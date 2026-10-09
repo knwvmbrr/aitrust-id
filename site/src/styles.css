@@ -81,3 +81,7 @@
   .theme-toggle { appearance: auto; width: 2rem; height: 2rem; }
   .theme-toggle::before { display: none; }
 }
+
+/* Narrow and enlarged-text workflows retain readable controls and wrapping. */
+.modal [data-workflow] { overflow-wrap: anywhere; }
+.modal [data-workflow] :where(section,div,button,a,input,select,textarea) { min-width: 0; }

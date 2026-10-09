@@ -96,7 +96,22 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-08-handheld-catalogue-public.json"
+    "verification": "runs/2026-10-08-handheld-catalogue-public.json",
+    "footer_workflows": {
+      "count": 8,
+      "architecture": "docs/footer-workflows.md",
+      "distinct_components": true,
+      "deep_links": true,
+      "report_submission": "explicit owner/user posting to public GitHub; vulnerabilities private",
+      "contribution_submission": "downloaded proposal; no automatic assignment",
+      "townhall": "dated public GitHub snapshot with live external links; no automatic refresh",
+      "scope_search_records": 202,
+      "self_hosted_community": false,
+      "automated_checks": "runs/2026-10-08-workflows-behavior.json",
+      "automated_pass": true,
+      "human_accessibility_verified": false
+    },
+    "naming_evidence_review": "docs/name-evidence-review.md"
   },
   "previous_runtime_verification": {
     "capabilities": [

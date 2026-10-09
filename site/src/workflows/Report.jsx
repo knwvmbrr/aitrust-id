@@ -1,0 +1,20 @@
+import React,{useState,useRef,useId} from 'react';
+import {allTags} from '../catalog.js';
+import {Intro,Field,Callout,Link,input,action,issueURL,securityURL,exportJSON} from './shared.jsx';
+export default function Report({tag}){
+ const id=useId(),observedRef=useRef(null),expectedRef=useRef(null);
+ const [target,setTarget]=useState(tag?.id||'PS'),[kind,setKind]=useState('Wrong or misleading tag'),[receipt,setReceipt]=useState(''),[observed,setObserved]=useState(''),[expected,setExpected]=useState(''),[error,setError]=useState(''),[status,setStatus]=useState('');
+ function record(){if(!observed.trim()||!expected.trim()){setError('Describe what happened and what you expected.');(!observed.trim()?observedRef:expectedRef).current.focus();return null;}setError('');return {format:'ai-trust-id-work-draft/v1',workflow:'report',draft_id:crypto.randomUUID(),kind,tag:target,tag_record_id:receipt.trim()||undefined,observed:observed.trim(),expected:expected.trim(),description:observed.trim()+'\nExpected: '+expected.trim(),status:'draft_not_submitted'};}
+ async function copy(){const data=record();if(!data)return;try{await navigator.clipboard.writeText(JSON.stringify(data,null,2));setStatus('Report copied. Paste it into GitHub yourself; nothing was submitted.');}catch{setStatus('Copy is unavailable. Download the report instead.');}}
+ function save(e){e?.preventDefault();const data=record();if(data){exportJSON('ai-trust-id-report-draft.json',data);setStatus('Report downloaded. Nothing was submitted.');}}
+ return <div data-workflow="report"><Intro eyebrow="Challenge a finding" title="Help us get the tag right.">Tell us what happened and what should have happened. A small, synthetic example is enough.</Intro>
+ <Field id={id+'-type'} label="Report type"><select id={id+'-type'} value={kind} onChange={e=>{setKind(e.target.value);setError('');setStatus('');}} className={input}>{['Wrong or misleading tag','Bug','Accessibility','Security or privacy'].map(x=><option key={x}>{x}</option>)}</select></Field>
+ {kind==='Security or privacy'?<section className="mt-4 rounded-xl border border-input p-4"><h4 className="text-lg font-semibold">Keep vulnerabilities private.</h4><p className="my-2 text-sm leading-6">Use the private security channel. Do not post exploitable details, credentials or private answers in public issues.</p><Link href={securityURL} primary>Open private security report</Link></section>:<form onSubmit={save} noValidate className="mt-4 space-y-4">
+ <Field id={id+'-tag'} label="Tag"><select id={id+'-tag'} value={target} onChange={e=>setTarget(e.target.value)} className={input}><option value="General">General</option>{allTags.map(t=><option key={t.id} value={t.id}>{t.code} · {t.name}</option>)}</select></Field>
+ <Field id={id+'-observed'} label="What happened?"><textarea id={id+'-observed'} ref={observedRef} rows={3} maxLength={2000} value={observed} onChange={e=>{setObserved(e.target.value);setStatus('');}} aria-invalid={!!error&&!observed.trim()} aria-describedby={id+'-error'} className={input}/></Field>
+ <Field id={id+'-expected'} label="What did you expect?"><textarea id={id+'-expected'} ref={expectedRef} rows={2} maxLength={2000} value={expected} onChange={e=>{setExpected(e.target.value);setStatus('');}} aria-invalid={!!error&&!expected.trim()} aria-describedby={id+'-error'} className={input}/></Field>
+ <Field id={id+'-record'} label="Tag record ID (optional)"><input id={id+'-record'} maxLength={100} value={receipt} onChange={e=>setReceipt(e.target.value)} className={input}/></Field><p id={id+'-error'} role="alert" className="text-sm">{error}</p>
+ <Callout>Drafts stay in this panel until you copy or download. GitHub reports are public: use synthetic content, not private AI answers.</Callout>
+ <div className="flex flex-wrap gap-2"><button type="submit" className={action}>Download draft</button><button type="button" className={action} onClick={copy}>Copy draft</button></div><p role="status" className="text-sm">{status}</p><Link href={issueURL}>Open public GitHub report</Link>
+ </form>}</div>;
+}

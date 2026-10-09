@@ -1,0 +1,33 @@
+{
+  "format": "ai-trust-id-fast-engineering/v1",
+  "engineering_pass": true,
+  "elapsed_seconds": 2.465,
+  "checks": [
+    {
+      "command": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.46,
+      "output": "........................................................................ [ 51%]\n...................................................................      [100%]\n=============================== warnings summary ===============================\n../aitrust-id-coordination/verification-venv/lib/python3.12/site-packages/fastapi/testclient.py:1\n  /Users/raashad/Downloads/aitrust-id-coordination/verification-venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n139 passed, 1 warning in 1.81s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-regressions.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.204,
+      "output": "{\n  \"regression_pass\": true,\n  \"datasets\": [\n    {\n      \"file\": \"ps_v1.jsonl\",\n      \"sha256\": \"7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4\",\n      \"tp\": 10,\n      \"fp\": 0,\n      \"fn\": 0,\n      \"tn\": 14,\n      \"category_failures\": []\n    },\n    {\n      \"file\": \"fetch_execute_v1.jsonl\",\n      \"sha256\": \"8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10\",\n      \"tp\": 8,\n      \"fp\": 0,\n      \"fn\": 0,\n      \"tn\": 11,\n      \"category_failures\": []\n    },\n    {\n      \"file\": \"counterexamples_v2.jsonl\",\n      \"sha256\": \"82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274\",\n      \"tp\": 3,\n      \"fp\": 0,\n      \"fn\": 0,\n      \"tn\": 12,\n      \"category_failures\": []\n    },\n    {\n      \"file\": \"live_gap_v1.jsonl\",\n      \"sha256\": \"0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9\",\n      \"tp\": 0,\n      \"fp\": 0,\n      \"fn\": 0,\n      \"tn\": 2,\n      \"category_failures\": []\n    },\n    {\n      \"file\": \"routing_boundaries_v1.jsonl\",\n      \"sha256\": \"639715fb9ebb6e755fb5028adab57f14f9b04733433b98810666bb4f93a63b62\",\n      \"tp\": 10,\n      \"fp\": 0,\n      \"fn\": 0,\n      \"tn\": 16,\n      \"category_failures\": []\n    }\n  ],\n  \"method_sha256\": \"8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a\",\n  \"case_count\": 86,\n  \"failures\": [],\n  \"historical\": [\n    {\n      \"file\": \"counterexamples_v1.jsonl\",\n      \"sha256\": \"1e2a473e3aa33b449b8cc7f7db0ad7a713e79fd8ac8486fa995051468e3927b7\",\n      \"superseded_by\": \"counterexamples_v2.jsonl\",\n      \"reason\": \"Two historical shell labels contradicted executed second-shell behavior; preserved, not treated as current ground truth.\"\n    }\n  ],\n  \"independent_accuracy_evidence\": false,\n  \"release_assessed\": false\n}\n",
+      "stderr": ""
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_assessed": false,
+  "scope": "Python source checks and all active development fixtures; mobile engines, live services and human review are separate."
+}

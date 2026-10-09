@@ -59,8 +59,8 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      assert(await dialog.getByRole('link',{name:'Try locally',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
      await axe();
      await dialog.getByRole('button',{name:'Report an issue',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();
-     await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByRole('alert').innerText()==='Add a short description before exporting.','Required description not enforced');
-     const description=report.getByLabel('Description (required)');await description.fill('Synthetic issue <img src=x onerror="window.injected=true">');
+     await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByRole('alert').innerText()==='Describe what happened and what you expected.','Required description not enforced');
+     const description=report.getByLabel('What happened?',{exact:true});await description.fill('Synthetic issue <img src=x onerror="window.injected=true">');await report.getByLabel('What did you expect?',{exact:true}).fill('A bounded reproducible finding.');
      assert(await report.getByRole('link',{name:'Open public GitHub report',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/issues/new?template=tag-review.yml','Public report destination missing or contains draft data');
      await report.getByLabel('Report type').selectOption('Security or privacy');
      assert(await report.getByRole('link',{name:'Open private security report',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/security/advisories/new','Security report routed publicly');
@@ -77,7 +77,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    }
   }
   for(const label of ['Report','Assist','Townhall','Teamwork','How tags work','Scope','About','Legal']){
-   const link=page.getByRole('navigation',{name:'Company and community'}).getByRole('button',{name:label,exact:true});await link.click();
+   const link=page.getByRole('navigation',{name:'Company and community'}).getByRole('link',{name:label,exact:true});await link.click();
    await page.getByRole('dialog',{name:label,exact:true}).waitFor();await axe();await page.keyboard.press('Escape');
    await page.getByRole('dialog',{name:label,exact:true}).waitFor({state:'hidden'});
    await page.waitForFunction(element=>document.activeElement===element,await link.elementHandle());

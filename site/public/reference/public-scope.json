@@ -12,7 +12,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver assertion envelope schema, JSON Schema 2020-12.",
-      "outcome": "Any tool can read a label and know exactly what it claims"
+      "outcome": "Any tool can read a label and know exactly what it claims",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-002",
@@ -20,7 +24,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver nine-label taxonomy (plus UNK, PII_REDACTED).",
-      "outcome": "A fixed vocabulary, so a label means the same thing everywhere"
+      "outcome": "A fixed vocabulary, so a label means the same thing everywhere",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-003",
@@ -28,7 +36,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver signal registry, 22 registered IDs with version suffixes.",
-      "outcome": "A third party can reproduce any assertion from the signal IDs it cites"
+      "outcome": "A third party can reproduce any assertion from the signal IDs it cites",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-004",
@@ -36,7 +48,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver abstention as a first-class state — UNK.",
-      "outcome": "The tool says \"I don't know\" instead of guessing at you"
+      "outcome": "The tool says \"I don't know\" instead of guessing at you",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-005",
@@ -44,7 +60,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver per-tag confidence floors.",
-      "outcome": "No tag is shown below the confidence its evidence supports"
+      "outcome": "No tag is shown below the confidence its evidence supports",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-006",
@@ -52,7 +72,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver six-modality reservation with normative subject definitions.",
-      "outcome": "Implementers agree on what is being hashed before anyone builds images or audio"
+      "outcome": "Implementers agree on what is being hashed before anyone builds images or audio",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-007",
@@ -60,7 +84,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Return hashes, offsets, and metadata without embedding evaluated text",
-      "outcome": "Recipients can inspect a tag record without the assertion containing content; local content transfer is disclosed."
+      "outcome": "Recipients can inspect a tag record without the assertion containing content; local content transfer is disclosed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-008",
@@ -68,7 +96,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Sign an exact canonical tag record with an identified key",
-      "outcome": "Recipients verify signer and record integrity without treating the signature as proof of truth."
+      "outcome": "Recipients verify signer and record integrity without treating the signature as proof of truth.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-009",
@@ -76,7 +108,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver cost-to-defeat ladder — statistical / behavioural / structural / cryptographic.",
-      "outcome": "You can judge how a label will age, not just whether it is accurate today"
+      "outcome": "You can judge how a label will age, not just whether it is accurate today",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-078",
@@ -84,7 +120,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver conformance vectors for text and code subject hashes.",
-      "outcome": "Two independent implementations produce the same hash for the same input"
+      "outcome": "Two independent implementations produce the same hash for the same input",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-079",
@@ -92,7 +132,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver five-clause privacy guarantee replacing \"no content in transit or at rest\".",
-      "outcome": "A guarantee that is true, clause by clause, each with a test"
+      "outcome": "A guarantee that is true, clause by clause, each with a test",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-080",
@@ -100,7 +144,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver subject hash documented as a correlation identifier, not an anonymisation.",
-      "outcome": "You are not misled about what the hash protects"
+      "outcome": "You are not misled about what the hash protects",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-076",
@@ -108,7 +156,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver rFC process — template, 14-day comment, evidence requirement.",
-      "outcome": "The taxonomy cannot drift into noise by accretion"
+      "outcome": "The taxonomy cannot drift into noise by accretion",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-077",
@@ -116,7 +168,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver dual licence: Apache-2.0 code, CC BY 4.0 spec.",
-      "outcome": "Free use and free reimplementation, permanently"
+      "outcome": "Free use and free reimplementation, permanently",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-NF",
@@ -124,7 +180,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver nF Non-Fiction.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-FI",
@@ -132,7 +192,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver fI Fiction / Fabricated.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-HP",
@@ -140,7 +204,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver hP Hallucination Possible.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-MT",
@@ -148,7 +216,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver mT Manipulative Tactic.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-PS",
@@ -156,7 +228,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver pS Potential Scam / Risk.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-IV",
@@ -164,7 +240,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver iV Independently Verified.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-FA",
@@ -172,7 +252,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver fA Full AI Augmentation.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-PA",
@@ -180,7 +264,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver pA Partially Augmented.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-UNK",
@@ -188,7 +276,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver uNK Unknown.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-PII",
@@ -196,7 +288,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver pII_REDACTED.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-OUT",
@@ -204,7 +300,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver pII_OUTBOUND.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty."
+      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-010",
@@ -212,7 +312,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.piped_installer.v1 — curl/wget piped to a shell.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-011",
@@ -220,7 +324,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.obfuscated_payload.v1 — base64/hex into eval/exec.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-012",
@@ -228,7 +336,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.credential_exfil.v1 — reads a secret path, writes to a network sink.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-013",
@@ -236,7 +348,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-014",
@@ -244,7 +360,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver use/mention discriminator — is the command being recommended or discussed?.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-015",
@@ -252,7 +372,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-016",
@@ -260,7 +384,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.selfcontradiction.v1 — NLI entailment between sentence pairs.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-017",
@@ -268,7 +396,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.duplicate_loop.v1 — n-gram repetition above threshold.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-018",
@@ -276,7 +408,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.hedge_collapse.v1 — hedging absent where uncertainty is expected.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-019a",
@@ -284,7 +420,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.urgency_frame.v1 — time-pressure lexicon plus imperative density.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-019b",
@@ -292,7 +432,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.false_dilemma.v1 — binary framing where alternatives exist.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-019c",
@@ -300,7 +444,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.authority_appeal.v1 — unattributed appeals to expertise or consensus.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-020a",
@@ -308,7 +456,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.corpus_support.v1 — retrieval similarity against an attached local corpus.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-020b",
@@ -316,7 +468,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-081",
@@ -324,7 +480,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver bring-your-own corpus — the user attaches their own reference material locally.",
-      "outcome": "A finding identifies this exact signal and the relevant subject spans."
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-026",
@@ -332,7 +492,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.keystroke_liveness.v1 — dwell and flight time distributions.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-027",
@@ -340,7 +504,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.revision_churn.v1 — deleted-and-rewritten characters over final length.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-028",
@@ -348,7 +516,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.compose_monotonicity.v1 — caret-position entropy.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-029a",
@@ -356,7 +528,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-029b",
@@ -364,7 +540,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-029c",
@@ -372,7 +552,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.paste_burst.v1 — large insertion with no preceding keystrokes.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-025",
@@ -380,7 +564,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver sig.c2pa_manifest.v1 — parses an attached C2PA manifest.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-082",
@@ -388,7 +576,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Suppress unsuitable timing analysis without assigning human attestation",
-      "outcome": "Assistive-input users receive no negative authorship inference or automatic IV claim."
+      "outcome": "Assistive-input users receive no negative authorship inference or automatic IV claim.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-083",
@@ -396,7 +588,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver the governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA.",
-      "outcome": "Observed interaction is documented without unsupported authorship or identity claims."
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-023",
@@ -404,7 +600,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Remove recognized entities before evaluation",
-      "outcome": "Detected entities are redacted; coverage and missed-detection limitations remain visible."
+      "outcome": "Detected entities are redacted; coverage and missed-detection limitations remain visible.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-041",
@@ -412,7 +612,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver redaction ordering guarantee — anonymise, then evaluate, always.",
-      "outcome": "The order cannot silently invert in a refactor"
+      "outcome": "The order cannot silently invert in a refactor",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-024",
@@ -420,7 +624,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver pII_OUTBOUND pre-send warning — you are about to paste personal data into a model.",
-      "outcome": "Catches the mistake before it leaves your machine, not after"
+      "outcome": "Catches the mistake before it leaves your machine, not after",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-043",
@@ -428,7 +636,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver no-egress network topology — internal: true, loopback binding.",
-      "outcome": "Nothing you read leaves the machine during evaluation"
+      "outcome": "Nothing you read leaves the machine during evaluation",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-084",
@@ -436,7 +648,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver no content logging — a verified clause, not a promise.",
-      "outcome": "Your text is not sitting in a log file you did not know about"
+      "outcome": "Your text is not sitting in a log file you did not know about",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-085",
@@ -444,7 +660,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Prevent content writes in documented application paths",
-      "outcome": "Verified application storage paths contain no evaluated content; operating-system limits are disclosed."
+      "outcome": "Verified application storage paths contain no evaluated content; operating-system limits are disclosed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-086",
@@ -452,7 +672,11 @@
       "layer": 2,
       "disposition": "retained; historical exclusion revised for requested research direction",
       "job": "Keep local evaluation free of automatic telemetry; separate any approved in-house research contribution under N-011.",
-      "outcome": "Local tags remain usable without contributing data; remote collection is unconnected."
+      "outcome": "Local tags remain usable without contributing data; remote collection is unconnected.",
+      "owner": "Codex",
+      "status": "storage boundary reopened by direct user instruction; collection policy unresolved",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-087",
@@ -460,7 +684,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver capture trust boundary, published plainly.",
-      "outcome": "You know a label attests \"this client observed this text at this time\" — not who wrote it"
+      "outcome": "You know a label attests \"this client observed this text at this time\" — not who wrote it",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-030",
@@ -468,7 +696,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver mV3 MAIN-world capture — fetch patch plus ReadableStream.tee().",
-      "outcome": "Labels appear where you already read AI output, with no copy-paste"
+      "outcome": "Labels appear where you already read AI output, with no copy-paste",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-031",
@@ -476,7 +708,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver dOM observer fallback for sites the fetch patch misses.",
-      "outcome": "Coverage when a site streams in a way the tap cannot see"
+      "outcome": "Coverage when a site streams in a way the tap cannot see",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-088",
@@ -484,7 +720,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Bind every result to its captured response and content revision",
-      "outcome": "Delayed or stale results never attach to a different response."
+      "outcome": "Delayed or stale results never attach to a different response.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-089",
@@ -492,7 +732,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver duplicate suppression — one badge per response.",
-      "outcome": "You see one label, not a stack of five"
+      "outcome": "You see one label, not a stack of five",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-090",
@@ -500,7 +744,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver character-data mutation observation.",
-      "outcome": "Streamed responses that rewrite text nodes still get captured"
+      "outcome": "Streamed responses that rewrite text nodes still get captured",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-032",
@@ -508,7 +756,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Debounce changes while tracking completion and content revisions",
-      "outcome": "A pause is not presented as guaranteed completion; revisions invalidate stale results."
+      "outcome": "A pause is not presented as guaranteed completion; revisions invalidate stale results.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-037",
@@ -516,7 +768,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver per-vendor site adapters.",
-      "outcome": "Reliable capture per site instead of a guess that works sometimes"
+      "outcome": "Reliable capture per site instead of a guess that works sometimes",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-033",
@@ -524,7 +780,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver closed shadow-root badge, monochrome.",
-      "outcome": "A label the page cannot read or restyle. Not spoof-proof — that claim was wrong (C8)"
+      "outcome": "A label the page cannot read or restyle. Not spoof-proof — that claim was wrong (C8)",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-034",
@@ -532,7 +792,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver evidence panel showing the exact spans that triggered the tag.",
-      "outcome": "You can see why, and argue with it"
+      "outcome": "You can see why, and argue with it",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-091",
@@ -540,7 +804,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver options page for the bearer token.",
-      "outcome": "Setup actually completes"
+      "outcome": "Setup actually completes",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-035",
@@ -548,7 +816,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver full screen-reader semantics, aria-live=\"polite\" never assertive.",
-      "outcome": "The label is announced without interrupting what you are reading"
+      "outcome": "The label is announced without interrupting what you are reading",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-092",
@@ -556,7 +828,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver keyboard-only operation — reach, open, read, close the panel.",
-      "outcome": "No mouse required, ever"
+      "outcome": "No mouse required, ever",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-093",
@@ -564,7 +840,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver forced-colors and high-contrast support.",
-      "outcome": "Works in Windows High Contrast and custom colour modes"
+      "outcome": "Works in Windows High Contrast and custom colour modes",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-094",
@@ -572,7 +852,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver 200% zoom and reduced-motion support.",
-      "outcome": "Readable magnified; no animation if you asked for none"
+      "outcome": "Readable magnified; no animation if you asked for none",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-095",
@@ -580,7 +864,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver monochrome-by-construction design — the movie/TV content-rating look.",
-      "outcome": "Nothing depends on colour, so colour-blindness is a non-issue by design — and the label reads as institutional rather than as branding"
+      "outcome": "Nothing depends on colour, so colour-blindness is a non-issue by design — and the label reads as institutional rather than as branding",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-036",
@@ -588,7 +876,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver signature verification before render.",
-      "outcome": "The badge refuses to display a verdict it cannot authenticate"
+      "outcome": "The badge refuses to display a verdict it cannot authenticate",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-096",
@@ -596,7 +888,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver graceful degradation — backend down, invalid token, unsupported page.",
-      "outcome": "A broken setup tells you what is wrong instead of failing silently"
+      "outcome": "A broken setup tells you what is wrong instead of failing silently",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-097",
@@ -604,7 +900,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver user-invoked labelling — select a response, ask for a check.",
-      "outcome": "Correct attribution even when automatic capture cannot be trusted"
+      "outcome": "Correct attribution even when automatic capture cannot be trusted",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-040",
@@ -612,7 +912,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver gateway orchestration — redact, evaluate, calibrate, return.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-042",
@@ -620,7 +924,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver evaluator on redacted text only; self-reports as \"rules-only\".",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-098",
@@ -628,7 +936,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver presidio language assets baked into the image.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-099",
@@ -636,7 +948,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver upstream response validation — status and shape checked before parsing.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-100",
@@ -644,7 +960,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver constant-time bearer token comparison.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-101",
@@ -652,7 +972,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver startup refusal of the example token change-me.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-102",
@@ -660,7 +984,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver modality validated against the schema enum; unsupported returns UNK + unsupported_modality.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-103",
@@ -668,7 +996,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver health checks reporting dependency readiness, not process liveness.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-104",
@@ -676,7 +1008,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver defined dependency-failure behaviour.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-044",
@@ -684,7 +1020,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver registry dashboard — hashes only, 30-day retention.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-045",
@@ -692,7 +1032,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver reporting intake, hash-only.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-105",
@@ -700,7 +1044,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver one documented command: clean clone → running stack.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-050",
@@ -708,7 +1056,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-051",
@@ -716,7 +1068,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Derive metrics from evaluator outputs on versioned fixtures",
-      "outcome": "Reports expose confusion counts, denominators, category failures, and applicable uncertainty."
+      "outcome": "Reports expose confusion counts, denominators, category failures, and applicable uncertainty.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-106",
@@ -724,7 +1080,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver wilson confidence intervals, lower-bound gating, n published beside every figure.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-107",
@@ -732,7 +1092,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver per-category failure breakdown on every metric.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-052",
@@ -740,7 +1104,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver pS fixture set.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-108",
@@ -748,7 +1116,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver frozen held-out split with a manifest hash, separate from the regression suite.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-109",
@@ -756,7 +1128,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver dataset versioning and provenance per example.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-110",
@@ -764,7 +1140,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver adversarial boundary examples for the use/mention discriminator.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-053",
@@ -772,7 +1152,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver hP / MT / FI fixtures.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-056",
@@ -780,7 +1164,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver krippendorff's α published for MT, ≥ 0.55.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-054",
@@ -788,7 +1176,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver cI that can actually fail.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-111",
@@ -796,7 +1188,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver evaluator unit tests — the first tests in the repository.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-112",
@@ -804,7 +1200,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver schema validation against real service responses, not just schema syntax.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-055",
@@ -812,7 +1212,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver axe-core accessibility gate, serious and critical at zero.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-113",
@@ -820,7 +1224,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver latency budget enforcement — p95 ≤ 100ms.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-114",
@@ -828,7 +1236,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver abstention-rate band enforcement, 0.02–0.35.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-115",
@@ -836,7 +1248,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver network-isolation verification — exec into each container and prove it cannot reach out.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-057",
@@ -844,7 +1260,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver sBOM plus Sigstore release signing.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-116",
@@ -852,7 +1272,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver dependency lockfiles and hashes, not just version pins.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-117",
@@ -860,7 +1284,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver model hash verification at load.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-118",
@@ -868,7 +1296,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver calibration ledger — every published number reproducible by a third party.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-119",
@@ -876,7 +1308,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver conformance test suite an outside implementer can run against their own build.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-120",
@@ -884,7 +1320,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver evidence packets — committed transcripts per exit gate.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-121",
@@ -892,7 +1332,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver receipt format binding an artifact hash to observed composition activity.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-122",
@@ -900,7 +1344,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver receipt issuance — always a free path, by policy.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-123",
@@ -908,7 +1356,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver receipt verification requiring no contact with us.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-124",
@@ -916,7 +1368,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver independent RFC 3161 timestamping — we never operate the authority.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-125",
@@ -924,7 +1380,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver per-device revocable keys plus a revocation transparency log.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-126",
@@ -932,7 +1392,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver freshness model for offline verification against revocation.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-127",
@@ -940,7 +1404,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver forgery-cost class as a first-class field on every receipt.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-128",
@@ -948,7 +1416,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver anti-coercion rule — a conformant implementation may not make receipt issuance non-optional for the author.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-129",
@@ -956,7 +1428,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver key custody and recovery for a non-technical author.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-130",
@@ -964,7 +1440,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver group authorship — four signers or four receipts.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-131",
@@ -972,7 +1452,11 @@
       "layer": 1,
       "disposition": "research retained; evidentiary interpretation unresolved",
       "job": "Specify and deliver receipt expiry and algorithm agility — ed25519 will not be safe forever.",
-      "outcome": "An author or verifier can inspect the defined composition evidence and its limits."
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-132",
@@ -980,7 +1464,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver aitrustid.com — landing and reference content, no-JS core.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-133",
@@ -988,7 +1476,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver public status table distinguishing supported / experimental / reserved.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-134",
@@ -996,7 +1488,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver limitations page, findable without being told where it is.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-135",
@@ -1004,7 +1500,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver report AI — public intake for AI content people want flagged.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-136",
@@ -1012,7 +1512,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Provide public live community discussions and official replies with safe publication controls.",
-      "outcome": "Everyone can read public community messages and company replies; private reports and research remain outside the public stream."
+      "outcome": "Everyone can read public community messages and company replies; private reports and research remain outside the public stream.",
+      "owner": "Codex",
+      "status": "owner direction accepted; architecture specified; implementation pending",
+      "acceptance": "Exercise two-user and moderator posting, safe rendering, object authorization, bounded live updates, reconnect/replay, throttling and retraction; verify private synthetic markers never reach public responses or logs.",
+      "failure": "Disable affected posting or streaming on unauthorized disclosure; show unavailable status; local tags remain usable."
     },
     {
       "id": "F-137",
@@ -1020,7 +1524,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Apply a documented moderation and appeal process with public safe action records.",
-      "outcome": "People see moderation reasons and appeal routes without removed secrets, private reports or reporter identities being republished."
+      "outcome": "People see moderation reasons and appeal routes without removed secrets, private reports or reporter identities being republished.",
+      "owner": "Codex",
+      "status": "transparent moderation direction accepted; implementation pending",
+      "acceptance": "Test moderator authorization, edits/retractions, safe tombstones and appeals; removed sensitive content must be absent from public history and event replay.",
+      "failure": "Restrict affected publication and surface appeal status; never leak removed content into an audit notice."
     },
     {
       "id": "F-073",
@@ -1028,7 +1536,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver security@ with a 72-hour response promise.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-074",
@@ -1036,7 +1548,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver conduct@ with an enforcement ladder.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-138",
@@ -1044,7 +1560,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver abuse@ and press@.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-139",
@@ -1052,7 +1572,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver site accessibility held to the same gate as the extension.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-140",
@@ -1060,7 +1584,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver sanitised public roadmap — no personal execution material.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-141",
@@ -1068,7 +1596,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver pilot programme — small consenting group, feedback without collecting prompts or outputs.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-142",
@@ -1076,7 +1608,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver install and removal instructions, reproducible.",
-      "outcome": "A person can access the public tag workflow and its support process."
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-075",
@@ -1084,7 +1620,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver two-entity structure — independent foundation holds spec and mark; implementations compete on top.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-143",
@@ -1092,7 +1632,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver certification mark — filed, owned by the foundation.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-144",
@@ -1100,7 +1644,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver mark usage guidelines and a conformance statement template.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-145",
@@ -1108,7 +1656,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver certification programme — what a certifier must test, and how one is accredited.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-146",
@@ -1116,7 +1668,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver nonprofit formation and filings.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-147",
@@ -1124,7 +1680,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver conflict-of-interest recusal rule for maintainers with a commercial interest.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-148",
@@ -1132,7 +1692,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver qualified legal review of every biometric and privacy assurance.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-070",
@@ -1140,7 +1704,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver six invariants in CONTRIBUTING.md.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-071",
@@ -1148,7 +1716,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver threat model, 10 entries.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-072",
@@ -1156,7 +1728,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver aCCESSIBILITY.md as a release gate.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-149",
@@ -1164,7 +1740,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver mAINTAINERS.md with per-maintainer scope.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-150",
@@ -1172,7 +1752,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver cHANGELOG.md, state.json, docs/, runs/.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-151",
@@ -1180,7 +1764,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver dECISIONS.md — 15 seeded decisions with dates and reasons.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-152",
@@ -1188,7 +1776,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver branch protection, CODEOWNERS, required status checks, Dependabot.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-153",
@@ -1196,7 +1788,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver named ongoing ownership for security response and adapter maintenance.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists."
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-060",
@@ -1204,7 +1800,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver image.",
-      "outcome": "Independent implementers have an explicit subject contract before support is claimed."
+      "outcome": "Independent implementers have an explicit subject contract before support is claimed.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-061",
@@ -1212,7 +1812,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver audio.",
-      "outcome": "Independent implementers have an explicit subject contract before support is claimed."
+      "outcome": "Independent implementers have an explicit subject contract before support is claimed.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-062",
@@ -1220,7 +1824,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver video.",
-      "outcome": "Independent implementers have an explicit subject contract before support is claimed."
+      "outcome": "Independent implementers have an explicit subject contract before support is claimed.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-063",
@@ -1228,7 +1836,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver document.",
-      "outcome": "Independent implementers have an explicit subject contract before support is claimed."
+      "outcome": "Independent implementers have an explicit subject contract before support is claimed.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-154",
@@ -1236,7 +1848,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver text and code subject contracts.",
-      "outcome": "Independent implementers have an explicit subject contract before support is claimed."
+      "outcome": "Independent implementers have an explicit subject contract before support is claimed.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-155",
@@ -1244,7 +1860,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver synthID and vendor watermarking.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-156",
@@ -1252,7 +1872,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver additional browser and site adapters.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-157",
@@ -1260,7 +1884,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver newsroom integration — labels in an editorial workflow.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-158",
@@ -1268,7 +1896,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver agent identity — labelling output from autonomous agents.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-159",
@@ -1276,7 +1908,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver fleet deployment and policy management.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-160",
@@ -1284,7 +1920,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver host-level capture agents.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-161",
@@ -1292,7 +1932,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver long-horizon retention and audit trails.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-162",
@@ -1300,7 +1944,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver sSO and directory integration.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-163",
@@ -1308,7 +1956,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver support with an SLA.",
-      "outcome": "The application extends supported tags without disabling the personal workflow."
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "X-01",
@@ -1316,7 +1968,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: A paid API or any metered inference",
-      "outcome": "The product excludes a paid api or any metered inference, and changes are reviewed against this boundary."
+      "outcome": "The product excludes a paid api or any metered inference, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-02",
@@ -1324,7 +1980,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Any closed-source or paid dependency in the pipeline",
-      "outcome": "The product excludes any closed-source or paid dependency in the pipeline, and changes are reviewed against this boundary."
+      "outcome": "The product excludes any closed-source or paid dependency in the pipeline, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-03",
@@ -1332,7 +1992,11 @@
       "layer": 2,
       "disposition": "retained; historical exclusion revised for requested research direction",
       "job": "Prevent unapproved central collection; review consented in-house research storage under N-011.",
-      "outcome": "No central collection is active; provider, consent and retention must be resolved before connection."
+      "outcome": "No central collection is active; provider, consent and retention must be resolved before connection.",
+      "owner": "Codex",
+      "status": "storage boundary reopened by direct user instruction; collection policy unresolved",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-04",
@@ -1340,7 +2004,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Per-person keystroke templates or any biometric identity profile",
-      "outcome": "The product excludes per-person keystroke templates or any biometric identity profile, and changes are reviewed against this boundary."
+      "outcome": "The product excludes per-person keystroke templates or any biometric identity profile, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-05",
@@ -1348,7 +2016,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Any human-negative verdict from an absent signal",
-      "outcome": "The product excludes any human-negative verdict from an absent signal, and changes are reviewed against this boundary."
+      "outcome": "The product excludes any human-negative verdict from an absent signal, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-06",
@@ -1356,7 +2028,11 @@
       "layer": 2,
       "disposition": "retained; historical exclusion revised for requested research direction",
       "job": "Keep automatic telemetry disabled; treat approved research contribution as a separate consented workflow.",
-      "outcome": "Using a tag does not automatically upload usage or content; collection remains unconnected."
+      "outcome": "Using a tag does not automatically upload usage or content; collection remains unconnected.",
+      "owner": "Codex",
+      "status": "storage boundary reopened by direct user instruction; collection policy unresolved",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-07",
@@ -1364,7 +2040,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Competing with C2PA on image provenance",
-      "outcome": "The product excludes competing with c2pa on image provenance, and changes are reviewed against this boundary."
+      "outcome": "The product excludes competing with c2pa on image provenance, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-08",
@@ -1372,7 +2052,11 @@
       "layer": 2,
       "disposition": "deferred, not permanently refused",
       "job": "Defer from the initial release: Building image, audio or video detection in 1.0",
-      "outcome": "The capability remains tracked for a later release and is not advertised as supported."
+      "outcome": "The capability remains tracked for a later release and is not advertised as supported.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-09",
@@ -1380,7 +2064,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Colour-coded labels",
-      "outcome": "The product excludes colour-coded labels, and changes are reviewed against this boundary."
+      "outcome": "The product excludes colour-coded labels, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-10",
@@ -1388,7 +2076,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: aria-live=\"assertive\" announcements",
-      "outcome": "The product excludes aria-live=\"assertive\" announcements, and changes are reviewed against this boundary."
+      "outcome": "The product excludes aria-live=\"assertive\" announcements, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-11",
@@ -1396,7 +2088,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Machine-assigned IV",
-      "outcome": "The product excludes machine-assigned iv, and changes are reviewed against this boundary."
+      "outcome": "The product excludes machine-assigned iv, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-12",
@@ -1404,7 +2100,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Mandatory receipts",
-      "outcome": "The product excludes mandatory receipts, and changes are reviewed against this boundary."
+      "outcome": "The product excludes mandatory receipts, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-13",
@@ -1412,7 +2112,11 @@
       "layer": 2,
       "disposition": "deferred, not permanently refused",
       "job": "Defer from the initial release: Signing in 0.1",
-      "outcome": "The capability remains tracked for a later release and is not advertised as supported."
+      "outcome": "The capability remains tracked for a later release and is not advertised as supported.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-14",
@@ -1420,7 +2124,11 @@
       "layer": 2,
       "disposition": "deferred, not permanently refused",
       "job": "Defer from the initial release: The registry container in 0.1",
-      "outcome": "The capability remains tracked for a later release and is not advertised as supported."
+      "outcome": "The capability remains tracked for a later release and is not advertised as supported.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-15",
@@ -1428,7 +2136,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: Collecting prompts or outputs from pilot users",
-      "outcome": "The product excludes collecting prompts or outputs from pilot users, and changes are reviewed against this boundary."
+      "outcome": "The product excludes collecting prompts or outputs from pilot users, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "X-16",
@@ -1436,7 +2148,11 @@
       "layer": 2,
       "disposition": "policy candidate; release exclusions are deferrals",
       "job": "Prevent introduction of: \"Outside knowledge proves human authorship\" as an implementation requirement",
-      "outcome": "The product excludes \"outside knowledge proves human authorship\" as an implementation requirement, and changes are reviewed against this boundary."
+      "outcome": "The product excludes \"outside knowledge proves human authorship\" as an implementation requirement, and changes are reviewed against this boundary.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "failure": "Do not release a change that violates an accepted boundary."
     },
     {
       "id": "F-019",
@@ -1444,7 +2160,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver legacy grouping for F-019a, F-019b, F-019c.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-020",
@@ -1452,7 +2172,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver legacy grouping for F-020a, F-020b.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-021",
@@ -1460,7 +2184,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver legacy grouping for T-FA, T-PA.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-022",
@@ -1468,7 +2196,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver legacy grouping for T-IV.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "F-029",
@@ -1476,7 +2208,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver legacy grouping for F-029a, F-029b, F-029c.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-001",
@@ -1484,7 +2220,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver protocol compatibility and schema migration.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-002",
@@ -1492,7 +2232,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver separate pending, uncertain, unsupported, unavailable, and no-finding states.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-003",
@@ -1500,7 +2244,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver detector resource limits, cancellation, concurrency, and failure containment.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-004",
@@ -1508,7 +2256,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver consent, per-site pause, capture boundaries, reset and deletion.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-005",
@@ -1516,7 +2268,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver label dispute, correction, and supersession workflow.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-006",
@@ -1524,7 +2280,11 @@
       "layer": 2,
       "disposition": "retained",
       "job": "Specify and deliver versioned regression checks and revalidation triggers.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Codex",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-007",
@@ -1532,7 +2292,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver no automated promotional AI content network.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-008",
@@ -1540,7 +2304,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver no child-safety report hosting.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-009",
@@ -1548,7 +2316,11 @@
       "layer": 1,
       "disposition": "retained",
       "job": "Specify and deliver no rogue-AI verdict inferred from output.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Claude",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "N-010",
@@ -1556,7 +2328,11 @@
       "layer": 3,
       "disposition": "retained",
       "job": "Specify and deliver personal/team/enterprise/proprietary tag offering boundaries.",
-      "outcome": "The named capability has observable behavior and is tracked independently of implementation status."
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "owner": "Michael",
+      "status": "normalized_scope; runtime unverified",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
     },
     {
       "id": "T-UC",
@@ -1564,7 +2340,11 @@
       "layer": 1,
       "disposition": "preserved proposal",
       "job": "Identify supported hazardous command instructions with context",
-      "outcome": "The person sees the command pattern and its bounded risk explanation."
+      "outcome": "The person sees the command pattern and its bounded risk explanation.",
+      "owner": "Claude",
+      "status": "proposed; not accepted or implemented",
+      "acceptance": "Publish claim boundaries and validate positive and adversarial cases before enabling.",
+      "failure": "No production issuance before accepted evidence and evaluation criteria."
     },
     {
       "id": "T-SC",
@@ -1572,7 +2352,11 @@
       "layer": 1,
       "disposition": "preserved proposal",
       "job": "Evaluate validated co-occurring fraud indicators",
-      "outcome": "The person sees possible fraud indicators, uncertainty, and relevant context."
+      "outcome": "The person sees possible fraud indicators, uncertainty, and relevant context.",
+      "owner": "Claude",
+      "status": "proposed; not accepted or implemented",
+      "acceptance": "Publish claim boundaries and validate positive and adversarial cases before enabling.",
+      "failure": "No production issuance before accepted evidence and evaluation criteria."
     },
     {
       "id": "T-BT",
@@ -1580,7 +2364,11 @@
       "layer": 1,
       "disposition": "preserved proposal",
       "job": "Research positive evidence of automation without inferring it from absent human evidence",
-      "outcome": "The person sees only validated observations; templates or repetition alone are not a bot verdict."
+      "outcome": "The person sees only validated observations; templates or repetition alone are not a bot verdict.",
+      "owner": "Claude",
+      "status": "proposed; not accepted or implemented",
+      "acceptance": "Publish claim boundaries and validate positive and adversarial cases before enabling.",
+      "failure": "No production issuance before accepted evidence and evaluation criteria."
     },
     {
       "id": "N-011",
@@ -1588,7 +2376,11 @@
       "layer": 3,
       "disposition": "retained; requested scope expansion",
       "job": "Organize approved tag outputs in a remotely hosted, controlled open-source data stack for independently reviewed training and pattern analysis.",
-      "outcome": "Versioned records, independent labels and approved examples support reproducible improvement without making collection a dependency of local tags."
+      "outcome": "Versioned records, independent labels and approved examples support reproducible improvement without making collection a dependency of local tags.",
+      "owner": "Codex",
+      "status": "private PostgreSQL foundation deployed; 46 host checks pass after reboot; application and recovery pending",
+      "acceptance": "Verify selected-tag record structure, no unapproved response text, independent-label separation, remote authentication/access isolation, bounded retry/deduplication, retention/deletion and dataset manifests before collection goes live.",
+      "failure": "Collection failure must not stop or change local tag evaluation. A prediction must not be treated as verified ground truth."
     },
     {
       "id": "N-012",
@@ -1596,7 +2388,11 @@
       "layer": 3,
       "disposition": "retained; requested scope expansion",
       "job": "Run a version-bound tag method on a phone without an account, extension or local containers.",
-      "outcome": "A person copies an answer from any app and receives a bounded PS preview without uploading the answer."
+      "outcome": "A person copies an answer from any app and receives a bounded PS preview without uploading the answer.",
+      "owner": "Codex",
+      "status": "implemented PS preview; browser-engine checks pass; physical phone checks pending",
+      "acceptance": "Compare full evidence for all active fixtures in Chromium and WebKit; test failed initialization, invalid source, timeout/cancellation, stale results, offline reload, clear/removal, no input-bearing requests/storage, keyboard, 320px and text enlargement.",
+      "failure": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes."
     },
     {
       "id": "N-013",
@@ -1604,7 +2400,11 @@
       "layer": 3,
       "disposition": "retained; requested scope expansion",
       "job": "Receive selected text through an iPhone Share extension with explicit user action.",
-      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "owner": "Codex",
+      "status": "preserved future delivery route; not implemented",
+      "acceptance": "Signed containing app and Share extension tested on real iPhones; bounded input, process lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "failure": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes."
     },
     {
       "id": "N-014",
@@ -1612,7 +2412,11 @@
       "layer": 3,
       "disposition": "retained; requested scope expansion",
       "job": "Receive selected text through an Android OS share interface with explicit user action.",
-      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "owner": "Codex",
+      "status": "preserved future delivery route; not implemented",
+      "acceptance": "Receive supported share intents on real Android devices; bounds, lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "failure": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes."
     },
     {
       "id": "N-015",
@@ -1620,7 +2424,11 @@
       "layer": 3,
       "disposition": "retained; requested scope expansion",
       "job": "Read a frozen reviewer JSON file, collect independent labels and export exact item fields for comparison.",
-      "outcome": "Reviewers can label without developer setup or detector predictions; incomplete and changed files fail coordinator comparison."
+      "outcome": "Reviewers can label without developer setup or detector predictions; incomplete and changed files fail coordinator comparison.",
+      "owner": "Codex",
+      "status": "implemented; synthetic form export and CLI comparison verified; independent human labeling pending",
+      "acceptance": "Validate frozen hashes, reviewer slot, exact original text, unique complete items and reasons; show disagreements and ambiguity; forbid hidden predictions, uploads, automatic persistence and claims of verified independence.",
+      "failure": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes."
     }
   ]
 }

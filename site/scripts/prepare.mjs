@@ -8,7 +8,7 @@ import sharp from 'sharp';
 import {metadata,origin,tagPath} from './seo.mjs';
 const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const repo=path.dirname(site);
 const scope=JSON.parse(fs.readFileSync(path.join(repo,'docs/master-scope.json')));
-const records=scope.records.map(r=>({id:r.id,title:r.title,layer:r.layer,disposition:r.disposition,job:r.baseline_job,outcome:r.outcome}));
+const records=scope.records.map(r=>({id:r.id,title:r.title,layer:r.layer,disposition:r.disposition,job:r.baseline_job,outcome:r.outcome,owner:r.owner,status:r.status,acceptance:r.acceptance,failure:r.failure_behavior}));
 const data={date:scope.date,layers:['Tag types and evidence','Shared tag capabilities','Personal and organization workflows'],records};
 fs.writeFileSync(path.join(site,'src/public-scope.json'),JSON.stringify(data,null,2)+'\n');
 const reference=path.join(site,'public/reference');fs.mkdirSync(reference,{recursive:true});fs.writeFileSync(path.join(reference,'public-scope.json'),JSON.stringify(data,null,2)+'\n');

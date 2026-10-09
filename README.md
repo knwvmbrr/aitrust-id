@@ -162,8 +162,13 @@ license is CC BY 4.0; see `CONTRIBUTING.md` for contribution requirements.
 The website in `site/` follows the tag catalogue layout: AI TRUST ID, Person / Enterprise,
 clickable tag details, and company/community information in the footer. It preserves 14 personal
 tag records and six proposed organization offerings. Building Now and Coming Soon describe
-progress; no catalogue entry claims a validated release. Reports, contributions and discussions
-can be copied or downloaded as drafts. They are not delivered to a remote team.
+progress; no catalogue entry claims a validated release. Each footer workflow has its own
+purpose and deep link: report a reproducible issue, propose a contribution, read public
+discussions, find owners and open needs, follow a tag, search all 202 scope records,
+learn about the project, or inspect rights and data handling. Report/contribution drafts
+can be downloaded; posting to GitHub is an explicit user action. Townhall shows a dated
+public snapshot and links to live GitHub discussions. It does not simulate live in-site
+posting or a self-hosted community. See [footer workflows](docs/footer-workflows.md).
 
 With Node.js 22 or newer:
 
@@ -175,11 +180,12 @@ npm run dev:site
 ```
 
 The local preview uses `http://127.0.0.1:5173/`. For built-site checks, serve `site/dist`
-on loopback port 5174, then run `npm run verify:site`. The CI site job performs this sequence.
+on loopback port 5174, then run `npm run verify:site` and `npm run verify:workflows`. The CI site job performs this sequence.
 See [website architecture and publishing](docs/website.md) for the verified behavior, remaining
 connections, and deployment steps. The reviewed catalogue is deployed on the owned
-domain with verified security headers. The website does not run a detector or change
-tag release gates.
+domain with verified security headers. The PS device checker runs the bounded method
+in a self-hosted browser worker; pasted text is not uploaded. It does not change tag
+release gates.
 
 
 The live-review gap pass adds bounded substitution detection, explicit disabled
@@ -212,8 +218,9 @@ certification. The 95% precision lower bound is 0.890 on this corpus; the candid
 0.93 threshold fails, and an independent holdout and calibration are missing.
 
 The site includes use/setup instructions in every tag's modal and static reference.
-PS and PII are local previews; other tags clearly state availability. Technical
-Linux/macOS setup is still required. Rebuild services after updating the source;
+PS is also available in a phone/device browser without an account, Docker or extension.
+PII remains a local service preview; other tags clearly state availability. Local service
+setup still requires technical Linux/macOS steps. Rebuild services after updating the source;
 the CLI rejects an evaluator whose hash differs from this checkout. The latest
 pass ran HTTP/unit checks, not a restarted full container pipeline.
 

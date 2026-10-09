@@ -8,7 +8,8 @@
     "dev:site": "npm run dev --prefix site",
     "verify:site": "node scripts/verify-site.cjs",
     "deploy:site": "npm run deploy --prefix site",
-    "verify:device": "node scripts/verify-device.cjs"
+    "verify:device": "node scripts/verify-device.cjs",
+    "verify:workflows": "node scripts/verify-workflows.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

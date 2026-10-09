@@ -2,6 +2,15 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Replaced the shared footer composer/doc layout with eight independent workflows,
+  descriptive links and deep links. Reports validate observed/expected results and
+  route vulnerabilities privately; contributions define deliverables; public discussions
+  use verified GitHub categories; task handoff selects a contribution role. Added a
+  searchable 202-record scope explorer and distinct walkthrough, About and Legal panels.
+  Drafts remain explicit downloads; no automatic posting or collection added.
+- Added workflow behavior, 320px/200% reflow and automated accessibility checks to
+  the site CI job. Recorded primary-source limits on the pasted naming advice.
+
 - Added a phone/device PS checker using the unchanged Python method in a pinned,
   self-hosted worker runtime, with bounded input, hash verification, cancellation,
   short result and metadata-only export. No account, Docker or extension required.
