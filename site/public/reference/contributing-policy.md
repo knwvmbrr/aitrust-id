@@ -35,3 +35,12 @@ labels stop meaning anything.
 ## Commits
 
 Sign off with DCO (`git commit -s`). No CLA — lower barrier, still gives provenance.
+
+## Change accountability
+
+Every source, public copy, policy, scope or operational-evidence change needs a
+new attributed record before build/deploy/commit. [Changelog](CHANGELOG.md),
+[policy and commands](docs/changelog-policy.md) and [scope completion ledger](docs/scope-progress.md)
+have separate jobs: history, enforcement, and acceptance.
+Use `npm run changelog -- --help`, then `npm run verify:changelog`; contributor
+is required. Engineering passes never substitute for independent tag validation.

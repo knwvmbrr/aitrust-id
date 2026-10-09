@@ -681,5 +681,22 @@
     "label_collection": "Owner-coordinated downloaded files; no automatic upload",
     "public_research_intake_active": false,
     "proprietary_assistant": "Allowed organization assistance direction, not adopted/trained in this pass; cannot validate itself"
+  },
+  "change_accountability": {
+    "status": "implemented; change-record and local site checks pass; public verification pending",
+    "policy": "docs/changelog-policy.md",
+    "changelog": "CHANGELOG.md",
+    "structured_events": "runs/changes/",
+    "enforcement": [
+      "npm site build/deploy",
+      "Make build/verify/deploy",
+      "full-history CI change range",
+      "versioned pre-commit hook checking actual staged index"
+    ],
+    "acceptance_percentages_unchanged": true,
+    "historical_records_backfilled_with_recording_timestamps": true,
+    "source_commit": null,
+    "public_verification_pending": true,
+    "independent_release_validated": false
   }
 }

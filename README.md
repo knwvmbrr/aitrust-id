@@ -255,3 +255,12 @@ keeps user research consent separate from engineering test logs. To refresh evid
 run regressions and the device suite, then `python scripts/build-tag-performance.py`
 using the verification environment. `npm run build:site` rejects stale method-bound
 reports; `npm run verify:performance` checks all panels, static pages and empty states.
+
+## Change accountability
+
+Every source, public copy, policy, scope or operational-evidence change needs a
+new attributed record before build/deploy/commit. [Changelog](CHANGELOG.md),
+[policy and commands](docs/changelog-policy.md) and [scope completion ledger](docs/scope-progress.md)
+have separate jobs: history, enforcement, and acceptance.
+Use `npm run changelog -- --help`, then `npm run verify:changelog`; contributor
+is required. Engineering passes never substitute for independent tag validation.

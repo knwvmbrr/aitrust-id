@@ -3,11 +3,33 @@ on: [push, pull_request]
 permissions:
   contents: read
 
+env:
+  AITRUST_CHANGELOG_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
 jobs:
+  change-records:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Exercise change record failure cases
+        run: python3 -m unittest discover -s tests -p test_changelog_pipeline.py -v
+      - name: Require records for the actual push or PR changes
+        env:
+          EVENT_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          change_base="$EVENT_BASE"
+          if [ -z "$change_base" ] || [ "$change_base" = "0000000000000000000000000000000000000000" ]; then
+            change_base="$(git hash-object -t tree /dev/null)"
+          fi
+          python3 scripts/verify-changelog.py --base "$change_base" --head HEAD
+
   host-config:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: sudo apt-get update && sudo apt-get install -y shellcheck
@@ -25,6 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python scripts/verify-scope-plan.py
@@ -34,6 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
@@ -46,6 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
@@ -57,6 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
@@ -73,6 +99,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
@@ -83,6 +110,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
         with: { node-version: "22" }
       - run: npm ci
@@ -93,6 +121,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
         with: { node-version: "22" }
       - uses: actions/setup-python@v5

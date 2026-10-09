@@ -8,7 +8,7 @@ check:
 	$(PYTHON) scripts/aitrust.py check --env-file "$(ENV_FILE)"
 doctor:
 	$(PYTHON) scripts/aitrust.py doctor --env-file "$(ENV_FILE)"
-build:
+build: verify-changelog
 	$(COMPOSE) build
 up:
 	$(COMPOSE) up -d --wait --wait-timeout 60
@@ -21,7 +21,7 @@ verify-ps:
 	$(PYTHON) scripts/verify-ps.py
 verify-device: site-build
 	AITRUST_VERIFY_PYTHON="$(PYTHON)" npm run verify:device
-verify: test
+verify: verify-changelog test
 	npm run verify:browser
 verify-runtime:
 	$(PYTHON) scripts/verify-runtime.py --env-file "$(ENV_FILE)"
@@ -35,7 +35,7 @@ deploy: build up
 .PHONY: site-build site-verify site-deploy
 site-build:
 	npm run build:site
-site-verify:
+site-verify: verify-changelog
 	npm run verify:enterprise
 	npm run verify:site
 	npm run verify:approachability
@@ -43,7 +43,7 @@ site-deploy: site-build
 	npm run deploy:site
 
 .PHONY: host-build host-verify host-deploy
-host-build:
+host-build: verify-changelog
 	bash -n deploy/host/bootstrap.sh deploy/host/deploy.sh deploy/host/verify.sh
 	$(PYTHON) -m py_compile deploy/host/verify.py
 host-verify:
@@ -52,7 +52,7 @@ host-deploy: host-build
 	bash deploy/host/deploy.sh
 
 .PHONY: backup-build backup-deploy backup-configure backup-verify
-backup-build:
+backup-build: verify-changelog
 	bash -n deploy/backup/bootstrap.sh deploy/backup/deploy.sh deploy/backup/verify.sh deploy/backup/schedule.sh deploy/backup/source-monitor.sh
 	$(PYTHON) -m py_compile deploy/backup/remote.py deploy/backup/cycle.py deploy/backup/verify.py deploy/backup/configure.py deploy/backup/restore.py deploy/backup/negative-checks.py deploy/backup/source-health.py
 	$(PYTHON) -m unittest discover -s tests -p test_backup_protocol.py -v
@@ -64,13 +64,13 @@ backup-verify:
 	bash deploy/backup/verify.sh
 
 .PHONY: alerts-build
-alerts-build:
+alerts-build: verify-changelog
 	bash -n deploy/alerts/install.sh
 	$(PYTHON) -m py_compile deploy/alerts/alerts.py
 	$(PYTHON) -m unittest discover -s tests -p test_operational_alerts.py -v
 
 .PHONY: notifications-build
-notifications-build:
+notifications-build: verify-changelog
 	bash -n deploy/notifications/install.sh deploy/notifications/prepare-edge.sh deploy/notifications/activate-edge.sh
 	$(PYTHON) -m py_compile deploy/notifications/provision.py deploy/notifications/verify-local.py
 
@@ -87,7 +87,13 @@ verify-progress:
 	$(PYTHON) scripts/scope-progress.py
 
 .PHONY: performance-build performance-verify
-performance-build:
+performance-build: verify-changelog
 	$(PYTHON) scripts/build-tag-performance.py
 performance-verify:
 	npm run verify:performance
+
+.PHONY: verify-changelog hooks-install
+verify-changelog:
+	$(PYTHON) scripts/verify-changelog.py
+hooks-install:
+	git config --local core.hooksPath .githooks

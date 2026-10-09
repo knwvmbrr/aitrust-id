@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-170616-earlier-performance-panels-ca4673d8",
+  "recorded_at": "2026-10-09T17:06:16.629344+00:00",
+  "author": "Codex",
+  "kind": "retrospective",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c5770c05783aa23ffd8c8fc7e8d71897629c9129",
+  "changed": "Recorded earlier published per-tag performance panels with counts, confidence bounds and explicit missing measurements.",
+  "proves": "Public panel checks and execution evidence cover the PS development examples and displayed evidence states.",
+  "limits": "Development fixture success does not clear the independent precision, sampling or calibration gates; other tags remain unmeasured.",
+  "scope_ids": [
+    "T-PS",
+    "F-133",
+    "WP-SITE"
+  ],
+  "files": {},
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-performance-ui-public.json",
+      "sha256": "8b308dabe4bf673b8e77c132df3ba575fc33bdfc817ab8730dd1065c5aade696"
+    },
+    {
+      "path": "runs/2026-10-09-performance-execution.json",
+      "sha256": "76896d1be5d97f15733f05cdecdf27f4989f6c6c30e4c1b6bfce8fe3c2d7d214"
+    }
+  ],
+  "checks": [],
+  "historical_source_commit": "8f1f1732f35591a31c867a80f20e68a4761e659a"
+}

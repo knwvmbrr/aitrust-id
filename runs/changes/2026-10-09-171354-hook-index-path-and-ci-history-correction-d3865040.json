@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-171354-hook-index-path-and-ci-history-correction-d3865040",
+  "recorded_at": "2026-10-09T17:13:54.468927+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c5770c05783aa23ffd8c8fc7e8d71897629c9129",
+  "changed": "Resolve the hook-provided Git index path against its original repository and give every CI build checkout full history for range verification; retain the blocked-commit diagnosis in the implementation record.",
+  "proves": "Twenty-four change-record regression tests and the complete Python suite pass, including the actual relative-index hook environment; YAML checks verify full history for every CI checkout.",
+  "limits": "The first commit attempt was blocked before publication; hosted Actions execution remains separate from these local checks, and no tag accuracy acceptance is advanced.",
+  "scope_ids": [
+    "F-150",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".githooks/pre-commit": "af5eaa8bbf27856fd2c1ce8b75ce078201388390ca6f738ea1c6fba95d0f6289",
+    ".github/workflows/ci.yml": "4f8dea688d3e2f94e17cbb1bf409573585ee23eb12931f8834e7feac65316290",
+    ".gitignore": "a6789d4a7ab54ced782965dc5ff89f25772c3f73aaf5c54a3aaf125043c6b181",
+    "CONTRIBUTING.md": "7a1826b4729a9ec2734860d40ece1ea21b85e8c515276901852b068358a96524",
+    "Makefile": "e26cfb00a98077f92c4c229a6725b5d0560c8b4f8060dbd4dcfc68c702b990f1",
+    "README.md": "8ef92cf7545289d4255e73ad30036d5552574c9f999872af3486a2fc4540ce0c",
+    "docs/change-accountability-plan.md": "8bf42a5affc07adc591b7759712682dba42aa542c46406391b999d915ee848ab",
+    "docs/change-accountability-result.md": "a42f91d8f007bf329b85838f387818f5850ab1c7df8b2f99db248597ffe756a2",
+    "docs/changelog-policy.md": "a2c06ca27ea3b1e57b669831c5ac4cb658063f944b6e28ee7209772232a2d842",
+    "docs/scope-progress.json": "2f0323b9c7393d4f2e5da2bc78a2a4e4580c9cc19bded29c15808be4cc51c413",
+    "docs/scope-progress.md": "c8234d9ba54d97ff02116696eb12eeee65a267850d735bbe8ca0fe8eed2c6ef0",
+    "package.json": "09972afc70818d6e73072d74ae1f49be9823524efea107df8178858ce4ebd4a6",
+    "runs/2026-10-09-change-log-ps-local.json": "bcd215e24f08798437140e8a6844e2a187ca2b47131760ac7e923faffe6b6cf4",
+    "runs/2026-10-09-changelog-hook-fix-checks.json": "de4329fe6333c91eb9021eba3289f41103a70af819d5d3ff1d5dff1ed9268c95",
+    "runs/2026-10-09-changelog-python-final.json": "3bf38e28849e9b8be1131e0287548fd3f7cf580811ad5724e655c5e9ed99c10b",
+    "runs/2026-10-09-changelog-python-local.json": "714d4ffd5204cf26a7b88149fd75c95b5fe1afcfa644728e5a4ca4fe57153e3b",
+    "runs/2026-10-09-changelog-scope-check.json": "92bd8065a0de9a0861d7c9423b5a63e4cc20763a5e81e7189dccdadcfebb643f",
+    "runs/2026-10-09-changelog-site-local.json": "54040c7adec80e191e142c3325c82f66946df2cb68095790730e791a66552a01",
+    "scripts/changelog-add.py": "e610909833f859b934e94685ad813d4431e89da41e2cd92a8470fdca686d7581",
+    "scripts/changelog_core.py": "bb2223c36402a400ae0f29831bc023d2b73283987e612f80ffa346f183b59943",
+    "scripts/verify-changelog.cjs": "abfb30687514dfeece5580b2f7ae4e0db69bb349809cf3353c5c6ddeee3b5a28",
+    "scripts/verify-changelog.py": "1cf376a682dce12aa4127acb204a5a9ddc722dc0d9e835954594b6877f5bf48f",
+    "scripts/verify-ps-results.cjs": "03495d240f4239e238b98c1cc07206fa44ea883f15d64f5c248262da2b16378a",
+    "site/index.html": "63dbf8523ca9f76cce43ffe124b58ae444cdc36148f1d8db5ced269c3e166c30",
+    "site/package.json": "58e212773bd6f0a15e184d3da06ec905a026baa02f32aeb3300ee83e4a4dadd3",
+    "site/public/reference/contributing-policy.md": "7a1826b4729a9ec2734860d40ece1ea21b85e8c515276901852b068358a96524",
+    "site/public/reference/public-scope.json": "30c80a95b306b6f2cfbe9bc4445ad1bff6fcc3aae050556f29368e831d9f4789",
+    "site/scripts/prepare.mjs": "19d684cfa479ad3cb640070aafe420a6f4685fdcb7144c362185de58df5441b2",
+    "site/scripts/render-reference.mjs": "1264393e32a52ca735c1a8e381864023e26d79df3961cf28439121a23704f612",
+    "site/src/main.jsx": "aa669662b6bb5657ba4d1cb7a6c0aef363520510aefdd7a0195cae8b5507fd85",
+    "site/src/presentation.js": "c8128e4a68089c176d366635844ad57d57f1f19c8384d41f408ad1026cd1ee48",
+    "site/src/ps-result.js": "aa0d5c6f44af14e58562dbf454f54232463a6801ee6fd47fb820ebcac957c9a3",
+    "site/src/public-scope.json": "30c80a95b306b6f2cfbe9bc4445ad1bff6fcc3aae050556f29368e831d9f4789",
+    "state.json": "4b09e4a72b473bcb63390dae9651f15832ba1f4923c99f059e32ee156d858ac5",
+    "tests/test_changelog_pipeline.py": "cd9cec9d7945be1a83d9839a526cfd51b7bf9a32b036b64cdaac4993a4d01671"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-changelog-hook-fix-checks.json",
+      "sha256": "de4329fe6333c91eb9021eba3289f41103a70af819d5d3ff1d5dff1ed9268c95"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_changelog_pipeline.py",
+        "-v"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-09T17:13:57.855139+00:00"
+    }
+  ]
+}

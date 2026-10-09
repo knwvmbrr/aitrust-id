@@ -1007,10 +1007,11 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -1023,9 +1024,13 @@
         "evidence": [
           "runs/2026-10-09-scope-regressions.json",
           "runs/2026-10-09-scope-completion-checks.json",
-          "runs/2026-10-08-upgrade-device-public.json"
+          "runs/2026-10-08-upgrade-device-public.json",
+          "docs/ps-result-clarity.md",
+          "runs/2026-10-09-ps-results-public.json",
+          "runs/2026-10-09-ps-results-deployment.json",
+          "runs/2026-10-09-performance-ui-public.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
         ],
@@ -6834,10 +6839,11 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6853,9 +6859,11 @@
           "runs/2026-10-09-branding-site-local.json",
           "runs/2026-10-08-scope-plan-site-public.json",
           "site/src/presentation.js",
-          "site/scripts/render-reference.mjs"
+          "site/scripts/render-reference.mjs",
+          "docs/ps-result-clarity.md",
+          "runs/2026-10-09-ps-results-public.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [],
         "queue": "completed"
       }
@@ -7293,10 +7301,11 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -7309,9 +7318,12 @@
         "evidence": [
           "runs/2026-10-08-upgrade-device-public.json",
           "runs/2026-10-08-scope-plan-site-public.json",
-          "docs/handheld-delivery.md"
+          "docs/handheld-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json",
+          "runs/2026-10-09-ps-results-public.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate."
         ],
@@ -8103,10 +8115,11 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -8119,9 +8132,13 @@
         "evidence": [
           "THREAT_MODEL.md",
           "runs/2026-10-08-owner-recovery-and-alerts-result.json",
-          "state.json"
+          "state.json",
+          "docs/changelog-policy.md",
+          "docs/change-accountability-plan.md",
+          "scripts/changelog_core.py",
+          "tests/test_changelog_pipeline.py"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings."
         ],
@@ -8806,9 +8823,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -8818,9 +8837,12 @@
         "next_fix": "Deliver Fleet deployment and policy management. Next package action: Specify enrollment, rollout cohorts, policy precedence and consent visibility. Required outcome: The application extends supported tags without disabling the personal workflow.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json",
+          "scripts/verify-enterprise.cjs"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Deliver Fleet deployment and policy management. Next package action: Specify enrollment, rollout cohorts, policy precedence and consent visibility. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
@@ -8859,9 +8881,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -8871,9 +8895,12 @@
         "next_fix": "Deliver Host-level capture agents. Next package action: Define OS permission/capture boundaries and visible stop controls. Required outcome: The application extends supported tags without disabling the personal workflow.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json",
+          "scripts/verify-enterprise.cjs"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Deliver Host-level capture agents. Next package action: Define OS permission/capture boundaries and visible stop controls. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
@@ -8912,9 +8939,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -8924,9 +8953,12 @@
         "next_fix": "Deliver Long-horizon retention and audit trails. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: The application extends supported tags without disabling the personal workflow.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json",
+          "scripts/verify-enterprise.cjs"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Deliver Long-horizon retention and audit trails. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
@@ -8964,9 +8996,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -8976,9 +9010,12 @@
         "next_fix": "Deliver SSO and directory integration. Next package action: Define role and tenant boundaries, admin recovery and audit events. Required outcome: The application extends supported tags without disabling the personal workflow.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json",
+          "scripts/verify-enterprise.cjs"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Deliver SSO and directory integration. Next package action: Define role and tenant boundaries, admin recovery and audit events. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
@@ -9016,9 +9053,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -9028,9 +9067,12 @@
         "next_fix": "Deliver Support with an SLA. Next package action: Define supported versions/hours, escalation, exclusions and service outcomes. Required outcome: The application extends supported tags without disabling the personal workflow.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json",
+          "scripts/verify-enterprise.cjs"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Deliver Support with an SLA. Next package action: Define supported versions/hours, escalation, exclusions and service outcomes. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
@@ -10629,10 +10671,11 @@
           "bounded_contract",
           "implemented_mechanism"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T17:06:15.922874+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -10644,9 +10687,11 @@
         "next_owner": "Codex",
         "evidence": [
           "site/src/policies.js",
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/approachable-tag-modals.md",
+          "runs/2026-10-09-approachable-public.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
         "required_acceptance": [
           "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
         ],

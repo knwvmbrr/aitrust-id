@@ -2,7 +2,7 @@ import {releasePolicy} from './policies.js';
 // Friendly introductions are separate from each tag's complete claim contract.
 // Examples describe a use case, never an evaluated result or a release promise.
 const descriptions = {
-  PS: ['Pause before running a command that downloads and runs code.', 'An AI answer gives you an install command. PS points out supported download-and-run patterns before you use it.', 'A warning is about the command, not proof of a scam. No warning does not mean it is safe.'],
+  PS: ['PS checks for commands that run downloaded or encoded code and explains what it finds.', 'An AI answer gives you an install command. PS points out supported download-and-run patterns before you use it.', 'A warning is about the command, not proof of a scam. No warning does not mean it is safe.'],
   PII_REDACTED: ['Keep detected personal details out of the local checker.', 'An answer includes an email address. The local service can remove detected values before checking the rest of the text.', 'Some sensitive details can be missed. This tag does not mean all private information is gone.'],
   NF: ['See how an answer lines up with the references you choose.', 'Compare an answer with your handbook and see the passages that support its claims.', 'Planned. A match is only as reliable as the reference; it is not proof of truth.'],
   FI: ['See where an answer disagrees with your references.', 'Compare a claim with your handbook and read the passage that contradicts it.', 'Planned. A disagreement does not prove dishonesty, and the reference could be wrong.'],

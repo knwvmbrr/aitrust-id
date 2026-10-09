@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-170616-earlier-ps-result-clarity-2abf697d",
+  "recorded_at": "2026-10-09T17:06:16.447165+00:00",
+  "author": "Codex",
+  "kind": "retrospective",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c5770c05783aa23ffd8c8fc7e8d71897629c9129",
+  "changed": "Recorded earlier published PS explanations, excerpts, availability and next steps against their existing scope IDs.",
+  "proves": "Public PS browser checks and deployment records describe the observed source commit; the recording timestamp is today, not an invented completion time.",
+  "limits": "Independent detector accuracy and human usability remain unverified; the current approved introduction is a separate change.",
+  "scope_ids": [
+    "T-PS",
+    "F-133",
+    "F-139"
+  ],
+  "files": {},
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-ps-results-public.json",
+      "sha256": "81165c3d6bab372afe458766e225d6c73873cd29577e479fc1cdbe3810ba0f74"
+    },
+    {
+      "path": "runs/2026-10-09-ps-results-deployment.json",
+      "sha256": "4a82e2e93ac2731a9f709b4f335af6144603a048695ac9b78d476607fdb40e0c"
+    }
+  ],
+  "checks": [],
+  "historical_source_commit": "28b66b8380613995adcda8bf31bdedf3dbd7ffcd"
+}

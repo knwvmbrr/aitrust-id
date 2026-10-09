@@ -27,7 +27,7 @@ export function explainPS(record,text){
   title:matches.length?'PS · Command-risk pattern found':'No supported pattern found',
   checked:'PS checked only download-and-run command patterns and supported encoded-code execution.',
   meaning:matches.length?'The matched parts below explain why PS flagged this answer. This is a pattern warning, not proof of a scam or malicious intent.':'PS found none of its supported command patterns. It did not check the answer for truth, scams, authorship or every possible danger.',
-  next:matches.length?'Pause before running it. Read the command and verify the source yourself. If you do not understand it, ask someone you trust to review it.':'Do not treat this as “safe” or “verified.” Check any important claims or instructions separately.',
+  next:matches.length?'Review this command before using it. Verify the source and ask someone you trust if anything is unclear.':'Do not treat this as “safe” or “verified.” Check any important claims or instructions separately.',
   matches:matches.slice(0,10),total_matches:matches.length
  };
 }

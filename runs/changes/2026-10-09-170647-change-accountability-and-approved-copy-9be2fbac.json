@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-170647-change-accountability-and-approved-copy-9be2fbac",
+  "recorded_at": "2026-10-09T17:06:47.904189+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c5770c05783aa23ffd8c8fc7e8d71897629c9129",
+  "changed": "Require fresh attributed scoped change events for actual Git differences, preserve earlier history, reconcile shipped presentation evidence with scope progress, provide a public changelog download and apply the approved centered PS introduction with shorter next-step wording.",
+  "proves": "Twenty actual-Git and writer failure-path tests cover fresh coverage, stale files, clean CI, explicit attribution, missing or changed proof, release overclaims, deletions and concurrent writers; scope checks retain 202 requirements, 39 packages and 117 subtasks.",
+  "limits": "Engineering log enforcement does not confer tag validation, change acceptance percentages, publish unrelated contributor drafts or replace human usability review; low-level provider commands can bypass wrappers.",
+  "scope_ids": [
+    "F-150",
+    "WP-RELEASE",
+    "WP-SITE",
+    "F-139",
+    "T-PS",
+    "F-133",
+    "N-010",
+    "F-159",
+    "F-160",
+    "F-161",
+    "F-162",
+    "F-163"
+  ],
+  "files": {
+    ".githooks/pre-commit": "8ab29938323f1692bfea48b9a9972ca0ea42df3663e997181926894788780f8a",
+    ".github/workflows/ci.yml": "987b88be805232c01f17b6cfed92a83edc120f31e39c785821983ccafd85bcee",
+    "CONTRIBUTING.md": "7a1826b4729a9ec2734860d40ece1ea21b85e8c515276901852b068358a96524",
+    "Makefile": "bf2cc23f914c55dbfeeee55eff92ad232bc55af7214d22cb0c634f76cc806b29",
+    "README.md": "8ef92cf7545289d4255e73ad30036d5552574c9f999872af3486a2fc4540ce0c",
+    "docs/change-accountability-plan.md": "c79410418f8c735adbe93484c4441547a722d0ca77b3a7c8ff08e7c12dd1deb7",
+    "docs/changelog-policy.md": "75fe5670427fd2a0f6ab2b7f6b3be30c174f56b039651a5df52b39065926f2dc",
+    "docs/scope-progress.json": "2f0323b9c7393d4f2e5da2bc78a2a4e4580c9cc19bded29c15808be4cc51c413",
+    "docs/scope-progress.md": "c8234d9ba54d97ff02116696eb12eeee65a267850d735bbe8ca0fe8eed2c6ef0",
+    "package.json": "09972afc70818d6e73072d74ae1f49be9823524efea107df8178858ce4ebd4a6",
+    "runs/2026-10-09-changelog-scope-check.json": "92bd8065a0de9a0861d7c9423b5a63e4cc20763a5e81e7189dccdadcfebb643f",
+    "scripts/changelog-add.py": "e610909833f859b934e94685ad813d4431e89da41e2cd92a8470fdca686d7581",
+    "scripts/changelog_core.py": "4294b8c1ce46916a46439011d9a4033294382ee834424afe0e00fe1ca1b3549b",
+    "scripts/verify-changelog.cjs": "abfb30687514dfeece5580b2f7ae4e0db69bb349809cf3353c5c6ddeee3b5a28",
+    "scripts/verify-changelog.py": "5784680d7cd691010b429c6f9a35a3f5e103155a471f04112761ef8a4737298f",
+    "scripts/verify-ps-results.cjs": "805f123684c4357135cbbd9a6d547ead07e200c9d3b4eaa8e752413bc9e8a871",
+    "site/package.json": "58e212773bd6f0a15e184d3da06ec905a026baa02f32aeb3300ee83e4a4dadd3",
+    "site/scripts/prepare.mjs": "19d684cfa479ad3cb640070aafe420a6f4685fdcb7144c362185de58df5441b2",
+    "site/scripts/render-reference.mjs": "c411f36b411a0691ff2564adff6fe9b3f45b9c510cf130620afe936910d3e668",
+    "site/src/main.jsx": "aa669662b6bb5657ba4d1cb7a6c0aef363520510aefdd7a0195cae8b5507fd85",
+    "site/src/presentation.js": "c8128e4a68089c176d366635844ad57d57f1f19c8384d41f408ad1026cd1ee48",
+    "site/src/ps-result.js": "aa0d5c6f44af14e58562dbf454f54232463a6801ee6fd47fb820ebcac957c9a3",
+    "state.json": "954ca22b62ef4b127925936d88165093a007a6ca5c6d943c2c1cc5f0ce0c805f",
+    "tests/test_changelog_pipeline.py": "9174c410bd4240f211d831216e1308db82ba7bc9509cc6aabb0c2d53ac7521c4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-changelog-scope-check.json",
+      "sha256": "92bd8065a0de9a0861d7c9423b5a63e4cc20763a5e81e7189dccdadcfebb643f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_changelog_pipeline.py",
+        "-v"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-09T17:06:54.056198+00:00"
+    }
+  ]
+}

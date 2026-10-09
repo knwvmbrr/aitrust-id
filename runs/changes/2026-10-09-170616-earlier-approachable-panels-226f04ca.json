@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-170616-earlier-approachable-panels-226f04ca",
+  "recorded_at": "2026-10-09T17:06:16.564318+00:00",
+  "author": "Codex",
+  "kind": "retrospective",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c5770c05783aa23ffd8c8fc7e8d71897629c9129",
+  "changed": "Recorded earlier published examples, compact disclosures, complete catalogue downloads and six distinct enterprise descriptions against their existing scope IDs; the entry acknowledges Claude enterprise-copy contributions reviewed and corrected by Codex.",
+  "proves": "Public panel and deployment records identify the shipped implementation and automated checks.",
+  "limits": "No enterprise service or additional detector is released; automated UI checks do not establish human usability or independent accuracy.",
+  "scope_ids": [
+    "F-139",
+    "N-010",
+    "F-159",
+    "F-160",
+    "F-161",
+    "F-162",
+    "F-163"
+  ],
+  "files": {},
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-approachable-public.json",
+      "sha256": "1b76587db188a224c810513093c295d305ad91e844c545df540ad80b7d1b9c0b"
+    },
+    {
+      "path": "runs/2026-10-09-approachable-deployment.json",
+      "sha256": "6be65442bead2fbfd4e47c3de2ed96096bf1332fdd25fea90d3b5f48d3789154"
+    }
+  ],
+  "checks": [],
+  "historical_source_commit": "53f876cf17c14df129dbefb5121e26cfdb3bc9cc"
+}

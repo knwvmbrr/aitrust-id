@@ -1,5 +1,70 @@
 # Changelog
 
+## Unreleased — 2026-10-09
+
+### 2026-10-09-171354-hook-index-path-and-ci-history-correction-d3865040
+
+Recorded 2026-10-09T17:13:54.468927+00:00 · Contributor: Codex · change
+
+- **Changed.** Resolve the hook-provided Git index path against its original repository and give every CI build checkout full history for range verification; retain the blocked-commit diagnosis in the implementation record.
+- **Evidence.** Twenty-four change-record regression tests and the complete Python suite pass, including the actual relative-index hook environment; YAML checks verify full history for every CI checkout. [Change record](./runs/changes/2026-10-09-171354-hook-index-path-and-ci-history-correction-d3865040.json).
+- **Not claimed.** The first commit attempt was blocked before publication; hosted Actions execution remains separate from these local checks, and no tag accuracy acceptance is advanced.
+
+
+### 2026-10-09-171104-staged-commit-and-final-local-evidence-0a781159
+
+Recorded 2026-10-09T17:11:04.862898+00:00 · Contributor: Codex · change
+
+- **Changed.** Enforce change coverage against the actual staged index and supported host/backup build targets, retain the contributor drafts separately, and record the final local evidence with a documented correction to the PS next-step assertion.
+- **Evidence.** Twenty-three change-record tests and the full Python suite pass; local site and PS-result checks verify the real download, centered introduction, matched evidence and all existing catalogue routes. [Change record](./runs/changes/2026-10-09-171104-staged-commit-and-final-local-evidence-0a781159.json).
+- **Not claimed.** Hosted CI execution and public deployment are separate observations; no independent tag release, additional working tag or acceptance-percentage increase is claimed.
+
+
+### 2026-10-09-170732-generated-scope-and-reference-checks-d20d51b0
+
+Recorded 2026-10-09T17:07:32.134355+00:00 · Contributor: Codex · change
+
+- **Changed.** Project the reconciled scope into static and interactive reference data, preserve the generated changelog copy outside source tracking, and verify the actual download plus centered introduction without centering result evidence.
+- **Evidence.** The site build succeeds with unchanged pinned PS method and bundle hashes; scope verification retains all 202 IDs and all acceptance percentages. [Change record](./runs/changes/2026-10-09-170732-generated-scope-and-reference-checks-d20d51b0.json).
+- **Not claimed.** The downloadable changelog is a deployment snapshot; Git holds newer operational records. Build warnings about bundle size remain, and no independent tag accuracy claim is made.
+
+
+### 2026-10-09-170647-change-accountability-and-approved-copy-9be2fbac
+
+Recorded 2026-10-09T17:06:47.904189+00:00 · Contributor: Codex · change
+
+- **Changed.** Require fresh attributed scoped change events for actual Git differences, preserve earlier history, reconcile shipped presentation evidence with scope progress, provide a public changelog download and apply the approved centered PS introduction with shorter next-step wording.
+- **Evidence.** Twenty actual-Git and writer failure-path tests cover fresh coverage, stale files, clean CI, explicit attribution, missing or changed proof, release overclaims, deletions and concurrent writers; scope checks retain 202 requirements, 39 packages and 117 subtasks. [Change record](./runs/changes/2026-10-09-170647-change-accountability-and-approved-copy-9be2fbac.json).
+- **Not claimed.** Engineering log enforcement does not confer tag validation, change acceptance percentages, publish unrelated contributor drafts or replace human usability review; low-level provider commands can bypass wrappers.
+
+
+### 2026-10-09-170616-earlier-performance-panels-ca4673d8
+
+Recorded 2026-10-09T17:06:16.629344+00:00 · Contributor: Codex · retrospective
+
+- **Changed.** Recorded earlier published per-tag performance panels with counts, confidence bounds and explicit missing measurements.
+- **Evidence.** Public panel checks and execution evidence cover the PS development examples and displayed evidence states. [Change record](./runs/changes/2026-10-09-170616-earlier-performance-panels-ca4673d8.json).
+- **Not claimed.** Development fixture success does not clear the independent precision, sampling or calibration gates; other tags remain unmeasured.
+
+
+### 2026-10-09-170616-earlier-approachable-panels-226f04ca
+
+Recorded 2026-10-09T17:06:16.564318+00:00 · Contributor: Codex · retrospective
+
+- **Changed.** Recorded earlier published examples, compact disclosures, complete catalogue downloads and six distinct enterprise descriptions against their existing scope IDs; the entry acknowledges Claude enterprise-copy contributions reviewed and corrected by Codex.
+- **Evidence.** Public panel and deployment records identify the shipped implementation and automated checks. [Change record](./runs/changes/2026-10-09-170616-earlier-approachable-panels-226f04ca.json).
+- **Not claimed.** No enterprise service or additional detector is released; automated UI checks do not establish human usability or independent accuracy.
+
+
+### 2026-10-09-170616-earlier-ps-result-clarity-2abf697d
+
+Recorded 2026-10-09T17:06:16.447165+00:00 · Contributor: Codex · retrospective
+
+- **Changed.** Recorded earlier published PS explanations, excerpts, availability and next steps against their existing scope IDs.
+- **Evidence.** Public PS browser checks and deployment records describe the observed source commit; the recording timestamp is today, not an invented completion time. [Change record](./runs/changes/2026-10-09-170616-earlier-ps-result-clarity-2abf697d.json).
+- **Not claimed.** Independent detector accuracy and human usability remain unverified; the current approved introduction is a separate change.
+
+
 ## 0.1.0 development preview — 2026-10-09
 
 - State personal availability explicitly: PS website preview, PII local service, twelve planned/proposed entries. Catalogue completeness does not imply detector completeness.

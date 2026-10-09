@@ -15,7 +15,10 @@
     "verify:performance": "node scripts/verify-performance.cjs",
     "verify:enterprise": "node scripts/verify-enterprise.cjs",
     "verify:approachability": "node scripts/verify-approachability.cjs",
-    "verify:ps-results": "node scripts/verify-ps-results.cjs"
+    "verify:ps-results": "node scripts/verify-ps-results.cjs",
+    "verify:changelog": "node scripts/verify-changelog.cjs",
+    "changelog": "python3 scripts/changelog-add.py",
+    "test:changelog": "python3 -m unittest discover -s tests -p test_changelog_pipeline.py -v"
   },
   "devDependencies": {
     "playwright": "1.62.1",
