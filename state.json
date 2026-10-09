@@ -194,6 +194,26 @@
       "public_evidence": "runs/2026-10-09-performance-ui-public.json",
       "source_commit": "8f1f1732f35591a31c867a80f20e68a4761e659a",
       "public_asset_evidence": "runs/2026-10-09-performance-assets-public.json"
+    },
+    "approachable_modals": {
+      "status": "local_checks_passed; production_publication_pending",
+      "records": 20,
+      "architecture": "docs/approachable-tag-modals.md",
+      "human_usability_test": false,
+      "detector_changed": false,
+      "catalogue_export_type": "catalogue_description",
+      "enterprise_claim_corrections": [
+        "ChatGPT content-script access",
+        "Catalogue description versus evaluated-result export",
+        "Proposed versus enforced SSO permissions",
+        "Optional author receipts",
+        "Private security disclosure",
+        "Host capture reference"
+      ],
+      "local_evidence": "runs/2026-10-09-approachable-local.json",
+      "site_evidence": "runs/2026-10-09-approachable-site-local.json",
+      "automated_axe_violations": 0,
+      "physical_phone": false
     }
   },
   "previous_runtime_verification": {

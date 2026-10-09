@@ -16,13 +16,113 @@ export const personTags=[
  tag('SC','SC','Scam pattern','Coming Soon',{scopeId:'T-SC',proposed:true,job:'Research validated co-occurring fraud indicators in context.',outcome:'See possible fraud indicators and what they do or do not establish.',claim:'A proposed possible scam pattern, never an unqualified accusation.',method:'Pressure, value-transfer, identity, and channel-switch indicator families. Co-occurrence is an unmeasured hypothesis, not independent corroboration.',inputs:'Content and contextual evidence.',supported:['Research proposal only'],limits:['Weak indicators may share one cause','News, quotations, and legitimate requests can contain the same terms','Recall tradeoffs must publish false positives and allow dismissal'],features:[],floor:'Unmeasured proposal.',references:[...shared.references,'/reference/0004-tag-claim-boundaries.md']}),
  tag('BT','BT','Automation pattern','Coming Soon',{scopeId:'T-BT',proposed:true,job:'Research positive evidence of automation without inferring it from absent human activity.',outcome:'See validated observations without calling ordinary human repetition a bot.',claim:'Proposed automation observation; cannot establish automation from style alone.',method:'Candidate timing and duplicate-construction indicators require validation; no detector exists.',inputs:'Positive, consented evidence within a defined observation scope.',supported:['Research proposal only'],limits:['Templates, repetition, timing, and learned writing patterns are not automation proof','Absent human evidence never becomes a bot verdict','Does not ship if indicators cannot separate ordinary human behavior'],features:['F-086','F-083'],floor:'Unmeasured proposal.',references:[...shared.references,'/reference/0004-tag-claim-boundaries.md']})
 ];
-const offering=(id,code,name,scopeId,job,outcome,limits)=>({...shared,id,code,name,scopeId,audience:'enterprise',status:'Coming Soon',proposed:true,kind:'Organization tag offering',job,outcome,claim:'An organization capability supporting tags, not a new detection verdict or an accepted protocol code.',method:'Planned organization layer over independently validated tag methods.',inputs:'Organization configuration and supported tag records.',supported:['Proposed organization-only capability'],limits:[...limits,'Underlying personal detection and evidence remain free'],validation:'No enterprise implementation or conformance evidence exists.',price:'Proposed paid organization offering. Pricing is not set; no purchase or subscription is available.',features:[scopeId],references:['/reference/public-scope.json']});
+// Enterprise offerings. Each one carries its OWN claim, method, inputs, outputs,
+// checks, limits and validation. They previously shared a single factory body,
+// which made all six panels read identically -- "What it checks" said
+// "Proposed organization-only capability" on every one of them. An offering
+// that cannot describe itself independently is not an offering.
+//
+// `today` is the honest answer to "what can I use right now, with no contract":
+// for several of these it is a real, verifiable artifact; for others it is
+// nothing, and the panel says nothing.
+const orgShared={version:'Development · standard v0.1.0',audience:'enterprise',status:'Coming Soon',proposed:true,kind:'Organization tag offering',
+ owner:'Maintainers own implementation; independent reviewers own validation; the product owner accepts release and any organization commitment.',
+ price:'Proposed paid organization offering. Pricing is not set, there is no checkout, and no subscription or contract is available. The personal detection, evidence and verification capabilities stay free and open.',
+ failure:'A failed or unsupported organization capability must not become a finding, and must not disable the personal workflow or any unrelated tag.',
+ references:['/reference/public-scope.json']};
+const offering=(id,code,name,scopeId,fields)=>({...orgShared,id,code,name,scopeId,features:[scopeId],...fields});
 export const enterpriseTags=[
- offering('fleet','FLEET','Fleet tags','F-159','Deploy and manage tag tools across an organization.','Apply deployment policy without changing a tag’s evidence standard.',['Organization policies must not silently redefine tag claims']),
- offering('host','HOST','Host capture tags','F-160','Capture supported artifacts at a host or managed-device layer.','Bind tag records to artifacts beyond one browser adapter.',['Requires consent, least privilege, and a reviewed capture boundary']),
- offering('audit','AUDIT','Audit tags','F-161','Retain versioned tag records for organization audit.','Trace record versions, review, and corrections under a defined retention policy.',['No raw content retention without a separate accepted privacy contract']),
- offering('sso','SSO','Identity-managed tags','F-162','Manage organization access to tag workflows using directory identity.','Assign least-privilege roles to organization workflows.',['Authentication is not evidence that a content claim is true']),
- offering('support','SUPPORT','Supported team tags','F-163','Provide contracted deployment and maintenance support.','Know who owns response and maintenance commitments.',['No SLA or response-time promise exists today']),
- offering('proprietary','PRIVATE','Proprietary tag package','N-010','Define organization-specific tag workflows and policy extensions.','Apply a private policy with clear provenance and claim boundaries.',['Display names here are offering names, not adopted standard codes','Private policy must not dilute or misrepresent the public standard'])
+ offering('fleet','FLEET','Fleet tags','F-159',{
+  job:'Deploy and manage tag tools across an organization.',
+  outcome:'Apply deployment policy without changing what a tag is allowed to claim.',
+  claim:'A deployment and policy capability. It changes who runs a tag and where, never what a tag asserts or how confident it is.',
+  method:'Planned managed configuration layered over the existing extension and local checker. No server-side evaluation, and no policy hook that can alter a tag threshold or claim.',
+  inputs:'Organization deployment policy and the existing extension/local-checker configuration.',
+  outputs:'A deployment state per device and an unchanged tag record contract.',
+  today:"You can review the extension’s access to chatgpt.com and your local gateway (127.0.0.1:8787) in the public source. Team rollout is still planned.",
+  supported:["Available now — inspect storage permission, loopback gateway access and ChatGPT content-script access in the manifest", "Available now — try the personal on-device PS checker without an account", "Planned — managed installation and updates with a stable release identity", "Planned — choose which tags run for each group"],
+  limits:["The development extension is side-loaded; there is no tested managed install or update route yet", "Team settings must not silently redefine a tag claim, threshold or evidence standard", "Rolling out a tool does not independently validate its findings", "Underlying personal detection and evidence remain free"],
+  validation:'No managed deployment has been built or tested. The permission surface claim above is verifiable from extension/manifest.json in the public repository.',
+  privacy:"The intended rollout must preserve F-086: no extension or service telemetry. Today the content script reads supported ChatGPT answers and sends them to your local gateway. A managed configuration must not quietly add a reporting channel.",
+  release:"Define and test a managed distribution and update route with a stable release identity. Verify F-086 under managed settings and F-096 when the gateway is down, the token is invalid or a page is unsupported.",
+  features:['F-159','F-086','F-096'],
+  dependencies:["Tested managed distribution and stable release identity", "Accepted privacy terms (WP-PRIVACY)", "Accepted release process (WP-RELEASE)"]}),
+ offering('host','HOST','Host capture tags','F-160',{
+  job:'Capture supported artifacts at a host or managed-device layer.',
+  outcome:'Bind tag records to artifacts beyond one browser adapter.',
+  claim:'A capture-scope capability. Widening what can be observed never widens what a tag may assert about it.',
+  method:'Planned host agent with an explicit path allowlist and a per-session consent gate. Not built.',
+  inputs:'Consented, enumerated artifact paths on a managed device.',
+  outputs:'A tag record bound to a host artifact, with the capture scope recorded in the record itself.',
+  today:"There is no host agent to install. You can review its planned capture boundaries in F-087 and the consent, pause, reset and deletion requirements in N-004 in the public scope.",
+  supported:['Available now — the intended capture boundary is written down and reviewable before anyone pilots anything','Planned — enumerated path allowlist with no directory traversal','Planned — per-session consent with a visible indicator while capture is active','Planned — capture scope recorded inside every record the agent produces'],
+  limits:["No host agent or tested consent flow exists yet", "Requires consent, least privilege and an independently reviewed capture boundary", "Access must be limited to explicitly supported artifacts; wider access adds privacy exposure", "Underlying personal detection and evidence remain free"],
+  validation:"No host implementation has been tested. Capture boundaries, consent and security review are required before a pilot.",
+  privacy:"An agent may access only the agreed artifacts. N-004 covers consent, pause, reset and deletion; F-087 requires clear capture boundaries. No host agent is collecting files today.",
+  release:"Publish and independently review the capture boundary. Test consent, pause, reset, deletion, allowed paths and denied access before a pilot. The browser adapter is a separate capture route, not proof that a host agent is safe.",
+  features:['F-160','F-087','N-004','F-030'],
+  dependencies:['Reviewed capture boundary (WP-CAPTURE)','Accepted privacy terms (WP-PRIVACY)','Accepted release process (WP-RELEASE)'],
+  references:['/reference/public-scope.json']}),
+ offering('audit','AUDIT','Audit tags','F-161',{
+  job:'Retain versioned tag records for organization audit.',
+  outcome:'Trace record versions, review and corrections under a defined retention policy.',
+  claim:'A retention and traceability capability. Keeping a record longer does not make the finding in it more certain.',
+  method:'Planned organization retention over the existing versioned record contract. The record format is the same one the personal workflow already emits.',
+  inputs:'Tag records the organization already holds, plus an accepted retention period.',
+  outputs:'A version history per record, with review and correction events, under a stated retention and deletion policy.',
+  today:"Today, you can save the summary from a PS check. Detailed results are optional and include privacy-sensitive fingerprints. Download details here saves this offering’s description, not a checked answer.",
+  supported:["Available now — download a summary after an on-device PS check", "Available now — opt in to a detailed PS result with a method hash and evidence positions", "Planned — record history, review and correction events", "Planned — team retention and deletion rules"],
+  limits:["No organization audit store, automatic upload or retention service runs today", "Detailed exports can link or reveal information through subject hashes and evidence positions, even without answer text", "Saving a result does not independently validate the finding", "Underlying personal detection and evidence remain free"],
+  validation:"PS result exports and catalogue-description exports are separate tested workflows. Team storage, version history and correction events are not implemented.",
+  privacy:"Choose what to keep and who can access it before storage is enabled. F-044 has a hashes-only, 30-day registry scope; that is not an active audit service or a universal retention policy. Detailed PS exports need your separate choice to include fingerprints and positions.",
+  release:"Agree approved fields, access, retention and deletion before enabling storage. Implement corrections and supersession (N-005), revalidation (N-006) and versioned signal references (F-003). Test that deletions and access restrictions work.",
+  features:['F-161','F-003','F-044','N-005','N-006'],
+  dependencies:['Operations ownership (WP-OPERATIONS)','Accepted privacy terms (WP-PRIVACY)','Record version contract (WP-PROTOCOL)']}),
+ offering('sso','SSO','Identity-managed tags','F-162',{
+  job:'Manage organization access to tag workflows using directory identity.',
+  outcome:'Assign least-privilege roles to organization workflows.',
+  claim:'An access-control capability. Knowing who is signed in says nothing whatsoever about whether a content claim is true.',
+  method:"Proposed directory integration with separate configuration, viewing, review and export permissions. No identity provider is connected today.",
+  inputs:'Organization directory groups and the published role definitions.',
+  outputs:'An authorization decision per workflow, and an access event that is kept separate from any tag record.',
+  today:"Review the proposed configure, view, review and export permissions against your team’s groups. These are design choices to discuss, not enforced roles or a working sign-in service.",
+  supported:["Available now — review the proposed permission split in this catalogue", "Planned — separate policy administration from independent review authority", "Planned — SAML or OIDC group mapping", "Planned — access events kept separate from tag findings"],
+  limits:["Signing in does not prove a finding is correct", "No identity provider or role enforcement has been tested", "An administrator’s permissions must not silently grant independent review status", "Underlying personal detection and evidence remain free"],
+  validation:'No identity provider has been integrated and no access control has been tested. The role split is a design proposal open to review.',
+  privacy:"Directory identity is personal data. Define access-event fields and retention separately from tag findings. Response and revision binding (F-088) must not turn into an unsupported claim about a person’s identity.",
+  release:"Test least-privilege role mapping, denied access and review independence. Verify that authors can decline receipt issuance (F-128), and review key custody (F-129) and group authorship (F-130) under team identity. Login must not be used to coerce attestation.",
+  features:['F-162','F-088','F-128','F-129','F-130'],
+  dependencies:['Operations ownership (WP-OPERATIONS)','Accepted privacy terms (WP-PRIVACY)']}),
+ offering('support','SUPPORT','Supported team tags','F-163',{
+  job:'Provide contracted deployment and maintenance support.',
+  outcome:'Know who owns response and maintenance commitments.',
+  claim:'An ownership and response capability. It is a commitment about people and timelines, not about accuracy.',
+  method:'Planned contracted support over the existing public channels. No contract, retainer or paid tier exists.',
+  inputs:'An accepted support agreement and a named organization contact.',
+  outputs:'A named owner per issue class and an agreed response commitment.',
+  today:"You can report defects for free today. Use the private vulnerability channel for security issues, and public issue reports for non-sensitive defects. Accessibility problems are treated as defects under the published policy; there is no paid support or promised response time yet.",
+  supported:["Available now — private security disclosure through the repository", "Available now — accessibility defect reporting under the published policy", "Planned — a named owner for each support responsibility", "Planned — agreed response commitments under a support contract"],
+  limits:["No support contract or response-time promise is offered today", "Support cannot substitute for independent tag validation", "Staffing and escalation need to be verified before promising coverage", "Underlying personal detection and evidence remain free"],
+  validation:'No support contract has been offered, priced or honoured. The disclosure channels above are live and documented.',
+  privacy:'An issue report can contain the content someone was checking, which is why neither original nor redacted content should be attached to a public report. Support correspondence is not a content store and must not become one.',
+  release:"Name support owners and escalation routes, verify coverage, and test the commitments before offering a contract. Check failure handling (F-096) so a service problem cannot turn into a misleading finding.",
+  features:['F-163','F-096'],
+  dependencies:['Operations ownership (WP-OPERATIONS)','Published site and contact surface (WP-SITE)'],
+  references:['/reference/public-scope.json']}),
+ offering('proprietary','PRIVATE','Proprietary tag package','N-010',{
+  job:'Define organization-specific tag workflows and policy extensions.',
+  outcome:'Apply a private policy with clear provenance and claim boundaries.',
+  claim:'A private extension capability, bounded so that a private policy can add obligations but never weaken a public claim.',
+  method:'Planned private policy layer with a published list of what a private policy may and may not do. Not built.',
+  inputs:'An organization policy document and the public standard it extends.',
+  outputs:'A private policy identifier recorded on affected records, so a reader can tell which policy produced a result.',
+  today:"Review the proposed boundaries: private policies may add stricter requirements or narrow the scope. They must not lower a public threshold, change a public code’s meaning, hide limits or present a private result as public-standard validation. No private policy engine is running yet.",
+  supported:["Available now — review the proposed private-policy boundaries in this catalogue", "Available now — offering names are distinguished from adopted standard codes", "Planned — identify the private policy on each affected record", "Planned — test that private rules do not weaken public claims"],
+  limits:['Display names here are offering names, not adopted standard codes','A private policy must not dilute or misrepresent the public standard, and must never reuse a public tag code for a different claim','A private extension is not a private fork of the evidence standard; thresholds move one way only, upward','Underlying personal detection and evidence remain free'],
+  validation:"The boundaries are a reviewable design, not an adopted conformance program. No private policy engine or enforcement tests exist yet.",
+  privacy:"A private policy must preserve consent and the public privacy commitments. Team payment does not waive no-telemetry (F-086) or capture boundaries (F-087) for the people whose content is checked.",
+  release:'Build the conformance check for the four prohibitions before offering this commercially, so a private policy that lowers a published threshold or reuses a public code fails a test rather than a conversation. WP-VALIDATION gates it: an extension mechanism with no conformance check is an invitation to dilute the standard quietly.',
+  features:['N-010','F-086','F-087'],
+  dependencies:['Accepted privacy terms (WP-PRIVACY)','Record version contract (WP-PROTOCOL)','Independent validation (WP-VALIDATION)']})
 ];
 export const allTags=[...personTags,...enterpriseTags];

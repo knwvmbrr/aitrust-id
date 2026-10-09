@@ -101,6 +101,7 @@ jobs:
       - run: pip install -r eval/requirements.txt
       - run: npm ci
       - run: npm ci --prefix site
+      - run: npm run verify:enterprise
       - run: npm run build:site
       - run: npx playwright install --with-deps chromium webkit
       - name: Device method parity, offline and private input boundaries
@@ -116,5 +117,6 @@ jobs:
           done
           npm run verify:site
           npm run verify:performance
+          npm run verify:approachability
           npm run verify:workflows
           npm run verify:policies

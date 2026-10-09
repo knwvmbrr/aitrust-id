@@ -35,13 +35,14 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    for(const id of ids){
     const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
     assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
+    assert(await dialog.locator('[data-tag-example]').innerText(),id+' missing everyday example');
     const validation=await dialog.getByRole('region',{name:'Validation status'}).innerText();assert(validation.includes('Every tag must pass its own published validation gate before release.'),'Release gate missing');assert(validation.includes(['PS','PII_REDACTED'].includes(id)?'Validation in progress':'Validation required before release'),'Wrong validation stage');
     assert(await dialog.locator('details').count()===(['PS','PII_REDACTED'].includes(id)?4:3),id+' must have its compact disclosures and applicable setup');
     const use=dialog.locator('[data-tag-usage]');assert(await use.count()===1,id+' use instructions missing');
     if(['PS','PII_REDACTED'].includes(id)){await use.locator('summary').click();assert(await use.locator('ol li').count()===4,'Setup must have four steps');await use.getByRole('button',{name:'Copy step 1 commands'}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='git clone https://github.com/knwvmbrr/aitrust-id.git\ncd aitrust-id','Command copy differs from displayed instructions');await use.locator('summary').click();}
     else{assert((await use.innerText()).includes('Coming Soon')||(await use.innerText()).includes('Research proposal'),'Unavailable tag overclaims installation');assert(await use.getByRole('link',{name:'Download source',exact:true}).count()===0,'Unavailable tag has fake download');}
     assert(await dialog.locator('details[open]').count()===0,id+' details must start collapsed');
-    for(const title of ['How it works','Testing and evidence','Privacy, access and all features']){
+    for(const title of ['How it works','Testing and evidence','Privacy and full details']){
      const summary=dialog.locator('summary').filter({hasText:title});await summary.focus();await page.keyboard.press('Enter');
      assert(await summary.evaluate(e=>e.parentElement.open),id+' disclosure is not keyboard operable');
     }
@@ -50,13 +51,14 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      await dialog.getByRole('button',{name:'Download details',exact:true}).scrollIntoViewIfNeeded();
      const downloadEvent=page.waitForEvent('download');await dialog.getByRole('button',{name:'Download details',exact:true}).click();
      const exported=JSON.parse(fs.readFileSync(await (await downloadEvent).path(),'utf8'));
+     assert(exported.record_type==='catalogue_description'&&exported.evaluated_result===false,'Catalogue export is not distinguished from evaluated result');
      const catalog=await import('../site/src/catalog.js');const expected=catalog.allTags.find(t=>t.id==='PS');
      for(const key of Object.keys(expected))assert(JSON.stringify(exported[key])===JSON.stringify(expected[key]),'Full detail export lost '+key);
     }
 
     if(id==='PS'){
-     assert(await dialog.getByRole('link',{name:'Download source',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','PS download path missing');
-     assert(await dialog.getByRole('link',{name:'Try locally',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
+     assert(await dialog.locator('[data-tag-usage] a').filter({hasText:'Download source'}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','PS download path missing');
+     assert(await dialog.locator('[data-tag-usage] a').filter({hasText:'Try locally'}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
      await axe();
      await dialog.getByRole('button',{name:'Report an issue',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();
      await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByRole('alert').innerText()==='Describe what happened and what you expected.','Required description not enforced');

@@ -36,7 +36,9 @@ deploy: build up
 site-build:
 	npm run build:site
 site-verify:
+	npm run verify:enterprise
 	npm run verify:site
+	npm run verify:approachability
 site-deploy: site-build
 	npm run deploy:site
 

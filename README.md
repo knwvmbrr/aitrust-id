@@ -15,7 +15,7 @@ uses the existing `PS` code with a bounded command-risk explanation. `UC`, `SC`,
 The public tag catalogue is live at [aitrustid.com](https://aitrustid.com), with
 Person/Enterprise views, compact tag tiles, a tag logo, Light/Dark/System appearance
 and compact tag-detail modals with a plain-language purpose, limitation and visible
-validation status. Deeper methods, testing and feature details expand on request. Twenty [static tag reference pages](https://aitrustid.com/tags/)
+validation status. Each panel starts with an everyday example and a clear next action. Deeper methods, testing and feature details expand on request. Catalogue downloads identify themselves as descriptions; PS result exports remain a separate workflow. Enterprise plans describe their own scope without presenting reviewable designs as running services. Twenty [static tag reference pages](https://aitrustid.com/tags/)
 and a [32-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
 to crawlers. Google indexing and Search Console ownership remain unverified.
 HTTPS, public response hashes,

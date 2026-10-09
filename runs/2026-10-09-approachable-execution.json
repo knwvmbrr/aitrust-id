@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-09T15:01:44.591800+00:00",
+  "verified_by": "Codex",
+  "enterprise_initial_copy": "Claude draft, reviewed and corrected by Codex",
+  "python_tests_passed": 261,
+  "python_test_command": "verification-venv/bin/python -m pytest tests -q",
+  "local_records": 20,
+  "complete_catalogue_downloads": 20,
+  "static_parity": 20,
+  "scope_records_preserved": 202,
+  "person_claim_records_unchanged": 14,
+  "detector_changed": false,
+  "method_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "human_usability_review": false,
+  "human_screen_reader": false,
+  "independent_accuracy_release": false,
+  "ci_configuration_updated": true,
+  "hosted_ci_run_verified": false,
+  "local_evidence": [
+    "runs/2026-10-09-approachable-local.json",
+    "runs/2026-10-09-approachable-site-local.json",
+    "runs/2026-10-09-approachable-performance-local.json",
+    "runs/2026-10-09-approachable-workflows-local.json",
+    "runs/2026-10-09-approachable-device-local.json"
+  ],
+  "isolation": "Separate checkout of published main plus explicitly reviewed enterprise drafts; unrelated adjudication, accessibility and device-bundle drafts were excluded."
+}

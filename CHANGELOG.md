@@ -2,6 +2,10 @@
 
 ## 0.1.0 development preview — 2026-10-09
 
+- Add everyday examples and shorter introductions to all 20 tag panels and static references; put the PS action before technical evidence and fold optional local setup into a disclosure.
+- Give six enterprise proposals distinct scope-grounded descriptions. Correct extension page access, catalogue versus result exports, proposed SSO roles, private security routing and host capture references.
+- Identify downloaded catalogue definitions explicitly and verify complete exports, static parity and enterprise claim boundaries. No detector, taxonomy, release gate or collection change.
+
 - Add per-tag performance panels with measured counts, Wilson ranges, pending/unmeasured states and downloadable source evidence; reject stale detector/dataset reports during build.
 - Execute Android Chromium and iPhone WebKit development parity again; record warm p50/p95 separately from cold runtime loading. No physical-device or independent-accuracy claim.
 - Publish a small-team frozen-review plan and exact denominator sizing; retain separate consented research intake and proprietary-assistance gates.
