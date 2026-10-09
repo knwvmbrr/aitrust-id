@@ -85,7 +85,7 @@ Future source/route/acceptance changes reopen affected records.
     text+=table(done)
     for label,rows in [('Open tag requirements',[x for x in data['records'] if x['percent_complete']<100 and x['id'].startswith('T-')]),('All other open requirements',[x for x in data['records'] if x['percent_complete']<100 and not x['id'].startswith('T-')]),('Work packages',data['packages']),('Package subtasks',data['subtasks']),('Research enhancements — no adoption or release implied',data['enhancements'])]:
         text+='## '+label+'\n\n'+table(rows)
-    (ROOT/'docs/scope-progress.md').write_text(text)
+    (ROOT/'docs/scope-progress.md').write_text(text.rstrip()+'\n')
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--render',action='store_true');parser.add_argument('--report');a=parser.parse_args()
     data=json.loads((ROOT/'docs/scope-progress.json').read_text());result=verify(data)
