@@ -2,6 +2,10 @@
 
 ## 0.1.0 development preview — 2026-10-09
 
+- State personal availability explicitly: PS website preview, PII local service, twelve planned/proposed entries. Catalogue completeness does not imply detector completeness.
+- Explain all five PS signal types with matched NFC code-point excerpts and next steps; focus the result after checking. Reject invalid states, unknown signals and invalid spans rather than rendering a finding or safety clearance.
+- Keep input excerpts on-page only and preserve minimal default export plus separate consent for detailed fingerprints. Record the exact origin in future mobile verification reports.
+
 - Add everyday examples and shorter introductions to all 20 tag panels and static references; put the PS action before technical evidence and fold optional local setup into a disclosure.
 - Give six enterprise proposals distinct scope-grounded descriptions. Correct extension page access, catalogue versus result exports, proposed SSO roles, private security routing and host capture references.
 - Identify downloaded catalogue definitions explicitly and verify complete exports, static parity and enterprise claim boundaries. No detector, taxonomy, release gate or collection change.

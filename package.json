@@ -14,7 +14,8 @@
     "verify:scope": "python3 scripts/verify-scope-plan.py",
     "verify:performance": "node scripts/verify-performance.cjs",
     "verify:enterprise": "node scripts/verify-enterprise.cjs",
-    "verify:approachability": "node scripts/verify-approachability.cjs"
+    "verify:approachability": "node scripts/verify-approachability.cjs",
+    "verify:ps-results": "node scripts/verify-ps-results.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

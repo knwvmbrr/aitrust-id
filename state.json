@@ -218,6 +218,22 @@
       "publication": "runs/2026-10-09-approachable-deployment.json",
       "source_commit": "53f876cf17c14df129dbefb5121e26cfdb3bc9cc",
       "public_asset_checks": 393
+    },
+    "ps_result_clarity": {
+      "status": "local_checks_passed; public_verification_pending",
+      "architecture": "docs/ps-result-clarity.md",
+      "website_personal_checkers": [
+        "PS"
+      ],
+      "local_only_personal_implementations": [
+        "PII_REDACTED"
+      ],
+      "planned_or_proposed_personal_tags": 12,
+      "explanations": "Reviewed signal reasons plus exact normalized input excerpts; next steps; explicit check boundaries",
+      "input_excerpt_exported": false,
+      "detector_changed": false,
+      "human_usability_review": false,
+      "local_evidence": "runs/2026-10-09-ps-results-local.json"
     }
   },
   "previous_runtime_verification": {

@@ -30,6 +30,10 @@ export function presentation(tag) {
   const working = tag.id === 'PS' || tag.id === 'PII_REDACTED';
   return {
     summary: text[0], example: text[1], limit: text[2], working,
+    availability: tag.id==='PS' ? 'Works here: PS command-pattern preview.'
+      : tag.id==='PII_REDACTED' ? 'Local setup required. PII does not run in this website checker.'
+      : tag.audience==='person' ? 'Not available yet. This tag is planned or proposed.'
+      : 'Planned offering. No team service is running.',
     stage: tag.id === 'PS' ? 'On-device preview' : working ? 'Local preview' : tag.proposed ? 'Research proposal' : 'Planned',
     validationTitle: working ? 'Validation in progress' : 'Validation required before release',
     releasePolicy,

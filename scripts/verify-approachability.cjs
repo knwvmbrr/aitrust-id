@@ -5,7 +5,7 @@ const {chromium}=require('playwright');
  const {presentation}=await import('../site/src/presentation.js');
  const base=process.env.AITRUST_SITE_URL||'http://127.0.0.1:5174';
  const browser=await chromium.launch();const context=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
- const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await context.newPage();const errors=[],transport=[];page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>transport.push({url:r.url(),error:r.failure()?.errorText}));
  fs.mkdirSync('output/playwright',{recursive:true});
  const records=[];
  try {
@@ -41,5 +41,6 @@ const {chromium}=require('playwright');
   const report={captured_at:new Date().toISOString(),url:base,records,no_script_examples:20,viewport_width:390,physical_phone:false,human_usability_test:false,errors};
   fs.writeFileSync(process.env.AITRUST_APPROACHABILITY_REPORT||'runs/2026-10-09-approachable-local.json',JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({pass:true,records:records.length,static_parity:20,complete_exports:20,no_script_examples:20}));
+ }catch(error){const diagnostics={captured_at:new Date().toISOString(),url:base,pass:false,failed_at_url:page.url(),error:error.message,page_errors:errors,transport,body_excerpt:(await page.locator('body').innerText().catch(()=>'' )).slice(0,1200)};fs.writeFileSync(process.env.AITRUST_APPROACHABILITY_REPORT||'runs/2026-10-09-approachable-local.json',JSON.stringify(diagnostics,null,2)+'\n');throw error;
  }finally{await context.close();await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

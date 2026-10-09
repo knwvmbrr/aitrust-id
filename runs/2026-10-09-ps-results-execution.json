@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-09T15:16:43.501523+00:00",
+  "verified_by": "Codex",
+  "user_feedback": "Result unclear; catalogue mistaken for working personal detectors",
+  "website_personal_checkers": [
+    "PS"
+  ],
+  "local_only": [
+    "PII_REDACTED"
+  ],
+  "planned_or_proposed": 12,
+  "real_explanation_cases": 6,
+  "mapped_signal_types": 5,
+  "invalid_result_cases_rejected": 7,
+  "detector_unchanged": true,
+  "method_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "matched_input_persisted": false,
+  "matched_input_in_summary_export": false,
+  "local_device_cases_per_engine": 86,
+  "human_usability_acceptance": false,
+  "physical_devices": false,
+  "independent_accuracy_validation": false,
+  "scope_records_preserved": 202,
+  "local_evidence": [
+    "runs/2026-10-09-ps-results-local.json",
+    "runs/2026-10-09-ps-results-panels-local.json",
+    "runs/2026-10-09-ps-results-site-local.json",
+    "runs/2026-10-09-ps-results-device-local.json"
+  ],
+  "verification_note": "One concurrent approachability run timed out waiting for its first modal. Cause not established; transport/page diagnostics added and standalone verification passed. Final result, site and both device checks passed."
+}

@@ -26,6 +26,7 @@ const workerPath='/assets/'+fs.readdirSync(root+'/assets').find(n=>/^device-work
 const started=Date.now();
 (async()=>{const {shareSummary}=await import('../site/src/share-record.js');const probe=shareSummary({state:'FINDING',text:'EXPORT_CANARY',subject:{sha256:'EXPORT_CANARY'},unknown_future_field:'EXPORT_CANARY',candidates:[{signals:[{span:[1,2],payload:'EXPORT_CANARY'}]}]},{method_sha256:'a'.repeat(64)});assert(!JSON.stringify(probe).includes('EXPORT_CANARY'),'Future fields leaked into default export');let invalid=false;try{shareSummary({state:'UNAVAILABLE'},{method_sha256:'a'.repeat(64)});}catch{invalid=true;}assert(invalid,'Invalid result exported as summary');await new Promise(r=>server.listen(0,'127.0.0.1',r));const base=process.env.AITRUST_DEVICE_URL||'http://127.0.0.1:'+server.address().port;
 try{
+ report.url=base;
  for(const [name,engine,device] of [['Android Chromium',chromium,devices['Pixel 7']],['iPhone WebKit',webkit,devices['iPhone 13']]]){
   const browser=await engine.launch({headless:true});
   try{

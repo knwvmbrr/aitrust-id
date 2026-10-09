@@ -28,6 +28,12 @@ is connected.
 distinguish related products from full product equivalence; business viability and
 comparative superiority are not established.
 
+## Which personal tags can run today?
+
+Of 14 personal catalogue entries, **PS runs on this website**, **PII_REDACTED runs only in the local service**, and **12 are planned or proposed**. A working catalogue panel is not a working detector. Each tag retains its own job and acceptance gate.
+
+PS reports the matched command text, a plain explanation and a next step. A negative result means no supported command pattern was found; it does not validate the rest of the answer. Matched text stays on the page and is excluded from the default summary export.
+
 ## Try PS on a phone or computer
 
 Open [PS](https://aitrustid.com/#person/PS) → **Check on this device**.

