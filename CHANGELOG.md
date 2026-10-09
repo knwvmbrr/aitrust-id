@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-09
 
+### 2026-10-09-200855-device-accessibility-publication-evidence-731162b1
+
+Recorded 2026-10-09T20:08:55.111625+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the successful source publication and public site/device accessibility checks, deployment identity, and current state; leave unrelated research drafts outside the release.
+- **Evidence.** 62 public accessibility surfaces pass; both browser engines match 86 PS development cases each; 134 artifacts match across three origins (402 hashes), with declared response headers intact. [Change record](./runs/changes/2026-10-09-200855-device-accessibility-publication-evidence-731162b1.json).
+- **Not claimed.** Published downloads reflect source 81fc621; subsequent operational metadata lives in Git. No independent tag accuracy, physical device, human screen-reader or hosted-CI execution claim; hosted jobs remain billing-blocked.
+
+
 ### 2026-10-09-200619-ps-results-final-build-evidence-26debd91
 
 Recorded 2026-10-09T20:06:19.855909+00:00 · Contributor: Codex · change

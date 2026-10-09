@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-200855-device-accessibility-publication-evidence-731162b1",
+  "recorded_at": "2026-10-09T20:08:55.111625+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979",
+  "changed": "Record the successful source publication and public site/device accessibility checks, deployment identity, and current state; leave unrelated research drafts outside the release.",
+  "proves": "62 public accessibility surfaces pass; both browser engines match 86 PS development cases each; 134 artifacts match across three origins (402 hashes), with declared response headers intact.",
+  "limits": "Published downloads reflect source 81fc621; subsequent operational metadata lives in Git. No independent tag accuracy, physical device, human screen-reader or hosted-CI execution claim; hosted jobs remain billing-blocked.",
+  "scope_ids": [
+    "T-PS",
+    "F-116",
+    "F-150",
+    "F-139",
+    "WP-SITE",
+    "WP-RELEASE"
+  ],
+  "files": {
+    "docs/device-accessibility-result.md": "6b45f0abf562b817f7c7431c9eed8f5da4a02d40c5a6c8512ffc5f009dd081bd",
+    "runs/2026-10-09-device-a11y-assets-public.json": "a10159e448523f9797a8062ddd095f78619df210aa10cb2abf89a0ef0f7d135a",
+    "runs/2026-10-09-device-a11y-catalogue-public.json": "16ef09c5f049b0ef87950aeb811d0af6264b724e06a0e5ca5cff4716f8264f88",
+    "runs/2026-10-09-device-a11y-deployment.json": "1c824b70f48f4a7404a3119b86242d194a4c781fc26a15376daf7644dbd6cd39",
+    "runs/2026-10-09-device-a11y-engines-public.json": "5726b549bcb5d36e940cd8a34247303eb34a9edbd95d79856b7bdadd6574c47a",
+    "runs/2026-10-09-device-a11y-hosted-ci.json": "403b5e99396029383ec884b61016d6fd8d2bd3968bd3f6303008dcefb4182afc",
+    "runs/2026-10-09-device-a11y-site-public.json": "b86a2f6cb05110ba4cd8417df04f5ecdfb17cad3d23b8314e19e23cde8d92d62",
+    "state.json": "9bf383576b053eaabb2bfc30c2627c83e258c5b7d9b1563349e8fbe70a4b0c95"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-device-a11y-site-public.json",
+      "sha256": "b86a2f6cb05110ba4cd8417df04f5ecdfb17cad3d23b8314e19e23cde8d92d62"
+    },
+    {
+      "path": "runs/2026-10-09-device-a11y-engines-public.json",
+      "sha256": "5726b549bcb5d36e940cd8a34247303eb34a9edbd95d79856b7bdadd6574c47a"
+    },
+    {
+      "path": "runs/2026-10-09-device-a11y-assets-public.json",
+      "sha256": "a10159e448523f9797a8062ddd095f78619df210aa10cb2abf89a0ef0f7d135a"
+    },
+    {
+      "path": "runs/2026-10-09-device-a11y-hosted-ci.json",
+      "sha256": "403b5e99396029383ec884b61016d6fd8d2bd3968bd3f6303008dcefb4182afc"
+    }
+  ],
+  "checks": []
+}

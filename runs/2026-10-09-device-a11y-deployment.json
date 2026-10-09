@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-09T20:08:55.069091+00:00",
+  "author": "Codex",
+  "source_commit": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979",
+  "deployment_id": "9805ae71-b0e5-4771-87c9-a11cc0f7161b",
+  "deployment_url": "https://9805ae71.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "pass": true,
+  "evidence": [
+    "runs/2026-10-09-device-a11y-site-public.json",
+    "runs/2026-10-09-device-a11y-engines-public.json",
+    "runs/2026-10-09-device-a11y-catalogue-public.json",
+    "runs/2026-10-09-device-a11y-assets-public.json"
+  ],
+  "python_tests": 301,
+  "scope_records": 202,
+  "percentages_changed": false,
+  "method_changed": false,
+  "independent_release_validated": false,
+  "limits": [
+    "Frozen independent accuracy/reviewer acceptance remains pending",
+    "Physical iPhone/Android and human screen-reader tests remain pending",
+    "GitHub hosted CI cannot start because of account billing lock",
+    "Public WebKit offline reload not exercised; local origin-outage case passed"
+  ],
+  "verification_tool_incident": {
+    "operation": "Initial Python urllib artifact fetch",
+    "result": "HTTP 403 on all three roots; no assertion made from the failed attempt",
+    "correction": "Standard Node fetch artifact verification completed; 402 SHA checks passed; declared headers matched"
+  }
+}

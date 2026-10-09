@@ -37,7 +37,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-09-changelog-site-public.json",
+    "evidence": "runs/2026-10-09-device-a11y-catalogue-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -47,8 +47,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://0de8b6d7.aitrust-id.pages.dev",
-    "deployment_id": "0de8b6d7-af48-477f-a097-1b1781f6fbb1",
+    "deployment_url": "https://9805ae71.aitrust-id.pages.dev",
+    "deployment_id": "9805ae71-b0e5-4771-87c9-a11cc0f7161b",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -68,7 +68,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-09-changelog-deployment.json",
+    "publication_evidence": "runs/2026-10-09-device-a11y-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -257,7 +257,9 @@
       "full_wcag_conformance_asserted": false,
       "manual_screen_reader": false,
       "physical_device": false,
-      "publication_pending": true
+      "publication_pending": false,
+      "public_evidence": "runs/2026-10-09-device-a11y-site-public.json",
+      "source_commit": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979"
     }
   },
   "previous_runtime_verification": {
@@ -557,9 +559,9 @@
     "issues_enabled": true,
     "discussions_enabled": true,
     "private_vulnerability_reporting_enabled": true,
-    "evidence": "runs/2026-10-08-handheld-download.json",
+    "evidence": "runs/2026-10-09-device-a11y-assets-public.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "28b66b8380613995adcda8bf31bdedf3dbd7ffcd",
+    "latest_implementation_commit": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979",
     "handheld_download_verified": true
   },
   "name_clearance": {
@@ -615,16 +617,16 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-09-device-a11y-engines-local.json",
+    "evidence": "runs/2026-10-09-device-a11y-engines-public.json",
     "future_native_routes": [
       "N-013",
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "b53179ef-44e1-436d-ac2d-0868d1915f53",
+    "deployment": "9805ae71-b0e5-4771-87c9-a11cc0f7161b",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input",
-    "latest_emulation_evidence": "runs/2026-10-09-device-a11y-engines-local.json"
+    "latest_emulation_evidence": "runs/2026-10-09-device-a11y-engines-public.json"
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -723,14 +725,14 @@
     "public_download_kind": "snapshot_at_deployed_source_commit; Git holds subsequent operational records",
     "git_hook_enabled_in_owner_checkout": true,
     "pipeline_regression_tests_passed": 24,
-    "total_python_tests_passed": 285,
+    "total_python_tests_passed": 301,
     "public_evidence": [
       "runs/2026-10-09-changelog-ps-public.json",
       "runs/2026-10-09-changelog-site-public.json",
       "runs/2026-10-09-changelog-assets-public.json"
     ],
     "hosted_ci_executed": false,
-    "hosted_ci_evidence": "runs/2026-10-09-changelog-hosted-ci.json"
+    "hosted_ci_evidence": "runs/2026-10-09-device-a11y-hosted-ci.json"
   },
   "device_build": {
     "status": "fresh_build_matrix_passed; tracked_manifest_and_method_unchanged",
@@ -745,6 +747,7 @@
     "stale_cleanup_failure_blocks_build": true,
     "evidence": "runs/2026-10-09-device-build-matrix-final.json",
     "unit_tests": 16,
-    "future_builder_versions_guaranteed": false
+    "future_builder_versions_guaranteed": false,
+    "published_source": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979"
   }
 }
