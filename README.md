@@ -162,13 +162,19 @@ license is CC BY 4.0; see `CONTRIBUTING.md` for contribution requirements.
 The website in `site/` follows the tag catalogue layout: AI TRUST ID, Person / Enterprise,
 clickable tag details, and company/community information in the footer. It preserves 14 personal
 tag records and six proposed organization offerings. Building Now and Coming Soon describe
-progress; no catalogue entry claims a validated release. Each footer workflow has its own
+progress; each tag must pass its own published validation gate before release. Each footer workflow has its own
 purpose and deep link: report a reproducible issue, propose a contribution, read public
 discussions, find owners and open needs, follow a tag, search all 202 scope records,
 learn about the project, or inspect rights and data handling. Report/contribution drafts
 can be downloaded; posting to GitHub is an explicit user action. Townhall shows a dated
 public snapshot and links to live GitHub discussions. It does not simulate live in-site
 posting or a self-hosted community. See [footer workflows](docs/footer-workflows.md).
+
+[Public terms and policies](https://aitrustid.com/policies/) cover use, privacy, validation,
+community, security, governance, contribution/accessibility, licenses and access.
+Versioned no-script pages and text downloads describe actual operating behavior.
+See [policy architecture](docs/public-policies.md) and
+[product differentiation](docs/product-differentiation.md) for current versus planned scope.
 
 With Node.js 22 or newer:
 
@@ -180,7 +186,7 @@ npm run dev:site
 ```
 
 The local preview uses `http://127.0.0.1:5173/`. For built-site checks, serve `site/dist`
-on loopback port 5174, then run `npm run verify:site` and `npm run verify:workflows`. The CI site job performs this sequence.
+on loopback port 5174, then run `npm run verify:site`, `npm run verify:workflows` and `npm run verify:policies`. The CI site job performs this sequence.
 See [website architecture and publishing](docs/website.md) for the verified behavior, remaining
 connections, and deployment steps. The reviewed catalogue is deployed on the owned
 domain with verified security headers. The PS device checker runs the bounded method

@@ -1,9 +1,9 @@
 export const origin='https://aitrustid.com';
 export const siteTitle='AI Trust ID — Explainable Tags and Evidence';
-export const siteDescription='Explore explainable tags and evidence for AI output. Try the free, open-source command-risk checker on your phone or computer. Independent release validation is pending.';
+export const siteDescription='Explore explainable tags and evidence for AI output. Try the free, open-source command-risk checker on your phone or computer. Each tag has its own validation gate before release.';
 export const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const tagPath=tag=>'/tags/'+tag.id.toLowerCase().replaceAll('_','-')+'/';
-export const tagDescription=tag=>`${tag.code} — ${tag.name}. ${tag.proposed?'Proposed':'Development'}; not release validated. Read its job, method, evidence, limits and acceptance requirements.`;
+export const tagDescription=tag=>`${tag.code} — ${tag.name}. ${tag.proposed?'Research proposal':'Development preview'}. Read its job, method, evidence, limits and validation gate.`;
 export const website={'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:'AI Trust ID',description:siteDescription,inLanguage:'en'};
 export function metadata({title=siteTitle,description=siteDescription,path='/',schema}) {
   const url=origin+path;

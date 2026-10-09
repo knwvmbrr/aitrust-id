@@ -1,0 +1,19 @@
+Security and disclosure
+AI TRUST ID · Version 1.0 · Effective 2026-10-08
+
+Protected reporting and the actual processing boundaries.
+
+Report privately
+Use GitHub private vulnerability reporting for security issues. Do not put credentials, private answers or exploit payloads in public issues. The owner created security@aitrustid.com; delivery for that inbox has not been independently tested. No guaranteed response time is advertised. Publish a safe incident summary after appropriate review, not a reporter’s private evidence.
+
+Open private security report: https://github.com/knwvmbrr/aitrust-id/security/advisories/new
+Security policy source: /reference/security-policy.md
+
+Current protections and limits
+On-device PS runs the pinned local method without executing commands or fetching payloads. The optional service route uses an authenticated loopback gateway with local redaction/evaluation. Assertions/exported metadata are not full answer text; hashes and offsets still need disclosure care. Configuration and bounded probes are evidence about tested conditions, not an absolute guarantee against breach.
+
+Processing and storage: /policies/privacy/
+Repository threat model: https://github.com/knwvmbrr/aitrust-id/blob/main/THREAT_MODEL.md
+
+Access and resilience
+Private operational credentials and backup keys remain restricted. Browsers do not receive PostgreSQL credentials. Real research intake and a self-hosted live community remain behind application authorization, consent, retention and recovery gates. Public transparency does not require publishing secrets or unfixed vulnerabilities.

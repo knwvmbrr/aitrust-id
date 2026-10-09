@@ -1,3 +1,4 @@
+import {releasePolicy} from './policies.js';
 // Plain-language introductions complement the full catalogue; they never change a tag's claim.
 const descriptions = {
   PS: ['Flags commands that download code and run it, or execute supported encoded code.', 'This warns about a command pattern. It does not prove a scam. An untagged answer may still be unsafe.'],
@@ -30,7 +31,9 @@ export function presentation(tag) {
     summary: text[0],
     limit: text[1],
     working,
-    stage: working ? 'Local preview' : tag.proposed ? 'Research proposal' : 'Planned',
+    stage: tag.id === 'PS' ? 'On-device preview' : working ? 'Local preview' : tag.proposed ? 'Research proposal' : 'Planned',
+    validationTitle: working ? 'Validation in progress' : 'Validation required before release',
+    releasePolicy,
     validation: working
       ? 'The local workflow has passed development checks. Independent accuracy testing and human accessibility review are still pending.'
       : 'This capability is not available yet. It needs a working method and independent testing before release.',

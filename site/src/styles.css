@@ -56,7 +56,7 @@
 .tag-outline path { fill: var(--panel); }
 .tag-tile:hover .tag-outline, .tag-tile:focus-visible .tag-outline { color: var(--foreground); }
 .tag-tile:hover .tag-outline path { fill: var(--page); }
-.reference-content { max-width: 48rem; margin-inline: auto; }
+.reference-content { max-width: 48rem; margin-inline: auto; overflow-wrap: anywhere; }
 .reference-content section { border-top: 1px solid var(--divider); padding-block: 1rem; }
 .reference-content h2 { font-size: 1.125rem; font-weight: 700; margin-bottom: .75rem; }
 .reference-content p, .reference-content li { line-height: 1.65; }

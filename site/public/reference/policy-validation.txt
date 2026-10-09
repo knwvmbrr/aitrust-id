@@ -1,0 +1,29 @@
+Validation and release
+AI TRUST ID · Version 1.0 · Effective 2026-10-08
+
+Each tag earns its release through its own evidence.
+
+One tag, one claim, one gate
+Every tag must pass its own published validation gate before release.
+
+Each tag defines its baseline job and outcome, supported inputs, bounded claim, method/version, failure behavior and acceptance thresholds. Adding another tag or a paid organization workflow cannot weaken those requirements. Multiple indicators from one method are not automatically independent corroboration.
+
+What validation includes
+Engineering checks establish that code runs and handles tested boundaries. Independent accuracy assessment uses a frozen corpus, blind labels, recorded disagreement/adjudication and the declared statistical protocol. Human usability and accessibility checks test the complete delivery route. The appropriate checks differ by tag; code tests, signatures and source hashes alone do not establish accuracy.
+
+PS acceptance scenarios: /reference/PS-01-acceptance.md
+Independent review protocol: /reference/independent-review.md
+Accessibility requirements: /reference/accessibility-policy.md
+
+Current PS stage
+PS is available as a development preview while validation is in progress. The current method passes its development fixtures and browser parity checks. The development corpus is not an independent holdout; the declared precision lower-bound gate remains unmet. Independent labels/calibration and human accessibility/physical-phone review remain release requirements. A passing preview check does not mark those requirements complete.
+
+PS current results: /tags/ps/
+Executed development results: /reference/ps-routing-regressions.json
+Statistical gate result: /reference/ps-routing-gates.json
+
+Release, correction and certification
+A validated release needs a versioned evidence packet and acceptance of that tag’s documented gate. If evidence changes, correct or withhold the affected claim and keep unrelated tag workflows usable. Formal certifier accreditation, mark licensing or certification of another implementation has its own scope and evidence; it is not automatically granted by a tag, a signature or a review.
+
+Challenge a finding: /#report
+Preserved scope: /#scope

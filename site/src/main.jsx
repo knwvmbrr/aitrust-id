@@ -61,7 +61,7 @@ function TagDetails({tag}) {
   <p data-tag-limit className="mt-2 text-sm leading-6 text-muted">{intro.limit}</p>
   <section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">
    <div className="flex flex-wrap items-center justify-between gap-2"><h3 className="text-sm font-semibold">Validation</h3><span className="text-xs text-muted">{intro.stage}</span></div>
-   <p className="mt-1 text-sm font-semibold">Not independently validated</p><p className="mt-1 text-sm leading-6 text-muted">{intro.validation}</p>
+   <p className="mt-1 text-sm font-semibold">{intro.validationTitle}</p><p className="mt-1 text-sm leading-6 text-muted">{intro.validation}</p><a className="mt-2 block text-xs underline underline-offset-4" href="/policies/validation/">{intro.releasePolicy}</a>
   </section>
   <UseTag tag={tag}/>
   <Disclosure title="How it works">

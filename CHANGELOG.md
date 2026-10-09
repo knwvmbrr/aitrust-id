@@ -2,6 +2,13 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Published the positive per-tag validation-before-release rule across metadata,
+  references and panels while retaining each tag’s current evidence/stage. Added
+  nine versioned public terms/policy pages, no-script index and matching text downloads.
+  Corrected governance’s absent roster reference and security’s missing device route.
+- Added policy/source-text/link/metadata and accessible reflow checks to the site
+  CI job. Documented actual product differences separately from priority claims.
+
 - Replaced the shared footer composer/doc layout with eight independent workflows,
   descriptive links and deep links. Reports validate observed/expected results and
   route vulnerabilities privately; contributions define deliverables; public discussions

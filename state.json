@@ -70,7 +70,7 @@
     "publication_evidence": "runs/2026-10-08-workflows-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
-      "sitemap_canonical_urls": 22,
+      "sitemap_canonical_urls": 32,
       "robots_url": "https://aitrustid.com/robots.txt",
       "sitemap_url": "https://aitrustid.com/sitemap.xml",
       "canonical_origin": "https://aitrustid.com",
@@ -114,7 +114,19 @@
       "public_evidence": "runs/2026-10-08-workflows-public.json",
       "source_commit": "527cbf4ee116482f24ffc1f50616b9b195549c6a"
     },
-    "naming_evidence_review": "docs/name-evidence-review.md"
+    "naming_evidence_review": "docs/name-evidence-review.md",
+    "public_policies": {
+      "version": "1.0",
+      "effective_date": "2026-10-08",
+      "index": "https://aitrustid.com/policies/",
+      "page_count": 9,
+      "source": "site/src/policies.js",
+      "text_downloads": true,
+      "current_services_only": true,
+      "published": false
+    },
+    "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
+    "product_differentiation": "docs/product-differentiation.md"
   },
   "previous_runtime_verification": {
     "capabilities": [
