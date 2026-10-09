@@ -14,10 +14,11 @@
     "Independent application and OS-image security review",
     "V2 conformance registration after evidence",
     "Signing, challenge/correction policy acceptance",
-    "Declared latency budget and investigation of one observed transient timeout"
+    "Declared latency budget and investigation of one observed transient timeout",
+    "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 261,
+  "python_tests_passed": 285,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -36,7 +37,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-09-ps-results-site-public.json",
+    "evidence": "runs/2026-10-09-changelog-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +47,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://b53179ef.aitrust-id.pages.dev",
-    "deployment_id": "b53179ef-44e1-436d-ac2d-0868d1915f53",
+    "deployment_url": "https://0de8b6d7.aitrust-id.pages.dev",
+    "deployment_id": "0de8b6d7-af48-477f-a097-1b1781f6fbb1",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +68,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-09-ps-results-deployment.json",
+    "publication_evidence": "runs/2026-10-09-changelog-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +97,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-09-ps-results-site-public.json",
+    "verification": "runs/2026-10-09-changelog-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -683,7 +684,7 @@
     "proprietary_assistant": "Allowed organization assistance direction, not adopted/trained in this pass; cannot validate itself"
   },
   "change_accountability": {
-    "status": "implemented; change-record and local site checks pass; public verification pending",
+    "status": "published_and_public_checks_pass; local_staged_and_build_guards_active; hosted_CI_billing_blocked",
     "policy": "docs/changelog-policy.md",
     "changelog": "CHANGELOG.md",
     "structured_events": "runs/changes/",
@@ -695,8 +696,20 @@
     ],
     "acceptance_percentages_unchanged": true,
     "historical_records_backfilled_with_recording_timestamps": true,
-    "source_commit": null,
-    "public_verification_pending": true,
-    "independent_release_validated": false
+    "source_commit": "ec9ac5e6aab6c583973e397086dcd10aab349567",
+    "public_verification_pending": false,
+    "independent_release_validated": false,
+    "public_download": "https://aitrustid.com/reference/changelog.md",
+    "public_download_kind": "snapshot_at_deployed_source_commit; Git holds subsequent operational records",
+    "git_hook_enabled_in_owner_checkout": true,
+    "pipeline_regression_tests_passed": 24,
+    "total_python_tests_passed": 285,
+    "public_evidence": [
+      "runs/2026-10-09-changelog-ps-public.json",
+      "runs/2026-10-09-changelog-site-public.json",
+      "runs/2026-10-09-changelog-assets-public.json"
+    ],
+    "hosted_ci_executed": false,
+    "hosted_ci_evidence": "runs/2026-10-09-changelog-hosted-ci.json"
   }
 }

@@ -77,3 +77,23 @@ recorded separately under runs/2026-10-09-changelog-*.json; current publication
 status and source are in state.json. No engineering check is independent
 accuracy or human usability acceptance. Existing bundle-size and dependency
 warnings remain visible in build/test output.
+
+## Published observations
+
+Source ec9ac5e6aab6c583973e397086dcd10aab349567 is deployed at
+https://aitrustid.com, https://www.aitrustid.com and
+https://0de8b6d7.aitrust-id.pages.dev. All 133 artifacts match the verified build
+on all three origins (399 hash checks). Public PS and site checks pass, including
+the actual changelog download, intro alignment, six result cases, all 20 tag
+panels, eight footer routes, 320px/200% reflow and zero automated axe violations.
+The final Python suite passes 285 tests, including 24 change-record tests.
+
+The actual Git hook is installed in the owner checkout and passed the commit.
+The new source range also passes the committed-range verifier locally. GitHub
+Actions run 37964819898 starts no job steps: its annotation says the account is
+locked due to a billing issue. Hosted CI is configured but not executed; resolving
+that account lock is an owner action. Local checks are not described as hosted CI.
+
+The site's changelog download reflects the deployed source snapshot. Subsequent
+publication/CI observations are appended to the Git changelog and state without
+pretending that they were included in the earlier deployed artifact.

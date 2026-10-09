@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-09
 
+### 2026-10-09-171716-publication-observations-and-billing-block-feca04de
+
+Recorded 2026-10-09T17:17:16.392244+00:00 · Contributor: Codex · change
+
+- **Changed.** Record verified public publication, the enabled owner-checkout Git hook, matching downloadable changelog and source-bound assets; publish the hosted CI billing block in current state.
+- **Evidence.** Public browser checks pass all 20 tag panels, eight footer routes and six real PS result cases; 399 checks match 133 build artifacts across three origins; local staged and committed-range checks passed, and the final Python suite passed 285 tests. [Change record](./runs/changes/2026-10-09-171716-publication-observations-and-billing-block-feca04de.json).
+- **Not claimed.** No hosted Actions job started because the account is locked over billing; independent accuracy, physical phones and human accessibility remain open. The public changelog download is the deployed snapshot; this later observation is in Git.
+
+
 ### 2026-10-09-171354-hook-index-path-and-ci-history-correction-d3865040
 
 Recorded 2026-10-09T17:13:54.468927+00:00 · Contributor: Codex · change

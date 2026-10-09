@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-171716-publication-observations-and-billing-block-feca04de",
+  "recorded_at": "2026-10-09T17:17:16.392244+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ec9ac5e6aab6c583973e397086dcd10aab349567",
+  "changed": "Record verified public publication, the enabled owner-checkout Git hook, matching downloadable changelog and source-bound assets; publish the hosted CI billing block in current state.",
+  "proves": "Public browser checks pass all 20 tag panels, eight footer routes and six real PS result cases; 399 checks match 133 build artifacts across three origins; local staged and committed-range checks passed, and the final Python suite passed 285 tests.",
+  "limits": "No hosted Actions job started because the account is locked over billing; independent accuracy, physical phones and human accessibility remain open. The public changelog download is the deployed snapshot; this later observation is in Git.",
+  "scope_ids": [
+    "F-150",
+    "WP-SITE",
+    "WP-RELEASE",
+    "F-139",
+    "T-PS"
+  ],
+  "files": {
+    "docs/change-accountability-result.md": "5344b8cdc8373c7ddb45ebbad06d6056896b1ac794bc50f6c09689dd39d3c842",
+    "runs/2026-10-09-changelog-assets-public.json": "e8db2691f7857d672e0fabf549c53fc2487a5f854d872d72d6e2cfc99622a943",
+    "runs/2026-10-09-changelog-deployment.json": "3b21717c8b4a8b0a31927f487bac5aafbdf85ec1ee05fb2bfde3942117bead0c",
+    "runs/2026-10-09-changelog-hosted-ci.json": "2af7092df0c0bf702e2556ec1273933e2add32a0a30ce2972f3500e888667c25",
+    "runs/2026-10-09-changelog-ps-public.json": "b5247d71d1b7581035328eeb326e1ea2fee6b5d7474f88b29555c2782afa088f",
+    "runs/2026-10-09-changelog-site-public.json": "5776606b6e12de13a78623f5cd94c9b0bfe71a6bce91ed8cea31cd4d0f4c3454",
+    "state.json": "0a44426b190fd0d75f23ab2e4e1fbe4af60e81b444747be8bafedc76376289ba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-changelog-deployment.json",
+      "sha256": "3b21717c8b4a8b0a31927f487bac5aafbdf85ec1ee05fb2bfde3942117bead0c"
+    },
+    {
+      "path": "runs/2026-10-09-changelog-ps-public.json",
+      "sha256": "b5247d71d1b7581035328eeb326e1ea2fee6b5d7474f88b29555c2782afa088f"
+    },
+    {
+      "path": "runs/2026-10-09-changelog-site-public.json",
+      "sha256": "5776606b6e12de13a78623f5cd94c9b0bfe71a6bce91ed8cea31cd4d0f4c3454"
+    },
+    {
+      "path": "runs/2026-10-09-changelog-assets-public.json",
+      "sha256": "e8db2691f7857d672e0fabf549c53fc2487a5f854d872d72d6e2cfc99622a943"
+    },
+    {
+      "path": "runs/2026-10-09-changelog-hosted-ci.json",
+      "sha256": "2af7092df0c0bf702e2556ec1273933e2add32a0a30ce2972f3500e888667c25"
+    },
+    {
+      "path": "runs/2026-10-09-changelog-hook-fix-checks.json",
+      "sha256": "de4329fe6333c91eb9021eba3289f41103a70af819d5d3ff1d5dff1ed9268c95"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-09T17:17:16.625555+00:00"
+    }
+  ]
+}
