@@ -1,0 +1,31 @@
+{
+  "format": "ai-trust-id-fast-engineering/v1",
+  "engineering_pass": true,
+  "elapsed_seconds": 1.945,
+  "python_tests": 139,
+  "active_development_cases": 86,
+  "checks": [
+    {
+      "command": "python3 -m pytest tests -q",
+      "exit_code": 0,
+      "elapsed_seconds": 1.943
+    },
+    {
+      "command": "python3 scripts/verify-regressions.py",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_assessed": false,
+  "docker_started": false,
+  "full_live_pipeline_retested": false,
+  "build_initial_failure": "Sharp.toFile requires a filesystem path, not a URL; corrected with fileURLToPath and rebuilt.",
+  "mobile_initial_findings": [
+    "Reviewer select label wrapped option text; moved label before control.",
+    "Worker construction could leave an unattached rejected readiness promise; initialize worker before readiness promise.",
+    "WebKit offline emulation navigation internal error; documented upstream issue, checked origin outage instead.",
+    "Focus restoration test required waiting for the dialog close lifecycle."
+  ],
+  "scope": "Source and controlled browser checks, not release certification"
+}

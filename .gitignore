@@ -24,3 +24,9 @@ dist/
 
 # Social preview image is built from the repository SVG template.
 site/public/share-card.png
+
+# Device runtime and method projection are rebuilt from pinned source.
+site/public/device/
+site/public/app-icon-*.png
+site/src/device-manifest.json
+eval/fast-engineering-report.json

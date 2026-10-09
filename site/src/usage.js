@@ -16,9 +16,10 @@ export function usage(tag) {
     : 'Coming Soon. This tag has no working checker to install yet.',
     steps:[],next:'See How it works for its intended job. Help improve this tag to contribute or follow its progress.'};
   return {available:true,summary:tag.id==='PS'
-    ? 'Install once. Save an AI answer as text, check it locally, then read the finding. AI Trust ID never runs the commands in that answer.'
+    ? 'On phone or computer: copy an AI answer, choose Check on this device, paste and check. No account, extension or Docker needed. The command patterns are checked, never executed.'
     : 'PII runs automatically before PS in the same local package. There is no separate PII installation or complete-privacy guarantee.',
     prerequisites:'Developer preview: Linux or macOS, Python 3.12+, Git, make, and Docker Engine with Compose. First setup downloads packages and models. A one-click installer and a Chrome Web Store release are not available yet.',
+    phone:tag.id==='PS' ? 'Open aitrustid.com/#person/PS and choose Check on this device. Optional: save the public app for offline use and add it to your home screen. No answer is uploaded; the phone preview performs no redaction.' : null,
     steps:setup,next:tag.id==='PS'
       ? 'PS finding = a supported command-risk pattern. No finding = no supported pattern found, not “safe.” UNAVAILABLE = the check did not complete successfully.'
       : 'A PII tag means detected values were redacted before checking. No PII tag does not prove that the answer contains no private information.',
@@ -29,6 +30,6 @@ export function usage(tag) {
 export function usageHTML(tag,esc) {
   const use=usage(tag);
   return `<section data-tag-usage><h2>Use this tag</h2><p>${esc(use.summary)}</p>${use.available
-    ? `<p class="mt-2 text-sm text-muted">${esc(use.prerequisites)}</p><p class="mt-3"><a href="${sourceDownload}">Download source</a> · <a href="${quickstart}">Full setup guide</a></p><ol class="mt-3 list-decimal space-y-3 pl-5">${use.steps.map(step=>`<li><h3 class="font-semibold">${esc(step.title)}</h3><p>${esc(step.body)}</p><pre class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(step.command)}</code></pre></li>`).join('')}</ol><p class="mt-3">${esc(use.next)}</p><p class="mt-3">${esc(use.browser)}</p><p class="mt-3">${esc(use.privacy)}</p><h3 class="mt-3 font-semibold">Stop the checker</h3><pre class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(use.stop)}</code></pre>`
+    ? `${use.phone ? `<p class="mt-2"><a href="/#person/PS">Check on this device</a></p><p>${esc(use.phone)}</p><h3 class="mt-3 font-semibold">Developer local service (optional)</h3>` : ''}<p class="mt-2 text-sm text-muted">${esc(use.prerequisites)}</p><p class="mt-3"><a href="${sourceDownload}">Download source</a> · <a href="${quickstart}">Full setup guide</a></p><ol class="mt-3 list-decimal space-y-3 pl-5">${use.steps.map(step=>`<li><h3 class="font-semibold">${esc(step.title)}</h3><p>${esc(step.body)}</p><pre class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(step.command)}</code></pre></li>`).join('')}</ol><p class="mt-3">${esc(use.next)}</p><p class="mt-3">${esc(use.browser)}</p><p class="mt-3">${esc(use.privacy)}</p><h3 class="mt-3 font-semibold">Stop the checker</h3><pre class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(use.stop)}</code></pre>`
     : `<p class="mt-2">${esc(use.next)}</p>`}</section>`;
 }

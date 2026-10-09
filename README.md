@@ -28,6 +28,28 @@ is connected.
 distinguish related products from full product equivalence; business viability and
 comparative superiority are not established.
 
+## Try PS on a phone or computer
+
+Open [PS](https://aitrustid.com/#person/PS) → **Check on this device**.
+Copy an AI answer, paste, and check. No account, extension or Docker required.
+The unchanged PS Python rules run in a self-hosted WebAssembly worker. Nothing
+in the answer executes. This preview performs no redaction and uploads no text.
+A finding identifies a supported command-risk pattern; no finding is not “safe.”
+UNAVAILABLE means no valid result was obtained. Metadata export contains no answer
+text, but its subject hash can correlate matching text; it is not anonymization.
+
+Use **Save for offline use** while online, then add the site to your home screen.
+The public app files are about 15 MB. Your browser can evict them. To update, save again online, close all AI Trust ID
+tabs and reopen. Each cached release keeps its own method identity. Clear removes page input and terminates its worker. Remove
+offline files unregisters this app’s worker/cache; close and reopen to finish.
+Android Chromium and iPhone WebKit engine checks are automated emulations;
+physical phones and human screen-reader testing remain open.
+
+Two reviewers can use **Review test examples** on the same PS page. This is a
+separate blind file form with no predictions. See [reviewer instructions](docs/PS-reviewer-start.md).
+Native iPhone/Android sharing interfaces are tracked future work, not shipped apps.
+[Architecture, privacy boundaries and acceptance](docs/handheld-delivery.md).
+
 ## Try the local checker
 
 [Download the source](https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip)
@@ -59,7 +81,7 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Capability | Evidence and limit |
 |---|---|
 | Runtime policy | Evaluator emits `PS` only; gateway suppresses unsupported detector candidates. `PII_REDACTED` comes from the redaction step |
-| Command regression | TP=10, FP=0, FN=0, TN=14 on 24 development examples. Not an independent holdout; precision and recall lower bounds are about 0.722 and fail the candidate gates |
+| Command regression | TP=31, FP=0, FN=0, TN=55 across 86 active development examples. Not an independent holdout; precision/recall lower bounds are about 0.890. Precision, holdout and calibration release gates remain unmet |
 | Gateway | Executed authentication, origin rejection, upstream failure, redaction ordering, assertion schema, offsets, and oversized-body checks |
 | Redaction | English assets provisioned during build; actual email redaction exercised with network creation blocked. Coverage is incomplete |
 | Extension | Real unpacked extension exercised against real local services on a synthetic ChatGPT-origin page. Delayed/stale results, duplicate presentation, and injection checks pass on fixtures |
@@ -116,7 +138,7 @@ containers with `make down` and the same environment file.
 
 ## Scope and ownership
 
-[Master scope](docs/master-scope.md) preserves 198 records across tag types, shared
+[Master scope](docs/master-scope.md) preserves 202 records across tag types, shared
 capabilities, and personal/team/enterprise/proprietary applications. Preserving a
 record does not mean it is implemented. The complete personal workflow remains
 free; proposed organizational services must not weaken the personal standard.

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "date": "2026-10-08",
-  "baseline": "scope corrected; detailed first-tag acceptance specified; no runtime verification",
+  "baseline": "Scope jobs preserved; implementation status requires versioned execution evidence",
   "layers": {
     "1": "Tag types and subject families",
     "2": "Shared tag capabilities",
@@ -5130,6 +5130,102 @@
         "personal": "No paid gate added to personal tags or evidence",
         "organizational": "No database pricing commitment; free hosted pilot sought",
         "operating_cost": "Hosted free tiers have finite quotas; production capacity and backups need a defined budget"
+      }
+    },
+    {
+      "id": "N-012",
+      "layer": 3,
+      "source": "Direct user handheld and faster testing direction, 2026-10-08",
+      "source_sections": [],
+      "title": "Phone and offline on-device tag checker",
+      "baseline_job": "Run a version-bound tag method on a phone without an account, extension or local containers.",
+      "outcome": "A person copies an answer from any app and receives a bounded PS preview without uploading the answer.",
+      "status": "implemented PS preview; browser-engine checks pass; physical phone checks pending",
+      "owner": "Codex",
+      "reviewer": "Independent device users and tag reviewers",
+      "release": "Handheld development preview",
+      "acceptance": "Compare full evidence for all active fixtures in Chromium and WebKit; test failed initialization, invalid source, timeout/cancellation, stale results, offline reload, clear/removal, no input-bearing requests/storage, keyboard, 320px and text enlargement.",
+      "disposition": "retained; requested scope expansion",
+      "dependencies": [
+        "docs/handheld-delivery.md",
+        "Versioned tag claim and method contract"
+      ],
+      "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
+      "pricing": {
+        "personal": "Free personal path; no account or paid gate",
+        "organizational": "No enterprise pricing claim"
+      }
+    },
+    {
+      "id": "N-013",
+      "layer": 3,
+      "source": "Direct user handheld and faster testing direction, 2026-10-08",
+      "source_sections": [],
+      "title": "Native iPhone sharing into a tag check",
+      "baseline_job": "Receive selected text through an iPhone Share extension with explicit user action.",
+      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "status": "preserved future delivery route; not implemented",
+      "owner": "Codex",
+      "reviewer": "Independent device users and tag reviewers",
+      "release": "Future native delivery increment",
+      "acceptance": "Signed containing app and Share extension tested on real iPhones; bounded input, process lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "disposition": "retained; requested scope expansion",
+      "dependencies": [
+        "docs/handheld-delivery.md",
+        "Versioned tag claim and method contract"
+      ],
+      "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
+      "pricing": {
+        "personal": "Free personal path; no account or paid gate",
+        "organizational": "No enterprise pricing claim"
+      }
+    },
+    {
+      "id": "N-014",
+      "layer": 3,
+      "source": "Direct user handheld and faster testing direction, 2026-10-08",
+      "source_sections": [],
+      "title": "Native Android sharing into a tag check",
+      "baseline_job": "Receive selected text through an Android OS share interface with explicit user action.",
+      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "status": "preserved future delivery route; not implemented",
+      "owner": "Codex",
+      "reviewer": "Independent device users and tag reviewers",
+      "release": "Future native delivery increment",
+      "acceptance": "Receive supported share intents on real Android devices; bounds, lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "disposition": "retained; requested scope expansion",
+      "dependencies": [
+        "docs/handheld-delivery.md",
+        "Versioned tag claim and method contract"
+      ],
+      "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
+      "pricing": {
+        "personal": "Free personal path; no account or paid gate",
+        "organizational": "No enterprise pricing claim"
+      }
+    },
+    {
+      "id": "N-015",
+      "layer": 3,
+      "source": "Direct user handheld and faster testing direction, 2026-10-08",
+      "source_sections": [],
+      "title": "Blind PS review from a phone",
+      "baseline_job": "Read a frozen reviewer JSON file, collect independent labels and export exact item fields for comparison.",
+      "outcome": "Reviewers can label without developer setup or detector predictions; incomplete and changed files fail coordinator comparison.",
+      "status": "implemented; synthetic form export and CLI comparison verified; independent human labeling pending",
+      "owner": "Codex",
+      "reviewer": "Independent device users and tag reviewers",
+      "release": "Handheld development preview",
+      "acceptance": "Validate frozen hashes, reviewer slot, exact original text, unique complete items and reasons; show disagreements and ambiguity; forbid hidden predictions, uploads, automatic persistence and claims of verified independence.",
+      "disposition": "retained; requested scope expansion",
+      "dependencies": [
+        "docs/handheld-delivery.md",
+        "Versioned tag claim and method contract"
+      ],
+      "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
+      "pricing": {
+        "personal": "Free personal path; no account or paid gate",
+        "organizational": "No enterprise pricing claim"
       }
     }
   ]

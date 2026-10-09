@@ -45,7 +45,7 @@ From the repository folder, using a new destination in an existing private paren
 python3 scripts/prepare-ps-review.py freeze ../ps-review-items.jsonl ../ps-blind-review
 ```
 
-The tool creates two separately shuffled CSV forms, the frozen items, and a hash
+The tool creates two separately shuffled CSV and phone-friendly JSON forms, the frozen items, and a hash
 manifest. No detector is called. Spreadsheet formula prefixes are escaped in the
 forms; the original frozen text is retained only in the private packet. Each
 reviewer independently fills `label` with `positive`, `negative`, or `ambiguous`
@@ -70,3 +70,21 @@ To volunteer, use the site's **Help improve this tag** control on PS, choose
 **Independent labels**, and post a privacy-safe draft in the linked public GitHub
 discussion. A maintainer coordinates the frozen packet; public posts are not
 permission to train on private content.
+
+## Review on a phone
+
+Open https://aitrustid.com/#person/PS and choose **Review test examples**. Open
+your `reviewer-1.json` or `reviewer-2.json` file, label each example and give a
+reason, then **Download labels**. Download progress before closing the page;
+reopen the downloaded JSON to resume. Nothing is uploaded or saved by the site.
+Return the completed file privately to the coordinator, who puts each file back
+in the corresponding private packet location and runs:
+
+```sh
+python3 scripts/prepare-ps-review.py compare ../ps-blind-review --format json
+```
+
+CSV remains available. Choose one format consistently for both reviewers. JSON
+comparison checks the same frozen hashes and exact original item fields as CSV.
+This form reduces setup work; it does not supply labels, prove independence or
+replace adjudication. Do not open the checker on your review examples.

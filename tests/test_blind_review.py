@@ -56,3 +56,33 @@ def test_preexisting_labels_cannot_be_recycled_as_blind_input(tmp_path):
     source.write_text(json.dumps({'id':'one','text':'sample','category':'display','source':'test','labels':['PS']})+'\n')
     with pytest.raises(ValueError, match='no labels'):
         review.freeze(source,tmp_path/'packet')
+
+
+def test_phone_forms_compare_and_reject_changes(tmp_path):
+    _, path, _ = packet(tmp_path)
+    with pytest.raises(ValueError, match='Every item'):
+        review.compare(path, 'json')
+    for i, label in [(1, 'positive'), (2, 'negative')]:
+        file = path/f'reviewer-{i}.json'
+        form = json.loads(file.read_text())
+        assert form['items'][0]['label'] is None
+        form['items'][0].update(label=label, reason='Synthetic test only')
+        file.write_text(json.dumps(form))
+    assert review.compare(path, 'json')['disagreement_ids'] == ['one']
+    file = path/'reviewer-1.json'
+    form = json.loads(file.read_text())
+    form['items'][0]['text'] += ' changed'
+    file.write_text(json.dumps(form))
+    with pytest.raises(ValueError, match='changed'):
+        review.compare(path, 'json')
+
+
+def test_phone_form_hash_identity_and_extra_predictions_are_refused(tmp_path):
+    _, path, _ = packet(tmp_path)
+    file = path/'reviewer-1.json'
+    original = json.loads(file.read_text())
+    for bad in [{**original, 'reviewer_slot':2}, {**original, 'method_sha256':'0'*64},
+                {**original, 'prediction':'PS'}]:
+        file.write_text(json.dumps(bad))
+        with pytest.raises(ValueError):
+            review.compare(path, 'json')

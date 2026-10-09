@@ -2,6 +2,16 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Added a phone/device PS checker using the unchanged Python method in a pinned,
+  self-hosted worker runtime, with bounded input, hash verification, cancellation,
+  short result and metadata-only export. No account, Docker or extension required.
+- Added opt-in public-asset offline saving/removal and home-screen manifest; no
+  answer or review caching. Added blind JSON phone review and strict CLI comparison.
+- Added full-evidence Chromium/WebKit parity for all 86 development cases and a
+  fast parallel source/regression command. Native sharing and actual-phone checks
+  remain tracked; independent accuracy is not claimed.
+
+
 - Corrected PS stdout routing and literal-display handling under context-v5,
   with versioned signals. Added 26 boundary cases and file-only shell checks;
   all 86 active development cases pass. Independent release remains blocked.

@@ -12,7 +12,7 @@ scammer. A legitimate installer can contain the pattern.
    encoded execution, and difficult mixed contexts. Do not reuse our development
    cases or private conversations. Agree sampling and candidate thresholds first.
 2. Freeze the packet with `scripts/prepare-ps-review.py`. It records the detector,
-   policy and dataset hashes and makes two separately shuffled CSV forms. The
+   policy and dataset hashes and makes two separately shuffled CSV and phone JSON forms. The
    full procedure is in [independent-review.md](independent-review.md).
 3. Each reviewer works alone, without detector results or the other's labels.
    Choose `positive`, `negative`, or `ambiguous`, and write a short reason. Do not
@@ -28,6 +28,12 @@ scammer. A legitimate installer can contain the pattern.
 If a finding exposes a defect, record it. Fixing the detector requires a new
 version and a new holdout; the exposed examples become development material.
 
-Current engineering baseline: 134 Python tests and 86 development cases pass.
+Current engineering baseline: 139 Python tests and 86 development cases pass.
 Independent labels have not been obtained. The release gate still fails.
 The updated full container pipeline has not been rerun. No certification is claimed.
+
+On a phone, open https://aitrustid.com/#person/PS → **Review test examples**, open
+your assigned JSON file, label and explain each item, then download your labels.
+Download progress before closing. Return the file privately to your coordinator.
+The comparison command for phone files adds `--format json`. No predictions or
+automatic uploads occur in this form.

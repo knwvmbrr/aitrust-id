@@ -16,6 +16,11 @@ down:
 	$(COMPOSE) down
 test:
 	$(PYTHON) -m pytest tests -q
+.PHONY: verify-ps verify-device
+verify-ps:
+	$(PYTHON) scripts/verify-ps.py
+verify-device: site-build
+	AITRUST_VERIFY_PYTHON="$(PYTHON)" npm run verify:device
 verify: test
 	npm run verify:browser
 verify-runtime:

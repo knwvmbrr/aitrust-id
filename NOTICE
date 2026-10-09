@@ -5,3 +5,9 @@ The specification in spec/ is separately licensed; see spec/LICENSE.
 Nunito Sans font assets are licensed under SIL Open Font License 1.1.
 Copyright and license: site/public/fonts/OFL.txt.
 Asset origin and hashes: site/public/fonts/provenance.json.
+
+The optional on-device checker serves unmodified Pyodide 314.0.7 runtime files
+(MPL-2.0), including CPython 3.14.2 (PSF license and bundled notices).
+License texts and source links: site/public/device-licenses/.
+Runtime assets are generated from the integrity-pinned npm package; not
+relicensed under Apache-2.0. The project method projection remains Apache-2.0.
