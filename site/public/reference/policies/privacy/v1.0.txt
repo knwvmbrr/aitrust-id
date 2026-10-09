@@ -1,6 +1,5 @@
 Privacy and data use
-AI TRUST ID · Version 1.1 · Effective 2026-10-08
-Published by Michael R. McGuire, an individual, Michigan, United States.
+AI TRUST ID · Version 1.0 · Effective 2026-10-08
 
 What stays on your device, what hosts receive and what sharing means.
 
@@ -16,7 +15,7 @@ Local setup: https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validati
 Security boundary: /policies/security/
 
 Browser storage and exports
-Theme preference is stored locally. Saving offline is optional and caches public application/runtime files, not answers or reviewer labels. Remove offline files through the PS checker. The default checker summary omits answer text, subject hashes, record identifiers, character counts, evidence positions and individual signals. It includes only the PS result state, public method identity and preview status. A summary still reveals that a check had a result; review it before sharing. Detailed records are a separate opt-in download and include subject hashes, spans and categories that may reveal or link information. Blind reviewer exports include the examples you opened and your labels. Files you download and clipboard copies remain under your own device/browser control.
+Theme preference is stored locally. Saving offline is optional and caches public application/runtime files, not answers or reviewer labels. Remove offline files through the PS checker. Metadata exports omit answer text, but subject hashes, spans and categories may reveal or link information. Blind reviewer exports include the examples you opened and your labels. Files you download and clipboard copies remain under your own device/browser control.
 
 Hosting and public discussion
 Cloudflare serves the site and receives connection metadata such as IP addresses and request information under its own practices. The site adds no analytics script or advertising tracker. GitHub receives messages and account activity you submit there under its own terms. Public posts may be copied by others. Research contribution and public publication are separate choices.

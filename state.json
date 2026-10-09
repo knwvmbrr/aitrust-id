@@ -99,7 +99,7 @@
     "verification": "runs/2026-10-08-policies-catalogue-public.json",
     "footer_workflows": {
       "count": 8,
-      "architecture": "docs/footer-workflows.md",
+      "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
       "distinct_components": true,
       "deep_links": true,
       "report_submission": "explicit owner/user posting to public GitHub; vulnerabilities private",
@@ -132,7 +132,26 @@
       "manual_legal_enforceability_review": false
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
-    "product_differentiation": "docs/product-differentiation.md"
+    "product_differentiation": "docs/product-differentiation.md",
+    "tag_system_upgrade": {
+      "status": "local_checks_pass; publication_pending",
+      "architecture": "docs/tag-system-upgrade.md",
+      "full_scope_records": 202,
+      "multi_tag_design_explained": true,
+      "publisher": "Michael R. McGuire, an individual, Michigan, United States",
+      "publisher_approved_by_owner": true,
+      "policy_version": "1.1",
+      "policy_1_0_preserved": true,
+      "default_summary_excludes_input_identifiers": true,
+      "detailed_export_opt_in": true,
+      "evidence": "runs/2026-10-08-upgrade-build-audit.json",
+      "local_browser_checks": {
+        "policies": "runs/2026-10-08-upgrade-policies-local.json",
+        "catalogue": "runs/2026-10-08-upgrade-site-local.json",
+        "workflows": "runs/2026-10-08-upgrade-workflows-local.json",
+        "device": "runs/2026-10-08-upgrade-device-local.json"
+      }
+    }
   },
   "previous_runtime_verification": {
     "capabilities": [

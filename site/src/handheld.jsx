@@ -1,16 +1,18 @@
 import React,{useState,useEffect,useRef,useId} from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
+import {shareSummary} from './share-record.js';
 import {deviceChecker,manifest} from './device-client.js';
 const button='min-h-11 rounded-lg border border-line px-4 py-3 text-sm font-medium disabled:opacity-50';
 function download(name,data){const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 
 function Checker(){
  const uid=useId(),client=useRef(null),generation=useRef(0);
+ const [includeDetails,setIncludeDetails]=useState(false);
  const [text,setText]=useState(''),[busy,setBusy]=useState(false),[status,setStatus]=useState(''),[record,setRecord]=useState(null);
  useEffect(()=>()=>{generation.current++;client.current?.stop();},[]);
- function clear(value=''){generation.current++;client.current?.stop();client.current=null;setText(value);setRecord(null);setBusy(false);setStatus('');}
+ function clear(value=''){generation.current++;client.current?.stop();client.current=null;setText(value);setRecord(null);setIncludeDetails(false);setBusy(false);setStatus('');}
  async function check(event){
-  event.preventDefault();const own=++generation.current;setRecord(null);
+  event.preventDefault();const own=++generation.current;setRecord(null);setIncludeDetails(false);
   if(!text.trim()||Array.from(text).length>manifest.max_codepoints){setStatus('Paste an answer, up to 20,000 characters.');return;}
   setBusy(true);
   try{client.current??=deviceChecker(message=>{if(own===generation.current)setStatus(message);});const value=await client.current.check(text);if(own!==generation.current)return;setRecord({...value,record_id:crypto.randomUUID()});setStatus('Check complete.');}
@@ -22,7 +24,7 @@ function Checker(){
  <form className="mt-4" onSubmit={check}><label className="block text-sm font-semibold" htmlFor={uid}>AI answer</label><textarea id={uid} className="mt-2 block w-full resize-y rounded-lg border border-input bg-surface p-3 text-base" rows={5} value={text} maxLength={40000} spellCheck={false} autoComplete="off" autoCorrect="off" autoCapitalize="off" onChange={e=>clear(e.target.value)} aria-describedby={uid+'-limit'}/><p id={uid+'-limit'} className="mt-1 text-xs text-muted">{Array.from(text).length.toLocaleString()} / 20,000 characters · Development preview</p>
  <div className="mt-3 flex flex-wrap gap-2"><button className={button} type="submit" disabled={busy}>{busy?'Checking…':'Check answer'}</button><button className={button} type="button" onClick={()=>clear()}>Clear</button></div></form>
  <p role="status" className="mt-3 text-sm leading-6">{status}</p>
- {record&&<section aria-label="Check result" className="mt-3 rounded-xl border border-line p-4"><p className="text-base font-semibold">{record.state==='FINDING'?'PS · Command-risk pattern found':'No supported pattern found'}</p><p className="mt-1 text-sm leading-6">{record.state==='FINDING'?'Read and understand the command before acting. This does not establish a scam or malicious intent.':'This is not a safety clearance. PS recognizes a bounded set of command patterns.'}</p><p className="mt-2 text-xs text-muted">Development preview · Method {record.models[0].revision} · {record.candidates.reduce((n,c)=>n+c.signals.length,0)} supported signals</p><button className={button+' mt-3'} onClick={()=>download('ai-trust-id-ps-record.json',record)}>Download record</button><p className="mt-2 text-xs text-muted">Metadata only, not a training label. The subject hash can link matching text; share carefully.</p></section>}
+ {record&&<section aria-label="Check result" className="mt-3 rounded-xl border border-line p-4"><p className="text-base font-semibold">{record.state==='FINDING'?'PS · Command-risk pattern found':'No supported pattern found'}</p><p className="mt-1 text-sm leading-6">{record.state==='FINDING'?'Read and understand the command before acting. This does not establish a scam or malicious intent.':'This is not a safety clearance. PS recognizes a bounded set of command patterns.'}</p><p className="mt-2 text-xs text-muted">Development preview · Method {record.models[0].revision} · {record.candidates.reduce((n,c)=>n+c.signals.length,0)} supported signals</p><button className={button+' mt-3'} onClick={()=>download('ai-trust-id-ps-summary.json',shareSummary(record,manifest))}>Download summary</button><p className="mt-2 text-xs leading-5 text-muted">The summary leaves out answer text, fingerprints and evidence positions. It still shares the result and public method identity; review before sharing. It is not a training label.</p><details className="mt-3 border-t border-line pt-3"><summary className="min-h-11 cursor-pointer py-2 text-sm font-semibold">Detailed record for reproduction</summary><p id={uid+'-details-warning'} className="mt-2 text-sm leading-6">The detailed record includes a subject hash and evidence positions that can link or reveal information about the answer. It contains no answer text. Keep it private unless you intend to disclose these details.</p><label className="my-3 flex min-h-11 items-start gap-3 text-sm leading-6"><input type="checkbox" className="mt-1 size-5 shrink-0" checked={includeDetails} onChange={e=>setIncludeDetails(e.target.checked)} aria-describedby={uid+'-details-warning'}/><span>Include fingerprints and evidence positions</span></label><button className={button} disabled={!includeDetails} onClick={()=>download('ai-trust-id-ps-record.json',record)}>Download detailed record</button></details></section>}
  <Offline/>
  </>;
 }

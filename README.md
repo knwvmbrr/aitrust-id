@@ -233,3 +233,7 @@ pass ran HTTP/unit checks, not a restarted full container pipeline.
 Independent reviewers can use the blind packet tool described in
 [Independent review](docs/independent-review.md). It never supplies predictions,
 labels, or a claim that two files establish two independent reviewers.
+
+Public policies name the current individual publisher and offer versioned plain-text
+downloads. Checker summaries omit answer fingerprints/positions by default; detailed
+reproduction records require an explicit choice. [Architecture and limits](docs/tag-system-upgrade.md).

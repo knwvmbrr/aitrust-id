@@ -1,7 +1,7 @@
 # Product distinction, not a priority argument
 
 Reviewed 2026-10-08. The product case is about jobs, users, delivery and evidence.
-A domain purchase price or another party's chronology does not determine usefulness.
+The comparison covers the complete approved tag system, its users and delivery routes. Overlap in one component does not establish product equivalence.
 Competitor marketing establishes advertised scope, not independently tested performance.
 
 ## The actual product difference
@@ -18,7 +18,7 @@ A validated release is an outcome of testing, not a label inferred from publicat
 | Small explainable findings | Code-only tags in the tested extension UI; site/device result gives a short explanation and metadata | A response can carry distinct findings without a large obstructive panel. The current device detector is PS-only; all future tags need their own method. |
 | Open implementation | Project code Apache-2.0, specification CC BY 4.0, public source/fixtures/download | Inspect, modify, redistribute and self-host under the actual licenses. Open source is an advantage, not unique across this market. |
 | Person-first access | PS device route needs no account, Docker, extension or metered inference API | Lower setup burden. Pinned browser runtime downloads and opt-in offline caching still have size/compatibility costs. |
-| User control of text | Device path has no answer upload; optional local gateway route is distinct | An owner controls sharing; no automatic training pipeline. Hosting still sees connection metadata, and local redaction can miss sensitive information. |
+| Deliberate disclosure | Device checking has no answer upload; default summary omits subject fingerprints and positions; detailed records require an explicit checkbox | The browser export tests verify both paths and cancellation boundaries. The result can still be sensitive; report drafts and reviewer packets have separate disclosure rules. |
 | Validation by tag | Written claim boundaries, acceptance scenarios, statistical gates, independent-review tools | Publicly inspectable path to earned release. Independent PS accuracy and human/physical-device checks are still pending. |
 | Correction and participation | Separate report, contribution, public discussion and task workflows | People can challenge and improve a claim. Posting is on GitHub; a self-hosted live community is future work. |
 | Personal versus enterprise | Free personal detection/evidence invariant; fleet/SSO/audit/support/private-policy scope retained | Organizations can pay for administration without weakening personal claims. These organization services are not active offers. |
@@ -38,12 +38,31 @@ no breadth. Our larger planned scope is not evidence that it is already delivere
 and its displayed provenance is not evidence that its content is true. Neither
 party's website alone supports an accuracy ranking.
 
-Other open-source systems exist. [NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)
-is an Apache-2.0 toolkit for programmable conversational safeguards.
-[Guardrails AI](https://github.com/guardrails-ai/guardrails) is an Apache-2.0 Python
-framework supporting multiple input/output validators and structured output.
-The opportunity is a clear consumer evidence/tag workflow, with actual portability,
-control and acceptance evidence—not exclusivity over open source or multiple checks.
+## Compare by product job
+
+| Comparable | Published job | AI TRUST ID distinction |
+| --- | --- | --- |
+| [Digimarc C2PA extension](https://github.com/digimarc-corp/c2pa-content-credentials-extension) | Browser inspection of media Content Credentials and associated watermark information | Tags also address distinct content questions such as reference support, command risk, manipulation and personal-information handling. Provenance verification remains one evidence lane. |
+| [Adobe TrustMark](https://github.com/adobe/trustmark) | Image watermark embedding, detection and removal research/software | Watermark evidence can support a provenance tag; it does not replace the other tag jobs, per-tag validation or personal/organization workflows. |
+| [ISCC](https://iscc.codes/concept/) | Open, content-derived identifiers/fingerprints for digital assets | Content identity can help bind records and locate related assets; the approved tag system also evaluates specific properties and provides explanations and correction paths. |
+
+These are relevant open-source components and adjacent standards, not demonstrated
+complete substitutes. NeMo Guardrails and Guardrails AI are developer-side
+safeguard/validator frameworks. Keep them in the broader technical landscape for
+integration research, not as equivalent consumer tagging/provenance products.
+Neither exclusivity nor a uniform quality ranking follows from these descriptions.
+
+## Complete design, preserved
+
+Different tags inspect different properties with appropriate evidence: references,
+context/risk methods, provenance records, observed composition or independent human
+review. A tag may combine multiple sources and tools. NF, FI, HP, MT, PS, IV, FA,
+PA, UNK and both personal-information routes retain their distinct jobs. UC, SC and
+BT remain proposals. Authorship receipts, six modalities, mobile/native sharing,
+free personal methods, organization administration/private policies, public
+collaboration and consented research remain in the 202-record scope. PS-first is
+sequencing, not a product definition. Multiple tags can coexist; correcting one
+must not silently redefine or disable unrelated findings.
 
 ## What would justify "better"
 
@@ -58,4 +77,4 @@ established here," not proof the vendor lacks it.
 The defensible claim now: a distinct, independently built, free/open personal
 workflow with observable engineering results and an explicit per-tag validation
 policy. Competitive superiority and commercial demand are questions to measure.
-Dates and insults are not acceptance evidence.
+Future comparisons should assess the complete product design separately from evidence about each delivered tag.

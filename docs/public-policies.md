@@ -28,3 +28,9 @@ payloads. Private reports can lead to safe public summaries.
 Verify metadata and sitemap uniqueness, policy HTML/text agreement, source links,
 320px and 200% reflow, both themes, keyboard/axe checks, all tag/workflow regressions
 and unchanged device method. Deploy the reviewed build and verify public hashes.
+
+Version 1.1 names the owner-approved individual publisher. Prior 1.0 text is
+retained at version-specific URLs. Policy verification now clicks the nine
+download links and compares saved bytes with source text. The default checker
+summary excludes subject hashes and evidence positions; full records require
+explicit opt-in. See `docs/tag-system-upgrade.md` for boundaries and risks.

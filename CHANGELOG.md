@@ -2,6 +2,13 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Expanded the walkthrough/About to explain the full multi-tag design and retained
+  all 202 scope records. Added the owner-approved individual publisher to public
+  surfaces. Preserved policy 1.0 and published version 1.1 with actual named downloads.
+- Added a minimal default checker summary and explicit opt-in for detailed subject
+  fingerprints/evidence positions. Browser checks now exercise both exports and
+  actual no-script policy downloads. No detector or release-gate change.
+
 - Published the positive per-tag validation-before-release rule across metadata,
   references and panels while retaining each tag’s current evidence/stage. Added
   nine versioned public terms/policy pages, no-script index and matching text downloads.
