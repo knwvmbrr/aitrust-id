@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-09-approachable-site-public.json",
+    "evidence": "runs/2026-10-09-ps-results-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +46,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://e50d0d71.aitrust-id.pages.dev",
-    "deployment_id": "e50d0d71-27bb-49c0-a985-2b76cb439270",
+    "deployment_url": "https://b53179ef.aitrust-id.pages.dev",
+    "deployment_id": "b53179ef-44e1-436d-ac2d-0868d1915f53",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +67,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-09-approachable-deployment.json",
+    "publication_evidence": "runs/2026-10-09-ps-results-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +96,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-09-approachable-site-public.json",
+    "verification": "runs/2026-10-09-ps-results-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -220,7 +220,7 @@
       "public_asset_checks": 393
     },
     "ps_result_clarity": {
-      "status": "local_checks_passed; public_verification_pending",
+      "status": "published_and_public_checks_pass",
       "architecture": "docs/ps-result-clarity.md",
       "website_personal_checkers": [
         "PS"
@@ -233,7 +233,10 @@
       "input_excerpt_exported": false,
       "detector_changed": false,
       "human_usability_review": false,
-      "local_evidence": "runs/2026-10-09-ps-results-local.json"
+      "local_evidence": "runs/2026-10-09-ps-results-local.json",
+      "public_evidence": "runs/2026-10-09-ps-results-public.json",
+      "publication": "runs/2026-10-09-ps-results-deployment.json",
+      "source_commit": "28b66b8380613995adcda8bf31bdedf3dbd7ffcd"
     }
   },
   "previous_runtime_verification": {
@@ -535,7 +538,7 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-08-handheld-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "53f876cf17c14df129dbefb5121e26cfdb3bc9cc",
+    "latest_implementation_commit": "28b66b8380613995adcda8bf31bdedf3dbd7ffcd",
     "handheld_download_verified": true
   },
   "name_clearance": {
@@ -591,16 +594,16 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-09-approachable-device-public.json",
+    "evidence": "runs/2026-10-09-ps-results-device-public.json",
     "future_native_routes": [
       "N-013",
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "e50d0d71-27bb-49c0-a985-2b76cb439270",
+    "deployment": "b53179ef-44e1-436d-ac2d-0868d1915f53",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input",
-    "latest_emulation_evidence": "runs/2026-10-09-approachable-device-public.json"
+    "latest_emulation_evidence": "runs/2026-10-09-ps-results-device-public.json"
   },
   "fast_verification": {
     "command": "make verify-ps",

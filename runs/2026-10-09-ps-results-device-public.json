@@ -1,0 +1,95 @@
+{
+  "execution_host": {
+    "platform": "darwin",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "logical_cpus": 8,
+    "memory_bytes": 8589934592,
+    "node": "v24.19.0",
+    "clock": "browser performance.now; resolution varies by engine",
+    "observation": "Execution host hardware; not simulated handset hardware"
+  },
+  "captured_at": "2026-10-09T15:27:06.987Z",
+  "method_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "format": "ai-trust-id-handheld-verification/v1",
+  "independent_accuracy": false,
+  "physical_device_tested": false,
+  "engines": [
+    {
+      "name": "Android Chromium",
+      "case_count": 86,
+      "timing": {
+        "sample_count": 86,
+        "p50_ms": 0.30000001192092896,
+        "p95_ms": 1,
+        "cold_load_ms": 2354,
+        "scope": "Desktop-hosted browser emulation; cold runtime load excluded from warm check times",
+        "input_lengths_codepoints": {
+          "min": 16,
+          "max": 118
+        }
+      },
+      "full_evidence_parity": true,
+      "parity_including_runtime_ms": 2498,
+      "offline_reload_and_check": true,
+      "offline_removal": true,
+      "offline_transport": "Playwright offline",
+      "metadata_export": true,
+      "minimal_summary_export": true,
+      "future_fields_excluded": true,
+      "detailed_export_requires_opt_in": true,
+      "detail_consent_reset_for_new_input": true,
+      "blind_review_export": true,
+      "invalid_bundle_unavailable": true,
+      "stale_input_cancelled": true,
+      "unsupported_worker_handled": true,
+      "timeout_handled": true,
+      "axe_violations": 0,
+      "text_resize_200": true,
+      "focus_restored": true,
+      "no_text_in_requests_or_cache": true,
+      "reflow_320": true,
+      "errors": []
+    },
+    {
+      "name": "iPhone WebKit",
+      "case_count": 86,
+      "timing": {
+        "sample_count": 86,
+        "p50_ms": 0,
+        "p95_ms": 1,
+        "cold_load_ms": 1678,
+        "scope": "Desktop-hosted browser emulation; cold runtime load excluded from warm check times",
+        "input_lengths_codepoints": {
+          "min": 16,
+          "max": 118
+        }
+      },
+      "full_evidence_parity": true,
+      "parity_including_runtime_ms": 1727,
+      "offline_reload_and_check": false,
+      "offline_removal": true,
+      "offline_transport": "Not exercised against public origin; local origin-outage check covers cache",
+      "metadata_export": true,
+      "minimal_summary_export": true,
+      "future_fields_excluded": true,
+      "detailed_export_requires_opt_in": true,
+      "detail_consent_reset_for_new_input": true,
+      "blind_review_export": true,
+      "invalid_bundle_unavailable": true,
+      "stale_input_cancelled": true,
+      "unsupported_worker_handled": true,
+      "timeout_handled": true,
+      "axe_violations": 0,
+      "text_resize_200": true,
+      "focus_restored": true,
+      "no_text_in_requests_or_cache": true,
+      "reflow_320": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "url": "https://aitrustid.com",
+  "pass": true,
+  "elapsed_ms": 49520
+}

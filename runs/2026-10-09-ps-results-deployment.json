@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-10-09T15:30:14.092560+00:00",
+  "pass": true,
+  "deployment_id": "b53179ef-44e1-436d-ac2d-0868d1915f53",
+  "deployment_url": "https://b53179ef.aitrust-id.pages.dev",
+  "source_commit": "28b66b8380613995adcda8bf31bdedf3dbd7ffcd",
+  "previous_deployment_id": "e50d0d71-27bb-49c0-a985-2b76cb439270",
+  "environment": "Production",
+  "uploaded_new_files": 36,
+  "existing_files_reused": 95,
+  "public_asset_checks": 393,
+  "website_personal_checkers": [
+    "PS"
+  ],
+  "local_only_personal_implementations": [
+    "PII_REDACTED"
+  ],
+  "planned_or_proposed_personal_tags": 12,
+  "real_result_cases": 6,
+  "explained_signal_types": 5,
+  "invalid_result_cases_rejected": 7,
+  "input_html_escaped": true,
+  "no_answer_upload": true,
+  "matched_excerpts_persisted": false,
+  "detector_changed": false,
+  "release_gates_changed": false,
+  "independent_accuracy_validated": false,
+  "human_usability_accepted": false,
+  "physical_device_tested": false,
+  "scope_records_preserved": 202,
+  "mobile_cases_per_engine": 86,
+  "public_webkit_offline_verified": false,
+  "local_webkit_origin_outage_verified": true,
+  "automated_axe_violations": 0,
+  "production_security_headers_verified": true,
+  "docker_started": false,
+  "evidence": {
+    "results": "runs/2026-10-09-ps-results-public.json",
+    "site": "runs/2026-10-09-ps-results-site-public.json",
+    "devices": "runs/2026-10-09-ps-results-device-public.json",
+    "assets": "runs/2026-10-09-ps-results-assets-public.json",
+    "execution": "runs/2026-10-09-ps-results-execution.json"
+  }
+}

@@ -27,5 +27,7 @@
     "runs/2026-10-09-ps-results-site-local.json",
     "runs/2026-10-09-ps-results-device-local.json"
   ],
-  "verification_note": "One concurrent approachability run timed out waiting for its first modal. Cause not established; transport/page diagnostics added and standalone verification passed. Final result, site and both device checks passed."
+  "verification_note": "One concurrent approachability run timed out waiting for its first modal. Cause not established; transport/page diagnostics added and standalone verification passed. Final result, site and both device checks passed.",
+  "publication": "runs/2026-10-09-ps-results-deployment.json",
+  "operator_command_correction": "Deployment listing wrapper initially assumed npx existed beside bundled Node; used actual PATH-resolved npx and verified the deployment ID successfully."
 }
