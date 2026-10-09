@@ -23,5 +23,18 @@
     "runs/2026-10-09-approachable-workflows-local.json",
     "runs/2026-10-09-approachable-device-local.json"
   ],
-  "isolation": "Separate checkout of published main plus explicitly reviewed enterprise drafts; unrelated adjudication, accessibility and device-bundle drafts were excluded."
+  "isolation": "Separate checkout of published main plus explicitly reviewed enterprise drafts; unrelated adjudication, accessibility and device-bundle drafts were excluded.",
+  "publication": "runs/2026-10-09-approachable-deployment.json",
+  "verification_corrections": [
+    {
+      "error_signature": "TypeError: ctx.dispose is not a function",
+      "scope": "One-off asset verification cleanup, after all hashes matched",
+      "fix": "Use BrowserContext.close; reran complete 393-hash check; exit 0"
+    },
+    {
+      "error_signature": "AITRUST_SITE_URL was ignored by verify-device.cjs",
+      "scope": "Initial purported public mobile run used its local server",
+      "fix": "Replaced output by a new successful AITRUST_DEVICE_URL=https://aitrustid.com run; public WebKit offline remains explicitly unverified"
+    }
+  ]
 }
