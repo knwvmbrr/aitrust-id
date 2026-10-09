@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-09T21:07:46.641291+00:00",
+  "author": "Codex",
+  "finding": "Fresh checkout failed because verifier read ignored site/src/device-manifest.json",
+  "error_signature": "FileNotFoundError: site/src/device-manifest.json",
+  "root_cause": "The installed-workspace builder check had a generated artifact available; configured CI did not build it first. Prior wording incorrectly described this file as tracked.",
+  "fix": "Read committed docs/device-build-reference.json; do not regenerate a mismatching reference",
+  "verification": "Two regression tests execute a minimal fresh checkout without site assets and reject an altered bundle reference; actual 3.10/3.11/3.12/3.13 builder matrix passes",
+  "evidence": [
+    "runs/2026-10-09-device-matrix-clean-reference.json",
+    "runs/2026-10-09-provenance-boundary-python.json"
+  ],
+  "pass": true,
+  "independent_release_validated": false
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-210938-provenance-research-api-final-verification-f5c53f73",
+  "recorded_at": "2026-10-09T21:09:38.875888+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e0ff1323a68e37c56d9cb272e5a553709700864d",
+  "changed": "Separate the experimental research-candidate API from the draft live-action flag, record final full-suite results and unchanged PS site checks, and preserve scope acceptance.",
+  "proves": "390 final reviewed Python tests pass; credential-only, malformed, conflicting, duplicate and mixed-subject evidence checks execute; six PS site-result cases still pass with zero axe findings and no answer uploads.",
+  "limits": "Research eligibility does not issue a production tag. Real media, capture, claim authenticity, independent accuracy and accepted mapping policy remain unimplemented or unverified.",
+  "scope_ids": [
+    "T-PA",
+    "T-FA",
+    "F-083",
+    "F-116",
+    "F-150"
+  ],
+  "files": {
+    "README.md": "35e4a425c739b5f45a051e7b2e3cc430041a1881f9d6f89360d929470eff05a0",
+    "docs/adjudication-spec.md": "0a962d88ea3e22d0d253736b7c3ccd6340c94659a0eb227a757110d920430d59",
+    "docs/development.md": "bf152cae82636513b18a8d63329c116e4e7a02c0b24e7875dd6bda4065a3ecb5",
+    "docs/device-accessibility-result.md": "c722b29115fab6388b4694f669f64c123d93dac5d001b7271d29527173f1e31f",
+    "docs/device-build-reference.json": "a47941a34b5c44426da586cf7705758353353eca78075c3e05e77aefd2f610c5",
+    "docs/provenance-boundary-increment.md": "0b884814ca4c6ad5a53c1c06122f85e9e349bd60c0d11339aeefa349fb0710b4",
+    "docs/provenance-boundary-result.md": "d9340a5111c28034ae0184b4e4d794fb866c66989cf39747cb286510680f1b64",
+    "docs/scope-progress.json": "9c6a43d52b7195d7730344ff270ee31251dbbaf56759f72d9eb5597a831560cf",
+    "docs/scope-progress.md": "dacb9f049d762ee8547b91c636d34d0aa46da39e5da531021c1e811c0001aecf",
+    "runs/2026-10-09-device-matrix-checkout-correction.json": "a3e8768b185dc1df86b0664c325e9994f773f1435b31ed4aebbd953cc57c0558",
+    "runs/2026-10-09-device-matrix-clean-reference.json": "a0da6e2b3b9c82347b09bf9a0b012302aadc99fbac39843891842677820e3b6b",
+    "runs/2026-10-09-provenance-boundary-demo.json": "8d3bdbecb1e7289fdded2008c6f32e7db68923a733580d1f8d23db6befe26c09",
+    "runs/2026-10-09-provenance-boundary-final-python.json": "1fd35bb9f06004aa084ea0c24cb7a3ffb582e20711b4fadbe9986a050ea62273",
+    "runs/2026-10-09-provenance-boundary-ps-local.json": "02d7d2e8d55b77d7dcbf067890bf922c47b1c4525289a2af2902c35a40d576ac",
+    "runs/2026-10-09-provenance-boundary-python.json": "f8a99a85fd34274db2ad4e7478d5a2304d322020a8a7ddf823f5146f578fcd76",
+    "runs/2026-10-09-provenance-boundary-scope.json": "2d0ca74e9bcd2411ad778f08eb5f2361ffae7c20dea919a277ed34737077babb",
+    "scripts/demo-tag-bridge.py": "b1ec8123c308b83749d9ee86625ff39108e30dbc8bef54e511c8a04fcbe40d30",
+    "scripts/verify-device-build-matrix.py": "ecb28c8dda18892ef1ffbe2f3d9f0d28a34139ed11e2deefb81be1b792f9a4d0",
+    "services/adjudicator/tag_bridge.py": "210b35d4454ffa4df192a0bd16aa16d6ae338a1bb9de5bd00b505f8063b70b03",
+    "site/public/reference/public-scope.json": "41452656e9e331b3714eb4fac48c68267ee8c0c489b19a46e8afa8d5ab53f7d1",
+    "site/src/public-scope.json": "41452656e9e331b3714eb4fac48c68267ee8c0c489b19a46e8afa8d5ab53f7d1",
+    "state.json": "1a9ded2223246a5beda86efb4f4db97dc01b45b5a9c103ef7b252fea66d686bb",
+    "tests/test_device_matrix_checkout.py": "38dcb556d224c256d604a27cd50b38f7a6940b41d9c2a5fe9eb1f5b412ae3db5",
+    "tests/test_tag_bridge.py": "2e5a1ab62b7fde09a6a1a59570e650bf5e201e503a00c4e07a3710b03e154849"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-provenance-boundary-final-python.json",
+      "sha256": "1fd35bb9f06004aa084ea0c24cb7a3ffb582e20711b4fadbe9986a050ea62273"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-ps-local.json",
+      "sha256": "02d7d2e8d55b77d7dcbf067890bf922c47b1c4525289a2af2902c35a40d576ac"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-210746-provenance-boundary-and-fresh-checkout-fix-07068734",
+  "recorded_at": "2026-10-09T21:07:46.877811+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e0ff1323a68e37c56d9cb272e5a553709700864d",
+  "changed": "Repair the experimental provenance-to-tag bridge: credential validity alone cannot imply AI participation; explicit subject-bound claims, typed inputs, conservative conflict preservation and deduplication are required. Correct the device verifier to use a committed reference in a clean checkout. Timestamp scope evidence without inflating acceptance.",
+  "proves": "390 reviewed Python tests pass, including 89 bridge/clean-checkout cases; a corrupted reference is rejected; four actual installed Python builders produce identical bytes; five synthetic bridge cases run without network or command execution.",
+  "limits": "No real media/cryptographic validation, accepted claim-mapping policy, independent accuracy or released PA/FA tags. Hosted CI remains account-billing blocked. Original unreviewed drafts are preserved separately.",
+  "scope_ids": [
+    "T-PA",
+    "T-FA",
+    "F-025",
+    "F-083",
+    "F-116",
+    "F-150",
+    "WP-RELEASE"
+  ],
+  "files": {
+    "README.md": "35e4a425c739b5f45a051e7b2e3cc430041a1881f9d6f89360d929470eff05a0",
+    "docs/adjudication-spec.md": "0a962d88ea3e22d0d253736b7c3ccd6340c94659a0eb227a757110d920430d59",
+    "docs/development.md": "bf152cae82636513b18a8d63329c116e4e7a02c0b24e7875dd6bda4065a3ecb5",
+    "docs/device-accessibility-result.md": "c722b29115fab6388b4694f669f64c123d93dac5d001b7271d29527173f1e31f",
+    "docs/device-build-reference.json": "a47941a34b5c44426da586cf7705758353353eca78075c3e05e77aefd2f610c5",
+    "docs/provenance-boundary-increment.md": "0b884814ca4c6ad5a53c1c06122f85e9e349bd60c0d11339aeefa349fb0710b4",
+    "docs/provenance-boundary-result.md": "d9340a5111c28034ae0184b4e4d794fb866c66989cf39747cb286510680f1b64",
+    "docs/scope-progress.json": "7c51b8bb78a171b46fd119fc7a3a34439480dc9fd577dbeaed14b7e26f06c40e",
+    "docs/scope-progress.md": "2d030250771d8604202a46928e3b4113dadeac84c6c4ec34b751afa78a16e4ef",
+    "runs/2026-10-09-device-matrix-checkout-correction.json": "a3e8768b185dc1df86b0664c325e9994f773f1435b31ed4aebbd953cc57c0558",
+    "runs/2026-10-09-device-matrix-clean-reference.json": "a0da6e2b3b9c82347b09bf9a0b012302aadc99fbac39843891842677820e3b6b",
+    "runs/2026-10-09-provenance-boundary-demo.json": "8d3bdbecb1e7289fdded2008c6f32e7db68923a733580d1f8d23db6befe26c09",
+    "runs/2026-10-09-provenance-boundary-python.json": "f8a99a85fd34274db2ad4e7478d5a2304d322020a8a7ddf823f5146f578fcd76",
+    "runs/2026-10-09-provenance-boundary-scope.json": "2d0ca74e9bcd2411ad778f08eb5f2361ffae7c20dea919a277ed34737077babb",
+    "scripts/demo-tag-bridge.py": "b1ec8123c308b83749d9ee86625ff39108e30dbc8bef54e511c8a04fcbe40d30",
+    "scripts/verify-device-build-matrix.py": "ecb28c8dda18892ef1ffbe2f3d9f0d28a34139ed11e2deefb81be1b792f9a4d0",
+    "services/adjudicator/tag_bridge.py": "22daace4f4325075839d6b8f25106e35bb45afa920f73279cd216a74f96caa36",
+    "state.json": "7a2140a083e00165d9b6a57537e096c2bebaa4d6dc11978ece561e17160b70c9",
+    "tests/test_device_matrix_checkout.py": "38dcb556d224c256d604a27cd50b38f7a6940b41d9c2a5fe9eb1f5b412ae3db5",
+    "tests/test_tag_bridge.py": "5d3a5ff3670e3a384c1920ddc48e5012dc93b8a983284ea2c8ac4f2c8f03332c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-provenance-boundary-python.json",
+      "sha256": "f8a99a85fd34274db2ad4e7478d5a2304d322020a8a7ddf823f5146f578fcd76"
+    },
+    {
+      "path": "runs/2026-10-09-device-matrix-clean-reference.json",
+      "sha256": "a0da6e2b3b9c82347b09bf9a0b012302aadc99fbac39843891842677820e3b6b"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-demo.json",
+      "sha256": "8d3bdbecb1e7289fdded2008c6f32e7db68923a733580d1f8d23db6befe26c09"
+    },
+    {
+      "path": "runs/2026-10-09-device-matrix-checkout-correction.json",
+      "sha256": "a3e8768b185dc1df86b0664c325e9994f773f1435b31ed4aebbd953cc57c0558"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-scope.json",
+      "sha256": "2d0ca74e9bcd2411ad778f08eb5f2361ffae7c20dea919a277ed34737077babb"
+    }
+  ],
+  "checks": []
+}

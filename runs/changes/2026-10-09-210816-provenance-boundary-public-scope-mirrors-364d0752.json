@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-210816-provenance-boundary-public-scope-mirrors-364d0752",
+  "recorded_at": "2026-10-09T21:08:16.893405+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e0ff1323a68e37c56d9cb272e5a553709700864d",
+  "changed": "Regenerate public scope mirrors for the provenance-boundary research evidence and clean-checkout correction; retain tag-specific preview/future states and all acceptance percentages.",
+  "proves": "All 202 scope records, 39 packages and 117 subtasks retain IDs, owners and required acceptance; the reviewed source ledger renders successfully.",
+  "limits": "PA/FA are not enabled by these mirrors; experimental candidates remain outside production.",
+  "scope_ids": [
+    "T-PA",
+    "T-FA",
+    "F-025",
+    "F-083",
+    "F-150"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "41452656e9e331b3714eb4fac48c68267ee8c0c489b19a46e8afa8d5ab53f7d1",
+    "site/src/public-scope.json": "41452656e9e331b3714eb4fac48c68267ee8c0c489b19a46e8afa8d5ab53f7d1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-provenance-boundary-scope.json",
+      "sha256": "2d0ca74e9bcd2411ad778f08eb5f2361ffae7c20dea919a277ed34737077babb"
+    }
+  ],
+  "checks": []
+}

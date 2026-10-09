@@ -10,7 +10,9 @@ https://9805ae71.aitrust-id.pages.dev.
   writes atomically, preserves unchanged file timestamps and blocks publication
   on failed stale-bundle cleanup. Tests run in fresh temporary output directories.
 - Four actual installed Python builders (3.10.15, 3.11.10, 3.12.14, 3.13.0)
-  produce the same bundle/manifest and match the tracked manifest. PS method and
+  produce the same bundle/manifest. The initial comparison used a generated
+  manifest; the subsequent clean-checkout correction uses the committed
+  docs/device-build-reference.json. PS method and
   bundle hashes remain unchanged. No future-version guarantee is made.
 - PS empty/oversized input errors are associated with the answer field; focus
   returns to it, editing clears the error, and busy state is announced.

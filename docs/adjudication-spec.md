@@ -131,3 +131,47 @@ reopen affected acceptance. Published research is motivation, not a substitute
 for our evidence. The [latest Nemecek paper](https://arxiv.org/abs/2603.02378)
 already reports its own cross-layer protocol; this project does not claim that
 conflict adjudication is an unoccupied category.
+
+## Experimental provenance-to-tag bridge — 0.2.0 research
+
+`services/adjudicator/tag_bridge.py` consumes typed, **supplied** credential results
+and optional explicit subject-bound authorship claims. Credential validity by
+itself yields neutral UNK; it must not turn an ordinary signed human document
+into PA. This bridge does not verify media, claims, signatures or revocation.
+It is not wired into the gateway, extension, site checker or production allowlist.
+
+Proposed adapter semantics (not general C2PA value aliases):
+
+| Explicit supplied claim | Research candidate | Missing requirement |
+|---|---|---|
+| `ai_generated_then_human_reworked` | PA | Authenticated, accepted upstream evidence of both stages |
+| `ai_generated_without_human_intervention` | FA | Authenticated, accepted evidence covering the full claimed workflow |
+| `human_origin_claim` | neutral UNK | No human-authenticity clearance is offered by this bridge |
+| No decoded claim, unbound claim or non-assertable credential | neutral UNK | Cannot infer authorship from credential quality or missing human evidence |
+
+The values are deliberately narrower than “AI present” or “AI generated”:
+neither of those proves whether a human later edited the output. PA and FA keep
+their individual jobs. F-083 permits evidence in support of their jobs; it never
+permits an inference from the absence of human evidence. A valid signer can still
+make a false statement, so signatures and these mappings are not truth guarantees.
+
+Each supplied claim needs an exact lowercase SHA-256 subject match, an opaque
+evidence reference and an explicit upstream binding-verification observation.
+A boolean is an adapter observation, not proof. Release requires real adapters,
+accepted policy and independent verification beyond this pure function.
+Only PA/FA/UNK research candidates are reachable. Candidate records always carry
+`production_assertion: false` and `independent_release_validated: false`.
+
+Rollup rejects mixed subjects, malformed objects and inconsistent observations
+under the same evidence reference. It deduplicates repeated evidence. Different
+supported authorship claims, including a human claim opposed to AI claims, return
+CONFLICTED/UNK with every source retained. A conflicted credential cannot be
+hidden by another candidate. No count of duplicate or weak observations becomes
+independent corroboration; `independent_source_count` remains null. “research
+eligible” is eligibility under this experimental mapping, not a live tag.
+
+Run `python3 scripts/demo-tag-bridge.py` for synthetic credential-only, PA, FA,
+conflict and missing-evidence examples. Tests are in `tests/test_tag_bridge.py`.
+No actual content is read or uploaded. X-07 remains a recorded scope boundary
+with deferred/candidate disposition; these internal functions do not adopt a
+media product or create an additional user-facing surface.

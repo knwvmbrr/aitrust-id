@@ -196,7 +196,7 @@ npm run dev:site
 The local preview uses `http://127.0.0.1:5173/`. For built-site checks, serve `site/dist`
 on loopback port 5174, then run `npm run verify:site`, `npm run verify:workflows` and `npm run verify:policies`. Run `npm run verify:a11y-probes` and
 `npm run verify:site-a11y` for the actual-site keyboard, spacing and target checks.
-`npm run verify:bundle` verifies a fresh device build against the tracked manifest;
+`npm run verify:bundle` verifies a fresh device build against the committed engineering reference;
 repeat `--python` arguments to its script to compare installed builder versions.
 See the [accessibility test record](docs/accessibility-conformance-report.md) for
 coverage and human-review limits. These checks are configured in CI; hosted runs
@@ -270,3 +270,10 @@ new attributed record before build/deploy/commit. [Changelog](CHANGELOG.md),
 have separate jobs: history, enforcement, and acceptance.
 Use `npm run changelog -- --help`, then `npm run verify:changelog`; contributor
 is required. Engineering passes never substitute for independent tag validation.
+
+### Provenance bridge research
+
+`python3 scripts/demo-tag-bridge.py` demonstrates explicit subject-bound PA/FA
+research candidates, missing evidence and conflicts. A valid credential alone
+does not imply AI participation. This is synthetic input processing, not a live
+tag or media verifier. See [the boundary contract](docs/adjudication-spec.md#experimental-provenance-to-tag-bridge--020-research).

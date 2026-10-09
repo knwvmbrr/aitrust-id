@@ -18,7 +18,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 301,
+  "python_tests_passed": 390,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -302,7 +302,7 @@
     "current_method_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
     "current_method_container_verified": false
   },
-  "python_tests_scope": "301 tests in the reviewed source snapshot; excludes concurrent unreviewed drafts; not independent accuracy validation.",
+  "python_tests_scope": "390 tests in the reviewed source snapshot; excludes concurrent unreviewed drafts; not independent accuracy validation.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -667,7 +667,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-09T20:05:11.817894+00:00",
+    "audited_at": "2026-10-09T21:07:46.641291+00:00",
     "completed_records": 14,
     "open_records": 188,
     "records_preserved": 202,
@@ -689,7 +689,21 @@
     "implementation_attribution": "Claude initial code per owner report; Codex fail-closed repairs and boundary checks",
     "release_integrated": false,
     "independent_validation": false,
-    "evidence": "runs/2026-10-09-scope-completion-checks.json"
+    "evidence": "runs/2026-10-09-scope-completion-checks.json",
+    "tag_bridge": {
+      "version": "tag-bridge/0.2.0-research",
+      "status": "experimental_subject_bound_claim_mapping_tested; no production integration",
+      "credential_alone_creates_tag": false,
+      "explicit_claims_required": true,
+      "mixed_subjects_rejected": true,
+      "contradictions_preserved": true,
+      "duplicate_evidence_deduplicated": true,
+      "independent_source_count": null,
+      "production_assertion": false,
+      "evidence": "runs/2026-10-09-provenance-boundary-final-python.json",
+      "real_adapter_implemented": false,
+      "proposed_claim_policy_accepted": false
+    }
   },
   "validation_route": {
     "plan": "docs/tag-performance-plan.md",
@@ -725,7 +739,7 @@
     "public_download_kind": "snapshot_at_deployed_source_commit; Git holds subsequent operational records",
     "git_hook_enabled_in_owner_checkout": true,
     "pipeline_regression_tests_passed": 24,
-    "total_python_tests_passed": 301,
+    "total_python_tests_passed": 390,
     "public_evidence": [
       "runs/2026-10-09-changelog-ps-public.json",
       "runs/2026-10-09-changelog-site-public.json",
@@ -745,9 +759,12 @@
     "atomic_writes": true,
     "unchanged_files_preserved": true,
     "stale_cleanup_failure_blocks_build": true,
-    "evidence": "runs/2026-10-09-device-build-matrix-final.json",
+    "evidence": "runs/2026-10-09-device-matrix-clean-reference.json",
     "unit_tests": 16,
     "future_builder_versions_guaranteed": false,
-    "published_source": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979"
+    "published_source": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979",
+    "reference": "docs/device-build-reference.json",
+    "fresh_checkout_entry_point_verified": true,
+    "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
   }
 }

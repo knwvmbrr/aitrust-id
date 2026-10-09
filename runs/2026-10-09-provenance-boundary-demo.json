@@ -1,0 +1,158 @@
+{
+  "captured_at": "2026-10-09T21:07:46.641291+00:00",
+  "author": "Codex",
+  "pass": true,
+  "input_scope": "Hardcoded synthetic adapter observations only",
+  "output": {
+    "synthetic_inputs_only": true,
+    "production_assertion": false,
+    "independent_release_validated": false,
+    "cases": {
+      "credential_only": {
+        "spec_version": "tag-bridge/0.2.0-research",
+        "candidate_tag": "UNK",
+        "research_eligible": false,
+        "state": "UNSUPPORTED",
+        "subject_sha256": null,
+        "basis": "No supported AI authorship claim was established.",
+        "inputs": [
+          {
+            "spec_version": "tag-bridge/0.2.0-research",
+            "candidate_tag": "UNK",
+            "direction": "neutral",
+            "basis": "A valid credential alone does not establish AI participation or human editing.",
+            "verdict_state": "valid",
+            "research_eligible": false,
+            "subject_sha256": null,
+            "claim": null,
+            "source_id": null,
+            "governing_rule": "F-083",
+            "production_assertion": false,
+            "independent_release_validated": false
+          }
+        ],
+        "governing_rule": "F-083",
+        "production_assertion": false,
+        "independent_release_validated": false,
+        "independent_source_count": null,
+        "trust_boundary": "Supplied adapter observations only; no cryptographic or media verification performed here."
+      },
+      "explicit_human_rework_claim": {
+        "spec_version": "tag-bridge/0.2.0-research",
+        "candidate_tag": "PA",
+        "research_eligible": true,
+        "state": "SUPPORTED",
+        "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "basis": "The supplied verified claim describes AI generation followed by human rework.",
+        "inputs": [
+          {
+            "spec_version": "tag-bridge/0.2.0-research",
+            "candidate_tag": "PA",
+            "direction": "raise",
+            "basis": "The supplied verified claim describes AI generation followed by human rework.",
+            "verdict_state": "valid",
+            "research_eligible": true,
+            "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "claim": "ai_generated_then_human_reworked",
+            "source_id": "synthetic:human-rework",
+            "governing_rule": "F-083",
+            "production_assertion": false,
+            "independent_release_validated": false
+          }
+        ],
+        "governing_rule": "F-083",
+        "production_assertion": false,
+        "independent_release_validated": false,
+        "independent_source_count": null,
+        "trust_boundary": "Supplied adapter observations only; no cryptographic or media verification performed here."
+      },
+      "explicit_full_generation_claim": {
+        "spec_version": "tag-bridge/0.2.0-research",
+        "candidate_tag": "FA",
+        "research_eligible": true,
+        "state": "SUPPORTED",
+        "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "basis": "The supplied verified claim describes generation without human intervention.",
+        "inputs": [
+          {
+            "spec_version": "tag-bridge/0.2.0-research",
+            "candidate_tag": "FA",
+            "direction": "raise",
+            "basis": "The supplied verified claim describes generation without human intervention.",
+            "verdict_state": "valid",
+            "research_eligible": true,
+            "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "claim": "ai_generated_without_human_intervention",
+            "source_id": "synthetic:full-generation",
+            "governing_rule": "F-083",
+            "production_assertion": false,
+            "independent_release_validated": false
+          }
+        ],
+        "governing_rule": "F-083",
+        "production_assertion": false,
+        "independent_release_validated": false,
+        "independent_source_count": null,
+        "trust_boundary": "Supplied adapter observations only; no cryptographic or media verification performed here."
+      },
+      "conflicting_claims": {
+        "spec_version": "tag-bridge/0.2.0-research",
+        "candidate_tag": "UNK",
+        "research_eligible": false,
+        "state": "CONFLICTED",
+        "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "basis": "Verified authorship claims conflict; retain every source and choose no tag.",
+        "inputs": [
+          {
+            "spec_version": "tag-bridge/0.2.0-research",
+            "candidate_tag": "PA",
+            "direction": "raise",
+            "basis": "The supplied verified claim describes AI generation followed by human rework.",
+            "verdict_state": "valid",
+            "research_eligible": true,
+            "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "claim": "ai_generated_then_human_reworked",
+            "source_id": "synthetic:human-rework",
+            "governing_rule": "F-083",
+            "production_assertion": false,
+            "independent_release_validated": false
+          },
+          {
+            "spec_version": "tag-bridge/0.2.0-research",
+            "candidate_tag": "FA",
+            "direction": "raise",
+            "basis": "The supplied verified claim describes generation without human intervention.",
+            "verdict_state": "valid",
+            "research_eligible": true,
+            "subject_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "claim": "ai_generated_without_human_intervention",
+            "source_id": "synthetic:full-generation",
+            "governing_rule": "F-083",
+            "production_assertion": false,
+            "independent_release_validated": false
+          }
+        ],
+        "governing_rule": "F-083",
+        "production_assertion": false,
+        "independent_release_validated": false,
+        "independent_source_count": null,
+        "trust_boundary": "Supplied adapter observations only; no cryptographic or media verification performed here."
+      },
+      "missing_evidence": {
+        "spec_version": "tag-bridge/0.2.0-research",
+        "candidate_tag": "UNK",
+        "research_eligible": false,
+        "state": "UNSUPPORTED",
+        "subject_sha256": null,
+        "basis": "No supported AI authorship claim was established.",
+        "inputs": [],
+        "governing_rule": "F-083",
+        "production_assertion": false,
+        "independent_release_validated": false,
+        "independent_source_count": null,
+        "trust_boundary": "Supplied adapter observations only; no cryptographic or media verification performed here."
+      }
+    }
+  },
+  "independent_release_validated": false
+}

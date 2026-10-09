@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-210959-provenance-final-evidence-mirrors-c322c84e",
+  "recorded_at": "2026-10-09T21:09:59.185875+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e0ff1323a68e37c56d9cb272e5a553709700864d",
+  "changed": "Synchronize generated scope mirrors with the final research-only API test evidence; all adopted requirements and acceptance percentages remain intact.",
+  "proves": "The source ledger renders all 202 requirements without orphan records; final 390-test evidence is referenced by the affected scope items.",
+  "limits": "No research candidate or pure mapping test is a released tag or independent validation.",
+  "scope_ids": [
+    "F-083",
+    "F-116",
+    "F-150"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "cbc1979d9dc43a311bf26fbfb04c36ec15d11fd4b1d8f2825c978e683d5acea4",
+    "site/src/public-scope.json": "cbc1979d9dc43a311bf26fbfb04c36ec15d11fd4b1d8f2825c978e683d5acea4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-provenance-boundary-final-python.json",
+      "sha256": "1fd35bb9f06004aa084ea0c24cb7a3ffb582e20711b4fadbe9986a050ea62273"
+    }
+  ],
+  "checks": []
+}

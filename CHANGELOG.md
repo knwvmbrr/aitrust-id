@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-09
 
+### 2026-10-09-210959-provenance-final-evidence-mirrors-c322c84e
+
+Recorded 2026-10-09T21:09:59.185875+00:00 · Contributor: Codex · change
+
+- **Changed.** Synchronize generated scope mirrors with the final research-only API test evidence; all adopted requirements and acceptance percentages remain intact.
+- **Evidence.** The source ledger renders all 202 requirements without orphan records; final 390-test evidence is referenced by the affected scope items. [Change record](./runs/changes/2026-10-09-210959-provenance-final-evidence-mirrors-c322c84e.json).
+- **Not claimed.** No research candidate or pure mapping test is a released tag or independent validation.
+
+
+### 2026-10-09-210938-provenance-research-api-final-verification-f5c53f73
+
+Recorded 2026-10-09T21:09:38.875888+00:00 · Contributor: Codex · change
+
+- **Changed.** Separate the experimental research-candidate API from the draft live-action flag, record final full-suite results and unchanged PS site checks, and preserve scope acceptance.
+- **Evidence.** 390 final reviewed Python tests pass; credential-only, malformed, conflicting, duplicate and mixed-subject evidence checks execute; six PS site-result cases still pass with zero axe findings and no answer uploads. [Change record](./runs/changes/2026-10-09-210938-provenance-research-api-final-verification-f5c53f73.json).
+- **Not claimed.** Research eligibility does not issue a production tag. Real media, capture, claim authenticity, independent accuracy and accepted mapping policy remain unimplemented or unverified.
+
+
+### 2026-10-09-210816-provenance-boundary-public-scope-mirrors-364d0752
+
+Recorded 2026-10-09T21:08:16.893405+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate public scope mirrors for the provenance-boundary research evidence and clean-checkout correction; retain tag-specific preview/future states and all acceptance percentages.
+- **Evidence.** All 202 scope records, 39 packages and 117 subtasks retain IDs, owners and required acceptance; the reviewed source ledger renders successfully. [Change record](./runs/changes/2026-10-09-210816-provenance-boundary-public-scope-mirrors-364d0752.json).
+- **Not claimed.** PA/FA are not enabled by these mirrors; experimental candidates remain outside production.
+
+
+### 2026-10-09-210746-provenance-boundary-and-fresh-checkout-fix-07068734
+
+Recorded 2026-10-09T21:07:46.877811+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair the experimental provenance-to-tag bridge: credential validity alone cannot imply AI participation; explicit subject-bound claims, typed inputs, conservative conflict preservation and deduplication are required. Correct the device verifier to use a committed reference in a clean checkout. Timestamp scope evidence without inflating acceptance.
+- **Evidence.** 390 reviewed Python tests pass, including 89 bridge/clean-checkout cases; a corrupted reference is rejected; four actual installed Python builders produce identical bytes; five synthetic bridge cases run without network or command execution. [Change record](./runs/changes/2026-10-09-210746-provenance-boundary-and-fresh-checkout-fix-07068734.json).
+- **Not claimed.** No real media/cryptographic validation, accepted claim-mapping policy, independent accuracy or released PA/FA tags. Hosted CI remains account-billing blocked. Original unreviewed drafts are preserved separately.
+
+
 ### 2026-10-09-200855-device-accessibility-publication-evidence-731162b1
 
 Recorded 2026-10-09T20:08:55.111625+00:00 · Contributor: Codex · change

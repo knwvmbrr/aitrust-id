@@ -75,3 +75,13 @@ The latest development corpus has five active sets and 86 cases. Containers must
 be rebuilt after the context-v5 method update; old container evidence is historical,
 not proof that this version is running. Docker Desktop is not launched automatically
 by the verification scripts. The local daemon was unavailable during this pass.
+
+## Device build reference
+
+`python3 scripts/verify-device-build-matrix.py` runs without a prior site build.
+The expected artifact is committed in `docs/device-build-reference.json`; the
+runtime manifest is generated and ignored. Method/projection changes must update
+this reference through a reviewed, recorded change. The verifier never silently
+refreshes it. Repeat `--python /path/to/python` to compare actual installed
+builders. `tests/test_device_matrix_checkout.py` executes a minimal clean checkout
+and a deliberately incorrect reference.
