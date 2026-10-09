@@ -12,7 +12,11 @@ uses the existing `PS` code with a bounded command-risk explanation. `UC`, `SC`,
 **Development preview. No tag has passed release validation.**
 
 The public tag catalogue is live at [aitrustid.com](https://aitrustid.com), with
-Person/Enterprise views and full tag-detail modals. HTTPS, public response hashes,
+Person/Enterprise views, compact tag tiles, a tag logo, Light/Dark/System appearance
+and full tag-detail modals. Twenty [static tag reference pages](https://aitrustid.com/tags/)
+and a [22-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
+to crawlers. Google indexing and Search Console ownership remain unverified.
+HTTPS, public response hashes,
 production security headers and all 20 modals pass external checks. Report and
 community controls export drafts and link to public GitHub issues/discussions;
 private vulnerabilities use a separate GitHub report channel. No research intake
@@ -107,7 +111,7 @@ containers with `make down` and the same environment file.
 
 ## Scope and ownership
 
-[Master scope](docs/master-scope.md) preserves 197 records across tag types, shared
+[Master scope](docs/master-scope.md) preserves 198 records across tag types, shared
 capabilities, and personal/team/enterprise/proprietary applications. Preserving a
 record does not mean it is implemented. The complete personal workflow remains
 free; proposed organizational services must not weaken the personal standard.
@@ -146,8 +150,9 @@ npm run dev:site
 The local preview uses `http://127.0.0.1:5173/`. For built-site checks, serve `site/dist`
 on loopback port 5174, then run `npm run verify:site`. The CI site job performs this sequence.
 See [website architecture and publishing](docs/website.md) for the verified behavior, remaining
-connections, and deployment steps. Cloudflare CLI authentication and account inventory now succeed; the AI Trust ID project and domain deployment remain unverified. No deployment
-has occurred. The website does not run a detector or change tag release gates.
+connections, and deployment steps. The reviewed catalogue is deployed on the owned
+domain with verified security headers. The website does not run a detector or change
+tag release gates.
 
 
 The live-review gap pass adds bounded substitution detection, explicit disabled

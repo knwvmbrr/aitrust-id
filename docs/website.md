@@ -21,8 +21,12 @@ is evidence of an accurate or certified detector.
 
 `src/main.jsx` uses Radix dialogs and tabs for focus containment, nested dialog behavior,
 keyboard navigation and focus restoration. `src/styles.css` provides the responsive
-layout. There are no remote fonts, tracking scripts, accounts, browser storage, or
-intake endpoints. A static host serves the built document, scripts and references.
+layout and compact tag-shaped buttons. A native SVG logo is used in the header and
+favicon; no raster generation service or remote font is involved. Light, Dark and
+System appearance is supported. The only persistent browser storage is the selected
+appearance preference; blocked storage does not break the controls. There are no
+tracking scripts, accounts or intake endpoints. A static host serves the built
+document, scripts and references.
 `public/_headers` defines intended Cloudflare security headers; their production
 application must be checked after deployment. Local Python static hosting does not apply them.
 
@@ -46,11 +50,10 @@ external, manually submitted development destinations. Site drafts are never
 pre-filled into an external URL or sent automatically. This supersedes the earlier
 destination-pending description below.
 
-Receiving reports and messages needs verified destinations. Public bug/contribution
-intake, moderated discussions, and private security reports have different disclosure
-needs. Do not publish an unverified inbox or route private security reports to public
-issues. User preference for destinations is pending. This is a real integration gap,
-not a reason to pretend an exported draft was submitted.
+Public bug/contribution intake, moderated discussions and private security reports
+have different disclosure needs. Private security reports must stay out of public
+issues. A self-hosted live community and private research intake are still separate
+application gates; exported drafts are not submissions.
 
 ## Privacy of the public build
 
@@ -94,17 +97,46 @@ python3 -m http.server 5174 --bind 127.0.0.1 --directory site/dist
 In another terminal, run `npm run verify:site`. The site CI job uses this workflow and
 fails on errors. It does not override the separate statistical evaluation gates.
 
-The public catalogue is now live on aitrustid.com and www.aitrustid.com; see
-docs/live-launch-status.md and dated production checks. Existing limited Pages
-authentication works. The original pre-deployment guidance below is historical: Reauthenticate with `site/node_modules/.bin/wrangler login`, verify the
-account using `wrangler whoami`, and inspect its Pages projects before publishing.
-The declared `npm run deploy:site` targets `aitrust-id`; this project is not yet
-confirmed. If absent, create it only in the confirmed target account. Before attaching
-the custom domain, inspect its current Pages/DNS configuration to avoid replacing an
-unrelated deployment. Verify HTTPS, references, security headers and report disclosures
-at the deployed URL. Recheck the custom domain after DNS propagation.
+The public catalogue is live on aitrustid.com and www.aitrustid.com. The existing
+limited Pages-write grant deploys `site/dist` through `npm run deploy:site`, targeting
+the confirmed `aitrust-id` project. No broader OAuth grant is needed. Review the
+publication asset manifest and execute the external verification after each deploy.
+The production checks verify CSP, frame denial, nosniff, no-transform and interaction.
+Roll back through the reviewed prior Pages deployment; preserve all mail and notify DNS.
 
-Do not claim the domain is live until a request to it returns this verified build.
-No hosting deployment, domain change, report connection or registration filing has
-been performed in this increment. Account and destination access are the current
-external dependencies. Roll back by redeploying a verified prior Pages build.
+## Crawlable content and accurate metadata
+
+The architecture retains React for the catalogue and Radix dialogs. Crawlable content
+is generated from the same catalogue without moving tag details or changing detector
+contracts. `scripts/seo.mjs` supplies canonical URLs, titles, descriptions, Open Graph,
+Twitter and JSON-LD. `scripts/prepare.mjs` builds the no-script home reference,
+robots.txt, sitemap.xml and the reproducible 1200×630 social preview using the declared
+Sharp dependency. `scripts/render-reference.mjs` runs after Vite and produces the tag
+index and all 20 standalone tag/organization pages, sharing the fingerprinted CSS.
+
+All references contain their actual status, limits and release requirements. Proposed
+enterprise offerings are not advertised as shipped products. Structured data uses
+WebSite, CollectionPage/WebPage and DefinedTerm; no invented ratings, certifications,
+prices or incorporated-company status. Invalid tag paths return a real 404 with noindex.
+There are 22 canonical sitemap URLs: home, tag index and 20 detail pages.
+
+`public/theme.js` is an early same-origin script compatible with the existing CSP.
+It validates the saved appearance enum and synchronizes system and cross-tab changes.
+Without JavaScript the system color scheme and full static references remain usable.
+Native selects are hidden on static pages until their behavior is initialized.
+
+Production evidence: `runs/2026-10-08-site-redesign-public.json`,
+`runs/2026-10-08-site-redesign-result.json` and the publication asset audit. Tests
+cover all modals, both themes, system changes, blocked storage, mobile/reflow, forced
+colors, keyboard behavior, static no-script content, unique metadata, canonical URLs,
+JSON-LD parsing and known types, social image dimensions, security headers and zero
+unexpected outbound requests. Automated axe reports zero violations in checked states.
+Human screen-reader review and Google Rich Results validation remain unverified.
+
+This makes the site crawlable; it does not establish actual Google indexing or rank.
+Search Console ownership and sitemap submission remain unverified. After verifying
+`aitrustid.com`, submit `https://aitrustid.com/sitemap.xml`, inspect the home and PS
+URLs, and monitor indexing reports. See [Google's Search Console guidance](https://developers.google.com/search/docs/monitor-debug/search-console-start)
+and [recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+The user's pasted search results describe other services and are not indexing evidence
+for this owned domain. No third-party biometric or certification claims are reused.

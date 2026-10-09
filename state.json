@@ -34,17 +34,18 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-site-public-domain-verification.json",
+    "evidence": "runs/2026-10-08-site-redesign-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
       "DNSSEC and DMARC rollout remain unverified",
-      "Self-hosted community and private research application gates remain open"
+      "Self-hosted community and private research application gates remain open",
+      "Search Console ownership verification, sitemap submission and actual Google indexing checks"
     ],
-    "tile_presentation": "tag_code_only",
+    "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://5fd49855.aitrust-id.pages.dev",
-    "deployment_id": "5fd49855-ddb5-402f-a5b3-eff87d95668e",
+    "deployment_url": "https://31094a97.aitrust-id.pages.dev",
+    "deployment_id": "31094a97-a347-4f0c-955a-9e02a02ef2e0",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -56,7 +57,28 @@
     "open_source_download_link_verified": true,
     "public_report_destination": "https://github.com/knwvmbrr/aitrust-id/issues/new?template=tag-review.yml",
     "private_security_destination": "https://github.com/knwvmbrr/aitrust-id/security/advisories/new",
-    "public_discussion_destination": "https://github.com/knwvmbrr/aitrust-id/discussions"
+    "public_discussion_destination": "https://github.com/knwvmbrr/aitrust-id/discussions",
+    "appearance_options": [
+      "system",
+      "light",
+      "dark"
+    ],
+    "appearance_storage": "browser_local_preference_only",
+    "logo": "site/public/tag-logo.svg",
+    "publication_evidence": "runs/2026-10-08-site-redesign-result.json",
+    "seo": {
+      "crawlable_tag_pages": 20,
+      "sitemap_canonical_urls": 22,
+      "robots_url": "https://aitrustid.com/robots.txt",
+      "sitemap_url": "https://aitrustid.com/sitemap.xml",
+      "canonical_origin": "https://aitrustid.com",
+      "unique_titles_and_descriptions": true,
+      "json_ld_parse_and_type_checks_passed": true,
+      "google_rich_results_test_verified": false,
+      "google_indexing_verified": false,
+      "search_console_verified": false,
+      "sitemap_submitted_in_search_console": false
+    }
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -354,5 +376,11 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-08-public-source-result.json",
     "independent_install_review": false
+  },
+  "name_clearance": {
+    "status": "unresolved; related exact-name public use observed",
+    "candidate_source": "https://theailab.org/ai-trust-registry",
+    "observed_mark": "AI Trust ID\u2122",
+    "registration_priority_and_legal_conflict_verified": false
   }
 }

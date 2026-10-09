@@ -11,10 +11,9 @@ violations. A separate ordinary browser context verifies the production CSP and
 working interaction without a CSP bypass. This is catalogue publication, not an
 accuracy-certified tag release or a remotely hosted evaluation service.
 
-Deployment: `5fd49855-ddb5-402f-a5b3-eff87d95668e`; only the reviewed `site/dist`
+Current deployment: `31094a97-a347-4f0c-955a-9e02a02ef2e0`; only the reviewed `site/dist`
 assets were uploaded. Known SMTP, notification and recovery secret literals were
-absent. The immediate `www` comparison differed during deployment propagation;
-subsequent comparisons of HTML and assets match on all three public addresses.
+absent. The redesign response hashes match the reviewed build on all three public addresses.
 The deployed asset manifest identifies the exact publication.
 
 The implementation is public at https://github.com/knwvmbrr/aitrust-id. Anonymous
@@ -54,6 +53,21 @@ user agent received its HTTP 1010 integrity rejection; browser verification and
 an identified Mozilla-compatible verifier pass without disabling that protection.
 See [Cloudflare automatic-injection documentation](https://developers.cloudflare.com/web-analytics/get-started/).
 
+## Design and crawler readiness
+
+Compact code-only tag tiles, the native vector tag logo and Light/Dark/System
+appearance are published. All 20 dialogs and eight footer dialogs pass the public
+verification, including mobile, keyboard, theme persistence and zero axe violations.
+Twenty static references work without JavaScript; robots.txt and the 22-URL sitemap
+are live. Canonical URLs, unique titles/descriptions, JSON-LD parsing/type checks and
+social preview dimensions pass. Google Rich Results testing, actual indexing, Search
+Console ownership and authenticated sitemap submission remain unverified.
+
+Evidence: `runs/2026-10-08-site-redesign-public.json`,
+`runs/2026-10-08-site-redesign-result.json`, and
+`runs/2026-10-08-site-redesign-publication-audit.json`.
+Previous deployment `5fd49855-ddb5-402f-a5b3-eff87d95668e` remains the rollback target.
+
 ## Remaining product gates
 
 | Gate | Owner | Required evidence |
@@ -66,6 +80,14 @@ See [Cloudflare automatic-injection documentation](https://developers.cloudflare
 | DNS and mail hardening | Engineering + owner | DNSSEC/DS validation and staged DMARC alignment/enforcement; neither is claimed complete |
 | Recovery | Owner + engineering | Offline custody, retrieval check, clean replacement-host drill; measured scope and timing |
 | Name and incorporation | Owner + qualified counsel | Comprehensive clearance, current official status, reviewed final filing facts and articles/bylaws |
+
+## Exact-name public use observed
+
+[The AI Lab’s own registry page](https://theailab.org/ai-trust-registry) publicly
+uses “AI Trust ID™” for identity/content and governance credentials. This is an
+additional name-clearance candidate in a related field. A website trademark claim
+does not establish registration, priority, enforceability or infringement. No
+renaming or filing was performed; qualified clearance remains an owner/counsel gate.
 
 ## Claude’s legal progress: evidence limits
 

@@ -10,7 +10,12 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   const errors=[],outside=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:'))outside.push(r.url());});
   const assert=(x,m)=>{if(!x)throw Error(m);};
   await page.goto(base);await page.getByRole('heading',{name:'AI TRUST ID',exact:true}).waitFor();
+  await page.getByLabel('Appearance',{exact:true}).selectOption('light');
+  assert(await page.locator('html').getAttribute('data-theme')==='light','Light preference did not apply');
   assert(await page.locator('[data-tag-id]').count()===14,'Person must default to all 14 records');
+  assert(await page.locator('[data-tag-id="PS"]').evaluate(e=>e.getBoundingClientRect().height<=128),'Tags are not compact');
+  assert(await page.locator('[data-tag-id="PS"]').innerText()==='PS','Tag tile contains extra visible text');
+  assert(await page.getByRole('link',{name:'Tag reference',exact:true}).getAttribute('href')==='/tags/','Crawlable reference link missing');
   await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
   let violations=[];async function axe(){if(!await page.evaluate(()=>typeof window.axe!=='undefined'))await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});const result=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag22aa']}}));violations.push(...result.violations.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.map(n=>n.target)})));}
   await axe();let checked=0;
@@ -20,7 +25,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    assert(ids.length===(audience==='person'?14:6),'Audience filtering failed');
    for(const id of ids){
     const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
-    for(const heading of ['Baseline job','What the tag can claim','Method and evidence','Accuracy and validation','Cost and access','Privacy','Who owns the outcome','Before this tag can run'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).count()===1,id+' incomplete');
+    for(const heading of ['Baseline job','What the tag can claim','Method and evidence','Accuracy and validation','Cost and access','Privacy','Who owns the outcome','Before release'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).count()===1,id+' incomplete');
     assert((await dialog.innerText()).includes('Not release validated'),'False release claim');
     if(id==='PS'){
      assert(await dialog.getByRole('link',{name:'Download source',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','PS download path missing');
@@ -63,6 +68,51 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   const publicScope=await context.request.get(base+'/reference/public-scope.json');
   const publicIds=(await publicScope.json()).records.map(record=>record.id);
   assert(publicIds.length===scopeIds.length&&new Set(publicIds).size===publicIds.length&&scopeIds.every(id=>publicIds.includes(id)),'Full scope omitted or duplicated');
+  await page.setViewportSize({width:1440,height:1100});await page.goto(base);
+  await page.getByLabel('Appearance',{exact:true}).selectOption('dark');await axe();
+  await page.reload();assert(await page.locator('html').getAttribute('data-theme')==='dark','Dark preference did not persist');
+  await page.screenshot({path:'output/playwright/site-redesign-dark.png'});
+  for(const id of ['PS','PII_REDACTED']){
+   await page.locator(`[data-tag-id="${id}"]`).click();await axe();
+   if(id==='PS'){await page.getByRole('button',{name:'Report this tag'}).click();await axe();await page.keyboard.press('Escape');}
+   await page.keyboard.press('Escape');
+  }
+  await page.getByRole('tab',{name:'Enterprise',exact:true}).click();await axe();
+  await page.locator('[data-tag-id="proprietary"]').click();await axe();await page.keyboard.press('Escape');
+  await page.emulateMedia({colorScheme:'light'});assert(await page.locator('html').getAttribute('data-theme')==='dark','Explicit preference lost to OS scheme');
+  await page.getByLabel('Appearance',{exact:true}).selectOption('system');assert(await page.locator('html').getAttribute('data-theme')==='light','System light preference failed');
+  await page.emulateMedia({colorScheme:'dark'});await page.waitForFunction(()=>document.documentElement.dataset.theme==='dark');
+  await page.getByLabel('Appearance',{exact:true}).selectOption('light');await page.getByRole('tab',{name:'Person',exact:true}).click();
+  await page.screenshot({path:'output/playwright/site-redesign-light.png'});
+  await page.setViewportSize({width:320,height:720});await axe();
+  await page.getByLabel('Appearance',{exact:true}).selectOption('dark');await axe();
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=320),'Dark mobile overflow');
+  await page.emulateMedia({forcedColors:'active',reducedMotion:'reduce'});
+  assert(await page.locator('[data-tag-id="PS"]').evaluate(e=>getComputedStyle(e).borderTopStyle==='solid'),'High-contrast tag boundary missing');
+  await page.emulateMedia({forcedColors:'none',reducedMotion:'no-preference'});
+  const blocked=await browser.newContext();await blocked.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked');}});});
+  const blockedPage=await blocked.newPage();await blockedPage.goto(base);await blockedPage.getByLabel('Appearance',{exact:true}).selectOption('dark');assert(await blockedPage.locator('html').getAttribute('data-theme')==='dark','Theme failed with blocked storage');await blocked.close();
+  const homeHTML=await (await context.request.get(base+'/')).text();
+  assert(homeHTML.includes('<link rel="canonical" href="https://aitrustid.com/"'),'Home canonical missing');
+  assert(!homeHTML.includes('noindex'),'Home blocked from indexing');
+  const robots=await (await context.request.get(base+'/robots.txt')).text();assert(robots.includes('Allow: /')&&robots.includes('Sitemap: https://aitrustid.com/sitemap.xml'),'Crawler policy missing');
+  const sitemap=await (await context.request.get(base+'/sitemap.xml')).text();const canonicalURLs=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
+  assert(canonicalURLs.length===22&&new Set(canonicalURLs).size===22,'Sitemap omits or duplicates tag URLs');
+  const canonicalTitles=new Set();const canonicalDescriptions=new Set();
+  for(const url of canonicalURLs){
+   const response=await context.request.get(base+new URL(url).pathname);assert(response.status()===200,'Crawlable page not served: '+url);
+   const html=await response.text();assert(html.includes(`<link rel="canonical" href="${url}"`),'Wrong canonical: '+url);
+   const title=html.match(/<title>(.*?)<\/title>/)?.[1];assert(title&&!canonicalTitles.has(title),'Missing or duplicate title');canonicalTitles.add(title);const description=html.match(/<meta name="description" content="([^"]+)"/)?.[1];assert(description&&!canonicalDescriptions.has(description),'Missing or duplicate description');canonicalDescriptions.add(description);
+   const json=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];const data=JSON.parse(json);assert(data['@context']==='https://schema.org','Structured metadata invalid');
+   assert(!json.includes('aggregateRating')&&!json.includes('Review')&&!json.includes('offers'),'Invented commercial/rating metadata');
+   assert(html.includes('not release validated')||html.includes('not independently release validated')||html.includes('No tag is independently release validated')||url==='https://aitrustid.com/','Reference drops validation limit');
+   assert(html.includes('property="og:image" content="https://aitrustid.com/share-card.png"'),'Share image metadata missing');
+  }
+  const share=await context.request.get(base+'/share-card.png');const png=await share.body();assert(share.status()===200&&png.readUInt32BE(16)===1200&&png.readUInt32BE(20)===630,'Social PNG missing or wrong size');
+  const plainReferences=await browser.newContext({javaScriptEnabled:false});const staticPage=await plainReferences.newPage();
+  await staticPage.goto(base+'/tags/');assert(await staticPage.locator('main a[href^="/tags/"]').count()===20,'No-script index cannot discover every tag');
+  await staticPage.goto(base+'/tags/ps/');assert(await staticPage.getByRole('heading',{name:'PS — Command risk',exact:true}).count()===1,'No-script PS reference missing');assert(await staticPage.getByRole('heading',{name:'Accuracy and validation',exact:true}).count()===1,'No-script reference incomplete');await plainReferences.close();
+  await page.setViewportSize({width:1440,height:1100});await page.goto(base+'/tags/ps/');await axe();await page.getByLabel('Appearance',{exact:true}).selectOption('light');await axe();
   assert(errors.length===0,'Browser errors: '+errors.join('; '));assert(outside.length===0,'Unexpected outbound traffic: '+JSON.stringify([...new Set(outside)]));assert(violations.length===0,'Accessibility violations: '+JSON.stringify(violations));
   let productionPolicyVerified=false;
   if(base.startsWith('https://')){
@@ -76,9 +126,15 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    await normal.locator('[data-tag-id="PS"]').click();await normal.getByRole('dialog',{name:'Command risk',exact:true}).waitFor();
    await normal.keyboard.press('Escape');await normal.getByRole('tab',{name:'Enterprise',exact:true}).click();
    assert(await normal.locator('[data-tag-id]').count()===6,'Production CSP blocked catalogue interaction');
+   await normal.getByLabel('Appearance',{exact:true}).selectOption('dark');
+   assert(await normal.locator('html').getAttribute('data-theme')==='dark','Production CSP blocked theme control');
+   await normal.goto(base+'/tags/ps/');
+   assert(await normal.getByRole('heading',{name:'PS — Command risk',exact:true}).count()===1,'Production reference not available');
+   assert(await normal.locator('html').getAttribute('data-theme')==='dark','Production reference lost theme preference');
+   const missing=await ordinary.request.get(base+'/tags/not-a-real-tag/');assert(missing.status()===404,'Unknown tag is a soft 404');
    productionPolicyVerified=true;await ordinary.close();
   }
-  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified};
+  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:22,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
   fs.writeFileSync(process.env.AITRUST_SITE_REPORT||'runs/2026-10-08-site-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));await context.close();
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,13 +1,68 @@
 @import "tailwindcss";
+@theme inline {
+  --color-canvas: var(--page);
+  --color-surface: var(--panel);
+  --color-ink: var(--foreground);
+  --color-muted: var(--secondary);
+  --color-line: var(--divider);
+  --color-input: var(--control-border);
+}
+:root {
+  color-scheme: light;
+  --page: #f7f8f6;
+  --panel: #ffffff;
+  --foreground: #202723;
+  --secondary: #56635c;
+  --divider: #d8dfd9;
+  --control-border: #77867c;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #101512;
+  --panel: #19211c;
+  --foreground: #edf2ee;
+  --secondary: #afbeb3;
+  --divider: #46554b;
+  --control-border: #83978a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #101512;
+    --panel: #19211c;
+    --foreground: #edf2ee;
+    --secondary: #afbeb3;
+    --divider: #46554b;
+    --control-border: #83978a;
+  }
+}
 @layer base {
-  body { @apply m-0 bg-white text-neutral-950; font-family:Arial,Helvetica,sans-serif; }
+  body { @apply m-0 bg-canvas text-ink; font-family:Arial,Helvetica,sans-serif; }
   button,a,input,select,textarea { @apply outline-offset-4; }
-  button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { @apply outline-2 outline-neutral-950; }
+  button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { @apply outline-2 outline-ink; }
   p { @apply text-pretty; }
   h1,h2,h3 { @apply text-balance; }
   button:not(:disabled),a { @apply cursor-pointer; }
-  ::selection { @apply bg-neutral-950 text-white; }
+  input,select,textarea { @apply bg-surface text-ink; }
+  ::selection { @apply bg-ink text-surface; }
 }
 
-/* Three columns when there is space, two on a small screen, one at large text. */
-.tag-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8rem, calc((100% - 2rem) / 3))), 1fr)); }
+/* Up to five compact tags; enlarged text naturally reduces the column count. */
+.tag-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8rem, calc((100% - 4rem) / 5))), 1fr)); }
+.tag-tile { position: relative; isolation: isolate; min-height: 7rem; }
+.tag-outline { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; color: var(--control-border); }
+.tag-outline path { fill: var(--panel); }
+.tag-tile:hover .tag-outline, .tag-tile:focus-visible .tag-outline { color: var(--foreground); }
+.tag-tile:hover .tag-outline path { fill: var(--page); }
+.reference-content { max-width: 48rem; margin-inline: auto; }
+.reference-content section { border-top: 1px solid var(--divider); padding-block: 1.5rem; }
+.reference-content h2 { font-size: 1.125rem; font-weight: 700; margin-bottom: .75rem; }
+.reference-content p, .reference-content li { line-height: 1.65; }
+.reference-content ul { padding-left: 1.25rem; list-style: disc; }
+.reference-content a { text-decoration: underline; text-underline-offset: .2em; overflow-wrap: anywhere; }
+@media (forced-colors: active) {
+  .tag-outline { display: none; }
+  .tag-tile { border: 1px solid ButtonText; }
+}
+
+.nojs-tags details[open] { grid-column: 1 / -1; }

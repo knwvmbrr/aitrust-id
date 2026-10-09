@@ -2,6 +2,14 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Published compact tag tiles, a native vector tag logo and persistent
+  Light/Dark/System appearance. All 20 modals, eight footer dialogs, keyboard,
+  mobile and automated accessibility checks pass on the live domain.
+- Added 20 static tag references, unique accurate metadata, canonical URLs,
+  JSON-LD, robots.txt, a 22-URL sitemap and a generated social preview. Google
+  indexing and Search Console verification/submission remain unverified.
+  Existing CSP and no-transform protections pass; no analytics added.
+
 - Published the reviewed development source and anonymous download; verified a fresh
   installation, 101 Python checks, 60 regressions and real local tag records.
 - Connected catalogue download/setup links and public/private GitHub reporting;
