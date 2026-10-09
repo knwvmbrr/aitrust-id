@@ -534,5 +534,25 @@
     "evidence": "runs/2026-10-08-workflows-engineering.json",
     "release_assessed": false,
     "measured_seconds": 2.465
+  },
+  "scope_planning": {
+    "source": "docs/scope-delivery.json",
+    "reader_plan": "docs/scope-delivery.md",
+    "task_index": "docs/scope-task-index.md",
+    "scope_records": 202,
+    "work_packages": 39,
+    "tag_packages": 14,
+    "package_subtasks": 117,
+    "record_tasks": 202,
+    "generic_ps_dependencies_removed": 81,
+    "tag_completion_dependencies": 0,
+    "status": "plan_structural_and_local_site_checks_pass; publication_pending",
+    "review": "No new proposal adoption, release acceptance, pricing, collection policy or professional legal judgment implied",
+    "verification": "runs/2026-10-08-scope-plan-verification.json",
+    "local_browser_evidence": {
+      "site": "runs/2026-10-08-scope-plan-site-local.json",
+      "workflows": "runs/2026-10-08-scope-plan-workflows-local.json",
+      "policies": "runs/2026-10-08-scope-plan-policies-local.json"
+    }
   }
 }

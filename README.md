@@ -143,6 +143,8 @@ capabilities, and personal/team/enterprise/proprietary applications. Preserving 
 record does not mean it is implemented. The complete personal workflow remains
 free; proposed organizational services must not weaken the personal standard.
 
+[Scope delivery plan](docs/scope-delivery.md) expands the full scope into 39 work packages, 117 subtasks and an exhaustive [202-record task index](docs/scope-task-index.md), with independent tag gates and scoped prerequisites. Twelve additional tag planning contracts supplement PS and PII; proposals remain proposals.
+
 [PS-01](docs/tags/PS-01.md) defines the first tag job, outcome, and acceptance packet.
 [Independent review](docs/independent-review.md) defines the human evidence still
 needed. Michael owns product acceptance; Claude owns claim and labeling review;

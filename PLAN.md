@@ -1,3 +1,7 @@
+# Historical plan — retained for traceability
+
+Current execution planning is [docs/scope-delivery.md](docs/scope-delivery.md), backed by the 202-record master scope and task index. Historical capture/remote/status statements below are not current blockers or blanket prerequisites. No work is removed by this routing note.
+
 # PLAN.md — the shared contract
 
 Both Claude Work and Claude Code read this file first. It is the only file that says

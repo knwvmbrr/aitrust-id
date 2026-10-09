@@ -2,6 +2,12 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Expanded all 202 scope records into 39 execution packages and 117 subtasks, with
+  14 distinct tag contracts, explicit prerequisites and separate release gates.
+  Removed 81 generic PS dependencies, preserved all IDs/dispositions, and linked
+  the execution plan plus package/prerequisite details from the Scope panel.
+  Corrected the PS contract to distinguish phone/paste and local-service routes.
+
 - Expanded the walkthrough/About to explain the full multi-tag design and retained
   all 202 scope records. Added the owner-approved individual publisher to public
   surfaces. Preserved policy 1.0 and published version 1.1 with actual named downloads.

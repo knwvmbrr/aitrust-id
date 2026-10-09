@@ -71,3 +71,9 @@ alerts-build:
 notifications-build:
 	bash -n deploy/notifications/install.sh deploy/notifications/prepare-edge.sh deploy/notifications/activate-edge.sh
 	$(PYTHON) -m py_compile deploy/notifications/provision.py deploy/notifications/verify-local.py
+
+.PHONY: scope-render verify-scope
+scope-render:
+	$(PYTHON) scripts/render-scope-plan.py
+verify-scope:
+	$(PYTHON) scripts/verify-scope-plan.py

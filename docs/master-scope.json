@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "date": "2026-10-08",
-  "baseline": "Scope jobs preserved; implementation status requires versioned execution evidence",
+  "baseline": "Complete scope preserved; explicit work-package planning added. Runtime and release status remain evidence-driven in state.json/runs.",
   "layers": {
     "1": "Tag types and subject families",
     "2": "Shared tag capabilities",
@@ -24,14 +24,20 @@
       "outcome": "Any tool can read a label and know exactly what it claims",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-001",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -50,14 +56,20 @@
       "outcome": "A fixed vocabulary, so a label means the same thing everywhere",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-002",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -76,14 +88,20 @@
       "outcome": "A third party can reproduce any assertion from the signal IDs it cites",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-003",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -103,13 +121,23 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-004",
+        "work_packages": [
+          "TAG-UNK"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -128,14 +156,20 @@
       "outcome": "No tag is shown below the confidence its evidence supports",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-005",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -154,14 +188,20 @@
       "outcome": "Implementers agree on what is being hashed before anyone builds images or audio",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-006",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -180,14 +220,20 @@
       "outcome": "Recipients can inspect a tag record without the assertion containing content; local content transfer is disclosed.",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-007",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -207,13 +253,21 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-008",
+        "work_packages": [
+          "WP-INTEGRITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -233,13 +287,21 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-009",
+        "work_packages": [
+          "WP-INTEGRITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -258,14 +320,20 @@
       "outcome": "Two independent implementations produce the same hash for the same input",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-078",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -285,13 +353,21 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-079",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -311,13 +387,21 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-080",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -337,13 +421,21 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-076",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -363,13 +455,21 @@
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-077",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -381,21 +481,32 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Independent claim/passage labels measure support accuracy and unsupported-claim coverage.; No corpus means unsupported/unavailable for NF, not an NF verdict.; Changing a source invalidates only findings derived from that source.",
       "disposition": "retained",
       "title": "NF Non-Fiction",
-      "baseline_job": "Specify and deliver nF Non-Fiction.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Extract checkable claims and compare them with the supplied, versioned reference corpus.",
+      "outcome": "The reader sees which claim is supported by which source and passage, and the limits of that support.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-REFERENCES",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Changing a source invalidates only findings derived from that source.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-NF",
+        "work_packages": [
+          "TAG-NF"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -407,21 +518,32 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Blind labels distinguish contradiction from missing evidence.; Offline non-resolution alone never establishes that a source does not exist anywhere.; Publish error rates by evidence type; NF and FI may describe different claims in one answer.",
       "disposition": "retained",
       "title": "FI Fiction / Fabricated",
-      "baseline_job": "Specify and deliver fI Fiction / Fabricated.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Distinguish contradicted claims from citations that cannot be resolved within the declared reference set.",
+      "outcome": "The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-REFERENCES",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Publish error rates by evidence type; NF and FI may describe different claims in one answer.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-FI",
+        "work_packages": [
+          "TAG-FI"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -433,21 +555,31 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Independent labels and comparison with simpler baselines establish useful indicator performance.; The release claim names the supported indicator; it does not infer model intent.; No source lookup capability is misrepresented as a factual verification.",
       "disposition": "retained",
       "title": "HP Hallucination Possible",
-      "baseline_job": "Specify and deliver hP Hallucination Possible.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Identify validated inconsistency and unsupported-specificity indicators without equating them with proven falsehood.",
+      "outcome": "The reader knows which inconsistency or unsupported detail warrants checking and why.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. No source lookup capability is misrepresented as a factual verification.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-HP",
+        "work_packages": [
+          "TAG-HP"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -459,21 +591,31 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Report agreement, category errors and confidence calibration separately.; Existing alpha 0.55 and accuracy values remain candidates until the protocol is accepted.; MT disagreement never blocks PS, provenance or privacy tag release.",
       "disposition": "retained",
       "title": "MT Manipulative Tactic",
-      "baseline_job": "Specify and deliver mT Manipulative Tactic.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Evaluate contextual pressure, constrained-choice framing and unsupported authority appeals.",
+      "outcome": "The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. MT disagreement never blocks PS, provenance or privacy tag release.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-MT",
+        "work_packages": [
+          "TAG-MT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -485,21 +627,31 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Use PS-01 and its 17-scenario acceptance packet plus phone/device checks.; Candidate 95% Wilson lower-bound precision 0.93 and recall 0.75 require prior protocol acceptance and independent labels.; Maintain all 86 current regression cases and publish category failures; no scam-intent inference.",
       "disposition": "retained",
       "title": "PS Potential Scam / Risk",
-      "baseline_job": "Specify and deliver pS Potential Scam / Risk.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Complete the existing bounded command-risk release, then expand risk capabilities as separately validated increments.",
+      "outcome": "The reader sees the hazardous instruction pattern before acting, with exact evidence and a challenge path.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Maintain all 86 current regression cases and publish category failures; no scam-intent inference.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-PS",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -511,21 +663,32 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim\u2019s accuracy.",
       "disposition": "retained",
       "title": "IV Independently Verified",
-      "baseline_job": "Specify and deliver iV Independently Verified.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Bind an explicit human review and its scope to the exact subject/version reviewed.",
+      "outcome": "The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Review identity and signature integrity are tested separately from the reviewed claim\u2019s accuracy.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-IV",
+        "work_packages": [
+          "TAG-IV"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -537,21 +700,32 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Absent typing, paste bursts or missing human evidence never establish FA.; Valid signatures establish the signer/record, not the truth of its origin claim.; Independent provenance cases include assisted-input users and incomplete capture.",
       "disposition": "retained",
       "title": "FA Full AI Augmentation",
-      "baseline_job": "Specify and deliver fA Full AI Augmentation.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Evaluate positive origin evidence for full AI generation within an explicitly observed or attested workflow.",
+      "outcome": "The reader sees the origin assertion, source of evidence and supported observation window.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Independent provenance cases include assisted-input users and incomplete capture.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-FA",
+        "work_packages": [
+          "TAG-FA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -563,21 +737,32 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Behavioral indicators alone must first demonstrate that they support the bounded claim.; No per-person timing template or absent-human inference.; Do not use outside knowledge as proof of human authorship.",
       "disposition": "retained",
       "title": "PA Partially Augmented",
-      "baseline_job": "Specify and deliver pA Partially Augmented.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Describe supported AI contribution and subsequent human modification within the observed workflow.",
+      "outcome": "The reader can distinguish documented contribution/edit events from unobserved authorship.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Do not use outside knowledge as proof of human authorship.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-PA",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -589,21 +774,31 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Unavailable processing cannot appear as evaluated uncertainty or success.; No-finding never certifies safety.; Protocol changes require compatibility tests and the established approval process.",
       "disposition": "retained",
       "title": "UNK Unknown",
-      "baseline_job": "Specify and deliver uNK Unknown.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Represent insufficient evaluated evidence separately from pending, no-finding, unsupported and unavailable results.",
+      "outcome": "A reader can tell what was evaluated and why a tag could not provide its claim.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Protocol changes require compatibility tests and the established approval process.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-UNK",
+        "work_packages": [
+          "TAG-UNK"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -615,21 +810,33 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Transformation/order correctness and recognition accuracy are separate measurements.; Invalid or failed required redaction stops the affected service route.; The on-device PS route does not claim this tag or pretend to redact its input.",
       "disposition": "retained",
       "title": "PII_REDACTED",
-      "baseline_job": "Specify and deliver pII_REDACTED.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Verify that supported detections were actually transformed before downstream local-service evaluation.",
+      "outcome": "The reader knows what category-level transformation occurred and that detection may miss information.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-SERVICE",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. The on-device PS route does not claim this tag or pretend to redact its input.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-PII",
+        "work_packages": [
+          "TAG-PII_REDACTED"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -641,21 +848,33 @@
       "status": "normalized_scope; runtime unverified",
       "owner": "Claude",
       "release": "unassigned",
-      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "acceptance": "Supported send paths cannot transmit before the warning decision.; Unsupported paths are disclosed; no blanket coverage claim.; Consent, cancel and reset tests verify no hidden retention or secondary upload.",
       "disposition": "retained",
       "title": "PII_OUTBOUND",
-      "baseline_job": "Specify and deliver pII_OUTBOUND.",
-      "outcome": "A recipient sees the bounded claim, supporting evidence, and its uncertainty.",
+      "baseline_job": "Warn about supported personal-information detections before a selected send action and let the user edit or cancel.",
+      "outcome": "The user controls disclosure before sending, without an invisible copy of their prompt.",
       "source": "Supplied scope baseline, section 2",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-CAPTURE",
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Consent, cancel and reset tests verify no hidden retention or secondary upload.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-T-OUT",
+        "work_packages": [
+          "TAG-PII_OUTBOUND"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -675,13 +894,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-010",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -701,13 +930,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-011",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -727,13 +966,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-012",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -753,13 +1002,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-013",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -779,13 +1038,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-014",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -805,13 +1074,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-015",
+        "work_packages": [
+          "TAG-HP"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -831,13 +1110,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-016",
+        "work_packages": [
+          "TAG-HP"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -857,13 +1146,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-017",
+        "work_packages": [
+          "TAG-HP"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -883,13 +1182,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-018",
+        "work_packages": [
+          "TAG-HP"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -909,13 +1218,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-019a",
+        "work_packages": [
+          "TAG-MT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -935,13 +1254,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-019b",
+        "work_packages": [
+          "TAG-MT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -961,13 +1290,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-019c",
+        "work_packages": [
+          "TAG-MT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -987,13 +1326,24 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-REFERENCES",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-020a",
+        "work_packages": [
+          "TAG-NF"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1013,13 +1363,24 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-REFERENCES",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-020b",
+        "work_packages": [
+          "TAG-FI"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1039,13 +1400,23 @@
       "source": "Supplied scope baseline, section 3",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-MODALITIES",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-081",
+        "work_packages": [
+          "WP-REFERENCES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1065,13 +1436,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-026",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1091,13 +1473,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-027",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1117,13 +1510,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-028",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1143,13 +1547,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-029a",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1169,13 +1584,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-029b",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1195,13 +1621,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-029c",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1222,13 +1659,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-025",
+        "work_packages": [
+          "TAG-FA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1248,13 +1696,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-082",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1274,13 +1733,24 @@
       "source": "Supplied scope baseline, section 4",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-083",
+        "work_packages": [
+          "TAG-FA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1300,13 +1770,25 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-SERVICE",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-023",
+        "work_packages": [
+          "TAG-PII_REDACTED"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1326,13 +1808,25 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-SERVICE",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-041",
+        "work_packages": [
+          "TAG-PII_REDACTED"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1352,13 +1846,25 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-CAPTURE",
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-024",
+        "work_packages": [
+          "TAG-PII_OUTBOUND"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1378,13 +1884,22 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-043",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1404,13 +1919,21 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-084",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1430,13 +1953,21 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-085",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1456,7 +1987,7 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
@@ -1469,6 +2000,14 @@
         "outcome": "Using the tool does not report that you used it",
         "status": "normalized_scope; runtime unverified",
         "disposition": "retained"
+      },
+      "delivery": {
+        "task_id": "TASK-F-086",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1488,13 +2027,21 @@
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-087",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1514,13 +2061,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-030",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1540,13 +2096,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-031",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1566,13 +2131,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-088",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1592,13 +2166,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-089",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1618,13 +2201,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-090",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1644,13 +2236,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-032",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1670,13 +2271,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-037",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1696,13 +2306,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-033",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1722,13 +2340,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-034",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1748,13 +2374,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-091",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1774,13 +2408,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-035",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1800,13 +2442,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-092",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1826,13 +2476,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-093",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1852,13 +2510,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-094",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1878,13 +2544,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-095",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1904,13 +2578,21 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-036",
+        "work_packages": [
+          "WP-INTEGRITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1930,13 +2612,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-096",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1956,13 +2647,22 @@
       "source": "Supplied scope baseline, section 6",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-097",
+        "work_packages": [
+          "WP-CAPTURE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -1982,13 +2682,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-040",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2008,13 +2717,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-042",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2034,13 +2752,25 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-SERVICE",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-098",
+        "work_packages": [
+          "TAG-PII_REDACTED"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2060,13 +2790,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-099",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2086,13 +2825,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-100",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2112,13 +2860,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-101",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2138,13 +2895,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-102",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2164,13 +2930,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-103",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2190,13 +2965,22 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-104",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2216,13 +3000,23 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-OPERATIONS",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-044",
+        "work_packages": [
+          "ORG-AUDIT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2242,13 +3036,23 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-OPERATIONS",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-045",
+        "work_packages": [
+          "ORG-AUDIT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2268,13 +3072,24 @@
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-RELEASE",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-105",
+        "work_packages": [
+          "WP-MOBILE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2293,14 +3108,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-050",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2319,14 +3140,20 @@
       "outcome": "Reports expose confusion counts, denominators, category failures, and applicable uncertainty.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-051",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2345,14 +3172,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-106",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2371,14 +3204,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-107",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2398,13 +3237,23 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-052",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2423,14 +3272,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-108",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2449,14 +3304,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-109",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2476,13 +3337,23 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-110",
+        "work_packages": [
+          "TAG-PS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2501,14 +3372,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-053",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2528,13 +3405,23 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-056",
+        "work_packages": [
+          "TAG-MT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2554,13 +3441,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-054",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2580,13 +3476,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-111",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2606,13 +3511,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-112",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2632,13 +3546,21 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-055",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2658,13 +3580,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-113",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2683,14 +3614,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-114",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2710,13 +3647,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-115",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2736,13 +3682,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-057",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2762,13 +3717,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-116",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2788,13 +3752,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-117",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2813,14 +3786,20 @@
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-118",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2840,13 +3819,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-119",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2866,13 +3854,22 @@
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-120",
+        "work_packages": [
+          "WP-RELEASE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2892,13 +3889,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-121",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2918,13 +3925,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-122",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2944,13 +3961,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-123",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2970,13 +3997,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-124",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -2996,13 +4033,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-125",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3022,13 +4069,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-126",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3048,13 +4105,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-127",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3074,13 +4141,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-128",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3100,13 +4177,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-129",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3126,13 +4213,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-130",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3152,13 +4249,23 @@
       "source": "Supplied scope baseline, section 9",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-131",
+        "work_packages": [
+          "WP-RECEIPTS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3178,13 +4285,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-132",
+        "work_packages": [
+          "WP-SITE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3204,13 +4320,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-133",
+        "work_packages": [
+          "WP-SITE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3230,13 +4355,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-134",
+        "work_packages": [
+          "WP-SITE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3256,13 +4390,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-135",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3282,15 +4425,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Owner and independent security reviewers",
       "dependencies": [
-        "docs/public-community-and-private-data.md",
-        "Accepted public posting and moderation policy",
-        "Authenticated application and tested independent recovery"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Disable affected posting or streaming on unauthorized disclosure; show unavailable status; local tags remain usable.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-136",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3310,14 +4460,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Owner and designated moderators",
       "dependencies": [
-        "F-136",
-        "Owner-selected moderators and policy"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Restrict affected publication and surface appeal status; never leak removed content into an audit notice.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-137",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3337,13 +4495,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-073",
+        "work_packages": [
+          "WP-OPERATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3363,13 +4530,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-074",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3389,13 +4565,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-138",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3415,13 +4600,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-139",
+        "work_packages": [
+          "WP-SITE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3441,13 +4635,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-140",
+        "work_packages": [
+          "WP-SITE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3467,13 +4670,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-141",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3493,13 +4705,22 @@
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL",
+        "WP-UX"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-142",
+        "work_packages": [
+          "WP-SITE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3519,13 +4740,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-075",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3545,13 +4774,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-143",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3571,13 +4808,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-144",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3597,13 +4842,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-145",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3623,13 +4876,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-146",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3649,13 +4910,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-147",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3675,13 +4944,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-148",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3701,13 +4978,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-070",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3727,13 +5012,22 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-071",
+        "work_packages": [
+          "WP-OPERATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3753,13 +5047,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-072",
+        "work_packages": [
+          "WP-UX"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3779,13 +5081,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-149",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3805,13 +5115,22 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-150",
+        "work_packages": [
+          "WP-OPERATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3831,13 +5150,21 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-151",
+        "work_packages": [
+          "WP-GOVERNANCE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3857,13 +5184,22 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-152",
+        "work_packages": [
+          "WP-OPERATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3883,13 +5219,22 @@
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-153",
+        "work_packages": [
+          "WP-OPERATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3909,13 +5254,22 @@
       "source": "Supplied scope baseline, section 12",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-060",
+        "work_packages": [
+          "WP-MODALITIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3935,13 +5289,22 @@
       "source": "Supplied scope baseline, section 12",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-061",
+        "work_packages": [
+          "WP-MODALITIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3961,13 +5324,22 @@
       "source": "Supplied scope baseline, section 12",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-062",
+        "work_packages": [
+          "WP-MODALITIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -3987,13 +5359,22 @@
       "source": "Supplied scope baseline, section 12",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-063",
+        "work_packages": [
+          "WP-MODALITIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4013,13 +5394,22 @@
       "source": "Supplied scope baseline, section 12",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-154",
+        "work_packages": [
+          "WP-MODALITIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4039,13 +5429,23 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-CAPTURE",
+        "WP-MODALITIES",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-155",
+        "work_packages": [
+          "WP-INTEGRATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4065,13 +5465,23 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-CAPTURE",
+        "WP-MODALITIES",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-156",
+        "work_packages": [
+          "WP-INTEGRATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4091,13 +5501,23 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-CAPTURE",
+        "WP-MODALITIES",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-157",
+        "work_packages": [
+          "WP-INTEGRATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4117,13 +5537,23 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-CAPTURE",
+        "WP-MODALITIES",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-158",
+        "work_packages": [
+          "WP-INTEGRATIONS"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4143,13 +5573,22 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-159",
+        "work_packages": [
+          "ORG-FLEET"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4169,13 +5608,23 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-CAPTURE",
+        "WP-PRIVACY",
+        "WP-RELEASE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-160",
+        "work_packages": [
+          "ORG-HOST"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4195,13 +5644,23 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-OPERATIONS",
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-161",
+        "work_packages": [
+          "ORG-AUDIT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4221,13 +5680,22 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-OPERATIONS",
+        "WP-PRIVACY"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-162",
+        "work_packages": [
+          "ORG-SSO"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4247,13 +5715,22 @@
       "source": "Supplied scope baseline, section 13",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-OPERATIONS",
+        "WP-SITE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-163",
+        "work_packages": [
+          "ORG-SUPPORT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4278,6 +5755,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-01",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4302,6 +5787,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-02",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4332,6 +5825,14 @@
         "outcome": "The product excludes a central database of assertions, and changes are reviewed against this boundary.",
         "status": "normalized_scope; runtime unverified",
         "disposition": "policy candidate; release exclusions are deferrals"
+      },
+      "delivery": {
+        "task_id": "TASK-X-03",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4356,6 +5857,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-04",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4380,6 +5889,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-05",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4410,6 +5927,14 @@
         "outcome": "The product excludes telemetry, usage analytics, crash reporting, and changes are reviewed against this boundary.",
         "status": "normalized_scope; runtime unverified",
         "disposition": "policy candidate; release exclusions are deferrals"
+      },
+      "delivery": {
+        "task_id": "TASK-X-06",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4434,6 +5959,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-07",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4458,6 +5991,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-08",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4482,6 +6023,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-09",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4506,6 +6055,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-10",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4530,6 +6087,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-11",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4554,6 +6119,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-12",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4578,6 +6151,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-13",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4602,6 +6183,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-14",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4626,6 +6215,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-15",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4650,6 +6247,14 @@
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-X-16",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4672,13 +6277,23 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-019",
+        "work_packages": [
+          "TAG-MT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4700,13 +6315,25 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-PROTOCOL",
+        "WP-REFERENCES",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-020",
+        "work_packages": [
+          "TAG-NF",
+          "TAG-FI"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4728,13 +6355,25 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-021",
+        "work_packages": [
+          "TAG-FA",
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4755,13 +6394,24 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-022",
+        "work_packages": [
+          "TAG-IV"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4784,13 +6434,24 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
       "dependencies": [
-        "Shared tag record and validation interfaces"
+        "WP-INTEGRITY",
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-F-029",
+        "work_packages": [
+          "TAG-PA"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4807,14 +6468,20 @@
       "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-001",
+        "work_packages": [
+          "WP-PROTOCOL"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4832,13 +6499,23 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-002",
+        "work_packages": [
+          "TAG-UNK"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4856,13 +6533,22 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-003",
+        "work_packages": [
+          "WP-SERVICE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4880,13 +6566,21 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PROTOCOL"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-004",
+        "work_packages": [
+          "WP-PRIVACY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4904,13 +6598,22 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Claude",
       "dependencies": [
-        "PS-01 claim and evidence contract"
+        "WP-PRIVACY",
+        "WP-SITE"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-005",
+        "work_packages": [
+          "WP-COMMUNITY"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4927,14 +6630,20 @@
       "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Claude",
-      "dependencies": [
-        "PS-01 claim and evidence contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-006",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4951,14 +6660,20 @@
       "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
-      "dependencies": [
-        "Supported personal tag workflow"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-007",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4975,14 +6690,20 @@
       "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
-      "dependencies": [
-        "Supported personal tag workflow"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-008",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -4999,14 +6720,20 @@
       "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
-      "dependencies": [
-        "Shared tag record and validation interfaces"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-009",
+        "work_packages": [
+          "WP-BOUNDARIES"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -5024,13 +6751,23 @@
       "source": "Legacy register or accepted planning discussion",
       "reviewer": "Codex",
       "dependencies": [
-        "Supported personal tag workflow"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "pricing": {
         "personal": "free complete workflow",
         "organizational": "proposal; no price or gate accepted",
         "operating_cost": "to be estimated separately"
+      },
+      "delivery": {
+        "task_id": "TASK-N-010",
+        "work_packages": [
+          "ORG-PRIVATE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -5042,20 +6779,29 @@
       "status": "proposed; not accepted or implemented",
       "owner": "Claude",
       "reviewer": "Codex",
-      "baseline_job": "Identify supported hazardous command instructions with context",
-      "outcome": "The person sees the command pattern and its bounded risk explanation.",
+      "baseline_job": "Research a clearer command-risk tag name/claim while preserving PS until a change is accepted.",
+      "outcome": "A proposed migration explains exactly which meaning changes and how old PS records remain interpretable.",
       "dependencies": [
-        "RFC-0004 product decision",
-        "Independent evidence validation"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "No production issuance before accepted evidence and evaluation criteria.",
-      "acceptance": "Publish claim boundaries and validate positive and adversarial cases before enabling.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. A naming change is not new independent accuracy evidence.",
+      "acceptance": "No rename or new live taxonomy code without owner/RFC acceptance.; Historic PS records retain their original meaning.; A naming change is not new independent accuracy evidence.",
       "pricing": {
         "personal": "free",
         "organizational": "proposal"
       },
       "release": "unassigned",
-      "disposition": "preserved proposal"
+      "disposition": "preserved proposal",
+      "delivery": {
+        "task_id": "TASK-T-UC",
+        "work_packages": [
+          "TAG-UC"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
+      }
     },
     {
       "id": "T-SC",
@@ -5066,20 +6812,29 @@
       "status": "proposed; not accepted or implemented",
       "owner": "Claude",
       "reviewer": "Codex",
-      "baseline_job": "Evaluate validated co-occurring fraud indicators",
-      "outcome": "The person sees possible fraud indicators, uncertainty, and relevant context.",
+      "baseline_job": "Research whether contextual fraud indicators support a useful, bounded possible-scam finding.",
+      "outcome": "The reader can inspect each validated indicator and dismiss a warning without an accusation of intent.",
       "dependencies": [
-        "RFC-0004 product decision",
-        "Independent evidence validation"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "No production issuance before accepted evidence and evaluation criteria.",
-      "acceptance": "Publish claim boundaries and validate positive and adversarial cases before enabling.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim.",
+      "acceptance": "Two-family co-occurrence is a hypothesis, not independent corroboration.; Publish measured false-positive rates and category misses; hedged wording and one-action dismissal are required.; If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim.",
       "pricing": {
         "personal": "free",
         "organizational": "proposal"
       },
       "release": "unassigned",
-      "disposition": "preserved proposal"
+      "disposition": "preserved proposal",
+      "delivery": {
+        "task_id": "TASK-T-SC",
+        "work_packages": [
+          "TAG-SC"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
+      }
     },
     {
       "id": "T-BT",
@@ -5090,20 +6845,29 @@
       "status": "proposed; not accepted or implemented",
       "owner": "Claude",
       "reviewer": "Codex",
-      "baseline_job": "Research positive evidence of automation without inferring it from absent human evidence",
-      "outcome": "The person sees only validated observations; templates or repetition alone are not a bot verdict.",
+      "baseline_job": "Research positive automation evidence without judging people from style, speed or absent human signals.",
+      "outcome": "A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot.",
       "dependencies": [
-        "RFC-0004 product decision",
-        "Independent evidence validation"
+        "WP-PROTOCOL",
+        "WP-UX",
+        "WP-VALIDATION"
       ],
-      "failure_behavior": "No production issuance before accepted evidence and evaluation criteria.",
-      "acceptance": "Publish claim boundaries and validate positive and adversarial cases before enabling.",
+      "failure_behavior": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. No deployment if the proposed evidence cannot support the declared claim.",
+      "acceptance": "Absence of human evidence never issues BT.; Repetition, template structure and timing regularity alone are not accepted proof.; No deployment if the proposed evidence cannot support the declared claim.",
       "pricing": {
         "personal": "free",
         "organizational": "proposal"
       },
       "release": "unassigned",
-      "disposition": "preserved proposal"
+      "disposition": "preserved proposal",
+      "delivery": {
+        "task_id": "TASK-T-BT",
+        "work_packages": [
+          "TAG-BT"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
+      }
     },
     {
       "id": "N-011",
@@ -5120,16 +6884,23 @@
       "acceptance": "Verify selected-tag record structure, no unapproved response text, independent-label separation, remote authentication/access isolation, bounded retry/deduplication, retention/deletion and dataset manifests before collection goes live.",
       "disposition": "retained; requested scope expansion",
       "dependencies": [
-        "docs/data-growth-plan.md",
-        "docs/private-host-operations.md",
-        "Accepted collection/consent and retention policy",
-        "Tested independently recoverable backups"
+        "WP-OPERATIONS",
+        "WP-PRIVACY",
+        "WP-VALIDATION"
       ],
       "failure_behavior": "Collection failure must not stop or change local tag evaluation. A prediction must not be treated as verified ground truth.",
       "pricing": {
         "personal": "No paid gate added to personal tags or evidence",
         "organizational": "No database pricing commitment; free hosted pilot sought",
         "operating_cost": "Hosted free tiers have finite quotas; production capacity and backups need a defined budget"
+      },
+      "delivery": {
+        "task_id": "TASK-N-011",
+        "work_packages": [
+          "WP-RESEARCH"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -5147,13 +6918,23 @@
       "acceptance": "Compare full evidence for all active fixtures in Chromium and WebKit; test failed initialization, invalid source, timeout/cancellation, stale results, offline reload, clear/removal, no input-bearing requests/storage, keyboard, 320px and text enlargement.",
       "disposition": "retained; requested scope expansion",
       "dependencies": [
-        "docs/handheld-delivery.md",
-        "Versioned tag claim and method contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-RELEASE",
+        "WP-UX"
       ],
       "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
       "pricing": {
         "personal": "Free personal path; no account or paid gate",
         "organizational": "No enterprise pricing claim"
+      },
+      "delivery": {
+        "task_id": "TASK-N-012",
+        "work_packages": [
+          "WP-MOBILE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -5171,13 +6952,23 @@
       "acceptance": "Signed containing app and Share extension tested on real iPhones; bounded input, process lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
       "disposition": "retained; requested scope expansion",
       "dependencies": [
-        "docs/handheld-delivery.md",
-        "Versioned tag claim and method contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-RELEASE",
+        "WP-UX"
       ],
       "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
       "pricing": {
         "personal": "Free personal path; no account or paid gate",
         "organizational": "No enterprise pricing claim"
+      },
+      "delivery": {
+        "task_id": "TASK-N-013",
+        "work_packages": [
+          "WP-MOBILE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -5195,13 +6986,23 @@
       "acceptance": "Receive supported share intents on real Android devices; bounds, lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
       "disposition": "retained; requested scope expansion",
       "dependencies": [
-        "docs/handheld-delivery.md",
-        "Versioned tag claim and method contract"
+        "WP-PRIVACY",
+        "WP-PROTOCOL",
+        "WP-RELEASE",
+        "WP-UX"
       ],
       "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
       "pricing": {
         "personal": "Free personal path; no account or paid gate",
         "organizational": "No enterprise pricing claim"
+      },
+      "delivery": {
+        "task_id": "TASK-N-014",
+        "work_packages": [
+          "WP-MOBILE"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     },
     {
@@ -5218,14 +7019,19 @@
       "release": "Handheld development preview",
       "acceptance": "Validate frozen hashes, reviewer slot, exact original text, unique complete items and reasons; show disagreements and ambiguity; forbid hidden predictions, uploads, automatic persistence and claims of verified independence.",
       "disposition": "retained; requested scope expansion",
-      "dependencies": [
-        "docs/handheld-delivery.md",
-        "Versioned tag claim and method contract"
-      ],
+      "dependencies": [],
       "failure_behavior": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
       "pricing": {
         "personal": "Free personal path; no account or paid gate",
         "organizational": "No enterprise pricing claim"
+      },
+      "delivery": {
+        "task_id": "TASK-N-015",
+        "work_packages": [
+          "WP-VALIDATION"
+        ],
+        "plan": "docs/scope-delivery.md",
+        "planning_status": "mapped; not evidence of implementation"
       }
     }
   ]

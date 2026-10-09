@@ -21,6 +21,14 @@ jobs:
       - run: shellcheck deploy/notifications/install.sh deploy/notifications/prepare-edge.sh deploy/notifications/activate-edge.sh
       # Live host verification is explicitly separate; CI has no production key.
 
+  scope-plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/verify-scope-plan.py
+
   spec:
     runs-on: ubuntu-latest
     steps:

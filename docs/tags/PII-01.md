@@ -42,3 +42,7 @@ PS's precision thresholds cannot be copied into this tag as a substitute.
 
 Engineering evidence: tests/test_redaction_contract.py and dated container/CLI
 checks. Reviewer-generated examples are development regressions, not a holdout.
+
+## Execution work package
+
+[TAG-PII_REDACTED](../scope-delivery.md#tag-pii_redacted) separates transformation/order evidence from entity-recognition coverage and false-redaction review. It progresses independently of PS human labeling; the chosen local-service route still requires successful redaction before downstream evaluation.
