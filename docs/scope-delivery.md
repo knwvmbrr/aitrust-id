@@ -17,6 +17,14 @@ The [machine plan](scope-delivery.json) and [master scope](master-scope.json) pr
 traceability. Planning coverage does not imply implementation coverage. Current
 executed truth remains in `../state.json` and versioned `../runs/` evidence.
 
+## Current timestamped completion
+
+Read the [completion ledger](scope-progress.md) for each requirement, package and
+subtask: percentage, timestamp, execution credit, evidence and next fix. 100%
+means the full named item functions and meets its acceptance; independent tag
+validation is not inferred from component tests. Completed records leave the open
+queue but stay in scope. Milestone percentages are not effort or accuracy.
+
 ## Three layers and their value
 
 1. **Tags and evidence:** reference support/contradiction, hallucination indicators,
@@ -199,6 +207,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader sees which claim is supported by which source and passage, and the limits of that support.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** Content and a user-supplied local reference corpus.
 
 **Output:** Claim-level support records with exact reference passages, corpus/version identity and limits.
@@ -234,6 +244,8 @@ References are not claims that the entire package is done.
 **Job:** Distinguish contradicted claims from citations that cannot be resolved within the declared reference set.
 
 **Outcome:** The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Content and a local reference corpus.
 
@@ -271,6 +283,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader knows which inconsistency or unsupported detail warrants checking and why.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** Content, with references where the method requires them.
 
 **Output:** The supported inconsistency/specificity indicator, its relevant spans and uncertainty; no blanket falsehood verdict.
@@ -307,6 +321,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** Content and its relevant context.
 
 **Output:** Contextual framing findings, matched evidence and the versioned annotation/error policy used to interpret them.
@@ -342,6 +358,8 @@ References are not claims that the entire package is done.
 **Job:** Complete the existing bounded command-risk release, then expand risk capabilities as separately validated increments.
 
 **Outcome:** The reader sees the hazardous instruction pattern before acting, with exact evidence and a challenge path.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Bounded selected text through either the independent phone/paste worker or the optional authenticated local gateway/Chrome route. Only the gateway route performs configured redaction.
 
@@ -381,6 +399,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** An identified artifact, reviewer evidence, and authorized attestation.
 
 **Output:** An explicit human review/attestation bound to a subject revision, review scope, reviewer identity and verifiable lifecycle.
@@ -416,6 +436,8 @@ References are not claims that the entire package is done.
 **Job:** Evaluate positive origin evidence for full AI generation within an explicitly observed or attested workflow.
 
 **Outcome:** The reader sees the origin assertion, source of evidence and supported observation window.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Positive provenance evidence and an identified artifact.
 
@@ -453,6 +475,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader can distinguish documented contribution/edit events from unobserved authorship.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** Consented composition evidence and artifact binding.
 
 **Output:** Documented AI-contribution and modification evidence bound to subject revisions and the observed workflow.
@@ -489,6 +513,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** A reader can tell what was evaluated and why a tag could not provide its claim.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** A valid evaluation result and its abstentions.
 
 **Output:** An explicit result state and reason explaining insufficient evaluated evidence; pending/unsupported/unavailable/no-finding remain distinguishable.
@@ -524,6 +550,8 @@ References are not claims that the entire package is done.
 **Job:** Verify that supported detections were actually transformed before downstream local-service evaluation.
 
 **Outcome:** The reader knows what category-level transformation occurred and that detection may miss information.
+
+**Completion:** 60% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Original text received by the local gateway.
 
@@ -563,6 +591,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The user controls disclosure before sending, without an invisible copy of their prompt.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** User input before submission to a supported service.
 
 **Output:** A local pre-send warning plus edit/cancel/proceed controls; no automatic research record or transmission.
@@ -598,6 +628,8 @@ References are not claims that the entire package is done.
 **Job:** Research a clearer command-risk tag name/claim while preserving PS until a change is accepted.
 
 **Outcome:** A proposed migration explains exactly which meaning changes and how old PS records remain interpretable.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Supported text/code instructions.
 
@@ -639,6 +671,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader can inspect each validated indicator and dismiss a warning without an accusation of intent.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Input:** Content and contextual evidence.
 
 **Output:** A proposed possible-scam warning exposing each validated contextual indicator, limits and a one-action dismissal.
@@ -678,6 +712,8 @@ References are not claims that the entire package is done.
 **Job:** Research positive automation evidence without judging people from style, speed or absent human signals.
 
 **Outcome:** A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Positive, consented evidence within a defined observation scope.
 
@@ -719,6 +755,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** Implementations exchange bounded tag records with compatible meanings.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-001, F-002, F-003, F-005, F-006, F-007, F-078, N-001.
 
 **Scoped prerequisites:** No detector prerequisite; define/test this capability independently.
@@ -746,6 +784,8 @@ References are not claims that the entire package is done.
 **Job:** Authenticate exact records and distinguish integrity, reproduction, source diversity and independent accuracy.
 
 **Outcome:** Readers verify who issued which record and understand what that verification establishes.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-008, F-009, F-036.
 
@@ -777,6 +817,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** People control what is checked and shared without forced telemetry or training.
 
+**Completion:** 40% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-079, F-080, F-084, F-085, F-086, F-087, F-091, N-004.
 
 **Scoped prerequisites:** WP-PROTOCOL.
@@ -807,6 +849,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** Tags attach to the right output once and stale results disappear.
 
+**Completion:** 40% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-030, F-031, F-032, F-037, F-088, F-089, F-090, F-097.
 
 **Scoped prerequisites:** WP-PROTOCOL, WP-PRIVACY.
@@ -834,6 +878,8 @@ References are not claims that the entire package is done.
 **Job:** Present several independent code-only tags without covering output, with brief explanations and optional full evidence.
 
 **Outcome:** A person understands a finding quickly and can inspect, challenge or dismiss it.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-033, F-034, F-035, F-092, F-093, F-094, F-095, F-055, F-072.
 
@@ -865,6 +911,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** A local caller receives an honest finding or failure without bypassing required safeguards.
 
+**Completion:** 60% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-040, F-042, F-043, F-099, F-100, F-101, F-102, F-103, F-104, F-096, N-003, F-115.
 
 **Scoped prerequisites:** WP-PROTOCOL, WP-PRIVACY.
@@ -892,6 +940,8 @@ References are not claims that the entire package is done.
 **Job:** Run accepted tag-specific protocols against frozen evidence and preserve failures.
 
 **Outcome:** A third party can reproduce metrics, denominators and release decisions.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-050, F-051, F-053, F-106, F-107, F-108, F-109, F-114, F-118, N-006, N-015.
 
@@ -923,6 +973,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** Users install the tested version and outside implementers can check conformance.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-054, F-057, F-111, F-112, F-113, F-116, F-117, F-119, F-120.
 
 **Scoped prerequisites:** WP-PROTOCOL, WP-VALIDATION.
@@ -950,6 +1002,8 @@ References are not claims that the entire package is done.
 **Job:** Bind optional observed composition evidence to artifacts with independent verification and key lifecycle.
 
 **Outcome:** Authors can offer verifiable receipts without compulsory identity profiling or dependence on our availability.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-121, F-122, F-123, F-124, F-125, F-126, F-127, F-128, F-129, F-130, F-131.
 
@@ -981,6 +1035,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The same declared subject produces comparable records across implementations.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-060, F-061, F-062, F-063, F-154.
 
 **Scoped prerequisites:** WP-PROTOCOL, WP-RELEASE.
@@ -1010,6 +1066,8 @@ References are not claims that the entire package is done.
 **Job:** Keep every tag’s job, use instructions, evidence, price boundary and status discoverable.
 
 **Outcome:** People can learn and use a tag without reading the entire project.
+
+**Completion:** 80% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-132, F-133, F-134, F-139, F-140, F-142.
 
@@ -1041,6 +1099,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** People see discussion and outcomes, can challenge tags, and contribute to explicit tasks.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-135, F-136, F-137, F-074, F-138, F-141, N-005.
 
 **Scoped prerequisites:** WP-SITE, WP-PRIVACY.
@@ -1070,6 +1130,8 @@ References are not claims that the entire package is done.
 **Job:** Establish accepted roles, open specification changes and an evidence-backed conformance program.
 
 **Outcome:** The public can identify who decides, what was reviewed and how conflicting interests are handled.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-075, F-076, F-077, F-143, F-144, F-145, F-146, F-147, F-148, F-070, F-149, F-151.
 
@@ -1103,6 +1165,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** The service can be operated, corrected and restored without hidden dependencies on another project.
 
+**Completion:** 40% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-073, F-071, F-150, F-152, F-153.
 
 **Scoped prerequisites:** WP-PRIVACY, WP-RELEASE.
@@ -1133,6 +1197,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** People and teams use the same tag semantics in more workflows.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-155, F-156, F-157, F-158.
 
 **Scoped prerequisites:** WP-PROTOCOL, WP-CAPTURE, WP-MODALITIES.
@@ -1160,6 +1226,8 @@ References are not claims that the entire package is done.
 **Job:** Deploy accepted tags and policies across organization-managed devices.
 
 **Outcome:** Administrators know which method/version/policy is active and can roll back safely.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-159.
 
@@ -1189,6 +1257,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** A team obtains relevant tag evidence across approved host workflows without covert monitoring.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-160.
 
 **Scoped prerequisites:** WP-CAPTURE, WP-PRIVACY, WP-RELEASE.
@@ -1216,6 +1286,8 @@ References are not claims that the entire package is done.
 **Job:** Retain approved versioned records with correction lineage and restricted access.
 
 **Outcome:** An organization can audit a result without silently replacing its original record or collecting unapproved answers.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-161, F-044, F-045.
 
@@ -1245,6 +1317,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** Teams can grant and revoke access without changing tag conclusions.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** F-162.
 
 **Scoped prerequisites:** WP-PRIVACY, WP-OPERATIONS.
@@ -1272,6 +1346,8 @@ References are not claims that the entire package is done.
 **Job:** Offer support with an explicitly staffed scope and measured response commitments.
 
 **Outcome:** An organization knows what help it buys and how incidents escalate.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-163.
 
@@ -1301,6 +1377,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** Organizations extend their workflow without confusing a private policy with a public standard claim.
 
+**Completion:** 40% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** N-010.
 
 **Scoped prerequisites:** WP-PROTOCOL, WP-PRIVACY, WP-VALIDATION.
@@ -1328,6 +1406,8 @@ References are not claims that the entire package is done.
 **Job:** Provide usable phone checks, optional offline assets and native share routes without mandatory account/Docker/extension.
 
 **Outcome:** A handheld user can check selected output and understand the tag quickly.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** N-012, N-013, N-014, F-105.
 
@@ -1358,6 +1438,8 @@ References are not claims that the entire package is done.
 **Job:** Organize explicitly consented examples, predictions, independent labels and corrections in the isolated open-source research stack.
 
 **Outcome:** Authorized researchers can improve methods without turning personal checks into automatic data collection.
+
+**Completion:** 40% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** N-011.
 
@@ -1391,6 +1473,8 @@ References are not claims that the entire package is done.
 
 **Outcome:** No scope restriction becomes an accidental feature, and no deferred tag disappears.
 
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+
 **Scope records:** X-01, X-02, X-03, X-04, X-05, X-06, X-07, X-08, X-09, X-10, X-11, X-12, X-13, X-14, X-15, X-16, N-007, N-008, N-009.
 
 **Scoped prerequisites:** No detector prerequisite; define/test this capability independently.
@@ -1418,6 +1502,8 @@ References are not claims that the entire package is done.
 **Job:** Attach and version a local reference corpus with reproducible passage identity, retrieval and freshness boundaries.
 
 **Outcome:** NF and FI can use the same evidence primitive without either tag depending on the other tag’s conclusion.
+
+**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-081.
 

@@ -17,7 +17,7 @@
     "Declared latency budget and investigation of one observed transient timeout"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 139,
+  "python_tests_passed": 253,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -116,8 +116,8 @@
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.1",
-      "effective_date": "2026-10-08",
+      "version": "1.2",
+      "effective_date": "2026-10-09",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
       "source": "site/src/policies.js",
@@ -162,6 +162,13 @@
         "device": "runs/2026-10-08-upgrade-device-public.json",
         "assets": "runs/2026-10-08-upgrade-assets-public.json"
       }
+    },
+    "branding": {
+      "publisher_credit": "Published by AI Trust ID.",
+      "product_owner_label": "Michael",
+      "operator_identity_location": "Terms of use only in current page prose; prior policy archives retained",
+      "github_account_renamed": false,
+      "public_verification_pending": true
     }
   },
   "previous_runtime_verification": {
@@ -562,5 +569,28 @@
       "policies": "runs/2026-10-08-scope-plan-policies-public.json",
       "assets": "runs/2026-10-08-scope-plan-assets-public.json"
     }
+  },
+  "scope_completion": {
+    "reader": "docs/scope-progress.md",
+    "source": "docs/scope-progress.json",
+    "audited_at": "2026-10-09T13:29:52.810894+00:00",
+    "completed_records": 14,
+    "open_records": 188,
+    "records_preserved": 202,
+    "packages": 39,
+    "subtasks": 117,
+    "enhancements": 4,
+    "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
+    "verified_by": "Codex",
+    "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
+    "structural_evidence": "runs/2026-10-09-scope-progress-verification.json",
+    "claude_review": "docs/competitive-differentiation.md"
+  },
+  "research_components": {
+    "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
+    "implementation_attribution": "Claude initial code per owner report; Codex fail-closed repairs and boundary checks",
+    "release_integrated": false,
+    "independent_validation": false,
+    "evidence": "runs/2026-10-09-scope-completion-checks.json"
   }
 }

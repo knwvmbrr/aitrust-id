@@ -77,3 +77,9 @@ scope-render:
 	$(PYTHON) scripts/render-scope-plan.py
 verify-scope:
 	$(PYTHON) scripts/verify-scope-plan.py
+
+.PHONY: progress-render verify-progress
+progress-render:
+	$(PYTHON) scripts/scope-progress.py --render
+verify-progress:
+	$(PYTHON) scripts/scope-progress.py

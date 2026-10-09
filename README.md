@@ -16,7 +16,7 @@ The public tag catalogue is live at [aitrustid.com](https://aitrustid.com), with
 Person/Enterprise views, compact tag tiles, a tag logo, Light/Dark/System appearance
 and compact tag-detail modals with a plain-language purpose, limitation and visible
 validation status. Deeper methods, testing and feature details expand on request. Twenty [static tag reference pages](https://aitrustid.com/tags/)
-and a [22-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
+and a [32-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
 to crawlers. Google indexing and Search Console ownership remain unverified.
 HTTPS, public response hashes,
 production security headers and all 20 modals pass external checks. Report and
@@ -239,3 +239,5 @@ labels, or a claim that two files establish two independent reviewers.
 Public policies name the current individual publisher and offer versioned plain-text
 downloads. Checker summaries omit answer fingerprints/positions by default; detailed
 reproduction records require an explicit choice. [Architecture and limits](docs/tag-system-upgrade.md).
+
+[Timestamped scope completion ledger](docs/scope-progress.md) records per-item milestones, credits, evidence and next fixes; 100% requires full functioning acceptance. Research adjudication components are tested supplied-input mappings, not a released media validator.

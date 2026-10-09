@@ -11,7 +11,10 @@
     "verify:device": "node scripts/verify-device.cjs",
     "verify:workflows": "node scripts/verify-workflows.cjs",
     "verify:policies": "node scripts/verify-policies.cjs",
-    "verify:scope": "python3 scripts/verify-scope-plan.py"
+    "verify:scope": "python3 scripts/verify-scope-plan.py",
+    "verify:a11y": "node scripts/verify-a11y.cjs",
+    "verify:a11y:selftest": "node scripts/verify-a11y-selftest.cjs",
+    "build:panel": "python3 scripts/build-provenance-panel.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",

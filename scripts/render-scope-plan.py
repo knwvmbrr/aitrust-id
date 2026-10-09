@@ -4,6 +4,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 plan=json.loads((ROOT/'docs/scope-delivery.json').read_text())
 scope=json.loads((ROOT/'docs/master-scope.json').read_text())
+progress=json.loads((ROOT/'docs/scope-progress.json').read_text()) if (ROOT/'docs/scope-progress.json').exists() else None
+progress_by={x['id']:x for k in ['records','packages','subtasks'] for x in progress[k]} if progress else {}
 def cell(text): return ('; '.join(map(str,text)) if isinstance(text,list) else str(text)).replace('|',r'\|').replace('\n',' ')
 def link(path, prefix=''):return f'[{path}]({prefix}{path})'
 intro='''# AI TRUST ID — scope delivery plan
@@ -24,6 +26,14 @@ package subtasks**. Every original ID also has a task in the [record index](scop
 The [machine plan](scope-delivery.json) and [master scope](master-scope.json) preserve
 traceability. Planning coverage does not imply implementation coverage. Current
 executed truth remains in `../state.json` and versioned `../runs/` evidence.
+
+## Current timestamped completion
+
+Read the [completion ledger](scope-progress.md) for each requirement, package and
+subtask: percentage, timestamp, execution credit, evidence and next fix. 100%
+means the full named item functions and meets its acceptance; independent tag
+validation is not inferred from component tests. Completed records leave the open
+queue but stay in scope. Milestone percentages are not effort or accuracy.
 
 ## Three layers and their value
 
@@ -161,6 +171,8 @@ References are not claims that the entire package is done.
 text=intro+'| Package | Job / service |\n|---|---|\n'+''.join('| ['+pkg['id']+'](#'+pkg['id'].lower()+') | '+pkg['name']+' |\n' for pkg in plan['packages'])+'\n'
 for pkg in plan['packages']:
  text+=f"### {pkg['id']}\n\n**{pkg['name']}**\n\n**Job:** {pkg['job']}\n\n**Outcome:** {pkg['outcome']}\n\n"
+ if pkg['id'] in progress_by:
+  audit=progress_by[pkg['id']];text+='**Completion:** '+str(audit['percent_complete'])+'% · audited '+audit['audited_at']+' · checked by '+audit['checked_by']+'. [Evidence and next fix](scope-progress.md).\n\n'
  if pkg['id'].startswith('TAG-'):
   text+='**Input:** '+cell(pkg['inputs'])+'\n\n**Output:** '+cell(pkg['outputs'])+'\n\n**Claim boundaries:** '+cell(pkg['claim_boundaries'])+'\n\n'
  text+='**Scope records:** '+', '.join(pkg['scope_ids'])+'.\n\n'
@@ -173,8 +185,8 @@ for pkg in plan['packages']:
  if pkg['references']:text+='**Existing references:** '+', '.join(link(path,'../') for path in pkg['references'])+'. '+pkg['evidence_note']+'\n\n'
  if pkg['id'].startswith('TAG-'):text+='**Tag contract:** '+link(pkg['contract'],'../')+'.\n\n'
 (ROOT/'docs/scope-delivery.md').write_text(text)
-index='# Scope task index\n\nAll 202 source IDs remain covered. This is a crosswalk into the [one execution plan](scope-delivery.md), not a second roadmap. Package subtasks and gates supply the delivery criteria. Legacy grouping rows are traceability records, not extra detector implementations.\n\n| Record/task | Preserved requirement | Work packages |\n|---|---|---|\n'
-for row in plan['records']:index+='| '+cell(row['task_id'])+' | '+cell(row.get('display_title',row['title']))+' | '+', '.join(f"[{id}](scope-delivery.md#{id.lower()})" for id in row['work_packages'])+' |\n'
+index='# Scope task index\n\nAll 202 source IDs remain covered. This is a crosswalk into the [one execution plan](scope-delivery.md), not a second roadmap. Package subtasks and gates supply the delivery criteria. Legacy grouping rows are traceability records, not extra detector implementations.\n\n| Record/task | Preserved requirement | Work packages | Completion at latest audit |\n|---|---|---|---|\n'
+for row in plan['records']:index+='| '+cell(row['task_id'])+' | '+cell(row.get('display_title',row['title']))+' | '+', '.join(f"[{id}](scope-delivery.md#{id.lower()})" for id in row['work_packages'])+' | '+str(progress_by.get(row['scope_id'],{}).get('percent_complete','unassessed'))+'% · [evidence/fix](scope-progress.md) |\n'
 (ROOT/'docs/scope-task-index.md').write_text(index)
 # Render master table after enriching dependency mappings.
 master='# Three-layer master scope\n\nAll 202 records and their dispositions remain preserved. UC, SC and BT remain proposals; no rename or new release is implied. Jobs/outcomes define scope, not implementation. Read the [execution plan](scope-delivery.md) and [task index](scope-task-index.md) for accountable work packages. `state.json` and `runs/` hold executed truth.\n\n| ID | Layer | Baseline job | Outcome | Work package |\n|---|---|---|---|---|\n'

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0 development preview — 2026-10-09
+
+- Add timestamped completion ledger for all 202 requirements, 39 packages and 117 subtasks; retain completed records and explicit fixes for open work.
+- Review supplied adjudication/statistics research code; require complete supplied verification, fail closed on unknown codes and publish missing-answer coverage. No real media validator or new tag is released.
+- Use AI Trust ID as the general publisher credit and Michael as product owner. Keep actual legal operator in Terms; preserve prior policy text and publish version 1.2.
+
 ## 0.1.0 — development preview, unreleased
 
 - Expanded all 202 scope records into 39 execution packages and 117 subtasks, with
