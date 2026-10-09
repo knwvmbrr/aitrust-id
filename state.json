@@ -35,7 +35,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-site-friendly-public.json",
+    "evidence": "runs/2026-10-08-ps-use-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -45,8 +45,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://f156a064.aitrust-id.pages.dev",
-    "deployment_id": "f156a064-4968-498a-9819-16ba63d3b38a",
+    "deployment_url": "https://937036a1.aitrust-id.pages.dev",
+    "deployment_id": "937036a1-014b-499a-bf09-e81e0ed66042",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-08-site-friendly-result.json",
+    "publication_evidence": "runs/2026-10-08-ps-use-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 22,
@@ -84,12 +84,16 @@
     "modal_presentation": "content_height_plain_language_summary_limit_visible_validation_three_disclosures",
     "complete_detail_export_verified": true,
     "cross_tab_appearance_verified": true,
-    "next_build_features": {
+    "font": "self-hosted Nunito Sans under SIL OFL 1.1",
+    "per_tag_use_sections": 20,
+    "local_setup_guides": 2,
+    "use_commands_copy_verified": true,
+    "use_contract": {
       "per_tag_use_sections": 20,
       "local_setup_guides": 2,
       "font": "self-hosted Nunito Sans",
       "site_validation": "runs/2026-10-08-ps-use-local.json",
-      "publication_verified": false
+      "publication_verified": true
     }
   },
   "previous_runtime_verification": {
@@ -389,8 +393,9 @@
     "issues_enabled": true,
     "discussions_enabled": true,
     "private_vulnerability_reporting_enabled": true,
-    "evidence": "runs/2026-10-08-public-source-result.json",
-    "independent_install_review": false
+    "evidence": "runs/2026-10-08-ps-use-download.json",
+    "independent_install_review": false,
+    "latest_implementation_commit": "bb79954"
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
@@ -407,7 +412,8 @@
     "complete_product_equivalence_verified": false,
     "comparative_accuracy_verified": false,
     "business_viability_verified": false,
-    "recommendation": "Bounded first-tag independent accuracy and outside-user trial before broad expansion; preserve full scope"
+    "recommendation": "Bounded first-tag independent accuracy and outside-user trial before broad expansion; preserve full scope",
+    "delivery_updates": "docs/competitive-landscape.md#product-improvements-executed-in-the-first-ps-validation-pass"
   },
   "independent_review": {
     "tool": "scripts/prepare-ps-review.py",
@@ -416,6 +422,8 @@
     "hash_freeze_and_disagreement_checks_tested": true,
     "human_review_complete": false,
     "independence_verified": false,
-    "statistical_gate_pass": false
+    "statistical_gate_pass": false,
+    "reviewer_recruitment": "Owner will recruit two reviewers",
+    "reviewer_handoff": "docs/PS-reviewer-start.md"
   }
 }

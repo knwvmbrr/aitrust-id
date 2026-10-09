@@ -76,3 +76,9 @@ make down ENV_FILE="$HOME/.config/aitrust-id/runtime.env"
 Remove the extension token before unloading it. Retain or remove your own local
 configuration separately. No unrelated Docker cleanup is part of uninstall.
 Do not upload real content to the research hosts.
+
+
+Public reference downloads also work with ordinary curl or an identified
+`AITrust-ID-Validator/0.1` user agent. The observed default Python urllib agent
+received Cloudflare error 1010; that transport response is not an evaluation
+result. The full repository includes the evidence and datasets for offline use.
