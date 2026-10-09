@@ -2,10 +2,11 @@
   "version": "0.1.0",
   "updated": "2026-10-08",
   "active_increment": "public_runnable_development_preview",
-  "status": "site_and_source_published; fresh_install_and_local_tags_verified; independent_release_blocked",
+  "status": "site_and_source_published; context_v5_http_and_development_tests_pass; independent_release_and_current_container_retest_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
+    "Rebuild and verify context-v5 full local pipeline; daemon and gateway stopped at last check",
     "Independent held-out ground truth, accepted sampling and evaluation policy",
     "Human screen-reader and outside-user install/removal evaluation",
     "Broader live ChatGPT compatibility across regeneration, multi-response and vendor updates",
@@ -15,7 +16,7 @@
     "Declared latency budget and investigation of one observed transient timeout"
   ],
   "scope_record_count": 198,
-  "python_tests_passed": 101,
+  "python_tests_passed": 134,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -82,7 +83,14 @@
     "appearance_control": "native_dark_mode_switch_with_device_auto",
     "modal_presentation": "content_height_plain_language_summary_limit_visible_validation_three_disclosures",
     "complete_detail_export_verified": true,
-    "cross_tab_appearance_verified": true
+    "cross_tab_appearance_verified": true,
+    "next_build_features": {
+      "per_tag_use_sections": 20,
+      "local_setup_guides": 2,
+      "font": "self-hosted Nunito Sans",
+      "site_validation": "runs/2026-10-08-ps-use-local.json",
+      "publication_verified": false
+    }
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -116,12 +124,15 @@
     "live_extension_installed": true,
     "live_content_script_ui_observed": true,
     "authenticated_live_finding_verified": true,
-    "pending": null,
-    "live_evidence_source_hash_matches": true,
+    "pending": "Rebuild and rerun the full container/installed extension pipeline for context-v5; local daemon is stopped. Earlier context-v4 evidence remains historical.",
+    "live_evidence_source_hash_matches": false,
     "live_scope": "One existing Homebrew answer; broader live coverage and independent accuracy remain open",
-    "verified_local_container_sources": true
+    "verified_local_container_sources": false,
+    "current_method": "context-v5",
+    "current_method_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+    "current_method_container_verified": false
   },
-  "python_tests_scope": "Current implementation; new boundary and full-schema HTTP policy checks included",
+  "python_tests_scope": "Current source HTTP/unit checks, 86 active development cases, controlled gateway upstream tests; no current full container run",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -279,16 +290,16 @@
     }
   },
   "regression_verification": {
-    "active_sets": 4,
-    "case_count": 60,
+    "active_sets": 5,
+    "case_count": 86,
     "classification_errors": 0,
     "manifest": "eval/datasets/unsafe_code/manifest.json",
-    "evidence": "runs/2026-10-08-all-active-regressions.json",
+    "evidence": "runs/2026-10-08-ps-routing-regressions.json",
     "ci_job": "regressions",
     "hosted_ci_executed": false,
     "independent_accuracy_evidence": false,
     "statistical_gate_pass": false,
-    "statistical_evidence": "runs/2026-10-08-ci-gate-recheck.json",
+    "statistical_evidence": "runs/2026-10-08-ps-routing-gates.json",
     "hosted_ci_status": "account_billing_blocked",
     "hosted_ci_evidence": "runs/2026-10-08-public-source-result.json"
   },
@@ -355,7 +366,7 @@
     "recovery_codes_offline_custody_verified": false
   },
   "local_cli": {
-    "status": "implemented_and_real_pipeline_verified; independent_release_pending",
+    "status": "current_code_tests_pass; gateway_unavailable_during_context_v5_pass; independent_release_pending",
     "script": "scripts/aitrust.py",
     "install_guide": "docs/open-validation-path.md",
     "schema_and_method_hash_validated": true,
@@ -397,5 +408,14 @@
     "comparative_accuracy_verified": false,
     "business_viability_verified": false,
     "recommendation": "Bounded first-tag independent accuracy and outside-user trial before broad expansion; preserve full scope"
+  },
+  "independent_review": {
+    "tool": "scripts/prepare-ps-review.py",
+    "instructions": "docs/independent-review.md",
+    "blind_export_implemented": true,
+    "hash_freeze_and_disagreement_checks_tested": true,
+    "human_review_complete": false,
+    "independence_verified": false,
+    "statistical_gate_pass": false
   }
 }

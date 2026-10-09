@@ -2,6 +2,14 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Corrected PS stdout routing and literal-display handling under context-v5,
+  with versioned signals. Added 26 boundary cases and file-only shell checks;
+  all 86 active development cases pass. Independent release remains blocked.
+- Added a blind PS review packet tool with frozen source/policy hashes, private
+  files, spreadsheet escaping and explicit disagreement/ambiguity reporting.
+- Added per-tag use and availability instructions, shared local setup for PS/PII,
+  copyable commands, and self-hosted SIL OFL Nunito Sans typography.
+
 - Replaced the appearance menu with a keyboard-operable light/dark switch and Auto.
   Tag dialogs fit their content, lead with plain-language purpose, limitation and
   visible validation status, and retain full details in three disclosures and JSON.

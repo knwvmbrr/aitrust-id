@@ -1,0 +1,43 @@
+{
+  "metrics": {
+    "PS": {
+      "tp": 31,
+      "fp": 0,
+      "fn": 0,
+      "tn": 55,
+      "intervals": {
+        "precision": [
+          0.889744604539564,
+          1.0
+        ],
+        "recall": [
+          0.889744604539564,
+          1.0
+        ]
+      },
+      "category_failures": []
+    }
+  },
+  "failures": [
+    "release evidence requires a frozen independent holdout, manifest hash, and pre-agreed method",
+    "PS.precision: lower bound does not clear 0.93",
+    "PS: calibration evidence missing; heuristic scores are not probabilities"
+  ],
+  "evaluation_gate_pass": false,
+  "gate_scope": "statistical_evaluation_only",
+  "release_assessed": false,
+  "source": {
+    "PS": {
+      "tp": 31,
+      "fp": 0,
+      "fn": 0,
+      "tn": 55
+    },
+    "dataset": {
+      "kind": "development_regression",
+      "independently_labeled": false,
+      "method_fixed_before_run": false,
+      "sha256": "ec9d5ce24bb4c13b31d7e95320f65bd1b989bac8dee5caeb204ad1f88b4a1181"
+    }
+  }
+}

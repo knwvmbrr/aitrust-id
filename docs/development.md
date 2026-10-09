@@ -46,7 +46,7 @@ Only text is enabled by the gateway. Non-text requests return an explicit unsupp
 
 ## Changes requiring specification review
 
-Context-aware behavior uses sig.piped_installer.v2 and sig.obfuscated_payload.v2. Their v1 IDs are not silently mutated. Methods and limitations are documented under development methods in spec/signals.md; accepted conformance registration still requires independent evidence. Scores are displayed as uncalibrated heuristic method data, never a probability.
+Context-aware behavior uses sig.piped_installer.v3 and sig.obfuscated_payload.v2; substitution methods are now v3/v3/v2 under context-v5. Their v1 IDs are not silently mutated. Methods and limitations are documented under development methods in spec/signals.md; accepted conformance registration still requires independent evidence. Scores are displayed as uncalibrated heuristic method data, never a probability.
 
 ## Reproducible runtime and audit limits
 
@@ -62,3 +62,16 @@ The dated package audit records zero known findings in audited package versions.
 direct-URL language model was skipped by pip-audit and its hash does not establish security.
 Application and OS-image review remain separate requirements. The automated live-site probe
 hit ChatGPT browser verification; do not treat the synthetic-origin test as a live-site pass.
+
+
+## First-tag validation pass
+
+Run `python3 scripts/prepare-ps-review.py --help` for the independent review
+preparation tool. It freezes method, policy and item hashes and exports two blind
+CSV forms; it never runs predictions or certifies reviewer independence. See
+`docs/independent-review.md`. Keep its files outside this public repository.
+
+The latest development corpus has five active sets and 86 cases. Containers must
+be rebuilt after the context-v5 method update; old container evidence is historical,
+not proof that this version is running. Docker Desktop is not launched automatically
+by the verification scripts. The local daemon was unavailable during this pass.

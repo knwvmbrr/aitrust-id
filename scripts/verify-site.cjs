@@ -6,7 +6,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
  const browser=await chromium.launch({channel:'chromium',headless:true});
  try{
   // Axe injection needs a test-only CSP bypass; separately verify the real policy below.
-  const context=await browser.newContext({viewport:{width:1440,height:1100},bypassCSP:true});const page=await context.newPage();
+  const context=await browser.newContext({viewport:{width:1440,height:1100},bypassCSP:true,permissions:['clipboard-read','clipboard-write']});const page=await context.newPage();
   const errors=[],outside=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:'))outside.push(r.url());});
   const assert=(x,m)=>{if(!x)throw Error(m);};
  async function appearance(target,value){
@@ -19,6 +19,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
 
   await page.goto(base);await page.getByRole('heading',{name:'AI TRUST ID',exact:true}).waitFor();
   await appearance(page,'light');
+  await page.evaluate(()=>document.fonts.ready);assert(await page.evaluate(()=>document.fonts.check('16px "Nunito Sans"')),'Self-hosted font not loaded');assert((await page.locator('body').evaluate(e=>getComputedStyle(e).fontFamily)).includes('Nunito Sans'),'Approachable font not applied');
   assert(await page.locator('html').getAttribute('data-theme')==='light','Light preference did not apply');
   assert(await page.locator('[data-tag-id]').count()===14,'Person must default to all 14 records');
   assert(await page.locator('[data-tag-id="PS"]').evaluate(e=>e.getBoundingClientRect().height<=128),'Tags are not compact');
@@ -35,7 +36,10 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
     assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
     assert((await dialog.getByRole('region',{name:'Validation status'}).innerText()).includes('Not independently validated'),'False release claim');
-    assert(await dialog.locator('details').count()===3,id+' must have three compact disclosures');
+    assert(await dialog.locator('details').count()===(['PS','PII_REDACTED'].includes(id)?4:3),id+' must have its compact disclosures and applicable setup');
+    const use=dialog.locator('[data-tag-usage]');assert(await use.count()===1,id+' use instructions missing');
+    if(['PS','PII_REDACTED'].includes(id)){await use.locator('summary').click();assert(await use.locator('ol li').count()===4,'Setup must have four steps');await use.getByRole('button',{name:'Copy step 1 commands'}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='git clone https://github.com/knwvmbrr/aitrust-id.git\ncd aitrust-id','Command copy differs from displayed instructions');await use.locator('summary').click();}
+    else{assert((await use.innerText()).includes('Coming Soon')||(await use.innerText()).includes('Research proposal'),'Unavailable tag overclaims installation');assert(await use.getByRole('link',{name:'Download source',exact:true}).count()===0,'Unavailable tag has fake download');}
     assert(await dialog.locator('details[open]').count()===0,id+' details must start collapsed');
     for(const title of ['How it works','Testing and evidence','Privacy, access and all features']){
      const summary=dialog.locator('summary').filter({hasText:title});await summary.focus();await page.keyboard.press('Enter');
@@ -162,7 +166,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    const missing=await ordinary.request.get(base+'/tags/not-a-real-tag/');assert(missing.status()===404,'Unknown tag is a soft 404');
    productionPolicyVerified=true;await ordinary.close();
   }
-  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,plainLanguageTagSummaries:20,visibleValidationStatus:20,compactDisclosures:true,completeDetailExport:true,themeSwitch:true,switchKeyboardSpace:true,crossTabThemeSync:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:22,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
+  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,plainLanguageTagSummaries:20,visibleValidationStatus:20,compactDisclosures:true,perTagUseInstructions:20,workingTagSetupGuides:2,selfHostedFont:true,completeDetailExport:true,themeSwitch:true,switchKeyboardSpace:true,crossTabThemeSync:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:22,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
   fs.writeFileSync(process.env.AITRUST_SITE_REPORT||'runs/2026-10-08-site-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));await context.close();
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

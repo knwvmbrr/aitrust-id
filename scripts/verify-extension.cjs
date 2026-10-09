@@ -60,7 +60,7 @@ const {chromium}=require('playwright');
     const downloaded=page.waitForEvent('download');
     await page.keyboard.press('Tab');await page.keyboard.press('Tab');await page.keyboard.press('Enter');
     const file=await downloaded,record=JSON.parse(fs.readFileSync(await file.path(),'utf8'));
-    if(record.selected_tag!=='PS'||!record.tags.some(tag=>tag.signals.some(signal=>signal.id==='sig.remote_command_substitution.v2')))throw new Error('Export lost substitution evidence');
+    if(record.selected_tag!=='PS'||!record.tags.some(tag=>tag.signals.some(signal=>signal.id==='sig.remote_command_substitution.v3')))throw new Error('Export lost substitution evidence');
     const evaluatorHash=require('node:crypto').createHash('sha256').update(fs.readFileSync('services/evaluator/app.py')).digest('hex');
     if(!record.evaluator.models.some(model=>model.sha256===evaluatorHash))throw new Error('Exported evaluator hash mismatch');
     if(JSON.stringify(record).includes('alice@example.com')||JSON.stringify(record).includes(command)||record.training_label!==null)throw new Error('Invalid privacy/training-label boundary');

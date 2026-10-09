@@ -24,7 +24,12 @@ def credential(tmp_path):
 
 
 def assertion():
-    return json.loads((ROOT / 'runs/2026-10-08-container-assertion.json').read_text())
+    from test_release_policy import evaluator
+    row = json.loads((ROOT / 'runs/2026-10-08-container-assertion.json').read_text())
+    # Preserve the historical run; use the current method in this unit fixture.
+    row['evaluator']['calibration_id'] = evaluator.CALIBRATION_ID
+    row['evaluator']['models'] = evaluator.MODELS
+    return row
 
 
 def test_private_config_is_exclusive_and_not_printed(tmp_path, capsys):

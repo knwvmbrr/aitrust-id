@@ -17,7 +17,7 @@ their own implementation, independent measurement, and release acceptance.
 | `sig.urgency_frame.v1` | MT | Time-pressure lexicon + imperative density | `statistical` | |
 | `sig.false_dilemma.v1` | MT | Binary-choice structure where alternatives exist | `statistical` | |
 | `sig.authority_appeal.v1` | MT | Unattributed appeals to expertise or consensus | `statistical` | |
-| `sig.piped_installer.v1` | PS (UC proposed) | `curl`/`wget` piped to a shell | `statistical` | **Corrected 2026-10-08:** previously claimed a near-zero false positive rate. The prior implementation produced 2 false positives on 24 regression examples. Regression precision 10/12 = 0.833, Wilson 95% CI 0.552&ndash;0.953. This does not estimate production accuracy. The current development implementation uses v2 below |
+| `sig.piped_installer.v1` | PS (UC proposed) | `curl`/`wget` piped to a shell | `statistical` | **Corrected 2026-10-08:** previously claimed a near-zero false positive rate. The prior implementation produced 2 false positives on 24 regression examples. Regression precision 10/12 = 0.833, Wilson 95% CI 0.552&ndash;0.953. This does not estimate production accuracy. That development version is now historical; the current implementation uses v3 below |
 | `sig.fetch_execute.v1` | PS | Historical fetch-and-execute prefix prototype | `statistical` | **Withdrawn from runtime 2026-10-08.** Matched downloads saved to files as if stdout were executed. Retained for historical traceability; no conformance acceptance or independent accuracy established. Superseded by the bounded development methods below |
 | `sig.obfuscated_payload.v1` | PS | base64/hex blobs passed to `eval`/`exec` | `statistical` | |
 | `sig.credential_exfil.v1` | PS | Reads a secret path and writes to a network sink | `statistical` | Semgrep ruleset |
@@ -104,10 +104,36 @@ The earlier unregistered `remote_command_substitution.v1` and
 source/evidence and are inactive. The v2 forms consolidate the evaluation-layer and
 context handling. `fetch_execute.v1` is inactive rather than silently narrowed.
 These methods remain development identifiers awaiting independent measurement and
-conformance acceptance. Their scores are uncalibrated 0.97 heuristics. Method
+conformance acceptance. Their scores are uncalibrated 0.97 heuristics. Historical method
 revision is `context-v4`; exact source SHA-256 is included in runtime assertions.
 The current execution report is `runs/2026-10-08-live-gap-implementation.json`.
 Historical `counterexamples_v1.jsonl` rows 2–3 have disputed negative labels:
 local shell-layer execution shows substitution can run in a second shell.
 `counterexamples_v2.jsonl` preserves and explicitly supersedes those labels for
 regression checks; it is not independent ground truth.
+
+
+### Routing and literal-display correction (context-v5)
+
+The active PS methods are `sig.piped_installer.v3`,
+`sig.remote_command_substitution.v3`, `sig.remote_process_substitution.v3`,
+`sig.remote_backtick_substitution.v2`, and unchanged
+`sig.obfuscated_payload.v2`. Earlier versions remain historical development
+identifiers, not current implementations or accepted conformance registrations.
+
+Piped downloads now use the same stdout-routing guard as substitutions. Curl
+file output and wget's default file output do not establish a supported
+network-to-shell flow. Recognized literal echo/printf display does not establish
+execution; a separate command after a display is still evaluated. Option values
+are consumed instead of reading letters inside headers as output flags.
+
+This is bounded token recognition, not a shell or complete curl/wget parser.
+Config files, multiple-transfer curl syntax, complex redirections, multiline
+expressions and other unrecognized quoting need separate coverage. Conservative
+non-matches on unsupported syntax are not safety clearances. No network payload
+is fetched or executed during evaluation. Scores remain uncalibrated heuristics.
+
+Five active development sets now contain 86 cases: TP=31, FP=0, FN=0, TN=55.
+These were used in development, including detector-author additions, and are not
+independent accuracy evidence. Exact source hashes identify the active method.
+See `runs/2026-10-08-ps-routing-regressions.json` for per-set counts.

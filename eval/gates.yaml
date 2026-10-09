@@ -8,7 +8,7 @@
 #    is not measurable yet.
 # 2. Error budgets are PER TAG. One uniform precision-first posture across nine tags was
 #    wrong — see rfcs/0004. The cost of a false positive differs enormously by audience.
-# 3. Gates apply only to tags on the production allowlist. A PS-only (now UC-only) release
+# 3. Gates apply only to tags on the production allowlist. A PS-only release
 #    does not run HP/FI/MT gates and does not claim them.
 #
 # Every number below is a CANDIDATE until a frozen, independently labelled held-out set
@@ -20,17 +20,18 @@ schema_version: 2
 # ---------------------------------------------------------------------------
 # v1 COMPATIBILITY BLOCK — deprecated, and deliberately NOT a gate.
 #
-# eval/harness.py reads gates["gates"][tag]["precision_min"|"recall_min"|"ece_max"]
+# The retired v1 consumer read gates["gates"][tag]["precision_min"|"recall_min"|"ece_max"]
 # and gates["abstention"]["min_rate"|"max_rate"]. Rewriting this file to the v2
 # structure below broke that contract. That was my error: I changed a config
 # format without checking its consumer.
 #
-# This block exists so the harness keeps running while Codex migrates it. It is
+# The current harness consumes schema_version 2. This legacy block remains for
+# older external consumers, and is
 # NOT a release gate and must not be reported as one:
 #   - the numbers here are POINT-ESTIMATE comparisons, and v2 gates on the lower
 #     bound of a Wilson interval. A point estimate of 0.833 passes nothing.
 #   - only allowlisted tags appear, so a v1 run says nothing about HP/FI/MT.
-# A v1 run is ADVISORY. Remove this block once the harness reads schema_version 2.
+# A v1 run is ADVISORY. This block is retained only for older external consumers.
 # Contract for that migration: eval/gates.schema.json
 # ---------------------------------------------------------------------------
 v1_consumer_is_advisory_only: true
@@ -62,8 +63,9 @@ tags:
   PS:
     posture: precision_weighted
     rationale: >
-      Technical audience that can disable the tool. A false alarm on a legitimate install
-      command teaches a developer to ignore every badge.
+      A false alarm on a download-only command or literal mention teaches users
+      to ignore the tag. A legitimate installer that executes downloaded code
+      is a supported positive pattern; PS does not judge publisher intent.
     precision_min_lower_bound: 0.93      # candidate
     recall_min_lower_bound: 0.75         # candidate
     ece_max: 0.05

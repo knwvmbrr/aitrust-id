@@ -34,7 +34,7 @@ const root=path.resolve(__dirname,'..');
    if(await page.evaluate(()=>document.documentElement.scrollWidth>320))throw new Error('320px reflow overflow');
    await page.screenshot({path:'output/playwright/command-tag-reflow.png',fullPage:true});
    const report={syntheticBrowserChecks:true,compactUI,observedDOM,axeSerious:serious.length,axeCritical:0,axeTotalViolations:axe.violations.length,reflow320:true,forcedColors:true,reducedMotion:true,closedShadowBehaviorTested:true,axeUsesTestOnlyOpenShadow:true,manualScreenReader:false,liveVendorCompatibility:false};
-   fs.writeFileSync(path.join(root,'runs/2026-10-08-browser-checks.json'),JSON.stringify(report,null,2)+'\n');
+   fs.writeFileSync(path.resolve(root,process.env.AITRUST_BROWSER_REPORT||'runs/2026-10-08-browser-checks.json'),JSON.stringify(report,null,2)+'\n');
    console.log(JSON.stringify(report));
  }finally{await browser.close();server.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

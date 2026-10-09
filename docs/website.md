@@ -162,3 +162,18 @@ same-origin tabs. Storage failure leaves the control usable. There is no motion,
 remote storage, extra dependency or analytics. Evidence for this revision:
 `runs/2026-10-08-site-friendly-local.json` and, after deployment,
 `runs/2026-10-08-site-friendly-public.json`.
+
+
+## Per-tag use and typography
+
+`site/src/usage.js` supplies the modal, static reference and no-JS use section.
+PS and PII share one local installation. Four setup steps have individually
+copyable commands, explicit Linux/macOS prerequisites, an optional unpacked
+Chrome path, result meanings and a stop command. The remaining 18 records state
+unavailability instead of providing a misleading install action. Detail exports
+also include the use contract.
+
+Nunito Sans is served from this site in five WOFF2 subsets (107,432 bytes total).
+The browser loads only applicable subsets. Its SIL OFL license and pinned asset
+hashes are in `site/public/fonts/`; no Google font request is made by the page.
+Code snippets remain monospaced; the visible tag letters and prose use Nunito Sans.

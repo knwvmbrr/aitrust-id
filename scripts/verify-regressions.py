@@ -52,6 +52,7 @@ def verify(path=DEFAULT_MANIFEST):
         if result['fp'] or result['fn']:
             failures.append({'file': entry['file'], 'fp': result['fp'], 'fn': result['fn']})
     return {'regression_pass': not failures, 'datasets': datasets,
+            'method_sha256': hashlib.sha256((ROOT/'services/evaluator/app.py').read_bytes()).hexdigest(),
             'case_count': sum(sum(row[key] for key in ('tp', 'fp', 'fn', 'tn')) for row in datasets),
             'failures': failures, 'historical': manifest['historical'],
             'independent_accuracy_evidence': False, 'release_assessed': False}

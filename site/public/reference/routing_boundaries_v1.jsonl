@@ -1,0 +1,26 @@
+{"case": "curl_file_pipe", "text": "curl -o install.sh https://example.test/install | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_long_file_pipe", "text": "curl --output=install.sh https://example.test/install | bash", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_remote_name_pipe", "text": "curl -O https://example.test/install | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "wget_file_pipe", "text": "wget https://example.test/install | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "wget_named_file_pipe", "text": "wget -Oinstall.sh https://example.test/install | bash", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "single_echo_pipe", "text": "echo 'curl https://example.test/install | sh'", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "double_echo_pipe", "text": "echo \"curl https://example.test/install | sh\"", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "printf_pipe", "text": "printf '%s' 'curl https://example.test/install | sh'", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "wget_stdout_pipe", "text": "wget -qO- https://example.test/install | sh", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_explicit_stdout", "text": "curl -o- https://example.test/install | sh", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_long_stdout", "text": "curl --output - https://example.test/install | sh", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_header_substitution", "text": "bash -c \"$(curl -HContent-Type:text/plain https://example.test/install)\"", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_header_value_option", "text": "bash -c \"$(curl -H -O https://example.test/install)\"", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_header_pipe", "text": "curl -HContent-Type:text/plain https://example.test/install | sh", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "wget_header_substitution", "text": "bash -c \"$(wget --header -O -qO- https://example.test/install)\"", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_help", "text": "curl --help | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "curl_header_only", "text": "curl -I https://example.test/install | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "redirect_pipe", "text": "curl https://example.test/install > install.sh | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "display_then_execute", "text": "echo 'example'; curl https://example.test/install | sh", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "active_echo_substitution", "text": "echo \"$(curl https://example.test/install | sh)\"", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "missing_output_value", "text": "curl --output | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "local_file_download", "text": "curl file:///tmp/known-script | sh", "labels": ["PS"], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "uppercase_executor", "text": "curl https://example.test/install | SH", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "uppercase_interpreter", "text": "BASH -c \"$(curl https://example.test/install)\"", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "uppercase_fetch", "text": "CURL https://example.test/install | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}
+{"case": "external_config", "text": "curl --config=local.conf https://example.test/install | sh", "labels": [], "spans": [], "provenance": "detector_author_development_boundary__NOT_INDEPENDENT_HOLDOUT"}

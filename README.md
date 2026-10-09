@@ -179,3 +179,22 @@ incomplete. Local tags remain independent of research submissions.
 See [host operations](docs/private-host-operations.md),
 [public communication and protected data](docs/public-community-and-private-data.md)
 and [backup options](docs/backup-option-review.md).
+
+
+### First PS validation pass
+
+The current context-v5 detector fixes file-routing and literal-display false
+positives and option-value parsing misses. Five development datasets now have
+86 cases (TP 31, FP 0, FN 0, TN 55). These are development results, not an accuracy
+certification. The 95% precision lower bound is 0.890 on this corpus; the candidate
+0.93 threshold fails, and an independent holdout and calibration are missing.
+
+The site includes use/setup instructions in every tag's modal and static reference.
+PS and PII are local previews; other tags clearly state availability. Technical
+Linux/macOS setup is still required. Rebuild services after updating the source;
+the CLI rejects an evaluator whose hash differs from this checkout. The latest
+pass ran HTTP/unit checks, not a restarted full container pipeline.
+
+Independent reviewers can use the blind packet tool described in
+[Independent review](docs/independent-review.md). It never supplies predictions,
+labels, or a claim that two files establish two independent reviewers.

@@ -10,7 +10,7 @@ The inventory is not 86 copies of AI Trust ID. It includes partial substitutes, 
 
 There are closer overlaps than authorship detectors. [TrustLens AI](https://www.canitrustai.company/docs) describes factual-claim verdicts, evidence and an advertised browser extension. [TruthLens](https://www.usetruthlens.com/) describes browser claim checking and per-image confidence badges. [SafePrompt](https://safeprompt.dev/blog/chrome-extension-launch) describes local warnings for hidden-text injection. Their jobs differ from our bounded PS command-risk check, but the combination of browser warnings, badges and evidence is not empty territory. Compact labels alone are not a durable competitive advantage.
 
-**Decision assessment:** competition does not establish that this project is wasted. Independent accuracy, repeat user usefulness and enterprise willingness to adopt remain unproven. Continue a bounded first-tag validation effort; avoid new purchases and broad feature expansion until those questions have evidence. Preserve the full scope. Do not use a claim of uniqueness as the business case.
+**Decision assessment:** competition does not establish that this project is wasted. Independent accuracy, repeat user usefulness and enterprise willingness to adopt remain unproven. Continue building and validating tag by tag, with PS first. Preserve the full scope and keep each release claim behind its own evidence gate. Do not use a claim of uniqueness as the business case.
 
 ## Closest overlaps to watch first
 
@@ -205,3 +205,29 @@ Before publishing a comparative accuracy claim, freeze the shared task and corpu
 ## Maintaining coverage
 
 The machine-readable companion is [competitive-landscape.json](competitive-landscape.json). Add newly discovered products with an official source and explicit overlap. Recheck product availability, ownership and licensing before procurement, integration or comparative advertising. This pass excludes generic AI assistants, every identity vendor worldwide and entire antivirus catalogues unless a specific output-evidence or warning workflow overlaps. Regional and newly launched services can be missing; retain the candidate list rather than declaring the market exhausted.
+
+
+## Product improvements executed in the first PS validation pass
+
+These are specific tradeoffs, not a claim that competitors are bad or unvalidated.
+[TruthLens's own FAQ](https://usetruthlens.com/#faq) says checked page content and
+images are forwarded to Anthropic and Hive. Its pricing table lists 15 monthly
+page analyses on its free plan. That can be a reasonable product choice; it is a
+poor fit for a user requiring no remote inference and no personal per-check cap.
+Our personal checker uses local methods without an inference subscription. This
+difference has a cost: installation is currently harder, and PS covers a much
+narrower job than fact checking or deepfake analysis. Do not imply feature parity.
+
+| Weakness or user requirement | Current improvement | Evidence and remaining gap |
+| --- | --- | --- |
+| Setup hidden behind a repository link | Every tag modal and static reference now explains use and availability; PS and PII include setup commands | Browser checks cover all 20 records and command copying. General-user one-click install is still missing |
+| Broad verdict can be mistaken for a safety clearance | Separate finding, no finding and unavailable explanations; explicit PS boundaries | No supported match cannot clear content as safe. Independent comprehension review remains needed |
+| False alarms on file downloads and literal displays | Routing and display corrections, versioned signals and source binding | Five active development sets, 86 cases, zero observed classification errors. Not independent accuracy |
+| Predictions recycled as training truth | Blind review preparation with method/policy hashes, empty labels and disagreement visibility | Reviewers and adjudication still needed; automation cannot verify their independence |
+| Remote analysis and personal usage metering | No remote inference or per-check API bill in the personal reference checker | Initial software downloads and local compute still cost resources. No comparative privacy/security superiority established |
+| Sharp, less approachable typography | Self-hosted Nunito Sans, preserved license and source hashes | Font and layout checked in browser; no external font requests |
+
+Next: accepted sampling and independent labels; an outside-user installation trial;
+then a reviewed, simpler installer. Do not substitute a decorative interface or
+another development corpus for those checks. Enterprise deployment should retain
+these same claim and evidence boundaries.

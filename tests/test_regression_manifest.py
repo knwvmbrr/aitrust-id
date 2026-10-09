@@ -24,8 +24,8 @@ def manifest_for(tmp_path, text, labels):
 def test_current_manifest_covers_all_active_files():
     report = runner.verify()
     assert report['regression_pass']
-    assert len(report['datasets']) == 4
-    assert report['case_count'] == 60
+    assert len(report['datasets']) == 5
+    assert report['case_count'] == 86
     assert [entry['file'] for entry in report['historical']] == ['counterexamples_v1.jsonl']
     assert report['independent_accuracy_evidence'] is False
     assert report['release_assessed'] is False

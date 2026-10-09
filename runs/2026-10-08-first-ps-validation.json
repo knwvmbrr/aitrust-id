@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-08",
+  "method": "context-v5",
+  "method_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "first_probe": {
+    "case_count": 6,
+    "false_positives": 4,
+    "false_negatives": 1
+  },
+  "fixes": [
+    "pipe stdout routing",
+    "literal echo/printf display and later-command boundary",
+    "argument-aware curl/wget option handling",
+    "case-sensitive shell command matches and exclusion of external curl config"
+  ],
+  "python_tests_passed": 134,
+  "development_cases": 86,
+  "development_counts": {
+    "tp": 31,
+    "fp": 0,
+    "fn": 0,
+    "tn": 55
+  },
+  "regression_pass": true,
+  "evaluator_http_executed": true,
+  "curl_semantics_test": "authored harmless file-only payload; no remote script executed",
+  "gateway_tests": "controlled upstream HTTP responses; not a full container pipeline",
+  "statistical_gate_exit": 1,
+  "statistical_gate_pass": false,
+  "independent_accuracy_validated": false,
+  "current_container_pipeline_verified": false,
+  "local_doctor_exit": 1,
+  "local_doctor_status": "UNAVAILABLE; gateway not running",
+  "docker_desktop_started": false,
+  "blind_review_tool_tested": true,
+  "human_labels_obtained": false,
+  "manual_screen_reader_verified": false,
+  "evidence": [
+    "runs/2026-10-08-ps-routing-regressions.json",
+    "runs/2026-10-08-ps-routing-gates.json",
+    "runs/2026-10-08-ps-routing-browser.json",
+    "runs/2026-10-08-ps-use-local.json"
+  ]
+}
