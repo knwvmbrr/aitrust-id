@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-200619-ps-results-final-build-evidence-26debd91",
+  "recorded_at": "2026-10-09T20:06:19.855909+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f24b4a3005e81570dd97254482dcf5cc63a8d532",
+  "changed": "Record the final built-site PS regression run, including the current downloadable changelog snapshot.",
+  "proves": "Six real result cases and seven malformed-evidence rejections pass; 14 personal panels retain separate live/local/future status; zero axe violations and no answer upload observed.",
+  "limits": "This development regression run does not establish held-out accuracy or human usability.",
+  "scope_ids": [
+    "T-PS",
+    "F-139",
+    "F-150"
+  ],
+  "files": {
+    "runs/2026-10-09-device-a11y-ps-local.json": "212461711e52b598080f56268e677dc7ba2dd0a08a09d9d8f3e47a0d6430e2d1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-device-a11y-ps-local.json",
+      "sha256": "212461711e52b598080f56268e677dc7ba2dd0a08a09d9d8f3e47a0d6430e2d1"
+    }
+  ],
+  "checks": []
+}

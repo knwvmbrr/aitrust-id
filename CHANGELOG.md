@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-09
 
+### 2026-10-09-200619-ps-results-final-build-evidence-26debd91
+
+Recorded 2026-10-09T20:06:19.855909+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the final built-site PS regression run, including the current downloadable changelog snapshot.
+- **Evidence.** Six real result cases and seven malformed-evidence rejections pass; 14 personal panels retain separate live/local/future status; zero axe violations and no answer upload observed. [Change record](./runs/changes/2026-10-09-200619-ps-results-final-build-evidence-26debd91.json).
+- **Not claimed.** This development regression run does not establish held-out accuracy or human usability.
+
+
+### 2026-10-09-200535-generated-device-accessibility-scope-98f4e882
+
+Recorded 2026-10-09T20:05:35.485673+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate public scope mirrors from the timestamped device/accessibility ledger; preserve every record and acceptance percentage.
+- **Evidence.** The scope verifier passes all 202 requirements, 39 packages and 117 subtasks; generated mirrors are checked against the canonical source. [Change record](./runs/changes/2026-10-09-200535-generated-device-accessibility-scope-98f4e882.json).
+- **Not claimed.** Generator output adds evidence only; no new tag, completed requirement or independent release acceptance.
+
+
+### 2026-10-09-200521-device-accessibility-verified-scope-45da6aa6
+
+Recorded 2026-10-09T20:05:21.326335+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish reproducible fail-closed PS device builds, actual-site accessibility and input-validation checks, bounded accessibility download, and timestamped scope evidence. Preserve all 202 records and existing acceptance percentages.
+- **Evidence.** 301 reviewed Python tests passed; four installed Python builders match the tracked manifest; 62 real-site surfaces pass across light/dark; six injected accessibility defects fail; 86 PS cases match on each of Chromium and WebKit with local offline and export checks. [Change record](./runs/changes/2026-10-09-200521-device-accessibility-verified-scope-45da6aa6.json).
+- **Not claimed.** PS remains a development preview. Human screen-reader, physical-phone, frozen independent ground truth and release gates remain open. Hosted CI is configured but account billing remains blocked.
+
+
+### 2026-10-09-200349-ps-input-accessible-validation-5724a7a1
+
+Recorded 2026-10-09T20:03:49.963486+00:00 · Contributor: Codex · change
+
+- **Changed.** Associate empty and oversized PS input errors with the answer field, focus that field, reset errors on edits, and expose checker busy state. Extend real-site accessibility checks to verify these states.
+- **Evidence.** Initial real-site run passed 62 surfaces across both themes; fresh validation checks are queued for the rebuilt UI. [Change record](./runs/changes/2026-10-09-200349-ps-input-accessible-validation-5724a7a1.json).
+- **Not claimed.** No formal accessibility conformance, physical phone, human screen-reader or independent accuracy acceptance.
+
+
+### 2026-10-09-195918-device-build-and-real-accessibility-checks-d938e131
+
+Recorded 2026-10-09T19:59:18.778759+00:00 · Contributor: Codex · change
+
+- **Changed.** Make the PS device build deterministic and atomic with AST-only normalization, hermetic tests and blocked stale-bundle publication; add targeted accessibility probes for actual site workflows and a bounded public evaluation record.
+- **Evidence.** Four actual Python builders reproduce identical bundle and manifest bytes; nineteen focused projection/build tests pass, and the accessibility probe control plus injected-defect checks exercise the same functions used on the site. [Change record](./runs/changes/2026-10-09-195918-device-build-and-real-accessibility-checks-d938e131.json).
+- **Not claimed.** The unchanged PS method remains a development preview; new real-site probe results are pending, human review and physical phones remain open, and the evaluation record is not a complete VPAT or certification.
+
+
 ### 2026-10-09-171716-publication-observations-and-billing-block-feca04de
 
 Recorded 2026-10-09T17:17:16.392244+00:00 · Contributor: Codex · change

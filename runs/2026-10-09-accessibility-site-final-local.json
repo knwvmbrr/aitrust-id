@@ -1,0 +1,1350 @@
+{
+  "captured_at": "2026-10-09T20:04:49.111Z",
+  "author": "Codex",
+  "base": "http://127.0.0.1:5175",
+  "pass": true,
+  "surfaces": 62,
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "viewport": {
+    "width": 320,
+    "height": 760
+  },
+  "reduced_motion_disclosures": true,
+  "forced_colors_reflow": true,
+  "validation": [
+    {
+      "theme": "light",
+      "empty_and_oversize_rejected": true,
+      "error_associated": true,
+      "focus_restored": true,
+      "edit_clears_error": true,
+      "busy_announced": true
+    },
+    {
+      "theme": "dark",
+      "empty_and_oversize_rejected": true,
+      "error_associated": true,
+      "focus_restored": true,
+      "edit_clears_error": true,
+      "busy_announced": true
+    }
+  ],
+  "coverage": [
+    "catalogue",
+    "20 tag/offer dialogs",
+    "8 independent footer dialogs",
+    "PS input/result"
+  ],
+  "checks": [
+    {
+      "name": "catalogue",
+      "theme": "light",
+      "targets": {
+        "controls": 29,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 27,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS",
+      "theme": "light",
+      "targets": {
+        "controls": 36,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 36,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 4,
+        "failures": []
+      }
+    },
+    {
+      "name": "PII_REDACTED",
+      "theme": "light",
+      "targets": {
+        "controls": 20,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 20,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 4,
+        "failures": []
+      }
+    },
+    {
+      "name": "NF",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "FI",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "HP",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "MT",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "IV",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "FA",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "PA",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "UNK",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "PII_OUTBOUND",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "UC",
+      "theme": "light",
+      "targets": {
+        "controls": 13,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 13,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "SC",
+      "theme": "light",
+      "targets": {
+        "controls": 13,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 13,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "BT",
+      "theme": "light",
+      "targets": {
+        "controls": 13,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 13,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "fleet",
+      "theme": "light",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "host",
+      "theme": "light",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "audit",
+      "theme": "light",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "sso",
+      "theme": "light",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "support",
+      "theme": "light",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "proprietary",
+      "theme": "light",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "report",
+      "theme": "light",
+      "targets": {
+        "controls": 9,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 9,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "assist",
+      "theme": "light",
+      "targets": {
+        "controls": 10,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 10,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "townhall",
+      "theme": "light",
+      "targets": {
+        "controls": 5,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 5,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "teamwork",
+      "theme": "light",
+      "targets": {
+        "controls": 6,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 6,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "scope",
+      "theme": "light",
+      "targets": {
+        "controls": 22,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 22,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 15,
+        "failures": []
+      }
+    },
+    {
+      "name": "how-tags-work",
+      "theme": "light",
+      "targets": {
+        "controls": 7,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 5,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "about",
+      "theme": "light",
+      "targets": {
+        "controls": 3,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 3,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "legal",
+      "theme": "light",
+      "targets": {
+        "controls": 14,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 14,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS checker empty",
+      "theme": "light",
+      "targets": {
+        "controls": 6,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 6,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS checker result",
+      "theme": "light",
+      "targets": {
+        "controls": 9,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 9,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 1,
+        "failures": []
+      }
+    },
+    {
+      "name": "catalogue",
+      "theme": "dark",
+      "targets": {
+        "controls": 29,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 27,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS",
+      "theme": "dark",
+      "targets": {
+        "controls": 36,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 36,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 4,
+        "failures": []
+      }
+    },
+    {
+      "name": "PII_REDACTED",
+      "theme": "dark",
+      "targets": {
+        "controls": 20,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 20,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 4,
+        "failures": []
+      }
+    },
+    {
+      "name": "NF",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "FI",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "HP",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "MT",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "IV",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "FA",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "PA",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "UNK",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "PII_OUTBOUND",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "UC",
+      "theme": "dark",
+      "targets": {
+        "controls": 13,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 13,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "SC",
+      "theme": "dark",
+      "targets": {
+        "controls": 13,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 13,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "BT",
+      "theme": "dark",
+      "targets": {
+        "controls": 13,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 13,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "fleet",
+      "theme": "dark",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "host",
+      "theme": "dark",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "audit",
+      "theme": "dark",
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "sso",
+      "theme": "dark",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "support",
+      "theme": "dark",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "proprietary",
+      "theme": "dark",
+      "targets": {
+        "controls": 11,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 11,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "report",
+      "theme": "dark",
+      "targets": {
+        "controls": 9,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 9,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "assist",
+      "theme": "dark",
+      "targets": {
+        "controls": 10,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 10,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "townhall",
+      "theme": "dark",
+      "targets": {
+        "controls": 5,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 5,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "teamwork",
+      "theme": "dark",
+      "targets": {
+        "controls": 6,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 6,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "scope",
+      "theme": "dark",
+      "targets": {
+        "controls": 22,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 22,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 15,
+        "failures": []
+      }
+    },
+    {
+      "name": "how-tags-work",
+      "theme": "dark",
+      "targets": {
+        "controls": 7,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 5,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "about",
+      "theme": "dark",
+      "targets": {
+        "controls": 3,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 3,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "legal",
+      "theme": "dark",
+      "targets": {
+        "controls": 14,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 14,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS checker empty",
+      "theme": "dark",
+      "targets": {
+        "controls": 6,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 6,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS checker result",
+      "theme": "dark",
+      "targets": {
+        "controls": 9,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 9,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 1,
+        "failures": []
+      }
+    }
+  ],
+  "errors": [],
+  "manual_screen_reader": false,
+  "physical_phone": false,
+  "full_wcag_conformance_asserted": false,
+  "independent_release_validated": false
+}

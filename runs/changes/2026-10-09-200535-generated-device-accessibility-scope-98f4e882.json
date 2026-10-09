@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-200535-generated-device-accessibility-scope-98f4e882",
+  "recorded_at": "2026-10-09T20:05:35.485673+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f24b4a3005e81570dd97254482dcf5cc63a8d532",
+  "changed": "Regenerate public scope mirrors from the timestamped device/accessibility ledger; preserve every record and acceptance percentage.",
+  "proves": "The scope verifier passes all 202 requirements, 39 packages and 117 subtasks; generated mirrors are checked against the canonical source.",
+  "limits": "Generator output adds evidence only; no new tag, completed requirement or independent release acceptance.",
+  "scope_ids": [
+    "F-150",
+    "F-139",
+    "WP-SITE"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "a59b6fa564d2b18001fecff1fcd0a93c689053ed5bba5f8929f65c27627043d4",
+    "site/src/public-scope.json": "a59b6fa564d2b18001fecff1fcd0a93c689053ed5bba5f8929f65c27627043d4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-device-a11y-scope.json",
+      "sha256": "4a379e82caa172d8204283699a3bb8ba54de2202398370c0449b4b8248bdc6b6"
+    }
+  ],
+  "checks": []
+}

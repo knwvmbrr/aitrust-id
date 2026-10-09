@@ -194,7 +194,13 @@ npm run dev:site
 ```
 
 The local preview uses `http://127.0.0.1:5173/`. For built-site checks, serve `site/dist`
-on loopback port 5174, then run `npm run verify:site`, `npm run verify:workflows` and `npm run verify:policies`. The CI site job performs this sequence.
+on loopback port 5174, then run `npm run verify:site`, `npm run verify:workflows` and `npm run verify:policies`. Run `npm run verify:a11y-probes` and
+`npm run verify:site-a11y` for the actual-site keyboard, spacing and target checks.
+`npm run verify:bundle` verifies a fresh device build against the tracked manifest;
+repeat `--python` arguments to its script to compare installed builder versions.
+See the [accessibility test record](docs/accessibility-conformance-report.md) for
+coverage and human-review limits. These checks are configured in CI; hosted runs
+currently cannot start because of the account billing lock.
 See [website architecture and publishing](docs/website.md) for the verified behavior, remaining
 connections, and deployment steps. The reviewed catalogue is deployed on the owned
 domain with verified security headers. The PS device checker runs the bounded method

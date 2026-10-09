@@ -1,12 +1,91 @@
 """Build a fail-closed, stdlib-only projection of the unchanged PS method."""
 import ast
 import hashlib
+import os
+import tempfile
+import io
+import tokenize
+import sys
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONSTANTS = set('PRODUCTION_TAGS CALIBRATION_ID PIPED_INSTALLER EXECUTOR INTERPRETER COMMAND FETCH PREFIX COMMAND_SUBSTITUTION PROCESS_SUBSTITUTION BACKTICK_SUBSTITUTION OBFUSCATED WARNING'.split())
 FUNCTIONS = set('fetches_stdout display_quote substitution_mentioned pipe_mentioned shell_evaluation_layer mentioned signals'.split())
+
+
+# Normalize syntax differences only at AST-identified tuple targets. Rewriting
+# arbitrary lines would also alter triple-quoted strings and detector patterns.
+def canonicalize(text):
+    tree = ast.parse(text)
+    lines = text.splitlines(keepends=True)
+    offsets = [0]
+    for line in lines:
+        offsets.append(offsets[-1] + len(line))
+    def position(line, byte_column):
+        prefix = lines[line - 1].encode('utf-8')[:byte_column].decode('utf-8')
+        return offsets[line - 1] + len(prefix)
+    edits = []
+    for node in ast.walk(tree):
+        targets = node.targets if isinstance(node, ast.Assign) else [node.target] if isinstance(node, (ast.For, ast.AsyncFor, ast.comprehension)) else []
+        for target in targets:
+            if not isinstance(target, ast.Tuple):
+                continue
+            start = position(target.lineno, target.col_offset)
+            end = position(target.end_lineno, target.end_col_offset)
+            segment = text[start:end]
+            tokens = [t for t in tokenize.generate_tokens(io.StringIO(segment).readline)
+                      if t.type not in (tokenize.NL, tokenize.NEWLINE, tokenize.ENDMARKER)]
+            if not tokens or tokens[0].string != '(' or tokens[-1].string != ')':
+                continue
+            depth = 0
+            outer = True
+            for index, token in enumerate(tokens):
+                if token.type == tokenize.OP and token.string == '(':
+                    depth += 1
+                elif token.type == tokenize.OP and token.string == ')':
+                    depth -= 1
+                    if depth == 0 and index != len(tokens) - 1:
+                        outer = False
+                        break
+            if outer:
+                edits.append((start, end, segment[1:-1]))
+    for start, end, replacement in sorted(edits, reverse=True):
+        text = text[:start] + replacement + text[end:]
+    return text
+
+
+def canonical_bundle(header, body, entry):
+    raw_text = header + body + '\n' + entry
+    text = canonicalize(raw_text)
+    if ast.dump(ast.parse(raw_text)) != ast.dump(ast.parse(text)):
+        raise ValueError('Tuple normalization changed bundle AST; refusing to emit')
+    if canonicalize(text) != text:
+        raise ValueError('Tuple normalization is not idempotent; refusing to emit')
+    return text.encode()
+
+
+def write_if_changed(target, data):
+    """Publish a whole file or keep the previous one; no truncate-write window."""
+    if target.is_symlink():
+        raise ValueError('Build target must not be a symlink: ' + str(target))
+    if target.exists() and target.read_bytes() == data:
+        return False
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=target.parent, prefix='.build-', delete=False) as file:
+            temporary = Path(file.name)
+            file.write(data)
+            file.flush()
+            os.fsync(file.fileno())
+        temporary.chmod(0o644)
+        os.replace(temporary, target)
+        temporary = None
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+    return True
 
 
 def project(raw):
@@ -74,22 +153,33 @@ def check_device(text):
         'label_status': 'unreviewed_prediction', 'text_included': False
     })
 '''
-    return (header + body + '\n' + entry).encode(), method_hash
+    return canonical_bundle(header, body, entry), method_hash
 
 
 def main():
     data, method_hash = project((ROOT/'services/evaluator/app.py').read_bytes())
     bundle_hash = hashlib.sha256(data).hexdigest()
     path = ROOT/'site/public/device'
+    if path.is_symlink():
+        raise ValueError('Public bundle directory must not be a symlink')
     path.mkdir(parents=True, exist_ok=True)
-    for old in path.glob('method-*.py'):
-        old.unlink()
     name = 'method-' + bundle_hash + '.py'
-    (path/name).write_bytes(data)
+    write_if_changed(path/name, data)
+    # Do not publish an obsolete method alongside the manifest's current one.
+    # A failed removal blocks the build; no new manifest is issued.
+    for old in path.glob('method-*.py'):
+        if old.name != name:
+            old.unlink()
     manifest = {'method_sha256':method_hash, 'bundle_sha256':bundle_hash,
                 'path':'/device/'+name, 'runtime':'314.0.7', 'max_codepoints':20000}
-    (ROOT/'site/src/device-manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
-    print(json.dumps(manifest))
+    write_if_changed(ROOT/'site/src/device-manifest.json',
+                     (json.dumps(manifest, indent=2)+'\n').encode())
+    provenance = {**manifest, 'builder_python':sys.version.split()[0],
+                  'tuple_normalization':'AST-target-only/v1'}
+    write_if_changed(ROOT/'output/device-build.json',
+                     (json.dumps(provenance, indent=2)+'\n').encode())
+    print(json.dumps(provenance))
+    return manifest
 
 
 if __name__ == '__main__':

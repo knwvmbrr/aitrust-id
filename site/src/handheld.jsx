@@ -7,23 +7,24 @@ const button='min-h-11 rounded-lg border border-line px-4 py-3 text-sm font-medi
 function download(name,data){const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 
 function Checker(){
- const uid=useId(),client=useRef(null),generation=useRef(0),resultRef=useRef(null);
- const [includeDetails,setIncludeDetails]=useState(false);
+ const uid=useId(),client=useRef(null),generation=useRef(0),resultRef=useRef(null),inputRef=useRef(null);
+ const [includeDetails,setIncludeDetails]=useState(false),[fieldError,setFieldError]=useState('');
  const [text,setText]=useState(''),[busy,setBusy]=useState(false),[status,setStatus]=useState(''),[record,setRecord]=useState(null),[explanation,setExplanation]=useState(null);
  useEffect(()=>()=>{generation.current++;client.current?.stop();},[]);
  useEffect(()=>{if(record){resultRef.current?.focus({preventScroll:true});resultRef.current?.scrollIntoView({block:'start',behavior:'instant'});}},[record]);
- function clear(value=''){generation.current++;client.current?.stop();client.current=null;setText(value);setRecord(null);setExplanation(null);setIncludeDetails(false);setBusy(false);setStatus('');}
+ function clear(value=''){generation.current++;client.current?.stop();client.current=null;setText(value);setRecord(null);setExplanation(null);setIncludeDetails(false);setBusy(false);setStatus('');setFieldError('');}
  async function check(event){
   event.preventDefault();const own=++generation.current;setRecord(null);setExplanation(null);setIncludeDetails(false);
-  if(!text.trim()||Array.from(text).length>manifest.max_codepoints){setStatus('Paste an answer, up to 20,000 characters.');return;}
-  setBusy(true);
+  if(!text.trim()||Array.from(text).length>manifest.max_codepoints){setFieldError('Paste an answer, up to 20,000 characters.');setStatus('');inputRef.current?.focus();return;}
+  setFieldError('');setBusy(true);
   try{client.current??=deviceChecker(message=>{if(own===generation.current)setStatus(message);});const value=await client.current.check(text);if(own!==generation.current)return;const details=explainPS(value,text);setExplanation(details);setRecord({...value,record_id:crypto.randomUUID()});setStatus('Check complete.');}
   catch{if(own===generation.current){client.current?.stop();client.current=null;setStatus('UNAVAILABLE — the check could not finish. Try again with a shorter answer or a supported browser.');}}
   finally{if(own===generation.current)setBusy(false);}
  }
  return <><p className="text-sm leading-6">This runs PS only: a check for supported download-and-run commands and encoded-code execution. Paste an answer from any AI app to try it.</p>
  <p className="mt-2 text-sm leading-6 text-muted">Checks run on your device. No text is uploaded or saved. Commands are never executed; personal information is not redacted.</p>
- <form className="mt-4" onSubmit={check}><label className="block text-sm font-semibold" htmlFor={uid}>AI answer</label><textarea id={uid} className="mt-2 block w-full resize-y rounded-lg border border-input bg-surface p-3 text-base" rows={5} value={text} maxLength={40000} spellCheck={false} autoComplete="off" autoCorrect="off" autoCapitalize="off" onChange={e=>clear(e.target.value)} aria-describedby={uid+'-limit'}/><p id={uid+'-limit'} className="mt-1 text-xs text-muted">{Array.from(text).length.toLocaleString()} / 20,000 characters · Development preview</p>
+ <form className="mt-4" onSubmit={check} aria-busy={busy}><label className="block text-sm font-semibold" htmlFor={uid}>AI answer</label><textarea ref={inputRef} id={uid} className="mt-2 block w-full resize-y rounded-lg border border-input bg-surface p-3 text-base" rows={5} value={text} maxLength={40000} spellCheck={false} autoComplete="off" autoCorrect="off" autoCapitalize="off" onChange={e=>clear(e.target.value)} aria-invalid={fieldError?true:undefined} aria-describedby={uid+'-limit'+(fieldError?' '+uid+'-error':'')}/><p id={uid+'-limit'} className="mt-1 text-xs text-muted">{Array.from(text).length.toLocaleString()} / 20,000 characters · Development preview</p>
+ {fieldError&&<p id={uid+'-error'} role="alert" className="mt-2 text-sm leading-6">{fieldError}</p>}
  <div className="mt-3 flex flex-wrap gap-2"><button className={button} type="submit" disabled={busy}>{busy?'Checking…':'Check answer'}</button><button className={button} type="button" onClick={()=>clear()}>Clear</button></div></form>
  <p role="status" className="mt-3 text-sm leading-6">{status}</p>
  {record&&<section ref={resultRef} tabIndex={-1} aria-label="Check result" className="mt-3 scroll-mt-24 rounded-xl border border-line p-4"><h3 className="text-base font-semibold">{explanation.title}</h3><p data-ps-checked className="mt-2 text-sm leading-6">{explanation.checked}</p><p data-ps-meaning className="mt-2 text-sm leading-6">{explanation.meaning}</p>

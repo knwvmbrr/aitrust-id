@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-09T17:06:15.922874+00:00",
+  "audited_at": "2026-10-09T20:05:11.817894+00:00",
   "client_date": "2026-10-09",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -579,11 +579,12 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -600,9 +601,14 @@
         "docs/ps-result-clarity.md",
         "runs/2026-10-09-ps-results-public.json",
         "runs/2026-10-09-ps-results-deployment.json",
-        "runs/2026-10-09-performance-ui-public.json"
+        "runs/2026-10-09-performance-ui-public.json",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
       ],
@@ -2126,10 +2132,11 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -2142,9 +2149,14 @@
       "evidence": [
         "runs/2026-10-08-browser-checks.json",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js"
+        "scripts/live-dom-acceptance.js",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
       ],
@@ -2160,10 +2172,11 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -2176,9 +2189,14 @@
       "evidence": [
         "runs/2026-10-08-browser-checks.json",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js"
+        "scripts/live-dom-acceptance.js",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
       ],
@@ -2194,10 +2212,11 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -2210,9 +2229,14 @@
       "evidence": [
         "runs/2026-10-08-browser-checks.json",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js"
+        "scripts/live-dom-acceptance.js",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
       ],
@@ -3201,10 +3225,11 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3217,9 +3242,14 @@
       "evidence": [
         "runs/2026-10-08-browser-checks.json",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js"
+        "scripts/live-dom-acceptance.js",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
       ],
@@ -3366,10 +3396,11 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3381,9 +3412,14 @@
       "next_owner": "Codex",
       "evidence": [
         "runs/2026-10-08-dependency-audit.json",
-        "services/gateway/requirements.lock"
+        "services/gateway/requirements.lock",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Verify every selected deploy/runtime dependency against pinned hashes and emit an inspectable release supply-chain record; registry/future routes need their own locks."
       ],
@@ -4148,11 +4184,12 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4168,9 +4205,14 @@
         "docs/handheld-delivery.md",
         "docs/approachable-tag-modals.md",
         "runs/2026-10-09-approachable-public.json",
-        "runs/2026-10-09-ps-results-public.json"
+        "runs/2026-10-09-ps-results-public.json",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate."
       ],
@@ -4612,11 +4654,12 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4633,9 +4676,14 @@
         "docs/changelog-policy.md",
         "docs/change-accountability-plan.md",
         "scripts/changelog_core.py",
-        "tests/test_changelog_pipeline.py"
+        "tests/test_changelog_pipeline.py",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings."
       ],
@@ -6959,9 +7007,11 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
@@ -6971,9 +7021,14 @@
       "next_fix": "Make build/verify/deploy jobs fail on missing prerequisites and injected failures.; Pin/hash dependencies and models; generate SBOM and test release signing.; Declare hardware, input sizes and route latency budgets before claiming them. Final acceptance: No soft-fail required CI job.; Fresh install verifies advertised method hashes and schemas.; Existing p95 100ms is a target until hardware/route evidence supports an accepted gate.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md#wp-release"
+        "docs/scope-delivery.md#wp-release",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Make build/verify/deploy jobs fail on missing prerequisites and injected failures.; Pin/hash dependencies and models; generate SBOM and test release signing.; Declare hardware, input sizes and route latency budgets before claiming them. Final acceptance: No soft-fail required CI job.; Fresh install verifies advertised method hashes and schemas.; Existing p95 100ms is a target until hardware/route evidence supports an accepted gate."
       ],
@@ -7048,10 +7103,11 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-09T20:05:11.817894+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -7064,9 +7120,14 @@
       "evidence": [
         "docs/scope-delivery.md#wp-site",
         "runs/2026-10-08-upgrade-site-public.json",
-        "runs/2026-10-08-upgrade-policies-public.json"
+        "runs/2026-10-08-upgrade-policies-public.json",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
         "Maintain compact Person/Enterprise catalogue and independent full-detail modals.; Keep crawlable references, downloads, public policies and status synchronized with evidence.; Test no-JS access, install/uninstall instructions, mobile and broken links. Final acceptance: Building Now/Coming Soon/preview/release status is tag-specific.; All preserved tag records remain discoverable.; No unsupported corporation, certification, price or staffed promise is published."
       ],

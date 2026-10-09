@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-200521-device-accessibility-verified-scope-45da6aa6",
+  "recorded_at": "2026-10-09T20:05:21.326335+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f24b4a3005e81570dd97254482dcf5cc63a8d532",
+  "changed": "Publish reproducible fail-closed PS device builds, actual-site accessibility and input-validation checks, bounded accessibility download, and timestamped scope evidence. Preserve all 202 records and existing acceptance percentages.",
+  "proves": "301 reviewed Python tests passed; four installed Python builders match the tracked manifest; 62 real-site surfaces pass across light/dark; six injected accessibility defects fail; 86 PS cases match on each of Chromium and WebKit with local offline and export checks.",
+  "limits": "PS remains a development preview. Human screen-reader, physical-phone, frozen independent ground truth and release gates remain open. Hosted CI is configured but account billing remains blocked.",
+  "scope_ids": [
+    "T-PS",
+    "F-116",
+    "F-150",
+    "F-055",
+    "F-092",
+    "F-093",
+    "F-094",
+    "F-139",
+    "WP-SITE",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "c7aa3fbcf6007127dc2483cd2893ccbc218a21eacb4106b1d74ed76f68b48634",
+    ".gitignore": "1bed042ed9b45a10c9ed60dd945813e5ade2b37c7a0d422244d59614a03bbf2d",
+    "README.md": "58ba6c590ed0c4ae2c359c2221d42c63c5880f53cbcd209d6a17e035388aaf85",
+    "docs/accessibility-conformance-report.md": "18a275c1e0c3e31624453f02127993ae5b794b5b82caf47d9ca854eef8fe97f3",
+    "docs/device-accessibility-increment.md": "158e156091e883b3710390084e6bc5f2b5ad9bf31b83dc27c986ac20591e8999",
+    "docs/scope-progress.json": "0d3db1ca744a7c6c8ff3ae71a856e15589c99cf66d212f89012870fed8c1b8a5",
+    "docs/scope-progress.md": "e1873a4b0e03fed4107e6d4a803c62e1d21cc0a783c92b4bd869154968559759",
+    "package.json": "bd1552c03e65331059b958699b6a21ba934a8b02766a07c45b5bdf5ece50e75e",
+    "runs/2026-10-09-accessibility-real-probe-selftest.json": "e163ba76c236d83a847df935627ef6fa05aeb4d3caffe3cb5d5df3ae9d0d59ea",
+    "runs/2026-10-09-accessibility-site-final-local.json": "adb6963c049943c14834164010fbd0d751141d5b8937e4188826ed560e78aceb",
+    "runs/2026-10-09-accessibility-site-local.json": "be51c48288c971d7c2cea06338345cfdd4b9f516e393afaaba1e1ebdb9ee4888",
+    "runs/2026-10-09-device-a11y-engines-local.json": "f189b307d1abd838fafb82749fee422aefff0c99664aad98359e01e95b45ec18",
+    "runs/2026-10-09-device-a11y-scope.json": "4a379e82caa172d8204283699a3bb8ba54de2202398370c0449b4b8248bdc6b6",
+    "runs/2026-10-09-device-a11y-site-local.json": "52130d68e00de9daa36f36c7844abe3ff6e4668e7d6fd9fbf0392b0295d191b7",
+    "runs/2026-10-09-device-accessibility-python.json": "bc958a8756cfb29d68a4847dd7f361d0b822152bbeedd6684c604da5af8f12a0",
+    "runs/2026-10-09-device-build-matrix-final.json": "ab98c40637c80b72130e0e266b19f80465649fe1eeabab57f84b114493dc702f",
+    "runs/2026-10-09-device-build-matrix.json": "fc8ebfb924808c86b3eac4b3e95cf02218637dec80c9b46633f1d9e04adeaccb",
+    "scripts/accessibility-probes.cjs": "4e2c4a0c86968eb89267e93381aba6fa0fe3309ee989ed4da37f647d7cf1141d",
+    "scripts/build-device-detector.py": "25228fc0ba44042382ae459eddf2e025fe20984bf790e151e7dd34efae29c1ec",
+    "scripts/verify-accessibility-probes.cjs": "a5c652c3468f524a6a951fdba2174c99988add1bd08395d24876d412e0c28bbe",
+    "scripts/verify-device-build-matrix.py": "c996dcc41d74973775cc4486d751530486fe60193b97b28d5a3b035ceded8d6c",
+    "scripts/verify-site-accessibility.cjs": "e0881cbdd98c7181253e97e33a9d0fccf37163048c1b0d9f0ab514940229c31d",
+    "site/scripts/prepare.mjs": "e2e61e330b4c5584b828c8d53ccef2b488a0f4bebd3d41aed77112c8921fb15b",
+    "site/src/handheld.jsx": "41409198f00445256dd721bdeaabb4d0c39623a0c061257e47862bdf16da51e9",
+    "site/src/workflows/Legal.jsx": "2f3131892ff906ef6510b6d2292f668b0d49d4a2c02107c767f15e370da9566a",
+    "state.json": "6b5e47626c21caa1e4c6f1e0afe07ad89b3eff793dea5a898a0d5db460cb85b7",
+    "tests/test_device_bundle_determinism.py": "8c7df9859128a06851b7f7b844e125bed2fb9f5a4931f1ad89ac15c1f257db4a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-device-accessibility-python.json",
+      "sha256": "bc958a8756cfb29d68a4847dd7f361d0b822152bbeedd6684c604da5af8f12a0"
+    },
+    {
+      "path": "runs/2026-10-09-device-build-matrix-final.json",
+      "sha256": "ab98c40637c80b72130e0e266b19f80465649fe1eeabab57f84b114493dc702f"
+    },
+    {
+      "path": "runs/2026-10-09-accessibility-site-final-local.json",
+      "sha256": "adb6963c049943c14834164010fbd0d751141d5b8937e4188826ed560e78aceb"
+    },
+    {
+      "path": "runs/2026-10-09-accessibility-real-probe-selftest.json",
+      "sha256": "e163ba76c236d83a847df935627ef6fa05aeb4d3caffe3cb5d5df3ae9d0d59ea"
+    },
+    {
+      "path": "runs/2026-10-09-device-a11y-engines-local.json",
+      "sha256": "f189b307d1abd838fafb82749fee422aefff0c99664aad98359e01e95b45ec18"
+    },
+    {
+      "path": "runs/2026-10-09-device-a11y-scope.json",
+      "sha256": "4a379e82caa172d8204283699a3bb8ba54de2202398370c0449b4b8248bdc6b6"
+    }
+  ],
+  "checks": []
+}

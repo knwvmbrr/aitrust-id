@@ -18,7 +18,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 285,
+  "python_tests_passed": 301,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -238,6 +238,26 @@
       "public_evidence": "runs/2026-10-09-ps-results-public.json",
       "publication": "runs/2026-10-09-ps-results-deployment.json",
       "source_commit": "28b66b8380613995adcda8bf31bdedf3dbd7ffcd"
+    },
+    "accessibility_evaluation": {
+      "record": "docs/accessibility-conformance-report.md",
+      "public_download": "https://aitrustid.com/reference/accessibility-evaluation.md",
+      "local_evidence": "runs/2026-10-09-accessibility-site-final-local.json",
+      "surfaces": 62,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "focus_controls": 772,
+      "target_controls": 780,
+      "disclosures": 156,
+      "mutations_caught": 6,
+      "input_errors_associated": true,
+      "busy_state_announced": true,
+      "full_wcag_conformance_asserted": false,
+      "manual_screen_reader": false,
+      "physical_device": false,
+      "publication_pending": true
     }
   },
   "previous_runtime_verification": {
@@ -280,7 +300,7 @@
     "current_method_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
     "current_method_container_verified": false
   },
-  "python_tests_scope": "261 checks in the published source checkout, excluding concurrent uncommitted research drafts; not independent accuracy validation.",
+  "python_tests_scope": "301 tests in the reviewed source snapshot; excludes concurrent unreviewed drafts; not independent accuracy validation.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -595,7 +615,7 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-09-ps-results-device-public.json",
+    "evidence": "runs/2026-10-09-device-a11y-engines-local.json",
     "future_native_routes": [
       "N-013",
       "N-014"
@@ -604,7 +624,7 @@
     "deployment": "b53179ef-44e1-436d-ac2d-0868d1915f53",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input",
-    "latest_emulation_evidence": "runs/2026-10-09-ps-results-device-public.json"
+    "latest_emulation_evidence": "runs/2026-10-09-device-a11y-engines-local.json"
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -645,7 +665,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-09T13:29:52.810894+00:00",
+    "audited_at": "2026-10-09T20:05:11.817894+00:00",
     "completed_records": 14,
     "open_records": 188,
     "records_preserved": 202,
@@ -711,5 +731,20 @@
     ],
     "hosted_ci_executed": false,
     "hosted_ci_evidence": "runs/2026-10-09-changelog-hosted-ci.json"
+  },
+  "device_build": {
+    "status": "fresh_build_matrix_passed; tracked_manifest_and_method_unchanged",
+    "builders": [
+      "3.10.15",
+      "3.11.10",
+      "3.12.14",
+      "3.13.0"
+    ],
+    "atomic_writes": true,
+    "unchanged_files_preserved": true,
+    "stale_cleanup_failure_blocks_build": true,
+    "evidence": "runs/2026-10-09-device-build-matrix-final.json",
+    "unit_tests": 16,
+    "future_builder_versions_guaranteed": false
   }
 }

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-195918-device-build-and-real-accessibility-checks-d938e131",
+  "recorded_at": "2026-10-09T19:59:18.778759+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f24b4a3005e81570dd97254482dcf5cc63a8d532",
+  "changed": "Make the PS device build deterministic and atomic with AST-only normalization, hermetic tests and blocked stale-bundle publication; add targeted accessibility probes for actual site workflows and a bounded public evaluation record.",
+  "proves": "Four actual Python builders reproduce identical bundle and manifest bytes; nineteen focused projection/build tests pass, and the accessibility probe control plus injected-defect checks exercise the same functions used on the site.",
+  "limits": "The unchanged PS method remains a development preview; new real-site probe results are pending, human review and physical phones remain open, and the evaluation record is not a complete VPAT or certification.",
+  "scope_ids": [
+    "T-PS",
+    "F-116",
+    "F-150",
+    "F-055",
+    "F-092",
+    "F-093",
+    "F-094",
+    "F-139",
+    "WP-SITE",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "c7aa3fbcf6007127dc2483cd2893ccbc218a21eacb4106b1d74ed76f68b48634",
+    ".gitignore": "1bed042ed9b45a10c9ed60dd945813e5ade2b37c7a0d422244d59614a03bbf2d",
+    "docs/accessibility-conformance-report.md": "87cc63a260d4be5f49ed81f5b341d95620396eaa4747e93c207ad0d91ca4b5f5",
+    "docs/device-accessibility-increment.md": "158e156091e883b3710390084e6bc5f2b5ad9bf31b83dc27c986ac20591e8999",
+    "package.json": "bd1552c03e65331059b958699b6a21ba934a8b02766a07c45b5bdf5ece50e75e",
+    "runs/2026-10-09-accessibility-real-probe-selftest.json": "e163ba76c236d83a847df935627ef6fa05aeb4d3caffe3cb5d5df3ae9d0d59ea",
+    "runs/2026-10-09-device-build-matrix.json": "fc8ebfb924808c86b3eac4b3e95cf02218637dec80c9b46633f1d9e04adeaccb",
+    "scripts/accessibility-probes.cjs": "4e2c4a0c86968eb89267e93381aba6fa0fe3309ee989ed4da37f647d7cf1141d",
+    "scripts/build-device-detector.py": "25228fc0ba44042382ae459eddf2e025fe20984bf790e151e7dd34efae29c1ec",
+    "scripts/verify-accessibility-probes.cjs": "a5c652c3468f524a6a951fdba2174c99988add1bd08395d24876d412e0c28bbe",
+    "scripts/verify-device-build-matrix.py": "9688f201cefa0bc8454683e971344f132f9c5191bb47b7f85bd1b2842e1644a4",
+    "scripts/verify-site-accessibility.cjs": "ed31cc86b83a0b5d92257c044610d5c3cc88021545b05d0e6d470e29465df304",
+    "site/scripts/prepare.mjs": "e2e61e330b4c5584b828c8d53ccef2b488a0f4bebd3d41aed77112c8921fb15b",
+    "site/src/workflows/Legal.jsx": "2f3131892ff906ef6510b6d2292f668b0d49d4a2c02107c767f15e370da9566a",
+    "tests/test_device_bundle_determinism.py": "8c7df9859128a06851b7f7b844e125bed2fb9f5a4931f1ad89ac15c1f257db4a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-device-build-matrix.json",
+      "sha256": "fc8ebfb924808c86b3eac4b3e95cf02218637dec80c9b46633f1d9e04adeaccb"
+    },
+    {
+      "path": "runs/2026-10-09-accessibility-real-probe-selftest.json",
+      "sha256": "e163ba76c236d83a847df935627ef6fa05aeb4d3caffe3cb5d5df3ae9d0d59ea"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_device_bundle_determinism.py",
+        "tests/test_device_projection.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-09T19:59:19.817372+00:00"
+    }
+  ]
+}
