@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-08",
+  "build_passed": true,
+  "artifacts_sha256": {
+    "_headers": "fcaf7a61a05c22ca9f5d05b4afb8fac91b7089b558dff86c4e0800e29431d484",
+    "assets/index-D7nyb_5X.css": "01517b035d25ba0a9fa2df0954054f5e3ed719679e65973fc91ff5f3ef542f48",
+    "assets/index-DJDLCzWw.js": "3f19b7d6d3b0eb8aeb8352b9045339ba95d42081d927f7276d44bea879f4d624",
+    "favicon.svg": "9defc5e1c6814fc33823d3fa3707df2fde21b752e11a710e8f94de8b89fc8172",
+    "index.html": "31c60b75a680f18d42cb1f1ea5de0d7d5824aa5e730cb5f984ee1a7a4d83c825",
+    "reference/0004-tag-claim-boundaries.md": "b9b6c80c68dec7a59ccd1db6c59faf36fb61997491a6ded981b1fcb462f23b38",
+    "reference/PS-01-acceptance.md": "a3e10d4d308b17bcd4cc4e1ec148588cd2f2e8cc96706cddac00904a3801c478",
+    "reference/PS-01.md": "12f1092b971cc2907f73f18399dd7b47b322d995f5774746cc0248eb7111f45c",
+    "reference/browser-checks.json": "fe9529c4055024b47093656c60e36f9c0e7d426f938fea3df5f51e4aa5a0ddec",
+    "reference/code-license.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "reference/container-checks.json": "4019772955f4965500714b28c4f2c887a368609029e29cf900bdb4e38ae172be",
+    "reference/counterexamples_v2.jsonl": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274",
+    "reference/extension-integration.json": "8b7973df119edd32cfd3db279576fae7806459c339bd8ea0d385803027699e1f",
+    "reference/fetch_execute_v1.jsonl": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10",
+    "reference/live-gap-implementation.json": "6f7589b82fc6ce836f98ebc742ea1c6fab160875d58be6d634da75b19f429071",
+    "reference/live_gap_v1.jsonl": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9",
+    "reference/ps_v1.jsonl": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4",
+    "reference/public-scope.json": "e27ddeaade4f9afabd6217f7052c627ffde974e2c92beb15d8a13c10058a3ce5",
+    "reference/regression-gates.json": "25e2b8c40e8a4d0dcd90acc5224f6a3557d8d96d7dbbe23ee3f1398d83a9b317",
+    "reference/signals.md": "3f07c22e7a835e928f217046be7b6802460a483c8dfbd5a1e189a438ab44c1a1",
+    "reference/spec-license.txt": "dc5be08778ad83fc1be1c18c28788bee9e7848ac3bd68ef33129f402205f6e77",
+    "reference/taxonomy.md": "e364852345b438c08487212b5b566ed04a0646c23a771c1598478801d795f5db"
+  },
+  "source_sha256": {
+    "site/src/catalog.js": "357f40fcd90fc5fe0efe6952c4cec14b5333958e94ffa9784b034ab3a23043b8",
+    "site/src/main.jsx": "bd62163e0dd914e54235d80a51d81286882cfbbd33b738dc9ff02a444642eb31",
+    "site/src/model-tools.js": "933a9eeadc5b8e4b2f49f287443de834f056496c63b24cbca79f643f8911b83e",
+    "site/src/styles.css": "1d079dd042202ca4ddf8da46bb3f5a698882419cb1589fcc9d9a6a3031ef4d86",
+    "site/scripts/prepare.mjs": "4d0933cf9aad6afccee513ba668a11e794cf11be811c06e4354968c6f4792aaa",
+    "site/package-lock.json": "5a73b3e87319df87ea5b60cbf05d15339cced1c653caed6a3809d4be7f439887"
+  },
+  "dependency_audit": {
+    "known_advisories": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "scope": "npm site dependency tree; not a complete security review",
+    "sharp_override": "0.35.5"
+  },
+  "targeted_deployment_artifact_scan_hits": 0,
+  "historical_privacy_clearance": false,
+  "cloudflare_headers_production_verified": false,
+  "public_deployment": false,
+  "optional_public_model_tools_mock_contract_pass": true,
+  "native_model_tools_validated": false,
+  "remaining": [
+    "Cloudflare authentication and target project/domain verification",
+    "Real report and conversation destinations",
+    "Human screen-reader review",
+    "Native optional model-tool integration verification"
+  ],
+  "tile_presentation": "tag_code_only",
+  "static_reference_refresh": "Post-live log probe refreshed the allowlisted implementation JSON; compiled assets unchanged."
+}

@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-08",
+  "task": "unobstructed_multiple_tag_row",
+  "plan": "docs/compact-tags-plan.md",
+  "implementation_pass": true,
+  "source_sha256": {
+    "extension/src/content/badge.js": "234d786e7789cb991513cd271b3145758180be36a648d8e4cda41e6b59254533",
+    "scripts/browser-acceptance.js": "a2240c85f5ad6aa8b61cd702691afa1f5fe64139b63e912cacd0fbe005d315ce"
+  },
+  "browser": {
+    "syntheticBrowserChecks": true,
+    "compactUI": {
+      "outOfOrder": true,
+      "unknownSignalSafe": true,
+      "compactTags": true,
+      "restingTagHeight": 24,
+      "restingTagWidth": 28,
+      "noDialogLayoutShift": true,
+      "nativeCloseFocus": true,
+      "staleDiscarded": true,
+      "characterMutation": true,
+      "duplicateSuppression": true,
+      "unavailableDistinct": true,
+      "escapeFocus": true,
+      "nativeFocusContainment": true,
+      "backdropDismissal": true,
+      "multipleTags": {
+        "allDistinctTags": true,
+        "syntheticTagCount": 6,
+        "duplicatesSuppressed": true,
+        "outputGeometryUnchanged": true,
+        "belowOutput": true,
+        "narrowRowWrap": true,
+        "perTagDetails": true
+      }
+    },
+    "observedDOM": {
+      "observedAttributeStructure": true,
+      "syntheticContent": true,
+      "wholeBody": true,
+      "toolbarExcluded": true,
+      "promptExcluded": true,
+      "hiddenExcluded": true,
+      "identityRequired": true,
+      "sameTextIdentityRace": true,
+      "navigationRace": true,
+      "streamingGuard": true,
+      "lostRoleCleanup": true,
+      "unsupportedCaptureVisible": true,
+      "liveVendorExecution": false
+    },
+    "axeSerious": 0,
+    "axeCritical": 0,
+    "axeTotalViolations": 0,
+    "reflow320": true,
+    "forcedColors": true,
+    "reducedMotion": true,
+    "closedShadowBehaviorTested": true,
+    "axeUsesTestOnlyOpenShadow": true,
+    "manualScreenReader": false,
+    "liveVendorCompatibility": false
+  },
+  "real_extension_pipeline": {
+    "realUnpackedExtension": true,
+    "realGateway": true,
+    "realRedaction": true,
+    "realEvaluator": true,
+    "keyboardEvidenceOpened": true,
+    "rawEmailAbsentFromEvidence": true,
+    "observedAttributeStructure": true,
+    "observedCases": [
+      {
+        "name": "homebrew",
+        "expectedFinding": true,
+        "passed": true
+      },
+      {
+        "name": "download_to_file",
+        "expectedFinding": false,
+        "passed": true
+      },
+      {
+        "name": "wget_to_file",
+        "expectedFinding": false,
+        "passed": true
+      }
+    ],
+    "liveVendorResponse": false,
+    "syntheticPage": true
+  },
+  "native_chrome": {
+    "updated_installed_extension": true,
+    "existing_homebrew_answer": true,
+    "codes_visible": [
+      "PS",
+      "PII"
+    ],
+    "row_below_output_visually_verified": true,
+    "pii_record_selected": true,
+    "other_ps_signal_absent_from_pii_detail": true,
+    "escape_returns_focus_to_pii": true,
+    "private_browser_content_saved_to_repo": false
+  },
+  "checks": [
+    "npm run verify:browser",
+    "AITRUST_ENV_FILE=<existing private runtime env> node scripts/verify-extension.cjs",
+    "node --check extension/src/content/badge.js",
+    "git diff --check"
+  ],
+  "limits": [
+    "Six-code test exercises the isolated renderer, not production detector support",
+    "Production bridge remains limited to PS and PII_REDACTED",
+    "No new accuracy or human screen-reader validation"
+  ],
+  "release_validated": false
+}

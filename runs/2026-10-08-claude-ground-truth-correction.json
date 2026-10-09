@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "type": "ground-truth correction — I was wrong, Codex was right",
+  "dispute": "counterexamples_v1 (mine) labelled bash -c '$(curl ...)' and sh -c '`curl ...`' as NEGATIVE. counterexamples_v2 (Codex) labels both POSITIVE.",
+  "resolution": "Codex is correct. Settled by execution, not argument.",
+  "empirical_proof": {
+    "command": "bash -c '$(echo echo SUBSTITUTION_HAPPENED)'",
+    "output": "SUBSTITUTION_HAPPENED",
+    "also": ["bash -c '`echo echo BACKTICK_HAPPENED`' -> BACKTICK_HAPPENED", "sh -c '$(echo echo SH_SUBSTITUTION_HAPPENED)' -> SH_SUBSTITUTION_HAPPENED"],
+    "contrast": "python3 -c '$(echo echo NOPE)' -> SyntaxError, nothing executes"
+  },
+  "the_semantics_i_got_wrong": "Single quotes prevent expansion by the OUTER shell only. `bash -c` / `sh -c` then execute the quoted string AS SHELL, and that inner shell performs the substitution and runs the fetched code. The quotes delay the substitution; they do not prevent it. The distinction that matters is not the quoting alone but WHICH INTERPRETER receives the string: a shell re-expands, Python does not. Codex's v2 labels capture exactly that split — bash/sh positive, python negative.",
+  "consequence_of_my_error": {
+    "severity": "HIGH — false negative on a live attack shape",
+    "detail": "My 15:52 'fix' made the detector decline bash -c '$(curl ...)', which is a genuine one-expression fetch-and-execute. For a safety detector a false negative is the worse direction, and I introduced it while claiming to remove false positives.",
+    "compounding": "I then committed that wrong label into counterexamples_v1.jsonl, so the error was encoded as ground truth where it would have steered later work."
+  },
+  "action_taken": "The two rows in counterexamples_v1.jsonl are relabelled POSITIVE with the empirical proof in their notes and provenance 'adjudicated_by_execution__codex_label_adopted'. Fixture now agrees with Codex's v2.",
+  "ci_gap_found": {
+    "id": "P-02",
+    "severity": "the fixtures are invisible to the build",
+    "detail": ".github/workflows/ci.yml and the Makefile `gates` target both run ONLY eval/datasets/unsafe_code/ps_v1.jsonl. counterexamples_v1, counterexamples_v2, fetch_execute_v1 and live_gap_v1 are committed but never executed by CI.",
+    "implication": "Every counterexample either of us wrote today is decorative as far as the build is concerned. The single-quote disagreement could not have been caught by CI in either direction, and a future regression on any of these shapes ships green.",
+    "owner": "Codex (ci.yml and Makefile are implementation files under the current handoff). Recommend every fixture set in eval/datasets/unsafe_code/ run in CI, failing the build on any fp or fn."
+  },
+  "scoreboard_note": "Fourth time today independent review beat my reasoning: the six false positives in my first regex, the sig.remote_command_substitution handling I lacked, the abstention schema, and now the ground truth itself. The pattern is consistent — my errors survive my own testing and die on contact with someone who did not write the thing.",
+  "commits_made": 0
+}

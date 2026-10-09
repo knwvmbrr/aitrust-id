@@ -1,0 +1,84 @@
+const fs=require('node:fs');
+const {chromium}=require('playwright');
+const base=process.env.AITRUST_SITE_URL||'http://127.0.0.1:5174';
+const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).records.map(record=>record.id);
+(async()=>{
+ const browser=await chromium.launch({channel:'chromium',headless:true});
+ try{
+  // Axe injection needs a test-only CSP bypass; separately verify the real policy below.
+  const context=await browser.newContext({viewport:{width:1440,height:1100},bypassCSP:true});const page=await context.newPage();
+  const errors=[],outside=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:'))outside.push(r.url());});
+  const assert=(x,m)=>{if(!x)throw Error(m);};
+  await page.goto(base);await page.getByRole('heading',{name:'AI TRUST ID',exact:true}).waitFor();
+  assert(await page.locator('[data-tag-id]').count()===14,'Person must default to all 14 records');
+  await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
+  let violations=[];async function axe(){if(!await page.evaluate(()=>typeof window.axe!=='undefined'))await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});const result=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag22aa']}}));violations.push(...result.violations.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.map(n=>n.target)})));}
+  await axe();let checked=0;
+  for(const audience of ['person','enterprise']){
+   await page.getByRole('tab',{name:audience==='person'?'Person':'Enterprise',exact:true}).click();
+   const ids=await page.locator('[data-tag-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.tagId));
+   assert(ids.length===(audience==='person'?14:6),'Audience filtering failed');
+   for(const id of ids){
+    const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
+    for(const heading of ['Baseline job','What the tag can claim','Method and evidence','Accuracy and validation','Cost and access','Privacy','Who owns the outcome','Before this tag can run'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).count()===1,id+' incomplete');
+    assert((await dialog.innerText()).includes('Not release validated'),'False release claim');
+    if(id==='PS'){
+     assert(await dialog.getByRole('link',{name:'Download source',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','PS download path missing');
+     assert(await dialog.getByRole('link',{name:'Local setup',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
+     await axe();
+     await dialog.getByRole('button',{name:'Report this tag',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();
+     await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByRole('alert').innerText()==='Add a short description before exporting.','Required description not enforced');
+     const description=report.getByLabel('Description (required)');await description.fill('Synthetic issue <img src=x onerror="window.injected=true">');
+     assert(await report.getByRole('link',{name:'Open public GitHub report',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/issues/new?template=tag-review.yml','Public report destination missing or contains draft data');
+     await report.getByLabel('Report type').selectOption('Security or privacy');
+     assert(await report.getByRole('link',{name:'Open private security report',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/security/advisories/new','Security report routed publicly');
+     await report.getByLabel('Report type').selectOption('Wrong or misleading tag');
+     await axe();const waiting=page.waitForEvent('download');await report.getByRole('button',{name:'Download draft',exact:true}).click();const item=await waiting;const draft=JSON.parse(fs.readFileSync(await item.path(),'utf8'));
+     assert(draft.tag==='PS'&&draft.status==='draft_not_submitted','Draft bound to wrong tag or false submission');assert(!await page.evaluate(()=>window.injected),'Injected content executed');
+     await page.keyboard.press('Escape');assert(await page.getByRole('dialog',{name:'Report',exact:true}).count()===0,'Nested Escape failed');
+     const reportTrigger=dialog.getByRole('button',{name:'Report this tag'});
+     await page.waitForFunction(element=>document.activeElement===element,await reportTrigger.elementHandle());
+     assert(await reportTrigger.evaluate(e=>e===document.activeElement),'Nested dialog did not restore focus');
+    }
+    await page.keyboard.press('Tab');assert(await page.evaluate(()=>document.activeElement.closest('[role=dialog]')!==null),'Focus escaped modal');
+    await page.keyboard.press('Escape');await page.waitForFunction(element=>document.activeElement===element,await tile.elementHandle());assert(await tile.evaluate(e=>e===document.activeElement),'Focus not restored to '+id);checked++;
+   }
+  }
+  for(const label of ['Report','Assist','Townhall','Teamwork','How tags work','Scope','About','Legal']){
+   const link=page.getByRole('navigation',{name:'Company and community'}).getByRole('button',{name:label,exact:true});await link.click();
+   await page.getByRole('dialog',{name:label,exact:true}).waitFor();await axe();await page.keyboard.press('Escape');
+   await page.getByRole('dialog',{name:label,exact:true}).waitFor({state:'hidden'});
+   await page.waitForFunction(element=>document.activeElement===element,await link.elementHandle());
+   assert(await link.evaluate(e=>e===document.activeElement),'Footer focus not restored: '+label);
+  }
+  const nativeModelContext=await page.evaluate(()=>typeof document.modelContext?.registerTool==='function');
+  await page.goto(base+'/#enterprise/proprietary');await page.getByRole('dialog',{name:'Proprietary tag package',exact:true}).waitFor();await page.keyboard.press('Escape');
+  await page.goto(base+'/#%E0%A4%A');await page.getByRole('heading',{name:'AI TRUST ID',exact:true}).waitFor();assert(await page.locator('[data-tag-id]').count()===14,'Malformed fragment crashed site');
+  await page.setViewportSize({width:320,height:720});await page.goto(base);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=320),'Mobile grid overflow');
+  await page.locator('[data-tag-id="PS"]').click();await axe();assert(await page.getByRole('dialog').evaluate(e=>e.scrollWidth<=e.clientWidth),'Mobile modal overflow');
+  await page.screenshot({path:'output/playwright/site-mobile-modal.png'});await page.keyboard.press('Escape');
+  await page.evaluate(()=>document.documentElement.style.fontSize='32px');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=320),'200% text enlargement overflow');
+  await page.locator('[data-tag-id="PS"]').click();assert(await page.getByRole('dialog').evaluate(e=>e.scrollWidth<=e.clientWidth),'200% modal overflow');await page.keyboard.press('Escape');
+  const nojs=await browser.newContext({javaScriptEnabled:false});const plain=await nojs.newPage();await plain.goto(base);assert(await plain.locator('details').count()===20,'No-JavaScript tag reference missing');await plain.locator('summary').first().click();assert(await plain.locator('details').first().getAttribute('open')!==null,'No-JavaScript detail not operable');await nojs.close();
+  const publicScope=await context.request.get(base+'/reference/public-scope.json');
+  const publicIds=(await publicScope.json()).records.map(record=>record.id);
+  assert(publicIds.length===scopeIds.length&&new Set(publicIds).size===publicIds.length&&scopeIds.every(id=>publicIds.includes(id)),'Full scope omitted or duplicated');
+  assert(errors.length===0,'Browser errors: '+errors.join('; '));assert(outside.length===0,'Unexpected outbound traffic: '+JSON.stringify([...new Set(outside)]));assert(violations.length===0,'Accessibility violations: '+JSON.stringify(violations));
+  let productionPolicyVerified=false;
+  if(base.startsWith('https://')){
+   const ordinary=await browser.newContext();const normal=await ordinary.newPage();
+   const response=await normal.goto(base);const headers=response.headers();
+   assert(headers['content-security-policy']?.includes("script-src 'self'"),'Production CSP missing');
+   assert(headers['x-content-type-options']==='nosniff','Production nosniff missing');
+   assert(headers['referrer-policy']==='no-referrer','Production referrer policy missing');
+   assert(headers['x-frame-options']==='DENY','Production framing restriction missing');
+   assert(headers['cache-control']?.includes('no-transform'),'Production no-transform missing');
+   await normal.locator('[data-tag-id="PS"]').click();await normal.getByRole('dialog',{name:'Command risk',exact:true}).waitFor();
+   await normal.keyboard.press('Escape');await normal.getByRole('tab',{name:'Enterprise',exact:true}).click();
+   assert(await normal.locator('[data-tag-id]').count()===6,'Production CSP blocked catalogue interaction');
+   productionPolicyVerified=true;await ordinary.close();
+  }
+  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified};
+  fs.writeFileSync(process.env.AITRUST_SITE_REPORT||'runs/2026-10-08-site-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));await context.close();
+ }finally{await browser.close();}
+})().catch(error=>{console.error(error);process.exitCode=1;});

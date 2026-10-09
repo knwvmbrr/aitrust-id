@@ -1,0 +1,102 @@
+name: ci
+on: [push, pull_request]
+permissions:
+  contents: read
+
+jobs:
+  host-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - run: make host-build
+      - run: shellcheck -e SC1091 deploy/host/bootstrap.sh deploy/host/deploy.sh deploy/host/verify.sh
+      - run: make backup-build
+      - run: shellcheck -e SC1091 deploy/backup/bootstrap.sh deploy/backup/deploy.sh deploy/backup/verify.sh deploy/backup/schedule.sh deploy/backup/source-monitor.sh
+      - run: make alerts-build
+      - run: shellcheck deploy/alerts/install.sh
+      - run: make notifications-build
+      - run: shellcheck deploy/notifications/install.sh deploy/notifications/prepare-edge.sh deploy/notifications/activate-edge.sh
+      # Live host verification is explicitly separate; CI has no production key.
+
+  spec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --require-hashes -r services/gateway/requirements.lock
+      - run: pip install -r eval/requirements.txt
+      - run: python -m pytest tests/test_gateway_integration.py -q
+
+  no-egress:
+    # The pipeline must work with the network unplugged. If a component needs the
+    # internet to evaluate text, this job fails and that is the intended behaviour.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --require-hashes -r services/gateway/requirements.lock
+      - run: pip install -r eval/requirements.txt
+      - run: sudo unshare -n "$(which python)" -m pytest tests -q
+      - run: echo "network-isolated evaluator tests complete"
+
+  regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --require-hashes -r services/gateway/requirements.lock
+      - run: pip install -r eval/requirements.txt
+      - run: python scripts/verify-regressions.py --output eval/regression-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: development-regressions
+          path: eval/regression-report.json
+          if-no-files-found: error
+
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --require-hashes -r services/gateway/requirements.lock
+      - run: pip install -r eval/requirements.txt
+      - run: python eval/harness.py --gates eval/gates.yaml --fixtures eval/datasets/unsafe_code/ps_v1.jsonl --output eval/report.json
+
+  accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run verify:browser
+
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: npm ci
+      - run: npm ci --prefix site
+      - run: npm run build:site
+      - run: npx playwright install --with-deps chromium
+      - name: Verify built catalogue and accessibility
+        run: |
+          python3 -m http.server 5174 --bind 127.0.0.1 --directory site/dist > /tmp/site-server.log 2>&1 &
+          site_server_pid=$!
+          trap 'kill "$site_server_pid"' EXIT
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run verify:site

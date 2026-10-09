@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-08",
+  "status": "development_integration_pass; release_not_validated",
+  "python_tests": 30,
+  "regression": {
+    "tp": 10,
+    "fp": 0,
+    "fn": 0,
+    "tn": 14,
+    "independent_holdout": false
+  },
+  "browser_report": "runs/2026-10-08-browser-checks.json",
+  "extension_report": "runs/2026-10-08-extension-integration.json",
+  "container_report": "runs/2026-10-08-container-checks.json",
+  "runtime_file_sha256": {
+    "services/gateway/app.py": "faee4af5986088d09026c2fa395e082507b5c6eae70e1e34d8552bcfd90e85c9",
+    "services/evaluator/app.py": "690c0b0747f5ce19c38086c9a9dfcede7a227c9badf95bc753f4ca42113b684b",
+    "services/anonymizer/app.py": "6fe4cd11ece8a6450ae41c0b1cbc7223ba944b1385f329d639554f844807eac1",
+    "extension/src/content/bridge.js": "e04c0bd17fe1942e774bb0852cc3a65febd7ea64ca9f820fe436827b5561665e",
+    "extension/src/content/badge.js": "0bf4ffb3edd1a8d9bc8050e18ddeb98c1f997d80e5a962591351762fddb45359",
+    "extension/src/sw/service-worker.js": "3f404ea5006a03235cab01513a93aba5cdf065ed52fd551e3449ad50db806a9d",
+    "services/gateway/requirements.lock": "7933f6cd8911ae0fef80d95a432bf30464761951225a4b600150581c71b3706e",
+    "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
+  },
+  "remaining_human_evidence": [
+    "Independent held-out ground truth, accepted sampling and evaluation policy",
+    "Human screen-reader and outside-user install/removal evaluation",
+    "Live ChatGPT compatibility behind browser verification"
+  ],
+  "remaining_release_controls": [
+    "Independent application and OS-image security review",
+    "V2 conformance registration after evidence",
+    "Signing, challenge/correction policy acceptance",
+    "Declared latency budget and investigation of one observed transient timeout"
+  ],
+  "committed": false,
+  "published": false,
+  "dependency_report": "runs/2026-10-08-dependency-audit.json",
+  "failure_report": "runs/2026-10-08-engineering-failures.json",
+  "deferred_scope": [
+    "Non-text subject contracts and detectors",
+    "Semantic/provenance tags",
+    "Team, enterprise and proprietary applications; retained in master scope"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "supersedes_claim_in": "runs/2026-10-08-claude-blocker-fixes.json -> fixes[L-01].false_positives",
+  "retracted_claim": "'0 false positives on 10 negatives' for sig.fetch_execute.v1",
+  "why_it_was_wrong": "I measured against ten negatives I wrote myself, immediately after writing the regex. That is finding L-03 — a test authored from the same mental model as the implementation cannot find the implementation's blind spot — committed by me one message after I named it. Codex's independent probe (runs/2026-10-08-concurrent-gap-probe.json) ran different negatives and found SIX false positives.",
+  "defects_found_by_codex": [
+    {
+      "bug": "A: command-position",
+      "detail": "_INTERP contains \\bsh\\b. A dot is a word boundary, so the 'sh' inside any filename — install.sh, deploy.sh, setup.sh, mytool.sh — matched as an interpreter.",
+      "examples": ["Download install.sh then run $(curl --version)", "Edit deploy.sh and set VERSION=$(curl -s ...)", "Run /usr/local/bin/mytool.sh after VERSION=$(curl -s ...)"],
+      "fix": "negative lookbehind (?<![\\w./-]) so the interpreter must sit in command position"
+    },
+    {
+      "bug": "B: the gap was a character budget, not a structure",
+      "detail": "I allowed [^\\n]{0,40} between the interpreter and $(curl. That is semantically meaningless: unrelated prose fits in 40 characters.",
+      "examples": ["Open a bash shell, then later check $(curl -s ...)", "python3 -c 'print(1)'  # separately, $(curl -s ...)"],
+      "fix": "the interpreter must be followed by an execution flag (-c/-e/-Command) then optional quote then the substitution. Flags and quotes only; no arbitrary characters."
+    },
+    {
+      "bug": "C: display vs recommendation",
+      "detail": "A command rendered by echo/printf is shown, not recommended. This belongs to the use/mention discriminator, not the pattern.",
+      "examples": ["echo 'bash -c \"$(curl ...)\"'"],
+      "fix": "mentioned() now suppresses when echo/printf precedes the match on the line"
+    }
+  ],
+  "after_fix": {
+    "method": "executed through the live evaluator module, not by reading the regex",
+    "positives": "11/11 including all five live shapes and the pipe-form regression",
+    "negatives": "18/18 including all six of Codex's cases",
+    "suite": "30 passed",
+    "fixtures": "ps_v1 tp=10 fp=0 fn=0 tn=14; fetch_execute_v1 tp=8 fp=0 fn=0 tn=11"
+  },
+  "standing_caveat": "These 18 negatives are now a mix of mine and Codex's reconstructed cases. They are still not independent ground truth: Codex and I both have the implementation in view. The residual false-positive rate is UNKNOWN until an adjudicator who has not seen the detector labels a held-out set. I should not publish a false-positive claim again before that happens.",
+  "open_design_question": {
+    "issue": "duplicate detection",
+    "detail": "sig.fetch_execute.v1 (mine) and sig.remote_command_substitution.v1 + sig.remote_process_substitution.v1 (Codex's) now coexist and cover overlapping ground, so one finding is reported under two ids.",
+    "tradeoff": "Codex's split gives finer granularity per shape; mine adds backticks and the command-position guard. Consolidation is a joint decision, not a unilateral delete — and spec/signals.md forbids mutating a registered version, so the loser becomes a deprecated id rather than a deletion.",
+    "owner": "Claude + Codex, with product-owner sign-off"
+  },
+  "concurrency_note": "Codex and I edited services/evaluator/app.py in the same window. Verified no clobbering: all five signal ids are present and the suite passes. This is exactly the collision R13 (one writer per file) exists to prevent, and it held only by luck."
+}

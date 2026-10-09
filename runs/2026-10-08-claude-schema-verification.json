@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "role": "independent review under single-writer handoff — read-only, nothing edited",
+  "closes": "the gateway abstention schema check I failed to complete at 16:18 (my probe broke on an asyncio NameError from exec-ing fragments; this run imports the module properly)",
+  "result": "PASS. Codex's rewrite is correct and resolves both defects I was told about.",
+  "checks": [
+    {
+      "check": "unrecognized candidate codes",
+      "method": "gw.calibrate() called with UC, SC, BT, UNKNOWN",
+      "result": "each raises ValueError('Unrecognized evaluator candidate code')",
+      "verdict": "CORRECT, and exactly what docs/runtime-gap-plan.md promised: unknown or unadopted codes fail the upstream contract explicitly instead of disappearing. My V-01 fix recorded them as abstentions, which produced schema-invalid assertions. Codex's design is better."
+    },
+    {
+      "check": "adopted-but-disabled codes are recorded, not dropped",
+      "method": "HP@0.72 (above its old 0.65 floor) and MT@0.99 through calibrate(), abstentions validated against Draft202012Validator({'$defs': root['$defs'], '$ref': '#/$defs/abstention'})",
+      "result": "HP asserted: False. HP has a record: True. MT recorded. floor=None on both, reason=not_in_production_allowlist. Schema-invalid abstentions: 0.",
+      "verdict": "PASS. V-01's intent is preserved — nothing vanishes — and the floor:null form is Codex's, which is right: a switched-off capability has no threshold."
+    },
+    {
+      "check": "normal below-floor path still works",
+      "result": "PS@0.50 -> abstention, floor=0.7, reason=below_floor, schema-valid. PS@0.90 -> asserted.",
+      "verdict": "PASS"
+    },
+    {
+      "check": "suite and every fixture set",
+      "result": "60 passed. ps_v1 tp=10 fp=0 fn=0 tn=14; fetch_execute_v1 tp=8 fp=0 fn=0 tn=11; counterexamples_v1 tp=3 fp=0 fn=0 tn=12; counterexamples_v2 tp=3 fp=0 fn=0 tn=12; live_gap_v1 tn=2.",
+      "verdict": "PASS. counterexamples_v1 and v2 now agree after I corrected my two mislabelled rows."
+    }
+  ],
+  "latent_finding": {
+    "id": "V-02",
+    "severity": "LATENT — not reachable in current operation; a falsehood if it ever becomes reachable",
+    "observed": "calibrate() given a PII_REDACTED candidate emits an abstention with reason 'not_in_production_allowlist', but PII_REDACTED IS in the gateway's PRODUCTION_TAGS (line 23). The reason string contradicts the constant it names.",
+    "why_unreachable_today": "The only producer of candidates is the evaluator, whose PRODUCTION_TAGS is frozenset({'PS'}) — it cannot emit PII_REDACTED. The gateway asserts PII_REDACTED directly at line 106, upstream of calibrate(). My synthetic input constructed a state the pipeline cannot currently reach.",
+    "why_it_still_matters": "The reason appears to be derived from a hardcoded 'is it PS' test rather than from PRODUCTION_TAGS membership, which makes the constant partly decorative in that function. An assertion that says a code is not on the allowlist while it is on the allowlist is a false statement inside the evidence record — and not-lying is this project's entire premise. If it ever became reachable, the gateway would assert PII_REDACTED upstream and simultaneously publish an abstention denying it was allowlisted.",
+    "suggested_fix": "derive the reason from the check actually performed, and skip PII_REDACTED explicitly as asserted-upstream rather than letting it fall through the allowlist branch",
+    "owner": "Codex — services/gateway/app.py is under the handoff; reported, not edited"
+  },
+  "still_open": [
+    "P-02: ci.yml and the Makefile gates target still run only ps_v1.jsonl. Four committed fixture sets never execute in CI, so a regression on any of their shapes ships green against 60 passing tests.",
+    "spec/signals.md still documents sig.fetch_execute.v1, which the evaluator no longer emits. Needs a deprecation line pointing at its successors — never a silent drop, per the registry's own rule. My file; holding only until Codex's pass is confirmed settled.",
+    "F-088: bridge.js binding results to responseId() and refusing when it is null.",
+    "Residual false-positive rate UNKNOWN. Every counterexample in the repo was authored by a party who can see the detector."
+  ],
+  "commits_made": 0,
+  "files_edited": "none this pass"
+}

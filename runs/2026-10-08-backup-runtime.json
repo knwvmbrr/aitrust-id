@@ -1,0 +1,155 @@
+{
+  "at": "2026-10-08T22:41:05.136607+00:00",
+  "kernel": "6.12.111+deb13-amd64",
+  "boot_id": "49e8ec67-e682-4de7-85a7-b6ca687ef8a7",
+  "pgbackrest": "pgBackRest 2.59.3",
+  "postgresql": "postgres (PostgreSQL) 18.6 (Debian 18.6-1.pgdg13+2)",
+  "timers_active": [
+    "active",
+    "active",
+    "active"
+  ],
+  "timers_enabled": [
+    "enabled",
+    "enabled",
+    "enabled"
+  ],
+  "failed_units": "",
+  "working_repo_info": [
+    {
+      "archive": [
+        {
+          "database": {
+            "id": 1,
+            "repo-key": 1
+          },
+          "id": "18-1",
+          "max": "000000010000000000000012",
+          "min": "000000010000000000000001"
+        }
+      ],
+      "backup": [
+        {
+          "archive": {
+            "start": "000000010000000000000003",
+            "stop": "000000010000000000000004"
+          },
+          "backrest": {
+            "format": 5,
+            "version": "2.59.3"
+          },
+          "database": {
+            "id": 1,
+            "repo-key": 1
+          },
+          "error": false,
+          "info": {
+            "delta": 31476653,
+            "repository": {
+              "delta": 4121168,
+              "size": 4121168
+            },
+            "size": 31476653
+          },
+          "label": "20261008-221801F",
+          "lsn": {
+            "start": "0/3000028",
+            "stop": "0/4000088"
+          },
+          "prior": null,
+          "reference": null,
+          "timestamp": {
+            "start": 1791497881,
+            "stop": 1791497909
+          },
+          "type": "full"
+        },
+        {
+          "archive": {
+            "start": "00000001000000000000000B",
+            "stop": "00000001000000000000000B"
+          },
+          "backrest": {
+            "format": 5,
+            "version": "2.59.3"
+          },
+          "database": {
+            "id": 1,
+            "repo-key": 1
+          },
+          "error": false,
+          "info": {
+            "delta": 1720578,
+            "repository": {
+              "delta": 191808,
+              "size": 4122288
+            },
+            "size": 31501229
+          },
+          "label": "20261008-221801F_20261008-222926D",
+          "lsn": {
+            "start": "0/B000028",
+            "stop": "0/B000120"
+          },
+          "prior": "20261008-221801F",
+          "reference": [
+            "20261008-221801F"
+          ],
+          "timestamp": {
+            "start": 1791498566,
+            "stop": 1791498569
+          },
+          "type": "diff"
+        }
+      ],
+      "cipher": "aes-256-cbc",
+      "db": [
+        {
+          "id": 1,
+          "repo-key": 1,
+          "system-id": 7694379277791763078,
+          "version": "18"
+        }
+      ],
+      "name": "aitrustid",
+      "repo": [
+        {
+          "cipher": "aes-256-cbc",
+          "key": 1,
+          "status": {
+            "code": 0,
+            "message": "ok"
+          }
+        }
+      ],
+      "status": {
+        "code": 0,
+        "lock": {
+          "backup": {
+            "held": false
+          },
+          "restore": {
+            "held": false
+          }
+        },
+        "message": "ok"
+      }
+    }
+  ],
+  "last_protected": {
+    "at": "2026-10-08T22:30:13.643011+00:00",
+    "mode": "protect",
+    "generation": "20261008T223013Z-00de3008",
+    "verify": "stanza: aitrustid\nstatus: ok\n  archiveId: 18-1, total WAL checked: 13, total valid WAL: 13\n    missing: 0, checksum invalid: 0, size invalid: 0, other: 0\n  backup: 20261008-221801F, status: valid, total files checked: 1265, total valid files: 1265\n    missing: 0, checksum invalid: 0, size invalid: 0, other: 0\n  backup: 20261008-221801F_20261008-222926D, status: valid, total files checked: 1267, total valid files: 1267\n    missing: 0, checksum invalid: 0, size invalid: 0, other: 0\n",
+    "last_backup_stop": 1791498569,
+    "free_bytes": 68399022080
+  },
+  "code_hashes": {
+    "remote.py": "471a5aea2b69036b1ccb5096b76f717de4819243713e6416eede3a59e20b7aa8",
+    "cycle.py": "d7305df7fb9d65c9cb82a05ca750a49bf7e077ddde98419ff5781a16239b4a3d",
+    "verify.py": "3b25431257f94e5cad62c1fc2fd9f51d189f3b57ad4603127fa8009fad3422f0",
+    "restore.py": "1d785c8969f17e69e749b50034bb7132fbc65581f8445eb6931237ab79061f3f",
+    "negative-checks.py": "d29ba9044ce21c34d50e32a5cd62731046e42490a06652e7ff55ca49f53bb4c3",
+    "schedule.sh": "a93ebd23596f008f5ff65247ee7e564369f3dfad2646ec9ab2f05c02ffed983b"
+  }
+}

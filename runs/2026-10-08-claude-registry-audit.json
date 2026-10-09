@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "role": "independent review under handoff — read-only on Codex's files",
+  "verified_green": {
+    "suite": "60 passed",
+    "fixtures": "ps_v1 10/0/0/14 · fetch_execute_v1 8/0/0/11 · counterexamples_v1 3/0/0/12 · counterexamples_v2 3/0/0/12 · live_gap_v1 tn=2",
+    "tree": "settled on services/ and spec/; Codex still touching extension/src/content/badge.js and docs/"
+  },
+  "already_fixed_by_codex": "The signals.md drift I was holding on is closed. sig.fetch_execute.v1 is documented as withdrawn from runtime, and line 105 states it is 'inactive rather than silently narrowed'. Correct handling under the never-mutate-a-version rule, and it needed nothing from me.",
+  "new_finding": {
+    "id": "P-03",
+    "severity": "published claim that does not reproduce",
+    "where": "spec/signals.md line 21, the withdrawal note on sig.fetch_execute.v1",
+    "claim": "'Matched downloads saved to files as if stdout were executed.'",
+    "problem": "I cannot reproduce that against EITHER version of the regex. Tested both my first draft (40-character gap, no command-position guard) and my final version (command position plus required execution flag) against: 'curl -fsSL URL -o install.sh', 'wget -O install.sh URL', 'curl -o install.sh URL && bash install.sh', and 'bash install.sh  # fetched with curl earlier'. All eight combinations return False.",
+    "why_it_matters": "The registry is published evidence. A withdrawal note states the failure mode for future implementers, and if the stated mode is wrong the registry teaches the wrong lesson. This is the same standard I was held to when I published '0 false positives'.",
+    "what_is_NOT_in_dispute": "The withdrawal itself. Consolidating onto Codex's bounded substitution methods is the right outcome regardless of how the note is worded.",
+    "resolution_needed": "Either Codex's exact download_to_file / wget_to_file strings so the claim can be reproduced and a fixture row added, or the note reworded to what is demonstrable — e.g. superseded by narrower bounded methods, without asserting a specific unreproduced failure mode.",
+    "relation_to_P-01": "Third time today a verification claim could not be re-run because its inputs were never committed. Mine, then Codex's probe, now this registry note."
+  },
+  "still_open": [
+    "P-02: ci.yml and the Makefile gates target still run ONLY ps_v1.jsonl. Four committed fixture sets never execute in the build. Confirmed again this pass.",
+    "V-02 latent: calibrate() would emit reason 'not_in_production_allowlist' for PII_REDACTED, which IS in PRODUCTION_TAGS. Unreachable today; the reason appears derived from a hardcoded is-it-PS test rather than allowlist membership.",
+    "F-088: bridge.js binding to responseId() and refusing when null.",
+    "No badge has rendered end to end on live ChatGPT. Needs the extension reloaded in Chrome after the adapter change — a human action.",
+    "Residual false-positive rate UNKNOWN. Every counterexample in the repo was authored by a party who can see the detector."
+  ],
+  "commits_made": 0,
+  "codex_files_edited": "none"
+}

@@ -1,0 +1,109 @@
+{
+  "method": "Executed current combined code against reported shapes and counterexamples; development checks only",
+  "cases": [
+    {
+      "case": "homebrew",
+      "expected": true,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1",
+        "sig.remote_command_substitution.v1"
+      ]
+    },
+    {
+      "case": "shell",
+      "expected": true,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1",
+        "sig.remote_command_substitution.v1"
+      ]
+    },
+    {
+      "case": "process",
+      "expected": true,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1",
+        "sig.remote_process_substitution.v1"
+      ]
+    },
+    {
+      "case": "eval",
+      "expected": true,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1",
+        "sig.remote_command_substitution.v1"
+      ]
+    },
+    {
+      "case": "python",
+      "expected": true,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1",
+        "sig.remote_command_substitution.v1"
+      ]
+    },
+    {
+      "case": "quoted_display",
+      "expected": false,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "download_to_file",
+      "expected": false,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "wget_to_file",
+      "expected": false,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "mere_shell_name",
+      "expected": false,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "single_quoted_python",
+      "expected": false,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "comment",
+      "expected": false,
+      "observed": false,
+      "signals": []
+    },
+    {
+      "case": "warning_path",
+      "expected": false,
+      "observed": true,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "services/evaluator/app.py": "032cbdee19028e7e2679aeb35f206e4822814463cf8e71adb9b0ebf6e9772dd8",
+    "services/gateway/app.py": "17a7ee190fe19a49c83ce4d676f5178d431be789bea187e977f0b98f953f6e9c"
+  },
+  "writer_handoff_pending": true
+}

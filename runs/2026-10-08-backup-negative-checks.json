@@ -1,0 +1,14 @@
+{
+  "scope": "synthetic_backup_negative_checks",
+  "checks": {
+    "repository_account_cannot_read_protected": true,
+    "repository_account_cannot_delete_protected": true,
+    "repository_account_cannot_overwrite_protected": true,
+    "protected_file_independent_of_working_inode": true,
+    "encrypted_file_header": true,
+    "corrupted_copy_rejected": true,
+    "wrong_cipher_key_rejected": true
+  },
+  "corrupt_verify_exit": 0,
+  "passed": true
+}

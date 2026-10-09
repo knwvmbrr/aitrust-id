@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-08",
+  "status": "local_implementation_and_one_live_homebrew_response_verified; release_not_validated",
+  "writer": "engineering lead",
+  "writer_handoff_received": true,
+  "source_sha256": {
+    "services/evaluator/app.py": "c775f2ae6888ebbe5cfbdc91647b3ea5da1b8ed20ff5ded84b2e53520c5de077",
+    "services/gateway/app.py": "2b1d056ea415cf2a8c68696dec755a1230a853127eefb2263cfccab562b0d03f",
+    "spec/assertion.schema.json": "9991aa209f0d7dcd469ff655167133d0b4543da293ce412754742d215ff8d438",
+    "extension/manifest.json": "2b2e5da39ed08b71d8f791e0d85c21bedbff396c8432d9ec1d67a7f43fcacaad",
+    "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+    "extension/src/content/bridge.js": "896449aa00e18257efb7074c7d78d91fac127cafe8096ca4c6d6878e179daa1a",
+    "extension/src/content/badge.js": "e853944ab4a0061fafa57dd628160351f93f3556fe3eb9117847ad7fcb085be3",
+    "extension/src/sw/service-worker.js": "3f404ea5006a03235cab01513a93aba5cdf065ed52fd551e3449ad50db806a9d"
+  },
+  "changes": [
+    "Bounded stdout substitution methods replace broad fetch-prefix prototype at runtime",
+    "Disabled known evaluator codes are null-floor abstentions; unknown codes fail with HTTP 502",
+    "PII assertions originate only from the trusted redactor",
+    "Explicit assistant anchors and stable response identity; no generic turn fallback",
+    "Toolbar, hidden content and controls excluded; stale identity/navigation and lost role guarded"
+  ],
+  "verification": {
+    "python": {
+      "command": "python -m pytest tests -q",
+      "passed": 60
+    },
+    "browser": "runs/2026-10-08-browser-checks.json",
+    "containers": "runs/2026-10-08-container-checks.json",
+    "real_extension_synthetic": "runs/2026-10-08-extension-integration.json",
+    "website": "runs/2026-10-08-site-verification.json",
+    "shell_layers": "runs/2026-10-08-shell-layer-check.json"
+  },
+  "datasets": [
+    {
+      "file": "eval/datasets/unsafe_code/ps_v1.jsonl",
+      "sha256": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4",
+      "counts": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 14
+      },
+      "failed_rows": [],
+      "independent_accuracy_evidence": false
+    },
+    {
+      "file": "eval/datasets/unsafe_code/fetch_execute_v1.jsonl",
+      "sha256": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10",
+      "counts": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "tn": 11
+      },
+      "failed_rows": [],
+      "independent_accuracy_evidence": false
+    },
+    {
+      "file": "eval/datasets/unsafe_code/counterexamples_v2.jsonl",
+      "sha256": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274",
+      "counts": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 12
+      },
+      "failed_rows": [],
+      "independent_accuracy_evidence": false
+    },
+    {
+      "file": "eval/datasets/unsafe_code/live_gap_v1.jsonl",
+      "sha256": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9",
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2
+      },
+      "failed_rows": [],
+      "independent_accuracy_evidence": false
+    }
+  ],
+  "exact_counterexamples": {
+    "download_to_file": "bash -c \"$(curl -o script.sh https://example.test/install)\"",
+    "wget_to_file": "bash -c \"$(wget https://example.test/install)\""
+  },
+  "historical_label_disputes": {
+    "file": "eval/datasets/unsafe_code/counterexamples_v1.jsonl",
+    "rows": [
+      2,
+      3
+    ],
+    "reason": "Second shell evaluates substitution received literally from outer shell; historical negative labels preserved, explicitly superseded by v2",
+    "independent_adjudication": false
+  },
+  "live_browser": {
+    "installation_approved": true,
+    "installed_via_native_chrome_ui": true,
+    "content_script_ui_observed": true,
+    "unavailable_with_missing_token_observed": true,
+    "authenticated_live_finding_verified": true,
+    "evidence_opened": true,
+    "private_conversation_content_exported": false,
+    "token_configuration_approved": true,
+    "token_saved_locally": true,
+    "token_value_printed": false,
+    "subject_hash_visible": true,
+    "evaluator_source_hash_visible": true,
+    "evaluator_source_hash_matches_rebuilt_checkout": true,
+    "redaction_metadata_visible": true,
+    "live_redaction_entity_types": [
+      "URL"
+    ],
+    "keyboard_screen_reader_human_review": false,
+    "scope": "Existing Homebrew answer only; no universal live-site compatibility or accuracy claim",
+    "verification_method": "Native Chrome installation and local settings UI; reloaded extension/page; read visible badge and evidence panel through accessibility tree; compared displayed evaluator hash with rebuilt source",
+    "privacy_claim_boundary": "URL category redaction is observed; entity categories do not prove personal sensitivity. UI wording reflects this boundary.",
+    "final_installed_badge_sha256": "e853944ab4a0061fafa57dd628160351f93f3556fe3eb9117847ad7fcb085be3",
+    "final_wording_verified_on_live_page": true
+  },
+  "release": {
+    "evaluation_gate_pass": false,
+    "independent_holdout_available": false,
+    "human_screen_reader_reviewed": false,
+    "validated": false
+  },
+  "publication": {
+    "performed": false,
+    "site_live": false
+  },
+  "failures_resolved_during_verification": [
+    {
+      "signature": "3 new HTTP stub cases returned 502",
+      "cause": "Test stub omitted required model revision; corrected stub before policy verification",
+      "recheck": "60 Python checks passed"
+    },
+    {
+      "signature": "Report probe: ModuleNotFoundError fastapi",
+      "cause": "Default Python lacks workspace verification dependencies",
+      "recheck": "Probe rerun with the existing verification virtualenv"
+    }
+  ],
+  "post_live_log_probe": {
+    "token_absent": true,
+    "synthetic_email_absent": true,
+    "live_homebrew_url_absent": true,
+    "scope": "Recent application logs only; does not audit browser profile, OS, all history or all content"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "returncode": 0,
+  "stdout": "Valid configuration\nEdge validated and kept stopped; no public firewall rules changed.\n",
+  "stderr": "{\"level\":\"info\",\"ts\":1791500867.0550935,\"msg\":\"using provided configuration\",\"config_file\":\"/etc/caddy/Caddyfile\",\"config_adapter\":\"\"}\n{\"level\":\"warn\",\"ts\":1791500867.0561697,\"msg\":\"Caddyfile input is not formatted; run the 'caddy fmt' command to fix inconsistencies\",\"adapter\":\"caddyfile\",\"file\":\"/etc/caddy/Caddyfile\",\"line\":2}\n{\"level\":\"info\",\"ts\":1791500867.0564535,\"logger\":\"http\",\"msg\":\"enabling automatic HTTP->HTTPS redirects\",\"server_name\":\"srv0\"}\n{\"level\":\"info\",\"ts\":1791500867.0567427,\"logger\":\"tls.cache.maintenance\",\"msg\":\"started background certificate maintenance\",\"cache\":\"0xc0001d2fc0\"}\n{\"level\":\"info\",\"ts\":1791500867.0567496,\"logger\":\"tls.cache.maintenance\",\"msg\":\"stopped background certificate maintenance\",\"cache\":\"0xc0001d2fc0\"}\n",
+  "firewall_changed": false,
+  "public_service_live": false
+}

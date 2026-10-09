@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-10-08T20:09:09.630980+00:00",
+  "scope": "Independent backup server purchase preparation",
+  "provider": "DigitalOcean",
+  "browser": "Google Chrome",
+  "signed_in": true,
+  "original_quote_monthly_usd": 12,
+  "regular_plan_disabled_regions_observed": [
+    "NYC1",
+    "SFO3",
+    "NYC3"
+  ],
+  "proposed_configuration": {
+    "os": "Debian 13 x64",
+    "region": "NYC3",
+    "plan": "Basic Premium Intel",
+    "vcpu": 1,
+    "memory_gb": 2,
+    "disk_gb": 70,
+    "monthly_usd_before_tax": 16,
+    "hostname": "aitrust-backup-01",
+    "quantity": 1,
+    "paid_addons": [],
+    "authentication": "SSH; aitrust-id-backup-admin selected",
+    "provider_metrics_agent": false,
+    "public_ipv4": true,
+    "public_ipv6": true
+  },
+  "paid_plan_change_accepted": false,
+  "ssh_key_registered": true,
+  "payment_method_needed": true,
+  "purchased": false,
+  "backup_repository_configured": false,
+  "restore_verified": false,
+  "private_screenshot": "Verified purchase summary retained outside public repository",
+  "updated_at": "2026-10-08T20:30:42.704761+00:00",
+  "ssh_key_registration_completed_by": "owner",
+  "ssh_key_selected": true,
+  "create_button_enabled": true
+}

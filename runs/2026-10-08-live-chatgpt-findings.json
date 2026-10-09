@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "method": "live ChatGPT in the user's real Chrome, extension loaded, local stack healthy (3/3 containers)",
+  "runtime_verified": true,
+  "findings": [
+    {
+      "id": "L-01",
+      "severity": "RELEASE BLOCKING — recall",
+      "title": "The detector misses the most common macOS install command in existence",
+      "observed": "First live query asked ChatGPT for the standard Homebrew install one-liner. It returned: /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+      "why_missed": "PIPED_INSTALLER is \\b(?:curl|wget)\\s+[^\\n|]*\\|\\s*(?:sudo\\s+)?(?:bash|sh)\\b — it requires a literal pipe character. Homebrew's official command uses command substitution $(...), not a pipe.",
+      "proof": "executed the live regex from services/evaluator/app.py against the exact captured string: PIPED_INSTALLER match -> False, OBFUSCATED match -> False",
+      "other_missed_shapes": [
+        "sh -c \"$(curl -fsSL ...)\"  — command substitution",
+        "bash <(curl -s ...)        — process substitution",
+        "eval \"$(curl -s ...)\"      — eval substitution",
+        "python3 -c \"$(curl -fsSL ...)\" — same pattern, python"
+      ],
+      "matched_shapes": ["curl -o- ... | bash", "wget -qO- ... | sudo bash"],
+      "implication": "Semantically these are identical to curl|sh: fetch remote code, execute it unseen. Recall measured 10/10 = 1.000 on the fixture set, which contains only the pipe form. The corpus was written from the same mental model as the regex, so it cannot expose the regex's blind spot."
+    },
+    {
+      "id": "L-02",
+      "severity": "RELEASE BLOCKING — the tag cannot attach",
+      "title": "The adapter's DOM anchors do not exist on live ChatGPT today",
+      "observed": "On a live chatgpt.com conversation: [data-message-author-role=\"assistant\"] -> 0 matches; [data-message-id] -> 0; [data-testid^=\"conversation-turn\"] -> 0; article -> 0; .markdown -> 0",
+      "actual_structure": "Code blocks sit under div[data-markdown-copy=\"code-block\"] inside div.CodeBlock-zu1QM3 — hashed CSS-module class names, no stable semantic message attributes",
+      "proof": "DOM queried directly in the live page; the Homebrew command was found under that chain",
+      "implication": "No badge rendered. 0 elements matching aitrust/trust-id anywhere in the DOM. Even with the extension loaded and the stack healthy, there is nothing for a result to attach to on the only supported site."
+    },
+    {
+      "id": "L-03",
+      "severity": "process",
+      "title": "Both passing test layers encode the same assumption as the code they test",
+      "detail": "The PS fixtures contain only the pipe form, which is the only form the regex knows — so recall reads 1.000. The synthetic extension page is built with the selectors the adapter uses — so the browser checks pass. In both cases the test was authored from the same mental model as the implementation, and neither could have found these two defects.",
+      "implication": "This is a concrete, non-theoretical argument for independent ground truth and for live-site checks as a release gate, not a nice-to-have. Codex's insistence on independent adjudication is vindicated; so is the requirement for a live ChatGPT check."
+    }
+  ],
+  "not_determined": [
+    "Whether the AITrust extension loaded successfully — content scripts run in an ISOLATED world and are not observable from page context. L-02 holds regardless: the anchors do not exist.",
+    "Console showed no AITrust output; the only exceptions came from an unrelated extension (dipmddknpfmlbdladkhofaimddikfdmc).",
+    "Use/mention negative case and the stale-result race (A05) were not reached — L-02 blocks them."
+  ],
+  "stack_state": "docker compose up --wait: gateway, evaluator, anonymizer all Healthy",
+  "commits_made": 0
+}

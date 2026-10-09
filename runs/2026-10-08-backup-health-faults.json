@@ -1,0 +1,10 @@
+{
+  "scope": "backup_health_fault_injection",
+  "checks": {
+    "stale_generation_and_backup_detected": true,
+    "capacity_threshold_failure_detected": true,
+    "failure_logged_by_systemd": true
+  },
+  "passed": true,
+  "external_notification_delivery_verified": false
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "source_archive_storage_health",
+  "checks": {
+    "database_query_works": true,
+    "database_free_space_above_20_percent": true,
+    "archive_enabled": true,
+    "no_pending_archive_failure": true,
+    "wal_storage_within_reserve": true
+  },
+  "passed": true,
+  "external_notification_delivery_verified": false
+}

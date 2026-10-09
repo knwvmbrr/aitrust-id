@@ -1,0 +1,16 @@
+{
+  "name": "aitrust-id-verification",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "verify:browser": "node scripts/verify-browser.cjs",
+    "build:site": "npm run build --prefix site",
+    "dev:site": "npm run dev --prefix site",
+    "verify:site": "node scripts/verify-site.cjs",
+    "deploy:site": "npm run deploy --prefix site"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "axe-core": "4.10.3"
+  }
+}

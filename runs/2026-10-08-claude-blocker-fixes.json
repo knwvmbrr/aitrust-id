@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "authorisation": "product owner instructed 'fix unfixed, keep working' — crosses the usual file-ownership split into services/ and extension/, which are normally Codex's",
+  "runtime_verified": true,
+  "commits_made": 0,
+  "fixes": [
+    {
+      "id": "L-01",
+      "file": "services/evaluator/app.py",
+      "change": "Registered a NEW signal sig.fetch_execute.v1 covering command substitution, process substitution, eval substitution and backticks. sig.piped_installer.v2 left untouched — spec/signals.md forbids mutating a registered version.",
+      "proof": "Imported the live module and called signals(). The official Homebrew command now yields sig.fetch_execute.v1; so do sh -c \"$(curl)\", bash <(curl), eval \"$(curl)\", python3 -c \"$(curl)\", source <(curl), zsh+wget, node -e, backticks. 10/10 designed positives caught.",
+      "false_positives": "0 on 10 negatives: pipe-to-jq, download-only, echo substitution, capture-to-variable, interpreter-without-fetch, process-substitution-without-fetch, local python -c, git clone, wget archive, prose.",
+      "use_mention_preserved": "The warned form ('Never run bash -c \"$(curl ...)\"') is still suppressed by the existing discriminator — verified through the live module, not by reading."
+    },
+    {
+      "id": "V-01",
+      "file": "services/gateway/app.py, spec/assertion.schema.json, tests/test_release_policy.py",
+      "change": "calibrate() recorded non-allowlisted candidates nowhere. They are now abstentions with reason 'not_in_production_allowlist'. Schema gained that enum value; no new top-level field, because the assertion schema is additionalProperties:false and an abstention is precisely 'we had a candidate and did not assert it, here is why'.",
+      "proof": "Adversarial probe: HP@0.72 (above its 0.65 floor) and MT@0.99 are NOT asserted and ARE recorded. Nothing dropped without a record. PII_REDACTED correctly appears in neither — it is asserted upstream by the redaction step.",
+      "test_change": "test_gateway_rejects_nonproduction_even_at_full_confidence asserted ==([],[]), whose second [] encoded the silent drop as intended behaviour. Rewritten STRICTLY STRONGER: still requires that nothing asserts, and now additionally requires that every withheld code leaves an auditable record with the right reason, and that PII_REDACTED is in neither list."
+    },
+    {
+      "id": "L-02",
+      "file": "extension/src/adapters/chatgpt.js",
+      "change": "Single stale selector replaced with an ordered anchor list, a stable responseId() accessor, widened streaming detection, and an anchor() diagnostic.",
+      "proof": "Injected the adapter into the live chatgpt.com page and compared SHA-256 of the injected source against the file on disk: 57a9ff3be7143307 == 57a9ff3be7143307, so the live test exercised the real file bytes. Result: anchor '[data-markdown-text-style=\"assistant-message\"]' matched, 1 response found, stable id fc17162b-298b-4198-ac4a-6805dc5ddaaf extracted, response text read including the Homebrew command, streaming correctly false.",
+      "legacy_selector_measurement": "[data-message-author-role] -> 0 nodes total and 0 assistant on live chatgpt.com. Re-verified by building the attribute name dynamically, because the browser tool redacts that literal key and an earlier reading could have been a redaction artifact rather than a real zero.",
+      "design_notes": [
+        "Ordered anchors: a vendor rename should degrade coverage, not zero it.",
+        "responseId() returns null when the page offers no stable id — the caller must then refuse rather than fall back to DOM position. That is the foundation F-088 needs.",
+        "Zero anchors matched renders UNSUPPORTED. Guessing an anchor is how a tag lands on the wrong text."
+      ]
+    }
+  ],
+  "fixtures_added": {
+    "file": "eval/datasets/unsafe_code/fetch_execute_v1.jsonl",
+    "rows": 19,
+    "positives": 8,
+    "negatives": 11,
+    "result": "tp=8 fp=0 fn=0 tn=11",
+    "PROVENANCE_WARNING": "Every row carries provenance='drafted_by_detector_author__REQUIRES_INDEPENDENT_ADJUDICATION'. I wrote the detector, so I cannot be the ground truth for it — this is exactly the trap finding L-03 identified. These rows are drafts for an independent adjudicator and MUST NOT count toward a release gate until adjudicated by someone who did not write the regex."
+  },
+  "suite": "30 passed",
+  "gates_still_failing_correctly": [
+    "release evidence requires a frozen independent holdout, manifest hash, and pre-agreed method",
+    "PS.precision: lower bound does not clear 0.93",
+    "PS.recall: lower bound does not clear 0.75",
+    "PS: calibration evidence missing; heuristic scores are not probabilities"
+  ],
+  "not_fixed_here": [
+    "Response identity (F-088) itself — the adapter now EXPOSES a stable id, but bridge.js must still bind results to it and refuse when it is null. Codex's lane.",
+    "No badge was rendered end to end on live ChatGPT; that needs the bridge change plus an extension reload.",
+    "docs/tags/PS-01.md line 50 still names individuals in a published reference file."
+  ]
+}

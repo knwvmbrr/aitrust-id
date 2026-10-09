@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-08",
+  "kind": "ci_review_reconciliation",
+  "python": {
+    "exit_code": 0,
+    "tests_passed": 65,
+    "warnings": 1,
+    "suite": "full repository Python test suite",
+    "runtime": "/private/tmp/aitrust-verify-venv/bin/python"
+  },
+  "active_regression_report": "runs/2026-10-08-all-active-regressions.json",
+  "statistical_gate_report": "runs/2026-10-08-ci-gate-recheck.json",
+  "statistical_gate_exit_code": 1,
+  "corrections": [
+    "Before this change pytest already consumed three active files and separate literal boundary cases; the gate consumed one file.",
+    "Four active files now classified and run; fifth file retains superseded labels as historical.",
+    "GitHub repository and origin now exist; no implementation push or hosted CI run.",
+    "Cloudflare device authorization completed and CLI account/project inventory succeeded; no AI Trust ID project or deployment yet.",
+    "A sample-size estimate conditional on zero errors is not the only release requirement; holdout, method, calibration, accessibility and broader integration remain."
+  ],
+  "remote_database_connected": false,
+  "committed": false,
+  "pushed": false
+}

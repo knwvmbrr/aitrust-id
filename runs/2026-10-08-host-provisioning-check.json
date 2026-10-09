@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-10-08T19:00:12.419434+00:00",
+  "kind": "host_provisioning_check",
+  "payment_validated_in_provider_ui": true,
+  "provider_active_verified": true,
+  "specification_verified": {
+    "plan": "VPS-2 2027",
+    "os": "Debian 13",
+    "region": "US-EAST-VA",
+    "vcpu": 4,
+    "memory_gb": 8,
+    "disk_gb": 75
+  },
+  "ssh_tcp_reachable": true,
+  "ssh_login_verified": false,
+  "dedicated_key_prepared_outside_repo": true,
+  "public_key_installed": false,
+  "database_installed": false,
+  "backup_observation": {
+    "dashboard_summary": "Disabled",
+    "dedicated_backup_page": "Daily schedule 14:57:00 UTC; zero restore points",
+    "restore_verified": false
+  },
+  "renewal_observation": "Manual renewal; next payment date displayed Invalid date",
+  "private_inventory": "Stored outside repository",
+  "initial_login_handoff_required": true,
+  "server_modified": false,
+  "browser_terminal_control_unavailable": true
+}

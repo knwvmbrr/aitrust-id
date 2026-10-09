@@ -1,0 +1,35 @@
+name: Tag finding or reproducible bug
+description: Challenge a bounded tag finding using synthetic content.
+title: "[Tag review] "
+body:
+  - type: markdown
+    attributes:
+      value: "This is PUBLIC. Use synthetic examples only. Report vulnerabilities through Security → Report a vulnerability. Do not include credentials, prompts, personal data or private AI responses."
+  - type: input
+    id: method
+    attributes:
+      label: Tag and method version
+      description: Include the evaluator source hash and record ID only when safe to disclose.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Synthetic reproduction
+      description: Minimal text and steps; use example.test for fictional hosts. Never provide an executable malware payload.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and observed behavior
+      description: Explain the tag's baseline job, actual finding, and disputed evidence.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Publication check
+      options:
+        - label: This contains only synthetic content and safe metadata, with no credentials or private information.
+          required: true

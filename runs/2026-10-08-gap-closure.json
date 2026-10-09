@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-08",
+  "tests_passed": 11,
+  "environment": "Python 3.13 local isolated virtualenv",
+  "runtime_policy": [
+    "PS",
+    "PII_REDACTED"
+  ],
+  "proposed_codes_enabled": false,
+  "regression_release_pass": false,
+  "hosted_ci_run": false,
+  "containers_verified": false,
+  "commands": [
+    "python -m pytest tests -q",
+    "python eval/harness.py --fixtures eval/datasets/unsafe_code/ps_v1.jsonl --output runs/2026-10-08-regression-gates.json"
+  ]
+}

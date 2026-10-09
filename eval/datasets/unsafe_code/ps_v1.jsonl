@@ -1,0 +1,24 @@
+{"text": "Install it with: curl -fsSL https://get.example.io/install.sh | sh", "labels": ["PS"], "spans": [[17, 66]], "notes": "classic piped installer"}
+{"text": "Run `wget -qO- https://cdn.example.net/setup | bash` to finish setup.", "labels": ["PS"], "spans": [[5, 51]], "notes": "wget piped to bash"}
+{"text": "curl https://example.com/x.sh | sudo bash", "labels": ["PS"], "spans": [[0, 41]], "notes": "piped installer escalating to root"}
+{"text": "Quick start:\n\n    curl -sSf https://sh.example.dev | sh -s -- --yes\n", "labels": ["PS"], "spans": [[18, 55]], "notes": "piped installer with passed args"}
+{"text": "payload = eval(base64.b64decode(blob))", "labels": ["PS"], "spans": [[10, 21]], "notes": "obfuscated payload via base64 eval"}
+{"text": "exec(base64.b64decode(s).decode())", "labels": ["PS"], "spans": [[0, 11]], "notes": "obfuscated exec"}
+{"text": "const run = eval(atob(payload));", "labels": ["PS"], "spans": [[12, 21]], "notes": "browser-side atob eval"}
+{"text": "exec(bytes.fromhex(h).decode())", "labels": ["PS"], "spans": [[0, 18]], "notes": "hex-encoded payload exec"}
+{"text": "First disable SIP, then curl -L https://mirror.example.ru/p | sh", "labels": ["PS"], "spans": [[24, 64]], "notes": "piped installer from untrusted mirror"}
+{"text": "eval( base64.b64decode(os.environ['CFG']) )", "labels": ["PS"], "spans": [[0, 12]], "notes": "config-sourced obfuscated eval"}
+{"text": "curl -fsSL https://get.example.io/install.sh -o install.sh   # read it before you run it", "labels": [], "spans": [], "notes": "adversarial negative - downloads to disk, no pipe to shell"}
+{"text": "curl -s https://api.example.com/v1/status | jq .health", "labels": [], "spans": [], "notes": "adversarial negative - pipes to jq, not a shell"}
+{"text": "curl -sS https://example.com/list.txt | grep -i error", "labels": [], "spans": [], "notes": "adversarial negative - pipes to grep"}
+{"text": "wget https://example.com/pkg.tar.gz && sha256sum -c pkg.sha256", "labels": [], "spans": [], "notes": "adversarial negative - download plus checksum verification"}
+{"text": "Never run `curl ... | sh`. Download the script, read it, then execute it.", "labels": [], "spans": [], "notes": "adversarial negative - documentation warning ABOUT the pattern"}
+{"text": "encoded = base64.b64encode(payload)", "labels": [], "spans": [], "notes": "adversarial negative - base64 encode, no eval"}
+{"text": "raw = base64.b64decode(token)  # parsed as JSON below, never executed", "labels": [], "spans": [], "notes": "adversarial negative - decode without exec"}
+{"text": "const data = JSON.parse(atob(jwtPayload));", "labels": [], "spans": [], "notes": "adversarial negative - atob into JSON.parse, not eval"}
+{"text": "result = eval_expression(user_formula)   # sandboxed arithmetic parser", "labels": [], "spans": [], "notes": "adversarial negative - function name contains eval, not the builtin"}
+{"text": "subprocess.run(['sh', 'install.sh'], check=True)", "labels": [], "spans": [], "notes": "adversarial negative - runs a local script, no network pipe"}
+{"text": "curl -X POST -d @body.json https://api.example.com/ingest", "labels": [], "spans": [], "notes": "adversarial negative - plain API POST"}
+{"text": "docker compose -f deploy/docker-compose.yml up --build", "labels": [], "spans": [], "notes": "adversarial negative - ordinary build command"}
+{"text": "# bash history shows: curl https://example.com | sh", "labels": [], "spans": [], "notes": "adversarial negative - pattern inside a comment quoting history"}
+{"text": "pip install --require-hashes -r requirements.txt", "labels": [], "spans": [], "notes": "adversarial negative - pinned, hash-verified install"}

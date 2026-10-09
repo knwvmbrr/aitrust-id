@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-08",
+  "resolved": [
+    {
+      "signature": "Raw personal information leaked into evidence (test assertion)",
+      "cause": "Accessibility test selected RootWebArea instead of the focused evidence panel",
+      "fix": "Exclude RootWebArea and assert only focused evidence descendants",
+      "verification": "Real-extension test passed with rawEmailAbsentFromEvidence=true"
+    },
+    {
+      "signature": "invalid mount path: noexec",
+      "cause": "Unquoted commas in a YAML flow list split tmpfs mount options into separate paths",
+      "fix": "Quote the complete tmpfs mount option string",
+      "verification": "Containers started with read-only roots and temporary filesystem"
+    },
+    {
+      "signature": "Connection refused during runtime verification",
+      "cause": "Verification ran before Compose recreation completed",
+      "fix": "Health checks, dependency readiness, and Compose up --wait",
+      "verification": "All three services healthy"
+    }
+  ],
+  "under_investigation": [
+    {
+      "signature": "HTTP 504 during a subsequent synthetic runtime check",
+      "observed": "Local Python verification also slowed to about 43 seconds on that run",
+      "scope": "Transient timing; no assertion issued for failed request",
+      "next_check": "Measure internal service response time; reduce repetitive health-check process startup and rerun without simultaneous host tests",
+      "follow_up": "Three serial real-pipeline requests passed at 1262.0, 94.8, and 70.7 ms after reducing periodic health-check startup overhead. Exact cause of the earlier 504 remains unconfirmed; no latency SLA accepted."
+    }
+  ]
+}

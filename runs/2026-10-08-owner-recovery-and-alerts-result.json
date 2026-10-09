@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-10-08T23:21:54.815204+00:00",
+  "status": "private_notifications_live; owner_receiver_and_offline_recovery_gates_open",
+  "completed": {
+    "url": "https://notify.aitrustid.com",
+    "software": "ntfy 2.29.0 behind Caddy; self-hosted on independent backup host",
+    "default_deny": true,
+    "distinct_publishers": true,
+    "owner_read_only": true,
+    "application_data_in_messages": false,
+    "upstream_forwarding": false,
+    "cache_hours": 24,
+    "primary_https_timer_enabled": true,
+    "backup_https_timer_enabled": true,
+    "public_https_authorization_checks_passed": 12,
+    "runtime_boundary_checks_passed": 17,
+    "sender_unit_tests_passed": 8,
+    "browser_both_topic_receipt_verified": true,
+    "desktop_permission_verified": false,
+    "separate_device_receipt_verified": false,
+    "primary_smtp_accepted_test": true,
+    "primary_email_timer_enabled": true,
+    "owner_inbox_receipt_confirmed": true,
+    "reader_password_manager_saved": false,
+    "independent_uptime_monitor": false
+  },
+  "owner_recovery": {
+    "repository_cipher_passwords_entry_saved": true,
+    "backup_admin_base64_passwords_entry_saved": true,
+    "saved_masked_ui_verified": true,
+    "retrieval_roundtrip_verified": false,
+    "independent_offline_copy_verified": false,
+    "ovh_mfa_configuration_verified": true,
+    "digitalocean_github_mfa_configuration_verified": true,
+    "recovery_codes_offline_custody_verified": false
+  },
+  "code_tests_and_shellcheck_passed": true,
+  "source_credentials_outside_git": true,
+  "public_site_deployed": true,
+  "real_data_collection_enabled": false,
+  "committed_or_pushed_this_pass": false,
+  "remaining": [
+    "Independent offline recovery-key copy, recovery-secret retrieval check and full replacement-host recovery drill",
+    "Accepted contribution/consent and retention policy before real submission",
+    "Implement application auth, object isolation, quotas and synthetic intake",
+    "Public live-community security, moderation and retraction checks",
+    "Desktop alert permission; independent uptime monitoring and renewal verification"
+  ],
+  "prior_failure_corrections": [
+    "DynamicUser D-Bus access failed despite NSS package installation; stable unprivileged user worked under sandbox",
+    "systemd credential root:root 0440 with root:root 0550 private directory rejected; exact private mount reader supported and tested",
+    "installer staged outside target directory after same-file source/destination rejection",
+    "notification installer immediate health probe raced startup; bounded retry added"
+  ],
+  "public_site_url": "https://aitrustid.com",
+  "updated_at": "2026-10-08T23:51:01.577133+00:00"
+}

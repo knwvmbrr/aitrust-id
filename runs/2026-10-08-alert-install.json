@@ -1,0 +1,20 @@
+{
+  "schema": "ai-trust-id-ops-evidence/v1",
+  "status": "prepared_disabled_pending_owner_smtp_credential",
+  "results": [
+    {
+      "role": "primary",
+      "returncode": 0,
+      "stdout": "{\"role\": \"primary\", \"issues\": []}\nUnits prepared; no timer enabled or email sent. Credential and inbox test required.\n",
+      "stderr": ""
+    },
+    {
+      "role": "backup",
+      "returncode": 0,
+      "stdout": "{\"role\": \"backup\", \"issues\": []}\nUnits prepared; no timer enabled or email sent. Credential and inbox test required.\n",
+      "stderr": ""
+    }
+  ],
+  "emails_sent": 0,
+  "delivery_verified": false
+}

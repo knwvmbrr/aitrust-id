@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "role": "primary",
+      "script_install_returncode": 0,
+      "credential_install_returncode": 0,
+      "timer_enabled": false,
+      "awaiting_dns_tls": true
+    },
+    {
+      "role": "backup",
+      "script_install_returncode": 1,
+      "credential_install_returncode": 0,
+      "timer_enabled": false,
+      "awaiting_dns_tls": true
+    }
+  ],
+  "tokens_exposed": false,
+  "collection_enabled": false
+}

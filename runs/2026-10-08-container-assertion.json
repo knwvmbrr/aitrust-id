@@ -1,0 +1,61 @@
+{
+  "assertion_id": "6897e2eb-6be7-4e26-a834-e3fd2fe81350",
+  "spec_version": "0.1.0",
+  "subject": {
+    "sha256": "1ade0a37915626e3c86304ede076e532723752d31a13363ad77ada823a84118a",
+    "char_len": 65,
+    "origin_host": "unknown",
+    "captured_at": "2026-10-09T00:10:37.921232+00:00",
+    "modality": "text"
+  },
+  "tags": [
+    {
+      "code": "PS",
+      "confidence": 0.97,
+      "floor": 0.7,
+      "state": "asserted",
+      "signals": [
+        {
+          "id": "sig.piped_installer.v2",
+          "score": 0.97,
+          "spans": [
+            [
+              27,
+              65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PII_REDACTED",
+      "confidence": 1.0,
+      "state": "asserted",
+      "signals": [
+        {
+          "id": "presidio.entity.v1",
+          "score": 1.0,
+          "detail": {
+            "entities": [
+              "EMAIL_ADDRESS",
+              "URL"
+            ],
+            "count": 2
+          }
+        }
+      ]
+    }
+  ],
+  "abstentions": [],
+  "evaluator": {
+    "models": [
+      {
+        "name": "rules-only",
+        "sha256": "c775f2ae6888ebbe5cfbdc91647b3ea5da1b8ed20ff5ded84b2e53520c5de077",
+        "revision": "context-v4"
+      }
+    ],
+    "calibration_id": "uncalibrated-rules-v4",
+    "latency_ms": 14.5
+  }
+}

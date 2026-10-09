@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-10-08T18:26:11.477466+00:00",
+  "kind": "host_order_preparation",
+  "user_request": "can you order what i need",
+  "status": "awaiting_user_account_sign_in",
+  "cart": {
+    "status": "cart_verified_awaiting_user_sign_in",
+    "provider": "OVHcloud US",
+    "plan": "VPS-2 2027",
+    "monthly_usd_before_tax": 10,
+    "tax": "Calculated after identification",
+    "commitment": "No commitment; monthly subscription",
+    "os": "Debian 13",
+    "region": "US-EAST-VA",
+    "paid_addons": [],
+    "paid_order_submitted": false,
+    "server_provisioned": false,
+    "evidence": "runs/2026-10-08-host-order-preparation.json"
+  },
+  "checkout_summary_verified": true,
+  "account_created": false,
+  "credentials_entered": false,
+  "terms_accepted": false,
+  "payment_submitted": false,
+  "server_provisioned": false,
+  "backup_ordered": false,
+  "blockers": [
+    "OVH account sign-in or user-created account",
+    "Final tax-inclusive amount and spending limit",
+    "Action-time acceptance of applicable binding terms"
+  ],
+  "screenshots": [
+    {
+      "path": "runs/hosting-research/ovh-order-summary.png",
+      "sha256": "74580614004e7963529189d75d26a39f0344086cf8d96baaedbfaa3b1b83e9e8"
+    },
+    {
+      "path": "runs/hosting-research/ovh-sign-in-handoff.png",
+      "sha256": "107d69415a42d436ce7b35f2924d4af399f9d655f7fda8d2ca9e93c2625a06c9"
+    }
+  ]
+}

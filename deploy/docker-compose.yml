@@ -1,0 +1,66 @@
+# Anonymizer and evaluator use only Docker's internal inspection network.
+# The gateway also needs the edge network for Docker Desktop loopback publishing.
+# External TCP probes for the internal services are recorded in runs/. They are
+# bounded checks, not proof against every exfiltration channel or compromise.
+# Only the gateway publishes a default port, bound to 127.0.0.1.
+
+name: aitrust-id
+
+x-runtime: &runtime
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: ["/tmp:rw,noexec,nosuid,size=64m"]
+  healthcheck:
+    test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz',timeout=2)"]
+    interval: 30s
+    start_interval: 2s
+    timeout: 3s
+    retries: 6
+    start_period: 20s
+
+networks:
+  edge:
+  inspection:
+    internal: true          # <- the important line in this file
+
+services:
+  gateway:
+    <<: *runtime
+    build: ../services/gateway
+    environment:
+      AITRUST_TOKEN: ${AITRUST_TOKEN:?set AITRUST_TOKEN in deploy/.env}
+      ANONYMIZER_URL: http://anonymizer:8000
+      EVALUATOR_URL: http://evaluator:8000
+    ports:
+      - "127.0.0.1:8787:8000"     # loopback only. never 0.0.0.0.
+    networks: [inspection, edge]
+    depends_on:
+      anonymizer: {condition: service_healthy}
+      evaluator: {condition: service_healthy}
+    restart: unless-stopped
+
+  anonymizer:
+    <<: *runtime
+    build: ../services/anonymizer
+    networks: [inspection]        # no egress
+    restart: unless-stopped
+
+  evaluator:
+    <<: *runtime
+    build: ../services/evaluator
+    networks: [inspection]        # no egress
+    restart: unless-stopped
+
+  registry:
+    profiles: [registry]
+    build: ../services/registry
+    ports:
+      - "127.0.0.1:8501:8501"
+    volumes:
+      - registry-data:/data
+    networks: [inspection]
+    restart: unless-stopped
+
+volumes:
+  registry-data:

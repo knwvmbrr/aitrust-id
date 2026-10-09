@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-09T00:12:12.290308+00:00",
+  "authenticated_real_local_pipeline": true,
+  "real_command_checks": [
+    {
+      "case": "supported",
+      "exit_code": 2,
+      "tags": [
+        "PS"
+      ],
+      "valid_json_assertion": true,
+      "raw_input_absent": true
+    },
+    {
+      "case": "warning",
+      "exit_code": 0,
+      "tags": [],
+      "valid_json_assertion": true,
+      "raw_input_absent": true
+    },
+    {
+      "case": "ordinary",
+      "exit_code": 0,
+      "tags": [],
+      "valid_json_assertion": true,
+      "raw_input_absent": true
+    },
+    {
+      "case": "redaction",
+      "exit_code": 2,
+      "tags": [
+        "PS",
+        "PII_REDACTED"
+      ],
+      "valid_json_assertion": true,
+      "raw_input_absent": true
+    }
+  ],
+  "empty_input_unavailable": true,
+  "cli_sha256": "9f8c89b0dbfb9cfe14a7ebf2cc498069162c0a594880eae175718fade5795186",
+  "gateway_sha256": "f6b0557f19accdb14f12fc5f3c31f6a1459ff7b321b25dd3b24ab19b61b065b3",
+  "method_source_hash_checked": true,
+  "independent_accuracy": false,
+  "release_validated": false
+}

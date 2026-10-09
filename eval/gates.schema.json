@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aitrustid.org/schema/gates-2.json",
+  "title": "AITrust-ID evaluation gate configuration, schema version 2",
+  "description": "Contract between eval/gates.yaml and any harness that consumes it. Written because a rewrite of gates.yaml broke the existing harness, which had no schema to code against. A conformant harness validates against this before reading.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "method",
+    "production_allowlist",
+    "tags",
+    "abstention",
+    "ci"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "v1_consumer_is_advisory_only": {
+      "type": "boolean",
+      "description": "True while the deprecated flat `gates` block is present. A harness reading that block produces an ADVISORY report, never a release gate: it compares point estimates, and v2 requires lower-bound comparison."
+    },
+    "gates": {
+      "type": "object",
+      "deprecated": true,
+      "description": "v1 compatibility only. Flat per-tag point-estimate thresholds. Remove once the harness reads schema_version 2.",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "precision_min",
+          "recall_min",
+          "ece_max"
+        ],
+        "properties": {
+          "precision_min": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "recall_min": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "ece_max": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "method": {
+      "type": "object",
+      "required": [
+        "interval",
+        "confidence",
+        "gate_on",
+        "frozen_holdout_required",
+        "method_fixed_before_run"
+      ],
+      "properties": {
+        "interval": {
+          "const": "wilson"
+        },
+        "confidence": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "exclusiveMaximum": 1
+        },
+        "gate_on": {
+          "const": "lower_bound",
+          "description": "A pass requires the LOWER BOUND of the interval to clear the threshold. Comparing the point estimate is not a gate."
+        },
+        "publish_alongside_every_figure": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "frozen_holdout_required": {
+          "const": true
+        },
+        "method_fixed_before_run": {
+          "const": true
+        }
+      }
+    },
+    "production_allowlist": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Release policy: only these tag codes may be evaluated, gated, or emitted. This list is configuration and does NOT by itself enforce anything \u2014 the evaluator must not emit non-allowlisted candidates and the gateway must drop any that appear. Enforcement is verified by acceptance check A17, not by the presence of this key."
+    },
+    "tags": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "posture"
+        ],
+        "properties": {
+          "posture": {
+            "enum": [
+              "precision_weighted",
+              "recall_weighted",
+              "balanced",
+              "undetermined"
+            ],
+            "description": "Which error the tag's audience pays for. Set from the cost of being wrong, not uniformly."
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "not_evaluated",
+              "experimental_not_in_release",
+              "candidate",
+              "accepted"
+            ]
+          },
+          "deterministic": {
+            "type": "boolean"
+          },
+          "precision_min_lower_bound": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "recall_min_lower_bound": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "ece_max": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "krippendorff_alpha_min": {
+            "type": "number",
+            "description": "Applies ONLY to the tag that declares it. It must not gate any other tag."
+          },
+          "hard_constraint": {
+            "type": "string"
+          },
+          "required_obligations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "For a recall_weighted tag these are part of the gate, not UX preferences: a tag that trades precision for recall owes the reader hedged wording, every indicator shown, one-action dismissal, and a published false-positive rate."
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "posture": {
+                  "const": "recall_weighted"
+                }
+              },
+              "required": [
+                "posture"
+              ]
+            },
+            "then": {
+              "required": [
+                "required_obligations"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "abstention": {
+      "type": "object",
+      "description": "v1 flat form. v2 consumers read the per-class form; a deterministic detector has no defensible minimum abstention rate, so min_rate may be null there.",
+      "properties": {
+        "min_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "deterministic_detectors": {
+          "$ref": "#/$defs/abstentionBand"
+        },
+        "probabilistic_detectors": {
+          "$ref": "#/$defs/abstentionBand"
+        }
+      }
+    },
+    "latency": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "unmeasured",
+            "measured"
+          ]
+        },
+        "declared_hardware": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "declared_input_lengths": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "p95_ms_target": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "description": "Not a gate until status is measured and hardware plus input lengths are declared."
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "axe_max_serious": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 0
+        },
+        "axe_max_critical": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 0
+        },
+        "fixture_page_required": {
+          "const": true
+        },
+        "manual_screen_reader_required": {
+          "const": true
+        }
+      }
+    },
+    "ci": {
+      "type": "object",
+      "required": [
+        "no_soft_failures",
+        "missing_prerequisite_fails",
+        "deliberate_failure_test_required"
+      ],
+      "properties": {
+        "no_soft_failures": {
+          "const": true,
+          "description": "No required job may use `|| true`."
+        },
+        "missing_prerequisite_fails": {
+          "const": true,
+          "description": "A missing fixture or results file is a FAILURE, not a skip."
+        },
+        "deliberate_failure_test_required": {
+          "const": true
+        }
+      }
+    }
+  },
+  "$defs": {
+    "abstentionBand": {
+      "type": "object",
+      "properties": {
+        "min_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "v1_consumer_is_advisory_only": {
+            "const": true
+          }
+        },
+        "required": [
+          "v1_consumer_is_advisory_only"
+        ]
+      },
+      "then": {
+        "required": [
+          "gates",
+          "abstention"
+        ],
+        "properties": {
+          "abstention": {
+            "required": [
+              "min_rate",
+              "max_rate"
+            ],
+            "description": "While a v1 consumer exists, the flat keys it reads MUST be present in the single top-level abstention mapping. A second `abstention:` block is silently shadowed by YAML and the v1 consumer then raises KeyError, which is exactly how the first compat attempt failed."
+          }
+        }
+      }
+    }
+  ]
+}

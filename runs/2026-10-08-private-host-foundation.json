@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-10-08T19:31:37.325267+00:00",
+  "scope": "Dedicated AI Trust ID private Linux/PostgreSQL foundation",
+  "executed": true,
+  "source_sha256": {
+    "deploy/host/bootstrap.sh": "bd987a3c8e8103adda89ecd72e3aaa083e8b4bef9851ebcb2733ac66b4a01aab",
+    "deploy/host/deploy.sh": "b45d7f5f13c5c7db3bd4583ff5105b1ce087e53ed85b7a4d6ffa231d954a2208",
+    "deploy/host/nftables.conf": "c43b5852832a065c14bda0d933e61be2eb0fe60ef6fdb6aeb1b771d81a882348",
+    "deploy/host/pg_hba.conf": "2d1dcb09e5fcca9a194689907737f64ee0ba956e63b31514397b6b2a2db28d6d",
+    "deploy/host/pg_ident.conf": "2bcced9cc3546017df3368af0b9f84aaa710281ddd83bebb8700300fa4bf826e",
+    "deploy/host/postgresql.conf": "8dd3c1eabf4956f5fc876390156fe5643ea65ba0987e82d4bd3b4f199dfae004",
+    "deploy/host/roles.sql": "30e5b297afe55b4c9998df309a6fd218387dd422ffeeaf9d6c0aa71552b7d459",
+    "deploy/host/sshd.conf": "8e998ae4fd085c97640f9d76549d3810f8a43a20561517c387ad7b2205abb1cb",
+    "deploy/host/verify.py": "a5ac727bd1a12e668d5a28989229a5aa211e81e8be2d86058714f527435be638",
+    "deploy/host/verify.sh": "f1bd361da04bf271a8bb08ecc183f26fb78514fd1c9f5b1bcdd17031ea63daff"
+  },
+  "host_check_report": "runs/2026-10-08-private-host-checks.json",
+  "checks_passed": 46,
+  "fresh_key_only_ssh_login_after_policy_change": true,
+  "fresh_login_after_reboot": true,
+  "kernel_before": "6.12.86+deb13-amd64",
+  "kernel_after": "6.12.111+deb13-amd64",
+  "boot_identity_changed": true,
+  "postgresql": "18.6-1.pgdg13+2",
+  "pgbackrest": "2.59.3-1.pgdg13+1",
+  "services_active_after_reboot": [
+    "postgresql@18-main",
+    "nftables",
+    "ssh",
+    "systemd-resolved",
+    "apt-daily-upgrade.timer"
+  ],
+  "failed_systemd_units": [],
+  "public_listening_services": [
+    "SSH on IPv4 and IPv6"
+  ],
+  "other_listeners": "Loopback DNS and interface DHCP only; no PostgreSQL TCP listener",
+  "external_ipv4_database_probe": {
+    "exit_code": 1,
+    "result": "connection timed out; independent IPv4 SSH positive control succeeds"
+  },
+  "external_ipv6_database_probe": {
+    "exit_code": 1,
+    "result": "connection timed out; positive SSH control also timed out, so external firewall validation is inconclusive"
+  },
+  "live_sql_permission_checks": "Actual OS-peer sessions; synthetic schema created and removed",
+  "lint": "Deployed bootstrap ShellCheck passed; local bash syntax and Python compilation passed; hosted CI not executed",
+  "corrected_failures": [
+    {
+      "signature": "psql: roles.sql: Permission denied",
+      "cause": "Postgres account could not read SQL in protected upload directory",
+      "fix": "Root supplies the file through standard input",
+      "verified": "Successful deployment and actual peer-role SQL checks"
+    },
+    {
+      "signature": "systemd-resolved: Failed to open configuration file: Permission denied",
+      "cause": "Root umask produced non-secret resolver drop-in mode 0640, unreadable to resolver service",
+      "fix": "Non-secret drop-in mode 0644; restart resolver; verify actual protocols, sockets and DNS",
+      "verified": "Three added runtime checks pass before and after reboot"
+    }
+  ],
+  "independent_backup_verified": false,
+  "database_disk_encryption_configured": false,
+  "public_intake_deployed": false,
+  "live_community_deployed": false,
+  "data_collection_enabled": false,
+  "wireguard_configured": false,
+  "provider_mfa_verified": false,
+  "production_ready": false,
+  "remaining": [
+    "Independent encrypted backup and fresh-host restore",
+    "Application auth/object authorization and staging",
+    "Accepted consent/retention/publication policies",
+    "HTTPS site/intake/community deployment",
+    "Alerts, administrator MFA/private access, recovery and billing renewal verification"
+  ]
+}

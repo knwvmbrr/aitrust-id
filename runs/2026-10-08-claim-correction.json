@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-08",
+  "increment": "A",
+  "actor": "Claude",
+  "scope": "claim wording, taxonomy, gates, decision log — Claude-owned files only",
+  "files_written": [
+    "rfcs/0004-tag-claim-boundaries.md",
+    "spec/taxonomy.md",
+    "spec/signals.md",
+    "eval/gates.yaml",
+    "README.md",
+    "DECISIONS.md",
+    "runs/2026-10-08-claim-correction.json"
+  ],
+  "files_not_touched_by_owner_rule": [
+    "docs/master-scope.md",
+    "docs/master-scope.json",
+    "docs/tags/PS-01.md",
+    "docs/increment-A-result.md",
+    "state.json",
+    "services/",
+    "extension/",
+    "eval/harness.py",
+    ".github/"
+  ],
+  "head_at_start": "c90bf99392cbf7c9120f0b751cf712bc9152b34c",
+  "commits_made": 0,
+  "pushes_made": 0,
+  "history_rewrites": 0,
+  "checks_executed": [
+    {"check": "ds_store_absent_from_head", "command": "git ls-tree -r HEAD --name-only | grep -c DS_Store", "result": "0", "confirms": "Codex's removal claim is true at c90bf99"},
+    {"check": "schema_floor_maximum", "method": "parsed spec/assertion.schema.json", "result": "$defs/tag/properties/floor has maximum: 1", "confirms": "a floor of 1.01 is schema-invalid; allowlist used instead"},
+    {"check": "ps_fixture_composition", "source": "PLAN.md lines 85, 89-94", "result": "24 fixtures = 10 positive + 14 adversarial negatives; 10/10 recall; 2 false positives; precision 10/12", "confirms": "earlier 20/24 figure was wrong"},
+    {"check": "gates_yaml_parses", "command": "python3 yaml.safe_load", "result": "valid; allowlist=[UC, PII_REDACTED]"},
+    {"check": "false_claims_removed", "method": "grep", "result": "'high precision', 'Working.', 'Near-zero false positive', 'Routes to IV', 'highest floor' no longer asserted anywhere"}
+  ],
+  "claims_retracted": [
+    "README: PS working with high precision",
+    "README: no-egress enforced by topology (configured, never executed)",
+    "taxonomy: MT has the highest floor (FA 0.95 and PA 0.85 are higher)",
+    "signals: sig.piped_installer.v1 has a near-zero false positive rate",
+    "signals: sig.assistive_input.v1 routes to IV (IV cannot be machine-assigned)",
+    "gates: global minimum abstention rate applied to a deterministic detector"
+  ],
+  "runtime_verified": false,
+  "limitations": [
+    "No service was started, no extension loaded, no capture exercised. These are document and specification changes only.",
+    "RFC-0004 is proposed, not accepted. UC/SC/BT are not registered until Michael accepts D18 and D19.",
+    "docs/tags/PS-01.md still carries the PS code; rename to UC-01 is Codex's on acceptance.",
+    "Defect reported to Codex, not fixed here (file ownership): the generated Outcome text in docs/master-scope.* inverts the meaning of every X-* refusal record — e.g. X-01 reads 'the workflow provides a paid api'.",
+    "Candidate gate numbers remain candidates. No frozen independently-labelled held-out set exists."
+  ]
+}

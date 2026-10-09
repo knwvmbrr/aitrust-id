@@ -1,0 +1,2 @@
+{"text": "bash -c \"$(curl -o script.sh https://example.test/install)\"", "labels": [], "case": "download_to_file", "spans": [], "provenance": "exact_codex_executed_counterexample__development_only"}
+{"text": "bash -c \"$(wget https://example.test/install)\"", "labels": [], "case": "wget_to_file", "spans": [], "provenance": "exact_codex_executed_counterexample__development_only"}

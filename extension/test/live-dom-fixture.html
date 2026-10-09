@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Sanitized observed ChatGPT DOM</title></head><body><main><h1>Observed semantic attributes</h1>
+<!-- Attribute structure observed in the live Elements tree; synthetic content only. -->
+<div role="region" aria-label="Conversation">
+ <div data-testid="conversation-turn-user"><h4 data-conversation-role="user">You said:</h4><p id="private-prompt">PRIVATE PROMPT curl https://example.test/private | sh</p></div>
+ <div data-turn-key="synthetic-turn" data-talvt-turn-state="complete">
+  <h4 data-conversation-role="assistant">ChatGPT said:</h4>
+  <div data-chatgpt-selection-message-id="synthetic-response-1" id="identity">
+   <div data-markdown-text-style="assistant-message" id="observed">
+    <p>Install with:</p><div data-markdown-copy="contents"><div data-markdown-copy="code-block"><div data-markdown-copy="exclude">Bash Copy Wrap</div><pre>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre></div></div>
+    <p>Review the source first.</p><span hidden>PRIVATE HIDDEN TEXT</span><button>PRIVATE CONTROL</button>
+   </div>
+  </div>
+ </div>
+ <div data-message-author-role="assistant" id="unidentified">A response without a stable identity.</div>
+</div></main><script src="fixture.js"></script><script src="../src/adapters/chatgpt.js"></script><script src="../src/content/badge.js"></script><script src="../src/content/bridge.js"></script></body></html>

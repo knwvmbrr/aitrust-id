@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "role": "independent review — executed, not read (R1/R16)",
+  "reviewing": "runs/2026-10-08-gap-closure.json (Codex)",
+  "environment": "fresh venv, Python 3.10, pyyaml jsonschema pytest httpx fastapi",
+  "head": "c90bf99392cbf7c9120f0b751cf712bc9152b34c",
+  "commits_made": 0,
+
+  "codex_claims_verified": [
+    {
+      "claim": "evaluator emits PS only; gateway rejects other production candidates; HP cannot assert",
+      "verdict": "CONFIRMED BY EXECUTION",
+      "method": "called calibrate() directly with HP@0.72 (above its 0.65 floor), MT@0.99, PS@0.90, PS@0.50, PII_REDACTED@1.0",
+      "result": "asserted tags = [PS@0.90] only. HP asserted: False. MT asserted: False.",
+      "note": "PRODUCTION_TAGS is hardcoded in service code, NOT read from eval/gates.yaml — satisfies acceptance check A17: editing eval config cannot enable a production tag"
+    },
+    {
+      "claim": "v2 harness validates configuration, runs fixtures, computes Wilson intervals, fails unmet gates",
+      "verdict": "CONFIRMED BY EXECUTION",
+      "method": "ran harness on eval/datasets/unsafe_code/ps_v1.jsonl, captured true exit code",
+      "result": "exit code 1. tp=10 fp=2 fn=0 tn=12. precision interval [0.5519691, 0.9530349]. failures: 'PS.precision: lower bound does not clear 0.93', 'PS.recall: lower bound does not clear 0.75', 'release evidence requires a frozen independent holdout, manifest hash, and pre-agreed method'. release_pass=false",
+      "note": "the computed interval 0.552-0.953 independently reproduces the figure I originally got wrong (I had used 20/24 instead of 10/12). Third independent confirmation."
+    },
+    {
+      "claim": "harness rejects duplicate YAML keys",
+      "verdict": "CONFIRMED BY EXECUTION",
+      "method": "appended a second `abstention:` block to a copy of gates.yaml and ran the harness against it",
+      "result": "exit code 1, 'GATE ERROR: duplicate YAML key: abstention'",
+      "note": "this is the exact defect I introduced in the v1 compat layer. The tool now catches it."
+    },
+    {
+      "claim": "CI no longer masks failures",
+      "verdict": "CONFIRMED",
+      "method": "grep for '|| true' and 'continue-on-error' in .github/workflows/ci.yml",
+      "result": "no matches"
+    },
+    {
+      "claim": "11 local tests pass",
+      "verdict": "CONFIRMED BY EXECUTION",
+      "method": "python -m pytest tests -q in a clean venv",
+      "result": "11 passed"
+    }
+  ],
+
+  "finding_against_codex": {
+    "id": "V-01",
+    "severity": "auditability — not a release-blocking safety hole",
+    "file": "services/gateway/app.py",
+    "function": "calibrate()",
+    "defect": "A candidate whose code is not on the production allowlist is `continue`d — it is recorded in NEITHER tags NOR abstentions. HP@0.72 and MT@0.99 vanish with no record anywhere.",
+    "why_it_matters": "This contradicts the function's own docstring two lines above: 'A candidate below its floor is recorded as an abstention, never dropped. Silence and uncertainty are different facts and auditors need to tell them apart.' A reader of an assertion cannot distinguish (a) HP was evaluated and withheld by release policy, (b) HP was never evaluated, (c) HP evaluated and found nothing. It is the same collapse-of-distinct-states pattern as the UNK overload corrected in RFC-0004, reappearing one layer down — and it defeats the auditability that is the allowlist's purpose.",
+    "evidence": "candidates with no record anywhere: ['HP', 'MT']",
+    "proposed_fix": "a third return bucket, e.g. `policy_suppressed: [{code, confidence, floor, reason: 'not_on_production_allowlist'}]`, so the record states that HP fired at 0.72 and was withheld by policy. Owner: Codex (services/).",
+    "test_gap": "tests/test_release_policy.py::test_gateway_rejects_nonproduction_even_at_full_confidence asserts rejection but does not assert that a record of the suppression exists."
+  },
+
+  "findings_i_retracted_before_reporting": [
+    {
+      "draft_finding": "PII_REDACTED is in the gateway's PRODUCTION_TAGS yet unconditionally excluded by the same line — dead logic",
+      "retracted_because": "services/gateway/app.py line 52 adds PII_REDACTED directly as an asserted tag before calibrate() runs. The clause in calibrate() is a de-duplication guard, which is correct.",
+      "lesson": "I read the exclusion without reading where the tag originates"
+    },
+    {
+      "draft_finding": "two allowlists with different contents (evaluator {PS}, gateway {PS, PII_REDACTED}) are two sources of truth that can drift",
+      "retracted_because": "PII_REDACTED originates in the gateway, not the evaluator. The evaluator cannot emit it, so the differing contents are correctly scoped per layer, not drift.",
+      "lesson": "same error: inferred a defect from a difference without checking why the difference exists"
+    }
+  ],
+
+  "release_still_blocked_by": [
+    "2 detector false positives (fixture lines 15 and 23) — precision lower bound 0.552 against a 0.93 gate",
+    "no frozen independently-labelled holdout; harness correctly refuses release_pass on regression data regardless of the numbers",
+    "browser integration unproven (response identity, badge parse, options page)",
+    "no accessibility runtime testing",
+    "no container isolation verification",
+    "UC/SC/BT remain proposals pending D18/D19"
+  ],
+  "not_verified_here": [
+    "container startup or network isolation — no docker run performed",
+    "browser capture — no extension loaded",
+    "hosted CI run — local only",
+    "accessibility — no screen reader, no axe run"
+  ]
+}

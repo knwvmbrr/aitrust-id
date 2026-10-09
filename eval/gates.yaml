@@ -1,0 +1,150 @@
+# CI gates. Rev 2 — 2026-10-08.
+#
+# Three corrections from the Rev 1 review:
+#
+# 1. Gates test the LOWER BOUND of a Wilson 95% interval, not the point estimate.
+#    Field names say so now. A point estimate of 0.833 on 12 predicted positives has a
+#    lower bound of 0.552; gating on the point estimate would have passed something that
+#    is not measurable yet.
+# 2. Error budgets are PER TAG. One uniform precision-first posture across nine tags was
+#    wrong — see rfcs/0004. The cost of a false positive differs enormously by audience.
+# 3. Gates apply only to tags on the production allowlist. A PS-only (now UC-only) release
+#    does not run HP/FI/MT gates and does not claim them.
+#
+# Every number below is a CANDIDATE until a frozen, independently labelled held-out set
+# exists and the interval method is agreed in advance. Choosing a method after seeing a
+# result is how a gate becomes a formality.
+
+schema_version: 2
+
+# ---------------------------------------------------------------------------
+# v1 COMPATIBILITY BLOCK — deprecated, and deliberately NOT a gate.
+#
+# eval/harness.py reads gates["gates"][tag]["precision_min"|"recall_min"|"ece_max"]
+# and gates["abstention"]["min_rate"|"max_rate"]. Rewriting this file to the v2
+# structure below broke that contract. That was my error: I changed a config
+# format without checking its consumer.
+#
+# This block exists so the harness keeps running while Codex migrates it. It is
+# NOT a release gate and must not be reported as one:
+#   - the numbers here are POINT-ESTIMATE comparisons, and v2 gates on the lower
+#     bound of a Wilson interval. A point estimate of 0.833 passes nothing.
+#   - only allowlisted tags appear, so a v1 run says nothing about HP/FI/MT.
+# A v1 run is ADVISORY. Remove this block once the harness reads schema_version 2.
+# Contract for that migration: eval/gates.schema.json
+# ---------------------------------------------------------------------------
+v1_consumer_is_advisory_only: true
+
+gates:
+  PS: { precision_min: 0.93, recall_min: 0.75, ece_max: 0.05 }
+
+# ---------------------------------------------------------------------------
+# v2 — the actual contract.
+# ---------------------------------------------------------------------------
+
+method:
+  interval: wilson
+  confidence: 0.95
+  gate_on: lower_bound
+  publish_alongside_every_figure: [tp, fp, fn, tn, denominator, n, interval, per_category_failures]
+  frozen_holdout_required: true          # regression fixtures are not a held-out set
+  method_fixed_before_run: true          # not after seeing the result
+
+# Only tags listed here are evaluated, gated, or emitted in a release build.
+# This list is release policy. It is NOT expressed as a confidence floor —
+# a floor of 1.01 is schema-invalid (floor has maximum: 1) and disguises policy
+# as calibration.
+production_allowlist:
+  - PS                                   # UC remains proposed until accepted
+  - PII_REDACTED
+
+tags:
+  PS:
+    posture: precision_weighted
+    rationale: >
+      Technical audience that can disable the tool. A false alarm on a legitimate install
+      command teaches a developer to ignore every badge.
+    precision_min_lower_bound: 0.93      # candidate
+    recall_min_lower_bound: 0.75         # candidate
+    ece_max: 0.05
+    deterministic: true                  # rules-only; see abstention note below
+
+  SC:
+    posture: recall_weighted
+    rationale: >
+      Audience includes people being actively targeted. A false alarm costs seconds and a
+      dismissal; a miss can cost someone their savings. Obligations in rfcs/0004 section 4
+      are part of this gate, not optional UX.
+    status: not_evaluated                # no corpus exists; no numbers proposed
+    required_obligations:
+      - wording_says_possible_not_asserted
+      - evidence_panel_lists_every_indicator
+      - one_action_dismissal_does_not_recur
+      - measured_false_positive_rate_published_plainly
+
+  BT:
+    posture: precision_weighted
+    rationale: >
+      A false positive is an accusation against a person. Recall is not worth that.
+    status: not_evaluated
+    hard_constraint: never_asserted_from_absence_of_human_evidence
+
+  MT:
+    posture: precision_weighted
+    rationale: >
+      A classifier may not claim more confidence than the humans who labelled its data.
+    status: not_evaluated
+    precision_min_lower_bound: 0.85      # candidate
+    recall_min_lower_bound: 0.40         # candidate
+    krippendorff_alpha_min: 0.55         # MT ONLY. Does not gate any other tag.
+
+  HP:
+    posture: undetermined                # set when a corpus is designed, not now
+    status: experimental_not_in_release
+
+  FI:
+    posture: undetermined
+    status: not_evaluated
+
+  NF:
+    posture: undetermined
+    status: not_evaluated
+
+abstention:
+  # Rev 1 enforced a global 0.02-0.35 band. Codex is right that forcing a MINIMUM
+  # abstention rate on a deterministic detector is indefensible: a regex abstains at
+  # whatever rate the data dictates, and a floor would just be noise.
+  #
+  # min_rate/max_rate are the v1 flat keys the current harness reads. They are set to the
+  # deterministic band because the only allowlisted detector is deterministic. They live
+  # here rather than in a second `abstention:` block: a duplicate top-level YAML key is
+  # silently shadowed, which is how the first attempt at this compat layer failed.
+  min_rate: 0.0
+  max_rate: 0.35
+  deterministic_detectors:
+    min_rate: null                       # deliberately unset
+    max_rate: 0.35                       # abstaining on everything is still not a pass
+  probabilistic_detectors:
+    min_rate: 0.02                       # never abstaining means the floors are miscalibrated
+    max_rate: 0.35
+
+latency:
+  # Not a gate until measured on declared hardware at declared input lengths.
+  # Speed is a design driver, not a checkbox: a local model answers before a network
+  # round trip can even begin, and that is the product's structural advantage.
+  status: unmeasured
+  declared_hardware: null
+  declared_input_lengths: null
+  p95_ms_target: 100                     # target, not yet a gate
+
+accessibility:
+  axe_max_serious: 0
+  axe_max_critical: 0
+  fixture_page_required: true            # the Rev 1 job referenced a fixture that did not exist
+  manual_screen_reader_required: true    # axe passing is not accessibility
+
+ci:
+  # No required job may use `|| true`. A missing prerequisite is a FAILURE, not a skip.
+  no_soft_failures: true
+  missing_prerequisite_fails: true
+  deliberate_failure_test_required: true # prove the build can go red

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-08",
+  "health_ready": true,
+  "real_pipeline": true,
+  "assertion_schema_valid": true,
+  "tags": [
+    "PS",
+    "PII_REDACTED"
+  ],
+  "raw_email_absent_from_assertion": true,
+  "offline_email_redaction": true,
+  "synthetic_markers_and_token_absent_from_recent_logs": true,
+  "synthetic_pipeline_latency_ms": [
+    409.9,
+    41.4,
+    18.3
+  ],
+  "latency_budget_accepted": false,
+  "services": {
+    "gateway": {
+      "source_sha256": "f6b0557f19accdb14f12fc5f3c31f6a1459ff7b321b25dd3b24ab19b61b065b3",
+      "uid": 10001,
+      "read_only": true,
+      "capabilities_dropped": true,
+      "no_new_privileges": true
+    },
+    "anonymizer": {
+      "source_sha256": "6fe4cd11ece8a6450ae41c0b1cbc7223ba944b1385f329d639554f844807eac1",
+      "uid": 10001,
+      "read_only": true,
+      "capabilities_dropped": true,
+      "no_new_privileges": true,
+      "external_tcp_reachable": false
+    },
+    "evaluator": {
+      "source_sha256": "c775f2ae6888ebbe5cfbdc91647b3ea5da1b8ed20ff5ded84b2e53520c5de077",
+      "uid": 10001,
+      "read_only": true,
+      "capabilities_dropped": true,
+      "no_new_privileges": true,
+      "external_tcp_reachable": false
+    }
+  },
+  "egress_probe_scope": "one external IPv4 TCP destination; not universal proof",
+  "live_vendor_compatibility": false,
+  "release_validated": false
+}

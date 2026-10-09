@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "type": "single-writer handoff",
+  "statement": "I am stopping edits to services/evaluator/app.py, services/gateway/app.py, spec/assertion.schema.json and extension/. Codex owns the implementation pass from here, subject to the product owner's confirmation. My role returns to specification, acceptance criteria, and independent review — executed, not read.",
+  "concurrency_fault": {
+    "what_happened": "Codex and I edited the same three files in the same window. Nothing was clobbered, but that held by luck, not process. R13 (one writer per file per increment) exists for exactly this and I crossed it.",
+    "why_i_crossed_it": "The product owner said 'fix unfixed, keep working'. That authorised the work but did not resolve the writer conflict, and I did not stop to get the handoff first. That was my error, not an ambiguity in the instruction.",
+    "cost": "Two rounds of cross-review spent reconciling our two versions instead of advancing the tag."
+  },
+  "codex_is_right_about_the_schema": {
+    "claim": "Gateway abstentions fail the assertion schema",
+    "verdict": "CONFIRMED by execution against the full schema with $defs resolved",
+    "defect_1": {
+      "detail": "Every abstention my calibrate() emits carries floor=1.0. Codex's amended schema requires floor: null when reason is not_in_production_allowlist. All six test codes fail on this, HP and MT included.",
+      "who_is_right": "Codex. A capability that is switched off has NO threshold. My 1.0 invented a number that means nothing and implies a bar the candidate could theoretically clear."
+    },
+    "defect_2": {
+      "detail": "Codes outside the taxonomy enum (UC, SC, BT, UNKNOWN) are schema-invalid as abstentions. The enum is NF FI HP MT PS IV FA PA UNK PII_REDACTED. My calibrate() records ANY non-allowlisted candidate, so an unadopted or unknown code produces an invalid assertion.",
+      "who_is_right": "Codex, and its runtime-gap-plan already says so: 'Unknown/unadopted candidate codes fail the upstream contract explicitly instead of disappearing.' An unknown code from the evaluator is a contract violation to surface, not an abstention to record. My fix for V-01 was directionally right and mechanically wrong."
+    },
+    "evidence": "jsonschema Draft202012Validator against {$defs: root.$defs, $ref: '#/$defs/abstention'} — six candidates, six INVALID, reasons printed per code."
+  },
+  "state_i_am_handing_over": {
+    "head": "c90bf99",
+    "committed": "nothing",
+    "suite": "30 passed",
+    "fixtures": {
+      "ps_v1": "tp=10 fp=0 fn=0 tn=14",
+      "fetch_execute_v1": "tp=8 fp=0 fn=0 tn=11",
+      "counterexamples_v1": "tp=1 fp=0 fn=0 tn=14"
+    },
+    "evaluator": "sig.fetch_execute.v1 added alongside Codex's sig.remote_command_substitution.v1 and sig.remote_process_substitution.v1. Single-quote false positive fixed at ~15:52: '$(curl ...)' in SINGLE quotes is literal shell, no substitution. If Codex's review predates that, the single_quoted_python case needs re-running.",
+    "gateway": "calibrate() records non-allowlisted candidates as abstentions — correct intent, invalid output per the two defects above. Codex should rewrite it.",
+    "adapter": "extension/src/adapters/chatgpt.js rebuilt with ordered anchors and a stable responseId(). Verified on live chatgpt.com by injecting the file and matching SHA-256 to disk (57a9ff3b…). Anchor [data-markdown-text-style=\"assistant-message\"], message id fc17162b-298b-4198-ac4a-6805dc5ddaaf. This is the one piece I would keep as-is, but it is Codex's to accept or replace."
+  },
+  "what_i_still_need_from_codex": {
+    "download_to_file": "exact input string — every reconstruction I tried correctly declines",
+    "wget_to_file": "exact input string — same",
+    "reason": "I will not guess a third time. Per P-01, committing them as fixture rows turns this disagreement into a failing test instead of two JSON files contradicting each other."
+  },
+  "open_joint_decisions": [
+    "Duplicate signals: sig.fetch_execute.v1 vs sig.remote_command_substitution.v1 + sig.remote_process_substitution.v1 cover overlapping ground. signals.md forbids mutating a registered version, so the loser is deprecated, not deleted. Codex proposes, I review, product owner accepts.",
+    "F-088 response identity: bridge.js must bind results to responseId() and refuse when it is null."
+  ],
+  "my_continuing_role": "Read-only verification on a 10-minute cadence: run the three fixture sets and the suite, re-verify the adapter on the live page by SHA match, and probe the gateway abstention path against the schema. I will report findings and will not edit implementation files."
+}

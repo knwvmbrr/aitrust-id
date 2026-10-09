@@ -1,0 +1,17 @@
+{
+  "status": "connectivity_only_no_authentication_or_email",
+  "checks": [
+    {
+      "role": "primary",
+      "returncode": 0,
+      "result": "{\"tls_connection\": true, \"authentication_attempted\": false}",
+      "stderr": ""
+    },
+    {
+      "role": "backup",
+      "returncode": 0,
+      "result": "{\"tls_connection\": false, \"error_class\": \"TimeoutError\", \"authentication_attempted\": false}",
+      "stderr": ""
+    }
+  ]
+}

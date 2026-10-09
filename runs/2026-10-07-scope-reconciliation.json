@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-07",
+  "increment": "A",
+  "status": "reconciliation_complete_with_disclosed_retention_limits",
+  "records": 194,
+  "unique_ids": true,
+  "all_records_have_jobs_and_outcomes": true,
+  "runtime_verified": false,
+  "current_commit_contains_ds_store": false,
+  "historical_commit_contains_ds_store": true,
+  "matching_github_repository_found": false,
+  "local_remote_configured": false,
+  "privacy_scan_main_findings": 0,
+  "privacy_scan_working_tree_findings": 0,
+  "unrelated_historical_blob_retained_locally": true,
+  "head": "c90bf99392cbf7c9120f0b751cf712bc9152b34c",
+  "limitations": [
+    "Pattern-based audit is not proof against all sensitive data",
+    "Local tooling refs retain unrelated historical material; no history rewrite or ref deletion performed",
+    "Historical .DS_Store remains in parent commit",
+    "Public release remains a separate gate"
+  ]
+}

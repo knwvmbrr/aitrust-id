@@ -1,0 +1,144 @@
+{
+  "status": "blocked_on_single_writer_handoff; release_not_validated",
+  "method": "Read-only execution of current combined code; development counterexamples, not an independent accuracy estimate",
+  "source_sha256": {
+    "services/evaluator/app.py": "55d2e425f6cf7e45f6afd1acd440355059779c467ed151d91ecf227541c7d76c",
+    "services/gateway/app.py": "17a7ee190fe19a49c83ce4d676f5178d431be789bea187e977f0b98f953f6e9c",
+    "extension/src/adapters/chatgpt.js": "57a9ff3be71433077e551b116b161e3ede7232a153a0f8537e4b1b9deafa1960",
+    "extension/src/content/bridge.js": "e04c0bd17fe1942e774bb0852cc3a65febd7ea64ca9f820fe436827b5561665e",
+    "spec/assertion.schema.json": "9aa15f71e2aa65aef625dafb41405180da8400afa3b95ba46b50e3d3f33d9208"
+  },
+  "sources_unchanged_during_probe": true,
+  "existing_python_suite": {
+    "passed": 30,
+    "coverage_limit": "Does not exercise these counterexamples or validate disabled abstentions against assertion schema"
+  },
+  "detector_cases": [
+    {
+      "case": "homebrew",
+      "expected": true,
+      "observed": true,
+      "passed": true,
+      "signals": [
+        "sig.remote_command_substitution.v1"
+      ]
+    },
+    {
+      "case": "quoted_display",
+      "expected": false,
+      "observed": false,
+      "passed": true,
+      "signals": []
+    },
+    {
+      "case": "download_to_file",
+      "expected": false,
+      "observed": true,
+      "passed": false,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "wget_to_file",
+      "expected": false,
+      "observed": true,
+      "passed": false,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "mere_shell_name",
+      "expected": false,
+      "observed": false,
+      "passed": true,
+      "signals": []
+    },
+    {
+      "case": "single_quoted_python",
+      "expected": false,
+      "observed": true,
+      "passed": false,
+      "signals": [
+        "sig.fetch_execute.v1"
+      ]
+    },
+    {
+      "case": "warning_path",
+      "expected": false,
+      "observed": false,
+      "passed": true,
+      "signals": []
+    }
+  ],
+  "gateway_candidate_cases": [
+    {
+      "code": "HP",
+      "tags": [],
+      "abstentions": [
+        {
+          "code": "HP",
+          "confidence": 1.0,
+          "floor": 1.0,
+          "reason": "not_in_production_allowlist"
+        }
+      ],
+      "schema_errors": [
+        "1.0 is not of type 'null'"
+      ],
+      "silently_dropped": false
+    },
+    {
+      "code": "UC",
+      "tags": [],
+      "abstentions": [
+        {
+          "code": "UC",
+          "confidence": 1.0,
+          "floor": 1.0,
+          "reason": "not_in_production_allowlist"
+        }
+      ],
+      "schema_errors": [
+        "'UC' is not one of ['NF', 'FI', 'HP', 'MT', 'PS', 'IV', 'FA', 'PA', 'UNK', 'PII_REDACTED']",
+        "1.0 is not of type 'null'"
+      ],
+      "silently_dropped": false
+    },
+    {
+      "code": "UNKNOWN",
+      "tags": [],
+      "abstentions": [
+        {
+          "code": "UNKNOWN",
+          "confidence": 1.0,
+          "floor": 1.0,
+          "reason": "not_in_production_allowlist"
+        }
+      ],
+      "schema_errors": [
+        "'UNKNOWN' is not one of ['NF', 'FI', 'HP', 'MT', 'PS', 'IV', 'FA', 'PA', 'UNK', 'PII_REDACTED']",
+        "1.0 is not of type 'null'"
+      ],
+      "silently_dropped": false
+    },
+    {
+      "code": "PII_REDACTED",
+      "tags": [],
+      "abstentions": [],
+      "schema_errors": [],
+      "silently_dropped": true
+    }
+  ],
+  "new_fixture_invalid_spans": [],
+  "adapter_review": {
+    "live_assistant_body_anchor_observed": true,
+    "extension_execution_on_live_site_verified": false,
+    "toolbar_exclusion_missing": true,
+    "responseId_not_consumed_by_bridge": true,
+    "generic_turn_fallback_not_role_filtered": true
+  },
+  "writer_handoff_pending": true,
+  "publication_performed": false
+}

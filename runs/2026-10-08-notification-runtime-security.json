@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "role": "primary",
+      "check": "HTTPS timer enabled",
+      "pass": true
+    },
+    {
+      "role": "primary",
+      "check": "HTTPS timer waiting with future activation",
+      "pass": true
+    },
+    {
+      "role": "primary",
+      "check": "sender succeeded",
+      "pass": true
+    },
+    {
+      "role": "primary",
+      "check": "source credential private",
+      "pass": true
+    },
+    {
+      "role": "primary",
+      "check": "source matches",
+      "pass": true
+    },
+    {
+      "role": "primary",
+      "check": "PostgreSQL has no TCP listener",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "HTTPS timer enabled",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "HTTPS timer waiting with future activation",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "sender succeeded",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "source credential private",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "source matches",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "PostgreSQL has no TCP listener",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "ntfy loopback only",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "edge active",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "protected copy permissions",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "notification sandbox",
+      "pass": true
+    },
+    {
+      "role": "backup",
+      "check": "edge TLS readiness",
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "deployed_sender_sha256": "61be9da7e21527f8209287a2fc8cd5fb817131ab091fb7126d38c9d606c1bdb5",
+  "database_publicly_exposed": false
+}

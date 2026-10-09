@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-08",
+  "task": "brief_tag_explanations_structured_records_and_access",
+  "source_sha256": {
+    "extension/src/content/badge.js": "546e4228e9de74fc0f67c7df49db3fce470d7da69f6524d4902027c093ef310d",
+    "scripts/browser-acceptance.js": "544a17d4733c593ad14c3efca99a6d43584781b313d41340c8b8dd09505f8f41",
+    "scripts/verify-extension.cjs": "7c7f061d309feae67fcf52f1c865163ef01157c21e25e2b60c0838053e7bfab9",
+    "scripts/verify-site.cjs": "09a1cd74bbf7ea6e7a8c913790386ccb310cb53748a20b09e208003d3847b0c4"
+  },
+  "browser": {
+    "syntheticBrowserChecks": true,
+    "compactUI": {
+      "outOfOrder": true,
+      "unknownSignalSafe": true,
+      "briefExplanation": true,
+      "structuredLocalExport": true,
+      "predictionNotTrainingLabel": true,
+      "exportExcludesSourceText": true,
+      "compactTags": true,
+      "restingTagHeight": 24,
+      "restingTagWidth": 28,
+      "noDialogLayoutShift": true,
+      "nativeCloseFocus": true,
+      "staleDiscarded": true,
+      "characterMutation": true,
+      "duplicateSuppression": true,
+      "unavailableDistinct": true,
+      "escapeFocus": true,
+      "nativeFocusContainment": true,
+      "backdropDismissal": true,
+      "multipleTags": {
+        "allDistinctTags": true,
+        "syntheticTagCount": 6,
+        "duplicatesSuppressed": true,
+        "outputGeometryUnchanged": true,
+        "belowOutput": true,
+        "narrowRowWrap": true,
+        "perTagDetails": true
+      }
+    },
+    "observedDOM": {
+      "observedAttributeStructure": true,
+      "syntheticContent": true,
+      "wholeBody": true,
+      "toolbarExcluded": true,
+      "promptExcluded": true,
+      "hiddenExcluded": true,
+      "identityRequired": true,
+      "sameTextIdentityRace": true,
+      "navigationRace": true,
+      "streamingGuard": true,
+      "lostRoleCleanup": true,
+      "unsupportedCaptureVisible": true,
+      "liveVendorExecution": false
+    },
+    "axeSerious": 0,
+    "axeCritical": 0,
+    "axeTotalViolations": 0,
+    "reflow320": true,
+    "forcedColors": true,
+    "reducedMotion": true,
+    "closedShadowBehaviorTested": true,
+    "axeUsesTestOnlyOpenShadow": true,
+    "manualScreenReader": false,
+    "liveVendorCompatibility": false
+  },
+  "real_extension_pipeline": {
+    "realUnpackedExtension": true,
+    "realGateway": true,
+    "realRedaction": true,
+    "realEvaluator": true,
+    "keyboardEvidenceOpened": true,
+    "briefExplanation": true,
+    "structuredExport": true,
+    "exportedEvaluatorHashMatches": true,
+    "rawEmailAbsentFromEvidence": true,
+    "rawContentExcludedFromExport": true,
+    "observedAttributeStructure": true,
+    "observedCases": [
+      {
+        "name": "homebrew",
+        "expectedFinding": true,
+        "passed": true
+      },
+      {
+        "name": "download_to_file",
+        "expectedFinding": false,
+        "passed": true
+      },
+      {
+        "name": "wget_to_file",
+        "expectedFinding": false,
+        "passed": true
+      }
+    ],
+    "liveVendorResponse": false,
+    "syntheticPage": true
+  },
+  "native_chrome": {
+    "updated_installed_extension": true,
+    "brief_ps_description_verified": true,
+    "technical_hashes_and_scores_absent_from_brief": true,
+    "download_record_action_visible": true,
+    "escape_restores_ps_focus": true,
+    "private_browser_content_exported": false
+  },
+  "repository": {
+    "url": "https://github.com/knwvmbrr/aitrust-id",
+    "visibility": "public",
+    "created": true,
+    "origin_connected": true,
+    "account_can_push": true,
+    "empty": true,
+    "code_pushed": false
+  },
+  "cloudflare": {
+    "prior_deployment_credentials": "expired",
+    "default_broad_login_cancelled": true,
+    "requested_scopes": [
+      "account:read",
+      "user:read",
+      "pages:write",
+      "zone:read"
+    ],
+    "narrowed_login": "failed",
+    "error_signature": "request_forbidden: No CSRF value available in the session cookie",
+    "deployment_access_restored": false,
+    "oauth_codes_tokens_or_private_account_details_saved_in_report": false,
+    "device_login": "started; awaiting user authorization",
+    "device_code_saved_in_report": false
+  },
+  "data": {
+    "scope_id": "N-011",
+    "scope_record_count": 198,
+    "structured_local_export": true,
+    "selected_destination": "Existing remote server for self-hosted PostgreSQL",
+    "server_access_supplied": false,
+    "database_connected": false,
+    "automatic_forwarding": false,
+    "source_text_excluded": true,
+    "training_label_null": true,
+    "collection_retention_policy": "unresolved"
+  },
+  "checks": [
+    "npm run verify:browser",
+    "AITRUST_ENV_FILE=<private existing env> node scripts/verify-extension.cjs",
+    "npm run build:site",
+    "npm run verify:site",
+    "node --check extension/src/content/badge.js",
+    "git diff --check"
+  ],
+  "release_validated": false,
+  "site": {
+    "date": "2026-10-08",
+    "builtSite": true,
+    "tagModalsChecked": 20,
+    "personRecords": 14,
+    "enterpriseOfferings": 6,
+    "preservedScopeRecords": 198,
+    "deepLinks": true,
+    "malformedFragmentSafe": true,
+    "keyboardFocusTrap": true,
+    "escapeRestoresFocus": true,
+    "nestedReportFocus": true,
+    "draftExport": true,
+    "noFalseSubmission": true,
+    "noScriptReference": true,
+    "mobile320": true,
+    "textEnlargement200": true,
+    "axeViolations": 0,
+    "unexpectedOutboundRequests": 0,
+    "footerModalsChecked": 8,
+    "nativeModelContextAvailable": false,
+    "nativeModelToolsValidated": false,
+    "manualScreenReader": false,
+    "remoteIntake": false,
+    "published": false
+  }
+}

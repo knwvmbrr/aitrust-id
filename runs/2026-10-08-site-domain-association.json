@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-08T23:50:09.508855+00:00",
+  "deployment_id": "5e75ffe7-a23f-4d13-b9c5-aa8ab4089e9b",
+  "deployment_url": "https://5e75ffe7.aitrust-id.pages.dev",
+  "domains": [
+    {
+      "name": "aitrustid.com",
+      "status": "active",
+      "validation_data": {
+        "status": "active",
+        "method": "http"
+      },
+      "verification_data": {
+        "status": "active"
+      },
+      "https_status": 200,
+      "sha256": "43018f80c2fda7479ad47c2080524a9b502bff8a9e4f17bc1e730425cd84265d",
+      "html_matches_build": true,
+      "beacon_injected": false,
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+      }
+    },
+    {
+      "name": "www.aitrustid.com",
+      "status": "active",
+      "validation_data": {
+        "status": "active",
+        "method": "http"
+      },
+      "verification_data": {
+        "status": "active"
+      },
+      "https_status": 200,
+      "sha256": "43018f80c2fda7479ad47c2080524a9b502bff8a9e4f17bc1e730425cd84265d",
+      "html_matches_build": true,
+      "beacon_injected": false,
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+      }
+    },
+    {
+      "name": "aitrust-id.pages.dev",
+      "https_status": 200,
+      "sha256": "43018f80c2fda7479ad47c2080524a9b502bff8a9e4f17bc1e730425cd84265d",
+      "html_matches_build": true,
+      "beacon_injected": false,
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+      }
+    }
+  ]
+}

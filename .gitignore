@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.env
+deploy/.env
+eval/results.json
+node_modules/
+models/
+.DS_Store
+*.bak
+
+output/
+.playwright-cli/
+
+.venv/
+
+site/dist/
+site/.wrangler/
+
+# Private provider checkout/sign-in screenshots are not source distribution.
+runs/hosting-research/
+dist/

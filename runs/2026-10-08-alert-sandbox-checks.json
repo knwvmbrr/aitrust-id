@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "role": "primary",
+      "sandbox_returncode": 0,
+      "stdout": "{\"role\": \"primary\", \"issues\": []}",
+      "stderr": "",
+      "timer_enabled": false
+    },
+    {
+      "role": "backup",
+      "sandbox_returncode": 0,
+      "stdout": "{\"role\": \"backup\", \"issues\": []}",
+      "stderr": "",
+      "timer_enabled": false
+    }
+  ],
+  "email_sent": false,
+  "external_delivery_verified": false,
+  "prior_failure": "DynamicUser systemctl read rejected with Transport endpoint is not connected; missing NSS package installed but did not resolve bus access; stable dedicated unprivileged identity used and retested"
+}

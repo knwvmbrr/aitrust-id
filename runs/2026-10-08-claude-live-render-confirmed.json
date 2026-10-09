@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-08",
+  "actor": "Claude",
+  "role": "independent verification of a README claim, under single-writer handoff — read-only",
+  "claim_under_test": "README: 'Live ChatGPT | Installed Chrome extension verified on one existing Homebrew answer: finding, evidence and evaluator source hash.'",
+  "verdict": "CONFIRMED. I set out to challenge this claim and it held.",
+  "why_i_challenged_it": "Six run records state liveVendorExecution / liveVendorCompatibility / liveVendorResponse = false (browser-checks, compact-tags, multiple-tags, container-checks, extension-integration). No record stated true. On the evidence in runs/ alone, the README appeared to contradict its own files.",
+  "what_i_actually_found": {
+    "method": "queried the live chatgpt.com DOM directly in the user's Chrome, on conversation 6ac7b1f8-f480-83ea-a8b0-d7b3fd02f4a9",
+    "aitrust_mount_elements": 2,
+    "mounted_inside_assistant_message": true,
+    "shadow_root": "closed (hasOpenShadow false) — as designed",
+    "live_region": {"role": "status", "aria-live": "polite"},
+    "announced_text": "AI Trust ID. Command risk pattern detected. Read the evidence before acting.",
+    "subject": "the real assistant response containing /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+  },
+  "significance": "This closes the full chain on a live vendor page for the first time: adapter anchor -> capture -> loopback gateway -> redaction -> evaluator -> sig.remote_command_substitution.v2 -> calibrated assertion -> badge mounted on the CORRECT response -> polite screen-reader announcement. The exact command it labelled is the one the detector could not see at all this morning (finding L-01), on a page whose anchors did not exist for the adapter (finding L-02).",
+  "claim_boundary_honoured": "The announced string is 'Command risk pattern detected. Read the evidence before acting.' It does not say scam, does not assert intent, and does not imply clearance. That is RFC-0004's claim boundary surviving all the way into the shipped UI string.",
+  "x10_honoured": "aria-live is polite with role=status. A trust label does not interrupt what someone is reading.",
+  "the_actual_finding": {
+    "id": "P-04",
+    "severity": "evidence record, not correctness",
+    "statement": "The claim is TRUE and its evidence is NOT in runs/. Every machine-readable record says live vendor execution is false — those records are about the automated harness, which genuinely did not run against the live vendor — but the successful installed-extension check was never written down. An auditor reading this repo would find a README claim contradicted by six evidence files and would reasonably conclude the README was overclaiming.",
+    "this_record_is_the_remedy": true,
+    "pattern": "Fourth instance today of P-01: a verification whose inputs or outputs were not committed. Mine ('0 false positives'), Codex's counterexample probe, the fetch_execute withdrawal note, and now an unrecorded SUCCESS. The failure mode is symmetrical — unrecorded evidence makes a true claim look false just as readily as it lets a false one stand.",
+    "recommended": "Codex adds a liveVendorExecution-true record, or amends browser-checks.json to distinguish 'automated harness did not run live' from 'installed extension was checked live and passed'."
+  },
+  "what_this_does_NOT_establish": [
+    "No gate passed. The README's own table is correct that precision and recall lower bounds are about 0.722 and fail the candidate gates.",
+    "One response, one site, one command shape, one manual observation. Not coverage.",
+    "No human screen-reader evaluation. The announcement is correctly marked up; whether it is usable is a separate question only a daily screen-reader user can answer.",
+    "Residual false-positive rate still UNKNOWN — every counterexample in the repo was authored by a party who can see the detector."
+  ],
+  "commits_made": 0,
+  "codex_files_edited": "none"
+}

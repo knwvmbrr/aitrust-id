@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-08",
+  "task": "compact_in_use_tags",
+  "implementation_pass": true,
+  "architecture": "docs/compact-tags-plan.md",
+  "source_sha256": {
+    "extension/src/content/badge.js": "a03db5ee4d99b385e5fb7715332f31f74c954afb40f48954334d8861c02d2cb3",
+    "scripts/browser-acceptance.js": "e08597daf7e8f05eff85448f991e4e7372a7d384876e48c4061cbaffa60afd73",
+    "scripts/live-dom-acceptance.js": "6d15c1b56adeb5dcd1de87bf781d4809e3c1221548fa07a69165f3ea057f3e8d",
+    "scripts/verify-browser.cjs": "473ad514f497bcc2e18c1e78a196d1538ca8a17fa12acd108c03a2584995a6b4",
+    "scripts/verify-extension.cjs": "600ff2b0dd2bfde7e0bf77b23334298d691f295c4e516aa7b5c7507bcbe5eaad"
+  },
+  "browser": {
+    "syntheticBrowserChecks": true,
+    "compactUI": {
+      "outOfOrder": true,
+      "unknownSignalSafe": true,
+      "compactTags": true,
+      "restingTagHeight": 32,
+      "restingTagWidth": 28,
+      "noDialogLayoutShift": true,
+      "nativeCloseFocus": true,
+      "staleDiscarded": true,
+      "characterMutation": true,
+      "duplicateSuppression": true,
+      "unavailableDistinct": true,
+      "escapeFocus": true,
+      "nativeFocusContainment": true,
+      "backdropDismissal": true
+    },
+    "observedDOM": {
+      "observedAttributeStructure": true,
+      "syntheticContent": true,
+      "wholeBody": true,
+      "toolbarExcluded": true,
+      "promptExcluded": true,
+      "hiddenExcluded": true,
+      "identityRequired": true,
+      "sameTextIdentityRace": true,
+      "navigationRace": true,
+      "streamingGuard": true,
+      "lostRoleCleanup": true,
+      "unsupportedCaptureVisible": true,
+      "liveVendorExecution": false
+    },
+    "axeSerious": 0,
+    "axeCritical": 0,
+    "axeTotalViolations": 0,
+    "reflow320": true,
+    "forcedColors": true,
+    "reducedMotion": true,
+    "closedShadowBehaviorTested": true,
+    "axeUsesTestOnlyOpenShadow": true,
+    "manualScreenReader": false,
+    "liveVendorCompatibility": false
+  },
+  "unpacked_extension": {
+    "realUnpackedExtension": true,
+    "realGateway": true,
+    "realRedaction": true,
+    "realEvaluator": true,
+    "keyboardEvidenceOpened": true,
+    "rawEmailAbsentFromEvidence": true,
+    "observedAttributeStructure": true,
+    "observedCases": [
+      {
+        "name": "homebrew",
+        "expectedFinding": true,
+        "passed": true
+      },
+      {
+        "name": "download_to_file",
+        "expectedFinding": false,
+        "passed": true
+      },
+      {
+        "name": "wget_to_file",
+        "expectedFinding": false,
+        "passed": true
+      }
+    ],
+    "liveVendorResponse": false,
+    "syntheticPage": true
+  },
+  "commands": [
+    "npm run verify:browser",
+    "AITRUST_ENV_FILE=<existing private runtime env> node scripts/verify-extension.cjs"
+  ],
+  "native_chrome": {
+    "installed_extension_reloaded": true,
+    "existing_homebrew_answer": true,
+    "resting_visible_codes": [
+      "PS",
+      "PII"
+    ],
+    "persistent_warning_card_absent": true,
+    "ps_detail_opened": true,
+    "evaluator_source_sha256": "c775f2ae6888ebbe5cfbdc91647b3ea5da1b8ed20ff5ded84b2e53520c5de077",
+    "escape_dismissal": true,
+    "focus_return_to_ps": true,
+    "screenshot_visually_inspected": true,
+    "private_browser_content_saved_to_repo": false
+  },
+  "synthetic_screenshots": [
+    "output/playwright/compact-tags.png",
+    "output/playwright/compact-tag-details.png"
+  ],
+  "limitations": [
+    "No human screen-reader evaluation",
+    "Native live verification covers one existing Homebrew answer",
+    "UI verification does not establish independent tag accuracy or release validation"
+  ],
+  "release_validated": false
+}

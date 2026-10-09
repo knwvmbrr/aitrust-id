@@ -1,0 +1,23 @@
+{
+  "scope": "isolated_protected_restore",
+  "target_kind": "after",
+  "generation": "20261008T222213Z-2d6f498f",
+  "backup_label": "20261008-221801F",
+  "checks": {
+    "target_promoted": true,
+    "network_namespace_isolated": true,
+    "synthetic_rows": true,
+    "checksums": true,
+    "socket_only": true,
+    "runtime_roles_unprivileged": true,
+    "reader_select": true,
+    "reader_write_denied": true,
+    "intake_read_denied": true,
+    "intake_insert": true,
+    "restore_cluster_stopped": true
+  },
+  "passed": true,
+  "elapsed_seconds": 2.848,
+  "production_ready": false,
+  "after_backup_host_reboot": true
+}

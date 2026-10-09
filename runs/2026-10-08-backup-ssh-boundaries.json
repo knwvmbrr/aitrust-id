@@ -1,0 +1,9 @@
+{
+  "scope": "live_restricted_backup_credentials",
+  "checks": {
+    "primary_key_cannot_run_shell_on_repository": true,
+    "repository_key_cannot_run_shell_on_primary": true,
+    "primary_key_cannot_forward_ports": true
+  },
+  "passed": true
+}

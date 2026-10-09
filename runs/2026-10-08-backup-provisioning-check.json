@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-08T22:09:34.805881+00:00",
+  "scope": "Independent backup Droplet provisioning and access check",
+  "provider": "DigitalOcean",
+  "owner_reports_payment_completed": true,
+  "provider_status": "Active",
+  "os": "Debian 13 x64",
+  "kernel_console": "6.12.111+deb13-amd64",
+  "plan": {
+    "vcpu": 1,
+    "memory_gb": 2,
+    "disk_gb": 70,
+    "monthly_usd_before_tax": 16,
+    "region": "NYC3"
+  },
+  "checks": {
+    "provider_web_console_root_login": true,
+    "ssh_host_fingerprint_matches_provider_console": true,
+    "dedicated_admin_key_installed": false,
+    "dedicated_key_ssh_login": false,
+    "existing_local_key_fingerprint_matches_installed_key": true,
+    "existing_key_server_accepts_public_key": true,
+    "existing_key_unattended_login": false
+  },
+  "diagnosis": "Creation installed an existing local administrator public key rather than the dedicated backup public key. The existing key is accepted by the server but cannot complete unattended authentication. Its reason for failing to sign was not established.",
+  "correction_to_cart_record": "The selected key name was observed, but its fingerprint was not checked. Selection by name did not prove installation of the dedicated key.",
+  "changes_on_host": "Read-only identity and SSH diagnostics; terminal clear. No permanent security configuration changes.",
+  "pending": "Owner installs dedicated public key through the open provider console; verify login before deployment.",
+  "backup_repository_configured": false,
+  "restore_verified": false,
+  "production_data_accepted": false,
+  "private_screenshot": "Console handoff view retained outside public repository"
+}

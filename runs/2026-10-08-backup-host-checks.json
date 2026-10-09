@@ -1,0 +1,29 @@
+{
+  "scope": "independent_backup_host",
+  "checks": {
+    "ssh_permitrootlogin": true,
+    "ssh_passwordauthentication": true,
+    "ssh_kbdinteractiveauthentication": true,
+    "ssh_allowagentforwarding": true,
+    "ssh_x11forwarding": true,
+    "ssh_accounts": true,
+    "dual_stack_input_drop": true,
+    "forward_drop": true,
+    "persistent_firewall": true,
+    "no_database_tcp_listener": true,
+    "no_multicast_name_listener": true,
+    "dns_works": true,
+    "protected_root_only": true,
+    "repository_account_cannot_read_protected": true,
+    "update_timer": true,
+    "pgbackrest_patched": true,
+    "protected_generation_present": true,
+    "protected_generation_fresh": true,
+    "backup_fresh": true,
+    "capacity_above_required_percent": true
+  },
+  "failures": [],
+  "passed": true,
+  "production_ready": false,
+  "after_reboot": true
+}

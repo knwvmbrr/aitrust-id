@@ -1,0 +1,32 @@
+{
+  "realUnpackedExtension": true,
+  "realGateway": true,
+  "realRedaction": true,
+  "realEvaluator": true,
+  "keyboardEvidenceOpened": true,
+  "briefExplanation": true,
+  "structuredExport": true,
+  "exportedEvaluatorHashMatches": true,
+  "rawEmailAbsentFromEvidence": true,
+  "rawContentExcludedFromExport": true,
+  "observedAttributeStructure": true,
+  "observedCases": [
+    {
+      "name": "homebrew",
+      "expectedFinding": true,
+      "passed": true
+    },
+    {
+      "name": "download_to_file",
+      "expectedFinding": false,
+      "passed": true
+    },
+    {
+      "name": "wget_to_file",
+      "expectedFinding": false,
+      "passed": true
+    }
+  ],
+  "liveVendorResponse": false,
+  "syntheticPage": true
+}

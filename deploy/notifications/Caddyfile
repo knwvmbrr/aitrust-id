@@ -1,0 +1,18 @@
+{
+    admin off
+    email admin@aitrustid.com
+}
+notify.aitrustid.com {
+    tls {
+        protocols tls1.2 tls1.3
+    }
+    request_body {
+        max_size 8KB
+    }
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy no-referrer
+        -Server
+    }
+    reverse_proxy 127.0.0.1:2586
+}

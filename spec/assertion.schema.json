@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aitrustid.org/spec/0.1.0/assertion.schema.json",
+  "title": "AITrust-ID Trust Assertion",
+  "type": "object",
+  "required": [
+    "assertion_id",
+    "spec_version",
+    "subject",
+    "tags",
+    "abstentions",
+    "evaluator"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "assertion_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "spec_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "sha256",
+        "char_len",
+        "origin_host",
+        "captured_at",
+        "modality"
+      ],
+      "additionalProperties": false,
+      "description": "Describes the evaluated content WITHOUT containing it.",
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "char_len": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "origin_host": {
+          "type": "string"
+        },
+        "captured_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "modality": {
+          "enum": [
+            "text",
+            "code",
+            "image",
+            "audio",
+            "video",
+            "document"
+          ],
+          "description": "The current gateway accepts text only; code snippets can be evaluated as text content. The code, image, audio, video and document modality values are reserved by the specification and do not establish runtime support."
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tag"
+      }
+    },
+    "abstentions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/abstention"
+      }
+    },
+    "evaluator": {
+      "type": "object",
+      "required": [
+        "models",
+        "calibration_id",
+        "latency_ms"
+      ],
+      "properties": {
+        "models": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "sha256"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "revision": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "calibration_id": {
+          "type": "string"
+        },
+        "latency_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "alg",
+        "key_id",
+        "sig"
+      ],
+      "properties": {
+        "alg": {
+          "const": "ed25519"
+        },
+        "key_id": {
+          "type": "string"
+        },
+        "sig": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "code": {
+      "enum": [
+        "NF",
+        "FI",
+        "HP",
+        "MT",
+        "PS",
+        "IV",
+        "FA",
+        "PA",
+        "UNK",
+        "PII_REDACTED"
+      ]
+    },
+    "span": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "description": "[start, end) character offsets into the REDACTED text."
+    },
+    "signal": {
+      "type": "object",
+      "required": [
+        "id",
+        "score"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_.]+\\.v\\d+$"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "spans": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/span"
+          }
+        },
+        "detail": {
+          "type": "object"
+        }
+      }
+    },
+    "tag": {
+      "type": "object",
+      "required": [
+        "code",
+        "confidence",
+        "state",
+        "signals"
+      ],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/code"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "floor": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "state": {
+          "const": "asserted"
+        },
+        "signals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/signal"
+          }
+        }
+      }
+    },
+    "abstention": {
+      "type": "object",
+      "required": [
+        "code",
+        "confidence",
+        "floor",
+        "reason"
+      ],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/code"
+        },
+        "confidence": {
+          "type": "number"
+        },
+        "floor": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reason": {
+          "enum": [
+            "below_floor",
+            "no_corpus",
+            "unsupported_modality",
+            "timeout",
+            "not_in_production_allowlist"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "reason": {
+                "const": "not_in_production_allowlist"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "floor": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "floor": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

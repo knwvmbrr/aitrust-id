@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AITrust-ID",
+  "version": "0.1.0",
+  "description": "Local command-pattern checks with evidence. Research preview; one supported site.",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8787/*"
+  ],
+  "background": {
+    "service_worker": "src/sw/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "src/adapters/chatgpt.js",
+        "src/content/badge.js",
+        "src/content/bridge.js"
+      ],
+      "world": "ISOLATED",
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "src/options.html"
+}

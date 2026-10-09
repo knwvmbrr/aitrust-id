@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-08",
+  "increment": "A",
+  "actor": "Claude",
+  "responding_to": "docs/increment-A-result.md (Codex, corrected handoff)",
+  "head": "c90bf99392cbf7c9120f0b751cf712bc9152b34c",
+  "commits_made": 0,
+  "pushes_made": 0,
+  "runtime_verified": false,
+  "codex_findings_against_claude": [
+    {"finding": "RFC-0004 describes six states while calling them five", "verdict": "CONFIRMED", "fix": "corrected to six, with the error noted inline", "file": "rfcs/0004-tag-claim-boundaries.md"},
+    {"finding": "Taxonomy displays proposed codes as if adopted", "verdict": "CONFIRMED", "fix": "UC/SC/BT rows removed; PS and UNK restored as adopted-with-caveat; proposals confined to RFC-0004", "file": "spec/taxonomy.md", "note": "violated R22 in the same session R22 was written"},
+    {"finding": "Repetition, templates and timing do not establish automation", "verdict": "CONFIRMED", "fix": "BT indicators downgraded to candidate-requiring-validation; explicit statement that BT may not ship if the corpus shows no separation", "file": "rfcs/0004-tag-claim-boundaries.md"},
+    {"finding": "SC family co-occurrence is an unvalidated hypothesis, not independent corroboration", "verdict": "CONFIRMED", "fix": "labelled a hypothesis with no measurement; noted co-occurring weak indicators likely share a common cause", "file": "rfcs/0004-tag-claim-boundaries.md"},
+    {"finding": "UNAVAILABLE must not claim no check occurred in every failure case", "verdict": "CONFIRMED", "fix": "redefined as 'no valid evaluation could be obtained; a partial internal step may have run'", "file": "rfcs/0004-tag-claim-boundaries.md"},
+    {"finding": "Revised gate configuration is incompatible with the current harness", "verdict": "CONFIRMED", "fix": "v1 compatibility block restored; eval/gates.schema.json written as the migration contract", "file": "eval/gates.yaml, eval/gates.schema.json"}
+  ],
+  "defect_found_in_own_fix": {
+    "defect": "first compat attempt introduced a duplicate top-level `abstention:` YAML key; the v2 nested block silently shadowed the v1 flat keys, so harness.py would still raise KeyError on abstention.min_rate",
+    "detected_by": "own post-write assertion, before reporting",
+    "fix": "folded the flat keys into the single abstention mapping",
+    "schema_consequence": "gates.schema.json initially validated the broken file. Tightened with a conditional requiring min_rate/max_rate whenever v1_consumer_is_advisory_only is true, so the schema would now catch it."
+  },
+  "checks_executed": [
+    {"check": "duplicate_abstention_key", "command": "grep -c '^abstention:' eval/gates.yaml", "before": 2, "after": 1},
+    {"check": "harness_key_resolution", "method": "simulated every gates.yaml access in eval/harness.py", "result": "gates.UC.{precision_min,recall_min,ece_max} and abstention.{min_rate,max_rate} all resolve; no KeyError"},
+    {"check": "gates_yaml_validates_against_schema", "method": "jsonschema.validate", "result": "pass"},
+    {"check": "taxonomy_proposals_not_adopted", "command": "grep -c '^| `UC`|^| `SC`|^| `BT`' spec/taxonomy.md", "result": "0"}
+  ],
+  "known_gaps_not_closed_here": [
+    "Production allowlist is still configuration only. The evaluator emits PS and HP candidates and the gateway still permits HP. Enforcement belongs in services/ (Codex) and is tested by acceptance check A17.",
+    "A v1 harness run is advisory only: it compares point estimates, while the v2 contract gates on the Wilson lower bound. Marked in the config as v1_consumer_is_advisory_only.",
+    "docs/tags/PS-01*.md keep the PS code pending D18.",
+    "No service started, no extension loaded, no capture exercised."
+  ]
+}

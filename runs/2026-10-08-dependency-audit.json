@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-08",
+  "tool": "pip-audit",
+  "source": "PyPI vulnerability service",
+  "scope": "pinned service Python packages; not a complete application or OS-image audit",
+  "prior_findings": {
+    "package": "starlette",
+    "version": "0.41.3",
+    "reported_entries": 14,
+    "unique_advisory_ids": 7
+  },
+  "resolved_versions": {
+    "fastapi": "0.143.0",
+    "starlette": "1.7.0"
+  },
+  "services": {
+    "gateway": {
+      "audited_packages": 23,
+      "findings": [],
+      "skipped": []
+    },
+    "evaluator": {
+      "audited_packages": 29,
+      "findings": [],
+      "skipped": []
+    },
+    "anonymizer": {
+      "audited_packages": 63,
+      "findings": [],
+      "skipped": [
+        {
+          "name": "en-core-web-sm",
+          "reason": "URL requirements cannot be pinned to a specific package version"
+        }
+      ]
+    }
+  },
+  "npm": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}
