@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-09-branding-site-public.json",
+    "evidence": "runs/2026-10-09-performance-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +46,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://b33b4137.aitrust-id.pages.dev",
-    "deployment_id": "b33b4137-c1ca-40ce-a4fd-ad498c0b8560",
+    "deployment_url": "https://2b2edb35.aitrust-id.pages.dev",
+    "deployment_id": "2b2edb35-454a-4bd5-b809-f8164decf1b9",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +67,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-09-scope-branding-deployment.json",
+    "publication_evidence": "runs/2026-10-09-performance-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +96,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-09-branding-site-public.json",
+    "verification": "runs/2026-10-09-performance-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -176,7 +176,7 @@
       "evidence": "runs/2026-10-09-branding-public.json"
     },
     "tag_performance": {
-      "status": "implemented_local_checks_pass; publication_pending",
+      "status": "published_and_public_panels_pass",
       "panels": 20,
       "measurement_source": "eval/tag-performance-evidence.json",
       "development_ps_examples": 86,
@@ -190,7 +190,10 @@
       "missing_data_display": "Not measured; never fabricated zero or perfect accuracy",
       "local_evidence": "runs/2026-10-09-performance-ui-local.json",
       "architecture": "docs/tag-performance-plan.md",
-      "execution_evidence": "runs/2026-10-09-performance-execution.json"
+      "execution_evidence": "runs/2026-10-09-performance-execution.json",
+      "public_evidence": "runs/2026-10-09-performance-ui-public.json",
+      "source_commit": "8f1f1732f35591a31c867a80f20e68a4761e659a",
+      "public_asset_evidence": "runs/2026-10-09-performance-assets-public.json"
     }
   },
   "previous_runtime_verification": {
@@ -548,16 +551,16 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-08-upgrade-device-public.json",
+    "evidence": "runs/2026-10-09-performance-device-public.json",
     "future_native_routes": [
       "N-013",
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "b33b4137-c1ca-40ce-a4fd-ad498c0b8560",
+    "deployment": "2b2edb35-454a-4bd5-b809-f8164decf1b9",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input",
-    "latest_emulation_evidence": "runs/2026-10-09-performance-device-final-local.json"
+    "latest_emulation_evidence": "runs/2026-10-09-performance-device-public.json"
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -612,7 +615,8 @@
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-09-scope-branding-deployment.json",
     "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
-    "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json"
+    "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
+    "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
