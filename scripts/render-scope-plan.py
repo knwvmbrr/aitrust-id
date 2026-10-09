@@ -174,7 +174,7 @@ for pkg in plan['packages']:
  if pkg['id'].startswith('TAG-'):text+='**Tag contract:** '+link(pkg['contract'],'../')+'.\n\n'
 (ROOT/'docs/scope-delivery.md').write_text(text)
 index='# Scope task index\n\nAll 202 source IDs remain covered. This is a crosswalk into the [one execution plan](scope-delivery.md), not a second roadmap. Package subtasks and gates supply the delivery criteria. Legacy grouping rows are traceability records, not extra detector implementations.\n\n| Record/task | Preserved requirement | Work packages |\n|---|---|---|\n'
-for row in plan['records']:index+='| '+cell(row['task_id'])+' | '+cell(row['title'])+' | '+', '.join(f"[{id}](scope-delivery.md#{id.lower()})" for id in row['work_packages'])+' |\n'
+for row in plan['records']:index+='| '+cell(row['task_id'])+' | '+cell(row.get('display_title',row['title']))+' | '+', '.join(f"[{id}](scope-delivery.md#{id.lower()})" for id in row['work_packages'])+' |\n'
 (ROOT/'docs/scope-task-index.md').write_text(index)
 # Render master table after enriching dependency mappings.
 master='# Three-layer master scope\n\nAll 202 records and their dispositions remain preserved. UC, SC and BT remain proposals; no rename or new release is implied. Jobs/outcomes define scope, not implementation. Read the [execution plan](scope-delivery.md) and [task index](scope-task-index.md) for accountable work packages. `state.json` and `runs/` hold executed truth.\n\n| ID | Layer | Baseline job | Outcome | Work package |\n|---|---|---|---|---|\n'
