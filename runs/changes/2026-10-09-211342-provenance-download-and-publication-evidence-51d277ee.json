@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-09-211342-provenance-download-and-publication-evidence-51d277ee",
+  "recorded_at": "2026-10-09T21:13:42.106605+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "403a317851a37c21d4e9e724911790eb6d230933",
+  "changed": "Record the published provenance-boundary research code, clean-checkout correction and refreshed public changelog/scope; verify an anonymous commit-pinned source download.",
+  "proves": "All 612 downloaded files match committed source; the clean verifier, synthetic demo and 89 focused tests run without a prior site build or Docker. Public PS/site checks pass; 134 site assets match across three origins (402 hashes), with declared headers intact.",
+  "limits": "PA/FA remain research-only; no real media/capture, accepted claim policy, independent accuracy or human/device acceptance. Existing verification dependencies were used. Hosted CI starts no steps due to the account billing lock. Later publication records live in Git, beyond the deployed changelog snapshot.",
+  "scope_ids": [
+    "T-PA",
+    "T-FA",
+    "F-025",
+    "F-083",
+    "F-116",
+    "F-150",
+    "WP-SITE",
+    "WP-RELEASE"
+  ],
+  "files": {
+    "docs/provenance-boundary-result.md": "eaffdfc3cede1b6e96f2e9862366710e68f218e3bbcb3c42e4a74a86168127ba",
+    "runs/2026-10-09-provenance-boundary-assets-public.json": "31445695f1a5176235decc6d5f94309dec7840ba519445f5b228d6240cf1cd50",
+    "runs/2026-10-09-provenance-boundary-deployment.json": "129d70320246e9ad911f3d70ca5bb9883a7d9355a4c1456edbe293554ccc7337",
+    "runs/2026-10-09-provenance-boundary-download.json": "2f659d644003f7c0348be4823573bcf62002b98cad6282efc5f7e72b07799520",
+    "runs/2026-10-09-provenance-boundary-hosted-ci.json": "6d11fcdfe31ab5ef473002d482835a8201e51853850469369e0853a95c456af2",
+    "runs/2026-10-09-provenance-boundary-ps-public.json": "dc5e703aab3cc6c1008a5e05957254c41c0f7afc01a22c6835d3c3763480a66c",
+    "runs/2026-10-09-provenance-boundary-site-public.json": "35732e80a21e4834d1c20d655171476a2b37f1e92479f8b1324cd30e39dc5c54",
+    "state.json": "102993de3fa8f7312ab441982e47d42eb7ae9975cffabc6a47709f8ba2075d1a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-09-provenance-boundary-download.json",
+      "sha256": "2f659d644003f7c0348be4823573bcf62002b98cad6282efc5f7e72b07799520"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-site-public.json",
+      "sha256": "35732e80a21e4834d1c20d655171476a2b37f1e92479f8b1324cd30e39dc5c54"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-ps-public.json",
+      "sha256": "dc5e703aab3cc6c1008a5e05957254c41c0f7afc01a22c6835d3c3763480a66c"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-assets-public.json",
+      "sha256": "31445695f1a5176235decc6d5f94309dec7840ba519445f5b228d6240cf1cd50"
+    },
+    {
+      "path": "runs/2026-10-09-provenance-boundary-hosted-ci.json",
+      "sha256": "6d11fcdfe31ab5ef473002d482835a8201e51853850469369e0853a95c456af2"
+    }
+  ],
+  "checks": []
+}

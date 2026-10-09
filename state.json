@@ -37,7 +37,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-09-device-a11y-catalogue-public.json",
+    "evidence": "runs/2026-10-09-provenance-boundary-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -47,8 +47,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://9805ae71.aitrust-id.pages.dev",
-    "deployment_id": "9805ae71-b0e5-4771-87c9-a11cc0f7161b",
+    "deployment_url": "https://37967789.aitrust-id.pages.dev",
+    "deployment_id": "37967789-8e1e-4b28-b4cf-cd18b7becc06",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -68,7 +68,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-09-device-a11y-deployment.json",
+    "publication_evidence": "runs/2026-10-09-provenance-boundary-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -559,9 +559,9 @@
     "issues_enabled": true,
     "discussions_enabled": true,
     "private_vulnerability_reporting_enabled": true,
-    "evidence": "runs/2026-10-09-device-a11y-assets-public.json",
+    "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979",
+    "latest_implementation_commit": "403a317851a37c21d4e9e724911790eb6d230933",
     "handheld_download_verified": true
   },
   "name_clearance": {
@@ -682,7 +682,8 @@
     "publication": "runs/2026-10-09-scope-branding-deployment.json",
     "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
-    "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json"
+    "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
+    "latest_increment": "runs/2026-10-09-provenance-boundary-deployment.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -702,7 +703,9 @@
       "production_assertion": false,
       "evidence": "runs/2026-10-09-provenance-boundary-final-python.json",
       "real_adapter_implemented": false,
-      "proposed_claim_policy_accepted": false
+      "proposed_claim_policy_accepted": false,
+      "source_commit": "403a317851a37c21d4e9e724911790eb6d230933",
+      "anonymous_download_verified": true
     }
   },
   "validation_route": {
@@ -746,7 +749,7 @@
       "runs/2026-10-09-changelog-assets-public.json"
     ],
     "hosted_ci_executed": false,
-    "hosted_ci_evidence": "runs/2026-10-09-device-a11y-hosted-ci.json"
+    "hosted_ci_evidence": "runs/2026-10-09-provenance-boundary-hosted-ci.json"
   },
   "device_build": {
     "status": "fresh_build_matrix_passed; tracked_manifest_and_method_unchanged",
@@ -762,7 +765,7 @@
     "evidence": "runs/2026-10-09-device-matrix-clean-reference.json",
     "unit_tests": 16,
     "future_builder_versions_guaranteed": false,
-    "published_source": "81fc621cfb0dc76ae7862a3e0f4c5c1f87bd6979",
+    "published_source": "403a317851a37c21d4e9e724911790eb6d230933",
     "reference": "docs/device-build-reference.json",
     "fresh_checkout_entry_point_verified": true,
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"

@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-09T21:13:42.055937+00:00",
+  "author": "Codex",
+  "source_commit": "403a317851a37c21d4e9e724911790eb6d230933",
+  "deployment_id": "37967789-8e1e-4b28-b4cf-cd18b7becc06",
+  "deployment_url": "https://37967789.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "pass": true,
+  "evidence": [
+    "runs/2026-10-09-provenance-boundary-download.json",
+    "runs/2026-10-09-provenance-boundary-ps-public.json",
+    "runs/2026-10-09-provenance-boundary-site-public.json",
+    "runs/2026-10-09-provenance-boundary-assets-public.json",
+    "runs/2026-10-09-provenance-boundary-hosted-ci.json"
+  ],
+  "python_tests_passed": 390,
+  "scope_records": 202,
+  "acceptance_percentages_changed": false,
+  "tag_allowlist_changed": false,
+  "independent_release_validated": false,
+  "limits": [
+    "Bridge processes supplied research observations only; no actual crypto/media/capture adapter or tag release",
+    "Synthetic claim semantics remain a proposal pending acceptance",
+    "Physical-device, human accessibility and independent accuracy gates remain open",
+    "Existing verification environment used for download tests; independent user/install review remains pending",
+    "Hosted CI remains billing-blocked; no hosted pass is claimed"
+  ]
+}

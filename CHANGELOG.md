@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-09
 
+### 2026-10-09-211342-provenance-download-and-publication-evidence-51d277ee
+
+Recorded 2026-10-09T21:13:42.106605+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the published provenance-boundary research code, clean-checkout correction and refreshed public changelog/scope; verify an anonymous commit-pinned source download.
+- **Evidence.** All 612 downloaded files match committed source; the clean verifier, synthetic demo and 89 focused tests run without a prior site build or Docker. Public PS/site checks pass; 134 site assets match across three origins (402 hashes), with declared headers intact. [Change record](./runs/changes/2026-10-09-211342-provenance-download-and-publication-evidence-51d277ee.json).
+- **Not claimed.** PA/FA remain research-only; no real media/capture, accepted claim policy, independent accuracy or human/device acceptance. Existing verification dependencies were used. Hosted CI starts no steps due to the account billing lock. Later publication records live in Git, beyond the deployed changelog snapshot.
+
+
 ### 2026-10-09-210959-provenance-final-evidence-mirrors-c322c84e
 
 Recorded 2026-10-09T21:09:59.185875+00:00 · Contributor: Codex · change
