@@ -1,0 +1,95 @@
+{
+  "captured_at": "2026-10-09T13:58:40.651456+00:00",
+  "pass": true,
+  "deployment_id": "b33b4137-c1ca-40ce-a4fd-ad498c0b8560",
+  "deployment_url": "https://b33b4137.aitrust-id.pages.dev",
+  "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
+  "previous_deployment_id": "ee219c2c-5377-4be2-882d-6a541bff82d3",
+  "environment": "Production",
+  "uploaded_new_files": 0,
+  "existing_files_reused": 126,
+  "all_public_asset_hashes_match": true,
+  "public_asset_hash_checks": 378,
+  "assets_per_origin": 126,
+  "origins": [
+    "https://aitrustid.com",
+    "https://www.aitrustid.com",
+    "https://b33b4137.aitrust-id.pages.dev"
+  ],
+  "publisher_credit": "Published by AI Trust ID.",
+  "product_owner_label": "Michael",
+  "operator_identity_location": "Terms of use only in current page prose; immutable previous policy archives retained",
+  "github_account_renamed": false,
+  "repository_url": "https://github.com/knwvmbrr/aitrust-id",
+  "scope_records_preserved": 202,
+  "original_scope_identity_baseline": "5607ba4",
+  "completed_records": 14,
+  "open_records": 188,
+  "work_packages": 39,
+  "tag_packages": 14,
+  "package_subtasks": 117,
+  "enhancements": 4,
+  "completion_definition": "Evidence milestones; 100% requires full named item functioning acceptance, not code presence or projected effort",
+  "python_tests_passed": 253,
+  "development_ps_regressions_passed": 86,
+  "release_harness_pass": false,
+  "release_harness_expected_exit": 1,
+  "public_policy_version": "1.2",
+  "policy_effective_date": "2026-10-09",
+  "prior_policy_versions_preserved": [
+    "1.0",
+    "1.1"
+  ],
+  "detector_source_unchanged": true,
+  "release_gates_unchanged": true,
+  "taxonomy_unchanged": true,
+  "pending_tag_proposals_adopted": false,
+  "independent_accuracy_completed": false,
+  "physical_device_tested": false,
+  "manual_screen_reader_completed": false,
+  "manual_legal_enforceability_review": false,
+  "docker_started": false,
+  "automatic_collection_added": false,
+  "research_components_integrated_into_production_tags": false,
+  "verification_evidence": {
+    "site": "runs/2026-10-09-branding-site-public.json",
+    "workflows": "runs/2026-10-09-branding-workflows-public.json",
+    "policies": "runs/2026-10-09-branding-policies-public.json",
+    "assets": "runs/2026-10-09-branding-assets-public.json",
+    "branding": "runs/2026-10-09-branding-public.json"
+  },
+  "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
+  "structural_evidence": "runs/2026-10-09-scope-progress-verification.json",
+  "publication_audit": "runs/2026-10-09-scope-publication-audit.json",
+  "existing_device_evidence": "runs/2026-10-08-upgrade-device-public.json",
+  "device_verification_note": "Detector and device worker unchanged; previous device evidence retained, not rerun for this branding and scope update.",
+  "diagnostics": [
+    {
+      "signature": "fatal: bad object 5099bb7bc93c052d37b64e13ae0b4005cabfc9d3",
+      "cause": "Incorrect full source identifier supplied to first deployment metadata; tested assets were still uploaded.",
+      "intermediate_deployment_id": "520c38a6-e62b-4754-9391-39d8e73dd95d",
+      "intermediate_uploaded_new_files": 55,
+      "intermediate_existing_files_reused": 71,
+      "fix": "Redeployed identical tested assets using git rev-parse HEAD verified full identifier.",
+      "verification": "Latest production deployment identifies source 5099bb7; all 378 asset hashes match."
+    },
+    {
+      "signature": "Python urllib HTTP 403 / Cloudflare edge code 1010",
+      "cause": "Client-specific edge rejection; browser request returned 200.",
+      "fix": "Verified hashes through existing Playwright request context; no edge policy changed.",
+      "verification": "378 of 378 exact byte hashes match across three public origins."
+    },
+    {
+      "signature": "AssertionError: branding-site-public.json lacks a pass field",
+      "cause": "Final evidence aggregator assumed every browser report shares the same envelope.",
+      "fix": "Validated the site report using its published, production-policy, modal count, axe and outbound-request results.",
+      "verification": "Explicit report predicates pass; no test or production behavior changed."
+    }
+  ],
+  "other_in_flight_drafts_preserved_and_excluded": [
+    "docs/accessibility-conformance-report.md",
+    "scripts/build-provenance-panel.py",
+    "scripts/verify-a11y.cjs",
+    "scripts/verify-a11y-selftest.cjs"
+  ]
+}

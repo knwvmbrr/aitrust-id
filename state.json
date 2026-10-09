@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-scope-plan-site-public.json",
+    "evidence": "runs/2026-10-09-branding-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +46,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://ee219c2c.aitrust-id.pages.dev",
-    "deployment_id": "ee219c2c-5377-4be2-882d-6a541bff82d3",
+    "deployment_url": "https://b33b4137.aitrust-id.pages.dev",
+    "deployment_id": "b33b4137-c1ca-40ce-a4fd-ad498c0b8560",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +67,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-08-scope-plan-deployment.json",
+    "publication_evidence": "runs/2026-10-09-scope-branding-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +96,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-08-scope-plan-site-public.json",
+    "verification": "runs/2026-10-09-branding-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -111,8 +111,8 @@
       "automated_pass": true,
       "human_accessibility_verified": false,
       "published": true,
-      "public_evidence": "runs/2026-10-08-scope-plan-workflows-public.json",
-      "source_commit": "c52a8a6ab9bae6f3ce25f1c831d3f03a5529544a"
+      "public_evidence": "runs/2026-10-09-branding-workflows-public.json",
+      "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5"
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
@@ -124,7 +124,7 @@
       "text_downloads": true,
       "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-08-scope-plan-policies-public.json",
+      "verification": "runs/2026-10-09-branding-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -132,7 +132,11 @@
       "manual_legal_enforceability_review": false,
       "actual_download_clicks_verified": 9,
       "prior_version_archive": "1.0",
-      "publisher_named": true
+      "publisher_named": true,
+      "prior_version_archives": [
+        "1.0",
+        "1.1"
+      ]
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
     "product_differentiation": "docs/product-differentiation.md",
@@ -168,7 +172,8 @@
       "product_owner_label": "Michael",
       "operator_identity_location": "Terms of use only in current page prose; prior policy archives retained",
       "github_account_renamed": false,
-      "public_verification_pending": true
+      "public_verification_pending": false,
+      "evidence": "runs/2026-10-09-branding-public.json"
     }
   },
   "previous_runtime_verification": {
@@ -532,7 +537,7 @@
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "ee219c2c-5377-4be2-882d-6a541bff82d3",
+    "deployment": "b33b4137-c1ca-40ce-a4fd-ad498c0b8560",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input"
   },
@@ -568,7 +573,9 @@
       "workflows": "runs/2026-10-08-scope-plan-workflows-public.json",
       "policies": "runs/2026-10-08-scope-plan-policies-public.json",
       "assets": "runs/2026-10-08-scope-plan-assets-public.json"
-    }
+    },
+    "completion_audit": "docs/scope-progress.md",
+    "completion_audit_publication": "runs/2026-10-09-scope-branding-deployment.json"
   },
   "scope_completion": {
     "reader": "docs/scope-progress.md",
@@ -584,7 +591,10 @@
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
     "structural_evidence": "runs/2026-10-09-scope-progress-verification.json",
-    "claude_review": "docs/competitive-differentiation.md"
+    "claude_review": "docs/competitive-differentiation.md",
+    "publication": "runs/2026-10-09-scope-branding-deployment.json",
+    "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
+    "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
