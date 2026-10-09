@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-policies-catalogue-public.json",
+    "evidence": "runs/2026-10-08-upgrade-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +46,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://0ff21540.aitrust-id.pages.dev",
-    "deployment_id": "0ff21540-fc26-434a-a803-ba5e57f1f881",
+    "deployment_url": "https://3b26e799.aitrust-id.pages.dev",
+    "deployment_id": "3b26e799-3dd2-4bab-a9ed-be52dad98f59",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +67,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-08-policies-deployment.json",
+    "publication_evidence": "runs/2026-10-08-upgrade-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +96,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-08-policies-catalogue-public.json",
+    "verification": "runs/2026-10-08-upgrade-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -111,12 +111,12 @@
       "automated_pass": true,
       "human_accessibility_verified": false,
       "published": true,
-      "public_evidence": "runs/2026-10-08-policies-workflows-public.json",
+      "public_evidence": "runs/2026-10-08-upgrade-workflows-public.json",
       "source_commit": "527cbf4ee116482f24ffc1f50616b9b195549c6a"
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.0",
+      "version": "1.1",
       "effective_date": "2026-10-08",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
@@ -124,17 +124,20 @@
       "text_downloads": true,
       "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-08-policies-public.json",
+      "verification": "runs/2026-10-08-upgrade-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
       "automated_axe_violations": 0,
-      "manual_legal_enforceability_review": false
+      "manual_legal_enforceability_review": false,
+      "actual_download_clicks_verified": 9,
+      "prior_version_archive": "1.0",
+      "publisher_named": true
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
     "product_differentiation": "docs/product-differentiation.md",
     "tag_system_upgrade": {
-      "status": "local_checks_pass; publication_pending",
+      "status": "published_and_public_browser_checks_pass",
       "architecture": "docs/tag-system-upgrade.md",
       "full_scope_records": 202,
       "multi_tag_design_explained": true,
@@ -150,6 +153,14 @@
         "catalogue": "runs/2026-10-08-upgrade-site-local.json",
         "workflows": "runs/2026-10-08-upgrade-workflows-local.json",
         "device": "runs/2026-10-08-upgrade-device-local.json"
+      },
+      "publication": "runs/2026-10-08-upgrade-deployment.json",
+      "public_evidence": {
+        "policies": "runs/2026-10-08-upgrade-policies-public.json",
+        "workflows": "runs/2026-10-08-upgrade-workflows-public.json",
+        "site": "runs/2026-10-08-upgrade-site-public.json",
+        "device": "runs/2026-10-08-upgrade-device-public.json",
+        "assets": "runs/2026-10-08-upgrade-assets-public.json"
       }
     }
   },
@@ -508,13 +519,15 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-08-policies-device-public.json",
+    "evidence": "runs/2026-10-08-upgrade-device-public.json",
     "future_native_routes": [
       "N-013",
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "0ff21540-fc26-434a-a803-ba5e57f1f881"
+    "deployment": "3b26e799-3dd2-4bab-a9ed-be52dad98f59",
+    "default_export": "minimal share summary; no answer fingerprint or positions",
+    "detailed_export": "separate opt-in; consent resets for new input"
   },
   "fast_verification": {
     "command": "make verify-ps",

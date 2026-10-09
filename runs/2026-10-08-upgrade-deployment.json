@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-10-09T03:21:41.968683+00:00",
+  "deployment_id": "3b26e799-3dd2-4bab-a9ed-be52dad98f59",
+  "deployment_url": "https://3b26e799.aitrust-id.pages.dev",
+  "source_commit": "7bfd029e8c7eba1d7caf2d920b9cc80b9edd55dc",
+  "previous_deployment_id": "0ff21540-fc26-434a-a803-ba5e57f1f881",
+  "environment": "Production",
+  "uploaded_new_files": 54,
+  "existing_files_reused": 63,
+  "all_public_asset_hashes_match": true,
+  "public_asset_hash_checks": 351,
+  "public_features_verified": [
+    "policies",
+    "workflows",
+    "site",
+    "device",
+    "assets"
+  ],
+  "public_policy_version": "1.1",
+  "original_policy_1_0_preserved": true,
+  "publisher_identity_explicitly_approved": true,
+  "scope_records_preserved": 202,
+  "detector_source_unchanged": true,
+  "release_gates_unchanged": true,
+  "independent_accuracy_completed": false,
+  "physical_device_tested": false,
+  "manual_screen_reader_completed": false,
+  "terms_legal_enforceability_reviewed": false,
+  "docker_started": false,
+  "automatic_collection_added": false,
+  "verification_evidence": {
+    "policies": "runs/2026-10-08-upgrade-policies-public.json",
+    "workflows": "runs/2026-10-08-upgrade-workflows-public.json",
+    "site": "runs/2026-10-08-upgrade-site-public.json",
+    "device": "runs/2026-10-08-upgrade-device-public.json",
+    "assets": "runs/2026-10-08-upgrade-assets-public.json"
+  }
+}
