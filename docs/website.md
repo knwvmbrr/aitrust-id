@@ -2,7 +2,7 @@
 
 The static React site in `site/` implements the requested title, Person/Enterprise switch,
 code-only tag grid, tag-detail dialogs, and a footer for reporting, assistance, townhall, teamwork,
-company information, scope and licensing. It preserves the 198-record scope baseline.
+company information, scope and licensing. It preserves all 202 current scope records. The original 198-record check below is historical.
 No existing evaluator, extension, or protocol code was renamed to implement the website.
 
 ## Architecture and boundaries
@@ -23,8 +23,9 @@ is evidence of an accurate or certified detector.
 keyboard navigation and focus restoration. `src/styles.css` provides the responsive
 layout and compact tag-shaped buttons. A native SVG logo is used in the header and
 favicon; no raster generation service or remote font is involved. Light, Dark and
-System appearance is supported. The only persistent browser storage is the selected
-appearance preference; blocked storage does not break the controls. There are no
+System appearance is supported. Appearance preference and explicitly saved public
+offline assets are the persistent browser storage; answers and review data are not cached.
+Blocked preference storage does not break the controls. There are no
 tracking scripts, accounts or intake endpoints. A static host serves the built
 document, scripts and references.
 `public/_headers` defines intended Cloudflare security headers; their production
@@ -38,12 +39,24 @@ issue tags, read draft content, submit reports, or change catalogue state.
 
 ## Reporting and teamwork
 
-Report, Assist and Townhall forms create validated JSON drafts with a selected tag,
-report/contribution category and required description. A report can include an optional
-tag record identifier. Downloading or copying is a local user action. Drafts explicitly
-say `draft_not_submitted`; no server has received them. Reloading clears page memory.
-There is no claim of persistence, delivery, moderation, response time or a functioning
-shared team workspace. Clipboard denial offers download as the fallback.
+Each of the eight entries has a distinct component, introduction, deep link and action
+contract; see [independent footer workflows](footer-workflows.md). Report requires an
+observed and expected result, can attach a tag record ID, and exports a local draft.
+Its Security/privacy branch removes the public form and offers the private channel.
+Assist selects a contribution lane, its deliverable and instructions; its exported
+proposal does not assign a task. Teamwork lists declared owner lanes and acceptance
+needs and passes the selected role to Assist. These workflows have separate form state.
+
+Townhall links to verified public GitHub categories and shows an explicitly dated,
+non-refreshing public snapshot. It has no in-site posting form or simulated live feed.
+How tags work follows a synthetic example through observation, explanation and challenge.
+Scope searches/filters all 202 records and exposes each job, outcome, owner lane and
+acceptance/failure boundary. About explains purpose and maturity; Legal links actual
+licenses and states data flows and unresolved organization/mark status.
+
+Download/copy is an explicit user action. Drafts remain unsubmitted and are not stored
+on reload. Clipboard denial offers download. No task assignment, server-side delivery,
+training consent, self-hosted moderation or staffed response time is implied.
 
 GitHub issues/discussions and private vulnerability reporting are now enabled as
 external, manually submitted development destinations. Site drafts are never
@@ -64,7 +77,7 @@ and reference existence are validated at build time. A targeted scan of the comp
 build found no selected private-path, portfolio, or secret-marker matches. This is a
 bounded scan of the deployment artifact, not blanket historical privacy clearance.
 
-## Verified locally on 2026-10-08
+## Original catalogue checks on 2026-10-08
 
 - Production build completed.
 - All 20 tag/organization dialogs and eight footer dialogs executed.
@@ -177,3 +190,14 @@ Nunito Sans is served from this site in five WOFF2 subsets (107,432 bytes total)
 The browser loads only applicable subsets. Its SIL OFL license and pinned asset
 hashes are in `site/public/fonts/`; no Google font request is made by the page.
 Code snippets remain monospaced; the visible tag letters and prose use Nunito Sans.
+
+## Independent workflow verification
+
+The new catalogue checks retain all 20 tag panels and 202 scope records. Workflow
+checks exercise separate deep links, report/contribution validation and JSON, private
+security routing, public category destinations, task-to-role handoff, scope search,
+actual license responses, ordinary CSP interaction, light/dark at 320px and 200%
+text enlargement, and automated accessibility. They confirm no form input request.
+Run `npm run verify:workflows` against the built site on port 5174. This also runs in
+the site CI job. Evidence is in `runs/2026-10-08-workflows-*.json`. Physical-phone,
+human screen-reader and independent tag accuracy checks remain open.

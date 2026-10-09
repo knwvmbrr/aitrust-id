@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-ps-use-public.json",
+    "evidence": "runs/2026-10-08-workflows-catalogue-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +46,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://937036a1.aitrust-id.pages.dev",
-    "deployment_id": "937036a1-014b-499a-bf09-e81e0ed66042",
+    "deployment_url": "https://7aeef542.aitrust-id.pages.dev",
+    "deployment_id": "7aeef542-5433-46f6-8004-e5c60b0c1393",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +67,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-08-ps-use-deployment.json",
+    "publication_evidence": "runs/2026-10-08-workflows-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 22,
@@ -96,7 +96,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-08-handheld-catalogue-public.json",
+    "verification": "runs/2026-10-08-workflows-catalogue-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md",
@@ -109,7 +109,10 @@
       "self_hosted_community": false,
       "automated_checks": "runs/2026-10-08-workflows-behavior.json",
       "automated_pass": true,
-      "human_accessibility_verified": false
+      "human_accessibility_verified": false,
+      "published": true,
+      "public_evidence": "runs/2026-10-08-workflows-public.json",
+      "source_commit": "527cbf4ee116482f24ffc1f50616b9b195549c6a"
     },
     "naming_evidence_review": "docs/name-evidence-review.md"
   },
@@ -468,18 +471,18 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-08-handheld-public.json",
+    "evidence": "runs/2026-10-08-workflows-device-public.json",
     "future_native_routes": [
       "N-013",
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "78f6f18f-042b-4780-bc53-19b72fcbdcf2"
+    "deployment": "7aeef542-5433-46f6-8004-e5c60b0c1393"
   },
   "fast_verification": {
     "command": "make verify-ps",
-    "evidence": "runs/2026-10-08-handheld-engineering.json",
+    "evidence": "runs/2026-10-08-workflows-engineering.json",
     "release_assessed": false,
-    "measured_seconds": 1.945
+    "measured_seconds": 2.465
   }
 }

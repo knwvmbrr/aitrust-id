@@ -1,0 +1,58 @@
+{
+  "captured_at": "2026-10-09T02:38:51.531813+00:00",
+  "deployment_id": "7aeef542-5433-46f6-8004-e5c60b0c1393",
+  "url": "https://7aeef542.aitrust-id.pages.dev",
+  "environment": "Production",
+  "source_commit": "527cbf4ee116482f24ffc1f50616b9b195549c6a",
+  "previous_deployment_id": "78f6f18f-042b-4780-bc53-19b72fcbdcf2",
+  "uploaded_new_files": 27,
+  "existing_files_reused": 48,
+  "only_site_dist_uploaded": true,
+  "domains": [
+    "https://aitrustid.com",
+    "https://www.aitrustid.com"
+  ],
+  "public_asset_checks": 225,
+  "all_public_hashes_match": true,
+  "public_workflows_pass": true,
+  "public_catalogue_pass": true,
+  "public_device_parity_pass": true,
+  "ordinary_csp_workflows_verified": true,
+  "automated_axe_violations": 0,
+  "screenshots": [
+    {
+      "path": "output/playwright/workflows-home-light.png",
+      "sha256": "0c5a5e1b8e6e22e40fec0388252db62ba8e4d56b1b9753eaf8539322002a7fc1",
+      "capture_scope": "Current public site appearance; does not establish historical first use"
+    },
+    {
+      "path": "output/playwright/workflows-home-dark.png",
+      "sha256": "bc312254f5cd01fed3afef5bde444ece6e848b471b97c102ca742af0fb13a2bc",
+      "capture_scope": "Current public site appearance; does not establish historical first use"
+    },
+    {
+      "path": "output/playwright/workflow-report.png",
+      "sha256": "dcc9ed2d0ff7397766b517482176395609e959ff1536875eaf278e982c0b0ef9",
+      "capture_scope": "Current public site appearance; does not establish historical first use"
+    },
+    {
+      "path": "output/playwright/workflow-teamwork.png",
+      "sha256": "72c95507c798ca5d49afdc15a22cc591918cc8764e9d6fb3331d32cfadb34a77",
+      "capture_scope": "Current public site appearance; does not establish historical first use"
+    },
+    {
+      "path": "output/playwright/workflow-scope.png",
+      "sha256": "d383ba7c90a264d0255c34da17ea349ac693a823750aa479bcb74de096d55714",
+      "capture_scope": "Current public site appearance; does not establish historical first use"
+    }
+  ],
+  "repo_download_checked_files": 344,
+  "independent_accuracy_validated": false,
+  "physical_devices_verified": false,
+  "human_screen_reader_verified": false,
+  "self_hosted_community": false,
+  "automatic_text_collection": false,
+  "docker_started": false,
+  "hosted_ci_execution": "Previously blocked by account billing; not asserted passing from local checks",
+  "result": "Eight independent footer workflows published and exercised; unchanged PS device preview retained."
+}
