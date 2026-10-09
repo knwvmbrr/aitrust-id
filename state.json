@@ -34,7 +34,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-site-redesign-public.json",
+    "evidence": "runs/2026-10-08-site-friendly-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -44,8 +44,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://31094a97.aitrust-id.pages.dev",
-    "deployment_id": "31094a97-a347-4f0c-955a-9e02a02ef2e0",
+    "deployment_url": "https://f156a064.aitrust-id.pages.dev",
+    "deployment_id": "f156a064-4968-498a-9819-16ba63d3b38a",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -65,7 +65,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-08-site-redesign-result.json",
+    "publication_evidence": "runs/2026-10-08-site-friendly-result.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 22,
@@ -78,7 +78,11 @@
       "google_indexing_verified": false,
       "search_console_verified": false,
       "sitemap_submitted_in_search_console": false
-    }
+    },
+    "appearance_control": "native_dark_mode_switch_with_device_auto",
+    "modal_presentation": "content_height_plain_language_summary_limit_visible_validation_three_disclosures",
+    "complete_detail_export_verified": true,
+    "cross_tab_appearance_verified": true
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -382,5 +386,16 @@
     "candidate_source": "https://theailab.org/ai-trust-registry",
     "observed_mark": "AI Trust ID\u2122",
     "registration_priority_and_legal_conflict_verified": false
+  },
+  "market_research": {
+    "as_of": "2026-10-08",
+    "inventory": "docs/competitive-landscape.json",
+    "assessment": "docs/competitive-landscape.md",
+    "related_products_projects_standards": 86,
+    "candidates_requiring_confirmation": 8,
+    "complete_product_equivalence_verified": false,
+    "comparative_accuracy_verified": false,
+    "business_viability_verified": false,
+    "recommendation": "Bounded first-tag independent accuracy and outside-user trial before broad expansion; preserve full scope"
   }
 }

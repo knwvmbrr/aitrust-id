@@ -1,0 +1,741 @@
+{
+  "as_of": "2026-10-08",
+  "counted_unit": "products, projects, standards and programs; not unique parent companies",
+  "confirmed_inventory_count": 86,
+  "candidate_count": 8,
+  "exhaustive": false,
+  "method": "Official product pages, documentation and source repositories. Capability descriptions are published scope, not executed verification. Overlap is our assessment. No cross-vendor accuracy ranking.",
+  "records": [
+    {
+      "category": "Provenance labels and content records",
+      "name": "The AI Lab TIP and AI Trust Registry",
+      "published_capability": "Signed origin labels, identifiers and public lookup",
+      "overlap_inference": "FA, PA, IV, records; closest brand overlap",
+      "source": "https://theailab.org/trust-identity-protocol",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Adobe Content Authenticity",
+      "published_capability": "Content Credentials application, inspection and browser display",
+      "overlap_inference": "FA, PA, evidence display",
+      "source": "https://helpx.adobe.com/creative-cloud/apps/adobe-content-authenticity/beta-overview.html",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Digimarc",
+      "published_capability": "Watermarks and C2PA provenance retrieval",
+      "overlap_inference": "FA, PA, media evidence",
+      "source": "https://www.digimarc.com/solutions/provenance-authenticity",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Google SynthID",
+      "published_capability": "Generation watermarks and a detector for supported providers",
+      "overlap_inference": "FA, future media tags",
+      "source": "https://deepmind.google/models/synthid/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Truepic",
+      "published_capability": "Photo and video authentication",
+      "overlap_inference": "Media provenance and evidence",
+      "source": "https://www.truepic.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Attestiv",
+      "published_capability": "Digital file validation",
+      "overlap_inference": "Media validation and enterprise evidence",
+      "source": "https://attestiv.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "ProofMode",
+      "published_capability": "Capture provenance and verification tools",
+      "overlap_inference": "Capture receipts and evidence",
+      "source": "https://proofmode.org/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Numbers Protocol",
+      "published_capability": "Content provenance infrastructure",
+      "overlap_inference": "Records and media provenance",
+      "source": "https://numbersprotocol.io/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Provenance labels and content records",
+      "name": "Grammarly Authorship",
+      "published_capability": "Writing-process records and shareable reports",
+      "overlap_inference": "PA, positive provenance, receipts",
+      "source": "https://www.grammarly.com/authorship",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Hive Detect",
+      "published_capability": "Synthetic media analysis and a browser extension",
+      "overlap_inference": "FA, future media tags",
+      "source": "https://hivemoderation.com/ai-generated-content-detection",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Reality Defender",
+      "published_capability": "Deepfake analysis for live and uploaded media",
+      "overlap_inference": "FA, media and enterprise tags",
+      "source": "https://www.realitydefender.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Sensity",
+      "published_capability": "Deepfake detection",
+      "overlap_inference": "FA and future media tags",
+      "source": "https://sensity.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "GetReal Security",
+      "published_capability": "Enterprise deepfake detection",
+      "overlap_inference": "FA, media and enterprise workflows",
+      "source": "https://www.getrealsecurity.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Resemble Detect",
+      "published_capability": "Multimodal deepfake detection",
+      "overlap_inference": "FA, future audio/video tags",
+      "source": "https://www.resemble.ai/products/detect",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "AI or Not",
+      "published_capability": "AI content checking across multiple media",
+      "overlap_inference": "FA and future media tags",
+      "source": "https://www.aiornot.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Sightengine",
+      "published_capability": "AI-generated image detection",
+      "overlap_inference": "FA and future image tags",
+      "source": "https://sightengine.com/detect-ai-generated-images",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "GPTZero",
+      "published_capability": "AI text detection and writing-process evidence",
+      "overlap_inference": "FA, PA; also advertises hallucination detection",
+      "source": "https://gptzero.me/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Originality.ai",
+      "published_capability": "AI text detection",
+      "overlap_inference": "FA; consumer and publisher workflow",
+      "source": "https://originality.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Copyleaks",
+      "published_capability": "AI text detection",
+      "overlap_inference": "FA; consumer and organization workflow",
+      "source": "https://copyleaks.com/ai-detector",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Turnitin",
+      "published_capability": "AI writing report for education",
+      "overlap_inference": "FA; institutional workflow",
+      "source": "https://guides.turnitin.com/hc/en-us/articles/22774058814093-Using-the-AI-Writing-Report",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Winston AI",
+      "published_capability": "AI content detection",
+      "overlap_inference": "FA; consumer and organization workflow",
+      "source": "https://gowinston.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Pangram",
+      "published_capability": "AI text detection",
+      "overlap_inference": "FA; consumer and organization workflow",
+      "source": "https://www.pangram.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "ZeroGPT",
+      "published_capability": "AI text detection",
+      "overlap_inference": "FA; consumer checking",
+      "source": "https://www.zerogpt.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Sapling",
+      "published_capability": "AI text detector",
+      "overlap_inference": "FA; consumer checking",
+      "source": "https://sapling.ai/ai-content-detector",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "QuillBot",
+      "published_capability": "AI text detector",
+      "overlap_inference": "FA; consumer checking",
+      "source": "https://quillbot.com/ai-content-detector",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Scribbr",
+      "published_capability": "AI text detector",
+      "overlap_inference": "FA; consumer checking",
+      "source": "https://www.scribbr.com/ai-detector/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "AI content and deepfake detectors",
+      "name": "Smodin",
+      "published_capability": "AI content detector",
+      "overlap_inference": "FA; consumer checking",
+      "source": "https://smodin.io/ai-content-detector",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Norton Genie and Scam Protection",
+      "published_capability": "Message, link and scam analysis; integrations",
+      "overlap_inference": "SC, MT and user warning experience",
+      "source": "https://us.norton.com/blog/online-scams/norton-genie",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Bitdefender Scamio",
+      "published_capability": "Chat-based scam checking for text, links and images",
+      "overlap_inference": "SC, MT; free consumer alternative",
+      "source": "https://www.bitdefender.com/en-us/consumer/scamio",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "McAfee Scam Detector",
+      "published_capability": "Consumer scam detection",
+      "overlap_inference": "SC and future media warnings",
+      "source": "https://www.mcafee.com/en-us/scam-detector/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "F-Secure",
+      "published_capability": "Scam protection products and resources",
+      "overlap_inference": "SC and consumer security education",
+      "source": "https://www.f-secure.com/us-en/scam-protection",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Trend Micro ScamCheck",
+      "published_capability": "On-demand scam analysis in a consumer app",
+      "overlap_inference": "SC and consumer warning experience",
+      "source": "https://us.shop.trendmicro.com/en_us/products/trend-micro-check.asp",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Guardio",
+      "published_capability": "Browser and consumer online protection",
+      "overlap_inference": "SC, privacy and browser distribution",
+      "source": "https://guard.io/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Netcraft",
+      "published_capability": "Cybercrime and phishing protection",
+      "overlap_inference": "SC and enterprise protection",
+      "source": "https://www.netcraft.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "ScamAdviser",
+      "published_capability": "Website scam and fraud checks",
+      "overlap_inference": "SC; domain-level alternative",
+      "source": "https://www.scamadviser.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Google Safe Browsing",
+      "published_capability": "Dangerous-site warnings",
+      "overlap_inference": "SC; platform distribution substitute",
+      "source": "https://safebrowsing.google.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Microsoft Defender SmartScreen",
+      "published_capability": "Site and download reputation checks",
+      "overlap_inference": "SC, PS-adjacent download warnings",
+      "source": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Scam warnings and browsing protection",
+      "name": "Scam Sniffer",
+      "published_capability": "Crypto scam browser extension",
+      "overlap_inference": "SC; transaction-specific workflow",
+      "source": "https://github.com/scamsniffer/scamsniffer",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Lakera at Check Point",
+      "published_capability": "AI workforce, agent and runtime protection",
+      "overlap_inference": "PII, PS-adjacent safety and team policy",
+      "source": "https://www.lakera.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Cisco AI Defense",
+      "published_capability": "AI visibility, validation and runtime guardrails",
+      "overlap_inference": "Enterprise capture, policy and safety",
+      "source": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Palo Alto Networks Prisma AIRS",
+      "published_capability": "Enterprise AI security platform",
+      "overlap_inference": "Enterprise safety and policy",
+      "source": "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-introduces-prisma-airs-foundation-which-ai",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "HiddenLayer",
+      "published_capability": "AI security platform",
+      "overlap_inference": "Enterprise safety and runtime protection",
+      "source": "https://www.hiddenlayer.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Lasso Security",
+      "published_capability": "Enterprise AI adoption security",
+      "overlap_inference": "Team privacy and policy",
+      "source": "https://www.lasso.security/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Noma Security",
+      "published_capability": "AI and agent security and governance",
+      "overlap_inference": "Enterprise policy, inventory and guardrails",
+      "source": "https://noma.security/about",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Prompt Security at SentinelOne",
+      "published_capability": "AI security products",
+      "overlap_inference": "Team privacy and policy",
+      "source": "https://prompt.security/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Tumeryk",
+      "published_capability": "AI trust infrastructure for enterprise security",
+      "overlap_inference": "Trust positioning and enterprise risk",
+      "source": "https://www.tumeryk.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Google Cloud Model Armor",
+      "published_capability": "Prompt and response security screening",
+      "overlap_inference": "PII and enterprise safety",
+      "source": "https://cloud.google.com/security/products/model-armor",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Enterprise AI security and policy",
+      "name": "Amazon Bedrock Guardrails",
+      "published_capability": "Generative AI guardrails",
+      "overlap_inference": "PII, grounding and enterprise policy",
+      "source": "https://aws.amazon.com/bedrock/guardrails/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "Presidio",
+      "published_capability": "PII detection and de-identification framework; already used here",
+      "overlap_inference": "PII; dependency and alternative implementation",
+      "source": "https://github.com/data-privacy-stack/presidio",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "LLM Guard",
+      "published_capability": "Security toolkit for LLM interactions",
+      "overlap_inference": "PII and safety checks",
+      "source": "https://github.com/protectai/llm-guard",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "NeMo Guardrails",
+      "published_capability": "Programmable conversational guardrails",
+      "overlap_inference": "Safety and enterprise policy",
+      "source": "https://github.com/NVIDIA-NeMo/Guardrails",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "Guardrails AI",
+      "published_capability": "Validation and guardrails library",
+      "overlap_inference": "Safety, structure and claim validation",
+      "source": "https://github.com/guardrails-ai/guardrails",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "Promptfoo",
+      "published_capability": "AI testing and red teaming",
+      "overlap_inference": "Evaluation and CI evidence",
+      "source": "https://github.com/promptfoo/promptfoo",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "garak",
+      "published_capability": "LLM vulnerability scanner",
+      "overlap_inference": "Safety evaluation",
+      "source": "https://github.com/NVIDIA/garak",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "Giskard",
+      "published_capability": "LLM agent evaluation and testing",
+      "overlap_inference": "Evaluation and failure discovery",
+      "source": "https://github.com/Giskard-AI/giskard-oss",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "DeepEval",
+      "published_capability": "LLM evaluation framework",
+      "overlap_inference": "NF, FI, HP-adjacent evaluation",
+      "source": "https://github.com/confident-ai/deepeval",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "Ragas",
+      "published_capability": "LLM application evaluation",
+      "overlap_inference": "NF, FI, HP-adjacent evaluation",
+      "source": "https://github.com/vibrantlabsai/ragas",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "TruLens",
+      "published_capability": "Evaluation and tracking",
+      "overlap_inference": "Evidence and grounding evaluation",
+      "source": "https://github.com/truera/trulens",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "Arize Phoenix",
+      "published_capability": "AI observability and evaluation",
+      "overlap_inference": "Evaluation and inspectable traces",
+      "source": "https://github.com/arize-ai/phoenix",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Implementation alternatives and evaluation frameworks",
+      "name": "LangSmith",
+      "published_capability": "Agent and LLM observability",
+      "overlap_inference": "Team evidence and evaluation",
+      "source": "https://www.langchain.com/langsmith/observability",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "Factiverse",
+      "published_capability": "Claim identification and evidence checking",
+      "overlap_inference": "NF, FI, HP and evidence display",
+      "source": "https://www.factiverse.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "NewsGuard",
+      "published_capability": "Information-source reliability ratings",
+      "overlap_inference": "NF, FI and labeled evidence experience",
+      "source": "https://www.newsguardtech.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "Full Fact AI",
+      "published_capability": "AI-assisted fact-checking tools",
+      "overlap_inference": "NF, FI and review workflows",
+      "source": "https://fullfact.org/ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "Patronus AI",
+      "published_capability": "Evaluation research including Lynx and GLIDER; current focus includes simulation",
+      "overlap_inference": "HP, NF and evaluation methods",
+      "source": "https://www.patronus.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "Galileo",
+      "published_capability": "AI observability, evaluations and guardrails",
+      "overlap_inference": "HP, NF, FI and team evidence",
+      "source": "https://galileo.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "Fiddler",
+      "published_capability": "AI observability platform",
+      "overlap_inference": "Enterprise monitoring and evidence",
+      "source": "https://www.fiddler.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Claim checking and AI evaluation services",
+      "name": "Arthur",
+      "published_capability": "AI evaluation and monitoring",
+      "overlap_inference": "Enterprise evaluation and evidence",
+      "source": "https://www.arthur.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "Credo AI",
+      "published_capability": "AI governance platform",
+      "overlap_inference": "Enterprise evidence, policy and governance",
+      "source": "https://www.credo.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "Holistic AI",
+      "published_capability": "AI governance platform",
+      "overlap_inference": "Enterprise assurance and governance",
+      "source": "https://www.holisticai.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "Monitaur",
+      "published_capability": "AI governance platform",
+      "overlap_inference": "Enterprise governance and evidence",
+      "source": "https://www.monitaur.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "IBM watsonx.governance",
+      "published_capability": "Model evaluation, monitoring and governance",
+      "overlap_inference": "Enterprise inventories, quality and PII checks",
+      "source": "https://www.ibm.com/docs/en/watsonx/saas?topic=watsonxgovernance-plans",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "AI Verify Foundation",
+      "published_capability": "AI testing and assurance ecosystem",
+      "overlap_inference": "Potential evaluation partner and assurance substitute",
+      "source": "https://aiverifyfoundation.sg/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "MLCommons AILuminate",
+      "published_capability": "AI safety benchmark",
+      "overlap_inference": "Evaluation standard; not a consumer tag seller",
+      "source": "https://mlcommons.org/ailuminate/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Governance standards and assurance programs",
+      "name": "C2PA",
+      "published_capability": "Content provenance standard",
+      "overlap_inference": "Interoperability; not a competing company",
+      "source": "https://c2pa.org/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "DigiCert AI Trust",
+      "published_capability": "Cryptographic proof for AI",
+      "overlap_inference": "Identity, provenance and name-space adjacency",
+      "source": "https://www.digicert.com/solutions/ai-trust",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "AI Implementation Group AI TrustID",
+      "published_capability": "Identity identification and verification",
+      "overlap_inference": "Close spelling; different baseline job",
+      "source": "https://aigroup.uz/products/trust-id/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "TrustID UK",
+      "published_capability": "Identity document checks",
+      "overlap_inference": "Name adjacency; different baseline job",
+      "source": "https://www.trustid.co.uk/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "Trust ID at trustid.life",
+      "published_capability": "Customer intelligence",
+      "overlap_inference": "Name adjacency; different baseline job",
+      "source": "https://business.trustid.life/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "Incode",
+      "published_capability": "Identity and KYC verification",
+      "overlap_inference": "Identity adjacency; outside current tag scope",
+      "source": "https://www.incode.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "Plaid Identity Verification",
+      "published_capability": "Identity verification",
+      "overlap_inference": "Identity adjacency; outside current tag scope",
+      "source": "https://plaid.com/products/identity-verification/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "Oscilar",
+      "published_capability": "Financial risk decisioning",
+      "overlap_inference": "Enterprise fraud adjacency",
+      "source": "https://oscilar.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Identity and similarly named adjacent products",
+      "name": "Sardine",
+      "published_capability": "Financial crime and fraud platform",
+      "overlap_inference": "Enterprise fraud adjacency",
+      "source": "https://www.sardine.ai/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Closer browser and AI-answer workflows",
+      "name": "TrustLens AI at canitrustai.company",
+      "published_capability": "AI-answer claim classifications with sources; browser extension advertised",
+      "overlap_inference": "NF, FI, HP; closer functional overlap",
+      "source": "https://www.canitrustai.company/docs",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Closer browser and AI-answer workflows",
+      "name": "TruthLens at usetruthlens.com",
+      "published_capability": "Browser source/claim checking and per-image confidence badges",
+      "overlap_inference": "NF, FI, FA; closer interface overlap",
+      "source": "https://www.usetruthlens.com/",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Closer browser and AI-answer workflows",
+      "name": "SafePrompt",
+      "published_capability": "Local hidden-text injection browser warnings",
+      "overlap_inference": "AI-adjacent warning experience; different threat than PS",
+      "source": "https://safeprompt.dev/blog/chrome-extension-launch",
+      "performance_independently_verified": false
+    },
+    {
+      "category": "Closer browser and AI-answer workflows",
+      "name": "TrustLensAI by mahdiebene",
+      "published_capability": "Misinformation checking with a browser extension; regional focus",
+      "overlap_inference": "NF, FI and browser review workflow",
+      "source": "https://github.com/mahdiebene/TrustLensAI",
+      "performance_independently_verified": false
+    }
+  ],
+  "watchlist": [
+    {
+      "name": "Deepware",
+      "source": "https://deepware.ai/",
+      "reason": "Primary page could not be read in this pass"
+    },
+    {
+      "name": "DeepMedia",
+      "source": "https://www.deepmedia.ai/",
+      "reason": "Primary page could not be read in this pass"
+    },
+    {
+      "name": "Aim Security",
+      "source": "https://www.aim.security/",
+      "reason": "Primary fetch denied; current ownership and offering need confirmation"
+    },
+    {
+      "name": "Aporia",
+      "source": "https://www.aporia.com/",
+      "reason": "Primary fetch timed out; current ownership and offering need confirmation"
+    },
+    {
+      "name": "ForHumanity",
+      "source": "https://www.forhumanity.center/",
+      "reason": "Primary page could not be read in this pass"
+    },
+    {
+      "name": "Logically Facts",
+      "source": "https://www.logicallyfacts.com/",
+      "reason": "Primary page could not be read in this pass"
+    },
+    {
+      "name": "Factinsect",
+      "source": "https://www.factinsect.com/",
+      "reason": "Primary page could not be read in this pass"
+    },
+    {
+      "name": "SourceFrame",
+      "source": "https://sourceframe.app/use-cases/check-ai-answers",
+      "reason": "Official search result describes AI-answer checking; full page fetch exceeded tool size limit"
+    }
+  ],
+  "full_product_equivalence_verified": false
+}

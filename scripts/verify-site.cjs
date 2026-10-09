@@ -9,8 +9,16 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   const context=await browser.newContext({viewport:{width:1440,height:1100},bypassCSP:true});const page=await context.newPage();
   const errors=[],outside=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('data:'))outside.push(r.url());});
   const assert=(x,m)=>{if(!x)throw Error(m);};
+ async function appearance(target,value){
+  if(value==='system'){await target.getByRole('button',{name:'Use device theme',exact:true}).click();return;}
+  const control=target.getByRole('switch',{name:'Dark mode',exact:true});
+  // An explicit choice must fire a change even if the device already has that theme.
+  if(await control.isChecked()===(value==='dark'))await control.setChecked(value!=='dark');
+  await control.setChecked(value==='dark');
+ }
+
   await page.goto(base);await page.getByRole('heading',{name:'AI TRUST ID',exact:true}).waitFor();
-  await page.getByLabel('Appearance',{exact:true}).selectOption('light');
+  await appearance(page,'light');
   assert(await page.locator('html').getAttribute('data-theme')==='light','Light preference did not apply');
   assert(await page.locator('[data-tag-id]').count()===14,'Person must default to all 14 records');
   assert(await page.locator('[data-tag-id="PS"]').evaluate(e=>e.getBoundingClientRect().height<=128),'Tags are not compact');
@@ -25,13 +33,28 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    assert(ids.length===(audience==='person'?14:6),'Audience filtering failed');
    for(const id of ids){
     const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
-    for(const heading of ['Baseline job','What the tag can claim','Method and evidence','Accuracy and validation','Cost and access','Privacy','Who owns the outcome','Before release'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).count()===1,id+' incomplete');
-    assert((await dialog.innerText()).includes('Not release validated'),'False release claim');
+    assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
+    assert((await dialog.getByRole('region',{name:'Validation status'}).innerText()).includes('Not independently validated'),'False release claim');
+    assert(await dialog.locator('details').count()===3,id+' must have three compact disclosures');
+    assert(await dialog.locator('details[open]').count()===0,id+' details must start collapsed');
+    for(const title of ['How it works','Testing and evidence','Privacy, access and all features']){
+     const summary=dialog.locator('summary').filter({hasText:title});await summary.focus();await page.keyboard.press('Enter');
+     assert(await summary.evaluate(e=>e.parentElement.open),id+' disclosure is not keyboard operable');
+    }
+    for(const heading of ['What it can say','Method','What has been checked','Privacy','Who is responsible','Before release'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).isVisible(),id+' incomplete');
+    if(id==='PS'){
+     await dialog.getByRole('button',{name:'Download details',exact:true}).scrollIntoViewIfNeeded();
+     const downloadEvent=page.waitForEvent('download');await dialog.getByRole('button',{name:'Download details',exact:true}).click();
+     const exported=JSON.parse(fs.readFileSync(await (await downloadEvent).path(),'utf8'));
+     const catalog=await import('../site/src/catalog.js');const expected=catalog.allTags.find(t=>t.id==='PS');
+     for(const key of Object.keys(expected))assert(JSON.stringify(exported[key])===JSON.stringify(expected[key]),'Full detail export lost '+key);
+    }
+
     if(id==='PS'){
      assert(await dialog.getByRole('link',{name:'Download source',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','PS download path missing');
-     assert(await dialog.getByRole('link',{name:'Local setup',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
+     assert(await dialog.getByRole('link',{name:'Try locally',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
      await axe();
-     await dialog.getByRole('button',{name:'Report this tag',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();
+     await dialog.getByRole('button',{name:'Report an issue',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();
      await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByRole('alert').innerText()==='Add a short description before exporting.','Required description not enforced');
      const description=report.getByLabel('Description (required)');await description.fill('Synthetic issue <img src=x onerror="window.injected=true">');
      assert(await report.getByRole('link',{name:'Open public GitHub report',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/issues/new?template=tag-review.yml','Public report destination missing or contains draft data');
@@ -41,7 +64,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      await axe();const waiting=page.waitForEvent('download');await report.getByRole('button',{name:'Download draft',exact:true}).click();const item=await waiting;const draft=JSON.parse(fs.readFileSync(await item.path(),'utf8'));
      assert(draft.tag==='PS'&&draft.status==='draft_not_submitted','Draft bound to wrong tag or false submission');assert(!await page.evaluate(()=>window.injected),'Injected content executed');
      await page.keyboard.press('Escape');assert(await page.getByRole('dialog',{name:'Report',exact:true}).count()===0,'Nested Escape failed');
-     const reportTrigger=dialog.getByRole('button',{name:'Report this tag'});
+     const reportTrigger=dialog.getByRole('button',{name:'Report an issue'});
      await page.waitForFunction(element=>document.activeElement===element,await reportTrigger.elementHandle());
      assert(await reportTrigger.evaluate(e=>e===document.activeElement),'Nested dialog did not restore focus');
     }
@@ -69,29 +92,34 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   const publicIds=(await publicScope.json()).records.map(record=>record.id);
   assert(publicIds.length===scopeIds.length&&new Set(publicIds).size===publicIds.length&&scopeIds.every(id=>publicIds.includes(id)),'Full scope omitted or duplicated');
   await page.setViewportSize({width:1440,height:1100});await page.goto(base);
-  await page.getByLabel('Appearance',{exact:true}).selectOption('dark');await axe();
+  await appearance(page,'dark');await axe();
   await page.reload();assert(await page.locator('html').getAttribute('data-theme')==='dark','Dark preference did not persist');
   await page.screenshot({path:'output/playwright/site-redesign-dark.png'});
   for(const id of ['PS','PII_REDACTED']){
    await page.locator(`[data-tag-id="${id}"]`).click();await axe();
-   if(id==='PS'){await page.getByRole('button',{name:'Report this tag'}).click();await axe();await page.keyboard.press('Escape');}
+   if(id==='PS'){await page.getByRole('button',{name:'Report an issue'}).click();await axe();await page.keyboard.press('Escape');}
    await page.keyboard.press('Escape');
   }
+  const sibling=await context.newPage();await sibling.goto(base);await appearance(sibling,'light');
+  await page.waitForFunction(()=>document.documentElement.dataset.theme==='light');
+  assert(!await page.getByRole('switch',{name:'Dark mode'}).isChecked(),'Cross-tab switch state stale');await sibling.close();
+  const themeSwitch=page.getByRole('switch',{name:'Dark mode'});await themeSwitch.focus();await page.keyboard.press('Space');
+  assert(await themeSwitch.isChecked(),'Switch not operable by Space');
   await page.getByRole('tab',{name:'Enterprise',exact:true}).click();await axe();
   await page.locator('[data-tag-id="proprietary"]').click();await axe();await page.keyboard.press('Escape');
   await page.emulateMedia({colorScheme:'light'});assert(await page.locator('html').getAttribute('data-theme')==='dark','Explicit preference lost to OS scheme');
-  await page.getByLabel('Appearance',{exact:true}).selectOption('system');assert(await page.locator('html').getAttribute('data-theme')==='light','System light preference failed');
+  await appearance(page,'system');assert(await page.locator('html').getAttribute('data-theme')==='light','System light preference failed');
   await page.emulateMedia({colorScheme:'dark'});await page.waitForFunction(()=>document.documentElement.dataset.theme==='dark');
-  await page.getByLabel('Appearance',{exact:true}).selectOption('light');await page.getByRole('tab',{name:'Person',exact:true}).click();
+  await appearance(page,'light');await page.getByRole('tab',{name:'Person',exact:true}).click();
   await page.screenshot({path:'output/playwright/site-redesign-light.png'});
   await page.setViewportSize({width:320,height:720});await axe();
-  await page.getByLabel('Appearance',{exact:true}).selectOption('dark');await axe();
+  await appearance(page,'dark');await axe();
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=320),'Dark mobile overflow');
   await page.emulateMedia({forcedColors:'active',reducedMotion:'reduce'});
   assert(await page.locator('[data-tag-id="PS"]').evaluate(e=>getComputedStyle(e).borderTopStyle==='solid'),'High-contrast tag boundary missing');
   await page.emulateMedia({forcedColors:'none',reducedMotion:'no-preference'});
   const blocked=await browser.newContext();await blocked.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked');}});});
-  const blockedPage=await blocked.newPage();await blockedPage.goto(base);await blockedPage.getByLabel('Appearance',{exact:true}).selectOption('dark');assert(await blockedPage.locator('html').getAttribute('data-theme')==='dark','Theme failed with blocked storage');await blocked.close();
+  const blockedPage=await blocked.newPage();await blockedPage.goto(base);await appearance(blockedPage,'dark');assert(await blockedPage.locator('html').getAttribute('data-theme')==='dark','Theme failed with blocked storage');await blocked.close();
   const homeHTML=await (await context.request.get(base+'/')).text();
   assert(homeHTML.includes('<link rel="canonical" href="https://aitrustid.com/"'),'Home canonical missing');
   assert(!homeHTML.includes('noindex'),'Home blocked from indexing');
@@ -112,7 +140,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   const plainReferences=await browser.newContext({javaScriptEnabled:false});const staticPage=await plainReferences.newPage();
   await staticPage.goto(base+'/tags/');assert(await staticPage.locator('main a[href^="/tags/"]').count()===20,'No-script index cannot discover every tag');
   await staticPage.goto(base+'/tags/ps/');assert(await staticPage.getByRole('heading',{name:'PS — Command risk',exact:true}).count()===1,'No-script PS reference missing');assert(await staticPage.getByRole('heading',{name:'Accuracy and validation',exact:true}).count()===1,'No-script reference incomplete');await plainReferences.close();
-  await page.setViewportSize({width:1440,height:1100});await page.goto(base+'/tags/ps/');await axe();await page.getByLabel('Appearance',{exact:true}).selectOption('light');await axe();
+  await page.setViewportSize({width:1440,height:1100});await page.goto(base+'/tags/ps/');await axe();await appearance(page,'light');await axe();
   assert(errors.length===0,'Browser errors: '+errors.join('; '));assert(outside.length===0,'Unexpected outbound traffic: '+JSON.stringify([...new Set(outside)]));assert(violations.length===0,'Accessibility violations: '+JSON.stringify(violations));
   let productionPolicyVerified=false;
   if(base.startsWith('https://')){
@@ -126,7 +154,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    await normal.locator('[data-tag-id="PS"]').click();await normal.getByRole('dialog',{name:'Command risk',exact:true}).waitFor();
    await normal.keyboard.press('Escape');await normal.getByRole('tab',{name:'Enterprise',exact:true}).click();
    assert(await normal.locator('[data-tag-id]').count()===6,'Production CSP blocked catalogue interaction');
-   await normal.getByLabel('Appearance',{exact:true}).selectOption('dark');
+   await appearance(normal,'dark');
    assert(await normal.locator('html').getAttribute('data-theme')==='dark','Production CSP blocked theme control');
    await normal.goto(base+'/tags/ps/');
    assert(await normal.getByRole('heading',{name:'PS — Command risk',exact:true}).count()===1,'Production reference not available');
@@ -134,7 +162,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    const missing=await ordinary.request.get(base+'/tags/not-a-real-tag/');assert(missing.status()===404,'Unknown tag is a soft 404');
    productionPolicyVerified=true;await ordinary.close();
   }
-  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:22,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
+  const report={date:'2026-10-08',url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,plainLanguageTagSummaries:20,visibleValidationStatus:20,compactDisclosures:true,completeDetailExport:true,themeSwitch:true,switchKeyboardSpace:true,crossTabThemeSync:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:22,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
   fs.writeFileSync(process.env.AITRUST_SITE_REPORT||'runs/2026-10-08-site-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));await context.close();
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

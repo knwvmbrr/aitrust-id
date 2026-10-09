@@ -4,8 +4,9 @@ AITrust-ID puts an identifiable tag beside content, with the evidence and limits
 what that tag establishes. Tags are the product. Detectors, capture, receipts,
 verification, and organizational services support those tags.
 
-The first development workflow checks text for two supported command-risk patterns:
-a download piped into a shell, and recognized encoded-payload execution syntax. It
+The first development workflow checks five bounded command-risk signal types:
+downloads piped into a shell; supported command, process and backtick substitution;
+and recognized encoded-code execution syntax. It
 uses the existing `PS` code with a bounded command-risk explanation. `UC`, `SC`, and
 `BT` remain proposals in RFC-0004; they have not replaced the adopted taxonomy.
 
@@ -13,7 +14,8 @@ uses the existing `PS` code with a bounded command-risk explanation. `UC`, `SC`,
 
 The public tag catalogue is live at [aitrustid.com](https://aitrustid.com), with
 Person/Enterprise views, compact tag tiles, a tag logo, Light/Dark/System appearance
-and full tag-detail modals. Twenty [static tag reference pages](https://aitrustid.com/tags/)
+and compact tag-detail modals with a plain-language purpose, limitation and visible
+validation status. Deeper methods, testing and feature details expand on request. Twenty [static tag reference pages](https://aitrustid.com/tags/)
 and a [22-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
 to crawlers. Google indexing and Search Console ownership remain unverified.
 HTTPS, public response hashes,
@@ -22,6 +24,9 @@ community controls export drafts and link to public GitHub issues/discussions;
 private vulnerabilities use a separate GitHub report channel. No research intake
 is connected.
 [Current launch gates and deployment evidence](docs/live-launch-status.md).
+[Market landscape and first-tag delivery priorities](docs/competitive-landscape.md)
+distinguish related products from full product equivalence; business viability and
+comparative superiority are not established.
 
 ## Try the local checker
 

@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef,useId} from 'react';
+import React,{useState,useEffect,useRef,useId,useSyncExternalStore} from 'react';
 import {createRoot} from 'react-dom/client';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -7,6 +7,7 @@ import {twMerge} from 'tailwind-merge';
 import {personTags,enterpriseTags,allTags} from './catalog.js';
 import scope from './public-scope.json';
 import {registerPublicTagTools} from './model-tools.js';
+import {presentation} from './presentation.js';
 
 const cn=(...x)=>twMerge(clsx(x));
 const repository='https://github.com/knwvmbrr/aitrust-id';
@@ -18,34 +19,71 @@ const featuresById=new Map(scope.records.map(r=>[r.id,r]));
 const sharedIds=['F-001','F-003','F-004','F-005','F-007','F-008','F-009','N-005','N-006'];
 function download(name,content,type='application/json'){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function route(){let decoded;try{decoded=decodeURIComponent(location.hash.slice(1));}catch{return {audience:'person',id:null};}const [audience,id]=decoded.split('/');return {audience:audience==='enterprise'?'enterprise':'person',id:allTags.some(t=>t.id===id&&t.audience===audience)?id:null};}
-function Section({title,children}){return <section className="border-t border-line py-6"><h3 className="mb-3 text-lg font-bold">{title}</h3>{children}</section>}
-function Bullets({items}){return <ul className="list-disc space-y-2 pl-5 text-base leading-relaxed">{items.map((item,i)=><li key={i}>{item}</li>)}</ul>}
-function Shell({children,title,description}){return <Dialog.Portal><Dialog.Overlay className="fixed inset-0 z-40 bg-black/60"/><Dialog.Content className="fixed inset-3 z-50 mx-auto max-w-3xl overflow-y-auto break-words rounded-2xl border border-line bg-surface shadow-lg sm:inset-6"><div className="sticky top-0 z-10 grid gap-3 border-b border-line bg-surface px-4 py-4 sm:flex sm:items-start sm:justify-between sm:gap-5 sm:px-8"><div className="min-w-0"><Dialog.Title className="text-xl font-bold">{title}</Dialog.Title><Dialog.Description className="mt-1 text-sm text-muted">{description}</Dialog.Description></div><Dialog.Close className={cn(button,"order-first justify-self-end sm:order-last sm:shrink-0")}>Close</Dialog.Close></div><div className="p-4 sm:p-8">{children}</div></Dialog.Content></Dialog.Portal>}
-function FeatureList({ids}){const unique=[...new Set(ids)].map(id=>featuresById.get(id)).filter(Boolean);return <ul className="space-y-4">{unique.map(f=><li key={f.id}><p className="text-base font-bold">{f.title}</p><p className="mt-1 text-base leading-relaxed">{f.job}</p><p className="mt-1 text-sm text-muted">{f.id} · {f.disposition} · Scope record; not an implementation claim</p></li>)}</ul>}
-function TagDetails({tag}){
+function Section({title,children}){return <section className="border-t border-line py-4"><h3 className="mb-2 text-base font-semibold">{title}</h3>{children}</section>}
+function Bullets({items}){return <ul className="list-disc space-y-1 pl-5 text-sm leading-6">{items.map((item,i)=><li key={i}>{item}</li>)}</ul>}
+function Shell({children,title,description}) {
+ return <Dialog.Portal><Dialog.Overlay className="fixed inset-0 z-40 bg-black/60"/><Dialog.Content className="modal fixed inset-x-3 top-1/2 z-50 mx-auto max-h-[calc(100dvh-1.5rem)] max-w-2xl -translate-y-1/2 overflow-y-auto break-words rounded-2xl border border-line bg-surface shadow-lg sm:inset-x-6 sm:max-h-[calc(100dvh-3rem)]">
+  <header className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-line bg-surface px-5 py-4 sm:px-6">
+   <div className="min-w-0"><Dialog.Title className="text-xl font-semibold">{title}</Dialog.Title><Dialog.Description className="mt-1 text-sm text-muted">{description}</Dialog.Description></div>
+   <Dialog.Close aria-label="Close" className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-line hover:border-ink"><svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m6 6 12 12M18 6 6 18"/></svg></Dialog.Close>
+  </header><div className="px-5 py-5 sm:px-6">{children}</div>
+ </Dialog.Content></Dialog.Portal>;
+}
+function Disclosure({title,children}) {
+ return <details className="tag-disclosure border-t border-line"><summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>{title}</span><span aria-hidden="true" className="disclosure-symbol text-lg font-normal">+</span></summary><div className="pb-4 text-sm leading-6">{children}</div></details>;
+}
+function FeatureList({ids}){const unique=[...new Set(ids)].map(id=>featuresById.get(id)).filter(Boolean);return <ul className="mt-2 space-y-3">{unique.map(f=><li key={f.id}><p className="text-sm font-semibold">{f.title}</p><p className="text-sm leading-6">{f.job}</p><p className="mt-1 text-sm text-muted">{f.id} · {f.disposition} · Scope record; not an implementation claim</p></li>)}</ul>}
+function TagDetails({tag}) {
  const [message,setMessage]=useState('');
+ const intro=presentation(tag);
  async function copyLink(){try{await navigator.clipboard.writeText(location.href);setMessage('Tag link copied.');}catch{setMessage('Copy was unavailable. The browser address is the tag link.');}}
- return <><div className="flex flex-wrap items-end justify-between gap-4"><span className={cn('font-mono text-5xl font-bold sm:text-7xl',tag.code.length>3&&'text-3xl sm:text-5xl')}>{tag.code}</span><p className="text-sm text-right">{tag.status}<br/>{tag.proposed?'Proposed':'Development'} · Not release validated</p></div><p className="mt-6 text-lg leading-relaxed">{tag.outcome}</p><div className="my-6 flex flex-wrap gap-3"><WorkDialog intent="Report" tag={tag} label="Report this tag"/><WorkDialog intent="Assist" tag={tag} label="Help with this tag"/><button className={button} onClick={copyLink}>Copy link</button><button className={button} onClick={()=>download('ai-trust-id-'+tag.id+'.json',JSON.stringify({...tag,scopeFeatures:[...sharedIds,...tag.features].map(id=>featuresById.get(id)).filter(Boolean)},null,2))}>Download details</button></div><p role="status" className="mb-4 text-sm">{message}</p>
- {tag.id==='PS'&&<Section title="Try PS locally"><p className="mb-4 text-base leading-relaxed">Download the open-source development checker. It finds supported command-risk patterns; it does not certify an AI answer as true or safe. Your text is evaluated on your own machine.</p><div className="flex flex-wrap gap-3"><a className={button} href={sourceDownload} rel="noreferrer">Download source</a><a className={button} href={quickstart} target="_blank" rel="noreferrer">Local setup</a></div></Section>}
- <Section title="Baseline job"><p className="text-base leading-relaxed">{tag.job}</p></Section>
- <Section title="What the tag can claim"><p className="text-base leading-relaxed">{tag.claim}</p></Section>
- <Section title="Method and evidence"><p className="text-base leading-relaxed">{tag.method}</p><p className="mt-3 break-all text-base">Record: {tag.id}</p><p className="mt-3 text-base">{tag.version}</p>{tag.floor&&<p className="mt-3 text-base">{tag.floor}</p>}</Section>
- <Section title="Inputs and outputs"><p className="text-base leading-relaxed"><strong>Input:</strong> {tag.inputs}</p><p className="mt-3 text-base leading-relaxed"><strong>Output:</strong> {tag.outputs}</p></Section>
- <Section title="Supported scope"><Bullets items={tag.supported}/></Section>
- <Section title="Limits"><Bullets items={tag.limits}/></Section>
- <Section title="Accuracy and validation"><p className="text-base leading-relaxed">{tag.validation}</p><p className="mt-3 text-base leading-relaxed">Independent reproduction is a goal, not a completed check. A matching hash or repeated result does not prove the claim is true.</p></Section>
- <Section title="Cost and access"><p className="text-base leading-relaxed">{tag.price}</p></Section>
- <Section title="Privacy"><p className="text-base leading-relaxed">{tag.privacy}</p></Section>
- <Section title="Dependencies and failure"><Bullets items={tag.dependencies}/><p className="mt-4 text-base leading-relaxed">{tag.failure}</p></Section>
- <Section title="Who owns the outcome"><p className="text-base leading-relaxed">{tag.owner}</p></Section>
- <Section title="Before release"><p className="text-base leading-relaxed">{tag.release}</p></Section>
- <Section title="Tag enhancements in scope">{tag.features.length?<FeatureList ids={tag.features}/>:<p className="text-base">The proposal needs its own validated method; no unmeasured indicator becomes an implemented feature.</p>}</Section>
- <Section title="Shared tag capabilities"><FeatureList ids={sharedIds}/></Section>
- <Section title="References"><p className="mb-4"><a className="text-base underline" href={'/tags/'+tag.id.toLowerCase().replaceAll('_','-')+'/'}>Permanent tag reference</a></p><ul className="space-y-3">{tag.references.map(url=><li key={url}><a className="break-all text-base underline" href={url} target="_blank" rel="noreferrer">{url.split('/').at(-1)}</a></li>)}</ul><p className="mt-4 text-sm">Scope record: {tag.scopeId}. A specification, proposal, or feature record is not evidence that it runs.</p></Section></>
+ return <>
+  <div className="mb-3 flex flex-wrap items-center gap-2 text-xs"><span className="rounded-md border border-input px-2 py-1 font-mono font-semibold">{tag.code}</span><span className="rounded-md bg-canvas px-2 py-1">{tag.status}</span><span className="text-muted">{intro.access}</span></div>
+  <p data-tag-summary className="text-lg leading-7">{intro.summary}</p>
+  <p data-tag-limit className="mt-2 text-sm leading-6 text-muted">{intro.limit}</p>
+  <section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">
+   <div className="flex flex-wrap items-center justify-between gap-2"><h3 className="text-sm font-semibold">Validation</h3><span className="text-xs text-muted">{intro.stage}</span></div>
+   <p className="mt-1 text-sm font-semibold">Not independently validated</p><p className="mt-1 text-sm leading-6 text-muted">{intro.validation}</p>
+  </section>
+  {tag.id==='PS'&&<div className="mb-4 flex flex-wrap gap-2"><a className={button} href={quickstart} target="_blank" rel="noreferrer">Try locally</a><a className={button} href={sourceDownload} rel="noreferrer">Download source</a></div>}
+  <Disclosure title="How it works">
+   <h4 className="font-semibold">What it can say</h4><p>{tag.claim}</p>
+   <h4 className="mt-3 font-semibold">Method</h4><p>{tag.method}</p>
+   <h4 className="mt-3 font-semibold">What it checks</h4><Bullets items={tag.supported}/>
+   <h4 className="mt-3 font-semibold">Limits</h4><Bullets items={tag.limits}/>
+   <dl className="mt-3 space-y-2"><div><dt className="font-semibold">Input</dt><dd>{tag.inputs}</dd></div><div><dt className="font-semibold">Output</dt><dd>{tag.outputs}</dd></div><div><dt className="font-semibold">Baseline job and outcome</dt><dd>{tag.job} {tag.outcome}</dd></div></dl>
+  </Disclosure>
+  <Disclosure title="Testing and evidence">
+   <h4 className="font-semibold">What has been checked</h4><p className="tabular-nums">{tag.validation}</p>
+   <p className="mt-2 text-muted">Repeating a result or checking its signature can confirm a record. It does not establish that the finding is correct.</p>
+   <h4 className="mt-3 font-semibold">Before release</h4><p>{tag.release}</p>
+   <h4 className="mt-3 font-semibold">Method settings</h4><p>{tag.version}</p>{tag.floor&&<p>{tag.floor}</p>}
+   <p className="mt-3"><a className="underline underline-offset-4" href={'/tags/'+tag.id.toLowerCase().replaceAll('_','-')+'/'}>Full tag reference</a></p>
+   <ul className="mt-2 space-y-1">{tag.references.map(url=><li key={url}><a className="break-all underline underline-offset-4" href={url} target="_blank" rel="noreferrer">{url.split('/').at(-1)}</a></li>)}</ul>
+   <p className="mt-2 text-xs text-muted">Record {tag.id} · Scope {tag.scopeId}. A planned feature is not evidence that it works.</p>
+  </Disclosure>
+  <Disclosure title="Privacy, access and all features">
+   <h4 className="font-semibold">Privacy</h4><p>{tag.privacy}</p><h4 className="mt-3 font-semibold">Access</h4><p>{tag.price}</p>
+   <h4 className="mt-3 font-semibold">Dependencies and failure</h4><Bullets items={tag.dependencies}/><p className="mt-2">{tag.failure}</p>
+   <h4 className="mt-3 font-semibold">Who is responsible</h4><p>{tag.owner}</p>
+   <h4 className="mt-3 font-semibold">Tag features</h4>{tag.features.length?<FeatureList ids={tag.features}/>:<p>This proposal needs its own validated method.</p>}
+   <h4 className="mt-3 font-semibold">Shared capabilities</h4><FeatureList ids={sharedIds}/>
+   <div className="mt-4 flex flex-wrap gap-2"><button className={button} onClick={copyLink}>Copy link</button><button className={button} onClick={()=>download('ai-trust-id-'+tag.id+'.json',JSON.stringify({...tag,scopeFeatures:[...sharedIds,...tag.features].map(id=>featuresById.get(id)).filter(Boolean)},null,2))}>Download details</button></div><p role="status" className="mt-2">{message}</p>
+  </Disclosure>
+  <div className="mt-4 flex flex-wrap items-center gap-2"><WorkDialog intent="Report" tag={tag} label="Report an issue"/><WorkDialog intent="Assist" tag={tag} label="Help improve this tag"/></div>
+ </>;
 }
 function TagMark({className=''}){return <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" className={className}><path d="M9 7h22l10 10v20a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V11a4 4 0 0 1 4-4Z" stroke="currentColor" strokeWidth="2.5"/><circle cx="31" cy="17" r="2.5" stroke="currentColor" strokeWidth="2"/><path d="M14 25h16M14 31h10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/></svg>}
-function Appearance(){const id=useId();return <div className="flex items-center gap-2 text-sm text-muted"><label htmlFor={id} className="sr-only">Appearance</label><select id={id} data-theme-picker defaultValue={window.AITrustTheme?.preference()||'system'} className="rounded-lg border border-line bg-canvas px-3 py-2 text-sm"><option value="system">System theme</option><option value="light">Light</option><option value="dark">Dark</option></select></div>}
-function TagTile({tag,open,onOpen,onClose}){return <Dialog.Root open={open} onOpenChange={value=>value?onOpen(tag):onClose()}><Dialog.Trigger asChild><button data-tag-id={tag.id} aria-label={tag.code+' · '+tag.name} className="tag-tile flex w-full items-center justify-center rounded-xl p-5 text-center"><svg aria-hidden="true" focusable="false" className="tag-outline" viewBox="0 0 180 112" preserveAspectRatio="none"><path d="M12 1H147L179 33V100Q179 111 168 111H12Q1 111 1 100V12Q1 1 12 1Z" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke"/><circle cx="152" cy="19" r="3" fill="none" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke"/></svg><span className={cn('font-mono text-3xl font-semibold',tag.code.length>3&&'text-xl')}>{tag.code}</span></button></Dialog.Trigger><Shell title={tag.name} description={tag.kind||'AI TRUST ID tag'}><TagDetails tag={tag}/></Shell></Dialog.Root>}
+function Appearance() {
+ const theme=window.AITrustTheme;
+ const state=useSyncExternalStore(theme.subscribe,theme.snapshot,theme.snapshot);
+ const [preference,resolved]=state.split(':');
+ return <div className="appearance flex items-center gap-2 text-sm">
+  <label className="theme-control flex min-h-11 cursor-pointer items-center gap-2"><span className="text-muted" aria-hidden="true">{resolved==='dark'?'Dark':'Light'}</span><input type="checkbox" role="switch" aria-label="Dark mode" className="theme-toggle" checked={resolved==='dark'} onChange={e=>theme.setPreference(e.target.checked?'dark':'light')}/></label>
+  <button type="button" aria-label="Use device theme" aria-pressed={preference==='system'} onClick={()=>theme.setPreference('system')} className="min-h-11 rounded-lg px-2 text-xs text-muted underline underline-offset-4">Auto</button>
+ </div>;
+}
+function TagTile({tag,open,onOpen,onClose}){return <Dialog.Root open={open} onOpenChange={value=>value?onOpen(tag):onClose()}><Dialog.Trigger asChild><button data-tag-id={tag.id} aria-label={tag.code+' · '+tag.name} className="tag-tile flex w-full items-center justify-center rounded-xl p-5 text-center"><svg aria-hidden="true" focusable="false" className="tag-outline" viewBox="0 0 180 112" preserveAspectRatio="none"><path d="M12 1H147L179 33V100Q179 111 168 111H12Q1 111 1 100V12Q1 1 12 1Z" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke"/><circle cx="152" cy="19" r="3" fill="none" stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke"/></svg><span className={cn('font-mono text-3xl font-semibold',tag.code.length>3&&'text-xl')}>{tag.code}</span></button></Dialog.Trigger><Shell title={tag.name} description={tag.audience==='person'?'Person tag':'Enterprise offering'}><TagDetails tag={tag}/></Shell></Dialog.Root>}
 
 function Composer({intent,tag}){
  const uid=useId();const detailsRef=useRef(null);const [kind,setKind]=useState(intent==='Report'?'Wrong or misleading tag':intent==='Assist'?'Contribution':'Discussion');const [target,setTarget]=useState(tag?.id||'General');const [role,setRole]=useState('Independent labels');const [receipt,setReceipt]=useState('');const [details,setDetails]=useState('');const [error,setError]=useState('');const [message,setMessage]=useState('');
@@ -72,7 +110,7 @@ function App(){const initial=route();const [audience,setAudience]=useState(initi
  function switchAudience(value){setSelected(null);setAudience(value);history.replaceState(null,'','#'+value);}
  function openTag(tag){setSelected(tag.id);history.replaceState(null,'','#'+tag.audience+'/'+encodeURIComponent(tag.id));}
  function closeTag(){setSelected(null);history.replaceState(null,'','#'+audience);}
- return <><a href="#tag-grid" className="sr-only focus:not-sr-only focus:absolute focus:left-5 focus:top-4 focus:z-50 focus:bg-surface focus:p-3">Skip to tags</a><main className="mx-auto max-w-5xl px-6 pb-8 pt-6 sm:px-10 sm:pt-8"><div className="mb-8 flex justify-end"><Appearance/></div><header className="flex flex-wrap items-center justify-center gap-3"><TagMark className="size-10 shrink-0"/><h1 className="break-words text-center text-3xl font-semibold sm:text-4xl">AI TRUST ID</h1></header><Tabs.Root id="tag-grid" tabIndex={-1} value={audience} onValueChange={switchAudience} className="mt-7"><Tabs.List aria-label="Tag audience" className="mx-auto flex w-fit max-w-full flex-wrap justify-center gap-1 rounded-xl border border-line bg-surface p-1"><Tabs.Trigger value="person" className="rounded-lg px-5 py-2 text-sm text-muted data-[state=active]:bg-ink data-[state=active]:text-surface">Person</Tabs.Trigger><Tabs.Trigger value="enterprise" className="rounded-lg px-5 py-2 text-sm text-muted data-[state=active]:bg-ink data-[state=active]:text-surface">Enterprise</Tabs.Trigger></Tabs.List>{['person','enterprise'].map(value=><Tabs.Content key={value} value={value} className="tag-grid mt-10 grid gap-4">{(value==='person'?personTags:enterpriseTags).map(tag=><TagTile key={tag.id} tag={tag} open={selected===tag.id} onOpen={openTag} onClose={closeTag}/>)}</Tabs.Content>)}</Tabs.Root><footer className="mt-10 border-t border-line pt-5"><nav aria-label="Company and community" className="flex flex-wrap justify-center gap-x-6 gap-y-1">{['Report','Assist','Townhall'].map(intent=><WorkDialog key={intent} intent={intent} footer/>)}{['Teamwork','How tags work','Scope','About','Legal'].map(kind=><Dialog.Root key={kind} open={footer===kind} onOpenChange={value=>setFooter(value?kind:null)}><Dialog.Trigger className="py-2 text-sm underline underline-offset-4">{kind}</Dialog.Trigger><Shell title={kind} description="AI TRUST ID"><FooterDetails kind={kind}/></Shell></Dialog.Root>)}<a className="py-2 text-sm underline underline-offset-4" href="/tags/">Tag reference</a></nav><p className="mt-6 text-center text-xs text-muted">AI TRUST ID · Development preview</p></footer></main></>;
+ return <><a href="#tag-grid" className="sr-only focus:not-sr-only focus:absolute focus:left-5 focus:top-4 focus:z-50 focus:bg-surface focus:p-3">Skip to tags</a><main className="mx-auto max-w-5xl px-6 pb-8 pt-6 sm:px-10 sm:pt-8"><div className="mb-5 flex justify-end"><Appearance/></div><header className="flex flex-wrap items-center justify-center gap-3"><TagMark className="size-10 shrink-0"/><h1 className="break-words text-center text-3xl font-semibold sm:text-4xl">AI TRUST ID</h1></header><Tabs.Root id="tag-grid" tabIndex={-1} value={audience} onValueChange={switchAudience} className="mt-7"><Tabs.List aria-label="Tag audience" className="mx-auto flex w-fit max-w-full flex-wrap justify-center gap-1 rounded-xl border border-line bg-surface p-1"><Tabs.Trigger value="person" className="rounded-lg px-5 py-2 text-sm text-muted data-[state=active]:bg-ink data-[state=active]:text-surface">Person</Tabs.Trigger><Tabs.Trigger value="enterprise" className="rounded-lg px-5 py-2 text-sm text-muted data-[state=active]:bg-ink data-[state=active]:text-surface">Enterprise</Tabs.Trigger></Tabs.List>{['person','enterprise'].map(value=><Tabs.Content key={value} value={value} className="tag-grid mt-10 grid gap-4">{(value==='person'?personTags:enterpriseTags).map(tag=><TagTile key={tag.id} tag={tag} open={selected===tag.id} onOpen={openTag} onClose={closeTag}/>)}</Tabs.Content>)}</Tabs.Root><footer className="mt-10 border-t border-line pt-5"><nav aria-label="Company and community" className="flex flex-wrap justify-center gap-x-6 gap-y-1">{['Report','Assist','Townhall'].map(intent=><WorkDialog key={intent} intent={intent} footer/>)}{['Teamwork','How tags work','Scope','About','Legal'].map(kind=><Dialog.Root key={kind} open={footer===kind} onOpenChange={value=>setFooter(value?kind:null)}><Dialog.Trigger className="py-2 text-sm underline underline-offset-4">{kind}</Dialog.Trigger><Shell title={kind} description="AI TRUST ID"><FooterDetails kind={kind}/></Shell></Dialog.Root>)}<a className="py-2 text-sm underline underline-offset-4" href="/tags/">Tag reference</a></nav><p className="mt-6 text-center text-xs text-muted">AI TRUST ID · Development preview</p></footer></main></>;
 
 }
 createRoot(document.getElementById('root')).render(<App/>);

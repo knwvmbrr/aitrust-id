@@ -123,7 +123,7 @@ There are 22 canonical sitemap URLs: home, tag index and 20 detail pages.
 `public/theme.js` is an early same-origin script compatible with the existing CSP.
 It validates the saved appearance enum and synchronizes system and cross-tab changes.
 Without JavaScript the system color scheme and full static references remain usable.
-Native selects are hidden on static pages until their behavior is initialized.
+Native switch controls are hidden on static pages until their behavior is initialized.
 
 Production evidence: `runs/2026-10-08-site-redesign-public.json`,
 `runs/2026-10-08-site-redesign-result.json` and the publication asset audit. Tests
@@ -140,3 +140,25 @@ URLs, and monitor indexing reports. See [Google's Search Console guidance](https
 and [recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
 The user's pasted search results describe other services and are not indexing evidence
 for this owned domain. No third-party biometric or certification claims are reused.
+
+## Friendly tag detail presentation
+
+The catalogue keeps code-only tiles. Each detail dialog opens at its natural content
+height, bounded by the viewport. The initial view shows a plain-language job, a
+specific limitation and the validation status. Three native keyboard-operable
+`details` sections contain the method, complete testing/evidence information and
+privacy/access/features. All catalogue fields and scope features remain available;
+the JSON export retains the full record. Evidence reproducibility and signature
+validity are explicitly distinguished from finding correctness.
+
+`src/presentation.js` supplies concise introductions for all 20 records. The build
+fails if a record lacks its introduction. Static reference pages use the same brief
+and keep the complete catalogue details crawlable.
+
+The native checkbox has `role="switch"` and accessible name “Dark mode.” Space toggles
+it; Auto follows the device theme. `public/theme.js` owns a single preference store,
+synchronizes catalogue and static controls, and notifies React subscribers and other
+same-origin tabs. Storage failure leaves the control usable. There is no motion,
+remote storage, extra dependency or analytics. Evidence for this revision:
+`runs/2026-10-08-site-friendly-local.json` and, after deployment,
+`runs/2026-10-08-site-friendly-public.json`.

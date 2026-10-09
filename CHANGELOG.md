@@ -2,6 +2,13 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Replaced the appearance menu with a keyboard-operable light/dark switch and Auto.
+  Tag dialogs fit their content, lead with plain-language purpose, limitation and
+  visible validation status, and retain full details in three disclosures and JSON.
+- Added a sourced market inventory that separates partial substitutes, standards,
+  dependencies and similar names from full product equivalence. No competitor
+  accuracy ranking or claim of market uniqueness is made.
+
 - Published compact tag tiles, a native vector tag logo and persistent
   Light/Dark/System appearance. All 20 modals, eight footer dialogs, keyboard,
   mobile and automated accessibility checks pass on the live domain.
