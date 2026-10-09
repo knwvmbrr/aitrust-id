@@ -19,8 +19,8 @@ test:
 verify: test
 	npm run verify:browser
 verify-runtime:
-	$(PYTHON) scripts/verify-runtime.py --env-file $(ENV_FILE)
-	AITRUST_ENV_FILE=$(ENV_FILE) node scripts/verify-extension.cjs
+	$(PYTHON) scripts/verify-runtime.py --env-file "$(ENV_FILE)"
+	AITRUST_ENV_FILE="$(ENV_FILE)" node scripts/verify-extension.cjs
 regressions:
 	$(PYTHON) scripts/verify-regressions.py --output eval/regression-report.json
 gates:

@@ -11,11 +11,32 @@ violations. A separate ordinary browser context verifies the production CSP and
 working interaction without a CSP bypass. This is catalogue publication, not an
 accuracy-certified tag release or a remotely hosted evaluation service.
 
-Deployment: `5e75ffe7-a23f-4d13-b9c5-aa8ab4089e9b`; only the reviewed `site/dist`
+Deployment: `5fd49855-ddb5-402f-a5b3-eff87d95668e`; only the reviewed `site/dist`
 assets were uploaded. Known SMTP, notification and recovery secret literals were
-absent. The working tree is dirty and its implementation has not been pushed to
-GitHub. Deployment metadata explicitly identifies that dirty state; the deployed
-file hash manifest is the source of publication truth.
+absent. The immediate `www` comparison differed during deployment propagation;
+subsequent comparisons of HTML and assets match on all three public addresses.
+The deployed asset manifest identifies the exact publication.
+
+The implementation is public at https://github.com/knwvmbrr/aitrust-id. Anonymous
+clone and ZIP downloads match the reviewed 254-file root snapshot `a0428c46`.
+Previous local commits and tooling refs were retained locally, outside public
+main history; only main was pushed. A fresh downloaded checkout installed its
+Python dependencies, passed 101 tests and 60 regressions, built all three
+containers, became healthy, and produced schema/method-validated PS and PII
+records. The installation test reused the existing local runtime credential;
+private initialization was separately exercised. This is engineering reproduction
+by the implementation agent, not an independent user review.
+
+GitHub issues/discussions and private vulnerability reporting are enabled and
+linked from the site. Draft text is not automatically submitted or included in
+links. These are the development entry paths; a self-hosted live community and
+private research intake remain separate unfinished application tracks.
+
+GitHub Actions attempted the initial push, but **no job started**: its annotation
+says the account is locked due to a billing issue. The owner must resolve that
+account condition before hosted CI can be verified. No runner or release gate was
+bypassed. The local statistical harness still exits 1 for missing independent
+holdout/calibration evidence and lower bounds below the candidate gates.
 
 The iCloud test arrived in the owner’s inbox; separate primary email alerts are
 now enabled alongside both HTTPS senders. Browser desktop notification permission
@@ -37,7 +58,7 @@ See [Cloudflare automatic-injection documentation](https://developers.cloudflare
 
 | Gate | Owner | Required evidence |
 |---|---|---|
-| Public source publication | Engineering | Scoped tree and reachable-history privacy audit, reproducible checks, normal push; no mirror |
+| Hosted CI | Owner + engineering | Resolve GitHub account billing lock, then run configured checks; statistical gate must remain failing until valid evidence exists |
 | Moderated public conversation | Engineering + owner | Accepted posting/privacy/moderation rules; authenticated posting, abuse limits, public messages, correction/retraction tests |
 | Private reports and research intake | Engineering + owner | Accepted consent/retention, auth, quotas, separation, deletion and restore checks; sensitive reports stay restricted |
 | PS accuracy | Independent labelers + owner | Frozen independent holdout, agreed sampling/calibration, confidence-bound gates; no relaxed release criterion |
@@ -68,7 +89,9 @@ Sources: [Tumeryk’s own product description](https://www.tumeryk.com/aitrustsc
 [USPTO likelihood of confusion](https://www.uspto.gov/trademarks/search/likelihood-confusion),
 [official case lookup](https://tsdr.uspto.gov/#caseNumber=98872636&caseSearchType=US_APPLICATION&caseType=DEFAULT).
 
-Evidence: `runs/2026-10-08-site-public-domain-verification.json`,
+Evidence: `runs/2026-10-08-public-source-result.json`,
+`runs/2026-10-08-open-path-publication.json`,
+`runs/2026-10-08-site-public-domain-verification.json`,
 `runs/2026-10-08-site-domain-association.json`,
 `runs/2026-10-08-site-live-result.json`,
 `runs/2026-10-08-public-site-publication-audit.json`,

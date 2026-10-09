@@ -61,7 +61,10 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 
 There are 101 passing Python checks, including live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All four active development fixture sets run through the dedicated CI regression job: 60 cases, zero classification errors locally. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
 The public repository contains the runnable source. Engineering CI and the separate
-statistical gate are visible; a failing statistical gate prevents release approval,
+statistical gate are configured. GitHub currently prevents every hosted job from
+starting because of an account billing lock; the fresh public checkout passes
+101 Python tests and 60 development regressions locally. Hosted execution remains
+unverified. The gates are visible; a failing statistical gate prevents release approval,
 not downloading or independently inspecting this development package. Statistical gates
 currently fail and must continue to fail until their evidence exists. The harness
 reports `evaluation_gate_pass`, not whole-product release approval.

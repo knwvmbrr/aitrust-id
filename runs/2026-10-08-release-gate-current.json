@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-09T00:21:25.484359+00:00",
+  "exit_code": 1,
+  "report": {
+    "metrics": {
+      "PS": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 14,
+        "intervals": {
+          "precision": [
+            0.7224672001371109,
+            1.0
+          ],
+          "recall": [
+            0.7224672001371109,
+            1.0
+          ]
+        },
+        "category_failures": []
+      }
+    },
+    "failures": [
+      "release evidence requires a frozen independent holdout, manifest hash, and pre-agreed method",
+      "PS.precision: lower bound does not clear 0.93",
+      "PS.recall: lower bound does not clear 0.75",
+      "PS: calibration evidence missing; heuristic scores are not probabilities"
+    ],
+    "evaluation_gate_pass": false,
+    "gate_scope": "statistical_evaluation_only",
+    "release_assessed": false,
+    "source": {
+      "PS": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 14,
+        "category_failures": []
+      },
+      "dataset": {
+        "sha256": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4",
+        "kind": "regression",
+        "independently_labeled": false,
+        "method_fixed_before_run": false
+      }
+    }
+  },
+  "gate_relaxed": false,
+  "release_approved": false
+}

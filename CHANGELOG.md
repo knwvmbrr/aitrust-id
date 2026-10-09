@@ -2,6 +2,12 @@
 
 ## 0.1.0 — development preview, unreleased
 
+- Published the reviewed development source and anonymous download; verified a fresh
+  installation, 101 Python checks, 60 regressions and real local tag records.
+- Connected catalogue download/setup links and public/private GitHub reporting;
+  all owned-domain checks pass. Hosted CI is blocked by account billing, and
+  independent accuracy release gates remain failing.
+
 - Runnable manual text checker added with private token initialization, proxy and
   redirect refusal, schema/offset/source-hash validation, bounded input and distinct
   finding/unavailable exits. Next PII procedural tag rejects unknown or inconsistent

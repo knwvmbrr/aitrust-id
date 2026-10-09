@@ -1,0 +1,56 @@
+{
+  "public_url": "https://github.com/knwvmbrr/aitrust-id",
+  "source_commit": "a0428c46f86f82190df840597e08b94ffa41ae56",
+  "anonymous_clone_verified": true,
+  "anonymous_zip_verified": true,
+  "downloaded_file_hashes_match": true,
+  "files": 254,
+  "private_local_history_published": false,
+  "release_validated": false,
+  "verified_at": "2026-10-09T00:20:26.425016+00:00",
+  "fresh_venv_install_passed": true,
+  "python_tests_passed": 101,
+  "development_regressions_passed": 60,
+  "fresh_source_container_build_passed": true,
+  "initialization_private_file_passed": true,
+  "real_doctor_passed": true,
+  "local_checks": [
+    {
+      "case": "supported_command",
+      "exit_code": 2,
+      "tags": [
+        "PS"
+      ],
+      "schema_and_method_validated": true
+    },
+    {
+      "case": "download_to_file",
+      "exit_code": 0,
+      "tags": [
+        "PII_REDACTED"
+      ],
+      "schema_and_method_validated": true
+    },
+    {
+      "case": "ordinary_text",
+      "exit_code": 0,
+      "tags": [],
+      "schema_and_method_validated": true
+    },
+    {
+      "case": "email_redacted",
+      "exit_code": 0,
+      "tags": [
+        "PII_REDACTED"
+      ],
+      "schema_and_method_validated": true
+    }
+  ],
+  "verification_credentials": "Existing private local credential reused for runtime; separate initialization also exercised",
+  "independent_install_review": false,
+  "github_ci": {
+    "status": "account_billing_blocked",
+    "run_id": 37863881056,
+    "message": "The job was not started because your account is locked due to a billing issue."
+  }
+}

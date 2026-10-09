@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
   "updated": "2026-10-08",
-  "active_increment": "first_tag_integration",
-  "status": "local_gap_pass_and_one_live_homebrew_response_verified; release_not_validated",
+  "active_increment": "public_runnable_development_preview",
+  "status": "site_and_source_published; fresh_install_and_local_tags_verified; independent_release_blocked",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -36,15 +36,15 @@
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
     "evidence": "runs/2026-10-08-site-public-domain-verification.json",
     "remaining": [
-      "Verified public discussion and private security intake destinations",
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
-      "DNSSEC and DMARC rollout remain unverified; public source implementation push remains incomplete"
+      "DNSSEC and DMARC rollout remain unverified",
+      "Self-hosted community and private research application gates remain open"
     ],
     "tile_presentation": "tag_code_only",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://5e75ffe7.aitrust-id.pages.dev",
-    "deployment_id": "5e75ffe7-a23f-4d13-b9c5-aa8ab4089e9b",
+    "deployment_url": "https://5fd49855.aitrust-id.pages.dev",
+    "deployment_id": "5fd49855-ddb5-402f-a5b3-eff87d95668e",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -52,7 +52,11 @@
     ],
     "custom_domains_active": true,
     "no_transform_verified": true,
-    "cloudflare_injected_analytics_absent": true
+    "cloudflare_injected_analytics_absent": true,
+    "open_source_download_link_verified": true,
+    "public_report_destination": "https://github.com/knwvmbrr/aitrust-id/issues/new?template=tag-review.yml",
+    "private_security_destination": "https://github.com/knwvmbrr/aitrust-id/security/advisories/new",
+    "public_discussion_destination": "https://github.com/knwvmbrr/aitrust-id/discussions"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -118,8 +122,10 @@
     "remote_url": "https://github.com/knwvmbrr/aitrust-id.git",
     "account_write_access_verified": true,
     "created": "2026-10-08",
-    "is_empty": true,
-    "implementation_pushed": false
+    "is_empty": false,
+    "implementation_pushed": true,
+    "public_root_commit": "a0428c46f86f82190df840597e08b94ffa41ae56",
+    "private_old_history_published": false
   },
   "research_data": {
     "scope_id": "N-011",
@@ -256,7 +262,9 @@
     "hosted_ci_executed": false,
     "independent_accuracy_evidence": false,
     "statistical_gate_pass": false,
-    "statistical_evidence": "runs/2026-10-08-ci-gate-recheck.json"
+    "statistical_evidence": "runs/2026-10-08-ci-gate-recheck.json",
+    "hosted_ci_status": "account_billing_blocked",
+    "hosted_ci_evidence": "runs/2026-10-08-public-source-result.json"
   },
   "project_email_setup": {
     "addresses": [
@@ -279,7 +287,12 @@
     "implemented": false,
     "private_research_auto_publication": false,
     "private_security_reports": "restricted; safe public summaries",
-    "public_posting_is_training_consent": false
+    "public_posting_is_training_consent": false,
+    "development_workspace_implemented": true,
+    "development_workspace": "public GitHub issues and discussions",
+    "self_hosted_live_community_implemented": false,
+    "moderators": "repository maintainers",
+    "private_report_channel_enabled": true
   },
   "operational_alerts": {
     "url": "https://notify.aitrustid.com",
@@ -328,15 +341,18 @@
   "next_tag": {
     "code": "PII_REDACTED",
     "contract": "docs/tags/PII-01.md",
-    "status": "redaction_contract_enforced_and_unit_tested; runtime_recheck_pending",
-    "coverage_accuracy_validated": false
+    "status": "bounded_redaction_contract_enforced; unit_and_real_pipeline_checks_passed; coverage_release_pending",
+    "coverage_accuracy_validated": false,
+    "evidence": "runs/2026-10-08-local-cli-verification.json"
   },
   "public_source": {
     "url": "https://github.com/knwvmbrr/aitrust-id",
-    "publication_status": "audited_publication_in_progress",
+    "publication_status": "public_source_and_anonymous_zip_verified; fresh_install_verified",
     "download_url": "https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip",
     "issues_enabled": true,
     "discussions_enabled": true,
-    "private_vulnerability_reporting_enabled": true
+    "private_vulnerability_reporting_enabled": true,
+    "evidence": "runs/2026-10-08-public-source-result.json",
+    "independent_install_review": false
   }
 }
