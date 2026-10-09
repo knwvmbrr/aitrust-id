@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-10-09T02:54:22.668179+00:00",
+  "deployment_id": "0ff21540-fc26-434a-a803-ba5e57f1f881",
+  "deployment_url": "https://0ff21540.aitrust-id.pages.dev",
+  "source_commit": "d587a7b5c50e11afed94de5d7e7d683f42bba6fb",
+  "previous_deployment_id": "7aeef542-5433-46f6-8004-e5c60b0c1393",
+  "environment": "Production",
+  "uploaded_new_files": 51,
+  "existing_files_reused": 48,
+  "only_site_dist_uploaded": true,
+  "public_policy_pages": 9,
+  "sitemap_urls": 32,
+  "public_policy_index": "https://aitrustid.com/policies/",
+  "public_own_domain_checks_pass": true,
+  "all_public_asset_hashes_match": true,
+  "asset_hash_checks": 297,
+  "initial_read_timeouts": 12,
+  "read_recheck_evidence": "runs/2026-10-08-policies-assets-recheck.json",
+  "initial_read_failures_preserved": "runs/2026-10-08-policies-assets-public.json",
+  "timeout_scope": "Deployment hostname requests; owned-domain reads and feature checks passed. Failed reads rechecked on canonical paths with fresh sequential contexts; all returned correct assets. No server-side cause inferred.",
+  "detector_source_unchanged": true,
+  "release_gates_unchanged": true,
+  "independent_accuracy_completed": false,
+  "manual_screen_reader_completed": false,
+  "physical_devices_completed": false,
+  "terms_scope": "Current free preview and existing licenses; no invented paid contract, training consent, corporation or accreditation",
+  "terms_legal_enforceability_reviewed": false,
+  "docker_started": false,
+  "new_automatic_collection": false,
+  "screenshots": [
+    {
+      "path": "output/playwright/policies-legal-index.png",
+      "sha256": "c9b2b1d878b5fd51128b4c2f3200167ff0150551c136edaa7d75cad5e2e1a065"
+    },
+    {
+      "path": "output/playwright/policy-validation-ps.png",
+      "sha256": "1aa5a45fc6528b8602833cf767188de93c43165d47214eab9996ecac9f666a89"
+    },
+    {
+      "path": "output/playwright/policy-privacy-dark.png",
+      "sha256": "800b38e90c75940f8d66a5f44ec8c0c47c248c24348f03e729496f4a6377cf58"
+    }
+  ],
+  "result": "Positive per-tag release policy and nine public policies deployed and verified. Current PS validation remains in progress."
+}

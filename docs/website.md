@@ -201,3 +201,18 @@ text enlargement, and automated accessibility. They confirm no form input reques
 Run `npm run verify:workflows` against the built site on port 5174. This also runs in
 the site CI job. Evidence is in `runs/2026-10-08-workflows-*.json`. Physical-phone,
 human screen-reader and independent tag accuracy checks remain open.
+
+## Public terms and validation language
+
+The Legal panel links to `/policies/` and nine distinct versioned pages: terms,
+privacy, validation, community, security, governance, contribution/accessibility,
+licenses and access. `site/src/policies.js` is shared by the panel, static renderer
+and matching text exports; all pages are readable without JavaScript and are in
+the 32-URL sitemap. The source policies and licenses are also inspectable.
+
+The catalogue and metadata state the release rule positively: every tag must
+pass its own published validation gate before release. Each tag still shows its
+current stage and evidence; PS says Validation in progress. This wording does
+not mark pending independent accuracy or human review complete. See
+`docs/public-policies.md`, `docs/product-differentiation.md` and the
+`runs/2026-10-08-policies-*.json` execution records.

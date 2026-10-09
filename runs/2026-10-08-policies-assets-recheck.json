@@ -1,0 +1,95 @@
+{
+  "captured_at": "2026-10-09T02:53:18.749Z",
+  "initial_evidence": "runs/2026-10-08-policies-assets-public.json",
+  "initial_timeouts": 12,
+  "recheck": "Only failed reads; canonical paths with fresh request contexts and sequential requests",
+  "results": [
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/contributing/index.html",
+      "requested_path": "policies/contributing/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/governance/index.html",
+      "requested_path": "policies/governance/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/index.html",
+      "requested_path": "policies/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/privacy/index.html",
+      "requested_path": "policies/privacy/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/security/index.html",
+      "requested_path": "policies/security/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/terms/index.html",
+      "requested_path": "policies/terms/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/licenses/index.html",
+      "requested_path": "policies/licenses/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/community/index.html",
+      "requested_path": "policies/community/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/access/index.html",
+      "requested_path": "policies/access/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "reference/PS-01-acceptance.md",
+      "requested_path": "reference/PS-01-acceptance.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/validation/index.html",
+      "requested_path": "policies/validation/",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "reference/0004-tag-claim-boundaries.md",
+      "requested_path": "reference/0004-tag-claim-boundaries.md",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "pass": true,
+  "total_unique_assets_verified": 297,
+  "source_commit": "d587a7b5c50e11afed94de5d7e7d683f42bba6fb"
+}

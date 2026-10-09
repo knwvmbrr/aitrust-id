@@ -1,0 +1,52 @@
+{
+  "format": "ai-trust-id-handheld-verification/v1",
+  "independent_accuracy": false,
+  "physical_device_tested": false,
+  "engines": [
+    {
+      "name": "Android Chromium",
+      "case_count": 86,
+      "full_evidence_parity": true,
+      "parity_including_runtime_ms": 2483,
+      "offline_reload_and_check": true,
+      "offline_removal": true,
+      "offline_transport": "Playwright offline",
+      "metadata_export": true,
+      "blind_review_export": true,
+      "invalid_bundle_unavailable": true,
+      "stale_input_cancelled": true,
+      "unsupported_worker_handled": true,
+      "timeout_handled": true,
+      "axe_violations": 0,
+      "text_resize_200": true,
+      "focus_restored": true,
+      "no_text_in_requests_or_cache": true,
+      "reflow_320": true,
+      "errors": []
+    },
+    {
+      "name": "iPhone WebKit",
+      "case_count": 86,
+      "full_evidence_parity": true,
+      "parity_including_runtime_ms": 1697,
+      "offline_reload_and_check": false,
+      "offline_removal": true,
+      "offline_transport": "Not exercised against public origin; local origin-outage check covers cache",
+      "metadata_export": true,
+      "blind_review_export": true,
+      "invalid_bundle_unavailable": true,
+      "stale_input_cancelled": true,
+      "unsupported_worker_handled": true,
+      "timeout_handled": true,
+      "axe_violations": 0,
+      "text_resize_200": true,
+      "focus_restored": true,
+      "no_text_in_requests_or_cache": true,
+      "reflow_320": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "elapsed_ms": 45450
+}

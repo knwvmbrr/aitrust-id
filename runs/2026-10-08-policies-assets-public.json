@@ -1,0 +1,86 @@
+{
+  "captured_at": "2026-10-09T02:52:50.384Z",
+  "source_commit": "d587a7b5c50e11afed94de5d7e7d683f42bba6fb",
+  "assets_per_origin": 99,
+  "origins": [
+    "https://aitrustid.com",
+    "https://www.aitrustid.com",
+    "https://0ff21540.aitrust-id.pages.dev"
+  ],
+  "checks": 285,
+  "failures": [
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/contributing/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/governance/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/privacy/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": false
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/security/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": false
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/terms/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": false
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/licenses/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/community/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/access/index.html",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": true
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "reference/PS-01-acceptance.md",
+      "error": "apiRequestContext.get: read ETIMEDOUT",
+      "redirect_observed": false
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "policies/validation/index.html",
+      "error": "apiRequestContext.get: Timeout 60000ms exceeded.",
+      "redirect_observed": false
+    },
+    {
+      "origin": "https://0ff21540.aitrust-id.pages.dev",
+      "path": "reference/0004-tag-claim-boundaries.md",
+      "error": "apiRequestContext.get: Timeout 60000ms exceeded.",
+      "redirect_observed": false
+    }
+  ],
+  "all_public_hashes_match": false
+}
