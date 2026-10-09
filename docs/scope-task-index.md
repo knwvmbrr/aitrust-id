@@ -105,7 +105,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-114 | Method-appropriate abstention measurement and policy | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-057 | SBOM plus Sigstore release signing | [WP-RELEASE](scope-delivery.md#wp-release) | 20% · [evidence/fix](scope-progress.md) |

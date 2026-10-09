@@ -83,3 +83,9 @@ progress-render:
 	$(PYTHON) scripts/scope-progress.py --render
 verify-progress:
 	$(PYTHON) scripts/scope-progress.py
+
+.PHONY: performance-build performance-verify
+performance-build:
+	$(PYTHON) scripts/build-tag-performance.py
+performance-verify:
+	npm run verify:performance

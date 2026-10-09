@@ -1,0 +1,60 @@
+{
+  "captured_at": "2026-10-09T14:15:21.834437+00:00",
+  "pass": true,
+  "author": "Codex",
+  "architecture": "docs/tag-performance-plan.md",
+  "python_tests_passed": 261,
+  "test_scope": "Isolated release checkout; unfinished concurrent tag_bridge tests are not included or claimed as released.",
+  "development_examples": 86,
+  "mobile_engine_case_runs": 172,
+  "independent_accuracy_validated": false,
+  "physical_device_tested": false,
+  "automatic_collection_added": false,
+  "new_endpoint_added": false,
+  "model_trained": false,
+  "detector_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "gate_sha256": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+  "performance_panels": 20,
+  "scope_records_preserved": 202,
+  "sizing": {
+    "scope": "Mathematical denominator minima only; representative independently labeled sampling still required.",
+    "precision_zero_errors": 52,
+    "precision_one_error": 77,
+    "recall_zero_errors": 12
+  },
+  "evidence": {
+    "regressions": "runs/2026-10-09-performance-regressions.json",
+    "device": "runs/2026-10-09-performance-device-final-local.json",
+    "panel": "runs/2026-10-09-performance-ui-local.json",
+    "site": "runs/2026-10-09-performance-site-local.json",
+    "scope": "runs/2026-10-09-performance-scope-verification.json"
+  },
+  "diagnostics": [
+    {
+      "signature": "Initial sizing test expected 78 instead of 77 with one error",
+      "fix": "Checked Wilson boundary: 75/76 fails, 76/77 passes; corrected the test, not the gate."
+    },
+    {
+      "signature": "Performance panel occupied 751px on a 390px phone viewport",
+      "fix": "Reduced main panel to 270px; moved detailed metrics and device timing into existing evidence disclosure."
+    },
+    {
+      "signature": "Missing reference /reference/private-host-operations.md from concurrent enterprise copy",
+      "fix": "Preserved shared drafts and used isolated release checkout with adopted current catalogue; no unfinished copy included."
+    },
+    {
+      "signature": "One heading startup timeout while three browser suites ran concurrently",
+      "cause": "Not conclusively diagnosed; no page exception was recorded.",
+      "fix": "Added failed-request/status diagnostics; standalone home probe and a bounded isolated rerun passed.",
+      "verification": "40 panels and 20 static pages passed with no transport errors; full catalogue and workflows also passed."
+    }
+  ],
+  "retired_missing_public_script_hooks": [
+    "verify:a11y",
+    "verify:a11y:selftest",
+    "build:panel"
+  ],
+  "retired_hook_reason": "The earlier public package referenced unfinished draft scripts absent from source tracking. Hooks can return with their reviewed implementations.",
+  "release_gate_evidence": "runs/2026-10-09-performance-gates.json",
+  "release_harness_expected_exit": 1
+}

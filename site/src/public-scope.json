@@ -5676,27 +5676,33 @@
         "id": "F-113",
         "kind": "requirement",
         "title": "Measured latency budget on declared hardware",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-09T14:11:42.010452+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Measured latency budget on declared hardware. Next package action: Make build/verify/deploy jobs fail on missing prerequisites and injected failures. Required outcome: Performance claims name their conditions; the historical p95 100 ms value remains a target until accepted.",
-        "next_owner": "Codex",
+        "next_fix": "Expand timing to declared larger input sizes, full service routes and physical phones; agree route-specific budgets and test enforcement before accepting the historical 100 ms target.",
+        "next_owner": "Codex; human device testers",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/tag-performance-plan.md",
+          "scripts/verify-device.cjs",
+          "runs/2026-10-09-performance-device-local.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Measured latency budget on declared hardware. Next package action: Make build/verify/deploy jobs fail on missing prerequisites and injected failures. Required outcome: Performance claims name their conditions; the historical p95 100 ms value remains a target until accepted."
+          "Expand timing to declared larger input sizes, full service routes and physical phones; agree route-specific budgets and test enforcement before accepting the historical 100 ms target."
         ],
         "queue": "open"
       }

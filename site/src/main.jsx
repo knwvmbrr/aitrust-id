@@ -10,6 +10,7 @@ import {registerPublicTagTools} from './model-tools.js';
 import {publisher} from './policies.js';
 import {presentation} from './presentation.js';
 import {usage} from './usage.js';
+import {Performance,PerformanceEvidence,performanceById} from './performance.jsx';
 import {HandheldDialogs} from './handheld.jsx';
 import {WorkflowPanel,workflows} from './workflows/index.jsx';
 import {WorkflowIcon} from './workflows/shared.jsx';
@@ -64,7 +65,9 @@ function TagDetails({tag}) {
    <div className="flex flex-wrap items-center justify-between gap-2"><h3 className="text-sm font-semibold">Validation</h3><span className="text-xs text-muted">{intro.stage}</span></div>
    <p className="mt-1 text-sm font-semibold">{intro.validationTitle}</p><p className="mt-1 text-sm leading-6 text-muted">{intro.validation}</p><a className="mt-2 block text-xs underline underline-offset-4" href="/policies/validation/">{intro.releasePolicy}</a>
   </section>
+  <Performance tag={tag}/>
   <UseTag tag={tag}/>
+  {tag.today&&<section aria-label="What you can use today" className="my-4 rounded-xl border border-line p-4"><h3 className="text-sm font-semibold">What you can use today</h3><p data-tag-today className="mt-1 text-sm leading-6">{tag.today}</p></section>}
   <Disclosure title="How it works">
    <h4 className="font-semibold">What it can say</h4><p>{tag.claim}</p>
    <h4 className="mt-3 font-semibold">Method</h4><p>{tag.method}</p>
@@ -73,6 +76,7 @@ function TagDetails({tag}) {
    <dl className="mt-3 space-y-2"><div><dt className="font-semibold">Input</dt><dd>{tag.inputs}</dd></div><div><dt className="font-semibold">Output</dt><dd>{tag.outputs}</dd></div><div><dt className="font-semibold">Baseline job and outcome</dt><dd>{tag.job} {tag.outcome}</dd></div></dl>
   </Disclosure>
   <Disclosure title="Testing and evidence">
+   <PerformanceEvidence tag={tag}/>
    <h4 className="font-semibold">What has been checked</h4><p className="tabular-nums">{tag.validation}</p>
    <p className="mt-2 text-muted">Repeating a result or checking its signature can confirm a record. It does not establish that the finding is correct.</p>
    <h4 className="mt-3 font-semibold">Before release</h4><p>{tag.release}</p>
@@ -87,7 +91,7 @@ function TagDetails({tag}) {
    <h4 className="mt-3 font-semibold">Who is responsible</h4><p>{tag.owner}</p>
    <h4 className="mt-3 font-semibold">Tag features</h4>{tag.features.length?<FeatureList ids={tag.features}/>:<p>This proposal needs its own validated method.</p>}
    <h4 className="mt-3 font-semibold">Shared capabilities</h4><FeatureList ids={sharedIds}/>
-   <div className="mt-4 flex flex-wrap gap-2"><button className={button} onClick={copyLink}>Copy link</button><button className={button} onClick={()=>download('ai-trust-id-'+tag.id+'.json',JSON.stringify({...tag,use:usage(tag),scopeFeatures:[...sharedIds,...tag.features].map(id=>featuresById.get(id)).filter(Boolean)},null,2))}>Download details</button></div><p role="status" className="mt-2">{message}</p>
+   <div className="mt-4 flex flex-wrap gap-2"><button className={button} onClick={copyLink}>Copy link</button><button className={button} onClick={()=>download('ai-trust-id-'+tag.id+'.json',JSON.stringify({...tag,use:usage(tag),performance:performanceById.get(tag.id),scopeFeatures:[...sharedIds,...tag.features].map(id=>featuresById.get(id)).filter(Boolean)},null,2))}>Download details</button></div><p role="status" className="mt-2">{message}</p>
   </Disclosure>
   <div className="mt-4 flex flex-wrap items-center gap-2"><WorkDialog intent="Report" tag={tag} label="Report an issue"/><WorkDialog intent="Assist" tag={tag} label="Help improve this tag"/></div>
  </>;

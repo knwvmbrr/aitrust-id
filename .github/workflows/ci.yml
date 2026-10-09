@@ -115,5 +115,6 @@ jobs:
             sleep 1
           done
           npm run verify:site
+          npm run verify:performance
           npm run verify:workflows
           npm run verify:policies

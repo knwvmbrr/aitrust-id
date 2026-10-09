@@ -2,6 +2,10 @@
 
 ## 0.1.0 development preview — 2026-10-09
 
+- Add per-tag performance panels with measured counts, Wilson ranges, pending/unmeasured states and downloadable source evidence; reject stale detector/dataset reports during build.
+- Execute Android Chromium and iPhone WebKit development parity again; record warm p50/p95 separately from cold runtime loading. No physical-device or independent-accuracy claim.
+- Publish a small-team frozen-review plan and exact denominator sizing; retain separate consented research intake and proprietary-assistance gates.
+
 - Add timestamped completion ledger for all 202 requirements, 39 packages and 117 subtasks; retain completed records and explicit fixes for open work.
 - Review supplied adjudication/statistics research code; require complete supplied verification, fail closed on unknown codes and publish missing-answer coverage. No real media validator or new tag is released.
 - Use AI Trust ID as the general publisher credit and Michael as product owner. Keep actual legal operator in Terms; preserve prior policy text and publish version 1.2.

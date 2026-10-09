@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {allTags} from '../src/catalog.js';
+import {validateEvidence,performanceFor} from '../src/performance-model.js';
+const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const root=path.dirname(site);
+const input=JSON.parse(fs.readFileSync(path.join(root,'eval/tag-performance-evidence.json'),'utf8'));
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+validateEvidence(input,hash);
+const data={format:'ai-trust-id-tag-performance/v1',records:allTags.map(tag=>performanceFor(tag,input))};
+fs.writeFileSync(path.join(site,'src/tag-performance.json'),JSON.stringify(data,null,2)+'\n');
+const publicDir=path.join(site,'public/reference');fs.mkdirSync(publicDir,{recursive:true});
+fs.writeFileSync(path.join(publicDir,'tag-performance.json'),JSON.stringify(data,null,2)+'\n');
+for(const [src,dest] of [['eval/tag-performance-evidence.json','tag-performance-evidence.json'],[input.evidence[0],'performance-regressions.json'],[input.evidence[1],'performance-device.json'],['docs/tag-performance-plan.md','tag-performance-plan.md']])fs.copyFileSync(path.join(root,src),path.join(publicDir,dest));
+console.log(`Prepared ${data.records.length} per-tag performance panels from method-bound measured records.`);

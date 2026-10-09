@@ -85,3 +85,15 @@
 /* Narrow and enlarged-text workflows retain readable controls and wrapping. */
 .modal [data-workflow] { overflow-wrap: anywhere; }
 .modal [data-workflow] :where(section,div,button,a,input,select,textarea) { min-width: 0; }
+
+/* Interval ranges and threshold ticks; plain text conveys the same measurements. */
+.performance-row { margin-top: .75rem; }
+.performance-track { position: relative; height: .5rem; margin-block: .5rem; border-radius: .25rem; background: var(--divider); }
+.performance-range { position: absolute; height: 100%; background: var(--foreground); border-radius: .25rem; }
+.performance-target { position: absolute; top: -.2rem; bottom: -.2rem; width: 2px; background: var(--secondary); }
+@media (forced-colors: active) {
+ .performance-track { border: 1px solid CanvasText; }
+ .performance-range { background: Highlight; }
+ .performance-target { background: CanvasText; }
+}
+.performance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: .75rem; }

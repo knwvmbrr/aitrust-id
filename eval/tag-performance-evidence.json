@@ -1,0 +1,161 @@
+{
+  "format": "ai-trust-id-performance-evidence/v1",
+  "captured_at": "2026-10-09T14:11:42.206588+00:00",
+  "kind": "development_regression",
+  "independently_labeled": false,
+  "release_validated": false,
+  "method_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "gates_sha256": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+  "fixtures": [
+    {
+      "path": "eval/datasets/unsafe_code/ps_v1.jsonl",
+      "sha256": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4"
+    },
+    {
+      "path": "eval/datasets/unsafe_code/fetch_execute_v1.jsonl",
+      "sha256": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10"
+    },
+    {
+      "path": "eval/datasets/unsafe_code/counterexamples_v2.jsonl",
+      "sha256": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274"
+    },
+    {
+      "path": "eval/datasets/unsafe_code/live_gap_v1.jsonl",
+      "sha256": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9"
+    },
+    {
+      "path": "eval/datasets/unsafe_code/routing_boundaries_v1.jsonl",
+      "sha256": "639715fb9ebb6e755fb5028adab57f14f9b04733433b98810666bb4f93a63b62"
+    }
+  ],
+  "case_count": 86,
+  "counts": {
+    "tp": 31,
+    "fp": 0,
+    "fn": 0,
+    "tn": 55
+  },
+  "metrics": [
+    {
+      "id": "precision",
+      "label": "Correct alerts",
+      "description": "How many flagged examples were correctly flagged.",
+      "successes": 31,
+      "denominator": 31,
+      "point": 1.0,
+      "interval": [
+        0.889744604539564,
+        1.0
+      ],
+      "candidate_lower_bound": 0.93
+    },
+    {
+      "id": "recall",
+      "label": "Patterns caught",
+      "description": "How many labeled risk examples were found.",
+      "successes": 31,
+      "denominator": 31,
+      "point": 1.0,
+      "interval": [
+        0.889744604539564,
+        1.0
+      ],
+      "candidate_lower_bound": 0.75
+    }
+  ],
+  "confidence": 0.95,
+  "interval_method": "wilson",
+  "evidence": [
+    "runs/2026-10-09-performance-regressions.json",
+    "runs/2026-10-09-performance-device-local.json"
+  ],
+  "evidence_sha256": {
+    "runs/2026-10-09-performance-regressions.json": "906e3d7f1cd87d9c919391548547ccae67dfe6c9d5105d800b41bf8843cb6954",
+    "runs/2026-10-09-performance-device-local.json": "5a3e77a49e408b091eddce376494035b89d14073481b07c46f81c7689dacf00c"
+  },
+  "mobile": {
+    "emulated": true,
+    "physical_device_tested": false,
+    "engines": [
+      {
+        "name": "Android Chromium",
+        "case_count": 86,
+        "timing": {
+          "sample_count": 86,
+          "p50_ms": 0.09999999403953552,
+          "p95_ms": 0.20000001788139343,
+          "cold_load_ms": 1118.199999988079,
+          "scope": "Desktop-hosted browser emulation; cold runtime load excluded from warm check times",
+          "input_lengths_codepoints": {
+            "min": 16,
+            "max": 118
+          }
+        },
+        "full_evidence_parity": true,
+        "parity_including_runtime_ms": 1172,
+        "offline_reload_and_check": true,
+        "offline_removal": true,
+        "offline_transport": "Playwright offline",
+        "metadata_export": true,
+        "minimal_summary_export": true,
+        "future_fields_excluded": true,
+        "detailed_export_requires_opt_in": true,
+        "detail_consent_reset_for_new_input": true,
+        "blind_review_export": true,
+        "invalid_bundle_unavailable": true,
+        "stale_input_cancelled": true,
+        "unsupported_worker_handled": true,
+        "timeout_handled": true,
+        "axe_violations": 0,
+        "text_resize_200": true,
+        "focus_restored": true,
+        "no_text_in_requests_or_cache": true,
+        "reflow_320": true,
+        "errors": []
+      },
+      {
+        "name": "iPhone WebKit",
+        "case_count": 86,
+        "timing": {
+          "sample_count": 86,
+          "p50_ms": 0,
+          "p95_ms": 1,
+          "cold_load_ms": 2152,
+          "scope": "Desktop-hosted browser emulation; cold runtime load excluded from warm check times",
+          "input_lengths_codepoints": {
+            "min": 16,
+            "max": 118
+          }
+        },
+        "full_evidence_parity": true,
+        "parity_including_runtime_ms": 2243,
+        "offline_reload_and_check": true,
+        "offline_removal": true,
+        "offline_transport": "origin unavailable; WebKit offline-emulation navigation bug #42775",
+        "metadata_export": true,
+        "minimal_summary_export": true,
+        "future_fields_excluded": true,
+        "detailed_export_requires_opt_in": true,
+        "detail_consent_reset_for_new_input": true,
+        "blind_review_export": true,
+        "invalid_bundle_unavailable": true,
+        "stale_input_cancelled": true,
+        "unsupported_worker_handled": true,
+        "timeout_handled": true,
+        "axe_violations": 0,
+        "text_resize_200": true,
+        "focus_restored": true,
+        "no_text_in_requests_or_cache": true,
+        "reflow_320": true,
+        "errors": []
+      }
+    ],
+    "attribution_verified": true
+  },
+  "sizing": {
+    "scope": "Mathematical denominator minima only; representative independently labeled sampling still required.",
+    "precision_zero_errors": 52,
+    "precision_one_error": 77,
+    "recall_zero_errors": 12
+  }
+}

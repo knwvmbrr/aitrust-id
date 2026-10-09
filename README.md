@@ -236,8 +236,16 @@ Independent reviewers can use the blind packet tool described in
 [Independent review](docs/independent-review.md). It never supplies predictions,
 labels, or a claim that two files establish two independent reviewers.
 
-Public policies name the current individual publisher and offer versioned plain-text
+The site credits AI Trust ID; Terms identify the current legal operator. Policies offer versioned plain-text
 downloads. Checker summaries omit answer fingerprints/positions by default; detailed
 reproduction records require an explicit choice. [Architecture and limits](docs/tag-system-upgrade.md).
 
 [Timestamped scope completion ledger](docs/scope-progress.md) records per-item milestones, credits, evidence and next fixes; 100% requires full functioning acceptance. Research adjudication components are tested supplied-input mappings, not a released media validator.
+
+Each tag modal now has its own performance panel. PS publishes development counts,
+Wilson ranges and emulated mobile parity; other tags show what is unmeasured and
+their next test. [Lean validation and data collection](docs/tag-performance-plan.md)
+keeps user research consent separate from engineering test logs. To refresh evidence,
+run regressions and the device suite, then `python scripts/build-tag-performance.py`
+using the verification environment. `npm run build:site` rejects stale method-bound
+reports; `npm run verify:performance` checks all panels, static pages and empty states.

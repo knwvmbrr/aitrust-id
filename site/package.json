@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
-    "build": "node scripts/prepare-device.mjs && node scripts/prepare.mjs && vite build && node scripts/render-reference.mjs && node scripts/prepare-offline.mjs",
+    "build": "node scripts/prepare-device.mjs && node scripts/prepare-performance.mjs && node scripts/prepare.mjs && vite build && node scripts/render-reference.mjs && node scripts/prepare-offline.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 5173 --strictPort",
     "deploy": "wrangler pages deploy dist --project-name aitrust-id --branch main --commit-dirty=true",
     "verify:data": "node scripts/prepare.mjs"
