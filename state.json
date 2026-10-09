@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-08-upgrade-site-public.json",
+    "evidence": "runs/2026-10-08-scope-plan-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,8 +46,8 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://3b26e799.aitrust-id.pages.dev",
-    "deployment_id": "3b26e799-3dd2-4bab-a9ed-be52dad98f59",
+    "deployment_url": "https://ee219c2c.aitrust-id.pages.dev",
+    "deployment_id": "ee219c2c-5377-4be2-882d-6a541bff82d3",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +67,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-08-upgrade-deployment.json",
+    "publication_evidence": "runs/2026-10-08-scope-plan-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +96,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-08-upgrade-site-public.json",
+    "verification": "runs/2026-10-08-scope-plan-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -111,8 +111,8 @@
       "automated_pass": true,
       "human_accessibility_verified": false,
       "published": true,
-      "public_evidence": "runs/2026-10-08-upgrade-workflows-public.json",
-      "source_commit": "527cbf4ee116482f24ffc1f50616b9b195549c6a"
+      "public_evidence": "runs/2026-10-08-scope-plan-workflows-public.json",
+      "source_commit": "c52a8a6ab9bae6f3ce25f1c831d3f03a5529544a"
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
@@ -124,7 +124,7 @@
       "text_downloads": true,
       "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-08-upgrade-policies-public.json",
+      "verification": "runs/2026-10-08-scope-plan-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -525,7 +525,7 @@
       "N-014"
     ],
     "local_evidence": "runs/2026-10-08-handheld-checks.json",
-    "deployment": "3b26e799-3dd2-4bab-a9ed-be52dad98f59",
+    "deployment": "ee219c2c-5377-4be2-882d-6a541bff82d3",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input"
   },
@@ -546,13 +546,21 @@
     "record_tasks": 202,
     "generic_ps_dependencies_removed": 81,
     "tag_completion_dependencies": 0,
-    "status": "plan_structural_and_local_site_checks_pass; publication_pending",
+    "status": "published; structural_and_public_scope_checks_pass",
     "review": "No new proposal adoption, release acceptance, pricing, collection policy or professional legal judgment implied",
     "verification": "runs/2026-10-08-scope-plan-verification.json",
     "local_browser_evidence": {
       "site": "runs/2026-10-08-scope-plan-site-local.json",
       "workflows": "runs/2026-10-08-scope-plan-workflows-local.json",
       "policies": "runs/2026-10-08-scope-plan-policies-local.json"
+    },
+    "source_commit": "c52a8a6ab9bae6f3ce25f1c831d3f03a5529544a",
+    "publication": "runs/2026-10-08-scope-plan-deployment.json",
+    "public_browser_evidence": {
+      "site": "runs/2026-10-08-scope-plan-site-public.json",
+      "workflows": "runs/2026-10-08-scope-plan-workflows-public.json",
+      "policies": "runs/2026-10-08-scope-plan-policies-public.json",
+      "assets": "runs/2026-10-08-scope-plan-assets-public.json"
     }
   }
 }
