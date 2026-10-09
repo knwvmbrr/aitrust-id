@@ -1,20 +1,43 @@
 # Live launch status — 2026-10-08
 
-The public development catalogue is live at https://aitrustid.com and
-https://www.aitrustid.com. Both Pages domains are active; HTTPS responses match
-the reviewed build. The provider address https://aitrust-id.pages.dev also works.
-It contains 14 personal tag records, six organization offerings and the complete
-198-record preserved scope. The production build and external checks pass: all
-20 modals, eight footer modals, keyboard focus, nested report drafts, mobile and
-200% text, no-JavaScript references, no unexpected outbound requests, and no axe
-violations. A separate ordinary browser context verifies the production CSP and
-working interaction without a CSP bypass. This is catalogue publication, not an
-accuracy-certified tag release or a remotely hosted evaluation service.
+The public development catalogue and on-device PS checker are live at
+https://aitrustid.com and https://www.aitrustid.com. The provider address
+https://aitrust-id.pages.dev also works. The catalogue contains 14 personal tag
+records, six organization offerings and 202 preserved scope records. All 20
+modals, eight footer modals, focus, mobile/text reflow, static references and
+automated accessibility checks pass on the public domain.
 
-Current deployment: `31094a97-a347-4f0c-955a-9e02a02ef2e0`; only the reviewed `site/dist`
-assets were uploaded. Known SMTP, notification and recovery secret literals were
-absent. The redesign response hashes match the reviewed build on all three public addresses.
-The deployed asset manifest identifies the exact publication.
+Open https://aitrustid.com/#person/PS → **Check on this device**. Copy an AI
+answer, paste and check on a phone or computer. The unchanged context-v5 Python
+rules run in a pinned self-hosted worker; there is no text submission endpoint,
+account, extension or Docker requirement for this path. This preview performs
+no redaction. It gives a supported command-pattern finding, no finding or
+UNAVAILABLE, with an explicit independent-validation limit.
+
+Android Chromium and iPhone WebKit emulations each match all 86 development cases
+and their complete evidence on the public domain under the actual CSP. Invalid
+method bytes, unavailable worker, deadlines, edited input, metadata export and
+blind JSON review export pass. No answer/review text enters a request or storage.
+Android offline reload passes publicly; WebKit offline reload passes locally
+with the origin unavailable, because its automation offline toggle has a known
+navigation defect. Physical iPhones/Android devices and human screen readers
+remain untested. The optional public app cache is about 15 MB, with explicit
+update/removal controls. Native OS sharing remains preserved future scope.
+
+Current production deployment: `78f6f18f-042b-4780-bc53-19b72fcbdcf2`, source
+`f43241f`. Only the audited `site/dist` assets were uploaded. This is a working
+development preview, not independently validated accuracy or a certification
+release. Current source has 139 passing Python checks; all 86 active development
+examples pass. The fast engineering loop takes about two seconds on this machine.
+The full container pipeline remains stopped and has not been retested for v5.
+
+New evidence: `runs/2026-10-08-handheld-public.json`,
+`runs/2026-10-08-handheld-catalogue-public.json`,
+`runs/2026-10-08-handheld-publication-audit.json`,
+`runs/2026-10-08-handheld-checks.json`,
+`runs/2026-10-08-handheld-engineering.json`.
+
+## Earlier source and installed-pipeline checks
 
 The implementation is public at https://github.com/knwvmbrr/aitrust-id. Anonymous
 clone and ZIP downloads match the reviewed 254-file root snapshot `a0428c46`.

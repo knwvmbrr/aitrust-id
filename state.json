@@ -2,10 +2,11 @@
   "version": "0.1.0",
   "updated": "2026-10-08",
   "active_increment": "public_runnable_development_preview",
-  "status": "site_and_source_published; context_v5_http_and_development_tests_pass; independent_release_and_current_container_retest_pending",
+  "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
+    "Physical iPhone and Android install/offline checks; phone screen-reader review; native Share integrations remain future scope",
     "Rebuild and verify context-v5 full local pipeline; daemon and gateway stopped at last check",
     "Independent held-out ground truth, accepted sampling and evaluation policy",
     "Human screen-reader and outside-user install/removal evaluation",
@@ -94,7 +95,8 @@
       "font": "self-hosted Nunito Sans",
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
-    }
+    },
+    "verification": "runs/2026-10-08-handheld-catalogue-public.json"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -393,9 +395,10 @@
     "issues_enabled": true,
     "discussions_enabled": true,
     "private_vulnerability_reporting_enabled": true,
-    "evidence": "runs/2026-10-08-ps-use-download.json",
+    "evidence": "runs/2026-10-08-handheld-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "bb79954"
+    "latest_implementation_commit": "f43241f",
+    "handheld_download_verified": true
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
@@ -429,7 +432,7 @@
     "strict_json_comparison_tested": true
   },
   "handheld": {
-    "status": "implemented_and_local_browser_engine_verified; publication_pending",
+    "status": "public_development_preview_verified_under_production_csp",
     "path": "https://aitrustid.com/#person/PS",
     "tag": "PS",
     "runtime": "self-hosted Pyodide 314.0.7 / CPython 3.14.2 worker",
@@ -450,15 +453,18 @@
     "manual_screen_reader_verified": false,
     "native_share_integrations_implemented": false,
     "independent_accuracy_validated": false,
-    "evidence": "runs/2026-10-08-handheld-checks.json",
+    "evidence": "runs/2026-10-08-handheld-public.json",
     "future_native_routes": [
       "N-013",
       "N-014"
-    ]
+    ],
+    "local_evidence": "runs/2026-10-08-handheld-checks.json",
+    "deployment": "78f6f18f-042b-4780-bc53-19b72fcbdcf2"
   },
   "fast_verification": {
     "command": "make verify-ps",
     "evidence": "runs/2026-10-08-handheld-engineering.json",
-    "release_assessed": false
+    "release_assessed": false,
+    "measured_seconds": 1.945
   }
 }
