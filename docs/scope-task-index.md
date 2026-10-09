@@ -12,9 +12,9 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) |
 | TASK-F-007 | Content-free assertion records | [WP-PROTOCOL](scope-delivery.md#wp-protocol) |
 | TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) |
-| TASK-F-009 | Cost-to-defeat ladder — statistical / behavioural / structural / cryptographic | [WP-INTEGRITY](scope-delivery.md#wp-integrity) |
+| TASK-F-009 | Evidence durability and cost-to-defeat assessment | [WP-INTEGRITY](scope-delivery.md#wp-integrity) |
 | TASK-F-078 | Conformance vectors for text and code subject hashes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) |
-| TASK-F-079 | Five-clause privacy guarantee replacing "no content in transit or at rest" | [WP-PRIVACY](scope-delivery.md#wp-privacy) |
+| TASK-F-079 | Route-specific privacy clauses with executed evidence | [WP-PRIVACY](scope-delivery.md#wp-privacy) |
 | TASK-F-080 | Subject hash documented as a correlation identifier, not an anonymisation | [WP-PRIVACY](scope-delivery.md#wp-privacy) |
 | TASK-F-076 | RFC process — template, 14-day comment, evidence requirement | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
 | TASK-F-077 | Dual licence: Apache-2.0 code, CC BY 4.0 spec | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
@@ -54,7 +54,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) |
 | TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) |
 | TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) |
-| TASK-F-041 | Redaction ordering guarantee — anonymise, then evaluate, always | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) |
+| TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) |
 | TASK-F-024 | PII_OUTBOUND pre-send warning — you are about to paste personal data into a model | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) |
 | TASK-F-043 | No-egress network topology — internal: true, loopback binding | [WP-SERVICE](scope-delivery.md#wp-service) |
 | TASK-F-084 | No content logging — a verified clause, not a promise | [WP-PRIVACY](scope-delivery.md#wp-privacy) |
@@ -88,7 +88,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-102 | Modality validated against the schema enum; unsupported returns UNK + unsupported_modality | [WP-SERVICE](scope-delivery.md#wp-service) |
 | TASK-F-103 | Health checks reporting dependency readiness, not process liveness | [WP-SERVICE](scope-delivery.md#wp-service) |
 | TASK-F-104 | Defined dependency-failure behaviour | [WP-SERVICE](scope-delivery.md#wp-service) |
-| TASK-F-044 | Registry dashboard — hashes only, 30-day retention | [ORG-AUDIT](scope-delivery.md#org-audit) |
+| TASK-F-044 | Optional registry and retention proposal | [ORG-AUDIT](scope-delivery.md#org-audit) |
 | TASK-F-045 | Reporting intake, hash-only | [ORG-AUDIT](scope-delivery.md#org-audit) |
 | TASK-F-105 | One documented command: clean clone → running stack | [WP-MOBILE](scope-delivery.md#wp-mobile) |
 | TASK-F-050 | Gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α | [WP-VALIDATION](scope-delivery.md#wp-validation) |
@@ -105,8 +105,8 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) |
 | TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) |
 | TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) |
-| TASK-F-113 | Latency budget enforcement — p95 ≤ 100ms | [WP-RELEASE](scope-delivery.md#wp-release) |
-| TASK-F-114 | Abstention-rate band enforcement, 0.02–0.35 | [WP-VALIDATION](scope-delivery.md#wp-validation) |
+| TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) |
+| TASK-F-114 | Method-appropriate abstention measurement and policy | [WP-VALIDATION](scope-delivery.md#wp-validation) |
 | TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) |
 | TASK-F-057 | SBOM plus Sigstore release signing | [WP-RELEASE](scope-delivery.md#wp-release) |
 | TASK-F-116 | Dependency lockfiles and hashes, not just version pins | [WP-RELEASE](scope-delivery.md#wp-release) |
@@ -131,7 +131,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-135 | Report AI — public intake for AI content people want flagged | [WP-COMMUNITY](scope-delivery.md#wp-community) |
 | TASK-F-136 | Townhall — a community space for AI users to talk, with moderation | [WP-COMMUNITY](scope-delivery.md#wp-community) |
 | TASK-F-137 | Moderation ladder and escalation path derived from the code of conduct | [WP-COMMUNITY](scope-delivery.md#wp-community) |
-| TASK-F-073 | security@ with a 72-hour response promise | [WP-OPERATIONS](scope-delivery.md#wp-operations) |
+| TASK-F-073 | Security reporting and response-capacity planning | [WP-OPERATIONS](scope-delivery.md#wp-operations) |
 | TASK-F-074 | conduct@ with an enforcement ladder | [WP-COMMUNITY](scope-delivery.md#wp-community) |
 | TASK-F-138 | abuse@ and press@ | [WP-COMMUNITY](scope-delivery.md#wp-community) |
 | TASK-F-139 | Site accessibility held to the same gate as the extension | [WP-SITE](scope-delivery.md#wp-site) |
@@ -139,7 +139,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-141 | Pilot programme — small consenting group, feedback without collecting prompts or outputs | [WP-COMMUNITY](scope-delivery.md#wp-community) |
 | TASK-F-142 | Install and removal instructions, reproducible | [WP-SITE](scope-delivery.md#wp-site) |
 | TASK-F-075 | Two-entity structure — independent foundation holds spec and mark; implementations compete on top | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
-| TASK-F-143 | Certification mark — filed, owned by the foundation | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
+| TASK-F-143 | Certification-mark ownership and filing work | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
 | TASK-F-144 | Mark usage guidelines and a conformance statement template | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
 | TASK-F-145 | Certification programme — what a certifier must test, and how one is accredited | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |
 | TASK-F-146 | Nonprofit formation and filings | [WP-GOVERNANCE](scope-delivery.md#wp-governance) |

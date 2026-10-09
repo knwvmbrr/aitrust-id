@@ -12,9 +12,9 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | F-006 | 2 | Specify and deliver six-modality reservation with normative subject definitions. | Implementers agree on what is being hashed before anyone builds images or audio | WP-PROTOCOL |
 | F-007 | 2 | Return hashes, offsets, and metadata without embedding evaluated text | Recipients can inspect a tag record without the assertion containing content; local content transfer is disclosed. | WP-PROTOCOL |
 | F-008 | 2 | Sign an exact canonical tag record with an identified key | Recipients verify signer and record integrity without treating the signature as proof of truth. | WP-INTEGRITY |
-| F-009 | 2 | Specify and deliver cost-to-defeat ladder — statistical / behavioural / structural / cryptographic. | You can judge how a label will age, not just whether it is accurate today | WP-INTEGRITY |
+| F-009 | 2 | Assess stated evasion/forgery threat assumptions and measured attack performance for each evidence method. | Readers distinguish measured resistance from assumptions; a class label does not promise future accuracy. | WP-INTEGRITY |
 | F-078 | 2 | Specify and deliver conformance vectors for text and code subject hashes. | Two independent implementations produce the same hash for the same input | WP-PROTOCOL |
-| F-079 | 2 | Specify and deliver five-clause privacy guarantee replacing "no content in transit or at rest". | A guarantee that is true, clause by clause, each with a test | WP-PRIVACY |
+| F-079 | 2 | Document and test each route’s capture, transfer, logging, persistence and disclosure boundaries. | People see the protections actually exercised and their limits, rather than an absolute privacy guarantee. | WP-PRIVACY |
 | F-080 | 2 | Specify and deliver subject hash documented as a correlation identifier, not an anonymisation. | You are not misled about what the hash protects | WP-PRIVACY |
 | F-076 | 2 | Specify and deliver rFC process — template, 14-day comment, evidence requirement. | The taxonomy cannot drift into noise by accretion | WP-GOVERNANCE |
 | F-077 | 2 | Specify and deliver dual licence: Apache-2.0 code, CC BY 4.0 spec. | Free use and free reimplementation, permanently | WP-GOVERNANCE |
@@ -54,7 +54,7 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | F-082 | 1 | Suppress unsuitable timing analysis without assigning human attestation | Assistive-input users receive no negative authorship inference or automatic IV claim. | TAG-PA |
 | F-083 | 1 | Specify and deliver the governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA. | Observed interaction is documented without unsupported authorship or identity claims. | TAG-FA |
 | F-023 | 2 | Remove recognized entities before evaluation | Detected entities are redacted; coverage and missed-detection limitations remain visible. | TAG-PII_REDACTED |
-| F-041 | 2 | Specify and deliver redaction ordering guarantee — anonymise, then evaluate, always. | The order cannot silently invert in a refactor | TAG-PII_REDACTED |
+| F-041 | 2 | Require validated detected-redaction output before forwarding text to the local-service evaluator. | The affected service route does not bypass required processing; recognition misses and linkage remain disclosed. | TAG-PII_REDACTED |
 | F-024 | 2 | Specify and deliver pII_OUTBOUND pre-send warning — you are about to paste personal data into a model. | Catches the mistake before it leaves your machine, not after | TAG-PII_OUTBOUND |
 | F-043 | 2 | Specify and deliver no-egress network topology — internal: true, loopback binding. | Nothing you read leaves the machine during evaluation | WP-SERVICE |
 | F-084 | 2 | Specify and deliver no content logging — a verified clause, not a promise. | Your text is not sitting in a log file you did not know about | WP-PRIVACY |
@@ -88,7 +88,7 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | F-102 | 2 | Specify and deliver modality validated against the schema enum; unsupported returns UNK + unsupported_modality. | Local tag processing exposes success and dependency failures explicitly. | WP-SERVICE |
 | F-103 | 2 | Specify and deliver health checks reporting dependency readiness, not process liveness. | Local tag processing exposes success and dependency failures explicitly. | WP-SERVICE |
 | F-104 | 2 | Specify and deliver defined dependency-failure behaviour. | Local tag processing exposes success and dependency failures explicitly. | WP-SERVICE |
-| F-044 | 2 | Specify and deliver registry dashboard — hashes only, 30-day retention. | Local tag processing exposes success and dependency failures explicitly. | ORG-AUDIT |
+| F-044 | 2 | Define approved registry fields, access, retention and deletion before enabling storage. | Users are not silently enrolled in storage; the historical 30-day/hash-only proposal is not adopted automatically. | ORG-AUDIT |
 | F-045 | 2 | Specify and deliver reporting intake, hash-only. | Local tag processing exposes success and dependency failures explicitly. | ORG-AUDIT |
 | F-105 | 2 | Specify and deliver one documented command: clean clone → running stack. | Local tag processing exposes success and dependency failures explicitly. | WP-MOBILE |
 | F-050 | 2 | Specify and deliver gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-VALIDATION |
@@ -105,8 +105,8 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | F-111 | 2 | Specify and deliver evaluator unit tests — the first tests in the repository. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-RELEASE |
 | F-112 | 2 | Specify and deliver schema validation against real service responses, not just schema syntax. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-RELEASE |
 | F-055 | 2 | Specify and deliver axe-core accessibility gate, serious and critical at zero. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-UX |
-| F-113 | 2 | Specify and deliver latency budget enforcement — p95 ≤ 100ms. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-RELEASE |
-| F-114 | 2 | Specify and deliver abstention-rate band enforcement, 0.02–0.35. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-VALIDATION |
+| F-113 | 2 | Measure route-specific startup/warm latency on declared hardware and input sizes before accepting an enforcement budget. | Performance claims name their conditions; the historical p95 100 ms value remains a target until accepted. | WP-RELEASE |
+| F-114 | 2 | Measure abstention and enforce only accepted method-appropriate bounds; deterministic methods have no forced minimum quota. | The method can honestly report its evidence without inventing abstentions to meet an arbitrary global band. | WP-VALIDATION |
 | F-115 | 2 | Specify and deliver network-isolation verification — exec into each container and prove it cannot reach out. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-SERVICE |
 | F-057 | 2 | Specify and deliver sBOM plus Sigstore release signing. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-RELEASE |
 | F-116 | 2 | Specify and deliver dependency lockfiles and hashes, not just version pins. | Versioned verification evidence determines whether the applicable acceptance criteria passed. | WP-RELEASE |
@@ -131,7 +131,7 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | F-135 | 3 | Specify and deliver report AI — public intake for AI content people want flagged. | A person can access the public tag workflow and its support process. | WP-COMMUNITY |
 | F-136 | 3 | Provide public live community discussions and official replies with safe publication controls. | Everyone can read public community messages and company replies; private reports and research remain outside the public stream. | WP-COMMUNITY |
 | F-137 | 3 | Apply a documented moderation and appeal process with public safe action records. | People see moderation reasons and appeal routes without removed secrets, private reports or reporter identities being republished. | WP-COMMUNITY |
-| F-073 | 3 | Specify and deliver security@ with a 72-hour response promise. | A person can access the public tag workflow and its support process. | WP-OPERATIONS |
+| F-073 | 3 | Maintain the actual private security channel and establish staffed response commitments before publishing any deadline. | Reporters have an accountable route without an unsupported 72-hour promise. | WP-OPERATIONS |
 | F-074 | 3 | Specify and deliver conduct@ with an enforcement ladder. | A person can access the public tag workflow and its support process. | WP-COMMUNITY |
 | F-138 | 3 | Specify and deliver abuse@ and press@. | A person can access the public tag workflow and its support process. | WP-COMMUNITY |
 | F-139 | 3 | Specify and deliver site accessibility held to the same gate as the extension. | A person can access the public tag workflow and its support process. | WP-SITE |
@@ -139,7 +139,7 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | F-141 | 3 | Specify and deliver pilot programme — small consenting group, feedback without collecting prompts or outputs. | A person can access the public tag workflow and its support process. | WP-COMMUNITY |
 | F-142 | 3 | Specify and deliver install and removal instructions, reproducible. | A person can access the public tag workflow and its support process. | WP-SITE |
 | F-075 | 3 | Specify and deliver two-entity structure — independent foundation holds spec and mark; implementations compete on top. | Responsibilities and decisions are documented without implying an operating institution exists. | WP-GOVERNANCE |
-| F-143 | 3 | Specify and deliver certification mark — filed, owned by the foundation. | Responsibilities and decisions are documented without implying an operating institution exists. | WP-GOVERNANCE |
+| F-143 | 3 | Prepare qualified clearance, ownership and filing decisions before any certification-mark application or asset assignment. | The public can distinguish a future institutional target from a mark or foundation that already exists. | WP-GOVERNANCE |
 | F-144 | 3 | Specify and deliver mark usage guidelines and a conformance statement template. | Responsibilities and decisions are documented without implying an operating institution exists. | WP-GOVERNANCE |
 | F-145 | 3 | Specify and deliver certification programme — what a certifier must test, and how one is accredited. | Responsibilities and decisions are documented without implying an operating institution exists. | WP-GOVERNANCE |
 | F-146 | 3 | Specify and deliver nonprofit formation and filings. | Responsibilities and decisions are documented without implying an operating institution exists. | WP-GOVERNANCE |

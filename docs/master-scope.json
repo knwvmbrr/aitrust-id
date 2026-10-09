@@ -282,8 +282,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Cost-to-defeat ladder \u2014 statistical / behavioural / structural / cryptographic",
-      "baseline_job": "Specify and deliver cost-to-defeat ladder \u2014 statistical / behavioural / structural / cryptographic.",
-      "outcome": "You can judge how a label will age, not just whether it is accurate today",
+      "baseline_job": "Assess stated evasion/forgery threat assumptions and measured attack performance for each evidence method.",
+      "outcome": "Readers distinguish measured resistance from assumptions; a class label does not promise future accuracy.",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
@@ -302,7 +302,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Evidence durability and cost-to-defeat assessment"
     },
     {
       "id": "F-078",
@@ -348,8 +349,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Five-clause privacy guarantee replacing \"no content in transit or at rest\"",
-      "baseline_job": "Specify and deliver five-clause privacy guarantee replacing \"no content in transit or at rest\".",
-      "outcome": "A guarantee that is true, clause by clause, each with a test",
+      "baseline_job": "Document and test each route\u2019s capture, transfer, logging, persistence and disclosure boundaries.",
+      "outcome": "People see the protections actually exercised and their limits, rather than an absolute privacy guarantee.",
       "source": "Supplied scope baseline, section 1",
       "reviewer": "Claude",
       "dependencies": [
@@ -368,7 +369,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Route-specific privacy clauses with executed evidence"
     },
     {
       "id": "F-080",
@@ -1803,8 +1805,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Redaction ordering guarantee \u2014 anonymise, then evaluate, always",
-      "baseline_job": "Specify and deliver redaction ordering guarantee \u2014 anonymise, then evaluate, always.",
-      "outcome": "The order cannot silently invert in a refactor",
+      "baseline_job": "Require validated detected-redaction output before forwarding text to the local-service evaluator.",
+      "outcome": "The affected service route does not bypass required processing; recognition misses and linkage remain disclosed.",
       "source": "Supplied scope baseline, section 5",
       "reviewer": "Claude",
       "dependencies": [
@@ -1827,7 +1829,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Detected redaction before local-service evaluation"
     },
     {
       "id": "F-024",
@@ -2995,8 +2998,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Registry dashboard \u2014 hashes only, 30-day retention",
-      "baseline_job": "Specify and deliver registry dashboard \u2014 hashes only, 30-day retention.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "baseline_job": "Define approved registry fields, access, retention and deletion before enabling storage.",
+      "outcome": "Users are not silently enrolled in storage; the historical 30-day/hash-only proposal is not adopted automatically.",
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
@@ -3017,7 +3020,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Optional registry and retention proposal"
     },
     {
       "id": "F-045",
@@ -3575,8 +3579,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Latency budget enforcement \u2014 p95 \u2264 100ms",
-      "baseline_job": "Specify and deliver latency budget enforcement \u2014 p95 \u2264 100ms.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_job": "Measure route-specific startup/warm latency on declared hardware and input sizes before accepting an enforcement budget.",
+      "outcome": "Performance claims name their conditions; the historical p95 100 ms value remains a target until accepted.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [
@@ -3596,7 +3600,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Measured latency budget on declared hardware"
     },
     {
       "id": "F-114",
@@ -3610,8 +3615,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Abstention-rate band enforcement, 0.02\u20130.35",
-      "baseline_job": "Specify and deliver abstention-rate band enforcement, 0.02\u20130.35.",
-      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_job": "Measure abstention and enforce only accepted method-appropriate bounds; deterministic methods have no forced minimum quota.",
+      "outcome": "The method can honestly report its evidence without inventing abstentions to meet an arbitrary global band.",
       "source": "Supplied scope baseline, section 8",
       "reviewer": "Claude",
       "dependencies": [],
@@ -3628,7 +3633,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Method-appropriate abstention measurement and policy"
     },
     {
       "id": "F-115",
@@ -4490,8 +4496,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "security@ with a 72-hour response promise",
-      "baseline_job": "Specify and deliver security@ with a 72-hour response promise.",
-      "outcome": "A person can access the public tag workflow and its support process.",
+      "baseline_job": "Maintain the actual private security channel and establish staffed response commitments before publishing any deadline.",
+      "outcome": "Reporters have an accountable route without an unsupported 72-hour promise.",
       "source": "Supplied scope baseline, section 10",
       "reviewer": "Codex",
       "dependencies": [
@@ -4511,7 +4517,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Security reporting and response-capacity planning"
     },
     {
       "id": "F-074",
@@ -4769,8 +4776,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Certification mark \u2014 filed, owned by the foundation",
-      "baseline_job": "Specify and deliver certification mark \u2014 filed, owned by the foundation.",
-      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "baseline_job": "Prepare qualified clearance, ownership and filing decisions before any certification-mark application or asset assignment.",
+      "outcome": "The public can distinguish a future institutional target from a mark or foundation that already exists.",
       "source": "Supplied scope baseline, section 11",
       "reviewer": "Codex",
       "dependencies": [
@@ -4789,7 +4796,8 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
-      }
+      },
+      "display_title": "Certification-mark ownership and filing work"
     },
     {
       "id": "F-144",

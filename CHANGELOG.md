@@ -4,7 +4,8 @@
 
 - Expanded all 202 scope records into 39 execution packages and 117 subtasks, with
   14 distinct tag contracts, explicit prerequisites and separate release gates.
-  Removed 81 generic PS dependencies, preserved all IDs/dispositions, and linked
+  Removed 81 generic PS dependencies, preserved all IDs/dispositions, qualified
+  historical latency/abstention/response/mark claims, and linked
   the execution plan plus package/prerequisite details from the Scope panel.
   Corrected the PS contract to distinguish phone/paste and local-service routes.
 
