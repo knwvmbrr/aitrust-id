@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-224707-source-provenance-controls-72dec909",
+  "recorded_at": "2026-10-10T22:47:07.250804+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "394b45dea8045cef03f5071a51e11ae8a08c61cd",
+  "changed": "Implement bounded committed-source snapshots, exact offline provenance identity policy and protected-main-only pinned signing workflow.",
+  "proves": "45 focused policy and archive tests; 1144 full Python tests on unchanged source; repeated real committed-tree source bytes match; signer privileges withheld from PRs.",
+  "limits": "Hosted signing has not yet run. Full dependency licenses, scanner identity and tag release remain unverified. No full scope requirement closed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "7a3c03a0b834c85dfab0166fe01b26d9735031273817c7732efedc5ba16c1f26",
+    "README.md": "b96365cd8df36b1cf3eb33ece96c659fb651503780f38fe44327657242a856cb",
+    "state.json": "f5bc9d888493836ba3030665b09afc0415a4f3410ebb64789a94e2cd1714405a",
+    "eval/route-boundaries.json": "c705a5cf30dc02620a7fe404a3365cb67a25d48203ce024027c09050f4309d55",
+    "scripts/verify-route-boundaries.py": "075f377eb0a4b7bfd21f367721a91821827a7172bde84b11ce8a7e209a5a9000",
+    "scripts/source_snapshot.py": "53c59596ecec49ab4c7a5e47e0b9ec8d6d72d189c352daf5c8029b4164b65765",
+    "scripts/build-source-snapshot.py": "710a58149f3126af87a24e2e1380606ac90efab3fa6521cf837a53b9d1405c99",
+    "scripts/verify-source-provenance.py": "02e3df910159a8f61204debae3d77782790b181676930571ec30db74655b2361",
+    "tests/test_source_provenance.py": "64e363c3c6e6324c70152949334cdbaaed351d74884068b8329293bd61456c94",
+    "docs/source-provenance-plan.md": "2da004001d0c27ed8263803dc0c135db77a8f817e606d8795566db33d42d06f0",
+    "docs/source-provenance.md": "241b6803bf4933bb6886a27cefd7c28f4dc631d4986cfaacfde38edf45fe2520",
+    "runs/2026-10-10-source-provenance-stable-controls.json": "ce6616f7204859b4e6df8c9883da7385b7f655505df40f1392fc0e19b4c44a5b",
+    "runs/2026-10-10-source-snapshot-reproduction.json": "745b779004f42a5ed2fa5f68834febb06aedf60647044535d98687f30eaea349"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-source-provenance-stable-controls.json",
+      "sha256": "ce6616f7204859b4e6df8c9883da7385b7f655505df40f1392fc0e19b4c44a5b"
+    },
+    {
+      "path": "runs/2026-10-10-source-snapshot-reproduction.json",
+      "sha256": "745b779004f42a5ed2fa5f68834febb06aedf60647044535d98687f30eaea349"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T22:47:07.992224+00:00"
+    }
+  ]
+}
