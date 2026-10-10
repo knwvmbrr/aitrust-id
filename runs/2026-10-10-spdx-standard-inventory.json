@@ -1,0 +1,57 @@
+{
+  "captured_at": "2026-10-10T21:28:07.526921+00:00",
+  "pass": true,
+  "kind": "bound_spdx_schema_and_selected_consistency_verification",
+  "schema_upstream_commit": "6f2cb47d13db19b12c23885573b22ef32ec1ada5",
+  "schema_sha256": "4126dc29f15e92feec92e9622f4939131ad58b125d6f578aa93e980a6e6f3212",
+  "verification_network_requests": 0,
+  "images": [
+    {
+      "role": "gateway",
+      "artifact": "sbom/runtime/gateway-linux-amd64.spdx.json",
+      "sha256": "b053a789840c36983fe8b4be6be6e459804ce1b3938f44c66c1b09ae225810b8",
+      "schema_validated": true,
+      "elements_checked": 2921,
+      "checksums_checked": 5517,
+      "package_verification_codes_recomputed": 87,
+      "license_expressions_reviewed": false,
+      "license_cleared": false,
+      "release_signed": false,
+      "source_files_authenticated": false
+    },
+    {
+      "role": "evaluator",
+      "artifact": "sbom/runtime/evaluator-linux-amd64.spdx.json",
+      "sha256": "b9aca7ebff7f203ba2ba8fdc4cb71875abc16be50e4a5fccd36f1b2daec73750",
+      "schema_validated": true,
+      "elements_checked": 2970,
+      "checksums_checked": 5577,
+      "package_verification_codes_recomputed": 87,
+      "license_expressions_reviewed": false,
+      "license_cleared": false,
+      "release_signed": false,
+      "source_files_authenticated": false
+    },
+    {
+      "role": "anonymizer",
+      "artifact": "sbom/runtime/anonymizer-linux-amd64.spdx.json",
+      "sha256": "709ee8f1aee249d10408d126b9dc850c4e72cbdb4a6754f2e1521ce4a0fd1603",
+      "schema_validated": true,
+      "elements_checked": 3264,
+      "checksums_checked": 5949,
+      "package_verification_codes_recomputed": 87,
+      "license_expressions_reviewed": false,
+      "license_cleared": false,
+      "release_signed": false,
+      "source_files_authenticated": false
+    }
+  ],
+  "package_occurrences": 421,
+  "license_cleared": false,
+  "release_signed": false,
+  "scanner_signed_identity_verified": false,
+  "source_files_authenticated": false,
+  "vulnerabilities_assessed": false,
+  "tag_release_approved": false,
+  "coverage": "Observed Linux amd64 images; official JSON schema and selected local consistency checks. Not complete SPDX semantic conformance, client/build inventory, or license clearance."
+}

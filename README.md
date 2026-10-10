@@ -106,6 +106,14 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Accessibility | Keyboard evidence checks and automated axe fixture checks pass. Human screen-reader evaluation is missing |
 | Live ChatGPT | Installed Chrome extension verified on one existing Homebrew answer: finding, evidence and evaluator source hash. Broader live coverage remains open |
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
+
+The observed Linux image inventories are public in `sbom/runtime/`. With the
+hash-locked verification environment installed, run
+`python3 scripts/verify-runtime-sbom-standard.py` to check their image/source
+bindings, the pinned official SPDX 2.3.1 JSON schema and local consistency.
+It works offline and recomputes package verification codes. This does not clear
+licenses, authenticate inventoried source files or sign a release. See
+[dependency evidence and remaining work](docs/spdx-inventory-validation.md).
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
 The last complete local suite passed 945 Python checks; subsequent portability repairs

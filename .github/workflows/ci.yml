@@ -77,6 +77,10 @@ jobs:
       - run: python -m pytest tests/test_gateway_integration.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
+      - name: Validate bound inventories with the pinned official SPDX schema
+        run: python scripts/verify-runtime-sbom-standard.py
+      - name: Refuse corrupted SPDX inventories and altered schema trust inputs
+        run: python -m pytest tests/test_spdx_inventory.py -q
       - run: python -m pytest tests/test_assertion_formats.py tests/test_http_privacy.py -q
 
   no-egress:

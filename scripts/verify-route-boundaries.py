@@ -34,6 +34,9 @@ PATTERNS += ('.github/CODEOWNERS', '.github/dependabot.yml',
 PATTERNS += ('scripts/dependency_pins.py', 'scripts/verify-dependencies.py',
              'tests/test_python_input_pins.py', 'tests/test_dependency_contract.py',
              'eval/requirements.txt', 'eval/requirements.lock')
+PATTERNS += ('scripts/spdx_inventory.py', 'scripts/verify-runtime-sbom.py',
+             'scripts/verify-runtime-sbom-standard.py', 'tests/test_spdx_inventory.py',
+             'spec/vendor/spdx-2.3.1/*', 'eval/dependencies/runtime-sbom.json', 'sbom/runtime/*')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

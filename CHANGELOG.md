@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-221830-validated-spdx-and-target-source-d6619170
+
+Recorded 2026-10-10T22:18:30.850977+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected the passing source-bound website receipt, completed 1099 current Python checks and updated state after its referenced evidence; retained all scope and the 25-open target.
+- **Evidence.** All four website capability checks passed with stable sources. Current route controls and target arithmetic agree with 105 complete, 97 open and 72 required closures. [Change record](./runs/changes/2026-10-10-221830-validated-spdx-and-target-source-d6619170.json).
+- **Not claimed.** No new full closure, license clearance, source-file authentication, release signature or independent tag acceptance. Hosted CI and new public publication remain to be observed.
+
+
+### 2026-10-10-221510-target-twenty-five-accountability-308e2f9a
+
+Recorded 2026-10-10T22:15:10.818956+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the owner target of 25 open requirements, preserved the superseded target history and enforced truthful remaining-work arithmetic against the ledger.
+- **Evidence.** The current state preserves 202 IDs, 105 complete and 97 open; the updated target needs 72 further full closures. Invalid targets and erased remaining counts are refused. [Change record](./runs/changes/2026-10-10-221510-target-twenty-five-accountability-308e2f9a.json).
+- **Not claimed.** No requirement completion or release acceptance granted. The pre-refresh suite correctly refused stale website evidence; refreshing the bound receipt is required before final verification.
+
+
+### 2026-10-10-212953-offline-spdx-inventory-validation-779e0cc4
+
+Recorded 2026-10-10T21:29:53.808510+00:00 · Contributor: Codex · change
+
+- **Changed.** Added offline pinned official SPDX schema validation, selected inventory consistency, adversarial controls and required spec CI checks; corrected the unsupported-modality next fix to its actual contract mismatch.
+- **Evidence.** Three bound Linux image inventories validate; 261 package verification codes reproduce; 55 focused tests and 1094 full Python tests pass. [Change record](./runs/changes/2026-10-10-212953-offline-spdx-inventory-validation-779e0cc4.json).
+- **Not claimed.** No new requirement closure, license clearance, scanner identity authentication, source-file authentication, release signature, tag release or human validation. All 202 scope records retained; 97 remain open.
+
+
 ### 2026-10-10-211706-verified-dependency-ledger-publication-5798548f
 
 Recorded 2026-10-10T21:17:06.100087+00:00 · Contributor: Codex · change

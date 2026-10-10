@@ -28,7 +28,11 @@ It checks the exact three document hashes, build/package input hashes, SPDX
 subjects against image/config and manifest identities, observed scan attribution
 and unique package IDs. It refuses changed/missing artifacts, unknown images,
 unsafe paths, symlinks and unsigned-to-signed or uncleared-to-cleared promotion.
-It is a bounded consistency verifier, not a full SPDX standards validator.
+It is a bounded identity verifier, not a full SPDX standards validator. The stronger
+`python3 scripts/verify-runtime-sbom-standard.py` additionally checks the pinned
+official JSON schema and selected internal consistency, offline. See
+[its executed checks and limits](spdx-inventory-validation.md). License clearance
+and signed release acceptance remain separate.
 
 For a new observed image, export an OCI archive on an isolated Linux builder,
 then use the hash-verified scanner; no local Docker daemon is required:
