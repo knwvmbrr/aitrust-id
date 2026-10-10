@@ -17,7 +17,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 461,
+  "python_tests_passed": 506,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -46,8 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://37967789.aitrust-id.pages.dev",
-    "deployment_id": "37967789-8e1e-4b28-b4cf-cd18b7becc06",
+    "deployment_url": "https://1d4e932c.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -67,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-calm-deployment.json",
+    "publication_evidence": "runs/2026-10-10-reference-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -96,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-calm-site-public.json",
+    "verification": "runs/2026-10-10-reference-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -646,7 +645,8 @@
     "deployment": "9805ae71-b0e5-4771-87c9-a11cc0f7161b",
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input",
-    "latest_emulation_evidence": "runs/2026-10-09-device-a11y-engines-public.json"
+    "latest_emulation_evidence": "runs/2026-10-10-frozen-device-engines.json",
+    "normalization_id": "NFC-Unicode-15.0.0/v1"
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -687,9 +687,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T04:43:37.387780+00:00",
-    "completed_records": 31,
-    "open_records": 171,
+    "audited_at": "2026-10-10T12:10:50.889140+00:00",
+    "completed_records": 32,
+    "open_records": 170,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -708,7 +708,8 @@
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 71
+    "target_remaining_closures": 70,
+    "publication_pending": true
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -777,7 +778,7 @@
     "hosted_ci_evidence": "runs/2026-10-09-provenance-boundary-hosted-ci.json"
   },
   "device_build": {
-    "status": "fresh_build_matrix_passed; tracked_manifest_and_method_unchanged",
+    "status": "four_actual_builders_pass_frozen_unicode15_bundle",
     "builders": [
       "3.10.15",
       "3.11.10",
@@ -787,7 +788,7 @@
     "atomic_writes": true,
     "unchanged_files_preserved": true,
     "stale_cleanup_failure_blocks_build": true,
-    "evidence": "runs/2026-10-09-device-matrix-clean-reference.json",
+    "evidence": "runs/2026-10-10-normalized-device-builders.json",
     "unit_tests": 16,
     "future_builder_versions_guaranteed": false,
     "published_source": "403a317851a37c21d4e9e724911790eb6d230933",
@@ -796,9 +797,9 @@
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
   },
   "current_source_service_conformance": {
-    "captured_at": "2026-10-10T04:45:25.178171+00:00",
-    "evidence": "runs/2026-10-10-current-service-recheck.json",
-    "http_checks": 30,
+    "captured_at": "2026-10-10T12:10:05.104822+00:00",
+    "evidence": "runs/2026-10-10-frozen-service-conformance.json",
+    "http_checks": 31,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
     "upstream_failure_and_recovery": true,
@@ -825,5 +826,27 @@
     "uploaded": false,
     "semantic_detector": false,
     "NF_FI_released": false
+  },
+  "known_normalization_gap": {
+    "evidence": "runs/2026-10-10-normalization-version-gap.json",
+    "reopened": [
+      "F-154",
+      "F-078"
+    ],
+    "status": "corrected_and_actual_routes_verified",
+    "correction_evidence": [
+      "runs/2026-10-10-frozen-normalization-node24.json",
+      "runs/2026-10-10-frozen-device-engines.json",
+      "runs/2026-10-10-frozen-service-conformance.json"
+    ]
+  },
+  "model_asset_integrity": {
+    "status": "verified_before_model_load; corruption_refused_in_real_image",
+    "evidence": [
+      "runs/2026-10-10-model-image-integrity.json",
+      "runs/2026-10-10-model-service-conformance.json"
+    ],
+    "independent_accuracy_evidence": false,
+    "local_docker_started": false
   }
 }

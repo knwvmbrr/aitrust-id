@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import re
 import stat
-import unicodedata
+from protocol.normalization import normalize_nfc, NORMALIZATION_ID
 
 VERSION = 'local-reference-corpus/v1'
 MAX_DOCUMENTS = 32
@@ -117,6 +117,8 @@ def load(path):
     raw = read_regular(Path(path).expanduser(), MAX_STORE_BYTES, private=True)
     try:
         record = json.loads(raw, object_pairs_hook=unique_pairs,
+                            parse_int=lambda _: (_ for _ in ()).throw(CorpusError('Unexpected numeric manifest value.')),
+                            parse_float=lambda _: (_ for _ in ()).throw(CorpusError('Unexpected numeric manifest value.')),
                             parse_constant=lambda _: (_ for _ in ()).throw(CorpusError('Invalid JSON number.')))
         if not isinstance(record, dict) or set(record) != {'format', 'documents', 'manifest_sha256'}:
             raise CorpusError('Invalid corpus envelope.')
@@ -141,7 +143,7 @@ def load(path):
         if sha(encoded(content)) != record['manifest_sha256']:
             raise CorpusError('Manifest integrity check failed.')
         return record
-    except (UnicodeError, json.JSONDecodeError, RecursionError, TypeError, KeyError):
+    except (ValueError, RecursionError, TypeError, KeyError):
         raise CorpusError('Invalid or corrupted corpus.') from None
 
 
@@ -159,10 +161,10 @@ def query(record, phrase):
         phrase.encode('utf-8', errors='strict')
     except UnicodeError:
         raise CorpusError('Query must use valid Unicode.') from None
-    needle = unicodedata.normalize('NFC', phrase)
+    needle = normalize_nfc(phrase)
     matches = []
     for document in record['documents']:
-        normalized = unicodedata.normalize('NFC', document['text'])
+        normalized = normalize_nfc(document['text'])
         start = 0
         while len(matches) < 10:
             at = normalized.find(needle, start)
@@ -171,7 +173,7 @@ def query(record, phrase):
             matches.append({'document_id': document['id'], 'document_sha256': document['sha256'],
                             'normalized_source_sha256': sha(normalized.encode('utf-8')),
                             'source_span': [at, at + len(needle)], 'query_span': [0, len(needle)],
-                            'offset_unit': 'NFC_unicode_codepoint', 'passage': normalized[at:at+len(needle)]})
+                            'normalization_id': NORMALIZATION_ID, 'offset_unit': 'NFC_unicode_codepoint', 'passage': normalized[at:at+len(needle)]})
             start = at + len(needle)
         if len(matches) == 10:
             break

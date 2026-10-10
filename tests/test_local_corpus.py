@@ -72,7 +72,7 @@ def test_corruption_never_returns_partial_matches(attached, change):
     with pytest.raises(c.CorpusError): c.load(output)
 
 
-@pytest.mark.parametrize('bad', ['{"format":1,"format":2}', '[]', '{', '{"x":NaN}', '['*1100])
+@pytest.mark.parametrize('bad', ['{"format":1,"format":2}', '[]', '{', '{"x":NaN}', '['*1100, '{"x":'+ '9'*100000+'}', '{"x":1.5}'])
 def test_invalid_json_rejected(attached, bad):
     _, _, output = attached; output.write_text(bad)
     with pytest.raises(c.CorpusError): c.load(output)

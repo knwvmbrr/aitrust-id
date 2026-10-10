@@ -1,0 +1,828 @@
+{
+  "version": 1,
+  "origin": "Developer-generated interoperability vectors; not labels or independent review",
+  "vectors": [
+    {
+      "id": "text-0",
+      "modality": "text",
+      "text": "",
+      "expected": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length": 0,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-1",
+      "modality": "text",
+      "text": "e\u0301",
+      "expected": {
+        "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-2",
+      "modality": "text",
+      "text": "\u00e9",
+      "expected": {
+        "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-3",
+      "modality": "text",
+      "text": "\ud83e\uddea Jos\u00e9",
+      "expected": {
+        "sha256": "082bc47c7142221530af0efa7cfb7331acad04dee24fb76efd4d4819178193e5",
+        "length": 6,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-4",
+      "modality": "text",
+      "text": "\u65e5\u672c\u8a9e",
+      "expected": {
+        "sha256": "77710aedc74ecfa33685e33a6c7df5cc83004da1bdcef7fb280f5c2b2e97e0a5",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-5",
+      "modality": "text",
+      "text": "line\r\nline",
+      "expected": {
+        "sha256": "d523830b97bbd0128708b773138cb7a3a928cde2214dc74326599b30dc216215",
+        "length": 10,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-6",
+      "modality": "text",
+      "text": "line\nline",
+      "expected": {
+        "sha256": "d39a27a2975956fc2a81ac5510d88368193f7cceb9d23382417716c860390e95",
+        "length": 9,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-7",
+      "modality": "text",
+      "text": " A\tB ",
+      "expected": {
+        "sha256": "017be60b1da5921731df5cb086f27bd986325e576be34b4454575f22cc7757ac",
+        "length": 5,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-8",
+      "modality": "text",
+      "text": "\u0000",
+      "expected": {
+        "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-9",
+      "modality": "text",
+      "text": "\ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb",
+      "expected": {
+        "sha256": "b1e0232190991f0337645cb23fb896790216a8488f6c1d59f4cdf874cf5ec806",
+        "length": 4,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-10",
+      "modality": "text",
+      "text": "\ufeffcode",
+      "expected": {
+        "sha256": "b9327b3e9abd5782aa24400db3c6754c8ef67469a60c8b192eccd7e1c3071009",
+        "length": 5,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "text-11",
+      "modality": "text",
+      "text": "\u212b",
+      "expected": {
+        "sha256": "0a94dc9d420d1142d6b71de60f9bf7e2f345a4d62c9f141b091539769ddf3075",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "code-0",
+      "modality": "code",
+      "base64": "",
+      "expected": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length": 0,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-1",
+      "modality": "code",
+      "base64": "IHgJDQo=",
+      "expected": {
+        "sha256": "a46b64ec14f3aff79b8b0c044a63a0688757ad27ebe12c841d77d23caeda7912",
+        "length": 5,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-2",
+      "modality": "code",
+      "base64": "IHgJCg==",
+      "expected": {
+        "sha256": "bc645dd39bb799b81475cc0c4c239738fbade6d6c9f730e41050be2ce4f64f95",
+        "length": 4,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-3",
+      "modality": "code",
+      "base64": "AP8=",
+      "expected": {
+        "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+        "length": 2,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-4",
+      "modality": "code",
+      "base64": "77u/cHJpbnQoMSk=",
+      "expected": {
+        "sha256": "4f19f153eaeecd6aff02678095ef1caee0b5e14a6b23eae3cdeea00164da645e",
+        "length": 11,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-5",
+      "modality": "code",
+      "base64": "ZcyB",
+      "expected": {
+        "sha256": "bf12767b0f2a56b2190075bae8169f656e3ce8d6357d4aff184bc6c7ea48f9f6",
+        "length": 3,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-6",
+      "modality": "code",
+      "base64": "w6k=",
+      "expected": {
+        "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
+        "length": 2,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-0",
+      "modality": "text",
+      "text": "a\u0897\u0323",
+      "expected": {
+        "sha256": "836dec73a367bbc0e438ff8f05d8be0851bac7fff2ed3014ce78159cb1c1ef25",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-1",
+      "modality": "text",
+      "text": "a\u1acf\u0323",
+      "expected": {
+        "sha256": "a2435bafb863b5eba96a12b2faca0fe30b254273b32368921f2b3c815374f5c1",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-2",
+      "modality": "text",
+      "text": "a\u1ad0\u0323",
+      "expected": {
+        "sha256": "824bdf9a03b32dfefb2309e0b92f4036b5fa5cabc906380687706d44fbef2044",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-3",
+      "modality": "text",
+      "text": "a\u1ad1\u0323",
+      "expected": {
+        "sha256": "58637c4fbf093aa0e0d4d96bd77a26ba90ce5b0f27715227b56f6be2895c691a",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-4",
+      "modality": "text",
+      "text": "a\u1ad2\u0323",
+      "expected": {
+        "sha256": "2d9b8894fe4d46d293cbb5d5a357282135e1194588b36be4e2df3d3dd410332b",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-5",
+      "modality": "text",
+      "text": "a\u1ad3\u0323",
+      "expected": {
+        "sha256": "a5358296a36471ef78f3bd7de4a7baaccefa7254eb17fb31b081a75731ed1ccd",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-6",
+      "modality": "text",
+      "text": "a\u1ad4\u0323",
+      "expected": {
+        "sha256": "96199d58223fdb860537d42a5f697128125b06f2c1718dea06ddb64c85a05014",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-7",
+      "modality": "text",
+      "text": "a\u1ad5\u0323",
+      "expected": {
+        "sha256": "92758f078f2bee5d16f0b8890d1f9a70f5bfa1116525c1cabb1a6a01c0c0887b",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-8",
+      "modality": "text",
+      "text": "a\u1ad6\u0323",
+      "expected": {
+        "sha256": "138567aa1f0037bd1e3bf3e493998a758c0b15df37548b6b43aeeae275a9ee70",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-9",
+      "modality": "text",
+      "text": "a\u1ad7\u0323",
+      "expected": {
+        "sha256": "c3b178eb3da660ee8250be0fe70a3c63336be2b60e186848205bfe31d9807c41",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-10",
+      "modality": "text",
+      "text": "a\u1ad8\u0323",
+      "expected": {
+        "sha256": "97b11575bb05c4c0c0421920c3cfed1d4d1c3fbf230a37b281b1dfce36f88f1e",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-11",
+      "modality": "text",
+      "text": "a\u1ad9\u0323",
+      "expected": {
+        "sha256": "bc9ddbf6659ddf3656cb175a1b6e3d3dac823d3895732b14d0f3a9ad406dfdf2",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-12",
+      "modality": "text",
+      "text": "a\u1ada\u0323",
+      "expected": {
+        "sha256": "cdea87d8a79e31872ee4c7256844fff1069995289cccbeb706dffc7682a6cd77",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-13",
+      "modality": "text",
+      "text": "a\u1adb\u0323",
+      "expected": {
+        "sha256": "f99df4a0580bac9ff94e967f2523d9e33c92a7b14c80faca843120a95a25e468",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-14",
+      "modality": "text",
+      "text": "a\u1adc\u0323",
+      "expected": {
+        "sha256": "dc332b05ca6a4946add97687e7811516e1f962bcd57d7cf31d307ab57f205308",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-15",
+      "modality": "text",
+      "text": "a\u1ae0\u0323",
+      "expected": {
+        "sha256": "42d6dd74b0818d5244eebcd76e31a0a6d0e0b25f365293e7aa3baa61468b2401",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-16",
+      "modality": "text",
+      "text": "a\u1ae1\u0323",
+      "expected": {
+        "sha256": "5b23fbf7f7ca2e64a78c9d10724a70fb6d474b14aa14742ff094208c977d62ee",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-17",
+      "modality": "text",
+      "text": "a\u1ae2\u0323",
+      "expected": {
+        "sha256": "4ea592d42bff29e51348a0026b96eae342566a5133ca6221075fe72e98a96cf6",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-18",
+      "modality": "text",
+      "text": "a\u1ae3\u0323",
+      "expected": {
+        "sha256": "a270617a5749b117028cc3d9ff43abbfc7933a5c6b02c1c4b4356bcdaec8e122",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-19",
+      "modality": "text",
+      "text": "a\u1ae4\u0323",
+      "expected": {
+        "sha256": "abc1090580ca3bf625c4e2566cdf87ac495ff8ef958ed73d75bed8b6f8619dd6",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-20",
+      "modality": "text",
+      "text": "a\u1ae5\u0323",
+      "expected": {
+        "sha256": "3b959e6307ede6e2d6210fdb72ef79e7385b42603875620372242a0907877e9a",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-21",
+      "modality": "text",
+      "text": "a\u1ae7\u0323",
+      "expected": {
+        "sha256": "8b23c96f8dba6f5cab619a2d2f3a180a52acb39c88d7e27e24e9d3665fd59c5c",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-22",
+      "modality": "text",
+      "text": "a\u1ae8\u0323",
+      "expected": {
+        "sha256": "3760e323439a8469f67728ea8071f91a136b5f1891590a642730320e78e7ffbf",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-23",
+      "modality": "text",
+      "text": "a\u1ae9\u0323",
+      "expected": {
+        "sha256": "fbc42ab8824f72ca504366a3506dc00519eeaf5e0eb02c20f83c243b922a6e40",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-24",
+      "modality": "text",
+      "text": "a\u1aea\u0323",
+      "expected": {
+        "sha256": "08794311ea78fab8c220a78762c9f835be25563cb1d077d1694d6d3cef7dc378",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-25",
+      "modality": "text",
+      "text": "a\u1aeb\u0323",
+      "expected": {
+        "sha256": "0c7fcb37e9c17d2ff04ace329d06e6cb4578a2b629f054dc0767a243d8ee6869",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-26",
+      "modality": "text",
+      "text": "a\ud803\udd69\u0323",
+      "expected": {
+        "sha256": "7c80e2325bcc2c7860abff8760d9e08c6577168b4791d347af26288a685a4e7e",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-27",
+      "modality": "text",
+      "text": "a\ud803\udd6a\u0323",
+      "expected": {
+        "sha256": "384c95d57892376444a9e3bddc5cfcf0f71527733dc5bfc7c011c5cae32a55c4",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-28",
+      "modality": "text",
+      "text": "a\ud803\udd6b\u0323",
+      "expected": {
+        "sha256": "95c81ad80061028094c89c8e0f2b755b41945d36ab14a4c67ec500444787e320",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-29",
+      "modality": "text",
+      "text": "a\ud803\udd6c\u0323",
+      "expected": {
+        "sha256": "dc7d338a4011cb894126b187bded4553611c2ad1c2b3a68faa9285401e901d2d",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-30",
+      "modality": "text",
+      "text": "a\ud803\udd6d\u0323",
+      "expected": {
+        "sha256": "ca89f1500da65583de1d781adb1781dbd04603d135178ba4c1b3cc4e9cc022ec",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-31",
+      "modality": "text",
+      "text": "a\ud804\udfce\u0323",
+      "expected": {
+        "sha256": "60bfff456277cd9dc04b10710ade43778f521060c3622d224624c5902a263641",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-32",
+      "modality": "text",
+      "text": "a\ud804\udfcf\u0323",
+      "expected": {
+        "sha256": "8fedafd76708bf915bf4e49dbb8b01fe4d1b7edad77d562cf23861d8f01b3d54",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-33",
+      "modality": "text",
+      "text": "a\ud804\udfd0\u0323",
+      "expected": {
+        "sha256": "7aaee48a6b41347c26eb2d6a2ad52b0b18aafa0f6110f548af5614c0a3dea9b4",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-34",
+      "modality": "text",
+      "text": "a\ud818\udd2f\u0323",
+      "expected": {
+        "sha256": "3bfeb9e83541a94e6dc5c60e4c7ac484fd62535022e02cc054ca0c1484ce23b2",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-35",
+      "modality": "text",
+      "text": "a\ud839\uddee\u0323",
+      "expected": {
+        "sha256": "19c93d29a3d024930b2aaa0b11daa2a336db298574810056aa67fd397f5e9b2e",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-36",
+      "modality": "text",
+      "text": "a\ud839\udee3\u0323",
+      "expected": {
+        "sha256": "22112a63fb69c276b8cd6cc69e84d2c397aa4764a48947bfa9f9e14f402601e6",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-37",
+      "modality": "text",
+      "text": "a\ud839\udee6\u0323",
+      "expected": {
+        "sha256": "36445b366609000866cddc46ac8532356cd357e5b8ceeb07af9c0d19aed3f4f6",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-38",
+      "modality": "text",
+      "text": "a\ud839\udeee\u0323",
+      "expected": {
+        "sha256": "851c23e7569fdb0fa0b3e813c45796adf5a17b6845d2df497b9f5e6f278640cb",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-39",
+      "modality": "text",
+      "text": "a\ud839\udeef\u0323",
+      "expected": {
+        "sha256": "0b757e653ec0bf14e180470ba414b241a22c552d313ba3bfbf3ec08c6d58f326",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    },
+    {
+      "id": "unicode-version-gap-40",
+      "modality": "text",
+      "text": "a\ud839\udef5\u0323",
+      "expected": {
+        "sha256": "7eb1b3694613c4fde5abbc726d64c1152a55644e156b39e2c3fae7186efea976",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v2",
+        "normalization_id": "NFC-Unicode-15.0.0/v1"
+      }
+    }
+  ],
+  "reject_vectors": [
+    {
+      "id": "text-null",
+      "modality": "text",
+      "text": null
+    },
+    {
+      "id": "text-number",
+      "modality": "text",
+      "text": 5
+    },
+    {
+      "id": "text-high-surrogate",
+      "modality": "text",
+      "text": "\ud800"
+    },
+    {
+      "id": "text-low-surrogate",
+      "modality": "text",
+      "text": "\udfff"
+    },
+    {
+      "id": "text-oversize",
+      "modality": "text",
+      "repeat": {
+        "value": "x",
+        "count": 200001
+      }
+    },
+    {
+      "id": "code-null",
+      "modality": "code",
+      "value": null
+    },
+    {
+      "id": "code-string",
+      "modality": "code",
+      "value": "abc"
+    },
+    {
+      "id": "code-oversize",
+      "modality": "code",
+      "repeat_byte": {
+        "value": 0,
+        "count": 800001
+      }
+    }
+  ],
+  "contract_version": "subject-v2"
+}

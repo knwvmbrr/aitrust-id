@@ -299,3 +299,18 @@ is separate from independent tag accuracy and human/device acceptance.
 [executable vocabulary](spec/vocabulary.json) provide reproducible shared contracts.
 The [scope target](docs/scope-100-execution.md) preserves all 202 requirements;
 completed jobs leave the open queue without disappearing from history.
+
+## Versioned text identity and model loading
+
+Current reference text primitives and runtime checks freeze NFC at Unicode 15.0.0,
+so device and gateway hashes/positions do not depend on the host Unicode version.
+[Migration and checks](docs/normalization-contract.md) preserve the old vectors;
+[subject contracts](docs/subject-contract.md) distinguish text v2 from exact code
+bytes v1. Run `python3 scripts/verify-normalization.py` and
+`python3 scripts/verify-subjects.py` with Node available.
+
+The redactor verifies every sealed English model asset before importing/loading
+the model and refuses changed, missing or extra assets.
+[Model integrity](docs/model-asset-integrity.md) describes the trusted-image
+boundary and an executable positive/corruption test. These checks verify integrity
+and interoperability, not independently measured tag accuracy.

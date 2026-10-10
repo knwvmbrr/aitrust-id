@@ -4,7 +4,7 @@ import hashlib
 import hmac
 import os
 import time
-import unicodedata
+from protocol.normalization import normalize_nfc
 import uuid
 from datetime import datetime, timezone
 from typing import Literal
@@ -103,9 +103,9 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
     work=disconnect=None
     async def pipeline():
         async with httpx.AsyncClient(timeout=10,trust_env=False) as client:
-            normalized=unicodedata.normalize('NFC',req.text)
+            normalized=normalize_nfc(req.text)
             red=await post_validated(client,ANONYMIZER+'/redact',{'text':normalized},Redaction)
-            red.text=unicodedata.normalize('NFC',red.text)
+            red.text=normalize_nfc(red.text)
             if red.entity_count and red.text==normalized:
                 raise ValueError('Redactor reports detections without changing text')
             ev=await post_validated(client,EVALUATOR+'/signals',{'text':red.text},Evaluation)

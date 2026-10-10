@@ -19,5 +19,5 @@ def test_invalid_code_is_rejected(raw):
     with pytest.raises(ValueError):m.code_subject(raw)
 def test_vector_corpus_matches_both_independent_implementations():
     spec=importlib.util.spec_from_file_location('verify_subjects',ROOT/'scripts/verify-subjects.py');v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
-    assert v.verify()['vectors']==19
+    assert v.verify()['vectors']==60
     assert v.verify()['reject_vectors']==8

@@ -29,7 +29,9 @@ services:
   gateway:
     <<: *runtime
     mem_limit: 256m
-    build: ../services/gateway
+    build:
+      context: ..
+      dockerfile: services/gateway/Dockerfile
     environment:
       AITRUST_TOKEN: ${AITRUST_TOKEN:?set AITRUST_TOKEN in deploy/.env}
       ANONYMIZER_URL: http://anonymizer:8000

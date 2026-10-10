@@ -9,7 +9,8 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def checkout(tmp_path):
     for name in ['scripts/verify-device-build-matrix.py','scripts/build-device-detector.py',
-                 'services/evaluator/app.py','docs/device-build-reference.json']:
+                 'services/evaluator/app.py','docs/device-build-reference.json',
+                 'protocol/normalization.py','protocol/unicode15-data.json']:
         dest=tmp_path/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/name,dest)
     return tmp_path
 

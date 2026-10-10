@@ -133,7 +133,11 @@ def project(raw):
         raise ValueError('New model identity structure requires projection review')
     identity = {key:ast.literal_eval(metadata[key]) for key in ('name','revision')}
     identity['sha256'] = method_hash
-    header = 'import hashlib, json, unicodedata\nfrom types import SimpleNamespace as Doc\n'
+    header = 'import hashlib, json\nfrom types import SimpleNamespace as Doc\n'
+    normalizer = (ROOT/'protocol/normalization.py').read_text()
+    tables = (ROOT/'protocol/unicode15-data.json').read_text().strip()
+    normalizer = normalizer.replace("from pathlib import Path\n", "").replace("json.loads(Path(__file__).with_name('unicode15-data.json').read_text())", 'json.loads(' + repr(tables) + ')')
+    header += normalizer + '\n'
     header += 'MODELS = ' + repr([{'name':identity['name'], 'sha256':method_hash, 'revision':identity['revision']}]) + '\n'
     body = ast.unparse(ast.fix_missing_locations(ast.Module(body=selected, type_ignores=[])))
     # Pasted input is a function argument, never Python source. No command runs.
@@ -141,13 +145,13 @@ def project(raw):
 def check_device(text):
     if not isinstance(text, str) or not text.strip() or len(text) > 20000:
         raise ValueError('Require 1–20000 text characters')
-    text = unicodedata.normalize('NFC', text)
+    text = normalize_nfc(text)
     result = signals(Doc(text=text))
     return json.dumps({
         'format': 'ai-trust-id-device-preview/v1',
         'state': 'FINDING' if result['candidates'] else 'NO_FINDING',
         'subject': {'sha256': hashlib.sha256(text.encode('utf-8')).hexdigest(),
-                    'codepoint_count': len(text), 'normalization': 'NFC'},
+                    'codepoint_count': len(text), 'normalization': NORMALIZATION_ID},
         **result, 'redaction_performed': False,
         'independently_validated': False, 'training_label': None,
         'label_status': 'unreviewed_prediction', 'text_included': False
@@ -171,7 +175,9 @@ def main():
         if old.name != name:
             old.unlink()
     manifest = {'method_sha256':method_hash, 'bundle_sha256':bundle_hash,
-                'path':'/device/'+name, 'runtime':'314.0.7', 'max_codepoints':20000}
+                'path':'/device/'+name, 'runtime':'314.0.7', 'max_codepoints':20000,
+                'normalization_id':'NFC-Unicode-15.0.0/v1',
+                'normalization_data_sha256':hashlib.sha256((ROOT/'protocol/unicode15-data.json').read_bytes()).hexdigest()}
     write_if_changed(ROOT/'site/src/device-manifest.json',
                      (json.dumps(manifest, indent=2)+'\n').encode())
     provenance = {**manifest, 'builder_python':sys.version.split()[0],

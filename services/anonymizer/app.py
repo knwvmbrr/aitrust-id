@@ -1,4 +1,6 @@
 """Detected PII redaction with build-provisioned English language assets."""
+from model_identity import verify_installed
+MODEL_IDENTITY = verify_installed()
 from fastapi import FastAPI
 from starlette.middleware.body_limit import RequestBodyLimitMiddleware
 from pydantic import BaseModel, ConfigDict, Field
@@ -24,7 +26,7 @@ class Doc(BaseModel):
     model_config=ConfigDict(extra='forbid')
     text:str=Field(max_length=200_000)
 @app.get('/healthz')
-def healthz():return {'ok':True}
+def healthz():return {'ok':True, 'model_identity':MODEL_IDENTITY}
 @app.post('/redact')
 def redact(doc:Doc):
     results=analyzer.analyze(text=doc.text,language='en')

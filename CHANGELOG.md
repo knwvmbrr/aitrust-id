@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-121224-frozen-normalization-pipeline-57474654
+
+Recorded 2026-10-10T12:12:24.357807+00:00 · Contributor: Codex · change
+
+- **Changed.** Add executable normalization generation/conformance and subject-vector verification to Make, npm and the configured CI scope job; declare Node for network-isolated cross-language tests.
+- **Evidence.** The local public catalogue checks pass with all 20 panels, 202 retained records and no automated axe violations; generation drift, Unicode official checks and measured version regressions have explicit commands. [Change record](./runs/changes/2026-10-10-121224-frozen-normalization-pipeline-57474654.json).
+- **Not claimed.** Hosted CI remains blocked before job execution by the account restriction; configured CI is not claimed executed. Independent tag validation and physical-device acceptance remain open.
+
+
+### 2026-10-10-121120-normalization-public-reference-f30f2407
+
+Recorded 2026-10-10T12:11:20.057070+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose the frozen normalization plan, text v2/code v1 vectors, model integrity design and current runtime checks through the public reference download set and README.
+- **Evidence.** Public reference preparation uses explicit source-file allowlists; runtime, vector, official Unicode and browser records remain attributed and distinct from accuracy validation. [Change record](./runs/changes/2026-10-10-121120-normalization-public-reference-f30f2407.json).
+- **Not claimed.** Deployment and published asset equality are checked after building; no claim of independent accuracy, physical handset performance or certification.
+
+
+### 2026-10-10-121051-frozen-normalization-route-acceptance-4958bb04
+
+Recorded 2026-10-10T12:10:51.036267+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the frozen Unicode 15.0 normalization correction through the actual gateway and phone-browser worker; retain original failure evidence and correct the completion ledger to 32 complete and 170 open.
+- **Evidence.** Both browser engines match full evidence on all 86 development fixtures and 41 Unicode-version regression inputs, including offline checks; the rebuilt Linux service passes 31 real HTTP checks, dependency recovery and exact runtime-file hash matching. Text/code vector and official NFC checks pass. [Change record](./runs/changes/2026-10-10-121051-frozen-normalization-route-acceptance-4958bb04.json).
+- **Not claimed.** Browser engines run on desktop hardware, not physical phones. Development cases do not satisfy independent accuracy gates. Public website publication remains pending for this source increment; no new tag or certification is released.
+
+
+### 2026-10-10-120901-frozen-normalization-and-model-integrity-a3897588
+
+Recorded 2026-10-10T12:09:01.357648+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify all redactor model assets before loading; freeze Unicode 15.0 NFC across subject primitives, the gateway, private corpus and on-device checker; retain known mismatch evidence and version text primitives explicitly.
+- **Evidence.** The real Linux model image passes intact and refuses a corrupted model config; 506 Python tests, complete Unicode NFC tests in Python and Node, subject vectors and four actual builder versions pass. F-117 is complete. Normalization integration remains under verification. [Change record](./runs/changes/2026-10-10-120901-frozen-normalization-and-model-integrity-a3897588.json).
+- **Not claimed.** No independent tag release, physical-phone acceptance, outside implementer acceptance, certification, broad privacy guarantee or new tag is asserted. Two hash requirements remain reopened until user-route runtime checks pass; public deployment snapshot predates this correction.
+
+
 ### 2026-10-10-044919-reference-increment-publication-audit-42c58de9
 
 Recorded 2026-10-10T04:49:19.436741+00:00 · Contributor: Codex · change

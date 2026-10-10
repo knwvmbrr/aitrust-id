@@ -54,6 +54,9 @@ jobs:
       - run: python scripts/scope-progress.py
       - run: python scripts/verify-accountability.py
       - run: python scripts/verify-vocabulary.py
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - run: make verify-primitives
 
   spec:
     runs-on: ubuntu-latest
@@ -77,6 +80,8 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install -r eval/requirements.txt
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
       - run: sudo unshare -n "$(which python)" -m pytest tests -q
       - run: echo "network-isolated evaluator tests complete"
 

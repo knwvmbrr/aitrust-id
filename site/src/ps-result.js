@@ -1,3 +1,4 @@
+import { normalizeNFC, NORMALIZATION_ID } from '../../protocol/normalization.mjs';
 // Explain only reviewed PS signals. No inference, execution, uploads or logging.
 const reasons={
  'sig.piped_installer.v3':'Downloads code and passes it straight to a shell to run.',
@@ -8,7 +9,8 @@ const reasons={
 };
 export function explainPS(record,text){
  if(typeof text!=='string'||record?.format!=='ai-trust-id-device-preview/v1'||!['FINDING','NO_FINDING'].includes(record.state)||!Array.isArray(record.candidates))throw Error('Invalid PS result');
- const chars=Array.from(text.normalize('NFC'));
+ if(record.subject?.normalization!==NORMALIZATION_ID)throw Error('Normalization identity mismatch');
+ const chars=Array.from(normalizeNFC(text));
  if(record.subject?.codepoint_count!==chars.length)throw Error('Input binding mismatch');
  const matches=[];
  for(const candidate of record.candidates){

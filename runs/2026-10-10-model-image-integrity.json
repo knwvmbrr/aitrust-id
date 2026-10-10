@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-10-10T05:09:16.329653+00:00",
+  "pass": true,
+  "image_id": "62a007d64678a923e876e208cd7737e7a39f8d2a462c01170284cc5ad3edad23",
+  "runtime_file_sha256": {
+    "app.py": "15726db195dc3f921b1ce383ff21193f6d1c917f4afc53d56ef5ade1fe201314",
+    "healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29"
+  },
+  "positive_app_startup": true,
+  "tampered_real_model_config_startup_refused": true,
+  "negative_exit": 1,
+  "isolated_network_none": true,
+  "runtime_uid": 10001,
+  "runtime_capabilities": {
+    "CapEff": 0,
+    "CapPrm": 0,
+    "CapBnd": 0
+  },
+  "isolation_options_requested": [
+    "read-only",
+    "network none",
+    "no-new-privileges",
+    "pids 128",
+    "memory 1024 MiB"
+  ],
+  "model_identity": {
+    "model_name": "en_core_web_sm",
+    "model_version": "3.8.0",
+    "manifest_sha256": "a04d1d444ed9711132aad1026db343e5317ef154eae5ae40cdd6c00e4b4f121f",
+    "asset_files": 29,
+    "verified_before_load": true
+  },
+  "engine": "podman",
+  "independent_accuracy_evidence": false,
+  "engine_auto_started": false,
+  "local_docker_started": false,
+  "executed_verifier_sha256": "d532fa07ea8806e76a52b187799f9bd14e6158c915a485fa4b37ba2f694c62a8"
+}

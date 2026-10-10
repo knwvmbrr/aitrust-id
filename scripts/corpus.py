@@ -40,7 +40,7 @@ def main(argv=None):
         # Escape control sequences so hostile source passages remain terminal text.
         print(json.dumps(result, ensure_ascii=True, indent=2))
         return 0
-    except (corpus.CorpusError, OSError):
+    except (corpus.CorpusError, OSError, UnicodeError):
         print('Local corpus request failed: ' + (str(sys.exc_info()[1]) if isinstance(sys.exc_info()[1], corpus.CorpusError) else 'Private storage is unavailable.'), file=sys.stderr)
         return 2
 

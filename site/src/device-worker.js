@@ -19,6 +19,7 @@ self.onmessage=event=>{
  try {
   if(!check||typeof text!=='string'||!Number.isSafeInteger(id))throw Error('Invalid check');
   const record=JSON.parse(check(text));
+  if(record.subject?.normalization!==manifest.normalization_id)throw Error('Normalization mismatch');
   if(record.models?.[0]?.sha256!==manifest.method_sha256)throw Error('Identity mismatch');
   self.postMessage({type:'result',id,record:{...record,device_runtime:manifest.runtime,bundle_sha256:manifest.bundle_sha256}});
  }catch{self.postMessage({type:'error',id});}

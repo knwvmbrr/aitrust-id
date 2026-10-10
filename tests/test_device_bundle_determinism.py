@@ -15,6 +15,8 @@ RAW = (ROOT/'services/evaluator/app.py').read_bytes()
 def output(tmp_path, monkeypatch):
     (tmp_path/'services/evaluator').mkdir(parents=True)
     (tmp_path/'services/evaluator/app.py').write_bytes(RAW)
+    (tmp_path/'protocol').mkdir()
+    for name in ['normalization.py','unicode15-data.json']:(tmp_path/'protocol'/name).write_bytes((ROOT/'protocol'/name).read_bytes())
     monkeypatch.setattr(B, 'ROOT', tmp_path)
     return tmp_path
 
@@ -37,10 +39,10 @@ def test_strings_and_comments_are_untouched():
     text='payload = """\nfor (a, b) in items:\n(a, b) = values\n"""\n# for (c, d) in items:\n'
     assert B.canonicalize(text) == text
 
-def test_projection_preserves_current_published_bytes():
+def test_projection_matches_reviewed_frozen_normalization_bundle():
     data, method = B.project(RAW)
     assert method == hashlib.sha256(RAW).hexdigest()
-    assert hashlib.sha256(data).hexdigest() == '415060d66f5b8ae14724250bc5e20ffb769546837454c8f0d19810d6109c06bb'
+    assert hashlib.sha256(data).hexdigest() == 'd97df1909f03bb1143e79425bf481bb411e02d5a59dd6ef61828e9be791bd4fb'
 
 def test_fresh_build_matches_manifest(output):
     manifest = B.main()

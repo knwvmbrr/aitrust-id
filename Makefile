@@ -103,3 +103,9 @@ hooks-install:
 .PHONY: corpus-test
 corpus-test:
 	$(PYTHON) -m pytest tests/test_local_corpus.py -q
+
+.PHONY: verify-primitives
+verify-primitives:
+	$(PYTHON) scripts/generate-normalization.py --check
+	$(PYTHON) scripts/verify-normalization.py
+	$(PYTHON) scripts/verify-subjects.py

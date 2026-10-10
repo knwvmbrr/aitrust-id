@@ -13,7 +13,9 @@ ROOT=Path(__file__).resolve().parents[1]
 SCRIPT='''
 import importlib.util,json,pathlib,sys
 spec=importlib.util.spec_from_file_location('builder',sys.argv[1]);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-m.ROOT=pathlib.Path(sys.argv[3]);p=m.ROOT/'services/evaluator/app.py';p.parent.mkdir(parents=True);p.write_bytes(pathlib.Path(sys.argv[2]).read_bytes())
+m.ROOT=pathlib.Path(sys.argv[3]);q=m.ROOT/'protocol';q.mkdir();
+for name in ['normalization.py','unicode15-data.json']:(q/name).write_bytes((pathlib.Path(sys.argv[2]).parents[2]/'protocol'/name).read_bytes())
+p=m.ROOT/'services/evaluator/app.py';p.parent.mkdir(parents=True);p.write_bytes(pathlib.Path(sys.argv[2]).read_bytes())
 manifest=m.main();print(json.dumps({'version':sys.version.split()[0],'manifest':manifest}))
 '''
 

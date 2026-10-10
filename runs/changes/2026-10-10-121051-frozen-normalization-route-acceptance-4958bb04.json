@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-121051-frozen-normalization-route-acceptance-4958bb04",
+  "recorded_at": "2026-10-10T12:10:51.036267+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ff7cfac24316b249aea148a4293e4a35a75fd5ef",
+  "changed": "Complete the frozen Unicode 15.0 normalization correction through the actual gateway and phone-browser worker; retain original failure evidence and correct the completion ledger to 32 complete and 170 open.",
+  "proves": "Both browser engines match full evidence on all 86 development fixtures and 41 Unicode-version regression inputs, including offline checks; the rebuilt Linux service passes 31 real HTTP checks, dependency recovery and exact runtime-file hash matching. Text/code vector and official NFC checks pass.",
+  "limits": "Browser engines run on desktop hardware, not physical phones. Development cases do not satisfy independent accuracy gates. Public website publication remains pending for this source increment; no new tag or certification is released.",
+  "scope_ids": [
+    "F-078",
+    "F-154",
+    "F-081",
+    "F-117",
+    "F-150"
+  ],
+  "files": {
+    ".dockerignore": "ae6950b0d6744b88c30e6a663906f0d4f0fe413d9344c9b29d437f9f11851245",
+    "deploy/docker-compose.yml": "39a7c98974a1bc3c30b5858bfc6b1a9d86c38d3dbd5fb85d60bc97adce887471",
+    "docs/device-build-reference.json": "6d3f179475885715ba896a04dcaa89c3ca67c20c225f1f93ac9a2a968c636b13",
+    "docs/model-asset-integrity.md": "6a594422eae0a9186e59c7214cd0b40955d18b6f13fae5e7f9680a343d1c2b62",
+    "docs/normalization-contract.md": "2151985ee1d7dcdb4ca3e422d50504c3d18f564240d90cf29617e2b26a6d4d22",
+    "docs/scope-progress.json": "ac06de89cdd48b9142ef1e7d8036676b13aec03ad3ee6abb625ac31b572c9fc9",
+    "docs/scope-progress.md": "b4678fe5836068df67e83f12daaf04833960b6e7a4396fbbbc3476d10df281b6",
+    "docs/scope-task-index.md": "451f1347484d6f3430bf6fab2867baf9515c18a8906a1d2c93c2656b1779d17d",
+    "docs/subject-contract.md": "4346bd52a1f6a084e5ee1696e6e2ffb467aa478a750372025be35bc658b9c4c1",
+    "eval/vectors/subjects-v2.json": "4281cc7ab369f1d415890b130dfcaae80b115c4b2bae47892d0a9b455e7d4fe0",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "eval/vectors/unicode/NormalizationTest-15.0.0.txt": "fb9ac8cc154a80cad6caac9897af55a4e75176af6f4e2bb6edc2bf8b1d57f326",
+    "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    "protocol/normalization.cjs": "dc801f09e3abb32f89fde3005bf48e7f62ed46d628dadcd02c2f62ec324f75c4",
+    "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/subjects.cjs": "0551d3a866639f232e9c7d1060ef021e3dd6b7147408cf31a8d3d0f21a1c4469",
+    "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "runs/2026-10-10-frozen-device-engines.json": "75c05df50e4afcd84f565a94bbacdd6a7c3fbe98d1e9a0626c78de3412e1c8fa",
+    "runs/2026-10-10-frozen-normalization-node24.json": "cd342916ed5bbfc4c150661e410012d553a89e3a0643c11c736d6e9c9c0139f6",
+    "runs/2026-10-10-frozen-normalization.json": "4423bb6064da064e5067de40d7325b4dc0a4e961c2238a3d6cd361c959483028",
+    "runs/2026-10-10-frozen-ps-results.json": "714cfc5f2b52e0f782b298603ed8f8277e83f39e2e69fde0abcc6b8049af1b35",
+    "runs/2026-10-10-frozen-service-conformance.json": "17c240d9c491a1ce8142831360f90bbf4b12096c17361cdb254fc0e64128616d",
+    "runs/2026-10-10-model-image-integrity.json": "031e7905f2058d39d8f51a3de54c83549017bb8de66a31be5504cf905532487a",
+    "runs/2026-10-10-model-service-conformance.json": "d76d7c04e5cecdb61ce37891199160e44596fc66e9166c29487c5b70c8b1a835",
+    "runs/2026-10-10-normalization-version-gap.json": "87c2ef270b1926560e2c818bb823c4fef983e115c6965f4b8701cf8eb98e48c8",
+    "runs/2026-10-10-normalized-device-builders.json": "2c7b2571bc7589ad9ef0c0ad144dbee452a1a9243e3cce3555d55dc9e758e556",
+    "runs/2026-10-10-reference-assets-public.json": "af1f20b3ab2006e836807eeb53f3b3ba8cfac14ca65fba551d6a49931f9d1fd1",
+    "runs/2026-10-10-reference-deployment.json": "1924673ec63acba78f50abb61b5c409c20d74a378b76ab418c238198483d8378",
+    "runs/2026-10-10-reference-ps-public.json": "d988721a16e2b2e1404da4adb94f6570fb8d48b60c0c51a08aaa390ae4d30974",
+    "runs/2026-10-10-reference-site-public.json": "07dcbdd340dd36f3d4526759aa2102dc59aee85a5669b945271bed1b90589dd6",
+    "runs/2026-10-10-subject-v2-vectors.json": "cb5866c915cf90397e2f5bbf794bb7d686f7179926933674ab5e0464c8909153",
+    "scripts/build-device-detector.py": "b04c4c9dfef623a33aa041424df80d2fa27ea0f9a835936c61e1593076e1e07e",
+    "scripts/corpus.py": "e18b50f2f22dd261c24a963d1cedeb0a478048cf3933df11e75e5fa51073a223",
+    "scripts/generate-normalization.py": "d534f3baedc3c9e856341c0ad348f7da687c7f26e9105a5330ca1aa1f25338c2",
+    "scripts/verify-device-build-matrix.py": "18130e95129491a7b74df0986f71651a4eaf2c752b2589ef91250f1a9ee513f9",
+    "scripts/verify-device.cjs": "32b54ab2829a1744b0a3d0423c5d0a75a616fd0f44f4a8e7d4ff0655a5a9d5d2",
+    "scripts/verify-model-image.py": "d532fa07ea8806e76a52b187799f9bd14e6158c915a485fa4b37ba2f694c62a8",
+    "scripts/verify-normalization.py": "96f781bea0dd306a4d1dd4b9248a3dd1614e3600bde0d93c93a98b05174b3853",
+    "scripts/verify-ps-results.cjs": "315bc651ae691f09f6b1d237069d2735c47e95eea0f39e76fd3f881a6bfc66c5",
+    "scripts/verify-service.py": "35b5a567ab568c135bd8de8724273916f60c072e3f38a8504cf9c00d0d5614f9",
+    "scripts/verify-subjects.py": "004da697a3f5ee79abe9ef4e01ce680b2d2b17e248aadd2fe066423a7410a4c3",
+    "services/anonymizer/Dockerfile": "1d1533e9ac12b753704b0ee08dd72c2713a8fa3061672bc655c97d48e9f6432c",
+    "services/anonymizer/app.py": "15726db195dc3f921b1ce383ff21193f6d1c917f4afc53d56ef5ade1fe201314",
+    "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "services/gateway/Dockerfile": "7437849a91ef1ff95dcf475a62e767cc8420ab99bf9cf6727e027d6449ec346c",
+    "services/gateway/app.py": "271b4081146cffbadbd759bd38f18ff3ceab98b5efaa5b9cb710bdcd4328a26c",
+    "site/public/reference/public-scope.json": "3200639c9c632b456c6040482f15cfc7639b3e850d61e380c8f26eb95126c07b",
+    "site/src/device-worker.js": "b327e1c5984d954e3a2a6f369e3462b6ccc13d3e6d6db7fe56dd2dccfb0d39ee",
+    "site/src/ps-result.js": "2ee10598cec6f526a39338c8df2153f93aa0ed53a3ba393054f5953a2dedfd40",
+    "site/src/public-scope.json": "3200639c9c632b456c6040482f15cfc7639b3e850d61e380c8f26eb95126c07b",
+    "state.json": "819ec9ddbac38e93a040395ab2ba03575b7a531890c01172f74e36f047596927",
+    "tests/test_device_bundle_determinism.py": "7a0a0bc28f1e3988170b0ed2f1e23f506079c1fa9fdd572aef292479e18a68a8",
+    "tests/test_device_matrix_checkout.py": "cb4299dd103017548b680c702e99cee7e6a8011af51e0d0961de77a6702853d9",
+    "tests/test_frozen_normalization.py": "1977b21e9f95945e84cc54f01801e2c4b31e652ae32a056aaf815f2982e409d3",
+    "tests/test_local_corpus.py": "b0c76295b87fe54f434b4257400a1ccff8a0e311dc9cc36484485635c681cf37",
+    "tests/test_model_asset_integrity.py": "d41b3ffd50532bc25fb5aec3bf3bc6df03041f43ba2b08ee929cb44afe5bb424",
+    "tests/test_subject_contract.py": "f590eb360affdc5b0abf27c7904d218f9b800983a1bac06d687606c12b53888b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-frozen-device-engines.json",
+      "sha256": "75c05df50e4afcd84f565a94bbacdd6a7c3fbe98d1e9a0626c78de3412e1c8fa"
+    },
+    {
+      "path": "runs/2026-10-10-frozen-ps-results.json",
+      "sha256": "714cfc5f2b52e0f782b298603ed8f8277e83f39e2e69fde0abcc6b8049af1b35"
+    },
+    {
+      "path": "runs/2026-10-10-frozen-service-conformance.json",
+      "sha256": "17c240d9c491a1ce8142831360f90bbf4b12096c17361cdb254fc0e64128616d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T12:10:51.242102+00:00"
+    }
+  ]
+}

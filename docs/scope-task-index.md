@@ -110,7 +110,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-057 | SBOM plus Sigstore release signing | [WP-RELEASE](scope-delivery.md#wp-release) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-116 | Dependency lockfiles and hashes, not just version pins | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-117 | Model hash verification at load | [WP-RELEASE](scope-delivery.md#wp-release) | 40% · [evidence/fix](scope-progress.md) |
+| TASK-F-117 | Model hash verification at load | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-118 | Calibration ledger — every published number reproducible by a third party | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-119 | Conformance test suite an outside implementer can run against their own build | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-120 | Evidence packets — committed transcripts per exit gate | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
