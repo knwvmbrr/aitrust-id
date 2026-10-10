@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-202156-first-push-ci-enforcement-71f40007",
+  "recorded_at": "2026-10-10T20:21:56.635622+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "06b9c547a728184388ed4afa88c81654001abc0d",
+  "changed": "Enforce eleven engineering checks on main; retain a ready failing PR that was blocked and closed without merging. Repair first-push record verification to check the full merge-base range and bind the website prebuild gate sources.",
+  "proves": "The actual required test failed and GitHub blocked the ready control PR while ten other required checks passed. Thirty-four Git-history and CLI tests pass, including an earlier undocumented branch commit that a parent-only check would miss.",
+  "limits": "Normal repaired-branch hosted checks and a protected merge remain pending. CODEOWNERS and Dependabot are unfinished. No independent tag-release, human accessibility or physical-phone acceptance is implied; collection stays disabled.",
+  "scope_ids": [
+    "F-054",
+    "F-152",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "e63457ccee169b90753d6c037f00c732be5890c54d5d3e2ecd40a46d714abd18",
+    "docs/ci-branch-baseline-plan.md": "f2ca92ca1e44c84a0673a523370f844a128c89527cec96d204d5699c9b8ee151",
+    "docs/scope-progress.json": "c8abcd001bb432909c368b97cc8a79be84e424c5a0f9cc79f6c9fb8fedfbf4b5",
+    "docs/scope-progress.md": "b67145ce0e28b053228caff2023b99ec3e600ab8d38533e3a907af57346d52c5",
+    "eval/revalidation.json": "518e8bd47a8ecbcb046166f4e67aa1a4d403df7afbaa318106176900b16ce6d5",
+    "runs/2026-10-10-ci-first-push-controls.json": "7e0bd2875609231eb66d8aac7c897c4fb79c83770a957b43a813bf438c0533d6",
+    "runs/2026-10-10-required-ci-failure-blocking.json": "7cc19e919237d5a3a7257075a6cc8d17681dfd2022b96b88f67a894c365a655a",
+    "scripts/changelog_core.py": "c3e03118b073d2bd4e5f4813d1f6a15960e3c050a89a8d0dd5ac283c5551b74a",
+    "scripts/verify-changelog.py": "952d2c0a3ac5ca9b71ffaef8f4ef224b3af2653c32356901df9771dbc6237c30",
+    "state.json": "ca211cd16b74c579b6f80bd7c980e199ac2a0465c3a235dc8a67332092b5311c",
+    "tests/test_changelog_pipeline.py": "b3b11114cdb5ef33811329c1233c303fa8428f168cf4e25aa6d1a977fa1948d6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-required-ci-failure-blocking.json",
+      "sha256": "7cc19e919237d5a3a7257075a6cc8d17681dfd2022b96b88f67a894c365a655a"
+    },
+    {
+      "path": "runs/2026-10-10-ci-first-push-controls.json",
+      "sha256": "7e0bd2875609231eb66d8aac7c897c4fb79c83770a957b43a813bf438c0533d6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:21:56.725440+00:00"
+    }
+  ]
+}

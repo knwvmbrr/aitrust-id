@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-202500-required-ci-final-source-verification-fb82595e
+
+Recorded 2026-10-10T20:25:00.256092+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain current website and source-bound deployment checks, refresh exact source review and point runtime state to all five fresh engineering receipts.
+- **Evidence.** 991 distinct Python tests passed, all five current capability receipts are accepted, and deployment boundaries reject unapproved intake or stale source bindings. The ready negative-control PR remains closed without merging. [Change record](./runs/changes/2026-10-10-202500-required-ci-final-source-verification-fb82595e.json).
+- **Not claimed.** Normal hosted first-push and PR acceptance remain pending. No independent accuracy, human screen-reader or physical-phone acceptance is claimed; research intake remains off.
+
+
+### 2026-10-10-202314-required-ci-current-capability-evidence-12785304
+
+Recorded 2026-10-10T20:23:14.962741+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain newly executed protocol, PS, redaction and extension engineering receipts for the changed revalidation contract.
+- **Evidence.** All four named current-source capabilities executed their configured checks successfully with unchanged source during each run. [Change record](./runs/changes/2026-10-10-202314-required-ci-current-capability-evidence-12785304.json).
+- **Not claimed.** These are engineering receipts, not independent detector accuracy, physical-phone testing or research collection.
+
+
+### 2026-10-10-202233-ci-progress-public-copy-29a5a63c
+
+Recorded 2026-10-10T20:22:33.776678+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh both public scope copies with the actual required-check progress and remaining CODEOWNERS/Dependabot work.
+- **Evidence.** The generated public catalogue preserves all 202 records and agrees with the evidence ledger; F-054 is 80 percent pending the normal protected merge, and F-152 remains open. [Change record](./runs/changes/2026-10-10-202233-ci-progress-public-copy-29a5a63c.json).
+- **Not claimed.** No requirement is completed by this generated copy or percentage update.
+
+
+### 2026-10-10-202210-website-changelog-dependency-proof-3f77624f
+
+Recorded 2026-10-10T20:22:10.384516+00:00 · Contributor: Codex · change
+
+- **Changed.** Include the actual change-record core, CLI and Git-history controls in website revalidation; execute the thirty-four controls as a prerequisite.
+- **Evidence.** The selected website receipt becomes stale when its prebuild enforcement or real-history tests change, and the controls run in the receipt rather than relying on a prior unrelated test report. [Change record](./runs/changes/2026-10-10-202210-website-changelog-dependency-proof-3f77624f.json).
+- **Not claimed.** This remains engineering enforcement; independent tag release and normal repaired-branch hosted checks remain pending.
+
+
+### 2026-10-10-202156-first-push-ci-enforcement-71f40007
+
+Recorded 2026-10-10T20:21:56.635622+00:00 · Contributor: Codex · change
+
+- **Changed.** Enforce eleven engineering checks on main; retain a ready failing PR that was blocked and closed without merging. Repair first-push record verification to check the full merge-base range and bind the website prebuild gate sources.
+- **Evidence.** The actual required test failed and GitHub blocked the ready control PR while ten other required checks passed. Thirty-four Git-history and CLI tests pass, including an earlier undocumented branch commit that a parent-only check would miss. [Change record](./runs/changes/2026-10-10-202156-first-push-ci-enforcement-71f40007.json).
+- **Not claimed.** Normal repaired-branch hosted checks and a protected merge remain pending. CODEOWNERS and Dependabot are unfinished. No independent tag-release, human accessibility or physical-phone acceptance is implied; collection stays disabled.
+
+
 ### 2026-10-10-201237-public-hosted-engineering-proof-4ade6185
 
 Recorded 2026-10-10T20:12:37.501652+00:00 · Contributor: Codex · change

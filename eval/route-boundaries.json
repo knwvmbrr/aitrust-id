@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-10T20:05:40.517303+00:00",
+  "reviewed_at": "2026-10-10T20:24:58.247573+00:00",
   "reviewed_by": "Codex; maintainer engineering assessment, not independent certification",
   "rules": [
     "X-01",
@@ -18,7 +18,7 @@
   "independent_release_approval": false,
   "sources": {
     ".dockerignore": "e0c863140f8f15747bac960aa9c5adc15f0a3e85c8dd66e17a7c6413c2870406",
-    ".github/workflows/ci.yml": "0aa34be7b826f3393ab89eccd7fa78ec4959adce116d44c7ac43b57f4aafa75a",
+    ".github/workflows/ci.yml": "e63457ccee169b90753d6c037f00c732be5890c54d5d3e2ecd40a46d714abd18",
     "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
     "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
     "extension/src/adapters/README.md": "559d6a3cd0c5e2045ddca1e3ff51276a10e1af8e45f9ca8aae3e5fe2d8b314ad",
@@ -126,7 +126,7 @@
     "site/src/policies.js": "58a8a799ca7eb06bb8e1b71481f31238bc4524227f8fb1c805444d3a64396c7f",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "93c6ad6d22e3ca67bccc32e03c9690772759288b16d5536328c660364d9f6154",
+    "site/src/public-scope.json": "89ed9a43d806b306f6f8fae9d79f5ef0c5abbb0817e62912567cf51531f90142",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
@@ -152,8 +152,8 @@
     "tools/composition/style.css": "2d235a7d0be78fc8ef9933e327e365fd8fe9b0a0a2920259ea3eb072e0f69b29"
   },
   "engineering_receipts": {
-    "extension": "runs/2026-10-10-ci-portable-extension.json",
-    "website": "runs/2026-10-10-ci-portable-website-final.json"
+    "extension": "runs/2026-10-10-required-ci-extension.json",
+    "website": "runs/2026-10-10-required-ci-website.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",
