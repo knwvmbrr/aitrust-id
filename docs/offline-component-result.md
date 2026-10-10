@@ -49,4 +49,13 @@ The final current-source Python suite passed 873 tests. The fresh reviewed
 route guard and rebuilt website checks passed. See
 [final Python evidence](../runs/2026-10-10-target-100-final-python.json) and
 [reviewed boundaries](../runs/2026-10-10-target-100-final-reviewed-boundaries.json).
-Committed build and exact-byte publication evidence follow separately.
+Committed source `7f25f0558902f408eb25ee65efcafee341140c24` is public on GitHub
+and deployed. All 175 artifacts matched across the preview, aitrustid.com and
+www.aitrustid.com (525 comparisons). Live checks passed all 20 modals, nine
+policy pages and the native editor download, which matches the tested artifact.
+An initial page mismatch immediately after deployment was retained as a failed
+attempt; the repeated complete comparison passed.
+
+[Publication evidence](../runs/2026-10-10-target-100-deployment.json) distinguishes
+the deployed source from this subsequent evidence-recording commit.
+[Use the offline tools](https://aitrustid.com/reference/offline-tools/).

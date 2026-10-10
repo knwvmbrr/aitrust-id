@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-10-10T16:59:05.715680+00:00",
+  "pass": true,
+  "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+  "deployment_url": "https://de07ac54.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "reports": {
+    "assets": "runs/2026-10-10-target-100-assets-public.json",
+    "site": "runs/2026-10-10-target-100-site-public.json",
+    "policies": "runs/2026-10-10-target-100-policies-public.json",
+    "download": "runs/2026-10-10-target-100-offline-download-public.json"
+  },
+  "completed_records": 102,
+  "open_records": 100,
+  "preserved_records": 202,
+  "python_tests": 873,
+  "node_component_tests": 57,
+  "initial_publication_attempt": {
+    "pass": false,
+    "reason": "One static tag page differed immediately after deployment; later direct checks and the complete repeated exact-byte comparison matched.",
+    "failure_not_counted_as_acceptance": true
+  },
+  "matching_public_artifacts": 525,
+  "independent_accuracy_evidence": false,
+  "new_tag_releases": 0
+}

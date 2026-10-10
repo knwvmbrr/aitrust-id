@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://afeadc89.aitrust-id.pages.dev",
+    "deployment_url": "https://de07ac54.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-capture-browser-assets-public.json",
+    "publication_evidence": "runs/2026-10-10-target-100-assets-public.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -281,10 +281,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "db64a9cc9d6ac2668732ff81b1b66441bddadf51",
-    "deployment": "https://75ff617f.aitrust-id.pages.dev",
-    "source_commit": "53d87fa8659c916703978f45734b439ebda48555"
+    "published_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+    "public_static_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+    "deployment": "https://de07ac54.aitrust-id.pages.dev",
+    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -709,8 +709,8 @@
     "execution_evidence": "runs/2026-10-10-offline-final-controls.json",
     "structural_evidence": "runs/2026-10-10-target-100-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-boundary-assets-public.json",
-    "source_commit": "53d87fa8659c916703978f45734b439ebda48555",
+    "publication": "runs/2026-10-10-target-100-deployment.json",
+    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/offline-component-result.md",
@@ -719,7 +719,7 @@
     "target_open_records": 100,
     "target_start_open_records": 187,
     "target_remaining_closures": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-target-100-scope.json"
   },
   "research_components": {
@@ -929,7 +929,7 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current_source_boundary_execution_pass; publication_pending",
+    "status": "current_source_and_publication_checks_pass",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-10-target-100-final-reviewed-boundaries.json",
     "source_files": 119,
@@ -948,12 +948,12 @@
     "registry_adoption": false,
     "research_collection_connected": false,
     "independent_security_certification": false,
-    "publication": "runs/2026-10-10-boundary-assets-public.json",
-    "public_catalogue": "runs/2026-10-10-boundary-site-public.json",
-    "public_policies": "runs/2026-10-10-boundary-policies-public.json"
+    "publication": "runs/2026-10-10-target-100-assets-public.json",
+    "public_catalogue": "runs/2026-10-10-target-100-site-public.json",
+    "public_policies": "runs/2026-10-10-target-100-policies-public.json"
   },
   "offline_components": {
-    "status": "component_acceptance_pass; publication_pending",
+    "status": "component_acceptance_and_publication_pass",
     "records": [
       "F-008",
       "F-017",
@@ -982,7 +982,12 @@
     "independent_timestamp": false,
     "revocation_checked": false,
     "new_tag_releases": 0,
-    "full_python_evidence": "runs/2026-10-10-target-100-final-python.json"
+    "full_python_evidence": "runs/2026-10-10-target-100-final-python.json",
+    "publication_pending": false,
+    "publication": "runs/2026-10-10-target-100-deployment.json",
+    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+    "public_guide": "https://aitrustid.com/reference/offline-tools/",
+    "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-10-target-100-current-PS-revalidation.json",
@@ -992,5 +997,6 @@
     "website": "runs/2026-10-10-target-100-publication-ready-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
-  }
+  },
+  "updated_at": "2026-10-10T16:59:05.715680+00:00"
 }

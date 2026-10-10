@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-165905-published-100-open-queue-76b4335b",
+  "recorded_at": "2026-10-10T16:59:05.753471+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7f25f0558902f408eb25ee65efcafee341140c24",
+  "changed": "Published the completed scope increment and verified live offline-tool downloads, catalogue and policies.",
+  "proves": "175 exact artifacts match on three public origins; 20 modals, nine policy pages and native editor download pass. Queue has 102 complete and 100 open, all 202 preserved.",
+  "limits": "This evidence commit follows deployed source 7f25f05. No independently validated tag, physical-phone or human accessibility release claim.",
+  "scope_ids": [
+    "F-149",
+    "N-006",
+    "F-008",
+    "F-121"
+  ],
+  "files": {
+    "docs/offline-component-result.md": "b930ee6ef7314c479c527672cd712953abf15bf2f3cc438f944336338376b1f2",
+    "runs/2026-10-10-target-100-assets-public.json": "939af51ddc26549797a1d4df266b324601539a7daec727c51202f16b859d0499",
+    "runs/2026-10-10-target-100-deployment.json": "4d5acde8bf3dc4f35632b1fbe0d3f169975af428168451201ad0a796a6239e49",
+    "runs/2026-10-10-target-100-offline-download-public.json": "ee53b62e77b7fa866c1af81aa6802b4c3566bf2ca72d86f9848635e98cf085ee",
+    "runs/2026-10-10-target-100-policies-public.json": "27ac00a1ab8b5377e2f01fb7b11c9b241ff705f9b5cf5e3479d885de56d1b5ef",
+    "runs/2026-10-10-target-100-site-public.json": "624751bf16afecb78bbc571311a24a8f2a0009ff7efe22e6e614918ab4c2a2e1",
+    "state.json": "22d16c207ac3993404529e0e55422abf8c45f2cb4b4bcebe33e980119f0625a2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-target-100-deployment.json",
+      "sha256": "4d5acde8bf3dc4f35632b1fbe0d3f169975af428168451201ad0a796a6239e49"
+    },
+    {
+      "path": "runs/2026-10-10-target-100-assets-public.json",
+      "sha256": "939af51ddc26549797a1d4df266b324601539a7daec727c51202f16b859d0499"
+    },
+    {
+      "path": "runs/2026-10-10-target-100-offline-download-public.json",
+      "sha256": "ee53b62e77b7fa866c1af81aa6802b4c3566bf2ca72d86f9848635e98cf085ee"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T16:59:06.139839+00:00"
+    }
+  ]
+}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-165905-published-100-open-queue-76b4335b
+
+Recorded 2026-10-10T16:59:05.753471+00:00 · Contributor: Codex · change
+
+- **Changed.** Published the completed scope increment and verified live offline-tool downloads, catalogue and policies.
+- **Evidence.** 175 exact artifacts match on three public origins; 20 modals, nine policy pages and native editor download pass. Queue has 102 complete and 100 open, all 202 preserved. [Change record](./runs/changes/2026-10-10-165905-published-100-open-queue-76b4335b.json).
+- **Not claimed.** This evidence commit follows deployed source 7f25f05. No independently validated tag, physical-phone or human accessibility release claim.
+
+
 ### 2026-10-10-165730-accepted-100-open-source-checks-585f4df4
 
 Recorded 2026-10-10T16:57:30.532646+00:00 · Contributor: Codex · change
