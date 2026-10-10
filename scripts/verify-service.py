@@ -12,11 +12,12 @@ from pathlib import Path
 import subprocess
 import time
 import traceback
+import sys
 import urllib.error
 import urllib.request
-from jsonschema import Draft202012Validator, FormatChecker
-
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from protocol.assertions import validator as assertion_validator
 
 
 def verify(env_file, engine='docker', project='aitrust-staging', disrupt=False):
@@ -35,8 +36,7 @@ def verify(env_file, engine='docker', project='aitrust-staging', disrupt=False):
         if result.returncode:
             raise RuntimeError('Container verification command failed: '+argv[0])
         return result.stdout.strip()
-    validator = Draft202012Validator(json.loads((ROOT/'spec/assertion.schema.json').read_text()),
-                                    format_checker=FormatChecker())
+    validator = assertion_validator()
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     cases = []
     def request(name, path='/v1/evaluate', payload=None, authorization=None,

@@ -5,10 +5,10 @@
   const words = {
     PENDING: 'Checking this response locally…',
     NO_FINDING: 'No supported command pattern found. This is not a safety clearance.',
-    UNCERTAIN: 'The available evidence was insufficient for a finding.',
+    UNCERTAIN: 'A tag was withheld. Open details to see why.',
     UNSUPPORTED: 'This response cannot be checked by the current implementation.',
     UNAVAILABLE: 'A valid local evaluation could not be obtained.',
-    FINDING: 'Command risk pattern detected. Read the evidence before acting.'
+    FINDING: 'A supported observation was recorded. Open a tag for its details.'
   };
   const markers = {PENDING:'…',NO_FINDING:'ID',UNCERTAIN:'?',UNSUPPORTED:'—',UNAVAILABLE:'!'};
   const displayCode=code=>code==='PII_REDACTED'?'PII':code;
@@ -60,6 +60,13 @@
     }else{
       paragraph(code?'A finding was recorded for this tag. Review its claim and limits in the site catalogue.':words[state]||words.UNAVAILABLE);
       if(reason)paragraph(reason);
+    }
+    if(!code&&state==='UNCERTAIN'&&assertion?.abstentions?.length){
+      const meanings={below_floor:'observation below the display threshold',no_corpus:'no reference corpus attached',unsupported_modality:'unsupported type of input',timeout:'check did not finish in time',not_in_production_allowlist:'capability not enabled in this preview'};
+      const detail=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Withheld tags';detail.append(summary);
+      const list=document.createElement('ul');
+      for(const item of assertion.abstentions){const li=document.createElement('li');li.textContent=displayCode(item.code)+': '+(meanings[item.reason]||'no supported conclusion')+'.';list.append(li);}
+      detail.append(list);container.append(detail);
     }
     const labels={'sig.piped_installer.v3':'Download piped to a shell','sig.remote_command_substitution.v3':'Downloaded output used in an execution command','sig.remote_process_substitution.v3':'Downloaded code handed to an interpreter','sig.remote_backtick_substitution.v2':'Downloaded output substituted into a command','sig.obfuscated_payload.v2':'Encoded content passed to eval or exec','presidio.entity.v1':'Detected entity redaction'};
     const signals=(assertion?.tags||[]).filter(tag=>tag.code===code).flatMap(tag=>tag.signals||[]);
@@ -127,7 +134,7 @@
     const item=roots.get(host);if(!item)return;
     const {root}=item,panel=root.querySelector('.panel');if(panel.open)panel.close();
     Object.assign(item,{state,assertion,reason,source});
-    const text=words[state]||words.UNAVAILABLE;
+    const text=state==='FINDING'&&assertion?.tags.some(tag=>tag.code==='PS')?'Command risk pattern detected. Read the evidence before acting.':words[state]||words.UNAVAILABLE;
     root.querySelector('.status').textContent=text+(reason?' '+reason:'');
     root.querySelector('.wrap').setAttribute('aria-busy',String(state==='PENDING'));
     const tags=[...new Map((assertion?.tags||[]).map(tag=>[tag.code,tag])).values()];
@@ -142,7 +149,7 @@
       button.dataset.state=state;
       button.textContent=code?displayCode(code):(markers[state]||'!');
       const description=code?(code==='PS'?'PS: supported command-risk finding.':code==='PII_REDACTED'?'PII: detected entity values redacted.':displayCode(code)+': recorded finding.'):'AI Trust ID check status.';
-      const label=description+' '+text+(reason?' '+reason:'')+' Open details.';
+      const label=description+' '+(code==='PII_REDACTED'?'Redaction is not a safety or privacy clearance.':text)+(reason?' '+reason:'')+' Open details.';
       button.setAttribute('aria-label',label);button.title=label;
       wrap.append(button);
     });

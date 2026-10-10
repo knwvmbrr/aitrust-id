@@ -69,9 +69,11 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
-      - run: pip install -r eval/requirements.txt
+      - run: pip install --require-hashes -r eval/requirements.lock
       - run: python -m pytest tests/test_gateway_integration.py -q
       - run: python scripts/verify-verdict-boundaries.py
+      - run: python scripts/verify-dependencies.py
+      - run: python -m pytest tests/test_assertion_formats.py -q
 
   no-egress:
     # The pipeline must work with the network unplugged. If a component needs the
@@ -83,7 +85,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
-      - run: pip install -r eval/requirements.txt
+      - run: pip install --require-hashes -r eval/requirements.lock
       - uses: actions/setup-node@v4
         with: { node-version: '24' }
       - run: sudo unshare -n "$(which python)" -m pytest tests -q
@@ -97,7 +99,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
-      - run: pip install -r eval/requirements.txt
+      - run: pip install --require-hashes -r eval/requirements.lock
       - run: python scripts/verify-dataset-provenance.py --verify-history
       - run: python scripts/verify-measurements.py
       - run: python scripts/verify-regressions.py --output eval/regression-report.json
@@ -116,7 +118,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
-      - run: pip install -r eval/requirements.txt
+      - run: pip install --require-hashes -r eval/requirements.lock
       - run: python eval/harness.py --gates eval/gates.yaml --fixtures eval/datasets/unsafe_code/ps_v1.jsonl --output eval/report.json
 
   accessibility:
@@ -130,6 +132,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run verify:axe-gate
       - run: npm run verify:a11y-probes
+      - run: npm run verify:consumer
 
   device-builder:
     runs-on: ubuntu-latest
@@ -154,7 +157,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
-      - run: pip install -r eval/requirements.txt
+      - run: pip install --require-hashes -r eval/requirements.lock
       - run: npm ci
       - run: npm ci --prefix site
       - run: npm run verify:enterprise

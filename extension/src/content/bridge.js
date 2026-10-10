@@ -1,16 +1,13 @@
 // Bind a result to response identity, captured text, page, and request revision.
 (() => {
-  const adapter=globalThis.AITrustAdapter,ui=globalThis.AITrust;
-  if(!adapter||!ui)return;
-  const states=new WeakMap(),tracked=new Set(),MAX=200000;let scanTimer;
-  function valid(a){
-    return a&&typeof a.assertion_id==='string'&&a.subject&&Number.isInteger(a.subject.char_len)&&Array.isArray(a.tags)&&Array.isArray(a.abstentions)&&a.evaluator&&typeof a.evaluator.calibration_id==='string'&&a.tags.every(t=>['PS','PII_REDACTED'].includes(t.code)&&Array.isArray(t.signals)&&t.signals.every(s=>typeof s.id==='string'&&Number.isFinite(s.score)&&(!s.spans||s.spans.every(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isInteger)&&p[0]>=0&&p[1]>p[0]&&p[1]<=a.subject.char_len))));
-  }
+  const adapter=globalThis.AITrustAdapter,ui=globalThis.AITrust,contract=globalThis.AITrustContract;
+  if(!adapter||!ui||!contract)return;
+  const states=new WeakMap(),tracked=new Set();let scanTimer;
   async function check(host,state){
     const identity=adapter.responseId(host),text=adapter.text(host),page=location.href;
     if(!identity){ui.update(host,'UNSUPPORTED',null,'A stable assistant response identity is unavailable.');return;}
     if(!text)return;
-    if(text.length>MAX){ui.update(host,'UNSUPPORTED',null,'Response exceeds the supported size.');return;}
+    if(!contract.scalarText(text)){ui.update(host,'UNSUPPORTED',null,'Response exceeds the supported size or contains invalid text.');return;}
     if(adapter.streaming(host)){ui.update(host,'PENDING',null,'Waiting for this response to finish.');return;}
     const request=++state.request;state.evaluated=text;
     ui.update(host,'PENDING');
@@ -18,9 +15,11 @@
     try{
       const result=await chrome.runtime.sendMessage({type:'evaluate',text,origin_host:location.hostname});
       if(!current())return;
-      if(!result||result.status!=='ok'||!valid(result.assertion)){ui.update(host,'UNAVAILABLE',null,result?.reason||'Check the local service and token settings.');return;}
+      if(!result||result.status!=='ok'){ui.update(host,result?.status==='unsupported'?'UNSUPPORTED':'UNAVAILABLE',null,result?.reason||'Check the local service and token settings.');return;}
+      const inspected=contract.inspect(result.assertion);
+      if(inspected.status!=='accepted'){ui.update(host,inspected.status==='unsupported'?'UNSUPPORTED':'UNAVAILABLE',null,inspected.reason);return;}
       const a=result.assertion;
-      ui.update(host,a.tags.some(t=>t.code==='PS')?'FINDING':a.abstentions.length?'UNCERTAIN':'NO_FINDING',a,'',text);
+      ui.update(host,inspected.result_state,a,'',text);
     }catch{if(current())ui.update(host,'UNAVAILABLE',null,'Check the local service and token settings.');}
   }
   function scan(){

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-134919-bound-assertion-consumers-and-hash-selected-dependencies-e19f527b",
+  "recorded_at": "2026-10-10T13:49:19.712382+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6b177f3dbe94e6bcd5cd1241435ddae90c7bb546",
+  "changed": "Bound extension response parsing and record validation, separate PII and withheld-result explanations, enforce required schema formats, provide an offline assertion conformance CLI, and verify selected dependency locks and immutable Linux base. Record the prior compact/media public deployment and preserve corrections and all 202 scope IDs.",
+  "proves": "730 Python tests; 38 synthetic service-worker fault cases; six-state browser fixture checks; 31 real Linux HTTP and dependency outage/recovery checks; clean Python/npm installs, actual corrupted-artifact refusal, and running-image lock/version verification. Current ledger 61 complete and 141 open.",
+  "limits": "No independent tag validation, new tag adoption, cryptographic verifier, successor migration, actual outside implementer or human/physical-device acceptance. Latest extension consumer is fixture-tested and not yet refreshed in installed Chrome. Inactive registry and future routes are excluded from verified dependencies. Public transcripts redact private environment paths.",
+  "scope_ids": [
+    "F-001",
+    "F-096",
+    "F-116",
+    "X-13",
+    "F-004",
+    "N-001",
+    "N-002",
+    "F-119",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "459abf56362b72a9c4352081b47a8496caa3a2ebd03692447c33b86a41dfa215",
+    "README.md": "9de5053a4105bec686d3f41307ae88de424b34f328321d28d3bb17dc9b7af449",
+    "docs/assertion-conformance-plan.md": "136e8347f41c2ac292777fb97231385803010d034c15fd49f9f41c8a8653dbd1",
+    "docs/consumer-boundary-result.md": "f4d359a4301a3ec9c7bf12df27ac289fef3095b7e929c9c5643566ebdf3fe485",
+    "docs/dependency-contract.md": "bb469c6f95627c70eb175068f5a66d46ab0f62f8334e715f4a73bfb2f467cf75",
+    "docs/development.md": "7ed6ebe3e0497d492080236f1e0988920cd6e3d82e84355fd8e32479e58636ed",
+    "docs/extension-consumer-plan.md": "eab1003891677d2651f0248f3e8e5c5c6fa6fda08fc7d7df1bedd8f34dfbfecf",
+    "docs/open-validation-path.md": "df1557e7e1cdfd464f94ef570633f6975c27e70a2270c97718d264308cb73223",
+    "docs/scope-progress.json": "148059b4cd5b04b3f1f7a1097fc2d3298b02c970189826ff4b637c6fafdf6f62",
+    "docs/scope-progress.md": "264dc57c3bd5bd10a1074e9dbc65e8978ccf6db684af4af738c01818587bc9ca",
+    "docs/scope-task-index.md": "b96002d1d3c40aed7cf304d8109a570af6d46023799288024bfd199a7238d717",
+    "eval/requirements.lock": "2cce75fdec6b3ee840902e884453e58c57d956d72f44de22dac65732f69a11c6",
+    "eval/requirements.txt": "cd8af9f6635c0246a430fe7fbde5272c89e03ea70476a57a2e733cba39765b26",
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "extension/src/content/badge.js": "4687cc0fb45bd6a9ed8e189ca002f6ca4ac97d61ef08795cd4b7491a043ca224",
+    "extension/src/content/bridge.js": "74dfc5d3b6ff019b9c0df141da77788639389df47bc58b3da0c574f59c690b33",
+    "extension/src/shared/contract.js": "146394bfa785749f89ab0921e5bdee635d32a00557c9c84a6939bdd1a2d90143",
+    "extension/src/sw/service-worker.js": "18b250cccc324fd3ef6ec37046a3558175a5ed0f8ab88dc8546b4e73710119b1",
+    "extension/test/badge-fixture.html": "27c67d762b74b475487ccea2707fe9fc6f495519185b6bf71f4056f71cb646e6",
+    "extension/test/fixture.js": "257ce3006a8acd1600c8fa76af6d1717b0f8bed09ffc5d289d2fc915d62696b1",
+    "extension/test/live-dom-fixture.html": "0133831a8c48e91939ec33afa2b3e7ad6afd758847174519fcc6d5607084f691",
+    "package.json": "3e73db4e7ba6eb36d0056b52f7d1041396d65bc5ca735c26e79af9eee7d4616e",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "runs/2026-10-10-clean-hashed-installs.json": "8b50b42dba7cff93f77ad4e051fcd72a865be68beb3ffb19081016adb39e66e0",
+    "runs/2026-10-10-compact-media-assets-public.json": "5165c48c071f80243c35bd20bde14a9f76cc530ddf76eac5c0f8864bf5cef49b",
+    "runs/2026-10-10-compact-media-deployment.json": "fbcd3761fc499032b4d7f70045caf10aa2009d3c44d591b49e16e7881ae42ab7",
+    "runs/2026-10-10-compact-media-ps-public.json": "d13d05c7dd708181ab8e7b6c57a943d529495d7bb9f7427c9bee712a118ec131",
+    "runs/2026-10-10-compact-media-site-public.json": "77bc37875ae3bda03a1ce0ac99dee11b4865dcf09f3980bececf286ef1b0b95b",
+    "runs/2026-10-10-consumer-browser-contract.json": "afb3bddbec877db5134c84a6e1549fab592d7d1492707dce47506ed65e63c3e6",
+    "runs/2026-10-10-consumer-current-service.json": "197aef554cfe1ca30319c66f0f1bb829505787aebed748047123414e9aac0ae7",
+    "runs/2026-10-10-consumer-final-python.json": "a2541a9daf81d7f78fa98abea3ec5eeb13e047814c7ee49de9478541ba843300",
+    "runs/2026-10-10-consumer-schema-python-corrected.json": "ce02c13f408b06a73e6a5706ee30310c07207aa4d2dbe626390b2fe3d3e8ab45",
+    "runs/2026-10-10-consumer-schema-python.json": "31fead2a4bf0bf6a40ae6358ecb3d106d66bfb6c0ad30741143aea412bb1fcdf",
+    "runs/2026-10-10-consumer-scope-progress.json": "17cc25c0e123de8b006e98917c516d074caec1afd1b195021832f2e983609ac3",
+    "runs/2026-10-10-extension-consumer-faults-corrected.json": "1a7f232bf027c408518fe2ea3780a4cbc35b2d48045f74f4906aab49aa27b877",
+    "runs/2026-10-10-extension-consumer-faults.json": "b906e3f282a2d90a89e2ae76750fe7047d98267100c5549238d48b1f5f120e95",
+    "runs/2026-10-10-installed-runtime-locks.json": "16d78d51ea56e4f255bdf4e05c76b37cf2bd03aba12d135aef8303aa210a6d2b",
+    "runs/2026-10-10-missing-date-format-gap.json": "4c3053e806f47ac86450e3c34b1e2cd1f8f840684b7212516e5555a4cea3ee37",
+    "runs/2026-10-10-selected-dependency-inventory.json": "35cb319f321feb935821879215b0408b0e99e0fcf614b2f25fd8084b58e77f36",
+    "runs/2026-10-10-six-state-consumer-browser.json": "00ca4cc01df54df323c3f1347f1e354601028731a2ac1a53212df42bc7accb59",
+    "scripts/aitrust.py": "759a80da1f7bd34674f84da854cc93b3331cd2f5fb25752c0d1c5efb2f5c035d",
+    "scripts/browser-acceptance.js": "a564f601845e368aa26c6fdc34e68f5d0fec8d602e949d23a6d8b3502a8a2409",
+    "scripts/check-assertion.py": "b163f661f60ebb1255e8faef8c5846de940674662732dbbbbba5d44b7970820d",
+    "scripts/verify-dependencies.py": "f88b43af8568d967da8d876747e04e72658c398419add6efdb31371d2bcbf559",
+    "scripts/verify-extension-consumer.cjs": "1f69516ddea1475c63df4aa295ba33342aef032152fb76c21c7a8a96ecb798bc",
+    "scripts/verify-runtime.py": "b2a897f73928f1ce9a292337414e46a691dcb33ab80de24cc27f719880375a24",
+    "scripts/verify-service.py": "1fc51e2e2a8d99ac9ea01872de51330223662069957e663245a94dac640f4295",
+    "services/anonymizer/Dockerfile": "6bebd517ddd41307c07d3238a2f5781ffa2c7d9c635f209af1895d2896aadd9d",
+    "services/evaluator/Dockerfile": "86a5bc76b40d44dd860ead1ef6701ff4f3038e0961276cc102f79c8367a31a21",
+    "services/gateway/Dockerfile": "6a03b5ae49e8adf8e704636701658012d6827993b397702fce4dd943fd2708ef",
+    "state.json": "09bc46526c8a0f58c3b3818ec58a21b8dd3471268b89ab77916379cbd0dc72c2",
+    "tests/test_assertion_conformance.py": "e1cad9c6870297ee00baa87bcde0b5f13cab1d6948b3c5fc0783fb7ea303d428",
+    "tests/test_assertion_formats.py": "6a7b667de7a49140731e22f9470cb2ba649872fb3b12650e97187cc7fe5b34f8",
+    "tests/test_dependency_contract.py": "f582c3db00fc25cb8830c03fe1934320d692cbf8170bb8e9db02ba1efabbdf54",
+    "tests/test_extension_consumer.py": "7975eefbf72a4c2a1b65162b8f914f56093a526484b90241e143ae34a598aea3",
+    "tests/test_gateway_integration.py": "0ffa2478f1526e6e72841fb97a67569a0367d750fe7ed2217cf4d11ce8f348b8",
+    "tests/test_local_cli.py": "d15b4a393f4aabc6258c5125de189a3c015bc980454991dc02e7672bf96ea22e",
+    "tests/test_scope_progress.py": "8fce5c5e65620efba5921daa6b0287e442b989a98bc888224b69bd2a16ee8913"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-consumer-final-python.json",
+      "sha256": "a2541a9daf81d7f78fa98abea3ec5eeb13e047814c7ee49de9478541ba843300"
+    },
+    {
+      "path": "runs/2026-10-10-consumer-current-service.json",
+      "sha256": "197aef554cfe1ca30319c66f0f1bb829505787aebed748047123414e9aac0ae7"
+    },
+    {
+      "path": "runs/2026-10-10-clean-hashed-installs.json",
+      "sha256": "8b50b42dba7cff93f77ad4e051fcd72a865be68beb3ffb19081016adb39e66e0"
+    },
+    {
+      "path": "runs/2026-10-10-selected-dependency-inventory.json",
+      "sha256": "35cb319f321feb935821879215b0408b0e99e0fcf614b2f25fd8084b58e77f36"
+    },
+    {
+      "path": "runs/2026-10-10-installed-runtime-locks.json",
+      "sha256": "16d78d51ea56e4f255bdf4e05c76b37cf2bd03aba12d135aef8303aa210a6d2b"
+    },
+    {
+      "path": "runs/2026-10-10-extension-consumer-faults-corrected.json",
+      "sha256": "1a7f232bf027c408518fe2ea3780a4cbc35b2d48045f74f4906aab49aa27b877"
+    },
+    {
+      "path": "runs/2026-10-10-six-state-consumer-browser.json",
+      "sha256": "00ca4cc01df54df323c3f1347f1e354601028731a2ac1a53212df42bc7accb59"
+    },
+    {
+      "path": "runs/2026-10-10-consumer-scope-progress.json",
+      "sha256": "17cc25c0e123de8b006e98917c516d074caec1afd1b195021832f2e983609ac3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T13:49:20.122272+00:00"
+    }
+  ]
+}

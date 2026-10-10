@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-10-10T13:45:31.745962+00:00",
+  "pass": true,
+  "services": [
+    {
+      "service": "gateway",
+      "locked_package_count": 23,
+      "all_locked_versions_match_running_image": true,
+      "embedded_lock_sha256": "7933f6cd8911ae0fef80d95a432bf30464761951225a4b600150581c71b3706e",
+      "base_bootstrap_distributions_not_in_runtime_lock": [
+        "pip"
+      ],
+      "runtime_user_distribution_inspection": true,
+      "root_read_only_lock_inspection": true
+    },
+    {
+      "service": "anonymizer",
+      "locked_package_count": 64,
+      "all_locked_versions_match_running_image": true,
+      "embedded_lock_sha256": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+      "base_bootstrap_distributions_not_in_runtime_lock": [
+        "pip"
+      ],
+      "runtime_user_distribution_inspection": true,
+      "root_read_only_lock_inspection": true
+    },
+    {
+      "service": "evaluator",
+      "locked_package_count": 29,
+      "all_locked_versions_match_running_image": true,
+      "embedded_lock_sha256": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+      "base_bootstrap_distributions_not_in_runtime_lock": [
+        "pip"
+      ],
+      "runtime_user_distribution_inspection": true,
+      "root_read_only_lock_inspection": true
+    }
+  ],
+  "selected_base_index": "python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+  "artifact_installation_checks": "RUN pip install --require-hashes in selected image builds; clean install and corrupted-artifact refusal recorded separately",
+  "application_or_model_truth_verified": false,
+  "security_certification": false
+}

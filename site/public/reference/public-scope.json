@@ -38,28 +38,35 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [
-          "Codex — prior session/run attribution"
+          "Codex"
         ],
-        "completed_at": "2026-10-09T13:29:52.810894+00:00",
-        "completion_timestamp_basis": "verified complete at this audit; original completion time not reconstructed",
+        "completed_at": "2026-10-10T13:47:05.800829+00:00",
+        "completion_timestamp_basis": "Current execution and final named-item acceptance verified at this audit; not an invented historical finish.",
         "next_fix": null,
         "next_owner": null,
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
           "tests/test_gateway_integration.py",
           "tests/test_redaction_contract.py",
-          "spec/assertion.schema.json"
+          "spec/assertion.schema.json",
+          "runs/2026-10-10-missing-date-format-gap.json",
+          "protocol/assertions.py",
+          "tests/test_assertion_formats.py",
+          "tests/test_extension_consumer.py",
+          "runs/2026-10-10-consumer-schema-python-corrected.json",
+          "runs/2026-10-10-clean-hashed-installs.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Full reference schema with mandatory UUID/date-time checking; absent checkers fail closed. Impossible dates, malformed records and actual gateway envelopes tested.",
         "required_acceptance": [],
         "queue": "completed"
       }
@@ -199,27 +206,38 @@
         "id": "F-004",
         "kind": "requirement",
         "title": "Abstention as a first-class state — UNK",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Abstention as a first-class state — UNK. Next package action: Reconcile existing protocol codes and six-state UI/proposal meanings without silent taxonomy changes. Required outcome: The tool says \"I don't know\" instead of guessing at you",
+        "next_fix": "Complete owner adoption/compatibility decision for the proposed UNK replacement and required human understanding/accessibility checks. Current abstentions and six UI states work without emitting a new UNK verdict.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/extension-consumer-plan.md",
+          "docs/assertion-conformance-plan.md",
+          "scripts/check-assertion.py",
+          "tests/test_assertion_conformance.py",
+          "runs/2026-10-10-six-state-consumer-browser.json",
+          "runs/2026-10-10-consumer-schema-python-corrected.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Abstention as a first-class state — UNK. Next package action: Reconcile existing protocol codes and six-state UI/proposal meanings without silent taxonomy changes. Required outcome: The tool says \"I don't know\" instead of guessing at you"
+          "Complete owner adoption/compatibility decision for the proposed UNK replacement and required human understanding/accessibility checks. Current abstentions and six UI states work without emitting a new UNK verdict."
         ],
         "queue": "open"
       }
@@ -4208,35 +4226,42 @@
         "id": "F-096",
         "kind": "requirement",
         "title": "Graceful degradation — backend down, invalid token, unsupported page",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T13:47:05.800829+00:00",
+        "completion_timestamp_basis": "Current execution and final named-item acceptance verified at this audit; not an invented historical finish.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
           "runs/2026-10-08-container-checks.json",
-          "docs/runtime-gap-plan.md"
+          "docs/runtime-gap-plan.md",
+          "runs/2026-10-10-consumer-current-service.json",
+          "runs/2026-10-10-extension-consumer-faults-corrected.json",
+          "runs/2026-10-10-six-state-consumer-browser.json",
+          "docs/extension-consumer-plan.md"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-        ],
-        "queue": "open"
+        "evidence_scope": "Current selected local-service graceful degradation: real Linux authentication/readiness/dependency outage and recovery; bounded extension HTTP/body/token failures and unsupported-page fixture behavior. Outside-user and broader vendor acceptance remain separate open jobs.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -6085,27 +6110,32 @@
         "id": "F-116",
         "kind": "requirement",
         "title": "Dependency lockfiles and hashes, not just version pins",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T21:07:46.641291+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
-          "Codex — corrected fresh-checkout verifier and committed engineering reference"
+          "Codex — corrected fresh-checkout verifier and committed engineering reference",
+          "Codex — current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Verify every selected deploy/runtime dependency against pinned hashes and emit an inspectable release supply-chain record; registry/future routes need their own locks.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T13:47:05.800829+00:00",
+        "completion_timestamp_basis": "Current execution and final named-item acceptance verified at this audit; not an invented historical finish.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-dependency-audit.json",
           "services/gateway/requirements.lock",
@@ -6119,13 +6149,18 @@
           "runs/2026-10-09-provenance-boundary-python.json",
           "runs/2026-10-09-provenance-boundary-demo.json",
           "runs/2026-10-09-device-matrix-checkout-correction.json",
-          "runs/2026-10-09-provenance-boundary-final-python.json"
+          "runs/2026-10-09-provenance-boundary-final-python.json",
+          "docs/dependency-contract.md",
+          "scripts/verify-dependencies.py",
+          "tests/test_dependency_contract.py",
+          "runs/2026-10-10-selected-dependency-inventory.json",
+          "runs/2026-10-10-clean-hashed-installs.json",
+          "runs/2026-10-10-installed-runtime-locks.json",
+          "runs/2026-10-10-consumer-current-service.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
-        "required_acceptance": [
-          "Verify every selected deploy/runtime dependency against pinned hashes and emit an inspectable release supply-chain record; registry/future routes need their own locks."
-        ],
-        "queue": "open"
+        "evidence_scope": "Complete selected preview dependency inventory: four Python locks, two npm locks, immutable multi-platform base, embedded running-image versions/locks, sealed redactor assets, clean installs and actual corrupted-artifact refusals. Inactive registry and future routes excluded explicitly, not released.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -6281,16 +6316,18 @@
         "id": "F-119",
         "kind": "requirement",
         "title": "Conformance test suite an outside implementer can run against their own build",
-        "percent_complete": 60,
+        "percent_complete": 80,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6298,15 +6335,21 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required.",
+        "next_fix": "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people.",
         "next_owner": "Codex",
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
-          "docs/open-validation-path.md"
+          "docs/open-validation-path.md",
+          "docs/extension-consumer-plan.md",
+          "docs/assertion-conformance-plan.md",
+          "scripts/check-assertion.py",
+          "tests/test_assertion_conformance.py",
+          "runs/2026-10-10-six-state-consumer-browser.json",
+          "runs/2026-10-10-consumer-schema-python-corrected.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required."
+          "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
         ],
         "queue": "open"
       }
@@ -10035,29 +10078,42 @@
         "id": "X-13",
         "kind": "requirement",
         "title": "Signing in 0.1",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: Signing in 0.1. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T13:47:05.800829+00:00",
+        "completion_timestamp_basis": "Current execution and final named-item acceptance verified at this audit; not an invented historical finish.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "extension/src/shared/contract.js",
+          "scripts/aitrust.py",
+          "scripts/check-assertion.py",
+          "tests/test_assertion_conformance.py",
+          "tests/test_local_cli.py",
+          "runs/2026-10-10-extension-consumer-faults-corrected.json",
+          "runs/2026-10-10-consumer-current-service.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: Signing in 0.1. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Unsigned 0.1 preview boundary: current producers emit unsigned records; extension and local checker refuse unverified signatures. Offline schema-only checks explicitly do not verify signatures. Future signing and trust-key work remain F-008/F-036/receipt jobs.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -10535,27 +10591,38 @@
         "id": "N-001",
         "kind": "requirement",
         "title": "Protocol compatibility and schema migration",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Protocol compatibility and schema migration. Next package action: Version the assertion/schema and signal registry. Required outcome: The named capability has observable behavior and is tracked independently of implementation status.",
+        "next_fix": "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/extension-consumer-plan.md",
+          "docs/assertion-conformance-plan.md",
+          "scripts/check-assertion.py",
+          "tests/test_assertion_conformance.py",
+          "runs/2026-10-10-six-state-consumer-browser.json",
+          "runs/2026-10-10-consumer-schema-python-corrected.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Protocol compatibility and schema migration. Next package action: Version the assertion/schema and signal registry. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
+          "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed."
         ],
         "queue": "open"
       }
@@ -10588,16 +10655,18 @@
         "id": "N-002",
         "kind": "requirement",
         "title": "Separate pending, uncertain, unsupported, unavailable, and no-finding states",
-        "percent_complete": 60,
+        "percent_complete": 80,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T13:47:05.800829+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -10605,16 +10674,22 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
+        "next_fix": "Complete current installed/live-vendor and required human keyboard/screen-reader/comprehension acceptance. All six states and safe withheld reasons pass actual bridge fixtures; fixtures do not replace these remaining checks.",
         "next_owner": "Codex",
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/extension-consumer-plan.md",
+          "docs/assertion-conformance-plan.md",
+          "scripts/check-assertion.py",
+          "tests/test_assertion_conformance.py",
+          "runs/2026-10-10-six-state-consumer-browser.json",
+          "runs/2026-10-10-consumer-schema-python-corrected.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+          "Complete current installed/live-vendor and required human keyboard/screen-reader/comprehension acceptance. All six states and safe withheld reasons pass actual bridge fixtures; fixtures do not replace these remaining checks."
         ],
         "queue": "open"
       }

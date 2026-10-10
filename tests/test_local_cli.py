@@ -167,6 +167,25 @@ def test_stale_or_wrong_evaluator_cannot_claim_a_reproducible_check():
         cli.validate_result(row)
 
 
+@pytest.mark.parametrize('change', ['signature', 'bad_date', 'future_version'])
+def test_cli_refuses_unverified_signatures_dates_and_unimplemented_versions(change):
+    row=assertion()
+    if change=='signature':row['signature']={'alg':'ed25519','key_id':'untrusted','sig':'private-canary'}
+    elif change=='bad_date':row['subject']['captured_at']='2026-02-31T00:00:00Z'
+    else:row['spec_version']='0.2.0'
+    with pytest.raises(cli.LocalCheckError):cli.validate_result(row)
+
+
+def test_missing_required_format_checker_is_unavailable_not_a_result(tmp_path,monkeypatch,capsys):
+    import protocol.assertions
+    env=credential(tmp_path);text=tmp_path/'response.txt';text.write_text('private-canary')
+    monkeypatch.setattr(cli,'local_request',lambda *args:assertion())
+    def missing(*args,**kwargs):raise RuntimeError('private-canary missing dependency detail')
+    monkeypatch.setattr(protocol.assertions,'validator',missing)
+    assert cli.main(['check',str(text),'--env-file',str(env),'--json'])==1
+    captured=capsys.readouterr();assert not captured.out and 'UNAVAILABLE' in captured.err and 'private-canary' not in captured.err
+
+
 def test_unknown_evidence_never_reaches_terminal_as_code():
     row = assertion()
     row['tags'][0]['signals'][0]['id'] = '\x1b[31mMALICIOUS'

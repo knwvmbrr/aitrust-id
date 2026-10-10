@@ -6,7 +6,7 @@ from pathlib import Path
 import httpx
 import pytest
 from fastapi.testclient import TestClient
-from jsonschema import Draft202012Validator, FormatChecker
+from protocol.assertions import validator as assertion_validator
 ROOT=Path(__file__).resolve().parents[1]
 os.environ['AITRUST_TOKEN']='test-only-token-at-least-32-characters'
 spec=importlib.util.spec_from_file_location('gateway_integration',ROOT/'services/gateway/app.py')
@@ -39,7 +39,7 @@ def test_redact_order_schema_and_no_text(monkeypatch):
     assertion=response.json()
     assert 'PRIVATE NAME' not in response.text
     assert assertion['subject']['sha256']==hashlib.sha256(calls[1][1]['text'].encode()).hexdigest()
-    Draft202012Validator(json.loads((ROOT/'spec/assertion.schema.json').read_text()),format_checker=FormatChecker()).validate(assertion)
+    assertion_validator().validate(assertion)
 
 @pytest.mark.parametrize('mode,status',[('red_fail',502),('timeout',504),('malformed',502),('span',502)])
 def test_dependency_failures(monkeypatch,mode,status):
@@ -112,6 +112,6 @@ def test_candidate_policy_through_http_and_full_schema(monkeypatch,code):
     else:
         assert response.status_code==200,response.text
         assertion=response.json()
-        Draft202012Validator(json.loads((ROOT/'spec/assertion.schema.json').read_text()),format_checker=FormatChecker()).validate(assertion)
+        assertion_validator().validate(assertion)
         assert assertion['tags']==[]
         assert assertion['abstentions']==[{'code':code,'confidence':1.,'floor':None,'reason':'not_in_production_allowlist'}]

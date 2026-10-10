@@ -23,7 +23,7 @@ Initial image/package/model downloads require a network.
 git clone https://github.com/knwvmbrr/aitrust-id.git
 cd aitrust-id
 python3 -m venv .venv
-.venv/bin/python -m pip install -r eval/requirements.txt
+.venv/bin/python -m pip install --require-hashes -r eval/requirements.lock
 python3 scripts/aitrust.py init
 make deploy ENV_FILE="$HOME/.config/aitrust-id/runtime.env"
 .venv/bin/python scripts/aitrust.py doctor
@@ -49,9 +49,28 @@ See docs/development.md for browser verification and removal instructions.
 
 ## Verify and challenge
 
+Check a record from your own implementation entirely offline:
+
+```sh
+.venv/bin/python scripts/check-assertion.py your-record.json
+.venv/bin/python scripts/check-assertion.py --profile extension your-record.json
+```
+
+The first command checks the full schema and required date/UUID formats. The
+second also uses the actual current extension profile (Node is required for that
+profile). Exit 0 means the selected structural checks accepted the record; 1 means
+invalid, 2 unsupported, and 3 unavailable tooling/input. Neither verifies a
+signature, measured accuracy or certification. The CLI never prints submitted
+fields and reads at most 2 MiB. It accepts standard input if no filename is given.
+Only wire version 0.1.0 is supported; future versions are refused unchanged, not
+guessed or relabeled. Signed records are structurally checkable by the schema
+profile but refused by the unsigned extension profile. Reserved modalities are
+schema values, not detector support. See [conformance boundaries](assertion-conformance-plan.md).
+
 ```sh
 .venv/bin/python -m pip install --require-hashes -r services/gateway/requirements.lock
 .venv/bin/python -m pytest tests -q
+.venv/bin/python scripts/verify-dependencies.py
 .venv/bin/python scripts/verify-regressions.py
 .venv/bin/python scripts/verify-runtime.py --env-file "$HOME/.config/aitrust-id/runtime.env"
 ```

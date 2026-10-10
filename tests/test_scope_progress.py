@@ -11,7 +11,7 @@ def ledger():return json.loads((ROOT/'docs/scope-progress.json').read_text())
 def test_scope_ledger_preserves_every_record_and_separates_open_work():
     result=m.verify(ledger());assert result['records']==202 and result['completed_records']==sum(r['percent_complete']==100 for r in ledger()['records']) and result['all_open_items_have_fix_and_owner']
 def test_false_completion_without_acceptance_or_credit_is_rejected():
-    d=ledger();r=d['records'][0];r['completed_by']=[]
+    d=ledger();r=next(r for r in d['records'] if r['percent_complete']==100);r['completed_by']=[]
     with pytest.raises(ValueError,match='Unsupported 100%'):m.verify(d)
 def test_missing_fix_or_scope_record_is_rejected():
     d=ledger();r=next(r for r in d['records'] if r['percent_complete']<100);r['next_fix']=''

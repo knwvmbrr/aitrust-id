@@ -1,0 +1,36 @@
+{
+  "started_at": "2026-10-10T13:53:21.995532+00:00",
+  "captured_at": "2026-10-10T13:54:05.351818+00:00",
+  "pass": true,
+  "argv": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q",
+    "--tb=short"
+  ],
+  "interpreter_version": "3.12.14",
+  "private_interpreter_path_omitted": true,
+  "exit_status": 0,
+  "transcript": "........................................................................ [  9%]\n........................................................................ [ 19%]\n........................................................................ [ 29%]\n........................................................................ [ 39%]\n........................................................................ [ 49%]\n........................................................................ [ 59%]\n........................................................................ [ 68%]\n........................................................................ [ 78%]\n........................................................................ [ 88%]\n........................................................................ [ 98%]\n...........                                                              [100%]\n=============================== warnings summary ===============================\n<verification-environment>/lib/python3.12/site-packages/fastapi/testclient.py:1\n  <verification-environment>/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n731 passed, 1 warning in 41.39s\n",
+  "transcript_private_paths_redacted": true,
+  "raw_transcript_sha256": "c57ca4fafd380dfd66d22e7e2bf69cf3d8f3c88f5edd9319be8ada484d4cfbff",
+  "source_hashes": {
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "scripts/check-assertion.py": "478dcc71e9b795233c34dceeac38aea60e01ea58070528bc697ff893d759c955",
+    "extension/src/shared/contract.js": "146394bfa785749f89ab0921e5bdee635d32a00557c9c84a6939bdd1a2d90143",
+    "extension/src/sw/service-worker.js": "18b250cccc324fd3ef6ec37046a3558175a5ed0f8ab88dc8546b4e73710119b1",
+    "extension/src/content/bridge.js": "74dfc5d3b6ff019b9c0df141da77788639389df47bc58b3da0c574f59c690b33",
+    "extension/src/content/badge.js": "4687cc0fb45bd6a9ed8e189ca002f6ca4ac97d61ef08795cd4b7491a043ca224",
+    "spec/assertion.schema.json": "9d2b13c04cf2081832d1ba0634d9b27210cdf0f765c26d3669f391e913c864a0",
+    "eval/requirements.lock": "2cce75fdec6b3ee840902e884453e58c57d956d72f44de22dac65732f69a11c6",
+    "scripts/verify-dependencies.py": "f88b43af8568d967da8d876747e04e72658c398419add6efdb31371d2bcbf559",
+    "tests/test_assertion_conformance.py": "0095b72455ef548f00c84bacbf572e15ddba6c44380592555f22f29bba644a2d",
+    "tests/test_local_cli.py": "d15b4a393f4aabc6258c5125de189a3c015bc980454991dc02e7672bf96ea22e"
+  },
+  "sources_unchanged_during_execution": true,
+  "independent_accuracy_verified": false,
+  "outside_user_verified": false,
+  "additional_regression": "Future versions with different layouts are refused as unsupported before current-schema validation; no guessed migration."
+}

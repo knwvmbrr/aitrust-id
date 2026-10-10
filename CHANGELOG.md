@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-135454-refuse-future-wire-layouts-and-verify-consumer-publication-2cbe4ded
+
+Recorded 2026-10-10T13:54:54.457104+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse future record layouts before applying the current schema; publish updated 61-complete/141-open scope projections and current acceptance records. Public audit transcripts redact private environment paths.
+- **Evidence.** 731 Python tests; future-layout incompatibility regression; all 20 site panels and 202 scope records; per-tag performance and six on-device PS result cases; targeted current-source/build privacy scan. [Change record](./runs/changes/2026-10-10-135454-refuse-future-wire-layouts-and-verify-consumer-publication-2cbe4ded.json).
+- **Not claimed.** Current version only; no successor migration or independent validation adopted. Chrome is being controlled concurrently by another tool, so installed-extension refresh remains unverified. The publication scan is targeted and is not blanket history or privacy clearance.
+
+
+### 2026-10-10-134919-bound-assertion-consumers-and-hash-selected-dependencies-e19f527b
+
+Recorded 2026-10-10T13:49:19.712382+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound extension response parsing and record validation, separate PII and withheld-result explanations, enforce required schema formats, provide an offline assertion conformance CLI, and verify selected dependency locks and immutable Linux base. Record the prior compact/media public deployment and preserve corrections and all 202 scope IDs.
+- **Evidence.** 730 Python tests; 38 synthetic service-worker fault cases; six-state browser fixture checks; 31 real Linux HTTP and dependency outage/recovery checks; clean Python/npm installs, actual corrupted-artifact refusal, and running-image lock/version verification. Current ledger 61 complete and 141 open. [Change record](./runs/changes/2026-10-10-134919-bound-assertion-consumers-and-hash-selected-dependencies-e19f527b.json).
+- **Not claimed.** No independent tag validation, new tag adoption, cryptographic verifier, successor migration, actual outside implementer or human/physical-device acceptance. Latest extension consumer is fixture-tested and not yet refreshed in installed Chrome. Inactive registry and future routes are excluded from verified dependencies. Public transcripts redact private environment paths.
+
+
 ### 2026-10-10-131128-record-targeted-publication-audit-ba209bb2
 
 Recorded 2026-10-10T13:11:28.800080+00:00 · Contributor: Codex · change

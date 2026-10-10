@@ -9,10 +9,9 @@ import sys
 from datetime import datetime, timezone
 import urllib.request
 
-from jsonschema import Draft202012Validator, FormatChecker
-
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
+from protocol.assertions import validator as assertion_validator
 from protocol.reports import write_report
 
 
@@ -38,7 +37,7 @@ def verify(env_file):
             assertion = json.load(response)
         latencies.append(round((time.perf_counter()-start)*1000,1))
     schema = json.loads((ROOT / 'spec/assertion.schema.json').read_text())
-    Draft202012Validator(schema, format_checker=FormatChecker()).validate(assertion)
+    assertion_validator(schema).validate(assertion)
     assert {tag['code'] for tag in assertion['tags']} == {'PS', 'PII_REDACTED'}
     assert 'alice@example.com' not in json.dumps(assertion)
     assert assertion['evaluator']['models'][0]['sha256'] == hashlib.sha256(

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10",
+  "updated": "2026-10-10T13:47:05.800829+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 652,
+  "python_tests_passed": 731,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://1257e8a7.aitrust-id.pages.dev",
+    "deployment_url": "https://94124862.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-measurement-deployment.json",
+    "publication_evidence": "runs/2026-10-10-compact-media-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-measurement-site-public.json",
+    "verification": "runs/2026-10-10-compact-media-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -281,7 +281,7 @@
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
     "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "b8fdb435daa0ee43929eff24e18fd566e94d5b53"
+    "public_static_source_commit": "6b177f3dbe94e6bcd5cd1241435ddae90c7bb546"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -689,9 +689,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T13:05:44.831784+00:00",
-    "completed_records": 58,
-    "open_records": 144,
+    "audited_at": "2026-10-10T13:47:05.800829+00:00",
+    "completed_records": 61,
+    "open_records": 141,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -699,20 +699,20 @@
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
-    "structural_evidence": "runs/2026-10-10-measurement-scope-progress.json",
+    "structural_evidence": "runs/2026-10-10-consumer-scope-progress.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-measurement-deployment.json",
-    "source_commit": "b8fdb435daa0ee43929eff24e18fd566e94d5b53",
+    "publication": "runs/2026-10-10-compact-media-deployment.json",
+    "source_commit": "6b177f3dbe94e6bcd5cd1241435ddae90c7bb546",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "runs/2026-10-10-measurement-deployment.json",
+    "latest_increment": "docs/consumer-boundary-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 44,
+    "target_remaining_closures": 41,
     "publication_pending": true,
-    "verification": "runs/2026-10-10-compact-media-acceptance.json"
+    "verification": "runs/2026-10-10-consumer-version-final-python.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -801,7 +801,7 @@
   },
   "current_source_service_conformance": {
     "captured_at": "2026-10-10T12:10:05.104822+00:00",
-    "evidence": "runs/2026-10-10-frozen-service-conformance.json",
+    "evidence": "runs/2026-10-10-consumer-current-service.json",
     "http_checks": 31,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
@@ -851,5 +851,27 @@
     ],
     "independent_accuracy_evidence": false,
     "local_docker_started": false
+  },
+  "assertion_conformance": {
+    "schema_validation": "required formats fail closed; offline references only",
+    "wire_version": "0.1.0",
+    "extension_profile": "bounded unsigned current text route",
+    "signed_records_trusted": false,
+    "unknown_versions_migrated": false,
+    "offline_cli": "scripts/check-assertion.py",
+    "outside_implementer_acceptance": false,
+    "independent_accuracy": false,
+    "evidence": [
+      "runs/2026-10-10-consumer-schema-python-corrected.json",
+      "runs/2026-10-10-extension-consumer-faults-corrected.json",
+      "runs/2026-10-10-consumer-final-python.json",
+      "runs/2026-10-10-consumer-version-final-python.json"
+    ]
+  },
+  "selected_dependencies": {
+    "inventory": "runs/2026-10-10-selected-dependency-inventory.json",
+    "clean_installs": "runs/2026-10-10-clean-hashed-installs.json",
+    "running_image_locks": "runs/2026-10-10-installed-runtime-locks.json",
+    "inactive_registry_locked": false
   }
 }

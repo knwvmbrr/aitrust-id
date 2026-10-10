@@ -12,6 +12,7 @@ import urllib.error
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 DEFAULT_ENV = Path.home() / '.config/aitrust-id/runtime.env'
 GATEWAY = 'http://127.0.0.1:8787'
 MAX_CHARS = 200_000
@@ -111,11 +112,13 @@ def read_input(stream):
 
 
 def validate_result(result):
-    from jsonschema import Draft202012Validator, FormatChecker
+    from protocol.assertions import validator as assertion_validator
     schema = json.loads((ROOT / 'spec/assertion.schema.json').read_text())
-    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    validator = assertion_validator(schema)
     if not validator.is_valid(result):
         raise LocalCheckError('Local gateway returned an invalid assertion; no finding is accepted.')
+    if 'signature' in result:
+        raise LocalCheckError('This unsigned preview cannot verify signed records.')
     if any(tag['code'] not in ('PS', 'PII_REDACTED') for tag in result['tags']):
         raise LocalCheckError('Local gateway returned a tag outside the supported capability set.')
     expected = hashlib.sha256((ROOT / 'services/evaluator/app.py').read_bytes()).hexdigest()
@@ -185,12 +188,12 @@ def main(argv=None):
         print(json.dumps(result, indent=2, ensure_ascii=False) if args.json else brief(result))
         return 2 if args.fail_on_finding and any(tag['code'] == 'PS' for tag in result['tags']) else 0
     except ImportError:
-        print('UNAVAILABLE: Install eval/requirements.txt in the documented virtual environment.', file=sys.stderr)
+        print('UNAVAILABLE: Install hashed eval/requirements.lock in the documented virtual environment.', file=sys.stderr)
     except LocalCheckError as error:
         print('UNAVAILABLE: ' + str(error) + ' No valid check completed.', file=sys.stderr)
     except FileExistsError:
         print('UNAVAILABLE: Configuration already exists; it was preserved.', file=sys.stderr)
-    except (OSError, ValueError, TypeError, KeyError):
+    except (OSError, ValueError, TypeError, KeyError, RuntimeError):
         # No traceback or exception data: inputs and credentials must not reach output.
         print('UNAVAILABLE: Check local configuration, input and service health. No valid check completed.', file=sys.stderr)
     return 1

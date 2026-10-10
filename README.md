@@ -84,7 +84,9 @@ record download are inside the dialog. Matched positions are collapsed by defaul
 and testing information. No training database or automatic reporting is connected.
 
 Default deployment starts three containers: gateway, anonymizer, evaluator. The
-registry remains available under an optional Compose profile. The gateway has an
+registry remains an inactive legacy proposal under an optional Compose profile.
+Its dependencies are not locked, so it is excluded from the selected preview's
+verified dependency inventory. The gateway has an
 edge network for Docker Desktop loopback publishing; anonymizer and evaluator use
 only the internal inspection network. Redaction can miss sensitive information.
 The gateway receives the original text; the evaluator receives redactor output.
@@ -104,12 +106,13 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
-There are 652 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
+There are 731 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
 The public repository contains the runnable source. Engineering CI and the separate
 statistical gate are configured. GitHub currently prevents every hosted job from
-starting because of an account billing lock; the fresh public checkout passes
-101 Python tests and 60 development regressions locally. Hosted execution remains
-unverified. The gates are visible; a failing statistical gate prevents release approval,
+starting because of an account billing lock; the early public checkout passed
+101 Python tests and 60 development regressions at its original publication.
+The current executed suite and 86-case development set are reported above.
+Hosted execution remains unverified. The gates are visible; a failing statistical gate prevents release approval,
 not downloading or independently inspecting this development package. Statistical gates
 currently fail and must continue to fail until their evidence exists. The harness
 reports `evaluation_gate_pass`, not whole-product release approval.

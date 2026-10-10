@@ -10,7 +10,7 @@ async (page) => {
     fixtureResponders[1](fixtureResult(fixtureRequests[1].text));
     await new Promise(r=>setTimeout(r,50));
     assert(root(second).querySelector('.status').textContent.includes('No supported'),'second response outcome');
-    fixtureResponders[0](fixtureResult(fixtureRequests[0].text,'<img src=x onerror="window.injected=true">'));
+    fixtureResponders[0](fixtureResult(fixtureRequests[0].text,'sig.unknown_safe.v99'));
     await new Promise(r=>setTimeout(r,50));
     assert(root(first).querySelector('.status').textContent.includes('Command risk'),'first response outcome');
     const restingHeight=first.getBoundingClientRect().height;
@@ -28,7 +28,7 @@ async (page) => {
       return JSON.parse(await blob.text());
     };
     const exported=await captureExport(root(first));
-    assert(exported.tags[0].signals[0].id.includes('<img'),'unknown signal preserved as JSON data');
+    assert(exported.tags[0].signals[0].id==='sig.unknown_safe.v99','unknown signal preserved as JSON data');
     assert(exported.training_label===null&&exported.review_status==='unreviewed_detector_output','prediction is not a ground-truth label');
     assert(!JSON.stringify(exported).includes(fixtureRequests[0].text),'source response text excluded from export');
     const brief=[...root(first).querySelectorAll('.evidence .brief')].map(p=>p.textContent).join(' ');
@@ -142,6 +142,25 @@ async (page) => {
     return {collapsed:true,exactEvaluatedPositions:true,malformedSpanFallback:true,selectedTagOnly:true,unknownIdentifierSafe:true,redactionWithoutInventedOffsets:true,renderLimit:20,completeDownload:true,visibleExportBoundary:true};
   });
   result.evidenceLocations=evidenceLocations;
+  const resultStates=await page.evaluate(async()=>{
+    const host=document.querySelector('#second'),root=fixtureRoots.get(host.querySelector('.aitrust-mount'));
+    const assert=(v,m)=>{if(!v)throw Error(m);},pause=()=>new Promise(r=>setTimeout(r,50));
+    const check=async result=>{root.querySelector('.check').click();fixtureResponders.at(-1)(result);await pause();return root.querySelector('.tag').dataset.state;};
+    root.querySelector('.check').click();assert(root.querySelector('.tag').dataset.state==='PENDING','pending distinct');
+    const withheld=fixtureResult('ordinary response');withheld.assertion.abstentions=[{code:'PS',confidence:.6,floor:.7,reason:'below_floor'}];
+    fixtureResponders.at(-1)(withheld);await pause();assert(root.querySelector('.tag').dataset.state==='UNCERTAIN','abstention not a no-finding');
+    root.querySelector('.tag').click();assert(root.querySelector('details').textContent.includes('PS: observation below'),'withheld tag and reason inspectable');root.querySelector('.close').click();
+    assert(await check(fixtureResult('ordinary response'))==='NO_FINDING','completed no-finding distinct');
+    assert(await check({status:'unavailable',reason:'Synthetic failed local evaluation.'})==='UNAVAILABLE','outage not uncertain');
+    assert(await check({status:'unsupported',reason:'Synthetic unsupported request.'})==='UNSUPPORTED','unsupported not unavailable');
+    const pii=fixtureResult('ordinary response');pii.assertion.tags=[{code:'PII_REDACTED',state:'asserted',confidence:1,signals:[{id:'presidio.entity.v1',score:1,detail:{count:1,entities:['EMAIL_ADDRESS']}}]}];
+    assert(await check(pii)==='FINDING','redaction finding independent');
+    assert(!root.querySelector('.status').textContent.includes('Command risk')&&!root.querySelector('.tag').getAttribute('aria-label').includes('Command risk'),'redaction does not borrow PS verdict');
+    const future=fixtureResult('ordinary response');future.assertion.spec_version='0.2.0';assert(await check(future)==='UNSUPPORTED','future version not silently interpreted');
+    const broken=fixtureResult('ordinary response');delete broken.assertion.subject.sha256;assert(await check(broken)==='UNAVAILABLE','invalid record not displayed');
+    return {sixStatesDistinct:true,withheldCodeAndReason:true,redactionIndependentFromCommandRisk:true,futureVersionUnsupported:true,invalidEnvelopeUnavailable:true};
+  });
+  result.resultStates=resultStates;
   // Exercise component contracts through real keyboard/browser settings, not requested flags.
   await page.goto('http://127.0.0.1:8799/extension/test/badge-fixture.html');
   await page.waitForFunction(()=>fixtureRequests.length===2);

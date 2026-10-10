@@ -11,7 +11,7 @@ Use Python 3.12, Node.js 22, and Docker. Create a virtual environment and instal
 ```sh
 python3 -m venv .venv
 .venv/bin/pip install --require-hashes -r services/gateway/requirements.lock
-.venv/bin/pip install -r eval/requirements.txt
+.venv/bin/pip install --require-hashes -r eval/requirements.lock
 npm ci
 npx playwright install chromium
 ```

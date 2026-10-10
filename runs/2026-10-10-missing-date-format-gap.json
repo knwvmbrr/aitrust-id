@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-10T13:26:08.821085+00:00",
+  "pass": false,
+  "error_signature": "DATE_TIME_CHECKER_ABSENT_SILENT_ACCEPTANCE",
+  "required_format_missing": true,
+  "impossible_date_accepted": true,
+  "root_cause": "jsonschema date-time checking requires an optional dependency absent from the version-only evaluation requirements",
+  "fix": "Pin the RFC3339 validator; require all schema formats before constructing any validator; rerun malformed-date controls and current response checks.",
+  "sources": [
+    "https://python-jsonschema.readthedocs.io/en/v4.21.1/validate/",
+    "https://github.com/naimetti/rfc3339-validator"
+  ]
+}
