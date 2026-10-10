@@ -1,0 +1,89 @@
+{
+  "captured_at": "2026-10-10T23:19:04.005227+00:00",
+  "pass": true,
+  "author": "Codex",
+  "kind": "anonymous_public_authenticated_source_download",
+  "release_url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-10-ea5f2ec",
+  "is_prerelease": true,
+  "source_commit": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+  "actual_hosted_workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38094185200",
+  "assets": [
+    {
+      "asset": "aitrust-id-source.tar.gz",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-10-ea5f2ec/aitrust-id-source.tar.gz",
+      "bytes": 3818142,
+      "sha256": "86d1ee5147672f012ae93d35b4f52067efb1f0110b86c170f4a7343b14fbbcc7",
+      "http_status": 200,
+      "byte_match": true,
+      "authorization_header_sent": false
+    },
+    {
+      "asset": "README-VERIFY.txt",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-10-ea5f2ec/README-VERIFY.txt",
+      "bytes": 1447,
+      "sha256": "4434c2060a6219b931cfc254d1d21553b134765f3f4a06a9f5c9ff6d3f3951db",
+      "http_status": 200,
+      "byte_match": true,
+      "authorization_header_sent": false
+    },
+    {
+      "asset": "source.sigstore.json",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-10-ea5f2ec/source.sigstore.json",
+      "bytes": 10662,
+      "sha256": "ef2ec6a139974226e4c7a53071b2b14b4d6a4cbd11c668680aab5bd1a05147a1",
+      "http_status": 200,
+      "byte_match": true,
+      "authorization_header_sent": false
+    },
+    {
+      "asset": "verification.json",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-10-ea5f2ec/verification.json",
+      "bytes": 780,
+      "sha256": "b463a66d752886547c804f9e7c2854a1793c9c262bc5b6243f27a94b7afade6c",
+      "http_status": 200,
+      "byte_match": true,
+      "authorization_header_sent": false
+    }
+  ],
+  "source_reproduction_byte_identical": true,
+  "source_files": 1391,
+  "actual_mac_verification": {
+    "captured_at": "2026-10-10T23:17:38.617172+00:00",
+    "pass": true,
+    "kind": "authenticated_development_source_snapshot",
+    "repository": "knwvmbrr/aitrust-id",
+    "signer_workflow": "knwvmbrr/aitrust-id/.github/workflows/ci.yml",
+    "expected_certificate_identity": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/ci.yml@refs/heads/main",
+    "offline_inputs": true,
+    "independent_tag_accuracy_evidence": false,
+    "license_cleared": false,
+    "profile": "aitrust-development-source/1.0.0",
+    "source_commit": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+    "source_files": 1391,
+    "source_bytes": 21433408,
+    "sha256": "86d1ee5147672f012ae93d35b4f52067efb1f0110b86c170f4a7343b14fbbcc7",
+    "tag_release_validated": false,
+    "installed_dependencies_authenticated": false
+  },
+  "actual_network_isolated_linux_verification": {
+    "captured_at": "2026-10-10T23:17:59.583098+00:00",
+    "pass": true,
+    "kind": "authenticated_development_source_snapshot",
+    "repository": "knwvmbrr/aitrust-id",
+    "signer_workflow": "knwvmbrr/aitrust-id/.github/workflows/ci.yml",
+    "expected_certificate_identity": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/ci.yml@refs/heads/main",
+    "offline_inputs": true,
+    "independent_tag_accuracy_evidence": false,
+    "license_cleared": false,
+    "profile": "aitrust-development-source/1.0.0",
+    "source_commit": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+    "source_files": 1391,
+    "source_bytes": 21433408,
+    "sha256": "86d1ee5147672f012ae93d35b4f52067efb1f0110b86c170f4a7343b14fbbcc7",
+    "tag_release_validated": false,
+    "installed_dependencies_authenticated": false
+  },
+  "independent_tag_release_validated": false,
+  "installed_dependencies_authenticated": false,
+  "full_license_clearance": false
+}

@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-10T23:23:03.026992+00:00",
+  "pass": true,
+  "author": "Codex",
+  "kind": "independent_timestamp_component_full_engineering_acceptance",
+  "python_tests_passed": 1172,
+  "focused_timestamp_tests_passed": 28,
+  "stdout_sha256": "f757f61727257958a19e8ed49db26a91ad715c9415d8dd429b51fb7d88650d70",
+  "source_files": {
+    "scripts/independent_timestamp.py": "eed3fe014679784a148cc2da0879036da3895327fff4c246aa59681465583ca2",
+    "scripts/timestamp-artifact.py": "558945d46ea980415e54559cfd5f92ff58ae974518c4ae25192fa1d5ea83d27d",
+    "tests/test_independent_timestamp.py": "9f7ec84fddaee60e530ae5305fe023fb2d9d2966b53d21a616c95cc2f56089c1",
+    ".github/workflows/ci.yml": "8fdbd8383975b4ba84399b89988fd5e29584e75c66989fbe620a6dff365c8bdb"
+  },
+  "actual_independent_issuance": "runs/2026-10-10-independent-timestamp-issuance.json",
+  "actual_network_isolated_linux": "runs/2026-10-10-independent-timestamp-offline-linux.json",
+  "actual_composition_receipt_integration": "runs/2026-10-10-composition-receipt-timestamp.json",
+  "previous_full_failure": {
+    "failed": 8,
+    "passed": 1164,
+    "cause": "state updated and updated_at timestamps disagreed",
+    "corrected_by": "Synchronize both timestamps; existing accountability guard retained",
+    "failed_log_sha256": "240c20bb3fbb18a7b5f561c30f7868843482f6e341ce979e8d3db559a67fb699"
+  },
+  "rfc_0002_adopted": false,
+  "authority_operated_by_AI_Trust_ID": false,
+  "authorship_proven": false,
+  "revocation_freshness_implemented": false,
+  "tag_issuance": false,
+  "independent_tag_accuracy_evidence": false
+}

@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-234355-timestamp-review-corrections-a2d53a3f
+
+Recorded 2026-10-10T23:43:55.636171+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix both protected-review timestamp refusal edges and refresh current source-bound controls.
+- **Evidence.** 1178 Python checks and 34 focused timestamp checks passed; unusable output parents refuse before provider contact; malformed HTTP uses exit 2. [Change record](./runs/changes/2026-10-10-234355-timestamp-review-corrections-a2d53a3f.json).
+- **Not claimed.** Synthetic controls and public timestamp fixtures are engineering evidence; no independently validated tag release or human authorship claim.
+
+
+### 2026-10-10-233626-timestamp-current-source-verification-157a79cf
+
+Recorded 2026-10-10T23:36:26.469859+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current 1173-test source, fresh rebuilt-site checks, explicit policy 1.6 disclosure and independently reproducible receipt timestamp evidence to the public ledger.
+- **Evidence.** 1173 full Python tests pass, with 29 timestamp checks. After pinning the official Node 24 CI action, 111 focused policy/source/scope checks pass. All four current website checks pass; the reviewed route guard covers 171 source files and retains the 32 actual service cases, 13 full-pipeline replays and deferred registry refusal. [Change record](./runs/changes/2026-10-10-233626-timestamp-current-source-verification-157a79cf.json).
+- **Not claimed.** This finishes the bounded timestamp component, not tag accuracy, institutional authority or license clearance. Open scope remains 96 toward target 25. Physical-phone and independent-review evidence are still required.
+
+
+### 2026-10-10-232920-timestamp-policy-derived-artifacts-72871c34
+
+Recorded 2026-10-10T23:29:20.079523+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep policy bundle 1.6 plain-text archives and the 106-complete scope projections synchronized with the source that generated them.
+- **Evidence.** Current site build renders all 20 tag pages and nine policy pages. The current 29 timestamp checks pass, including public receipt signature and real independent-token replay. Earlier policy archives remain intact. [Change record](./runs/changes/2026-10-10-232920-timestamp-policy-derived-artifacts-72871c34.json).
+- **Not claimed.** Current-source browser and route receipts are being revalidated; no independent tag accuracy or human-device result is credited.
+
+
+### 2026-10-10-232834-timestamp-public-fixtures-and-privacy-79cee719
+
+Recorded 2026-10-10T23:28:34.156621+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish the synthetic signed receipt, public key and real authority token so the composition timestamp path is independently reproducible. Version the policy bundle to 1.6 and disclose explicit digest/IP sharing with FreeTSA.
+- **Evidence.** Existing timestamp operation and offline checks remain bounded. The source snapshot release has four byte-verified anonymous assets. Policy 1.5 texts remain archived; no checker or research collection is enrolled by timestamp use. [Change record](./runs/changes/2026-10-10-232834-timestamp-public-fixtures-and-privacy-79cee719.json).
+- **Not claimed.** One additional receipt replay test and policy/browser checks await current-source verification. The previous full run reports two stale-website-receipt guard failures after the ledger/site changed, with 1171 other passes; the guard is retained. Revocation, authorship and tag release remain unestablished.
+
+
+### 2026-10-10-232357-timestamp-component-full-acceptance-acab212d
+
+Recorded 2026-10-10T23:23:57.634114+00:00 · Contributor: Codex · change
+
+- **Changed.** Record full bounded independent timestamp component acceptance and its public instructions; preserve remaining source SBOM/license work and all 202 scope records.
+- **Evidence.** 1172 full Python regressions pass after synchronizing state timestamps. Real digest-only authority issuance, independent-root signer pinning, composition-receipt interoperability and network-isolated Linux verification pass. F-124 full component acceptance closes one requirement: 106 complete, 96 open, 71 further closures to target 25. [Change record](./runs/changes/2026-10-10-232357-timestamp-component-full-acceptance-acab212d.json).
+- **Not claimed.** The timestamp is conditional on the selected authority and reports revocation unchecked, authorship unestablished and certified validity false. RFC-0002 is unadopted; no authorship tag, full licensing clearance, physical-device acceptance or independent tag accuracy is inferred. Protected Git and website publication are pending.
+
+
+### 2026-10-10-232116-authenticated-download-and-independent-timestamps-32841573
+
+Recorded 2026-10-10T23:21:16.544715+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish a no-account signed development source snapshot and implement optional independent RFC 3161 timestamps with exact authority pins.
+- **Evidence.** Four anonymously downloaded assets match the verified hosted archive; actual Mac and network-isolated Linux source verification pass. A real authority issued tokens for synthetic content and a signed composition receipt; 28 timestamp controls pass. [Change record](./runs/changes/2026-10-10-232116-authenticated-download-and-independent-timestamps-32841573.json).
+- **Not claimed.** Tag release gates, full dependency license clearance and RFC-0002 adoption remain separate. Timestamp revocation is unchecked and authorship unestablished. Full regression and protected publication checks are still pending for the new timestamp component.
+
+
 ### 2026-10-10-230625-source-signing-consumer-contract-273752ed
 
 Recorded 2026-10-10T23:06:25.770467+00:00 · Contributor: Codex · change

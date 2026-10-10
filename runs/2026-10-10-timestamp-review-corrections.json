@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-10T23:43:54.714781+00:00",
+  "author": "Codex",
+  "pass": true,
+  "python_tests_passed": 1178,
+  "timestamp_tests_passed": 34,
+  "log_sha256": "46d2113663bdd9d152bee4de76ff4f1e6876f0f81531de4eea9f71bd60912d9c",
+  "corrections": [
+    "Missing, non-directory and symlink output parents refuse before query generation or network contact",
+    "Malformed HTTP status and incomplete response use documented CLI refusal exit 2, without traceback or accepted output"
+  ],
+  "source_files": {
+    "scripts/independent_timestamp.py": "99647176035369e030c8714671e20fbf9d19d5348de68f23a8d39c0c21f7c144",
+    "scripts/timestamp-artifact.py": "38c872be11f7ded8bba9a300cc4f9e56c48b2b2020ae9cb640e5605ccb82c02f",
+    "tests/test_independent_timestamp.py": "95dac4386ebe0f245206eb12715f437471806f6227e63faa1470b52df22cfd18"
+  },
+  "review_pr": 17,
+  "independent_tag_accuracy_evidence": false,
+  "protected_publication_pending": true
+}

@@ -1,0 +1,151 @@
+{
+  "captured_at": "2026-10-10T23:19:54.227199+00:00",
+  "pass": true,
+  "author": "Codex",
+  "source_commit": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+  "workflow_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38094185200",
+  "required_engineering_results": [
+    {
+      "name": "host-config",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:04Z",
+      "completedAt": "2026-10-10T23:12:20Z"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:49Z",
+      "completedAt": "2026-10-10T23:12:55Z"
+    },
+    {
+      "name": "regressions",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:04Z",
+      "completedAt": "2026-10-10T23:12:22Z"
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:04Z",
+      "completedAt": "2026-10-10T23:12:15Z"
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:05Z",
+      "completedAt": "2026-10-10T23:12:53Z"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:05Z",
+      "completedAt": "2026-10-10T23:12:11Z"
+    },
+    {
+      "name": "spec",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:05Z",
+      "completedAt": "2026-10-10T23:12:32Z"
+    },
+    {
+      "name": "change-records",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:05Z",
+      "completedAt": "2026-10-10T23:12:14Z"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:04Z",
+      "completedAt": "2026-10-10T23:12:09Z"
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:05Z",
+      "completedAt": "2026-10-10T23:13:11Z"
+    },
+    {
+      "name": "site",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:12:05Z",
+      "completedAt": "2026-10-10T23:17:01Z"
+    }
+  ],
+  "actual_source_signing_steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:05Z",
+      "completedAt": "2026-10-10T23:17:07Z"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:07Z",
+      "completedAt": "2026-10-10T23:17:09Z"
+    },
+    {
+      "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:09Z",
+      "completedAt": "2026-10-10T23:17:09Z"
+    },
+    {
+      "name": "Build committed development source snapshot",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:09Z",
+      "completedAt": "2026-10-10T23:17:12Z"
+    },
+    {
+      "name": "Attest exact source bytes",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:12Z",
+      "completedAt": "2026-10-10T23:17:16Z"
+    },
+    {
+      "name": "Preserve verification bundle",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:16Z",
+      "completedAt": "2026-10-10T23:17:16Z"
+    },
+    {
+      "name": "Preserve independently obtained verification roots",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:16Z",
+      "completedAt": "2026-10-10T23:17:19Z"
+    },
+    {
+      "name": "Verify the actual signed source before offering the download",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:19Z",
+      "completedAt": "2026-10-10T23:17:19Z"
+    },
+    {
+      "name": "Downloadable development source and provenance",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:19Z",
+      "completedAt": "2026-10-10T23:17:21Z"
+    },
+    {
+      "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:21Z",
+      "completedAt": "2026-10-10T23:17:21Z"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:21Z",
+      "completedAt": "2026-10-10T23:17:21Z"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success",
+      "startedAt": "2026-10-10T23:17:21Z",
+      "completedAt": "2026-10-10T23:17:21Z"
+    }
+  ],
+  "tag_release_validated": false,
+  "full_license_clearance": false
+}

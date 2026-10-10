@@ -122,7 +122,7 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current complete local suite passed 1,144 Python checks; source-bound execution
+The current complete local suite passed 1,178 Python checks; source-bound execution
 is recorded in `runs/2026-10-10-target25-source-checks-repaired.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
@@ -411,3 +411,5 @@ text. Follow the [local replay guide](docs/assertion-replay.md) to compare it ag
 your original text through your authenticated loopback service. The command reports
 matching findings, changed input, differences or unavailable history. Matching is
 repeatability, not an accuracy score. It does not send research data to us.
+
+Optional development components: [independent file timestamps](docs/independent-timestamps.md) and a [verified no-account source download](docs/source-provenance.md). They do not issue authorship tags or establish tag accuracy.

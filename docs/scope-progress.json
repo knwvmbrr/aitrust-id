@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T21:29:13.613459+00:00",
+  "audited_at": "2026-10-10T23:23:03.026992+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3900,10 +3900,11 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-10T21:29:13.613459+00:00",
+      "audited_at": "2026-10-10T23:23:03.026992+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete"
+        "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
+        "Codex \u2014 actual protected-main Sigstore source signing, independent-root Mac/offline-Linux verification and anonymous public download"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3911,7 +3912,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Review unknown and vendored licenses/notices and all client/build/architecture dependencies; verify scanner identity and implement/exercise source-bound Sigstore signing before full SBOM/signing acceptance.",
+      "next_fix": "Complete reviewed unknown/vendored notices, all client/build/model/OS/architecture inventory and licenses, scanner identity and runtime release binding. Source-bound development signing and anonymous authenticated download are now exercised; they do not clear the complete SBOM/licensing job.",
       "next_owner": "Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -3928,11 +3929,14 @@
         "scripts/verify-runtime-sbom-standard.py",
         "tests/test_spdx_inventory.py",
         "runs/2026-10-10-spdx-standard-inventory.json",
-        "runs/2026-10-10-spdx-validation-controls.json"
+        "runs/2026-10-10-spdx-validation-controls.json",
+        "docs/source-provenance.md",
+        "runs/2026-10-10-authenticated-source-download.json",
+        "runs/2026-10-10-source-download-hosted-checks.json"
       ],
       "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted.",
       "required_acceptance": [
-        "Review unknown and vendored licenses/notices and all client/build/architecture dependencies; verify scanner identity and implement/exercise source-bound Sigstore signing before full SBOM/signing acceptance."
+        "Complete reviewed unknown/vendored notices, all client/build/model/OS/architecture inventory and licenses, scanner identity and runtime release binding. Source-bound development signing and anonymous authenticated download are now exercised; they do not clear the complete SBOM/licensing job."
       ],
       "queue": "open"
     },
@@ -4263,29 +4267,43 @@
       "id": "F-124",
       "kind": "requirement",
       "title": "Independent RFC 3161 timestamping \u2014 we never operate the authority",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T23:23:03.026992+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 actual bounded RFC 3161 development component, real independent FreeTSA issuance and Mac/network-isolated Linux receipt interoperability"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Independent RFC 3161 timestamping \u2014 we never operate the authority. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-10T23:23:03.026992+00:00",
+      "completion_timestamp_basis": "Full named independent timestamp component acceptance executed now; no authorship tag, revocation/freshness, RFC adoption or institutional authority inferred.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/independent-timestamp-plan.md",
+        "docs/independent-timestamps.md",
+        "scripts/timestamp-artifact.py",
+        "tests/test_independent_timestamp.py",
+        "tests/fixtures/timestamp-freetsa-2026/manifest.json",
+        "runs/2026-10-10-independent-timestamp-issuance.json",
+        "runs/2026-10-10-independent-timestamp-offline-linux.json",
+        "runs/2026-10-10-composition-receipt-timestamp.json",
+        "runs/2026-10-10-independent-timestamp-acceptance.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Independent RFC 3161 timestamping \u2014 we never operate the authority. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full optional timestamp operation and offline pinned-authority verification for exact artifact/receipt bytes. Authority time, nonce, digest, signature and unchecked revocation are explicit; not human authorship, tag accuracy, archival validity or RFC adoption.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-125",
