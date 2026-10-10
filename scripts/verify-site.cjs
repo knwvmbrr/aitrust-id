@@ -36,16 +36,17 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
     assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
     assert(await dialog.locator('[data-tag-example]').innerText(),id+' missing everyday example');
-    const validation=await dialog.getByRole('region',{name:'Validation status'}).innerText();assert(validation.includes('Every tag must pass its own published validation gate before release.'),'Release gate missing');assert(validation.includes(['PS','PII_REDACTED'].includes(id)?'Validation in progress':'Validation required before release'),'Wrong validation stage');
+    const working=['PS','PII_REDACTED'].includes(id);const validation=dialog.getByRole('region',{name:'Validation status'});assert(await validation.count()===(working?1:0),'Wrong validation card visibility');if(working)assert((await validation.innerText()).includes('Validation in progress'),'Working preview stage missing');assert((await dialog.locator('[data-tag-availability]').innerText()).includes(working?(id==='PS'?'preview':'Local setup'):(audience==='person'?'No checker':'No team service')),'Availability hidden');
     assert(await dialog.locator('details').count()===(['PS','PII_REDACTED'].includes(id)?4:3),id+' must have its compact disclosures and applicable setup');
     const use=dialog.locator('[data-tag-usage]');assert(await use.count()===1,id+' use instructions missing');
     if(['PS','PII_REDACTED'].includes(id)){await use.locator('summary').click();assert(await use.locator('ol li').count()===4,'Setup must have four steps');await use.getByRole('button',{name:'Copy step 1 commands'}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='git clone https://github.com/knwvmbrr/aitrust-id.git\ncd aitrust-id','Command copy differs from displayed instructions');await use.locator('summary').click();}
-    else{assert((await use.innerText()).includes('Coming Soon')||(await use.innerText()).includes('Research proposal'),'Unavailable tag overclaims installation');assert(await use.getByRole('link',{name:'Download source',exact:true}).count()===0,'Unavailable tag has fake download');}
+    else{assert(await use.getByRole('button',{name:'Help improve this tag',exact:true}).count()===1,'Unavailable item needs a contribution action');assert(await use.getByRole('link',{name:'Download source',exact:true}).count()===0,'Unavailable tag has fake download');}
     assert(await dialog.locator('details[open]').count()===0,id+' details must start collapsed');
     for(const title of ['How it works','Testing and evidence','Privacy and full details']){
      const summary=dialog.locator('summary').filter({hasText:title});await summary.focus();await page.keyboard.press('Enter');
      assert(await summary.evaluate(e=>e.parentElement.open),id+' disclosure is not keyboard operable');
     }
+    assert((await dialog.innerText()).includes('Every tag must pass its own published validation gate before release.'),'Release gate missing from full evidence');
     for(const heading of ['What it can say','Method','What has been checked','Privacy','Who is responsible','Before release'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).isVisible(),id+' incomplete');
     if(id==='PS'){
      await dialog.getByRole('button',{name:'Download details',exact:true}).scrollIntoViewIfNeeded();

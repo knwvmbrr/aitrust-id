@@ -4,7 +4,7 @@ import {percent} from './performance-model.js';
 export const performanceById=new Map(data.records.map(r=>[r.id,r]));
 export function Performance({tag}) {
  const r=performanceById.get(tag.id);
- return <section data-tag-performance={tag.id} aria-label="Tag performance" className="my-4 rounded-xl border border-line p-4">
+ return <section data-tag-performance={tag.id} aria-label="Tag performance" className={r.metrics.length?"my-4 rounded-xl border border-line p-4":"my-4 py-1"}>
   <div className="flex flex-wrap justify-between gap-2"><h3 className="text-sm font-semibold">Performance</h3><span className="text-xs text-muted">{r.stage}</span></div>
   <p className="mt-1 text-xs leading-5 text-muted">{r.id==='PS'?'Development fixtures · not an independent study':r.summary}</p>
   <div className="performance-grid">{r.metrics.map(m=><div key={m.id} className="performance-row">

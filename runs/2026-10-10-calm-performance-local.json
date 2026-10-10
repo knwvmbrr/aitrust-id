@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-10T03:25:44.220Z",
+  "base": "http://127.0.0.1:5175",
+  "pass": false,
+  "modals": 0,
+  "static_pages": 0,
+  "missing_data_not_zero": true,
+  "stale_evidence_rejected": true,
+  "automatic_collection_added": false,
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'AI TRUST ID', exact: true }) to be visible\u001b[22m\n",
+  "errors": [],
+  "transport_errors": [
+    {
+      "url": "http://127.0.0.1:5175/assets/index-DHEN0cCX.js",
+      "failure": {
+        "errorText": "net::ERR_SOCKET_NOT_CONNECTED"
+      }
+    }
+  ],
+  "outbound": [],
+  "axe_violations": []
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-032858-calmer-tag-panels-and-escape-repair-9fb33dc9",
+  "recorded_at": "2026-10-10T03:28:58.805420+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "65a0601af52bcb70c9abcf2cf140f2466bc2536a",
+  "changed": "Left-align all tag introductions, soften the MT display title while preserving its formal claim, streamline planned panels, add tag-specific help steps, fix nested Escape dismissal, and complete the current public-roadmap audit.",
+  "proves": "390 Python tests pass; 20 modal/reference/export/help checks, 40 light/dark performance panels and 62 accessibility surfaces pass; 620 source files passed the bounded publication audit.",
+  "limits": "No independent accuracy, physical-phone, human accessibility or new tag release acceptance. Failed early transport checks remain recorded; unknown secrets and unreachable objects are outside the roadmap audit.",
+  "scope_ids": [
+    "T-MT",
+    "WP-SITE",
+    "WP-UX",
+    "F-139",
+    "F-140",
+    "F-150"
+  ],
+  "files": {
+    "docs/PS-reviewer-start.md": "62d126c5af662a95f4987f79483230bad1b70a276689705bcb750024bd5bd750",
+    "docs/calmer-tag-panels.md": "a9ef11de5f08fa7510a10639f6c783028966bafcbdcc50fb757d0a72a2ec16c2",
+    "docs/scope-delivery.md": "4f26d18fa746eab5b020de4785cf46092c98aa630f83a64a0ed1e07daaa2deb8",
+    "docs/scope-progress.json": "cdb27eea092671534d43c813097f0ffccd926b8ed998778fb0bae6a33e1edd2b",
+    "docs/scope-progress.md": "9b317281de44325321afde407fdd32e760e27b53e051c5e8b8dc7dc456495269",
+    "docs/scope-task-index.md": "b839aff836c02cf0171957f210cbac65174ab3201fd9df68eb20d50319055b0e",
+    "runs/2026-10-10-calm-a11y-final-local.json": "95a3501950fc07a9d2f0cc190c84133aca7ff40ace8e448639ec12fe56d77c37",
+    "runs/2026-10-10-calm-a11y-local.json": "6ab99f75789cea50ac5a3365920608b1cfc3176143f239d7d667c0743daa10a3",
+    "runs/2026-10-10-calm-engineering.json": "b779683d017c5cd86cadc19557f6a308424f9fba83f58420d060bea4c5924c66",
+    "runs/2026-10-10-calm-panels-final-local.json": "c18edaa714f6fb9a9df082256c4235360dfc3f6c70b38fc738ea3c0d6211b33e",
+    "runs/2026-10-10-calm-panels-local.json": "66435599f5ccae87ba45b9ed97d38d10839a59a83b757de1f0da249df9c645a1",
+    "runs/2026-10-10-calm-performance-final-local.json": "f6809c1c801e5e09cb7190e2074c986955c77fafd4413912ec4fa059422f31b0",
+    "runs/2026-10-10-calm-performance-local.json": "e8c3432e0b303fb3a9293932cbad6cb1b4acf0e0d593b7cb758c1c8693ba7a60",
+    "runs/2026-10-10-calm-policies-local.json": "c76bc4eec3de9bbcfaca74d2d0d11889f0d3ff9981e4a9e3fc7d79858f6b31cf",
+    "runs/2026-10-10-calm-ps-local.json": "152863add838543febb3005cd7f5c402092475fd63512f1f1bd9b2cf1c3fdc8e",
+    "runs/2026-10-10-calm-scope-local.json": "da85877e97ec117c6470da3bc66c81dc6f2f8e663a2d0f5f67bdc773382e1d2c",
+    "runs/2026-10-10-calm-site-local.json": "9a9ccae502156d60fdcf17abcbf69aad6d9a1cbb8cdbc445c797ffdf4c1cf79b",
+    "runs/2026-10-10-roadmap-publication-audit.json": "187dcdba727a1c377e98778bf904c3e5e200d63ad88a9b011aa6d21fc83111c5",
+    "scripts/verify-approachability.cjs": "a49931b7209987b078e59861a3a138a86d3a86212d45626ec48e923ad9ab14fd",
+    "scripts/verify-policies.cjs": "70f3f96fd33cef0c4c25335be7d66b198d2f143387fc506bf217745d709cdecd",
+    "scripts/verify-ps-results.cjs": "abf091504b8f52a4642c6d2afdc82221398d9197df1abf3db93ea96a8c490377",
+    "scripts/verify-site.cjs": "936fde23bd280296f682b1d42ac273913c5e4a68f4fbfcd5398b511a7ae5f5ab",
+    "site/index.html": "98e4266a4bd065886d7c4a3973e95b3639a2583baa1c0301a76db53941dafc20",
+    "site/public/reference/public-scope.json": "d02086923fc6826118be0c2411e9dd0fd239a6923c2b9bc22d018b474642bbc4",
+    "site/public/reference/tag-performance.json": "abbba8bd9cb5fb4423a7d01842abf00823bf9565fb5b01bf4161ea335229d3f3",
+    "site/scripts/prepare.mjs": "8260186bea2edbdf0be7ddf91c9e21c21aaa219639fda7f06224e928c95a146d",
+    "site/scripts/render-reference.mjs": "1b99a24666b26fa7a4036616574d9cf3332e6ad16239da42ffb0b01132ffbb34",
+    "site/src/catalog.js": "2cdb2ccc1910c9564dcadbbb5cab0a7a9d0a8c8dbad9569e1ee3d61da1e52a9b",
+    "site/src/main.jsx": "590a62b101f6ef4a439d841ec663a6849eda623d82954f8a7cd08cbfd069fecf",
+    "site/src/performance-model.js": "71afc2ba6b723aabc9159ce6fc169d0ba484b50dca9bfab55e470194845f60fe",
+    "site/src/performance.jsx": "e59fadd6883b7e75c0282d6ba135632a1d9b0e7835abe052c8c84b9b64b45b32",
+    "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
+    "site/src/public-scope.json": "d02086923fc6826118be0c2411e9dd0fd239a6923c2b9bc22d018b474642bbc4",
+    "site/src/tag-performance.json": "abbba8bd9cb5fb4423a7d01842abf00823bf9565fb5b01bf4161ea335229d3f3",
+    "site/src/usage.js": "4dc2269c0a09d75e5410d38b0477e15dd5c1f564131f9a95c0c5e7683f1ca5d2",
+    "state.json": "4844a20bd844b8222e866ab4227bf3f003e0095022c72fd8c92034815813bd17"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-calm-engineering.json",
+      "sha256": "b779683d017c5cd86cadc19557f6a308424f9fba83f58420d060bea4c5924c66"
+    },
+    {
+      "path": "runs/2026-10-10-calm-panels-final-local.json",
+      "sha256": "c18edaa714f6fb9a9df082256c4235360dfc3f6c70b38fc738ea3c0d6211b33e"
+    },
+    {
+      "path": "runs/2026-10-10-calm-performance-final-local.json",
+      "sha256": "f6809c1c801e5e09cb7190e2074c986955c77fafd4413912ec4fa059422f31b0"
+    },
+    {
+      "path": "runs/2026-10-10-calm-a11y-final-local.json",
+      "sha256": "95a3501950fc07a9d2f0cc190c84133aca7ff40ace8e448639ec12fe56d77c37"
+    },
+    {
+      "path": "runs/2026-10-10-roadmap-publication-audit.json",
+      "sha256": "187dcdba727a1c377e98778bf904c3e5e200d63ad88a9b011aa6d21fc83111c5"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T03:28:58.976076+00:00"
+    }
+  ]
+}

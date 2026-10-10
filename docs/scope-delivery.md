@@ -437,7 +437,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader sees the origin assertion, source of evidence and supported observation window.
 
-**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 20% · audited 2026-10-09T21:07:46.641291+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Positive provenance evidence and an identified artifact.
 
@@ -475,7 +475,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** The reader can distinguish documented contribution/edit events from unobserved authorship.
 
-**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 20% · audited 2026-10-09T21:07:46.641291+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Input:** Consented composition evidence and artifact binding.
 
@@ -973,7 +973,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** Users install the tested version and outside implementers can check conformance.
 
-**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 20% · audited 2026-10-09T21:07:46.641291+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-054, F-057, F-111, F-112, F-113, F-116, F-117, F-119, F-120.
 
@@ -1067,7 +1067,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** People can learn and use a tag without reading the entire project.
 
-**Completion:** 80% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 80% · audited 2026-10-09T20:05:11.817894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-132, F-133, F-134, F-139, F-140, F-142.
 

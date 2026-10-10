@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useSyncExternalStore} from 'react';
+import React,{useState,useEffect,useSyncExternalStore,useRef} from 'react';
 import {createRoot} from 'react-dom/client';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -29,10 +29,17 @@ function route(){let decoded;try{decoded=decodeURIComponent(location.hash.slice(
 function Section({title,children}){return <section className="border-t border-line py-4"><h3 className="mb-2 text-base font-semibold">{title}</h3>{children}</section>}
 function Bullets({items}){return <ul className="list-disc space-y-1 pl-5 text-sm leading-6">{items.map((item,i)=><li key={i}>{item}</li>)}</ul>}
 function Shell({children,title,description}) {
- return <Dialog.Portal><Dialog.Overlay className="fixed inset-0 z-40 bg-black/60"/><Dialog.Content className="modal fixed inset-x-3 top-1/2 z-50 mx-auto max-h-[calc(100dvh-1.5rem)] max-w-2xl -translate-y-1/2 overflow-y-auto break-words rounded-2xl border border-line bg-surface shadow-lg sm:inset-x-6 sm:max-h-[calc(100dvh-3rem)]">
+ const content=useRef(null);
+ function escape(event){
+  // A newly mounted child can be visible before Radix's layer effect settles.
+  // Delegate that early event to its existing Close primitive, never the parent.
+  const top=[...document.querySelectorAll('[data-ai-dialog][data-state="open"]')].at(-1);
+  if(top&&top!==content.current){event.preventDefault();event.stopImmediatePropagation();top.querySelector('[data-dialog-close]')?.click();}
+ }
+ return <Dialog.Portal><Dialog.Overlay className="fixed inset-0 z-40 bg-black/60"/><Dialog.Content ref={content} data-ai-dialog onEscapeKeyDown={escape} className="modal fixed inset-x-3 top-1/2 z-50 mx-auto max-h-[calc(100dvh-1.5rem)] max-w-2xl -translate-y-1/2 overflow-y-auto break-words rounded-2xl border border-line bg-surface shadow-lg sm:inset-x-6 sm:max-h-[calc(100dvh-3rem)]">
   <header className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-line bg-surface px-5 py-4 sm:px-6">
    <div className="min-w-0"><Dialog.Title className="text-xl font-semibold">{title}</Dialog.Title><Dialog.Description className="mt-1 text-sm text-muted">{description}</Dialog.Description></div>
-   <Dialog.Close aria-label="Close" className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-line hover:border-ink"><svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m6 6 12 12M18 6 6 18"/></svg></Dialog.Close>
+   <Dialog.Close data-dialog-close aria-label="Close" className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-line hover:border-ink"><svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m6 6 12 12M18 6 6 18"/></svg></Dialog.Close>
   </header><div className="px-5 py-5 sm:px-6">{children}</div>
  </Dialog.Content></Dialog.Portal>;
 }
@@ -43,14 +50,14 @@ function FeatureList({ids}){const unique=[...new Set(ids)].map(id=>featuresById.
 function UseTag({tag}) {
  const use=usage(tag);const [message,setMessage]=useState('');
  async function copy(command){try{await navigator.clipboard.writeText(command);setMessage('Commands copied. Review them before running in Terminal.');}catch{setMessage('Copy is unavailable. Select the commands, or open the full setup guide.');}}
- return <section data-tag-usage className="my-4 rounded-xl border border-line p-4 text-sm leading-6">
-  <h3 className="mb-1 font-semibold">Use this tag</h3><p>{use.summary}</p>{tag.id==='PS'&&<HandheldDialogs Shell={Shell}/>}
+ return <section data-tag-usage className="my-4 border-y border-line py-4 text-sm leading-6">
+  <h3 className="mb-1 font-semibold">{use.available?'Use this tag':'What you can do'}</h3><p>{use.available?use.summary:use.next}</p>{tag.id==='PS'&&<HandheldDialogs Shell={Shell}/>}
   {use.available?<>
    <details className="tag-disclosure"><summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 font-semibold"><span>Set up the local service</span><span aria-hidden="true" className="disclosure-symbol text-lg">+</span></summary>
     <p className="mb-3 text-muted">{use.prerequisites}</p><div className="my-3 flex flex-wrap gap-2"><a className={button} href={sourceDownload}>Download source</a><a className={button} href={quickstart} target="_blank" rel="noreferrer">Try locally</a></div><ol className="list-decimal space-y-4 pl-5">{use.steps.map((step,i)=><li key={step.title}><h4 className="font-semibold">{step.title}</h4><p>{step.body}</p><pre className="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-xs leading-5"><code>{step.command}</code></pre><button type="button" className="min-h-11 rounded-lg border border-line px-3 text-xs" aria-label={'Copy step '+(i+1)+' commands'} onClick={()=>copy(step.command)}>Copy commands</button></li>)}</ol>
     <p className="mt-3">{use.browser}</p><p className="mt-3 text-muted">{use.privacy}</p><h4 className="mt-3 font-semibold">Stop the checker</h4><pre className="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-xs"><code>{use.stop}</code></pre>
    </details><p role="status" className="mt-1 text-muted">{message}</p>
-  </>:<>{tag.today&&<p data-tag-today className="mt-3">{tag.today}</p>}{!tag.today&&<p className="mt-3 text-muted">{use.next}</p>}{tag.id==='audit'&&<a className="mt-3 inline-flex min-h-11 items-center underline underline-offset-4" href="/#person/PS">Try PS exports</a>}</>}
+  </>:<>{tag.today&&<p data-tag-today className="mt-3">{tag.today}</p>}{tag.id==='audit'&&<a className="mt-3 inline-flex min-h-11 items-center underline underline-offset-4" href="/#person/PS">Try PS exports</a>}<div className="mt-3"><WorkDialog intent="Assist" tag={tag} label="Help improve this tag"/></div></>}
  </section>;
 }
 function TagDetails({tag}) {
@@ -59,18 +66,19 @@ function TagDetails({tag}) {
  async function copyLink(){try{await navigator.clipboard.writeText(location.href);setMessage('Tag link copied.');}catch{setMessage('Copy was unavailable. The browser address is the tag link.');}}
  return <>
   <div className="mb-3 flex flex-wrap items-center gap-2 text-xs"><span className="rounded-md border border-input px-2 py-1 font-mono font-semibold">{tag.code}</span><span className="rounded-md bg-canvas px-2 py-1">{tag.status}</span><span className="text-muted">{intro.access}</span></div>
-  <p data-tag-availability className="mb-3 text-center text-sm font-semibold">{intro.availability}</p>
-  <p data-tag-summary className="text-center text-lg leading-7">{intro.summary}</p>
+  <p data-tag-summary className="text-left text-lg font-medium leading-7">{intro.summary}</p>
   <p data-tag-example className="mt-2 text-sm leading-6"><span className="font-semibold">For example: </span>{intro.example}</p>
   <p data-tag-limit className="mt-2 text-sm leading-6 text-muted">{intro.limit}</p>
+  <p data-tag-availability className="mt-2 text-left text-xs leading-5 text-muted">{intro.availability}</p>
   <UseTag tag={tag}/>
-  <section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">
+  {intro.working&&<section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">
    <div className="flex flex-wrap items-center justify-between gap-2"><h3 className="text-sm font-semibold">Validation</h3><span className="text-xs text-muted">{intro.stage}</span></div>
    <p className="mt-1 text-sm font-semibold">{intro.validationTitle}</p><p className="mt-1 text-sm leading-6 text-muted">{intro.validation}</p><a className="mt-2 block text-xs underline underline-offset-4" href="/policies/validation/">{intro.releasePolicy}</a>
-  </section>
+  </section>}
   <Performance tag={tag}/>
   <Disclosure title="How it works">
    {intro.working&&<><h4 className="font-semibold">Reading a result</h4><p className="mb-3">{usage(tag).next}</p></>}
+   {tag.formalName&&<p className="mb-3 text-muted">Formal tag name: {tag.formalName}. Displayed as {tag.name}.</p>}
    <h4 className="font-semibold">What it can say</h4><p>{tag.claim}</p>
    <h4 className="mt-3 font-semibold">Method</h4><p>{tag.method}</p>
    <h4 className="mt-3 font-semibold">What it checks</h4><Bullets items={tag.supported}/>
@@ -81,7 +89,7 @@ function TagDetails({tag}) {
    <PerformanceEvidence tag={tag}/>
    <h4 className="font-semibold">What has been checked</h4><p className="tabular-nums">{tag.validation}</p>
    <p className="mt-2 text-muted">Repeating a result or checking its signature can confirm a record. It does not establish that the finding is correct.</p>
-   <h4 className="mt-3 font-semibold">Before release</h4><p>{tag.release}</p>
+   <h4 className="mt-3 font-semibold">Before release</h4><p>{tag.release}</p><a className="mt-2 inline-flex min-h-11 items-center underline underline-offset-4" href="/policies/validation/">{intro.releasePolicy}</a>
    <h4 className="mt-3 font-semibold">Method settings</h4><p>{tag.version}</p>{tag.floor&&<p>{tag.floor}</p>}
    <p className="mt-3"><a className="underline underline-offset-4" href={'/tags/'+tag.id.toLowerCase().replaceAll('_','-')+'/'}>Full tag reference</a></p>
    <ul className="mt-2 space-y-1">{tag.references.map(url=><li key={url}><a className="break-all underline underline-offset-4" href={url} target="_blank" rel="noreferrer">{url.split('/').at(-1)}</a></li>)}</ul>
@@ -96,7 +104,7 @@ function TagDetails({tag}) {
    <p className="mt-4 text-muted">Download details saves this tag’s description and evidence links. It is not a result from a checked answer.</p>
    <div className="mt-3 flex flex-wrap gap-2"><button className={button} onClick={copyLink}>Copy link</button><button className={button} onClick={()=>download('ai-trust-id-'+tag.id+'.json',JSON.stringify(catalogueExport(tag,usage(tag),performanceById.get(tag.id),[...sharedIds,...tag.features].map(id=>featuresById.get(id)).filter(Boolean)),null,2))}>Download details</button></div><p role="status" className="mt-2">{message}</p>
   </Disclosure>
-  <div className="mt-4 flex flex-wrap items-center gap-2"><WorkDialog intent="Report" tag={tag} label="Report an issue"/><WorkDialog intent="Assist" tag={tag} label="Help improve this tag"/></div>
+  <div className="mt-4 flex flex-wrap items-center gap-2"><WorkDialog intent="Report" tag={tag} label="Report an issue"/>{intro.working&&<WorkDialog intent="Assist" tag={tag} label="Help improve this tag"/>}</div>
  </>;
 }
 function TagMark({className=''}){return <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" className={className}><path d="M9 7h22l10 10v20a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V11a4 4 0 0 1 4-4Z" stroke="currentColor" strokeWidth="2.5"/><circle cx="31" cy="17" r="2.5" stroke="currentColor" strokeWidth="2"/><path d="M14 25h16M14 31h10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/></svg>}

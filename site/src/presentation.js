@@ -7,7 +7,7 @@ const descriptions = {
   NF: ['See how an answer lines up with the references you choose.', 'Compare an answer with your handbook and see the passages that support its claims.', 'Planned. A match is only as reliable as the reference; it is not proof of truth.'],
   FI: ['See where an answer disagrees with your references.', 'Compare a claim with your handbook and read the passage that contradicts it.', 'Planned. A disagreement does not prove dishonesty, and the reference could be wrong.'],
   HP: ['Take a closer look at claims that may not hold up.', 'Review a specific claim alongside its supporting evidence, rather than judging how confident the answer sounds.', 'Planned. Confident wording, dates or repetition alone cannot show that a claim was invented.'],
-  MT: ['Notice wording that may put pressure on you.', 'Look more closely at an “act now” message and the context around it.', 'Planned. Urgency can be legitimate; this tag would not judge someone’s intent.'],
+  MT: ['A little context when a message asks you to act quickly.', 'A message says “act now.” MT would help you look at the wording and what is happening around it.', 'Urgent messages can be helpful. This planned tag would highlight wording, not judge the person behind it.'],
   IV: ['See what an independent person actually checked.', 'Read a reviewer’s evidence, what they reviewed and what their review did not cover.', 'Planned. A signature records a review; it does not guarantee every claim is true.'],
   FA: ['See evidence that AI generated the content.', 'Inspect a recorded generation event or authenticated content credential tied to the item.', 'Planned. Writing style or missing human evidence cannot prove AI origin.'],
   PA: ['See recorded AI contributions and later edits.', 'Follow a consented record of an AI draft and the editing that happened afterward.', 'Planned. It describes observed contributions, not a person’s identity or integrity.'],
@@ -32,14 +32,14 @@ export function presentation(tag) {
     summary: text[0], example: text[1], limit: text[2], working,
     availability: tag.id==='PS' ? 'Works here: PS command-pattern preview.'
       : tag.id==='PII_REDACTED' ? 'Local setup required. PII does not run in this website checker.'
-      : tag.audience==='person' ? 'Not available yet. This tag is planned or proposed.'
+      : tag.audience==='person' ? 'Planned · No checker available yet.'
       : 'Planned offering. No team service is running.',
     stage: tag.id === 'PS' ? 'On-device preview' : working ? 'Local preview' : tag.proposed ? 'Research proposal' : 'Planned',
     validationTitle: working ? 'Validation in progress' : 'Validation required before release',
     releasePolicy,
     validation: working
       ? 'Development checks pass. Independent accuracy checks and human accessibility review are still ahead.'
-      : 'Not available yet. This needs a working method and its own independent checks before release.',
+      : 'We will test this tag on its own before making it available.',
     access: tag.audience === 'person' ? 'Free for personal use' : 'Proposed paid team offering',
   };
 }

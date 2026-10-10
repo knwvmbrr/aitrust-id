@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-033008-calm-panels-final-build-verification-5dd0f1fc",
+  "recorded_at": "2026-10-10T03:30:08.283835+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "65a0601af52bcb70c9abcf2cf140f2466bc2536a",
+  "changed": "Record final built-site and real PS-result checks plus the updated publication snapshot audit.",
+  "proves": "All 20 tag panels and eight footer routes, six real PS result cases, seven invalid-evidence cases and the source audit pass; nine scope/performance tests pass.",
+  "limits": "Engineering checks only; no human, physical-device, independent-accuracy or hosted-CI acceptance.",
+  "scope_ids": [
+    "WP-SITE",
+    "WP-UX",
+    "F-140",
+    "F-150"
+  ],
+  "files": {
+    "runs/2026-10-10-calm-site-final-local.json": "46ee9f20909bf10e854c9d242d650b3aeaaa3948fc8c53bbf02fc481f5edc795",
+    "runs/2026-10-10-calm-ps-final-local.json": "57c4733a273c982504e74c00743b93cb3d367b13de8d8dbab823478c7bf9b2a9",
+    "runs/2026-10-10-calm-final-publication-audit.json": "45c92fc773fa71975b8863c6bf5de56bb93332f772fccf6f1da67cf9748d4034"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-calm-site-final-local.json",
+      "sha256": "46ee9f20909bf10e854c9d242d650b3aeaaa3948fc8c53bbf02fc481f5edc795"
+    },
+    {
+      "path": "runs/2026-10-10-calm-ps-final-local.json",
+      "sha256": "57c4733a273c982504e74c00743b93cb3d367b13de8d8dbab823478c7bf9b2a9"
+    },
+    {
+      "path": "runs/2026-10-10-calm-final-publication-audit.json",
+      "sha256": "45c92fc773fa71975b8863c6bf5de56bb93332f772fccf6f1da67cf9748d4034"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T03:30:08.386808+00:00"
+    }
+  ]
+}

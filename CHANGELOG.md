@@ -1,5 +1,25 @@
 # Changelog
 
+## Unreleased — 2026-10-10
+
+### 2026-10-10-033008-calm-panels-final-build-verification-5dd0f1fc
+
+Recorded 2026-10-10T03:30:08.283835+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final built-site and real PS-result checks plus the updated publication snapshot audit.
+- **Evidence.** All 20 tag panels and eight footer routes, six real PS result cases, seven invalid-evidence cases and the source audit pass; nine scope/performance tests pass. [Change record](./runs/changes/2026-10-10-033008-calm-panels-final-build-verification-5dd0f1fc.json).
+- **Not claimed.** Engineering checks only; no human, physical-device, independent-accuracy or hosted-CI acceptance.
+
+
+### 2026-10-10-032858-calmer-tag-panels-and-escape-repair-9fb33dc9
+
+Recorded 2026-10-10T03:28:58.805420+00:00 · Contributor: Codex · change
+
+- **Changed.** Left-align all tag introductions, soften the MT display title while preserving its formal claim, streamline planned panels, add tag-specific help steps, fix nested Escape dismissal, and complete the current public-roadmap audit.
+- **Evidence.** 390 Python tests pass; 20 modal/reference/export/help checks, 40 light/dark performance panels and 62 accessibility surfaces pass; 620 source files passed the bounded publication audit. [Change record](./runs/changes/2026-10-10-032858-calmer-tag-panels-and-escape-repair-9fb33dc9.json).
+- **Not claimed.** No independent accuracy, physical-phone, human accessibility or new tag release acceptance. Failed early transport checks remain recorded; unknown secrets and unreachable objects are outside the roadmap audit.
+
+
 ## Unreleased — 2026-10-09
 
 ### 2026-10-09-211342-provenance-download-and-publication-evidence-51d277ee

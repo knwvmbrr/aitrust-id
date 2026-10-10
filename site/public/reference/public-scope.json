@@ -951,9 +951,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T03:28:32.219175+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -963,7 +965,9 @@
         "next_fix": "Deliver MT Manipulative Tactic. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/calmer-tag-panels.md",
+          "runs/2026-10-10-calm-a11y-final-local.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -1007,12 +1011,13 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-09T20:05:11.817894+00:00",
+        "audited_at": "2026-10-10T03:28:32.219175+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-          "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
+          "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
+          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -1034,7 +1039,9 @@
           "runs/2026-10-09-device-build-matrix-final.json",
           "runs/2026-10-09-accessibility-site-final-local.json",
           "runs/2026-10-09-device-a11y-engines-local.json",
-          "runs/2026-10-09-device-accessibility-python.json"
+          "runs/2026-10-09-device-accessibility-python.json",
+          "docs/calmer-tag-panels.md",
+          "runs/2026-10-10-calm-a11y-final-local.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
         "required_acceptance": [
@@ -7376,12 +7383,13 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-09T20:05:11.817894+00:00",
+        "audited_at": "2026-10-10T03:28:32.219175+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-          "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
+          "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
+          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -7402,7 +7410,9 @@
           "runs/2026-10-09-device-build-matrix-final.json",
           "runs/2026-10-09-accessibility-site-final-local.json",
           "runs/2026-10-09-device-a11y-engines-local.json",
-          "runs/2026-10-09-device-accessibility-python.json"
+          "runs/2026-10-09-device-accessibility-python.json",
+          "docs/calmer-tag-panels.md",
+          "runs/2026-10-10-calm-a11y-final-local.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
         "required_acceptance": [
@@ -7438,35 +7448,38 @@
         "id": "F-140",
         "kind": "requirement",
         "title": "Sanitised public roadmap — no personal execution material",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T03:28:32.219175+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current public planning/research publication audit, recorded 2026-10-10T03:28:32.219175+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Verify the expanded public planning and new research artifacts against the publication/privacy audit before pushing; keep private packets, credentials and unrelated personal material outside source.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T03:28:32.219175+00:00",
+        "completion_timestamp_basis": "Current bounded publication audit completion; not historical or blanket privacy clearance",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-public-source-audit.json",
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "runs/2026-10-10-roadmap-publication-audit.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Verify the expanded public planning and new research artifacts against the publication/privacy audit before pushing; keep private packets, credentials and unrelated personal material outside source."
-        ],
-        "queue": "open"
+        "evidence_scope": "Current public roadmap/source snapshot checked for five targeted marker categories and the known local gateway token; private environment/provider artifacts absent from source. Unknown secrets and unreachable Git objects are outside this acceptance. Reaudit changes before publication.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {

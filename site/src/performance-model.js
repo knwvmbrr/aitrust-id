@@ -20,7 +20,7 @@ const nextTests={
  NF:'Benchmark supported and unsupported claims against a declared reference corpus.',
  FI:'Test actual reference contradictions separately from missing evidence.',
  HP:'Validate specific indicators against independently labeled unsupported claims.',
- MT:'Measure context-sensitive tactic errors and reviewer agreement.',
+ MT:'Compare helpful and pressuring messages, with independent reviewers checking the context.',
  IV:'Verify reviewer identity, independence, artifact binding and challenges.',
  FA:'Test positive generation evidence, binding and unknown-source behavior.',
  PA:'Test contribution/edit receipts, consent and assistive-input handling.',

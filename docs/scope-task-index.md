@@ -135,7 +135,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-074 | conduct@ with an enforcement ladder | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-138 | abuse@ and press@ | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-139 | Site accessibility held to the same gate as the extension | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-F-140 | Sanitised public roadmap — no personal execution material | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-140 | Sanitised public roadmap — no personal execution material | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-141 | Pilot programme — small consenting group, feedback without collecting prompts or outputs | [WP-COMMUNITY](scope-delivery.md#wp-community) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-142 | Install and removal instructions, reproducible | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-075 | Two-entity structure — independent foundation holds spec and mark; implementations compete on top | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |

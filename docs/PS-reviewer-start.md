@@ -28,7 +28,8 @@ scammer. A legitimate installer can contain the pattern.
 If a finding exposes a defect, record it. Fixing the detector requires a new
 version and a new holdout; the exposed examples become development material.
 
-Current engineering baseline: 139 Python tests and 86 development cases pass.
+The current engineering counts and dated checks are in [state.json](../state.json)
+and the [scope ledger](scope-progress.md). The PS development set has 86 cases.
 Independent labels have not been obtained. The release gate still fails.
 The updated full container pipeline has not been rerun. No certification is claimed.
 

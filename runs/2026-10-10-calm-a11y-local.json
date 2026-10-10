@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-10-10T03:25:45.539Z",
+  "pass": false,
+  "results": [
+    {
+      "name": "catalogue",
+      "theme": "light",
+      "targets": {
+        "controls": 0,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 0,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await root.isVisible())\n",
+  "errors": [],
+  "full_wcag_conformance_asserted": false
+}
