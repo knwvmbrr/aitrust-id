@@ -5060,7 +5060,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T21:29:13.613459+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution"
@@ -5071,7 +5071,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
+        "next_fix": "Resolve the adopted wire contract for unsupported modalities: current source-bound service execution returns 422, while this historical requirement specifies UNK plus unsupported_modality. Publish and exercise the accepted compatibility decision; a rebuilt image or passing text route does not resolve it.",
         "next_owner": "Codex",
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
@@ -5080,7 +5080,7 @@
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
+          "Resolve the adopted wire contract for unsupported modalities: current source-bound service execution returns 422, while this historical requirement specifies UNK plus unsupported_modality. Publish and exercise the accepted compatibility decision; a rebuilt image or passing text route does not resolve it."
         ],
         "queue": "open"
       }
@@ -6421,9 +6421,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-10T19:59:26.070527+00:00",
+        "audited_at": "2026-10-10T21:29:13.613459+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded image inventory and offline verification; full license/signing mechanism incomplete"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -6440,9 +6442,16 @@
           "runs/2026-10-10-runtime-sbom-identity.json",
           "scripts/verify-runtime-sbom.py",
           "tests/test_runtime_sbom.py",
-          "eval/dependencies/runtime-sbom.json"
+          "eval/dependencies/runtime-sbom.json",
+          "docs/spdx-validation-plan.md",
+          "docs/spdx-inventory-validation.md",
+          "scripts/spdx_inventory.py",
+          "scripts/verify-runtime-sbom-standard.py",
+          "tests/test_spdx_inventory.py",
+          "runs/2026-10-10-spdx-standard-inventory.json",
+          "runs/2026-10-10-spdx-validation-controls.json"
         ],
-        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item.",
+        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted.",
         "required_acceptance": [
           "Review unknown and vendored licenses/notices and all client/build/architecture dependencies; verify scanner identity and implement/exercise source-bound Sigstore signing before full SBOM/signing acceptance."
         ],
@@ -10040,9 +10049,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-10T19:59:26.070527+00:00",
+        "audited_at": "2026-10-10T21:29:13.613459+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded image inventory and offline verification; full license/signing mechanism incomplete"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -10059,9 +10070,16 @@
           "runs/2026-10-10-runtime-sbom-identity.json",
           "scripts/verify-runtime-sbom.py",
           "tests/test_runtime_sbom.py",
-          "eval/dependencies/runtime-sbom.json"
+          "eval/dependencies/runtime-sbom.json",
+          "docs/spdx-validation-plan.md",
+          "docs/spdx-inventory-validation.md",
+          "scripts/spdx_inventory.py",
+          "scripts/verify-runtime-sbom-standard.py",
+          "tests/test_spdx_inventory.py",
+          "runs/2026-10-10-spdx-standard-inventory.json",
+          "runs/2026-10-10-spdx-validation-controls.json"
         ],
-        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item.",
+        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted.",
         "required_acceptance": [
           "Review missing license declarations, vendored/OS/model/client/runtime/font/data and build dependencies; publish reviewed notices and a source-bound conflict rejection policy for every selected personal route."
         ],

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-221510-target-twenty-five-accountability-308e2f9a",
+  "recorded_at": "2026-10-10T22:15:10.818956+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "02782870cdcf74bf33cacc8d6baa5293aca40d27",
+  "changed": "Recorded the owner target of 25 open requirements, preserved the superseded target history and enforced truthful remaining-work arithmetic against the ledger.",
+  "proves": "The current state preserves 202 IDs, 105 complete and 97 open; the updated target needs 72 further full closures. Invalid targets and erased remaining counts are refused.",
+  "limits": "No requirement completion or release acceptance granted. The pre-refresh suite correctly refused stale website evidence; refreshing the bound receipt is required before final verification.",
+  "scope_ids": [
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "e267664d374ecfea1b249bbad6717a90d16dfd2647aa434d6076dff937b42206",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "README.md": "f98c8d335df86eeed8db9f7d7ea2382aa08b41577a745ebc44e5740ee69f7b8a",
+    "docs/runtime-sbom.md": "ac7789409c81bdeebbdb72ceb6d46e18cc1346e0724c8c25cd0392d7b31fc3ef",
+    "docs/scope-25-execution.md": "d7ff9cd33bae16895b2086ee72fc304aa2c7fc47f1c93e391c78d3506c872216",
+    "docs/scope-50-execution.md": "0326a83bda56ac4590335e1d7370b2dce5b22972b632febf1584e929896f3681",
+    "docs/scope-progress.json": "5f5834b6c6761239f1d018deab8fc68ce189bbd7c0555b5569a3314a595ed92a",
+    "docs/scope-progress.md": "fcd7ae9b4530d412a8e5e1903395916b70e3ef931c84d43465fe2202076487fe",
+    "docs/spdx-inventory-validation.md": "22fdcfa81ee6c29a725af1372b6a7bec17b23ea647867cdd86c08dab7b06b752",
+    "docs/spdx-validation-plan.md": "596c687f00a24f7a00d7b555fb40a43d1d3cf8f3975b3feb25290de9cce0cf35",
+    "eval/route-boundaries.json": "23b7e6e18a1a9be89285358fb9a0cab73afd1187b4e8151064df6584fb0c80ce",
+    "runs/2026-10-10-spdx-full-python.json": "5b41dc514c8e4622c5af9acfb13a929786dbeee8ddfc6aae62295cd5a226470a",
+    "runs/2026-10-10-spdx-standard-inventory.json": "8659f5fe5d09cc29e09b05bad4702429a50acc2ecf73f028fe0f51bd05934935",
+    "runs/2026-10-10-spdx-validation-controls.json": "7b1cf673b2fb80339c1cc3d63888018e0b00939cd61230fcdb4ea3056829ebc5",
+    "runs/2026-10-10-spdx-website-revalidation.json": "5367967fc57ab6940371595490f9734c363ebf550cd41336e4e96e05545ecb32",
+    "runs/2026-10-10-target25-revalidation-order.json": "54d9b41c2ef2119eda1e3e1d533067391b1b70d5f2e8d03c97efa28993e73ec2",
+    "scripts/spdx_inventory.py": "b22cdea09d05413c3663579efbe4cfe9d8fefb5836457f6268cf233ab9924a1b",
+    "scripts/verify-accountability.py": "a51230b0ad809a361381939efb3bfd0d9e023bd83e357e00ddeda21bae2915e2",
+    "scripts/verify-route-boundaries.py": "4f9f1d15c401b29ff6c39c3d94641d3d10d04ebe1092cde0318418ce4d861a27",
+    "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
+    "site/public/reference/public-scope.json": "d09e91fec9a8a610d9cc4eea64ffd9997fccec137a3e33e64d28348e827d5537",
+    "site/src/public-scope.json": "d09e91fec9a8a610d9cc4eea64ffd9997fccec137a3e33e64d28348e827d5537",
+    "spec/vendor/spdx-2.3.1/LICENSE": "017e38491cccbd2bdb6da0a32a33db9ec245b5dab30fdcd09f2c742c975e5b35",
+    "spec/vendor/spdx-2.3.1/schema.json": "4126dc29f15e92feec92e9622f4939131ad58b125d6f578aa93e980a6e6f3212",
+    "spec/vendor/spdx-2.3.1/source.json": "84a41ebe6c9976e78d25f5aa99a535612f32d294e43311673757c9ac63717da1",
+    "state.json": "da0da11f76a34c17d3dcc82f9d0695c3778a81a81988befdf137361c44a16549",
+    "tests/test_accountability.py": "0827d80d98a4f44c9615193fb3761086d324cfb58f08b3c1eee897cff9d92782",
+    "tests/test_spdx_inventory.py": "0a4808bd3b824404765ee0d80b71f263cd8ff763fd2ba61206275fdf07dfbbb5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-target25-revalidation-order.json",
+      "sha256": "54d9b41c2ef2119eda1e3e1d533067391b1b70d5f2e8d03c97efa28993e73ec2"
+    },
+    {
+      "path": "runs/2026-10-10-spdx-website-revalidation.json",
+      "sha256": "5367967fc57ab6940371595490f9734c363ebf550cd41336e4e96e05545ecb32"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_accountability.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T22:15:12.870637+00:00"
+    }
+  ]
+}

@@ -64,6 +64,10 @@ def verify(root=ROOT):
     done=sum(r['percent_complete']==100 for r in ledger['records'])
     if state['scope_completion']['completed_records']!=done or state['scope_completion']['open_records']!=len(ledger['records'])-done:
         raise ValueError('State contradicts acceptance ledger')
+    target=state['scope_completion'].get('target_open_records')
+    if (type(target) is not int or not 0<=target<=len(ledger['records'])
+        or state['scope_completion'].get('target_remaining_closures')!=max(0,len(ledger['records'])-done-target)):
+        raise ValueError('Scope target or remaining closures contradicts acceptance ledger')
     return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,
             'requirements':len(ledger['records']),'completed_records':done,'open_records':len(ledger['records'])-done,
             'named_lanes':len(lanes),'legal_institution_or_sla_claimed':False,

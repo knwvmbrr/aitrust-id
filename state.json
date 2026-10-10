@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T21:16:49.311012+00:00",
+  "updated": "2026-10-10T22:25:08.915014+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1052,
+  "python_tests_passed": 1099,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -707,7 +707,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T20:58:39.656735+00:00",
+    "audited_at": "2026-10-10T21:29:13.613459+00:00",
     "completed_records": 105,
     "open_records": 97,
     "records_preserved": 202,
@@ -723,14 +723,17 @@
     "source_commit": "a8919741319877e9bb619424222ece251f17e81d",
     "public_workflow_evidence": "runs/2026-10-10-dependency-accepted-site-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/dependency-automation-result.md",
+    "latest_increment": "docs/spdx-inventory-validation.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
-    "target_open_records": 50,
+    "target_open_records": 25,
     "target_start_open_records": 100,
-    "target_remaining_closures": 47,
-    "publication_pending": false,
-    "verification": "runs/2026-10-10-dependency-acceptance-scope.json"
+    "target_remaining_closures": 72,
+    "publication_pending": true,
+    "verification": "runs/2026-10-10-dependency-acceptance-scope.json",
+    "target_plan": "docs/scope-25-execution.md",
+    "target_direction_date": "2026-10-10",
+    "current_target_verification": "runs/2026-10-10-target25-source-checks-repaired.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1005,11 +1008,11 @@
     "PII_REDACTED": "runs/2026-10-10-required-ci-pii-redacted.json",
     "protocol": "runs/2026-10-10-required-ci-protocol.json",
     "extension": "runs/2026-10-10-required-ci-extension.json",
-    "website": "runs/2026-10-10-dependency-acceptance-website.json",
+    "website": "runs/2026-10-10-spdx-website-revalidation-repaired.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T21:16:49.311012+00:00",
+  "updated_at": "2026-10-10T22:25:08.915014+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1094,12 +1097,22 @@
     "positive_acceptance": "runs/2026-10-10-required-ci-positive-acceptance.json"
   },
   "dependency_license_audit": {
-    "status": "three_observed_linux_images_inventoried; unsigned; incomplete_license_and_client_coverage",
+    "status": "three_observed_linux_images_pass_pinned_official_spdx_schema_and_selected_consistency; unsigned; incomplete_license_and_client_coverage",
     "package_occurrences": 421,
     "manifest": "eval/dependencies/runtime-sbom.json",
     "evidence": "runs/2026-10-10-runtime-license-inventory.json",
     "license_cleared": false,
-    "release_signed": false
+    "release_signed": false,
+    "spdx_standard_evidence": "runs/2026-10-10-spdx-standard-inventory.json",
+    "spdx_control_evidence": "runs/2026-10-10-spdx-validation-controls.json",
+    "full_python_evidence": "runs/2026-10-10-target25-source-checks-repaired.json",
+    "standard_verification_offline": true,
+    "package_verification_codes_recomputed": 261,
+    "new_hosted_check_observed": true,
+    "website_revalidation": "runs/2026-10-10-spdx-website-revalidation-repaired.json",
+    "precondition_diagnosis": "runs/2026-10-10-target25-revalidation-order.json",
+    "hosted_source_evidence": "runs/2026-10-10-spdx-first-hosted-engineering-pass.json",
+    "readme_review_evidence": "runs/2026-10-10-spdx-readme-current-render.json"
   },
   "dependency_automation": {
     "status": "protected_source_merged; codeowners_accepted; all_ten_actual_update_jobs_succeeded; proposal_held_by_required_checks",

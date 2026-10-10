@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-222509-readme-spdx-review-and-hosted-proof-30da7981",
+  "recorded_at": "2026-10-10T22:25:09.099873+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a3c3e2509fa80aa4cc827395a8ecddefecce9437",
+  "changed": "Restored the README capability table and corrected stale test/protection statements against actual evidence; recorded both successful hosted engineering workflows before the review fix.",
+  "proves": "GitHub GFM rendering places all capability rows in one table. All eleven required contexts passed on both a3c3e25 workflows, including the new SPDX verifier and corruption checks.",
+  "limits": "Review-fix source requires new checks and normal protected merge. Independent tag gates remain unmet; no dependency license clearance or release signature granted.",
+  "scope_ids": [
+    "F-057",
+    "F-054",
+    "F-150",
+    "F-152"
+  ],
+  "files": {
+    "README.md": "0426b647866dfdce98845c8ee4aa49cceddb0942436e474838adec426a5735ff",
+    "docs/spdx-inventory-validation.md": "17e8bd602f6ca1b5061b8d5c031079bbaece114247c3aeff15b52302a69e0751",
+    "runs/2026-10-10-spdx-first-hosted-engineering-pass.json": "61e80e9de1ac6087948232833739681880a37f40736d1b65e8ead048b0903db1",
+    "runs/2026-10-10-spdx-readme-current-render.json": "17733953385e8daf1f52844f67daa1e3555830f279969167e159010132f1868a",
+    "runs/2026-10-10-spdx-readme-render-correction.json": "806bb557d2c06b71e1914af3169163d3dda53741a560aad1f56ab3ca15841915",
+    "state.json": "4262e7f31cceca4a40300906506958ebac3b560afebf7d2fa3d50a1a3abfdd8c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-spdx-readme-render-correction.json",
+      "sha256": "806bb557d2c06b71e1914af3169163d3dda53741a560aad1f56ab3ca15841915"
+    },
+    {
+      "path": "runs/2026-10-10-spdx-readme-current-render.json",
+      "sha256": "17733953385e8daf1f52844f67daa1e3555830f279969167e159010132f1868a"
+    },
+    {
+      "path": "runs/2026-10-10-spdx-first-hosted-engineering-pass.json",
+      "sha256": "61e80e9de1ac6087948232833739681880a37f40736d1b65e8ead048b0903db1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T22:25:09.452112+00:00"
+    }
+  ]
+}

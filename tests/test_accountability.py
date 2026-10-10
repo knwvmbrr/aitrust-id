@@ -33,6 +33,13 @@ def test_unassigned_lane_rejected(snapshot):
 def test_stale_scope_count_rejected(snapshot):
     mutate(snapshot,'state.json',lambda d:d['scope_completion'].update(open_records=d['scope_completion']['open_records']+1))
     with pytest.raises(ValueError,match='contradicts'):m.verify(snapshot)
+@pytest.mark.parametrize('target',[None,True,-1,203])
+def test_invalid_goal_target_refused(snapshot,target):
+    mutate(snapshot,'state.json',lambda d:d['scope_completion'].update(target_open_records=target))
+    with pytest.raises(ValueError,match='Scope target'):m.verify(snapshot)
+def test_remaining_work_cannot_be_erased_from_target(snapshot):
+    mutate(snapshot,'state.json',lambda d:d['scope_completion'].update(target_remaining_closures=0))
+    with pytest.raises(ValueError,match='remaining closures'):m.verify(snapshot)
 def test_missing_execution_contract_rejected(snapshot):
     (snapshot/'docs/changelog-policy.md').unlink()
     with pytest.raises(ValueError):m.verify(snapshot)

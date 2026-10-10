@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-10T22:15:04.095867+00:00",
+  "kind": "failed_precondition_diagnosis",
+  "pass": false,
+  "python_tests_passed": 1097,
+  "python_tests_failed": 2,
+  "failure_signature": "Missing or stale browser execution",
+  "root_cause": "Full suite ran before the new website capability receipt was selected; website rebuild also required a change record for the newly authorized target/state edits.",
+  "planned_repair": "Record target/accountability edits, execute website revalidation, select only its passing receipt, then rerun the affected full suite.",
+  "failure_log_sha256": "36dac1c06157abddb4b24485051e609d43858e768e3bf148c139860c65878fbd",
+  "release_approved": false,
+  "requirement_completion_granted": false
+}

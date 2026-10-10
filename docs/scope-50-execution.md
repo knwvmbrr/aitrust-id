@@ -1,5 +1,9 @@
 # Open queue target: 50 — execution plan
 
+Historical target, superseded by the owner's October 10, 2026 direction to reach
+[25 open requirements](scope-25-execution.md). Implementation history below is
+retained; it is not the current target.
+
 Owner direction: reduce the 100 open full requirements to 50, preserving all 202
 scope records. A completed document or a component is not completion of a whole
 pilot, deployed collection pipeline, legal formation, physical-device route or
