@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-210115-dependency-acceptance-current-website-proof-1b160bba",
+  "recorded_at": "2026-10-10T21:01:15.609556+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "de17261dd11cda50aa2908cabc713168af38ecb3",
+  "changed": "Bind the accepted ledger to fresh website execution and current reviewed deployment boundaries.",
+  "proves": "Four website checks pass; 143 reviewed sources preserve source-bound service, device and replay controls; all 202 scope IDs retained.",
+  "limits": "Engineering checks only; no independent accuracy, physical phone or production dependency upgrade claim.",
+  "scope_ids": [
+    "F-152",
+    "F-054"
+  ],
+  "files": {
+    "docs/dependency-automation-result.md": "a470a3571b41e4e4fb113571709fc0454ad1a0abe5accf76c93674014222e1a0",
+    "docs/scope-progress.json": "66703112b8a7b264c0e8bff66e4cd84ca7d5bb0e1d07160c1190d50d0671b3b0",
+    "docs/scope-progress.md": "8bb51d01e159893e98472db9566a54fd59c05624982933efb27499ebcbbf88ea",
+    "eval/route-boundaries.json": "7cbdc3ccaa7dc8807a8c91a70815bfcffc9758ba5b69df82d1909fef671e79d9",
+    "runs/2026-10-10-dependency-acceptance-boundaries.json": "1473c8ea911027da704e121d3038dd0d01d6fb9bc6209bc89aac22dceb9d1a07",
+    "runs/2026-10-10-dependency-acceptance-scope.json": "5559fb902c81aa3bc2a0a67da70230071d0c9ac6eb6fd20694d9c4b83d5e857f",
+    "runs/2026-10-10-dependency-acceptance-website.json": "a65c90b0f31d990518b4cef6ba125e378060a2ddee0b7254fd37c2c72a58811f",
+    "runs/2026-10-10-dependency-automation-hosted-acceptance.json": "09f8c6e8dd2963a67ef36c17eb447bcac2bbe2bc847bc0c5a5a3e3cd88a368c7",
+    "site/public/reference/public-scope.json": "c66796a7aaa1ed69285babaa13e7379a21591eb68d9b65c77362dd673eaa4dec",
+    "site/src/public-scope.json": "c66796a7aaa1ed69285babaa13e7379a21591eb68d9b65c77362dd673eaa4dec",
+    "state.json": "33765e2711190edd9222e0726f33218964c701c0f6c47bd650e958e1c7b0f966"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-dependency-acceptance-website.json",
+      "sha256": "a65c90b0f31d990518b4cef6ba125e378060a2ddee0b7254fd37c2c72a58811f"
+    },
+    {
+      "path": "runs/2026-10-10-dependency-acceptance-boundaries.json",
+      "sha256": "1473c8ea911027da704e121d3038dd0d01d6fb9bc6209bc89aac22dceb9d1a07"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-route-boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T21:01:16.195234+00:00"
+    }
+  ]
+}

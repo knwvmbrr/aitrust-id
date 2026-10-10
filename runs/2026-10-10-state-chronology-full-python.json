@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-10T21:08:52.393879+00:00",
+  "pass": true,
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "python_tests_passed": 1052,
+  "warnings": 1,
+  "warning_scope": "Existing Starlette/httpx deprecation; no unrelated dependency upgrade performed.",
+  "stdout_stderr_sha256": "2b545c4488c90a4f3c5b09418a028fb154c43fc52a7f68fb26d64a8aedf94e9c",
+  "source_revision_base": "f6edcce7adb4e8eaf7675975b575396f56335994",
+  "source_changes_tested": [
+    "scripts/verify-accountability.py",
+    "tests/test_accountability.py",
+    "state.json"
+  ],
+  "independent_accuracy": false,
+  "physical_device": false
+}

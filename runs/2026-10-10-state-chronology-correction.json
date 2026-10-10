@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-10T21:07:32.576294+00:00",
+  "pass": true,
+  "requirements": 202,
+  "completed_records": 105,
+  "open_records": 97,
+  "named_lanes": 6,
+  "legal_institution_or_sla_claimed": false,
+  "independent_accuracy_evidence": false,
+  "owner_availability_verified": false,
+  "state_evidence_references": 137,
+  "timed_evidence_references": 119,
+  "untimed_evidence_references": 18,
+  "latest_referenced_timestamp": "2026-10-10T21:00:48.133249+00:00",
+  "state_chronology_verified": true,
+  "kind": "actual_state_chronology_review_correction",
+  "review_pr": "https://github.com/knwvmbrr/aitrust-id/pull/11",
+  "review_thread": "PRRT_kwDOVBYh3s6rHw3F",
+  "finding": "State timestamp preceded its newly referenced website execution receipt.",
+  "prior_state_timestamp": "2026-10-10T20:58:39.656735+00:00",
+  "referenced_website_timestamp": "2026-10-10T21:00:48.133249+00:00",
+  "implemented_by": "Codex",
+  "source_sha256": {
+    "scripts/verify-accountability.py": "15dc21704432140df6b863c057b75e2ae5843ff99c972ecfb75dc38646e4a4c6",
+    "tests/test_accountability.py": "8f04785269fdb55139930b5e04149cffc7b0fb632dd2cd4c08316014c91d5071"
+  },
+  "targeted_tests_passed": 23,
+  "review_thread_resolved": false,
+  "new_hosted_source_verified": false,
+  "tag_release_approved": false
+}
