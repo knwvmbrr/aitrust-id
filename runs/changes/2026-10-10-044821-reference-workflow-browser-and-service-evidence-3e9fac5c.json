@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-044821-reference-workflow-browser-and-service-evidence-3e9fac5c",
+  "recorded_at": "2026-10-10T04:48:21.292231+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7c3c0a7fd4ea213e78688b71bf61b353cc90b8e7",
+  "changed": "Record current-source Linux service recheck and independent browser engineering runs without overwriting historical evidence.",
+  "proves": "30 real service HTTP checks pass; all 20 catalogue panels and static exports pass; six real on-device PS result cases pass with zero axe findings and matching changelog download.",
+  "limits": "No human review, physical device test or independent accuracy; staging is isolated from production data; broader adapter gates remain open.",
+  "scope_ids": [
+    "F-081",
+    "F-078",
+    "F-150",
+    "WP-SITE",
+    "N-003"
+  ],
+  "files": {
+    "Makefile": "4f01983fa70bd462e585eca6d08177a7d7b7333535ede5af6db8c0c4311f9ebc",
+    "README.md": "aef67243edc08350181f7c38f08e08d35fc2ea499adcd8d9f6924e0a3697cb2a",
+    "docs/local-reference-corpus.md": "64c00f4175207b3d87b23b0013f2e4942f3e0f718dfa088f437f92799686d76b",
+    "docs/scope-100-execution.md": "a364c7f5256e32fe5dfc9de6ea583a34a646aa05c264891192899c5b054dc1c9",
+    "docs/scope-progress.json": "e7198717be1eabfa9f2d82792b0b879b0dcdda1bb20fe9e52e748828ad7e86c4",
+    "docs/scope-progress.md": "dffb948714abc0779d4253ddca1dae356e28211adb1bcfd2c7daa7586c1d13d1",
+    "docs/scope-task-index.md": "ac83977fa79ab9ecf02831b2662abe744cfcd9ea46a2cfee9f4f37b4036afc14",
+    "docs/subject-contract.md": "a7c35149955407156186687c41c178e51e613ab658c11bf6ff9c866441ec9829",
+    "eval/vectors/subjects-v1.json": "3e47d7e698f9e16926a68fbf82d39cbd23f7e9a63f4c38deaab526782f7c086c",
+    "protocol/corpus.py": "b4aba3388d4aebc070bffd184fe06f3f20ad04cf05946405192f309796bfb6f2",
+    "runs/2026-10-10-current-service-recheck.json": "b6333d4b58c30b791f1ea404ecc6cbfcd1b04083c5ac03f33c591bc5e448cf4d",
+    "runs/2026-10-10-local-reference-corpus.json": "b8a8741dca6ddd9ed44ca8a99324f02b3e6f6abe7697418ec0a274b1fcd8b4b9",
+    "runs/2026-10-10-reference-approachability-local.json": "c947d8c1adad1b726d78824e29cd467dd1059b6c6bda27f72dcd48aaf2de3fe9",
+    "runs/2026-10-10-reference-ps-local.json": "90a044f1aec1547af1c92613db61b027713f5cc6663bc473fdca2a49a2c7af54",
+    "runs/2026-10-10-reference-scope.json": "a093507d04a15d438614d8e1d511a10c255922254c51766a3ad24cece792fcf3",
+    "runs/2026-10-10-reference-site-local.json": "aaec23d1793f637488ca9a409a76737d9dac1cceea8f1926bac601f90b90978d",
+    "runs/2026-10-10-subject-negative-conformance.json": "b205428ece874faafb2ba4163f1512150b18f9151ef213dd9fa6ecc52ea1f19c",
+    "scripts/corpus.py": "bb1c5374838f45882c3efb6332abb010799875b819d9197f061d5409ad1d6309",
+    "scripts/verify-subjects.py": "d87a6b981df26d2df2203463a8bf8e70d91593f3d8ebc6fe7799b8b2592fd2da",
+    "site/index.html": "839a03ddd5ef980eba9ddb8f8a7e015f1c18f89885b3cd8200e7db2f83fd2356",
+    "site/public/reference/bounded-service-conformance.json": "427a9841cda44f0417a370cb0174b8eb4e6fa345818b5dc49dff430e0ac7db05",
+    "site/public/reference/local-reference-corpus.md": "64c00f4175207b3d87b23b0013f2e4942f3e0f718dfa088f437f92799686d76b",
+    "site/public/reference/public-scope.json": "dde7568b060e46c832fcd9d42d3927c5f8ac624fcc07984bc51f1f9edbd33c0c",
+    "site/public/reference/service-resource-faults.json": "bc435aa42b049dc089e554c0f3c922c43867a870aab99a1b35769bd51a69d618",
+    "site/scripts/prepare.mjs": "e94a7eff7d81425861d88846d11c212200e8eadc45555c815920852ce25e5ee9",
+    "site/src/catalog.js": "25db3d1c15e4855700635d34bb9be06b61d18f1abd357304a12977e556ed22a6",
+    "site/src/public-scope.json": "dde7568b060e46c832fcd9d42d3927c5f8ac624fcc07984bc51f1f9edbd33c0c",
+    "state.json": "cd1fc84d7aa81237ea086f930fe529a54d9679badbaa3b3eca4e237b6b015d14",
+    "tests/test_local_corpus.py": "3af243113ad8d48193e743db4624a36c1b911fb323808684ad89d6fac33ff3c0",
+    "tests/test_subject_contract.py": "f3085841b600e21480a7ccfc49c4fcdb1ad6ee849a2a554876f98618d8369fb1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-current-service-recheck.json",
+      "sha256": "b6333d4b58c30b791f1ea404ecc6cbfcd1b04083c5ac03f33c591bc5e448cf4d"
+    },
+    {
+      "path": "runs/2026-10-10-reference-site-local.json",
+      "sha256": "aaec23d1793f637488ca9a409a76737d9dac1cceea8f1926bac601f90b90978d"
+    },
+    {
+      "path": "runs/2026-10-10-reference-approachability-local.json",
+      "sha256": "c947d8c1adad1b726d78824e29cd467dd1059b6c6bda27f72dcd48aaf2de3fe9"
+    },
+    {
+      "path": "runs/2026-10-10-reference-ps-local.json",
+      "sha256": "90a044f1aec1547af1c92613db61b027713f5cc6663bc473fdca2a49a2c7af54"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T04:48:21.527472+00:00"
+    }
+  ]
+}

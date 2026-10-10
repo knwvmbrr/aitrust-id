@@ -20,6 +20,9 @@ make arbitrary bytes executable or prove a language parser accepts them.
 `eval/vectors/subjects-v1.json` carries fixed expected outputs and deliberately
 different code/text artifacts. Run `python3 scripts/verify-subjects.py` with Node
 available to compare both implementations. Invalid and oversized inputs fail.
+The public vectors include 19 exact-output cases and eight invalid-input cases;
+oversized cases use compact repetition instructions. Both language implementations
+must reject every invalid case, including unpaired surrogates and wrong types.
 
 The gateway still evaluates **text only**, including code pasted as text. The raw
 code subject primitive is an implementer contract, not a functioning code-modality

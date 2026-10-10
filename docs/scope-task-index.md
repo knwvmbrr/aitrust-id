@@ -13,7 +13,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-007 | Content-free assertion records | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-009 | Evidence durability and cost-to-defeat assessment | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-078 | Conformance vectors for text and code subject hashes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-078 | Conformance vectors for text and code subject hashes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-079 | Route-specific privacy clauses with executed evidence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-080 | Subject hash documented as a correlation identifier, not an anonymisation | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-076 | RFC process — template, 14-day comment, evidence requirement | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
@@ -43,7 +43,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-019c | sig.authority_appeal.v1 — unattributed appeals to expertise or consensus | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-081 | Bring-your-own corpus — the user attaches their own reference material locally | [WP-REFERENCES](scope-delivery.md#wp-references) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-081 | Bring-your-own corpus — the user attaches their own reference material locally | [WP-REFERENCES](scope-delivery.md#wp-references) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-026 | sig.keystroke_liveness.v1 — dwell and flight time distributions | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-027 | sig.revision_churn.v1 — deleted-and-rewritten characters over final length | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-028 | sig.compose_monotonicity.v1 — caret-position entropy | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |

@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-10-10T04:43:37.387780+00:00",
+  "pass": true,
+  "argv": [
+    "verification Python 3.12.14",
+    "-m",
+    "pytest",
+    "tests/test_local_corpus.py",
+    "-q"
+  ],
+  "summary": ".............................                                            [100%]\n29 passed in 0.18s",
+  "checks": [
+    "actual CLI create/query/inspect",
+    "NFC source and query spans",
+    "owner-held private storage",
+    "manifest and source tamper rejection",
+    "invalid JSON and Unicode",
+    "FIFO and symlink rejection",
+    "document/query/match/total byte bounds",
+    "no overwrite",
+    "no network",
+    "hostile text remains passive",
+    "stdin query avoids process arguments"
+  ],
+  "source_sha256": {
+    "protocol/corpus.py": "b4aba3388d4aebc070bffd184fe06f3f20ad04cf05946405192f309796bfb6f2",
+    "scripts/corpus.py": "bb1c5374838f45882c3efb6332abb010799875b819d9197f061d5409ad1d6309",
+    "tests/test_local_corpus.py": "3af243113ad8d48193e743db4624a36c1b911fb323808684ad89d6fac33ff3c0"
+  },
+  "detector_or_tag_assertion": false,
+  "independent_accuracy_evidence": false,
+  "user_content_in_report": false
+}

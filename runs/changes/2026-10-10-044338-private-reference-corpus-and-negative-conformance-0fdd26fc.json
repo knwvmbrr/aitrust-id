@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-044338-private-reference-corpus-and-negative-conformance-0fdd26fc",
+  "recorded_at": "2026-10-10T04:43:38.029510+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7c3c0a7fd4ea213e78688b71bf61b353cc90b8e7",
+  "changed": "Add offline owner-held reference attachment and literal passage queries; execute invalid subject vectors in Python and Node; expose current service evidence in PS details.",
+  "proves": "29 corpus checks and 19 positive plus eight invalid hash vectors pass; 461 Python tests pass; 202 scope IDs retained with 171 requirements open.",
+  "limits": "Literal reference matches do not release NF/FI; no independent labels or outside implementer acceptance; PS remains a development preview; public deployment pending.",
+  "scope_ids": [
+    "F-081",
+    "F-078",
+    "T-NF",
+    "T-FI",
+    "N-003",
+    "F-150"
+  ],
+  "files": {
+    "Makefile": "4f01983fa70bd462e585eca6d08177a7d7b7333535ede5af6db8c0c4311f9ebc",
+    "README.md": "aef67243edc08350181f7c38f08e08d35fc2ea499adcd8d9f6924e0a3697cb2a",
+    "docs/local-reference-corpus.md": "64c00f4175207b3d87b23b0013f2e4942f3e0f718dfa088f437f92799686d76b",
+    "docs/scope-100-execution.md": "a364c7f5256e32fe5dfc9de6ea583a34a646aa05c264891192899c5b054dc1c9",
+    "docs/scope-progress.json": "e7198717be1eabfa9f2d82792b0b879b0dcdda1bb20fe9e52e748828ad7e86c4",
+    "docs/scope-progress.md": "dffb948714abc0779d4253ddca1dae356e28211adb1bcfd2c7daa7586c1d13d1",
+    "docs/scope-task-index.md": "ac83977fa79ab9ecf02831b2662abe744cfcd9ea46a2cfee9f4f37b4036afc14",
+    "docs/subject-contract.md": "a7c35149955407156186687c41c178e51e613ab658c11bf6ff9c866441ec9829",
+    "eval/vectors/subjects-v1.json": "3e47d7e698f9e16926a68fbf82d39cbd23f7e9a63f4c38deaab526782f7c086c",
+    "protocol/corpus.py": "b4aba3388d4aebc070bffd184fe06f3f20ad04cf05946405192f309796bfb6f2",
+    "runs/2026-10-10-local-reference-corpus.json": "b8a8741dca6ddd9ed44ca8a99324f02b3e6f6abe7697418ec0a274b1fcd8b4b9",
+    "runs/2026-10-10-reference-scope.json": "a093507d04a15d438614d8e1d511a10c255922254c51766a3ad24cece792fcf3",
+    "runs/2026-10-10-subject-negative-conformance.json": "b205428ece874faafb2ba4163f1512150b18f9151ef213dd9fa6ecc52ea1f19c",
+    "scripts/corpus.py": "bb1c5374838f45882c3efb6332abb010799875b819d9197f061d5409ad1d6309",
+    "scripts/verify-subjects.py": "d87a6b981df26d2df2203463a8bf8e70d91593f3d8ebc6fe7799b8b2592fd2da",
+    "site/scripts/prepare.mjs": "e94a7eff7d81425861d88846d11c212200e8eadc45555c815920852ce25e5ee9",
+    "site/src/catalog.js": "25db3d1c15e4855700635d34bb9be06b61d18f1abd357304a12977e556ed22a6",
+    "state.json": "087ee9ce0d47ccc0e397e7aafca7b26e7aab15b8c72f927081a28d400761dfec",
+    "tests/test_local_corpus.py": "3af243113ad8d48193e743db4624a36c1b911fb323808684ad89d6fac33ff3c0",
+    "tests/test_subject_contract.py": "f3085841b600e21480a7ccfc49c4fcdb1ad6ee849a2a554876f98618d8369fb1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-local-reference-corpus.json",
+      "sha256": "b8a8741dca6ddd9ed44ca8a99324f02b3e6f6abe7697418ec0a274b1fcd8b4b9"
+    },
+    {
+      "path": "runs/2026-10-10-subject-negative-conformance.json",
+      "sha256": "b205428ece874faafb2ba4163f1512150b18f9151ef213dd9fa6ecc52ea1f19c"
+    },
+    {
+      "path": "runs/2026-10-10-reference-scope.json",
+      "sha256": "a093507d04a15d438614d8e1d511a10c255922254c51766a3ad24cece792fcf3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T04:43:38.150916+00:00"
+    }
+  ]
+}

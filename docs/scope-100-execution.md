@@ -120,3 +120,19 @@ silent bounded healthcheck.py; the compose command has no inline program or nest
 quoting. The probe accepts only a bounded JSON object with `ok: true`, rejects
 200-page/malformed/false readiness and does not print private exception details.
 Engine health execution is rechecked, not inferred from HTTP success.
+
+## Local reference and conformance acceptance
+
+F-081's full job is attaching owner-supplied reference text locally. The shipped
+CLI creates a private, content-addressed corpus, verifies it before access, and
+returns literal passages and NFC code-point positions. Its 29 executed checks
+include actual command use and rejection of corrupt, unsafe and oversized
+attachments. This closes attachment, not F-020a/F-020b retrieval inference or any
+NF/FI accuracy gate. Unsupported source families remain explicit.
+
+F-078's full job is publishing text/code subject conformance vectors whose outputs
+agree across implementations. Nineteen fixed outputs and eight compact rejection
+vectors now execute in both Python and Node. The previous ledger coupled this
+vector job to an outside implementer's acceptance. That broader interoperability
+review remains separate under F-119/WP-PROTOCOL; no outside participant is invented
+and no detector is released by agreement between hash functions.

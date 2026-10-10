@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-044821-reference-workflow-browser-and-service-evidence-3e9fac5c
+
+Recorded 2026-10-10T04:48:21.292231+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source Linux service recheck and independent browser engineering runs without overwriting historical evidence.
+- **Evidence.** 30 real service HTTP checks pass; all 20 catalogue panels and static exports pass; six real on-device PS result cases pass with zero axe findings and matching changelog download. [Change record](./runs/changes/2026-10-10-044821-reference-workflow-browser-and-service-evidence-3e9fac5c.json).
+- **Not claimed.** No human review, physical device test or independent accuracy; staging is isolated from production data; broader adapter gates remain open.
+
+
+### 2026-10-10-044408-reference-catalogue-build-projection-7eb0dc3d
+
+Recorded 2026-10-10T04:44:08.422770+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate public scope and reference downloads for the verified local corpus and current service evidence.
+- **Evidence.** Site build succeeds; canonical source copies include all 202 records and the matching new engineering evidence. [Change record](./runs/changes/2026-10-10-044408-reference-catalogue-build-projection-7eb0dc3d.json).
+- **Not claimed.** Public deployment and browser verification follow; independent tag release remains pending.
+
+
+### 2026-10-10-044338-private-reference-corpus-and-negative-conformance-0fdd26fc
+
+Recorded 2026-10-10T04:43:38.029510+00:00 · Contributor: Codex · change
+
+- **Changed.** Add offline owner-held reference attachment and literal passage queries; execute invalid subject vectors in Python and Node; expose current service evidence in PS details.
+- **Evidence.** 29 corpus checks and 19 positive plus eight invalid hash vectors pass; 461 Python tests pass; 202 scope IDs retained with 171 requirements open. [Change record](./runs/changes/2026-10-10-044338-private-reference-corpus-and-negative-conformance-0fdd26fc.json).
+- **Not claimed.** Literal reference matches do not release NF/FI; no independent labels or outside implementer acceptance; PS remains a development preview; public deployment pending.
+
+
 ### 2026-10-10-043655-prevent-dependency-links-in-source-distribution-7dfed6ed
 
 Recorded 2026-10-10T04:36:55.312120+00:00 · Contributor: Codex · change

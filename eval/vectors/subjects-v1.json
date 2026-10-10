@@ -17,7 +17,7 @@
     {
       "id": "text-1",
       "modality": "text",
-      "text": "é",
+      "text": "e\u0301",
       "expected": {
         "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
         "length": 1,
@@ -29,7 +29,7 @@
     {
       "id": "text-2",
       "modality": "text",
-      "text": "é",
+      "text": "\u00e9",
       "expected": {
         "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
         "length": 1,
@@ -41,7 +41,7 @@
     {
       "id": "text-3",
       "modality": "text",
-      "text": "🧪 José",
+      "text": "\ud83e\uddea Jos\u00e9",
       "expected": {
         "sha256": "082bc47c7142221530af0efa7cfb7331acad04dee24fb76efd4d4819178193e5",
         "length": 6,
@@ -53,7 +53,7 @@
     {
       "id": "text-4",
       "modality": "text",
-      "text": "日本語",
+      "text": "\u65e5\u672c\u8a9e",
       "expected": {
         "sha256": "77710aedc74ecfa33685e33a6c7df5cc83004da1bdcef7fb280f5c2b2e97e0a5",
         "length": 3,
@@ -113,7 +113,7 @@
     {
       "id": "text-9",
       "modality": "text",
-      "text": "👩🏽‍💻",
+      "text": "\ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb",
       "expected": {
         "sha256": "b1e0232190991f0337645cb23fb896790216a8488f6c1d59f4cdf874cf5ec806",
         "length": 4,
@@ -125,7 +125,7 @@
     {
       "id": "text-10",
       "modality": "text",
-      "text": "﻿code",
+      "text": "\ufeffcode",
       "expected": {
         "sha256": "b9327b3e9abd5782aa24400db3c6754c8ef67469a60c8b192eccd7e1c3071009",
         "length": 5,
@@ -137,7 +137,7 @@
     {
       "id": "text-11",
       "modality": "text",
-      "text": "Å",
+      "text": "\u212b",
       "expected": {
         "sha256": "0a94dc9d420d1142d6b71de60f9bf7e2f345a4d62c9f141b091539769ddf3075",
         "length": 1,
@@ -228,6 +228,54 @@
         "offset_unit": "byte",
         "modality": "code",
         "contract_version": "subject-v1"
+      }
+    }
+  ],
+  "reject_vectors": [
+    {
+      "id": "text-null",
+      "modality": "text",
+      "text": null
+    },
+    {
+      "id": "text-number",
+      "modality": "text",
+      "text": 5
+    },
+    {
+      "id": "text-high-surrogate",
+      "modality": "text",
+      "text": "\ud800"
+    },
+    {
+      "id": "text-low-surrogate",
+      "modality": "text",
+      "text": "\udfff"
+    },
+    {
+      "id": "text-oversize",
+      "modality": "text",
+      "repeat": {
+        "value": "x",
+        "count": 200001
+      }
+    },
+    {
+      "id": "code-null",
+      "modality": "code",
+      "value": null
+    },
+    {
+      "id": "code-string",
+      "modality": "code",
+      "value": "abc"
+    },
+    {
+      "id": "code-oversize",
+      "modality": "code",
+      "repeat_byte": {
+        "value": 0,
+        "count": 800001
       }
     }
   ]

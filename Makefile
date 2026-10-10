@@ -99,3 +99,7 @@ verify-changelog:
 	$(PYTHON) scripts/verify-changelog.py
 hooks-install:
 	git config --local core.hooksPath .githooks
+
+.PHONY: corpus-test
+corpus-test:
+	$(PYTHON) -m pytest tests/test_local_corpus.py -q

@@ -24,7 +24,27 @@ const v=JSON.parse(require('node:fs').readFileSync(0,'utf8'));
 process.stdout.write(JSON.stringify(v.map(x=>x.modality==='text'?m.textSubject(x.text):m.codeSubject(Buffer.from(x.base64,'base64')))));'''
     result=subprocess.run([node,'-e',program],cwd=ROOT,input=json.dumps(vectors['vectors']),capture_output=True,text=True,check=True)
     assert json.loads(result.stdout)==observed
-    return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,'contract_version':'subject-v1','vectors':len(observed),'implementations':['Python hashlib/unicodedata','Node crypto/normalize'],'outside_implementer_acceptance':False,'independent_accuracy_evidence':False,'code_gateway_support':False}
+    rejected=[]
+    for v in vectors['reject_vectors']:
+        value=v.get('text') if v['modality']=='text' else v.get('value')
+        if 'repeat' in v:value=v['repeat']['value']*v['repeat']['count']
+        if 'repeat_byte' in v:value=bytes([v['repeat_byte']['value']])*v['repeat_byte']['count']
+        try:
+            (m.text_subject if v['modality']=='text' else m.code_subject)(value)
+        except ValueError:rejected.append(v['id'])
+        else:raise AssertionError('Invalid input accepted '+v['id'])
+    negative_program='''const m=require('./protocol/subjects.cjs');
+const vectors=JSON.parse(require('node:fs').readFileSync(0,'utf8'));
+process.stdout.write(JSON.stringify(vectors.map(v=>{
+ let value=v.modality==='text'?v.text:v.value;
+ if(v.repeat)value=v.repeat.value.repeat(v.repeat.count);
+ if(v.repeat_byte)value=Buffer.alloc(v.repeat_byte.count,v.repeat_byte.value);
+ try { (v.modality==='text'?m.textSubject:m.codeSubject)(value); return null; }
+ catch { return v.id; }
+})));'''
+    negative=subprocess.run([node,'-e',negative_program],cwd=ROOT,input=json.dumps(vectors['reject_vectors']),capture_output=True,text=True,check=True)
+    assert json.loads(negative.stdout)==rejected,'Node/Python rejection mismatch'
+    return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,'contract_version':'subject-v1','vectors':len(observed),'reject_vectors':len(rejected),'implementations':['Python hashlib/unicodedata','Node crypto/normalize'],'outside_implementer_acceptance':False,'independent_accuracy_evidence':False,'code_gateway_support':False}
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path);a=p.parse_args();r=verify()
     if a.output:a.output.write_text(json.dumps(r,indent=2)+'\n')

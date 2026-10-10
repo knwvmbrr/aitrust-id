@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T04:35:10.633801+00:00",
+  "audited_at": "2026-10-10T04:43:37.387780+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -297,37 +297,40 @@
       "id": "F-078",
       "kind": "requirement",
       "title": "Conformance vectors for text and code subject hashes",
-      "percent_complete": 80,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
         "executable_checks",
-        "selected_integration"
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:43:37.387780+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Publish complete text/code conformance vectors with external implementation execution; the current Unicode/service tests are useful but do not establish complete cross-implementation conformance.",
-      "next_owner": "Codex vectors; outside implementer review",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:43:37.387780+00:00",
+      "completion_timestamp_basis": "Current full named component job executed; no detector accuracy, human review, or outside implementer adoption inferred",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "tests/test_gateway_integration.py",
-        "tests/test_redaction_contract.py",
-        "spec/assertion.schema.json"
+        "protocol/subjects.py",
+        "protocol/subjects.cjs",
+        "eval/vectors/subjects-v1.json",
+        "scripts/verify-subjects.py",
+        "tests/test_subject_contract.py",
+        "runs/2026-10-10-subject-negative-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "External conformance vector execution"
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-079",
@@ -1237,29 +1240,39 @@
       "id": "F-081",
       "kind": "requirement",
       "title": "Bring-your-own corpus \u2014 the user attaches their own reference material locally",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:43:37.387780+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Bring-your-own corpus \u2014 the user attaches their own reference material locally. Next package action: Validate supported source formats and provenance without executing attachments. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:43:37.387780+00:00",
+      "completion_timestamp_basis": "Current full named component job executed; no detector accuracy, human review, or outside implementer adoption inferred",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "protocol/corpus.py",
+        "scripts/corpus.py",
+        "docs/local-reference-corpus.md",
+        "tests/test_local_corpus.py",
+        "runs/2026-10-10-local-reference-corpus.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Bring-your-own corpus \u2014 the user attaches their own reference material locally. Next package action: Validate supported source formats and provenance without executing attachments. Required outcome: A finding identifies this exact signal and the relevant subject spans."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-026",

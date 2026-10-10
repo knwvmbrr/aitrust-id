@@ -1,0 +1,79 @@
+{
+  "captured_at": "2026-10-10T04:28:31.005507+00:00",
+  "pass": true,
+  "fixture_is_not_a_detector": true,
+  "cases": [
+    {
+      "name": "fixture_ready",
+      "status": 200,
+      "elapsed_ms": 165.69,
+      "pass": true
+    },
+    {
+      "name": "malformed",
+      "status": 502,
+      "elapsed_ms": 37.33,
+      "pass": true
+    },
+    {
+      "name": "malformed_recovery",
+      "status": 200,
+      "elapsed_ms": 26.24,
+      "pass": true
+    },
+    {
+      "name": "unknown_code",
+      "status": 502,
+      "elapsed_ms": 24.95,
+      "pass": true
+    },
+    {
+      "name": "unknown_code_recovery",
+      "status": 200,
+      "elapsed_ms": 26.09,
+      "pass": true
+    },
+    {
+      "name": "bad_span",
+      "status": 502,
+      "elapsed_ms": 33.0,
+      "pass": true
+    },
+    {
+      "name": "bad_span_recovery",
+      "status": 200,
+      "elapsed_ms": 24.93,
+      "pass": true
+    },
+    {
+      "name": "fifth_request_busy",
+      "status": 503,
+      "elapsed_ms": 103.03,
+      "pass": true
+    },
+    {
+      "name": "disconnect_releases_capacity",
+      "status": 200,
+      "elapsed_ms": 31.1,
+      "pass": true
+    },
+    {
+      "name": "dependency_timeout",
+      "status": 504,
+      "elapsed_ms": 10025.35,
+      "pass": true
+    },
+    {
+      "name": "timeout_releases_capacity",
+      "status": 200,
+      "elapsed_ms": 26.69,
+      "pass": true
+    }
+  ],
+  "four_admitted_fifth_rejected": true,
+  "disconnect_capacity_recovery_ms": 31.53,
+  "upstream_work_already_received_may_continue": true,
+  "independent_accuracy_evidence": false,
+  "release_validated": false,
+  "public_endpoint_created": false
+}

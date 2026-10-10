@@ -63,6 +63,14 @@ or clone this repository. Follow the [installation and verification guide](docs/
 PS checks bounded command-risk patterns in text you supply; it does not certify
 the accuracy or safety of an AI answer. The complete personal workflow runs locally.
 
+## Attach your own references
+
+The [local corpus tool](docs/local-reference-corpus.md) imports plain-text or
+Markdown documents into an owner-held, versioned file. It checks source integrity
+and returns exact reference passages with Unicode spans, entirely offline.
+Run `python3 scripts/corpus.py --help`. A literal match is not an NF/FI verdict;
+those tags remain planned. No attached document is automatically uploaded.
+
 ## What runs today
 
 A Chrome extension captures individual assistant responses on the initial ChatGPT
