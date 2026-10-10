@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-195455-portable-public-measurement-artifacts-2ff0da31",
+  "recorded_at": "2026-10-10T19:54:55.656607+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f5186bb227c6028ab990c9fa6817dfca42252743",
+  "changed": "Regenerated public measurement and scope copies from the verified portability contract and corrected hosted status.",
+  "proves": "Build succeeds; canonical and generated records retain 202 scope IDs and 86 development examples.",
+  "limits": "Full source-bound checks and hosted recheck still pending; no independent release or phone acceptance.",
+  "scope_ids": [
+    "F-118",
+    "F-054",
+    "F-152"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "515e096658d088d5ec68a4a79f36789a1443c662cfa9cccbe435117595537f38",
+    "README.md": "e7c3dcad052f5efa8bf6b0fea99ada58d2d10976a3fda84ac1e1adfa96342437",
+    "docs/ci-portability-plan.md": "c489a40e046bcbdfa6c91da4b1d05e40295cee7c951509ac5fe91fff07220666",
+    "docs/open-dependency-audit-plan.md": "e455c7a676647b52aab6cd435d45eac22ba8220ba4522eee8c5744e1243e703d",
+    "docs/scope-progress.json": "c6dfbb5d73e9c33fbc7904260b454131e0aafa780346a4533c2d484d54ded09e",
+    "docs/scope-progress.md": "652b8d60160b52bd5b9f2bc3f524974af8f7c7fbbc2fac80d06c593094a39c08",
+    "eval/revalidation.json": "7dfedcc5e40b4129efe44de3f6389e359fa9615e3273ce055a59786726f4ded1",
+    "eval/tag-performance-evidence.json": "66e4d3679f40cdaf2eb429bc36db642df7bba539755d4c112c2384f1e693ecf9",
+    "protocol/measurements.py": "2b850a3416e7ac680367a1a64bc93d64e1ad1078da1124b1212063fca607a818",
+    "runs/2026-10-10-hosted-ci-portability-diagnosis.json": "d2cb66ed37efd9ab1b980a449eb37b682dd381a716abcf1422d0e801f88f4829",
+    "runs/2026-10-10-portable-measurements-linux.json": "233839ba56a523356edde3ccf1a0f9d5fc383c34a47eb0ae8eb9866cc16312a2",
+    "runs/2026-10-10-portable-measurements-local.json": "c4f9b3190cd295d77890048a3bf4c5f7df2b6de49539f95603add20f636bae90",
+    "scripts/build-tag-performance.py": "1ae70e4942a09ada278493e80d70db5a8bc84a05eff1a4a929783e71075e759b",
+    "scripts/verify-measurements.py": "19dc5201193baec2c600980b9cedc5475137f04809fee9cfc6001ad622357e58",
+    "scripts/verify-route-boundaries.py": "be2ecf281066dc4a25ba8b8edb0eb28a4139f8911661fc3f3587054c70105bb1",
+    "site/public/reference/public-scope.json": "9f6806b04e23fc3ddc99e64f4cb9f60780920c14d9ba9dd7fec87b00fa05a89f",
+    "site/public/reference/tag-performance-evidence.json": "66e4d3679f40cdaf2eb429bc36db642df7bba539755d4c112c2384f1e693ecf9",
+    "site/public/reference/tag-performance.json": "9111e970ddec93c6acf662b530c556e94ff93ab5edae16658bf8f3fb2c81baf4",
+    "site/src/public-scope.json": "9f6806b04e23fc3ddc99e64f4cb9f60780920c14d9ba9dd7fec87b00fa05a89f",
+    "site/src/tag-performance.json": "9111e970ddec93c6acf662b530c556e94ff93ab5edae16658bf8f3fb2c81baf4",
+    "state.json": "7b0cc9f22268a71673d71678e06345083fd9c45a38b8d093bcc0a7497b1823d0",
+    "tests/test_measurement_portability.py": "fcf4c7fa40ff85f7da7f41a16b4b10e2d487aa1269482571fdd08b1bb6e90999",
+    "tests/test_route_boundaries.py": "7664e3df9e85aff07ce472215b7590900f7d3668c56251a024a3166396f6ffcf"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-portable-measurements-linux.json",
+      "sha256": "233839ba56a523356edde3ccf1a0f9d5fc383c34a47eb0ae8eb9866cc16312a2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T19:54:55.786381+00:00"
+    }
+  ]
+}

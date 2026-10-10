@@ -1,6 +1,6 @@
 # Selected dependency contract
 
-The active preview has five install roots: the gateway, redactor, evaluator,
+The active preview has six install roots: the gateway, redactor, evaluator,
 evaluation tools, and the two npm projects (root browser tools and site). Each
 Python install uses a complete `--require-hashes` lock; npm installs use `npm ci`
 and the lock's integrity fields. The three active images share an immutable
@@ -41,3 +41,7 @@ pip-compile --generate-hashes --no-emit-index-url --no-emit-trusted-host --outpu
 
 Review all transitive changes. Never include private index credentials in a lock
 header. Run the dependency verifier and a clean hash-required installation.
+
+[Observed runtime SPDX inventories](runtime-sbom.md) now bind the three scanned
+Linux amd64 images. They remain unsigned and are not license clearance or
+complete client/build coverage; missing declarations are recorded for review.

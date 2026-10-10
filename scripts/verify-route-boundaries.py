@@ -28,6 +28,11 @@ PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'scripts/verify-replay-export.cjs', 'tests/test_assertion_replay.py')
 PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
+# Host font rendering changes this decorative raster, not executable sources.
+# The versioned prepare.mjs generator remains fingerprinted; deployment checks
+# still compare every published artifact byte. No other source is excluded.
+HOST_RENDERED_ASSET = 'site/public/share-card.png'
+
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx',
@@ -89,7 +94,10 @@ def inventory(root):
             if file.is_symlink() or any(parent.is_symlink() for parent in file.parents if parent != root):
                 raise ValueError('Boundary source symlink refused')
             if file.is_file():
-                found[file.relative_to(root).as_posix()] = hashlib.sha256(file.read_bytes()).hexdigest()
+                relative = file.relative_to(root).as_posix()
+                if relative == HOST_RENDERED_ASSET:
+                    continue
+                found[relative] = hashlib.sha256(file.read_bytes()).hexdigest()
     if not found:
         raise ValueError('Missing boundary sources')
     return dict(sorted(found.items()))

@@ -24,3 +24,36 @@ def validate_timing(timing,total):
     cold=timing.get('cold_load_ms')
     if type(cold) not in (int,float) or not math.isfinite(cold) or cold<0:raise ValueError('Invalid cold-load observation')
     return timing
+
+
+# IEEE-754/libm implementations can differ by an ulp. This bound is for Wilson
+# interval endpoints only, never counts, points, denominators, hashes or gates.
+WILSON_ENDPOINT_ABS_TOLERANCE = 1e-14
+
+def measurements_match(published, recomputed):
+    """Strict structural/value comparison with bounded interval-only arithmetic."""
+    if isinstance(recomputed, dict):
+        if not isinstance(published, dict) or set(published) != set(recomputed):
+            return False
+        for key, expected in recomputed.items():
+            actual = published[key]
+            if key == 'interval' and isinstance(expected, list):
+                if (not isinstance(actual, list) or len(actual) != 2 or len(expected) != 2
+                        or any(type(x) not in (int, float) or not math.isfinite(x)
+                               or not 0 <= x <= 1 for x in actual + expected)
+                        or actual[0] > actual[1] or expected[0] > expected[1]
+                        or any(abs(a-b) > WILSON_ENDPOINT_ABS_TOLERANCE
+                               for a,b in zip(actual, expected))):
+                    return False
+            elif not measurements_match(actual, expected):
+                return False
+        return True
+    if isinstance(recomputed, list):
+        return (isinstance(published, list) and len(published) == len(recomputed)
+                and all(measurements_match(a,b) for a,b in zip(published,recomputed)))
+    if type(published) is not type(recomputed):
+        return False
+    if isinstance(recomputed, float) and (not math.isfinite(recomputed)
+                                          or not math.isfinite(published)):
+        return False
+    return published == recomputed

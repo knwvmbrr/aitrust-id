@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-10-10T19:54:14.736217+00:00",
+  "pass": true,
+  "kind": "actual_linux_measurement_portability",
+  "synthetic_development_examples_only": true,
+  "fixture_rows": 86,
+  "counts": {
+    "tp": 31,
+    "fp": 0,
+    "fn": 0,
+    "tn": 55
+  },
+  "python_checks_passed": 32,
+  "checks": [
+    {
+      "command": "python scripts/verify-measurements.py",
+      "exit_status": 0,
+      "stdout_sha256": "f9149f97ae6fbfc68d229f2c80ce5bc096c84182a74c688138536d4feba43be4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python -m pytest tests/test_measurement_portability.py tests/test_tag_performance.py -q",
+      "exit_status": 0,
+      "stdout_sha256": "23a0828487470a20ca791149cfbe849a5c490aeeb1fb146f67a38ec8c3cd92e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sources": {
+    "protocol/measurements.py": "2b850a3416e7ac680367a1a64bc93d64e1ad1078da1124b1212063fca607a818",
+    "scripts/build-tag-performance.py": "1ae70e4942a09ada278493e80d70db5a8bc84a05eff1a4a929783e71075e759b",
+    "scripts/verify-measurements.py": "19dc5201193baec2c600980b9cedc5475137f04809fee9cfc6001ad622357e58",
+    "tests/test_measurement_portability.py": "fcf4c7fa40ff85f7da7f41a16b4b10e2d487aa1269482571fdd08b1bb6e90999",
+    "eval/tag-performance-evidence.json": "66e4d3679f40cdaf2eb429bc36db642df7bba539755d4c112c2384f1e693ecf9"
+  },
+  "interval_endpoint_absolute_tolerance": 1e-14,
+  "non_interval_values_compared_exactly": true,
+  "independent_release_approved": false,
+  "hosted_ci_rechecked": false
+}

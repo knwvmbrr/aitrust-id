@@ -1,0 +1,89 @@
+{
+  "captured_at": "2026-10-10T19:53:37.382491+00:00",
+  "kind": "hosted_ci_failure_diagnosis",
+  "source_commit": "f5186bb227c6028ab990c9fa6817dfca42252743",
+  "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38081112426",
+  "conclusion": "failure",
+  "hosted_jobs_started": true,
+  "billing_block_claim_current": false,
+  "main_branch_protected": false,
+  "jobs": [
+    {
+      "name": "gates",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Require actual accessibility release evidence",
+        "Assess statistical evidence even when accessibility refuses release"
+      ]
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "spec",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "host-config",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "change-records",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "regressions",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/verify-measurements.py",
+        "Run actions/upload-artifact@v4"
+      ]
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run sudo unshare -n \"$(which python)\" -m pytest tests --ignore=tests/test_route_boundaries.py -q"
+      ]
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "name": "site",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Exercise current-route deployment boundaries and violating profiles"
+      ]
+    }
+  ],
+  "root_causes": [
+    "Exact float equality rejected Wilson interval differences no larger than 2.220446049250313e-16 on Linux; counts and categories identical",
+    "Host font rendering changes ignored share-card.png included in route source inventory"
+  ],
+  "release_evidence_gate_refusals_expected": true,
+  "engineering_repairs_verified_hosted": false,
+  "independent_release_approved": false
+}

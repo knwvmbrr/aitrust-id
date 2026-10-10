@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T14:20:09.489490+00:00",
+  "updated": "2026-10-10T20:02:46.696826+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -14,10 +14,10 @@
     "V2 conformance registration after evidence",
     "Signing, challenge/correction policy acceptance",
     "Declared latency budget and investigation of one observed transient timeout",
-    "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
+    "Hosted CI now starts; engineering portability failures require repair and rerun; release gates remain unmet; main has no required-check protection"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 945,
+  "python_tests_passed": 981,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -499,7 +499,7 @@
     "independent_accuracy_evidence": false,
     "statistical_gate_pass": false,
     "statistical_evidence": "runs/2026-10-08-ps-routing-gates.json",
-    "hosted_ci_status": "account_billing_blocked",
+    "hosted_ci_status": "running_engineering_portability_failures_under_repair; release_gates_unmet",
     "hosted_ci_evidence": "runs/2026-10-08-public-source-result.json"
   },
   "project_email_setup": {
@@ -762,7 +762,7 @@
     "proprietary_assistant": "Allowed organization assistance direction, not adopted/trained in this pass; cannot validate itself"
   },
   "change_accountability": {
-    "status": "published_and_public_checks_pass; local_staged_and_build_guards_active; hosted_CI_billing_blocked",
+    "status": "published_and_public_checks_pass; local_staged_and_build_guards_active; hosted_CI_running_portability_failures_under_repair",
     "policy": "docs/changelog-policy.md",
     "changelog": "CHANGELOG.md",
     "structured_events": "runs/changes/",
@@ -1072,5 +1072,20 @@
     "matching_artifacts": 561,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
+  },
+  "ci_portability": {
+    "status": "local_mac_and_actual_linux_measurement_checks_pass; all_five_engineering_capability_receipts_current; hosted_recheck_pending",
+    "diagnosis": "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
+    "main_branch_protected": false,
+    "release_gates_waived": false,
+    "checks": "runs/2026-10-10-ci-portable-complete-checks.json"
+  },
+  "dependency_license_audit": {
+    "status": "three_observed_linux_images_inventoried; unsigned; incomplete_license_and_client_coverage",
+    "package_occurrences": 421,
+    "manifest": "eval/dependencies/runtime-sbom.json",
+    "evidence": "runs/2026-10-10-runtime-license-inventory.json",
+    "license_cleared": false,
+    "release_signed": false
   }
 }

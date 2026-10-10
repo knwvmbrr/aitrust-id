@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-195926-actual-runtime-sbom-inventory-0339ba3c",
+  "recorded_at": "2026-10-10T19:59:26.168321+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f5186bb227c6028ab990c9fa6817dfca42252743",
+  "changed": "Add actual three-image SPDX inventory, source/artifact identity verifier, rejection tests and explicit uncleared/unsigned limits; link partial scope evidence.",
+  "proves": "421 package occurrences inventoried from existing isolated Linux images; 13 local mutation controls pass; no production image changed; license and signing flags remain false.",
+  "limits": "This is incomplete license and signing acceptance; no scope record was promoted to 100. Runtime/font/model/vendored and architecture review remains open.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-054",
+    "F-152"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "b9d24b773e78748fd3c92454d0deceb416cc4f57bd48cdf75eb88f131bde7f85",
+    "README.md": "e7c3dcad052f5efa8bf6b0fea99ada58d2d10976a3fda84ac1e1adfa96342437",
+    "docs/ci-portability-plan.md": "c489a40e046bcbdfa6c91da4b1d05e40295cee7c951509ac5fe91fff07220666",
+    "docs/dependency-contract.md": "b855e2868bb8f8ecd1b237469ce3ca464b406b186d6277a5f10364b1389ab3ae",
+    "docs/open-dependency-audit-plan.md": "e455c7a676647b52aab6cd435d45eac22ba8220ba4522eee8c5744e1243e703d",
+    "docs/runtime-sbom.md": "1cf4576ccae123dd7b2aec7097693b08cb213593fb7ed652b5e1081551917a19",
+    "docs/scope-100-execution.md": "5ab8e84174c37247a512ce398ef714a9874ee125fb6de82c261eb2132f269446",
+    "docs/scope-progress.json": "33ca45a80bec37dad79b0c8ca11ab919824c51b1d54c2369d169bbce1a4f8b60",
+    "docs/scope-progress.md": "dc80261207ffc2d6aaaa6085046dcf15e802f6bd205022a69a9fb93d7dc8f5cf",
+    "eval/dependencies/runtime-sbom.json": "04dd18234429056b28df81a09340d2a1416dbc3f22af08f9efa22c8ce503833a",
+    "eval/revalidation.json": "7dfedcc5e40b4129efe44de3f6389e359fa9615e3273ce055a59786726f4ded1",
+    "eval/tag-performance-evidence.json": "66e4d3679f40cdaf2eb429bc36db642df7bba539755d4c112c2384f1e693ecf9",
+    "protocol/measurements.py": "2b850a3416e7ac680367a1a64bc93d64e1ad1078da1124b1212063fca607a818",
+    "runs/2026-10-10-ci-portable-extension.json": "585bc03e6af5039d6c4095bbd1939022d84e5455ff226ec1b9308e3fa0b9cfae",
+    "runs/2026-10-10-ci-portable-pii-redacted.json": "46e3345383642699ccbf197f7edb1f25b83c438be2bf1bf52904a663162ec0a7",
+    "runs/2026-10-10-ci-portable-protocol.json": "2098755ba83b8ea50777d7783abf320d08a11827ffd440abe57faece870af4e4",
+    "runs/2026-10-10-ci-portable-ps.json": "43a08cd5e2ed14d7bf5ba7e4eb4a245f31a243149a093342c7e2fb8d5f4f364f",
+    "runs/2026-10-10-ci-portable-website-attributed.json": "d4093ad3b4776fda3c7c612a5f855bb89dd1af6471d4e9e81aeeb10f64c17508",
+    "runs/2026-10-10-ci-portable-website-corrected.json": "9735c68de216ac9ed43602575d1ab4bab22beb12b6a4f289f21e60c9c5d85e3b",
+    "runs/2026-10-10-ci-portable-website.json": "4fc0eaad6e22456c9badef4bd1f69e8f498af2e949c7c638d26a8ff564841a3e",
+    "runs/2026-10-10-hosted-ci-portability-diagnosis.json": "d2cb66ed37efd9ab1b980a449eb37b682dd381a716abcf1422d0e801f88f4829",
+    "runs/2026-10-10-portable-measurements-linux.json": "233839ba56a523356edde3ccf1a0f9d5fc383c34a47eb0ae8eb9866cc16312a2",
+    "runs/2026-10-10-portable-measurements-local.json": "c4f9b3190cd295d77890048a3bf4c5f7df2b6de49539f95603add20f636bae90",
+    "runs/2026-10-10-runtime-license-inventory.json": "805216f0bfc6e40fc53b91190ebd67216a148d5584cc3d6389eb48907108eff8",
+    "runs/2026-10-10-runtime-sbom-identity.json": "0026f3606c1d8d92b871c471b8475e1f45bcac4316a92ceca86219bcb26b65de",
+    "sbom/runtime/anonymizer-linux-amd64.spdx.json": "709ee8f1aee249d10408d126b9dc850c4e72cbdb4a6754f2e1521ce4a0fd1603",
+    "sbom/runtime/evaluator-linux-amd64.spdx.json": "b9aca7ebff7f203ba2ba8fdc4cb71875abc16be50e4a5fccd36f1b2daec73750",
+    "sbom/runtime/gateway-linux-amd64.spdx.json": "b053a789840c36983fe8b4be6be6e459804ce1b3938f44c66c1b09ae225810b8",
+    "scripts/build-tag-performance.py": "1ae70e4942a09ada278493e80d70db5a8bc84a05eff1a4a929783e71075e759b",
+    "scripts/verify-measurements.py": "19dc5201193baec2c600980b9cedc5475137f04809fee9cfc6001ad622357e58",
+    "scripts/verify-route-boundaries.py": "be2ecf281066dc4a25ba8b8edb0eb28a4139f8911661fc3f3587054c70105bb1",
+    "scripts/verify-runtime-sbom.py": "d73637e6706b82f8d54e24a71bab1ef54902cafd071070ac579530d6347544b3",
+    "site/public/reference/public-scope.json": "9f6806b04e23fc3ddc99e64f4cb9f60780920c14d9ba9dd7fec87b00fa05a89f",
+    "site/public/reference/tag-performance-evidence.json": "66e4d3679f40cdaf2eb429bc36db642df7bba539755d4c112c2384f1e693ecf9",
+    "site/public/reference/tag-performance.json": "9111e970ddec93c6acf662b530c556e94ff93ab5edae16658bf8f3fb2c81baf4",
+    "site/src/public-scope.json": "9f6806b04e23fc3ddc99e64f4cb9f60780920c14d9ba9dd7fec87b00fa05a89f",
+    "site/src/tag-performance.json": "9111e970ddec93c6acf662b530c556e94ff93ab5edae16658bf8f3fb2c81baf4",
+    "state.json": "2aedadf626d0e3f68c1d0a8cc08669c99daaeea25e8690b85201603030e6364e",
+    "tests/test_measurement_portability.py": "fcf4c7fa40ff85f7da7f41a16b4b10e2d487aa1269482571fdd08b1bb6e90999",
+    "tests/test_route_boundaries.py": "7664e3df9e85aff07ce472215b7590900f7d3668c56251a024a3166396f6ffcf",
+    "tests/test_runtime_sbom.py": "c2b4fb34e5e62ff30a83104680f35f6e9144f98dbee26600c4084911bb9d2cc2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-runtime-license-inventory.json",
+      "sha256": "805216f0bfc6e40fc53b91190ebd67216a148d5584cc3d6389eb48907108eff8"
+    },
+    {
+      "path": "runs/2026-10-10-runtime-sbom-identity.json",
+      "sha256": "0026f3606c1d8d92b871c471b8475e1f45bcac4316a92ceca86219bcb26b65de"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_runtime_sbom.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T19:59:27.308248+00:00"
+    }
+  ]
+}

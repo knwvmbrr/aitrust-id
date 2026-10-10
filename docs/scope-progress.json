@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T19:36:04.973854+00:00",
+  "audited_at": "2026-10-10T19:59:26.070527+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3637,7 +3637,7 @@
         "bounded_contract",
         "implemented_mechanism"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T19:53:37.382491+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution"
@@ -3648,15 +3648,19 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Resolve GitHub Actions account billing/execution restrictions, then demonstrate required checks and branch protection with an intentional failing change. Defined YAML is not running hosted CI.",
-      "next_owner": "Michael account access; Codex configuration",
+      "next_fix": "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate.",
+      "next_owner": "Codex engineering checks; Michael acceptance of operating roles",
       "evidence": [
         ".github/workflows/ci.yml",
-        "runs/2026-10-08-ci-gate-recheck.json"
+        "runs/2026-10-08-ci-gate-recheck.json",
+        "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
+        "docs/ci-portability-plan.md",
+        "runs/2026-10-10-ci-portable-extension.json",
+        "runs/2026-10-10-ci-portable-website-attributed.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
-        "Resolve GitHub Actions account billing/execution restrictions, then demonstrate required checks and branch protection with an intentional failing change. Defined YAML is not running hosted CI."
+        "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate."
       ],
       "queue": "open"
     },
@@ -3886,7 +3890,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T19:59:26.070527+00:00",
       "checked_by": "Codex",
       "implemented_by": [],
       "planning_contributors": [
@@ -3895,14 +3899,21 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver SBOM plus Sigstore release signing. Next package action: Make build/verify/deploy jobs fail on missing prerequisites and injected failures. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "next_fix": "Review unknown and vendored licenses/notices and all client/build/architecture dependencies; verify scanner identity and implement/exercise source-bound Sigstore signing before full SBOM/signing acceptance.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/open-dependency-audit-plan.md",
+        "docs/runtime-sbom.md",
+        "runs/2026-10-10-runtime-license-inventory.json",
+        "runs/2026-10-10-runtime-sbom-identity.json",
+        "scripts/verify-runtime-sbom.py",
+        "tests/test_runtime_sbom.py",
+        "eval/dependencies/runtime-sbom.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item.",
       "required_acceptance": [
-        "Deliver SBOM plus Sigstore release signing. Next package action: Make build/verify/deploy jobs fail on missing prerequisites and injected failures. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed."
+        "Review unknown and vendored licenses/notices and all client/build/architecture dependencies; verify scanner identity and implement/exercise source-bound Sigstore signing before full SBOM/signing acceptance."
       ],
       "queue": "open"
     },
@@ -4012,7 +4023,7 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-10-10T12:39:48.674550+00:00",
+      "audited_at": "2026-10-10T19:53:37.382491+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
@@ -4037,9 +4048,13 @@
         "tests/test_measurement_timings.py",
         "runs/2026-10-10-measurement-recomputation.json",
         "runs/2026-10-10-provenance-history-check.json",
-        "runs/2026-10-10-category-performance-ui-corrected.json"
+        "runs/2026-10-10-category-performance-ui-corrected.json",
+        "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
+        "tests/test_measurement_portability.py",
+        "runs/2026-10-10-portable-measurements-local.json",
+        "runs/2026-10-10-portable-measurements-linux.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Actual Linux and macOS source recomputation pass with 32 strict portability/count/source controls on each host; interval endpoints alone permit absolute differences up to 1e-14. Hosted CI rerun remains a separate job gate.",
       "required_acceptance": [],
       "queue": "completed"
     },
@@ -5424,7 +5439,7 @@
         "bounded_contract",
         "implemented_mechanism"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T19:53:37.382491+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution"
@@ -5435,15 +5450,19 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Resolve GitHub Actions account billing/execution restrictions, then demonstrate required checks and branch protection with an intentional failing change. Defined YAML is not running hosted CI.",
-      "next_owner": "Michael account access; Codex configuration",
+      "next_fix": "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate.",
+      "next_owner": "Codex engineering checks; Michael acceptance of operating roles",
       "evidence": [
         ".github/workflows/ci.yml",
-        "runs/2026-10-08-ci-gate-recheck.json"
+        "runs/2026-10-08-ci-gate-recheck.json",
+        "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
+        "docs/ci-portability-plan.md",
+        "runs/2026-10-10-ci-portable-extension.json",
+        "runs/2026-10-10-ci-portable-website-attributed.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
-        "Resolve GitHub Actions account billing/execution restrictions, then demonstrate required checks and branch protection with an intentional failing change. Defined YAML is not running hosted CI."
+        "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate."
       ],
       "queue": "open"
     },
@@ -6032,7 +6051,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T19:59:26.070527+00:00",
       "checked_by": "Codex",
       "implemented_by": [],
       "planning_contributors": [
@@ -6041,14 +6060,21 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: Any closed-source or paid dependency in the pipeline. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
+      "next_fix": "Review missing license declarations, vendored/OS/model/client/runtime/font/data and build dependencies; publish reviewed notices and a source-bound conflict rejection policy for every selected personal route.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/open-dependency-audit-plan.md",
+        "docs/runtime-sbom.md",
+        "runs/2026-10-10-runtime-license-inventory.json",
+        "runs/2026-10-10-runtime-sbom-identity.json",
+        "scripts/verify-runtime-sbom.py",
+        "tests/test_runtime_sbom.py",
+        "eval/dependencies/runtime-sbom.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item.",
       "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: Any closed-source or paid dependency in the pipeline. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+        "Review missing license declarations, vendored/OS/model/client/runtime/font/data and build dependencies; publish reviewed notices and a source-bound conflict rejection policy for every selected personal route."
       ],
       "queue": "open"
     },

@@ -202,3 +202,31 @@ def test_replay_proof_requires_current_executed_private_boundary(monkeypatch):
             return row
         monkeypatch.setattr(guard,'read_json',altered)
         with pytest.raises(ValueError):guard.replay_evidence(relative)
+
+
+def test_host_rendered_pixels_are_bound_by_generator_not_host_font(tmp_path):
+    public = tmp_path / 'site/public'
+    scripts = tmp_path / 'site/scripts'
+    public.mkdir(parents=True)
+    scripts.mkdir()
+    generator = scripts / 'prepare.mjs'
+    generator.write_text('versioned share template')
+    image = public / 'share-card.png'
+    image.write_bytes(b'mac render')
+    first = guard.inventory(tmp_path)
+    image.write_bytes(b'linux render')
+    assert guard.inventory(tmp_path) == first
+    generator.write_text('changed share template')
+    assert guard.inventory(tmp_path) != first
+    (public / 'unexpected.js').write_text('new script')
+    assert 'site/public/unexpected.js' in guard.inventory(tmp_path)
+
+
+def test_host_rendered_asset_cannot_hide_symlink(tmp_path):
+    public = tmp_path / 'site/public'
+    public.mkdir(parents=True)
+    target = tmp_path / 'target'
+    target.write_text('outside boundary')
+    (public / 'share-card.png').symlink_to(target)
+    with pytest.raises(ValueError, match='symlink'):
+        guard.inventory(tmp_path)

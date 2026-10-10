@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-200246-verified-portability-and-sbom-checks-2f444528
+
+Recorded 2026-10-10T20:02:46.762083+00:00 · Contributor: Codex · change
+
+- **Changed.** Record 981 Python checks, all five current engineering receipts, route rejection controls, actual Linux recomputation and three-image unsigned inventory.
+- **Evidence.** 133 source boundaries pass; public intake remains disabled; changed intervals/counts/identities and unsafe SBOM promotions are refused; existing limited deployment authentication verified. [Change record](./runs/changes/2026-10-10-200246-verified-portability-and-sbom-checks-2f444528.json).
+- **Not claimed.** Hosted CI repair rerun and main protection pending; unsigned inventory has unresolved licenses; no independent tag release or physical-phone acceptance.
+
+
+### 2026-10-10-200032-sbom-public-scope-attribution-922c48ae
+
+Recorded 2026-10-10T20:00:32.237514+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated the public scope with actual partial SBOM evidence and corrected the historical CI account note.
+- **Evidence.** All 202 IDs remain; SPDX integrity verification and 13 failure controls pass; unknown licenses and signatures are explicitly unresolved. [Change record](./runs/changes/2026-10-10-200032-sbom-public-scope-attribution-922c48ae.json).
+- **Not claimed.** No 100 percent completion from an unsigned or uncleared inventory; main protection still absent.
+
+
+### 2026-10-10-195926-actual-runtime-sbom-inventory-0339ba3c
+
+Recorded 2026-10-10T19:59:26.168321+00:00 · Contributor: Codex · change
+
+- **Changed.** Add actual three-image SPDX inventory, source/artifact identity verifier, rejection tests and explicit uncleared/unsigned limits; link partial scope evidence.
+- **Evidence.** 421 package occurrences inventoried from existing isolated Linux images; 13 local mutation controls pass; no production image changed; license and signing flags remain false. [Change record](./runs/changes/2026-10-10-195926-actual-runtime-sbom-inventory-0339ba3c.json).
+- **Not claimed.** This is incomplete license and signing acceptance; no scope record was promoted to 100. Runtime/font/model/vendored and architecture review remains open.
+
+
+### 2026-10-10-195623-executed-portability-logs-attributed-eba7d2e4
+
+Recorded 2026-10-10T19:56:23.169047+00:00 · Contributor: Codex · change
+
+- **Changed.** Attributed four successful capability checks and preserved the two website documentation-guard refusals.
+- **Evidence.** Protocol, PS, redaction and extension receipts are successful and source-bound. The self-referential changelog prerequisite was removed from the record-writing invocation; the actual guard remains enabled. [Change record](./runs/changes/2026-10-10-195623-executed-portability-logs-attributed-eba7d2e4.json).
+- **Not claimed.** Website rerun and hosted CI remain pending; no failing evidence was overwritten.
+
+
+### 2026-10-10-195455-portable-public-measurement-artifacts-2ff0da31
+
+Recorded 2026-10-10T19:54:55.656607+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public measurement and scope copies from the verified portability contract and corrected hosted status.
+- **Evidence.** Build succeeds; canonical and generated records retain 202 scope IDs and 86 development examples. [Change record](./runs/changes/2026-10-10-195455-portable-public-measurement-artifacts-2ff0da31.json).
+- **Not claimed.** Full source-bound checks and hosted recheck still pending; no independent release or phone acceptance.
+
+
+### 2026-10-10-195443-linux-statistical-reproduction-7391165d
+
+Recorded 2026-10-10T19:54:43.120620+00:00 · Contributor: Codex · change
+
+- **Changed.** Reproduced the measurement repair on dedicated Linux and added the portability checks to source-bound revalidation.
+- **Evidence.** Both Linux and macOS reproduce 86 cases with identical counts; 32 targeted checks pass on Linux; full tag scope and all release gates retained. [Change record](./runs/changes/2026-10-10-195443-linux-statistical-reproduction-7391165d.json).
+- **Not claimed.** Hosted repair rerun and main protection remain pending; no new tag release or independent accuracy claim.
+
+
+### 2026-10-10-195409-ci-portability-repair-1b22217f
+
+Recorded 2026-10-10T19:54:09.387509+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair Linux measurement recomputation and host-rendered image source inventory; correct stale hosted-CI status; retain dependency/signing audit plan.
+- **Evidence.** Interval-only ulp tolerance retains exact counts, thresholds and identities; generated share pixels cannot hide source or symlink changes. Local negative controls pass; hosted execution and protection remain separate gates. [Change record](./runs/changes/2026-10-10-195409-ci-portability-repair-1b22217f.json).
+- **Not claimed.** No independent accuracy, human accessibility, physical-phone or release approval. Required main checks are not yet enforced. License inventory and Sigstore remain unfinished.
+
+
 ### 2026-10-10-194539-replay-publication-proof-68e3224e
 
 Recorded 2026-10-10T19:45:39.415919+00:00 · Contributor: Codex · change

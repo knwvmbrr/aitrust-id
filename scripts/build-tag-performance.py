@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'eval'))
 import harness
-from protocol.measurements import validate_timing
+from protocol.measurements import validate_timing, measurements_match
 
 
 def digest(path):
@@ -53,7 +53,7 @@ def build(regressions, device):
             raise ValueError('Fixture changed since measured run')
         recomputed=harness.evaluate_fixtures(path)['PS']
         for key in ('tp','fp','fn','tn','category_failures','category_metrics'):
-            if row.get(key)!=recomputed[key]:raise ValueError('Published count/category differs from source recomputation')
+            if not measurements_match(row.get(key),recomputed[key]):raise ValueError('Published count/category differs from source recomputation')
         categories.extend({'source_dataset':name,'category':category,**metrics} for category,metrics in recomputed['category_metrics'].items())
         for key in counts:
             if type(row[key]) is not int or row[key] < 0:

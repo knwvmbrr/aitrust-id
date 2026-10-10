@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "unsigned_observed_runtime_sbom",
+  "captured_at": "2026-10-10T19:56:33.046032+00:00",
+  "scanner": "syft 1.54.1",
+  "scanner_archive_sha256": "c069905b391cc4c20a5ba65ad5c10be2a7ba074f8ea6ad203e24d14e303dad47",
+  "scanner_signed_identity_verified": false,
+  "license_cleared": false,
+  "release_signed": false,
+  "platform": "linux/amd64",
+  "images": [
+    {
+      "role": "gateway",
+      "artifact": "sbom/runtime/gateway-linux-amd64.spdx.json",
+      "sha256": "b053a789840c36983fe8b4be6be6e459804ce1b3938f44c66c1b09ae225810b8",
+      "image_id": "7cf8bc2f545e882009275d9a83876065808fe959f243df00034e967d9c00b907",
+      "manifest_digest": "211b98f32aff1ad07d24d78a5202decb2a8d5b3c4959fa83a9d0ce699d69c5e7",
+      "packages": 119
+    },
+    {
+      "role": "evaluator",
+      "artifact": "sbom/runtime/evaluator-linux-amd64.spdx.json",
+      "sha256": "b9aca7ebff7f203ba2ba8fdc4cb71875abc16be50e4a5fccd36f1b2daec73750",
+      "image_id": "5776e1d019164e3d888f693a497c83f943597504451535564ac3fb54c21251c2",
+      "manifest_digest": "a2fe288e0a51b84d6afbc59fc8ec1d37b44b709cf09ba67a60e54e76a938f31b",
+      "packages": 125
+    },
+    {
+      "role": "anonymizer",
+      "artifact": "sbom/runtime/anonymizer-linux-amd64.spdx.json",
+      "sha256": "709ee8f1aee249d10408d126b9dc850c4e72cbdb4a6754f2e1521ce4a0fd1603",
+      "image_id": "9f74213987efa910d085afb516623e60e6cd1b73b3a07a64e341f0c1103054bd",
+      "manifest_digest": "e9a7f2243b7dcdab7c0f5e94d02333d23315ee7706ee9e9fe65ef7d104c837f9",
+      "packages": 180
+    }
+  ],
+  "sources": {
+    ".dockerignore": "e0c863140f8f15747bac960aa9c5adc15f0a3e85c8dd66e17a7c6413c2870406",
+    "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
+    "services/gateway/Dockerfile": "ad55c40b40843c93de109011bfe8307d43eab99e9638f09845030df2e4cd734a",
+    "services/gateway/requirements.lock": "7933f6cd8911ae0fef80d95a432bf30464761951225a4b600150581c71b3706e",
+    "services/evaluator/Dockerfile": "adb032a393577f2b87f891e7ad170eee0fa0e3b03cce99e28009acf7a6da1963",
+    "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+    "services/anonymizer/Dockerfile": "9f562b7330f8eee4f22e9955a8a672436e45d2171d0e95e421c80da137910ac9",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
+  },
+  "inventory_evidence": "runs/2026-10-10-runtime-license-inventory.json"
+}

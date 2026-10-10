@@ -151,8 +151,9 @@ acceptance under F-035/F-072/F-139.
 
 Implement machine-checked contracts and actual positive/negative gate executions.
 A missing owner, weakened release prerequisite or serious axe defect must fail.
-A configured hosted job remains unexecuted while account restrictions prevent it
-starting. Security response capacity, independent security review, physical
+Historical account restrictions prevented hosted execution. Jobs now start.
+Portability repairs, required-check enforcement and independent release evidence
+remain pending. A configured job without executed evidence remains unverified. Security response capacity, independent security review, physical
 phones, human accessibility, conformance adoption and replacement-host recovery
 remain separately open. Risks: policy lint may miss semantic loopholes; a passing
 automated accessibility gate is not conformance; owner assignment is not proof

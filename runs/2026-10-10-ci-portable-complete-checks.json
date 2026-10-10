@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-10-10T20:02:46.696826+00:00",
+  "pass": true,
+  "kind": "bounded_engineering_checks",
+  "python_tests_passed": 981,
+  "checks": [
+    {
+      "name": "ci-portability-python",
+      "passed_tests": 949,
+      "stdout_sha256": "aeac6492b0a1b667ab29c1abc7c13b657d8983a2ce41e2e02fed51d18f88fa3a",
+      "pass": true
+    },
+    {
+      "name": "ci-route-tests",
+      "passed_tests": 32,
+      "stdout_sha256": "37776e49a135b065a7795a46eea03f76d70cf94578e2c45a0aeaf04f11ebc22f",
+      "pass": true
+    }
+  ],
+  "source_bound_receipts": {
+    "protocol": "runs/2026-10-10-ci-portable-protocol.json",
+    "PS": "runs/2026-10-10-ci-portable-ps.json",
+    "PII_REDACTED": "runs/2026-10-10-ci-portable-pii-redacted.json",
+    "extension": "runs/2026-10-10-ci-portable-extension.json",
+    "website": "runs/2026-10-10-ci-portable-website-final.json"
+  },
+  "scope_records": 202,
+  "complete_records": 103,
+  "open_records": 99,
+  "actual_linux_statistical_recomputation": true,
+  "spdx_inventory_occurrences": 421,
+  "license_cleared": false,
+  "release_signed": false,
+  "hosted_repair_verified": false,
+  "independent_accuracy_evidence": false,
+  "physical_device_tested": false,
+  "release_approved": false
+}

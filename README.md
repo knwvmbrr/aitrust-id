@@ -108,16 +108,19 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
-There are 794 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
-The public repository contains the runnable source. Engineering CI and the separate
-statistical gate are configured. GitHub currently prevents every hosted job from
-starting because of an account billing lock; the early public checkout passed
-101 Python tests and 60 development regressions at its original publication.
-The current executed suite and 86-case development set are reported above.
-Hosted execution remains unverified. The gates are visible; a failing statistical gate prevents release approval,
-not downloading or independently inspecting this development package. Statistical gates
-currently fail and must continue to fail until their evidence exists. The harness
-reports `evaluation_gate_pass`, not whole-product release approval.
+The last complete local suite passed 945 Python checks; subsequent portability repairs
+have their own execution records in `runs/`. All five active development fixture
+sets are selected by CI: 86 cases with no classification errors. These examples
+are not independent accuracy evidence. Historical corrected labels remain archived.
+The public repository contains runnable source, separate engineering checks and
+statistical/accessibility release gates. Hosted GitHub jobs now start. The run at
+`f5186bb` exposed Linux floating-point recomputation and host-rendered share-image
+inventory failures; their repair and hosted rerun are recorded separately from
+local success. Main-branch required-check protection is not yet configured.
+Release gates remain unmet and must continue to refuse release until their
+independent evidence exists. A statistical refusal does not prevent downloading
+or inspecting this development package; `evaluation_gate_pass` is not whole-product
+release approval.
 
 A finding does not establish a scam, malicious intent, or authorship. No finding is
 not a safety clearance. Heuristic scores are not measured probabilities. Pending,
@@ -216,8 +219,9 @@ on loopback port 5174, then run `npm run verify:site`, `npm run verify:workflows
 `npm run verify:bundle` verifies a fresh device build against the committed engineering reference;
 repeat `--python` arguments to its script to compare installed builder versions.
 See the [accessibility test record](docs/accessibility-conformance-report.md) for
-coverage and human-review limits. These checks are configured in CI; hosted runs
-currently cannot start because of the account billing lock.
+coverage and human-review limits. Hosted CI now starts; inspect the recorded
+engineering results and separate release refusals rather than infer approval
+from configured checks.
 See [website architecture and publishing](docs/website.md) for the verified behavior, remaining
 connections, and deployment steps. The reviewed catalogue is deployed on the owned
 domain with verified security headers. The PS device checker runs the bounded method

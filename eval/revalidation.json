@@ -69,7 +69,12 @@
         "spec/signal-registry.json",
         "scripts/replay-assertion.py",
         "scripts/verify-assertion-replay.py",
-        "tests/replay_fixture.py"
+        "tests/replay_fixture.py",
+        "scripts/build-tag-performance.py",
+        "scripts/verify-measurements.py",
+        "tests/test_measurement_portability.py",
+        "tests/test_tag_performance.py",
+        "eval/tag-performance-evidence.json"
       ],
       "commands": [
         [
@@ -78,6 +83,8 @@
           "pytest",
           "tests/test_assertion_formats.py",
           "tests/test_assertion_replay.py",
+          "tests/test_measurement_portability.py",
+          "tests/test_tag_performance.py",
           "-q"
         ],
         [
