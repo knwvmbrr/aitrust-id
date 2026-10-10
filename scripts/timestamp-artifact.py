@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Request or verify optional independent digest timestamps. No authorship verdict."""
 import argparse
+import http.client
 import json
 from pathlib import Path
 import subprocess
@@ -35,6 +36,7 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except (ValueError, OSError, UnicodeError, subprocess.SubprocessError, urllib.error.URLError):
+    except (ValueError, OSError, UnicodeError, subprocess.SubprocessError,
+            urllib.error.URLError, http.client.HTTPException):
         print('Timestamp refused: invalid inputs, untrusted authority, signature failure or unavailable prerequisites. No valid verdict issued.', file=sys.stderr)
         raise SystemExit(2)

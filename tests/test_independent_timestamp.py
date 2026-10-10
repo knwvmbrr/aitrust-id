@@ -1,7 +1,9 @@
 """Real public timestamp verification; mocked transport tests are not independence evidence."""
 import hashlib
+import http.client
 import json
 import os
+import runpy
 from pathlib import Path
 import subprocess
 import sys
@@ -130,6 +132,36 @@ def test_existing_output_refuses_before_contact(tmp_path):
         pytest.fail('Must not contact provider for an unusable destination')
     with pytest.raises(ValueError):
         ts.issue(inputs()[0], tmp_path, inputs()[3], inputs()[4], True, never)
+
+
+@pytest.mark.parametrize('parent_kind', ['missing', 'file', 'symlink'])
+def test_unusable_parent_refuses_before_query_or_contact(tmp_path, parent_kind):
+    parent = tmp_path / 'parent'
+    if parent_kind == 'file':
+        parent.write_text('not a directory')
+    elif parent_kind == 'symlink':
+        parent.symlink_to(tmp_path, target_is_directory=True)
+    def never(*args, **kwargs):
+        pytest.fail('Unusable output must refuse before query generation or provider contact')
+    with pytest.raises(ValueError):
+        ts.issue(inputs()[0], parent / 'new', inputs()[3], inputs()[4], True, never, never)
+
+
+@pytest.mark.parametrize('error', [http.client.BadStatusLine('malformed'),
+                                 http.client.IncompleteRead(b'partial')])
+def test_malformed_provider_http_uses_cli_refusal(monkeypatch, capsys, tmp_path, error):
+    def broken(*args, **kwargs):
+        raise error
+    monkeypatch.setattr(ts, 'issue', broken)
+    monkeypatch.setattr(sys, 'argv', ['timestamp-artifact.py', 'request', str(inputs()[0]),
+                        '--ca-file', str(inputs()[3]), '--tsa-file', str(inputs()[4]),
+                        '--output-dir', str(tmp_path / 'new'), '--send-digest'])
+    with pytest.raises(SystemExit) as exit:
+        runpy.run_path(str(ROOT / 'scripts/timestamp-artifact.py'), run_name='__main__')
+    captured = capsys.readouterr()
+    assert exit.value.code == 2 and not captured.out
+    assert 'Timestamp refused:' in captured.err and 'Traceback' not in captured.err
+    assert not (tmp_path / 'new').exists()
 
 
 def test_redirect_refused():

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-234355-timestamp-review-corrections-a2d53a3f
+
+Recorded 2026-10-10T23:43:55.636171+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix both protected-review timestamp refusal edges and refresh current source-bound controls.
+- **Evidence.** 1178 Python checks and 34 focused timestamp checks passed; unusable output parents refuse before provider contact; malformed HTTP uses exit 2. [Change record](./runs/changes/2026-10-10-234355-timestamp-review-corrections-a2d53a3f.json).
+- **Not claimed.** Synthetic controls and public timestamp fixtures are engineering evidence; no independently validated tag release or human authorship claim.
+
+
 ### 2026-10-10-233626-timestamp-current-source-verification-157a79cf
 
 Recorded 2026-10-10T23:36:26.469859+00:00 · Contributor: Codex · change

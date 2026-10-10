@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T23:36:26.365853+00:00",
+  "updated": "2026-10-10T23:43:54.714781+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1173,
+  "python_tests_passed": 1178,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1012,7 +1012,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T23:36:26.365853+00:00",
+  "updated_at": "2026-10-10T23:43:54.714781+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1165,7 +1165,7 @@
     "status": "full_bounded_development_component_accepted; protected_publication_pending",
     "profile": "independent-timestamp/freetsa-2026/1.0.0",
     "guide": "docs/independent-timestamps.md",
-    "focused_controls_passed": 29,
+    "focused_controls_passed": 34,
     "real_authority_issuance": "runs/2026-10-10-independent-timestamp-issuance.json",
     "actual_offline_linux_verification": "runs/2026-10-10-independent-timestamp-offline-linux.json",
     "composition_receipt_integration": "runs/2026-10-10-composition-receipt-timestamp.json",
@@ -1179,6 +1179,7 @@
     "acceptance": "runs/2026-10-10-independent-timestamp-acceptance.json",
     "website_receipt": "runs/2026-10-10-timestamp-website-revalidated.json",
     "current_controls": "runs/2026-10-10-timestamp-current-source-controls.json",
-    "current_boundaries": "runs/2026-10-10-timestamp-final-boundaries.json"
+    "current_boundaries": "runs/2026-10-10-timestamp-final-boundaries.json",
+    "review_corrections": "runs/2026-10-10-timestamp-review-corrections.json"
   }
 }

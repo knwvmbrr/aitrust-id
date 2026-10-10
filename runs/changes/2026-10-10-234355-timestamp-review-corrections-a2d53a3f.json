@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-234355-timestamp-review-corrections-a2d53a3f",
+  "recorded_at": "2026-10-10T23:43:55.636171+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "73e1e0734d873300bba74fd3439c024fbfdb7865",
+  "changed": "Fix both protected-review timestamp refusal edges and refresh current source-bound controls.",
+  "proves": "1178 Python checks and 34 focused timestamp checks passed; unusable output parents refuse before provider contact; malformed HTTP uses exit 2.",
+  "limits": "Synthetic controls and public timestamp fixtures are engineering evidence; no independently validated tag release or human authorship claim.",
+  "scope_ids": [
+    "F-124",
+    "F-120"
+  ],
+  "files": {
+    "README.md": "068d2da4c8ab7b3fc770fce51f46bf6237c33a295a1a9805a1d025491fa61d52",
+    "eval/route-boundaries.json": "d331f342766010d35e6fda42e3daee68091288335ee61991f9313044bd74a6f7",
+    "runs/2026-10-10-timestamp-review-corrections.json": "e61df6804dd5a767606b985e3d46c64f84fabf53eb5e4ef17d868930a769caac",
+    "runs/2026-10-10-timestamp-reviewed-boundaries.json": "7f3e6af9551ff0a185ae6539eb3bf3e120c36adffff631d33f96f77c21c7fcf3",
+    "scripts/independent_timestamp.py": "99647176035369e030c8714671e20fbf9d19d5348de68f23a8d39c0c21f7c144",
+    "scripts/timestamp-artifact.py": "38c872be11f7ded8bba9a300cc4f9e56c48b2b2020ae9cb640e5605ccb82c02f",
+    "state.json": "0a5a19d6db8675e7a8dfb95e85f7264296dbd1df37502b780101ee03d87fde45",
+    "tests/test_independent_timestamp.py": "95dac4386ebe0f245206eb12715f437471806f6227e63faa1470b52df22cfd18"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-timestamp-review-corrections.json",
+      "sha256": "e61df6804dd5a767606b985e3d46c64f84fabf53eb5e4ef17d868930a769caac"
+    },
+    {
+      "path": "runs/2026-10-10-timestamp-reviewed-boundaries.json",
+      "sha256": "7f3e6af9551ff0a185ae6539eb3bf3e120c36adffff631d33f96f77c21c7fcf3"
+    }
+  ],
+  "checks": []
+}

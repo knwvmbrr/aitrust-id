@@ -126,8 +126,9 @@ def issue(artifact, destination, ca, tsa, consent=False, transport=send, runner=
     authority(ca, tsa)  # Refuse untrusted inputs before any provider contact.
     raw = read(artifact, MAX_ARTIFACT)
     destination = Path(destination).absolute()
-    if destination.parent.resolve() != destination.parent or destination.exists():
-        raise ValueError('New destination with a non-symlink parent required')
+    if (not destination.parent.is_dir() or
+            destination.parent.resolve() != destination.parent or destination.exists()):
+        raise ValueError('New destination with an existing non-symlink directory parent required')
     query = command(['ts', '-query', '-digest', digest(raw), '-sha256', '-cert'], runner)
     # OpenSSL generates the request nonce; do not send an unbounded helper result.
     if not query or len(query) > MAX_EVIDENCE:
