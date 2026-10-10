@@ -47,11 +47,12 @@ const {chromium}=require('playwright');
    await context.route(url,route=>route.fulfill({contentType:'text/html',body:modernBody(item.text)}));
    await page.goto(url);await page.waitForSelector('.aitrust-mount');
    let names='';
-   const expected=item.finding?'Command risk pattern detected':'No supported command pattern found';
+   const expected=item.finding?'Command risk pattern detected':'PII: detected entity values redacted.';
    for(let i=0;i<60;i++){
     const tree=await cdp.send('Accessibility.getFullAXTree');names=tree.nodes.map(n=>n.name?.value||'').join('\n');
     if(names.includes(expected))break;await page.waitForTimeout(250);
    }
+   if(!item.finding&&names.includes('PS: supported command-risk finding.'))throw new Error('Download-only response received PS');
    if(!names.includes(expected))throw new Error('Modern real integration failed: '+item.name+' '+names);
    if(item.finding){
     await page.screenshot({path:'output/playwright/compact-tags.png',fullPage:true});
@@ -59,9 +60,16 @@ const {chromium}=require('playwright');
     const tree=await cdp.send('Accessibility.getFullAXTree');names=tree.nodes.map(n=>n.name?.value||'').join('\n');
     if(!names.includes('This command downloads code and runs it.'))throw new Error('Brief command explanation unavailable');
     const downloaded=page.waitForEvent('download');
-    await page.keyboard.press('Tab');await page.keyboard.press('Tab');await page.keyboard.press('Enter');
+    let exportFocused=false;
+    for(let step=0;step<15;step++){
+     const ax=await cdp.send('Accessibility.getFullAXTree');
+     exportFocused=ax.nodes.some(node=>node.name?.value==='Download record'&&node.properties?.some(p=>p.name==='focused'&&p.value?.value===true));
+     if(exportFocused)break;await page.keyboard.press('Tab');
+    }
+    if(!exportFocused)throw Error('Download record is not keyboard reachable');
+    await page.keyboard.press('Enter');
     const file=await downloaded,record=JSON.parse(fs.readFileSync(await file.path(),'utf8'));
-    if(record.selected_tag!=='PS'||!record.tags.some(tag=>tag.signals.some(signal=>signal.id==='sig.remote_command_substitution.v3')))throw new Error('Export lost substitution evidence');
+    if(record.selected_tag!=='PS'||!record.tags.some(tag=>tag.signals.some(signal=>signal.id==='sig.remote_command_substitution.v4')))throw new Error('Export lost substitution evidence');
     const evaluatorHash=require('node:crypto').createHash('sha256').update(fs.readFileSync('services/evaluator/app.py')).digest('hex');
     if(!record.evaluator.models.some(model=>model.sha256===evaluatorHash))throw new Error('Exported evaluator hash mismatch');
     if(JSON.stringify(record).includes('alice@example.com')||JSON.stringify(record).includes(command)||record.training_label!==null)throw new Error('Invalid privacy/training-label boundary');

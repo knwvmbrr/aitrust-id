@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-10-10T15:26:07.637456+00:00",
+  "pass": true,
+  "tests_passed": 813,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "python": "3.12.14",
+  "source_sha256": {
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "tests/test_command_performance.py": "9043d41292c17c10832baec9b3ba0942778ae7f524708dc5a4347feca1b48307",
+    "tests/test_evidence_resistance.py": "97b22b1a4bbcd4b233c22a13bba45e8be163bbc82052321f977270934636b410",
+    "tests/test_tag_performance.py": "159602f0ce4560e05cd9e8e9b21ddf39db72eda7196468d9f232572581bf6a3f"
+  },
+  "warning": "Existing Starlette httpx TestClient deprecation",
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

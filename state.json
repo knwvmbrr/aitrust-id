@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://e253eb53.aitrust-id.pages.dev",
+    "deployment_url": "https://3cb022b3.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-privacy-deployment.json",
+    "publication_evidence": "runs/2026-10-10-reproducibility-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-privacy-site-public.json",
+    "verification": "runs/2026-10-10-reproducibility-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -123,7 +123,7 @@
       "text_downloads": true,
       "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-10-privacy-policies-public.json",
+      "verification": "runs/2026-10-10-reproducibility-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -282,7 +282,7 @@
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
     "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9"
+    "public_static_source_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -316,15 +316,18 @@
     "live_extension_installed": true,
     "live_content_script_ui_observed": true,
     "authenticated_live_finding_verified": true,
-    "pending": "Rebuild and rerun the full container/installed extension pipeline for context-v5; local daemon is stopped. Earlier context-v4 evidence remains historical.",
+    "pending": "Current method passes remote staging and actual unpacked-extension synthetic checks. Current live-vendor, human route and independent accuracy acceptance remain open; no local Docker daemon started.",
     "live_evidence_source_hash_matches": false,
     "live_scope": "One existing Homebrew answer; broader live coverage and independent accuracy remain open",
     "verified_local_container_sources": false,
-    "current_method": "context-v5",
-    "current_method_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
-    "current_method_container_verified": false
+    "current_method": "context-v6",
+    "current_method_source_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "current_method_container_verified": true,
+    "current_method_container_environment": "Dedicated remote Linux staging; not a local Docker daemon",
+    "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
+    "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "390 tests in the reviewed source snapshot; excludes concurrent unreviewed drafts; not independent accuracy validation.",
+  "python_tests_scope": "813 tests passed on Python 3.12.14 for this snapshot; engineering checks, not independent tag accuracy. Evidence: runs/2026-10-10-capture-assessment-python.json.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -558,14 +561,15 @@
     "recovery_codes_offline_custody_verified": false
   },
   "local_cli": {
-    "status": "current_code_tests_pass; gateway_unavailable_during_context_v5_pass; independent_release_pending",
+    "status": "context_v6_current_source_unit_checks_pass; independent_release_pending",
     "script": "scripts/aitrust.py",
     "install_guide": "docs/open-validation-path.md",
     "schema_and_method_hash_validated": true,
     "redirects_and_system_proxies_refused": true,
     "text_executed": false,
     "text_persisted_or_uploaded": false,
-    "evidence": "runs/2026-10-08-local-cli-verification.json"
+    "evidence": "runs/2026-10-08-local-cli-verification.json",
+    "current_test_evidence": "runs/2026-10-10-capture-assessment-python.json"
   },
   "next_tag": {
     "code": "PII_REDACTED",
@@ -583,7 +587,7 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9",
+    "latest_implementation_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
     "handheld_download_verified": true
   },
   "name_clearance": {
@@ -618,11 +622,11 @@
     "strict_json_comparison_tested": true
   },
   "handheld": {
-    "status": "public_development_preview_verified_under_production_csp",
+    "status": "context_v6_local_built_engine_checks_pass_publication_pending",
     "path": "https://aitrustid.com/#person/PS",
     "tag": "PS",
     "runtime": "self-hosted Pyodide 314.0.7 / CPython 3.14.2 worker",
-    "same_detector_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+    "same_detector_source_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
     "account_required": false,
     "docker_required": false,
     "extension_required": false,
@@ -649,7 +653,8 @@
     "default_export": "minimal share summary; no answer fingerprint or positions",
     "detailed_export": "separate opt-in; consent resets for new input",
     "latest_emulation_evidence": "runs/2026-10-10-frozen-device-engines.json",
-    "normalization_id": "NFC-Unicode-15.0.0/v1"
+    "normalization_id": "NFC-Unicode-15.0.0/v1",
+    "latest_engine_verification": "runs/2026-10-10-context-v6-fixed-device-engines.json"
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -690,9 +695,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T14:40:05.191205+00:00",
-    "completed_records": 71,
-    "open_records": 131,
+    "audited_at": "2026-10-10T15:26:07.637456+00:00",
+    "completed_records": 79,
+    "open_records": 123,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -700,20 +705,20 @@
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
-    "structural_evidence": "runs/2026-10-10-consumer-scope-progress.json",
+    "structural_evidence": "runs/2026-10-10-capture-assessment-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-privacy-deployment.json",
-    "source_commit": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9",
+    "publication": "runs/2026-10-10-reproducibility-deployment.json",
+    "source_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/reproducibility-controls-result.md",
+    "latest_increment": "docs/capture-mechanism-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 31,
+    "target_remaining_closures": 23,
     "publication_pending": true,
-    "verification": "runs/2026-10-10-reproducibility-scope-progress.json"
+    "verification": "runs/2026-10-10-capture-assessment-scope.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -896,7 +901,7 @@
     "public_evidence": "runs/2026-10-10-privacy-policies-public.json"
   },
   "reproducibility_controls": {
-    "status": "executed_not_yet_published",
+    "status": "published_and_public_checks_pass",
     "decisions": 15,
     "catalogue_versions": 33,
     "active_development_methods": 5,
@@ -907,6 +912,18 @@
     "accessibility_release_gate_exit": 1,
     "full_assertion_replay": false,
     "independent_accuracy_evidence": false,
-    "result": "docs/reproducibility-controls-result.md"
+    "result": "docs/reproducibility-controls-result.md",
+    "publication": "runs/2026-10-10-reproducibility-deployment.json"
+  },
+  "command_performance": {
+    "method": "context-v6",
+    "method_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "synthetic_profile_measurement": "runs/2026-10-10-context-v6-unicode-stress.json",
+    "candidate_100_ms_target_met_for_all_profiles": false,
+    "frozen_word_class": "Unicode 15.0.0",
+    "cross_engine_evidence": "runs/2026-10-10-context-v6-fixed-device-engines.json",
+    "resistance_assessment": "runs/2026-10-10-evidence-resistance.json",
+    "independent_accuracy_evidence": false,
+    "release_approved": false
   }
 }

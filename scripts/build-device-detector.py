@@ -1,4 +1,4 @@
-"""Build a fail-closed, stdlib-only projection of the unchanged PS method."""
+"""Build a fail-closed, stdlib-only projection of the exact selected PS method."""
 import ast
 import hashlib
 import os
@@ -10,8 +10,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CONSTANTS = set('PRODUCTION_TAGS CALIBRATION_ID PIPED_INSTALLER EXECUTOR INTERPRETER COMMAND FETCH PREFIX COMMAND_SUBSTITUTION PROCESS_SUBSTITUTION BACKTICK_SUBSTITUTION OBFUSCATED WARNING'.split())
-FUNCTIONS = set('fetches_stdout display_quote substitution_mentioned pipe_mentioned shell_evaluation_layer mentioned signals'.split())
+CONSTANTS = set('PRODUCTION_TAGS CALIBRATION_ID FROZEN_WORD PIPED_TARGET PIPED_INSTALLER EXECUTOR INTERPRETER COMMAND FETCH PREFIX COMMAND_SUBSTITUTION PROCESS_SUBSTITUTION BACKTICK_SUBSTITUTION OBFUSCATED WARNING'.split())
+FUNCTIONS = set('fetches_stdout display_quote substitution_mentioned pipe_mentioned shell_evaluation_layer mentioned build_context warning_before pipe_matches signals compile_pattern'.split())
 
 
 # Normalize syntax differences only at AST-identified tuple targets. Rewriting

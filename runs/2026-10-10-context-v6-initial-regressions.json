@@ -1,0 +1,962 @@
+{
+  "captured_at": "2026-10-10T14:59:42.999783+00:00",
+  "normalization_id": "NFC-Unicode-15.0.0/v1",
+  "normalization_sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+  "normalization_data_sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+  "category_version": "development-input-form/v1",
+  "category_source_sha256": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+  "provenance": {
+    "captured_at": "2026-10-10T14:59:40.081498+00:00",
+    "pass": true,
+    "examples": 101,
+    "active_examples": 86,
+    "historical_examples": 15,
+    "manifest_sha256": "ec9d5ce24bb4c13b31d7e95320f65bd1b989bac8dee5caeb204ad1f88b4a1181",
+    "provenance_sha256": "39fa339ba299a2e3131cb8e4b1c1dc31fa78bf19a48151f373fadf7612a666a1",
+    "source_history_verified": false,
+    "unknown_author_attribution_preserved": true,
+    "independent_accuracy_evidence": false,
+    "origin_scope": "exact source commit and recorded commit time; not original authorship or creation time"
+  },
+  "regression_pass": true,
+  "datasets": [
+    {
+      "file": "ps_v1.jsonl",
+      "sha256": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4",
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "tn": 14,
+      "category_failures": [],
+      "category_metrics": {
+        "encoded_content_forms": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2,
+          "n": 6,
+          "precision": {
+            "successes": 4,
+            "denominator": 4,
+            "point": 1.0,
+            "interval": [
+              0.5101091635454028,
+              0.9999999999999999
+            ]
+          },
+          "recall": {
+            "successes": 4,
+            "denominator": 4,
+            "point": 1.0,
+            "interval": [
+              0.5101091635454028,
+              0.9999999999999999
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 2,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.6576197724933468
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 4,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.48989083645459713
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "file_download_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 1,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "ordinary_text_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4,
+          "n": 4,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 4,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.48989083645459713
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_code_forms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 2,
+          "precision": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_download_forms": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5,
+          "n": 9,
+          "precision": {
+            "successes": 4,
+            "denominator": 4,
+            "point": 1.0,
+            "interval": [
+              0.5101091635454028,
+              0.9999999999999999
+            ]
+          },
+          "recall": {
+            "successes": 4,
+            "denominator": 4,
+            "point": 1.0,
+            "interval": [
+              0.5101091635454028,
+              0.9999999999999999
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 5,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.43448246478317465
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 4,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.48989083645459713
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "quoted_or_discussed_download_forms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 2,
+          "precision": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        }
+      }
+    },
+    {
+      "file": "fetch_execute_v1.jsonl",
+      "sha256": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10",
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 11,
+      "category_failures": [],
+      "category_metrics": {
+        "file_download_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 1,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "ordinary_text_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 1,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_code_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2,
+          "n": 2,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 2,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.6576197724933468
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_download_forms": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5,
+          "n": 13,
+          "precision": {
+            "successes": 8,
+            "denominator": 8,
+            "point": 1.0,
+            "interval": [
+              0.67559243511612,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 8,
+            "denominator": 8,
+            "point": 1.0,
+            "interval": [
+              0.67559243511612,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 5,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.43448246478317465
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 8,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.3244075648838801
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "quoted_or_discussed_download_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2,
+          "n": 2,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 2,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.6576197724933468
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        }
+      }
+    },
+    {
+      "file": "counterexamples_v2.jsonl",
+      "sha256": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "category_failures": [],
+      "category_metrics": {
+        "file_download_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4,
+          "n": 4,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 4,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.48989083645459713
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_download_forms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6,
+          "n": 7,
+          "precision": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 6,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.3903342879021652
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "quoted_or_discussed_download_forms": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2,
+          "n": 4,
+          "precision": {
+            "successes": 2,
+            "denominator": 2,
+            "point": 1.0,
+            "interval": [
+              0.3423802275066532,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 2,
+            "denominator": 2,
+            "point": 1.0,
+            "interval": [
+              0.3423802275066532,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 2,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.6576197724933468
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 2,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.6576197724933468
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        }
+      }
+    },
+    {
+      "file": "live_gap_v1.jsonl",
+      "sha256": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "category_failures": [],
+      "category_metrics": {
+        "file_download_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 1,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_download_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 1,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        }
+      }
+    },
+    {
+      "file": "routing_boundaries_v1.jsonl",
+      "sha256": "639715fb9ebb6e755fb5028adab57f14f9b04733433b98810666bb4f93a63b62",
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "tn": 16,
+      "category_failures": [],
+      "category_metrics": {
+        "file_download_forms": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 6,
+          "n": 10,
+          "precision": {
+            "successes": 4,
+            "denominator": 4,
+            "point": 1.0,
+            "interval": [
+              0.5101091635454028,
+              0.9999999999999999
+            ]
+          },
+          "recall": {
+            "successes": 4,
+            "denominator": 4,
+            "point": 1.0,
+            "interval": [
+              0.5101091635454028,
+              0.9999999999999999
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 6,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.3903342879021652
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 4,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.48989083645459713
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_code_forms": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "n": 1,
+          "precision": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "recall": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 0,
+            "point": null,
+            "interval": null
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "other_download_forms": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "tn": 7,
+          "n": 12,
+          "precision": {
+            "successes": 5,
+            "denominator": 5,
+            "point": 1.0,
+            "interval": [
+              0.5655175352168255,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 5,
+            "denominator": 5,
+            "point": 1.0,
+            "interval": [
+              0.5655175352168255,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 7,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.3543304350666873
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 5,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.43448246478317465
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        },
+        "quoted_or_discussed_download_forms": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2,
+          "n": 3,
+          "precision": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "recall": {
+            "successes": 1,
+            "denominator": 1,
+            "point": 1.0,
+            "interval": [
+              0.2065493143772375,
+              1.0
+            ]
+          },
+          "false_positive_rate": {
+            "successes": 0,
+            "denominator": 2,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.6576197724933468
+            ]
+          },
+          "false_negative_rate": {
+            "successes": 0,
+            "denominator": 1,
+            "point": 0.0,
+            "interval": [
+              0.0,
+              0.7934506856227624
+            ]
+          },
+          "calibration": {
+            "ece": null,
+            "observations": 0,
+            "reason": "Calibration evidence is separate; heuristic scores are not probabilities"
+          }
+        }
+      }
+    }
+  ],
+  "method_sha256": "e4dc27a1bcca1f78a0d4d11f16fce5edebdbf340641996a811a87e263c7dc33e",
+  "case_count": 86,
+  "failures": [],
+  "historical": [
+    {
+      "file": "counterexamples_v1.jsonl",
+      "sha256": "1e2a473e3aa33b449b8cc7f7db0ad7a713e79fd8ac8486fa995051468e3927b7",
+      "superseded_by": "counterexamples_v2.jsonl",
+      "reason": "Two historical shell labels contradicted executed second-shell behavior; preserved, not treated as current ground truth."
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_assessed": false
+}

@@ -6,9 +6,9 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
 (async()=>{
  const profile=fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-consent-'));
  const token=crypto.randomBytes(24).toString('hex'),marker='synthetic-consent-private-canary';
- let requests=0,held=false,pending=[],cancelled=0,context;
+ let requests=0,held=false,pending=[],cancelled=0,invalidAuth=0,context;
  const server=http.createServer((req,res)=>{
-  assert(req.url==='/v1/evaluate','Unexpected local request');assert(req.headers.authorization==='Bearer '+token,'Invalid synthetic auth');
+  assert(req.url==='/v1/evaluate','Unexpected local request');if(req.headers.authorization!=='Bearer '+token){invalidAuth++;req.resume();res.writeHead(401,{'content-type':'application/json','cache-control':'no-store'});res.end(JSON.stringify({detail:'Invalid local credential'}));return;}
   let body='';req.on('data',chunk=>{body+=chunk;assert(body.length<10000,'Unbounded test body');});
   req.on('end',()=>{
    requests++;const input=JSON.parse(body);assert(input.origin_host==='chatgpt.com'&&input.modality==='text','Unexpected capture');assert(!input.text.includes(marker+'-prompt'),'Prompt captured');
@@ -41,11 +41,16 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
   held=false;await settings.locator('#checks-enabled').check();for(let i=0;i<50&&requests!==3;i++)await page.waitForTimeout(50);assert(requests===3,'Resume did not create fresh check');
   await settings.getByRole('button',{name:'Reset local settings',exact:true}).click();await settings.waitForFunction(()=>document.querySelector('#saved-token').textContent.includes('No local token'));
   await page.waitForFunction(()=>!document.querySelector('article .aitrust-mount'));
+  await settings.locator('#token').fill('synthetic-invalid-token-at-least-32-characters');await settings.getByRole('button',{name:'Save token',exact:true}).click();await settings.waitForFunction(()=>document.querySelector('#saved-token').textContent.includes('A local token is saved'));
+  await settings.locator('#checks-enabled').check();for(let i=0;i<50&&!invalidAuth;i++)await page.waitForTimeout(50);assert(invalidAuth===1,'Invalid-token request was not checked');
+  const cdp=await context.newCDPSession(page);let names='';for(let i=0;i<50;i++){const tree=await cdp.send('Accessibility.getFullAXTree');names=tree.nodes.map(n=>n.name?.value||'').join('\n');if(names.includes('The local token is invalid.'))break;await page.waitForTimeout(50);}
+  assert(names.includes('The local token is invalid.')&&!names.includes('PS: supported command-risk finding.'),'Failed auth became a finding or lost its recovery message');
+  await settings.getByRole('button',{name:'Reset local settings',exact:true}).click();await settings.waitForFunction(()=>document.querySelector('#saved-token').textContent.includes('No local token'));await page.waitForFunction(()=>!document.querySelector('article .aitrust-mount'));
   const storage=await worker.evaluate(()=>chrome.storage.local.get(null));assert(!('token' in storage)&&!('checks_enabled' in storage),'Reset retained credential or consent');
   assert(!JSON.stringify(storage).includes(marker),'Answer persisted in extension storage');
   await page.reload();await page.waitForTimeout(900);assert(requests===3,'Reset did not remain paused');
   assert(!await settings.locator('body').innerText().then(v=>v.includes(token)||v.includes(marker)),'Secret or response echoed in options');
-  const result={captured_at:new Date().toISOString(),pass:true,actual_unpacked_extension:true,synthetic_vendor_page:true,synthetic_loopback_service:true,default_paused:true,token_save_is_not_consent:true,explicit_enable:true,pause_aborts_inflight:true,late_result_cannot_remount:true,resume_requires_fresh_check:true,reset_removes_token_and_consent:true,reset_persists_across_reload:true,no_answer_in_extension_storage:true,no_token_in_options_dom:true,evaluation_requests:requests,cancelled_requests:cancelled,real_vendor_compatibility:false,physical_device:false,independent_accuracy:false,source_sha256:Object.fromEntries(['extension/src/sw/service-worker.js','extension/src/content/bridge.js','extension/src/options.js','extension/src/options.html'].map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]))};
+  const result={captured_at:new Date().toISOString(),pass:true,actual_unpacked_extension:true,synthetic_vendor_page:true,synthetic_loopback_service:true,invalid_auth_requests:invalidAuth,invalid_token_is_unavailable_not_finding:true,default_paused:true,token_save_is_not_consent:true,explicit_enable:true,pause_aborts_inflight:true,late_result_cannot_remount:true,resume_requires_fresh_check:true,reset_removes_token_and_consent:true,reset_persists_across_reload:true,no_answer_in_extension_storage:true,no_token_in_options_dom:true,evaluation_requests:requests,cancelled_requests:cancelled,real_vendor_compatibility:false,physical_device:false,independent_accuracy:false,source_sha256:Object.fromEntries(['extension/src/sw/service-worker.js','extension/src/content/bridge.js','extension/src/options.js','extension/src/options.html'].map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]))};
   writeReport(process.env.AITRUST_PRIVACY_REPORT||'output/verification/extension-privacy.json',result);console.log(JSON.stringify(result));
  }finally{if(context)await context.close();await new Promise(resolve=>server.close(resolve));fs.rmSync(profile,{recursive:true,force:true});}
 })().catch(()=>{console.error('Extension privacy verification failed; inspect the synthetic test without logging credentials or answer text.');process.exitCode=1;});

@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-10T15:21:01.602229+00:00",
+  "pass": true,
+  "tests_passed": 807,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "python": "3.12.14",
+  "source_sha256": {
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "tests/test_command_performance.py": "9043d41292c17c10832baec9b3ba0942778ae7f524708dc5a4347feca1b48307"
+  },
+  "warning": "Existing Starlette httpx TestClient deprecation",
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

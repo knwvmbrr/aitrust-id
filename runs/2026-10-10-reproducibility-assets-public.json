@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-10-10T14:45:56.168Z",
+  "pass": true,
+  "source_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
+  "artifacts_per_origin": 160,
+  "origins": [
+    {
+      "origin": "https://3cb022b3.aitrust-id.pages.dev",
+      "matching_artifacts": 160,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "matching_artifacts": 160,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://www.aitrustid.com",
+      "matching_artifacts": 160,
+      "security_headers_present": true
+    }
+  ],
+  "matching_artifacts": 480,
+  "scope": "Exact decoded HTTP bytes of the reviewed build; not an independent source audit or detector accuracy test",
+  "independent_accuracy_evidence": false
+}

@@ -5,6 +5,7 @@
   const states=new WeakMap(),tracked=new Set();let scanTimer,enabled=false,consentRevision=0;
   async function check(host,state){
     if(!enabled)return;
+    clearTimeout(state.timer);state.timer=null;
     const identity=adapter.responseId(host),text=adapter.text(host),page=location.href;
     if(!identity){ui.update(host,'UNSUPPORTED',null,'A stable assistant response identity is unavailable.');return;}
     if(!text)return;
@@ -38,11 +39,11 @@
       if(!state){state={request:0,text:'',identity:null,page:null,evaluated:null,timer:null,streaming:false};states.set(host,state);tracked.add(host);ui.mount(host,()=>check(host,state));}
       const text=adapter.text(host),identity=adapter.responseId(host),page=location.href,streaming=adapter.streaming(host);
       if(text!==state.text||identity!==state.identity||page!==state.page||streaming!==state.streaming){
-        Object.assign(state,{text,identity,page,streaming,evaluated:null});state.request++;clearTimeout(state.timer);ui.update(host,'PENDING');
+        Object.assign(state,{text,identity,page,streaming,evaluated:null});state.request++;clearTimeout(state.timer);state.timer=null;ui.update(host,'PENDING');
       }
       if(!identity){ui.update(host,'UNSUPPORTED',null,'A stable assistant response identity is unavailable.');continue;}
       if(streaming){ui.update(host,'PENDING',null,'Waiting for this response to finish.');continue;}
-      if(text&&state.evaluated!==text){clearTimeout(state.timer);state.timer=setTimeout(()=>check(host,state),600);}
+      if(text&&state.evaluated!==text&&state.timer===null){state.timer=setTimeout(()=>{state.timer=null;check(host,state);},600);}
     }
   }
   function queue(){clearTimeout(scanTimer);scanTimer=setTimeout(scan,50);}

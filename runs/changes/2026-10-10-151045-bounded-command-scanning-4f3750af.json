@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-151045-bounded-command-scanning-4f3750af",
+  "recorded_at": "2026-10-10T15:10:45.283485+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
+  "changed": "Bound command scanning cost, retain exact prior method source, version all affected evidence IDs, rebuild the device projection and add dense-input and Unicode-boundary checks.",
+  "proves": "Twenty-five synthetic profiles finish, 600 prior-method comparisons agree, active development fixtures retain 31 true positives and zero false positives, and four actual Python builders produce one identical bundle.",
+  "limits": "Large dense profiles exceed the candidate 100 ms target. Independent accuracy, physical phones and human acceptance remain incomplete. New browser and service verification is still in progress.",
+  "scope_ids": [
+    "F-009",
+    "F-010",
+    "F-011",
+    "F-014",
+    "F-113",
+    "T-PS",
+    "N-006"
+  ],
+  "files": {
+    "docs/command-matching-performance-plan.md": "518d8e6a6778baec4e7a62b0aacf26965750a7a96f330333593457e37dab0964",
+    "docs/device-build-reference.json": "91754698f163eeeb24f499d2bdb1de53c50262cda8fd7fbd37cac0fea3af085d",
+    "eval/methods/README.md": "e47de496d7ad753cd56eb2b1eb7ca5f5e143cce48870b920bf978a9f4dfa3f90",
+    "eval/methods/context-v5.py": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+    "eval/revalidation.json": "10cf347b55daa992c80b988f03ac73fe398e63a60d37210a3e09613db9b633fc",
+    "eval/tag-performance-evidence.json": "21cef45daa8959758d1b91770af1c7146ea36952447650600ec1b00d30415796",
+    "eval/vectors/ps-unicode-redaction.json": "7690cb2ffb6c7843513554481dc25775ed52661850c792b7463536f481c5d6ea",
+    "extension/src/content/badge.js": "f0eb3c8275a84495e3a37190aa9fbf9c10419cba6b8a28437a19a9c51fbaa5d4",
+    "protocol/signals.py": "76fb59949d36d511518925aeb0d90029c3887e5b5cb91c2fb925bcbf8c1010ca",
+    "runs/2026-10-10-context-v6-builder-matrix.json": "b542ac964f25c9db16234d274afafd36cffa15f83a3f7582e80c63117df5557b",
+    "runs/2026-10-10-context-v6-command-stress.json": "bf25b8aca258ac8a2fd076620c9a2b4aa4e8edf2f97bcf2c7a6abd2015527cd1",
+    "runs/2026-10-10-context-v6-initial-regressions.json": "0956d7b2841e6db8e2cf2857ec7103320877e40d6e0310b9a70ef05390a99fe0",
+    "runs/2026-10-10-reproducibility-assets-public.json": "d020e0b5464b720ef8ab0ff5fc575cc66945cebd17d7a9c0af8d79990954ebdd",
+    "runs/2026-10-10-reproducibility-deployment.json": "24b77caaf452e1a91115662a14f2a715c70ade102eef4c35ff4eb5a83f8f810d",
+    "runs/2026-10-10-reproducibility-policies-public.json": "a0a785ad64db80cbd8764b5a8a1c2c72d95725be84adf1108d7989f540baaeb6",
+    "runs/2026-10-10-reproducibility-site-public.json": "a1c1d51f2f3e884dfc62b1f940362b417e5786e696b6fe851ccecb463e2ca74e",
+    "scripts/aitrust.py": "cce8263e6b03864735400e186e28ac8855e407d8c7a17f5a9f8ef0ec8cad2b40",
+    "scripts/build-device-detector.py": "a3da3ff45b31c1cbeddbb558f640ef8c482945b42106399689a4f6892dbcfcfd",
+    "scripts/measure-command-performance.py": "a18ca54766dc5da5f9bc8c542671cf0d0a2e7498097b1cd5dfbdc16936b47e5c",
+    "scripts/verify-device.cjs": "b1306fc15b4ab344493854c2d6f79d0e442c291c0b731bdb168009c92c628b96",
+    "scripts/verify-extension.cjs": "4c82c2380f1d11261827dd52fef7b6faf611992655610ec6e47f2cb8e505004d",
+    "scripts/verify-ps-results.cjs": "82feaf681ad98d3fb09d8cabf570c24cce64e80abea645cb141884f00220fc03",
+    "scripts/verify-service.py": "6a9338277e83dadef2a96fb5ecf0d527b93b074efa79594c45814620880b4766",
+    "services/evaluator/app.py": "e4dc27a1bcca1f78a0d4d11f16fce5edebdbf340641996a811a87e263c7dc33e",
+    "site/src/catalog.js": "1ec5d5a358d9212bdb7b7cf66839e2f1bef17bcdd4e0909a8d47d21d738ed477",
+    "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
+    "spec/signal-registry.json": "406bcc99e08eea406fda6d833f4af839fdbdeb30d12074ad5861485fcd9f4ade",
+    "spec/signals.md": "c57c5511dfa824dddc8abc99051ed353941c7966eee3d83dbaa33b4573fbfd90",
+    "state.json": "58b52296fc3653dfe5095c1596fa508bde2462e6ed07a1320cde5e12808ebf7f",
+    "tests/test_command_performance.py": "9dd3fbea12339bc11727411cf9c34c92bf4ea3b1ae42f42693dffc42fa7fb8e1",
+    "tests/test_device_bundle_determinism.py": "d33079d75769ec3f8872aa3a486323db34161ada69df66a534d21928f879c165",
+    "tests/test_pipe_routing.py": "a7237bb093c57604f1e675a1be3f39102510ff97a39b4563f21e0d8daa13876b",
+    "tests/test_reproducibility_controls.py": "1bbdce80ef70bd2f9de4f12d89c15a28b8eda1bba923ba75225920a49bc76f09",
+    "tests/test_tag_performance.py": "67383f05d1c43a6459a1152b1b85a3ad70d6a1deb8e3908ddb2d4cd79ef7570e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-context-v6-command-stress.json",
+      "sha256": "bf25b8aca258ac8a2fd076620c9a2b4aa4e8edf2f97bcf2c7a6abd2015527cd1"
+    },
+    {
+      "path": "runs/2026-10-10-context-v6-initial-regressions.json",
+      "sha256": "0956d7b2841e6db8e2cf2857ec7103320877e40d6e0310b9a70ef05390a99fe0"
+    },
+    {
+      "path": "runs/2026-10-10-context-v6-builder-matrix.json",
+      "sha256": "b542ac964f25c9db16234d274afafd36cffa15f83a3f7582e80c63117df5557b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_command_performance.py",
+        "tests/test_device_bundle_determinism.py",
+        "tests/test_device_matrix_checkout.py",
+        "tests/test_local_cli.py",
+        "tests/test_gateway_integration.py",
+        "tests/test_tag_performance.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T15:10:48.037618+00:00"
+    }
+  ]
+}

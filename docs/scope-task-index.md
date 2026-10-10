@@ -12,7 +12,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-007 | Content-free assertion records | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-009 | Evidence durability and cost-to-defeat assessment | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-009 | Evidence durability and cost-to-defeat assessment | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-078 | Conformance vectors for text and code subject hashes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-079 | Route-specific privacy clauses with executed evidence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-080 | Subject hash documented as a correlation identifier, not an anonymisation | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
@@ -62,15 +62,15 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-086 | No telemetry, no analytics, no phone-home — in the extension or the services | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-087 | Capture trust boundary, published plainly | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-030 | MV3 MAIN-world capture — fetch patch plus ReadableStream.tee() | [WP-CAPTURE](scope-delivery.md#wp-capture) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-031 | DOM observer fallback for sites the fetch patch misses | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-088 | Response identity and revision binding | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-089 | Duplicate suppression — one badge per response | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-090 | Character-data mutation observation | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-032 | Streaming settle detection | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-031 | DOM observer fallback for sites the fetch patch misses | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-088 | Response identity and revision binding | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-089 | Duplicate suppression — one badge per response | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-090 | Character-data mutation observation | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-032 | Streaming settle detection | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-037 | Per-vendor site adapters | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-033 | Closed shadow-root badge, monochrome | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-034 | Evidence panel showing the exact spans that triggered the tag | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-091 | Options page for the bearer token | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-091 | Options page for the bearer token | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-035 | Full screen-reader semantics, aria-live="polite" never assertive | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-092 | Keyboard-only operation — reach, open, read, close the panel | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-093 | Forced-colors and high-contrast support | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
@@ -189,7 +189,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-022 | Legacy grouping for T-IV | [TAG-IV](scope-delivery.md#tag-iv) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-029 | Legacy grouping for F-029a, F-029b, F-029c | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-N-001 | Protocol compatibility and schema migration | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-N-002 | Separate pending, uncertain, unsupported, unavailable, and no-finding states | [TAG-UNK](scope-delivery.md#tag-unk) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-N-002 | Separate pending, uncertain, unsupported, unavailable, and no-finding states | [TAG-UNK](scope-delivery.md#tag-unk) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-003 | Detector resource limits, cancellation, concurrency, and failure containment | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-004 | Consent, per-site pause, capture boundaries, reset and deletion | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-005 | Label dispute, correction, and supersession workflow | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |

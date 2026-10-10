@@ -29,6 +29,13 @@ def registry(root=ROOT):
         for name in s['source_files']:
             if name.startswith('/') or '..' in Path(name).parts or not (root/name).is_file() or (root/name).is_symlink():
                 raise ValueError('Invalid implementation source')
+        if 'historical_source' in s:
+            name=s['historical_source']
+            if s['status']!='historical_development' or not re.fullmatch(r'eval/methods/context-v[0-9]+\.py',name):
+                raise ValueError('Invalid archived method binding')
+            file=root/name
+            if file.is_symlink() or not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=s['historical_source_sha256']:
+                raise ValueError('Historical implementation changed')
     return data
 
 def lookup(signal_id,root=ROOT):

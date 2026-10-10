@@ -1,0 +1,360 @@
+{
+  "captured_at": "2026-10-10T15:17:51.092083+00:00",
+  "pass": true,
+  "kind": "current_evidence_resistance_assessment",
+  "method_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+  "source_unchanged": true,
+  "synthetic_lexical_trials": [
+    {
+      "family": "pipe",
+      "mutation": "escaped_command_name",
+      "inserted_characters": 1,
+      "baseline_signal_ids": [
+        "sig.piped_installer.v4"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "pipe",
+      "mutation": "quoted_command_fragment",
+      "inserted_characters": 2,
+      "baseline_signal_ids": [
+        "sig.piped_installer.v4"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "command",
+      "mutation": "escaped_command_name",
+      "inserted_characters": 1,
+      "baseline_signal_ids": [
+        "sig.remote_command_substitution.v4"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "command",
+      "mutation": "quoted_command_fragment",
+      "inserted_characters": 2,
+      "baseline_signal_ids": [
+        "sig.remote_command_substitution.v4"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "process",
+      "mutation": "escaped_command_name",
+      "inserted_characters": 1,
+      "baseline_signal_ids": [
+        "sig.remote_process_substitution.v4"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "process",
+      "mutation": "quoted_command_fragment",
+      "inserted_characters": 2,
+      "baseline_signal_ids": [
+        "sig.remote_process_substitution.v4"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "backtick",
+      "mutation": "escaped_command_name",
+      "inserted_characters": 1,
+      "baseline_signal_ids": [
+        "sig.remote_backtick_substitution.v3"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    },
+    {
+      "family": "backtick",
+      "mutation": "quoted_command_fragment",
+      "inserted_characters": 2,
+      "baseline_signal_ids": [
+        "sig.remote_backtick_substitution.v3"
+      ],
+      "mutation_signal_ids": [],
+      "baseline_found": true,
+      "mutation_found": false,
+      "syntax_only_pass": true,
+      "shlex_token_sequence_equal": true
+    }
+  ],
+  "methods": [
+    {
+      "signal_id": "presidio.entity.v1",
+      "method_status": "procedural",
+      "status": "recognizer_coverage_not_attack_measured",
+      "assumption": "Recognizers can miss novel formatting and sensitive information; successful redaction is not anonymity."
+    },
+    {
+      "signal_id": "sig.assistive_input.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.attention_shape.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.authority_appeal.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.compose_monotonicity.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.corpus_contradiction.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.corpus_support.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.credential_exfil.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.duplicate_loop.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.false_dilemma.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.fetch_execute.v1",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.hedge_collapse.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.keystroke_liveness.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.obfuscated_payload.v1",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.obfuscated_payload.v2",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.obfuscated_payload.v3",
+      "method_status": "active_development",
+      "status": "measured_named_decoder_boundary",
+      "baseline_found": true,
+      "aliased_decoder_found": false,
+      "execution_equivalence_verified": false
+    },
+    {
+      "signal_id": "sig.outside_knowledge.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.paste_burst.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.piped_installer.v1",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.piped_installer.v2",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.piped_installer.v3",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.piped_installer.v4",
+      "method_status": "active_development",
+      "status": "measured_synthetic_lexical_evasion",
+      "trials": 2,
+      "misses": 2,
+      "smallest_observed_insertions": 1
+    },
+    {
+      "signal_id": "sig.remote_backtick_substitution.v1",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_backtick_substitution.v2",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_backtick_substitution.v3",
+      "method_status": "active_development",
+      "status": "measured_synthetic_lexical_evasion",
+      "trials": 2,
+      "misses": 2,
+      "smallest_observed_insertions": 1
+    },
+    {
+      "signal_id": "sig.remote_command_substitution.v1",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_command_substitution.v2",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_command_substitution.v3",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_command_substitution.v4",
+      "method_status": "active_development",
+      "status": "measured_synthetic_lexical_evasion",
+      "trials": 2,
+      "misses": 2,
+      "smallest_observed_insertions": 1
+    },
+    {
+      "signal_id": "sig.remote_process_substitution.v1",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_process_substitution.v2",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_process_substitution.v3",
+      "method_status": "historical_development",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.remote_process_substitution.v4",
+      "method_status": "active_development",
+      "status": "measured_synthetic_lexical_evasion",
+      "trials": 2,
+      "misses": 2,
+      "smallest_observed_insertions": 1
+    },
+    {
+      "signal_id": "sig.revision_churn.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.selfcontradiction.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.typosquat.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.unsourced_specificity.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    },
+    {
+      "signal_id": "sig.urgency_frame.v1",
+      "method_status": "proposed",
+      "status": "inactive_or_unimplemented_not_measured",
+      "assumption": "A proposed cost class supplies no measured resistance."
+    }
+  ],
+  "unsigned_record_integrity": "A subject hash binds bytes; it does not authenticate an issuer. Current consumers refuse signed records they cannot verify.",
+  "cost_interpretation": "Insertion count is the smallest observed textual edit in these trials, not money, time, a lower bound, or a population evasion rate.",
+  "limits": "Syntax and shlex agreement do not prove runtime equivalence for all shells or environments. No command executes; all URLs are synthetic. Inactive methods and recognizer attack coverage remain unmeasured.",
+  "commands_executed": false,
+  "network_requests": 0,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

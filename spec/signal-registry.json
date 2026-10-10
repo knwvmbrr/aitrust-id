@@ -134,11 +134,22 @@
     },
     {
       "id": "sig.obfuscated_payload.v2",
-      "status": "active_development",
+      "status": "historical_development",
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Lexical match for `eval` or `exec` receiving `base64.b64decode`, `atob`, or `bytes.fromhex`",
+      "source_files": [],
+      "historical_source": "eval/methods/context-v5.py",
+      "historical_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a"
+    },
+    {
+      "id": "sig.obfuscated_payload.v3",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Lexical match for `eval` or `exec` receiving `base64.b64decode`, `atob`, or `bytes.fromhex` Context-v6 indexes warnings and literal displays once; pipe matching scans bounded delimiter windows.",
       "source_files": [
         "services/evaluator/app.py",
         "protocol/normalization.py",
@@ -184,11 +195,22 @@
     },
     {
       "id": "sig.piped_installer.v3",
-      "status": "active_development",
+      "status": "historical_development",
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [],
+      "historical_source": "eval/methods/context-v5.py",
+      "historical_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a"
+    },
+    {
+      "id": "sig.piped_installer.v4",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md. Context-v6 indexes warnings and literal displays once; pipe matching scans bounded delimiter windows.",
       "source_files": [
         "services/evaluator/app.py",
         "protocol/normalization.py",
@@ -207,11 +229,22 @@
     },
     {
       "id": "sig.remote_backtick_substitution.v2",
-      "status": "active_development",
+      "status": "historical_development",
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [],
+      "historical_source": "eval/methods/context-v5.py",
+      "historical_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a"
+    },
+    {
+      "id": "sig.remote_backtick_substitution.v3",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md. Context-v6 indexes warnings and literal displays once; pipe matching scans bounded delimiter windows.",
       "source_files": [
         "services/evaluator/app.py",
         "protocol/normalization.py",
@@ -239,11 +272,22 @@
     },
     {
       "id": "sig.remote_command_substitution.v3",
-      "status": "active_development",
+      "status": "historical_development",
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [],
+      "historical_source": "eval/methods/context-v5.py",
+      "historical_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a"
+    },
+    {
+      "id": "sig.remote_command_substitution.v4",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md. Context-v6 indexes warnings and literal displays once; pipe matching scans bounded delimiter windows.",
       "source_files": [
         "services/evaluator/app.py",
         "protocol/normalization.py",
@@ -271,11 +315,22 @@
     },
     {
       "id": "sig.remote_process_substitution.v3",
-      "status": "active_development",
+      "status": "historical_development",
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [],
+      "historical_source": "eval/methods/context-v5.py",
+      "historical_source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a"
+    },
+    {
+      "id": "sig.remote_process_substitution.v4",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md. Context-v6 indexes warnings and literal displays once; pipe matching scans bounded delimiter windows.",
       "source_files": [
         "services/evaluator/app.py",
         "protocol/normalization.py",

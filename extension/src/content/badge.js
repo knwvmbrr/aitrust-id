@@ -52,7 +52,7 @@
     root.querySelector('.export').hidden=!assertion;
     root.querySelector('.export-note').hidden=!assertion;
     if(code==='PS'){
-      const encoded=assertion?.tags.filter(tag=>tag.code===code).some(tag=>tag.signals.some(signal=>signal.id==='sig.obfuscated_payload.v2'));
+      const encoded=assertion?.tags.filter(tag=>tag.code===code).some(tag=>tag.signals.some(signal=>signal.id==='sig.obfuscated_payload.v3'));
       paragraph(encoded?'This command runs encoded code. Inspect what it decodes to before running it.':'This command downloads code and runs it. Inspect the code before running it.');
       paragraph('A command-risk warning, not a scam verdict.');
     }else if(code==='PII_REDACTED'){
@@ -69,7 +69,7 @@
       for(const item of assertion.abstentions){const li=document.createElement('li');li.textContent=displayCode(item.code)+': '+(meanings[item.reason]||'no supported conclusion')+'.';list.append(li);}
       detail.append(list);container.append(detail);
     }
-    const labels={'sig.piped_installer.v3':'Download piped to a shell','sig.remote_command_substitution.v3':'Downloaded output used in an execution command','sig.remote_process_substitution.v3':'Downloaded code handed to an interpreter','sig.remote_backtick_substitution.v2':'Downloaded output substituted into a command','sig.obfuscated_payload.v2':'Encoded content passed to eval or exec','presidio.entity.v1':'Detected entity redaction'};
+    const labels={'sig.piped_installer.v4':'Download piped to a shell','sig.remote_command_substitution.v4':'Downloaded output used in an execution command','sig.remote_process_substitution.v4':'Downloaded code handed to an interpreter','sig.remote_backtick_substitution.v3':'Downloaded output substituted into a command','sig.obfuscated_payload.v3':'Encoded content passed to eval or exec','presidio.entity.v1':'Detected entity redaction'};
     const signals=(assertion?.tags||[]).filter(tag=>tag.code===code).flatMap(tag=>tag.signals||[]);
     if(signals.length){
       const detail=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Matched locations';detail.append(summary);

@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-10T15:26:44.577011+00:00",
+  "pass": false,
+  "kind": "observed_verifier_failure",
+  "failure": "Verifier expected NO_FINDING on a command-negative response that independently had PII redaction; UI correctly rendered its PII finding.",
+  "fix": "Check PS absence separately from the PII observation; do not erase independent tag findings to satisfy an old single-tag test.",
+  "incorrect_tag_finding_established": false,
+  "independent_accuracy_evidence": false
+}

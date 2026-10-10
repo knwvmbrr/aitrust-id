@@ -1,0 +1,459 @@
+{
+  "captured_at": "2026-10-10T15:13:01.442759+00:00",
+  "pass": true,
+  "kind": "synthetic_rule_stress_measurement",
+  "method_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+  "source_unchanged": true,
+  "declared_hardware": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "logical_cpus": 8
+  },
+  "python_version": "3.12.14",
+  "declared_input_lengths": [
+    2000,
+    10000,
+    20000,
+    100000,
+    200000
+  ],
+  "repeats_per_form": 5,
+  "rows": [
+    {
+      "form": "negative",
+      "input_length_codepoints": 2000,
+      "cold_method_import_ms": 305.5535419844091,
+      "durations_ms": [
+        2.237832988612354,
+        2.1512910025194287,
+        2.2210829774849117,
+        2.219624991994351,
+        2.1404169965535402
+      ],
+      "signals": 0,
+      "p50_ms": 2.219624991994351,
+      "p95_ms": 2.237832988612354
+    },
+    {
+      "form": "negative",
+      "input_length_codepoints": 10000,
+      "cold_method_import_ms": 257.1925840165932,
+      "durations_ms": [
+        11.109667015261948,
+        11.266959016211331,
+        10.803500015754253,
+        10.939041996607557,
+        10.871749982470647
+      ],
+      "signals": 0,
+      "p50_ms": 10.939041996607557,
+      "p95_ms": 11.266959016211331
+    },
+    {
+      "form": "negative",
+      "input_length_codepoints": 20000,
+      "cold_method_import_ms": 260.0505830196198,
+      "durations_ms": [
+        21.466916979989037,
+        21.604875015327707,
+        21.46941699902527,
+        21.635582990711555,
+        21.57245800481178
+      ],
+      "signals": 0,
+      "p50_ms": 21.57245800481178,
+      "p95_ms": 21.635582990711555
+    },
+    {
+      "form": "negative",
+      "input_length_codepoints": 100000,
+      "cold_method_import_ms": 258.65112501196563,
+      "durations_ms": [
+        108.60433397465385,
+        111.74858297454193,
+        128.1574580061715,
+        110.43262502062134,
+        106.7384580092039
+      ],
+      "signals": 0,
+      "p50_ms": 110.43262502062134,
+      "p95_ms": 128.1574580061715
+    },
+    {
+      "form": "negative",
+      "input_length_codepoints": 200000,
+      "cold_method_import_ms": 253.1660840031691,
+      "durations_ms": [
+        222.815624991199,
+        215.92995800892822,
+        213.65204200264998,
+        224.64416699949652,
+        212.81245900900103
+      ],
+      "signals": 0,
+      "p50_ms": 215.92995800892822,
+      "p95_ms": 224.64416699949652
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 2000,
+      "cold_method_import_ms": 246.07674998696893,
+      "durations_ms": [
+        3.856957977404818,
+        3.7540420016739517,
+        3.8247500197030604,
+        4.01970898383297,
+        3.831624984741211
+      ],
+      "signals": 50,
+      "p50_ms": 3.831624984741211,
+      "p95_ms": 4.01970898383297
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 10000,
+      "cold_method_import_ms": 239.45712501881644,
+      "durations_ms": [
+        19.835917017189786,
+        19.144042016705498,
+        19.076583004789427,
+        18.865666002966464,
+        18.924959003925323
+      ],
+      "signals": 250,
+      "p50_ms": 19.076583004789427,
+      "p95_ms": 19.835917017189786
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 20000,
+      "cold_method_import_ms": 250.38508299621753,
+      "durations_ms": [
+        39.07991701271385,
+        38.87933399528265,
+        39.14929198799655,
+        38.17975000129081,
+        38.2792089949362
+      ],
+      "signals": 500,
+      "p50_ms": 38.87933399528265,
+      "p95_ms": 39.14929198799655
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 100000,
+      "cold_method_import_ms": 233.83812498650514,
+      "durations_ms": [
+        190.9162079973612,
+        192.9462920234073,
+        196.5756250137929,
+        204.85495799221098,
+        199.14170799893327
+      ],
+      "signals": 2500,
+      "p50_ms": 196.5756250137929,
+      "p95_ms": 204.85495799221098
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 200000,
+      "cold_method_import_ms": 319.30958401062526,
+      "durations_ms": [
+        391.548417013837,
+        413.40654200757854,
+        388.10404200921766,
+        387.8514999814797,
+        520.9155410120729
+      ],
+      "signals": 5000,
+      "p50_ms": 391.548417013837,
+      "p95_ms": 520.9155410120729
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 2000,
+      "cold_method_import_ms": 290.0660409941338,
+      "durations_ms": [
+        4.596624989062548,
+        4.283541988115758,
+        4.338916012784466,
+        4.987499996786937,
+        4.472083004657179
+      ],
+      "signals": 41,
+      "p50_ms": 4.472083004657179,
+      "p95_ms": 4.987499996786937
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 10000,
+      "cold_method_import_ms": 242.337250005221,
+      "durations_ms": [
+        19.5465839933604,
+        20.570207998389378,
+        19.828207994578406,
+        19.781709008384496,
+        19.65429200208746
+      ],
+      "signals": 208,
+      "p50_ms": 19.781709008384496,
+      "p95_ms": 20.570207998389378
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 20000,
+      "cold_method_import_ms": 274.77541600819677,
+      "durations_ms": [
+        41.110584017587826,
+        41.43583300174214,
+        45.43370800092816,
+        47.64020899892785,
+        57.52179099363275
+      ],
+      "signals": 416,
+      "p50_ms": 45.43370800092816,
+      "p95_ms": 57.52179099363275
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 100000,
+      "cold_method_import_ms": 553.4729580103885,
+      "durations_ms": [
+        235.72133301058784,
+        221.54616698389873,
+        206.13612499437295,
+        194.7230829973705,
+        226.81283397832885
+      ],
+      "signals": 2083,
+      "p50_ms": 221.54616698389873,
+      "p95_ms": 235.72133301058784
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 200000,
+      "cold_method_import_ms": 341.1203330033459,
+      "durations_ms": [
+        391.03170900489204,
+        413.2742499932647,
+        427.9359589854721,
+        387.80045899329707,
+        434.7121249884367
+      ],
+      "signals": 4166,
+      "p50_ms": 413.2742499932647,
+      "p95_ms": 434.7121249884367
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 2000,
+      "cold_method_import_ms": 250.83608299610205,
+      "durations_ms": [
+        3.362499992363155,
+        3.2810409902594984,
+        3.2986250007525086,
+        3.2637919939588755,
+        3.368582983966917
+      ],
+      "signals": 0,
+      "p50_ms": 3.2986250007525086,
+      "p95_ms": 3.368582983966917
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 10000,
+      "cold_method_import_ms": 233.98829202051274,
+      "durations_ms": [
+        16.200459009269252,
+        16.141749976668507,
+        16.129458002978936,
+        16.120457992656156,
+        16.204082989133894
+      ],
+      "signals": 0,
+      "p50_ms": 16.141749976668507,
+      "p95_ms": 16.204082989133894
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 20000,
+      "cold_method_import_ms": 234.4587080006022,
+      "durations_ms": [
+        32.13816700736061,
+        32.251124997856095,
+        32.189291989197955,
+        32.17720799148083,
+        32.143040996743366
+      ],
+      "signals": 0,
+      "p50_ms": 32.17720799148083,
+      "p95_ms": 32.251124997856095
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 100000,
+      "cold_method_import_ms": 222.38762499182485,
+      "durations_ms": [
+        203.38758299476467,
+        174.1935409954749,
+        165.65350000746548,
+        165.589624986751,
+        164.4079159887042
+      ],
+      "signals": 0,
+      "p50_ms": 165.65350000746548,
+      "p95_ms": 203.38758299476467
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 200000,
+      "cold_method_import_ms": 256.35341700399294,
+      "durations_ms": [
+        356.58287498517893,
+        366.34308300563134,
+        397.58104100474156,
+        373.83541601593606,
+        369.4277500035241
+      ],
+      "signals": 0,
+      "p50_ms": 369.4277500035241,
+      "p95_ms": 397.58104100474156
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 2000,
+      "cold_method_import_ms": 305.1475829852279,
+      "durations_ms": [
+        3.6095419782213867,
+        3.481125022517517,
+        3.946417011320591,
+        5.219624988967553,
+        3.5625830059871078
+      ],
+      "signals": 0,
+      "p50_ms": 3.6095419782213867,
+      "p95_ms": 5.219624988967553
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 10000,
+      "cold_method_import_ms": 307.8506670135539,
+      "durations_ms": [
+        20.292916015023366,
+        23.078958998667076,
+        21.4082500024233,
+        22.48125002370216,
+        19.552167010260746
+      ],
+      "signals": 0,
+      "p50_ms": 21.4082500024233,
+      "p95_ms": 23.078958998667076
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 20000,
+      "cold_method_import_ms": 277.90154100512154,
+      "durations_ms": [
+        43.80383298848756,
+        41.865000006509945,
+        37.20433299895376,
+        36.573666002368554,
+        37.926541990600526
+      ],
+      "signals": 0,
+      "p50_ms": 37.926541990600526,
+      "p95_ms": 43.80383298848756
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 100000,
+      "cold_method_import_ms": 286.9808340037707,
+      "durations_ms": [
+        183.91762499231845,
+        185.7893749838695,
+        184.07729102182202,
+        193.73170798644423,
+        193.40616697445512
+      ],
+      "signals": 0,
+      "p50_ms": 185.7893749838695,
+      "p95_ms": 193.73170798644423
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 200000,
+      "cold_method_import_ms": 315.9108750114683,
+      "durations_ms": [
+        399.42916700965725,
+        369.2963749927003,
+        436.5646670048591,
+        390.600209007971,
+        396.7473329976201
+      ],
+      "signals": 0,
+      "p50_ms": 396.7473329976201,
+      "p95_ms": 436.5646670048591
+    }
+  ],
+  "failures": [],
+  "candidate_target_ms": 100,
+  "target_exceeded_profiles": [
+    {
+      "form": "negative",
+      "input_length_codepoints": 100000,
+      "p95_ms": 128.1574580061715
+    },
+    {
+      "form": "negative",
+      "input_length_codepoints": 200000,
+      "p95_ms": 224.64416699949652
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 100000,
+      "p95_ms": 204.85495799221098
+    },
+    {
+      "form": "positive",
+      "input_length_codepoints": 200000,
+      "p95_ms": 520.9155410120729
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 100000,
+      "p95_ms": 235.72133301058784
+    },
+    {
+      "form": "substitution",
+      "input_length_codepoints": 200000,
+      "p95_ms": 434.7121249884367
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 100000,
+      "p95_ms": 203.38758299476467
+    },
+    {
+      "form": "warning",
+      "input_length_codepoints": 200000,
+      "p95_ms": 397.58104100474156
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 100000,
+      "p95_ms": 193.73170798644423
+    },
+    {
+      "form": "literal",
+      "input_length_codepoints": 200000,
+      "p95_ms": 436.5646670048591
+    }
+  ],
+  "target_is_not_an_accepted_release_gate": true,
+  "scope": "Rule call only; cold imports, English redaction, HTTP transfer and whole-device startup are separate. Five repeated runs are not population confidence intervals.",
+  "user_content_used": false,
+  "remote_requests": 0,
+  "payloads_executed": 0,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

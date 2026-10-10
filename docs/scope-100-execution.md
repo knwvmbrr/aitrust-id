@@ -173,3 +173,35 @@ live vendor adapters or a human screen-reader experience. F-033/F-092/F-093/F-09
 F-095 are renderer jobs; broader live-route acceptance stays with F-030/F-037 and
 human semantics stay with F-035/F-139. No planned tag is enabled by using dummy
 codes to exercise a wrapping layout.
+
+## Evidence resistance and current-route boundary batch
+
+Architecture before implementation: add an executable, source-bound assessment of
+current evidence methods, separate from detector accuracy. For lexical PS methods,
+compare supported forms with shell-token-preserving spellings, validate syntax
+without running a command, and publish the smallest observed edit that defeats
+the matcher. Redaction and unsigned-record integrity get separate stated threat
+assumptions; inactive methods remain unmeasured. No forged observation becomes a
+production tag or independent accuracy label.
+
+Then bind explicit product refusals to a versioned current-route manifest and its
+reviewed source hashes, permission/endpoint surfaces and executed browser/service
+checks. Exercise deliberately violating profiles. A source or surface change
+requires renewed review; a green guard cannot guarantee future code, third-party
+hosts or a compromised maintainer. Do not close central-registry or mark/legal
+requirements while their owner decisions remain open.
+
+Risks: shell syntax/token agreement alone is not a proof of runtime equivalence;
+small synthetic attack sets do not estimate real-world evasion prevalence;
+source hash pinning does not establish semantic safety. State those limits in the
+assessment, publish observations rather than resistance rankings, and keep every
+tag's independent release gates open. Current automated setup/boundary jobs must
+remain distinct from real-user, physical-phone and human screen-reader acceptance.
+
+Capture timing correction before refactor: unrelated DOM mutations currently
+restart the same pending settle timer, and a manual check can leave the automatic
+timer active. Keep response/content/identity invalidation unchanged. Schedule one
+settle timer per response revision, clear it on manual check or invalidation, and
+set its handle to null when it fires. Exercise a continuously changing unrelated
+node and manual-check-before-settle; neither may starve or duplicate an evaluation.
+This verifies the DOM mechanism, not current vendor coverage or human usability.

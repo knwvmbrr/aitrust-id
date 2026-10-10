@@ -1,11 +1,14 @@
 async (page) => {
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.goto('http://127.0.0.1:8799/extension/test/live-dom-fixture.html');
-  await page.waitForFunction(()=>fixtureRequests.length===1);
+  await page.evaluate(()=>{const node=document.createElement('span');node.id='unrelated-counter';document.body.append(node);window.noiseTimer=setInterval(()=>node.textContent=String(Date.now()),20);});
+  await page.waitForFunction(()=>fixtureRequests.length===1,{},{timeout:3000});
+  await page.evaluate(()=>{clearInterval(window.noiseTimer);document.querySelector('#unrelated-counter').remove();});
   const result=await page.evaluate(async()=>{
     const assert=(value,message)=>{if(!value)throw new Error(message);};
     const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
     const host=document.querySelector('#observed'),identity=document.querySelector('#identity');
+    assert(fixtureRequests.length===1,'unrelated DOM activity must not starve or duplicate settle');
     const root=()=>fixtureRoots.get(host.querySelector('.aitrust-mount'));
     const text=fixtureRequests[0].text;
     assert(text.includes('/bin/bash -c')&&text.includes('Review the source first.'),'whole assistant body');
@@ -29,6 +32,10 @@ async (page) => {
     dispatchEvent(new PopStateEvent('popstate'));await pause(900);
     assert(!root().querySelector('.status').textContent.includes('Command risk'),'navigation discards same-text result');
     fixtureResponders.at(-1)(fixtureResult(text));await pause(50);
+    const block=host.querySelector('p');block.firstChild.nodeValue+=' Synthetic edit';await pause(100);
+    const beforeManual=fixtureRequests.length;root().querySelector('.check').click();await pause(750);
+    assert(fixtureRequests.length===beforeManual+1,'manual check must consume pending automatic settle');
+    fixtureResponders.at(-1)(fixtureResult(fixtureRequests.at(-1).text));await pause(50);
     const turn=host.closest('[data-talvt-turn-state]');turn.setAttribute('data-talvt-turn-state','unknown-streaming-state');await pause(150);
     const count=fixtureRequests.length;root().querySelector('.check').click();await pause(50);
     assert(fixtureRequests.length===count,'manual check cannot bypass unfinished turn');
@@ -39,7 +46,7 @@ async (page) => {
     document.querySelector('#unidentified').removeAttribute('data-message-author-role');await pause(150);
     const captureRoot=[...document.querySelectorAll('.aitrust-mount')].map(node=>fixtureRoots.get(node)).find(Boolean);
     assert(captureRoot?.querySelector('.tag').getAttribute('aria-label').includes('Nothing on this page has been evaluated.'),'unsupported capture compact and explicit');
-    return {observedAttributeStructure:true,syntheticContent:true,wholeBody:true,toolbarExcluded:true,promptExcluded:true,hiddenExcluded:true,identityRequired:true,sameTextIdentityRace:true,navigationRace:true,streamingGuard:true,lostRoleCleanup:true,unsupportedCaptureVisible:true,liveVendorExecution:false};
+    return {observedAttributeStructure:true,syntheticContent:true,wholeBody:true,toolbarExcluded:true,promptExcluded:true,hiddenExcluded:true,identityRequired:true,sameTextIdentityRace:true,navigationRace:true,streamingGuard:true,unrelated_dom_cannot_starve:true,manual_check_consumes_settle_timer:true,lostRoleCleanup:true,unsupportedCaptureVisible:true,liveVendorExecution:false};
   });
   if(errors.length)throw new Error(errors.join('\n'));
   console.log(JSON.stringify(result));return result;

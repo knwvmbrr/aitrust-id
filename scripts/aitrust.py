@@ -18,11 +18,11 @@ GATEWAY = 'http://127.0.0.1:8787'
 MAX_CHARS = 200_000
 MAX_BYTES = MAX_CHARS * 4
 EXPLANATIONS = {
-    'sig.piped_installer.v3': 'Downloaded output is piped into a shell.',
-    'sig.obfuscated_payload.v2': 'A recognized decoded payload is passed to eval/exec.',
-    'sig.remote_command_substitution.v3': 'Downloaded output is substituted into an execution command.',
-    'sig.remote_process_substitution.v3': 'A supported executor reads downloaded output through process substitution.',
-    'sig.remote_backtick_substitution.v2': 'Downloaded output is substituted using backticks into an execution command.',
+    'sig.piped_installer.v4': 'Downloaded output is piped into a shell.',
+    'sig.obfuscated_payload.v3': 'A recognized decoded payload is passed to eval/exec.',
+    'sig.remote_command_substitution.v4': 'Downloaded output is substituted into an execution command.',
+    'sig.remote_process_substitution.v4': 'A supported executor reads downloaded output through process substitution.',
+    'sig.remote_backtick_substitution.v3': 'Downloaded output is substituted using backticks into an execution command.',
 }
 
 
@@ -123,7 +123,7 @@ def validate_result(result):
         raise LocalCheckError('Local gateway returned a tag outside the supported capability set.')
     expected = hashlib.sha256((ROOT / 'services/evaluator/app.py').read_bytes()).hexdigest()
     if (result['spec_version'] != '0.1.0'
-            or result['evaluator']['calibration_id'] != 'uncalibrated-rules-v5'
+            or result['evaluator']['calibration_id'] != 'uncalibrated-rules-v6'
             or not any(model['name'] == 'rules-only' and model['sha256'] == expected
                        for model in result['evaluator']['models'])):
         raise LocalCheckError('Local evaluator differs from this checkout. Rebuild before checking.')

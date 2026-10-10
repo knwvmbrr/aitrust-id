@@ -35,22 +35,23 @@ def test_changed_method_cannot_publish_old_results(tmp_path,monkeypatch):
 @pytest.mark.parametrize('field',['tp','category_metrics','category_failures','provenance','category_version'])
 def test_published_measurement_must_recompute_from_source(tmp_path,field):
     import json
-    report=json.loads((ROOT/'runs/2026-10-10-categorized-regressions.json').read_text())
+    report=json.loads((ROOT/'runs/2026-10-10-context-v6-unicode-regressions.json').read_text())
     if field=='tp':report['datasets'][0]['tp']+=1
     elif field=='category_metrics':report['datasets'][0][field]={}
     elif field=='category_failures':report['datasets'][0][field]=[{'line':1,'category':'ordinary_text_forms','error':'fp'}]
     elif field=='provenance':report[field]['provenance_sha256']='0'*64
     else:report[field]='unknown/v1'
     p=tmp_path/'forged.json';p.write_text(json.dumps(report))
-    with pytest.raises(ValueError):module.build(p,ROOT/'runs/2026-10-10-measurement-device-engines.json')
+    with pytest.raises(ValueError):module.build(p,ROOT/'runs/2026-10-10-context-v6-fixed-device-engines.json')
 
 
 def test_current_measurements_and_categories_are_reproducible():
-    data=module.build(ROOT/'runs/2026-10-10-categorized-regressions.json',ROOT/'runs/2026-10-10-measurement-device-engines.json')
+    data=module.build(ROOT/'runs/2026-10-10-context-v6-unicode-regressions.json',ROOT/'runs/2026-10-10-context-v6-fixed-device-engines.json')
     assert data['case_count']==86 and data['counts']==dict(tp=31,fp=0,fn=0,tn=55)
     assert sum(row['n'] for row in data['category_metrics'])==86
     assert len({row['category'] for row in data['category_metrics']})==6
-    assert data['mobile']['attribution_verified'] is False  # historical timing report has no reproducible samples
+    assert data['mobile']['attribution_verified'] is True
+    assert all(e['full_evidence_parity'] and e['case_count']==137 for e in data['mobile']['engines'])
     assert data['release_validated'] is False
     for row in data['category_metrics']:
         assert row['calibration']['ece'] is None

@@ -141,8 +141,8 @@ See `runs/2026-10-08-ps-routing-regressions.json` for per-set counts.
 ## Machine catalogue and reproducibility boundary
 
 `spec/signal-registry.json` preserves every fully qualified ID and two historical
-substitution v1 IDs. The legacy scope title says 22; the catalogue now contains
-33 distinct versions. `python3 scripts/verify-signals.py --signal ID`
+substitution v1 IDs. The legacy scope title says 22; the catalogue originally contained
+33 distinct versions before the context-v6 additions. `python3 scripts/verify-signals.py --signal ID`
 returns status, method and current implementation hashes without reading user
 content. `--check` rejects a missing ID, changed active-code set or unsupported
 registration claim. Proposed and historical methods have no current source
@@ -153,3 +153,11 @@ also requires the exact normalized, redacted text and evaluator source/dependenc
 PII reproduction requires the pre-redaction text and pinned recognizer; the current
 assertion does not carry that recognizer identity. Do not publish private text to
 fill this gap. F-003 remains open for complete per-assertion reproducibility.
+
+### Bounded scanning correction (context-v6)
+
+The active development IDs are `sig.piped_installer.v4`, `sig.remote_command_substitution.v4`, `sig.remote_process_substitution.v4`, `sig.remote_backtick_substitution.v3`, `sig.obfuscated_payload.v3`. Older versions remain historical. The exact prior source is archived at `eval/methods/context-v5.py` (SHA-256 `8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a`).
+
+Warning, comment and literal-display context is indexed once. Pipe candidates are scanned in disjoint command-delimiter windows; a fetch must occur on the same physical line as its pipe. Whitespace after the pipe may lead to its receiving shell on another line. Arbitrary multiline/continued commands remain unsupported. Source and behavior changes require fresh regressions and release evaluation; heuristic scores remain uncalibrated. The catalogue now retains 38 distinct versions.
+
+Context-v6 command word boundaries use the explicit Unicode-15 word class in the evaluator source, not the host Python Unicode database. Post-15 assignments follow this frozen interpretation; surrounding prose is still outside a full shell parser. The generation record is `eval/methods/unicode15-word-class.json`.

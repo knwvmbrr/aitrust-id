@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-153533-capture-current-release-checks-6d0dd76a
+
+Recorded 2026-10-10T15:35:33.471359+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source PS, redactor, protocol, extension and freshly rebuilt website receipts plus actual refusal to release without human accessibility reviews.
+- **Evidence.** All five engineering revalidation capabilities pass on source-bound evidence. The equal website/extension release gate rejects exactly four missing human reviews and grants no tag accuracy or WCAG certification. [Change record](./runs/changes/2026-10-10-153533-capture-current-release-checks-6d0dd76a.json).
+- **Not claimed.** The requirement queue is 123, with 23 further closures needed for the owner target. Public byte verification follows; independent human labels, physical phones and live-vendor expansion remain open.
+
+
+### 2026-10-10-153112-capture-generated-public-evidence-4a3832a7
+
+Recorded 2026-10-10T15:31:12.732950+00:00 · Contributor: Codex · change
+
+- **Changed.** Generate current 79/123 scope, PS method evidence, 274 browser timing observations and explicit resistance/stress/service reference downloads; retain the stale-build refusal record.
+- **Evidence.** Published measurement inputs recompute exactly from current source and source-bound engine observations. All generated references describe development evidence and disclose missing independent release acceptance. [Change record](./runs/changes/2026-10-10-153112-capture-generated-public-evidence-4a3832a7.json).
+- **Not claimed.** Public deployment verification still follows. Warm emulated engine timings are not physical phone measurements; proposed latency target exceedances and simple lexical evasions remain visible.
+
+
+### 2026-10-10-152823-capture-and-resistance-acceptance-840dccca
+
+Recorded 2026-10-10T15:28:23.499465+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair settle starvation and duplicate manual/automatic checks; test actual options wrong-auth/reset; update method, performance evidence and the attributed ledger to 79 complete and 123 open.
+- **Evidence.** 813 Python tests, 32 actual Linux HTTP checks, 137 full-evidence cases in each browser engine, actual unpacked-extension full stack and token setup/reset, and scoped positive/negative capture checks execute. [Change record](./runs/changes/2026-10-10-152823-capture-and-resistance-acceptance-840dccca.json).
+- **Not claimed.** Live-vendor expansion, human accessibility, physical phones, independent accuracy and all tag release gates remain open. Eight lexical spellings evade the bounded matcher; large-input profiles exceed the proposed 100 ms target. Hosted CI remains account-billing blocked.
+
+
+### 2026-10-10-151343-freeze-command-word-boundaries-08f208be
+
+Recorded 2026-10-10T15:13:43.667686+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix actual server/browser Unicode word-boundary divergence with an explicit generated Unicode-15 class; preserve the failed browser execution and rerun method-bound measurements.
+- **Evidence.** Four Python builders agree; every Unicode scalar matches the reference word class; 86 active development examples agree; all 25 long-input profiles finish with target exceedances reported. [Change record](./runs/changes/2026-10-10-151343-freeze-command-word-boundaries-08f208be.json).
+- **Not claimed.** Frozen word boundaries are a bounded matcher interpretation. Independent accuracy, physical phones, general shell parsing and release acceptance remain incomplete; rebuilt device and service checks still follow.
+
+
+### 2026-10-10-151045-bounded-command-scanning-4f3750af
+
+Recorded 2026-10-10T15:10:45.283485+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound command scanning cost, retain exact prior method source, version all affected evidence IDs, rebuild the device projection and add dense-input and Unicode-boundary checks.
+- **Evidence.** Twenty-five synthetic profiles finish, 600 prior-method comparisons agree, active development fixtures retain 31 true positives and zero false positives, and four actual Python builders produce one identical bundle. [Change record](./runs/changes/2026-10-10-151045-bounded-command-scanning-4f3750af.json).
+- **Not claimed.** Large dense profiles exceed the candidate 100 ms target. Independent accuracy, physical phones and human acceptance remain incomplete. New browser and service verification is still in progress.
+
+
 ### 2026-10-10-144247-retain-independent-statistical-ci-assessment-613598e7
 
 Recorded 2026-10-10T14:42:47.445257+00:00 · Contributor: Codex · change

@@ -67,8 +67,8 @@ def verify(env_file, engine='docker', project='aitrust-staging', disrupt=False):
             assert all(t['code'] in ('PS','PII_REDACTED') for t in result['tags'])
             model = result['evaluator']['models'][0]
             assert model['sha256'] == hashlib.sha256((ROOT/'services/evaluator/app.py').read_bytes()).hexdigest()
-            assert model['revision'] == 'context-v5'
-            assert result['evaluator']['calibration_id'] == 'uncalibrated-rules-v5'
+            assert model['revision'] == 'context-v6'
+            assert result['evaluator']['calibration_id'] == 'uncalibrated-rules-v6'
             assert token not in raw.decode()
             for tag in result['tags']:
                 for signal in tag['signals']:

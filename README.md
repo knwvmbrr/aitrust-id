@@ -246,8 +246,10 @@ and [backup options](docs/backup-option-review.md).
 
 ### First PS validation pass
 
-The current context-v5 detector fixes file-routing and literal-display false
-positives and option-value parsing misses. Five development datasets now have
+The current context-v6 detector uses bounded command windows and indexed context
+to avoid repeated rescanning, with a frozen Unicode-15 word class shared by server
+and device. Exact context-v5 source is retained in eval/methods/. It also retains
+the prior file-routing, literal-display and option-value corrections. Five development datasets now have
 86 cases (TP 31, FP 0, FN 0, TN 55). These are development results, not an accuracy
 certification. The 95% precision lower bound is 0.890 on this corpus; the candidate
 0.93 threshold fails, and an independent holdout and calibration are missing.
@@ -295,7 +297,7 @@ tag or media verifier. See [the boundary contract](docs/adjudication-spec.md#exp
 
 ## Current engineering increment — 2026-10-10
 
-The current context-v5 pipeline passed 30 synthetic HTTP checks on the dedicated
+The current context-v6 pipeline passed 32 synthetic HTTP checks on the dedicated
 Linux staging host, with source hashes, loopback binding, real redacted subject
 identity, read-only non-root execution, zero Linux capabilities, bounded network
 probes, stdout/stderr canaries and both dependency stop/recovery cycles. No local
@@ -341,3 +343,13 @@ not a frozen independent accuracy study. See [measurement provenance](docs/measu
 Image, audio, video and document have [bounded prepared-artifact reference contracts](docs/reserved-subject-contract.md), matching Python/Node primitives and runnable vectors. They establish exactly what is hashed, not file decoding or tag support. Run `python3 scripts/verify-reserved-subjects.py` or hash explicitly prepared JSON with `python3 scripts/hash-reserved-artifact.py`. The gateway still evaluates text only.
 
 Source-bound engineering checks are available through `python3 scripts/revalidate.py CAPABILITY`. Website checks build fresh source on an owned temporary server. The shared `npm run verify:release-a11y` gate refuses absent real manual reviews; this is separate from statistical tag acceptance. See [executed controls](docs/reproducibility-controls-result.md). The [dated decision ledger](docs/decisions.json) records proposals without accepting them.
+
+### Measured evidence resistance
+
+Eight synthetic shell spelling trials bypass the bounded matcher with one or two
+inserted characters, despite passing syntax-only and shlex token controls. No
+command was executed. This is measured weakness, not a population evasion rate.
+See [Evidence resistance](docs/evidence-resistance.md). New syntactic coverage
+needs its own error checks; a source hash or heuristic cost class is not proof
+of resistance. Large-input stress timings also publish exceedances of the
+proposed 100 ms target rather than labeling that target met.

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-151343-freeze-command-word-boundaries-08f208be",
+  "recorded_at": "2026-10-10T15:13:43.667686+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
+  "changed": "Fix actual server/browser Unicode word-boundary divergence with an explicit generated Unicode-15 class; preserve the failed browser execution and rerun method-bound measurements.",
+  "proves": "Four Python builders agree; every Unicode scalar matches the reference word class; 86 active development examples agree; all 25 long-input profiles finish with target exceedances reported.",
+  "limits": "Frozen word boundaries are a bounded matcher interpretation. Independent accuracy, physical phones, general shell parsing and release acceptance remain incomplete; rebuilt device and service checks still follow.",
+  "scope_ids": [
+    "F-010",
+    "F-011",
+    "F-014",
+    "F-113",
+    "T-PS",
+    "N-006"
+  ],
+  "files": {
+    "docs/command-matching-performance-plan.md": "daa8dc635da345532b3f1cefbe72996282ba4d5ab2d1ce0b5c27f3afefe4cf08",
+    "docs/device-build-reference.json": "2d12a18686e7db362b4aba7ffd2740e8e8a85f0f7711ecc42f34b3466d9bae76",
+    "eval/methods/README.md": "e47de496d7ad753cd56eb2b1eb7ca5f5e143cce48870b920bf978a9f4dfa3f90",
+    "eval/methods/context-v5.py": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+    "eval/methods/unicode15-word-class.json": "282ff213d209129493d29700204a3cdc648bb5b3890c3af2f3895eb168ce435a",
+    "eval/revalidation.json": "10cf347b55daa992c80b988f03ac73fe398e63a60d37210a3e09613db9b633fc",
+    "eval/tag-performance-evidence.json": "d6b577944f26817a2534910667eaa025bcbf099148b39a4204a0bdb275af9bc5",
+    "eval/vectors/ps-unicode-redaction.json": "7690cb2ffb6c7843513554481dc25775ed52661850c792b7463536f481c5d6ea",
+    "extension/src/content/badge.js": "f0eb3c8275a84495e3a37190aa9fbf9c10419cba6b8a28437a19a9c51fbaa5d4",
+    "protocol/signals.py": "76fb59949d36d511518925aeb0d90029c3887e5b5cb91c2fb925bcbf8c1010ca",
+    "runs/2026-10-10-context-v6-builder-matrix.json": "b542ac964f25c9db16234d274afafd36cffa15f83a3f7582e80c63117df5557b",
+    "runs/2026-10-10-context-v6-command-stress.json": "bf25b8aca258ac8a2fd076620c9a2b4aa4e8edf2f97bcf2c7a6abd2015527cd1",
+    "runs/2026-10-10-context-v6-device-engines.json": "da530ea630f3f479b69e1e3d4f60d00e2833581c206f6e0c1dc5a4a5018f2015",
+    "runs/2026-10-10-context-v6-initial-regressions.json": "0956d7b2841e6db8e2cf2857ec7103320877e40d6e0310b9a70ef05390a99fe0",
+    "runs/2026-10-10-context-v6-unicode-builder-matrix.json": "db10c1d58abb8567f10faecd5c3a053d47c31a1a60342f3329c4fb193cc102b4",
+    "runs/2026-10-10-context-v6-unicode-regressions.json": "ef0acbce8c16998ca6b951fa5fbbd7259d2e2ef06f64ed40c97f5783456b8b25",
+    "runs/2026-10-10-context-v6-unicode-stress.json": "a64d39a9241d833d5e39272dfc49ea04b20c898a500c805a91d644f7e7374078",
+    "runs/2026-10-10-reproducibility-assets-public.json": "d020e0b5464b720ef8ab0ff5fc575cc66945cebd17d7a9c0af8d79990954ebdd",
+    "runs/2026-10-10-reproducibility-deployment.json": "24b77caaf452e1a91115662a14f2a715c70ade102eef4c35ff4eb5a83f8f810d",
+    "runs/2026-10-10-reproducibility-policies-public.json": "a0a785ad64db80cbd8764b5a8a1c2c72d95725be84adf1108d7989f540baaeb6",
+    "runs/2026-10-10-reproducibility-site-public.json": "a1c1d51f2f3e884dfc62b1f940362b417e5786e696b6fe851ccecb463e2ca74e",
+    "scripts/aitrust.py": "cce8263e6b03864735400e186e28ac8855e407d8c7a17f5a9f8ef0ec8cad2b40",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "scripts/measure-command-performance.py": "a18ca54766dc5da5f9bc8c542671cf0d0a2e7498097b1cd5dfbdc16936b47e5c",
+    "scripts/verify-device.cjs": "b1306fc15b4ab344493854c2d6f79d0e442c291c0b731bdb168009c92c628b96",
+    "scripts/verify-extension.cjs": "4c82c2380f1d11261827dd52fef7b6faf611992655610ec6e47f2cb8e505004d",
+    "scripts/verify-ps-results.cjs": "82feaf681ad98d3fb09d8cabf570c24cce64e80abea645cb141884f00220fc03",
+    "scripts/verify-service.py": "6a9338277e83dadef2a96fb5ecf0d527b93b074efa79594c45814620880b4766",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "site/index.html": "922a10619a840d3e04e2bf25e4f3e883009250071c239e57e8cd4c23507b88cf",
+    "site/public/reference/performance-device.json": "a58c82eafbc05e5721e7ca054ce11ed43103e125dc35f3dda3afc7ed2bcb1770",
+    "site/public/reference/performance-regressions.json": "0956d7b2841e6db8e2cf2857ec7103320877e40d6e0310b9a70ef05390a99fe0",
+    "site/public/reference/signal-registry.json": "406bcc99e08eea406fda6d833f4af839fdbdeb30d12074ad5861485fcd9f4ade",
+    "site/public/reference/signals.md": "c57c5511dfa824dddc8abc99051ed353941c7966eee3d83dbaa33b4573fbfd90",
+    "site/public/reference/tag-performance-evidence.json": "21cef45daa8959758d1b91770af1c7146ea36952447650600ec1b00d30415796",
+    "site/public/reference/tag-performance.json": "523383f6f39217692e5c4795664d0fd511bdc70147e00e1857197f169baf0180",
+    "site/src/catalog.js": "e90d4d79707e9f37a86fb1ba0d371ebd72fd9cb59b3f0b269dc51561ecfead23",
+    "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
+    "site/src/tag-performance.json": "523383f6f39217692e5c4795664d0fd511bdc70147e00e1857197f169baf0180",
+    "spec/signal-registry.json": "406bcc99e08eea406fda6d833f4af839fdbdeb30d12074ad5861485fcd9f4ade",
+    "spec/signals.md": "4716cea97e37f78224d156545d72a05294848cf97483f2dd9e5b24fdcec45238",
+    "state.json": "58b52296fc3653dfe5095c1596fa508bde2462e6ed07a1320cde5e12808ebf7f",
+    "tests/test_command_performance.py": "9043d41292c17c10832baec9b3ba0942778ae7f524708dc5a4347feca1b48307",
+    "tests/test_device_bundle_determinism.py": "c89dcba4070653107b8371aec89a00c6b67cb0a9972e2adbb49467cd3e15f2e2",
+    "tests/test_pipe_routing.py": "a7237bb093c57604f1e675a1be3f39102510ff97a39b4563f21e0d8daa13876b",
+    "tests/test_reproducibility_controls.py": "1bbdce80ef70bd2f9de4f12d89c15a28b8eda1bba923ba75225920a49bc76f09",
+    "tests/test_tag_performance.py": "de4a7b4014155b62adfe585a7057d485504bdb5b5260428b768ad88c2352ee5c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-context-v6-unicode-regressions.json",
+      "sha256": "ef0acbce8c16998ca6b951fa5fbbd7259d2e2ef06f64ed40c97f5783456b8b25"
+    },
+    {
+      "path": "runs/2026-10-10-context-v6-unicode-stress.json",
+      "sha256": "a64d39a9241d833d5e39272dfc49ea04b20c898a500c805a91d644f7e7374078"
+    },
+    {
+      "path": "runs/2026-10-10-context-v6-unicode-builder-matrix.json",
+      "sha256": "db10c1d58abb8567f10faecd5c3a053d47c31a1a60342f3329c4fb193cc102b4"
+    },
+    {
+      "path": "runs/2026-10-10-context-v6-device-engines.json",
+      "sha256": "da530ea630f3f479b69e1e3d4f60d00e2833581c206f6e0c1dc5a4a5018f2015"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_command_performance.py",
+        "tests/test_device_bundle_determinism.py",
+        "tests/test_device_projection.py",
+        "tests/test_local_cli.py",
+        "tests/test_tag_performance.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T15:13:49.002590+00:00"
+    }
+  ]
+}

@@ -497,29 +497,59 @@
         "id": "F-009",
         "kind": "requirement",
         "title": "Evidence durability and cost-to-defeat assessment",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Evidence durability and cost-to-defeat assessment. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: Readers distinguish measured resistance from assumptions; a class label does not promise future accuracy.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-evidence-resistance.json",
+          "docs/evidence-resistance.md",
+          "tests/test_evidence_resistance.py"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Evidence durability and cost-to-defeat assessment. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: Readers distinguish measured resistance from assumptions; a class label does not promise future accuracy."
-        ],
-        "queue": "open"
+        "evidence_scope": "Source-bound assessment inventories all current signal versions and measures lexical evasion without executing payloads; inactive and recognizer attack coverage remain explicitly unmeasured.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Deliver Evidence durability and cost-to-defeat assessment. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: Readers distinguish measured resistance from assumptions; a class label does not promise future accuracy."
+          ],
+          "retained_in_open_records": [
+            "F-005",
+            "F-010",
+            "F-011",
+            "F-014",
+            "T-PS",
+            "T-FA",
+            "T-PA"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Source-bound assessment inventories all current signal versions and measures lexical evasion without executing payloads; inactive and recognizer attack coverage remain explicitly unmeasured."
+        ]
       }
     },
     {
@@ -1109,7 +1139,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+        "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
         "next_owner": "Michael coordinates independent reviewers; Codex tooling",
         "evidence": [
           "runs/2026-10-09-scope-regressions.json",
@@ -1125,11 +1155,14 @@
           "runs/2026-10-09-device-a11y-engines-local.json",
           "runs/2026-10-09-device-accessibility-python.json",
           "docs/calmer-tag-panels.md",
-          "runs/2026-10-10-calm-a11y-final-local.json"
+          "runs/2026-10-10-calm-a11y-final-local.json",
+          "runs/2026-10-10-context-v6-unicode-regressions.json",
+          "runs/2026-10-10-context-v6-fixed-device-engines.json",
+          "runs/2026-10-10-evidence-resistance.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
         "required_acceptance": [
-          "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+          "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
         ],
         "queue": "open"
       }
@@ -1527,16 +1560,19 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+        "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
         "next_owner": "Michael coordinates independent reviewers; Codex tooling",
         "evidence": [
           "runs/2026-10-09-scope-regressions.json",
           "runs/2026-10-09-scope-completion-checks.json",
-          "runs/2026-10-08-upgrade-device-public.json"
+          "runs/2026-10-08-upgrade-device-public.json",
+          "runs/2026-10-10-context-v6-unicode-regressions.json",
+          "runs/2026-10-10-context-v6-fixed-device-engines.json",
+          "runs/2026-10-10-evidence-resistance.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+          "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
         ],
         "queue": "open"
       }
@@ -1587,16 +1623,19 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+        "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
         "next_owner": "Michael coordinates independent reviewers; Codex tooling",
         "evidence": [
           "runs/2026-10-09-scope-regressions.json",
           "runs/2026-10-09-scope-completion-checks.json",
-          "runs/2026-10-08-upgrade-device-public.json"
+          "runs/2026-10-08-upgrade-device-public.json",
+          "runs/2026-10-10-context-v6-unicode-regressions.json",
+          "runs/2026-10-10-context-v6-fixed-device-engines.json",
+          "runs/2026-10-10-evidence-resistance.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+          "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
         ],
         "queue": "open"
       }
@@ -1753,16 +1792,19 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+        "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
         "next_owner": "Michael coordinates independent reviewers; Codex tooling",
         "evidence": [
           "runs/2026-10-09-scope-regressions.json",
           "runs/2026-10-09-scope-completion-checks.json",
-          "runs/2026-10-08-upgrade-device-public.json"
+          "runs/2026-10-08-upgrade-device-public.json",
+          "runs/2026-10-10-context-v6-unicode-regressions.json",
+          "runs/2026-10-10-context-v6-fixed-device-engines.json",
+          "runs/2026-10-10-evidence-resistance.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Complete the accepted independent context-v5 sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+          "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
         ],
         "queue": "open"
       }
@@ -3445,35 +3487,57 @@
         "id": "F-031",
         "kind": "requirement",
         "title": "DOM observer fallback for sites the fetch patch misses",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-        ],
-        "queue": "open"
+        "evidence_scope": "Selected ChatGPT DOM fallback extracts only supported identified assistant bodies; unsupported capture, hidden/prompt exclusion, ownership loss and current timing failures execute.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+          ],
+          "retained_in_open_records": [
+            "F-037",
+            "F-156",
+            "F-035",
+            "F-142"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Selected ChatGPT DOM fallback extracts only supported identified assistant bodies; unsupported capture, hidden/prompt exclusion, ownership loss and current timing failures execute."
+        ]
       }
     },
     {
@@ -3503,35 +3567,57 @@
         "id": "F-088",
         "kind": "requirement",
         "title": "Response identity and revision binding",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-        ],
-        "queue": "open"
+        "evidence_scope": "Current bridge binds each accepted result to response identity, text, page, request revision and completion state; out-of-order, identity-only and navigation races discard stale results.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+          ],
+          "retained_in_open_records": [
+            "F-037",
+            "F-035",
+            "F-142",
+            "T-PS"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Current bridge binds each accepted result to response identity, text, page, request revision and completion state; out-of-order, identity-only and navigation races discard stale results."
+        ]
       }
     },
     {
@@ -3561,35 +3647,56 @@
         "id": "F-089",
         "kind": "requirement",
         "title": "Duplicate suppression — one badge per response",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-        ],
-        "queue": "open"
+        "evidence_scope": "One mount per selected response and one pending automatic check per revision; duplicate mount, redundant scanning and early manual-check timer races execute.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+          ],
+          "retained_in_open_records": [
+            "F-037",
+            "F-035",
+            "F-142"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "One mount per selected response and one pending automatic check per revision; duplicate mount, redundant scanning and early manual-check timer races execute."
+        ]
       }
     },
     {
@@ -3619,35 +3726,56 @@
         "id": "F-090",
         "kind": "requirement",
         "title": "Character-data mutation observation",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-        ],
-        "queue": "open"
+        "evidence_scope": "Current observer detects character-data edits and invalidates prior results while excluding its own UI mutations.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+          ],
+          "retained_in_open_records": [
+            "F-037",
+            "F-035",
+            "F-142"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Current observer detects character-data edits and invalidates prior results while excluding its own UI mutations."
+        ]
       }
     },
     {
@@ -3677,35 +3805,56 @@
         "id": "F-032",
         "kind": "requirement",
         "title": "Streaming settle detection",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-        ],
-        "queue": "open"
+        "evidence_scope": "Streaming and incomplete turns block manual/automatic checks; completion resumes once, unrelated DOM activity cannot starve settling, and manual checks consume the timer.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+          ],
+          "retained_in_open_records": [
+            "F-037",
+            "F-035",
+            "F-142"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Streaming and incomplete turns block manual/automatic checks; completion resumes once, unrelated DOM activity cannot starve settling, and manual checks consume the timer."
+        ]
       }
     },
     {
@@ -3912,35 +4061,55 @@
         "id": "F-091",
         "kind": "requirement",
         "title": "Options page for the bearer token",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Perform current-version token save/reset and failed-auth checks in the installed extension; confirm local-only custody and outside-user setup/removal.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "extension/src/options.js",
-          "runs/2026-10-08-extension-integration.json"
+          "runs/2026-10-08-extension-integration.json",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-options-current-extension.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Perform current-version token save/reset and failed-auth checks in the installed extension; confirm local-only custody and outside-user setup/removal."
-        ],
-        "queue": "open"
+        "evidence_scope": "Actual unpacked Chromium options save a local-only token without enabling capture; explicit enable, wrong-token unavailable result, pause, reset and reload execute.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Perform current-version token save/reset and failed-auth checks in the installed extension; confirm local-only custody and outside-user setup/removal."
+          ],
+          "retained_in_open_records": [
+            "F-142",
+            "F-035"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Actual unpacked Chromium options save a local-only token without enabling capture; explicit enable, wrong-token unavailable result, pause, reset and reload execute."
+        ]
       }
     },
     {
@@ -10825,27 +10994,31 @@
         "id": "N-002",
         "kind": "requirement",
         "title": "Separate pending, uncertain, unsupported, unavailable, and no-finding states",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-10T13:47:05.800829+00:00",
+        "audited_at": "2026-10-10T15:26:07.637456+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
+          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00",
+          "Codex — current mechanism repairs and executed acceptance, 2026-10-10T15:26:07.637456+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete current installed/live-vendor and required human keyboard/screen-reader/comprehension acceptance. All six states and safe withheld reasons pass actual bridge fixtures; fixtures do not replace these remaining checks.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:26:07.637456+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; referenced outside-user, vendor, human accessibility and independent tag acceptance remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
@@ -10855,13 +11028,30 @@
           "scripts/check-assertion.py",
           "tests/test_assertion_conformance.py",
           "runs/2026-10-10-six-state-consumer-browser.json",
-          "runs/2026-10-10-consumer-schema-python-corrected.json"
+          "runs/2026-10-10-consumer-schema-python-corrected.json",
+          "docs/capture-mechanism-result.md",
+          "runs/2026-10-10-capture-timing-current.json",
+          "runs/2026-10-10-capture-extension-revalidation.json",
+          "runs/2026-10-10-current-extension-real-stack.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Complete current installed/live-vendor and required human keyboard/screen-reader/comprehension acceptance. All six states and safe withheld reasons pass actual bridge fixtures; fixtures do not replace these remaining checks."
-        ],
-        "queue": "open"
+        "evidence_scope": "Current UI renders six distinct result states, preserving withheld reasons and independent redaction; unknown versions and malformed envelopes never render a finding.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Complete current installed/live-vendor and required human keyboard/screen-reader/comprehension acceptance. All six states and safe withheld reasons pass actual bridge fixtures; fixtures do not replace these remaining checks."
+          ],
+          "retained_in_open_records": [
+            "F-035",
+            "F-037",
+            "F-142",
+            "T-PS"
+          ],
+          "reason": "Verify the full named current mechanism/assessment job; preserve whole vendor/human/independent tag acceptance on its own open requirements. No original requirement or release gate is removed."
+        },
+        "executed_acceptance": [
+          "Current UI renders six distinct result states, preserving withheld reasons and independent redaction; unknown versions and malformed envelopes never render a finding."
+        ]
       }
     },
     {
@@ -11122,7 +11312,9 @@
           "runs/2026-10-10-ps-final-revalidation.json",
           "runs/2026-10-10-pii-final-revalidation.json",
           "runs/2026-10-10-protocol-final-revalidation.json",
-          "runs/2026-10-10-extension-final-revalidation.json"
+          "runs/2026-10-10-extension-final-revalidation.json",
+          "runs/2026-10-10-context-v6-ps-revalidation.json",
+          "runs/2026-10-10-capture-extension-revalidation.json"
         ],
         "evidence_scope": "Five current capabilities execute versioned checks and source/dependency/fixture inventories; stale, altered or failed evidence requires revalidation.",
         "required_acceptance": [],

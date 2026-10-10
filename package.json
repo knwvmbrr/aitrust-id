@@ -40,7 +40,8 @@
     "verify:decisions": "python3 scripts/verify-decisions.py",
     "revalidate": "python3 scripts/revalidate.py",
     "verify:release-a11y": "python3 scripts/verify-accessibility-release.py",
-    "verify:signals": "python3 scripts/verify-signals.py --check"
+    "verify:signals": "python3 scripts/verify-signals.py --check",
+    "verify:resistance": "python3 scripts/assess-evidence-resistance.py --output output/verification/evidence-resistance.json"
   },
   "devDependencies": {
     "playwright": "1.62.1",

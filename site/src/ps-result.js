@@ -1,11 +1,11 @@
 import { normalizeNFC, NORMALIZATION_ID } from '../../protocol/normalization.mjs';
 // Explain only reviewed PS signals. No inference, execution, uploads or logging.
 const reasons={
- 'sig.piped_installer.v3':'Downloads code and passes it straight to a shell to run.',
- 'sig.remote_command_substitution.v3':'Puts downloaded output into a command that runs it.',
- 'sig.remote_process_substitution.v3':'Hands downloaded code to a shell to run.',
- 'sig.remote_backtick_substitution.v2':'Inserts downloaded output into a command that runs it.',
- 'sig.obfuscated_payload.v2':'Passes encoded content to eval or exec, which can run code.'
+ 'sig.piped_installer.v4':'Downloads code and passes it straight to a shell to run.',
+ 'sig.remote_command_substitution.v4':'Puts downloaded output into a command that runs it.',
+ 'sig.remote_process_substitution.v4':'Hands downloaded code to a shell to run.',
+ 'sig.remote_backtick_substitution.v3':'Inserts downloaded output into a command that runs it.',
+ 'sig.obfuscated_payload.v3':'Passes encoded content to eval or exec, which can run code.'
 };
 export function explainPS(record,text){
  if(typeof text!=='string'||record?.format!=='ai-trust-id-device-preview/v1'||!['FINDING','NO_FINDING'].includes(record.state)||!Array.isArray(record.candidates))throw Error('Invalid PS result');

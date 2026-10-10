@@ -114,15 +114,16 @@ def test_decisions_refuse_missing_and_manufactured_acceptance(mutation):
 def test_dated_prose_is_exact_current_source():assert decisions.verify()['pass']
 
 def test_all_signal_ids_have_explainable_state_and_unknowns_refuse():
-    data=signals.registry();assert len(data['signals'])==33
+    data=signals.registry();assert len(data['signals'])==38
     for row in data['signals']:
         found=signals.lookup(row['id']);assert found['description'] and not found['independent_accuracy_evidence']
     for id in ('sig.unknown.v1','sig.piped_installer','<script>','sig.piped_installer.v999'):
         assert signals.lookup(id)['status']=='unsupported'
 
 def test_active_catalogue_and_runtime_cannot_silently_diverge(tmp_path):
-    for name in ['spec/signal-registry.json','spec/signals.md']+[name for s in signals.registry()['signals'] for name in s['source_files']]:
+    for name in ['spec/signal-registry.json','spec/signals.md','eval/methods/context-v5.py']+[name for s in signals.registry()['signals'] for name in s['source_files']]:
         target=tmp_path/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(signals.ROOT/name,target)
+    assert signals.registry(tmp_path)
     data=json.loads((tmp_path/'spec/signal-registry.json').read_text());data['signals'][0]['independent_validation']=True
     (tmp_path/'spec/signal-registry.json').write_text(json.dumps(data))
     with pytest.raises(ValueError):signals.registry(tmp_path)
