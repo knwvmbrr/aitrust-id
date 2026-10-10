@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-175416-registry-security-download-e5574006
+
+Recorded 2026-10-10T17:54:16.181731+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the public security-policy download from the corrected security source.
+- **Evidence.** Source and generated public security-policy Markdown match byte for byte. [Change record](./runs/changes/2026-10-10-175416-registry-security-download-e5574006.json).
+- **Not claimed.** No new policy version, registry activation or security certification.
+
+
 ### 2026-10-10-175250-registry-boundaries-and-site-final-955121a7
 
 Recorded 2026-10-10T17:52:50.946762+00:00 · Contributor: Codex · change

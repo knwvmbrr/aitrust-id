@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-175416-registry-security-download-e5574006",
+  "recorded_at": "2026-10-10T17:54:16.181731+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "571dfed128360e4bd804f962803e67d0d6dd58af",
+  "changed": "Refresh the public security-policy download from the corrected security source.",
+  "proves": "Source and generated public security-policy Markdown match byte for byte.",
+  "limits": "No new policy version, registry activation or security certification.",
+  "scope_ids": [
+    "X-14"
+  ],
+  "files": {
+    "runs/2026-10-10-registry-deferral-security-export.json": "9841187d098a0637eecf6d5f53417ab84a7b9d435c03d3ad62a598aea54fce97",
+    "site/public/reference/security-policy.md": "97ac8bf3efa9f396af26cbf21c6502f71afd5484ae616a0cb5244d4d93d0dfd5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-registry-deferral-security-export.json",
+      "sha256": "9841187d098a0637eecf6d5f53417ab84a7b9d435c03d3ad62a598aea54fce97"
+    }
+  ],
+  "checks": []
+}
