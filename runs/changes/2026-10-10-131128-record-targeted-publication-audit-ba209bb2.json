@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-131128-record-targeted-publication-audit-ba209bb2",
+  "recorded_at": "2026-10-10T13:11:28.800080+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b8fdb435daa0ee43929eff24e18fd566e94d5b53",
+  "changed": "Record the targeted pre-publication scan of this owned increment and built public files.",
+  "proves": "986 files checked, zero matches for selected private gateway credential, provider-address, private-key and unrelated-portfolio markers. The changelog guard rejected the uncited audit before it was recorded.",
+  "limits": "Targeted current source/build scan, not historical erasure, blanket privacy clearance, independent accuracy or an outside security audit.",
+  "scope_ids": [
+    "F-080",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "d4f97378e896cfcbb7ea5c1fea6a3c04fd42988e577007ef66d2950023f5d8df",
+    "README.md": "9031baca344934a81b41fb9b41b58704dfa8fc45bcfa494adc50cbee6f7e28ec",
+    "docs/compact-evidence-plan.md": "e711b750a98ce4cb574767eef699a91b96c79af72f269d54892cb084171e01cb",
+    "docs/reserved-subject-contract.md": "0efe6d55aa138b5eca863b64af7596fe6238c3451ac722f063ee366391123754",
+    "docs/reserved-subject-plan.md": "c0bead923d46a7e6e00c8b39dcc3fc112a2bc631a3491e833e6c63c23e362deb",
+    "docs/scope-boundary-guard-plan.md": "affa4f6401a24d433c88d0c6fad77fe7fbe9d7b5437afee98173683578d45630",
+    "docs/scope-progress.json": "ea762d284553a1aded0570ce84bbd3626ce348e50c725954cdbced8af5399ab6",
+    "docs/scope-progress.md": "be82ab97923e8c0802927ebf7a0cce5f3c5d0b1e64cbaa1c01ad52e35425e3b1",
+    "docs/scope-task-index.md": "00616157fa88c38a551f0401e3cf5cfc81a2658b2e6ceaf83031f5fa4f1fb75d",
+    "eval/vectors/reserved-subjects-v1.json": "fdd385117f811400c2d8a31e8c050a571a1b238999dc5fc91ab7337ffe7494d6",
+    "extension/src/content/badge.js": "b2a94c735e1322bffa92e77c18889a4e1ea2cd16fce085d66e61cd945a4b8cbd",
+    "package.json": "d293eb7462ae8d81df4bd96b81ed56e10c84251283f1d1ce86a6ec48f5e38149",
+    "protocol/reserved-subjects.cjs": "4ef18ca508118d39eab0bb821a35db553961c80ffa040d18dacf9c4300cb49b9",
+    "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+    "rfcs/0003-modality-coverage.md": "835b96c0ee4dcee5050c89abad5e1c2f8631dc124b41589ea9dbc96df3d30eff",
+    "runs/2026-10-10-compact-media-acceptance.json": "0eb3df7d8a4de7df4e1326cd6e1d92888b2e7acbea1f62caf643b399ad9ebc43",
+    "runs/2026-10-10-compact-media-performance-local.json": "84abb42133b9d5b0a2d9dfc40f775f59e2bdbd2d068b9c82cd137812d418d57a",
+    "runs/2026-10-10-compact-media-publication-audit.json": "b04a76ed07bdad2eff2d9c4dc0b22f9541ec4e9ea4f2cb36a720b723edb2d942",
+    "runs/2026-10-10-compact-media-site-local.json": "93cbbb2ed7e8b7b03737b9826670e631091617a28b173e80bf4688742c3b6cba",
+    "runs/2026-10-10-evidence-component-scope.json": "da29ebcdb6c19313cbd3575fb47a0c15a403e6a7258ea2458bb66c2d0eda3576",
+    "runs/2026-10-10-hash-disclosure.json": "2ca005fcb9a1d4b01f72da08c60e69570ab4323d114949348306bc0cd7fa9937",
+    "runs/2026-10-10-matched-location-component.json": "357918842f39deb3c184dda9f0e00cb52bd559a62424bd4635bf79b559fd0b0c",
+    "runs/2026-10-10-measurement-assets-public.json": "cac87800cd4f2ee6ce17cebb2ff354c8685be4cf9d6f5f4254c680c7acbfef75",
+    "runs/2026-10-10-measurement-deployment.json": "0795620c27275ad9bb014e119f3b188f96f1b8683044f743c6dce339818c1b4c",
+    "runs/2026-10-10-measurement-performance-public.json": "7aa394191527638934e25fcd1d39c41914f835bbf9d6f1dab78431cf54f4d604",
+    "runs/2026-10-10-measurement-ps-public.json": "86990a703eb24b5144a1918bd317dfcbb04aec5564a04d7956c76add55ab2fa1",
+    "runs/2026-10-10-measurement-site-public.json": "15bddf7b670190e5ef121edb021cb7d23f73fe220f9a321c0b14c4fd7ff0a02b",
+    "runs/2026-10-10-refusal-scope-progress.json": "e4ba81eafa3ce0665946c81a56f9457d6ed58cd98ad8e249fc8adc18ec6acbbb",
+    "runs/2026-10-10-reserved-profile-conformance.json": "e8b0ff6497887bb6216650283a4bea986a95d96381513eca698468b87426e65c",
+    "runs/2026-10-10-reserved-subject-conformance.json": "f06d1e46c725f0646c7ebaf60c41c317f8bac01c1c050ab5fdbdaf474fad0bdb",
+    "runs/2026-10-10-reserved-subject-scope.json": "4f9fa57fdd2e96d13aa12a27eafcd1ea78a6bcad53e8dd8b9ebd91df31587f85",
+    "runs/2026-10-10-verdict-refusals.json": "890f0bb3e68864ca725e4ac46e4b1e0332e220d9370e598bc8bccbeabb5f9f5e",
+    "scripts/badge-probes.js": "42c72a54b11e82b68a21216d94b7a75148d5518701aa93386327eea744991afa",
+    "scripts/browser-acceptance.js": "33a4214006541689b84150ab1d4ec5b016000110ce9f9a889285a61756611224",
+    "scripts/hash-reserved-artifact.py": "eacc0808f85b9f0854cb2dfe1fc5ecb63270b4db143186029ad0373b8b03f0d1",
+    "scripts/verify-hash-disclosure.py": "dc4ed71edba9e418af416b09530e7756dd25de48674825e7a1317fefaf5c924a",
+    "scripts/verify-reserved-subjects.py": "4c2f00032e4b903ae8b84a1104efc1691032ece73d4caa39cea5d3d798aa607c",
+    "scripts/verify-verdict-boundaries.py": "fafc72e42dd304c00ada0c7ca5efdec1f6eb6860ff3b5121a68e2580ce4b6011",
+    "site/public/reference/public-scope.json": "aac4d6b627098f15d032e736bf5be42541ad95d3fd41dae123e9ed8ba1e3d94d",
+    "site/src/public-scope.json": "aac4d6b627098f15d032e736bf5be42541ad95d3fd41dae123e9ed8ba1e3d94d",
+    "spec/assertion.schema.json": "9d2b13c04cf2081832d1ba0634d9b27210cdf0f765c26d3669f391e913c864a0",
+    "spec/subject-profiles.json": "66b9cfd6b09d3a36c5e3ef1c33aa2d0f0e0d49a3b1b1db113c8a6526999eb462",
+    "state.json": "b14f88f8653ab6fb45166da8eb12b04295b14f74752f30371fa0ac550d7023da",
+    "tests/test_hash_disclosure.py": "a472a3686ad17edcbe99a7b7ff9ae4820056f8db4356914a05a6b490988f14a0",
+    "tests/test_reserved_subjects.py": "491c468dbd6f43a6a093c37326e4c7379a033aa1be0c47120ddb5c3e34b978b9",
+    "tests/test_verdict_refusals.py": "425d7074186daf545e6ce1547fd50268d667213e615a98a0b0858fc234772839"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-compact-media-publication-audit.json",
+      "sha256": "b04a76ed07bdad2eff2d9c4dc0b22f9541ec4e9ea4f2cb36a720b723edb2d942"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T13:11:29.632007+00:00"
+    }
+  ]
+}

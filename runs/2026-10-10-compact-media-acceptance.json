@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-10-10T13:07:33.616768+00:00",
+  "pass": true,
+  "evidence_origin": "Codex observed completed shell execution; summary of returned test output",
+  "argv": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "exit_status": 0,
+  "passed": 652,
+  "duration_seconds_reported_by_pytest": 46.06,
+  "warnings": 1,
+  "warning_kind": "existing Starlette test-client deprecation",
+  "source_sha256": {
+    "tests/test_reserved_subjects.py": "491c468dbd6f43a6a093c37326e4c7379a033aa1be0c47120ddb5c3e34b978b9",
+    "tests/test_hash_disclosure.py": "a472a3686ad17edcbe99a7b7ff9ae4820056f8db4356914a05a6b490988f14a0",
+    "tests/test_verdict_refusals.py": "425d7074186daf545e6ce1547fd50268d667213e615a98a0b0858fc234772839",
+    "extension/src/content/badge.js": "b2a94c735e1322bffa92e77c18889a4e1ea2cd16fce085d66e61cd945a4b8cbd",
+    "scripts/browser-acceptance.js": "33a4214006541689b84150ab1d4ec5b016000110ce9f9a889285a61756611224",
+    "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+    "protocol/reserved-subjects.cjs": "4ef18ca508118d39eab0bb821a35db553961c80ffa040d18dacf9c4300cb49b9"
+  },
+  "independent_tag_accuracy": false,
+  "human_accessibility": false,
+  "executable_path_redacted": true,
+  "python_version": "3.12.14"
+}

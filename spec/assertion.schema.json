@@ -35,7 +35,8 @@
       "properties": {
         "sha256": {
           "type": "string",
-          "pattern": "^[a-f0-9]{64}$"
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "A repeatable correlation identifier, not anonymisation. Known or low-entropy subjects may be recovered by candidate lookup; publishing hashes and spans can link or reveal information."
         },
         "char_len": {
           "type": "integer",

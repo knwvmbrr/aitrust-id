@@ -10,7 +10,7 @@
 Reserve `text`, `code`, `image`, `audio`, `video` and `document` in the assertion schema's
 `modality` field. Define what the subject hash means for each. **Specify text and code subjects; runtime currently evaluates text only.**
 
-This is a scoping RFC. It adds no detector and makes no accuracy claim. It exists so that an
+This is a draft scoping RFC; its executable reference contracts do not adopt a new wire protocol. It adds no detector and makes no accuracy claim. It exists so that an
 image implementation written by someone else in 2029 is conformant without a version break.
 
 ## Motivation
@@ -40,10 +40,10 @@ different bytes for the same artifact and their assertions will not be comparabl
 |---|---|---|---|
 | `text` | **implemented** | UTF-8 NFC-normalised redacted text | character offsets |
 | `code` | subject primitive specified and tested; detector reserved | raw bytes, no normalisation — whitespace is semantic | byte offsets |
-| `image` | reserved | decoded pixel buffer, excluding metadata | pixel bounding boxes |
-| `audio` | reserved | decoded PCM at declared sample rate | millisecond ranges |
-| `video` | reserved | per-frame hash tree, root recorded | frame + bounding box |
-| `document` | reserved | extracted text layer, plus per-asset hashes | page + character offset |
+| `image` | reserved | versioned RGBA8/sRGB/oriented pixel contract, excluding metadata | half-open pixel boxes |
+| `audio` | reserved | versioned PCM16LE interleaved bytes and declared rate/channels | sample-frame ranges |
+| `video` | reserved | ordered domain-separated frame/timing Merkle tree | frame index + pixel box |
+| `document` | reserved | versioned supplied-page-text extraction profile plus ordered asset hashes | page + code-point range |
 
 Excluding metadata from the image hash is deliberate: a C2PA manifest lives in metadata, and the
 subject hash must stay stable whether or not that manifest is present or stripped.
@@ -98,7 +98,7 @@ Not applicable. **This RFC must not be cited as evidence that any modality is su
   coming. Mitigation: the spec and README both carry the implemented/reserved table, and
   `reserved` is stated in the schema description, not only in prose.
 - **Hash ambiguity across implementations.** Two implementers normalise differently and produce
-  incomparable assertions. Mitigation: the table above is normative, and each reserved modality
+  incomparable assertions. Mitigation: the table above is a proposed subject boundary, and each reserved modality
   must ship conformance vectors before it moves to implemented.
 - **Scope creep.** Reserving a modality makes it feel cheap to start building it. It is not.
   Nothing moves from reserved to implemented without its own RFC clearing Invariant 5.
@@ -141,3 +141,14 @@ pass required of text labels.
 [Subject contract v1](../docs/subject-contract.md) and 19 fixed vectors agree
 between independent Python and Node implementations. This does not enable the
 gateway code modality or establish outside-implementer acceptance.
+
+## Executed reserved subject reference contracts — 2026-10-10
+
+[Prepared-artifact contracts](../docs/reserved-subject-contract.md) specify the
+exact binary encodings, coordinate units, preparation profiles and resource
+limits. Sixteen fixed subjects and 37 rejection cases run in both Python and
+Node, plus valid/invalid coordinate checks and actual CLI stdin use. The broader
+test suite exercises resource ceilings, odd/even frame trees, transforms and
+canonical JSON integral numbers. These are hashing contracts, not file decoders,
+RFC adoption or tag support. Image/audio/video/document detection and file-parser
+acceptance remain separately gated. Encoded-file extraction is not implied.

@@ -17,9 +17,9 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 563,
+  "python_tests_passed": 652,
   "deferred_scope": [
-    "Non-text subject contracts and detectors",
+    "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
     "Team, enterprise and proprietary applications; retained in master scope"
   ],
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://7345d34a.aitrust-id.pages.dev",
+    "deployment_url": "https://1257e8a7.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-frozen-deployment.json",
+    "publication_evidence": "runs/2026-10-10-measurement-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-frozen-site-public.json",
+    "verification": "runs/2026-10-10-measurement-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -280,7 +280,8 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a"
+    "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
+    "public_static_source_commit": "b8fdb435daa0ee43929eff24e18fd566e94d5b53"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -688,9 +689,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T12:41:06.463719+00:00",
-    "completed_records": 44,
-    "open_records": 158,
+    "audited_at": "2026-10-10T13:05:44.831784+00:00",
+    "completed_records": 58,
+    "open_records": 144,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -700,17 +701,18 @@
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
     "structural_evidence": "runs/2026-10-10-measurement-scope-progress.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-09-scope-branding-deployment.json",
-    "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
+    "publication": "runs/2026-10-10-measurement-deployment.json",
+    "source_commit": "b8fdb435daa0ee43929eff24e18fd566e94d5b53",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "runs/2026-10-10-calm-deployment.json",
+    "latest_increment": "runs/2026-10-10-measurement-deployment.json",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 58,
-    "publication_pending": true
+    "target_remaining_closures": 44,
+    "publication_pending": true,
+    "verification": "runs/2026-10-10-compact-media-acceptance.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",

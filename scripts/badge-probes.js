@@ -3,6 +3,8 @@
  function inspect(root,{forced=false}={}){
   const failures=[];const tag=root.querySelector('.tag'),panel=root.querySelector('.panel');
   if(!tag||!panel)throw Error('Missing tagging component');
+  const live=document.querySelector('.aitrust-mount[role="status"]');
+  if(!live||live.getAttribute('aria-live')!=='polite')failures.push('tag announcement is not polite');
   const gray=value=>{const m=value.match(/^rgba?\(\s*([\d.]+)[, ]+([\d.]+)[, ]+([\d.]+)/);return !m||m[1]===m[2]&&m[2]===m[3];};
   for(const e of [tag,panel,...root.querySelectorAll('.close,.check,.export')]){
    const css=getComputedStyle(e);

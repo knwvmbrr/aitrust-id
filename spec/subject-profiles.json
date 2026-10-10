@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "adopted_wire_protocol_change": false,
+  "runtime_evaluation_modalities": [
+    "text"
+  ],
+  "profiles": {
+    "text": {
+      "contract_version": "subject-v2",
+      "contract_document": "docs/subject-contract.md",
+      "detector_supported": true,
+      "file_decoder_supported": false
+    },
+    "code": {
+      "contract_version": "subject-v1",
+      "contract_document": "docs/subject-contract.md",
+      "detector_supported": false,
+      "file_decoder_supported": false
+    },
+    "image": {
+      "contract_version": "reserved-subject-v1",
+      "contract_document": "docs/reserved-subject-contract.md",
+      "detector_supported": false,
+      "file_decoder_supported": false
+    },
+    "audio": {
+      "contract_version": "reserved-subject-v1",
+      "contract_document": "docs/reserved-subject-contract.md",
+      "detector_supported": false,
+      "file_decoder_supported": false
+    },
+    "video": {
+      "contract_version": "reserved-subject-v1",
+      "contract_document": "docs/reserved-subject-contract.md",
+      "detector_supported": false,
+      "file_decoder_supported": false
+    },
+    "document": {
+      "contract_version": "reserved-subject-v1",
+      "contract_document": "docs/reserved-subject-contract.md",
+      "detector_supported": false,
+      "file_decoder_supported": false
+    }
+  }
+}

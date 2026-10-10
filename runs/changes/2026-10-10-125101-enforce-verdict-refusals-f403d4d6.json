@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-125101-enforce-verdict-refusals-f403d4d6",
+  "recorded_at": "2026-10-10T12:51:01.420549+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b8fdb435daa0ee43929eff24e18fd566e94d5b53",
+  "changed": "Execute the current absence/context/credential/unknown-code refusal contract and deliberately violating controls; retain proposals and provenance detectors as open; record five enforced boundary closures and prior publication evidence.",
+  "proves": "49 complete/153 open; all 202 records retained. 109 targeted tests pass, ordinary context cannot accuse an author, machine IV cannot assert, and rogue-AI codes fail the upstream contract.",
+  "limits": "Current production policy and experimental typed-observation interpretation only; no provenance detector, real credential adapter, accepted claim mapping or independently released tag.",
+  "scope_ids": [
+    "F-083",
+    "X-05",
+    "X-11",
+    "X-16",
+    "N-009",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "e6238140ea42a6b771a1427774ad9b0a64b24ccfbbff3bbda3e7c5e98ff70056",
+    "docs/scope-boundary-guard-plan.md": "affa4f6401a24d433c88d0c6fad77fe7fbe9d7b5437afee98173683578d45630",
+    "docs/scope-progress.json": "d2e7e5fe37287cefec520d0d1b89bdba7d9b7751097df205ff158a025d89ae89",
+    "docs/scope-progress.md": "cf7cc485f20456064485952ca601b360d12df61b12324cda4de9793b416a5b09",
+    "docs/scope-task-index.md": "ba9f3c352cc44f402035e3c211176b5b318e423caad7a1488922032cefaefbc7",
+    "package.json": "bb92cbc4796a0092bca87725e853e06cb61990c6b183a30dfbb901a14c806432",
+    "runs/2026-10-10-measurement-assets-public.json": "cac87800cd4f2ee6ce17cebb2ff354c8685be4cf9d6f5f4254c680c7acbfef75",
+    "runs/2026-10-10-measurement-deployment.json": "0795620c27275ad9bb014e119f3b188f96f1b8683044f743c6dce339818c1b4c",
+    "runs/2026-10-10-measurement-performance-public.json": "7aa394191527638934e25fcd1d39c41914f835bbf9d6f1dab78431cf54f4d604",
+    "runs/2026-10-10-measurement-ps-public.json": "86990a703eb24b5144a1918bd317dfcbb04aec5564a04d7956c76add55ab2fa1",
+    "runs/2026-10-10-measurement-site-public.json": "15bddf7b670190e5ef121edb021cb7d23f73fe220f9a321c0b14c4fd7ff0a02b",
+    "runs/2026-10-10-refusal-scope-progress.json": "e4ba81eafa3ce0665946c81a56f9457d6ed58cd98ad8e249fc8adc18ec6acbbb",
+    "runs/2026-10-10-verdict-refusals.json": "890f0bb3e68864ca725e4ac46e4b1e0332e220d9370e598bc8bccbeabb5f9f5e",
+    "scripts/verify-verdict-boundaries.py": "fafc72e42dd304c00ada0c7ca5efdec1f6eb6860ff3b5121a68e2580ce4b6011",
+    "state.json": "c356af2517e24153e816bfc7da51c6a5add099330358c4c6e40867824b3fc80e",
+    "tests/test_verdict_refusals.py": "425d7074186daf545e6ce1547fd50268d667213e615a98a0b0858fc234772839"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-verdict-refusals.json",
+      "sha256": "890f0bb3e68864ca725e4ac46e4b1e0332e220d9370e598bc8bccbeabb5f9f5e"
+    },
+    {
+      "path": "runs/2026-10-10-refusal-scope-progress.json",
+      "sha256": "e4ba81eafa3ce0665946c81a56f9457d6ed58cd98ad8e249fc8adc18ec6acbbb"
+    },
+    {
+      "path": "runs/2026-10-10-measurement-deployment.json",
+      "sha256": "0795620c27275ad9bb014e119f3b188f96f1b8683044f743c6dce339818c1b4c"
+    },
+    {
+      "path": "runs/2026-10-10-measurement-ps-public.json",
+      "sha256": "86990a703eb24b5144a1918bd317dfcbb04aec5564a04d7956c76add55ab2fa1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T12:51:01.529276+00:00"
+    }
+  ]
+}

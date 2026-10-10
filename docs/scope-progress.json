@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T12:41:06.463719+00:00",
+  "audited_at": "2026-10-10T13:05:44.831784+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -176,29 +176,43 @@
       "id": "F-006",
       "kind": "requirement",
       "title": "Six-modality reservation with normative subject definitions",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T13:05:44.831784+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Six-modality reservation with normative subject definitions. Next package action: Version the assertion/schema and signal registry. Required outcome: Implementers agree on what is being hashed before anyone builds images or audio",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
+      "completed_at": "2026-10-10T13:05:44.831784+00:00",
+      "completion_timestamp_basis": "Full reserved subject-definition job verified; file decoding, RFC adoption and detector support are not implied",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/reserved-subject-contract.md",
+        "docs/reserved-subject-plan.md",
+        "spec/subject-profiles.json",
+        "protocol/reserved_subjects.py",
+        "protocol/reserved-subjects.cjs",
+        "eval/vectors/reserved-subjects-v1.json",
+        "scripts/verify-reserved-subjects.py",
+        "tests/test_reserved_subjects.py",
+        "runs/2026-10-10-reserved-profile-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Six-modality reservation with normative subject definitions. Next package action: Version the assertion/schema and signal registry. Required outcome: Implementers agree on what is being hashed before anyone builds images or audio"
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-007",
@@ -375,36 +389,42 @@
       "id": "F-080",
       "kind": "requirement",
       "title": "Subject hash documented as a correlation identifier, not an anonymisation",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:59:01.570068+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:59:01.570068+00:00",
+      "completion_timestamp_basis": "Current full named component or disclosure job verified; independent tag accuracy and human route acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
-        "runs/2026-10-08-upgrade-device-public.json",
-        "site/src/policies.js",
-        "docs/tag-system-upgrade.md"
+        "runs/2026-10-10-matched-location-component.json",
+        "scripts/browser-acceptance.js",
+        "scripts/badge-probes.js",
+        "docs/compact-evidence-plan.md",
+        "runs/2026-10-10-hash-disclosure.json",
+        "scripts/verify-hash-disclosure.py",
+        "tests/test_hash_disclosure.py",
+        "docs/subject-contract.md"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-076",
@@ -1517,37 +1537,41 @@
       "id": "F-083",
       "kind": "requirement",
       "title": "The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T21:07:46.641291+00:00",
+      "audited_at": "2026-10-10T12:51:01.263617+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Claude \u2014 initial bridge draft; Codex \u2014 repaired typed/subject/conflict research seam; no media adapter or released tag"
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
+      "completed_at": "2026-10-10T12:51:01.263617+00:00",
+      "completion_timestamp_basis": "Full named current verdict refusal verified; implementing or adopting provenance detectors remains separate and open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md",
-        "docs/provenance-boundary-increment.md",
-        "docs/adjudication-spec.md",
-        "runs/2026-10-09-provenance-boundary-python.json",
-        "runs/2026-10-09-provenance-boundary-demo.json",
-        "runs/2026-10-09-device-matrix-checkout-correction.json",
-        "runs/2026-10-09-provenance-boundary-final-python.json"
+        "docs/scope-boundary-guard-plan.md",
+        "scripts/verify-verdict-boundaries.py",
+        "tests/test_verdict_refusals.py",
+        "tests/test_tag_bridge.py",
+        "tests/test_release_policy.py",
+        "runs/2026-10-10-verdict-refusals.json",
+        "runs/2026-10-10-frozen-service-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
-      "required_acceptance": [
-        "Deliver The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-023",
@@ -2104,35 +2128,38 @@
       "id": "F-034",
       "kind": "requirement",
       "title": "Evidence panel showing the exact spans that triggered the tag",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:59:01.570068+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:59:01.570068+00:00",
+      "completion_timestamp_basis": "Current full named component or disclosure job verified; independent tag accuracy and human route acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
+        "runs/2026-10-10-matched-location-component.json",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js"
+        "scripts/badge-probes.js",
+        "docs/compact-evidence-plan.md"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-091",
@@ -4951,113 +4978,169 @@
       "id": "F-060",
       "kind": "requirement",
       "title": "image",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T13:05:44.831784+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver image. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
+      "completed_at": "2026-10-10T13:05:44.831784+00:00",
+      "completion_timestamp_basis": "Full reserved subject-definition job verified; file decoding, RFC adoption and detector support are not implied",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/reserved-subject-contract.md",
+        "docs/reserved-subject-plan.md",
+        "spec/subject-profiles.json",
+        "protocol/reserved_subjects.py",
+        "protocol/reserved-subjects.cjs",
+        "eval/vectors/reserved-subjects-v1.json",
+        "scripts/verify-reserved-subjects.py",
+        "tests/test_reserved_subjects.py",
+        "runs/2026-10-10-reserved-profile-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver image. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-061",
       "kind": "requirement",
       "title": "audio",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T13:05:44.831784+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver audio. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
+      "completed_at": "2026-10-10T13:05:44.831784+00:00",
+      "completion_timestamp_basis": "Full reserved subject-definition job verified; file decoding, RFC adoption and detector support are not implied",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/reserved-subject-contract.md",
+        "docs/reserved-subject-plan.md",
+        "spec/subject-profiles.json",
+        "protocol/reserved_subjects.py",
+        "protocol/reserved-subjects.cjs",
+        "eval/vectors/reserved-subjects-v1.json",
+        "scripts/verify-reserved-subjects.py",
+        "tests/test_reserved_subjects.py",
+        "runs/2026-10-10-reserved-profile-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver audio. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-062",
       "kind": "requirement",
       "title": "video",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T13:05:44.831784+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver video. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
+      "completed_at": "2026-10-10T13:05:44.831784+00:00",
+      "completion_timestamp_basis": "Full reserved subject-definition job verified; file decoding, RFC adoption and detector support are not implied",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/reserved-subject-contract.md",
+        "docs/reserved-subject-plan.md",
+        "spec/subject-profiles.json",
+        "protocol/reserved_subjects.py",
+        "protocol/reserved-subjects.cjs",
+        "eval/vectors/reserved-subjects-v1.json",
+        "scripts/verify-reserved-subjects.py",
+        "tests/test_reserved_subjects.py",
+        "runs/2026-10-10-reserved-profile-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver video. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-063",
       "kind": "requirement",
       "title": "document",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T13:05:44.831784+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver document. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 reference contract implementation and executed conformance"
+      ],
+      "completed_at": "2026-10-10T13:05:44.831784+00:00",
+      "completion_timestamp_basis": "Full reserved subject-definition job verified; file decoding, RFC adoption and detector support are not implied",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/reserved-subject-contract.md",
+        "docs/reserved-subject-plan.md",
+        "spec/subject-profiles.json",
+        "protocol/reserved_subjects.py",
+        "protocol/reserved-subjects.cjs",
+        "eval/vectors/reserved-subjects-v1.json",
+        "scripts/verify-reserved-subjects.py",
+        "tests/test_reserved_subjects.py",
+        "runs/2026-10-10-reserved-profile-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver document. Next package action: Complete canonical byte/text-layer contracts and parser/version rules. Required outcome: Independent implementers have an explicit subject contract before support is claimed."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-154",
@@ -5497,29 +5580,41 @@
       "id": "X-05",
       "kind": "requirement",
       "title": "Any human-negative verdict from an absent signal",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:51:01.263617+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: Any human-negative verdict from an absent signal. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
+      "completed_at": "2026-10-10T12:51:01.263617+00:00",
+      "completion_timestamp_basis": "Full named current verdict refusal verified; implementing or adopting provenance detectors remains separate and open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-boundary-guard-plan.md",
+        "scripts/verify-verdict-boundaries.py",
+        "tests/test_verdict_refusals.py",
+        "tests/test_tag_bridge.py",
+        "tests/test_release_policy.py",
+        "runs/2026-10-10-verdict-refusals.json",
+        "runs/2026-10-10-frozen-service-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: Any human-negative verdict from an absent signal. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "X-06",
@@ -5609,85 +5704,115 @@
       "id": "X-09",
       "kind": "requirement",
       "title": "Colour-coded labels",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:59:01.570068+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: Colour-coded labels. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:59:01.570068+00:00",
+      "completion_timestamp_basis": "Current full named component or disclosure job verified; independent tag accuracy and human route acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "runs/2026-10-10-matched-location-component.json",
+        "scripts/browser-acceptance.js",
+        "scripts/badge-probes.js",
+        "docs/compact-evidence-plan.md"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: Colour-coded labels. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "X-10",
       "kind": "requirement",
       "title": "aria-live=\"assertive\" announcements",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:59:01.570068+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: aria-live=\"assertive\" announcements. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:59:01.570068+00:00",
+      "completion_timestamp_basis": "Current full named component or disclosure job verified; independent tag accuracy and human route acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "runs/2026-10-10-matched-location-component.json",
+        "scripts/browser-acceptance.js",
+        "scripts/badge-probes.js",
+        "docs/compact-evidence-plan.md"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: aria-live=\"assertive\" announcements. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "X-11",
       "kind": "requirement",
       "title": "Machine-assigned IV",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:51:01.263617+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: Machine-assigned IV. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
+      "completed_at": "2026-10-10T12:51:01.263617+00:00",
+      "completion_timestamp_basis": "Full named current verdict refusal verified; implementing or adopting provenance detectors remains separate and open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-boundary-guard-plan.md",
+        "scripts/verify-verdict-boundaries.py",
+        "tests/test_verdict_refusals.py",
+        "tests/test_tag_bridge.py",
+        "tests/test_release_policy.py",
+        "runs/2026-10-10-verdict-refusals.json",
+        "runs/2026-10-10-frozen-service-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: Machine-assigned IV. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "X-12",
@@ -5805,29 +5930,41 @@
       "id": "X-16",
       "kind": "requirement",
       "title": "\"Outside knowledge proves human authorship\" as an implementation requirement",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:51:01.263617+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: \"Outside knowledge proves human authorship\" as an implementation requirement. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
+      "completed_at": "2026-10-10T12:51:01.263617+00:00",
+      "completion_timestamp_basis": "Full named current verdict refusal verified; implementing or adopting provenance detectors remains separate and open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-boundary-guard-plan.md",
+        "scripts/verify-verdict-boundaries.py",
+        "tests/test_verdict_refusals.py",
+        "tests/test_tag_bridge.py",
+        "tests/test_release_policy.py",
+        "runs/2026-10-10-verdict-refusals.json",
+        "runs/2026-10-10-frozen-service-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: \"Outside knowledge proves human authorship\" as an implementation requirement. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-019",
@@ -6253,29 +6390,41 @@
       "id": "N-009",
       "kind": "requirement",
       "title": "No rogue-AI verdict inferred from output",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:51:01.263617+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: No rogue-AI verdict inferred from output. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current refusal mechanisms and executed negative controls"
+      ],
+      "completed_at": "2026-10-10T12:51:01.263617+00:00",
+      "completion_timestamp_basis": "Full named current verdict refusal verified; implementing or adopting provenance detectors remains separate and open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-boundary-guard-plan.md",
+        "scripts/verify-verdict-boundaries.py",
+        "tests/test_verdict_refusals.py",
+        "tests/test_tag_bridge.py",
+        "tests/test_release_policy.py",
+        "runs/2026-10-10-verdict-refusals.json",
+        "runs/2026-10-10-frozen-service-conformance.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: No rogue-AI verdict inferred from output. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "N-010",

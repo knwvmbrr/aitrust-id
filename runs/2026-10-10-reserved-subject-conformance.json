@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-10T13:04:20.800079+00:00",
+  "pass": true,
+  "contract_version": "reserved-subject-v1",
+  "valid_vectors_per_implementation": 16,
+  "rejection_vectors_per_implementation": 37,
+  "valid_spans_per_implementation": 4,
+  "invalid_spans_per_implementation": 11,
+  "actual_cli_modalities": [
+    "audio",
+    "document",
+    "image",
+    "video"
+  ],
+  "actual_cli_checks": 4,
+  "source_sha256": {
+    "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+    "protocol/reserved-subjects.cjs": "4ef18ca508118d39eab0bb821a35db553961c80ffa040d18dacf9c4300cb49b9",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/normalization.cjs": "dc801f09e3abb32f89fde3005bf48e7f62ed46d628dadcd02c2f62ec324f75c4",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/hash-reserved-artifact.py": "eacc0808f85b9f0854cb2dfe1fc5ecb63270b4db143186029ad0373b8b03f0d1",
+    "scripts/verify-reserved-subjects.py": "f0dddc26e2d98aec0f0b9affb77f22ba651d98358a410753a5017ad1aceafec2",
+    "eval/vectors/reserved-subjects-v1.json": "fdd385117f811400c2d8a31e8c050a571a1b238999dc5fc91ab7337ffe7494d6",
+    "docs/reserved-subject-contract.md": "0efe6d55aa138b5eca863b64af7596fe6238c3451ac722f063ee366391123754"
+  },
+  "file_decoder_support": false,
+  "detector_support": false,
+  "adopted_wire_protocol": false,
+  "outside_implementer_acceptance": false
+}

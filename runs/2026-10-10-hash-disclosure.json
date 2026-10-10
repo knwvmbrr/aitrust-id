@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-10-10T12:58:45.638953+00:00",
+  "pass": true,
+  "repeatable_dictionary_recovery": true,
+  "canonical_equivalent_linkability": true,
+  "fingerprint_is_not_anonymisation": true,
+  "raw_examples_in_report": false,
+  "source_sha256": {
+    "docs/subject-contract.md": "4346bd52a1f6a084e5ee1696e6e2ffb467aa478a750372025be35bc658b9c4c1",
+    "spec/assertion.schema.json": "9d2b13c04cf2081832d1ba0634d9b27210cdf0f765c26d3669f391e913c864a0",
+    "extension/src/content/badge.js": "b2a94c735e1322bffa92e77c18889a4e1ea2cd16fce085d66e61cd945a4b8cbd",
+    "site/src/policies.js": "89b4fea995b075744b80abbe1a1bdc7b70cf0452082384c4a88826da14048c4b"
+  },
+  "limits": [
+    "Small synthetic dictionary demonstrates linkability, not exhaustive recovery of every subject.",
+    "No physical-memory erasure, no-leak guarantee or training consent is asserted."
+  ]
+}

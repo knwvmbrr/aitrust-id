@@ -9,13 +9,13 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-004 | Abstention as a first-class state — UNK | [TAG-UNK](scope-delivery.md#tag-unk) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-007 | Content-free assertion records | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-009 | Evidence durability and cost-to-defeat assessment | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-078 | Conformance vectors for text and code subject hashes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-079 | Route-specific privacy clauses with executed evidence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-080 | Subject hash documented as a correlation identifier, not an anonymisation | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-080 | Subject hash documented as a correlation identifier, not an anonymisation | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-076 | RFC process — template, 14-day comment, evidence requirement | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-077 | Dual licence: Apache-2.0 code, CC BY 4.0 spec | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-T-NF | NF Non-Fiction | [TAG-NF](scope-delivery.md#tag-nf) | 20% · [evidence/fix](scope-progress.md) |
@@ -52,7 +52,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-029c | sig.paste_burst.v1 — large insertion with no preceding keystrokes | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-025 | sig.c2pa_manifest.v1 — parses an attached C2PA manifest | [TAG-FA](scope-delivery.md#tag-fa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-024 | PII_OUTBOUND pre-send warning — you are about to paste personal data into a model | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 20% · [evidence/fix](scope-progress.md) |
@@ -69,7 +69,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-032 | Streaming settle detection | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-037 | Per-vendor site adapters | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-033 | Closed shadow-root badge, monochrome | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-034 | Evidence panel showing the exact spans that triggered the tag | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-034 | Evidence panel showing the exact spans that triggered the tag | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-091 | Options page for the bearer token | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-035 | Full screen-reader semantics, aria-live="polite" never assertive | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-092 | Keyboard-only operation — reach, open, read, close the panel | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
@@ -153,10 +153,10 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-151 | DECISIONS.md — 15 seeded decisions with dates and reasons | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-152 | Branch protection, CODEOWNERS, required status checks, Dependabot | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-153 | Named ongoing ownership for security response and adapter maintenance | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-060 | image | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-061 | audio | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-062 | video | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-063 | document | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-060 | image | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-061 | audio | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-062 | video | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-063 | document | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-154 | text and code subject contracts | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-155 | SynthID and vendor watermarking | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-156 | Additional browser and site adapters | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
@@ -171,18 +171,18 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-X-02 | Any closed-source or paid dependency in the pipeline | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-03 | A central database of assertions | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-04 | Per-person keystroke templates or any biometric identity profile | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-05 | Any human-negative verdict from an absent signal | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-05 | Any human-negative verdict from an absent signal | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-06 | Telemetry, usage analytics, crash reporting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-07 | Competing with C2PA on image provenance | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-08 | Building image, audio or video detection in 1.0 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-09 | Colour-coded labels | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-10 | aria-live="assertive" announcements | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-11 | Machine-assigned IV | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-09 | Colour-coded labels | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-X-10 | aria-live="assertive" announcements | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-X-11 | Machine-assigned IV | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-12 | Mandatory receipts | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-13 | Signing in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-14 | The registry container in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-15 | Collecting prompts or outputs from pilot users | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-16 | "Outside knowledge proves human authorship" as an implementation requirement | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-16 | "Outside knowledge proves human authorship" as an implementation requirement | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-019 | Legacy grouping for F-019a, F-019b, F-019c | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-020 | Legacy grouping for F-020a, F-020b | [TAG-NF](scope-delivery.md#tag-nf), [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-021 | Legacy grouping for T-FA, T-PA | [TAG-FA](scope-delivery.md#tag-fa), [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
@@ -196,7 +196,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-N-006 | Versioned regression checks and revalidation triggers | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-N-007 | No automated promotional AI content network | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-N-008 | No child-safety report hosting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-N-009 | No rogue-AI verdict inferred from output | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-N-009 | No rogue-AI verdict inferred from output | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-010 | Personal/team/enterprise/proprietary tag offering boundaries | [ORG-PRIVATE](scope-delivery.md#org-private) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-T-UC | Unsafe Command | [TAG-UC](scope-delivery.md#tag-uc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-SC | Scam Pattern | [TAG-SC](scope-delivery.md#tag-sc) | 20% · [evidence/fix](scope-progress.md) |

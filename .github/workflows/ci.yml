@@ -58,6 +58,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '24' }
       - run: make verify-primitives
+      - run: python scripts/verify-reserved-subjects.py
+      - run: python scripts/verify-hash-disclosure.py
 
   spec:
     runs-on: ubuntu-latest
@@ -69,6 +71,7 @@ jobs:
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install -r eval/requirements.txt
       - run: python -m pytest tests/test_gateway_integration.py -q
+      - run: python scripts/verify-verdict-boundaries.py
 
   no-egress:
     # The pipeline must work with the network unplugged. If a component needs the

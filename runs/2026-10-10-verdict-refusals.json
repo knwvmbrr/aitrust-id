@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-10T12:50:06.010609+00:00",
+  "pass": true,
+  "current_routes": [
+    "production_gateway",
+    "development_evaluator",
+    "experimental_typed_provenance_interpretation"
+  ],
+  "ordinary_context_cases": 6,
+  "disabled_codes_withheld": 8,
+  "unknown_codes_refused": 6,
+  "credential_missing_or_incomplete_cases": 4,
+  "human_claim_is_not_ai_or_authenticity_clearance": true,
+  "machine_iv_unassertable": true,
+  "outside_knowledge_not_authorship": true,
+  "rogue_ai_code_unassertable": true,
+  "source_sha256": {
+    "services/gateway/app.py": "271b4081146cffbadbd759bd38f18ff3ceab98b5efaa5b9cb710bdcd4328a26c",
+    "services/evaluator/app.py": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+    "services/adjudicator/tag_bridge.py": "210b35d4454ffa4df192a0bd16aa16d6ae338a1bb9de5bd00b505f8063b70b03",
+    "services/adjudicator/verdict.py": "9a4238667c8831108046e229a75870cc1ea1afb9645806718c4aff4490ce7bf2",
+    "rfcs/0001-behavioral-provenance.md": "efadfd2b51784076e29cbbf255879a291946ed0454ce46bf8ae771bc229fcb18",
+    "rfcs/0002-authorship-receipts.md": "3b7938aa0301a9340ff4aa9744abd7b789d81b2d7f85052e92d45fabfb3b61bf"
+  },
+  "provenance_capture_implemented": false,
+  "independent_release_validated": false,
+  "scope": "Current production refusal and supplied-observation research contract; no human-authorship detector or real credential adapter is implemented"
+}

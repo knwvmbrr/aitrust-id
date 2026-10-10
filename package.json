@@ -29,7 +29,10 @@
     "verify:axe-gate": "node scripts/verify-axe-gate.cjs",
     "verify:controls": "python3 scripts/verify-project-controls.py",
     "verify:measurements": "python3 scripts/verify-measurements.py",
-    "verify:provenance": "python3 scripts/verify-dataset-provenance.py"
+    "verify:provenance": "python3 scripts/verify-dataset-provenance.py",
+    "verify:verdicts": "python3 scripts/verify-verdict-boundaries.py",
+    "verify:hash-disclosure": "python3 scripts/verify-hash-disclosure.py",
+    "verify:reserved-subjects": "python3 scripts/verify-reserved-subjects.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",

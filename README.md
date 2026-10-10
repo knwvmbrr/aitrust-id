@@ -80,7 +80,7 @@ supported patterns. The extension attaches the result to the same unchanged
 response with small code-only tags in a wrapping row beneath the output. Each
 distinct tag has its own control. Selecting a tag opens a short explanation in a
 native dialog; Close or Escape returns focus to the tag. Recheck and a structured
-record download are inside the dialog. The website holds full tag specifications
+record download are inside the dialog. Matched positions are collapsed by default and refer to evaluated redacted text, which can differ from the visible answer. Exported fingerprints and positions may link or reveal information; review before sharing. The website holds full tag specifications
 and testing information. No training database or automatic reporting is connected.
 
 Default deployment starts three containers: gateway, anonymizer, evaluator. The
@@ -104,7 +104,7 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
-There are 101 passing Python checks, including live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All four active development fixture sets run through the dedicated CI regression job: 60 cases, zero classification errors locally. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
+There are 652 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
 The public repository contains the runnable source. Engineering CI and the separate
 statistical gate are configured. GitHub currently prevents every hosted job from
 starting because of an account billing lock; the fresh public checkout passes
@@ -328,3 +328,7 @@ records (86 active, 15 historical). Add `--verify-history` in a full Git clone t
 verify exact source commits; ZIP users can still verify every file and row hash.
 Unknown original authorship remains unknown. These are development examples,
 not a frozen independent accuracy study. See [measurement provenance](docs/measurement-provenance-plan.md).
+
+## Future modality subject contracts
+
+Image, audio, video and document have [bounded prepared-artifact reference contracts](docs/reserved-subject-contract.md), matching Python/Node primitives and runnable vectors. They establish exactly what is hashed, not file decoding or tag support. Run `python3 scripts/verify-reserved-subjects.py` or hash explicitly prepared JSON with `python3 scripts/hash-reserved-artifact.py`. The gateway still evaluates text only.

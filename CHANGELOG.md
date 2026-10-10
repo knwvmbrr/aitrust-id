@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-131128-record-targeted-publication-audit-ba209bb2
+
+Recorded 2026-10-10T13:11:28.800080+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the targeted pre-publication scan of this owned increment and built public files.
+- **Evidence.** 986 files checked, zero matches for selected private gateway credential, provider-address, private-key and unrelated-portfolio markers. The changelog guard rejected the uncited audit before it was recorded. [Change record](./runs/changes/2026-10-10-131128-record-targeted-publication-audit-ba209bb2.json).
+- **Not claimed.** Targeted current source/build scan, not historical erasure, blanket privacy clearance, independent accuracy or an outside security audit.
+
+
+### 2026-10-10-131051-verify-compact-media-publication-build-73c258e3
+
+Recorded 2026-10-10T13:10:51.457545+00:00 · Contributor: Codex · change
+
+- **Changed.** Record built catalogue and performance checks, generated 202-record public scope, and sanitize the unpublished test executable path while preserving its version and completed execution.
+- **Evidence.** Twenty catalogue records and 202 scope IDs remain; per-tag measured breakdowns and no-script references pass. Full Python suite is 652 passing checks. [Change record](./runs/changes/2026-10-10-131051-verify-compact-media-publication-build-73c258e3.json).
+- **Not claimed.** Local built-site acceptance; public deployment and current installed extension refresh are separate. No human or independent tag-validation result. Earlier uncommitted event hashes were corrected for the same sanitized report.
+
+
+### 2026-10-10-130733-compact-evidence-and-reserved-subject-contracts-d3da75ac
+
+Recorded 2026-10-10T13:07:33.803669+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep tags compact with optional exact matched positions, disclose export linkability, and implement bounded reserved-media subject contracts with independent Python/Node vectors.
+- **Evidence.** Actual compact renderer and keyboard/theme/axe/negative probes pass; 652 Python tests pass; four prepared-artifact CLI routes and 16 subject vectors, 37 rejection controls and 15 coordinate controls agree across runtimes. Queue is 144 open, all 202 retained. [Change record](./runs/changes/2026-10-10-130733-compact-evidence-and-reserved-subject-contracts-d3da75ac.json).
+- **Not claimed.** No file decoder, media detector, new tag, RFC adoption, independent accuracy, physical-device acceptance or human screen-reader pass. Installed Chrome extension update is not claimed.
+
+
+### 2026-10-10-125101-enforce-verdict-refusals-f403d4d6
+
+Recorded 2026-10-10T12:51:01.420549+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute the current absence/context/credential/unknown-code refusal contract and deliberately violating controls; retain proposals and provenance detectors as open; record five enforced boundary closures and prior publication evidence.
+- **Evidence.** 49 complete/153 open; all 202 records retained. 109 targeted tests pass, ordinary context cannot accuse an author, machine IV cannot assert, and rogue-AI codes fail the upstream contract. [Change record](./runs/changes/2026-10-10-125101-enforce-verdict-refusals-f403d4d6.json).
+- **Not claimed.** Current production policy and experimental typed-observation interpretation only; no provenance detector, real credential adapter, accepted claim mapping or independently released tag.
+
+
 ### 2026-10-10-124637-measurement-publication-review-d63ab7db
 
 Recorded 2026-10-10T12:46:37.477341+00:00 · Contributor: Codex · change

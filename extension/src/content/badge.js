@@ -46,9 +46,10 @@
     const {root,assertion,reason,state}=item;
     const container=root.querySelector('.evidence');container.replaceChildren();
     root.querySelector('h2').textContent=code?displayCode(code):'AI Trust ID';
-    function paragraph(text){const p=document.createElement('p');p.textContent=text;container.append(p);}
+    function paragraph(text){const p=document.createElement('p');p.className='brief';p.textContent=text;container.append(p);}
     item.selectedCode=code;
     root.querySelector('.export').hidden=!assertion;
+    root.querySelector('.export-note').hidden=!assertion;
     if(code==='PS'){
       const encoded=assertion?.tags.filter(tag=>tag.code===code).some(tag=>tag.signals.some(signal=>signal.id==='sig.obfuscated_payload.v2'));
       paragraph(encoded?'This command runs encoded code. Inspect what it decodes to before running it.':'This command downloads code and runs it. Inspect the code before running it.');
@@ -59,6 +60,23 @@
     }else{
       paragraph(code?'A finding was recorded for this tag. Review its claim and limits in the site catalogue.':words[state]||words.UNAVAILABLE);
       if(reason)paragraph(reason);
+    }
+    const labels={'sig.piped_installer.v3':'Download piped to a shell','sig.remote_command_substitution.v3':'Downloaded output used in an execution command','sig.remote_process_substitution.v3':'Downloaded code handed to an interpreter','sig.remote_backtick_substitution.v2':'Downloaded output substituted into a command','sig.obfuscated_payload.v2':'Encoded content passed to eval or exec','presidio.entity.v1':'Detected entity redaction'};
+    const signals=(assertion?.tags||[]).filter(tag=>tag.code===code).flatMap(tag=>tag.signals||[]);
+    if(signals.length){
+      const detail=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Matched locations';detail.append(summary);
+      const explanation=document.createElement('p');explanation.textContent='Character positions refer to the evaluated, redacted text. They can differ from this answer.';detail.append(explanation);
+      const list=document.createElement('ul');let total=0,shown=0;
+      for(const signal of signals){
+        const spans=Array.isArray(signal.spans)?signal.spans:[];
+        const valid=spans.filter(span=>Array.isArray(span)&&span.length===2&&span.every(Number.isSafeInteger)&&span[0]>=0&&span[1]>span[0]&&span[1]<=assertion.subject.char_len);
+        const label=labels[signal.id]||'Other supporting observation';
+        const rows=valid.length?valid:[null];total+=rows.length;
+        for(const span of rows){if(shown>=20)continue;const li=document.createElement('li');li.textContent=label+(span?': characters '+span[0]+'–'+span[1]+' (end excluded).':': no character positions provided.');list.append(li);shown++;}
+      }
+      detail.append(list);
+      if(total>shown){const more=document.createElement('p');more.textContent='Showing '+shown+' of '+total+' observations. Download the record for all positions.';detail.append(more);}
+      container.append(detail);
     }
   }
   function open(item, button) {
@@ -78,11 +96,11 @@
       .panel{width:min(24rem,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:16px;border:1px solid #a3a3a3;border-radius:8px;background:#fff;color:#171717;overflow:auto;overflow-wrap:anywhere;font:14px/1.5 system-ui,sans-serif}
       .panel::backdrop{background:rgb(0 0 0 / .25)} header{display:flex;align-items:center;justify-content:space-between;gap:12px}
       h2{margin:0;font:600 16px/1.5 ui-monospace,monospace;text-wrap:balance} p{margin:12px 0;text-wrap:pretty;font-variant-numeric:tabular-nums}
-      .close,.check,.export{min-height:32px;padding:4px 10px;border:1px solid #a3a3a3;border-radius:4px;background:transparent} footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+      summary{cursor:pointer;min-height:32px;padding:6px 0;font-weight:600}summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}ul{padding-left:20px}li{margin:8px 0}.export-note{font-size:12px} .close,.check,.export{min-height:32px;padding:4px 10px;border:1px solid #a3a3a3;border-radius:4px;background:transparent} footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
       [hidden]{display:none!important}
       @media(prefers-color-scheme:dark){:host{color:#e5e5e5}.tag,.panel{background:#171717;color:#e5e5e5;border-color:#737373}}
       @media(forced-colors:active){.tag,.panel,.close,.check,.export{background:Canvas;color:CanvasText;border-color:CanvasText}button:focus-visible{outline-color:Highlight}}
-    </style><span class="wrap" role="group" aria-label="AI Trust ID tags"><span class="status sr-only"></span></span><dialog class="panel"><header><h2>AI Trust ID</h2><form method="dialog"><button class="close" autofocus>Close</button></form></header><div class="evidence"></div><footer><button class="check" type="button">Recheck locally</button><button class="export" type="button" hidden>Download record</button></footer></dialog>`;
+    </style><span class="wrap" role="group" aria-label="AI Trust ID tags"><span class="status sr-only"></span></span><dialog class="panel"><header><h2>AI Trust ID</h2><form method="dialog"><button class="close" autofocus>Close</button></form></header><div class="evidence"></div><p class="export-note" hidden>Records include fingerprints and positions that can link or reveal information. Review before sharing.</p><footer><button class="check" type="button">Recheck locally</button><button class="export" type="button" hidden>Download record</button></footer></dialog>`;
     const panel=root.querySelector('.panel'),title=root.querySelector('h2');
     panel.id='aitrust-record-'+crypto.randomUUID();title.id=panel.id+'-title';panel.setAttribute('aria-labelledby',title.id);
     const item={holder,root,state:'PENDING',assertion:null,reason:'',source:''};
