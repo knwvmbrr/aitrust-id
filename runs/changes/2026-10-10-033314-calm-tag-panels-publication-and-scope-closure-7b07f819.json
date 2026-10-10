@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-033314-calm-tag-panels-publication-and-scope-closure-7b07f819",
+  "recorded_at": "2026-10-10T03:33:14.163300+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d2d946c62f15fbf1ddd85f510aa44ccdbd4705e1",
+  "changed": "Record live calmer tag panels, synchronized policy/reference downloads and the completed WP-SITE-A02 reference-sync subtask; retain 202 requirements with 15 complete and 187 open.",
+  "proves": "Public checks pass for 20 tag panels, eight footer routes, nine policy downloads and six real PS cases; 402 artifact hashes match across three origins; scope completion checks pass.",
+  "limits": "The public website changelog is the implementation-source snapshot; Git includes this later publication record. No tag accuracy, physical-device, human accessibility or hosted-CI acceptance.",
+  "scope_ids": [
+    "WP-SITE",
+    "WP-UX",
+    "F-140",
+    "F-150"
+  ],
+  "files": {
+    "docs/calmer-tag-panels.md": "a742127d2fe9cb1471e8d7917ed4764ad50de7eb482815de6473f59080cdfc00",
+    "docs/scope-progress.json": "874b9cf035834e39c70fce74046dffeb1459172ea64c3402390cce2f928019dc",
+    "docs/scope-progress.md": "b4a449280a613a27158ffc4db9eb7431e3e2f4b13fb81ff25622152bd9a881ff",
+    "runs/2026-10-10-calm-assets-public.json": "667f05f4627a9c3dfd82e9371fd33ea690a2d0f2b593b38a3e9c7dc406be5e18",
+    "runs/2026-10-10-calm-deployment.json": "2a1b5c4fdfcdbc5c693596820588800fa8e69f04422a110880a3d99cfd3da330",
+    "runs/2026-10-10-calm-panels-public.json": "b5e2b1531af399c7b6445a1c4fcdcab2df62c8bd156b1b4087a08954d0cb1aca",
+    "runs/2026-10-10-calm-policies-public.json": "f631fe99e34cf1eb6923abd03a29948acf9f85477755bc9a7aa59c9011aedaec",
+    "runs/2026-10-10-calm-ps-public.json": "3e127a0ab544c92d57b4d04df09f167e26fd1b454e0241e3860375c6fd975dae",
+    "runs/2026-10-10-calm-scope-public.json": "54f9c05cb91ba94ce299dd71670e3fa3bb51d288d083983c9f758244e491617e",
+    "runs/2026-10-10-calm-site-public.json": "068f736343e0212be42e266736b9341f2eb2198b1b2c865a7fd3a9de13d449ea",
+    "state.json": "bf281ba3f10d8fe9549f20d3e484d867676d06b448091ac5190e6d8164dd61a9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-calm-deployment.json",
+      "sha256": "2a1b5c4fdfcdbc5c693596820588800fa8e69f04422a110880a3d99cfd3da330"
+    },
+    {
+      "path": "runs/2026-10-10-calm-assets-public.json",
+      "sha256": "667f05f4627a9c3dfd82e9371fd33ea690a2d0f2b593b38a3e9c7dc406be5e18"
+    },
+    {
+      "path": "runs/2026-10-10-calm-site-public.json",
+      "sha256": "068f736343e0212be42e266736b9341f2eb2198b1b2c865a7fd3a9de13d449ea"
+    },
+    {
+      "path": "runs/2026-10-10-calm-policies-public.json",
+      "sha256": "f631fe99e34cf1eb6923abd03a29948acf9f85477755bc9a7aa59c9011aedaec"
+    },
+    {
+      "path": "runs/2026-10-10-calm-ps-public.json",
+      "sha256": "3e127a0ab544c92d57b4d04df09f167e26fd1b454e0241e3860375c6fd975dae"
+    },
+    {
+      "path": "runs/2026-10-10-calm-panels-public.json",
+      "sha256": "b5e2b1531af399c7b6445a1c4fcdcab2df62c8bd156b1b4087a08954d0cb1aca"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T03:33:14.309660+00:00"
+    }
+  ]
+}

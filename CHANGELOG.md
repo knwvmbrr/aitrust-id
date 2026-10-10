@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-033314-calm-tag-panels-publication-and-scope-closure-7b07f819
+
+Recorded 2026-10-10T03:33:14.163300+00:00 · Contributor: Codex · change
+
+- **Changed.** Record live calmer tag panels, synchronized policy/reference downloads and the completed WP-SITE-A02 reference-sync subtask; retain 202 requirements with 15 complete and 187 open.
+- **Evidence.** Public checks pass for 20 tag panels, eight footer routes, nine policy downloads and six real PS cases; 402 artifact hashes match across three origins; scope completion checks pass. [Change record](./runs/changes/2026-10-10-033314-calm-tag-panels-publication-and-scope-closure-7b07f819.json).
+- **Not claimed.** The public website changelog is the implementation-source snapshot; Git includes this later publication record. No tag accuracy, physical-device, human accessibility or hosted-CI acceptance.
+
+
 ### 2026-10-10-033008-calm-panels-final-build-verification-5dd0f1fc
 
 Recorded 2026-10-10T03:30:08.283835+00:00 · Contributor: Codex · change

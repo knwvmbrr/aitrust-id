@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-10T03:33:13.612117+00:00",
+  "author": "Codex",
+  "status": "deployed_and_public_checks_pass",
+  "source_commit": "d2d946c62f15fbf1ddd85f510aa44ccdbd4705e1",
+  "deployment_url": "https://baff45df.aitrust-id.pages.dev",
+  "production_url": "https://aitrustid.com",
+  "public_evidence": [
+    "runs/2026-10-10-calm-panels-public.json",
+    "runs/2026-10-10-calm-site-public.json",
+    "runs/2026-10-10-calm-policies-public.json",
+    "runs/2026-10-10-calm-ps-public.json",
+    "runs/2026-10-10-calm-assets-public.json"
+  ],
+  "artifact_hashes_matching": 402,
+  "public_origins_verified": 3,
+  "closed_requirement": "F-140",
+  "closed_subtask": "WP-SITE-A02",
+  "independent_release_validated": false,
+  "physical_device_tested": false,
+  "human_screen_reader_tested": false,
+  "local_docker_started": false,
+  "asset_check_correction": "Initial urllib checks used index.html URLs and encountered HTTP 403; final check uses ordinary browser HTTP client and canonical page directories, matching all published bytes."
+}

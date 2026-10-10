@@ -51,3 +51,15 @@ that acceptance. Source changes require a new audit before publication.
 Early parallel tests exhausted the Python test server's connections; failed
 records are retained. Final tests use the production Vite preview and pass.
 Publication and the live reference-sync subtask are recorded separately.
+
+## Published verification
+
+Source `d2d946c` is live at aitrustid.com. All 20 modal/static/export/help
+flows, eight footer panels, nine public policy downloads and six real PS result
+cases pass on production. All 134 public artifacts match their local bytes at
+the main domain, www alias and deployment URL (402 hashes). Production CSP
+and framing/referrer/content-type protections remain intact.
+
+WP-SITE-A02 is complete against this bounded live reference/download/status
+acceptance. Search indexing, human accessibility, physical phones and independent
+accuracy remain separate open jobs. See runs/2026-10-10-calm-deployment.json.

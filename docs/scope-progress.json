@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T03:28:32.219175+00:00",
+  "audited_at": "2026-10-10T03:33:13.612117+00:00",
   "client_date": "2026-10-09",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -9728,34 +9728,42 @@
       "id": "WP-SITE-A02",
       "kind": "subtask",
       "title": "Keep crawlable references, downloads, public policies and status synchronized with evidence.",
-      "percent_complete": 80,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
         "executable_checks",
-        "selected_integration"
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T03:33:13.612117+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 live reference, public policy/archive/download and per-tag status synchronization, recorded 2026-10-10T03:33:13.612117+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Verify branding revision and policy archive/downloads live; Search Console status remains separate.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-10T03:33:13.612117+00:00",
+      "completion_timestamp_basis": "Fresh production reference/download/status synchronization verified against source",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-scope-plan-site-public.json"
+        "runs/2026-10-08-scope-plan-site-public.json",
+        "runs/2026-10-10-calm-panels-public.json",
+        "runs/2026-10-10-calm-site-public.json",
+        "runs/2026-10-10-calm-policies-public.json",
+        "runs/2026-10-10-calm-ps-public.json",
+        "runs/2026-10-10-calm-assets-public.json",
+        "runs/2026-10-10-calm-deployment.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Verify branding revision and policy archive/downloads live; Search Console status remains separate."
-      ],
-      "queue": "open"
+      "evidence_scope": "20 modal/static references and full exports, 9 policy downloads and prior archives, published status, no-JS reference, 32 sitemap URLs, 402 matching artifact hashes across 3 origins; Google indexing, human accessibility and tag release acceptance remain separate.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "WP-SITE-A03",
