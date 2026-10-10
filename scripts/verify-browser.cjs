@@ -1,8 +1,10 @@
+const {writeReport}=require('./execution-report.cjs');
 const fs=require('node:fs');
 const http=require('node:http');
 const path=require('node:path');
 const vm=require('node:vm');
 const {chromium}=require('playwright');
+const {assess}=require('./axe-gate.cjs');
 const root=path.resolve(__dirname,'..');
 (async()=>{
  const server=http.createServer((req,res)=>{
@@ -25,16 +27,17 @@ const root=path.resolve(__dirname,'..');
    await page.evaluate(()=>{fixtureResponders.forEach((resolve,i)=>resolve(fixtureResult(fixtureRequests[i].text)));});
    await page.waitForTimeout(100);
    await page.getByRole('button',{name:/^PS:/}).first().click();
+   if(process.env.AITRUST_AXE_NEGATIVE==='1')await page.getByRole('button',{name:/^PS:/}).first().evaluate(e=>{e.textContent='';e.removeAttribute('aria-label');e.removeAttribute('aria-labelledby');e.removeAttribute('title');});
    await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});
    const axe=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag22aa']}}));
-   const serious=axe.violations.filter(v=>['serious','critical'].includes(v.impact));
-   if(serious.length)throw new Error(JSON.stringify(serious.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))));
+   const gate=assess(axe);
+   if(!gate.pass)throw new Error('AXE_RELEASE_GATE_FAILED '+JSON.stringify(gate.failures));
    await page.emulateMedia({forcedColors:'active',reducedMotion:'reduce'});
    await page.setViewportSize({width:320,height:640});
    if(await page.evaluate(()=>document.documentElement.scrollWidth>320))throw new Error('320px reflow overflow');
    await page.screenshot({path:'output/playwright/command-tag-reflow.png',fullPage:true});
-   const report={syntheticBrowserChecks:true,compactUI,observedDOM,axeSerious:serious.length,axeCritical:0,axeTotalViolations:axe.violations.length,reflow320:true,forcedColors:true,reducedMotion:true,closedShadowBehaviorTested:true,axeUsesTestOnlyOpenShadow:true,manualScreenReader:false,liveVendorCompatibility:false};
-   fs.writeFileSync(path.resolve(root,process.env.AITRUST_BROWSER_REPORT||'runs/2026-10-08-browser-checks.json'),JSON.stringify(report,null,2)+'\n');
+   const report={captured_at:new Date().toISOString(),syntheticBrowserChecks:true,compactUI,observedDOM,axeSerious:gate.serious,axeCritical:gate.critical,axeTotalViolations:axe.violations.length,reflow320:true,forcedColors:true,reducedMotion:true,closedShadowBehaviorTested:true,axeUsesTestOnlyOpenShadow:true,manualScreenReader:false,liveVendorCompatibility:false};
+   writeReport(path.resolve(root,process.env.AITRUST_BROWSER_REPORT||'output/verification/browser-checks.json'),report);
    console.log(JSON.stringify(report));
  }finally{await browser.close();server.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

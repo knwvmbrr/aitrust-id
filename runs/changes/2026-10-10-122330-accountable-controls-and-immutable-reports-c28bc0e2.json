@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-122330-accountable-controls-and-immutable-reports-c28bc0e2",
+  "recorded_at": "2026-10-10T12:23:30.081757+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
+  "changed": "Complete the six accurate contribution invariants, traceable ten-entry threat model, named ongoing security/adapter ownership and executable axe severity gate; prevent default browser/runtime checks from replacing historical evidence and add shared atomic report writers.",
+  "proves": "526 Python tests pass. The intact badge passes and a genuinely unnamed badge fails the same actual axe gate. Control mutation tests reject missing owners, missing residual/evidence, unsupported promises and stale documentation. Report tests reject overwritten history, outside paths, symlinks and invalid/non-finite JSON.",
+  "limits": "These are full named documented-control and automated-gate jobs. No staffed response SLA, operating foundation, full recovery, human accessibility, live-vendor acceptance, independent security certification or tag accuracy release is asserted. Website currently carries the earlier verified 32-complete/170-open snapshot; 36-complete/166-open source publication remains pending.",
+  "scope_ids": [
+    "F-070",
+    "F-071",
+    "F-153",
+    "F-055",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "db98548be37fc5e9a525fbab8be20a192adac045825e5837350bbabddaa1ca3d",
+    "ACCESSIBILITY.md": "69ba5c3928914d897480706d6f9c73f066f9b6849ba76b6e51abdc4cb2c3edce",
+    "CONTRIBUTING.md": "f24cc5e176cd69d88b2b1b851a7dacff19eaab9bc0c3aec7a3eb37a53aa03054",
+    "Makefile": "c3a126a2da58d17ea26863a5e96d6e43e711fa2142378848a1370886bec45df9",
+    "THREAT_MODEL.md": "7142a8f15808b68637f1fa869790898cca78aa5fda69231259feb637d0da5c87",
+    "docs/execution-report-contract.md": "a729a383491637eb684e7960ebec4fc3a4af2382d3923d5dd9d9fb6a76f2c9b9",
+    "docs/scope-100-execution.md": "7595f8b6bebb84d1e7757244eff06104ac0df5ebd21ef069307c5da04ce4a3d2",
+    "docs/scope-progress.json": "05b3789024f9a61e76f439e1f3861d4383461060f27eab9139461670f8016b06",
+    "docs/scope-progress.md": "35036da7500ab1010da92b56de76a55fafd5a38b1b4b78407b0288443ea8051a",
+    "docs/scope-task-index.md": "0fe9b3cd9695dfe3517bf7e752b0f9df0bc864b56791b04f0ba560b638359b6d",
+    "docs/threat-controls.json": "83b902a84dc90e4942e9a7d1d8e532cd4ad8fac4fbd7f564b3f1258b76d69194",
+    "package.json": "620a50afacdfd09625858b9cbdf5ffcae7a78ef7233f7491bfa20059ed648288",
+    "protocol/reports.py": "2a094034f74386bbc480b19119d8f28928a80080a86c486e0b4f07124a303978",
+    "rfcs/0000-template.md": "7ac1d5f89e59089f82e4683d2fdf64039ee572e6d2e51ed52b74baa8dde357ff",
+    "runs/2026-10-10-axe-gate-controls.json": "6f6732210cb71f9307a819ec1c99fec7cf4094715ddf35aabe453f348502db5b",
+    "runs/2026-10-10-axe-positive-component.json": "aec25ab300d38cec3731ad3e37a5ad7d4a224d260808034983737e9dcb953de7",
+    "runs/2026-10-10-axe-report-boundary.json": "5cab07cf14d122e96944fee74366433eb42427d418f42e8723a7baa803d55d83",
+    "runs/2026-10-10-frozen-assets-public.json": "6a142961f79548ae5390b6759cd0b6f098e2fe931ea251dd618a7733353dbfaa",
+    "runs/2026-10-10-frozen-deployment.json": "8f34b7244413ac126a5d45424a3b1d40b3daff3989946e14cb7c87386a6bb2db",
+    "runs/2026-10-10-frozen-ps-public.json": "f7167e478336e7c3288a8575d5977637c494d1b504cbe0ecb1dab62d23e0c25a",
+    "runs/2026-10-10-frozen-site-public.json": "82e49952f1a3a5da59a9f48a525e6cbe3e56faa0a5b8ca9d41f484a980c3e8c2",
+    "runs/2026-10-10-project-controls.json": "710d823472e53ad7eec8c0c013edfdaa8235149c98acbe1a559f35a9b38b02f1",
+    "scripts/axe-gate.cjs": "4cf4f9088f891ed964cadd14c782b11c0b8b48e87dfeb67fbc8a342a8e7a3e47",
+    "scripts/execution-report.cjs": "368ea02355526b62fffb9e2410febff6442ee79acc45b4f71f442e3c37b178ba",
+    "scripts/verify-accessibility-probes.cjs": "6c843d4be984c44c9064a6c58cd3361afc7a0a207e0d39a78e0c5a602b935e68",
+    "scripts/verify-approachability.cjs": "2b3eeaf617d21becf904ee03aea207cdc4bf748b1f14cc284f7432301f428b8e",
+    "scripts/verify-axe-gate.cjs": "6a28a82fafd446c1c41377d14bd8b35951ef807270038d5330522b477c28de2f",
+    "scripts/verify-branding.cjs": "64af7630591ce217b313cf86e65669bc2329211919703cb4c26f83dd7ae8eaca",
+    "scripts/verify-browser.cjs": "9b9d1f2c0cb851cdece53b9d07ea55229ddf529f01d6efc145d05dfecd760beb",
+    "scripts/verify-device.cjs": "3025d1e3f5f1141ff429c58aedb5742229177f208d82acc63e602830384ae371",
+    "scripts/verify-extension.cjs": "80cf430547dc4b43f32eee44741b488c2b94bbdcb5582c5341f1998f24ac0ac6",
+    "scripts/verify-performance.cjs": "312f1106e37d85d2ae1cf38f838226e6ac623381f5aefa188518e5b8bcdaf17d",
+    "scripts/verify-policies.cjs": "b947ccde2ebcdd45131b5235ec4a473b5dad0860dd87059eb120a63b3f8715aa",
+    "scripts/verify-project-controls.py": "50c183a3c73bcc3d01960cb75401910b66942c2b1e241157df2411f44e9e0287",
+    "scripts/verify-ps-results.cjs": "2d04936412a70f8570ac72cddee22f513b6e96429548adc7753911f2d8e0d409",
+    "scripts/verify-publication.cjs": "ab153b6056e798b6502ef57cf2f76f931742b0b9f109bb47b4cd76ebf90953a1",
+    "scripts/verify-runtime.py": "ce916f838cf3f108c5dc76a27401aeb643a27a5c25a23c7f1d1de1b01c12daef",
+    "scripts/verify-site-accessibility.cjs": "5e9d60394f20f73e2f7ee424e4b2670064ac779ecef9783252ea735e1c792f72",
+    "scripts/verify-site.cjs": "92a705aa6f693effc3d9cc7c0ce26b9d8a8dfda5ca57331d22dbae556ce07a7b",
+    "scripts/verify-workflows.cjs": "cb02fa5dc31827c03b9d246fd892c18fe24d9d10fdf472c378d454525cf8cb99",
+    "state.json": "7efb3c0ec935c4bc7bd8ca25374207f92e6dd5014a6f05abe0d3d00d304ce107",
+    "tests/test_execution_reports.py": "c782ca3c2df5e556087326f97c2d30347c777dd09c1de2da516d6d391cd0e599",
+    "tests/test_project_controls.py": "30d8d6bfd341f40377b66f83a87158a1b32fb4e19a9a5fc3b693e47ed8f75266"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-project-controls.json",
+      "sha256": "710d823472e53ad7eec8c0c013edfdaa8235149c98acbe1a559f35a9b38b02f1"
+    },
+    {
+      "path": "runs/2026-10-10-axe-gate-controls.json",
+      "sha256": "6f6732210cb71f9307a819ec1c99fec7cf4094715ddf35aabe453f348502db5b"
+    },
+    {
+      "path": "runs/2026-10-10-axe-report-boundary.json",
+      "sha256": "5cab07cf14d122e96944fee74366433eb42427d418f42e8723a7baa803d55d83"
+    },
+    {
+      "path": "runs/2026-10-10-frozen-deployment.json",
+      "sha256": "8f34b7244413ac126a5d45424a3b1d40b3daff3989946e14cb7c87386a6bb2db"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T12:23:30.291234+00:00"
+    }
+  ]
+}

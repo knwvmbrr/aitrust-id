@@ -5,11 +5,15 @@ import json
 from pathlib import Path
 import subprocess
 import time
+import sys
+from datetime import datetime, timezone
 import urllib.request
 
 from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from protocol.reports import write_report
 
 
 def run(*args):
@@ -75,7 +79,7 @@ print("offline email redaction passed")'''
     assert run(*compose, 'exec', '-T', 'anonymizer', 'python', '-c', offline) == 'offline email redaction passed'
     logs=run(*compose, 'logs', '--no-color', '--since', '2m', 'gateway', 'anonymizer', 'evaluator')
     assert all(marker not in logs for marker in ('alice@example.com','example.test/install',token))
-    result = {'date':'2026-10-08', 'health_ready':True, 'real_pipeline':True,
+    result = {'captured_at':datetime.now(timezone.utc).isoformat(), 'health_ready':True, 'real_pipeline':True,
               'assertion_schema_valid':True, 'tags':['PS','PII_REDACTED'],
               'raw_email_absent_from_assertion':True, 'offline_email_redaction':True,
               'synthetic_markers_and_token_absent_from_recent_logs':True,
@@ -83,8 +87,8 @@ print("offline email redaction passed")'''
               'latency_budget_accepted':False,
               'services':services, 'egress_probe_scope':'one external IPv4 TCP destination; not universal proof',
               'live_vendor_compatibility':False, 'release_validated':False}
-    (ROOT / 'runs/2026-10-08-container-checks.json').write_text(json.dumps(result, indent=2)+'\n')
-    (ROOT / 'runs/2026-10-08-container-assertion.json').write_text(json.dumps(assertion, indent=2)+'\n')
+    write_report('output/verification/container-checks.json',result)
+    write_report('output/verification/container-assertion.json',assertion)
     print(json.dumps(result, indent=2))
 
 

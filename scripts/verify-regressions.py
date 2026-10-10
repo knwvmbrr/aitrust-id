@@ -1,6 +1,8 @@
 """Run every active development dataset; never claim statistical release approval."""
 import argparse
 import hashlib
+import importlib.util
+from datetime import datetime, timezone
 import json
 import re
 import sys
@@ -8,6 +10,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'eval'))
+sys.path.insert(0,str(ROOT))
+from protocol.reports import write_report
 import harness
 
 DEFAULT_MANIFEST = ROOT / 'eval/datasets/unsafe_code/manifest.json'
@@ -45,13 +49,22 @@ def load_manifest(path=DEFAULT_MANIFEST):
 def verify(path=DEFAULT_MANIFEST):
     path = Path(path)
     manifest = load_manifest(path)
+    provenance=None
+    if path.resolve()==DEFAULT_MANIFEST.resolve():
+        spec=importlib.util.spec_from_file_location('current_dataset_provenance',ROOT/'scripts/verify-dataset-provenance.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);provenance=module.verify(path.parent)
     datasets, failures = [], []
     for entry in manifest['active']:
         result = harness.evaluate_fixtures(path.parent / entry['file'])['PS']
         datasets.append({'file': entry['file'], 'sha256': entry['sha256'], **result})
         if result['fp'] or result['fn']:
             failures.append({'file': entry['file'], 'fp': result['fp'], 'fn': result['fn']})
-    return {'regression_pass': not failures, 'datasets': datasets,
+    return {'captured_at':datetime.now(timezone.utc).isoformat(),'normalization_id':harness.NORMALIZATION_ID,
+            'normalization_sha256':hashlib.sha256((ROOT/'protocol/normalization.py').read_bytes()).hexdigest(),
+            'normalization_data_sha256':hashlib.sha256((ROOT/'protocol/unicode15-data.json').read_bytes()).hexdigest(),
+            'category_version':harness.CATEGORY_VERSION,
+            'category_source_sha256':hashlib.sha256((ROOT/'protocol/categories.py').read_bytes()).hexdigest(),
+            'provenance':provenance,'regression_pass': not failures, 'datasets': datasets,
             'method_sha256': hashlib.sha256((ROOT/'services/evaluator/app.py').read_bytes()).hexdigest(),
             'case_count': sum(sum(row[key] for key in ('tp', 'fp', 'fn', 'tn')) for row in datasets),
             'failures': failures, 'historical': manifest['historical'],
@@ -68,7 +81,7 @@ def main():
     except (ValueError, KeyError, OSError, TypeError) as error:
         report = {'regression_pass': False, 'error': str(error), 'release_assessed': False}
     if args.output:
-        args.output.write_text(json.dumps(report, indent=2) + '\n')
+        write_report(args.output.resolve(),report,allow_external=True)
     print(json.dumps(report, indent=2))
     return 0 if report['regression_pass'] else 1
 

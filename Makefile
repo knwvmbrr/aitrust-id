@@ -86,6 +86,7 @@ progress-render:
 verify-progress:
 	$(PYTHON) scripts/scope-progress.py
 	$(PYTHON) scripts/verify-accountability.py
+	$(PYTHON) scripts/verify-project-controls.py
 	$(PYTHON) scripts/verify-vocabulary.py
 
 .PHONY: performance-build performance-verify
@@ -109,3 +110,8 @@ verify-primitives:
 	$(PYTHON) scripts/generate-normalization.py --check
 	$(PYTHON) scripts/verify-normalization.py
 	$(PYTHON) scripts/verify-subjects.py
+
+.PHONY: verify-measurements
+verify-measurements:
+	$(PYTHON) scripts/verify-dataset-provenance.py
+	$(PYTHON) scripts/verify-measurements.py

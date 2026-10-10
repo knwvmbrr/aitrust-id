@@ -68,14 +68,14 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-090 | Character-data mutation observation | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-032 | Streaming settle detection | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-037 | Per-vendor site adapters | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-033 | Closed shadow-root badge, monochrome | [WP-UX](scope-delivery.md#wp-ux) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-033 | Closed shadow-root badge, monochrome | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-034 | Evidence panel showing the exact spans that triggered the tag | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-091 | Options page for the bearer token | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-035 | Full screen-reader semantics, aria-live="polite" never assertive | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-092 | Keyboard-only operation — reach, open, read, close the panel | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-093 | Forced-colors and high-contrast support | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-094 | 200% zoom and reduced-motion support | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-095 | Monochrome-by-construction design — the movie/TV content-rating look | [WP-UX](scope-delivery.md#wp-ux) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-092 | Keyboard-only operation — reach, open, read, close the panel | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-093 | Forced-colors and high-contrast support | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-094 | 200% zoom and reduced-motion support | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-095 | Monochrome-by-construction design — the movie/TV content-rating look | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-036 | Signature verification before render | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-096 | Graceful degradation — backend down, invalid token, unsupported page | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-097 | User-invoked labelling — select a response, ask for a check | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
@@ -94,24 +94,24 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-050 | Gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-051 | Executable evaluation harness | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-106 | Wilson confidence intervals, lower-bound gating, n published beside every figure | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-107 | Per-category failure breakdown on every metric | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-107 | Per-category failure breakdown on every metric | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-052 | PS fixture set | [TAG-PS](scope-delivery.md#tag-ps) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-108 | Frozen held-out split with a manifest hash, separate from the regression suite | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-109 | Dataset versioning and provenance per example | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-109 | Dataset versioning and provenance per example | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-110 | Adversarial boundary examples for the use/mention discriminator | [TAG-PS](scope-delivery.md#tag-ps) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-053 | HP / MT / FI fixtures | [WP-VALIDATION](scope-delivery.md#wp-validation) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-056 | Krippendorff's α published for MT, ≥ 0.55 | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-054 | CI that can actually fail | [WP-RELEASE](scope-delivery.md#wp-release) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-114 | Method-appropriate abstention measurement and policy | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-057 | SBOM plus Sigstore release signing | [WP-RELEASE](scope-delivery.md#wp-release) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-116 | Dependency lockfiles and hashes, not just version pins | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-117 | Model hash verification at load | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-118 | Calibration ledger — every published number reproducible by a third party | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-118 | Calibration ledger — every published number reproducible by a third party | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-119 | Conformance test suite an outside implementer can run against their own build | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-120 | Evidence packets — committed transcripts per exit gate | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-121 | Receipt format binding an artifact hash to observed composition activity | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
@@ -145,14 +145,14 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-146 | Nonprofit formation and filings | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-147 | Conflict-of-interest recusal rule for maintainers with a commercial interest | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-148 | Qualified legal review of every biometric and privacy assurance | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-070 | Six invariants in CONTRIBUTING.md | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-071 | Threat model, 10 entries | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-070 | Six invariants in CONTRIBUTING.md | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-071 | Threat model, 10 entries | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-072 | ACCESSIBILITY.md as a release gate | [WP-UX](scope-delivery.md#wp-ux) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-149 | MAINTAINERS.md with per-maintainer scope | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-150 | CHANGELOG.md, state.json, docs/, runs/ | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-151 | DECISIONS.md — 15 seeded decisions with dates and reasons | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-152 | Branch protection, CODEOWNERS, required status checks, Dependabot | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-153 | Named ongoing ownership for security response and adapter maintenance | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-153 | Named ongoing ownership for security response and adapter maintenance | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-060 | image | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-061 | audio | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-062 | video | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |

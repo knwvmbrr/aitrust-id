@@ -5,16 +5,21 @@
 1. **No paid dependencies.** A component with a metered API is a rejected PR, regardless of
    how good it is. This project must cost a contributor nothing to run.
 2. **No network egress at inference.** The anonymizer and evaluator run on an internal Docker
-   network with no route out. CI runs the test suite with networking disabled — if your
-   component needs the internet to evaluate text, it does not belong in the pipeline.
+   network. Bounded Linux runtime probes and actual offline processing are recorded in
+   runs/. CI is configured for network-isolated tests; hosted jobs currently cannot start
+   because of an account restriction. No universal no-egress guarantee is claimed. A
+   component requiring an external inference service does not belong in the pipeline.
 3. **No response content in assertion records or telemetry.** The personal workflow
    transfers text only to its authenticated local gateway and local redaction/evaluation
    services. Do not add automatic remote uploads or content persistence. Public assertions
    carry hashes and offsets; those metadata still deserve careful disclosure.
 4. **Accessibility is a gate, not a follow-up.** See ACCESSIBILITY.md. Any serious or critical
    axe violation fails the build.
-5. **A tag may not claim more confidence than its evidence supports.** If human annotators only
-   agree at 0.6, your classifier does not ship at 0.9.
+5. **A tag may not claim more confidence than its evidence supports.** Publish the
+   error counts, denominators, uncertainty and independent evaluation for its bounded claim.
+   Annotator agreement diagnoses ground-truth reliability; it is not a probability ceiling
+   or interchangeable with model confidence, precision or calibration. Heuristic scores
+   are not measured probabilities. Failed or missing independent gates block release.
 6. **No detection capability is ever withheld from an individual.** Every label, every signal,
    every piece of evidence is free and open, forever. Never add a feature flag that disables a
    label, a signal or an evidence panel for a free user. What an organisation pays for is

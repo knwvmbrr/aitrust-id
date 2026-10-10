@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "development_regression",
+  "independent_accuracy_evidence": false,
+  "active": [
+    {
+      "file": "ps_v1.jsonl",
+      "sha256": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4"
+    },
+    {
+      "file": "fetch_execute_v1.jsonl",
+      "sha256": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10"
+    },
+    {
+      "file": "counterexamples_v2.jsonl",
+      "sha256": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274"
+    },
+    {
+      "file": "live_gap_v1.jsonl",
+      "sha256": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9"
+    },
+    {
+      "file": "routing_boundaries_v1.jsonl",
+      "sha256": "639715fb9ebb6e755fb5028adab57f14f9b04733433b98810666bb4f93a63b62"
+    }
+  ],
+  "historical": [
+    {
+      "file": "counterexamples_v1.jsonl",
+      "sha256": "1e2a473e3aa33b449b8cc7f7db0ad7a713e79fd8ac8486fa995051468e3927b7",
+      "superseded_by": "counterexamples_v2.jsonl",
+      "reason": "Two historical shell labels contradicted executed second-shell behavior; preserved, not treated as current ground truth."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+const {writeReport}=require('./execution-report.cjs');
 // Mutation tests of the same probes that run against the real website.
 const assert=require('node:assert/strict'),fs=require('node:fs');const {chromium}=require('playwright');const probes=require('./accessibility-probes.cjs');
 (async()=>{const browser=await chromium.launch();const context=await browser.newContext({viewport:{width:320,height:760},reducedMotion:'reduce'});const page=await context.newPage();
@@ -12,5 +13,5 @@ const passed=[];try{
  await page.setContent(html.replace('</style>','@media(prefers-reduced-motion:reduce){details[open]{height:20px!important;overflow:hidden!important}}</style>'));assert((await probes.disclosures(page.locator('main'))).failures.length);passed.push('dead disclosure under reduced motion');
  // Inline text links are exempt; arbitrary tiny clipped text must not be exempt.
  await page.setContent(html.replace('<p>','<p>Read <a href="#help">help</a>. '));assert.deepEqual((await probes.targetSizes(page.locator('main'))).failures,[]);
- const report={captured_at:new Date().toISOString(),author:'Codex',pass:true,clean_control_passed:true,mutations_caught:passed.length,mutations:passed,full_wcag_conformance_asserted:false};if(process.env.AITRUST_A11Y_PROBES_REPORT)fs.writeFileSync(process.env.AITRUST_A11Y_PROBES_REPORT,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+ const report={captured_at:new Date().toISOString(),author:'Codex',pass:true,clean_control_passed:true,mutations_caught:passed.length,mutations:passed,full_wcag_conformance_asserted:false};if(process.env.AITRUST_A11Y_PROBES_REPORT)writeReport(process.env.AITRUST_A11Y_PROBES_REPORT,report);console.log(JSON.stringify(report));
 }finally{await context.close();await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

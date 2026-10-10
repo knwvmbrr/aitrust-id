@@ -2,7 +2,7 @@
 
 - **Author:** Michael Raashad McGuire (knwvmbrr)
 - **Date:** 2026-10-06
-- **Status:** draft
+- **Status:** draft; unadopted, no implemented receipt issuance or authorship validation
 - **Affects:** spec, governance
 
 ## Summary
@@ -10,26 +10,27 @@
 Invert the customer. Every product in this category sells *detection* to institutions so they
 can accuse people. This one issues **receipts to authors** so they can answer the accusation.
 
-An authorship receipt is a signed, timestamped assertion that a human composed a specific
-artifact, held by the author, verifiable offline by anyone, with no central database and no
-callback to us. Paired with a published calibration ledger, it converts "trust our numbers"
+The proposed receipt binds a key-signed statement of observed composition activity to an
+artifact. It is held by its issuer and is intended for offline verification without a central
+assertion database. A signature or timestamp cannot establish that a human composed the artifact. Paired with a published calibration ledger, it converts "trust our numbers"
 into "re-run our numbers."
 
 ## Motivation
 
-### Detection degrades. Attestation does not.
+### Evidence integrity and authorship are separate
 
-A detector is in a race it eventually loses. Models will be trained to emit human-looking
-keystroke cadence — that is a distribution, and distributions can be sampled. Any signal whose
-only defence is statistical will be forged on a long enough timeline.
+A verified signature binds a statement to a key. It does not establish that the
+statement is true, that the keyholder is a particular person, or that the
+observed activity came from a human. A replayed or fabricated event stream can
+be signed and timestamped too. Those risks need their own measured controls.
 
-A receipt issued **at composition time** is different in kind. To forge it, an adversary must
-produce a signature and timestamp that predate the artifact's existence. A better model in 2029
-does not help, because the fraud is not in the text — it is in the clock. **Time is the only
-adversarial asymmetry that does not erode.**
-
-This is why the defensive product is also the durable architecture. We are not choosing between
-ethics and longevity.
+An independently trusted timestamp can establish that the bound datum existed
+by the recorded time, subject to the authority's policy, trust chain and status.
+It does not validate a self-reported composition window or prove what preceded
+that datum. [RFC 3161 sections 1–2.2](https://www.rfc-editor.org/rfc/rfc3161.html)
+defines this narrower proof-of-existence and the required imprint/token checks.
+Revocation, compromise and algorithm aging remain relevant. This draft does
+not claim an eternal or unforgeable human-authorship certificate.
 
 ### The accused have no tool
 
@@ -63,8 +64,9 @@ Issued when a composition window closes. Signed ed25519 with a key the author ho
 ```
 
 **Never in a receipt:** the text, any excerpt of it, a biometric template, a user identifier, or
-a raw event stream. A receipt proves *that* a human composed a thing with a given hash. It does
-not reveal what the thing says or who the human is.
+a raw event stream. Hashes and per-device public keys can still correlate or identify
+records. A receipt proves a bound statement was signed only after its cryptographic
+checks pass; the statement’s authorship meaning requires separate validated evidence.
 
 ### Verification
 
@@ -75,9 +77,9 @@ not invalidate existing receipts.
 
 ### Independent timestamping
 
-The signature alone proves authorship by keyholder, not time of composition. An RFC 3161
-timestamp from an independent authority — or an equivalent transparency log — is what makes
-pre-dating infeasible. This is the load-bearing component of the design and **must not be
+The signature alone supports key-bound statement integrity, not human authorship or time of composition. An RFC 3161
+timestamp from an independent authority — or an equivalent transparency log — can establish an independently attested existence time after its own trust and status checks;
+it does not establish the truth of earlier self-reported times. This is the load-bearing component of the design and **must not be
 operated by us.**
 
 ## Forgery cost as a first-class field
@@ -96,16 +98,16 @@ A signal that is 95% accurate today and `statistical` is worth less than one tha
 accurate and `structural`. Release notes must state the distribution of forgery classes behind
 each tag, so a reader can judge how the label will age.
 
-## Signals this RFC registers
+## Signals this draft proposes
 
 | ID | Feeds | Method | Forgery cost |
 |---|---|---|---|
-| `sig.outside_knowledge.v1` | PA | A revision introduces an entity, figure or claim not derivable from anything in the captured session context. A model's edits can only recombine its own context; a human reaches outside it. Checked locally against the captured window. | `structural` |
-| `sig.attention_shape.v1` | PA | Read-pause-write rhythm from `visibilitychange` and focus events. An inserted block has no antecedent attention. **No content access, no biometric.** Survives dictation and switch access, where timing signals must be suppressed. | `behavioral` |
+| `sig.outside_knowledge.v1` | PA | A revision introduces an entity, figure or claim not derivable from anything in the captured session context. Absence from captured context does not establish origin; no authorship inference or runtime implementation is accepted. | `unvalidated` |
+| `sig.attention_shape.v1` | PA | Read-pause-write rhythm from `visibilitychange` and focus events. An inserted block has no antecedent attention. No content capture is proposed; correlation and legal treatment still require review. Dictation and switch-access support is unmeasured. | `behavioral` |
 
-`sig.outside_knowledge.v1` is the most durable behavioral signal in the system. Its barrier is
-not statistical — a model cannot inject information it does not have, no matter how well it is
-trained to imitate a person.
+`sig.outside_knowledge.v1` is an unvalidated proposal. Humans and automated systems can
+introduce information absent from the captured window. This indicator must never be
+used to establish human authorship or assigned a structural security guarantee.
 
 ## Calibration ledger
 
@@ -121,7 +123,7 @@ reproduced by a third party is marketing. **No release ships a number a reader c
 
 ## Licensing and tiering
 
-Governing rule, adopted here as policy:
+Proposed implementation requirements, consistent with the preserved personal-access scope; this draft does not itself adopt a standard:
 
 > **The specification, the reference implementation, the fixtures and the calibration ledger are
 > open and free. Permanently. The only thing that may sit behind a commercial gate is tooling
@@ -144,10 +146,10 @@ power.**
 |---|---|---|
 | R1 | Pre-dating a receipt | Independent RFC 3161 timestamp; we never operate the TSA |
 | R2 | Receipt transferred to a different artifact | Receipt binds the artifact hash; verification recomputes it |
-| R3 | Author signs a receipt for AI output they pasted | `sig.paste_burst.v1` raises `FA`, not `PA`. The receipt reports what was observed — a receipt that says `FA` is still a true receipt |
+| R3 | Author signs a receipt for AI output they pasted | A paste is evidence of insertion, not origin. A signed false inference stays false; no FA/PA issuance is implemented or accepted here |
 | R4 | Key theft | Keys are per-device and revocable; revocation publishes to the transparency log |
 | R5 | Coerced attestation — an institution demands receipts for all work | Governance: a conformant implementation may not make receipt issuance non-optional for the author |
-| R6 | We become the thing we oppose | No central database. Verification requires no contact with us. The project can die and every issued receipt still verifies |
+| R6 | We become the thing we oppose | Proposed offline verification without a central database. The project can stop operating, but verification needs exported trust and status evidence; availability and freshness limits must remain explicit |
 
 ## Open questions
 

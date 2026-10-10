@@ -112,6 +112,42 @@ async (page) => {
     return {allDistinctTags:true,syntheticTagCount:codes.length,duplicatesSuppressed:true,outputGeometryUnchanged:true,belowOutput:true,narrowRowWrap:true,perTagDetails:true};
   });
   result.multipleTags=multipleTags;
+  // Exercise component contracts through real keyboard/browser settings, not requested flags.
+  await page.goto('http://127.0.0.1:8799/extension/test/badge-fixture.html');
+  await page.waitForFunction(()=>fixtureRequests.length===2);
+  await page.evaluate(()=>fixtureResponders.forEach((resolve,i)=>resolve(fixtureResult(fixtureRequests[i].text))));
+  await page.waitForTimeout(100);
+  const closed=await page.evaluate(()=>[...document.querySelectorAll('.aitrust-mount')].every(e=>e.shadowRoot===null));
+  if(!closed)throw Error('Production badge exposes its shadow root');
+  let reached=false;for(let i=0;i<12;i++){await page.keyboard.press('Tab');reached=await page.evaluate(()=>fixtureRoots.get(document.querySelector('#first .aitrust-mount')).activeElement?.classList.contains('tag'));if(reached)break;}
+  if(!reached)throw Error('Tag is not keyboard reachable');
+  await page.keyboard.press('Enter');
+  if(!await page.evaluate(()=>fixtureRoots.get(document.querySelector('#first .aitrust-mount')).querySelector('.panel').open))throw Error('Keyboard Enter does not open details');
+  await page.keyboard.press('Escape');
+  if(!await page.evaluate(()=>{const r=fixtureRoots.get(document.querySelector('#first .aitrust-mount'));return !r.querySelector('.panel').open&&r.activeElement?.classList.contains('tag');}))throw Error('Keyboard Escape does not restore tag focus');
+  await page.addScriptTag({url:'http://127.0.0.1:8799/scripts/badge-probes.js'});
+  for(const theme of ['light','dark']){
+    await page.emulateMedia({colorScheme:theme,reducedMotion:'reduce',forcedColors:'none'});
+    await page.setViewportSize({width:320,height:760});
+    await page.keyboard.press('Enter');
+    const healthy=await page.evaluate(()=>badgeProbes.inspect(fixtureRoots.get(document.querySelector('#first .aitrust-mount'))));
+    if(healthy.length)throw Error(theme+': '+healthy.join(', '));
+    await page.evaluate(()=>document.body.style.zoom='2');
+    const zoomed=await page.evaluate(()=>badgeProbes.inspect(fixtureRoots.get(document.querySelector('#first .aitrust-mount'))));
+    if(zoomed.length)throw Error('200% '+theme+': '+zoomed.join(', '));
+    await page.evaluate(()=>document.body.style.zoom='');
+    await page.emulateMedia({forcedColors:'active'});
+    const forced=await page.evaluate(()=>badgeProbes.inspect(fixtureRoots.get(document.querySelector('#first .aitrust-mount')),{forced:true}));
+    if(forced.length)throw Error('Forced colors: '+forced.join(', '));
+    await page.keyboard.press('Escape');
+  }
+  await page.emulateMedia({forcedColors:'none',colorScheme:'light'});
+  const mutations=await page.evaluate(()=>{
+    const root=fixtureRoots.get(document.querySelector('#first .aitrust-mount'));const style=document.createElement('style');root.append(style);const caught=[];
+    for(const [name,rule] of [['color','.tag{color:red!important}'],['overflow','.tag{width:900px!important;flex-shrink:0!important}'],['motion','.tag{transition:all 5s!important}']]){style.textContent=rule;if(!badgeProbes.inspect(root).length)throw Error('Probe missed '+name);caught.push(name);}
+    style.remove();return caught;
+  });
+  result.componentContract={closedShadow:true,keyboardReachEnterEscape:true,lightDarkMonochrome:true,forcedColorsInspected:true,zoom200Inspected:true,reducedMotionInspected:true,deliberateDefectsCaught:mutations};
   if(errors.length)throw new Error(errors.join('\n'));
   console.log(JSON.stringify(result));
   await page.screenshot({path:'output/playwright/command-tag-fixture.png',fullPage:true});

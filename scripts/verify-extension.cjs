@@ -1,3 +1,4 @@
+const {writeReport}=require('./execution-report.cjs');
 // Real unpacked extension + real local containers on a routed synthetic vendor page.
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const {chromium}=require('playwright');
@@ -71,6 +72,6 @@ const {chromium}=require('playwright');
   }
   await page.screenshot({path:'output/playwright/real-extension-synthetic.png',fullPage:true});
   const result={realUnpackedExtension:true,realGateway:true,realRedaction:true,realEvaluator:true,keyboardEvidenceOpened:true,briefExplanation:true,structuredExport:true,exportedEvaluatorHashMatches:true,rawEmailAbsentFromEvidence:true,rawContentExcludedFromExport:true,observedAttributeStructure:true,observedCases,liveVendorResponse:false,syntheticPage:true};
-  fs.writeFileSync('runs/2026-10-08-extension-integration.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+  writeReport(process.env.AITRUST_EXTENSION_REPORT||'output/verification/extension-integration.json',result);console.log(JSON.stringify(result));
  }finally{if(context)await context.close();fs.rmSync(profile,{recursive:true,force:true});}
 })().catch(error=>{console.error(error);process.exitCode=1;});

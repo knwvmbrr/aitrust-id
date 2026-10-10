@@ -24,8 +24,10 @@ else could implement it from this section alone.
 **Required.** Where are the labeled fixtures? How many? How were they labeled, by how many
 annotators, and what is the measured inter-annotator agreement (Krippendorff's alpha)?
 
-> A proposed tag may not claim a confidence floor higher than the agreement of the humans
-> who labeled its data. State the alpha here and set the floor accordingly.
+> State agreement and uncertainty separately from precision, recall and calibration.
+> An agreement coefficient is not a model-confidence ceiling. Fix the claim-specific
+> sampling, annotation and metric method before evaluation; do not choose gates after
+> seeing the result.
 
 ## Measured performance
 

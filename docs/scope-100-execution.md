@@ -136,3 +136,40 @@ vectors now execute in both Python and Node. The previous ledger coupled this
 vector job to an outside implementer's acceptance. That broader interoperability
 review remains separate under F-119/WP-PROTOCOL; no outside participant is invented
 and no detector is released by agreement between hash functions.
+
+## Next batch: accountable controls and release gates
+
+Architecture: keep the tag methods and independent gates unchanged. Separate
+full named policy/mechanism jobs from unrelated whole-product acceptance copied
+into their initial ledger rows. F-153 names ongoing security/adapter ownership;
+it does not promise a staffed SLA or require a full host restore. F-070 records
+six contribution invariants; disagreement coefficients must not be presented as
+probability ceilings. F-071 is a current ten-entry threat model with traceable
+controls, residual risk and owners, not a claim that all threats are eliminated.
+F-055 is an executable automated axe gate, distinct from human screen-reader
+acceptance under F-035/F-072/F-139.
+
+Implement machine-checked contracts and actual positive/negative gate executions.
+A missing owner, weakened release prerequisite or serious axe defect must fail.
+A configured hosted job remains unexecuted while account restrictions prevent it
+starting. Security response capacity, independent security review, physical
+phones, human accessibility, conformance adoption and replacement-host recovery
+remain separately open. Risks: policy lint may miss semantic loopholes; a passing
+automated accessibility gate is not conformance; owner assignment is not proof
+of availability. State these limits in the evidence and retain all original IDs.
+
+## Compact tagging component acceptance
+
+Architecture: keep the actual badge renderer and bridge methods unchanged while
+expanding executable component probes. Test the default closed shadow root,
+multiple distinct code-only tags below the response, native dialog focus and
+keyboard dismissal, grayscale colors in both themes, system forced-colors,
+200% text and reduced-motion reflow. Inject deliberate defects into a disposable
+fixture to prove probes fail rather than only record requested browser settings.
+
+Risks: open-shadow instrumentation is needed for automated accessibility scans;
+it must remain fixture-only. Passing a synthetic component test does not verify
+live vendor adapters or a human screen-reader experience. F-033/F-092/F-093/F-094/
+F-095 are renderer jobs; broader live-route acceptance stays with F-030/F-037 and
+human semantics stay with F-035/F-139. No planned tag is enabled by using dummy
+codes to exercise a wrapping layout.

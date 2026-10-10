@@ -1,0 +1,16 @@
+{
+ "schema_version":1,
+ "assessment_kind":"maintainer threat model; not independent security certification",
+ "threats":[
+  {"id":"exfiltration","owner_lane":"security","control":"Local/device-only processing and internal service isolation","evidence":["runs/2026-10-10-frozen-service-conformance.json","runs/2026-10-10-frozen-device-engines.json"],"residual":"Redaction misses, host compromise and untested covert channels remain possible"},
+  {"id":"exposure","owner_lane":"security","control":"Loopback binding, bearer authentication and origin/body/concurrency rejection","evidence":["runs/2026-10-10-frozen-service-conformance.json","runs/2026-10-10-service-resource-faults.json"],"residual":"Stolen tokens and local malware can invoke the local gateway"},
+  {"id":"credentials","owner_lane":"security","control":"No proxy/redirect credential forwarding in the manual checker","evidence":["tests/test_local_cli.py"],"residual":"A compromised owner host can read its credentials"},
+  {"id":"hostile_page","owner_lane":"adapters","control":"Escaped rendering, response identity and isolated content-script tests","evidence":["scripts/browser-acceptance.js","scripts/live-dom-acceptance.js"],"residual":"A vendor page can imitate or remove UI; shadow roots and unsigned records do not authenticate origin"},
+  {"id":"supply_chain","owner_lane":"source","control":"Hash-locked packages and pre-load model asset verification","evidence":["runs/2026-10-10-model-image-integrity.json","services/anonymizer/requirements.lock"],"residual":"Trusted-image compromise, floating base-image changes and incomplete SBOM/signing remain open"},
+  {"id":"evasion","owner_lane":"independent_review","control":"Input handled as data; development command/use-mention regressions","evidence":["eval/datasets/unsafe_code/manifest.json","runs/2026-10-10-frozen-device-engines.json"],"residual":"Development examples are not independent accuracy evidence; supported patterns are limited"},
+  {"id":"collection","owner_lane":"security","control":"No default upload/persistence; minimal export with separate detailed consent","evidence":["runs/2026-10-10-frozen-device-engines.json","site/src/share-record.js"],"residual":"Explicit detailed export can link input through hashes/positions; private corpus is deliberately owner-held persistent data"},
+  {"id":"vendor_drift","owner_lane":"adapters","control":"Revision/race regression checks and unsupported-route visibility","evidence":["scripts/live-dom-acceptance.js","docs/runtime-gap-plan.md"],"residual":"Broad live vendor changes/regeneration remain unverified; MAIN-world capture is inactive scope"},
+  {"id":"accessibility","owner_lane":"source","control":"Polite compact controls, keyboard and automated accessibility checks","evidence":["runs/2026-10-10-frozen-site-local.json","runs/2026-10-10-frozen-device-engines.json"],"residual":"Human screen-reader, physical-phone and independent usability acceptance remain open"},
+  {"id":"delivery","owner_lane":"operations","control":"CSP, no-transform and exact public artifact comparison","evidence":["scripts/verify-publication.cjs","runs/2026-10-10-frozen-site-public.json"],"residual":"Hosting/DNS providers remain dependencies and receive connection metadata; hashes do not defeat a compromised trusted build"}
+ ]
+}

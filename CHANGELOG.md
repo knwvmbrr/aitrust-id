@@ -2,6 +2,78 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-124637-measurement-publication-review-d63ab7db
+
+Recorded 2026-10-10T12:46:37.477341+00:00 · Contributor: Codex · change
+
+- **Changed.** Review the owned increment and built public artifact set for known private runtime credentials, server-address and portfolio markers.
+- **Evidence.** Targeted scan passed before publication; no private provider or account data was added to the report. [Change record](./runs/changes/2026-10-10-124637-measurement-publication-review-d63ab7db.json).
+- **Not claimed.** Exact known markers/current source scan only; not an independent security audit or blanket historical privacy clearance.
+
+
+### 2026-10-10-124612-all-surface-measurement-validation-e4b4e750
+
+Recorded 2026-10-10T12:46:12.705734+00:00 · Contributor: Codex · change
+
+- **Changed.** Update structural assertions to distinguish outer tag disclosures from the nested test breakdown; verify the final build and preserve all current completion records in public generated scope.
+- **Evidence.** 20 tag dialogs, eight footer workflows and 202 IDs pass; 62 accessibility surfaces pass; no unexpected outbound requests, no axe violations. [Change record](./runs/changes/2026-10-10-124612-all-surface-measurement-validation-e4b4e750.json).
+- **Not claimed.** Automated component/site checks, no human WCAG certification or independently validated tag release. The target remains 100 open.
+
+
+### 2026-10-10-124612-retain-provenance-scope-without-false-proofs-dee42f17
+
+Recorded 2026-10-10T12:46:12.360968+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct draft behavioral/receipt/media claims: events, key signatures and trusted timestamps do not prove human authorship; no blanket biometric exemption or automatic IV routing; retain all proposed jobs.
+- **Evidence.** RFC 3161 checked against its primary specification; existing independent provenance/release tests pass. Drafts state their unimplemented and unadopted status. [Change record](./runs/changes/2026-10-10-124612-retain-provenance-scope-without-false-proofs-dee42f17.json).
+- **Not claimed.** No proposal adopted, capture enabled, legal compliance granted, receipt issued or scope item marked complete by these document corrections.
+
+
+### 2026-10-10-124106-compact-tag-component-acceptance-7cbb4a3c
+
+Recorded 2026-10-10T12:41:06.755291+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute real keyboard access, closed-shadow, theme, grayscale, forced-color, zoom and reduced-motion probes against compact tags; catch intentionally colored, overflowing and animated controls; record eight full mechanism closures.
+- **Evidence.** 44 complete/158 open records; all 202 retained. 24px-high/28px-wide resting tag, six wrapping tags, individual records and unchanged output geometry. Performance breakdown passes 40 theme/tag modals and 20 static references. [Change record](./runs/changes/2026-10-10-124106-compact-tag-component-acceptance-7cbb4a3c.json).
+- **Not claimed.** Synthetic component route. Human screen-reader, broader live vendor, physical phones and independent accuracy remain separate open gates. Target still 100 open.
+
+
+### 2026-10-10-123721-reproducible-measurement-ledger-00735577
+
+Recorded 2026-10-10T12:37:21.955561+00:00 · Contributor: Codex · change
+
+- **Changed.** Reproduce all published PS counts, per-category error metrics, Wilson ranges, sample-size arithmetic and observed engine-timing quantiles; publish example provenance and clear test breakdowns.
+- **Evidence.** 86 active/15 historical rows verified; 254 timing observations retained; fabricated counts, provenance, intervals and timing summaries fail. [Change record](./runs/changes/2026-10-10-123721-reproducible-measurement-ledger-00735577.json).
+- **Not claimed.** Development labels only. Calibration unmeasured; independent accuracy, accepted release policy and physical-phone acceptance remain open.
+
+
+### 2026-10-10-123506-observable-device-timings-7cd31d21
+
+Recorded 2026-10-10T12:35:06.865579+00:00 · Contributor: Codex · change
+
+- **Changed.** Require raw per-case timing observations and per-input category quantiles before reusing an engine report.
+- **Evidence.** Old reports without observations display unmeasured device timing; a fresh engine run is required. [Change record](./runs/changes/2026-10-10-123506-observable-device-timings-7cd31d21.json).
+- **Not claimed.** Environment-specific performance observations, no hardware SLA or independent accuracy.
+
+
+### 2026-10-10-123443-development-measurement-provenance-028ee0cd
+
+Recorded 2026-10-10T12:34:43.782144+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind every development example to its source revision; recompute category results and expose an expandable test breakdown; preserve timing observations for reproducible summaries.
+- **Evidence.** Executed provenance tampering and fabricated-count tests; all 86 active and 15 historical examples accounted for. Independent release remains false. [Change record](./runs/changes/2026-10-10-123443-development-measurement-provenance-028ee0cd.json).
+- **Not claimed.** Measurement tooling only. Maintainer labels and desktop-hosted phone engines do not establish independent accuracy or physical phone acceptance.
+
+
+### 2026-10-10-122330-accountable-controls-and-immutable-reports-c28bc0e2
+
+Recorded 2026-10-10T12:23:30.081757+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the six accurate contribution invariants, traceable ten-entry threat model, named ongoing security/adapter ownership and executable axe severity gate; prevent default browser/runtime checks from replacing historical evidence and add shared atomic report writers.
+- **Evidence.** 526 Python tests pass. The intact badge passes and a genuinely unnamed badge fails the same actual axe gate. Control mutation tests reject missing owners, missing residual/evidence, unsupported promises and stale documentation. Report tests reject overwritten history, outside paths, symlinks and invalid/non-finite JSON. [Change record](./runs/changes/2026-10-10-122330-accountable-controls-and-immutable-reports-c28bc0e2.json).
+- **Not claimed.** These are full named documented-control and automated-gate jobs. No staffed response SLA, operating foundation, full recovery, human accessibility, live-vendor acceptance, independent security certification or tag accuracy release is asserted. Website currently carries the earlier verified 32-complete/170-open snapshot; 36-complete/166-open source publication remains pending.
+
+
 ### 2026-10-10-121224-frozen-normalization-pipeline-57474654
 
 Recorded 2026-10-10T12:12:24.357807+00:00 · Contributor: Codex · change

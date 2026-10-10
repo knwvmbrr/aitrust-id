@@ -22,8 +22,10 @@ can read is not a trust label.
 
 ## Testing gate
 
-CI runs `axe-core` against the badge and panel components. **The build fails on any violation
-at serious or critical severity.** Manual NVDA and VoiceOver passes are required before any
+The executable `npm run verify:axe-gate` checks the actual badge/panel fixture
+and proves that an injected serious/critical accessibility defect fails. The
+configured CI job calls the same gate; hosted execution is currently blocked by
+an account restriction. **The gate fails on any serious or critical axe violation.** Manual NVDA and VoiceOver passes are required before any
 release tagged `minor` or larger, and the results are recorded in the release notes.
 
 ## Reporting

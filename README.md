@@ -314,3 +314,17 @@ the model and refuses changed, missing or extra assets.
 [Model integrity](docs/model-asset-integrity.md) describes the trusted-image
 boundary and an executable positive/corruption test. These checks verify integrity
 and interoperability, not independently measured tag accuracy.
+
+### Reproduce published development measurements
+
+Run `python scripts/verify-measurements.py` in a downloaded checkout. It recomputes
+all five development datasets, category denominators/Wilson ranges, mathematical
+sample-size minima and recorded browser-timing quantiles. Missing calibration is
+explicitly unmeasured. Timing observations describe their recorded desktop host;
+a fresh run can differ. No account, network call or service startup is required.
+
+`python scripts/verify-dataset-provenance.py` checks all 101 versioned example
+records (86 active, 15 historical). Add `--verify-history` in a full Git clone to
+verify exact source commits; ZIP users can still verify every file and row hash.
+Unknown original authorship remains unknown. These are development examples,
+not a frozen independent accuracy study. See [measurement provenance](docs/measurement-provenance-plan.md).

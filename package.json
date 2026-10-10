@@ -25,7 +25,11 @@
     "verify:subjects": "python3 scripts/verify-subjects.py",
     "verify:accountability": "python3 scripts/verify-accountability.py",
     "verify:vocabulary": "python3 scripts/verify-vocabulary.py",
-    "verify:normalization": "python3 scripts/generate-normalization.py --check && python3 scripts/verify-normalization.py"
+    "verify:normalization": "python3 scripts/generate-normalization.py --check && python3 scripts/verify-normalization.py",
+    "verify:axe-gate": "node scripts/verify-axe-gate.cjs",
+    "verify:controls": "python3 scripts/verify-project-controls.py",
+    "verify:measurements": "python3 scripts/verify-measurements.py",
+    "verify:provenance": "python3 scripts/verify-dataset-provenance.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",

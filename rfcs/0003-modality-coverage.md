@@ -26,8 +26,8 @@ Two costs to leaving it there:
    The person being deceived by a cloned voice on the phone is inside our stated mission and
    outside our stated schema. That gap should be *visible and labelled*, not silent.
 
-The honest position is not "we cover everything." It is: **the protocol covers everything; this
-implementation covers two, and says so.**
+The honest position is not "we cover everything." It is: **the schema reserves six values; this runtime evaluates text. Code has a
+separate tested hash primitive, which is not a code-modality detector.**
 
 ## Design
 
@@ -64,17 +64,24 @@ exactly as it would for text. Invariant 5 is modality-independent.
 
 None. No detector is proposed. For the reserved modalities, the honest state of the art is:
 
-- **Image.** Detecting generation from pixels alone is unreliable and degrades with every model
-  release. C2PA manifests and SynthID are substantially better at this and are backed by the
-  producers themselves. We should **consume their signals, not compete with their detectors.**
-- **Audio.** Voice-clone detection is an active arms race against well-funded specialists. A
-  one-person project entering it ships a detector that is wrong about real people's voices.
-- **Video.** Hardest and most compute-hungry. Outside any plausible local-CPU constraint, and
-  our no-egress invariant forbids shipping the frames somewhere that could afford it.
+- **Image.** A future contract must define decoding, pixel/color representation,
+  metadata boundaries, evidence coordinates and reproducible vectors. Consume
+  provenance claims with their actual integrity/trust status; a credential is not
+  proof of truthful content or generation origin.
+- **Audio.** Define sample representation/rate, timing and transforms before a
+  detector can claim support. Voice provenance and generation observations need
+  their own datasets and accessibility/privacy review.
+- **Video.** Define frame/time ordering, canonical decoding and hash-tree rules.
+  Local resource budgets and usable playback evidence need measurement.
+- **Document.** Define text-layer extraction, layout/assets, page coordinates and
+  unsupported-encrypted/scanned-content behavior with their own vectors.
+
+These are preserved independent jobs, not accepted detector implementations or
+comparative claims about competing vendors.
 
 RFC-0002's authorship receipts are the more promising direction for all three, and for the same
-reason stated there: attestation at creation time does not degrade as models improve, because
-the asymmetry is the clock rather than the content.
+reason stated there: a verified signed statement can preserve evidence integrity, while authorship,
+clock trust, replay resistance, revocation and algorithm aging need separate checks.
 
 ## Dataset
 

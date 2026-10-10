@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-124637-measurement-publication-review-d63ab7db",
+  "recorded_at": "2026-10-10T12:46:37.477341+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
+  "changed": "Review the owned increment and built public artifact set for known private runtime credentials, server-address and portfolio markers.",
+  "proves": "Targeted scan passed before publication; no private provider or account data was added to the report.",
+  "limits": "Exact known markers/current source scan only; not an independent security audit or blanket historical privacy clearance.",
+  "scope_ids": [
+    "F-150",
+    "F-118"
+  ],
+  "files": {
+    "runs/2026-10-10-measurement-publication-audit.json": "66dbc5ce058c3b80cda5cb6efe122684638b6c941cefa721a6e2309f52210fb8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-measurement-publication-audit.json",
+      "sha256": "66dbc5ce058c3b80cda5cb6efe122684638b6c941cefa721a6e2309f52210fb8"
+    }
+  ],
+  "checks": []
+}

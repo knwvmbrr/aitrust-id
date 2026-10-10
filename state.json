@@ -17,7 +17,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 506,
+  "python_tests_passed": 563,
   "deferred_scope": [
     "Non-text subject contracts and detectors",
     "Semantic/provenance tags",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://1d4e932c.aitrust-id.pages.dev",
+    "deployment_url": "https://7345d34a.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-reference-deployment.json",
+    "publication_evidence": "runs/2026-10-10-frozen-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-reference-site-public.json",
+    "verification": "runs/2026-10-10-frozen-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -279,7 +279,8 @@
         "runs/2026-10-10-calm-assets-public.json"
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
-    }
+    },
+    "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -687,9 +688,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T12:10:50.889140+00:00",
-    "completed_records": 32,
-    "open_records": 170,
+    "audited_at": "2026-10-10T12:41:06.463719+00:00",
+    "completed_records": 44,
+    "open_records": 158,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -697,7 +698,7 @@
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
-    "structural_evidence": "runs/2026-10-10-scope-100-structure.json",
+    "structural_evidence": "runs/2026-10-10-measurement-scope-progress.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-09-scope-branding-deployment.json",
     "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
@@ -708,7 +709,7 @@
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 70,
+    "target_remaining_closures": 58,
     "publication_pending": true
   },
   "research_components": {

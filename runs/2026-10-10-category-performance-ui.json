@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-10T12:37:41.501Z",
+  "base": "http://127.0.0.1:5176",
+  "pass": false,
+  "modals": 0,
+  "static_pages": 0,
+  "missing_data_not_zero": true,
+  "stale_evidence_rejected": true,
+  "automatic_collection_added": false,
+  "error": "locator.click: Error: strict mode violation: getByRole('dialog').locator('details').filter({ has: getByText('Test breakdown', { exact: true }) }).locator('summary') resolved to 2 elements:\n    1) <summary class=\"flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold\">…</summary> aka getByText('Testing and evidence+')\n    2) <summary class=\"min-h-11 cursor-pointer py-3 font-semibold\">Test breakdown</summary> aka getByText('Test breakdown')\n\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').locator('details').filter({ has: getByText('Test breakdown', { exact: true }) }).locator('summary')\u001b[22m\n",
+  "errors": [],
+  "transport_errors": [],
+  "outbound": [],
+  "axe_violations": []
+}

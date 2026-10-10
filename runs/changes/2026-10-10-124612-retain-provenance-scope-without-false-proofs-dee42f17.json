@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-124612-retain-provenance-scope-without-false-proofs-dee42f17",
+  "recorded_at": "2026-10-10T12:46:12.360968+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
+  "changed": "Correct draft behavioral/receipt/media claims: events, key signatures and trusted timestamps do not prove human authorship; no blanket biometric exemption or automatic IV routing; retain all proposed jobs.",
+  "proves": "RFC 3161 checked against its primary specification; existing independent provenance/release tests pass. Drafts state their unimplemented and unadopted status.",
+  "limits": "No proposal adopted, capture enabled, legal compliance granted, receipt issued or scope item marked complete by these document corrections.",
+  "scope_ids": [
+    "F-029a",
+    "X-16",
+    "F-083",
+    "F-121",
+    "F-124",
+    "F-006"
+  ],
+  "files": {
+    "docs/scope-boundary-guard-plan.md": "2b338ad14fcb4eefd069eeedfafe76ff395ac80e3eef246c810dfb1f51eff365",
+    "rfcs/0001-behavioral-provenance.md": "efadfd2b51784076e29cbbf255879a291946ed0454ce46bf8ae771bc229fcb18",
+    "rfcs/0002-authorship-receipts.md": "3b7938aa0301a9340ff4aa9744abd7b789d81b2d7f85052e92d45fabfb3b61bf",
+    "rfcs/0003-modality-coverage.md": "3bd272b6ab73c38ca2e3c53af51a34155ec1ef1156f86692822f29925ee46870"
+  },
+  "evidence": [
+    {
+      "path": "docs/scope-boundary-guard-plan.md",
+      "sha256": "2b338ad14fcb4eefd069eeedfafe76ff395ac80e3eef246c810dfb1f51eff365"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_tag_bridge.py",
+        "tests/test_adjudicator_boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T12:46:12.668952+00:00"
+    }
+  ]
+}

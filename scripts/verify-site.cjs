@@ -1,3 +1,4 @@
+const {writeReport}=require('./execution-report.cjs');
 const fs=require('node:fs');
 const {chromium}=require('playwright');
 const base=process.env.AITRUST_SITE_URL||'http://127.0.0.1:5174';
@@ -37,7 +38,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
     assert(await dialog.locator('[data-tag-example]').innerText(),id+' missing everyday example');
     const working=['PS','PII_REDACTED'].includes(id);const validation=dialog.getByRole('region',{name:'Validation status'});assert(await validation.count()===(working?1:0),'Wrong validation card visibility');if(working)assert((await validation.innerText()).includes('Validation in progress'),'Working preview stage missing');assert((await dialog.locator('[data-tag-availability]').innerText()).includes(working?(id==='PS'?'preview':'Local setup'):(audience==='person'?'No checker':'No team service')),'Availability hidden');
-    assert(await dialog.locator('details').count()===(['PS','PII_REDACTED'].includes(id)?4:3),id+' must have its compact disclosures and applicable setup');
+    assert(await dialog.locator('details').count()===(id==='PS'?5:id==='PII_REDACTED'?4:3),id+' must have its compact disclosures and applicable setup');
     const use=dialog.locator('[data-tag-usage]');assert(await use.count()===1,id+' use instructions missing');
     if(['PS','PII_REDACTED'].includes(id)){await use.locator('summary').click();assert(await use.locator('ol li').count()===4,'Setup must have four steps');await use.getByRole('button',{name:'Copy step 1 commands'}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='git clone https://github.com/knwvmbrr/aitrust-id.git\ncd aitrust-id','Command copy differs from displayed instructions');await use.locator('summary').click();}
     else{assert(await use.getByRole('button',{name:'Help improve this tag',exact:true}).count()===1,'Unavailable item needs a contribution action');assert(await use.getByRole('link',{name:'Download source',exact:true}).count()===0,'Unavailable tag has fake download');}
@@ -94,7 +95,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   await page.screenshot({path:'output/playwright/site-mobile-modal.png'});await page.keyboard.press('Escape');
   await page.evaluate(()=>document.documentElement.style.fontSize='32px');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=320),'200% text enlargement overflow');
   await page.locator('[data-tag-id="PS"]').click();assert(await page.getByRole('dialog').evaluate(e=>e.scrollWidth<=e.clientWidth),'200% modal overflow');await page.keyboard.press('Escape');
-  const nojs=await browser.newContext({javaScriptEnabled:false});const plain=await nojs.newPage();await plain.goto(base);assert(await plain.locator('details').count()===20,'No-JavaScript tag reference missing');await plain.locator('summary').first().click();assert(await plain.locator('details').first().getAttribute('open')!==null,'No-JavaScript detail not operable');await nojs.close();
+  const nojs=await browser.newContext({javaScriptEnabled:false});const plain=await nojs.newPage();await plain.goto(base);assert(await plain.locator('.nojs-tags > details').count()===20,'No-JavaScript tag reference missing');await plain.locator('.nojs-tags > details > summary').first().click();assert(await plain.locator('.nojs-tags > details').first().getAttribute('open')!==null,'No-JavaScript detail not operable');await nojs.close();
   const publicScope=await context.request.get(base+'/reference/public-scope.json');
   const publicIds=(await publicScope.json()).records.map(record=>record.id);
   assert(publicIds.length===scopeIds.length&&new Set(publicIds).size===publicIds.length&&scopeIds.every(id=>publicIds.includes(id)),'Full scope omitted or duplicated');
@@ -170,6 +171,6 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    productionPolicyVerified=true;await ordinary.close();
   }
   const report={date:process.env.AITRUST_CLIENT_DATE||new Intl.DateTimeFormat('en-CA',{timeZone:'America/Indianapolis'}).format(new Date()),captured_at:new Date().toISOString(),url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,plainLanguageTagSummaries:20,visibleValidationStatus:20,compactDisclosures:true,perTagUseInstructions:20,workingTagSetupGuides:2,selfHostedFont:true,completeDetailExport:true,themeSwitch:true,switchKeyboardSpace:true,crossTabThemeSync:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:32,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
-  fs.writeFileSync(process.env.AITRUST_SITE_REPORT||'runs/2026-10-08-site-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));await context.close();
+  writeReport(process.env.AITRUST_SITE_REPORT||'output/verification/site-verification.json',report);console.log(JSON.stringify(report));await context.close();
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

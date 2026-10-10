@@ -1,3 +1,4 @@
+const {writeReport}=require('./execution-report.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');
 (async()=>{
@@ -44,8 +45,8 @@ const {chromium}=require('playwright');
   assert.equal(await plain.locator('[data-tag-example]').count(),20);await nojs.close();
   assert.equal(errors.length,0,errors.join('; '));
   const report={captured_at:new Date().toISOString(),url:base,records,no_script_examples:20,viewport_width:390,physical_phone:false,human_usability_test:false,errors};
-  fs.writeFileSync(process.env.AITRUST_APPROACHABILITY_REPORT||'runs/2026-10-09-approachable-local.json',JSON.stringify(report,null,2)+'\n');
+  writeReport(process.env.AITRUST_APPROACHABILITY_REPORT||'output/verification/approachable-local.json',report);
   console.log(JSON.stringify({pass:true,records:records.length,static_parity:20,complete_exports:20,no_script_examples:20,nested_help_flows:20,left_aligned:20}));
- }catch(error){const diagnostics={captured_at:new Date().toISOString(),url:base,pass:false,failed_at_url:page.url(),error:error.message,page_errors:errors,transport,body_excerpt:(await page.locator('body').innerText().catch(()=>'' )).slice(0,1200)};fs.writeFileSync(process.env.AITRUST_APPROACHABILITY_REPORT||'runs/2026-10-09-approachable-local.json',JSON.stringify(diagnostics,null,2)+'\n');throw error;
+ }catch(error){const diagnostics={captured_at:new Date().toISOString(),url:base,pass:false,failed_at_url:page.url(),error:error.message,page_errors:errors,transport,body_excerpt:(await page.locator('body').innerText().catch(()=>'' )).slice(0,1200)};writeReport(process.env.AITRUST_APPROACHABILITY_REPORT||'output/verification/approachable-local.json',diagnostics);throw error;
  }finally{await context.close();await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

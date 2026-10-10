@@ -1,6 +1,7 @@
 """Publish method-bound development measurements, never independent validation."""
 import argparse
 import hashlib
+import importlib.util
 import json
 import sys
 from datetime import datetime, timezone
@@ -9,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'eval'))
 import harness
+from protocol.measurements import validate_timing
 
 
 def digest(path):
@@ -29,8 +31,19 @@ def build(regressions, device):
     method = digest(ROOT / 'services/evaluator/app.py')
     if report['method_sha256'] != method or report['independent_accuracy_evidence'] is not False:
         raise ValueError('Stale or misclassified regression evidence')
+    for key,name in [('normalization_sha256','normalization.py'),('normalization_data_sha256','unicode15-data.json'),('category_source_sha256','categories.py')]:
+        if report.get(key)!=digest(ROOT/'protocol'/name):raise ValueError('Stale normalization identity')
+    active=json.loads((ROOT/'eval/datasets/unsafe_code/manifest.json').read_text())['active']
+    spec=importlib.util.spec_from_file_location('measurement_provenance',ROOT/'scripts/verify-dataset-provenance.py')
+    provenance_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(provenance_module)
+    current_provenance=provenance_module.verify()
+    for key in ('pass','examples','active_examples','historical_examples','manifest_sha256','provenance_sha256','independent_accuracy_evidence'):
+        if report.get('provenance',{}).get(key)!=current_provenance[key]:raise ValueError('Stale or invalid example provenance')
+    if report.get('category_version')!=harness.CATEGORY_VERSION:raise ValueError('Stale category version')
+    names=[r['file'] for r in report['datasets']]
+    if len(names)!=len(set(names)) or set(names)!={r['file'] for r in active}:raise ValueError('Missing or duplicate active measurements')
     counts = dict.fromkeys(('tp','fp','fn','tn'), 0)
-    fixtures = []
+    fixtures = [];categories=[]
     for row in report['datasets']:
         name = row['file']
         if Path(name).name != name:
@@ -38,6 +51,10 @@ def build(regressions, device):
         path = ROOT / 'eval/datasets/unsafe_code' / name
         if digest(path) != row['sha256']:
             raise ValueError('Fixture changed since measured run')
+        recomputed=harness.evaluate_fixtures(path)['PS']
+        for key in ('tp','fp','fn','tn','category_failures','category_metrics'):
+            if row.get(key)!=recomputed[key]:raise ValueError('Published count/category differs from source recomputation')
+        categories.extend({'source_dataset':name,'category':category,**metrics} for category,metrics in recomputed['category_metrics'].items())
         for key in counts:
             if type(row[key]) is not int or row[key] < 0:
                 raise ValueError('Invalid counts')
@@ -59,11 +76,16 @@ def build(regressions, device):
     mobile=json.loads(device.read_text())
     mobile_method=mobile.get('method_sha256')
     # Legacy engine reports predate explicit method attribution; do not reuse them as current measurements.
-    engines=mobile['engines'] if mobile.get('pass') and mobile_method==method else []
+    reference=json.loads((ROOT/'docs/device-build-reference.json').read_text())
+    engines=mobile['engines'] if mobile.get('pass') and mobile_method==method and mobile.get('bundle_sha256')==reference['bundle_sha256'] and mobile.get('normalization_data_sha256')==reference['normalization_data_sha256'] and all(isinstance(e.get('timing',{}).get('samples'),list) for e in mobile.get('engines',[])) else []
+    for engine in engines:validate_timing(engine['timing'],engine['case_count'])
     return {'format':'ai-trust-id-performance-evidence/v1',
         'captured_at':datetime.now(timezone.utc).isoformat(),
         'kind':'development_regression','independently_labeled':False,'release_validated':False,
-        'method_sha256':method,'gates_sha256':digest(ROOT/'eval/gates.yaml'),
+        'method_sha256':method,'gates_sha256':digest(ROOT/'eval/gates.yaml'),'measurement_source_sha256':digest(ROOT/'eval/harness.py'),'timing_source_sha256':digest(ROOT/'protocol/measurements.py'),
+        'category_version':report['category_version'],'category_source_sha256':report['category_source_sha256'],
+        'category_metrics':categories,'provenance':report['provenance'],
+        'normalization_sha256':report['normalization_sha256'],'normalization_data_sha256':report['normalization_data_sha256'],
         'fixtures':fixtures,'case_count':report['case_count'],'counts':counts,'metrics':metrics,
         'confidence':confidence,'interval_method':'wilson',
         'evidence':[str(regressions.relative_to(ROOT)),str(device.relative_to(ROOT))],
@@ -78,8 +100,8 @@ def build(regressions, device):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--regressions',type=Path,default=ROOT/'runs/2026-10-09-performance-regressions.json')
-    parser.add_argument('--device',type=Path,default=ROOT/'runs/2026-10-09-performance-device-local.json')
+    parser.add_argument('--regressions',type=Path,default=ROOT/'eval/regression-report.json')
+    parser.add_argument('--device',type=Path,default=ROOT/'output/verification/handheld-checks.json')
     parser.add_argument('--output',type=Path,default=ROOT/'eval/tag-performance-evidence.json')
     args=parser.parse_args()
     result=build(args.regressions.resolve(), args.device.resolve())

@@ -2,20 +2,21 @@
 
 - **Author:** Michael Raashad McGuire (knwvmbrr)
 - **Date:** 2026-10-06
-- **Status:** draft
+- **Status:** draft; proposed signals, no implemented behavioral capture or provenance-tag issuance
 - **Affects:** signals, spec, governance
 
 ## Summary
 
-`FA` and `PA` carry the two highest confidence floors in the taxonomy (0.95, 0.85) and are the
-only tags whose detection basis is provenance rather than content. Neither has a registered
-signal. This RFC registers six, and establishes the rule that separates them from the content
-tags: **we do not infer authorship from the artifact. We witness it at the capture point, or we
-return `UNK`.**
+FA and PA are preserved provenance-tag types. This draft proposes bounded
+composition observations; it does not register conformant detectors, validate
+confidence floors or enable runtime capture. Observing an input event is different
+from establishing who caused it. Missing observations must remain unknown and
+must never become an AI-origin accusation.
 
-The inversion is the point. "Is this AI?" is an unbounded negative claim about a string of
-bytes. "Was a human present while this was composed?" is a positive claim about an observable
-event. We detect the second and report the first only as its complement.
+The design adds evidence about the creation process alongside other source
+families. Each family still needs its own job, falsifiable measurements,
+assistive-input safeguards and challenge path. No one signal supplies the
+conclusion for every tag.
 
 ## Motivation
 
@@ -36,16 +37,16 @@ keyboard.
 
 ## Detection basis
 
-Signals are computed **in the content script, in the page, on the user's machine.** Raw event
-streams never cross a process boundary. Only derived scalars reach the gateway.
+Signals are computed **in the content script, in the page, on the user's machine.** The proposed capture contract would retain raw events only within a bounded local
+window. No event capture or scalar forwarding is currently implemented.
 
-### Registered signals
+### Proposed signals
 
 | ID | Feeds | Method |
 |---|---|---|
 | `sig.keystroke_liveness.v1` | PA | Dwell time (keydown→keyup) and flight time (keyup→next keydown) distributions. Humans produce heavy-tailed, context-dependent intervals; synthetic injection produces low-variance or templated ones. Reports a scalar in [0,1]. **Never a per-person template.** |
-| `sig.revision_churn.v1` | PA | Ratio of deleted-and-rewritten characters to final length, plus count of non-adjacent edit positions. Generation is monotonic and forward. Composition is not. |
-| `sig.compose_monotonicity.v1` | PA | Caret-position entropy over the composition window. A caret that only advances indicates insertion rather than authorship. |
+| `sig.revision_churn.v1` | PA | Ratio of deleted-and-rewritten characters to final length, plus count of non-adjacent edit positions. Humans and automated tools can both revise or proceed monotonically. This statistic does not establish origin. |
+| `sig.compose_monotonicity.v1` | PA | Caret-position entropy over the composition window. Caret motion is an observation, not an authorship verdict. |
 | `sig.paste_burst.v1` | FA | Insertion of ≥N characters in a single event with no preceding keystroke activity in the target field. Evidence of insertion, not of origin. |
 | `sig.c2pa_manifest.v1` | FA | Parses an attached C2PA manifest and reports its assertions. Trust is inherited from the manifest's signer, never asserted by us. |
 | `sig.assistive_input.v1` | *routing* | Detects switch access, voice dictation, on-screen keyboard, eye-tracking and IME composition events. **Suppresses the timing signals; it does not score.** See Accessibility. |
@@ -59,28 +60,17 @@ we witnessed.
 
 ## Privacy
 
-Keystroke dynamics are biometric data. Under Illinois BIPA, Texas CUBI, Washington's HB 1493
-and GDPR Article 9, collecting a biometric **identifier** triggers written-consent, retention
-and private-right-of-action obligations. BIPA in particular carries statutory damages per
-violation and no requirement to show harm.
+This draft makes no exemption claim under biometric or privacy law. Legal
+classification, consent and retention requirements need qualified,
+jurisdiction-specific review before behavioral capture can be piloted. Derived
+scalars and ephemeral processing do not establish anonymity or compliance.
+F-148 remains open; no behavioral capture is implemented in the current extension.
 
-These statutes attach to the **data subject's** location, not the implementer's. Any
-deployment with a single user in a covered jurisdiction is in scope regardless of where the
-project is maintained. An implementation that never derives an identifier is out of scope
-everywhere, which is why the constraint below is architectural and not a policy promise.
-
-The architecture avoids this entirely by making a weaker claim than fraud-detection systems do:
-
-> Fraud detection asks **who** is typing. We ask only **whether anyone is.**
-
-- No per-person template is computed, stored, or compared. Nothing supports re-identification.
-- The raw event stream lives in a bounded ring buffer in the content script and is discarded
-  when the composition window closes. It is never written to disk, never sent to the gateway,
-  never logged.
-- What leaves the page is a scalar and a span set. `{"id":"sig.keystroke_liveness.v1",
-  "score":0.88,"spans":[[0,412]]}` — the same shape every other signal emits.
-- Default is **off.** Behavioral capture requires explicit per-origin opt-in, surfaced in plain
-  language, revocable, and recorded in the assertion so a reader knows it was active.
+Proposed safeguards require explicit per-origin opt-in, pause, reset and deletion,
+bounded local processing and suppression of timing under assistive input. Raw event
+streams, per-person templates and identity profiles must not be written or forwarded.
+These are future requirements, not executed protections. Their complete data flow
+and correlation risks must be tested before any feature is enabled.
 
 This extends Threat #7 (*registry becomes a surveillance log*) rather than contradicting it. A
 system built to defend people must not become the most invasive thing on their machine.
@@ -104,18 +94,18 @@ Controls:
 
 1. `sig.assistive_input.v1` runs **first**. When assistive input is detected, the timing signals
    are suppressed entirely — not down-weighted. They do not contribute, in either direction.
-2. The composition then routes to `IV`, the human-attestation path, which was already
-   human-only by design.
+2. Suppression returns insufficient-evidence status. It must never assign `IV` or
+   any provenance tag; IV requires a separate independently accountable human workflow.
 3. `ACCESSIBILITY.md` gains a conformance test: a composition produced via dictation and one
    produced via switch access must never receive a lower human-authorship score than one typed
    by hand. This runs in CI alongside the axe gates.
 
 ## Dataset
 
-Behavioral ground truth is **instrumented, not annotated.** The capture point records what
-occurred, so there is no annotator disagreement to measure — the event either happened or it
-did not. This removes the Krippendorff constraint that gates `MT`, and it is the reason these
-floors can sit high.
+Instrumentation can record observed events but cannot determine who or what
+caused them. Ground truth and the mapping to provenance claims require independent
+validation, adversarial replay tests and accessibility review. No floor is supported
+by instrumentation alone; proposed numeric values below are not accepted gates.
 
 What still requires validation is the mapping from signal to tag. Proposed fixture families
 under `eval/datasets/provenance/`:
@@ -149,8 +139,8 @@ Cadence can be replayed. A recorded human stream can be played back to synthesiz
 the `replayed/` split exists to measure exactly how well we resist it.
 
 We do not claim this is unforgeable. The claim is the standard IDS bargain: **raise the cost of
-evasion, and be honest about the residual.** Forging per-field composition behavior in real
-time, per target, at scale is meaningfully more expensive than regenerating text. That is the
+evasion, and be honest about the residual.** The cost of forging per-field composition behavior is unmeasured; no superiority
+or meaningful increase in attacker effort has been demonstrated. That is the
 whole margin, and overstating it would be the first dishonest thing in this specification.
 
 ## Scope

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-123506-observable-device-timings-7cd31d21",
+  "recorded_at": "2026-10-10T12:35:06.865579+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
+  "changed": "Require raw per-case timing observations and per-input category quantiles before reusing an engine report.",
+  "proves": "Old reports without observations display unmeasured device timing; a fresh engine run is required.",
+  "limits": "Environment-specific performance observations, no hardware SLA or independent accuracy.",
+  "scope_ids": [
+    "F-107",
+    "F-118"
+  ],
+  "files": {
+    "scripts/verify-device.cjs": "ab607a99d5c0916eb140f238cba811a6c3d7de0e8666583c83de21a051ceccd7",
+    "scripts/build-tag-performance.py": "f0cfa73168da033691be77a8f63d6c30ab834535591f570a1efb1451843a73e4",
+    "site/src/performance-model.js": "de46fee09aa03a4b57d2d6d2b36427ba5caff2bea2a8546bc5f5a86c4393a2ea",
+    "eval/tag-performance-evidence.json": "20a47b12402251d8355f39101952db3aea3aad821055fc3885bae9f5682c6f1f",
+    "tests/test_tag_performance.py": "b839d4b901f72aee6ebd5f281ac4f56b8ed0430b3618a162e5255f31b3049c6b"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_tag_performance.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T12:35:07.684140+00:00"
+    }
+  ]
+}

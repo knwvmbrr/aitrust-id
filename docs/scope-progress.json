@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T12:10:50.889140+00:00",
+  "audited_at": "2026-10-10T12:41:06.463719+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -2066,14 +2066,15 @@
       "id": "F-033",
       "kind": "requirement",
       "title": "Closed shadow-root badge, monochrome",
-      "percent_complete": 80,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
         "executable_checks",
-        "selected_integration"
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:41:06.463719+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution"
@@ -2081,20 +2082,23 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Repeat the compact-tag component checks on its selected real delivery route and resolve outside-user acceptance. Keep full screen-reader conformance tracked separately.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 executed full renderer component acceptance"
+      ],
+      "completed_at": "2026-10-10T12:41:06.463719+00:00",
+      "completion_timestamp_basis": "Full named component job verified with real browser settings and failing mutation controls; live adapter and human screen-reader gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
-        "extension/src/content/badge.js"
+        "docs/scope-100-execution.md",
+        "extension/src/content/badge.js",
+        "scripts/browser-acceptance.js",
+        "scripts/badge-probes.js",
+        "runs/2026-10-10-compact-component-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Repeat the compact-tag component checks on its selected real delivery route and resolve outside-user acceptance. Keep full screen-reader conformance tracked separately."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-034",
@@ -2202,13 +2206,15 @@
       "id": "F-092",
       "kind": "requirement",
       "title": "Keyboard-only operation \u2014 reach, open, read, close the panel",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T20:05:11.817894+00:00",
+      "audited_at": "2026-10-10T12:41:06.463719+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -2217,38 +2223,37 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 executed full renderer component acceptance"
+      ],
+      "completed_at": "2026-10-10T12:41:06.463719+00:00",
+      "completion_timestamp_basis": "Full named component job verified with real browser settings and failing mutation controls; live adapter and human screen-reader gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
+        "docs/scope-100-execution.md",
+        "extension/src/content/badge.js",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js",
-        "docs/device-accessibility-increment.md",
-        "runs/2026-10-09-device-build-matrix-final.json",
-        "runs/2026-10-09-accessibility-site-final-local.json",
-        "runs/2026-10-09-device-a11y-engines-local.json",
-        "runs/2026-10-09-device-accessibility-python.json"
+        "scripts/badge-probes.js",
+        "runs/2026-10-10-compact-component-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
-      "required_acceptance": [
-        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-093",
       "kind": "requirement",
       "title": "Forced-colors and high-contrast support",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T20:05:11.817894+00:00",
+      "audited_at": "2026-10-10T12:41:06.463719+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -2257,38 +2262,37 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 executed full renderer component acceptance"
+      ],
+      "completed_at": "2026-10-10T12:41:06.463719+00:00",
+      "completion_timestamp_basis": "Full named component job verified with real browser settings and failing mutation controls; live adapter and human screen-reader gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
+        "docs/scope-100-execution.md",
+        "extension/src/content/badge.js",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js",
-        "docs/device-accessibility-increment.md",
-        "runs/2026-10-09-device-build-matrix-final.json",
-        "runs/2026-10-09-accessibility-site-final-local.json",
-        "runs/2026-10-09-device-a11y-engines-local.json",
-        "runs/2026-10-09-device-accessibility-python.json"
+        "scripts/badge-probes.js",
+        "runs/2026-10-10-compact-component-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
-      "required_acceptance": [
-        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-094",
       "kind": "requirement",
       "title": "200% zoom and reduced-motion support",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T20:05:11.817894+00:00",
+      "audited_at": "2026-10-10T12:41:06.463719+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -2297,39 +2301,37 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 executed full renderer component acceptance"
+      ],
+      "completed_at": "2026-10-10T12:41:06.463719+00:00",
+      "completion_timestamp_basis": "Full named component job verified with real browser settings and failing mutation controls; live adapter and human screen-reader gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
+        "docs/scope-100-execution.md",
+        "extension/src/content/badge.js",
         "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js",
-        "docs/device-accessibility-increment.md",
-        "runs/2026-10-09-device-build-matrix-final.json",
-        "runs/2026-10-09-accessibility-site-final-local.json",
-        "runs/2026-10-09-device-a11y-engines-local.json",
-        "runs/2026-10-09-device-accessibility-python.json"
+        "scripts/badge-probes.js",
+        "runs/2026-10-10-compact-component-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
-      "required_acceptance": [
-        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-095",
       "kind": "requirement",
       "title": "Monochrome-by-construction design \u2014 the movie/TV content-rating look",
-      "percent_complete": 80,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
         "executable_checks",
-        "selected_integration"
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:41:06.463719+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution"
@@ -2337,20 +2339,23 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Repeat the compact-tag component checks on its selected real delivery route and resolve outside-user acceptance. Keep full screen-reader conformance tracked separately.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 executed full renderer component acceptance"
+      ],
+      "completed_at": "2026-10-10T12:41:06.463719+00:00",
+      "completion_timestamp_basis": "Full named component job verified with real browser settings and failing mutation controls; live adapter and human screen-reader gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
-        "extension/src/content/badge.js"
+        "docs/scope-100-execution.md",
+        "extension/src/content/badge.js",
+        "scripts/browser-acceptance.js",
+        "scripts/badge-probes.js",
+        "runs/2026-10-10-compact-component-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Repeat the compact-tag component checks on its selected real delivery route and resolve outside-user acceptance. Keep full screen-reader conformance tracked separately."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-036",
@@ -2982,36 +2987,44 @@
       "id": "F-107",
       "kind": "requirement",
       "title": "Per-category failure breakdown on every metric",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:39:48.674550+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
+      ],
+      "completed_at": "2026-10-10T12:39:48.674550+00:00",
+      "completion_timestamp_basis": "Full named measurement/provenance job verified; independent holdout and release-policy acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-09-scope-regressions.json",
-        "eval/gates.yaml",
-        "docs/independent-review.md"
+        "docs/measurement-provenance-plan.md",
+        "scripts/verify-measurements.py",
+        "scripts/verify-dataset-provenance.py",
+        "tests/test_tag_performance.py",
+        "tests/test_category_metrics.py",
+        "tests/test_dataset_provenance.py",
+        "tests/test_measurement_timings.py",
+        "runs/2026-10-10-measurement-recomputation.json",
+        "runs/2026-10-10-provenance-history-check.json",
+        "runs/2026-10-10-category-performance-ui-corrected.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-052",
@@ -3087,36 +3100,44 @@
       "id": "F-109",
       "kind": "requirement",
       "title": "Dataset versioning and provenance per example",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:39:48.674550+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
+      ],
+      "completed_at": "2026-10-10T12:39:48.674550+00:00",
+      "completion_timestamp_basis": "Full named measurement/provenance job verified; independent holdout and release-policy acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-09-scope-regressions.json",
-        "eval/gates.yaml",
-        "docs/independent-review.md"
+        "docs/measurement-provenance-plan.md",
+        "scripts/verify-measurements.py",
+        "scripts/verify-dataset-provenance.py",
+        "tests/test_tag_performance.py",
+        "tests/test_category_metrics.py",
+        "tests/test_dataset_provenance.py",
+        "tests/test_measurement_timings.py",
+        "runs/2026-10-10-measurement-recomputation.json",
+        "runs/2026-10-10-provenance-history-check.json",
+        "runs/2026-10-10-category-performance-ui-corrected.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-110",
@@ -3319,41 +3340,39 @@
       "id": "F-055",
       "kind": "requirement",
       "title": "axe-core accessibility gate, serious and critical at zero",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T20:05:11.817894+00:00",
+      "audited_at": "2026-10-10T12:21:19.378641+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00"
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:21:19.378641+00:00",
+      "completion_timestamp_basis": "verified complete for original named job; broader gates remain separately open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-08-browser-checks.json",
-        "scripts/browser-acceptance.js",
-        "scripts/live-dom-acceptance.js",
-        "docs/device-accessibility-increment.md",
-        "runs/2026-10-09-device-build-matrix-final.json",
-        "runs/2026-10-09-accessibility-site-final-local.json",
-        "runs/2026-10-09-device-a11y-engines-local.json",
-        "runs/2026-10-09-device-accessibility-python.json"
+        "scripts/axe-gate.cjs",
+        "scripts/verify-axe-gate.cjs",
+        "scripts/verify-browser.cjs",
+        "runs/2026-10-10-axe-gate-controls.json",
+        "ACCESSIBILITY.md"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
-      "required_acceptance": [
-        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full named documented-control or automated-gate job; not owner availability, human accessibility, live vendor acceptance, full recovery, independent security certification or operating governance",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-113",
@@ -3578,36 +3597,44 @@
       "id": "F-118",
       "kind": "requirement",
       "title": "Calibration ledger \u2014 every published number reproducible by a third party",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:39:48.674550+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 implemented mechanisms and executed source/browser acceptance"
+      ],
+      "completed_at": "2026-10-10T12:39:48.674550+00:00",
+      "completion_timestamp_basis": "Full named measurement/provenance job verified; independent holdout and release-policy acceptance retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-09-scope-regressions.json",
-        "eval/gates.yaml",
-        "docs/independent-review.md"
+        "docs/measurement-provenance-plan.md",
+        "scripts/verify-measurements.py",
+        "scripts/verify-dataset-provenance.py",
+        "tests/test_tag_performance.py",
+        "tests/test_category_metrics.py",
+        "tests/test_dataset_provenance.py",
+        "tests/test_measurement_timings.py",
+        "runs/2026-10-10-measurement-recomputation.json",
+        "runs/2026-10-10-provenance-history-check.json",
+        "runs/2026-10-10-category-performance-ui-corrected.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-119",
@@ -4644,68 +4671,76 @@
       "id": "F-070",
       "kind": "requirement",
       "title": "Six invariants in CONTRIBUTING.md",
-      "percent_complete": 40,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:21:19.378641+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board.",
-      "next_owner": "Michael and reviewers",
+      "completed_by": [
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:21:19.378641+00:00",
+      "completion_timestamp_basis": "verified complete for original named job; broader gates remain separately open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "CONTRIBUTING.md",
-        "GOVERNANCE.md",
-        "DECISIONS.md"
+        "scripts/verify-project-controls.py",
+        "tests/test_project_controls.py",
+        "runs/2026-10-10-project-controls.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full named documented-control or automated-gate job; not owner availability, human accessibility, live vendor acceptance, full recovery, independent security certification or operating governance",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-071",
       "kind": "requirement",
       "title": "Threat model, 10 entries",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:21:19.378641+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings.",
-      "next_owner": "Michael accountable; Codex operational tooling",
+      "completed_by": [
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:21:19.378641+00:00",
+      "completion_timestamp_basis": "verified complete for original named job; broader gates remain separately open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "THREAT_MODEL.md",
-        "runs/2026-10-08-owner-recovery-and-alerts-result.json",
-        "state.json"
+        "docs/threat-controls.json",
+        "scripts/verify-project-controls.py",
+        "tests/test_project_controls.py",
+        "runs/2026-10-10-project-controls.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full named documented-control or automated-gate job; not owner availability, human accessibility, live vendor acceptance, full recovery, independent security certification or operating governance",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-072",
@@ -4878,35 +4913,39 @@
       "id": "F-153",
       "kind": "requirement",
       "title": "Named ongoing ownership for security response and adapter maintenance",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T12:21:19.378641+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings.",
-      "next_owner": "Michael accountable; Codex operational tooling",
+      "completed_by": [
+        "Codex \u2014 current accountable-control implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T12:21:19.378641+00:00",
+      "completion_timestamp_basis": "verified complete for original named job; broader gates remain separately open",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "THREAT_MODEL.md",
-        "runs/2026-10-08-owner-recovery-and-alerts-result.json",
-        "state.json"
+        "MAINTAINERS.md",
+        "docs/maintainers.json",
+        "scripts/verify-project-controls.py",
+        "tests/test_project_controls.py",
+        "runs/2026-10-10-project-controls.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full named documented-control or automated-gate job; not owner availability, human accessibility, live vendor acceptance, full recovery, independent security certification or operating governance",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-060",

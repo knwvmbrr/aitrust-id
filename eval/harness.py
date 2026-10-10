@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import json
 import math
+import re
 import sys
 from pathlib import Path
 from statistics import NormalDist
@@ -13,6 +14,9 @@ from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from protocol.normalization import normalize_nfc, NORMALIZATION_ID
+from protocol.categories import category_for_text, CATEGORY_VERSION
 
 class UniqueLoader(yaml.SafeLoader):
     pass
@@ -46,7 +50,7 @@ def wilson(successes, total, confidence=0.95):
     denominator = 1 + z*z/total
     center = (p + z*z/(2*total)) / denominator
     radius = z*math.sqrt(p*(1-p)/total + z*z/(4*total*total))/denominator
-    return [center-radius, min(1.0, center+radius)]
+    return [max(0.0, center-radius), min(1.0, center+radius)]
 
 def ece(pairs, bins=10):
     if not pairs:
@@ -60,23 +64,37 @@ def ece(pairs, bins=10):
         groups[min(int(confidence*bins), bins-1)].append((confidence, correct))
     return sum(len(g)/len(pairs)*abs(sum(y for _,y in g)/len(g)-sum(c for c,_ in g)/len(g)) for g in groups if g)
 
+def category_metrics(counts,confidence=.95):
+    if set(counts)!={'tp','fp','fn','tn'} or any(type(v)is not int or v<0 for v in counts.values()):raise ValueError('Invalid category counts')
+    results={**counts,'n':sum(counts.values())}
+    for name,success,total in [('precision',counts['tp'],counts['tp']+counts['fp']),('recall',counts['tp'],counts['tp']+counts['fn']),('false_positive_rate',counts['fp'],counts['fp']+counts['tn']),('false_negative_rate',counts['fn'],counts['tp']+counts['fn'])]:
+        results[name]={'successes':success,'denominator':total,'point':success/total if total else None,'interval':wilson(success,total,confidence)}
+    results['calibration']={'ece':None,'observations':0,'reason':'Calibration evidence is separate; heuristic scores are not probabilities'}
+    return results
+
 def evaluate_fixtures(path):
     spec = importlib.util.spec_from_file_location('fixture_evaluator', ROOT/'services/evaluator/app.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     counts = dict(tp=0, fp=0, fn=0, tn=0)
-    failures = []
+    failures = [];categories={}
+    if Path(path).stat().st_size>16_000_000:raise ValueError('Oversized fixture file')
     raw = Path(path).read_bytes()
     for index, line in enumerate(raw.decode().splitlines(), 1):
         row = json.loads(line)
+        if not isinstance(row,dict) or not isinstance(row.get('text'),str) or len(row['text'])>200_000 or not isinstance(row.get('labels'),list) or any(x!='PS' for x in row['labels']) or len(set(row['labels']))!=len(row['labels']):raise ValueError('Invalid fixture at line '+str(index))
+        category=row.get('category',category_for_text(row['text']))
+        if not isinstance(category,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,80}',category):raise ValueError('Invalid fixture category at line '+str(index))
         actual = 'PS' in row['labels']
-        predicted = any(c['code']=='PS' for c in module.signals(module.Doc(text=row['text']))['candidates'])
-        counts['tp' if actual and predicted else 'fn' if actual else 'fp' if predicted else 'tn'] += 1
+        predicted = any(c['code']=='PS' for c in module.signals(module.Doc(text=normalize_nfc(row['text'])))['candidates'])
+        key='tp' if actual and predicted else 'fn' if actual else 'fp' if predicted else 'tn'
+        counts[key] += 1
+        categories.setdefault(category,dict(tp=0,fp=0,fn=0,tn=0))[key]+=1
         if actual != predicted:
-            failures.append({'line':index, 'category':row.get('category','uncategorized'), 'error':'fn' if actual else 'fp'})
+            failures.append({'line':index, 'category':category, 'error':'fn' if actual else 'fp'})
     if not sum(counts.values()):
         raise ValueError('empty fixture set')
-    return {'PS':{**counts,'category_failures':failures},'dataset':{'sha256':hashlib.sha256(raw).hexdigest(),'kind':'regression','independently_labeled':False,'method_fixed_before_run':False}}
+    return {'PS':{**counts,'category_failures':failures,'category_metrics':{key:category_metrics(value) for key,value in sorted(categories.items())}},'dataset':{'sha256':hashlib.sha256(raw).hexdigest(),'kind':'regression','independently_labeled':False,'method_fixed_before_run':False,'normalization_id':NORMALIZATION_ID,'category_version':CATEGORY_VERSION}}
 
 def assess(config, report):
     failures = []
