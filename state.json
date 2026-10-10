@@ -17,7 +17,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 874,
+  "python_tests_passed": 902,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -331,7 +331,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "813 tests passed on Python 3.12.14 for this snapshot; engineering checks, not independent tag accuracy. Evidence: runs/2026-10-10-capture-assessment-python.json.",
+  "python_tests_scope": "902 Python tests passed for registry deferral snapshot; engineering acceptance, not independent tag accuracy.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -699,30 +699,30 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T16:35:01.916924+00:00",
-    "completed_records": 102,
-    "open_records": 100,
+    "audited_at": "2026-10-10T17:50:20.129438+00:00",
+    "completed_records": 103,
+    "open_records": 99,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-10-offline-final-controls.json",
-    "structural_evidence": "runs/2026-10-10-target-100-scope.json",
+    "execution_evidence": "runs/2026-10-10-registry-deferral-linux-corrected.json",
+    "structural_evidence": "runs/2026-10-10-registry-deferral-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-10-target-100-deployment.json",
     "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/offline-component-result.md",
+    "latest_increment": "docs/registry-deferral-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
-    "target_open_records": 100,
-    "target_start_open_records": 187,
-    "target_remaining_closures": 0,
-    "publication_pending": false,
-    "verification": "runs/2026-10-10-target-100-scope.json"
+    "target_open_records": 50,
+    "target_start_open_records": 100,
+    "target_remaining_closures": 49,
+    "publication_pending": true,
+    "verification": "runs/2026-10-10-registry-deferral-scope.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -933,9 +933,9 @@
   "personal_route_boundaries": {
     "status": "current_source_and_publication_checks_pass",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-10-target-100-final-reviewed-boundaries.json",
-    "source_files": 119,
-    "controls_and_ci_contract_tests": 29,
+    "evidence": "runs/2026-10-10-registry-deferral-final-boundaries.json",
+    "source_files": 125,
+    "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
       "X-03",
@@ -943,6 +943,7 @@
       "X-06",
       "X-08",
       "X-12",
+      "X-14",
       "X-15",
       "N-007",
       "N-008"
@@ -996,11 +997,11 @@
     "PII_REDACTED": "runs/2026-10-10-owner-pilot-PII-revalidation.json",
     "protocol": "runs/2026-10-10-owner-pilot-protocol-revalidation.json",
     "extension": "runs/2026-10-10-owner-pilot-extension-revalidation.json",
-    "website": "runs/2026-10-10-owner-pilot-website-final.json",
+    "website": "runs/2026-10-10-registry-deferral-website-final.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T17:39:10.950818+00:00",
+  "updated_at": "2026-10-10T17:50:20.129438+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1029,5 +1030,17 @@
     "formation_complete": false,
     "publication_verified": true,
     "public_register": "https://aitrustid.com/reference/legal-drafts/"
+  },
+  "registry_deferral": {
+    "status": "full_named_deferral_acceptance_verified_publication_pending",
+    "record": "X-14",
+    "operating_registry": false,
+    "prototype_retained": true,
+    "synthetic_data_only": true,
+    "local_docker_started": false,
+    "linux_execution": "runs/2026-10-10-registry-deferral-linux-corrected.json",
+    "regression_checks": 57,
+    "future_research_intake_enabled": false,
+    "publication_pending": true
   }
 }

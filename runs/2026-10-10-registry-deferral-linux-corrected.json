@@ -1,0 +1,64 @@
+{
+  "captured_at": "2026-10-10T17:48:56.682328+00:00",
+  "pass": true,
+  "engine": "podman version 5.4.2",
+  "sources": {
+    "services/registry/Dockerfile": "3740a0f3a560cadc096e36e258ba02d7aeb302422a1cc6120ffab2f04f489d3e",
+    "services/registry/deferred.py": "a700c02e4c113a92c1e92ab053159df47afbf0953a1c76df6f2e94d4bfd78e10",
+    "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206"
+  },
+  "cases": [
+    {
+      "name": "default",
+      "exit_code": 64,
+      "fixed_output": true,
+      "data_unchanged": true,
+      "synthetic_mount_target": "/tmp",
+      "user": "10001:10001",
+      "read_only": true,
+      "network": "none",
+      "no_published_ports": true,
+      "not_running": true,
+      "memory_limit_bytes": 33554432,
+      "pid_limit": 16,
+      "runtime_file_deltas": [
+        "C /etc"
+      ]
+    },
+    {
+      "name": "unaccepted_future_version",
+      "exit_code": 64,
+      "fixed_output": true,
+      "data_unchanged": true,
+      "synthetic_mount_target": "/tmp",
+      "user": "10001:10001",
+      "read_only": true,
+      "network": "none",
+      "no_published_ports": true,
+      "not_running": true,
+      "memory_limit_bytes": 33554432,
+      "pid_limit": 16,
+      "runtime_file_deltas": [
+        "C /etc"
+      ]
+    }
+  ],
+  "runtime_identity": {
+    "uid": 10001,
+    "caps": {
+      "CapEff": 0,
+      "CapPrm": 0,
+      "CapBnd": 0
+    },
+    "no_new_privileges": 1
+  },
+  "synthetic_data_only": true,
+  "registry_activated": false,
+  "independent_accuracy_evidence": false,
+  "scope": "Actual pinned refusal image in disposable Linux Podman staging. No listener or application data writes; not future registry or research pipeline acceptance.",
+  "cleanup": {
+    "owned_containers_removed": 3,
+    "owned_image_absent": true,
+    "verified": true
+  }
+}

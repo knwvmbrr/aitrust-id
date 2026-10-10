@@ -1,10 +1,10 @@
-"""Telemetry dashboard. Stores hashes and tag codes. Never content."""
+"""Inactive, unvalidated registry prototype; not a released data collection path."""
 import sqlite3
 import streamlit as st
 
 st.set_page_config(page_title="AITrust-ID Registry", layout="wide")
 st.title("AITrust-ID Registry")
-st.caption("Hashes and tag codes only. No prompts, no outputs, no user identifiers.")
+st.caption("Experimental prototype. Hashes, origin hosts and timestamps may identify or link information.")
 
 db = sqlite3.connect("/data/registry.db", check_same_thread=False)
 db.execute("""CREATE TABLE IF NOT EXISTS assertions (
@@ -16,4 +16,4 @@ rows = db.execute("SELECT captured_at, origin_host, tags, latency_ms "
 if rows:
     st.dataframe(rows, use_container_width=True)
 else:
-    st.info("No assertions recorded yet. Retention default is 30 days.")
+    st.info("No assertions recorded. Retention expiry is not implemented.")

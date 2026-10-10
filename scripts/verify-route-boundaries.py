@@ -22,10 +22,11 @@ PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'site/scripts/*', 'site/functions/**/*', 'site/public/*',
             'site/public/device/*', 'site/index.html', '.github/workflows/*',
             'deploy/docker-compose.yml', 'package.json', 'site/package.json',
-            'scripts/verify-route-boundaries.py', 'scripts/verify-route-boundaries.cjs')
+            'scripts/verify-route-boundaries.py', 'scripts/verify-route-boundaries.cjs',
+            'scripts/verify-registry-deferral.py', 'tests/test_registry_deferral.py')
 PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
-RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-15', 'N-007', 'N-008')
+RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx',
                   'site/src/share-record.js', 'protocol/normalization.mjs',
@@ -107,6 +108,62 @@ def routes(root, relative):
     return sorted(result)
 
 
+def registry_boundary(value):
+    expected = {'profiles': ['registry'], 'build': '../services/registry',
+                'network_mode': 'none', 'read_only': True, 'cap_drop': ['ALL'],
+                'security_opt': ['no-new-privileges:true'], 'pids_limit': 16,
+                'mem_limit': '32m', 'restart': 'no'}
+    if value != expected:
+        raise ValueError('Deferred registry activation or persistence changed')
+
+
+def registry_image_boundary(root=ROOT):
+    # Bind the reviewed refusal launcher independently of a new source inventory.
+    # A future operational registry requires explicit policy/code review.
+    expected_launcher = 'a700c02e4c113a92c1e92ab053159df47afbf0953a1c76df6f2e94d4bfd78e10'
+    if hashlib.sha256((root/'services/registry/deferred.py').read_bytes()).hexdigest() != expected_launcher:
+        raise ValueError('Deferred registry launcher changed')
+    lines = (root/'services/registry/Dockerfile').read_text().strip().splitlines()
+    if lines != [
+        'FROM python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1',
+        'WORKDIR /app', 'COPY --chmod=0444 deferred.py .',
+        'ENV PYTHONDONTWRITEBYTECODE=1', 'USER 10001:10001',
+        'CMD ["python", "deferred.py"]']:
+        raise ValueError('Deferred registry image activates unreviewed code')
+
+
+
+def registry_evidence(relative, root=ROOT):
+    if not isinstance(relative, str) or not re.fullmatch(r'runs/[a-z0-9-]+\.json', relative):
+        raise ValueError('Invalid registry evidence path')
+    report = read_json(root / relative)
+    names = ['services/registry/Dockerfile', 'services/registry/deferred.py',
+             'scripts/verify-registry-deferral.py']
+    expected = {n: hashlib.sha256((root/n).read_bytes()).hexdigest() for n in names}
+    if (report.get('pass') is not True or report.get('sources') != expected
+            or report.get('registry_activated') is not False
+            or report.get('synthetic_data_only') is not True
+            or report.get('independent_accuracy_evidence') is not False):
+        raise ValueError('Missing or stale registry execution')
+    identity = {'uid': 10001, 'caps': {'CapEff': 0, 'CapPrm': 0, 'CapBnd': 0},
+                'no_new_privileges': 1}
+    if report.get('runtime_identity') != identity or report.get('cleanup') != {
+            'owned_containers_removed': 3, 'owned_image_absent': True, 'verified': True}:
+        raise ValueError('Registry sandbox or staging cleanup failed')
+    cases = report.get('cases', [])
+    if len(cases) != 2 or {x.get('name') for x in cases} != {'default', 'unaccepted_future_version'}:
+        raise ValueError('Missing registry refusal cases')
+    for case in cases:
+        expected_case = {'exit_code': 64, 'fixed_output': True, 'data_unchanged': True,
+            'synthetic_mount_target': '/tmp', 'user': '10001:10001', 'read_only': True,
+            'network': 'none', 'no_published_ports': True, 'not_running': True,
+            'memory_limit_bytes': 33554432, 'pid_limit': 16}
+        if any(case.get(k) != v for k, v in expected_case.items()) or any(
+                line != 'C /etc' for line in case.get('runtime_file_deltas', ['missing'])):
+            raise ValueError('Registry refusal execution boundary failed')
+    return len(cases)
+
+
 def compose_boundary(value):
     services = value['services']
     active = {name for name, row in services.items() if not row.get('profiles')}
@@ -121,6 +178,9 @@ def compose_boundary(value):
         if (services[name].get('ports') or services[name].get('volumes')
                 or services[name].get('networks') != ['inspection']):
             raise ValueError('Private processor access boundary changed')
+    registry_boundary(services.get('registry'))
+    if value.get('volumes'):
+        raise ValueError('Initial release acquired persistent registry storage')
     return sorted(active)
 
 
@@ -147,7 +207,7 @@ def service_evidence(relative, root=ROOT):
 def evaluate(manifest, root=ROOT):
     fields = {'schema_version', 'wire_version', 'reviewed_at', 'reviewed_by', 'rules',
               'independent_release_approval', 'sources', 'engineering_receipts',
-              'device_evidence', 'service_evidence'}
+              'device_evidence', 'service_evidence', 'registry_evidence'}
     if (set(manifest) != fields or manifest.get('schema_version') != 1 or manifest.get('wire_version') != '0.1.0'
             or manifest.get('rules') != list(RULES)
             or manifest.get('independent_release_approval') is not False):
@@ -169,6 +229,7 @@ def evaluate(manifest, root=ROOT):
     if observed != expected:
         raise ValueError('Application endpoint surface changed')
     active = compose_boundary(yaml.safe_load((root / 'deploy/docker-compose.yml').read_text()))
+    registry_image_boundary(root)
     extension = read_json(root / 'extension/manifest.json')
     if (extension.get('permissions') != ['storage'] or extension.get('optional_permissions')
             or extension.get('host_permissions') != ['http://127.0.0.1:8787/*']
@@ -187,10 +248,12 @@ def evaluate(manifest, root=ROOT):
             raise ValueError('Missing or stale browser execution')
     engines = device_evidence(manifest.get('device_evidence', {}), root)
     service_cases = service_evidence(manifest.get('service_evidence'), root)
+    registry_cases = registry_evidence(manifest.get('registry_evidence'), root)
     return {'routes': observed, 'source_files': len(manifest['sources']),
             'browser_receipts_current': True, 'extension_access_unchanged': True,
             'committed_device_engine_evidence': engines, 'active_services': active,
-            'current_remote_service_cases': service_cases}
+            'current_remote_service_cases': service_cases, 'registry_0_1_deferred_enforced': True,
+            'actual_registry_refusal_cases': registry_cases}
 
 
 def intake_controls(root=ROOT):
@@ -238,7 +301,7 @@ def verify(root=ROOT):
             'independent_accuracy_evidence': False, 'release_approved': False,
             'scope': 'Reviewed current personal source/access/endpoint boundaries and source-bound browser checks. '
                      'Not a proof against host compromise, third-party collection, future changes or new organizational/research routes. '
-                     'Optional registry proposals and license clearance are outside this guard.'}
+                     'The deferred registry is refused by this release. Future research intake and license clearance remain separate.'}
 
 
 if __name__ == '__main__':

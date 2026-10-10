@@ -157,8 +157,9 @@ def test_device_collection_failure_refused(monkeypatch):
         guard.device_evidence(manifest()['device_evidence'])
 
 
-def test_experimental_registry_stays_outside_approval():
-    assert 'X-14' not in guard.RULES
+def test_registry_deferral_is_reviewed_without_approving_future_registry():
+    assert 'X-14' in guard.RULES
+    assert guard.verify()['registry_0_1_deferred_enforced']
 
 
 def test_optional_registry_cannot_become_default():

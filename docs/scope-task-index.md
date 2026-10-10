@@ -136,7 +136,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-138 | abuse@ and press@ | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-139 | Site accessibility held to the same gate as the extension | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-140 | Sanitised public roadmap — no personal execution material | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-141 | Pilot programme — small consenting group, feedback without collecting prompts or outputs | [WP-COMMUNITY](scope-delivery.md#wp-community) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-141 | Pilot programme — small consenting group, feedback without collecting prompts or outputs | [WP-COMMUNITY](scope-delivery.md#wp-community) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-142 | Install and removal instructions, reproducible | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-075 | Two-entity structure — independent foundation holds spec and mark; implementations compete on top | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-143 | Certification-mark ownership and filing work | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
@@ -180,7 +180,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-X-11 | Machine-assigned IV | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-12 | Mandatory receipts | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-13 | Signing in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-X-14 | The registry container in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-14 | The registry container in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-15 | Collecting prompts or outputs from pilot users | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-16 | "Outside knowledge proves human authorship" as an implementation requirement | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-019 | Legacy grouping for F-019a, F-019b, F-019c | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |

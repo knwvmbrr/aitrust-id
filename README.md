@@ -84,8 +84,10 @@ record download are inside the dialog. Matched positions are collapsed by defaul
 and testing information. No training database or automatic reporting is connected.
 
 Default deployment starts three containers: gateway, anonymizer, evaluator. The
-registry remains an inactive legacy proposal under an optional Compose profile.
-Its dependencies are not locked, so it is excluded from the selected preview's
+registry remains a deferred proposal. Its optional Compose profile is an explicit
+refusal launcher: it exits before network or storage starts. The inactive prototype
+is retained for inspection, with no implemented retention or intake.
+The preserved prototype’s dependencies are not locked, so it is excluded from the selected preview's
 verified dependency inventory. The gateway has an
 edge network for Docker Desktop loopback publishing; anonymizer and evaluator use
 only the internal inspection network. Redaction can miss sensitive information.

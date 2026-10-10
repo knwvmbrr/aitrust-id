@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-10T17:50:20.129438+00:00",
+  "pass": true,
+  "failed_attempts": [
+    "runs/2026-10-10-registry-deferral-linux.json",
+    "runs/2026-10-10-registry-deferral-linux-diagnosis.json",
+    "runs/2026-10-10-registry-deferral-linux-file-diagnosis.json"
+  ],
+  "error_signature": "Engine-created A /data mountpoint rejected as an application filesystem write",
+  "root_cause": "Verifier mounted synthetic data on a path absent from the base image. Podman created the mountpoint before executing the read-only application.",
+  "fix": "Mount the synthetic directory at existing /tmp; retain rejection of every application filesystem delta. Keep C /etc documented as engine-generated configuration. Verify source-bound runtime identity and cleanup.",
+  "corrected_execution": "runs/2026-10-10-registry-deferral-linux-corrected.json",
+  "additional_local_command_failure": "System Python lacked FastAPI; boundary command rerun successfully in the declared verification environment. No dependency or check was removed."
+}

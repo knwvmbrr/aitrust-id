@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-175052-registry-public-scope-snapshot-c16b223a",
+  "recorded_at": "2026-10-10T17:50:52.801792+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "683c0dfaa522dfa3fe9d3bb1385ef681a5d9a8eb",
+  "changed": "Regenerate public scope exports with the executed X-14 deferral acceptance; retain blocked first website check.",
+  "proves": "Scope identity check preserves all 202 records; actual Linux refusal and 902 Python tests pass.",
+  "limits": "Website revalidation stopped because regenerated exports lacked a fresh changelog event; this record supplies accountability, not a test waiver.",
+  "scope_ids": [
+    "X-14"
+  ],
+  "files": {
+    "README.md": "48eafa632d24bdeaceecec43e3a2bc1b0a0bbaf8992397161b33c6d185b5e1ca",
+    "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
+    "docs/registry-deferral-plan.md": "715fbe934113cc55dd6ba8f938029f55426dd5c31579fe6adce4c15904a4ae60",
+    "docs/registry-deferral-result.md": "80426cfab32c8804f07eb9b0967192be650496f41b9360b90531ac503faae8e8",
+    "docs/scope-progress.json": "3318500c721c134fc9885902c0ed78192ebbb4d91d0979916b4564200e73736f",
+    "docs/scope-progress.md": "526e63408c18335d955cf42e9577d476de26476b6a092fa8885474302aa6c5bd",
+    "docs/scope-task-index.md": "f5be74a4d7e60ce5e15ecc73bd444ef6668752fbb04b3dd6ce40e9e45672bde5",
+    "eval/route-boundaries.json": "08481e552d09a48e8fbf93c92015253d5fe8c85315d1d63630c07d7e281ac857",
+    "runs/2026-10-10-registry-deferral-failure-resolution.json": "801d7c4d06330af84dd1cd847ec009ae87c4b7fea4ad66bcd688ca8040ffb95c",
+    "runs/2026-10-10-registry-deferral-linux-corrected.json": "41320369381cc794e7860d47f8e0a26feef91a034a02d096bf9b4fefc164f5c5",
+    "runs/2026-10-10-registry-deferral-linux-diagnosis.json": "b7715e579d8e2e32dfd1a0b72de7e52a41ec5ba8017ba18b620a24247df969ba",
+    "runs/2026-10-10-registry-deferral-linux-file-diagnosis.json": "db455d2468241ce1381be8a4ae434a5b05c9797ccfe327e92ef7bffada93d63d",
+    "runs/2026-10-10-registry-deferral-linux.json": "1afc7c42b394ae7d7c08851105769751877c238a4a120c56a4d2895d26a358b3",
+    "runs/2026-10-10-registry-deferral-python.json": "a7e57424694ee085d568f4c43db3e7507b6b14dc4f6ecfa3502b136dded2f561",
+    "runs/2026-10-10-registry-deferral-reviewed-boundaries.json": "fd8c94776d4e9651af9f35b4a2b3e9db25bf2c9e545e20945c9f7e51ea16a6a2",
+    "runs/2026-10-10-registry-deferral-scope.json": "c2f50a2cec102dcf363e5ee72f927623059c17059e3a09b42401285d3d7b2731",
+    "runs/2026-10-10-registry-deferral-website.json": "05c74850af5b0f1acbd73406354a69adc5bdad6da000728274e17fbdde61e446",
+    "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206",
+    "scripts/verify-route-boundaries.py": "b1aac94dd11095b7ac3845cfd1cb23c232f43f5460162cc84bb7ce415f1ffa4c",
+    "services/registry/Dockerfile": "3740a0f3a560cadc096e36e258ba02d7aeb302422a1cc6120ffab2f04f489d3e",
+    "services/registry/README.md": "312029c72adaae929f7208fd5813efc92b36ab6fed879f5d54a448972377a3f8",
+    "services/registry/app.py": null,
+    "services/registry/deferred.py": "a700c02e4c113a92c1e92ab053159df47afbf0953a1c76df6f2e94d4bfd78e10",
+    "services/registry/prototype/app.py": "cc0d6988115fc42035213a9ebdc30fc2690dff0a4096c09b47baa9d4a05d8503",
+    "services/registry/prototype/requirements.txt": "96acad962c7af372f511cbe859636187d66916527a561bffdefe5aa02905b173",
+    "services/registry/requirements.txt": null,
+    "site/public/reference/public-scope.json": "0d78decdb4cdfbdb48209510008a15a36181cfb087adb797265611d1ba164951",
+    "site/src/public-scope.json": "0d78decdb4cdfbdb48209510008a15a36181cfb087adb797265611d1ba164951",
+    "state.json": "5b6c7686a74a49971127a0b3526797a2149fec038dbd88af5a1e7bb77292c4a5",
+    "tests/test_registry_deferral.py": "3d90be7b2dfcee63f8d1f2da1c0e279725dfd75f191845af9364b32a9fe67bb0",
+    "tests/test_route_boundaries.py": "77dae74c3a1195761a543784d831a184f56ccf48b90dbf6173427a2941806ad8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-registry-deferral-scope.json",
+      "sha256": "c2f50a2cec102dcf363e5ee72f927623059c17059e3a09b42401285d3d7b2731"
+    },
+    {
+      "path": "runs/2026-10-10-registry-deferral-website.json",
+      "sha256": "05c74850af5b0f1acbd73406354a69adc5bdad6da000728274e17fbdde61e446"
+    }
+  ],
+  "checks": []
+}

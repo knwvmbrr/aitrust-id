@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-10T17:35:42.261649+00:00",
+  "reviewed_at": "2026-10-10T17:52:42.217756+00:00",
   "reviewed_by": "Codex; maintainer engineering assessment, not independent certification",
   "rules": [
     "X-01",
@@ -10,6 +10,7 @@
     "X-06",
     "X-08",
     "X-12",
+    "X-14",
     "X-15",
     "N-007",
     "N-008"
@@ -17,7 +18,7 @@
   "independent_release_approval": false,
   "sources": {
     ".github/workflows/ci.yml": "fbb17c9939504e0626b77ae8e22a4e9ad15bd404cc139004078cde0829dde2ee",
-    "deploy/docker-compose.yml": "af2599c8f4a5143de8258ef9d29cc5fa1d22ddd7f2137e3751683e65421a7218",
+    "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
     "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
     "extension/src/adapters/README.md": "559d6a3cd0c5e2045ddca1e3ff51276a10e1af8e45f9ca8aae3e5fe2d8b314ad",
     "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
@@ -57,8 +58,9 @@
     "scripts/build-composition-tool.py": "384dc77de3cb2cf7a8ca97539740ba8897158d5a937bfa547f5aef68fe588be5",
     "scripts/check-repetition.py": "9ea741e4235c05c66bee8be32e5b40b162837864e77f21d79cc8dcf6cf1c4071",
     "scripts/receipt.cjs": "973a2ff458087a0802e27889d33d52c4efc776ab40cfe10d82b526067b095a7d",
+    "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "ead612e7f290b65f3e96428a23a880788050f315e1b41d4d5f26a2009f0106e9",
+    "scripts/verify-route-boundaries.py": "b1aac94dd11095b7ac3845cfd1cb23c232f43f5460162cc84bb7ce415f1ffa4c",
     "services/adjudicator/adjudicate.py": "4f0fa7bf3d0a18144cbd89b1fd2123bd0a9d66a9f76ef0133c05208e430a4d14",
     "services/adjudicator/presentation.py": "2166006c60c49a81c3d65d883e0e781d8f65c5461481f1db85257c644fcba762",
     "services/adjudicator/tag_bridge.py": "210b35d4454ffa4df192a0bd16aa16d6ae338a1bb9de5bd00b505f8063b70b03",
@@ -82,9 +84,11 @@
     "services/gateway/requirements.freeze": "60430696b853ac4cd6cd01e047d467d26a644bacd4e15400bb29afbb9299c57c",
     "services/gateway/requirements.lock": "7933f6cd8911ae0fef80d95a432bf30464761951225a4b600150581c71b3706e",
     "services/gateway/requirements.txt": "0cda0aff8c0b2cb93b3189f4f930caf7fa207e689c415786fe90bb82d6c8d49e",
-    "services/registry/Dockerfile": "bc11eff7eded8b479d3a722cae25475aef7d2be2fda928f74c27111c08243146",
-    "services/registry/app.py": "4c0c743bd6a682ffcba41054a4ec4be187fa69858efa8cecc9c3ecde78177306",
-    "services/registry/requirements.txt": "96acad962c7af372f511cbe859636187d66916527a561bffdefe5aa02905b173",
+    "services/registry/Dockerfile": "3740a0f3a560cadc096e36e258ba02d7aeb302422a1cc6120ffab2f04f489d3e",
+    "services/registry/README.md": "312029c72adaae929f7208fd5813efc92b36ab6fed879f5d54a448972377a3f8",
+    "services/registry/deferred.py": "a700c02e4c113a92c1e92ab053159df47afbf0953a1c76df6f2e94d4bfd78e10",
+    "services/registry/prototype/app.py": "cc0d6988115fc42035213a9ebdc30fc2690dff0a4096c09b47baa9d4a05d8503",
+    "services/registry/prototype/requirements.txt": "96acad962c7af372f511cbe859636187d66916527a561bffdefe5aa02905b173",
     "site/index.html": "2d81b51963edb70abce19dbac777ab9b80052ece5625cb57c60520bccd422385",
     "site/package.json": "d9cd79fad161ea17a8521ad721a19eebab0b766a4209bdcd56d74d83fa66a11d",
     "site/public/404.html": "c142135861339de18d96d48923da0012af2c1a894f8ea2179416030b9557c8f1",
@@ -116,7 +120,7 @@
     "site/src/policies.js": "58a8a799ca7eb06bb8e1b71481f31238bc4524227f8fb1c805444d3a64396c7f",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "0c2385ea2f85c117a7f931fd0bfa15d6e3901510ab8a2aab998c31ff39ea2e13",
+    "site/src/public-scope.json": "0d78decdb4cdfbdb48209510008a15a36181cfb087adb797265611d1ba164951",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
@@ -133,6 +137,7 @@
     "site/src/workflows/community.json": "9f1269d788fc2e8407bd3912d52f78c30906ee1809c056a203e950af7d8f039a",
     "site/src/workflows/index.jsx": "f619babb98a9df0218257d329d092bd1a4559680a45156b7d131bb96540a6ba6",
     "site/src/workflows/shared.jsx": "b0eac1b6e41879d572574062abec942e88ae45707412720cbb75c374148d6f54",
+    "tests/test_registry_deferral.py": "3d90be7b2dfcee63f8d1f2da1c0e279725dfd75f191845af9364b32a9fe67bb0",
     "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90",
     "tools/composition/editor.html": "3f57ec89f4229d50ba98db6fb4f49b090fa8937b17279451a43d83ed34287c50",
     "tools/composition/editor.js": "38d2898cd490af1e6e7fef821504091841dba28a404c015313364346009fd297",
@@ -140,7 +145,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-10-owner-pilot-extension-revalidation.json",
-    "website": "runs/2026-10-10-owner-pilot-website-final.json"
+    "website": "runs/2026-10-10-registry-deferral-website-final.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",
@@ -157,5 +162,6 @@
       "services/evaluator/app.py"
     ]
   },
-  "service_evidence": "runs/2026-10-10-context-v6-real-service.json"
+  "service_evidence": "runs/2026-10-10-context-v6-real-service.json",
+  "registry_evidence": "runs/2026-10-10-registry-deferral-linux-corrected.json"
 }

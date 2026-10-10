@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-10T17:50:37.208304+00:00",
+  "pass": false,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "website",
+    "sources": {
+      "eval/revalidation.json": "4bd85fefa41a829b1fadb6b6be6dd717c5e293aa3676e33927b36ab54f7e079a",
+      "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+      "package.json": "609fd32f64bd8cd552d1985f31e6167f9072ee22effa972187e71b58e36d8b34",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+      "scripts/accessibility-probes.cjs": "4e2c4a0c86968eb89267e93381aba6fa0fe3309ee989ed4da37f647d7cf1141d",
+      "scripts/execution-report.cjs": "368ea02355526b62fffb9e2410febff6442ee79acc45b4f71f442e3c37b178ba",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/static-headers.cjs": "5a43068ad58256ad6dc04939947f88ad5d7115a198f30b2a92f2034f43ea340d",
+      "scripts/verify-built-website.cjs": "70ec270c7680bca271f3c2103e3ffd616de6d5aa02385425ee294910df900e37",
+      "scripts/verify-offline-download.cjs": "0dee789317a445095b926ad9c27114c02050701b6c9238a8841abf047606ffbb",
+      "scripts/verify-research-feedback.cjs": "c36e42e7c3b084948983cb7335d8307ceda97ffc11aa567b503d9bd9047a4c7a",
+      "scripts/verify-site-accessibility.cjs": "5e9d60394f20f73e2f7ee424e4b2670064ac779ecef9783252ea735e1c792f72",
+      "scripts/verify-site.cjs": "e21a26b110edf71c508039e1d4a704cfaed225d9575cb32dbee40fa34350f7b8",
+      "scripts/verify-static-headers.cjs": "0f81ddf73ade1ba91bfd887b0d2c79f88ee3dcd5da6e66a33c0acbc6a8ff9707",
+      "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+      "site/package.json": "d9cd79fad161ea17a8521ad721a19eebab0b766a4209bdcd56d74d83fa66a11d",
+      "site/public/_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+      "site/public/theme.js": "7d17c74230a266c5b8ffe7e819b76d2e639fbf971cdd3f6adb2969fd8d1be055",
+      "site/scripts/owner-guide.mjs": "f9c50c5a055853c6ee81950a062b5eef14c58fcb6dd705738d8b2ac1abd72f61",
+      "site/scripts/prepare-device.mjs": "9e6011d991f923dcd2c089ce4b5bce524fe7536f00200da8ec849143d8d6e021",
+      "site/scripts/prepare-offline.mjs": "882f4b6a46f0d0e2c130b52ca9bc46f931764bf327bc3f6893a665453e06be3a",
+      "site/scripts/prepare-performance.mjs": "8da724ab20933c625c66851d89d8566b62c4d94e6b877cdc779fbed5b3f58514",
+      "site/scripts/prepare.mjs": "bfe4e9231c18454dc077c3f0de479c75f527e431abd89372e45dc46145ac9a6d",
+      "site/scripts/render-reference.mjs": "7d1fc856b6c7b499c44da3683ac4901714d58cb8de8944937b2473d92a16b7c7",
+      "site/scripts/seo.mjs": "65e89eb18d7d472b9a04572e506334381c52a77f898fdb39fac33e8c9596bd5b",
+      "site/src/catalog.js": "99584f624401474e92286a6acbf562e9e3bbee8b89a125c85bb8125459fc2be9",
+      "site/src/catalogue-export.js": "4b9d1c60f03428a88c750b6d65a162ceeac97a750e3d031a5cb0adab55e6af78",
+      "site/src/device-client.js": "53e6e8fe5de3f6650bbd894f4af9138e92a7c697e0d827bdce13921edf3e39c5",
+      "site/src/device-manifest.json": "2d12a18686e7db362b4aba7ffd2740e8e8a85f0f7711ecc42f34b3466d9bae76",
+      "site/src/device-worker.js": "b327e1c5984d954e3a2a6f369e3462b6ccc13d3e6d6db7fe56dd2dccfb0d39ee",
+      "site/src/handheld.jsx": "ecc666d883c423842dce50564f109e88279fcb0645d52c70c6b75aa57490a250",
+      "site/src/main.jsx": "00fc1bc4c005e171e75066b8f13c8a120b8268d711e0d1552861eda8d754c543",
+      "site/src/model-tools.js": "933a9eeadc5b8e4b2f49f287443de834f056496c63b24cbca79f643f8911b83e",
+      "site/src/performance-model.js": "7083d48f27ba1437b3f33b57521dfb7fe163a381fd883857f5b05a38136acbf5",
+      "site/src/performance.jsx": "8d529e407c29869064eca9019e06e7fc32c80fd2d632c9492e3e20d60665fe42",
+      "site/src/policies.js": "58a8a799ca7eb06bb8e1b71481f31238bc4524227f8fb1c805444d3a64396c7f",
+      "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
+      "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
+      "site/src/public-scope.json": "0d78decdb4cdfbdb48209510008a15a36181cfb087adb797265611d1ba164951",
+      "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
+      "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
+      "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
+      "site/src/tag-performance.json": "4c108a1ed4976bff084092c44b79fe8f8b70c5f8a671c41a41e47ac276361456",
+      "site/src/usage.js": "b3f539b48b6570c32881cc0823396cdc42e628b1ac1f3ca8639b18b578c32519",
+      "site/src/workflows/About.jsx": "a59306cff4d0ce922462965aa2da9ce33322f85e3966b628912762a8a6509f99",
+      "site/src/workflows/Assist.jsx": "96ffd98b5c65a8b84ba9f4860aafc1378ef74d6a6ba0a3211d210833b4617106",
+      "site/src/workflows/HowTagsWork.jsx": "c45c28fcfb0d53ccab848d1081c07cfe6faa54389dc75d7779b756951be04674",
+      "site/src/workflows/Legal.jsx": "2f3131892ff906ef6510b6d2292f668b0d49d4a2c02107c767f15e370da9566a",
+      "site/src/workflows/Report.jsx": "b12d5d501f29a06dfcf178eda75de4cdea6802a1eef9213322d39b673f80a8b9",
+      "site/src/workflows/Scope.jsx": "6626ce7e62494ee12d2a9b5cf97855eb44ebbbb3168f43ddeca7bac8883c5b75",
+      "site/src/workflows/Teamwork.jsx": "09d6c6f9653493e0a22efa1630f9ad2f839c826c928bd1651dd6f6a084ca69ff",
+      "site/src/workflows/Townhall.jsx": "33bdbe6ed102a0257b23b215f43fc1177f2d537d4fd904fc71d0ee797678903f",
+      "site/src/workflows/community.json": "9f1269d788fc2e8407bd3912d52f78c30906ee1809c056a203e950af7d8f039a",
+      "site/src/workflows/index.jsx": "f619babb98a9df0218257d329d092bd1a4559680a45156b7d131bb96540a6ba6",
+      "site/src/workflows/shared.jsx": "b0eac1b6e41879d572574062abec942e88ae45707412720cbb75c374148d6f54",
+      "tests/research-feedback.cjs": "cc9b469b4deb2f5ee638b5a97eb85a4a816ecd04e59f34d1f6f0fd5afde49a4d",
+      "tests/static-headers.cjs": "217ffdc8152100bd23c20b3b305bf545d5e48cef702565608d926f58dd4ad007"
+    },
+    "sha256": "cc922fa2569a5d6be4d90f25971282582e76a9d8b3ffcb46a6221b0a39b22765",
+    "commands": [
+      [
+        "node",
+        "scripts/verify-built-website.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-offline-download.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-static-headers.cjs"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "node",
+        "scripts/verify-built-website.cjs"
+      ],
+      "exit": 1,
+      "stdout_sha256": "53762d4240ffe17a528648d09b10708e9986f9742ae2e215a71ce322706631a3",
+      "stderr_sha256": "bf4c942ea4d77eb321dd710527f20c0d30338e989e7666f0afb9fe1115e16a9d"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

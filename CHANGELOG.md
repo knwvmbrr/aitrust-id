@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-175250-registry-boundaries-and-site-final-955121a7
+
+Recorded 2026-10-10T17:52:50.946762+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete fresh website/offline/header revalidation and bind final reviewed source and Linux receipts; clarify README and security notice.
+- **Evidence.** Current generated site, accessibility probes, metadata-only feedback, offline downloads and static headers passed; all 57 registry/route controls passed against final manifest. [Change record](./runs/changes/2026-10-10-175250-registry-boundaries-and-site-final-955121a7.json).
+- **Not claimed.** Physical phone and independent labels remain human gates; no research collection, registry or future service accepted.
+
+
+### 2026-10-10-175052-registry-public-scope-snapshot-c16b223a
+
+Recorded 2026-10-10T17:50:52.801792+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate public scope exports with the executed X-14 deferral acceptance; retain blocked first website check.
+- **Evidence.** Scope identity check preserves all 202 records; actual Linux refusal and 902 Python tests pass. [Change record](./runs/changes/2026-10-10-175052-registry-public-scope-snapshot-c16b223a.json).
+- **Not claimed.** Website revalidation stopped because regenerated exports lacked a fresh changelog event; this record supplies accountability, not a test waiver.
+
+
+### 2026-10-10-175020-registry-deferral-accepted-ba10bd1b
+
+Recorded 2026-10-10T17:50:20.363510+00:00 · Contributor: Codex · change
+
+- **Changed.** Enforce initial-release registry deferral; preserve inactive prototype; source-bind actual Linux sandbox and cleanup evidence; complete X-14 with 103 complete and 99 open records.
+- **Evidence.** 902 Python tests passed, including 57 route/registry controls; actual default and future-version container refusal passed with synthetic data unchanged and cleanup verified. [Change record](./runs/changes/2026-10-10-175020-registry-deferral-accepted-ba10bd1b.json).
+- **Not claimed.** No future registry or research intake enabled. No independent tag accuracy, legal approval or physical-device acceptance.
+
+
+### 2026-10-10-174454-registry-release-deferral-4c22da27
+
+Recorded 2026-10-10T17:44:54.891155+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved inactive registry prototype with corrected linkability/retention copy; initial-release image now refuses before opening a listener or storage, with no port, volume or network.
+- **Evidence.** Nineteen controls pass: launcher refuses default/future settings without writes; profile, image and storage activation mutations fail closed. [Change record](./runs/changes/2026-10-10-174454-registry-release-deferral-4c22da27.json).
+- **Not claimed.** Actual Linux image execution and updated release review still required. Optional research intake remains separate and unconnected.
+
+
 ### 2026-10-10-173910-published-owner-guide-and-draft-register-d7e5719c
 
 Recorded 2026-10-10T17:39:10.992874+00:00 · Contributor: Codex · change

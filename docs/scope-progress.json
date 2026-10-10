@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T17:31:33.618951+00:00",
+  "audited_at": "2026-10-10T17:50:20.129438+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -6518,29 +6518,42 @@
       "id": "X-14",
       "kind": "requirement",
       "title": "The registry container in 0.1",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T17:50:20.129438+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 release refusal launcher, storage/network isolation, regression guard and actual Linux execution"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: The registry container in 0.1. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-10T17:50:20.129438+00:00",
+      "completion_timestamp_basis": "Current full named deferral acceptance verified; not acceptance of future registry collection.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/registry-deferral-plan.md",
+        "services/registry/README.md",
+        "services/registry/deferred.py",
+        "deploy/docker-compose.yml",
+        "tests/test_registry_deferral.py",
+        "runs/2026-10-10-registry-deferral-linux-corrected.json",
+        "runs/2026-10-10-registry-deferral-python.json",
+        "runs/2026-10-10-registry-deferral-reviewed-boundaries.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: The registry container in 0.1. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full X-14 initial-release deferral: actual image refuses default and future-version activation with no listener/storage, exact Compose/image contract, source-bound Linux execution and stale/failed evidence mutation controls. Future F-044/N-011 implementation stays open.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "X-15",

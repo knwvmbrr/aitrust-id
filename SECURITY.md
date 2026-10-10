@@ -30,9 +30,11 @@ detected redaction precedes evaluation and can miss sensitive information.
 
 Hashes, offsets and redaction categories are metadata and deserve careful
 disclosure. Default processing has no registry persistence or remote collection.
-Do not expose the development gateway to the Internet or enable the optional
-registry for research: it is an unconnected prototype, not a retention-enforced
-service. See docs/development.md for the executed boundaries.
+Do not expose the development gateway to the Internet. This release refuses
+registry startup before any listener or storage opens; its preserved prototype
+is inactive and has no implemented retention. Future research collection requires
+separate reviewed code and consent. See docs/development.md and
+docs/registry-deferral-result.md for the executed boundaries.
 
 ## Threat model
 

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-174454-registry-release-deferral-4c22da27",
+  "recorded_at": "2026-10-10T17:44:54.891155+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "683c0dfaa522dfa3fe9d3bb1385ef681a5d9a8eb",
+  "changed": "Preserved inactive registry prototype with corrected linkability/retention copy; initial-release image now refuses before opening a listener or storage, with no port, volume or network.",
+  "proves": "Nineteen controls pass: launcher refuses default/future settings without writes; profile, image and storage activation mutations fail closed.",
+  "limits": "Actual Linux image execution and updated release review still required. Optional research intake remains separate and unconnected.",
+  "scope_ids": [
+    "X-14",
+    "F-044",
+    "N-011"
+  ],
+  "files": {
+    "README.md": "48eafa632d24bdeaceecec43e3a2bc1b0a0bbaf8992397161b33c6d185b5e1ca",
+    "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
+    "docs/registry-deferral-plan.md": "715fbe934113cc55dd6ba8f938029f55426dd5c31579fe6adce4c15904a4ae60",
+    "scripts/verify-registry-deferral.py": "a5bd85b18798d45af03fdd2d1297c7db4cec7b3cc38b93e3fd2702260d616bb7",
+    "scripts/verify-route-boundaries.py": "44020e4cc50acc74f56aa190c094fe1caf6b6aca0635fb390802bcefe9eaf975",
+    "services/registry/Dockerfile": "3740a0f3a560cadc096e36e258ba02d7aeb302422a1cc6120ffab2f04f489d3e",
+    "services/registry/README.md": "312029c72adaae929f7208fd5813efc92b36ab6fed879f5d54a448972377a3f8",
+    "services/registry/app.py": null,
+    "services/registry/deferred.py": "a700c02e4c113a92c1e92ab053159df47afbf0953a1c76df6f2e94d4bfd78e10",
+    "services/registry/prototype/app.py": "cc0d6988115fc42035213a9ebdc30fc2690dff0a4096c09b47baa9d4a05d8503",
+    "services/registry/prototype/requirements.txt": "96acad962c7af372f511cbe859636187d66916527a561bffdefe5aa02905b173",
+    "services/registry/requirements.txt": null,
+    "tests/test_registry_deferral.py": "04cce15536388e10cb8493245ea39db7292c72872f070e520687e5c1726956dd",
+    "tests/test_route_boundaries.py": "77dae74c3a1195761a543784d831a184f56ccf48b90dbf6173427a2941806ad8"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_registry_deferral.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T17:44:56.268141+00:00"
+    }
+  ]
+}

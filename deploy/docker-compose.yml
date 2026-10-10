@@ -65,12 +65,10 @@ services:
   registry:
     profiles: [registry]
     build: ../services/registry
-    ports:
-      - "127.0.0.1:8501:8501"
-    volumes:
-      - registry-data:/data
-    networks: [inspection]
-    restart: unless-stopped
-
-volumes:
-  registry-data:
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 16
+    mem_limit: 32m
+    restart: "no"
