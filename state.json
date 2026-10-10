@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T22:25:08.915014+00:00",
+  "updated": "2026-10-10T22:38:26.535746+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-10-ci-portable-site-public.json",
+    "evidence": "runs/2026-10-10-spdx-target25-live-site.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://a1e07693.aitrust-id.pages.dev",
+    "deployment_url": "https://1dfe2ddb.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-dependency-accepted-publication.json",
+    "publication_evidence": "runs/2026-10-10-spdx-target25-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 35,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-dependency-accepted-site-public.json",
+    "verification": "runs/2026-10-10-spdx-target25-live-site.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -716,12 +716,12 @@
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-10-dependency-automation-hosted-acceptance.json",
+    "execution_evidence": "runs/2026-10-10-spdx-protected-merge.json",
     "structural_evidence": "runs/2026-10-10-dependency-acceptance-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-dependency-accepted-publication.json",
-    "source_commit": "a8919741319877e9bb619424222ece251f17e81d",
-    "public_workflow_evidence": "runs/2026-10-10-dependency-accepted-site-public.json",
+    "publication": "runs/2026-10-10-spdx-target25-publication.json",
+    "source_commit": "5d8b47b18688bace1f8b01ff4d4df2bf1d8e7a2c",
+    "public_workflow_evidence": "runs/2026-10-10-spdx-target25-live-site.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/spdx-inventory-validation.md",
     "completed_subtasks": 1,
@@ -729,7 +729,7 @@
     "target_open_records": 25,
     "target_start_open_records": 100,
     "target_remaining_closures": 72,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-dependency-acceptance-scope.json",
     "target_plan": "docs/scope-25-execution.md",
     "target_direction_date": "2026-10-10",
@@ -1012,7 +1012,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T22:25:08.915014+00:00",
+  "updated_at": "2026-10-10T22:38:26.535746+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1077,9 +1077,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "a8919741319877e9bb619424222ece251f17e81d",
-    "deployment_url": "https://a1e07693.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-10-dependency-accepted-publication.json",
+    "source_commit": "5d8b47b18688bace1f8b01ff4d4df2bf1d8e7a2c",
+    "deployment_url": "https://1dfe2ddb.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-10-spdx-target25-publication.json",
     "matching_artifacts": 561,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
@@ -1111,7 +1111,7 @@
     "new_hosted_check_observed": true,
     "website_revalidation": "runs/2026-10-10-spdx-website-revalidation-repaired.json",
     "precondition_diagnosis": "runs/2026-10-10-target25-revalidation-order.json",
-    "hosted_source_evidence": "runs/2026-10-10-spdx-first-hosted-engineering-pass.json",
+    "hosted_source_evidence": "runs/2026-10-10-spdx-protected-merge.json",
     "readme_review_evidence": "runs/2026-10-10-spdx-readme-current-render.json"
   },
   "dependency_automation": {

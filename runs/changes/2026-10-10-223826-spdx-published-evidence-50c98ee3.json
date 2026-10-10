@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-223826-spdx-published-evidence-50c98ee3",
+  "recorded_at": "2026-10-10T22:38:26.694742+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a2923864f2cce4ddc63c4bdae22f391bdaa8cc64",
+  "changed": "Publish exact site, final protected-merge and live modal evidence for the reviewed SPDX increment; update current state.",
+  "proves": "22 required checks passed on reviewed source; PR 13 normally merged; 561 artifact comparisons match; live 20 panels pass automated checks.",
+  "limits": "97 full requirements remain open; target 25 needs 72 more full closures. No independent accuracy or full license clearance granted.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-152"
+  ],
+  "files": {
+    "state.json": "ceea331d6a5a3c497acc00e9284281668fe1c19dd1f59fb8d12f73fdcb3790d4",
+    "docs/spdx-inventory-validation.md": "cc783a10fa3b38c0623681bc6f7b3bf0b90bc0400fb0ca1982d50e39415815e4",
+    "runs/2026-10-10-spdx-protected-merge.json": "91d918d465c60d32ecb49dbff80fc087a5d3d8843ae12e1a988b7104774916de",
+    "runs/2026-10-10-spdx-target25-publication.json": "6c43ada00f8e35749939c9cc79cb91cb0f8e54d6cef96d5b35e9f923b4e29ef9",
+    "runs/2026-10-10-spdx-target25-live-site.json": "76cc336b0eaddf1744d130380123337cf49ae6fd66803a61f39a46ffa2b98c40"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-spdx-protected-merge.json",
+      "sha256": "91d918d465c60d32ecb49dbff80fc087a5d3d8843ae12e1a988b7104774916de"
+    },
+    {
+      "path": "runs/2026-10-10-spdx-target25-publication.json",
+      "sha256": "6c43ada00f8e35749939c9cc79cb91cb0f8e54d6cef96d5b35e9f923b4e29ef9"
+    },
+    {
+      "path": "runs/2026-10-10-spdx-target25-live-site.json",
+      "sha256": "76cc336b0eaddf1744d130380123337cf49ae6fd66803a61f39a46ffa2b98c40"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T22:38:26.944620+00:00"
+    }
+  ]
+}
