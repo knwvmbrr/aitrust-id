@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-204838-manifest-sync-current-deployment-checks-00e952eb
+
+Recorded 2026-10-10T20:48:38.856734+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain current source-bound deployment checks for the pin synchronization repair and update runtime state to 1037 distinct passing Python tests.
+- **Evidence.** The deployment guard checks four Python manifest/lock roots, all five engineering receipts remain current, 32 refreshed route controls pass and the unchanged observed runtime SBOM still verifies. [Change record](./runs/changes/2026-10-10-204838-manifest-sync-current-deployment-checks-00e952eb.json).
+- **Not claimed.** Hosted checks and the review resolution for the new repair remain pending; no installed dependency or actual image was changed, no independent release gate passed and research collection stays off.
+
+
+### 2026-10-10-204822-enforce-python-manifest-install-sync-0a8caf9f
+
+Recorded 2026-10-10T20:48:22.456158+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix the substantive PR finding that a version-only Python manifest update could leave the installed lock unchanged. Share bounded input parsing across proposal, inventory and deployment checks; bind direct and frozen inputs into the selected dependency inventory.
+- **Evidence.** All four real direct-manifest bumps are rejected against unchanged install locks. Sixty-four targeted tests and 1005 full-suite Python tests excluding the source-bound route cases pass. Current 19 direct pins and 110 frozen service pins agree with their hashed locks. [Change record](./runs/changes/2026-10-10-204822-enforce-python-manifest-install-sync-0a8caf9f.json).
+- **Not claimed.** The review conversation and new hosted checks are still pending; scheduled dependency jobs have not run. No installed package, model or image was updated, no license clearance or signing was granted, and independent release gates remain unchanged.
+
+
+### 2026-10-10-203458-dependency-controls-current-checks-7761c6b1
+
+Recorded 2026-10-10T20:34:58.669448+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain current website and route-boundary execution after ownership and dependency controls; update state to the actual 1005 distinct Python tests.
+- **Evidence.** 973 full-suite tests and 32 refreshed source-bound route controls pass. The website receipt is current, ownership/dependency policy is source-bound, and optional collection remains disabled. [Change record](./runs/changes/2026-10-10-203458-dependency-controls-current-checks-7761c6b1.json).
+- **Not claimed.** GitHub configuration parsing and Dependabot execution are still pending; no tag release or human/physical-phone acceptance is implied.
+
+
+### 2026-10-10-203159-dependency-policy-release-binding-53157aef
+
+Recorded 2026-10-10T20:31:59.701474+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind ownership and dependency proposal policy to the current release source review, and refresh the public scope copies showing the completed CI job.
+- **Evidence.** All 202 scope records remain; the CI requirement is 100 percent from hosted protected acceptance, while dependency automation remains 60 percent pending actual GitHub acceptance and jobs. [Change record](./runs/changes/2026-10-10-203159-dependency-policy-release-binding-53157aef.json).
+- **Not claimed.** Static dependency policy and source fingerprints do not prove the scheduled bot operated or that a proposed dependency is safe.
+
+
+### 2026-10-10-203125-protected-ci-complete-dependency-controls-3c1e712e
+
+Recorded 2026-10-10T20:31:25.281801+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the failure-capable CI requirement from actual protected acceptance. Add whole-tree ownership and bounded weekly dependency proposals for six install roots, three images and Actions, with strict offline controls.
+- **Evidence.** All eleven actual required contexts passed on the normal first push and PR, which merged without an admin bypass. A separate ready intentional failure was blocked and closed. Fourteen dependency-policy controls pass; the new broader suite has 973 passing tests before the 32 deployment-boundary checks. [Change record](./runs/changes/2026-10-10-203125-protected-ci-complete-dependency-controls-3c1e712e.json).
+- **Not claimed.** F-152 is not complete: GitHub ownership acceptance and scheduled dependency jobs remain unobserved. Independent tag release, physical phones and human accessibility are still open. Research collection stays disabled.
+
+
 ### 2026-10-10-202500-required-ci-final-source-verification-fb82595e
 
 Recorded 2026-10-10T20:25:00.256092+00:00 · Contributor: Codex · change

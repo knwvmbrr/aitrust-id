@@ -17,7 +17,7 @@
     "All eleven hosted engineering checks pass; enforce main required checks and demonstrate a blocked failing PR. Independent release gates remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 991,
+  "python_tests_passed": 1037,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -339,7 +339,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "959 Python tests plus 32 current source-bound route tests passed for the required-CI repair; engineering acceptance only.",
+  "python_tests_scope": "1005 full-suite Python tests plus 32 current deployment-boundary tests, including 64 targeted dependency controls; engineering acceptance only.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -707,29 +707,29 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T17:50:20.129438+00:00",
-    "completed_records": 103,
-    "open_records": 99,
+    "audited_at": "2026-10-10T20:31:25.150684+00:00",
+    "completed_records": 104,
+    "open_records": 98,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-10-registry-deferral-linux-corrected.json",
+    "execution_evidence": "runs/2026-10-10-required-ci-positive-acceptance.json",
     "structural_evidence": "runs/2026-10-10-registry-deferral-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-10-registry-deferral-deployment.json",
     "source_commit": "a0718543dac233bb7fc10393f32fc987091574c6",
     "public_workflow_evidence": "runs/2026-10-10-registry-deferral-site-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/registry-deferral-result.md",
+    "latest_increment": "docs/required-ci-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
     "target_start_open_records": 100,
-    "target_remaining_closures": 49,
-    "publication_pending": false,
+    "target_remaining_closures": 48,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-registry-deferral-scope.json"
   },
   "research_components": {
@@ -1005,11 +1005,11 @@
     "PII_REDACTED": "runs/2026-10-10-required-ci-pii-redacted.json",
     "protocol": "runs/2026-10-10-required-ci-protocol.json",
     "extension": "runs/2026-10-10-required-ci-extension.json",
-    "website": "runs/2026-10-10-required-ci-website.json",
+    "website": "runs/2026-10-10-dependency-automation-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T20:25:00.209896+00:00",
+  "updated_at": "2026-10-10T20:48:38.814640+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1082,7 +1082,7 @@
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
   "ci_portability": {
-    "status": "main_protected; ready_failing_pr_blocked; normal_first_push_repair_waiting_hosted_checks",
+    "status": "protected_normal_merge_and_ready_negative_control_both_verified",
     "diagnosis": "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
     "main_branch_protected": true,
     "release_gates_waived": false,
@@ -1090,7 +1090,8 @@
     "report_path_diagnosis": "runs/2026-10-10-hosted-report-destination-repair.json",
     "hosted_evidence": "runs/2026-10-10-ci-portable-hosted-pass.json",
     "negative_control": "runs/2026-10-10-required-ci-failure-blocking.json",
-    "first_push_controls": "runs/2026-10-10-ci-first-push-controls.json"
+    "first_push_controls": "runs/2026-10-10-ci-first-push-controls.json",
+    "positive_acceptance": "runs/2026-10-10-required-ci-positive-acceptance.json"
   },
   "dependency_license_audit": {
     "status": "three_observed_linux_images_inventoried; unsigned; incomplete_license_and_client_coverage",
@@ -1099,5 +1100,13 @@
     "evidence": "runs/2026-10-10-runtime-license-inventory.json",
     "license_cleared": false,
     "release_signed": false
+  },
+  "dependency_automation": {
+    "status": "manifest_to_lock_and_frozen_input_sync_controls_pass; protected_review_repair_pending",
+    "evidence": "runs/2026-10-10-dependency-automation-local.json",
+    "auto_merge_enabled": false,
+    "monitoring_roots": 10,
+    "research_collection_enabled": false,
+    "manifest_sync_review": "runs/2026-10-10-dependency-manifest-sync-review.json"
   }
 }

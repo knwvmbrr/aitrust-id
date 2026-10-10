@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-204822-enforce-python-manifest-install-sync-0a8caf9f",
+  "recorded_at": "2026-10-10T20:48:22.456158+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f51e796959c73103d7aa9356d5e17ff86434e5a5",
+  "changed": "Fix the substantive PR finding that a version-only Python manifest update could leave the installed lock unchanged. Share bounded input parsing across proposal, inventory and deployment checks; bind direct and frozen inputs into the selected dependency inventory.",
+  "proves": "All four real direct-manifest bumps are rejected against unchanged install locks. Sixty-four targeted tests and 1005 full-suite Python tests excluding the source-bound route cases pass. Current 19 direct pins and 110 frozen service pins agree with their hashed locks.",
+  "limits": "The review conversation and new hosted checks are still pending; scheduled dependency jobs have not run. No installed package, model or image was updated, no license clearance or signing was granted, and independent release gates remain unchanged.",
+  "scope_ids": [
+    "F-152",
+    "F-057",
+    "X-02",
+    "WP-RELEASE"
+  ],
+  "files": {
+    "docs/dependency-automation-plan.md": "b77b9c7d4531813f9eff2136071eb746bd1eaaf09d7d5c6218ff916dd1eeeffc",
+    "runs/2026-10-10-dependency-manifest-sync-review.json": "3271d45b4f796792af0b93a0e70dc03ff36a2a08f9eff6f7efee255d4ed704ce",
+    "scripts/dependency_pins.py": "28670207e4c0e2d0416fbdb6a2d94fb0e67b73ea83c830869066c697f610e568",
+    "scripts/verify-dependencies.py": "d56293977dbb3342f60c440a4205ec4a2d13f4524daf221fb19abe2bf4d25bc1",
+    "scripts/verify-dependency-automation.py": "321b863511c509c06a3c7c0151d1eb91c5c76f886d1b9ef62d1b271215ef7a61",
+    "scripts/verify-route-boundaries.py": "321c401af0b40746c51eb3c4fb47c5fba8f91d8b182ca73274ec1e51048c5c0a",
+    "state.json": "bb5143109af6abb55bf97be3765082030988a18d234056d8da8b8903f1e29937",
+    "tests/test_dependency_automation.py": "64cf034e47a40de12714be0162fe4de401d4edb960fa2553764a0fcc0e5e6d22",
+    "tests/test_dependency_contract.py": "3be44fe186305a6f55e3f7512ed6e6375d0a9985495211c160415957cb149f8e",
+    "tests/test_python_input_pins.py": "59573588df5ba336c8bc2ecb859a7e1ed599534cfb61db13069ceeff944beb1f",
+    "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-dependency-manifest-sync-review.json",
+      "sha256": "3271d45b4f796792af0b93a0e70dc03ff36a2a08f9eff6f7efee255d4ed704ce"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-dependencies.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:48:22.647363+00:00"
+    }
+  ]
+}

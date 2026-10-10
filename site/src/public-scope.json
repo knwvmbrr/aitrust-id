@@ -5989,14 +5989,15 @@
         "id": "F-054",
         "kind": "requirement",
         "title": "CI that can actually fail",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-10T20:21:56.538273+00:00",
+        "audited_at": "2026-10-10T20:31:25.150684+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -6005,11 +6006,13 @@
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Verify normal first-push and pull-request engineering jobs after the baseline repair, then merge through the enforced required checks. Independent tag release gates remain unchanged.",
-        "next_owner": "Codex engineering checks; Michael acceptance of operating roles",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T20:31:25.150684+00:00",
+        "completion_timestamp_basis": "Actual ready negative-control failure blocking and normal first-push/PR checks followed by protected merge; all source retained.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           ".github/workflows/ci.yml",
           "runs/2026-10-08-ci-gate-recheck.json",
@@ -6020,13 +6023,13 @@
           "docs/required-ci-plan.md",
           "docs/ci-branch-baseline-plan.md",
           "runs/2026-10-10-required-ci-failure-blocking.json",
-          "runs/2026-10-10-ci-first-push-controls.json"
+          "runs/2026-10-10-ci-first-push-controls.json",
+          "runs/2026-10-10-required-ci-positive-acceptance.json",
+          "runs/2026-10-10-required-ci-complete-python.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Verify normal first-push and pull-request engineering jobs after the baseline repair, then merge through the enforced required checks. Independent tag release gates remain unchanged."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full functioning failure-capable CI: eleven actual required contexts, admin enforcement, ready failing PR blocked and closed, first-push history controls, normal protected merge. Separate independent tag-release gates still refuse.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -8991,16 +8994,18 @@
         "id": "F-152",
         "kind": "requirement",
         "title": "Branch protection, CODEOWNERS, required status checks, Dependabot",
-        "percent_complete": 40,
+        "percent_complete": 60,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-10T20:21:56.538273+00:00",
+        "audited_at": "2026-10-10T20:31:25.150684+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — required main checks, ready negative-control PR and first-push repair, 2026-10-10T20:21:56.538273+00:00"
+          "Codex — required main checks, ready negative-control PR and first-push repair, 2026-10-10T20:21:56.538273+00:00",
+          "Codex — bounded proposal configuration, ownership and fourteen offline refusal controls, 2026-10-10T20:31:25.150684+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -9008,8 +9013,8 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Protection and required checks are operating. CODEOWNERS and Dependabot still need implementation and observed operation; do not treat protection alone as completing this full item.",
-        "next_owner": "Codex engineering checks; Michael acceptance of operating roles",
+        "next_fix": "Publish the ownership and bounded dependency proposal configuration through protected checks; observe GitHub CODEOWNERS acceptance and actual Dependabot update jobs, resolving any failures before full acceptance.",
+        "next_owner": "Codex source and hosted verification; Michael accountable review",
         "evidence": [
           ".github/workflows/ci.yml",
           "runs/2026-10-08-ci-gate-recheck.json",
@@ -9020,11 +9025,17 @@
           "docs/required-ci-plan.md",
           "docs/ci-branch-baseline-plan.md",
           "runs/2026-10-10-required-ci-failure-blocking.json",
-          "runs/2026-10-10-ci-first-push-controls.json"
+          "runs/2026-10-10-ci-first-push-controls.json",
+          "docs/dependency-automation-plan.md",
+          ".github/CODEOWNERS",
+          ".github/dependabot.yml",
+          "scripts/verify-dependency-automation.py",
+          "tests/test_dependency_automation.py",
+          "runs/2026-10-10-dependency-automation-local.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Protection and required checks are operating. CODEOWNERS and Dependabot still need implementation and observed operation; do not treat protection alone as completing this full item."
+          "Publish the ownership and bounded dependency proposal configuration through protected checks; observe GitHub CODEOWNERS acceptance and actual Dependabot update jobs, resolving any failures before full acceptance."
         ],
         "queue": "open"
       }
