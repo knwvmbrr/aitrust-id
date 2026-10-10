@@ -5989,15 +5989,18 @@
         "id": "F-054",
         "kind": "requirement",
         "title": "CI that can actually fail",
-        "percent_complete": 40,
+        "percent_complete": 80,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-10T19:53:37.382491+00:00",
+        "audited_at": "2026-10-10T20:21:56.538273+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — required main checks, ready negative-control PR and first-push repair, 2026-10-10T20:21:56.538273+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6005,7 +6008,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate.",
+        "next_fix": "Verify normal first-push and pull-request engineering jobs after the baseline repair, then merge through the enforced required checks. Independent tag release gates remain unchanged.",
         "next_owner": "Codex engineering checks; Michael acceptance of operating roles",
         "evidence": [
           ".github/workflows/ci.yml",
@@ -6013,11 +6016,15 @@
           "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
           "docs/ci-portability-plan.md",
           "runs/2026-10-10-ci-portable-extension.json",
-          "runs/2026-10-10-ci-portable-website-attributed.json"
+          "runs/2026-10-10-ci-portable-website-attributed.json",
+          "docs/required-ci-plan.md",
+          "docs/ci-branch-baseline-plan.md",
+          "runs/2026-10-10-required-ci-failure-blocking.json",
+          "runs/2026-10-10-ci-first-push-controls.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate."
+          "Verify normal first-push and pull-request engineering jobs after the baseline repair, then merge through the enforced required checks. Independent tag release gates remain unchanged."
         ],
         "queue": "open"
       }
@@ -8989,10 +8996,11 @@
           "bounded_contract",
           "implemented_mechanism"
         ],
-        "audited_at": "2026-10-10T19:53:37.382491+00:00",
+        "audited_at": "2026-10-10T20:21:56.538273+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — required main checks, ready negative-control PR and first-push repair, 2026-10-10T20:21:56.538273+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -9000,7 +9008,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate.",
+        "next_fix": "Protection and required checks are operating. CODEOWNERS and Dependabot still need implementation and observed operation; do not treat protection alone as completing this full item.",
         "next_owner": "Codex engineering checks; Michael acceptance of operating roles",
         "evidence": [
           ".github/workflows/ci.yml",
@@ -9008,11 +9016,15 @@
           "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
           "docs/ci-portability-plan.md",
           "runs/2026-10-10-ci-portable-extension.json",
-          "runs/2026-10-10-ci-portable-website-attributed.json"
+          "runs/2026-10-10-ci-portable-website-attributed.json",
+          "docs/required-ci-plan.md",
+          "docs/ci-branch-baseline-plan.md",
+          "runs/2026-10-10-required-ci-failure-blocking.json",
+          "runs/2026-10-10-ci-first-push-controls.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Repair Linux measurement/share-image portability, verify the resulting hosted run, then enforce required checks on main and demonstrate an intentional failing change is blocked. Statistical and human-accessibility release refusals remain separate."
+          "Protection and required checks are operating. CODEOWNERS and Dependabot still need implementation and observed operation; do not treat protection alone as completing this full item."
         ],
         "queue": "open"
       }

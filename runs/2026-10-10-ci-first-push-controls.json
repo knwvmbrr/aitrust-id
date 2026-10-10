@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-10-10T20:21:56.536190+00:00",
+  "pass": true,
+  "kind": "actual_git_history_and_cli_controls",
+  "tests_passed": 34,
+  "new_first_push_scenarios": 9,
+  "earlier_undocumented_commit_rejected": true,
+  "documented_branch_accepted": true,
+  "missing_unrelated_history_refused": true,
+  "initial_default_branch_full_tree_checked": true,
+  "ordinary_push_and_pr_bases_preserved": true,
+  "source_sha256": {
+    "scripts/changelog_core.py": "c3e03118b073d2bd4e5f4813d1f6a15960e3c050a89a8d0dd5ac283c5551b74a",
+    "scripts/verify-changelog.py": "952d2c0a3ac5ca9b71ffaef8f4ef224b3af2653c32356901df9771dbc6237c30",
+    "tests/test_changelog_pipeline.py": "b3b11114cdb5ef33811329c1233c303fa8428f168cf4e25aa6d1a977fa1948d6",
+    ".github/workflows/ci.yml": "e63457ccee169b90753d6c037f00c732be5890c54d5d3e2ecd40a46d714abd18"
+  },
+  "hosted_normal_branch_pass_observed": false,
+  "independent_accuracy": false,
+  "initial_test_failure": "Two test assertions used changed_files as a list; the verifier defines it as a count. Assertions now check the concrete missing-record errors; verification behavior was unchanged."
+}

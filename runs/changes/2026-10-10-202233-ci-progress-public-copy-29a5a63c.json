@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-202233-ci-progress-public-copy-29a5a63c",
+  "recorded_at": "2026-10-10T20:22:33.776678+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "06b9c547a728184388ed4afa88c81654001abc0d",
+  "changed": "Refresh both public scope copies with the actual required-check progress and remaining CODEOWNERS/Dependabot work.",
+  "proves": "The generated public catalogue preserves all 202 records and agrees with the evidence ledger; F-054 is 80 percent pending the normal protected merge, and F-152 remains open.",
+  "limits": "No requirement is completed by this generated copy or percentage update.",
+  "scope_ids": [
+    "F-054",
+    "F-152"
+  ],
+  "files": {
+    "site/src/public-scope.json": "89ed9a43d806b306f6f8fae9d79f5ef0c5abbb0817e62912567cf51531f90142",
+    "site/public/reference/public-scope.json": "89ed9a43d806b306f6f8fae9d79f5ef0c5abbb0817e62912567cf51531f90142"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:22:34.003310+00:00"
+    }
+  ]
+}

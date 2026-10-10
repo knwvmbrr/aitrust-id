@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-202314-required-ci-current-capability-evidence-12785304",
+  "recorded_at": "2026-10-10T20:23:14.962741+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "06b9c547a728184388ed4afa88c81654001abc0d",
+  "changed": "Retain newly executed protocol, PS, redaction and extension engineering receipts for the changed revalidation contract.",
+  "proves": "All four named current-source capabilities executed their configured checks successfully with unchanged source during each run.",
+  "limits": "These are engineering receipts, not independent detector accuracy, physical-phone testing or research collection.",
+  "scope_ids": [
+    "F-054"
+  ],
+  "files": {
+    "runs/2026-10-10-required-ci-protocol.json": "fd7c340d5c681bb845420970b9d54b05bb820d0acdcea118054d6ec2a9705de7",
+    "runs/2026-10-10-required-ci-ps.json": "9b5db832eb9e2d36c28c5e7c2a6b4422cdc387d7af3990fc62d8cd0bd242bb62",
+    "runs/2026-10-10-required-ci-pii-redacted.json": "4fceaba8452a690965195a3f77f855837adc45f600f4f0983f44030c6d37eb0c",
+    "runs/2026-10-10-required-ci-extension.json": "c4985f332313a7ea765d54b29c34a9d176546e544900c23c795e983188bc2ad3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-required-ci-protocol.json",
+      "sha256": "fd7c340d5c681bb845420970b9d54b05bb820d0acdcea118054d6ec2a9705de7"
+    },
+    {
+      "path": "runs/2026-10-10-required-ci-ps.json",
+      "sha256": "9b5db832eb9e2d36c28c5e7c2a6b4422cdc387d7af3990fc62d8cd0bd242bb62"
+    },
+    {
+      "path": "runs/2026-10-10-required-ci-pii-redacted.json",
+      "sha256": "4fceaba8452a690965195a3f77f855837adc45f600f4f0983f44030c6d37eb0c"
+    },
+    {
+      "path": "runs/2026-10-10-required-ci-extension.json",
+      "sha256": "c4985f332313a7ea765d54b29c34a9d176546e544900c23c795e983188bc2ad3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-changelog.py",
+        "--staged"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:23:17.142573+00:00"
+    }
+  ]
+}

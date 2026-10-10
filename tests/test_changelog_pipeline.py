@@ -34,6 +34,65 @@ class ChangePipeline(unittest.TestCase):
         return r,name
     def test_actual_change_passes(self):
         (self.root/'source.py').write_text('after\n');self.record();self.assertTrue(m.verify(self.root)['pass'])
+    def first_push_base(self, **overrides):
+        values={'base':'0'*40,'head':'HEAD','default_ref':'refs/remotes/origin/main','event_ref':'refs/heads/feature'}
+        values.update(overrides)
+        return m.select_change_base(self.root, **values)
+    def test_first_push_checks_full_documented_branch(self):
+        self.git('update-ref','refs/remotes/origin/main',self.base)
+        (self.root/'source.py').write_text('after\n');self.record();self.commit()
+        base=self.first_push_base()
+        self.assertEqual(base,self.base)
+        self.assertTrue(m.verify(self.root,base)['pass'])
+    def test_first_push_cannot_hide_earlier_undocumented_commit(self):
+        self.git('update-ref','refs/remotes/origin/main',self.base)
+        (self.root/'earlier.py').write_text('undocumented\n');self.commit()
+        parent=self.git('rev-parse','HEAD').strip()
+        (self.root/'source.py').write_text('after\n');self.record(source_base=parent);self.commit()
+        self.assertTrue(m.verify(self.root,parent)['pass'])
+        result=m.verify(self.root,self.first_push_base())
+        self.assertFalse(result['pass'])
+        self.assertIn('New change missing fresh matching event: earlier.py',result['errors'])
+    def test_first_push_current_undocumented_commit_fails(self):
+        self.git('update-ref','refs/remotes/origin/main',self.base)
+        (self.root/'source.py').write_text('after\n');self.commit()
+        self.assertFalse(m.verify(self.root,self.first_push_base())['pass'])
+    def test_first_push_requires_metadata(self):
+        for overrides in [{'default_ref':None},{'event_ref':None},{'default_ref':'main'},{'event_ref':'feature'},
+                          {'default_ref':'refs/remotes/origin/bad ref'},{'event_ref':'refs/heads/../main'}]:
+            with self.subTest(overrides=overrides),self.assertRaises(ValueError):self.first_push_base(**overrides)
+    def test_first_push_missing_default_history_refuses(self):
+        with self.assertRaises(ValueError):self.first_push_base()
+    def test_first_push_unrelated_history_refuses(self):
+        self.git('update-ref','refs/remotes/origin/main',self.base)
+        self.git('checkout','--orphan','unrelated')
+        (self.root/'source.py').write_text('unrelated\n');self.commit()
+        with self.assertRaises(ValueError):self.first_push_base()
+    def test_initial_default_branch_checks_entire_tree(self):
+        base=self.first_push_base(event_ref='refs/heads/main')
+        self.assertEqual(base,self.git('hash-object','-t','tree','/dev/null').strip())
+        result=m.verify(self.root,base)
+        self.assertFalse(result['pass'])
+        self.assertIn('New change missing fresh matching event: source.py',result['errors'])
+    def test_normal_push_and_pr_keep_supplied_base(self):
+        for base in [None,self.base,self.git('hash-object','-t','tree','/dev/null').strip()]:
+            self.assertEqual(m.select_change_base(self.root,base),base)
+    def test_first_push_cli_uses_event_metadata_and_fails_closed(self):
+        scripts=Path(__file__).resolve().parents[1]/'scripts'
+        for f in ['verify-changelog.py','changelog_core.py']:shutil.copyfile(scripts/f,self.root/'scripts'/f)
+        self.git('update-ref','refs/remotes/origin/main',self.base)
+        (self.root/'source.py').write_text('after\n')
+        self.record(files={f:m.digest(self.root,f) for f in ['source.py','scripts/verify-changelog.py','scripts/changelog_core.py']})
+        self.commit()
+        env=dict(os.environ,CI='true',AITRUST_CHANGELOG_BASE='0'*40,
+                 AITRUST_CHANGELOG_DEFAULT_REF='refs/remotes/origin/main',GITHUB_REF='refs/heads/feature')
+        command=['python3',str(self.root/'scripts/verify-changelog.py')]
+        result=subprocess.run(command,cwd=self.root,env=env,capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        env['AITRUST_CHANGELOG_DEFAULT_REF']='refs/remotes/origin/missing'
+        result=subprocess.run(command,cwd=self.root,env=env,capture_output=True,text=True)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('unavailable or unrelated',result.stderr)
     def test_staged_dependency_link_cannot_bypass_exclusions(self):
         self.record()
         (self.root/'node_modules').symlink_to(self.root/'scripts',target_is_directory=True)

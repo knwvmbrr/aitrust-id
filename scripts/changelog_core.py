@@ -28,6 +28,24 @@ def git(root, *args):
         env['GIT_INDEX_FILE'] = index_path
     return subprocess.check_output(['git', *prefix, *args], cwd=root, env=env).decode()
 
+def select_change_base(root, base, head='HEAD', default_ref=None, event_ref=None):
+    """Resolve a new branch's complete range; never skip its earlier commits."""
+    if base != '0' * 40:
+        return base
+    if (not isinstance(default_ref, str) or not default_ref.startswith('refs/remotes/origin/')
+            or not isinstance(event_ref, str) or not event_ref.startswith('refs/heads/')):
+        raise ValueError('First push requires default-branch and event references')
+    try:
+        git(root, 'check-ref-format', default_ref)
+        git(root, 'check-ref-format', event_ref)
+        default_branch = default_ref[len('refs/remotes/origin/'):]
+        if event_ref == 'refs/heads/' + default_branch:
+            return git(root, 'hash-object', '-t', 'tree', '/dev/null').strip()
+        return git(root, 'merge-base', head, default_ref).strip()
+    except subprocess.CalledProcessError:
+        raise ValueError('First-push default history unavailable or unrelated') from None
+
+
 def safe_path(root, name):
     if not isinstance(name, str) or not name or '\\' in name or Path(name).is_absolute() or '..' in Path(name).parts:
         raise ValueError('Invalid repository-relative path: ' + str(name))

@@ -155,9 +155,20 @@
         "tests/research-feedback.cjs",
         "scripts/scope-progress.py",
         "docs/scope-progress.json",
-        "tests/test_scope_progress.py"
+        "tests/test_scope_progress.py",
+        "scripts/changelog_core.py",
+        "scripts/verify-changelog.py",
+        "scripts/verify-changelog.cjs",
+        "tests/test_changelog_pipeline.py"
       ],
       "commands": [
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_changelog_pipeline.py",
+          "-q"
+        ],
         [
           "node",
           "scripts/verify-built-website.cjs"
