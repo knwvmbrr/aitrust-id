@@ -83,3 +83,40 @@ real-response schema/isolation checks. It does not complete the whole service
 package, any detector's accuracy gate or every privacy route. The initial ledger's
 shared cancellation/human-recognition gates are retained on N-003/T-PII instead
 of being treated as dependencies of every unrelated service requirement.
+
+## Resource and cancellation architecture
+
+Keep the existing authenticated endpoint and result schema. The gateway holds at
+most four admitted evaluations and waits at most 100 ms for admission. Run each
+upstream pipeline as a cancellable task alongside a client-disconnect observer;
+when the client leaves, cancel pending HTTP work and release its admission slot.
+Always cancel/join observers in a finally block, including upstream exceptions and
+caller cancellation. Dependency HTTP timeouts remain ten seconds. A disconnected
+request cannot produce a finding; the internal terminal response is HTTP 408.
+
+Apply explicit container PID and memory ceilings, with a larger allowance for the
+English redactor. Test through a separate fault-injection staging upstream using
+synthetic inputs only: malformed responses, invalid tag codes, four held requests,
+a rejected fifth, disconnect, timeout and recovered admission. Do not replace a
+production upstream or weaken required redaction. These mechanisms bound work;
+they do not erase physical RAM or guarantee instant cancellation inside a remote
+redactor already processing a received request. Measure those limits plainly.
+
+The first cancellation observer using Starlette's polling cancellation scope
+hung cleanup on a synchronous ASGI test transport. The replacement consumes the
+post-body disconnect event directly; 25 existing HTTP/redaction tests and three
+new admission/cancellation tests pass. No polling workaround was shipped.
+
+Runtime inspection also caught podman-compose 1.3.0 silently ignoring the compose
+`pids_limit` field while applying memory limits. Its staging launcher therefore
+uses an explicit `--podman-run-args="--pids-limit=128"`; the verifier checks actual
+kernel/container limits instead of trusting YAML. Docker's reference compose
+retains the declared field. Engine-specific compatibility is explicit.
+
+Actual container health execution exposed a second compose-provider defect: its
+conversion of an inline Python CMD introduced invalid shell quoting. The endpoint
+was healthy but the engine's health command failed. All three images now contain a
+silent bounded healthcheck.py; the compose command has no inline program or nested
+quoting. The probe accepts only a bounded JSON object with `ok: true`, rejects
+200-page/malformed/false readiness and does not print private exception details.
+Engine health execution is rechecked, not inferred from HTTP success.

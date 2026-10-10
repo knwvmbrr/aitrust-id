@@ -115,6 +115,12 @@ def validate_record(root, record, name, current=False):
 
 def verify(root=ROOT, base=None, head='HEAD'):
     errors = []
+    # Ignored build/dependency paths must not bypass the guard when explicitly
+    # staged (a symlink does not match a directory-only .gitignore pattern).
+    for tracked in git(root,'ls-files','-z').split('\0'):
+        if tracked and ('node_modules' in Path(tracked).parts or
+                        tracked.startswith(('site/dist/','site/.wrangler/'))):
+            errors.append('Generated dependency/build artifact is tracked: '+tracked)
     records = {}
     log = (root / 'CHANGELOG.md').read_text()
     for p in sorted((root / EVENT_DIR).glob('*.json')):

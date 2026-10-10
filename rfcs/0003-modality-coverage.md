@@ -8,14 +8,14 @@
 ## Summary
 
 Reserve `text`, `code`, `image`, `audio`, `video` and `document` in the assertion schema's
-`modality` field. Define what the subject hash means for each. **Implement two of them.**
+`modality` field. Define what the subject hash means for each. **Specify text and code subjects; runtime currently evaluates text only.**
 
 This is a scoping RFC. It adds no detector and makes no accuracy claim. It exists so that an
 image implementation written by someone else in 2029 is conformant without a version break.
 
 ## Motivation
 
-The schema currently admits `text` and `code`. That is an accurate description of what we can
+The schema reserves six modalities. The gateway currently accepts only `text`; code snippets can be checked as text. This describes what we can
 do and a bad description of what the standard is for.
 
 Two costs to leaving it there:
@@ -39,7 +39,7 @@ different bytes for the same artifact and their assertions will not be comparabl
 | Modality | Status | Subject hash is taken over | Spans address |
 |---|---|---|---|
 | `text` | **implemented** | UTF-8 NFC-normalised redacted text | character offsets |
-| `code` | **implemented** | raw bytes, no normalisation — whitespace is semantic | byte offsets |
+| `code` | subject primitive specified and tested; detector reserved | raw bytes, no normalisation — whitespace is semantic | byte offsets |
 | `image` | reserved | decoded pixel buffer, excluding metadata | pixel bounding boxes |
 | `audio` | reserved | decoded PCM at declared sample rate | millisecond ranges |
 | `video` | reserved | per-frame hash tree, root recorded | frame + bounding box |
@@ -128,3 +128,9 @@ pass required of text labels.
    conformance purposes, even with no detector of our own? Leaning yes, as provenance-only.
 3. For video, is a frame-hash tree the right subject, or should re-encoded video be expected to
    produce a different subject entirely?
+
+## Executed subject primitive — 2026-10-10
+
+[Subject contract v1](../docs/subject-contract.md) and 19 fixed vectors agree
+between independent Python and Node implementations. This does not enable the
+gateway code modality or establish outside-implementer acceptance.

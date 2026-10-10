@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-043655-prevent-dependency-links-in-source-distribution-7dfed6ed
+
+Recorded 2026-10-10T04:36:55.312120+00:00 · Contributor: Codex · change
+
+- **Changed.** Ignore dependency links as well as directories and reject tracked dependency/build artifacts, including explicit staging; remove local dependency symlinks from the unpublished increment and refresh generated public scope references.
+- **Evidence.** 25 change-pipeline checks include a real staged Git symlink that the guard rejects; corrected increment will be audited before publication. [Change record](./runs/changes/2026-10-10-043655-prevent-dependency-links-in-source-distribution-7dfed6ed.json).
+- **Not claimed.** This corrects a local packaging mistake caught before push, not a blanket privacy clearance. The earlier bad unpublished commit will not be pushed.
+
+
+### 2026-10-10-043530-bounded-admission-cancellation-and-real-readiness-d73337f6
+
+Recorded 2026-10-10T04:35:30.078796+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound container memory/PIDs, cancel disconnected gateway work and recover admission; replace fragile inline health command with executable readiness probes; expose verifier commands and correct reserved-code RFC status.
+- **Evidence.** 431 Python checks; 11 real HTTP fault scenarios; current three-service source/capability/loopback/readiness/resource checks; N-003 fully functioning on selected Linux staging. [Change record](./runs/changes/2026-10-10-043530-bounded-admission-cancellation-and-real-readiness-d73337f6.json).
+- **Not claimed.** 173 requirements remain open toward target 100. Downstream work already admitted may finish in its bounded process. No independent accuracy, physical phone or human acceptance, hosted CI pass or universal isolation claim.
+
+
 ### 2026-10-10-042105-scope-100-foundations-and-live-service-conformance-dbbc585f
 
 Recorded 2026-10-10T04:21:05.320560+00:00 · Contributor: Codex · change

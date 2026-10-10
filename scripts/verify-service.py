@@ -123,8 +123,17 @@ print(json.dumps({"sha256":hashlib.sha256(red.encode()).hexdigest(),"char_len":l
                   '--filter','label=com.docker.compose.service='+service,'-q')
         assert cid and '\n' not in cid, 'Expected one staging service container'
         info = json.loads(run(engine,'inspect',cid))[0]
+        if engine=='podman':
+            run(engine,'healthcheck','run',cid)
+        else:
+            # Docker schedules its own healthcheck; it has no healthcheck-run CLI.
+            run(engine,'exec',cid,'python','healthcheck.py')
+        health=json.loads(run(engine,'inspect',cid))[0]['State'].get('Health',{})
+        assert health.get('Status')=='healthy', 'Engine readiness probe failed'
         assert info['Config']['User'] == '10001:10001'
         assert info['HostConfig']['ReadonlyRootfs'] is True
+        assert 0 < info['HostConfig']['PidsLimit'] <= 128
+        assert 0 < info['HostConfig']['Memory'] <= (1024 if service=='anonymizer' else 256)*1024*1024
         bindings=info['HostConfig'].get('PortBindings') or {}
         if service=='gateway':
             assert set(bindings)=={'8000/tcp'}
@@ -156,7 +165,10 @@ print(json.dumps(out))'''
         runtime_deltas=diff.splitlines() if diff else []
         assert all(line=='C /etc' for line in runtime_deltas), 'Unexpected application filesystem changes'
         services[service] = {'source_sha256':actual, 'uid':10001, 'read_only':True,
+                             'memory_limit_bytes':info['HostConfig']['Memory'],
+                             'pid_limit':info['HostConfig']['PidsLimit'],
                              'all_capabilities_dropped':True, 'no_new_privileges':True,
+                             'engine_readiness_probe_passed':True,
                              'published_port_scope':'127.0.0.1:8787' if service=='gateway' else 'none',
                              'unexpected_application_filesystem_changes':[],
                              'runtime_generated_directory_changes':runtime_deltas,

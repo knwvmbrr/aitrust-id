@@ -113,3 +113,22 @@ before executing. Only synthetic input is submitted. A safe failure record repor
 its source location; it excludes exception bodies and credentials. Successful
 reports are reproducible engineering evidence, not tag accuracy or a public API.
 Current execution: `runs/2026-10-10-current-service-conformance.json`.
+
+### Capacity and cancelled requests
+
+The gateway admits at most four pipelines, with a 100 ms admission wait and
+10-second upstream HTTP timeouts. Client disconnect cancels the gateway's pending
+HTTP task and releases admission. Work already received by a redactor/evaluator
+may finish inside its own isolated process; cancellation is not physical-memory
+erasure. Container PID limits are 128; memory ceilings are 256 MiB for gateway and
+evaluator, 1 GiB for the English redactor. Exhaustion affects the service route,
+not the independent website checker. Readiness must detect failed dependencies.
+
+podman-compose 1.3.0 ignores `pids_limit`. For that supported staging provider use
+`--podman-run-args="--pids-limit=128"` on its launcher; the verifier rejects the
+actual default 2048 limit. Do not assume YAML became a kernel limit. Docker Compose
+uses the field in the reference file. Future provider versions need fresh checks.
+The disposable upstream fixture is only for synthetic faults, never an accuracy
+measurement. Its 11 actual HTTP scenarios confirmed malformed output, unknown
+codes, invalid offsets, four occupied slots, rejected fifth, disconnect capacity
+recovery and timeout recovery. See the version-bound run for measurements.

@@ -34,6 +34,13 @@ class ChangePipeline(unittest.TestCase):
         return r,name
     def test_actual_change_passes(self):
         (self.root/'source.py').write_text('after\n');self.record();self.assertTrue(m.verify(self.root)['pass'])
+    def test_staged_dependency_link_cannot_bypass_exclusions(self):
+        self.record()
+        (self.root/'node_modules').symlink_to(self.root/'scripts',target_is_directory=True)
+        self.git('add','node_modules','CHANGELOG.md','runs/changes')
+        result=m.verify_staged(self.root)
+        self.assertFalse(result['pass'])
+        self.assertTrue(any('dependency/build artifact' in e for e in result['errors']))
     def test_new_change_fails_without_event(self):
         self.record();self.commit();(self.root/'source.py').write_text('after\n');self.assertFalse(m.verify(self.root)['pass'])
     def test_edit_after_record_fails(self):

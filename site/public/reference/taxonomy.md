@@ -18,6 +18,8 @@ candidate abstains.
 | `PA` | Partially Augmented | Machine-generated, then edited by a person | Provenance + observed edit events | 0.85 |
 | `UNK` | Unknown | Evaluated; nothing cleared its floor. **Overloaded: it cannot distinguish "we checked and are unsure" from "no valid evaluation was obtained". A six-state replacement is proposed in RFC-0004 and is not yet accepted** | All candidates abstained | — |
 
+| `PII_REDACTED` | Detected redaction | Detected entity values were replaced before evaluation. This does not prove all sensitive information was removed. | Trusted redactor transformation; only categories/counts appear in the assertion | n/a |
+
 ## Why MT's floor is set by its annotators
 
 *(Corrected 2026-10-08: this heading previously read "the highest floor". It is not —
@@ -71,3 +73,13 @@ that you did it is not.
 Taxonomy changes require an RFC (`rfcs/0000-template.md`) containing a detection basis, a
 labeled dataset, and measured agreement. Without that, community tagging drifts into noise
 inside a year and the labels stop meaning anything.
+
+## Executable vocabulary contract
+
+`spec/vocabulary.json` distinguishes ten adopted schema codes, three proposed
+codes, six reserved modalities and current development capabilities.
+`python3 scripts/verify-vocabulary.py` rejects consumer drift and accidental
+proposal/release promotion. A vocabulary entry is not a working detector.
+The current gateway returns tags and explicit abstentions; it does not synthesize
+a UNK tag for every no-finding result. The six-state presentation remains distinct
+from any future adopted protocol revision.

@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-10T04:27:59.190210+00:00",
+  "pass": false,
+  "phase": "intermediate_staging_resource_verification",
+  "root_cause": "podman-compose 1.3.0 ignored pids_limit; actual runtime limit was 2048 despite requested 128",
+  "fix": "Explicit Podman run argument plus actual runtime inspection; verification still required",
+  "production_modified": false,
+  "tag_accuracy_assessed": false
+}

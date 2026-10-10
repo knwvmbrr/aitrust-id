@@ -50,7 +50,7 @@ queue but stay in scope. Milestone percentages are not effort or accuracy.
 
 | Role | Accountable outcome | Boundary |
 |---|---|---|
-| Michael R. McGuire | Product acceptance, scope changes, enabled service and release decisions | Decisions are recorded; no agent adopts proposals on his behalf. |
+| Michael | Product acceptance, scope changes, enabled service and release decisions | Decisions are recorded; no agent adopts proposals on his behalf. |
 | Codex | Architecture, implementation, reproducible engineering checks and state updates | Holds the implementation pen; no verification from reading code alone. |
 | Claude | Claim wording, evidence/labeling review and gaps | Review-only during this implementation pass; changes require a coordinated handoff. |
 | Independent human reviewers | Blind labels, adjudication and real usability/accessibility judgment | Roles remain unfilled until someone accepts; agents do not count as independent labelers. |

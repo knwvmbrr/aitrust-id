@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-043530-bounded-admission-cancellation-and-real-readiness-d73337f6",
+  "recorded_at": "2026-10-10T04:35:30.078796+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1a437bfe7640f111e37fd5ba022f1a2dcf51ae1c",
+  "changed": "Bound container memory/PIDs, cancel disconnected gateway work and recover admission; replace fragile inline health command with executable readiness probes; expose verifier commands and correct reserved-code RFC status.",
+  "proves": "431 Python checks; 11 real HTTP fault scenarios; current three-service source/capability/loopback/readiness/resource checks; N-003 fully functioning on selected Linux staging.",
+  "limits": "173 requirements remain open toward target 100. Downstream work already admitted may finish in its bounded process. No independent accuracy, physical phone or human acceptance, hosted CI pass or universal isolation claim.",
+  "scope_ids": [
+    "N-003",
+    "F-040",
+    "F-041",
+    "F-042",
+    "F-043",
+    "F-098",
+    "F-103",
+    "F-104",
+    "F-112",
+    "F-115",
+    "F-154",
+    "F-149"
+  ],
+  "files": {
+    "deploy/docker-compose.yml": "5f4602be4bc9b9160f2d9cd2e1df3b83a9e4c9e42f8c6c130c67acd288fe4e50",
+    "docs/development.md": "e0e449f12c2b5d9336f8db647c30b5c2985d9ed2f7f4c1584924a90129e82e35",
+    "docs/scope-100-execution.md": "ad1e8f30eef2781b7121eac3cfde619e88f140d1f81250c2c624088031c0ee67",
+    "docs/scope-delivery.md": "b03b3821d49bcbdda575ba679ed4f547bf6ebae2e7b2daf4169bc8e06fc2dc33",
+    "docs/scope-progress.json": "0dbba47b6e40165fb095742c573668d186d0d31e4f11e2e64c7876ce43927c80",
+    "docs/scope-progress.md": "996f23769b3f233f1bb477d06f9e7c832e417697032a14dd0ad695802ff0f72d",
+    "docs/scope-task-index.md": "c88b705e77808abc793cd6b0fa8e93cc9d8f8976ea7f330ae5a74d5306a4409c",
+    "package.json": "200d0dbc709b198126c6d0f68ea25a68d5cd54a9116ce92ae9b7a45629ba80a2",
+    "rfcs/0003-modality-coverage.md": "78a32b339f02bc43927ba19309d57ff67f764789f8684f320f6145831f422b2a",
+    "runs/2026-10-10-bounded-service-conformance.json": "427a9841cda44f0417a370cb0174b8eb4e6fa345818b5dc49dff430e0ac7db05",
+    "runs/2026-10-10-resource-python-final.json": "7e380c8525dbdbf45c8d13dfdc970e3836cee863b859f42b9549dadafc32cef2",
+    "runs/2026-10-10-resource-python.json": "f87297a6052f5b8b54867fc8a34c94db992ad86f69f025b55b4917702f5414fc",
+    "runs/2026-10-10-resource-scope.json": "a1acf16c125cd265e92389f6c5ac4c2ba6063ff3a1c6b860b88c7c90d77e850b",
+    "runs/2026-10-10-service-resource-faults.json": "bc435aa42b049dc089e554c0f3c922c43867a870aab99a1b35769bd51a69d618",
+    "runs/2026-10-10-staging-health-command-failure.json": "be9535ada2fc3eb43f311ded9dc92cb0151eb6c948da9022a349b9e469e54366",
+    "runs/2026-10-10-staging-pid-limit-failure.json": "56d522a297d3ac88d8efd3d77f2dc00b5bf440e41f3cf760e70cff3166a63970",
+    "scripts/render-scope-plan.py": "250d75e0fa07e8b655d75cd0aabf6c4e033e00a1271b67e8e1547a0e85795f52",
+    "scripts/verify-service-faults.py": "bb869ae0b87cc7f5627f752122d86888f26e2a6824fecea09e70f35091a0a7a3",
+    "scripts/verify-service.py": "d3508fbcd4db85a5b2af6a12312d6c14616c50626d15cdc31735fb462bfd9783",
+    "services/anonymizer/Dockerfile": "b453922a26923d8cb7e3d25e2778d45d80ba5685e5c929427e6850bbcf11b184",
+    "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "services/evaluator/Dockerfile": "b453922a26923d8cb7e3d25e2778d45d80ba5685e5c929427e6850bbcf11b184",
+    "services/evaluator/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "services/gateway/Dockerfile": "b453922a26923d8cb7e3d25e2778d45d80ba5685e5c929427e6850bbcf11b184",
+    "services/gateway/app.py": "98284b264841bc13f37013bba3d4c882e80e7b36f5fc96bb59df9891bf8e5250",
+    "services/gateway/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "state.json": "de527edfc3efcb696da07aa343ee4fd17a1b9f7c80547e06d0b4f2f5279404ec",
+    "tests/fixtures/service-fault/Dockerfile": "f5b829c6a25c520db5de5fcec7bbaf6e88acfc5d72ae7011fe12e8369679919a",
+    "tests/fixtures/service-fault/README.md": "968a0b333d82d0e75362342d15d67343c8334bf4090729d92827eab95000b867",
+    "tests/fixtures/service-fault/app.py": "cb32bec58ba783887318bf2e981b3a81b18cc2af4a2b5a100a6fc44f1e9a4a3c",
+    "tests/test_gateway_cancellation.py": "83e3895161150e6b371091e09ca1d7497d4b9f661e43fa8fbff7654b8abd9ec6",
+    "tests/test_service_readiness_probe.py": "c0faec8db154bcc7bbda9f40f3d3ea3f54232362ab8df4df6ae0ce264ff11fb5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-bounded-service-conformance.json",
+      "sha256": "427a9841cda44f0417a370cb0174b8eb4e6fa345818b5dc49dff430e0ac7db05"
+    },
+    {
+      "path": "runs/2026-10-10-service-resource-faults.json",
+      "sha256": "bc435aa42b049dc089e554c0f3c922c43867a870aab99a1b35769bd51a69d618"
+    },
+    {
+      "path": "runs/2026-10-10-resource-python-final.json",
+      "sha256": "7e380c8525dbdbf45c8d13dfdc970e3836cee863b859f42b9549dadafc32cef2"
+    },
+    {
+      "path": "runs/2026-10-10-resource-scope.json",
+      "sha256": "a1acf16c125cd265e92389f6c5ac4c2ba6063ff3a1c6b860b88c7c90d77e850b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T04:35:30.224747+00:00"
+    }
+  ]
+}

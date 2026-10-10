@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from typing import Literal
 
 import httpx
-from fastapi import FastAPI, Header, HTTPException
+from fastapi import FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
 from starlette.middleware.body_limit import RequestBodyLimitMiddleware
 
@@ -88,7 +88,7 @@ async def healthz():
     return {'ok':True,'spec_version':SPEC_VERSION}
 
 @app.post('/v1/evaluate')
-async def evaluate(req:EvalRequest,authorization:str=Header(default=''),origin:str=Header(default='')):
+async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(default=''),origin:str=Header(default='')):
     if not hmac.compare_digest(authorization.encode(),f'Bearer {TOKEN}'.encode()):
         raise HTTPException(401,'Invalid local token')
     if origin and not origin.startswith('chrome-extension://'):
@@ -100,7 +100,8 @@ async def evaluate(req:EvalRequest,authorization:str=Header(default=''),origin:s
         await asyncio.wait_for(LIMIT.acquire(),timeout=.1)
     except TimeoutError:
         raise HTTPException(503,'Evaluator is busy; retry later')
-    try:
+    work=disconnect=None
+    async def pipeline():
         async with httpx.AsyncClient(timeout=10,trust_env=False) as client:
             normalized=unicodedata.normalize('NFC',req.text)
             red=await post_validated(client,ANONYMIZER+'/redact',{'text':normalized},Redaction)
@@ -108,6 +109,21 @@ async def evaluate(req:EvalRequest,authorization:str=Header(default=''),origin:s
             if red.entity_count and red.text==normalized:
                 raise ValueError('Redactor reports detections without changing text')
             ev=await post_validated(client,EVALUATOR+'/signals',{'text':red.text},Evaluation)
+        return red,ev
+    async def watch_disconnect():
+        # FastAPI has already consumed the validated body. Wait for the next
+        # ASGI disconnect event directly; polling is_disconnected() uses its own
+        # cancellation scope and can swallow task cancellation during cleanup.
+        while True:
+            message=await request.receive()
+            if message['type']=='http.disconnect':return
+    try:
+        work=asyncio.create_task(pipeline())
+        disconnect=asyncio.create_task(watch_disconnect())
+        completed,_=await asyncio.wait((work,disconnect),return_when=asyncio.FIRST_COMPLETED)
+        if work not in completed:
+            raise HTTPException(408,'Client disconnected before a result was available')
+        red,ev=await work
         for candidate in ev.candidates:
             for signal in candidate.signals:
                 for span in signal.spans:
@@ -119,6 +135,10 @@ async def evaluate(req:EvalRequest,authorization:str=Header(default=''),origin:s
     except (httpx.HTTPError,ValidationError,ValueError):
         raise HTTPException(502,'Local dependency returned an invalid evaluation')
     finally:
+        tasks=[task for task in (work,disconnect) if task is not None]
+        for task in tasks:
+            if not task.done():task.cancel()
+        await asyncio.gather(*tasks,return_exceptions=True)
         LIMIT.release()
     if red.entity_count:
         tags.append({'code':'PII_REDACTED','confidence':1.,'state':'asserted','signals':[{'id':'presidio.entity.v1','score':1.,'detail':{'entities':red.entities,'count':red.entity_count}}]})
