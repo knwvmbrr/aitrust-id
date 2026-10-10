@@ -63,9 +63,12 @@ itself establish encrypted storage or a multi-user team service.
 
 ## Scope change and owners
 
-This direction reopens earlier central-storage/no-telemetry exclusions (X-03,
-X-06 and F-086). Preserve their history; revise their applicability explicitly when
-the collection policy is selected. Local evaluation remains useful without
+Optional, specifically consented private research contributions are separate from
+mandatory central storage or automatic telemetry. Preserve X-03, X-06 and F-086;
+do not interpret the database direction as permission to capture all users.
+The owner accepted a metadata-only first pilot on 2026-10-10: tag result, method
+version, failure category and structured feedback. Examples require a separate
+preview, redaction review and permission. Retention and intake remain unselected. Local evaluation remains useful without
 submission. Individual users must control contribution of their own content.
 No paid gate is added to tag explanations or evidence.
 

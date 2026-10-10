@@ -2,6 +2,78 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-173518-verified-owner-pilot-source-5021d486
+
+Recorded 2026-10-10T17:35:18.411061+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded final source-bound website, PS, redaction, protocol and extension checks plus 137-case-per-engine checker regression with the owner guide link.
+- **Evidence.** All selected component and website gates pass; metadata preview/download passed two engines, no-script refusal, small-screen reflow and zero axe violations. [Change record](./runs/changes/2026-10-10-173518-verified-owner-pilot-source-5021d486.json).
+- **Not claimed.** No new tag or full requirement release. Independent labels, physical phone, recruited pilot, intake/retention and professional review remain open. Earlier full-suite refusal is retained until source review binding refresh.
+
+
+### 2026-10-10-173312-owner-guide-evidence-registration-1f9b608f
+
+Recorded 2026-10-10T17:33:12.997296+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a PS-modal link to the owner guide, versioned historical evidence notes and registered fresh PS, PII, protocol and extension revalidation reports.
+- **Evidence.** All four source-bound component checks pass. The first website revalidation correctly refused unregistered new execution files at prebuild; the changelog guard remains enabled. [Change record](./runs/changes/2026-10-10-173312-owner-guide-evidence-registration-1f9b608f.json).
+- **Not claimed.** Website revalidation is rerun against final source and registered evidence before deployment.
+
+
+### 2026-10-10-173154-refreshed-owner-guide-artifacts-6c303ade
+
+Recorded 2026-10-10T17:31:54.138702+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed generated public scope, immutable policy 1.5 text downloads, crawlable owner guide and legal draft index before source-bound revalidation.
+- **Evidence.** The built guide uses the tested metadata contract and current PS practice method; prior policy archives remain intact. [Change record](./runs/changes/2026-10-10-173154-refreshed-owner-guide-artifacts-6c303ade.json).
+- **Not claimed.** Publication and source-bound checks still run before deployment; no full requirement promotion.
+
+
+### 2026-10-10-173133-owner-pilot-ledger-update-054eaec5
+
+Recorded 2026-10-10T17:31:33.680985+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded metadata-only pilot acceptance, tested local file builder, iPhone 14 Plus handoff and legal correction backlog in scope/state. F-141 reaches executable-check milestone only.
+- **Evidence.** Both engines pass preview/download, no-script inertness, no feedback network/storage, 320px/200-percent reflow and zero axe violations. All 202 IDs remain; 102 complete and 100 open. [Change record](./runs/changes/2026-10-10-173133-owner-pilot-ledger-update-054eaec5.json).
+- **Not claimed.** No new full requirement completed. Real pilot, physical device, independent labels, intake/retention and counsel review remain open.
+
+
+### 2026-10-10-173044-reference-theme-reflow-7d6d99c3
+
+Recorded 2026-10-10T17:30:44.044088+00:00 · Contributor: Codex · change
+
+- **Changed.** Allowed static reference appearance controls to wrap at enlarged text after an actual 320px test exposed header overflow.
+- **Evidence.** Recorded the failing layout and preserved native labelled controls. [Change record](./runs/changes/2026-10-10-173044-reference-theme-reflow-7d6d99c3.json).
+- **Not claimed.** Reflow retest and human accessibility remain required.
+
+
+### 2026-10-10-172948-owner-guide-reflow-fix-4c48e639
+
+Recorded 2026-10-10T17:29:48.506479+00:00 · Contributor: Codex · change
+
+- **Changed.** Wrapped owner practice commands at narrow widths after axe found unfocusable horizontal scrolling; retained first failed check.
+- **Evidence.** Published practice examples still match the current PS method. [Change record](./runs/changes/2026-10-10-172948-owner-guide-reflow-fix-4c48e639.json).
+- **Not claimed.** Browser reflow must pass; physical iPhone and human VoiceOver remain pending.
+
+
+### 2026-10-10-172922-inert-feedback-failure-boundary-f3e23b9b
+
+Recorded 2026-10-10T17:29:22.167507+00:00 · Contributor: Codex · change
+
+- **Changed.** Feedback controls remain hidden until local-only handlers are installed; changed answers cancel preview permission; added no-JavaScript, two-engine, actual-download and 200-percent text checks.
+- **Evidence.** Syntax checks and strict feedback unit checks pass; no-script failure path is included in the browser gate. [Change record](./runs/changes/2026-10-10-172922-inert-feedback-failure-boundary-f3e23b9b.json).
+- **Not claimed.** No remote collection or physical-device acceptance.
+
+
+### 2026-10-10-172851-owner-feedback-and-legal-review-d2cf0a60
+
+Recorded 2026-10-10T17:28:51.720902+00:00 · Contributor: Codex · change
+
+- **Changed.** Added owner PS practice and iPhone handoff, metadata-only local feedback preview/download, public legal draft register and proposed corrective clauses; privacy policy 1.5 preserves prior permissions.
+- **Evidence.** Strict feedback validation rejects unapproved fields; published synthetic practice matches current PS; source inventory identifies external drafts without claiming adoption. [Change record](./runs/changes/2026-10-10-172851-owner-feedback-and-legal-review-d2cf0a60.json).
+- **Not claimed.** No private research intake, real phone result, independent accuracy label, legal formation or counsel clearance; full external draft publication remains pending.
+
+
 ### 2026-10-10-165905-published-100-open-queue-76b4335b
 
 Recorded 2026-10-10T16:59:05.753471+00:00 · Contributor: Codex · change

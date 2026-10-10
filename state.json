@@ -69,7 +69,7 @@
     "publication_evidence": "runs/2026-10-10-target-100-assets-public.json",
     "seo": {
       "crawlable_tag_pages": 20,
-      "sitemap_canonical_urls": 32,
+      "sitemap_canonical_urls": 35,
       "robots_url": "https://aitrustid.com/robots.txt",
       "sitemap_url": "https://aitrustid.com/sitemap.xml",
       "canonical_origin": "https://aitrustid.com",
@@ -115,14 +115,14 @@
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.3",
+      "version": "1.5",
       "effective_date": "2026-10-10",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
       "source": "site/src/policies.js",
       "text_downloads": true,
       "current_services_only": true,
-      "published": true,
+      "published": false,
       "verification": "runs/2026-10-10-capture-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
@@ -990,13 +990,34 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-10-target-100-current-PS-revalidation.json",
-    "PII_REDACTED": "runs/2026-10-10-target-100-current-PII-revalidation.json",
-    "protocol": "runs/2026-10-10-target-100-final-integrity-protocol.json",
-    "extension": "runs/2026-10-10-target-100-current-extension-revalidation.json",
-    "website": "runs/2026-10-10-target-100-publication-ready-website.json",
+    "PS": "runs/2026-10-10-owner-pilot-PS-revalidation.json",
+    "PII_REDACTED": "runs/2026-10-10-owner-pilot-PII-revalidation.json",
+    "protocol": "runs/2026-10-10-owner-pilot-protocol-revalidation.json",
+    "extension": "runs/2026-10-10-owner-pilot-extension-revalidation.json",
+    "website": "runs/2026-10-10-owner-pilot-website-final.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T16:59:05.715680+00:00"
+  "updated_at": "2026-10-10T17:35:18.371078+00:00",
+  "research_pilot": {
+    "accepted_scope": "tag result, method version, failure category and structured feedback only",
+    "metadata_file_builder": "executed_local_preview_download",
+    "evidence": "runs/2026-10-10-owner-feedback-browser.json",
+    "intake_connected": false,
+    "examples_authorized": false,
+    "retention_accepted": false,
+    "pilot_group_operating": false,
+    "publication_pending": true,
+    "owner_device": "iPhone 14 Plus",
+    "physical_device_result": false,
+    "checker_regression": "runs/2026-10-10-owner-guide-device-engines.json"
+  },
+  "legal_review": {
+    "source_inventory": "docs/legal/source-inventory.json",
+    "targeted_findings": "docs/legal-operations-review.md",
+    "proposed_corrections": "docs/legal/reviewed-corrections.md",
+    "all_originals_published": false,
+    "qualified_counsel_review": false,
+    "formation_complete": false
+  }
 }

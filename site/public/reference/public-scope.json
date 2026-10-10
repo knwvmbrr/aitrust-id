@@ -8079,27 +8079,33 @@
         "id": "F-141",
         "kind": "requirement",
         "title": "Pilot programme — small consenting group, feedback without collecting prompts or outputs",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T17:31:33.618951+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — metadata-only local feedback form and executed tests, 2026-10-10T17:31:33.618951+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Pilot programme — small consenting group, feedback without collecting prompts or outputs. Next package action: Keep Report/Assist/Townhall/Teamwork distinct and actual destinations visible. Required outcome: A person can access the public tag workflow and its support process.",
-        "next_owner": "Codex",
+        "next_fix": "Recruit and record a small consenting pilot, run the real workflow, review user feedback and close defects. Metadata preview/download is tested; it is not a running recruited pilot.",
+        "next_owner": "Michael recruits and accepts; Codex tooling",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/owner-operation.md",
+          "runs/2026-10-10-owner-feedback-browser.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Pilot programme — small consenting group, feedback without collecting prompts or outputs. Next package action: Keep Report/Assist/Townhall/Teamwork distinct and actual destinations visible. Required outcome: A person can access the public tag workflow and its support process."
+          "Recruit and record a small consenting pilot, run the real workflow, review user feedback and close defects. Metadata preview/download is tested; it is not a running recruited pilot."
         ],
         "queue": "open"
       }
@@ -8397,7 +8403,7 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T17:31:33.618951+00:00",
         "checked_by": "Codex",
         "implemented_by": [],
         "planning_contributors": [
@@ -8406,14 +8412,17 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Nonprofit formation and filings. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
-        "next_owner": "Codex",
+        "next_fix": "Reconcile full safe public formation drafts, approve entity/tax choices with a realistic budget and qualified counsel, and perform actual filings. Inventory and proposed corrections are not formation.",
+        "next_owner": "Michael and qualified nonprofit/tax counsel",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/legal-operations-review.md",
+          "docs/legal/reviewed-corrections.md",
+          "docs/legal/source-inventory.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Nonprofit formation and filings. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+          "Reconcile full safe public formation drafts, approve entity/tax choices with a realistic budget and qualified counsel, and perform actual filings. Inventory and proposed corrections are not formation."
         ],
         "queue": "open"
       }
@@ -8504,7 +8513,7 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T17:31:33.618951+00:00",
         "checked_by": "Codex",
         "implemented_by": [],
         "planning_contributors": [
@@ -8513,14 +8522,17 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Qualified legal review of every biometric and privacy assurance. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
-        "next_owner": "Codex",
+        "next_fix": "Qualified counsel must review actual privacy/biometric assurances and applicability. Codex targeted draft repairs and authoritative-source research do not constitute this qualified review.",
+        "next_owner": "Michael engages qualified counsel",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/legal-operations-review.md",
+          "docs/legal/reviewed-corrections.md",
+          "docs/legal/source-inventory.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Qualified legal review of every biometric and privacy assurance. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+          "Qualified counsel must review actual privacy/biometric assurances and applicability. Codex targeted draft repairs and authoritative-source research do not constitute this qualified review."
         ],
         "queue": "open"
       }
@@ -12049,7 +12061,7 @@
           "bounded_contract",
           "implemented_mechanism"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T17:31:33.618951+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution"
@@ -12060,15 +12072,17 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Accept specific collection consent, fields, retention/deletion and roles; build authenticated synthetic intake and prove replacement-host recovery before collecting real examples. Training/anomaly jobs remain separate.",
+        "next_fix": "Metadata-only first pilot accepted. Choose retention/backup expiry and roles; approve concrete private intake; exercise synthetic consent/deletion and replacement-host recovery before real submissions. Example sharing, training and anomaly jobs remain separate.",
         "next_owner": "Michael data policy; Codex application",
         "evidence": [
           "docs/data-growth-plan.md",
-          "runs/2026-10-08-private-host-foundation.json"
+          "runs/2026-10-08-private-host-foundation.json",
+          "docs/owner-operation.md",
+          "runs/2026-10-10-owner-feedback-browser.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Accept specific collection consent, fields, retention/deletion and roles; build authenticated synthetic intake and prove replacement-host recovery before collecting real examples. Training/anomaly jobs remain separate."
+          "Metadata-only first pilot accepted. Choose retention/backup expiry and roles; approve concrete private intake; exercise synthetic consent/deletion and replacement-host recovery before real submissions. Example sharing, training and anomaly jobs remain separate."
         ],
         "queue": "open"
       }
@@ -12109,7 +12123,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T17:31:33.618951+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution"
@@ -12120,16 +12134,18 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate.",
-        "next_owner": "Human device/accessibility testers; Codex fixes",
+        "next_fix": "Execute the owner guide on the identified physical iPhone 14 Plus with actual iOS version and VoiceOver; then Android/TalkBack, outside-user setup and human desktop screen-reader checks. Browser engines do not substitute.",
+        "next_owner": "Michael first iPhone test; other human testers; Codex fixes",
         "evidence": [
           "runs/2026-10-08-upgrade-device-public.json",
           "runs/2026-10-08-scope-plan-site-public.json",
-          "docs/handheld-delivery.md"
+          "docs/handheld-delivery.md",
+          "docs/owner-operation.md",
+          "runs/2026-10-10-owner-feedback-browser.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate."
+          "Execute the owner guide on the identified physical iPhone 14 Plus with actual iOS version and VoiceOver; then Android/TalkBack, outside-user setup and human desktop screen-reader checks. Browser engines do not substitute."
         ],
         "queue": "open"
       }

@@ -23,6 +23,7 @@ function Checker(){
  }
  return <><p className="text-sm leading-6">This runs PS only: a check for supported download-and-run commands and encoded-code execution. Paste an answer from any AI app to try it.</p>
  <p className="mt-2 text-sm leading-6 text-muted">Checks run on your device. No text is uploaded or saved. Commands are never executed; personal information is not redacted.</p>
+ <p className="mt-2 text-sm leading-6"><a className="underline underline-offset-4" href="/reference/operate/">New here? Try the short PS guide</a></p>
  <form className="mt-4" onSubmit={check} aria-busy={busy}><label className="block text-sm font-semibold" htmlFor={uid}>AI answer</label><textarea ref={inputRef} id={uid} className="mt-2 block w-full resize-y rounded-lg border border-input bg-surface p-3 text-base" rows={5} value={text} maxLength={40000} spellCheck={false} autoComplete="off" autoCorrect="off" autoCapitalize="off" onChange={e=>clear(e.target.value)} aria-invalid={fieldError?true:undefined} aria-describedby={uid+'-limit'+(fieldError?' '+uid+'-error':'')}/><p id={uid+'-limit'} className="mt-1 text-xs text-muted">{Array.from(text).length.toLocaleString()} / 20,000 characters · Development preview</p>
  {fieldError&&<p id={uid+'-error'} role="alert" className="mt-2 text-sm leading-6">{fieldError}</p>}
  <div className="mt-3 flex flex-wrap gap-2"><button className={button} type="submit" disabled={busy}>{busy?'Checking…':'Check answer'}</button><button className={button} type="button" onClick={()=>clear()}>Clear</button></div></form>

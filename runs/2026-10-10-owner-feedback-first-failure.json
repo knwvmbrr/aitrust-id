@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-10T17:29:40.897227+00:00",
+  "pass": false,
+  "error_signature": "axe scrollable-region-focusable on two practice command blocks at 320px",
+  "root_cause": "horizontal scrolling command blocks were not keyboard focusable",
+  "fix": "wrap practice text within viewport instead of horizontal scrolling",
+  "retest_required": true,
+  "independent_accuracy_evidence": false
+}

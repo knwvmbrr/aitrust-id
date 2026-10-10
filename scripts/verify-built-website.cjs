@@ -31,6 +31,7 @@ async function main(){
   // Ignore a caller's stale external fixture URL. Both tools see this new build.
   await run(process.execPath,['scripts/verify-site.cjs'],env);
   await run(process.execPath,['scripts/verify-site-accessibility.cjs'],env);
+ await run(process.execPath,['scripts/verify-research-feedback.cjs'],env);
  }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(()=>{console.error('CURRENT_BUILD_WEBSITE_REVALIDATION_FAILED');process.exitCode=1;});

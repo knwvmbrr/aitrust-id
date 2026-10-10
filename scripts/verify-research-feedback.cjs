@@ -1,0 +1,32 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const {chromium,webkit}=require('playwright'),{writeReport}=require('./execution-report.cjs'),{parseHeaders,headersFor}=require('./static-headers.cjs');
+const root=path.resolve(__dirname,'..'),dist=path.join(root,'site/dist');
+(async()=>{
+ const {feedbackRecord}=await import('../site/src/research-feedback.js');
+ assert(fs.readFileSync(path.join(root,'services/evaluator/app.py'),'utf8').includes("'revision':'"+feedbackRecord({reported_result:'not_checked',failure_category:'none_observed',feedback:'easy_to_understand'}).method_version+"'"),'Feedback method version does not match evaluator');
+ const rules=parseHeaders(fs.readFileSync(path.join(dist,'_headers'),'utf8'));let server,base=process.env.AITRUST_SITE_URL;
+ if(!base){server=http.createServer((req,res)=>{try{if(req.method!=='GET')throw Error();const name=new URL(req.url,'http://localhost').pathname;let file=path.resolve(dist,'.'+decodeURIComponent(name));if(!file.startsWith(dist+path.sep))throw Error();if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');res.writeHead(200,{'content-type':file.endsWith('.html')?'text/html':file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':'application/octet-stream',...headersFor(rules,name)});res.end(fs.readFileSync(file));}catch{res.writeHead(404);res.end();}});await new Promise(r=>server.listen(0,'127.0.0.1',r));base='http://127.0.0.1:'+server.address().port;}
+ const engines=[];
+ try{for(const [name,type] of [['chromium',chromium],['webkit',webkit]]){
+  const browser=await type.launch();try{const nojs=await browser.newContext({javaScriptEnabled:false});const inert=await nojs.newPage();await inert.goto(base+'/reference/operate/');assert.equal(await inert.locator('[data-feedback-form]').isVisible(),false,'No-script form could transmit metadata');assert(await inert.getByRole('heading',{name:'Your first check'}).isVisible());await nojs.close();const context=await browser.newContext({viewport:{width:320,height:740},acceptDownloads:true,bypassCSP:true});const page=await context.newPage(),requests=[],errors=[];page.on('request',r=>requests.push(r.url()));page.on('pageerror',e=>errors.push(e.message));await page.goto(base+'/reference/operate/');await page.waitForLoadState('networkidle');
+  const download=page.getByRole('button',{name:'Download feedback file',exact:true}),preview=page.locator('[data-feedback-preview]');assert(await download.isDisabled());
+  const initial=requests.length;
+  await page.getByLabel('What did PS show?',{exact:true}).selectOption('pattern_found');await page.getByLabel('Did something seem wrong?',{exact:true}).selectOption('unexpected_finding');await page.getByLabel('How did it feel to use?',{exact:true}).selectOption('needs_clearer_explanation');
+  await page.getByRole('button',{name:'Preview feedback file'}).focus();await page.keyboard.press('Enter');
+  const expected=feedbackRecord({reported_result:'pattern_found',failure_category:'unexpected_finding',feedback:'needs_clearer_explanation'});assert.deepEqual(JSON.parse(await preview.textContent()),expected);assert(await download.isDisabled());
+  await page.getByRole('checkbox',{name:'I have reviewed this preview and choose to download this file.'}).check();
+  const pending=page.waitForEvent('download');await download.click();const file=await pending;assert.equal(file.suggestedFilename(),'AI-Trust-ID-PS-feedback.json');assert.deepEqual(JSON.parse(fs.readFileSync(await file.path(),'utf8')),expected);
+  assert((await page.locator('[data-feedback-status]').innerText()).includes('Nothing was submitted'));
+  await page.getByLabel('How did it feel to use?',{exact:true}).selectOption('hard_to_use');assert(await download.isDisabled());assert.equal(await page.getByRole('checkbox').isChecked(),false);assert((await preview.innerText()).includes('Choose your answers'));assert.equal(requests.length,initial,'Feedback triggered a network request');
+  await page.getByRole('button',{name:'Clear my choices'}).click();assert.equal(await page.getByLabel('What did PS show?',{exact:true}).inputValue(),'');assert(await download.isDisabled());
+  assert.equal(await page.evaluate(()=>sessionStorage.length),0);assert.equal(await page.evaluate(()=>localStorage.length),0);
+  await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});let count=0;for(const theme of ['light','dark']){await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);const violations=await page.evaluate(async()=> (await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag22aa']}})).violations);count+=violations.length;assert.equal(violations.length,0,JSON.stringify(violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))));}
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.evaluate(()=>document.documentElement.style.fontSize='32px');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await page.goto(base+'/reference/legal-drafts/');assert(await page.getByRole('heading',{name:'Visible policies. Clear draft status.'}).isVisible());assert((await page.locator('main').innerText()).includes('not all published or fully reviewed'));
+  assert.equal(errors.length,0,errors.join('\n'));engines.push({engine:name,no_script_form_inert:true,preview_matches_download:true,permission_required:true,changed_answers_invalidate_permission:true,no_feedback_network_or_storage:true,keyboard_preview:true,reflow_320_and_200_percent:true,axe_violations:count,physical_device_tested:false});
+  await context.close();}finally{await browser.close();}
+ }
+ const files=['site/src/research-feedback.js','site/scripts/owner-guide.mjs','scripts/verify-research-feedback.cjs','tests/research-feedback.cjs'];const record={captured_at:new Date().toISOString(),pass:true,base,engines,sources:Object.fromEntries(files.map(f=>[f,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')])),metadata_only:true,intake_connected:false,independent_accuracy_evidence:false};writeReport(process.env.AITRUST_FEEDBACK_REPORT||'output/verification/research-feedback.json',record,root);console.log(JSON.stringify(record));
+ }finally{if(server)await new Promise(r=>server.close(r));}
+})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -48,7 +48,7 @@ each need their own terms and tests. They are not enabled by these checks.
   synthetic DOM fixtures; prompt/hidden/toolbar exclusion, races, six states,
   evidence disclosure, compact layout and automated accessibility.
 
-`runs/2026-10-10-privacy-device-engines.json` passed 127 method-parity cases
+The earlier `runs/2026-10-10-privacy-device-engines.json` passed 127 method-parity cases
 in each engine, offline save/reload/removal, console/storage/network canaries,
 no session storage and empty IndexedDB on both engines. The 9 version 1.3 policy
 pages and real no-script downloads passed in
@@ -56,3 +56,11 @@ pages and real no-script downloads passed in
 separately after deployment. Physical phones, a human
 screen-reader, broader live-vendor compatibility and installed-profile refresh
 are not substituted by these synthetic engineering tests.
+
+## Owner-first metadata feedback update
+
+The optional owner guide uses a strict metadata-only file builder, with no intake
+or storage. Its preview/download and stale-permission behavior pass in both
+engines under `runs/2026-10-10-owner-feedback-browser.json`. No-JavaScript controls
+remain inert. Version 1.5 adds this explicit choice and preserves prior-purpose
+permissions. Real pilot, physical phone and independent labels remain unverified.

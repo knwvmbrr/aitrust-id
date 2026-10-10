@@ -31,7 +31,9 @@ version and a new holdout; the exposed examples become development material.
 The current engineering counts and dated checks are in [state.json](../state.json)
 and the [scope ledger](scope-progress.md). The PS development set has 86 cases.
 Independent labels have not been obtained. The release gate still fails.
-The updated full container pipeline has not been rerun. No certification is claimed.
+Current context-v6 staging passed 32 real HTTP service checks and 11 additional
+resource/failure checks. Those engineering results are not independent accuracy
+evidence. No certification is claimed.
 
 On a phone, open https://aitrustid.com/#person/PS → **Review test examples**, open
 your assigned JSON file, label and explain each item, then download your labels.

@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-10-10T17:31:09.742Z",
+  "pass": true,
+  "base": "http://127.0.0.1:49856",
+  "engines": [
+    {
+      "engine": "chromium",
+      "no_script_form_inert": true,
+      "preview_matches_download": true,
+      "permission_required": true,
+      "changed_answers_invalidate_permission": true,
+      "no_feedback_network_or_storage": true,
+      "keyboard_preview": true,
+      "reflow_320_and_200_percent": true,
+      "axe_violations": 0,
+      "physical_device_tested": false
+    },
+    {
+      "engine": "webkit",
+      "no_script_form_inert": true,
+      "preview_matches_download": true,
+      "permission_required": true,
+      "changed_answers_invalidate_permission": true,
+      "no_feedback_network_or_storage": true,
+      "keyboard_preview": true,
+      "reflow_320_and_200_percent": true,
+      "axe_violations": 0,
+      "physical_device_tested": false
+    }
+  ],
+  "sources": {
+    "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
+    "site/scripts/owner-guide.mjs": "f9c50c5a055853c6ee81950a062b5eef14c58fcb6dd705738d8b2ac1abd72f61",
+    "scripts/verify-research-feedback.cjs": "c36e42e7c3b084948983cb7335d8307ceda97ffc11aa567b503d9bd9047a4c7a",
+    "tests/research-feedback.cjs": "cc9b469b4deb2f5ee638b5a97eb85a4a816ecd04e59f34d1f6f0fd5afde49a4d"
+  },
+  "metadata_only": true,
+  "intake_connected": false,
+  "independent_accuracy_evidence": false
+}

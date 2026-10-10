@@ -375,3 +375,8 @@ authorship and unchecked revocation. These are functioning development component
 PA, FA, HP, MT and IV remain unavailable. `npm run verify:offline-components`
 executes their controls; `npm run verify:composition` exercises both browser engines.
 The new HP/MT/FI fixtures are synthetic development scenarios, not release evidence.
+
+Owner-first practice: [Start with PS](https://aitrustid.com/reference/operate/).
+Optional feedback previews and downloads a local metadata file; it sends nothing.
+[Legal draft register](docs/legal/README.md) separates effective policies, proposed
+corrections, restricted records and the remaining full-package review.
