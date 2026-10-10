@@ -33,10 +33,14 @@ The real inventory test refuses any attempted socket connection.
 · [Full current Python execution and target controls](../runs/2026-10-10-target25-source-checks-repaired.json)
 
 The required `spec` CI job now runs the stronger verifier and corruption tests.
-All eleven required contexts passed on both the first push and PR source
-`a3c3e2509fa80aa4cc827395a8ecddefecce9437`; see
-[actual hosted checks](../runs/2026-10-10-spdx-first-hosted-engineering-pass.json).
-The README review correction requires fresh checks before normal protected merge.
+All eleven required contexts passed on both the reviewed push and PR source
+`5d8b47b18688bace1f8b01ff4d4df2bf1d8e7a2c`: 22 successful check results.
+[PR 13](https://github.com/knwvmbrr/aitrust-id/pull/13) merged through the protected
+path; [actual merge and check evidence](../runs/2026-10-10-spdx-protected-merge.json).
+The updated site is published: [561 matching artifact comparisons](../runs/2026-10-10-spdx-target25-publication.json)
+and [all 20 tag panels checked on the live site](../runs/2026-10-10-spdx-target25-live-site.json).
+Automated accessibility checks report zero violations; actual human/device and
+independent tag accuracy acceptance remain separate and pending.
 
 ## What a pass establishes
 

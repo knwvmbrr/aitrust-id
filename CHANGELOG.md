@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-223826-spdx-published-evidence-50c98ee3
+
+Recorded 2026-10-10T22:38:26.694742+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish exact site, final protected-merge and live modal evidence for the reviewed SPDX increment; update current state.
+- **Evidence.** 22 required checks passed on reviewed source; PR 13 normally merged; 561 artifact comparisons match; live 20 panels pass automated checks. [Change record](./runs/changes/2026-10-10-223826-spdx-published-evidence-50c98ee3.json).
+- **Not claimed.** 97 full requirements remain open; target 25 needs 72 more full closures. No independent accuracy or full license clearance granted.
+
+
 ### 2026-10-10-222509-readme-spdx-review-and-hosted-proof-30da7981
 
 Recorded 2026-10-10T22:25:09.099873+00:00 · Contributor: Codex · change
