@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-10T19:26:24.435418+00:00",
+  "pass": false,
+  "error_signature": "Running gateway source remained the previous published source after staged Compose build",
+  "root_cause": "The staging Compose invocation resolved the relative build context through the existing environment/project directory, despite an absolute compose file path.",
+  "fix": "Use a private staging override with an absolute verified source context for the three owned service builds. Preserve published ports, networks, readonly/capability boundaries; supply the already documented PID creation flag. Verify actual image sources before acceptance.",
+  "previous_source_sha256": "271b4081146cffbadbd759bd38f18ff3ceab98b5efaa5b9cb710bdcd4328a26c",
+  "production_restart": false,
+  "local_docker_started": false,
+  "thresholds_weakened": false
+}

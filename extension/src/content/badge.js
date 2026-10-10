@@ -24,6 +24,22 @@
       abstentions:a.abstentions.map(value=>pick(value,['code','reason','floor'])),
       training_label:null,review_status:'unreviewed_detector_output',delivery:'local_download_only'};
   }
+  function replayRecord(assertion){
+    const pick=(value,keys)=>Object.fromEntries(keys.filter(key=>value?.[key]!==undefined).map(key=>[key,value[key]]));
+    return {assertion_id:assertion.assertion_id,spec_version:assertion.spec_version,
+      subject:pick(assertion.subject,['sha256','char_len','origin_host','captured_at','modality']),
+      tags:assertion.tags.map(tag=>({...pick(tag,['code','confidence','floor','state']),signals:tag.signals.map(signal=>{
+        const value=pick(signal,['id','score','spans']);
+        if(signal.id==='presidio.entity.v1'&&signal.detail)value.detail=pick(signal.detail,['entities','count']);
+        return value;
+      })})),abstentions:assertion.abstentions.map(value=>pick(value,['code','confidence','floor','reason'])),
+      evaluator:{...pick(assertion.evaluator,['calibration_id','latency_ms','preprocessing']),models:assertion.evaluator.models.map(value=>pick(value,['name','revision','sha256']))}};
+  }
+  function download(value,name){
+    const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));
+    const link=document.createElement('a');link.className='aitrust-mount';link.href=url;link.download=name;link.hidden=true;
+    document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
   let live, capture, captureMessage='';
   function announce(text) {
     if (!live) {
@@ -69,6 +85,16 @@
       for(const item of assertion.abstentions){const li=document.createElement('li');li.textContent=displayCode(item.code)+': '+(meanings[item.reason]||'no supported conclusion')+'.';list.append(li);}
       detail.append(list);container.append(detail);
     }
+    if(assertion?.evaluator?.preprocessing&&globalThis.AITrustContract?.inspect(assertion).status==='accepted'){
+      const detail=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Reproduce this check';detail.append(summary);
+      const note=document.createElement('p');note.textContent='Download the versioned record, then use the local replay guide. It includes fingerprints, positions and all findings for this response. Repeatability does not establish accuracy.';detail.append(note);
+      const label=document.createElement('label'),permission=document.createElement('input');permission.type='checkbox';permission.className='replay-consent';
+      label.append(permission,document.createTextNode(' Include the complete replay metadata.'));detail.append(label);
+      const button=document.createElement('button');button.type='button';button.className='check replay-export';button.textContent='Download replay record';button.disabled=true;
+      permission.addEventListener('change',()=>{button.disabled=!permission.checked;});
+      button.addEventListener('click',()=>{if(permission.checked)download(replayRecord(assertion),'ai-trust-id-replay.json');});detail.append(button);
+      const guide=document.createElement('a');guide.href='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/assertion-replay.md';guide.target='_blank';guide.rel='noopener noreferrer';guide.textContent='Local replay guide';detail.append(guide);container.append(detail);
+    }
     const labels={'sig.piped_installer.v4':'Download piped to a shell','sig.remote_command_substitution.v4':'Downloaded output used in an execution command','sig.remote_process_substitution.v4':'Downloaded code handed to an interpreter','sig.remote_backtick_substitution.v3':'Downloaded output substituted into a command','sig.obfuscated_payload.v3':'Encoded content passed to eval or exec','presidio.entity.v1':'Detected entity redaction'};
     const signals=(assertion?.tags||[]).filter(tag=>tag.code===code).flatMap(tag=>tag.signals||[]);
     if(signals.length){
@@ -104,7 +130,7 @@
       .panel{width:min(24rem,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:16px;border:1px solid #a3a3a3;border-radius:8px;background:#fff;color:#171717;overflow:auto;overflow-wrap:anywhere;font:14px/1.5 system-ui,sans-serif}
       .panel::backdrop{background:rgb(0 0 0 / .25)} header{display:flex;align-items:center;justify-content:space-between;gap:12px}
       h2{margin:0;font:600 16px/1.5 ui-monospace,monospace;text-wrap:balance} p{margin:12px 0;text-wrap:pretty;font-variant-numeric:tabular-nums}
-      summary{cursor:pointer;min-height:32px;padding:6px 0;font-weight:600}summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}ul{padding-left:20px}li{margin:8px 0}.export-note{font-size:12px} .close,.check,.export{min-height:32px;padding:4px 10px;border:1px solid #a3a3a3;border-radius:4px;background:transparent} footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+      summary{cursor:pointer;min-height:32px;padding:6px 0;font-weight:600}summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}ul{padding-left:20px}li{margin:8px 0}.export-note{font-size:12px} .close,.check,.export{min-height:32px;padding:4px 10px;border:1px solid #a3a3a3;border-radius:4px;background:transparent} .replay-export{display:block;margin:12px 0;min-height:44px}.replay-consent{width:20px;height:20px;vertical-align:middle} footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
       [hidden]{display:none!important}
       @media(prefers-color-scheme:dark){:host{color:#e5e5e5}.tag,.panel{background:#171717;color:#e5e5e5;border-color:#737373}}
       @media(forced-colors:active){.tag,.panel,.close,.check,.export{background:Canvas;color:CanvasText;border-color:CanvasText}button:focus-visible{outline-color:Highlight}}
@@ -125,9 +151,7 @@
     root.querySelector('.check').addEventListener('click',check);
     root.querySelector('.export').addEventListener('click',()=>{
       const value=record(item,item.selectedCode);if(!value)return;
-      const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));
-      const link=document.createElement('a');link.className='aitrust-mount';link.href=url;link.download='ai-trust-id-'+(value.selected_tag||'result')+'.json';link.hidden=true;
-      document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+      download(value,'ai-trust-id-'+(value.selected_tag||'result')+'.json');
     });
     host.append(holder);roots.set(host,item);update(host,'PENDING');return holder;
   }

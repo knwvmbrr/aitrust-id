@@ -5,6 +5,8 @@ import hmac
 import os
 import time
 from protocol.normalization import normalize_nfc
+from protocol.replay_identity import RedactorIdentity, pipeline_identity
+from pathlib import Path
 import uuid
 from datetime import datetime, timezone
 from typing import Literal
@@ -44,6 +46,7 @@ class Redaction(StrictModel):
         'PERSON','PHONE_NUMBER','SG_NRIC_FIN','UK_NHS','URL','US_BANK_NUMBER',
         'US_DRIVER_LICENSE','US_ITIN','US_PASSPORT','US_SSN']]=Field(max_length=32)
     entity_count:int=Field(ge=0,le=200_000)
+    identity:RedactorIdentity
 
     @model_validator(mode='after')
     def consistent_categories(self):
@@ -142,7 +145,19 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
         LIMIT.release()
     if red.entity_count:
         tags.append({'code':'PII_REDACTED','confidence':1.,'state':'asserted','signals':[{'id':'presidio.entity.v1','score':1.,'detail':{'entities':red.entities,'count':red.entity_count}}]})
-    return {'assertion_id':str(uuid.uuid4()),'spec_version':SPEC_VERSION,'subject':{'sha256':hashlib.sha256(red.text.encode()).hexdigest(),'char_len':len(red.text),'origin_host':req.origin_host,'captured_at':datetime.now(timezone.utc).isoformat(),'modality':req.modality},'tags':tags,'abstentions':abstentions,'evaluator':{'models':[m.model_dump() for m in ev.models],'calibration_id':ev.calibration_id,'latency_ms':round((time.perf_counter()-t0)*1000,1)}}
+    from protocol import normalization
+    preprocessing=pipeline_identity({
+        'gateway_source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        'normalization_source_sha256':hashlib.sha256(Path(normalization.__file__).read_bytes()).hexdigest(),
+        'normalization_data_sha256':hashlib.sha256(Path(normalization.__file__).with_name('unicode15-data.json').read_bytes()).hexdigest(),
+        'rule_floor':FLOORS['PS'],
+        'redactor':red.identity.model_dump(),
+    })
+    models=[m.model_dump() for m in ev.models]+[
+        {'name':'presidio-redaction','sha256':red.identity.sha256,'revision':red.identity.version},
+        {'name':'gateway-pipeline','sha256':preprocessing['sha256'],'revision':preprocessing['version']},
+    ]
+    return {'assertion_id':str(uuid.uuid4()),'spec_version':SPEC_VERSION,'subject':{'sha256':hashlib.sha256(red.text.encode()).hexdigest(),'char_len':len(red.text),'origin_host':req.origin_host,'captured_at':datetime.now(timezone.utc).isoformat(),'modality':req.modality},'tags':tags,'abstentions':abstentions,'evaluator':{'models':models,'preprocessing':preprocessing,'calibration_id':ev.calibration_id,'latency_ms':round((time.perf_counter()-t0)*1000,1)}}
 
 def calibrate(candidates):
     """Only PS can assert from the evaluator; the redactor owns PII assertions."""

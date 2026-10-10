@@ -1,3 +1,4 @@
+from replay_fixture import synthetic_identity
 """Cancellation must release admission and cancel upstream work without bypassing redaction."""
 import asyncio
 from fastapi import HTTPException
@@ -14,7 +15,7 @@ def test_client_disconnect_cancels_pending_http_and_releases_slot(monkeypatch):
     async def scenario():
         started=asyncio.Event();cancelled=asyncio.Event()
         async def handle(req):
-            if req.url.path=='/redact':return httpx.Response(200,json={'text':'synthetic','entities':[],'entity_count':0})
+            if req.url.path=='/redact':return httpx.Response(200,json={'identity':synthetic_identity(),'text':'synthetic','entities':[],'entity_count':0})
             started.set()
             try:await asyncio.Event().wait()
             except asyncio.CancelledError:cancelled.set();raise
@@ -31,7 +32,7 @@ def test_caller_cancellation_joins_upstream_and_releases_slot(monkeypatch):
     async def scenario():
         started=asyncio.Event();cancelled=asyncio.Event()
         async def handle(req):
-            if req.url.path=='/redact':return httpx.Response(200,json={'text':'synthetic','entities':[],'entity_count':0})
+            if req.url.path=='/redact':return httpx.Response(200,json={'identity':synthetic_identity(),'text':'synthetic','entities':[],'entity_count':0})
             started.set()
             try:await asyncio.Event().wait()
             except asyncio.CancelledError:cancelled.set();raise
@@ -49,7 +50,7 @@ def test_fifth_request_rejected_without_entering_upstream_then_slots_recover(mon
         admitted=0;four_started=asyncio.Event();release=asyncio.Event()
         async def handle(req):
             nonlocal admitted
-            if req.url.path=='/redact':return httpx.Response(200,json={'text':'synthetic','entities':[],'entity_count':0})
+            if req.url.path=='/redact':return httpx.Response(200,json={'identity':synthetic_identity(),'text':'synthetic','entities':[],'entity_count':0})
             admitted+=1
             if admitted==4:four_started.set()
             await release.wait();return httpx.Response(200,json={'candidates':[],'models':[],'calibration_id':'synthetic'})

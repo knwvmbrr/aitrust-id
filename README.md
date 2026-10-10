@@ -382,3 +382,12 @@ Owner-first practice: [Start with PS](https://aitrustid.com/reference/operate/).
 Optional feedback previews and downloads a local metadata file; it sends nothing.
 [Legal draft register](docs/legal/README.md) separates effective policies, proposed
 corrections, restricted records and the remaining full-package review.
+
+### Reproduce your local-service record
+
+The extension offers a separate **Reproduce this check** download for new records.
+It contains all findings and the selected pipeline identities, with no response
+text. Follow the [local replay guide](docs/assertion-replay.md) to compare it against
+your original text through your authenticated loopback service. The command reports
+matching findings, changed input, differences or unavailable history. Matching is
+repeatability, not an accuracy score. It does not send research data to us.

@@ -184,9 +184,21 @@ def test_missing_live_service_evidence_refused(monkeypatch):
     original = guard.read_json
     def altered(file):
         row = original(file)
-        if file.name.endswith('real-service.json'):
+        if file.relative_to(ROOT).as_posix()==manifest()['service_evidence']:
             row['services']['evaluator']['source_sha256'] = '0' * 64
         return row
     monkeypatch.setattr(guard, 'read_json', altered)
     with pytest.raises(ValueError, match='Service source'):
         guard.service_evidence(manifest()['service_evidence'])
+
+
+def test_replay_proof_requires_current_executed_private_boundary(monkeypatch):
+    relative=manifest()['replay_evidence']
+    original=guard.read_json
+    for field,value in [('actual_pipeline_and_cli_executed',False),('public_intake_connected',True),('private_markers_absent_from_logs',False),('temporary_input_directory_removed',False),('sources',{})]:
+        def altered(file):
+            row=original(file)
+            if file.as_posix().endswith(relative):row[field]=value
+            return row
+        monkeypatch.setattr(guard,'read_json',altered)
+        with pytest.raises(ValueError):guard.replay_evidence(relative)

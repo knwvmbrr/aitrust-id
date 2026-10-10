@@ -3,7 +3,7 @@ WORKDIR /app
 COPY services/gateway/requirements.lock .
 RUN pip install --no-cache-dir --require-hashes -r requirements.lock
 COPY --chmod=0444 services/gateway/app.py services/gateway/healthcheck.py .
-COPY --chmod=0444 protocol/http_privacy.py protocol/normalization.py protocol/unicode15-data.json ./protocol/
+COPY --chmod=0444 protocol/http_privacy.py protocol/normalization.py protocol/replay_identity.py protocol/unicode15-data.json ./protocol/
 USER 10001:10001
 EXPOSE 8000
 CMD ["uvicorn", "protocol.http_privacy:application", "--factory", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]

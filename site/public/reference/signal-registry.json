@@ -12,7 +12,9 @@
       "source_files": [
         "services/anonymizer/app.py",
         "services/anonymizer/model_identity.py",
-        "services/anonymizer/requirements.lock"
+        "services/anonymizer/requirements.lock",
+        "services/anonymizer/replay_metadata.py",
+        "protocol/replay_identity.py"
       ]
     },
     {

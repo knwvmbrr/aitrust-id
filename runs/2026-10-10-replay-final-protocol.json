@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-10T19:40:13.045257+00:00",
+  "pass": true,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "protocol",
+    "sources": {
+      "eval/revalidation.json": "f1816a4de8b7a15c09b0dd4b0698a82e02b1603ad74a1823a90c0a9f952e9a7c",
+      "eval/vectors/ps-unicode-redaction.json": "7690cb2ffb6c7843513554481dc25775ed52661850c792b7463536f481c5d6ea",
+      "eval/vectors/reserved-subjects-v1.json": "fdd385117f811400c2d8a31e8c050a571a1b238999dc5fc91ab7337ffe7494d6",
+      "eval/vectors/subjects-v1.json": "3e47d7e698f9e16926a68fbf82d39cbd23f7e9a63f4c38deaab526782f7c086c",
+      "eval/vectors/subjects-v2.json": "4281cc7ab369f1d415890b130dfcaae80b115c4b2bae47892d0a9b455e7d4fe0",
+      "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+      "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+      "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+      "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+      "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+      "protocol/measurements.py": "4d4954f954ea2802761ffb2ff065f099f11bdb16751fd78f460ec8d869e9f53b",
+      "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+      "protocol/normalization.cjs": "dc801f09e3abb32f89fde3005bf48e7f62ed46d628dadcd02c2f62ec324f75c4",
+      "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+      "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+      "protocol/replay.py": "1276d36794919a538b70799cc4603de7294789c96c1fff79f5250958cc3f43dd",
+      "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "protocol/reserved-subjects.cjs": "4ef18ca508118d39eab0bb821a35db553961c80ffa040d18dacf9c4300cb49b9",
+      "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+      "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+      "protocol/signals.py": "3e9e21b828b375b2ad08cb8c734bf8de142512bca6226482abe017c3e00bfda3",
+      "protocol/subjects.cjs": "0551d3a866639f232e9c7d1060ef021e3dd6b7147408cf31a8d3d0f21a1c4469",
+      "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "scripts/replay-assertion.py": "9c0555438fa20ee07c6a562bd0b914634b404a5176e2026cd97c30451169b3f7",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/verify-assertion-replay.py": "67ba07f3edc6da225887d0ed334c21b43ccdb025621dc07fbbb23ad24a5da51b",
+      "scripts/verify-reserved-subjects.py": "4c2f00032e4b903ae8b84a1104efc1691032ece73d4caa39cea5d3d798aa607c",
+      "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+      "spec/signal-registry.json": "2c61ef8b53a604116b5197c3d59c3e2b0a39291e382fe4b55bbb2362abcdee29",
+      "spec/vocabulary.json": "d3c14256da3d44c3a02f252c591a2f9039ebc2944b73837c7c521d8adac0002a",
+      "tests/replay_fixture.py": "293c963d5cd9e34f9583ed81ca39e82e987b3a97a703506d6e5b2f672770528a",
+      "tests/test_assertion_conformance.py": "0095b72455ef548f00c84bacbf572e15ddba6c44380592555f22f29bba644a2d",
+      "tests/test_assertion_formats.py": "6a7b667de7a49140731e22f9470cb2ba649872fb3b12650e97187cc7fe5b34f8",
+      "tests/test_assertion_replay.py": "73b99f41e7f0c14760bb05bdd7528cce427890698fc66d0a0e9ce116a867836d",
+      "tests/test_reserved_subjects.py": "491c468dbd6f43a6a093c37326e4c7379a033aa1be0c47120ddb5c3e34b978b9"
+    },
+    "sha256": "c093501f6b7b026592d1abde9519d9dbda1b4ec0de67ba54ba5ceede6720661c",
+    "commands": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_assertion_formats.py",
+        "tests/test_assertion_replay.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-reserved-subjects.py"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_assertion_formats.py",
+        "tests/test_assertion_replay.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "cf8024d92418920da754bff21e1927399cf9c552d56a30fcc23df7582f894cdc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-reserved-subjects.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "1ef336e46da0299c63c6a64f09acf67948151a9cb44531d333370a49b8f97846",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

@@ -1,3 +1,4 @@
+from replay_fixture import synthetic_identity
 """Canary checks exercise real parsing, errors and middleware, not error mocks."""
 import asyncio
 import importlib.util
@@ -116,7 +117,7 @@ def test_success_remains_a_valid_assertion(private_gateway, monkeypatch):
     original = httpx.AsyncClient
     def handle(request):
         if request.url.path == '/redact':
-            return httpx.Response(200, json={'text': '<PERSON>', 'entities': ['PERSON'], 'entity_count': 1})
+            return httpx.Response(200, json={'identity':synthetic_identity(),'text': '<PERSON>', 'entities': ['PERSON'], 'entity_count': 1})
         return httpx.Response(200, json={'candidates': [], 'models': [], 'calibration_id': 'synthetic'})
     monkeypatch.setattr(private_gateway.httpx, 'AsyncClient',
                         lambda **kw: original(transport=httpx.MockTransport(handle), **kw))

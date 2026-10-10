@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-10T19:20:35.904259+00:00",
+  "pass": false,
+  "error_signature": "FileNotFoundError: relative deploy/docker-compose.yml not resolved by staging Compose",
+  "container_start_exit": 1,
+  "build_and_start_completed": false,
+  "fix": "Use the absolute verified Compose file path in the isolated source directory; force recreation of only the named owned staging stack after building.",
+  "real_data_used": false,
+  "local_docker_started": false
+}

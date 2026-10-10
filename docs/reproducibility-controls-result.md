@@ -55,3 +55,12 @@ Evidence: [Python checks](../runs/2026-10-10-reproducibility-python.json),
 [extension](../runs/2026-10-10-extension-final-revalidation.json),
 [fresh-build website](../runs/2026-10-10-website-current-revalidation.json),
 [actual release refusal](../runs/2026-10-10-accessibility-release-refusal.json).
+
+## Later integration — 2026-10-10
+
+The earlier 60% assessment above describes its recorded source. F-003 is now 80%:
+new service assertions carry bounded redactor/configuration and pipeline identities,
+and exact browser-downloaded synthetic records have replayed through the actual
+CLI/services. All 38 catalogue IDs are preserved. See [executed replay result](assertion-replay-result.md).
+Missing historical identity/input still cannot be reconstructed; independent
+validation, real phones and human accessibility remain separate open acceptance.

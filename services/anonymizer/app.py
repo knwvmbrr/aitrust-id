@@ -22,6 +22,8 @@ class OfflineEmailRecognizer(EmailRecognizer):
 analyzer.registry.remove_recognizer('EmailRecognizer')
 analyzer.registry.add_recognizer(OfflineEmailRecognizer())
 anonymizer=AnonymizerEngine()
+from replay_metadata import identity
+REDACTOR_IDENTITY=identity(analyzer,MODEL_IDENTITY)
 class Doc(BaseModel):
     model_config=ConfigDict(extra='forbid')
     text:str=Field(max_length=200_000)
@@ -29,6 +31,6 @@ class Doc(BaseModel):
 def healthz():return {'ok':True, 'model_identity':MODEL_IDENTITY}
 @app.post('/redact')
 def redact(doc:Doc):
-    results=analyzer.analyze(text=doc.text,language='en')
+    results=analyzer.analyze(text=doc.text,language='en',score_threshold=0.0)
     output=anonymizer.anonymize(text=doc.text,analyzer_results=results)
-    return {'text':output.text,'entities':sorted({r.entity_type for r in results}),'entity_count':len(results)}
+    return {'text':output.text,'entities':sorted({r.entity_type for r in results}),'entity_count':len(results),'identity':REDACTOR_IDENTITY}

@@ -17,7 +17,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 902,
+  "python_tests_passed": 945,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1001,7 +1001,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T17:57:12.884265+00:00",
+  "updated_at": "2026-10-10T19:43:40.681379+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1044,5 +1044,22 @@
     "publication_pending": false,
     "source_commit": "a0718543dac233bb7fc10393f32fc987091574c6",
     "publication": "runs/2026-10-10-registry-deferral-deployment.json"
+  },
+  "assertion_replay": {
+    "status": "current_unsigned_local_service_replay_executed",
+    "scope_percent": 80,
+    "actual_linux_service_cases": 32,
+    "actual_cli_cases": 13,
+    "actual_browser_download_replayed": true,
+    "metadata_export_requires_separate_permission": true,
+    "private_input_retained_by_tool": false,
+    "public_intake_connected": false,
+    "historical_missing_identity_reconstructed": false,
+    "independent_accuracy_verified": false,
+    "evidence": "runs/2026-10-10-replay-browser-to-service.json",
+    "guide": "docs/assertion-replay.md",
+    "python_suite_without_final_boundaries": 915,
+    "complete_python_suite_passed": 945,
+    "current_source_boundaries_verified": true
   }
 }

@@ -110,6 +110,31 @@
         "latency_ms": {
           "type": "number",
           "minimum": 0
+        },
+        "preprocessing": {
+          "additionalProperties": false,
+          "properties": {
+            "version": {
+              "const": "local-text-pipeline/v1",
+              "default": "local-text-pipeline/v1",
+              "title": "Version",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[a-f0-9]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "configuration": {
+              "$ref": "#/$defs/PipelineConfiguration"
+            }
+          },
+          "required": [
+            "sha256",
+            "configuration"
+          ],
+          "title": "PipelineIdentity",
+          "type": "object"
         }
       }
     },
@@ -275,6 +300,242 @@
           }
         }
       ]
+    },
+    "PipelineConfiguration": {
+      "additionalProperties": false,
+      "properties": {
+        "gateway_source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Gateway Source Sha256",
+          "type": "string"
+        },
+        "normalization_source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Normalization Source Sha256",
+          "type": "string"
+        },
+        "normalization_data_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Normalization Data Sha256",
+          "type": "string"
+        },
+        "normalization_id": {
+          "const": "NFC-Unicode-15.0.0/v1",
+          "default": "NFC-Unicode-15.0.0/v1",
+          "title": "Normalization Id",
+          "type": "string"
+        },
+        "normalization_stages": {
+          "const": "before-redaction-and-before-evaluation",
+          "default": "before-redaction-and-before-evaluation",
+          "title": "Normalization Stages",
+          "type": "string"
+        },
+        "asserted_rule_tag": {
+          "const": "PS",
+          "default": "PS",
+          "title": "Asserted Rule Tag",
+          "type": "string"
+        },
+        "rule_floor": {
+          "const": 0.7,
+          "default": 0.7,
+          "title": "Rule Floor",
+          "type": "number"
+        },
+        "procedural_tag": {
+          "const": "PII_REDACTED",
+          "default": "PII_REDACTED",
+          "title": "Procedural Tag",
+          "type": "string"
+        },
+        "redactor": {
+          "$ref": "#/$defs/RedactorIdentity"
+        }
+      },
+      "required": [
+        "gateway_source_sha256",
+        "normalization_source_sha256",
+        "normalization_data_sha256",
+        "redactor"
+      ],
+      "title": "PipelineConfiguration",
+      "type": "object"
+    },
+    "RedactorConfiguration": {
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "const": "en",
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "python": {
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "title": "Python",
+          "type": "string"
+        },
+        "platform_machine": {
+          "enum": [
+            "x86_64",
+            "aarch64",
+            "arm64",
+            "AMD64"
+          ],
+          "title": "Platform Machine",
+          "type": "string"
+        },
+        "dependency_records": {
+          "maxProperties": 128,
+          "minProperties": 1,
+          "patternProperties": {
+            "^[A-Za-z0-9_.-]{1,80}$": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            }
+          },
+          "title": "Dependency Records",
+          "type": "object"
+        },
+        "model_name": {
+          "const": "en_core_web_sm",
+          "default": "en_core_web_sm",
+          "title": "Model Name",
+          "type": "string"
+        },
+        "model_version": {
+          "const": "3.8.0",
+          "default": "3.8.0",
+          "title": "Model Version",
+          "type": "string"
+        },
+        "model_manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Model Manifest Sha256",
+          "type": "string"
+        },
+        "sources": {
+          "$ref": "#/$defs/RedactorSources"
+        },
+        "dependencies": {
+          "maxProperties": 128,
+          "minProperties": 1,
+          "patternProperties": {
+            "^[A-Za-z0-9_.-]{1,80}$": {
+              "pattern": "^[0-9][A-Za-z0-9_.+!=-]{0,79}$",
+              "type": "string"
+            }
+          },
+          "title": "Dependencies",
+          "type": "object"
+        },
+        "recognizer_configuration_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Recognizer Configuration Sha256",
+          "type": "string"
+        },
+        "recognizer_count": {
+          "maximum": 128,
+          "minimum": 1,
+          "title": "Recognizer Count",
+          "type": "integer"
+        },
+        "analysis_score_threshold": {
+          "const": 0.0,
+          "default": 0.0,
+          "title": "Analysis Score Threshold",
+          "type": "number"
+        },
+        "email_suffix_refresh": {
+          "const": false,
+          "default": false,
+          "title": "Email Suffix Refresh",
+          "type": "boolean"
+        },
+        "anonymization": {
+          "const": "presidio-default-replace",
+          "default": "presidio-default-replace",
+          "title": "Anonymization",
+          "type": "string"
+        }
+      },
+      "required": [
+        "python",
+        "platform_machine",
+        "dependency_records",
+        "model_manifest_sha256",
+        "sources",
+        "dependencies",
+        "recognizer_configuration_sha256",
+        "recognizer_count"
+      ],
+      "title": "RedactorConfiguration",
+      "type": "object"
+    },
+    "RedactorIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": "presidio-offline-en/v1",
+          "default": "presidio-offline-en/v1",
+          "title": "Version",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "configuration": {
+          "$ref": "#/$defs/RedactorConfiguration"
+        }
+      },
+      "required": [
+        "sha256",
+        "configuration"
+      ],
+      "title": "RedactorIdentity",
+      "type": "object"
+    },
+    "RedactorSources": {
+      "additionalProperties": false,
+      "properties": {
+        "app": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "App",
+          "type": "string"
+        },
+        "model_loader": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Model Loader",
+          "type": "string"
+        },
+        "requirements_lock": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Requirements Lock",
+          "type": "string"
+        },
+        "identity_contract": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Identity Contract",
+          "type": "string"
+        },
+        "identity_builder": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Identity Builder",
+          "type": "string"
+        }
+      },
+      "required": [
+        "app",
+        "model_loader",
+        "requirements_lock",
+        "identity_contract",
+        "identity_builder"
+      ],
+      "title": "RedactorSources",
+      "type": "object"
     }
   }
 }

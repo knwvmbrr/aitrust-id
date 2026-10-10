@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-10T19:36:16.413420+00:00",
+  "pass": true,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "PII_REDACTED",
+    "sources": {
+      "eval/revalidation.json": "8b4f7a893186315204363456fcd2163cff2613c1978a519331dff6c93aa564fe",
+      "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+      "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+      "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+      "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+      "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+      "protocol/measurements.py": "4d4954f954ea2802761ffb2ff065f099f11bdb16751fd78f460ec8d869e9f53b",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+      "protocol/replay.py": "1276d36794919a538b70799cc4603de7294789c96c1fff79f5250958cc3f43dd",
+      "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+      "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+      "protocol/signals.py": "3e9e21b828b375b2ad08cb8c734bf8de142512bca6226482abe017c3e00bfda3",
+      "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "services/anonymizer/Dockerfile": "9f562b7330f8eee4f22e9955a8a672436e45d2171d0e95e421c80da137910ac9",
+      "services/anonymizer/app.py": "3db0adee2ee207b8ac7a295649b2000eac1786eb9eadc415383aa11b371fed86",
+      "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+      "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+      "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
+      "services/anonymizer/requirements.freeze": "f141eec1fa11d21c9a9333a65a94a5d0f76df43e6a4da62dfdfe8b645b448b45",
+      "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+      "services/anonymizer/requirements.txt": "7121535fd693a31d90cbb802f72e1476525191f5ee5565f2ed84d6231cfae39f",
+      "services/gateway/app.py": "231a6c0e4ab58ed017bba70f76a1233ec33fae98159c053d2ecac17104bb050b",
+      "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+      "tests/test_redaction_contract.py": "2aa451161052f39e3c78f7ae5467ce3cfef66eabbfcdea569c356c155abf62b1"
+    },
+    "sha256": "3f36aec368c7ee9a23cf4f5996bfcfbf66dfed50b403f1ec0f7aea54317d5914",
+    "commands": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_redaction_contract.py",
+        "-q"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_redaction_contract.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e1570e4562692cbff1916db35d4ca70bd9d3a5e660a94f2f0bfce1996c8db403",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

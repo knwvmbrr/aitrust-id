@@ -28,16 +28,16 @@ modalities, redaction binding and declared isolation probes. Source-bound browse
 receipts cover local custody, pause/reset, no automatic content sharing and actual
 current catalogue workflows. Deliberately violating test profiles verify refusals.
 
-Nine records describe the current enforced personal boundaries: X-01, X-03, X-04,
-X-06, X-08, X-12, X-15, N-007 and N-008. Media detection remains deferred; reserved
+Ten records describe the current enforced personal boundaries: X-01, X-03, X-04,
+X-06, X-08, X-12, X-14, X-15, N-007 and N-008. Media detection remains deferred; reserved
 hash formats do not become detectors. Public synthetic bug discussion on GitHub
 is a third-party community workflow, not child-safety evidence hosting. Never post
 private, exploitative or unlawful material there. The company has no such intake.
 
 X-03 follows its revised scope: no unapproved automatic central collection;
-research collection remains unconnected. X-14 and D11 remain open: the optional
-registry proposal must be resolved explicitly. This guard does not accept that
-proposal or remove it from the scope.
+research collection remains unconnected. X-14 now enforces registry deferral in
+the 0.1 runtime; its refusal launcher cannot start a listener or storage. D11 and
+the future registry proposal remain unaccepted. The proposal stays in scope.
 X-02 needs an actual license audit; artifact pinning alone cannot close it. Future
 consented research, organization services and media methods require their own
 accepted boundaries and source review before connection. Editing a manifest can
@@ -52,3 +52,12 @@ override a user agent, solve challenges or weaken edge protections. Every artifa
 must still return 200 and match the build hash, and security headers remain required.
 The original failure is retained in the private operation log; the succeeding
 492-artifact comparison is in `runs/2026-10-10-capture-browser-assets-public.json`.
+
+## Current-service replay boundary
+
+New unsigned service records bind the selected preprocessing configuration and
+source identities. The separately permitted complete extension download replays
+through the authenticated loopback CLI. The guard requires 13 actual current-source
+CLI controls and private-marker/temporary-file checks alongside the existing service
+and browser evidence. It refuses missing or stale replay evidence. This adds no
+research intake, automatic export, accuracy conclusion or historical reconstruction.

@@ -174,6 +174,8 @@ jobs:
       - name: Exercise current-route deployment boundaries and violating profiles
         run: python -m pytest tests/test_route_boundaries.py -q
       - run: npx playwright install --with-deps chromium webkit
+      - name: Reproduce the current synthetic service record through the browser export
+        run: node scripts/verify-replay-export.cjs --python python
       - name: Offline observations and optional receipt controls
         run: |
           node --test tests/composition-observations.cjs tests/offline-receipts.cjs

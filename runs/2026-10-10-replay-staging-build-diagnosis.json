@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-10T19:33:32.974116+00:00",
+  "pass": false,
+  "error": "compose_exit_zero_did_not_mean_build_success",
+  "causes": [
+    "dependency_hosts_not_resolvable_from_build_network",
+    "new_identity_files_missing_from_build_allowlist"
+  ],
+  "old_image_detected_by_running_source_hash": true,
+  "repair": [
+    "explicit_builds_with_checked_exit_codes",
+    "absolute_context",
+    "build_only_network_host_on_owned_staging",
+    "launch_no_build",
+    "restore_new_files_to_build_allowlist"
+  ],
+  "service_runtime_network_relaxed": false,
+  "next_executed_evidence": "runs/2026-10-10-replay-source-verified-service.json",
+  "independent_accuracy_evidence": false
+}

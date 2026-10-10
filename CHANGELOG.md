@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-194340-replay-complete-acceptance-1155ca4a
+
+Recorded 2026-10-10T19:43:40.773187+00:00 · Contributor: Codex · change
+
+- **Changed.** Finalized current-service replay with source-bound browser/runtime evidence, strict ledger typing, hashed setup instructions and CI coverage.
+- **Evidence.** 945 Python tests, current boundary guard, all five capability receipts, actual Linux service and exact browser-download replay pass. [Change record](./runs/changes/2026-10-10-194340-replay-complete-acceptance-1155ca4a.json).
+- **Not claimed.** F-003 remains 80% for historical gaps. 99 requirements remain open; no new independently validated tag, intake or physical-device claim.
+
+
+### 2026-10-10-194056-replay-source-finalization-89ed5fb4
+
+Recorded 2026-10-10T19:40:56.888607+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the corrected generated ledger copies and refreshed capability receipts; added the replay guide to the two implemented service setup panels.
+- **Evidence.** Current attribution lists validate; four capability receipts pass after the stricter build contract. [Change record](./runs/changes/2026-10-10-194056-replay-source-finalization-89ed5fb4.json).
+- **Not claimed.** Current-source website and final complete boundary acceptance still pending; no new tag release.
+
+
+### 2026-10-10-193954-scope-attribution-type-fix-801cda8f
+
+Recorded 2026-10-10T19:39:54.044592+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed the scalar execution-credit entry that crashed the Scope workflow; added strict ledger list checks and site build enforcement.
+- **Evidence.** Nine ledger tests pass, including deliberate malformed attribution and acceptance values; all 202 records remain valid. [Change record](./runs/changes/2026-10-10-193954-scope-attribution-type-fix-801cda8f.json).
+- **Not claimed.** The broken build was not published. Final generated-source/browser checks still required.
+
+
+### 2026-10-10-193810-replay-built-source-sync-5947c0f6
+
+Recorded 2026-10-10T19:38:10.732589+00:00 · Contributor: Codex · change
+
+- **Changed.** Synced generated public scope and signal copies, added the browser replay check to CI and refreshed runtime boundary evidence.
+- **Evidence.** Current source is recorded before the next build; prior rejected/source-changing website attempts remain visible. [Change record](./runs/changes/2026-10-10-193810-replay-built-source-sync-5947c0f6.json).
+- **Not claimed.** Final website and route checks pending; hosted CI execution remains subject to the existing account restriction.
+
+
+### 2026-10-10-193700-replay-capability-checks-9d0a7b4e
+
+Recorded 2026-10-10T19:37:00.270085+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current protocol, extension, command and redaction revalidation; retained the website attempt rejected by the fresh change-record gate.
+- **Evidence.** All four runtime capability receipts pass against the updated source; the website build correctly refused unrecorded newly generated receipts. [Change record](./runs/changes/2026-10-10-193700-replay-capability-checks-9d0a7b4e.json).
+- **Not claimed.** Website retry and final boundary/source checks still required; no independent release approval.
+
+
+### 2026-10-10-193605-current-assertion-replay-28b65f37
+
+Recorded 2026-10-10T19:36:05.073836+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented versioned preprocessing identity, protected local replay, and a separately permitted complete browser record download; corrected image build and setup instructions.
+- **Evidence.** 32 actual Linux service cases, 13 actual CLI cases, browser permission/schema/digest checks and exact downloaded bytes replayed through the actual service. [Change record](./runs/changes/2026-10-10-193605-current-assertion-replay-28b65f37.json).
+- **Not claimed.** Current unsigned service integration only; historical identity gaps, independent accuracy, real phones and outside-user acceptance remain open. No research collection is activated.
+
+
 ### 2026-10-10-175713-registry-deferral-publication-c6495202
 
 Recorded 2026-10-10T17:57:13.119794+00:00 · Contributor: Codex · change

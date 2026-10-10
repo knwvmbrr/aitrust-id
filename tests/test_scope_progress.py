@@ -21,3 +21,11 @@ def test_missing_fix_or_scope_record_is_rejected():
 def test_package_cannot_inherit_completion_from_one_good_component():
     d=ledger();p=d['packages'][0];p.update(percent_complete=100,milestones_passed=m.MILESTONES,completed_by=['Fake'],implemented_by=['Fake'],completed_at=p['audited_at'],next_fix=None,next_owner=None,required_acceptance=[],queue='completed')
     with pytest.raises(ValueError,match='inflates child'):m.verify(d)
+
+
+@pytest.mark.parametrize('field',['implemented_by','completed_by','planning_contributors','evidence','required_acceptance'])
+def test_attribution_and_acceptance_lists_cannot_be_scalar(field):
+    data=json.loads((ROOT/'docs/scope-progress.json').read_text())
+    data['records'][0][field]='malformed scalar'
+    with pytest.raises(ValueError,match='Invalid list field'):
+        m.verify(data)

@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-10T19:43:40.681379+00:00",
+  "pass": true,
+  "python_tests": 945,
+  "python_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "observed_exit_code": 0,
+  "test_output_sha256": "d7ad11a85c307bc054fb49ccb8c28dd5b393e8e6b67ddcd5815ac2800fb81432",
+  "current_source_route_guard_passed": true,
+  "actual_linux_service_cases": 32,
+  "actual_cli_cases": 13,
+  "actual_download_replayed": true,
+  "website_source_bound_revalidation_passed": true,
+  "scope_records_preserved": 202,
+  "open_records": 99,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "public_intake_connected": false,
+  "evidence": [
+    "runs/2026-10-10-replay-complete-boundaries.json",
+    "runs/2026-10-10-replay-website-corrected.json",
+    "runs/2026-10-10-replay-browser-to-service.json"
+  ]
+}

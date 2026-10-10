@@ -15,6 +15,9 @@ def verify(data):
     all_rows=[x for group in ('records','packages','subtasks','enhancements') for x in data[group]]
     if len({x['id'] for x in all_rows})!=len(all_rows):raise ValueError('Duplicate global audit ID')
     for x in all_rows:
+        for field in ('implemented_by','completed_by','planning_contributors','evidence','required_acceptance'):
+            if not isinstance(x.get(field),list) or any(not isinstance(value,str) or not value.strip() for value in x[field]):
+                raise ValueError('Invalid list field '+field+' '+x['id'])
         percent=x['percent_complete']
         if type(percent) is not int or percent not in range(0,101,20):raise ValueError('Invalid milestone percentage '+x['id'])
         if x['milestones_passed']!=MILESTONES[:percent//20]:raise ValueError('Milestone mismatch '+x['id'])

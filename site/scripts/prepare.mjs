@@ -1,3 +1,4 @@
+import {execFileSync} from 'node:child_process';
 import {performanceHTML} from '../src/performance-model.js';
 import {policies,policyPath,policyText,policyDownloadPath,publisher,releasePolicy} from '../src/policies.js';
 import fs from 'node:fs';
@@ -10,6 +11,7 @@ import sharp from 'sharp';
 import {metadata,origin,tagPath} from './seo.mjs';
 const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const repo=path.dirname(site);
 const scope=JSON.parse(fs.readFileSync(path.join(repo,'docs/master-scope.json')));
+execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/scope-progress.py')],{stdio:'pipe'});
 const progress=JSON.parse(fs.readFileSync(path.join(repo,'docs/scope-progress.json')));
 const progressBy=new Map(progress.records.map(r=>[r.id,r]));
 const records=scope.records.map(r=>({id:r.id,title:r.display_title||r.title,layer:r.layer,disposition:r.disposition,job:r.baseline_job,outcome:r.outcome,owner:r.owner,status:r.status,acceptance:r.acceptance,failure:r.failure_behavior,dependencies:r.dependencies,delivery:r.delivery,progress:progressBy.get(r.id)}));

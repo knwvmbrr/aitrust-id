@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-10T19:16:19.812675+00:00",
+  "pass": true,
+  "failed_test": "test_private_reader_rejects_symlink_fifo_and_oversize",
+  "initial_result": "1 failed,43 passed",
+  "root_cause": "O_NOFOLLOW correctly refused a symlink with OSError, while the bounded reader contract test expected a sanitized ValueError.",
+  "fix": "Normalize open failures to fixed ValueError without paths; also require owner-only permissions on original text and describe tool retention separately from pre-existing user files.",
+  "verification_pending": true
+}

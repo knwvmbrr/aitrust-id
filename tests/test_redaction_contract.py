@@ -1,3 +1,4 @@
+from replay_fixture import synthetic_identity
 import json
 import httpx
 import pytest
@@ -19,7 +20,7 @@ def test_invalid_redactor_never_reaches_evaluator_or_assertion(monkeypatch, chan
     calls = []
     def handle(request):
         calls.append(request.url.path)
-        return httpx.Response(200, json={'text': '<PERSON>', 'entities': ['PERSON'],
+        return httpx.Response(200, json={'identity':synthetic_identity(),'text': '<PERSON>', 'entities': ['PERSON'],
                                       'entity_count': 1, **changes})
     original = httpx.AsyncClient
     monkeypatch.setattr(g.httpx, 'AsyncClient', lambda **kw: original(transport=httpx.MockTransport(handle), **kw))
@@ -34,7 +35,7 @@ def test_invalid_redactor_never_reaches_evaluator_or_assertion(monkeypatch, chan
 def test_only_category_metadata_and_changed_subject_are_asserted(monkeypatch):
     def handle(request):
         if request.url.path == '/redact':
-            return httpx.Response(200, json={'text': 'Email <EMAIL_ADDRESS>',
+            return httpx.Response(200, json={'identity':synthetic_identity(),'text': 'Email <EMAIL_ADDRESS>',
                 'entities': ['EMAIL_ADDRESS'], 'entity_count': 1})
         assert json.loads(request.content)['text'] == 'Email <EMAIL_ADDRESS>'
         return httpx.Response(200, json={'candidates': [], 'models': [], 'calibration_id': 'test-only'})

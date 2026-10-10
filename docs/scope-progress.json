@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T17:50:20.129438+00:00",
+  "audited_at": "2026-10-10T19:36:04.973854+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -99,16 +99,17 @@
       "id": "F-003",
       "kind": "requirement",
       "title": "Signal registry, 22 registered IDs with version suffixes",
-      "percent_complete": 60,
+      "percent_complete": 80,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-10T14:40:05.191205+00:00",
+      "audited_at": "2026-10-10T19:36:04.973854+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 versioned catalogue and executed source lookup; remaining replay gap explicit"
+        "Codex \u2014 current pipeline identity, protected replay CLI, explicit browser export and executed Linux/browser integration"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -116,14 +117,19 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Complete per-assertion reproducibility without disclosing private inputs: bind the recognizer/configuration identity and versioned replay contract, preserve historical source access, and verify current/unknown methods. Signal IDs alone are not sufficient input.",
+      "next_fix": "Resolve full historical reproducibility without guessing absent preprocessing configuration or original private input; preserve unavailable history and obtain remaining outside-user acceptance. Current selected service replay is implemented and executed.",
       "next_owner": "Codex",
       "evidence": [
         "docs/scope-delivery.md",
         "spec/signal-registry.json",
         "protocol/signals.py",
         "runs/2026-10-10-signal-catalogue.json",
-        "docs/reproducibility-controls-result.md"
+        "docs/reproducibility-controls-result.md",
+        "docs/assertion-replay-result.md",
+        "runs/2026-10-10-replay-source-verified-service.json",
+        "runs/2026-10-10-replay-corrected-cli.json",
+        "runs/2026-10-10-replay-browser-export-final.json",
+        "runs/2026-10-10-replay-browser-to-service.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [

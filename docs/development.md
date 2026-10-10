@@ -132,3 +132,14 @@ The disposable upstream fixture is only for synthetic faults, never an accuracy
 measurement. Its 11 actual HTTP scenarios confirmed malformed output, unknown
 codes, invalid offsets, four occupied slots, rejected fifth, disconnect capacity
 recovery and timeout recovery. See the version-bound run for measurements.
+
+### Require successful staging image builds
+
+A podman-compose 1.3.0 launch can return zero after a failed build and start an old
+image. Build each image explicitly, check each exit status, and only then launch
+with `--no-build`. Use an absolute context and verify running source hashes. If
+the isolated build network cannot resolve dependency hosts, `podman build
+--network=host` can be used for the dependency installation step on the dedicated
+staging host. That build-only option must never replace the runtime inspection
+network or loopback port restriction. The runtime verifier rejects stale source
+and unapplied PID limits. No successful launch message alone is evidence.

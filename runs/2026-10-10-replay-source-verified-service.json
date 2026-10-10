@@ -1,0 +1,302 @@
+{
+  "captured_at": "2026-10-10T19:32:11.319561+00:00",
+  "pass": true,
+  "engine": "podman",
+  "engine_version": "podman version 5.4.2",
+  "project": "aitrust-staging",
+  "cases": [
+    {
+      "name": "ready",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 21.66
+    },
+    {
+      "name": "missing_auth",
+      "status": 401,
+      "pass": true,
+      "latency_ms": 2.97
+    },
+    {
+      "name": "wrong_auth",
+      "status": 401,
+      "pass": true,
+      "latency_ms": 1.16
+    },
+    {
+      "name": "private_error_fields_not_reflected",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.15
+    },
+    {
+      "name": "page_origin_rejected",
+      "status": 403,
+      "pass": true,
+      "latency_ms": 1.07
+    },
+    {
+      "name": "unsupported_code",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.05
+    },
+    {
+      "name": "unsupported_image",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.05
+    },
+    {
+      "name": "unsupported_audio",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.19
+    },
+    {
+      "name": "unsupported_video",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.05
+    },
+    {
+      "name": "unsupported_document",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 0.96
+    },
+    {
+      "name": "unsupported_made-up",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.0
+    },
+    {
+      "name": "empty",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 2.96
+    },
+    {
+      "name": "extra_field",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.01
+    },
+    {
+      "name": "oversize_chars",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 2.06
+    },
+    {
+      "name": "wrong_type",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.09
+    },
+    {
+      "name": "pipeline",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 173154919.7
+    },
+    {
+      "name": "homebrew",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 173158955.87
+    },
+    {
+      "name": "download_only",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 35.29
+    },
+    {
+      "name": "wget_file",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 37.75
+    },
+    {
+      "name": "warning",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 39.66
+    },
+    {
+      "name": "literal_display",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 36.63
+    },
+    {
+      "name": "encoded",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 173159140.83
+    },
+    {
+      "name": "benign",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 32.57
+    },
+    {
+      "name": "unicode",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 173145211.12
+    },
+    {
+      "name": "frozen_unicode15",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 173150248.41
+    },
+    {
+      "name": "detected_redaction_before_evaluation",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 173132320.18
+    },
+    {
+      "name": "evaluator_down_readiness",
+      "status": 503,
+      "pass": true,
+      "latency_ms": 24.11
+    },
+    {
+      "name": "evaluator_down_evaluation",
+      "status": 502,
+      "pass": true,
+      "latency_ms": 28.14
+    },
+    {
+      "name": "evaluator_recovered",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 84.95
+    },
+    {
+      "name": "anonymizer_down_readiness",
+      "status": 503,
+      "pass": true,
+      "latency_ms": 14.66
+    },
+    {
+      "name": "anonymizer_down_evaluation",
+      "status": 502,
+      "pass": true,
+      "latency_ms": 14.65
+    },
+    {
+      "name": "anonymizer_recovered",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 152.81
+    }
+  ],
+  "services": {
+    "gateway": {
+      "source_sha256": "231a6c0e4ab58ed017bba70f76a1233ec33fae98159c053d2ecac17104bb050b",
+      "uid": 10001,
+      "read_only": true,
+      "runtime_file_sha256": {
+        "app.py": "231a6c0e4ab58ed017bba70f76a1233ec33fae98159c053d2ecac17104bb050b",
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+      },
+      "memory_limit_bytes": 268435456,
+      "pid_limit": 128,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "engine_readiness_probe_passed": true,
+      "published_port_scope": "127.0.0.1:8787",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    },
+    "anonymizer": {
+      "source_sha256": "3db0adee2ee207b8ac7a295649b2000eac1786eb9eadc415383aa11b371fed86",
+      "uid": 10001,
+      "read_only": true,
+      "runtime_file_sha256": {
+        "app.py": "3db0adee2ee207b8ac7a295649b2000eac1786eb9eadc415383aa11b371fed86",
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+        "model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29"
+      },
+      "memory_limit_bytes": 1073741824,
+      "pid_limit": 128,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "engine_readiness_probe_passed": true,
+      "published_port_scope": "none",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ],
+      "model_identity": {
+        "model_name": "en_core_web_sm",
+        "model_version": "3.8.0",
+        "manifest_sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4",
+        "asset_files": 29,
+        "verified_before_load": true
+      }
+    },
+    "evaluator": {
+      "source_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+      "uid": 10001,
+      "read_only": true,
+      "runtime_file_sha256": {
+        "app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b"
+      },
+      "memory_limit_bytes": 268435456,
+      "pid_limit": 128,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "engine_readiness_probe_passed": true,
+      "published_port_scope": "none",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    }
+  },
+  "offline_redaction": true,
+  "redacted_subject_hash_and_length_verified": true,
+  "synthetic_markers_absent_from_application_logs": true,
+  "application_log_streams_checked": [
+    "stdout",
+    "stderr"
+  ],
+  "private_validation_errors_checked_on_all_services": true,
+  "no_store_headers_checked_on_all_gateway_cases": true,
+  "request_url_access_logging_disabled": true,
+  "dependency_failure_recovery_exercised": true,
+  "gateway_edge_egress_observed": false,
+  "isolation_scope": "Two external IPv4/IPv6 TCP destinations; evaluator/redactor only",
+  "latency_budget_accepted": false,
+  "independent_accuracy_evidence": false,
+  "release_validated": false,
+  "human_or_device_acceptance": false
+}

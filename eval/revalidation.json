@@ -66,7 +66,10 @@
         "tests/test_assertion*.py",
         "tests/test_reserved_subjects*.py",
         "scripts/verify-reserved-subjects.py",
-        "spec/signal-registry.json"
+        "spec/signal-registry.json",
+        "scripts/replay-assertion.py",
+        "scripts/verify-assertion-replay.py",
+        "tests/replay_fixture.py"
       ],
       "commands": [
         [
@@ -74,6 +77,7 @@
           "-m",
           "pytest",
           "tests/test_assertion_formats.py",
+          "tests/test_assertion_replay.py",
           "-q"
         ],
         [
@@ -93,7 +97,14 @@
         "scripts/axe-gate.cjs",
         "scripts/execution-report.cjs",
         "package*.json",
-        "scripts/live-dom-acceptance.js"
+        "scripts/live-dom-acceptance.js",
+        "scripts/verify-replay-export.cjs",
+        "protocol/replay*.py",
+        "scripts/replay-assertion.py",
+        "scripts/verify-assertion-replay.py",
+        "services/gateway/app.py",
+        "services/anonymizer/*",
+        "spec/assertion.schema.json"
       ],
       "commands": [
         [
@@ -107,6 +118,12 @@
         [
           "node",
           "scripts/verify-extension-privacy.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-replay-export.cjs",
+          "--python",
+          "{python}"
         ]
       ]
     },
@@ -128,7 +145,10 @@
         "scripts/verify-static-headers.cjs",
         "tests/static-headers.cjs",
         "scripts/verify-research-feedback.cjs",
-        "tests/research-feedback.cjs"
+        "tests/research-feedback.cjs",
+        "scripts/scope-progress.py",
+        "docs/scope-progress.json",
+        "tests/test_scope_progress.py"
       ],
       "commands": [
         [

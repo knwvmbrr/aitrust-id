@@ -23,7 +23,9 @@ PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'site/public/device/*', 'site/index.html', '.github/workflows/*',
             'deploy/docker-compose.yml', 'package.json', 'site/package.json',
             'scripts/verify-route-boundaries.py', 'scripts/verify-route-boundaries.cjs',
-            'scripts/verify-registry-deferral.py', 'tests/test_registry_deferral.py')
+            'scripts/verify-registry-deferral.py', 'tests/test_registry_deferral.py',
+            '.dockerignore', 'tests/test_route_boundaries.py', 'scripts/replay-assertion.py', 'scripts/verify-assertion-replay.py',
+            'scripts/verify-replay-export.cjs', 'tests/test_assertion_replay.py')
 PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
@@ -204,10 +206,41 @@ def service_evidence(relative, root=ROOT):
     return len(report['cases'])
 
 
+
+def replay_evidence(relative, root=ROOT):
+    if not isinstance(relative,str) or not re.fullmatch(r'runs/[a-z0-9-]+\.json',relative):
+        raise ValueError('Invalid replay evidence path')
+    report=read_json(root/relative)
+    required=['ordinary','command','pii','both_unicode','quoted_warning','download_only',
+              'wrong_original','altered_finding','historical_identity_missing','different_source',
+              'invalid_digest','future_wire','credential_permissions']
+    if (report.get('pass') is not True or report.get('synthetic_only') is not True
+            or report.get('actual_pipeline_and_cli_executed') is not True
+            or report.get('private_markers_absent_from_logs') is not True
+            or report.get('temporary_input_directory_removed') is not True
+            or report.get('public_intake_connected') is not False
+            or report.get('independent_accuracy_evidence') is not False
+            or [c.get('name') for c in report.get('cases',[])]!=required):
+        raise ValueError('Missing bounded current replay execution')
+    expected=['protocol/replay.py','protocol/replay_identity.py','protocol/normalization.py',
+              'protocol/unicode15-data.json','scripts/replay-assertion.py',
+              'scripts/verify-assertion-replay.py','services/gateway/app.py',
+              'services/anonymizer/app.py','services/anonymizer/model_identity.py',
+              'services/anonymizer/replay_metadata.py','services/anonymizer/requirements.lock',
+              'services/evaluator/app.py','spec/assertion.schema.json']
+    if report.get('sources')!={n:hashlib.sha256((root/n).read_bytes()).hexdigest() for n in expected}:
+        raise ValueError('Replay execution source changed')
+    states=[('matched',0)]*6+[('input_mismatch',2),('mismatch',1),('unavailable',3),
+                             ('unavailable',3),('invalid',4),('unavailable',3),('invalid',4)]
+    for row,(state,code) in zip(report['cases'],states):
+        if row.get('status')!=state or row.get('exit_code')!=code or row.get('output_contains_no_private_marker') is not True:
+            raise ValueError('Replay outcome control failed')
+    return len(required)
+
 def evaluate(manifest, root=ROOT):
     fields = {'schema_version', 'wire_version', 'reviewed_at', 'reviewed_by', 'rules',
               'independent_release_approval', 'sources', 'engineering_receipts',
-              'device_evidence', 'service_evidence', 'registry_evidence'}
+              'device_evidence', 'service_evidence', 'registry_evidence', 'replay_evidence'}
     if (set(manifest) != fields or manifest.get('schema_version') != 1 or manifest.get('wire_version') != '0.1.0'
             or manifest.get('rules') != list(RULES)
             or manifest.get('independent_release_approval') is not False):
@@ -249,11 +282,12 @@ def evaluate(manifest, root=ROOT):
     engines = device_evidence(manifest.get('device_evidence', {}), root)
     service_cases = service_evidence(manifest.get('service_evidence'), root)
     registry_cases = registry_evidence(manifest.get('registry_evidence'), root)
+    replay_cases = replay_evidence(manifest.get('replay_evidence'), root)
     return {'routes': observed, 'source_files': len(manifest['sources']),
             'browser_receipts_current': True, 'extension_access_unchanged': True,
             'committed_device_engine_evidence': engines, 'active_services': active,
             'current_remote_service_cases': service_cases, 'registry_0_1_deferred_enforced': True,
-            'actual_registry_refusal_cases': registry_cases}
+            'actual_registry_refusal_cases': registry_cases, 'actual_full_pipeline_replay_cases':replay_cases}
 
 
 def intake_controls(root=ROOT):
