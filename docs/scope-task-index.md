@@ -11,7 +11,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-007 | Content-free assertion records | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-009 | Evidence durability and cost-to-defeat assessment | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-078 | Conformance vectors for text and code subject hashes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-079 | Route-specific privacy clauses with executed evidence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
@@ -36,7 +36,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-014 | Use/mention discriminator — is the command being recommended or discussed? | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-015 | sig.unsourced_specificity.v1 — figures or dates with no provenance marker | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-016 | sig.selfcontradiction.v1 — NLI entailment between sentence pairs | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-017 | sig.duplicate_loop.v1 — n-gram repetition above threshold | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-017 | sig.duplicate_loop.v1 — n-gram repetition above threshold | [TAG-HP](scope-delivery.md#tag-hp) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-018 | sig.hedge_collapse.v1 — hedging absent where uncertainty is expected | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-019a | sig.urgency_frame.v1 — time-pressure lexicon plus imperative density | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-019b | sig.false_dilemma.v1 — binary framing where alternatives exist | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
@@ -44,14 +44,14 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-081 | Bring-your-own corpus — the user attaches their own reference material locally | [WP-REFERENCES](scope-delivery.md#wp-references) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-026 | sig.keystroke_liveness.v1 — dwell and flight time distributions | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-027 | sig.revision_churn.v1 — deleted-and-rewritten characters over final length | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-028 | sig.compose_monotonicity.v1 — caret-position entropy | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-026 | sig.keystroke_liveness.v1 — dwell and flight time distributions | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-027 | sig.revision_churn.v1 — deleted-and-rewritten characters over final length | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-028 | sig.compose_monotonicity.v1 — caret-position entropy | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-029a | sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-029b | sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-029c | sig.paste_burst.v1 — large insertion with no preceding keystrokes | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-029b | sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-029c | sig.paste_burst.v1 — large insertion with no preceding keystrokes | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-025 | sig.c2pa_manifest.v1 — parses an attached C2PA manifest | [TAG-FA](scope-delivery.md#tag-fa) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 100% · [evidence/fix](scope-progress.md) |
@@ -99,7 +99,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-108 | Frozen held-out split with a manifest hash, separate from the regression suite | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-109 | Dataset versioning and provenance per example | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-110 | Adversarial boundary examples for the use/mention discriminator | [TAG-PS](scope-delivery.md#tag-ps) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-053 | HP / MT / FI fixtures | [WP-VALIDATION](scope-delivery.md#wp-validation) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-053 | HP / MT / FI fixtures | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-056 | Krippendorff's α published for MT, ≥ 0.55 | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-054 | CI that can actually fail | [WP-RELEASE](scope-delivery.md#wp-release) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
@@ -114,17 +114,17 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-118 | Calibration ledger — every published number reproducible by a third party | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-119 | Conformance test suite an outside implementer can run against their own build | [WP-RELEASE](scope-delivery.md#wp-release) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-120 | Evidence packets — committed transcripts per exit gate | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-121 | Receipt format binding an artifact hash to observed composition activity | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-122 | Receipt issuance — always a free path, by policy | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-123 | Receipt verification requiring no contact with us | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-121 | Receipt format binding an artifact hash to observed composition activity | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-122 | Receipt issuance — always a free path, by policy | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-123 | Receipt verification requiring no contact with us | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-124 | Independent RFC 3161 timestamping — we never operate the authority | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-125 | Per-device revocable keys plus a revocation transparency log | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-126 | Freshness model for offline verification against revocation | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-127 | Forgery-cost class as a first-class field on every receipt | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-127 | Forgery-cost class as a first-class field on every receipt | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-128 | Anti-coercion rule — a conformant implementation may not make receipt issuance non-optional for the author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-129 | Key custody and recovery for a non-technical author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-130 | Group authorship — four signers or four receipts | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-131 | Receipt expiry and algorithm agility — ed25519 will not be safe forever | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-131 | Receipt expiry and algorithm agility — ed25519 will not be safe forever | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-132 | aitrustid.com — landing and reference content, no-JS core | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-133 | Public status table distinguishing supported / experimental / reserved | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-134 | Limitations page, findable without being told where it is | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |

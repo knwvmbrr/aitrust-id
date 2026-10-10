@@ -72,6 +72,12 @@ def verify(root=ROOT):
     path=Path('eval/requirements.lock');py[str(path)]=python_lock((root/path).read_text());files[str(path)]=digest(root/path)
     eval_names={r['name'] for r in py[str(path)]}
     if not {'jsonschema','rfc3339-validator','six','pyyaml','pytest'}<=eval_names:raise ValueError('Required format/test dependencies missing')
+    # CI uses one environment for gateway and evaluation checks. Individually valid
+    # locks must also be jointly satisfiable; sequential installation can hide drift.
+    gateway_pins={r['name']:r['requirement'] for r in py['services/gateway/requirements.lock']}
+    for row in py['eval/requirements.lock']:
+        if row['name'] in gateway_pins and row['requirement']!=gateway_pins[row['name']]:
+            raise ValueError('Gateway and evaluation lock pins conflict')
     for prefix in ('','site/'):
         path=Path(prefix+'package-lock.json');value=json.loads((root/path).read_text());npm[str(path)]=npm_lock(value);files[str(path)]=digest(root/path)
         package=json.loads((root/(prefix+'package.json')).read_text())

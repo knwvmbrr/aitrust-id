@@ -2,6 +2,105 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-165730-accepted-100-open-source-checks-585f4df4
+
+Recorded 2026-10-10T16:57:30.532646+00:00 · Contributor: Codex · change
+
+- **Changed.** Final current source passes the complete Python suite, website checks and reviewed personal route guard.
+- **Evidence.** 873 Python tests pass; 57 Node component controls and two-engine editor integration pass; all 202 scope records remain, with 100 open. [Change record](./runs/changes/2026-10-10-165730-accepted-100-open-source-checks-585f4df4.json).
+- **Not claimed.** Public deployment is next. No independent accuracy, physical device, authorship or tag release claim is granted.
+
+
+### 2026-10-10-165555-final-prepared-scope-artifacts-ecdd4e57
+
+Recorded 2026-10-10T16:55:55.600415+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepared public scope artifacts retain all 202 requirements, with 102 completed and 100 open.
+- **Evidence.** Prepared site build passed with the final component evidence paths and downloadable offline editor. [Change record](./runs/changes/2026-10-10-165555-final-prepared-scope-artifacts-ecdd4e57.json).
+- **Not claimed.** Publication and final source boundary checks are pending; independent tag validation remains open.
+
+
+### 2026-10-10-165314-final-offline-integrity-and-source-evidence-9aa2b17f
+
+Recorded 2026-10-10T16:53:14.989324+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the 14 closed jobs to final source checks; preserved exact UTF-8 BOM artifacts and bounded private-file reads. Updated execution evidence and retained the 100-open target.
+- **Evidence.** 57 Node and 48 selected Python controls passed; final two-engine editor-to-receipt integration passed. Full Python suite passed 873 tests before this final isolated Node fidelity refinement. [Change record](./runs/changes/2026-10-10-165314-final-offline-integrity-and-source-evidence-9aa2b17f.json).
+- **Not claimed.** New tag release, independent timestamp, revocation, real-phone and human accessibility remain unverified. Final guard/publication checks follow.
+
+
+### 2026-10-10-164759-current-profile-rechecks-after-header-fix-a3e47b52
+
+Recorded 2026-10-10T16:47:59.277870+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded fresh PS, PII, protocol, extension and two-engine device checks after adding the supported static-header verification entrypoint.
+- **Evidence.** Four current source-bound capability receipts and actual current device check passed. Static-header unit command now matches the strict revalidation consumer contract. [Change record](./runs/changes/2026-10-10-164759-current-profile-rechecks-after-header-fix-a3e47b52.json).
+- **Not claimed.** Device emulation is not a physical phone or human review; failed predecessor receipts remain false. Website current receipt follows.
+
+
+### 2026-10-10-164521-match-static-headers-by-route-619a1456
+
+Recorded 2026-10-10T16:45:21.565237+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected owned verification servers to apply static headers by matched route; retained failed website receipts instead of approval.
+- **Evidence.** Four route-header controls prove the homepage/policies/assets remain inline and only the exact standalone editor becomes an attachment. [Change record](./runs/changes/2026-10-10-164521-match-static-headers-by-route-619a1456.json).
+- **Not claimed.** Test transport fix; current site/device execution and publication checks follow. Cloudflare policy was not weakened.
+
+
+### 2026-10-10-164309-retain-refused-site-receipt-63b8e0d8
+
+Recorded 2026-10-10T16:43:09.884024+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained a refused final website receipt and prepared private command diagnostics before retry.
+- **Evidence.** The failed receipt remains explicitly false and cannot satisfy the reviewed deployment boundary. [Change record](./runs/changes/2026-10-10-164309-retain-refused-site-receipt-63b8e0d8.json).
+- **Not claimed.** No success inferred from the receipt; actual failing command is being diagnosed.
+
+
+### 2026-10-10-164208-prepared-offline-artifacts-and-download-check-9b88a6d7
+
+Recorded 2026-10-10T16:42:08.546165+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded regenerated 102/100 public scope, policy 1.4 downloads and the corrected native-download verifier.
+- **Evidence.** Prepared site builds; actual 320px native editor download matches the built artifact and the reference page has zero automated accessibility violations. [Change record](./runs/changes/2026-10-10-164208-prepared-offline-artifacts-and-download-check-9b88a6d7.json).
+- **Not claimed.** This is local download evidence; public-origin deployment and final reviewed source guard are pending.
+
+
+### 2026-10-10-163959-offline-data-flow-and-crawl-discovery-420f245c
+
+Recorded 2026-10-10T16:39:59.094797+00:00 · Contributor: Codex · change
+
+- **Changed.** Published-policy source version 1.4 describes optional editor/receipt data flow; added the offline-tools canonical page to the sitemap and updated discovery checks.
+- **Evidence.** New public wording matches implemented opt-in observation, separate downloads and explicit trust limits. Prior policy versions remain immutable. [Change record](./runs/changes/2026-10-10-163959-offline-data-flow-and-crawl-discovery-420f245c.json).
+- **Not claimed.** Build/public policy and download verification pending; no new data collection, training permission or authorship claim.
+
+
+### 2026-10-10-163828-target-100-revalidation-evidence-b3161f19
+
+Recorded 2026-10-10T16:38:28.602701+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current PS, PII, protocol and extension receipts and actual Linux boundary controls; retained refused website receipt.
+- **Evidence.** Four source-bound capability receipts passed; Linux boundary 29 controls passed with reconciled locks. The failed website record is not approved evidence. [Change record](./runs/changes/2026-10-10-163828-target-100-revalidation-evidence-b3161f19.json).
+- **Not claimed.** Website build initially refused newly unlogged reports; logging precedes its fresh rebuild. No hosted CI, new tag release or independent accuracy asserted.
+
+
+### 2026-10-10-163649-scope-target-100-and-offline-download-71dcd11a
+
+Recorded 2026-10-10T16:36:49.225888+00:00 · Contributor: Codex · change
+
+- **Changed.** Audited fourteen functioning component closures: 102 complete, exactly 100 open, all 202 retained. Added public offline-tool download/reference and refreshed source-review coverage.
+- **Evidence.** Each completed component has executed positive/refusal and selected integration evidence; scope/accountability checks verify count and ownership. [Change record](./runs/changes/2026-10-10-163649-scope-target-100-and-offline-download-71dcd11a.json).
+- **Not claimed.** Publication and fresh route receipts pending at this event; no tag accuracy, physical-phone, independent timestamp/revocation or institutional release inferred.
+
+
+### 2026-10-10-163254-offline-observations-and-receipts-f660b222
+
+Recorded 2026-10-10T16:32:54.879454+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented optional offline editing observations, literal repetition, versioned development fixtures and artifact-bound receipts; reconciled gateway/evaluation lock pins.
+- **Evidence.** Executed 56 Node and 48 selected Python controls; actual Chromium/WebKit editor export-to-receipt integration; exact previous-checkpoint publication verified. [Change record](./runs/changes/2026-10-10-163254-offline-observations-and-receipts-f660b222.json).
+- **Not claimed.** No authorship, independent accuracy, physical-phone, human accessibility, timestamp, revocation or certification release claim. This event records implementation; queue closure awaits final evidence audit.
+
+
 ### 2026-10-10-160546-current-boundary-final-evidence-ebb683e0
 
 Recorded 2026-10-10T16:05:46.944801+00:00 · Contributor: Codex · change

@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-10-10T16:30:55.187178+00:00",
+  "pass": true,
+  "sources_unchanged": true,
+  "sources": {
+    "eval/datasets/tag_development/fi-v1.jsonl": "ce892be727d32fa8d4447ba3e8b3b25cf7f225dba6879daded73536c438ded96",
+    "eval/datasets/tag_development/hp-v1.jsonl": "e7aae6a8d6cc02a08bc50948b74590cccc491b668d9165f102acbbec9a902a5f",
+    "eval/datasets/tag_development/manifest.json": "68ab70e5efeca15103f23678a99d23b8bbc2b8b539f3b448196b05da2631886f",
+    "eval/datasets/tag_development/mt-v1.jsonl": "8bcbde8c12783a53f8cd3827f98078c4a1004d72afbd236a1cc7777675be65c3",
+    "eval/requirements.lock": "09e5a8f85b2bfb6be32656e0be9ea5db3fae2f36808a5e2b172df36062b77558",
+    "eval/requirements.txt": "972c74ca6534698898712363fa31dde478f2d58189ee49031ee3ade5bc8da980",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/receipts.cjs": "c4daf0c0c0070f8977748495c29d4f27390860d7a80505b40b8a1979934a16e7",
+    "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+    "protocol/signals.py": "3e9e21b828b375b2ad08cb8c734bf8de142512bca6226482abe017c3e00bfda3",
+    "scripts/build-composition-tool.py": "384dc77de3cb2cf7a8ca97539740ba8897158d5a937bfa547f5aef68fe588be5",
+    "scripts/check-repetition.py": "9ea741e4235c05c66bee8be32e5b40b162837864e77f21d79cc8dcf6cf1c4071",
+    "scripts/receipt.cjs": "4c5be0c4cdbd1467ad6a1a77cae4f7ecdcd454d8e5c0e1aef75efdfc53bbd524",
+    "scripts/verify-composition-tool.cjs": "157337c084009a1c98b83a9ba527ee6873cc0462c0c2a3fad85b829eacb4b435",
+    "scripts/verify-dependencies.py": "f564a1a3d49621d398c037c2ae3cd84e343083b87297cd7f032baee3329800b6",
+    "scripts/verify-offline-components.py": "84fd1a3c48793726d74fc33fc35d5b9630974f4c5c73e5992587782ea01060d4",
+    "scripts/verify-tag-development.py": "f58baa06b8f8b29a950433c454f819a678287653775ed1af7e8c99623e9ed774",
+    "spec/assertion.schema.json": "9d2b13c04cf2081832d1ba0634d9b27210cdf0f765c26d3669f391e913c864a0",
+    "spec/signal-registry.json": "e3510e363ed397ef7581d670a731c863362e15ad40d4fac2d35a5ba59f68da8b",
+    "tests/composition-observations.cjs": "a1ea715cc209fe6c28df619a31fbee2efe75527d01a7553a40a47d6fd8453f63",
+    "tests/offline-receipts.cjs": "3d89eccd8ca975f5f248a9580a613bb89cd44f2078b5924b26e50c24c57f4fb0",
+    "tests/test_dependency_contract.py": "105216c1ae6414a61d6faa4885f174a116fc4271bfa07f1b5eeacb9be3730b94",
+    "tests/test_repetition_observation.py": "d786fa3b58e62b821426532144448fb6201ac5b3236f4bb6bb419ae534665bda",
+    "tests/test_tag_development.py": "ed43bc59db9bdc500116ce58b3ab189efa6dae6ed92c63c2973b8e8ad20449bc",
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90",
+    "tools/composition/editor.html": "3f57ec89f4229d50ba98db6fb4f49b090fa8937b17279451a43d83ed34287c50",
+    "tools/composition/editor.js": "4de2569e11fc4f086fea6057b9f117238dbde3b8862b1615f74a7e5a6bcd4fcb",
+    "tools/composition/style.css": "2d235a7d0be78fc8ef9933e327e365fd8fe9b0a0a2920259ea3eb072e0f69b29"
+  },
+  "checks": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/composition-observations.cjs",
+        "tests/offline-receipts.cjs"
+      ],
+      "exit": 0,
+      "passed_tests": 56,
+      "stdout_sha256": "952690318f3f551efc18c58ede4f8a7bcc403f4f95a5134dffe7849ac8cc9b53",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_development.py",
+        "tests/test_repetition_observation.py",
+        "tests/test_dependency_contract.py",
+        "-q"
+      ],
+      "exit": 0,
+      "passed_tests": 48,
+      "stdout_sha256": "7065590538b083ac107725487e6674f98cc1ed1f463201a3075c30e5b1e11b1d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "receipt_algorithms": [
+    "Ed25519",
+    "ECDSA-P256-SHA256"
+  ],
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false,
+  "scope": "Executed offline component, synthetic key/receipt CLI, fixture integrity and lock compatibility controls. Browser integration is separately recorded."
+}

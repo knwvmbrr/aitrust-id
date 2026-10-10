@@ -23,6 +23,8 @@ PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'site/public/device/*', 'site/index.html', '.github/workflows/*',
             'deploy/docker-compose.yml', 'package.json', 'site/package.json',
             'scripts/verify-route-boundaries.py', 'scripts/verify-route-boundaries.cjs')
+PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
+             'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx',

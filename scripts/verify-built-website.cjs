@@ -1,6 +1,7 @@
 // Build current source, then check that exact build on an owned ephemeral server.
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {spawn}=require('node:child_process');
+const {parseHeaders,headersFor}=require('./static-headers.cjs');
 const root=path.resolve(__dirname,'..'),dist=path.join(root,'site/dist');
 const run=(command,args,env=process.env)=>new Promise((resolve,reject)=>{
  const child=spawn(command,args,{cwd:root,env,stdio:'inherit'});
@@ -8,7 +9,7 @@ const run=(command,args,env=process.env)=>new Promise((resolve,reject)=>{
 });
 async function main(){
  await run(process.platform==='win32'?'npm.cmd':'npm',['run','build:site']);
- const headers=Object.fromEntries(fs.readFileSync(path.join(dist,'_headers'),'utf8').split('\n').filter(s=>s.startsWith('  ')).map(s=>{const at=s.indexOf(':');return [s.slice(2,at),s.slice(at+1).trim()];}));
+ const rules=parseHeaders(fs.readFileSync(path.join(dist,'_headers'),'utf8'));
  const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.wasm':'application/wasm','.woff2':'font/woff2','.txt':'text/plain','.md':'text/plain','.py':'text/plain'};
  const server=http.createServer((req,res)=>{
   try{
@@ -20,7 +21,7 @@ async function main(){
    let current=file;
    while(current!==dist){if(fs.lstatSync(current).isSymbolicLink())throw Error('symlink');current=path.dirname(current);}
    if(!fs.statSync(file).isFile())throw Error('file');
-   res.writeHead(200,{...headers,'Content-Type':mime[path.extname(file)]||'application/octet-stream'});
+   res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream',...headersFor(rules,relative)});
    if(req.method==='HEAD')res.end();else fs.createReadStream(file).on('error',()=>res.destroy()).pipe(res);
   }catch{res.writeHead(404);res.end();}
  });

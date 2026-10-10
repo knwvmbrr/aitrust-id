@@ -8,6 +8,13 @@ implemented or validated detector. Only the command-pattern development methods
 described below currently execute in the evaluator. The remaining methods require
 their own implementation, independent measurement, and release acceptance.
 
+The [offline observation tool](../docs/composition-observations.md) implements the
+six composition measurements and a separate literal repetition checker. Their
+reference sources are bound in the machine registry. They issue observation
+records with no tag, identity or authorship verdict. Proposed PA/FA/HP mappings
+remain proposed and are absent from the production allowlist. The current
+extension performs no behavioral capture.
+
 | ID | Feeds | Method | Cost to defeat | Notes |
 |---|---|---|---|---|
 | `sig.selfcontradiction.v1` | HP | NLI entailment between sentence pairs, contradiction probability | `statistical` | ONNX DeBERTa-v3-small; CPU |

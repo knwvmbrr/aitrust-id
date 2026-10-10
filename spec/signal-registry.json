@@ -22,7 +22,16 @@
       "accepted_conformance_registration": false,
       "feeds": "*routing*",
       "description": "Detects switch access, voice dictation, on-screen keyboard, eye tracking, IME composition",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/composition/core.cjs",
+          "tools/composition/editor.js"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.attention_shape.v1",
@@ -31,7 +40,16 @@
       "accepted_conformance_registration": false,
       "feeds": "PA",
       "description": "Read-pause-write rhythm from `visibilitychange` and focus events",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/composition/core.cjs",
+          "tools/composition/editor.js"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.authority_appeal.v1",
@@ -49,7 +67,16 @@
       "accepted_conformance_registration": false,
       "feeds": "PA",
       "description": "Caret-position entropy across the window",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/composition/core.cjs",
+          "tools/composition/editor.js"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.corpus_contradiction.v1",
@@ -85,7 +112,15 @@
       "accepted_conformance_registration": false,
       "feeds": "HP",
       "description": "n-gram repetition above threshold within response",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "literal_observation_only",
+        "source_files": [
+          "protocol/repetition.py"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.false_dilemma.v1",
@@ -121,7 +156,16 @@
       "accepted_conformance_registration": false,
       "feeds": "PA",
       "description": "Dwell and flight time distributions over the composition window",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/composition/core.cjs",
+          "tools/composition/editor.js"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.obfuscated_payload.v1",
@@ -173,7 +217,16 @@
       "accepted_conformance_registration": false,
       "feeds": "FA",
       "description": "Insertion of \u2265N characters with no preceding keystroke activity in the field",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/composition/core.cjs",
+          "tools/composition/editor.js"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.piped_installer.v1",
@@ -345,7 +398,16 @@
       "accepted_conformance_registration": false,
       "feeds": "PA",
       "description": "Deleted-and-rewritten characters over final length; count of non-adjacent edit positions",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/composition/core.cjs",
+          "tools/composition/editor.js"
+        ],
+        "contract": "docs/composition-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.selfcontradiction.v1",

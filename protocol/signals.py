@@ -36,11 +36,19 @@ def registry(root=ROOT):
             file=root/name
             if file.is_symlink() or not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=s['historical_source_sha256']:
                 raise ValueError('Historical implementation changed')
+        if 'reference_implementation' in s:
+            reference=s['reference_implementation']
+            if s['status']!='proposed' or reference.get('kind') not in ('offline_observation_only','literal_observation_only') or reference.get('tag_mapping_validated') is not False or not reference.get('source_files'):
+                raise ValueError('Observation is not an accepted tag mapping')
+            for name in [*reference['source_files'],reference['contract']]:
+                if name.startswith('/') or '..' in Path(name).parts or (root/name).is_symlink() or not (root/name).is_file():raise ValueError('Missing observation implementation')
     return data
 
 def lookup(signal_id,root=ROOT):
     data=registry(root)
     row=next((s for s in data['signals'] if s['id']==signal_id),None)
     if row is None:return {'status':'unsupported','reason':'unknown_signal_id'}
+    reference=row.get('reference_implementation',{})
     return {**row,'source_sha256':{name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in row['source_files']},
+            'reference_implementation_sha256':{name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in reference.get('source_files',[])},
             'signal_id_alone_reproduces_assertion':False,'independent_accuracy_evidence':False}

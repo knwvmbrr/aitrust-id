@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "dataset_id": "tag-development/1.0.0",
+  "split": "development",
+  "created_by": "Codex",
+  "source": "New synthetic examples authored for this increment",
+  "independently_labeled": false,
+  "release_holdout": false,
+  "classifier_accuracy_established": false,
+  "files": {
+    "hp-v1.jsonl": {
+      "sha256": "e7aae6a8d6cc02a08bc50948b74590cccc491b668d9165f102acbbec9a902a5f",
+      "rows": 12,
+      "tag": "HP"
+    },
+    "mt-v1.jsonl": {
+      "sha256": "8bcbde8c12783a53f8cd3827f98078c4a1004d72afbd236a1cc7777675be65c3",
+      "rows": 12,
+      "tag": "MT"
+    },
+    "fi-v1.jsonl": {
+      "sha256": "ce892be727d32fa8d4447ba3e8b3b25cf7f225dba6879daded73536c438ded96",
+      "rows": 12,
+      "tag": "FI"
+    }
+  }
+}

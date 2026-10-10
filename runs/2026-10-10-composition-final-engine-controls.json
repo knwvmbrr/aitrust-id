@@ -1,0 +1,51 @@
+{
+  "captured_at": "2026-10-10T16:25:15.075Z",
+  "pass": true,
+  "method": "composition-observation/1.0.0",
+  "sources": {
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90",
+    "tools/composition/editor.js": "477f2aa72a14a9b22c6e92be01f74af5b92395ee55e566769b070c042eaa57bc",
+    "tools/composition/editor.html": "490c3603a6a52c4ed261ed9dfa6022bd614fae7d66fbcd2bcbb883695f5de1d0",
+    "tools/composition/style.css": "2d235a7d0be78fc8ef9933e327e365fd8fe9b0a0a2920259ea3eb072e0f69b29"
+  },
+  "artifact_sha256": "eaf2917d711c1e3de4dffced2687487ea771c1223859bc46cd340bd9c0860a19",
+  "deterministic_build": true,
+  "observations": [
+    {
+      "engine": "chromium",
+      "engine_version": "151.0.7922.34",
+      "native_typing": true,
+      "revision": true,
+      "coarse_timing": true,
+      "composition_suppression": true,
+      "synthetic_paste_instrumentation": true,
+      "native_clipboard_test": false,
+      "CSP_network_refusal": true,
+      "manual_summary_export": true,
+      "pause_reset_reload": true,
+      "network_requests": 0,
+      "storage_writes": 0,
+      "axe_violations": 0
+    },
+    {
+      "engine": "webkit",
+      "engine_version": "26.5",
+      "native_typing": true,
+      "revision": true,
+      "coarse_timing": true,
+      "composition_suppression": true,
+      "synthetic_paste_instrumentation": true,
+      "native_clipboard_test": false,
+      "CSP_network_refusal": true,
+      "manual_summary_export": true,
+      "pause_reset_reload": true,
+      "network_requests": 0,
+      "storage_writes": 0,
+      "axe_violations": 0
+    }
+  ],
+  "actual_physical_phone": false,
+  "human_accessibility_review": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

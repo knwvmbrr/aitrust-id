@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-10T16:45:48.645816+00:00",
+  "pass": true,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "PS",
+    "sources": {
+      "eval/datasets/unsafe_code/counterexamples_v1.jsonl": "1e2a473e3aa33b449b8cc7f7db0ad7a713e79fd8ac8486fa995051468e3927b7",
+      "eval/datasets/unsafe_code/counterexamples_v2.jsonl": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274",
+      "eval/datasets/unsafe_code/fetch_execute_v1.jsonl": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10",
+      "eval/datasets/unsafe_code/live_gap_v1.jsonl": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9",
+      "eval/datasets/unsafe_code/manifest.json": "ec9d5ce24bb4c13b31d7e95320f65bd1b989bac8dee5caeb204ad1f88b4a1181",
+      "eval/datasets/unsafe_code/provenance-v1.json": "39fa339ba299a2e3131cb8e4b1c1dc31fa78bf19a48151f373fadf7612a666a1",
+      "eval/datasets/unsafe_code/ps_v1.jsonl": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4",
+      "eval/datasets/unsafe_code/routing_boundaries_v1.jsonl": "639715fb9ebb6e755fb5028adab57f14f9b04733433b98810666bb4f93a63b62",
+      "eval/gates.schema.json": "8798635d95ba86cb297bd115f87f3de23ba56d9a086697dfc4080094e8ebaf85",
+      "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+      "eval/harness.py": "4d5c16f3081347ba0dcf793301ffdc6406be66450024f662efe9f3902b082c84",
+      "eval/measure.py": "10481b433440ce93820c90c3fdea12b2dde6b6d051c3eb21231065ab43a2b7ec",
+      "eval/methods/README.md": "e47de496d7ad753cd56eb2b1eb7ca5f5e143cce48870b920bf978a9f4dfa3f90",
+      "eval/methods/context-v5.py": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+      "eval/methods/unicode15-word-class.json": "282ff213d209129493d29700204a3cdc648bb5b3890c3af2f3895eb168ce435a",
+      "eval/revalidation.json": "bc3cb4a91e9a937e426761fa0aa8863205c5d7a003994f7ea0500e2b771cb65c",
+      "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+      "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+      "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+      "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+      "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+      "protocol/measurements.py": "4d4954f954ea2802761ffb2ff065f099f11bdb16751fd78f460ec8d869e9f53b",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+      "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+      "protocol/signals.py": "3e9e21b828b375b2ad08cb8c734bf8de142512bca6226482abe017c3e00bfda3",
+      "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "scripts/assess-evidence-resistance.py": "4eb780f2c9cc31eb82bb394336ca18e6a393e522a455855f52c62f8a1f91a145",
+      "scripts/measure-command-performance.py": "a18ca54766dc5da5f9bc8c542671cf0d0a2e7498097b1cd5dfbdc16936b47e5c",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/verify-regressions.py": "4b04f6d580c002124b3a36dc40f436abb494a1dc3a548fd3cb8aa98540839e00",
+      "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+      "services/evaluator/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+      "services/evaluator/requirements.freeze": "dae667b6ec5dcf4ec14d7a5773114a2e10a3d6c7ee1dbcb74a07d6b07c1da114",
+      "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+      "services/evaluator/requirements.txt": "bbad8257ab10f0390117019ced2df3c23f90676a2f1853ec8a8697cf9fd759de",
+      "spec/signal-registry.json": "e3510e363ed397ef7581d670a731c863362e15ad40d4fac2d35a5ba59f68da8b",
+      "spec/signals.md": "a2d862d1733596b1a9e563f6eedb533a78662c4791537cbd1bdb0b4dd29672ea",
+      "tests/test_command_performance.py": "9043d41292c17c10832baec9b3ba0942778ae7f524708dc5a4347feca1b48307",
+      "tests/test_context.py": "f454b631a75fe0b1069bef043619464a13ff0d3588684be1a983f35510ff6314",
+      "tests/test_evidence_resistance.py": "97b22b1a4bbcd4b233c22a13bba45e8be163bbc82052321f977270934636b410",
+      "tests/test_live_gap_boundaries.py": "1f128f52e34449ef96d0c79d9d83be93df916b08b54fe8cd63ce0fbcf4cc61e8",
+      "tests/test_pipe_routing.py": "a7237bb093c57604f1e675a1be3f39102510ff97a39b4563f21e0d8daa13876b"
+    },
+    "sha256": "6411977e6fa84c5f67ad897c0df4768c0ceee183dce568921f0532226b8e3a4e",
+    "commands": [
+      [
+        "{python}",
+        "scripts/verify-regressions.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_command_performance.py",
+        "tests/test_evidence_resistance.py",
+        "-q"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-regressions.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e9c8d8e3002a340ccbb5ba1a3382302365971bf732a8a875886f05c16ed418ca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_command_performance.py",
+        "tests/test_evidence_resistance.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "c014edcb1bcee1acee05edf670fa2f257f911fe5586b25edb3fcc32c7b561dd9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

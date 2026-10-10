@@ -42,7 +42,14 @@
     "verify:release-a11y": "python3 scripts/verify-accessibility-release.py",
     "verify:signals": "python3 scripts/verify-signals.py --check",
     "verify:resistance": "python3 scripts/assess-evidence-resistance.py --output output/verification/evidence-resistance.json",
-    "verify:boundaries": "node scripts/verify-route-boundaries.cjs"
+    "verify:boundaries": "node scripts/verify-route-boundaries.cjs",
+    "build:composition": "python3 scripts/build-composition-tool.py",
+    "test:composition": "node --test tests/composition-observations.cjs",
+    "verify:composition": "node scripts/verify-composition-tool.cjs",
+    "verify:tag-fixtures": "python3 scripts/verify-tag-development.py",
+    "receipt": "node scripts/receipt.cjs",
+    "test:receipts": "node --test tests/offline-receipts.cjs",
+    "verify:offline-components": "python3 scripts/verify-offline-components.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",

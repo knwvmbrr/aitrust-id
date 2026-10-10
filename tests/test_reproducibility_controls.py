@@ -121,7 +121,9 @@ def test_all_signal_ids_have_explainable_state_and_unknowns_refuse():
         assert signals.lookup(id)['status']=='unsupported'
 
 def test_active_catalogue_and_runtime_cannot_silently_diverge(tmp_path):
-    for name in ['spec/signal-registry.json','spec/signals.md','eval/methods/context-v5.py']+[name for s in signals.registry()['signals'] for name in s['source_files']]:
+    methods=signals.registry()['signals']
+    reference_files=[name for s in methods if 'reference_implementation' in s for name in [*s['reference_implementation']['source_files'],s['reference_implementation']['contract']]]
+    for name in set(['spec/signal-registry.json','spec/signals.md','eval/methods/context-v5.py']+[name for s in methods for name in s['source_files']]+reference_files):
         target=tmp_path/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(signals.ROOT/name,target)
     assert signals.registry(tmp_path)
     data=json.loads((tmp_path/'spec/signal-registry.json').read_text());data['signals'][0]['independent_validation']=True

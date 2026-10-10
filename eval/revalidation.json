@@ -122,12 +122,24 @@
         "scripts/execution-report.cjs",
         "package*.json",
         "scripts/verify-built-website.cjs",
-        "site/public/_headers"
+        "site/public/_headers",
+        "scripts/verify-offline-download.cjs",
+        "scripts/static-headers.cjs",
+        "scripts/verify-static-headers.cjs",
+        "tests/static-headers.cjs"
       ],
       "commands": [
         [
           "node",
           "scripts/verify-built-website.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-offline-download.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-static-headers.cjs"
         ]
       ]
     }

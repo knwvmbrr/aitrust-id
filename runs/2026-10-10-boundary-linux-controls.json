@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-10T16:37:18.077239+00:00",
+  "pass": true,
+  "source_commit": "53d87fa8659c916703978f45734b439ebda48555",
+  "environment": "Dedicated Linux host; owner-only public source clone with explicitly reconciled evaluation locks and hash-locked test venv",
+  "patched_source_files": {
+    "eval/requirements.lock": "09e5a8f85b2bfb6be32656e0be9ea5db3fae2f36808a5e2b172df36062b77558",
+    "eval/requirements.txt": "972c74ca6534698898712363fa31dde478f2d58189ee49031ee3ade5bc8da980"
+  },
+  "command": "pytest tests/test_route_boundaries.py -q; verify-route-boundaries.py",
+  "exit": 0,
+  "stdout_sha256": "d2b66789d7fd69cb3fa5ffa1b49b7ba4fa89e98afdd490e086042144d8c862fa",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "prepared_artifact_sha256": {
+    "site/src/device-manifest.json": "2d12a18686e7db362b4aba7ffd2740e8e8a85f0f7711ecc42f34b3466d9bae76",
+    "site/public/share-card.png": "ba8dbaeff35b3679283c832c535b595c1a6a04b21bb5c9a282ff82fcff54d7ca",
+    "site/public/device/method-59d43c94897957ef3284c4dddafefe8499611886978014491ff21528db70e86f.py": "59d43c94897957ef3284c4dddafefe8499611886978014491ff21528db70e86f"
+  },
+  "prepared_artifacts_copied_from_verified_local_build": true,
+  "linux_browser_execution": false,
+  "hosted_github_actions_execution": false,
+  "independent_accuracy_evidence": false,
+  "scope": "Actual Linux source/access/endpoint/receipt guard and controls. Prepared static artifacts were copied, not rebuilt on Linux; archived browser and service observations are checked, not rerun."
+}

@@ -446,29 +446,36 @@
         "id": "F-008",
         "kind": "requirement",
         "title": "Signed assertion integrity",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Signed assertion integrity. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: Recipients verify signer and record integrity without treating the signature as proof of truth.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Signed assertion integrity. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: Recipients verify signer and record integrity without treating the signature as proof of truth."
-        ],
-        "queue": "open"
+        "evidence_scope": "Optional detached signing and pinned-key integrity verification for schema-valid assertions; both algorithms, tampering and invalid schema executed. Gateway/extension automatic signing and signature-before-render remain separate open jobs.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -1943,29 +1950,36 @@
         "id": "F-017",
         "kind": "requirement",
         "title": "sig.duplicate_loop.v1 — n-gram repetition above threshold",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.duplicate_loop.v1 — n-gram repetition above threshold. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver sig.duplicate_loop.v1 — n-gram repetition above threshold. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
-        ],
-        "queue": "open"
+        "evidence_scope": "Exact bounded repetition observation with current source/configuration identity and normalized spans. Intentional repetitions may match; no HP or truth inference.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -2380,29 +2394,37 @@
         "id": "F-026",
         "kind": "requirement",
         "title": "sig.keystroke_liveness.v1 — dwell and flight time distributions",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.keystroke_liveness.v1 — dwell and flight time distributions. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver sig.keystroke_liveness.v1 — dwell and flight time distributions. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
-        ],
-        "queue": "open"
+        "evidence_scope": "The independently named editing-observation job is implemented in the opt-in offline editor and tested numerically and through both actual browser engines. Its proposed PA/FA mapping is unvalidated; no identity or authorship verdict is issued.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -2434,29 +2456,37 @@
         "id": "F-027",
         "kind": "requirement",
         "title": "sig.revision_churn.v1 — deleted-and-rewritten characters over final length",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.revision_churn.v1 — deleted-and-rewritten characters over final length. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver sig.revision_churn.v1 — deleted-and-rewritten characters over final length. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
-        ],
-        "queue": "open"
+        "evidence_scope": "The independently named editing-observation job is implemented in the opt-in offline editor and tested numerically and through both actual browser engines. Its proposed PA/FA mapping is unvalidated; no identity or authorship verdict is issued.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -2488,29 +2518,37 @@
         "id": "F-028",
         "kind": "requirement",
         "title": "sig.compose_monotonicity.v1 — caret-position entropy",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.compose_monotonicity.v1 — caret-position entropy. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver sig.compose_monotonicity.v1 — caret-position entropy. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
-        ],
-        "queue": "open"
+        "evidence_scope": "The independently named editing-observation job is implemented in the opt-in offline editor and tested numerically and through both actual browser engines. Its proposed PA/FA mapping is unvalidated; no identity or authorship verdict is issued.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -2596,29 +2634,37 @@
         "id": "F-029b",
         "kind": "requirement",
         "title": "sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
-        ],
-        "queue": "open"
+        "evidence_scope": "The independently named editing-observation job is implemented in the opt-in offline editor and tested numerically and through both actual browser engines. Its proposed PA/FA mapping is unvalidated; no identity or authorship verdict is issued.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -2650,29 +2696,37 @@
         "id": "F-029c",
         "kind": "requirement",
         "title": "sig.paste_burst.v1 — large insertion with no preceding keystrokes",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.paste_burst.v1 — large insertion with no preceding keystrokes. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver sig.paste_burst.v1 — large insertion with no preceding keystrokes. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
-        ],
-        "queue": "open"
+        "evidence_scope": "The independently named editing-observation job is implemented in the opt-in offline editor and tested numerically and through both actual browser engines. Its proposed PA/FA mapping is unvalidated; no identity or authorship verdict is issued.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -2766,29 +2820,37 @@
         "id": "F-082",
         "kind": "requirement",
         "title": "Assistive input safety routing",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Assistive input safety routing. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Assistive-input users receive no negative authorship inference or automatic IV claim.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Assistive input safety routing. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Assistive-input users receive no negative authorship inference or automatic IV claim."
-        ],
-        "queue": "open"
+        "evidence_scope": "The independently named editing-observation job is implemented in the opt-in offline editor and tested numerically and through both actual browser engines. Its proposed PA/FA mapping is unvalidated; no identity or authorship verdict is issued.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -5808,29 +5870,37 @@
         "id": "F-053",
         "kind": "requirement",
         "title": "HP / MT / FI fixtures",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver HP / MT / FI fixtures. Next package action: Freeze method/corpus/protocol identity before runs; separate development from holdout. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-tag-development-fixtures.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver HP / MT / FI fixtures. Next package action: Freeze method/corpus/protocol identity before runs; separate development from holdout. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed."
-        ],
-        "queue": "open"
+        "evidence_scope": "36 exact versioned synthetic HP/MT/FI development fixtures, provenance/refusal checks and current evaluator non-emission. No independently labeled accuracy or holdout.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -6708,29 +6778,37 @@
         "id": "F-121",
         "kind": "requirement",
         "title": "Receipt format binding an artifact hash to observed composition activity",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Receipt format binding an artifact hash to observed composition activity. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Receipt format binding an artifact hash to observed composition activity. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-        ],
-        "queue": "open"
+        "evidence_scope": "Receipt format binds exact artifact bytes/hash to the exported composition observations; real browser export to CLI issuance/verification executed. No authorship or independent timestamp proof.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -6761,29 +6839,37 @@
         "id": "F-122",
         "kind": "requirement",
         "title": "Receipt issuance — always a free path, by policy",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Receipt issuance — always a free path, by policy. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Receipt issuance — always a free path, by policy. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-        ],
-        "queue": "open"
+        "evidence_scope": "Complete optional free local issuance path from editor exports and owner-held signing keys; no provider, account, payment or compulsory receipt. This is not a legal certification service.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -6814,29 +6900,37 @@
         "id": "F-123",
         "kind": "requirement",
         "title": "Receipt verification requiring no contact with us",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Receipt verification requiring no contact with us. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Receipt verification requiring no contact with us. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-        ],
-        "queue": "open"
+        "evidence_scope": "Pinned-key receipt and artifact verification runs offline without contacting us; integrity, expiry, unchecked revocation and unestablished authorship are separate.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -7026,29 +7120,37 @@
         "id": "F-127",
         "kind": "requirement",
         "title": "Forgery-cost class as a first-class field on every receipt",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Forgery-cost class as a first-class field on every receipt. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Forgery-cost class as a first-class field on every receipt. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-        ],
-        "queue": "open"
+        "evidence_scope": "Every receipt requires an explicit unvalidated observation-forgery cost class; omitted/unsupported or inflated classes fail. A signature is not evidence of difficult-to-forge composition.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -7238,29 +7340,37 @@
         "id": "F-131",
         "kind": "requirement",
         "title": "Receipt expiry and algorithm agility — ed25519 will not be safe forever",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T16:35:01.916924+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current implementation and executed component acceptance"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Receipt expiry and algorithm agility — ed25519 will not be safe forever. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T16:35:01.916924+00:00",
+        "completion_timestamp_basis": "Full named component job verified by current positive/negative and selected integration checks; not a tag release or invented historical timestamp.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/offline-component-result.md",
+          "runs/2026-10-10-offline-final-controls.json",
+          "runs/2026-10-10-offline-final-editor-receipt.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Receipt expiry and algorithm agility — ed25519 will not be safe forever. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-        ],
-        "queue": "open"
+        "evidence_scope": "Two explicit algorithm profiles, default/max lifetime, expired/not-yet-current states and unsupported-algorithm refusal executed. Revocation/freshness and post-quantum guarantees are not supplied.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-163254-offline-observations-and-receipts-f660b222",
+  "recorded_at": "2026-10-10T16:32:54.879454+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "53d87fa8659c916703978f45734b439ebda48555",
+  "changed": "Implemented optional offline editing observations, literal repetition, versioned development fixtures and artifact-bound receipts; reconciled gateway/evaluation lock pins.",
+  "proves": "Executed 56 Node and 48 selected Python controls; actual Chromium/WebKit editor export-to-receipt integration; exact previous-checkpoint publication verified.",
+  "limits": "No authorship, independent accuracy, physical-phone, human accessibility, timestamp, revocation or certification release claim. This event records implementation; queue closure awaits final evidence audit.",
+  "scope_ids": [
+    "F-008",
+    "F-017",
+    "F-026",
+    "F-027",
+    "F-028",
+    "F-029b",
+    "F-029c",
+    "F-053",
+    "F-082",
+    "F-121",
+    "F-122",
+    "F-123",
+    "F-127",
+    "F-131",
+    "F-098"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "fbb17c9939504e0626b77ae8e22a4e9ad15bd404cc139004078cde0829dde2ee",
+    "README.md": "788e3dca35f5cf6522dde23e39991d7a6a50ce56c737e568b1e134369bfbf947",
+    "docs/composition-observation-plan.md": "2cae86be43d13b5ef11f13f496d17bfb0eed303eb3741419de2d88bbd830e2e2",
+    "docs/composition-observations.md": "3ddafc6a6d3078be5952b8929756090139fbcc957da328a3a9e41d4bd1f05eb9",
+    "docs/offline-receipt-plan.md": "7882114f547f68570ea64a202cdb36a25c92098b913b1478eebf5b479a759d87",
+    "docs/offline-receipts.md": "f181bd27f7d3773f85230a2b71b5c0f30199673182a025cee94f370dcea817da",
+    "eval/datasets/tag_development/fi-v1.jsonl": "ce892be727d32fa8d4447ba3e8b3b25cf7f225dba6879daded73536c438ded96",
+    "eval/datasets/tag_development/hp-v1.jsonl": "e7aae6a8d6cc02a08bc50948b74590cccc491b668d9165f102acbbec9a902a5f",
+    "eval/datasets/tag_development/manifest.json": "68ab70e5efeca15103f23678a99d23b8bbc2b8b539f3b448196b05da2631886f",
+    "eval/datasets/tag_development/mt-v1.jsonl": "8bcbde8c12783a53f8cd3827f98078c4a1004d72afbd236a1cc7777675be65c3",
+    "eval/requirements.lock": "09e5a8f85b2bfb6be32656e0be9ea5db3fae2f36808a5e2b172df36062b77558",
+    "eval/requirements.txt": "972c74ca6534698898712363fa31dde478f2d58189ee49031ee3ade5bc8da980",
+    "package.json": "7253f5735bf485b331eea115d6c5643c36169463f227af8f33e7f4581f9f7744",
+    "protocol/receipts.cjs": "b3650a788b10deed592a2802b33bf8062a83c500a3c7f7972fbdd04e9622f476",
+    "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+    "protocol/signals.py": "3e9e21b828b375b2ad08cb8c734bf8de142512bca6226482abe017c3e00bfda3",
+    "rfcs/0002-authorship-receipts.md": "392e01fef96804c6a22be2bfed7562d3cfde067544bd9b46faf3aef746283689",
+    "runs/2026-10-10-boundary-assets-public.json": "09b6d38d053807eed0667596e613dd4554d9829e020d88eac6124c43b61a374e",
+    "runs/2026-10-10-boundary-policies-public.json": "2591dabac4b474b0bb5ad80981db76b49115f0bcd139814ab1b041ead1ac8984",
+    "runs/2026-10-10-boundary-site-public.json": "85d6704db8027e4d51a028635c2805ced3860733960d5935817f4d000323d8b6",
+    "runs/2026-10-10-composition-artifact-binding.json": "95a5f92b2bd3573ee6b79dd1d9be347126f3a2c56d794e8009206e6b5cec8f0b",
+    "runs/2026-10-10-composition-current-receipt-integration.json": "3a34b3bfc317054341e8cfd90509a11bbf264dd8639910e27c79c1bc68b9048c",
+    "runs/2026-10-10-composition-engine-controls.json": "2192b30afe80e6498a302f8d61a5177301b2fe8f3cb06092d834a0964cb942db",
+    "runs/2026-10-10-composition-final-engine-controls.json": "7532ece6f77328bf01efd0b8ad5713269b3d3a1ca93c9e1cc9db5f4a6f897fc4",
+    "runs/2026-10-10-observation-to-receipt-engines.json": "ab7bb02a3b09791d9e7fbf08ff875622d6c4e4cacec82a425c4290d0beef911a",
+    "runs/2026-10-10-offline-component-accepted-controls.json": "9ce0c265a2b72a7b297d8fa163babeb9547ca39024be9ea0e413616197512160",
+    "runs/2026-10-10-offline-component-current-controls.json": "394710945ace40a210753b494978bc438e3593f57c3202bc43dfe82c28bc03e5",
+    "runs/2026-10-10-tag-development-fixtures.json": "c3e56f40565e8a4328427e2e36fd2e1c720db43274225d5a4e3c358174de178d",
+    "scripts/build-composition-tool.py": "384dc77de3cb2cf7a8ca97539740ba8897158d5a937bfa547f5aef68fe588be5",
+    "scripts/check-repetition.py": "9ea741e4235c05c66bee8be32e5b40b162837864e77f21d79cc8dcf6cf1c4071",
+    "scripts/receipt.cjs": "4c5be0c4cdbd1467ad6a1a77cae4f7ecdcd454d8e5c0e1aef75efdfc53bbd524",
+    "scripts/verify-composition-tool.cjs": "157337c084009a1c98b83a9ba527ee6873cc0462c0c2a3fad85b829eacb4b435",
+    "scripts/verify-dependencies.py": "f564a1a3d49621d398c037c2ae3cd84e343083b87297cd7f032baee3329800b6",
+    "scripts/verify-offline-components.py": "84fd1a3c48793726d74fc33fc35d5b9630974f4c5c73e5992587782ea01060d4",
+    "scripts/verify-tag-development.py": "f58baa06b8f8b29a950433c454f819a678287653775ed1af7e8c99623e9ed774",
+    "spec/signal-registry.json": "e3510e363ed397ef7581d670a731c863362e15ad40d4fac2d35a5ba59f68da8b",
+    "spec/signals.md": "a2d862d1733596b1a9e563f6eedb533a78662c4791537cbd1bdb0b4dd29672ea",
+    "state.json": "ffff23930a029fc7d0ddb960c57c49f016d36612586e08c83d00f6e97bac0ba8",
+    "tests/composition-observations.cjs": "a1ea715cc209fe6c28df619a31fbee2efe75527d01a7553a40a47d6fd8453f63",
+    "tests/offline-receipts.cjs": "3d89eccd8ca975f5f248a9580a613bb89cd44f2078b5924b26e50c24c57f4fb0",
+    "tests/test_dependency_contract.py": "105216c1ae6414a61d6faa4885f174a116fc4271bfa07f1b5eeacb9be3730b94",
+    "tests/test_repetition_observation.py": "d786fa3b58e62b821426532144448fb6201ac5b3236f4bb6bb419ae534665bda",
+    "tests/test_reproducibility_controls.py": "3f1683be0ee5e6cfe107ede693f88fb2a9a125fb2c591972ee159eb8f6c67187",
+    "tests/test_tag_development.py": "ed43bc59db9bdc500116ce58b3ab189efa6dae6ed92c63c2973b8e8ad20449bc",
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90",
+    "tools/composition/editor.html": "3f57ec89f4229d50ba98db6fb4f49b090fa8937b17279451a43d83ed34287c50",
+    "tools/composition/editor.js": "38d2898cd490af1e6e7fef821504091841dba28a404c015313364346009fd297",
+    "tools/composition/style.css": "2d235a7d0be78fc8ef9933e327e365fd8fe9b0a0a2920259ea3eb072e0f69b29"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-offline-component-current-controls.json",
+      "sha256": "394710945ace40a210753b494978bc438e3593f57c3202bc43dfe82c28bc03e5"
+    },
+    {
+      "path": "runs/2026-10-10-composition-current-receipt-integration.json",
+      "sha256": "3a34b3bfc317054341e8cfd90509a11bbf264dd8639910e27c79c1bc68b9048c"
+    },
+    {
+      "path": "runs/2026-10-10-tag-development-fixtures.json",
+      "sha256": "c3e56f40565e8a4328427e2e36fd2e1c720db43274225d5a4e3c358174de178d"
+    },
+    {
+      "path": "runs/2026-10-10-boundary-assets-public.json",
+      "sha256": "09b6d38d053807eed0667596e613dd4554d9829e020d88eac6124c43b61a374e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_tag_development.py",
+        "tests/test_repetition_observation.py",
+        "tests/test_dependency_contract.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T16:32:56.645343+00:00"
+    }
+  ]
+}

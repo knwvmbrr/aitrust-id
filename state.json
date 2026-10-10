@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-09-provenance-boundary-site-public.json",
+    "evidence": "runs/2026-10-10-boundary-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -282,7 +282,9 @@
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
     "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "db64a9cc9d6ac2668732ff81b1b66441bddadf51"
+    "public_static_source_commit": "db64a9cc9d6ac2668732ff81b1b66441bddadf51",
+    "deployment": "https://75ff617f.aitrust-id.pages.dev",
+    "source_commit": "53d87fa8659c916703978f45734b439ebda48555"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -633,7 +635,7 @@
     "raw_text_uploaded": false,
     "raw_text_persisted": false,
     "redaction_performed": false,
-    "offline_public_asset_bytes": 14914906,
+    "offline_public_asset_bytes": 14915969,
     "browser_engine_cases_per_engine": 137,
     "emulated_engines": [
       "Android Chromium",
@@ -695,30 +697,30 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T15:54:29.912531+00:00",
-    "completed_records": 88,
-    "open_records": 114,
+    "audited_at": "2026-10-10T16:35:01.916924+00:00",
+    "completed_records": 102,
+    "open_records": 100,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
-    "structural_evidence": "runs/2026-10-10-route-boundary-scope.json",
+    "execution_evidence": "runs/2026-10-10-offline-final-controls.json",
+    "structural_evidence": "runs/2026-10-10-target-100-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-capture-browser-assets-public.json",
-    "source_commit": "db64a9cc9d6ac2668732ff81b1b66441bddadf51",
+    "publication": "runs/2026-10-10-boundary-assets-public.json",
+    "source_commit": "53d87fa8659c916703978f45734b439ebda48555",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/route-boundary-result.md",
+    "latest_increment": "docs/offline-component-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 14,
+    "target_remaining_closures": 0,
     "publication_pending": true,
-    "verification": "runs/2026-10-10-route-boundary-scope.json"
+    "verification": "runs/2026-10-10-target-100-scope.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -927,10 +929,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current_source_checks_pass; publication_pending",
+    "status": "current_source_boundary_execution_pass; publication_pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-10-boundary-current-deploy-controls.json",
-    "source_files": 110,
+    "evidence": "runs/2026-10-10-target-100-final-reviewed-boundaries.json",
+    "source_files": 119,
     "controls_and_ci_contract_tests": 29,
     "records": [
       "X-01",
@@ -945,6 +947,50 @@
     ],
     "registry_adoption": false,
     "research_collection_connected": false,
-    "independent_security_certification": false
+    "independent_security_certification": false,
+    "publication": "runs/2026-10-10-boundary-assets-public.json",
+    "public_catalogue": "runs/2026-10-10-boundary-site-public.json",
+    "public_policies": "runs/2026-10-10-boundary-policies-public.json"
+  },
+  "offline_components": {
+    "status": "component_acceptance_pass; publication_pending",
+    "records": [
+      "F-008",
+      "F-017",
+      "F-026",
+      "F-027",
+      "F-028",
+      "F-029b",
+      "F-029c",
+      "F-053",
+      "F-082",
+      "F-121",
+      "F-122",
+      "F-123",
+      "F-127",
+      "F-131"
+    ],
+    "editor": "tools/composition/editor.html",
+    "editor_build": "python3 scripts/build-composition-tool.py",
+    "guide": "docs/composition-observations.md",
+    "receipt_guide": "docs/offline-receipts.md",
+    "controls": "runs/2026-10-10-offline-final-controls.json",
+    "browser_integration": "runs/2026-10-10-offline-final-editor-receipt.json",
+    "development_fixtures": "runs/2026-10-10-tag-development-fixtures.json",
+    "automatic_collection": false,
+    "authorship_validation": false,
+    "independent_timestamp": false,
+    "revocation_checked": false,
+    "new_tag_releases": 0,
+    "full_python_evidence": "runs/2026-10-10-target-100-final-python.json"
+  },
+  "current_engineering_revalidation": {
+    "PS": "runs/2026-10-10-target-100-current-PS-revalidation.json",
+    "PII_REDACTED": "runs/2026-10-10-target-100-current-PII-revalidation.json",
+    "protocol": "runs/2026-10-10-target-100-final-integrity-protocol.json",
+    "extension": "runs/2026-10-10-target-100-current-extension-revalidation.json",
+    "website": "runs/2026-10-10-target-100-publication-ready-website.json",
+    "independent_accuracy_evidence": false,
+    "release_approved": false
   }
 }

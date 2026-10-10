@@ -1,0 +1,57 @@
+{
+  "captured_at": "2026-10-10T16:29:29.510Z",
+  "pass": true,
+  "method": "composition-observation/1.0.0",
+  "sources": {
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90",
+    "tools/composition/editor.js": "4de2569e11fc4f086fea6057b9f117238dbde3b8862b1615f74a7e5a6bcd4fcb",
+    "tools/composition/editor.html": "3f57ec89f4229d50ba98db6fb4f49b090fa8937b17279451a43d83ed34287c50",
+    "tools/composition/style.css": "2d235a7d0be78fc8ef9933e327e365fd8fe9b0a0a2920259ea3eb072e0f69b29"
+  },
+  "artifact_sha256": "5767c26eca345209216955bbbfb773eff3072bdb31b7c53667993f84e938fb99",
+  "deterministic_build": true,
+  "observations": [
+    {
+      "engine": "chromium",
+      "engine_version": "151.0.7922.34",
+      "native_typing": true,
+      "revision": true,
+      "coarse_timing": true,
+      "composition_suppression": true,
+      "synthetic_paste_instrumentation": true,
+      "native_clipboard_test": false,
+      "CSP_network_refusal": true,
+      "manual_summary_export": true,
+      "manual_text_export": true,
+      "export_to_offline_receipt": true,
+      "reset_cancels_pending_export": true,
+      "pause_reset_reload": true,
+      "network_requests": 0,
+      "storage_writes": 0,
+      "axe_violations": 0
+    },
+    {
+      "engine": "webkit",
+      "engine_version": "26.5",
+      "native_typing": true,
+      "revision": true,
+      "coarse_timing": true,
+      "composition_suppression": true,
+      "synthetic_paste_instrumentation": true,
+      "native_clipboard_test": false,
+      "CSP_network_refusal": true,
+      "manual_summary_export": true,
+      "manual_text_export": true,
+      "export_to_offline_receipt": true,
+      "reset_cancels_pending_export": true,
+      "pause_reset_reload": true,
+      "network_requests": 0,
+      "storage_writes": 0,
+      "axe_violations": 0
+    }
+  ],
+  "actual_physical_phone": false,
+  "human_accessibility_review": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

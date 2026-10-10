@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Trust ID · Offline editing observations</title>
+<meta name="method-sha256" content="__METHOD_SHA__">
+<meta http-equiv="Content-Security-Policy" content="__CSP__">
+<style>__STYLE__</style></head><body><main>
+<header><p>AI TRUST ID · Research tool</p><h1>Your editing session, described simply.</h1>
+<p>This tool observes edits in this box when you choose Start. It cannot tell who wrote something. It does not issue a tag.</p></header>
+<section aria-labelledby="controls-title"><h2 id="controls-title">You are in control</h2>
+<p>Nothing is sent or saved automatically. Your words stay in this box. Reset clears your words and measurements. Timing summaries can still link sessions; share only what you choose.</p>
+<label for="mode">Input method</label><select id="mode"><option value="unknown">Uncertain / touch / other — timing off</option><option value="assistive">Assistive input / dictation / IME — timing off</option><option value="physical">Physical keyboard — coarse timing on</option></select>
+<div class="actions"><button id="start">Start</button><button id="pause" disabled>Pause</button><button id="reset">Reset and delete</button></div>
+<p id="status" role="status">Not started. Nothing is observed.</p>
+<label for="editor">Your own test text</label><textarea id="editor" rows="7" maxlength="20000" readonly spellcheck="false" autocomplete="off" aria-describedby="limits"></textarea>
+<p id="limits">Stops after 30 minutes or 10,000 events. Maximum 20,000 text units. Pause ends this session; reset to start another.</p></section>
+<section aria-labelledby="results-title"><h2 id="results-title">What was observed</h2>
+<p>Edits, caret movement, visible focus and large paste events. Focus does not prove reading. Pasting does not prove AI use. Timing is erased when input is uncertain or composition is observed.</p>
+<details><summary>See the measurement record</summary><pre id="summary"></pre></details>
+<div class="actions"><button id="download" disabled>Download this summary</button><button id="download-text" disabled>Download your text</button></div><p>The summary includes scalar measurements, an artifact hash and the method version. It excludes your words, key names and raw event timings. Download your text creates a separate file containing your words, only when you choose it.</p></section>
+<footer><p>Development component. No independent accuracy, human accessibility or identity claim. No account, tracking, storage or network access.</p></footer>
+</main><script>__CORE__</script><script>__EDITOR__</script></body></html>

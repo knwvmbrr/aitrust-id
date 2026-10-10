@@ -2,8 +2,13 @@
 
 - **Author:** Michael Raashad McGuire (knwvmbrr)
 - **Date:** 2026-10-06
-- **Status:** draft; unadopted, no implemented receipt issuance or authorship validation
+- **Status:** draft; unadopted. Optional experimental offline integrity receipts exist; no authorship validation
 - **Affects:** spec, governance
+
+The [offline component](../docs/offline-receipts.md) implements optional artifact-bound
+receipts, pinned-key integrity and expiry. It does not implement this RFC’s
+independent timestamps, revocation, recovery, group receipts or provenance claims.
+No standard adoption or PA/FA/IV acceptance is implied.
 
 ## Summary
 

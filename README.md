@@ -364,3 +364,14 @@ environment needs the locked gateway and evaluation dependencies; build the site
 first to prepare its checked device assets. The guard refuses changed or missing
 evidence. It does not certify future code, third-party hosting or independent
 accuracy, and it does not activate research collection or the registry proposal.
+
+## Offline research components
+
+The [editing observation tool](docs/composition-observations.md) runs as a standalone
+HTML file, with opt-in measurement, timing suppression and local exports. The
+[optional receipt tool](docs/offline-receipts.md) signs artifact-bound records and
+verifies them without contacting us. Signature integrity is separate from truth,
+authorship and unchecked revocation. These are functioning development components;
+PA, FA, HP, MT and IV remain unavailable. `npm run verify:offline-components`
+executes their controls; `npm run verify:composition` exercises both browser engines.
+The new HP/MT/FI fixtures are synthetic development scenarios, not release evidence.

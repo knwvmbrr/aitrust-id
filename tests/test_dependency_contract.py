@@ -25,7 +25,7 @@ def test_npm_negative_integrity_controls(field,value):
     lock['packages'][key][field]=value
     with pytest.raises((ValueError,AttributeError)):m.npm_lock(lock)
 
-@pytest.mark.parametrize('change',['base','install','active-service','format-dep'])
+@pytest.mark.parametrize('change',['base','install','active-service','format-dep','conflicting-pin'])
 def test_release_inventory_rejects_mutations(tmp_path,change):
     import shutil
     for path in ['deploy/docker-compose.yml','eval/requirements.lock','package-lock.json','package.json','site/package-lock.json','site/package.json',*[f'services/{name}/{file}' for name in ('gateway','anonymizer','evaluator') for file in ('Dockerfile','requirements.lock')]]:
@@ -36,6 +36,8 @@ def test_release_inventory_rejects_mutations(tmp_path,change):
         p=tmp_path/'services/gateway/Dockerfile';p.write_text(p.read_text().replace('--require-hashes ',''))
     elif change=='active-service':
         p=tmp_path/'deploy/docker-compose.yml';p.write_text(p.read_text().replace('    profiles: [registry]\n',''))
+    elif change=='conflicting-pin':
+        p=tmp_path/'eval/requirements.lock';p.write_text(p.read_text().replace('pyyaml==6.0.3','pyyaml==6.0.2'))
     else:
         p=tmp_path/'eval/requirements.lock';p.write_text(p.read_text().replace('rfc3339-validator==0.1.4','not-the-format-dependency==0.1.4'))
     with pytest.raises(ValueError):m.verify(tmp_path)
