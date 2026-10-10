@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-194539-replay-publication-proof-68e3224e",
+  "recorded_at": "2026-10-10T19:45:39.415919+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9810441e7f5555da7083405d73263d2a8400fbb0",
+  "changed": "Recorded the actual current-source publication, public workflow checks and latest deployment state.",
+  "proves": "Reviewed static artifacts match preview/apex/www, current public catalogue and Scope work, and runtime source 9810441 is pushed.",
+  "limits": "This proof/state commit is bookkeeping, not another runtime deployment. 99 requirements remain open; no tag accuracy or physical-device acceptance is inferred.",
+  "scope_ids": [
+    "F-003",
+    "F-150"
+  ],
+  "files": {
+    "runs/2026-10-10-replay-publication.json": "aca88e9412a3691b9632f23502ec4212028771acaf22a8209a0b77a82c2dd096",
+    "runs/2026-10-10-replay-site-public.json": "f0dde61b75a837625fa64357f72d4e83cf3a0c60455e4366073f21414eab73d8",
+    "state.json": "77e191a1f0e3947ad698f5f17e21707d78c7efb288809c2a3d3b11c4363e9aa1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-replay-publication.json",
+      "sha256": "aca88e9412a3691b9632f23502ec4212028771acaf22a8209a0b77a82c2dd096"
+    },
+    {
+      "path": "runs/2026-10-10-replay-site-public.json",
+      "sha256": "f0dde61b75a837625fa64357f72d4e83cf3a0c60455e4366073f21414eab73d8"
+    }
+  ],
+  "checks": []
+}

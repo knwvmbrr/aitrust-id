@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-194539-replay-publication-proof-68e3224e
+
+Recorded 2026-10-10T19:45:39.415919+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the actual current-source publication, public workflow checks and latest deployment state.
+- **Evidence.** Reviewed static artifacts match preview/apex/www, current public catalogue and Scope work, and runtime source 9810441 is pushed. [Change record](./runs/changes/2026-10-10-194539-replay-publication-proof-68e3224e.json).
+- **Not claimed.** This proof/state commit is bookkeeping, not another runtime deployment. 99 requirements remain open; no tag accuracy or physical-device acceptance is inferred.
+
+
 ### 2026-10-10-194340-replay-complete-acceptance-1155ca4a
 
 Recorded 2026-10-10T19:43:40.773187+00:00 · Contributor: Codex · change

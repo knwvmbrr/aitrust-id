@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-10-owner-pilot-site-public.json",
+    "evidence": "runs/2026-10-10-replay-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://65015b3e.aitrust-id.pages.dev",
+    "deployment_url": "https://daf1fbfa.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -1001,7 +1001,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T19:43:40.681379+00:00",
+  "updated_at": "2026-10-10T19:45:39.324772+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1060,6 +1060,17 @@
     "guide": "docs/assertion-replay.md",
     "python_suite_without_final_boundaries": 915,
     "complete_python_suite_passed": 945,
-    "current_source_boundaries_verified": true
+    "current_source_boundaries_verified": true,
+    "source_commit": "9810441e7f5555da7083405d73263d2a8400fbb0",
+    "publication_evidence": "runs/2026-10-10-replay-publication.json",
+    "public_site_checks_passed": true
+  },
+  "latest_runtime_publication": {
+    "source_commit": "9810441e7f5555da7083405d73263d2a8400fbb0",
+    "deployment_url": "https://daf1fbfa.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-10-replay-publication.json",
+    "matching_artifacts": 561,
+    "independent_accuracy_evidence": false,
+    "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   }
 }
