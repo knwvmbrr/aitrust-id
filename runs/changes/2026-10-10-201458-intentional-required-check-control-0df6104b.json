@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-201458-intentional-required-check-control-0df6104b",
+  "recorded_at": "2026-10-10T20:14:58.496821+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "06b9c547a728184388ed4afa88c81654001abc0d",
+  "changed": "Create an isolated control branch with exactly one intentionally failing Python test; product main remains unchanged.",
+  "proves": "The control exits 1 locally with its explicit control marker. Changelog discipline remains enforced for the branch. Ready-PR hosted blocking is not yet claimed.",
+  "limits": "Never merge this branch. This is failure-control evidence, not a product implementation, a release candidate or independent validation.",
+  "scope_ids": [
+    "F-054",
+    "F-152"
+  ],
+  "files": {
+    "runs/2026-10-10-intentional-ci-control.json": "f49947350f99e684f2ed2bdfbed3f3c7ae038c83db2a79d52e75a667249a3186",
+    "tests/test_hosted_failure_control.py": "20b786aec9701dad0955f7c0bfe9dc351dc3ae68cd40cc623a078da0e1477c7f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-intentional-ci-control.json",
+      "sha256": "f49947350f99e684f2ed2bdfbed3f3c7ae038c83db2a79d52e75a667249a3186"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:14:58.699434+00:00"
+    }
+  ]
+}

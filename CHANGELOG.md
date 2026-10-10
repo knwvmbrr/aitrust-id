@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-201458-intentional-required-check-control-0df6104b
+
+Recorded 2026-10-10T20:14:58.496821+00:00 · Contributor: Codex · change
+
+- **Changed.** Create an isolated control branch with exactly one intentionally failing Python test; product main remains unchanged.
+- **Evidence.** The control exits 1 locally with its explicit control marker. Changelog discipline remains enforced for the branch. Ready-PR hosted blocking is not yet claimed. [Change record](./runs/changes/2026-10-10-201458-intentional-required-check-control-0df6104b.json).
+- **Not claimed.** Never merge this branch. This is failure-control evidence, not a product implementation, a release candidate or independent validation.
+
+
 ### 2026-10-10-201237-public-hosted-engineering-proof-4ade6185
 
 Recorded 2026-10-10T20:12:37.501652+00:00 · Contributor: Codex · change
