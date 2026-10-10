@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-230625-source-signing-consumer-contract-273752ed",
+  "recorded_at": "2026-10-10T23:06:25.770467+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8c21e39dd7fd34b5de0affda193636be7dee9e9d",
+  "changed": "Fix mutually exclusive GitHub CLI identity flags; preserve real attestation, failed hosted run and actual offline acceptance/refusals.",
+  "proves": "Corrected code authenticates real signed source on Mac and network-isolated Linux; all eight crypto scenarios pass; 1144 Python tests pass with source unchanged.",
+  "limits": "The corrected hosted job and its downloadable source must still execute. Prior source contains the old verifier and was withheld. Full licenses and tag validation remain open; no full scope closure.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "scripts/verify-source-provenance.py": "23af3bd57297f1ef309c17abaf644eda68823f3a4e06331a5e02471e43e095ba",
+    "tests/test_source_provenance.py": "d50854181eb329e112d58e16a5ab8f771e4b03e19195cfd7b0b6bc62cbdfdb13",
+    "eval/route-boundaries.json": "c7411b56d235a8c487a56d6d2c26525305e17ebc8d6e7c181dc79c80e41945f4",
+    "state.json": "0e14fff0fc878448602535141aadc952309be232daa02d1abc8866fc859c4658",
+    "docs/source-provenance.md": "36aa19290a340b05d93e6ec385050de365ddba9810384bca024aa41598bd0717",
+    "runs/2026-10-10-source-provenance-protected-merge.json": "c1ad388974613b26841dfcb8dfe8a1cad1a68ee381155ef31c76d66236805485",
+    "runs/2026-10-10-source-attestation-real-verification.json": "8f06b111ef586fe2d0dc042490abf3099883fed5f5709786a05b28c4b7ae5871",
+    "runs/2026-10-10-source-attestation-offline-linux.json": "1ca5d382216bb830937e043f62450b97e624083116fb30cf311ec1a9edce37ce",
+    "runs/2026-10-10-source-attestation-real-refusals.json": "63d6d8bca07b9c4c36dfa000d706323c94d8a43dae617be81c5d1b6c36390d75",
+    "runs/2026-10-10-source-attestation-hosted-contract-failure.json": "60205caec925d07b8403d00d4a8a19960488d92fa35b4bafd4cb8ad6094f4a22",
+    "runs/2026-10-10-source-provenance-corrected-controls.json": "057c1ea673024bf39219e057b14b6806211997facfc582d3a467033345216398",
+    "provenance/8c21e39dd7fd34b5de0affda193636be7dee9e9d/source.sigstore.json": "ae0bf8d844fb1b42889bf35fd758c6c4b933b7b116da7c1f347a859bccab3f6a",
+    "provenance/8c21e39dd7fd34b5de0affda193636be7dee9e9d/trusted-root.jsonl": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+    "provenance/8c21e39dd7fd34b5de0affda193636be7dee9e9d/origin.json": "bd2f6623f160c1fb7c2b299f03a5a865c23e1655d79e81df17a93a25c238ba36"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-source-attestation-real-verification.json",
+      "sha256": "8f06b111ef586fe2d0dc042490abf3099883fed5f5709786a05b28c4b7ae5871"
+    },
+    {
+      "path": "runs/2026-10-10-source-attestation-offline-linux.json",
+      "sha256": "1ca5d382216bb830937e043f62450b97e624083116fb30cf311ec1a9edce37ce"
+    },
+    {
+      "path": "runs/2026-10-10-source-attestation-real-refusals.json",
+      "sha256": "63d6d8bca07b9c4c36dfa000d706323c94d8a43dae617be81c5d1b6c36390d75"
+    },
+    {
+      "path": "runs/2026-10-10-source-provenance-corrected-controls.json",
+      "sha256": "057c1ea673024bf39219e057b14b6806211997facfc582d3a467033345216398"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T23:06:26.225572+00:00"
+    }
+  ]
+}

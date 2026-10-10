@@ -1,0 +1,76 @@
+{
+  "pass": true,
+  "network_namespace_isolated": true,
+  "cases": [
+    {
+      "case": "valid",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "stdout_sha256": "a68158c5d8d7a25216c42e2fd52c9a8c035ade329ea9c86bb9aedf75fc526ada",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "altered_bytes",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c944f1b754f8698a9259484d1ac1b71aada1ac805b3e107d94d0dfe88d165009"
+    },
+    {
+      "case": "altered_signature",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c944f1b754f8698a9259484d1ac1b71aada1ac805b3e107d94d0dfe88d165009"
+    },
+    {
+      "case": "wrong_source_commit",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c944f1b754f8698a9259484d1ac1b71aada1ac805b3e107d94d0dfe88d165009"
+    },
+    {
+      "case": "missing_bundle",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "ffe144c2ec9648c00e7354ce8da4e9ca304d6f7421f90fa3a1e0c4a0a79d813f"
+    },
+    {
+      "case": "wrong_repository",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "95aed064d1dd94c43ae720a12b8cfc883145c59dcd57fd4b280f42070b8ae356"
+    },
+    {
+      "case": "wrong_workflow",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "486941643d59bcaec905305a9ad2843539956d60f735745f77a05db562cfda19"
+    },
+    {
+      "case": "wrong_source_ref",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b9679ff7c20e63b694a0aac9b48fd8661ee9b4c18b3355f1317c7f741654ce28"
+    }
+  ],
+  "actual_cryptographic_bundle": true,
+  "independent_tag_accuracy_evidence": false,
+  "captured_at": "2026-10-10T23:02:40.513899+00:00",
+  "source_commit": "8c21e39dd7fd34b5de0affda193636be7dee9e9d",
+  "verifier_sha256": "23af3bd57297f1ef309c17abaf644eda68823f3a4e06331a5e02471e43e095ba",
+  "archive_parser_sha256": "53c59596ecec49ab4c7a5e47e0b9ec8d6d72d189c352daf5c8029b4164b65765"
+}

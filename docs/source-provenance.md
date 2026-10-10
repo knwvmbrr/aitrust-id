@@ -80,4 +80,17 @@ and [CLI identity policy](https://cli.github.com/manual/gh_attestation_verify).
 
 Local controls: [1,144 passing Python checks on fixed inputs](../runs/2026-10-10-source-provenance-stable-controls.json)
 and [actual repeated committed-tree build](../runs/2026-10-10-source-snapshot-reproduction.json).
-These records do not yet establish actual hosted signing.
+The [first real attestation](https://github.com/knwvmbrr/aitrust-id/attestations/54693572)
+was generated for source `8c21e39dd7fd34b5de0affda193636be7dee9e9d`.
+The hosted verifier then refused incompatible CLI flags and withheld its download;
+[that failure is preserved](../runs/2026-10-10-source-attestation-hosted-contract-failure.json).
+The corrected verifier authenticated the actual signed bytes on
+[the Mac](../runs/2026-10-10-source-attestation-real-verification.json) and
+[network-isolated Linux](../runs/2026-10-10-source-attestation-offline-linux.json).
+[Eight real acceptance/refusal cases](../runs/2026-10-10-source-attestation-real-refusals.json)
+include modified bytes/signatures and wrong repository, workflow, source commit
+and ref. The saved public bundle and root inventory are in
+`provenance/8c21e39dd7fd34b5de0affda193636be7dee9e9d/`. They are evidence of that
+historical source, which contains the old verifier; use the corrected trusted
+verifier and do not interpret co-delivered roots as automatically trusted.
+The corrected hosted job must still execute before offering its new download.

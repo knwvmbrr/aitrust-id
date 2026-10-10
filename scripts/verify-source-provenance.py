@@ -25,7 +25,7 @@ def verify(artifact, bundle, trusted_root, commit, runner=subprocess.run):
     argv = ['gh', 'attestation', 'verify', str(Path(artifact).absolute()),
             '--bundle', str(Path(bundle).absolute()),
             '--custom-trusted-root', str(Path(trusted_root).absolute()),
-            '--repo', REPO, '--signer-workflow', WORKFLOW,
+            '--repo', REPO,
             '--cert-identity', IDENTITY, '--cert-oidc-issuer',
             'https://token.actions.githubusercontent.com',
             '--source-digest', commit, '--source-ref', 'refs/heads/main',
