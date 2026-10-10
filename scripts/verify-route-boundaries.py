@@ -28,6 +28,8 @@ PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'scripts/verify-replay-export.cjs', 'tests/test_assertion_replay.py')
 PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
+PATTERNS += ('.github/CODEOWNERS', '.github/dependabot.yml',
+             'scripts/verify-dependency-automation.py', 'tests/test_dependency_automation.py')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

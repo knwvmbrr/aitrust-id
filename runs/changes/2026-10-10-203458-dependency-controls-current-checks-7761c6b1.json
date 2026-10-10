@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-203458-dependency-controls-current-checks-7761c6b1",
+  "recorded_at": "2026-10-10T20:34:58.669448+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "676a075b7d7ec75cc298e336bf7ae7ab1aa0e3c2",
+  "changed": "Retain current website and route-boundary execution after ownership and dependency controls; update state to the actual 1005 distinct Python tests.",
+  "proves": "973 full-suite tests and 32 refreshed source-bound route controls pass. The website receipt is current, ownership/dependency policy is source-bound, and optional collection remains disabled.",
+  "limits": "GitHub configuration parsing and Dependabot execution are still pending; no tag release or human/physical-phone acceptance is implied.",
+  "scope_ids": [
+    "F-152",
+    "F-054",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
+    ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
+    ".github/workflows/ci.yml": "17ecd5a8fce35839b41aa9c05ade79dba60435a066578b4dfdb6f7b8580dd6c5",
+    "docs/dependency-automation-plan.md": "d10d70888609b1f7f996f700b5a41305bbf9a9ae5646cc19d88d23c52d422dce",
+    "docs/required-ci-result.md": "8bbe857d686f3a4fd143dca0bf4d29280328469f92a63f388da4e32efbb965ff",
+    "docs/scope-progress.json": "014ecb1a139cca25fc02ad616c5cce87068786bd1f3a87bb30e5c3ad394b7a04",
+    "docs/scope-progress.md": "7bca51df5c79f2c1e515b2d04d751ea0075559beec8da76220c6192193f2520c",
+    "eval/route-boundaries.json": "4da335cab89da0a48c81969d32db8f772bf7255cbba377d5aec8a48322597aac",
+    "runs/2026-10-10-dependency-automation-boundaries.json": "151fb84f09d7f2c78bc7abc19eaaf090fc7c03cd0ad46ca91009d43b45bf601c",
+    "runs/2026-10-10-dependency-automation-complete-checks.json": "c7cae7556c1a2697f9e6d6aa6c734cdd0628f3c4af98060a05f11ccd1b638af5",
+    "runs/2026-10-10-dependency-automation-local.json": "134b3670a2404bc00be23e55ca528533d6e0b5cc4bd70838326b680378c9b840",
+    "runs/2026-10-10-dependency-automation-website.json": "fa014f60c3e4e95ec5fafa1d86cb6049da4b5e9861b4bd77fd5a5e2c04a30ce5",
+    "runs/2026-10-10-owned-sbom-cleanup.json": "049c0cca32a9e7467c747ab2d7cbb1f64d32dd4283e0f62de97b35f26645e7bd",
+    "runs/2026-10-10-required-ci-positive-acceptance.json": "3755d5329d509729dd7f1be2b6f0f1989d11f93522f3c5010f48cd08a862ced8",
+    "scripts/verify-dependency-automation.py": "dcec8e810dee6ec3287e17a47e4990a579f955c6dc823b6f8ae86db466efeda9",
+    "scripts/verify-route-boundaries.py": "25961777f0942a8d443ed4a5ffbbcc2e9086148d64b3f9b0a99606b45f7b8dcd",
+    "site/public/reference/public-scope.json": "ec2cda10fc5c45d04b87eb4c9b6d706273bbebb36cf2bb99de0f189dc1061445",
+    "site/src/public-scope.json": "ec2cda10fc5c45d04b87eb4c9b6d706273bbebb36cf2bb99de0f189dc1061445",
+    "state.json": "b1b31c91d066482d60cb5215507402f88ffa80decc0286a31c2c5de172f6dbca",
+    "tests/test_dependency_automation.py": "72576dd6f11bf52726c35d2b301fdf4f222c214d739ec15c1ed0c6da1942761e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-dependency-automation-website.json",
+      "sha256": "fa014f60c3e4e95ec5fafa1d86cb6049da4b5e9861b4bd77fd5a5e2c04a30ce5"
+    },
+    {
+      "path": "runs/2026-10-10-dependency-automation-boundaries.json",
+      "sha256": "151fb84f09d7f2c78bc7abc19eaaf090fc7c03cd0ad46ca91009d43b45bf601c"
+    },
+    {
+      "path": "runs/2026-10-10-dependency-automation-complete-checks.json",
+      "sha256": "c7cae7556c1a2697f9e6d6aa6c734cdd0628f3c4af98060a05f11ccd1b638af5"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-route-boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:34:59.204029+00:00"
+    }
+  ]
+}

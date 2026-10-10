@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-203159-dependency-policy-release-binding-53157aef",
+  "recorded_at": "2026-10-10T20:31:59.701474+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "676a075b7d7ec75cc298e336bf7ae7ab1aa0e3c2",
+  "changed": "Bind ownership and dependency proposal policy to the current release source review, and refresh the public scope copies showing the completed CI job.",
+  "proves": "All 202 scope records remain; the CI requirement is 100 percent from hosted protected acceptance, while dependency automation remains 60 percent pending actual GitHub acceptance and jobs.",
+  "limits": "Static dependency policy and source fingerprints do not prove the scheduled bot operated or that a proposed dependency is safe.",
+  "scope_ids": [
+    "F-152",
+    "F-054"
+  ],
+  "files": {
+    ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
+    ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
+    ".github/workflows/ci.yml": "17ecd5a8fce35839b41aa9c05ade79dba60435a066578b4dfdb6f7b8580dd6c5",
+    "docs/dependency-automation-plan.md": "d10d70888609b1f7f996f700b5a41305bbf9a9ae5646cc19d88d23c52d422dce",
+    "docs/required-ci-result.md": "8bbe857d686f3a4fd143dca0bf4d29280328469f92a63f388da4e32efbb965ff",
+    "docs/scope-progress.json": "014ecb1a139cca25fc02ad616c5cce87068786bd1f3a87bb30e5c3ad394b7a04",
+    "docs/scope-progress.md": "7bca51df5c79f2c1e515b2d04d751ea0075559beec8da76220c6192193f2520c",
+    "runs/2026-10-10-dependency-automation-local.json": "134b3670a2404bc00be23e55ca528533d6e0b5cc4bd70838326b680378c9b840",
+    "runs/2026-10-10-owned-sbom-cleanup.json": "049c0cca32a9e7467c747ab2d7cbb1f64d32dd4283e0f62de97b35f26645e7bd",
+    "runs/2026-10-10-required-ci-positive-acceptance.json": "3755d5329d509729dd7f1be2b6f0f1989d11f93522f3c5010f48cd08a862ced8",
+    "scripts/verify-dependency-automation.py": "dcec8e810dee6ec3287e17a47e4990a579f955c6dc823b6f8ae86db466efeda9",
+    "scripts/verify-route-boundaries.py": "25961777f0942a8d443ed4a5ffbbcc2e9086148d64b3f9b0a99606b45f7b8dcd",
+    "site/public/reference/public-scope.json": "ec2cda10fc5c45d04b87eb4c9b6d706273bbebb36cf2bb99de0f189dc1061445",
+    "site/src/public-scope.json": "ec2cda10fc5c45d04b87eb4c9b6d706273bbebb36cf2bb99de0f189dc1061445",
+    "state.json": "e816668f767a9a80e6a3580280929d2fa530803c687913703081a4e4ec82376c",
+    "tests/test_dependency_automation.py": "72576dd6f11bf52726c35d2b301fdf4f222c214d739ec15c1ed0c6da1942761e"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:31:59.881137+00:00"
+    }
+  ]
+}

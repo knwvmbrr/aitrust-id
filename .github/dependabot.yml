@@ -1,0 +1,185 @@
+{
+  "version": 2,
+  "updates": [
+    {
+      "package-ecosystem": "github-actions",
+      "directory": "/",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:00",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "npm",
+      "directory": "/",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:05",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "npm",
+      "directory": "/site",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:10",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "pip",
+      "directory": "/eval",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:15",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "pip",
+      "directory": "/services/gateway",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:20",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "pip",
+      "directory": "/services/evaluator",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:25",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "pip",
+      "directory": "/services/anonymizer",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:30",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "docker",
+      "directory": "/services/gateway",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:35",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "docker",
+      "directory": "/services/evaluator",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:40",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    },
+    {
+      "package-ecosystem": "docker",
+      "directory": "/services/anonymizer",
+      "schedule": {
+        "interval": "weekly",
+        "day": "monday",
+        "time": "04:45",
+        "timezone": "Etc/UTC"
+      },
+      "open-pull-requests-limit": 1,
+      "assignees": [
+        "knwvmbrr"
+      ],
+      "commit-message": {
+        "prefix": "deps",
+        "include": "scope"
+      }
+    }
+  ]
+}

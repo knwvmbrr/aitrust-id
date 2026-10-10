@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-10T20:28:27.675198+00:00",
+  "pass": true,
+  "kind": "offline_dependency_proposal_policy_controls",
+  "tests_passed": 14,
+  "source_sha256": {
+    ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
+    ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
+    "scripts/verify-dependency-automation.py": "dcec8e810dee6ec3287e17a47e4990a579f955c6dc823b6f8ae86db466efeda9",
+    "tests/test_dependency_automation.py": "72576dd6f11bf52726c35d2b301fdf4f222c214d739ec15c1ed0c6da1942761e"
+  },
+  "monitoring_roots": 10,
+  "active_install_roots": 6,
+  "active_images": 3,
+  "actions_monitored": true,
+  "whole_tree_ownership_declared": true,
+  "proposals_per_root_limit": 1,
+  "unsafe_extra_execution_permission_refused": true,
+  "inactive_registry_not_monitored": true,
+  "missing_lock_and_symlink_refused": true,
+  "duplicate_key_and_root_refused": true,
+  "github_configuration_accepted": false,
+  "scheduled_jobs_observed": false,
+  "release_gates_waived": false,
+  "independent_review": false,
+  "initial_control_error": "The first path check inspected parents above the repository, mistaking the macOS temporary-directory alias for a source link. Checks now stop at the owned root and refuse links within it or a linked root."
+}
