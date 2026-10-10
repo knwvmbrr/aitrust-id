@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-211706-verified-dependency-ledger-publication-5798548f
+
+Recorded 2026-10-10T21:17:06.100087+00:00 · Contributor: Codex · change
+
+- **Changed.** Record normal protected merge of the reviewed source and verify the published ledger, catalogue and source artifacts.
+- **Evidence.** Both workflows pass all eleven required engineering checks; 561 public artifacts match, 20 live panels pass and all 202 scope IDs remain visible. [Change record](./runs/changes/2026-10-10-211706-verified-dependency-ledger-publication-5798548f.json).
+- **Not claimed.** Evidence bookkeeping is not another runtime deployment. Independent accuracy, physical phone testing and optional research intake remain open.
+
+
 ### 2026-10-10-210852-state-chronology-full-execution-17e66ba3
 
 Recorded 2026-10-10T21:08:52.436657+00:00 · Contributor: Codex · change

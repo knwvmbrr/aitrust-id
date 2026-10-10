@@ -1,0 +1,228 @@
+{
+  "captured_at": "2026-10-10T21:16:49.306467+00:00",
+  "pass": true,
+  "kind": "actual_review_corrected_protected_source_acceptance",
+  "source_pr": {
+    "headRefOid": "a8919741319877e9bb619424222ece251f17e81d",
+    "mergeCommit": {
+      "oid": "e0ff90987b59be8953b9fedfa1a4438a4c7d9b7f"
+    },
+    "mergedAt": "2026-10-10T21:14:35Z",
+    "state": "MERGED",
+    "url": "https://github.com/knwvmbrr/aitrust-id/pull/11"
+  },
+  "normal_merge_without_admin_bypass": true,
+  "required_checks": [
+    {
+      "context": "accessibility",
+      "app_id": 15368
+    },
+    {
+      "context": "change-records",
+      "app_id": 15368
+    },
+    {
+      "context": "device-builder (3.12)",
+      "app_id": 15368
+    },
+    {
+      "context": "device-builder (3.13)",
+      "app_id": 15368
+    },
+    {
+      "context": "device-builder (3.14)",
+      "app_id": 15368
+    },
+    {
+      "context": "host-config",
+      "app_id": 15368
+    },
+    {
+      "context": "no-egress",
+      "app_id": 15368
+    },
+    {
+      "context": "regressions",
+      "app_id": 15368
+    },
+    {
+      "context": "scope-plan",
+      "app_id": 15368
+    },
+    {
+      "context": "site",
+      "app_id": 15368
+    },
+    {
+      "context": "spec",
+      "app_id": 15368
+    }
+  ],
+  "hosted_runs": [
+    {
+      "id": 38086513679,
+      "source": "a8919741319877e9bb619424222ece251f17e81d",
+      "event": "push",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679",
+      "jobs": [
+        {
+          "name": "gates",
+          "conclusion": "failure",
+          "databaseId": 114314043134,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043134"
+        },
+        {
+          "name": "change-records",
+          "conclusion": "success",
+          "databaseId": 114314043316,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043316"
+        },
+        {
+          "name": "scope-plan",
+          "conclusion": "success",
+          "databaseId": 114314043326,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043326"
+        },
+        {
+          "name": "accessibility",
+          "conclusion": "success",
+          "databaseId": 114314043332,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043332"
+        },
+        {
+          "name": "host-config",
+          "conclusion": "success",
+          "databaseId": 114314043362,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043362"
+        },
+        {
+          "name": "site",
+          "conclusion": "success",
+          "databaseId": 114314043369,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043369"
+        },
+        {
+          "name": "device-builder (3.14)",
+          "conclusion": "success",
+          "databaseId": 114314043371,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043371"
+        },
+        {
+          "name": "no-egress",
+          "conclusion": "success",
+          "databaseId": 114314043376,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043376"
+        },
+        {
+          "name": "spec",
+          "conclusion": "success",
+          "databaseId": 114314043378,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043378"
+        },
+        {
+          "name": "device-builder (3.13)",
+          "conclusion": "success",
+          "databaseId": 114314043380,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043380"
+        },
+        {
+          "name": "device-builder (3.12)",
+          "conclusion": "success",
+          "databaseId": 114314043384,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043384"
+        },
+        {
+          "name": "regressions",
+          "conclusion": "success",
+          "databaseId": 114314043408,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086513679/job/114314043408"
+        }
+      ]
+    },
+    {
+      "id": 38086517155,
+      "source": "a8919741319877e9bb619424222ece251f17e81d",
+      "event": "pull_request",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155",
+      "jobs": [
+        {
+          "name": "accessibility",
+          "conclusion": "success",
+          "databaseId": 114314053131,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053131"
+        },
+        {
+          "name": "gates",
+          "conclusion": "failure",
+          "databaseId": 114314053184,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053184"
+        },
+        {
+          "name": "scope-plan",
+          "conclusion": "success",
+          "databaseId": 114314053214,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053214"
+        },
+        {
+          "name": "no-egress",
+          "conclusion": "success",
+          "databaseId": 114314053225,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053225"
+        },
+        {
+          "name": "site",
+          "conclusion": "success",
+          "databaseId": 114314053272,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053272"
+        },
+        {
+          "name": "host-config",
+          "conclusion": "success",
+          "databaseId": 114314053279,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053279"
+        },
+        {
+          "name": "regressions",
+          "conclusion": "success",
+          "databaseId": 114314053284,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053284"
+        },
+        {
+          "name": "device-builder (3.13)",
+          "conclusion": "success",
+          "databaseId": 114314053287,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053287"
+        },
+        {
+          "name": "device-builder (3.14)",
+          "conclusion": "success",
+          "databaseId": 114314053299,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053299"
+        },
+        {
+          "name": "spec",
+          "conclusion": "success",
+          "databaseId": 114314053300,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053300"
+        },
+        {
+          "name": "change-records",
+          "conclusion": "success",
+          "databaseId": 114314053301,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053301"
+        },
+        {
+          "name": "device-builder (3.12)",
+          "conclusion": "success",
+          "databaseId": 114314053377,
+          "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38086517155/job/114314053377"
+        }
+      ]
+    }
+  ],
+  "full_python_tests_passed": 1052,
+  "state_chronology_review_fixed": true,
+  "all_review_threads_resolved_before_merge": true,
+  "independent_accuracy": false,
+  "tag_release_approved": false
+}
