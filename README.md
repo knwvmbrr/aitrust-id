@@ -106,6 +106,7 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Accessibility | Keyboard evidence checks and automated axe fixture checks pass. Human screen-reader evaluation is missing |
 | Live ChatGPT | Installed Chrome extension verified on one existing Homebrew answer: finding, evidence and evaluator source hash. Broader live coverage remains open |
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
+| Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
 The observed Linux image inventories are public in `sbom/runtime/`. With the
 hash-locked verification environment installed, run
@@ -114,17 +115,18 @@ bindings, the pinned official SPDX 2.3.1 JSON schema and local consistency.
 It works offline and recomputes package verification codes. This does not clear
 licenses, authenticate inventoried source files or sign a release. See
 [dependency evidence and remaining work](docs/spdx-inventory-validation.md).
-| Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
-The last complete local suite passed 945 Python checks; subsequent portability repairs
-have their own execution records in `runs/`. All five active development fixture
+The current complete local suite passed 1,099 Python checks; source-bound execution
+is recorded in `runs/2026-10-10-target25-source-checks-repaired.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and
-statistical/accessibility release gates. Hosted GitHub jobs now start. The run at
-`f5186bb` exposed Linux floating-point recomputation and host-rendered share-image
-inventory failures; their repair and hosted rerun are recorded separately from
-local success. Main-branch required-check protection is not yet configured.
+statistical/accessibility release gates. Main requires eleven passing engineering checks from GitHub Actions, with
+up-to-date branches, administrator enforcement and resolved review conversations.
+Normal protected merges and a blocked failing control PR have been exercised;
+see `docs/required-ci-result.md` and `docs/dependency-automation-result.md`.
+CODEOWNERS is accepted and all ten actual Dependabot jobs have succeeded.
+Dependency proposals remain subject to protected checks and reviewed locked inputs.
 Release gates remain unmet and must continue to refuse release until their
 independent evidence exists. A statistical refusal does not prevent downloading
 or inspecting this development package; `evaluation_gate_pass` is not whole-product

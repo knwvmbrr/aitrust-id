@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-222509-readme-spdx-review-and-hosted-proof-30da7981
+
+Recorded 2026-10-10T22:25:09.099873+00:00 · Contributor: Codex · change
+
+- **Changed.** Restored the README capability table and corrected stale test/protection statements against actual evidence; recorded both successful hosted engineering workflows before the review fix.
+- **Evidence.** GitHub GFM rendering places all capability rows in one table. All eleven required contexts passed on both a3c3e25 workflows, including the new SPDX verifier and corruption checks. [Change record](./runs/changes/2026-10-10-222509-readme-spdx-review-and-hosted-proof-30da7981.json).
+- **Not claimed.** Review-fix source requires new checks and normal protected merge. Independent tag gates remain unmet; no dependency license clearance or release signature granted.
+
+
 ### 2026-10-10-221830-validated-spdx-and-target-source-d6619170
 
 Recorded 2026-10-10T22:18:30.850977+00:00 · Contributor: Codex · change

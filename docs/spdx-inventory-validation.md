@@ -33,7 +33,10 @@ The real inventory test refuses any attempted socket connection.
 · [Full current Python execution and target controls](../runs/2026-10-10-target25-source-checks-repaired.json)
 
 The required `spec` CI job now runs the stronger verifier and corruption tests.
-Its new hosted execution is recorded separately after a protected source PR.
+All eleven required contexts passed on both the first push and PR source
+`a3c3e2509fa80aa4cc827395a8ecddefecce9437`; see
+[actual hosted checks](../runs/2026-10-10-spdx-first-hosted-engineering-pass.json).
+The README review correction requires fresh checks before normal protected merge.
 
 ## What a pass establishes
 
