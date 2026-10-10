@@ -50,3 +50,13 @@ Next: owner physical-device operation, two blinded reviewers, real pilot feedbac
 retention/backup expiry and a concrete approved private intake contract. Full safe
 formation drafts, adopted roles and professional review remain distinct gates.
 The 100-to-50 scope goal remains active; this batch does not claim it achieved.
+
+## Publication verified
+
+Runtime source `c0486f90671ae6c111778917ed7199fe47d8e92a` is live at aitrustid.com, www and
+its Pages deployment. All 187 artifacts match at each origin (561 checks), all
+20 tag modals and 35 canonical pages pass the site gate, and all nine policy
+pages/downloads pass with zero automated axe violations. The actual public
+feedback preview/download passes both engines. See
+`runs/2026-10-10-owner-pilot-deployment.json`. The later evidence bookkeeping
+commit does not claim a different deployed runtime source.

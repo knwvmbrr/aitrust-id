@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-10-boundary-site-public.json",
+    "evidence": "runs/2026-10-10-owner-pilot-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://de07ac54.aitrust-id.pages.dev",
+    "deployment_url": "https://65015b3e.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-target-100-assets-public.json",
+    "publication_evidence": "runs/2026-10-10-owner-pilot-assets-public.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 35,
@@ -122,8 +122,8 @@
       "source": "site/src/policies.js",
       "text_downloads": true,
       "current_services_only": true,
-      "published": false,
-      "verification": "runs/2026-10-10-capture-policies-public.json",
+      "published": true,
+      "verification": "runs/2026-10-10-owner-pilot-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -135,7 +135,9 @@
       "prior_version_archives": [
         "1.0",
         "1.1",
-        "1.2"
+        "1.2",
+        "1.3",
+        "1.4"
       ]
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
@@ -998,7 +1000,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T17:37:00.000056+00:00",
+  "updated_at": "2026-10-10T17:39:10.950818+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1007,12 +1009,16 @@
     "examples_authorized": false,
     "retention_accepted": false,
     "pilot_group_operating": false,
-    "publication_pending": true,
+    "publication_pending": false,
     "owner_device": "iPhone 14 Plus",
     "physical_device_result": false,
     "checker_regression": "runs/2026-10-10-owner-guide-device-engines.json",
     "full_python_evidence": "runs/2026-10-10-owner-pilot-accepted-python.json",
-    "reviewed_boundaries": "runs/2026-10-10-owner-pilot-reviewed-boundaries.json"
+    "reviewed_boundaries": "runs/2026-10-10-owner-pilot-reviewed-boundaries.json",
+    "publication": "runs/2026-10-10-owner-pilot-deployment.json",
+    "public_url": "https://aitrustid.com/reference/operate/",
+    "public_evidence": "runs/2026-10-10-owner-pilot-feedback-public.json",
+    "source_commit": "c0486f90671ae6c111778917ed7199fe47d8e92a"
   },
   "legal_review": {
     "source_inventory": "docs/legal/source-inventory.json",
@@ -1020,6 +1026,8 @@
     "proposed_corrections": "docs/legal/reviewed-corrections.md",
     "all_originals_published": false,
     "qualified_counsel_review": false,
-    "formation_complete": false
+    "formation_complete": false,
+    "publication_verified": true,
+    "public_register": "https://aitrustid.com/reference/legal-drafts/"
   }
 }

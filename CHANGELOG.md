@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-173910-published-owner-guide-and-draft-register-d7e5719c
+
+Recorded 2026-10-10T17:39:10.992874+00:00 · Contributor: Codex · change
+
+- **Changed.** Published and verified owner guide, optional metadata file tool, legal draft register and policy 1.5; recorded actual source and delivery proof in state/result.
+- **Evidence.** 561 asset matches over three origins; both public feedback engines pass; 20 modals, 35 canonical URLs and nine actual policy downloads pass with zero automated axe violations. [Change record](./runs/changes/2026-10-10-173910-published-owner-guide-and-draft-register-d7e5719c.json).
+- **Not claimed.** 100 open requirements remain. No recruited pilot, private intake, real device, qualified legal review or new validated tag release.
+
+
 ### 2026-10-10-173700-owner-pilot-final-boundary-acceptance-2510e562
 
 Recorded 2026-10-10T17:37:00.058686+00:00 · Contributor: Codex · change
