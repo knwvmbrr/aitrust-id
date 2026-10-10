@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-224707-source-provenance-controls-72dec909
+
+Recorded 2026-10-10T22:47:07.250804+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement bounded committed-source snapshots, exact offline provenance identity policy and protected-main-only pinned signing workflow.
+- **Evidence.** 45 focused policy and archive tests; 1144 full Python tests on unchanged source; repeated real committed-tree source bytes match; signer privileges withheld from PRs. [Change record](./runs/changes/2026-10-10-224707-source-provenance-controls-72dec909.json).
+- **Not claimed.** Hosted signing has not yet run. Full dependency licenses, scanner identity and tag release remain unverified. No full scope requirement closed.
+
+
 ### 2026-10-10-223826-spdx-published-evidence-50c98ee3
 
 Recorded 2026-10-10T22:38:26.694742+00:00 · Contributor: Codex · change

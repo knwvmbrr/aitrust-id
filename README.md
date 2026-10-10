@@ -116,7 +116,13 @@ It works offline and recomputes package verification codes. This does not clear
 licenses, authenticate inventoried source files or sign a release. See
 [dependency evidence and remaining work](docs/spdx-inventory-validation.md).
 
-The current complete local suite passed 1,099 Python checks; source-bound execution
+The optional [development source provenance workflow](docs/source-provenance.md)
+builds a committed-source snapshot with a file inventory. Its signing job is
+restricted to protected main after the required engineering checks. Actual
+signing evidence is required before claiming a particular download authenticated;
+this does not release a tag or clear every dependency license.
+
+The current complete local suite passed 1,144 Python checks; source-bound execution
 is recorded in `runs/2026-10-10-target25-source-checks-repaired.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
