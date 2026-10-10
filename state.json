@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T20:12:37.458974+00:00",
+  "updated": "2026-10-10T20:58:39.656735+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -14,7 +14,7 @@
     "V2 conformance registration after evidence",
     "Signing, challenge/correction policy acceptance",
     "Declared latency budget and investigation of one observed transient timeout",
-    "All eleven hosted engineering checks pass; enforce main required checks and demonstrate a blocked failing PR. Independent release gates remain unmet"
+    "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
   "python_tests_passed": 1037,
@@ -707,28 +707,28 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T20:31:25.150684+00:00",
-    "completed_records": 104,
-    "open_records": 98,
+    "audited_at": "2026-10-10T20:58:39.656735+00:00",
+    "completed_records": 105,
+    "open_records": 97,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-10-required-ci-positive-acceptance.json",
+    "execution_evidence": "runs/2026-10-10-dependency-automation-hosted-acceptance.json",
     "structural_evidence": "runs/2026-10-10-registry-deferral-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-10-registry-deferral-deployment.json",
     "source_commit": "a0718543dac233bb7fc10393f32fc987091574c6",
     "public_workflow_evidence": "runs/2026-10-10-registry-deferral-site-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/required-ci-result.md",
+    "latest_increment": "docs/dependency-automation-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
     "target_start_open_records": 100,
-    "target_remaining_closures": 48,
+    "target_remaining_closures": 47,
     "publication_pending": true,
     "verification": "runs/2026-10-10-registry-deferral-scope.json"
   },
@@ -1005,11 +1005,11 @@
     "PII_REDACTED": "runs/2026-10-10-required-ci-pii-redacted.json",
     "protocol": "runs/2026-10-10-required-ci-protocol.json",
     "extension": "runs/2026-10-10-required-ci-extension.json",
-    "website": "runs/2026-10-10-dependency-automation-website.json",
+    "website": "runs/2026-10-10-dependency-acceptance-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T20:48:38.814640+00:00",
+  "updated_at": "2026-10-10T20:58:39.656735+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1074,9 +1074,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "9810441e7f5555da7083405d73263d2a8400fbb0",
-    "deployment_url": "https://daf1fbfa.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-10-replay-publication.json",
+    "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
+    "deployment_url": "https://0a4b7796.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-10-ci-portable-publication.json",
     "matching_artifacts": 561,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
@@ -1102,11 +1102,17 @@
     "release_signed": false
   },
   "dependency_automation": {
-    "status": "manifest_to_lock_and_frozen_input_sync_controls_pass; protected_review_repair_pending",
-    "evidence": "runs/2026-10-10-dependency-automation-local.json",
+    "status": "protected_source_merged; codeowners_accepted; all_ten_actual_update_jobs_succeeded; proposal_held_by_required_checks",
+    "evidence": "runs/2026-10-10-dependency-automation-hosted-acceptance.json",
     "auto_merge_enabled": false,
     "monitoring_roots": 10,
     "research_collection_enabled": false,
-    "manifest_sync_review": "runs/2026-10-10-dependency-manifest-sync-review.json"
+    "manifest_sync_review": "runs/2026-10-10-dependency-manifest-sync-review.json",
+    "source_commit": "de17261dd11cda50aa2908cabc713168af38ecb3",
+    "github_configuration_accepted": true,
+    "scheduled_jobs_observed": 10,
+    "held_proposal": "https://github.com/knwvmbrr/aitrust-id/pull/4",
+    "production_dependencies_updated": false,
+    "independent_human_review": false
   }
 }

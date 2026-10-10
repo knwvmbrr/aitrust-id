@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-210115-dependency-acceptance-current-website-proof-1b160bba
+
+Recorded 2026-10-10T21:01:15.609556+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the accepted ledger to fresh website execution and current reviewed deployment boundaries.
+- **Evidence.** Four website checks pass; 143 reviewed sources preserve source-bound service, device and replay controls; all 202 scope IDs retained. [Change record](./runs/changes/2026-10-10-210115-dependency-acceptance-current-website-proof-1b160bba.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, physical phone or production dependency upgrade claim.
+
+
+### 2026-10-10-205929-dependency-acceptance-public-ledger-7d062ca6
+
+Recorded 2026-10-10T20:59:29.553533+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate public scope copies from the accepted ledger without removing or changing scope identities.
+- **Evidence.** The generated catalogue retains 202 IDs and reflects the functioning repository-control acceptance. [Change record](./runs/changes/2026-10-10-205929-dependency-acceptance-public-ledger-7d062ca6.json).
+- **Not claimed.** Publication pending; no released-tag accuracy or operating research collection is inferred.
+
+
+### 2026-10-10-205906-actual-dependency-automation-acceptance-251a79ef
+
+Recorded 2026-10-10T20:59:06.700876+00:00 · Contributor: Codex · change
+
+- **Changed.** Record protected normal merge, accepted ownership and ten successful actual dependency update jobs; complete F-152 and preserve metadata-only research boundaries.
+- **Evidence.** Actual GitHub source checks and dependency jobs pass; the first bot proposal is blocked; 105 requirements complete, 97 open, all 202 retained. [Change record](./runs/changes/2026-10-10-205906-actual-dependency-automation-acceptance-251a79ef.json).
+- **Not claimed.** No automatic merger, deployed dependency upgrade, independent tag validation, physical phone acceptance or research intake.
+
+
 ### 2026-10-10-204838-manifest-sync-current-deployment-checks-00e952eb
 
 Recorded 2026-10-10T20:48:38.856734+00:00 · Contributor: Codex · change

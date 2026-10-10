@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T20:31:25.150684+00:00",
+  "audited_at": "2026-10-10T20:58:39.656735+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -5444,27 +5444,32 @@
       "id": "F-152",
       "kind": "requirement",
       "title": "Branch protection, CODEOWNERS, required status checks, Dependabot",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-10T20:31:25.150684+00:00",
+      "audited_at": "2026-10-10T20:58:39.656735+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
         "Codex \u2014 required main checks, ready negative-control PR and first-push repair, 2026-10-10T20:21:56.538273+00:00",
-        "Codex \u2014 bounded proposal configuration, ownership and fourteen offline refusal controls, 2026-10-10T20:31:25.150684+00:00"
+        "Codex \u2014 bounded proposal configuration, ownership and fourteen offline refusal controls, 2026-10-10T20:31:25.150684+00:00",
+        "Codex \u2014 manifest/frozen pin synchronization repair and actual hosted acceptance, 2026-10-10T20:58:39.656735+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Publish the ownership and bounded dependency proposal configuration through protected checks; observe GitHub CODEOWNERS acceptance and actual Dependabot update jobs, resolving any failures before full acceptance.",
-      "next_owner": "Codex source and hosted verification; Michael accountable review",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-10T20:58:39.656735+00:00",
+      "completion_timestamp_basis": "Actual protected normal merge, GitHub ownership acceptance and all ten real dependency jobs verified at this audit; historical attempts retained.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         ".github/workflows/ci.yml",
         "runs/2026-10-08-ci-gate-recheck.json",
@@ -5481,13 +5486,16 @@
         ".github/dependabot.yml",
         "scripts/verify-dependency-automation.py",
         "tests/test_dependency_automation.py",
-        "runs/2026-10-10-dependency-automation-local.json"
+        "runs/2026-10-10-dependency-automation-local.json",
+        "scripts/dependency_pins.py",
+        "tests/test_python_input_pins.py",
+        "runs/2026-10-10-dependency-manifest-sync-review.json",
+        "runs/2026-10-10-dependency-automation-hosted-acceptance.json",
+        "docs/dependency-automation-result.md"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Publish the ownership and bounded dependency proposal configuration through protected checks; observe GitHub CODEOWNERS acceptance and actual Dependabot update jobs, resolving any failures before full acceptance."
-      ],
-      "queue": "open"
+      "evidence_scope": "All four named controls operate on the public repository. Actual bot proposal is blocked by required change records; no auto-merge, independent reviewer, production dependency upgrade or tag-release claim.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-153",

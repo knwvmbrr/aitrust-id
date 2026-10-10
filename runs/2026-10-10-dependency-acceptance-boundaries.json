@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-10-10T21:01:06.358559+00:00",
+  "pass": true,
+  "rules": [
+    "X-01",
+    "X-03",
+    "X-04",
+    "X-06",
+    "X-08",
+    "X-12",
+    "X-14",
+    "X-15",
+    "N-007",
+    "N-008"
+  ],
+  "routes": {
+    "services/gateway/app.py": [
+      [
+        "get",
+        "/healthz"
+      ],
+      [
+        "post",
+        "/v1/evaluate"
+      ]
+    ],
+    "services/evaluator/app.py": [
+      [
+        "get",
+        "/healthz"
+      ],
+      [
+        "post",
+        "/signals"
+      ]
+    ],
+    "services/anonymizer/app.py": [
+      [
+        "get",
+        "/healthz"
+      ],
+      [
+        "post",
+        "/redact"
+      ]
+    ]
+  },
+  "source_files": 143,
+  "browser_receipts_current": true,
+  "extension_access_unchanged": true,
+  "committed_device_engine_evidence": 2,
+  "active_services": [
+    "anonymizer",
+    "evaluator",
+    "gateway"
+  ],
+  "current_remote_service_cases": 32,
+  "registry_0_1_deferred_enforced": true,
+  "actual_registry_refusal_cases": 2,
+  "actual_full_pipeline_replay_cases": 13,
+  "ordinary_text_without_account_payment_receipt": true,
+  "undeclared_intake_fields_refused": 11,
+  "network_executed": false,
+  "python_manifest_lock_roots_verified": 4,
+  "review_manifest_sha256": "7cbdc3ccaa7dc8807a8c91a70815bfcffc9758ba5b69df82d1909fef671e79d9",
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "scope": "Reviewed current personal source/access/endpoint boundaries and source-bound browser checks. Not a proof against host compromise, third-party collection, future changes or new organizational/research routes. The deferred registry is refused by this release. Future research intake and license clearance remain separate."
+}
