@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-173700-owner-pilot-final-boundary-acceptance-2510e562",
+  "recorded_at": "2026-10-10T17:37:00.058686+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",
+  "changed": "Bound current device evidence to its committed source, refreshed reviewed personal route inventory, corrected privacy failure-injection target and recorded final 874-test acceptance.",
+  "proves": "All current checks pass; 121 reviewed sources, two engine receipts, 32 historical current-source Linux service checks and 11 denied intake fields retain the bounded no-collection route.",
+  "limits": "No human, independent accuracy, operational pilot or counsel gate is substituted. Retention is pending; no real data intake exists.",
+  "scope_ids": [
+    "F-141",
+    "N-011",
+    "N-012",
+    "F-146",
+    "F-148"
+  ],
+  "files": {
+    "docs/owner-pilot-result.md": "0cd38e06704365a65ea32469040416a83690c879b1ad9b76c584ad0dd705fff0",
+    "eval/route-boundaries.json": "546eef3a830934cc74ba60664b84aab875c8eda314b34b3f1bc15a034f461009",
+    "runs/2026-10-10-owner-pilot-accepted-python.json": "dce263293bb9e0c043d6e2ee6a76e5890ea9632e7f2ff85a6c9360890e94c433",
+    "runs/2026-10-10-owner-pilot-final-python.json": "fbab556d7204e5cbe889e9b0773a6f0528b90ab697b1b26d44c5659d6feed799",
+    "runs/2026-10-10-owner-pilot-reviewed-boundaries.json": "dc45f930a5aa9904714e6712b9569fc0db12dba39f519dca5b90daef1f371112",
+    "state.json": "50bc27145adae607d9e89e2d281cc548f554b1aa231745ef1650069b7f31aa04",
+    "tests/test_route_boundaries.py": "bf4dc393793af422ff3b64ab8a442a45b977ccd47d01939ae4cee25693416803"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-owner-pilot-accepted-python.json",
+      "sha256": "dce263293bb9e0c043d6e2ee6a76e5890ea9632e7f2ff85a6c9360890e94c433"
+    },
+    {
+      "path": "runs/2026-10-10-owner-pilot-reviewed-boundaries.json",
+      "sha256": "dc45f930a5aa9904714e6712b9569fc0db12dba39f519dca5b90daef1f371112"
+    }
+  ],
+  "checks": []
+}

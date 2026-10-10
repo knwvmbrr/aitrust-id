@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-173700-owner-pilot-final-boundary-acceptance-2510e562
+
+Recorded 2026-10-10T17:37:00.058686+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound current device evidence to its committed source, refreshed reviewed personal route inventory, corrected privacy failure-injection target and recorded final 874-test acceptance.
+- **Evidence.** All current checks pass; 121 reviewed sources, two engine receipts, 32 historical current-source Linux service checks and 11 denied intake fields retain the bounded no-collection route. [Change record](./runs/changes/2026-10-10-173700-owner-pilot-final-boundary-acceptance-2510e562.json).
+- **Not claimed.** No human, independent accuracy, operational pilot or counsel gate is substituted. Retention is pending; no real data intake exists.
+
+
 ### 2026-10-10-173518-verified-owner-pilot-source-5021d486
 
 Recorded 2026-10-10T17:35:18.411061+00:00 · Contributor: Codex · change

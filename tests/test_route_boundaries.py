@@ -146,9 +146,10 @@ def test_changed_device_execution_refused():
 
 def test_device_collection_failure_refused(monkeypatch):
     original = guard.read_json
+    selected_receipt = ROOT / manifest()['device_evidence']['receipt']
     def altered(file):
         row = original(file)
-        if file.name.endswith('fixed-device-engines.json'):
+        if file == selected_receipt:
             row['engines'][0]['no_text_in_requests_or_cache'] = False
         return row
     monkeypatch.setattr(guard, 'read_json', altered)
