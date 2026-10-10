@@ -4092,7 +4092,8 @@
           "runs/2026-10-10-capture-timing-current.json",
           "runs/2026-10-10-capture-extension-revalidation.json",
           "runs/2026-10-10-options-current-extension.json",
-          "runs/2026-10-10-current-extension-real-stack.json"
+          "runs/2026-10-10-current-extension-real-stack.json",
+          "runs/2026-10-10-boundary-options-current.json"
         ],
         "evidence_scope": "Actual unpacked Chromium options save a local-only token without enabling capture; explicit enable, wrong-token unavailable result, pause, reset and reload execute.",
         "required_acceptance": [],
@@ -9787,29 +9788,50 @@
         "id": "X-01",
         "kind": "requirement",
         "title": "A paid API or any metered inference",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: A paid API or any metered inference. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: A paid API or any metered inference. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: A paid API or any metered inference. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -9885,29 +9907,50 @@
         "id": "X-03",
         "kind": "requirement",
         "title": "A central database of assertions",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: A central database of assertions. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: A central database of assertions. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: A central database of assertions. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -9934,29 +9977,50 @@
         "id": "X-04",
         "kind": "requirement",
         "title": "Per-person keystroke templates or any biometric identity profile",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: Per-person keystroke templates or any biometric identity profile. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: Per-person keystroke templates or any biometric identity profile. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: Per-person keystroke templates or any biometric identity profile. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -10044,29 +10108,50 @@
         "id": "X-06",
         "kind": "requirement",
         "title": "Telemetry, usage analytics, crash reporting",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: Telemetry, usage analytics, crash reporting. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: Telemetry, usage analytics, crash reporting. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: Telemetry, usage analytics, crash reporting. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -10142,29 +10227,50 @@
         "id": "X-08",
         "kind": "requirement",
         "title": "Building image, audio or video detection in 1.0",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: Building image, audio or video detection in 1.0. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: Building image, audio or video detection in 1.0. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: Building image, audio or video detection in 1.0. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -10368,29 +10474,50 @@
         "id": "X-12",
         "kind": "requirement",
         "title": "Mandatory receipts",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: Mandatory receipts. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: Mandatory receipts. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: Mandatory receipts. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -10528,29 +10655,50 @@
         "id": "X-15",
         "kind": "requirement",
         "title": "Collecting prompts or outputs from pilot users",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: Collecting prompts or outputs from pilot users. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: Collecting prompts or outputs from pilot users. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: Collecting prompts or outputs from pilot users. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -11183,7 +11331,8 @@
           "runs/2026-10-10-consent-worker-faults.json",
           "runs/2026-10-10-privacy-device-engines.json",
           "runs/2026-10-10-privacy-policies-local.json",
-          "runs/2026-10-10-consent-component-browser.json"
+          "runs/2026-10-10-consent-component-browser.json",
+          "runs/2026-10-10-boundary-options-current.json"
         ],
         "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
         "required_acceptance": [],
@@ -11361,29 +11510,50 @@
         "id": "N-007",
         "kind": "requirement",
         "title": "No automated promotional AI content network",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: No automated promotional AI content network. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: No automated promotional AI content network. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: No automated promotional AI content network. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {
@@ -11410,29 +11580,50 @@
         "id": "N-008",
         "kind": "requirement",
         "title": "No child-safety report hosting",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T15:54:29.912531+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current source-bound deployment/refusal guard and executed controls, 2026-10-10T15:54:29.912531+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Exercise the current and next release routes against this explicit boundary: No child-safety report hosting. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T15:54:29.912531+00:00",
+        "completion_timestamp_basis": "Current boundary guard and positive/deliberate-violation checks executed before this audit; not a historical finish or detector release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/current-route-boundaries.md",
+          "docs/route-boundary-result.md",
+          "scripts/verify-route-boundaries.py",
+          "scripts/verify-route-boundaries.cjs",
+          "eval/route-boundaries.json",
+          "tests/test_route_boundaries.py",
+          "runs/2026-10-10-route-boundaries-accepted.json",
+          "runs/2026-10-10-boundary-extension-revalidation.json",
+          "runs/2026-10-10-boundary-website-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Exercise the current and next release routes against this explicit boundary: No child-safety report hosting. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-        ],
-        "queue": "open"
+        "evidence_scope": "Full enforced current-personal-route boundary job; source review, actual intake refusals and fresh/matching selected browser/service evidence. No independent security, human route or detector release certification.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "previous_acceptance": [
+            "Exercise the current and next release routes against this explicit boundary: No child-safety report hosting. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
+          ],
+          "resolution": "Current full named boundary review/refusal job executed; source and permission/endpoint changes require renewed review, current browser receipts and source-bound device/service evidence before deployment. Future methods, registry adoption, consented research and human/tag release remain separately open."
+        }
       }
     },
     {

@@ -1,0 +1,57 @@
+{
+  "captured_at": "2026-10-10T15:48:57.100213+00:00",
+  "pass": true,
+  "rules": [
+    "X-01",
+    "X-04",
+    "X-06",
+    "X-08",
+    "X-12",
+    "X-15",
+    "N-007",
+    "N-008"
+  ],
+  "routes": {
+    "services/gateway/app.py": [
+      [
+        "get",
+        "/healthz"
+      ],
+      [
+        "post",
+        "/v1/evaluate"
+      ]
+    ],
+    "services/evaluator/app.py": [
+      [
+        "get",
+        "/healthz"
+      ],
+      [
+        "post",
+        "/signals"
+      ]
+    ],
+    "services/anonymizer/app.py": [
+      [
+        "get",
+        "/healthz"
+      ],
+      [
+        "post",
+        "/redact"
+      ]
+    ]
+  },
+  "source_files": 110,
+  "browser_receipts_current": true,
+  "extension_access_unchanged": true,
+  "committed_device_engine_evidence": 2,
+  "ordinary_text_without_account_payment_receipt": true,
+  "undeclared_intake_fields_refused": 11,
+  "network_executed": false,
+  "review_manifest_sha256": "6065db98dd7915ca92ee855344b9533777e43a732189e93972c68060f3e20ed6",
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "scope": "Reviewed current personal source/access/endpoint boundaries and source-bound browser checks. Not a proof against host compromise, third-party collection, future changes or new organizational/research routes. Optional registry proposals and license clearance are outside this guard."
+}

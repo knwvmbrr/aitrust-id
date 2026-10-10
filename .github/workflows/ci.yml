@@ -90,7 +90,9 @@ jobs:
       - run: pip install --require-hashes -r eval/requirements.lock
       - uses: actions/setup-node@v4
         with: { node-version: '24' }
-      - run: sudo unshare -n "$(which python)" -m pytest tests -q
+      # Source-bound browser/deploy controls need prepared device assets and a
+      # normal-owner Git checkout. The site job below runs that complete file.
+      - run: sudo unshare -n "$(which python)" -m pytest tests --ignore=tests/test_route_boundaries.py -q
       - run: echo "network-isolated evaluator tests complete"
 
   regressions:
@@ -169,6 +171,8 @@ jobs:
       - run: npm ci --prefix site
       - run: npm run verify:enterprise
       - run: npm run build:site
+      - name: Exercise current-route deployment boundaries and violating profiles
+        run: python -m pytest tests/test_route_boundaries.py -q
       - run: npx playwright install --with-deps chromium webkit
       - name: Device method parity, offline and private input boundaries
         run: npm run verify:device

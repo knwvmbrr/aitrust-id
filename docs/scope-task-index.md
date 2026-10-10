@@ -167,21 +167,21 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-161 | Long-horizon retention and audit trails | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-162 | SSO and directory integration | [ORG-SSO](scope-delivery.md#org-sso) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-163 | Support with an SLA | [ORG-SUPPORT](scope-delivery.md#org-support) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-01 | A paid API or any metered inference | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-01 | A paid API or any metered inference | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-02 | Any closed-source or paid dependency in the pipeline | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-03 | A central database of assertions | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-04 | Per-person keystroke templates or any biometric identity profile | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-03 | A central database of assertions | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-X-04 | Per-person keystroke templates or any biometric identity profile | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-05 | Any human-negative verdict from an absent signal | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-X-06 | Telemetry, usage analytics, crash reporting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-06 | Telemetry, usage analytics, crash reporting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-07 | Competing with C2PA on image provenance | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-08 | Building image, audio or video detection in 1.0 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-08 | Building image, audio or video detection in 1.0 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-09 | Colour-coded labels | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-10 | aria-live="assertive" announcements | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-11 | Machine-assigned IV | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-X-12 | Mandatory receipts | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-12 | Mandatory receipts | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-13 | Signing in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-14 | The registry container in 0.1 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-X-15 | Collecting prompts or outputs from pilot users | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-15 | Collecting prompts or outputs from pilot users | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-16 | "Outside knowledge proves human authorship" as an implementation requirement | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-019 | Legacy grouping for F-019a, F-019b, F-019c | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-020 | Legacy grouping for F-020a, F-020b | [TAG-NF](scope-delivery.md#tag-nf), [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
@@ -194,8 +194,8 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-N-004 | Consent, per-site pause, capture boundaries, reset and deletion | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-005 | Label dispute, correction, and supersession workflow | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-N-006 | Versioned regression checks and revalidation triggers | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-N-007 | No automated promotional AI content network | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-N-008 | No child-safety report hosting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-N-007 | No automated promotional AI content network | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-N-008 | No child-safety report hosting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-009 | No rogue-AI verdict inferred from output | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-010 | Personal/team/enterprise/proprietary tag offering boundaries | [ORG-PRIVATE](scope-delivery.md#org-private) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-T-UC | Unsafe Command | [TAG-UC](scope-delivery.md#tag-uc) | 20% · [evidence/fix](scope-progress.md) |

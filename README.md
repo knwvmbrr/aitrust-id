@@ -353,3 +353,14 @@ See [Evidence resistance](docs/evidence-resistance.md). New syntactic coverage
 needs its own error checks; a source hash or heuristic cost class is not proof
 of resistance. Large-input stress timings also publish exceedances of the
 proposed 100 ms target rather than labeling that target met.
+
+### Current personal workflow boundaries
+
+The site deploy hook runs a [source-bound route guard](docs/current-route-boundaries.md).
+`AITRUST_VERIFY_PYTHON=/path/to/your/verification-venv/bin/python npm run verify:boundaries`
+checks the reviewed source, extension permissions, service endpoints and active
+containers, plus matching executed browser/service evidence. The verification
+environment needs the locked gateway and evaluation dependencies; build the site
+first to prepare its checked device assets. The guard refuses changed or missing
+evidence. It does not certify future code, third-party hosting or independent
+accuracy, and it does not activate research collection or the registry proposal.

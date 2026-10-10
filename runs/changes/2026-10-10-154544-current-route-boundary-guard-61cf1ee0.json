@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-154544-current-route-boundary-guard-61cf1ee0",
+  "recorded_at": "2026-10-10T15:45:44.260687+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "db64a9cc9d6ac2668732ff81b1b66441bddadf51",
+  "changed": "Add a reviewed current-route source/access/endpoint guard to site deployment; publish the current capture build and repair exact-byte verification transport.",
+  "proves": "The deployed db64a9c build matches 164 artifacts at each of three origins; catalogue checks pass. Guard execution and closure evidence are still pending fresh source-bound browser receipts.",
+  "limits": "No independent accuracy, human accessibility, registry adoption, license clearance or future-route approval. Boundary closures remain uncounted until actual controls pass.",
+  "scope_ids": [
+    "X-01",
+    "X-04",
+    "X-06",
+    "X-08",
+    "X-12",
+    "X-15",
+    "N-007",
+    "N-008",
+    "F-006",
+    "F-063"
+  ],
+  "files": {
+    "docs/current-route-boundaries.md": "99ae1ce554ef7176da8036722a7e0202cb071927074f9c2eab8ffdf9bab2d9df",
+    "eval/route-boundaries.json": "cb33e3d8cb34cf5738d7f9ef71e4fb8d844c3c8766106d1499bb7d86afcfcd64",
+    "package.json": "feff218a2e2461c7b19e29f22c6fa1a817affb9b36f21a52c055508407ea5cb8",
+    "runs/2026-10-10-capture-browser-assets-public.json": "d9dc1128b7257a055f6332f1d74d58b86388c471c357eb97ac63d112dc5e4e42",
+    "runs/2026-10-10-capture-policies-public.json": "0845ebabed4640e0ddf8a05e1d913d22989c9af2b87d8deae0895fd63220c190",
+    "runs/2026-10-10-capture-site-public.json": "408993bb79b464899b5a9843b4d6fd27a8e176b016aec2ca47d1fe548f7d8567",
+    "scripts/verify-publication.cjs": "9efad1078351f9431d69e0b31c7f306a9eb808becc082a52741e590edd698313",
+    "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
+    "scripts/verify-route-boundaries.py": "5a1799266b0bc46f3cf075f9ca61e1314d68cbd4a6953d82b6f4995ebac77787",
+    "site/package.json": "d9cd79fad161ea17a8521ad721a19eebab0b766a4209bdcd56d74d83fa66a11d",
+    "state.json": "d682f696166652afa20692fd2842475ad6eb2291dd15afc5877cdf774491f356",
+    "tests/test_route_boundaries.py": "8193c1eec45ceb6766e3b4d10028ab5f12bf6c3d52b3eaa67f04f4f5ade9e968"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-capture-browser-assets-public.json",
+      "sha256": "d9dc1128b7257a055f6332f1d74d58b86388c471c357eb97ac63d112dc5e4e42"
+    },
+    {
+      "path": "runs/2026-10-10-capture-site-public.json",
+      "sha256": "408993bb79b464899b5a9843b4d6fd27a8e176b016aec2ca47d1fe548f7d8567"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "py_compile",
+        "scripts/verify-route-boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T15:45:44.421556+00:00"
+    }
+  ]
+}

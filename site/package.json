@@ -10,7 +10,7 @@
     "deploy": "wrangler pages deploy dist --project-name aitrust-id --branch main --commit-dirty=true",
     "verify:data": "node scripts/prepare.mjs",
     "prebuild": "node ../scripts/verify-changelog.cjs",
-    "predeploy": "node ../scripts/verify-changelog.cjs"
+    "predeploy": "node ../scripts/verify-changelog.cjs && node ../scripts/verify-route-boundaries.cjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.2.0",

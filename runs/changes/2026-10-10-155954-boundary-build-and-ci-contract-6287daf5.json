@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-155954-boundary-build-and-ci-contract-6287daf5",
+  "recorded_at": "2026-10-10T15:59:54.576288+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "db64a9cc9d6ac2668732ff81b1b66441bddadf51",
+  "changed": "Regenerate the preserved public scope at 88 completed and 114 open; require prepared assets for the complete boundary test file in the declared site CI job.",
+  "proves": "The CI contract test verifies every boundary check remains scheduled after site preparation. All other Python tests retain their separate network-isolated job. Current source review refreshed for generated public metadata and CI configuration.",
+  "limits": "Hosted GitHub Actions remain unexecuted under the account restriction. Final website receipt and deployment still pending; no accuracy or human-review gate relaxed.",
+  "scope_ids": [
+    "X-01",
+    "X-03",
+    "X-04",
+    "X-06",
+    "X-08",
+    "X-12",
+    "X-15",
+    "N-007",
+    "N-008",
+    "F-054",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "82bf9a52bc4be63aff6ddefdab6597858bc363f808e07e4e8809fdd98e6a1011",
+    "README.md": "36014b0cd164919a969f01b44aae645842b917ba242b14bb8a2c99cf1ceb7e6d",
+    "docs/current-route-boundaries.md": "89ecec77455c36fa443354eb6d34798cf22e21f8d8b6535ccd0afc88c61af815",
+    "docs/route-boundary-result.md": "54afc52c15ad56e8a9bdfc3657406f4ddaae0823f57b5c759d6f4a7a3f7da55d",
+    "docs/scope-progress.json": "ab7e094d5e9b656dd19f39a141839ae6bdaf5cf60bcf83bdedac97099e35903a",
+    "docs/scope-progress.md": "d80cf97b0b60d36e1cca00a01cfb49ae0cd978205555528c1473c1356b2bedd4",
+    "docs/scope-task-index.md": "52050d8759f44105702d047a99286c02f7b2744baaf6620d485cc2e887ad217b",
+    "eval/route-boundaries.json": "ffbfd119443f8d371c1295dba3fb7c8a5e117753563bb1a854fc4125aeec8b4d",
+    "package.json": "feff218a2e2461c7b19e29f22c6fa1a817affb9b36f21a52c055508407ea5cb8",
+    "runs/2026-10-10-boundary-extension-revalidation.json": "eda816a7e669746a26534eb9a571631287e7571bfcbb5fe82808d22de866e6d1",
+    "runs/2026-10-10-boundary-options-current.json": "2c44eec3be4af39ef8bf3225f7de6324c1538960b3bc2f962dd570e3f140efa2",
+    "runs/2026-10-10-boundary-website-revalidation.json": "97886794edd91277afeda1b8a703bc1427251b3542f8d16a45f4b4ef26f1d738",
+    "runs/2026-10-10-capture-browser-assets-public.json": "d9dc1128b7257a055f6332f1d74d58b86388c471c357eb97ac63d112dc5e4e42",
+    "runs/2026-10-10-capture-policies-public.json": "0845ebabed4640e0ddf8a05e1d913d22989c9af2b87d8deae0895fd63220c190",
+    "runs/2026-10-10-capture-site-public.json": "408993bb79b464899b5a9843b4d6fd27a8e176b016aec2ca47d1fe548f7d8567",
+    "runs/2026-10-10-route-boundaries-accepted.json": "49f2e10fae01b9494851ff692060c589c4d200b9e4de54759e8fdb76a0b503ae",
+    "runs/2026-10-10-route-boundaries-final.json": "4cc2a0e2de9f5e5f3367376bbf1a84d600e19d2099a36144a0679b456538850c",
+    "runs/2026-10-10-route-boundary-controls.json": "81dfc558d4ca09ddf3fa17a2ab24cee50d252db3f4170a1c2294d53cc6e7ff2f",
+    "runs/2026-10-10-route-boundary-scope.json": "31504382037b150e0c321083e2a9918dbd80693a88327e90c1ab40b9429b8ea5",
+    "scripts/verify-publication.cjs": "9efad1078351f9431d69e0b31c7f306a9eb808becc082a52741e590edd698313",
+    "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
+    "scripts/verify-route-boundaries.py": "d1d12f96a4f285d1ffd101015eec5a102f7e82039e45b7556e292624f150ce71",
+    "site/package.json": "d9cd79fad161ea17a8521ad721a19eebab0b766a4209bdcd56d74d83fa66a11d",
+    "site/public/reference/public-scope.json": "6c2b24182a73a8ef7e7fc38eb21b75d03b4ce520547785fabd7e77caa92c4043",
+    "site/src/public-scope.json": "6c2b24182a73a8ef7e7fc38eb21b75d03b4ce520547785fabd7e77caa92c4043",
+    "state.json": "57ded8980550475f60ac83e9e6d81f87578fb528eadf32d4d85bcb95d3b4c334",
+    "tests/test_accountability.py": "30a9b6576f0dd615d9e7374514ec61b528a2fec6a8ffc7b08be149ba5af9006d",
+    "tests/test_route_boundaries.py": "4d25073c5d28fe960ba48352663455bf39d178fd242ba589d56387c1fd520acf"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-route-boundary-scope.json",
+      "sha256": "31504382037b150e0c321083e2a9918dbd80693a88327e90c1ab40b9429b8ea5"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_route_boundaries.py::test_declared_ci_prepares_assets_for_boundary_checks",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T15:59:55.601435+00:00"
+    }
+  ]
+}

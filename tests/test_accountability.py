@@ -23,7 +23,7 @@ def test_unassigned_lane_rejected(snapshot):
     mutate(snapshot,'docs/maintainers.json',lambda d:d['lanes'][0].update(owner=''))
     with pytest.raises(ValueError,match='Unassigned'):m.verify(snapshot)
 def test_stale_scope_count_rejected(snapshot):
-    mutate(snapshot,'state.json',lambda d:d['scope_completion'].update(open_records=100))
+    mutate(snapshot,'state.json',lambda d:d['scope_completion'].update(open_records=d['scope_completion']['open_records']+1))
     with pytest.raises(ValueError,match='contradicts'):m.verify(snapshot)
 def test_missing_execution_contract_rejected(snapshot):
     (snapshot/'docs/changelog-policy.md').unlink()

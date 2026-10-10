@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://3cb022b3.aitrust-id.pages.dev",
+    "deployment_url": "https://afeadc89.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-reproducibility-deployment.json",
+    "publication_evidence": "runs/2026-10-10-capture-browser-assets-public.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-reproducibility-site-public.json",
+    "verification": "runs/2026-10-10-capture-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -123,7 +123,7 @@
       "text_downloads": true,
       "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-10-reproducibility-policies-public.json",
+      "verification": "runs/2026-10-10-capture-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -282,7 +282,7 @@
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
     "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c"
+    "public_static_source_commit": "db64a9cc9d6ac2668732ff81b1b66441bddadf51"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -622,7 +622,7 @@
     "strict_json_comparison_tested": true
   },
   "handheld": {
-    "status": "context_v6_local_built_engine_checks_pass_publication_pending",
+    "status": "context_v6_published; built_engine_checks_pass; physical_and_human_acceptance_pending",
     "path": "https://aitrustid.com/#person/PS",
     "tag": "PS",
     "runtime": "self-hosted Pyodide 314.0.7 / CPython 3.14.2 worker",
@@ -633,8 +633,8 @@
     "raw_text_uploaded": false,
     "raw_text_persisted": false,
     "redaction_performed": false,
-    "offline_public_asset_bytes": 14247724,
-    "browser_engine_cases_per_engine": 86,
+    "offline_public_asset_bytes": 14914906,
+    "browser_engine_cases_per_engine": 137,
     "emulated_engines": [
       "Android Chromium",
       "iPhone WebKit"
@@ -695,9 +695,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T15:26:07.637456+00:00",
-    "completed_records": 79,
-    "open_records": 123,
+    "audited_at": "2026-10-10T15:54:29.912531+00:00",
+    "completed_records": 88,
+    "open_records": 114,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -705,20 +705,20 @@
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
-    "structural_evidence": "runs/2026-10-10-capture-assessment-scope.json",
+    "structural_evidence": "runs/2026-10-10-route-boundary-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-reproducibility-deployment.json",
-    "source_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
+    "publication": "runs/2026-10-10-capture-browser-assets-public.json",
+    "source_commit": "db64a9cc9d6ac2668732ff81b1b66441bddadf51",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/capture-mechanism-result.md",
+    "latest_increment": "docs/route-boundary-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 23,
+    "target_remaining_closures": 14,
     "publication_pending": true,
-    "verification": "runs/2026-10-10-capture-assessment-scope.json"
+    "verification": "runs/2026-10-10-route-boundary-scope.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -925,5 +925,26 @@
     "resistance_assessment": "runs/2026-10-10-evidence-resistance.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
+  },
+  "personal_route_boundaries": {
+    "status": "current_source_checks_pass; publication_pending",
+    "manifest": "eval/route-boundaries.json",
+    "evidence": "runs/2026-10-10-boundary-current-deploy-controls.json",
+    "source_files": 110,
+    "controls_and_ci_contract_tests": 29,
+    "records": [
+      "X-01",
+      "X-03",
+      "X-04",
+      "X-06",
+      "X-08",
+      "X-12",
+      "X-15",
+      "N-007",
+      "N-008"
+    ],
+    "registry_adoption": false,
+    "research_collection_connected": false,
+    "independent_security_certification": false
   }
 }

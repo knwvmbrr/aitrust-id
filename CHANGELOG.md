@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-160546-current-boundary-final-evidence-ebb683e0
+
+Recorded 2026-10-10T16:05:46.944801+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final prepared-source deployment guard, fresh website revalidation and current complete boundary/CI test results.
+- **Evidence.** Twenty-nine checks pass; the actual guard accepts the reviewed 110-file inventory, matching website/extension receipts, two unchanged-source browser engines and the current 32-case service report. Scope retains 202 records at 88 completed and 114 open. [Change record](./runs/changes/2026-10-10-160546-current-boundary-final-evidence-ebb683e0.json).
+- **Not claimed.** This is engineering evidence for current personal boundaries. No independent accuracy, physical/human acceptance, license clearance, registry adoption or new organization service. Publication of this boundary increment remains pending.
+
+
+### 2026-10-10-155954-boundary-build-and-ci-contract-6287daf5
+
+Recorded 2026-10-10T15:59:54.576288+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the preserved public scope at 88 completed and 114 open; require prepared assets for the complete boundary test file in the declared site CI job.
+- **Evidence.** The CI contract test verifies every boundary check remains scheduled after site preparation. All other Python tests retain their separate network-isolated job. Current source review refreshed for generated public metadata and CI configuration. [Change record](./runs/changes/2026-10-10-155954-boundary-build-and-ci-contract-6287daf5.json).
+- **Not claimed.** Hosted GitHub Actions remain unexecuted under the account restriction. Final website receipt and deployment still pending; no accuracy or human-review gate relaxed.
+
+
+### 2026-10-10-155517-enforce-personal-boundaries-c3ce3316
+
+Recorded 2026-10-10T15:55:17.816498+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete nine current personal-route boundary jobs with a source/access/endpoint and receipt guard wired into site deployment; preserve the optional registry and research proposals.
+- **Evidence.** Twenty-eight positive and deliberately violating controls pass; current source-bound website/extension receipts and unchanged-source two-engine/32-case Linux evidence are required. Scope ledger is 88 complete and 114 open with all 202 IDs retained. [Change record](./runs/changes/2026-10-10-155517-enforce-personal-boundaries-c3ce3316.json).
+- **Not claimed.** Current-route enforcement, not future safety, license clearance, independent accuracy, physical devices, human screen-reader review or operating institutional certification. This increment is not yet published.
+
+
+### 2026-10-10-154544-current-route-boundary-guard-61cf1ee0
+
+Recorded 2026-10-10T15:45:44.260687+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a reviewed current-route source/access/endpoint guard to site deployment; publish the current capture build and repair exact-byte verification transport.
+- **Evidence.** The deployed db64a9c build matches 164 artifacts at each of three origins; catalogue checks pass. Guard execution and closure evidence are still pending fresh source-bound browser receipts. [Change record](./runs/changes/2026-10-10-154544-current-route-boundary-guard-61cf1ee0.json).
+- **Not claimed.** No independent accuracy, human accessibility, registry adoption, license clearance or future-route approval. Boundary closures remain uncounted until actual controls pass.
+
+
 ### 2026-10-10-153533-capture-current-release-checks-6d0dd76a
 
 Recorded 2026-10-10T15:35:33.471359+00:00 · Contributor: Codex · change
