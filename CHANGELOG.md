@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-230625-source-signing-consumer-contract-273752ed
+
+Recorded 2026-10-10T23:06:25.770467+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix mutually exclusive GitHub CLI identity flags; preserve real attestation, failed hosted run and actual offline acceptance/refusals.
+- **Evidence.** Corrected code authenticates real signed source on Mac and network-isolated Linux; all eight crypto scenarios pass; 1144 Python tests pass with source unchanged. [Change record](./runs/changes/2026-10-10-230625-source-signing-consumer-contract-273752ed.json).
+- **Not claimed.** The corrected hosted job and its downloadable source must still execute. Prior source contains the old verifier and was withheld. Full licenses and tag validation remain open; no full scope closure.
+
+
 ### 2026-10-10-224707-source-provenance-controls-72dec909
 
 Recorded 2026-10-10T22:47:07.250804+00:00 · Contributor: Codex · change

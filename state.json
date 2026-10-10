@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T22:47:05.793441+00:00",
+  "updated": "2026-10-10T23:05:26.396616+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1012,7 +1012,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T22:47:05.793441+00:00",
+  "updated_at": "2026-10-10T23:05:26.396616+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1137,15 +1137,23 @@
     "complete_python_suite": "runs/2026-10-10-state-chronology-full-python.json"
   },
   "source_provenance": {
-    "status": "implemented_with_local_controls; actual_hosted_signing_pending",
+    "status": "actual_prior_attestation_verified_on_mac_and_offline_linux; corrected_hosted_download_pending",
     "architecture": "docs/source-provenance-plan.md",
     "guide": "docs/source-provenance.md",
-    "controls": "runs/2026-10-10-source-provenance-stable-controls.json",
+    "controls": "runs/2026-10-10-source-provenance-corrected-controls.json",
     "snapshot_reproduction": "runs/2026-10-10-source-snapshot-reproduction.json",
     "focused_tests_passed": 45,
     "full_python_tests_passed": 1144,
-    "actual_hosted_signing_observed": false,
+    "actual_hosted_signing_observed": true,
     "independent_tag_release_validated": false,
-    "full_license_clearance": false
+    "full_license_clearance": false,
+    "real_verification": "runs/2026-10-10-source-attestation-real-verification.json",
+    "offline_verification": "runs/2026-10-10-source-attestation-offline-linux.json",
+    "real_refusals": "runs/2026-10-10-source-attestation-real-refusals.json",
+    "hosted_failure": "runs/2026-10-10-source-attestation-hosted-contract-failure.json",
+    "protected_merge": "runs/2026-10-10-source-provenance-protected-merge.json",
+    "real_cryptographic_cases": 8,
+    "network_isolated_verification": true,
+    "corrected_hosted_download_observed": false
   }
 }

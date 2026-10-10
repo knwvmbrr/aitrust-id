@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-10-10T23:03:08.920194+00:00",
+  "pass": false,
+  "kind": "hosted_source_verifier_contract_failure",
+  "actual_signing_observed": true,
+  "signing_step_passed": true,
+  "verification_step_passed": false,
+  "artifact_upload_skipped": true,
+  "source_commit": "8c21e39dd7fd34b5de0affda193636be7dee9e9d",
+  "workflow_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38093099281",
+  "failure": "GitHub CLI rejects simultaneous --cert-identity and --signer-workflow selectors.",
+  "fix": "Remove redundant --signer-workflow. Exact certificate SAN still pins full repository/workflow/main ref; retain issuer, source-digest/ref, repository and hosted-runner policy.",
+  "corrected_local_crypto_verification": "runs/2026-10-10-source-attestation-real-verification.json",
+  "corrected_offline_linux_verification": "runs/2026-10-10-source-attestation-offline-linux.json",
+  "corrected_hosted_job_observed": false,
+  "independent_accuracy_evidence": false
+}

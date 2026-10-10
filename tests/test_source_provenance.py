@@ -201,7 +201,9 @@ def test_policy_pins_cryptographic_identity_and_source(inputs):
         assert argv[argv.index('--source-digest')+1] == sha
         assert argv[argv.index('--source-ref')+1] == 'refs/heads/main'
         assert argv[argv.index('--cert-identity')+1] == verifier.IDENTITY
-        assert argv[argv.index('--signer-workflow')+1] == verifier.WORKFLOW
+        # gh's identity selectors are mutually exclusive. Exact SAN pins the workflow/ref.
+        assert '--signer-workflow' not in argv and '--signer-repo' not in argv
+        assert '--cert-identity-regex' not in argv
         assert '--deny-self-hosted-runners' in argv
         assert '--bundle' in argv and '--custom-trusted-root' in argv
         assert kwargs['timeout'] == 120 and kwargs['capture_output'] is True
