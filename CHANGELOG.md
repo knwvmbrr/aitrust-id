@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-033504-bind-public-changelog-check-to-deployed-source-3e896ab4
+
+Recorded 2026-10-10T03:35:04.199652+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the public changelog-download check to its declared deployed source commit, and document the explicit source override for newly published candidates.
+- **Evidence.** The published PS checker passes six result cases and seven invalid-evidence cases against the d2d946c snapshot; malformed source identifiers and unknown commits are rejected. [Change record](./runs/changes/2026-10-10-033504-bind-public-changelog-check-to-deployed-source-3e896ab4.json).
+- **Not claimed.** No website behavior or tag release status changed; later Git operations records remain separate from the deployed changelog snapshot.
+
+
 ### 2026-10-10-033314-calm-tag-panels-publication-and-scope-closure-7b07f819
 
 Recorded 2026-10-10T03:33:14.163300+00:00 · Contributor: Codex · change

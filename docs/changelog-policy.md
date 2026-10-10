@@ -78,3 +78,12 @@ CHANGELOG.md is the readable index; runs/changes/ is its structured audit trail;
 docs/scope-progress.json holds acceptance, next fixes and attribution; state.json
 holds current runtime/publication truth. Public readers can download the
 changelog from the site's existing reference area and inspect the records in Git.
+
+## Verify the deployed snapshot
+
+A site build includes the changelog at its implementation source commit. Later
+publication/operations records live in Git and do not rewrite that deployed
+download. `verify:ps-results` compares the public download to the full source
+commit named in `state.json`'s publication record. When checking a new deployment
+before its publication record is written, pass `AITRUST_PUBLISHED_SOURCE` with
+that full commit. Local checks continue to compare to the working changelog.

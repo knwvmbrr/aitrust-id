@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-033504-bind-public-changelog-check-to-deployed-source-3e896ab4",
+  "recorded_at": "2026-10-10T03:35:04.199652+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1824507dfb055471afdaced896bfaf32f98bdd13",
+  "changed": "Bind the public changelog-download check to its declared deployed source commit, and document the explicit source override for newly published candidates.",
+  "proves": "The published PS checker passes six result cases and seven invalid-evidence cases against the d2d946c snapshot; malformed source identifiers and unknown commits are rejected.",
+  "limits": "No website behavior or tag release status changed; later Git operations records remain separate from the deployed changelog snapshot.",
+  "scope_ids": [
+    "WP-SITE",
+    "WP-RELEASE",
+    "F-150"
+  ],
+  "files": {
+    "docs/changelog-policy.md": "37b3e4cc1f79cd6a0e2fe0f2cc93a7072bc2bbbd3e966dc139236757f91b4939",
+    "runs/2026-10-10-calm-ps-source-bound-public.json": "49e6a0b37a60c0bcf7cba6286641329b0e138b7b03dfedea7a4223f2b83a4af8",
+    "runs/2026-10-10-public-snapshot-negative-checks.json": "16fe27c97986afdf02ebcde6d380a0611919096fb016ebda505a237650027ddb",
+    "scripts/verify-ps-results.cjs": "044e5d3786c427570406cdf76e3a0950ac779d61a4c66babdf5e49fe0e862a67"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-calm-ps-source-bound-public.json",
+      "sha256": "49e6a0b37a60c0bcf7cba6286641329b0e138b7b03dfedea7a4223f2b83a4af8"
+    },
+    {
+      "path": "runs/2026-10-10-public-snapshot-negative-checks.json",
+      "sha256": "16fe27c97986afdf02ebcde6d380a0611919096fb016ebda505a237650027ddb"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T03:35:04.288741+00:00"
+    }
+  ]
+}
