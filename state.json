@@ -17,7 +17,7 @@
     "All eleven hosted engineering checks pass; enforce main required checks and demonstrate a blocked failing PR. Independent release gates remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1005,
+  "python_tests_passed": 1037,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -339,7 +339,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "973 full-suite Python tests plus 32 current deployment-boundary tests, including fourteen new dependency policy controls; engineering acceptance only.",
+  "python_tests_scope": "1005 full-suite Python tests plus 32 current deployment-boundary tests, including 64 targeted dependency controls; engineering acceptance only.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -1009,7 +1009,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T20:34:58.610736+00:00",
+  "updated_at": "2026-10-10T20:48:38.814640+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1102,10 +1102,11 @@
     "release_signed": false
   },
   "dependency_automation": {
-    "status": "offline_configuration_and_fourteen_controls_pass; github_acceptance_and_execution_pending",
+    "status": "manifest_to_lock_and_frozen_input_sync_controls_pass; protected_review_repair_pending",
     "evidence": "runs/2026-10-10-dependency-automation-local.json",
     "auto_merge_enabled": false,
     "monitoring_roots": 10,
-    "research_collection_enabled": false
+    "research_collection_enabled": false,
+    "manifest_sync_review": "runs/2026-10-10-dependency-manifest-sync-review.json"
   }
 }

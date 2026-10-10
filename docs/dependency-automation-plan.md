@@ -33,3 +33,22 @@ configuration reaches main; retain public source IDs and results, not credential
 
 References: [GitHub CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners),
 [Dependabot configuration](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference).
+
+## Reviewed pin synchronization correction
+
+PR review found a real gap: existence of requirements.lock did not establish
+that a Dependabot change to requirements.txt changed the installed dependency.
+The selected dependency verifier also omitted the direct manifest. Add a shared
+standard-library parser for the bounded pinned forms actually used here. Compare
+every direct manifest pin with the hashed lock; services also compare every frozen
+build pin and each direct manifest pin with the frozen input. Resolve normalized
+package names and the accepted uvicorn standard extra explicitly; unknown extras,
+ranges, markers, options, duplicate normalized names and credential-bearing URLs
+fail closed. Do not silently treat unsupported forms as unconstrained.
+
+Use the same check in dependency proposal, selected dependency and deployment
+boundary verification. Bind the direct/frozen files into the selected inventory.
+Reproduce all four real direct-manifest version bumps with their original locks,
+then exercise missing pins, frozen drift and URL/extras controls. Keep lock contents
+and observed installed-image/SBOM identities unchanged for this enforcement-only
+repair. Do not resolve the review thread until the implemented controls pass.

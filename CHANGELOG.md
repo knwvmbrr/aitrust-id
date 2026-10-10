@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-204838-manifest-sync-current-deployment-checks-00e952eb
+
+Recorded 2026-10-10T20:48:38.856734+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain current source-bound deployment checks for the pin synchronization repair and update runtime state to 1037 distinct passing Python tests.
+- **Evidence.** The deployment guard checks four Python manifest/lock roots, all five engineering receipts remain current, 32 refreshed route controls pass and the unchanged observed runtime SBOM still verifies. [Change record](./runs/changes/2026-10-10-204838-manifest-sync-current-deployment-checks-00e952eb.json).
+- **Not claimed.** Hosted checks and the review resolution for the new repair remain pending; no installed dependency or actual image was changed, no independent release gate passed and research collection stays off.
+
+
+### 2026-10-10-204822-enforce-python-manifest-install-sync-0a8caf9f
+
+Recorded 2026-10-10T20:48:22.456158+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix the substantive PR finding that a version-only Python manifest update could leave the installed lock unchanged. Share bounded input parsing across proposal, inventory and deployment checks; bind direct and frozen inputs into the selected dependency inventory.
+- **Evidence.** All four real direct-manifest bumps are rejected against unchanged install locks. Sixty-four targeted tests and 1005 full-suite Python tests excluding the source-bound route cases pass. Current 19 direct pins and 110 frozen service pins agree with their hashed locks. [Change record](./runs/changes/2026-10-10-204822-enforce-python-manifest-install-sync-0a8caf9f.json).
+- **Not claimed.** The review conversation and new hosted checks are still pending; scheduled dependency jobs have not run. No installed package, model or image was updated, no license clearance or signing was granted, and independent release gates remain unchanged.
+
+
 ### 2026-10-10-203458-dependency-controls-current-checks-7761c6b1
 
 Recorded 2026-10-10T20:34:58.669448+00:00 · Contributor: Codex · change

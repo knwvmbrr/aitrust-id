@@ -18,7 +18,7 @@ class ProposalPolicy(unittest.TestCase):
         self.root = Path(self.temp.name)
         sources = {'.github/CODEOWNERS', '.github/dependabot.yml', '.github/workflows/ci.yml'}
         for ecosystem, directory in m.EXPECTED:
-            for name in {'npm': ['package.json', 'package-lock.json'], 'pip': ['requirements.txt', 'requirements.lock'],
+            for name in {'npm': ['package.json', 'package-lock.json'], 'pip': ['requirements.txt', 'requirements.lock'] + (['requirements.freeze'] if directory.startswith('/services/') else []),
                          'docker': ['Dockerfile'], 'github-actions': []}[ecosystem]:
                 sources.add(str(Path(directory.lstrip('/')) / name))
         for name in sources:
@@ -70,6 +70,28 @@ class ProposalPolicy(unittest.TestCase):
 
     def test_missing_lock_refused(self):
         (self.root / 'eval/requirements.lock').unlink()
+        self.refused()
+
+    def test_version_only_proposal_rejected_for_each_python_root(self):
+        for directory in ['eval', 'services/gateway', 'services/evaluator', 'services/anonymizer']:
+            path = self.root / directory / 'requirements.txt'
+            original = path.read_text()
+            name = 'PyYAML==6.0.3' if directory == 'eval' else 'fastapi==0.143.0'
+            changed = 'PyYAML==6.0.4' if directory == 'eval' else 'fastapi==0.143.1'
+            self.assertIn(name, original)
+            path.write_text(original.replace(name, changed))
+            with self.subTest(directory=directory):
+                self.refused()
+            path.write_text(original)
+
+    def test_frozen_pin_drift_rejected(self):
+        path = self.root / 'services/gateway/requirements.freeze'
+        path.write_text(path.read_text().replace('fastapi==0.143.0', 'fastapi==0.143.1'))
+        self.refused()
+
+    def test_unreviewed_extra_cannot_keep_old_lock(self):
+        path = self.root / 'services/gateway/requirements.txt'
+        path.write_text(path.read_text().replace('uvicorn[standard]', 'uvicorn[other]'))
         self.refused()
 
     def test_false_owner_coverage_refused(self):

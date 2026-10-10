@@ -11,35 +11,10 @@ from urllib.parse import urlsplit
 import yaml
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from protocol.reports import write_report
+from scripts.dependency_pins import python_lock, verify_inputs
 BASE='python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1'
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
-
-def python_lock(text):
-    blocks=[];current=[]
-    for line in text.splitlines():
-        line=line.strip()
-        if not line or line.startswith('#'):continue
-        if line.endswith('\\'):
-            current.append(line[:-1].strip());continue
-        current.append(line);blocks.append(' '.join(current));current=[]
-    if current:raise ValueError('Unfinished requirement')
-    rows=[];names=set()
-    for block in blocks:
-        parts=block.split(' --hash=');requirement=parts[0];hashes=parts[1:]
-        if not hashes or any(not re.fullmatch(r'sha256:[a-f0-9]{64}',x) for x in hashes):raise ValueError('Missing or malformed package hashes')
-        match=re.fullmatch(r'([A-Za-z0-9_-]+)(?:==([^\s]+)| @ (https://\S+))',requirement)
-        if not match:raise ValueError('Unpinned or unexpected requirement')
-        name=match[1].lower().replace('_','-')
-        if name in names:raise ValueError('Duplicate requirement')
-        names.add(name)
-        if match[3]:
-            url=urlsplit(match[3])
-            if url.username or url.password or url.query:raise ValueError('Private dependency URL refused')
-            if url.fragment and url.fragment not in {h.replace(':','=') for h in hashes}:raise ValueError('URL artifact hash disagrees')
-        rows.append({'name':name,'requirement':requirement,'artifact_hashes':sorted(set(hashes))})
-    if not rows:raise ValueError('Empty lock')
-    return rows
 
 def npm_lock(value):
     if value.get('lockfileVersion')!=3:raise ValueError('Unsupported npm lock version')
@@ -70,6 +45,12 @@ def verify(root=ROOT):
     for name in ('gateway','anonymizer','evaluator'):
         path=Path('services')/name/'requirements.lock';py[str(path)]=python_lock((root/path).read_text());files[str(path)]=digest(root/path)
     path=Path('eval/requirements.lock');py[str(path)]=python_lock((root/path).read_text());files[str(path)]=digest(root/path)
+    for lock_name, locked in py.items():
+        parent=Path(lock_name).parent
+        manifest=parent/'requirements.txt';freeze=parent/'requirements.freeze'
+        verify_inputs((root/manifest).read_text(), (root/lock_name).read_text(), (root/freeze).read_text() if str(parent).startswith('services/') else None)
+        files[str(manifest)]=digest(root/manifest)
+        if str(parent).startswith('services/'):files[str(freeze)]=digest(root/freeze)
     eval_names={r['name'] for r in py[str(path)]}
     if not {'jsonschema','rfc3339-validator','six','pyyaml','pytest'}<=eval_names:raise ValueError('Required format/test dependencies missing')
     # CI uses one environment for gateway and evaluation checks. Individually valid

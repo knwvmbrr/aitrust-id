@@ -1,8 +1,11 @@
 """Offline policy verification; GitHub parsing and scheduled execution are separate."""
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from scripts.dependency_pins import verify_inputs
 EXPECTED = {('github-actions', '/'), ('npm', '/'), ('npm', '/site'),
             ('pip', '/eval'), ('pip', '/services/gateway'),
             ('pip', '/services/evaluator'), ('pip', '/services/anonymizer'),
@@ -63,15 +66,20 @@ def verify(root=ROOT):
         ecosystem, directory = key
         base = directory.lstrip('/')
         required = {'npm': ['package.json', 'package-lock.json'],
-                    'pip': ['requirements.txt', 'requirements.lock'],
+                    'pip': ['requirements.txt', 'requirements.lock'] + (['requirements.freeze'] if base.startswith('services/') else []),
                     'docker': ['Dockerfile'], 'github-actions': ['.github/workflows/ci.yml']}[ecosystem]
         for name in required:
             file(root, str(Path(base) / name))
+        if ecosystem == 'pip':
+            verify_inputs(file(root, base+'/requirements.txt').read_text(),
+                          file(root, base+'/requirements.lock').read_text(),
+                          file(root, base+'/requirements.freeze').read_text() if base.startswith('services/') else None)
     return {'pass': True, 'kind': 'offline_dependency_proposal_policy', 'monitoring_roots': len(seen),
             'active_install_roots': 6, 'active_images': 3, 'actions_monitored': True,
             'whole_tree_owner': OWNER, 'proposals_per_root_limit': 1, 'auto_merge_configured': False,
             'github_configuration_accepted': False, 'scheduled_jobs_observed': False,
-            'independent_review': False, 'release_gates_waived': False}
+            'independent_review': False, 'release_gates_waived': False,
+            'direct_python_manifests_match_locks': True, 'service_frozen_inputs_match_locks': True}
 
 
 if __name__ == '__main__':

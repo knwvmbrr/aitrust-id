@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT))
 from protocol.reports import write_report
 from protocol.revalidation import assess
 from protocol.evidence import read_evidence
+from scripts.dependency_pins import verify_root_inputs
 
 PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'site/scripts/*', 'site/functions/**/*', 'site/public/*',
@@ -30,6 +31,9 @@ PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
 PATTERNS += ('.github/CODEOWNERS', '.github/dependabot.yml',
              'scripts/verify-dependency-automation.py', 'tests/test_dependency_automation.py')
+PATTERNS += ('scripts/dependency_pins.py', 'scripts/verify-dependencies.py',
+             'tests/test_python_input_pins.py', 'tests/test_dependency_contract.py',
+             'eval/requirements.txt', 'eval/requirements.lock')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
@@ -334,6 +338,7 @@ def intake_controls(root=ROOT):
 
 def verify(root=ROOT):
     before = inventory(root)
+    pins = verify_root_inputs(root)
     manifest = read_json(root / 'eval/route-boundaries.json')
     observed = evaluate(manifest, root)
     intake = intake_controls(root)
@@ -341,6 +346,7 @@ def verify(root=ROOT):
         raise ValueError('Boundary sources changed during verification')
     return {'captured_at': datetime.now(timezone.utc).isoformat(), 'pass': True,
             'rules': list(RULES), **observed, **intake,
+            'python_manifest_lock_roots_verified': len(pins),
             'review_manifest_sha256': hashlib.sha256((root / 'eval/route-boundaries.json').read_bytes()).hexdigest(),
             'independent_accuracy_evidence': False, 'release_approved': False,
             'scope': 'Reviewed current personal source/access/endpoint boundaries and source-bound browser checks. '

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-204838-manifest-sync-current-deployment-checks-00e952eb",
+  "recorded_at": "2026-10-10T20:48:38.856734+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f51e796959c73103d7aa9356d5e17ff86434e5a5",
+  "changed": "Retain current source-bound deployment checks for the pin synchronization repair and update runtime state to 1037 distinct passing Python tests.",
+  "proves": "The deployment guard checks four Python manifest/lock roots, all five engineering receipts remain current, 32 refreshed route controls pass and the unchanged observed runtime SBOM still verifies.",
+  "limits": "Hosted checks and the review resolution for the new repair remain pending; no installed dependency or actual image was changed, no independent release gate passed and research collection stays off.",
+  "scope_ids": [
+    "F-152",
+    "F-057"
+  ],
+  "files": {
+    "docs/dependency-automation-plan.md": "b77b9c7d4531813f9eff2136071eb746bd1eaaf09d7d5c6218ff916dd1eeeffc",
+    "eval/route-boundaries.json": "bbe5ee6d60ff5107e6853e2d58c57c9429d837bb6d7f41c7b5d5d0ac41b17e69",
+    "runs/2026-10-10-dependency-manifest-sync-boundaries.json": "f83bc36f93b185eeb0899a10882bb614d9da194b930c57cc75ef7f4383868ee2",
+    "runs/2026-10-10-dependency-manifest-sync-complete-checks.json": "2a76319197dcb144dd1116ce48fa3ad0cf42ba4b0d0b6c2ff5303355aa47f604",
+    "runs/2026-10-10-dependency-manifest-sync-review.json": "3271d45b4f796792af0b93a0e70dc03ff36a2a08f9eff6f7efee255d4ed704ce",
+    "scripts/dependency_pins.py": "28670207e4c0e2d0416fbdb6a2d94fb0e67b73ea83c830869066c697f610e568",
+    "scripts/verify-dependencies.py": "d56293977dbb3342f60c440a4205ec4a2d13f4524daf221fb19abe2bf4d25bc1",
+    "scripts/verify-dependency-automation.py": "321b863511c509c06a3c7c0151d1eb91c5c76f886d1b9ef62d1b271215ef7a61",
+    "scripts/verify-route-boundaries.py": "321c401af0b40746c51eb3c4fb47c5fba8f91d8b182ca73274ec1e51048c5c0a",
+    "state.json": "4e84d97e35123abfdc720687e5b1141d7b7e280f5cb6f4b6d5e072198bf15d0a",
+    "tests/test_dependency_automation.py": "64cf034e47a40de12714be0162fe4de401d4edb960fa2553764a0fcc0e5e6d22",
+    "tests/test_dependency_contract.py": "3be44fe186305a6f55e3f7512ed6e6375d0a9985495211c160415957cb149f8e",
+    "tests/test_python_input_pins.py": "59573588df5ba336c8bc2ecb859a7e1ed599534cfb61db13069ceeff944beb1f",
+    "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-dependency-manifest-sync-boundaries.json",
+      "sha256": "f83bc36f93b185eeb0899a10882bb614d9da194b930c57cc75ef7f4383868ee2"
+    },
+    {
+      "path": "runs/2026-10-10-dependency-manifest-sync-complete-checks.json",
+      "sha256": "2a76319197dcb144dd1116ce48fa3ad0cf42ba4b0d0b6c2ff5303355aa47f604"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-route-boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:48:39.368918+00:00"
+    }
+  ]
+}
