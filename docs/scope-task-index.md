@@ -5,7 +5,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | Record/task | Preserved requirement | Work packages | Completion at latest audit |
 |---|---|---|---|
 | TASK-F-001 | Assertion envelope schema, JSON Schema 2020-12 | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-002 | Nine-label taxonomy (plus UNK, PII_REDACTED) | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-002 | Nine-label taxonomy (plus UNK, PII_REDACTED) | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-004 | Abstention as a first-class state — UNK | [TAG-UNK](scope-delivery.md#tag-unk) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
@@ -54,9 +54,9 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-024 | PII_OUTBOUND pre-send warning — you are about to paste personal data into a model | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-043 | No-egress network topology — internal: true, loopback binding | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-043 | No-egress network topology — internal: true, loopback binding | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-084 | No content logging — a verified clause, not a promise | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-085 | No application-controlled content persistence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-086 | No telemetry, no analytics, no phone-home — in the extension or the services | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 60% · [evidence/fix](scope-progress.md) |
@@ -79,15 +79,15 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-036 | Signature verification before render | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-096 | Graceful degradation — backend down, invalid token, unsupported page | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-097 | User-invoked labelling — select a response, ask for a check | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-040 | Gateway orchestration — redact, evaluate, calibrate, return | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-042 | Evaluator on redacted text only; self-reports as "rules-only" | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-098 | Presidio language assets baked into the image | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-040 | Gateway orchestration — redact, evaluate, calibrate, return | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-042 | Evaluator on redacted text only; self-reports as "rules-only" | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-098 | Presidio language assets baked into the image | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-099 | Upstream response validation — status and shape checked before parsing | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-100 | Constant-time bearer token comparison | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-101 | Startup refusal of the example token change-me | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-102 | Modality validated against the schema enum; unsupported returns UNK + unsupported_modality | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-103 | Health checks reporting dependency readiness, not process liveness | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-104 | Defined dependency-failure behaviour | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-103 | Health checks reporting dependency readiness, not process liveness | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-104 | Defined dependency-failure behaviour | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-044 | Optional registry and retention proposal | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-045 | Reporting intake, hash-only | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-105 | One documented command: clean clone → running stack | [WP-MOBILE](scope-delivery.md#wp-mobile) | 60% · [evidence/fix](scope-progress.md) |
@@ -103,11 +103,11 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-056 | Krippendorff's α published for MT, ≥ 0.55 | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-054 | CI that can actually fail | [WP-RELEASE](scope-delivery.md#wp-release) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-114 | Method-appropriate abstention measurement and policy | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
-| TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-057 | SBOM plus Sigstore release signing | [WP-RELEASE](scope-delivery.md#wp-release) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-116 | Dependency lockfiles and hashes, not just version pins | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-117 | Model hash verification at load | [WP-RELEASE](scope-delivery.md#wp-release) | 40% · [evidence/fix](scope-progress.md) |
@@ -148,8 +148,8 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-070 | Six invariants in CONTRIBUTING.md | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-071 | Threat model, 10 entries | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-072 | ACCESSIBILITY.md as a release gate | [WP-UX](scope-delivery.md#wp-ux) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-149 | MAINTAINERS.md with per-maintainer scope | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-150 | CHANGELOG.md, state.json, docs/, runs/ | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-149 | MAINTAINERS.md with per-maintainer scope | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-150 | CHANGELOG.md, state.json, docs/, runs/ | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-151 | DECISIONS.md — 15 seeded decisions with dates and reasons | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-152 | Branch protection, CODEOWNERS, required status checks, Dependabot | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-153 | Named ongoing ownership for security response and adapter maintenance | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
@@ -157,7 +157,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-061 | audio | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-062 | video | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-063 | document | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-154 | text and code subject contracts | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-154 | text and code subject contracts | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-155 | SynthID and vendor watermarking | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-156 | Additional browser and site adapters | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-157 | Newsroom integration — labels in an editorial workflow | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |

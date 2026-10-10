@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "origin": "Developer-generated interoperability vectors; not labels or independent review",
+  "vectors": [
+    {
+      "id": "text-0",
+      "modality": "text",
+      "text": "",
+      "expected": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length": 0,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-1",
+      "modality": "text",
+      "text": "é",
+      "expected": {
+        "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-2",
+      "modality": "text",
+      "text": "é",
+      "expected": {
+        "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-3",
+      "modality": "text",
+      "text": "🧪 José",
+      "expected": {
+        "sha256": "082bc47c7142221530af0efa7cfb7331acad04dee24fb76efd4d4819178193e5",
+        "length": 6,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-4",
+      "modality": "text",
+      "text": "日本語",
+      "expected": {
+        "sha256": "77710aedc74ecfa33685e33a6c7df5cc83004da1bdcef7fb280f5c2b2e97e0a5",
+        "length": 3,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-5",
+      "modality": "text",
+      "text": "line\r\nline",
+      "expected": {
+        "sha256": "d523830b97bbd0128708b773138cb7a3a928cde2214dc74326599b30dc216215",
+        "length": 10,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-6",
+      "modality": "text",
+      "text": "line\nline",
+      "expected": {
+        "sha256": "d39a27a2975956fc2a81ac5510d88368193f7cceb9d23382417716c860390e95",
+        "length": 9,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-7",
+      "modality": "text",
+      "text": " A\tB ",
+      "expected": {
+        "sha256": "017be60b1da5921731df5cb086f27bd986325e576be34b4454575f22cc7757ac",
+        "length": 5,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-8",
+      "modality": "text",
+      "text": "\u0000",
+      "expected": {
+        "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-9",
+      "modality": "text",
+      "text": "👩🏽‍💻",
+      "expected": {
+        "sha256": "b1e0232190991f0337645cb23fb896790216a8488f6c1d59f4cdf874cf5ec806",
+        "length": 4,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-10",
+      "modality": "text",
+      "text": "﻿code",
+      "expected": {
+        "sha256": "b9327b3e9abd5782aa24400db3c6754c8ef67469a60c8b192eccd7e1c3071009",
+        "length": 5,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "text-11",
+      "modality": "text",
+      "text": "Å",
+      "expected": {
+        "sha256": "0a94dc9d420d1142d6b71de60f9bf7e2f345a4d62c9f141b091539769ddf3075",
+        "length": 1,
+        "offset_unit": "unicode_codepoint",
+        "modality": "text",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-0",
+      "modality": "code",
+      "base64": "",
+      "expected": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "length": 0,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-1",
+      "modality": "code",
+      "base64": "IHgJDQo=",
+      "expected": {
+        "sha256": "a46b64ec14f3aff79b8b0c044a63a0688757ad27ebe12c841d77d23caeda7912",
+        "length": 5,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-2",
+      "modality": "code",
+      "base64": "IHgJCg==",
+      "expected": {
+        "sha256": "bc645dd39bb799b81475cc0c4c239738fbade6d6c9f730e41050be2ce4f64f95",
+        "length": 4,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-3",
+      "modality": "code",
+      "base64": "AP8=",
+      "expected": {
+        "sha256": "06eb7d6a69ee19e5fbdf749018d3d2abfa04bcbd1365db312eb86dc7169389b8",
+        "length": 2,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-4",
+      "modality": "code",
+      "base64": "77u/cHJpbnQoMSk=",
+      "expected": {
+        "sha256": "4f19f153eaeecd6aff02678095ef1caee0b5e14a6b23eae3cdeea00164da645e",
+        "length": 11,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-5",
+      "modality": "code",
+      "base64": "ZcyB",
+      "expected": {
+        "sha256": "bf12767b0f2a56b2190075bae8169f656e3ce8d6357d4aff184bc6c7ea48f9f6",
+        "length": 3,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    },
+    {
+      "id": "code-6",
+      "modality": "code",
+      "base64": "w6k=",
+      "expected": {
+        "sha256": "4a99557e4033c3539de2eb65472017cad5f9557f7a0625a09f1c3f6e2ba69c4c",
+        "length": 2,
+        "offset_unit": "byte",
+        "modality": "code",
+        "contract_version": "subject-v1"
+      }
+    }
+  ]
+}

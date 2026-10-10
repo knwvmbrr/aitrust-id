@@ -172,3 +172,22 @@ def test_unknown_evidence_never_reaches_terminal_as_code():
     row['tags'][0]['signals'][0]['id'] = '\x1b[31mMALICIOUS'
     output = cli.brief(row)
     assert '\x1b' not in output and 'MALICIOUS' not in output
+
+
+def test_unicode_submission_preserves_utf8_body_budget(monkeypatch):
+    captured=[]
+    class Response:
+        status=200
+        headers=Mock()
+        def __enter__(self):return self
+        def __exit__(self,*args):pass
+        def read(self,*args):return b'{"ok":true}'
+    response=Response();response.headers.get_content_type.return_value='application/json'
+    class Opener:
+        def open(self,request,timeout):
+            captured.append(request.data);return response
+    monkeypatch.setattr(cli.urllib.request,'build_opener',lambda *args:Opener())
+    text='🧪'*200_000
+    assert cli.local_request('/v1/evaluate',{'text':text},'synthetic-token-abcdefghijklmnop')['ok'] is True
+    assert len(captured[0])<1_250_000
+    assert json.loads(captured[0])['text']==text

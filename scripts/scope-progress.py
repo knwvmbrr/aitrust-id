@@ -34,9 +34,10 @@ def verify(data):
 def cell(s):return str(s).replace('|',r'\|').replace('\n',' ')
 def render(data):
     done=[x for x in data['records'] if x['percent_complete']==100]
-    text=f'''# Scope completion ledger — 2026-10-09
+    client_date=datetime.date.fromisoformat(data['client_date'])
+    text=f'''# Scope completion ledger — {client_date.isoformat()}
 
-Audit timestamp: **{data['audited_at']}** (UTC; client date October 9).
+Audit timestamp: **{data['audited_at']}** (UTC; client date {client_date.strftime('%B')} {client_date.day}).
 
 **{len(done)} complete requirement records; {202-len(done)} remain open.** All 202
 original IDs are retained. Completed records leave the open queue, not history.

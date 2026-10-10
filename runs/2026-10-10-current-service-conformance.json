@@ -1,0 +1,270 @@
+{
+  "captured_at": "2026-10-10T04:20:06.752295+00:00",
+  "pass": true,
+  "engine": "podman",
+  "engine_version": "podman version 5.4.2",
+  "project": "aitrust-staging",
+  "cases": [
+    {
+      "name": "ready",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 21.0
+    },
+    {
+      "name": "missing_auth",
+      "status": 401,
+      "pass": true,
+      "latency_ms": 1.73
+    },
+    {
+      "name": "wrong_auth",
+      "status": 401,
+      "pass": true,
+      "latency_ms": 1.2
+    },
+    {
+      "name": "page_origin_rejected",
+      "status": 403,
+      "pass": true,
+      "latency_ms": 1.45
+    },
+    {
+      "name": "unsupported_code",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.09
+    },
+    {
+      "name": "unsupported_image",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.3
+    },
+    {
+      "name": "unsupported_audio",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.24
+    },
+    {
+      "name": "unsupported_video",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.24
+    },
+    {
+      "name": "unsupported_document",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.11
+    },
+    {
+      "name": "unsupported_made-up",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.32
+    },
+    {
+      "name": "empty",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.45
+    },
+    {
+      "name": "extra_field",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.51
+    },
+    {
+      "name": "oversize_chars",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 4.84
+    },
+    {
+      "name": "wrong_type",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.26
+    },
+    {
+      "name": "pipeline",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 118433685.18
+    },
+    {
+      "name": "homebrew",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 118437716.51
+    },
+    {
+      "name": "download_only",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 32.86
+    },
+    {
+      "name": "wget_file",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 34.85
+    },
+    {
+      "name": "warning",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 40.22
+    },
+    {
+      "name": "literal_display",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 30.09
+    },
+    {
+      "name": "encoded",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 118437881.81
+    },
+    {
+      "name": "benign",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 28.48
+    },
+    {
+      "name": "unicode",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 118423939.71
+    },
+    {
+      "name": "detected_redaction_before_evaluation",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 118411012.66
+    },
+    {
+      "name": "evaluator_down_readiness",
+      "status": 503,
+      "pass": true,
+      "latency_ms": 22.49
+    },
+    {
+      "name": "evaluator_down_evaluation",
+      "status": 502,
+      "pass": true,
+      "latency_ms": 28.99
+    },
+    {
+      "name": "evaluator_recovered",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 31.5
+    },
+    {
+      "name": "anonymizer_down_readiness",
+      "status": 503,
+      "pass": true,
+      "latency_ms": 13.57
+    },
+    {
+      "name": "anonymizer_down_evaluation",
+      "status": 502,
+      "pass": true,
+      "latency_ms": 20.38
+    },
+    {
+      "name": "anonymizer_recovered",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 171.06
+    }
+  ],
+  "services": {
+    "gateway": {
+      "source_sha256": "f6b0557f19accdb14f12fc5f3c31f6a1459ff7b321b25dd3b24ab19b61b065b3",
+      "uid": 10001,
+      "read_only": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "published_port_scope": "127.0.0.1:8787",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    },
+    "anonymizer": {
+      "source_sha256": "6fe4cd11ece8a6450ae41c0b1cbc7223ba944b1385f329d639554f844807eac1",
+      "uid": 10001,
+      "read_only": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "published_port_scope": "none",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    },
+    "evaluator": {
+      "source_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+      "uid": 10001,
+      "read_only": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "published_port_scope": "none",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    }
+  },
+  "offline_redaction": true,
+  "redacted_subject_hash_and_length_verified": true,
+  "synthetic_markers_absent_from_application_logs": true,
+  "application_log_streams_checked": [
+    "stdout",
+    "stderr"
+  ],
+  "dependency_failure_recovery_exercised": true,
+  "gateway_edge_egress_observed": false,
+  "isolation_scope": "Two external IPv4/IPv6 TCP destinations; evaluator/redactor only",
+  "latency_budget_accepted": false,
+  "independent_accuracy_evidence": false,
+  "release_validated": false,
+  "human_or_device_acceptance": false,
+  "source_base": "21e9e42f653fcdad2c1a8fa5019dd26c6a71d7aa",
+  "source_files": {
+    "scripts/verify-service.py": "d3abbada2b75ed9ea545b8a34a094e84a36a0907fce996ff9a6551e72106147f",
+    "deploy/docker-compose.yml": "8be0806f9331d0a9c77606861fb161ec794d8f1c3b2e409c34b83ca7eb103953",
+    "spec/assertion.schema.json": "9991aa209f0d7dcd469ff655167133d0b4543da293ce412754742d215ff8d438",
+    "services/gateway/app.py": "f6b0557f19accdb14f12fc5f3c31f6a1459ff7b321b25dd3b24ab19b61b065b3",
+    "services/gateway/Dockerfile": "2177551f2da4fa39af9d095ef05cc8e4ac23b17468f0597aee49d0bc441651cf",
+    "services/gateway/requirements.lock": "7933f6cd8911ae0fef80d95a432bf30464761951225a4b600150581c71b3706e",
+    "services/evaluator/app.py": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+    "services/evaluator/Dockerfile": "2177551f2da4fa39af9d095ef05cc8e4ac23b17468f0597aee49d0bc441651cf",
+    "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+    "services/anonymizer/app.py": "6fe4cd11ece8a6450ae41c0b1cbc7223ba944b1385f329d639554f844807eac1",
+    "services/anonymizer/Dockerfile": "2177551f2da4fa39af9d095ef05cc8e4ac23b17468f0597aee49d0bc441651cf",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
+  },
+  "execution_location": "Dedicated primary Linux host, disposable staging; local Docker not started",
+  "host_firewall_scope": "Temporary staging-bridge DNS and same-inspection-bridge forwarding; no public ingress/general forwarding allowance"
+}

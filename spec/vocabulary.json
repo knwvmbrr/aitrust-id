@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "spec_version": "0.1.0",
+  "codes": ["NF", "FI", "HP", "MT", "PS", "IV", "FA", "PA", "UNK", "PII_REDACTED"],
+  "proposed_codes": ["UC", "SC", "BT"],
+  "modalities": ["text", "code", "image", "audio", "video", "document"],
+  "gateway_modalities": ["text"],
+  "development_gateway_codes": ["PS", "PII_REDACTED"],
+  "development_evaluator_codes": ["PS"],
+  "independently_released_codes": [],
+  "unknown_code_behavior": "upstream_contract_failure",
+  "disabled_known_code_behavior": "abstention_null_floor",
+  "taxonomy_change_requires": "recorded owner acceptance and versioned RFC; never inferred from tests"
+}

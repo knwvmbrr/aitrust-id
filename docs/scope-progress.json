@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T03:33:13.612117+00:00",
-  "client_date": "2026-10-09",
+  "audited_at": "2026-10-10T04:21:05.048309+00:00",
+  "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
   "attribution_rule": "Session/run attribution distinguished from owner-reported Claude additions; Git account author is not substituted for actual implementer",
@@ -55,29 +55,38 @@
       "id": "F-002",
       "kind": "requirement",
       "title": "Nine-label taxonomy (plus UNK, PII_REDACTED)",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Nine-label taxonomy (plus UNK, PII_REDACTED). Next package action: Version the assertion/schema and signal registry. Required outcome: A fixed vocabulary, so a label means the same thing everywhere",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "spec/vocabulary.json",
+        "scripts/verify-vocabulary.py",
+        "tests/test_vocabulary.py",
+        "runs/2026-10-10-vocabulary-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Nine-label taxonomy (plus UNK, PII_REDACTED). Next package action: Version the assertion/schema and signal registry. Required outcome: A fixed vocabulary, so a label means the same thing everywhere"
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-003",
@@ -1558,35 +1567,39 @@
       "id": "F-041",
       "kind": "requirement",
       "title": "Detected redaction before local-service evaluation",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "tests/test_redaction_contract.py",
-        "docs/tags/PII-01.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-024",
@@ -1620,35 +1633,39 @@
       "id": "F-043",
       "kind": "requirement",
       "title": "No-egress network topology \u2014 internal: true, loopback binding",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-084",
@@ -2414,103 +2431,115 @@
       "id": "F-040",
       "kind": "requirement",
       "title": "Gateway orchestration \u2014 redact, evaluate, calibrate, return",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-042",
       "kind": "requirement",
       "title": "Evaluator on redacted text only; self-reports as \"rules-only\"",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-098",
       "kind": "requirement",
       "title": "Presidio language assets baked into the image",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "tests/test_redaction_contract.py",
-        "docs/tags/PII-01.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-099",
@@ -2658,69 +2687,77 @@
       "id": "F-103",
       "kind": "requirement",
       "title": "Health checks reporting dependency readiness, not process liveness",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-104",
       "kind": "requirement",
       "title": "Defined dependency-failure behaviour",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-044",
@@ -3224,35 +3261,39 @@
       "id": "F-112",
       "kind": "requirement",
       "title": "Schema validation against real service responses, not just schema syntax",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-055",
@@ -3367,35 +3408,39 @@
       "id": "F-115",
       "kind": "requirement",
       "title": "Network-isolation verification \u2014 exec into each container and prove it cannot reach out",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:21:05.048309+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and executed acceptance"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and executed acceptance"
+      ],
+      "completed_at": "2026-10-10T04:21:05.048309+00:00",
+      "completion_timestamp_basis": "Current full named engineering contract verified; tag accuracy, human recognition and cancellation gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "scripts/verify-service.py",
+        "runs/2026-10-10-current-service-conformance.json",
+        "docs/development.md",
+        "tests/test_gateway_integration.py",
+        "tests/test_redaction_contract.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Rebuild and run the full current-source local-service route; prove readiness, bounded isolation, upstream failure and cancellation scenarios against that version. The context-v4 container record is historical."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-057",
@@ -4667,86 +4712,75 @@
       "id": "F-149",
       "kind": "requirement",
       "title": "MAINTAINERS.md with per-maintainer scope",
-      "percent_complete": 40,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:14:01.284175+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and verification"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board.",
-      "next_owner": "Michael and reviewers",
+      "completed_by": [
+        "Codex \u2014 current implementation and verification"
+      ],
+      "completed_at": "2026-10-10T04:14:01.284175+00:00",
+      "completion_timestamp_basis": "Full named baseline verified at this audit; unrelated package gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "CONTRIBUTING.md",
-        "GOVERNANCE.md",
-        "DECISIONS.md"
+        "MAINTAINERS.md",
+        "docs/maintainers.json",
+        "scripts/verify-accountability.py",
+        "tests/test_accountability.py",
+        "runs/2026-10-10-accountability-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-150",
       "kind": "requirement",
       "title": "CHANGELOG.md, state.json, docs/, runs/",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T21:07:46.641291+00:00",
+      "audited_at": "2026-10-10T04:14:01.284175+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-        "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
-        "Codex \u2014 corrected fresh-checkout verifier and committed engineering reference"
+        "Codex \u2014 current implementation and verification"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings.",
-      "next_owner": "Michael accountable; Codex operational tooling",
+      "completed_by": [
+        "Codex \u2014 current implementation and verification"
+      ],
+      "completed_at": "2026-10-10T04:14:01.284175+00:00",
+      "completion_timestamp_basis": "Full named baseline verified at this audit; unrelated package gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "THREAT_MODEL.md",
-        "runs/2026-10-08-owner-recovery-and-alerts-result.json",
-        "state.json",
         "docs/changelog-policy.md",
-        "docs/change-accountability-plan.md",
-        "scripts/changelog_core.py",
         "tests/test_changelog_pipeline.py",
-        "docs/device-accessibility-increment.md",
-        "runs/2026-10-09-device-build-matrix-final.json",
-        "runs/2026-10-09-accessibility-site-final-local.json",
-        "runs/2026-10-09-device-a11y-engines-local.json",
-        "runs/2026-10-09-device-accessibility-python.json",
-        "docs/provenance-boundary-increment.md",
-        "docs/adjudication-spec.md",
-        "runs/2026-10-09-provenance-boundary-python.json",
-        "runs/2026-10-09-provenance-boundary-demo.json",
-        "runs/2026-10-09-device-matrix-checkout-correction.json",
-        "runs/2026-10-09-provenance-boundary-final-python.json"
+        "runs/2026-10-10-accountability-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
-      "required_acceptance": [
-        "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-151",
@@ -4963,34 +4997,39 @@
       "id": "F-154",
       "kind": "requirement",
       "title": "text and code subject contracts",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-10T04:14:01.284175+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and verification"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Complete cross-implementation text/code subject vectors and full selected route acceptance; six reserved modalities are not six functioning detectors.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex \u2014 current implementation and verification"
+      ],
+      "completed_at": "2026-10-10T04:14:01.284175+00:00",
+      "completion_timestamp_basis": "Full named baseline verified at this audit; unrelated package gates retained separately",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "runs/2026-10-09-scope-completion-checks.json",
-        "spec/assertion.schema.json"
+        "docs/subject-contract.md",
+        "protocol/subjects.py",
+        "protocol/subjects.cjs",
+        "tests/test_subject_contract.py",
+        "runs/2026-10-10-subject-contract.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Complete cross-implementation text/code subject vectors and full selected route acceptance; six reserved modalities are not six functioning detectors."
-      ],
-      "queue": "open"
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-155",

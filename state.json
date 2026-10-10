@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -688,9 +688,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T03:33:13.612117+00:00",
-    "completed_records": 15,
-    "open_records": 187,
+    "audited_at": "2026-10-10T04:21:05.048309+00:00",
+    "completed_records": 28,
+    "open_records": 174,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -698,7 +698,7 @@
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
-    "structural_evidence": "runs/2026-10-09-performance-scope-verification.json",
+    "structural_evidence": "runs/2026-10-10-scope-100-structure.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-09-scope-branding-deployment.json",
     "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
@@ -706,7 +706,10 @@
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "runs/2026-10-10-calm-deployment.json",
     "completed_subtasks": 1,
-    "open_subtasks": 116
+    "open_subtasks": 116,
+    "target_open_records": 100,
+    "target_start_open_records": 187,
+    "target_remaining_closures": 74
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -792,5 +795,18 @@
     "reference": "docs/device-build-reference.json",
     "fresh_checkout_entry_point_verified": true,
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
+  },
+  "current_source_service_conformance": {
+    "captured_at": "2026-10-10T04:20:06.752295+00:00",
+    "evidence": "runs/2026-10-10-current-service-conformance.json",
+    "http_checks": 30,
+    "engine": "Podman 5.4.2 on dedicated primary Linux staging",
+    "local_docker_started": false,
+    "upstream_failure_and_recovery": true,
+    "redacted_subject_binding_verified": true,
+    "loopback_only_port_verified": true,
+    "release_validated": false,
+    "human_acceptance": false,
+    "resource_cancellation_gate_complete": false
   }
 }

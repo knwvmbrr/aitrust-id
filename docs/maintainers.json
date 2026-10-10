@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-10T04:13:19.801707+00:00",
+  "publisher": "AI Trust ID",
+  "accountable_owner": "Michael",
+  "institution_operating": false,
+  "response_sla_accepted": false,
+  "lanes": [
+    {
+      "id": "product",
+      "owner": "Michael",
+      "execution": "owner adoption decisions",
+      "contract": "DECISIONS.md"
+    },
+    {
+      "id": "source",
+      "owner": "Michael",
+      "execution": "Codex implementation; Claude advisory review",
+      "contract": "docs/changelog-policy.md"
+    },
+    {
+      "id": "security",
+      "owner": "Michael",
+      "execution": "private intake; no staffed SLA",
+      "contract": "SECURITY.md"
+    },
+    {
+      "id": "adapters",
+      "owner": "Michael",
+      "execution": "Codex version-bound adapter checks",
+      "contract": "docs/runtime-gap-plan.md"
+    },
+    {
+      "id": "operations",
+      "owner": "Michael",
+      "execution": "dedicated host and recovery administration",
+      "contract": "docs/private-host-operations.md"
+    },
+    {
+      "id": "independent_review",
+      "owner": "Michael",
+      "execution": "reviewer recruitment; labels still outstanding",
+      "contract": "docs/independent-review.md"
+    }
+  ],
+  "handoff_required": [
+    "source_revision",
+    "files",
+    "evidence",
+    "remaining_failures",
+    "accepted_owner"
+  ],
+  "tools_are_legal_officers": false
+}

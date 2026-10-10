@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-042105-scope-100-foundations-and-live-service-conformance-dbbc585f
+
+Recorded 2026-10-10T04:21:05.320560+00:00 · Contributor: Codex · change
+
+- **Changed.** Make restrictive-permission service builds work; execute current Linux staging conformance; add cross-language subject and vocabulary guards, maintainer accountability, correct ledger dates and UTF-8 submission sizing.
+- **Evidence.** 419 Python checks, 19 cross-implementation vectors, vocabulary negative tests and 30 real HTTP checks with dependency failure/recovery; 13 named baseline jobs closed, all 202 records preserved. [Change record](./runs/changes/2026-10-10-042105-scope-100-foundations-and-live-service-conformance-dbbc585f.json).
+- **Not claimed.** 174 requirements remain open toward target 100. No independent tag accuracy, real-phone/human acceptance, universal isolation, full-host recovery or hosted CI pass. Temporary staging networking is narrowly scoped.
+
+
 ### 2026-10-10-033504-bind-public-changelog-check-to-deployed-source-3e896ab4
 
 Recorded 2026-10-10T03:35:04.199652+00:00 · Contributor: Codex · change

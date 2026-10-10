@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-042105-scope-100-foundations-and-live-service-conformance-dbbc585f",
+  "recorded_at": "2026-10-10T04:21:05.320560+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "21e9e42f653fcdad2c1a8fa5019dd26c6a71d7aa",
+  "changed": "Make restrictive-permission service builds work; execute current Linux staging conformance; add cross-language subject and vocabulary guards, maintainer accountability, correct ledger dates and UTF-8 submission sizing.",
+  "proves": "419 Python checks, 19 cross-implementation vectors, vocabulary negative tests and 30 real HTTP checks with dependency failure/recovery; 13 named baseline jobs closed, all 202 records preserved.",
+  "limits": "174 requirements remain open toward target 100. No independent tag accuracy, real-phone/human acceptance, universal isolation, full-host recovery or hosted CI pass. Temporary staging networking is narrowly scoped.",
+  "scope_ids": [
+    "F-002",
+    "F-040",
+    "F-042",
+    "F-043",
+    "F-041",
+    "F-098",
+    "F-103",
+    "F-104",
+    "F-112",
+    "F-115",
+    "F-149",
+    "F-150",
+    "F-154",
+    "WP-SERVICE",
+    "WP-PROTOCOL"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "fd05677fd1b7f7fcb1627805b27d9cad288e96e7fb0278e9121fb61963e79222",
+    "DECISIONS.md": "92efb43f98f9a4f819ab4d0e2a61b9b9c3e412d33db981c5f681265e7c39bc55",
+    "GOVERNANCE.md": "865b1d8e2d15e9ee156da0ec01cbe2c5943dd30afdcfdc46586b78b88ac604d7",
+    "MAINTAINERS.md": "e6f73d49932e3c1ded3e79e5de7796a2ae0ed9f21105f9809dbc41ae3469d975",
+    "Makefile": "9ce054048574e7fbe119756af8045f49d36895b1e455d0c02301d5aa318c8091",
+    "README.md": "148a19ea516e0ec5175508d4f9bd0733700e8b7355877171559cce419b98f25d",
+    "docs/development.md": "9eacad7834dc98dd5ea83362dd76f11547e7e815bab2e48cf2f0e83e8510721e",
+    "docs/maintainers.json": "b8ecea8b41975e7cea8653062ff72c1db10b4b947cd3fc55539a3fe7144440e6",
+    "docs/scope-100-execution.md": "543c2f89d94ee2b6bb4f5710498eea964e06f5b08a420008b7da73c6bd93750e",
+    "docs/scope-progress.json": "30e52d0156b2d6f0bf32d2e40915e966b4ea42e8162d4e00f7a9954779f069ce",
+    "docs/scope-progress.md": "61ecd331f5cef85a8e611ed469dc7170dafc3d07f0acad49228aa27356f38e0e",
+    "docs/scope-task-index.md": "bb2d4fc8117c05b79859361722d44c2d6a37ad615cf8c27c49f42fce77b1ddc9",
+    "docs/subject-contract.md": "752a65b60e52bc0b1cbcee89b030b5842c5a42f9fdd265c445ef4a0f14ae26f4",
+    "eval/vectors/subjects-v1.json": "028e47b832485a745159cb64a68f9fc3941bbb2a5b3533f13c7c6541a22baf17",
+    "package.json": "200d0dbc709b198126c6d0f68ea25a68d5cd54a9116ce92ae9b7a45629ba80a2",
+    "protocol/subjects.cjs": "0f2cc94f69e464ec9cef6f2e82b85fc036aae8255a4ac13ecbcd74050eccc92d",
+    "protocol/subjects.py": "cb63421e124b1e5f1a3cd7a30c7b3ee1bb9f80c8efd703defed6b728f5d3f97f",
+    "rfcs/0003-modality-coverage.md": "78a32b339f02bc43927ba19309d57ff67f764789f8684f320f6145831f422b2a",
+    "runs/2026-10-10-accountability-contract.json": "125d8f98857ad816ce4c55a00a0f4ffdbd716f0c64c21363f249dc5b37726b67",
+    "runs/2026-10-10-accountability-current.json": "df3461ac2c211ad0eabd2d48a60ba413c6c0e15103ee3ff297af53bade07d93a",
+    "runs/2026-10-10-current-service-conformance.json": "fc52252e63521c7418b7f4eae9a6b01e7a127ba29257d56ceb3357b875361d0e",
+    "runs/2026-10-10-scope-100-python.json": "05b79fae304861b6872630235a4ba9d8791569837a7cdbe3b46bca1761baaaf9",
+    "runs/2026-10-10-scope-100-structure.json": "dd0ead46679ee1aa3c7bdd4ffbb07abc16a5952a4d65efb7b5722bbb5269ba7c",
+    "runs/2026-10-10-subject-contract.json": "d0ad5be2952b8fa8922f83b9fbf714134597e8e9cc0751c6ffa0e3b1cc100059",
+    "runs/2026-10-10-vocabulary-contract.json": "704aa3b3dcb15a16dee8188d3b11857b4dbf2e09b6f8813fd56a8af5d6665305",
+    "scripts/aitrust.py": "b61aee18cd1a85873348914bddd0f6567c7630f54b0f1aa43003c3fa2ab3a2b3",
+    "scripts/scope-progress.py": "e89c4d485f55b5ce48bb9d54959e55b5c374c5e1e5eea12b0691044199f2d497",
+    "scripts/verify-accountability.py": "7ee4785d76e540eab0fa92d098789497385151fbbccebbeedc369961141775d8",
+    "scripts/verify-service.py": "d3abbada2b75ed9ea545b8a34a094e84a36a0907fce996ff9a6551e72106147f",
+    "scripts/verify-subjects.py": "d6a1abe32df61c917ad2fbabfa8139886b6b3f12d2dd92ed2466836ae157e216",
+    "scripts/verify-vocabulary.py": "ef466428b0e658e03d7b93020155cb05d61372330d3390642ac6fb2d7a40459e",
+    "services/anonymizer/Dockerfile": "2177551f2da4fa39af9d095ef05cc8e4ac23b17468f0597aee49d0bc441651cf",
+    "services/evaluator/Dockerfile": "2177551f2da4fa39af9d095ef05cc8e4ac23b17468f0597aee49d0bc441651cf",
+    "services/gateway/Dockerfile": "2177551f2da4fa39af9d095ef05cc8e4ac23b17468f0597aee49d0bc441651cf",
+    "spec/taxonomy.md": "84c495ba17a3d319bc6847b5aa81407ce0d0c8b4b46ace334f68b9b8a7c348b4",
+    "spec/vocabulary.json": "d3c14256da3d44c3a02f252c591a2f9039ebc2944b73837c7c521d8adac0002a",
+    "state.json": "8dc14ec14b1882882fe8961dc12481d0c35b747853a8f6e4c7ce5c93205c55cd",
+    "tests/test_accountability.py": "0b565bae72954cdef739d03084d4b65a16dcf78c5ddc3064829f0cfcf1a5820d",
+    "tests/test_local_cli.py": "9a1574a8a97275b6b1e61a2155922af9cc8a0ebd65b58cc8b8da2705db6c9074",
+    "tests/test_subject_contract.py": "ef2bc4302d6ddfe8f2847caa9456fbd15eb647a82bcf611b3712f6182983dae1",
+    "tests/test_vocabulary.py": "c7d512c1f5cf25264491d86e45bb9447082ccb6f455efe5645594540639eb633"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-current-service-conformance.json",
+      "sha256": "fc52252e63521c7418b7f4eae9a6b01e7a127ba29257d56ceb3357b875361d0e"
+    },
+    {
+      "path": "runs/2026-10-10-subject-contract.json",
+      "sha256": "d0ad5be2952b8fa8922f83b9fbf714134597e8e9cc0751c6ffa0e3b1cc100059"
+    },
+    {
+      "path": "runs/2026-10-10-vocabulary-contract.json",
+      "sha256": "704aa3b3dcb15a16dee8188d3b11857b4dbf2e09b6f8813fd56a8af5d6665305"
+    },
+    {
+      "path": "runs/2026-10-10-accountability-current.json",
+      "sha256": "df3461ac2c211ad0eabd2d48a60ba413c6c0e15103ee3ff297af53bade07d93a"
+    },
+    {
+      "path": "runs/2026-10-10-scope-100-python.json",
+      "sha256": "05b79fae304861b6872630235a4ba9d8791569837a7cdbe3b46bca1761baaaf9"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T04:21:05.495437+00:00"
+    }
+  ]
+}

@@ -52,6 +52,8 @@ jobs:
         with: { python-version: "3.12" }
       - run: python scripts/verify-scope-plan.py
       - run: python scripts/scope-progress.py
+      - run: python scripts/verify-accountability.py
+      - run: python scripts/verify-vocabulary.py
 
   spec:
     runs-on: ubuntu-latest

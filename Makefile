@@ -85,6 +85,8 @@ progress-render:
 	$(PYTHON) scripts/scope-progress.py --render
 verify-progress:
 	$(PYTHON) scripts/scope-progress.py
+	$(PYTHON) scripts/verify-accountability.py
+	$(PYTHON) scripts/verify-vocabulary.py
 
 .PHONY: performance-build performance-verify
 performance-build: verify-changelog

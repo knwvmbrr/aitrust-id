@@ -19,7 +19,7 @@ is a commitment against that.
 * Spec versioning: semantic. A detector behaviour change requires a signal version bump.
 * The repository owner is the current accountable maintainer. Contributor and reviewer
   lanes are described in `docs/footer-workflows.md` and the public Teamwork panel;
-  an open lane is not an accepted assignment. No separate MAINTAINERS.md roster exists yet.
+  an open lane is not an accepted assignment. [MAINTAINERS.md](MAINTAINERS.md) names the current accountable owner, implementation lanes and limits; it does not imply an operating foundation.
 
 ## Conflicts of interest
 

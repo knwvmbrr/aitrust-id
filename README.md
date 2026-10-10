@@ -277,3 +277,17 @@ is required. Engineering passes never substitute for independent tag validation.
 research candidates, missing evidence and conflicts. A valid credential alone
 does not imply AI participation. This is synthetic input processing, not a live
 tag or media verifier. See [the boundary contract](docs/adjudication-spec.md#experimental-provenance-to-tag-bridge--020-research).
+
+## Current engineering increment — 2026-10-10
+
+The current context-v5 pipeline passed 30 synthetic HTTP checks on the dedicated
+Linux staging host, with source hashes, loopback binding, real redacted subject
+identity, read-only non-root execution, zero Linux capabilities, bounded network
+probes, stdout/stderr canaries and both dependency stop/recovery cycles. No local
+Docker was started. [Executed service evidence](runs/2026-10-10-current-service-conformance.json)
+is separate from independent tag accuracy and human/device acceptance.
+
+[Maintainer lanes](MAINTAINERS.md), [subject contract](docs/subject-contract.md) and
+[executable vocabulary](spec/vocabulary.json) provide reproducible shared contracts.
+The [scope target](docs/scope-100-execution.md) preserves all 202 requirements;
+completed jobs leave the open queue without disappearing from history.

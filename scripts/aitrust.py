@@ -80,7 +80,7 @@ def local_request(path, payload=None, token=None):
     data = None
     if payload is not None:
         headers['Content-Type'] = 'application/json'
-        data = json.dumps(payload).encode('utf-8')
+        data = json.dumps(payload, ensure_ascii=False).encode('utf-8')
     request = urllib.request.Request(GATEWAY + path, data=data, headers=headers)
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
     try:

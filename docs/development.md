@@ -85,3 +85,31 @@ this reference through a reviewed, recorded change. The verifier never silently
 refreshes it. Repeat `--python /path/to/python` to compare actual installed
 builders. `tests/test_device_matrix_checkout.py` executes a minimal clean checkout
 and a deliberately incorrect reference.
+
+## Linux staging conformance (current source)
+
+The selected context-v5 stack has also executed on Debian with Podman 5.4.2 and
+podman-compose 1.3.0. Debian's daemonless engine needs `aardvark-dns` for container
+name resolution. Use absolute compose/env paths with that compose version. Builds
+need working network DNS; on a host with a loopback-only resolver, a build-only
+host-network setting worked. Never transfer that setting to inference containers.
+Explicit source COPY permissions make a restrictive checkout/extraction umask safe
+for the non-root runtime. Existing host default-deny firewall policies can block
+container DNS/internal traffic; review narrowly scoped private-bridge rules rather
+than opening public ports or globally allowing forwarding.
+
+On a dedicated **disposable staging** project, after the services are healthy:
+
+```sh
+python3 scripts/verify-service.py --engine podman \
+  --project aitrust-staging --env-file /absolute/private/runtime.env \
+  --disrupt-staging-dependencies --output /absolute/private/service-report.json
+```
+
+Use the engine's required administrative permissions on Linux. The verifier
+refuses projects outside the staging naming boundary. The disruption option stops
+and restarts each dependency, so never point it at production. Inspect the source
+before executing. Only synthetic input is submitted. A safe failure record reports
+its source location; it excludes exception bodies and credentials. Successful
+reports are reproducible engineering evidence, not tag accuracy or a public API.
+Current execution: `runs/2026-10-10-current-service-conformance.json`.
