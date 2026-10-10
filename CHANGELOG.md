@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-044919-reference-increment-publication-audit-42c58de9
+
+Recorded 2026-10-10T04:49:19.436741+00:00 · Contributor: Codex · change
+
+- **Changed.** Record bounded source/public-asset privacy checks before publishing the reference and resource-control increment.
+- **Evidence.** Targeted credential, private provider address, private-key and portfolio markers absent from current tracked source and built assets; dependency paths excluded from source tracking. [Change record](./runs/changes/2026-10-10-044919-reference-increment-publication-audit-42c58de9.json).
+- **Not claimed.** Not historical erasure, unknown-secret discovery or independent security certification; release validation remains pending.
+
+
 ### 2026-10-10-044821-reference-workflow-browser-and-service-evidence-3e9fac5c
 
 Recorded 2026-10-10T04:48:21.292231+00:00 · Contributor: Codex · change

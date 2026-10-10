@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-044919-reference-increment-publication-audit-42c58de9",
+  "recorded_at": "2026-10-10T04:49:19.436741+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "726fa38f0a9bf99f929571029c8f8a09f729e02f",
+  "changed": "Record bounded source/public-asset privacy checks before publishing the reference and resource-control increment.",
+  "proves": "Targeted credential, private provider address, private-key and portfolio markers absent from current tracked source and built assets; dependency paths excluded from source tracking.",
+  "limits": "Not historical erasure, unknown-secret discovery or independent security certification; release validation remains pending.",
+  "scope_ids": [
+    "F-140",
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    "runs/2026-10-10-reference-publication-audit.json": "af80dc5db7f21a9e2f71881cdb772122c93cec3519375061051da6d6a071f3fe"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-reference-publication-audit.json",
+      "sha256": "af80dc5db7f21a9e2f71881cdb772122c93cec3519375061051da6d6a071f3fe"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T04:49:19.577250+00:00"
+    }
+  ]
+}
