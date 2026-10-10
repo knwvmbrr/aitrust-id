@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-200539-hosted-report-destination-repair-26382548",
+  "recorded_at": "2026-10-10T20:05:39.371921+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ef131267d1797f388426e0d4a05b6addd1a2cd13",
+  "changed": "Repair the hosted regression producer/upload path and exercise that exact workflow command against the real atomic report writer.",
+  "proves": "Configured command produces the 86-case artifact under the approved scratch directory; hosted no-egress check already passed; artifact missing/refusal policies remain enforced.",
+  "limits": "Full repaired hosted run and required main checks remain pending; release gates still refuse independent accuracy/accessibility.",
+  "scope_ids": [
+    "F-054",
+    "F-118",
+    "F-152"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "0aa34be7b826f3393ab89eccd7fa78ec4959adce116d44c7ac43b57f4aafa75a",
+    "docs/ci-portability-plan.md": "80c4ddd9064d0b4c55a312bd85885783a21505f7132f91c7b2e05fdea6702ffa",
+    "runs/2026-10-10-hosted-report-destination-repair.json": "37c4eb72aa124fbd10e968350f856756c4b559da1f86fd7fe45bc6bb51702d27",
+    "tests/test_ci_regression_output.py": "3b904a73322164185734e0f6f1fcc544d1eff89b525aaaf107d13137a365475e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-hosted-report-destination-repair.json",
+      "sha256": "37c4eb72aa124fbd10e968350f856756c4b559da1f86fd7fe45bc6bb51702d27"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_ci_regression_output.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:05:40.349168+00:00"
+    }
+  ]
+}

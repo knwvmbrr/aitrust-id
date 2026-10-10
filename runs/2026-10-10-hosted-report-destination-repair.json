@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-10T20:05:38.210296+00:00",
+  "source_commit": "ef131267d1797f388426e0d4a05b6addd1a2cd13",
+  "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38082248082",
+  "kind": "hosted_ci_report_destination_diagnosis",
+  "no_egress_job_passed": true,
+  "root_cause": "Hosted regression output path under eval conflicted with the report writer runs/output-only policy",
+  "repair": "Use output/verification/hosted-regressions.json in both producer and artifact upload; exact configured command exercised",
+  "local_configured_command_passed": true,
+  "fixture_cases": 86,
+  "script_report_policy_weakened": false,
+  "hosted_repair_passed": false,
+  "release_approved": false
+}

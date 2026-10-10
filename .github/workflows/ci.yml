@@ -107,13 +107,13 @@ jobs:
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install --require-hashes -r eval/requirements.lock
       - run: python scripts/verify-dataset-provenance.py --verify-history
-      - run: python scripts/verify-regressions.py --output eval/regression-report.json
+      - run: python scripts/verify-regressions.py --output output/verification/hosted-regressions.json
       - run: python scripts/verify-measurements.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: development-regressions
-          path: eval/regression-report.json
+          path: output/verification/hosted-regressions.json
           if-no-files-found: error
 
   gates:

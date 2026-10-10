@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-200610-report-path-source-bound-review-b2698195
+
+Recorded 2026-10-10T20:06:10.026476+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the reviewed CI source inventory after the output-path correction and record hosted evidence separately from local checks.
+- **Evidence.** Current route guard remains valid; the newly executed configured-report test brings distinct passing Python checks to 982. [Change record](./runs/changes/2026-10-10-200610-report-path-source-bound-review-b2698195.json).
+- **Not claimed.** No required main checks yet; full hosted rerun remains pending and independent release gates are unmet.
+
+
+### 2026-10-10-200539-hosted-report-destination-repair-26382548
+
+Recorded 2026-10-10T20:05:39.371921+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair the hosted regression producer/upload path and exercise that exact workflow command against the real atomic report writer.
+- **Evidence.** Configured command produces the 86-case artifact under the approved scratch directory; hosted no-egress check already passed; artifact missing/refusal policies remain enforced. [Change record](./runs/changes/2026-10-10-200539-hosted-report-destination-repair-26382548.json).
+- **Not claimed.** Full repaired hosted run and required main checks remain pending; release gates still refuse independent accuracy/accessibility.
+
+
 ### 2026-10-10-200246-verified-portability-and-sbom-checks-2f444528
 
 Recorded 2026-10-10T20:02:46.762083+00:00 · Contributor: Codex · change

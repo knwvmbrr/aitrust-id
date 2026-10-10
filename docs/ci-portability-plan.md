@@ -44,3 +44,9 @@ bytes against that deployment's build. The device bundle remains hash-bound.
 Negative controls cover non-finite/wrong-type/out-of-range/reversed intervals,
 changed counts/points/denominators/gates/source identities, missing/extra fields,
 substantive interval changes, changed templates and excluded-asset symlinks.
+
+The hosted rerun at `ef13126` confirmed network-isolated checks but exposed the
+regression artifact path under `eval/`, which the common atomic report writer
+refuses. Both CI producer and upload now use the approved `output/verification/`
+scratch path. A test executes the exact configured command and checks its actual
+86-case report. The writer policy and missing-artifact upload refusal are retained.

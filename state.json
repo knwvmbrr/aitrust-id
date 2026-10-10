@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T20:02:46.696826+00:00",
+  "updated": "2026-10-10T20:06:09.978049+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Hosted CI now starts; engineering portability failures require repair and rerun; release gates remain unmet; main has no required-check protection"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 981,
+  "python_tests_passed": 982,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1074,11 +1074,12 @@
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
   "ci_portability": {
-    "status": "local_mac_and_actual_linux_measurement_checks_pass; all_five_engineering_capability_receipts_current; hosted_recheck_pending",
+    "status": "linux_no_egress_and_accessibility_hosted_jobs_passed; regression_report_path_repaired; complete_hosted_recheck_pending",
     "diagnosis": "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
     "main_branch_protected": false,
     "release_gates_waived": false,
-    "checks": "runs/2026-10-10-ci-portable-complete-checks.json"
+    "checks": "runs/2026-10-10-ci-portable-complete-checks.json",
+    "report_path_diagnosis": "runs/2026-10-10-hosted-report-destination-repair.json"
   },
   "dependency_license_audit": {
     "status": "three_observed_linux_images_inventoried; unsigned; incomplete_license_and_client_coverage",
