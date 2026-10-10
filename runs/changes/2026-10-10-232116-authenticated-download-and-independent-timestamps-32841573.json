@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-232116-authenticated-download-and-independent-timestamps-32841573",
+  "recorded_at": "2026-10-10T23:21:16.544715+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+  "changed": "Publish a no-account signed development source snapshot and implement optional independent RFC 3161 timestamps with exact authority pins.",
+  "proves": "Four anonymously downloaded assets match the verified hosted archive; actual Mac and network-isolated Linux source verification pass. A real authority issued tokens for synthetic content and a signed composition receipt; 28 timestamp controls pass.",
+  "limits": "Tag release gates, full dependency license clearance and RFC-0002 adoption remain separate. Timestamp revocation is unchecked and authorship unestablished. Full regression and protected publication checks are still pending for the new timestamp component.",
+  "scope_ids": [
+    "F-057",
+    "F-124",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "8fdbd8383975b4ba84399b89988fd5e29584e75c66989fbe620a6dff365c8bdb",
+    "docs/independent-timestamp-plan.md": "f441fa05a982e2d080255df42b645ebad15cca317ad0c22df34405586f30a60b",
+    "docs/independent-timestamps.md": "0d8114eb6cca93cdc06fc1604506c314e55960e183bbd8c16d17fc15ec4dcd11",
+    "docs/offline-receipts.md": "6ca6a238dc37f39fb10e7141af811219e85bd6e239d3aabd9d6d20885df11db9",
+    "docs/source-provenance.md": "431b577e4ed28ff73534213d5c7ef9cae36b567da933f66a7591aa4613bafa46",
+    "eval/route-boundaries.json": "ebd7ea1daee1a5d9193a7e925aa5b35abc8acaf3970dd6327f439b8b0ad44423",
+    "provenance/ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85/origin.json": "ef07fa686a57ac42cf2eebb18f3651db38769ae2eb28116cd4ae215674b92dbb",
+    "provenance/ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85/source.sigstore.json": "ef2ec6a139974226e4c7a53071b2b14b4d6a4cbd11c668680aab5bd1a05147a1",
+    "provenance/ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85/verification.json": "b463a66d752886547c804f9e7c2854a1793c9c262bc5b6243f27a94b7afade6c",
+    "runs/2026-10-10-authenticated-source-download.json": "ab0100621ae80b07941b58fb0867718418a861b713fa0dcd1d8277d1020d8a9d",
+    "runs/2026-10-10-composition-receipt-timestamp.json": "cde1b63f21dc3bc5d8990671dc72995008da62175d5ea53c03c2d046c05bc0fd",
+    "runs/2026-10-10-independent-timestamp-issuance.json": "dac1cb9b8c84a023f795cb2484cfd5fc66a72bfa81ed9de36df97e952298008a",
+    "runs/2026-10-10-independent-timestamp-offline-linux.json": "65c0600b3bde00c967e14769312f068d4d2f6498b569a9723ed6943cfd406a78",
+    "runs/2026-10-10-source-contract-protected-merge.json": "6e9296f9ed6d96f01e5a4e75c5b7a6aa0a1e6ff1eab1819fd7bf35523b0f91ed",
+    "runs/2026-10-10-source-download-hosted-checks.json": "a9df2972415d03c8ff9067bec9831d40d6743589fe6df9f95acc9f6fa17533a2",
+    "scripts/independent_timestamp.py": "eed3fe014679784a148cc2da0879036da3895327fff4c246aa59681465583ca2",
+    "scripts/timestamp-artifact.py": "558945d46ea980415e54559cfd5f92ff58ae974518c4ae25192fa1d5ea83d27d",
+    "scripts/verify-route-boundaries.py": "4bae6661f76fecab64305b58b6b429e3954d3ac70b37f794de0ecd118b617e38",
+    "state.json": "a97040c0a60bb422b2c60d2bb099ce7688c0916abb733b543e0f5c4c45dae9ac",
+    "tests/fixtures/timestamp-freetsa-2026/artifact.txt": "2490dca44ecb4a4509a5d85c345e66a76f174822cddad1df50e9fe118bc081fa",
+    "tests/fixtures/timestamp-freetsa-2026/ca.pem": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+    "tests/fixtures/timestamp-freetsa-2026/manifest.json": "b89cba8a6a2d57c205726e63e6fabc45910e9fd206e0e1b42a8f7072091bc392",
+    "tests/fixtures/timestamp-freetsa-2026/request.tsq": "3e75c3bd0149a665c0fb0fe275359b89758772db4a3127d0cfa23e6a3caf09a4",
+    "tests/fixtures/timestamp-freetsa-2026/response.tsr": "2469262ddd33202a9261aca7b54e8dfd3a6954def3c991ce09eafbcd5216a3d5",
+    "tests/fixtures/timestamp-freetsa-2026/tsa.pem": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467",
+    "tests/test_independent_timestamp.py": "9f7ec84fddaee60e530ae5305fe023fb2d9d2966b53d21a616c95cc2f56089c1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-authenticated-source-download.json",
+      "sha256": "ab0100621ae80b07941b58fb0867718418a861b713fa0dcd1d8277d1020d8a9d"
+    },
+    {
+      "path": "runs/2026-10-10-independent-timestamp-issuance.json",
+      "sha256": "dac1cb9b8c84a023f795cb2484cfd5fc66a72bfa81ed9de36df97e952298008a"
+    },
+    {
+      "path": "runs/2026-10-10-independent-timestamp-offline-linux.json",
+      "sha256": "65c0600b3bde00c967e14769312f068d4d2f6498b569a9723ed6943cfd406a78"
+    },
+    {
+      "path": "runs/2026-10-10-composition-receipt-timestamp.json",
+      "sha256": "cde1b63f21dc3bc5d8990671dc72995008da62175d5ea53c03c2d046c05bc0fd"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_independent_timestamp.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T23:21:17.623769+00:00"
+    }
+  ]
+}

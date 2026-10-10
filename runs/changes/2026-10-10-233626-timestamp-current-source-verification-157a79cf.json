@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-233626-timestamp-current-source-verification-157a79cf",
+  "recorded_at": "2026-10-10T23:36:26.469859+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+  "changed": "Bind the current 1173-test source, fresh rebuilt-site checks, explicit policy 1.6 disclosure and independently reproducible receipt timestamp evidence to the public ledger.",
+  "proves": "1173 full Python tests pass, with 29 timestamp checks. After pinning the official Node 24 CI action, 111 focused policy/source/scope checks pass. All four current website checks pass; the reviewed route guard covers 171 source files and retains the 32 actual service cases, 13 full-pipeline replays and deferred registry refusal.",
+  "limits": "This finishes the bounded timestamp component, not tag accuracy, institutional authority or license clearance. Open scope remains 96 toward target 25. Physical-phone and independent-review evidence are still required.",
+  "scope_ids": [
+    "F-057",
+    "F-124",
+    "F-063"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "9a33b417dba2510686e1b703642497a5753fae484059454178a50a8380f62d9e",
+    "README.md": "9910cf4f8e3e3a1be850e991069a4544002780fe1320021d653179f28c9c9ac9",
+    "docs/independent-timestamp-plan.md": "f441fa05a982e2d080255df42b645ebad15cca317ad0c22df34405586f30a60b",
+    "docs/independent-timestamps.md": "1270629f01bfceea317296bafffc41098b4bde77029fb2a8d8f8e6ef818df17b",
+    "docs/offline-receipts.md": "6ca6a238dc37f39fb10e7141af811219e85bd6e239d3aabd9d6d20885df11db9",
+    "docs/scope-25-execution.md": "99061b1b718e9202ecd12c9fb335fce7cdec9518f968b3060a554cd294ac2310",
+    "docs/scope-progress.json": "1a3a5cae1ab4e7ac3902b414a724db7d67776c0547e1cf300d970028405b349a",
+    "docs/scope-progress.md": "c625815baf3cdd0cb45114bc660a4eb43ec6153f115841d6878a1e55808e3017",
+    "docs/source-provenance.md": "431b577e4ed28ff73534213d5c7ef9cae36b567da933f66a7591aa4613bafa46",
+    "eval/route-boundaries.json": "f8f0fe96ce8ac1d16ec20f04b335b6b85374da3fd990b08b3ea8e40a9ba86054",
+    "provenance/ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85/origin.json": "ef07fa686a57ac42cf2eebb18f3651db38769ae2eb28116cd4ae215674b92dbb",
+    "provenance/ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85/source.sigstore.json": "ef2ec6a139974226e4c7a53071b2b14b4d6a4cbd11c668680aab5bd1a05147a1",
+    "provenance/ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85/verification.json": "b463a66d752886547c804f9e7c2854a1793c9c262bc5b6243f27a94b7afade6c",
+    "runs/2026-10-10-authenticated-source-download.json": "ab0100621ae80b07941b58fb0867718418a861b713fa0dcd1d8277d1020d8a9d",
+    "runs/2026-10-10-composition-receipt-timestamp.json": "cde1b63f21dc3bc5d8990671dc72995008da62175d5ea53c03c2d046c05bc0fd",
+    "runs/2026-10-10-independent-timestamp-acceptance.json": "c42ba33be6a1776858ee56f4ce733c4eafcfffec429162405a78c741ebc1b7f3",
+    "runs/2026-10-10-independent-timestamp-issuance.json": "dac1cb9b8c84a023f795cb2484cfd5fc66a72bfa81ed9de36df97e952298008a",
+    "runs/2026-10-10-independent-timestamp-offline-linux.json": "65c0600b3bde00c967e14769312f068d4d2f6498b569a9723ed6943cfd406a78",
+    "runs/2026-10-10-source-contract-protected-merge.json": "6e9296f9ed6d96f01e5a4e75c5b7a6aa0a1e6ff1eab1819fd7bf35523b0f91ed",
+    "runs/2026-10-10-source-download-hosted-checks.json": "a9df2972415d03c8ff9067bec9831d40d6743589fe6df9f95acc9f6fa17533a2",
+    "runs/2026-10-10-timestamp-current-source-controls.json": "a3ae6da94b7c8c4c1a83a1a843e82febcee4a51a89e7f2fdbf562f6adfbcd808",
+    "runs/2026-10-10-timestamp-final-boundaries.json": "13298f861faf34bda370802605954c373d2d5076f61a88e973b0296bd4fc5d74",
+    "runs/2026-10-10-timestamp-scope-acceptance.json": "9fcaf5890e18471af5a5eed003151948377af1c7021c981d380a97e1ccd7de15",
+    "runs/2026-10-10-timestamp-website-recording-failure.json": "1f274590eec756b406a9bd07a7b39c59a8561e9287e63fad3bf572f83ba91c35",
+    "runs/2026-10-10-timestamp-website-revalidated.json": "2d219a4f356a42d4818db259ac942a9c8718f7869b979e003258753fb8d17139",
+    "scripts/independent_timestamp.py": "eed3fe014679784a148cc2da0879036da3895327fff4c246aa59681465583ca2",
+    "scripts/timestamp-artifact.py": "558945d46ea980415e54559cfd5f92ff58ae974518c4ae25192fa1d5ea83d27d",
+    "scripts/verify-route-boundaries.py": "4bae6661f76fecab64305b58b6b429e3954d3ac70b37f794de0ecd118b617e38",
+    "site/public/reference/policies/access/v1.6.txt": "98a0b435a3c619bf896ad918ab04f624b88b745c3affe2df5171b7374140d887",
+    "site/public/reference/policies/community/v1.6.txt": "75741427adb9d9299edab222633fc5ce0efc1058b504ae222b0b1fa7c1490c0f",
+    "site/public/reference/policies/contributing/v1.6.txt": "981678ef7481367c97d05621fae81a756736836cc6a1adfa7d4b32fb9c6fc3ac",
+    "site/public/reference/policies/governance/v1.6.txt": "e25e248992f961d8439918cedd1fa16e683452e8c62a5d0c00df5808d8b9bd3c",
+    "site/public/reference/policies/licenses/v1.6.txt": "4ea6491f8f4c6cbd1a85662817b5d8c7f067ba16402f241da428779275b5a620",
+    "site/public/reference/policies/privacy/v1.6.txt": "429e4e317d7269ac03123c1c7449c96ae7a195eeec59e87221f821294ec70805",
+    "site/public/reference/policies/security/v1.6.txt": "be7141c45922c9b65bad0259092259a4e096d83d134759d7cb9b7dfa0d73d864",
+    "site/public/reference/policies/terms/v1.6.txt": "240424d737d3fc96f1f5adc72da3280c3da682e46219d9f0e9eeb41f3cdeeba4",
+    "site/public/reference/policies/validation/v1.6.txt": "98f45b9ba91994dd237b1ea645400ff35308d25f9a25c820afe3a5f159e36aaf",
+    "site/public/reference/policy-access.txt": "98a0b435a3c619bf896ad918ab04f624b88b745c3affe2df5171b7374140d887",
+    "site/public/reference/policy-community.txt": "75741427adb9d9299edab222633fc5ce0efc1058b504ae222b0b1fa7c1490c0f",
+    "site/public/reference/policy-contributing.txt": "981678ef7481367c97d05621fae81a756736836cc6a1adfa7d4b32fb9c6fc3ac",
+    "site/public/reference/policy-governance.txt": "e25e248992f961d8439918cedd1fa16e683452e8c62a5d0c00df5808d8b9bd3c",
+    "site/public/reference/policy-licenses.txt": "4ea6491f8f4c6cbd1a85662817b5d8c7f067ba16402f241da428779275b5a620",
+    "site/public/reference/policy-privacy.txt": "429e4e317d7269ac03123c1c7449c96ae7a195eeec59e87221f821294ec70805",
+    "site/public/reference/policy-security.txt": "be7141c45922c9b65bad0259092259a4e096d83d134759d7cb9b7dfa0d73d864",
+    "site/public/reference/policy-terms.txt": "240424d737d3fc96f1f5adc72da3280c3da682e46219d9f0e9eeb41f3cdeeba4",
+    "site/public/reference/policy-validation.txt": "98f45b9ba91994dd237b1ea645400ff35308d25f9a25c820afe3a5f159e36aaf",
+    "site/public/reference/public-scope.json": "8e354e7611167725d9fff226a67d1cd0f558e3d0de282a73a6074952c372e2b4",
+    "site/scripts/render-reference.mjs": "20687d383a8580266c70575eccbe7fb886ea19cd42fad020d18de599fb5caa7a",
+    "site/src/policies.js": "76cf8feb9d43363cf92ed7bc23aafa5627f2581bc82e066ce7f1964235389704",
+    "site/src/public-scope.json": "8e354e7611167725d9fff226a67d1cd0f558e3d0de282a73a6074952c372e2b4",
+    "state.json": "5ebf02880848d33199dacd3e821a9288c02b6a930dfc604ac61996d9812bd5a9",
+    "tests/fixtures/timestamp-freetsa-2026/artifact.txt": "2490dca44ecb4a4509a5d85c345e66a76f174822cddad1df50e9fe118bc081fa",
+    "tests/fixtures/timestamp-freetsa-2026/ca.pem": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+    "tests/fixtures/timestamp-freetsa-2026/composition-receipt.json": "4975ec707c0b91b1431cb39ff5b418163ca0e6d6337b45ea54d9cee90bd96dac",
+    "tests/fixtures/timestamp-freetsa-2026/composition-request.tsq": "0caf5835c7025aadeeb19854de01ccd53d74637fba173c66196864271ee988e0",
+    "tests/fixtures/timestamp-freetsa-2026/composition-response.tsr": "e38852d9c3b8724b0363b03f7637ab79765fdbec76bea57ac221722ffab32f2f",
+    "tests/fixtures/timestamp-freetsa-2026/manifest.json": "9fb117a8b6c56c3333743697fa09c2d903b5463c8bc561a4caa021ca4f5bb06d",
+    "tests/fixtures/timestamp-freetsa-2026/receipt-public.pem": "a677e8d414b8bae1274ad1e216ebdc04c2deb21981b9e5e3ed6d4984f95d5cb5",
+    "tests/fixtures/timestamp-freetsa-2026/request.tsq": "3e75c3bd0149a665c0fb0fe275359b89758772db4a3127d0cfa23e6a3caf09a4",
+    "tests/fixtures/timestamp-freetsa-2026/response.tsr": "2469262ddd33202a9261aca7b54e8dfd3a6954def3c991ce09eafbcd5216a3d5",
+    "tests/fixtures/timestamp-freetsa-2026/tsa.pem": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467",
+    "tests/test_independent_timestamp.py": "1ff42c685ce9ec74553503f8f8160212c85bb3501fad8d79afd3c1be5fbe12e7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-timestamp-current-source-controls.json",
+      "sha256": "a3ae6da94b7c8c4c1a83a1a843e82febcee4a51a89e7f2fdbf562f6adfbcd808"
+    },
+    {
+      "path": "runs/2026-10-10-timestamp-website-revalidated.json",
+      "sha256": "2d219a4f356a42d4818db259ac942a9c8718f7869b979e003258753fb8d17139"
+    },
+    {
+      "path": "runs/2026-10-10-timestamp-final-boundaries.json",
+      "sha256": "13298f861faf34bda370802605954c373d2d5076f61a88e973b0296bd4fc5d74"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T23:36:26.774864+00:00"
+    }
+  ]
+}

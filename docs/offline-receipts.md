@@ -83,8 +83,13 @@ Run `node --test tests/offline-receipts.cjs` with the schema environment configu
 The suite generates and deletes disposable synthetic keys. No production signing
 key or real composition data is created by the verification suite.
 
-RFC-0002 remains unadopted as a standard. Independent RFC 3161 timestamping,
-revocation transparency, offline freshness, institutional anti-coercion
+An optional [independent timestamp tool](independent-timestamps.md) can bind this
+signed receipt file to an external authority's time. Keep the timestamp separately;
+changing the signed receipt would invalidate its signature. It reports unchecked
+revocation and unknown authorship explicitly.
+
+RFC-0002 remains unadopted as a standard.
+Revocation transparency, offline freshness, institutional anti-coercion
 conformance, non-technical key recovery, group receipts and PA/FA/IV validation
 remain separate unfinished requirements. No foundation, certifier or public
 authorship registry is operating.

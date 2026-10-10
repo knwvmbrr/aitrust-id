@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-10-10T23:19:36.665609+00:00",
+  "pass": true,
+  "author": "Codex",
+  "kind": "synthetic_composition_receipt_to_real_independent_timestamp",
+  "synthetic_input_only": true,
+  "real_authority_issuance": {
+    "captured_at": "2026-10-10T23:18:49.497441+00:00",
+    "pass": true,
+    "profile": "independent-timestamp/freetsa-2026/1.0.0",
+    "artifact_sha256": "4975ec707c0b91b1431cb39ff5b418163ca0e6d6337b45ea54d9cee90bd96dac",
+    "artifact_bytes": 2838,
+    "request_sha256": "0caf5835c7025aadeeb19854de01ccd53d74637fba173c66196864271ee988e0",
+    "response_sha256": "e38852d9c3b8724b0363b03f7637ab79765fdbec76bea57ac221722ffab32f2f",
+    "authority_time": "2026-10-10T23:18:49+00:00",
+    "authority": "FreeTSA",
+    "record_integrity": "verified_under_separately_pinned_authority",
+    "artifact_binding": "matched",
+    "nonce_binding": "matched",
+    "authority_clock": "authority_attested; not independently measured by AI Trust ID",
+    "revocation": "unchecked",
+    "authorship": "unestablished",
+    "certified_valid": false,
+    "tag_issuance": false,
+    "independent_tag_accuracy_evidence": false,
+    "trust_sha256": {
+      "ca": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+      "tsa": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467"
+    }
+  },
+  "mac_receipt_signature_verification": {
+    "record_integrity": "verified_under_pinned_key",
+    "artifact_binding": "matched",
+    "expiry": "within_declared_window",
+    "clock": "verifier_local_clock_unverified",
+    "revocation": "unchecked",
+    "authorship": "unestablished",
+    "independent_timestamp": false,
+    "certified_valid": false,
+    "key_sha256": "5939a49660e28c02b656ea0beb05c9d21ece12cfd6873abee2bbcc1102474a4b",
+    "algorithm": "Ed25519",
+    "forgery_cost_class": "unvalidated"
+  },
+  "actual_offline_linux_timestamp_verification": {
+    "captured_at": "2026-10-10T23:19:36.648483+00:00",
+    "pass": true,
+    "profile": "independent-timestamp/freetsa-2026/1.0.0",
+    "artifact_sha256": "4975ec707c0b91b1431cb39ff5b418163ca0e6d6337b45ea54d9cee90bd96dac",
+    "artifact_bytes": 2838,
+    "request_sha256": "0caf5835c7025aadeeb19854de01ccd53d74637fba173c66196864271ee988e0",
+    "response_sha256": "e38852d9c3b8724b0363b03f7637ab79765fdbec76bea57ac221722ffab32f2f",
+    "authority_time": "2026-10-10T23:18:49+00:00",
+    "authority": "FreeTSA",
+    "record_integrity": "verified_under_separately_pinned_authority",
+    "artifact_binding": "matched",
+    "nonce_binding": "matched",
+    "authority_clock": "authority_attested; not independently measured by AI Trust ID",
+    "revocation": "unchecked",
+    "authorship": "unestablished",
+    "certified_valid": false,
+    "tag_issuance": false,
+    "independent_tag_accuracy_evidence": false,
+    "trust_sha256": {
+      "ca": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+      "tsa": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467"
+    }
+  },
+  "network_namespace_isolated": true,
+  "private_signing_key_persisted": false,
+  "authorship_proven": false,
+  "independent_tag_accuracy_evidence": false,
+  "timestamp_does_not_replace_receipt_signature": true
+}

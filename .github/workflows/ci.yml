@@ -83,6 +83,10 @@ jobs:
         run: python -m pytest tests/test_spdx_inventory.py -q
       - name: Refuse altered source snapshots and unsafe signing policy
         run: python -m pytest tests/test_source_provenance.py -q
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with: { node-version: '24' }
+      - name: Verify real public timestamp evidence and refuse tampering without network
+        run: python -m pytest tests/test_independent_timestamp.py -q
       - run: python -m pytest tests/test_assertion_formats.py tests/test_http_privacy.py -q
 
   no-egress:

@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-10T23:34:27.539688+00:00",
+  "pass": true,
+  "author": "Codex",
+  "python_tests_passed": 1173,
+  "timestamp_tests_passed": 29,
+  "stdout_sha256": "523896c4b966daeaa7ab5837ea1c16db469c658e393219254d1be13c62b0c7b3",
+  "source_files": {
+    "scripts/independent_timestamp.py": "eed3fe014679784a148cc2da0879036da3895327fff4c246aa59681465583ca2",
+    "scripts/timestamp-artifact.py": "558945d46ea980415e54559cfd5f92ff58ae974518c4ae25192fa1d5ea83d27d",
+    "tests/test_independent_timestamp.py": "1ff42c685ce9ec74553503f8f8160212c85bb3501fad8d79afd3c1be5fbe12e7"
+  },
+  "prior_stale_route_guard_refusals": {
+    "failed": 2,
+    "passed": 1171,
+    "cause": "Changed scope/site fingerprint required a fresh successful website receipt",
+    "corrected_website_receipt": "runs/2026-10-10-timestamp-website-revalidated.json"
+  },
+  "full_component_completion_record": "runs/2026-10-10-independent-timestamp-acceptance.json",
+  "independent_tag_accuracy_evidence": false,
+  "protected_publication_pending": true
+}

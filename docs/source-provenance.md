@@ -8,12 +8,15 @@ binds each included file to a hash and the selected commit. The archive is a
 The protected-main CI job generates a GitHub/Sigstore attestation after the
 required engineering checks pass. PRs cannot run that signing job. Each signing
 run retains a downloadable `authenticated-development-source` artifact for 30
-days. Long-term release storage is not implemented. Before reporting any
-particular snapshot authenticated, use its actual signing and verification record.
+days. Selected verified snapshots are also published as public development
+prereleases. Before reporting any particular snapshot authenticated, use its
+actual signing and verification record.
 
 ## Download and verify
 
-Open the repository's [Actions runs](https://github.com/knwvmbrr/aitrust-id/actions/workflows/ci.yml),
+For a no-account download, open the [verified development snapshot](https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-10-ea5f2ec). It packages source `ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85`, including the corrected verifier, with archive SHA-256 `86d1ee5147672f012ae93d35b4f52067efb1f0110b86c170f4a7343b14fbbcc7`. Its four published assets were anonymously downloaded and compared byte for byte. Read `README-VERIFY.txt` for direct GitHub CLI verification before using archive code.
+
+For other runs, open the repository's [Actions runs](https://github.com/knwvmbrr/aitrust-id/actions/workflows/ci.yml),
 choose a main push with a successful `source-provenance` job and download its
 `authenticated-development-source` artifact. It contains:
 
@@ -93,4 +96,4 @@ and ref. The saved public bundle and root inventory are in
 `provenance/8c21e39dd7fd34b5de0affda193636be7dee9e9d/`. They are evidence of that
 historical source, which contains the old verifier; use the corrected trusted
 verifier and do not interpret co-delivered roots as automatically trusted.
-The corrected hosted job must still execute before offering its new download.
+The corrected [hosted signing/verification job passed](../runs/2026-10-10-source-download-hosted-checks.json). The [public download proof](../runs/2026-10-10-authenticated-source-download.json) binds the actual archive, anonymous downloads and separate Mac/network-isolated Linux verification. The historical failure remains visible; it is not rewritten as a pass.

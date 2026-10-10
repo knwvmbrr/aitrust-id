@@ -39,6 +39,8 @@ PATTERNS += ('scripts/spdx_inventory.py', 'scripts/verify-runtime-sbom.py',
              'spec/vendor/spdx-2.3.1/*', 'eval/dependencies/runtime-sbom.json', 'sbom/runtime/*')
 PATTERNS += ('scripts/source_snapshot.py', 'scripts/build-source-snapshot.py',
              'scripts/verify-source-provenance.py', 'tests/test_source_provenance.py')
+PATTERNS += ('scripts/independent_timestamp.py', 'scripts/timestamp-artifact.py',
+             'tests/test_independent_timestamp.py', 'tests/fixtures/timestamp-freetsa-2026/*')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

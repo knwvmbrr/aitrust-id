@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T23:05:26.396616+00:00",
+  "updated": "2026-10-10T23:36:26.365853+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1144,
+  "python_tests_passed": 1173,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -707,30 +707,30 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T21:29:13.613459+00:00",
-    "completed_records": 105,
-    "open_records": 97,
+    "audited_at": "2026-10-10T23:23:03.026992+00:00",
+    "completed_records": 106,
+    "open_records": 96,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-10-spdx-protected-merge.json",
-    "structural_evidence": "runs/2026-10-10-dependency-acceptance-scope.json",
+    "execution_evidence": "runs/2026-10-10-independent-timestamp-acceptance.json",
+    "structural_evidence": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-10-spdx-target25-publication.json",
     "source_commit": "5d8b47b18688bace1f8b01ff4d4df2bf1d8e7a2c",
     "public_workflow_evidence": "runs/2026-10-10-spdx-target25-live-site.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/spdx-inventory-validation.md",
+    "latest_increment": "docs/independent-timestamps.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 25,
     "target_start_open_records": 100,
-    "target_remaining_closures": 72,
-    "publication_pending": false,
-    "verification": "runs/2026-10-10-dependency-acceptance-scope.json",
+    "target_remaining_closures": 71,
+    "publication_pending": true,
+    "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-25-execution.md",
     "target_direction_date": "2026-10-10",
     "current_target_verification": "runs/2026-10-10-target25-source-checks-repaired.json"
@@ -1012,7 +1012,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T23:05:26.396616+00:00",
+  "updated_at": "2026-10-10T23:36:26.365853+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1137,7 +1137,7 @@
     "complete_python_suite": "runs/2026-10-10-state-chronology-full-python.json"
   },
   "source_provenance": {
-    "status": "actual_prior_attestation_verified_on_mac_and_offline_linux; corrected_hosted_download_pending",
+    "status": "actual_hosted_signed_source_verified_and_publicly_downloadable",
     "architecture": "docs/source-provenance-plan.md",
     "guide": "docs/source-provenance.md",
     "controls": "runs/2026-10-10-source-provenance-corrected-controls.json",
@@ -1154,6 +1154,31 @@
     "protected_merge": "runs/2026-10-10-source-provenance-protected-merge.json",
     "real_cryptographic_cases": 8,
     "network_isolated_verification": true,
-    "corrected_hosted_download_observed": false
+    "corrected_hosted_download_observed": true,
+    "current_source_snapshot": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
+    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-10-ea5f2ec",
+    "download_evidence": "runs/2026-10-10-authenticated-source-download.json",
+    "corrected_hosted_checks": "runs/2026-10-10-source-download-hosted-checks.json",
+    "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json"
+  },
+  "independent_timestamp": {
+    "status": "full_bounded_development_component_accepted; protected_publication_pending",
+    "profile": "independent-timestamp/freetsa-2026/1.0.0",
+    "guide": "docs/independent-timestamps.md",
+    "focused_controls_passed": 29,
+    "real_authority_issuance": "runs/2026-10-10-independent-timestamp-issuance.json",
+    "actual_offline_linux_verification": "runs/2026-10-10-independent-timestamp-offline-linux.json",
+    "composition_receipt_integration": "runs/2026-10-10-composition-receipt-timestamp.json",
+    "automatic_submission": false,
+    "new_AI_Trust_ID_endpoint": false,
+    "authorship_proven": false,
+    "revocation": "unchecked",
+    "certified_valid": false,
+    "tag_issuance": false,
+    "rfc_0002_adopted": false,
+    "acceptance": "runs/2026-10-10-independent-timestamp-acceptance.json",
+    "website_receipt": "runs/2026-10-10-timestamp-website-revalidated.json",
+    "current_controls": "runs/2026-10-10-timestamp-current-source-controls.json",
+    "current_boundaries": "runs/2026-10-10-timestamp-final-boundaries.json"
   }
 }
