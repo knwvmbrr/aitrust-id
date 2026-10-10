@@ -106,7 +106,7 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
-There are 748 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
+There are 794 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
 The public repository contains the runnable source. Engineering CI and the separate
 statistical gate are configured. GitHub currently prevents every hosted job from
 starting because of an account billing lock; the early public checkout passed
@@ -339,3 +339,5 @@ not a frozen independent accuracy study. See [measurement provenance](docs/measu
 ## Future modality subject contracts
 
 Image, audio, video and document have [bounded prepared-artifact reference contracts](docs/reserved-subject-contract.md), matching Python/Node primitives and runnable vectors. They establish exactly what is hashed, not file decoding or tag support. Run `python3 scripts/verify-reserved-subjects.py` or hash explicitly prepared JSON with `python3 scripts/hash-reserved-artifact.py`. The gateway still evaluates text only.
+
+Source-bound engineering checks are available through `python3 scripts/revalidate.py CAPABILITY`. Website checks build fresh source on an owned temporary server. The shared `npm run verify:release-a11y` gate refuses absent real manual reviews; this is separate from statistical tag acceptance. See [executed controls](docs/reproducibility-controls-result.md). The [dated decision ledger](docs/decisions.json) records proposals without accepting them.

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-10T14:37:33.520597+00:00",
+  "pass": true,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "extension",
+    "sources": {
+      "eval/revalidation.json": "b51e10b9ef13629468085b3f49481a7b53caa4f11e9de464aaf597fff4d8afba",
+      "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+      "extension/src/adapters/README.md": "559d6a3cd0c5e2045ddca1e3ff51276a10e1af8e45f9ca8aae3e5fe2d8b314ad",
+      "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+      "extension/src/content/badge.js": "984d3a7b51a2b28827a632260a6711da0568bebb62e493aa5f4243581c0c9f9b",
+      "extension/src/content/bridge.js": "0f53550ea0a8ebf413dd2f6d0fba2de7143297e6c544fb9d6af15f19fc72f7db",
+      "extension/src/main-world/tap.js": "d8c1be8fc7a38cbd6833d21363bfbd2c897f17bd026f8490e5ee27fc47c4432f",
+      "extension/src/options.html": "c615d88d68c616cd483b62267d4ec9a0ce0b2d436bfe67ff5ad29b5cb627ab3b",
+      "extension/src/options.js": "a442dca038329b692e471c35c863fcddeca914fc4f349841e25992190a0d41d3",
+      "extension/src/shared/contract.js": "146394bfa785749f89ab0921e5bdee635d32a00557c9c84a6939bdd1a2d90143",
+      "extension/src/sw/service-worker.js": "144f1cf7727c25a7bbed1a90fc8be7933351ba91619970389e6ad9d673d7a98c",
+      "extension/test/badge-fixture.html": "27c67d762b74b475487ccea2707fe9fc6f495519185b6bf71f4056f71cb646e6",
+      "extension/test/fixture.js": "d8f721faae71975f56ba2da4409350ca6334c0fa4641c7826a7b652534c2f788",
+      "extension/test/live-dom-fixture.html": "0133831a8c48e91939ec33afa2b3e7ad6afd758847174519fcc6d5607084f691",
+      "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+      "package.json": "3f5fa2ab52c21dacef933195f2912a170f2108e377051a9fdb1bc43a9f1b835b",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+      "scripts/axe-gate.cjs": "4cf4f9088f891ed964cadd14c782b11c0b8b48e87dfeb67fbc8a342a8e7a3e47",
+      "scripts/badge-probes.js": "42c72a54b11e82b68a21216d94b7a75148d5518701aa93386327eea744991afa",
+      "scripts/browser-acceptance.js": "a564f601845e368aa26c6fdc34e68f5d0fec8d602e949d23a6d8b3502a8a2409",
+      "scripts/execution-report.cjs": "368ea02355526b62fffb9e2410febff6442ee79acc45b4f71f442e3c37b178ba",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/verify-browser.cjs": "9b9d1f2c0cb851cdece53b9d07ea55229ddf529f01d6efc145d05dfecd760beb",
+      "scripts/verify-extension-consumer.cjs": "3e0a020985623478ec3a4087a8a246e15ccf2bd0e5916b948feb0736315d678e",
+      "scripts/verify-extension-privacy.cjs": "a07a41da7f0c133cd0ca690bb536512365c04f386dfc998ec7d4cf3c294f8266"
+    },
+    "sha256": "32b2fd1f0c486f072fc79fedaf6e0553e58c7e0bde5d8834f4dd8feb1c0b628d",
+    "commands": [
+      [
+        "node",
+        "scripts/verify-browser.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-extension-consumer.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-extension-privacy.cjs"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "node",
+        "scripts/verify-browser.cjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "c8f0693576ed6fadaccf291de56668db1c006bdce2dbd202185bacbd52e0a791",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-extension-consumer.cjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "6b673a6318d5c9d5cb5bf7d46e8ece25106864ecec241ab22ed15a148fb5257f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-extension-privacy.cjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "074d5f3b4dd1a1e60ac6c58285ebe15c28cca74eab0590728779b7c8414b00d8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

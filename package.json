@@ -36,7 +36,11 @@
     "verify:consumer": "node scripts/verify-extension-consumer.cjs",
     "verify:dependencies": "python3 scripts/verify-dependencies.py",
     "check:assertion": "python3 scripts/check-assertion.py",
-    "verify:extension-privacy": "node scripts/verify-extension-privacy.cjs"
+    "verify:extension-privacy": "node scripts/verify-extension-privacy.cjs",
+    "verify:decisions": "python3 scripts/verify-decisions.py",
+    "revalidate": "python3 scripts/revalidate.py",
+    "verify:release-a11y": "python3 scripts/verify-accessibility-release.py",
+    "verify:signals": "python3 scripts/verify-signals.py --check"
   },
   "devDependencies": {
     "playwright": "1.62.1",

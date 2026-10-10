@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-10T14:31:30.289164+00:00",
+  "pass": true,
+  "command": [
+    "verification-venv/bin/python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "exit": 0,
+  "tests_passed": 794,
+  "new_control_tests": 46,
+  "warnings": [
+    "Existing Starlette TestClient/httpx deprecation"
+  ],
+  "new_manual_reviews": 0,
+  "independent_accuracy_evidence": false,
+  "source_sha256": {
+    "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+    "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+    "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/signals.py": "ada311b328a482a98a9300cd69bc5b859f6d494cc7bc794275b006db3d45eef1",
+    "tests/test_reproducibility_controls.py": "43190b89a1eefc0eec969ea854decba8e3336370b88d1b0be1c9d0a8c28ecb1c"
+  }
+}

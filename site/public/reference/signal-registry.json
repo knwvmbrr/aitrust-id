@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "spec_version": "0.1.0",
+  "signals": [
+    {
+      "id": "presidio.entity.v1",
+      "status": "procedural",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PII_REDACTED",
+      "description": "Presidio entity recognition",
+      "source_files": [
+        "services/anonymizer/app.py",
+        "services/anonymizer/model_identity.py",
+        "services/anonymizer/requirements.lock"
+      ]
+    },
+    {
+      "id": "sig.assistive_input.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "*routing*",
+      "description": "Detects switch access, voice dictation, on-screen keyboard, eye tracking, IME composition",
+      "source_files": []
+    },
+    {
+      "id": "sig.attention_shape.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PA",
+      "description": "Read-pause-write rhythm from `visibilitychange` and focus events",
+      "source_files": []
+    },
+    {
+      "id": "sig.authority_appeal.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "MT",
+      "description": "Unattributed appeals to expertise or consensus",
+      "source_files": []
+    },
+    {
+      "id": "sig.compose_monotonicity.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PA",
+      "description": "Caret-position entropy across the window",
+      "source_files": []
+    },
+    {
+      "id": "sig.corpus_contradiction.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "FI",
+      "description": "NLI contradiction against retrieved local passage",
+      "source_files": []
+    },
+    {
+      "id": "sig.corpus_support.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "NF",
+      "description": "Retrieval similarity above threshold against the attached local corpus",
+      "source_files": []
+    },
+    {
+      "id": "sig.credential_exfil.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Reads a secret path and writes to a network sink",
+      "source_files": []
+    },
+    {
+      "id": "sig.duplicate_loop.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "HP",
+      "description": "n-gram repetition above threshold within response",
+      "source_files": []
+    },
+    {
+      "id": "sig.false_dilemma.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "MT",
+      "description": "Binary-choice structure where alternatives exist",
+      "source_files": []
+    },
+    {
+      "id": "sig.fetch_execute.v1",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Historical fetch-and-execute prefix prototype",
+      "source_files": []
+    },
+    {
+      "id": "sig.hedge_collapse.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "HP",
+      "description": "Hedging language absent where uncertainty is expected",
+      "source_files": []
+    },
+    {
+      "id": "sig.keystroke_liveness.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PA",
+      "description": "Dwell and flight time distributions over the composition window",
+      "source_files": []
+    },
+    {
+      "id": "sig.obfuscated_payload.v1",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "base64/hex blobs passed to `eval`/`exec`",
+      "source_files": []
+    },
+    {
+      "id": "sig.obfuscated_payload.v2",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Lexical match for `eval` or `exec` receiving `base64.b64decode`, `atob`, or `bytes.fromhex`",
+      "source_files": [
+        "services/evaluator/app.py",
+        "protocol/normalization.py",
+        "protocol/unicode15-data.json",
+        "services/evaluator/requirements.lock"
+      ]
+    },
+    {
+      "id": "sig.outside_knowledge.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PA",
+      "description": "A revision introduces an entity, figure or claim not derivable from the captured session context",
+      "source_files": []
+    },
+    {
+      "id": "sig.paste_burst.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "FA",
+      "description": "Insertion of \u2265N characters with no preceding keystroke activity in the field",
+      "source_files": []
+    },
+    {
+      "id": "sig.piped_installer.v1",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS (UC proposed)",
+      "description": "`curl`/`wget` piped to a shell",
+      "source_files": []
+    },
+    {
+      "id": "sig.piped_installer.v2",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Case-insensitive lexical match for `curl` or `wget`, a pipe, optional `sudo`, and `sh` or `bash`",
+      "source_files": []
+    },
+    {
+      "id": "sig.piped_installer.v3",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [
+        "services/evaluator/app.py",
+        "protocol/normalization.py",
+        "protocol/unicode15-data.json",
+        "services/evaluator/requirements.lock"
+      ]
+    },
+    {
+      "id": "sig.remote_backtick_substitution.v1",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Same bounded stdout and execution-layer checks for backtick substitution",
+      "source_files": []
+    },
+    {
+      "id": "sig.remote_backtick_substitution.v2",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [
+        "services/evaluator/app.py",
+        "protocol/normalization.py",
+        "protocol/unicode15-data.json",
+        "services/evaluator/requirements.lock"
+      ]
+    },
+    {
+      "id": "sig.remote_command_substitution.v1",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": []
+    },
+    {
+      "id": "sig.remote_command_substitution.v2",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Bounded direct curl/wget stdout substitution into a supported shell `-c`, interpreter `-c`/`-e`, or `eval`; includes a second shell evaluation layer for single-quoted shell arguments",
+      "source_files": []
+    },
+    {
+      "id": "sig.remote_command_substitution.v3",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [
+        "services/evaluator/app.py",
+        "protocol/normalization.py",
+        "protocol/unicode15-data.json",
+        "services/evaluator/requirements.lock"
+      ]
+    },
+    {
+      "id": "sig.remote_process_substitution.v1",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": []
+    },
+    {
+      "id": "sig.remote_process_substitution.v2",
+      "status": "historical_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Bounded direct curl/wget stdout process substitution into supported shells/interpreters, `source` or `.`",
+      "source_files": []
+    },
+    {
+      "id": "sig.remote_process_substitution.v3",
+      "status": "active_development",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Versioned bounded command-pattern method; see the context-v5 section of spec/signals.md.",
+      "source_files": [
+        "services/evaluator/app.py",
+        "protocol/normalization.py",
+        "protocol/unicode15-data.json",
+        "services/evaluator/requirements.lock"
+      ]
+    },
+    {
+      "id": "sig.revision_churn.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PA",
+      "description": "Deleted-and-rewritten characters over final length; count of non-adjacent edit positions",
+      "source_files": []
+    },
+    {
+      "id": "sig.selfcontradiction.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "HP",
+      "description": "NLI entailment between sentence pairs, contradiction probability",
+      "source_files": []
+    },
+    {
+      "id": "sig.typosquat.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "PS",
+      "description": "Package name within edit distance 1\u20132 of a top-N name",
+      "source_files": []
+    },
+    {
+      "id": "sig.unsourced_specificity.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "HP",
+      "description": "Precise figures / dates / named citations with no provenance marker in context",
+      "source_files": []
+    },
+    {
+      "id": "sig.urgency_frame.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "MT",
+      "description": "Time-pressure lexicon + imperative density",
+      "source_files": []
+    }
+  ],
+  "scope_title_legacy_count": 22,
+  "entries_are_not_release_acceptance": true
+}

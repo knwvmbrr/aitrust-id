@@ -28,7 +28,7 @@ make gates PYTHON=.venv/bin/python
 
 The gate command currently returns failure: the 24-example regression set is not a frozen independently labeled holdout, its intervals do not clear the candidate gates, and scores are uncalibrated. Passing regression tests does not override this.
 
-Load extension/ unpacked in a dedicated Chrome profile. Set the gateway token in its options. Remove the token there and unload the extension to remove access. Shut down this project's containers with make down and the same ENV_FILE. Do not run Docker cleanup against unrelated projects.
+Load extension/ unpacked in a dedicated Chrome profile. Save the gateway token in its options, then separately enable ChatGPT checking. New and upgraded installations remain paused until explicit consent. Pause cancels pending checks; Reset removes local token and consent. Unload the extension to remove page access. Neither action deletes the vendor conversation or rotates the server credential. Shut down this project's containers with make down and the same ENV_FILE. Do not run Docker cleanup against unrelated projects.
 
 ## Verification boundaries
 

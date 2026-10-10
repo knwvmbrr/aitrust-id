@@ -52,12 +52,12 @@ must be verified when implemented; they are not current runtime guarantees.
 | ID | Feeds | Method | Cost to defeat | Notes |
 |---|---|---|---|---|
 | `sig.keystroke_liveness.v1` | PA | Dwell and flight time distributions over the composition window | `statistical` | Scalar only. **Never a per-person template.** Suppressed entirely when assistive input is detected |
-| `sig.revision_churn.v1` | PA | Deleted-and-rewritten characters over final length; count of non-adjacent edit positions | `behavioral` | Generation is monotonic; composition is not |
-| `sig.compose_monotonicity.v1` | PA | Caret-position entropy across the window | `behavioral` | A caret that only advances indicates insertion |
+| `sig.revision_churn.v1` | PA | Deleted-and-rewritten characters over final length; count of non-adjacent edit positions | `behavioral` | Unvalidated revision-pattern hypothesis; both people and models can revise or emit monotonic text |
+| `sig.compose_monotonicity.v1` | PA | Caret-position entropy across the window | `behavioral` | Caret movement may describe editing; it does not establish authorship or automation |
 | `sig.outside_knowledge.v1` | PA | A revision introduces an entity, figure or claim not derivable from the captured session context | `structural` (proposed) | Unvalidated hypothesis. Both humans and models can introduce material absent from captured context; this does not establish human authorship |
-| `sig.attention_shape.v1` | PA | Read-pause-write rhythm from `visibilitychange` and focus events | `behavioral` | No content access, no biometric. Survives dictation and switch access |
+| `sig.attention_shape.v1` | PA | Read-pause-write rhythm from `visibilitychange` and focus events | `behavioral` | Proposed focus/timing summary; disability compatibility and identifying/linking risk are unmeasured |
 | `sig.paste_burst.v1` | FA | Insertion of ≥N characters with no preceding keystroke activity in the field | `behavioral` | Evidence of insertion, not of origin |
-| `sig.c2pa_manifest.v1` | FA | Parses an attached C2PA manifest and reports its assertions | `cryptographic` | Trust inherited from the manifest signer, never asserted by us |
+| `sig.c2pa_manifest.v1` | FA | Parses an attached C2PA manifest and reports its assertions | `cryptographic` | Signer identity, integrity and revocation are separate claims; no authenticity or truth follows from a manifest alone |
 | `sig.assistive_input.v1` | *routing* | Detects switch access, voice dictation, on-screen keyboard, eye tracking, IME composition | n/a | **Suppresses timing signals; never scores.** **Corrected 2026-10-08:** this previously said it "routes to `IV`". It cannot &mdash; `IV` requires a person to attest and sign, and no detector may assign it (`X-11`). Suppression yields a result state, not an attestation |
 
 ### The governing rule
@@ -137,3 +137,19 @@ Five active development sets now contain 86 cases: TP=31, FP=0, FN=0, TN=55.
 These were used in development, including detector-author additions, and are not
 independent accuracy evidence. Exact source hashes identify the active method.
 See `runs/2026-10-08-ps-routing-regressions.json` for per-set counts.
+
+## Machine catalogue and reproducibility boundary
+
+`spec/signal-registry.json` preserves every fully qualified ID and two historical
+substitution v1 IDs. The legacy scope title says 22; the catalogue now contains
+33 distinct versions. `python3 scripts/verify-signals.py --signal ID`
+returns status, method and current implementation hashes without reading user
+content. `--check` rejects a missing ID, changed active-code set or unsupported
+registration claim. Proposed and historical methods have no current source
+binding and cannot be used as active evidence.
+
+IDs identify methods, not sufficient input for replay. Reproducing a PS observation
+also requires the exact normalized, redacted text and evaluator source/dependencies.
+PII reproduction requires the pre-redaction text and pinned recognizer; the current
+assertion does not carry that recognizer identity. Do not publish private text to
+fill this gap. F-003 remains open for complete per-assertion reproducibility.

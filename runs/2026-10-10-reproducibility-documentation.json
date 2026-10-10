@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-10T14:41:24.445690+00:00",
+  "pass": true,
+  "checks": [
+    "tests/test_scope_progress.py",
+    "tests/test_accountability.py",
+    "tests/test_reproducibility_controls.py",
+    "scripts/verify-signals.py --check",
+    "scripts/verify-decisions.py",
+    "scripts/verify-scope-plan.py"
+  ],
+  "requirements": 202,
+  "completed": 71,
+  "open": 131,
+  "independent_accuracy_evidence": false
+}

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T14:12:12.549487+00:00",
+  "updated": "2026-10-10T14:20:09.489490+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://71002fcf.aitrust-id.pages.dev",
+    "deployment_url": "https://e253eb53.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-consumer-deployment.json",
+    "publication_evidence": "runs/2026-10-10-privacy-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-consumer-site-public.json",
+    "verification": "runs/2026-10-10-privacy-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -122,8 +122,8 @@
       "source": "site/src/policies.js",
       "text_downloads": true,
       "current_services_only": true,
-      "published": false,
-      "verification": "runs/2026-10-09-branding-policies-public.json",
+      "published": true,
+      "verification": "runs/2026-10-10-privacy-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -134,7 +134,8 @@
       "publisher_named": true,
       "prior_version_archives": [
         "1.0",
-        "1.1"
+        "1.1",
+        "1.2"
       ]
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
@@ -281,7 +282,7 @@
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
     "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "c66f9f727fed36c836fd4b50283f36a23f7753e2"
+    "public_static_source_commit": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -582,7 +583,7 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
+    "latest_implementation_commit": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9",
     "handheld_download_verified": true
   },
   "name_clearance": {
@@ -689,9 +690,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T14:12:12.549487+00:00",
-    "completed_records": 67,
-    "open_records": 135,
+    "audited_at": "2026-10-10T14:40:05.191205+00:00",
+    "completed_records": 71,
+    "open_records": 131,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -701,18 +702,18 @@
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
     "structural_evidence": "runs/2026-10-10-consumer-scope-progress.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-consumer-deployment.json",
-    "source_commit": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
+    "publication": "runs/2026-10-10-privacy-deployment.json",
+    "source_commit": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/privacy-boundaries.md",
+    "latest_increment": "docs/reproducibility-controls-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 35,
+    "target_remaining_closures": 31,
     "publication_pending": true,
-    "verification": "runs/2026-10-10-consumer-version-final-python.json"
+    "verification": "runs/2026-10-10-reproducibility-scope-progress.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -875,7 +876,7 @@
     "inactive_registry_locked": false
   },
   "privacy_controls": {
-    "status": "current_selected_route_privacy_checks_pass; publication_pending",
+    "status": "selected_route_privacy_controls_published_and_public_checks_pass",
     "default_extension_capture": "paused_without_explicit_checks_enabled_true",
     "token_save_is_consent": false,
     "pause_aborts_pending_fetches": true,
@@ -891,6 +892,21 @@
       "runs/2026-10-10-http-privacy-python.json"
     ],
     "device_evidence": "runs/2026-10-10-privacy-device-engines.json",
-    "policy_evidence": "runs/2026-10-10-privacy-policies-local.json"
+    "policy_evidence": "runs/2026-10-10-privacy-policies-local.json",
+    "public_evidence": "runs/2026-10-10-privacy-policies-public.json"
+  },
+  "reproducibility_controls": {
+    "status": "executed_not_yet_published",
+    "decisions": 15,
+    "catalogue_versions": 33,
+    "active_development_methods": 5,
+    "capabilities_executed": 5,
+    "control_tests": 46,
+    "python_tests": 794,
+    "manual_accessibility_reviews": 0,
+    "accessibility_release_gate_exit": 1,
+    "full_assertion_replay": false,
+    "independent_accuracy_evidence": false,
+    "result": "docs/reproducibility-controls-result.md"
   }
 }

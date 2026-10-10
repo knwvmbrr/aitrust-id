@@ -1,26 +1,4 @@
-# Decisions
-
-Machine source: [dated decision ledger](docs/decisions.json). The 15 existing open decisions were recorded at **2026-10-10T14:24:11.737441+00:00**. This is a recording date, not an invented historical decision or approval. Each proposal keeps its owner, reason and separate acceptance. No operating board is implied.
-
-| ID | Status | Owner | Decision | Reason | Blocks |
-|---|---|---|---|---|---|
-| D1 | open | Michael | Current development allowlist: `PS` + `PII_REDACTED`. HP cannot assert. `UC` requires D18 acceptance before any rename. | PS/PII enforcement is implemented and tested; successor-code adoption stays open | Increment 0 close |
-| D18 | open | Michael | Split `PS` into `UC` (unsafe command — observation) and `SC` (scam pattern — composite). See `rfcs/0004`. | Consider distinct command-risk and scam-pattern claims. Naming alone does not establish an accusation or measurement; adoption remains the owner’s decision. | Tag contract rename |
-| D19 | open | Michael | Register `SC` (scam pattern) and `BT` (automation pattern) as new tags. | Accept. These are the two findings people most need and neither is in the taxonomy | Corpus work |
-| D20 | open | Michael | Per-tag error budgets: `UC` precision-weighted, `SC` recall-weighted. | Accept. The false-positive cost is not uniform across audiences | `gates.yaml` adoption |
-| D17 | open | Michael | Six result states distinct from overloaded `UNK`: pending, finding, no-finding, uncertain, unsupported and unavailable. Protocol adoption requires its own versioned decision. | Accept. A backend outage must not render as "evaluated, uncertain" | Schema RFC |
-| D13 | open | Michael | Broader supported sites after the selected Chrome + ChatGPT adapter. | First route authorized by installation/use; further vendor support requires separate evidence | Additional vendor adapters |
-| D16 | open | Michael | Who adjudicates `UC` ground truth independently of whoever drafts the fixtures. | Community reports are a candidate pipeline; adjudicators must not be the drafters | Evaluation |
-| D3 | open | Michael | Publish the capture-integrity limitation prominently, or in an appendix. | Prominently. Reviewers will find it anyway; better in our words | — |
-| D4 | open | Michael | Townhall venue: GitHub Discussions vs self-hosted. | Discussions first. Zero cost, moderation tools exist, migrates later | — |
-| D5 | open | Michael + counsel | Certification mark vs ordinary trademark. [37 CFR 2.45](https://www.law.cornell.edu/cfr/text/37/2.45) requires a certification-mark applicant to state it is not producing or marketing the goods the mark certifies. | Counsel compares options before any filing. **Not a prerequisite for shipping a local tool** | — |
-| D11 | open | Michael | Cut the registry container from 0.1. | Accept. Nothing writes to it; it adds a container and an attack surface for no user-visible outcome | — |
-| D12 | open | Michael | Describe the subject hash as a correlation identifier, not an anonymisation. | Accept. A hash over short predictable text is dictionary-guessable | — |
-| D14 | open | Michael | Defer behavioural provenance past 1.0 pending qualified legal review. | Defer pending qualified review. Scalar measurements can still reveal or link a person; non-identification is a proposed restriction, not a legal exemption. | — |
-| D15 | open | Michael | No assertion signing in 0.1. | A signature authenticates signed bytes and their key association, not the truth of a verdict or content provenance. Keep the current unsigned profile explicit. | — |
-| D21 | open | Michael | `SC` scope: model output only, or also content a person pastes in to check? | Pasting is more useful to someone being targeted, and is a different capture path. Decide before `SC` architecture | — |
-
-Historic observations below retain their dates and limits. Later dated entries supersede earlier deployment/purchase status; they are not fresh runtime checks.
+# Preserved decision history
 
 ## Accepted
 

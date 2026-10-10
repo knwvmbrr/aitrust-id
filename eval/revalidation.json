@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "independent_accuracy_evidence": false,
+  "capabilities": {
+    "PS": {
+      "patterns": [
+        "services/evaluator/*.py",
+        "services/evaluator/requirements*",
+        "protocol/*.py",
+        "protocol/unicode15-data.json",
+        "eval/*.py",
+        "eval/gates*",
+        "eval/datasets/unsafe_code/*",
+        "scripts/verify-regressions.py",
+        "tests/test_pipe_routing.py",
+        "tests/test_context.py",
+        "tests/test_live_gap_boundaries.py"
+      ],
+      "commands": [
+        [
+          "{python}",
+          "scripts/verify-regressions.py"
+        ]
+      ]
+    },
+    "PII_REDACTED": {
+      "patterns": [
+        "services/anonymizer/*",
+        "services/gateway/app.py",
+        "protocol/*.py",
+        "spec/assertion.schema.json",
+        "tests/test_redaction*.py"
+      ],
+      "commands": [
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_redaction_contract.py",
+          "-q"
+        ]
+      ]
+    },
+    "protocol": {
+      "patterns": [
+        "protocol/*",
+        "spec/assertion.schema.json",
+        "spec/vocabulary.json",
+        "eval/vectors/*",
+        "tests/test_assertion*.py",
+        "tests/test_reserved_subjects*.py",
+        "scripts/verify-reserved-subjects.py",
+        "spec/signal-registry.json"
+      ],
+      "commands": [
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_assertion_formats.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-reserved-subjects.py"
+        ]
+      ]
+    },
+    "extension": {
+      "patterns": [
+        "extension/**/*",
+        "scripts/verify-browser.cjs",
+        "scripts/browser-acceptance.js",
+        "scripts/badge-probes.js",
+        "scripts/verify-extension-consumer.cjs",
+        "scripts/verify-extension-privacy.cjs",
+        "scripts/axe-gate.cjs",
+        "scripts/execution-report.cjs",
+        "package*.json"
+      ],
+      "commands": [
+        [
+          "node",
+          "scripts/verify-browser.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-extension-consumer.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-extension-privacy.cjs"
+        ]
+      ]
+    },
+    "website": {
+      "patterns": [
+        "site/src/**/*",
+        "site/scripts/*",
+        "site/package*.json",
+        "site/public/theme.js",
+        "scripts/verify-site.cjs",
+        "scripts/verify-site-accessibility.cjs",
+        "scripts/accessibility-probes.cjs",
+        "scripts/execution-report.cjs",
+        "package*.json",
+        "scripts/verify-built-website.cjs",
+        "site/public/_headers"
+      ],
+      "commands": [
+        [
+          "node",
+          "scripts/verify-built-website.cjs"
+        ]
+      ]
+    }
+  }
+}

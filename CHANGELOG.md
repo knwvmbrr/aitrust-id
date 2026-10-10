@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-144247-retain-independent-statistical-ci-assessment-613598e7
+
+Recorded 2026-10-10T14:42:47.445257+00:00 · Contributor: Codex · change
+
+- **Changed.** Kept statistical evaluation running independently after accessibility release refusal in the configured CI gate job.
+- **Evidence.** CI declares the statistical step with always(), so a missing manual review cannot hide statistical failures. [Change record](./runs/changes/2026-10-10-144247-retain-independent-statistical-ci-assessment-613598e7.json).
+- **Not claimed.** Hosted execution remains account-blocked; configured CI is not claimed as executed evidence.
+
+
+### 2026-10-10-144153-bind-reproducibility-public-copies-and-final-checks-40f0b306
+
+Recorded 2026-10-10T14:41:53.045062+00:00 · Contributor: Codex · change
+
+- **Changed.** Updated generated public signal/decision/accessibility reference copies and final 202-record plan/progress evidence.
+- **Evidence.** 58 relevant post-documentation tests and scope, decision, signal and accountability verifiers pass; all 202 IDs, 39 packages and 117 subtasks remain. [Change record](./runs/changes/2026-10-10-144153-bind-reproducibility-public-copies-and-final-checks-40f0b306.json).
+- **Not claimed.** These are complete named control jobs, not certification or performed human review. 131 requirements remain open toward the requested 100-open target.
+
+
+### 2026-10-10-144029-complete-four-reproducibility-and-release-gate-jobs-6db84340
+
+Recorded 2026-10-10T14:40:29.460242+00:00 · Contributor: Codex · change
+
+- **Changed.** Closed the complete dated-decision, revalidation and shared accessibility-gate jobs; preserved 202 IDs with 71 complete and 131 open. Signal replay remains open.
+- **Evidence.** All five source-bound capability runs pass and current receipts assess successfully. The real accessibility release command exits 1 solely for four absent human reviews; 46 control tests reject stale, ambiguous and fabricated inputs. [Change record](./runs/changes/2026-10-10-144029-complete-four-reproducibility-and-release-gate-jobs-6db84340.json).
+- **Not claimed.** A working refusal gate is not human accessibility or tag release validation. Board operation, independent sampling, phones and outside-user acceptance remain in their own open records. No proposed tag adopted.
+
+
+### 2026-10-10-143307-bind-website-checks-to-a-fresh-build-e7ea62e3
+
+Recorded 2026-10-10T14:33:07.181396+00:00 · Contributor: Codex · change
+
+- **Changed.** Website revalidation now builds current source and owns its temporary loopback server rather than trusting an externally running preview.
+- **Evidence.** The execution chain requires a successful guarded build and both full catalogue and accessibility browser checks; functional source identity excludes routine changelog bookkeeping. [Change record](./runs/changes/2026-10-10-143307-bind-website-checks-to-a-fresh-build-e7ea62e3.json).
+- **Not claimed.** The actual website revalidation run follows this record. Manual reviews and independent accuracy remain missing.
+
+
+### 2026-10-10-143130-executable-revalidation-and-dated-decisions-f59e8e0e
+
+Recorded 2026-10-10T14:31:30.386611+00:00 · Contributor: Codex · change
+
+- **Changed.** Added source-bound engineering revalidation, a shared real-review accessibility release refusal gate, 15 dated open decisions, and a 33-version signal lookup catalogue; published privacy deployment evidence.
+- **Evidence.** 794 Python tests passed, including 46 new mutation/import/gate tests; PS, PII, protocol and actual extension commands executed successfully; decision renderer preserves all open decisions and history. [Change record](./runs/changes/2026-10-10-143130-executable-revalidation-and-dated-decisions-f59e8e0e.json).
+- **Not claimed.** No actual human review or independent tag accuracy claimed. Signal IDs alone do not replay a complete assertion; the missing redactor identity remains open. Current accessibility release gate must refuse.
+
+
 ### 2026-10-10-141538-bind-generated-consent-catalogue-to-source-f189c740
 
 Recorded 2026-10-10T14:15:38.032370+00:00 · Contributor: Codex · change

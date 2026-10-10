@@ -53,6 +53,8 @@ jobs:
       - run: python scripts/verify-scope-plan.py
       - run: python scripts/scope-progress.py
       - run: python scripts/verify-accountability.py
+      - run: python scripts/verify-decisions.py
+      - run: python scripts/verify-signals.py --check
       - run: python scripts/verify-project-controls.py
       - run: python scripts/verify-vocabulary.py
       - uses: actions/setup-node@v4
@@ -119,7 +121,11 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install --require-hashes -r eval/requirements.lock
-      - run: python eval/harness.py --gates eval/gates.yaml --fixtures eval/datasets/unsafe_code/ps_v1.jsonl --output eval/report.json
+      - name: Require actual accessibility release evidence
+        run: python scripts/verify-accessibility-release.py
+      - name: Assess statistical evidence even when accessibility refuses release
+        if: always()
+        run: python eval/harness.py --gates eval/gates.yaml --fixtures eval/datasets/unsafe_code/ps_v1.jsonl --output eval/report.json
 
   accessibility:
     runs-on: ubuntu-latest

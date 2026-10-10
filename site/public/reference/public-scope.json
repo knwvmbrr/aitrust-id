@@ -153,27 +153,35 @@
         "id": "F-003",
         "kind": "requirement",
         "title": "Signal registry, 22 registered IDs with version suffixes",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:40:05.191205+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — versioned catalogue and executed source lookup; remaining replay gap explicit"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Signal registry, 22 registered IDs with version suffixes. Next package action: Version the assertion/schema and signal registry. Required outcome: A third party can reproduce any assertion from the signal IDs it cites",
+        "next_fix": "Complete per-assertion reproducibility without disclosing private inputs: bind the recognizer/configuration identity and versioned replay contract, preserve historical source access, and verify current/unknown methods. Signal IDs alone are not sufficient input.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "spec/signal-registry.json",
+          "protocol/signals.py",
+          "runs/2026-10-10-signal-catalogue.json",
+          "docs/reproducibility-controls-result.md"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Signal registry, 22 registered IDs with version suffixes. Next package action: Version the assertion/schema and signal registry. Required outcome: A third party can reproduce any assertion from the signal IDs it cites"
+          "Full per-assertion current and historical method/source/input identity and replay contract, with private-input handling and explicit unsupported failure."
         ],
         "queue": "open"
       }
@@ -7636,29 +7644,33 @@
         "id": "F-139",
         "kind": "requirement",
         "title": "Site accessibility held to the same gate as the extension",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-10T03:28:32.219175+00:00",
+        "audited_at": "2026-10-10T14:40:05.191205+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
           "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
-          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00"
+          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00",
+          "Codex — current complete mechanism and execution, 2026-10-10T14:40:05.191205+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate.",
-        "next_owner": "Human device/accessibility testers; Codex fixes",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:40:05.191205+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; separate unperformed human, independent accuracy and institutional outcomes remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-upgrade-device-public.json",
           "runs/2026-10-08-scope-plan-site-public.json",
@@ -7672,13 +7684,31 @@
           "runs/2026-10-09-device-a11y-engines-local.json",
           "runs/2026-10-09-device-accessibility-python.json",
           "docs/calmer-tag-panels.md",
-          "runs/2026-10-10-calm-a11y-final-local.json"
+          "runs/2026-10-10-calm-a11y-final-local.json",
+          "docs/reproducibility-controls-plan.md",
+          "docs/reproducibility-controls-result.md",
+          "tests/test_reproducibility_controls.py",
+          "runs/2026-10-10-reproducibility-python.json",
+          "runs/2026-10-10-accessibility-release-refusal.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
-        "required_acceptance": [
-          "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate."
-        ],
-        "queue": "open"
+        "evidence_scope": "Website and extension share identical actual human-review and fresh-engineering release requirements; both require NVDA and VoiceOver, and missing evidence fails.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate."
+          ],
+          "retained_in_open_records": [
+            "F-035",
+            "F-142",
+            "N-012",
+            "T-PS"
+          ],
+          "reason": "Separate the full named mechanism/policy job from independent review, tag release and operating institution; no original requirement removed."
+        },
+        "executed_acceptance": [
+          "Website and extension share identical actual human-review and fresh-engineering release requirements; both require NVDA and VoiceOver, and missing evidence fails."
+        ]
       }
     },
     {
@@ -8363,29 +8393,55 @@
         "id": "F-072",
         "kind": "requirement",
         "title": "ACCESSIBILITY.md as a release gate",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:40:05.191205+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current complete mechanism and execution, 2026-10-10T14:40:05.191205+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver ACCESSIBILITY.md as a release gate. Next package action: Preserve small monochrome tags and short in-use descriptions. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:40:05.191205+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; separate unperformed human, independent accuracy and institutional outcomes remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/reproducibility-controls-plan.md",
+          "docs/reproducibility-controls-result.md",
+          "tests/test_reproducibility_controls.py",
+          "runs/2026-10-10-reproducibility-python.json",
+          "runs/2026-10-10-accessibility-release-refusal.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver ACCESSIBILITY.md as a release gate. Next package action: Preserve small monochrome tags and short in-use descriptions. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
-        ],
-        "queue": "open"
+        "evidence_scope": "Executable accessibility policy release gate requires current-source engineering evidence and real NVDA/VoiceOver reviews; actual missing human reviews block release.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Deliver ACCESSIBILITY.md as a release gate. Next package action: Preserve small monochrome tags and short in-use descriptions. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+          ],
+          "retained_in_open_records": [
+            "F-035",
+            "F-142",
+            "N-012",
+            "T-PS"
+          ],
+          "reason": "Separate the full named mechanism/policy job from independent review, tag release and operating institution; no original requirement removed."
+        },
+        "executed_acceptance": [
+          "Executable accessibility policy release gate requires current-source engineering evidence and real NVDA/VoiceOver reviews; actual missing human reviews block release."
+        ]
       }
     },
     {
@@ -8535,34 +8591,57 @@
         "id": "F-151",
         "kind": "requirement",
         "title": "DECISIONS.md — 15 seeded decisions with dates and reasons",
-        "percent_complete": 40,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:40:05.191205+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current complete mechanism and execution, 2026-10-10T14:40:05.191205+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board.",
-        "next_owner": "Michael and reviewers",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:40:05.191205+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; separate unperformed human, independent accuracy and institutional outcomes remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "CONTRIBUTING.md",
           "GOVERNANCE.md",
-          "DECISIONS.md"
+          "DECISIONS.md",
+          "docs/reproducibility-controls-plan.md",
+          "docs/reproducibility-controls-result.md",
+          "tests/test_reproducibility_controls.py",
+          "runs/2026-10-10-reproducibility-python.json",
+          "runs/2026-10-10-dated-decisions.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
-        ],
-        "queue": "open"
+        "evidence_scope": "All 15 existing open decisions have recording timestamps, reasons, accountable owners, unchanged status and preserved dated history; missing IDs or manufactured seed acceptance fail.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
+          ],
+          "retained_in_open_records": [
+            "F-076",
+            "F-147",
+            "F-146"
+          ],
+          "reason": "Separate the full named mechanism/policy job from independent review, tag release and operating institution; no original requirement removed."
+        },
+        "executed_acceptance": [
+          "All 15 existing open decisions have recording timestamps, reasons, accountable owners, unchanged status and preserved dated history; missing IDs or manufactured seed acceptance fail."
+        ]
       }
     },
     {
@@ -11004,36 +11083,66 @@
         "id": "N-006",
         "kind": "requirement",
         "title": "Versioned regression checks and revalidation triggers",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:40:05.191205+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current complete mechanism and execution, 2026-10-10T14:40:05.191205+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:40:05.191205+00:00",
+        "completion_timestamp_basis": "Current full named mechanism executed; separate unperformed human, independent accuracy and institutional outcomes remain open.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
           "runs/2026-10-09-scope-regressions.json",
           "eval/gates.yaml",
-          "docs/independent-review.md"
+          "docs/independent-review.md",
+          "docs/reproducibility-controls-plan.md",
+          "docs/reproducibility-controls-result.md",
+          "tests/test_reproducibility_controls.py",
+          "runs/2026-10-10-reproducibility-python.json",
+          "runs/2026-10-10-website-current-revalidation.json",
+          "eval/revalidation.json",
+          "protocol/revalidation.py",
+          "runs/2026-10-10-ps-final-revalidation.json",
+          "runs/2026-10-10-pii-final-revalidation.json",
+          "runs/2026-10-10-protocol-final-revalidation.json",
+          "runs/2026-10-10-extension-final-revalidation.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
-        ],
-        "queue": "open"
+        "evidence_scope": "Five current capabilities execute versioned checks and source/dependency/fixture inventories; stale, altered or failed evidence requires revalidation.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "prior_audit_acceptance_mapping": {
+          "required_acceptance": [
+            "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
+          ],
+          "retained_in_open_records": [
+            "F-005",
+            "F-050",
+            "F-056",
+            "F-108",
+            "T-PS"
+          ],
+          "reason": "Separate the full named mechanism/policy job from independent review, tag release and operating institution; no original requirement removed."
+        },
+        "executed_acceptance": [
+          "Five current capabilities execute versioned checks and source/dependency/fixture inventories; stale, altered or failed evidence requires revalidation."
+        ]
       }
     },
     {

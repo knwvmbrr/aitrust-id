@@ -6,7 +6,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 |---|---|---|---|
 | TASK-F-001 | Assertion envelope schema, JSON Schema 2020-12 | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-002 | Nine-label taxonomy (plus UNK, PII_REDACTED) | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-004 | Abstention as a first-class state — UNK | [TAG-UNK](scope-delivery.md#tag-unk) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
@@ -134,7 +134,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-073 | Security reporting and response-capacity planning | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-074 | conduct@ with an enforcement ladder | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-138 | abuse@ and press@ | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-139 | Site accessibility held to the same gate as the extension | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-139 | Site accessibility held to the same gate as the extension | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-140 | Sanitised public roadmap — no personal execution material | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-141 | Pilot programme — small consenting group, feedback without collecting prompts or outputs | [WP-COMMUNITY](scope-delivery.md#wp-community) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-142 | Install and removal instructions, reproducible | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
@@ -147,10 +147,10 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-148 | Qualified legal review of every biometric and privacy assurance | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-070 | Six invariants in CONTRIBUTING.md | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-071 | Threat model, 10 entries | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-072 | ACCESSIBILITY.md as a release gate | [WP-UX](scope-delivery.md#wp-ux) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-072 | ACCESSIBILITY.md as a release gate | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-149 | MAINTAINERS.md with per-maintainer scope | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-150 | CHANGELOG.md, state.json, docs/, runs/ | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-151 | DECISIONS.md — 15 seeded decisions with dates and reasons | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
+| TASK-F-151 | DECISIONS.md — 15 seeded decisions with dates and reasons | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-152 | Branch protection, CODEOWNERS, required status checks, Dependabot | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-153 | Named ongoing ownership for security response and adapter maintenance | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-060 | image | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
@@ -193,7 +193,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-N-003 | Detector resource limits, cancellation, concurrency, and failure containment | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-004 | Consent, per-site pause, capture boundaries, reset and deletion | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-005 | Label dispute, correction, and supersession workflow | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-N-006 | Versioned regression checks and revalidation triggers | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-N-006 | Versioned regression checks and revalidation triggers | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-007 | No automated promotional AI content network | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-N-008 | No child-safety report hosting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-N-009 | No rogue-AI verdict inferred from output | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |

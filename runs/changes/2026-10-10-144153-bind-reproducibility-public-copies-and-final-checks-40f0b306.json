@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-144153-bind-reproducibility-public-copies-and-final-checks-40f0b306",
+  "recorded_at": "2026-10-10T14:41:53.045062+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0cd0a077d05c5f567bad90dbf75aca0c87430ee9",
+  "changed": "Updated generated public signal/decision/accessibility reference copies and final 202-record plan/progress evidence.",
+  "proves": "58 relevant post-documentation tests and scope, decision, signal and accountability verifiers pass; all 202 IDs, 39 packages and 117 subtasks remain.",
+  "limits": "These are complete named control jobs, not certification or performed human review. 131 requirements remain open toward the requested 100-open target.",
+  "scope_ids": [
+    "F-003",
+    "F-072",
+    "F-139",
+    "F-151",
+    "N-006"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "2af0f1ec62b61aae71a69223e0ab678564fe5ef049a8dc8528fd2f084e1f205c",
+    "ACCESSIBILITY.md": "fe5bfff83ca13350bfc02b8cc6e5b86edfebab71f3cd975386f5442df5d5587d",
+    "DECISIONS.md": "c034b0e73a029c7ad60ca4277bc3bc6fe4bb6487c4c9c3b39992092ccb31468e",
+    "README.md": "aafd6f11333cc75bef12fa8801605d2a205a29fa25b0c728060fe7d187fb55f7",
+    "docs/accessibility-release-gate.md": "71f0670551f32e7e025eb08cbf8b055d84f3f544295e4c72f8f4deba539913ee",
+    "docs/decision-history.md": "0b0784fa8337dcfcea72c05b955c1cb5ccc5c9c66053928245d18e9a70cdd3ed",
+    "docs/decisions.json": "e04d0ccb32be625463fb503f03b84d1a7afe1580d384f055d7a87da0e256c0cc",
+    "docs/development.md": "253fdbbbffc90cf72c387d3fe457e8f22a019ae519241852f47d4c8ec7294096",
+    "docs/reproducibility-controls-plan.md": "c42ce2529b0113235e294fe6295ae19ff609168b28fa68ad0a1f144e4265c834",
+    "docs/reproducibility-controls-result.md": "03c143cd2c504ba63c1d2c63f6ea25d5c98a3acfdac2008c9fb3c9dc3b8abfda",
+    "docs/scope-progress.json": "4762b296ab634f4015dbc9286b97f93e7e225232a76fef97a805f61ccc37fcb0",
+    "docs/scope-progress.md": "fef1ca0e2b725df34dfa3f23524d863413b43f190144a4d70159bde2b9c0b412",
+    "docs/scope-task-index.md": "de839501bb43e8843da858bfb8dd103eb92577ae9e60198c8ae0c61f6512405a",
+    "eval/revalidation.json": "b51e10b9ef13629468085b3f49481a7b53caa4f11e9de464aaf597fff4d8afba",
+    "package.json": "3f5fa2ab52c21dacef933195f2912a170f2108e377051a9fdb1bc43a9f1b835b",
+    "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+    "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+    "protocol/signals.py": "ada311b328a482a98a9300cd69bc5b859f6d494cc7bc794275b006db3d45eef1",
+    "runs/2026-10-10-accessibility-release-refusal.json": "aa18fb1e4c71e4670754076e0cf109d98930ab0eae0136071725867653aaefd9",
+    "runs/2026-10-10-dated-decisions.json": "2de2a5eb010beae409f6248adcb9c768a050274ee38ab9bdba05268bbf6b06ec",
+    "runs/2026-10-10-extension-current-revalidation.json": "5a7e9b89810af2e6bc257f5c076b9eaa0be80ce008a710888d7b0d8b244f2440",
+    "runs/2026-10-10-extension-final-revalidation.json": "8e55cff89783f70068a3836f50ae95e91cf263f00ac949c28f05cbe3e13816a2",
+    "runs/2026-10-10-pii-current-revalidation.json": "41415c1af3fb981ca5db0f194598dfda2332e3f107e486774455edeb8df9f8ca",
+    "runs/2026-10-10-pii-final-revalidation.json": "6eddaf87eb1826fb0203bcebb4e87b39500be698517d1d4d405354b65e231e98",
+    "runs/2026-10-10-privacy-assets-public.json": "3bac66b6fff1823c5d5c8e8b7f5c0ebd753162a442b193dcc1ffe2b645e4e323",
+    "runs/2026-10-10-privacy-deployment.json": "ad7dbd1bb46338311167956975bedec62d486464bc16dbe3aa3940197c1f245c",
+    "runs/2026-10-10-privacy-policies-public.json": "97264457c84d7737c16015c8bec92cc656f89e3ed287ebce286654dba9113aa0",
+    "runs/2026-10-10-privacy-site-public.json": "96df4da044b774c2a8928bb70670c5a52b9c2adef76263e3e65c8206c7472c97",
+    "runs/2026-10-10-protocol-current-revalidation.json": "38571f2a82bb964a350c6ba557a3820ea83d2d671f07a6e963417da0b4519eed",
+    "runs/2026-10-10-protocol-final-revalidation.json": "9c7b85a497522b561823df4758f1a6791b590c2e01fee46e5e42fb021c7ee1e4",
+    "runs/2026-10-10-ps-current-revalidation.json": "e2f1dfe82b070e3c4948ed9c679d1eedc68bfe0013c580b08765d4ee78d2faef",
+    "runs/2026-10-10-ps-final-revalidation.json": "4c31fb4b91219d3c014a700da378a2d97724799e4c475bd3b1cd068353a3d76d",
+    "runs/2026-10-10-reproducibility-documentation.json": "158659e8247eb2fe59bfe48d3de6f53f824bb05055dd09d6b5649f620e893396",
+    "runs/2026-10-10-reproducibility-python.json": "241b572e3728654a217b3c1cde9de62461a5a5d64453ae2008adf86e617fee0c",
+    "runs/2026-10-10-reproducibility-scope-progress.json": "4c3d1032c7c42cbe34862dd96e6e9df3b20756006bfb868f12e244f469e1c013",
+    "runs/2026-10-10-signal-catalogue.json": "30bcbb8f4855f58ff0578a855da5777cc40e7e8a8e3b631e5c2af0c9ff30b776",
+    "runs/2026-10-10-website-current-revalidation.json": "0eaaa614e9e875a966af061a34ad17aa6d211d13b5029d5ec53a22da40d77dcc",
+    "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+    "scripts/verify-accessibility-release.py": "74d2b4b88fbbd7d61c58e29557ea89afb0177845a5d237110c19e06b1d7e9b59",
+    "scripts/verify-built-website.cjs": "e1a5b38ffd207a980d52305724bac5b47e60f1cf7a9d47111aae6771240bfc50",
+    "scripts/verify-decisions.py": "6e641dd5013475d0d00553dc16d1aa5fdacb68fb6069133634eba02d285cb11e",
+    "scripts/verify-signals.py": "0b9230fc7be6ab436408457f91cfdea1f5f85167409efe4d38ced09cd2cd9798",
+    "site/public/reference/accessibility-policy.md": "fe5bfff83ca13350bfc02b8cc6e5b86edfebab71f3cd975386f5442df5d5587d",
+    "site/public/reference/accessibility-release-gate.md": "71f0670551f32e7e025eb08cbf8b055d84f3f544295e4c72f8f4deba539913ee",
+    "site/public/reference/decisions.json": "e04d0ccb32be625463fb503f03b84d1a7afe1580d384f055d7a87da0e256c0cc",
+    "site/public/reference/decisions.md": "c034b0e73a029c7ad60ca4277bc3bc6fe4bb6487c4c9c3b39992092ccb31468e",
+    "site/public/reference/public-scope.json": "d17af64e968b279b0d209b8e65e67f78af271505f8a301b612fde4634fb6d248",
+    "site/public/reference/reproducibility-controls-plan.md": "c42ce2529b0113235e294fe6295ae19ff609168b28fa68ad0a1f144e4265c834",
+    "site/public/reference/signal-registry.json": "6ec78b363c0e4669409a03d34c9636828273d337c2ef75a13d762bcb4a0004f3",
+    "site/public/reference/signals.md": "0df40fd14b7ac80e395bfb049fd4620cbcccc64ae2f91b2ad6d9e77cdb739bc2",
+    "site/scripts/prepare.mjs": "58a1de865931dff938a43099bdc41fc5869db8eeae9ef7c5d9205d5e86a87b00",
+    "site/src/public-scope.json": "d17af64e968b279b0d209b8e65e67f78af271505f8a301b612fde4634fb6d248",
+    "spec/signal-registry.json": "6ec78b363c0e4669409a03d34c9636828273d337c2ef75a13d762bcb4a0004f3",
+    "spec/signals.md": "0df40fd14b7ac80e395bfb049fd4620cbcccc64ae2f91b2ad6d9e77cdb739bc2",
+    "state.json": "b690b3de631235f9b9953a8956f1bb00a29fbe23f2d16f1e8bac01a2de8ff25c",
+    "tests/test_reproducibility_controls.py": "43190b89a1eefc0eec969ea854decba8e3336370b88d1b0be1c9d0a8c28ecb1c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-reproducibility-documentation.json",
+      "sha256": "158659e8247eb2fe59bfe48d3de6f53f824bb05055dd09d6b5649f620e893396"
+    },
+    {
+      "path": "runs/2026-10-10-reproducibility-scope-progress.json",
+      "sha256": "4c3d1032c7c42cbe34862dd96e6e9df3b20756006bfb868f12e244f469e1c013"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T14:41:53.410139+00:00"
+    }
+  ]
+}

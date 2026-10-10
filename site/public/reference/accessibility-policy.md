@@ -6,7 +6,7 @@ can read is not a trust label.
 ## Commitments
 
 1. **Never color alone.** Labels are monochrome and distinguished by letter, shape, and text.
-   This satisfies WCAG 2.2 SC 1.4.1 by construction rather than by remediation.
+   This is the design requirement; conformance depends on executed checks and manual review.
 2. **Every label has a descriptive accessible name.** PS is announced as a command-risk
    finding; the visible tile remains code-only. Heuristic scores must not be announced
    as calibrated probability. Unsupported HP is not an operating capability.
@@ -25,8 +25,7 @@ can read is not a trust label.
 The executable `npm run verify:axe-gate` checks the actual badge/panel fixture
 and proves that an injected serious/critical accessibility defect fails. The
 configured CI job calls the same gate; hosted execution is currently blocked by
-an account restriction. **The gate fails on any serious or critical axe violation.** Manual NVDA and VoiceOver passes are required before any
-release tagged `minor` or larger, and the results are recorded in the release notes.
+an account restriction. **The gate fails on any serious or critical axe violation.** The separate `npm run verify:release-a11y` gate requires source-bound engineering receipts and actual NVDA and VoiceOver reviews of both website and extension before a validated product release. Missing or stale evidence fails. [Review instructions](docs/accessibility-release-gate.md) describe the inputs and limits. A development catalogue is not a validated product release.
 
 ## Reporting
 
