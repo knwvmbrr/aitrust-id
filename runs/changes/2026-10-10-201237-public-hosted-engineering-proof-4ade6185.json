@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-201237-public-hosted-engineering-proof-4ade6185",
+  "recorded_at": "2026-10-10T20:12:37.501652+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
+  "changed": "Record the deployed portability repair, exact public bytes and all eleven successful hosted engineering jobs; prepare required-check enforcement.",
+  "proves": "561 public artifact matches across preview/apex/www; 20 public panels and zero automated axe defects; real Linux CI measurements, no-egress, regression artifacts, SBOM identities and site checks pass.",
+  "limits": "Independent accuracy and human-accessibility release gates correctly fail. Main protection/failing PR control, signing, license clearance and actual phone tests remain open.",
+  "scope_ids": [
+    "F-054",
+    "F-152",
+    "F-118",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/required-ci-plan.md": "9fee085bde0e2c0c9efd1be31d8fbf0c8ea6c11cf72ad5b7f7b3b36b39661f43",
+    "runs/2026-10-10-ci-portable-hosted-pass.json": "352772622558a6402c342e86d681e28f5c7c8f710d03e0f30571e2d211f83561",
+    "runs/2026-10-10-ci-portable-publication.json": "45870a9806e6711a4a5e1f0ea9d84580d20c73d14cce4af4fead3e47dd452ee6",
+    "runs/2026-10-10-ci-portable-site-public.json": "f59db1f78fa96303b513c20a7c7944991c32d010f0b3a7ef56e7fe549ccae868",
+    "state.json": "3e824c3b0a1efe80b7181b1b2c7454d5ac03b6a1f7da8725b41c15c843f4582c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-ci-portable-publication.json",
+      "sha256": "45870a9806e6711a4a5e1f0ea9d84580d20c73d14cce4af4fead3e47dd452ee6"
+    },
+    {
+      "path": "runs/2026-10-10-ci-portable-site-public.json",
+      "sha256": "f59db1f78fa96303b513c20a7c7944991c32d010f0b3a7ef56e7fe549ccae868"
+    },
+    {
+      "path": "runs/2026-10-10-ci-portable-hosted-pass.json",
+      "sha256": "352772622558a6402c342e86d681e28f5c7c8f710d03e0f30571e2d211f83561"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T20:12:37.630208+00:00"
+    }
+  ]
+}

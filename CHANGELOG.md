@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-201237-public-hosted-engineering-proof-4ade6185
+
+Recorded 2026-10-10T20:12:37.501652+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the deployed portability repair, exact public bytes and all eleven successful hosted engineering jobs; prepare required-check enforcement.
+- **Evidence.** 561 public artifact matches across preview/apex/www; 20 public panels and zero automated axe defects; real Linux CI measurements, no-egress, regression artifacts, SBOM identities and site checks pass. [Change record](./runs/changes/2026-10-10-201237-public-hosted-engineering-proof-4ade6185.json).
+- **Not claimed.** Independent accuracy and human-accessibility release gates correctly fail. Main protection/failing PR control, signing, license clearance and actual phone tests remain open.
+
+
 ### 2026-10-10-200610-report-path-source-bound-review-b2698195
 
 Recorded 2026-10-10T20:06:10.026476+00:00 · Contributor: Codex · change

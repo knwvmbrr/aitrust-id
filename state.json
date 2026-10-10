@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T20:06:09.978049+00:00",
+  "updated": "2026-10-10T20:12:37.458974+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -14,7 +14,7 @@
     "V2 conformance registration after evidence",
     "Signing, challenge/correction policy acceptance",
     "Declared latency budget and investigation of one observed transient timeout",
-    "Hosted CI now starts; engineering portability failures require repair and rerun; release gates remain unmet; main has no required-check protection"
+    "All eleven hosted engineering checks pass; enforce main required checks and demonstrate a blocked failing PR. Independent release gates remain unmet"
   ],
   "scope_record_count": 202,
   "python_tests_passed": 982,
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-10-replay-site-public.json",
+    "evidence": "runs/2026-10-10-ci-portable-site-public.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -286,7 +286,15 @@
     "published_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
     "public_static_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
     "deployment": "https://de07ac54.aitrust-id.pages.dev",
-    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24"
+    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+    "ci_portability_publication": {
+      "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
+      "preview": "https://0a4b7796.aitrust-id.pages.dev",
+      "evidence": "runs/2026-10-10-ci-portable-publication.json",
+      "matching_artifacts": 561,
+      "engineering_release_only": true,
+      "independent_tag_release": false
+    }
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -1074,12 +1082,13 @@
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
   "ci_portability": {
-    "status": "linux_no_egress_and_accessibility_hosted_jobs_passed; regression_report_path_repaired; complete_hosted_recheck_pending",
+    "status": "all_eleven_hosted_engineering_jobs_pass; independent_release_gates_correctly_refuse; main_protection_pending",
     "diagnosis": "runs/2026-10-10-hosted-ci-portability-diagnosis.json",
     "main_branch_protected": false,
     "release_gates_waived": false,
     "checks": "runs/2026-10-10-ci-portable-complete-checks.json",
-    "report_path_diagnosis": "runs/2026-10-10-hosted-report-destination-repair.json"
+    "report_path_diagnosis": "runs/2026-10-10-hosted-report-destination-repair.json",
+    "hosted_evidence": "runs/2026-10-10-ci-portable-hosted-pass.json"
   },
   "dependency_license_audit": {
     "status": "three_observed_linux_images_inventoried; unsigned; incomplete_license_and_client_coverage",
