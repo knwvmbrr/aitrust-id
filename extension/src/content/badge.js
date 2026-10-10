@@ -34,10 +34,11 @@
     }
     if(live.textContent!==text)live.textContent=text;
   }
-  function captureStatus(message) {
+  function captureStatus(message,action=()=>location.reload(),actionLabel="Recheck locally") {
     if(!message){if(capture)unmount(document.body);capture=null;captureMessage='';return;}
     if(!capture){
-      capture=mount(document.body,()=>location.reload());
+      capture=mount(document.body,action);
+      roots.get(document.body).root.querySelector('.check').textContent=actionLabel;
       Object.assign(capture.style,{position:'fixed',right:'max(12px, env(safe-area-inset-right))',bottom:'max(12px, env(safe-area-inset-bottom))',zIndex:'20'});
     }
     if(message!==captureMessage){captureMessage=message;update(document.body,'UNSUPPORTED',null,message);}

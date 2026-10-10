@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-10T14:10:02.589360+00:00",
+  "pass": true,
+  "command": "python -m pytest -q",
+  "exit_code": 0,
+  "passed": 748,
+  "warnings": 1,
+  "warning_scope": "Existing Starlette/httpx TestClient deprecation; no runtime assertion error",
+  "source_sha256": {
+    "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+    "tests/test_http_privacy.py": "e62244ffc998359f67ebff67937ca0347d528ce1c0cedbb2991f5fc4c899bd91",
+    "extension/src/sw/service-worker.js": "144f1cf7727c25a7bbed1a90fc8be7933351ba91619970389e6ad9d673d7a98c",
+    "extension/src/content/bridge.js": "0f53550ea0a8ebf413dd2f6d0fba2de7143297e6c544fb9d6af15f19fc72f7db"
+  },
+  "independent_accuracy": false
+}

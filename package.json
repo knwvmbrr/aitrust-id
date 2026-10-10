@@ -35,7 +35,8 @@
     "verify:reserved-subjects": "python3 scripts/verify-reserved-subjects.py",
     "verify:consumer": "node scripts/verify-extension-consumer.cjs",
     "verify:dependencies": "python3 scripts/verify-dependencies.py",
-    "check:assertion": "python3 scripts/check-assertion.py"
+    "check:assertion": "python3 scripts/check-assertion.py",
+    "verify:extension-privacy": "node scripts/verify-extension-privacy.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

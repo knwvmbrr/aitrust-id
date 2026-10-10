@@ -57,4 +57,4 @@ def test_semantic_profile_stricter_than_schema_rejects_out_of_range_offsets_floo
     assert all(r['status']=='invalid' for r in inspect(values))
 def test_real_service_worker_body_and_fault_contract():
     result=subprocess.run(['node','-e',"require('./scripts/verify-extension-consumer.cjs').verify().then(r=>console.log(JSON.stringify({pass:r.pass,count:r.case_count}))).catch(()=>process.exit(1))"],cwd=ROOT,capture_output=True,text=True,check=True)
-    assert json.loads(result.stdout)=={'pass':True,'count':38}
+    assert json.loads(result.stdout)=={'pass':True,'count':42}

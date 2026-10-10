@@ -53,11 +53,15 @@ def verify(env_file, engine='docker', project='aitrust-staging', disrupt=False):
             with opener.open(req, timeout=30) as response:
                 status = response.status
                 raw = response.read(2_000_001)
+                response_headers = response.headers
         except urllib.error.HTTPError as response:
             status, raw = response.code, response.read(2_000_001)
+            response_headers = response.headers
         if status != expected:
             raise AssertionError(name+' returned unexpected HTTP status '+str(status))
         result = json.loads(raw)
+        assert response_headers.get('Cache-Control') == 'no-store'
+        assert response_headers.get('X-Content-Type-Options') == 'nosniff'
         if validate:
             validator.validate(result)
             assert all(t['code'] in ('PS','PII_REDACTED') for t in result['tags'])
@@ -78,6 +82,12 @@ def verify(env_file, engine='docker', project='aitrust-staging', disrupt=False):
     for name, auth in [('missing_auth', None), ('wrong_auth', 'Bearer synthetic-invalid')]:
         request(name, payload={'text':'synthetic'}, authorization=auth, expected=401)
     auth = 'Bearer '+token
+    private_error_canary = 'aitrust-synthetic-private-error-92d1'
+    error_result = request('private_error_fields_not_reflected',
+                          path='/v1/evaluate?private='+private_error_canary,
+                          payload={'text': private_error_canary, private_error_canary: private_error_canary},
+                          authorization=auth, expected=422)
+    assert error_result == {'detail': 'Request does not match the supported input contract'}
     request('page_origin_rejected', payload={'text':'synthetic'}, authorization=auth,
             origin='https://example.test', expected=403)
     for modality in ('code','image','audio','video','document','made-up'):
@@ -149,6 +159,27 @@ print(json.dumps({"sha256":hashlib.sha256(red.encode()).hexdigest(),"char_len":l
                      'import hashlib; print(hashlib.sha256(open("app.py","rb").read()).hexdigest())')
         assert actual == hashlib.sha256((ROOT/'services'/service/'app.py').read_bytes()).hexdigest()
         runtime_hashes={'app.py':actual}
+        private_module = run(engine,'exec',cid,'python','-c',
+            'import hashlib; print(hashlib.sha256(open("protocol/http_privacy.py","rb").read()).hexdigest())')
+        assert private_module == hashlib.sha256((ROOT/'protocol/http_privacy.py').read_bytes()).hexdigest()
+        runtime_hashes['protocol/http_privacy.py'] = private_module
+        command = info['Config']['Cmd']
+        assert 'protocol.http_privacy:application' in command and '--factory' in command
+        assert '--no-access-log' in command
+        route = {'gateway': '/v1/evaluate', 'anonymizer': '/redact', 'evaluator': '/signals'}[service]
+        error_probe = '''import json,urllib.request,urllib.error
+marker="aitrust-synthetic-private-error-92d1"
+route=ROUTE
+payload={"text":marker,marker:marker}
+r=urllib.request.Request("http://127.0.0.1:8000"+route+"?private="+marker,data=json.dumps(payload).encode(),headers={"Content-Type":"application/json"})
+try:urllib.request.urlopen(r,timeout=10);raise AssertionError("Bad request accepted")
+except urllib.error.HTTPError as e:
+ assert e.code==422
+ assert json.load(e)=={"detail":"Request does not match the supported input contract"}
+ assert e.headers["Cache-Control"]=="no-store"
+ assert e.headers["X-Content-Type-Options"]=="nosniff"
+print("private error passed")'''.replace('ROUTE', repr(route))
+        assert run(engine,'exec',cid,'python','-c',error_probe) == 'private error passed'
         for name in (['healthcheck.py','model_identity.py'] if service=='anonymizer' else ['healthcheck.py']):
             value=run(engine,'exec',cid,'python','-c',
                 'import hashlib; print(hashlib.sha256(open('+repr(name)+',"rb").read()).hexdigest())')
@@ -226,13 +257,16 @@ print("offline redaction passed")'''
         assert log_result.returncode==0, 'Application logs could not be read'
         log_streams.extend([log_result.stdout,log_result.stderr])
     logs='\n'.join(log_streams)
-    assert all(value not in logs for value in (canary,token,'example.test/install'))
+    assert all(value not in logs for value in (canary,token,'example.test/install',private_error_canary))
     return {'captured_at':datetime.now(timezone.utc).isoformat(), 'pass':True,
             'engine':engine, 'engine_version':run(engine,'--version'), 'project':project,
             'cases':cases,'services':services,'offline_redaction':True,
             'redacted_subject_hash_and_length_verified':True,
             'synthetic_markers_absent_from_application_logs':True,
             'application_log_streams_checked':['stdout','stderr'],
+            'private_validation_errors_checked_on_all_services':True,
+            'no_store_headers_checked_on_all_gateway_cases':True,
+            'request_url_access_logging_disabled':True,
             'dependency_failure_recovery_exercised':disrupt,
             'gateway_edge_egress_observed':any(services['gateway']['bounded_external_tcp_reachable']),
             'isolation_scope':'Two external IPv4/IPv6 TCP destinations; evaluator/redactor only',

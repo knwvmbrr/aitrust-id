@@ -607,33 +607,52 @@
         "id": "F-079",
         "kind": "requirement",
         "title": "Route-specific privacy clauses with executed evidence",
-        "percent_complete": 40,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:12:12.549487+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current HTTP privacy, explicit consent/pause/reset, source-bound selected-route execution 2026-10-10T14:12:12.549487+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Execute all five declared privacy clauses for each selected route using the current source identity; retain unsupported or unperformed clauses explicitly.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:12:12.549487+00:00",
+        "completion_timestamp_basis": "Current source mechanisms and selected-route acceptance executed at this audit; not an invented historical completion.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "docs/runtime-gap-plan.md",
-          "runs/2026-10-09-scope-completion-checks.json"
+          "runs/2026-10-09-scope-completion-checks.json",
+          "docs/privacy-boundaries.md",
+          "docs/http-privacy-plan.md",
+          "docs/extension-consent-plan.md",
+          "protocol/http_privacy.py",
+          "tests/test_http_privacy.py",
+          "runs/2026-10-10-http-privacy-python.json",
+          "runs/2026-10-10-http-privacy-service.json",
+          "runs/2026-10-10-current-extension-prompt-boundary.json",
+          "runs/2026-10-10-consent-worker-faults.json",
+          "runs/2026-10-10-privacy-device-engines.json",
+          "runs/2026-10-10-privacy-policies-local.json",
+          "runs/2026-10-10-consent-component-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "executed_acceptance": [
           "Execute all five declared privacy clauses for each selected route using the current source identity; retain unsupported or unperformed clauses explicitly."
-        ],
-        "queue": "open"
+        ]
       }
     },
     {
@@ -3057,36 +3076,54 @@
         "id": "F-084",
         "kind": "requirement",
         "title": "No content logging — a verified clause, not a promise",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:12:12.549487+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current HTTP privacy, explicit consent/pause/reset, source-bound selected-route execution 2026-10-10T14:12:12.549487+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:12:12.549487+00:00",
+        "completion_timestamp_basis": "Current source mechanisms and selected-route acceptance executed at this audit; not an invented historical completion.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "runs/2026-10-08-upgrade-device-public.json",
           "site/src/policies.js",
-          "docs/tag-system-upgrade.md"
+          "docs/tag-system-upgrade.md",
+          "docs/privacy-boundaries.md",
+          "docs/http-privacy-plan.md",
+          "docs/extension-consent-plan.md",
+          "protocol/http_privacy.py",
+          "tests/test_http_privacy.py",
+          "runs/2026-10-10-http-privacy-python.json",
+          "runs/2026-10-10-http-privacy-service.json",
+          "runs/2026-10-10-current-extension-prompt-boundary.json",
+          "runs/2026-10-10-consent-worker-faults.json",
+          "runs/2026-10-10-privacy-device-engines.json",
+          "runs/2026-10-10-privacy-policies-local.json",
+          "runs/2026-10-10-consent-component-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "executed_acceptance": [
           "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim."
-        ],
-        "queue": "open"
+        ]
       }
     },
     {
@@ -3115,36 +3152,54 @@
         "id": "F-085",
         "kind": "requirement",
         "title": "No application-controlled content persistence",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:12:12.549487+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current HTTP privacy, explicit consent/pause/reset, source-bound selected-route execution 2026-10-10T14:12:12.549487+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:12:12.549487+00:00",
+        "completion_timestamp_basis": "Current source mechanisms and selected-route acceptance executed at this audit; not an invented historical completion.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "runs/2026-10-08-upgrade-device-public.json",
           "site/src/policies.js",
-          "docs/tag-system-upgrade.md"
+          "docs/tag-system-upgrade.md",
+          "docs/privacy-boundaries.md",
+          "docs/http-privacy-plan.md",
+          "docs/extension-consent-plan.md",
+          "protocol/http_privacy.py",
+          "tests/test_http_privacy.py",
+          "runs/2026-10-10-http-privacy-python.json",
+          "runs/2026-10-10-http-privacy-service.json",
+          "runs/2026-10-10-current-extension-prompt-boundary.json",
+          "runs/2026-10-10-consent-worker-faults.json",
+          "runs/2026-10-10-privacy-device-engines.json",
+          "runs/2026-10-10-privacy-policies-local.json",
+          "runs/2026-10-10-consent-component-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "executed_acceptance": [
           "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim."
-        ],
-        "queue": "open"
+        ]
       }
     },
     {
@@ -3173,36 +3228,54 @@
         "id": "F-086",
         "kind": "requirement",
         "title": "No telemetry, no analytics, no phone-home — in the extension or the services",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:12:12.549487+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current HTTP privacy, explicit consent/pause/reset, source-bound selected-route execution 2026-10-10T14:12:12.549487+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:12:12.549487+00:00",
+        "completion_timestamp_basis": "Current source mechanisms and selected-route acceptance executed at this audit; not an invented historical completion.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "runs/2026-10-08-upgrade-device-public.json",
           "site/src/policies.js",
-          "docs/tag-system-upgrade.md"
+          "docs/tag-system-upgrade.md",
+          "docs/privacy-boundaries.md",
+          "docs/http-privacy-plan.md",
+          "docs/extension-consent-plan.md",
+          "protocol/http_privacy.py",
+          "tests/test_http_privacy.py",
+          "runs/2026-10-10-http-privacy-python.json",
+          "runs/2026-10-10-http-privacy-service.json",
+          "runs/2026-10-10-current-extension-prompt-boundary.json",
+          "runs/2026-10-10-consent-worker-faults.json",
+          "runs/2026-10-10-privacy-device-engines.json",
+          "runs/2026-10-10-privacy-policies-local.json",
+          "runs/2026-10-10-consent-component-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "executed_acceptance": [
           "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim."
-        ],
-        "queue": "open"
+        ]
       }
     },
     {
@@ -3231,36 +3304,54 @@
         "id": "F-087",
         "kind": "requirement",
         "title": "Capture trust boundary, published plainly",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:12:12.549487+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current HTTP privacy, explicit consent/pause/reset, source-bound selected-route execution 2026-10-10T14:12:12.549487+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:12:12.549487+00:00",
+        "completion_timestamp_basis": "Current source mechanisms and selected-route acceptance executed at this audit; not an invented historical completion.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "runs/2026-10-08-upgrade-device-public.json",
           "site/src/policies.js",
-          "docs/tag-system-upgrade.md"
+          "docs/tag-system-upgrade.md",
+          "docs/privacy-boundaries.md",
+          "docs/http-privacy-plan.md",
+          "docs/extension-consent-plan.md",
+          "protocol/http_privacy.py",
+          "tests/test_http_privacy.py",
+          "runs/2026-10-10-http-privacy-python.json",
+          "runs/2026-10-10-http-privacy-service.json",
+          "runs/2026-10-10-current-extension-prompt-boundary.json",
+          "runs/2026-10-10-consent-worker-faults.json",
+          "runs/2026-10-10-privacy-device-engines.json",
+          "runs/2026-10-10-privacy-policies-local.json",
+          "runs/2026-10-10-consent-component-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "executed_acceptance": [
           "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim."
-        ],
-        "queue": "open"
+        ]
       }
     },
     {
@@ -10783,36 +10874,54 @@
         "id": "N-004",
         "kind": "requirement",
         "title": "Consent, per-site pause, capture boundaries, reset and deletion",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T14:12:12.549487+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — current HTTP privacy, explicit consent/pause/reset, source-bound selected-route execution 2026-10-10T14:12:12.549487+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-10T14:12:12.549487+00:00",
+        "completion_timestamp_basis": "Current source mechanisms and selected-route acceptance executed at this audit; not an invented historical completion.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "runs/2026-10-08-upgrade-device-public.json",
           "site/src/policies.js",
-          "docs/tag-system-upgrade.md"
+          "docs/tag-system-upgrade.md",
+          "docs/privacy-boundaries.md",
+          "docs/http-privacy-plan.md",
+          "docs/extension-consent-plan.md",
+          "protocol/http_privacy.py",
+          "tests/test_http_privacy.py",
+          "runs/2026-10-10-http-privacy-python.json",
+          "runs/2026-10-10-http-privacy-service.json",
+          "runs/2026-10-10-current-extension-prompt-boundary.json",
+          "runs/2026-10-10-consent-worker-faults.json",
+          "runs/2026-10-10-privacy-device-engines.json",
+          "runs/2026-10-10-privacy-policies-local.json",
+          "runs/2026-10-10-consent-component-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full named privacy job on current selected device, local service and unpacked Chrome routes; real Linux and Chromium plus Chromium/WebKit device checks. No physical erasure, universal egress, broader live vendor, human accessibility or independent tag validation claim.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "executed_acceptance": [
           "Complete route-by-route canary/error/cache tests and documented consent/reset/delete boundaries on current production/extension/local service versions; no universal no-leak claim."
-        ],
-        "queue": "open"
+        ]
       }
     },
     {

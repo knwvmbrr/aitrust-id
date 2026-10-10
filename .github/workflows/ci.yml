@@ -73,7 +73,7 @@ jobs:
       - run: python -m pytest tests/test_gateway_integration.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
-      - run: python -m pytest tests/test_assertion_formats.py -q
+      - run: python -m pytest tests/test_assertion_formats.py tests/test_http_privacy.py -q
 
   no-egress:
     # The pipeline must work with the network unplugged. If a component needs the
@@ -133,6 +133,7 @@ jobs:
       - run: npm run verify:axe-gate
       - run: npm run verify:a11y-probes
       - run: npm run verify:consumer
+      - run: npm run verify:extension-privacy
 
   device-builder:
     runs-on: ubuntu-latest

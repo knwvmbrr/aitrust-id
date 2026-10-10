@@ -8,3 +8,15 @@
 !protocol/
 !protocol/normalization.py
 !protocol/unicode15-data.json
+!protocol/http_privacy.py
+!services/anonymizer/
+!services/anonymizer/Dockerfile
+!services/anonymizer/requirements.lock
+!services/anonymizer/app.py
+!services/anonymizer/healthcheck.py
+!services/anonymizer/model_identity.py
+!services/evaluator/
+!services/evaluator/Dockerfile
+!services/evaluator/requirements.lock
+!services/evaluator/app.py
+!services/evaluator/healthcheck.py

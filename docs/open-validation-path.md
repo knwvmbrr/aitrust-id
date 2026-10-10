@@ -45,6 +45,10 @@ startup; UNAVAILABLE is not a successful check.
 The extension is optional. Load `extension/` using Chrome's unpacked-extension
 workflow, open its options, and supply your existing local token from the private
 file. It is saved in extension-local storage, not sync. Never publish/share it.
+The extension starts paused. In options, explicitly enable ChatGPT checks after
+saving the token; token saving does not enable capture. Pause stops new capture,
+cancels in-flight checks and removes tags. Reset removes token and consent locally;
+server credentials, ChatGPT conversations and your downloads remain yours.
 See docs/development.md for browser verification and removal instructions.
 
 ## Verify and challenge

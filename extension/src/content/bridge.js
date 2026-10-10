@@ -2,8 +2,9 @@
 (() => {
   const adapter=globalThis.AITrustAdapter,ui=globalThis.AITrust,contract=globalThis.AITrustContract;
   if(!adapter||!ui||!contract)return;
-  const states=new WeakMap(),tracked=new Set();let scanTimer;
+  const states=new WeakMap(),tracked=new Set();let scanTimer,enabled=false,consentRevision=0;
   async function check(host,state){
+    if(!enabled)return;
     const identity=adapter.responseId(host),text=adapter.text(host),page=location.href;
     if(!identity){ui.update(host,'UNSUPPORTED',null,'A stable assistant response identity is unavailable.');return;}
     if(!text)return;
@@ -11,7 +12,7 @@
     if(adapter.streaming(host)){ui.update(host,'PENDING',null,'Waiting for this response to finish.');return;}
     const request=++state.request;state.evaluated=text;
     ui.update(host,'PENDING');
-    const current=()=>host.isConnected&&request===state.request&&location.href===page&&adapter.responseId(host)===identity&&adapter.text(host)===text&&adapter.responses().includes(host)&&!adapter.streaming(host);
+    const current=()=>enabled&&host.isConnected&&request===state.request&&location.href===page&&adapter.responseId(host)===identity&&adapter.text(host)===text&&adapter.responses().includes(host)&&!adapter.streaming(host);
     try{
       const result=await chrome.runtime.sendMessage({type:'evaluate',text,origin_host:location.hostname});
       if(!current())return;
@@ -23,6 +24,7 @@
     }catch{if(current())ui.update(host,'UNAVAILABLE',null,'Check the local service and token settings.');}
   }
   function scan(){
+    if(!enabled){ui.captureStatus('Checks are paused. Open settings to enable assistant-response checks on ChatGPT.',()=>chrome.runtime.sendMessage({type:'open_settings'}),'Open settings');return;}
     const hosts=adapter.responses();
     for(const host of tracked){
       if(!hosts.includes(host)){
@@ -49,5 +51,16 @@
     queue();
   });
   observer.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['data-testid','aria-label','data-talvt-turn-state','data-chatgpt-selection-message-id','data-message-id','data-dil-source-message-id','data-dil-message-id','data-markdown-text-style','data-message-author-role','hidden','aria-hidden']});
+  function applyConsent(value){
+    enabled=value===true;clearTimeout(scanTimer);
+    for(const host of tracked){const state=states.get(host);state.request++;clearTimeout(state.timer);ui.unmount(host);states.delete(host);}tracked.clear();ui.captureStatus('');scan();
+  }
+  chrome.storage.onChanged.addListener((changes,area)=>{
+    if(area!=='local')return;
+    if(changes.checks_enabled){consentRevision++;applyConsent(changes.checks_enabled.newValue);}
+    else if(changes.token){consentRevision++;applyConsent(enabled);}
+  });
+  const initialRevision=consentRevision;
+  chrome.storage.local.get('checks_enabled').then(value=>{if(initialRevision===consentRevision)applyConsent(value.checks_enabled);}).catch(()=>{if(initialRevision===consentRevision)applyConsent(false);});
   addEventListener('popstate',queue);addEventListener('hashchange',queue);scan();
 })();

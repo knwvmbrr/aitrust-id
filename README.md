@@ -73,8 +73,8 @@ those tags remain planned. No attached document is automatically uploaded.
 
 ## What runs today
 
-A Chrome extension captures individual assistant responses on the initial ChatGPT
-adapter. It sends bounded text to an authenticated loopback gateway. A local
+After explicit opt-in in settings, the Chrome extension captures individual
+assistant responses on the initial ChatGPT adapter. It starts paused. It sends bounded text to an authenticated loopback gateway. A local
 anonymizer redacts detected personal information before a local evaluator matches
 supported patterns. The extension attaches the result to the same unchanged
 response with small code-only tags in a wrapping row beneath the output. Each
@@ -106,7 +106,7 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
-There are 731 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
+There are 748 passing Python checks in the latest executed suite, including subject interoperability and rejection controls, live-review counterexamples, full-schema HTTP candidate-policy checks, and regression-manifest failures. All five active development fixture sets are selected by the configured CI regression job: 86 cases, zero classification errors locally. Hosted jobs remain blocked as described below. Historical corrected labels remain archived; these development cases are not independent accuracy evidence. Browser and container evidence is in `runs/`.
 The public repository contains the runnable source. Engineering CI and the separate
 statistical gate are configured. GitHub currently prevents every hosted job from
 starting because of an account billing lock; the early public checkout passed
@@ -150,6 +150,10 @@ make gates PYTHON=.venv/bin/python
 `deploy` starts the local containers. It does not publish a website. `gates` is
 expected to fail on the current regression material. Load `extension/` unpacked in
 a dedicated Chrome profile and configure its token through extension options.
+Checks start paused, including upgrades without saved consent. Explicitly enable
+ChatGPT checks in settings; saving a token is not consent. Pause cancels pending
+checks and removes tags. Reset removes the local token and consent, not the server
+credential or a ChatGPT conversation.
 Remove the token and unload the extension to remove access. Stop this project's
 containers with `make down` and the same environment file.
 

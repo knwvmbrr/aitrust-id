@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-141459-explain-opt-in-setup-and-preserve-policy-downloads-0d251517",
+  "recorded_at": "2026-10-10T14:14:59.388515+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
+  "changed": "Explain the separate ChatGPT opt-in in the install modal and README; include generated scope mirrors and immutable policy 1.3 downloads; retain every earlier policy version.",
+  "proves": "The current privacy site passes all 20 modals, eight footer workflows, 202 preserved scope records and automated accessibility; policy downloads and both device-engine privacy runs pass.",
+  "limits": "Setup copy improvement is not an outside-user install review; this increment still awaits public deployment; current tags retain their independent release gates.",
+  "scope_ids": [
+    "F-079",
+    "N-004",
+    "F-150",
+    "F-142"
+  ],
+  "files": {
+    ".dockerignore": "e7aa7e8abfb26231daf62f2b99df8c96acd0b0fe565d6e7256b783b1ebcaf4a3",
+    ".github/workflows/ci.yml": "c816e3a5b53a25244fee28ba466aaa4c920ea5d80869d93c0e58ecec60e632c0",
+    "README.md": "ad8dce916469a445cfa2bcd0ed07bcbe8d181c993a61f3b615173dba85cd6481",
+    "deploy/docker-compose.yml": "af2599c8f4a5143de8258ef9d29cc5fa1d22ddd7f2137e3751683e65421a7218",
+    "docs/extension-consent-plan.md": "8b400d07561504596932b307ba97e9e66e673916e7317702d07bad65ce335636",
+    "docs/http-privacy-plan.md": "774a50899a0cdd06b14dd7c8c526b5f0aa28f1b80a42a13fb29f203dc83159f0",
+    "docs/open-validation-path.md": "9f6c57559908cbcd69258c5fc534122bdc066fe514cd3ec5766425ad41b1a55f",
+    "docs/privacy-boundaries.md": "796380e3a8d860602d29b96b5afa9ac8576c4e3719978d3b464d1fffc68a196e",
+    "docs/scope-progress.json": "b043d05e861069074fc58c246b25bb07781cb3e2ea584987748278af902329f0",
+    "docs/scope-progress.md": "52dbf0e81ad2ec5a593faa7bdb21aa3a058a854f048f6c3ca121a9808aacfc21",
+    "docs/scope-task-index.md": "3bf4e2c71d867d60baa4babc0feb76d343294e51b0e34c845e94711047fef9aa",
+    "extension/src/content/badge.js": "984d3a7b51a2b28827a632260a6711da0568bebb62e493aa5f4243581c0c9f9b",
+    "extension/src/content/bridge.js": "0f53550ea0a8ebf413dd2f6d0fba2de7143297e6c544fb9d6af15f19fc72f7db",
+    "extension/src/options.html": "c615d88d68c616cd483b62267d4ec9a0ce0b2d436bfe67ff5ad29b5cb627ab3b",
+    "extension/src/options.js": "a442dca038329b692e471c35c863fcddeca914fc4f349841e25992190a0d41d3",
+    "extension/src/sw/service-worker.js": "144f1cf7727c25a7bbed1a90fc8be7933351ba91619970389e6ad9d673d7a98c",
+    "extension/test/fixture.js": "d8f721faae71975f56ba2da4409350ca6334c0fa4641c7826a7b652534c2f788",
+    "package.json": "98a8957b8b23ac5a389550ecfd258773c2f843e82d2ec4baf74ba8ac80bda769",
+    "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+    "runs/2026-10-10-actual-extension-consent.json": "3bf0fa05f774fd50ac518e706511c9342bf541b9a698d11fae4ce569f96723c6",
+    "runs/2026-10-10-consent-component-browser.json": "e1864433bb8382cfc9e148f57986aa25d2a6270182e5330ddff1cd5c151d0aa0",
+    "runs/2026-10-10-consent-worker-faults.json": "396c952c6bbf793fc3ee5ae0a0f06fd9bc4df8487e9dc7266bed9dca5b87f5f3",
+    "runs/2026-10-10-consumer-assets-public.json": "7461a5b03cb43fcccde3e0dce4317dbbae6d521acdd55b795c6b4102470fd001",
+    "runs/2026-10-10-consumer-deployment.json": "b30dedec65dda87f73369c632297206ea7f9e2f309ecbc9e2e84cf94d9d0d16b",
+    "runs/2026-10-10-consumer-ps-public.json": "0d1ddc62aa890d119a5dd287854c6f8699ff79f9a7eba8a2b685afbc6df4608c",
+    "runs/2026-10-10-consumer-site-public.json": "c8a874e8711035eacf329950499a290a98d6d33265a63a32e621906de4fdc384",
+    "runs/2026-10-10-current-extension-consent.json": "2c75918d360fed97930d4bf2f12817ddb31a79428f0c28433957dc63992f0404",
+    "runs/2026-10-10-current-extension-prompt-boundary.json": "1d723c547053cb4b6c468baea61aaee3b93c44dd9ab1a384c64cf15d0162b121",
+    "runs/2026-10-10-http-privacy-python.json": "e2aeb72555c342d564461cb6c62f8dcf252ace222974d1b17a354be069825a65",
+    "runs/2026-10-10-http-privacy-service.json": "773c806c7b7eae515d52aedeb5ac39481d6b1e587f86e8dd82ec64f77a24728b",
+    "runs/2026-10-10-privacy-device-engines.json": "eeb3c8584f058e3c3fdc150f62814c5b424bf6a12906ba29b0b2b0d21ccc619e",
+    "runs/2026-10-10-privacy-policies-local.json": "1c3155eb1a3678f70a6b7df78b49b80a191a7c0fe74366c425f91b4e411e6ddf",
+    "runs/2026-10-10-privacy-scope-progress.json": "40b024ece4ff4c9e25dab9262ea35e5709df46f0e9af7b2232907844ea5acac2",
+    "runs/2026-10-10-privacy-site-local.json": "dc58a5c8fb3532645898252faefea466284bcbcc59cd2b10b4d8222deec5b709",
+    "scripts/verify-device.cjs": "a31b1675df477f2b99a4793ad0690a96e7982e9454ea033d5d8e933b694a5640",
+    "scripts/verify-extension-consumer.cjs": "3e0a020985623478ec3a4087a8a246e15ccf2bd0e5916b948feb0736315d678e",
+    "scripts/verify-extension-privacy.cjs": "a07a41da7f0c133cd0ca690bb536512365c04f386dfc998ec7d4cf3c294f8266",
+    "scripts/verify-extension.cjs": "e9eb70e6621ae55380b7f410df6d91fe0ebd6cd52fdb2d1c55a9cab28b4ecebe",
+    "scripts/verify-service.py": "0aabc2aa9cb6f644399869cc97c1555f4a80fc04c8b08aa52639d297b3db6e8d",
+    "services/anonymizer/Dockerfile": "a552fe5d4ffc325ac03e4d9eb659b85f0e4eb3647b62755218e9a25de918cdcb",
+    "services/evaluator/Dockerfile": "adb032a393577f2b87f891e7ad170eee0fa0e3b03cce99e28009acf7a6da1963",
+    "services/gateway/Dockerfile": "f5343e87470b1938726023d62cf43cf26f8137597a5cebd274d08bd8fd049a0f",
+    "site/public/reference/policies/access/v1.3.txt": "eab30e4df04f19ca5487829b9002382aec116986987b1f060f65c62b07b1f21b",
+    "site/public/reference/policies/community/v1.3.txt": "da93c1149ee5e4ed55777e1fa70a9598899f1f83e02240cdc347aad1fd5324a8",
+    "site/public/reference/policies/contributing/v1.3.txt": "a20eb0225369d64a6a4bdd5bdfa0880e671cabfb8a512a771dc0913181ed3ea2",
+    "site/public/reference/policies/governance/v1.3.txt": "45112a1f611965eefbfacd5710276261a58752d1eeb7fa9bde3ab81285ae078d",
+    "site/public/reference/policies/licenses/v1.3.txt": "de3080f767ebed59f3af24ecce75e8c30049648ba0124192461c5fde640a8811",
+    "site/public/reference/policies/privacy/v1.3.txt": "771bbc46ccb2ecb20df91964b99cadc633e866b12090733799c919121246b63e",
+    "site/public/reference/policies/security/v1.3.txt": "69eb8122438b3c997b915b91147b7775d7d3e35e81e6cc5c20d2335074b07e9d",
+    "site/public/reference/policies/terms/v1.3.txt": "ac59a52a17a5ad888b3272bd751592b79dcddceda5f507d171b11f141c9da652",
+    "site/public/reference/policies/validation/v1.3.txt": "7ad4c43f9a2d028285d66ee30172c9bc2ec99e8cc7f9feaddfb3baa60634368e",
+    "site/public/reference/policy-access.txt": "eab30e4df04f19ca5487829b9002382aec116986987b1f060f65c62b07b1f21b",
+    "site/public/reference/policy-community.txt": "da93c1149ee5e4ed55777e1fa70a9598899f1f83e02240cdc347aad1fd5324a8",
+    "site/public/reference/policy-contributing.txt": "a20eb0225369d64a6a4bdd5bdfa0880e671cabfb8a512a771dc0913181ed3ea2",
+    "site/public/reference/policy-governance.txt": "45112a1f611965eefbfacd5710276261a58752d1eeb7fa9bde3ab81285ae078d",
+    "site/public/reference/policy-licenses.txt": "de3080f767ebed59f3af24ecce75e8c30049648ba0124192461c5fde640a8811",
+    "site/public/reference/policy-privacy.txt": "771bbc46ccb2ecb20df91964b99cadc633e866b12090733799c919121246b63e",
+    "site/public/reference/policy-security.txt": "69eb8122438b3c997b915b91147b7775d7d3e35e81e6cc5c20d2335074b07e9d",
+    "site/public/reference/policy-terms.txt": "ac59a52a17a5ad888b3272bd751592b79dcddceda5f507d171b11f141c9da652",
+    "site/public/reference/policy-validation.txt": "7ad4c43f9a2d028285d66ee30172c9bc2ec99e8cc7f9feaddfb3baa60634368e",
+    "site/public/reference/public-scope.json": "1ba605753db6cf6205aca752bc2b9f601f502f55db5ea4d8b52d27cb5f3cd1e7",
+    "site/src/policies.js": "a22a02b254ecb590e79c55de31c0f75de0d7ea0ca3ec9c219898f10c992fa4d5",
+    "site/src/public-scope.json": "1ba605753db6cf6205aca752bc2b9f601f502f55db5ea4d8b52d27cb5f3cd1e7",
+    "site/src/usage.js": "b3f539b48b6570c32881cc0823396cdc42e628b1ac1f3ca8639b18b578c32519",
+    "state.json": "0da3e8c4b5f07d068fbc553c0b4532063faedd518d433e64c7860afc914b22c8",
+    "tests/test_extension_consumer.py": "45b48dc08f461c4480c90ca6b27ddbd396f26e3859ee4f61a5a31f930a47cc29",
+    "tests/test_http_privacy.py": "e62244ffc998359f67ebff67937ca0347d528ce1c0cedbb2991f5fc4c899bd91"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-privacy-site-local.json",
+      "sha256": "dc58a5c8fb3532645898252faefea466284bcbcc59cd2b10b4d8222deec5b709"
+    },
+    {
+      "path": "runs/2026-10-10-privacy-policies-local.json",
+      "sha256": "1c3155eb1a3678f70a6b7df78b49b80a191a7c0fe74366c425f91b4e411e6ddf"
+    },
+    {
+      "path": "runs/2026-10-10-privacy-device-engines.json",
+      "sha256": "eeb3c8584f058e3c3fdc150f62814c5b424bf6a12906ba29b0b2b0d21ccc619e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T14:14:59.586100+00:00"
+    }
+  ]
+}

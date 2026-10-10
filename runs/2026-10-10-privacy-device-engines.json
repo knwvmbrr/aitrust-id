@@ -1,0 +1,1712 @@
+{
+  "bundle_sha256": "d97df1909f03bb1143e79425bf481bb411e02d5a59dd6ef61828e9be791bd4fb",
+  "normalization_id": "NFC-Unicode-15.0.0/v1",
+  "normalization_data_sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+  "execution_host": {
+    "platform": "darwin",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "logical_cpus": 8,
+    "memory_bytes": 8589934592,
+    "node": "v24.19.0",
+    "clock": "browser performance.now; resolution varies by engine",
+    "observation": "Execution host hardware; not simulated handset hardware"
+  },
+  "captured_at": "2026-10-10T14:10:34.089Z",
+  "method_sha256": "8eca778f68bc889e26be2fbbe5e6bc3cadad51a53c647a7f2669e8ec554e263a",
+  "format": "ai-trust-id-handheld-verification/v1",
+  "independent_accuracy": false,
+  "physical_device_tested": false,
+  "engines": [
+    {
+      "name": "Android Chromium",
+      "case_count": 127,
+      "development_fixture_cases": 86,
+      "unicode_version_regression_cases": 41,
+      "timing": {
+        "samples": [
+          {
+            "case_id": "ps_v1.jsonl:1",
+            "category": "other_download_forms",
+            "duration_ms": 2.800000011920929,
+            "input_length_codepoints": 66
+          },
+          {
+            "case_id": "ps_v1.jsonl:2",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.699999988079071,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "ps_v1.jsonl:3",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "ps_v1.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 68
+          },
+          {
+            "case_id": "ps_v1.jsonl:5",
+            "category": "encoded_content_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "ps_v1.jsonl:6",
+            "category": "encoded_content_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 34
+          },
+          {
+            "case_id": "ps_v1.jsonl:7",
+            "category": "other_code_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 32
+          },
+          {
+            "case_id": "ps_v1.jsonl:8",
+            "category": "encoded_content_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 31
+          },
+          {
+            "case_id": "ps_v1.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "ps_v1.jsonl:10",
+            "category": "encoded_content_forms",
+            "duration_ms": 0.7999999821186066,
+            "input_length_codepoints": 43
+          },
+          {
+            "case_id": "ps_v1.jsonl:11",
+            "category": "file_download_forms",
+            "duration_ms": 0.6000000238418579,
+            "input_length_codepoints": 88
+          },
+          {
+            "case_id": "ps_v1.jsonl:12",
+            "category": "other_download_forms",
+            "duration_ms": 0.3999999761581421,
+            "input_length_codepoints": 54
+          },
+          {
+            "case_id": "ps_v1.jsonl:13",
+            "category": "other_download_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 53
+          },
+          {
+            "case_id": "ps_v1.jsonl:14",
+            "category": "other_download_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 62
+          },
+          {
+            "case_id": "ps_v1.jsonl:15",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 73
+          },
+          {
+            "case_id": "ps_v1.jsonl:16",
+            "category": "encoded_content_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 35
+          },
+          {
+            "case_id": "ps_v1.jsonl:17",
+            "category": "encoded_content_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "ps_v1.jsonl:18",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 42
+          },
+          {
+            "case_id": "ps_v1.jsonl:19",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0.3999999761581421,
+            "input_length_codepoints": 70
+          },
+          {
+            "case_id": "ps_v1.jsonl:20",
+            "category": "other_code_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 48
+          },
+          {
+            "case_id": "ps_v1.jsonl:21",
+            "category": "other_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 57
+          },
+          {
+            "case_id": "ps_v1.jsonl:22",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 54
+          },
+          {
+            "case_id": "ps_v1.jsonl:23",
+            "category": "other_download_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 51
+          },
+          {
+            "case_id": "ps_v1.jsonl:24",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 48
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:1",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 118
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:2",
+            "category": "other_download_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:3",
+            "category": "other_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 56
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 0.699999988079071,
+            "input_length_codepoints": 75
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:5",
+            "category": "other_download_forms",
+            "duration_ms": 1.5,
+            "input_length_codepoints": 72
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:6",
+            "category": "other_download_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:7",
+            "category": "other_download_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:8",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 66
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 72
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:10",
+            "category": "file_download_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 67
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:11",
+            "category": "other_download_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 63
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:12",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:13",
+            "category": "other_code_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 51
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:14",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 33
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:15",
+            "category": "other_code_forms",
+            "duration_ms": 0.10000002384185791,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:16",
+            "category": "other_download_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:17",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 80
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:18",
+            "category": "other_download_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 63
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:19",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:1",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.7000000178813934,
+            "input_length_codepoints": 40
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:2",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 40
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:3",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 37
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 0.6000000238418579,
+            "input_length_codepoints": 40
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:5",
+            "category": "other_download_forms",
+            "duration_ms": 0.3999999761581421,
+            "input_length_codepoints": 58
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:6",
+            "category": "other_download_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 70
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:7",
+            "category": "other_download_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:8",
+            "category": "other_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 56
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0.10000002384185791,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:10",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:11",
+            "category": "other_download_forms",
+            "duration_ms": 0.7000000178813934,
+            "input_length_codepoints": 80
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:12",
+            "category": "file_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 53
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:13",
+            "category": "file_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:14",
+            "category": "file_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:15",
+            "category": "file_download_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 44
+          },
+          {
+            "case_id": "live_gap_v1.jsonl:1",
+            "category": "file_download_forms",
+            "duration_ms": 0.7999999821186066,
+            "input_length_codepoints": 59
+          },
+          {
+            "case_id": "live_gap_v1.jsonl:2",
+            "category": "other_download_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 46
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:1",
+            "category": "file_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 52
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:2",
+            "category": "file_download_forms",
+            "duration_ms": 0.7999999821186066,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:3",
+            "category": "file_download_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 1.2000000178813934,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:5",
+            "category": "file_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 53
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:6",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 45
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:7",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 45
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:8",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 52
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 43
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:10",
+            "category": "file_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 42
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:11",
+            "category": "file_download_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 49
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:12",
+            "category": "other_download_forms",
+            "duration_ms": 0.800000011920929,
+            "input_length_codepoints": 72
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:13",
+            "category": "file_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 52
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:14",
+            "category": "other_download_forms",
+            "duration_ms": 0.7000000178813934,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:15",
+            "category": "file_download_forms",
+            "duration_ms": 0.3999999761581421,
+            "input_length_codepoints": 63
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:16",
+            "category": "other_download_forms",
+            "duration_ms": 0.10000002384185791,
+            "input_length_codepoints": 16
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:17",
+            "category": "other_download_forms",
+            "duration_ms": 0.7999999821186066,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:18",
+            "category": "file_download_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 51
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:19",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 54
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:20",
+            "category": "other_download_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 48
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:21",
+            "category": "file_download_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 18
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:22",
+            "category": "other_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 34
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:23",
+            "category": "other_download_forms",
+            "duration_ms": 0.10000002384185791,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:24",
+            "category": "other_download_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 46
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:25",
+            "category": "other_code_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:26",
+            "category": "other_download_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 58
+          },
+          {
+            "case_id": "unicode-regression:1",
+            "category": "unicode_regression_forms",
+            "duration_ms": 2.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:2",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.7999999821186066,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:3",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.7000000178813934,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:4",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:5",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:6",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.800000011920929,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:7",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.9000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:8",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.3999999761581421,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:9",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:10",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:11",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:12",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:13",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:14",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.10000002384185791,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:15",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.3999999761581421,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:16",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.7000000178813934,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:17",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:18",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.7000000178813934,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:19",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.29999998211860657,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:20",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.20000001788139343,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:21",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:22",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:23",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.30000001192092896,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:24",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:25",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.19999998807907104,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:26",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.6000000238418579,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:27",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1.899999976158142,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:28",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:29",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1.300000011920929,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:30",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:31",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.09999999403953552,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:32",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:33",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.699999988079071,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:34",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:35",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.10000002384185791,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:36",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.7999999821186066,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:37",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:38",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:39",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.5999999940395355,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:40",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:41",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0.4000000059604645,
+            "input_length_codepoints": 50
+          }
+        ],
+        "sample_count": 127,
+        "p50_ms": 0.3999999761581421,
+        "p95_ms": 0.9000000059604645,
+        "cold_load_ms": 1876.699999988079,
+        "scope": "Desktop-hosted browser emulation; cold runtime load excluded from warm check times",
+        "input_lengths_codepoints": {
+          "min": 16,
+          "max": 118
+        },
+        "per_category": {
+          "other_download_forms": {
+            "sample_count": 42,
+            "p50_ms": 0.30000001192092896,
+            "p95_ms": 1.2000000178813934
+          },
+          "quoted_or_discussed_download_forms": {
+            "sample_count": 11,
+            "p50_ms": 0.29999998211860657,
+            "p95_ms": 0.7000000178813934
+          },
+          "encoded_content_forms": {
+            "sample_count": 6,
+            "p50_ms": 0.19999998807907104,
+            "p95_ms": 0.7999999821186066
+          },
+          "other_code_forms": {
+            "sample_count": 5,
+            "p50_ms": 0.19999998807907104,
+            "p95_ms": 0.30000001192092896
+          },
+          "file_download_forms": {
+            "sample_count": 17,
+            "p50_ms": 0.5,
+            "p95_ms": 0.7999999821186066
+          },
+          "ordinary_text_forms": {
+            "sample_count": 5,
+            "p50_ms": 0.29999998211860657,
+            "p95_ms": 0.3999999761581421
+          },
+          "unicode_regression_forms": {
+            "sample_count": 41,
+            "p50_ms": 0.4000000059604645,
+            "p95_ms": 1.300000011920929
+          }
+        }
+      },
+      "full_evidence_parity": true,
+      "parity_including_runtime_ms": 2078,
+      "offline_reload_and_check": true,
+      "offline_removal": true,
+      "offline_transport": "Playwright offline",
+      "metadata_export": true,
+      "minimal_summary_export": true,
+      "future_fields_excluded": true,
+      "detailed_export_requires_opt_in": true,
+      "detail_consent_reset_for_new_input": true,
+      "blind_review_export": true,
+      "invalid_bundle_unavailable": true,
+      "stale_input_cancelled": true,
+      "unsupported_worker_handled": true,
+      "timeout_handled": true,
+      "axe_violations": 0,
+      "text_resize_200": true,
+      "focus_restored": true,
+      "no_text_in_requests_or_cache": true,
+      "no_canary_in_browser_console": true,
+      "no_session_content_storage": true,
+      "indexeddb_enumeration_available": true,
+      "indexeddb_databases": [],
+      "reflow_320": true,
+      "errors": []
+    },
+    {
+      "name": "iPhone WebKit",
+      "case_count": 127,
+      "development_fixture_cases": 86,
+      "unicode_version_regression_cases": 41,
+      "timing": {
+        "samples": [
+          {
+            "case_id": "ps_v1.jsonl:1",
+            "category": "other_download_forms",
+            "duration_ms": 2,
+            "input_length_codepoints": 66
+          },
+          {
+            "case_id": "ps_v1.jsonl:2",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "ps_v1.jsonl:3",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "ps_v1.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 68
+          },
+          {
+            "case_id": "ps_v1.jsonl:5",
+            "category": "encoded_content_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "ps_v1.jsonl:6",
+            "category": "encoded_content_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 34
+          },
+          {
+            "case_id": "ps_v1.jsonl:7",
+            "category": "other_code_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 32
+          },
+          {
+            "case_id": "ps_v1.jsonl:8",
+            "category": "encoded_content_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 31
+          },
+          {
+            "case_id": "ps_v1.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "ps_v1.jsonl:10",
+            "category": "encoded_content_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 43
+          },
+          {
+            "case_id": "ps_v1.jsonl:11",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 88
+          },
+          {
+            "case_id": "ps_v1.jsonl:12",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 54
+          },
+          {
+            "case_id": "ps_v1.jsonl:13",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 53
+          },
+          {
+            "case_id": "ps_v1.jsonl:14",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 62
+          },
+          {
+            "case_id": "ps_v1.jsonl:15",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 73
+          },
+          {
+            "case_id": "ps_v1.jsonl:16",
+            "category": "encoded_content_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 35
+          },
+          {
+            "case_id": "ps_v1.jsonl:17",
+            "category": "encoded_content_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "ps_v1.jsonl:18",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 42
+          },
+          {
+            "case_id": "ps_v1.jsonl:19",
+            "category": "ordinary_text_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 70
+          },
+          {
+            "case_id": "ps_v1.jsonl:20",
+            "category": "other_code_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 48
+          },
+          {
+            "case_id": "ps_v1.jsonl:21",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 57
+          },
+          {
+            "case_id": "ps_v1.jsonl:22",
+            "category": "ordinary_text_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 54
+          },
+          {
+            "case_id": "ps_v1.jsonl:23",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 51
+          },
+          {
+            "case_id": "ps_v1.jsonl:24",
+            "category": "ordinary_text_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 48
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:1",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 118
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:2",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:3",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 56
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 75
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:5",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 72
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:6",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:7",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:8",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 66
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 72
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:10",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 67
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:11",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 63
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:12",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:13",
+            "category": "other_code_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 51
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:14",
+            "category": "ordinary_text_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 33
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:15",
+            "category": "other_code_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:16",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:17",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 80
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:18",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 63
+          },
+          {
+            "case_id": "fetch_execute_v1.jsonl:19",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:1",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 40
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:2",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 40
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:3",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 37
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 40
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:5",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 58
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:6",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 70
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:7",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 69
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:8",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 56
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:10",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:11",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 80
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:12",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 53
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:13",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:14",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "counterexamples_v2.jsonl:15",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 44
+          },
+          {
+            "case_id": "live_gap_v1.jsonl:1",
+            "category": "file_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 59
+          },
+          {
+            "case_id": "live_gap_v1.jsonl:2",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 46
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:1",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 52
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:2",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 60
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:3",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:4",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:5",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 53
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:6",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 45
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:7",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 45
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:8",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 52
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:9",
+            "category": "other_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 43
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:10",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 42
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:11",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 49
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:12",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 72
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:13",
+            "category": "file_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 52
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:14",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 64
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:15",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 63
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:16",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 16
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:17",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 41
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:18",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 51
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:19",
+            "category": "quoted_or_discussed_download_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 54
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:20",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 48
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:21",
+            "category": "file_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 18
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:22",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 34
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:23",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:24",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 46
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:25",
+            "category": "other_code_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 38
+          },
+          {
+            "case_id": "routing_boundaries_v1.jsonl:26",
+            "category": "other_download_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 58
+          },
+          {
+            "case_id": "unicode-regression:1",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:2",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:3",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:4",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:5",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:6",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:7",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:8",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:9",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:10",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:11",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:12",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:13",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:14",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:15",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:16",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:17",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:18",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:19",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:20",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:21",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:22",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:23",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:24",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:25",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:26",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:27",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:28",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:29",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:30",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:31",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:32",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:33",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:34",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:35",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:36",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:37",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:38",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:39",
+            "category": "unicode_regression_forms",
+            "duration_ms": 1,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:40",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          },
+          {
+            "case_id": "unicode-regression:41",
+            "category": "unicode_regression_forms",
+            "duration_ms": 0,
+            "input_length_codepoints": 50
+          }
+        ],
+        "sample_count": 127,
+        "p50_ms": 0,
+        "p95_ms": 1,
+        "cold_load_ms": 1276,
+        "scope": "Desktop-hosted browser emulation; cold runtime load excluded from warm check times",
+        "input_lengths_codepoints": {
+          "min": 16,
+          "max": 118
+        },
+        "per_category": {
+          "other_download_forms": {
+            "sample_count": 42,
+            "p50_ms": 0,
+            "p95_ms": 1
+          },
+          "quoted_or_discussed_download_forms": {
+            "sample_count": 11,
+            "p50_ms": 0,
+            "p95_ms": 1
+          },
+          "encoded_content_forms": {
+            "sample_count": 6,
+            "p50_ms": 0,
+            "p95_ms": 1
+          },
+          "other_code_forms": {
+            "sample_count": 5,
+            "p50_ms": 0,
+            "p95_ms": 1
+          },
+          "file_download_forms": {
+            "sample_count": 17,
+            "p50_ms": 0,
+            "p95_ms": 1
+          },
+          "ordinary_text_forms": {
+            "sample_count": 5,
+            "p50_ms": 1,
+            "p95_ms": 1
+          },
+          "unicode_regression_forms": {
+            "sample_count": 41,
+            "p50_ms": 0,
+            "p95_ms": 1
+          }
+        }
+      },
+      "full_evidence_parity": true,
+      "parity_including_runtime_ms": 1588,
+      "offline_reload_and_check": true,
+      "offline_removal": true,
+      "offline_transport": "origin unavailable; WebKit offline-emulation navigation bug #42775",
+      "metadata_export": true,
+      "minimal_summary_export": true,
+      "future_fields_excluded": true,
+      "detailed_export_requires_opt_in": true,
+      "detail_consent_reset_for_new_input": true,
+      "blind_review_export": true,
+      "invalid_bundle_unavailable": true,
+      "stale_input_cancelled": true,
+      "unsupported_worker_handled": true,
+      "timeout_handled": true,
+      "axe_violations": 0,
+      "text_resize_200": true,
+      "focus_restored": true,
+      "no_text_in_requests_or_cache": true,
+      "no_canary_in_browser_console": true,
+      "no_session_content_storage": true,
+      "indexeddb_enumeration_available": true,
+      "indexeddb_databases": [],
+      "reflow_320": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:61596",
+  "pass": true,
+  "elapsed_ms": 44402
+}

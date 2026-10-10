@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-141538-bind-generated-consent-catalogue-to-source-f189c740
+
+Recorded 2026-10-10T14:15:38.032370+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the no-script catalogue with the explicit extension opt-in setup text and the 67-complete scope snapshot.
+- **Evidence.** Generated fallback remains a source-derived presentation of the current catalogue, with all 202 scope IDs preserved; the same privacy checker and tag methods are retained. [Change record](./runs/changes/2026-10-10-141538-bind-generated-consent-catalogue-to-source-f189c740.json).
+- **Not claimed.** Generation does not validate a tag or prove outside-user comprehension; exact public bytes are verified separately after deployment.
+
+
+### 2026-10-10-141459-explain-opt-in-setup-and-preserve-policy-downloads-0d251517
+
+Recorded 2026-10-10T14:14:59.388515+00:00 · Contributor: Codex · change
+
+- **Changed.** Explain the separate ChatGPT opt-in in the install modal and README; include generated scope mirrors and immutable policy 1.3 downloads; retain every earlier policy version.
+- **Evidence.** The current privacy site passes all 20 modals, eight footer workflows, 202 preserved scope records and automated accessibility; policy downloads and both device-engine privacy runs pass. [Change record](./runs/changes/2026-10-10-141459-explain-opt-in-setup-and-preserve-policy-downloads-0d251517.json).
+- **Not claimed.** Setup copy improvement is not an outside-user install review; this increment still awaits public deployment; current tags retain their independent release gates.
+
+
+### 2026-10-10-141249-complete-six-selected-route-privacy-jobs-3466ad26
+
+Recorded 2026-10-10T14:12:49.066459+00:00 · Contributor: Codex · change
+
+- **Changed.** Close six full selected-route privacy jobs after device, service and actual unpacked-extension execution; retain all 202 scope records and required independent release evidence; publish versioned consent and reset terms.
+- **Evidence.** 67 records have full named-job acceptance and 135 remain open; both device engines pass 127 parity cases, offline recovery, storage and console canaries; all nine version 1.3 policy downloads work; no tag release is inferred. [Change record](./runs/changes/2026-10-10-141249-complete-six-selected-route-privacy-jobs-3466ad26.json).
+- **Not claimed.** Public deployment of this increment remains pending; physical phones, broad live vendor behavior, installed-profile refresh, human accessibility, compromised OS and independent tag accuracy remain outside these closures.
+
+
+### 2026-10-10-141002-enforce-private-errors-and-explicit-capture-consent-eaae0eef
+
+Recorded 2026-10-10T14:10:02.740989+00:00 · Contributor: Codex · change
+
+- **Changed.** Prevent input reflection and caching in the three-service route; add explicit extension opt-in, pause, cancellation and reset; document current privacy boundaries and policy version 1.3; record the prior verified public deployment.
+- **Evidence.** 748 Python tests pass; actual Linux services pass 32 HTTP checks; actual unpacked Chromium consent controls and 42 source-worker fault cases pass; compact bridge regression checks pass. [Change record](./runs/changes/2026-10-10-141002-enforce-private-errors-and-explicit-capture-consent-eaae0eef.json).
+- **Not claimed.** Website cache and new public policy verification still pending; synthetic vendor checks do not prove broader live compatibility, physical devices, memory erasure or independent tag accuracy; no privacy scope percentage closed yet.
+
+
 ### 2026-10-10-135454-refuse-future-wire-layouts-and-verify-consumer-publication-2cbe4ded
 
 Recorded 2026-10-10T13:54:54.457104+00:00 · Contributor: Codex · change

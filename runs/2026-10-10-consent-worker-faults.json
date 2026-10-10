@@ -1,0 +1,234 @@
+{
+  "captured_at": "2026-10-10T14:08:11.894Z",
+  "pass": true,
+  "cases": [
+    {
+      "name": "valid_unsigned",
+      "status": "ok",
+      "pass": true
+    },
+    {
+      "name": "default_no_consent",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "paused_no_capture",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "non_boolean_consent",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "credential_control_characters",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "wrong_origin",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "bad_sender",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "missing_token",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "absent_credential",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "short_credential",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "placeholder_credential",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "storage_failure",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "empty_text",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "unpaired_surrogate",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "oversized_text",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "astral_codepoint_boundary",
+      "status": "ok",
+      "pass": true
+    },
+    {
+      "name": "http_401",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "http_422",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "http_500",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "http_504",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "network_or_timeout",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "non_json",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "malformed_json",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_utf8",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "declared_oversize",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "chunked_oversize",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "future_version",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "signed_unverified",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "reserved_modality",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "missing_subject_hash",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "malformed_hash",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "bad_uuid",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "bad_date",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "negative_length",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "unknown_tag",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "disabled_tag",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "below_floor_asserted",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_signal_id",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_span",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_score",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "missing_model",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "duplicate_tag",
+      "status": "unavailable",
+      "pass": true
+    }
+  ],
+  "case_count": 42,
+  "stream_overflow_cancelled": true,
+  "one_terminal_response": true,
+  "closed_channel_safe": true,
+  "unrelated_messages_ignored": true,
+  "redirects_refused": true,
+  "browser_cache_disabled": true,
+  "credential_destination": "fixed_authenticated_loopback_only",
+  "real_web_stream_response_types": true,
+  "synthetic_chrome_storage_and_fetch": true,
+  "live_vendor_compatibility": false,
+  "installed_extension_refresh_verified": false,
+  "source_sha256": {
+    "extension/src/shared/contract.js": "146394bfa785749f89ab0921e5bdee635d32a00557c9c84a6939bdd1a2d90143",
+    "extension/src/sw/service-worker.js": "144f1cf7727c25a7bbed1a90fc8be7933351ba91619970389e6ad9d673d7a98c",
+    "extension/src/content/bridge.js": "0f53550ea0a8ebf413dd2f6d0fba2de7143297e6c544fb9d6af15f19fc72f7db",
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba"
+  }
+}

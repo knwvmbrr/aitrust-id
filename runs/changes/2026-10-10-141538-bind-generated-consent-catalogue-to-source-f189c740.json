@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-141538-bind-generated-consent-catalogue-to-source-f189c740",
+  "recorded_at": "2026-10-10T14:15:38.032370+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
+  "changed": "Regenerate the no-script catalogue with the explicit extension opt-in setup text and the 67-complete scope snapshot.",
+  "proves": "Generated fallback remains a source-derived presentation of the current catalogue, with all 202 scope IDs preserved; the same privacy checker and tag methods are retained.",
+  "limits": "Generation does not validate a tag or prove outside-user comprehension; exact public bytes are verified separately after deployment.",
+  "scope_ids": [
+    "F-079",
+    "N-004",
+    "F-150"
+  ],
+  "files": {
+    "site/index.html": "974e902ce9f7a7b606ea8a565acb96ca26e5249a80c927d7968b1a4afc7bde0f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-privacy-site-local.json",
+      "sha256": "dc58a5c8fb3532645898252faefea466284bcbcc59cd2b10b4d8222deec5b709"
+    },
+    {
+      "path": "runs/2026-10-10-privacy-scope-progress.json",
+      "sha256": "40b024ece4ff4c9e25dab9262ea35e5709df46f0e9af7b2232907844ea5acac2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T14:15:38.130040+00:00"
+    }
+  ]
+}

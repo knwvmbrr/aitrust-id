@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-141002-enforce-private-errors-and-explicit-capture-consent-eaae0eef",
+  "recorded_at": "2026-10-10T14:10:02.740989+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
+  "changed": "Prevent input reflection and caching in the three-service route; add explicit extension opt-in, pause, cancellation and reset; document current privacy boundaries and policy version 1.3; record the prior verified public deployment.",
+  "proves": "748 Python tests pass; actual Linux services pass 32 HTTP checks; actual unpacked Chromium consent controls and 42 source-worker fault cases pass; compact bridge regression checks pass.",
+  "limits": "Website cache and new public policy verification still pending; synthetic vendor checks do not prove broader live compatibility, physical devices, memory erasure or independent tag accuracy; no privacy scope percentage closed yet.",
+  "scope_ids": [
+    "F-079",
+    "F-084",
+    "F-085",
+    "F-086",
+    "F-087",
+    "N-004",
+    "F-001",
+    "F-150"
+  ],
+  "files": {
+    ".dockerignore": "e7aa7e8abfb26231daf62f2b99df8c96acd0b0fe565d6e7256b783b1ebcaf4a3",
+    ".github/workflows/ci.yml": "c816e3a5b53a25244fee28ba466aaa4c920ea5d80869d93c0e58ecec60e632c0",
+    "README.md": "0aff3a39772702325bb786399e5af20ce8d2d8d184f5cbcadca50e3779814c52",
+    "deploy/docker-compose.yml": "af2599c8f4a5143de8258ef9d29cc5fa1d22ddd7f2137e3751683e65421a7218",
+    "docs/extension-consent-plan.md": "8b400d07561504596932b307ba97e9e66e673916e7317702d07bad65ce335636",
+    "docs/http-privacy-plan.md": "774a50899a0cdd06b14dd7c8c526b5f0aa28f1b80a42a13fb29f203dc83159f0",
+    "docs/open-validation-path.md": "9f6c57559908cbcd69258c5fc534122bdc066fe514cd3ec5766425ad41b1a55f",
+    "docs/privacy-boundaries.md": "3b9e0c36eb07e824994a5e964ef3df5e8007b09fa4d8078438444ea93c5c4e37",
+    "extension/src/content/badge.js": "984d3a7b51a2b28827a632260a6711da0568bebb62e493aa5f4243581c0c9f9b",
+    "extension/src/content/bridge.js": "0f53550ea0a8ebf413dd2f6d0fba2de7143297e6c544fb9d6af15f19fc72f7db",
+    "extension/src/options.html": "c615d88d68c616cd483b62267d4ec9a0ce0b2d436bfe67ff5ad29b5cb627ab3b",
+    "extension/src/options.js": "a442dca038329b692e471c35c863fcddeca914fc4f349841e25992190a0d41d3",
+    "extension/src/sw/service-worker.js": "144f1cf7727c25a7bbed1a90fc8be7933351ba91619970389e6ad9d673d7a98c",
+    "extension/test/fixture.js": "d8f721faae71975f56ba2da4409350ca6334c0fa4641c7826a7b652534c2f788",
+    "package.json": "98a8957b8b23ac5a389550ecfd258773c2f843e82d2ec4baf74ba8ac80bda769",
+    "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+    "runs/2026-10-10-actual-extension-consent.json": "3bf0fa05f774fd50ac518e706511c9342bf541b9a698d11fae4ce569f96723c6",
+    "runs/2026-10-10-consent-component-browser.json": "e1864433bb8382cfc9e148f57986aa25d2a6270182e5330ddff1cd5c151d0aa0",
+    "runs/2026-10-10-consent-worker-faults.json": "396c952c6bbf793fc3ee5ae0a0f06fd9bc4df8487e9dc7266bed9dca5b87f5f3",
+    "runs/2026-10-10-consumer-assets-public.json": "7461a5b03cb43fcccde3e0dce4317dbbae6d521acdd55b795c6b4102470fd001",
+    "runs/2026-10-10-consumer-deployment.json": "b30dedec65dda87f73369c632297206ea7f9e2f309ecbc9e2e84cf94d9d0d16b",
+    "runs/2026-10-10-consumer-ps-public.json": "0d1ddc62aa890d119a5dd287854c6f8699ff79f9a7eba8a2b685afbc6df4608c",
+    "runs/2026-10-10-consumer-site-public.json": "c8a874e8711035eacf329950499a290a98d6d33265a63a32e621906de4fdc384",
+    "runs/2026-10-10-current-extension-consent.json": "2c75918d360fed97930d4bf2f12817ddb31a79428f0c28433957dc63992f0404",
+    "runs/2026-10-10-http-privacy-python.json": "e2aeb72555c342d564461cb6c62f8dcf252ace222974d1b17a354be069825a65",
+    "runs/2026-10-10-http-privacy-service.json": "773c806c7b7eae515d52aedeb5ac39481d6b1e587f86e8dd82ec64f77a24728b",
+    "scripts/verify-device.cjs": "a31b1675df477f2b99a4793ad0690a96e7982e9454ea033d5d8e933b694a5640",
+    "scripts/verify-extension-consumer.cjs": "3e0a020985623478ec3a4087a8a246e15ccf2bd0e5916b948feb0736315d678e",
+    "scripts/verify-extension-privacy.cjs": "a07a41da7f0c133cd0ca690bb536512365c04f386dfc998ec7d4cf3c294f8266",
+    "scripts/verify-extension.cjs": "e9eb70e6621ae55380b7f410df6d91fe0ebd6cd52fdb2d1c55a9cab28b4ecebe",
+    "scripts/verify-service.py": "0aabc2aa9cb6f644399869cc97c1555f4a80fc04c8b08aa52639d297b3db6e8d",
+    "services/anonymizer/Dockerfile": "a552fe5d4ffc325ac03e4d9eb659b85f0e4eb3647b62755218e9a25de918cdcb",
+    "services/evaluator/Dockerfile": "adb032a393577f2b87f891e7ad170eee0fa0e3b03cce99e28009acf7a6da1963",
+    "services/gateway/Dockerfile": "f5343e87470b1938726023d62cf43cf26f8137597a5cebd274d08bd8fd049a0f",
+    "site/src/policies.js": "a22a02b254ecb590e79c55de31c0f75de0d7ea0ca3ec9c219898f10c992fa4d5",
+    "state.json": "9dd10c9fc9d780bcc295f9fea7a34d3e35aa0aec5ff604491e9b0aab5006bf19",
+    "tests/test_extension_consumer.py": "45b48dc08f461c4480c90ca6b27ddbd396f26e3859ee4f61a5a31f930a47cc29",
+    "tests/test_http_privacy.py": "e62244ffc998359f67ebff67937ca0347d528ce1c0cedbb2991f5fc4c899bd91"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-http-privacy-python.json",
+      "sha256": "e2aeb72555c342d564461cb6c62f8dcf252ace222974d1b17a354be069825a65"
+    },
+    {
+      "path": "runs/2026-10-10-http-privacy-service.json",
+      "sha256": "773c806c7b7eae515d52aedeb5ac39481d6b1e587f86e8dd82ec64f77a24728b"
+    },
+    {
+      "path": "runs/2026-10-10-current-extension-consent.json",
+      "sha256": "2c75918d360fed97930d4bf2f12817ddb31a79428f0c28433957dc63992f0404"
+    },
+    {
+      "path": "runs/2026-10-10-consent-worker-faults.json",
+      "sha256": "396c952c6bbf793fc3ee5ae0a0f06fd9bc4df8487e9dc7266bed9dca5b87f5f3"
+    },
+    {
+      "path": "runs/2026-10-10-consent-component-browser.json",
+      "sha256": "e1864433bb8382cfc9e148f57986aa25d2a6270182e5330ddff1cd5c151d0aa0"
+    },
+    {
+      "path": "runs/2026-10-10-consumer-deployment.json",
+      "sha256": "b30dedec65dda87f73369c632297206ea7f9e2f309ecbc9e2e84cf94d9d0d16b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-dependencies.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T14:10:02.915656+00:00"
+    }
+  ]
+}

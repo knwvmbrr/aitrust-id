@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T13:47:05.800829+00:00",
+  "updated": "2026-10-10T14:12:12.549487+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "GitHub Actions account billing lock prevents hosted CI jobs starting; local range and staged guards are verified"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 731,
+  "python_tests_passed": 748,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://94124862.aitrust-id.pages.dev",
+    "deployment_url": "https://71002fcf.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-compact-media-deployment.json",
+    "publication_evidence": "runs/2026-10-10-consumer-deployment.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 32,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-compact-media-site-public.json",
+    "verification": "runs/2026-10-10-consumer-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -115,14 +115,14 @@
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.2",
-      "effective_date": "2026-10-09",
+      "version": "1.3",
+      "effective_date": "2026-10-10",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
       "source": "site/src/policies.js",
       "text_downloads": true,
       "current_services_only": true,
-      "published": true,
+      "published": false,
       "verification": "runs/2026-10-09-branding-policies-public.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
@@ -281,7 +281,7 @@
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
     "published_source_commit": "510b72dd1be2d3cce1e9661fadb206d106f1237a",
-    "public_static_source_commit": "6b177f3dbe94e6bcd5cd1241435ddae90c7bb546"
+    "public_static_source_commit": "c66f9f727fed36c836fd4b50283f36a23f7753e2"
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -582,7 +582,7 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "403a317851a37c21d4e9e724911790eb6d230933",
+    "latest_implementation_commit": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
     "handheld_download_verified": true
   },
   "name_clearance": {
@@ -689,9 +689,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-10T13:47:05.800829+00:00",
-    "completed_records": 61,
-    "open_records": 141,
+    "audited_at": "2026-10-10T14:12:12.549487+00:00",
+    "completed_records": 67,
+    "open_records": 135,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -701,16 +701,16 @@
     "execution_evidence": "runs/2026-10-09-scope-completion-checks.json",
     "structural_evidence": "runs/2026-10-10-consumer-scope-progress.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-compact-media-deployment.json",
-    "source_commit": "6b177f3dbe94e6bcd5cd1241435ddae90c7bb546",
+    "publication": "runs/2026-10-10-consumer-deployment.json",
+    "source_commit": "c66f9f727fed36c836fd4b50283f36a23f7753e2",
     "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/consumer-boundary-result.md",
+    "latest_increment": "docs/privacy-boundaries.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 100,
     "target_start_open_records": 187,
-    "target_remaining_closures": 41,
+    "target_remaining_closures": 35,
     "publication_pending": true,
     "verification": "runs/2026-10-10-consumer-version-final-python.json"
   },
@@ -873,5 +873,24 @@
     "clean_installs": "runs/2026-10-10-clean-hashed-installs.json",
     "running_image_locks": "runs/2026-10-10-installed-runtime-locks.json",
     "inactive_registry_locked": false
+  },
+  "privacy_controls": {
+    "status": "current_selected_route_privacy_checks_pass; publication_pending",
+    "default_extension_capture": "paused_without_explicit_checks_enabled_true",
+    "token_save_is_consent": false,
+    "pause_aborts_pending_fetches": true,
+    "reset_scope": "local token and consent only; not server rotation or vendor deletion",
+    "http_errors_reflect_input": false,
+    "http_responses_no_store": true,
+    "evaluation_url_access_logs": false,
+    "independent_tag_validation": false,
+    "physical_erasure_guarantee": false,
+    "evidence": [
+      "runs/2026-10-10-http-privacy-service.json",
+      "runs/2026-10-10-current-extension-consent.json",
+      "runs/2026-10-10-http-privacy-python.json"
+    ],
+    "device_evidence": "runs/2026-10-10-privacy-device-engines.json",
+    "policy_evidence": "runs/2026-10-10-privacy-policies-local.json"
   }
 }

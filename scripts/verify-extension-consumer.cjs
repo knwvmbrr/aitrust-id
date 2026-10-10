@@ -3,9 +3,9 @@ const fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const assert=(v,message)=>{if(!v)throw Error(message);};
 const valid=()=>({assertion_id:crypto.randomUUID(),spec_version:'0.1.0',subject:{sha256:'a'.repeat(64),char_len:100,origin_host:'chatgpt.com',captured_at:new Date().toISOString(),modality:'text'},tags:[{code:'PS',confidence:.97,floor:.7,state:'asserted',signals:[{id:'sig.piped_installer.v3',score:.97,spans:[[4,20]]}]}],abstentions:[],evaluator:{models:[{name:'rules-only',sha256:'b'.repeat(64),revision:'fixture-v1'}],calibration_id:'uncalibrated',latency_ms:1}});
 const contractSource=fs.readFileSync('extension/src/shared/contract.js','utf8');
-async function request({message={type:'evaluate',text:'Synthetic command text'},sender={url:'https://chatgpt.com/c/synthetic'},token=crypto.randomBytes(24).toString('hex'),response,fetchFault=false,storageFault=false,closedChannel=false,noCredential=false}={}){
+async function request({message={type:'evaluate',text:'Synthetic command text'},sender={url:'https://chatgpt.com/c/synthetic'},token=crypto.randomBytes(24).toString('hex'),response,fetchFault=false,storageFault=false,closedChannel=false,noCredential=false,enabled=true,absentConsent=false}={}){
  let listener,reply,fetches=0,options,endpoint,replies=0,cancelled=false,secret=token;
- const sandbox={URL,AbortSignal,TextDecoder,Uint8Array,Date,Set,Number,chrome:{runtime:{onMessage:{addListener:f=>listener=f}},storage:{local:{get:async()=>{if(storageFault)throw Error('Synthetic storage error');return noCredential?{}:{token};}}}},fetch:async(url,init)=>{fetches++;endpoint=url;options=init;if(fetchFault)throw Error('Synthetic network failure');return typeof response==='function'?response(()=>cancelled=true):response||new Response(JSON.stringify(valid()),{headers:{'content-type':'application/json'}});}};
+ const sandbox={URL,AbortSignal,AbortController,setTimeout,clearTimeout,TextDecoder,Uint8Array,Date,Set,Number,chrome:{runtime:{onMessage:{addListener:f=>listener=f}},storage:{onChanged:{addListener:()=>{}},local:{get:async()=>{if(storageFault)throw Error('Synthetic storage error');return {...(noCredential?{}:{token}),...(absentConsent?{}:{checks_enabled:enabled})};}}}},fetch:async(url,init)=>{fetches++;endpoint=url;options=init;if(fetchFault)throw Error('Synthetic network failure');return typeof response==='function'?response(()=>cancelled=true):response||new Response(JSON.stringify(valid()),{headers:{'content-type':'application/json'}});}};
  vm.createContext(sandbox);vm.runInContext(contractSource,sandbox);
  const source=fs.readFileSync('extension/src/sw/service-worker.js','utf8').replace(/^import '\.\.\/shared\/contract\.js';\n/,'');
  vm.runInContext(source,sandbox);
@@ -19,6 +19,10 @@ async function verify(){
  const cases=[];
  async function check(name,settings,status,fetches){const result=await request(settings);assert(result.reply?.status===status,name+' incorrect state');if(fetches!==undefined)assert(result.fetches===fetches,name+' unexpectedly contacted a service');cases.push({name,status,pass:true});return result;}
  await check('valid_unsigned',{ },'ok',1);
+ await check('default_no_consent',{absentConsent:true},'unavailable',0);
+ await check('paused_no_capture',{enabled:false},'unavailable',0);
+ await check('non_boolean_consent',{enabled:'true'},'unavailable',0);
+ await check('credential_control_characters',{token:'synthetic-token-with-newline\n'},'unavailable',0);
  await check('wrong_origin',{sender:{url:'https://hostile.test/'}},'unsupported',0);
  await check('bad_sender',{sender:{url:'not a URL'}},'unsupported',0);
  await check('missing_token',{noCredential:true},'unavailable',0);

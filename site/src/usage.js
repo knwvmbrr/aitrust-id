@@ -43,7 +43,7 @@ export function usage(tag) {
     steps:setup,next:tag.id==='PS'
       ? 'A PS finding asks you to review a command pattern. No finding means no supported pattern was found, not “safe.” If a check cannot finish, it says so.'
       : 'A PII tag means detected values were redacted. Without a tag, private details may still be present.',
-    browser:'Optional Chrome tags: open chrome://extensions, enable Developer mode, choose Load unpacked, select this repository’s extension folder, then enter your local token in its options. Keep the services running and open ChatGPT. Tags appear below supported answers; click a tag for a short explanation.',
+    browser:'Optional Chrome tags: open chrome://extensions, enable Developer mode, choose Load unpacked, select this repository’s extension folder, then enter your local token in its options. Checks start paused: turn on Enable checks on ChatGPT separately. Keep the services running and open ChatGPT. Pause or reset in options at any time. Tags appear below supported answers; click a tag for a short explanation.',
     privacy:'Your answer goes to your own local service, not this website or a training database. Keep your token private. Do not paste it into a public report.',
     stop:'make down ENV_FILE="$HOME/.config/aitrust-id/runtime.env"'};
 }
