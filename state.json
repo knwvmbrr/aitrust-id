@@ -711,9 +711,9 @@
     "execution_evidence": "runs/2026-10-10-registry-deferral-linux-corrected.json",
     "structural_evidence": "runs/2026-10-10-registry-deferral-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-target-100-deployment.json",
-    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
-    "public_workflow_evidence": "runs/2026-10-09-branding-workflows-public.json",
+    "publication": "runs/2026-10-10-registry-deferral-deployment.json",
+    "source_commit": "a0718543dac233bb7fc10393f32fc987091574c6",
+    "public_workflow_evidence": "runs/2026-10-10-registry-deferral-site-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/registry-deferral-result.md",
     "completed_subtasks": 1,
@@ -721,7 +721,7 @@
     "target_open_records": 50,
     "target_start_open_records": 100,
     "target_remaining_closures": 49,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-registry-deferral-scope.json"
   },
   "research_components": {
@@ -810,9 +810,9 @@
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
   },
   "current_source_service_conformance": {
-    "captured_at": "2026-10-10T12:10:05.104822+00:00",
-    "evidence": "runs/2026-10-10-consumer-current-service.json",
-    "http_checks": 31,
+    "captured_at": "2026-10-10T15:17:30.840944+00:00",
+    "evidence": "runs/2026-10-10-context-v6-real-service.json",
+    "http_checks": 32,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
     "upstream_failure_and_recovery": true,
@@ -951,8 +951,8 @@
     "registry_adoption": false,
     "research_collection_connected": false,
     "independent_security_certification": false,
-    "publication": "runs/2026-10-10-target-100-assets-public.json",
-    "public_catalogue": "runs/2026-10-10-target-100-site-public.json",
+    "publication": "runs/2026-10-10-registry-deferral-assets-public.json",
+    "public_catalogue": "runs/2026-10-10-registry-deferral-site-public.json",
     "public_policies": "runs/2026-10-10-target-100-policies-public.json"
   },
   "offline_components": {
@@ -1001,7 +1001,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T17:50:20.129438+00:00",
+  "updated_at": "2026-10-10T17:57:12.884265+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1032,7 +1032,7 @@
     "public_register": "https://aitrustid.com/reference/legal-drafts/"
   },
   "registry_deferral": {
-    "status": "full_named_deferral_acceptance_verified_publication_pending",
+    "status": "full_named_deferral_acceptance_and_publication_verified",
     "record": "X-14",
     "operating_registry": false,
     "prototype_retained": true,
@@ -1041,6 +1041,8 @@
     "linux_execution": "runs/2026-10-10-registry-deferral-linux-corrected.json",
     "regression_checks": 57,
     "future_research_intake_enabled": false,
-    "publication_pending": true
+    "publication_pending": false,
+    "source_commit": "a0718543dac233bb7fc10393f32fc987091574c6",
+    "publication": "runs/2026-10-10-registry-deferral-deployment.json"
   }
 }

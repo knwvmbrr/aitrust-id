@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-175713-registry-deferral-publication-c6495202",
+  "recorded_at": "2026-10-10T17:57:13.119794+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a0718543dac233bb7fc10393f32fc987091574c6",
+  "changed": "Record verified Git publication and Cloudflare deployment; retain explicit source commit and public runtime evidence.",
+  "proves": "561 exact public artifact matches across preview, apex and www; 20 live tag modals, keyboard, narrow layout and text enlargement passed with zero automated axe violations.",
+  "limits": "99 requirements remain open toward the 50 target. No independent accuracy, human screen-reader acceptance, physical iPhone acceptance or research intake is inferred.",
+  "scope_ids": [
+    "X-14"
+  ],
+  "files": {
+    "docs/registry-deferral-result.md": "efbe0794d68e8f4a6dce194b4453834329d33bcba1d977c3d8bc6396a9f44590",
+    "runs/2026-10-10-registry-deferral-assets-public.json": "835f7eb4eb7c95bbf9f67da319b05e9934ea7e6fe97fb10a071ea1bb43729deb",
+    "runs/2026-10-10-registry-deferral-deployment.json": "f79172010c443f75c9e04e9ece23f4d906029bd7112e30b41953a44852726664",
+    "runs/2026-10-10-registry-deferral-site-public.json": "1a744b5575cc0f692f1db4d3e97d782b82e390281eaeda5762d9306973cc957e",
+    "state.json": "f48748bbe9c746e60c56d6f3f61e7a558878e5e5c6e07bd450385e118c37d4c1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-registry-deferral-assets-public.json",
+      "sha256": "835f7eb4eb7c95bbf9f67da319b05e9934ea7e6fe97fb10a071ea1bb43729deb"
+    },
+    {
+      "path": "runs/2026-10-10-registry-deferral-site-public.json",
+      "sha256": "1a744b5575cc0f692f1db4d3e97d782b82e390281eaeda5762d9306973cc957e"
+    },
+    {
+      "path": "runs/2026-10-10-registry-deferral-deployment.json",
+      "sha256": "f79172010c443f75c9e04e9ece23f4d906029bd7112e30b41953a44852726664"
+    }
+  ],
+  "checks": []
+}

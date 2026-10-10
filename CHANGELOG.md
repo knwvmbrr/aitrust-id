@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-175713-registry-deferral-publication-c6495202
+
+Recorded 2026-10-10T17:57:13.119794+00:00 · Contributor: Codex · change
+
+- **Changed.** Record verified Git publication and Cloudflare deployment; retain explicit source commit and public runtime evidence.
+- **Evidence.** 561 exact public artifact matches across preview, apex and www; 20 live tag modals, keyboard, narrow layout and text enlargement passed with zero automated axe violations. [Change record](./runs/changes/2026-10-10-175713-registry-deferral-publication-c6495202.json).
+- **Not claimed.** 99 requirements remain open toward the 50 target. No independent accuracy, human screen-reader acceptance, physical iPhone acceptance or research intake is inferred.
+
+
 ### 2026-10-10-175416-registry-security-download-e5574006
 
 Recorded 2026-10-10T17:54:16.181731+00:00 · Contributor: Codex · change

@@ -29,5 +29,10 @@ mount path; the application-write check remains enforced. See the
 [Python execution](../runs/2026-10-10-registry-deferral-python.json) and
 [boundary review](../runs/2026-10-10-registry-deferral-reviewed-boundaries.json).
 
-Publication is tracked separately in state and the deployment receipt. A source
+Published source `a0718543dac233bb7fc10393f32fc987091574c6` passed exact-byte
+checks for 187 artifacts on each of three origins (561 matches). All 20 tag
+panels, keyboard focus, 320px layout and 200% text enlargement passed on the
+public site with zero automated axe violations. See the
+[deployment receipt](../runs/2026-10-10-registry-deferral-deployment.json).
+Later bookkeeping commits record this evidence without claiming a new runtime. A source
 or contract change reopens the acceptance; a document label cannot pass the guard.
