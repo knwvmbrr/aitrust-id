@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-211706-verified-dependency-ledger-publication-5798548f",
+  "recorded_at": "2026-10-10T21:17:06.100087+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e0ff90987b59be8953b9fedfa1a4438a4c7d9b7f",
+  "changed": "Record normal protected merge of the reviewed source and verify the published ledger, catalogue and source artifacts.",
+  "proves": "Both workflows pass all eleven required engineering checks; 561 public artifacts match, 20 live panels pass and all 202 scope IDs remain visible.",
+  "limits": "Evidence bookkeeping is not another runtime deployment. Independent accuracy, physical phone testing and optional research intake remain open.",
+  "scope_ids": [
+    "F-152",
+    "F-054",
+    "N-011"
+  ],
+  "files": {
+    "docs/dependency-automation-result.md": "e85ad8177482426ae81f527482a9dc81363bb0f2214ba8d2c61bcff49190c405",
+    "runs/2026-10-10-dependency-accepted-protected-source.json": "22f9acd0c10fc5ae587c6fab60b07cee120603132d507f0ad6a0ae07729c90f3",
+    "runs/2026-10-10-dependency-accepted-publication.json": "2dc142c704440cfca9efdb404d77ed84438d2413c14eb18d26cdeb671fecfbc1",
+    "runs/2026-10-10-dependency-accepted-site-public.json": "cd250d5213e9bd31cbd6062ed0fe74a85937d164c865921e889cdbd51ff6f1a6",
+    "state.json": "3b1bdffabaf3e66ec76dea8f44e1c27dff71f0148756f30ae69d6433b08a792e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-dependency-accepted-protected-source.json",
+      "sha256": "22f9acd0c10fc5ae587c6fab60b07cee120603132d507f0ad6a0ae07729c90f3"
+    },
+    {
+      "path": "runs/2026-10-10-dependency-accepted-publication.json",
+      "sha256": "2dc142c704440cfca9efdb404d77ed84438d2413c14eb18d26cdeb671fecfbc1"
+    },
+    {
+      "path": "runs/2026-10-10-dependency-accepted-site-public.json",
+      "sha256": "cd250d5213e9bd31cbd6062ed0fe74a85937d164c865921e889cdbd51ff6f1a6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T21:17:06.295714+00:00"
+    }
+  ]
+}

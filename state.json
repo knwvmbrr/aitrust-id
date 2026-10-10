@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T21:08:52.396013+00:00",
+  "updated": "2026-10-10T21:16:49.311012+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://daf1fbfa.aitrust-id.pages.dev",
+    "deployment_url": "https://a1e07693.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-owner-pilot-assets-public.json",
+    "publication_evidence": "runs/2026-10-10-dependency-accepted-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 35,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-capture-site-public.json",
+    "verification": "runs/2026-10-10-dependency-accepted-site-public.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -717,11 +717,11 @@
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-10-dependency-automation-hosted-acceptance.json",
-    "structural_evidence": "runs/2026-10-10-registry-deferral-scope.json",
+    "structural_evidence": "runs/2026-10-10-dependency-acceptance-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-registry-deferral-deployment.json",
-    "source_commit": "a0718543dac233bb7fc10393f32fc987091574c6",
-    "public_workflow_evidence": "runs/2026-10-10-registry-deferral-site-public.json",
+    "publication": "runs/2026-10-10-dependency-accepted-publication.json",
+    "source_commit": "a8919741319877e9bb619424222ece251f17e81d",
+    "public_workflow_evidence": "runs/2026-10-10-dependency-accepted-site-public.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/dependency-automation-result.md",
     "completed_subtasks": 1,
@@ -729,8 +729,8 @@
     "target_open_records": 50,
     "target_start_open_records": 100,
     "target_remaining_closures": 47,
-    "publication_pending": true,
-    "verification": "runs/2026-10-10-registry-deferral-scope.json"
+    "publication_pending": false,
+    "verification": "runs/2026-10-10-dependency-acceptance-scope.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1009,7 +1009,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T21:08:52.396013+00:00",
+  "updated_at": "2026-10-10T21:16:49.311012+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1074,9 +1074,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
-    "deployment_url": "https://0a4b7796.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-10-ci-portable-publication.json",
+    "source_commit": "a8919741319877e9bb619424222ece251f17e81d",
+    "deployment_url": "https://a1e07693.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-10-dependency-accepted-publication.json",
     "matching_artifacts": 561,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
@@ -1113,7 +1113,8 @@
     "scheduled_jobs_observed": 10,
     "held_proposal": "https://github.com/knwvmbrr/aitrust-id/pull/4",
     "production_dependencies_updated": false,
-    "independent_human_review": false
+    "independent_human_review": false,
+    "protected_review_acceptance": "runs/2026-10-10-dependency-accepted-protected-source.json"
   },
   "state_chronology": {
     "evidence": "runs/2026-10-10-state-chronology-correction.json",

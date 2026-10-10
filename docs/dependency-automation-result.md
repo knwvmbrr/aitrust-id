@@ -27,3 +27,14 @@ repository engineering controls, not independent human review or tag accuracy.
 The separate release gate remains unmet. Research intake is disabled; the first
 pilot remains an optional metadata preview/download with no examples authorized.
 Website publication of the updated ledger is verified separately after deployment.
+
+## Publication verified
+
+Reviewed source `a8919741319877e9bb619424222ece251f17e81d` is live. All 187
+artifacts match at its Pages deployment, aitrustid.com and www (561 exact decoded
+HTTP byte checks). All 20 live panels pass, with zero automated axe violations
+and all 202 scope records preserved. Both source workflows passed all eleven
+required engineering checks after the chronology correction; normal PR 11 merge
+used no protection bypass. See `runs/2026-10-10-dependency-accepted-publication.json`
+and `runs/2026-10-10-dependency-accepted-protected-source.json`. Later evidence
+bookkeeping is not a new runtime deployment.
