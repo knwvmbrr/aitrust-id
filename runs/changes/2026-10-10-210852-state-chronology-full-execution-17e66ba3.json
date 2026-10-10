@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-210852-state-chronology-full-execution-17e66ba3",
+  "recorded_at": "2026-10-10T21:08:52.436657+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f6edcce7adb4e8eaf7675975b575396f56335994",
+  "changed": "Record the complete repaired Python suite and finalize matching state timestamps after the referenced execution evidence.",
+  "proves": "1052 Python tests pass, including 23 accountability controls; 138 existing evidence references remain explicit and date-only history stays untimed.",
+  "limits": "Engineering execution only; one existing deprecation warning, no released detector accuracy or physical-device claim.",
+  "scope_ids": [
+    "F-152",
+    "F-150"
+  ],
+  "files": {
+    "docs/state-chronology-plan.md": "60553981cb9f41ab246220e84abe2cb1b278be62f4a7a086a5309673928a53f8",
+    "runs/2026-10-10-state-chronology-correction.json": "93df41e5b2cd47bbbb94a14a3f188b689dd7637be96dd10eed3d577994b9c289",
+    "runs/2026-10-10-state-chronology-full-python.json": "6961a2ef34de17ac1ff7199b03ab212ee20b197f59522ba1d3e04e70e5087b27",
+    "scripts/verify-accountability.py": "15dc21704432140df6b863c057b75e2ae5843ff99c972ecfb75dc38646e4a4c6",
+    "state.json": "fbdd66f2488e203e309c010da1007fcbd7b82df52f4a07fcacd7cda9ec0c733c",
+    "tests/test_accountability.py": "8f04785269fdb55139930b5e04149cffc7b0fb632dd2cd4c08316014c91d5071"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-state-chronology-full-python.json",
+      "sha256": "6961a2ef34de17ac1ff7199b03ab212ee20b197f59522ba1d3e04e70e5087b27"
+    },
+    {
+      "path": "runs/2026-10-10-state-chronology-correction.json",
+      "sha256": "93df41e5b2cd47bbbb94a14a3f188b689dd7637be96dd10eed3d577994b9c289"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T21:08:53.179576+00:00"
+    }
+  ]
+}

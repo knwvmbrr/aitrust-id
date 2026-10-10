@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T20:58:39.656735+00:00",
+  "updated": "2026-10-10T21:08:52.396013+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1037,
+  "python_tests_passed": 1052,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1009,7 +1009,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T20:58:39.656735+00:00",
+  "updated_at": "2026-10-10T21:08:52.396013+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1114,5 +1114,12 @@
     "held_proposal": "https://github.com/knwvmbrr/aitrust-id/pull/4",
     "production_dependencies_updated": false,
     "independent_human_review": false
+  },
+  "state_chronology": {
+    "evidence": "runs/2026-10-10-state-chronology-correction.json",
+    "contract": "docs/state-chronology-plan.md",
+    "guard": "scripts/verify-accountability.py",
+    "timestamp_rule": "Matching timezone-aware state timestamps must follow all explicitly referenced timed run evidence; untimed historical receipts remain untimed.",
+    "complete_python_suite": "runs/2026-10-10-state-chronology-full-python.json"
   }
 }

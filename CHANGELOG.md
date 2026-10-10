@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-10
 
+### 2026-10-10-210852-state-chronology-full-execution-17e66ba3
+
+Recorded 2026-10-10T21:08:52.436657+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete repaired Python suite and finalize matching state timestamps after the referenced execution evidence.
+- **Evidence.** 1052 Python tests pass, including 23 accountability controls; 138 existing evidence references remain explicit and date-only history stays untimed. [Change record](./runs/changes/2026-10-10-210852-state-chronology-full-execution-17e66ba3.json).
+- **Not claimed.** Engineering execution only; one existing deprecation warning, no released detector accuracy or physical-device claim.
+
+
+### 2026-10-10-210749-enforce-state-evidence-chronology-c784b497
+
+Recorded 2026-10-10T21:07:49.288742+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix the reviewed state timestamp inversion and require matching state times no earlier than referenced timed evidence.
+- **Evidence.** 23 actual accountability checks reject stale, invalid, future, missing, duplicate or linked evidence; historical date-only records remain explicitly untimed. [Change record](./runs/changes/2026-10-10-210749-enforce-state-evidence-chronology-c784b497.json).
+- **Not claimed.** Chronology does not authenticate evidence, establish license clearance or replace independent validation.
+
+
 ### 2026-10-10-210115-dependency-acceptance-current-website-proof-1b160bba
 
 Recorded 2026-10-10T21:01:15.609556+00:00 · Contributor: Codex · change

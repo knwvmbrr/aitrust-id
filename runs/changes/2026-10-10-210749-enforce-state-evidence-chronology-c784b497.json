@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-10-210749-enforce-state-evidence-chronology-c784b497",
+  "recorded_at": "2026-10-10T21:07:49.288742+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f6edcce7adb4e8eaf7675975b575396f56335994",
+  "changed": "Fix the reviewed state timestamp inversion and require matching state times no earlier than referenced timed evidence.",
+  "proves": "23 actual accountability checks reject stale, invalid, future, missing, duplicate or linked evidence; historical date-only records remain explicitly untimed.",
+  "limits": "Chronology does not authenticate evidence, establish license clearance or replace independent validation.",
+  "scope_ids": [
+    "F-152",
+    "F-150"
+  ],
+  "files": {
+    "docs/state-chronology-plan.md": "60553981cb9f41ab246220e84abe2cb1b278be62f4a7a086a5309673928a53f8",
+    "runs/2026-10-10-state-chronology-correction.json": "93df41e5b2cd47bbbb94a14a3f188b689dd7637be96dd10eed3d577994b9c289",
+    "scripts/verify-accountability.py": "15dc21704432140df6b863c057b75e2ae5843ff99c972ecfb75dc38646e4a4c6",
+    "state.json": "b63cb2db9d7d21fc52f97480700d082b2bd14753662a8764f3ac44ebc0d3c8f0",
+    "tests/test_accountability.py": "8f04785269fdb55139930b5e04149cffc7b0fb632dd2cd4c08316014c91d5071"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-10-state-chronology-correction.json",
+      "sha256": "93df41e5b2cd47bbbb94a14a3f188b689dd7637be96dd10eed3d577994b9c289"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-10T21:07:49.513735+00:00"
+    }
+  ]
+}
