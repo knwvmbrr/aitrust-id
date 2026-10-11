@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-200925-source-capture-web-preparation-f4791d00",
+  "recorded_at": "2026-10-11T20:09:25.839198+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "86b634ed552bcae304517f8e1c5f50162e6a893c",
+  "changed": "Preserve the initial website run and record prepared public scope projections plus real signature refusal evidence before source revalidation.",
+  "proves": "All five initial website commands returned zero, but the receipt correctly refused because preparation regenerated the public scope projection. The actual signature tool also refused altered archive, bundle and root inputs.",
+  "limits": "The failed stable-source receipt is retained. A new frozen-source run is required; no full requirement, accuracy or license acceptance changed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-10-11-source-captured-bound-website.json": "7f113c8d6101ec87e499ad8298d35a5d245328b7aa8aba46d3a652ae870cdfd9",
+    "runs/2026-10-11-source-captured-real-refusals.json": "7a0637c70e31c551515df7b37afaf27bd842028fe89f46d7899aca7b8259cdba",
+    "site/src/public-scope.json": "b75b0db76a900f02ecf49c9dc7048b4cd4137d7a462442813f5cbb236f6f3b4b",
+    "site/src/scope-manifest.json": "c46022dcad024d08b4852b4d3cfb2bcfb7c2eebadb3f0c8edb80fa18d1954bb8",
+    "site/public/reference/public-scope.json": "b75b0db76a900f02ecf49c9dc7048b4cd4137d7a462442813f5cbb236f6f3b4b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-source-captured-bound-website.json",
+      "sha256": "7f113c8d6101ec87e499ad8298d35a5d245328b7aa8aba46d3a652ae870cdfd9"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-real-refusals.json",
+      "sha256": "7a0637c70e31c551515df7b37afaf27bd842028fe89f46d7899aca7b8259cdba"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T20:09:26.032776+00:00"
+    }
+  ]
+}

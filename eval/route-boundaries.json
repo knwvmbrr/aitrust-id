@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T19:54:19.261401+00:00",
-  "reviewed_by": "Codex \u2014 executed private blind-review CLI/browser/device integration and unchanged endpoint/access review",
+  "reviewed_at": "2026-10-11T20:12:23.438563+00:00",
+  "reviewed_by": "Codex \u2014 executed captured source-verification input handoff and unchanged application endpoint/access review",
   "rules": [
     "X-01",
     "X-03",
@@ -344,7 +344,7 @@
     "scripts/replay-assertion.py": "9c0555438fa20ee07c6a562bd0b914634b404a5176e2026cd97c30451169b3f7",
     "scripts/reviewer-agreement.py": "e8da7cb0e8c1b7c8187cf83cdee2449b041f76d0e146966bd3fe88263d8790f5",
     "scripts/revocation.cjs": "b89aed87d4120960085604feda993573e012cfe303e7191cbcf257e9a02bf605",
-    "scripts/source_snapshot.py": "53c59596ecec49ab4c7a5e47e0b9ec8d6d72d189c352daf5c8029b4164b65765",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
     "scripts/spdx_inventory.py": "b22cdea09d05413c3663579efbe4cfe9d8fefb5836457f6268cf233ab9924a1b",
     "scripts/timestamp-artifact.py": "38c872be11f7ded8bba9a300cc4f9e56c48b2b2020ae9cb640e5605ccb82c02f",
     "scripts/verify-assertion-replay.py": "67ba07f3edc6da225887d0ed334c21b43ccdb025621dc07fbbb23ad24a5da51b",
@@ -369,7 +369,7 @@
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-plan.py": "cc0660aced2664618f20c7d67ccd3b63e395cbc05660395d6670ae9b663ebfd9",
     "scripts/verify-signed-gateway.cjs": "47abfdd0a2bb88407d90a56b75b66b0d5215261c208de1a75b0e9e6bbf5d1aac",
-    "scripts/verify-source-provenance.py": "23af3bd57297f1ef309c17abaf644eda68823f3a4e06331a5e02471e43e095ba",
+    "scripts/verify-source-provenance.py": "dc9e8995841c5a330cc019bd32a75a20c72335e10c7311b5855cd9d63ff9decf",
     "scripts/verify-workflows.cjs": "b3692070ff011d460db4ebc56587db5eda15a782812cf0a6f112fc9ad5438462",
     "services/adjudicator/adjudicate.py": "4f0fa7bf3d0a18144cbd89b1fd2123bd0a9d66a9f76ef0133c05208e430a4d14",
     "services/adjudicator/presentation.py": "2166006c60c49a81c3d65d883e0e781d8f65c5461481f1db85257c644fcba762",
@@ -432,12 +432,12 @@
     "site/src/policies.js": "4e375fb0c7852b5134af7adc8fe98fff403bac69460dff3d8fc6234c9dbea03f",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "c8fcb34aba57ff8804cc750bd05585d414c018fd5196f2991fe4ad992c18beeb",
+    "site/src/public-scope.json": "b75b0db76a900f02ecf49c9dc7048b4cd4137d7a462442813f5cbb236f6f3b4b",
     "site/src/redaction-performance-model.js": "4633a77f3866572f470c7895570c3b032fad4c061c0c71260bd1a00175e7630a",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "9ec01caf4ece26c22386245019b755b06f83b000a8748d6c59cbdba500c17dc5",
+    "site/src/scope-manifest.json": "c46022dcad024d08b4852b4d3cfb2bcfb7c2eebadb3f0c8edb80fa18d1954bb8",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
     "site/src/tag-performance.json": "37d5b0b7e08ef84cc018fd8f4953302f62fdf5da2f78c6c804b79b17ff9c8969",
@@ -515,7 +515,7 @@
     "tests/test_reviewer_agreement.py": "d4db4344c4100e57ce39284711d56da4c4a0da18bacf94f0419c97e705767229",
     "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192",
     "tests/test_scope_index.py": "7a5d29fba7d74ee77938ea5985a30211b24abddd1c44586675afc904070bfa3f",
-    "tests/test_source_provenance.py": "d50854181eb329e112d58e16a5ab8f771e4b03e19195cfd7b0b6bc62cbdfdb13",
+    "tests/test_source_provenance.py": "2503ce6ea16fffebf0d3109cc97d9f26fad2b7ef0c4ec87e91efa9497f43bc05",
     "tests/test_spdx_inventory.py": "9b5a6859e1b80d48e4f996b8eaafba53d49af57b6163777e31e22bc4f8db8437",
     "tests/test_transport_signing.py": "230f05007da4814ab2eab4893917499e59bf8285ae9d4f3a74febab03a26254b",
     "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
@@ -533,7 +533,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-11-blind-private-bound-extension.json",
-    "website": "runs/2026-10-11-blind-private-bound-website.json"
+    "website": "runs/2026-10-11-source-captured-prepared-website.json"
   },
   "device_evidence": {
     "source_commit": "c2226fb67047b737246804ce2bd6a0134b1a0ff3",

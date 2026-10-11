@@ -3,6 +3,8 @@ import gzip
 import hashlib
 import io
 import json
+import os
+import stat
 import re
 import subprocess
 import tarfile
@@ -175,12 +177,45 @@ def inspect(raw, expected_commit):
 
 
 def read_file(path, limit):
-    path = Path(path)
-    if (path.is_symlink() or any(p.is_symlink() for p in path.parents)
-            or not path.is_file()):
-        raise ValueError('Missing or symlinked verification input')
-    with path.open('rb') as stream:
-        raw = stream.read(limit + 1)
-    if not raw or len(raw) > limit:
+    """Capture one bounded regular input through no-follow directory descriptors."""
+    if type(limit) is not int or limit < 1:
         raise ValueError('Verification input limit')
-    return raw
+    if not hasattr(os, 'O_NOFOLLOW') or not hasattr(os, 'O_DIRECTORY'):
+        raise ValueError('Safe verification input reads unavailable')
+    path = Path(path).absolute()
+    if '..' in path.parts or len(path.parts) < 2:
+        raise ValueError('Unsafe verification input path')
+    directory = os.open(path.anchor, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        for component in path.parts[1:-1]:
+            next_directory = os.open(component, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,
+                                     dir_fd=directory)
+            os.close(directory)
+            directory = next_directory
+        fd = os.open(path.name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK,
+                     dir_fd=directory)
+        try:
+            before = os.fstat(fd)
+            if (not stat.S_ISREG(before.st_mode) or before.st_nlink != 1
+                    or not 0 < before.st_size <= limit):
+                raise ValueError('Verification input type or limit')
+            chunks, remaining = [], limit + 1
+            while remaining:
+                data = os.read(fd, min(remaining, 1_048_576))
+                if not data:
+                    break
+                chunks.append(data)
+                remaining -= len(data)
+            raw = b''.join(chunks)
+            after = os.fstat(fd)
+            fields = ('st_dev', 'st_ino', 'st_size', 'st_mtime_ns', 'st_ctime_ns', 'st_nlink')
+            if (not raw or len(raw) != before.st_size or len(raw) > limit
+                    or any(getattr(before, f) != getattr(after, f) for f in fields)):
+                raise ValueError('Verification input changed during capture')
+            return raw
+        finally:
+            os.close(fd)
+    except OSError as error:
+        raise ValueError('Verification input unavailable or unsafe') from error
+    finally:
+        os.close(directory)

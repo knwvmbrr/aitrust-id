@@ -1,0 +1,7 @@
+# Signed-source input handoff — executed 2026-10-11
+
+The source verifier captures bounded regular inputs through no-follow directory descriptors and refuses file changes, links, hardlinks, special files and excessive sizes. Signature verification reads exclusive temporary copies of those same captured bytes. All staged inputs are checked again before the captured archive is inspected; cleanup occurs on success, failure and timeout. Originals are untouched.
+
+77 installed-source controls pass on the Mac. The same capture implementation authenticated retained source a36898f30f91adfd189baed12ba7f7c13740964b using separately obtained trust roots on the Mac and network-isolated Linux. Linux testing used the previously checksum-verified GitHub CLI 2.102.0, with no transferred credentials or system configuration changes. The private synthetic source sandbox was removed.
+
+This closes the capture/tool handoff defect, not F-057 or X-02. Full redistribution obligations, runtime image signing and broader architecture acceptance remain open. No signature proves safe software, tag accuracy, human identity or authorship. All five current capability checks pass, the reviewed inventory covers 513 selected files, and the full suite passes 1,955 Python tests with one upstream warning in 53.72 seconds. The actual signature tool refuses changed archive, bundle and root inputs. The first website receipt remains failed because its preparer changed generated scope files during execution; the prepared stable-source rerun passes. Protected publication remains pending.

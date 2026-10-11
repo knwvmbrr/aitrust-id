@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T19:57:37.411463+00:00",
+  "updated": "2026-10-11T20:14:24.265045+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1923,
+  "python_tests_passed": 1955,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://00a5e183.aitrust-id.pages.dev",
+    "deployment_url": "https://50b1f91e.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-pii-labels-publication.json",
+    "publication_evidence": "runs/2026-10-11-blind-private-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -296,7 +296,7 @@
     "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "104b5e347c37a0d5bad464515391087dfdee6947",
+    "source_commit": "86b634ed552bcae304517f8e1c5f50162e6a893c",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T19:47:23.935934+00:00",
+    "audited_at": "2026-10-11T20:05:45.003137+00:00",
     "completed_records": 114,
     "open_records": 88,
     "records_preserved": 202,
@@ -732,11 +732,11 @@
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-pii-labels-publication.json",
+    "publication": "runs/2026-10-11-blind-private-publication.json",
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/blind-review-privacy-plan.md",
+    "latest_increment": "docs/source-input-binding-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -746,7 +746,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-11-blind-private-current-boundaries.json",
+    "current_target_verification": "runs/2026-10-11-source-captured-boundaries.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-11"
@@ -966,7 +966,7 @@
   "personal_route_boundaries": {
     "status": "current_source_checks_pass_publication_pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-11-blind-private-current-boundaries.json",
+    "evidence": "runs/2026-10-11-source-captured-boundaries.json",
     "source_files": 513,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1030,11 +1030,11 @@
     "PII_REDACTED": "runs/2026-10-11-blind-private-bound-PII_REDACTED.json",
     "protocol": "runs/2026-10-11-blind-private-bound-protocol.json",
     "extension": "runs/2026-10-11-blind-private-bound-extension.json",
-    "website": "runs/2026-10-11-blind-private-bound-website.json",
+    "website": "runs/2026-10-11-source-captured-prepared-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T19:57:37.411463+00:00",
+  "updated_at": "2026-10-11T20:14:24.265045+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1639,7 +1639,7 @@
     "published_source": "104b5e347c37a0d5bad464515391087dfdee6947"
   },
   "blind_review_privacy": {
-    "status": "current_source_checks_pass_publication_pending",
+    "status": "current_source_checks_pass_protected_merge_and_publication_verified",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-108",
@@ -1655,7 +1655,7 @@
     "independence_verified": false,
     "sampling_accepted": false,
     "release_assessed": false,
-    "publication_pending": true,
+    "publication_pending": false,
     "requirements_closed": 0,
     "linux_focused_security_controls": 56,
     "browser_execution": "runs/2026-10-11-blind-private-arguments-browser.json",
@@ -1672,6 +1672,25 @@
     "website_execution": "runs/2026-10-11-blind-private-bound-website.json",
     "current_boundaries": "runs/2026-10-11-blind-private-current-boundaries.json",
     "python_execution": "runs/2026-10-11-blind-private-current-python.json",
-    "full_python_tests_passed": 1923
+    "full_python_tests_passed": 1923,
+    "publication": "runs/2026-10-11-blind-private-publication.json",
+    "protected_merge": "runs/2026-10-11-blind-private-protected-merge.json"
+  },
+  "source_input_capture": {
+    "status": "current_source_checks_pass_protected_publication_pending",
+    "implemented_by": "Codex",
+    "architecture": "docs/source-input-binding-plan.md",
+    "mac": "runs/2026-10-11-source-captured-mac.json",
+    "linux": "runs/2026-10-11-source-captured-linux.json",
+    "focused_controls": 77,
+    "original_inputs_modified": false,
+    "independent_accuracy_evidence": false,
+    "license_cleared": false,
+    "requirements_closed": 0,
+    "current_capabilities": "runs/2026-10-11-source-captured-capabilities.json",
+    "actual_refusals": "runs/2026-10-11-source-captured-real-refusals.json",
+    "current_boundaries": "runs/2026-10-11-source-captured-boundaries.json",
+    "full_python_execution": "runs/2026-10-11-source-captured-full-python.json",
+    "full_python_tests_passed": 1955
   }
 }

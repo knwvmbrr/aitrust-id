@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-201424-source-capture-current-verification-6c7f4ab6",
+  "recorded_at": "2026-10-11T20:14:24.319569+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "86b634ed552bcae304517f8e1c5f50162e6a893c",
+  "changed": "Record frozen-source website acceptance, all five current capabilities, selected boundaries and full Python execution for the source verifier.",
+  "proves": "All five capability receipts pass; 513 selected route files match; 1955 Python tests pass. Source verification consumes captured inputs and refuses actual modified signature inputs.",
+  "limits": "88 full requirements remain open. Source origin is not independent accuracy, license clearance or runtime image authentication. Protected review/publication is pending.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "eef0552f15a10e7aaa5de9ac6b7e6f4b604ae11be973c5b636790f8a90382f47",
+    "docs/source-input-binding-result.md": "4aee783960ab7872b1deb6d710ea180b9f1a10f73da1e63ac4678b40a81b07c9",
+    "eval/route-boundaries.json": "436a376f57e460af1f22ea8e5d6dcb62d4ac68fd9bf07a6f584491ae36e9b4f2",
+    "runs/2026-10-11-source-captured-prepared-website.json": "1e7b903cb47dc66fed995ba5c5dc852de4d52911fcff0b35dad9da1426f271ce",
+    "runs/2026-10-11-source-captured-capabilities.json": "72c421194cae60f630c2a1978b5340efbdb900ed750594c7fca83f10c6777909",
+    "runs/2026-10-11-source-captured-boundaries.json": "5105c57696d33fb45bbf8b50fcbc2da985ff71ccc39101006e23f6d0dc6e1b78",
+    "runs/2026-10-11-source-captured-full-python.json": "e4c41dd1b28ec0eecb5f819c8d14fc50e1d1ca2035271d89846919c1fe669c62"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-source-captured-prepared-website.json",
+      "sha256": "1e7b903cb47dc66fed995ba5c5dc852de4d52911fcff0b35dad9da1426f271ce"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-capabilities.json",
+      "sha256": "72c421194cae60f630c2a1978b5340efbdb900ed750594c7fca83f10c6777909"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-boundaries.json",
+      "sha256": "5105c57696d33fb45bbf8b50fcbc2da985ff71ccc39101006e23f6d0dc6e1b78"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-full-python.json",
+      "sha256": "e4c41dd1b28ec0eecb5f819c8d14fc50e1d1ca2035271d89846919c1fe669c62"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T20:14:24.706865+00:00"
+    }
+  ]
+}

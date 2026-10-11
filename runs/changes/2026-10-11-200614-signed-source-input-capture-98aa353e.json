@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-200614-signed-source-input-capture-98aa353e",
+  "recorded_at": "2026-10-11T20:06:14.357866+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "86b634ed552bcae304517f8e1c5f50162e6a893c",
+  "changed": "Pin downloaded source, signature bundle and separately trusted root to captured bytes; record the completed private-review publication.",
+  "proves": "77 installed source controls pass, and actual signatures verify on Mac and network-isolated Linux. Review workflow PR 38 passed all 22 required checks; all 244 artifacts match on each of three public origins.",
+  "limits": "88 requirements remain open. Signed origin is not license clearance, independent accuracy or safety. A compromised same-account process or verifier is outside this input-handoff boundary.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-015",
+    "F-108"
+  ],
+  "files": {
+    "docs/blind-review-privacy-result.md": "dfc09a6de149279966c162d94d2494210c0df485a114bf09099fe1686e59d959",
+    "docs/scope-progress.json": "4dd88b70bac64dc395ae3ae549e8d4eb85323b33c5c16d22e9202241a342560c",
+    "docs/scope-progress.md": "5bdf8d7d0a4ffc552d8e90682db1bf0e16bacd94c09eb569cc7c3763b8b5678e",
+    "docs/source-input-binding-plan.md": "177e3832a35e2b71fb36b9bfac8036ee6630e50ffddb2429f7a40836a27ad8af",
+    "docs/source-input-binding-result.md": "e8e592e033769baea701f3e7281cacf757ae662b499121bc46e8a06aad6ac4d9",
+    "docs/source-provenance.md": "b0d0f4e3defa1f5d74979c920756b3333f6280f397704c69e6921dfda4eb71b0",
+    "runs/2026-10-11-blind-private-merge-history.json": "6871b9e39b767c99bf6b7edc67478325e8f62cfafa2d3587027ba0c18a29e6b7",
+    "runs/2026-10-11-blind-private-primary-ff.json": "328d7f329691c51c4699904c638894e6a0c0cd54529a2fb52b04c565cf917f98",
+    "runs/2026-10-11-blind-private-protected-merge.json": "d4117a9d3c249a3b7d8162b5f8e65bd4a08d30f250baa002d067e2b6d7451e44",
+    "runs/2026-10-11-blind-private-publication.json": "2fbf4351bcc7daab07134d0959f8b43bac994e8840f73b8c06abe4539d12f22b",
+    "runs/2026-10-11-source-captured-controls.json": "595a0c2f4d48c9954f68d2eaa082a9a07c445d1796b88e77017a30007970d7fa",
+    "runs/2026-10-11-source-captured-linux.json": "bff0d3bb13f45f4345a32582d3ddb4f12eea435e01a1ab0f30c8ed36a4102102",
+    "runs/2026-10-11-source-captured-mac.json": "c214585ec9ef78c0dd8aabe53436858f8e6b12b0607f2d48ac8ac6419df0363a",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/verify-source-provenance.py": "dc9e8995841c5a330cc019bd32a75a20c72335e10c7311b5855cd9d63ff9decf",
+    "state.json": "7678116baab56aef4ab28baf0c6a2175cea5ff5b2e8373d1d1ea680ed4145b84",
+    "tests/test_source_provenance.py": "2503ce6ea16fffebf0d3109cc97d9f26fad2b7ef0c4ec87e91efa9497f43bc05"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-source-captured-controls.json",
+      "sha256": "595a0c2f4d48c9954f68d2eaa082a9a07c445d1796b88e77017a30007970d7fa"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-mac.json",
+      "sha256": "c214585ec9ef78c0dd8aabe53436858f8e6b12b0607f2d48ac8ac6419df0363a"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-linux.json",
+      "sha256": "bff0d3bb13f45f4345a32582d3ddb4f12eea435e01a1ab0f30c8ed36a4102102"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-publication.json",
+      "sha256": "2fbf4351bcc7daab07134d0959f8b43bac994e8840f73b8c06abe4539d12f22b"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-primary-ff.json",
+      "sha256": "328d7f329691c51c4699904c638894e6a0c0cd54529a2fb52b04c565cf917f98"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-merge-history.json",
+      "sha256": "6871b9e39b767c99bf6b7edc67478325e8f62cfafa2d3587027ba0c18a29e6b7"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-protected-merge.json",
+      "sha256": "d4117a9d3c249a3b7d8162b5f8e65bd4a08d30f250baa002d067e2b6d7451e44"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T20:06:14.479980+00:00"
+    }
+  ]
+}
