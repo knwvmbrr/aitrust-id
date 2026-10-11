@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-11T16:36:28.522062+00:00",
+  "pass": true,
+  "actual_postgresql_fault_injection": true,
+  "injected_schema_install_failure": true,
+  "failure_artifact": {
+    "captured_at": "2026-10-11T16:36:27.832253+00:00",
+    "pass": false,
+    "failure_stage": "verification",
+    "only_synthetic_records": true,
+    "production_database_changed": false,
+    "new_endpoints": 0,
+    "independent_accuracy_evidence": false,
+    "completed_cases": [],
+    "source_snapshot_at_failure": {
+      "deploy/research/metadata-development.sql": "1719e178959fdb04366280f3aefbf5977facab2f586b0bc90d16fa99a459de42",
+      "scripts/metadata-store-sandbox.py": "50ef656444769e2736d78fe9dd28333ffcb536b8b466e5cf1cdf58a350915729",
+      "scripts/verify-metadata-store.py": "b9d9accd8c47c8921b06a77c24fe459b24af8b31dc80f5901278fcec47664901",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c"
+    },
+    "worker_exit_status": 1,
+    "stdout_sha256": "ac3f142be6fb4879d6b112c19a2565678b725cca6c20a39363ca5d3a04a955b1",
+    "stderr_sha256": "3f25df79555278d6c21d8d50ebf7fdf6d2faeb4f5e2a13ed302d92ea452f8a44",
+    "sandbox_shutdown_verified": true,
+    "private_cluster_removed": true
+  },
+  "ordinary_linux_user": true,
+  "no_production_changes": true,
+  "not_accuracy_evidence": true
+}

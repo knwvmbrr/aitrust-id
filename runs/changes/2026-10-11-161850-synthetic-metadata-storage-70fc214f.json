@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-161850-synthetic-metadata-storage-70fc214f",
+  "recorded_at": "2026-10-11T16:18:50.870373+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6dfc9df2804449d59f65e30b020ec5fbae457a07",
+  "changed": "Built synthetic-only PostgreSQL metadata storage with restricted roles, exact fields, withdrawal and expiry; added an owned private Unix-socket test runner and its CI workflow. Refreshed published native-loader acceptance in scope/state.",
+  "proves": "39 actual non-root PostgreSQL controls pass, including all 80 supported feedback combinations and escaped-Unicode refusal without reflected canaries. Shutdown/removal occurs before passing evidence is written. F-025 current merged source passed 16 anonymous CLI cases, both hosted native jobs and all 22 required engineering contexts.",
+  "limits": "No participant intake, endpoint, production database change, retention adoption, independent accuracy or training/anomaly job is claimed. N-011 advances to executable-check milestone only; all 202 records remain, 114 complete and 88 open.",
+  "scope_ids": [
+    "N-011",
+    "F-044",
+    "F-045",
+    "F-141",
+    "F-161",
+    "F-025"
+  ],
+  "files": {
+    ".github/workflows/metadata-storage.yml": "2fef6bfecace79c70014529093aae5b4f4d1368fed29e54cd2d393ed778794b0",
+    "deploy/research/metadata-development.sql": "a6df9e0e344a9910adb5e9576a028106966dbaa907e7221f8c73ce8d5586a32f",
+    "docs/manifest-inspection.md": "a9c88de1b14f9d137c269f9a2b68d25b8107586ecc9dd3e9f51136ec5262d624",
+    "docs/metadata-storage-plan.md": "dd7078feb806de0cf2cce52cbb0f7e06e54db03ef2b35b1a7787176ad0a65310",
+    "docs/metadata-storage.md": "5cfd621232276f5c3a709fcc9b108b909196f042b46a205e1c380f8f6ca42134",
+    "docs/scope-progress.json": "84c9bba99f0fbc2bf63432725cc761baaddafc3db5b485b9079937a5c4d4f56e",
+    "docs/scope-progress.md": "823ddb69cac55b01c2a4f2119a473e842efd1a0f3bbd0a2cf6e2994eb52058f7",
+    "runs/2026-10-11-manifest-loader-merged-source.json": "68461bab0d397201f6ea09bf6d49e3684e11dded38a6ee5d70c09819e8381a89",
+    "runs/2026-10-11-manifest-loader-protected-merge.json": "48a80f22b219ac755f967a4d4a69184de27d15ba47914d015bebc77191b37868",
+    "runs/2026-10-11-metadata-storage-scope.json": "bb63997cdaf944701f517a18d7adaa92eda8a3e4b7b569e964b06d7fbdecb061",
+    "runs/2026-10-11-metadata-store-helper-linux.json": "e1ca0892c17df40bfbea1a47420d059a839592e18f9b4d88c36201aacb83e3b7",
+    "runs/2026-10-11-metadata-store-linux-final.json": "c573215f8e9a25ac79db810f3fe5eeee04380dc2c1dfaf2278b8e18acca1815c",
+    "runs/2026-10-11-metadata-store-linux.json": "81637732f27570628ca53990d0260c6e10f1ac16a0a6eb36ff7de1d06a30ca6e",
+    "runs/2026-10-11-metadata-store-unicode-linux.json": "f78e79d39f3696753b6056201f12896f049902f26bf9ef9a20c96fdb75683601",
+    "scripts/metadata-store-sandbox.py": "9a55a147e577ee1713682699eb1b0369e306844b917090b5f6f212819273cc86",
+    "scripts/verify-metadata-store.py": "bec380606bc2284543ef8f169a0f4c44bd6ebea40588bf2be3b75da413602e40",
+    "scripts/verify-route-boundaries.py": "7ffd2609912b64d97ee3917e4ea52f63f99fa2262f6d99a72d2ae93d90551c6e",
+    "state.json": "6d61a8c11e92a77ae90464de966ed80ad1a3718c656d38c7dbc144902ccb37f4",
+    "tests/test_metadata_store.py": "0451b812a1554ffd4f345c45d506785d6a6552d48403ebdbbac747b8fb873778"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-metadata-store-unicode-linux.json",
+      "sha256": "f78e79d39f3696753b6056201f12896f049902f26bf9ef9a20c96fdb75683601"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-merged-source.json",
+      "sha256": "68461bab0d397201f6ea09bf6d49e3684e11dded38a6ee5d70c09819e8381a89"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-protected-merge.json",
+      "sha256": "48a80f22b219ac755f967a4d4a69184de27d15ba47914d015bebc77191b37868"
+    },
+    {
+      "path": "runs/2026-10-11-metadata-storage-scope.json",
+      "sha256": "bb63997cdaf944701f517a18d7adaa92eda8a3e4b7b569e964b06d7fbdecb061"
+    }
+  ],
+  "checks": []
+}

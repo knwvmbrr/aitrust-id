@@ -2851,10 +2851,11 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-11T15:19:36.016108+00:00",
+        "audited_at": "2026-10-11T16:17:29.010903+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — optional real C2PA file adapter, pin/privacy/limits and actual Mac/nonroot isolated Linux execution"
+          "Codex — optional real C2PA file adapter, pin/privacy/limits and actual Mac/nonroot isolated Linux execution",
+          "Codex — absolute pinned SDK loading, checkout-local environment compatibility and published-source/native hosted acceptance, 2026-10-11T16:17:29.010903+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -2877,9 +2878,12 @@
           ".github/workflows/manifest-inspection.yml",
           "tests/test_manifest_workflow.py",
           "runs/2026-10-11-manifest-protected-acceptance.json",
-          "runs/2026-10-11-manifest-merged-source-acceptance.json"
+          "runs/2026-10-11-manifest-merged-source-acceptance.json",
+          "docs/manifest-loader-plan.md",
+          "runs/2026-10-11-manifest-loader-merged-source.json",
+          "runs/2026-10-11-manifest-loader-protected-merge.json"
         ],
-        "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release. The hosted job passes 13 real cases on both push and PR for be14b359; the protected merge d26acfc passes the same 13 cases from an anonymously downloaded source archive. Full embedded assertions can be explicitly exported privately. Broader formats, signer interpretation and FA/PA remain retained under the modality/tag jobs.",
+        "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release. The hosted job passes 13 real cases on both push and PR for be14b359; the protected merge d26acfc passes the same 13 cases from an anonymously downloaded source archive. Full embedded assertions can be explicitly exported privately. Broader formats, signer interpretation and FA/PA remain retained under the modality/tag jobs. The 1.0.1 loader now passed 16 actual cases per Mac/Linux platform, both hosted native runs and anonymous merged-source execution; the registry/FA/PA boundaries are unchanged.",
         "required_acceptance": [],
         "queue": "completed"
       }
@@ -12360,15 +12364,17 @@
         "id": "N-011",
         "kind": "requirement",
         "title": "In-house research data, training and anomaly pipeline",
-        "percent_complete": 40,
+        "percent_complete": 60,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-10T17:31:33.618951+00:00",
+        "audited_at": "2026-10-11T16:17:29.010903+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — synthetic-only PostgreSQL storage/grant/withdrawal/expiry controls and owned Unix-socket harness, 2026-10-11T16:17:29.010903+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -12376,17 +12382,24 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Metadata-only first pilot accepted. Choose retention/backup expiry and roles; approve concrete private intake; exercise synthetic consent/deletion and replacement-host recovery before real submissions. Example sharing, training and anomaly jobs remain separate.",
+        "next_fix": "Accept the proposed collection/purpose/roles/retention/withdrawal contract and endpoint; implement invitation quotas and reviewed proxy/provider handling; prove encrypted backup expiry and replacement-host recovery; then run a consenting pilot. Training, example sharing and anomaly analysis remain separate jobs. Synthetic storage controls are implemented, not a deployed intake.",
         "next_owner": "Michael data policy; Codex application",
         "evidence": [
           "docs/data-growth-plan.md",
           "runs/2026-10-08-private-host-foundation.json",
           "docs/owner-operation.md",
-          "runs/2026-10-10-owner-feedback-browser.json"
+          "runs/2026-10-10-owner-feedback-browser.json",
+          "docs/metadata-storage-plan.md",
+          "docs/metadata-storage.md",
+          "deploy/research/metadata-development.sql",
+          "scripts/metadata-store-sandbox.py",
+          "scripts/verify-metadata-store.py",
+          "tests/test_metadata_store.py",
+          "runs/2026-10-11-metadata-store-unicode-linux.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation 39 actual non-root PostgreSQL controls (including all 80 supported enum combinations) exercise synthetic development storage only. No participant data, endpoint, production database change or training/anomaly operation is claimed.",
         "required_acceptance": [
-          "Metadata-only first pilot accepted. Choose retention/backup expiry and roles; approve concrete private intake; exercise synthetic consent/deletion and replacement-host recovery before real submissions. Example sharing, training and anomaly jobs remain separate."
+          "Accept the proposed collection/purpose/roles/retention/withdrawal contract and endpoint; implement invitation quotas and reviewed proxy/provider handling; prove encrypted backup expiry and replacement-host recovery; then run a consenting pilot. Training, example sharing and anomaly analysis remain separate jobs. Synthetic storage controls are implemented, not a deployed intake."
         ],
         "queue": "open"
       }

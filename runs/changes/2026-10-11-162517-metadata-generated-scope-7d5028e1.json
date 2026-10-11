@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-162517-metadata-generated-scope-7d5028e1",
+  "recorded_at": "2026-10-11T16:25:17.156294+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6dfc9df2804449d59f65e30b020ec5fbae457a07",
+  "changed": "Regenerated public scope artifacts for the synthetic metadata milestone and retained failed verification receipts.",
+  "proves": "The failed first website receipt records source regeneration; the full-suite failure identifies the stale route inventory rather than granting acceptance.",
+  "limits": "Neither failed receipt is passing evidence; 114 complete and 88 open remain unchanged.",
+  "scope_ids": [
+    "N-011",
+    "F-025"
+  ],
+  "files": {
+    "site/src/public-scope.json": "16267e66a6ee2f06c8e10cdd819403700e69cc8e3732842b96c6fc15c081b067",
+    "site/src/scope-manifest.json": "c68f8dfe03e16c5740c7ee1718c1c7c59af9e718d17b110bb48401af19a09525",
+    "site/public/reference/public-scope.json": "16267e66a6ee2f06c8e10cdd819403700e69cc8e3732842b96c6fc15c081b067",
+    "runs/2026-10-11-metadata-storage-website.json": "0caeb4b1f60dc7cf3c592d53cef9c88cd89e0dca7db9c63cabc102ab4de33cef",
+    "runs/2026-10-11-metadata-storage-website-stable.json": "9534f0dc20af258a867dfab839b76e128556040c8181b8d5749e21aceedd495b",
+    "runs/2026-10-11-metadata-storage-full-python.json": "7ba3357b927aaa507f109ec80952ff1a8af3836a5652ac301ea9c5ec0deac2e5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-metadata-store-unicode-linux.json",
+      "sha256": "f78e79d39f3696753b6056201f12896f049902f26bf9ef9a20c96fdb75683601"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-162722-metadata-current-verification-ccf5eac3",
+  "recorded_at": "2026-10-11T16:27:22.610345+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6dfc9df2804449d59f65e30b020ec5fbae457a07",
+  "changed": "Refreshed exact generated website and route inventories after synthetic storage changes.",
+  "proves": "All five source-bound capabilities and unchanged endpoint/permission boundaries pass.",
+  "limits": "Engineering acceptance does not validate tag accuracy or activate research collection.",
+  "scope_ids": [
+    "N-011",
+    "F-025"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "6e5fc998fc6622dc99e69b33ccdf4109b584b672e567d42a531cbcae3d6415d5",
+    "runs/2026-10-11-metadata-storage-website-current.json": "88d291868c9c9cb914ecb82e2a893c684a8313734b89ab1549ca587d242aac07",
+    "runs/2026-10-11-metadata-storage-current-capabilities.json": "1b92f0ed5e95c99339234a63237529851951d9fe4759a39ab517c6df6d0d9e51",
+    "runs/2026-10-11-metadata-storage-boundaries.json": "ed9b1206ab206b65cd9ccdd744dda7fd3117c1fb1b571743d966dd932d90552a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-metadata-storage-website-current.json",
+      "sha256": "88d291868c9c9cb914ecb82e2a893c684a8313734b89ab1549ca587d242aac07"
+    },
+    {
+      "path": "runs/2026-10-11-metadata-storage-current-capabilities.json",
+      "sha256": "1b92f0ed5e95c99339234a63237529851951d9fe4759a39ab517c6df6d0d9e51"
+    },
+    {
+      "path": "runs/2026-10-11-metadata-storage-boundaries.json",
+      "sha256": "ed9b1206ab206b65cd9ccdd744dda7fd3117c1fb1b571743d966dd932d90552a"
+    }
+  ],
+  "checks": []
+}

@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-163937-metadata-reviewed-python-366ca120
+
+Recorded 2026-10-11T16:39:37.204599+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded full-suite acceptance for bounded failure diagnostics and refreshed actual state timestamps.
+- **Evidence.** 1567 Python checks pass with execution sources unchanged; the stored failure proof remains a deliberately failing database outcome. [Change record](./runs/changes/2026-10-11-163937-metadata-reviewed-python-366ca120.json).
+- **Not claimed.** No hosted final-head pass, new full closure, real intake or independent accuracy is claimed.
+
+
+### 2026-10-11-163826-metadata-failure-evidence-f8cd3103
+
+Recorded 2026-10-11T16:38:26.178234+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve bounded PostgreSQL failure evidence after cleanup, including completed cases, operation index, SQLSTATE, source/output hashes and teardown status.
+- **Evidence.** All 39 current SQL controls pass. A real injected missing-function failure writes a failing artifact with operation 2 / SQLSTATE 42883 after confirmed shutdown/removal. 22 focused controls reject malformed diagnostics and unsafe boundaries. [Change record](./runs/changes/2026-10-11-163826-metadata-failure-evidence-f8cd3103.json).
+- **Not claimed.** Raw SQL, server logs, worker diagnostics and participant content are not published. No intake, full recovery, independent accuracy or new full requirement closure is claimed.
+
+
+### 2026-10-11-162830-metadata-python-acceptance-1e84e9ed
+
+Recorded 2026-10-11T16:28:30.324939+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current full-suite storage acceptance and documented the one-command synthetic Linux test.
+- **Evidence.** 1559 Python checks pass with unchanged execution sources, and all current route controls pass. [Change record](./runs/changes/2026-10-11-162830-metadata-python-acceptance-1e84e9ed.json).
+- **Not claimed.** 39 actual PostgreSQL controls remain separate from unit checks; no real collection, tag accuracy, hosted workflow pass or additional full requirement closure is claimed.
+
+
+### 2026-10-11-162722-metadata-current-verification-ccf5eac3
+
+Recorded 2026-10-11T16:27:22.610345+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed exact generated website and route inventories after synthetic storage changes.
+- **Evidence.** All five source-bound capabilities and unchanged endpoint/permission boundaries pass. [Change record](./runs/changes/2026-10-11-162722-metadata-current-verification-ccf5eac3.json).
+- **Not claimed.** Engineering acceptance does not validate tag accuracy or activate research collection.
+
+
+### 2026-10-11-162517-metadata-generated-scope-7d5028e1
+
+Recorded 2026-10-11T16:25:17.156294+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public scope artifacts for the synthetic metadata milestone and retained failed verification receipts.
+- **Evidence.** The failed first website receipt records source regeneration; the full-suite failure identifies the stale route inventory rather than granting acceptance. [Change record](./runs/changes/2026-10-11-162517-metadata-generated-scope-7d5028e1.json).
+- **Not claimed.** Neither failed receipt is passing evidence; 114 complete and 88 open remain unchanged.
+
+
+### 2026-10-11-161850-synthetic-metadata-storage-70fc214f
+
+Recorded 2026-10-11T16:18:50.870373+00:00 · Contributor: Codex · change
+
+- **Changed.** Built synthetic-only PostgreSQL metadata storage with restricted roles, exact fields, withdrawal and expiry; added an owned private Unix-socket test runner and its CI workflow. Refreshed published native-loader acceptance in scope/state.
+- **Evidence.** 39 actual non-root PostgreSQL controls pass, including all 80 supported feedback combinations and escaped-Unicode refusal without reflected canaries. Shutdown/removal occurs before passing evidence is written. F-025 current merged source passed 16 anonymous CLI cases, both hosted native jobs and all 22 required engineering contexts. [Change record](./runs/changes/2026-10-11-161850-synthetic-metadata-storage-70fc214f.json).
+- **Not claimed.** No participant intake, endpoint, production database change, retention adoption, independent accuracy or training/anomaly job is claimed. N-011 advances to executable-check milestone only; all 202 records remain, 114 complete and 88 open.
+
+
 ### 2026-10-11-160522-loader-venv-accepted-9659097a
 
 Recorded 2026-10-11T16:05:22.739748+00:00 · Contributor: Codex · change

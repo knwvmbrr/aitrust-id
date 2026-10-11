@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-163937-metadata-reviewed-python-366ca120",
+  "recorded_at": "2026-10-11T16:39:37.204599+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "37206be034b753f0c1a7c3e98554df5e76a95be4",
+  "changed": "Recorded full-suite acceptance for bounded failure diagnostics and refreshed actual state timestamps.",
+  "proves": "1567 Python checks pass with execution sources unchanged; the stored failure proof remains a deliberately failing database outcome.",
+  "limits": "No hosted final-head pass, new full closure, real intake or independent accuracy is claimed.",
+  "scope_ids": [
+    "N-011",
+    "F-025"
+  ],
+  "files": {
+    "README.md": "e95c3a7ce63ab47d20740e54cf8cf7c6452a697fbe18b88a77092f22337a3dee",
+    "state.json": "486a28b5ff148eb4d1ff3f015f996ebc5fb9e451fcc24346555b6f7adc72d682",
+    "runs/2026-10-11-metadata-storage-diagnostics-python.json": "4f50d07924f744636a9343383b654041a82f612fa8b58891f7f093bdaf208b30"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-metadata-storage-diagnostics-python.json",
+      "sha256": "4f50d07924f744636a9343383b654041a82f612fa8b58891f7f093bdaf208b30"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T16:39:37.471570+00:00"
+    }
+  ]
+}
