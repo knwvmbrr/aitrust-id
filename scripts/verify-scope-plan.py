@@ -4,6 +4,19 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def require(condition,message):
  if not condition:raise ValueError(message)
+def verify_task_percentages(index,records):
+ expected={'TASK-'+r['id']:r['percent_complete'] for r in records}
+ observed={}
+ for line in index.splitlines():
+  if not line.startswith('| TASK-'):continue
+  match=re.fullmatch(r'\| (TASK-[A-Za-z0-9-]+) \|.*\| ([0-9]{1,3})% · \[evidence/fix\]\(scope-progress\.md\) \|',line)
+  require(match is not None,'Invalid rendered scope task percentage')
+  task,percentage=match.groups()
+  require(task not in observed,'Duplicate rendered scope task')
+  observed[task]=int(percentage)
+ require(observed==expected,'Rendered task percentages disagree with completion ledger')
+ return len(observed)
+
 def verify():
  scope=json.loads((ROOT/'docs/master-scope.json').read_text());plan=json.loads((ROOT/'docs/scope-delivery.json').read_text())
  original=scope['records'];records=plan['records'];packages=plan['packages']
@@ -44,6 +57,8 @@ def verify():
  doc=(ROOT/'docs/scope-delivery.md').read_text();index=(ROOT/'docs/scope-task-index.md').read_text()
  for p in packages:require('### '+p['id']+'\n' in doc,'Package anchor absent '+p['id'])
  for r in records:require('| '+r['task_id']+' |' in index,'Record absent from reader index')
+ progress=json.loads((ROOT/'docs/scope-progress.json').read_text())
+ verify_task_percentages(index,progress['records'])
  for file in ['docs/scope-delivery.md','docs/scope-task-index.md']+[p['contract'] for p in packages if p['id'].startswith('TAG-')]:
   path=ROOT/file
   for target in re.findall(r'\]\(([^)]+)\)',path.read_text()):

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T18:10:05.568512+00:00",
+  "reviewed_at": "2026-10-11T18:24:23.250518+00:00",
   "reviewed_by": "Codex \u2014 per-response source-matched synthetic pipeline timing; no endpoint, permission, intake or tag change",
   "rules": [
     "X-01",
@@ -350,9 +350,10 @@
     "scripts/verify-replay-export.cjs": "30cbd99c5c3e81657ba337e64687325ffd170397a2df72e142dcd4f767403db0",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "7e8bbca3c32ecb4cd37f8061ff307b4a88a9c33bbcdc157a9370bc02dd06b8e2",
+    "scripts/verify-route-boundaries.py": "1f22aad9d4a04123457126228b80ada6c0538630198dd081d18b4ba1d18365d8",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
+    "scripts/verify-scope-plan.py": "cc0660aced2664618f20c7d67ccd3b63e395cbc05660395d6670ae9b663ebfd9",
     "scripts/verify-signed-gateway.cjs": "47abfdd0a2bb88407d90a56b75b66b0d5215261c208de1a75b0e9e6bbf5d1aac",
     "scripts/verify-source-provenance.py": "23af3bd57297f1ef309c17abaf644eda68823f3a4e06331a5e02471e43e095ba",
     "services/adjudicator/adjudicate.py": "4f0fa7bf3d0a18144cbd89b1fd2123bd0a9d66a9f76ef0133c05208e430a4d14",
@@ -488,6 +489,7 @@
     "tests/test_registry_deferral.py": "3d90be7b2dfcee63f8d1f2da1c0e279725dfd75f191845af9364b32a9fe67bb0",
     "tests/test_reviewer_agreement.py": "d4db4344c4100e57ce39284711d56da4c4a0da18bacf94f0419c97e705767229",
     "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192",
+    "tests/test_scope_index.py": "7a5d29fba7d74ee77938ea5985a30211b24abddd1c44586675afc904070bfa3f",
     "tests/test_source_provenance.py": "d50854181eb329e112d58e16a5ab8f771e4b03e19195cfd7b0b6bc62cbdfdb13",
     "tests/test_spdx_inventory.py": "9b5a6859e1b80d48e4f996b8eaafba53d49af57b6163777e31e22bc4f8db8437",
     "tests/test_transport_signing.py": "230f05007da4814ab2eab4893917499e59bf8285ae9d4f3a74febab03a26254b",
@@ -504,7 +506,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-11-pipeline-identity-extension-current.json",
-    "website": "runs/2026-10-11-reviewer-agreement-website-stable.json"
+    "website": "runs/2026-10-11-reviewer-agreement-index-ordered-website.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",

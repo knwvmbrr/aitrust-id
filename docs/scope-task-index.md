@@ -31,16 +31,16 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-T-OUT | PII_OUTBOUND | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-010 | sig.piped_installer.v1 — curl/wget piped to a shell | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-011 | sig.obfuscated_payload.v1 — base64/hex into eval/exec | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-F-012 | sig.credential_exfil.v1 — reads a secret path, writes to a network sink | [TAG-PS](scope-delivery.md#tag-ps) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-013 | sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name | [TAG-PS](scope-delivery.md#tag-ps) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-012 | sig.credential_exfil.v1 — reads a secret path, writes to a network sink | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-013 | sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-014 | Use/mention discriminator — is the command being recommended or discussed? | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-F-015 | sig.unsourced_specificity.v1 — figures or dates with no provenance marker | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-015 | sig.unsourced_specificity.v1 — figures or dates with no provenance marker | [TAG-HP](scope-delivery.md#tag-hp) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-016 | sig.selfcontradiction.v1 — NLI entailment between sentence pairs | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-017 | sig.duplicate_loop.v1 — n-gram repetition above threshold | [TAG-HP](scope-delivery.md#tag-hp) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-018 | sig.hedge_collapse.v1 — hedging absent where uncertainty is expected | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-019a | sig.urgency_frame.v1 — time-pressure lexicon plus imperative density | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-018 | sig.hedge_collapse.v1 — hedging absent where uncertainty is expected | [TAG-HP](scope-delivery.md#tag-hp) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-019a | sig.urgency_frame.v1 — time-pressure lexicon plus imperative density | [TAG-MT](scope-delivery.md#tag-mt) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-019b | sig.false_dilemma.v1 — binary framing where alternatives exist | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-019c | sig.authority_appeal.v1 — unattributed appeals to expertise or consensus | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-019c | sig.authority_appeal.v1 — unattributed appeals to expertise or consensus | [TAG-MT](scope-delivery.md#tag-mt) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-081 | Bring-your-own corpus — the user attaches their own reference material locally | [WP-REFERENCES](scope-delivery.md#wp-references) | 100% · [evidence/fix](scope-progress.md) |
@@ -50,7 +50,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-029a | sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-029b | sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-029c | sig.paste_burst.v1 — large insertion with no preceding keystrokes | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-025 | sig.c2pa_manifest.v1 — parses an attached C2PA manifest | [TAG-FA](scope-delivery.md#tag-fa) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-025 | sig.c2pa_manifest.v1 — parses an attached C2PA manifest | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
@@ -100,12 +100,12 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-109 | Dataset versioning and provenance per example | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-110 | Adversarial boundary examples for the use/mention discriminator | [TAG-PS](scope-delivery.md#tag-ps) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-053 | HP / MT / FI fixtures | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-056 | Krippendorff's α published for MT, ≥ 0.55 | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-056 | Krippendorff's α published for MT, ≥ 0.55 | [TAG-MT](scope-delivery.md#tag-mt) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-054 | CI that can actually fail | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-113 | Measured latency budget on declared hardware | [WP-RELEASE](scope-delivery.md#wp-release) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-114 | Method-appropriate abstention measurement and policy | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-115 | Network-isolation verification — exec into each container and prove it cannot reach out | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-057 | SBOM plus Sigstore release signing | [WP-RELEASE](scope-delivery.md#wp-release) | 20% · [evidence/fix](scope-progress.md) |
@@ -201,7 +201,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-T-UC | Unsafe Command | [TAG-UC](scope-delivery.md#tag-uc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-SC | Scam Pattern | [TAG-SC](scope-delivery.md#tag-sc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-BT | Automation Pattern | [TAG-BT](scope-delivery.md#tag-bt) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-N-011 | In-house research data, training and anomaly pipeline | [WP-RESEARCH](scope-delivery.md#wp-research) | 40% · [evidence/fix](scope-progress.md) |
+| TASK-N-011 | In-house research data, training and anomaly pipeline | [WP-RESEARCH](scope-delivery.md#wp-research) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-N-012 | Phone and offline on-device tag checker | [WP-MOBILE](scope-delivery.md#wp-mobile) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-N-013 | Native iPhone sharing into a tag check | [WP-MOBILE](scope-delivery.md#wp-mobile) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-N-014 | Native Android sharing into a tag check | [WP-MOBILE](scope-delivery.md#wp-mobile) | 20% · [evidence/fix](scope-progress.md) |

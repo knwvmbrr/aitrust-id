@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-182553-index-current-full-regression-eb230057",
+  "recorded_at": "2026-10-11T18:25:53.669554+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af21f8b31b86f0b1dec5b65f1a2b0b193efcb351",
+  "changed": "Record current full regression after scope-index consistency repair.",
+  "proves": "1692 Python tests pass, with 11 task-index regression checks and all 202 rendered percentages consistent with their ledger.",
+  "limits": "One upstream TestClient warning; no independent accuracy, physical-device, legal or full requirement closure.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "README.md": "476d2e3534d929f74ec7cc014808b1f1fe18b6397a8ac3fc078215a5a078e066",
+    "state.json": "6115c0ccfce70774183839fa647e710b711b6e212ccc92ef47ed7547fc43efa2",
+    "runs/2026-10-11-reviewer-agreement-index-python.json": "104e27df94296961b5deaaf72e9706b6aff52fa0f9df8e2aed616d8a5cd261f5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-index-python.json",
+      "sha256": "104e27df94296961b5deaaf72e9706b6aff52fa0f9df8e2aed616d8a5cd261f5"
+    }
+  ],
+  "checks": []
+}

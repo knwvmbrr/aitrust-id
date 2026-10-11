@@ -9,3 +9,7 @@ Strict unique-key bounded JSON, exact allowed keys, typed and length-bounded ali
 Primary source: Klaus Krippendorff, Computing Krippendorff’s Alpha-Reliability, 2011, revised literature 2013: https://www.asc.upenn.edu/sites/default/files/2021-03/Computing%20Krippendorff%27s%20Alpha-Reliability.pdf . Implemented formulas and independently written synthetic vectors only; do not redistribute the paper.
 
 Report destination failures are distinct from invalid rating data. Execute unsafe-output refusal and exclusive retained-report overwrite checks; an output failure prints no coefficient and does not modify the retained record.
+
+## Review correction: derived scope consistency
+
+The task index must agree with the ledger after a percentage changes. Regenerate the existing scope renderer, review each resulting file, and add an executable guard that compares every rendered task percentage against its ledger record, including duplicate/missing/orphan rows. This changes no acceptance criteria or completion counts. Keep PS/PII detailed contracts untouched as the renderer already specifies. Verify the corrected source, rerun current website checks affected by the regression gate, and record the original disagreement as a defect rather than calling the earlier audit consistent.

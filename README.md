@@ -144,10 +144,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current development source passed 1,681 Python checks, including
+The current development source passed 1,692 Python checks, including
 all 32 route-boundary checks. Execution is recorded in
-`runs/2026-10-11-reviewer-agreement-python.json` and
-`runs/2026-10-11-reviewer-agreement-boundaries.json`. All five active development fixture
+`runs/2026-10-11-reviewer-agreement-index-python.json` and
+`runs/2026-10-11-reviewer-agreement-index-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and

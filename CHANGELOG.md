@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-182553-index-current-full-regression-eb230057
+
+Recorded 2026-10-11T18:25:53.669554+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current full regression after scope-index consistency repair.
+- **Evidence.** 1692 Python tests pass, with 11 task-index regression checks and all 202 rendered percentages consistent with their ledger. [Change record](./runs/changes/2026-10-11-182553-index-current-full-regression-eb230057.json).
+- **Not claimed.** One upstream TestClient warning; no independent accuracy, physical-device, legal or full requirement closure.
+
+
+### 2026-10-11-182424-index-reviewed-source-boundaries-442be2b5
+
+Recorded 2026-10-11T18:24:24.305689+00:00 · Contributor: Codex · change
+
+- **Changed.** Include task-percentage guard and eleven regression cases in reviewed current source and state.
+- **Evidence.** 486 reviewed source files and all five current capability receipts; task index agrees with all 202 ledger rows. [Change record](./runs/changes/2026-10-11-182424-index-reviewed-source-boundaries-442be2b5.json).
+- **Not claimed.** No new tag or full requirement closure.
+
+
+### 2026-10-11-182423-index-ordered-website-5e4758fd
+
+Recorded 2026-10-11T18:24:23.040069+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute current website after matching code and prior failed-receipt records are committed to the change ledger.
+- **Evidence.** Four actual website commands pass with an unchanged source fingerprint. [Change record](./runs/changes/2026-10-11-182423-index-ordered-website-5e4758fd.json).
+- **Not claimed.** No independent accuracy, physical device or human accessibility acceptance.
+
+
+### 2026-10-11-182227-index-verification-sequencing-57e02ed6
+
+Recorded 2026-10-11T18:22:27.309999+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain failed operator verification and explain the change-record and exclusive-destination refusal.
+- **Evidence.** Changelog admission rejects unrecorded code/evidence; retained receipt cannot be overwritten. [Change record](./runs/changes/2026-10-11-182227-index-verification-sequencing-57e02ed6.json).
+- **Not claimed.** These failures are not successful website acceptance; source remains unchanged and no production service was modified.
+
+
+### 2026-10-11-182012-scope-index-ledger-consistency-59382fbf
+
+Recorded 2026-10-11T18:20:12.079075+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate ten stale task percentages and block disagreement between the readable task index and retained ledger.
+- **Evidence.** 11 tests include all 202 actual rows plus stale, inflated, malformed, missing, duplicated, orphan and incorrect-evidence-link cases; scope-plan passes. [Change record](./runs/changes/2026-10-11-182012-scope-index-ledger-consistency-59382fbf.json).
+- **Not claimed.** No full requirement closes and no acceptance criteria change; percentages remain evidence milestones.
+
+
 ### 2026-10-11-181111-agreement-full-regression-bdac46a6
 
 Recorded 2026-10-11T18:11:11.378515+00:00 · Contributor: Codex · change
