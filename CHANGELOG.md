@@ -2,6 +2,123 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-175709-timing-identity-full-acceptance-ad44d68e
+
+Recorded 2026-10-11T17:57:09.575688+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed the source-identity review correction with fresh staging, build admission, capability and full regression evidence; updated current counts and state chronology.
+- **Evidence.** 1643 Python tests pass against unchanged executable source; 46 focused client and 30 display controls pass. All five current capability receipts and the 480-file reviewed boundary guard pass. Each of the 253 actual staging assertions had a checked consistent gateway/redactor/evaluator identity. [Change record](./runs/changes/2026-10-11-175709-timing-identity-full-acceptance-ad44d68e.json).
+- **Not claimed.** This does not claim remote attestation, independent accuracy, physical-phone acceptance or an adopted speed budget. F-113 stays at 80 percent and the open requirement count remains 88.
+
+
+### 2026-10-11-175543-timing-reviewed-identity-boundaries-2c4cb7db
+
+Recorded 2026-10-11T17:55:43.164135+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual current boundary verification and updated state chronology after its execution.
+- **Evidence.** Current source/access/endpoint and browser evidence guards pass for the corrected timing implementation. [Change record](./runs/changes/2026-10-11-175543-timing-reviewed-identity-boundaries-2c4cb7db.json).
+- **Not claimed.** No independent accuracy, phone acceptance, remote attestation or full scope closure is claimed.
+
+
+### 2026-10-11-175542-timing-all-source-identity-checks-69a45dad
+
+Recorded 2026-10-11T17:55:42.060651+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed all five current source-bound capability receipts after the timing source-identity review correction, including actual website and downloadable full identity measurements.
+- **Evidence.** All five executed capability checks pass against unchanged source. Current source inventory and browser receipt references are reviewed; no user collection, endpoint, permission or tag change is introduced. [Change record](./runs/changes/2026-10-11-175542-timing-all-source-identity-checks-69a45dad.json).
+- **Not claimed.** The source identity is self-reported consistency, not remote attestation. The full regression suite follows; 88 requirements remain open.
+
+
+### 2026-10-11-175341-timing-runtime-identity-receipts-7078eb45
+
+Recorded 2026-10-11T17:53:41.800130+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the corrected staging source-identity measurement, refreshed F-113 evidence without closing it, and retained four newly executed source-capability receipts before the next website build.
+- **Evidence.** All four service/protocol/extension capabilities pass after the corrected timing configuration. The actual measured report is admitted by 30 display controls using checked canonical gateway/redactor digests; the old evaluator-only report is refused. [Change record](./runs/changes/2026-10-11-175341-timing-runtime-identity-receipts-7078eb45.json).
+- **Not claimed.** The website and whole suite are rerun before pushing this review correction; self-reported identity is not remote attestation. The scope count remains 114 complete and 88 open.
+
+
+### 2026-10-11-175237-timing-each-service-identity-a7ff1701
+
+Recorded 2026-10-11T17:52:37.077806+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected evaluator-only timing admission by validating the existing full pipeline identity on every response, matching gateway/normalization and five redactor sources, matching model entries and refusing runtime identity drift; the build checks canonical runtime identity digests and exact source bindings.
+- **Evidence.** 46 focused client controls and 30 source-bound display controls pass, including stale rehashed gateway/redactor, missing/corrupt identities, model mismatch and drift. A fresh actual staging run completed 253 requests across 12 profiles with the corrected client. [Change record](./runs/changes/2026-10-11-175237-timing-each-service-identity-a7ff1701.json).
+- **Not claimed.** These are self-reported source identities, not cryptographic remote attestation or protection against a compromised service lying. The earlier evaluator-only report is preserved and rejected by current display admission. Full source checks follow before publication.
+
+
+### 2026-10-11-174230-timing-regression-acceptance-3377d74b
+
+Recorded 2026-10-11T17:42:30.205818+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the corrected full regression run and visual review; updated README and current state to the executed counts.
+- **Evidence.** 1627 Python tests pass with unchanged executable source; 30 focused timing controls and 20 source-bound display controls pass. Five current capability receipts and 479 reviewed source files pass. Codex inspected actual 390px light/dark timing screenshots. [Change record](./runs/changes/2026-10-11-174230-timing-regression-acceptance-3377d74b.json).
+- **Not claimed.** One upstream test-client deprecation warning remains. Physical-device, outside-user, independent accuracy and latency-budget acceptance remain separate; zero full requirements were closed by this partial timing increment.
+
+
+### 2026-10-11-174041-timing-state-chronology-22220c06
+
+Recorded 2026-10-11T17:40:41.788017+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected state timestamps after recording the newest execution evidence; retained the failed full regression result.
+- **Evidence.** The full suite refused 13 accountability cases because state predated newly referenced capability receipts; 1614 other tests passed. The defect was state chronology, not a detector or timing computation regression. [Change record](./runs/changes/2026-10-11-174041-timing-state-chronology-22220c06.json).
+- **Not claimed.** The corrected state and full suite must be rerun. This event does not count a failing test as passed or close a requirement.
+
+
+### 2026-10-11-173909-timing-executed-capabilities-19634d5d
+
+Recorded 2026-10-11T17:39:09.060025+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded five current passing capability receipts, refreshed the reviewed source inventory and fixed stale publication aliases in state.
+- **Evidence.** PS, redaction, protocol, extension and current-built website checks all executed successfully against unchanged source. The website includes actual service timing downloads, keyboard and light/dark checks. [Change record](./runs/changes/2026-10-11-173909-timing-executed-capabilities-19634d5d.json).
+- **Not claimed.** F-113 remains 80 percent; 114 requirements complete and 88 open. Independent accuracy, physical phones and a declared accepted speed budget remain incomplete.
+
+
+### 2026-10-11-173641-timing-sequential-receipts-b330307f
+
+Recorded 2026-10-11T17:36:41.830840+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the newly executed PS, redaction, protocol and extension receipts before the website prebuild; retained the failed concurrent prebuild as evidence rather than ignoring the changelog gate.
+- **Evidence.** All four capabilities passed their current executed checks. Private failure diagnostics identify missing fresh matching events for concurrent receipt files as the latest prebuild rejection. [Change record](./runs/changes/2026-10-11-173641-timing-sequential-receipts-b330307f.json).
+- **Not claimed.** The website is rerun after this ordered event. No tag accuracy, physical-phone or speed-budget acceptance follows.
+
+
+### 2026-10-11-173533-timing-current-verification-08127921
+
+Recorded 2026-10-11T17:35:33.437901+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the actual timing UI verifier into the website source fingerprint and documented private bounded failure diagnostics.
+- **Evidence.** The latest separate built-site check passes 40 light/dark tag modal checks, 20 static pages and source-bound timing data downloads without outbound requests or automated accessibility violations. [Change record](./runs/changes/2026-10-11-173533-timing-current-verification-08127921.json).
+- **Not claimed.** This separate run is not a current revalidation receipt or physical-phone/human accuracy acceptance. Fresh capability receipts follow the final configuration.
+
+
+### 2026-10-11-173418-timing-verifier-diagnosis-705c6176
+
+Recorded 2026-10-11T17:34:18.687271+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected website verification to count the existing disclosures independently of the new nested service timing chart; added actual performance UI verification to the current-built website pipeline and moved timing admission tests after explicit Node setup.
+- **Evidence.** A separate diagnostic run identified a stale disclosure-count assertion. The original hash-only failed receipt cannot recover its lost diagnostic output; this correction will be checked by a fresh actual website run. [Change record](./runs/changes/2026-10-11-173418-timing-verifier-diagnosis-705c6176.json).
+- **Not claimed.** No independent tag accuracy, phone acceptance, speed budget or full requirement closure is claimed. Raw failed-command diagnostics are retained only in owner-private operator logs.
+
+
+### 2026-10-11-172914-timing-build-diagnosis-5065f5af
+
+Recorded 2026-10-11T17:29:14.232712+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained the failing first website execution receipt for the service timing display and continued its diagnosis before any release.
+- **Evidence.** The failure is retained with source fingerprints and command result; private execution logs are used to diagnose the actual build failure. [Change record](./runs/changes/2026-10-11-172914-timing-build-diagnosis-5065f5af.json).
+- **Not claimed.** This entry does not approve or complete the website, tag, timing budget or any requirement.
+
+
+### 2026-10-11-172643-staging-timing-measurements-f8a23498
+
+Recorded 2026-10-11T17:26:43.011398+00:00 · Contributor: Codex · change
+
+- **Changed.** Measured 253 actual staging requests at four input sizes and added source-bound local-service speed details to PS and redaction evidence; recorded numeric tool publication and full anonymous-download execution.
+- **Evidence.** 30 focused Python controls and 20 timing-display controls pass; the actual 12-profile benchmark checks running container sources, and all 2180 merged Git blobs match the public download. Numeric publication matches 714 served artifacts. [Change record](./runs/changes/2026-10-11-172643-staging-timing-measurements-f8a23498.json).
+- **Not claimed.** No independent accuracy, physical-phone timing, accepted speed budget, new endpoint or collection. The first prototype expectation failure is retained; 114 complete and 88 open remain.
+
+
 ### 2026-10-11-171304-quantitative-identifier-acceptance-070c3c08
 
 Recorded 2026-10-11T17:13:04.669300+00:00 · Contributor: Codex · change

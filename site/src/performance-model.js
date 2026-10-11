@@ -1,4 +1,5 @@
 // No content, identities or runtime heuristic scores enter public measurements.
+import {pipelineTimingFor,pipelineTimingHTML} from './pipeline-timing-model.js';
 export function validateEvidence(data, readHash) {
  if(data.format!=='ai-trust-id-performance-evidence/v1'||data.kind!=='development_regression'||data.independently_labeled!==false||data.release_validated!==false)throw Error('Invalid performance evidence classification');
  if(data.timing_source_sha256!==readHash('protocol/measurements.py'))throw Error('Stale timing implementation');
@@ -69,12 +70,12 @@ const nextTests={
  support:'Validate the actual support workflow before promising response times.',
  proprietary:'Test private-policy boundaries without weakening public tag standards.'
 };
-export function performanceFor(tag,evidence) {
+export function performanceFor(tag,evidence,timing=null) {
  const working=['PS','PII_REDACTED'].includes(tag.id);
  const base={id:tag.id,stage:working?'Working preview':'Not running',independently_validated:false,
   accuracy_measured:false,metrics:[],next_test:nextTests[tag.id]||'Define and execute this capability’s acceptance tests.',
   summary:tag.id==='PII_REDACTED'?'Redaction procedure checked; recognition accuracy not measured.':tag.audience==='enterprise'?'Organization capability; performance not measured.':'No measured results for this tag yet.',
-  sources:[],device:null};
+  sources:[],device:null,pipeline:timing?pipelineTimingFor(tag,timing):null};
  if(tag.id!=='PS')return base;
  return {...base,accuracy_measured:true,summary:'Development examples · not an independent accuracy study',
   categories:categoryGroups(evidence.category_metrics),measured_at:evidence.captured_at,metrics:evidence.metrics,counts:evidence.counts,case_count:evidence.case_count,
@@ -91,5 +92,5 @@ export function performanceHTML(record,esc) {
  const rows=record.metrics.map(m=>`<div class="performance-row"><div class="flex flex-wrap justify-between gap-2"><h3 class="text-sm font-semibold">${esc(m.label)}</h3><span class="tabular-nums text-sm">${m.denominator?esc(percent(m.point)):'Not measured'} · ${m.successes}/${m.denominator}</span></div>${m.interval?`<div class="performance-track" aria-hidden="true"><span class="performance-range" style="left:${m.interval[0]*100}%;width:${(m.interval[1]-m.interval[0])*100}%"></span><span class="performance-target" style="left:${m.candidate_lower_bound*100}%"></span></div><p class="text-xs text-muted">95% range ${esc(percent(m.interval[0]))}–${esc(percent(m.interval[1]))} · candidate lower bound ${esc(percent(m.candidate_lower_bound))}</p>`:''}<p class="text-xs text-muted">${esc(m.description)}</p></div>`).join('');
  const counts=record.counts?`<dl class="mt-3 grid grid-cols-2 gap-2 text-xs tabular-nums">${[['Correct alerts','tp'],['False alerts','fp'],['Missed patterns','fn'],['Correctly unflagged','tn']].map(([label,key])=>`<div><dt class="text-muted">${label}</dt><dd class="font-semibold">${record.counts[key]}</dd></div>`).join('')}</dl>`:'';
  const categories=record.categories?.length?`<details class="mt-3"><summary class="min-h-11 cursor-pointer py-3 font-semibold">Test breakdown</summary><p class="mb-2 text-muted">Development input groups, not a representative accuracy study.</p><dl class="space-y-2">${record.categories.map(c=>`<div class="border-b border-line pb-2"><dt class="font-semibold">${esc(c.label)}</dt><dd class="tabular-nums">${c.n} examples · ${c.fp} false alerts · ${c.fn} missed patterns</dd></div>`).join('')}</dl></details>`:'';
- return `<section data-tag-performance="${esc(record.id)}" aria-label="Tag performance" class="my-4 rounded-xl border border-line p-4"><div class="flex flex-wrap justify-between gap-2"><h2 class="text-sm font-semibold">Performance</h2><span class="text-xs text-muted">${esc(record.stage)}</span></div><p class="mt-1 text-sm">${esc(record.summary)}</p>${rows}${counts}${categories}<p class="mt-2 text-xs text-muted">${record.case_count?`${record.case_count} development examples. Range shows sampling uncertainty; tuned examples do not establish real-world accuracy. `:''}Independent release validation: pending.</p>${record.measured_at?`<p class="mt-1 text-xs text-muted">Measured ${esc(record.measured_at.slice(0,10))}</p>`:''}<p class="mt-2 text-xs"><strong>Next test:</strong> ${esc(record.next_test)}</p></section>`;
+ return `<section data-tag-performance="${esc(record.id)}" aria-label="Tag performance" class="my-4 rounded-xl border border-line p-4"><div class="flex flex-wrap justify-between gap-2"><h2 class="text-sm font-semibold">Performance</h2><span class="text-xs text-muted">${esc(record.stage)}</span></div><p class="mt-1 text-sm">${esc(record.summary)}</p>${rows}${counts}${categories}${pipelineTimingHTML(record.pipeline,esc)}<p class="mt-2 text-xs text-muted">${record.case_count?`${record.case_count} development examples. Range shows sampling uncertainty; tuned examples do not establish real-world accuracy. `:''}Independent release validation: pending.</p>${record.measured_at?`<p class="mt-1 text-xs text-muted">Measured ${esc(record.measured_at.slice(0,10))}</p>`:''}<p class="mt-2 text-xs"><strong>Next test:</strong> ${esc(record.next_test)}</p></section>`;
 }

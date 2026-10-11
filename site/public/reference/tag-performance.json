@@ -1866,6 +1866,34 @@
         ],
         "attribution_verified": true
       },
+      "pipeline": {
+        "kind": "synthetic_staging_pipeline_timing",
+        "measured_at": "2026-10-11T17:51:24.919198+00:00",
+        "logical_cpus": 4,
+        "sample_count_per_profile": 20,
+        "profile_count": 12,
+        "accuracy_evidence": false,
+        "budget_accepted": false,
+        "download": "/reference/pipeline-performance.json",
+        "rows": [
+          {
+            "input_length_codepoints": 256,
+            "p95_ms": 46.712275012396276
+          },
+          {
+            "input_length_codepoints": 2000,
+            "p95_ms": 121.50729197310284
+          },
+          {
+            "input_length_codepoints": 8000,
+            "p95_ms": 441.80121400859207
+          },
+          {
+            "input_length_codepoints": 20000,
+            "p95_ms": 1634.8302700207569
+          }
+        ]
+      },
       "categories": [
         {
           "id": "encoded_content_forms",
@@ -1935,7 +1963,35 @@
       "next_test": "Measure missed and false redactions by entity category; independently review coverage.",
       "summary": "Redaction procedure checked; recognition accuracy not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": {
+        "kind": "synthetic_staging_pipeline_timing",
+        "measured_at": "2026-10-11T17:51:24.919198+00:00",
+        "logical_cpus": 4,
+        "sample_count_per_profile": 20,
+        "profile_count": 12,
+        "accuracy_evidence": false,
+        "budget_accepted": false,
+        "download": "/reference/pipeline-performance.json",
+        "rows": [
+          {
+            "input_length_codepoints": 256,
+            "p95_ms": 46.712275012396276
+          },
+          {
+            "input_length_codepoints": 2000,
+            "p95_ms": 121.50729197310284
+          },
+          {
+            "input_length_codepoints": 8000,
+            "p95_ms": 441.80121400859207
+          },
+          {
+            "input_length_codepoints": 20000,
+            "p95_ms": 1634.8302700207569
+          }
+        ]
+      }
     },
     {
       "id": "NF",
@@ -1946,7 +2002,8 @@
       "next_test": "Benchmark supported and unsupported claims against a declared reference corpus.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "FI",
@@ -1957,7 +2014,8 @@
       "next_test": "Test actual reference contradictions separately from missing evidence.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "HP",
@@ -1968,7 +2026,8 @@
       "next_test": "Validate specific indicators against independently labeled unsupported claims.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "MT",
@@ -1979,7 +2038,8 @@
       "next_test": "Compare helpful and pressuring messages, with independent reviewers checking the context.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "IV",
@@ -1990,7 +2050,8 @@
       "next_test": "Verify reviewer identity, independence, artifact binding and challenges.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "FA",
@@ -2001,7 +2062,8 @@
       "next_test": "Test positive generation evidence, binding and unknown-source behavior.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "PA",
@@ -2012,7 +2074,8 @@
       "next_test": "Test contribution/edit receipts, consent and assistive-input handling.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "UNK",
@@ -2023,7 +2086,8 @@
       "next_test": "Test insufficient evidence separately from unavailable and unsupported checks.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "PII_OUTBOUND",
@@ -2034,7 +2098,8 @@
       "next_test": "Test pre-send detection, explicit choice and fail-safe interception.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "UC",
@@ -2045,7 +2110,8 @@
       "next_test": "Agree the proposed code contract and independently validate command contexts.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "SC",
@@ -2056,7 +2122,8 @@
       "next_test": "Measure fraud-indicator false alarms, misses and legitimate look-alikes.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "BT",
@@ -2067,7 +2134,8 @@
       "next_test": "Test positive automation evidence against human and assistive-input counterexamples.",
       "summary": "No measured results for this tag yet.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "fleet",
@@ -2078,7 +2146,8 @@
       "next_test": "Test deployment, version rollback and per-tag policy isolation.",
       "summary": "Organization capability; performance not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "host",
@@ -2089,7 +2158,8 @@
       "next_test": "Test consented capture, permissions and artifact binding.",
       "summary": "Organization capability; performance not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "audit",
@@ -2100,7 +2170,8 @@
       "next_test": "Test record retention, corrections, authorized access and deletion.",
       "summary": "Organization capability; performance not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "sso",
@@ -2111,7 +2182,8 @@
       "next_test": "Test access roles, revocation and organization separation.",
       "summary": "Organization capability; performance not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "support",
@@ -2122,7 +2194,8 @@
       "next_test": "Validate the actual support workflow before promising response times.",
       "summary": "Organization capability; performance not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     },
     {
       "id": "proprietary",
@@ -2133,7 +2206,8 @@
       "next_test": "Test private-policy boundaries without weakening public tag standards.",
       "summary": "Organization capability; performance not measured.",
       "sources": [],
-      "device": null
+      "device": null,
+      "pipeline": null
     }
   ]
 }

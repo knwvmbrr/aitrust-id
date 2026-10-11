@@ -144,10 +144,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current development source passed 1,597 Python checks, including
+The current development source passed 1,643 Python checks, including
 all 32 route-boundary checks. Execution is recorded in
-`runs/2026-10-11-quantitative-identifier-python.json` and
-`runs/2026-10-11-quantitative-identifier-boundaries.json`. All five active development fixture
+`runs/2026-10-11-pipeline-identity-python.json` and
+`runs/2026-10-11-pipeline-identity-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and
@@ -456,3 +456,5 @@ Optional [encrypted key backup and recovery](docs/key-recovery.md) runs offline,
 [Receipts stay optional](docs/author-choice.md) · [Mark usage and an evidence-bound self-declaration](docs/mark-usage.md) · [Image-provenance boundary](docs/image-provenance-boundary.md). These controls grant no certification or independent tag validation.
 
 [Local reference similarity](docs/corpus-support.md) identifies matched passages without a truth verdict or NF/FI issuance.
+
+The [staging pipeline timing tool](docs/pipeline-performance.md) measures the complete local redaction-plus-tagging route with synthetic inputs. Its 12 measured profiles keep phone/emulated timing, detector-only speed and full service duration separate; no latency budget or independent accuracy is claimed.

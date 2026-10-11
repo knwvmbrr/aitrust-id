@@ -1,6 +1,7 @@
 import React from 'react';
 import data from './tag-performance.json';
 import {percent} from './performance-model.js';
+import {milliseconds,timingNote} from './pipeline-timing-model.js';
 export const performanceById=new Map(data.records.map(r=>[r.id,r]));
 export function Performance({tag}) {
  const r=performanceById.get(tag.id);
@@ -23,8 +24,18 @@ export function PerformanceEvidence({tag}) {
   {r.counts&&<p className="mt-2 tabular-nums">Correct alerts {r.counts.tp} · False alerts {r.counts.fp} · Missed patterns {r.counts.fn} · Correctly unflagged {r.counts.tn}. Wilson 95% ranges show sampling uncertainty, not a real-world accuracy certification. These examples were used during development.</p>}
   {r.device?.engines.length>0&&<div className="mt-3"><h4 className="font-semibold">Phone browser tests · emulated</h4><ul className="mt-1 space-y-1 tabular-nums">{r.device.engines.map(e=><li key={e.name}>{e.name}: {e.case_count}/{e.case_count} method-parity cases{e.timing&&` · warm p95 ${e.timing.p95_ms.toFixed(1)} ms`}</li>)}</ul><p className="mt-1 text-muted">Desktop-hosted emulation; warm checks exclude first runtime load. Physical-phone acceptance is pending.</p></div>}
   {r.categories?.length>0&&<details className="mt-3"><summary className="min-h-11 cursor-pointer py-3 font-semibold">Test breakdown</summary><p className="mb-2 text-muted">Development input groups, not a representative accuracy study.</p><dl className="space-y-2">{r.categories.map(c=><div key={c.id} className="border-b border-line pb-2"><dt className="font-semibold">{c.label}</dt><dd className="tabular-nums">{c.n} examples · {c.fp} false alerts · {c.fn} missed patterns</dd></div>)}</dl></details>}
+  {r.pipeline&&<ServiceTiming data={r.pipeline}/>}
   {r.measured_at&&<p className="mt-2 text-muted">Measured {r.measured_at.slice(0,10)}</p>}
   <p className="mt-2"><strong>Next test:</strong> {r.next_test}</p>
   {r.sources.length>0&&<a className="mt-2 inline-block min-h-11 py-3 underline underline-offset-4" href={r.sources[0]} download>Download measured data</a>}
  </div>;
+}
+function ServiceTiming({data}) {
+ const maximum=Math.max(...data.rows.map(r=>r.p95_ms),1);
+ return <details data-service-timing className="mt-3"><summary className="min-h-11 cursor-pointer py-3 font-semibold">Local service speed</summary>
+  <p className="mb-2 text-muted">Includes redaction and tagging. The phone preview uses a different route.</p>
+  <dl className="space-y-2">{data.rows.map(r=><div key={r.input_length_codepoints}><dt className="text-muted">{r.input_length_codepoints.toLocaleString('en-US')} characters</dt><dd className="tabular-nums">{milliseconds(r.p95_ms)}<div className="h-1 rounded-full bg-line" aria-hidden="true"><div className="h-1 rounded-full bg-ink" style={{width:`${r.p95_ms/maximum*100}%`}}/></div></dd></div>)}</dl>
+  <p className="mt-2 text-muted">{timingNote(data)}</p><p className="mt-1 text-muted">Measured {data.measured_at.slice(0,10)} · synthetic inputs</p>
+  <a className="inline-block min-h-11 py-3 underline underline-offset-4" href={data.download} download>Download service timings</a>
+ </details>;
 }
