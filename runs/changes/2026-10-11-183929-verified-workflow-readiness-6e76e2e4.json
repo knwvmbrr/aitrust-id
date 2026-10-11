@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-183929-verified-workflow-readiness-6e76e2e4",
+  "recorded_at": "2026-10-11T18:39:29.186524+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5400ab1302cbc542375e32c56fc63685c2e841ed",
+  "changed": "Record actual eight-workflow delayed-response controls, refreshed capability receipts and deployment source review.",
+  "proves": "All five current capability receipts pass, 487 boundary sources are bound, and all eight independently named workflow panels load and pass current browser checks.",
+  "limits": "114 complete and 88 open remain unchanged; human accessibility, community hosting, independent accuracy and publication of this head remain pending.",
+  "scope_ids": [
+    "F-120",
+    "F-136"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "f31977c6ebc9158de3c195db7d022cf6d2f72566658ece33446dce23b0f26f72",
+    "state.json": "fb64cd2bf4a1e379ce0fdd528c35a257aaa0335b344fb842e10c65c4a05abf28",
+    "runs/2026-10-11-workflow-bound-website-recorded.json": "12ea747530f0c07c9d84ef34f0637305e45553f9b59e469f0c6818d84ef57798",
+    "runs/2026-10-11-workflow-current.json": "0ddd9becd0e7b9feb43f74a6be5a5e1288853592f5907ec1f04079a959c4cc56",
+    "runs/2026-10-11-workflow-boundaries.json": "7656b140d0174982b2b084aa44b756af514754f7b3f2e368979f0ed101fe2952",
+    "runs/2026-10-11-workflow-loaded-controls.json": "a7ffb9c9fc1a5ba50470b8fb10a321af746a15b90a5c8bc48e3e27a2b212ec33"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-workflow-bound-website-recorded.json",
+      "sha256": "12ea747530f0c07c9d84ef34f0637305e45553f9b59e469f0c6818d84ef57798"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-current.json",
+      "sha256": "0ddd9becd0e7b9feb43f74a6be5a5e1288853592f5907ec1f04079a959c4cc56"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-boundaries.json",
+      "sha256": "7656b140d0174982b2b084aa44b756af514754f7b3f2e368979f0ed101fe2952"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-loaded-controls.json",
+      "sha256": "a7ffb9c9fc1a5ba50470b8fb10a321af746a15b90a5c8bc48e3e27a2b212ec33"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:39:29.324046+00:00"
+    }
+  ]
+}

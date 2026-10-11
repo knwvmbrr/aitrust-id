@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-183652-current-workflow-receipts-8c46832c",
+  "recorded_at": "2026-10-11T18:36:52.425485+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5400ab1302cbc542375e32c56fc63685c2e841ed",
+  "changed": "Retain four passing capability checks, the website prebuild refusal and its ordering correction.",
+  "proves": "PS, PII, protocol and extension executed against current manifest; a build refused unrecorded evidence rather than omitting it.",
+  "limits": "No website pass in the refused attempt, merge, publication or independent accuracy acceptance.",
+  "scope_ids": [
+    "F-120"
+  ],
+  "files": {
+    "docs/reviewer-agreement-plan.md": "0f0dd6baf99ae0093489d7fcd4f3dca6f2ff9e34f17639b5e610929c48672034",
+    "runs/2026-10-11-workflow-bound-PS.json": "e47606e21cf624b083d90a5d6557d9df6390f36a397e9c52edd548dbc23bd67f",
+    "runs/2026-10-11-workflow-bound-PII_REDACTED.json": "fb5df5e9eed72e1b2a1a099d147bd1574b73a4caea7aec1462f5d86ac22565af",
+    "runs/2026-10-11-workflow-bound-protocol.json": "eebbc10790d80572997444ea089e1597809fafd5290ce6e4a5f560d30d5444ab",
+    "runs/2026-10-11-workflow-bound-extension.json": "4b8197b10b85b60e67be827ebbedbca3a847e42f172681ccbab3d4caea434ba2",
+    "runs/2026-10-11-workflow-bound-website.json": "d2e7af991ae9f8f02fe3f3f240ab389a7c82b1d9d23657e52665ab294b834f4e",
+    "runs/2026-10-11-workflow-verification-order.json": "122726a46ebfba057af826134924586885b219be55353be6c9111d8d74cac349"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-workflow-bound-PS.json",
+      "sha256": "e47606e21cf624b083d90a5d6557d9df6390f36a397e9c52edd548dbc23bd67f"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-bound-PII_REDACTED.json",
+      "sha256": "fb5df5e9eed72e1b2a1a099d147bd1574b73a4caea7aec1462f5d86ac22565af"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-bound-protocol.json",
+      "sha256": "eebbc10790d80572997444ea089e1597809fafd5290ce6e4a5f560d30d5444ab"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-bound-extension.json",
+      "sha256": "4b8197b10b85b60e67be827ebbedbca3a847e42f172681ccbab3d4caea434ba2"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-bound-website.json",
+      "sha256": "d2e7af991ae9f8f02fe3f3f240ab389a7c82b1d9d23657e52665ab294b834f4e"
+    },
+    {
+      "path": "runs/2026-10-11-workflow-verification-order.json",
+      "sha256": "122726a46ebfba057af826134924586885b219be55353be6c9111d8d74cac349"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:36:52.526809+00:00"
+    }
+  ]
+}

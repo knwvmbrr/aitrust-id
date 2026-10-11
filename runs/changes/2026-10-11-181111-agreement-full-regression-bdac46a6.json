@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-181111-agreement-full-regression-bdac46a6",
+  "recorded_at": "2026-10-11T18:11:11.378515+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "07b2c1f97b94c87d608ea07df019433197d5113c",
+  "changed": "Record executed full agreement regression and current source-bound engineering totals.",
+  "proves": "1681 Python tests pass; 38 agreement computation cases and 13 actual CLI controls on each Mac and isolated Linux; no full requirement count inflation.",
+  "limits": "One upstream TestClient deprecation warning remains; synthetic checks do not validate MT or supply independent reviewers.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "state.json": "37826c343f76dd47617bf91f1f5b0a12a913c7451ce35c9e1d2f45ac6680580e",
+    "README.md": "ab0b8c059862050356eb6db412b738ab3a1b7ec1ba00d89fdd77cdaa28e55b77",
+    "runs/2026-10-11-reviewer-agreement-python.json": "8ba8d1c60388a5dd91e92d403278037b42cedbd5a5a7f5e8a93d93256ff8027c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-python.json",
+      "sha256": "8ba8d1c60388a5dd91e92d403278037b42cedbd5a5a7f5e8a93d93256ff8027c"
+    }
+  ],
+  "checks": []
+}

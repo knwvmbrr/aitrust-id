@@ -2,6 +2,132 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-183929-verified-workflow-readiness-6e76e2e4
+
+Recorded 2026-10-11T18:39:29.186524+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual eight-workflow delayed-response controls, refreshed capability receipts and deployment source review.
+- **Evidence.** All five current capability receipts pass, 487 boundary sources are bound, and all eight independently named workflow panels load and pass current browser checks. [Change record](./runs/changes/2026-10-11-183929-verified-workflow-readiness-6e76e2e4.json).
+- **Not claimed.** 114 complete and 88 open remain unchanged; human accessibility, community hosting, independent accuracy and publication of this head remain pending.
+
+
+### 2026-10-11-183652-current-workflow-receipts-8c46832c
+
+Recorded 2026-10-11T18:36:52.425485+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain four passing capability checks, the website prebuild refusal and its ordering correction.
+- **Evidence.** PS, PII, protocol and extension executed against current manifest; a build refused unrecorded evidence rather than omitting it. [Change record](./runs/changes/2026-10-11-183652-current-workflow-receipts-8c46832c.json).
+- **Not claimed.** No website pass in the refused attempt, merge, publication or independent accuracy acceptance.
+
+
+### 2026-10-11-183500-bind-workflow-verification-20709d49
+
+Recorded 2026-10-11T18:35:00.929371+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the workflow readiness verifier into current website checks and deployment source inventory.
+- **Evidence.** The corrected workflow is now executed from the current build and changes invalidate its recorded verification. [Change record](./runs/changes/2026-10-11-183500-bind-workflow-verification-20709d49.json).
+- **Not claimed.** No live community service or human acceptance; prior receipt retained as historical after manifest changes.
+
+
+### 2026-10-11-183254-workflow-data-readiness-171f3a7c
+
+Recorded 2026-10-11T18:32:54.092474+00:00 · Contributor: Codex · change
+
+- **Changed.** Wait for actual workflow content and test a deliberately delayed Scope data response.
+- **Evidence.** Preserves the failed CI run and closes an asynchronous test-readiness defect without retrying assertions or weakening acceptance. [Change record](./runs/changes/2026-10-11-183254-workflow-data-readiness-171f3a7c.json).
+- **Not claimed.** Pending current execution and protected merge; no independent accuracy or human accessibility acceptance.
+
+
+### 2026-10-11-182553-index-current-full-regression-eb230057
+
+Recorded 2026-10-11T18:25:53.669554+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current full regression after scope-index consistency repair.
+- **Evidence.** 1692 Python tests pass, with 11 task-index regression checks and all 202 rendered percentages consistent with their ledger. [Change record](./runs/changes/2026-10-11-182553-index-current-full-regression-eb230057.json).
+- **Not claimed.** One upstream TestClient warning; no independent accuracy, physical-device, legal or full requirement closure.
+
+
+### 2026-10-11-182424-index-reviewed-source-boundaries-442be2b5
+
+Recorded 2026-10-11T18:24:24.305689+00:00 · Contributor: Codex · change
+
+- **Changed.** Include task-percentage guard and eleven regression cases in reviewed current source and state.
+- **Evidence.** 486 reviewed source files and all five current capability receipts; task index agrees with all 202 ledger rows. [Change record](./runs/changes/2026-10-11-182424-index-reviewed-source-boundaries-442be2b5.json).
+- **Not claimed.** No new tag or full requirement closure.
+
+
+### 2026-10-11-182423-index-ordered-website-5e4758fd
+
+Recorded 2026-10-11T18:24:23.040069+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute current website after matching code and prior failed-receipt records are committed to the change ledger.
+- **Evidence.** Four actual website commands pass with an unchanged source fingerprint. [Change record](./runs/changes/2026-10-11-182423-index-ordered-website-5e4758fd.json).
+- **Not claimed.** No independent accuracy, physical device or human accessibility acceptance.
+
+
+### 2026-10-11-182227-index-verification-sequencing-57e02ed6
+
+Recorded 2026-10-11T18:22:27.309999+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain failed operator verification and explain the change-record and exclusive-destination refusal.
+- **Evidence.** Changelog admission rejects unrecorded code/evidence; retained receipt cannot be overwritten. [Change record](./runs/changes/2026-10-11-182227-index-verification-sequencing-57e02ed6.json).
+- **Not claimed.** These failures are not successful website acceptance; source remains unchanged and no production service was modified.
+
+
+### 2026-10-11-182012-scope-index-ledger-consistency-59382fbf
+
+Recorded 2026-10-11T18:20:12.079075+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate ten stale task percentages and block disagreement between the readable task index and retained ledger.
+- **Evidence.** 11 tests include all 202 actual rows plus stale, inflated, malformed, missing, duplicated, orphan and incorrect-evidence-link cases; scope-plan passes. [Change record](./runs/changes/2026-10-11-182012-scope-index-ledger-consistency-59382fbf.json).
+- **Not claimed.** No full requirement closes and no acceptance criteria change; percentages remain evidence milestones.
+
+
+### 2026-10-11-181111-agreement-full-regression-bdac46a6
+
+Recorded 2026-10-11T18:11:11.378515+00:00 · Contributor: Codex · change
+
+- **Changed.** Record executed full agreement regression and current source-bound engineering totals.
+- **Evidence.** 1681 Python tests pass; 38 agreement computation cases and 13 actual CLI controls on each Mac and isolated Linux; no full requirement count inflation. [Change record](./runs/changes/2026-10-11-181111-agreement-full-regression-bdac46a6.json).
+- **Not claimed.** One upstream TestClient deprecation warning remains; synthetic checks do not validate MT or supply independent reviewers.
+
+
+### 2026-10-11-181006-agreement-source-bound-acceptance-56a9f1e7
+
+Recorded 2026-10-11T18:10:06.674626+00:00 · Contributor: Codex · change
+
+- **Changed.** Review standalone agreement sources and preserve all five current personal capability checks.
+- **Evidence.** 484 reviewed source files, unchanged service/extension permission boundaries and all five current capability receipts; full requirement count remains 88 open. [Change record](./runs/changes/2026-10-11-181006-agreement-source-bound-acceptance-56a9f1e7.json).
+- **Not claimed.** This is agreement computation and engineering acceptance, without actual human MT labels, independent release or new collection.
+
+
+### 2026-10-11-181005-agreement-stable-website-bf0ac1e1
+
+Recorded 2026-10-11T18:10:05.331777+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute all current website checks after generated scope source is stable.
+- **Evidence.** Four checks pass with unchanged source fingerprint, including actual browser panels, timing details, accessibility, offline downloads and security headers. [Change record](./runs/changes/2026-10-11-181005-agreement-stable-website-bf0ac1e1.json).
+- **Not claimed.** Browser execution does not supply human accessibility, physical devices or independent accuracy.
+
+
+### 2026-10-11-180718-agreement-generated-scope-1d62669b
+
+Recorded 2026-10-11T18:07:18.008504+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh generated public scope after F-056 advances and retain the resulting changed-source rejection.
+- **Evidence.** All four website execution commands passed; source fingerprint correctly rejects generated scope changes within the run. [Change record](./runs/changes/2026-10-11-180718-agreement-generated-scope-1d62669b.json).
+- **Not claimed.** Failed receipt is historical, not current acceptance; stable-source verification is rerun separately.
+
+
+### 2026-10-11-180425-reviewer-agreement-component-0094c140
+
+Recorded 2026-10-11T18:04:25.382701+00:00 · Contributor: Codex · change
+
+- **Changed.** Add bounded nominal agreement computation and actual Mac/Linux CLI controls; publish source-identified service timing.
+- **Evidence.** 38 computational cases and 13 actual CLI controls per platform; 717 exact published artifacts; F-056 advances from 20 to 60. [Change record](./runs/changes/2026-10-11-180425-reviewer-agreement-component-0094c140.json).
+- **Not claimed.** No real human ratings, MT tag, independent accuracy, adopted threshold, new intake, or full requirement closure.
+
+
 ### 2026-10-11-175709-timing-identity-full-acceptance-ad44d68e
 
 Recorded 2026-10-11T17:57:09.575688+00:00 · Contributor: Codex · change

@@ -74,6 +74,10 @@ PATTERNS += ('tools/quantitative_observations.py', 'scripts/quantitative-observa
 PATTERNS += ('scripts/measure-pipeline-performance.py', 'tests/test_pipeline_performance.py',
              'tests/pipeline-timing.cjs', 'runs/2026-10-11-staging-pipeline-performance.json',
              'runs/2026-10-11-staging-pipeline-identity-checked.json')
+PATTERNS += ('tools/reviewer_agreement.py', 'scripts/reviewer-agreement.py',
+             'scripts/verify-reviewer-agreement.py', 'tests/test_reviewer_agreement.py')
+PATTERNS += ('scripts/verify-scope-plan.py', 'tests/test_scope_index.py')
+PATTERNS += ('scripts/verify-workflows.cjs',)
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

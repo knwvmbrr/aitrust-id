@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-11T18:32:53.711416+00:00",
+  "pass": false,
+  "kind": "ci_workflow_readiness_failure",
+  "source_head": "5400ab1302cbc542375e32c56fc63685c2e841ed",
+  "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38163801450",
+  "check": "site",
+  "error_signature": "Shared or wrong panel Scope",
+  "diagnosis": "The test counted the asynchronous workflow before its verified scope data loaded; the dialog shell is visible earlier. Other site job on the same head passed.",
+  "fix": "Wait for the specific workflow content and exercise a deliberately held scope response. Require both CI site jobs to pass on the corrected exact head.",
+  "release_approved": false,
+  "independent_accuracy_evidence": false
+}

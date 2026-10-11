@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-182424-index-reviewed-source-boundaries-442be2b5",
+  "recorded_at": "2026-10-11T18:24:24.305689+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af21f8b31b86f0b1dec5b65f1a2b0b193efcb351",
+  "changed": "Include task-percentage guard and eleven regression cases in reviewed current source and state.",
+  "proves": "486 reviewed source files and all five current capability receipts; task index agrees with all 202 ledger rows.",
+  "limits": "No new tag or full requirement closure.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "state.json": "c4882176f83a6f51a25cc77e07a0524bfe501dc3d0429989cb1a4f26956b6a12",
+    "eval/route-boundaries.json": "8ed5706c31f68c50aa387a42614f4295cadbad99f7048ade5cdef7d9d99bab87",
+    "runs/2026-10-11-reviewer-agreement-index-current.json": "3cfc98f28cadde2102877f0206311f0c8a6a3e3d238fdaa1f3b519a9db381d31",
+    "runs/2026-10-11-reviewer-agreement-index-boundaries.json": "46743d677783866a8f90a102ab715441c734c29e3fcf83409f4be4add5fec920"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-index-current.json",
+      "sha256": "3cfc98f28cadde2102877f0206311f0c8a6a3e3d238fdaa1f3b519a9db381d31"
+    },
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-index-boundaries.json",
+      "sha256": "46743d677783866a8f90a102ab715441c734c29e3fcf83409f4be4add5fec920"
+    }
+  ],
+  "checks": []
+}

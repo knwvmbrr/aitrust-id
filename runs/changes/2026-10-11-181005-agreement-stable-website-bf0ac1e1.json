@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-181005-agreement-stable-website-bf0ac1e1",
+  "recorded_at": "2026-10-11T18:10:05.331777+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "07b2c1f97b94c87d608ea07df019433197d5113c",
+  "changed": "Execute all current website checks after generated scope source is stable.",
+  "proves": "Four checks pass with unchanged source fingerprint, including actual browser panels, timing details, accessibility, offline downloads and security headers.",
+  "limits": "Browser execution does not supply human accessibility, physical devices or independent accuracy.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "runs/2026-10-11-reviewer-agreement-website-stable.json": "1f1de9ce0ed46c8449870210dd94341ee91212913ec5adc96171f2b4c6d17684"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-website-stable.json",
+      "sha256": "1f1de9ce0ed46c8449870210dd94341ee91212913ec5adc96171f2b4c6d17684"
+    }
+  ],
+  "checks": []
+}

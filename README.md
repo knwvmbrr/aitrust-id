@@ -144,10 +144,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current development source passed 1,643 Python checks, including
+The current development source passed 1,692 Python checks, including
 all 32 route-boundary checks. Execution is recorded in
-`runs/2026-10-11-pipeline-identity-python.json` and
-`runs/2026-10-11-pipeline-identity-boundaries.json`. All five active development fixture
+`runs/2026-10-11-reviewer-agreement-index-python.json` and
+`runs/2026-10-11-reviewer-agreement-index-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and
@@ -458,3 +458,7 @@ Optional [encrypted key backup and recovery](docs/key-recovery.md) runs offline,
 [Local reference similarity](docs/corpus-support.md) identifies matched passages without a truth verdict or NF/FI issuance.
 
 The [staging pipeline timing tool](docs/pipeline-performance.md) measures the complete local redaction-plus-tagging route with synthetic inputs. Its 12 measured profiles keep phone/emulated timing, detector-only speed and full service duration separate; no latency budget or independent accuracy is claimed.
+
+The [reviewer-agreement tool](docs/reviewer-agreement.md) compares supplied MT
+labels locally and exports aggregate counts only. Run `python3 scripts/reviewer-agreement.py /path/to/private/ratings.json`.
+It checks consistency, not correctness or reviewer independence; MT remains planned.

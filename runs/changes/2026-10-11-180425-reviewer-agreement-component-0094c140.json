@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-180425-reviewer-agreement-component-0094c140",
+  "recorded_at": "2026-10-11T18:04:25.382701+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "07b2c1f97b94c87d608ea07df019433197d5113c",
+  "changed": "Add bounded nominal agreement computation and actual Mac/Linux CLI controls; publish source-identified service timing.",
+  "proves": "38 computational cases and 13 actual CLI controls per platform; 717 exact published artifacts; F-056 advances from 20 to 60.",
+  "limits": "No real human ratings, MT tag, independent accuracy, adopted threshold, new intake, or full requirement closure.",
+  "scope_ids": [
+    "F-056",
+    "F-113"
+  ],
+  "files": {
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052",
+    "scripts/reviewer-agreement.py": "e8da7cb0e8c1b7c8187cf83cdee2449b041f76d0e146966bd3fe88263d8790f5",
+    "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
+    "tests/test_reviewer_agreement.py": "d4db4344c4100e57ce39284711d56da4c4a0da18bacf94f0419c97e705767229",
+    "docs/reviewer-agreement-plan.md": "f886c41dd8f2778302aa23ae971529fb8220cdd22d239bd380ed704ca0a19165",
+    "docs/reviewer-agreement.md": "78cba6e39233720c25f8c60c34698fa75518b91f647f6c3814b11258bbecf024",
+    ".github/workflows/ci.yml": "c6628bb38e375959e0917bf721fe443214837a6df6cea3c79a72f3e3ecf5619a",
+    "scripts/verify-route-boundaries.py": "7e8bbca3c32ecb4cd37f8061ff307b4a88a9c33bbcdc157a9370bc02dd06b8e2",
+    "README.md": "36f413e7cd970bc212a9d6b809cb86abf607f4ffffab8506404383dfa43858aa",
+    "docs/scope-progress.json": "2853c4c59b82338e3fc18e3dd7c5f00a3f058b1bb671c4ca113eded22f176bd7",
+    "docs/scope-progress.md": "a075867fc29ea5b01184fb823593e3f5695e3597831975fc4faec9579b17bc16",
+    "state.json": "e9f5d142c4447c4a04c1166155eab7545ebfa3e1ed04720725a14dd0e684f2b3",
+    "runs/2026-10-11-reviewer-agreement-mac.json": "b5390ff185d45f033811e9ea047b475d1a7feb90121dbe80ab133512ad5278a1",
+    "runs/2026-10-11-reviewer-agreement-linux.json": "f9fd7fb45c0eaa7cf4b1d33b483dbb1ccdbcbfc25f2e446a57af37fcd919731e",
+    "runs/2026-10-11-pipeline-protected-merge.json": "77c803d0181886867cbd99d890ad891ed2537976a478db9cf3f25813e246dd11",
+    "runs/2026-10-11-pipeline-publication.json": "717d3483ec42b23c4d58b951d561048a550f7d7cddb587bcf42f2b6769e0b83d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-mac.json",
+      "sha256": "b5390ff185d45f033811e9ea047b475d1a7feb90121dbe80ab133512ad5278a1"
+    },
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-linux.json",
+      "sha256": "f9fd7fb45c0eaa7cf4b1d33b483dbb1ccdbcbfc25f2e446a57af37fcd919731e"
+    },
+    {
+      "path": "runs/2026-10-11-pipeline-protected-merge.json",
+      "sha256": "77c803d0181886867cbd99d890ad891ed2537976a478db9cf3f25813e246dd11"
+    },
+    {
+      "path": "runs/2026-10-11-pipeline-publication.json",
+      "sha256": "717d3483ec42b23c4d58b951d561048a550f7d7cddb587bcf42f2b6769e0b83d"
+    }
+  ],
+  "checks": []
+}

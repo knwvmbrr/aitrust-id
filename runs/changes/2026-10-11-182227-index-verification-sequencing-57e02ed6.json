@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-182227-index-verification-sequencing-57e02ed6",
+  "recorded_at": "2026-10-11T18:22:27.309999+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af21f8b31b86f0b1dec5b65f1a2b0b193efcb351",
+  "changed": "Retain failed operator verification and explain the change-record and exclusive-destination refusal.",
+  "proves": "Changelog admission rejects unrecorded code/evidence; retained receipt cannot be overwritten.",
+  "limits": "These failures are not successful website acceptance; source remains unchanged and no production service was modified.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "runs/2026-10-11-reviewer-agreement-index-website.json": "b44bd6fbe75feaedc84c75989f2ffd2d54a69eb5177dce8f1386fe94b3af8e14",
+    "runs/2026-10-11-reviewer-agreement-index-sequencing.json": "264af522b247b44b992fdaee8acde8a8783168462394d83c8a59a029ebf0e0a9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-index-website.json",
+      "sha256": "b44bd6fbe75feaedc84c75989f2ffd2d54a69eb5177dce8f1386fe94b3af8e14"
+    },
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-index-sequencing.json",
+      "sha256": "264af522b247b44b992fdaee8acde8a8783168462394d83c8a59a029ebf0e0a9"
+    }
+  ],
+  "checks": []
+}

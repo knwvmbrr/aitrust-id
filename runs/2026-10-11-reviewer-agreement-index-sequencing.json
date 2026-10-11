@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-11T18:22:27.262535+00:00",
+  "kind": "operator_verification_sequencing_failure",
+  "failed_receipt": "runs/2026-10-11-reviewer-agreement-index-website.json",
+  "signature": "CURRENT_BUILD_WEBSITE_REVALIDATION_FAILED",
+  "cause": "First verification started before the change event was written because its shell did not stop on the failed record command. The next attempt encountered the unrecorded failed receipt and refused to overwrite the same retained destination.",
+  "fix": "Record both the failed receipt and diagnosis, use a new exclusive destination, and stop dependent commands on any nonzero exit.",
+  "source_changes_during_execution": false,
+  "website_acceptance_claimed": false,
+  "production_modified": false,
+  "independent_accuracy_evidence": false
+}

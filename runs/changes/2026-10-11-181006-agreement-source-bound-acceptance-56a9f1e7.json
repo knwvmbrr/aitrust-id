@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-181006-agreement-source-bound-acceptance-56a9f1e7",
+  "recorded_at": "2026-10-11T18:10:06.674626+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "07b2c1f97b94c87d608ea07df019433197d5113c",
+  "changed": "Review standalone agreement sources and preserve all five current personal capability checks.",
+  "proves": "484 reviewed source files, unchanged service/extension permission boundaries and all five current capability receipts; full requirement count remains 88 open.",
+  "limits": "This is agreement computation and engineering acceptance, without actual human MT labels, independent release or new collection.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "3b5066232a05c189b41744286c9ed8f2ece232aa1374bffcd7ad0b5f5e945cbb",
+    "state.json": "5039bac80d91d7e0576d2f7d48a6ae9049792044a5436e48b5244f7f05eaa331",
+    "runs/2026-10-11-reviewer-agreement-current-capabilities.json": "b531adb7632a90d88d6b58f5815e8a8956814056cbb98263bdb2a1e8ce2566eb",
+    "runs/2026-10-11-reviewer-agreement-boundaries.json": "4886aec55723b535d9fdafb897a5266c930e2d4e248ea42188a76ccbceda7268"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-current-capabilities.json",
+      "sha256": "b531adb7632a90d88d6b58f5815e8a8956814056cbb98263bdb2a1e8ce2566eb"
+    },
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-boundaries.json",
+      "sha256": "4886aec55723b535d9fdafb897a5266c930e2d4e248ea42188a76ccbceda7268"
+    }
+  ],
+  "checks": []
+}

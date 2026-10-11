@@ -1,0 +1,75 @@
+{
+  "captured_at": "2026-10-11T18:03:27.680345+00:00",
+  "pass": true,
+  "kind": "synthetic_agreement_cli_controls",
+  "case_count": 13,
+  "cases": [
+    {
+      "case": "perfect_nominal_not_release",
+      "pass": true
+    },
+    {
+      "case": "constant_undefined_not_perfect",
+      "pass": true
+    },
+    {
+      "case": "one_reviewer_cannot_create_agreement",
+      "pass": true
+    },
+    {
+      "case": "unexpected_content_field_refused",
+      "pass": true
+    },
+    {
+      "case": "duplicate_json_refused",
+      "pass": true
+    },
+    {
+      "case": "invalid_utf8_refused",
+      "pass": true
+    },
+    {
+      "case": "input_limit_refused",
+      "pass": true
+    },
+    {
+      "case": "deep_invalid_structure_refused",
+      "pass": true
+    },
+    {
+      "case": "symlink_input_refused",
+      "pass": true
+    },
+    {
+      "case": "explicit_aggregate_report",
+      "pass": true
+    },
+    {
+      "case": "unsafe_output_destination_refused",
+      "pass": true
+    },
+    {
+      "case": "retained_report_first_write",
+      "pass": true
+    },
+    {
+      "case": "retained_report_cannot_be_overwritten",
+      "pass": true
+    }
+  ],
+  "sources": {
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052",
+    "scripts/reviewer-agreement.py": "e8da7cb0e8c1b7c8187cf83cdee2449b041f76d0e146966bd3fe88263d8790f5",
+    "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+  },
+  "source_unchanged_during_execution": true,
+  "isolated_linux": false,
+  "external_canary_blocked": null,
+  "nonroot_execution": true,
+  "only_authored_synthetic_inputs": true,
+  "human_ratings_used": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

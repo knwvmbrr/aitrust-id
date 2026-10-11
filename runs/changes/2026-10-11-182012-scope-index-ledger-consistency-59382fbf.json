@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-182012-scope-index-ledger-consistency-59382fbf",
+  "recorded_at": "2026-10-11T18:20:12.079075+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af21f8b31b86f0b1dec5b65f1a2b0b193efcb351",
+  "changed": "Regenerate ten stale task percentages and block disagreement between the readable task index and retained ledger.",
+  "proves": "11 tests include all 202 actual rows plus stale, inflated, malformed, missing, duplicated, orphan and incorrect-evidence-link cases; scope-plan passes.",
+  "limits": "No full requirement closes and no acceptance criteria change; percentages remain evidence milestones.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "docs/reviewer-agreement-plan.md": "5419ab6b59f14ff6b3d314b433b781506d369782201509c1ccb262cff3b04cf2",
+    "docs/scope-task-index.md": "6afac2a6a45841c1c2da1695e5111419bf94331693906b14064c0d1b299b08b8",
+    "scripts/verify-scope-plan.py": "cc0660aced2664618f20c7d67ccd3b63e395cbc05660395d6670ae9b663ebfd9",
+    "scripts/verify-route-boundaries.py": "1f22aad9d4a04123457126228b80ada6c0538630198dd081d18b4ba1d18365d8",
+    "tests/test_scope_index.py": "7a5d29fba7d74ee77938ea5985a30211b24abddd1c44586675afc904070bfa3f"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_scope_index.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:20:12.451902+00:00"
+    }
+  ]
+}

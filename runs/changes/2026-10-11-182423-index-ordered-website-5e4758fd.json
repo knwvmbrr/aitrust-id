@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-182423-index-ordered-website-5e4758fd",
+  "recorded_at": "2026-10-11T18:24:23.040069+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af21f8b31b86f0b1dec5b65f1a2b0b193efcb351",
+  "changed": "Execute current website after matching code and prior failed-receipt records are committed to the change ledger.",
+  "proves": "Four actual website commands pass with an unchanged source fingerprint.",
+  "limits": "No independent accuracy, physical device or human accessibility acceptance.",
+  "scope_ids": [
+    "F-056"
+  ],
+  "files": {
+    "runs/2026-10-11-reviewer-agreement-index-ordered-website.json": "35923e0b5521e190311fb1662bdabfd3269b423823bab2ef8558a31ada2a4f18"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-reviewer-agreement-index-ordered-website.json",
+      "sha256": "35923e0b5521e190311fb1662bdabfd3269b423823bab2ef8558a31ada2a4f18"
+    }
+  ],
+  "checks": []
+}
