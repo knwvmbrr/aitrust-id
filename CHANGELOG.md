@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-011043-key-recovery-final-engineering-evidence-2e784e03
+
+Recorded 2026-10-11T01:10:43.921471+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current source-bound website/extension/privacy integration, reviewed unchanged personal service boundaries, the protected publication-proof merge and final full regressions.
+- **Evidence.** 1182 Python tests pass; 44 Node custody controls per actual Mac/Linux plus real terminal and cross-platform recovery. Current website/extension checks pass with stable source; nine policy pages pass automated accessibility and matching downloads. [Change record](./runs/changes/2026-10-11-011043-key-recovery-final-engineering-evidence-2e784e03.json).
+- **Not claimed.** 107 requirements complete, 95 open; 25-open target unmet. Nontechnical recovery, independent tag accuracy, physical devices, public revocation and legal/governance adoption remain distinct open acceptance. Policy 1.9 and this new tool are not yet live.
+
+
+### 2026-10-11-010632-key-recovery-generated-reference-a01d6bc6
+
+Recorded 2026-10-11T01:06:32.392563+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepared stable generated website scope, optional recovery guide and immutable policy 1.9 text artifacts; corrected a rejected scope ID in an attempted change record.
+- **Evidence.** Current-source build succeeded. The guard rejected an unregistered scope ID and incomplete generated-file attribution before publication; the refused website attempt is preserved. [Change record](./runs/changes/2026-10-11-010632-key-recovery-generated-reference-a01d6bc6.json).
+- **Not claimed.** Preparation is not live publication, human acceptance or independent tag accuracy. Earlier policy versions remain untouched.
+
+
+### 2026-10-11-010518-optional-encrypted-key-recovery-9b12061c
+
+Recorded 2026-10-11T01:05:18.105123+00:00 · Contributor: Codex · change
+
+- **Changed.** Added optional encrypted signing-key backup, separately selected public-key recovery, hidden terminal prompts and step-by-step practice instructions; prepared policy 1.9 and website guide.
+- **Evidence.** 44 bounded controls on actual Mac and isolated Linux plus actual terminal backup/restore/cancellation and Mac-to-Linux restored-key signing. Fixed and preserved the initial prompt readiness race. [Change record](./runs/changes/2026-10-11-010518-optional-encrypted-key-recovery-9b12061c.json).
+- **Not claimed.** F-129 is 80 percent pending actual nontechnical-author acceptance. No new tag, hosted escrow, public revocation service, collection endpoint, automatic rotation or independent accuracy claim. The 25-open target remains unmet at 95 open.
+
+
 ### 2026-10-11-005624-offline-status-publication-proof-2bf07465
 
 Recorded 2026-10-11T00:56:24.925829+00:00 · Contributor: Codex · change

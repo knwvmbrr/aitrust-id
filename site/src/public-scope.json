@@ -7313,27 +7313,36 @@
         "id": "F-129",
         "kind": "requirement",
         "title": "Key custody and recovery for a non-technical author",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T01:04:34.862617+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — optional encrypted backup and recovery, actual Mac/Linux hidden terminals and cross-platform key restoration"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Key custody and recovery for a non-technical author. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "next_fix": "Complete actual nontechnical-author backup, lost-key restoration, separately saved public-key checking and compromise/replacement understanding on an owner-controlled second computer. Offline Mac/Linux engineering and hidden terminal controls are exercised; human custody acceptance is not.",
+        "next_owner": "Michael and outside author; Codex fixes",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/key-recovery-plan.md",
+          "docs/key-recovery.md",
+          "runs/2026-10-11-key-backup-platforms.json",
+          "runs/2026-10-11-key-backup-terminal-refusal.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Key custody and recovery for a non-technical author. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
+          "Actual nontechnical-author operation and recovery/compromise understanding on an independently operated computer; no automated terminal can substitute for human acceptance."
         ],
         "queue": "open"
       }

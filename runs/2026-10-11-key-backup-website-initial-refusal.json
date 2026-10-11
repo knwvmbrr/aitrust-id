@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-11T01:06:17.593187+00:00",
+  "pass": false,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "website",
+    "sources": {
+      "docs/scope-progress.json": "e31470e720ab1c36d05011f0801b9041e066d300cd227652497f637470bd1a40",
+      "eval/revalidation.json": "770ad2094e8a71da01ef77ffeed21732d7bc4829045e9921a2eb161161b74944",
+      "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+      "package.json": "6d3b7a2088116908f0f0fdc1265b2888cea77024198ea92b26169e3e155c2c14",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+      "scripts/accessibility-probes.cjs": "4e2c4a0c86968eb89267e93381aba6fa0fe3309ee989ed4da37f647d7cf1141d",
+      "scripts/changelog_core.py": "c3e03118b073d2bd4e5f4813d1f6a15960e3c050a89a8d0dd5ac283c5551b74a",
+      "scripts/execution-report.cjs": "368ea02355526b62fffb9e2410febff6442ee79acc45b4f71f442e3c37b178ba",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/scope-progress.py": "21559045ed60054b515410d16d60ef9148271e9e27fca5b1a05670e57d35d456",
+      "scripts/static-headers.cjs": "5a43068ad58256ad6dc04939947f88ad5d7115a198f30b2a92f2034f43ea340d",
+      "scripts/verify-built-website.cjs": "70ec270c7680bca271f3c2103e3ffd616de6d5aa02385425ee294910df900e37",
+      "scripts/verify-changelog.cjs": "abfb30687514dfeece5580b2f7ae4e0db69bb349809cf3353c5c6ddeee3b5a28",
+      "scripts/verify-changelog.py": "952d2c0a3ac5ca9b71ffaef8f4ef224b3af2653c32356901df9771dbc6237c30",
+      "scripts/verify-offline-download.cjs": "0dee789317a445095b926ad9c27114c02050701b6c9238a8841abf047606ffbb",
+      "scripts/verify-research-feedback.cjs": "c36e42e7c3b084948983cb7335d8307ceda97ffc11aa567b503d9bd9047a4c7a",
+      "scripts/verify-site-accessibility.cjs": "5e9d60394f20f73e2f7ee424e4b2670064ac779ecef9783252ea735e1c792f72",
+      "scripts/verify-site.cjs": "e21a26b110edf71c508039e1d4a704cfaed225d9575cb32dbee40fa34350f7b8",
+      "scripts/verify-static-headers.cjs": "0f81ddf73ade1ba91bfd887b0d2c79f88ee3dcd5da6e66a33c0acbc6a8ff9707",
+      "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+      "site/package.json": "d9cd79fad161ea17a8521ad721a19eebab0b766a4209bdcd56d74d83fa66a11d",
+      "site/public/_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+      "site/public/theme.js": "7d17c74230a266c5b8ffe7e819b76d2e639fbf971cdd3f6adb2969fd8d1be055",
+      "site/scripts/owner-guide.mjs": "f9c50c5a055853c6ee81950a062b5eef14c58fcb6dd705738d8b2ac1abd72f61",
+      "site/scripts/prepare-device.mjs": "9e6011d991f923dcd2c089ce4b5bce524fe7536f00200da8ec849143d8d6e021",
+      "site/scripts/prepare-offline.mjs": "882f4b6a46f0d0e2c130b52ca9bc46f931764bf327bc3f6893a665453e06be3a",
+      "site/scripts/prepare-performance.mjs": "8da724ab20933c625c66851d89d8566b62c4d94e6b877cdc779fbed5b3f58514",
+      "site/scripts/prepare.mjs": "cbcdc2903d5b930aacef31547d1e9f1c719ab601e5b1e9d5ff69d21c9ff9f82e",
+      "site/scripts/render-reference.mjs": "4b20c24d6a647196a510fe827f245236bc78871a2230e7dee92876ca92aff1f6",
+      "site/scripts/seo.mjs": "65e89eb18d7d472b9a04572e506334381c52a77f898fdb39fac33e8c9596bd5b",
+      "site/src/catalog.js": "99584f624401474e92286a6acbf562e9e3bbee8b89a125c85bb8125459fc2be9",
+      "site/src/catalogue-export.js": "4b9d1c60f03428a88c750b6d65a162ceeac97a750e3d031a5cb0adab55e6af78",
+      "site/src/device-client.js": "53e6e8fe5de3f6650bbd894f4af9138e92a7c697e0d827bdce13921edf3e39c5",
+      "site/src/device-manifest.json": "2d12a18686e7db362b4aba7ffd2740e8e8a85f0f7711ecc42f34b3466d9bae76",
+      "site/src/device-worker.js": "b327e1c5984d954e3a2a6f369e3462b6ccc13d3e6d6db7fe56dd2dccfb0d39ee",
+      "site/src/handheld.jsx": "ecc666d883c423842dce50564f109e88279fcb0645d52c70c6b75aa57490a250",
+      "site/src/main.jsx": "2bdbaa5df9011b3bc526521673a1569240c21734ff593bbe60290e6c690860a7",
+      "site/src/model-tools.js": "933a9eeadc5b8e4b2f49f287443de834f056496c63b24cbca79f643f8911b83e",
+      "site/src/performance-model.js": "7083d48f27ba1437b3f33b57521dfb7fe163a381fd883857f5b05a38136acbf5",
+      "site/src/performance.jsx": "8d529e407c29869064eca9019e06e7fc32c80fd2d632c9492e3e20d60665fe42",
+      "site/src/policies.js": "810cea2290782c13e5d8455df2835111b00ef1a3a7d2139b0392264e0f8c8c89",
+      "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
+      "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
+      "site/src/public-scope.json": "548bc0f47e974f1553d41a2ef72a22d365e009feaac06f8e20951cf9abf57829",
+      "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
+      "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
+      "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
+      "site/src/tag-performance.json": "9111e970ddec93c6acf662b530c556e94ff93ab5edae16658bf8f3fb2c81baf4",
+      "site/src/usage.js": "750c1b4757d7bb20880e4c9c85348aa8788d4bd677b2d643403c5216f556b45c",
+      "site/src/workflows/About.jsx": "a59306cff4d0ce922462965aa2da9ce33322f85e3966b628912762a8a6509f99",
+      "site/src/workflows/Assist.jsx": "96ffd98b5c65a8b84ba9f4860aafc1378ef74d6a6ba0a3211d210833b4617106",
+      "site/src/workflows/HowTagsWork.jsx": "c45c28fcfb0d53ccab848d1081c07cfe6faa54389dc75d7779b756951be04674",
+      "site/src/workflows/Legal.jsx": "2f3131892ff906ef6510b6d2292f668b0d49d4a2c02107c767f15e370da9566a",
+      "site/src/workflows/Report.jsx": "b12d5d501f29a06dfcf178eda75de4cdea6802a1eef9213322d39b673f80a8b9",
+      "site/src/workflows/Scope.jsx": "6626ce7e62494ee12d2a9b5cf97855eb44ebbbb3168f43ddeca7bac8883c5b75",
+      "site/src/workflows/Teamwork.jsx": "09d6c6f9653493e0a22efa1630f9ad2f839c826c928bd1651dd6f6a084ca69ff",
+      "site/src/workflows/Townhall.jsx": "33bdbe6ed102a0257b23b215f43fc1177f2d537d4fd904fc71d0ee797678903f",
+      "site/src/workflows/community.json": "9f1269d788fc2e8407bd3912d52f78c30906ee1809c056a203e950af7d8f039a",
+      "site/src/workflows/index.jsx": "f619babb98a9df0218257d329d092bd1a4559680a45156b7d131bb96540a6ba6",
+      "site/src/workflows/shared.jsx": "b0eac1b6e41879d572574062abec942e88ae45707412720cbb75c374148d6f54",
+      "tests/research-feedback.cjs": "cc9b469b4deb2f5ee638b5a97eb85a4a816ecd04e59f34d1f6f0fd5afde49a4d",
+      "tests/static-headers.cjs": "217ffdc8152100bd23c20b3b305bf545d5e48cef702565608d926f58dd4ad007",
+      "tests/test_changelog_pipeline.py": "b3b11114cdb5ef33811329c1233c303fa8428f168cf4e25aa6d1a977fa1948d6",
+      "tests/test_scope_progress.py": "8caea78ee8d94d55161354a27e5722bc8cc228d435a1dc580bb8d42deb9d8bad"
+    },
+    "sha256": "8af916a144ee3bb3cd8690ebaac6631b80a5039474a60cc6aca93faf32782ad1",
+    "commands": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_changelog_pipeline.py",
+        "-q"
+      ],
+      [
+        "node",
+        "scripts/verify-built-website.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-offline-download.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-static-headers.cjs"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_changelog_pipeline.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "86ff95bc9f9ad6c1a75d7835f7856edf0c34d0855cb8918d8ae8b009a7f0c0b5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-built-website.cjs"
+      ],
+      "exit": 1,
+      "stdout_sha256": "1e24fb565b4e689f870c9afbb229e99deb0b69bd817076e3a215c331418e963c",
+      "stderr_sha256": "bf4c942ea4d77eb321dd710527f20c0d30338e989e7666f0afb9fe1115e16a9d"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

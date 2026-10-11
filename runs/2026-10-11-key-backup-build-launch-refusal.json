@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-11T01:06:07.460835+00:00",
+  "pass": false,
+  "stage": "initial_build_launch",
+  "exit": 127,
+  "error_signature": "npm command not found",
+  "root_cause": "The orchestration PATH omitted the existing npm directory; feature code did not run.",
+  "fix": "Use the prepared verification PATH including npm and Node 24; the subsequent actual build succeeded.",
+  "log_sha256": "32cedf3c6e595262a3744d1ed7f4af136532dfae9169ad55e1c6c858b5a440d5",
+  "checks_bypassed": false
+}

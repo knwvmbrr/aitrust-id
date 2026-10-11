@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-11T01:06:59.550613+00:00",
+  "pass": false,
+  "stage": "first_full_regression_execution",
+  "passed": 1173,
+  "failed": 9,
+  "error_signature": "Current route differs from reviewed source inventory",
+  "root_cause": "New optional sources and package entries had not yet been added to the selected boundary review manifest; all nine failures reject that stale inventory before other checks.",
+  "fix": "Revalidate current extension/website, review unchanged personal access/endpoints plus new local key tool, bind actual new hashes, then rerun suite.",
+  "log_sha256": "bf51af7a59fd358fb7cbf99d8a85f374a794c30e300b3a0329b18c3b7b2ccf64",
+  "checks_bypassed": false
+}

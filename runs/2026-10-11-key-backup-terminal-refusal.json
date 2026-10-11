@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-10-11T01:04:34.831595+00:00",
+  "pass": false,
+  "stage": "initial_actual_terminal_check",
+  "node_unit_controls_passed": 44,
+  "python_checks": {
+    "passed": 1,
+    "failed": 1
+  },
+  "error_signature": "subprocess.TimeoutExpired after immediate password confirmation",
+  "root_cause": "Prompt was displayed before hidden-input handlers and raw mode were fully ready; immediate input could race setup.",
+  "fix": "Install raw mode and listeners before announcing password readiness; retain strict no-echo and cancellation assertions.",
+  "initial_log_sha256": "20816df7b83e99bc86a04de38b10b3a0f13f3212afcb6e6def13bb28bbc4332c",
+  "current_success_log_sha256": "d320012c23eb1a255f9a3124cdca7a59d2cc206e73049a46afe4fbb6a90e9e10",
+  "guard_waived": false,
+  "synthetic_only": true
+}

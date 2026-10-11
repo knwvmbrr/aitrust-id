@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-010518-optional-encrypted-key-recovery-9b12061c",
+  "recorded_at": "2026-10-11T01:05:18.105123+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "227bee8d4e48a6e7eb49992a7f1b271f21b2bf54",
+  "changed": "Added optional encrypted signing-key backup, separately selected public-key recovery, hidden terminal prompts and step-by-step practice instructions; prepared policy 1.9 and website guide.",
+  "proves": "44 bounded controls on actual Mac and isolated Linux plus actual terminal backup/restore/cancellation and Mac-to-Linux restored-key signing. Fixed and preserved the initial prompt readiness race.",
+  "limits": "F-129 is 80 percent pending actual nontechnical-author acceptance. No new tag, hosted escrow, public revocation service, collection endpoint, automatic rotation or independent accuracy claim. The 25-open target remains unmet at 95 open.",
+  "scope_ids": [
+    "F-129",
+    "F-125",
+    "F-123",
+    "N-004"
+  ],
+  "files": {
+    "README.md": "9270eabbe53fe5859a58c8b9f4a188a438ecbc52bad24174dbba3bc7e3037adf",
+    "docs/key-recovery-plan.md": "72c04add3e92dec50a98bac56dd64b6913735958c164bb8d83b2392782bf68d4",
+    "docs/key-recovery.md": "ca82b2e877c5fc046adb1f7534452775f65ca8cfa4eff8d84a7e5bcdf7ad4f49",
+    "docs/offline-receipts.md": "338da7c4dc47db220e631cc0950e2d6fd6fc8c47b83c8cacb4661172648c2370",
+    "docs/scope-progress.json": "e31470e720ab1c36d05011f0801b9041e066d300cd227652497f637470bd1a40",
+    "docs/scope-progress.md": "bf950a9bcedd82dee1993f3f2589176fcb4852a05f94fd94844263ee12520d04",
+    "docs/scope-task-index.md": "70cbe82d8308d213882abe894858f23b204e421f7cb66a9510e16e87216ae185",
+    "package.json": "6d3b7a2088116908f0f0fdc1265b2888cea77024198ea92b26169e3e155c2c14",
+    "protocol/key-backup.cjs": "0c656585f042ac6cfcdcf10721dbed90d8ba4349f8ae00b92fdd310f502aef17",
+    "runs/2026-10-11-key-backup-platforms.json": "25ce9849aaf48331ba18f6f82d8b1bb70ad48f64750a7afbb53090aae679d2b5",
+    "runs/2026-10-11-key-backup-scope.json": "3b992840087300222901f6a80e835116c6473371e714e73202ab3ecce8421373",
+    "runs/2026-10-11-key-backup-terminal-refusal.json": "870b72a63f23ba1decbdd2ebd71c0a8729a2b0542b0502558c9a1f4a3f2f4b68",
+    "scripts/key-backup.cjs": "68513d61b715a3d5e54d118aed865896e247adc7b0ae4a7ad86bbf75d064d4be",
+    "scripts/verify-route-boundaries.py": "a45d9850e7b4aa0ae65d20c528d1f5999c225744ce852f43fae66270900566b1",
+    "site/scripts/render-reference.mjs": "4b20c24d6a647196a510fe827f245236bc78871a2230e7dee92876ca92aff1f6",
+    "site/src/policies.js": "810cea2290782c13e5d8455df2835111b00ef1a3a7d2139b0392264e0f8c8c89",
+    "state.json": "c152ec8377aa8afabf33cdaef89413f0d4dc8e3e913c042dc5db52e8a2baa0c5",
+    "tests/key-backup.cjs": "5b0c8e1284d0553a5b35896fadfc6d8439f6bb0edde85cbfceab61d939e06ca9",
+    "tests/test_key_backup.py": "7f1927d7f93beb16cfaac71502e30c68b84538345434cf00698771db2c8e45f2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-backup-platforms.json",
+      "sha256": "25ce9849aaf48331ba18f6f82d8b1bb70ad48f64750a7afbb53090aae679d2b5"
+    },
+    {
+      "path": "runs/2026-10-11-key-backup-terminal-refusal.json",
+      "sha256": "870b72a63f23ba1decbdd2ebd71c0a8729a2b0542b0502558c9a1f4a3f2f4b68"
+    },
+    {
+      "path": "runs/2026-10-11-key-backup-scope.json",
+      "sha256": "3b992840087300222901f6a80e835116c6473371e714e73202ab3ecce8421373"
+    }
+  ],
+  "checks": []
+}
