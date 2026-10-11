@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-003006-publication-pointer-reconciliation-d13eaaf7
+
+Recorded 2026-10-11T00:30:06.842003+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconcile all current website deployment and policy pointers after protected review found a mixed old/new evidence set.
+- **Evidence.** Current website and runtime publication identify the same deployed source, preview and actual checks; policy version 1.7 and all prior archives are reflected. [Change record](./runs/changes/2026-10-11-003006-publication-pointer-reconciliation-d13eaaf7.json).
+- **Not claimed.** Metadata correction only; historical nested records remain historical. No independent accuracy or legal acceptance.
+
+
+### 2026-10-11-002617-group-publication-evidence-54b4ab3c
+
+Recorded 2026-10-11T00:26:17.267069+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual protected publication, independently rooted offline archive verification and anonymous signed-source downloads; correct premature prerelease publication ordering.
+- **Evidence.** Reviewed main source 6b97547 was served byte-for-byte across three origins (615 comparisons); four no-account source assets match Mac and network-isolated Linux verification. [Change record](./runs/changes/2026-10-11-002617-group-publication-evidence-54b4ab3c.json).
+- **Not claimed.** 106 requirements complete, 96 open. Signature integrity does not establish tag accuracy, authorship, distinct people, license clearance or fresh revocation; the initial publication-order failure is preserved.
+
+
 ### 2026-10-11-000053-group-final-regression-record-a4d5613f
 
 Recorded 2026-10-11T00:00:53.877256+00:00 · Contributor: Codex · change
