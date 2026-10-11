@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-11T18:55:02.012969+00:00",
+  "pass": false,
+  "full_python": {
+    "passed": 1813,
+    "failed": 9,
+    "cause": "Route source inventory and selected service/browser receipts describe the prior source."
+  },
+  "extension": {
+    "passed_commands": 4,
+    "failed_command": "scripts/verify-replay-export.cjs",
+    "cause": "Selected replay receipt still identifies the pre-IPv6 redactor; local replay correctly refuses its stale identity."
+  },
+  "fix": "Select the newly executed source-bound service and replay receipts, refresh browser verification, then rebuild the reviewed route inventory. Historical failures are retained.",
+  "release_approved": false
+}

@@ -1,0 +1,1690 @@
+{
+  "captured_at": "2026-10-11T19:16:14.868624+00:00",
+  "pass": true,
+  "kind": "synthetic_english_engine_observations",
+  "rows": [
+    {
+      "id": "email_simple",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 23
+        },
+        {
+          "entity": "URL",
+          "start": 12,
+          "end": 23
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 23
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "email_plus",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 30
+        },
+        {
+          "entity": "URL",
+          "start": 19,
+          "end": 30
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 30
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "email_upper",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 26
+        },
+        {
+          "entity": "URL",
+          "start": 15,
+          "end": 26
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 26
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "email_subdomain",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 31
+        },
+        {
+          "entity": "URL",
+          "start": 15,
+          "end": 31
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 31
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "email_dotted",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 4,
+          "end": 25
+        },
+        {
+          "entity": "URL",
+          "start": 4,
+          "end": 11
+        },
+        {
+          "entity": "URL",
+          "start": 14,
+          "end": 25
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 4,
+          "end": 25
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "email_quoted",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 17,
+          "end": 34
+        },
+        {
+          "entity": "URL",
+          "start": 23,
+          "end": 34
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 17,
+          "end": 34
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "email_unicode_context",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 28,
+          "end": 45
+        },
+        {
+          "entity": "NRP",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "entity": "URL",
+          "start": 34,
+          "end": 45
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 28,
+          "end": 45
+        },
+        {
+          "entity": "NRP",
+          "start": 12,
+          "end": 16
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "phone_hyphen",
+      "predicted": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 5,
+          "end": 17
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 5,
+          "end": 17
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "phone_parentheses",
+      "predicted": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 7,
+          "end": 21
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 7,
+          "end": 21
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "phone_country",
+      "predicted": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 9,
+          "end": 24
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 9,
+          "end": 24
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "phone_dots",
+      "predicted": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 11,
+          "end": 23
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 11,
+          "end": 23
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "person_full",
+      "predicted": [
+        {
+          "entity": "PERSON",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PERSON",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "person_common",
+      "predicted": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 32
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 32
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "person_apostrophe",
+      "predicted": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 37
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 37
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "person_hyphen",
+      "predicted": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 43
+        }
+      ],
+      "applied": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 43
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "location_city",
+      "predicted": [
+        {
+          "entity": "LOCATION",
+          "start": 37,
+          "end": 44
+        }
+      ],
+      "applied": [
+        {
+          "entity": "LOCATION",
+          "start": 37,
+          "end": 44
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "location_country",
+      "predicted": [
+        {
+          "entity": "LOCATION",
+          "start": 21,
+          "end": 27
+        }
+      ],
+      "applied": [
+        {
+          "entity": "LOCATION",
+          "start": 21,
+          "end": 27
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "location_phrase",
+      "predicted": [
+        {
+          "entity": "LOCATION",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "applied": [
+        {
+          "entity": "LOCATION",
+          "start": 21,
+          "end": 34
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "ip_documentation",
+      "predicted": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 33
+        }
+      ],
+      "applied": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 33
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "ip_documentation_two",
+      "predicted": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 32
+        }
+      ],
+      "applied": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 32
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "ipv6_documentation",
+      "predicted": [
+        {
+          "entity": "DATE_TIME",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 32
+        }
+      ],
+      "applied": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 32
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "url_https",
+      "predicted": [
+        {
+          "entity": "URL",
+          "start": 6,
+          "end": 30
+        }
+      ],
+      "applied": [
+        {
+          "entity": "URL",
+          "start": 6,
+          "end": 30
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "url_subdomain",
+      "predicted": [
+        {
+          "entity": "URL",
+          "start": 13,
+          "end": 44
+        }
+      ],
+      "applied": [
+        {
+          "entity": "URL",
+          "start": 13,
+          "end": 44
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "date_numeric",
+      "predicted": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 39
+        }
+      ],
+      "applied": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 39
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "date_written",
+      "predicted": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 45
+        }
+      ],
+      "applied": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 45
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "date_iso",
+      "predicted": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 39
+        }
+      ],
+      "applied": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 39
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "mixed_email_phone",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 23
+        },
+        {
+          "entity": "URL",
+          "start": 12,
+          "end": 23
+        },
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 27,
+          "end": 39
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 23
+        },
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 27,
+          "end": 39
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "mixed_person_email",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 14,
+          "end": 31
+        },
+        {
+          "entity": "PERSON",
+          "start": 0,
+          "end": 8
+        },
+        {
+          "entity": "URL",
+          "start": 20,
+          "end": 31
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 14,
+          "end": 31
+        },
+        {
+          "entity": "PERSON",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "repeated_email",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 0,
+          "end": 17
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 22,
+          "end": 39
+        },
+        {
+          "entity": "URL",
+          "start": 6,
+          "end": 17
+        },
+        {
+          "entity": "URL",
+          "start": 28,
+          "end": 39
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 0,
+          "end": 17
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 22,
+          "end": 39
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "adjacent_email",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 10,
+          "end": 25
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 27,
+          "end": 42
+        },
+        {
+          "entity": "URL",
+          "start": 14,
+          "end": 25
+        },
+        {
+          "entity": "URL",
+          "start": 31,
+          "end": 42
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 10,
+          "end": 25
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 27,
+          "end": 42
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_plain",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_code",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_symbol",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_numeric",
+      "predicted": [
+        {
+          "entity": "DATE_TIME",
+          "start": 21,
+          "end": 23
+        }
+      ],
+      "applied": [
+        {
+          "entity": "DATE_TIME",
+          "start": 21,
+          "end": 23
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_hedge",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_packages",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_type",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "negative_words",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "challenge_spanish",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 19,
+          "end": 36
+        },
+        {
+          "entity": "PERSON",
+          "start": 0,
+          "end": 8
+        },
+        {
+          "entity": "URL",
+          "start": 25,
+          "end": 36
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 19,
+          "end": 36
+        },
+        {
+          "entity": "PERSON",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "challenge_unicode_local",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 25
+        },
+        {
+          "entity": "URL",
+          "start": 14,
+          "end": 25
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 25
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    {
+      "id": "challenge_obfuscated_email",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 1
+    },
+    {
+      "id": "challenge_zero_width",
+      "predicted": [
+        {
+          "entity": "URL",
+          "start": 19,
+          "end": 26
+        }
+      ],
+      "applied": [
+        {
+          "entity": "URL",
+          "start": 19,
+          "end": 26
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    }
+  ],
+  "redactor_identity": {
+    "version": "presidio-offline-en/v1",
+    "sha256": "f0a50c69933b260a0260234ba7abc28529976a3b3c5d2b7c9a2c3a3bd99add46",
+    "configuration": {
+      "language": "en",
+      "python": "3.12.15",
+      "platform_machine": "x86_64",
+      "dependency_records": {
+        "pip": "9c8fa39729845b5e3a0fe3470e9d99f271baafe923e98d6df06def5888835ceb",
+        "smart-open": "ecd90e5a32b2e80e38b3149020cc2dd2235944d8e80eee34adf9f980178cef9e",
+        "websockets": "2dd4c31a00160c6a71812cedcc4f27a927ba6cd0933dc81713074b1a2b0fc0dd",
+        "thinc": "afe5191c53628c00f80a59920a9405e1bd6c46b0f3b421c188968a3860b4e98a",
+        "phonenumbers": "c0fc8b49fabc9e9c85f19bcb5a7d92b831ceb400bc526f1b4b4bfba958ae898b",
+        "h11": "fa83fcec506310ef27455d776ed1b5a86b14746f2c48bc7fd29f41d2320630ea",
+        "srsly": "f46e4d8843c537668151504802511da93ceb9c57d0e177dfd8bdc90d8e365c9e",
+        "blis": "2899273dc1e43b5a3d5fa9e13c95fba856031c919115096ca287f94b89dd53e0",
+        "numpy": "38654cd97de57854c20cf8033f08d2f2b5292b92d5824531e330d9bd5f2f695a",
+        "spacy": "940d100bf670cd78cae66dfe68d70360957de68b19530e4595e2f0039841c459",
+        "httpcore": "34eb3d2e270764d5b764e0bb2c9a319899865973bd5feaa26ee8dd093e0775ac",
+        "confection": "f8c965778e9ff9269655b2355f19a171056f1fca20372f280b5b1ad8aa2f92af",
+        "anyio": "a6d76bf9fd7090d84b32341bd775fd3781ae57cb1a82588715dffc15d0440b42",
+        "annotated-types": "32d25d8860ed8fb965af8c175f9f6d4579e6ab83de779f8fbd23b393e84fdbbb",
+        "urllib3": "452e7f733959ed7b6588ade3fa51306b6c8893dee7b780d7f5c3346d8cb6ec9d",
+        "cymem": "2c3df1e4ee973a9f055146fcaf12f5adf1cb2f88f9bfcc6ffe7c4a27039d1d2b",
+        "packaging": "5de8ea71c96d768936032ff40fee8788b9df2907d23c959e0635c04f3eeafab1",
+        "idna": "7ca7d1abce8beab49fdb6dc4cda0c04639b16a9a0e27029341befe9d5d0c0d95",
+        "pydantic": "e1d9ec6c04feeed0b3b59316f725dd8fdc38524496075088d86179d4d1d3fc49",
+        "azure-core": "8024192e0df4378817abfe7de9f9496ea0b02b9cd8e7e234a1edc4a65e7b78c8",
+        "starlette": "acdf16a9df6c7c2d2027fe0a6b3f89943754a85f05a9faf86e99f74db44b4487",
+        "charset-normalizer": "843936069219e44b8663f9cbceee19156addf3f12e2db3c493b9af3089fcd9c5",
+        "annotated-doc": "d0183be2a86b24c0b53c8c29be4be91f5efb42e587721c452bd3208dea5dbb2f",
+        "presidio-analyzer": "d9d024fe422fe73d85e2d58f5455ff064dea315a75c9f69b999438a66aae1b03",
+        "fastapi": "a4652a75876e58c0f88d2bcff478ac26df555033480698dfa2ba230a4f15c2be",
+        "httptools": "a3e0f19255afd1bae94e660d535001075d35a7c5da662dd33c3fe81c2494e9af",
+        "click": "9fca4932169704e4b2badc42f82e4b381fc9a96e860e818996dcfaf0063af104",
+        "filelock": "59c54a99660f0bb84082efd9c96bd50a26bce55e501103fd034a7c9530193738",
+        "watchfiles": "a24ba4163d847dc619778ddef979ca554d104b5342d3b01c6e68c1e8e2ac8fe0",
+        "rich": "e6d36e5b6dda9b2da692a29eec258c92a92aa12e37f6db92d12a5a91d77940f4",
+        "markdown-it-py": "49e040f031fc27b7a6bfd771e66a3ae98a789013c26f75b66c7031cbf4a4d8d4",
+        "requests": "7bba0196a873a09fd85f983bc50ee47c430a4edd6e7ba3cbc8a0cce21c3cd215",
+        "uvloop": "7be0af50268f64f92cac16a41d8de110c6ff033523f2240396edbb936179731d",
+        "catalogue": "a5cb6903f798b35e213289c4257e330e97fb77a452ec68327866aa8861dd8202",
+        "preshed": "aded0ca4a80df730866a66ca61af442d2cd55cfc4d384785654cc91cd204bb79",
+        "jinja2": "1addd73160817f42334fdcf62e6a904e575c70f085a45f1aad07e1acf58db763",
+        "opentelemetry-api": "2cb1a6ef68670da89d5fff287dcf74de52124b96ee1e1b2c55628d79cee08fa5",
+        "en-core-web-sm": "2e0a8ab52b9d7cf540be189f8bdec13e8b0c72a5cd5c59778e5ae3b354777db3",
+        "wrapt": "4e3c74d033504c32e943068a3520efcf709d64eaa57bb28549e085fa51151720",
+        "tldextract": "7d7bef1ef1c161024652c054d0a864578e0a114d55a8408ff74d720d2ac9a324",
+        "weasel": "6595660b89accfbfdc3a921fcbcfddddc206304fd2e40dc5fc58a1a108a5ebcf",
+        "typing-inspection": "10b95fa603fd228affa1e3a53ad980bdab4f7363bebabb36d67419864e7a1448",
+        "httpx": "564e700b801091438cfd10a38d34130c6bebab5e5ee01e39c5e37347562b0b8b",
+        "certifi": "e4dbdbedae71c38d0eea3ca6aec12e989d9522fd1847a42601b703ff60cbebc4",
+        "setuptools": "ce455ba55b3a1804f5aa39412c71d5fe4eb4947b5c19e871ddda9cab8ac7731e",
+        "typing-extensions": "b2b29b17130655534d101b05b9a37c58b63c51a0d9fa09dfd0a3e3a6881d6a23",
+        "pyyaml": "05fc51f58555b5e19e3e6a7d32627cd54fb3384fa9fd8c98f3402e178235b6df",
+        "python-dotenv": "d8729175375da3407386294fed51128f258510f0308bab462faeec2d2d1dee73",
+        "shellingham": "b734388bf145092b54d1b2eb7a1615be3bb745b9b194787731f128778c7b9ea1",
+        "uvicorn": "78d96737db531305b8e047ccfc9856d2a54353264f1445b32ae0a38287bbfb7f",
+        "wasabi": "94dade3147657e3c1d9bdd36fcc67868786f8fbd130e8283b25f99ed1f041877",
+        "pydantic-core": "7b051cf70661d6536bcc16ef8f9cbf5a329017f0f77380527a9a096799ebc2ef",
+        "regex": "54139a3bd54f1ee29b891f137fb2a0d3423d8e4fe767e05bf745f158ef89fa46",
+        "requests-file": "37bcb49a2db8c8a27b99c1fb937c842fddbb6d55139276a15a7b434f3fbc9cd6",
+        "cloudpathlib": "5f6ab2d302b8083d90e3f2da14257adab62825fe42e9ce94e5f7de7203acbaa9",
+        "mdurl": "737c5e7bdcbefcffd7dfa80fd3a59e9600c74a570880a29e926c4bc9603d32b8",
+        "typer": "c7673d0cebdd59e7cd0c4f4dda1966d0bf1e0486a0f675f1fe63224ff5eb37f6",
+        "markupsafe": "02703d6e134e1e24e64dced626ea59326510758cb8c417f55889bac8557535a1",
+        "tqdm": "01b18a4320bd4caff8ff4bcda6d862f16c0fe2735c2cac345850e05c307352dd",
+        "presidio-anonymizer": "18dfde793f49425763d0de0b0a8ce4916c492cb72cb8cc5728c85ea314ac5e33",
+        "pycryptodome": "061cb385ec4bfa443036f93bc229ce41bc121c09b660c3aa20a6c3d2b65ceec6",
+        "pygments": "cf6c3423f0d2f4eb80bafa787ce11edc26364cc569239c4c6f079ecd81dbd95b",
+        "spacy-loggers": "a756d03cec325c89ce1bbc349cc3c8a6751dfbb82974e34b2a74094491c7566b",
+        "spacy-legacy": "57dbb723857d57ccbfb531f8c3554a09c03eccf5f435a3814d3a4bcba2cc2b61",
+        "murmurhash": "aabf259d6971d90c25e54a3931f456058895d31a6401fa3206094be1b5f14d24"
+      },
+      "model_name": "en_core_web_sm",
+      "model_version": "3.8.0",
+      "model_manifest_sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4",
+      "sources": {
+        "app": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+        "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+        "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+        "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+        "identity_builder": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+      },
+      "dependencies": {
+        "pip": "25.0.1",
+        "smart-open": "8.0.2",
+        "websockets": "17.2",
+        "thinc": "8.3.13",
+        "phonenumbers": "8.13.55",
+        "h11": "0.16.0",
+        "srsly": "2.5.4",
+        "blis": "1.3.3",
+        "numpy": "2.5.3",
+        "spacy": "3.8.16",
+        "httpcore": "1.0.9",
+        "confection": "1.3.3",
+        "anyio": "4.15.1",
+        "annotated-types": "0.8.0",
+        "urllib3": "2.8.0",
+        "cymem": "2.0.13",
+        "packaging": "26.3",
+        "idna": "3.20",
+        "pydantic": "2.13.5",
+        "azure-core": "1.41.0",
+        "starlette": "1.7.0",
+        "charset-normalizer": "3.5.2",
+        "annotated-doc": "0.0.5",
+        "presidio-analyzer": "2.2.355",
+        "fastapi": "0.143.0",
+        "httptools": "0.8.0",
+        "click": "8.5.0",
+        "filelock": "4.0.12",
+        "watchfiles": "1.3.0",
+        "rich": "15.0.0",
+        "markdown-it-py": "4.2.0",
+        "requests": "2.34.2",
+        "uvloop": "0.23.0",
+        "catalogue": "2.0.10",
+        "preshed": "3.0.13",
+        "jinja2": "3.1.6",
+        "opentelemetry-api": "1.45.1",
+        "en-core-web-sm": "3.8.0",
+        "wrapt": "2.5.0",
+        "tldextract": "5.4.0",
+        "weasel": "1.0.0",
+        "typing-inspection": "0.4.4",
+        "httpx": "0.28.1",
+        "certifi": "2026.7.22",
+        "setuptools": "84.0.0",
+        "typing-extensions": "4.16.0",
+        "pyyaml": "6.0.3",
+        "python-dotenv": "1.2.4",
+        "shellingham": "1.5.4",
+        "uvicorn": "0.34.0",
+        "wasabi": "1.1.3",
+        "pydantic-core": "2.46.5",
+        "regex": "2026.9.29",
+        "requests-file": "3.0.1",
+        "cloudpathlib": "0.26.0",
+        "mdurl": "0.1.2",
+        "typer": "0.27.3",
+        "markupsafe": "3.0.4",
+        "tqdm": "4.70.1",
+        "presidio-anonymizer": "2.2.355",
+        "pycryptodome": "3.24.0",
+        "pygments": "2.21.0",
+        "spacy-loggers": "1.0.5",
+        "spacy-legacy": "3.0.12",
+        "murmurhash": "1.0.15"
+      },
+      "recognizer_configuration_sha256": "229372edf840197ccc204febf34a50e731cb213351efee545527a3c67bb6ea9c",
+      "recognizer_count": 26,
+      "analysis_score_threshold": 0.0,
+      "email_suffix_refresh": false,
+      "anonymization": "presidio-default-replace"
+    }
+  },
+  "sources": {
+    "app": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+    "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "identity_builder": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+  },
+  "fixture_sha256": "8794def090345dff3209f2feb1242edff8338d2f5dc890bccaa4a753c8ec962f",
+  "source_unchanged": true,
+  "independent_accuracy_evidence": false,
+  "real_user_data": false,
+  "production_services_modified": false,
+  "client_sources": {
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
+    "eval/fixtures/pii-recognition-development.json": "bbce463bb23425a9d49e4d5c8bfc70af7201957b739d53c753b49eb8ec5c52c6",
+    "eval/fixtures/pii-compact-addresses.json": "a9eda7f5fb5c2aaeeb20e1af7d8eaaf3b2d15aadb3db1472af1f9bf8b1d689d8",
+    "scripts/redaction-development-worker.py": "04b74a58800213c9c4ec1051a8d9c5f828229a571e0245d7a6e78cdc7e79920a",
+    "scripts/measure-redaction-development.py": "8b78a6983aeca0d913cdec6d97344df0ab4e765df4e1cdbc91923c23bf0410d9",
+    "tools/redaction_observations.py": "fed317d28b1a45f9a7e526bfaccf9eb2284fd6c94bb43bd02aeb50bc90b8cdea",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+  },
+  "measurement": {
+    "slices": {
+      "en": {
+        "cases": 38,
+        "cases_with_misses": 0,
+        "cases_with_unexpected_predictions": 13,
+        "tp": 34,
+        "fp": 17,
+        "fn": 0,
+        "expected": 34,
+        "predicted": 51,
+        "duplicate_predictions_removed": 0
+      },
+      "out_of_coverage": {
+        "cases": 4,
+        "cases_with_misses": 2,
+        "cases_with_unexpected_predictions": 3,
+        "tp": 2,
+        "fp": 4,
+        "fn": 2,
+        "expected": 4,
+        "predicted": 6,
+        "duplicate_predictions_removed": 0
+      }
+    },
+    "categories": [
+      {
+        "coverage": "en",
+        "entity": "DATE_TIME",
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "expected": 3,
+        "predicted": 5,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "EMAIL_ADDRESS",
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "expected": 13,
+        "predicted": 13,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "IP_ADDRESS",
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "expected": 3,
+        "predicted": 3,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "LOCATION",
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "expected": 3,
+        "predicted": 3,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "NRP",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "expected": 0,
+        "predicted": 1,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "PERSON",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "expected": 5,
+        "predicted": 5,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "PHONE_NUMBER",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "expected": 5,
+        "predicted": 5,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "en",
+        "entity": "URL",
+        "tp": 2,
+        "fp": 14,
+        "fn": 0,
+        "expected": 2,
+        "predicted": 16,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "out_of_coverage",
+        "entity": "EMAIL_ADDRESS",
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "expected": 4,
+        "predicted": 2,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "out_of_coverage",
+        "entity": "PERSON",
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "expected": 0,
+        "predicted": 1,
+        "partial_overlap_predictions": 0
+      },
+      {
+        "coverage": "out_of_coverage",
+        "entity": "URL",
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "expected": 0,
+        "predicted": 3,
+        "partial_overlap_predictions": 0
+      }
+    ],
+    "strict_entity_span_matching": true,
+    "independent_accuracy_evidence": false,
+    "representative_sample": false,
+    "privacy_clearance": false,
+    "redaction_coverage": [
+      {
+        "id": "email_simple",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 17,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "email_plus",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 24,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "email_upper",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 17,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "email_subdomain",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 22,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "email_dotted",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 21,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "email_quoted",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 17,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "email_unicode_context",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 17,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 4,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "phone_hyphen",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 12,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "phone_parentheses",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 14,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "phone_country",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 15,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "phone_dots",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 12,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "person_full",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 13,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "person_common",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 8,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "person_apostrophe",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 13,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "person_hyphen",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 19,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "location_city",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 7,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "location_country",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 6,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "location_phrase",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 13,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "ip_documentation",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 13,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "ip_documentation_two",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 12,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "ipv6_documentation",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 12,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "url_https",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 24,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "url_subdomain",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 31,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "date_numeric",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 10,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "date_written",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 16,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "date_iso",
+        "coverage": "en",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 10,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "mixed_email_phone",
+        "coverage": "en",
+        "expected_spans": 2,
+        "fully_masked_expected_spans": 2,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 29,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "mixed_person_email",
+        "coverage": "en",
+        "expected_spans": 2,
+        "fully_masked_expected_spans": 2,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 25,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "repeated_email",
+        "coverage": "en",
+        "expected_spans": 2,
+        "fully_masked_expected_spans": 2,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 34,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "adjacent_email",
+        "coverage": "en",
+        "expected_spans": 2,
+        "fully_masked_expected_spans": 2,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 30,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_plain",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_code",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_symbol",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_numeric",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 2,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_hedge",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_packages",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_type",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "negative_words",
+        "coverage": "en",
+        "expected_spans": 0,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "challenge_spanish",
+        "coverage": "out_of_coverage",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 17,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 8,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "challenge_unicode_local",
+        "coverage": "out_of_coverage",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 1,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 0,
+        "expected_characters": 16,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "challenge_obfuscated_email",
+        "coverage": "out_of_coverage",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 0,
+        "untouched_expected_spans": 1,
+        "expected_characters": 28,
+        "unmasked_expected_characters": 28,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      },
+      {
+        "id": "challenge_zero_width",
+        "coverage": "out_of_coverage",
+        "expected_spans": 1,
+        "fully_masked_expected_spans": 0,
+        "partially_masked_expected_spans": 1,
+        "untouched_expected_spans": 0,
+        "expected_characters": 18,
+        "unmasked_expected_characters": 11,
+        "masked_outside_expected_characters": 0,
+        "masking_is_not_privacy_clearance": true
+      }
+    ]
+  },
+  "worker_operation_observed": true,
+  "http_route_tested": false,
+  "candidate_recognizer_override": false,
+  "source_identity_is_not_remote_attestation": true
+}

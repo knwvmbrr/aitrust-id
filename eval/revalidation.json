@@ -45,7 +45,19 @@
         "services/gateway/app.py",
         "protocol/*.py",
         "spec/assertion.schema.json",
-        "tests/test_redaction*.py"
+        "tests/test_redaction*.py",
+        "tools/redaction_observations.py",
+        "scripts/measure-redaction-development.py",
+        "scripts/redaction-development-worker.py",
+        "scripts/build-redaction-performance.py",
+        "eval/fixtures/pii-recognition-development.json",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "eval/fixtures/pii-compact-addresses.json",
+        "runs/2026-10-11-pii-labels-compact.json"
       ],
       "commands": [
         [
@@ -53,7 +65,11 @@
           "-m",
           "pytest",
           "tests/test_redaction_contract.py",
-          "-q"
+          "-q",
+          "tests/test_complete_ipv6.py",
+          "tests/test_redaction_observations.py",
+          "tests/test_redaction_development_client.py",
+          "tests/test_redaction_development_builder.py"
         ]
       ]
     },
@@ -189,10 +205,20 @@
         "scripts/measure-pipeline-performance.py",
         "tests/test_pipeline_performance.py",
         "tests/pipeline-timing.cjs",
-        "runs/2026-10-11-staging-pipeline-identity-checked.json",
+        "runs/2026-10-11-pii-labels-timing.json",
         "docs/pipeline-performance.md",
         "scripts/verify-performance.cjs",
-        "scripts/verify-workflows.cjs"
+        "scripts/verify-workflows.cjs",
+        "scripts/build-redaction-performance.py",
+        "scripts/measure-redaction-development.py",
+        "scripts/redaction-development-worker.py",
+        "tools/redaction_observations.py",
+        "eval/fixtures/pii-recognition-development.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "tests/redaction-performance.cjs",
+        "docs/redaction-recognition.md",
+        "eval/fixtures/pii-compact-addresses.json",
+        "runs/2026-10-11-pii-labels-compact.json"
       ],
       "commands": [
         [

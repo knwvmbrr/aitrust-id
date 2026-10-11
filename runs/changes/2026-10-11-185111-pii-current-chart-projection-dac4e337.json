@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-185111-pii-current-chart-projection-dac4e337",
+  "recorded_at": "2026-10-11T18:51:11.850639+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
+  "changed": "Regenerate method-bound performance and scope projections from actual current PII evidence.",
+  "proves": "Recomputes recognition/masking counts and preserves independent tag jobs and all 202 scope records.",
+  "limits": "Build projection only; current website browser and deployment checks follow. No human or independent accuracy acceptance.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-120"
+  ],
+  "files": {
+    "site/src/tag-performance.json": "4a403d6a2948fab4b4c5a2fc3c775d80176a3f210f2aa21f02e282d22806f210",
+    "site/src/public-scope.json": "b3de66154c82247a4053b213f339810d9a65d3c74993dc3f9aafff1e4b4e04fe",
+    "site/src/scope-manifest.json": "308874abe46ef0a748b519fe235d75dbe55d656bd634f9603e682e3a7638c202"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-pii-recognition-staging.json",
+      "sha256": "2f50e249118f4bef582ad9a09731137fe23930d27a92bec214ef9ab88b85235b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/build-redaction-performance.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:51:11.984532+00:00"
+    }
+  ]
+}

@@ -27,7 +27,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-T-FA | FA Full AI Augmentation | [TAG-FA](scope-delivery.md#tag-fa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-PA | PA Partially Augmented | [TAG-PA](scope-delivery.md#tag-pa) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-UNK | UNK Unknown | [TAG-UNK](scope-delivery.md#tag-unk) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-T-PII | PII_REDACTED | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-T-PII | PII_REDACTED | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-T-OUT | PII_OUTBOUND | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-010 | sig.piped_installer.v1 — curl/wget piped to a shell | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-011 | sig.obfuscated_payload.v1 — base64/hex into eval/exec | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
@@ -53,7 +53,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-025 | sig.c2pa_manifest.v1 — parses an attached C2PA manifest | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-082 | Assistive input safety routing | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-024 | PII_OUTBOUND pre-send warning — you are about to paste personal data into a model | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-043 | No-egress network topology — internal: true, loopback binding | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |

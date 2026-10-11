@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-192518-pii-compact-capability-checks-33df6e55",
+  "recorded_at": "2026-10-11T19:25:18.770914+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0ede62be5802399df1a7fda8edf63bf078566a51",
+  "changed": "Run current-source PS, PII, protocol and extension regression checks after the compact-label correction.",
+  "proves": "All four engineering receipts pass without source changes during execution.",
+  "limits": "Engineering checks do not establish independent accuracy, human accessibility or release acceptance; 88 full requirements remain open.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-113"
+  ],
+  "files": {
+    "docs/redaction-recognition-plan.md": "e1457173e2f79ee85821e4f4be4644178bf318c6596f47d9c5c7d621f0a39e7e",
+    "docs/redaction-recognition.md": "9c9a17b78eccb469f91138a87666d061fc169f46d11d9e78d6c779196cc2df14",
+    "docs/scope-progress.json": "865a1f57482ce49d315316a3f6465696131ea7bccacc3339df68a72404615af4",
+    "docs/scope-progress.md": "0d51c4cb5581dc8700329d0439b293b28dcf3c332d999606e688237e0d176707",
+    "eval/fixtures/pii-compact-addresses.json": "a9eda7f5fb5c2aaeeb20e1af7d8eaaf3b2d15aadb3db1472af1f9bf8b1d689d8",
+    "eval/revalidation.json": "0351ea58efa3a720ceec09b1f23dd3c0e28e78f4e7b635c981888aace554ad7b",
+    "eval/route-boundaries.json": "56693edceab639c4e0057f909dd67e9e2253532e79a0d7860aeaac2ad43bed47",
+    "runs/2026-10-11-pii-labels-bound-PII_REDACTED.json": "498cae69ccc3d49a2b8fedca291c3644a2ffc298c56bb9b17eb752e6fe6a306f",
+    "runs/2026-10-11-pii-labels-bound-PS.json": "ecf1f6bf2a3c53ddc2feb830b9b95a61cf37ded698b722d99c93e3851ef09c14",
+    "runs/2026-10-11-pii-labels-bound-extension.json": "274a0d8236092a4876a79582522818ce92375b15df1cb70f439967aa402c38ad",
+    "runs/2026-10-11-pii-labels-bound-protocol.json": "b8cb678f4c78173dd4af5c8152546f492942d13ff517598e423d22e74c460ca7",
+    "runs/2026-10-11-pii-labels-compact.json": "c08585edc7c33be833494eeb6614fa848d5434f49f48aef75e34ccfe5818e270",
+    "runs/2026-10-11-pii-labels-integration.json": "b3311f08884bab4ef90ab6ea150f6199ab76acf0d74cbd521dd03aade14224d6",
+    "runs/2026-10-11-pii-labels-recognition-intermediate.json": "00f1cda6e5e4631130bbc071100aec044d93119f53f958e0566404694e55bc61",
+    "runs/2026-10-11-pii-labels-recognition.json": "3b918cd7f88d9756b3eec3cb8c1209b8a53265d6f0664bfde4d71bbe83d1db08",
+    "runs/2026-10-11-pii-labels-replay.json": "d02ecc2002198649075828d12ecde6a7127e975e02f39c48c14728e5e5e59c5d",
+    "runs/2026-10-11-pii-labels-review-diagnosis.json": "15004fa81747dcab56e30db89377c6fa381ccdc2006abe755fd3bce3a0cda945",
+    "runs/2026-10-11-pii-labels-service.json": "e7b5bdcb378bf6a0fad807ade3c23c1e133637018d55eb2a478e29b0f8bb4e7a",
+    "runs/2026-10-11-pii-labels-timing.json": "be61f7ea333142db4a39a970a36c7c35caaf30be0f71bef30349521bf94ddff8",
+    "scripts/build-redaction-performance.py": "a8b7a2d463faa420a3f60a5d05b203215894b2545c34be7a9be70963151cbde5",
+    "scripts/measure-redaction-development.py": "8b78a6983aeca0d913cdec6d97344df0ab4e765df4e1cdbc91923c23bf0410d9",
+    "scripts/verify-performance.cjs": "0e89da5d030b0cfe05a105c0c53364e73d600ec24012c3e4bc1618421d486c6e",
+    "scripts/verify-route-boundaries.py": "6c56578bf3cfbd8849cbf449fea8ab826aa689ca6775b55ff9c6d798b01d6675",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "site/index.html": "4eb4bd9f713b0f4b12d39f93775a5ba9d55dd3534c8468b557383247b8321b5d",
+    "site/public/reference/pii-compact-addresses.json": "a9eda7f5fb5c2aaeeb20e1af7d8eaaf3b2d15aadb3db1472af1f9bf8b1d689d8",
+    "site/public/reference/pipeline-performance.json": "39613c6024c0a7c69f1fbbe16a09a595e4095045e26faf924b9809c97015b713",
+    "site/public/reference/public-scope.json": "f2c2d984ea2cfc66f4f1d679bbbdab082c7275d8bb3c858c5e85f50233fd5171",
+    "site/public/reference/redaction-compact-addresses.json": "c08585edc7c33be833494eeb6614fa848d5434f49f48aef75e34ccfe5818e270",
+    "site/public/reference/redaction-recognition.json": "3b918cd7f88d9756b3eec3cb8c1209b8a53265d6f0664bfde4d71bbe83d1db08",
+    "site/public/reference/redaction-recognition.md": "9c9a17b78eccb469f91138a87666d061fc169f46d11d9e78d6c779196cc2df14",
+    "site/public/reference/tag-performance.json": "37d5b0b7e08ef84cc018fd8f4953302f62fdf5da2f78c6c804b79b17ff9c8969",
+    "site/scripts/prepare-performance.mjs": "27374caa6560758b20bcf5493121d46cd91533732aecae442d702ee7c23ea5be",
+    "site/src/performance.jsx": "ca85bcab8cb3b92c9627cb2df1f2c39a5da5e0a51a01f68729efc9a4d683a6e7",
+    "site/src/public-scope.json": "f2c2d984ea2cfc66f4f1d679bbbdab082c7275d8bb3c858c5e85f50233fd5171",
+    "site/src/redaction-performance-model.js": "4633a77f3866572f470c7895570c3b032fad4c061c0c71260bd1a00175e7630a",
+    "site/src/scope-manifest.json": "80da6333be183cf318bcb6512e3675d05c12e67c1bb876d6e32a1732d1d9723a",
+    "site/src/tag-performance.json": "37d5b0b7e08ef84cc018fd8f4953302f62fdf5da2f78c6c804b79b17ff9c8969",
+    "state.json": "662e1cd664b33ea0c458d70932e6a974efb5d37cc3e542b339abb9316819812b",
+    "tests/pipeline-timing.cjs": "d6297ab3d60a3ea5794ae3403f49340e0c2a57db1544d77f35866a1448dcf4d6",
+    "tests/redaction-performance.cjs": "e7d4514bcb194a3f5e38258a123f07f7d0c4e36208bba92fb768c3ac2742c59f",
+    "tests/test_complete_ipv6.py": "6575ce8175f629bcea4e4d9677b34e3395ad3d734b2ffa5b25d9a7c1e2e2d64e",
+    "tests/test_redaction_development_builder.py": "3f96ae25400041e1c2bbaccd6eb326bb2a215b67bbfa96ef003d948bace61fb6",
+    "tests/test_redaction_development_client.py": "dedb76b453f56c41f9e26e70e8d2b1f42fd4a2c888fbf00ad73e09cd61a3d438"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-pii-labels-bound-PS.json",
+      "sha256": "ecf1f6bf2a3c53ddc2feb830b9b95a61cf37ded698b722d99c93e3851ef09c14"
+    },
+    {
+      "path": "runs/2026-10-11-pii-labels-bound-PII_REDACTED.json",
+      "sha256": "498cae69ccc3d49a2b8fedca291c3644a2ffc298c56bb9b17eb752e6fe6a306f"
+    },
+    {
+      "path": "runs/2026-10-11-pii-labels-bound-protocol.json",
+      "sha256": "b8cb678f4c78173dd4af5c8152546f492942d13ff517598e423d22e74c460ca7"
+    },
+    {
+      "path": "runs/2026-10-11-pii-labels-bound-extension.json",
+      "sha256": "274a0d8236092a4876a79582522818ce92375b15df1cb70f439967aa402c38ad"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T19:25:18.902049+00:00"
+    }
+  ]
+}

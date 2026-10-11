@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-10-11T18:51:10.358494+00:00",
+  "pass": true,
+  "python_checks": 130,
+  "node_checks": 47,
+  "execution": "Actual focused pytest and Node test commands; fixed synthetic controls, not independent recognition accuracy.",
+  "python_command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests/test_complete_ipv6.py",
+    "tests/test_redaction_observations.py",
+    "tests/test_redaction_development_client.py",
+    "tests/test_redaction_development_builder.py",
+    "-q"
+  ],
+  "node_command": [
+    "node",
+    "--test",
+    "tests/redaction-performance.cjs",
+    "tests/pipeline-timing.cjs"
+  ],
+  "node_stdout_sha256": "2f10fe783706ca73ee109dbdc7808e63eacf2a515acf21034a357eeb91537fb0",
+  "independent_accuracy_evidence": false
+}

@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-10-11T19:23:11.931229+00:00",
+  "review_thread": "PRRT_kwDOVBYh3s6rQiw8",
+  "reviewed_source": "0ede62be5802399df1a7fda8edf63bf078566a51",
+  "issue": "Compact IP labels block the original complete-address token boundary.",
+  "fix": "Add bounded explicit IP/IPv6/address/addr/host separators; retain whole-address, malformed, embedded and scoped guards.",
+  "rejected_generic_label_draft": {
+    "source_sha256": "472c4c97f9d2f47a80c3df61e18e1e001dd80a754faf70878f77dd86e10c475f",
+    "issue": "x2001 was incorrectly treated as a label, admitting the db8::27 suffix.",
+    "retained_development_image": "2ea7c7314483a642db398e1b62be412af09d9c850d1682f86609b51ae7ae03bb",
+    "accepted_for_release": false
+  },
+  "final_source_sha256": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+  "focused_ipv6_controls": 83,
+  "focused_python_controls": 175,
+  "focused_node_controls": 53,
+  "actual_main_engine_examples": 42,
+  "actual_compact_engine_examples": 6,
+  "actual_pipeline_http_controls": 32,
+  "actual_pipeline_replay_controls": 13,
+  "actual_pipeline_timing_requests": 253,
+  "compact_expected_fully_masked": 6,
+  "compact_examples_with_extra_masking": 3,
+  "compact_extra_characters_masked": 12,
+  "production_services_modified": false,
+  "real_user_data": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

@@ -193,6 +193,8 @@ jobs:
       - run: pip install --require-hashes -r eval/requirements.lock
       - run: npm ci
       - run: npm ci --prefix site
+      - name: Validate source-bound redaction development charts and isolated tag states
+        run: node --test tests/redaction-performance.cjs
       - run: npm run verify:enterprise
       - run: npm run build:site
       - name: Exercise current-route deployment boundaries and violating profiles
