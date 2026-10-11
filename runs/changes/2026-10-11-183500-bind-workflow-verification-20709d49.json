@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-183500-bind-workflow-verification-20709d49",
+  "recorded_at": "2026-10-11T18:35:00.929371+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5400ab1302cbc542375e32c56fc63685c2e841ed",
+  "changed": "Bind the workflow readiness verifier into current website checks and deployment source inventory.",
+  "proves": "The corrected workflow is now executed from the current build and changes invalidate its recorded verification.",
+  "limits": "No live community service or human acceptance; prior receipt retained as historical after manifest changes.",
+  "scope_ids": [
+    "F-120",
+    "F-136"
+  ],
+  "files": {
+    "eval/revalidation.json": "9a7ed9bd61700248adbac7fcafc775ddb9d6bc626c3f9e8cca1d4536964bc8df",
+    "scripts/verify-built-website.cjs": "7aa134cd27b474e18f86d67bb65f3f55ffa4400d834f87fc02c6f424af58800a",
+    "scripts/verify-route-boundaries.py": "6057eb6ff88cb1c3de4b4e2e81cad21f889bb73f3f213862027650fb2867168e",
+    "runs/2026-10-11-workflow-readiness-website.json": "a940487d46a0b7ede8baf06feed9c5c0be1365c758bd2e47d7715462f273fc82"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-workflow-readiness-website.json",
+      "sha256": "a940487d46a0b7ede8baf06feed9c5c0be1365c758bd2e47d7715462f273fc82"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-built-website.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:35:01.251152+00:00"
+    }
+  ]
+}

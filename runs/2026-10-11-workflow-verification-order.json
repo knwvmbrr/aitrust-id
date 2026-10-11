@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-11T18:36:52.304512+00:00",
+  "pass": false,
+  "kind": "verification_prerequisite_refusal",
+  "error_signature": "New change missing fresh matching event",
+  "cause": "The operator generated four capability receipts and started a website build before recording those new evidence files in the changelog. The guard correctly refused the build. No workflow assertion ran in this attempt.",
+  "fix": "Record each generated public receipt before any dependent build. Preserve the failed attempt and use a new exclusive website receipt destination.",
+  "protected_merge_performed": false,
+  "site_deployed": false,
+  "independent_accuracy_evidence": false
+}

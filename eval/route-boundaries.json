@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T18:24:23.250518+00:00",
-  "reviewed_by": "Codex \u2014 per-response source-matched synthetic pipeline timing; no endpoint, permission, intake or tag change",
+  "reviewed_at": "2026-10-11T18:39:28.053205+00:00",
+  "reviewed_by": "Codex \u2014 scope-workflow content readiness, controlled delayed-response verification and unchanged service/extension access",
   "rules": [
     "X-01",
     "X-03",
@@ -350,12 +350,13 @@
     "scripts/verify-replay-export.cjs": "30cbd99c5c3e81657ba337e64687325ffd170397a2df72e142dcd4f767403db0",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "1f22aad9d4a04123457126228b80ada6c0538630198dd081d18b4ba1d18365d8",
+    "scripts/verify-route-boundaries.py": "6057eb6ff88cb1c3de4b4e2e81cad21f889bb73f3f213862027650fb2867168e",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-plan.py": "cc0660aced2664618f20c7d67ccd3b63e395cbc05660395d6670ae9b663ebfd9",
     "scripts/verify-signed-gateway.cjs": "47abfdd0a2bb88407d90a56b75b66b0d5215261c208de1a75b0e9e6bbf5d1aac",
     "scripts/verify-source-provenance.py": "23af3bd57297f1ef309c17abaf644eda68823f3a4e06331a5e02471e43e095ba",
+    "scripts/verify-workflows.cjs": "b3692070ff011d460db4ebc56587db5eda15a782812cf0a6f112fc9ad5438462",
     "services/adjudicator/adjudicate.py": "4f0fa7bf3d0a18144cbd89b1fd2123bd0a9d66a9f76ef0133c05208e430a4d14",
     "services/adjudicator/presentation.py": "2166006c60c49a81c3d65d883e0e781d8f65c5461481f1db85257c644fcba762",
     "services/adjudicator/tag_bridge.py": "210b35d4454ffa4df192a0bd16aa16d6ae338a1bb9de5bd00b505f8063b70b03",
@@ -505,8 +506,8 @@
     "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052"
   },
   "engineering_receipts": {
-    "extension": "runs/2026-10-11-pipeline-identity-extension-current.json",
-    "website": "runs/2026-10-11-reviewer-agreement-index-ordered-website.json"
+    "extension": "runs/2026-10-11-workflow-bound-extension.json",
+    "website": "runs/2026-10-11-workflow-bound-website-recorded.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",

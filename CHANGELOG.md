@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-183929-verified-workflow-readiness-6e76e2e4
+
+Recorded 2026-10-11T18:39:29.186524+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual eight-workflow delayed-response controls, refreshed capability receipts and deployment source review.
+- **Evidence.** All five current capability receipts pass, 487 boundary sources are bound, and all eight independently named workflow panels load and pass current browser checks. [Change record](./runs/changes/2026-10-11-183929-verified-workflow-readiness-6e76e2e4.json).
+- **Not claimed.** 114 complete and 88 open remain unchanged; human accessibility, community hosting, independent accuracy and publication of this head remain pending.
+
+
+### 2026-10-11-183652-current-workflow-receipts-8c46832c
+
+Recorded 2026-10-11T18:36:52.425485+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain four passing capability checks, the website prebuild refusal and its ordering correction.
+- **Evidence.** PS, PII, protocol and extension executed against current manifest; a build refused unrecorded evidence rather than omitting it. [Change record](./runs/changes/2026-10-11-183652-current-workflow-receipts-8c46832c.json).
+- **Not claimed.** No website pass in the refused attempt, merge, publication or independent accuracy acceptance.
+
+
+### 2026-10-11-183500-bind-workflow-verification-20709d49
+
+Recorded 2026-10-11T18:35:00.929371+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the workflow readiness verifier into current website checks and deployment source inventory.
+- **Evidence.** The corrected workflow is now executed from the current build and changes invalidate its recorded verification. [Change record](./runs/changes/2026-10-11-183500-bind-workflow-verification-20709d49.json).
+- **Not claimed.** No live community service or human acceptance; prior receipt retained as historical after manifest changes.
+
+
+### 2026-10-11-183254-workflow-data-readiness-171f3a7c
+
+Recorded 2026-10-11T18:32:54.092474+00:00 · Contributor: Codex · change
+
+- **Changed.** Wait for actual workflow content and test a deliberately delayed Scope data response.
+- **Evidence.** Preserves the failed CI run and closes an asynchronous test-readiness defect without retrying assertions or weakening acceptance. [Change record](./runs/changes/2026-10-11-183254-workflow-data-readiness-171f3a7c.json).
+- **Not claimed.** Pending current execution and protected merge; no independent accuracy or human accessibility acceptance.
+
+
 ### 2026-10-11-182553-index-current-full-regression-eb230057
 
 Recorded 2026-10-11T18:25:53.669554+00:00 · Contributor: Codex · change

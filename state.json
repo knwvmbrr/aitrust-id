@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T18:25:53.617305+00:00",
+  "updated": "2026-10-11T18:39:28.977243+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -106,12 +106,13 @@
       "townhall": "dated public GitHub snapshot with live external links; no automatic refresh",
       "scope_search_records": 202,
       "self_hosted_community": false,
-      "automated_checks": "runs/2026-10-08-workflows-behavior.json",
+      "automated_checks": "runs/2026-10-11-workflow-loaded-controls.json",
       "automated_pass": true,
       "human_accessibility_verified": false,
       "published": true,
       "public_evidence": "runs/2026-10-09-branding-workflows-public.json",
-      "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5"
+      "source_commit": "5099bb7a26a229efb3b73bd470d1e12f9c67f1c5",
+      "verification_scope": "Current locally built eight distinct workflows including deliberately delayed scope data; publication and human acceptance separate"
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
@@ -964,8 +965,8 @@
   "personal_route_boundaries": {
     "status": "current_source_and_publication_checks_pass",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-11-key-backup-final-boundaries.json",
-    "source_files": 189,
+    "evidence": "runs/2026-10-11-workflow-boundaries.json",
+    "source_files": 487,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1024,15 +1025,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-pipeline-identity-ps-current.json",
-    "PII_REDACTED": "runs/2026-10-11-pipeline-identity-pii-current.json",
-    "protocol": "runs/2026-10-11-pipeline-identity-protocol-current.json",
-    "extension": "runs/2026-10-11-pipeline-identity-extension-current.json",
-    "website": "runs/2026-10-11-reviewer-agreement-index-ordered-website.json",
+    "PS": "runs/2026-10-11-workflow-bound-PS.json",
+    "PII_REDACTED": "runs/2026-10-11-workflow-bound-PII_REDACTED.json",
+    "protocol": "runs/2026-10-11-workflow-bound-protocol.json",
+    "extension": "runs/2026-10-11-workflow-bound-extension.json",
+    "website": "runs/2026-10-11-workflow-bound-website-recorded.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T18:25:53.617305+00:00",
+  "updated_at": "2026-10-11T18:39:28.977243+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1567,14 +1568,16 @@
     "requirements_closed": 0,
     "publication_pending": true,
     "focused_math_tests": 38,
-    "current_capabilities": "runs/2026-10-11-reviewer-agreement-index-current.json",
-    "website_execution": "runs/2026-10-11-reviewer-agreement-index-ordered-website.json",
+    "current_capabilities": "runs/2026-10-11-workflow-current.json",
+    "website_execution": "runs/2026-10-11-workflow-bound-website-recorded.json",
     "source_change_diagnosis": "runs/2026-10-11-reviewer-agreement-build-diagnosis.json",
-    "current_boundaries": "runs/2026-10-11-reviewer-agreement-index-boundaries.json",
+    "current_boundaries": "runs/2026-10-11-workflow-boundaries.json",
     "full_python_tests": 1692,
     "python_execution": "runs/2026-10-11-reviewer-agreement-index-python.json",
     "index_regression_checks": 11,
     "index_review_corrected": true,
-    "index_sequencing_failure": "runs/2026-10-11-reviewer-agreement-index-sequencing.json"
+    "index_sequencing_failure": "runs/2026-10-11-reviewer-agreement-index-sequencing.json",
+    "workflow_readiness_failure": "runs/2026-10-11-workflow-readiness-failure.json",
+    "controlled_delayed_scope_response_checked": true
   }
 }

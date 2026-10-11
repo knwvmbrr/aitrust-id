@@ -13,3 +13,9 @@ Report destination failures are distinct from invalid rating data. Execute unsaf
 ## Review correction: derived scope consistency
 
 The task index must agree with the ledger after a percentage changes. Regenerate the existing scope renderer, review each resulting file, and add an executable guard that compares every rendered task percentage against its ledger record, including duplicate/missing/orphan rows. This changes no acceptance criteria or completion counts. Keep PS/PII detailed contracts untouched as the renderer already specifies. Verify the corrected source, rerun current website checks affected by the regression gate, and record the original disagreement as a defect rather than calling the earlier audit consistent.
+
+## CI workflow-readiness correction
+
+The dialog shell appears before the Scope workflow's verified JSON finishes loading. Waiting only for the dialog and immediately counting its child produces a false failure under slower scheduling. Wait for each declared workflow panel, not an arbitrary delay; keep missing/mismatched panels as failures. Exercise a fresh browser context with the scope response held until the visible loading state is observed, then release it and prove the expected panel appears. Preserve CI failure evidence and rerun source-bound website checks before protected merge. No production behavior or release gates are weakened.
+
+Verification ordering is explicit: after generating a retained capability receipt, record that public evidence file before starting any dependent website build. The prebuild changelog guard inspects newly created reports too. A batch that runs four capabilities and then a website build without recording their reports is invalid; retain the refusal and use a fresh exclusive output destination after repairing the prerequisite.

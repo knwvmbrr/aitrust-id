@@ -31,6 +31,7 @@ async function main(){
   // Ignore a caller's stale external fixture URL. Both tools see this new build.
   await run(process.execPath,['scripts/verify-site.cjs'],env);
   await run(process.execPath,['scripts/verify-performance.cjs'],env);
+  await run(process.execPath,['scripts/verify-workflows.cjs'],env);
   await run(process.execPath,['scripts/verify-site-accessibility.cjs'],env);
   await run(process.execPath,['scripts/verify-mobile-payload.cjs'],env);
  await run(process.execPath,['scripts/verify-research-feedback.cjs'],env);

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-183254-workflow-data-readiness-171f3a7c",
+  "recorded_at": "2026-10-11T18:32:54.092474+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5400ab1302cbc542375e32c56fc63685c2e841ed",
+  "changed": "Wait for actual workflow content and test a deliberately delayed Scope data response.",
+  "proves": "Preserves the failed CI run and closes an asynchronous test-readiness defect without retrying assertions or weakening acceptance.",
+  "limits": "Pending current execution and protected merge; no independent accuracy or human accessibility acceptance.",
+  "scope_ids": [
+    "F-136",
+    "F-120"
+  ],
+  "files": {
+    "scripts/verify-workflows.cjs": "b3692070ff011d460db4ebc56587db5eda15a782812cf0a6f112fc9ad5438462",
+    "docs/reviewer-agreement-plan.md": "6d6de285a6b36410096f69a15a233ca6d86c396e1d540d332eb352a0521279fc",
+    "runs/2026-10-11-workflow-readiness-failure.json": "907b59e91bd920be9f24b8d6add2d44197582685ac97af7c07d8e239c53a697c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-workflow-readiness-failure.json",
+      "sha256": "907b59e91bd920be9f24b8d6add2d44197582685ac97af7c07d8e239c53a697c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-workflows.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:32:54.162572+00:00"
+    }
+  ]
+}
