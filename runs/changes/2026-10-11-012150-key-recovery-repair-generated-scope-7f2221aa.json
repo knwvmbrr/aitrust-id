@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-012150-key-recovery-repair-generated-scope-7f2221aa",
+  "recorded_at": "2026-10-11T01:21:50.363343+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0eca0dd120b175bfff30df53e5cea3798eefa0fe",
+  "changed": "Regenerated public scope with immutable atomic-write repair evidence, keeping all 202 records and 107/95 counts.",
+  "proves": "Actual source website build succeeds; the new acceptance evidence is visible without changing baseline jobs or claiming human acceptance.",
+  "limits": "Still prepared, not newly deployed; no validated tag or completed 25-open target.",
+  "scope_ids": [
+    "F-129"
+  ],
+  "files": {
+    "docs/key-recovery-plan.md": "33e3e06637be52bc951ab3bd0223174d27836a30dba84c22128470fb12b865bb",
+    "docs/key-recovery.md": "4a5b00653522ebe0b4d6ff0735c3b9831f5182bfa747a51cf4aeec463d783e72",
+    "docs/scope-progress.json": "b066bdfb4a79466825ec3a4a5e8000bd500553da171778bccf3577a900928d2f",
+    "docs/scope-progress.md": "c72d8826198edfb2624e7230182d736b4f74b90a15ac7346769b15f4b702494b",
+    "runs/2026-10-11-key-backup-atomic-repair.json": "a6c75feb144a72b42504943e36c661742f435af136c77062da0d3f94dad3cd2f",
+    "scripts/atomic-output.cjs": "8c335936dc20e569b984162c5a28e3af1ac48a65e967b02f79f1daba8bac1ab1",
+    "scripts/key-backup.cjs": "b6e84f7b0a1510e25d729df360373b1d76adf4a9cf355ca200cd01ce7a84c4cf",
+    "scripts/receipt.cjs": "953d06371495923b87cd50518c363d9d47a57fc59adf317bd80c4e088229841e",
+    "scripts/verify-offline-components.py": "e9960d7e24346317b0f8d95547691870d4f254a4fc09643d6d2caf60b8033111",
+    "scripts/verify-route-boundaries.py": "2752ee4b7fecf475a54bbce76af45602f527bc552355dd60a55c7f32d32c8eb4",
+    "site/public/reference/public-scope.json": "153151e9945ebbc7fad760fcd88b38ecc05fa30747217e71629f923b874defac",
+    "site/src/public-scope.json": "153151e9945ebbc7fad760fcd88b38ecc05fa30747217e71629f923b874defac",
+    "state.json": "4373ad598f4ca372a1e964fd18ab63220f6dd2b13eed7e63f859973967348133",
+    "tests/key-backup.cjs": "cc62350dbee89eaf42043fe3b74800b895855533320ed2b9a6d9d949125b9a42"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-backup-atomic-repair.json",
+      "sha256": "a6c75feb144a72b42504943e36c661742f435af136c77062da0d3f94dad3cd2f"
+    }
+  ],
+  "checks": []
+}

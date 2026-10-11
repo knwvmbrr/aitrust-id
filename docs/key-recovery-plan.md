@@ -36,3 +36,24 @@ Compromised machines, clipboard/password-manager security, disk erasure and
 actual human operation remain outside what automated checks can prove.
 
 Author: Codex. Planned 2026-10-11 UTC before feature code.
+
+## Review repair plan — failed output containment
+
+PR-22 review identified that the reused receipt writer creates the destination
+before write/fsync success. For this optional private-key workflow, replace that
+use with a dedicated publisher: validate the existing owner-only destination,
+create a random owner-only temporary file in the same directory, write and sync
+all bytes, close, then atomically hard-link the complete file to the new final
+name without overwrite. Write/sync/close/link failures must leave no final key;
+clean temporary output and permit a retry. Test failures with injected I/O errors
+over actual files, plus concurrent destination creation without deleting the
+other writer's file. Do not alter current personal checks or their receipt writer.
+Temporary-file cleanup failures must be surfaced explicitly; do not promise
+physical erasure or disk/host compromise protection. Plan recorded before repair.
+
+The repair also applies this publisher to the existing receipt CLI writer, so
+initial key creation has the same write/sync failure containment as restoration.
+Extract it as an internal built-in-only module; keep each caller’s existing path
+and permission checks. Personal gateway, capture, assertion and tag semantics
+remain unchanged. Update source inventories and run both CLI families before
+resolving the review. This broader repair was planned before changing the writer.

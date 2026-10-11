@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-012530-key-recovery-final-private-output-controls-0d3298b0",
+  "recorded_at": "2026-10-11T01:25:30.469048+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0eca0dd120b175bfff30df53e5cea3798eefa0fe",
+  "changed": "Bound final shared atomic writer, restrictive-umask safety and actual editor/receipt integration to new immutable source evidence.",
+  "proves": "53 custody controls per actual Mac/Linux, 181/149 combined Node controls, real hidden terminals, current raw-source equality and actual two-engine editor-to-receipt flow.",
+  "limits": "F-129 still requires actual nontechnical-author acceptance. Physical storage/power failure is not asserted; failed cleanup remains explicit. All 202 requirements stay, 107 complete/95 open.",
+  "scope_ids": [
+    "F-129",
+    "F-121",
+    "F-123"
+  ],
+  "files": {
+    "docs/key-recovery-plan.md": "33e3e06637be52bc951ab3bd0223174d27836a30dba84c22128470fb12b865bb",
+    "docs/key-recovery.md": "4a5b00653522ebe0b4d6ff0735c3b9831f5182bfa747a51cf4aeec463d783e72",
+    "docs/scope-progress.json": "1680b7f26bc648e6c515c4fc44e9819ed1a242c9c630515b39c5f43272a11eaf",
+    "docs/scope-progress.md": "423a83d0c5db9816c4a479c855a002630414cd8d1fad6bed03b1c8f1916dff9b",
+    "runs/2026-10-11-key-backup-atomic-editor-receipt.json": "5f9ad3b9da151375baf76ab3f5569dc94eba7d7651a4103d86d14266e46368f2",
+    "runs/2026-10-11-key-backup-atomic-final-platforms.json": "b3ab56ad5d2da4c7bd5ec04ecef90e195340d8746de23b0e22805e0b54a12cb9",
+    "runs/2026-10-11-key-backup-atomic-receipt-components.json": "6298259d6b5229876d3911918a2185f4df2799647317bc4bfd03e79762d21e7f",
+    "runs/2026-10-11-key-backup-atomic-repair.json": "a6c75feb144a72b42504943e36c661742f435af136c77062da0d3f94dad3cd2f",
+    "runs/2026-10-11-key-backup-atomic-website-current.json": "8b55c5989a264aab89d2b2d432b88db6d986f5a34d543aa6d396315287660ab8",
+    "scripts/atomic-output.cjs": "8f4d364e9b5ef77259a975edd5ccd69658f78e2b5f78cc8d853fac3826f8aad4",
+    "scripts/key-backup.cjs": "b6e84f7b0a1510e25d729df360373b1d76adf4a9cf355ca200cd01ce7a84c4cf",
+    "scripts/receipt.cjs": "953d06371495923b87cd50518c363d9d47a57fc59adf317bd80c4e088229841e",
+    "scripts/verify-offline-components.py": "e9960d7e24346317b0f8d95547691870d4f254a4fc09643d6d2caf60b8033111",
+    "scripts/verify-route-boundaries.py": "2752ee4b7fecf475a54bbce76af45602f527bc552355dd60a55c7f32d32c8eb4",
+    "site/public/reference/public-scope.json": "153151e9945ebbc7fad760fcd88b38ecc05fa30747217e71629f923b874defac",
+    "site/src/public-scope.json": "153151e9945ebbc7fad760fcd88b38ecc05fa30747217e71629f923b874defac",
+    "state.json": "03be2a489a17ac939063b23e210bfe17e8aa1fdd23d23e0eb1b9f98b5679ea23",
+    "tests/key-backup.cjs": "60065961d7258d6913d3c31eaabe2506647c5ec3f4a9f137e98631645fd4a4d4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-backup-atomic-final-platforms.json",
+      "sha256": "b3ab56ad5d2da4c7bd5ec04ecef90e195340d8746de23b0e22805e0b54a12cb9"
+    },
+    {
+      "path": "runs/2026-10-11-key-backup-atomic-editor-receipt.json",
+      "sha256": "5f9ad3b9da151375baf76ab3f5569dc94eba7d7651a4103d86d14266e46368f2"
+    },
+    {
+      "path": "runs/2026-10-11-key-backup-atomic-receipt-components.json",
+      "sha256": "6298259d6b5229876d3911918a2185f4df2799647317bc4bfd03e79762d21e7f"
+    }
+  ],
+  "checks": []
+}

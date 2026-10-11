@@ -2,6 +2,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
 const receipts=require('../protocol/receipts.cjs');
+const atomic=require('./atomic-output.cjs');
 const root=path.resolve(__dirname,'..');
 function read(name,privateKey=false,limit=262144){
  const file=path.resolve(name),fd=fs.openSync(file,fs.constants.O_RDONLY|fs.constants.O_NOFOLLOW|fs.constants.O_NONBLOCK);
@@ -16,8 +17,7 @@ function write(name,raw,privateFile=false){
  if(privateFile&&(file===root||file.startsWith(root+path.sep)))throw Error('Private keys must stay outside the repository');
  if(fs.realpathSync(parent)!==parent)throw Error('Symlink output directory refused');
  const stat=fs.statSync(parent);if(privateFile&&(stat.uid!==process.getuid()||(stat.mode&0o077)!==0))throw Error('Use an owner-only directory for keys');
- const fd=fs.openSync(file,fs.constants.O_WRONLY|fs.constants.O_CREAT|fs.constants.O_EXCL|fs.constants.O_NOFOLLOW,privateFile?0o600:0o600);
- try{fs.writeFileSync(fd,raw);fs.fsyncSync(fd);}finally{fs.closeSync(fd);}
+ atomic.publish(file,raw);
 }
 function schema(value){
  const python=process.env.AITRUST_VERIFY_PYTHON||'python3';
@@ -59,5 +59,5 @@ function main(args){
  }
  throw Error('Unsupported command. Run: node scripts/receipt.cjs help');
 }
-if(require.main===module){try{process.exitCode=main(process.argv.slice(2))||0;}catch(_){console.error('Receipt operation refused: invalid input, trust, permissions or unavailable prerequisites. No valid verdict issued.');process.exitCode=2;}}
+if(require.main===module){try{process.exitCode=main(process.argv.slice(2))||0;}catch(error){console.error(error.code==='AITRUST_PRIVATE_CLEANUP'?'Receipt operation refused. Temporary output cleanup failed; inspect your selected folder before retrying.':'Receipt operation refused: invalid input, trust, permissions or unavailable prerequisites. No valid verdict issued.');process.exitCode=2;}}
 module.exports={main,read,write};

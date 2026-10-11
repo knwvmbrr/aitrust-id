@@ -115,3 +115,50 @@ test('hidden input refuses absent terminal and excessively long password',async(
  await assert.rejects(cli.hidden('Prompt',new PassThrough(),{write:()=>{}}));
  const t=terminal(),promise=cli.hidden('Prompt',t.input,t.output);t.input.emit('keypress','x'.repeat(1025),{});await assert.rejects(promise);assert.equal(t.input.isRaw,false);
 });
+for(const fault of ['writeFileSync','fsyncSync','closeSync','linkSync'])test('failed '+fault+' leaves no final key or temporary file and permits retry',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-key-io-')));fs.chmodSync(dir,0o700);
+ try{
+  const file=path.join(dir,'restored.pem'),key=pair().private;let failed=false;
+  const io=new Proxy(fs,{get(target,name){if(name===fault)return (...args)=>{if(!failed){failed=true;if(fault==='writeFileSync')fs.writeSync(args[0],key.subarray(0,10));const error=Error('Synthetic private output I/O failure');error.code=fault==='writeFileSync'?'ENOSPC':'EIO';throw error;}return target[name](...args);};return target[name];}});
+  assert.throws(()=>cli.publish(file,key,io));assert.equal(fs.existsSync(file),false);assert.deepEqual(fs.readdirSync(dir),[]);
+  cli.publish(file,key);assert(fs.readFileSync(file).equals(key));assert.equal(fs.statSync(file).mode&0o777,0o600);assert.deepEqual(fs.readdirSync(dir),['restored.pem']);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('a concurrent destination is preserved without accepting this key',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-key-race-')));fs.chmodSync(dir,0o700);
+ try{
+  const file=path.join(dir,'other-writer.pem'),io=new Proxy(fs,{get(target,name){if(name==='linkSync')return (...args)=>{fs.writeFileSync(file,'Other writer owns these bytes',{mode:0o600});return target.linkSync(...args);};return target[name];}});
+  assert.throws(()=>cli.publish(file,pair().private,io));assert.equal(fs.readFileSync(file,'utf8'),'Other writer owns these bytes');assert.deepEqual(fs.readdirSync(dir),['other-writer.pem']);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('temporary cleanup failure is explicit and rolls back the published final key',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-key-cleanup-')));fs.chmodSync(dir,0o700);
+ try{
+  const file=path.join(dir,'restored.pem'),io=new Proxy(fs,{get(target,name){if(name==='unlinkSync')return (...args)=>{if(args[0]!==file){const error=Error('Synthetic denied cleanup');error.code='EACCES';throw error;}return target.unlinkSync(...args);};return target[name];}});
+  assert.throws(()=>cli.publish(file,pair().private,io),error=>error.code==='AITRUST_PRIVATE_CLEANUP');assert(!fs.existsSync(file));
+  const remaining=fs.readdirSync(dir);assert.equal(remaining.length,1);assert.notEqual(remaining[0],'restored.pem');assert.equal(fs.statSync(path.join(dir,remaining[0])).mode&0o777,0o600);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('atomic publication preserves an existing dangling destination symlink',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-key-dangling-')));fs.chmodSync(dir,0o700);
+ try{
+  const file=path.join(dir,'dangling.pem');fs.symlinkSync(path.join(dir,'missing.pem'),file);
+  assert.throws(()=>cli.publish(file,pair().private));assert(fs.lstatSync(file).isSymbolicLink());assert.deepEqual(fs.readdirSync(dir),['dangling.pem']);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('initial receipt key writer uses the same synced publication and permits retry after I/O failure',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-initial-key-')));fs.chmodSync(dir,0o700);
+ const write=require('../scripts/receipt.cjs').write,original=fs.fsyncSync;
+ try{
+  const file=path.join(dir,'initial-private.pem'),key=pair().private;
+  fs.fsyncSync=()=>{const error=Error('Synthetic initial key sync failure');error.code='EIO';throw error;};
+  try{assert.throws(()=>write(file,key,true));}finally{fs.fsyncSync=original;}
+  assert(!fs.existsSync(file));assert.deepEqual(fs.readdirSync(dir),[]);
+  write(file,key,true);assert(fs.readFileSync(file).equals(key));assert.equal(fs.statSync(file).mode&0o777,0o600);
+ }finally{fs.fsyncSync=original;fs.rmSync(dir,{recursive:true,force:true});}
+});
+test('a restrictive owner umask cannot make the restored key unreadable',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-key-umask-')));fs.chmodSync(dir,0o700);const previous=process.umask(0o777);
+ try{const file=path.join(dir,'restored.pem'),key=pair().private;cli.publish(file,key);assert.equal(fs.statSync(file).mode&0o777,0o600);assert(fs.readFileSync(file).equals(key));}
+ finally{process.umask(previous);fs.rmSync(dir,{recursive:true,force:true});}
+});

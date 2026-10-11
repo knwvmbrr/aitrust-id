@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T01:10:43.837945+00:00",
+  "updated": "2026-10-11T01:29:29.574959+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -345,7 +345,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1005 full-suite Python tests plus 32 current deployment-boundary tests, including 64 targeted dependency controls; engineering acceptance only.",
+  "python_tests_scope": "1182 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -713,7 +713,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T01:04:34.862617+00:00",
+    "audited_at": "2026-10-11T01:25:30.316087+00:00",
     "completed_records": 107,
     "open_records": 95,
     "records_preserved": 202,
@@ -1019,7 +1019,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T01:10:43.837945+00:00",
+  "updated_at": "2026-10-11T01:29:29.574959+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1261,8 +1261,13 @@
     "production_keys_modified": false,
     "nontechnical_author_acceptance": false,
     "completed_requirement": false,
-    "full_regressions": "runs/2026-10-11-key-backup-final-regressions.json",
-    "website_integration": "runs/2026-10-11-key-backup-website-current.json",
-    "reviewed_personal_boundaries": "runs/2026-10-11-key-backup-current-boundaries.json"
+    "full_regressions": "runs/2026-10-11-key-backup-atomic-final-regressions.json",
+    "website_integration": "runs/2026-10-11-key-backup-final-website.json",
+    "reviewed_personal_boundaries": "runs/2026-10-11-key-backup-final-boundaries.json",
+    "atomic_output_verification": "runs/2026-10-11-key-backup-atomic-final-platforms.json",
+    "failed_private_outputs_contained": true,
+    "custody_controls_per_actual_platform": 53,
+    "actual_editor_to_receipt": "runs/2026-10-11-key-backup-atomic-editor-receipt.json",
+    "receipt_components": "runs/2026-10-11-key-backup-final-receipt-components.json"
   }
 }

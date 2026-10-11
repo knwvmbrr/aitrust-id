@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-012929-key-recovery-review-repair-acceptance-59679637
+
+Recorded 2026-10-11T01:29:29.607744+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the current shared atomic-output review repair and record the final full regression, source-bound website and receipt controls.
+- **Evidence.** 1182 current full-suite tests pass; 53 custody controls on both actual Mac and isolated Linux, 57 receipt/composition and 53 Python component controls, and four stable-source website checks pass. [Change record](./runs/changes/2026-10-11-012929-key-recovery-review-repair-acceptance-59679637.json).
+- **Not claimed.** These are bounded engineering checks. F-129 stays 80%; all 202 records remain 107 complete and 95 open. Physical power loss, real nontechnical authors, independent accuracy, public transparency and certification are not asserted.
+
+
+### 2026-10-11-012535-key-recovery-final-scope-build-9bb9cf8b
+
+Recorded 2026-10-11T01:25:35.849484+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepared the final public scope snapshot with current atomic writer acceptance evidence and unchanged completion counts.
+- **Evidence.** Current-source site build passes without altering any earlier policy version or tag claim. [Change record](./runs/changes/2026-10-11-012535-key-recovery-final-scope-build-9bb9cf8b.json).
+- **Not claimed.** Not yet a published runtime; outside-user and accuracy acceptance remain open.
+
+
+### 2026-10-11-012530-key-recovery-final-private-output-controls-0d3298b0
+
+Recorded 2026-10-11T01:25:30.469048+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound final shared atomic writer, restrictive-umask safety and actual editor/receipt integration to new immutable source evidence.
+- **Evidence.** 53 custody controls per actual Mac/Linux, 181/149 combined Node controls, real hidden terminals, current raw-source equality and actual two-engine editor-to-receipt flow. [Change record](./runs/changes/2026-10-11-012530-key-recovery-final-private-output-controls-0d3298b0.json).
+- **Not claimed.** F-129 still requires actual nontechnical-author acceptance. Physical storage/power failure is not asserted; failed cleanup remains explicit. All 202 requirements stay, 107 complete/95 open.
+
+
+### 2026-10-11-012150-key-recovery-repair-generated-scope-7f2221aa
+
+Recorded 2026-10-11T01:21:50.363343+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public scope with immutable atomic-write repair evidence, keeping all 202 records and 107/95 counts.
+- **Evidence.** Actual source website build succeeds; the new acceptance evidence is visible without changing baseline jobs or claiming human acceptance. [Change record](./runs/changes/2026-10-11-012150-key-recovery-repair-generated-scope-7f2221aa.json).
+- **Not claimed.** Still prepared, not newly deployed; no validated tag or completed 25-open target.
+
+
+### 2026-10-11-012143-contain-failed-private-key-writes-39dbd0b0
+
+Recorded 2026-10-11T01:21:43.308897+00:00 · Contributor: Codex · change
+
+- **Changed.** Repaired PR-22 partial private-key output finding with shared synced, atomic no-overwrite publication for key generation, backups, restoration and receipt outputs; report cleanup failures explicitly.
+- **Evidence.** 180 Mac and 148 network-isolated Linux Node controls pass, including 52 custody cases per platform, actual terminal workflows and injected I/O failure/retry controls. The merge was held for repair. [Change record](./runs/changes/2026-10-11-012143-contain-failed-private-key-writes-39dbd0b0.json).
+- **Not claimed.** Injected filesystem failures are not actual physical disk exhaustion or power-loss testing. F-129 remains 80 percent pending nontechnical author acceptance; source review and accuracy gates still apply.
+
+
 ### 2026-10-11-011116-key-recovery-current-state-743041e3
 
 Recorded 2026-10-11T01:11:16.302941+00:00 · Contributor: Codex · change

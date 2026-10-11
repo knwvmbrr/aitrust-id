@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),readline=require('node:readline');
+const atomic=require('./atomic-output.cjs');
 const custody=require('../protocol/key-backup.cjs'),receipts=require('../protocol/receipts.cjs');
-const {read,write}=require('./receipt.cjs');
+const {read}=require('./receipt.cjs');
 const root=path.resolve(__dirname,'..');
 function destination(name) {
  const file=path.resolve(name),parent=path.dirname(file);
@@ -11,6 +12,9 @@ function destination(name) {
  const stat=fs.statSync(parent);
  if (!stat.isDirectory() || stat.uid!==process.getuid() || (stat.mode&0o077)!==0) throw Error('Use an owner-only directory');
  return file;
+}
+function publish(name,raw,io=fs) {
+ atomic.publish(destination(name),raw,io);
 }
 function hidden(prompt, input=process.stdin, output=process.stderr) {
  if (!input.isTTY || typeof input.setRawMode!=='function') return Promise.reject(Error('Interactive terminal required'));
@@ -62,19 +66,19 @@ async function main(args) {
   if(command==='backup') {
    const file=destination(rest[1]); privateInput=read(rest[0],true,4096); custody.pem(privateInput,true);
    pass=await secret(passwordFile,true);
-   write(file,receipts.bytes(custody.backup(privateInput,pass))+'\n',true);
+   publish(file,receipts.bytes(custody.backup(privateInput,pass))+'\n');
    console.log('Encrypted backup saved locally. Save your password separately and practice recovery.');return 0;
   }
   const file=command==='restore'?destination(rest[2]):null;
   const backup=custody.parse(read(rest[0],true,custody.LIMIT)),publicPem=read(rest[1],false,4096);
   custody.pem(publicPem,false);pass=await secret(passwordFile,false);
   key=custody.restore(backup,pass,publicPem);
-  if(file){write(file,key,true);console.log('Signing key restored locally. Its separately saved public key matches. Stolen copies are not revoked.');}
+  if(file){publish(file,key);console.log('Signing key restored locally. Its separately saved public key matches. Stolen copies are not revoked.');}
   else console.log('Backup opens and matches your separately saved public key. No private key file was written.');
   return 0;
  }finally{if(pass)pass.fill(0);if(key)key.fill(0);if(privateInput)privateInput.fill(0);}
 }
-if(require.main===module)main(process.argv.slice(2)).then(code=>{process.exitCode=code;}).catch(()=>{
- console.error('Key operation refused: password, trust, input, permissions, destination or cancellation. No key was accepted.');process.exitCode=2;
+if(require.main===module)main(process.argv.slice(2)).then(code=>{process.exitCode=code;}).catch(error=>{
+ console.error(error.code==='AITRUST_PRIVATE_CLEANUP'?'Key operation refused. Temporary private-file cleanup failed; inspect your private folder before retrying.':'Key operation refused: password, trust, input, permissions, destination or cancellation. No key was accepted.');process.exitCode=2;
 });
-module.exports=Object.freeze({main,hidden,destination});
+module.exports=Object.freeze({main,hidden,destination,publish});

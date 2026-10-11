@@ -45,6 +45,13 @@ directory (0700). Private inputs and new files require owner-only permissions
 containing symlinks, existing outputs and unsupported signing keys. A restore
 refusal does not change your existing key or backup.
 
+Restored keys and encrypted backups are written to a private temporary file,
+synced completely, then published under a new name without overwrite. A failed
+write or sync leaves no final key. If temporary cleanup itself fails, the tool
+explicitly tells you to inspect your private folder before retrying. This is
+failure containment, not a guarantee of physical disk erasure or immunity to
+power loss or a compromised host.
+
 ## If something is lost or compromised
 
 - **Lost key, intact backup:** restore using the password and original public
