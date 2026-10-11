@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-014520-key-recovery-verified-publication-9735e7ea
+
+Recorded 2026-10-11T01:45:20.995754+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish the protected optional key-recovery source, verify four anonymous authenticated development downloads and exact site delivery, and refresh stale operational state with current executed evidence.
+- **Evidence.** Normal protected merge with 22 checks; independent-root Mac/Linux verification before release; 669 exact public-artifact matches across three origins; 20 live panels, nine clicked policy downloads and the standalone editor download pass. Exact synthetic Linux staging directory removed; unrelated primary files preserved. [Change record](./runs/changes/2026-10-11-014520-key-recovery-verified-publication-9735e7ea.json).
+- **Not claimed.** Full named key-custody human acceptance remains open. No tag release validation, public witnessed revocation, training/intake service, human accessibility, professional legal acceptance or new requirement closure is asserted. All 202 records stay 107 complete and 95 open; 70 further closures are needed for the target of 25. This proof update is bookkeeping, not another runtime deployment.
+
+
 ### 2026-10-11-012929-key-recovery-review-repair-acceptance-59679637
 
 Recorded 2026-10-11T01:29:29.607744+00:00 · Contributor: Codex · change
