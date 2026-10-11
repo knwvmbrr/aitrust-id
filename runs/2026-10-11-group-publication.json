@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-11T00:16:47.539Z",
+  "pass": true,
+  "source_commit": "6b97547383baeec699c40a910c582874a395faf9",
+  "artifacts_per_origin": 205,
+  "origins": [
+    {
+      "origin": "https://4fa36575.aitrust-id.pages.dev",
+      "matching_artifacts": 205,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "matching_artifacts": 205,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://www.aitrustid.com",
+      "matching_artifacts": 205,
+      "security_headers_present": true
+    }
+  ],
+  "matching_artifacts": 615,
+  "scope": "Exact decoded HTTP bytes of the reviewed build; not an independent source audit or detector accuracy test",
+  "independent_accuracy_evidence": false,
+  "author": "Codex"
+}

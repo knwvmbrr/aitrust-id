@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-11T00:25:56.356938+00:00",
+  "author": "Codex",
+  "kind": "publication_order_failure_and_correction",
+  "first_attempt_pass": false,
+  "failure": "Wrong saved trust-root filename; verifier refused missing verification input before validating the archive. The orchestration continued and published a prerelease before the Linux check passed.",
+  "correction": "Returned prerelease to draft, used the independently obtained saved root under its actual filename, verified the same bytes in network-isolated Linux, then republished the prerelease.",
+  "final_verification": "runs/2026-10-11-group-authenticated-download.json",
+  "source_and_assets_changed": false,
+  "initial_download_counters_zero_prove_no_access": false,
+  "no_verification_guard_bypassed": true,
+  "pass": true
+}

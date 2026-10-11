@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-002617-group-publication-evidence-54b4ab3c",
+  "recorded_at": "2026-10-11T00:26:17.267069+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6b97547383baeec699c40a910c582874a395faf9",
+  "changed": "Record actual protected publication, independently rooted offline archive verification and anonymous signed-source downloads; correct premature prerelease publication ordering.",
+  "proves": "Reviewed main source 6b97547 was served byte-for-byte across three origins (615 comparisons); four no-account source assets match Mac and network-isolated Linux verification.",
+  "limits": "106 requirements complete, 96 open. Signature integrity does not establish tag accuracy, authorship, distinct people, license clearance or fresh revocation; the initial publication-order failure is preserved.",
+  "scope_ids": [
+    "F-057",
+    "F-124",
+    "F-130"
+  ],
+  "files": {
+    "runs/2026-10-11-group-authenticated-download.json": "d3079b784371a549758baad77f3bcaf083f20da8c843fc78fbff2c1539fae28f",
+    "runs/2026-10-11-group-download-order-correction.json": "90a51f4d2e6e51d417408f3b888835629efca1be99d68d80ccf5a426ceea6d87",
+    "runs/2026-10-11-group-hosted-source.json": "67cdc93f8fe9bbadeefa3588f7d1e6a9400ac94bb67ed6319f27fb7631a46182",
+    "runs/2026-10-11-group-live-policies.json": "ac577c2fe9e1f54fd728add99c562bf394d8c190d54d92954818e8e5ccbf3df8",
+    "runs/2026-10-11-group-live-site.json": "1ad2b257547c6b4f40cb77a5d2f5a9c8c9dd9f546058e037ac1aafe7d9a90e79",
+    "runs/2026-10-11-group-protected-merge.json": "039baf71ad85c182709f00adf38540294cb3b1335f78b3ee7b2d40d5c86e5b75",
+    "runs/2026-10-11-group-publication.json": "3963535763e529e2258f9a0a1380f8403f0c42063ed773d7e269afe94b07b5a2",
+    "state.json": "c83c6be61b07655799cf75109883da44f4979041c150b54a5112105b217fd333"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-group-publication.json",
+      "sha256": "3963535763e529e2258f9a0a1380f8403f0c42063ed773d7e269afe94b07b5a2"
+    },
+    {
+      "path": "runs/2026-10-11-group-live-site.json",
+      "sha256": "1ad2b257547c6b4f40cb77a5d2f5a9c8c9dd9f546058e037ac1aafe7d9a90e79"
+    },
+    {
+      "path": "runs/2026-10-11-group-live-policies.json",
+      "sha256": "ac577c2fe9e1f54fd728add99c562bf394d8c190d54d92954818e8e5ccbf3df8"
+    },
+    {
+      "path": "runs/2026-10-11-group-authenticated-download.json",
+      "sha256": "d3079b784371a549758baad77f3bcaf083f20da8c843fc78fbff2c1539fae28f"
+    },
+    {
+      "path": "runs/2026-10-11-group-protected-merge.json",
+      "sha256": "039baf71ad85c182709f00adf38540294cb3b1335f78b3ee7b2d40d5c86e5b75"
+    },
+    {
+      "path": "runs/2026-10-11-group-hosted-source.json",
+      "sha256": "67cdc93f8fe9bbadeefa3588f7d1e6a9400ac94bb67ed6319f27fb7631a46182"
+    },
+    {
+      "path": "runs/2026-10-11-group-download-order-correction.json",
+      "sha256": "90a51f4d2e6e51d417408f3b888835629efca1be99d68d80ccf5a426ceea6d87"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T00:26:17.510106+00:00"
+    }
+  ]
+}

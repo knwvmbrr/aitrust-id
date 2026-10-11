@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T00:00:53.827944+00:00",
+  "updated": "2026-10-11T00:25:56.357728+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-10-spdx-target25-live-site.json",
+    "evidence": "runs/2026-10-11-group-live-site.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -719,9 +719,9 @@
     "execution_evidence": "runs/2026-10-10-independent-timestamp-acceptance.json",
     "structural_evidence": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-10-spdx-target25-publication.json",
-    "source_commit": "5d8b47b18688bace1f8b01ff4d4df2bf1d8e7a2c",
-    "public_workflow_evidence": "runs/2026-10-10-spdx-target25-live-site.json",
+    "publication": "runs/2026-10-11-group-publication.json",
+    "source_commit": "6b97547383baeec699c40a910c582874a395faf9",
+    "public_workflow_evidence": "runs/2026-10-11-group-live-site.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/independent-timestamps.md",
     "completed_subtasks": 1,
@@ -729,7 +729,7 @@
     "target_open_records": 25,
     "target_start_open_records": 100,
     "target_remaining_closures": 71,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-25-execution.md",
     "target_direction_date": "2026-10-10",
@@ -1012,7 +1012,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T00:00:53.827944+00:00",
+  "updated_at": "2026-10-11T00:25:56.357728+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1077,10 +1077,10 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "5d8b47b18688bace1f8b01ff4d4df2bf1d8e7a2c",
-    "deployment_url": "https://1dfe2ddb.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-10-spdx-target25-publication.json",
-    "matching_artifacts": 561,
+    "source_commit": "6b97547383baeec699c40a910c582874a395faf9",
+    "deployment_url": "https://4fa36575.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-11-group-publication.json",
+    "matching_artifacts": 615,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
@@ -1155,14 +1155,17 @@
     "real_cryptographic_cases": 8,
     "network_isolated_verification": true,
     "corrected_hosted_download_observed": true,
-    "current_source_snapshot": "ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85",
-    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-10-ea5f2ec",
-    "download_evidence": "runs/2026-10-10-authenticated-source-download.json",
+    "current_source_snapshot": "6b97547383baeec699c40a910c582874a395faf9",
+    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-6b97547",
+    "download_evidence": "runs/2026-10-11-group-authenticated-download.json",
     "corrected_hosted_checks": "runs/2026-10-10-source-download-hosted-checks.json",
-    "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json"
+    "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json",
+    "latest_protected_merge": "runs/2026-10-11-group-protected-merge.json",
+    "latest_hosted_source": "runs/2026-10-11-group-hosted-source.json",
+    "publication_order_correction": "runs/2026-10-11-group-download-order-correction.json"
   },
   "independent_timestamp": {
-    "status": "protected_merged_component; website_publication_pending",
+    "status": "protected_component_published_and_exact_public_bytes_verified",
     "profile": "independent-timestamp/freetsa-2026/1.0.0",
     "guide": "docs/independent-timestamps.md",
     "focused_controls_passed": 34,
@@ -1182,11 +1185,12 @@
     "current_boundaries": "runs/2026-10-10-timestamp-final-boundaries.json",
     "review_corrections": "runs/2026-10-10-timestamp-review-corrections.json",
     "protected_merge": "runs/2026-10-10-timestamp-protected-merge.json",
-    "hosted_source": "runs/2026-10-10-timestamp-hosted-source.json"
+    "hosted_source": "runs/2026-10-10-timestamp-hosted-source.json",
+    "public_evidence": "runs/2026-10-11-group-publication.json"
   },
   "group_receipts": {
     "profile": "group-receipt/1.0.0",
-    "status": "selected_offline_integration_executed; full_F_130_acceptance_open",
+    "status": "selected_offline_integration_protected_and_published; full_F_130_acceptance_open",
     "guide": "docs/group-receipts.md",
     "controls": "runs/2026-10-10-group-receipt-controls.json",
     "mac_tests": 40,
@@ -1201,6 +1205,8 @@
     "extension_receipt": "runs/2026-10-10-group-extension-revalidated.json",
     "recording_refusal": "runs/2026-10-10-group-recording-refusal.json",
     "current_controls": "runs/2026-10-10-group-cross-platform.json",
-    "full_regressions": "runs/2026-10-11-group-final-regressions.json"
+    "full_regressions": "runs/2026-10-11-group-final-regressions.json",
+    "protected_merge": "runs/2026-10-11-group-protected-merge.json",
+    "public_evidence": "runs/2026-10-11-group-publication.json"
   }
 }
