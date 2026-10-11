@@ -72,6 +72,24 @@
       }
     },
     {
+      "id": "sig.c2pa_manifest.v1",
+      "status": "proposed",
+      "independent_validation": false,
+      "accepted_conformance_registration": false,
+      "feeds": "FA",
+      "description": "Parses an attached C2PA manifest and reports its assertions; signature, content binding, trust and revocation remain separate from truth or authorship.",
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/manifest_inspection.py",
+          "scripts/inspect-manifest.py"
+        ],
+        "contract": "docs/manifest-inspection.md",
+        "tag_mapping_validated": false
+      }
+    },
+    {
       "id": "sig.compose_monotonicity.v1",
       "status": "proposed",
       "independent_validation": false,

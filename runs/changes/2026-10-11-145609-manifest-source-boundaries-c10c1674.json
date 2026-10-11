@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-145609-manifest-source-boundaries-c10c1674",
+  "recorded_at": "2026-10-11T14:56:09.066826+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "64e056963c31990a1cf213ae76c370b16b84a670",
+  "changed": "Included the optional native parser, pinned environment and frozen synthetic fixtures in the current route-source review inventory.",
+  "proves": "Inspection is a separately invoked offline CLI; no new service endpoint or production tag was added. The image credential issuance exclusion still passes.",
+  "limits": "Current-source website and boundary execution are separate following checks; native isolation is not a complete security sandbox or provenance accuracy claim.",
+  "scope_ids": [
+    "F-025",
+    "X-07",
+    "N-007"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "6d4deed9b8b15e1901ff1807b27c2b35985b4d81c72aeeb98f2d01466441b24d",
+    "README.md": "811269cbb995964baa9cdd31033eda6ced95e761768303e6f0e08423effe8110",
+    "docs/manifest-inspection-plan.md": "963c89d858f227b231f3ed4081c86b68e9adb9a98c0578fcbade0463e5f15da4",
+    "docs/manifest-inspection.md": "d07bb33198a56307ff69db267572172d293afe0c1a7f91d0bd318093076b67aa",
+    "docs/scope-progress.json": "fce078eaff801e0549a2cd2bf62ef06acfd0f38d4e571aeb21d56bb3f9c04345",
+    "docs/scope-progress.md": "5e9854a1229dadd1edc5dfafe2077be8e739030f92bab877fbfec1138b5d98b9",
+    "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+    "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+    "protocol/signals.py": "a2d3e52b5ec6760f8f7b2db4a38741b424a31f767e59c16d745a9d897af65f71",
+    "runs/2026-10-11-independent-mobile-protected-merges.json": "4a2d524659867bc6fb32c784a474be23a1ebcb630f834b56cbbd08be21047da2",
+    "runs/2026-10-11-manifest-catalogue-key-correction.json": "d30827177555b28db33c3871dc67364b191571817553572c649173ef0f1269cf",
+    "runs/2026-10-11-manifest-inspection-corrections.json": "7dd589821f676a7885a6e76f87c4a70facd14d2a2aa97a3e6d26088553db7be6",
+    "runs/2026-10-11-manifest-inspection-linux-final.json": "a8c61327b693e8fe0e18b4afda314088a8c225c086d1165553d5120fff6bde53",
+    "runs/2026-10-11-manifest-inspection-linux.json": "044df6e888f8c36598c03986f59e7102d49e8cf7198e6435f1f97d4bd84ce305",
+    "runs/2026-10-11-manifest-inspection-mac-bound.json": "4d7c5d0681399c6094a61b0d029b07a429f945c22bd62a7e79671fbc4a2a436b",
+    "runs/2026-10-11-manifest-inspection-mac-final.json": "20a25ba05415d2376d13d2d7f1e537a6e282213411581ac9b330c090bf8d32a5",
+    "runs/2026-10-11-manifest-inspection-mac-reviewed.json": "b917481683a2f69b712f7b570c42cc9cebe703c4a25ca4d87feabd1870567cf4",
+    "runs/2026-10-11-manifest-inspection-mac.json": "b3e2b3edf7ad6c2d0cc1cb6191f80508a570fc965ea80be1b8362986ed2fdfaa",
+    "runs/2026-10-11-manifest-pii-revalidation.json": "b84f6485d0d48cec95e4e087f9b64672c19f816bb50c703d3b5ca396c8405eba",
+    "runs/2026-10-11-manifest-protocol-revalidation.json": "3eaf64331e810b2d5d842c11823d00b0232045ba3f7aedb9b4cc09afc4680b77",
+    "runs/2026-10-11-manifest-ps-accepted.json": "6089c9ee537ae0993d24c4f0dfdde4cd353618b60746c6c149f21d19833adcbc",
+    "runs/2026-10-11-manifest-ps-catalogue-corrected.json": "f71405a1abe34bb0e8815858f85ccf5081f4aa48d56e3b824b962787b4b07643",
+    "runs/2026-10-11-manifest-ps-revalidation.json": "fec708a79e5d059ba922d36b54606ae7421ecdbe3407f8f563896b5975fc092c",
+    "runs/2026-10-11-manifest-scope-prepared.json": "f6d1d9a812ff80669fe624433e4613c18c5524d9dc6868cf550ce6190388290b",
+    "runs/2026-10-11-manifest-website-revalidation.json": "7fd7959be5c5bbe5af6ef048f56b7853cbf407d1eb39157d556197e2bc772db0",
+    "runs/2026-10-11-mobile-payload-publication.json": "a914e3141998a3ea54358ac28cf0358b052401c7ae4cfb5250c4c8f515e73da1",
+    "scripts/inspect-manifest.py": "2db79e574bc42b68aeb33bf9b7ec7aa89f1af07172e14021d73785857876dbbe",
+    "scripts/verify-manifest-inspection.py": "666c5e243a887815a003812d691597d4d37e5176d2d6a22d0537abd1cf3682a2",
+    "scripts/verify-route-boundaries.py": "15a1f27865a5afb64f33b5e1ae8907e4e6bd76a75daf367239891395a656bed4",
+    "site/public/reference/public-scope.json": "6f49404aefc16820afc4b98384e4af8e2dcc4829a1573bad5556fe5dc4d21258",
+    "site/public/reference/signal-registry.json": "da221d2f515468e76cc61c8dd8e612cf2858053bc8aebd8fa017bfea36d0ac7d",
+    "site/src/public-scope.json": "6f49404aefc16820afc4b98384e4af8e2dcc4829a1573bad5556fe5dc4d21258",
+    "site/src/scope-manifest.json": "781afd347ada6c86d672379d67f6d8977d853f781cdf17addb3f3305dce1eec6",
+    "spec/signal-registry.json": "da221d2f515468e76cc61c8dd8e612cf2858053bc8aebd8fa017bfea36d0ac7d",
+    "state.json": "39822faa55f73e46a1dc761eeed47ac78b41aa605ef13c0bdb72cefc01186241",
+    "tests/fixtures/c2pa-inspection-2026/altered.png": "3fa76c5468932a539b48af2e8f31da16a22b50be84e710fae2e9ca205b3fd991",
+    "tests/fixtures/c2pa-inspection-2026/generate.py": "a7dc00bbdfe81483208d2a07397252711246cd780d7fb9641e7d78f0b18ea0b0",
+    "tests/fixtures/c2pa-inspection-2026/manifest.json": "be3a6db50fb389492135032f103b122b751e4da84ec62aa70d032132cfd4f230",
+    "tests/fixtures/c2pa-inspection-2026/signed.png": "44de22dcce52ade2b87fce492b1bba358d404c75bd2da6cc71cb7ecfd9ba8086",
+    "tests/fixtures/c2pa-inspection-2026/unsigned.png": "e878950f8091ec010cf5cc723bdea027a8539cf7147cfea199c2f666232dcd4e",
+    "tests/test_evidence_resistance.py": "d27b2ae58765c2a675bcefa7a7971ad7bec0ef14840f2fc5ea389881b7f3100d",
+    "tests/test_manifest_inspection.py": "34d13d703912411c1b76a1a8080ee076c6c7fd9e7b3351067e30b75d18bc4568",
+    "tests/test_reproducibility_controls.py": "f40c817c3daf3d910c9770d19c88e34920653fab9ad27bb0bc49d67c43321784",
+    "tools/manifest_inspection.py": "4f869ef59ea32fe96e6bb1fcbc57862b5645ebf9f2bb4586d7cec591ca1ab6c7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-manifest-inspection-mac-final.json",
+      "sha256": "20a25ba05415d2376d13d2d7f1e537a6e282213411581ac9b330c090bf8d32a5"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-inspection-linux-final.json",
+      "sha256": "a8c61327b693e8fe0e18b4afda314088a8c225c086d1165553d5120fff6bde53"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-image-provenance-boundary.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:56:09.188283+00:00"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-11T14:58:08.160327+00:00",
+  "pass": false,
+  "stage": "catalogue_uniqueness_control",
+  "failure": "A second uniqueness assertion still expected 38 after the documented C2PA ID was restored.",
+  "fix": "Both total and uniqueness counts now require 39; C2PA must be present and proposed. The detector and statistical thresholds are unchanged.",
+  "accepted_ps_evidence": "runs/2026-10-11-manifest-ps-all-counts-corrected.json",
+  "independent_accuracy_evidence": false
+}

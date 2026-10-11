@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "package": "c2pa-python",
+  "package_version": "0.38.0",
+  "sdk_version": "0.91.0",
+  "license": "MIT OR Apache-2.0",
+  "source": "https://pypi.org/project/c2pa-python/0.38.0/",
+  "profiles": {
+    "darwin-arm64": {
+      "wheel": "c2pa_python-0.38.0-py3-none-macosx_11_0_arm64.whl",
+      "wheel_sha256": "53364e6b02b2c26863419f444bb6390e8c4c4095eb0e3c3373c7144e7a7ff363",
+      "native": "c2pa/libs/libc2pa_c.dylib",
+      "sources": {
+        "c2pa/__init__.py": "a8f8ae61ceffed6e80c23f13423ac26e02e0fc4a01a3584762014a1a3ca41d8c",
+        "c2pa/build.py": "7fe2e2bf8b91301d8b0e2ac7c4ac286cf1b670e31467742368253d6e01a93c2f",
+        "c2pa/c2pa.py": "ede549f30d849acad7d0850adedd2ca29e59655f6cdb555d35e4cd1488362ffd",
+        "c2pa/lib.py": "355dbc601194ac8d37fcbe37f380ad1c1af8bcaddd4c1bf2486680968dda3680",
+        "c2pa/libs/libc2pa_c.dylib": "82703a5145e4d4c70dc980418e89e185a899b597061358a79f293cc999332af6"
+      }
+    },
+    "linux-x86_64": {
+      "wheel": "c2pa_python-0.38.0-py3-none-manylinux_2_28_x86_64.whl",
+      "wheel_sha256": "9739589e69e5891da80d9b2cc2549c8a9b224d9131cafed4582d5746a155fd2d",
+      "native": "c2pa/libs/libc2pa_c.so",
+      "sources": {
+        "c2pa/__init__.py": "a8f8ae61ceffed6e80c23f13423ac26e02e0fc4a01a3584762014a1a3ca41d8c",
+        "c2pa/build.py": "7fe2e2bf8b91301d8b0e2ac7c4ac286cf1b670e31467742368253d6e01a93c2f",
+        "c2pa/c2pa.py": "ede549f30d849acad7d0850adedd2ca29e59655f6cdb555d35e4cd1488362ffd",
+        "c2pa/lib.py": "355dbc601194ac8d37fcbe37f380ad1c1af8bcaddd4c1bf2486680968dda3680",
+        "c2pa/libs/libc2pa_c.so": "dfa68d2a8ee739bb75919dcb5300f2cb289e1b51ecce94b0f339ff287ebe0703"
+      }
+    }
+  }
+}

@@ -2843,14 +2843,17 @@
         "id": "F-025",
         "kind": "requirement",
         "title": "sig.c2pa_manifest.v1 — parses an attached C2PA manifest",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T21:07:46.641291+00:00",
+        "audited_at": "2026-10-11T14:54:24.183289+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Claude — initial bridge draft; Codex — repaired typed/subject/conflict research seam; no media adapter or released tag"
+          "Codex — optional real C2PA file adapter, pin/privacy/limits and actual Mac/nonroot isolated Linux execution"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -2858,20 +2861,20 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.c2pa_manifest.v1 — parses an attached C2PA manifest. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
+        "next_fix": "Complete the hosted optional parser job and published-source acceptance for the bounded attached-PNG inspection. JPEG and FA/PA tag interpretation, independent provenance release and revocation freshness remain their separately tracked gates.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md",
-          "docs/provenance-boundary-increment.md",
-          "docs/adjudication-spec.md",
-          "runs/2026-10-09-provenance-boundary-python.json",
-          "runs/2026-10-09-provenance-boundary-demo.json",
-          "runs/2026-10-09-device-matrix-checkout-correction.json",
-          "runs/2026-10-09-provenance-boundary-final-python.json"
+          "docs/manifest-inspection-plan.md",
+          "docs/manifest-inspection.md",
+          "tools/manifest_inspection.py",
+          "scripts/inspect-manifest.py",
+          "tests/test_manifest_inspection.py",
+          "runs/2026-10-11-manifest-inspection-mac-final.json",
+          "runs/2026-10-11-manifest-inspection-linux-final.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
+        "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release.",
         "required_acceptance": [
-          "Deliver sig.c2pa_manifest.v1 — parses an attached C2PA manifest. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
+          "Hosted pinned optional SDK job and published-source acceptance must pass on the same reviewed source."
         ],
         "queue": "open"
       }

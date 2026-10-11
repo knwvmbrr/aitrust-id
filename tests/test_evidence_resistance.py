@@ -11,8 +11,9 @@ assessment = module('scripts/assess-evidence-resistance.py')
 
 def test_current_attack_assessment_inventories_versions_and_reports_observations():
     record = assessment.assess()
-    assert record['pass'] and len(record['methods']) == 38
-    assert len({r['signal_id'] for r in record['methods']}) == 38
+    assert record['pass'] and len(record['methods']) == 39
+    assert any(row['signal_id']=='sig.c2pa_manifest.v1' and row['method_status']=='proposed' for row in record['methods'])
+    assert len({r['signal_id'] for r in record['methods']}) == 39
     assert len(record['synthetic_lexical_trials']) == 8
     assert all(r['syntax_only_pass'] and r['shlex_token_sequence_equal']
                and r['baseline_found'] for r in record['synthetic_lexical_trials'])

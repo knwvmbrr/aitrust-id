@@ -1,0 +1,52 @@
+{
+  "captured_at": "2026-10-11T14:59:10.579682+00:00",
+  "pass": true,
+  "checks": {
+    "PII_REDACTED": {
+      "receipt": "runs/2026-10-11-manifest-pii-revalidation.json",
+      "pass": true,
+      "capability": "PII_REDACTED",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "PS": {
+      "receipt": "runs/2026-10-11-manifest-ps-all-counts-corrected.json",
+      "pass": true,
+      "capability": "PS",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "extension": {
+      "receipt": "runs/2026-10-11-mobile-payload-extension-revalidation.json",
+      "pass": true,
+      "capability": "extension",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "protocol": {
+      "receipt": "runs/2026-10-11-manifest-protocol-revalidation.json",
+      "pass": true,
+      "capability": "protocol",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "website": {
+      "receipt": "runs/2026-10-11-manifest-website-recorded.json",
+      "pass": true,
+      "capability": "website",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    }
+  },
+  "independent_accuracy_evidence": false
+}

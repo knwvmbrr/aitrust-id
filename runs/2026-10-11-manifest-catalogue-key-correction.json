@@ -1,0 +1,8 @@
+{
+  "captured_at": "2026-10-11T14:55:19.795259+00:00",
+  "pass": false,
+  "stage": "stronger_catalogue_regression",
+  "failure": "The new C2PA presence assertion used catalogue_status instead of the actual method_status field.",
+  "fix": "Read the assessment consumer and use method_status; rerun source-bound PS checks without changing the detector or evidence gate.",
+  "independent_accuracy_evidence": false
+}

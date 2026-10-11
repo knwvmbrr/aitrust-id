@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-10-11T14:54:24.183289+00:00",
+  "kind": "execution_corrections",
+  "pass": false,
+  "observations": [
+    {
+      "stage": "fixture_generation",
+      "failure": "SDK required a created action and its digitalSourceType",
+      "fix": "Generate synthetic fixtures with the supported complete action; no real credential issued."
+    },
+    {
+      "stage": "receipt_writer",
+      "failure": "write_report arguments were in the wrong order",
+      "fix": "Call the actual target/record/root interface; rerun real CLI controls."
+    },
+    {
+      "stage": "linux_receipt_retrieval",
+      "failure": "Root-owned 0600 report could not be copied before the test directory was removed",
+      "fix": "Rerun, retrieve and validate before cleanup; final native inspection drops privileges."
+    },
+    {
+      "stage": "namespace_diagnostic",
+      "failure": "Nonroot cannot inspect init network namespace; standalone comparison is unavailable",
+      "fix": "Keep diagnostic null; separately witness namespace difference in the privileged launcher before nonroot exec."
+    },
+    {
+      "stage": "PS_registry_control",
+      "failure": "A fixed 38-method count failed after restoring the documented digit-containing C2PA ID",
+      "fix": "Require all 39 preserved methods and explicitly verify the proposed C2PA entry."
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

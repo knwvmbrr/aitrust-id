@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-151059-native-workflow-dependencies-3e913c52
+
+Recorded 2026-10-11T15:10:59.517333+00:00 · Contributor: Codex · change
+
+- **Changed.** Made the actual native SDK job run for shared protocol and verifier test changes on both push and PR. Added a trigger-inventory regression check and executed the anonymously downloaded parser source.
+- **Evidence.** 1489 Python tests including the route checks pass. Both workflow triggers cover every fixed native verifier input. Thirteen CLI cases pass from anonymous published source with matching native input fingerprints. [Change record](./runs/changes/2026-10-11-151059-native-workflow-dependencies-3e913c52.json).
+- **Not claimed.** The reviewed native files match the earlier published source; the corrected hosted workflow must pass on its new exact commit. No FA/PA tag or independent accuracy release.
+
+
+### 2026-10-11-150345-manifest-full-regressions-3affe59a
+
+Recorded 2026-10-11T15:03:45.955982+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the complete Python regression execution and corrected stale README counts and evidence links.
+- **Evidence.** 1455 Python tests and 32 separate route-boundary tests pass; optional parser remains outside production tag issuance. [Change record](./runs/changes/2026-10-11-150345-manifest-full-regressions-3affe59a.json).
+- **Not claimed.** Hosted optional parser and published-source acceptance are pending. Independent accuracy and human acceptance remain open.
+
+
+### 2026-10-11-145957-manifest-current-evidence-81c904af
+
+Recorded 2026-10-11T14:59:57.872993+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current capability and route checks, corrected both catalogue-count assertions and their field spelling, and refreshed live launch documentation with dated historical status.
+- **Evidence.** All five capability receipts assess current; 32 route tests pass; the reviewed inventory includes the optional parser without adding endpoints or changing asserted tags. [Change record](./runs/changes/2026-10-11-145957-manifest-current-evidence-81c904af.json).
+- **Not claimed.** Independent tag accuracy and human/device accessibility remain open. F-025 is pending hosted and published-source acceptance; historical failures are preserved.
+
+
+### 2026-10-11-145609-manifest-source-boundaries-c10c1674
+
+Recorded 2026-10-11T14:56:09.066826+00:00 · Contributor: Codex · change
+
+- **Changed.** Included the optional native parser, pinned environment and frozen synthetic fixtures in the current route-source review inventory.
+- **Evidence.** Inspection is a separately invoked offline CLI; no new service endpoint or production tag was added. The image credential issuance exclusion still passes. [Change record](./runs/changes/2026-10-11-145609-manifest-source-boundaries-c10c1674.json).
+- **Not claimed.** Current-source website and boundary execution are separate following checks; native isolation is not a complete security sandbox or provenance accuracy claim.
+
+
+### 2026-10-11-145519-optional-manifest-inspection-cc8c8481
+
+Recorded 2026-10-11T14:55:19.889477+00:00 · Contributor: Codex · change
+
+- **Changed.** Built a separate hash-pinned, bounded native attached-PNG manifest inspector with private full-assertion export; restored the previously omitted documented C2PA identifier; recorded verified mobile publication.
+- **Evidence.** 62 parser/pin/privacy controls and 13 actual SDK CLI controls on Mac and nonroot Linux; signature and byte binding remain separate, raw embedded metadata is omitted, a privileged launcher witnesses isolated Linux execution. The site has 229 matching files on three public origins. [Change record](./runs/changes/2026-10-11-145519-optional-manifest-inspection-cc8c8481.json).
+- **Not claimed.** F-025 remains at 80 pending hosted/published-source acceptance. No FA/PA or new tag release, independent accuracy, issuer identity, revocation clearance, JPEG or complete native sandbox is claimed. Failed attempts remain recorded.
+
+
 ### 2026-10-11-143211-mobile-cache-verified-96163778
 
 Recorded 2026-10-11T14:32:11.071750+00:00 · Contributor: Codex · change
