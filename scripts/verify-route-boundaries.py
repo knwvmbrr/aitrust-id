@@ -69,6 +69,8 @@ PATTERNS += ('.gitattributes', 'scripts/license_notices.py', 'scripts/verify-red
              'sbom/notices/*')
 PATTERNS += ('deploy/research/metadata-development.sql', 'scripts/verify-metadata-store.py',
              'scripts/metadata-store-sandbox.py', 'tests/test_metadata_store.py')
+PATTERNS += ('tools/quantitative_observations.py', 'scripts/quantitative-observations.py',
+             'scripts/verify-quantitative-observations.py', 'tests/test_quantitative_observations.py')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

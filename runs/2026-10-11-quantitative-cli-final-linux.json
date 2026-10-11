@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-10-11T16:55:31.035419+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "plain_counts_no_private_text_or_details",
+      "pass": true
+    },
+    {
+      "case": "grouping_decimal_and_date_shape",
+      "pass": true
+    },
+    {
+      "case": "markers_excluded_and_same_unit_only",
+      "pass": true
+    },
+    {
+      "case": "identifiers_ip_and_broken_grouping",
+      "pass": true
+    },
+    {
+      "case": "non_ascii_boundary_refusal",
+      "pass": true
+    },
+    {
+      "case": "invalid_utf8",
+      "pass": true
+    },
+    {
+      "case": "nul_input",
+      "pass": true
+    },
+    {
+      "case": "byte_limit",
+      "pass": true
+    },
+    {
+      "case": "detail_limit",
+      "pass": true
+    },
+    {
+      "case": "explicit_private_details",
+      "pass": true
+    },
+    {
+      "case": "private_export_never_overwrites",
+      "pass": true
+    }
+  ],
+  "case_count": 11,
+  "sources": {
+    "tools/quantitative_observations.py": "26b1b397b132d1a0ee0d8c9755793f966d5592194e554e92404e6b7004db5523",
+    "tools/language_observations.py": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "scripts/quantitative-observations.py": "32baf241b0143e6ab8e6a784cb103d1501b74419e981168cd9ff87fc1da58c4b",
+    "scripts/verify-quantitative-observations.py": "03db4dd8d31e31c4238992f300b19b2c6881982603bf4ff838e134d24f8b4dcb"
+  },
+  "source_unchanged_during_execution": true,
+  "isolated_linux": true,
+  "external_canary_blocked": true,
+  "nonroot_execution": true,
+  "only_authored_synthetic_inputs": true,
+  "tag_assertions": 0,
+  "independent_accuracy_evidence": false
+}

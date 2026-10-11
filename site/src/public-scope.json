@@ -1878,23 +1878,36 @@
         "id": "F-015",
         "kind": "requirement",
         "title": "sig.unsourced_specificity.v1 — figures or dates with no provenance marker",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T16:55:59.524526+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — standalone literal quantitative signal and private-export controls, 2026-10-11T16:55:59.524526+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
-        "next_owner": "Codex",
+        "next_fix": "Validate contextual specificity, citation scope and useful indicator errors before HP integration. The separate literal numeric/date-shaped component now executes on Mac and isolated non-root Linux; it does not establish truth or source support.",
+        "next_owner": "Codex with independent reviewers",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/quantitative-observations.md",
+          "docs/quantitative-observation-plan.md",
+          "tools/quantitative_observations.py",
+          "scripts/quantitative-observations.py",
+          "scripts/verify-quantitative-observations.py",
+          "tests/test_quantitative_observations.py",
+          "runs/2026-10-11-quantitative-cli-final-mac.json",
+          "runs/2026-10-11-quantitative-cli-final-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -12370,7 +12383,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-11T16:17:29.010903+00:00",
+        "audited_at": "2026-10-11T16:55:59.524526+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -12395,7 +12408,11 @@
           "scripts/metadata-store-sandbox.py",
           "scripts/verify-metadata-store.py",
           "tests/test_metadata_store.py",
-          "runs/2026-10-11-metadata-store-unicode-linux.json"
+          "runs/2026-10-11-metadata-store-unicode-linux.json",
+          "runs/2026-10-11-metadata-storage-bounded-diagnostics.json",
+          "runs/2026-10-11-metadata-storage-merged-source.json",
+          "runs/2026-10-11-metadata-storage-protected-merge.json",
+          "runs/2026-10-11-metadata-store-diagnostics-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation 39 actual non-root PostgreSQL controls (including all 80 supported enum combinations) exercise synthetic development storage only. No participant data, endpoint, production database change or training/anomaly operation is claimed.",
         "required_acceptance": [

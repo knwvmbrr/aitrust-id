@@ -144,7 +144,7 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The synthetic-storage source passed 1,567 Python checks, including
+The current development source passed 1,597 Python checks, including
 all 32 route-boundary checks. Execution is recorded in
 `runs/2026-10-11-metadata-storage-diagnostics-python.json` and
 `runs/2026-10-11-metadata-storage-diagnostics-boundaries.json`. All five active development fixture
@@ -424,6 +424,11 @@ authorship and unchecked revocation. These are functioning development component
 PA, FA, HP, MT and IV remain unavailable. `npm run verify:offline-components`
 executes their controls; `npm run verify:composition` exercises both browser engines.
 The new HP/MT/FI fixtures are synthetic development scenarios, not release evidence.
+
+The [quantitative-detail observation](docs/quantitative-observations.md) counts
+supported literal numbers and nearby source markers independently. Its brief
+contains counts only; private span/hash export is explicit. It performs no source
+lookup and does not issue HP, NF, FI or other tags.
 
 Owner-first practice: [Start with PS](https://aitrustid.com/reference/operate/).
 Optional feedback previews and downloads a local metadata file; it sends nothing.

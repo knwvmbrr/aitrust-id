@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T16:39:37.051076+00:00",
+  "updated": "2026-10-11T17:01:41.038762+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://3e3da54b.aitrust-id.pages.dev",
+    "deployment_url": "https://f4490358.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-mobile-payload-publication.json",
+    "publication_evidence": "runs/2026-10-11-metadata-storage-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -291,10 +291,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
-    "public_static_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+    "published_source_commit": "226f5afaf53ee323bc81865276baa08e2c313389",
+    "public_static_source_commit": "226f5afaf53ee323bc81865276baa08e2c313389",
     "deployment": "https://de07ac54.aitrust-id.pages.dev",
-    "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
+    "source_commit": "226f5afaf53ee323bc81865276baa08e2c313389",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -717,7 +717,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T16:17:29.010903+00:00",
+    "audited_at": "2026-10-11T16:55:59.524526+00:00",
     "completed_records": 114,
     "open_records": 88,
     "records_preserved": 202,
@@ -729,11 +729,11 @@
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-notices-publication.json",
-    "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
+    "publication": "runs/2026-10-11-metadata-storage-publication.json",
+    "source_commit": "226f5afaf53ee323bc81865276baa08e2c313389",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/metadata-storage.md",
+    "latest_increment": "docs/quantitative-observations.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -1027,11 +1027,11 @@
     "PII_REDACTED": "runs/2026-10-11-manifest-pii-revalidation.json",
     "protocol": "runs/2026-10-11-manifest-protocol-revalidation.json",
     "extension": "runs/2026-10-11-mobile-payload-extension-revalidation.json",
-    "website": "runs/2026-10-11-notices-website.json",
+    "website": "runs/2026-10-11-quantitative-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T16:39:37.051076+00:00",
+  "updated_at": "2026-10-11T17:01:41.038762+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1483,11 +1483,33 @@
     "retention_contract_adopted": false,
     "training_or_anomaly_pipeline_running": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "full_python_tests": 1567,
     "full_python_evidence": "runs/2026-10-11-metadata-storage-diagnostics-python.json",
     "current_capabilities": "runs/2026-10-11-metadata-storage-current-capabilities.json",
     "current_boundaries": "runs/2026-10-11-metadata-storage-diagnostics-boundaries.json",
-    "actual_failure_evidence": "runs/2026-10-11-metadata-storage-bounded-diagnostics.json"
+    "actual_failure_evidence": "runs/2026-10-11-metadata-storage-bounded-diagnostics.json",
+    "source_commit": "226f5afaf53ee323bc81865276baa08e2c313389",
+    "protected_merge": "runs/2026-10-11-metadata-storage-protected-merge.json",
+    "published_source_evidence": "runs/2026-10-11-metadata-storage-merged-source.json"
+  },
+  "quantitative_observation": {
+    "status": "standalone_development_component",
+    "implemented_by": "Codex",
+    "contract": "docs/quantitative-observations.md",
+    "method": "literal-quantitative-observations/1.0.0",
+    "mac_evidence": "runs/2026-10-11-quantitative-cli-final-mac.json",
+    "isolated_linux_evidence": "runs/2026-10-11-quantitative-cli-final-linux.json",
+    "actual_cli_controls_per_platform": 11,
+    "focused_tests": 30,
+    "production_tag_assertions": 0,
+    "source_lookup_performed": false,
+    "independent_accuracy_evidence": false,
+    "publication_pending": true,
+    "requirements_closed": 0,
+    "current_source_receipts": "runs/2026-10-11-quantitative-current-receipts.json",
+    "website_revalidation": "runs/2026-10-11-quantitative-website.json",
+    "python_suite": "runs/2026-10-11-quantitative-full-python.json",
+    "python_checks_passed": 1597
   }
 }
