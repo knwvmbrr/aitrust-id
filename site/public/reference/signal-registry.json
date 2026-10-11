@@ -183,7 +183,17 @@
       "accepted_conformance_registration": false,
       "feeds": "MT",
       "description": "Binary-choice structure where alternatives exist",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/choice_framing.py",
+          "scripts/check-choice-framing.py",
+          "scripts/prepare-choice-demo.py"
+        ],
+        "contract": "docs/choice-framing.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.fetch_execute.v1",

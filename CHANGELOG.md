@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-215046-choice-current-accepted-engineering-2e006e2d
+
+Recorded 2026-10-11T21:50:46.490667+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound current reviewed source inventory and finalized choice-framing engineering evidence, state and remaining full acceptance.
+- **Evidence.** 2192 full Python tests pass with one platform skip; five current capabilities and 588-file route inventory pass without relaxed checks or taxonomy changes. [Change record](./runs/changes/2026-10-11-215046-choice-current-accepted-engineering-2e006e2d.json).
+- **Not claimed.** Failed stale review, prebuild attribution and inventory-call records remain; zero full requirements close and no independently validated MT tag is released.
+
+
+### 2026-10-11-214630-choice-capability-receipts-prebuild-961053ae
+
+Recorded 2026-10-11T21:46:30.156297+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded completed PS, redaction, protocol and extension source-bound checks plus retained website prebuild refusal while current receipts were still being written.
+- **Evidence.** Four completed current capability receipts pass; historical failed source-review suite and website refusal stay visible. [Change record](./runs/changes/2026-10-11-214630-choice-capability-receipts-prebuild-961053ae.json).
+- **Not claimed.** Website receipt still needs a fresh run after attribution; no guard is bypassed and no independent tag accuracy is claimed.
+
+
+### 2026-10-11-214606-choice-current-projections-and-review-refusal-5aa87684
+
+Recorded 2026-10-11T21:46:06.558059+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public scope/signal mirrors and retained full-suite refusal of the previous route source review.
+- **Evidence.** All 202 scope records remain; 2183 tests passed and nine boundary tests correctly refused stale source inventory pending current review. [Change record](./runs/changes/2026-10-11-214606-choice-current-projections-and-review-refusal-5aa87684.json).
+- **Not claimed.** This failed suite is not acceptance or independent accuracy; source review and browser receipts must be refreshed before merge/deploy.
+
+
+### 2026-10-11-214457-caller-bound-choice-framing-51e1d4d4
+
+Recorded 2026-10-11T21:44:57.189908+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a separate owner-private choice-framing observation, invented practice packet, three-step guide, proposed reference registration and CI controls; scope advances 20 to 60 with all 202 IDs retained.
+- **Evidence.** 137 focused tests and 19 actual invented CLI controls pass on both Mac and isolated unprivileged Linux; exact source/manifest/span bindings and privacy/no-overwrite failures are exercised. [Change record](./runs/changes/2026-10-11-214457-caller-bound-choice-framing-51e1d4d4.json).
+- **Not claimed.** No feasible alternative, manipulation, intent, source freshness, independent accuracy or MT tag mapping is established. Zero full requirements closed; broader grammar and contextual acceptance remain open.
+
+
+### 2026-10-11-212343-reference-nli-protected-publication-7db53768
+
+Recorded 2026-10-11T21:23:43.727595+00:00 · Contributor: Codex · change
+
+- **Changed.** Confirmed protected reference-comparison merge, current served guide bytes and preservation of unrelated primary work; corrected the publication updater to the existing website state object.
+- **Evidence.** 22 exact-head required executions passed; 738 live artifact comparisons matched across three origins; 12 unrelated files preserved byte-for-byte. [Change record](./runs/changes/2026-10-11-212343-reference-nli-protected-publication-7db53768.json).
+- **Not claimed.** Published optional reference research is not independent accuracy, validated falsehood, source freshness, corroboration or a released FI/NF tag. 88 full requirements remain open.
+
+
 ### 2026-10-11-211252-reference-evidence-immutability-correction-c6ae6bbd
 
 Recorded 2026-10-11T21:12:52.788130+00:00 · Contributor: Codex · change

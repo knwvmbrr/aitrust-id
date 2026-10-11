@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-11T21:44:33.615410+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "focused_mac_tests_passed": 137,
+  "focused_linux_tests_passed": 137,
+  "actual_synthetic_cli_controls_per_platform": 19,
+  "mac_controls": "runs/2026-10-11-choice-framing-current-mac-controls.json",
+  "linux_controls": "runs/2026-10-11-choice-framing-current-linux-controls.json",
+  "linux_cleanup": "runs/2026-10-11-choice-framing-current-linux-cleanup.json",
+  "sources": {
+    "tools/choice_framing.py": "8acc29c11ddd33eb097029d086ccf0e686169ff8acf84e9234149353a3a02c05",
+    "scripts/check-choice-framing.py": "909e36ce3cf810754057784c867923e0cc59486f12b0ce8c0cfffa55c2b48939",
+    "scripts/prepare-choice-demo.py": "d1551ca26405ed37972ada0a94e77d98e52b7a612ef25e0f433aef135c3689a6",
+    "scripts/verify-choice-framing.py": "bf4186f50903bf72b1ea686293431b813f7f7e819bae846db876db1a9cf0245b",
+    "tests/test_choice_framing.py": "cb21297b35aa9f4ca2edb44d8d123ddabe61a54ba3b7013286c85e713af6103d",
+    "tests/test_choice_framing_cli.py": "2618d847830bf059a1ca44746b92880f4a89a653caac87f16a27124b37510f82"
+  },
+  "network_or_model_required": false,
+  "independent_accuracy_evidence": false,
+  "additional_option_verified": false,
+  "tag_mapping_validated": false,
+  "requirements_closed": 0
+}

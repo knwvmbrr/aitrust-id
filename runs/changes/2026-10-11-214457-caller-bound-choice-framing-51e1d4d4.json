@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-214457-caller-bound-choice-framing-51e1d4d4",
+  "recorded_at": "2026-10-11T21:44:57.189908+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "59235baf65f55c64ff2e47ec93b2d6bea1158466",
+  "changed": "Added a separate owner-private choice-framing observation, invented practice packet, three-step guide, proposed reference registration and CI controls; scope advances 20 to 60 with all 202 IDs retained.",
+  "proves": "137 focused tests and 19 actual invented CLI controls pass on both Mac and isolated unprivileged Linux; exact source/manifest/span bindings and privacy/no-overwrite failures are exercised.",
+  "limits": "No feasible alternative, manipulation, intent, source freshness, independent accuracy or MT tag mapping is established. Zero full requirements closed; broader grammar and contextual acceptance remain open.",
+  "scope_ids": [
+    "F-019b"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "ada65721edd7ab84e88a93df252dc1738ff6ffbb06a9aff83985a7e17f038a41",
+    "docs/choice-framing-plan.md": "829b29cff518dc377bfb92b947bd48ca9727e92259618538bb9a440583cca6cf",
+    "docs/choice-framing-result.md": "04ba462a6c5cc08c7ecfb526dc5911baa24c2f373e825ecc77c7be7ff2397deb",
+    "docs/choice-framing.md": "01963f1713ea282d738588ddcc66b7096f7e12749d7bf3a35429285de8de2d0e",
+    "docs/nli-reference-result.md": "2ac68424ef9ab2645362518aa63a7669315463c13d2a8e8a441761bf33b53224",
+    "docs/scope-progress.json": "1d68f73c91a061c5547639951671e8792095d30bbe9dc2aada270896e62dd3ea",
+    "docs/scope-progress.md": "bdbb41f15b64decbfbd670c2357e0fc09285a7282bb82b257fe71491ccb97b19",
+    "docs/scope-task-index.md": "1042e59118571b2be5e628a61fa06b6ac332ffa1b135cd7dbbe2e6352edf7aaf",
+    "eval/revalidation.json": "b4e4f971951b882b8a7921981d9be42ef9d772a4513852a4adb46995c08dffea",
+    "runs/2026-10-11-choice-framing-current-linux-cleanup.json": "8c0084a93bd83c1c675c882f98b314c3b8eeda8c4b4af7948ab84196843528fa",
+    "runs/2026-10-11-choice-framing-current-linux-controls.json": "b40adf4c1f93addc1dd05a5a9fc051197dc046044f17133666c7e75c2330733c",
+    "runs/2026-10-11-choice-framing-current-mac-controls.json": "5e332a87516b63bbb98346d2609de6df8b25358092938ad05067adbfb796f870",
+    "runs/2026-10-11-choice-framing-engineering.json": "ce9e89d102332e3a56da0a450b736f4579c71cc3642c32ff6d862352baae2f1b",
+    "runs/2026-10-11-choice-framing-linux-cleanup.json": "77ddbc7cad2344fd5cc1e59d0f3a443c91693ef56c17a1aaa85023de624eeb49",
+    "runs/2026-10-11-choice-framing-linux-controls.json": "81357baedc9aa1c10f6ea382b8d3218bcd2487e5b2aff91d8a16af907ab5b64a",
+    "runs/2026-10-11-choice-framing-mac-controls.json": "08d26b8d7a82321d7878035b2e11febd33e606f151290acafcc745a3ba4e1c89",
+    "runs/2026-10-11-choice-framing-scope.json": "0c0f3d7111a988a102f35eaa011bc13bdb26c78ca470ee0a6e8e7a1dd235c1a9",
+    "runs/2026-10-11-choice-framing-signal-check.json": "e0b969e36de5f375ae21f44e34fb7d91bdc535ec2237e27e80422f6f361f9fe1",
+    "runs/2026-10-11-nli-reference-primary-ff.json": "7a6e3080614e799af7f7eb3dd0469475321779388bd97aa7c76e5be349e4d639",
+    "runs/2026-10-11-nli-reference-protected-merge.json": "303c80a7d611cf408c6b244b3aea10a14775dc2f6f3d660db00f11737dffcdaf",
+    "runs/2026-10-11-nli-reference-publication.json": "d55185b738e94a3f5b3aee1e32d848acdf5e468fcd418f6620b4b3969722c071",
+    "scripts/check-choice-framing.py": "909e36ce3cf810754057784c867923e0cc59486f12b0ce8c0cfffa55c2b48939",
+    "scripts/prepare-choice-demo.py": "d1551ca26405ed37972ada0a94e77d98e52b7a612ef25e0f433aef135c3689a6",
+    "scripts/verify-choice-framing.py": "bf4186f50903bf72b1ea686293431b813f7f7e819bae846db876db1a9cf0245b",
+    "scripts/verify-route-boundaries.py": "c1f85058b0b8e7a1ec0ed6c66e4ecd8e86b165da3ef61e92c05ff534a00c01ec",
+    "site/scripts/render-reference.mjs": "4873a59f7c02c30de8517d1107c48776d32a7a17da23a62a70d94911f7a73ee5",
+    "spec/signal-registry.json": "d38dbb33574cfb1d7d72a91ce20c36769b0aa23a21185684fd7bad2391b7f1a9",
+    "state.json": "ae7db41cff57e500a4d50010b1bd42a837fac98e1d803033613afc04f4f38ea8",
+    "tests/test_choice_framing.py": "cb21297b35aa9f4ca2edb44d8d123ddabe61a54ba3b7013286c85e713af6103d",
+    "tests/test_choice_framing_cli.py": "2618d847830bf059a1ca44746b92880f4a89a653caac87f16a27124b37510f82",
+    "tools/choice_framing.py": "8acc29c11ddd33eb097029d086ccf0e686169ff8acf84e9234149353a3a02c05"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-choice-framing-engineering.json",
+      "sha256": "ce9e89d102332e3a56da0a450b736f4579c71cc3642c32ff6d862352baae2f1b"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-current-mac-controls.json",
+      "sha256": "5e332a87516b63bbb98346d2609de6df8b25358092938ad05067adbfb796f870"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-current-linux-controls.json",
+      "sha256": "b40adf4c1f93addc1dd05a5a9fc051197dc046044f17133666c7e75c2330733c"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-current-linux-cleanup.json",
+      "sha256": "8c0084a93bd83c1c675c882f98b314c3b8eeda8c4b4af7948ab84196843528fa"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-scope.json",
+      "sha256": "0c0f3d7111a988a102f35eaa011bc13bdb26c78ca470ee0a6e8e7a1dd235c1a9"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-signal-check.json",
+      "sha256": "e0b969e36de5f375ae21f44e34fb7d91bdc535ec2237e27e80422f6f361f9fe1"
+    }
+  ],
+  "checks": []
+}
