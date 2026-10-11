@@ -33,3 +33,17 @@ The build uses the specific reviewed staging report and recomputes each count an
 The original engine recognized only the prefix of the synthetic compressed IPv6 address `2001:db8::27` and left its final two characters unmasked. The narrow correction parses complete, unscoped IPv6 tokens using Python's standard `ipaddress`, preserves upstream IPv4/scoped behavior and scores, and replaces contained truncated IP candidates. It changes no PII score threshold, generation tag, HTTP contract, consent or upload behavior. URL brackets, punctuation, mapped addresses and malformed/scoped/embedded/long tokens have explicit regression checks.
 
 The pre-fix report is retained. Remaining unnecessary masking, raw candidate overlaps and challenge misses are still displayed. No detector is approved by these development examples. Independent recognition acceptance, broader real input/language coverage and human operation remain open in F-023 and T-PII.
+
+## Compact IP labels
+
+Review added explicit IP/IPv6/address/addr/host label separators such as `IP:2001:db8::27`. All-hex prefixes remain address hextets; malformed, embedded and scoped tokens retain their existing boundaries. A generic label draft was rejected because it treated `x2001` as a label and matched a suffix. Eighty-three focused controls now include the exact separator and negative forms.
+
+Repeat the six fixed compact-address engine checks without supplying a user file:
+
+```sh
+python3 scripts/measure-redaction-development.py \
+  --engine podman --project aitrust-staging --profile compact \
+  --output output/verification/redaction-compact.json
+```
+
+All six expected addresses were fully masked on the actual rebuilt engine. Three examples also lost 12 extra characters: two separator colons from overlapping IP candidates and a ten-character field label identified by another recognizer. These are remaining defects, not successful identifier detections. The six positive regression examples do not estimate false-positive rates or independent accuracy. They remain separate from the main 38 English development examples and four coverage challenges. Both raw reports and fixtures are public; downloads are bound to the measured source.

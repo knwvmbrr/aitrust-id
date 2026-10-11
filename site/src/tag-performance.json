@@ -1868,7 +1868,7 @@
       },
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-10-11T18:48:55.619503+00:00",
+        "measured_at": "2026-10-11T19:15:21.727375+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1878,19 +1878,19 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 52.80904902610928
+            "p95_ms": 51.50577099993825
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 122.19875701703131
+            "p95_ms": 119.61075098952278
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 456.3680680003017
+            "p95_ms": 478.66713101393543
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1663.8271209958475
+            "p95_ms": 1708.2902510010172
           }
         ]
       },
@@ -1968,7 +1968,7 @@
       "device": null,
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-10-11T18:48:55.619503+00:00",
+        "measured_at": "2026-10-11T19:15:21.727375+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1978,25 +1978,25 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 52.80904902610928
+            "p95_ms": 51.50577099993825
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 122.19875701703131
+            "p95_ms": 119.61075098952278
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 456.3680680003017
+            "p95_ms": 478.66713101393543
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1663.8271209958475
+            "p95_ms": 1708.2902510010172
           }
         ]
       },
       "redaction": {
         "format": "ai-trust-id-redaction-development/v1",
-        "measured_at": "2026-10-11T18:45:44.009717+00:00",
+        "measured_at": "2026-10-11T19:16:14.868624+00:00",
         "kind": "synthetic_development",
         "independently_validated": false,
         "population_accuracy_measured": false,
@@ -2105,6 +2105,21 @@
             "partial_overlap_predictions": 0
           }
         ],
+        "compact": {
+          "cases": 6,
+          "cases_with_misses": 0,
+          "cases_with_unexpected_predictions": 3,
+          "tp": 6,
+          "fp": 3,
+          "fn": 0,
+          "expected": 6,
+          "predicted": 9,
+          "duplicate_predictions_removed": 0,
+          "fully_masked": 6,
+          "cases_with_extra_masking": 3,
+          "extra_masked_characters": 12,
+          "report": "/reference/redaction-compact-addresses.json"
+        },
         "other_extra_candidates": 1,
         "sources": {
           "report": "/reference/redaction-recognition.json",
@@ -2112,7 +2127,7 @@
         },
         "limits": "38 developer-authored English examples and four out-of-coverage challenges. Exact entity/span matches and actual masking are different measures; no population or independent accuracy claim."
       },
-      "measured_at": "2026-10-11T18:45:44.009717+00:00"
+      "measured_at": "2026-10-11T19:16:14.868624+00:00"
     },
     {
       "id": "NF",

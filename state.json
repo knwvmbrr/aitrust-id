@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T19:01:34.307747+00:00",
+  "updated": "2026-10-11T19:30:12.868270+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1822,
+  "python_tests_passed": 1867,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1822 current Python engineering checks; no independent tag or human route acceptance.",
+  "python_tests_scope": "1867 current Python engineering checks; no independent tag or human route acceptance.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T18:51:10.358494+00:00",
+    "audited_at": "2026-10-11T19:23:11.937023+00:00",
     "completed_records": 114,
     "open_records": 88,
     "records_preserved": 202,
@@ -746,7 +746,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-11-pii-current-boundaries.json",
+    "current_target_verification": "runs/2026-10-11-pii-labels-current-boundaries.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-11"
@@ -966,8 +966,8 @@
   "personal_route_boundaries": {
     "status": "current_source_and_publication_checks_pass",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-11-pii-current-boundaries.json",
-    "source_files": 500,
+    "evidence": "runs/2026-10-11-pii-labels-current-boundaries.json",
+    "source_files": 504,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-pii-bound-PS.json",
-    "PII_REDACTED": "runs/2026-10-11-pii-bound-PII_REDACTED.json",
-    "protocol": "runs/2026-10-11-pii-bound-protocol.json",
-    "extension": "runs/2026-10-11-pii-current-extension.json",
-    "website": "runs/2026-10-11-pii-static-website.json",
+    "PS": "runs/2026-10-11-pii-labels-bound-PS.json",
+    "PII_REDACTED": "runs/2026-10-11-pii-labels-bound-PII_REDACTED.json",
+    "protocol": "runs/2026-10-11-pii-labels-bound-protocol.json",
+    "extension": "runs/2026-10-11-pii-labels-bound-extension.json",
+    "website": "runs/2026-10-11-pii-labels-bound-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T19:01:34.307747+00:00",
+  "updated_at": "2026-10-11T19:30:12.868270+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1525,7 +1525,7 @@
     "status": "per_response_source_identity_and_display_verified",
     "implemented_by": "Codex",
     "guide": "docs/pipeline-performance.md",
-    "execution": "runs/2026-10-11-pii-pipeline-timing.json",
+    "execution": "runs/2026-10-11-pii-labels-timing.json",
     "source_witness": "runs/2026-10-11-staging-pipeline-identity-witness.json",
     "expectation_failure": "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
     "authenticated_requests": 253,
@@ -1591,7 +1591,7 @@
       "F-023",
       "T-PII"
     ],
-    "current_app_sha256": "6edd7132e8315bc5575c609723b715a9f94a9cda368e4cdc6f0eb9a0dac3c17f",
+    "current_app_sha256": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
     "guide": "docs/redaction-recognition.md",
     "architecture": "docs/redaction-recognition-plan.md",
     "actual_engine_examples": 42,
@@ -1606,10 +1606,10 @@
     "english_cases_with_extra_masking": 2,
     "challenge_partial": 1,
     "challenge_untouched": 1,
-    "source_bound_observations": "runs/2026-10-11-pii-recognition-staging.json",
-    "runtime_integration": "runs/2026-10-11-pii-recognition-integration.json",
-    "http_controls": "runs/2026-10-11-pii-recognition-service.json",
-    "pipeline_replay": "runs/2026-10-11-pii-recognition-replay.json",
+    "source_bound_observations": "runs/2026-10-11-pii-labels-recognition.json",
+    "runtime_integration": "runs/2026-10-11-pii-labels-integration.json",
+    "http_controls": "runs/2026-10-11-pii-labels-service.json",
+    "pipeline_replay": "runs/2026-10-11-pii-labels-replay.json",
     "diagnosis": "runs/2026-10-11-pii-recognition-diagnosis.json",
     "focused_checks": "runs/2026-10-11-pii-recognition-focused.json",
     "independent_accuracy_evidence": false,
@@ -1618,11 +1618,21 @@
     "production_changed": false,
     "requirements_closed": 0,
     "publication_pending": true,
-    "current_capabilities": "runs/2026-10-11-pii-current-capabilities.json",
-    "website_execution": "runs/2026-10-11-pii-static-website.json",
-    "current_boundaries": "runs/2026-10-11-pii-current-boundaries.json",
-    "python_execution": "runs/2026-10-11-pii-current-python.json",
-    "full_python_tests": 1822,
-    "visual_review": "Codex inspected 390px light/dark synthetic redaction evidence; emulation only"
+    "current_capabilities": "runs/2026-10-11-pii-labels-current-capabilities.json",
+    "website_execution": "runs/2026-10-11-pii-labels-bound-website.json",
+    "current_boundaries": "runs/2026-10-11-pii-labels-current-boundaries.json",
+    "python_execution": "runs/2026-10-11-pii-labels-python-chronology-corrected.json",
+    "full_python_tests": 1867,
+    "visual_review": "Codex inspected 390px light/dark synthetic redaction evidence; emulation only",
+    "review_correction": "runs/2026-10-11-pii-labels-review-diagnosis.json",
+    "compact_observations": "runs/2026-10-11-pii-labels-compact.json",
+    "compact_engine_examples": 6,
+    "compact_fully_masked": 6,
+    "compact_extra_masking_cases": 3,
+    "compact_extra_characters": 12,
+    "source_revalidation_pending": false,
+    "focused_python_controls": 175,
+    "focused_node_controls": 53,
+    "bookkeeping_failure": "runs/2026-10-11-pii-labels-current-python.json"
   }
 }

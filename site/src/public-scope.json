@@ -1448,7 +1448,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-11T18:51:10.358494+00:00",
+        "audited_at": "2026-10-11T19:23:11.937023+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -1475,7 +1475,13 @@
           "runs/2026-10-11-pii-recognition-service.json",
           "runs/2026-10-11-pii-recognition-replay.json",
           "runs/2026-10-11-pii-recognition-integration.json",
-          "runs/2026-10-11-pii-recognition-focused.json"
+          "runs/2026-10-11-pii-recognition-focused.json",
+          "runs/2026-10-11-pii-labels-review-diagnosis.json",
+          "runs/2026-10-11-pii-labels-recognition.json",
+          "runs/2026-10-11-pii-labels-compact.json",
+          "runs/2026-10-11-pii-labels-service.json",
+          "runs/2026-10-11-pii-labels-replay.json",
+          "runs/2026-10-11-pii-labels-timing.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -3082,7 +3088,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-11T18:51:10.358494+00:00",
+        "audited_at": "2026-10-11T19:23:11.937023+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -3109,7 +3115,13 @@
           "runs/2026-10-11-pii-recognition-service.json",
           "runs/2026-10-11-pii-recognition-replay.json",
           "runs/2026-10-11-pii-recognition-integration.json",
-          "runs/2026-10-11-pii-recognition-focused.json"
+          "runs/2026-10-11-pii-recognition-focused.json",
+          "runs/2026-10-11-pii-labels-review-diagnosis.json",
+          "runs/2026-10-11-pii-labels-recognition.json",
+          "runs/2026-10-11-pii-labels-compact.json",
+          "runs/2026-10-11-pii-labels-service.json",
+          "runs/2026-10-11-pii-labels-replay.json",
+          "runs/2026-10-11-pii-labels-timing.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -6409,7 +6421,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-11T17:53:04.173163+00:00",
+        "audited_at": "2026-10-11T19:23:11.937023+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex",
@@ -6437,7 +6449,13 @@
           "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
           "runs/2026-10-11-staging-pipeline-identity-checked.json",
           "runs/2026-10-11-staging-pipeline-identity-witness.json",
-          "runs/2026-10-11-pii-pipeline-timing.json"
+          "runs/2026-10-11-pii-pipeline-timing.json",
+          "runs/2026-10-11-pii-labels-review-diagnosis.json",
+          "runs/2026-10-11-pii-labels-recognition.json",
+          "runs/2026-10-11-pii-labels-compact.json",
+          "runs/2026-10-11-pii-labels-service.json",
+          "runs/2026-10-11-pii-labels-replay.json",
+          "runs/2026-10-11-pii-labels-timing.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation The corrected benchmark validates the full self-reported pipeline identity on every response, matches each selected service source and rejects drift; this is not cryptographic remote attestation. The original evaluator-only run remains historical.",
         "required_acceptance": [

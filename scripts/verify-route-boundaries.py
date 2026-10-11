@@ -84,6 +84,7 @@ PATTERNS += ('tools/redaction_observations.py', 'scripts/measure-redaction-devel
              'tests/test_redaction_observations.py', 'tests/test_redaction_development_client.py',
              'tests/test_redaction_development_builder.py', 'tests/redaction-performance.cjs',
              'runs/2026-10-11-pii-recognition-staging.json', 'runs/2026-10-11-pii-pipeline-timing.json')
+PATTERNS += ('eval/fixtures/pii-compact-addresses.json', 'runs/2026-10-11-pii-labels-recognition.json', 'runs/2026-10-11-pii-labels-compact.json', 'runs/2026-10-11-pii-labels-timing.json')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

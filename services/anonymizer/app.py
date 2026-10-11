@@ -24,15 +24,22 @@ analyzer.registry.add_recognizer(OfflineEmailRecognizer())
 import ipaddress
 import re
 IPV6_TOKEN=re.compile(r'(?<![0-9A-Za-z_:.])([0-9A-Fa-f:.]{2,64})(?![0-9A-Za-z_:.%])')
+IPV6_LABEL_TOKEN=re.compile(r'(?<![0-9A-Za-z_:.])(?P<label>ip(?:v6)?(?:_?address)?|addr(?:ess)?|host):(?P<value>[0-9A-Fa-f:.]{2,64})(?![0-9A-Za-z_:.%])',re.I)
 def complete_ipv6_spans(text):
+    candidates=[(match.start(1),match[1]) for match in IPV6_TOKEN.finditer(text)]
+    for match in IPV6_LABEL_TOKEN.finditer(text):
+        # A non-hexadecimal label cannot be a hextet of the address. Never
+        # split a valid or malformed address at an internal separator colon.
+        if any(char not in '0123456789abcdefABCDEF' for char in match['label']):
+            candidates.append((match.start('value'),match['value']))
     result=[]
-    for match in IPV6_TOKEN.finditer(text):
-        value=match[1].rstrip('.')
+    for start,token in candidates:
+        value=token.rstrip('.')
         if ':' not in value:continue
         try:address=ipaddress.ip_address(value)
         except ValueError:continue
-        if address.version==6:result.append((match.start(1),match.start(1)+len(value)))
-    return result
+        if address.version==6:result.append((start,start+len(value)))
+    return sorted(set(result))
 
 from presidio_analyzer.predefined_recognizers import IpRecognizer
 from presidio_analyzer import RecognizerResult

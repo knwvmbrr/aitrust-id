@@ -24,3 +24,20 @@ def test_current_source_bound_errors_can_be_published_without_clearance():
 def test_altered_evidence_cannot_reach_chart(mutate):
  d=copy.deepcopy(r);mutate(d)
  with pytest.raises((ValueError,TypeError)):m.public_summary(d)
+
+
+def test_compact_regressions_remain_separate_with_extra_masking_visible():
+    summary=m.public_summary(r)
+    assert summary['english']['cases']==38 and summary['compact']['cases']==6
+    assert summary['compact']['fully_masked']==6 and summary['compact']['cases_with_extra_masking']==3
+    assert summary['compact']['extra_masked_characters']==12
+
+@pytest.mark.parametrize('change',[
+ lambda d:d.update(real_user_data=True),lambda d:d['sources'].update(app='a'*64),
+ lambda d:d['measurement']['redaction_coverage'][0].update(masked_outside_expected_characters=50),
+ lambda d:d['rows'].pop(),
+])
+def test_modified_compact_evidence_refuses_the_entire_chart(monkeypatch,change):
+    bad=json.loads((ROOT/m.COMPACT_REPORT).read_text());change(bad);read=m.read_evidence
+    monkeypatch.setattr(m,'read_evidence',lambda path:bad if path==ROOT/m.COMPACT_REPORT else read(path))
+    with pytest.raises((ValueError,TypeError)):m.public_summary(r)

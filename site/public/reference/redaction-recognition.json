@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-11T18:45:44.009717+00:00",
+  "captured_at": "2026-10-11T19:16:14.868624+00:00",
   "pass": true,
   "kind": "synthetic_english_engine_observations",
   "rows": [
@@ -853,7 +853,7 @@
   ],
   "redactor_identity": {
     "version": "presidio-offline-en/v1",
-    "sha256": "674c530ad0d5ff980d5774fac2ad36f323f3924289fa24cf48274d9eb349357b",
+    "sha256": "f0a50c69933b260a0260234ba7abc28529976a3b3c5d2b7c9a2c3a3bd99add46",
     "configuration": {
       "language": "en",
       "python": "3.12.15",
@@ -929,7 +929,7 @@
       "model_version": "3.8.0",
       "model_manifest_sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4",
       "sources": {
-        "app": "6edd7132e8315bc5575c609723b715a9f94a9cda368e4cdc6f0eb9a0dac3c17f",
+        "app": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
         "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
         "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
         "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
@@ -1002,7 +1002,7 @@
         "spacy-legacy": "3.0.12",
         "murmurhash": "1.0.15"
       },
-      "recognizer_configuration_sha256": "4d0c737e0befdddc8fb847487a69a3d1cb959a157d0d1b4e9b4b5e9a02340ab1",
+      "recognizer_configuration_sha256": "229372edf840197ccc204febf34a50e731cb213351efee545527a3c67bb6ea9c",
       "recognizer_count": 26,
       "analysis_score_threshold": 0.0,
       "email_suffix_refresh": false,
@@ -1010,7 +1010,7 @@
     }
   },
   "sources": {
-    "app": "6edd7132e8315bc5575c609723b715a9f94a9cda368e4cdc6f0eb9a0dac3c17f",
+    "app": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
     "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
     "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
     "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
@@ -1022,14 +1022,15 @@
   "real_user_data": false,
   "production_services_modified": false,
   "client_sources": {
-    "services/anonymizer/app.py": "6edd7132e8315bc5575c609723b715a9f94a9cda368e4cdc6f0eb9a0dac3c17f",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
     "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
     "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
     "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
     "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
     "eval/fixtures/pii-recognition-development.json": "bbce463bb23425a9d49e4d5c8bfc70af7201957b739d53c753b49eb8ec5c52c6",
+    "eval/fixtures/pii-compact-addresses.json": "a9eda7f5fb5c2aaeeb20e1af7d8eaaf3b2d15aadb3db1472af1f9bf8b1d689d8",
     "scripts/redaction-development-worker.py": "04b74a58800213c9c4ec1051a8d9c5f828229a571e0245d7a6e78cdc7e79920a",
-    "scripts/measure-redaction-development.py": "111a02bbeacf76dc79672b8a0cfee22a8ffc65fdf1d65bbd0977c4fc4de5f0f2",
+    "scripts/measure-redaction-development.py": "8b78a6983aeca0d913cdec6d97344df0ab4e765df4e1cdbc91923c23bf0410d9",
     "tools/redaction_observations.py": "fed317d28b1a45f9a7e526bfaccf9eb2284fd6c94bb43bd02aeb50bc90b8cdea",
     "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
     "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"

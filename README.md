@@ -312,7 +312,9 @@ PII increment ran a rebuilt isolated Linux staging pipeline: 32 HTTP controls,
 13 full-route replay controls and 42 synthetic recognition examples. It masks
 complete IPv6 addresses, including the suffix missed by the earlier engine.
 All 34 expected English identifiers were fully masked; 2 of 38 English examples
-also lost ordinary text. Four coverage challenges include partial and missed
+also lost ordinary text. Six additional compact IP label examples were fully masked,
+with extra characters removed in three; their errors are separately downloadable.
+Four coverage challenges include partial and missed
 masking. These development results are not independent accuracy or privacy clearance.
 See [redaction observations and reproduction](docs/redaction-recognition.md).
 

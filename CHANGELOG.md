@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-193012-pii-compact-current-verification-c7127b7a
+
+Recorded 2026-10-11T19:30:12.916734+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish the compact-label privacy correction with current source-bound website, boundary and full Python verification; repair the state/evidence timestamp ordering caught by tests.
+- **Evidence.** 1867 Python checks, 175 focused Python and 53 focused Node checks pass; all five capability receipts pass and 504 selected route files are reviewed. Actual six-example compact masking errors remain visible and separately downloadable. [Change record](./runs/changes/2026-10-11-193012-pii-compact-current-verification-c7127b7a.json).
+- **Not claimed.** 114 complete and 88 open requirements remain. No independent accuracy, physical phone, human accessibility, privacy clearance or release certification; website publication awaits protected merge. The failed chronology run is retained.
+
+
+### 2026-10-11-192518-pii-compact-capability-checks-33df6e55
+
+Recorded 2026-10-11T19:25:18.770914+00:00 · Contributor: Codex · change
+
+- **Changed.** Run current-source PS, PII, protocol and extension regression checks after the compact-label correction.
+- **Evidence.** All four engineering receipts pass without source changes during execution. [Change record](./runs/changes/2026-10-11-192518-pii-compact-capability-checks-33df6e55.json).
+- **Not claimed.** Engineering checks do not establish independent accuracy, human accessibility or release acceptance; 88 full requirements remain open.
+
+
+### 2026-10-11-192314-pii-compact-public-projection-f395e3e8
+
+Recorded 2026-10-11T19:23:14.638829+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate PII performance, fixed-profile downloads and full 202-record public scope from the measured corrected source.
+- **Evidence.** Both engine reports match the current app, worker, client and fixed fixtures; the display preserves separate main and compact errors. [Change record](./runs/changes/2026-10-11-192314-pii-compact-public-projection-f395e3e8.json).
+- **Not claimed.** Development projection only; browser checks and final source review remain pending.
+
+
+### 2026-10-11-192312-pii-compact-label-review-ee938fc5
+
+Recorded 2026-10-11T19:23:12.107486+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix compact IP label separators without admitting embedded address suffixes; preserve a rejected generic draft, add fixed six-example engine profile and expose its real extra masking separately.
+- **Evidence.** 83 IP controls and 175 focused Python controls pass; 53 Node controls pass. Actual rebuilt staging runs passed 42 reference examples, six compact examples, 32 HTTP controls, 13 replay controls and 253 timing requests. [Change record](./runs/changes/2026-10-11-192312-pii-compact-label-review-ee938fc5.json).
+- **Not claimed.** Six compact values are masked, but three examples also lose 12 characters. Independent recognition, human operation and release approval remain open. 114 complete and 88 open.
+
+
 ### 2026-10-11-190134-pii-current-acceptance-b3faf011
 
 Recorded 2026-10-11T19:01:34.346312+00:00 · Contributor: Codex · change

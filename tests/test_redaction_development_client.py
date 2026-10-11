@@ -8,7 +8,7 @@ sys.path.insert(0,str(ROOT))
 spec=importlib.util.spec_from_file_location('client',ROOT/'scripts/measure-redaction-development.py')
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 fixture=json.loads((ROOT/m.FIXTURE).read_text())
-observed=json.loads((ROOT/'runs/2026-10-11-pii-recognition-staging.json').read_text())
+observed=json.loads((ROOT/'runs/2026-10-11-pii-labels-recognition.json').read_text())
 INSPECTION=[{'Config':{'User':'10001:10001','Labels':{'com.docker.compose.project':'aitrust-staging'}},'State':{'Running':True}}]
 def engine_result():return {k:copy.deepcopy(observed[k]) for k in ['captured_at','pass','kind','rows','redactor_identity','sources','fixture_sha256','source_unchanged','independent_accuracy_evidence','real_user_data','production_services_modified']}
 def test_actual_development_fixture_recomputes_baseline_error():
@@ -72,3 +72,9 @@ def test_actual_child_nonzero_is_refused_without_stdout_or_error_reflection():
 def test_actual_child_output_limit_is_enforced():
  with pytest.raises(ValueError,match='^Staging diagnostic unavailable$'):
   m.invoke([sys.executable,'-c','import sys;sys.stdout.write("x"*2000001)'])
+
+
+@pytest.mark.parametrize('profile',['private.json','../../other-corpus',''])
+def test_unregistered_profile_is_refused_before_any_engine_call(monkeypatch,profile):
+    monkeypatch.setattr(m,'invoke',lambda *a,**k:pytest.fail('Engine must not run for an unregistered profile'))
+    with pytest.raises(ValueError):m.measure('podman',profile)

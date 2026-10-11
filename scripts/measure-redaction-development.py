@@ -9,8 +9,10 @@ from protocol.replay_identity import RedactorIdentity
 from tools.redaction_observations import compare,coverage,aggregate
 SOURCES={'app':'services/anonymizer/app.py','model_loader':'services/anonymizer/model_identity.py','requirements_lock':'services/anonymizer/requirements.lock','identity_contract':'protocol/replay_identity.py','identity_builder':'services/anonymizer/replay_metadata.py'}
 FIXTURE='eval/fixtures/pii-recognition-development.json'
+COMPACT_FIXTURE='eval/fixtures/pii-compact-addresses.json'
+PROFILES={'english':(FIXTURE,42),'compact':(COMPACT_FIXTURE,6)}
 WORKER='scripts/redaction-development-worker.py'
-FILES=[*SOURCES.values(),FIXTURE,WORKER,'scripts/measure-redaction-development.py','tools/redaction_observations.py','protocol/evidence.py','protocol/reports.py']
+FILES=[*SOURCES.values(),FIXTURE,COMPACT_FIXTURE,WORKER,'scripts/measure-redaction-development.py','tools/redaction_observations.py','protocol/evidence.py','protocol/reports.py']
 
 def source_bytes(name):
     file=ROOT/name
@@ -57,13 +59,15 @@ def summarize_observations(result,fixture,sources):
     summary=aggregate(cases);summary['redaction_coverage']=masking
     return summary
 
-def measure(engine):
+def measure(engine,profile='english'):
+    if profile not in PROFILES:raise ValueError('Staging diagnostic unavailable')
+    fixture_name,case_count=PROFILES[profile]
     before={n:hashlib.sha256(source_bytes(n)).hexdigest() for n in FILES}
-    fixture=read_evidence(ROOT/FIXTURE)
+    fixture=read_evidence(ROOT/fixture_name)
     # This diagnostic uses a committed fixed corpus, with no user-file argument.
     if not isinstance(fixture,dict) or set(fixture)!={'schema_version','kind','supported_language','independently_labeled','representative_sample','real_user_data','rows'} or type(fixture['schema_version']) is not int or fixture.get('schema_version')!=1 or fixture.get('kind')!='synthetic_redaction_recognition_cases' or fixture.get('real_user_data') is not False or fixture.get('representative_sample') is not False or fixture.get('independently_labeled') is not False or fixture.get('supported_language')!='en':raise ValueError('Staging diagnostic unavailable')
     rows=fixture.get('rows');ids=set()
-    if not isinstance(rows,list) or len(rows)!=42:raise ValueError('Staging diagnostic unavailable')
+    if not isinstance(rows,list) or len(rows)!=case_count:raise ValueError('Staging diagnostic unavailable')
     for row in rows:
         if not isinstance(row,dict) or set(row)!={'id','coverage','text','expected'} or not isinstance(row['id'],str) or not re.fullmatch('[a-z][a-z0-9_]{0,63}',row['id']) or not isinstance(row['text'],str) or len(row['text'])>2000 or row['coverage'] not in ['en','out_of_coverage'] or row['id'] in ids:raise ValueError('Staging diagnostic unavailable')
         ids.add(row['id']);compare(row['expected'],[],len(row['text']))
@@ -81,8 +85,8 @@ def measure(engine):
     return {**result,'client_sources':before,'measurement':summary,'worker_operation_observed':True,'http_route_tested':False,'candidate_recognizer_override':False,'source_identity_is_not_remote_attestation':True}
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--engine',choices=['docker','podman'],required=True);p.add_argument('--project',choices=['aitrust-staging'],required=True);p.add_argument('--output',required=True);a=p.parse_args()
-    try:r=measure(a.engine);write_report(a.output,r)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--engine',choices=['docker','podman'],required=True);p.add_argument('--project',choices=['aitrust-staging'],required=True);p.add_argument('--profile',choices=sorted(PROFILES),default='english');p.add_argument('--output',required=True);a=p.parse_args()
+    try:r=measure(a.engine,a.profile);write_report(a.output,r)
     except (ValueError,TypeError,KeyError,IndexError,OSError,AssertionError,subprocess.SubprocessError):
         print('Synthetic redaction diagnostic unavailable; no privacy clearance.',file=sys.stderr);return 1
     print(json.dumps({'pass':True,'cases':len(r['rows']),'independent_accuracy_evidence':False}));return 0

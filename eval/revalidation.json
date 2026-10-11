@@ -55,7 +55,9 @@
         "tests/test_redaction_observations.py",
         "tests/test_redaction_development_client.py",
         "tests/test_redaction_development_builder.py",
-        "runs/2026-10-11-pii-recognition-staging.json"
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "eval/fixtures/pii-compact-addresses.json",
+        "runs/2026-10-11-pii-labels-compact.json"
       ],
       "commands": [
         [
@@ -203,7 +205,7 @@
         "scripts/measure-pipeline-performance.py",
         "tests/test_pipeline_performance.py",
         "tests/pipeline-timing.cjs",
-        "runs/2026-10-11-pii-pipeline-timing.json",
+        "runs/2026-10-11-pii-labels-timing.json",
         "docs/pipeline-performance.md",
         "scripts/verify-performance.cjs",
         "scripts/verify-workflows.cjs",
@@ -212,9 +214,11 @@
         "scripts/redaction-development-worker.py",
         "tools/redaction_observations.py",
         "eval/fixtures/pii-recognition-development.json",
-        "runs/2026-10-11-pii-recognition-staging.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
         "tests/redaction-performance.cjs",
-        "docs/redaction-recognition.md"
+        "docs/redaction-recognition.md",
+        "eval/fixtures/pii-compact-addresses.json",
+        "runs/2026-10-11-pii-labels-compact.json"
       ],
       "commands": [
         [

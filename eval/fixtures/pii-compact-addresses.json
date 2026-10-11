@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_redaction_recognition_cases",
+  "supported_language": "en",
+  "independently_labeled": false,
+  "representative_sample": false,
+  "real_user_data": false,
+  "rows": [
+    {
+      "id": "compact_ip",
+      "coverage": "en",
+      "text": "IP:2001:db8::27",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 3,
+          "end": 15
+        }
+      ]
+    },
+    {
+      "id": "compact_ipv6",
+      "coverage": "en",
+      "text": "IPv6:::1",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 5,
+          "end": 8
+        }
+      ]
+    },
+    {
+      "id": "compact_mapped",
+      "coverage": "en",
+      "text": "addr:::ffff:192.0.2.42",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 5,
+          "end": 22
+        }
+      ]
+    },
+    {
+      "id": "compact_full",
+      "coverage": "en",
+      "text": "ip_address:2001:db8:0:0:0:0:0:27",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 11,
+          "end": 32
+        }
+      ]
+    },
+    {
+      "id": "compact_bracket",
+      "coverage": "en",
+      "text": "Host:[2001:db8::27]:443",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 6,
+          "end": 18
+        }
+      ]
+    },
+    {
+      "id": "compact_period",
+      "coverage": "en",
+      "text": "address:2001:DB8::ABCD.",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 8,
+          "end": 22
+        }
+      ]
+    }
+  ]
+}
