@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-10T23:43:54.714781+00:00",
+  "updated": "2026-10-11T00:00:53.827944+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1178,
+  "python_tests_passed": 1179,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1012,7 +1012,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-10T23:43:54.714781+00:00",
+  "updated_at": "2026-10-11T00:00:53.827944+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1162,7 +1162,7 @@
     "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json"
   },
   "independent_timestamp": {
-    "status": "full_bounded_development_component_accepted; protected_publication_pending",
+    "status": "protected_merged_component; website_publication_pending",
     "profile": "independent-timestamp/freetsa-2026/1.0.0",
     "guide": "docs/independent-timestamps.md",
     "focused_controls_passed": 34,
@@ -1180,6 +1180,27 @@
     "website_receipt": "runs/2026-10-10-timestamp-website-revalidated.json",
     "current_controls": "runs/2026-10-10-timestamp-current-source-controls.json",
     "current_boundaries": "runs/2026-10-10-timestamp-final-boundaries.json",
-    "review_corrections": "runs/2026-10-10-timestamp-review-corrections.json"
+    "review_corrections": "runs/2026-10-10-timestamp-review-corrections.json",
+    "protected_merge": "runs/2026-10-10-timestamp-protected-merge.json",
+    "hosted_source": "runs/2026-10-10-timestamp-hosted-source.json"
+  },
+  "group_receipts": {
+    "profile": "group-receipt/1.0.0",
+    "status": "selected_offline_integration_executed; full_F_130_acceptance_open",
+    "guide": "docs/group-receipts.md",
+    "controls": "runs/2026-10-10-group-receipt-controls.json",
+    "mac_tests": 40,
+    "actual_linux_offline_tests": 40,
+    "automatic_sharing": false,
+    "authorship_proven": false,
+    "distinct_people_proven": false,
+    "revocation": "unchecked",
+    "tag_issuance": false,
+    "website_receipt": "runs/2026-10-10-group-website-revalidated.json",
+    "current_boundaries": "runs/2026-10-10-group-vector-boundaries.json",
+    "extension_receipt": "runs/2026-10-10-group-extension-revalidated.json",
+    "recording_refusal": "runs/2026-10-10-group-recording-refusal.json",
+    "current_controls": "runs/2026-10-10-group-cross-platform.json",
+    "full_regressions": "runs/2026-10-11-group-final-regressions.json"
   }
 }

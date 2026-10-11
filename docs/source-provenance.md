@@ -14,7 +14,9 @@ actual signing and verification record.
 
 ## Download and verify
 
-For a no-account download, open the [verified development snapshot](https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-10-ea5f2ec). It packages source `ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85`, including the corrected verifier, with archive SHA-256 `86d1ee5147672f012ae93d35b4f52067efb1f0110b86c170f4a7343b14fbbcc7`. Its four published assets were anonymously downloaded and compared byte for byte. Read `README-VERIFY.txt` for direct GitHub CLI verification before using archive code.
+For a no-account download, open the [public development downloads](https://github.com/knwvmbrr/aitrust-id/releases). Each selected snapshot has an exact source commit and archive SHA-256 in `README-VERIFY.txt`. Verify those bytes with the direct GitHub CLI command before using archive code. A snapshot contains only its named commit; it does not automatically gain tools added later.
+
+The earlier [verified snapshot](https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-10-ea5f2ec) packages source `ea5f2ec72cd1c32c41c10dd5dcb3c49f4b39ba85`, with archive SHA-256 `86d1ee5147672f012ae93d35b4f52067efb1f0110b86c170f4a7343b14fbbcc7`. Its four published assets were anonymously downloaded and compared byte for byte. It predates the independent timestamp and group tools; choose a later verified snapshot that contains the tool you need, or inspect current main source separately.
 
 For other runs, open the repository's [Actions runs](https://github.com/knwvmbrr/aitrust-id/actions/workflows/ci.yml),
 choose a main push with a successful `source-provenance` job and download its

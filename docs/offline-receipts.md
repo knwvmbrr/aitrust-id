@@ -88,6 +88,8 @@ signed receipt file to an external authority's time. Keep the timestamp separate
 changing the signed receipt would invalidate its signature. It reports unchecked
 revocation and unknown authorship explicitly.
 
+The optional [group agreement tool](group-receipts.md) lets several selected keys sign the same artifact-bound record independently. It does not prove group authorship or distinct people.
+
 RFC-0002 remains unadopted as a standard.
 Revocation transparency, offline freshness, institutional anti-coercion
 conformance, non-technical key recovery, group receipts and PA/FA/IV validation

@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-10-10T23:59:15.216061+00:00",
+  "pass": true,
+  "author": "Codex",
+  "profile": "group-receipt/1.0.0",
+  "mac_node_version": "24.19.0",
+  "linux_node_version": "24.19.0",
+  "synthetic_keys_only": true,
+  "mac_controls_passed": 40,
+  "network_isolated_linux_controls_passed": 40,
+  "unchanged_mac_group_verified_on_linux": {
+    "profile": "group-receipt/1.0.0",
+    "record_integrity": "all_signatures_verified_under_selected_roster",
+    "artifact_binding": "matched",
+    "signer_count": 4,
+    "signers": [
+      {
+        "key_sha256": "25e4eeb755d6133b23e390945c474acec5f555a03de9e5f9f48c16a27a57b70e",
+        "algorithm": "ECDSA-P256-SHA256",
+        "record_integrity": "verified_under_pinned_key"
+      },
+      {
+        "key_sha256": "53af0a54168f94b6bb6dd719a173f6fa7f7ed30ceda4dba74dfa5ada345b9bdf",
+        "algorithm": "Ed25519",
+        "record_integrity": "verified_under_pinned_key"
+      },
+      {
+        "key_sha256": "a141e372b049fbba1ceb9e5386d633e5002e83870f943bf00b259293b65eaf33",
+        "algorithm": "ECDSA-P256-SHA256",
+        "record_integrity": "verified_under_pinned_key"
+      },
+      {
+        "key_sha256": "c580a988da6c077b944ea0041cfe5bfdc0abea3eabbc0f17d765d0ccdc9399e5",
+        "algorithm": "Ed25519",
+        "record_integrity": "verified_under_pinned_key"
+      }
+    ],
+    "expiry": "within_declared_window",
+    "clock": "verifier_local_clock_unverified",
+    "revocation": "unchecked",
+    "authorship": "unestablished",
+    "distinct_people": "unestablished",
+    "coercion": "not_assessed",
+    "certified_valid": false,
+    "tag_issuance": false
+  },
+  "mac_log_sha256": "0c043e3b02cbfd4fe1daecd936942c58f0984101e9c86070909ca2c340c6072c",
+  "linux_log_sha256": "dbf11a087fa52198e9c9e85510b0933431b0871880f67a345e21d9e5e52cf06f",
+  "source_files": {
+    "protocol/group-receipts.cjs": "262a66ed3da5ebac28682b6e6992488d66ae9b2a94561788e6a3eccaa9ec90e8",
+    "scripts/group-receipt.cjs": "e49e0cee6eb54f513a495e47e2d7b719ebeae555c25cbe34aeb9d776d4193df1",
+    "tests/group-receipts.cjs": "4704ada4d0732654b1b651eb7fb90decc1114f83a40970dfddb8b4f4866fc829",
+    "tests/test_group_receipts.py": "baf197c2038aa826b670e2b96d1a17200f7fed4f7efb6137dccfc00b833a3c05"
+  },
+  "public_fixture": "tests/fixtures/group-receipt-2026/manifest.json",
+  "private_keys_never_persisted": true,
+  "full_F_130_acceptance": false,
+  "authorship_proven": false,
+  "distinct_human_participants_proven": false,
+  "independent_tag_accuracy_evidence": false
+}

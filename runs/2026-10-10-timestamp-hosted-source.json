@@ -1,0 +1,130 @@
+{
+  "captured_at": "2026-10-10T23:57:11.014269+00:00",
+  "author": "Codex",
+  "pass": true,
+  "source_commit": "b9cfe5826b3a076542a9f0ece86a63c3c513f1c5",
+  "workflow_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38096350442",
+  "source_job": {
+    "name": "source-provenance",
+    "conclusion": "success",
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38096350442/job/114343740596",
+    "steps": [
+      {
+        "completedAt": "2026-10-10T23:54:39Z",
+        "conclusion": "success",
+        "name": "Set up job",
+        "number": 1,
+        "startedAt": "2026-10-10T23:54:38Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:40Z",
+        "conclusion": "success",
+        "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "number": 2,
+        "startedAt": "2026-10-10T23:54:39Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:40Z",
+        "conclusion": "success",
+        "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+        "number": 3,
+        "startedAt": "2026-10-10T23:54:40Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:42Z",
+        "conclusion": "success",
+        "name": "Build committed development source snapshot",
+        "number": 4,
+        "startedAt": "2026-10-10T23:54:40Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:44Z",
+        "conclusion": "success",
+        "name": "Attest exact source bytes",
+        "number": 5,
+        "startedAt": "2026-10-10T23:54:42Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:45Z",
+        "conclusion": "success",
+        "name": "Preserve verification bundle",
+        "number": 6,
+        "startedAt": "2026-10-10T23:54:44Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:48Z",
+        "conclusion": "success",
+        "name": "Preserve independently obtained verification roots",
+        "number": 7,
+        "startedAt": "2026-10-10T23:54:45Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:48Z",
+        "conclusion": "success",
+        "name": "Verify the actual signed source before offering the download",
+        "number": 8,
+        "startedAt": "2026-10-10T23:54:48Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:50Z",
+        "conclusion": "success",
+        "name": "Downloadable development source and provenance",
+        "number": 9,
+        "startedAt": "2026-10-10T23:54:48Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:50Z",
+        "conclusion": "success",
+        "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+        "number": 17,
+        "startedAt": "2026-10-10T23:54:50Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:50Z",
+        "conclusion": "success",
+        "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "number": 18,
+        "startedAt": "2026-10-10T23:54:50Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-10T23:54:50Z",
+        "conclusion": "success",
+        "name": "Complete job",
+        "number": 19,
+        "startedAt": "2026-10-10T23:54:50Z",
+        "status": "completed"
+      }
+    ]
+  },
+  "mac_verification": {
+    "captured_at": "2026-10-10T23:56:28.757347+00:00",
+    "pass": true,
+    "kind": "authenticated_development_source_snapshot",
+    "repository": "knwvmbrr/aitrust-id",
+    "signer_workflow": "knwvmbrr/aitrust-id/.github/workflows/ci.yml",
+    "expected_certificate_identity": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/ci.yml@refs/heads/main",
+    "offline_inputs": true,
+    "independent_tag_accuracy_evidence": false,
+    "license_cleared": false,
+    "profile": "aitrust-development-source/1.0.0",
+    "source_commit": "b9cfe5826b3a076542a9f0ece86a63c3c513f1c5",
+    "source_files": 1438,
+    "source_bytes": 21610517,
+    "sha256": "6f295bfac1b657195359aa62501d9c162c7cd204f78dbf2ac488d9d4f1d880e0",
+    "tag_release_validated": false,
+    "installed_dependencies_authenticated": false
+  },
+  "tag_accuracy_release_gate_pass": false,
+  "scope": "Actual protected-main attested timestamp source; not group source or independent tag release"
+}

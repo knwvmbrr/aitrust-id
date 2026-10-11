@@ -7345,27 +7345,35 @@
         "id": "F-130",
         "kind": "requirement",
         "title": "Group authorship — four signers or four receipts",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-10T23:50:13.154055+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — local group agreement, separate participant signing, two/four/sixteen-key and actual Mac/Linux offline checks"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Group authorship — four signers or four receipts. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-        "next_owner": "Codex",
+        "next_fix": "Complete outside-user multi-device group operation and the full authorship-receipt interpretation/acceptance. Current cryptographic agreement proves selected keys signed the same artifact-bound record; it does not prove authorship or distinct people, issue PA/FA/IV, implement revocation or adopt RFC-0002.",
+        "next_owner": "Michael and group participants; Codex interpretation and fixes",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/group-receipt-plan.md",
+          "docs/group-receipts.md",
+          "runs/2026-10-10-group-receipt-controls.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Group authorship — four signers or four receipts. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
+          "Complete outside-user multi-device group operation and the full authorship-receipt interpretation/acceptance. Current cryptographic agreement proves selected keys signed the same artifact-bound record; it does not prove authorship or distinct people, issue PA/FA/IV, implement revocation or adopt RFC-0002."
         ],
         "queue": "open"
       }

@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-10-10T23:50:13.154055+00:00",
+  "author": "Codex",
+  "pass": true,
+  "profile": "group-receipt/1.0.0",
+  "source_files": {
+    "protocol/group-receipts.cjs": "262a66ed3da5ebac28682b6e6992488d66ae9b2a94561788e6a3eccaa9ec90e8",
+    "scripts/group-receipt.cjs": "e49e0cee6eb54f513a495e47e2d7b719ebeae555c25cbe34aeb9d776d4193df1",
+    "tests/group-receipts.cjs": "73a2ce91310873acc0eb2cdc0e868ed423e9b716b0ef24fe3a08a8e1aa9fc012",
+    "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+    "scripts/receipt.cjs": "973a2ff458087a0802e27889d33d52c4efc776ab40cfe10d82b526067b095a7d"
+  },
+  "synthetic_signers_only": true,
+  "mac_node_version": "24.19.0",
+  "linux_node_version": "24.19.0",
+  "node_distribution": {
+    "version": "24.19.0",
+    "source": "https://nodejs.org/dist/v24.19.0/node-v24.19.0-linux-x64.tar.xz",
+    "checksum_source": "https://nodejs.org/dist/v24.19.0/SHASUMS256.txt",
+    "sha256": "14b342e71204f811bde6153be8e04b62aef63c236fef92b55f9c83154b409647",
+    "trust": "Official distribution over HTTPS and its published checksum; not an independent code audit"
+  },
+  "mac_tests_passed": 39,
+  "linux_tests_passed": 39,
+  "linux_network_namespace": "sudo unshare -n",
+  "linux_exit": 0,
+  "mac_log_sha256": "60aad851828ff075d056defc3ee1bfa7d588ee77225016c7a154e51b512d6735",
+  "linux_log_sha256": "ecd0fb4c64c59384578bae210ddf03414dfccaa9a49650c3c8b95de97a3449d2",
+  "executed": [
+    "two/four/sixteen selected keys",
+    "mixed Ed25519 and P-256",
+    "separate participant CLI signing",
+    "selected public-key roster creation",
+    "full signature assembly and offline verification",
+    "altered artifact/signature/payload/manifest/trust/version",
+    "missing/extra/duplicate signer",
+    "no signing without explicit agreement",
+    "expiry and invalid clock",
+    "output overwrite, symlink input and unsafe private-key permissions",
+    "refuse private keys or appended material in public-key roster"
+  ],
+  "first_test_refusal": {
+    "pass": false,
+    "passed": 38,
+    "failed": 1,
+    "cause": "macOS temporary path was a symlink; canonicalized the test directory without weakening output protections"
+  },
+  "authorship_proven": false,
+  "distinct_human_participants_proven": false,
+  "revocation_checked": false,
+  "certification": false,
+  "independent_tag_accuracy_evidence": false,
+  "full_F_130_acceptance": false
+}
