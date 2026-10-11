@@ -134,7 +134,7 @@ signing evidence is required before claiming a particular download authenticated
 this does not release a tag or clear every dependency license.
 
 The current source passed 1,381 Python checks plus the separately executed 32
-route-boundary checks (1,413 combined). Execution is recorded in
+route-boundary checks (1,417 combined). Execution is recorded in
 `runs/2026-10-11-independent-signals-python-payload-corrected.json` and
 `runs/2026-10-11-independent-signals-route-tests.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples

@@ -20,11 +20,23 @@ SOURCES = ['tools/package_proximity.py', 'tools/language_observations.py',
            'docs/language-observations.md', 'protocol/corpus.py',
            'protocol/normalization.py', 'protocol/unicode15-data.json']
 SOURCES += ['tools/credential_flow.py', 'scripts/credential-flow.py',
-            'tests/test_credential_flow.py', 'docs/credential-flow.md']
+            'tests/test_credential_flow.py', 'docs/credential-flow.md',
+            'tests/test_observation_verifier.py']
 
 
 def sources():
     return {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES}
+
+
+def network_namespace_comparison():
+    if sys.platform != 'linux':
+        return None
+    try:
+        return os.readlink('/proc/self/ns/net') != os.readlink('/proc/1/ns/net')
+    except OSError:
+        # Optional diagnostic may be restricted even when all actual CLI checks run.
+        # Unknown is never interpreted as proof of isolation or identical namespaces.
+        return None
 
 
 def main():
@@ -76,13 +88,12 @@ def main():
         run('unknown_transform_not_a_negative', flow, program+'secret=secret.encode()\n'+sink, 'UNAVAILABLE', 2)
         run('unknown_branch_not_a_negative', flow, program+'if True:\n '+sink, 'UNAVAILABLE', 2)
     stable = before == sources()
-    namespace = None
-    if sys.platform == 'linux':
-        namespace = os.readlink('/proc/self/ns/net') != os.readlink('/proc/1/ns/net')
+    namespace = network_namespace_comparison()
     report = {'captured_at': datetime.now(timezone.utc).isoformat(), 'pass': stable and all(c['pass'] for c in checks),
               'author': 'Codex', 'platform': platform.system(), 'architecture': platform.machine(),
               'python': platform.python_version(), 'sources': before, 'source_unchanged_during_execution': stable,
               'checks': checks, 'different_network_namespace_from_init': namespace,
+              'network_namespace_comparison_available': namespace is not None,
               'synthetic_controls_only': True, 'independent_accuracy_evidence': False,
               'tags_released': [], 'production_detector_changed': False}
     print(json.dumps(report, indent=2))

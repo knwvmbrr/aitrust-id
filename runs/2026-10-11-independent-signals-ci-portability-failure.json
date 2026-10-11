@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-11T14:01:18.695064+00:00",
+  "author": "Codex",
+  "pass": false,
+  "source_commit": "d92adf1a3128ee723e2f6246c7499b112ed69152",
+  "job": "scope-plan",
+  "job_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38145231350/job/114487065300",
+  "error_signature": "PermissionError: [Errno 13] Permission denied: /proc/1/ns/net",
+  "root_cause": "Optional namespace diagnostic assumed permission to inspect init on the unprivileged GitHub runner.",
+  "fix": "Report unavailable comparison as null, preserve actual CLI failures, add unavailable/permission/same/different namespace controls.",
+  "independent_accuracy_evidence": false
+}

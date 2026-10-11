@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-140556-observation-verifier-portability-cb042291
+
+Recorded 2026-10-11T14:05:56.391056+00:00 · Contributor: Codex · change
+
+- **Changed.** Handle inaccessible optional Linux namespace diagnostics explicitly as unknown, preserve actual isolation evidence separately, and add four refusal/comparison controls.
+- **Evidence.** Eighteen real CLI cases pass on Mac and isolated Linux. Current Python regression suite passes 1385 non-route tests and 32 route tests; all 218 reviewed sources preserve existing routes. [Change record](./runs/changes/2026-10-11-140556-observation-verifier-portability-cb042291.json).
+- **Not claimed.** The five full tag integration requirements remain open at 80 percent; no new tag release, accuracy evidence, endpoint or data collection is implied.
+
+
 ### 2026-10-11-135606-independent-signal-final-engineering-5876c6c8
 
 Recorded 2026-10-11T13:56:06.862077+00:00 · Contributor: Codex · change

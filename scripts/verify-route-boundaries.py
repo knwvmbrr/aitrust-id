@@ -58,6 +58,7 @@ PATTERNS += ('tools/package_proximity.py', 'tools/language_observations.py',
              'scripts/language-observations.py', 'scripts/credential-flow.py',
              'scripts/verify-independent-observations.py', 'tests/test_package_proximity.py',
              'tests/test_language_observations.py', 'tests/test_credential_flow.py')
+PATTERNS += ('tests/test_observation_verifier.py',)
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
