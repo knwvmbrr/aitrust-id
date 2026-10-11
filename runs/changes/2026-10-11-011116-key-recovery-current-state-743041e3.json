@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-011116-key-recovery-current-state-743041e3",
+  "recorded_at": "2026-10-11T01:11:16.302941+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4bbacb1a64c90ff536d02e7c26078212180bb82b",
+  "changed": "Include the current machine-readable recovery, test and policy preparation state in the source increment before review.",
+  "proves": "State records 1182 passed regressions, F-129 human acceptance still open, policy 1.9 publication pending and unchanged 107/95 requirement counts.",
+  "limits": "State is source evidence, not an additional runtime deployment, validated tag or completed target.",
+  "scope_ids": [
+    "F-129",
+    "N-007"
+  ],
+  "files": {
+    "state.json": "23d8d5ac1c5f287e8326ad272d92248901a360acc8da92504a5ef83401c2d180"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-backup-final-regressions.json",
+      "sha256": "29367521aaa3e40ed82651e3f0cf4473d95c3953ca2fea289800a1a90bf431f7"
+    },
+    {
+      "path": "runs/2026-10-11-key-backup-platforms.json",
+      "sha256": "25ce9849aaf48331ba18f6f82d8b1bb70ad48f64750a7afbb53090aae679d2b5"
+    }
+  ],
+  "checks": []
+}

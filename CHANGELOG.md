@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-011116-key-recovery-current-state-743041e3
+
+Recorded 2026-10-11T01:11:16.302941+00:00 · Contributor: Codex · change
+
+- **Changed.** Include the current machine-readable recovery, test and policy preparation state in the source increment before review.
+- **Evidence.** State records 1182 passed regressions, F-129 human acceptance still open, policy 1.9 publication pending and unchanged 107/95 requirement counts. [Change record](./runs/changes/2026-10-11-011116-key-recovery-current-state-743041e3.json).
+- **Not claimed.** State is source evidence, not an additional runtime deployment, validated tag or completed target.
+
+
 ### 2026-10-11-011043-key-recovery-final-engineering-evidence-2e784e03
 
 Recorded 2026-10-11T01:10:43.921471+00:00 · Contributor: Codex · change
