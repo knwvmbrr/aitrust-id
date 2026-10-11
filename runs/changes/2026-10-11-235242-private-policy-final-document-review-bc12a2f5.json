@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-235242-private-policy-final-document-review-bc12a2f5",
+  "recorded_at": "2026-10-11T23:52:42.834247+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+  "changed": "Refreshed the unchanged 612-file review set for the final private-policy result documentation and retained the precommit refusal.",
+  "proves": "The current route/access verifier executes successfully after reviewing the final result document; no route, permission or guard is relaxed.",
+  "limits": "Full organization, native Share, independent accuracy and physical-device acceptance remain open; requirement count is unchanged.",
+  "scope_ids": [
+    "N-010"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "0ff831559843bf28438e79726e0768693e8237d89874fdfa5e29169fe36fc134",
+    "runs/2026-10-11-private-policy-post-result-review-refusal.json": "544a9b0d8ef2291ce480af5ebdc5019a750d440b12d8fdb177be9710d9de2328",
+    "runs/2026-10-11-private-policy-final-route-review.json": "7be25e1c4484b067d8c00698a5df3653c74a14908766b1d41a234a1996804435"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-private-policy-final-route-review.json",
+      "sha256": "7be25e1c4484b067d8c00698a5df3653c74a14908766b1d41a234a1996804435"
+    }
+  ],
+  "checks": []
+}

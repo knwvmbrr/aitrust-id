@@ -103,6 +103,14 @@ PATTERNS += ('tools/choice_framing.py','scripts/check-choice-framing.py','script
 # still compare every published artifact byte. No other source is excluded.
 HOST_RENDERED_ASSET = 'site/public/share-card.png'
 
+PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-probe-cases.py',
+             'scripts/prepare-native-bundle.py', 'scripts/verify-ios-bundle.py', 'scripts/verify-shared-text.py',
+             'tests/test_native_bundle.py', 'docs/native-share-plan.md', 'docs/native-engine-checks.md',
+             'docs/experiments/native-share-unreleased.json', 'tools/private_policy.py',
+             'scripts/check-private-policy.py', 'scripts/prepare-private-policy-demo.py',
+             'scripts/verify-private-policy.py', 'tests/test_private_policy.py', 'tests/test_private_policy_cli.py',
+             'docs/private-policy-plan.md', 'docs/private-policy.md', 'docs/private-policy-result.md')
+
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',

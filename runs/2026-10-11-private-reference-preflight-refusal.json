@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-11T23:09:06.188443+00:00",
+  "pass": false,
+  "stage": "prebuild_reference_guard",
+  "reason": "new_PRIVATE_reference_missing_from_prepare_allowlist",
+  "source": "site/scripts/prepare.mjs",
+  "deployment_performed": false,
+  "fix": "Add only the two public guide files to the explicit copy allowlist; rerun before build."
+}

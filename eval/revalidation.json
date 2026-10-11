@@ -96,7 +96,14 @@
         "scripts/verify-blind-review-privacy.py",
         "tests/test_blind_review.py",
         "tests/test_blind_review_privacy.py",
-        "docs/independent-review.md"
+        "docs/independent-review.md",
+        "tools/private_policy.py",
+        "scripts/check-private-policy.py",
+        "scripts/prepare-private-policy-demo.py",
+        "scripts/verify-private-policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "docs/private-policy.md"
       ],
       "commands": [
         [
@@ -118,6 +125,14 @@
         [
           "{python}",
           "scripts/verify-blind-review-privacy.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_private_policy.py",
+          "tests/test_private_policy_cli.py",
+          "-q"
         ]
       ]
     },
@@ -237,7 +252,12 @@
         "docs/independent-review.md",
         "docs/nli-pairs.md",
         "docs/nli-references.md",
-        "docs/choice-framing.md"
+        "docs/choice-framing.md",
+        "docs/private-policy.md",
+        "docs/native-engine-checks.md",
+        "scripts/native_bundle.py",
+        "scripts/prepare-native-bundle.py",
+        "tests/test_native_bundle.py"
       ],
       "commands": [
         [

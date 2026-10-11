@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-11T23:02:00.459613+00:00",
+  "pass": false,
+  "kind": "unreleased_native_ui_attempt",
+  "selected_driver": {
+    "exit": -15,
+    "stopped_for": "deadline",
+    "seconds": 360.7910644580261,
+    "physical_device": false
+  },
+  "edit_invalidates_finding_test_passed": true,
+  "clear_test_failed": "XCTest observed the previous text after Clear; unresolved",
+  "share_test_incomplete": "Selected text was unavailable; full run reached its 360-second bound",
+  "prototype_distributed": false,
+  "physical_device": false,
+  "independent_accuracy": false,
+  "prototype_sources_sha256": {
+    "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+    "mobile/ios/Source/CheckerController.swift": "9d6460d0eb6cedc598e757108aa0e3729674bf86c04a25dcc2e0617ca4105451",
+    "mobile/ios/Source/ShareController.swift": "5e61b4bdf9495e6f5199ad8c5743bacf431c65c4dc5a7adf0f28922d99f08543",
+    "mobile/ios/Tests/UIFlows.swift": "b0dfb359b38a11a682057c7ea52f5baf86cc193576d81a81439c4fd965ede043",
+    "scripts/build-ios-project.py": "89bdcbbb3688745e4945f897f2a8ce522fb6ea2f81688db0a763b6d5c72035ae",
+    "tests/test_ios_project_package.py": "6b728105e58d05df690ea29278336667cfceca709d37bb124b09ffa60cfe3bd9"
+  },
+  "retained_private_diagnostics": true,
+  "owner_review_needed_now": false
+}

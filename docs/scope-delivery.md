@@ -1377,7 +1377,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** Organizations extend their workflow without confusing a private policy with a public standard claim.
 
-**Completion:** 40% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 60% · audited 2026-10-11T23:05:16.789989+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** N-010.
 

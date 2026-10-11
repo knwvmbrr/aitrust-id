@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-235242-private-policy-final-document-review-bc12a2f5
+
+Recorded 2026-10-11T23:52:42.834247+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed the unchanged 612-file review set for the final private-policy result documentation and retained the precommit refusal.
+- **Evidence.** The current route/access verifier executes successfully after reviewing the final result document; no route, permission or guard is relaxed. [Change record](./runs/changes/2026-10-11-235242-private-policy-final-document-review-bc12a2f5.json).
+- **Not claimed.** Full organization, native Share, independent accuracy and physical-device acceptance remain open; requirement count is unchanged.
+
+
+### 2026-10-11-235142-private-policy-current-verification-19058556
+
+Recorded 2026-10-11T23:51:42.695412+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed current private-policy website, route and combined-suite checks; repaired state chronology and retained failed attempts.
+- **Evidence.** 2298 current Python tests pass with one platform skip; five capability receipts and the 612-file route/access review pass. Website narrow light/dark automated accessibility checks pass. [Change record](./runs/changes/2026-10-11-235142-private-policy-current-verification-19058556.json).
+- **Not claimed.** 88 full requirements remain open; no independent accuracy, physical phone, Share workflow, namespace ownership, commercial service or legal clearance is claimed.
+
+
+### 2026-10-11-234507-private-policy-and-native-refusal-tools-9de45252
+
+Recorded 2026-10-11T23:45:07.581380+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement a separate caller-bound offline organization literal-policy component, private practice/details workflow and exact native-engine/resource refusal tooling. Retain the unavailable native Share experiment without offering an app. Update the scope, independent PRIVATE description, guides and guarded source inventory.
+- **Evidence.** 96 focused policy tests and 24 actual CLI controls on both Mac and network-denied Linux; exact PS output unchanged; ten native resource packaging controls and ten temporary-copy refusals passed. Historical native engine execution passed 137 cases with unchanged current engine/resource bytes. [Change record](./runs/changes/2026-10-11-234507-private-policy-and-native-refusal-tools-9de45252.json).
+- **Not claimed.** No organization service, namespace ownership/adoption, employee consent, independent accuracy or physical phone acceptance. Share failed; later fresh-simulator startup was unavailable. N-010 advances to 60 percent; N-013 stays open at 20 percent. 114 complete and 88 open; no final requirement closure in this increment.
+
+
+### 2026-10-11-220332-choice-publication-and-native-architecture-a55b9bad
+
+Recorded 2026-10-11T22:03:32.519412+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded protected choice-framing publication and native Share architecture before implementation.
+- **Evidence.** 22 required exact-head CI executions, 741 exact hosted artifact comparisons and 12 preserved unrelated files; two invented native simulator examples exercise the same bundled PS method. [Change record](./runs/changes/2026-10-11-220332-choice-publication-and-native-architecture-a55b9bad.json).
+- **Not claimed.** Two native compatibility examples are not a Share extension, physical phone, human accessibility or independent tag accuracy. File-origin CORS and harness extraction failures remain documented. No full requirement closes.
+
+
 ### 2026-10-11-215046-choice-current-accepted-engineering-2e006e2d
 
 Recorded 2026-10-11T21:50:46.490667+00:00 · Contributor: Codex · change

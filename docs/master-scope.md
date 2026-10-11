@@ -206,3 +206,7 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 | N-013 | 3 | Receive selected text through an iPhone Share extension with explicit user action. | A person checks shared text without manual copy-and-paste while retaining control of disclosure. | WP-MOBILE |
 | N-014 | 3 | Receive selected text through an Android OS share interface with explicit user action. | A person checks shared text without manual copy-and-paste while retaining control of disclosure. | WP-MOBILE |
 | N-015 | 3 | Read a frozen reviewer JSON file, collect independent labels and export exact item fields for comparison. | Reviewers can label without developer setup or detector predictions; incomplete and changed files fail coordinator comparison. | WP-VALIDATION |
+
+## Executed component update — 2026-10-11
+
+N-010 now includes the separately tested offline organization literal-policy component. Its full ownership, custom workflow and commercial acceptance remain open. N-013 retains observed exact engine parity and file-refusal tooling; the attempted Share workflow failed and is not offered as a phone app. See [policy result](private-policy-result.md), [native boundaries](native-engine-checks.md) and the [current completion ledger](scope-progress.md). All 202 records remain.

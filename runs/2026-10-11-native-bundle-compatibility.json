@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-10-11T22:03:32.469907+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "kind": "native_bundled_runtime_compatibility_only",
+  "source_commit": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+  "sdk": "iOS Simulator 27.0",
+  "simulator_os": "26.2",
+  "simulator_device": "iPhone 14 Plus",
+  "physical_device": false,
+  "method_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+  "bundle_sha256": "59d43c94897957ef3284c4dddafefe8499611886978014491ff21528db70e86f",
+  "first_file_origin_route": "refused_by_module_CORS",
+  "first_bundle_only_result": "harness expected tags instead of existing candidates field; extraction failure retained privately",
+  "corrected_bundle_only": {
+    "command_tags": [
+      "PS"
+    ],
+    "method_sha256": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "network_evaluation_required": false,
+    "pass": true,
+    "physical_device": false,
+    "safe_tags": []
+  },
+  "invented_examples_checked": 2,
+  "share_extension_implemented": false,
+  "input_network_transfer": false,
+  "native_apps_stopped": true,
+  "owned_simulator_retained_for_next_tests": true,
+  "tool_setup": "Existing xcrun initialized current CoreSimulator framework before listing/creating the owned simulator; no user phone or existing simulator was tested.",
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

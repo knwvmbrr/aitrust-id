@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-10-11T23:50:06.317500+00:00",
+  "author": "Codex",
+  "pass": false,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "passed": 2285,
+  "failed": 13,
+  "skipped": 1,
+  "warning_count": 1,
+  "elapsed_seconds": 58.33,
+  "failure": "state_timestamp_predates_newly_referenced_evidence",
+  "failure_test_file": "tests/test_accountability.py",
+  "private_output_sha256": "5decc38ccd323f3bf80bef21d68944db6ff1b9698ad1c22c1c3bc197f5b52bf5",
+  "independent_accuracy_evidence": false
+}

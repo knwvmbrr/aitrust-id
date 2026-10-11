@@ -1,0 +1,148 @@
+{
+  "captured_at": "2026-10-11T22:59:30.238776+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "actual_synthetic_cli_controls": [
+    {
+      "case": "actual_invented_packet_prepared",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "review_choice_required",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "short_summary_no_text_hash_or_namespace",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "optional_private_details",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "existing_details_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject.txt_public_permissions_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject.txt_hardlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject.txt_symlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "policy.json_public_permissions_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "policy.json_hardlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "policy.json_symlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "selection.json_public_permissions_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "selection.json_hardlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "selection.json_symlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "changed_subject_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "changed_policy_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_thresholds_weakening_refused_even_with_updated_binding",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "receipts_optional_weakening_refused_even_with_updated_binding",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "limits_visible_weakening_refused_even_with_updated_binding",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "personal_checks_separate_weakening_refused_even_with_updated_binding",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_code_reuse_refused_with_updated_binding",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "malformed_utf8_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "no_match_is_not_compliance",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "private_argument_not_echoed",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "sources": {
+    "tools/private_policy.py": "bcc69df1dc1615e1574c0e870760ebb36edc42140a8ab5fdbbfd695ba4d8f11e",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/check-private-policy.py": "8c7bd974b4a1d33a579ba88136d4ed2d5ff61324d578bb46a140794c59bfa6df",
+    "scripts/prepare-private-policy-demo.py": "6a2743909233bc6e6fb60e5ddb9d8dabe6d8730a1982bf5d0bfe99d4588c5213",
+    "scripts/verify-private-policy.py": "22b5725b403f87e4ecdb68663b66994320074e4439c5a6d618e0e88d011f0197",
+    "tests/test_private_policy.py": "701700ed4a4ef7e3ba5e25683ef99c6b5593f1e3fc6b26b38cbc952b7d4cbb2d",
+    "tests/test_private_policy_cli.py": "aa9ad2b556bdd519bb925f3ec9f0c0057d128c0fb873a6c4706be9aa017ececd",
+    "docs/private-policy.md": "6ca65a93b3a3c908cea337ff7a8e210b1161d202fb2ebdb8d6b15e3e47045ad0",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "spec/vocabulary.json": "d3c14256da3d44c3a02f252c591a2f9039ebc2944b73837c7c521d8adac0002a"
+  },
+  "source_unchanged_during_execution": true,
+  "private_test_directory_removed": true,
+  "public_tag_asserted": false,
+  "standard_namespace_adopted": false,
+  "independent_accuracy_evidence": false,
+  "organization_service_running": false,
+  "release_approved": false
+}

@@ -113,16 +113,17 @@ export const enterpriseTags=[
   job:'Define organization-specific tag workflows and policy extensions.',
   outcome:'Apply a private policy with clear provenance and claim boundaries.',
   claim:'A private extension capability, bounded so that a private policy can add obligations but never weaken a public claim.',
-  method:'Planned private policy layer with a published list of what a private policy may and may not do. Not built.',
-  inputs:'An organization policy document and the public standard it extends.',
-  outputs:'A private policy identifier recorded on affected records, so a reader can tell which policy produced a result.',
-  today:"Review the proposed boundaries: private policies may add stricter requirements or narrow the scope. They must not lower a public threshold, change a public code’s meaning, hide limits or present a private result as public-standard validation. No private policy engine is running yet.",
-  supported:["Available now — review the proposed private-policy boundaries in this catalogue", "Available now — offering names are distinguished from adopted standard codes", "Planned — identify the private policy on each affected record", "Planned — test that private rules do not weaken public claims"],
+  method:'A separate offline development tool finds exact terms in text you choose. Its private policy cannot change public tag methods. Organization rollout is planned.',
+  inputs:'Your reviewed policy, a private text file and a selection that binds both files. The practice example is invented.',
+  outputs:'Optional private details identify the selected namespace, policy revision and matching locations. Namespace ownership is unverified; a match is not a policy-violation verdict.',
+  today:"Try the separate term-check practice guide on a Mac or Linux computer. Nothing is uploaded and no account is required. The tool refuses public-code reuse, hidden limits, required receipts and public-threshold settings. The organization service is still planned.",
+  supported:["Available now — optional local practice with a reviewed literal-term policy", "Available now — exact policy/text bindings and qualified private observations", "Available now — refused public-code and privacy-weakening controls", "Planned — organization ownership, each custom workflow and rollout acceptance"],
   limits:['Display names here are offering names, not adopted standard codes','A private policy must not dilute or misrepresent the public standard, and must never reuse a public tag code for a different claim','A private extension is not a private fork of the evidence standard; thresholds move one way only, upward','Underlying personal detection and evidence remain free'],
-  validation:"The boundaries are a reviewable design, not an adopted conformance program. No private policy engine or enforcement tests exist yet.",
+  validation:"The development component passed 96 focused tests and 24 actual command controls on Mac and isolated Linux. These checks cover the selected literal workflow; they do not establish namespace ownership, employee consent or independent real-world accuracy.",
   privacy:"A private policy must preserve consent and the public privacy commitments. Team payment does not waive no-telemetry (F-086) or capture boundaries (F-087) for the people whose content is checked.",
-  release:'Build the conformance check for the four prohibitions before offering this commercially, so a private policy that lowers a published threshold or reuses a public code fails a test rather than a conversation. WP-VALIDATION gates it: an extension mechanism with no conformance check is an invitation to dilute the standard quietly.',
+  release:'Complete organization ownership, agreed custom workflows, permission/export acceptance and the full conformance review before commercial rollout. The local literal prototype tests the four prohibitions; it does not validate every future private policy job.',
   features:['N-010','F-086','F-087'],
-  dependencies:['Accepted privacy terms (WP-PRIVACY)','Record version contract (WP-PROTOCOL)','Independent validation (WP-VALIDATION)']})
+  dependencies:['Accepted privacy terms (WP-PRIVACY)','Record version contract (WP-PROTOCOL)','Independent validation (WP-VALIDATION)'],
+  references:['/reference/public-scope.json','/reference/private-policy.md']})
 ];
 export const allTags=[...personTags,...enterpriseTags];
