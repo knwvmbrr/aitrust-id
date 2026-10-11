@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-030205-consent-reference-publication-aebdf758",
+  "recorded_at": "2026-10-11T03:02:05.578680+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "65a1298261d2a8509765d3e97ce9e71c18ca931c",
+  "changed": "Published four implemented reference jobs and their guide, verified exact public artifact bytes, and corrected measured crawl reporting and prior change-event scope attribution.",
+  "proves": "228 artifacts match on each of three public origins; 20 panels, 202 scope records, 36 actual crawl URLs, nine policies and three guide downloads pass live checks. PR24 passed 22 required checks and normal merge.",
+  "limits": "The prior measured-crawl-count event erroneously cites F-070; this correction attributes that reporting change to F-150/F-139 and does not change any acceptance. Publication is development work, not independent accuracy, physical-phone or human accessibility approval.",
+  "scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a",
+    "F-150",
+    "F-139"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "ec2881f0c29520806b779045ca988064e605635313b6c6d4a3eb6b5e24ee76e9",
+    "runs/2026-10-11-consent-live-downloads.json": "200c3dd0c04c02454f72fca98c8dc927bf0e9f68e8071404ec7d3dd90f519217",
+    "runs/2026-10-11-consent-live-policies.json": "445a5e75d39f29c18073b07f49e7bf079e4958cd862991344b96bfc886c08d3e",
+    "runs/2026-10-11-consent-live-site.json": "efdb235d50bf2d2d1516be7b096a8d64aa8f3f42c5af1be697a0ac564129e7b9",
+    "runs/2026-10-11-consent-protected-merge.json": "e73b465c3d4280e4202d8796de0e26217a3032b8afaa5b731a1878ba5a61f485",
+    "runs/2026-10-11-consent-publication-current-website.json": "5777dc84aae112fedcdb33aad1ea83e760dea81e1e7690b217c0b9d07c69723e",
+    "runs/2026-10-11-consent-publication.json": "ca0cfebe42d866e570ab839557b07ceff5ac71781c9f3cb827ca95279eef3c00",
+    "scripts/verify-site.cjs": "60197b592d7d25094ef3798c3ed55eccea471769bdd25484c2bd05c401d62f92",
+    "state.json": "1ccbc7730044ee6f0dfdb82d6b124d2186443776e073ff044ce92b643e090de7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-consent-publication.json",
+      "sha256": "ca0cfebe42d866e570ab839557b07ceff5ac71781c9f3cb827ca95279eef3c00"
+    },
+    {
+      "path": "runs/2026-10-11-consent-live-site.json",
+      "sha256": "efdb235d50bf2d2d1516be7b096a8d64aa8f3f42c5af1be697a0ac564129e7b9"
+    },
+    {
+      "path": "runs/2026-10-11-consent-live-downloads.json",
+      "sha256": "200c3dd0c04c02454f72fca98c8dc927bf0e9f68e8071404ec7d3dd90f519217"
+    },
+    {
+      "path": "runs/2026-10-11-consent-protected-merge.json",
+      "sha256": "e73b465c3d4280e4202d8796de0e26217a3032b8afaa5b731a1878ba5a61f485"
+    },
+    {
+      "path": "runs/2026-10-11-consent-publication-current-website.json",
+      "sha256": "5777dc84aae112fedcdb33aad1ea83e760dea81e1e7690b217c0b9d07c69723e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T03:02:05.869881+00:00"
+    }
+  ]
+}

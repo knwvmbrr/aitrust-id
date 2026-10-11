@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-030522-authenticated-consent-source-e4427cb9",
+  "recorded_at": "2026-10-11T03:05:22.598819+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "65a1298261d2a8509765d3e97ce9e71c18ca931c",
+  "changed": "Published anonymous authenticated development source containing optional receipts, self-declarations and local corpus comparison, and recorded current host/source evidence.",
+  "proves": "Exact archive reproduced and verified with independently saved roots on Mac and isolated Linux before publication; four anonymous assets match, hosted engineering/signing jobs pass, temporary staging removed.",
+  "limits": "Independent release gate fails as designed; authenticated source does not establish accuracy, identity, authorship, full license clearance or installed dependency authenticity.",
+  "scope_ids": [
+    "F-057",
+    "F-128",
+    "F-144",
+    "F-020a",
+    "F-150"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "ec2881f0c29520806b779045ca988064e605635313b6c6d4a3eb6b5e24ee76e9",
+    "runs/2026-10-11-consent-authenticated-download.json": "d9e700502e8168edee6c326eb54ba67858adcbd87dec47cf194fa5394a2615e5",
+    "runs/2026-10-11-consent-hosted-source.json": "6f86e4d12c66222bbbc85555c0e5ebc606b08916a60d39f1053b4269676202ea",
+    "runs/2026-10-11-consent-live-downloads.json": "200c3dd0c04c02454f72fca98c8dc927bf0e9f68e8071404ec7d3dd90f519217",
+    "runs/2026-10-11-consent-live-policies.json": "445a5e75d39f29c18073b07f49e7bf079e4958cd862991344b96bfc886c08d3e",
+    "runs/2026-10-11-consent-live-site.json": "efdb235d50bf2d2d1516be7b096a8d64aa8f3f42c5af1be697a0ac564129e7b9",
+    "runs/2026-10-11-consent-protected-merge.json": "e73b465c3d4280e4202d8796de0e26217a3032b8afaa5b731a1878ba5a61f485",
+    "runs/2026-10-11-consent-publication-current-website.json": "5777dc84aae112fedcdb33aad1ea83e760dea81e1e7690b217c0b9d07c69723e",
+    "runs/2026-10-11-consent-publication.json": "ca0cfebe42d866e570ab839557b07ceff5ac71781c9f3cb827ca95279eef3c00",
+    "scripts/verify-site.cjs": "60197b592d7d25094ef3798c3ed55eccea471769bdd25484c2bd05c401d62f92",
+    "state.json": "6e826a3e5329152a5fd71ece24bdaf69c0e194d48a02a843dc99f6731de97281"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-consent-authenticated-download.json",
+      "sha256": "d9e700502e8168edee6c326eb54ba67858adcbd87dec47cf194fa5394a2615e5"
+    },
+    {
+      "path": "runs/2026-10-11-consent-hosted-source.json",
+      "sha256": "6f86e4d12c66222bbbc85555c0e5ebc606b08916a60d39f1053b4269676202ea"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T03:05:22.818069+00:00"
+    }
+  ]
+}
