@@ -1,0 +1,88 @@
+{
+  "captured_at": "2026-10-11T12:27:16.964419+00:00",
+  "pass": true,
+  "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+  "release_url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f",
+  "published_at": "2026-10-11T12:26:50Z",
+  "verification_finished_before_publication": true,
+  "assets": [
+    {
+      "name": "aitrust-id-source.tar.gz",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-11-a36898f/aitrust-id-source.tar.gz",
+      "bytes": 4106331,
+      "sha256": "b672941a084048ec731c3bbe289914513b7a9a74ae4081b20de58fce4cd10cbd",
+      "http_status": 200,
+      "anonymous_download_matches": true,
+      "authorization_header_sent": false
+    },
+    {
+      "name": "README-VERIFY.txt",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-11-a36898f/README-VERIFY.txt",
+      "bytes": 2194,
+      "sha256": "3d04796e82dfb311afd9561cebbd71dd5816a99052b1a847f2c05f44f58a4c94",
+      "http_status": 200,
+      "anonymous_download_matches": true,
+      "authorization_header_sent": false
+    },
+    {
+      "name": "source.sigstore.json",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-11-a36898f/source.sigstore.json",
+      "bytes": 10611,
+      "sha256": "52c19f8606b69944ba0cda769d45c74ab01c513986eb26ced3cd26799769233d",
+      "http_status": 200,
+      "anonymous_download_matches": true,
+      "authorization_header_sent": false
+    },
+    {
+      "name": "verification.json",
+      "url": "https://github.com/knwvmbrr/aitrust-id/releases/download/development-source-2026-10-11-a36898f/verification.json",
+      "bytes": 780,
+      "sha256": "f47f4e06cab0517aed644b1e6402a70649ae292476c7c9db4958ff43ec748a47",
+      "http_status": 200,
+      "anonymous_download_matches": true,
+      "authorization_header_sent": false
+    }
+  ],
+  "actual_mac_verification": {
+    "captured_at": "2026-10-11T12:26:15.277061+00:00",
+    "pass": true,
+    "kind": "authenticated_development_source_snapshot",
+    "repository": "knwvmbrr/aitrust-id",
+    "signer_workflow": "knwvmbrr/aitrust-id/.github/workflows/ci.yml",
+    "expected_certificate_identity": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/ci.yml@refs/heads/main",
+    "offline_inputs": true,
+    "independent_tag_accuracy_evidence": false,
+    "license_cleared": false,
+    "profile": "aitrust-development-source/1.0.0",
+    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "source_files": 1672,
+    "source_bytes": 22634075,
+    "sha256": "b672941a084048ec731c3bbe289914513b7a9a74ae4081b20de58fce4cd10cbd",
+    "tag_release_validated": false,
+    "installed_dependencies_authenticated": false
+  },
+  "independent_tag_release_validated": false,
+  "full_license_clearance": false,
+  "installed_dependencies_authenticated": false,
+  "actual_hosted_workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38138903476",
+  "actual_network_isolated_linux_verification": {
+    "captured_at": "2026-10-11T12:27:42.092495+00:00",
+    "pass": true,
+    "kind": "authenticated_development_source_snapshot",
+    "repository": "knwvmbrr/aitrust-id",
+    "signer_workflow": "knwvmbrr/aitrust-id/.github/workflows/ci.yml",
+    "expected_certificate_identity": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/ci.yml@refs/heads/main",
+    "offline_inputs": true,
+    "independent_tag_accuracy_evidence": false,
+    "license_cleared": false,
+    "profile": "aitrust-development-source/1.0.0",
+    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "source_files": 1672,
+    "source_bytes": 22634075,
+    "sha256": "b672941a084048ec731c3bbe289914513b7a9a74ae4081b20de58fce4cd10cbd",
+    "tag_release_validated": false,
+    "installed_dependencies_authenticated": false
+  },
+  "temporary_linux_verification_removed": true,
+  "cleanup_correction": "Unprivileged removal refused root-owned verifier cache; administrator removal limited to the owned temporary directory passed, and absence was checked."
+}

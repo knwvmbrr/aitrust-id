@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-10-11T12:13:39.340090+00:00",
+  "pass": true,
+  "executed_by": "Codex",
+  "cases": [
+    {
+      "case": "permissive_mode",
+      "pass": true,
+      "gateway_startup_refused": true,
+      "exception_output_retained": false
+    },
+    {
+      "case": "wrong_curve",
+      "pass": true,
+      "gateway_startup_refused": true,
+      "exception_output_retained": false
+    },
+    {
+      "case": "missing_file",
+      "pass": true,
+      "gateway_startup_refused": true,
+      "exception_output_retained": false
+    }
+  ],
+  "actual_gateway_initialization_executed": true,
+  "private_file_directory_removed": true,
+  "configured_private_key_or_token_published": false,
+  "source_sha256": {
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c"
+  },
+  "independent_accuracy": false
+}

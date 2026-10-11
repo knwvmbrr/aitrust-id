@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-11T12:28:57.381414+00:00",
+  "kind": "publication_bookkeeping_correction",
+  "pass": true,
+  "executed_by": "Codex",
+  "failure": "State timestamp predates referenced evidence: runs/2026-10-11-authenticated-hosted-source.json",
+  "cause": "State was recorded before the final hosted-source observation was written.",
+  "correction": "Refresh state timestamps after all referenced observations exist; retain the original execution receipts.",
+  "runtime_code_changed": false,
+  "scope_completion_changed": false,
+  "gate_weakened": false
+}

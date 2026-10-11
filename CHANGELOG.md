@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-122915-authenticated-results-publication-d5e2087e
+
+Recorded 2026-10-11T12:29:15.496629+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish authenticated gateway source and exact live build; retain startup failures, immutable release association, current runtime inventory counts and an unaccepted metadata pilot contract.
+- **Evidence.** Protected merge passed all 22 required executions; 684 live artifacts match the reviewed build; four source assets anonymously download with exact bytes; Mac and network-isolated Linux verify the source signature. Scope remains 113 complete and 89 open. [Change record](./runs/changes/2026-10-11-122915-authenticated-results-publication-d5e2087e.json).
+- **Not claimed.** Independent tag release, full license clearance, scanner workflow attestation, physical-phone/human review and research intake remain incomplete. The pilot contract is a proposal, not permission to collect data.
+
+
 ### 2026-10-11-121105-authenticated-results-final-regressions-and-cleanup-c2dccbe4
 
 Recorded 2026-10-11T12:11:05.651324+00:00 · Contributor: Codex · change

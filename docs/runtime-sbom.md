@@ -1,18 +1,25 @@
 # Observed runtime SBOMs
 
 These are inspectable SPDX 2.3 inventories of the three actual Linux amd64 staging
-images, scanned on 2026-10-10 with Syft 1.54.1. They contain 421 package occurrences
+images. The gateway was rebuilt and rescanned on 2026-10-11 with Syft 1.54.1;
+the unchanged evaluator/redactor scans retain their 2026-10-10 attribution.
+They contain 424 package occurrences
 across the images (shared packages are counted in each image), plus one image
 subject per document. No production data or host configuration was scanned.
 
-- [Gateway inventory](../sbom/runtime/gateway-linux-amd64.spdx.json): 118 packages.
+- [Gateway inventory](../sbom/runtime/gateway-linux-amd64.spdx.json): 121 packages.
 - [Evaluator inventory](../sbom/runtime/evaluator-linux-amd64.spdx.json): 124 packages.
 - [Redactor inventory](../sbom/runtime/anonymizer-linux-amd64.spdx.json): 179 packages.
 - [Identity manifest](../eval/dependencies/runtime-sbom.json).
-- [Actual scan and missing-license results](../runs/2026-10-10-runtime-license-inventory.json).
+- [Actual scan and missing-license results](../runs/2026-10-11-runtime-license-inventory.json).
 
 The scanner archive was checked against the upstream release checksum and GitHub
-asset digest before execution. Its Sigstore identity has **not** been verified.
+asset digest before execution. The archive also passed
+[GitHub immutable-release association verification](../runs/2026-10-11-scanner-release-association.json)
+against `anchore/syft@v1.54.1`. This authenticates the release association, not
+the separate Anchore workflow signature on the checksum file. That latter
+profile has **not** been verified; the manifest does not promote its stronger
+scanner-identity flag.
 The SPDX documents are unsigned. A matching SHA-256 checks file identity, not
 publisher authentication, malware, license clearance or accuracy. Package/build
 inputs changing make the verifier refuse these inventories pending a rescan.

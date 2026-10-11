@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T12:11:05.539269+00:00",
+  "updated": "2026-10-11T12:28:57.384524+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -347,7 +347,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1182 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
+  "python_tests_scope": "1,241 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -607,9 +607,9 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "4673a06458df52dca812885ff132828f2d3657f3",
+    "latest_implementation_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
     "handheld_download_verified": true,
-    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-4673a06"
+    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f"
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
@@ -716,7 +716,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T02:38:48.987316+00:00",
+    "audited_at": "2026-10-11T12:03:44.933701+00:00",
     "completed_records": 113,
     "open_records": 89,
     "records_preserved": 202,
@@ -725,25 +725,25 @@
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-11-consent-acceptance-packet.json",
+    "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-key-recovery-publication.json",
-    "source_commit": "4673a06458df52dca812885ff132828f2d3657f3",
-    "public_workflow_evidence": "runs/2026-10-11-key-recovery-live-site.json",
+    "publication": "runs/2026-10-11-authenticated-publication.json",
+    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/consent-conformance-plan.md",
+    "latest_increment": "docs/authenticated-results-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
     "target_start_open_records": 91,
     "target_remaining_closures": 39,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-11-consent-typed-controls.json",
-    "publication_evidence_merge": "runs/2026-10-11-key-recovery-protected-merge.json",
+    "current_target_verification": "runs/2026-10-11-authenticated-current-boundaries.json",
+    "publication_evidence_merge": "runs/2026-10-11-authenticated-protected-merge.json",
     "latest_owner_direction": "Continue closing the 91 remaining open requirements, returning at 50",
     "latest_owner_direction_date": "2026-10-11"
   },
@@ -836,8 +836,8 @@
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
   },
   "current_source_service_conformance": {
-    "captured_at": "2026-10-10T15:17:30.840944+00:00",
-    "evidence": "runs/2026-10-10-context-v6-real-service.json",
+    "captured_at": "2026-10-11T11:59:31.235197+00:00",
+    "evidence": "runs/2026-10-11-authenticated-service.json",
     "http_checks": 32,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
@@ -1030,7 +1030,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T12:11:05.539269+00:00",
+  "updated_at": "2026-10-11T12:28:57.384524+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1095,9 +1095,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "65a1298261d2a8509765d3e97ce9e71c18ca931c",
-    "deployment_url": "https://e99c2aa6.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-11-consent-publication.json",
+    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "deployment_url": "https://a0cd81f0.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-11-authenticated-publication.json",
     "matching_artifacts": 684,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
@@ -1173,13 +1173,13 @@
     "real_cryptographic_cases": 8,
     "network_isolated_verification": true,
     "corrected_hosted_download_observed": true,
-    "current_source_snapshot": "65a1298261d2a8509765d3e97ce9e71c18ca931c",
-    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-65a1298",
-    "download_evidence": "runs/2026-10-11-consent-authenticated-download.json",
+    "current_source_snapshot": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f",
+    "download_evidence": "runs/2026-10-11-authenticated-download.json",
     "corrected_hosted_checks": "runs/2026-10-10-source-download-hosted-checks.json",
     "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json",
-    "latest_protected_merge": "runs/2026-10-11-consent-protected-merge.json",
-    "latest_hosted_source": "runs/2026-10-11-consent-hosted-source.json",
+    "latest_protected_merge": "runs/2026-10-11-authenticated-protected-merge.json",
+    "latest_hosted_source": "runs/2026-10-11-authenticated-hosted-source.json",
     "publication_order_correction": "runs/2026-10-11-group-download-order-correction.json"
   },
   "independent_timestamp": {
@@ -1330,7 +1330,7 @@
     "runtime_service": "runs/2026-10-11-authenticated-service.json",
     "runtime_replay": "runs/2026-10-11-authenticated-replay.json",
     "unsupported_media_owner_approval": "runs/2026-10-11-unsupported-modality-owner-decision.json",
-    "publication_pending": true,
+    "publication_pending": false,
     "capability_evidence": [
       "runs/2026-10-11-authenticated-ps-revalidation.json",
       "runs/2026-10-11-authenticated-pii-revalidation.json",
@@ -1340,6 +1340,28 @@
     ],
     "full_regressions": "runs/2026-10-11-authenticated-full-regressions.json",
     "current_boundaries": "runs/2026-10-11-authenticated-current-boundaries.json",
-    "staging_cleanup": "runs/2026-10-11-authenticated-staging-cleanup.json"
+    "staging_cleanup": "runs/2026-10-11-authenticated-staging-cleanup.json",
+    "publication": "runs/2026-10-11-authenticated-publication.json",
+    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "protected_merge": "runs/2026-10-11-authenticated-protected-merge.json",
+    "startup_refusals": "runs/2026-10-11-authenticated-startup-refusals.json",
+    "public_source_download": "runs/2026-10-11-authenticated-download.json",
+    "bookkeeping_correction": "runs/2026-10-11-authenticated-bookkeeping-correction.json"
+  },
+  "metadata_pilot_contract": {
+    "status": "proposal_pending_owner_approval; no endpoint or collection enabled",
+    "contract": "docs/metadata-pilot-contract.md",
+    "scope_ids": [
+      "F-044",
+      "F-045",
+      "F-141",
+      "N-011"
+    ],
+    "active_retention_days_proposed": 30,
+    "backup_expiry_days_proposed": 7,
+    "invitation_only_proposed": true,
+    "owner_role_proposed": "Michael \u2014 accountable pilot operator and access approver",
+    "real_data_allowed": false,
+    "new_endpoint_approved": false
   }
 }

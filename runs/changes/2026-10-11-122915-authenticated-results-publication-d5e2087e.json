@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-122915-authenticated-results-publication-d5e2087e",
+  "recorded_at": "2026-10-11T12:29:15.496629+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a36898f30f91adfd189baed12ba7f7c13740964b",
+  "changed": "Publish authenticated gateway source and exact live build; retain startup failures, immutable release association, current runtime inventory counts and an unaccepted metadata pilot contract.",
+  "proves": "Protected merge passed all 22 required executions; 684 live artifacts match the reviewed build; four source assets anonymously download with exact bytes; Mac and network-isolated Linux verify the source signature. Scope remains 113 complete and 89 open.",
+  "limits": "Independent tag release, full license clearance, scanner workflow attestation, physical-phone/human review and research intake remain incomplete. The pilot contract is a proposal, not permission to collect data.",
+  "scope_ids": [
+    "F-036",
+    "F-102",
+    "F-057",
+    "X-02",
+    "F-044",
+    "F-045",
+    "F-141",
+    "N-011"
+  ],
+  "files": {
+    "docs/authenticated-results-result.md": "478fac55a05f2120e05fd521bc624c583ea9fb64a647f4869cbf167136567b36",
+    "docs/metadata-pilot-contract.md": "a19cd13974472981ae55fe15418507e9840fabf627817a14a9e9c4ce9e504b08",
+    "docs/runtime-sbom.md": "ed86c57c9d3ceddc2728430315c707ce3b67de4f6979433b99c9b60149dd4168",
+    "runs/2026-10-11-authenticated-bookkeeping-correction.json": "fbc1706b6e77a85162e50304ed43ef298b78409697e4f35cc30532a187680667",
+    "runs/2026-10-11-authenticated-download.json": "2efab8c2ad352c8fcfa252a89f272b299fde609905bfc4555de9407cf350b9e3",
+    "runs/2026-10-11-authenticated-hosted-source.json": "7843fe1bf9791087ae43ea8f3da937d63c003bae879ff06d18abb3953ea0f786",
+    "runs/2026-10-11-authenticated-live-accessibility.json": "007b3c791db471ec29b546f8370c8e9f9811788e0d4d98194357098265ea5bb5",
+    "runs/2026-10-11-authenticated-live-performance.json": "c11466fbb56f8e8b67188d985890bf81e2d1a6fced4f013b2f74addb0114785e",
+    "runs/2026-10-11-authenticated-live-policies.json": "de39a2316e57f2945394da370e15ee081ee5db9a59a561168245a49dc64e21f4",
+    "runs/2026-10-11-authenticated-live-site.json": "1b060bf5b8abf7cf0f893813c2f0fbbb60f6ece37f95ce092fac445afc8a6128",
+    "runs/2026-10-11-authenticated-live-workflows.json": "1118c896b6eef8049d71315dd0d2659a671ebf584a28a0712cb48cc69d88f4cf",
+    "runs/2026-10-11-authenticated-protected-merge.json": "adb34a5f84d0a0814e91d7b88e12a8c39d0d1ccccf90a40fa1ce5576b4d2e1f5",
+    "runs/2026-10-11-authenticated-publication.json": "75b2be18cf2bcae42db39a721be17d7e7c1e96e08af4a4491ba556362b8a632d",
+    "runs/2026-10-11-authenticated-startup-refusals.json": "b3ba5bfadb22e8fe9750fb70dba13326a6f5c9d2728cf045da760e75e31bb3ea",
+    "runs/2026-10-11-scanner-release-association.json": "ac69a7749598ec3d02de0944aca416c0e1acadadc1806a7af541a83d6cf7096a",
+    "state.json": "125594df34ae7ae12721ebd572a6b0d4bd2cca5b50e0e3cea0db5ea8fc53a802"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-authenticated-publication.json",
+      "sha256": "75b2be18cf2bcae42db39a721be17d7e7c1e96e08af4a4491ba556362b8a632d"
+    },
+    {
+      "path": "runs/2026-10-11-authenticated-download.json",
+      "sha256": "2efab8c2ad352c8fcfa252a89f272b299fde609905bfc4555de9407cf350b9e3"
+    },
+    {
+      "path": "runs/2026-10-11-authenticated-protected-merge.json",
+      "sha256": "adb34a5f84d0a0814e91d7b88e12a8c39d0d1ccccf90a40fa1ce5576b4d2e1f5"
+    },
+    {
+      "path": "runs/2026-10-11-authenticated-startup-refusals.json",
+      "sha256": "b3ba5bfadb22e8fe9750fb70dba13326a6f5c9d2728cf045da760e75e31bb3ea"
+    },
+    {
+      "path": "runs/2026-10-11-scanner-release-association.json",
+      "sha256": "ac69a7749598ec3d02de0944aca416c0e1acadadc1806a7af541a83d6cf7096a"
+    },
+    {
+      "path": "runs/2026-10-11-authenticated-bookkeeping-correction.json",
+      "sha256": "fbc1706b6e77a85162e50304ed43ef298b78409697e4f35cc30532a187680667"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T12:29:16.033609+00:00"
+    }
+  ]
+}

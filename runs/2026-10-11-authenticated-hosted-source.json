@@ -1,0 +1,78 @@
+{
+  "captured_at": "2026-10-11T12:28:27.768915+00:00",
+  "pass": true,
+  "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+  "workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/38138903476",
+  "engineering_and_source_jobs_passed": true,
+  "independent_release_gates_passed": false,
+  "jobs": [
+    {
+      "name": "no-egress",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "change-records",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "gates",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "host-config",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "site",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "spec",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "regressions",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "accessibility",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "scope-plan",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "source-provenance",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "temporary_linux_public_source_staging_removed": true,
+  "staging_absence_checked": true,
+  "local_Docker_started": false
+}
