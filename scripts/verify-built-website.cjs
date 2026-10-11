@@ -30,6 +30,7 @@ async function main(){
   const env={...process.env,AITRUST_SITE_URL:'http://127.0.0.1:'+server.address().port};
   // Ignore a caller's stale external fixture URL. Both tools see this new build.
   await run(process.execPath,['scripts/verify-site.cjs'],env);
+  await run(process.execPath,['scripts/verify-performance.cjs'],env);
   await run(process.execPath,['scripts/verify-site-accessibility.cjs'],env);
   await run(process.execPath,['scripts/verify-mobile-payload.cjs'],env);
  await run(process.execPath,['scripts/verify-research-feedback.cjs'],env);

@@ -6371,16 +6371,18 @@
         "id": "F-113",
         "kind": "requirement",
         "title": "Measured latency budget on declared hardware",
-        "percent_complete": 60,
+        "percent_complete": 80,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T14:11:42.010452+00:00",
+        "audited_at": "2026-10-11T17:26:41.852967+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex"
+          "Codex",
+          "Codex — actual authenticated staging timing across declared input sizes and source-bound display controls, 2026-10-11T17:26:41.852967+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6388,12 +6390,20 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Expand timing to declared larger input sizes, full service routes and physical phones; agree route-specific budgets and test enforcement before accepting the historical 100 ms target.",
+        "next_fix": "Measure physical-phone and other declared whole-route startup/update behavior; accept route-specific budgets and prove their enforcement. The complete local staging pipeline is now measured at four input sizes; the historical 100 ms target remains unaccepted.",
         "next_owner": "Codex; human device testers",
         "evidence": [
           "docs/tag-performance-plan.md",
           "scripts/verify-device.cjs",
-          "runs/2026-10-09-performance-device-local.json"
+          "runs/2026-10-09-performance-device-local.json",
+          "docs/pipeline-performance.md",
+          "docs/pipeline-performance-plan.md",
+          "scripts/measure-pipeline-performance.py",
+          "tests/test_pipeline_performance.py",
+          "tests/pipeline-timing.cjs",
+          "runs/2026-10-11-staging-pipeline-performance.json",
+          "runs/2026-10-11-staging-pipeline-source-witness.json",
+          "runs/2026-10-11-pipeline-benchmark-expectation-failure.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [

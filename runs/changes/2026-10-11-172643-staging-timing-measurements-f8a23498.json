@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-172643-staging-timing-measurements-f8a23498",
+  "recorded_at": "2026-10-11T17:26:43.011398+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "81f66a0ccd3b9c6d915f664e4af1e010aaa85088",
+  "changed": "Measured 253 actual staging requests at four input sizes and added source-bound local-service speed details to PS and redaction evidence; recorded numeric tool publication and full anonymous-download execution.",
+  "proves": "30 focused Python controls and 20 timing-display controls pass; the actual 12-profile benchmark checks running container sources, and all 2180 merged Git blobs match the public download. Numeric publication matches 714 served artifacts.",
+  "limits": "No independent accuracy, physical-phone timing, accepted speed budget, new endpoint or collection. The first prototype expectation failure is retained; 114 complete and 88 open remain.",
+  "scope_ids": [
+    "F-113",
+    "F-015",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "c196f2328707625f084de52aa664c35709db5eea53edf806de84b6b40d59c5dd",
+    "README.md": "da7a1653b974e9f612e2a6f13c4ec64e938de43a43921e23b3d67eb1ca63fa15",
+    "docs/pipeline-performance-plan.md": "7be5ccecb30ab9076ddb2ebe3a04507672559a7a2f8af4c137a0fc08f42fa181",
+    "docs/pipeline-performance.md": "63e2a2b78e84fc26aebbf6e0eb561d5d7d7e4cb0f856b9d86c6f77de316b3fa0",
+    "docs/scope-progress.json": "6e57119b0fd1d407e6c007dfd8c883193ed8d761140e30293b48e404b458ba2c",
+    "docs/scope-progress.md": "d52cd5d76163121528a67536e63bff7b465e656344609cbf2bc76b468d0a9861",
+    "eval/revalidation.json": "63cd48d2f61e140bb611011a4e2e0f2eebfeb28696721047f44944d029e3b093",
+    "runs/2026-10-11-pipeline-benchmark-expectation-failure.json": "8c8005ef4f6afe4c7410a47b0ffa46d155b0e5e7d1cb4cb0d2d7dbbb58120d4a",
+    "runs/2026-10-11-quantitative-cli-merged-linux.json": "d95ef35ff2179f533e9aa28149183e16a455982e98c0d139b7f89c3bc7a2e968",
+    "runs/2026-10-11-quantitative-merged-source.json": "a51eea9f813c6ac90418125757b38195ac3b277c6f526b7304f71005d1def5cf",
+    "runs/2026-10-11-quantitative-protected-merge.json": "b0c5960c6f862b1a680a53056a8a4bed0159cdaa735521f654a7cf66b8366594",
+    "runs/2026-10-11-quantitative-publication.json": "a5f39d716d07fc03f4c7f5d1074148afe669be642cd858706e6e2741a792191c",
+    "runs/2026-10-11-staging-pipeline-performance.json": "54551d3b8597b17c6efd6e507f4aee6056119fd9ced3413a13fb231946c88a5f",
+    "runs/2026-10-11-staging-pipeline-source-witness.json": "34c2a7414c97f2c540ee576dda3dd080118e317560e7ddc096e310bfa68f3b0a",
+    "scripts/measure-pipeline-performance.py": "75023900c98dd033f5f3ff7db8dccd8b3456ee4a2ddfa8272ef00a17b987b3e3",
+    "scripts/verify-performance.cjs": "12209f84a60109e5a17ac767e3bcef239527c838ae9a6994f9d3f153c1c5b77b",
+    "scripts/verify-route-boundaries.py": "b0cf2ce91c08bd89efe7433ba534b041ae7c67ba4d05b974b6423b67ef5c1679",
+    "site/index.html": "d1fa4b7464fefa93a4d4e5cceaee5bcc0e19d87aae5962f779634b2c5024f3b8",
+    "site/public/reference/pipeline-performance.json": "c594d489788a7b76d4729b8c57b48815aa41c4c244cb1fffdc031299cb89e10d",
+    "site/public/reference/public-scope.json": "15a798ba40c35137ef457e9e44227c14a0d1c26b47e0b6adbd42494d399ca61f",
+    "site/public/reference/tag-performance.json": "30b0fd2c049e0093f1ef8716c6390db7e900257112a8a82376a2a9ebb1695e25",
+    "site/scripts/prepare-performance.mjs": "c75902edd4707a08adf703eaad5330e9dd0f3378187e1513bb09f9e2e086d4c1",
+    "site/src/performance-model.js": "677ebac1e12ef7c2cf30abd1dd1b417af7e4396949059fc272ce21f7a962aaed",
+    "site/src/performance.jsx": "ec4472c2d23ae2af0a7f37916ee1c7a00f34bc40bf4a94c8a67cdf308c6a7b8d",
+    "site/src/pipeline-timing-model.js": "e145277771daad5741b9b6fccc2c65d80ab02d4c2206780d2f9f2c94f160873c",
+    "site/src/public-scope.json": "15a798ba40c35137ef457e9e44227c14a0d1c26b47e0b6adbd42494d399ca61f",
+    "site/src/scope-manifest.json": "eb0b65bc07e2d04fe0ac2ea63c44bacb6c3067b87842661f9aeaf1ba89f418a1",
+    "site/src/tag-performance.json": "30b0fd2c049e0093f1ef8716c6390db7e900257112a8a82376a2a9ebb1695e25",
+    "state.json": "80046235bc85d172c167483f36e1debcac53e04f28ba7faf5a9f1008de2ce970",
+    "tests/pipeline-timing.cjs": "6be50d5251e079bff6b6f6a8c46cdcff96a21d823efa6baabb66ba36848fe0f3",
+    "tests/test_pipeline_performance.py": "8a9eff89da8ee8429261f395c0f53fa0c09af2b7f02a6a01da21c01b7adb5c92"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-staging-pipeline-performance.json",
+      "sha256": "54551d3b8597b17c6efd6e507f4aee6056119fd9ced3413a13fb231946c88a5f"
+    },
+    {
+      "path": "runs/2026-10-11-staging-pipeline-source-witness.json",
+      "sha256": "34c2a7414c97f2c540ee576dda3dd080118e317560e7ddc096e310bfa68f3b0a"
+    },
+    {
+      "path": "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
+      "sha256": "8c8005ef4f6afe4c7410a47b0ffa46d155b0e5e7d1cb4cb0d2d7dbbb58120d4a"
+    },
+    {
+      "path": "runs/2026-10-11-quantitative-publication.json",
+      "sha256": "a5f39d716d07fc03f4c7f5d1074148afe669be642cd858706e6e2741a792191c"
+    },
+    {
+      "path": "runs/2026-10-11-quantitative-merged-source.json",
+      "sha256": "a51eea9f813c6ac90418125757b38195ac3b277c6f526b7304f71005d1def5cf"
+    }
+  ],
+  "checks": []
+}
