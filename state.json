@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T21:12:52.691895+00:00",
+  "updated": "2026-10-11T21:50:46.290947+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2141,
+  "python_tests_passed": 2192,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-11-nli-publication.json",
+    "evidence": "runs/2026-10-11-nli-reference-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://207914dc.aitrust-id.pages.dev",
+    "deployment_url": "https://ec373651.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-nli-publication.json",
+    "publication_evidence": "runs/2026-10-11-nli-reference-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -296,7 +296,7 @@
     "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "98820be101461464fb8a2fc0129fc0563c8e155a",
+    "source_commit": "59235baf65f55c64ff2e47ec93b2d6bea1158466",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1867 tests passed on the preceding PII source; full private-review source verification is pending.",
+  "python_tests_scope": "Current managed-source full Python suite: 2192 passed, one Linux-only Mac skip and one upstream TestClient warning; no independent accuracy implied.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T20:05:45.003137+00:00",
+    "audited_at": "2026-10-11T21:44:33.615410+00:00",
     "completed_records": 114,
     "open_records": 88,
     "records_preserved": 202,
@@ -966,8 +966,8 @@
   "personal_route_boundaries": {
     "status": "current_source_checks_pass_publication_pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-11-source-captured-boundaries.json",
-    "source_files": 513,
+    "evidence": "runs/2026-10-11-choice-framing-current-boundaries.json",
+    "source_files": 588,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-nli-reference-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-11-nli-reference-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-11-nli-reference-current-protocol.json",
-    "extension": "runs/2026-10-11-nli-reference-current-extension.json",
-    "website": "runs/2026-10-11-nli-reference-current-website.json",
+    "PS": "runs/2026-10-11-choice-framing-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-11-choice-framing-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-11-choice-framing-current-protocol.json",
+    "extension": "runs/2026-10-11-choice-framing-current-extension.json",
+    "website": "runs/2026-10-11-choice-framing-accepted-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T21:12:52.691895+00:00",
+  "updated_at": "2026-10-11T21:50:46.290947+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1720,7 +1720,7 @@
     "protected_merge": "runs/2026-10-11-nli-protected-merge.json"
   },
   "nli_reference_comparison": {
-    "status": "optional_local_research_actual_mac_linux_checks_passed_publication_pending",
+    "status": "optional_local_research_protected_merge_and_publication_verified",
     "scope_ids": [
       "F-020b"
     ],
@@ -1745,6 +1745,36 @@
     },
     "full_python_execution": "runs/2026-10-11-nli-reference-full-python.json",
     "current_boundaries": "runs/2026-10-11-nli-reference-current-boundaries.json",
-    "result": "docs/nli-reference-result.md"
+    "result": "docs/nli-reference-result.md",
+    "publication": "runs/2026-10-11-nli-reference-publication.json",
+    "protected_merge": "runs/2026-10-11-nli-reference-protected-merge.json"
+  },
+  "choice_framing": {
+    "status": "optional_research_command_mac_linux_checked_publication_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-019b"
+    ],
+    "guide": "docs/choice-framing.md",
+    "architecture": "docs/choice-framing-plan.md",
+    "engineering": "runs/2026-10-11-choice-framing-engineering.json",
+    "focused_tests_per_host": 137,
+    "actual_cli_controls_per_host": 19,
+    "tag_mapping_validated": false,
+    "independent_accuracy_evidence": false,
+    "additional_option_verified": false,
+    "requirements_closed": 0,
+    "current_capabilities": {
+      "PS": "runs/2026-10-11-choice-framing-current-PS.json",
+      "PII_REDACTED": "runs/2026-10-11-choice-framing-current-PII_REDACTED.json",
+      "protocol": "runs/2026-10-11-choice-framing-current-protocol.json",
+      "extension": "runs/2026-10-11-choice-framing-current-extension.json",
+      "website": "runs/2026-10-11-choice-framing-accepted-website.json",
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "full_python_tests_passed": 2192,
+    "full_python_execution": "runs/2026-10-11-choice-framing-accepted-full-python.json",
+    "current_boundaries": "runs/2026-10-11-choice-framing-current-boundaries.json"
   }
 }

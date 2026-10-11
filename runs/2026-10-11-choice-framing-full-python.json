@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-10-11T21:45:40.884291+00:00",
+  "pass": false,
+  "implemented_by": "Codex",
+  "argv": [
+    "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "exit_status": 1,
+  "elapsed_seconds": 67.15,
+  "summary": "ewed source inventory')\nE           ValueError: Current route differs from reviewed source inventory\n\nscripts/verify-route-boundaries.py:333: ValueError\n=============================== warnings summary ===============================\n../../../../Downloads/aitrust-id-coordination/verification-venv/lib/python3.12/site-packages/fastapi/testclient.py:1\n  /Users/raashad/Downloads/aitrust-id-coordination/verification-venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED tests/test_route_boundaries.py::test_actual_current_guard - ValueError...\nFAILED tests/test_route_boundaries.py::test_upload_payment_and_promotion_endpoints_refused\nFAILED tests/test_route_boundaries.py::test_broader_extension_access_refused[permissions-value0]\nFAILED tests/test_route_boundaries.py::test_broader_extension_access_refused[host_permissions-value1]\nFAILED tests/test_route_boundaries.py::test_broader_extension_access_refused[optional_host_permissions-value2]\nFAILED tests/test_route_boundaries.py::test_failed_or_stale_execution_refused\nFAILED tests/test_route_boundaries.py::test_missing_browser_evidence_refused\nFAILED tests/test_route_boundaries.py::test_unsafe_receipt_path_refused - Ass...\nFAILED tests/test_route_boundaries.py::test_registry_deferral_is_reviewed_without_approving_future_registry\n9 failed, 2183 passed, 1 skipped, 1 warning in 66.27s (0:01:06)\n",
+  "independent_accuracy_evidence": false,
+  "tag_asserted": false
+}

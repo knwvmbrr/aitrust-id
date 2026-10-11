@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-10-11T21:30:28.758090+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "actual_synthetic_cli_controls": [
+    {
+      "case": "private_summary_no_raw_values",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "explicit_private_details",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "existing_details_unchanged",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_subject_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_annotations_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_corpus_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject_symlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "context_hardlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "malformed_utf8_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject_character_limit",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "duplicate_context_json_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "stale_subject_binding_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "stale_corpus_binding_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "no_supported_pattern_is_not_safety_clearance",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "arguments_do_not_echo_private_values",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "private_test_directory_removed": true,
+  "caller_alternative_verified": false,
+  "independent_accuracy_evidence": false,
+  "tag_asserted": false,
+  "release_approved": false
+}

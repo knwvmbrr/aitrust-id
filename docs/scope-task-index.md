@@ -39,7 +39,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-017 | sig.duplicate_loop.v1 — n-gram repetition above threshold | [TAG-HP](scope-delivery.md#tag-hp) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-018 | sig.hedge_collapse.v1 — hedging absent where uncertainty is expected | [TAG-HP](scope-delivery.md#tag-hp) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-019a | sig.urgency_frame.v1 — time-pressure lexicon plus imperative density | [TAG-MT](scope-delivery.md#tag-mt) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-F-019b | sig.false_dilemma.v1 — binary framing where alternatives exist | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-019b | sig.false_dilemma.v1 — binary framing where alternatives exist | [TAG-MT](scope-delivery.md#tag-mt) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-019c | sig.authority_appeal.v1 — unattributed appeals to expertise or consensus | [TAG-MT](scope-delivery.md#tag-mt) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 60% · [evidence/fix](scope-progress.md) |

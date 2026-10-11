@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-212343-reference-nli-protected-publication-7db53768",
+  "recorded_at": "2026-10-11T21:23:43.727595+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "59235baf65f55c64ff2e47ec93b2d6bea1158466",
+  "changed": "Confirmed protected reference-comparison merge, current served guide bytes and preservation of unrelated primary work; corrected the publication updater to the existing website state object.",
+  "proves": "22 exact-head required executions passed; 738 live artifact comparisons matched across three origins; 12 unrelated files preserved byte-for-byte.",
+  "limits": "Published optional reference research is not independent accuracy, validated falsehood, source freshness, corroboration or a released FI/NF tag. 88 full requirements remain open.",
+  "scope_ids": [
+    "F-020b"
+  ],
+  "files": {
+    "state.json": "18369feeaf5feda7c708d4a15d1f44b91b68d416c015b4e0af043fdc8338e623",
+    "docs/nli-reference-result.md": "2ac68424ef9ab2645362518aa63a7669315463c13d2a8e8a441761bf33b53224",
+    "runs/2026-10-11-nli-reference-publication.json": "d55185b738e94a3f5b3aee1e32d848acdf5e468fcd418f6620b4b3969722c071",
+    "runs/2026-10-11-nli-reference-protected-merge.json": "303c80a7d611cf408c6b244b3aea10a14775dc2f6f3d660db00f11737dffcdaf",
+    "runs/2026-10-11-nli-reference-primary-ff.json": "7a6e3080614e799af7f7eb3dd0469475321779388bd97aa7c76e5be349e4d639"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-nli-reference-publication.json",
+      "sha256": "d55185b738e94a3f5b3aee1e32d848acdf5e468fcd418f6620b4b3969722c071"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-protected-merge.json",
+      "sha256": "303c80a7d611cf408c6b244b3aea10a14775dc2f6f3d660db00f11737dffcdaf"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-primary-ff.json",
+      "sha256": "7a6e3080614e799af7f7eb3dd0469475321779388bd97aa7c76e5be349e4d639"
+    }
+  ],
+  "checks": []
+}
