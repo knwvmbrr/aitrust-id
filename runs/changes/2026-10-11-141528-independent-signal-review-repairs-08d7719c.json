@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-141528-independent-signal-review-repairs-08d7719c",
+  "recorded_at": "2026-10-11T14:15:28.247544+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8e608edb999231a3e71cd73dafc397d9c3dd8616",
+  "changed": "Retain file constructor type, refuse impossible read-method pairs, and bind CLI observations to the exact invoked implementation hash.",
+  "proves": "171 focused tests and 20 actual final-source CLI cases on Mac and isolated Linux. Accepted final-source full suite passes 1392 non-route tests; 32 separate route tests pass.",
+  "limits": "The full tag integration requirements remain open at 80 percent. Historical failed and superseded checks remain visible; no independent accuracy or new tag release is claimed.",
+  "scope_ids": [
+    "F-012",
+    "F-013",
+    "F-018",
+    "F-019a",
+    "F-019c"
+  ],
+  "files": {
+    "README.md": "26254b20430c07e30b10b4fb81887a1ba507128d508da8fd62d9a82cca4b97f6",
+    "docs/credential-flow.md": "afc2a8196d8175f735f86745388b863842b35428019a567dc236437a0a5cc5af",
+    "docs/independent-signals-result.md": "db989663dd7d50c192cf6bdaeabac8aafe883c3fcd0479f6fd5f8bc1a4c588d4",
+    "eval/route-boundaries.json": "f8ee18d1ad6aaa1638ab3b6b777181fed04042a4b93582234323568c1cd7dd6d",
+    "runs/2026-10-11-independent-observations-linux-review-final.json": "e05d0a0a8fe14399882493b441021dfd408d0218bc09deaedea71b9cde1be23d",
+    "runs/2026-10-11-independent-observations-linux-review-initial.json": "2914812b4700c01191d1c0bdc6004092b006d27e73617ca862fd07efb9d274d9",
+    "runs/2026-10-11-independent-observations-linux-reviewed.json": "6df395e006f358f7beaafb07c75fc30fed756f59ecb53049b6b3633d8ca32a90",
+    "runs/2026-10-11-independent-observations-mac-review-corrected.json": "ed554b51560a1a2b823ac7ac73442e8903ece2544a0173d1884baa45b350bf54",
+    "runs/2026-10-11-independent-observations-mac-review-final.json": "4e4b0330e93d5f5455b69533392e2849c3e293c08c5951dc645d93275cc946ab",
+    "runs/2026-10-11-independent-observations-mac-reviewed.json": "76b7e2c73dd971f7faa74fb219065326872910fa5578278028a5c33762f18f4c",
+    "runs/2026-10-11-independent-signals-boundaries-review-corrected.json": "8415f245f9ea02e5fba70ef82900f935a0dbda96082eb105a386b4978141c031",
+    "runs/2026-10-11-independent-signals-boundaries-reviewed.json": "3281c535b88a88903ec74b42db1ad0a1a3baf9a8f0b7f74e37800566126a5b26",
+    "runs/2026-10-11-independent-signals-python-review-accepted.json": "d87ce623a7e9cfec8e1df4a02ea31e03c1f2536c6910afe755b86147ffc5055b",
+    "runs/2026-10-11-independent-signals-python-review-corrected.json": "a389fb0e884d6f39022bd8bd4eb6f3991e295b021135ca042b9cf9ca6eb04b8d",
+    "runs/2026-10-11-independent-signals-python-review-final.json": "313679e913fcfd384a86db8b25c5699b942cca8eb7689791f95c156aa2ac26d9",
+    "runs/2026-10-11-independent-signals-python-reviewed.json": "31b37320128365ed7b4569ada558010ffcf8788aeb2cb910f5f349c62207a3f4",
+    "runs/2026-10-11-independent-signals-route-tests-reviewed.json": "0b4997553b856a859e632a18871c4dd106717f8a1486249927e17fcd3ecb52d7",
+    "scripts/verify-independent-observations.py": "3b543a55d6bcb3bdfe2f52eacd5b190ac5979a4259113a4090f3764c36b2288f",
+    "state.json": "8bc6b25fb83eda18f7d8a33bf423b183b46c28ac83e81d272014401c2a2f65c3",
+    "tests/test_credential_flow.py": "53f0d8ac596d7f424076cee32727ffc0ebd70a0be2b1f0a469241b651b19b0b7",
+    "tests/test_observation_verifier.py": "2eef69e0657e9f90ce1878d21e79483704e8f350f902c036a40ecb87ac2804f3",
+    "tools/credential_flow.py": "b4b39e985c05f53c3d514b368f021d578031e751668301b4382a53d17d636c35"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-independent-signals-python-review-accepted.json",
+      "sha256": "d87ce623a7e9cfec8e1df4a02ea31e03c1f2536c6910afe755b86147ffc5055b"
+    },
+    {
+      "path": "runs/2026-10-11-independent-observations-mac-review-final.json",
+      "sha256": "4e4b0330e93d5f5455b69533392e2849c3e293c08c5951dc645d93275cc946ab"
+    },
+    {
+      "path": "runs/2026-10-11-independent-observations-linux-review-final.json",
+      "sha256": "e05d0a0a8fe14399882493b441021dfd408d0218bc09deaedea71b9cde1be23d"
+    },
+    {
+      "path": "runs/2026-10-11-independent-signals-route-tests-reviewed.json",
+      "sha256": "0b4997553b856a859e632a18871c4dd106717f8a1486249927e17fcd3ecb52d7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:15:28.390921+00:00"
+    }
+  ]
+}

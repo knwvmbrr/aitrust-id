@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-141528-independent-signal-review-repairs-08d7719c
+
+Recorded 2026-10-11T14:15:28.247544+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain file constructor type, refuse impossible read-method pairs, and bind CLI observations to the exact invoked implementation hash.
+- **Evidence.** 171 focused tests and 20 actual final-source CLI cases on Mac and isolated Linux. Accepted final-source full suite passes 1392 non-route tests; 32 separate route tests pass. [Change record](./runs/changes/2026-10-11-141528-independent-signal-review-repairs-08d7719c.json).
+- **Not claimed.** The full tag integration requirements remain open at 80 percent. Historical failed and superseded checks remain visible; no independent accuracy or new tag release is claimed.
+
+
+### 2026-10-11-140556-observation-verifier-portability-cb042291
+
+Recorded 2026-10-11T14:05:56.391056+00:00 · Contributor: Codex · change
+
+- **Changed.** Handle inaccessible optional Linux namespace diagnostics explicitly as unknown, preserve actual isolation evidence separately, and add four refusal/comparison controls.
+- **Evidence.** Eighteen real CLI cases pass on Mac and isolated Linux. Current Python regression suite passes 1385 non-route tests and 32 route tests; all 218 reviewed sources preserve existing routes. [Change record](./runs/changes/2026-10-11-140556-observation-verifier-portability-cb042291.json).
+- **Not claimed.** The five full tag integration requirements remain open at 80 percent; no new tag release, accuracy evidence, endpoint or data collection is implied.
+
+
+### 2026-10-11-135606-independent-signal-final-engineering-5876c6c8
+
+Recorded 2026-10-11T13:56:06.862077+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current 1413 combined Python checks, a 217-source route review, current website execution and all five current capability receipts; corrected stale state pointers without asserting a tag release.
+- **Evidence.** 1381 full-suite checks excluding 32 separately executed route tests pass, with current endpoint/access boundaries and complete current website checks. [Change record](./runs/changes/2026-10-11-135606-independent-signal-final-engineering-5876c6c8.json).
+- **Not claimed.** Five reference components retain 80-percent full requirement status; no independent accuracy, new tag release, research collection or full requirement closure is granted.
+
+
+### 2026-10-11-135054-credential-payload-boundary-correction-f9d7d304
+
+Recorded 2026-10-11T13:50:54.039090+00:00 · Contributor: Codex · change
+
+- **Changed.** Excluded local timeout values from credential-to-network payload findings, added a negative regression/CLI control, refreshed exact source-bound Mac/Linux observations and retained prior runs as historical.
+- **Evidence.** 160 component tests and 18 actual CLI cases per platform pass; an unrelated/local timeout argument no longer becomes a credential transfer. [Change record](./runs/changes/2026-10-11-135054-credential-payload-boundary-correction-f9d7d304.json).
+- **Not claimed.** Reference observers remain outside PS/HP/MT runtime and full requirements remain open at 80 percent; no independent accuracy evidence or tag release.
+
+
+### 2026-10-11-134541-independent-signal-public-projections-c81f5589
+
+Recorded 2026-10-11T13:45:41.546597+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated the preserved public scope and signal references from the five-component ledger and recorded the current-source regression receipts.
+- **Evidence.** No scope IDs were removed; the reference components are bound as proposed observations and active evaluator methods remain five. [Change record](./runs/changes/2026-10-11-134541-independent-signal-public-projections-c81f5589.json).
+- **Not claimed.** The full acceptance count stays 113 complete / 89 open; failed prebuild/website attempts remain failures until a current complete check passes.
+
+
+### 2026-10-11-134407-independent-signal-components-cb3ab649
+
+Recorded 2026-10-11T13:44:07.549319+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented five independent offline signal components, private CLI interfaces, published method contracts and CI controls; retained full requirement and tag acceptance gates.
+- **Evidence.** 159 component tests and 17 actual CLI cases per Mac/Linux pass; Linux CLI ran with networking disabled; source and input identities are explicit. [Change record](./runs/changes/2026-10-11-134407-independent-signal-components-cb3ab649.json).
+- **Not claimed.** No PS enhancement is activated, HP/MT are unavailable, independent accuracy and full contextual integration remain open; queue remains 113 complete and 89 open.
+
+
 ### 2026-10-11-124218-publication-timing-final-regressions-4855149b
 
 Recorded 2026-10-11T12:42:18.050517+00:00 · Contributor: Codex · change

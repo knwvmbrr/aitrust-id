@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-140556-observation-verifier-portability-cb042291",
+  "recorded_at": "2026-10-11T14:05:56.391056+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d92adf1a3128ee723e2f6246c7499b112ed69152",
+  "changed": "Handle inaccessible optional Linux namespace diagnostics explicitly as unknown, preserve actual isolation evidence separately, and add four refusal/comparison controls.",
+  "proves": "Eighteen real CLI cases pass on Mac and isolated Linux. Current Python regression suite passes 1385 non-route tests and 32 route tests; all 218 reviewed sources preserve existing routes.",
+  "limits": "The five full tag integration requirements remain open at 80 percent; no new tag release, accuracy evidence, endpoint or data collection is implied.",
+  "scope_ids": [
+    "F-012",
+    "F-013",
+    "F-018",
+    "F-019a",
+    "F-019c"
+  ],
+  "files": {
+    "README.md": "5faf1341ab3458abc5f521a19c9f2f142d7ddf0678d0c904c1166af4291a7212",
+    "docs/independent-signals-result.md": "0733f0443aa916fa215c737f5edaa9154394ddd24cfefbd6fa658e157209118e",
+    "eval/route-boundaries.json": "b86b161c5980d31720a06df00d51c464745757515d519cd0fd9b24cf199b532b",
+    "runs/2026-10-11-independent-observations-linux-portable.json": "5d2f85466d702e2ecc6623aa0bf56f6d27b95f1935f37e544dc5bc5b96bf385f",
+    "runs/2026-10-11-independent-observations-mac-portable.json": "7546cec7dfa9a58e8728fd4c8f8a96538cd89d6710aee4dc8586c0d863cb6590",
+    "runs/2026-10-11-independent-signals-boundaries-portable.json": "c8ab565799a95cecc413ec54c90592a106e6882dd34eff2d6ba22ee630ac3b53",
+    "runs/2026-10-11-independent-signals-ci-portability-failure.json": "ff7d6edc59c67a088d1b7832917acaf1639bf8e860b03c63203bfaa6a42c8ffd",
+    "runs/2026-10-11-independent-signals-python-portable.json": "03161eb62c624b7e22aa8535a60039b0974aaf1e038fab54aadfa29739bafe99",
+    "runs/2026-10-11-independent-signals-route-tests-portable.json": "89b1f550cfe79951b9496102b4a635aac5f9aee3780d10562178b59bfc9823f3",
+    "scripts/verify-independent-observations.py": "7d469889fdf8b954884bbb5786ab217653679447ce433dce10ec59022c4aca3e",
+    "scripts/verify-route-boundaries.py": "1bcbae53a1335f0b24c411e5f64c88b6310f6daccd9b9cd2d54c8992702664b0",
+    "state.json": "d69466b8ce554e022fc682fe1a1346ea2ce478776f36c803914f21e960834496",
+    "tests/test_observation_verifier.py": "204d3ea6aad7786aa29dc537c81ebe7e071aeb8cd5556c7ba0fab2d850790764"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-independent-observations-mac-portable.json",
+      "sha256": "7546cec7dfa9a58e8728fd4c8f8a96538cd89d6710aee4dc8586c0d863cb6590"
+    },
+    {
+      "path": "runs/2026-10-11-independent-observations-linux-portable.json",
+      "sha256": "5d2f85466d702e2ecc6623aa0bf56f6d27b95f1935f37e544dc5bc5b96bf385f"
+    },
+    {
+      "path": "runs/2026-10-11-independent-signals-python-portable.json",
+      "sha256": "03161eb62c624b7e22aa8535a60039b0974aaf1e038fab54aadfa29739bafe99"
+    },
+    {
+      "path": "runs/2026-10-11-independent-signals-route-tests-portable.json",
+      "sha256": "89b1f550cfe79951b9496102b4a635aac5f9aee3780d10562178b59bfc9823f3"
+    },
+    {
+      "path": "runs/2026-10-11-independent-signals-boundaries-portable.json",
+      "sha256": "c8ab565799a95cecc413ec54c90592a106e6882dd34eff2d6ba22ee630ac3b53"
+    },
+    {
+      "path": "runs/2026-10-11-independent-signals-ci-portability-failure.json",
+      "sha256": "ff7d6edc59c67a088d1b7832917acaf1639bf8e860b03c63203bfaa6a42c8ffd"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:05:56.525907+00:00"
+    }
+  ]
+}

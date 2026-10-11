@@ -71,7 +71,18 @@ and returns exact reference passages with Unicode spans, entirely offline.
 Run `python3 scripts/corpus.py --help`. A literal match is not an NF/FI verdict;
 those tags remain planned. No attached document is automatically uploaded.
 
-## What runs today
+## Inspect independent signals offline
+
+The source also includes separately selected
+[package-name proximity](docs/package-proximity.md),
+[credential-to-HTTP dataflow](docs/credential-flow.md), and
+[English language observations](docs/language-observations.md).
+Each has its own CLI, input boundary, version, exact evidence positions and failure
+state. They neither change the live PS checker nor release HP or MT. No inspected
+program executes; no ranking or source is fetched. Their combined actual CLI
+controls run with `python3 scripts/verify-independent-observations.py`.
+
+## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual
 assistant responses on the initial ChatGPT adapter. It starts paused. It sends bounded text to an authenticated loopback gateway. A local
@@ -122,8 +133,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current complete local suite passed 1,179 Python checks; source-bound execution
-is recorded in `runs/2026-10-10-target25-source-checks-repaired.json`. All five active development fixture
+The current source passed 1,381 Python checks plus the separately executed 32
+route-boundary checks (1,424 combined). Execution is recorded in
+`runs/2026-10-11-independent-signals-python-payload-corrected.json` and
+`runs/2026-10-11-independent-signals-route-tests.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and

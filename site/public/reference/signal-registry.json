@@ -60,7 +60,16 @@
       "accepted_conformance_registration": false,
       "feeds": "MT",
       "description": "Unattributed appeals to expertise or consensus",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/language_observations.py",
+          "scripts/language-observations.py"
+        ],
+        "contract": "docs/language-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.compose_monotonicity.v1",
@@ -105,7 +114,16 @@
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Reads a secret path and writes to a network sink",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/credential_flow.py",
+          "scripts/credential-flow.py"
+        ],
+        "contract": "docs/credential-flow.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.duplicate_loop.v1",
@@ -149,7 +167,16 @@
       "accepted_conformance_registration": false,
       "feeds": "HP",
       "description": "Hedging language absent where uncertainty is expected",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/language_observations.py",
+          "scripts/language-observations.py"
+        ],
+        "contract": "docs/language-observations.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.keystroke_liveness.v1",
@@ -427,7 +454,16 @@
       "accepted_conformance_registration": false,
       "feeds": "PS",
       "description": "Package name within edit distance 1\u20132 of a top-N name",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/package_proximity.py",
+          "scripts/package-proximity.py"
+        ],
+        "contract": "docs/package-proximity.md",
+        "tag_mapping_validated": false
+      }
     },
     {
       "id": "sig.unsourced_specificity.v1",
@@ -445,7 +481,16 @@
       "accepted_conformance_registration": false,
       "feeds": "MT",
       "description": "Time-pressure lexicon + imperative density",
-      "source_files": []
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "source_files": [
+          "tools/language_observations.py",
+          "scripts/language-observations.py"
+        ],
+        "contract": "docs/language-observations.md",
+        "tag_mapping_validated": false
+      }
     }
   ],
   "scope_title_legacy_count": 22,

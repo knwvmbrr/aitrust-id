@@ -53,6 +53,12 @@ PATTERNS += ('spec/image-provenance-boundary.json', 'scripts/verify-image-proven
              'tests/conformance-statement.cjs', 'tests/test_consent_conformance.py',
              'scripts/corpus-support.py', 'tests/test_corpus_support.py',
              'scripts/verify-consent-conformance.py')
+PATTERNS += ('tools/package_proximity.py', 'tools/language_observations.py',
+             'tools/credential_flow.py', 'scripts/package-proximity.py',
+             'scripts/language-observations.py', 'scripts/credential-flow.py',
+             'scripts/verify-independent-observations.py', 'tests/test_package_proximity.py',
+             'tests/test_language_observations.py', 'tests/test_credential_flow.py')
+PATTERNS += ('tests/test_observation_verifier.py',)
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

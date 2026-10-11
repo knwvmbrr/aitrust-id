@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-10-11T13:55:30.920954+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "{python}",
+    "-m",
+    "pytest",
+    "tests/test_route_boundaries.py",
+    "-q"
+  ],
+  "python_version": "3.12.14",
+  "tests_passed": 32,
+  "observed_summary": "32 passed in 1.63s",
+  "sources": {
+    "scripts/verify-route-boundaries.py": "407c652b0e2112d0b02009c5046e33e4d3957c271d647044324253448525cd43",
+    "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192",
+    "eval/route-boundaries.json": "bd035c957dd788b04953b5395a40ccb04ec5f5330989c8b59994b26885ffd23c"
+  },
+  "independent_accuracy_evidence": false
+}

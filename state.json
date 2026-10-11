@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T12:42:17.918489+00:00",
+  "updated": "2026-10-11T14:15:22.991093+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1225,
+  "python_tests_passed": 1424,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -347,7 +347,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1,253 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
+  "python_tests_scope": "Current source: 1,381 tests excluding the separately executed 32 route-boundary tests; 1,413 combined. Engineering controls only, not independent tag accuracy.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -717,7 +717,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T12:03:44.933701+00:00",
+    "audited_at": "2026-10-11T13:43:26.933854+00:00",
     "completed_records": 113,
     "open_records": 89,
     "records_preserved": 202,
@@ -733,7 +733,7 @@
     "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/authenticated-results-plan.md",
+    "latest_increment": "docs/independent-signals-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -745,7 +745,7 @@
     "target_direction_date": "2026-10-11",
     "current_target_verification": "runs/2026-10-11-authenticated-current-boundaries.json",
     "publication_evidence_merge": "runs/2026-10-11-authenticated-protected-merge.json",
-    "latest_owner_direction": "Continue closing the 91 remaining open requirements, returning at 50",
+    "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-11"
   },
   "research_components": {
@@ -1023,15 +1023,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-10-required-ci-ps.json",
-    "PII_REDACTED": "runs/2026-10-10-required-ci-pii-redacted.json",
-    "protocol": "runs/2026-10-10-required-ci-protocol.json",
-    "extension": "runs/2026-10-11-key-backup-extension-current.json",
-    "website": "runs/2026-10-11-key-backup-final-website.json",
+    "PS": "runs/2026-10-11-independent-signals-current-ps.json",
+    "PII_REDACTED": "runs/2026-10-11-authenticated-pii-revalidation.json",
+    "protocol": "runs/2026-10-11-independent-signals-current-protocol.json",
+    "extension": "runs/2026-10-11-authenticated-extension-accepted.json",
+    "website": "runs/2026-10-11-independent-signals-website-payload-corrected.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T12:42:17.918489+00:00",
+  "updated_at": "2026-10-11T14:15:22.991093+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1366,5 +1366,34 @@
     "owner_role_proposed": "Michael \u2014 accountable pilot operator and access approver",
     "real_data_allowed": false,
     "new_endpoint_approved": false
+  },
+  "independent_signal_components": {
+    "scope_ids": [
+      "F-012",
+      "F-013",
+      "F-018",
+      "F-019a",
+      "F-019c"
+    ],
+    "implemented_by": "Codex",
+    "method_contracts": [
+      "docs/package-proximity.md",
+      "docs/language-observations.md",
+      "docs/credential-flow.md"
+    ],
+    "actual_mac_evidence": "runs/2026-10-11-independent-observations-mac-review-final.json",
+    "actual_linux_evidence": "runs/2026-10-11-independent-observations-linux-review-final.json",
+    "component_tests": 171,
+    "production_signal_count": 5,
+    "production_detector_changed": false,
+    "independent_accuracy_evidence": false,
+    "new_tag_releases": 0,
+    "requirements_closed_by_this_batch": 0,
+    "publication_pending": true,
+    "full_python_evidence": "runs/2026-10-11-independent-signals-python-review-accepted.json",
+    "current_boundaries": "runs/2026-10-11-independent-signals-boundaries-reviewed.json",
+    "route_tests": "runs/2026-10-11-independent-signals-route-tests-reviewed.json",
+    "current_source_receipts": "runs/2026-10-11-independent-signals-current-receipts.json",
+    "ci_portability_failure": "runs/2026-10-11-independent-signals-ci-portability-failure.json"
   }
 }

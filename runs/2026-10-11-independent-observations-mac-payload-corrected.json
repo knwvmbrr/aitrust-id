@@ -1,0 +1,160 @@
+{
+  "captured_at": "2026-10-11T13:48:50.707900+00:00",
+  "pass": true,
+  "author": "Codex",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "sources": {
+    "tools/package_proximity.py": "1ce62f01086757fd96f8b9e536f230b627fd9f5bd9919d6c17f169598d896e84",
+    "tools/language_observations.py": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+    "scripts/package-proximity.py": "c631c439e311d093dc1b397ed6aa259d734f89b49cd6fa8318890baefc81b3d7",
+    "scripts/language-observations.py": "ac86473b87ce6e499c1185ce3fd81e569c99bfc4d78360af470d490fd18b0abb",
+    "scripts/verify-independent-observations.py": "a928e4a3def330dc494b135873489653bf335e943b365d9b480d55544dadcf82",
+    "tests/test_package_proximity.py": "b789d18cb0613cad336da111780c333f0d2f2ebd8f41a862fbbe3a14f887673b",
+    "tests/test_language_observations.py": "19722287d64bae1621e6fdaf7ea025b709efc11b7310dc81ca7c60dff6ff0757",
+    "docs/package-proximity.md": "7fd53bfea53157663e54d361fe660a77aa87a1b37db655f54105b09fcfcb9ef5",
+    "docs/language-observations.md": "454064ef9b026ddad36d3f45d89d87767a633540b25db2487bf7e3702eac9d92",
+    "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/credential_flow.py": "fa71cea989161573a48258f80896d585045b03380836caa399a2676d674daa83",
+    "scripts/credential-flow.py": "93607d5f721fa52d433d12382bbcaee47dc1d78e1df8d2f95299758ac5c292f6",
+    "tests/test_credential_flow.py": "7215c0ebfe2cb732ad450eb950f9641976bb9941c5d14f0ec1695f1ece47eb57",
+    "docs/credential-flow.md": "6a2bf45668f2433aa8f8f64ad0ca59dcd768cdc5b004db79309715ba27fa25f6"
+  },
+  "source_unchanged_during_execution": true,
+  "checks": [
+    {
+      "case": "private_snapshot_import",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "518cda0bac2a249ec6b4357a9e72e9474ac165b17a1a0d952c1d9c520bc54f70",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "distance_two",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "17bc364d109147ead3a3d5dab9fd1230a09c1f683f6f7cb703107317385cb3dc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "canonical_equality",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "3d4b5066928083ebcd386f323497925bae6b2573b8a26167e12fd59411edb253",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "command_is_not_a_package_name",
+      "exit_status": 2,
+      "pass": true,
+      "stdout_sha256": "a69ef2b0cbff2bd43326dcf0ee86434144729f5afc18c64b4e0d51f73c3a1439",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "corrupt_snapshot",
+      "exit_status": 2,
+      "pass": true,
+      "stdout_sha256": "a69ef2b0cbff2bd43326dcf0ee86434144729f5afc18c64b4e0d51f73c3a1439",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "legitimate_emergency_has_no_intent_verdict",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "6407b2e16ec3d85fce978290eb36203ba7852c872805a556f711be4755313292",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "pressure_without_directive",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "b90e7e2a0c2ab8e3de535641e6c4769d1f7e70f5d7b6237c47636cc4fb7a6e93",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "unmarked_authority",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "73bf999ab456ccfcd92ff5d6759c42ecada17c1a3c4645cd2eab7b0f5ed9fc1e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "marked_authority",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "6c915b3d5faf0a58ae7740a11b237af4c750b7485459e97633ec308b68284a0e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "explicit_uncertainty_without_hedge",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "7ac7834b76b2f10a27a6b929a2a226dbe10d8a2c486d925cf697a7cb34b68916",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "foreign_subject_annotations",
+      "exit_status": 2,
+      "pass": true,
+      "stdout_sha256": "6eefbf573a8d0d4d6ba798491756da8b43c3cfdeea0a7fae53f50c655c3f437d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "expectation_is_not_inferred",
+      "exit_status": 2,
+      "pass": true,
+      "stdout_sha256": "6eefbf573a8d0d4d6ba798491756da8b43c3cfdeea0a7fae53f50c655c3f437d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "credential_read_reaches_sink",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "5672453d5ed672d551e87fca88df2518e7c8f4ac8975d2626eca20359f62fbdd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "unrelated_sink_is_not_a_flow",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "1282d19f04cd47c22447f93d940a85c1942068cc3df931592dc9e3b9fef38fe4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "overwritten_secret_is_not_a_flow",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "95432fe80949bafce9487318bfda4e5b7638f851945eeeaecdc4e7123162bed3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "local_timeout_is_not_network_payload",
+      "exit_status": 0,
+      "pass": true,
+      "stdout_sha256": "e80ee17d07f8a5628f07362ae4a92d14235053c68e769263932ac957c87b43b4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "unknown_transform_not_a_negative",
+      "exit_status": 2,
+      "pass": true,
+      "stdout_sha256": "d7629ae813625a9a9c798c668e5c954e6f4ea535bbd6c8af413092f9dea41c46",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "unknown_branch_not_a_negative",
+      "exit_status": 2,
+      "pass": true,
+      "stdout_sha256": "d7629ae813625a9a9c798c668e5c954e6f4ea535bbd6c8af413092f9dea41c46",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "different_network_namespace_from_init": null,
+  "synthetic_controls_only": true,
+  "independent_accuracy_evidence": false,
+  "tags_released": [],
+  "production_detector_changed": false
+}
