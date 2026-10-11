@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-10-11T20:09:04.322816+00:00",
+  "pass": true,
+  "verified_by": "Codex",
+  "actual_gh_signature_tool": true,
+  "source_commit_checked": "a36898f30f91adfd189baed12ba7f7c13740964b",
+  "cases": [
+    {
+      "case": "changed_archive",
+      "exit_status": 2,
+      "refused": true,
+      "stdout_stderr_sha256": "eea19c89206dc592c65c0e7f3a8e414003dbe23210575fddfdf41c2d2c5829bc"
+    },
+    {
+      "case": "changed_bundle",
+      "exit_status": 2,
+      "refused": true,
+      "stdout_stderr_sha256": "eea19c89206dc592c65c0e7f3a8e414003dbe23210575fddfdf41c2d2c5829bc"
+    },
+    {
+      "case": "changed_trusted-root",
+      "exit_status": 2,
+      "refused": true,
+      "stdout_stderr_sha256": "eea19c89206dc592c65c0e7f3a8e414003dbe23210575fddfdf41c2d2c5829bc"
+    }
+  ],
+  "sources": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/verify-source-provenance.py": "dc9e8995841c5a330cc019bd32a75a20c72335e10c7311b5855cd9d63ff9decf"
+  },
+  "owned_synthetic_sandbox_removed": true,
+  "independent_accuracy_evidence": false,
+  "license_cleared": false
+}

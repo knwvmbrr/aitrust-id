@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-11T20:06:14.121262+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests/test_source_provenance.py",
+    "-q"
+  ],
+  "summary": "77 passed in 7.27s",
+  "source_files": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/verify-source-provenance.py": "dc9e8995841c5a330cc019bd32a75a20c72335e10c7311b5855cd9d63ff9decf",
+    "tests/test_source_provenance.py": "2503ce6ea16fffebf0d3109cc97d9f26fad2b7ef0c4ec87e91efa9497f43bc05"
+  },
+  "stdout_stderr_sha256": "171f92c607746f7b0f40f5b38f933bbd5b43468d22e910e7d6903030c73d7d9c",
+  "synthetic_controls": true,
+  "independent_accuracy_evidence": false,
+  "license_cleared": false
+}

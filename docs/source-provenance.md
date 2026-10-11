@@ -99,3 +99,9 @@ and ref. The saved public bundle and root inventory are in
 historical source, which contains the old verifier; use the corrected trusted
 verifier and do not interpret co-delivered roots as automatically trusted.
 The corrected [hosted signing/verification job passed](../runs/2026-10-10-source-download-hosted-checks.json). The [public download proof](../runs/2026-10-10-authenticated-source-download.json) binds the actual archive, anonymous downloads and separate Mac/network-isolated Linux verification. The historical failure remains visible; it is not rewritten as a pass.
+
+## Stable verification inputs
+
+The verifier captures each bounded regular input through no-follow directory descriptors. It copies the archive, bundle and separately trusted root into an exclusive temporary directory, then sends those captured files to the signature tool. The same archive bytes are inspected only after the signature check succeeds and all three staged files still match. Originals are untouched; the owned temporary files are removed on success or failure. Links, hardlinks, directories, FIFOs, changed files and oversized inputs are refused. On platforms without the required safe file APIs, verification is unavailable.
+
+This protects the input handoff; it does not protect against a compromised verifier, gh executable, administrator or malicious process running as your own account. Trust roots still need a separate accepted source. See [architecture](source-input-binding-plan.md) and the [actual Mac](../runs/2026-10-11-source-captured-mac.json) and [network-isolated Linux](../runs/2026-10-11-source-captured-linux.json) signature checks.

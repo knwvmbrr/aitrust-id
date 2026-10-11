@@ -4,6 +4,8 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
+import tempfile
 from pathlib import Path
 import subprocess
 import sys
@@ -19,21 +21,40 @@ PREDICATE = 'https://slsa.dev/provenance/v1'
 def verify(artifact, bundle, trusted_root, commit, runner=subprocess.run):
     if not COMMIT.fullmatch(commit):
         raise ValueError('Expected exact source commit required from a trusted channel')
-    raw = read_file(artifact, MAX_ARCHIVE)
-    read_file(bundle, 5_000_000)
-    read_file(trusted_root, 5_000_000)
-    argv = ['gh', 'attestation', 'verify', str(Path(artifact).absolute()),
-            '--bundle', str(Path(bundle).absolute()),
-            '--custom-trusted-root', str(Path(trusted_root).absolute()),
-            '--repo', REPO,
-            '--cert-identity', IDENTITY, '--cert-oidc-issuer',
-            'https://token.actions.githubusercontent.com',
-            '--source-digest', commit, '--source-ref', 'refs/heads/main',
-            '--deny-self-hosted-runners', '--predicate-type', PREDICATE,
-            '--format', 'json']
-    completed = runner(argv, capture_output=True, timeout=120, check=False)
-    if completed.returncode or len(completed.stdout) > 5_000_000:
-        raise ValueError('Cryptographic provenance or identity verification refused')
+    captures = {
+        'source.tar.gz': read_file(artifact, MAX_ARCHIVE),
+        'bundle.json': read_file(bundle, 5_000_000),
+        'trusted-root.jsonl': read_file(trusted_root, 5_000_000),
+    }
+    raw = captures['source.tar.gz']
+    # gh and archive inspection consume the same captured bytes. Original paths
+    # are never handed to the external verifier after capture.
+    with tempfile.TemporaryDirectory(prefix='aitrust-source-verification-') as temporary:
+        stage = Path(temporary).resolve(strict=True)
+        stage.chmod(0o700)
+        for name, data in captures.items():
+            fd = os.open(stage / name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+            with os.fdopen(fd, 'wb') as stream:
+                stream.write(data)
+                stream.flush()
+                os.fsync(stream.fileno())
+                os.fchmod(stream.fileno(), 0o400)
+        argv = ['gh', 'attestation', 'verify', str(stage / 'source.tar.gz'),
+                '--bundle', str(stage / 'bundle.json'),
+                '--custom-trusted-root', str(stage / 'trusted-root.jsonl'),
+                '--repo', REPO,
+                '--cert-identity', IDENTITY, '--cert-oidc-issuer',
+                'https://token.actions.githubusercontent.com',
+                '--source-digest', commit, '--source-ref', 'refs/heads/main',
+                '--deny-self-hosted-runners', '--predicate-type', PREDICATE,
+                '--format', 'json']
+        completed = runner(argv, capture_output=True, timeout=120, check=False)
+        if (completed.returncode or not isinstance(completed.stdout, bytes)
+                or not 0 < len(completed.stdout) <= 5_000_000):
+            raise ValueError('Cryptographic provenance or identity verification refused')
+        for name, expected in captures.items():
+            if read_file(stage / name, len(expected)) != expected:
+                raise ValueError('Captured verification input changed')
     verified = json.loads(completed.stdout, object_pairs_hook=unique)
     digest = hashlib.sha256(raw).hexdigest()
     if not isinstance(verified, list) or not verified or len(verified) > 30:
@@ -50,6 +71,9 @@ def verify(artifact, bundle, trusted_root, commit, runner=subprocess.run):
             'kind': 'authenticated_development_source_snapshot',
             'repository': REPO, 'signer_workflow': WORKFLOW,
             'expected_certificate_identity': IDENTITY, 'offline_inputs': True,
+            'captured_inputs_verified': True,
+            'bundle_sha256': hashlib.sha256(captures['bundle.json']).hexdigest(),
+            'trusted_root_sha256': hashlib.sha256(captures['trusted-root.jsonl']).hexdigest(),
             'independent_tag_accuracy_evidence': False, 'license_cleared': False,
             **inspect(raw, commit)}
 
@@ -74,5 +98,5 @@ if __name__ == '__main__':
         main()
     except (ValueError, OSError, KeyError, TypeError, EOFError, RecursionError,
             tarfile.TarError, subprocess.SubprocessError) as error:
-        print('Source verification refused: ' + str(error), file=sys.stderr)
+        print('Source verification refused: ' + type(error).__name__, file=sys.stderr)
         raise SystemExit(2)

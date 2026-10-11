@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-10-11T20:12:23.278331+00:00",
+  "pass": true,
+  "assessments": {
+    "PS": {
+      "pass": true,
+      "capability": "PS",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "PII_REDACTED": {
+      "pass": true,
+      "capability": "PII_REDACTED",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "protocol": {
+      "pass": true,
+      "capability": "protocol",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "extension": {
+      "pass": true,
+      "capability": "extension",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "website": {
+      "pass": true,
+      "capability": "website",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    }
+  },
+  "receipts": {
+    "PS": "runs/2026-10-11-blind-private-bound-PS.json",
+    "PII_REDACTED": "runs/2026-10-11-blind-private-bound-PII_REDACTED.json",
+    "protocol": "runs/2026-10-11-blind-private-bound-protocol.json",
+    "extension": "runs/2026-10-11-blind-private-bound-extension.json",
+    "website": "runs/2026-10-11-source-captured-prepared-website.json"
+  },
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

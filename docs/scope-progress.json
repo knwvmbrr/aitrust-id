@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-11T19:47:23.935934+00:00",
+  "audited_at": "2026-10-11T20:05:45.003137+00:00",
   "client_date": "2026-10-11",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -4099,12 +4099,13 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-11T15:22:45.042358+00:00",
+      "audited_at": "2026-10-11T20:05:45.003137+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
         "Codex \u2014 actual protected-main Sigstore source signing, independent-root Mac/offline-Linux verification and anonymous public download",
-        "Codex \u2014 collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks"
+        "Codex \u2014 collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks",
+        "Codex \u2014 descriptor-bound capture of signed source inputs, private tool handoff and actual Mac/network-isolated Linux signature checks"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4140,7 +4141,13 @@
         "tests/test_license_notices.py",
         "sbom/notices/manifest.json",
         "runs/2026-10-11-license-notices-timestamped.json",
-        "runs/2026-10-11-license-archives-timestamped.json"
+        "runs/2026-10-11-license-archives-timestamped.json",
+        "docs/source-input-binding-plan.md",
+        "scripts/source_snapshot.py",
+        "scripts/verify-source-provenance.py",
+        "tests/test_source_provenance.py",
+        "runs/2026-10-11-source-captured-mac.json",
+        "runs/2026-10-11-source-captured-linux.json"
       ],
       "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations.",
       "required_acceptance": [
@@ -6373,11 +6380,12 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-11T15:22:45.042358+00:00",
+      "audited_at": "2026-10-11T20:05:45.003137+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
-        "Codex \u2014 collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks"
+        "Codex \u2014 collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks",
+        "Codex \u2014 descriptor-bound capture of signed source inputs, private tool handoff and actual Mac/network-isolated Linux signature checks"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -6410,7 +6418,13 @@
         "tests/test_license_notices.py",
         "sbom/notices/manifest.json",
         "runs/2026-10-11-license-notices-timestamped.json",
-        "runs/2026-10-11-license-archives-timestamped.json"
+        "runs/2026-10-11-license-archives-timestamped.json",
+        "docs/source-input-binding-plan.md",
+        "scripts/source_snapshot.py",
+        "scripts/verify-source-provenance.py",
+        "tests/test_source_provenance.py",
+        "runs/2026-10-11-source-captured-mac.json",
+        "runs/2026-10-11-source-captured-linux.json"
       ],
       "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations.",
       "required_acceptance": [

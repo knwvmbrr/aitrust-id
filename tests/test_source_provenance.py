@@ -258,3 +258,95 @@ def test_main_only_signing_after_all_required_contexts():
     attest = next(step for step in job['steps'] if step.get('id') == 'provenance')
     assert attest['with'] == {'subject-path':'output/provenance/aitrust-id-source.tar.gz'}
     assert workflow['jobs']['gates']  # No independent release gate deleted or signed away.
+
+
+@pytest.mark.parametrize('index', [0, 1, 2])
+def test_original_paths_are_not_reopened_by_tool(inputs, index):
+    original = [p.read_bytes() for p in inputs[:3]]
+    stages = []
+    def runner(argv, **kwargs):
+        paths = [Path(argv[3]), Path(argv[argv.index('--bundle')+1]),
+                 Path(argv[argv.index('--custom-trusted-root')+1])]
+        stages.extend(paths)
+        inputs[index].write_bytes(b'changed after capture')
+        assert all(path != inputs[i] for i,path in enumerate(paths))
+        assert [p.read_bytes() for p in paths] == original
+        assert all(p.stat().st_mode & 0o777 == 0o400 for p in paths)
+        assert paths[0].parent.stat().st_mode & 0o777 == 0o700
+        return subprocess.CompletedProcess(argv, 0, json.dumps(policy_reply(paths[0])).encode(), b'')
+    result = verifier.verify(*inputs, runner=runner)
+    assert result['pass'] and result['captured_inputs_verified']
+    assert result['bundle_sha256'] == hashlib.sha256(original[1]).hexdigest()
+    assert result['trusted_root_sha256'] == hashlib.sha256(original[2]).hexdigest()
+    assert all(not p.exists() for p in stages)
+
+
+@pytest.mark.parametrize('index', [0, 1, 2])
+@pytest.mark.parametrize('change', ['bytes', 'link', 'remove', 'directory', 'hardlink'])
+def test_staged_input_changes_refuse_and_cleanup(inputs, index, change):
+    import os
+    stages = []
+    def runner(argv, **kwargs):
+        paths = [Path(argv[3]), Path(argv[argv.index('--bundle')+1]),
+                 Path(argv[argv.index('--custom-trusted-root')+1])]
+        stages.extend(paths)
+        reply = policy_reply(paths[0])
+        path = paths[index]
+        if change == 'bytes':
+            path.chmod(0o600); path.write_bytes(b'changed bytes')
+        else:
+            path.unlink()
+            if change == 'link': path.symlink_to(inputs[index])
+            if change == 'directory': path.mkdir()
+            if change == 'hardlink': os.link(inputs[index], path)
+        return subprocess.CompletedProcess(argv, 0, json.dumps(reply).encode(), b'')
+    with pytest.raises(ValueError): verifier.verify(*inputs, runner=runner)
+    assert all(not p.exists() for p in stages)
+    assert all(p.is_file() for p in inputs[:3])
+
+
+@pytest.mark.parametrize('failure', ['timeout', 'oserror', 'returncode', 'empty', 'text', 'invalid-json', 'duplicate'])
+def test_tool_failure_cleans_owned_inputs(inputs, failure):
+    stages=[]
+    def runner(argv, **kwargs):
+        stages.append(Path(argv[3]).parent)
+        if failure == 'timeout': raise subprocess.TimeoutExpired(argv, 120)
+        if failure == 'oserror': raise OSError('synthetic tool unavailable')
+        out = json.dumps(policy_reply(Path(argv[3]))).encode()
+        if failure == 'empty': out = b''
+        if failure == 'text': out = 'not binary stdout'
+        if failure == 'invalid-json': out = b'not JSON'
+        if failure == 'duplicate': out = b'[{' + b'"verificationResult":{},"verificationResult":{}' + b'}]'
+        return subprocess.CompletedProcess(argv, int(failure == 'returncode'), out, b'')
+    with pytest.raises((ValueError, OSError, subprocess.SubprocessError)):
+        verifier.verify(*inputs, runner=runner)
+    assert all(not p.exists() for p in stages)
+
+
+@pytest.mark.parametrize('kind', ['fifo', 'directory', 'empty', 'oversize', 'hardlink', 'parent-link'])
+def test_descriptor_read_refuses_unsafe_shape(tmp_path, kind):
+    import os
+    path = tmp_path / 'input'
+    if kind == 'fifo': os.mkfifo(path)
+    elif kind == 'directory': path.mkdir()
+    else:
+        path.write_bytes(b'' if kind == 'empty' else b'abc')
+        if kind == 'hardlink': os.link(path, tmp_path / 'other')
+        if kind == 'parent-link':
+            parent=tmp_path/'alias';parent.symlink_to(tmp_path,target_is_directory=True);path=parent/'input'
+    with pytest.raises(ValueError): source.read_file(path, 2 if kind=='oversize' else 3)
+
+
+def test_exact_read_limit_and_midread_mutation(tmp_path, monkeypatch):
+    import os
+    path=tmp_path/'input';path.write_bytes(b'abc')
+    assert source.read_file(path,3)==b'abc'
+    original=os.read;changed=False
+    def read(fd,size):
+        nonlocal changed
+        result=original(fd,size)
+        if not changed:
+            changed=True;path.write_bytes(b'xyz')
+        return result
+    monkeypatch.setattr(source.os,'read',read)
+    with pytest.raises(ValueError,match='changed'):source.read_file(path,3)

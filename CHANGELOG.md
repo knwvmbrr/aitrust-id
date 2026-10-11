@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-201424-source-capture-current-verification-6c7f4ab6
+
+Recorded 2026-10-11T20:14:24.319569+00:00 · Contributor: Codex · change
+
+- **Changed.** Record frozen-source website acceptance, all five current capabilities, selected boundaries and full Python execution for the source verifier.
+- **Evidence.** All five capability receipts pass; 513 selected route files match; 1955 Python tests pass. Source verification consumes captured inputs and refuses actual modified signature inputs. [Change record](./runs/changes/2026-10-11-201424-source-capture-current-verification-6c7f4ab6.json).
+- **Not claimed.** 88 full requirements remain open. Source origin is not independent accuracy, license clearance or runtime image authentication. Protected review/publication is pending.
+
+
+### 2026-10-11-200925-source-capture-web-preparation-f4791d00
+
+Recorded 2026-10-11T20:09:25.839198+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the initial website run and record prepared public scope projections plus real signature refusal evidence before source revalidation.
+- **Evidence.** All five initial website commands returned zero, but the receipt correctly refused because preparation regenerated the public scope projection. The actual signature tool also refused altered archive, bundle and root inputs. [Change record](./runs/changes/2026-10-11-200925-source-capture-web-preparation-f4791d00.json).
+- **Not claimed.** The failed stable-source receipt is retained. A new frozen-source run is required; no full requirement, accuracy or license acceptance changed.
+
+
+### 2026-10-11-200614-signed-source-input-capture-98aa353e
+
+Recorded 2026-10-11T20:06:14.357866+00:00 · Contributor: Codex · change
+
+- **Changed.** Pin downloaded source, signature bundle and separately trusted root to captured bytes; record the completed private-review publication.
+- **Evidence.** 77 installed source controls pass, and actual signatures verify on Mac and network-isolated Linux. Review workflow PR 38 passed all 22 required checks; all 244 artifacts match on each of three public origins. [Change record](./runs/changes/2026-10-11-200614-signed-source-input-capture-98aa353e.json).
+- **Not claimed.** 88 requirements remain open. Signed origin is not license clearance, independent accuracy or safety. A compromised same-account process or verifier is outside this input-handoff boundary.
+
+
 ### 2026-10-11-195737-private-review-final-verification-0115964f
 
 Recorded 2026-10-11T19:57:37.486819+00:00 · Contributor: Codex · change

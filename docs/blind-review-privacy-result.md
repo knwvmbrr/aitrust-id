@@ -11,3 +11,5 @@ N-015 advances from 60% to 80% for demonstrated selected integration. F-108 rema
 All five source-bound capability checks pass. The device receipt is bound to 11 files recoverable from the implementation commit, and the current route inventory covers 513 files. The full Python suite passes 1,923 tests with one upstream TestClient warning in 50.29 seconds. Protected merge and publication remain pending; these checks grant no independent accuracy or release acceptance.
 
 Command syntax errors now use a fixed private message instead of echoing an argument or path. Actual updated Mac/Linux CLI checks and the browser/CLI round trip were rerun against that corrected source. Earlier source-specific diagnostics remain historical evidence.
+
+Protected PR #38 passed all 22 required exact-head checks and merged with both implementation commits retained. The deployed preview, apex and www each match all 244 build files (732 matches), with the declared index security headers present. The original 12 unrelated untracked files remain byte-identical. This is publication evidence for the selected workflow, with no new accuracy or human acceptance claim.
