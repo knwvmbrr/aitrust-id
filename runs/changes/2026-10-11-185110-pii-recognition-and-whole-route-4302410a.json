@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-185110-pii-recognition-and-whole-route-4302410a",
+  "recorded_at": "2026-10-11T18:51:10.680602+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
+  "changed": "Correct complete IPv6 masking, measure recognition and actual masking separately, add independent PII development charts and refresh actual staging pipeline evidence.",
+  "proves": "130 focused Python and 47 Node controls; 42 actual synthetic engine cases, 32 staging HTTP controls, 13 real replay checks and 253 fresh source-bound timing requests. Existing agreement merge and 717 public artifacts are preserved.",
+  "limits": "Only developer-authored English coverage; 2 extra-masking cases, 17 extra raw candidates and challenge misses remain visible. No population accuracy, human acceptance, collection or tag release. 114 complete and 88 open unchanged.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-113",
+    "F-120"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "a84ea187e126871027a95babfd7b2f2c24b7d22d1d93d251ee6e589bfb3af3da",
+    "docs/redaction-recognition-plan.md": "a920ad7097b65cd1cd6fe82b5aae1815a9f8d1570a7c4f0ca1b428a64178143f",
+    "docs/redaction-recognition.md": "7444875d3a7eb46d20b0f993cdb792501bc367603649a39a034248b590e89b4e",
+    "docs/scope-progress.json": "f8f2dcea4ddf9cc3e84faea3306e617a5a17bd5ad0124cf9dc10ae09b2e97101",
+    "docs/scope-progress.md": "77817fae505cf7cb31a0acc946ed5f0a8d5ff7ec1889c6febb95a40613a4ac8b",
+    "docs/scope-task-index.md": "6e232859843203b937eadef01463d7f717ef23ef60bcba44ade0488f3f5fc207",
+    "eval/fixtures/pii-recognition-development.json": "bbce463bb23425a9d49e4d5c8bfc70af7201957b739d53c753b49eb8ec5c52c6",
+    "eval/revalidation.json": "9345156d3f87e41f760cfd2530beef2d8952e14a396357477a0d034052ed57d1",
+    "runs/2026-10-11-agreement-primary-ff.json": "6beff5103f52338f836a8c85f9606e6f2eda8dbf1cd639ad0afdcf24c8ec92cb",
+    "runs/2026-10-11-agreement-protected-merge.json": "5308881e37f824ac9df41e5ba928631ecfb9f499797db832c8b6d12ed94347c0",
+    "runs/2026-10-11-agreement-publication.json": "d5c2a9d28d37c3852ad3a82411c1506067fc80f1879629156fac04eab4c0ad7c",
+    "runs/2026-10-11-pii-pipeline-timing.json": "dd505e3c04bbe3145b06183e45512be7689bed9540b2e401afc5dc1626f06c64",
+    "runs/2026-10-11-pii-recognition-baseline.json": "46f3da898ca9c273784f9b184f7b20e0aeba281a56041ee9e86d5b1d4532e252",
+    "runs/2026-10-11-pii-recognition-diagnosis.json": "094712fb2369bab1c27a00da222b35e0930c05585e45a57bd5e2815b5028c304",
+    "runs/2026-10-11-pii-recognition-focused.json": "33b6a3ea3efc8f53e4692c4f8a372281b550b6e982d3159ae148b804e111b94a",
+    "runs/2026-10-11-pii-recognition-integration.json": "e052c40ed1107fc133f9077de022387313ecc95cdb0a6888b66c740ae1fa8965",
+    "runs/2026-10-11-pii-recognition-replay.json": "2ce2e44cb657ad3aa95d9aa1792872776b305f5b945702271e55c16c846dc84c",
+    "runs/2026-10-11-pii-recognition-service.json": "6072bcbb71c34ec36efad270ecaec22aefef683f381a63c7c1f200074b2b221b",
+    "runs/2026-10-11-pii-recognition-staging.json": "2f50e249118f4bef582ad9a09731137fe23930d27a92bec214ef9ab88b85235b",
+    "scripts/build-redaction-performance.py": "6f96c372b2a777ae2b54548144bb239babd42d577f137224d9f0b0911a0fa213",
+    "scripts/measure-redaction-development.py": "111a02bbeacf76dc79672b8a0cfee22a8ffc65fdf1d65bbd0977c4fc4de5f0f2",
+    "scripts/redaction-development-worker.py": "04b74a58800213c9c4ec1051a8d9c5f828229a571e0245d7a6e78cdc7e79920a",
+    "scripts/verify-performance.cjs": "d6d8fbf108bfc5869e2029e71b0c1f2ba5a7584f269eea9360004d4791d2d072",
+    "scripts/verify-route-boundaries.py": "bb0a3152abc881c1fef35026c9ae4f233e1e92078ce57d9f9cb063063e23f92e",
+    "services/anonymizer/app.py": "6edd7132e8315bc5575c609723b715a9f94a9cda368e4cdc6f0eb9a0dac3c17f",
+    "site/scripts/prepare-performance.mjs": "c41c7383f6c7fcb6539da8725385824c7bdfbb6b1c19e95015d70f34f7914a5d",
+    "site/src/performance-model.js": "c82ac41fef00d0b7327b8a66b3fac65f49f5a20c7e0c94340215d07930c9a3b9",
+    "site/src/performance.jsx": "1101add7114669fa474123ae076827a919a9286bbdb181a33a5110323ed587d9",
+    "site/src/redaction-performance-model.js": "cb0e270f923794b4758f99015a8cf7f79fc40b37503424cc1590358ee50a60fc",
+    "tests/pipeline-timing.cjs": "22c4d90735e368a6d2f9cb17b99cc08cea598f88438422a65ff86f088d884ace",
+    "tests/redaction-performance.cjs": "8efcd2c4b3a86887e1e4925579c3c16834dd2b81e5616cf3b8c23f84d350282b",
+    "tests/test_complete_ipv6.py": "d87d5a88c98a8798dbb78fa9a5b83dfe165e7be4a0cf491be56cce39fc7e13e5",
+    "tests/test_redaction_development_builder.py": "161fd24929a190a9a401f841bc54bb746ab0def22f121d105e8347cafff0013b",
+    "tests/test_redaction_development_client.py": "446ae3b849f8766498397806b7a98c672d7647c335e4fc3f48ac97bd0f758e37",
+    "tests/test_redaction_observations.py": "1e5ba2792b850aed95e870fa78562b08d9d358069576dfcff80630761d54f83b",
+    "tools/redaction_observations.py": "fed317d28b1a45f9a7e526bfaccf9eb2284fd6c94bb43bd02aeb50bc90b8cdea"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-pii-recognition-staging.json",
+      "sha256": "2f50e249118f4bef582ad9a09731137fe23930d27a92bec214ef9ab88b85235b"
+    },
+    {
+      "path": "runs/2026-10-11-pii-recognition-service.json",
+      "sha256": "6072bcbb71c34ec36efad270ecaec22aefef683f381a63c7c1f200074b2b221b"
+    },
+    {
+      "path": "runs/2026-10-11-pii-recognition-replay.json",
+      "sha256": "2ce2e44cb657ad3aa95d9aa1792872776b305f5b945702271e55c16c846dc84c"
+    },
+    {
+      "path": "runs/2026-10-11-pii-recognition-integration.json",
+      "sha256": "e052c40ed1107fc133f9077de022387313ecc95cdb0a6888b66c740ae1fa8965"
+    },
+    {
+      "path": "runs/2026-10-11-pii-pipeline-timing.json",
+      "sha256": "dd505e3c04bbe3145b06183e45512be7689bed9540b2e401afc5dc1626f06c64"
+    },
+    {
+      "path": "runs/2026-10-11-pii-recognition-focused.json",
+      "sha256": "33b6a3ea3efc8f53e4692c4f8a372281b550b6e982d3159ae148b804e111b94a"
+    },
+    {
+      "path": "runs/2026-10-11-agreement-publication.json",
+      "sha256": "d5c2a9d28d37c3852ad3a82411c1506067fc80f1879629156fac04eab4c0ad7c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T18:51:10.891218+00:00"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# PII recognition increment — executed 2026-10-11
+
+Codex implemented and tested the complete-IPv6 correction and the independent PII development chart. The dedicated staging stack was rebuilt and all three known staging containers recreated with unchanged gateway/evaluator images and privileges. Production was untouched.
+
+The actual engine processed 42 fixed synthetic examples. In 38 English examples, all 34 expected identifiers were fully masked, with exact type/span counts TP 34, FP 17 and FN 0. Most extra candidates overlap an intended redaction. Two examples actually lost six ordinary characters. Four coverage challenges contain two fully masked, one partially masked and one untouched identifier. These errors remain visible.
+
+Actual current pipeline evidence: 32 HTTP controls, 13 replay controls and 253 authenticated timing requests across 12 profiles. The source-bound service, replay, masking and timing records are preserved separately under runs/. No participant data was used. The report is self-identified source evidence, not remote attestation.
+
+All 1822 Python checks pass with one upstream TestClient deprecation warning. Focused Node controls passed 47 checks. All five current capability receipts pass; the refreshed route review binds 500 selected files. The website checks catalogue, performance, independent footer workflows, automated accessibility, mobile payloads, feedback preview, offline downloads and security headers against the actual build. These are automated engineering checks, not physical-phone, human accessibility or independently labeled recognition acceptance.
+
+Failures were retained: stale route and browser replay identities, build/changelog sequencing, outdated main-disclosure counting and reading a closed no-script disclosure. Each was diagnosed and corrected; no failed report was overwritten or relabeled passed.
+
+F-023 and T-PII advance from 60% to 80%. The full ledger remains 114 complete and 88 open of 202. The target of 50 open is not met. Independent representative recognition/masking acceptance, remaining extra masking/challenge errors and human operation are still required. No tag taxonomy, release gate, payment, intake or collection endpoint changed.
+
+Source and website publication follow protected review and exact served-artifact verification. This report records completed engineering; it does not claim publication before that verification.

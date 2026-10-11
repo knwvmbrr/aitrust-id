@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-10-11T18:51:10.358494+00:00",
+  "kind": "pii_development_failures_and_corrections",
+  "pass": true,
+  "failures": [
+    {
+      "signature": "inspection JSON array refused",
+      "cause": "Object-only evidence reader was incorrectly used for container inspection.",
+      "fix": "Typed inspection arrays use bounded duplicate-key/finite/depth checks; evidence reports remain objects.",
+      "corrected_execution": "runs/2026-10-11-pii-recognition-staging.json"
+    },
+    {
+      "signature": "IsADirectoryError before regular-file check",
+      "cause": "Source reader wrapped a directory descriptor too early.",
+      "fix": "Check fstat and close before fdopen; adversarial unit test passes."
+    },
+    {
+      "signature": "Podman cap-drop expansion differs from ALL spelling",
+      "cause": "Runtime inspection expands ALL into named capabilities.",
+      "fix": "Check actual permitted/effective/bounding capabilities are zero, no-new-privileges and original boundaries."
+    },
+    {
+      "signature": "compose zero exit despite container removal errors",
+      "cause": "Dependent gateway prevented an isolated redactor replacement.",
+      "fix": "Source checks rejected the unchanged image; original image stayed healthy. Explicit staging restart used thereafter."
+    },
+    {
+      "signature": "no-deps recreated dependency containers",
+      "cause": "Installed compose tool did not isolate dependency recreation.",
+      "fix": "Retain all prior images and explicitly recreate the three staging containers; only redactor image changed. Record actual recreation."
+    },
+    {
+      "signature": "service report output directory absent",
+      "cause": "Operator did not create the destination expected by the existing verifier.",
+      "fix": "Create the owned output directory before execution; current 32-case report was rerun and saved."
+    },
+    {
+      "signature": "pipeline timing run as root refused before requests",
+      "cause": "Operator applied elevated execution to a user-owned token client.",
+      "fix": "Run only the authenticated timing client as its existing credential-owning user; current 253-request measurement passes.",
+      "failed_report_retrieved": false
+    }
+  ],
+  "production_services_modified": false,
+  "real_user_data_used": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

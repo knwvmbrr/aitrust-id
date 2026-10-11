@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const data=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-identity-checked.json'),'utf8'));
+const data=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-pii-pipeline-timing.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 const digest=s=>crypto.createHash('sha256').update(s).digest('hex');
 let model;
@@ -62,3 +62,5 @@ test('static HTML keeps visible values, decorative bars and downloadable conditi
 test('old evaluator-only report is historical, not current admission',()=>{const old=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-performance.json')));assert.throws(()=>model.validatePipelineTiming(old,hash,digest));});
 
 test('runtime identity requires an actual canonical digest function',()=>assert.throws(()=>model.validatePipelineTiming(data,hash)));
+
+test('pre-IPv6 pipeline timing stays historical after the selected redactor changes',()=>{const old=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-identity-checked.json')));assert.throws(()=>model.validatePipelineTiming(old,hash,digest));});

@@ -1868,7 +1868,7 @@
       },
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-10-11T17:51:24.919198+00:00",
+        "measured_at": "2026-10-11T18:48:55.619503+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1878,19 +1878,19 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 46.712275012396276
+            "p95_ms": 52.80904902610928
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 121.50729197310284
+            "p95_ms": 122.19875701703131
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 441.80121400859207
+            "p95_ms": 456.3680680003017
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1634.8302700207569
+            "p95_ms": 1663.8271209958475
           }
         ]
       },
@@ -1960,13 +1960,15 @@
       "independently_validated": false,
       "accuracy_measured": false,
       "metrics": [],
-      "next_test": "Measure missed and false redactions by entity category; independently review coverage.",
-      "summary": "Redaction procedure checked; recognition accuracy not measured.",
-      "sources": [],
+      "next_test": "Independently review recognition, extra masking and real-user operation.",
+      "summary": "English redaction development checks · not independent validation",
+      "sources": [
+        "/reference/redaction-recognition.json"
+      ],
       "device": null,
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-10-11T17:51:24.919198+00:00",
+        "measured_at": "2026-10-11T18:48:55.619503+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1976,22 +1978,141 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 46.712275012396276
+            "p95_ms": 52.80904902610928
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 121.50729197310284
+            "p95_ms": 122.19875701703131
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 441.80121400859207
+            "p95_ms": 456.3680680003017
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1634.8302700207569
+            "p95_ms": 1663.8271209958475
           }
         ]
-      }
+      },
+      "redaction": {
+        "format": "ai-trust-id-redaction-development/v1",
+        "measured_at": "2026-10-11T18:45:44.009717+00:00",
+        "kind": "synthetic_development",
+        "independently_validated": false,
+        "population_accuracy_measured": false,
+        "privacy_clearance": false,
+        "english": {
+          "cases": 38,
+          "cases_with_misses": 0,
+          "cases_with_unexpected_predictions": 13,
+          "tp": 34,
+          "fp": 17,
+          "fn": 0,
+          "expected": 34,
+          "predicted": 51,
+          "duplicate_predictions_removed": 0,
+          "fully_masked": 34,
+          "partial": 0,
+          "untouched": 0,
+          "cases_with_extra_masking": 2,
+          "extra_masked_characters": 6
+        },
+        "challenges": {
+          "cases": 4,
+          "cases_with_misses": 2,
+          "cases_with_unexpected_predictions": 3,
+          "tp": 2,
+          "fp": 4,
+          "fn": 2,
+          "expected": 4,
+          "predicted": 6,
+          "duplicate_predictions_removed": 0,
+          "fully_masked": 2,
+          "partial": 1,
+          "untouched": 1,
+          "cases_with_extra_masking": 1,
+          "extra_masked_characters": 8
+        },
+        "categories": [
+          {
+            "coverage": "en",
+            "entity": "DATE_TIME",
+            "tp": 3,
+            "fp": 2,
+            "fn": 0,
+            "expected": 3,
+            "predicted": 5,
+            "partial_overlap_predictions": 0
+          },
+          {
+            "coverage": "en",
+            "entity": "EMAIL_ADDRESS",
+            "tp": 13,
+            "fp": 0,
+            "fn": 0,
+            "expected": 13,
+            "predicted": 13,
+            "partial_overlap_predictions": 0
+          },
+          {
+            "coverage": "en",
+            "entity": "IP_ADDRESS",
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "expected": 3,
+            "predicted": 3,
+            "partial_overlap_predictions": 0
+          },
+          {
+            "coverage": "en",
+            "entity": "LOCATION",
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "expected": 3,
+            "predicted": 3,
+            "partial_overlap_predictions": 0
+          },
+          {
+            "coverage": "en",
+            "entity": "PERSON",
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "expected": 5,
+            "predicted": 5,
+            "partial_overlap_predictions": 0
+          },
+          {
+            "coverage": "en",
+            "entity": "PHONE_NUMBER",
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "expected": 5,
+            "predicted": 5,
+            "partial_overlap_predictions": 0
+          },
+          {
+            "coverage": "en",
+            "entity": "URL",
+            "tp": 2,
+            "fp": 14,
+            "fn": 0,
+            "expected": 2,
+            "predicted": 16,
+            "partial_overlap_predictions": 0
+          }
+        ],
+        "other_extra_candidates": 1,
+        "sources": {
+          "report": "/reference/redaction-recognition.json",
+          "fixture": "/reference/pii-recognition-development.json"
+        },
+        "limits": "38 developer-authored English examples and four out-of-coverage challenges. Exact entity/span matches and actual masking are different measures; no population or independent accuracy claim."
+      },
+      "measured_at": "2026-10-11T18:45:44.009717+00:00"
     },
     {
       "id": "NF",

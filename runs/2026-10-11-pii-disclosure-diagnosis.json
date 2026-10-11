@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-11T18:57:02.015429+00:00",
+  "pass": false,
+  "failure_receipt": "runs/2026-10-11-pii-current-website.json",
+  "failure": "PII_REDACTED must have its compact disclosures and applicable setup",
+  "cause": "Catalogue smoke test counted new nested redaction evidence as an extra main disclosure.",
+  "fix": "Keep the original exact main-disclosure counts and separately require exactly one PII-only redaction breakdown; retain initially collapsed and keyboard checks.",
+  "release_approved": false
+}

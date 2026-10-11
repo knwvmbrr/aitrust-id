@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_redaction_recognition_cases",
+  "supported_language": "en",
+  "independently_labeled": false,
+  "representative_sample": false,
+  "real_user_data": false,
+  "rows": [
+    {
+      "id": "email_simple",
+      "coverage": "en",
+      "text": "Email pilot@example.com.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 23
+        }
+      ]
+    },
+    {
+      "id": "email_plus",
+      "coverage": "en",
+      "text": "Reach pilot+review@example.org for this fictional example.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 30
+        }
+      ]
+    },
+    {
+      "id": "email_upper",
+      "coverage": "en",
+      "text": "Address: PILOT@EXAMPLE.COM",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 26
+        }
+      ]
+    },
+    {
+      "id": "email_subdomain",
+      "coverage": "en",
+      "text": "Mailbox: pilot@mail.example.org",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 31
+        }
+      ]
+    },
+    {
+      "id": "email_dotted",
+      "coverage": "en",
+      "text": "Use test.user@example.net.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 4,
+          "end": 25
+        }
+      ]
+    },
+    {
+      "id": "email_quoted",
+      "coverage": "en",
+      "text": "The sample says \"pilot@example.com\".",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 17,
+          "end": 34
+        }
+      ]
+    },
+    {
+      "id": "email_unicode_context",
+      "coverage": "en",
+      "text": "A fictional café contact is pilot@example.org.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 28,
+          "end": 45
+        }
+      ]
+    },
+    {
+      "id": "phone_hyphen",
+      "coverage": "en",
+      "text": "Call 202-555-0147.",
+      "expected": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 5,
+          "end": 17
+        }
+      ]
+    },
+    {
+      "id": "phone_parentheses",
+      "coverage": "en",
+      "text": "Phone: (202) 555-0147.",
+      "expected": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 7,
+          "end": 21
+        }
+      ]
+    },
+    {
+      "id": "phone_country",
+      "coverage": "en",
+      "text": "Contact: +1 202-555-0147.",
+      "expected": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 9,
+          "end": 24
+        }
+      ]
+    },
+    {
+      "id": "phone_dots",
+      "coverage": "en",
+      "text": "Telephone: 202.555.0147.",
+      "expected": [
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 11,
+          "end": 23
+        }
+      ]
+    },
+    {
+      "id": "person_full",
+      "coverage": "en",
+      "text": "My fictional name is Alice Example.",
+      "expected": [
+        {
+          "entity": "PERSON",
+          "start": 21,
+          "end": 34
+        }
+      ]
+    },
+    {
+      "id": "person_common",
+      "coverage": "en",
+      "text": "The fictional character Jane Doe wrote this.",
+      "expected": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 32
+        }
+      ]
+    },
+    {
+      "id": "person_apostrophe",
+      "coverage": "en",
+      "text": "The fictional character Pat O'Example wrote this.",
+      "expected": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 37
+        }
+      ]
+    },
+    {
+      "id": "person_hyphen",
+      "coverage": "en",
+      "text": "The fictional character Alex Example-Sample wrote this.",
+      "expected": [
+        {
+          "entity": "PERSON",
+          "start": 24,
+          "end": 43
+        }
+      ]
+    },
+    {
+      "id": "location_city",
+      "coverage": "en",
+      "text": "The fictional meeting takes place in Detroit.",
+      "expected": [
+        {
+          "entity": "LOCATION",
+          "start": 37,
+          "end": 44
+        }
+      ]
+    },
+    {
+      "id": "location_country",
+      "coverage": "en",
+      "text": "The example mentions Canada.",
+      "expected": [
+        {
+          "entity": "LOCATION",
+          "start": 21,
+          "end": 27
+        }
+      ]
+    },
+    {
+      "id": "location_phrase",
+      "coverage": "en",
+      "text": "The example mentions New York City.",
+      "expected": [
+        {
+          "entity": "LOCATION",
+          "start": 21,
+          "end": 34
+        }
+      ]
+    },
+    {
+      "id": "ip_documentation",
+      "coverage": "en",
+      "text": "Documentation host: 198.51.100.27.",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 33
+        }
+      ]
+    },
+    {
+      "id": "ip_documentation_two",
+      "coverage": "en",
+      "text": "Documentation host: 203.0.113.42.",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 32
+        }
+      ]
+    },
+    {
+      "id": "ipv6_documentation",
+      "coverage": "en",
+      "text": "Documentation host: 2001:db8::27.",
+      "expected": [
+        {
+          "entity": "IP_ADDRESS",
+          "start": 20,
+          "end": 32
+        }
+      ]
+    },
+    {
+      "id": "url_https",
+      "coverage": "en",
+      "text": "Visit https://example.org/help for the example.",
+      "expected": [
+        {
+          "entity": "URL",
+          "start": 6,
+          "end": 30
+        }
+      ]
+    },
+    {
+      "id": "url_subdomain",
+      "coverage": "en",
+      "text": "Sample link: https://test.example.net/sample",
+      "expected": [
+        {
+          "entity": "URL",
+          "start": 13,
+          "end": 44
+        }
+      ]
+    },
+    {
+      "id": "date_numeric",
+      "coverage": "en",
+      "text": "The fictional appointment is 10/11/2026.",
+      "expected": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 39
+        }
+      ]
+    },
+    {
+      "id": "date_written",
+      "coverage": "en",
+      "text": "The fictional appointment is October 11, 2026.",
+      "expected": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 45
+        }
+      ]
+    },
+    {
+      "id": "date_iso",
+      "coverage": "en",
+      "text": "The fictional appointment is 2026-10-11.",
+      "expected": [
+        {
+          "entity": "DATE_TIME",
+          "start": 29,
+          "end": 39
+        }
+      ]
+    },
+    {
+      "id": "mixed_email_phone",
+      "coverage": "en",
+      "text": "Reach pilot@example.com or 202-555-0147.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 6,
+          "end": 23
+        },
+        {
+          "entity": "PHONE_NUMBER",
+          "start": 27,
+          "end": 39
+        }
+      ]
+    },
+    {
+      "id": "mixed_person_email",
+      "coverage": "en",
+      "text": "Jane Doe uses pilot@example.net in this fictional sample.",
+      "expected": [
+        {
+          "entity": "PERSON",
+          "start": 0,
+          "end": 8
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 14,
+          "end": 31
+        }
+      ]
+    },
+    {
+      "id": "repeated_email",
+      "coverage": "en",
+      "text": "pilot@example.com and pilot@example.com are the same sample.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 0,
+          "end": 17
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 22,
+          "end": 39
+        }
+      ]
+    },
+    {
+      "id": "adjacent_email",
+      "coverage": "en",
+      "text": "Contacts: one@example.com, two@example.org.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 10,
+          "end": 25
+        },
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 27,
+          "end": 42
+        }
+      ]
+    },
+    {
+      "id": "negative_plain",
+      "coverage": "en",
+      "text": "This is an ordinary fictional answer with no identifiers.",
+      "expected": []
+    },
+    {
+      "id": "negative_code",
+      "coverage": "en",
+      "text": "print(\"hello\")",
+      "expected": []
+    },
+    {
+      "id": "negative_symbol",
+      "coverage": "en",
+      "text": "An at sign is @ and a dot is .",
+      "expected": []
+    },
+    {
+      "id": "negative_numeric",
+      "coverage": "en",
+      "text": "The sample answer is 42.",
+      "expected": []
+    },
+    {
+      "id": "negative_hedge",
+      "coverage": "en",
+      "text": "I am unsure whether this conclusion follows.",
+      "expected": []
+    },
+    {
+      "id": "negative_packages",
+      "coverage": "en",
+      "text": "Python packages can run offline.",
+      "expected": []
+    },
+    {
+      "id": "negative_type",
+      "coverage": "en",
+      "text": "An email address contains a local part and a domain.",
+      "expected": []
+    },
+    {
+      "id": "negative_words",
+      "coverage": "en",
+      "text": "Read the result and review the evidence.",
+      "expected": []
+    },
+    {
+      "id": "challenge_spanish",
+      "coverage": "out_of_coverage",
+      "text": "Contacto ficticio: pilot@example.com.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 19,
+          "end": 36
+        }
+      ]
+    },
+    {
+      "id": "challenge_unicode_local",
+      "coverage": "out_of_coverage",
+      "text": "Mailbox: tést@example.org",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 9,
+          "end": 25
+        }
+      ]
+    },
+    {
+      "id": "challenge_obfuscated_email",
+      "coverage": "out_of_coverage",
+      "text": "Contact pilot [at] example [dot] org.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 8,
+          "end": 36
+        }
+      ]
+    },
+    {
+      "id": "challenge_zero_width",
+      "coverage": "out_of_coverage",
+      "text": "Contact pilot@exam​ple.com.",
+      "expected": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 8,
+          "end": 26
+        }
+      ]
+    }
+  ]
+}

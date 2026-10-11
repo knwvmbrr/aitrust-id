@@ -21,6 +21,34 @@ class OfflineEmailRecognizer(EmailRecognizer):
         return self.extractor(pattern_text).fqdn != ''
 analyzer.registry.remove_recognizer('EmailRecognizer')
 analyzer.registry.add_recognizer(OfflineEmailRecognizer())
+import ipaddress
+import re
+IPV6_TOKEN=re.compile(r'(?<![0-9A-Za-z_:.])([0-9A-Fa-f:.]{2,64})(?![0-9A-Za-z_:.%])')
+def complete_ipv6_spans(text):
+    result=[]
+    for match in IPV6_TOKEN.finditer(text):
+        value=match[1].rstrip('.')
+        if ':' not in value:continue
+        try:address=ipaddress.ip_address(value)
+        except ValueError:continue
+        if address.version==6:result.append((match.start(1),match.start(1)+len(value)))
+    return result
+
+from presidio_analyzer.predefined_recognizers import IpRecognizer
+from presidio_analyzer import RecognizerResult
+class CompleteIPv6Recognizer(IpRecognizer):
+    def analyze(self,text,entities,nlp_artifacts=None):
+        original=super().analyze(text,entities,nlp_artifacts)
+        if 'IP_ADDRESS' not in entities:return original
+        full=complete_ipv6_spans(text)
+        # Keep upstream IPv4/scoped behavior; replace only truncated candidates
+        # wholly inside an independently parsed complete unscoped IPv6 token.
+        kept=[r for r in original if not any(start<=r.start and r.end<=end and (start,end)!=(r.start,r.end) for start,end in full)]
+        existing={(r.start,r.end) for r in kept}
+        return kept+[RecognizerResult('IP_ADDRESS',start,end,0.6) for start,end in full if (start,end) not in existing]
+analyzer.registry.remove_recognizer('IpRecognizer')
+analyzer.registry.add_recognizer(CompleteIPv6Recognizer())
+
 anonymizer=AnonymizerEngine()
 from replay_metadata import identity
 REDACTOR_IDENTITY=identity(analyzer,MODEL_IDENTITY)

@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-190134-pii-current-acceptance-b3faf011
+
+Recorded 2026-10-11T19:01:34.346312+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual full-suite and current source-bound PII/browser/boundary acceptance, attribution and staged publication status.
+- **Evidence.** 1822 Python checks pass; 47 focused Node checks, five source-bound capability receipts, 500-file route review, actual 42 engine cases, 32 HTTP controls, 13 replay controls and 253 timing requests. Retained failures have corrected successor receipts. [Change record](./runs/changes/2026-10-11-190134-pii-current-acceptance-b3faf011.json).
+- **Not claimed.** F-023 and T-PII are 80%, not released; 114 complete and 88 open. Independent recognition, real phone/human acceptance and protected publication remain separate.
+
+
+### 2026-10-11-185759-pii-no-script-disclosure-e4f8d70b
+
+Recorded 2026-10-11T18:57:59.848599+00:00 · Contributor: Codex · change
+
+- **Changed.** Exercise the native no-script PII evidence disclosure before reading its rendered content; reject transport failures.
+- **Evidence.** 40 light/dark panels already passed, including PII downloads, seven categories, 320px and 200-percent text reflow; failed closed-disclosure assumption retained. [Change record](./runs/changes/2026-10-11-185759-pii-no-script-disclosure-e4f8d70b.json).
+- **Not claimed.** Complete website sequence still pending; human accessibility and independent recognition acceptance remain open.
+
+
+### 2026-10-11-185702-pii-disclosure-acceptance-d00659a3
+
+Recorded 2026-10-11T18:57:02.077491+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep exact main disclosure counts while independently requiring the new PII-only redaction breakdown in the catalogue smoke check.
+- **Evidence.** Retains the old collapsed/keyboard/setup contracts; no other tag may borrow PII measurements. Light/dark 390px redaction breakdown inspected. [Change record](./runs/changes/2026-10-11-185702-pii-disclosure-acceptance-d00659a3.json).
+- **Not claimed.** Previous site receipt failed the outdated count; full refreshed browser run still required. Emulation does not replace physical-phone or human accessibility.
+
+
+### 2026-10-11-185607-pii-selected-replay-refresh-559395e8
+
+Recorded 2026-10-11T18:56:07.311369+00:00 · Contributor: Codex · change
+
+- **Changed.** Select current rebuilt service replay and retain refused stale export and website prebuild records; finish extension checks before recording and building.
+- **Evidence.** All five extension commands pass using actual current synthetic both-tag replay. Build guard correctly refused an extension receipt generated after the previous changelog record. [Change record](./runs/changes/2026-10-11-185607-pii-selected-replay-refresh-559395e8.json).
+- **Not claimed.** Sequencing correction only; no tag release approval or full requirement closure.
+
+
+### 2026-10-11-185512-pii-current-runtime-review-6f12799b
+
+Recorded 2026-10-11T18:55:12.433591+00:00 · Contributor: Codex · change
+
+- **Changed.** Rebuilt isolated staging IPv6 redaction, exact masking observations, seven-category PII performance panel, refreshed pipeline timing and current published agreement metadata.
+- **Evidence.** 130 focused Python and 47 Node controls plus actual 42-example redactor, 32 HTTP, 13 replay and 253 timing executions. Initial full suite refuses nine stale boundary checks; extension export refuses prior redactor identity. [Change record](./runs/changes/2026-10-11-185512-pii-current-runtime-review-6f12799b.json).
+- **Not claimed.** 114 complete and 88 open; independent recognition accuracy, human operation, phone and release approval remain incomplete. No production or participant-data change.
+
+
+### 2026-10-11-185111-pii-current-chart-projection-dac4e337
+
+Recorded 2026-10-11T18:51:11.850639+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate method-bound performance and scope projections from actual current PII evidence.
+- **Evidence.** Recomputes recognition/masking counts and preserves independent tag jobs and all 202 scope records. [Change record](./runs/changes/2026-10-11-185111-pii-current-chart-projection-dac4e337.json).
+- **Not claimed.** Build projection only; current website browser and deployment checks follow. No human or independent accuracy acceptance.
+
+
+### 2026-10-11-185110-pii-recognition-and-whole-route-4302410a
+
+Recorded 2026-10-11T18:51:10.680602+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct complete IPv6 masking, measure recognition and actual masking separately, add independent PII development charts and refresh actual staging pipeline evidence.
+- **Evidence.** 130 focused Python and 47 Node controls; 42 actual synthetic engine cases, 32 staging HTTP controls, 13 real replay checks and 253 fresh source-bound timing requests. Existing agreement merge and 717 public artifacts are preserved. [Change record](./runs/changes/2026-10-11-185110-pii-recognition-and-whole-route-4302410a.json).
+- **Not claimed.** Only developer-authored English coverage; 2 extra-masking cases, 17 extra raw candidates and challenge misses remain visible. No population accuracy, human acceptance, collection or tag release. 114 complete and 88 open unchanged.
+
+
 ### 2026-10-11-183929-verified-workflow-readiness-6e76e2e4
 
 Recorded 2026-10-11T18:39:29.186524+00:00 · Contributor: Codex · change

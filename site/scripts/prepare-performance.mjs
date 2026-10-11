@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {redactionSummary} from '../src/redaction-performance-model.js';
 import {fileURLToPath} from 'node:url';
 import {allTags} from '../src/catalog.js';
 import {validateEvidence,performanceFor} from '../src/performance-model.js';
@@ -9,12 +11,16 @@ const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const
 const input=JSON.parse(fs.readFileSync(path.join(root,'eval/tag-performance-evidence.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 validateEvidence(input,hash);
-const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-identity-checked.json'),'utf8'));
+const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-pii-pipeline-timing.json'),'utf8'));
 validatePipelineTiming(timing,hash,s=>crypto.createHash('sha256').update(s).digest('hex'));
-const data={format:'ai-trust-id-tag-performance/v1',records:allTags.map(tag=>performanceFor(tag,input,timing))};
+const redaction=redactionSummary(JSON.parse(execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/build-redaction-performance.py'],{cwd:root,encoding:'utf8',maxBuffer:200000})));
+const data={format:'ai-trust-id-tag-performance/v1',records:allTags.map(tag=>performanceFor(tag,input,timing,redaction))};
 fs.writeFileSync(path.join(site,'src/tag-performance.json'),JSON.stringify(data,null,2)+'\n');
 const publicDir=path.join(site,'public/reference');fs.mkdirSync(publicDir,{recursive:true});
 fs.writeFileSync(path.join(publicDir,'tag-performance.json'),JSON.stringify(data,null,2)+'\n');
 fs.writeFileSync(path.join(publicDir,'pipeline-performance.json'),JSON.stringify(timing,null,2)+'\n');
+fs.copyFileSync(path.join(root,'runs/2026-10-11-pii-recognition-staging.json'),path.join(publicDir,'redaction-recognition.json'));
+fs.copyFileSync(path.join(root,'eval/fixtures/pii-recognition-development.json'),path.join(publicDir,'pii-recognition-development.json'));
+fs.copyFileSync(path.join(root,'docs/redaction-recognition.md'),path.join(publicDir,'redaction-recognition.md'));
 for(const [src,dest] of [['eval/tag-performance-evidence.json','tag-performance-evidence.json'],[input.evidence[0],'performance-regressions.json'],[input.evidence[1],'performance-device.json'],['docs/tag-performance-plan.md','tag-performance-plan.md'],['docs/measurement-provenance-plan.md','measurement-provenance-plan.md'],['eval/datasets/unsafe_code/provenance-v1.json','example-provenance.json'],['eval/datasets/unsafe_code/manifest.json','development-dataset-manifest.json']])fs.copyFileSync(path.join(root,src),path.join(publicDir,dest));
 console.log(`Prepared ${data.records.length} per-tag performance panels from method-bound measured records.`);
