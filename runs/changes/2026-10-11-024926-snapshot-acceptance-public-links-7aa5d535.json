@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-024926-snapshot-acceptance-public-links-7aa5d535",
+  "recorded_at": "2026-10-11T02:49:26.111848+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6f95c697fafa6d8989ffdc8ad10b5c6a3a39dc32",
+  "changed": "Regenerate public scope from the repaired F-144 evidence without changing any acceptance baseline or completion count.",
+  "proves": "Both public scope files point to the accepted repaired statement snapshot.",
+  "limits": "An evidence refresh is not another feature completion or a tag release.",
+  "scope_ids": [
+    "F-144"
+  ],
+  "files": {
+    "docs/scope-progress.json": "6cc58ae57e3e92c86422ce1bc7ea6a6a91a567599fa226745df5a74156f736e5",
+    "docs/scope-progress.md": "324fc9863a22b907ab714556db40530c59fbc8a917cb42a3fc9ac4c3659e1924",
+    "protocol/conformance-statement.cjs": "ef65e76adc8873dd506f4c344507bd1b3800ba032aadf0cacd7c25342555f189",
+    "runs/2026-10-11-consent-snapshot-controls.json": "7c5d1227dc90235f5730cf0720eda3912b6835ec25e5ce73e21f868ddf6679ec",
+    "runs/2026-10-11-consent-snapshot-platforms.json": "e7392cb8717acea1d5dd677afb63bbce444f9f36341476701ebec353a1d857a3",
+    "site/public/reference/public-scope.json": "29a449fabd63aef8b8082a1ccd235d35df4c54d07fbe39dcfa9aa4108dc205d8",
+    "site/src/public-scope.json": "29a449fabd63aef8b8082a1ccd235d35df4c54d07fbe39dcfa9aa4108dc205d8",
+    "tests/conformance-statement.cjs": "b844ba9b1a9f2ae2e4e5e6315ac192cce4ec845bc0e09d17564ae13b90f2fd91"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T02:49:26.203213+00:00"
+    }
+  ]
+}

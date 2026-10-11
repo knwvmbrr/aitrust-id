@@ -9,13 +9,14 @@ ROOT = Path(__file__).resolve().parents[1]
 def build(root=ROOT):
     folder = root/'tools/composition'
     core = (folder/'core.cjs').read_text()
+    choice = (root/'protocol/author-choice.cjs').read_text()
     editor = (folder/'editor.js').read_text()
     style = (folder/'style.css').read_text()
     def policy_hash(text):
         return "'sha256-"+base64.b64encode(hashlib.sha256(text.encode()).digest()).decode()+"'"
-    csp = "default-src 'none'; script-src "+policy_hash(core)+' '+policy_hash(editor)+"; style-src "+policy_hash(style)+"; connect-src 'none'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    csp = "default-src 'none'; script-src "+policy_hash(core)+' '+policy_hash(choice)+' '+policy_hash(editor)+"; style-src "+policy_hash(style)+"; connect-src 'none'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
     html = (folder/'editor.html').read_text()
-    for key, value in {'__CORE__':core,'__EDITOR__':editor,'__STYLE__':style,'__CSP__':csp,'__METHOD_SHA__':hashlib.sha256(core.encode()).hexdigest()}.items():
+    for key, value in {'__CHOICE__':choice,'__CORE__':core,'__EDITOR__':editor,'__STYLE__':style,'__CSP__':csp,'__METHOD_SHA__':hashlib.sha256(core.encode()).hexdigest()}.items():
         html = html.replace(key,value)
     return html.encode()
 

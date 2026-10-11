@@ -54,7 +54,10 @@
     "verify:feedback": "node scripts/verify-research-feedback.cjs",
     "test:group-receipts": "node --test tests/group-receipts.cjs",
     "test:key-backup": "node --test tests/key-backup.cjs",
-    "key-backup": "node scripts/key-backup.cjs"
+    "key-backup": "node scripts/key-backup.cjs",
+    "test:author-choice": "node --test tests/author-choice.cjs",
+    "test:self-declaration": "node --test tests/conformance-statement.cjs",
+    "self-declaration": "node scripts/conformance-statement.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-11T01:25:30.316087+00:00",
+  "audited_at": "2026-10-11T02:49:20.780836+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -1318,29 +1318,38 @@
       "id": "F-020a",
       "kind": "requirement",
       "title": "sig.corpus_support.v1 \u2014 retrieval similarity against an attached local corpus",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T02:38:48.987316+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver sig.corpus_support.v1 \u2014 retrieval similarity against an attached local corpus. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T02:38:48.987316+00:00",
+      "completion_timestamp_basis": "Current full named reference job verified by actual executable controls; not an inferred historical finish",
+      "next_fix": "",
+      "next_owner": "",
       "evidence": [
-        "docs/scope-delivery.md"
+        "runs/2026-10-11-consent-typed-controls.json",
+        "runs/2026-10-11-consent-typed-platforms.json",
+        "runs/2026-10-11-consent-editor-engines.json",
+        "runs/2026-10-11-corpus-support-linux.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver sig.corpus_support.v1 \u2014 retrieval similarity against an attached local corpus. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: A finding identifies this exact signal and the relevant subject spans."
-      ],
-      "queue": "open"
+      "evidence_scope": "Working local retrieval similarity signal with declared claim/passages, exact normalized spans, corpus/source identity, bounded ASCII word cosine and unknown reference freshness. Misleading similarities never issue NF/FI or a truth conclusion; no independent tag accuracy.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-020b",
@@ -4422,29 +4431,38 @@
       "id": "F-128",
       "kind": "requirement",
       "title": "Anti-coercion rule \u2014 a conformant implementation may not make receipt issuance non-optional for the author",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T02:38:48.987316+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Anti-coercion rule \u2014 a conformant implementation may not make receipt issuance non-optional for the author. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T02:38:48.987316+00:00",
+      "completion_timestamp_basis": "Current full named reference job verified by actual executable controls; not an inferred historical finish",
+      "next_fix": "",
+      "next_owner": "",
       "evidence": [
-        "docs/scope-delivery.md"
+        "runs/2026-10-11-consent-typed-controls.json",
+        "runs/2026-10-11-consent-typed-platforms.json",
+        "runs/2026-10-11-consent-editor-engines.json",
+        "runs/2026-10-11-corpus-support-linux.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Anti-coercion rule \u2014 a conformant implementation may not make receipt issuance non-optional for the author. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-      ],
-      "queue": "open"
+      "evidence_scope": "Reference editor/receipt/group choices and strict optional-author policy are executed; no compulsory receipt or upload is accepted. This is a software conformance rule, not detection or prevention of institutional pressure outside this software.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-129",
@@ -5101,29 +5119,36 @@
       "id": "F-144",
       "kind": "requirement",
       "title": "Mark usage guidelines and a conformance statement template",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T02:49:20.780836+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Mark usage guidelines and a conformance statement template. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T02:49:20.780836+00:00",
+      "completion_timestamp_basis": "Current full named reference job verified by actual executable controls; not an inferred historical finish",
+      "next_fix": "",
+      "next_owner": "",
       "evidence": [
-        "docs/scope-delivery.md"
+        "runs/2026-10-11-consent-snapshot-controls.json",
+        "runs/2026-10-11-consent-snapshot-platforms.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Mark usage guidelines and a conformance statement template. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
-      ],
-      "queue": "open"
+      "evidence_scope": "Published usage guidelines and functioning evidence-bound self-declaration template/CLI: exact source revision, pass/fail/untested evidence hashes and mandatory limits. No certification, mark authorization, registration or legal clearance is granted.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-145",
@@ -6376,29 +6401,38 @@
       "id": "X-07",
       "kind": "requirement",
       "title": "Competing with C2PA on image provenance",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T02:38:48.987316+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Exercise the current and next release routes against this explicit boundary: Competing with C2PA on image provenance. Keep consented research separate from compulsory collection; publish any version-specific exception before activation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T02:38:48.987316+00:00",
+      "completion_timestamp_basis": "Current full named reference job verified by actual executable controls; not an inferred historical finish",
+      "next_fix": "",
+      "next_owner": "",
       "evidence": [
-        "docs/scope-delivery.md"
+        "runs/2026-10-11-consent-typed-controls.json",
+        "runs/2026-10-11-consent-typed-platforms.json",
+        "runs/2026-10-11-consent-editor-engines.json",
+        "runs/2026-10-11-corpus-support-linux.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Exercise the current and next release routes against this explicit boundary: Competing with C2PA on image provenance. Keep consented research separate from compulsory collection; publish any version-specific exception before activation."
-      ],
-      "queue": "open"
+      "evidence_scope": "Current gateway refuses non-text before dependency contact; current/next release policy and producer allowlist are guarded against image-origin/replacement-C2PA issuance. External evidence inspection and all proposed tags remain preserved; future exceptions need a recorded decision.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "X-08",

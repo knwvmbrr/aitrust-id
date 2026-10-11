@@ -33,7 +33,7 @@ const html=path.join(site,'index.html');let text=fs.readFileSync(html,'utf8');
 text=text.replace(/<head>[\s\S]*?<\/head>/, `<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#f7f8f6"/><meta name="color-scheme" content="light dark"/>${metadata({})}<link rel="icon" type="image/svg+xml" href="/favicon.svg"/><script src="/theme.js"></script><link rel="stylesheet" href="/src/styles.css"/></head>`);text=text.replace(/<!-- NOJS START -->[\s\S]*?<!-- NOJS END -->/,`<!-- NOJS START -->${fallback}<!-- NOJS END -->`);fs.writeFileSync(html,text);
 console.log(`Prepared ${allTags.length} tag/offer records and ${records.length} scope records; public references allowlisted.`);
 
-const urls=['/','/tags/','/reference/offline-tools/','/reference/operate/','/reference/legal-drafts/',...allTags.map(tagPath),'/policies/',...policies.map(policyPath)];
+const urls=['/','/tags/','/reference/offline-tools/','/reference/operate/','/reference/legal-drafts/','/reference/conformance/',...allTags.map(tagPath),'/policies/',...policies.map(policyPath)];
 if(new Set(urls).size!==urls.length)throw Error('Duplicate crawlable tag URL');
 fs.writeFileSync(path.join(site,'public/sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url=>`  <url><loc>${origin}${url}</loc></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(site,'public/robots.txt'),`User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);

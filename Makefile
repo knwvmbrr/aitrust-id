@@ -107,6 +107,7 @@ corpus-test:
 
 .PHONY: verify-primitives
 verify-primitives:
+	$(PYTHON) scripts/verify-image-provenance-boundary.py
 	$(PYTHON) scripts/generate-normalization.py --check
 	$(PYTHON) scripts/verify-normalization.py
 	$(PYTHON) scripts/verify-subjects.py

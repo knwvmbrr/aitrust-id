@@ -1,5 +1,7 @@
 /* Attached only to this editor after explicit Start. No global keyboard capture. */
 'use strict';
+const choice = AITrustAuthorChoice;
+const authorPolicy = Object.freeze(choice.profile());
 const observation = AITrustComposition.create();
 const field = document.querySelector('#editor');
 const mode = document.querySelector('#mode');
@@ -28,6 +30,7 @@ function event(e) {
   paint();
 }
 start.addEventListener('click', () => {
+  if (!choice.authorize(authorPolicy,'observe')) return;
   generation++;
   observation.start(now(), mode.value); field.focus();
   observation.event({kind:'focus', at:now(), value:true});
@@ -79,10 +82,11 @@ function save(blob, name) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 document.querySelector('#download-text').addEventListener('click', () => {
-  if (!['paused','limit_reached'].includes(observation.snapshot().status)) return;
+  if (!choice.authorize(authorPolicy,'export',true) || !['paused','limit_reached'].includes(observation.snapshot().status)) return;
   save(new Blob([new TextEncoder().encode(field.value)],{type:'text/plain;charset=utf-8'}),'artifact.txt');
 });
 download.addEventListener('click', async () => {
+  if (!choice.authorize(authorPolicy,'export',true)) return;
   const record = observation.snapshot();
   const capturedGeneration = generation;
   if (!['paused','limit_reached'].includes(record.status)) return;

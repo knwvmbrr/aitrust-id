@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-022931-four-reference-jobs-accepted-d71784ff",
+  "recorded_at": "2026-10-11T02:29:31.867462+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "50fe19d740000983b69692024348af71e9c832fc",
+  "changed": "Timestamp four functioning full reference jobs and preserve all 202 records; update the open queue to 91 and retain the flexible owner direction.",
+  "proves": "F-128, F-144, X-07 and F-020a have working mechanisms, positive/refusal checks and selected integration; scope structure validates 111 complete and 91 open.",
+  "limits": "Completion does not validate a tag, complete a legal entity or certify outside implementations; every other original requirement remains open.",
+  "scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a"
+  ],
+  "files": {
+    "docs/scope-progress.json": "1ad78cc2bfeb733fd4319e1489c30be9408c133374216294f7d224ff9991c37e",
+    "docs/scope-progress.md": "63ed3736c967a2d787a874166e1052a77a39980d2205a13bf3b3bcfd641759d0",
+    "docs/scope-delivery.md": "b03b3821d49bcbdda575ba679ed4f547bf6ebae2e7b2daf4169bc8e06fc2dc33",
+    "docs/scope-index.md": null,
+    "docs/scope-25-execution.md": "5039094bafc2dcac9759a827c78ab2237cd655b421334e2192f80e981b94095e",
+    "state.json": "c080e39c8d6832c8c23c719b485670a5647ed31a038245fed8fd948814cc3f3b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-consent-scope.json",
+      "sha256": "37eb86fc8f802ddd6f0fc0d5bb26b46dffb711333a4c174924ba2978a084313b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T02:29:31.971390+00:00"
+    }
+  ]
+}

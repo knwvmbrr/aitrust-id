@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-10-11T02:29:00.456677+00:00",
+  "pass": true,
+  "sources": {
+    "protocol/author-choice.cjs": "fca928eba07e0a1335d62c7d5db83c853c8a8694fbcd30985d2c50f777349c8a",
+    "protocol/conformance-statement.cjs": "c091e7faae3489ce6d188325964f18861ec0f9e245d5a5df4d6dfde28c5b1553",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "scripts/conformance-statement.cjs": "bce368ff8dd53bc417de147960314b3f9d309b4d91bea7638ba56065bcc238d7",
+    "scripts/corpus-support.py": "cd814151d1a3999f7b914617311c86435429839a14bcd6024e1c30b0881e900f",
+    "scripts/receipt.cjs": "c771968409fbd34fd673847d40e8fa6a73c8520475ba416004289aaa73ebd950",
+    "scripts/group-receipt.cjs": "acb151653dd6f7739179071645b5d1069fe69899062c4e5afeea36a19d4c28ba",
+    "scripts/verify-consent-conformance.py": "9d54742f4ea0c5703a592078ee45efcb00352512a8a7cda7f812e6abe1cdbd39",
+    "scripts/verify-image-provenance-boundary.py": "aae341bef5856f4b158f3ec6e141ced99cec7b8685232f8699876578941e4563",
+    "scripts/build-composition-tool.py": "505e604a702660abd873e14dd01c04f676783349a8b74c5621be4e54b359be6e",
+    "scripts/verify-composition-tool.cjs": "1ec53769a91ca078a821a279e22171c77cb992e18831a726a66057c4393bf7eb",
+    "tools/composition/editor.js": "a4edb9844befa41f6e77178183b13b249d30a5411ab809a907c4e80e8fd8a804",
+    "tools/composition/editor.html": "f5239b93ef824f02bb2a7211cbc18316cfe6dc8c5b8b91ee98662c6a9c7f13a1",
+    "spec/image-provenance-boundary.json": "8ed330580783ec7f61e2ea0e537a6d402764beef765ecc6aa8e8f9b9222b3f1c",
+    "tests/author-choice.cjs": "84ddd8a548ffaa202d8e4aca2e8a028f48bc84829c50221c41009f2100bcdabd",
+    "tests/conformance-statement.cjs": "0981ca3cc09ccc7d294d8688343afc96eb7489664439edd4d2efd2dc4b47e979",
+    "tests/test_consent_conformance.py": "eb4ef53ebd325e064544edb055ba8346a2a6ad950e2eb4616f13c6fcc02a65f7",
+    "tests/test_corpus_support.py": "ccea0063b7bf8b0ec86e6269c55ca39407baf1ba2cd6db5b033ae02144e700ea"
+  },
+  "source_unchanged_during_execution": true,
+  "checks": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/author-choice.cjs",
+        "tests/conformance-statement.cjs"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "d533089c329e275cbf9dd989b5a0705a46e0dca3276c2a7f509e50820d9e933e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_consent_conformance.py",
+        "tests/test_corpus_support.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "30aba76ee7143fc135702dc0b78167896eb9e9fa5e120dabcbbf83ac3239fca5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-image-provenance-boundary.py"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "dcc830d83d45a86422ae4a1821f7a4c49d1eb69d2d38d6322f6165ffaf747fb5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a"
+  ],
+  "reference_implementation_only": true,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_review": false,
+  "physical_phone_tested": false,
+  "certification_operating": false,
+  "institutional_coercion_prevented_outside_software": false,
+  "tag_release_approved": false
+}

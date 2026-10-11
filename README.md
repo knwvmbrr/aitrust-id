@@ -417,3 +417,7 @@ Optional development components: [independent file timestamps](docs/independent-
 Optional [offline revocation/freshness](docs/offline-revocation.md) verifies a separately selected signed checkpoint history and reports each key’s status under your chosen cached-data policy. Stale or missing status cannot clear a key. This is not a running public transparency service or a globally current revocation claim.
 
 Optional [encrypted key backup and recovery](docs/key-recovery.md) runs offline, supports Ed25519 and P-256, and checks a separately saved public key before restoring. Passwords use hidden terminal prompts; no hosted escrow, automatic replacement or nontechnical-user acceptance is claimed.
+
+[Receipts stay optional](docs/author-choice.md) · [Mark usage and an evidence-bound self-declaration](docs/mark-usage.md) · [Image-provenance boundary](docs/image-provenance-boundary.md). These controls grant no certification or independent tag validation.
+
+[Local reference similarity](docs/corpus-support.md) identifies matched passages without a truth verdict or NF/FI issuance.
