@@ -11,7 +11,7 @@ scammer. A legitimate installer can contain the pattern.
    Include recommendations, downloads saved to files, quoted displays, warnings,
    encoded execution, and difficult mixed contexts. Do not reuse our development
    cases or private conversations. Agree sampling and candidate thresholds first.
-2. Freeze the packet with `scripts/prepare-ps-review.py`. It records the detector,
+2. Freeze the packet with `scripts/prepare-ps-review.py` in an owner-held private folder outside the repository (directory 700, files 600). It records the detector,
    policy and dataset hashes and makes two separately shuffled CSV and phone JSON forms. The
    full procedure is in [independent-review.md](independent-review.md).
 3. Each reviewer works alone, without detector results or the other's labels.
@@ -40,3 +40,5 @@ your assigned JSON file, label and explain each item, then download your labels.
 Download progress before closing. Return the file privately to your coordinator.
 The comparison command for phone files adds `--format json`. No predictions or
 automatic uploads occur in this form.
+
+Your phone file must be a valid UTF-8 JSON form under 10 MB. The coordinator imports your return as a private regular file, verifies the frozen hashes and compares both reviews. There is no automatic upload. A validation error asks for a corrected file; it never converts missing or corrupted labels into agreement.

@@ -205,4 +205,4 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-N-012 | Phone and offline on-device tag checker | [WP-MOBILE](scope-delivery.md#wp-mobile) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-N-013 | Native iPhone sharing into a tag check | [WP-MOBILE](scope-delivery.md#wp-mobile) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-N-014 | Native Android sharing into a tag check | [WP-MOBILE](scope-delivery.md#wp-mobile) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-N-015 | Blind PS review from a phone | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-N-015 | Blind PS review from a phone | [WP-VALIDATION](scope-delivery.md#wp-validation) | 80% · [evidence/fix](scope-progress.md) |

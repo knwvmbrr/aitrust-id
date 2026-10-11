@@ -39,11 +39,19 @@ Do not put credentials, private conversations or personal data into public issue
 Keep the corpus outside the repository. Write the protocol and fix the detector
 before the reviewers see any prediction.
 
-From the repository folder, using a new destination in an existing private parent:
+From the repository folder, create a private workspace outside the source checkout:
 
 ```sh
-python3 scripts/prepare-ps-review.py freeze ../ps-review-items.jsonl ../ps-blind-review
+install -d -m 700 ../ai-trust-id-review
 ```
+
+Put your authorized new items in `../ai-trust-id-review/items.jsonl`. Verify it is an ordinary file you own, rather than a link; set its permissions to 600. Then use a new packet name:
+
+```sh
+python3 scripts/prepare-ps-review.py freeze ../ai-trust-id-review/items.jsonl ../ai-trust-id-review/packet
+```
+
+The CLI works on Linux/macOS with private owner-held directories (700) and files (600). It refuses reused destinations, file links, shared permissions, duplicate JSON fields and malformed text. Source JSONL and phone forms are limited to 10 MB, items/CSV to 16 MB each, the manifest to 64 KB and the generated packet to 32 MB total. Oversized output fails before any packet is created. Identifiers must be unique opaque IDs; spreadsheet-escaped IDs must also remain unique. Source and category fields each allow 1,000 characters. These limits protect your machine; they do not establish a representative sample.
 
 The tool creates two separately shuffled CSV and phone-friendly JSON forms, the frozen items, and a hash
 manifest. No detector is called. Spreadsheet formula prefixes are escaped in the
@@ -54,7 +62,7 @@ specified command pattern in a recommendation, including legitimate installers;
 it is not a scam label. Capture uncertain use/mention cases as ambiguous.
 
 ```sh
-python3 scripts/prepare-ps-review.py compare ../ps-blind-review
+python3 scripts/prepare-ps-review.py compare ../ai-trust-id-review/packet
 ```
 
 Incomplete, altered, duplicated or missing items fail the comparison. A detector
@@ -77,14 +85,16 @@ Open https://aitrustid.com/#person/PS and choose **Review test examples**. Open
 your `reviewer-1.json` or `reviewer-2.json` file, label each example and give a
 reason, then **Download labels**. Download progress before closing the page;
 reopen the downloaded JSON to resume. Nothing is uploaded or saved by the site.
-Return the completed file privately to the coordinator, who puts each file back
+Return the completed file privately to the coordinator. Import only an ordinary independently copied file, keep the private packet directory at 700 and set the imported form to 600 before comparison. Do not use permission changes to disguise a symlink or hardlink. The coordinator puts each file back
 in the corresponding private packet location and runs:
 
 ```sh
-python3 scripts/prepare-ps-review.py compare ../ps-blind-review --format json
+python3 scripts/prepare-ps-review.py compare ../ai-trust-id-review/packet --format json
 ```
 
 CSV remains available. Choose one format consistently for both reviewers. JSON
 comparison checks the same frozen hashes and exact original item fields as CSV.
 This form reduces setup work; it does not supply labels, prove independence or
 replace adjudication. Do not open the checker on your review examples.
+
+The phone form strictly reads UTF-8 and rejects duplicate fields, non-scalar text, excessive nesting and invalid shape. Rejected files never become a review. Completed labels remain on your device until you choose to download them. The CLI comparison preserves disagreements and never calls the detector. See [the packet safety plan](blind-review-privacy-plan.md) for the controls and their threat boundary.

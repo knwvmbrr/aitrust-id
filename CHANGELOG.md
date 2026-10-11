@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-195000-private-review-final-source-2cac9926
+
+Recorded 2026-10-11T19:50:00.570366+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish private argument diagnostics and regenerate reviewer scope projections after executed current-source tests.
+- **Evidence.** 62 focused Mac Python and 34 Node checks pass; 56 Linux security checks and 18 real CLI controls pass, with 18 Mac CLI controls. The corrected source again preserves eight browser-returned files and four CLI comparisons. All 202 records and availability stages are retained. [Change record](./runs/changes/2026-10-11-195000-private-review-final-source-2cac9926.json).
+- **Not claimed.** Source binding and full-suite acceptance are pending; 88 full requirements remain open. No independent labels, physical phones, collection or new tag release.
+
+
+### 2026-10-11-194724-private-review-browser-integration-e7c692c8
+
+Recorded 2026-10-11T19:47:24.121330+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the actual frozen-packet phone browser download and private CLI comparison flow, plus strict imports, without supplying human labels.
+- **Evidence.** 60 Mac Python, 34 Node and 54 Linux security controls pass; 16 CLI controls pass on each host. Chromium and WebKit in both themes preserve eight returned form files and four actual CLI comparisons, with no private content in network, console or storage. Full device checks include seven invalid import cases per engine. [Change record](./runs/changes/2026-10-11-194724-private-review-browser-integration-e7c692c8.json).
+- **Not claimed.** N-015 is 80%, F-108 remains 60%; 114 full records complete and 88 open. Physical phones, real humans, sampling, independent accuracy and protected publication remain separate. Current source binding and full suite are still pending.
+
+
+### 2026-10-11-194426-private-review-file-safety-b642e0c4
+
+Recorded 2026-10-11T19:44:26.393010+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify and publish the protected PII increment; harden private blind-review packet files and phone imports while retaining the full scope.
+- **Evidence.** 732 exact live artifact matches after 22 required merge checks; 60 focused Python, 34 Node parser and 32 actual Mac/Linux CLI controls pass. Packet creation is private, bounded, exclusive and preserves unrelated files on failure; imports reject duplicate fields and malformed UTF-8. [Change record](./runs/changes/2026-10-11-194426-private-review-file-safety-b642e0c4.json).
+- **Not claimed.** 88 full requirements remain open. Integrated browser checks, source-bound revalidation and the next publication are pending. No human ratings, independent labels, sampling acceptance, new endpoint or collection.
+
+
 ### 2026-10-11-193012-pii-compact-current-verification-c7127b7a
 
 Recorded 2026-10-11T19:30:12.916734+00:00 · Contributor: Codex · change

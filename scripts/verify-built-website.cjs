@@ -8,6 +8,7 @@ const run=(command,args,env=process.env)=>new Promise((resolve,reject)=>{
  child.on('error',reject);child.on('exit',(code,signal)=>code===0?resolve():reject(Error('Website check failed: '+(signal||code))));
 });
 async function main(){
+ await run(process.execPath,['--test','tests/blind-review-files.cjs']);
  await run(process.platform==='win32'?'npm.cmd':'npm',['run','build:site']);
  const rules=parseHeaders(fs.readFileSync(path.join(dist,'_headers'),'utf8'));
  const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.wasm':'application/wasm','.woff2':'font/woff2','.txt':'text/plain','.md':'text/plain','.py':'text/plain'};

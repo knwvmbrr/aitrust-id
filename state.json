@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T19:30:12.868270+00:00",
+  "updated": "2026-10-11T19:50:00.470146+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://1e246e84.aitrust-id.pages.dev",
+    "deployment_url": "https://00a5e183.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-agreement-publication.json",
+    "publication_evidence": "runs/2026-10-11-pii-labels-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -296,7 +296,7 @@
     "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
+    "source_commit": "104b5e347c37a0d5bad464515391087dfdee6947",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1867 current Python engineering checks; no independent tag or human route acceptance.",
+  "python_tests_scope": "1867 tests passed on the preceding PII source; full private-review source verification is pending.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T19:23:11.937023+00:00",
+    "audited_at": "2026-10-11T19:47:23.935934+00:00",
     "completed_records": 114,
     "open_records": 88,
     "records_preserved": 202,
@@ -732,17 +732,17 @@
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-pipeline-publication.json",
+    "publication": "runs/2026-10-11-pii-labels-publication.json",
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/redaction-recognition-plan.md",
+    "latest_increment": "docs/blind-review-privacy-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
     "target_start_open_records": 91,
     "target_remaining_closures": 38,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
@@ -964,7 +964,7 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current_source_and_publication_checks_pass",
+    "status": "source_changed_revalidation_pending",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-11-pii-labels-current-boundaries.json",
     "source_files": 504,
@@ -1034,7 +1034,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T19:30:12.868270+00:00",
+  "updated_at": "2026-10-11T19:50:00.470146+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1617,7 +1617,7 @@
     "actual_user_data_used": false,
     "production_changed": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "current_capabilities": "runs/2026-10-11-pii-labels-current-capabilities.json",
     "website_execution": "runs/2026-10-11-pii-labels-bound-website.json",
     "current_boundaries": "runs/2026-10-11-pii-labels-current-boundaries.json",
@@ -1633,6 +1633,40 @@
     "source_revalidation_pending": false,
     "focused_python_controls": 175,
     "focused_node_controls": 53,
-    "bookkeeping_failure": "runs/2026-10-11-pii-labels-current-python.json"
+    "bookkeeping_failure": "runs/2026-10-11-pii-labels-current-python.json",
+    "publication": "runs/2026-10-11-pii-labels-publication.json",
+    "protected_merge": "runs/2026-10-11-pii-labels-protected-merge.json",
+    "published_source": "104b5e347c37a0d5bad464515391087dfdee6947"
+  },
+  "blind_review_privacy": {
+    "status": "mac_linux_cli_and_browser_integration_pass_source_binding_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-108",
+      "N-015"
+    ],
+    "architecture": "docs/blind-review-privacy-plan.md",
+    "mac_cli": "runs/2026-10-11-blind-private-arguments-mac-cli.json",
+    "linux_cli": "runs/2026-10-11-blind-private-arguments-linux-current.json",
+    "focused_python_controls": 62,
+    "focused_node_controls": 34,
+    "synthetic_only": true,
+    "human_ratings": false,
+    "independence_verified": false,
+    "sampling_accepted": false,
+    "release_assessed": false,
+    "publication_pending": true,
+    "requirements_closed": 0,
+    "linux_focused_security_controls": 56,
+    "browser_execution": "runs/2026-10-11-blind-private-arguments-browser.json",
+    "device_execution": "runs/2026-10-11-blind-private-device.json",
+    "browser_engines": 2,
+    "browser_themes": 4,
+    "reviewer_downloads": 8,
+    "actual_browser_cli_comparisons": 4,
+    "strict_device_import_refusals_per_engine": 7,
+    "source_revalidation_pending": true,
+    "actual_cli_controls_per_host": 18,
+    "private_argument_echo_refused": true
   }
 }

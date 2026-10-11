@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-11T19:23:11.937023+00:00",
+  "audited_at": "2026-10-11T19:47:23.935934+00:00",
   "client_date": "2026-10-11",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3627,10 +3627,11 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T19:47:23.935934+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 bounded private packet files and strict phone parser; 60 focused Python, 34 Node and 32 Mac/Linux CLI controls, 2026-10-11T19:44:26.208892+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3643,7 +3644,13 @@
       "evidence": [
         "runs/2026-10-09-scope-completion-checks.json",
         "tests/test_blind_review.py",
-        "docs/PS-reviewer-start.md"
+        "docs/PS-reviewer-start.md",
+        "docs/blind-review-privacy-plan.md",
+        "runs/2026-10-11-blind-private-current-mac-cli.json",
+        "runs/2026-10-11-blind-private-linux-cli.json",
+        "runs/2026-10-11-blind-private-linux-current.json",
+        "runs/2026-10-11-blind-private-browser.json",
+        "runs/2026-10-11-blind-private-device.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
@@ -7874,16 +7881,18 @@
       "id": "N-015",
       "kind": "requirement",
       "title": "Blind PS review from a phone",
-      "percent_complete": 60,
+      "percent_complete": 80,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T19:47:23.935934+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 bounded private packet files and strict phone parser; 60 focused Python, 34 Node and 32 Mac/Linux CLI controls, 2026-10-11T19:44:26.208892+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -7891,12 +7900,18 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not.",
+      "next_fix": "Complete the identified physical iPhone 14 Plus owner-run review task and the independently coordinated representative holdout with two real blind reviewers and human adjudication. Current actual frozen-file browser downloads and private CLI comparisons are demonstrated using invented ratings only.",
       "next_owner": "Michael and independent reviewers",
       "evidence": [
         "runs/2026-10-09-scope-completion-checks.json",
         "tests/test_blind_review.py",
-        "docs/PS-reviewer-start.md"
+        "docs/PS-reviewer-start.md",
+        "docs/blind-review-privacy-plan.md",
+        "runs/2026-10-11-blind-private-current-mac-cli.json",
+        "runs/2026-10-11-blind-private-linux-cli.json",
+        "runs/2026-10-11-blind-private-linux-current.json",
+        "runs/2026-10-11-blind-private-browser.json",
+        "runs/2026-10-11-blind-private-device.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [

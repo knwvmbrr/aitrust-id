@@ -6,9 +6,20 @@ import json
 import os
 from pathlib import Path
 import random
+import re
+from io import StringIO
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from tools.blind_review_io import PacketError, directory, member, source as private_source, create as private_create
+from protocol.evidence import unique, reject, finite
+INPUT_LIMIT = 10_000_000
+MEMBER_LIMIT = 16_000_000
+PACKET_LIMIT = 32_000_000
+PHONE_LIMIT = 10_000_000
+MANIFEST_LIMIT = 64_000
+NOTE = 'Hashes freeze bytes; they do not prove reviewer independence or representative sampling.'
 LABELS = {'positive', 'negative', 'ambiguous'}
 FIELDS = ['id', 'text', 'category', 'source', 'label', 'reason']
 
@@ -17,27 +28,64 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def freeze(source, destination):
-    raw = Path(source).read_bytes()
-    if len(raw) > 10_000_000:
-        raise ValueError('Review input exceeds 10 MB')
-    rows = []
-    for line in raw.decode('utf-8').splitlines():
-        row = json.loads(line)
-        if set(row) != {'id', 'text', 'category', 'source'}:
-            raise ValueError('Each item needs only id, text, category and source; no labels or predictions')
-        if any(not isinstance(value, str) or not value.strip() for value in row.values()):
-            raise ValueError('All item fields must be nonempty strings')
-        if len(row['text']) > 200_000 or len(row['id']) > 100:
-            raise ValueError('Item exceeds checker or identifier limit')
-        rows.append(row)
-    if not 1 <= len(rows) <= 1000 or len({row['id'] for row in rows}) != len(rows):
+def decoded(raw):
+    try:
+        text=raw.decode('utf-8', errors='strict')
+        if '\x00' in text:raise ValueError('Review text contains a forbidden control')
+        return text
+    except UnicodeError:
+        raise ValueError('Review text must be valid UTF-8') from None
+
+
+def strict_json(raw):
+    try:
+        value=json.loads(decoded(raw),object_pairs_hook=unique,parse_constant=reject)
+        finite(value)
+        return value
+    except (RecursionError,UnicodeError):
+        raise ValueError('Review JSON exceeds safe text or nesting limits') from None
+
+
+def item(row):
+    if not isinstance(row,dict) or set(row)!={'id','text','category','source'}:
+        raise ValueError('Each item needs only id, text, category and source; no labels or predictions')
+    limits={'id':100,'text':200_000,'category':1000,'source':1000}
+    if any(not isinstance(v,str) or not v.strip() or len(v)>limits[k] or '\x00' in v for k,v in row.items()):
+        raise ValueError('Item fields must be nonempty text within their limits')
+    finite(row)
+    return row
+
+
+def parse_items(raw):
+    rows=[item(strict_json(line.encode('utf-8'))) for line in decoded(raw).splitlines()]
+    if not 1<=len(rows)<=1000 or len({r['id'] for r in rows})!=len(rows):
         raise ValueError('Require 1–1000 uniquely identified items')
-    destination = Path(destination).expanduser().absolute()
-    if destination.resolve().is_relative_to(ROOT):
-        raise ValueError('Keep blind review material outside the public repository')
-    # Never overwrite an existing packet or follow a destination symlink.
-    destination.mkdir(mode=0o700, parents=False, exist_ok=False)
+    return rows
+
+
+def spreadsheet(value):
+    if value[:1] in '=+-@\t\r\n' or value.lstrip(' \t\r\n')[:1] in '=+-@':
+        return "'"+value
+    return value
+
+
+def validate_manifest(value):
+    hashes={'input_sha256','dataset_sha256','method_sha256','gates_sha256','protocol_sha256'}
+    flags={'independence_verified','sampling_accepted','predictions_run','release_assessed'}
+    if (not isinstance(value,dict) or set(value)!={'format','item_count','note',*hashes,*flags}
+            or value['format']!='ai-trust-id-blind-ps-review/v1' or value['note']!=NOTE
+            or type(value['item_count']) is not int or not 1<=value['item_count']<=1000
+            or any(value[k] is not False for k in flags)
+            or any(not isinstance(value[k],str) or not re.fullmatch('[a-f0-9]{64}',value[k]) for k in hashes)):
+        raise ValueError('Frozen review manifest is invalid; no independent validation accepted')
+    return value
+
+
+def freeze(source, destination):
+    raw = private_source(source, ROOT, INPUT_LIMIT)
+    rows = parse_items(raw)
+    if len({spreadsheet(r['id']) for r in rows})!=len(rows):
+        raise ValueError('Spreadsheet identifiers collide; choose distinct opaque item IDs')
     items = ''.join(json.dumps(row, ensure_ascii=False) + '\n' for row in rows).encode()
     files = {'items.jsonl': items}
     for reviewer in (1, 2):
@@ -45,12 +93,11 @@ def freeze(source, destination):
         random.SystemRandom().shuffle(order)
         # CSV formula injection must not execute when opened in a spreadsheet.
         # A leading apostrophe is part of the blind export, not the frozen text.
-        from io import StringIO
         output = StringIO(newline='')
         writer = csv.DictWriter(output, fieldnames=FIELDS)
         writer.writeheader()
         for row in order:
-            writer.writerow({**{k: "'" + v if v[:1] in '=+-@\t\r' else v
+            writer.writerow({**{k: spreadsheet(v)
                                for k, v in row.items()}, 'label': '', 'reason': ''})
         files[f'reviewer-{reviewer}.csv'] = output.getvalue().encode()
     manifest = {'format': 'ai-trust-id-blind-ps-review/v1', 'item_count': len(rows),
@@ -60,7 +107,7 @@ def freeze(source, destination):
         'protocol_sha256': sha((ROOT/'docs/independent-review.md').read_bytes()),
         'independence_verified': False, 'sampling_accepted': False,
         'predictions_run': False, 'release_assessed': False,
-        'note': 'Hashes freeze bytes; they do not prove reviewer independence or representative sampling.'}
+        'note': NOTE}
     files['manifest.json'] = (json.dumps(manifest, indent=2) + '\n').encode()
     for reviewer in (1, 2):
         order = list(rows)
@@ -69,30 +116,34 @@ def freeze(source, destination):
                 **{key: manifest[key] for key in ('dataset_sha256', 'method_sha256', 'gates_sha256', 'protocol_sha256')},
                 'items': [{**row, 'label': None, 'reason': ''} for row in order]}
         files[f'reviewer-{reviewer}.json'] = (json.dumps(form, ensure_ascii=False, indent=2)+'\n').encode()
-    for name, data in files.items():
-        with os.fdopen(os.open(destination/name, os.O_WRONLY|os.O_CREAT|os.O_EXCL, 0o600), 'wb') as handle:
-            handle.write(data)
+    if (any(len(raw)>(PHONE_LIMIT if name.startswith('reviewer-') and name.endswith('.json') else MANIFEST_LIMIT if name=='manifest.json' else MEMBER_LIMIT) for name,raw in files.items()) or sum(map(len,files.values()))>PACKET_LIMIT):
+        raise ValueError('Prepared packet exceeds the safe output byte limit')
+    private_create(destination, ROOT, files)
     return manifest
 
 
 def compare(packet, format='csv'):
-    packet = Path(packet)
-    manifest = json.loads((packet/'manifest.json').read_text())
-    items = (packet/'items.jsonl').read_bytes()
+    if format not in ('csv','json'):raise ValueError('Unsupported review format')
+    with directory(packet, ROOT) as packet_fd:
+        raw_manifest=member(packet_fd,'manifest.json',MANIFEST_LIMIT)
+        items=member(packet_fd,'items.jsonl',MEMBER_LIMIT)
+        forms={i:member(packet_fd,f'reviewer-{i}.'+format,PHONE_LIMIT if format=='json' else MEMBER_LIMIT) for i in (1,2)}
+    manifest = validate_manifest(strict_json(raw_manifest))
     if sha(items) != manifest['dataset_sha256']:
         raise ValueError('Frozen dataset changed')
     if sha((ROOT/'services/evaluator/app.py').read_bytes()) != manifest['method_sha256']:
         raise ValueError('Detector changed after freeze; start a new review')
     if sha((ROOT/'eval/gates.yaml').read_bytes()) != manifest['gates_sha256'] or sha((ROOT/'docs/independent-review.md').read_bytes()) != manifest['protocol_sha256']:
         raise ValueError('Review policy changed after freeze')
-    rows = {row['id']: row for row in map(json.loads, items.decode().splitlines())}
+    rows = {row['id']: row for row in parse_items(items)}
+    if len(rows)!=manifest['item_count']:raise ValueError('Frozen item count changed')
     reviews = []
     for reviewer in (1, 2):
         labels = {}
         if format == 'json':
-            form = json.loads((packet/f'reviewer-{reviewer}.json').read_text())
+            form = strict_json(forms[reviewer])
             keys = {'format','reviewer_slot','dataset_sha256','method_sha256','gates_sha256','protocol_sha256','items'}
-            if set(form) != keys or form['format'] != 'ai-trust-id-blind-ps-labels/v1' or form['reviewer_slot'] != reviewer:
+            if not isinstance(form,dict) or set(form) != keys or type(form['reviewer_slot']) is not int or form['format'] != 'ai-trust-id-blind-ps-labels/v1' or form['reviewer_slot'] != reviewer:
                 raise ValueError('Review identity changed')
             for key in ('dataset_sha256','method_sha256','gates_sha256','protocol_sha256'):
                 if form[key] != manifest[key]:
@@ -102,27 +153,37 @@ def compare(packet, format='csv'):
             for row in form['items']:
                 if not isinstance(row, dict) or set(row) != set(FIELDS):
                     raise ValueError('Review has unexpected fields')
+                item({k:row[k] for k in ('id','text','category','source')})
                 matched = row['id']
                 if matched not in rows or matched in labels or any(row[k] != rows[matched][k] for k in ('id','text','category','source')):
                     raise ValueError('Review has changed, duplicate or unknown items')
-                if row['label'] not in LABELS or not isinstance(row['reason'],str) or not row['reason'].strip() or len(row['reason']) > 2000:
+                if not isinstance(row['label'],str) or row['label'] not in LABELS or not isinstance(row['reason'],str) or not row['reason'].strip() or len(row['reason']) > 2000 or '\x00' in row['reason']:
                     raise ValueError('Every item needs positive/negative/ambiguous and a reason')
                 labels[matched] = row['label']
         else:
-            with (packet/f'reviewer-{reviewer}.csv').open(newline='') as handle:
-                for row in csv.DictReader(handle):
-                    # Undo only the exact spreadsheet escape used in this packet.
-                    matched = None
-                    for item in rows.values():
-                        escaped = {k: "'"+v if v[:1] in '=+-@\t\r' else v for k,v in item.items()}
-                        if all(row.get(k) == v for k,v in escaped.items()):
-                            matched = item['id']
-                            break
-                    if matched is None or matched in labels:
+            previous_limit=csv.field_size_limit(200_001)
+            try:
+                reader=csv.DictReader(StringIO(decoded(forms[reviewer]),newline=''))
+                if reader.fieldnames!=FIELDS:raise ValueError('CSV headers must match the frozen review format')
+                escaped={spreadsheet(r['id']):r for r in rows.values()}
+                if len(escaped)!=len(rows):raise ValueError('Spreadsheet identifiers collide; use phone JSON forms')
+                for row in reader:
+                    if set(row)!=set(FIELDS):raise ValueError('CSV contains missing or extra fields')
+                    finite(row)
+                    original=escaped.get(row['id'])
+                    matched=original['id'] if original is not None else None
+                    if (matched is None or matched in labels
+                            or any(row.get(k)!=spreadsheet(v) for k,v in original.items())):
                         raise ValueError('Review has changed, duplicate or unknown items')
-                    if row.get('label') not in LABELS or not row.get('reason', '').strip():
+                    if (row.get('label') not in LABELS or not isinstance(row.get('reason'),str)
+                            or not row['reason'].strip() or len(row['reason'])>2000 or '\x00' in row['reason']):
                         raise ValueError('Every item needs positive/negative/ambiguous and a reason')
-                    labels[matched] = row['label']
+                    labels[matched]=row['label']
+                    if len(labels)>len(rows):raise ValueError('Review contains too many items')
+            except csv.Error:
+                raise ValueError('Review CSV exceeds its field or syntax limits') from None
+            finally:
+                csv.field_size_limit(previous_limit)
         if set(labels) != set(rows):
             raise ValueError('Review omits items')
         reviews.append(labels)
@@ -134,8 +195,12 @@ def compare(packet, format='csv'):
             'release_assessed':False, 'next':'Record independent reviewer attestations, sampling acceptance and adjudication before evaluation.'}
 
 
+class PrivateReviewParser(argparse.ArgumentParser):
+    def error(self, _message):
+        self.exit(2, 'Review command failed. Use freeze or compare as documented. No validation accepted.\n')
+
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = PrivateReviewParser(description=__doc__)
     commands = parser.add_subparsers(dest='command', required=True)
     create = commands.add_parser('freeze')
     create.add_argument('source', type=Path)
@@ -146,7 +211,7 @@ def main():
     args = parser.parse_args()
     try:
         result = freeze(args.source, args.destination) if args.command == 'freeze' else compare(args.packet, args.format)
-    except (OSError, ValueError, KeyError, TypeError):
+    except (OSError, ValueError, KeyError, TypeError, UnicodeError, RecursionError, RuntimeError):
         print('Review operation failed. Check input format, unique packet path, frozen hashes and completed labels. No validation accepted.', file=sys.stderr)
         return 1
     print(json.dumps(result, indent=2))
