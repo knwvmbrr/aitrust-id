@@ -72,7 +72,8 @@ PATTERNS += ('deploy/research/metadata-development.sql', 'scripts/verify-metadat
 PATTERNS += ('tools/quantitative_observations.py', 'scripts/quantitative-observations.py',
              'scripts/verify-quantitative-observations.py', 'tests/test_quantitative_observations.py')
 PATTERNS += ('scripts/measure-pipeline-performance.py', 'tests/test_pipeline_performance.py',
-             'tests/pipeline-timing.cjs', 'runs/2026-10-11-staging-pipeline-performance.json')
+             'tests/pipeline-timing.cjs', 'runs/2026-10-11-staging-pipeline-performance.json',
+             'runs/2026-10-11-staging-pipeline-identity-checked.json')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-11T17:26:41.852967+00:00",
+  "audited_at": "2026-10-11T17:53:04.173163+00:00",
   "client_date": "2026-10-11",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3926,7 +3926,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-11T17:26:41.852967+00:00",
+      "audited_at": "2026-10-11T17:53:04.173163+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex",
@@ -3951,9 +3951,11 @@
         "tests/pipeline-timing.cjs",
         "runs/2026-10-11-staging-pipeline-performance.json",
         "runs/2026-10-11-staging-pipeline-source-witness.json",
-        "runs/2026-10-11-pipeline-benchmark-expectation-failure.json"
+        "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
+        "runs/2026-10-11-staging-pipeline-identity-checked.json",
+        "runs/2026-10-11-staging-pipeline-identity-witness.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation The corrected benchmark validates the full self-reported pipeline identity on every response, matches each selected service source and rejects drift; this is not cryptographic remote attestation. The original evaluator-only run remains historical.",
       "required_acceptance": [
         "Expand timing to declared larger input sizes, full service routes and physical phones; agree route-specific budgets and test enforcement before accepting the historical 100 ms target."
       ],

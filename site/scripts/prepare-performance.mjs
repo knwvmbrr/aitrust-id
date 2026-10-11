@@ -9,8 +9,8 @@ const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const
 const input=JSON.parse(fs.readFileSync(path.join(root,'eval/tag-performance-evidence.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 validateEvidence(input,hash);
-const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-performance.json'),'utf8'));
-validatePipelineTiming(timing,hash);
+const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-identity-checked.json'),'utf8'));
+validatePipelineTiming(timing,hash,s=>crypto.createHash('sha256').update(s).digest('hex'));
 const data={format:'ai-trust-id-tag-performance/v1',records:allTags.map(tag=>performanceFor(tag,input,timing))};
 fs.writeFileSync(path.join(site,'src/tag-performance.json'),JSON.stringify(data,null,2)+'\n');
 const publicDir=path.join(site,'public/reference');fs.mkdirSync(publicDir,{recursive:true});

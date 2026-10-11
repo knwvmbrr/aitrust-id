@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-175341-timing-runtime-identity-receipts-7078eb45",
+  "recorded_at": "2026-10-11T17:53:41.800130+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b9e9a933019b8132b6e1aaef7a4301056ec8b37",
+  "changed": "Recorded the corrected staging source-identity measurement, refreshed F-113 evidence without closing it, and retained four newly executed source-capability receipts before the next website build.",
+  "proves": "All four service/protocol/extension capabilities pass after the corrected timing configuration. The actual measured report is admitted by 30 display controls using checked canonical gateway/redactor digests; the old evaluator-only report is refused.",
+  "limits": "The website and whole suite are rerun before pushing this review correction; self-reported identity is not remote attestation. The scope count remains 114 complete and 88 open.",
+  "scope_ids": [
+    "F-113"
+  ],
+  "files": {
+    "docs/pipeline-performance-plan.md": "082e322f46146c1a4effa14cc0767ac122970ad1bdd0d160f2c6a6ae5a060880",
+    "docs/pipeline-performance.md": "dc47dba46ab3d5515ca6802adf89bdbea24d3128a324384484b2512c37dd1dab",
+    "docs/scope-progress.json": "12df1341aecec5380e96caabe6f683bb0db93cf233b464890c96f560de968694",
+    "docs/scope-progress.md": "f66fbeb907e0c91dce0ec1f96011e38d1681b9e603bc73ab8ae97fb04192b64b",
+    "eval/revalidation.json": "ed3f3425cfb9a87095c07a382965a3efaeb0bd219ddd29dd8f6eba1ff59f7399",
+    "runs/2026-10-11-pipeline-identity-extension-current.json": "0aa4aa7852595d147fa57fe83ab4322799a55a00aab8ce27e611b76519c59123",
+    "runs/2026-10-11-pipeline-identity-pii-current.json": "8107661f4ef106e1d240dc7ebf3198150e7bff259c09e87c7534c02584740072",
+    "runs/2026-10-11-pipeline-identity-protocol-current.json": "f64cf3435573e97605083c4b93a0614f2e03f8228cb92e7711ae1ecfb00cfec6",
+    "runs/2026-10-11-pipeline-identity-ps-current.json": "9741d3d4774c9abff0a6b5788a6abd2149904e7faf94c06d6883e21f7f672c36",
+    "runs/2026-10-11-staging-pipeline-identity-checked.json": "bc4fa49ede523420ee96ecb6ed826abe188a523f41e8e44442799ab24dedeb4c",
+    "runs/2026-10-11-staging-pipeline-identity-witness.json": "03bc8cd06f7dc26e74635c610961bcea23677902200e47e3c68c3dd9d089c2c0",
+    "scripts/measure-pipeline-performance.py": "babb06b7afb5b030c4529b40b0e97a705430bc46fee4b1c6b658612ae6d57fab",
+    "scripts/verify-route-boundaries.py": "84b04690d9dfb7d440b5e0ee4b2b647a569f46fcf84dec215d2f17269d9cf4d6",
+    "site/index.html": "63d24a3b93069dee6eb00f433dcad459ac4a655b4e0130c963b0518c6c25e0e6",
+    "site/public/reference/pipeline-performance.json": "af9414627cca178e1cd9fdb8d9eae35655c582699a5106e0c36b1b4074b3ee13",
+    "site/public/reference/public-scope.json": "5d3df25c6908655de0a61c81812cb7d0410adeb84c47e4d1185f61981a1bee82",
+    "site/public/reference/tag-performance.json": "f04e0adc5f68fb5781b50e476756fdd61cadb14581c69a7cc0434260c226d688",
+    "site/scripts/prepare-performance.mjs": "287b042637b9250b7eda658f4cb38e13269de1a73335d7e35a4ea129b38bebb9",
+    "site/src/pipeline-timing-model.js": "3e5feb2b4088a1022b84b2e5c6aeb3c192c221c5dc27eb36cd11b0956ce9e0cc",
+    "site/src/public-scope.json": "5d3df25c6908655de0a61c81812cb7d0410adeb84c47e4d1185f61981a1bee82",
+    "site/src/scope-manifest.json": "58438d03910c764c9995444533869c7533ceb46b3871448a3a2d6782eba79cb4",
+    "site/src/tag-performance.json": "f04e0adc5f68fb5781b50e476756fdd61cadb14581c69a7cc0434260c226d688",
+    "state.json": "34e0d219260088c51aa0fedf24b743346f7121d22eb7605a2f2ad86cf707bd00",
+    "tests/pipeline-timing.cjs": "137e375bdd3ba2be1298c5a6152925d38b1eb90e57deb47df5fdaf931bddc255",
+    "tests/test_pipeline_performance.py": "b6d9f9683edb4f0e7aabb7ca86540880560bcaae09b0c2d73c8497200dc63b71"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-pipeline-identity-ps-current.json",
+      "sha256": "9741d3d4774c9abff0a6b5788a6abd2149904e7faf94c06d6883e21f7f672c36"
+    },
+    {
+      "path": "runs/2026-10-11-pipeline-identity-pii-current.json",
+      "sha256": "8107661f4ef106e1d240dc7ebf3198150e7bff259c09e87c7534c02584740072"
+    },
+    {
+      "path": "runs/2026-10-11-pipeline-identity-protocol-current.json",
+      "sha256": "f64cf3435573e97605083c4b93a0614f2e03f8228cb92e7711ae1ecfb00cfec6"
+    },
+    {
+      "path": "runs/2026-10-11-pipeline-identity-extension-current.json",
+      "sha256": "0aa4aa7852595d147fa57fe83ab4322799a55a00aab8ce27e611b76519c59123"
+    },
+    {
+      "path": "runs/2026-10-11-staging-pipeline-identity-checked.json",
+      "sha256": "bc4fa49ede523420ee96ecb6ed826abe188a523f41e8e44442799ab24dedeb4c"
+    }
+  ],
+  "checks": []
+}

@@ -66,9 +66,21 @@ class SyntheticOpener:
             tags.append({'code':'PS','state':'asserted','confidence':.97,'floor':.7,'signals':[{'id':'sig.piped_installer.v3','score':.97,'spans':[[0,10]]}]})
         if '@example.invalid' in text:
             tags.append({'code':'PII_REDACTED','state':'asserted','confidence':1,'floor':1,'signals':[{'id':'presidio.entity.v1','score':1,'spans':[[0,10]]}]})
+        from protocol.replay_identity import pipeline_identity,redactor_identity
+        hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in module.INPUT_SOURCES}
+        redactor=redactor_identity({'python':'3.12.14','platform_machine':'arm64',
+            'dependency_records':{'synthetic-package':'a'*64},'dependencies':{'synthetic-package':'1.0.0'},
+            'model_manifest_sha256':'b'*64,'sources':{k:hashes[p] for k,p in module.REDACTOR_SOURCE_KEYS.items()},
+            'recognizer_configuration_sha256':'c'*64,'recognizer_count':1})
+        identity=pipeline_identity({'gateway_source_sha256':hashes['services/gateway/app.py'],
+            'normalization_source_sha256':hashes['protocol/normalization.py'],
+            'normalization_data_sha256':hashes['protocol/unicode15-data.json'],'rule_floor':.7,'redactor':redactor})
         record={'assertion_id':'eadf909b-7723-4431-b200-1a4cb56c538b','spec_version':'0.1.0',
             'subject':{'sha256':hashlib.sha256(text.encode()).hexdigest(),'char_len':len(text),'origin_host':'unknown','captured_at':'2026-10-11T00:00:00Z','modality':'text'},
-            'tags':tags,'abstentions':[],'evaluator':{'models':[{'name':'rules-only','sha256':hashlib.sha256((ROOT/'services/evaluator/app.py').read_bytes()).hexdigest()}],'calibration_id':'synthetic','latency_ms':1}}
+            'tags':tags,'abstentions':[],'evaluator':{'models':[{'name':'rules-only','sha256':hashes['services/evaluator/app.py']},
+                {'name':'presidio-redaction','sha256':redactor['sha256'],'revision':redactor['version']},
+                {'name':'gateway-pipeline','sha256':identity['sha256'],'revision':identity['version']}],
+                'preprocessing':identity,'calibration_id':'synthetic','latency_ms':1}}
         if self.corrupt:self.corrupt(record)
         return Response(json.dumps(record).encode())
 
@@ -83,6 +95,8 @@ def test_actual_client_protocol_measures_all_profiles_without_private_reports(tm
     for secret in ('synthetic_private_key_123456789','http://127.0.0.1',str(path),'synthetic-observer@example.invalid','assertion_id'):
         assert secret not in raw
     assert report['accepted_latency_budget_ms'] is None and report['first_observed_is_not_service_cold_start']
+    assert report['runtime_identity_verified_on_each_response']
+    assert report['runtime_identity']['configuration']['redactor']['configuration']['sources']['app']==hashlib.sha256((ROOT/'services/anonymizer/app.py').read_bytes()).hexdigest()
 
 
 @pytest.mark.parametrize('corrupt',[
@@ -121,3 +135,63 @@ def test_configured_url_redaction_can_coexist_with_command_observation(tmp_path,
     report=module.measure(path,'aitrust-staging',SyntheticOpener(redacted_url))
     assert report['pass'] and report['command_profile_allows_configured_url_redaction']
     assert all('warm_evaluator' not in row and 'warm_reported_pipeline' in row for row in report['rows'])
+
+
+@pytest.mark.parametrize('field',['gateway_source_sha256','normalization_source_sha256','normalization_data_sha256'])
+def test_rehashed_stale_pipeline_sources_refused(tmp_path,monkeypatch,field):
+    from protocol.replay_identity import pipeline_identity
+    def stale(record):
+        config=record['evaluator']['preprocessing']['configuration'];config[field]='a'*64
+        record['evaluator']['preprocessing']=pipeline_identity(config)
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    result=module.measure(private_token(tmp_path),'aitrust-staging',SyntheticOpener(stale))
+    assert result['pass'] is False and result['failure_code']=='pipeline_source_changed'
+
+
+@pytest.mark.parametrize('field',list(module.REDACTOR_SOURCE_KEYS))
+def test_rehashed_stale_redactor_sources_refused(tmp_path,monkeypatch,field):
+    from protocol.replay_identity import pipeline_identity,redactor_identity
+    def stale(record):
+        config=record['evaluator']['preprocessing']['configuration'];red=config['redactor']['configuration'];red['sources'][field]='a'*64
+        config['redactor']=redactor_identity(red);record['evaluator']['preprocessing']=pipeline_identity(config)
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    result=module.measure(private_token(tmp_path),'aitrust-staging',SyntheticOpener(stale))
+    assert result['pass'] is False and result['failure_code']=='pipeline_source_changed'
+
+
+@pytest.mark.parametrize('change',[
+    lambda r:r['evaluator'].pop('preprocessing'),
+    lambda r:r['evaluator']['preprocessing'].__setitem__('sha256','a'*64),
+    lambda r:r['evaluator']['preprocessing']['configuration']['redactor'].__setitem__('sha256','a'*64),
+])
+def test_missing_or_corrupt_identity_refused(tmp_path,monkeypatch,change):
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    result=module.measure(private_token(tmp_path),'aitrust-staging',SyntheticOpener(change))
+    assert result['pass'] is False and result['failure_code']=='pipeline_identity_invalid'
+
+
+@pytest.mark.parametrize('change',[
+    lambda r:r['evaluator']['models'].pop(),
+    lambda r:r['evaluator']['models'][1].__setitem__('sha256','a'*64),
+    lambda r:r['evaluator']['models'][2].__setitem__('revision','different'),
+    lambda r:r['evaluator']['models'][2].__setitem__('name','presidio-redaction'),
+])
+def test_model_list_must_match_validated_identities(tmp_path,monkeypatch,change):
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    result=module.measure(private_token(tmp_path),'aitrust-staging',SyntheticOpener(change))
+    assert result['pass'] is False and result['failure_code']=='pipeline_models_invalid'
+
+
+def test_each_response_must_keep_same_redactor_configuration(tmp_path,monkeypatch):
+    from protocol.replay_identity import pipeline_identity,redactor_identity
+    calls=0
+    def drift(record):
+        nonlocal calls
+        calls+=1
+        if calls==1:return
+        config=record['evaluator']['preprocessing']['configuration'];red=config['redactor']['configuration'];red['recognizer_count']=2
+        config['redactor']=redactor_identity(red);identity=pipeline_identity(config);record['evaluator']['preprocessing']=identity
+        record['evaluator']['models'][1].update(sha256=config['redactor']['sha256']);record['evaluator']['models'][2].update(sha256=identity['sha256'])
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    result=module.measure(private_token(tmp_path),'aitrust-staging',SyntheticOpener(drift))
+    assert result['pass'] is False and result['failure_code']=='pipeline_identity_changed'

@@ -2,7 +2,8 @@
 export const timingSources=['services/evaluator/app.py','services/gateway/app.py','services/anonymizer/app.py',
  'services/anonymizer/model_identity.py','protocol/normalization.py','protocol/unicode15-data.json',
  'spec/assertion.schema.json','protocol/assertions.py','protocol/evidence.py','protocol/reports.py',
- 'scripts/measure-pipeline-performance.py'];
+ 'protocol/replay_identity.py','services/anonymizer/replay_metadata.py',
+ 'services/anonymizer/requirements.lock','scripts/measure-pipeline-performance.py'];
 const sizes=[256,2000,8000,20000],forms=['ordinary','command','redaction_command'];
 const finite=v=>typeof v==='number'&&Number.isFinite(v)&&v>=0;
 const exact=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).sort().join('|')===[...keys].sort().join('|');
@@ -11,21 +12,51 @@ function checkSummary(value){
  const ordered=[...value.durations_ms].sort((a,b)=>a-b);
  if(value.p50_ms!==ordered[9]||value.p95_ms!==ordered[18]||value.max_ms!==ordered[19])throw Error('Service timing summary differs from observations');
 }
-export function validatePipelineTiming(data,readHash){
+// Match the existing Python identity canonicalization, including its one 0.0 field.
+export function canonicalTimingIdentity(value,key=''){
+ if(key==='analysis_score_threshold'&&value===0)return '0.0';
+ if(value&&typeof value==='object'&&!Array.isArray(value))return '{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonicalTimingIdentity(value[k],k)).join(',')+'}';
+ return JSON.stringify(value);
+}
+const digestPattern=/^[a-f0-9]{64}$/;
+function validateRuntimeIdentity(identity,sources,digest){
+ if(typeof digest!=='function'||!exact(identity,['version','sha256','configuration'])||identity.version!=='local-text-pipeline/v1'||!digestPattern.test(identity.sha256))throw Error('Missing measured pipeline identity');
+ const c=identity.configuration;
+ if(!exact(c,['gateway_source_sha256','normalization_source_sha256','normalization_data_sha256','normalization_id','normalization_stages','asserted_rule_tag','rule_floor','procedural_tag','redactor'])||
+  c.gateway_source_sha256!==sources['services/gateway/app.py']||c.normalization_source_sha256!==sources['protocol/normalization.py']||c.normalization_data_sha256!==sources['protocol/unicode15-data.json']||
+  c.normalization_id!=='NFC-Unicode-15.0.0/v1'||c.normalization_stages!=='before-redaction-and-before-evaluation'||c.asserted_rule_tag!=='PS'||c.rule_floor!==.7||c.procedural_tag!=='PII_REDACTED')throw Error('Different measured gateway pipeline');
+ const r=c.redactor;
+ if(!exact(r,['version','sha256','configuration'])||r.version!=='presidio-offline-en/v1'||!digestPattern.test(r.sha256))throw Error('Missing measured redactor identity');
+ const v=r.configuration;
+ if(!exact(v,['language','python','platform_machine','dependency_records','model_name','model_version','model_manifest_sha256','sources','dependencies','recognizer_configuration_sha256','recognizer_count','analysis_score_threshold','email_suffix_refresh','anonymization'])||
+  v.language!=='en'||!/^[0-9]+\.[0-9]+\.[0-9]+$/.test(v.python)||!['x86_64','aarch64','arm64','AMD64'].includes(v.platform_machine)||
+  v.model_name!=='en_core_web_sm'||v.model_version!=='3.8.0'||!digestPattern.test(v.model_manifest_sha256)||!digestPattern.test(v.recognizer_configuration_sha256)||
+  !Number.isSafeInteger(v.recognizer_count)||v.recognizer_count<1||v.recognizer_count>128||v.analysis_score_threshold!==0||v.email_suffix_refresh!==false||v.anonymization!=='presidio-default-replace')throw Error('Invalid measured redactor configuration');
+ const sourceKeys={app:'services/anonymizer/app.py',model_loader:'services/anonymizer/model_identity.py',requirements_lock:'services/anonymizer/requirements.lock',identity_contract:'protocol/replay_identity.py',identity_builder:'services/anonymizer/replay_metadata.py'};
+ if(!exact(v.sources,Object.keys(sourceKeys))||Object.entries(sourceKeys).some(([k,p])=>v.sources[k]!==sources[p]))throw Error('Different measured redactor source');
+ if(!v.dependencies||typeof v.dependencies!=='object'||Array.isArray(v.dependencies))throw Error('Missing measured dependency identity');
+ const names=Object.keys(v.dependencies);
+ if(names.length<1||names.length>128||!exact(v.dependency_records,names)||names.some(k=>!/^[A-Za-z0-9_.-]{1,80}$/.test(k)||typeof v.dependencies[k]!=='string'||!/^[0-9][A-Za-z0-9_.+!=-]{0,79}$/.test(v.dependencies[k])||!digestPattern.test(v.dependency_records[k])))throw Error('Invalid measured dependency identity');
+ if(r.sha256!==digest(canonicalTimingIdentity({version:r.version,configuration:v}))||identity.sha256!==digest(canonicalTimingIdentity({version:identity.version,configuration:c})))throw Error('Measured runtime identity digest differs');
+}
+export function validatePipelineTiming(data,readHash,digest){
  const keys=['captured_at','pass','kind','sources','source_unchanged','declared_hardware','declared_input_lengths',
   'repeats_per_profile','profile_count','rows','processing_scope','wire_latency_field',
   'command_profile_allows_configured_url_redaction','first_observed_is_not_service_cold_start','population_latency_inferred',
   'accepted_latency_budget_ms','user_content_used','submitted_payloads_executed','production_services_started_or_changed',
-  'independent_accuracy_evidence','release_approved'];
+  'independent_accuracy_evidence','release_approved','runtime_identity',
+  'runtime_identity_verified_on_each_response','runtime_identity_scope'];
  if(!exact(data,keys)||data.pass!==true||data.kind!=='synthetic_staging_pipeline_timing'||data.source_unchanged!==true||
   data.command_profile_allows_configured_url_redaction!==true||data.first_observed_is_not_service_cold_start!==true||
   data.population_latency_inferred!==false||data.accepted_latency_budget_ms!==null||data.user_content_used!==false||
   data.submitted_payloads_executed!==false||data.production_services_started_or_changed!==false||
   data.independent_accuracy_evidence!==false||data.release_approved!==false||data.repeats_per_profile!==20||data.profile_count!==12||
+  data.runtime_identity_verified_on_each_response!==true||data.runtime_identity_scope!=='Self-reported per-response identity matched to selected source; not remote attestation'||
   JSON.stringify(data.declared_input_lengths)!==JSON.stringify(sizes)||!Number.isFinite(Date.parse(data.captured_at))||
   data.processing_scope!=='Authenticated loopback gateway, English redaction and evaluator; not remote network, browser or physical phone startup.'||
   data.wire_latency_field!=='evaluator.latency_ms — gateway pipeline duration, not detector-only time')throw Error('Invalid service timing classification');
  if(!exact(data.sources,timingSources)||timingSources.some(p=>!/^[a-f0-9]{64}$/.test(data.sources[p])||data.sources[p]!==readHash(p)))throw Error('Stale service timing source');
+ validateRuntimeIdentity(data.runtime_identity,data.sources,digest);
  const hardware=data.declared_hardware;
  if(!exact(hardware,['system','release','machine','logical_cpus','client_python'])||hardware.system!=='Linux'||
   !['x86_64','aarch64','arm64','AMD64'].includes(hardware.machine)||!Number.isSafeInteger(hardware.logical_cpus)||hardware.logical_cpus<1||hardware.logical_cpus>4096||

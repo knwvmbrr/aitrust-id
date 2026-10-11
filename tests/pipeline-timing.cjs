@@ -4,12 +4,13 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const data=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-performance.json'),'utf8'));
+const data=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-identity-checked.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+const digest=s=>crypto.createHash('sha256').update(s).digest('hex');
 let model;
 before(async()=>{model=await import('../site/src/pipeline-timing-model.js');});
 test('admit the actual source-bound synthetic staging measurements',()=>{
- assert.equal(model.validatePipelineTiming(data,hash),data);
+ assert.equal(model.validatePipelineTiming(data,hash,digest),data);
  assert.equal(data.profile_count,12);assert.equal(data.repeats_per_profile,20);
 });
 const corruptions={
@@ -24,10 +25,18 @@ const corruptions={
  'duplicate profile':d=>d.rows[11]=structuredClone(d.rows[0]),
  'stale source':d=>d.sources['services/evaluator/app.py']='0'.repeat(64),
  'hidden text':d=>d.private='canary must not be published',
- 'missing hardware':d=>d.declared_hardware.logical_cpus=0
+ 'missing hardware':d=>d.declared_hardware.logical_cpus=0,
+ 'unchecked runtime identity':d=>d.runtime_identity_verified_on_each_response=false,
+ 'gateway runtime mismatch':d=>d.runtime_identity.configuration.gateway_source_sha256='0'.repeat(64),
+ 'redactor runtime mismatch':d=>d.runtime_identity.configuration.redactor.configuration.sources.app='0'.repeat(64),
+ 'corrupted pipeline digest':d=>d.runtime_identity.sha256='0'.repeat(64),
+ 'corrupted redactor digest':d=>d.runtime_identity.configuration.redactor.sha256='0'.repeat(64),
+ 'changed dependency record':d=>d.runtime_identity.configuration.redactor.configuration.dependency_records[Object.keys(d.runtime_identity.configuration.redactor.configuration.dependency_records)[0]]='0'.repeat(64),
+ 'hidden runtime content':d=>d.runtime_identity.configuration.redactor.configuration.private='hidden canary',
+ 'invalid recognizer count':d=>d.runtime_identity.configuration.redactor.configuration.recognizer_count=0
 };
 for(const [name,corrupt] of Object.entries(corruptions))test('reject '+name,()=>{
- const bad=structuredClone(data);corrupt(bad);assert.throws(()=>model.validatePipelineTiming(bad,hash));
+ const bad=structuredClone(data);corrupt(bad);assert.throws(()=>model.validatePipelineTiming(bad,hash,digest));
 });
 test('never read an attacker-selected source filename',()=>{
  const bad=structuredClone(data);bad.sources['../../private.env']='a'.repeat(64);
@@ -49,3 +58,7 @@ test('static HTML keeps visible values, decorative bars and downloadable conditi
  assert.ok(html.includes('download>Download service timings'));
  assert.equal(model.pipelineTimingHTML(null,esc),'');
 });
+
+test('old evaluator-only report is historical, not current admission',()=>{const old=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-staging-pipeline-performance.json')));assert.throws(()=>model.validatePipelineTiming(old,hash,digest));});
+
+test('runtime identity requires an actual canonical digest function',()=>assert.throws(()=>model.validatePipelineTiming(data,hash)));

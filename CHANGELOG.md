@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-175709-timing-identity-full-acceptance-ad44d68e
+
+Recorded 2026-10-11T17:57:09.575688+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed the source-identity review correction with fresh staging, build admission, capability and full regression evidence; updated current counts and state chronology.
+- **Evidence.** 1643 Python tests pass against unchanged executable source; 46 focused client and 30 display controls pass. All five current capability receipts and the 480-file reviewed boundary guard pass. Each of the 253 actual staging assertions had a checked consistent gateway/redactor/evaluator identity. [Change record](./runs/changes/2026-10-11-175709-timing-identity-full-acceptance-ad44d68e.json).
+- **Not claimed.** This does not claim remote attestation, independent accuracy, physical-phone acceptance or an adopted speed budget. F-113 stays at 80 percent and the open requirement count remains 88.
+
+
+### 2026-10-11-175543-timing-reviewed-identity-boundaries-2c4cb7db
+
+Recorded 2026-10-11T17:55:43.164135+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual current boundary verification and updated state chronology after its execution.
+- **Evidence.** Current source/access/endpoint and browser evidence guards pass for the corrected timing implementation. [Change record](./runs/changes/2026-10-11-175543-timing-reviewed-identity-boundaries-2c4cb7db.json).
+- **Not claimed.** No independent accuracy, phone acceptance, remote attestation or full scope closure is claimed.
+
+
+### 2026-10-11-175542-timing-all-source-identity-checks-69a45dad
+
+Recorded 2026-10-11T17:55:42.060651+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed all five current source-bound capability receipts after the timing source-identity review correction, including actual website and downloadable full identity measurements.
+- **Evidence.** All five executed capability checks pass against unchanged source. Current source inventory and browser receipt references are reviewed; no user collection, endpoint, permission or tag change is introduced. [Change record](./runs/changes/2026-10-11-175542-timing-all-source-identity-checks-69a45dad.json).
+- **Not claimed.** The source identity is self-reported consistency, not remote attestation. The full regression suite follows; 88 requirements remain open.
+
+
+### 2026-10-11-175341-timing-runtime-identity-receipts-7078eb45
+
+Recorded 2026-10-11T17:53:41.800130+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the corrected staging source-identity measurement, refreshed F-113 evidence without closing it, and retained four newly executed source-capability receipts before the next website build.
+- **Evidence.** All four service/protocol/extension capabilities pass after the corrected timing configuration. The actual measured report is admitted by 30 display controls using checked canonical gateway/redactor digests; the old evaluator-only report is refused. [Change record](./runs/changes/2026-10-11-175341-timing-runtime-identity-receipts-7078eb45.json).
+- **Not claimed.** The website and whole suite are rerun before pushing this review correction; self-reported identity is not remote attestation. The scope count remains 114 complete and 88 open.
+
+
+### 2026-10-11-175237-timing-each-service-identity-a7ff1701
+
+Recorded 2026-10-11T17:52:37.077806+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected evaluator-only timing admission by validating the existing full pipeline identity on every response, matching gateway/normalization and five redactor sources, matching model entries and refusing runtime identity drift; the build checks canonical runtime identity digests and exact source bindings.
+- **Evidence.** 46 focused client controls and 30 source-bound display controls pass, including stale rehashed gateway/redactor, missing/corrupt identities, model mismatch and drift. A fresh actual staging run completed 253 requests across 12 profiles with the corrected client. [Change record](./runs/changes/2026-10-11-175237-timing-each-service-identity-a7ff1701.json).
+- **Not claimed.** These are self-reported source identities, not cryptographic remote attestation or protection against a compromised service lying. The earlier evaluator-only report is preserved and rejected by current display admission. Full source checks follow before publication.
+
+
 ### 2026-10-11-174230-timing-regression-acceptance-3377d74b
 
 Recorded 2026-10-11T17:42:30.205818+00:00 · Contributor: Codex · change

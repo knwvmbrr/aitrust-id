@@ -19,6 +19,7 @@ sys.path.insert(0,str(ROOT))
 from protocol.assertions import validator
 from protocol.reports import write_report
 from protocol.evidence import unique, reject, finite
+from protocol.replay_identity import PipelineIdentity
 
 LENGTHS=(256,2000,8000,20000)
 REPEATS=20
@@ -27,7 +28,15 @@ INPUT_SOURCES=('services/evaluator/app.py','services/gateway/app.py',
     'services/anonymizer/app.py','services/anonymizer/model_identity.py',
     'protocol/normalization.py','protocol/unicode15-data.json',
     'spec/assertion.schema.json','protocol/assertions.py','protocol/evidence.py',
-    'protocol/reports.py','scripts/measure-pipeline-performance.py')
+    'protocol/reports.py','protocol/replay_identity.py',
+    'services/anonymizer/replay_metadata.py','services/anonymizer/requirements.lock',
+    'scripts/measure-pipeline-performance.py')
+
+REDACTOR_SOURCE_KEYS={'app':'services/anonymizer/app.py',
+    'model_loader':'services/anonymizer/model_identity.py',
+    'requirements_lock':'services/anonymizer/requirements.lock',
+    'identity_contract':'protocol/replay_identity.py',
+    'identity_builder':'services/anonymizer/replay_metadata.py'}
 
 
 class MeasurementError(ValueError):
@@ -89,8 +98,9 @@ def measure(env_file,project,opener=None,clock=time.perf_counter):
     source_hashes=lambda:{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUT_SOURCES}
     before=source_hashes();schema=validator()
     if opener is None:opener=urllib.request.build_opener(urllib.request.ProxyHandler({}),NoRedirect())
-    rows=[];current={'stage':'health'}
+    rows=[];current={'stage':'health'};runtime_identity=None
     def request(path,payload=None):
+        nonlocal runtime_identity
         data=None if payload is None else json.dumps(payload,ensure_ascii=True).encode('utf-8')
         headers={'Content-Type':'application/json'}
         if payload is not None:headers['Authorization']='Bearer '+token
@@ -110,6 +120,28 @@ def measure(env_file,project,opener=None,clock=time.perf_counter):
             schema.validate(value)
             if value['evaluator']['models'][0]['sha256']!=before['services/evaluator/app.py']:
                 raise MeasurementError('evaluator_source_changed')
+            try:
+                identity=PipelineIdentity.model_validate(value['evaluator']['preprocessing']).model_dump()
+            except (KeyError,ValueError,TypeError):
+                raise MeasurementError('pipeline_identity_invalid') from None
+            config=identity['configuration'];redactor=config['redactor'];red=config['redactor']['configuration']
+            expected={'gateway_source_sha256':'services/gateway/app.py',
+                'normalization_source_sha256':'protocol/normalization.py',
+                'normalization_data_sha256':'protocol/unicode15-data.json'}
+            if (any(config[k]!=before[p] for k,p in expected.items()) or
+                    any(red['sources'][k]!=before[p] for k,p in REDACTOR_SOURCE_KEYS.items())):
+                raise MeasurementError('pipeline_source_changed')
+            models=value['evaluator']['models']
+            by_name={m['name']:m for m in models}
+            if len(models)!=3 or set(by_name)!={'rules-only','presidio-redaction','gateway-pipeline'}:
+                raise MeasurementError('pipeline_models_invalid')
+            for name,expected_identity in [('presidio-redaction',redactor),('gateway-pipeline',identity)]:
+                if (by_name[name]['sha256']!=expected_identity['sha256'] or
+                        by_name[name].get('revision')!=expected_identity['version']):
+                    raise MeasurementError('pipeline_models_invalid')
+            if runtime_identity is not None and runtime_identity!=identity:
+                raise MeasurementError('pipeline_identity_changed')
+            runtime_identity=identity
             observed={tag['code'] for tag in value['tags']}
             expected=set() if current['form']=='ordinary' else {'PS'}
             if current['form']=='redaction_command':expected.add('PII_REDACTED')
@@ -142,10 +174,12 @@ def measure(env_file,project,opener=None,clock=time.perf_counter):
         return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':False,
             'kind':'synthetic_staging_pipeline_timing','failed_profile':current,
             'failure_kind':type(error).__name__,'completed_profiles':rows,'sources':before,
-            'failure_code':error.args[0] if isinstance(error,MeasurementError) and error.args and error.args[0] in {'invalid_or_private_response','invalid_timing_sample','evaluator_source_changed','synthetic_profile_outcome_changed','different_synthetic_subject','staging_not_ready','local_sources_changed','redirect_refused'} else 'upstream_or_measurement_failure',
+            'failure_code':error.args[0] if isinstance(error,MeasurementError) and error.args and error.args[0] in {'invalid_or_private_response','invalid_timing_sample','evaluator_source_changed','pipeline_identity_invalid','pipeline_source_changed','pipeline_models_invalid','pipeline_identity_changed','synthetic_profile_outcome_changed','different_synthetic_subject','staging_not_ready','local_sources_changed','redirect_refused'} else 'upstream_or_measurement_failure',
             'independent_accuracy_evidence':False,'release_approved':False}
     return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,
         'kind':'synthetic_staging_pipeline_timing','sources':before,'source_unchanged':True,
+        'runtime_identity':runtime_identity,'runtime_identity_verified_on_each_response':True,
+        'runtime_identity_scope':'Self-reported per-response identity matched to selected source; not remote attestation',
         'declared_hardware':{'system':platform.system(),'release':platform.release(),
             'machine':platform.machine(),'logical_cpus':os.cpu_count(),'client_python':platform.python_version()},
         'declared_input_lengths':list(LENGTHS),'repeats_per_profile':REPEATS,'profile_count':len(rows),'rows':rows,

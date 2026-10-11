@@ -1868,7 +1868,7 @@
       },
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-10-11T17:15:43.174028+00:00",
+        "measured_at": "2026-10-11T17:51:24.919198+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1878,19 +1878,19 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 53.53398699662648
+            "p95_ms": 46.712275012396276
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 124.54069097293541
+            "p95_ms": 121.50729197310284
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 456.08288201037794
+            "p95_ms": 441.80121400859207
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1660.0235240184702
+            "p95_ms": 1634.8302700207569
           }
         ]
       },
@@ -1966,7 +1966,7 @@
       "device": null,
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-10-11T17:15:43.174028+00:00",
+        "measured_at": "2026-10-11T17:51:24.919198+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1976,19 +1976,19 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 53.53398699662648
+            "p95_ms": 46.712275012396276
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 124.54069097293541
+            "p95_ms": 121.50729197310284
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 456.08288201037794
+            "p95_ms": 441.80121400859207
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1660.0235240184702
+            "p95_ms": 1634.8302700207569
           }
         ]
       }
