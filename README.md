@@ -122,7 +122,7 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current complete local suite passed 1,178 Python checks; source-bound execution
+The current complete local suite passed 1,179 Python checks; source-bound execution
 is recorded in `runs/2026-10-10-target25-source-checks-repaired.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.

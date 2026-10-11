@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-10T23:55:14.818359+00:00",
+  "author": "Codex",
+  "pass": false,
+  "failed_python_tests": 3,
+  "python_setup_errors": 26,
+  "passed_python_tests": 1150,
+  "cause": "Shared package.json test-command change invalidated extension source receipt. The recording chain continued after guard refusal and temporarily referenced the absent boundary report. No deployment occurred.",
+  "fix": "Re-executed all four extension capability checks; recorded existing fresh website receipt; refreshed and successfully executed current route boundaries; state references repaired. Final broad regressions follow.",
+  "fresh_extension": "runs/2026-10-10-group-extension-revalidated.json",
+  "fresh_website": "runs/2026-10-10-group-website-revalidated.json",
+  "current_boundary": "runs/2026-10-10-group-current-boundaries.json",
+  "log_sha256": "64e112b73db3bf3e99443f58739aedac80c79dca07462ac518108b4b46a1a852",
+  "independent_tag_accuracy_evidence": false
+}

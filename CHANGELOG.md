@@ -1,6 +1,80 @@
 # Changelog
 
+## Unreleased — 2026-10-11
+
+### 2026-10-11-000053-group-final-regression-record-a4d5613f
+
+Recorded 2026-10-11T00:00:53.877256+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final current group cross-platform-vector and broad regression acceptance before protected publication.
+- **Evidence.** 1179 Python checks and40 group controls per platform pass; unchanged Mac-created signatures verify offline on Linux. [Change record](./runs/changes/2026-10-11-000053-group-final-regression-record-a4d5613f.json).
+- **Not claimed.** 106 complete and96 open scope records are preserved. Full human group acceptance and independent tag accuracy are not claimed; target25 not reached.
+
+
 ## Unreleased — 2026-10-10
+
+### 2026-10-10-235923-group-cross-platform-vector-37d7c1a1
+
+Recorded 2026-10-10T23:59:23.485010+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish a public synthetic four-key group vector and verify the unchanged Mac-created record on network-isolated Linux, with strict public-key-only rosters.
+- **Evidence.** 40 current controls pass on MacNode24 and offlineLinuxNode24; the cross-platform CLI verifies the exact artifact and all four signatures. [Change record](./runs/changes/2026-10-10-235923-group-cross-platform-vector-37d7c1a1.json).
+- **Not claimed.** Keys are synthetic and private keys were never persisted. Explicit historical vector clocks are not current validity, independent time, distinct people or human authorship evidence. FullF130 remains open.
+
+
+### 2026-10-10-235711-group-stable-regressions-0c0b3ba1
+
+Recorded 2026-10-10T23:57:11.066879+00:00 · Contributor: Codex · change
+
+- **Changed.** Record1179 passing Python checks, current group refusal controls and the actual successful protected-main timestamp source attestation; distinguish old source downloads from later tools.
+- **Evidence.** All1179 Python checks pass. The group workflow passes39 controls on both actual Mac and offline Linux; timestamp main source signing/verification/upload succeeded and was verified locally. [Change record](./runs/changes/2026-10-10-235711-group-stable-regressions-0c0b3ba1.json).
+- **Not claimed.** F130 full human group acceptance stays open; F057 full license/runtime clearance and independent tag release validation remain open. Site deployment pending.
+
+
+### 2026-10-10-235514-group-current-route-acceptance-1e525720
+
+Recorded 2026-10-10T23:55:14.858769+00:00 · Contributor: Codex · change
+
+- **Changed.** Record fresh website and extension capability acceptance, current reviewed route inventory and the refused stale-evidence recording chain.
+- **Evidence.** All four website and four extension capability checks pass; the current source-bound route guard passes with the group tool included. [Change record](./runs/changes/2026-10-10-235514-group-current-route-acceptance-1e525720.json).
+- **Not claimed.** Prior recording failures remain visible. Full group human acceptance, real phones, human accessibility and independent tag accuracy remain open.
+
+
+### 2026-10-10-235145-group-reference-policy-projections-f2a806f9
+
+Recorded 2026-10-10T23:51:45.116016+00:00 · Contributor: Codex · change
+
+- **Changed.** Generate public group workflow links, scope80-percent integration projection and version1.7 policy text, keeping all nine earlier policy archives.
+- **Evidence.** The site build completed; source-bound browser and download acceptance is next. [Change record](./runs/changes/2026-10-10-235145-group-reference-policy-projections-f2a806f9.json).
+- **Not claimed.** No full group human acceptance or tag release is asserted by generated pages.
+
+
+### 2026-10-10-235118-group-receipt-privacy-disclosure-1cb02355
+
+Recorded 2026-10-10T23:51:18.543930+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish policy version1.7 describing optional local group receipts, collaboration-graph exposure, independent key custody and explicit sharing.
+- **Evidence.** Current signed record excludes original words and participant names; 39 positive/refusal controls executed on Mac and offline Linux. [Change record](./runs/changes/2026-10-10-235118-group-receipt-privacy-disclosure-1cb02355.json).
+- **Not claimed.** Policy disclosure is not counsel approval, identity verification, anti-coercion certification or training consent. Earlier policy versions remain archived.
+
+
+### 2026-10-10-235039-group-receipt-command-and-boundary-6b208d5a
+
+Recorded 2026-10-10T23:50:39.549027+00:00 · Contributor: Codex · change
+
+- **Changed.** Wire the group test command and track its CLI and positive/refusal controls in the existing source-bound deploy guard.
+- **Evidence.** Existing group mechanism passed actual Mac and network-isolated Linux controls; new deployment inventory must be freshly reviewed before deploy. [Change record](./runs/changes/2026-10-10-235039-group-receipt-command-and-boundary-6b208d5a.json).
+- **Not claimed.** No new endpoint or dependency. Group human acceptance remains open; this event does not claim the new boundary guard has executed yet.
+
+
+### 2026-10-10-235013-group-receipt-offline-integration-e2e9662d
+
+Recorded 2026-10-10T23:50:13.329228+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement optional separate-participant group signing, assembly and offline verification; publish its guide and retain full group-authorship acceptance as open.
+- **Evidence.** 39 current cryptographic workflow/refusal controls pass on Mac Node24 and actual network-isolated Linux Node24; timestamp PR17 merged after22 protected engineering checks. [Change record](./runs/changes/2026-10-10-235013-group-receipt-offline-integration-e2e9662d.json).
+- **Not claimed.** Synthetic signers do not establish human authorship or distinct people. Group scope stays80 percent, revocation unchecked, no PA FA IV release. Website publication pending.
+
 
 ### 2026-10-10-234355-timestamp-review-corrections-a2d53a3f
 

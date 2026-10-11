@@ -51,7 +51,8 @@
     "test:receipts": "node --test tests/offline-receipts.cjs",
     "verify:offline-components": "python3 scripts/verify-offline-components.py",
     "test:feedback": "node --test tests/research-feedback.cjs",
-    "verify:feedback": "node scripts/verify-research-feedback.cjs"
+    "verify:feedback": "node scripts/verify-research-feedback.cjs",
+    "test:group-receipts": "node --test tests/group-receipts.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

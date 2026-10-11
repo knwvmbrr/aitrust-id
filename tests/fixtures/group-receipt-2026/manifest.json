@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-10-10T23:57:46.924Z",
+  "author": "Codex",
+  "synthetic_keys_only": true,
+  "private_keys_never_persisted": true,
+  "clock_basis": "Explicit historical test clock manifest.issued_at+1, not current-window or independent-time evidence",
+  "result": {
+    "profile": "group-receipt/1.0.0",
+    "record_integrity": "all_signatures_verified_under_selected_roster",
+    "artifact_binding": "matched",
+    "signer_count": 4,
+    "signers": [
+      {
+        "key_sha256": "25e4eeb755d6133b23e390945c474acec5f555a03de9e5f9f48c16a27a57b70e",
+        "algorithm": "ECDSA-P256-SHA256",
+        "record_integrity": "verified_under_pinned_key"
+      },
+      {
+        "key_sha256": "53af0a54168f94b6bb6dd719a173f6fa7f7ed30ceda4dba74dfa5ada345b9bdf",
+        "algorithm": "Ed25519",
+        "record_integrity": "verified_under_pinned_key"
+      },
+      {
+        "key_sha256": "a141e372b049fbba1ceb9e5386d633e5002e83870f943bf00b259293b65eaf33",
+        "algorithm": "ECDSA-P256-SHA256",
+        "record_integrity": "verified_under_pinned_key"
+      },
+      {
+        "key_sha256": "c580a988da6c077b944ea0041cfe5bfdc0abea3eabbc0f17d765d0ccdc9399e5",
+        "algorithm": "Ed25519",
+        "record_integrity": "verified_under_pinned_key"
+      }
+    ],
+    "expiry": "within_declared_window",
+    "clock": "verifier_local_clock_unverified",
+    "revocation": "unchecked",
+    "authorship": "unestablished",
+    "distinct_people": "unestablished",
+    "coercion": "not_assessed",
+    "certified_valid": false,
+    "tag_issuance": false
+  },
+  "files": {
+    "artifact.txt": "da2307f2d29ba23d574ffb5f1313430e46b1837423b3dad0f582a031fb3bf929",
+    "group.json": "31ccb1c897a5456061e8af0ea2f51e2584e766cf024a0ede9bf8c44c1c989b96",
+    "roster.json": "60cb02e1e3eacaf90f494f894d669b27da612310a4bcf540f69658085897eb44"
+  }
+}
