@@ -38,7 +38,7 @@ def verify(root=ROOT):
         expected[name] = hashlib.sha256(read_path.read_bytes()).hexdigest()
     if m['sources'] != expected:
         raise ValueError('SBOM package/build inputs changed; rescan required')
-    if m['inventory_evidence'] != 'runs/2026-10-10-runtime-license-inventory.json':
+    if not isinstance(m['inventory_evidence'],str) or not re.fullmatch(r'runs/\d{4}-\d{2}-\d{2}-runtime-license-inventory\.json',m['inventory_evidence']):
         raise ValueError('Invalid observed inventory evidence path')
     evidence = read_evidence(root / m['inventory_evidence'])
     if evidence.get('scan_completed') is not True or evidence.get('licenses_cleared') is not False:

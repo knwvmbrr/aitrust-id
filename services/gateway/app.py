@@ -6,6 +6,7 @@ import os
 import time
 from protocol.normalization import normalize_nfc
 from protocol.replay_identity import RedactorIdentity, pipeline_identity
+from protocol.transport_signing import load_private_key, sign_headers
 from pathlib import Path
 import uuid
 from datetime import datetime, timezone
@@ -15,6 +16,8 @@ import httpx
 from fastapi import FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
 from starlette.middleware.body_limit import RequestBodyLimitMiddleware
+from starlette.responses import JSONResponse
+import re
 
 SPEC_VERSION='0.1.0'
 TOKEN=os.environ['AITRUST_TOKEN']
@@ -26,6 +29,7 @@ PRODUCTION_TAGS=frozenset({'PS','PII_REDACTED'})
 KNOWN_CODES=frozenset({'NF','FI','HP','MT','PS','IV','FA','PA','UNK','PII_REDACTED'})
 FLOORS={'PS':.70}
 LIMIT=asyncio.Semaphore(4)
+SIGNING_KEY=load_private_key(os.environ['AITRUST_SIGNING_KEY_FILE']) if os.environ.get('AITRUST_SIGNING_KEY_FILE') else None
 app=FastAPI(title='AITrust-ID Gateway',version=SPEC_VERSION)
 app.add_middleware(RequestBodyLimitMiddleware,max_body_size=1_250_000)
 
@@ -98,6 +102,12 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
         raise HTTPException(403,'Browser page requests are not permitted')
     if req.modality!='text':
         raise HTTPException(422,'Unsupported modality; only text is currently evaluated')
+    nonces=request.headers.getlist('X-AITrust-Nonce')
+    nonce=nonces[0] if nonces else None
+    if nonces and (len(nonces)!=1 or not re.fullmatch('[a-f0-9]{64}',nonce)):
+        raise HTTPException(422,'Invalid request nonce')
+    if nonce is not None and SIGNING_KEY is None:
+        raise HTTPException(503,'Gateway response signing is not configured')
     t0=time.perf_counter()
     try:
         await asyncio.wait_for(LIMIT.acquire(),timeout=.1)
@@ -157,7 +167,11 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
         {'name':'presidio-redaction','sha256':red.identity.sha256,'revision':red.identity.version},
         {'name':'gateway-pipeline','sha256':preprocessing['sha256'],'revision':preprocessing['version']},
     ]
-    return {'assertion_id':str(uuid.uuid4()),'spec_version':SPEC_VERSION,'subject':{'sha256':hashlib.sha256(red.text.encode()).hexdigest(),'char_len':len(red.text),'origin_host':req.origin_host,'captured_at':datetime.now(timezone.utc).isoformat(),'modality':req.modality},'tags':tags,'abstentions':abstentions,'evaluator':{'models':models,'preprocessing':preprocessing,'calibration_id':ev.calibration_id,'latency_ms':round((time.perf_counter()-t0)*1000,1)}}
+    assertion={'assertion_id':str(uuid.uuid4()),'spec_version':SPEC_VERSION,'subject':{'sha256':hashlib.sha256(red.text.encode()).hexdigest(),'char_len':len(red.text),'origin_host':req.origin_host,'captured_at':datetime.now(timezone.utc).isoformat(),'modality':req.modality},'tags':tags,'abstentions':abstentions,'evaluator':{'models':models,'preprocessing':preprocessing,'calibration_id':ev.calibration_id,'latency_ms':round((time.perf_counter()-t0)*1000,1)}}
+    if nonce is None:return assertion
+    response=JSONResponse(assertion)
+    response.headers.update(sign_headers(SIGNING_KEY,nonce,await request.body(),response.body))
+    return response
 
 def calibrate(candidates):
     """Only PS can assert from the evaluator; the redactor owns PII assertions."""

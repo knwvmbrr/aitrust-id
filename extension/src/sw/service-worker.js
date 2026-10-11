@@ -1,11 +1,12 @@
 import '../shared/contract.js';
+import '../shared/transport.js';
 const ENDPOINT='http://127.0.0.1:8787/v1/evaluate';
 const MAX_RESPONSE_BYTES=2*1024*1024;
 const active=new Set();let generation=0;
 chrome.storage.onChanged.addListener((changes,area)=>{
- if(area==='local'&&(changes.checks_enabled||changes.token)){generation++;for(const controller of active)controller.abort();}
+ if(area==='local'&&(changes.checks_enabled||changes.token||changes.gateway_public_key)){generation++;for(const controller of active)controller.abort();}
 });
-async function boundedJSON(response){
+async function boundedBytes(response){
   if(!/^application\/json(?:\s*;\s*charset=utf-8)?\s*$/i.test(response.headers.get('content-type')||''))throw Error('Unsupported response content type');
   const declared=response.headers.get('content-length');if(declared!==null&&(!/^\d+$/.test(declared)||Number(declared)>MAX_RESPONSE_BYTES))throw Error('Oversized response');
   if(!response.body)throw Error('Missing response stream');
@@ -14,7 +15,7 @@ async function boundedJSON(response){
   catch(error){try{await reader.cancel();}catch{}throw error;}
   finally{reader.releaseLock();}
   const bytes=new Uint8Array(total);let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.byteLength;}
-  return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
+  return bytes;
 }
 chrome.runtime.onMessage.addListener((msg,sender,respond)=>{
   if(msg?.type==='open_settings'){
@@ -30,17 +31,22 @@ chrome.runtime.onMessage.addListener((msg,sender,respond)=>{
   (async()=>{
     let controller,timer;
     try{
-      const {token,checks_enabled}=await chrome.storage.local.get(['token','checks_enabled']);
+      const {token,checks_enabled,gateway_public_key}=await chrome.storage.local.get(['token','checks_enabled','gateway_public_key']);
       if(revision!==generation||checks_enabled!==true){reply({status:'unavailable',reason:'Checks are paused. Enable ChatGPT checks in extension settings.'});return;}
       if(typeof token!=='string'||token==='change-me'||token.length<16||token.length>4096||!(/^[\x21-\x7e]+$/).test(token)){reply({status:'unavailable',reason:'Set the local token in extension options.'});return;}
+      let selected;try{selected=await AITrustTransport.selectedKey(gateway_public_key);}catch{reply({status:'unavailable',reason:'Choose your gateway public key in extension settings.'});return;}
+      if(revision!==generation){reply({status:'unavailable',reason:'Settings changed. Run a new check.'});return;}
       controller=new AbortController();active.add(controller);timer=setTimeout(()=>controller.abort(),15000);
-      const response=await fetch(ENDPOINT,{method:'POST',headers:{'content-type':'application/json',authorization:`Bearer ${token}`},body:JSON.stringify({text:msg.text,origin_host:url.hostname,modality:'text'}),redirect:'error',cache:'no-store',credentials:'omit',signal:controller.signal});
+      const nonce=AITrustTransport.nonce(),body=JSON.stringify({text:msg.text,origin_host:url.hostname,modality:'text'});
+      const response=await fetch(ENDPOINT,{method:'POST',headers:{'content-type':'application/json',authorization:`Bearer ${token}`,'X-AITrust-Nonce':nonce},body,redirect:'error',cache:'no-store',credentials:'omit',signal:controller.signal});
       if(!response.ok){reply({status:'unavailable',reason:response.status===401?'The local token is invalid.':'The local service could not complete the check.'});return;}
-      const assertion=await boundedJSON(response),contract=AITrustContract.inspect(assertion);
+      const bytes=await boundedBytes(response);
+      await AITrustTransport.verify(response,bytes,nonce,body,selected);
+      const assertion=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes)),contract=AITrustContract.inspect(assertion);
       if(contract.status!=='accepted'){reply({status:contract.status==='unsupported'?'unsupported':'unavailable',reason:contract.reason});return;}
       if(controller.signal.aborted||revision!==generation){reply({status:'unavailable',reason:'Settings changed. Run a new check after enabling checks.'});return;}
-      reply({status:'ok',assertion});
-    }catch{reply({status:'unavailable',reason:controller?.signal.aborted?'The check was cancelled or timed out.':'The local service is unavailable or timed out.'});}
+      reply({status:'ok',assertion,authentication:{profile:AITrustTransport.PROFILE,key_id:selected.key_id}});
+    }catch{reply({status:'unavailable',reason:controller?.signal.aborted?'The check was cancelled or timed out.':'Could not authenticate a result from your local service. Check its signing key and connection.'});}
     finally{clearTimeout(timer);if(controller)active.delete(controller);}
   })();return true;
 });

@@ -50,9 +50,9 @@ def test_actual_three_bound_inventories_validate_offline(monkeypatch):
     monkeypatch.setattr(socket.socket, 'connect', refuse_network)
     monkeypatch.setattr(socket, 'create_connection', refuse_network)
     report = STANDARD.verify()
-    assert report['pass'] and report['package_occurrences'] == 421
+    assert report['pass'] and report['package_occurrences'] == 424
     assert len(report['images']) == 3 and report['verification_network_requests'] == 0
-    assert sum(row['elements_checked'] for row in report['images']) == 9155
+    assert sum(row['elements_checked'] for row in report['images']) == 9168
     assert sum(row['package_verification_codes_recomputed'] for row in report['images']) == 261
     for row in [report, *report['images']]:
         assert row['license_cleared'] is False and row['release_signed'] is False

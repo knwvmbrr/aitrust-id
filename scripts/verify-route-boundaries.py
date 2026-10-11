@@ -47,6 +47,7 @@ PATTERNS += ('scripts/group-receipt.cjs', 'tests/group-receipts.cjs',
 PATTERNS += ('scripts/revocation.cjs', 'tests/offline-revocation.cjs',
              'tests/test_offline_revocation.py', 'tests/fixtures/offline-revocation-2026/*')
 PATTERNS += ('scripts/key-backup.cjs', 'scripts/atomic-output.cjs', 'tests/key-backup.cjs', 'tests/test_key_backup.py')
+PATTERNS += ('scripts/gateway-key.cjs','scripts/verify-signed-gateway.cjs','tests/test_transport_signing.py','deploy/docker-compose.signing.yml')
 PATTERNS += ('spec/image-provenance-boundary.json', 'scripts/verify-image-provenance-boundary.py',
              'scripts/conformance-statement.cjs', 'tests/author-choice.cjs',
              'tests/conformance-statement.cjs', 'tests/test_consent_conformance.py',

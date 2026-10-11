@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-11T12:01:32.793635+00:00",
+  "owner": "Michael",
+  "requirement": "F-102",
+  "approval_source": "Owner reply to request_user_input_async call_77e8fbd3992547e39b384420bf2d99d5, question 0",
+  "question": "One open requirement conflicts with the working protocol: F-102 originally called for an UNK tag on unsupported media, while the current tested gateway returns HTTP 422 and the UI shows Unsupported without evaluating it. May I adopt that existing explicit failure behavior as the compatibility contract, preserve the historical requirement in the decision record, and keep unsupported media out of the detector?",
+  "answer": "1",
+  "accepted_contract": "HTTP 422 for unsupported media before redaction/evaluation; explicit UI Unsupported state where input or assertion modality is unsupported; no UNK assertion generated.",
+  "historical_baseline_job": "Specify and deliver modality validated against the schema enum; unsupported returns UNK + unsupported_modality.",
+  "baseline_job": "Validate modality against the reserved schema vocabulary; evaluate text only and reject unsupported media with HTTP 422 before detector execution. Present Unsupported at the UI contract boundary without manufacturing an UNK assertion.",
+  "schema_version_changed": false,
+  "taxonomy_changed": false,
+  "general_UNK_replacement_accepted": false,
+  "UC_SC_BT_adopted": false
+}

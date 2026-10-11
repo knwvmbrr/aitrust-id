@@ -72,3 +72,7 @@ These were not choices. They are what verification found, recorded so they are n
 ## 2026-10-09 — Completion ledger and brand credit
 
 Owner requested per-item timestamped milestone completion, execution attribution and fixes; 100% requires functioning full acceptance. Retain all source IDs and completed history. Claude research code is reviewed as components, not a shipped validator or adopted tag policy. Owner superseded repeated personal publisher credits: current general site credit is AI Trust ID; product owner display is Michael. Real operator remains in Terms and archived versions remain intact. No GitHub account rename, organization creation, new endpoint, runtime tag registration or collection activation was performed.
+
+## 2026-10-11 — Unsupported-media compatibility accepted
+
+Michael approved the F-102 compatibility question (answer “1”). The supported gateway evaluates text only; all reserved non-text modalities and unknown modality values return HTTP 422 before redaction or detector execution. The UI contract exposes Unsupported for unsupported input/records. It does not invent an UNK assertion. The original UNK + unsupported_modality requirement remains in the master scope historical baseline and the [dated owner decision](../runs/2026-10-11-unsupported-modality-owner-decision.json). This approval does not adopt the general UNK replacement, UC/SC/BT or a new schema version.

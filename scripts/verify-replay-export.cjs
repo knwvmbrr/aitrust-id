@@ -14,7 +14,9 @@ async function verify(){
   const page=await browser.newPage({viewport:{width:320,height:740}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(`http://127.0.0.1:${server.address().port}/extension/test/badge-fixture.html?open-shadow`);
   await page.waitForFunction(()=>fixtureRequests.length===2);
-  await page.evaluate(a=>{fixtureResponders[0]({status:'ok',assertion:a});fixtureResponders[1](fixtureResult(fixtureRequests[1].text));},a);
+  // Mock only the trusted worker channel here; real cryptographic transport has
+  // separate installed-extension tests. Export integrity is this fixture's job.
+  await page.evaluate(a=>{fixtureResponders[0]({status:'ok',authentication:{profile:'loopback-response/p256-sha256/v1',key_id:'a'.repeat(64)},assertion:a});fixtureResponders[1](fixtureResult(fixtureRequests[1].text));},a);
   await page.getByRole('button',{name:/^PS:/}).click();
   const holder=page.locator('#first .aitrust-mount').first();
   const before=await page.locator('#first').boundingBox();

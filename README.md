@@ -102,9 +102,9 @@ This is local processing, not a guarantee that every exfiltration path is blocke
 | Command regression | TP=31, FP=0, FN=0, TN=55 across 86 active development examples. Not an independent holdout; precision/recall lower bounds are about 0.890. Precision, holdout and calibration release gates remain unmet |
 | Gateway | Executed authentication, origin rejection, upstream failure, redaction ordering, assertion schema, offsets, and oversized-body checks |
 | Redaction | English assets provisioned during build; actual email redaction exercised with network creation blocked. Coverage is incomplete |
-| Extension | Real unpacked extension exercised against real local services on a synthetic ChatGPT-origin page. Delayed/stale results, duplicate presentation, and injection checks pass on fixtures |
+| Extension | Installed Chrome exercised against the Linux gateway using an explicitly selected P-256 key and exact request/response authentication. Unsigned, altered and replayed responses fail closed. Rotation, pause and Reset cancel pending results. Synthetic ChatGPT-origin pages; broader current-vendor and human checks remain open |
 | Accessibility | Keyboard evidence checks and automated axe fixture checks pass. Human screen-reader evaluation is missing |
-| Live ChatGPT | Installed Chrome extension verified on one existing Homebrew answer: finding, evidence and evaluator source hash. Broader live coverage remains open |
+| Live ChatGPT | Historical installed-extension check on one existing Homebrew answer: finding, evidence and evaluator source hash. The new authenticated profile has separate synthetic-origin integration evidence; broader live coverage remains open |
 | Dependencies | Runtime packages and language-model artifact hash locked; package audit findings and exclusions recorded in `runs/`. This does not replace an application or OS-image security review |
 | Semantic/provenance/media tags | Preserved in scope. Not implemented or validated by this workflow |
 
@@ -170,10 +170,13 @@ make gates PYTHON=.venv/bin/python
 
 `deploy` starts the local containers. It does not publish a website. `gates` is
 expected to fail on the current regression material. Load `extension/` unpacked in
-a dedicated Chrome profile and configure its token through extension options.
+a dedicated Chrome profile. Follow [gateway authentication](docs/gateway-authentication.md)
+to configure a private signing key, select its separately confirmed public-key
+JSON in extension settings, and enter the matching local token. Unsigned,
+altered or replayed results cannot become verdict badges.
 Checks start paused, including upgrades without saved consent. Explicitly enable
-ChatGPT checks in settings; saving a token is not consent. Pause cancels pending
-checks and removes tags. Reset removes the local token and consent, not the server
+ChatGPT checks in settings; saving a token or key is not consent. Pause cancels pending
+checks and removes tags. Reset removes the local token, public key and consent, not the server
 credential or a ChatGPT conversation.
 Remove the token and unload the extension to remove access. Stop this project's
 containers with `make down` and the same environment file.

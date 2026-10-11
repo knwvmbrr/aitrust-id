@@ -111,9 +111,28 @@
         "scripts/verify-assertion-replay.py",
         "services/gateway/app.py",
         "services/anonymizer/*",
-        "spec/assertion.schema.json"
+        "spec/assertion.schema.json",
+        "scripts/gateway-key.cjs",
+        "scripts/verify-signed-gateway.cjs",
+        "tests/test_transport_signing.py",
+        "docs/gateway-authentication.md",
+        "deploy/docker-compose.signing.yml",
+        "protocol/transport_signing.py",
+        "services/gateway/requirements*",
+        "services/gateway/Dockerfile",
+        ".dockerignore",
+        "tests/test_gateway_integration.py"
       ],
       "commands": [
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_transport_signing.py",
+          "tests/test_gateway_cancellation.py",
+          "tests/test_gateway_integration.py",
+          "-q"
+        ],
         [
           "node",
           "scripts/verify-browser.cjs"

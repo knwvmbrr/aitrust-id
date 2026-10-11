@@ -3995,14 +3995,14 @@
         "WP-SERVICE"
       ],
       "disposition": "retained",
-      "task": "Specify and deliver modality validated against the schema enum; unsupported returns UNK + unsupported_modality.",
+      "task": "Validate modality against the reserved schema vocabulary; evaluate text only and reject unsupported media with HTTP 422 before detector execution. Present Unsupported at the UI contract boundary without manufacturing an UNK assertion.",
       "done": "This record\u2019s job/outcome is accepted, its applicable package scenarios execute, its limitations are published and its versioned evidence is linked. Planning alone is not done.",
       "status": "planned; consult state.json and runs/ for implemented evidence",
       "implementation_owner": "Codex",
       "review_owner": "Claude; human/professional review where specified",
       "acceptance_owner": "Michael R. McGuire",
-      "display_title": "Modality validated against the schema enum; unsupported returns UNK + unsupported_modality",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly."
+      "display_title": "Unsupported media: HTTP 422 before evaluation",
+      "outcome": "Unsupported input is refused without a detector result or invented UNK assertion."
     },
     {
       "scope_id": "F-103",

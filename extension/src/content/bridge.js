@@ -18,6 +18,7 @@
       const result=await chrome.runtime.sendMessage({type:'evaluate',text,origin_host:location.hostname});
       if(!current())return;
       if(!result||result.status!=='ok'){ui.update(host,result?.status==='unsupported'?'UNSUPPORTED':'UNAVAILABLE',null,result?.reason||'Check the local service and token settings.');return;}
+      if(result.authentication?.profile!=='loopback-response/p256-sha256/v1'||!(/^[a-f0-9]{64}$/).test(result.authentication?.key_id||'')){ui.update(host,'UNAVAILABLE',null,'The local result was not authenticated. Check your gateway signing settings.');return;}
       const inspected=contract.inspect(result.assertion);
       if(inspected.status!=='accepted'){ui.update(host,inspected.status==='unsupported'?'UNSUPPORTED':'UNAVAILABLE',null,inspected.reason);return;}
       const a=result.assertion;
@@ -59,7 +60,7 @@
   chrome.storage.onChanged.addListener((changes,area)=>{
     if(area!=='local')return;
     if(changes.checks_enabled){consentRevision++;applyConsent(changes.checks_enabled.newValue);}
-    else if(changes.token){consentRevision++;applyConsent(enabled);}
+    else if(changes.token||changes.gateway_public_key){consentRevision++;applyConsent(enabled);}
   });
   const initialRevision=consentRevision;
   chrome.storage.local.get('checks_enabled').then(value=>{if(initialRevision===consentRevision)applyConsent(value.checks_enabled);}).catch(()=>{if(initialRevision===consentRevision)applyConsent(false);});
