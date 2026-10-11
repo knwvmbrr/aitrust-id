@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-204329-nli-current-product-verification-8babb474
+
+Recorded 2026-10-11T20:43:29.142967+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded complete corrected Python verification, current capability/boundary receipts and actual model increment limits.
+- **Evidence.** 2062 full-suite tests pass with one Linux-only Mac skip and one upstream warning; five current product capabilities pass and 572 reviewed files are bound. [Change record](./runs/changes/2026-10-11-204329-nli-current-product-verification-8babb474.json).
+- **Not claimed.** The ledger remains 114 complete and 88 open; independent accuracy, human acceptance, tag integration and protected publication remain separate.
+
+
+### 2026-10-11-204121-nli-accountability-and-site-verification-7e0d0411
+
+Recorded 2026-10-11T20:41:21.061897+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified the new guide in the built website, recorded current route boundaries, and corrected paired state timestamps after a failed full-suite attempt.
+- **Evidence.** All five website command groups pass with stable sources; 40 accountability tests pass after the state correction; selected personal boundaries remain unchanged. [Change record](./runs/changes/2026-10-11-204121-nli-accountability-and-site-verification-7e0d0411.json).
+- **Not claimed.** The failed suite receipt is retained; full rerun is pending. No independent tag validation or complete requirement is claimed.
+
+
+### 2026-10-11-203827-nli-research-guide-and-cleanup-02487112
+
+Recorded 2026-10-11T20:38:27.713030+00:00 · Contributor: Codex · change
+
+- **Changed.** Added the working model research guide to the existing offline-tools page, with three steps, model-error disclosure and an explicit desktop boundary; recorded owned Linux sandbox cleanup.
+- **Evidence.** The guide has its own setup, result interpretation and removal workflow; actual Mac/Linux controls are recorded separately. [Change record](./runs/changes/2026-10-11-203827-nli-research-guide-and-cleanup-02487112.json).
+- **Not claimed.** This research tool does not run on phones or issue any tag; new guide rendering and accessibility must pass the current site checks.
+
+
+### 2026-10-11-203536-nli-stable-site-projection-0ba058df
+
+Recorded 2026-10-11T20:35:36.297139+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated scope and signal projections after the NLI research increment and recorded refreshed PS/protocol checks.
+- **Evidence.** The current ledger and rendered task index agree without promoting any tag or dropping scope. [Change record](./runs/changes/2026-10-11-203536-nli-stable-site-projection-0ba058df.json).
+- **Not claimed.** The research model does not assert a tag; all 202 records remain and 88 full requirements stay open.
+
+
+### 2026-10-11-203501-pinned-private-nli-pairs-8fa0d909
+
+Recorded 2026-10-11T20:35:01.780868+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented a separate pinned local English sentence-pair research tool, public asset downloader, private outputs, worker network controls, hashes, dependency locks and preserved notices.
+- **Evidence.** Actual model execution and 13 privacy/refusal controls pass on Mac and unprivileged Linux; 107 focused Mac and 108 Linux tests pass; neutral-pair model error retained. [Change record](./runs/changes/2026-10-11-203501-pinned-private-nli-pairs-8fa0d909.json).
+- **Not claimed.** F-016 advances to 60 percent; no tag, calibrated probability, truth, independent corroboration, license clearance, retrieved-passage implementation or full requirement completion is claimed.
+
+
+### 2026-10-11-203501-source-capture-publication-confirmed-7537bc6c
+
+Recorded 2026-10-11T20:35:01.722141+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified protected source-capture merge, current primary checkout and exact served publication.
+- **Evidence.** 22 required executions succeeded, review threads resolved, 732 artifacts matched and 12 unrelated files preserved. [Change record](./runs/changes/2026-10-11-203501-source-capture-publication-confirmed-7537bc6c.json).
+- **Not claimed.** Source authenticity and site publication are not tag accuracy, license clearance or complete F-057/X-02 acceptance.
+
+
 ### 2026-10-11-201424-source-capture-current-verification-6c7f4ab6
 
 Recorded 2026-10-11T20:14:24.319569+00:00 · Contributor: Codex · change

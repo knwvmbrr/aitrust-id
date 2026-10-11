@@ -462,8 +462,20 @@
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "HP",
-      "description": "NLI entailment between sentence pairs, contradiction probability",
-      "source_files": []
+      "description": "Proposed NLI observations between caller-selected sentence spans; model scores are uncalibrated and do not establish contradiction or truth.",
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "tag_mapping_validated": false,
+        "source_files": [
+          "research/nli/pairs.py",
+          "research/nli/backend.py",
+          "research/nli/network.py",
+          "research/nli/assets.json",
+          "scripts/check-nli-pairs.py"
+        ],
+        "contract": "docs/nli-pairs.md"
+      }
     },
     {
       "id": "sig.typosquat.v1",

@@ -17,7 +17,7 @@ extension performs no behavioral capture.
 
 | ID | Feeds | Method | Cost to defeat | Notes |
 |---|---|---|---|---|
-| `sig.selfcontradiction.v1` | HP | NLI entailment between sentence pairs, contradiction probability | `statistical` | ONNX DeBERTa-v3-small; CPU |
+| `sig.selfcontradiction.v1` | HP | NLI observations between selected sentence spans; uncalibrated model scores | `statistical` | Proposed small-model signal; pinned xsmall offline research reference in docs/nli-pairs.md; CPU, no tag mapping |
 | `sig.unsourced_specificity.v1` | HP | Precise figures / dates / named citations with no provenance marker in context | `statistical` | Proposed regex + NER; precision and recall are unmeasured |
 | `sig.duplicate_loop.v1` | HP | n-gram repetition above threshold within response | `statistical` | Cheap; catches degenerate generation |
 | `sig.hedge_collapse.v1` | HP | Hedging language absent where uncertainty is expected | `statistical` | Weak signal; never sufficient alone |

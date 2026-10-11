@@ -35,7 +35,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-013 | sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-014 | Use/mention discriminator — is the command being recommended or discussed? | [TAG-PS](scope-delivery.md#tag-ps) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-015 | sig.unsourced_specificity.v1 — figures or dates with no provenance marker | [TAG-HP](scope-delivery.md#tag-hp) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-F-016 | sig.selfcontradiction.v1 — NLI entailment between sentence pairs | [TAG-HP](scope-delivery.md#tag-hp) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-016 | sig.selfcontradiction.v1 — NLI entailment between sentence pairs | [TAG-HP](scope-delivery.md#tag-hp) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-017 | sig.duplicate_loop.v1 — n-gram repetition above threshold | [TAG-HP](scope-delivery.md#tag-hp) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-018 | sig.hedge_collapse.v1 — hedging absent where uncertainty is expected | [TAG-HP](scope-delivery.md#tag-hp) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-019a | sig.urgency_frame.v1 — time-pressure lexicon plus imperative density | [TAG-MT](scope-delivery.md#tag-mt) | 80% · [evidence/fix](scope-progress.md) |

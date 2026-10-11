@@ -1966,27 +1966,35 @@
         "id": "F-016",
         "kind": "requirement",
         "title": "sig.selfcontradiction.v1 — NLI entailment between sentence pairs",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T20:34:06.009352+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — pinned optional offline NLI pair contract, secure worker, private CLI and executed Mac/Linux controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.selfcontradiction.v1 — NLI entailment between sentence pairs. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
+        "next_fix": "Validate representative self-contradiction selection, category errors and model calibration; agree signal/tag mapping and finish the full HP integration and human acceptance. The working caller-selected research model has a retained neutral-pair error and issues no tag.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/nli-pairs.md",
+          "docs/nli-pairs-plan.md",
+          "runs/2026-10-11-nli-current-engineering.json",
+          "runs/2026-10-11-nli-mac-controls.json",
+          "runs/2026-10-11-nli-linux-controls.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver sig.selfcontradiction.v1 — NLI entailment between sentence pairs. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+          "Representative self-contradiction selection and independent labeled/category error validation, agreed calibration/threshold policy, HP integration and human acceptance; no classifier score is treated as truth or independent corroboration."
         ],
         "queue": "open"
       }

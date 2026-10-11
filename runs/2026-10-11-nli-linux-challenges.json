@@ -1,0 +1,122 @@
+{
+  "actual_current_cli": true,
+  "wall_seconds_including_ssh": 5.025938917009626,
+  "model_identity": {
+    "model_repository": "cross-encoder/nli-deberta-v3-xsmall",
+    "revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+    "artifacts": {
+      "model.onnx": "7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4",
+      "tokenizer.json": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+      "config.json": "8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342"
+    },
+    "runtime_versions": {
+      "anyio": "4.15.1",
+      "click": "8.5.0",
+      "filelock": "4.1.1",
+      "flatbuffers": "25.12.19",
+      "fsspec": "2026.9.0",
+      "h11": "0.16.0",
+      "hf-xet": "1.7.0",
+      "httpcore2": "2.13.1",
+      "httpx2": "2.13.1",
+      "huggingface_hub": "2.2.0",
+      "idna": "3.20",
+      "ml_dtypes": "0.6.0",
+      "numpy": "2.5.4",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.0",
+      "packaging": "26.3",
+      "protobuf": "7.36.2",
+      "PyYAML": "6.0.3",
+      "tokenizers": "0.23.3",
+      "tqdm": "4.70.1",
+      "truststore": "0.10.4",
+      "typing_extensions": "4.16.0"
+    },
+    "provider": "CPUExecutionProvider",
+    "declared_label_order": [
+      "contradiction",
+      "entailment",
+      "neutral"
+    ],
+    "scores_calibrated": false,
+    "upstream_benchmark_is_product_accuracy": false
+  },
+  "cases": [
+    {
+      "synthetic_case": "entailed",
+      "expected_author_label": "entailment",
+      "top_model_labels": [
+        "entailment"
+      ],
+      "normalized_model_scores": {
+        "contradiction": 0.00060062225315487,
+        "entailment": 0.9397074226949309,
+        "neutral": 0.05969195505191424
+      },
+      "tokens": 12,
+      "matches_invented_label": true
+    },
+    {
+      "synthetic_case": "contradicted",
+      "expected_author_label": "contradiction",
+      "top_model_labels": [
+        "contradiction"
+      ],
+      "normalized_model_scores": {
+        "contradiction": 0.9974389786233885,
+        "entailment": 0.00044550746756363293,
+        "neutral": 0.0021155139090479062
+      },
+      "tokens": 15,
+      "matches_invented_label": true
+    },
+    {
+      "synthetic_case": "unrelated",
+      "expected_author_label": "neutral",
+      "top_model_labels": [
+        "contradiction"
+      ],
+      "normalized_model_scores": {
+        "contradiction": 0.8458400211015707,
+        "entailment": 0.013520658073324207,
+        "neutral": 0.14063932082510502
+      },
+      "tokens": 16,
+      "matches_invented_label": false
+    },
+    {
+      "synthetic_case": "negation",
+      "expected_author_label": "contradiction",
+      "top_model_labels": [
+        "contradiction"
+      ],
+      "normalized_model_scores": {
+        "contradiction": 0.996708349035653,
+        "entailment": 0.001186488954505869,
+        "neutral": 0.002105162009841065
+      },
+      "tokens": 14,
+      "matches_invented_label": true
+    },
+    {
+      "synthetic_case": "temporal",
+      "expected_author_label": "neutral",
+      "top_model_labels": [
+        "neutral"
+      ],
+      "normalized_model_scores": {
+        "contradiction": 0.07718227824191065,
+        "entailment": 0.022986497825244024,
+        "neutral": 0.8998312239328453
+      },
+      "tokens": 15,
+      "matches_invented_label": true
+    }
+  ],
+  "independent_ground_truth": false,
+  "accuracy_claim": false,
+  "captured_at": "2026-10-11T20:34:06.009352+00:00",
+  "phase": "installed model before final worker marker and Mac pre-load denial probe; current controls recorded separately",
+  "method_accuracy_claim": false
+}
