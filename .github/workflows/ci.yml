@@ -55,6 +55,8 @@ jobs:
         run: python scripts/verify-independent-observations.py
       - name: Exercise bounded quantitative CLI privacy and failure controls
         run: python scripts/verify-quantitative-observations.py --output output/verification/quantitative-cli.json
+      - name: Exercise bounded nominal agreement without real labels or automatic submission
+        run: python scripts/verify-reviewer-agreement.py --output output/verification/reviewer-agreement-cli.json
       - run: python scripts/verify-project-controls.py
       - name: Verify unsigned observed runtime SBOM identity
         run: python scripts/verify-runtime-sbom.py

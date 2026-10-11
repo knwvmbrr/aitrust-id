@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T17:55:41.740415+00:00",
+  "reviewed_at": "2026-10-11T18:10:05.568512+00:00",
   "reviewed_by": "Codex \u2014 per-response source-matched synthetic pipeline timing; no endpoint, permission, intake or tag change",
   "rules": [
     "X-01",
@@ -21,7 +21,7 @@
     ".gitattributes": "8f69fdb101cf018af8e37f66cf305518dbbe95ee7356e6a05ff7e601ac7678c9",
     ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
     ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
-    ".github/workflows/ci.yml": "d502c5d1dbc28d4daf6f4bfae94d6e77e7dfb175494b2cde5980f9a1e6208086",
+    ".github/workflows/ci.yml": "c6628bb38e375959e0917bf721fe443214837a6df6cea3c79a72f3e3ecf5619a",
     ".github/workflows/manifest-inspection.yml": "451b8df145c747ca53c6295ef8dcb534aedfb5c4ccf9608814715d85b962a220",
     ".github/workflows/metadata-storage.yml": "2fef6bfecace79c70014529093aae5b4f4d1368fed29e54cd2d393ed778794b0",
     "deploy/docker-compose.signing.yml": "0b89234c9e3af2b930a2f4eaf9e5c95a45bc04caf430e8b6fc9a706f79ccbbdf",
@@ -330,6 +330,7 @@
     "scripts/quantitative-observations.py": "32baf241b0143e6ab8e6a784cb103d1501b74419e981168cd9ff87fc1da58c4b",
     "scripts/receipt.cjs": "c771968409fbd34fd673847d40e8fa6a73c8520475ba416004289aaa73ebd950",
     "scripts/replay-assertion.py": "9c0555438fa20ee07c6a562bd0b914634b404a5176e2026cd97c30451169b3f7",
+    "scripts/reviewer-agreement.py": "e8da7cb0e8c1b7c8187cf83cdee2449b041f76d0e146966bd3fe88263d8790f5",
     "scripts/revocation.cjs": "b89aed87d4120960085604feda993573e012cfe303e7191cbcf257e9a02bf605",
     "scripts/source_snapshot.py": "53c59596ecec49ab4c7a5e47e0b9ec8d6d72d189c352daf5c8029b4164b65765",
     "scripts/spdx_inventory.py": "b22cdea09d05413c3663579efbe4cfe9d8fefb5836457f6268cf233ab9924a1b",
@@ -347,8 +348,9 @@
     "scripts/verify-redistribution-notices.py": "25a47193c9e1ee1eb4582047fa575234badfecc9eb1d15d76d9e5fe4140002e1",
     "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206",
     "scripts/verify-replay-export.cjs": "30cbd99c5c3e81657ba337e64687325ffd170397a2df72e142dcd4f767403db0",
+    "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "84b04690d9dfb7d440b5e0ee4b2b647a569f46fcf84dec215d2f17269d9cf4d6",
+    "scripts/verify-route-boundaries.py": "7e8bbca3c32ecb4cd37f8061ff307b4a88a9c33bbcdc157a9370bc02dd06b8e2",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-signed-gateway.cjs": "47abfdd0a2bb88407d90a56b75b66b0d5215261c208de1a75b0e9e6bbf5d1aac",
@@ -414,10 +416,10 @@
     "site/src/policies.js": "4e375fb0c7852b5134af7adc8fe98fff403bac69460dff3d8fc6234c9dbea03f",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "5d3df25c6908655de0a61c81812cb7d0410adeb84c47e4d1185f61981a1bee82",
+    "site/src/public-scope.json": "48f537230462d026747905f0c7931dc9eaba6d1c92a1a3359cc40ff957821cf0",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "58438d03910c764c9995444533869c7533ceb46b3871448a3a2d6782eba79cb4",
+    "site/src/scope-manifest.json": "46b29ff92438f245bc9807fcde227ac36a6f6cb5ef544b5af1c80bf1f2f7f063",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
     "site/src/tag-performance.json": "f04e0adc5f68fb5781b50e476756fdd61cadb14581c69a7cc0434260c226d688",
@@ -484,6 +486,7 @@
     "tests/test_python_input_pins.py": "59573588df5ba336c8bc2ecb859a7e1ed599534cfb61db13069ceeff944beb1f",
     "tests/test_quantitative_observations.py": "f842b79ac44b522ddf5af01f8506f875327076b328264c125cf34786cebfaa83",
     "tests/test_registry_deferral.py": "3d90be7b2dfcee63f8d1f2da1c0e279725dfd75f191845af9364b32a9fe67bb0",
+    "tests/test_reviewer_agreement.py": "d4db4344c4100e57ce39284711d56da4c4a0da18bacf94f0419c97e705767229",
     "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192",
     "tests/test_source_provenance.py": "d50854181eb329e112d58e16a5ab8f771e4b03e19195cfd7b0b6bc62cbdfdb13",
     "tests/test_spdx_inventory.py": "9b5a6859e1b80d48e4f996b8eaafba53d49af57b6163777e31e22bc4f8db8437",
@@ -496,11 +499,12 @@
     "tools/language_observations.py": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
     "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
     "tools/package_proximity.py": "1ce62f01086757fd96f8b9e536f230b627fd9f5bd9919d6c17f169598d896e84",
-    "tools/quantitative_observations.py": "ec27459447054729cc58a578b5ef34525dbc9dff2582432243fd7a912a4cf012"
+    "tools/quantitative_observations.py": "ec27459447054729cc58a578b5ef34525dbc9dff2582432243fd7a912a4cf012",
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052"
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-11-pipeline-identity-extension-current.json",
-    "website": "runs/2026-10-11-pipeline-identity-website-current.json"
+    "website": "runs/2026-10-11-reviewer-agreement-website-stable.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",

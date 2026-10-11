@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-11T18:07:17.968488+00:00",
+  "kind": "generated_scope_source_change_diagnosis",
+  "failed_receipt": "runs/2026-10-11-reviewer-agreement-website.json",
+  "signature": "source_unchanged_during_execution_false",
+  "changed_generated_sources": [
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json"
+  ],
+  "all_four_execution_commands_passed": true,
+  "cause": "Build refreshed public scope artifacts after the F-056 ledger update. The pre-build fingerprint correctly refused to accept changed inputs.",
+  "fix": "Retain the failed receipt, record the generated artifacts, and rerun against the stable generated source.",
+  "independent_accuracy_evidence": false
+}

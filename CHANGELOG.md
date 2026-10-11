@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-181111-agreement-full-regression-bdac46a6
+
+Recorded 2026-10-11T18:11:11.378515+00:00 · Contributor: Codex · change
+
+- **Changed.** Record executed full agreement regression and current source-bound engineering totals.
+- **Evidence.** 1681 Python tests pass; 38 agreement computation cases and 13 actual CLI controls on each Mac and isolated Linux; no full requirement count inflation. [Change record](./runs/changes/2026-10-11-181111-agreement-full-regression-bdac46a6.json).
+- **Not claimed.** One upstream TestClient deprecation warning remains; synthetic checks do not validate MT or supply independent reviewers.
+
+
+### 2026-10-11-181006-agreement-source-bound-acceptance-56a9f1e7
+
+Recorded 2026-10-11T18:10:06.674626+00:00 · Contributor: Codex · change
+
+- **Changed.** Review standalone agreement sources and preserve all five current personal capability checks.
+- **Evidence.** 484 reviewed source files, unchanged service/extension permission boundaries and all five current capability receipts; full requirement count remains 88 open. [Change record](./runs/changes/2026-10-11-181006-agreement-source-bound-acceptance-56a9f1e7.json).
+- **Not claimed.** This is agreement computation and engineering acceptance, without actual human MT labels, independent release or new collection.
+
+
+### 2026-10-11-181005-agreement-stable-website-bf0ac1e1
+
+Recorded 2026-10-11T18:10:05.331777+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute all current website checks after generated scope source is stable.
+- **Evidence.** Four checks pass with unchanged source fingerprint, including actual browser panels, timing details, accessibility, offline downloads and security headers. [Change record](./runs/changes/2026-10-11-181005-agreement-stable-website-bf0ac1e1.json).
+- **Not claimed.** Browser execution does not supply human accessibility, physical devices or independent accuracy.
+
+
+### 2026-10-11-180718-agreement-generated-scope-1d62669b
+
+Recorded 2026-10-11T18:07:18.008504+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh generated public scope after F-056 advances and retain the resulting changed-source rejection.
+- **Evidence.** All four website execution commands passed; source fingerprint correctly rejects generated scope changes within the run. [Change record](./runs/changes/2026-10-11-180718-agreement-generated-scope-1d62669b.json).
+- **Not claimed.** Failed receipt is historical, not current acceptance; stable-source verification is rerun separately.
+
+
+### 2026-10-11-180425-reviewer-agreement-component-0094c140
+
+Recorded 2026-10-11T18:04:25.382701+00:00 · Contributor: Codex · change
+
+- **Changed.** Add bounded nominal agreement computation and actual Mac/Linux CLI controls; publish source-identified service timing.
+- **Evidence.** 38 computational cases and 13 actual CLI controls per platform; 717 exact published artifacts; F-056 advances from 20 to 60. [Change record](./runs/changes/2026-10-11-180425-reviewer-agreement-component-0094c140.json).
+- **Not claimed.** No real human ratings, MT tag, independent accuracy, adopted threshold, new intake, or full requirement closure.
+
+
 ### 2026-10-11-175709-timing-identity-full-acceptance-ad44d68e
 
 Recorded 2026-10-11T17:57:09.575688+00:00 · Contributor: Codex · change
