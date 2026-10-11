@@ -25,7 +25,9 @@ Replace the fixture path with your own PNG only when you want to inspect it. The
 are fixed. The tool does not execute image content or use filenames as URLs.
 It checks the pinned SDK wrapper and native library bytes before importing them.
 It loads that exact checked package by its absolute path; a same-named file or
-folder in your source checkout is not used. A preloaded SDK is refused.
+folder in your source checkout is not used. A preloaded SDK is refused. An
+environment inside your checkout retains its checked distribution metadata;
+the loaded wrapper and native versions must both match their pins.
 No global SDK settings are used; each reader gets verification enabled, remote
 manifest and OCSP fetching disabled, no allowed network hosts and identity
 decoding disabled. It does not add a test root to its trust store.

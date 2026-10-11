@@ -144,10 +144,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The pinned-manifest-loader source passed 1,545 Python checks, including
+The synthetic-storage source passed 1,559 Python checks, including
 all 32 route-boundary checks. Execution is recorded in
-`runs/2026-10-11-manifest-loader-metadata-python.json` and
-`runs/2026-10-11-manifest-loader-metadata-boundaries.json`. All five active development fixture
+`runs/2026-10-11-metadata-storage-full-python-current.json` and
+`runs/2026-10-11-metadata-storage-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and
@@ -427,6 +427,9 @@ The new HP/MT/FI fixtures are synthetic development scenarios, not release evide
 
 Owner-first practice: [Start with PS](https://aitrustid.com/reference/operate/).
 Optional feedback previews and downloads a local metadata file; it sends nothing.
+The [synthetic PostgreSQL storage controls](docs/metadata-storage.md) run on Linux
+with one command, using their own disposable private cluster. They do not
+activate participant collection, change production tables or adopt retention terms.
 [Legal draft register](docs/legal/README.md) separates effective policies, proposed
 corrections, restricted records and the remaining full-package review.
 

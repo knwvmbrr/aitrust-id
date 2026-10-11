@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-162830-metadata-python-acceptance-1e84e9ed
+
+Recorded 2026-10-11T16:28:30.324939+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current full-suite storage acceptance and documented the one-command synthetic Linux test.
+- **Evidence.** 1559 Python checks pass with unchanged execution sources, and all current route controls pass. [Change record](./runs/changes/2026-10-11-162830-metadata-python-acceptance-1e84e9ed.json).
+- **Not claimed.** 39 actual PostgreSQL controls remain separate from unit checks; no real collection, tag accuracy, hosted workflow pass or additional full requirement closure is claimed.
+
+
+### 2026-10-11-162722-metadata-current-verification-ccf5eac3
+
+Recorded 2026-10-11T16:27:22.610345+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed exact generated website and route inventories after synthetic storage changes.
+- **Evidence.** All five source-bound capabilities and unchanged endpoint/permission boundaries pass. [Change record](./runs/changes/2026-10-11-162722-metadata-current-verification-ccf5eac3.json).
+- **Not claimed.** Engineering acceptance does not validate tag accuracy or activate research collection.
+
+
+### 2026-10-11-162517-metadata-generated-scope-7d5028e1
+
+Recorded 2026-10-11T16:25:17.156294+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public scope artifacts for the synthetic metadata milestone and retained failed verification receipts.
+- **Evidence.** The failed first website receipt records source regeneration; the full-suite failure identifies the stale route inventory rather than granting acceptance. [Change record](./runs/changes/2026-10-11-162517-metadata-generated-scope-7d5028e1.json).
+- **Not claimed.** Neither failed receipt is passing evidence; 114 complete and 88 open remain unchanged.
+
+
+### 2026-10-11-161850-synthetic-metadata-storage-70fc214f
+
+Recorded 2026-10-11T16:18:50.870373+00:00 · Contributor: Codex · change
+
+- **Changed.** Built synthetic-only PostgreSQL metadata storage with restricted roles, exact fields, withdrawal and expiry; added an owned private Unix-socket test runner and its CI workflow. Refreshed published native-loader acceptance in scope/state.
+- **Evidence.** 39 actual non-root PostgreSQL controls pass, including all 80 supported feedback combinations and escaped-Unicode refusal without reflected canaries. Shutdown/removal occurs before passing evidence is written. F-025 current merged source passed 16 anonymous CLI cases, both hosted native jobs and all 22 required engineering contexts. [Change record](./runs/changes/2026-10-11-161850-synthetic-metadata-storage-70fc214f.json).
+- **Not claimed.** No participant intake, endpoint, production database change, retention adoption, independent accuracy or training/anomaly job is claimed. N-011 advances to executable-check milestone only; all 202 records remain, 114 complete and 88 open.
+
+
 ### 2026-10-11-160522-loader-venv-accepted-9659097a
 
 Recorded 2026-10-11T16:05:22.739748+00:00 · Contributor: Codex · change
