@@ -16,7 +16,7 @@ The public tag catalogue is live at [aitrustid.com](https://aitrustid.com), with
 Person/Enterprise views, compact tag tiles, a tag logo, Light/Dark/System appearance
 and compact tag-detail modals with a plain-language purpose, limitation and visible
 validation status. Each panel starts with an everyday example and a clear next action. Deeper methods, testing and feature details expand on request. Catalogue downloads identify themselves as descriptions; PS result exports remain a separate workflow. Enterprise plans describe their own scope without presenting reviewable designs as running services. Twenty [static tag reference pages](https://aitrustid.com/tags/)
-and a [32-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
+and a [36-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
 to crawlers. Google indexing and Search Console ownership remain unverified.
 HTTPS, public response hashes,
 production security headers and all 20 modals pass external checks. Report and
@@ -82,6 +82,13 @@ state. They neither change the live PS checker nor release HP or MT. No inspecte
 program executes; no ranking or source is fetched. Their combined actual CLI
 controls run with `python3 scripts/verify-independent-observations.py`.
 
+The optional [attached C2PA inspector](docs/manifest-inspection.md) reads a selected
+PNG in a separate pinned environment. It reports signature, asset binding, trust
+and unchecked revocation separately. Its brief result omits embedded personal
+metadata; full assertions require an explicit new private report file. It neither
+issues image credentials nor releases FA/PA. The documented C2PA signal remains
+a proposed observation, with its own runnable source and test fixtures.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual
@@ -133,10 +140,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current source passed 1,381 Python checks plus the separately executed 32
-route-boundary checks (1,424 combined). Execution is recorded in
-`runs/2026-10-11-independent-signals-python-payload-corrected.json` and
-`runs/2026-10-11-independent-signals-route-tests.json`. All five active development fixture
+The manifest-inspection source passed 1,455 Python checks plus the separately executed 32
+route-boundary checks (1,487 combined). Execution is recorded in
+`runs/2026-10-11-manifest-full-python.json` and
+`runs/2026-10-11-manifest-current-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and

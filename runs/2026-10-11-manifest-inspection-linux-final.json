@@ -1,0 +1,122 @@
+{
+  "captured_at": "2026-10-11T14:53:12.129554+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "signed",
+      "state": "OBSERVED",
+      "minimal_output_no_private_metadata": true
+    },
+    {
+      "case": "altered",
+      "state": "OBSERVED",
+      "minimal_output_no_private_metadata": true
+    },
+    {
+      "case": "unsigned",
+      "state": "NOT_FOUND",
+      "minimal_output_no_private_metadata": true
+    },
+    {
+      "case": "ambient_native_loader_override",
+      "state": "OBSERVED",
+      "reviewed_library_used": true
+    },
+    {
+      "case": "malformed",
+      "state": "UNAVAILABLE",
+      "no_path_or_metadata_echo": true
+    },
+    {
+      "case": "unsupported",
+      "state": "UNAVAILABLE",
+      "no_path_or_metadata_echo": true
+    },
+    {
+      "case": "oversized",
+      "state": "UNAVAILABLE",
+      "no_path_or_metadata_echo": true
+    },
+    {
+      "case": "symlink",
+      "state": "UNAVAILABLE",
+      "no_path_or_metadata_echo": true
+    },
+    {
+      "case": "directory",
+      "state": "UNAVAILABLE",
+      "no_path_or_metadata_echo": true
+    },
+    {
+      "case": "missing",
+      "state": "UNAVAILABLE",
+      "no_path_or_metadata_echo": true
+    },
+    {
+      "case": "explicit_private_export_and_replacement_refusal",
+      "state": "OBSERVED",
+      "owner_private": true
+    },
+    {
+      "case": "public_directory",
+      "state": "UNAVAILABLE",
+      "private_export_refused": true
+    },
+    {
+      "case": "source_checkout",
+      "state": "UNAVAILABLE",
+      "private_export_refused": true
+    }
+  ],
+  "case_count": 13,
+  "sources": {
+    "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+    "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+    "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/inspect-manifest.py": "2db79e574bc42b68aeb33bf9b7ec7aa89f1af07172e14021d73785857876dbbe",
+    "scripts/verify-manifest-inspection.py": "666c5e243a887815a003812d691597d4d37e5176d2d6a22d0537abd1cf3682a2",
+    "tests/fixtures/c2pa-inspection-2026/altered.png": "3fa76c5468932a539b48af2e8f31da16a22b50be84e710fae2e9ca205b3fd991",
+    "tests/fixtures/c2pa-inspection-2026/generate.py": "a7dc00bbdfe81483208d2a07397252711246cd780d7fb9641e7d78f0b18ea0b0",
+    "tests/fixtures/c2pa-inspection-2026/manifest.json": "be3a6db50fb389492135032f103b122b751e4da84ec62aa70d032132cfd4f230",
+    "tests/fixtures/c2pa-inspection-2026/signed.png": "44de22dcce52ade2b87fce492b1bba358d404c75bd2da6cc71cb7ecfd9ba8086",
+    "tests/fixtures/c2pa-inspection-2026/unsigned.png": "e878950f8091ec010cf5cc723bdea027a8539cf7147cfea199c2f666232dcd4e",
+    "tests/test_manifest_inspection.py": "34d13d703912411c1b76a1a8080ee076c6c7fd9e7b3351067e30b75d18bc4568",
+    "tools/manifest_inspection.py": "4f869ef59ea32fe96e6bb1fcbc57862b5645ebf9f2bb4586d7cec591ca1ab6c7"
+  },
+  "source_unchanged_during_execution": true,
+  "package_version": "0.38.0",
+  "sdk_version": "0.91.0",
+  "native_sha256": "dfa68d2a8ee739bb75919dcb5300f2cb289e1b51ecce94b0f339ff287ebe0703",
+  "effective_user_is_root": false,
+  "network_namespace_differs_from_init": null,
+  "settings": {
+    "version": 1,
+    "verify": {
+      "verify_after_reading": true,
+      "verify_trust": true,
+      "verify_timestamp_trust": true,
+      "remote_manifest_fetch": false,
+      "ocsp_fetch": false
+    },
+    "core": {
+      "allowed_network_hosts": [],
+      "decode_identity_assertions": false
+    }
+  },
+  "native_is_a_complete_security_sandbox": false,
+  "new_tag_releases": 0,
+  "independent_accuracy_evidence": false,
+  "external_network_namespace_witness": {
+    "observed_before_nonroot_exec": true,
+    "inspection_namespace": "net:[4026532456]",
+    "init_namespace": "net:[4026531840]",
+    "different": true,
+    "launcher_exit": 0,
+    "launcher_script_sha256": "db99cf0c7683a75259e2ff6e486474982a8be45528cfdf827c66f3c1dcda65db",
+    "child_report_sha256": "2b7377862f99cefabf404070700d3eb00905be3a72ea554da47ce52baa3d7c4d",
+    "captured_at": "2026-10-11T14:53:12.788053+00:00"
+  }
+}

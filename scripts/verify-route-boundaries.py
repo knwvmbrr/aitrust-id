@@ -59,6 +59,10 @@ PATTERNS += ('tools/package_proximity.py', 'tools/language_observations.py',
              'scripts/verify-independent-observations.py', 'tests/test_package_proximity.py',
              'tests/test_language_observations.py', 'tests/test_credential_flow.py')
 PATTERNS += ('tests/test_observation_verifier.py', 'scripts/verify-mobile-payload.cjs')
+PATTERNS += ('tools/manifest_inspection.py', 'scripts/inspect-manifest.py',
+             'scripts/verify-manifest-inspection.py', 'tests/test_manifest_inspection.py',
+             'eval/c2pa-inspection.lock', 'eval/dependencies/c2pa-inspection.json',
+             'tests/fixtures/c2pa-inspection-2026/*')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

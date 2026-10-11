@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T14:32:11.041395+00:00",
+  "updated": "2026-10-11T15:03:45.852014+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://e99c2aa6.aitrust-id.pages.dev",
+    "deployment_url": "https://3e3da54b.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-consent-publication.json",
+    "publication_evidence": "runs/2026-10-11-mobile-payload-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -717,7 +717,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T13:43:26.933854+00:00",
+    "audited_at": "2026-10-11T14:54:24.183289+00:00",
     "completed_records": 113,
     "open_records": 89,
     "records_preserved": 202,
@@ -729,11 +729,11 @@
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-authenticated-publication.json",
-    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "publication": "runs/2026-10-11-mobile-payload-publication.json",
+    "source_commit": "64e056963c31990a1cf213ae76c370b16b84a670",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/independent-signals-result.md",
+    "latest_increment": "docs/manifest-inspection.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -744,7 +744,7 @@
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
     "current_target_verification": "runs/2026-10-11-authenticated-current-boundaries.json",
-    "publication_evidence_merge": "runs/2026-10-11-authenticated-protected-merge.json",
+    "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-11"
   },
@@ -1023,15 +1023,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-mobile-payload-ps-revalidation.json",
-    "PII_REDACTED": "runs/2026-10-11-mobile-payload-pii_redacted-revalidation.json",
-    "protocol": "runs/2026-10-11-mobile-payload-protocol-revalidation.json",
+    "PS": "runs/2026-10-11-manifest-ps-all-counts-corrected.json",
+    "PII_REDACTED": "runs/2026-10-11-manifest-pii-revalidation.json",
+    "protocol": "runs/2026-10-11-manifest-protocol-revalidation.json",
     "extension": "runs/2026-10-11-mobile-payload-extension-revalidation.json",
-    "website": "runs/2026-10-11-mobile-payload-website-cache-corrected.json",
+    "website": "runs/2026-10-11-manifest-website-recorded.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T14:32:11.041395+00:00",
+  "updated_at": "2026-10-11T15:03:45.852014+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1389,12 +1389,14 @@
     "independent_accuracy_evidence": false,
     "new_tag_releases": 0,
     "requirements_closed_by_this_batch": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "full_python_evidence": "runs/2026-10-11-independent-signals-python-review-accepted.json",
     "current_boundaries": "runs/2026-10-11-independent-signals-boundaries-reviewed.json",
     "route_tests": "runs/2026-10-11-independent-signals-route-tests-reviewed.json",
     "current_source_receipts": "runs/2026-10-11-independent-signals-current-receipts.json",
-    "ci_portability_failure": "runs/2026-10-11-independent-signals-ci-portability-failure.json"
+    "ci_portability_failure": "runs/2026-10-11-independent-signals-ci-portability-failure.json",
+    "source_commit": "e3b68e87e4d73a4d276289371e3bea9f51aab602",
+    "protected_merge": "runs/2026-10-11-independent-mobile-protected-merges.json"
   },
   "mobile_scope_payload": {
     "implemented_by": "Codex",
@@ -1415,6 +1417,27 @@
     "source_receipts": "runs/2026-10-11-mobile-payload-current-cache-corrected.json",
     "physical_phone_verified": false,
     "requirements_closed_by_this_batch": 0,
-    "publication_pending": true
+    "publication_pending": false,
+    "publication": "runs/2026-10-11-mobile-payload-publication.json",
+    "source_commit": "64e056963c31990a1cf213ae76c370b16b84a670",
+    "protected_merge": "runs/2026-10-11-independent-mobile-protected-merges.json"
+  },
+  "manifest_inspection": {
+    "implemented_by": "Codex",
+    "scope_id": "F-025",
+    "state": "optional_offline_png_observation",
+    "contract": "docs/manifest-inspection.md",
+    "mac_evidence": "runs/2026-10-11-manifest-inspection-mac-final.json",
+    "linux_evidence": "runs/2026-10-11-manifest-inspection-linux-final.json",
+    "fault_pin_privacy_tests": 62,
+    "real_cli_cases_per_platform": 13,
+    "library_version": "c2pa-python/0.38.0 native/0.91.0",
+    "new_tag_releases": 0,
+    "image_credential_issuer": false,
+    "publication_pending": true,
+    "independent_accuracy_evidence": false,
+    "current_capabilities": "runs/2026-10-11-manifest-current-capabilities.json",
+    "current_boundaries": "runs/2026-10-11-manifest-current-boundaries.json",
+    "full_python_evidence": "runs/2026-10-11-manifest-full-python.json"
   }
 }

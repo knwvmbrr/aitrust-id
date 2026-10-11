@@ -1,0 +1,44 @@
+name: optional-manifest-inspection
+on:
+  push:
+    paths:
+      - 'tools/manifest_inspection.py'
+      - 'scripts/inspect-manifest.py'
+      - 'scripts/verify-manifest-inspection.py'
+      - 'eval/c2pa-inspection.lock'
+      - 'eval/dependencies/c2pa-inspection.json'
+      - 'tests/fixtures/c2pa-inspection-2026/**'
+      - '.github/workflows/manifest-inspection.yml'
+  pull_request:
+    paths:
+      - 'tools/manifest_inspection.py'
+      - 'scripts/inspect-manifest.py'
+      - 'scripts/verify-manifest-inspection.py'
+      - 'eval/c2pa-inspection.lock'
+      - 'eval/dependencies/c2pa-inspection.json'
+      - 'tests/fixtures/c2pa-inspection-2026/**'
+      - '.github/workflows/manifest-inspection.yml'
+permissions:
+  contents: read
+jobs:
+  attached-manifest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install separate pinned optional environment
+        run: python -m pip install --require-hashes -r eval/c2pa-inspection.lock
+      - name: Exercise actual parser in network isolation
+        run: |
+          sudo unshare -n sh -c 'set -e
+          test "$(readlink /proc/self/ns/net)" != "$(readlink /proc/1/ns/net)"
+          exec setpriv --reuid "$1" --regid "$2" --init-groups "$3" scripts/verify-manifest-inspection.py --output output/verification/manifest-inspection.json' _ "$(id -u)" "$(id -g)" "$(which python)"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: optional-manifest-inspection
+          path: output/verification/manifest-inspection.json
+          if-no-files-found: error

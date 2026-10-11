@@ -114,11 +114,18 @@ def test_decisions_refuse_missing_and_manufactured_acceptance(mutation):
 def test_dated_prose_is_exact_current_source():assert decisions.verify()['pass']
 
 def test_all_signal_ids_have_explainable_state_and_unknowns_refuse():
-    data=signals.registry();assert len(data['signals'])==38
+    data=signals.registry();assert len(data['signals'])==39
+    assert signals.lookup('sig.c2pa_manifest.v1')['status']=='proposed'
     for row in data['signals']:
         found=signals.lookup(row['id']);assert found['description'] and not found['independent_accuracy_evidence']
     for id in ('sig.unknown.v1','sig.piped_installer','<script>','sig.piped_installer.v999'):
         assert signals.lookup(id)['status']=='unsupported'
+
+def test_documented_c2pa_identifier_is_not_lost_by_letter_only_matching():
+    import re
+    assert re.fullmatch(signals.SIGNAL_ID,'sig.c2pa_manifest.v1')
+    for invalid in ('sig.2bad.v1','sig.C2PA.v1','sig.c2pa_manifest.v0','sig.c2pa_manifest.v01','sig..v1'):
+        assert not re.fullmatch(signals.SIGNAL_ID,invalid)
 
 def test_active_catalogue_and_runtime_cannot_silently_diverge(tmp_path):
     methods=signals.registry()['signals']

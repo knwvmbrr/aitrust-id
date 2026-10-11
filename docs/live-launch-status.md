@@ -1,4 +1,34 @@
-# Live launch status — 2026-10-08
+# Live launch status — 2026-10-11
+
+The current published website source is
+`64e056963c31990a1cf213ae76c370b16b84a670`, the protected merge of PR 29.
+All 229 served files match the tested build on the preview address,
+aitrustid.com and www.aitrustid.com; all three have the checked security headers.
+The initial JavaScript is 539,453 bytes, down from the measured 994,375-byte
+baseline. The full 202-record scope loads on request with exact size, hash and
+ordered-ID checks. Rejected responses bypass the HTTP cache on retry. Complete
+details remain available after offline installation.
+
+[Published-byte evidence](../runs/2026-10-11-mobile-payload-publication.json) ·
+[Protected merges and 22 required checks each](../runs/2026-10-11-independent-mobile-protected-merges.json) ·
+[Real cached-response recovery and browser controls](../runs/2026-10-11-mobile-payload-browser-cache-corrected.json).
+The GitHub billing issue in the historical snapshot below is resolved; hosted
+engineering CI now runs. The separate statistical and human accessibility
+release gates remain failing and have not been waived. No tag is independently
+release validated.
+
+PS is the on-device development checker. PII_REDACTED is a procedural local-service
+capability; the other catalogue tags remain planned/proposed. The offline package,
+credential-flow and language observation tools are published in Git after PR 28.
+None of them automatically creates a new production tag. The optional real
+attached-manifest inspector is under its own source/CI acceptance; see
+[its contract](manifest-inspection.md). The latest owner direction is to skip
+blocked requirements and keep building toward 50 open. The audit keeps all 202
+IDs and credits 100% only for full functioning acceptance.
+
+## Historical launch snapshot — 2026-10-08
+
+The following observations describe that dated source, not the current deployment.
 
 The public development catalogue and on-device PS checker are live at
 https://aitrustid.com and https://www.aitrustid.com. The provider address
