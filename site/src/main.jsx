@@ -5,7 +5,7 @@ import * as Tabs from '@radix-ui/react-tabs';
 import {clsx} from 'clsx';
 import {twMerge} from 'tailwind-merge';
 import {personTags,enterpriseTags,allTags} from './catalog.js';
-import scope from './public-scope.json';
+import {ScopeData} from './ScopeData.jsx';
 import {registerPublicTagTools} from './model-tools.js';
 import {publisher} from './policies.js';
 import {presentation} from './presentation.js';
@@ -22,7 +22,6 @@ const sourceDownload=repository+'/archive/refs/heads/main.zip';
 const quickstart=repository+'/blob/main/docs/open-validation-path.md';
 const securityReport=repository+'/security/advisories/new';
 const button='rounded-lg border border-line bg-surface px-4 py-3 text-sm font-medium hover:border-ink hover:bg-ink hover:text-surface';
-const featuresById=new Map(scope.records.map(r=>[r.id,r]));
 const sharedIds=['F-001','F-003','F-004','F-005','F-007','F-008','F-009','N-005','N-006'];
 function download(name,content,type='application/json'){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function route(){let decoded;try{decoded=decodeURIComponent(location.hash.slice(1));}catch{return {audience:'person',id:null};}const [audience,id]=decoded.split('/');return {footer:workflows.find(w=>w.slug===decoded)?.name||null,audience:audience==='enterprise'?'enterprise':'person',id:allTags.some(t=>t.id===id&&t.audience===audience)?id:null};}
@@ -43,10 +42,11 @@ function Shell({children,title,description}) {
   </header><div className="px-5 py-5 sm:px-6">{children}</div>
  </Dialog.Content></Dialog.Portal>;
 }
-function Disclosure({title,children}) {
- return <details className="tag-disclosure border-t border-line"><summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>{title}</span><span aria-hidden="true" className="disclosure-symbol text-lg font-normal">+</span></summary><div className="pb-4 text-sm leading-6">{children}</div></details>;
+function Disclosure({title,children,defer=false}) {
+ const [open,setOpen]=useState(false);
+ return <details className="tag-disclosure border-t border-line" onToggle={event=>setOpen(event.currentTarget.open)}><summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>{title}</span><span aria-hidden="true" className="disclosure-symbol text-lg font-normal">+</span></summary><div className="pb-4 text-sm leading-6">{(!defer||open)&&children}</div></details>;
 }
-function FeatureList({ids}){const unique=[...new Set(ids)].map(id=>featuresById.get(id)).filter(Boolean);return <ul className="mt-2 space-y-3">{unique.map(f=><li key={f.id}><p className="text-sm font-semibold">{f.title}</p><p className="text-sm leading-6">{f.job}</p><p className="mt-1 text-sm text-muted">{f.id} · {f.disposition} · Scope record; not an implementation claim</p></li>)}</ul>}
+function FeatureList({ids,records}){const featuresById=new Map(records.map(r=>[r.id,r]));const unique=[...new Set(ids)].map(id=>featuresById.get(id)).filter(Boolean);return <ul className="mt-2 space-y-3">{unique.map(f=><li key={f.id}><p className="text-sm font-semibold">{f.title}</p><p className="text-sm leading-6">{f.job}</p><p className="mt-1 text-sm text-muted">{f.id} · {f.disposition} · Scope record; not an implementation claim</p></li>)}</ul>}
 function UseTag({tag}) {
  const use=usage(tag);const [message,setMessage]=useState('');
  async function copy(command){try{await navigator.clipboard.writeText(command);setMessage('Commands copied. Review them before running in Terminal.');}catch{setMessage('Copy is unavailable. Select the commands, or open the full setup guide.');}}
@@ -95,14 +95,16 @@ function TagDetails({tag}) {
    <ul className="mt-2 space-y-1">{tag.references.map(url=><li key={url}><a className="break-all underline underline-offset-4" href={url} target="_blank" rel="noreferrer">{url.split('/').at(-1)}</a></li>)}</ul>
    <p className="mt-2 text-xs text-muted">Record {tag.id} · Scope {tag.scopeId}. A planned feature is not evidence that it works.</p>
   </Disclosure>
-  <Disclosure title="Privacy and full details">
+  <Disclosure title="Privacy and full details" defer>
    <h4 className="font-semibold">Privacy</h4><p>{tag.privacy}</p><h4 className="mt-3 font-semibold">Access</h4><p>{tag.price}</p>
    <h4 className="mt-3 font-semibold">Dependencies and failure</h4><Bullets items={tag.dependencies}/><p className="mt-2">{tag.failure}</p>
    <h4 className="mt-3 font-semibold">Who is responsible</h4><p>{tag.owner}</p>
-   <h4 className="mt-3 font-semibold">Tag features</h4>{tag.features.length?<FeatureList ids={tag.features}/>:<p>This proposal needs its own validated method.</p>}
-   <h4 className="mt-3 font-semibold">Shared capabilities</h4><FeatureList ids={sharedIds}/>
+   <ScopeData>{scope=>{const featuresById=new Map(scope.records.map(r=>[r.id,r]));return <>
+   <h4 className="mt-3 font-semibold">Tag features</h4>{tag.features.length?<FeatureList ids={tag.features} records={scope.records}/>:<p>This proposal needs its own validated method.</p>}
+   <h4 className="mt-3 font-semibold">Shared capabilities</h4><FeatureList ids={sharedIds} records={scope.records}/>
    <p className="mt-4 text-muted">Download details saves this tag’s description and evidence links. It is not a result from a checked answer.</p>
    <div className="mt-3 flex flex-wrap gap-2"><button className={button} onClick={copyLink}>Copy link</button><button className={button} onClick={()=>download('ai-trust-id-'+tag.id+'.json',JSON.stringify(catalogueExport(tag,usage(tag),performanceById.get(tag.id),[...sharedIds,...tag.features].map(id=>featuresById.get(id)).filter(Boolean)),null,2))}>Download details</button></div><p role="status" className="mt-2">{message}</p>
+   </>}}</ScopeData>
   </Disclosure>
   <div className="mt-4 flex flex-wrap items-center gap-2"><WorkDialog intent="Report" tag={tag} label="Report an issue"/>{intro.working&&<WorkDialog intent="Assist" tag={tag} label="Help improve this tag"/>}</div>
  </>;

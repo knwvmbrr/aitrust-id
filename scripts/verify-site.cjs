@@ -48,7 +48,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      assert(await summary.evaluate(e=>e.parentElement.open),id+' disclosure is not keyboard operable');
     }
     assert((await dialog.innerText()).includes('Every tag must pass its own published validation gate before release.'),'Release gate missing from full evidence');
-    for(const heading of ['What it can say','Method','What has been checked','Privacy','Who is responsible','Before release'])assert(await dialog.getByRole('heading',{name:heading,exact:true}).isVisible(),id+' incomplete');
+    for(const heading of ['What it can say','Method','What has been checked','Privacy','Who is responsible','Before release'])await dialog.getByRole('heading',{name:heading,exact:true}).waitFor({state:'visible'});
     if(id==='PS'){
      await dialog.getByRole('button',{name:'Download details',exact:true}).scrollIntoViewIfNeeded();
      const downloadEvent=page.waitForEvent('download');await dialog.getByRole('button',{name:'Download details',exact:true}).click();

@@ -2,6 +2,7 @@ import {execFileSync} from 'node:child_process';
 import {performanceHTML} from '../src/performance-model.js';
 import {policies,policyPath,policyText,policyDownloadPath,publisher,releasePolicy} from '../src/policies.js';
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {allTags,personTags,enterpriseTags} from '../src/catalog.js';
@@ -16,7 +17,9 @@ const progress=JSON.parse(fs.readFileSync(path.join(repo,'docs/scope-progress.js
 const progressBy=new Map(progress.records.map(r=>[r.id,r]));
 const records=scope.records.map(r=>({id:r.id,title:r.display_title||r.title,layer:r.layer,disposition:r.disposition,job:r.baseline_job,outcome:r.outcome,owner:r.owner,status:r.status,acceptance:r.acceptance,failure:r.failure_behavior,dependencies:r.dependencies,delivery:r.delivery,progress:progressBy.get(r.id)}));
 const data={date:scope.date,layers:['Tag types and evidence','Shared tag capabilities','Personal and organization workflows'],records};
-fs.writeFileSync(path.join(site,'src/public-scope.json'),JSON.stringify(data,null,2)+'\n');
+const scopeBytes=Buffer.from(JSON.stringify(data,null,2)+'\n');
+fs.writeFileSync(path.join(site,'src/public-scope.json'),scopeBytes);
+fs.writeFileSync(path.join(site,'src/scope-manifest.json'),JSON.stringify({sha256:createHash('sha256').update(scopeBytes).digest('hex'),bytes:scopeBytes.length,ids:records.map(record=>record.id)},null,2)+'\n');
 const performanceRecords=JSON.parse(fs.readFileSync(path.join(site,'src/tag-performance.json'),'utf8')).records;
 const performanceById=new Map(performanceRecords.map(r=>[r.id,r]));
 const reference=path.join(site,'public/reference');fs.mkdirSync(reference,{recursive:true});fs.writeFileSync(path.join(reference,'public-scope.json'),JSON.stringify(data,null,2)+'\n');
