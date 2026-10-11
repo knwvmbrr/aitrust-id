@@ -65,3 +65,14 @@ their jobs to reach a number.
 
 Author: Codex. Owner direction: Michael. Execution evidence and actual completion
 timestamps remain in the scope ledger, `runs/` and the versioned changelog.
+
+## Current next acceptance handoff
+
+The optional encrypted key tool now executes on actual Mac and isolated Linux,
+including hidden terminal input and cross-platform restoration. F-129 remains
+80% until an actual nontechnical author saves and restores a key under a
+separately kept public key and understands lost-password and compromised-key
+handling. Use `docs/key-recovery.md`; synthetic terminal success is not human
+acceptance. PS blind review, the physical iPhone 14 Plus/VoiceOver checks, outside
+implementation acceptance and legal/service decisions remain independently
+required. This handoff changes no requirement counts or baseline jobs.

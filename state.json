@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T00:56:24.745990+00:00",
+  "updated": "2026-10-11T01:29:29.574959+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1180,
+  "python_tests_passed": 1182,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -115,15 +115,15 @@
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.8",
+      "version": "1.9",
       "effective_date": "2026-10-10",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
       "source": "site/src/policies.js",
       "text_downloads": true,
       "current_services_only": true,
-      "published": true,
-      "verification": "runs/2026-10-11-revocation-live-policies.json",
+      "published": false,
+      "verification": "runs/2026-10-11-key-backup-policies-local.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -141,7 +141,10 @@
         "1.5",
         "1.6",
         "1.7"
-      ]
+      ],
+      "publication_pending": true,
+      "last_published_version": "1.8",
+      "verification_scope": "Prepared policy 1.9, automated local acceptance; publication pending"
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
     "product_differentiation": "docs/product-differentiation.md",
@@ -342,7 +345,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1005 full-suite Python tests plus 32 current deployment-boundary tests, including 64 targeted dependency controls; engineering acceptance only.",
+  "python_tests_scope": "1182 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -710,7 +713,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T00:32:13.834109+00:00",
+    "audited_at": "2026-10-11T01:25:30.316087+00:00",
     "completed_records": 107,
     "open_records": 95,
     "records_preserved": 202,
@@ -719,24 +722,25 @@
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-11-offline-revocation-platforms.json",
-    "structural_evidence": "runs/2026-10-11-offline-revocation-scope.json",
+    "execution_evidence": "runs/2026-10-11-key-backup-platforms.json",
+    "structural_evidence": "runs/2026-10-11-key-backup-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-11-revocation-publication.json",
     "source_commit": "5bd2f3f8ce7aadfd5d75fdeb3ade4e6a787d7cbc",
     "public_workflow_evidence": "runs/2026-10-11-revocation-live-site.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/offline-revocation.md",
+    "latest_increment": "docs/key-recovery.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 25,
     "target_start_open_records": 100,
     "target_remaining_closures": 70,
-    "publication_pending": false,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-25-execution.md",
     "target_direction_date": "2026-10-10",
-    "current_target_verification": "runs/2026-10-10-target25-source-checks-repaired.json"
+    "current_target_verification": "runs/2026-10-10-target25-source-checks-repaired.json",
+    "publication_evidence_merge": "runs/2026-10-11-offline-status-publication-protected-merge.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1015,7 +1019,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T00:56:24.745990+00:00",
+  "updated_at": "2026-10-11T01:29:29.574959+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1236,5 +1240,34 @@
     "publication": "runs/2026-10-11-revocation-publication.json",
     "protected_merge": "runs/2026-10-11-offline-status-protected-merge.json",
     "authenticated_source": "runs/2026-10-11-offline-status-authenticated-download.json"
+  },
+  "offline_key_recovery": {
+    "implemented": true,
+    "scope_id": "F-129",
+    "profile": "offline-key-backup/1.0.0",
+    "guide": "docs/key-recovery.md",
+    "plan": "docs/key-recovery-plan.md",
+    "verification": "runs/2026-10-11-key-backup-platforms.json",
+    "algorithms": [
+      "Ed25519",
+      "ECDSA-P256-SHA256"
+    ],
+    "kdf": "scrypt N=32768 r=8 p=1; 32 bytes",
+    "cipher": "AES-256-GCM",
+    "selected_public_key_required": true,
+    "hidden_password_prompt": true,
+    "network_or_collection": false,
+    "hosted_escrow": false,
+    "production_keys_modified": false,
+    "nontechnical_author_acceptance": false,
+    "completed_requirement": false,
+    "full_regressions": "runs/2026-10-11-key-backup-atomic-final-regressions.json",
+    "website_integration": "runs/2026-10-11-key-backup-final-website.json",
+    "reviewed_personal_boundaries": "runs/2026-10-11-key-backup-final-boundaries.json",
+    "atomic_output_verification": "runs/2026-10-11-key-backup-atomic-final-platforms.json",
+    "failed_private_outputs_contained": true,
+    "custody_controls_per_actual_platform": 53,
+    "actual_editor_to_receipt": "runs/2026-10-11-key-backup-atomic-editor-receipt.json",
+    "receipt_components": "runs/2026-10-11-key-backup-final-receipt-components.json"
   }
 }

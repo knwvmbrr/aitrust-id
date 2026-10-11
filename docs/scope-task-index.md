@@ -122,7 +122,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-126 | Freshness model for offline verification against revocation | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-127 | Forgery-cost class as a first-class field on every receipt | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-128 | Anti-coercion rule — a conformant implementation may not make receipt issuance non-optional for the author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-129 | Key custody and recovery for a non-technical author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-129 | Key custody and recovery for a non-technical author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-130 | Group authorship — four signers or four receipts | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-131 | Receipt expiry and algorithm agility — ed25519 will not be safe forever | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-132 | aitrustid.com — landing and reference content, no-JS core | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |

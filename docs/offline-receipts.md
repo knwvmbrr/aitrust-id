@@ -22,8 +22,9 @@ node scripts/receipt.cjs verify "$HOME/aitrust-receipts/receipt.json" "$HOME/ait
 
 Use your actual file paths. Never publish `private.pem` or send it to us. Private
 keys must have owner-only permissions (0600); generation refuses to overwrite a
-file or follow a symlink. Keep backups privately. Friendly recovery and automatic
-key replacement are not implemented. The key identifies a cryptographic key,
+file or follow a symlink. Keep backups privately. The optional [encrypted backup and recovery tool](key-recovery.md)
+restores a key under your separately saved public key. Actual nontechnical-user
+acceptance and automatic key replacement remain open. The key identifies a cryptographic key,
 not a legally identified person. Establish a trusted public-key fingerprint with
 the other party through your chosen channel; an embedded key is never trusted.
 
@@ -92,7 +93,7 @@ The optional [group agreement tool](group-receipts.md) lets several selected key
 
 RFC-0002 remains unadopted as a standard.
 Public revocation transparency, institutional anti-coercion
-conformance, non-technical key recovery, full outside-user group acceptance and PA/FA/IV validation
+conformance, non-technical recovery acceptance, full outside-user group acceptance and PA/FA/IV validation
 remain separate unfinished requirements. No foundation, certifier or public
 authorship registry is operating.
 

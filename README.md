@@ -415,3 +415,5 @@ repeatability, not an accuracy score. It does not send research data to us.
 Optional development components: [independent file timestamps](docs/independent-timestamps.md) and a [verified no-account source download](docs/source-provenance.md). They do not issue authorship tags or establish tag accuracy.
 
 Optional [offline revocation/freshness](docs/offline-revocation.md) verifies a separately selected signed checkpoint history and reports each key’s status under your chosen cached-data policy. Stale or missing status cannot clear a key. This is not a running public transparency service or a globally current revocation claim.
+
+Optional [encrypted key backup and recovery](docs/key-recovery.md) runs offline, supports Ed25519 and P-256, and checks a separately saved public key before restoring. Passwords use hidden terminal prompts; no hosted escrow, automatic replacement or nontechnical-user acceptance is claimed.

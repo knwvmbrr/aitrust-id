@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-012143-contain-failed-private-key-writes-39dbd0b0",
+  "recorded_at": "2026-10-11T01:21:43.308897+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0eca0dd120b175bfff30df53e5cea3798eefa0fe",
+  "changed": "Repaired PR-22 partial private-key output finding with shared synced, atomic no-overwrite publication for key generation, backups, restoration and receipt outputs; report cleanup failures explicitly.",
+  "proves": "180 Mac and 148 network-isolated Linux Node controls pass, including 52 custody cases per platform, actual terminal workflows and injected I/O failure/retry controls. The merge was held for repair.",
+  "limits": "Injected filesystem failures are not actual physical disk exhaustion or power-loss testing. F-129 remains 80 percent pending nontechnical author acceptance; source review and accuracy gates still apply.",
+  "scope_ids": [
+    "F-129",
+    "F-121",
+    "F-123"
+  ],
+  "files": {
+    "docs/key-recovery-plan.md": "33e3e06637be52bc951ab3bd0223174d27836a30dba84c22128470fb12b865bb",
+    "docs/key-recovery.md": "4a5b00653522ebe0b4d6ff0735c3b9831f5182bfa747a51cf4aeec463d783e72",
+    "docs/scope-progress.json": "b066bdfb4a79466825ec3a4a5e8000bd500553da171778bccf3577a900928d2f",
+    "docs/scope-progress.md": "c72d8826198edfb2624e7230182d736b4f74b90a15ac7346769b15f4b702494b",
+    "runs/2026-10-11-key-backup-atomic-repair.json": "a6c75feb144a72b42504943e36c661742f435af136c77062da0d3f94dad3cd2f",
+    "scripts/atomic-output.cjs": "8c335936dc20e569b984162c5a28e3af1ac48a65e967b02f79f1daba8bac1ab1",
+    "scripts/key-backup.cjs": "b6e84f7b0a1510e25d729df360373b1d76adf4a9cf355ca200cd01ce7a84c4cf",
+    "scripts/receipt.cjs": "953d06371495923b87cd50518c363d9d47a57fc59adf317bd80c4e088229841e",
+    "scripts/verify-offline-components.py": "e9960d7e24346317b0f8d95547691870d4f254a4fc09643d6d2caf60b8033111",
+    "scripts/verify-route-boundaries.py": "2752ee4b7fecf475a54bbce76af45602f527bc552355dd60a55c7f32d32c8eb4",
+    "state.json": "4373ad598f4ca372a1e964fd18ab63220f6dd2b13eed7e63f859973967348133",
+    "tests/key-backup.cjs": "cc62350dbee89eaf42043fe3b74800b895855533320ed2b9a6d9d949125b9a42"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-backup-atomic-repair.json",
+      "sha256": "a6c75feb144a72b42504943e36c661742f435af136c77062da0d3f94dad3cd2f"
+    }
+  ],
+  "checks": []
+}

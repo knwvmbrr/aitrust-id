@@ -1,0 +1,59 @@
+{
+  "captured_at": "2026-10-11T01:21:43.094271+00:00",
+  "pass": true,
+  "author": "Codex",
+  "review_thread": "https://github.com/knwvmbrr/aitrust-id/pull/22",
+  "review_id": "PRRT_kwDOVBYh3s6rJQvf",
+  "original_finding": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Delete failed private-key outputs**\n\nIf writing or syncing the restored key fails\u2014for example because the filesystem runs out of space or `fsyncSync` reports an I/O error\u2014the shared `write()` helper has already created the destination and never unlinks it. The CLI then exits with \u201cNo key was accepted,\u201d although a partial or even complete private key may remain, and a retry is blocked because the destination now exists. Remove the newly created file when the write or sync fails, or publish it atomically only after a successful sync.\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+  "held_merge_before_repair": true,
+  "repair": "Shared CLI output is written and fsynced to an owner-only temporary file before atomic no-overwrite hard-link publication. Write/sync/close/link failures remove failed output; cleanup failure is explicitly surfaced. Initial key creation and restoration share the repaired publisher.",
+  "sources": {
+    "protocol/key-backup.cjs": "0c656585f042ac6cfcdcf10721dbed90d8ba4349f8ae00b92fdd310f502aef17",
+    "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+    "scripts/key-backup.cjs": "b6e84f7b0a1510e25d729df360373b1d76adf4a9cf355ca200cd01ce7a84c4cf",
+    "scripts/atomic-output.cjs": "8c335936dc20e569b984162c5a28e3af1ac48a65e967b02f79f1daba8bac1ab1",
+    "scripts/receipt.cjs": "953d06371495923b87cd50518c363d9d47a57fc59adf317bd80c4e088229841e",
+    "tests/key-backup.cjs": "cc62350dbee89eaf42043fe3b74800b895855533320ed2b9a6d9d949125b9a42",
+    "tests/test_key_backup.py": "7f1927d7f93beb16cfaac71502e30c68b84538345434cf00698771db2c8e45f2",
+    "tests/group-receipts.cjs": "4704ada4d0732654b1b651eb7fb90decc1114f83a40970dfddb8b4f4866fc829",
+    "tests/offline-revocation.cjs": "6047130192d5e73e6e58e525b7fe108b54ba9533a9b0584fa5ffe59b200891db",
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90"
+  },
+  "platforms": [
+    {
+      "platform": "actual macOS",
+      "node": "24.19.0",
+      "node_tests": 180,
+      "custody_controls": 52,
+      "receipt_group_revocation_families_executed": true,
+      "actual_terminal_checks": 1,
+      "log_sha256": "5f226314b971eb8d154458c815d68e944fdfb2bb5e4538024b4ec7bf1d433d41",
+      "terminal_log_sha256": "d15656fba3a3ea9d1f64991ce64ddc2facf5b510fe3ce3165d3097b9c2734f59"
+    },
+    {
+      "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41",
+      "node": "24.19.0",
+      "node_tests": 148,
+      "custody_controls": 52,
+      "group_revocation_families_executed": true,
+      "actual_terminal_checks": 1,
+      "network_namespace": "unshare -n",
+      "log_sha256": "5013efb5497819dc4594fb03bc21a7def961afb409c7c507865576e195f452ea"
+    }
+  ],
+  "io_refusals": [
+    "partial write/ENOSPC",
+    "fsync/EIO",
+    "close/EIO",
+    "link/EIO",
+    "concurrent destination preserves other writer",
+    "cleanup failure requires inspection",
+    "dangling destination symlink remains untouched",
+    "initial key writer sync failure and retry"
+  ],
+  "physical_disk_full_or_power_loss_tested": false,
+  "nontechnical_author_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "tag_issuance": false,
+  "prior_cross_platform_boundary": "Earlier cross-platform proof transferred an encrypted synthetic backup and a public key; private_key_not_copied_from_mac means no plaintext private PEM transfer, not that an encrypted key copy stayed on one device."
+}

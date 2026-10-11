@@ -14,7 +14,7 @@ from protocol.reports import write_report
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def inventory():
     names=['protocol/repetition.py','protocol/receipts.cjs','protocol/signals.py',
-           'scripts/receipt.cjs','scripts/check-repetition.py','scripts/build-composition-tool.py',
+           'scripts/receipt.cjs','scripts/atomic-output.cjs','scripts/check-repetition.py','scripts/build-composition-tool.py',
            'scripts/verify-tag-development.py','scripts/verify-offline-components.py',
            'scripts/verify-composition-tool.cjs','scripts/verify-dependencies.py',
            'tests/composition-observations.cjs','tests/offline-receipts.cjs',

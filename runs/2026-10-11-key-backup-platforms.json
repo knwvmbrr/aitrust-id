@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-10-11T01:04:34.833263+00:00",
+  "pass": true,
+  "kind": "offline_key_backup_engineering",
+  "author": "Codex",
+  "platforms": [
+    {
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "node": "24.19.0",
+      "node_tests_passed": 44,
+      "actual_terminal_checks_passed": 1,
+      "nested_python_controls_passed": 2,
+      "log_sha256": "ac27919dd1c16a7089ee02c569b2afc5b007ba53a5fa20d318eaba853f0981ff",
+      "terminal_log_sha256": "d320012c23eb1a255f9a3124cdca7a59d2cc206e73049a46afe4fbb6a90e9e10"
+    },
+    {
+      "platform": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "sources": {
+        "protocol/key-backup.cjs": "0c656585f042ac6cfcdcf10721dbed90d8ba4349f8ae00b92fdd310f502aef17",
+        "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+        "scripts/key-backup.cjs": "68513d61b715a3d5e54d118aed865896e247adc7b0ae4a7ad86bbf75d064d4be",
+        "scripts/receipt.cjs": "973a2ff458087a0802e27889d33d52c4efc776ab40cfe10d82b526067b095a7d",
+        "tests/key-backup.cjs": "5b0c8e1284d0553a5b35896fadfc6d8439f6bb0edde85cbfceab61d939e06ca9",
+        "tests/test_key_backup.py": "7f1927d7f93beb16cfaac71502e30c68b84538345434cf00698771db2c8e45f2",
+        "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90"
+      },
+      "node": "24.19.0",
+      "node_tests_passed": 44,
+      "nested_python_controls_invoked": 2,
+      "actual_terminal_checks_passed": 1,
+      "network_isolation": "sudo unshare -n",
+      "log_sha256": "1f6772cd36c22a5ee4b98ce54412642178494b6ce50df1c3a8d7bb8fb07e61e7"
+    }
+  ],
+  "sources": {
+    "protocol/key-backup.cjs": "0c656585f042ac6cfcdcf10721dbed90d8ba4349f8ae00b92fdd310f502aef17",
+    "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+    "scripts/key-backup.cjs": "68513d61b715a3d5e54d118aed865896e247adc7b0ae4a7ad86bbf75d064d4be",
+    "scripts/receipt.cjs": "973a2ff458087a0802e27889d33d52c4efc776ab40cfe10d82b526067b095a7d",
+    "tests/key-backup.cjs": "5b0c8e1284d0553a5b35896fadfc6d8439f6bb0edde85cbfceab61d939e06ca9",
+    "tests/test_key_backup.py": "7f1927d7f93beb16cfaac71502e30c68b84538345434cf00698771db2c8e45f2",
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90"
+  },
+  "cross_platform": {
+    "pass": true,
+    "records": 2,
+    "algorithms": [
+      "Ed25519",
+      "ECDSA-P256-SHA256"
+    ],
+    "mac_backup_opened_on_linux": true,
+    "recovered_key_signed_under_original_selected_public_key": true,
+    "network_namespace": "unshare -n",
+    "synthetic_only": true,
+    "private_key_not_copied_from_mac": true,
+    "authorship_proven": false,
+    "tag_issuance": false
+  },
+  "format": "offline-key-backup/1.0.0",
+  "schema_or_algorithm_adoption": false,
+  "tag_issuance": false,
+  "nontechnical_author_acceptance": false,
+  "hosted_escrow": false,
+  "production_keys_modified": false,
+  "independent_accuracy_evidence": false,
+  "initial_failure": "runs/2026-10-11-key-backup-terminal-refusal.json"
+}

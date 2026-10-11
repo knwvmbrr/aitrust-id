@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-010632-key-recovery-generated-reference-a01d6bc6",
+  "recorded_at": "2026-10-11T01:06:32.392563+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "227bee8d4e48a6e7eb49992a7f1b271f21b2bf54",
+  "changed": "Prepared stable generated website scope, optional recovery guide and immutable policy 1.9 text artifacts; corrected a rejected scope ID in an attempted change record.",
+  "proves": "Current-source build succeeded. The guard rejected an unregistered scope ID and incomplete generated-file attribution before publication; the refused website attempt is preserved.",
+  "limits": "Preparation is not live publication, human acceptance or independent tag accuracy. Earlier policy versions remain untouched.",
+  "scope_ids": [
+    "F-129",
+    "F-079"
+  ],
+  "files": {
+    "README.md": "9270eabbe53fe5859a58c8b9f4a188a438ecbc52bad24174dbba3bc7e3037adf",
+    "docs/key-recovery-plan.md": "72c04add3e92dec50a98bac56dd64b6913735958c164bb8d83b2392782bf68d4",
+    "docs/key-recovery.md": "ca82b2e877c5fc046adb1f7534452775f65ca8cfa4eff8d84a7e5bcdf7ad4f49",
+    "docs/offline-receipts.md": "338da7c4dc47db220e631cc0950e2d6fd6fc8c47b83c8cacb4661172648c2370",
+    "docs/scope-progress.json": "e31470e720ab1c36d05011f0801b9041e066d300cd227652497f637470bd1a40",
+    "docs/scope-progress.md": "bf950a9bcedd82dee1993f3f2589176fcb4852a05f94fd94844263ee12520d04",
+    "docs/scope-task-index.md": "70cbe82d8308d213882abe894858f23b204e421f7cb66a9510e16e87216ae185",
+    "package.json": "6d3b7a2088116908f0f0fdc1265b2888cea77024198ea92b26169e3e155c2c14",
+    "protocol/key-backup.cjs": "0c656585f042ac6cfcdcf10721dbed90d8ba4349f8ae00b92fdd310f502aef17",
+    "runs/2026-10-11-key-backup-build-launch-refusal.json": "c6836b24ae782563c1c52b87397d37ec558ab240fb97c009190bfa18ab0aad87",
+    "runs/2026-10-11-key-backup-extension-current.json": "7a2dfd90a530ff6aed49e266401d0a0ac8c3350f3d83cb23cd93b15cf0b85712",
+    "runs/2026-10-11-key-backup-platforms.json": "25ce9849aaf48331ba18f6f82d8b1bb70ad48f64750a7afbb53090aae679d2b5",
+    "runs/2026-10-11-key-backup-scope.json": "3b992840087300222901f6a80e835116c6473371e714e73202ab3ecce8421373",
+    "runs/2026-10-11-key-backup-terminal-refusal.json": "870b72a63f23ba1decbdd2ebd71c0a8729a2b0542b0502558c9a1f4a3f2f4b68",
+    "runs/2026-10-11-key-backup-website-initial-refusal.json": "6e0932dac0512551f4cc065ddcb32c3482b42fd4f758206dedce8ea903b4c352",
+    "scripts/key-backup.cjs": "68513d61b715a3d5e54d118aed865896e247adc7b0ae4a7ad86bbf75d064d4be",
+    "scripts/verify-route-boundaries.py": "a45d9850e7b4aa0ae65d20c528d1f5999c225744ce852f43fae66270900566b1",
+    "site/public/reference/policies/access/v1.9.txt": "e26fd4fbf1c37b2715b03392bbcf851847900b1312a95e49d1d99636feb5df5c",
+    "site/public/reference/policies/community/v1.9.txt": "6d940594fcf0e60a51795b605b40e0935b5caa8f04865ed07675af7a08776241",
+    "site/public/reference/policies/contributing/v1.9.txt": "4d5d6e040d698d0d3d6ff011c53d2e7ac16c62fc4d45fc95ebe99385aacd35b1",
+    "site/public/reference/policies/governance/v1.9.txt": "f0913a68b4b995b4f2feb668fe8907df7cc43c857955f68508a2a5b72bf211e5",
+    "site/public/reference/policies/licenses/v1.9.txt": "0a5b2838388f9bb63cd7e7a2795e216a5605a32388e11be2c8815d1360dd22f9",
+    "site/public/reference/policies/privacy/v1.9.txt": "311b290681a54d2a8d38508e64b9522666a14df46eebf65e1acf8a75bd0e79b3",
+    "site/public/reference/policies/security/v1.9.txt": "2b175dfbb415e3c27815d7fb373ff58c109496e9288c5db311d2b174a8784e27",
+    "site/public/reference/policies/terms/v1.9.txt": "bfb77116b8160466987d5714898942e95e2072dae815ac968d8609b615e94ad8",
+    "site/public/reference/policies/validation/v1.9.txt": "b3008887ab0f7ad5ca48d9a7aca989f1ba782fba354136e7c0dcb4f2823f92bd",
+    "site/public/reference/policy-access.txt": "e26fd4fbf1c37b2715b03392bbcf851847900b1312a95e49d1d99636feb5df5c",
+    "site/public/reference/policy-community.txt": "6d940594fcf0e60a51795b605b40e0935b5caa8f04865ed07675af7a08776241",
+    "site/public/reference/policy-contributing.txt": "4d5d6e040d698d0d3d6ff011c53d2e7ac16c62fc4d45fc95ebe99385aacd35b1",
+    "site/public/reference/policy-governance.txt": "f0913a68b4b995b4f2feb668fe8907df7cc43c857955f68508a2a5b72bf211e5",
+    "site/public/reference/policy-licenses.txt": "0a5b2838388f9bb63cd7e7a2795e216a5605a32388e11be2c8815d1360dd22f9",
+    "site/public/reference/policy-privacy.txt": "311b290681a54d2a8d38508e64b9522666a14df46eebf65e1acf8a75bd0e79b3",
+    "site/public/reference/policy-security.txt": "2b175dfbb415e3c27815d7fb373ff58c109496e9288c5db311d2b174a8784e27",
+    "site/public/reference/policy-terms.txt": "bfb77116b8160466987d5714898942e95e2072dae815ac968d8609b615e94ad8",
+    "site/public/reference/policy-validation.txt": "b3008887ab0f7ad5ca48d9a7aca989f1ba782fba354136e7c0dcb4f2823f92bd",
+    "site/public/reference/public-scope.json": "548bc0f47e974f1553d41a2ef72a22d365e009feaac06f8e20951cf9abf57829",
+    "site/scripts/render-reference.mjs": "4b20c24d6a647196a510fe827f245236bc78871a2230e7dee92876ca92aff1f6",
+    "site/src/policies.js": "810cea2290782c13e5d8455df2835111b00ef1a3a7d2139b0392264e0f8c8c89",
+    "site/src/public-scope.json": "548bc0f47e974f1553d41a2ef72a22d365e009feaac06f8e20951cf9abf57829",
+    "state.json": "c152ec8377aa8afabf33cdaef89413f0d4dc8e3e913c042dc5db52e8a2baa0c5",
+    "tests/key-backup.cjs": "5b0c8e1284d0553a5b35896fadfc6d8439f6bb0edde85cbfceab61d939e06ca9",
+    "tests/test_key_backup.py": "7f1927d7f93beb16cfaac71502e30c68b84538345434cf00698771db2c8e45f2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-backup-build-launch-refusal.json",
+      "sha256": "c6836b24ae782563c1c52b87397d37ec558ab240fb97c009190bfa18ab0aad87"
+    },
+    {
+      "path": "runs/2026-10-11-key-backup-website-initial-refusal.json",
+      "sha256": "6e0932dac0512551f4cc065ddcb32c3482b42fd4f758206dedce8ea903b4c352"
+    }
+  ],
+  "checks": []
+}

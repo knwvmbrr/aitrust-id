@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-11T01:10:43.835159+00:00",
+  "pass": true,
+  "author": "Codex",
+  "command": [
+    "{python}",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "python": "3.12",
+  "node": "24.19.0",
+  "passed": 1182,
+  "failed": 0,
+  "warnings": 1,
+  "warning": "Existing Starlette/httpx TestClient deprecation; no new dependency change made.",
+  "stdout_sha256": "87a46d349c3012ac627eab595ca1d60273c11eb90f3689914f77def9f7dea445",
+  "prior_refused_run": "runs/2026-10-11-key-backup-regression-initial-refusal.json",
+  "independent_accuracy_evidence": false,
+  "physical_device_or_human_acceptance": false,
+  "tests_may_include_nested_node_controls": true
+}

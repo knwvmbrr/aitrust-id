@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-11T01:29:29.573870+00:00",
+  "pass": true,
+  "author": "Codex",
+  "command": [
+    "{python}",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "python": "3.12",
+  "node": "24.19.0",
+  "passed": 1182,
+  "failed": 0,
+  "warnings": 1,
+  "warning": "Existing Starlette/httpx TestClient deprecation; no new dependency change made.",
+  "stdout_sha256": "6e382e491a5993250ac9caad5644789cc210ce25d469802dd9ca60f5420189c8",
+  "review_repair": "runs/2026-10-11-key-backup-atomic-repair.json",
+  "independent_accuracy_evidence": false,
+  "physical_device_or_human_acceptance": false,
+  "tests_may_include_nested_node_controls": true
+}
