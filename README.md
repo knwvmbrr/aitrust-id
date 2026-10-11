@@ -140,10 +140,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The manifest-inspection source passed 1,455 Python checks plus the separately executed 32
-route-boundary checks (1,487 combined). Execution is recorded in
-`runs/2026-10-11-manifest-full-python.json` and
-`runs/2026-10-11-manifest-current-boundaries.json`. All five active development fixture
+The workflow-corrected manifest-inspection source passed 1,489 Python checks,
+including all 32 route-boundary checks. Execution is recorded in
+`runs/2026-10-11-manifest-workflow-full-python.json` and
+`runs/2026-10-11-manifest-workflow-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and

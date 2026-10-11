@@ -2,6 +2,9 @@ name: optional-manifest-inspection
 on:
   push:
     paths:
+      - 'protocol/**'
+      - 'tests/test_manifest_inspection.py'
+      - 'tests/test_manifest_workflow.py'
       - 'tools/manifest_inspection.py'
       - 'scripts/inspect-manifest.py'
       - 'scripts/verify-manifest-inspection.py'
@@ -11,6 +14,9 @@ on:
       - '.github/workflows/manifest-inspection.yml'
   pull_request:
     paths:
+      - 'protocol/**'
+      - 'tests/test_manifest_inspection.py'
+      - 'tests/test_manifest_workflow.py'
       - 'tools/manifest_inspection.py'
       - 'scripts/inspect-manifest.py'
       - 'scripts/verify-manifest-inspection.py'

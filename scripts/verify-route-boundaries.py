@@ -61,6 +61,7 @@ PATTERNS += ('tools/package_proximity.py', 'tools/language_observations.py',
 PATTERNS += ('tests/test_observation_verifier.py', 'scripts/verify-mobile-payload.cjs')
 PATTERNS += ('tools/manifest_inspection.py', 'scripts/inspect-manifest.py',
              'scripts/verify-manifest-inspection.py', 'tests/test_manifest_inspection.py',
+             'tests/test_manifest_workflow.py',
              'eval/c2pa-inspection.lock', 'eval/dependencies/c2pa-inspection.json',
              'tests/fixtures/c2pa-inspection-2026/*')
 # Host font rendering changes this decorative raster, not executable sources.

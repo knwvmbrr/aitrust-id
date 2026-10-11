@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-151059-native-workflow-dependencies-3e913c52",
+  "recorded_at": "2026-10-11T15:10:59.517333+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ae1e2a09ebb921bd56e673fa4a16e4646c4768ad",
+  "changed": "Made the actual native SDK job run for shared protocol and verifier test changes on both push and PR. Added a trigger-inventory regression check and executed the anonymously downloaded parser source.",
+  "proves": "1489 Python tests including the route checks pass. Both workflow triggers cover every fixed native verifier input. Thirteen CLI cases pass from anonymous published source with matching native input fingerprints.",
+  "limits": "The reviewed native files match the earlier published source; the corrected hosted workflow must pass on its new exact commit. No FA/PA tag or independent accuracy release.",
+  "scope_ids": [
+    "F-025",
+    "F-003",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "451b8df145c747ca53c6295ef8dcb534aedfb5c4ccf9608814715d85b962a220",
+    "README.md": "cf38cbd2dc3cc4f9e3ef04f39c16f877b4987550ed9e0d6877106e090538f417",
+    "eval/route-boundaries.json": "36d9d1f26c4e68a27bef0bf9284aaab1422293603519be15b05cdd2267730bcf",
+    "runs/2026-10-11-manifest-public-source.json": "887c2936342822e7789cd90b25bc12d1f537000dd908091291a16ba4f7b71716",
+    "runs/2026-10-11-manifest-workflow-boundaries.json": "172c409bf9602b56693bf6a9967dbf81ab2e9db318d4acaa43c0230d96559b09",
+    "runs/2026-10-11-manifest-workflow-full-python.json": "6437771c306725fd39a824e9b1823604389a4852a27bf8332c871388d59bd76c",
+    "scripts/verify-route-boundaries.py": "5e1d2bce770368358deba75fbc98878edfaa3c6ee5e14a0222baca7a73fd8c73",
+    "state.json": "9ab02edb11513ef6459f190fc05fef87ba66ec058ab919398219fe26c18efcac",
+    "tests/test_manifest_workflow.py": "8ec74c48c3f2cb64448f44f190a6e92ed9e9186f3c7d72c77315304725612a89"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-manifest-workflow-full-python.json",
+      "sha256": "6437771c306725fd39a824e9b1823604389a4852a27bf8332c871388d59bd76c"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-workflow-boundaries.json",
+      "sha256": "172c409bf9602b56693bf6a9967dbf81ab2e9db318d4acaa43c0230d96559b09"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-public-source.json",
+      "sha256": "887c2936342822e7789cd90b25bc12d1f537000dd908091291a16ba4f7b71716"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T15:10:59.831399+00:00"
+    }
+  ]
+}

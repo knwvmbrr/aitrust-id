@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-151059-native-workflow-dependencies-3e913c52
+
+Recorded 2026-10-11T15:10:59.517333+00:00 · Contributor: Codex · change
+
+- **Changed.** Made the actual native SDK job run for shared protocol and verifier test changes on both push and PR. Added a trigger-inventory regression check and executed the anonymously downloaded parser source.
+- **Evidence.** 1489 Python tests including the route checks pass. Both workflow triggers cover every fixed native verifier input. Thirteen CLI cases pass from anonymous published source with matching native input fingerprints. [Change record](./runs/changes/2026-10-11-151059-native-workflow-dependencies-3e913c52.json).
+- **Not claimed.** The reviewed native files match the earlier published source; the corrected hosted workflow must pass on its new exact commit. No FA/PA tag or independent accuracy release.
+
+
 ### 2026-10-11-150345-manifest-full-regressions-3affe59a
 
 Recorded 2026-10-11T15:03:45.955982+00:00 · Contributor: Codex · change
