@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-014520-key-recovery-verified-publication-9735e7ea",
+  "recorded_at": "2026-10-11T01:45:20.995754+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4673a06458df52dca812885ff132828f2d3657f3",
+  "changed": "Publish the protected optional key-recovery source, verify four anonymous authenticated development downloads and exact site delivery, and refresh stale operational state with current executed evidence.",
+  "proves": "Normal protected merge with 22 checks; independent-root Mac/Linux verification before release; 669 exact public-artifact matches across three origins; 20 live panels, nine clicked policy downloads and the standalone editor download pass. Exact synthetic Linux staging directory removed; unrelated primary files preserved.",
+  "limits": "Full named key-custody human acceptance remains open. No tag release validation, public witnessed revocation, training/intake service, human accessibility, professional legal acceptance or new requirement closure is asserted. All 202 records stay 107 complete and 95 open; 70 further closures are needed for the target of 25. This proof update is bookkeeping, not another runtime deployment.",
+  "scope_ids": [
+    "F-129",
+    "F-121",
+    "F-123",
+    "F-125",
+    "F-126",
+    "F-130",
+    "F-057",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "state.json": "c36ed048e344e6ee41069df96b98a60732f970347d86b4cdf0a3e70e41fc1043",
+    "runs/2026-10-11-key-recovery-publication.json": "a4c73a0ed8e9f6ef9205dbb1a2b0163b0fd1022b4ab184573c45e951e0cbb4f5",
+    "runs/2026-10-11-key-recovery-live-site.json": "6a29d1bdc3fe0b1d97fd672a81debaa45e13fd9be2e8aac3586c760bbeae64b3",
+    "runs/2026-10-11-key-recovery-live-policies.json": "7a6e086598012daee18f791150b6894f128a71d9eb0db7aa2d7fea8a173acfa8",
+    "runs/2026-10-11-key-recovery-live-editor-download.json": "f717fee6c505cacf23df66fa50725b3e76df3ec3bcf8d4d10872b304e6900e23",
+    "runs/2026-10-11-key-recovery-protected-merge.json": "039afc02ed3e827a710ac393b9bcaed8857a71c56b9c75450173a704252bee81",
+    "runs/2026-10-11-key-recovery-authenticated-download.json": "b5e536629efaa9aecd39e67f70cd16d5e414ca30e2599dac2b718babb0940e67",
+    "runs/2026-10-11-key-recovery-primary-preservation.json": "34dfa32f27b92edb9f46e1b32e3073d1f737346987275485a120a2fb343355f9",
+    "runs/2026-10-11-key-recovery-hosted-source.json": "0b86d6d3a7785754e36e3eeb408a7676c3b272d9c78d04432debaa20cc74a355",
+    "runs/2026-10-11-key-recovery-linux-cleanup.json": "5f82a6197d0f0e178c16fdb91d931536b588a81321ded77468b457ad96235ba7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-key-recovery-publication.json",
+      "sha256": "a4c73a0ed8e9f6ef9205dbb1a2b0163b0fd1022b4ab184573c45e951e0cbb4f5"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-live-site.json",
+      "sha256": "6a29d1bdc3fe0b1d97fd672a81debaa45e13fd9be2e8aac3586c760bbeae64b3"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-live-policies.json",
+      "sha256": "7a6e086598012daee18f791150b6894f128a71d9eb0db7aa2d7fea8a173acfa8"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-live-editor-download.json",
+      "sha256": "f717fee6c505cacf23df66fa50725b3e76df3ec3bcf8d4d10872b304e6900e23"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-protected-merge.json",
+      "sha256": "039afc02ed3e827a710ac393b9bcaed8857a71c56b9c75450173a704252bee81"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-authenticated-download.json",
+      "sha256": "b5e536629efaa9aecd39e67f70cd16d5e414ca30e2599dac2b718babb0940e67"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-primary-preservation.json",
+      "sha256": "34dfa32f27b92edb9f46e1b32e3073d1f737346987275485a120a2fb343355f9"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-hosted-source.json",
+      "sha256": "0b86d6d3a7785754e36e3eeb408a7676c3b272d9c78d04432debaa20cc74a355"
+    },
+    {
+      "path": "runs/2026-10-11-key-recovery-linux-cleanup.json",
+      "sha256": "5f82a6197d0f0e178c16fdb91d931536b588a81321ded77468b457ad96235ba7"
+    }
+  ],
+  "checks": []
+}

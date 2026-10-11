@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T01:29:29.574959+00:00",
+  "updated": "2026-10-11T01:44:44.311583+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-11-revocation-live-site.json",
+    "evidence": "runs/2026-10-11-key-recovery-live-site.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://029ec4b8.aitrust-id.pages.dev",
+    "deployment_url": "https://7c3817d3.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-revocation-publication.json",
+    "publication_evidence": "runs/2026-10-11-key-recovery-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 35,
@@ -122,7 +122,7 @@
       "source": "site/src/policies.js",
       "text_downloads": true,
       "current_services_only": true,
-      "published": false,
+      "published": true,
       "verification": "runs/2026-10-11-key-backup-policies-local.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
@@ -140,11 +140,13 @@
         "1.4",
         "1.5",
         "1.6",
-        "1.7"
+        "1.7",
+        "1.8"
       ],
-      "publication_pending": true,
-      "last_published_version": "1.8",
-      "verification_scope": "Prepared policy 1.9, automated local acceptance; publication pending"
+      "publication_pending": false,
+      "last_published_version": "1.9",
+      "verification_scope": "Actual live nine policies and nine clicked matching text downloads; narrow/200%-enlarged, light/dark automated accessibility. Human/counsel acceptance separate.",
+      "public_evidence": "runs/2026-10-11-key-recovery-live-policies.json"
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
     "product_differentiation": "docs/product-differentiation.md",
@@ -605,8 +607,9 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "4b5ed5b9e73fa01f29644b6cdc75d1f05542a97c",
-    "handheld_download_verified": true
+    "latest_implementation_commit": "4673a06458df52dca812885ff132828f2d3657f3",
+    "handheld_download_verified": true,
+    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-4673a06"
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
@@ -722,12 +725,12 @@
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-11-key-backup-platforms.json",
+    "execution_evidence": "runs/2026-10-11-key-backup-atomic-final-platforms.json",
     "structural_evidence": "runs/2026-10-11-key-backup-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-revocation-publication.json",
-    "source_commit": "5bd2f3f8ce7aadfd5d75fdeb3ade4e6a787d7cbc",
-    "public_workflow_evidence": "runs/2026-10-11-revocation-live-site.json",
+    "publication": "runs/2026-10-11-key-recovery-publication.json",
+    "source_commit": "4673a06458df52dca812885ff132828f2d3657f3",
+    "public_workflow_evidence": "runs/2026-10-11-key-recovery-live-site.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/key-recovery.md",
     "completed_subtasks": 1,
@@ -735,12 +738,12 @@
     "target_open_records": 25,
     "target_start_open_records": 100,
     "target_remaining_closures": 70,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-25-execution.md",
     "target_direction_date": "2026-10-10",
     "current_target_verification": "runs/2026-10-10-target25-source-checks-repaired.json",
-    "publication_evidence_merge": "runs/2026-10-11-offline-status-publication-protected-merge.json"
+    "publication_evidence_merge": "runs/2026-10-11-key-recovery-protected-merge.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -780,7 +783,7 @@
     "proprietary_assistant": "Allowed organization assistance direction, not adopted/trained in this pass; cannot validate itself"
   },
   "change_accountability": {
-    "status": "published_and_public_checks_pass; local_staged_and_build_guards_active; hosted_CI_running_portability_failures_under_repair",
+    "status": "published_and_public_checks_pass; protected hosted CI and staged/build change guards active",
     "policy": "docs/changelog-policy.md",
     "changelog": "CHANGELOG.md",
     "structured_events": "runs/changes/",
@@ -805,8 +808,11 @@
       "runs/2026-10-09-changelog-site-public.json",
       "runs/2026-10-09-changelog-assets-public.json"
     ],
-    "hosted_ci_executed": false,
-    "hosted_ci_evidence": "runs/2026-10-09-provenance-boundary-hosted-ci.json"
+    "hosted_ci_executed": true,
+    "hosted_ci_evidence": "runs/2026-10-11-key-recovery-protected-merge.json",
+    "latest_total_python_tests_passed": 1182,
+    "latest_runtime_source_commit": "4673a06458df52dca812885ff132828f2d3657f3",
+    "latest_public_evidence": "runs/2026-10-11-key-recovery-publication.json"
   },
   "device_build": {
     "status": "four_actual_builders_pass_frozen_unicode15_bundle",
@@ -951,8 +957,8 @@
   "personal_route_boundaries": {
     "status": "current_source_and_publication_checks_pass",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-10-registry-deferral-final-boundaries.json",
-    "source_files": 125,
+    "evidence": "runs/2026-10-11-key-backup-final-boundaries.json",
+    "source_files": 189,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -969,9 +975,9 @@
     "registry_adoption": false,
     "research_collection_connected": false,
     "independent_security_certification": false,
-    "publication": "runs/2026-10-10-registry-deferral-assets-public.json",
-    "public_catalogue": "runs/2026-10-10-registry-deferral-site-public.json",
-    "public_policies": "runs/2026-10-10-target-100-policies-public.json"
+    "publication": "runs/2026-10-11-key-recovery-publication.json",
+    "public_catalogue": "runs/2026-10-11-key-recovery-live-site.json",
+    "public_policies": "runs/2026-10-11-key-recovery-live-policies.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1014,12 +1020,12 @@
     "PS": "runs/2026-10-10-required-ci-ps.json",
     "PII_REDACTED": "runs/2026-10-10-required-ci-pii-redacted.json",
     "protocol": "runs/2026-10-10-required-ci-protocol.json",
-    "extension": "runs/2026-10-10-required-ci-extension.json",
-    "website": "runs/2026-10-11-revocation-website-stable.json",
+    "extension": "runs/2026-10-11-key-backup-extension-current.json",
+    "website": "runs/2026-10-11-key-backup-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T01:29:29.574959+00:00",
+  "updated_at": "2026-10-11T01:44:44.311583+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1084,10 +1090,10 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "5bd2f3f8ce7aadfd5d75fdeb3ade4e6a787d7cbc",
-    "deployment_url": "https://029ec4b8.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-11-revocation-publication.json",
-    "matching_artifacts": 642,
+    "source_commit": "4673a06458df52dca812885ff132828f2d3657f3",
+    "deployment_url": "https://7c3817d3.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-11-key-recovery-publication.json",
+    "matching_artifacts": 669,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
@@ -1150,7 +1156,7 @@
     "controls": "runs/2026-10-10-source-provenance-corrected-controls.json",
     "snapshot_reproduction": "runs/2026-10-10-source-snapshot-reproduction.json",
     "focused_tests_passed": 45,
-    "full_python_tests_passed": 1144,
+    "full_python_tests_passed": 1182,
     "actual_hosted_signing_observed": true,
     "independent_tag_release_validated": false,
     "full_license_clearance": false,
@@ -1162,13 +1168,13 @@
     "real_cryptographic_cases": 8,
     "network_isolated_verification": true,
     "corrected_hosted_download_observed": true,
-    "current_source_snapshot": "5bd2f3f8ce7aadfd5d75fdeb3ade4e6a787d7cbc",
-    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-5bd2f3f",
-    "download_evidence": "runs/2026-10-11-offline-status-authenticated-download.json",
+    "current_source_snapshot": "4673a06458df52dca812885ff132828f2d3657f3",
+    "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-4673a06",
+    "download_evidence": "runs/2026-10-11-key-recovery-authenticated-download.json",
     "corrected_hosted_checks": "runs/2026-10-10-source-download-hosted-checks.json",
     "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json",
-    "latest_protected_merge": "runs/2026-10-11-offline-status-protected-merge.json",
-    "latest_hosted_source": "runs/2026-10-11-offline-status-hosted-source.json",
+    "latest_protected_merge": "runs/2026-10-11-key-recovery-protected-merge.json",
+    "latest_hosted_source": "runs/2026-10-11-key-recovery-hosted-source.json",
     "publication_order_correction": "runs/2026-10-11-group-download-order-correction.json"
   },
   "independent_timestamp": {
@@ -1268,6 +1274,13 @@
     "failed_private_outputs_contained": true,
     "custody_controls_per_actual_platform": 53,
     "actual_editor_to_receipt": "runs/2026-10-11-key-backup-atomic-editor-receipt.json",
-    "receipt_components": "runs/2026-10-11-key-backup-final-receipt-components.json"
+    "receipt_components": "runs/2026-10-11-key-backup-final-receipt-components.json",
+    "publication_pending": false,
+    "public_source_commit": "4673a06458df52dca812885ff132828f2d3657f3",
+    "public_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-4673a06",
+    "authenticated_download_evidence": "runs/2026-10-11-key-recovery-authenticated-download.json",
+    "publication": "runs/2026-10-11-key-recovery-publication.json",
+    "public_guide": "https://aitrustid.com/reference/offline-tools/",
+    "linux_cleanup": "runs/2026-10-11-key-recovery-linux-cleanup.json"
   }
 }
