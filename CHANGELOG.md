@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-141528-independent-signal-review-repairs-08d7719c
+
+Recorded 2026-10-11T14:15:28.247544+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain file constructor type, refuse impossible read-method pairs, and bind CLI observations to the exact invoked implementation hash.
+- **Evidence.** 171 focused tests and 20 actual final-source CLI cases on Mac and isolated Linux. Accepted final-source full suite passes 1392 non-route tests; 32 separate route tests pass. [Change record](./runs/changes/2026-10-11-141528-independent-signal-review-repairs-08d7719c.json).
+- **Not claimed.** The full tag integration requirements remain open at 80 percent. Historical failed and superseded checks remain visible; no independent accuracy or new tag release is claimed.
+
+
 ### 2026-10-11-140556-observation-verifier-portability-cb042291
 
 Recorded 2026-10-11T14:05:56.391056+00:00 · Contributor: Codex · change

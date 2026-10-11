@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T14:05:43.758441+00:00",
+  "updated": "2026-10-11T14:15:22.991093+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1417,
+  "python_tests_passed": 1424,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1031,7 +1031,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T14:05:43.758441+00:00",
+  "updated_at": "2026-10-11T14:15:22.991093+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1381,18 +1381,18 @@
       "docs/language-observations.md",
       "docs/credential-flow.md"
     ],
-    "actual_mac_evidence": "runs/2026-10-11-independent-observations-mac-portable.json",
-    "actual_linux_evidence": "runs/2026-10-11-independent-observations-linux-portable.json",
-    "component_tests": 164,
+    "actual_mac_evidence": "runs/2026-10-11-independent-observations-mac-review-final.json",
+    "actual_linux_evidence": "runs/2026-10-11-independent-observations-linux-review-final.json",
+    "component_tests": 171,
     "production_signal_count": 5,
     "production_detector_changed": false,
     "independent_accuracy_evidence": false,
     "new_tag_releases": 0,
     "requirements_closed_by_this_batch": 0,
     "publication_pending": true,
-    "full_python_evidence": "runs/2026-10-11-independent-signals-python-portable.json",
-    "current_boundaries": "runs/2026-10-11-independent-signals-boundaries-portable.json",
-    "route_tests": "runs/2026-10-11-independent-signals-route-tests-portable.json",
+    "full_python_evidence": "runs/2026-10-11-independent-signals-python-review-accepted.json",
+    "current_boundaries": "runs/2026-10-11-independent-signals-boundaries-reviewed.json",
+    "route_tests": "runs/2026-10-11-independent-signals-route-tests-reviewed.json",
     "current_source_receipts": "runs/2026-10-11-independent-signals-current-receipts.json",
     "ci_portability_failure": "runs/2026-10-11-independent-signals-ci-portability-failure.json"
   }

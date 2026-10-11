@@ -69,3 +69,9 @@ This component does not classify whether a displayed program is recommended,
 quoted, authorized or malicious. Those boundaries and independent measurement
 must be satisfied before a PS enhancement can ship. F-012 stays open.
 Controls: `python3 -m pytest tests/test_credential_flow.py -q`.
+
+File values preserve their constructor: `open(...).read()` and
+`Path(...).read_text()` / `.read_bytes()` are the supported pairs. Crossed methods
+are unavailable even on an ordinary file; an invalid program is never a negative
+or static-flow finding. The CLI verifier binds each result to this implementation
+file hash, not to an arbitrary source in the review inventory.

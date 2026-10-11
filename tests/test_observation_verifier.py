@@ -37,3 +37,16 @@ def test_non_linux_does_not_probe_proc(monkeypatch):
         raise AssertionError('Non-Linux probe forbidden')
     monkeypatch.setattr(verifier.os, 'readlink', forbidden)
     assert verifier.network_namespace_comparison() is None
+
+
+def test_method_identity_is_bound_to_the_specific_invoked_tool():
+    inventory={path: str(index)*64 for index,path in enumerate(verifier.METHOD_SOURCES.values(),1)}
+    for script,source in verifier.METHOD_SOURCES.items():
+        assert verifier.method_matches({'method_sha256':inventory[source]},[script],inventory)
+        for foreign in inventory.values():
+            if foreign != inventory[source]:
+                assert not verifier.method_matches({'method_sha256':foreign},[script],inventory)
+    assert not verifier.method_matches({'method_sha256':'1'*64},['unknown.py'],inventory)
+    assert not verifier.method_matches({},[],inventory)
+    assert not verifier.method_matches({},['scripts/credential-flow.py'],inventory)
+    assert not verifier.method_matches({},['scripts/credential-flow.py'],{})

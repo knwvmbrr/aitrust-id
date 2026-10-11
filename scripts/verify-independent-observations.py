@@ -23,6 +23,15 @@ SOURCES += ['tools/credential_flow.py', 'scripts/credential-flow.py',
             'tests/test_credential_flow.py', 'docs/credential-flow.md',
             'tests/test_observation_verifier.py']
 
+METHOD_SOURCES = {'scripts/package-proximity.py': 'tools/package_proximity.py',
+                  'scripts/language-observations.py': 'tools/language_observations.py',
+                  'scripts/credential-flow.py': 'tools/credential_flow.py'}
+
+
+def method_matches(data, argv, inventory):
+    source = METHOD_SOURCES.get(argv[0]) if argv else None
+    return source in inventory and data.get('method_sha256') == inventory[source]
+
 
 def sources():
     return {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES}
@@ -47,7 +56,7 @@ def main():
         data = json.loads(result.stdout)
         passed = result.returncode == exit_status and data.get('state') == expected and data.get('tags') == []
         if exit_status == 0 and expected is not None:
-            passed = passed and data.get('method_sha256') in before.values()
+            passed = passed and method_matches(data, argv, before)
         checks.append({'case': label, 'exit_status': result.returncode, 'pass': passed,
                        'stdout_sha256': hashlib.sha256(result.stdout.encode()).hexdigest(),
                        'stderr_sha256': hashlib.sha256(result.stderr.encode()).hexdigest()})
@@ -87,6 +96,8 @@ def main():
         run('local_timeout_is_not_network_payload', flow, program+sink.replace('data=secret', 'timeout=secret'), 'NO_SUPPORTED_FLOW')
         run('unknown_transform_not_a_negative', flow, program+'secret=secret.encode()\n'+sink, 'UNAVAILABLE', 2)
         run('unknown_branch_not_a_negative', flow, program+'if True:\n '+sink, 'UNAVAILABLE', 2)
+        run('path_read_is_not_a_valid_method', flow, (program+sink).replace('.read_text()', '.read()'), 'UNAVAILABLE', 2)
+        run('open_read_text_is_not_a_valid_method', flow, (program+sink).replace('Path(".env")', 'open(".env")'), 'UNAVAILABLE', 2)
     stable = before == sources()
     namespace = network_namespace_comparison()
     report = {'captured_at': datetime.now(timezone.utc).isoformat(), 'pass': stable and all(c['pass'] for c in checks),
