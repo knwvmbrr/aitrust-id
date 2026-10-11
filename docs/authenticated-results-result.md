@@ -39,3 +39,35 @@ the original runtime gate passed. Do not treat parsed configuration as runtime
 proof. The isolated signing key and temporary signed container are verification
 resources, not production credentials. Publication and cleanup receive separate
 observed records; the initial acceptance packet preserves its pre-publication state.
+
+## Publication observed
+
+[Protected PR 26](https://github.com/knwvmbrr/aitrust-id/pull/26) merged after
+all 22 required push/PR executions passed, with no unresolved review threads
+and no protection bypass. The independent release gates still fail.
+[All 684 artifact comparisons](../runs/2026-10-11-authenticated-publication.json)
+match source `a36898f30f91adfd189baed12ba7f7c13740964b` on the preview, apex
+and www. Live catalogue, performance, policy, workflow and automated accessibility
+checks pass; these do not substitute for physical phones or human screen readers.
+[Three actual initialization failures](../runs/2026-10-11-authenticated-startup-refusals.json)
+refuse missing keys, wrong curves and permissive private-key modes.
+
+The [public development source](https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f)
+is separately authenticated and does not release a tag. Its observed download
+evidence and hosted signing record are preserved separately from the original
+pre-publication acceptance packet. The proposed metadata pilot contract still
+needs owner approval; no intake, training or hidden collection was enabled.
+
+### Download timing correction
+
+The [corrected download receipt](../runs/2026-10-11-authenticated-download-corrected.json)
+records Mac verification before publication and the additional network-isolated
+Linux verification after publication. Both passed. The original receipt's generic
+pre-publication flag and top-level capture time were wrong; that original remains
+in history and is superseded for current acceptance. The accountability gate now
+rejects a receipt that predates its recorded platform checks or misstates their
+order relative to publication.
+
+After those evidence corrections, [the full suite](../runs/2026-10-11-publication-timing-full-regressions.json)
+passes 1,253 Python tests, including 12 new timing controls. These are additional
+accountability checks; they do not change PS's method, runtime image or accuracy.

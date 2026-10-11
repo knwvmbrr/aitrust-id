@@ -82,3 +82,39 @@ def test_date_only_history_stays_explicitly_untimed(snapshot):
     mutate(snapshot,'state.json',lambda d:d.update(chronology_control='runs/date-only-history.json'))
     report=m.verify(snapshot)
     assert report['state_chronology_verified'] and report['untimed_evidence_references']>0
+
+def publication_receipt(snapshot,after=False):
+    receipt={'captured_at':'2026-01-03T00:00:00Z','published_at':'2026-01-02T00:00:00Z',
+        'verification_finished_before_publication':not after,
+        'actual_mac_verification':{'pass':True,'captured_at':'2026-01-01T00:00:00Z'},
+        'actual_network_isolated_linux_verification':{'pass':True,'captured_at':
+            '2026-01-02T12:00:00Z' if after else '2026-01-01T12:00:00Z'}}
+    path=snapshot/'runs/publication-timing-control.json';path.write_text(json.dumps(receipt))
+    mutate(snapshot,'state.json',lambda d:d.update(publication_timing_control='runs/publication-timing-control.json'))
+    return receipt,path
+
+@pytest.mark.parametrize('after',[False,True])
+def test_publication_timing_accepts_truthful_before_and_after_checks(snapshot,after):
+    publication_receipt(snapshot,after)
+    assert m.verify(snapshot)['state_chronology_verified']
+
+@pytest.mark.parametrize('case',['late-check','early-capture','missing-check-date','failed-check','missing-published','nonboolean','no-checks'])
+def test_false_or_incomplete_publication_timing_refused(snapshot,case):
+    receipt,path=publication_receipt(snapshot,after=True)
+    if case=='late-check':receipt['verification_finished_before_publication']=True
+    elif case=='early-capture':receipt['captured_at']='2026-01-02T00:00:00Z'
+    elif case=='missing-check-date':del receipt['actual_mac_verification']['captured_at']
+    elif case=='failed-check':receipt['actual_mac_verification']['pass']=False
+    elif case=='missing-published':del receipt['published_at']
+    elif case=='nonboolean':receipt['verification_finished_before_publication']=1
+    else:
+        del receipt['actual_mac_verification'];del receipt['actual_network_isolated_linux_verification']
+    path.write_text(json.dumps(receipt))
+    with pytest.raises(ValueError):m.verify(snapshot)
+
+@pytest.mark.parametrize('platform,value',[('mac',False),('network_isolated_linux',True),('mac',1)])
+def test_false_platform_publication_timing_refused(snapshot,platform,value):
+    receipt,path=publication_receipt(snapshot,after=True)
+    receipt[platform+'_verification_finished_before_publication']=value
+    path.write_text(json.dumps(receipt))
+    with pytest.raises(ValueError,match='Platform'):m.verify(snapshot)

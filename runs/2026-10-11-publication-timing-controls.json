@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-10-11T12:39:50.335666+00:00",
+  "pass": true,
+  "executed_by": "Codex",
+  "targeted_tests_passed": 40,
+  "tests_failed": 0,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_accountability.py",
+    "-q"
+  ],
+  "coverage": [
+    "Reject true pre-publication claim when any recorded platform check followed publication",
+    "Reject capture timestamps before recorded platform checks or publication",
+    "Reject missing publication/check timestamps, failed checks and nonboolean flags",
+    "Reject contradictory per-platform timing flags",
+    "Accept truthful before/after ordering",
+    "Retain existing owner/count/state chronology refusal controls"
+  ],
+  "source_sha256": {
+    "scripts/verify-accountability.py": "e6f8745eaf5aaadcb4d783930ab5c05707e47d80dc7740f1112f001592ef1161",
+    "tests/test_accountability.py": "bf7a9ab7939834c55c55cd3f2a56a68c6f5252fbc1e2db87c04db493871d519e"
+  },
+  "prototype_failure": "An older referenced download receipt had a before-publication flag but no publication timestamp. The first guard refused that incomplete evidence.",
+  "correction": "Read actual historical GitHub release metadata, preserve the old report and reference a new timing-confirmed receipt; no compatibility bypass was added.",
+  "review_finding": "Original current download flag implied both Mac and Linux verification occurred before publication. Only Mac did.",
+  "original_run_rewritten": false,
+  "runtime_code_changed": false,
+  "new_endpoint": false,
+  "scope_completion_changed": false,
+  "independent_accuracy": false
+}

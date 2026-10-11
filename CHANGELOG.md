@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-124218-publication-timing-final-regressions-4855149b
+
+Recorded 2026-10-11T12:42:18.050517+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain final full-suite evidence and update current test attribution after the publication-timing correction.
+- **Evidence.** All 1,253 Python tests pass after the corrected receipts and accountability timing guard; no requirements were reclassified as complete. [Change record](./runs/changes/2026-10-11-124218-publication-timing-final-regressions-4855149b.json).
+- **Not claimed.** The runtime source remains a36898f; no detector accuracy, phone, human accessibility or legal gate was fulfilled by this suite.
+
+
+### 2026-10-11-123950-publication-timing-truth-6d30efd5
+
+Recorded 2026-10-11T12:39:50.457214+00:00 · Contributor: Codex · change
+
+- **Changed.** Supersede the incorrect publication timing receipt, confirm an older missing publication date from actual release metadata, and enforce timing claims in the accountability gate.
+- **Evidence.** 40 accountability tests pass, including before/after-publication, missing-date, failed-check, capture-time and contradictory platform-flag controls. Current source provenance references corrected receipts; original reports remain preserved. [Change record](./runs/changes/2026-10-11-123950-publication-timing-truth-6d30efd5.json).
+- **Not claimed.** Mac verification preceded the current release; the additional Linux verification followed it. Source authentication does not establish tag accuracy or complete license clearance. No full scope record was closed.
+
+
+### 2026-10-11-122915-authenticated-results-publication-d5e2087e
+
+Recorded 2026-10-11T12:29:15.496629+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish authenticated gateway source and exact live build; retain startup failures, immutable release association, current runtime inventory counts and an unaccepted metadata pilot contract.
+- **Evidence.** Protected merge passed all 22 required executions; 684 live artifacts match the reviewed build; four source assets anonymously download with exact bytes; Mac and network-isolated Linux verify the source signature. Scope remains 113 complete and 89 open. [Change record](./runs/changes/2026-10-11-122915-authenticated-results-publication-d5e2087e.json).
+- **Not claimed.** Independent tag release, full license clearance, scanner workflow attestation, physical-phone/human review and research intake remain incomplete. The pilot contract is a proposal, not permission to collect data.
+
+
 ### 2026-10-11-121105-authenticated-results-final-regressions-and-cleanup-c2dccbe4
 
 Recorded 2026-10-11T12:11:05.651324+00:00 · Contributor: Codex · change

@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-10-11T12:25:46.709031+00:00",
+  "pass": true,
+  "executed_by": "Codex",
+  "verification_command": [
+    "gh",
+    "release",
+    "verify-asset",
+    "v1.54.1",
+    "syft_1.54.1_linux_amd64.tar.gz",
+    "--repo",
+    "anchore/syft",
+    "--format",
+    "json"
+  ],
+  "release": "https://github.com/anchore/syft/releases/tag/v1.54.1",
+  "asset": "syft_1.54.1_linux_amd64.tar.gz",
+  "sha256": "c069905b391cc4c20a5ba65ad5c10be2a7ba074f8ea6ad203e24d14e303dad47",
+  "predicate_type": "https://in-toto.io/attestation/release/v0.2",
+  "predicate": {
+    "databaseId": "404889400",
+    "ownerId": "16208487",
+    "packageId": "262126497",
+    "purl": "pkg:github/anchore/syft@v1.54.1",
+    "repository": "anchore/syft",
+    "repositoryId": "262126497",
+    "tag": "v1.54.1"
+  },
+  "verified_timestamps": [
+    {
+      "type": "TimestampAuthority",
+      "uri": "timestamp.githubapp.com",
+      "timestamp": "2026-10-06T15:35:11Z"
+    }
+  ],
+  "verified_certificate_identity": {
+    "certificateIssuer": "CN=Fulcio Intermediate l1,O=GitHub\\, Inc.",
+    "subjectAlternativeName": "https://dotcom.releases.github.com"
+  },
+  "github_immutable_release_association_verified": true,
+  "anchore_workflow_checksum_signature_verified": false,
+  "runtime_images_signed": false,
+  "licenses_cleared": false,
+  "full_scope_requirement_completed": false
+}

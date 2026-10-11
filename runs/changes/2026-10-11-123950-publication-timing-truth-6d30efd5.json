@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-123950-publication-timing-truth-6d30efd5",
+  "recorded_at": "2026-10-11T12:39:50.457214+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f0031ce33f109edc39c8e99649a968330fb51f7d",
+  "changed": "Supersede the incorrect publication timing receipt, confirm an older missing publication date from actual release metadata, and enforce timing claims in the accountability gate.",
+  "proves": "40 accountability tests pass, including before/after-publication, missing-date, failed-check, capture-time and contradictory platform-flag controls. Current source provenance references corrected receipts; original reports remain preserved.",
+  "limits": "Mac verification preceded the current release; the additional Linux verification followed it. Source authentication does not establish tag accuracy or complete license clearance. No full scope record was closed.",
+  "scope_ids": [
+    "F-120",
+    "F-057",
+    "N-007"
+  ],
+  "files": {
+    "docs/authenticated-results-result.md": "d6f202318e798685ba62d07bfe306d152323b198eb2132ab717aeeb989b831ac",
+    "runs/2026-10-11-authenticated-download-corrected.json": "c9274ab65ce9fdf18a0a2fdc96bb5a12c8d439e4408035f3b1151f506f1e758c",
+    "runs/2026-10-11-offline-status-download-timing-confirmed.json": "badf76d48db0a69e37c2b1a075a6b64493014feb85d58b7fd39953f921dbbca6",
+    "runs/2026-10-11-publication-timing-controls.json": "0ac1fbe42efbbdbe1dec6a041f76544d45cb59dae8507c3a0cb10669c31171c3",
+    "scripts/verify-accountability.py": "e6f8745eaf5aaadcb4d783930ab5c05707e47d80dc7740f1112f001592ef1161",
+    "state.json": "97be42068a95cca1238da791933761ac739f6394af8fb4c39c1cdc5c82d0cd45",
+    "tests/test_accountability.py": "bf7a9ab7939834c55c55cd3f2a56a68c6f5252fbc1e2db87c04db493871d519e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-authenticated-download-corrected.json",
+      "sha256": "c9274ab65ce9fdf18a0a2fdc96bb5a12c8d439e4408035f3b1151f506f1e758c"
+    },
+    {
+      "path": "runs/2026-10-11-offline-status-download-timing-confirmed.json",
+      "sha256": "badf76d48db0a69e37c2b1a075a6b64493014feb85d58b7fd39953f921dbbca6"
+    },
+    {
+      "path": "runs/2026-10-11-publication-timing-controls.json",
+      "sha256": "0ac1fbe42efbbdbe1dec6a041f76544d45cb59dae8507c3a0cb10669c31171c3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T12:39:50.848221+00:00"
+    }
+  ]
+}

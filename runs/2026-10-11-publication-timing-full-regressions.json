@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-10-11T12:42:17.891110+00:00",
+  "pass": true,
+  "executed_by": "Codex",
+  "python": "Python 3.12.14",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "tests_passed": 1253,
+  "tests_failed": 0,
+  "warnings": 1,
+  "elapsed_seconds": 46.04,
+  "warning": "Existing Starlette/httpx TestClient deprecation; no new runtime failure.",
+  "source_sha256": {
+    "scripts/verify-accountability.py": "e6f8745eaf5aaadcb4d783930ab5c05707e47d80dc7740f1112f001592ef1161",
+    "tests/test_accountability.py": "bf7a9ab7939834c55c55cd3f2a56a68c6f5252fbc1e2db87c04db493871d519e"
+  },
+  "scope": "Full Python suite after publication-timing corrections; includes nested Node controls. Not independent accuracy or physical-device evidence.",
+  "independent_accuracy": false,
+  "release_validated": false,
+  "scope_requirements_closed_by_this_check": 0
+}
