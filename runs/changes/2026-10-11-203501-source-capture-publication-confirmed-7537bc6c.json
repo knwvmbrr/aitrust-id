@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-203501-source-capture-publication-confirmed-7537bc6c",
+  "recorded_at": "2026-10-11T20:35:01.722141+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bbf653c3b9dac23eb758180a2f03d91efbc50392",
+  "changed": "Verified protected source-capture merge, current primary checkout and exact served publication.",
+  "proves": "22 required executions succeeded, review threads resolved, 732 artifacts matched and 12 unrelated files preserved.",
+  "limits": "Source authenticity and site publication are not tag accuracy, license clearance or complete F-057/X-02 acceptance.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/source-input-binding-result.md": "d6ac77fe78d07964ae135ccdcd499c2a5d65f78f376d87ab52b0ef812fe21d4b",
+    "runs/2026-10-11-source-captured-publication.json": "c02ff76192ba4d95197d2cfbca4302c3369f7729d67a92c62e9f0406bc082c8b",
+    "runs/2026-10-11-source-captured-primary-ff.json": "96c58fc0145f36750a892cb2550480a88b98cce37bb4cd5b1aa685146c2a91aa",
+    "runs/2026-10-11-source-captured-protected-merge.json": "692870400f933078b2ad1db2062a53eeebc7f77a05adb1c851d821b921fdb102"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-source-captured-publication.json",
+      "sha256": "c02ff76192ba4d95197d2cfbca4302c3369f7729d67a92c62e9f0406bc082c8b"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-primary-ff.json",
+      "sha256": "96c58fc0145f36750a892cb2550480a88b98cce37bb4cd5b1aa685146c2a91aa"
+    },
+    {
+      "path": "runs/2026-10-11-source-captured-protected-merge.json",
+      "sha256": "692870400f933078b2ad1db2062a53eeebc7f77a05adb1c851d821b921fdb102"
+    }
+  ],
+  "checks": []
+}

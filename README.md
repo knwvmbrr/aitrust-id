@@ -89,6 +89,12 @@ metadata; full assertions require an explicit new private report file. It neithe
 issues image credentials nor releases FA/PA. The documented C2PA signal remains
 a proposed observation, with its own runnable source and test fixtures.
 
+The optional [English sentence-pair model](docs/nli-pairs.md) compares selected
+passages locally in a separate pinned research environment. Real Mac and Linux
+execution, denied network access and private-output controls are recorded. It
+still makes semantic errors, issues no tag and provides no calibrated probability.
+Its model error cases are retained; retrieved-passage work remains separate.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual

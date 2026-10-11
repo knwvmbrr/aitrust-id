@@ -1,0 +1,77 @@
+{
+  "captured_at": "2026-10-11T20:32:51.246750+00:00",
+  "pass": true,
+  "actual_model_inference": true,
+  "synthetic_only": true,
+  "controls": [
+    {
+      "case": "actual_summary_omits_text_spans_hash_scores",
+      "exit_status": 0,
+      "pass": true
+    },
+    {
+      "case": "private_details_opt_in",
+      "exit_status": 0,
+      "pass": true
+    },
+    {
+      "case": "existing_details_never_overwritten",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "nonprivate_input_refused",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "input_symlink_refused",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "duplicate_json",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "unsupported_language",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "overlapping_spans",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "oversized_input",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "tampered_model_refused",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "missing_model_refused",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "arguments_do_not_echo_private_values",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "case": "direct_internal_worker_refused",
+      "exit_status": 2,
+      "pass": true
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "tag_asserted": false,
+  "release_approved": false,
+  "private_test_directory_removed": true
+}

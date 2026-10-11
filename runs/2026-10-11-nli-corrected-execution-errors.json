@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-11T20:34:06.009352+00:00",
+  "errors_retained": [
+    {
+      "phase": "private graph prototype",
+      "signature": "AttributeError: ModelProto has no graph initializer collection",
+      "fix": "Pass model.graph to the recursive graph inspector",
+      "verified": "Actual model backend and CLI execute on Mac and Linux"
+    },
+    {
+      "phase": "test collection",
+      "signature": "TypeError: PosixPath plus str",
+      "fix": "Group script filename before joining to directory",
+      "verified": "107 Mac and 108 Linux focused tests pass"
+    },
+    {
+      "phase": "operator report destination",
+      "signature": "ValueError: Invalid report destination",
+      "fix": "Use the existing repository runs/output destination contract",
+      "verified": "13 actual controls recorded on each platform"
+    }
+  ],
+  "uncorrected_semantic_error": "Unrelated sky/books pair classified as contradiction; retained, no tag mapping or accuracy claim"
+}

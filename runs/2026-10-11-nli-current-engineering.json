@@ -1,0 +1,65 @@
+{
+  "captured_at": "2026-10-11T20:34:06.009352+00:00",
+  "implemented_by": "Codex",
+  "pass": true,
+  "source_base": "bbf653c3b9dac23eb758180a2f03d91efbc50392",
+  "sources": {
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938",
+    "research/nli/backend.py": "177d3d205b8099db085cb149573311c87bc1e839c98068a25d85074bc8790c74",
+    "research/nli/network.py": "90afdb1f6a9892f94788148de90f288b2ca4e010179b2e54498b6ef051af0223",
+    "scripts/check-nli-pairs.py": "4a90c7dea6195a50b06243d723d00a3ca262557adcc21521847d74f4e30fd516",
+    "scripts/fetch-nli-assets.py": "3224b000d373a60ee94e4662d2213c792731efd9516b53b52fd5e38d787f6756",
+    "scripts/verify-nli-pairs.py": "9d94977b198be4052aefee761e7cd5ae29a30f089c8b637eaae733de64766caf",
+    "scripts/verify-nli-profile.py": "8bf7165d012d04a5755d7c1df8c2be3b70960af25ec3352f90693e2fd344fdf7",
+    "tests/test_nli_pairs.py": "5f5212f1cdc2c2a5132fd05cf75ee773f4d237d059aa2908d27ac7992727f054",
+    "tests/test_nli_network.py": "9596ec557f98f7f33dd60e65a81f6e64cbdcf4ba2078750f43f5bbc0b07c7c40",
+    "tests/test_nli_cli.py": "3bb1a1deb8e65bf9e792332ab2d913efc5325db019660d8303b167a99fa70388",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09"
+  },
+  "focused_mac_passed": 107,
+  "focused_mac_platform_skip": 1,
+  "focused_linux_passed": 108,
+  "actual_cli_controls_per_platform": 13,
+  "actual_public_asset_download": {
+    "downloaded_pinned_public_assets": 4,
+    "model_executed": false,
+    "user_examples_read": false
+  },
+  "assets": {
+    "profile": "pinned-nli-assets/1.0.0",
+    "revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+    "files": [
+      {
+        "name": "model.onnx",
+        "bytes": 284200859,
+        "sha256": "7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/onnx/model.onnx"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 8656624,
+        "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/tokenizer.json"
+      },
+      {
+        "name": "config.json",
+        "bytes": 1053,
+        "sha256": "8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/config.json"
+      },
+      {
+        "name": "README.md",
+        "bytes": 2871,
+        "sha256": "4aeb5585a9eeb71b2d572249f9faa22ef3378c6abee3eeaffaae8c961068a2c6",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/README.md"
+      }
+    ],
+    "independently_audited": false
+  },
+  "model_error_retained": true,
+  "synthetic_only": true,
+  "tag_asserted": false,
+  "independent_release_validated": false,
+  "requirements_closed": 0
+}

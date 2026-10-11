@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T20:14:24.265045+00:00",
+  "updated": "2026-10-11T20:43:28.981008+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1955,
+  "python_tests_passed": 2062,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-11-agreement-publication.json",
+    "evidence": "runs/2026-10-11-source-captured-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://50b1f91e.aitrust-id.pages.dev",
+    "deployment_url": "https://46800cab.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-blind-private-publication.json",
+    "publication_evidence": "runs/2026-10-11-source-captured-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -296,7 +296,7 @@
     "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "86b634ed552bcae304517f8e1c5f50162e6a893c",
+    "source_commit": "bbf653c3b9dac23eb758180a2f03d91efbc50392",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-blind-private-bound-PS.json",
+    "PS": "runs/2026-10-11-nli-bound-PS.json",
     "PII_REDACTED": "runs/2026-10-11-blind-private-bound-PII_REDACTED.json",
-    "protocol": "runs/2026-10-11-blind-private-bound-protocol.json",
+    "protocol": "runs/2026-10-11-nli-bound-protocol.json",
     "extension": "runs/2026-10-11-blind-private-bound-extension.json",
-    "website": "runs/2026-10-11-source-captured-prepared-website.json",
+    "website": "runs/2026-10-11-nli-guide-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T20:14:24.265045+00:00",
+  "updated_at": "2026-10-11T20:43:28.981008+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1677,7 +1677,7 @@
     "protected_merge": "runs/2026-10-11-blind-private-protected-merge.json"
   },
   "source_input_capture": {
-    "status": "current_source_checks_pass_protected_publication_pending",
+    "status": "current_source_checks_pass_protected_merge_and_publication_verified",
     "implemented_by": "Codex",
     "architecture": "docs/source-input-binding-plan.md",
     "mac": "runs/2026-10-11-source-captured-mac.json",
@@ -1691,6 +1691,30 @@
     "actual_refusals": "runs/2026-10-11-source-captured-real-refusals.json",
     "current_boundaries": "runs/2026-10-11-source-captured-boundaries.json",
     "full_python_execution": "runs/2026-10-11-source-captured-full-python.json",
-    "full_python_tests_passed": 1955
+    "full_python_tests_passed": 1955,
+    "publication": "runs/2026-10-11-source-captured-publication.json",
+    "protected_merge": "runs/2026-10-11-source-captured-protected-merge.json"
+  },
+  "nli_sentence_pairs": {
+    "status": "optional_local_research_checks_pass; protected_publication_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-016"
+    ],
+    "focused_mac": 107,
+    "focused_linux": 108,
+    "actual_cli_controls_per_platform": 13,
+    "current_engineering": "runs/2026-10-11-nli-current-engineering.json",
+    "model_error_retained": true,
+    "independent_accuracy_evidence": false,
+    "tag_asserted": false,
+    "requirements_closed": 0,
+    "result": "docs/nli-pairs-result.md",
+    "full_python_tests_passed": 2062,
+    "full_python_execution": "runs/2026-10-11-nli-full-python.json",
+    "current_capabilities": "runs/2026-10-11-nli-current-capabilities.json",
+    "current_boundaries": "runs/2026-10-11-nli-current-boundaries.json",
+    "website_execution": "runs/2026-10-11-nli-guide-website.json",
+    "owned_remote_environment_removed": true
   }
 }

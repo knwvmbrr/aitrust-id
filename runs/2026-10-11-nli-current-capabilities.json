@@ -1,0 +1,52 @@
+{
+  "captured_at": "2026-10-11T20:43:28.981008+00:00",
+  "pass": true,
+  "capabilities": {
+    "PS": {
+      "receipt": "runs/2026-10-11-nli-bound-PS.json",
+      "pass": true,
+      "capability": "PS",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "PII_REDACTED": {
+      "receipt": "runs/2026-10-11-blind-private-bound-PII_REDACTED.json",
+      "pass": true,
+      "capability": "PII_REDACTED",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "protocol": {
+      "receipt": "runs/2026-10-11-nli-bound-protocol.json",
+      "pass": true,
+      "capability": "protocol",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "extension": {
+      "receipt": "runs/2026-10-11-blind-private-bound-extension.json",
+      "pass": true,
+      "capability": "extension",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "website": {
+      "receipt": "runs/2026-10-11-nli-guide-website.json",
+      "pass": true,
+      "capability": "website",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    }
+  },
+  "independent_accuracy": false
+}

@@ -88,6 +88,10 @@ PATTERNS += ('eval/fixtures/pii-compact-addresses.json', 'runs/2026-10-11-pii-la
 PATTERNS += ('tools/blind_review_io.py', 'scripts/prepare-ps-review.py', 'scripts/verify-blind-review-privacy.py',
              'scripts/verify-blind-review-browser.cjs', 'tests/test_blind_review.py',
              'tests/test_blind_review_privacy.py', 'tests/blind-review-files.cjs', 'docs/independent-review.md')
+PATTERNS += ('research/nli/**/*', 'research/__init__.py', 'scripts/check-nli-pairs.py',
+             'scripts/fetch-nli-assets.py', 'scripts/verify-nli-pairs.py', 'scripts/verify-nli-profile.py',
+             'tests/test_nli_pairs.py', 'tests/test_nli_network.py', 'tests/test_nli_cli.py',
+             'docs/nli-pairs.md', 'docs/nli-pairs-plan.md')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

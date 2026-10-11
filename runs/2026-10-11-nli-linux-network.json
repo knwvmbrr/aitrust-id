@@ -1,0 +1,43 @@
+{
+  "profile": "linux-worker-network-denial/1.0.0",
+  "mechanism": "system_libseccomp",
+  "native_architecture": "x86_64",
+  "no_new_privileges": true,
+  "denied_syscalls": [
+    "socket",
+    "socketpair",
+    "connect",
+    "bind",
+    "listen",
+    "accept",
+    "accept4",
+    "sendto",
+    "sendmsg",
+    "sendmmsg",
+    "recvfrom",
+    "recvmsg",
+    "recvmmsg",
+    "getsockopt",
+    "setsockopt",
+    "getsockname",
+    "getpeername",
+    "shutdown",
+    "io_uring_setup",
+    "io_uring_enter",
+    "io_uring_register"
+  ],
+  "io_uring_denied": true,
+  "existing_threads_synchronized": true,
+  "pass_execution": true,
+  "actual_socket_attempts_denied": [
+    "inet",
+    "inet6",
+    "unix",
+    "pair"
+  ],
+  "descendant_socket_denied": true,
+  "unprivileged": true,
+  "captured_at": "2026-10-11T20:34:06.009352+00:00",
+  "worker_only": true,
+  "production_service_settings_changed": false
+}

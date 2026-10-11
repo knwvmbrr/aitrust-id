@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-11T20:40:47.282108+00:00",
+  "pass": false,
+  "executed_suite": "all tests except route-boundary file while new website receipt was pending",
+  "passed": 2017,
+  "failed": 13,
+  "skipped": 1,
+  "upstream_warnings": 1,
+  "seconds": 56.02,
+  "root_signature": "State timestamps disagree",
+  "cause": "updated changed without its required updated_at companion",
+  "fix": "Set both current-state timestamps to the same actual UTC value; keep verifier and tests unchanged",
+  "subsequent_verification": "Recorded separately; this failed receipt stays failed",
+  "independent_accuracy": false
+}
