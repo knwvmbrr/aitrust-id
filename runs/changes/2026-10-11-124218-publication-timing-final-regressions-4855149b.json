@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-124218-publication-timing-final-regressions-4855149b",
+  "recorded_at": "2026-10-11T12:42:18.050517+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f0031ce33f109edc39c8e99649a968330fb51f7d",
+  "changed": "Retain final full-suite evidence and update current test attribution after the publication-timing correction.",
+  "proves": "All 1,253 Python tests pass after the corrected receipts and accountability timing guard; no requirements were reclassified as complete.",
+  "limits": "The runtime source remains a36898f; no detector accuracy, phone, human accessibility or legal gate was fulfilled by this suite.",
+  "scope_ids": [
+    "F-120",
+    "N-007"
+  ],
+  "files": {
+    "state.json": "9264eb6e368ba798fa09c9445293eaa90a25a32afc5dd4673179bcbcc170c710",
+    "docs/authenticated-results-result.md": "5e37700ff24d2c596711626e697fb6cc7435be81041c41e97598122410ea4732",
+    "runs/2026-10-11-publication-timing-full-regressions.json": "8242c2170c06160969d45953ba0546491f2673f299156717afa726e9f5e2f420"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-publication-timing-full-regressions.json",
+      "sha256": "8242c2170c06160969d45953ba0546491f2673f299156717afa726e9f5e2f420"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T12:42:18.465917+00:00"
+    }
+  ]
+}

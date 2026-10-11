@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T12:28:57.384524+00:00",
+  "updated": "2026-10-11T12:42:17.918489+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -347,7 +347,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "1,241 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
+  "python_tests_scope": "1,253 current full-suite Python tests, including nested Node controls; engineering acceptance only. Independent accuracy and human/device acceptance remain separate.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -609,7 +609,8 @@
     "independent_install_review": false,
     "latest_implementation_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
     "handheld_download_verified": true,
-    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f"
+    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f",
+    "latest_implementation_scope": "Selected gateway/extension runtime; later bookkeeping and accountability utilities are tracked separately."
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
@@ -1030,7 +1031,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T12:28:57.384524+00:00",
+  "updated_at": "2026-10-11T12:42:17.918489+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1175,7 +1176,7 @@
     "corrected_hosted_download_observed": true,
     "current_source_snapshot": "a36898f30f91adfd189baed12ba7f7c13740964b",
     "public_development_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-a36898f",
-    "download_evidence": "runs/2026-10-11-authenticated-download.json",
+    "download_evidence": "runs/2026-10-11-authenticated-download-corrected.json",
     "corrected_hosted_checks": "runs/2026-10-10-source-download-hosted-checks.json",
     "corrected_protected_merge": "runs/2026-10-10-source-contract-protected-merge.json",
     "latest_protected_merge": "runs/2026-10-11-authenticated-protected-merge.json",
@@ -1250,7 +1251,7 @@
     "current_boundaries": "runs/2026-10-11-revocation-current-boundaries.json",
     "publication": "runs/2026-10-11-revocation-publication.json",
     "protected_merge": "runs/2026-10-11-offline-status-protected-merge.json",
-    "authenticated_source": "runs/2026-10-11-offline-status-authenticated-download.json"
+    "authenticated_source": "runs/2026-10-11-offline-status-download-timing-confirmed.json"
   },
   "offline_key_recovery": {
     "implemented": true,
@@ -1345,8 +1346,10 @@
     "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
     "protected_merge": "runs/2026-10-11-authenticated-protected-merge.json",
     "startup_refusals": "runs/2026-10-11-authenticated-startup-refusals.json",
-    "public_source_download": "runs/2026-10-11-authenticated-download.json",
-    "bookkeeping_correction": "runs/2026-10-11-authenticated-bookkeeping-correction.json"
+    "public_source_download": "runs/2026-10-11-authenticated-download-corrected.json",
+    "bookkeeping_correction": "runs/2026-10-11-authenticated-bookkeeping-correction.json",
+    "publication_timing_controls": "runs/2026-10-11-publication-timing-controls.json",
+    "publication_timing_full_regressions": "runs/2026-10-11-publication-timing-full-regressions.json"
   },
   "metadata_pilot_contract": {
     "status": "proposal_pending_owner_approval; no endpoint or collection enabled",

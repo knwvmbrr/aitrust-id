@@ -9,6 +9,29 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from protocol.evidence import read_evidence
 
+def publication_chronology(receipt,moment):
+    """A before-publication claim covers every recorded actual platform check."""
+    if 'verification_finished_before_publication' not in receipt:return
+    flag=receipt['verification_finished_before_publication']
+    if type(flag) is not bool:raise ValueError('Invalid publication verification flag')
+    published=moment(receipt.get('published_at'))
+    captured=moment(receipt.get('captured_at'))
+    verified=[]
+    for key,value in receipt.items():
+        if key.startswith('actual_') and key.endswith('_verification'):
+            if not isinstance(value,dict) or value.get('pass') is not True:
+                raise ValueError('Missing successful actual publication verification')
+            when=moment(value.get('captured_at'));verified.append(when)
+            platform_flag=key[len('actual_'):-len('_verification')]+'_verification_finished_before_publication'
+            if platform_flag in receipt and (type(receipt[platform_flag]) is not bool
+                or receipt[platform_flag]!=(when<=published)):
+                raise ValueError('Platform publication timing claim contradicts observation')
+    if not verified:raise ValueError('Missing actual publication verification dates')
+    if captured<max([published,*verified]):
+        raise ValueError('Publication receipt predates recorded verification')
+    if flag!=all(when<=published for when in verified):
+        raise ValueError('Publication verification timing claim contradicts observations')
+
 def state_chronology(state,root=ROOT):
     now=datetime.now(timezone.utc)
     def moment(value):
@@ -35,6 +58,7 @@ def state_chronology(state,root=ROOT):
         if not file.is_file():raise ValueError("Missing state evidence reference")
         receipt=read_evidence(file)
         if not isinstance(receipt,dict):raise ValueError("Invalid state evidence record")
+        publication_chronology(receipt,moment)
         stamps=[moment(receipt[key]) for key in ("captured_at","recorded_at") if key in receipt]
         if not stamps:untimed+=1;continue
         timed+=1;captured=max(stamps)

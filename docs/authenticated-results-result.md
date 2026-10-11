@@ -57,3 +57,17 @@ is separately authenticated and does not release a tag. Its observed download
 evidence and hosted signing record are preserved separately from the original
 pre-publication acceptance packet. The proposed metadata pilot contract still
 needs owner approval; no intake, training or hidden collection was enabled.
+
+### Download timing correction
+
+The [corrected download receipt](../runs/2026-10-11-authenticated-download-corrected.json)
+records Mac verification before publication and the additional network-isolated
+Linux verification after publication. Both passed. The original receipt's generic
+pre-publication flag and top-level capture time were wrong; that original remains
+in history and is superseded for current acceptance. The accountability gate now
+rejects a receipt that predates its recorded platform checks or misstates their
+order relative to publication.
+
+After those evidence corrections, [the full suite](../runs/2026-10-11-publication-timing-full-regressions.json)
+passes 1,253 Python tests, including 12 new timing controls. These are additional
+accountability checks; they do not change PS's method, runtime image or accuracy.
