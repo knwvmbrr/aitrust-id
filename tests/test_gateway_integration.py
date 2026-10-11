@@ -56,8 +56,9 @@ def test_auth_origin_modality_prevent_processing(monkeypatch):
     with TestClient(g.app) as client:
         assert client.post('/v1/evaluate',json={'text':'x'}).status_code==401
         assert client.post('/v1/evaluate',headers={'authorization':'Bearer '+g.TOKEN,'origin':'https://hostile.test'},json={'text':'x'}).status_code==403
-        assert client.post('/v1/evaluate',headers={'authorization':'Bearer '+g.TOKEN},json={'text':'x','modality':'image'}).status_code==422
-        assert client.post('/v1/evaluate',headers={'authorization':'Bearer '+g.TOKEN},json={'text':'x','modality':'nonsense'}).status_code==422
+        for modality in ('code','image','audio','video','document','nonsense'):
+            response=client.post('/v1/evaluate',headers={'authorization':'Bearer '+g.TOKEN},json={'text':'x','modality':modality})
+            assert response.status_code==422 and 'tags' not in response.json()
     assert not calls
 
 @pytest.mark.parametrize('chunked',[False,True])

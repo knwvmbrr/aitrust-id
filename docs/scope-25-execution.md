@@ -1,4 +1,6 @@
-# Open queue target: 25
+# Historical open queue target: 25
+
+**Superseded on October 11, 2026:** the current owner direction is to continue from 91 open requirements to 50. See [the current execution plan](authenticated-results-plan.md). The following preserves the prior target and its history.
 
 The owner changed the target on October 10, 2026: continue until **25 full
 requirements remain open**. This supersedes the previous target of 50, while

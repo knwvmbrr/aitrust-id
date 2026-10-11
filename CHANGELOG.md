@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-121105-authenticated-results-final-regressions-and-cleanup-c2dccbe4
+
+Recorded 2026-10-11T12:11:05.651324+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete 1241-test regression pass, accepted current personal boundaries and actual removal of the isolated signing resources; synchronize timestamped state.
+- **Evidence.** 1241 Python tests pass; all five capability checks pass with stable sources, reviewed endpoints and permissions remain unchanged, and owned signing staging resources are removed with the standard services still running. [Change record](./runs/changes/2026-10-11-121105-authenticated-results-final-regressions-and-cleanup-c2dccbe4.json).
+- **Not claimed.** Scope remains 113 complete and 89 open, rather than the requested 50. No independent tag release, real-device/human acceptance or whole-project security guarantee is claimed.
+
+
+### 2026-10-11-121006-authenticated-routes-current-accepted-evidence-236be675
+
+Recorded 2026-10-11T12:10:06.600578+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing source-stable checks for all five affected capabilities and bind current website, extension, Linux service and replay receipts into the reviewed personal route manifest.
+- **Evidence.** All five source fingerprints remain unchanged during actual checks; replay export uses current gateway evidence, and no acceptance gate was relaxed. [Change record](./runs/changes/2026-10-11-121006-authenticated-routes-current-accepted-evidence-236be675.json).
+- **Not claimed.** Engineering revalidation does not release a tag or complete the open historical/outside-user/device/license jobs. Scope stays at 113 complete and 89 open.
+
+
+### 2026-10-11-120840-current-source-replay-binding-93bea18f
+
+Recorded 2026-10-11T12:08:40.117187+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the replay-export fixture to the current executed gateway replay record instead of reusing historical source identity; preserve source mismatch refusal and refresh reviewed route pointers.
+- **Evidence.** The downloaded two-tag export validates against current gateway preprocessing and detector source hashes, with keyboard opt-in and 320-pixel layout checks. [Change record](./runs/changes/2026-10-11-120840-current-source-replay-binding-93bea18f.json).
+- **Not claimed.** This is current-source reproducibility and authenticated transport engineering; no absent historical configuration is guessed, no independent accuracy or outside-user acceptance is granted.
+
+
+### 2026-10-11-120710-authenticated-export-fixture-and-revalidation-records-1365b515
+
+Recorded 2026-10-11T12:07:10.522519+00:00 · Contributor: Codex · change
+
+- **Changed.** Update the replay-export test fixture to the trusted worker result contract and record every actual capability execution, including the correctly refused obsolete fixture.
+- **Evidence.** PS, redaction and protocol revalidation pass with unchanged source fingerprints; the extension boundary refused a fixture without authentication rather than rendering it. [Change record](./runs/changes/2026-10-11-120710-authenticated-export-fixture-and-revalidation-records-1365b515.json).
+- **Not claimed.** The fixture is not cryptographic evidence; installed-extension cryptographic tests are separate. Corrected extension and current website revalidation still required.
+
+
+### 2026-10-11-120536-authenticated-results-current-scope-artifacts-fa227346
+
+Recorded 2026-10-11T12:05:36.320440+00:00 · Contributor: Codex · change
+
+- **Changed.** Synchronize generated public scope and approved decision copies; record actual settings accessibility/race evidence and current gateway inventory in state; retain the prior targets as historical plans.
+- **Evidence.** All 202 source IDs remain preserved, current ledger arithmetic is 113 complete / 89 open and 39 remaining closures toward 50, and the warm production build completed. [Change record](./runs/changes/2026-10-11-120536-authenticated-results-current-scope-artifacts-fa227346.json).
+- **Not claimed.** Independent tag accuracy, real vendor/device/human acceptance, full licensing and publication remain separate. This change adds no further completed requirements.
+
+
+### 2026-10-11-120407-authenticated-gateway-and-approved-media-contract-433c1949
+
+Recorded 2026-10-11T12:04:07.610613+00:00 · Contributor: Codex · change
+
+- **Changed.** Authenticate gateway response bytes before Chrome renders verdicts; add operator key setup, nonce replay protection, cancellation and Reset race controls; apply the owner-approved unsupported-media compatibility contract without changing the taxonomy.
+- **Evidence.** 59 targeted Python/consumer checks, 49 native Web Crypto consumer cases, installed Chrome negative/rotation/reset checks, three actual signed Linux-gateway outcomes, 32 service HTTP controls and 13 complete replay controls passed. The new gateway image was built from hash-locked inputs and its observed SPDX inventory validates. [Change record](./runs/changes/2026-10-11-120407-authenticated-gateway-and-approved-media-contract-433c1949.json).
+- **Not claimed.** Independent tag accuracy, live vendor coverage, human accessibility and physical-phone acceptance remain open. Scope is 113 complete and 89 open; 39 genuine closures still needed for the target of 50. Publication pending; signatures authenticate bytes rather than truth, and full license/SBOM release clearance is not claimed.
+
+
 ### 2026-10-11-030522-authenticated-consent-source-e4427cb9
 
 Recorded 2026-10-11T03:05:22.598819+00:00 · Contributor: Codex · change

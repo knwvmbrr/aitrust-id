@@ -1,0 +1,11 @@
+# Optional explicit operator key. The base CLI stack remains unsigned.
+# The private file must be 0400/0600 and owned by container UID 10001.
+services:
+  gateway:
+    environment:
+      AITRUST_SIGNING_KEY_FILE: /run/aitrust-gateway-signing.pem
+    volumes:
+      - type: bind
+        source: ${AITRUST_SIGNING_KEY_FILE:?choose an owner-private P-256 key file outside the repository}
+        target: /run/aitrust-gateway-signing.pem
+        read_only: true

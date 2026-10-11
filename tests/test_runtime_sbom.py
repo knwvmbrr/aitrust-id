@@ -12,7 +12,7 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 @pytest.fixture
 def copy_root(tmp_path):
     names=module.SOURCES+['eval/dependencies/runtime-sbom.json',
-        'runs/2026-10-10-runtime-license-inventory.json']+[
+        json.loads((ROOT/'eval/dependencies/runtime-sbom.json').read_text())['inventory_evidence']]+[
         f'sbom/runtime/{role}-linux-amd64.spdx.json' for role in module.ROLES]
     for name in names:
         target=tmp_path/name;target.parent.mkdir(parents=True,exist_ok=True)
@@ -22,7 +22,7 @@ def copy_root(tmp_path):
 
 def test_actual_inventory_is_verifiable_and_remains_unsigned():
     r=module.verify()
-    assert r['images']==3 and r['package_occurrences']==421
+    assert r['images']==3 and r['package_occurrences']==424
     assert r['sbom_identity_verified']
     assert not r['license_cleared'] and not r['release_signed']
     assert not r['vulnerabilities_assessed'] and not r['tag_release_approved']

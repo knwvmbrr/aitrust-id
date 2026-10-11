@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-10-11T12:02:38.446792+00:00",
+  "pass": true,
+  "browser_execution": {
+    "captured_at": "2026-10-11T12:01:49.870Z",
+    "pass": true,
+    "actual_unpacked_extension": true,
+    "actual_remote_linux_gateway": true,
+    "synthetic_vendor_page": true,
+    "synthetic_inputs_only": true,
+    "cases": [
+      {
+        "name": "command",
+        "pass": true,
+        "PS": true,
+        "PII": false
+      },
+      {
+        "name": "ordinary",
+        "pass": true,
+        "PS": false,
+        "PII": false
+      },
+      {
+        "name": "command_and_redaction",
+        "pass": true,
+        "PS": true,
+        "PII": true
+      }
+    ],
+    "public_intake_connected": false,
+    "independent_accuracy": false,
+    "real_vendor_compatibility": false,
+    "physical_device": false,
+    "reset_verified": true,
+    "source_sha256": {
+      "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+      "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+      "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+      "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+      "extension/src/content/bridge.js": "821ca77c4d480dfd7ecf133710316b5633215de0f4f4fb06a76c49691dddbdba",
+      "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64",
+      "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146"
+    }
+  },
+  "independent_runtime_file_observation": {
+    "app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c"
+  },
+  "runtime_matches_browser_report": true,
+  "observed_gateway_image_config_sha256": "08891934508d918533aa00b8de3c41ea887304e1859c8eb6272687c27b095b9b",
+  "source_authentication_not_accuracy": true,
+  "production_keys_changed": false,
+  "synthetic_only": true
+}

@@ -7,7 +7,9 @@ import pytest
 from test_gateway_integration import g
 
 class Request:
-    def __init__(self):self.disconnected=asyncio.Event()
+    def __init__(self):
+        from starlette.datastructures import Headers
+        self.disconnected=asyncio.Event();self.headers=Headers()
     async def receive(self):
         await self.disconnected.wait();return {'type':'http.disconnect'}
 

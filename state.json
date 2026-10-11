@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T03:05:22.552724+00:00",
+  "updated": "2026-10-11T12:11:05.539269+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -717,8 +717,8 @@
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
     "audited_at": "2026-10-11T02:38:48.987316+00:00",
-    "completed_records": 111,
-    "open_records": 91,
+    "completed_records": 113,
+    "open_records": 89,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -735,17 +735,17 @@
     "latest_increment": "docs/consent-conformance-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
-    "target_open_records": 25,
-    "target_start_open_records": 100,
-    "target_remaining_closures": 66,
+    "target_open_records": 50,
+    "target_start_open_records": 91,
+    "target_remaining_closures": 39,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
-    "target_plan": "docs/scope-25-execution.md",
-    "target_direction_date": "2026-10-10",
+    "target_plan": "docs/authenticated-results-plan.md",
+    "target_direction_date": "2026-10-11",
     "current_target_verification": "runs/2026-10-11-consent-typed-controls.json",
     "publication_evidence_merge": "runs/2026-10-11-key-recovery-protected-merge.json",
-    "latest_owner_direction": "Reduce the 95 open requirements to as few as possible without reducing full named acceptance",
-    "latest_owner_direction_date": "2026-10-10"
+    "latest_owner_direction": "Continue closing the 91 remaining open requirements, returning at 50",
+    "latest_owner_direction_date": "2026-10-11"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -908,14 +908,15 @@
     "inventory": "runs/2026-10-10-selected-dependency-inventory.json",
     "clean_installs": "runs/2026-10-10-clean-hashed-installs.json",
     "running_image_locks": "runs/2026-10-10-installed-runtime-locks.json",
-    "inactive_registry_locked": false
+    "inactive_registry_locked": false,
+    "new_gateway_observation": "runs/2026-10-11-runtime-license-inventory.json"
   },
   "privacy_controls": {
     "status": "selected_route_privacy_controls_published_and_public_checks_pass",
     "default_extension_capture": "paused_without_explicit_checks_enabled_true",
     "token_save_is_consent": false,
     "pause_aborts_pending_fetches": true,
-    "reset_scope": "local token and consent only; not server rotation or vendor deletion",
+    "reset_scope": "local token, selected gateway public key and consent only; not server rotation or vendor deletion",
     "http_errors_reflect_input": false,
     "http_responses_no_store": true,
     "evaluation_url_access_logs": false,
@@ -924,7 +925,9 @@
     "evidence": [
       "runs/2026-10-10-http-privacy-service.json",
       "runs/2026-10-10-current-extension-consent.json",
-      "runs/2026-10-10-http-privacy-python.json"
+      "runs/2026-10-10-http-privacy-python.json",
+      "runs/2026-10-11-authenticated-extension-privacy.json",
+      "runs/2026-10-11-authenticated-service.json"
     ],
     "device_evidence": "runs/2026-10-10-privacy-device-engines.json",
     "policy_evidence": "runs/2026-10-10-privacy-policies-local.json",
@@ -1027,7 +1030,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T03:05:22.552724+00:00",
+  "updated_at": "2026-10-11T12:11:05.539269+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1113,9 +1116,9 @@
   },
   "dependency_license_audit": {
     "status": "three_observed_linux_images_pass_pinned_official_spdx_schema_and_selected_consistency; unsigned; incomplete_license_and_client_coverage",
-    "package_occurrences": 421,
+    "package_occurrences": 424,
     "manifest": "eval/dependencies/runtime-sbom.json",
-    "evidence": "runs/2026-10-10-runtime-license-inventory.json",
+    "evidence": "runs/2026-10-11-runtime-license-inventory.json",
     "license_cleared": false,
     "release_signed": false,
     "spdx_standard_evidence": "runs/2026-10-10-spdx-standard-inventory.json",
@@ -1308,5 +1311,35 @@
     "protected_merge": "runs/2026-10-11-consent-protected-merge.json",
     "authenticated_source": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-10-11-65a1298",
     "authenticated_download_evidence": "runs/2026-10-11-consent-authenticated-download.json"
+  },
+  "authenticated_gateway_results": {
+    "scope_ids": [
+      "F-036",
+      "F-102"
+    ],
+    "profile": "loopback-response/p256-sha256/v1",
+    "gateway_key_selection_required": true,
+    "private_key_in_repository": false,
+    "new_endpoint": false,
+    "assertion_schema_changed": false,
+    "public_intake_connected": false,
+    "independent_accuracy": false,
+    "selected_engineering_acceptance": "runs/2026-10-11-authenticated-results-acceptance.json",
+    "actual_browser_gateway": "runs/2026-10-11-authenticated-browser-gateway.json",
+    "privacy_and_rotation": "runs/2026-10-11-authenticated-extension-privacy.json",
+    "runtime_service": "runs/2026-10-11-authenticated-service.json",
+    "runtime_replay": "runs/2026-10-11-authenticated-replay.json",
+    "unsupported_media_owner_approval": "runs/2026-10-11-unsupported-modality-owner-decision.json",
+    "publication_pending": true,
+    "capability_evidence": [
+      "runs/2026-10-11-authenticated-ps-revalidation.json",
+      "runs/2026-10-11-authenticated-pii-revalidation.json",
+      "runs/2026-10-11-authenticated-protocol-revalidation.json",
+      "runs/2026-10-11-authenticated-extension-accepted.json",
+      "runs/2026-10-11-authenticated-website-revalidation.json"
+    ],
+    "full_regressions": "runs/2026-10-11-authenticated-full-regressions.json",
+    "current_boundaries": "runs/2026-10-11-authenticated-current-boundaries.json",
+    "staging_cleanup": "runs/2026-10-11-authenticated-staging-cleanup.json"
   }
 }

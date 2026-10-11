@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-11T02:49:20.780836+00:00",
-  "client_date": "2026-10-10",
+  "audited_at": "2026-10-11T12:03:44.933701+00:00",
+  "client_date": "2026-10-11",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
   "attribution_rule": "Session/run attribution distinguished from owner-reported Claude additions; Git account author is not substituted for actual implementer",
@@ -2752,29 +2752,43 @@
       "id": "F-036",
       "kind": "requirement",
       "title": "Signature verification before render",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T12:03:44.933701+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 current implementation and actual Python, native Web Crypto, installed Chrome and Linux staging execution"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Signature verification before render. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: The badge refuses to display a verdict it cannot authenticate",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T12:03:44.933701+00:00",
+      "completion_timestamp_basis": "Full selected named engineering contract executed; no tag accuracy, outside-user, real-vendor, legal or physical-phone acceptance inferred.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "runs/2026-10-11-authenticated-results-acceptance.json",
+        "runs/2026-10-11-authenticated-service.json",
+        "runs/2026-10-11-authenticated-extension-privacy.json",
+        "docs/gateway-authentication.md",
+        "protocol/transport_signing.py",
+        "extension/src/shared/transport.js",
+        "tests/test_transport_signing.py",
+        "runs/2026-10-11-authenticated-browser-gateway.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Signature verification before render. Next package action: Define canonicalization, keys, versioning and verification boundaries. Required outcome: The badge refuses to display a verdict it cannot authenticate"
-      ],
-      "queue": "open"
+      "evidence_scope": "Every verdict in the selected Chrome loopback profile requires the independently selected operator key, fresh request nonce, exact request/response signature and strict assertion contract. Unsigned, altered, replayed, wrong-key and unsupported-profile responses cannot render verdicts. Key change/pause/reset cancel pending results. This authenticates bytes, not truth, authorship or content safety; other tag/device/human gates remain open.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-096",
@@ -3076,35 +3090,43 @@
       "id": "F-102",
       "kind": "requirement",
       "title": "Modality validated against the schema enum; unsupported returns UNK + unsupported_modality",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-10T21:29:13.613459+00:00",
+      "audited_at": "2026-10-11T12:03:44.933701+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 current implementation and actual Python, native Web Crypto, installed Chrome and Linux staging execution"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Resolve the adopted wire contract for unsupported modalities: current source-bound service execution returns 422, while this historical requirement specifies UNK plus unsupported_modality. Publish and exercise the accepted compatibility decision; a rebuilt image or passing text route does not resolve it.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T12:03:44.933701+00:00",
+      "completion_timestamp_basis": "Full selected named engineering contract executed; no tag accuracy, outside-user, real-vendor, legal or physical-phone acceptance inferred.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "runs/2026-10-09-scope-completion-checks.json",
         "runs/2026-10-08-container-checks.json",
-        "docs/runtime-gap-plan.md"
+        "docs/runtime-gap-plan.md",
+        "runs/2026-10-11-authenticated-results-acceptance.json",
+        "runs/2026-10-11-authenticated-service.json",
+        "runs/2026-10-11-authenticated-extension-privacy.json",
+        "runs/2026-10-11-unsupported-modality-owner-decision.json",
+        "tests/test_gateway_integration.py",
+        "scripts/verify-extension-consumer.cjs"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Resolve the adopted wire contract for unsupported modalities: current source-bound service execution returns 422, while this historical requirement specifies UNK plus unsupported_modality. Publish and exercise the accepted compatibility decision; a rebuilt image or passing text route does not resolve it."
-      ],
-      "queue": "open"
+      "evidence_scope": "Owner accepted HTTP 422 before processing for every reserved non-text modality and unknown value, preserving the original UNK wording in historical_baseline_job. Actual Linux gateway refuses all six; unit upstream spies prove neither redaction nor evaluator called; extension rejects reserved-modality assertions as Unsupported. No UNK verdict invented and no general UNK/schema/proposed-tag adoption.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-103",

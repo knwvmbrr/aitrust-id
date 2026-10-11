@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-11T12:07:10.486081+00:00",
+  "pass": true,
+  "scope_ids": [
+    "F-036",
+    "F-102"
+  ],
+  "failed_extension_receipt": "runs/2026-10-11-authenticated-extension-revalidation.json",
+  "failure": "Replay-export fixture supplied an obsolete mocked worker result without the authentication channel marker. The bridge correctly refused it.",
+  "fix": "Keep the real verification boundary; update this explicitly synthetic trusted-worker mock. Actual cryptographic transport remains separately tested against installed Chrome and the Linux gateway.",
+  "revalidation_required": true,
+  "independent_accuracy": false
+}

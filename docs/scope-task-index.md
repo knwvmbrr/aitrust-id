@@ -76,7 +76,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-093 | Forced-colors and high-contrast support | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-094 | 200% zoom and reduced-motion support | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-095 | Monochrome-by-construction design — the movie/TV content-rating look | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-036 | Signature verification before render | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-036 | Signature verification before render | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-096 | Graceful degradation — backend down, invalid token, unsupported page | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-097 | User-invoked labelling — select a response, ask for a check | [WP-CAPTURE](scope-delivery.md#wp-capture) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-040 | Gateway orchestration — redact, evaluate, calibrate, return | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
@@ -85,7 +85,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-099 | Upstream response validation — status and shape checked before parsing | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-100 | Constant-time bearer token comparison | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-101 | Startup refusal of the example token change-me | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-102 | Modality validated against the schema enum; unsupported returns UNK + unsupported_modality | [WP-SERVICE](scope-delivery.md#wp-service) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-102 | Unsupported media: HTTP 422 before evaluation | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-103 | Health checks reporting dependency readiness, not process liveness | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-104 | Defined dependency-failure behaviour | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-044 | Optional registry and retention proposal | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |

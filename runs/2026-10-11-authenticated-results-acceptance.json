@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-10-11T12:03:44.933701+00:00",
+  "pass": true,
+  "executed_by": "Codex",
+  "scope_ids": [
+    "F-036",
+    "F-102"
+  ],
+  "kind": "named_engineering_acceptance",
+  "python_cases": 59,
+  "python_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_transport_signing.py",
+    "tests/test_gateway_integration.py",
+    "tests/test_extension_consumer.py",
+    "tests/test_gateway_cancellation.py"
+  ],
+  "native_webcrypto_consumer_cases": 49,
+  "actual_gateway_http_cases": 32,
+  "actual_pipeline_replay_cases": 13,
+  "actual_remote_linux_gateway_and_chrome_cases": 3,
+  "actual_browser_negative_signature_cases": 6,
+  "actual_settings_rotation_and_reset_races": true,
+  "settings_320px_axe_violations": 0,
+  "records": [
+    "runs/2026-10-11-authenticated-service.json",
+    "runs/2026-10-11-authenticated-replay.json",
+    "runs/2026-10-11-authenticated-browser-gateway.json",
+    "runs/2026-10-11-authenticated-extension-privacy.json",
+    "runs/2026-10-11-unsupported-modality-owner-decision.json"
+  ],
+  "source_sha256": {
+    "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64",
+    "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146",
+    "extension/src/content/bridge.js": "821ca77c4d480dfd7ecf133710316b5633215de0f4f4fb06a76c49691dddbdba",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "scripts/gateway-key.cjs": "48c67d951f6a8756352a4163deee5dff54c495704821c3bf4bf47895e72dc005",
+    "scripts/verify-extension-consumer.cjs": "b489f11ec575b7132da87b1175169cde5196bc5cac74b2e9b5f2707de7088ba6",
+    "scripts/verify-extension-privacy.cjs": "af8aaf73f710732fa78297b1c665a85ee71b34131ecc17e94620b405a7d14524",
+    "scripts/verify-signed-gateway.cjs": "47abfdd0a2bb88407d90a56b75b66b0d5215261c208de1a75b0e9e6bbf5d1aac",
+    "tests/test_transport_signing.py": "230f05007da4814ab2eab4893917499e59bf8285ae9d4f3a74febab03a26254b",
+    "tests/test_gateway_integration.py": "2e7b4fbc90782484c7549de7c15a9c7406eb8f2f84224ba88898ea128271aac0",
+    "tests/test_gateway_cancellation.py": "13491da183fd6f2dede378b729691f964024563da085309db5826f294e63ac15",
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "services/gateway/requirements.lock": "230b685d1c222b0bb59562ee046090debc4e75ef55a7c651819f5ae066042b59",
+    "eval/revalidation.json": "0e8dda637bf80b8b1b973e61906f29d43dfdcbca31ebf453fd1a2946fd12adf6"
+  },
+  "known_failures_fixed": [
+    {
+      "failure": "Podman Compose recreation did not apply declared PID limits",
+      "fix": "Applied 128 per-container limit to each owned staging service and observed all three values before unchanged runtime verifier passed. Compose setup remains an outside-user gate; no universal engine compatibility claimed."
+    },
+    {
+      "failure": "Staging source mirror lagged unchanged evaluator/anonymizer image bytes",
+      "fix": "Updated mirror from current checkout; actual image-to-file byte comparison passed."
+    },
+    {
+      "failure": "Staging verification environment lacked gateway httpx dependency",
+      "fix": "Installed existing exact hash-locked gateway requirements before replay."
+    },
+    {
+      "failure": "A delayed public-key import could undo Reset",
+      "fix": "Import generation invalidated at Reset; actual delayed file-read browser test proves storage remains empty."
+    }
+  ],
+  "independent_tag_accuracy": false,
+  "real_vendor_coverage": false,
+  "physical_device_acceptance": false,
+  "publication_pending": true,
+  "all_202_records_retained": true
+}

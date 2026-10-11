@@ -2893,8 +2893,8 @@
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "disposition": "retained",
       "title": "Modality validated against the schema enum; unsupported returns UNK + unsupported_modality",
-      "baseline_job": "Specify and deliver modality validated against the schema enum; unsupported returns UNK + unsupported_modality.",
-      "outcome": "Local tag processing exposes success and dependency failures explicitly.",
+      "baseline_job": "Validate modality against the reserved schema vocabulary; evaluate text only and reject unsupported media with HTTP 422 before detector execution. Present Unsupported at the UI contract boundary without manufacturing an UNK assertion.",
+      "outcome": "The caller distinguishes unsupported input from evaluated uncertainty; no unsupported media enters the detector.",
       "source": "Supplied scope baseline, section 7",
       "reviewer": "Claude",
       "dependencies": [
@@ -2914,6 +2914,13 @@
         ],
         "plan": "docs/scope-delivery.md",
         "planning_status": "mapped; not evidence of implementation"
+      },
+      "historical_baseline_job": "Specify and deliver modality validated against the schema enum; unsupported returns UNK + unsupported_modality.",
+      "compatibility_decision": {
+        "recorded_at": "2026-10-11T12:01:32.793635+00:00",
+        "accepted_by": "Michael",
+        "evidence": "runs/2026-10-11-unsupported-modality-owner-decision.json",
+        "scope": "F-102 unsupported media only; no UNK replacement or UC/SC/BT adoption"
       }
     },
     {
