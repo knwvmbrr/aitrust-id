@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T00:25:56.357728+00:00",
+  "updated": "2026-10-11T00:30:06.766091+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://1dfe2ddb.aitrust-id.pages.dev",
+    "deployment_url": "https://4fa36575.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-10-spdx-target25-publication.json",
+    "publication_evidence": "runs/2026-10-11-group-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 35,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-10-spdx-target25-live-site.json",
+    "verification": "runs/2026-10-11-group-live-site.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -115,7 +115,7 @@
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.5",
+      "version": "1.7",
       "effective_date": "2026-10-10",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
@@ -123,7 +123,7 @@
       "text_downloads": true,
       "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-10-owner-pilot-policies-public.json",
+      "verification": "runs/2026-10-11-group-live-policies.json",
       "policy_pages_verified": 9,
       "no_script_verified": true,
       "matching_text_downloads_verified": true,
@@ -137,7 +137,9 @@
         "1.1",
         "1.2",
         "1.3",
-        "1.4"
+        "1.4",
+        "1.5",
+        "1.6"
       ]
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
@@ -1012,7 +1014,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T00:25:56.357728+00:00",
+  "updated_at": "2026-10-11T00:30:06.766091+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",

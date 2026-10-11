@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-003006-publication-pointer-reconciliation-d13eaaf7",
+  "recorded_at": "2026-10-11T00:30:06.842003+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0a824819a0e398aee6cb1f799b8f3039b510fba8",
+  "changed": "Reconcile all current website deployment and policy pointers after protected review found a mixed old/new evidence set.",
+  "proves": "Current website and runtime publication identify the same deployed source, preview and actual checks; policy version 1.7 and all prior archives are reflected.",
+  "limits": "Metadata correction only; historical nested records remain historical. No independent accuracy or legal acceptance.",
+  "scope_ids": [
+    "F-151",
+    "F-124",
+    "F-130"
+  ],
+  "files": {
+    "state.json": "ad3e242dd22e1258d342cdf97c2916e5a9e9d43bee18122d2bb214e46e387d88"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-group-publication.json",
+      "sha256": "3963535763e529e2258f9a0a1380f8403f0c42063ed773d7e269afe94b07b5a2"
+    },
+    {
+      "path": "runs/2026-10-11-group-live-site.json",
+      "sha256": "1ad2b257547c6b4f40cb77a5d2f5a9c8c9dd9f546058e037ac1aafe7d9a90e79"
+    },
+    {
+      "path": "runs/2026-10-11-group-live-policies.json",
+      "sha256": "ac577c2fe9e1f54fd728add99c562bf394d8c190d54d92954818e8e5ccbf3df8"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T00:30:06.936782+00:00"
+    }
+  ]
+}
