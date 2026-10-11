@@ -54,5 +54,7 @@ independent tag validation. An upstream notice is preserved verbatim; this
 project's Apache license does not replace it.
 
 [Notice store and exact inventory](../sbom/notices/manifest.json) ·
-[Current identity check](../runs/2026-10-11-license-notices-timestamped.json) ·
-[Actual archive extraction check](../runs/2026-10-11-license-archives-timestamped.json)
+[Current identity check](../runs/2026-10-11-license-notices-checkout-bytes.json) ·
+[Actual archive extraction check](../runs/2026-10-11-license-archives-checkout-bytes.json)
+
+Checkout preserves original bytes for source, locks and notices, even with Git line-ending conversion enabled. Fifty focused controls include actual synthetic clones with core.autocrlf=true and input. All 224 committed notice blobs were checked against their retained content digests. Only upstream notice formatting is exempt from whitespace cleanup.

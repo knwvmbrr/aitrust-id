@@ -64,7 +64,7 @@ PATTERNS += ('tools/manifest_inspection.py', 'scripts/inspect-manifest.py',
              'tests/test_manifest_workflow.py',
              'eval/c2pa-inspection.lock', 'eval/dependencies/c2pa-inspection.json',
              'tests/fixtures/c2pa-inspection-2026/*')
-PATTERNS += ('scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
+PATTERNS += ('.gitattributes', 'scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
              'scripts/collect-runtime-notices.py', 'tests/test_license_notices.py',
              'sbom/notices/*')
 # Host font rendering changes this decorative raster, not executable sources.

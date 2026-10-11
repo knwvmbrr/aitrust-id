@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 @pytest.fixture
 def workspace(tmp_path):
     manifest = json.loads((ROOT / n.MANIFEST).read_text())
-    paths = [n.MANIFEST, 'scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
+    paths = [n.MANIFEST, '.gitattributes', 'scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
              'scripts/collect-runtime-notices.py', 'protocol/evidence.py', 'protocol/corpus.py',
              *manifest['sources'], *['sbom/notices/'+h+'.txt' for h in manifest['notices']]]
     for relative in paths:
@@ -163,3 +163,29 @@ def test_cli_distinguishes_integrity_from_clearance(strict,code):
     output=json.loads(run.stdout)
     assert output['evidence_integrity_pass'] is True
     assert output['license_release_pass'] is False
+
+
+def test_notice_store_disables_line_ending_conversion():
+    attributes=(ROOT/'.gitattributes').read_text().splitlines()
+    assert 'sbom/notices/*.txt -text -whitespace' in attributes
+
+
+@pytest.mark.parametrize('conversion', ['true','input'])
+def test_git_checkout_preserves_all_evidence_bytes(tmp_path,conversion):
+    import subprocess
+    source=tmp_path/'source';source.mkdir()
+    data={'.gitattributes':(ROOT/'.gitattributes').read_bytes(),
+          'source.py':b'# Fixture source\n', 'package-lock.json':b'{}\n',
+          'runtime.wasm':b'\x00asm\x01\x00\x00\x00',
+          'sbom/notices/sample.txt':b'Original upstream notice\r\n'}
+    for name,raw in data.items():
+        target=source/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+    def git(*args):
+        result=subprocess.run(['git','-c','commit.gpgsign=false','-c','core.hooksPath=/dev/null',
+                               '-c','user.name=Fixture','-c','user.email=fixture@example.invalid',*args],
+                              cwd=source,capture_output=True,timeout=20)
+        assert result.returncode==0,result.stderr.decode()
+    git('init','--quiet');git('add','--',*data);git('commit','--quiet','-m','Synthetic byte preservation fixture')
+    target=tmp_path/'clone'
+    git('-c','core.autocrlf='+conversion,'clone','--quiet','--no-local','--no-hardlinks',str(source),str(target))
+    assert all((target/name).read_bytes()==raw for name,raw in data.items())

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-153757-preserve-checkout-bytes-a3de3534",
+  "recorded_at": "2026-10-11T15:37:57.703990+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9139eb575384e317a912add8b50bb93a52f0c42d",
+  "changed": "Prevented automatic Git line-ending conversion of fingerprinted source and preserved upstream notice whitespace; added actual synthetic checkout tests for autocrlf true and input.",
+  "proves": "All 224 original committed notice blobs match retained digests. Fifty notice controls and the complete 1539-test Python suite pass; current archive extraction and route checks pass without weakening license-clearance refusal.",
+  "limits": "Native OS, browser and human/device acceptance remains separate. A matching notice or source hash is not legal permission, malware clearance or an independent tag release.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-142"
+  ],
+  "files": {
+    ".gitattributes": "8f69fdb101cf018af8e37f66cf305518dbbe95ee7356e6a05ff7e601ac7678c9",
+    "README.md": "1f714573c2ee9117e42b0f1ba5d68af88fc7deb7e0a30e9f616f7cfad1a519ab",
+    "docs/dependency-notices.md": "3dcc6460b5d86c07b5545203e7ae9339287822dfbbc6e2d627e6c20fa8c69461",
+    "docs/license-evidence-plan.md": "06021c2558e47cb169041e887b8dc6f1e7e6b50869463943385e217eb3d1ee60",
+    "eval/route-boundaries.json": "56a6f79f87dfadf459e89ab13f3f25721dd37640f363e46a374c9e794190a43d",
+    "runs/2026-10-11-license-archives-byte-preservation.json": "f0a0d9ddb954b0afbbda674fa51765593d11dbeaa8cb867dbd1891d7181b41e6",
+    "runs/2026-10-11-license-archives-checkout-bytes.json": "6f763429ca8f571c3605dd3660b165c9176438af3338939f614acaa138db0081",
+    "runs/2026-10-11-license-notices-byte-preservation.json": "cdee62507e5c546a640ae56359c5d6b7d5b6756b3c08521048357a2e2f35ba7e",
+    "runs/2026-10-11-license-notices-checkout-bytes.json": "7212c867bcfe729ca4da3cf1abeaa08b41c02d8d3b94ade77381fc64b305fd81",
+    "runs/2026-10-11-notices-byte-preservation-boundaries.json": "1dba733ee33e7f0ff0aed80c2a67ec5d391d236cc957eea7cd7daf392e4c13ef",
+    "runs/2026-10-11-notices-byte-preservation-full-python.json": "a1d1f85776c0c818bad7d90678ffbb95293356a9e15523eea3392e786a279edc",
+    "runs/2026-10-11-notices-checkout-boundaries.json": "cf9db2297f9fb12aa6ac0fb217c2ead59644df28691c8b789fb8eed79a1b2e24",
+    "runs/2026-10-11-notices-checkout-python.json": "81adc3c9456f13501425f07733f8753262433b6a00ee9928ee5f857b2377bcc2",
+    "scripts/license_notices.py": "a1ff720900ff9e0d5dbd479087390c67fe1dac04839f75676e626acf59427ffa",
+    "scripts/verify-route-boundaries.py": "84542d438de21cb74ab7c54bdf3ec2712ffb171c1e423976bd755b5fbc707513",
+    "state.json": "a56c7089442ff36f0d5cf88dd0dd8c21580aa0fd1d1e85d1b1eb5b54d29b0459",
+    "tests/test_license_notices.py": "23ff8e358446e1ce71b28dc4d0de006c496ebe8e7468eb976c9327760c53d3da"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-license-notices-checkout-bytes.json",
+      "sha256": "7212c867bcfe729ca4da3cf1abeaa08b41c02d8d3b94ade77381fc64b305fd81"
+    },
+    {
+      "path": "runs/2026-10-11-license-archives-checkout-bytes.json",
+      "sha256": "6f763429ca8f571c3605dd3660b165c9176438af3338939f614acaa138db0081"
+    },
+    {
+      "path": "runs/2026-10-11-notices-checkout-python.json",
+      "sha256": "81adc3c9456f13501425f07733f8753262433b6a00ee9928ee5f857b2377bcc2"
+    },
+    {
+      "path": "runs/2026-10-11-notices-checkout-boundaries.json",
+      "sha256": "cf9db2297f9fb12aa6ac0fb217c2ead59644df28691c8b789fb8eed79a1b2e24"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T15:37:58.033104+00:00"
+    }
+  ]
+}

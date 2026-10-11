@@ -95,7 +95,7 @@ def archive_notices(archive, row):
 
 def verify(root=ROOT, archive_dir=None):
     root = Path(root).absolute()
-    proof_files = [MANIFEST, 'scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
+    proof_files = [MANIFEST, '.gitattributes', 'scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
                    'scripts/collect-runtime-notices.py', 'protocol/evidence.py', 'protocol/corpus.py']
     before = {name: hashlib.sha256(file_bytes(root, name)).hexdigest() for name in proof_files}
     value = read_evidence(root / MANIFEST)

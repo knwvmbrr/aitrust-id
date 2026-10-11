@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-153757-preserve-checkout-bytes-a3de3534
+
+Recorded 2026-10-11T15:37:57.703990+00:00 · Contributor: Codex · change
+
+- **Changed.** Prevented automatic Git line-ending conversion of fingerprinted source and preserved upstream notice whitespace; added actual synthetic checkout tests for autocrlf true and input.
+- **Evidence.** All 224 original committed notice blobs match retained digests. Fifty notice controls and the complete 1539-test Python suite pass; current archive extraction and route checks pass without weakening license-clearance refusal. [Change record](./runs/changes/2026-10-11-153757-preserve-checkout-bytes-a3de3534.json).
+- **Not claimed.** Native OS, browser and human/device acceptance remains separate. A matching notice or source hash is not legal permission, malware clearance or an independent tag release.
+
+
 ### 2026-10-11-152656-notice-current-verification-6b382bef
 
 Recorded 2026-10-11T15:26:56.182695+00:00 · Contributor: Codex · change
