@@ -79,6 +79,10 @@ jobs:
       - run: python -m pytest tests/test_gateway_integration.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
+      - name: Check preserved component notice identity without claiming legal clearance
+        run: python scripts/verify-redistribution-notices.py
+      - name: Refuse corrupted notice evidence and permission promotion
+        run: python -m pytest tests/test_license_notices.py -q
       - name: Validate bound inventories with the pinned official SPDX schema
         run: python scripts/verify-runtime-sbom-standard.py
       - name: Refuse corrupted SPDX inventories and altered schema trust inputs

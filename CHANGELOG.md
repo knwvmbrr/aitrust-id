@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-152656-notice-current-verification-6b382bef
+
+Recorded 2026-10-11T15:26:56.182695+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the complete notice-source Python execution, current built website and policy checks, current five-capability assessment, and reviewed the expanded route inventory.
+- **Evidence.** 1504 Python tests and 32 route tests pass; all five capability receipts assess current. Website, on-device/offline checks and all policy pages pass with version 1.10. The retained scope has 114 complete and 88 open records. [Change record](./runs/changes/2026-10-11-152656-notice-current-verification-6b382bef.json).
+- **Not claimed.** New source and website publication are pending. Notice collection does not satisfy full license clearance, and independent tag or physical/human acceptance stays open.
+
+
+### 2026-10-11-152330-preserved-component-notices-6ebdcc57
+
+Recorded 2026-10-11T15:23:30.219827+00:00 · Contributor: Codex · change
+
+- **Changed.** Closed the protected attached-PNG parser job after hosted and anonymous-source acceptance. Preserved 224 original component notices with image/lock bindings, added offline integrity and archive-extraction checks, and published dated dependency-transparency policy text in source.
+- **Evidence.** All 202 records remain; 114 complete and 88 open. Twenty-two required engineering and two actual SDK checks passed for PR 30. Notice checks reproduce 205 npm artifacts and preserve 449 runtime plus 149 npm notice occurrences; 47 focused corruption and permission-boundary tests pass. [Change record](./runs/changes/2026-10-11-152330-preserved-component-notices-6ebdcc57.json).
+- **Not claimed.** FA/PA tag validation, broader media and fresh revocation checks remain open. Notice identity does not clear licenses or source obligations; F057 and X02 remain at 20. New website and license CI execution/publication are pending.
+
+
 ### 2026-10-11-151059-native-workflow-dependencies-3e913c52
 
 Recorded 2026-10-11T15:10:59.517333+00:00 · Contributor: Codex · change

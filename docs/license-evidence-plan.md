@@ -1,0 +1,9 @@
+# Dependency notices: execution plan
+
+Extend the existing X-02/F-057 architecture without altering inference, host permissions or license promises. Preserve original notices from actual staging-image installed files and integrity-checked npm archives for both complete locks, including uninstalled platform alternatives. Keep source byte bindings and the dependency identities together. Separate a collected notice from a reviewed redistribution obligation.
+
+A content-addressed notice store avoids repeating license texts. The inventory records role/image or lock/package/artifact identity, original member path, license metadata and notice digest. The offline verifier requires exact image and lock bindings, a bounded strict schema, unique package/member identities and reproducible notice digests; it rejects unsafe paths, links, stale sources, tampered text and unknown packages. It does not turn package metadata into permission or mark a notice absent when a file was merely overlooked.
+
+Default verification checks evidence identity. A stricter reviewed-license mode refuses unresolved/vendored/source-offer entries. Source offers, native transitive components, fonts/model/runtime/data/browser tools, wheel provenance and architecture coverage remain explicit coverage items. No package is installed or executed to collect its metadata.
+
+Risks: installed scanners can miss bundled binaries and upstream obligations; GPL/LGPL/MPL notices and source obligations require explicit review. A public software notice is not qualified counsel's advice or a vulnerability clearance. Keep package license text intact; do not copy secrets, general configuration, host logs or application data. Synthetic corruption cases must demonstrate that the evidence checker refuses drift rather than accepting a renamed file.

@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-10-11T15:23:30.138285+00:00",
+  "author": "Codex",
+  "pass": false,
+  "observed_failures": [
+    {
+      "failure": "Default 2 MB limit refused the existing 2.3\u20132.8 MB SPDX documents",
+      "fix": "Kept notice limits at 2 MB; explicitly bounded only the known dependency input files to 8 MB."
+    },
+    {
+      "failure": "The verified DefinitelyTyped Emscripten archive uses emscripten/ rather than package/",
+      "fix": "Added that exact locked package root exception; traversal and unknown roots remain refused."
+    }
+  ],
+  "design_corrections": [
+    "Tar parsing uses previously hash-verified in-memory bytes, avoiding a second path read.",
+    "Collection timestamps precede snapshot time; naive and future observations are rejected.",
+    "Removed an invented qualified-legal-review completion requirement from the technical coverage list; no legal permission is claimed."
+  ],
+  "accepted_evidence": [
+    "runs/2026-10-11-license-notices-timestamped.json",
+    "runs/2026-10-11-license-archives-timestamped.json"
+  ],
+  "license_cleared": false
+}

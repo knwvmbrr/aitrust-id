@@ -2843,14 +2843,15 @@
         "id": "F-025",
         "kind": "requirement",
         "title": "sig.c2pa_manifest.v1 — parses an attached C2PA manifest",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-11T14:54:24.183289+00:00",
+        "audited_at": "2026-10-11T15:19:36.016108+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — optional real C2PA file adapter, pin/privacy/limits and actual Mac/nonroot isolated Linux execution"
@@ -2858,11 +2859,13 @@
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete the hosted optional parser job and published-source acceptance for the bounded attached-PNG inspection. JPEG and FA/PA tag interpretation, independent provenance release and revocation freshness remain their separately tracked gates.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-11T15:19:36.016108+00:00",
+        "completion_timestamp_basis": "Current full declared attached-PNG parser job verified on protected reviewed source, actual Mac/Linux SDK execution, both hosted jobs and anonymous merged-source execution. No image tag release.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "docs/manifest-inspection-plan.md",
           "docs/manifest-inspection.md",
@@ -2870,13 +2873,15 @@
           "scripts/inspect-manifest.py",
           "tests/test_manifest_inspection.py",
           "runs/2026-10-11-manifest-inspection-mac-final.json",
-          "runs/2026-10-11-manifest-inspection-linux-final.json"
+          "runs/2026-10-11-manifest-inspection-linux-final.json",
+          ".github/workflows/manifest-inspection.yml",
+          "tests/test_manifest_workflow.py",
+          "runs/2026-10-11-manifest-protected-acceptance.json",
+          "runs/2026-10-11-manifest-merged-source-acceptance.json"
         ],
-        "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release.",
-        "required_acceptance": [
-          "Hosted pinned optional SDK job and published-source acceptance must pass on the same reviewed source."
-        ],
-        "queue": "open"
+        "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release. The hosted job passes 13 real cases on both push and PR for be14b359; the protected merge d26acfc passes the same 13 cases from an anonymously downloaded source archive. Full embedded assertions can be explicitly exported privately. Broader formats, signer interpretation and FA/PA remain retained under the modality/tag jobs.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -6525,11 +6530,12 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-10T23:23:03.026992+00:00",
+        "audited_at": "2026-10-11T15:22:45.042358+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — bounded image inventory and offline verification; full license/signing mechanism incomplete",
-          "Codex — actual protected-main Sigstore source signing, independent-root Mac/offline-Linux verification and anonymous public download"
+          "Codex — actual protected-main Sigstore source signing, independent-root Mac/offline-Linux verification and anonymous public download",
+          "Codex — collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6537,7 +6543,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete reviewed unknown/vendored notices, all client/build/model/OS/architecture inventory and licenses, scanner identity and runtime release binding. Source-bound development signing and anonymous authenticated download are now exercised; they do not clear the complete SBOM/licensing job.",
+        "next_fix": "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised.",
         "next_owner": "Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -6557,11 +6563,19 @@
           "runs/2026-10-10-spdx-validation-controls.json",
           "docs/source-provenance.md",
           "runs/2026-10-10-authenticated-source-download.json",
-          "runs/2026-10-10-source-download-hosted-checks.json"
+          "runs/2026-10-10-source-download-hosted-checks.json",
+          "docs/license-evidence-plan.md",
+          "docs/dependency-notices.md",
+          "scripts/license_notices.py",
+          "scripts/verify-redistribution-notices.py",
+          "tests/test_license_notices.py",
+          "sbom/notices/manifest.json",
+          "runs/2026-10-11-license-notices-timestamped.json",
+          "runs/2026-10-11-license-archives-timestamped.json"
         ],
-        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted.",
+        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations.",
         "required_acceptance": [
-          "Complete reviewed unknown/vendored notices, all client/build/model/OS/architecture inventory and licenses, scanner identity and runtime release binding. Source-bound development signing and anonymous authenticated download are now exercised; they do not clear the complete SBOM/licensing job."
+          "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
         ],
         "queue": "open"
       }
@@ -10227,10 +10241,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-10T21:29:13.613459+00:00",
+        "audited_at": "2026-10-11T15:22:45.042358+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — bounded image inventory and offline verification; full license/signing mechanism incomplete"
+          "Codex — bounded image inventory and offline verification; full license/signing mechanism incomplete",
+          "Codex — collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -10238,7 +10253,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Review missing license declarations, vendored/OS/model/client/runtime/font/data and build dependencies; publish reviewed notices and a source-bound conflict rejection policy for every selected personal route.",
+        "next_fix": "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised.",
         "next_owner": "Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -10255,11 +10270,19 @@
           "scripts/verify-runtime-sbom-standard.py",
           "tests/test_spdx_inventory.py",
           "runs/2026-10-10-spdx-standard-inventory.json",
-          "runs/2026-10-10-spdx-validation-controls.json"
+          "runs/2026-10-10-spdx-validation-controls.json",
+          "docs/license-evidence-plan.md",
+          "docs/dependency-notices.md",
+          "scripts/license_notices.py",
+          "scripts/verify-redistribution-notices.py",
+          "tests/test_license_notices.py",
+          "sbom/notices/manifest.json",
+          "runs/2026-10-11-license-notices-timestamped.json",
+          "runs/2026-10-11-license-archives-timestamped.json"
         ],
-        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted.",
+        "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations.",
         "required_acceptance": [
-          "Review missing license declarations, vendored/OS/model/client/runtime/font/data and build dependencies; publish reviewed notices and a source-bound conflict rejection policy for every selected personal route."
+          "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
         ],
         "queue": "open"
       }

@@ -1,5 +1,5 @@
-export const policyVersion='1.9';
-export const policyDate='2026-10-10';
+export const policyVersion='1.10';
+export const policyDate='2026-10-11';
 export const publisher='Published by AI Trust ID.';
 export const releasePolicy='Every tag must pass its own published validation gate before release.';
 const repo='https://github.com/knwvmbrr/aitrust-id';
@@ -52,6 +52,7 @@ export const policies=[
   {heading:'Independent and accessible review',paragraphs:['Reviewers label without seeing the detector’s predictions and record uncertainty and disagreement. Review files return privately to their coordinator. Automated accessibility checks complement human screen-reader and real-device checks; they do not substitute for them.'],links:[['Blind reviewer start',repo+'/blob/main/docs/PS-reviewer-start.md'],['Accessibility policy','/reference/accessibility-policy.md']]}
  ]},
  {slug:'licenses',title:'Licenses and notices',summary:'Actual texts governing source, specification, runtime and typeface.',sections:[
+  {heading:'Dependency transparency',paragraphs:['The public repository preserves upstream notice texts and the package or image versions inspected. The collection covers two complete npm locks, including platform alternatives, and three Linux staging images. Finding a notice does not finish a license review: bundled code, source obligations and other assets remain recorded gaps. You can inspect and check this evidence without submitting data.'],links:[['Preserved component notices',repo+'/tree/main/sbom/notices'],['Run the offline checks',repo+'/blob/main/docs/dependency-notices.md']]},
   {heading:'Code and specification',paragraphs:['Apache-2.0 governs project code, including commercial use subject to its conditions. CC BY 4.0 governs the specification and requires appropriate attribution when sharing/adapting it. The licenses have their own warranty and rights limitations; a public repository is not a blanket license to every third-party asset or trademark.'],links:[['Full code license','/reference/code-license.txt'],['Specification license notice','/reference/spec-license.txt'],['CC BY 4.0 legal text','https://creativecommons.org/licenses/by/4.0/legalcode.en']]},
   {heading:'Browser runtime and font',paragraphs:['The device runtime and self-hosted typeface retain their upstream notices. Component licensing is separate from tag validation and from a future certification mark.'],links:[['Pyodide MPL-2.0','/device-licenses/pyodide-MPL-2.0.txt'],['Python notices','/device-licenses/python-license.txt'],['Runtime provenance','/device-licenses/source.txt'],['Nunito Sans SIL OFL','/fonts/OFL.txt']]}
  ]},
