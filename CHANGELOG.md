@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-025347-immutable-statement-current-acceptance-f09e595c
+
+Recorded 2026-10-11T02:53:47.377793+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved self-declaration limitations snapshots after caller mutation and re-executed current source acceptance.
+- **Evidence.** All 1225 Python tests, 44 Mac and isolated Linux controls, stable current website checks and temporary staging cleanup passed. [Change record](./runs/changes/2026-10-11-025347-immutable-statement-current-acceptance-f09e595c.json).
+- **Not claimed.** Independent tag accuracy, human accessibility, physical phones and certification remain unaccepted; deployment pending.
+
+
+### 2026-10-11-024926-snapshot-acceptance-public-links-7aa5d535
+
+Recorded 2026-10-11T02:49:26.111848+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate public scope from the repaired F-144 evidence without changing any acceptance baseline or completion count.
+- **Evidence.** Both public scope files point to the accepted repaired statement snapshot. [Change record](./runs/changes/2026-10-11-024926-snapshot-acceptance-public-links-7aa5d535.json).
+- **Not claimed.** An evidence refresh is not another feature completion or a tag release.
+
+
+### 2026-10-11-024920-immutable-declaration-limitations-228f1a85
+
+Recorded 2026-10-11T02:49:20.892188+00:00 · Contributor: Codex · change
+
+- **Changed.** Copy limitations into the issued statement so later caller edits cannot rewrite its snapshot; reaccept F-144 against the repaired source.
+- **Evidence.** 44 actual Mac/Linux controls include retained-input mutation and subsequent comparison refusal; counts remain 111 complete and 91 open. [Change record](./runs/changes/2026-10-11-024920-immutable-declaration-limitations-228f1a85.json).
+- **Not claimed.** Self-declarations still do not authenticate publisher/time, prove test truth or grant certification; the previous full-suite packet predates this repair.
+
+
 ### 2026-10-11-024218-consent-full-regression-packet-de967b7f
 
 Recorded 2026-10-11T02:42:18.418047+00:00 · Contributor: Codex · change

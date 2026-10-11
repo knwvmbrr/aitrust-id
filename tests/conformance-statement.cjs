@@ -16,3 +16,5 @@ test('invalid and normalized-impossible date refused',()=>fixture((dir,input)=>{
 test('local date and publisher do not become authenticated',()=>fixture((dir,input)=>{const result=s.declaration(input,dir,'2026-01-01T00:00:00.000Z');const check=s.verify(input,dir,result);assert.equal(check.publisher_and_time_authenticated,false);assert.equal(check.source_revision_verified,false);}));
 
 test('a hash-shaped array cannot stand in for a revision string',()=>fixture((dir,input)=>{input.source_revision=['a'.repeat(40)];assert.throws(()=>s.declaration(input,dir));}));
+
+test('later edits to caller limitations cannot rewrite the issued snapshot',()=>fixture((dir,input)=>{const result=s.declaration(input,dir);const original=[...result.limitations];input.limitations[0]='Changed after declaration';input.limitations.push('Another later change');assert.deepEqual(result.limitations,original);assert.throws(()=>s.verify(input,dir,result));}));

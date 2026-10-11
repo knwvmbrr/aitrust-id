@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T02:40:53.604803+00:00",
-  "reviewed_by": "Codex \u2014 optional author-choice, typed evidence declarations, local corpus support and current/next image-issuance review; no independent release approval",
+  "reviewed_at": "2026-10-11T02:52:52.512379+00:00",
+  "reviewed_by": "Codex \u2014 immutable declaration snapshot repair and executed current website review; no independent accuracy approval",
   "rules": [
     "X-01",
     "X-03",
@@ -43,7 +43,7 @@
     "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
     "protocol/author-choice.cjs": "fca928eba07e0a1335d62c7d5db83c853c8a8694fbcd30985d2c50f777349c8a",
     "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
-    "protocol/conformance-statement.cjs": "ed0038c562824c27f3833cf31f369e606030ac86935d3fe8457c5bdb39f63def",
+    "protocol/conformance-statement.cjs": "ef65e76adc8873dd506f4c344507bd1b3800ba032aadf0cacd7c25342555f189",
     "protocol/corpus.py": "d0c40151187a40113d07de53a521697b087237ce5202009f57cf10622ae7c8ab",
     "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
     "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
@@ -159,7 +159,7 @@
     "site/src/policies.js": "810cea2290782c13e5d8455df2835111b00ef1a3a7d2139b0392264e0f8c8c89",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "031bacbcb56c7d96277fd7478e620f8b85cfda20f8fd5c5ac421357d487763c3",
+    "site/src/public-scope.json": "29a449fabd63aef8b8082a1ccd235d35df4c54d07fbe39dcfa9aa4108dc205d8",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
@@ -181,7 +181,7 @@
     "spec/vendor/spdx-2.3.1/schema.json": "4126dc29f15e92feec92e9622f4939131ad58b125d6f578aa93e980a6e6f3212",
     "spec/vendor/spdx-2.3.1/source.json": "84a41ebe6c9976e78d25f5aa99a535612f32d294e43311673757c9ac63717da1",
     "tests/author-choice.cjs": "84ddd8a548ffaa202d8e4aca2e8a028f48bc84829c50221c41009f2100bcdabd",
-    "tests/conformance-statement.cjs": "7a7d2f7353fcf26ceecb60b9ee88a06e9f431dd0dfc6db49af7d9d8c1b677cdd",
+    "tests/conformance-statement.cjs": "b844ba9b1a9f2ae2e4e5e6315ac192cce4ec845bc0e09d17564ae13b90f2fd91",
     "tests/fixtures/group-receipt-2026/artifact.txt": "da2307f2d29ba23d574ffb5f1313430e46b1837423b3dad0f582a031fb3bf929",
     "tests/fixtures/group-receipt-2026/group.json": "31ccb1c897a5456061e8af0ea2f51e2584e766cf024a0ede9bf8c44c1c989b96",
     "tests/fixtures/group-receipt-2026/manifest.json": "25edc7127e6b4a2cc5646f6049d2117c4310708a271f57a8b41a486135a5db9d",
@@ -221,7 +221,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-11-consent-extension-accepted.json",
-    "website": "runs/2026-10-11-consent-website-accepted.json"
+    "website": "runs/2026-10-11-consent-snapshot-website-accepted.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",

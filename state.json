@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T02:42:18.382767+00:00",
+  "updated": "2026-10-11T02:53:47.345918+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1027,7 +1027,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T02:42:18.382767+00:00",
+  "updated_at": "2026-10-11T02:53:47.345918+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1296,9 +1296,11 @@
     "independent_tag_accuracy": false,
     "certification_operating": false,
     "public_deployment_pending": true,
-    "evidence": "runs/2026-10-11-consent-typed-controls.json",
-    "current_website_evidence": "runs/2026-10-11-consent-website-accepted.json",
+    "evidence": "runs/2026-10-11-consent-snapshot-controls.json",
+    "current_website_evidence": "runs/2026-10-11-consent-snapshot-website-accepted.json",
     "current_extension_evidence": "runs/2026-10-11-consent-extension-accepted.json",
-    "acceptance_packet": "runs/2026-10-11-consent-acceptance-packet.json"
+    "acceptance_packet": "runs/2026-10-11-consent-snapshot-acceptance.json",
+    "platform_evidence": "runs/2026-10-11-consent-snapshot-platforms.json",
+    "linux_cleanup": "runs/2026-10-11-consent-snapshot-cleanup.json"
   }
 }

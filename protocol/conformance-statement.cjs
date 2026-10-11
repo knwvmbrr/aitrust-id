@@ -25,7 +25,7 @@ function declaration(input,base,issuedAt=new Date().toISOString()){
   return {name:c.name,result:c.result,evidence_sha256:crypto.createHash('sha256').update(raw).digest('hex'),evidence_bytes:raw.length};
  });
  if(typeof issuedAt!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(issuedAt)||!Number.isFinite(Date.parse(issuedAt))||new Date(issuedAt).toISOString()!==issuedAt)throw Error('Invalid declaration date');
- return {version:VERSION,issued_at:issuedAt,clock:'publisher_local_clock_unverified',publisher:input.publisher,implementation:input.implementation,source_revision:input.source_revision,profile:input.profile,claim:'self_declared_engineering_checks',checks,limitations:input.limitations,all_declared_checks_pass:checks.every(c=>c.result==='pass'),independent_accuracy_validated:false,certification:false,mark_authorization:false,signature_verified:false,evidence_contents_included:false};
+ return {version:VERSION,issued_at:issuedAt,clock:'publisher_local_clock_unverified',publisher:input.publisher,implementation:input.implementation,source_revision:input.source_revision,profile:input.profile,claim:'self_declared_engineering_checks',checks,limitations:[...input.limitations],all_declared_checks_pass:checks.every(c=>c.result==='pass'),independent_accuracy_validated:false,certification:false,mark_authorization:false,signature_verified:false,evidence_contents_included:false};
 }
 function load(file){return parse(read(file));}
 function verify(input,base,statement){

@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-10-11T02:53:47.344403+00:00",
+  "pass": true,
+  "scope_before": {
+    "complete": 107,
+    "open": 95
+  },
+  "scope_after": {
+    "complete": 111,
+    "open": 91,
+    "preserved": 202
+  },
+  "completed_scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a"
+  ],
+  "full_python_test_count": 1225,
+  "full_python_suite_exit_status": 0,
+  "full_test_stdout_sha256": "e8aadcb41013c0cec98146981a267b5c62e56af4c000c81655d555e7861dea54",
+  "actual_mac_node_controls": 44,
+  "actual_linux_network_isolated_node_controls": 44,
+  "current_source_bound_website": "runs/2026-10-11-consent-snapshot-website-accepted.json",
+  "current_source_bound_extension": "runs/2026-10-11-consent-extension-accepted.json",
+  "review_thread": "PRRT_kwDOVBYh3s6rJuqb",
+  "review_fix": "Returned declaration owns a copy of limitations; retained caller input mutation cannot change it. Actual mutation regression passes.",
+  "actual_linux_corpus_cases": 7,
+  "no_local_docker_started": true,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_review": false,
+  "physical_phone_tested": false,
+  "certification_operating": false,
+  "new_tag_release": false,
+  "publication_pending": true
+}
