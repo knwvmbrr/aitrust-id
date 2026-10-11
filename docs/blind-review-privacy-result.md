@@ -8,6 +8,6 @@ In actual Chromium and WebKit phone viewports, four theme/engine flows froze rea
 
 N-015 advances from 60% to 80% for demonstrated selected integration. F-108 remains 60%; real independently sampled and labeled holdout material is not supplied by this tool. The complete ledger remains 114 complete and 88 open of 202. The target of 50 is not achieved, and no requirement was dropped or renamed to reduce it.
 
-Source-bound capability checks, committed device source binding, full-suite acceptance and protected publication follow this implementation record. No claim of those pending steps is made here.
+All five source-bound capability checks pass. The device receipt is bound to 11 files recoverable from the implementation commit, and the current route inventory covers 513 files. The full Python suite passes 1,923 tests with one upstream TestClient warning in 50.29 seconds. Protected merge and publication remain pending; these checks grant no independent accuracy or release acceptance.
 
 Command syntax errors now use a fixed private message instead of echoing an argument or path. Actual updated Mac/Linux CLI checks and the browser/CLI round trip were rerun against that corrected source. Earlier source-specific diagnostics remain historical evidence.

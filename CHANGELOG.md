@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-195737-private-review-final-verification-0115964f
+
+Recorded 2026-10-11T19:57:37.486819+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current private review source binding, five capability checks, route inventory and full Python execution.
+- **Evidence.** All five current capability checks pass; 513 selected files match the route inventory; 1923 Python tests pass. The device record is recoverable from its named source commit. [Change record](./runs/changes/2026-10-11-195737-private-review-final-verification-0115964f.json).
+- **Not claimed.** 88 full requirements remain open. Physical phone checks, independent reviewers and release acceptance remain pending. No participant data collected.
+
+
+### 2026-10-11-195211-private-review-current-capabilities-ea8ed788
+
+Recorded 2026-10-11T19:52:11.152194+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the executed device record to its committed parser, UI, verifier and method sources and rerun four current capability checks.
+- **Evidence.** The two-engine record matches 11 source files recoverable from the named implementation commit; current PS, PII, protocol and extension checks pass without source changes during execution. [Change record](./runs/changes/2026-10-11-195211-private-review-current-capabilities-ea8ed788.json).
+- **Not claimed.** Website revalidation, full suite and protected publication remain pending; 88 requirements remain open and no independent labels or release approval are granted.
+
+
 ### 2026-10-11-195000-private-review-final-source-2cac9926
 
 Recorded 2026-10-11T19:50:00.570366+00:00 · Contributor: Codex · change

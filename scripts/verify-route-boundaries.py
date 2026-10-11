@@ -98,7 +98,7 @@ DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',
                   'site/src/share-record.js', 'protocol/normalization.mjs',
                   'protocol/normalization-core.js', 'protocol/unicode15-data.json',
-                  'services/evaluator/app.py']
+                  'services/evaluator/app.py', 'scripts/verify-device.cjs']
 
 
 def read_json(file):
