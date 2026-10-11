@@ -23,7 +23,7 @@ def cli(text,extra=()):
     ('It costs 1,250.50 dollars.',1),('A rate of 12.5% was stated.',1),
     ('The stated date is 2026-10-11.',1),('The date-shaped token is 2026-99-99.',1),
     ('There are 12, 25, and 37 entries.',3),('The number is 12,34.',0),
-    ('ID123 abc-123 #123 abc123x 123abc é123 表123.',0),
+    ('ID123 abc-123 #123 abc123x 123abc é123 表123 123@example.com @123 123@456.',0),
     ('An IPv4-shaped string is 192.0.2.1.',0),('Version v1.2.3 applies.',0),
     ('Written-out twelve and May tenth are outside this method.',0),
     ('https://example.invalid/2026/page?item=12 [45]',0),

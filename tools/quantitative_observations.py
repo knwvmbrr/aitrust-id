@@ -15,7 +15,7 @@ MAX_DETAILS=256
 MAX_REPORT_BYTES=131072
 # Recognize entire date-shaped or grouped/decimal tokens. Word-attached and
 # identifier fragments are excluded; calendar validity is not inferred.
-TOKEN=re.compile(r'(?<![\w#.,/:+-])(?:[0-9]{4}-[0-9]{2}-[0-9]{2}|[+-]?(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]+)?%?)(?![\w/:+-]|[.,][0-9])',re.ASCII)
+TOKEN=re.compile(r'(?<![\w@#.,/:+-])(?:[0-9]{4}-[0-9]{2}-[0-9]{2}|[+-]?(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]+)?%?)(?![\w@/:+-]|[.,][0-9])',re.ASCII)
 
 
 def digest(text):return hashlib.sha256(text.encode('utf-8')).hexdigest()

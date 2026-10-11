@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-171304-quantitative-identifier-acceptance-070c3c08
+
+Recorded 2026-10-11T17:13:04.669300+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded full regression acceptance for repaired numeric email and handle boundaries, with corrected README evidence attribution.
+- **Evidence.** 1597 tests pass on Python 3.12.14 with unchanged captured executable sources; both platform CLI controls and current website and route receipts pass. [Change record](./runs/changes/2026-10-11-171304-quantitative-identifier-acceptance-070c3c08.json).
+- **Not claimed.** No independently validated tag or additional full requirement closure. F-015 stays at 80 percent.
+
+
+### 2026-10-11-171126-quantitative-identifier-current-0d8d59c8
+
+Recorded 2026-10-11T17:11:26.166801+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound corrected at-sign identifier exclusions to current website and unchanged route execution receipts.
+- **Evidence.** Current receipt assessment and 474-source route boundary checks pass for the corrected method, with no endpoint or capture changes. [Change record](./runs/changes/2026-10-11-171126-quantitative-identifier-current-0d8d59c8.json).
+- **Not claimed.** Engineering-only checks; full factual/contextual accuracy, human acceptance and tag release remain open.
+
+
+### 2026-10-11-170925-quantitative-identifier-repair-6b76f984
+
+Recorded 2026-10-11T17:09:25.338047+00:00 · Contributor: Codex · change
+
+- **Changed.** Reproduced and excluded numeric email/handle identifiers; corrected README links to the current numeric-development regression receipts.
+- **Evidence.** Both actual identifier counterexamples are retained as failing evidence; the corrected method passes 30 focused checks and 11 real Mac and isolated Linux CLI checks with matching source hashes. [Change record](./runs/changes/2026-10-11-170925-quantitative-identifier-repair-6b76f984.json).
+- **Not claimed.** No source lookup, factual verdict or new tag; F-015 remains partial and the open count remains 88.
+
+
 ### 2026-10-11-170141-quantitative-regression-acceptance-ff8b51b9
 
 Recorded 2026-10-11T17:01:41.164133+00:00 · Contributor: Codex · change

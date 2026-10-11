@@ -53,7 +53,7 @@ def main():
     check('grouping_decimal_and_date_shape',b'There are 1,250.50 items. Date: 2026-10-11.',0,{'supported_detail_count':2})
     check('markers_excluded_and_same_unit_only',b'There are 12 items [1]. Another has 25. https://example.invalid/2026.',0,
         {'supported_detail_count':2,'with_same_unit_marker':1,'without_same_unit_marker':1})
-    check('identifiers_ip_and_broken_grouping',b'ID123 abc-123 192.0.2.1 12,34.',0,{'supported_detail_count':0})
+    check('identifiers_ip_and_broken_grouping',b'ID123 abc-123 123@example.com @123 123@456 192.0.2.1 12,34.',0,{'supported_detail_count':0})
     check('non_ascii_boundary_refusal','é123 表456 78\u0301 90\u00a0'.encode(),0,{'supported_detail_count':0,'skipped_detail_count':4})
     for name,raw in [('invalid_utf8',b'\xff PRIVATE_QUANTITATIVE_CANARY'),
                      ('nul_input',b'PRIVATE_QUANTITATIVE_CANARY\0'),('byte_limit',b'x'*32001),

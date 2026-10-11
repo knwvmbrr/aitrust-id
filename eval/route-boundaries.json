@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T17:00:27.648422+00:00",
-  "reviewed_by": "Codex \u2014 bounded standalone quantitative CLI, unchanged personal routes and collection",
+  "reviewed_at": "2026-10-11T17:11:25.022869+00:00",
+  "reviewed_by": "Codex \u2014 exclude at-sign quantitative identifiers; preserve unchanged personal routes and inactive intake",
   "rules": [
     "X-01",
     "X-03",
@@ -340,7 +340,7 @@
     "scripts/verify-manifest-inspection.py": "11f4ad5723c9db6da79b1fcba0a960d1a3df65dea07cfdabebae5be81a2be034",
     "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
     "scripts/verify-mobile-payload.cjs": "9a2cc75ef2c4f8cbaf26bb5a146bffec9d9ef6cc128984742ccfa6f342f04cdb",
-    "scripts/verify-quantitative-observations.py": "03db4dd8d31e31c4238992f300b19b2c6881982603bf4ff838e134d24f8b4dcb",
+    "scripts/verify-quantitative-observations.py": "7a49df7f59671810e0943abcf86731e2264a6361564310ec53090f9779f71de0",
     "scripts/verify-redistribution-notices.py": "25a47193c9e1ee1eb4582047fa575234badfecc9eb1d15d76d9e5fe4140002e1",
     "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206",
     "scripts/verify-replay-export.cjs": "30cbd99c5c3e81657ba337e64687325ffd170397a2df72e142dcd4f767403db0",
@@ -410,10 +410,10 @@
     "site/src/policies.js": "4e375fb0c7852b5134af7adc8fe98fff403bac69460dff3d8fc6234c9dbea03f",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "f3a81582a5f3f10fb62bcf42d0dc5c6ec18ff5f7d51953e720fc971c37b10b9b",
+    "site/src/public-scope.json": "00cf4a5362c39ade14ba44984109fe8c6e6f37e63419dab8cd6d1f4011151c1c",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "2ab15cb3268ae917f55ceffc3e7ba602b07c840819b708f64db108e4e17b27ae",
+    "site/src/scope-manifest.json": "552d87e0d45cdd5bd145d67246faae55420e82947f77702336526c8d1c0ac3a8",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
     "site/src/tag-performance.json": "9111e970ddec93c6acf662b530c556e94ff93ab5edae16658bf8f3fb2c81baf4",
@@ -476,7 +476,7 @@
     "tests/test_offline_revocation.py": "4f638ed0779ef307714ce1b0c23b90a4adc62eede6e763c409dcb0f1ce7ea9d2",
     "tests/test_package_proximity.py": "b789d18cb0613cad336da111780c333f0d2f2ebd8f41a862fbbe3a14f887673b",
     "tests/test_python_input_pins.py": "59573588df5ba336c8bc2ecb859a7e1ed599534cfb61db13069ceeff944beb1f",
-    "tests/test_quantitative_observations.py": "41825623dcba66b5d0f1417707f7d4d4191d5c12389495d280597f68c8c3b76a",
+    "tests/test_quantitative_observations.py": "f842b79ac44b522ddf5af01f8506f875327076b328264c125cf34786cebfaa83",
     "tests/test_registry_deferral.py": "3d90be7b2dfcee63f8d1f2da1c0e279725dfd75f191845af9364b32a9fe67bb0",
     "tests/test_route_boundaries.py": "a7d60d9d54e829646fddf675dc79844a0ab0d9badd173fc8d019d5e4d0f9d192",
     "tests/test_source_provenance.py": "d50854181eb329e112d58e16a5ab8f771e4b03e19195cfd7b0b6bc62cbdfdb13",
@@ -490,10 +490,10 @@
     "tools/language_observations.py": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
     "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
     "tools/package_proximity.py": "1ce62f01086757fd96f8b9e536f230b627fd9f5bd9919d6c17f169598d896e84",
-    "tools/quantitative_observations.py": "26b1b397b132d1a0ee0d8c9755793f966d5592194e554e92404e6b7004db5523"
+    "tools/quantitative_observations.py": "ec27459447054729cc58a578b5ef34525dbc9dff2582432243fd7a912a4cf012"
   },
   "engineering_receipts": {
-    "website": "runs/2026-10-11-quantitative-website.json",
+    "website": "runs/2026-10-11-quantitative-identifier-website.json",
     "extension": "runs/2026-10-11-mobile-payload-extension-revalidation.json"
   },
   "device_evidence": {

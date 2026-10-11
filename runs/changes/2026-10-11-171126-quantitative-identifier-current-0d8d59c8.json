@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-171126-quantitative-identifier-current-0d8d59c8",
+  "recorded_at": "2026-10-11T17:11:26.166801+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "be5eccd2fd450153402371fc581c5555ae7c758b",
+  "changed": "Bound corrected at-sign identifier exclusions to current website and unchanged route execution receipts.",
+  "proves": "Current receipt assessment and 474-source route boundary checks pass for the corrected method, with no endpoint or capture changes.",
+  "limits": "Engineering-only checks; full factual/contextual accuracy, human acceptance and tag release remain open.",
+  "scope_ids": [
+    "F-015",
+    "T-HP"
+  ],
+  "files": {
+    "README.md": "e866079832ccbe3fde3468b18c3dbe65180bb93af3047cd5954c19beb7c49cbe",
+    "docs/scope-progress.json": "eca4990468ec3aa608a1872c5ad08e4451e9468620e1b5bcbee3ceb5775cbe5f",
+    "docs/scope-progress.md": "38a9136db67453fce9cc556bf2fbcc44eea69e614a5aa13f84a020f2395f4945",
+    "eval/route-boundaries.json": "96860e6b2cc11e7b4d8a6b43acf7f749bd9b1e3515923fa70908ecdce21d73f6",
+    "runs/2026-10-11-quantitative-cli-identifiers-linux.json": "f1ab6a098f799b3482156b9e92448caa4bf0b130f442b3aae46c86d2faa76dcf",
+    "runs/2026-10-11-quantitative-cli-identifiers-mac.json": "de7fbed7b205b6585e290e3285bbe01d82e0b21aa32f18371f63bb06b652a3ad",
+    "runs/2026-10-11-quantitative-identifier-boundaries.json": "287fc634c2302842b2dfa0ba807b671d4145ed4767387915ecbfdf0352aec303",
+    "runs/2026-10-11-quantitative-identifier-boundary-diagnosis.json": "7c165bdf3e5873223e0fdb4ee0a7423f7a95bb7558bd75f502a5b95dc2610a91",
+    "runs/2026-10-11-quantitative-identifier-current.json": "f833b88c6a86551cfc36555f146ee2d777ec478e4d59a97eaceb57d9d7358311",
+    "runs/2026-10-11-quantitative-identifier-website.json": "5b03de090c10d88860a7aa34f038f55b05e308ce32131db77127342d5f62feae",
+    "scripts/verify-quantitative-observations.py": "7a49df7f59671810e0943abcf86731e2264a6361564310ec53090f9779f71de0",
+    "site/public/reference/public-scope.json": "00cf4a5362c39ade14ba44984109fe8c6e6f37e63419dab8cd6d1f4011151c1c",
+    "site/src/public-scope.json": "00cf4a5362c39ade14ba44984109fe8c6e6f37e63419dab8cd6d1f4011151c1c",
+    "site/src/scope-manifest.json": "552d87e0d45cdd5bd145d67246faae55420e82947f77702336526c8d1c0ac3a8",
+    "state.json": "887e2fabbcf3d68119a17a4e755d7d17cb314c7909760f8a00ebc90c80b6a752",
+    "tests/test_quantitative_observations.py": "f842b79ac44b522ddf5af01f8506f875327076b328264c125cf34786cebfaa83",
+    "tools/quantitative_observations.py": "ec27459447054729cc58a578b5ef34525dbc9dff2582432243fd7a912a4cf012"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-quantitative-identifier-website.json",
+      "sha256": "5b03de090c10d88860a7aa34f038f55b05e308ce32131db77127342d5f62feae"
+    },
+    {
+      "path": "runs/2026-10-11-quantitative-identifier-current.json",
+      "sha256": "f833b88c6a86551cfc36555f146ee2d777ec478e4d59a97eaceb57d9d7358311"
+    },
+    {
+      "path": "runs/2026-10-11-quantitative-identifier-boundaries.json",
+      "sha256": "287fc634c2302842b2dfa0ba807b671d4145ed4767387915ecbfdf0352aec303"
+    }
+  ],
+  "checks": []
+}
