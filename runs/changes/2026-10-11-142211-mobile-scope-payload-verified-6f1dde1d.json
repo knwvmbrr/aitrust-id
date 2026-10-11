@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-142211-mobile-scope-payload-verified-6f1dde1d",
+  "recorded_at": "2026-10-11T14:22:11.165416+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "549dfb5891c2d69eab1704e9d2acca5e2c0e4c5b",
+  "changed": "Verified deferred complete scope loading, exact build integrity, bounded failures and retry, offline export and current route/capability boundaries.",
+  "proves": "Initial JavaScript drops from 994375 to 539456 bytes. Chromium/WebKit, six failed-load/retry controls, offline export, 20 tag modals, eight footer workflows and 62 accessibility surfaces pass. All five current capability receipts and 32 route checks pass.",
+  "limits": "No physical phone, human acceptance, full requirement closure, tag release or independent detector accuracy is claimed.",
+  "scope_ids": [
+    "F-142",
+    "N-012",
+    "F-113"
+  ],
+  "files": {
+    "docs/mobile-payload-plan.md": "3cb6d5c7d7882ed8e2453159ce28dbc6201ce1a8a81d7a2d628e1edb52db32cc",
+    "eval/revalidation.json": "5cb142411670a024d1c8395fb7edbde8052bce3e06e5bdbcbe603b678b57778d",
+    "eval/route-boundaries.json": "6f9046e89c6247e7389aed1b3d9aa0373d5782f5adc0c0e137a7e0b2706169eb",
+    "runs/2026-10-11-mobile-payload-accessibility.json": "605d646bebc19433bac890bf045f6c6b02a5d37108e16b56a5223dfeff459da3",
+    "runs/2026-10-11-mobile-payload-baseline.json": "49232252494d1ac8a52b12cbaa38db70f338c0d3f8a25fb9374665b8271749ef",
+    "runs/2026-10-11-mobile-payload-browser-controls.json": "c61d39ab5a31ccfb9a4143ddf6e170151c7b1c93517fc4ef44529ac5494ee0d7",
+    "runs/2026-10-11-mobile-payload-catalogue.json": "011012db00ee09389e2f318fd6e9c0b9ccbace8026dc3a38fdc7ef255a3f09f7",
+    "runs/2026-10-11-mobile-payload-current-boundaries.json": "91d1b70b3f2fbb39268bee178c5086d7afaed716d8df4c85e3a5a0f6d7dce105",
+    "runs/2026-10-11-mobile-payload-current-receipts.json": "e2d7bb9566dc9260f770aba0b4f0bc9935d1bb4d0194ce9587b0fc617a871765",
+    "runs/2026-10-11-mobile-payload-extension-revalidation.json": "0695aff21a0a07aef4ede9f76cde70ca93134b4ead060f977d89195fd6ac5be5",
+    "runs/2026-10-11-mobile-payload-pii_redacted-revalidation.json": "25265a52fdd184321d0135ef89d0720eec7c4a1d6ad1ec22c6f7eb05421dbd55",
+    "runs/2026-10-11-mobile-payload-protocol-revalidation.json": "487e6ee14ec10395faa58c56a8726aa5903f6db195801268acd601cbfb32707d",
+    "runs/2026-10-11-mobile-payload-ps-revalidation.json": "68efe64db4bd824328d6d03ff06b287abe5c076c026b708321c140900f3afe66",
+    "runs/2026-10-11-mobile-payload-website-attempt.json": "2a91d62ca95d5f4b71654371de17344c22c0cf99404214690a54f2c79d5e2f81",
+    "runs/2026-10-11-mobile-payload-website-reviewed.json": "e3a2035bd49444a866fa7191f18e0199fca001aeaf602989f1d4b026043044dd",
+    "scripts/verify-built-website.cjs": "d8c7f3e38877ca4a1276ed9e36e041a4408b2de909b4e9b9f22ac3abae4a404f",
+    "scripts/verify-mobile-payload.cjs": "4b541be68dcb9dbec66b112f58532f74177500859736c66e10c7ac22810b36cd",
+    "scripts/verify-route-boundaries.py": "0baaf6606efeafa4592384efe81fe634d3eaed9324598533745f7c2032f40af5",
+    "scripts/verify-site.cjs": "dcdb7615f784cc02bd25b42ddf0ba2c271ca530cee53f274ebce0ad7fed05728",
+    "site/scripts/prepare.mjs": "bdf1839709043db2cac2f15f572d99d1ecbdd69e81ebed695aee2212f24fc09a",
+    "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
+    "site/src/main.jsx": "44873f3c7d819bd849ae401dd7b7c7c04731b0400f595b7e01972362181fb8b8",
+    "site/src/scope-data.js": "ad1feb2fcb758cd4aafca617bd8950d7fee2c115c80c2841cbcba0574e77f989",
+    "site/src/scope-manifest.json": "ddb2ab8c9942c2e5bb3385927be417909684d04349390e2f446d65e1b050ecb1",
+    "site/src/workflows/Scope.jsx": "e472165e4139627a0f31ea57839a834299e66fa7b21f165ef1fe46db0dde6c72",
+    "state.json": "508094f4e1c67b33cd144fcdb4e0a4b10db775ebb351336d457d8fd092626335"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-mobile-payload-browser-controls.json",
+      "sha256": "c61d39ab5a31ccfb9a4143ddf6e170151c7b1c93517fc4ef44529ac5494ee0d7"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-website-reviewed.json",
+      "sha256": "e3a2035bd49444a866fa7191f18e0199fca001aeaf602989f1d4b026043044dd"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-accessibility.json",
+      "sha256": "605d646bebc19433bac890bf045f6c6b02a5d37108e16b56a5223dfeff459da3"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-current-boundaries.json",
+      "sha256": "91d1b70b3f2fbb39268bee178c5086d7afaed716d8df4c85e3a5a0f6d7dce105"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-current-receipts.json",
+      "sha256": "e2d7bb9566dc9260f770aba0b4f0bc9935d1bb4d0194ce9587b0fc617a871765"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:22:11.478083+00:00"
+    }
+  ]
+}

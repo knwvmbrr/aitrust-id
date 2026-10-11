@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-140910-mobile-scope-payload-b23e7c68",
+  "recorded_at": "2026-10-11T14:09:10.981781+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8e608edb999231a3e71cd73dafc397d9c3dd8616",
+  "changed": "Load complete scope on demand as a hashed bounded asset with exact build digest, native disclosure loading, retries and integrity refusal; preserve complete catalogue exports and Scope search.",
+  "proves": "Architecture and source checks are prepared for actual built browser and offline verification; the result is not yet accepted or published.",
+  "limits": "No physical phone, human usability, independent accuracy or completed requirement is claimed; full browser execution is pending.",
+  "scope_ids": [
+    "F-142",
+    "N-012",
+    "F-113"
+  ],
+  "files": {
+    "docs/mobile-payload-plan.md": "43d9884622c4011f9defa2d2cf06f677b79f012e1576df319f034ec1c6abfa84",
+    "eval/revalidation.json": "5cb142411670a024d1c8395fb7edbde8052bce3e06e5bdbcbe603b678b57778d",
+    "runs/2026-10-11-mobile-payload-baseline.json": "49232252494d1ac8a52b12cbaa38db70f338c0d3f8a25fb9374665b8271749ef",
+    "scripts/verify-built-website.cjs": "d8c7f3e38877ca4a1276ed9e36e041a4408b2de909b4e9b9f22ac3abae4a404f",
+    "scripts/verify-mobile-payload.cjs": "fb90358b46df100f41d18989402154df8246c17ab39f4acfb8396f1e696f6fa7",
+    "scripts/verify-route-boundaries.py": "0baaf6606efeafa4592384efe81fe634d3eaed9324598533745f7c2032f40af5",
+    "site/scripts/prepare.mjs": "bdf1839709043db2cac2f15f572d99d1ecbdd69e81ebed695aee2212f24fc09a",
+    "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
+    "site/src/main.jsx": "326fb42596d676057ecd4f1862ee4e448d7c52aece1d32fd7d432f40863caa43",
+    "site/src/scope-data.js": "ad1feb2fcb758cd4aafca617bd8950d7fee2c115c80c2841cbcba0574e77f989",
+    "site/src/scope-manifest.json": "ddb2ab8c9942c2e5bb3385927be417909684d04349390e2f446d65e1b050ecb1",
+    "site/src/workflows/Scope.jsx": "e472165e4139627a0f31ea57839a834299e66fa7b21f165ef1fe46db0dde6c72"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:09:11.163871+00:00"
+    }
+  ]
+}

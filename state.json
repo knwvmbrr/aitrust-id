@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T14:15:22.991093+00:00",
+  "updated": "2026-10-11T14:32:11.041395+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1023,15 +1023,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-independent-signals-current-ps.json",
-    "PII_REDACTED": "runs/2026-10-11-authenticated-pii-revalidation.json",
-    "protocol": "runs/2026-10-11-independent-signals-current-protocol.json",
-    "extension": "runs/2026-10-11-authenticated-extension-accepted.json",
-    "website": "runs/2026-10-11-independent-signals-website-payload-corrected.json",
+    "PS": "runs/2026-10-11-mobile-payload-ps-revalidation.json",
+    "PII_REDACTED": "runs/2026-10-11-mobile-payload-pii_redacted-revalidation.json",
+    "protocol": "runs/2026-10-11-mobile-payload-protocol-revalidation.json",
+    "extension": "runs/2026-10-11-mobile-payload-extension-revalidation.json",
+    "website": "runs/2026-10-11-mobile-payload-website-cache-corrected.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T14:15:22.991093+00:00",
+  "updated_at": "2026-10-11T14:32:11.041395+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1395,5 +1395,26 @@
     "route_tests": "runs/2026-10-11-independent-signals-route-tests-reviewed.json",
     "current_source_receipts": "runs/2026-10-11-independent-signals-current-receipts.json",
     "ci_portability_failure": "runs/2026-10-11-independent-signals-ci-portability-failure.json"
+  },
+  "mobile_scope_payload": {
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-142",
+      "N-012",
+      "F-113"
+    ],
+    "initial_js_before_bytes": 994375,
+    "initial_js_after_bytes": 539453,
+    "reduction_percent": 45.75,
+    "all_scope_records_preserved": 202,
+    "browser_controls": "runs/2026-10-11-mobile-payload-browser-cache-corrected.json",
+    "website_revalidation": "runs/2026-10-11-mobile-payload-website-cache-corrected.json",
+    "accessibility": "runs/2026-10-11-mobile-payload-accessibility.json",
+    "catalogue": "runs/2026-10-11-mobile-payload-catalogue.json",
+    "current_boundaries": "runs/2026-10-11-mobile-payload-boundaries-cache-corrected.json",
+    "source_receipts": "runs/2026-10-11-mobile-payload-current-cache-corrected.json",
+    "physical_phone_verified": false,
+    "requirements_closed_by_this_batch": 0,
+    "publication_pending": true
   }
 }

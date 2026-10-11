@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-143211-mobile-cache-verified-96163778
+
+Recorded 2026-10-11T14:32:11.071750+00:00 · Contributor: Codex · change
+
+- **Changed.** Rejected public scope responses bypass HTTP cache; retry was exercised against a real cacheable corrupt 200 and corrected origin response.
+- **Evidence.** Source-bound website checks pass, seven load-failure controls recover, all 202 scope records and complete exports remain available, initial JavaScript is 539453 bytes. [Change record](./runs/changes/2026-10-11-143211-mobile-cache-verified-96163778.json).
+- **Not claimed.** Emulated Chromium and WebKit are not physical phone or human accessibility acceptance. No requirement or independent accuracy gate was marked complete.
+
+
+### 2026-10-11-142749-mobile-http-cache-retry-e4f850d8
+
+Recorded 2026-10-11T14:27:49.177768+00:00 · Contributor: Codex · change
+
+- **Changed.** Do not store/reuse potentially rejected HTTP scope responses; retain only verified in-memory scope and add a real cacheable-corruption origin-repair browser control.
+- **Evidence.** The new control uses an owned real HTTP server without Playwright routing, which would otherwise disable the cache under test. [Change record](./runs/changes/2026-10-11-142749-mobile-http-cache-retry-e4f850d8.json).
+- **Not claimed.** Current-source execution follows; physical phone and human gates remain open. Offline use continues through the separate frozen worker cache.
+
+
+### 2026-10-11-142211-mobile-scope-payload-verified-6f1dde1d
+
+Recorded 2026-10-11T14:22:11.165416+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified deferred complete scope loading, exact build integrity, bounded failures and retry, offline export and current route/capability boundaries.
+- **Evidence.** Initial JavaScript drops from 994375 to 539456 bytes. Chromium/WebKit, six failed-load/retry controls, offline export, 20 tag modals, eight footer workflows and 62 accessibility surfaces pass. All five current capability receipts and 32 route checks pass. [Change record](./runs/changes/2026-10-11-142211-mobile-scope-payload-verified-6f1dde1d.json).
+- **Not claimed.** No physical phone, human acceptance, full requirement closure, tag release or independent detector accuracy is claimed.
+
+
+### 2026-10-11-141901-mobile-source-bound-controls-150c97e2
+
+Recorded 2026-10-11T14:19:01.418049+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the mobile verifier to its real source files, test stalled requests with the real timeout, and require both preserved scope matches for a signal and its group record.
+- **Evidence.** The test now checks complete preserved group membership rather than incorrectly assuming a unique text-search match; actual browser execution follows. [Change record](./runs/changes/2026-10-11-141901-mobile-source-bound-controls-150c97e2.json).
+- **Not claimed.** Source-bound automated browser checks remain distinct from physical phone and human acceptance.
+
+
+### 2026-10-11-141649-deferred-detail-browser-readiness-02f67322
+
+Recorded 2026-10-11T14:16:49.669187+00:00 · Contributor: Codex · change
+
+- **Changed.** Require actual visible headings after native disclosure content mounts rather than an immediate non-waiting visibility probe; retain full completeness checks.
+- **Evidence.** Built initial JavaScript measures 539456 bytes versus 994375 bytes before the change; full browser acceptance is still executing. [Change record](./runs/changes/2026-10-11-141649-deferred-detail-browser-readiness-02f67322.json).
+- **Not claimed.** This is a payload measurement and asynchronous readiness fix, not physical-phone validation or a completed requirement.
+
+
+### 2026-10-11-141609-mobile-scope-failure-controls-801a0531
+
+Recorded 2026-10-11T14:16:09.545384+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve immediate privacy/access information during deferred scope loading and record refreshed capability checks and the initial guarded build refusal.
+- **Evidence.** Existing independent capability checks execute on the changed verification contract; actual built mobile execution remains next. [Change record](./runs/changes/2026-10-11-141609-mobile-scope-failure-controls-801a0531.json).
+- **Not claimed.** No full requirement closes; phone hardware acceptance and independent detector validation remain separate.
+
+
 ### 2026-10-11-141528-independent-signal-review-repairs-08d7719c
 
 Recorded 2026-10-11T14:15:28.247544+00:00 · Contributor: Codex · change
@@ -9,6 +63,13 @@ Recorded 2026-10-11T14:15:28.247544+00:00 · Contributor: Codex · change
 - **Changed.** Retain file constructor type, refuse impossible read-method pairs, and bind CLI observations to the exact invoked implementation hash.
 - **Evidence.** 171 focused tests and 20 actual final-source CLI cases on Mac and isolated Linux. Accepted final-source full suite passes 1392 non-route tests; 32 separate route tests pass. [Change record](./runs/changes/2026-10-11-141528-independent-signal-review-repairs-08d7719c.json).
 - **Not claimed.** The full tag integration requirements remain open at 80 percent. Historical failed and superseded checks remain visible; no independent accuracy or new tag release is claimed.
+### 2026-10-11-140910-mobile-scope-payload-b23e7c68
+
+Recorded 2026-10-11T14:09:10.981781+00:00 · Contributor: Codex · change
+
+- **Changed.** Load complete scope on demand as a hashed bounded asset with exact build digest, native disclosure loading, retries and integrity refusal; preserve complete catalogue exports and Scope search.
+- **Evidence.** Architecture and source checks are prepared for actual built browser and offline verification; the result is not yet accepted or published. [Change record](./runs/changes/2026-10-11-140910-mobile-scope-payload-b23e7c68.json).
+- **Not claimed.** No physical phone, human usability, independent accuracy or completed requirement is claimed; full browser execution is pending.
 
 
 ### 2026-10-11-140556-observation-verifier-portability-cb042291

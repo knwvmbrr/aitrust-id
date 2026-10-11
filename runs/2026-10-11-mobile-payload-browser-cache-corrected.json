@@ -1,0 +1,92 @@
+{
+  "captured_at": "2026-10-11T14:29:07.533Z",
+  "pass": true,
+  "sources": {
+    "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
+    "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
+    "site/src/scope-manifest.json": "ddb2ab8c9942c2e5bb3385927be417909684d04349390e2f446d65e1b050ecb1",
+    "site/src/public-scope.json": "28df306f9547069bbfdb3100d6a67ca881d860b38afdfdd510bd7406828d3fee",
+    "site/src/main.jsx": "44873f3c7d819bd849ae401dd7b7c7c04731b0400f595b7e01972362181fb8b8",
+    "site/src/workflows/Scope.jsx": "e472165e4139627a0f31ea57839a834299e66fa7b21f165ef1fe46db0dde6c72",
+    "site/scripts/prepare.mjs": "bdf1839709043db2cac2f15f572d99d1ecbdd69e81ebed695aee2212f24fc09a",
+    "site/scripts/prepare-offline.mjs": "882f4b6a46f0d0e2c130b52ca9bc46f931764bf327bc3f6893a665453e06be3a",
+    "scripts/verify-mobile-payload.cjs": "9a2cc75ef2c4f8cbaf26bb5a146bffec9d9ef6cc128984742ccfa6f342f04cdb"
+  },
+  "source_unchanged_during_execution": true,
+  "initial_javascript_bytes": 539453,
+  "initial_budget_bytes": 600000,
+  "full_scope_asset_bytes": 591350,
+  "preserved_records": 202,
+  "engines": [
+    {
+      "engine": "chromium",
+      "viewport_width": 390,
+      "no_eager_scope_request": true,
+      "complete_export_records": 14,
+      "scope_search": true,
+      "verified_scope_cache": true,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "viewport_width": 390,
+      "no_eager_scope_request": true,
+      "complete_export_records": 14,
+      "scope_search": true,
+      "verified_scope_cache": true,
+      "page_errors": []
+    }
+  ],
+  "controls": [
+    {
+      "fault": "network",
+      "refused": true,
+      "checker_available": true,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "http",
+      "refused": true,
+      "checker_available": true,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "truncated",
+      "refused": true,
+      "checker_available": true,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "oversized",
+      "refused": true,
+      "checker_available": true,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "altered",
+      "refused": true,
+      "checker_available": true,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "timeout",
+      "refused": true,
+      "checker_available": true,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "actual_cacheable_corrupt_response",
+      "playwright_routes_used": false,
+      "origin_requests": 2,
+      "retry_with_complete_export": true
+    },
+    {
+      "fault": "offline_after_install",
+      "complete_export": true,
+      "frozen_scope_asset": true
+    }
+  ],
+  "physical_phone": false,
+  "human_accessibility_acceptance": false,
+  "independent_accuracy_evidence": false
+}

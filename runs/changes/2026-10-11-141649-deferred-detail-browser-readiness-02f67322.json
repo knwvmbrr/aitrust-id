@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-141649-deferred-detail-browser-readiness-02f67322",
+  "recorded_at": "2026-10-11T14:16:49.669187+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "549dfb5891c2d69eab1704e9d2acca5e2c0e4c5b",
+  "changed": "Require actual visible headings after native disclosure content mounts rather than an immediate non-waiting visibility probe; retain full completeness checks.",
+  "proves": "Built initial JavaScript measures 539456 bytes versus 994375 bytes before the change; full browser acceptance is still executing.",
+  "limits": "This is a payload measurement and asynchronous readiness fix, not physical-phone validation or a completed requirement.",
+  "scope_ids": [
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "docs/mobile-payload-plan.md": "43d9884622c4011f9defa2d2cf06f677b79f012e1576df319f034ec1c6abfa84",
+    "eval/revalidation.json": "5cb142411670a024d1c8395fb7edbde8052bce3e06e5bdbcbe603b678b57778d",
+    "runs/2026-10-11-mobile-payload-baseline.json": "49232252494d1ac8a52b12cbaa38db70f338c0d3f8a25fb9374665b8271749ef",
+    "runs/2026-10-11-mobile-payload-extension-revalidation.json": "0695aff21a0a07aef4ede9f76cde70ca93134b4ead060f977d89195fd6ac5be5",
+    "runs/2026-10-11-mobile-payload-pii_redacted-revalidation.json": "25265a52fdd184321d0135ef89d0720eec7c4a1d6ad1ec22c6f7eb05421dbd55",
+    "runs/2026-10-11-mobile-payload-protocol-revalidation.json": "487e6ee14ec10395faa58c56a8726aa5903f6db195801268acd601cbfb32707d",
+    "runs/2026-10-11-mobile-payload-ps-revalidation.json": "68efe64db4bd824328d6d03ff06b287abe5c076c026b708321c140900f3afe66",
+    "runs/2026-10-11-mobile-payload-website-attempt.json": "2a91d62ca95d5f4b71654371de17344c22c0cf99404214690a54f2c79d5e2f81",
+    "scripts/verify-built-website.cjs": "d8c7f3e38877ca4a1276ed9e36e041a4408b2de909b4e9b9f22ac3abae4a404f",
+    "scripts/verify-mobile-payload.cjs": "fb90358b46df100f41d18989402154df8246c17ab39f4acfb8396f1e696f6fa7",
+    "scripts/verify-route-boundaries.py": "0baaf6606efeafa4592384efe81fe634d3eaed9324598533745f7c2032f40af5",
+    "scripts/verify-site.cjs": "dcdb7615f784cc02bd25b42ddf0ba2c271ca530cee53f274ebce0ad7fed05728",
+    "site/scripts/prepare.mjs": "bdf1839709043db2cac2f15f572d99d1ecbdd69e81ebed695aee2212f24fc09a",
+    "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
+    "site/src/main.jsx": "44873f3c7d819bd849ae401dd7b7c7c04731b0400f595b7e01972362181fb8b8",
+    "site/src/scope-data.js": "ad1feb2fcb758cd4aafca617bd8950d7fee2c115c80c2841cbcba0574e77f989",
+    "site/src/scope-manifest.json": "ddb2ab8c9942c2e5bb3385927be417909684d04349390e2f446d65e1b050ecb1",
+    "site/src/workflows/Scope.jsx": "e472165e4139627a0f31ea57839a834299e66fa7b21f165ef1fe46db0dde6c72"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:16:49.813486+00:00"
+    }
+  ]
+}
