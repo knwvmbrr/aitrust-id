@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-030023-measured-crawl-count-d5bb7ba0",
+  "recorded_at": "2026-10-11T03:00:23.932409+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "65a1298261d2a8509765d3e97ce9e71c18ca931c",
+  "changed": "Derive the verification report sitemap count from URLs actually inspected instead of an outdated literal.",
+  "proves": "The existing checker already requires all 36 unique canonical URLs; this corrects its report field and preserves acceptance.",
+  "limits": "The previous live report says 35 despite executing the 36-URL assertion; corrected live evidence and source revalidation follow.",
+  "scope_ids": [
+    "F-070"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "60197b592d7d25094ef3798c3ed55eccea471769bdd25484c2bd05c401d62f92"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T03:00:24.133891+00:00"
+    }
+  ]
+}

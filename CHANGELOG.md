@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-030522-authenticated-consent-source-e4427cb9
+
+Recorded 2026-10-11T03:05:22.598819+00:00 · Contributor: Codex · change
+
+- **Changed.** Published anonymous authenticated development source containing optional receipts, self-declarations and local corpus comparison, and recorded current host/source evidence.
+- **Evidence.** Exact archive reproduced and verified with independently saved roots on Mac and isolated Linux before publication; four anonymous assets match, hosted engineering/signing jobs pass, temporary staging removed. [Change record](./runs/changes/2026-10-11-030522-authenticated-consent-source-e4427cb9.json).
+- **Not claimed.** Independent release gate fails as designed; authenticated source does not establish accuracy, identity, authorship, full license clearance or installed dependency authenticity.
+
+
+### 2026-10-11-030205-consent-reference-publication-aebdf758
+
+Recorded 2026-10-11T03:02:05.578680+00:00 · Contributor: Codex · change
+
+- **Changed.** Published four implemented reference jobs and their guide, verified exact public artifact bytes, and corrected measured crawl reporting and prior change-event scope attribution.
+- **Evidence.** 228 artifacts match on each of three public origins; 20 panels, 202 scope records, 36 actual crawl URLs, nine policies and three guide downloads pass live checks. PR24 passed 22 required checks and normal merge. [Change record](./runs/changes/2026-10-11-030205-consent-reference-publication-aebdf758.json).
+- **Not claimed.** The prior measured-crawl-count event erroneously cites F-070; this correction attributes that reporting change to F-150/F-139 and does not change any acceptance. Publication is development work, not independent accuracy, physical-phone or human accessibility approval.
+
+
+### 2026-10-11-030023-measured-crawl-count-d5bb7ba0
+
+Recorded 2026-10-11T03:00:23.932409+00:00 · Contributor: Codex · change
+
+- **Changed.** Derive the verification report sitemap count from URLs actually inspected instead of an outdated literal.
+- **Evidence.** The existing checker already requires all 36 unique canonical URLs; this corrects its report field and preserves acceptance. [Change record](./runs/changes/2026-10-11-030023-measured-crawl-count-d5bb7ba0.json).
+- **Not claimed.** The previous live report says 35 despite executing the 36-URL assertion; corrected live evidence and source revalidation follow.
+
+
 ### 2026-10-11-025347-immutable-statement-current-acceptance-f09e595c
 
 Recorded 2026-10-11T02:53:47.377793+00:00 · Contributor: Codex · change
