@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-160522-loader-venv-accepted-9659097a
+
+Recorded 2026-10-11T16:05:22.739748+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified checkout-local virtualenv compatibility and exact loaded wrapper/native versions on Mac and isolated Linux, preserving the narrower actual metadata diagnosis.
+- **Evidence.** 1,545 Python checks, 68 focused controls and 16 real CLI cases per platform pass. Existing personal routes and evidence remain unchanged. [Change record](./runs/changes/2026-10-11-160522-loader-venv-accepted-9659097a.json).
+- **Not claimed.** The review prediction of reader failure was not reproduced: the old pinned wrapper used unknown as its version. Current source retains and checks the correct version. Hosted and anonymous published-source acceptance remain separate.
+
+
+### 2026-10-11-160347-loader-distribution-metadata-d968a7e1
+
+Recorded 2026-10-11T16:03:47.152935+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained the checked SDK distribution metadata inside checkout-local virtualenvs and now verifies the loaded wrapper version as well as the native SDK version.
+- **Evidence.** 68 focused controls and the 16-case real Mac verifier pass. The earlier source lost wrapper-version metadata; its pinned initializer fell back to unknown, so the review claim of reader failure was not reproduced and is corrected in the diagnosis. [Change record](./runs/changes/2026-10-11-160347-loader-distribution-metadata-d968a7e1.json).
+- **Not claimed.** No complete sandbox or new tag is claimed; Linux, full-suite and hosted acceptance are refreshed for the exact amended source.
+
+
 ### 2026-10-11-155410-loader-engineering-accepted-dcb7b968
 
 Recorded 2026-10-11T15:54:10.180527+00:00 · Contributor: Codex · change

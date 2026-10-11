@@ -264,3 +264,17 @@ def test_initializer_failure_clears_partial_module_cache(fake_sdk,monkeypatch):
     monkeypatch.setattr(sys,'path',list(sys.path));monkeypatch.setenv('C2PA_LIBRARY_NAME','before')
     with pytest.raises(RuntimeError,match='fixture failure'):m.load_verified_sdk()
     assert not any(name=='c2pa' or name.startswith('c2pa.') for name in sys.modules)
+
+
+def test_verified_distribution_root_is_retained_inside_checkout(fake_sdk,tmp_path,monkeypatch):
+    package=reviewed_initializer(fake_sdk,'CHECKED_ORIGIN = True\n')
+    root=tmp_path.resolve()
+    monkeypatch.setattr(m,'ROOT',root);monkeypatch.chdir(root)
+    monkeypatch.setattr(sys,'path',[str(root),str(package.parent)]+list(sys.path))
+    monkeypatch.setenv('C2PA_LIBRARY_NAME','before')
+    try:
+        sdk,_=m.load_verified_sdk()
+        assert sdk.CHECKED_ORIGIN and str(package.parent) in sys.path and str(root) not in sys.path
+    finally:
+        for name in list(sys.modules):
+            if name=='c2pa' or name.startswith('c2pa.'):sys.modules.pop(name)

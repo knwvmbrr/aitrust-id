@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T15:54:09.883440+00:00",
+  "updated": "2026-10-11T16:05:22.479286+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1544,
+  "python_tests_passed": 1545,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1031,7 +1031,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T15:54:09.883440+00:00",
+  "updated_at": "2026-10-11T16:05:22.479286+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1427,10 +1427,10 @@
     "scope_id": "F-025",
     "state": "optional_offline_png_observation",
     "contract": "docs/manifest-inspection.md",
-    "mac_evidence": "runs/2026-10-11-manifest-loader-mac-final.json",
-    "linux_evidence": "runs/2026-10-11-manifest-loader-linux-final.json",
-    "fault_pin_privacy_tests": 67,
-    "real_cli_cases_per_platform": 15,
+    "mac_evidence": "runs/2026-10-11-manifest-loader-metadata-mac.json",
+    "linux_evidence": "runs/2026-10-11-manifest-loader-metadata-linux.json",
+    "fault_pin_privacy_tests": 68,
+    "real_cli_cases_per_platform": 16,
     "library_version": "c2pa-python/0.38.0 native/0.91.0",
     "new_tag_releases": 0,
     "image_credential_issuer": false,
@@ -1438,7 +1438,7 @@
     "independent_accuracy_evidence": false,
     "current_capabilities": "runs/2026-10-11-manifest-current-capabilities.json",
     "current_boundaries": "runs/2026-10-11-manifest-workflow-boundaries.json",
-    "full_python_evidence": "runs/2026-10-11-manifest-loader-python-corrected.json",
+    "full_python_evidence": "runs/2026-10-11-manifest-loader-metadata-python.json",
     "published_source_execution": "runs/2026-10-11-manifest-public-source.json",
     "protected_acceptance": "runs/2026-10-11-manifest-protected-acceptance.json",
     "merged_source_acceptance": "runs/2026-10-11-manifest-merged-source-acceptance.json",

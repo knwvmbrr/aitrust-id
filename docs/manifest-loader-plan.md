@@ -14,6 +14,11 @@ search path while importing the SDK, and retain that restricted path for its
 reader lifetime. Keep the parent free of native imports. Existing settings,
 limits, PNG boundary and output/privacy behavior stay in place.
 
+Retain the exact checked distribution's site-packages root even when the user's
+virtual environment lives inside the checkout. The wrapper resolves its own
+version from distribution metadata. A real copied `.venv` control verifies this
+alongside the package/file-shadow refusals; other checkout entries stay excluded.
+
 Test source-tree package and single-file collisions in private copied checkouts,
 then repeat the real signed, changed and unsigned PNG controls on Mac and
 network-isolated Linux. Unit controls cover preloaded modules and cleanup after

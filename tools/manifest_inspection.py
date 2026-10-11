@@ -126,9 +126,11 @@ def load_verified_sdk():
     # The CLI adds ROOT to load our protocol. Do not offer that directory, a
     # descendant or the worker's current directory to SDK/transitive imports.
     cwd = Path.cwd().resolve()
+    trusted_site = package.parent.resolve()
     sys.path[:] = [entry for entry in sys.path if entry and
-        not Path(entry).resolve().is_relative_to(ROOT.resolve()) and
-        Path(entry).resolve() != cwd]
+        (Path(entry).resolve() == trusted_site or
+         (not Path(entry).resolve().is_relative_to(ROOT.resolve()) and
+          Path(entry).resolve() != cwd))]
     spec = importlib.util.spec_from_file_location('c2pa', initializer,
         submodule_search_locations=[str(package)])
     if spec is None or spec.loader is None:
@@ -216,8 +218,8 @@ def worker():
     png_container(raw)
     import io
     c2pa, pins = load_verified_sdk()
-    if c2pa.sdk_version() != pins['sdk_version']:
-        raise CorpusError('Native SDK version differs from the reviewed pin.')
+    if c2pa.__version__ != pins['package_version'] or c2pa.sdk_version() != pins['sdk_version']:
+        raise CorpusError('Loaded SDK version differs from the reviewed pin.')
     try:
         with c2pa.Context.from_dict(SETTINGS) as context:
             with c2pa.Reader('image/png', io.BytesIO(raw), context=context) as reader:
