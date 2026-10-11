@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-155410-loader-engineering-accepted-dcb7b968
+
+Recorded 2026-10-11T15:54:10.180527+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed the current loader engineering verification: 1,544 Python checks, 67 focused controls, and 15 real CLI cases per Mac/Linux platform; recorded corrected failures and actual publication.
+- **Evidence.** The exact reviewed package loads despite harmless checkout shadows, with unchanged personal routes and all engineering tests passing. [Change record](./runs/changes/2026-10-11-155410-loader-engineering-accepted-dcb7b968.json).
+- **Not claimed.** Optional native hosted and anonymous published-source acceptance remain pending, and no independently validated tag or full license clearance is claimed.
+
+
+### 2026-10-11-155240-loader-platform-checks-bc710363
+
+Recorded 2026-10-11T15:52:40.100489+00:00 · Contributor: Codex · change
+
+- **Changed.** Executed all 15 current native CLI controls on Mac and non-root network-isolated Linux; corrected a refused report path and mismatched state timestamps discovered by actual checks.
+- **Evidence.** Both platforms used the same current source and bypassed harmless source-tree shadow modules. All 67 isolated parser/loading controls pass. [Change record](./runs/changes/2026-10-11-155240-loader-platform-checks-bc710363.json).
+- **Not claimed.** The first full Python run failed chronology checks and is preserved; the corrected full run and hosted/published-source acceptance remain pending.
+
+
+### 2026-10-11-155105-loader-reviewed-inventory-0988619c
+
+Recorded 2026-10-11T15:51:05.194810+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the repaired optional native loader to the reviewed source inventory and recorded actual notice-publication state.
+- **Evidence.** Existing personal routes, permissions and browser receipts remain current; the route-boundary check passes for the updated optional source. [Change record](./runs/changes/2026-10-11-155105-loader-reviewed-inventory-0988619c.json).
+- **Not claimed.** Hosted and published-source native acceptance remains pending; independent tag accuracy and human acceptance remain open.
+
+
+### 2026-10-11-155027-pinned-manifest-loader-3a63c48c
+
+Recorded 2026-10-11T15:50:27.994854+00:00 · Contributor: Codex · change
+
+- **Changed.** Published policy v1.10, preserved dependency notices and the 114/88 scope ledger; repaired optional manifest SDK namespace collisions with absolute checked-package loading.
+- **Evidence.** The deployed build matched all 238 artifacts at each of three origins. Private package-shadow reproduction established the bug, and regression controls now refuse cached SDK modules and bypass checkout shadows. [Change record](./runs/changes/2026-10-11-155027-pinned-manifest-loader-3a63c48c.json).
+- **Not claimed.** Current loader acceptance is pending fresh Mac/Linux/hosted and published-source runs. No origin tag, independent accuracy, license permission or human acceptance is granted.
+
+
 ### 2026-10-11-153757-preserve-checkout-bytes-a3de3534
 
 Recorded 2026-10-11T15:37:57.703990+00:00 · Contributor: Codex · change

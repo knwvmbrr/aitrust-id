@@ -1,6 +1,7 @@
 """Optional bounded attached-manifest inspection; never an origin or truth tag."""
 import hashlib
 import importlib.metadata
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -16,7 +17,7 @@ import zlib
 from protocol.corpus import CorpusError, read_regular
 
 ROOT = Path(__file__).resolve().parents[1]
-METHOD = 'attached-c2pa-inspection/1.0.0'
+METHOD = 'attached-c2pa-inspection/1.0.1'
 MAX_ASSET_BYTES = 10 * 1024 * 1024
 MAX_REPORT_BYTES = 4 * 1024 * 1024
 DEADLINE_SECONDS = 12
@@ -115,6 +116,36 @@ def checked_sdk():
     return str(distribution.locate_file(pins['profiles'][profile]['native'])), pins
 
 
+def load_verified_sdk():
+    """Import the checked package by absolute path, never by checkout lookup."""
+    if any(name == 'c2pa' or name.startswith('c2pa.') for name in sys.modules):
+        raise CorpusError('A preloaded SDK is unsupported.')
+    native, pins = checked_sdk()
+    package = Path(native).parent.parent
+    initializer = package / '__init__.py'
+    # The CLI adds ROOT to load our protocol. Do not offer that directory, a
+    # descendant or the worker's current directory to SDK/transitive imports.
+    cwd = Path.cwd().resolve()
+    sys.path[:] = [entry for entry in sys.path if entry and
+        not Path(entry).resolve().is_relative_to(ROOT.resolve()) and
+        Path(entry).resolve() != cwd]
+    spec = importlib.util.spec_from_file_location('c2pa', initializer,
+        submodule_search_locations=[str(package)])
+    if spec is None or spec.loader is None:
+        raise CorpusError('The checked SDK cannot be loaded.')
+    module = importlib.util.module_from_spec(spec)
+    sys.modules['c2pa'] = module
+    os.environ['C2PA_LIBRARY_NAME'] = native
+    try:
+        spec.loader.exec_module(module)
+    except BaseException:
+        for name in list(sys.modules):
+            if name == 'c2pa' or name.startswith('c2pa.'):
+                del sys.modules[name]
+        raise
+    return module, pins
+
+
 def status_groups(value):
     if not isinstance(value, dict) or set(value) - {'success', 'informational', 'failure'}:
         raise CorpusError('Unsupported validation group.')
@@ -181,12 +212,10 @@ def worker():
     resource.setrlimit(resource.RLIMIT_FSIZE, (MAX_REPORT_BYTES, MAX_REPORT_BYTES))
     if sys.platform == 'linux':
         resource.setrlimit(resource.RLIMIT_AS, (1024**3, 1024**3))
-    native, pins = checked_sdk()
-    os.environ['C2PA_LIBRARY_NAME'] = native
     raw = sys.stdin.buffer.read(MAX_ASSET_BYTES + 1)
     png_container(raw)
     import io
-    import c2pa
+    c2pa, pins = load_verified_sdk()
     if c2pa.sdk_version() != pins['sdk_version']:
         raise CorpusError('Native SDK version differs from the reviewed pin.')
     try:

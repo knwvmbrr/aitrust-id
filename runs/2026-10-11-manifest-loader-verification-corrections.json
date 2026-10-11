@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-11T15:52:39.819478+00:00",
+  "pass": false,
+  "corrected_failures": [
+    {
+      "failure": "Linux verifier report path outside approved output tree",
+      "effect": "Cases executed, report was refused",
+      "fix": "Repeat all cases with output/verification path",
+      "evidence": "runs/2026-10-11-manifest-loader-linux-final.json"
+    },
+    {
+      "failure": "State updated and updated_at disagree",
+      "effect": "13 chronology/accountability checks failed; native checks passed",
+      "fix": "Write both existing timestamp fields at the same actual update",
+      "evidence": "runs/2026-10-11-manifest-loader-python-chronology-failure.json"
+    }
+  ],
+  "author": "Codex",
+  "independent_accuracy_evidence": false
+}

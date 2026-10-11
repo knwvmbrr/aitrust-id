@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-155240-loader-platform-checks-bc710363",
+  "recorded_at": "2026-10-11T15:52:40.100489+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
+  "changed": "Executed all 15 current native CLI controls on Mac and non-root network-isolated Linux; corrected a refused report path and mismatched state timestamps discovered by actual checks.",
+  "proves": "Both platforms used the same current source and bypassed harmless source-tree shadow modules. All 67 isolated parser/loading controls pass.",
+  "limits": "The first full Python run failed chronology checks and is preserved; the corrected full run and hosted/published-source acceptance remain pending.",
+  "scope_ids": [
+    "F-025"
+  ],
+  "files": {
+    "docs/manifest-inspection.md": "8b453c04f6a2f28ff3fbbcccc9868bccc570954ac88d64d52b5f1056b696c56a",
+    "docs/manifest-loader-plan.md": "25354d1c387b7c3eaef584edbde4f48ea0373afda63438359a7f92b31a811cb7",
+    "eval/route-boundaries.json": "cfa228f541ebaf9f48df6ae5036312de47914bc596f2e621c9a8f0dd991ba941",
+    "runs/2026-10-11-manifest-loader-boundaries.json": "440a2e635725452fc4ff60990fdac39c397d2c87c8f3e66ebaa0051eeea0f8b3",
+    "runs/2026-10-11-manifest-loader-linux-final.json": "6615256382f02002291499ffb0787612203ae896c31311b40b9002d46578a8ac",
+    "runs/2026-10-11-manifest-loader-linux.json": "d4bb9b9b6ab732f6621109834127a1cce6a9d90c500009ecdeb00f30999880fd",
+    "runs/2026-10-11-manifest-loader-mac-final.json": "4caf820f76d9f2405f09b1781478928fa3db1b7ed744cbc2c26c6ae9288562e3",
+    "runs/2026-10-11-manifest-loader-mac.json": "726dbdd5f9b26456e2b16ce199cedcfa450eada374469f403f8853ff90c40297",
+    "runs/2026-10-11-manifest-loader-python-chronology-failure.json": "02b9b8f27673d6b85bca035e3ecfde21db4a262e9fd49a6ede25d3292cc26a86",
+    "runs/2026-10-11-manifest-loader-verification-corrections.json": "5167c3ddc4249b53a80c1bb82ace45955c85b683a5baf88614ca580c3cdbc24d",
+    "runs/2026-10-11-manifest-shadow-reproduced.json": "29403081fdae79366ff2b14ffff20b934cd46285bda9027546f58288107549fc",
+    "runs/2026-10-11-notices-publication.json": "f805da153dd944ed5a0874ce0c1146b42aec700d5fc0b135d031bf871c28af35",
+    "scripts/verify-manifest-inspection.py": "01aa10eb8ae1567c4a26eb12e23bc8a36ea4a73f9e98cf7c23b79c4378591806",
+    "state.json": "a4cfdc0370f83e0cbd86dd847d5447018a7e37bad27e24178e8443a66318b9aa",
+    "tests/test_manifest_inspection.py": "59222e0b27ff3c8bfeb02fda06344f7cd279c46a9ff03e30f1530bc8717167ce",
+    "tools/manifest_inspection.py": "3580d9012586aa3f994dbd29bfb1b0ee8c3aa15850dc7a1849f847c88e568845"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-manifest-loader-mac-final.json",
+      "sha256": "4caf820f76d9f2405f09b1781478928fa3db1b7ed744cbc2c26c6ae9288562e3"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-linux-final.json",
+      "sha256": "6615256382f02002291499ffb0787612203ae896c31311b40b9002d46578a8ac"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-verification-corrections.json",
+      "sha256": "5167c3ddc4249b53a80c1bb82ace45955c85b683a5baf88614ca580c3cdbc24d"
+    }
+  ],
+  "checks": []
+}

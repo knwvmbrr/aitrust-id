@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -46,6 +47,28 @@ def main():
         {**os.environ,'C2PA_LIBRARY_NAME':'/nonexistent/LOADER_PRIVATE_CANARY','LD_LIBRARY_PATH':'/nonexistent/LOADER_PRIVATE_CANARY'})
     assert value['asset_binding']=='matched' and value['active_assertion_count']==2
     cases.append({'case':'ambient_native_loader_override','state':'OBSERVED','reviewed_library_used':True})
+    # Copy only source dependencies into our own temporary checkout; never put
+    # a shadow package in the caller's source or installed Python environment.
+    for shape in ('package', 'module'):
+        with tempfile.TemporaryDirectory(prefix='aitrust-sdk-shadow-') as directory:
+            copied = Path(directory).resolve()
+            for name in ('protocol', 'tools', 'scripts', 'eval/dependencies'):
+                shutil.copytree(ROOT/name, copied/name,
+                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+            marker = copied/'shadow-executed'
+            source = 'from pathlib import Path\nPath('+repr(str(marker))+').write_text("isolated control")\nraise RuntimeError("shadow control")\n'
+            if shape == 'package':
+                (copied/'c2pa').mkdir(); (copied/'c2pa/__init__.py').write_text(source)
+            else:
+                (copied/'c2pa.py').write_text(source)
+            result = subprocess.run([sys.executable, str(copied/'scripts/inspect-manifest.py'),
+                '--image', str(fixture/'signed.png')], cwd=copied, capture_output=True, timeout=20)
+            assert result.returncode == 0 and not result.stderr and not marker.exists()
+            value = json.loads(result.stdout)
+            assert value['state'] == 'OBSERVED' and value['asset_binding'] == 'matched'
+            assert value['tags'] == [] and b'FIXTURE_PRIVATE_METADATA_CANARY' not in result.stdout
+            cases.append({'case':'source_tree_shadow_'+shape, 'state':'OBSERVED',
+                'reviewed_library_used':True, 'shadow_code_executed':False})
     with tempfile.TemporaryDirectory(prefix='aitrust-manifest-control-') as directory:
         private=Path(directory).resolve();private.chmod(0o700)
         malformed=private/'malformed.png';malformed.write_bytes((fixture/'unsigned.png').read_bytes()[:-1])
