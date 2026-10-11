@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-005624-offline-status-publication-proof-2bf07465",
+  "recorded_at": "2026-10-11T00:56:24.925829+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5bd2f3f8ce7aadfd5d75fdeb3ade4e6a787d7cbc",
+  "changed": "Record protected publication, exact deployed bytes, current policy 1.8 and signed no-account development download for the completed conditional freshness model.",
+  "proves": "642 public artifact matches across three origins, 20 panels and nine policy downloads pass; source reproduces and authenticates on Mac and isolated Linux before prerelease publication, then four anonymous downloads match.",
+  "limits": "107 complete, 95 open; target 25 still needs 70 full closures. Source signature is not accuracy, license clearance, human authorship or global revocation proof.",
+  "scope_ids": [
+    "F-057",
+    "F-125",
+    "F-126",
+    "N-006"
+  ],
+  "files": {
+    "runs/2026-10-11-offline-status-authenticated-download.json": "5786b0bd286dd628e72f8c83f6147cabf58141e435f007f039fb65b72d127e9a",
+    "runs/2026-10-11-offline-status-hosted-source.json": "7bd04f5dcd11eb8f3d93af5656b0c278897d71b3eedb88e3d6a26ac9f120ad81",
+    "runs/2026-10-11-offline-status-protected-merge.json": "56da684cfb14175f52b92a90afb74d1018576fd3d20b2fefbae342b1261b4512",
+    "runs/2026-10-11-revocation-live-policies.json": "2e0095ca7f9bfe5ef0adaa267706be0cab230ffb3c3740b177787b6e951e9801",
+    "runs/2026-10-11-revocation-live-site.json": "88f298ed8a19ae818f749e2862b7ecf7861a4afc2d7a0fcee1bd57cf111acc3b",
+    "runs/2026-10-11-revocation-publication.json": "cbc8d0d8c880fb42901694774c40a323b7ca3ed5187c9e4e22a34ecfd633e143",
+    "state.json": "74dcc7ccf2d53cb2baffdb8868ab50f7448fb7ed2273edef89ab9e931d8483c1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-revocation-publication.json",
+      "sha256": "cbc8d0d8c880fb42901694774c40a323b7ca3ed5187c9e4e22a34ecfd633e143"
+    },
+    {
+      "path": "runs/2026-10-11-revocation-live-site.json",
+      "sha256": "88f298ed8a19ae818f749e2862b7ecf7861a4afc2d7a0fcee1bd57cf111acc3b"
+    },
+    {
+      "path": "runs/2026-10-11-revocation-live-policies.json",
+      "sha256": "2e0095ca7f9bfe5ef0adaa267706be0cab230ffb3c3740b177787b6e951e9801"
+    },
+    {
+      "path": "runs/2026-10-11-offline-status-authenticated-download.json",
+      "sha256": "5786b0bd286dd628e72f8c83f6147cabf58141e435f007f039fb65b72d127e9a"
+    },
+    {
+      "path": "runs/2026-10-11-offline-status-protected-merge.json",
+      "sha256": "56da684cfb14175f52b92a90afb74d1018576fd3d20b2fefbae342b1261b4512"
+    },
+    {
+      "path": "runs/2026-10-11-offline-status-hosted-source.json",
+      "sha256": "7bd04f5dcd11eb8f3d93af5656b0c278897d71b3eedb88e3d6a26ac9f120ad81"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T00:56:25.174034+00:00"
+    }
+  ]
+}
