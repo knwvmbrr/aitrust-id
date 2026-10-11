@@ -2,6 +2,53 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-003912-immutable-revocation-acceptance-c8091692
+
+Recorded 2026-10-11T00:39:12.350698+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the completed conditional freshness model against immutable final 56-case platform and 1180-test regression evidence; preserve the rejected unpublished change record.
+- **Evidence.** Current component, source-stable website and guarded routes execute successfully; historical committed events are unchanged, and full F-126 acceptance leaves 95 requirements open. [Change record](./runs/changes/2026-10-11-003912-immutable-revocation-acceptance-c8091692.json).
+- **Not claimed.** No public transparency service, independent accuracy, human acceptance, globally current revocation, new endpoint or tag release.
+
+
+### 2026-10-11-003816-offline-status-final-acceptance-134a4e9b
+
+Recorded 2026-10-11T00:38:16.817568+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final 1180-test regression pass and current guarded source after optional offline status implementation; all preserved scope and remaining fixes retained.
+- **Evidence.** All 1180 Python tests pass, 56 actual controls pass on each Mac/Linux platform, stable website evidence and current 184-source route guard pass. [Change record](./runs/changes/2026-10-11-003816-offline-status-final-acceptance-134a4e9b.json).
+- **Not claimed.** 107 complete, 95 open, 70 more full closures needed for target 25. Public transparency, actual devices, blind labels, key recovery, legal and enterprise acceptance remain open.
+
+
+### 2026-10-11-003654-revocation-stable-integration-7844cc9d
+
+Recorded 2026-10-11T00:36:54.259628+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final cached-status component and policy 1.8 to current deployment guards; record successful source-stable website checks after generated-input preparation.
+- **Evidence.** Current browser/accessibility, offline download and security-header checks pass with stable prepared sources; old publication and initial refusal remain distinct. [Change record](./runs/changes/2026-10-11-003654-revocation-stable-integration-7844cc9d.json).
+- **Not claimed.** Engineering evidence only, 107 complete and 95 open; outside users and public witnessed transparency remain unverified.
+
+
+### 2026-10-11-003631-revocation-trust-input-hardening-310159ec
+
+Recorded 2026-10-11T00:36:31.685297+00:00 · Contributor: Codex · change
+
+- **Changed.** Validate canonical supported authority public keys even on missing-status paths; extend actual cross-platform acceptance to 56 cases per platform.
+- **Evidence.** Final Mac and network-isolated Linux controls cover invalid authority material and unsupported algorithms, while preserving unknown status for missing evidence. [Change record](./runs/changes/2026-10-11-003631-revocation-trust-input-hardening-310159ec.json).
+- **Not claimed.** No global status, witnessed public log, human authorship or released tag; 107 complete and 95 open.
+
+
+### 2026-10-11-003449-revocation-generated-site-evidence-9c5555a0
+
+Recorded 2026-10-11T00:34:49.931428+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare versioned 1.8 policy archives and public scope before source-stable website revalidation; preserve the failed stability receipt.
+- **Evidence.** The initial four website checks succeeded, but their source fingerprint changed during preparation and was correctly refused. Subsequent acceptance must execute against stable prepared sources. [Change record](./runs/changes/2026-10-11-003449-revocation-generated-site-evidence-9c5555a0.json).
+- **Not claimed.** This records a guarded build refusal, not a website or release pass. No accuracy or human acceptance claimed.
+
+
+
+
 ### 2026-10-11-003006-publication-pointer-reconciliation-d13eaaf7
 
 Recorded 2026-10-11T00:30:06.842003+00:00 · Contributor: Codex · change

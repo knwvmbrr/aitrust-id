@@ -1,0 +1,47 @@
+{
+  "captured_at": "2026-10-11T00:35:32.476776+00:00",
+  "author": "Codex",
+  "pass": true,
+  "kind": "actual_mac_and_network_isolated_linux_optional_revocation_controls",
+  "controls_per_platform": 56,
+  "platforms": [
+    {
+      "platform": "macOS",
+      "node": "24.19.0",
+      "tests": 56,
+      "pass": true,
+      "log_sha256": "118442c33f581a6cdbe70312c1378340773a55034b91d8b0471c4bd3d098c8e0"
+    },
+    {
+      "platform": "Linux x64",
+      "node": "24.19.0",
+      "network_namespace": "sudo unshare -n",
+      "tests": 56,
+      "pass": true,
+      "log_sha256": "56287486eca75e5227232ffee1f9e7f1e57b5672cf480eb18a69d8e032cfd967",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sources": {
+    "protocol/revocation.cjs": "951ffae38ca69b94c2b93a01d47a0412da6e243db92804d424f75e16305621b2",
+    "scripts/revocation.cjs": "b89aed87d4120960085604feda993573e012cfe303e7191cbcf257e9a02bf605",
+    "tests/offline-revocation.cjs": "6047130192d5e73e6e58e525b7fe108b54ba9533a9b0584fa5ffe59b200891db",
+    "tests/fixtures/offline-revocation-2026/vector.json": "00608ce8597725e1b5d4cec05c149b5807e80d1c0b3e923c4ca25510c5379ae2",
+    "tools/composition/core.cjs": "48f40670d784762a2337ffc1308862c91c43ed0a99f72559b8a2f3611108ae90",
+    "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+    "protocol/group-receipts.cjs": "262a66ed3da5ebac28682b6e6992488d66ae9b2a94561788e6a3eccaa9ec90e8",
+    "scripts/receipt.cjs": "973a2ff458087a0802e27889d33d52c4efc776ab40cfe10d82b526067b095a7d"
+  },
+  "mac_generated_public_signed_vector_verified_unchanged_in_linux": true,
+  "fixture_clock": "explicit recorded historical time; not current status",
+  "actual_public_transparency_service": false,
+  "independent_witnesses": false,
+  "outside_user_acceptance": false,
+  "global_revocation_status": false,
+  "authorship_proven": false,
+  "tag_issuance": false,
+  "new_project_endpoint": false,
+  "private_keys_copied_to_staging": false,
+  "synthetic_test_keys_created_and_removed_on_each_platform": true,
+  "additional_hardening": "Missing-status path still validates canonical, supported authority public key; unsupported algorithms refuse."
+}

@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-10-11T00:38:16.730453+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "python": "3.12",
+  "node": "24.19.0",
+  "tests_passed": 1180,
+  "warnings": 1,
+  "known_warning": "Starlette TestClient httpx deprecation; not a failure",
+  "stdout_sha256": "40c2e619b3fa919c2b188b79946102fd5d720bf6ce6aa099bf2bd1db984b2c52",
+  "actual_mac_and_linux_component_controls": 56,
+  "component_evidence": "runs/2026-10-11-offline-revocation-platforms.json",
+  "complete_requirements": 107,
+  "open_requirements": 95,
+  "target_open_requirements": 25,
+  "independent_accuracy_evidence": false,
+  "physical_phone_acceptance": false,
+  "outside_group_acceptance": false
+}

@@ -6,7 +6,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 |---|---|---|---|
 | TASK-F-001 | Assertion envelope schema, JSON Schema 2020-12 | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-002 | Nine-label taxonomy (plus UNK, PII_REDACTED) | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-004 | Abstention as a first-class state — UNK | [TAG-UNK](scope-delivery.md#tag-unk) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
@@ -101,7 +101,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-110 | Adversarial boundary examples for the use/mention discriminator | [TAG-PS](scope-delivery.md#tag-ps) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-053 | HP / MT / FI fixtures | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-056 | Krippendorff's α published for MT, ≥ 0.55 | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-054 | CI that can actually fail | [WP-RELEASE](scope-delivery.md#wp-release) | 40% · [evidence/fix](scope-progress.md) |
+| TASK-F-054 | CI that can actually fail | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-111 | Evaluator unit tests — the first tests in the repository | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-112 | Schema validation against real service responses, not just schema syntax | [WP-RELEASE](scope-delivery.md#wp-release) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-055 | axe-core accessibility gate, serious and critical at zero | [WP-UX](scope-delivery.md#wp-ux) | 100% · [evidence/fix](scope-progress.md) |
@@ -117,13 +117,13 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-121 | Receipt format binding an artifact hash to observed composition activity | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-122 | Receipt issuance — always a free path, by policy | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-123 | Receipt verification requiring no contact with us | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-124 | Independent RFC 3161 timestamping — we never operate the authority | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-125 | Per-device revocable keys plus a revocation transparency log | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-126 | Freshness model for offline verification against revocation | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-124 | Independent RFC 3161 timestamping — we never operate the authority | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
+| TASK-F-125 | Per-device revocable keys plus a revocation transparency log | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-126 | Freshness model for offline verification against revocation | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-127 | Forgery-cost class as a first-class field on every receipt | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-128 | Anti-coercion rule — a conformant implementation may not make receipt issuance non-optional for the author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-129 | Key custody and recovery for a non-technical author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-130 | Group authorship — four signers or four receipts | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-130 | Group authorship — four signers or four receipts | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-131 | Receipt expiry and algorithm agility — ed25519 will not be safe forever | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-132 | aitrustid.com — landing and reference content, no-JS core | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-133 | Public status table distinguishing supported / experimental / reserved | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |
@@ -151,7 +151,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-149 | MAINTAINERS.md with per-maintainer scope | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-150 | CHANGELOG.md, state.json, docs/, runs/ | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-151 | DECISIONS.md — 15 seeded decisions with dates and reasons | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-152 | Branch protection, CODEOWNERS, required status checks, Dependabot | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 40% · [evidence/fix](scope-progress.md) |
+| TASK-F-152 | Branch protection, CODEOWNERS, required status checks, Dependabot | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-153 | Named ongoing ownership for security response and adapter maintenance | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-060 | image | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-061 | audio | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |

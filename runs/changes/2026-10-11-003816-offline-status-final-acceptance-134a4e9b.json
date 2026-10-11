@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-003816-offline-status-final-acceptance-134a4e9b",
+  "recorded_at": "2026-10-11T00:38:16.817568+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "675fea95ffba2d0095074d893208d099224d5734",
+  "changed": "Record final 1180-test regression pass and current guarded source after optional offline status implementation; all preserved scope and remaining fixes retained.",
+  "proves": "All 1180 Python tests pass, 56 actual controls pass on each Mac/Linux platform, stable website evidence and current 184-source route guard pass.",
+  "limits": "107 complete, 95 open, 70 more full closures needed for target 25. Public transparency, actual devices, blind labels, key recovery, legal and enterprise acceptance remain open.",
+  "scope_ids": [
+    "F-125",
+    "F-126",
+    "N-006"
+  ],
+  "files": {
+    "README.md": "ca5f65d66415cf9c2b0478ed08a4ed418790869a81451c3a45fd6b00d700452f",
+    "docs/offline-receipts.md": "13c3e71d8727b9d4e64a961670f65f501cbcaba8737c9b5c4b66d3f1390c3ada",
+    "docs/offline-revocation-plan.md": "0f2a104cf0b6329da4514eca58f25c465000e71078bcf537f38f7592e33f3002",
+    "docs/offline-revocation.md": "f209b35f44e9b41b626ef7e70b01c3086ef8b4b7521f2f8f710926a518252aae",
+    "docs/scope-25-execution.md": "cabc231d0704d9bf06c8c0053d7a1e6c3c7918cbaec3f8136519181aa2986284",
+    "docs/scope-progress.json": "9ae7a03cd4b1d574d312c2a10f1f686ae09ad1e1cdc20f87f251e890b921cbd7",
+    "docs/scope-progress.md": "87994863ada804b6b30078f3f5bf484a17d3ead9cc473cc19c201595129e4c7a",
+    "docs/scope-task-index.md": "baf398c1286571cc832833fdf28ed1c318b4f92440ab80d723e6aa8a61ade89e",
+    "eval/route-boundaries.json": "c0ab5446abc8407821a5dd93c304b03a649a80c0b323ea0108aa7565b8c91ff9",
+    "protocol/revocation.cjs": "951ffae38ca69b94c2b93a01d47a0412da6e243db92804d424f75e16305621b2",
+    "rfcs/0002-authorship-receipts.md": "56b3cbd6f06234de6d3a45a2dd07b3781d140d18d237bdea7828399c65c8c6ac",
+    "runs/2026-10-11-offline-revocation-initial-refusal.json": "c360f4c86a0ab604a572cb14bdcdb4c1709058ee3e004ca73fe49d14468b6bce",
+    "runs/2026-10-11-offline-revocation-platforms.json": "71a543612bd6e6e893395dffbe1dabc1f08742de56483034e1229f3d81e4bd8e",
+    "runs/2026-10-11-offline-revocation-scope.json": "58bf2f7e389c8fea4e55135c09d7c80a07122dbd17e1b483eb8d3c0a459f0c85",
+    "runs/2026-10-11-revocation-build-input-refusal.json": "bd711d6f34c39d6d5914f080f011cc36785ead857eb322e0d61046855ad7ea98",
+    "runs/2026-10-11-revocation-current-boundaries.json": "71a923939d1edba01f52231f129b0312b4b8ed1e4467268f073b48508386b936",
+    "runs/2026-10-11-revocation-final-regressions.json": "a404114c7d81100f9497b19f6f524b3d81087a2b07b0139bb3ba439af8088a92",
+    "runs/2026-10-11-revocation-website-stable.json": "2727bdc42a1cb3849607fc6210016d1249ba2f29babb9ebf7c5a4d729f51e697",
+    "scripts/revocation.cjs": "b89aed87d4120960085604feda993573e012cfe303e7191cbcf257e9a02bf605",
+    "scripts/verify-route-boundaries.py": "64ea7594432cbf88c3097e662f63bf8656bc62596aa61a79b9fb809a8257a6ab",
+    "site/public/reference/policies/access/v1.8.txt": "3ad4eff8a7549d308142d802e8bc904f102205d233b9732212f18ac6289c5e31",
+    "site/public/reference/policies/community/v1.8.txt": "03ac384cfa8a86f59c1a4cdbe268afde6888b72043141aa0d4754e43b95d5068",
+    "site/public/reference/policies/contributing/v1.8.txt": "33e338a80bce74f655d55a501af4ae856094fb0c2d9ed616ddda3fea2db0e20e",
+    "site/public/reference/policies/governance/v1.8.txt": "99dd3c2660dd0ffe31d1f5d3b4163561c9a95deb918483676b1e53dcd40b9f51",
+    "site/public/reference/policies/licenses/v1.8.txt": "8e9732cdd3791271c066e6e8e17e27eea280490d7abe0b267b43b8f4993fcf28",
+    "site/public/reference/policies/privacy/v1.8.txt": "221ef600575462a8488c07174e9dd9d030018afebdf68694fa04aa7189358775",
+    "site/public/reference/policies/security/v1.8.txt": "ebd0a3c193a979211c9986378c9272dcc016d80ca44e00c3826884928e9bd261",
+    "site/public/reference/policies/terms/v1.8.txt": "1148af443a17cdf4721873135e1a703fdc49784c7de0be440863818205b791ba",
+    "site/public/reference/policies/validation/v1.8.txt": "f47e92eaa04471f4ea10ac160b2927b9f40b9cde06bd6d5a7214bd0718df407b",
+    "site/public/reference/policy-access.txt": "3ad4eff8a7549d308142d802e8bc904f102205d233b9732212f18ac6289c5e31",
+    "site/public/reference/policy-community.txt": "03ac384cfa8a86f59c1a4cdbe268afde6888b72043141aa0d4754e43b95d5068",
+    "site/public/reference/policy-contributing.txt": "33e338a80bce74f655d55a501af4ae856094fb0c2d9ed616ddda3fea2db0e20e",
+    "site/public/reference/policy-governance.txt": "99dd3c2660dd0ffe31d1f5d3b4163561c9a95deb918483676b1e53dcd40b9f51",
+    "site/public/reference/policy-licenses.txt": "8e9732cdd3791271c066e6e8e17e27eea280490d7abe0b267b43b8f4993fcf28",
+    "site/public/reference/policy-privacy.txt": "221ef600575462a8488c07174e9dd9d030018afebdf68694fa04aa7189358775",
+    "site/public/reference/policy-security.txt": "ebd0a3c193a979211c9986378c9272dcc016d80ca44e00c3826884928e9bd261",
+    "site/public/reference/policy-terms.txt": "1148af443a17cdf4721873135e1a703fdc49784c7de0be440863818205b791ba",
+    "site/public/reference/policy-validation.txt": "f47e92eaa04471f4ea10ac160b2927b9f40b9cde06bd6d5a7214bd0718df407b",
+    "site/public/reference/public-scope.json": "75a18ac1eec000d62d70514b7de02824673749fd081c66fe8f75a8e5c89e1f93",
+    "site/scripts/render-reference.mjs": "5d34b7272164367d8ffee6ae2296ec3da09f7dce7956ebf53f080fcc6f469456",
+    "site/src/policies.js": "dc23aace197ea94237c1290939341a3a6d37716f5cab8db67b413fbe2526fd2b",
+    "site/src/public-scope.json": "75a18ac1eec000d62d70514b7de02824673749fd081c66fe8f75a8e5c89e1f93",
+    "state.json": "c7e5737a815885132eddedee2630300a9db594c02558d536d250ce3c9c3544ba",
+    "tests/fixtures/offline-revocation-2026/vector.json": "00608ce8597725e1b5d4cec05c149b5807e80d1c0b3e923c4ca25510c5379ae2",
+    "tests/offline-revocation.cjs": "6047130192d5e73e6e58e525b7fe108b54ba9533a9b0584fa5ffe59b200891db",
+    "tests/test_offline_revocation.py": "4f638ed0779ef307714ce1b0c23b90a4adc62eede6e763c409dcb0f1ce7ea9d2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-revocation-final-regressions.json",
+      "sha256": "a404114c7d81100f9497b19f6f524b3d81087a2b07b0139bb3ba439af8088a92"
+    },
+    {
+      "path": "runs/2026-10-11-revocation-current-boundaries.json",
+      "sha256": "71a923939d1edba01f52231f129b0312b4b8ed1e4467268f073b48508386b936"
+    },
+    {
+      "path": "runs/2026-10-11-offline-revocation-platforms.json",
+      "sha256": "71a543612bd6e6e893395dffbe1dabc1f08742de56483034e1229f3d81e4bd8e"
+    },
+    {
+      "path": "runs/2026-10-11-revocation-website-stable.json",
+      "sha256": "2727bdc42a1cb3849607fc6210016d1249ba2f29babb9ebf7c5a4d729f51e697"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T00:38:17.285472+00:00"
+    }
+  ]
+}
