@@ -33,6 +33,20 @@ extension performs no behavioral capture.
 | `sig.corpus_contradiction.v1` | FI | NLI contradiction against retrieved local passage | `behavioral` | Requires corpus |
 | `presidio.entity.v1` | PII_REDACTED | Presidio entity recognition | n/a | Runs before any evaluation |
 
+### Independently selected offline observations
+
+[Package-name proximity](../docs/package-proximity.md) implements the supplied
+ranked-reference/edit-distance observation for F-013. Ranking integrity does not
+establish popularity, freshness or maliciousness. It is absent from the PS runtime.
+
+[Language observations](../docs/language-observations.md) independently measure
+caller-selected uncertainty context, literal urgency/directive density and local
+source markers around supported authority phrases. These are explicitly bounded
+English lexical observations, not inferred intention, falsehood or verified
+attribution. Their sources are bound as reference implementations in the machine
+catalogue. HP and MT remain unavailable. The proposed signal IDs and tag mappings
+have not gained conformance acceptance or independent accuracy evidence.
+
 ### Cost to defeat
 
 Signals should be assessed by measured accuracy and by **cost to defeat** over time. One ladder, two

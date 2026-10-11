@@ -51,6 +51,8 @@ jobs:
       - run: python scripts/verify-accountability.py
       - run: python scripts/verify-decisions.py
       - run: python scripts/verify-signals.py --check
+      - name: Exercise independent offline observation CLIs without executing inspected programs
+        run: python scripts/verify-independent-observations.py
       - run: python scripts/verify-project-controls.py
       - name: Verify unsigned observed runtime SBOM identity
         run: python scripts/verify-runtime-sbom.py

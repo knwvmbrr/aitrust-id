@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-10-11T13:46:44.181589+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "{python}",
+    "-m",
+    "pytest",
+    "tests",
+    "--ignore=tests/test_route_boundaries.py",
+    "-q"
+  ],
+  "exit_status": 0,
+  "stdout_sha256": "9bde675314ef011e6ded78958c6aee095b3857dad33dc2b4deda075df5250feb",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary": "1380 passed, 1 warning in 46.55s",
+  "independent_accuracy_evidence": false,
+  "python_version": "3.12.14",
+  "route_boundaries_excluded_for_separate_check": true,
+  "current_payload_fix_included": false
+}

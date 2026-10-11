@@ -1681,27 +1681,41 @@
         "id": "F-012",
         "kind": "requirement",
         "title": "sig.credential_exfil.v1 — reads a secret path, writes to a network sink",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T13:43:26.933854+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded independently selected offline reference component and actual Mac/Linux CLI controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Specify secret-path-to-sink dataflow and package-reference provenance as separately bounded PS enhancements; implement positive/benign/adversarial controls and validate each before adding it to the tag.",
+        "next_fix": "Complete the proposed Semgrep/use-mention integration contract and independent credential-flow validation before any PS mapping. The separate bounded Python static-flow observation now runs on Mac and isolated Linux; unknown syntax is explicitly unavailable.",
         "next_owner": "Codex",
         "evidence": [
-          "runs/2026-10-09-scope-completion-checks.json"
+          "runs/2026-10-09-scope-completion-checks.json",
+          "tools/credential_flow.py",
+          "scripts/credential-flow.py",
+          "tests/test_credential_flow.py",
+          "docs/credential-flow.md",
+          "scripts/verify-independent-observations.py",
+          "runs/2026-10-11-independent-observations-mac-final.json",
+          "runs/2026-10-11-independent-observations-linux-final.json",
+          "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+          "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open.",
         "required_acceptance": [
-          "Specify secret-path-to-sink dataflow and package-reference provenance as separately bounded PS enhancements; implement positive/benign/adversarial controls and validate each before adding it to the tag."
+          "Complete the proposed Semgrep/use-mention integration contract and independent credential-flow validation before any PS mapping. The separate bounded Python static-flow observation now runs on Mac and isolated Linux; unknown syntax is explicitly unavailable."
         ],
         "queue": "open"
       }
@@ -1734,27 +1748,41 @@
         "id": "F-013",
         "kind": "requirement",
         "title": "sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T13:43:26.933854+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded independently selected offline reference component and actual Mac/Linux CLI controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Specify secret-path-to-sink dataflow and package-reference provenance as separately bounded PS enhancements; implement positive/benign/adversarial controls and validate each before adding it to the tag.",
+        "next_fix": "Obtain an independently supported ranked package snapshot, validate the recommendation/use-mention and benign-similarity boundaries, and complete held-out enhancement acceptance before any PS mapping. The offline ranking/import/edit-distance component is functioning.",
         "next_owner": "Codex",
         "evidence": [
-          "runs/2026-10-09-scope-completion-checks.json"
+          "runs/2026-10-09-scope-completion-checks.json",
+          "tools/package_proximity.py",
+          "scripts/package-proximity.py",
+          "tests/test_package_proximity.py",
+          "docs/package-proximity.md",
+          "scripts/verify-independent-observations.py",
+          "runs/2026-10-11-independent-observations-mac-final.json",
+          "runs/2026-10-11-independent-observations-linux-final.json",
+          "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+          "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open.",
         "required_acceptance": [
-          "Specify secret-path-to-sink dataflow and package-reference provenance as separately bounded PS enhancements; implement positive/benign/adversarial controls and validate each before adding it to the tag."
+          "Obtain an independently supported ranked package snapshot, validate the recommendation/use-mention and benign-similarity boundaries, and complete held-out enhancement acceptance before any PS mapping. The offline ranking/import/edit-distance component is functioning."
         ],
         "queue": "open"
       }
@@ -2016,27 +2044,41 @@
         "id": "F-018",
         "kind": "requirement",
         "title": "sig.hedge_collapse.v1 — hedging absent where uncertainty is expected",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T13:43:26.933854+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded independently selected offline reference component and actual Mac/Linux CLI controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.hedge_collapse.v1 — hedging absent where uncertainty is expected. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
+        "next_fix": "Validate contextual hedge/word-sense interpretation and complete the full HP integration acceptance. The English reference observation works for explicitly caller-selected, hash-bound expected-uncertainty spans; expectation is not inferred.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "tools/language_observations.py",
+          "scripts/language-observations.py",
+          "tests/test_language_observations.py",
+          "docs/language-observations.md",
+          "scripts/verify-independent-observations.py",
+          "runs/2026-10-11-independent-observations-mac-final.json",
+          "runs/2026-10-11-independent-observations-linux-final.json",
+          "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+          "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open.",
         "required_acceptance": [
-          "Deliver sig.hedge_collapse.v1 — hedging absent where uncertainty is expected. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+          "Validate contextual hedge/word-sense interpretation and complete the full HP integration acceptance. The English reference observation works for explicitly caller-selected, hash-bound expected-uncertainty spans; expectation is not inferred."
         ],
         "queue": "open"
       }
@@ -2069,27 +2111,41 @@
         "id": "F-019a",
         "kind": "requirement",
         "title": "sig.urgency_frame.v1 — time-pressure lexicon plus imperative density",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T13:43:26.933854+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded independently selected offline reference component and actual Mac/Linux CLI controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.urgency_frame.v1 — time-pressure lexicon plus imperative density. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
+        "next_fix": "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "tools/language_observations.py",
+          "scripts/language-observations.py",
+          "tests/test_language_observations.py",
+          "docs/language-observations.md",
+          "scripts/verify-independent-observations.py",
+          "runs/2026-10-11-independent-observations-mac-final.json",
+          "runs/2026-10-11-independent-observations-linux-final.json",
+          "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+          "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open.",
         "required_acceptance": [
-          "Deliver sig.urgency_frame.v1 — time-pressure lexicon plus imperative density. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+          "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
         ],
         "queue": "open"
       }
@@ -2175,27 +2231,41 @@
         "id": "F-019c",
         "kind": "requirement",
         "title": "sig.authority_appeal.v1 — unattributed appeals to expertise or consensus",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T13:43:26.933854+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded independently selected offline reference component and actual Mac/Linux CLI controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.authority_appeal.v1 — unattributed appeals to expertise or consensus. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
+        "next_fix": "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "tools/language_observations.py",
+          "scripts/language-observations.py",
+          "tests/test_language_observations.py",
+          "docs/language-observations.md",
+          "scripts/verify-independent-observations.py",
+          "runs/2026-10-11-independent-observations-mac-final.json",
+          "runs/2026-10-11-independent-observations-linux-final.json",
+          "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+          "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open.",
         "required_acceptance": [
-          "Deliver sig.authority_appeal.v1 — unattributed appeals to expertise or consensus. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+          "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent."
         ],
         "queue": "open"
       }
