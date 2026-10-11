@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import pwd
+import re
 import subprocess
 import sys
 
@@ -16,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from protocol.reports import write_report
 
+PROGRESS = []
+SQL_DIAGNOSTIC = {'operation_index':0,'sqlstate':None}
 SCHEMA = ROOT/'deploy/research/metadata-development.sql'
 LOCAL = {'schema_version':1,'purpose':'PS_preview_usability_and_failure_review',
     'tag':'PS','method_version':'context-v6','reported_result':'pattern_found',
@@ -51,15 +54,18 @@ def main():
     paths=['deploy/research/metadata-development.sql','scripts/verify-metadata-store.py','scripts/metadata-store-sandbox.py',
         'site/src/research-feedback.js','protocol/reports.py']
     def inventory():return {p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths}
-    before=inventory();cases=[]
-    command=['/usr/lib/postgresql/18/bin/psql','-XqAt','--set','ON_ERROR_STOP=1',
+    before=inventory();cases=PROGRESS;cases.clear()
+    command=['/usr/lib/postgresql/18/bin/psql','-XqAt','--set','ON_ERROR_STOP=1','--set','VERBOSITY=verbose',
         '--host',str(directory/'socket'),'--port','55443','--dbname','postgres',
         '--username',pwd.getpwuid(os.geteuid()).pw_name]
     environment={'PATH':os.defpath,'LANG':'C.UTF-8',
         'PGOPTIONS':'-c statement_timeout=5000 -c lock_timeout=3000 -c standard_conforming_strings=on'}
     def sql(query, good=True, role=None):
+        SQL_DIAGNOSTIC['operation_index']+=1;SQL_DIAGNOSTIC['sqlstate']=None
         if role:query='SET ROLE '+role+';\n'+query
         result=subprocess.run(command,input=query.encode(),capture_output=True,env=environment,timeout=15)
+        code=re.search(rb'(?:ERROR|FATAL):[ \t]+([0-9A-Z]{5}):',result.stderr[:65536])
+        SQL_DIAGNOSTIC['sqlstate']=code.group(1).decode('ascii') if code else None
         if len(result.stdout)+len(result.stderr)>65536 or (result.returncode==0)!=good:
             raise ValueError('Synthetic database control failed; inspect private diagnostics.')
         if b'PRIVATE_METADATA_CANARY' in result.stdout+result.stderr:
@@ -172,6 +178,10 @@ def main():
 
 if __name__=='__main__':
     try:main()
-    except (AssertionError,ValueError,OSError,subprocess.SubprocessError):
+    except (AssertionError,ValueError,OSError,subprocess.SubprocessError) as error:
+        # Fixed names describe completed synthetic controls, never supplied JSON
+        # or SQL diagnostics. The parent binds output hashes and teardown state.
+        print(json.dumps({'pass':False,'completed_cases':[row['case'] for row in PROGRESS],
+            'failure_kind':type(error).__name__,'sql_diagnostic':dict(SQL_DIAGNOSTIC)}))
         print('Synthetic metadata-store verification failed; no production acceptance.',file=sys.stderr)
         raise SystemExit(1)

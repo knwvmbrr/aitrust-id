@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T16:28:30.250947+00:00",
+  "updated": "2026-10-11T16:39:37.051076+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1031,7 +1031,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T16:28:30.250947+00:00",
+  "updated_at": "2026-10-11T16:39:37.051076+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1473,10 +1473,10 @@
     "status": "synthetic_only_component",
     "implemented_by": "Codex",
     "contract": "docs/metadata-storage.md",
-    "actual_linux_evidence": "runs/2026-10-11-metadata-store-unicode-linux.json",
+    "actual_linux_evidence": "runs/2026-10-11-metadata-store-diagnostics-linux.json",
     "actual_postgresql_controls": 39,
     "all_supported_enum_combinations": 80,
-    "boundary_tests": 14,
+    "boundary_tests": 22,
     "participant_collection_active": false,
     "new_endpoints": 0,
     "production_database_changed": false,
@@ -1484,9 +1484,10 @@
     "training_or_anomaly_pipeline_running": false,
     "requirements_closed": 0,
     "publication_pending": true,
-    "full_python_tests": 1559,
-    "full_python_evidence": "runs/2026-10-11-metadata-storage-full-python-current.json",
+    "full_python_tests": 1567,
+    "full_python_evidence": "runs/2026-10-11-metadata-storage-diagnostics-python.json",
     "current_capabilities": "runs/2026-10-11-metadata-storage-current-capabilities.json",
-    "current_boundaries": "runs/2026-10-11-metadata-storage-boundaries.json"
+    "current_boundaries": "runs/2026-10-11-metadata-storage-diagnostics-boundaries.json",
+    "actual_failure_evidence": "runs/2026-10-11-metadata-storage-bounded-diagnostics.json"
   }
 }

@@ -17,7 +17,11 @@ or external service is used. The helper creates its own private temporary cluste
 uses a Unix socket with TCP disabled, executes the controls, confirms shutdown and
 removes the cluster. Only then does it write
 `output/verification/metadata-store.json`. If shutdown cannot be confirmed, it
-keeps the private directory and reports failure. It never deletes an active
+keeps the private directory and reports failure. A failed database/control run
+still writes a bounded `pass: false` evidence file with its stage, completed
+check names, an operation index/SQLSTATE when available, output hashes and
+shutdown/removal state. Raw input, SQL and server
+logs are not uploaded. Missing reports remain failures. It never deletes an active
 cluster or touches the existing application database. It does not install
 PostgreSQL or change your system service configuration.
 
@@ -60,7 +64,7 @@ The row-copy test is not a complete backup or replacement-host recovery test.
 
 ## Current evidence and remaining work
 
-[39 actual Linux controls](../runs/2026-10-11-metadata-store-unicode-linux.json)
+[39 actual Linux controls](../runs/2026-10-11-metadata-store-diagnostics-linux.json)
 include all 80 supported answer combinations. The disposable helper runs as an
 ordinary Linux user and records successful shutdown/removal before publication.
 The source, database guards and [boundary controls](../tests/test_metadata_store.py)
@@ -74,3 +78,7 @@ proxy/provider logging; demonstrate encrypted backup expiry and complete
 replacement-host recovery; update the effective notice; then have the owner
 operate it. No requirement for a running pilot, enterprise audit service or
 training/anomaly pipeline is completed by this storage component.
+
+An [actual injected SQL failure](../runs/2026-10-11-metadata-storage-bounded-diagnostics.json)
+verifies that failure evidence survives successful cleanup; failed checks are
+never converted into passing storage or accuracy evidence.

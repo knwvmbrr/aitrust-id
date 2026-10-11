@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-163937-metadata-reviewed-python-366ca120
+
+Recorded 2026-10-11T16:39:37.204599+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded full-suite acceptance for bounded failure diagnostics and refreshed actual state timestamps.
+- **Evidence.** 1567 Python checks pass with execution sources unchanged; the stored failure proof remains a deliberately failing database outcome. [Change record](./runs/changes/2026-10-11-163937-metadata-reviewed-python-366ca120.json).
+- **Not claimed.** No hosted final-head pass, new full closure, real intake or independent accuracy is claimed.
+
+
+### 2026-10-11-163826-metadata-failure-evidence-f8cd3103
+
+Recorded 2026-10-11T16:38:26.178234+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve bounded PostgreSQL failure evidence after cleanup, including completed cases, operation index, SQLSTATE, source/output hashes and teardown status.
+- **Evidence.** All 39 current SQL controls pass. A real injected missing-function failure writes a failing artifact with operation 2 / SQLSTATE 42883 after confirmed shutdown/removal. 22 focused controls reject malformed diagnostics and unsafe boundaries. [Change record](./runs/changes/2026-10-11-163826-metadata-failure-evidence-f8cd3103.json).
+- **Not claimed.** Raw SQL, server logs, worker diagnostics and participant content are not published. No intake, full recovery, independent accuracy or new full requirement closure is claimed.
+
+
 ### 2026-10-11-162830-metadata-python-acceptance-1e84e9ed
 
 Recorded 2026-10-11T16:28:30.324939+00:00 · Contributor: Codex · change

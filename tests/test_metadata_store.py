@@ -67,7 +67,10 @@ def test_actual_cli_refusal_has_no_traceback_or_application_content(script):
     elif sys.platform=='linux' and os.geteuid()!=0:
         pytest.skip('The real Linux runner is exercised by the actual database gate.')
     result=subprocess.run(argv,cwd=ROOT,capture_output=True,timeout=5)
-    assert result.returncode==1 and not result.stdout
+    assert result.returncode==1
+    if script=='verify-metadata-store.py':
+        failure=json.loads(result.stdout);assert failure['pass'] is False and failure['completed_cases']==[]
+    else:assert not result.stdout
     assert b'Traceback' not in result.stderr and b'PRIVATE_METADATA_CANARY' not in result.stderr
 
 
@@ -99,3 +102,36 @@ def test_shutdown_confirmation_controls_directory_retention(tmp_path,monkeypatch
         assert any(call[-1]=='status' for call in calls)
     finally:
         if directory.exists():shutil.rmtree(directory)
+
+
+def test_failure_packet_bounds_progress_and_never_echoes_diagnostics():
+    module=load('metadata_failure_packet','scripts/metadata-store-sandbox.py')
+    raw=b'{"pass":false,"completed_cases":["valid_insert_and_idempotent_duplicate"]}'
+    result=subprocess.CompletedProcess([],1,raw,b'PRIVATE_METADATA_CANARY invalid statement')
+    record=module.failure_record('verification',result)
+    assert record['pass'] is False and record['failure_stage']=='verification'
+    assert record['completed_cases']==['valid_insert_and_idempotent_duplicate']
+    assert 'PRIVATE_METADATA_CANARY' not in json.dumps(record)
+    assert len(record['stderr_sha256'])==64 and record['worker_exit_status']==1
+
+
+@pytest.mark.parametrize('raw',[b'{"pass":false,"completed_cases":["PRIVATE_METADATA_CANARY"]}',b'PRIVATE_METADATA_CANARY'])
+def test_unknown_worker_output_is_only_hashed(raw):
+    module=load('metadata_failure_unknown','scripts/metadata-store-sandbox.py')
+    record=module.failure_record('verification',subprocess.CompletedProcess([],1,raw,b'private'))
+    assert record['completed_cases']==[] and 'PRIVATE_METADATA_CANARY' not in json.dumps(record)
+
+
+def test_missing_source_is_explicit_in_failure_snapshot(tmp_path,monkeypatch):
+    module=load('metadata_missing_failure_source','scripts/metadata-store-sandbox.py')
+    monkeypatch.setattr(module,'ROOT',tmp_path)
+    record=module.failure_record('initialization')
+    assert record['pass'] is False and all(value is None for value in record['source_snapshot_at_failure'].values())
+
+
+@pytest.mark.parametrize('diagnostic',[{'operation_index':True,'sqlstate':'42883'},{'operation_index':1,'sqlstate':'PRIVATE_METADATA_CANARY'},{'operation_index':1001,'sqlstate':'42883'},{'operation_index':1,'sqlstate':{'text':'private'}}])
+def test_failure_packet_rejects_unbounded_sql_diagnostics(diagnostic):
+    module=load('metadata_failure_diagnostic_bounds','scripts/metadata-store-sandbox.py')
+    raw=json.dumps({'pass':False,'completed_cases':[],'sql_diagnostic':diagnostic}).encode()
+    record=module.failure_record('verification',subprocess.CompletedProcess([],1,raw,b''))
+    assert 'sql_diagnostic' not in record and 'PRIVATE_METADATA_CANARY' not in json.dumps(record)

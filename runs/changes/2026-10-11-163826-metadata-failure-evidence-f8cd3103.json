@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-163826-metadata-failure-evidence-f8cd3103",
+  "recorded_at": "2026-10-11T16:38:26.178234+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "37206be034b753f0c1a7c3e98554df5e76a95be4",
+  "changed": "Preserve bounded PostgreSQL failure evidence after cleanup, including completed cases, operation index, SQLSTATE, source/output hashes and teardown status.",
+  "proves": "All 39 current SQL controls pass. A real injected missing-function failure writes a failing artifact with operation 2 / SQLSTATE 42883 after confirmed shutdown/removal. 22 focused controls reject malformed diagnostics and unsafe boundaries.",
+  "limits": "Raw SQL, server logs, worker diagnostics and participant content are not published. No intake, full recovery, independent accuracy or new full requirement closure is claimed.",
+  "scope_ids": [
+    "N-011",
+    "F-044",
+    "F-045"
+  ],
+  "files": {
+    "scripts/metadata-store-sandbox.py": "3e08e5c3000d95ba65be31ffbcfcffa80009c8d37758a2360395c7666f717f9d",
+    "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
+    "tests/test_metadata_store.py": "3616ec0a1d03e719dfd81aaf4c6f5c6471c8830e1353486dfdbc9ad4eebbd840",
+    "docs/metadata-storage.md": "2977011fdc150ec1370283c43939caacf58616c4594a99a6c7c9bb412a088e30",
+    "eval/route-boundaries.json": "f4a6c4e29596b1bf8b0f7059ea9a7eb892375e3ff072ed2908effa2e9c4c413b",
+    "state.json": "5f9ee2146bdad0eb179051f631ea96a6c7dc56b7a9a1103bb8bfc323d17d5ba0",
+    "runs/2026-10-11-metadata-store-failure-controls-linux.json": "bcf50da4be378d697a8b1e986236891fd04c2220991927c6b14a8829a5970ba5",
+    "runs/2026-10-11-metadata-storage-failure-retention.json": "32a16c284da1845617d6416f836ea7991e04f25bef7e92a7e6e293b45ac35927",
+    "runs/2026-10-11-metadata-store-diagnostics-linux.json": "9a1d341a05cf136dd18a0085fdc6bc4ae3cbc51dcbc286481169828ccdbf129b",
+    "runs/2026-10-11-metadata-storage-bounded-diagnostics.json": "2282f8dfc8fa5cfd55249d6f6432023fe10bc7e9b751cfaf539a63b9ba549a85",
+    "runs/2026-10-11-metadata-storage-diagnostics-boundaries.json": "c46e7e1e5958015a4b12f00624b6947ab09b0fc95416eb75697aa0d755f74acb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-metadata-store-diagnostics-linux.json",
+      "sha256": "9a1d341a05cf136dd18a0085fdc6bc4ae3cbc51dcbc286481169828ccdbf129b"
+    },
+    {
+      "path": "runs/2026-10-11-metadata-storage-bounded-diagnostics.json",
+      "sha256": "2282f8dfc8fa5cfd55249d6f6432023fe10bc7e9b751cfaf539a63b9ba549a85"
+    },
+    {
+      "path": "runs/2026-10-11-metadata-storage-diagnostics-boundaries.json",
+      "sha256": "c46e7e1e5958015a4b12f00624b6947ab09b0fc95416eb75697aa0d755f74acb"
+    }
+  ],
+  "checks": []
+}
