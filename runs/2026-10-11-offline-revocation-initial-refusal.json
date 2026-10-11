@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-11T00:31:27.559738+00:00",
+  "author": "Codex",
+  "initial_pass": false,
+  "first_checks": 53,
+  "first_passed": 52,
+  "first_failed": 1,
+  "failure": "Synthetic receipt test requested issuance with an observation still idle; existing receipt validator correctly refused Unsupported observation claim.",
+  "correction": "Test now starts and pauses a real composition session before issuing its synthetic empty-artifact receipt. No issuance guard relaxed.",
+  "corrected_evidence": "runs/2026-10-11-offline-revocation-platforms.json",
+  "pass": true
+}

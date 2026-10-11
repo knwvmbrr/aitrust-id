@@ -43,6 +43,8 @@ PATTERNS += ('scripts/independent_timestamp.py', 'scripts/timestamp-artifact.py'
              'tests/test_independent_timestamp.py', 'tests/fixtures/timestamp-freetsa-2026/*')
 PATTERNS += ('scripts/group-receipt.cjs', 'tests/group-receipts.cjs',
              'tests/test_group_receipts.py', 'tests/fixtures/group-receipt-2026/*')
+PATTERNS += ('scripts/revocation.cjs', 'tests/offline-revocation.cjs',
+             'tests/test_offline_revocation.py', 'tests/fixtures/offline-revocation-2026/*')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

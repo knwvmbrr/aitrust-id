@@ -1,0 +1,75 @@
+{
+  "captured_at": "2026-10-11T00:39:12.306010+00:00",
+  "author": "Codex",
+  "pass": false,
+  "kind": "uncommitted_change_evidence_refusal",
+  "failure": "Updating the 54-case evidence file to the 56-case final execution invalidated its hash in an earlier unpublished change event. The change gate refused before commit or push.",
+  "rejected_uncommitted_event": {
+    "schema_version": 1,
+    "id": "2026-10-11-003214-optional-revocation-freshness-66e3758b",
+    "recorded_at": "2026-10-11T00:32:14.159364+00:00",
+    "author": "Codex",
+    "kind": "change",
+    "claim_level": "engineering_only",
+    "independent_release_validated": false,
+    "source_base": "797fa55d2c5e71ee56f704e254bcb93cf02f9fdb",
+    "changed": "Implement optional signed cached revocation history, separately chosen freshness policy and single/group receipt status checks; close the full F-126 freshness-model component and preserve public-transparency F-125 acceptance.",
+    "proves": "54 actual Mac and 54 network-isolated Linux controls pass, including unchanged signed cross-platform vector, stale/absent status, tampering, rollback, permanent revocation and actual CLI workflows.",
+    "limits": "107 requirements complete, 95 open. No public witnessed transparency, outside-user recovery, global/current status, authorship, new endpoint or tag release; personal tag workflows remain independent.",
+    "scope_ids": [
+      "F-125",
+      "F-126"
+    ],
+    "files": {
+      "README.md": "ca5f65d66415cf9c2b0478ed08a4ed418790869a81451c3a45fd6b00d700452f",
+      "docs/offline-receipts.md": "13c3e71d8727b9d4e64a961670f65f501cbcaba8737c9b5c4b66d3f1390c3ada",
+      "docs/offline-revocation-plan.md": "0f2a104cf0b6329da4514eca58f25c465000e71078bcf537f38f7592e33f3002",
+      "docs/offline-revocation.md": "f209b35f44e9b41b626ef7e70b01c3086ef8b4b7521f2f8f710926a518252aae",
+      "docs/scope-25-execution.md": "cabc231d0704d9bf06c8c0053d7a1e6c3c7918cbaec3f8136519181aa2986284",
+      "docs/scope-progress.json": "9ae7a03cd4b1d574d312c2a10f1f686ae09ad1e1cdc20f87f251e890b921cbd7",
+      "docs/scope-progress.md": "87994863ada804b6b30078f3f5bf484a17d3ead9cc473cc19c201595129e4c7a",
+      "docs/scope-task-index.md": "baf398c1286571cc832833fdf28ed1c318b4f92440ab80d723e6aa8a61ade89e",
+      "protocol/revocation.cjs": "3b55add6e48f02c3b54de888ba03be15a9d8d527c2a84c41832de6af12892607",
+      "rfcs/0002-authorship-receipts.md": "56b3cbd6f06234de6d3a45a2dd07b3781d140d18d237bdea7828399c65c8c6ac",
+      "runs/2026-10-11-offline-revocation-initial-refusal.json": "c360f4c86a0ab604a572cb14bdcdb4c1709058ee3e004ca73fe49d14468b6bce",
+      "runs/2026-10-11-offline-revocation-platforms.json": "c46a61953c83c60c88e19b6e12ec499c36689543d468ecbc15878955d5334c22",
+      "runs/2026-10-11-offline-revocation-scope.json": "58bf2f7e389c8fea4e55135c09d7c80a07122dbd17e1b483eb8d3c0a459f0c85",
+      "scripts/revocation.cjs": "b89aed87d4120960085604feda993573e012cfe303e7191cbcf257e9a02bf605",
+      "scripts/verify-route-boundaries.py": "64ea7594432cbf88c3097e662f63bf8656bc62596aa61a79b9fb809a8257a6ab",
+      "site/scripts/render-reference.mjs": "5d34b7272164367d8ffee6ae2296ec3da09f7dce7956ebf53f080fcc6f469456",
+      "site/src/policies.js": "dc23aace197ea94237c1290939341a3a6d37716f5cab8db67b413fbe2526fd2b",
+      "state.json": "1d2127b809e16162dcc7738096e3cdafca6343d6fb3f68b936d0c92ac81e74ee",
+      "tests/fixtures/offline-revocation-2026/vector.json": "00608ce8597725e1b5d4cec05c149b5807e80d1c0b3e923c4ca25510c5379ae2",
+      "tests/offline-revocation.cjs": "d05eefbf5546a2a4f6b2cca918f9e52bae321a56814cc85ecb2b9ac8bee3c580",
+      "tests/test_offline_revocation.py": "3756249aadb1dcd86bcacfc49528ac50c1c812efb080d95d1eeb400517328065"
+    },
+    "evidence": [
+      {
+        "path": "runs/2026-10-11-offline-revocation-platforms.json",
+        "sha256": "c46a61953c83c60c88e19b6e12ec499c36689543d468ecbc15878955d5334c22"
+      },
+      {
+        "path": "runs/2026-10-11-offline-revocation-initial-refusal.json",
+        "sha256": "c360f4c86a0ab604a572cb14bdcdb4c1709058ee3e004ca73fe49d14468b6bce"
+      },
+      {
+        "path": "runs/2026-10-11-offline-revocation-scope.json",
+        "sha256": "58bf2f7e389c8fea4e55135c09d7c80a07122dbd17e1b483eb8d3c0a459f0c85"
+      }
+    ],
+    "checks": [
+      {
+        "argv": [
+          "python3",
+          "scripts/verify-accountability.py"
+        ],
+        "exit_status": 0,
+        "pass": true,
+        "finished_at": "2026-10-11T00:32:14.488180+00:00"
+      }
+    ]
+  },
+  "correction": "Preserve this rejected draft, remove only its unpublished changelog entry, and create a new event against immutable final evidence. Previously committed events remain unchanged.",
+  "previous_54_case_execution_logs_retained_privately": true,
+  "guard_waived": false
+}

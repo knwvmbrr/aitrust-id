@@ -32,7 +32,7 @@ The result separates these facts:
 - **Record integrity:** the signature matches the public key you selected.
 - **Artifact binding:** the supplied file matches the signed hash and length.
 - **Expiry:** within, before or after the declared local-clock window.
-- **Revocation:** unchecked. No transparency log or fresh status evidence exists.
+- **Revocation:** unchecked. The separate optional selected-log tool can assess cached status under your chosen policy; it does not operate public transparency.
 - **Authorship:** unestablished. Invented events can be signed too.
 
 `certified_valid` always remains false. An expired receipt can still have an
@@ -91,7 +91,9 @@ revocation and unknown authorship explicitly.
 The optional [group agreement tool](group-receipts.md) lets several selected keys sign the same artifact-bound record independently. It does not prove group authorship or distinct people.
 
 RFC-0002 remains unadopted as a standard.
-Revocation transparency, offline freshness, institutional anti-coercion
-conformance, non-technical key recovery, group receipts and PA/FA/IV validation
+Public revocation transparency, institutional anti-coercion
+conformance, non-technical key recovery, full outside-user group acceptance and PA/FA/IV validation
 remain separate unfinished requirements. No foundation, certifier or public
 authorship registry is operating.
+
+[Optional revocation and freshness check](offline-revocation.md) keeps integrity and selected-log status separate. A fresh cached status is not globally current non-revocation.

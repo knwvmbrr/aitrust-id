@@ -3,7 +3,7 @@
 The owner changed the target on October 10, 2026: continue until **25 full
 requirements remain open**. This supersedes the previous target of 50, while
 preserving its implementation history and all 202 requirement IDs. Current
-audited state is 106 complete and 96 open: **71 additional full completions**
+audited state is 107 complete and 95 open: **70 additional full completions**
 are required. The live counts and remaining work are derived from the acceptance
 ledger in `state.json`; its verifier rejects contradictory target arithmetic.
 

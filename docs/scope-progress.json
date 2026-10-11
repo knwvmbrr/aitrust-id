@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-10T23:50:13.154055+00:00",
+  "audited_at": "2026-10-11T00:32:13.834109+00:00",
   "client_date": "2026-10-10",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -4309,27 +4309,37 @@
       "id": "F-125",
       "kind": "requirement",
       "title": "Per-device revocable keys plus a revocation transparency log",
-      "percent_complete": 20,
+      "percent_complete": 80,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T00:32:13.834109+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 optional signed checkpoint history, explicitly selected freshness policy, offline CLI, single/group integration and actual Mac/Linux checks"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver Per-device revocable keys plus a revocation transparency log. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-      "next_owner": "Codex",
+      "next_fix": "Deliver actual publicly distributed/witnessed revocation transparency, equivocation/completeness checks, rotation and outside-user per-device acceptance. Current signed cached history is not a public transparency service.",
+      "next_owner": "Codex and Michael",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/offline-revocation-plan.md",
+        "docs/offline-revocation.md",
+        "protocol/revocation.cjs",
+        "scripts/revocation.cjs",
+        "tests/offline-revocation.cjs",
+        "runs/2026-10-11-offline-revocation-platforms.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Actual conditional offline key-status model with separately selected authority and cached checkpoint. No operating public transparency service, current global revocation, authorship or independently validated tag claim.",
       "required_acceptance": [
-        "Deliver Per-device revocable keys plus a revocation transparency log. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
+        "Operating public revocation transparency and witness/distribution evidence; full outside-user per-device operation."
       ],
       "queue": "open"
     },
@@ -4337,29 +4347,40 @@
       "id": "F-126",
       "kind": "requirement",
       "title": "Freshness model for offline verification against revocation",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T00:32:13.834109+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 optional signed checkpoint history, explicitly selected freshness policy, offline CLI, single/group integration and actual Mac/Linux checks"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Freshness model for offline verification against revocation. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-11T00:32:13.834109+00:00",
+      "completion_timestamp_basis": "Full named freshness-model job exercised on Mac and network-isolated Linux, including insufficient status and separate single/group receipt integration; public transparency remains F-125.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/offline-revocation-plan.md",
+        "docs/offline-revocation.md",
+        "protocol/revocation.cjs",
+        "scripts/revocation.cjs",
+        "tests/offline-revocation.cjs",
+        "runs/2026-10-11-offline-revocation-platforms.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Deliver Freshness model for offline verification against revocation. Next package action: Specify evidence/window limits, groups, canonical artifacts and expiry. Required outcome: An author or verifier can inspect the defined composition evidence and its limits."
-      ],
-      "queue": "open"
+      "evidence_scope": "Actual conditional offline key-status model with separately selected authority and cached checkpoint. No operating public transparency service, current global revocation, authorship or independently validated tag claim.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-127",

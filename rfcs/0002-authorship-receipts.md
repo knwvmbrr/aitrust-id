@@ -6,8 +6,10 @@
 - **Affects:** spec, governance
 
 The [offline component](../docs/offline-receipts.md) implements optional artifact-bound
-receipts, pinned-key integrity and expiry. It does not implement this RFC’s
-independent timestamps, revocation, recovery, group receipts or provenance claims.
+receipts, pinned-key integrity and expiry. Separate optional [independent timestamps](../docs/independent-timestamps.md),
+[group integrity](../docs/group-receipts.md) and [cached revocation/freshness](../docs/offline-revocation.md)
+components now exist. Public witnessed revocation, non-technical recovery and
+validated authorship/provenance claims remain unimplemented.
 No standard adoption or PA/FA/IV acceptance is implied.
 
 ## Summary
