@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-143211-mobile-cache-verified-96163778",
+  "recorded_at": "2026-10-11T14:32:11.071750+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "84d8f9cab198f1b59186b8a161d441840957db0a",
+  "changed": "Rejected public scope responses bypass HTTP cache; retry was exercised against a real cacheable corrupt 200 and corrected origin response.",
+  "proves": "Source-bound website checks pass, seven load-failure controls recover, all 202 scope records and complete exports remain available, initial JavaScript is 539453 bytes.",
+  "limits": "Emulated Chromium and WebKit are not physical phone or human accessibility acceptance. No requirement or independent accuracy gate was marked complete.",
+  "scope_ids": [
+    "F-142",
+    "N-012",
+    "F-113"
+  ],
+  "files": {
+    "docs/mobile-payload-plan.md": "ef9521c5e8308c0d7a7b4dbd539d0296a2be2bea104cb9de669eac97466238bc",
+    "eval/route-boundaries.json": "14e29bae972aa3883ff3a4c7720b2256c54cadf9438a3408a1a322d3cea0ac03",
+    "runs/2026-10-11-mobile-payload-boundaries-cache-corrected.json": "a145cc1163cc1dd6b4513c4010de96d7a02e6db31ca1532d5f067c110309ad8a",
+    "runs/2026-10-11-mobile-payload-browser-cache-corrected.json": "2a0dda2679b01cad6f8afbf192233d687382a13d1bf5835261851de1c693bc0d",
+    "runs/2026-10-11-mobile-payload-current-cache-corrected.json": "07d560a17808060e08c94ff05b707d69d14a4d1588d84a10bd7492e9a9f687bd",
+    "runs/2026-10-11-mobile-payload-website-cache-corrected.json": "91f014d1ceafc5d149852d4e8630811f217623eb887f26b6c73f5dd8979d4553",
+    "scripts/verify-mobile-payload.cjs": "9a2cc75ef2c4f8cbaf26bb5a146bffec9d9ef6cc128984742ccfa6f342f04cdb",
+    "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
+    "state.json": "80a848977e7697a1d331416faa86702ffc9afd0ff48f26d70bb1fff65394fce0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-mobile-payload-browser-cache-corrected.json",
+      "sha256": "2a0dda2679b01cad6f8afbf192233d687382a13d1bf5835261851de1c693bc0d"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-website-cache-corrected.json",
+      "sha256": "91f014d1ceafc5d149852d4e8630811f217623eb887f26b6c73f5dd8979d4553"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-current-cache-corrected.json",
+      "sha256": "07d560a17808060e08c94ff05b707d69d14a4d1588d84a10bd7492e9a9f687bd"
+    },
+    {
+      "path": "runs/2026-10-11-mobile-payload-boundaries-cache-corrected.json",
+      "sha256": "a145cc1163cc1dd6b4513c4010de96d7a02e6db31ca1532d5f067c110309ad8a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T14:32:11.310098+00:00"
+    }
+  ]
+}

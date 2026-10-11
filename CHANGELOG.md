@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-143211-mobile-cache-verified-96163778
+
+Recorded 2026-10-11T14:32:11.071750+00:00 · Contributor: Codex · change
+
+- **Changed.** Rejected public scope responses bypass HTTP cache; retry was exercised against a real cacheable corrupt 200 and corrected origin response.
+- **Evidence.** Source-bound website checks pass, seven load-failure controls recover, all 202 scope records and complete exports remain available, initial JavaScript is 539453 bytes. [Change record](./runs/changes/2026-10-11-143211-mobile-cache-verified-96163778.json).
+- **Not claimed.** Emulated Chromium and WebKit are not physical phone or human accessibility acceptance. No requirement or independent accuracy gate was marked complete.
+
+
+### 2026-10-11-142749-mobile-http-cache-retry-e4f850d8
+
+Recorded 2026-10-11T14:27:49.177768+00:00 · Contributor: Codex · change
+
+- **Changed.** Do not store/reuse potentially rejected HTTP scope responses; retain only verified in-memory scope and add a real cacheable-corruption origin-repair browser control.
+- **Evidence.** The new control uses an owned real HTTP server without Playwright routing, which would otherwise disable the cache under test. [Change record](./runs/changes/2026-10-11-142749-mobile-http-cache-retry-e4f850d8.json).
+- **Not claimed.** Current-source execution follows; physical phone and human gates remain open. Offline use continues through the separate frozen worker cache.
+
+
 ### 2026-10-11-142211-mobile-scope-payload-verified-6f1dde1d
 
 Recorded 2026-10-11T14:22:11.165416+00:00 · Contributor: Codex · change

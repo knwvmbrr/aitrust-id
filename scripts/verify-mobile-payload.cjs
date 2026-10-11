@@ -3,6 +3,8 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {chromium,webkit}=require('playwright');
 const {writeReport}=require('./execution-report.cjs');
 const {createHash}=require('node:crypto');
+const http=require('node:http');
+const {parseHeaders,headersFor}=require('./static-headers.cjs');
 const sourcePaths=['site/src/scope-data.js','site/src/ScopeData.jsx','site/src/scope-manifest.json',
   'site/src/public-scope.json','site/src/main.jsx','site/src/workflows/Scope.jsx',
   'site/scripts/prepare.mjs','site/scripts/prepare-offline.mjs','scripts/verify-mobile-payload.cjs'];
@@ -73,6 +75,35 @@ async function main(){
         failures.push({fault,refused:true,checker_available:true,retry_with_complete_export:true});
       }finally{await context.close();}
     }
+    // Browser routing disables its HTTP cache. This real owned server does not:
+    // return one corrupt cacheable 200, repair the origin, then require recovery.
+    let reads=0;
+    const rules=parseHeaders(fs.readFileSync(path.join(dist,'_headers'),'utf8'));
+    const cacheServer=http.createServer((request,response)=>{
+      try {
+        const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname);
+        let location=path.resolve(dist,'.'+pathname);
+        if(location!==dist&&!location.startsWith(dist+path.sep))throw Error('Path refused');
+        if(fs.statSync(location).isDirectory())location=path.join(location,'index.html');
+        const mime={'.html':'text/html','.js':'text/javascript','.json':'application/json','.css':'text/css','.woff2':'font/woff2','.svg':'image/svg+xml'};
+        const headers={'content-type':mime[path.extname(location)]||'application/octet-stream',...headersFor(rules,pathname)};
+        let body=fs.readFileSync(location);
+        if(pathname===asset){reads++;headers['cache-control']='public, max-age=31536000';
+          if(reads===1){body=Buffer.from(bytes);const at=body.indexOf('Tag types');assert(at>=0);body[at]=88;}}
+        response.writeHead(200,headers);response.end(body);
+      }catch{response.writeHead(404);response.end();}
+    });
+    await new Promise((resolve,reject)=>{cacheServer.once('error',reject);cacheServer.listen(0,'127.0.0.1',resolve);});
+    const cacheContext=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
+    try{
+      const page=await cacheContext.newPage();await page.goto('http://127.0.0.1:'+cacheServer.address().port+'/#person/PS');
+      const dialog=page.getByRole('dialog');await dialog.waitFor();await details(dialog);
+      await dialog.locator('[data-scope-load-error]').waitFor();assert.equal(reads,1);
+      await dialog.getByRole('button',{name:'Try loading again',exact:true}).click();
+      await dialog.getByRole('button',{name:'Download details',exact:true}).waitFor();await exportDetails(page,dialog,ps);
+      assert.equal(reads,2,'Retry reused a corrupt HTTP-cache entry');
+      failures.push({fault:'actual_cacheable_corrupt_response',playwright_routes_used:false,origin_requests:reads,retry_with_complete_export:true});
+    }finally{await cacheContext.close();cacheServer.closeAllConnections();await new Promise(resolve=>cacheServer.close(resolve));}
     const context=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
     try{
       const page=await context.newPage();await panel(page);

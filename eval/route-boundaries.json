@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T14:21:14.203374+00:00",
-  "reviewed_by": "Codex \u2014 bounded same-origin build-hashed public scope asset loader, integrity/timeouts/retry, catalogue and offline controls reviewed; existing endpoints/access unchanged",
+  "reviewed_at": "2026-10-11T14:32:03.032949+00:00",
+  "reviewed_by": "Codex \u2014 rejected public scope fetches bypass HTTP cache; real corrupt cacheable response recovers; bounded same-origin loader and unchanged endpoints reviewed",
   "rules": [
     "X-01",
     "X-03",
@@ -101,7 +101,7 @@
     "scripts/verify-dependency-automation.py": "321b863511c509c06a3c7c0151d1eb91c5c76f886d1b9ef62d1b271215ef7a61",
     "scripts/verify-image-provenance-boundary.py": "aae341bef5856f4b158f3ec6e141ced99cec7b8685232f8699876578941e4563",
     "scripts/verify-independent-observations.py": "3b543a55d6bcb3bdfe2f52eacd5b190ac5979a4259113a4090f3764c36b2288f",
-    "scripts/verify-mobile-payload.cjs": "4b541be68dcb9dbec66b112f58532f74177500859736c66e10c7ac22810b36cd",
+    "scripts/verify-mobile-payload.cjs": "9a2cc75ef2c4f8cbaf26bb5a146bffec9d9ef6cc128984742ccfa6f342f04cdb",
     "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206",
     "scripts/verify-replay-export.cjs": "30cbd99c5c3e81657ba337e64687325ffd170397a2df72e142dcd4f767403db0",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
@@ -172,7 +172,7 @@
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
     "site/src/public-scope.json": "28df306f9547069bbfdb3100d6a67ca881d860b38afdfdd510bd7406828d3fee",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
-    "site/src/scope-data.js": "ad1feb2fcb758cd4aafca617bd8950d7fee2c115c80c2841cbcba0574e77f989",
+    "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
     "site/src/scope-manifest.json": "ddb2ab8c9942c2e5bb3385927be417909684d04349390e2f446d65e1b050ecb1",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "2a5cbe351e7c984d95b314f79e254d14d999a800e1dea25600ecf475bd826186",
@@ -242,7 +242,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-11-mobile-payload-extension-revalidation.json",
-    "website": "runs/2026-10-11-mobile-payload-website-reviewed.json"
+    "website": "runs/2026-10-11-mobile-payload-website-cache-corrected.json"
   },
   "device_evidence": {
     "source_commit": "4382e38b864e2ab315ebc3ee11d32eb39a9b1362",

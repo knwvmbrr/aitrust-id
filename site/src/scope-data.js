@@ -8,7 +8,7 @@ async function readScope() {
   const timer = setTimeout(()=>controller.abort(), 8000);
   try {
     const response = await fetch(scopeUrl, {signal:controller.signal,
-      credentials:'omit', referrerPolicy:'no-referrer', cache:'force-cache'});
+      credentials:'omit', referrerPolicy:'no-referrer', cache:'no-store'});
     if (!response.ok || !response.body) throw Error('Scope unavailable');
     const reader = response.body.getReader();
     const pieces = []; let size = 0;

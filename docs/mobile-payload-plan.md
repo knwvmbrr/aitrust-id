@@ -32,11 +32,17 @@ close/reopen work; keyboard and automated accessibility checks pass. No physical
 phone or independent accuracy credit is granted by emulated browser testing.
 Existing F-142/N-012 human/device gates and F-113 latency scope remain open.
 
-Verified outcome: initial JavaScript is 539,456 bytes versus the measured
+Verified outcome: initial JavaScript is 539,453 bytes versus the measured
 994,375-byte baseline (45.75% reduction). Chromium and WebKit at 390 CSS pixels
 exercise deferred loading, full selected-record export and both matching scope
-records. Six failed-load controls refuse bad data and recover with complete
+records. Seven failed-load controls refuse bad data and recover with complete
 exports; an installed offline release loads and exports the frozen full scope.
 All 20 catalogue modals, eight footer workflows and 62 automated accessibility
 surfaces pass. Existing full requirement gates remain open. The built-browser
 controls are integrated into the normal website revalidation/CI pipeline.
+
+HTTP cache review: the verified in-memory cache is sufficient for repeated use.
+Fetch uses no-store so a rejected cacheable response cannot be reused on retry.
+A real owned server first returns a corrupt cacheable 200, then correct bytes;
+the browser must make a second origin request and produce the complete export.
+Mock browser routes alone cannot verify this because they disable HTTP caching.
