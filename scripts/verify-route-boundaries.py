@@ -92,6 +92,9 @@ PATTERNS += ('research/nli/**/*', 'research/__init__.py', 'scripts/check-nli-pai
              'scripts/fetch-nli-assets.py', 'scripts/verify-nli-pairs.py', 'scripts/verify-nli-profile.py',
              'tests/test_nli_pairs.py', 'tests/test_nli_network.py', 'tests/test_nli_cli.py',
              'docs/nli-pairs.md', 'docs/nli-pairs-plan.md')
+PATTERNS += ('scripts/check-nli-references.py','scripts/verify-nli-references.py',
+             'tests/test_captured_corpus.py','tests/test_nli_references.py','tests/test_nli_reference_cli.py',
+             'docs/nli-references.md','docs/nli-reference-plan.md')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

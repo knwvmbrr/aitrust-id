@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-205731-nli-protected-publication-confirmed-57f86d32",
+  "recorded_at": "2026-10-11T20:57:31.725036+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "changed": "Verified ordinary protected NLI merge, primary checkout preservation and exact served guide publication; retained a failed SSL comparison attempt.",
+  "proves": "22 required checks succeeded, 735 live artifacts matched and 12 unrelated files stayed unchanged.",
+  "limits": "Published optional research is not a released tag, calibrated probability, independent accuracy, license clearance or full F-016 completion.",
+  "scope_ids": [
+    "F-016"
+  ],
+  "files": {
+    "docs/nli-pairs-result.md": "31335e82700204ef6c3ee1ac5ba15577455041b62713a206ffbe3b8f527a47c5",
+    "state.json": "3177acfd086b2c633a1dfe1740d0f2f16207ed48589209a90d74a6344c9d6aff",
+    "runs/2026-10-11-nli-publication.json": "df304b7bcd53badfe85d597c2a1a1ba75225100a9e9506c9059b1e452a131087",
+    "runs/2026-10-11-nli-protected-merge.json": "7e78b0574f6ab1e2bcf2557aeae90181c8ca8926ff8b85197d4dc8f12e7a9ee5",
+    "runs/2026-10-11-nli-primary-ff.json": "172dc27d5793d9f2397a58dd5005886cce53387be7b9a1fdadac169540b0c297",
+    "runs/2026-10-11-nli-publication-network-refusal.json": "9deabdbad762d24d2a3e2f305793a5f6a8f74c40438330bd1d76ca602d27f06a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-nli-publication.json",
+      "sha256": "df304b7bcd53badfe85d597c2a1a1ba75225100a9e9506c9059b1e452a131087"
+    },
+    {
+      "path": "runs/2026-10-11-nli-protected-merge.json",
+      "sha256": "7e78b0574f6ab1e2bcf2557aeae90181c8ca8926ff8b85197d4dc8f12e7a9ee5"
+    },
+    {
+      "path": "runs/2026-10-11-nli-primary-ff.json",
+      "sha256": "172dc27d5793d9f2397a58dd5005886cce53387be7b9a1fdadac169540b0c297"
+    },
+    {
+      "path": "runs/2026-10-11-nli-publication-network-refusal.json",
+      "sha256": "9deabdbad762d24d2a3e2f305793a5f6a8f74c40438330bd1d76ca602d27f06a"
+    }
+  ],
+  "checks": []
+}

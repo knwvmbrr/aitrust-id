@@ -30,7 +30,7 @@ extension performs no behavioral capture.
 | `sig.credential_exfil.v1` | PS | Reads a secret path and writes to a network sink | `statistical` | Semgrep ruleset |
 | `sig.typosquat.v1` | PS | Package name within edit distance 1–2 of a top-N name | `statistical` | Offline snapshot; never queried at runtime |
 | `sig.corpus_support.v1` | NF | Retrieval similarity above threshold against the attached local corpus | `behavioral` | Requires corpus |
-| `sig.corpus_contradiction.v1` | FI | NLI contradiction against retrieved local passage | `behavioral` | Requires corpus |
+| `sig.corpus_contradiction.v1` | FI | Proposed NLI relationship against retrieved local passages | `behavioral` | Separate offline research in docs/nli-references.md; lexical misses/model errors retained; no FI mapping |
 | `presidio.entity.v1` | PII_REDACTED | Presidio entity recognition | n/a | Runs before any evaluation |
 
 ### Independently selected offline observations

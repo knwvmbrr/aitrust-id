@@ -114,7 +114,13 @@ def unique_pairs(pairs):
 
 
 def load(path):
-    raw = read_regular(Path(path).expanduser(), MAX_STORE_BYTES, private=True)
+    return parse(read_regular(Path(path).expanduser(), MAX_STORE_BYTES, private=True))
+
+
+def parse(raw):
+    """Validate one captured corpus envelope without reopening a source path."""
+    if type(raw) is not bytes or not 0 < len(raw) <= MAX_STORE_BYTES:
+        raise CorpusError('Captured corpus exceeds its byte contract.')
     try:
         record = json.loads(raw, object_pairs_hook=unique_pairs,
                             parse_int=lambda _: (_ for _ in ()).throw(CorpusError('Unexpected numeric manifest value.')),

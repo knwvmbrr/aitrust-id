@@ -2405,27 +2405,35 @@
         "id": "F-020b",
         "kind": "requirement",
         "title": "sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T21:06:24.197420+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — separate pinned-model reference observation and executed Mac/Linux controls"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
+        "next_fix": "Validate representative reference selection, contextual and temporal errors, source freshness and model calibration; accept the proposed signal/tag mapping and complete full FI integration and human acceptance. The working offline research command preserves a default lexical miss and is not an FI or falsehood verdict.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/nli-references.md",
+          "docs/nli-reference-plan.md",
+          "runs/2026-10-11-nli-reference-current-engineering.json",
+          "runs/2026-10-11-nli-reference-mac-owned-session-controls.json",
+          "runs/2026-10-11-nli-reference-linux-controls.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Working exact-reference-bound optional local model observation, source-only contracts and actual network-denied Mac/Linux synthetic commands. No independent accuracy, truth, freshness, corroboration, FI mapping or release acceptance.",
         "required_acceptance": [
-          "Deliver sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+          "Representative held-out reference/category validation, freshness/claim selection contract, calibrated accepted tag mapping, full FI integration and required human operation."
         ],
         "queue": "open"
       }

@@ -42,7 +42,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-019b | sig.false_dilemma.v1 — binary framing where alternatives exist | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-019c | sig.authority_appeal.v1 — unattributed appeals to expertise or consensus | [TAG-MT](scope-delivery.md#tag-mt) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-081 | Bring-your-own corpus — the user attaches their own reference material locally | [WP-REFERENCES](scope-delivery.md#wp-references) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-026 | sig.keystroke_liveness.v1 — dwell and flight time distributions | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-027 | sig.revision_churn.v1 — deleted-and-rewritten characters over final length | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |

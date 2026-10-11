@@ -113,8 +113,24 @@
       "independent_validation": false,
       "accepted_conformance_registration": false,
       "feeds": "FI",
-      "description": "NLI contradiction against retrieved local passage",
-      "source_files": []
+      "description": "Proposed model relationship against lexically retrieved owner-held passages; no-match is not falsehood, scores are uncalibrated and source freshness is unestablished.",
+      "source_files": [],
+      "reference_implementation": {
+        "kind": "offline_observation_only",
+        "tag_mapping_validated": false,
+        "source_files": [
+          "research/nli/references.py",
+          "research/nli/pairs.py",
+          "research/nli/backend.py",
+          "research/nli/network.py",
+          "research/nli/assets.json",
+          "protocol/corpus.py",
+          "protocol/corpus_support.py",
+          "scripts/check-nli-references.py",
+          "scripts/check-nli-pairs.py"
+        ],
+        "contract": "docs/nli-references.md"
+      }
     },
     {
       "id": "sig.corpus_support.v1",

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-211150-reference-nli-current-product-verification-5a4c805b",
+  "recorded_at": "2026-10-11T21:11:50.841503+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "changed": "Completed the current reference-comparison regression, restored attributed generated projections, refreshed all five common-manifest capability receipts and recorded full-suite and route results.",
+  "proves": "2141 Python tests pass with one platform skip; all five current source-bound capabilities pass; 580 selected source files reviewed. Both hosts passed installed-model reference and pair controls.",
+  "limits": "The first website prebuild receipt remains failed. 114 full requirements complete and 88 remain open; this optional research signal has no independently validated FI/NF mapping or release approval.",
+  "scope_ids": [
+    "F-020b",
+    "F-120"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "91de7abbe5f496f9b7ce5bcc37d95c8d041482b35b442819fc4ab0ca1c2f6012",
+    "README.md": "7652c31242c26ede5b867238a0439494d20fdb6917cfb3b8bdb9585be9fefbf8",
+    "docs/nli-pairs-result.md": "31335e82700204ef6c3ee1ac5ba15577455041b62713a206ffbe3b8f527a47c5",
+    "docs/nli-pairs.md": "a04371ba9b36a311a1234d1f16be18dd225a34e6964fc899c9c7df31f288df65",
+    "docs/nli-reference-plan.md": "f6a7f796032031e288c71804a09891a2011344385c9644e4676cc684964e6c49",
+    "docs/nli-reference-result.md": "5570819aade6316073087cd4b46518138681da36f94866ed100ae4b0b04ee358",
+    "docs/nli-references.md": "755a05392bd4bf09a98576f74a0830f99adbf31d6c1550f1b3a6f04e831724ec",
+    "docs/scope-progress.json": "37d927621e8461684e4652204f34118df0501815843f56517eb0acf7e71b6628",
+    "docs/scope-progress.md": "f79a97e25f126049838919fa31d41b4ef103ba359b4d62479da6e77dd8b6b977",
+    "docs/scope-task-index.md": "b90a4c65e023b188f25284c157f22666ac7edd04b87a84024318a60bed011127",
+    "eval/revalidation.json": "b353e19ae2367428029f66c2717efffb634eb5a63ec563cfec749178486f5647",
+    "eval/route-boundaries.json": "3bef3750af5788a1e8cd4122cb76dae9c4d5395abdb3b2e74acced267b9ca6e9",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "runs/2026-10-11-nli-primary-ff.json": "172dc27d5793d9f2397a58dd5005886cce53387be7b9a1fdadac169540b0c297",
+    "runs/2026-10-11-nli-protected-merge.json": "7e78b0574f6ab1e2bcf2557aeae90181c8ca8926ff8b85197d4dc8f12e7a9ee5",
+    "runs/2026-10-11-nli-publication-network-refusal.json": "9deabdbad762d24d2a3e2f305793a5f6a8f74c40438330bd1d76ca602d27f06a",
+    "runs/2026-10-11-nli-publication.json": "df304b7bcd53badfe85d597c2a1a1ba75225100a9e9506c9059b1e452a131087",
+    "runs/2026-10-11-nli-reference-bound-PII.json": "5d087a4317601d00d5b5a69306a583acb8a2ded9383ec7880b2f7415f2fb4744",
+    "runs/2026-10-11-nli-reference-bound-PS.json": "df87c4f5c9e217cdf8ea40f378a1dd6ffd1b3c5f7f9c5c6b94dc888563fcc13e",
+    "runs/2026-10-11-nli-reference-bound-protocol.json": "25c5f78e6a7081d689680ff1e50f206fb4be28b6e3c4cab9afdef86ce34beed7",
+    "runs/2026-10-11-nli-reference-bound-website.json": "af33cd9366d789868f19596a0bc7e7693cbe8be3d12f17d54446b4f3e19ad6ad",
+    "runs/2026-10-11-nli-reference-current-PII_REDACTED.json": "73fe09904fd69ed70c71602466580922a6a8d02f2e880ed28dfe62f2f8dd51a7",
+    "runs/2026-10-11-nli-reference-current-PS.json": "95e79d5ae8935d29b701705ec092eff4d1b5d07fb9b6dfc7861f88772dcda04a",
+    "runs/2026-10-11-nli-reference-current-boundaries.json": "43dd4d5924897ee7776a59a08fd944fed8223fad2fe55dc1af91274c437c93ea",
+    "runs/2026-10-11-nli-reference-current-capabilities.json": "452e63677eaea5ff137eb1b892456101f55e0a7fce23fde282e14e2fce9ca7f1",
+    "runs/2026-10-11-nli-reference-current-engineering.json": "8571ecc8f8507d710c44567f618c8c1f2b26044d2abbd29ae18c0ac3e77626c8",
+    "runs/2026-10-11-nli-reference-current-extension.json": "cdcaabedd8ee11673c75e831cf77191db57ab6f043f335cdf6495093da2c4ff8",
+    "runs/2026-10-11-nli-reference-current-protocol.json": "b6b927cd2abd914cf85e6eef161fcb96fbf20770c5fcdefbad38ff0c7349d633",
+    "runs/2026-10-11-nli-reference-current-website.json": "70aace68b5a99e2b4ce46d6640cf42ead35fb96421dbc47c54ec439f21162b18",
+    "runs/2026-10-11-nli-reference-full-python.json": "caf403394861106c1d1a7d37a425f7dd5daaeefdf378848f0e66a0c6266263d2",
+    "runs/2026-10-11-nli-reference-linux-cleanup.json": "5904225d2026405b3a34b3915ed1ed4bf734e03bd570beaef1bdad416876f449",
+    "runs/2026-10-11-nli-reference-linux-controls.json": "f85c41d1534351be2f5b4dcb1439f5f0e0643e093f654d541fc377af19e9db1a",
+    "runs/2026-10-11-nli-reference-linux-pair-identity-controls.json": "0c21fe3025690e9685e169b5618831df6bf838f230a3edc1113a718c58f43db5",
+    "runs/2026-10-11-nli-reference-linux-path-refusal.json": "695fd21d0ae0c9fb0028031683317f0ffff4ec1521a3e453a8256b9237a44386",
+    "runs/2026-10-11-nli-reference-mac-controls.json": "1d493e47f526a0175e08824756461870eae8f811111bfab9631303abb11612a3",
+    "runs/2026-10-11-nli-reference-mac-owned-session-controls.json": "06a14878e14b04a8e8458399ec4a97dad1a6c0fccf77e58d16a3da5ea50e2780",
+    "runs/2026-10-11-nli-reference-mac-pair-identity-controls.json": "32d58946a56ab0279fc27f5993a78811552cfe424db821b608dfb3be8d9c0221",
+    "scripts/check-nli-references.py": "3df74a9e852736f4563256ea5e83cccf66ada92ef0de98f4e6b173eaf400e333",
+    "scripts/verify-nli-references.py": "9a738042491d2b87b55293e5dae5fc965793b926063278f583708d2d465e9a4d",
+    "scripts/verify-route-boundaries.py": "291d7ad3c432d1f98514d85e858f9f254a07a118a4cc71de54a503e8df083df4",
+    "site/public/reference/public-scope.json": "4bde31fcbf78f48b36abf58bc9d6505573b6c4e772c0212547f574b91325f097",
+    "site/public/reference/signal-registry.json": "5385debcfd1f75e599e7ebbfa38656b047b86b79c1c89d3599497d1491be7b1d",
+    "site/public/reference/signals.md": "f2de6ca8a20f7a9cad59be6e6151285b2fe4239f7c832e79cbdb916f71231c7e",
+    "site/scripts/render-reference.mjs": "f2cce0e86739111b08645f9896f73f08a4a87a186322a9e1d14e351eaca38aa8",
+    "site/src/public-scope.json": "4bde31fcbf78f48b36abf58bc9d6505573b6c4e772c0212547f574b91325f097",
+    "site/src/scope-manifest.json": "d901b8355528f691aa23a4fdc8fa0c6c70c7f6c205c1395b7c4058617066e761",
+    "spec/signal-registry.json": "5385debcfd1f75e599e7ebbfa38656b047b86b79c1c89d3599497d1491be7b1d",
+    "spec/signals.md": "f2de6ca8a20f7a9cad59be6e6151285b2fe4239f7c832e79cbdb916f71231c7e",
+    "state.json": "c2bd4453b79831f27bc12cbaf0ab7d658ad200b008648cfbdcdaedb099bc52ef",
+    "tests/test_captured_corpus.py": "55dbaa047ef12af02d1b3fafd5499b6bcef1a8babbf6e9bf6f94e0808b154b33",
+    "tests/test_nli_reference_cli.py": "5065b549db6085b8ec9b912bdd108cac1c703bdfe6cfcf0eab56b324867d60ac",
+    "tests/test_nli_references.py": "9a858ad2e3eeb2b501e26dccc1b4fd4d14f8c933a699c0bb17c3071de5c8c578"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-nli-reference-current-PS.json",
+      "sha256": "95e79d5ae8935d29b701705ec092eff4d1b5d07fb9b6dfc7861f88772dcda04a"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-current-PII_REDACTED.json",
+      "sha256": "73fe09904fd69ed70c71602466580922a6a8d02f2e880ed28dfe62f2f8dd51a7"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-current-protocol.json",
+      "sha256": "b6b927cd2abd914cf85e6eef161fcb96fbf20770c5fcdefbad38ff0c7349d633"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-current-extension.json",
+      "sha256": "cdcaabedd8ee11673c75e831cf77191db57ab6f043f335cdf6495093da2c4ff8"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-current-website.json",
+      "sha256": "70aace68b5a99e2b4ce46d6640cf42ead35fb96421dbc47c54ec439f21162b18"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-current-capabilities.json",
+      "sha256": "452e63677eaea5ff137eb1b892456101f55e0a7fce23fde282e14e2fce9ca7f1"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-current-boundaries.json",
+      "sha256": "43dd4d5924897ee7776a59a08fd944fed8223fad2fe55dc1af91274c437c93ea"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-full-python.json",
+      "sha256": "caf403394861106c1d1a7d37a425f7dd5daaeefdf378848f0e66a0c6266263d2"
+    }
+  ],
+  "checks": []
+}

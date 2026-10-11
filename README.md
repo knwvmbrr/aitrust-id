@@ -95,6 +95,8 @@ execution, denied network access and private-output controls are recorded. It
 still makes semantic errors, issues no tag and provides no calibrated probability.
 Its model error cases are retained; retrieved-passage work remains separate.
 
+The separate [reference comparison command](docs/nli-references.md) selects passages from your owner-held corpus and compares them with a claim. It distinguishes a missing search match from uncalibrated model observations, keeps exact evidence private and issues no NF/FI or truth verdict.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual

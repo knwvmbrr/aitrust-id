@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-210637-reference-nli-private-command-4c6fa0d6",
+  "recorded_at": "2026-10-11T21:06:37.563128+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "changed": "Implemented a separate private reference/claim model command, captured-byte corpus parsing, current runtime identity and owned worker deadline cleanup; added its three-step downloadable guide.",
+  "proves": "242 focused Mac checks and 243 Linux checks passed; both hosts executed 17 reference controls and 13 current pair controls. Preserved a lexical search miss, exact source bindings and no-model/no-match behavior.",
+  "limits": "No independent accuracy, source freshness, calibrated probability, corroboration, FI/NF mapping, licensing clearance or full requirement closure. 88 requirements remain open.",
+  "scope_ids": [
+    "F-020b",
+    "F-016"
+  ],
+  "files": {
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "scripts/check-nli-references.py": "3df74a9e852736f4563256ea5e83cccf66ada92ef0de98f4e6b173eaf400e333",
+    "scripts/verify-nli-references.py": "9a738042491d2b87b55293e5dae5fc965793b926063278f583708d2d465e9a4d",
+    "tests/test_nli_reference_cli.py": "5065b549db6085b8ec9b912bdd108cac1c703bdfe6cfcf0eab56b324867d60ac",
+    "tests/test_nli_references.py": "9a858ad2e3eeb2b501e26dccc1b4fd4d14f8c933a699c0bb17c3071de5c8c578",
+    "tests/test_captured_corpus.py": "55dbaa047ef12af02d1b3fafd5499b6bcef1a8babbf6e9bf6f94e0808b154b33",
+    "docs/nli-references.md": "755a05392bd4bf09a98576f74a0830f99adbf31d6c1550f1b3a6f04e831724ec",
+    "docs/nli-reference-plan.md": "7e5a0057abb5df429bc42218e5cc1326d36cddf02e3bb145143298116b5febd7",
+    "docs/nli-reference-result.md": "f5c17085e10f134d23ba76ec22a268a4c4ef3c0bb4f328d6181d0a9dce8e58dd",
+    "docs/nli-pairs.md": "a04371ba9b36a311a1234d1f16be18dd225a34e6964fc899c9c7df31f288df65",
+    "README.md": "7652c31242c26ede5b867238a0439494d20fdb6917cfb3b8bdb9585be9fefbf8",
+    "spec/signals.md": "f2de6ca8a20f7a9cad59be6e6151285b2fe4239f7c832e79cbdb916f71231c7e",
+    "spec/signal-registry.json": "5385debcfd1f75e599e7ebbfa38656b047b86b79c1c89d3599497d1491be7b1d",
+    "site/scripts/render-reference.mjs": "f2cce0e86739111b08645f9896f73f08a4a87a186322a9e1d14e351eaca38aa8",
+    ".github/workflows/ci.yml": "91de7abbe5f496f9b7ce5bcc37d95c8d041482b35b442819fc4ab0ca1c2f6012",
+    "scripts/verify-route-boundaries.py": "291d7ad3c432d1f98514d85e858f9f254a07a118a4cc71de54a503e8df083df4",
+    "docs/scope-progress.json": "37d927621e8461684e4652204f34118df0501815843f56517eb0acf7e71b6628",
+    "docs/scope-progress.md": "f79a97e25f126049838919fa31d41b4ef103ba359b4d62479da6e77dd8b6b977",
+    "docs/scope-task-index.md": "b90a4c65e023b188f25284c157f22666ac7edd04b87a84024318a60bed011127",
+    "state.json": "c2ebe3bd424658860b1a25aa99c30d6c653f3abbc8b3c50b195af64c3853c475",
+    "runs/2026-10-11-nli-reference-current-engineering.json": "bf83a9fa0f587ca4209afe7c1050b33b965075a321beb9ae7087a6fe428f943a",
+    "runs/2026-10-11-nli-reference-mac-controls.json": "1d493e47f526a0175e08824756461870eae8f811111bfab9631303abb11612a3",
+    "runs/2026-10-11-nli-reference-mac-owned-session-controls.json": "06a14878e14b04a8e8458399ec4a97dad1a6c0fccf77e58d16a3da5ea50e2780",
+    "runs/2026-10-11-nli-reference-mac-pair-identity-controls.json": "32d58946a56ab0279fc27f5993a78811552cfe424db821b608dfb3be8d9c0221",
+    "runs/2026-10-11-nli-reference-linux-controls.json": "f85c41d1534351be2f5b4dcb1439f5f0e0643e093f654d541fc377af19e9db1a",
+    "runs/2026-10-11-nli-reference-linux-pair-identity-controls.json": "0c21fe3025690e9685e169b5618831df6bf838f230a3edc1113a718c58f43db5",
+    "runs/2026-10-11-nli-reference-linux-path-refusal.json": "695fd21d0ae0c9fb0028031683317f0ffff4ec1521a3e453a8256b9237a44386",
+    "runs/2026-10-11-nli-reference-linux-cleanup.json": "5904225d2026405b3a34b3915ed1ed4bf734e03bd570beaef1bdad416876f449",
+    "runs/2026-10-11-nli-reference-bound-PS.json": "df87c4f5c9e217cdf8ea40f378a1dd6ffd1b3c5f7f9c5c6b94dc888563fcc13e",
+    "runs/2026-10-11-nli-reference-bound-PII.json": "5d087a4317601d00d5b5a69306a583acb8a2ded9383ec7880b2f7415f2fb4744",
+    "runs/2026-10-11-nli-reference-bound-protocol.json": "25c5f78e6a7081d689680ff1e50f206fb4be28b6e3c4cab9afdef86ce34beed7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-nli-reference-current-engineering.json",
+      "sha256": "bf83a9fa0f587ca4209afe7c1050b33b965075a321beb9ae7087a6fe428f943a"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-mac-owned-session-controls.json",
+      "sha256": "06a14878e14b04a8e8458399ec4a97dad1a6c0fccf77e58d16a3da5ea50e2780"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-linux-controls.json",
+      "sha256": "f85c41d1534351be2f5b4dcb1439f5f0e0643e093f654d541fc377af19e9db1a"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-linux-cleanup.json",
+      "sha256": "5904225d2026405b3a34b3915ed1ed4bf734e03bd570beaef1bdad416876f449"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-bound-PS.json",
+      "sha256": "df87c4f5c9e217cdf8ea40f378a1dd6ffd1b3c5f7f9c5c6b94dc888563fcc13e"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-bound-PII.json",
+      "sha256": "5d087a4317601d00d5b5a69306a583acb8a2ded9383ec7880b2f7415f2fb4744"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-bound-protocol.json",
+      "sha256": "25c5f78e6a7081d689680ff1e50f206fb4be28b6e3c4cab9afdef86ce34beed7"
+    }
+  ],
+  "checks": []
+}
