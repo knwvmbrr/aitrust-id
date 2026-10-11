@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T20:43:28.981008+00:00",
+  "updated": "2026-10-11T21:12:52.691895+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2062,
+  "python_tests_passed": 2141,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-11-source-captured-publication.json",
+    "evidence": "runs/2026-10-11-nli-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://46800cab.aitrust-id.pages.dev",
+    "deployment_url": "https://207914dc.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-source-captured-publication.json",
+    "publication_evidence": "runs/2026-10-11-nli-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -296,7 +296,7 @@
     "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "bbf653c3b9dac23eb758180a2f03d91efbc50392",
+    "source_commit": "98820be101461464fb8a2fc0129fc0563c8e155a",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-nli-bound-PS.json",
-    "PII_REDACTED": "runs/2026-10-11-blind-private-bound-PII_REDACTED.json",
-    "protocol": "runs/2026-10-11-nli-bound-protocol.json",
-    "extension": "runs/2026-10-11-blind-private-bound-extension.json",
-    "website": "runs/2026-10-11-nli-guide-website.json",
+    "PS": "runs/2026-10-11-nli-reference-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-11-nli-reference-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-11-nli-reference-current-protocol.json",
+    "extension": "runs/2026-10-11-nli-reference-current-extension.json",
+    "website": "runs/2026-10-11-nli-reference-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T20:43:28.981008+00:00",
+  "updated_at": "2026-10-11T21:12:52.691895+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1696,7 +1696,7 @@
     "protected_merge": "runs/2026-10-11-source-captured-protected-merge.json"
   },
   "nli_sentence_pairs": {
-    "status": "optional_local_research_checks_pass; protected_publication_pending",
+    "status": "optional_local_research_protected_merge_and_publication_verified",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-016"
@@ -1704,7 +1704,7 @@
     "focused_mac": 107,
     "focused_linux": 108,
     "actual_cli_controls_per_platform": 13,
-    "current_engineering": "runs/2026-10-11-nli-current-engineering.json",
+    "current_engineering": "runs/2026-10-11-nli-reference-confirmed-engineering.json",
     "model_error_retained": true,
     "independent_accuracy_evidence": false,
     "tag_asserted": false,
@@ -1714,7 +1714,37 @@
     "full_python_execution": "runs/2026-10-11-nli-full-python.json",
     "current_capabilities": "runs/2026-10-11-nli-current-capabilities.json",
     "current_boundaries": "runs/2026-10-11-nli-current-boundaries.json",
-    "website_execution": "runs/2026-10-11-nli-guide-website.json",
-    "owned_remote_environment_removed": true
+    "website_execution": "runs/2026-10-11-nli-reference-current-website.json",
+    "owned_remote_environment_removed": true,
+    "publication": "runs/2026-10-11-nli-publication.json",
+    "protected_merge": "runs/2026-10-11-nli-protected-merge.json"
+  },
+  "nli_reference_comparison": {
+    "status": "optional_local_research_actual_mac_linux_checks_passed_publication_pending",
+    "scope_ids": [
+      "F-020b"
+    ],
+    "profile": "retrieved-passage-nli-observation/1.0.0",
+    "guide": "docs/nli-references.md",
+    "architecture": "docs/nli-reference-plan.md",
+    "engineering": "runs/2026-10-11-nli-reference-confirmed-engineering.json",
+    "mac_controls": "runs/2026-10-11-nli-reference-mac-owned-session-controls.json",
+    "linux_controls": "runs/2026-10-11-nli-reference-linux-controls.json",
+    "default_retrieval_miss_retained": true,
+    "single_model_not_independent_corroboration": true,
+    "independently_validated": false,
+    "tag_mapping_validated": false,
+    "release_approved": false,
+    "full_requirements_closed": 0,
+    "current_capabilities": {
+      "PS": "runs/2026-10-11-nli-reference-current-PS.json",
+      "PII_REDACTED": "runs/2026-10-11-nli-reference-current-PII_REDACTED.json",
+      "protocol": "runs/2026-10-11-nli-reference-current-protocol.json",
+      "extension": "runs/2026-10-11-nli-reference-current-extension.json",
+      "website": "runs/2026-10-11-nli-reference-current-website.json"
+    },
+    "full_python_execution": "runs/2026-10-11-nli-reference-full-python.json",
+    "current_boundaries": "runs/2026-10-11-nli-reference-current-boundaries.json",
+    "result": "docs/nli-reference-result.md"
   }
 }

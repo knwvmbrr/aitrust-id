@@ -96,7 +96,7 @@ jobs:
       - name: Verify optional local-model pins and failure controls without downloading weights
         run: |
           python scripts/verify-nli-profile.py
-          python -m pytest tests/test_nli_pairs.py tests/test_nli_network.py tests/test_nli_cli.py -q
+          python -m pytest tests/test_nli_pairs.py tests/test_nli_network.py tests/test_nli_cli.py tests/test_nli_references.py tests/test_nli_reference_cli.py tests/test_captured_corpus.py -q
       - name: Refuse altered source snapshots and unsafe signing policy
         run: python -m pytest tests/test_source_provenance.py -q
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4

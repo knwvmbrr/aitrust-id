@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-11T21:05:42.277706+00:00",
+  "implemented_by": "Codex",
+  "pass": false,
+  "failure_signature": "actual_selected_reference_model_and_private_details refused on Linux",
+  "diagnosis": "Operator passed an absolute-but-noncanonical model-cache path containing parent traversal; the strict descriptor asset reader refused it before model loading. Official hash-locked wheels installed successfully.",
+  "fix": "Reran with canonical absolute model/environment paths; kept no-parent-traversal and no-symlink file contracts.",
+  "corrected_reference_evidence": "runs/2026-10-11-nli-reference-linux-controls.json",
+  "requirements_closed": 0,
+  "independent_accuracy_evidence": false
+}

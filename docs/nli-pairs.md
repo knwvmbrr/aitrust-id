@@ -1,6 +1,6 @@
 # Compare two passages locally — research tool
 
-Choose two passages from one English text and inspect what one pinned model says about their relationship. This is a working offline research command, separate from the PS and PII checkers. It does not issue HP or any other tag, establish truth or decide someone’s intent. The self-contradiction signal remains proposed. Its larger detector, automatic sentence selection, independent accuracy checks and tag integration remain open. The retrieved-passage signal F-020b is a separate job and is not implemented by this tool.
+Choose two passages from one English text and inspect what one pinned model says about their relationship. This is a working offline research command, separate from the PS and PII checkers. It does not issue HP or any other tag, establish truth or decide someone’s intent. The self-contradiction signal remains proposed. Its larger detector, automatic sentence selection, independent accuracy checks and tag integration remain open. The retrieved-passage signal F-020b is a separate job; use the [distinct reference research command](nli-references.md) for selected corpus passages, its own result and reference bindings.
 
 The first real tests found an error: the model called “The sky is blue.” and “There are five books on the shelf.” a contradiction. Both statements can be true. This case remains in the published execution evidence. Normalized scores describe the model’s output, not measured probabilities or independent corroboration.
 

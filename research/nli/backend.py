@@ -1,13 +1,13 @@
 """One pinned FP32 English NLI backend; no model download or remote code loading."""
 from pathlib import Path
-import hashlib,json,importlib.metadata,time
+import hashlib,json,importlib.metadata,time,platform
 from .pairs import PairError,require
 MODEL_REVISION='a150876415327c80daeff35ca6f68f5ed8cf5c24'
 EXPECTED={'model.onnx':('7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4',284200859),'tokenizer.json':('5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964',8656624),'config.json':('8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342',1053)}
 VERSIONS={'anyio': '4.15.1', 'click': '8.5.0', 'filelock': '4.1.1', 'flatbuffers': '25.12.19', 'fsspec': '2026.9.0', 'h11': '0.16.0', 'hf-xet': '1.7.0', 'httpcore2': '2.13.1', 'httpx2': '2.13.1', 'huggingface_hub': '2.2.0', 'idna': '3.20', 'ml_dtypes': '0.6.0', 'numpy': '2.5.4', 'onnx': '1.23.2', 'onnxruntime': '1.31.0', 'packaging': '26.3', 'protobuf': '7.36.2', 'PyYAML': '6.0.3', 'tokenizers': '0.23.3', 'tqdm': '4.70.1', 'truststore': '0.10.4', 'typing_extensions': '4.16.0'}
 
 def expected_identity():
-    return {'model_repository':'cross-encoder/nli-deberta-v3-xsmall','revision':MODEL_REVISION,'artifacts':{n:d for n,(d,s) in EXPECTED.items()},'runtime_versions':dict(VERSIONS),'provider':'CPUExecutionProvider','declared_label_order':['contradiction','entailment','neutral'],'scores_calibrated':False,'upstream_benchmark_is_product_accuracy':False}
+    return {'model_repository':'cross-encoder/nli-deberta-v3-xsmall','revision':MODEL_REVISION,'artifacts':{n:d for n,(d,s) in EXPECTED.items()},'runtime_versions':dict(VERSIONS),'python_runtime':{'implementation':platform.python_implementation(),'version':platform.python_version(),'system':platform.system(),'architecture':platform.machine()},'provider':'CPUExecutionProvider','declared_label_order':['contradiction','entailment','neutral'],'scores_calibrated':False,'upstream_benchmark_is_product_accuracy':False}
 
 class Backend:
     def __init__(self,cache,read_regular):

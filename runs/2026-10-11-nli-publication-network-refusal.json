@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-11T20:52:49.105707+00:00",
+  "pass": false,
+  "source_commit": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "failed_origin": "https://aitrustid.com",
+  "failed_artifact": "reference/signal-registry.json",
+  "signature": "curl 28 SSL connection timeout after three attempts",
+  "scope": "Network verification could not complete; no artifact-byte comparison was relaxed",
+  "followup": "Separate rerun with 20-second connection deadline and the existing 30-second per-attempt/100-second subprocess limits"
+}

@@ -1,0 +1,98 @@
+{
+  "captured_at": "2026-10-11T21:01:59.573696+00:00",
+  "pass": true,
+  "actual_model_inference": true,
+  "synthetic_only": true,
+  "controls": [
+    {
+      "case": "default_selection_miss_without_loading_model",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "actual_selected_reference_model_and_private_details",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "existing_details_unchanged",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "same_passage_model_relationship",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "mixed_claim_stays_research_observation",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "subject_character_limit",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "strict_utf8_subject",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "unsupported_lexical_subject",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_subject_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject_symlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject_hardlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_corpus_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "selected_passage_requires_model_cache",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "selected_passage_changed_model_refuses",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "corrupt_corpus_identity_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "invalid_candidate_bound",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "invalid_threshold",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "retained_default_retrieval_miss": true,
+  "independent_accuracy_evidence": false,
+  "tag_asserted": false,
+  "release_approved": false,
+  "private_test_directory_removed": true
+}

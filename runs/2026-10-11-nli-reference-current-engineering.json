@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-10-11T21:05:42.277706+00:00",
+  "implemented_by": "Codex",
+  "pass": true,
+  "source_base": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "source_sha256": {
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "scripts/check-nli-references.py": "3df74a9e852736f4563256ea5e83cccf66ada92ef0de98f4e6b173eaf400e333",
+    "scripts/check-nli-pairs.py": "4a90c7dea6195a50b06243d723d00a3ca262557adcc21521847d74f4e30fd516",
+    "scripts/verify-nli-references.py": "9a738042491d2b87b55293e5dae5fc965793b926063278f583708d2d465e9a4d",
+    "tests/test_nli_reference_cli.py": "5065b549db6085b8ec9b912bdd108cac1c703bdfe6cfcf0eab56b324867d60ac",
+    "tests/test_nli_references.py": "9a858ad2e3eeb2b501e26dccc1b4fd4d14f8c933a699c0bb17c3071de5c8c578",
+    "tests/test_captured_corpus.py": "55dbaa047ef12af02d1b3fafd5499b6bcef1a8babbf6e9bf6f94e0808b154b33"
+  },
+  "source_only_focused_mac_passed": 242,
+  "linux_only_mac_skip": 1,
+  "actual_mac_reference_controls": 17,
+  "reference_profile": "retrieved-passage-nli-observation/1.0.0",
+  "private_details_explicit_new_destination_only": true,
+  "no_match_does_not_run_model_or_establish_falsehood": true,
+  "reference_freshness_unestablished": true,
+  "default_cosine_retrieval_miss_retained": true,
+  "raw_model_values_not_calibrated_probabilities": true,
+  "tag_asserted": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "full_requirements_closed": 0
+}

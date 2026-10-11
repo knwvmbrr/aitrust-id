@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-11T21:12:52.691895+00:00",
+  "implemented_by": "Codex",
+  "pass": false,
+  "failure_signature": "prebuild changelog Missing or changed evidence for already recorded engineering receipt",
+  "diagnosis": "Operator appended Linux count fields to an already hashed Mac engineering receipt. No detector, model or acceptance result changed.",
+  "correction": "Restored exact original receipt bytes after checking against its recorded SHA-256; created a distinct combined receipt and updated state references. The original event and guard remain unchanged.",
+  "original_receipt_sha256_restored": "bf83a9fa0f587ca4209afe7c1050b33b965075a321beb9ae7087a6fe428f943a",
+  "separate_combined_receipt": "runs/2026-10-11-nli-reference-confirmed-engineering.json",
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

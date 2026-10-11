@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-210730-reference-guide-build-refusal-and-binding-d6dfcd89",
+  "recorded_at": "2026-10-11T21:07:30.681688+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "changed": "Preserved a failed website prebuild receipt, attributed generated scope/signal projections and bound both downloadable model guides to future website revalidation.",
+  "proves": "The build refused generated files and a new run that lacked their own attributed change record; source checks were not weakened.",
+  "limits": "The failed receipt remains failed. Common revalidation manifest changes require five fresh checks before delivery; no release or full requirement completion.",
+  "scope_ids": [
+    "F-020b",
+    "F-120"
+  ],
+  "files": {
+    "docs/nli-reference-plan.md": "f6a7f796032031e288c71804a09891a2011344385c9644e4676cc684964e6c49",
+    "eval/revalidation.json": "b353e19ae2367428029f66c2717efffb634eb5a63ec563cfec749178486f5647",
+    "runs/2026-10-11-nli-reference-bound-website.json": "af33cd9366d789868f19596a0bc7e7693cbe8be3d12f17d54446b4f3e19ad6ad",
+    "site/public/reference/public-scope.json": "4bde31fcbf78f48b36abf58bc9d6505573b6c4e772c0212547f574b91325f097",
+    "site/public/reference/signal-registry.json": "5385debcfd1f75e599e7ebbfa38656b047b86b79c1c89d3599497d1491be7b1d",
+    "site/public/reference/signals.md": "f2de6ca8a20f7a9cad59be6e6151285b2fe4239f7c832e79cbdb916f71231c7e",
+    "site/src/public-scope.json": "4bde31fcbf78f48b36abf58bc9d6505573b6c4e772c0212547f574b91325f097",
+    "site/src/scope-manifest.json": "d901b8355528f691aa23a4fdc8fa0c6c70c7f6c205c1395b7c4058617066e761"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-nli-reference-bound-website.json",
+      "sha256": "af33cd9366d789868f19596a0bc7e7693cbe8be3d12f17d54446b4f3e19ad6ad"
+    }
+  ],
+  "checks": []
+}

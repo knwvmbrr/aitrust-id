@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-211252-reference-evidence-immutability-correction-c6ae6bbd
+
+Recorded 2026-10-11T21:12:52.788130+00:00 · Contributor: Codex · change
+
+- **Changed.** Restored an already hashed Mac receipt exactly and saved combined Mac/Linux engineering counts as a new immutable record; retained the prebuild refusal diagnosis.
+- **Evidence.** The restored receipt matches its original recorded SHA-256. No event, acceptance test or detector result was rewritten. [Change record](./runs/changes/2026-10-11-211252-reference-evidence-immutability-correction-c6ae6bbd.json).
+- **Not claimed.** Operator correction only; 88 full requirements remain open, with no independent model/tag release acceptance.
+
+
+### 2026-10-11-211150-reference-nli-current-product-verification-5a4c805b
+
+Recorded 2026-10-11T21:11:50.841503+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed the current reference-comparison regression, restored attributed generated projections, refreshed all five common-manifest capability receipts and recorded full-suite and route results.
+- **Evidence.** 2141 Python tests pass with one platform skip; all five current source-bound capabilities pass; 580 selected source files reviewed. Both hosts passed installed-model reference and pair controls. [Change record](./runs/changes/2026-10-11-211150-reference-nli-current-product-verification-5a4c805b.json).
+- **Not claimed.** The first website prebuild receipt remains failed. 114 full requirements complete and 88 remain open; this optional research signal has no independently validated FI/NF mapping or release approval.
+
+
+### 2026-10-11-210730-reference-guide-build-refusal-and-binding-d6dfcd89
+
+Recorded 2026-10-11T21:07:30.681688+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved a failed website prebuild receipt, attributed generated scope/signal projections and bound both downloadable model guides to future website revalidation.
+- **Evidence.** The build refused generated files and a new run that lacked their own attributed change record; source checks were not weakened. [Change record](./runs/changes/2026-10-11-210730-reference-guide-build-refusal-and-binding-d6dfcd89.json).
+- **Not claimed.** The failed receipt remains failed. Common revalidation manifest changes require five fresh checks before delivery; no release or full requirement completion.
+
+
+### 2026-10-11-210637-reference-nli-private-command-4c6fa0d6
+
+Recorded 2026-10-11T21:06:37.563128+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented a separate private reference/claim model command, captured-byte corpus parsing, current runtime identity and owned worker deadline cleanup; added its three-step downloadable guide.
+- **Evidence.** 242 focused Mac checks and 243 Linux checks passed; both hosts executed 17 reference controls and 13 current pair controls. Preserved a lexical search miss, exact source bindings and no-model/no-match behavior. [Change record](./runs/changes/2026-10-11-210637-reference-nli-private-command-4c6fa0d6.json).
+- **Not claimed.** No independent accuracy, source freshness, calibrated probability, corroboration, FI/NF mapping, licensing clearance or full requirement closure. 88 requirements remain open.
+
+
+### 2026-10-11-205731-nli-protected-publication-confirmed-57f86d32
+
+Recorded 2026-10-11T20:57:31.725036+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified ordinary protected NLI merge, primary checkout preservation and exact served guide publication; retained a failed SSL comparison attempt.
+- **Evidence.** 22 required checks succeeded, 735 live artifacts matched and 12 unrelated files stayed unchanged. [Change record](./runs/changes/2026-10-11-205731-nli-protected-publication-confirmed-57f86d32.json).
+- **Not claimed.** Published optional research is not a released tag, calibrated probability, independent accuracy, license clearance or full F-016 completion.
+
+
 ### 2026-10-11-204329-nli-current-product-verification-8babb474
 
 Recorded 2026-10-11T20:43:29.142967+00:00 · Contributor: Codex · change

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-211252-reference-evidence-immutability-correction-c6ae6bbd",
+  "recorded_at": "2026-10-11T21:12:52.788130+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "98820be101461464fb8a2fc0129fc0563c8e155a",
+  "changed": "Restored an already hashed Mac receipt exactly and saved combined Mac/Linux engineering counts as a new immutable record; retained the prebuild refusal diagnosis.",
+  "proves": "The restored receipt matches its original recorded SHA-256. No event, acceptance test or detector result was rewritten.",
+  "limits": "Operator correction only; 88 full requirements remain open, with no independent model/tag release acceptance.",
+  "scope_ids": [
+    "F-020b",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-10-11-nli-reference-current-engineering.json": "bf83a9fa0f587ca4209afe7c1050b33b965075a321beb9ae7087a6fe428f943a",
+    "runs/2026-10-11-nli-reference-confirmed-engineering.json": "49b0410790a3e1a4653655108ad4c269e8e28d8d8930bb7e42dc3bb1c480acc9",
+    "runs/2026-10-11-nli-reference-immutable-receipt-refusal.json": "d9b18cea6ed6c3860fd5dc6668fde533df465be761b2cf24a2f2644525def39d",
+    "docs/nli-reference-result.md": "ea479c1ec1d340d62723564b7ba88dbcdb083c7e7e9356c0663ad5617f8a5174",
+    "state.json": "8819c600a414ba102a21cf1eb3b3b37529a8620231d4faf57115f28e1c9611a1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-nli-reference-current-engineering.json",
+      "sha256": "bf83a9fa0f587ca4209afe7c1050b33b965075a321beb9ae7087a6fe428f943a"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-confirmed-engineering.json",
+      "sha256": "49b0410790a3e1a4653655108ad4c269e8e28d8d8930bb7e42dc3bb1c480acc9"
+    },
+    {
+      "path": "runs/2026-10-11-nli-reference-immutable-receipt-refusal.json",
+      "sha256": "d9b18cea6ed6c3860fd5dc6668fde533df465be761b2cf24a2f2644525def39d"
+    }
+  ],
+  "checks": []
+}
