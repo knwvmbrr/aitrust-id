@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-170141-quantitative-regression-acceptance-ff8b51b9",
+  "recorded_at": "2026-10-11T17:01:41.164133+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "226f5afaf53ee323bc81865276baa08e2c313389",
+  "changed": "Recorded the current full Python regression result and bound development progress to executable source and disclosure limits.",
+  "proves": "1597 Python tests pass on Python 3.12.14; 30 new focused tests and 11 actual CLI controls are included, and website and route checks pass.",
+  "limits": "Synthetic engineering evidence only, no factual verification, source resolution, independent accuracy or additional completed requirement.",
+  "scope_ids": [
+    "F-015",
+    "T-HP",
+    "N-011"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "5e50237e6e0e910af8e12e753f0ba71f629323d8e064905f3b273fe22b5c6dd1",
+    "README.md": "12424b2a6e5b20d631fed9054db2ce8b4c21529df6d7de29b13a5ad2d436b370",
+    "docs/quantitative-observation-plan.md": "a69a331bc123bfd625677a5ebd346488d0ae3635f483dd3c292a68609b43b3e7",
+    "docs/quantitative-observations.md": "57fbaa689ddc6dc300ba9c27bbf5596bbcfb2e72166212dc2142766bb6faa803",
+    "docs/scope-progress.json": "f22c53883a1f073ee5a86ec496bc0963cdda215eb45511e5db540380b13bae68",
+    "docs/scope-progress.md": "630c449ea63761838b2da6b64ec855ba356914bac9c854d53e0c7900639fa8c1",
+    "eval/route-boundaries.json": "8e5a6498a8fc700ea77e9ab98de7491aee7cbc8a6d5deea510b91905724d24e9",
+    "runs/2026-10-11-metadata-storage-merged-source.json": "7b1bac2526de5c8a968730a55dd29138d5648830a9766721034479dea84a9c60",
+    "runs/2026-10-11-metadata-storage-protected-merge.json": "dc06e189049c298063929ce87659b1f079337067a1bc3dc3e2999566f4b712b3",
+    "runs/2026-10-11-metadata-storage-publication.json": "63d4cf4f263ccdd26a4080666f97edf9dd3a5ccd42a5882da58cc1aa36243b9c",
+    "runs/2026-10-11-quantitative-cli-final-linux.json": "91fc2587ed216802cebdc1f274543728f317a95ec2783830801ade1312232f87",
+    "runs/2026-10-11-quantitative-cli-final-mac.json": "ac1a4efc0879a7e14533778fbde817290e2148757df37fefc77b1b7eb6af104c",
+    "runs/2026-10-11-quantitative-cli-linux.json": "8e3ae6556c3d1af2a9a58a236689ff7f9cedde7fbc82097f4a40e59a5c95318f",
+    "runs/2026-10-11-quantitative-cli-mac.json": "f5ae3a1ae5285cc404cc0c4f2499004200e585f9f953ee44d8f7733ba6c5507e",
+    "runs/2026-10-11-quantitative-current-receipts.json": "c4c631bcf4d298c14a6bb786360d4d5991517dcd4f00fe2b69ee0effcdd53d55",
+    "runs/2026-10-11-quantitative-full-python.json": "e9fa1b95f4030fb39023175b7ec0f12c94f1b0a3b164444ed81b76c747e4b39a",
+    "runs/2026-10-11-quantitative-route-boundaries.json": "38f897b4c3efc3762c32e9f77c91c43edc8928c813110f18d9dd5c42a12e66c8",
+    "runs/2026-10-11-quantitative-verifier-path-correction.json": "f0c0ce6a6f5f50c97198dae7f933ca4db767754ac055a9fc85d4f575da67370c",
+    "runs/2026-10-11-quantitative-website.json": "aa9adf462707d43970ef6e84f7bb682da73999182b84d22a0cff0aba89073603",
+    "scripts/quantitative-observations.py": "32baf241b0143e6ab8e6a784cb103d1501b74419e981168cd9ff87fc1da58c4b",
+    "scripts/verify-quantitative-observations.py": "03db4dd8d31e31c4238992f300b19b2c6881982603bf4ff838e134d24f8b4dcb",
+    "scripts/verify-route-boundaries.py": "6c32917a19e58a1187fc6c5bb42a714e1429b9f2e94cf66880f5faa8b9f7eea6",
+    "site/public/reference/public-scope.json": "f3a81582a5f3f10fb62bcf42d0dc5c6ec18ff5f7d51953e720fc971c37b10b9b",
+    "site/src/public-scope.json": "f3a81582a5f3f10fb62bcf42d0dc5c6ec18ff5f7d51953e720fc971c37b10b9b",
+    "site/src/scope-manifest.json": "2ab15cb3268ae917f55ceffc3e7ba602b07c840819b708f64db108e4e17b27ae",
+    "state.json": "98db72e47f4ef66b8e7c2c519995da7ed8a3e2e83d7db9a9f5ccf5e1bca00304",
+    "tests/test_quantitative_observations.py": "41825623dcba66b5d0f1417707f7d4d4191d5c12389495d280597f68c8c3b76a",
+    "tools/quantitative_observations.py": "26b1b397b132d1a0ee0d8c9755793f966d5592194e554e92404e6b7004db5523"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-quantitative-full-python.json",
+      "sha256": "e9fa1b95f4030fb39023175b7ec0f12c94f1b0a3b164444ed81b76c747e4b39a"
+    },
+    {
+      "path": "runs/2026-10-11-quantitative-website.json",
+      "sha256": "aa9adf462707d43970ef6e84f7bb682da73999182b84d22a0cff0aba89073603"
+    },
+    {
+      "path": "runs/2026-10-11-quantitative-route-boundaries.json",
+      "sha256": "38f897b4c3efc3762c32e9f77c91c43edc8928c813110f18d9dd5c42a12e66c8"
+    }
+  ],
+  "checks": []
+}

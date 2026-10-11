@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-171304-quantitative-identifier-acceptance-070c3c08
+
+Recorded 2026-10-11T17:13:04.669300+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded full regression acceptance for repaired numeric email and handle boundaries, with corrected README evidence attribution.
+- **Evidence.** 1597 tests pass on Python 3.12.14 with unchanged captured executable sources; both platform CLI controls and current website and route receipts pass. [Change record](./runs/changes/2026-10-11-171304-quantitative-identifier-acceptance-070c3c08.json).
+- **Not claimed.** No independently validated tag or additional full requirement closure. F-015 stays at 80 percent.
+
+
+### 2026-10-11-171126-quantitative-identifier-current-0d8d59c8
+
+Recorded 2026-10-11T17:11:26.166801+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound corrected at-sign identifier exclusions to current website and unchanged route execution receipts.
+- **Evidence.** Current receipt assessment and 474-source route boundary checks pass for the corrected method, with no endpoint or capture changes. [Change record](./runs/changes/2026-10-11-171126-quantitative-identifier-current-0d8d59c8.json).
+- **Not claimed.** Engineering-only checks; full factual/contextual accuracy, human acceptance and tag release remain open.
+
+
+### 2026-10-11-170925-quantitative-identifier-repair-6b76f984
+
+Recorded 2026-10-11T17:09:25.338047+00:00 · Contributor: Codex · change
+
+- **Changed.** Reproduced and excluded numeric email/handle identifiers; corrected README links to the current numeric-development regression receipts.
+- **Evidence.** Both actual identifier counterexamples are retained as failing evidence; the corrected method passes 30 focused checks and 11 real Mac and isolated Linux CLI checks with matching source hashes. [Change record](./runs/changes/2026-10-11-170925-quantitative-identifier-repair-6b76f984.json).
+- **Not claimed.** No source lookup, factual verdict or new tag; F-015 remains partial and the open count remains 88.
+
+
+### 2026-10-11-170141-quantitative-regression-acceptance-ff8b51b9
+
+Recorded 2026-10-11T17:01:41.164133+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the current full Python regression result and bound development progress to executable source and disclosure limits.
+- **Evidence.** 1597 Python tests pass on Python 3.12.14; 30 new focused tests and 11 actual CLI controls are included, and website and route checks pass. [Change record](./runs/changes/2026-10-11-170141-quantitative-regression-acceptance-ff8b51b9.json).
+- **Not claimed.** Synthetic engineering evidence only, no factual verification, source resolution, independent accuracy or additional completed requirement.
+
+
+### 2026-10-11-170036-quantitative-current-boundaries-839ca5e1
+
+Recorded 2026-10-11T17:00:36.081614+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the current standalone quantitative observation and metadata publication to current website and route execution receipts.
+- **Evidence.** Five capability receipts remain current and the reviewed 474-source inventory preserves application endpoints, extension access and inactive collection. [Change record](./runs/changes/2026-10-11-170036-quantitative-current-boundaries-839ca5e1.json).
+- **Not claimed.** Engineering execution only; no new production tag, accuracy evidence or full scope closure.
+
+
+### 2026-10-11-165650-quantitative-observation-29b37714
+
+Recorded 2026-10-11T16:56:50.823113+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented a standalone literal numeric/date-shaped observation with count-only output and opt-in private span export; recorded merged metadata storage publication.
+- **Evidence.** 30 focused controls pass. Eleven real CLI controls execute on Mac and in an offline non-root Linux namespace with matching sources. Metadata main source passed 39 SQL controls and its site matches 714 served artifacts. [Change record](./runs/changes/2026-10-11-165650-quantitative-observation-29b37714.json).
+- **Not claimed.** No new tag verdict, factual verification, source lookup, participant intake, independent accuracy or full requirement closure. F-015 advances to partial implementation; 114 complete and 88 open remain.
+
+
 ### 2026-10-11-163937-metadata-reviewed-python-366ca120
 
 Recorded 2026-10-11T16:39:37.204599+00:00 · Contributor: Codex · change

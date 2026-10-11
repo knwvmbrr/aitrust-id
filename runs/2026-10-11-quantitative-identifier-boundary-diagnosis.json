@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-11T17:08:12.915882+00:00",
+  "pass": false,
+  "kind": "quantitative_identifier_boundary_diagnosis",
+  "method_sha256": "26b1b397b132d1a0ee0d8c9755793f966d5592194e554e92404e6b7004db5523",
+  "cases": [
+    {
+      "case": "numeric_email_identifier",
+      "expected_supported_detail_count": 0,
+      "actual_supported_detail_count": 1,
+      "pass": false
+    },
+    {
+      "case": "numeric_handle_identifier",
+      "expected_supported_detail_count": 0,
+      "actual_supported_detail_count": 1,
+      "pass": false
+    }
+  ],
+  "only_authored_synthetic_inputs": true,
+  "independent_accuracy_evidence": false
+}

@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-10-11T16:56:50.784262+00:00",
+  "kind": "verification_correction",
+  "author": "Codex",
+  "pass": false,
+  "observed_command": [
+    "{python}",
+    "scripts/verify-quantitative-observations.py"
+  ],
+  "observed_exit_status": 1,
+  "observed_failed_case": "explicit_private_details",
+  "diagnosis": "The first Mac fixture used a temporary-directory alias with a symlink ancestor; the intended private-export guard correctly refused it. The fixture now resolves its own existing directory first.",
+  "historical_source_fingerprint_retained": false,
+  "current_success_receipts": [
+    "runs/2026-10-11-quantitative-cli-final-mac.json",
+    "runs/2026-10-11-quantitative-cli-final-linux.json"
+  ],
+  "failure_is_not_accuracy_evidence": true
+}
