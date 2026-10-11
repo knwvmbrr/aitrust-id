@@ -133,6 +133,10 @@ bindings, the pinned official SPDX 2.3.1 JSON schema and local consistency.
 It works offline and recomputes package verification codes. This does not clear
 licenses, authenticate inventoried source files or sign a release. See
 [dependency evidence and remaining work](docs/spdx-inventory-validation.md).
+[Preserved upstream notices and offline checks](docs/dependency-notices.md)
+cover the observed images and all artifacts in the two npm locks. Notice
+identity and license clearance are reported separately; unresolved obligations
+remain open.
 
 The optional [development source provenance workflow](docs/source-provenance.md)
 builds a committed-source snapshot with a file inventory. Its signing job is
@@ -140,10 +144,10 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The workflow-corrected manifest-inspection source passed 1,489 Python checks,
-including all 32 route-boundary checks. Execution is recorded in
-`runs/2026-10-11-manifest-workflow-full-python.json` and
-`runs/2026-10-11-manifest-workflow-boundaries.json`. All five active development fixture
+The checkout-byte-preservation source passed 1,539 Python checks, including
+all 32 route-boundary checks. Execution is recorded in
+`runs/2026-10-11-notices-checkout-python.json` and
+`runs/2026-10-11-notices-checkout-boundaries.json`. All five active development fixture
 sets are selected by CI: 86 cases with no classification errors. These examples
 are not independent accuracy evidence. Historical corrected labels remain archived.
 The public repository contains runnable source, separate engineering checks and

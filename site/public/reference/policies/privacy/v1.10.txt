@@ -1,0 +1,75 @@
+Privacy and data use
+AI TRUST ID · Version 1.10 · Effective 2026-10-11
+Published by AI Trust ID.
+
+What stays on your device, what hosts receive and what sharing means.
+
+Optional offline editor and receipts
+The separately downloaded offline editor observes only its own text box after you choose Start. Timing is off by default; assistive, composition and uncertain input suppress timing. Measurements remain in the local session. Pause ends observation, and Reset clears the editor and measurements; this is logical deletion, not physical memory-erasure proof. No editor text, event stream or receipt is uploaded or stored automatically.
+
+Summary download is a deliberate action. It excludes words and raw key/event timings but includes coarse measurements, lengths, method identity and an artifact hash; these can reveal or link information. Download your text separately includes your exact words only when chosen. Optional local receipts bind the text file to the summary and verify a signature under a public key you explicitly trust. Signatures do not prove identity, human authorship or truth. Revocation is unchecked and clocks are not independent timestamps. No research or training permission is granted by using these tools.
+
+Offline tools and instructions: /reference/offline-tools/
+
+Optional encrypted key backups
+The separate key-backup tool encrypts a local signing key using a password you enter in a hidden terminal prompt. You choose where to save the backup and keep your public key separately. Restoring checks that selected public key before writing a new owner-only private key file. Nothing is uploaded or collected; using a backup grants no research or training permission.
+
+Encrypted backups still reveal algorithm and public-key fingerprint and can link receipts. Keep them privately outside the repository and save the password separately. Forgotten passwords cannot be reset by us. Restoring does not revoke stolen copies; compromised machines and physical memory or disk erasure are not covered. Nontechnical-author operation remains an open acceptance requirement.
+
+Save, practice and restore instructions: https://github.com/knwvmbrr/aitrust-id/blob/main/docs/key-recovery.md
+
+Optional offline revocation status
+The separate revocation commands run locally. Saved signed checkpoint history contains authority and revoked public-key fingerprints, a sequence, prior-checkpoint digest and issuer-local time window. Your selected policy also pins a known checkpoint and declares maximum cached-data age and lifetime. Fingerprints and times can correlate records or devices; share these files only by deliberate choice. No words, names, contact information or event stream is stored in the log.
+
+Verification does not contact a provider, upload files or enable research/training. It reports status in your selected saved log, not globally current non-revocation. Stale, absent, future or expired status cannot clear a key; a valid signature does not prove authorship, independent time or completeness of the log. Existing receipt commands continue to report unchecked revocation unless this separate optional check is used. Public distribution, independent witnessing and non-technical recovery remain open.
+
+Selected-log instructions and limits: https://github.com/knwvmbrr/aitrust-id/blob/main/docs/offline-revocation.md
+
+Optional group receipts
+Group receipt commands run locally. Each willing participant signs independently with their own key; the organizer does not need anyone’s private key. The saved record includes public-key fingerprints, a file hash and length, a group identifier, a declared time window and signatures. It excludes participant names and the original file. Different keys do not prove different people or authorship.
+
+A group record and selected public-key roster expose a collaboration graph and can link known content. Share them only with everyone’s agreement. There is no automatic upload, identity verification, research collection or training permission. Revocation is unchecked, local clocks are unverified, and the tool cannot establish freedom from coercion. Personal checking does not require a group receipt.
+
+Group signing and verification instructions: https://github.com/knwvmbrr/aitrust-id/blob/main/docs/group-receipts.md
+
+Optional independent timestamps
+The separate timestamp command contacts FreeTSA only when you choose --send-digest. It sends the selected file’s SHA-256 digest and a random request nonce; it does not send the original file, words, event history or a signing key. The provider sees your connection IP and may correlate the digest with known content. A hash is not an anonymity guarantee. This third party’s handling is outside AI Trust ID’s control; no provider retention or no-logging guarantee is made here.
+
+Verification uses saved evidence and separately trusted certificates offline, without provider contact. Saved files remain under your own control. Using timestamps is optional, does not enable research collection or training, and does not change the offline checker or local receipt’s operation. Authority time, unchecked revocation and unestablished authorship are reported separately.
+
+Timestamp instructions: https://github.com/knwvmbrr/aitrust-id/blob/main/docs/independent-timestamps.md
+Independent provider and certificate information: https://www.freetsa.org/index_en.php
+
+On-device checking
+PS input is processed in the page and a self-hosted browser worker. Answer text is not uploaded or stored by this app. Runtime files are downloaded from this site. Clear, editing the input or closing the checker clears/cancels application state; this is not a guarantee of physical memory erasure. The on-device PS route does not redact personal information.
+
+Try PS: /#person/PS
+
+Local service and extension
+The optional local CLI sends text you choose to your authenticated loopback gateway. The Chrome extension starts paused. Saving its token does not enable capture; enable checks on ChatGPT explicitly in extension settings. While enabled, only supported assistant responses on chatgpt.com are sent to your authenticated local gateway at 127.0.0.1:8787. Pause cancels pending checks and removes tags. Reset removes local consent and the saved token; it does not revoke the gateway credential, delete a ChatGPT conversation, or recall downloaded files. Detected redaction precedes the evaluator and can miss sensitive information. This route is different from the on-device checker; it does not send text to this website or a research database. The selected service entrypoints return fixed input-validation errors, disable request URL access logs, and mark responses no-store. These are tested application boundaries; they do not cover your browser vendor, a compromised OS, every PII category or physical memory erasure.
+
+Local setup: https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md
+Security boundary: /policies/security/
+
+Browser storage and exports
+Theme preference is stored locally. Saving offline is optional and caches public application/runtime files, not answers or reviewer labels. Remove offline files through the PS checker. The default checker summary omits answer text, subject hashes, record identifiers, character counts, evidence positions and individual signals. It includes only the PS result state, public method identity and preview status. A summary still reveals that a check had a result; review it before sharing. Detailed records are a separate opt-in download and include subject hashes, spans and categories that may reveal or link information. Blind reviewer exports include the examples you opened and your labels. Files you download and clipboard copies remain under your own device/browser control.
+
+Hosting and public discussion
+Cloudflare serves the site and receives connection metadata such as IP addresses and request information under its own practices. The site adds no analytics script or advertising tracker. GitHub receives messages and account activity you submit there under its own terms. Public posts may be copied by others. Research contribution and public publication are separate choices.
+
+Cloudflare privacy policy: https://www.cloudflare.com/privacypolicy/
+GitHub privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+
+Research collection and correction requests
+Automatic training-data forwarding and website research intake are disabled. Merely checking an answer or posting a public discussion does not consent to training. Before any future collection, publish its purpose, allowed fields, access, retention, deletion, backup handling and specific consent choices. No unchosen retention period or anonymous-data guarantee is asserted here. Contact maintainers privately for a disclosure/deletion concern; a public-post correction cannot recall copies already made by third parties.
+
+Private security report: https://github.com/knwvmbrr/aitrust-id/security/advisories/new
+Project contact: mailto:admin@aitrustid.com
+
+Optional metadata feedback
+The owner-first guide lets you choose a PS result, method version, failure category and structured usability feedback. Preview and download save a local file; nothing is submitted, stored by the application or enrolled. The file excludes examples, personal identifiers, subject hashes and event timestamps. Feedback is user-reported, not independently verified ground truth. No example-sharing or training permission follows from this download. Changing answers clears the prior preview and download choice.
+
+Try the owner guide and feedback preview: /reference/operate/
+
+New purposes need a new choice
+Using the free checker, contributing open-source code or posting publicly does not grant a blanket license to train on your content. New research use needs specific prospective permission. A policy update does not silently expand the permitted use of previously shared material. Real private intake remains disabled until its purpose, fields, access, retention, withdrawal and backup/deletion procedures are accepted and tested.

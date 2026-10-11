@@ -95,3 +95,9 @@ FA/PA interpretation and independent provenance tag release remain separate work
 Primary references: [pinned SDK](https://pypi.org/project/c2pa-python/0.38.0/),
 [context settings](https://github.com/contentauth/c2pa-python/blob/main/docs/context-settings.md),
 [full validation results](https://opensource.contentauthenticity.org/docs/manifest/reading/manifest-validation/).
+
+## Published parser acceptance
+
+F-025’s declared attached-PNG inspection is complete as of 2026-10-11T15:19:36.016108+00:00. [PR 30](https://github.com/knwvmbrr/aitrust-id/pull/30) merged after 22 required engineering checks and two real optional SDK jobs passed on the reviewed source. The anonymously downloaded merged source also passed all 13 CLI controls. [Hosted execution and protected merge](../runs/2026-10-11-manifest-protected-acceptance.json) · [Merged-source execution](../runs/2026-10-11-manifest-merged-source-acceptance.json).
+
+This completes the parser job, with PNG as its supported format and explicit failures for other inputs. FA/PA tag release, broader media formats and fresh revocation checks stay open in their retained scope jobs. No accuracy or certification gate is waived.

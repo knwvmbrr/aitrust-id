@@ -64,6 +64,9 @@ PATTERNS += ('tools/manifest_inspection.py', 'scripts/inspect-manifest.py',
              'tests/test_manifest_workflow.py',
              'eval/c2pa-inspection.lock', 'eval/dependencies/c2pa-inspection.json',
              'tests/fixtures/c2pa-inspection-2026/*')
+PATTERNS += ('.gitattributes', 'scripts/license_notices.py', 'scripts/verify-redistribution-notices.py',
+             'scripts/collect-runtime-notices.py', 'tests/test_license_notices.py',
+             'sbom/notices/*')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
