@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-11T16:03:14.305807+00:00",
+  "pass": false,
+  "metadata_fault_reproduced": true,
+  "review_claimed_runtime_failure_reproduced": false,
+  "case": "in_checkout_virtualenv_metadata_removed",
+  "source_commit": "ebfeee1d844eaebb99a3ad119cc47712a2860da7",
+  "state": "OBSERVED",
+  "exit_status": 0,
+  "loaded_wrapper_version": "unknown",
+  "reason": "Pinned initializer catches ImportError; missing distribution metadata falls back to unknown instead of failing the reader",
+  "private_copy_only": true,
+  "production_changed": false,
+  "correction": "retain verified site root and check loaded wrapper/native versions"
+}

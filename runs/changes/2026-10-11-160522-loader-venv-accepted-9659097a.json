@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-160522-loader-venv-accepted-9659097a",
+  "recorded_at": "2026-10-11T16:05:22.739748+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ebfeee1d844eaebb99a3ad119cc47712a2860da7",
+  "changed": "Verified checkout-local virtualenv compatibility and exact loaded wrapper/native versions on Mac and isolated Linux, preserving the narrower actual metadata diagnosis.",
+  "proves": "1,545 Python checks, 68 focused controls and 16 real CLI cases per platform pass. Existing personal routes and evidence remain unchanged.",
+  "limits": "The review prediction of reader failure was not reproduced: the old pinned wrapper used unknown as its version. Current source retains and checks the correct version. Hosted and anonymous published-source acceptance remain separate.",
+  "scope_ids": [
+    "F-025"
+  ],
+  "files": {
+    "README.md": "f1f84a84487dd14e5b1568b6afab89db67d39afadcdc9ae7400bc154f86fe087",
+    "docs/manifest-loader-plan.md": "c57a9ee425fe4852c8360a48bf2add0868de0c15e24fe8155dec20fbe2986c20",
+    "eval/route-boundaries.json": "6ccbdc986b004fc30ed17a0ef81cba152a2e3156acb69a536323a84ba303daff",
+    "runs/2026-10-11-manifest-loader-metadata-boundaries.json": "7b65a6e0b93c27094fe126a083403887084c4219cf35e7e071f2d23b77969993",
+    "runs/2026-10-11-manifest-loader-metadata-linux.json": "36b35fc18959a9001d23ff8f0a77e54cffbcd54d2176c0b9a150aa55f58a097d",
+    "runs/2026-10-11-manifest-loader-metadata-mac.json": "284deb24e2ba845824817d736b50da29cad821967b6598aff759f5ada1e32606",
+    "runs/2026-10-11-manifest-loader-metadata-python.json": "bffd48dfae99e3dbbe6b9533434ec26c7b9b139c17369c4574ae4f0c9f018187",
+    "runs/2026-10-11-manifest-loader-venv-boundaries.json": "9e319bdaee7bdb3d5633587e9badb8d92e29e80e5eb0c80e07f72cff110e2aff",
+    "runs/2026-10-11-manifest-loader-venv-diagnosis.json": "01fb90230d527a2002a59af586096bd6ab037ebd83a2052007ccc7308b0c8c56",
+    "runs/2026-10-11-manifest-loader-venv-linux.json": "74527ea1e402a73b75794c2c51c73a80aade801012cf4555b14596a714f275b9",
+    "runs/2026-10-11-manifest-loader-venv-mac.json": "5ff7b9fbd53b2090f1f9909dfe9911a28a818413d5e829125404c03c1805f1e7",
+    "scripts/verify-manifest-inspection.py": "11f4ad5723c9db6da79b1fcba0a960d1a3df65dea07cfdabebae5be81a2be034",
+    "state.json": "c5cad3eb3c3130477c809ab3a0fa5e33362f2206794e28fc3aa66ccc8c13dcab",
+    "tests/test_manifest_inspection.py": "f776087710a57b0ace9268282c59633f19718c293592dd3e169eaf65386e05c3",
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-manifest-loader-metadata-python.json",
+      "sha256": "bffd48dfae99e3dbbe6b9533434ec26c7b9b139c17369c4574ae4f0c9f018187"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-metadata-mac.json",
+      "sha256": "284deb24e2ba845824817d736b50da29cad821967b6598aff759f5ada1e32606"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-metadata-linux.json",
+      "sha256": "36b35fc18959a9001d23ff8f0a77e54cffbcd54d2176c0b9a150aa55f58a097d"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-venv-diagnosis.json",
+      "sha256": "01fb90230d527a2002a59af586096bd6ab037ebd83a2052007ccc7308b0c8c56"
+    }
+  ],
+  "checks": []
+}

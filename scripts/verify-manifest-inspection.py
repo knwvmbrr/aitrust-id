@@ -5,9 +5,11 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
+import venv
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
@@ -46,6 +48,60 @@ def main():
         {**os.environ,'C2PA_LIBRARY_NAME':'/nonexistent/LOADER_PRIVATE_CANARY','LD_LIBRARY_PATH':'/nonexistent/LOADER_PRIVATE_CANARY'})
     assert value['asset_binding']=='matched' and value['active_assertion_count']==2
     cases.append({'case':'ambient_native_loader_override','state':'OBSERVED','reviewed_library_used':True})
+    # Copy only source dependencies into our own temporary checkout; never put
+    # a shadow package in the caller's source or installed Python environment.
+    for shape in ('package', 'module'):
+        with tempfile.TemporaryDirectory(prefix='aitrust-sdk-shadow-') as directory:
+            copied = Path(directory).resolve()
+            for name in ('protocol', 'tools', 'scripts', 'eval/dependencies'):
+                shutil.copytree(ROOT/name, copied/name,
+                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+            marker = copied/'shadow-executed'
+            source = 'from pathlib import Path\nPath('+repr(str(marker))+').write_text("isolated control")\nraise RuntimeError("shadow control")\n'
+            if shape == 'package':
+                (copied/'c2pa').mkdir(); (copied/'c2pa/__init__.py').write_text(source)
+            else:
+                (copied/'c2pa.py').write_text(source)
+            result = subprocess.run([sys.executable, str(copied/'scripts/inspect-manifest.py'),
+                '--image', str(fixture/'signed.png')], cwd=copied, capture_output=True, timeout=20)
+            assert result.returncode == 0 and not result.stderr and not marker.exists()
+            value = json.loads(result.stdout)
+            assert value['state'] == 'OBSERVED' and value['asset_binding'] == 'matched'
+            assert value['tags'] == [] and b'FIXTURE_PRIVATE_METADATA_CANARY' not in result.stdout
+            cases.append({'case':'source_tree_shadow_'+shape, 'state':'OBSERVED',
+                'reviewed_library_used':True, 'shadow_code_executed':False})
+    with tempfile.TemporaryDirectory(prefix='aitrust-sdk-checkout-venv-') as directory:
+        copied = Path(directory).resolve()
+        for name in ('protocol', 'tools', 'scripts', 'eval/dependencies'):
+            shutil.copytree(ROOT/name, copied/name,
+                ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+        environment = copied/'.venv'
+        venv.EnvBuilder(with_pip=False, symlinks=True).create(environment)
+        python = environment/'bin/python'
+        site = Path(subprocess.check_output([str(python), '-I', '-c',
+            'import sysconfig; print(sysconfig.get_path("purelib"))'], text=True).strip())
+        # Reader imports need the checked package and distribution metadata;
+        # copy both from this installed pinned environment, never from the web.
+        package = Path(native).parent.parent
+        shutil.copytree(package, site/'c2pa', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+        distribution = m.importlib.metadata.distribution('c2pa-python')
+        metadata = [p for p in distribution.files if str(p).endswith('.dist-info/METADATA')]
+        assert len(metadata) == 1
+        original = Path(distribution.locate_file(metadata[0])).parent
+        shutil.copytree(original, site/original.name)
+        probe = subprocess.check_output([str(python), '-I', '-c',
+            'import sys; sys.path.insert(0, '+repr(str(copied))+'); '
+            'from tools import manifest_inspection as m; sdk, pins = m.load_verified_sdk(); '
+            'assert sdk.__version__ == pins["package_version"]; print(sdk.__version__)'],
+            cwd=copied, text=True, timeout=20).strip()
+        assert probe == pins['package_version']
+        result = subprocess.run([str(python), str(copied/'scripts/inspect-manifest.py'),
+            '--image', str(fixture/'signed.png')], cwd=copied, capture_output=True, timeout=20)
+        assert result.returncode == 0 and not result.stderr
+        value = json.loads(result.stdout)
+        assert value['state'] == 'OBSERVED' and value['asset_binding'] == 'matched' and value['tags'] == []
+        cases.append({'case':'in_checkout_virtualenv', 'state':'OBSERVED',
+            'reviewed_library_used':True, 'distribution_metadata_retained':True})
     with tempfile.TemporaryDirectory(prefix='aitrust-manifest-control-') as directory:
         private=Path(directory).resolve();private.chmod(0o700)
         malformed=private/'malformed.png';malformed.write_bytes((fixture/'unsigned.png').read_bytes()[:-1])

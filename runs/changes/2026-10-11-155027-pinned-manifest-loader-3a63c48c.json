@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-155027-pinned-manifest-loader-3a63c48c",
+  "recorded_at": "2026-10-11T15:50:27.994854+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
+  "changed": "Published policy v1.10, preserved dependency notices and the 114/88 scope ledger; repaired optional manifest SDK namespace collisions with absolute checked-package loading.",
+  "proves": "The deployed build matched all 238 artifacts at each of three origins. Private package-shadow reproduction established the bug, and regression controls now refuse cached SDK modules and bypass checkout shadows.",
+  "limits": "Current loader acceptance is pending fresh Mac/Linux/hosted and published-source runs. No origin tag, independent accuracy, license permission or human acceptance is granted.",
+  "scope_ids": [
+    "F-025",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/manifest-inspection.md": "8b453c04f6a2f28ff3fbbcccc9868bccc570954ac88d64d52b5f1056b696c56a",
+    "docs/manifest-loader-plan.md": "25354d1c387b7c3eaef584edbde4f48ea0373afda63438359a7f92b31a811cb7",
+    "runs/2026-10-11-manifest-loader-linux.json": "d4bb9b9b6ab732f6621109834127a1cce6a9d90c500009ecdeb00f30999880fd",
+    "runs/2026-10-11-manifest-loader-mac.json": "726dbdd5f9b26456e2b16ce199cedcfa450eada374469f403f8853ff90c40297",
+    "runs/2026-10-11-manifest-shadow-reproduced.json": "29403081fdae79366ff2b14ffff20b934cd46285bda9027546f58288107549fc",
+    "runs/2026-10-11-notices-publication.json": "f805da153dd944ed5a0874ce0c1146b42aec700d5fc0b135d031bf871c28af35",
+    "scripts/verify-manifest-inspection.py": "01aa10eb8ae1567c4a26eb12e23bc8a36ea4a73f9e98cf7c23b79c4378591806",
+    "state.json": "004d58c45408e3b9d43762c39143d163f1d6890301727dfc7f3dd4547518da91",
+    "tests/test_manifest_inspection.py": "59222e0b27ff3c8bfeb02fda06344f7cd279c46a9ff03e30f1530bc8717167ce",
+    "tools/manifest_inspection.py": "3580d9012586aa3f994dbd29bfb1b0ee8c3aa15850dc7a1849f847c88e568845"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-notices-publication.json",
+      "sha256": "f805da153dd944ed5a0874ce0c1146b42aec700d5fc0b135d031bf871c28af35"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-shadow-reproduced.json",
+      "sha256": "29403081fdae79366ff2b14ffff20b934cd46285bda9027546f58288107549fc"
+    }
+  ],
+  "checks": []
+}

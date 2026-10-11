@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-160347-loader-distribution-metadata-d968a7e1",
+  "recorded_at": "2026-10-11T16:03:47.152935+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ebfeee1d844eaebb99a3ad119cc47712a2860da7",
+  "changed": "Retained the checked SDK distribution metadata inside checkout-local virtualenvs and now verifies the loaded wrapper version as well as the native SDK version.",
+  "proves": "68 focused controls and the 16-case real Mac verifier pass. The earlier source lost wrapper-version metadata; its pinned initializer fell back to unknown, so the review claim of reader failure was not reproduced and is corrected in the diagnosis.",
+  "limits": "No complete sandbox or new tag is claimed; Linux, full-suite and hosted acceptance are refreshed for the exact amended source.",
+  "scope_ids": [
+    "F-025"
+  ],
+  "files": {
+    "docs/manifest-loader-plan.md": "c57a9ee425fe4852c8360a48bf2add0868de0c15e24fe8155dec20fbe2986c20",
+    "eval/route-boundaries.json": "6ccbdc986b004fc30ed17a0ef81cba152a2e3156acb69a536323a84ba303daff",
+    "runs/2026-10-11-manifest-loader-metadata-boundaries.json": "7b65a6e0b93c27094fe126a083403887084c4219cf35e7e071f2d23b77969993",
+    "runs/2026-10-11-manifest-loader-metadata-mac.json": "284deb24e2ba845824817d736b50da29cad821967b6598aff759f5ada1e32606",
+    "runs/2026-10-11-manifest-loader-venv-boundaries.json": "9e319bdaee7bdb3d5633587e9badb8d92e29e80e5eb0c80e07f72cff110e2aff",
+    "runs/2026-10-11-manifest-loader-venv-diagnosis.json": "01fb90230d527a2002a59af586096bd6ab037ebd83a2052007ccc7308b0c8c56",
+    "runs/2026-10-11-manifest-loader-venv-linux.json": "74527ea1e402a73b75794c2c51c73a80aade801012cf4555b14596a714f275b9",
+    "runs/2026-10-11-manifest-loader-venv-mac.json": "5ff7b9fbd53b2090f1f9909dfe9911a28a818413d5e829125404c03c1805f1e7",
+    "scripts/verify-manifest-inspection.py": "11f4ad5723c9db6da79b1fcba0a960d1a3df65dea07cfdabebae5be81a2be034",
+    "tests/test_manifest_inspection.py": "f776087710a57b0ace9268282c59633f19718c293592dd3e169eaf65386e05c3",
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-manifest-loader-venv-diagnosis.json",
+      "sha256": "01fb90230d527a2002a59af586096bd6ab037ebd83a2052007ccc7308b0c8c56"
+    },
+    {
+      "path": "runs/2026-10-11-manifest-loader-metadata-mac.json",
+      "sha256": "284deb24e2ba845824817d736b50da29cad821967b6598aff759f5ada1e32606"
+    }
+  ],
+  "checks": []
+}

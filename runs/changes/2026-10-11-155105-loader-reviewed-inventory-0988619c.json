@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-155105-loader-reviewed-inventory-0988619c",
+  "recorded_at": "2026-10-11T15:51:05.194810+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
+  "changed": "Bound the repaired optional native loader to the reviewed source inventory and recorded actual notice-publication state.",
+  "proves": "Existing personal routes, permissions and browser receipts remain current; the route-boundary check passes for the updated optional source.",
+  "limits": "Hosted and published-source native acceptance remains pending; independent tag accuracy and human acceptance remain open.",
+  "scope_ids": [
+    "F-025",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "docs/manifest-inspection.md": "8b453c04f6a2f28ff3fbbcccc9868bccc570954ac88d64d52b5f1056b696c56a",
+    "docs/manifest-loader-plan.md": "25354d1c387b7c3eaef584edbde4f48ea0373afda63438359a7f92b31a811cb7",
+    "eval/route-boundaries.json": "cfa228f541ebaf9f48df6ae5036312de47914bc596f2e621c9a8f0dd991ba941",
+    "runs/2026-10-11-manifest-loader-boundaries.json": "440a2e635725452fc4ff60990fdac39c397d2c87c8f3e66ebaa0051eeea0f8b3",
+    "runs/2026-10-11-manifest-loader-linux.json": "d4bb9b9b6ab732f6621109834127a1cce6a9d90c500009ecdeb00f30999880fd",
+    "runs/2026-10-11-manifest-loader-mac-final.json": "4caf820f76d9f2405f09b1781478928fa3db1b7ed744cbc2c26c6ae9288562e3",
+    "runs/2026-10-11-manifest-loader-mac.json": "726dbdd5f9b26456e2b16ce199cedcfa450eada374469f403f8853ff90c40297",
+    "runs/2026-10-11-manifest-shadow-reproduced.json": "29403081fdae79366ff2b14ffff20b934cd46285bda9027546f58288107549fc",
+    "runs/2026-10-11-notices-publication.json": "f805da153dd944ed5a0874ce0c1146b42aec700d5fc0b135d031bf871c28af35",
+    "scripts/verify-manifest-inspection.py": "01aa10eb8ae1567c4a26eb12e23bc8a36ea4a73f9e98cf7c23b79c4378591806",
+    "state.json": "d54bc475ceebd092e7dabacb2a0eb0ad474d0686d98cbcab5bd019ddd12a8b7e",
+    "tests/test_manifest_inspection.py": "59222e0b27ff3c8bfeb02fda06344f7cd279c46a9ff03e30f1530bc8717167ce",
+    "tools/manifest_inspection.py": "3580d9012586aa3f994dbd29bfb1b0ee8c3aa15850dc7a1849f847c88e568845"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-manifest-loader-boundaries.json",
+      "sha256": "440a2e635725452fc4ff60990fdac39c397d2c87c8f3e66ebaa0051eeea0f8b3"
+    }
+  ],
+  "checks": []
+}

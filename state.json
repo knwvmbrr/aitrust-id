@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T15:37:57.597800+00:00",
+  "updated": "2026-10-11T16:05:22.479286+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1424,
+  "python_tests_passed": 1545,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-11-key-recovery-live-site.json",
+    "evidence": "runs/2026-10-11-notices-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -294,7 +294,7 @@
     "published_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
     "public_static_source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
     "deployment": "https://de07ac54.aitrust-id.pages.dev",
-    "source_commit": "7f25f0558902f408eb25ee65efcafee341140c24",
+    "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -729,8 +729,8 @@
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
-    "publication": "runs/2026-10-11-mobile-payload-publication.json",
-    "source_commit": "64e056963c31990a1cf213ae76c370b16b84a670",
+    "publication": "runs/2026-10-11-notices-publication.json",
+    "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
     "latest_increment": "docs/manifest-inspection.md",
@@ -1031,7 +1031,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T15:37:57.597800+00:00",
+  "updated_at": "2026-10-11T16:05:22.479286+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1427,10 +1427,10 @@
     "scope_id": "F-025",
     "state": "optional_offline_png_observation",
     "contract": "docs/manifest-inspection.md",
-    "mac_evidence": "runs/2026-10-11-manifest-inspection-mac-final.json",
-    "linux_evidence": "runs/2026-10-11-manifest-inspection-linux-final.json",
-    "fault_pin_privacy_tests": 62,
-    "real_cli_cases_per_platform": 13,
+    "mac_evidence": "runs/2026-10-11-manifest-loader-metadata-mac.json",
+    "linux_evidence": "runs/2026-10-11-manifest-loader-metadata-linux.json",
+    "fault_pin_privacy_tests": 68,
+    "real_cli_cases_per_platform": 16,
     "library_version": "c2pa-python/0.38.0 native/0.91.0",
     "new_tag_releases": 0,
     "image_credential_issuer": false,
@@ -1438,11 +1438,15 @@
     "independent_accuracy_evidence": false,
     "current_capabilities": "runs/2026-10-11-manifest-current-capabilities.json",
     "current_boundaries": "runs/2026-10-11-manifest-workflow-boundaries.json",
-    "full_python_evidence": "runs/2026-10-11-manifest-workflow-full-python.json",
+    "full_python_evidence": "runs/2026-10-11-manifest-loader-metadata-python.json",
     "published_source_execution": "runs/2026-10-11-manifest-public-source.json",
     "protected_acceptance": "runs/2026-10-11-manifest-protected-acceptance.json",
     "merged_source_acceptance": "runs/2026-10-11-manifest-merged-source-acceptance.json",
-    "source_commit": "d26acfc308c95c37adb415e1f8e710c4f0a89c41"
+    "source_commit": "d26acfc308c95c37adb415e1f8e710c4f0a89c41",
+    "loader_repair": "docs/manifest-loader-plan.md",
+    "reproduced_fault": "runs/2026-10-11-manifest-shadow-reproduced.json",
+    "loader_revalidation_pending": true,
+    "method": "attached-c2pa-inspection/1.0.1"
   },
   "dependency_notice_evidence": {
     "status": "observed_notice_identity_and_archive_extraction",
@@ -1458,9 +1462,11 @@
       "F-057",
       "X-02"
     ],
-    "publication_pending": true,
+    "publication_pending": false,
     "full_python_evidence": "runs/2026-10-11-notices-checkout-python.json",
     "current_capabilities": "runs/2026-10-11-notices-current-capabilities.json",
-    "current_boundaries": "runs/2026-10-11-notices-checkout-boundaries.json"
+    "current_boundaries": "runs/2026-10-11-notices-checkout-boundaries.json",
+    "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
+    "website_publication": "runs/2026-10-11-notices-publication.json"
   }
 }

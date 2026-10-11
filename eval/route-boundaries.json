@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-11T15:35:25.516668+00:00",
-  "reviewed_by": "Codex \u2014 preserve exact upstream notice bytes across checkouts, exclude only third-party notice whitespace from whitespace normalization, recheck pinned artifact extraction without permission or route changes",
+  "reviewed_at": "2026-10-11T16:03:46.333919+00:00",
+  "reviewed_by": "Codex \u2014 retain checked SDK metadata and enforce loaded package/native versions, exclude source shadow imports, personal routes unchanged",
   "rules": [
     "X-01",
     "X-03",
@@ -333,7 +333,7 @@
     "scripts/verify-dependency-automation.py": "321b863511c509c06a3c7c0151d1eb91c5c76f886d1b9ef62d1b271215ef7a61",
     "scripts/verify-image-provenance-boundary.py": "aae341bef5856f4b158f3ec6e141ced99cec7b8685232f8699876578941e4563",
     "scripts/verify-independent-observations.py": "3b543a55d6bcb3bdfe2f52eacd5b190ac5979a4259113a4090f3764c36b2288f",
-    "scripts/verify-manifest-inspection.py": "666c5e243a887815a003812d691597d4d37e5176d2d6a22d0537abd1cf3682a2",
+    "scripts/verify-manifest-inspection.py": "11f4ad5723c9db6da79b1fcba0a960d1a3df65dea07cfdabebae5be81a2be034",
     "scripts/verify-mobile-payload.cjs": "9a2cc75ef2c4f8cbaf26bb5a146bffec9d9ef6cc128984742ccfa6f342f04cdb",
     "scripts/verify-redistribution-notices.py": "25a47193c9e1ee1eb4582047fa575234badfecc9eb1d15d76d9e5fe4140002e1",
     "scripts/verify-registry-deferral.py": "6bdcf2aaaedfb1f3d96f35588ac6d0f537fe8205099f0de712c9cb67fb5cb206",
@@ -463,7 +463,7 @@
     "tests/test_key_backup.py": "7f1927d7f93beb16cfaac71502e30c68b84538345434cf00698771db2c8e45f2",
     "tests/test_language_observations.py": "19722287d64bae1621e6fdaf7ea025b709efc11b7310dc81ca7c60dff6ff0757",
     "tests/test_license_notices.py": "23ff8e358446e1ce71b28dc4d0de006c496ebe8e7468eb976c9327760c53d3da",
-    "tests/test_manifest_inspection.py": "34d13d703912411c1b76a1a8080ee076c6c7fd9e7b3351067e30b75d18bc4568",
+    "tests/test_manifest_inspection.py": "f776087710a57b0ace9268282c59633f19718c293592dd3e169eaf65386e05c3",
     "tests/test_manifest_workflow.py": "8ec74c48c3f2cb64448f44f190a6e92ed9e9186f3c7d72c77315304725612a89",
     "tests/test_observation_verifier.py": "2eef69e0657e9f90ce1878d21e79483704e8f350f902c036a40ecb87ac2804f3",
     "tests/test_offline_revocation.py": "4f638ed0779ef307714ce1b0c23b90a4adc62eede6e763c409dcb0f1ce7ea9d2",
@@ -480,7 +480,7 @@
     "tools/composition/style.css": "2d235a7d0be78fc8ef9933e327e365fd8fe9b0a0a2920259ea3eb072e0f69b29",
     "tools/credential_flow.py": "b4b39e985c05f53c3d514b368f021d578031e751668301b4382a53d17d636c35",
     "tools/language_observations.py": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
-    "tools/manifest_inspection.py": "4f869ef59ea32fe96e6bb1fcbc57862b5645ebf9f2bb4586d7cec591ca1ab6c7",
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
     "tools/package_proximity.py": "1ce62f01086757fd96f8b9e536f230b627fd9f5bd9919d6c17f169598d896e84"
   },
   "engineering_receipts": {

@@ -24,6 +24,8 @@ Replace the fixture path with your own PNG only when you want to inspect it. The
 10 MiB input limit, 16-million-pixel structural limit and 12-second child deadline
 are fixed. The tool does not execute image content or use filenames as URLs.
 It checks the pinned SDK wrapper and native library bytes before importing them.
+It loads that exact checked package by its absolute path; a same-named file or
+folder in your source checkout is not used. A preloaded SDK is refused.
 No global SDK settings are used; each reader gets verification enabled, remote
 manifest and OCSP fetching disabled, no allowed network hosts and identity
 decoding disabled. It does not add a test root to its trust store.
@@ -70,7 +72,7 @@ created; private reports remain yours to keep or remove separately.
 
 ## Evidence and limits
 
-Method `attached-c2pa-inspection/1.0.0`, c2pa-python 0.38.0, native SDK 0.91.0.
+Method `attached-c2pa-inspection/1.0.1`, c2pa-python 0.38.0, native SDK 0.91.0.
 The optional package is MIT OR Apache-2.0. Package and binary wheel digests are in
 `eval/dependencies/c2pa-inspection.json`; the ten-package optional environment is
 hash locked separately from the running personal pipeline. SDK and transitive

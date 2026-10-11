@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import struct
 import subprocess
+import sys
 import zlib
 
 import pytest
@@ -219,3 +220,61 @@ def test_unreviewed_sdk_version_refused(fake_sdk):
 def test_unreviewed_pin_contract_refused(fake_sdk,mutation):
     _,file,pins,_=fake_sdk;mutation(pins);file.write_text(json.dumps(pins))
     with pytest.raises(CorpusError):m.checked_sdk()
+
+
+@pytest.mark.parametrize('name', ['c2pa', 'c2pa.lib', 'c2pa.other'])
+def test_preloaded_sdk_is_refused_before_checked_import(monkeypatch,name):
+    monkeypatch.setitem(sys.modules,name,object())
+    monkeypatch.setattr(m,'checked_sdk',lambda:pytest.fail('Preloaded SDK must be refused first'))
+    with pytest.raises(CorpusError,match='preloaded'):m.load_verified_sdk()
+
+
+def reviewed_initializer(fake_sdk, source):
+    package,file,pins,_=fake_sdk
+    (package/'__init__.py').write_text(source)
+    pins['profiles']['linux-x86_64']['sources']['c2pa/__init__.py']=hashlib.sha256((package/'__init__.py').read_bytes()).hexdigest()
+    file.write_text(json.dumps(pins))
+    return package
+
+
+def test_checked_absolute_initializer_ignores_shadow_search_path(fake_sdk,tmp_path,monkeypatch):
+    package=reviewed_initializer(fake_sdk,'CHECKED_ORIGIN = True\nfrom . import lib\n')
+    (package/'lib.py').write_text('RELATIVE_ORIGIN = True\n')
+    _,file,pins,_=fake_sdk
+    pins['profiles']['linux-x86_64']['sources']['c2pa/lib.py']=hashlib.sha256((package/'lib.py').read_bytes()).hexdigest()
+    file.write_text(json.dumps(pins))
+    shadow=tmp_path/'source';shadow.mkdir();(shadow/'c2pa.py').write_text('raise RuntimeError("unreviewed shadow")\n')
+    monkeypatch.setattr(m,'ROOT',shadow);monkeypatch.chdir(shadow)
+    monkeypatch.setattr(sys,'path',[str(shadow),str(shadow/'child'),'']+list(sys.path))
+    monkeypatch.setenv('C2PA_LIBRARY_NAME','unreviewed environment override')
+    try:
+        sdk,_=m.load_verified_sdk()
+        assert sdk.CHECKED_ORIGIN and sdk.lib.RELATIVE_ORIGIN
+        assert Path(sdk.__file__) == package/'__init__.py'
+        assert str(shadow) not in sys.path and '' not in sys.path
+        assert not any(Path(p).resolve().is_relative_to(shadow) for p in sys.path)
+        assert m.os.environ['C2PA_LIBRARY_NAME']==str(package/'libs/libc2pa_c.so')
+    finally:
+        for name in list(sys.modules):
+            if name=='c2pa' or name.startswith('c2pa.'):sys.modules.pop(name)
+
+
+def test_initializer_failure_clears_partial_module_cache(fake_sdk,monkeypatch):
+    reviewed_initializer(fake_sdk,'import sys\nsys.modules["c2pa.partial"] = object()\nraise RuntimeError("fixture failure")\n')
+    monkeypatch.setattr(sys,'path',list(sys.path));monkeypatch.setenv('C2PA_LIBRARY_NAME','before')
+    with pytest.raises(RuntimeError,match='fixture failure'):m.load_verified_sdk()
+    assert not any(name=='c2pa' or name.startswith('c2pa.') for name in sys.modules)
+
+
+def test_verified_distribution_root_is_retained_inside_checkout(fake_sdk,tmp_path,monkeypatch):
+    package=reviewed_initializer(fake_sdk,'CHECKED_ORIGIN = True\n')
+    root=tmp_path.resolve()
+    monkeypatch.setattr(m,'ROOT',root);monkeypatch.chdir(root)
+    monkeypatch.setattr(sys,'path',[str(root),str(package.parent)]+list(sys.path))
+    monkeypatch.setenv('C2PA_LIBRARY_NAME','before')
+    try:
+        sdk,_=m.load_verified_sdk()
+        assert sdk.CHECKED_ORIGIN and str(package.parent) in sys.path and str(root) not in sys.path
+    finally:
+        for name in list(sys.modules):
+            if name=='c2pa' or name.startswith('c2pa.'):sys.modules.pop(name)
