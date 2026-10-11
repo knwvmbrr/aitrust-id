@@ -3,7 +3,7 @@
 The owner changed the target on October 10, 2026: continue until **25 full
 requirements remain open**. This supersedes the previous target of 50, while
 preserving its implementation history and all 202 requirement IDs. Current
-audited state is 107 complete and 95 open: **70 additional full completions**
+audited state is 111 complete and 91 open: **66 additional full completions**
 are required. The live counts and remaining work are derived from the acceptance
 ledger in `state.json`; its verifier rejects contradictory target arithmetic.
 
@@ -76,3 +76,5 @@ handling. Use `docs/key-recovery.md`; synthetic terminal success is not human
 acceptance. PS blind review, the physical iPhone 14 Plus/VoiceOver checks, outside
 implementation acceptance and legal/service decisions remain independently
 required. This handoff changes no requirement counts or baseline jobs.
+
+Latest owner direction: reduce the open queue as far as full functioning acceptance permits. The earlier target of 25 remains tracked; no record is dropped or narrowed. The consent/conformance increment closes F-128, F-144, X-07 and F-020a as reference jobs, without releasing NF or a certification programme.

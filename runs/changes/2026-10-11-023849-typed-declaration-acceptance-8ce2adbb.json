@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-023849-typed-declaration-acceptance-8ce2adbb",
+  "recorded_at": "2026-10-11T02:38:49.069826+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "50fe19d740000983b69692024348af71e9c832fc",
+  "changed": "Reject hash-shaped arrays in declaration revisions and bind four closures to the final typed current-source evidence.",
+  "proves": "Actual Mac and network-isolated Linux both pass 43 controls, including strict revision types and unauthenticated publisher/time handling.",
+  "limits": "No certification, claimed test truth or source-revision authenticity is inferred from a self-declaration.",
+  "scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a"
+  ],
+  "files": {
+    "Makefile": "506a906e67f5b7a64570cd52a1f2d5e4d92bc4fb83e799de689c91bcd1141682",
+    "README.md": "30a3c03c9a57232b520de27086a7fe4b245d66af9ea4d27f77df9fc9cfc2140f",
+    "docs/author-choice.md": "673a2b9b5701934d17721519386fac4fae4e7545d7e50b450e77bd18c5a089a6",
+    "docs/consent-conformance-plan.md": "d62749f2b680cfd5e118f2a3d30656c73f4a2ba638839eafa46f97b8ee5a3d0f",
+    "docs/corpus-support.md": "90670e8f898c40fd08091d4ebc6e87d3c98c8fb52160b8234912eee805e661b5",
+    "docs/image-provenance-boundary.md": "6f18c9c7e7c36337cfd4cb07893abd6f6a55befd9d4315b0cd87e7dd1e603345",
+    "docs/mark-usage.md": "579611c0c16371c73ed4ef168812dfaec2861834c7a7754c03f925bdfe9237e1",
+    "docs/scope-25-execution.md": "5039094bafc2dcac9759a827c78ab2237cd655b421334e2192f80e981b94095e",
+    "docs/scope-progress.json": "98d99b9e9d495121d3009342ef4a5761f9d41c3b82f6eee5ce20dc3a2503676c",
+    "docs/scope-progress.md": "4735fda9fc59e3aa1b77ebf7c2afcd6e9b979f8bb6ef690687827380e64e3b37",
+    "docs/scope-task-index.md": "0f174fd8b77a5b3b4a207c1fa08df1c31fe36fa9b0b074fbb8dccbe6c3f1b560",
+    "eval/revalidation.json": "b6db8b80e565b08ac6146f82ee43b67b3f86898d03ad8bcfdd77d75b2e76c79f",
+    "package.json": "c0ca7ca63d1ff891ef1ff8efb015b07f52622f5a8e6ecb70cdf8154e9edbe7d9",
+    "protocol/author-choice.cjs": "fca928eba07e0a1335d62c7d5db83c853c8a8694fbcd30985d2c50f777349c8a",
+    "protocol/conformance-statement.cjs": "ed0038c562824c27f3833cf31f369e606030ac86935d3fe8457c5bdb39f63def",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "runs/2026-10-11-consent-conformance-controls.json": "1286afa12431759f049a79b3e8b3b8668cdd82d489e635bdad17b4d74a4f89b3",
+    "runs/2026-10-11-consent-conformance-platforms.json": "539e38c1800e3ba71414ed09230f6c3f5bf52d0e8724d2f04a17102103e2828c",
+    "runs/2026-10-11-consent-editor-engines.json": "4abb98a071b057313d42a8b86b39b7ebbae3ca7541573f889495a2fe2a963fd3",
+    "runs/2026-10-11-consent-extension-current.json": "6650dc1a220648e1e2d740e3e2d4c075d47dc6579b1e6ae202100fb7d92c6920",
+    "runs/2026-10-11-consent-final-controls.json": "cb57784b8d3d3ca1982fb10205c6badbba1a03d3807cfef2a9b62035e8137239",
+    "runs/2026-10-11-consent-final-platforms.json": "11ec568301aa8fb6972e8b521dfaa0393dd096d61101506170de7e5cae7ebc2b",
+    "runs/2026-10-11-consent-scope.json": "37eb86fc8f802ddd6f0fc0d5bb26b46dffb711333a4c174924ba2978a084313b",
+    "runs/2026-10-11-consent-typed-controls.json": "e5985f4b33cbe46f3a8f6100129887cf79c9b479bb79b7e0b3e083d1653cebe2",
+    "runs/2026-10-11-consent-typed-platforms.json": "6091b5e06d227ede1117cde4bb740ea138691613b408662f989d52619516a380",
+    "runs/2026-10-11-consent-website-current.json": "4b3abb051b6417b74e7d15480e1b512ebfb2da9830dc4f5a8a05000bd9a85e9d",
+    "runs/2026-10-11-corpus-support-linux.json": "a8e45a8a453b707a2fddcb1234213028080c4ef74bc5025c2f12cd617d107adb",
+    "scripts/build-composition-tool.py": "505e604a702660abd873e14dd01c04f676783349a8b74c5621be4e54b359be6e",
+    "scripts/conformance-statement.cjs": "bce368ff8dd53bc417de147960314b3f9d309b4d91bea7638ba56065bcc238d7",
+    "scripts/corpus-support.py": "cd814151d1a3999f7b914617311c86435429839a14bcd6024e1c30b0881e900f",
+    "scripts/group-receipt.cjs": "acb151653dd6f7739179071645b5d1069fe69899062c4e5afeea36a19d4c28ba",
+    "scripts/receipt.cjs": "c771968409fbd34fd673847d40e8fa6a73c8520475ba416004289aaa73ebd950",
+    "scripts/verify-composition-tool.cjs": "1ec53769a91ca078a821a279e22171c77cb992e18831a726a66057c4393bf7eb",
+    "scripts/verify-consent-conformance.py": "9d54742f4ea0c5703a592078ee45efcb00352512a8a7cda7f812e6abe1cdbd39",
+    "scripts/verify-image-provenance-boundary.py": "aae341bef5856f4b158f3ec6e141ced99cec7b8685232f8699876578941e4563",
+    "scripts/verify-offline-download.cjs": "1225af31f687e36a7f4a62f9395006cca3f7eae5c89f1675c8d7965604ec7f8b",
+    "scripts/verify-route-boundaries.py": "21114c16f78ef00d5e9a80f2ab0d2c08c51a18e320476f5abecf9a85b63ce6e5",
+    "scripts/verify-site.cjs": "05c0a49c100cee4165fe4081e09699ea72e4ee56368eb4a827449baf803ee5a8",
+    "site/public/reference/public-scope.json": "a157d90111655b098014125bc2df4d18ac84e57608f63fa6a01faf1685128800",
+    "site/public/sitemap.xml": "4aa2e13deb579be2386a4ade8ddf6f41244820f3fcb7f778b4a2b2bd9c733767",
+    "site/scripts/prepare.mjs": "7b3128189f3cfc02623801b3fefeb772d0d2d1e1d92929c261aa7f6f1eea00b5",
+    "site/scripts/render-reference.mjs": "b2d62a2c9a3ae706fd1bccb02ba4414ee06ff11d4f08d11fa72275304bdddc6e",
+    "site/src/public-scope.json": "a157d90111655b098014125bc2df4d18ac84e57608f63fa6a01faf1685128800",
+    "site/src/workflows/Legal.jsx": "21225f8a38db117d01d6bac421cae682dad06e7e6bd88d2800705aa662d71e68",
+    "spec/image-provenance-boundary.json": "8ed330580783ec7f61e2ea0e537a6d402764beef765ecc6aa8e8f9b9222b3f1c",
+    "state.json": "171e21265ba738c94d08e89d3b4ee4f47fea615cde34d5b9bebbe42737834d5a",
+    "tests/author-choice.cjs": "84ddd8a548ffaa202d8e4aca2e8a028f48bc84829c50221c41009f2100bcdabd",
+    "tests/conformance-statement.cjs": "7a7d2f7353fcf26ceecb60b9ee88a06e9f431dd0dfc6db49af7d9d8c1b677cdd",
+    "tests/test_consent_conformance.py": "eb4ef53ebd325e064544edb055ba8346a2a6ad950e2eb4616f13c6fcc02a65f7",
+    "tests/test_corpus_support.py": "ccea0063b7bf8b0ec86e6269c55ca39407baf1ba2cd6db5b033ae02144e700ea",
+    "tools/composition/editor.html": "f5239b93ef824f02bb2a7211cbc18316cfe6dc8c5b8b91ee98662c6a9c7f13a1",
+    "tools/composition/editor.js": "a4edb9844befa41f6e77178183b13b249d30a5411ab809a907c4e80e8fd8a804"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-consent-typed-controls.json",
+      "sha256": "e5985f4b33cbe46f3a8f6100129887cf79c9b479bb79b7e0b3e083d1653cebe2"
+    },
+    {
+      "path": "runs/2026-10-11-consent-typed-platforms.json",
+      "sha256": "6091b5e06d227ede1117cde4bb740ea138691613b408662f989d52619516a380"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T02:38:49.230378+00:00"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const g=require('../protocol/group-receipts.cjs'),r=require('../protocol/receipts.cjs'),io=require('./receipt.cjs');
+const choice=require('../protocol/author-choice.cjs');
 function json(file){return r.parse(io.read(file));}
 function main(args){
  const [command,...a]=args;
@@ -13,6 +14,7 @@ function main(args){
  }
  if(command==='create'&&a.length===3){io.write(a[2],r.bytes(g.create(io.read(a[0],false,g.LIMIT),json(a[1]),Math.floor(Date.now()/1000)))+'\n');console.log('Local manifest created. Share it only with willing participants.');return 0;}
  if(command==='sign'&&a.length===4&&a[3]==='--agree'){
+  if(!choice.authorize(choice.profile(),'endorse',true))throw Error('Endorsement declined');
   io.write(a[2],r.bytes(g.endorse(json(a[0]),io.read(a[1],true),true))+'\n');
   console.log('Your selected key signed this manifest. No authorship verdict issued.');return 0;
  }

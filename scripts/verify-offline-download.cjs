@@ -29,7 +29,18 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
   await page.evaluate(fs.readFileSync(require.resolve('axe-core/axe.min.js'),'utf8'));
   const violations=await page.evaluate(async()=> (await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}})).violations.length);assert.equal(violations,0);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-  const record={captured_at:new Date().toISOString(),pass:true,base,published:!!process.env.AITRUST_SITE_URL,download_sha256:sha(download),native_download:true,expected_filename:true,reference_320_reflow:true,axe_violations:violations,independent_accuracy_evidence:false,tag_release_approved:false};
+  await page.goto(base+'/reference/conformance/');
+  assert(await page.getByRole('heading',{name:'Show what your build has checked.',exact:true}).isVisible());
+  const guides=[];
+  for(const [label,name] of [['Download the guidelines and template','mark-usage'],['Read the optional-receipt rule','author-choice'],['Local reference comparison guide','corpus-support']]){
+    const pending=page.waitForEvent('download');await page.getByRole('link',{name:label,exact:true}).click();
+    const downloaded=await pending,raw=fs.readFileSync(await downloaded.path());
+    assert.equal(sha(raw),sha(fs.readFileSync(path.join(root,'docs',name+'.md'))));guides.push({name,native_download:true,sha256:sha(raw)});
+  }
+  await page.evaluate(fs.readFileSync(require.resolve('axe-core/axe.min.js'),'utf8'));
+  const conformanceAxe=await page.evaluate(async()=> (await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}})).violations.length);assert.equal(conformanceAxe,0);
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  const record={captured_at:new Date().toISOString(),pass:true,base,published:!!process.env.AITRUST_SITE_URL,download_sha256:sha(download),native_download:true,expected_filename:true,reference_320_reflow:true,axe_violations:violations,conformance_guides:guides,conformance_axe_violations:conformanceAxe,independent_accuracy_evidence:false,tag_release_approved:false};
   writeReport(process.env.AITRUST_OFFLINE_DOWNLOAD_REPORT||'output/verification/offline-download.json',record,root);console.log(JSON.stringify(record));
  }finally{if(browser)await browser.close();if(server)await new Promise(resolve=>server.close(resolve));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

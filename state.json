@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T01:44:44.311583+00:00",
+  "updated": "2026-10-11T02:42:18.382767+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 1182,
+  "python_tests_passed": 1225,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -716,34 +716,36 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T01:25:30.316087+00:00",
-    "completed_records": 107,
-    "open_records": 95,
+    "audited_at": "2026-10-11T02:38:48.987316+00:00",
+    "completed_records": 111,
+    "open_records": 91,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
     "enhancements": 4,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
-    "execution_evidence": "runs/2026-10-11-key-backup-atomic-final-platforms.json",
-    "structural_evidence": "runs/2026-10-11-key-backup-scope.json",
+    "execution_evidence": "runs/2026-10-11-consent-acceptance-packet.json",
+    "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-11-key-recovery-publication.json",
     "source_commit": "4673a06458df52dca812885ff132828f2d3657f3",
     "public_workflow_evidence": "runs/2026-10-11-key-recovery-live-site.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/key-recovery.md",
+    "latest_increment": "docs/consent-conformance-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 25,
     "target_start_open_records": 100,
-    "target_remaining_closures": 70,
-    "publication_pending": false,
+    "target_remaining_closures": 66,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-25-execution.md",
     "target_direction_date": "2026-10-10",
-    "current_target_verification": "runs/2026-10-10-target25-source-checks-repaired.json",
-    "publication_evidence_merge": "runs/2026-10-11-key-recovery-protected-merge.json"
+    "current_target_verification": "runs/2026-10-11-consent-typed-controls.json",
+    "publication_evidence_merge": "runs/2026-10-11-key-recovery-protected-merge.json",
+    "latest_owner_direction": "Reduce the 95 open requirements to as few as possible without reducing full named acceptance",
+    "latest_owner_direction_date": "2026-10-10"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1025,7 +1027,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T01:44:44.311583+00:00",
+  "updated_at": "2026-10-11T02:42:18.382767+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1282,5 +1284,21 @@
     "publication": "runs/2026-10-11-key-recovery-publication.json",
     "public_guide": "https://aitrustid.com/reference/offline-tools/",
     "linux_cleanup": "runs/2026-10-11-key-recovery-linux-cleanup.json"
+  },
+  "consent_conformance": {
+    "scope_ids": [
+      "F-128",
+      "F-144",
+      "X-07",
+      "F-020a"
+    ],
+    "reference_implementation_verified": true,
+    "independent_tag_accuracy": false,
+    "certification_operating": false,
+    "public_deployment_pending": true,
+    "evidence": "runs/2026-10-11-consent-typed-controls.json",
+    "current_website_evidence": "runs/2026-10-11-consent-website-accepted.json",
+    "current_extension_evidence": "runs/2026-10-11-consent-extension-accepted.json",
+    "acceptance_packet": "runs/2026-10-11-consent-acceptance-packet.json"
   }
 }

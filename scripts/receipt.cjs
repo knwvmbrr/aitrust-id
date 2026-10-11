@@ -2,6 +2,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
 const receipts=require('../protocol/receipts.cjs');
+const choice=require('../protocol/author-choice.cjs');
 const atomic=require('./atomic-output.cjs');
 const root=path.resolve(__dirname,'..');
 function read(name,privateKey=false,limit=262144){
@@ -38,6 +39,7 @@ function main(args){
   console.log('New local key files created. Public-key trust must be established separately.');return;
  }
  if(command==='issue'&&a.length===4){
+  if(!choice.authorize(choice.profile(),'issue',true))throw Error('Receipt declined');
   const artifact=read(a[0],false,80000),observation=receipts.parse(read(a[1]));
   const expected=receipts.hash(read(path.join(root,'tools/composition/core.cjs')));
   if(observation.source_sha256!==expected)throw Error('Observation method source unavailable or changed');

@@ -41,7 +41,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-019a | sig.urgency_frame.v1 — time-pressure lexicon plus imperative density | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-019b | sig.false_dilemma.v1 — binary framing where alternatives exist | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-019c | sig.authority_appeal.v1 — unattributed appeals to expertise or consensus | [TAG-MT](scope-delivery.md#tag-mt) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-020a | sig.corpus_support.v1 — retrieval similarity against an attached local corpus | [TAG-NF](scope-delivery.md#tag-nf) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-020b | sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage | [TAG-FI](scope-delivery.md#tag-fi) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-081 | Bring-your-own corpus — the user attaches their own reference material locally | [WP-REFERENCES](scope-delivery.md#wp-references) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-026 | sig.keystroke_liveness.v1 — dwell and flight time distributions | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
@@ -121,7 +121,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-125 | Per-device revocable keys plus a revocation transparency log | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-126 | Freshness model for offline verification against revocation | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-127 | Forgery-cost class as a first-class field on every receipt | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-128 | Anti-coercion rule — a conformant implementation may not make receipt issuance non-optional for the author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-128 | Anti-coercion rule — a conformant implementation may not make receipt issuance non-optional for the author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-129 | Key custody and recovery for a non-technical author | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-130 | Group authorship — four signers or four receipts | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-131 | Receipt expiry and algorithm agility — ed25519 will not be safe forever | [WP-RECEIPTS](scope-delivery.md#wp-receipts) | 100% · [evidence/fix](scope-progress.md) |
@@ -140,7 +140,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-142 | Install and removal instructions, reproducible | [WP-SITE](scope-delivery.md#wp-site) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-075 | Two-entity structure — independent foundation holds spec and mark; implementations compete on top | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-143 | Certification-mark ownership and filing work | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-144 | Mark usage guidelines and a conformance statement template | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-144 | Mark usage guidelines and a conformance statement template | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-145 | Certification programme — what a certifier must test, and how one is accredited | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-146 | Nonprofit formation and filings | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-147 | Conflict-of-interest recusal rule for maintainers with a commercial interest | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 40% · [evidence/fix](scope-progress.md) |
@@ -173,7 +173,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-X-04 | Per-person keystroke templates or any biometric identity profile | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-05 | Any human-negative verdict from an absent signal | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-06 | Telemetry, usage analytics, crash reporting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-X-07 | Competing with C2PA on image provenance | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-X-07 | Competing with C2PA on image provenance | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-08 | Building image, audio or video detection in 1.0 | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-09 | Colour-coded labels | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-X-10 | aria-live="assertive" announcements | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |

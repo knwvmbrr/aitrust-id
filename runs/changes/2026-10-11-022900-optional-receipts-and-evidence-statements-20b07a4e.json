@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-022900-optional-receipts-and-evidence-statements-20b07a4e",
+  "recorded_at": "2026-10-11T02:29:00.513333+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "50fe19d740000983b69692024348af71e9c832fc",
+  "changed": "Enforce optional receipt policies, add an evidence-bound self-declaration and local corpus support, and guard current/next image-provenance issuance.",
+  "proves": "Actual local command controls, both editor browser engines and 41 network-isolated Linux controls execute without certification or factual-tag issuance.",
+  "limits": "No independent tag accuracy, human/device acceptance, legal clearance, operating certification or protection from coercion outside the software.",
+  "scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a"
+  ],
+  "files": {
+    "Makefile": "506a906e67f5b7a64570cd52a1f2d5e4d92bc4fb83e799de689c91bcd1141682",
+    "README.md": "30a3c03c9a57232b520de27086a7fe4b245d66af9ea4d27f77df9fc9cfc2140f",
+    "package.json": "c0ca7ca63d1ff891ef1ff8efb015b07f52622f5a8e6ecb70cdf8154e9edbe7d9",
+    "scripts/build-composition-tool.py": "505e604a702660abd873e14dd01c04f676783349a8b74c5621be4e54b359be6e",
+    "scripts/group-receipt.cjs": "acb151653dd6f7739179071645b5d1069fe69899062c4e5afeea36a19d4c28ba",
+    "scripts/receipt.cjs": "c771968409fbd34fd673847d40e8fa6a73c8520475ba416004289aaa73ebd950",
+    "scripts/verify-composition-tool.cjs": "1ec53769a91ca078a821a279e22171c77cb992e18831a726a66057c4393bf7eb",
+    "scripts/verify-route-boundaries.py": "4f59b51f6fe318284ba77bf777cee3458e3085cb930103f9bfbf88ce5db03eb9",
+    "site/scripts/prepare.mjs": "7b3128189f3cfc02623801b3fefeb772d0d2d1e1d92929c261aa7f6f1eea00b5",
+    "site/scripts/render-reference.mjs": "b2d62a2c9a3ae706fd1bccb02ba4414ee06ff11d4f08d11fa72275304bdddc6e",
+    "site/src/workflows/Legal.jsx": "21225f8a38db117d01d6bac421cae682dad06e7e6bd88d2800705aa662d71e68",
+    "tools/composition/editor.html": "f5239b93ef824f02bb2a7211cbc18316cfe6dc8c5b8b91ee98662c6a9c7f13a1",
+    "tools/composition/editor.js": "a4edb9844befa41f6e77178183b13b249d30a5411ab809a907c4e80e8fd8a804",
+    "docs/author-choice.md": "673a2b9b5701934d17721519386fac4fae4e7545d7e50b450e77bd18c5a089a6",
+    "docs/consent-conformance-plan.md": "d62749f2b680cfd5e118f2a3d30656c73f4a2ba638839eafa46f97b8ee5a3d0f",
+    "docs/image-provenance-boundary.md": "6f18c9c7e7c36337cfd4cb07893abd6f6a55befd9d4315b0cd87e7dd1e603345",
+    "docs/mark-usage.md": "3f203efaa05ad9f4aa89f3dedde63dc739ec01170b1012951c7f6803db3a54f6",
+    "docs/corpus-support.md": "90670e8f898c40fd08091d4ebc6e87d3c98c8fb52160b8234912eee805e661b5",
+    "protocol/author-choice.cjs": "fca928eba07e0a1335d62c7d5db83c853c8a8694fbcd30985d2c50f777349c8a",
+    "protocol/conformance-statement.cjs": "c091e7faae3489ce6d188325964f18861ec0f9e245d5a5df4d6dfde28c5b1553",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "scripts/conformance-statement.cjs": "bce368ff8dd53bc417de147960314b3f9d309b4d91bea7638ba56065bcc238d7",
+    "scripts/corpus-support.py": "cd814151d1a3999f7b914617311c86435429839a14bcd6024e1c30b0881e900f",
+    "scripts/verify-consent-conformance.py": "9d54742f4ea0c5703a592078ee45efcb00352512a8a7cda7f812e6abe1cdbd39",
+    "scripts/verify-image-provenance-boundary.py": "aae341bef5856f4b158f3ec6e141ced99cec7b8685232f8699876578941e4563",
+    "spec/image-provenance-boundary.json": "8ed330580783ec7f61e2ea0e537a6d402764beef765ecc6aa8e8f9b9222b3f1c",
+    "tests/author-choice.cjs": "84ddd8a548ffaa202d8e4aca2e8a028f48bc84829c50221c41009f2100bcdabd",
+    "tests/conformance-statement.cjs": "0981ca3cc09ccc7d294d8688343afc96eb7489664439edd4d2efd2dc4b47e979",
+    "tests/test_consent_conformance.py": "eb4ef53ebd325e064544edb055ba8346a2a6ad950e2eb4616f13c6fcc02a65f7",
+    "tests/test_corpus_support.py": "ccea0063b7bf8b0ec86e6269c55ca39407baf1ba2cd6db5b033ae02144e700ea"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-consent-conformance-controls.json",
+      "sha256": "1286afa12431759f049a79b3e8b3b8668cdd82d489e635bdad17b4d74a4f89b3"
+    },
+    {
+      "path": "runs/2026-10-11-consent-conformance-platforms.json",
+      "sha256": "539e38c1800e3ba71414ed09230f6c3f5bf52d0e8724d2f04a17102103e2828c"
+    },
+    {
+      "path": "runs/2026-10-11-consent-editor-engines.json",
+      "sha256": "4abb98a071b057313d42a8b86b39b7ebbae3ca7541573f889495a2fe2a963fd3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-image-provenance-boundary.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T02:29:00.575407+00:00"
+    }
+  ]
+}

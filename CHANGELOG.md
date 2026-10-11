@@ -2,6 +2,114 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-024218-consent-full-regression-packet-de967b7f
+
+Recorded 2026-10-11T02:42:18.418047+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final 1,225-test acceptance, current-source browser receipts and four complete reference jobs without releasing another tag.
+- **Evidence.** Full suite passes; actual Mac/Linux controls, both editor browser engines, scope/accountability and current deployment guards are verified. [Change record](./runs/changes/2026-10-11-024218-consent-full-regression-packet-de967b7f.json).
+- **Not claimed.** 91 requirements remain open; independent labels, human/phone acceptance, certification, legal formation and unbuilt tag/organization services remain separate.
+
+
+### 2026-10-11-024054-frozen-current-route-acceptance-c17f6f30
+
+Recorded 2026-10-11T02:40:54.485474+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind stable current website/extension receipts and reviewed source inventory to deployment checks, preserving synthetic staging cleanup evidence.
+- **Evidence.** Every selected engineering command passed with sources unchanged; current route, personal-access and image-boundary controls verify against those receipts. [Change record](./runs/changes/2026-10-11-024054-frozen-current-route-acceptance-c17f6f30.json).
+- **Not claimed.** The source-bound acceptance is engineering only; independent accuracy, human accessibility, physical devices and certification remain separate.
+
+
+### 2026-10-11-023854-final-public-scope-evidence-links-9ddbd9ed
+
+Recorded 2026-10-11T02:38:54.105755+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the generated public scope links to final typed acceptance evidence while preserving the 111/91 counts.
+- **Evidence.** Both generated scope copies derive from the same unchanged 202-record ledger. [Change record](./runs/changes/2026-10-11-023854-final-public-scope-evidence-links-9ddbd9ed.json).
+- **Not claimed.** This is an evidence-link refresh, not another scope closure or tag release.
+
+
+### 2026-10-11-023849-typed-declaration-acceptance-8ce2adbb
+
+Recorded 2026-10-11T02:38:49.069826+00:00 · Contributor: Codex · change
+
+- **Changed.** Reject hash-shaped arrays in declaration revisions and bind four closures to the final typed current-source evidence.
+- **Evidence.** Actual Mac and network-isolated Linux both pass 43 controls, including strict revision types and unauthenticated publisher/time handling. [Change record](./runs/changes/2026-10-11-023849-typed-declaration-acceptance-8ce2adbb.json).
+- **Not claimed.** No certification, claimed test truth or source-revision authenticity is inferred from a self-declaration.
+
+
+### 2026-10-11-023651-final-generated-public-scope-3175d866
+
+Recorded 2026-10-11T02:36:51.881344+00:00 · Contributor: Codex · change
+
+- **Changed.** Record regenerated public scope after the final acceptance evidence update, before freezing the website fingerprint.
+- **Evidence.** Generated scope reflects all 202 records and the same four closures; preceding browser checks passed, but their before/after source inventory correctly detected regeneration. [Change record](./runs/changes/2026-10-11-023651-final-generated-public-scope-3175d866.json).
+- **Not claimed.** Only a stable subsequent source-bound receipt can authorize deployment; generated-page refresh is not another completed feature.
+
+
+### 2026-10-11-023436-source-bound-final-consent-controls-9d49320f
+
+Recorded 2026-10-11T02:34:36.912043+00:00 · Contributor: Codex · change
+
+- **Changed.** Clarify unauthenticated declaration dates, bind new guide/editor inputs to website revalidation and attach final current-source evidence to all four closures.
+- **Evidence.** 42 actual Node controls pass on Mac and isolated Linux; declaration checks never authenticate publisher, time or declared revision. [Change record](./runs/changes/2026-10-11-023436-source-bound-final-consent-controls-9d49320f.json).
+- **Not claimed.** Source mutation during the preceding website run correctly refused acceptance; freeze and fresh checks are required before publication.
+
+
+### 2026-10-11-023248-conformance-crawl-and-deploy-guard-86c5e3d6
+
+Recorded 2026-10-11T02:32:48.846963+00:00 · Contributor: Codex · change
+
+- **Changed.** Require the new conformance page in the sitemap crawl and enforce the image-provenance policy in the existing predeploy guard.
+- **Evidence.** The sitemap check retains exact uniqueness and full-page crawling with the additional reference route; deployment checks cannot skip the boundary validator. [Change record](./runs/changes/2026-10-11-023248-conformance-crawl-and-deploy-guard-86c5e3d6.json).
+- **Not claimed.** The earlier website refusal came from its old 35-URL expectation; no publishing approval is inferred from that failed run.
+
+
+### 2026-10-11-023212-record-current-build-refusal-7ac55255
+
+Recorded 2026-10-11T02:32:12.688723+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the initial current-source website refusal as evidence and continue verification before publication.
+- **Evidence.** The source-bound check refused completion; no failing receipt is used to approve a release. [Change record](./runs/changes/2026-10-11-023212-record-current-build-refusal-7ac55255.json).
+- **Not claimed.** A failed receipt is diagnostic only; the corrected current-source website run must pass independently.
+
+
+### 2026-10-11-023118-consent-guide-scope-render-7f5221ff
+
+Recorded 2026-10-11T02:31:18.614771+00:00 · Contributor: Codex · change
+
+- **Changed.** Render the four accepted reference jobs into the public scope and record actual downloadable guide tests.
+- **Evidence.** Current build includes the unchanged 202-record catalogue and separate consent, self-declaration and reference-similarity guides. [Change record](./runs/changes/2026-10-11-023118-consent-guide-scope-render-7f5221ff.json).
+- **Not claimed.** The public preview and all independent validation gates retain their previous limits.
+
+
+### 2026-10-11-023055-executable-consent-and-corpus-evidence-1733e6ab
+
+Recorded 2026-10-11T02:30:55.291973+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual Mac/Linux/browser acceptance and add a discoverable public self-declaration guide with exact downloadable rules.
+- **Evidence.** Fresh evidence covers 41 Node controls on each platform, seven isolated Linux retrieval cases and selected editor paths without compulsory receipts. [Change record](./runs/changes/2026-10-11-023055-executable-consent-and-corpus-evidence-1733e6ab.json).
+- **Not claimed.** Records remain engineering evidence; no tag accuracy, certification, legal clearance or actual phone/human review is asserted.
+
+
+### 2026-10-11-022931-four-reference-jobs-accepted-d71784ff
+
+Recorded 2026-10-11T02:29:31.867462+00:00 · Contributor: Codex · change
+
+- **Changed.** Timestamp four functioning full reference jobs and preserve all 202 records; update the open queue to 91 and retain the flexible owner direction.
+- **Evidence.** F-128, F-144, X-07 and F-020a have working mechanisms, positive/refusal checks and selected integration; scope structure validates 111 complete and 91 open. [Change record](./runs/changes/2026-10-11-022931-four-reference-jobs-accepted-d71784ff.json).
+- **Not claimed.** Completion does not validate a tag, complete a legal entity or certify outside implementations; every other original requirement remains open.
+
+
+### 2026-10-11-022900-optional-receipts-and-evidence-statements-20b07a4e
+
+Recorded 2026-10-11T02:29:00.513333+00:00 · Contributor: Codex · change
+
+- **Changed.** Enforce optional receipt policies, add an evidence-bound self-declaration and local corpus support, and guard current/next image-provenance issuance.
+- **Evidence.** Actual local command controls, both editor browser engines and 41 network-isolated Linux controls execute without certification or factual-tag issuance. [Change record](./runs/changes/2026-10-11-022900-optional-receipts-and-evidence-statements-20b07a4e.json).
+- **Not claimed.** No independent tag accuracy, human/device acceptance, legal clearance, operating certification or protection from coercion outside the software.
+
+
 ### 2026-10-11-014520-key-recovery-verified-publication-9735e7ea
 
 Recorded 2026-10-11T01:45:20.995754+00:00 · Contributor: Codex · change

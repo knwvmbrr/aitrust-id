@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-10-11T02:42:18.380399+00:00",
+  "pass": true,
+  "scope_before": {
+    "complete": 107,
+    "open": 95
+  },
+  "scope_after": {
+    "complete": 111,
+    "open": 91,
+    "preserved": 202
+  },
+  "completed_scope_ids": [
+    "F-128",
+    "F-144",
+    "X-07",
+    "F-020a"
+  ],
+  "full_python_test_count": 1225,
+  "full_python_suite_exit_status": 0,
+  "full_test_stdout_sha256": "30fb5c1ad35e01312ccdd2f018c235ae19069ae6a244579027acc743bc39418a",
+  "current_source_bound_website": "runs/2026-10-11-consent-website-accepted.json",
+  "current_source_bound_extension": "runs/2026-10-11-consent-extension-accepted.json",
+  "actual_mac_node_controls": 43,
+  "actual_linux_network_isolated_node_controls": 43,
+  "actual_linux_corpus_cases": 7,
+  "browser_engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "no_local_docker_started": true,
+  "primary_untracked_files_preserved": 12,
+  "known_failed_attempts": [
+    "Initial full suite refused stale route source inventory (9 tests); current full suite passes.",
+    "Initial website checker expected 35 sitemap URLs; the new reference page requires 36 unique crawled URLs.",
+    "Source-bound website checks refused changed documentation/manifest inputs and regenerated public scope; final run is stable and passes."
+  ],
+  "independent_accuracy_evidence": false,
+  "human_accessibility_review": false,
+  "physical_phone_tested": false,
+  "certification_operating": false,
+  "new_tag_release": false,
+  "publication_pending": true
+}

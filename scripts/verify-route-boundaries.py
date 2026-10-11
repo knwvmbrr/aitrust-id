@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import re
+import runpy
 import subprocess
 import sys
 import yaml
@@ -46,6 +47,11 @@ PATTERNS += ('scripts/group-receipt.cjs', 'tests/group-receipts.cjs',
 PATTERNS += ('scripts/revocation.cjs', 'tests/offline-revocation.cjs',
              'tests/test_offline_revocation.py', 'tests/fixtures/offline-revocation-2026/*')
 PATTERNS += ('scripts/key-backup.cjs', 'scripts/atomic-output.cjs', 'tests/key-backup.cjs', 'tests/test_key_backup.py')
+PATTERNS += ('spec/image-provenance-boundary.json', 'scripts/verify-image-provenance-boundary.py',
+             'scripts/conformance-statement.cjs', 'tests/author-choice.cjs',
+             'tests/conformance-statement.cjs', 'tests/test_consent_conformance.py',
+             'scripts/corpus-support.py', 'tests/test_corpus_support.py',
+             'scripts/verify-consent-conformance.py')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
@@ -289,6 +295,7 @@ def evaluate(manifest, root=ROOT):
         raise ValueError('Application endpoint surface changed')
     active = compose_boundary(yaml.safe_load((root / 'deploy/docker-compose.yml').read_text()))
     registry_image_boundary(root)
+    runpy.run_path(str(root/'scripts/verify-image-provenance-boundary.py'))['verify'](root)
     extension = read_json(root / 'extension/manifest.json')
     if (extension.get('permissions') != ['storage'] or extension.get('optional_permissions')
             or extension.get('host_permissions') != ['http://127.0.0.1:8787/*']

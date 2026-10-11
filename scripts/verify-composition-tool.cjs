@@ -18,6 +18,13 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
    const requests=[],errors=[];page.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});page.on('pageerror',e=>errors.push(e.message));
    await page.addInitScript(()=>{window.storageWrites=0;const original=Storage.prototype.setItem;Storage.prototype.setItem=function(...args){window.storageWrites++;return original.apply(this,args);};});
    await page.goto(pathToFileURL(file).href);assert(await page.locator('#editor').getAttribute('readonly')!==null);
+   let declinedDownloads=0;const trackDeclined=()=>declinedDownloads++;page.on('download',trackDeclined);
+   await page.getByRole('button',{name:'Start',exact:true}).click();
+   await page.locator('#editor').pressSequentially('Declining a receipt.');
+   await page.getByRole('button',{name:'Pause',exact:true}).click();
+   await page.getByRole('button',{name:'Reset and delete',exact:true}).click();
+   assert.equal(declinedDownloads,0);page.off('download',trackDeclined);
+   assert.equal(await page.locator('#editor').inputValue(),'');
    await page.getByRole('button',{name:'Start',exact:true}).click();
    await page.locator('#editor').pressSequentially('Private synthetic writing.');
    let record=JSON.parse(await page.locator('#summary').textContent());assert.equal(record.timing.status,'suppressed');assert(record.event_count>0);assert.equal(record.final_length,26);
@@ -61,11 +68,11 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
    await page.reload();assert.equal(await page.locator('#editor').inputValue(),'');assert.equal(JSON.parse(await page.locator('#summary').textContent()).status,'not_started');
    assert.equal(await page.evaluate(()=>window.storageWrites),0);assert.equal(requests.length,0);assert.deepEqual(errors,[]);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile overflow');
-   observations.push({engine:engine.name(),engine_version:browser.version(),native_typing:true,revision:true,coarse_timing:true,composition_suppression:true,synthetic_paste_instrumentation:true,native_clipboard_test:false,CSP_network_refusal:true,manual_summary_export:true,manual_text_export:true,export_to_offline_receipt:true,reset_cancels_pending_export:true,pause_reset_reload:true,network_requests:0,storage_writes:0,axe_violations:0});
+   observations.push({engine:engine.name(),engine_version:browser.version(),ordinary_use_without_receipt:true,decline_receipt_without_export:true,native_typing:true,revision:true,coarse_timing:true,composition_suppression:true,synthetic_paste_instrumentation:true,native_clipboard_test:false,CSP_network_refusal:true,manual_summary_export:true,manual_text_export:true,export_to_offline_receipt:true,reset_cancels_pending_export:true,pause_reset_reload:true,network_requests:0,storage_writes:0,axe_violations:0});
    await context.close();
   }finally{await browser.close();}
  }
- const record={captured_at:new Date().toISOString(),pass:true,method:'composition-observation/1.0.0',sources:Object.fromEntries(['core.cjs','editor.js','editor.html','style.css'].map(n=>['tools/composition/'+n,sha(fs.readFileSync(path.join(root,'tools/composition',n)))])),artifact_sha256:sha(first),deterministic_build:true,observations,actual_physical_phone:false,human_accessibility_review:false,independent_accuracy_evidence:false,tag_release_approved:false};
+ const record={captured_at:new Date().toISOString(),pass:true,method:'composition-observation/1.0.0',sources:Object.fromEntries(['core.cjs','editor.js','editor.html','style.css'].map(n=>['tools/composition/'+n,sha(fs.readFileSync(path.join(root,'tools/composition',n)))])),author_choice_source_sha256:sha(fs.readFileSync(path.join(root,'protocol/author-choice.cjs'))),artifact_sha256:sha(first),deterministic_build:true,observations,actual_physical_phone:false,human_accessibility_review:false,independent_accuracy_evidence:false,tag_release_approved:false};
  execFileSync(python,['-c',"import json,sys;from protocol.reports import write_report;write_report(sys.argv[1],json.load(sys.stdin))",process.env.AITRUST_COMPOSITION_REPORT||'output/verification/composition-tool.json'],{cwd:root,input:JSON.stringify(record)});
  console.log(JSON.stringify(record));
 })().catch(e=>{console.error(e);process.exitCode=1;});

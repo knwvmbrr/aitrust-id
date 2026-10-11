@@ -133,7 +133,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   assert(!homeHTML.includes('noindex'),'Home blocked from indexing');
   const robots=await (await context.request.get(base+'/robots.txt')).text();assert(robots.includes('Allow: /')&&robots.includes('Sitemap: https://aitrustid.com/sitemap.xml'),'Crawler policy missing');
   const sitemap=await (await context.request.get(base+'/sitemap.xml')).text();const canonicalURLs=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
-  assert(canonicalURLs.length===35&&new Set(canonicalURLs).size===35,'Sitemap omits or duplicates tag URLs');
+  assert(canonicalURLs.length===36&&new Set(canonicalURLs).size===36&&canonicalURLs.includes('https://aitrustid.com/reference/conformance/'),'Sitemap omits or duplicates tag URLs');
   const canonicalTitles=new Set();const canonicalDescriptions=new Set();
   for(const url of canonicalURLs){
    const response=await context.request.get(base+new URL(url).pathname);assert(response.status()===200,'Crawlable page not served: '+url);
