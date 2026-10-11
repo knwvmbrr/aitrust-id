@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-10-11T19:48:43.133Z",
+  "pass": true,
+  "synthetic_only": true,
+  "human_ratings": false,
+  "physical_phone": false,
+  "independent_accuracy_evidence": false,
+  "predictions_run": false,
+  "release_assessed": false,
+  "sources": {
+    "scripts/prepare-ps-review.py": "f36497626d5b67d4b2398daf478985eb7eaf6f7b24a764a3eb6936201b3242ec",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+    "docs/independent-review.md": "4a0a5dc7182e59164e0eb8797ceb71bac7b023f11e490e410c501134718313de",
+    "site/src/handheld.jsx": "438815d794b55490d9ac68c209469d9f98f299c229f77315685a447457c9fbf8",
+    "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
+    "scripts/verify-blind-review-browser.cjs": "ce1dad7793ac1dfc3a958ff79be4ad0fad3f8b3e9410fb6afbf8a657ccefa79d"
+  },
+  "engines": [
+    {
+      "engine": "Chromium phone viewport",
+      "themes": [
+        {
+          "theme": "light",
+          "reviewer_downloads": 2,
+          "actual_cli_comparison": true,
+          "invalid_file_controls": 2
+        },
+        {
+          "theme": "dark",
+          "reviewer_downloads": 2,
+          "actual_cli_comparison": true,
+          "invalid_file_controls": 2
+        }
+      ],
+      "exact_original_text_preserved": true,
+      "disagreements_preserved": true,
+      "malformed_files_refused": true,
+      "no_private_network_console_or_storage": true,
+      "reflow_320": true
+    },
+    {
+      "engine": "WebKit phone viewport",
+      "themes": [
+        {
+          "theme": "light",
+          "reviewer_downloads": 2,
+          "actual_cli_comparison": true,
+          "invalid_file_controls": 2
+        },
+        {
+          "theme": "dark",
+          "reviewer_downloads": 2,
+          "actual_cli_comparison": true,
+          "invalid_file_controls": 2
+        }
+      ],
+      "exact_original_text_preserved": true,
+      "disagreements_preserved": true,
+      "malformed_files_refused": true,
+      "no_private_network_console_or_storage": true,
+      "reflow_320": true
+    }
+  ],
+  "private_material_removed": true,
+  "source_unchanged": true
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-195211-private-review-current-capabilities-ea8ed788",
+  "recorded_at": "2026-10-11T19:52:11.152194+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c2226fb67047b737246804ce2bd6a0134b1a0ff3",
+  "changed": "Bind the executed device record to its committed parser, UI, verifier and method sources and rerun four current capability checks.",
+  "proves": "The two-engine record matches 11 source files recoverable from the named implementation commit; current PS, PII, protocol and extension checks pass without source changes during execution.",
+  "limits": "Website revalidation, full suite and protected publication remain pending; 88 requirements remain open and no independent labels or release approval are granted.",
+  "scope_ids": [
+    "N-015",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "a9088b5c81896362c48e12cae3f5b3d9fa3caeb7113d95dc7699c725c5686a7e",
+    "runs/2026-10-11-blind-private-bound-PII_REDACTED.json": "8bc87719207ecaa7bb2c736c95e0344bed3fdcfe628d163dded52acd4fd53af4",
+    "runs/2026-10-11-blind-private-bound-PS.json": "0c5b8483faf50ebbee70fbcebce3b61967768b277fab3bba9181351d6361a73e",
+    "runs/2026-10-11-blind-private-bound-extension.json": "215bf28eeee7ec3da9221df975b87342d184e643bb313453dc3a6ee5d55fd447",
+    "runs/2026-10-11-blind-private-bound-protocol.json": "f71f4a307cf7cdfcdd414027ea4f2134a417d2bf65700fcdb79a2407b5102b27",
+    "scripts/verify-route-boundaries.py": "c191595b84a2e1655b5b0a236c83820dc5e6bc83ba9d5223abd177e9052568bc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-blind-private-bound-PS.json",
+      "sha256": "0c5b8483faf50ebbee70fbcebce3b61967768b277fab3bba9181351d6361a73e"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-bound-PII_REDACTED.json",
+      "sha256": "8bc87719207ecaa7bb2c736c95e0344bed3fdcfe628d163dded52acd4fd53af4"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-bound-protocol.json",
+      "sha256": "f71f4a307cf7cdfcdd414027ea4f2134a417d2bf65700fcdb79a2407b5102b27"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-bound-extension.json",
+      "sha256": "215bf28eeee7ec3da9221df975b87342d184e643bb313453dc3a6ee5d55fd447"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T19:52:11.386735+00:00"
+    }
+  ]
+}

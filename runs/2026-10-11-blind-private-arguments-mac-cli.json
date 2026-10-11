@@ -1,0 +1,152 @@
+{
+  "captured_at": "2026-10-11T19:48:42.759562+00:00",
+  "pass": true,
+  "kind": "synthetic_offline_blind_review_cli",
+  "platform": "Darwin",
+  "python_version": "3.12.14",
+  "sources": {
+    "scripts/prepare-ps-review.py": "f36497626d5b67d4b2398daf478985eb7eaf6f7b24a764a3eb6936201b3242ec",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+    "docs/independent-review.md": "4a0a5dc7182e59164e0eb8797ceb71bac7b023f11e490e410c501134718313de"
+  },
+  "source_unchanged": true,
+  "cases": [
+    {
+      "name": "unknown_command_private_path_refused",
+      "exit_status": 2,
+      "pass": true,
+      "output_sha256": "c86825fba4bc248bb8539e035e74dfbada9caf0f7d895d84b3b5a75f47a122a9",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "extra_private_argument_refused",
+      "exit_status": 2,
+      "pass": true,
+      "output_sha256": "c86825fba4bc248bb8539e035e74dfbada9caf0f7d895d84b3b5a75f47a122a9",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "freeze",
+      "exit_status": 0,
+      "pass": true,
+      "output_sha256": "334c1cdeda9eae7eee5037d036f2928b090bcb900644877cd2d1e0d668dc21e9",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "existing_packet_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "incomplete_csv_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "incomplete_phone_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "csv_disagreements_preserved",
+      "exit_status": 0,
+      "pass": true,
+      "output_sha256": "8120f3d992c0cf3417b9daa1c61f1b4cba6e43b7657633b931ea5938b92befe2",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "phone_disagreements_preserved",
+      "exit_status": 0,
+      "pass": true,
+      "output_sha256": "8120f3d992c0cf3417b9daa1c61f1b4cba6e43b7657633b931ea5938b92befe2",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "duplicate_manifest_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "forged_independence_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "invalid_utf8_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "linked_phone_form_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "multiply_linked_form_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "public_form_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "long_reason_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "oversized_source_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "public_source_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    },
+    {
+      "name": "public_destination_parent_refused",
+      "exit_status": 1,
+      "pass": true,
+      "output_sha256": "a5700b9474a904bb3e5512dfd42c79601fdf10eaa271cdc08298b9826e72b224",
+      "private_canary_and_path_absent": true
+    }
+  ],
+  "private_temporary_material_removed": true,
+  "synthetic_only": true,
+  "human_ratings": false,
+  "independence_verified": false,
+  "sampling_accepted": false,
+  "predictions_run": false,
+  "release_assessed": false,
+  "scope": "Actual offline CLI and private file controls with invented ratings; not independent reviewers, representative sampling, phone hardware or tag accuracy."
+}

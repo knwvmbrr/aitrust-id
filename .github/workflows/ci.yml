@@ -194,7 +194,7 @@ jobs:
       - run: npm ci
       - run: npm ci --prefix site
       - name: Validate source-bound redaction development charts and isolated tag states
-        run: node --test tests/redaction-performance.cjs
+        run: node --test tests/redaction-performance.cjs tests/blind-review-files.cjs
       - run: npm run verify:enterprise
       - run: npm run build:site
       - name: Exercise current-route deployment boundaries and violating profiles
@@ -225,6 +225,7 @@ jobs:
           npm run verify:site-a11y
           npm run verify:workflows
           npm run verify:policies
+          node scripts/verify-blind-review-browser.cjs
 
   source-provenance:
     # Development-source provenance only. Independent tag-release gates stay separate.

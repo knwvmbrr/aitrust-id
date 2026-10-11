@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-194426-private-review-file-safety-b642e0c4",
+  "recorded_at": "2026-10-11T19:44:26.393010+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "104b5e347c37a0d5bad464515391087dfdee6947",
+  "changed": "Verify and publish the protected PII increment; harden private blind-review packet files and phone imports while retaining the full scope.",
+  "proves": "732 exact live artifact matches after 22 required merge checks; 60 focused Python, 34 Node parser and 32 actual Mac/Linux CLI controls pass. Packet creation is private, bounded, exclusive and preserves unrelated files on failure; imports reject duplicate fields and malformed UTF-8.",
+  "limits": "88 full requirements remain open. Integrated browser checks, source-bound revalidation and the next publication are pending. No human ratings, independent labels, sampling acceptance, new endpoint or collection.",
+  "scope_ids": [
+    "F-108",
+    "N-015",
+    "F-113",
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "51689a37d9a1418fc62f4a403b0e36260704fe5137938d7e2ed63d967834978b",
+    "docs/PS-reviewer-start.md": "f3fbfd8c2363447a661a86e295db5d4e84323048556ade696792fa812c3a31d8",
+    "docs/blind-review-privacy-plan.md": "2151abaa40150ab3ff0b64fc5df45c16bc1b51fe2428f53e86885dd9a802ebdb",
+    "docs/independent-review.md": "4a0a5dc7182e59164e0eb8797ceb71bac7b023f11e490e410c501134718313de",
+    "docs/redaction-recognition-result.md": "6d79dca339c5283e413a0dea39adf06b6e0ec0003b2a73b84ec46c4273158a20",
+    "docs/scope-progress.json": "d62d2f1583304ae04b463c8a49f1f9d77e657586bbc4d3af6e374e9c6ca1f049",
+    "docs/scope-progress.md": "7ca36ac08121abdcdbfaa55d7bad2daff22279cf85360fdd868fb74c826e5327",
+    "eval/revalidation.json": "b4c1ccb247ea12329528b36f6f875e580cb4bb5122da414c9fe7405de7ef5694",
+    "runs/2026-10-11-blind-private-current-mac-cli.json": "c9ab2a14bf6efa12e63653ab3b835025f82d2349cffffe8aacccc1ae143402cb",
+    "runs/2026-10-11-blind-private-linux-cli.json": "60dc51f184878fe471015975bd0e1722bfff1767f30f8992d88aae901a69633a",
+    "runs/2026-10-11-blind-private-mac-cli.json": "ae83487c4943eb87211146a9e23c80b5f4a908d8d03260ea9dee5301491f3702",
+    "runs/2026-10-11-pii-labels-primary-ff.json": "05cec39290ce0b314c7a8f32f38c735985de03d5ca5a1bf28fe9c865739e6bf9",
+    "runs/2026-10-11-pii-labels-protected-merge.json": "072495aab30361fce1ed58e78ba6fda58bd89e103a72353634641a7364a1ae1c",
+    "runs/2026-10-11-pii-labels-publication.json": "9583a10aa13995e21664aac1117369e105f75ceabc5214c86403cc4a6a8cf30b",
+    "scripts/prepare-ps-review.py": "c625354c5f4d84ac100a977c0af72b1023bdf8bfa88d22bfe944badea22f7c71",
+    "scripts/verify-blind-review-browser.cjs": "ce1dad7793ac1dfc3a958ff79be4ad0fad3f8b3e9410fb6afbf8a657ccefa79d",
+    "scripts/verify-blind-review-privacy.py": "3a453b83938e138125194ca5119d71f0bf4094c37176f8a8903ec17378ba117f",
+    "scripts/verify-device.cjs": "c30465f519354dce3546fc2a9c7b9ed6bdcad1a1c8217dd3db4b2e05e120da20",
+    "scripts/verify-route-boundaries.py": "784b7d1ba9fcbc9f6b531ddd21cb70912fb14609aaaea7e3f12f52080736d48f",
+    "site/src/handheld.jsx": "438815d794b55490d9ac68c209469d9f98f299c229f77315685a447457c9fbf8",
+    "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
+    "state.json": "cd7505f62695a211c7b60e63f06cb0a0b1053337561f1e98b85c170aa81a7930",
+    "tests/blind-review-files.cjs": "2bc35ffd97f819c34cf24d20ccfc6bb84b7ee9f80d1db42d79c32264b483f096",
+    "tests/test_blind_review.py": "f1f19dca67b4f62a604729ed57f27de540183f8187f5cf76fb6eb81c4e88897c",
+    "tests/test_blind_review_privacy.py": "0da040ea72736471261bd15b45ef5ea6d4654ed8c344d49289f26a0ddc85c1f7",
+    "tools/blind_review_io.py": "a6f5708d73e2b8b80752753f355b30d0601720f43c3f3f0128db8a859bae4aa8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-pii-labels-publication.json",
+      "sha256": "9583a10aa13995e21664aac1117369e105f75ceabc5214c86403cc4a6a8cf30b"
+    },
+    {
+      "path": "runs/2026-10-11-pii-labels-protected-merge.json",
+      "sha256": "072495aab30361fce1ed58e78ba6fda58bd89e103a72353634641a7364a1ae1c"
+    },
+    {
+      "path": "runs/2026-10-11-pii-labels-primary-ff.json",
+      "sha256": "05cec39290ce0b314c7a8f32f38c735985de03d5ca5a1bf28fe9c865739e6bf9"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-current-mac-cli.json",
+      "sha256": "c9ab2a14bf6efa12e63653ab3b835025f82d2349cffffe8aacccc1ae143402cb"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-linux-cli.json",
+      "sha256": "60dc51f184878fe471015975bd0e1722bfff1767f30f8992d88aae901a69633a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T19:44:26.740242+00:00"
+    }
+  ]
+}

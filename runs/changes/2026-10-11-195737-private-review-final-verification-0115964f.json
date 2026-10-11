@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-195737-private-review-final-verification-0115964f",
+  "recorded_at": "2026-10-11T19:57:37.486819+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c2226fb67047b737246804ce2bd6a0134b1a0ff3",
+  "changed": "Record current private review source binding, five capability checks, route inventory and full Python execution.",
+  "proves": "All five current capability checks pass; 513 selected files match the route inventory; 1923 Python tests pass. The device record is recoverable from its named source commit.",
+  "limits": "88 full requirements remain open. Physical phone checks, independent reviewers and release acceptance remain pending. No participant data collected.",
+  "scope_ids": [
+    "N-015",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "a0bf22ba3e2a75a5865c9bc91ab926b53bdd83a0b20e783d0814da53dcbf95f2",
+    "docs/blind-review-privacy-result.md": "3603225bbb4a5442f2270426e17ffb62ce2b571b5af70104fe2fcd5a845350f3",
+    "eval/route-boundaries.json": "f24409fdb4e4aedef7cd5fa05ebc25da54e9a80e48c7a20e7d7dc76b725cc35f",
+    "scripts/verify-route-boundaries.py": "c191595b84a2e1655b5b0a236c83820dc5e6bc83ba9d5223abd177e9052568bc",
+    "runs/2026-10-11-blind-private-bound-website.json": "fe09eb5b4f41d335660dd546736f3acdbff437043b520894a18e39e0ee4a385e",
+    "runs/2026-10-11-blind-private-current-capabilities.json": "19b1abe433f9b7188ab10524b8c054ad0849947749e4239fe3edcfabd24401dd",
+    "runs/2026-10-11-blind-private-current-boundaries.json": "a5705cfb7a2b71d80bd436cde2a8cf17bc97169db0e19c946b00f1c047547148",
+    "runs/2026-10-11-blind-private-current-python.json": "bb72d0ab307ad27053574f5889b1ad96c33906f4b8e552ae592305e3118a2a2a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-blind-private-bound-website.json",
+      "sha256": "fe09eb5b4f41d335660dd546736f3acdbff437043b520894a18e39e0ee4a385e"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-current-capabilities.json",
+      "sha256": "19b1abe433f9b7188ab10524b8c054ad0849947749e4239fe3edcfabd24401dd"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-current-boundaries.json",
+      "sha256": "a5705cfb7a2b71d80bd436cde2a8cf17bc97169db0e19c946b00f1c047547148"
+    },
+    {
+      "path": "runs/2026-10-11-blind-private-current-python.json",
+      "sha256": "bb72d0ab307ad27053574f5889b1ad96c33906f4b8e552ae592305e3118a2a2a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T19:57:37.584630+00:00"
+    }
+  ]
+}

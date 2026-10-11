@@ -90,7 +90,13 @@
         "scripts/verify-measurements.py",
         "tests/test_measurement_portability.py",
         "tests/test_tag_performance.py",
-        "eval/tag-performance-evidence.json"
+        "eval/tag-performance-evidence.json",
+        "tools/blind_review_io.py",
+        "scripts/prepare-ps-review.py",
+        "scripts/verify-blind-review-privacy.py",
+        "tests/test_blind_review.py",
+        "tests/test_blind_review_privacy.py",
+        "docs/independent-review.md"
       ],
       "commands": [
         [
@@ -101,11 +107,17 @@
           "tests/test_assertion_replay.py",
           "tests/test_measurement_portability.py",
           "tests/test_tag_performance.py",
+          "tests/test_blind_review.py",
+          "tests/test_blind_review_privacy.py",
           "-q"
         ],
         [
           "{python}",
           "scripts/verify-reserved-subjects.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-blind-review-privacy.py"
         ]
       ]
     },
@@ -218,7 +230,11 @@
         "tests/redaction-performance.cjs",
         "docs/redaction-recognition.md",
         "eval/fixtures/pii-compact-addresses.json",
-        "runs/2026-10-11-pii-labels-compact.json"
+        "runs/2026-10-11-pii-labels-compact.json",
+        "tests/blind-review-files.cjs",
+        "scripts/verify-blind-review-browser.cjs",
+        "scripts/verify-device.cjs",
+        "docs/independent-review.md"
       ],
       "commands": [
         [
@@ -239,6 +255,10 @@
         [
           "node",
           "scripts/verify-static-headers.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-blind-review-browser.cjs"
         ]
       ]
     }

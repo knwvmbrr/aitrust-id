@@ -320,7 +320,7 @@ See [redaction observations and reproduction](docs/redaction-recognition.md).
 
 Independent reviewers can use the blind packet tool described in
 [Independent review](docs/independent-review.md). It never supplies predictions,
-labels, or a claim that two files establish two independent reviewers.
+labels, or a claim that two files establish two independent reviewers. Packet files must be owner-held and private outside the checkout; the phone importer rejects duplicate fields and malformed UTF-8. Actual synthetic CLI/browser round trips are documented in [the private review result](docs/blind-review-privacy-result.md).
 
 The site credits AI Trust ID; Terms identify the current legal operator. Policies offer versioned plain-text
 downloads. Checker summaries omit answer fingerprints/positions by default; detailed

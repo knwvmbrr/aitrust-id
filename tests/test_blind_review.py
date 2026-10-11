@@ -11,6 +11,8 @@ def packet(tmp_path):
     source = tmp_path/'new.jsonl'
     source.write_text(json.dumps({'id':'one','text':'=Synthetic spreadsheet string',
                                  'category':'display','source':'authored synthetic'})+'\n')
+    tmp_path.chmod(0o700)
+    source.chmod(0o600)
     destination = tmp_path/'packet'
     manifest = review.freeze(source, destination)
     return source, destination, manifest
@@ -54,6 +56,8 @@ def test_disagreement_remains_visible_and_is_not_release_evidence(tmp_path):
 def test_preexisting_labels_cannot_be_recycled_as_blind_input(tmp_path):
     source=tmp_path/'bad.jsonl'
     source.write_text(json.dumps({'id':'one','text':'sample','category':'display','source':'test','labels':['PS']})+'\n')
+    tmp_path.chmod(0o700)
+    source.chmod(0o600)
     with pytest.raises(ValueError, match='no labels'):
         review.freeze(source,tmp_path/'packet')
 

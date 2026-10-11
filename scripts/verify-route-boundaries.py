@@ -85,6 +85,9 @@ PATTERNS += ('tools/redaction_observations.py', 'scripts/measure-redaction-devel
              'tests/test_redaction_development_builder.py', 'tests/redaction-performance.cjs',
              'runs/2026-10-11-pii-recognition-staging.json', 'runs/2026-10-11-pii-pipeline-timing.json')
 PATTERNS += ('eval/fixtures/pii-compact-addresses.json', 'runs/2026-10-11-pii-labels-recognition.json', 'runs/2026-10-11-pii-labels-compact.json', 'runs/2026-10-11-pii-labels-timing.json')
+PATTERNS += ('tools/blind_review_io.py', 'scripts/prepare-ps-review.py', 'scripts/verify-blind-review-privacy.py',
+             'scripts/verify-blind-review-browser.cjs', 'tests/test_blind_review.py',
+             'tests/test_blind_review_privacy.py', 'tests/blind-review-files.cjs', 'docs/independent-review.md')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
@@ -92,10 +95,10 @@ HOST_RENDERED_ASSET = 'site/public/share-card.png'
 
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
-                  'site/src/ps-result.js', 'site/src/handheld.jsx',
+                  'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',
                   'site/src/share-record.js', 'protocol/normalization.mjs',
                   'protocol/normalization-core.js', 'protocol/unicode15-data.json',
-                  'services/evaluator/app.py']
+                  'services/evaluator/app.py', 'scripts/verify-device.cjs']
 
 
 def read_json(file):
