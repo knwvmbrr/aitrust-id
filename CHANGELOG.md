@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-11
 
+### 2026-10-11-005624-offline-status-publication-proof-2bf07465
+
+Recorded 2026-10-11T00:56:24.925829+00:00 · Contributor: Codex · change
+
+- **Changed.** Record protected publication, exact deployed bytes, current policy 1.8 and signed no-account development download for the completed conditional freshness model.
+- **Evidence.** 642 public artifact matches across three origins, 20 panels and nine policy downloads pass; source reproduces and authenticates on Mac and isolated Linux before prerelease publication, then four anonymous downloads match. [Change record](./runs/changes/2026-10-11-005624-offline-status-publication-proof-2bf07465.json).
+- **Not claimed.** 107 complete, 95 open; target 25 still needs 70 full closures. Source signature is not accuracy, license clearance, human authorship or global revocation proof.
+
+
 ### 2026-10-11-003912-immutable-revocation-acceptance-c8091692
 
 Recorded 2026-10-11T00:39:12.350698+00:00 · Contributor: Codex · change
