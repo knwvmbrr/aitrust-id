@@ -481,7 +481,13 @@
         "docs/session-revision-plan.md",
         "docs/session-revisions.md",
         "docs/session-revision-result.md",
-        "tests/test_revision_public_links.py"
+        "tests/test_revision_public_links.py",
+        "scripts/website-build-phases.cjs",
+        "tests/website-build-phases.cjs",
+        "site/public/reference/session-revision-plan.md",
+        "site/public/reference/session-revisions.md",
+        "site/public/reference/session-revision-result.md",
+        "tests/test_website_build_diagnostics.py"
       ],
       "commands": [
         [
@@ -493,6 +499,7 @@
           "tests/test_review_execution_binding.py",
           "tests/test_blind_review.py",
           "tests/test_blind_review_privacy.py",
+          "tests/test_website_build_diagnostics.py",
           "-q"
         ],
         [

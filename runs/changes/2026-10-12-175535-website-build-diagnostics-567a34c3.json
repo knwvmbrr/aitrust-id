@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-175535-website-build-diagnostics-567a34c3",
+  "recorded_at": "2026-10-12T17:55:35.507346+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "616cf20c03dd810b666636ab7169ec48a71f8c75",
+  "changed": "Record bounded website build phases and bind public revision-guide copies",
+  "proves": "Eight real-child controls and five integration checks pass; failed or partial executions cannot become a passing aggregate",
+  "limits": "No independent accuracy or human accessibility acceptance; complete current browser execution remains required; zero full requirements closed",
+  "scope_ids": [
+    "F-073",
+    "F-120"
+  ],
+  "files": {
+    "scripts/website-build-phases.cjs": "9c721c2ab67d98b8009a17815e0e649dc6545abbc88be81cf61557965bb463ab",
+    "scripts/verify-built-website.cjs": "1d668d04b6010db105940b05c63426606595dc8d2a881a9e01faa8b4f9044b0c",
+    "tests/website-build-phases.cjs": "ec6a824048270baf5947195a46602d5863df82ef3415bb8b58806a63cdcf6414",
+    "tests/test_website_build_diagnostics.py": "c2ca610e2ea1fe05053a833efa6220e42df689bf6889d7fd4247d15aff5718d3",
+    "eval/revalidation.json": "58f70e268516152632d4e8f74501e164952ecf8d7bfb8afec3559d3551268fb1",
+    "scripts/verify-route-boundaries.py": "517cd33d7577fb562fd1727ca77160138e469c4b05f050faae64fbcdd3b80b68",
+    ".github/workflows/ci.yml": "b87cd0b2989ce7cc41dc74b11e0f86007d60e5a6e9bcbd5314a911888f9b5db8",
+    "docs/website-build-diagnostics-plan.md": "46b678b5e327c5d025bcb24614578afaead0ba133a1cc91574aabe744fe3d02d",
+    "README.md": "b16168bccd1ec1198a649cc1ed75a74fcbd95faf82b6d6b2c3c90e8435a39bdb"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/website-build-phases.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T17:55:37.078418+00:00"
+    }
+  ]
+}

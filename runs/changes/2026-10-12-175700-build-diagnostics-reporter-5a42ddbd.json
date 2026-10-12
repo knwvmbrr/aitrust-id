@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-175700-build-diagnostics-reporter-5a42ddbd",
+  "recorded_at": "2026-10-12T17:57:00.985770+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "616cf20c03dd810b666636ab7169ec48a71f8c75",
+  "changed": "Fix the build-control test reporter across Node 20 and Node 24",
+  "proves": "The first website attempt correctly retained a failed record; explicitly requesting TAP avoids depending on runtime defaults",
+  "limits": "The original failed execution is preserved; this correction needs fresh source-bound checks and closes no full requirement",
+  "scope_ids": [
+    "F-073",
+    "F-120"
+  ],
+  "files": {
+    "tests/test_website_build_diagnostics.py": "bc38125d28491f7ff5e247c7a0d0cc459c70407a8cffdb49a5c819a865487f9e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-build-diagnostics-website.json",
+      "sha256": "e42c191b694d228d5d207034afd30d203a605547efa6e16a735136bd74a0d482"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/website-build-phases.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T17:57:02.730316+00:00"
+    }
+  ]
+}

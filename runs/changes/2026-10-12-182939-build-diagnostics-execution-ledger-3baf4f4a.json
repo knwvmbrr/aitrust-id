@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-182939-build-diagnostics-execution-ledger-3baf4f4a",
+  "recorded_at": "2026-10-12T18:29:39.533104+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "616cf20c03dd810b666636ab7169ec48a71f8c75",
+  "changed": "Preserve build-diagnostics executions and the enforced prebuild changelog refusal",
+  "proves": "Four current capabilities passed; the full website command identifies build as the failed phase when generated receipts lack fresh events",
+  "limits": "Earlier failed attempts stay failed; source-stable complete website revalidation and full regressions are still pending; no requirement closed",
+  "scope_ids": [
+    "F-073",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-10-12-build-diagnostics-PS.json": "71050e186a799b1600360ebf6498f40904aa6ac3091e13df37ed2d8a85ea85fe",
+    "runs/2026-10-12-build-diagnostics-PII_REDACTED.json": "0709204f562e1e01f8563632ca132f8c02c3be22991974cb5b3604af9a55fbf6",
+    "runs/2026-10-12-build-diagnostics-protocol.json": "8fe9b69f6aada2c7214ecd7098d0659779371fdfc2aedc50ae4a574e998ea6ec",
+    "runs/2026-10-12-build-diagnostics-extension.json": "4821be15f7e54ba08f1358a304346e326fed5173c1e6355885cafc34333717be",
+    "runs/2026-10-12-build-diagnostics-website.json": "e42c191b694d228d5d207034afd30d203a605547efa6e16a735136bd74a0d482",
+    "runs/2026-10-12-build-diagnostics-current-PS.json": "4ca64670b315157c018519e4ae39b32591e8168abac09dacc770172ef52059ff",
+    "runs/2026-10-12-build-diagnostics-current-PII_REDACTED.json": "0e576a31bebc80512efa2a71ddc38529871909f2406cbdeca83cfd0bd973ac70",
+    "runs/2026-10-12-build-diagnostics-current-protocol.json": "0e0cb7937c67534360f904c33633f5f2a93771ed80ac3d96fcf2d50638ca4a61",
+    "runs/2026-10-12-build-diagnostics-current-extension.json": "b251df14179814d5e8e5a8325515fac188fa22a6cf31dbb633979f407c994c24",
+    "runs/2026-10-12-build-diagnostics-current-website.json": "42b0914f1341aa3481447da60a69a11c83e5de8a47968f1bd8a09dbfeab4123f",
+    "runs/2026-10-12-build-diagnostics-changelog-refusal.json": "ca2e1a30fefa4e85839640a7f50cf4ec4ff8e8571f5e8f75721a56ff7dfef6ee"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-build-diagnostics-current-protocol.json",
+      "sha256": "0e0cb7937c67534360f904c33633f5f2a93771ed80ac3d96fcf2d50638ca4a61"
+    },
+    {
+      "path": "runs/2026-10-12-build-diagnostics-changelog-refusal.json",
+      "sha256": "ca2e1a30fefa4e85839640a7f50cf4ec4ff8e8571f5e8f75721a56ff7dfef6ee"
+    }
+  ],
+  "checks": []
+}

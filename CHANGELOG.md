@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-192041-build-diagnostics-current-execution-705b0dfb
+
+Recorded 2026-10-12T19:20:41.596744+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish source-bound controller interruption, whole-build and regression checks
+- **Evidence.** 2951 Python tests passed, five explicit platform skips, 720 source inputs unchanged; all five current capability receipts assess valid; eight actual build phases and sixteen website commands passed [Change record](./runs/changes/2026-10-12-192041-build-diagnostics-current-execution-705b0dfb.json).
+- **Not claimed.** Zero full requirements closed; all 202 IDs, completion percentages and acceptance gates preserved. Independent tag release, physical phone and legal acceptance remain separate.
+
+
+### 2026-10-12-183749-build-controller-interruption-and-publication-35c127eb
+
+Recorded 2026-10-12T18:37:49.910945+00:00 · Contributor: Codex · change
+
+- **Changed.** Invalidate old build success before starting children and preserve the protected revision-tool publication
+- **Evidence.** Eight selected integration tests pass, including three actual controller cases; PR57 merged with 22 strict checks and all 774 public artifact bytes and four header values verified [Change record](./runs/changes/2026-10-12-183749-build-controller-interruption-and-publication-35c127eb.json).
+- **Not claimed.** Four unchanged capability receipts remain valid; repaired website and complete regressions still require execution. No independent accuracy, human accessibility or full requirement completion.
+
+
+### 2026-10-12-182939-build-diagnostics-execution-ledger-3baf4f4a
+
+Recorded 2026-10-12T18:29:39.533104+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve build-diagnostics executions and the enforced prebuild changelog refusal
+- **Evidence.** Four current capabilities passed; the full website command identifies build as the failed phase when generated receipts lack fresh events [Change record](./runs/changes/2026-10-12-182939-build-diagnostics-execution-ledger-3baf4f4a.json).
+- **Not claimed.** Earlier failed attempts stay failed; source-stable complete website revalidation and full regressions are still pending; no requirement closed
+
+
+### 2026-10-12-175700-build-diagnostics-reporter-5a42ddbd
+
+Recorded 2026-10-12T17:57:00.985770+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix the build-control test reporter across Node 20 and Node 24
+- **Evidence.** The first website attempt correctly retained a failed record; explicitly requesting TAP avoids depending on runtime defaults [Change record](./runs/changes/2026-10-12-175700-build-diagnostics-reporter-5a42ddbd.json).
+- **Not claimed.** The original failed execution is preserved; this correction needs fresh source-bound checks and closes no full requirement
+
+
+### 2026-10-12-175535-website-build-diagnostics-567a34c3
+
+Recorded 2026-10-12T17:55:35.507346+00:00 · Contributor: Codex · change
+
+- **Changed.** Record bounded website build phases and bind public revision-guide copies
+- **Evidence.** Eight real-child controls and five integration checks pass; failed or partial executions cannot become a passing aggregate [Change record](./runs/changes/2026-10-12-175535-website-build-diagnostics-567a34c3.json).
+- **Not claimed.** No independent accuracy or human accessibility acceptance; complete current browser execution remains required; zero full requirements closed
+
+
 ### 2026-10-12-174136-revision-links-final-regressions-3c34c64a
 
 Recorded 2026-10-12T17:41:36.332638+00:00 · Contributor: Codex · change

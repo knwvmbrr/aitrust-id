@@ -415,7 +415,7 @@ not a frozen independent accuracy study. See [measurement provenance](docs/measu
 
 Image, audio, video and document have [bounded prepared-artifact reference contracts](docs/reserved-subject-contract.md), matching Python/Node primitives and runnable vectors. They establish exactly what is hashed, not file decoding or tag support. Run `python3 scripts/verify-reserved-subjects.py` or hash explicitly prepared JSON with `python3 scripts/hash-reserved-artifact.py`. The gateway still evaluates text only.
 
-Source-bound engineering checks are available through `python3 scripts/revalidate.py CAPABILITY`. Website checks build fresh source on an owned temporary server. The shared `npm run verify:release-a11y` gate refuses absent real manual reviews; this is separate from statistical tag acceptance. See [executed controls](docs/reproducibility-controls-result.md). The [dated decision ledger](docs/decisions.json) records proposals without accepting them.
+Source-bound engineering checks are available through `python3 scripts/revalidate.py CAPABILITY`. Website checks build fresh source on an owned temporary server. The build runner writes closed phase names and exit results to `output/verification/website-build-phases.json`; partial or interrupted checks remain failed. See [build diagnosis](docs/website-build-diagnostics-plan.md). The shared `npm run verify:release-a11y` gate refuses absent real manual reviews; this is separate from statistical tag acceptance. See [executed controls](docs/reproducibility-controls-result.md). The [dated decision ledger](docs/decisions.json) records proposals without accepting them.
 
 ### Measured evidence resistance
 

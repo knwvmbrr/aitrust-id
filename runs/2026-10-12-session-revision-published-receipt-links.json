@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-12T18:33:54.498628+00:00",
+  "pass": true,
+  "checks": [
+    {
+      "path": "runs/2026-10-12-session-revision-local.json",
+      "main_bytes_verified": true,
+      "sha256": "15485cea95ad0c788058ab58cbaf8f3c0d4004eece9492a6237fcaf1857fb0fc"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-linux.json",
+      "main_bytes_verified": true,
+      "sha256": "9cd84d0d39fd58fbc61669bd88d3377f182fbc5ba875818fb573e237b7c924c1"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-links-full-suite.json",
+      "main_bytes_verified": true,
+      "sha256": "ac6a9e80d081042399052a4131bd98eb0abe2ded544e6e5fc8e568cb61962866"
+    }
+  ],
+  "method": "GitHub API current main raw bytes compared with reviewed local receipts",
+  "review_correction": "Three published Markdown guide receipt links target public main source paths",
+  "requirements_closed": 0
+}
