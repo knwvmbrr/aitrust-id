@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-023344-restore-terminal-state-full-source-6a446eac
+
+Recorded 2026-10-12T02:33:44.538770+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the full current-source test execution after the documented Linux terminal-state repair.
+- **Evidence.** All full-suite tests passed; captured sources remained unchanged; active and unknown process states remain refused. [Change record](./runs/changes/2026-10-12-023344-restore-terminal-state-full-source-6a446eac.json).
+- **Not claimed.** One platform-specific skip and one upstream warning; no production recovery installation, tag accuracy acceptance or CI-policy bypass.
+
+
+### 2026-10-12-023147-restore-linux-dead-state-observation-ecc4fb76
+
+Recorded 2026-10-12T02:31:47.940200+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the older cleanup test to accept documented terminal Linux states while explicitly refusing active, unknown and unreadable states.
+- **Evidence.** 94 focused tests pass; both actual hosted failures retained; disappearance still requires second confirmation. [Change record](./runs/changes/2026-10-12-023147-restore-linux-dead-state-observation-ecc4fb76.json).
+- **Not claimed.** Test interpretation only; production/model code and strict required-check policy unchanged; full-source protected checks pending.
+
+
 ### 2026-10-12-022547-restore-reaping-full-source-accepted-becf2c70
 
 Recorded 2026-10-12T02:25:47.572141+00:00 · Contributor: Codex · change

@@ -147,15 +147,16 @@ def test_prepared_request_bound_is_not_silently_truncated(packet):
 
 def assert_owned_descendant_stopped(child):
     # Read directly: init can reap a killed child between exists() and read().
-    # Only a disappeared process or a zombie is accepted, never an unknown or
-    # running state. Permission/read failures still fail the check.
+    # Only disappearance or documented terminal states are accepted. Linux may
+    # expose X during final teardown before init removes the procfs entry.
+    # Permission/read failures and active or unknown states still fail.
     try:
         stat = Path(f'/proc/{child}/stat').read_text()
     except (FileNotFoundError, ProcessLookupError):
         with pytest.raises(ProcessLookupError):
             os.kill(child, 0)
     else:
-        assert stat.rsplit(')', 1)[1].split()[0] == 'Z'
+        assert stat.rsplit(')', 1)[1].split()[0] in ('Z', 'X', 'x')
 
 
 @pytest.mark.parametrize("disappeared", [FileNotFoundError, ProcessLookupError])
@@ -167,9 +168,16 @@ def test_reaped_descendant_between_observation_and_read_is_accepted(monkeypatch,
     assert_owned_descendant_stopped(123)
 
 
-def test_running_descendant_is_still_rejected(monkeypatch):
-    monkeypatch.setattr(Path, 'read_text', lambda *a, **k: '123 (synthetic python) S 1')
+@pytest.mark.parametrize('state', ['R','S','D','T','t','K','W','P','I','?'])
+def test_running_descendant_is_still_rejected(monkeypatch,state):
+    monkeypatch.setattr(Path, 'read_text', lambda *a, **k: '123 (synthetic python) '+state+' 1')
     with pytest.raises(AssertionError): assert_owned_descendant_stopped(123)
+
+
+@pytest.mark.parametrize('state', ['Z','X','x'])
+def test_documented_terminal_descendant_is_accepted(monkeypatch,state):
+    monkeypatch.setattr(Path, 'read_text', lambda *a, **k: '123 (synthetic python) '+state+' 1')
+    assert_owned_descendant_stopped(123)
 
 
 def test_unknown_descendant_read_failure_is_not_a_pass(monkeypatch):
