@@ -1,6 +1,35 @@
 # Changelog
 
+## Unreleased — 2026-10-12
+
+### 2026-10-12-000037-native-repair-current-browser-review-1c2d789c
+
+Recorded 2026-10-12T00:00:37.491731+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the successful website rerun and reviewed native fixture repair to current state and the unchanged 612-file access review.
+- **Evidence.** All five current capability receipts pass and route review succeeds with repaired source-only native refusal tests; native packaging remains a separately executed post-build check. [Change record](./runs/changes/2026-10-12-000037-native-repair-current-browser-review-1c2d789c.json).
+- **Not claimed.** Protected CI must pass on the repaired head; no independent tag validation, Share acceptance, physical phone, legal clearance or requirement closure is implied.
+
+
 ## Unreleased — 2026-10-11
+
+### 2026-10-11-235804-native-repair-browser-environment-refusal-425947b5
+
+Recorded 2026-10-11T23:58:04.891063+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained the website revalidation refusal caused by invoking its npm build without the existing npm directory in the verification PATH.
+- **Evidence.** The receipt records one passing test command and the refused website build with unchanged source. The native clean-checkout controls separately pass. [Change record](./runs/changes/2026-10-11-235804-native-repair-browser-environment-refusal-425947b5.json).
+- **Not claimed.** No website pass is inferred from this failed attempt; the complete verification must run in the existing selected toolchain before publication.
+
+
+### 2026-10-11-235713-native-clean-clone-fixture-repair-c96fdbed
+
+Recorded 2026-10-11T23:57:13.136515+00:00 · Contributor: Codex · change
+
+- **Changed.** Removed the native refusal test dependency on an ignored generated website manifest; retained the actual clean-clone CI failure.
+- **Evidence.** Seven refusal controls pass in an actual source-only temporary checkout without npm or generated device assets; all ten packaging/refusal tests pass after the real prepared build. [Change record](./runs/changes/2026-10-11-235713-native-clean-clone-fixture-repair-c96fdbed.json).
+- **Not claimed.** Native Share remains unavailable and full precommit CI must rerun on the repaired head; no gate, network boundary, permission or production route is relaxed.
+
 
 ### 2026-10-11-235242-private-policy-final-document-review-bc12a2f5
 

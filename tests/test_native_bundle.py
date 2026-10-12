@@ -8,6 +8,7 @@ import subprocess
 import sys
 import zipfile
 import hashlib
+import runpy
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,8 +52,19 @@ def test_package_is_deterministic_for_identical_selected_sources(prepared_assets
 @pytest.fixture
 def source_copy(tmp_path, monkeypatch):
     root = tmp_path / 'checkout'; root.mkdir()
-    for name in ['site/src/device-manifest.json', 'protocol/unicode15-data.json', 'services/evaluator/app.py']:
+    # Refusal controls must run before any website/npm build in a clean clone.
+    # Derive their valid starting identity from tracked sources, not an ignored
+    # generated device manifest that happens to exist on the developer's Mac.
+    for name in ['protocol/unicode15-data.json', 'services/evaluator/app.py']:
         target = root / name; target.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(ROOT / name, target)
+    method, source_hash = runpy.run_path(str(ROOT / 'scripts/build-device-detector.py'))['project']((ROOT / 'services/evaluator/app.py').read_bytes())
+    bundle_hash = hashlib.sha256(method).hexdigest()
+    manifest = {'method_sha256': source_hash, 'bundle_sha256': bundle_hash,
+                'path': '/device/method-' + bundle_hash + '.py', 'runtime': '314.0.7',
+                'max_codepoints': 20000, 'normalization_id': 'NFC-Unicode-15.0.0/v1',
+                'normalization_data_sha256': hashlib.sha256((ROOT / 'protocol/unicode15-data.json').read_bytes()).hexdigest()}
+    manifest_path = root / 'site/src/device-manifest.json'; manifest_path.parent.mkdir(parents=True)
+    manifest_path.write_text(json.dumps(manifest))
     monkeypatch.setattr(builder, 'ROOT', root)
     return root
 

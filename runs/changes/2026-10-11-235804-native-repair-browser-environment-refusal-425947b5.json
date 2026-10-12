@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-235804-native-repair-browser-environment-refusal-425947b5",
+  "recorded_at": "2026-10-11T23:58:04.891063+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7c103f5e737c6684d6a4057c70cc5e9bbeb14b74",
+  "changed": "Retained the website revalidation refusal caused by invoking its npm build without the existing npm directory in the verification PATH.",
+  "proves": "The receipt records one passing test command and the refused website build with unchanged source. The native clean-checkout controls separately pass.",
+  "limits": "No website pass is inferred from this failed attempt; the complete verification must run in the existing selected toolchain before publication.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "runs/2026-10-12-native-ci-repaired-website.json": "f92531997feff6bb7a16919e97105bbf4f218d694f74a07ff222957bd4be0ee9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-native-ci-repaired-website.json",
+      "sha256": "f92531997feff6bb7a16919e97105bbf4f218d694f74a07ff222957bd4be0ee9"
+    }
+  ],
+  "checks": []
+}
