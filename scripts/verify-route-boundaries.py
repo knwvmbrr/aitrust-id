@@ -78,6 +78,10 @@ PATTERNS += ('tools/reviewer_agreement.py', 'scripts/reviewer-agreement.py',
              'scripts/verify-reviewer-agreement.py', 'tests/test_reviewer_agreement.py')
 PATTERNS += ('scripts/verify-scope-plan.py', 'scripts/render-scope-plan.py', 'tests/test_scope_index.py')
 PATTERNS += ('scripts/verify-workflows.cjs',)
+PATTERNS += ('tools/session_revisions.py', 'scripts/review-session-revision.py',
+             'scripts/prepare-session-revision-demo.py', 'scripts/prepare-session-selections.py',
+             'scripts/verify-session-revisions.py', 'tests/test_session_revisions.py',
+             'tests/test_revision_public_links.py')
 PATTERNS += ('tools/redaction_observations.py', 'scripts/measure-redaction-development.py',
              'scripts/redaction-development-worker.py', 'scripts/build-redaction-performance.py',
              'eval/fixtures/pii-recognition-development.json', 'tests/test_complete_ipv6.py',

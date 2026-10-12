@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-171526-revision-website-routes-and-state-order-1097c1f0",
+  "recorded_at": "2026-10-12T17:15:26.247162+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b1c37e925fda1ce4cac6397cce0ef090a8c7b",
+  "changed": "Record all fifteen stable website commands, reviewed route controls and the full-suite state-timestamp ordering failure. Refresh state after referenced evidence.",
+  "proves": "Current website and route execution pass. The failed full run kept all 714 source hashes unchanged; its thirteen failures were stale state timestamps and 2,926 tests passed.",
+  "limits": "The failure is retained and a complete regression repeat is required. No independent accuracy, human accessibility or full requirement completion is credited.",
+  "scope_ids": [
+    "F-029a"
+  ],
+  "files": {
+    "runs/2026-10-12-session-revision-current-website.json": "719a0a75e31d3ec33b593e5ae90deed2479ed2ed63ffb70a603165f6bccddd57",
+    "runs/2026-10-12-session-revision-routes.json": "0803fb5a525aeeaa95b6acc98709ecf58d9964537b00abdeac938bbc6ab17b99",
+    "runs/2026-10-12-session-revision-full-suite.json": "d394f6e54bee63a1d85c63d98ebad7052f7c6023dc3019ae0d024951edc60916",
+    "state.json": "ade275a844e97a6f581f0e858fedced167aa01857626edcb502d2c5db7dc32fb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-current-website.json",
+      "sha256": "719a0a75e31d3ec33b593e5ae90deed2479ed2ed63ffb70a603165f6bccddd57"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-routes.json",
+      "sha256": "0803fb5a525aeeaa95b6acc98709ecf58d9964537b00abdeac938bbc6ab17b99"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-full-suite.json",
+      "sha256": "d394f6e54bee63a1d85c63d98ebad7052f7c6023dc3019ae0d024951edc60916"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_accountability.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T17:15:34.711581+00:00"
+    }
+  ]
+}

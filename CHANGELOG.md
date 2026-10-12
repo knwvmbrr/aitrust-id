@@ -2,6 +2,105 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-174136-revision-links-final-regressions-3c34c64a
+
+Recorded 2026-10-12T17:41:36.332638+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete passing corrected-link regression suite and current state chronology.
+- **Evidence.** 2,943 tests pass, five explicit platform skips, and all 715 source inputs unchanged. All five capability receipts assess current. [Change record](./runs/changes/2026-10-12-174136-revision-links-final-regressions-3c34c64a.json).
+- **Not claimed.** Original F-029a derivability acceptance and independent tag/human gates remain open. Zero full closures.
+
+
+### 2026-10-12-173746-revision-links-stable-website-976bb522
+
+Recorded 2026-10-12T17:37:46.081024+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all sixteen passing corrected-link website commands and the reviewed 715-input route controls. Refresh state after both receipts.
+- **Evidence.** Website and route checks pass with unchanged sources; public link tests execute inside the source-bound website check. [Change record](./runs/changes/2026-10-12-173746-revision-links-stable-website-976bb522.json).
+- **Not claimed.** Independent accuracy, human acceptance and full original derivability acceptance remain open. Full-regression repeat is next.
+
+
+### 2026-10-12-173333-revision-link-current-capabilities-6ad209fb
+
+Recorded 2026-10-12T17:33:33.923420+00:00 · Contributor: Codex · change
+
+- **Changed.** Record four current capability executions and the corrected-link route source inventory before website verification.
+- **Evidence.** All four executions pass with unchanged input hashes; source inventory now binds the public-link regression. [Change record](./runs/changes/2026-10-12-173333-revision-link-current-capabilities-6ad209fb.json).
+- **Not claimed.** Website and full-regression repeats remain pending. Actual revision methods and isolated Linux control sources are unchanged; no full closure or tag release.
+
+
+### 2026-10-12-173128-revision-public-receipt-links-65267be1
+
+Recorded 2026-10-12T17:31:28.461304+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix three copied guide receipt links and add real public-context link-resolution regressions, CI and source binding.
+- **Evidence.** All four link tests and 36 unchanged revision unit tests passed. Missing relative site receipt paths are explicitly refused; actual repository or published reference files resolve. [Change record](./runs/changes/2026-10-12-173128-revision-public-receipt-links-65267be1.json).
+- **Not claimed.** The previous head was not published; current source checks and protected review must repeat before publication. No method, tag, collection or full requirement closure change.
+
+
+### 2026-10-12-172007-revision-final-regressions-362b46c9
+
+Recorded 2026-10-12T17:20:07.645738+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete passing regression repeat and chronologically current state. Update the stale hosted-CI status while keeping its historical fixture snapshot explicit.
+- **Evidence.** 2,939 tests pass with five explicit platform skips and all 714 source inputs unchanged; all five capability receipts are current and state chronology passes. [Change record](./runs/changes/2026-10-12-172007-revision-final-regressions-362b46c9.json).
+- **Not claimed.** No independent accuracy, human acceptance, adopted derivability signal or full requirement closure. Protected publication remains pending.
+
+
+### 2026-10-12-171526-revision-website-routes-and-state-order-1097c1f0
+
+Recorded 2026-10-12T17:15:26.247162+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all fifteen stable website commands, reviewed route controls and the full-suite state-timestamp ordering failure. Refresh state after referenced evidence.
+- **Evidence.** Current website and route execution pass. The failed full run kept all 714 source hashes unchanged; its thirteen failures were stale state timestamps and 2,926 tests passed. [Change record](./runs/changes/2026-10-12-171526-revision-website-routes-and-state-order-1097c1f0.json).
+- **Not claimed.** The failure is retained and a complete regression repeat is required. No independent accuracy, human accessibility or full requirement completion is credited.
+
+
+### 2026-10-12-171014-revision-browser-repeat-recorded-cceff492
+
+Recorded 2026-10-12T17:10:14.520003+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the detailed built-browser repeat after a failed capability execution.
+- **Evidence.** The exact source fingerprint matches the earlier failed execution; all built-browser checks returned success in the direct repeat. [Change record](./runs/changes/2026-10-12-171014-revision-browser-repeat-recorded-cceff492.json).
+- **Not claimed.** The original failing phase was not retained by the old orchestration and could not be reproduced; no root-cause repair is claimed. The full website capability must still run all declared commands.
+
+
+### 2026-10-12-170727-revision-website-failure-retained-53caedeb
+
+Recorded 2026-10-12T17:07:27.743771+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the failed website execution and select a new receipt for the diagnosis and repair.
+- **Evidence.** The source fingerprint stayed stable, its first selected unit command passed and the built website command returned failure. No publication of this component occurred. [Change record](./runs/changes/2026-10-12-170727-revision-website-failure-retained-53caedeb.json).
+- **Not claimed.** Failure cause is under diagnosis; no passing browser or full integration claim. Local and isolated Linux private command checks remain separate evidence.
+
+
+### 2026-10-12-164120-revision-current-checks-and-backup-publication-ffbab648
+
+Recorded 2026-10-12T16:41:20.261047+00:00 · Contributor: Codex · change
+
+- **Changed.** Record four current capability executions, review-bound route inputs, the protected backup merge and verified site publication. Retain upload and HTTP2 transport failures.
+- **Evidence.** All 255 build artifacts match at preview, apex and www (765 comparisons), with four exact security headers per origin; twelve unrelated primary files preserved. [Change record](./runs/changes/2026-10-12-164120-revision-current-checks-and-backup-publication-ffbab648.json).
+- **Not claimed.** Private backend unchanged; full replacement-host recovery, independent tag accuracy and original outside-knowledge acceptance remain open. No full closure.
+
+
+### 2026-10-12-163814-revision-scope-format-preserved-5125e214
+
+Recorded 2026-10-12T16:38:14.004707+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the existing readable Unicode format in the scope ledger after adding partial component evidence.
+- **Evidence.** All 202 scope records, percentages and full acceptance criteria remain intact; only the F-029a evidence and component attribution advance. [Change record](./runs/changes/2026-10-12-163814-revision-scope-format-preserved-5125e214.json).
+- **Not claimed.** No original derivability signal, tag or full requirement closure is claimed.
+
+
+### 2026-10-12-163639-selected-revision-context-a846f691
+
+Recorded 2026-10-12T16:36:39.872787+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a private selected-literal revision comparison, version-bound selection preparation, practice workflow and source-bound CI checks. Retain the connection and site upload failures.
+- **Evidence.** Thirty-six unit tests and seventeen actual CLI control groups passed on both macOS and isolated Linux, with unchanged sources, private file protections and owned cleanup. [Change record](./runs/changes/2026-10-12-163639-selected-revision-context-a846f691.json).
+- **Not claimed.** Literal absence is not semantic non-derivability, outside knowledge, human or AI authorship. Original F-029a full acceptance and all 202 scope records stay intact; no full closure, tag, endpoint, collection or production backend change.
+
+
 ### 2026-10-12-155307-backup-cancellation-final-current-state-a5664723
 
 Recorded 2026-10-12T15:53:07.395112+00:00 · Contributor: Codex · change

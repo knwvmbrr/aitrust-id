@@ -152,7 +152,17 @@
         "docs/backup-retention.md",
         "docs/backup-retention-result.md",
         "deploy/backup/restore.py",
-        "protocol/reports.py"
+        "protocol/reports.py",
+        "tools/session_revisions.py",
+        "scripts/review-session-revision.py",
+        "scripts/prepare-session-revision-demo.py",
+        "scripts/prepare-session-selections.py",
+        "scripts/verify-session-revisions.py",
+        "tests/test_session_revisions.py",
+        "docs/session-revision-plan.md",
+        "docs/session-revisions.md",
+        "docs/session-revision-result.md",
+        "tests/test_revision_public_links.py"
       ],
       "commands": [
         [
@@ -216,6 +226,26 @@
           "pytest",
           "tests/test_backup_retention.py",
           "tests/test_restore_isolation.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_session_revisions.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-session-revisions.py",
+          "--output",
+          "output/verification/session-revisions.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_revision_public_links.py",
           "-q"
         ]
       ]
@@ -441,7 +471,17 @@
         "docs/backup-retention.md",
         "docs/backup-retention-result.md",
         "deploy/backup/restore.py",
-        "protocol/reports.py"
+        "protocol/reports.py",
+        "tools/session_revisions.py",
+        "scripts/review-session-revision.py",
+        "scripts/prepare-session-revision-demo.py",
+        "scripts/prepare-session-selections.py",
+        "scripts/verify-session-revisions.py",
+        "tests/test_session_revisions.py",
+        "docs/session-revision-plan.md",
+        "docs/session-revisions.md",
+        "docs/session-revision-result.md",
+        "tests/test_revision_public_links.py"
       ],
       "commands": [
         [
@@ -522,6 +562,26 @@
           "pytest",
           "tests/test_backup_retention.py",
           "tests/test_restore_isolation.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_session_revisions.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-session-revisions.py",
+          "--output",
+          "output/verification/session-revisions.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_revision_public_links.py",
           "-q"
         ]
       ]

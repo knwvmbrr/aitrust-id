@@ -1,0 +1,170 @@
+{
+  "captured_at": "2026-10-12T16:34:54.841932+00:00",
+  "pass": true,
+  "selected_python_tests": 36,
+  "actual_cli_controls": 17,
+  "non_root": true,
+  "isolated_network_namespace_verified": true,
+  "ipv4_ipv6_external_connections_refused": 2,
+  "sources": {
+    "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248",
+    "scripts/review-session-revision.py": "db37559bfb079b1b02c7a8cf324144461edbbb885929d4cea45e9ebcce73cfc6",
+    "scripts/prepare-session-revision-demo.py": "a310c274fc8233347cec33471205141710f067b9c2444887bd64900931c3d4d4",
+    "scripts/prepare-session-selections.py": "42c43645e79b4c2720fcd7d021948d8576856e5cb40a7ecc57fe1fd84368eecb",
+    "scripts/verify-session-revisions.py": "91c54feade6e68ee7590690ff728f9cae4e58fd6db0b23b0928561164781c609",
+    "tests/test_session_revisions.py": "f6e0f8919fd7c3b63bafece8b90eae0e0633a352d7883c45807419921941a865",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+  },
+  "source_unchanged_during_execution": true,
+  "controls": {
+    "captured_at": "2026-10-12T16:34:54.823294+00:00",
+    "pass": true,
+    "sources": {
+      "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248",
+      "scripts/review-session-revision.py": "db37559bfb079b1b02c7a8cf324144461edbbb885929d4cea45e9ebcce73cfc6",
+      "scripts/prepare-session-revision-demo.py": "a310c274fc8233347cec33471205141710f067b9c2444887bd64900931c3d4d4",
+      "scripts/prepare-session-selections.py": "42c43645e79b4c2720fcd7d021948d8576856e5cb40a7ecc57fe1fd84368eecb",
+      "scripts/verify-session-revisions.py": "91c54feade6e68ee7590690ff728f9cae4e58fd6db0b23b0928561164781c609",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "tests/test_session_revisions.py": "f6e0f8919fd7c3b63bafece8b90eae0e0633a352d7883c45807419921941a865"
+    },
+    "source_unchanged_during_execution": true,
+    "controls": [
+      {
+        "case": "invented_private_practice_created",
+        "exit_status": 0,
+        "pass": true,
+        "stdout_sha256": "b3697a8d8f83611a9a529a7497399dac7f208795ae5770e290044ba8dedb6ce6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "literal_arithmetic_absence_is_not_outside_knowledge",
+        "exit_status": 0,
+        "pass": true,
+        "stdout_sha256": "640d75915b34109ec23d71b70f56dc9203573be98afe60f9b99e50b486190fd0",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "new_private_details_created",
+        "exit_status": 0,
+        "pass": true,
+        "stdout_sha256": "0fd79003fb8081debc52b806036451bd4b7672fcf2dbdbb92f9016091b992fc0",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "selected_spans_bound_without_manual_hashing",
+        "exit_status": 0,
+        "pass": true,
+        "stdout_sha256": "420beaeaf3eb188d39dc12ae99cbe30fbb1c9bc55ab0c6d76983eb13e8f7dec2",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "existing_prepared_selection_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1282ea6da75fd8884d24af43335ed9337f52b8770132fa457c67ef3b2a16aa0d"
+      },
+      {
+        "case": "invalid_preparation_span_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1282ea6da75fd8884d24af43335ed9337f52b8770132fa457c67ef3b2a16aa0d"
+      },
+      {
+        "case": "unknown_preparation_argument_not_echoed",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "a9a05581263123e8649a823de0f07c16b67f9216df4ae0ef35afb18175c8dbc9"
+      },
+      {
+        "case": "existing_details_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "existing_practice_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "f02c5e34cccfcf60c3f2e76f6d7c04df48b7ccc9bcbdff54649e4ac94ee23e7f"
+      },
+      {
+        "case": "public_input_permissions_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "hard_linked_private_input_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "private_input_symlink_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "stale_selection_hash_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "unknown_private_field_refused_without_echo",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "invalid_utf8_private_input_refused",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1b1b24441d15fc0ff6d2ac3e81afa292a6f00d2ed82b4d4777fe0884c8be0456"
+      },
+      {
+        "case": "unknown_private_argument_not_echoed",
+        "exit_status": 2,
+        "pass": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "d0dd2faefef55de439f98bba000022f660e1d9d386a3a3efc3be884d31e37a21"
+      },
+      {
+        "case": "owned_private_inputs_unchanged",
+        "pass": true
+      }
+    ],
+    "owned_private_work_removed": true,
+    "semantic_derivation_assessed": false,
+    "outside_knowledge_established": false,
+    "tag_asserted": false,
+    "actual_participant_data": false,
+    "requirements_closed": 0
+  },
+  "independent_accuracy_evidence": false,
+  "production_changes": false,
+  "requirements_closed": 0,
+  "owned_staging_removed": true,
+  "checked_by": "Codex"
+}

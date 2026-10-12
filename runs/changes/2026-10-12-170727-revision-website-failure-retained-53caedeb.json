@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-170727-revision-website-failure-retained-53caedeb",
+  "recorded_at": "2026-10-12T17:07:27.743771+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b1c37e925fda1ce4cac6397cce0ef090a8c7b",
+  "changed": "Retain the failed website execution and select a new receipt for the diagnosis and repair.",
+  "proves": "The source fingerprint stayed stable, its first selected unit command passed and the built website command returned failure. No publication of this component occurred.",
+  "limits": "Failure cause is under diagnosis; no passing browser or full integration claim. Local and isolated Linux private command checks remain separate evidence.",
+  "scope_ids": [
+    "F-029a"
+  ],
+  "files": {
+    "runs/2026-10-12-session-revision-website.json": "e204fc9e88b70e45658d47ed4f59c930f00ffbd5210434ebe068b39cbbda8467",
+    "state.json": "9b45b2c743b2a281758f48eea7bb62cb672340cdb02d0e68d6a8f48f6312e4dd",
+    "eval/route-boundaries.json": "677cbe8e281342727bdc2400394ad2ea265af09c84eb29e090b1881c680df5a0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-website.json",
+      "sha256": "e204fc9e88b70e45658d47ed4f59c930f00ffbd5210434ebe068b39cbbda8467"
+    }
+  ],
+  "checks": []
+}

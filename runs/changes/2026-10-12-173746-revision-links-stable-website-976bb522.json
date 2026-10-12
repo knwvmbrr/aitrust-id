@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-173746-revision-links-stable-website-976bb522",
+  "recorded_at": "2026-10-12T17:37:46.081024+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "33190e709190c1352eb315e00a28353eaf705fcd",
+  "changed": "Record all sixteen passing corrected-link website commands and the reviewed 715-input route controls. Refresh state after both receipts.",
+  "proves": "Website and route checks pass with unchanged sources; public link tests execute inside the source-bound website check.",
+  "limits": "Independent accuracy, human acceptance and full original derivability acceptance remain open. Full-regression repeat is next.",
+  "scope_ids": [
+    "F-029a",
+    "N-008"
+  ],
+  "files": {
+    "runs/2026-10-12-session-revision-links-website.json": "a172110913c6d560865d6e2677e61e5e6c154926c2964c53b7ce6efce6ad99eb",
+    "runs/2026-10-12-session-revision-links-routes.json": "a8007a4358919f15fae2cddc87f4d32bae75e4dea27e3d46324ecc13e5cf17e5",
+    "state.json": "0afb32cd38063fce3c33c834608d97f90c2b381d54ce2fba7f441367f2f14a95"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-links-website.json",
+      "sha256": "a172110913c6d560865d6e2677e61e5e6c154926c2964c53b7ce6efce6ad99eb"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-links-routes.json",
+      "sha256": "a8007a4358919f15fae2cddc87f4d32bae75e4dea27e3d46324ecc13e5cf17e5"
+    }
+  ],
+  "checks": []
+}

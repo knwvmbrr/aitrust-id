@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-173333-revision-link-current-capabilities-6ad209fb",
+  "recorded_at": "2026-10-12T17:33:33.923420+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "33190e709190c1352eb315e00a28353eaf705fcd",
+  "changed": "Record four current capability executions and the corrected-link route source inventory before website verification.",
+  "proves": "All four executions pass with unchanged input hashes; source inventory now binds the public-link regression.",
+  "limits": "Website and full-regression repeats remain pending. Actual revision methods and isolated Linux control sources are unchanged; no full closure or tag release.",
+  "scope_ids": [
+    "F-029a",
+    "N-008"
+  ],
+  "files": {
+    "state.json": "56cf3759cb9320ccf7ca2fecf3565e7b439576f50217ff8bcb7dcb757d858acb",
+    "eval/route-boundaries.json": "f8f79c57fcc41f765696375fb980f3ca6a618b0fcefbcff7eb65cb8108ad47f7",
+    "runs/2026-10-12-session-revision-links-PS.json": "6237c5aeda7f3223b97acf00226917d8117cf93f5e3ba82f827f6d734eda5490",
+    "runs/2026-10-12-session-revision-links-PII_REDACTED.json": "0f2a37f787185ee2b357a0bcaf9db6e93b9b8ae1baf061b0e59520472b25c57c",
+    "runs/2026-10-12-session-revision-links-protocol.json": "35aa250b963e53264628eff13361538663134d8f585676ed8e8896ef9148deff",
+    "runs/2026-10-12-session-revision-links-extension.json": "ac593ff752cf1a511c6ac0281068a71b8e47fd37a0adcaa4cf19dd3bae7c3dff"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-links-PS.json",
+      "sha256": "6237c5aeda7f3223b97acf00226917d8117cf93f5e3ba82f827f6d734eda5490"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-links-PII_REDACTED.json",
+      "sha256": "0f2a37f787185ee2b357a0bcaf9db6e93b9b8ae1baf061b0e59520472b25c57c"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-links-protocol.json",
+      "sha256": "35aa250b963e53264628eff13361538663134d8f585676ed8e8896ef9148deff"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-links-extension.json",
+      "sha256": "ac593ff752cf1a511c6ac0281068a71b8e47fd37a0adcaa4cf19dd3bae7c3dff"
+    }
+  ],
+  "checks": []
+}

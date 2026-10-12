@@ -103,6 +103,8 @@ The separate [reference comparison command](docs/nli-references.md) selects pass
 
 [Check backup retention](docs/backup-retention.md) on a dedicated Linux development host. The encrypted practice drill demonstrates deletion, retained recovery and expiry using invented data; it changes no production database or retention policy.
 
+[Review changed wording](docs/session-revisions.md) in private drafts and supplied context. The offline command shows literal matches and prepares version-bound selections without manual hashing. Missing wording is a review cue, not proof of outside knowledge, AI use or human authorship.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual

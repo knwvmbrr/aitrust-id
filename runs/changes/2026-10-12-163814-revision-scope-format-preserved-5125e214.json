@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-163814-revision-scope-format-preserved-5125e214",
+  "recorded_at": "2026-10-12T16:38:14.004707+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b1c37e925fda1ce4cac6397cce0ef090a8c7b",
+  "changed": "Preserve the existing readable Unicode format in the scope ledger after adding partial component evidence.",
+  "proves": "All 202 scope records, percentages and full acceptance criteria remain intact; only the F-029a evidence and component attribution advance.",
+  "limits": "No original derivability signal, tag or full requirement closure is claimed.",
+  "scope_ids": [
+    "F-029a"
+  ],
+  "files": {
+    "docs/scope-progress.json": "1aa7ab1ae5260ebbee9c1ca74f3dc22133ed541e4b88755beff56815f2f0b10a"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T16:38:14.218674+00:00"
+    }
+  ]
+}

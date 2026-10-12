@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-173128-revision-public-receipt-links-65267be1",
+  "recorded_at": "2026-10-12T17:31:28.461304+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "33190e709190c1352eb315e00a28353eaf705fcd",
+  "changed": "Fix three copied guide receipt links and add real public-context link-resolution regressions, CI and source binding.",
+  "proves": "All four link tests and 36 unchanged revision unit tests passed. Missing relative site receipt paths are explicitly refused; actual repository or published reference files resolve.",
+  "limits": "The previous head was not published; current source checks and protected review must repeat before publication. No method, tag, collection or full requirement closure change.",
+  "scope_ids": [
+    "F-029a"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "55f4aeb97250add4779ada83ebfa6927552fc465b030f2eb40e44e25c20e714d",
+    "docs/session-revision-result.md": "66d7e91595d6bca68770854aa34ac4cda258a6f64cdc7b7cf996469b1d357ad5",
+    "eval/revalidation.json": "24481f0eaefd5b47830e6192a61cccd41bcaedbdc047fefeb2735006b2fb2333",
+    "scripts/verify-route-boundaries.py": "eb6c323dfbffe49dc6e0d947afcaaf9a1d9a72e1902c9f982a0f91c079efe83e",
+    "site/public/reference/session-revision-result.md": "66d7e91595d6bca68770854aa34ac4cda258a6f64cdc7b7cf996469b1d357ad5",
+    "state.json": "34ced6e71facb7d0ee5a0f80456f6bba0affbfe7d1ee55bb887872113fb11cd0",
+    "tests/test_revision_public_links.py": "df0dea45e70a9ea602cc7adcee03e4a96a5dee421c5f024e42f6acbbd119c654",
+    "runs/2026-10-12-session-revision-public-link-review.json": "c26b35b391706c0794009a5fefc3077f857bc874f7370f5a40e98ea3f9d5758d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-public-link-review.json",
+      "sha256": "c26b35b391706c0794009a5fefc3077f857bc874f7370f5a40e98ea3f9d5758d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_revision_public_links.py",
+        "tests/test_session_revisions.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T17:31:28.791589+00:00"
+    }
+  ]
+}
