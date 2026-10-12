@@ -14,7 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from protocol.reports import write_report
 FILES = ['scripts/prepare-ps-review.py','tools/blind_review_io.py','protocol/evidence.py',
-         'services/evaluator/app.py','eval/gates.yaml','docs/independent-review.md']
+         'services/evaluator/app.py','eval/gates.yaml','docs/independent-review.md',
+         'tools/review_execution.py','protocol/normalization.py','protocol/unicode15-data.json',
+         'services/evaluator/requirements.lock','eval/harness.py']
 
 
 def verify():
@@ -61,6 +63,15 @@ def verify():
             assert all(value[k] is False for k in ['independence_verified','predictions_run','release_assessed'])
         call('csv_disagreements_preserved',['compare',packet],True,disagreements)
         call('phone_disagreements_preserved',['compare',packet,'--format','json'],True,disagreements)
+        call('bound_phone_comparison',['compare',packet,'--format','json','--require-execution-binding'],True,
+             lambda r:r['execution_binding_verified'] is True or (_ for _ in ()).throw(ValueError('Missing execution binding')))
+        file=packet/'manifest.json';bound=file.read_bytes();legacy=json.loads(bound)
+        legacy['format']='ai-trust-id-blind-ps-review/v1';legacy.pop('execution_context_sha256')
+        file.write_text(json.dumps(legacy))
+        call('legacy_labels_only',['compare',packet,'--format','json'],True,
+             lambda r:r['execution_binding_verified'] is False or (_ for _ in ()).throw(ValueError('False legacy binding')))
+        call('legacy_required_binding_refused',['compare',packet,'--format','json','--require-execution-binding'],False)
+        file.write_bytes(bound)
         file=packet/'manifest.json';original=file.read_bytes()
         file.write_bytes(original.replace(b'"format":',b'"format":"duplicate", "format":',1));call('duplicate_manifest_refused',['compare',packet,'--format','json'],False);file.write_bytes(original)
         value=json.loads(original);value['independence_verified']=True;file.write_text(json.dumps(value));call('forged_independence_refused',['compare',packet,'--format','json'],False);file.write_bytes(original)

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T03:11:45.985855+00:00",
+  "updated": "2026-10-12T03:28:38.352746+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-12T02:56:06.856209+00:00",
+    "audited_at": "2026-10-12T03:27:21.911845+00:00",
     "completed_records": 115,
     "open_records": 87,
     "records_preserved": 202,
@@ -1034,7 +1034,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T03:11:45.985855+00:00",
+  "updated_at": "2026-10-12T03:28:38.352746+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1955,5 +1955,28 @@
     "append_only_bookkeeping_excluded": true,
     "independent_accuracy_evidence": false,
     "full_suite": "runs/2026-10-12-choice-grammar-publication-input-full-suite.json"
+  },
+  "review_execution_binding": {
+    "status": "component_executed; protected_publication_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-050",
+      "F-108",
+      "F-120"
+    ],
+    "guide": "docs/independent-review.md",
+    "architecture": "docs/review-execution-binding-plan.md",
+    "result": "docs/review-execution-binding-result.md",
+    "focused": "runs/2026-10-12-review-execution-focused.json",
+    "cli": "runs/2026-10-12-review-execution-cli.json",
+    "linux": "runs/2026-10-12-review-execution-linux.json",
+    "cleanup": "runs/2026-10-12-review-execution-linux-cleanup.json",
+    "focused_tests_per_host": 84,
+    "actual_cli_controls_per_host": 21,
+    "legacy_labels_preserved": true,
+    "legacy_execution_binding_verified": false,
+    "human_independence_verified": false,
+    "independent_accuracy_evidence": false,
+    "requirements_closed": 0
   }
 }

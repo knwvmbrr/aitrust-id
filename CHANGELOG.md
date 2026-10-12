@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-032910-blind-review-execution-binding-a3d6f718
+
+Recorded 2026-10-12T03:29:10.391362+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind new blind PS review packets to the selected execution recipe; retain legacy label-only comparison and explicit require-binding control.
+- **Evidence.** 84 source-bound tests and 21 actual private CLI controls pass on macOS and Linux, with Linux network-denial checks and owned-stage cleanup. [Change record](./runs/changes/2026-10-12-032910-blind-review-execution-binding-a3d6f718.json).
+- **Not claimed.** No human review, sampling acceptance, accuracy measurement or requirement closure. Broader route/build integration and protected publication remain pending.
+
+
 ### 2026-10-12-031146-choice-grammar-verified-6f8c067b
 
 Recorded 2026-10-12T03:11:46.258790+00:00 · Contributor: Codex · change
