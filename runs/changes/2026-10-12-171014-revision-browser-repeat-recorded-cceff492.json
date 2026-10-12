@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-171014-revision-browser-repeat-recorded-cceff492",
+  "recorded_at": "2026-10-12T17:10:14.520003+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b1c37e925fda1ce4cac6397cce0ef090a8c7b",
+  "changed": "Record the detailed built-browser repeat after a failed capability execution.",
+  "proves": "The exact source fingerprint matches the earlier failed execution; all built-browser checks returned success in the direct repeat.",
+  "limits": "The original failing phase was not retained by the old orchestration and could not be reproduced; no root-cause repair is claimed. The full website capability must still run all declared commands.",
+  "scope_ids": [
+    "F-029a"
+  ],
+  "files": {
+    "runs/2026-10-12-session-revision-browser-repeat.json": "8f2432e941de5d8df1f640b40d11860c6f017a7efbc8ccf86fc9398311725c0f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-browser-repeat.json",
+      "sha256": "8f2432e941de5d8df1f640b40d11860c6f017a7efbc8ccf86fc9398311725c0f"
+    }
+  ],
+  "checks": []
+}

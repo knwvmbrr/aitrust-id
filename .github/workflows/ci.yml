@@ -119,6 +119,10 @@ jobs:
         run: |
           python -m pytest tests/test_feedback_analysis.py tests/test_research_admission.py -q
           python scripts/verify-feedback-analysis.py --output output/verification/feedback-analysis.json
+      - name: Compare private selected revisions without an origin or knowledge verdict
+        run: |
+          python -m pytest tests/test_session_revisions.py -q
+          python scripts/verify-session-revisions.py --output output/verification/session-revisions.json
       - name: Refuse unsafe synthetic backup execution before database creation
         run: python -m pytest tests/test_backup_retention.py tests/test_restore_isolation.py -q
       - name: Check distinct caller-bound choice framing without a manipulation verdict

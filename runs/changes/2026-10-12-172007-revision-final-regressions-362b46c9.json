@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-172007-revision-final-regressions-362b46c9",
+  "recorded_at": "2026-10-12T17:20:07.645738+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b1c37e925fda1ce4cac6397cce0ef090a8c7b",
+  "changed": "Record the complete passing regression repeat and chronologically current state. Update the stale hosted-CI status while keeping its historical fixture snapshot explicit.",
+  "proves": "2,939 tests pass with five explicit platform skips and all 714 source inputs unchanged; all five capability receipts are current and state chronology passes.",
+  "limits": "No independent accuracy, human acceptance, adopted derivability signal or full requirement closure. Protected publication remains pending.",
+  "scope_ids": [
+    "F-029a",
+    "F-144"
+  ],
+  "files": {
+    "runs/2026-10-12-session-revision-current-full-suite.json": "4b26835f0398bd4ac347dfd95389a1c03fdfc416aa435109ebd18469a9169a2e",
+    "state.json": "7cc7f6c084d2ab47ed5ae72f26c058f3a8149170f2545e487620d26da461b01b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-current-full-suite.json",
+      "sha256": "4b26835f0398bd4ac347dfd95389a1c03fdfc416aa435109ebd18469a9169a2e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T17:20:08.080723+00:00"
+    }
+  ]
+}

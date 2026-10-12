@@ -154,3 +154,17 @@ def test_backup_retention_consumers_bind_real_guard_and_private_writer(capabilit
     assert required <= fingerprint(capability)['sources'].keys()
     assert ['{python}', '-m', 'pytest', 'tests/test_backup_retention.py',
             'tests/test_restore_isolation.py', '-q'] in fingerprint(capability)['commands']
+
+
+@pytest.mark.parametrize('capability', ['protocol', 'website'])
+def test_session_revision_consumers_bind_selection_preparation_and_private_contract(capability):
+    required = {'tools/session_revisions.py', 'scripts/review-session-revision.py',
+        'scripts/prepare-session-revision-demo.py', 'scripts/prepare-session-selections.py',
+        'scripts/verify-session-revisions.py', 'tests/test_session_revisions.py',
+        'tools/blind_review_io.py', 'protocol/corpus.py', 'protocol/normalization.py',
+        'protocol/unicode15-data.json', 'protocol/reports.py', 'docs/session-revisions.md',
+        '.github/workflows/ci.yml'}
+    current = fingerprint(capability)
+    assert required <= current['sources'].keys()
+    assert ['{python}', 'scripts/verify-session-revisions.py', '--output',
+            'output/verification/session-revisions.json'] in current['commands']

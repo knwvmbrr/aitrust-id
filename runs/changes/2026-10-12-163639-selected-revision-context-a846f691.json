@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-163639-selected-revision-context-a846f691",
+  "recorded_at": "2026-10-12T16:36:39.872787+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b1c37e925fda1ce4cac6397cce0ef090a8c7b",
+  "changed": "Add a private selected-literal revision comparison, version-bound selection preparation, practice workflow and source-bound CI checks. Retain the connection and site upload failures.",
+  "proves": "Thirty-six unit tests and seventeen actual CLI control groups passed on both macOS and isolated Linux, with unchanged sources, private file protections and owned cleanup.",
+  "limits": "Literal absence is not semantic non-derivability, outside knowledge, human or AI authorship. Original F-029a full acceptance and all 202 scope records stay intact; no full closure, tag, endpoint, collection or production backend change.",
+  "scope_ids": [
+    "F-029a",
+    "F-073",
+    "N-011"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "80e5c16e0f844e0dac4b3804c043fa6f384ee441afffcc65e1e5a4b564395e28",
+    "README.md": "65cbc19497d5ad939f796ebac50b149ed301f36b46a5e48da58219971140aa49",
+    "docs/scope-progress.json": "37e5db713ffe1ef2f1a4a18c17523411d47e8eda3813e2e5749b6bd1f7e04594",
+    "docs/scope-progress.md": "49ade1e818c0d3b2e108463c4ec00fdc7d638801ce757edec7babd01cf0ab2ee",
+    "docs/session-revision-plan.md": "8c48f988200fdd534fa859edd39656693d0fdd955098f4cace85a4142e3814da",
+    "docs/session-revision-result.md": "aff10859135c4a37b1c03433f0f7f98f88feedfd5fbf8de706f0aa3ff81be61d",
+    "docs/session-revisions.md": "01876099857ffbb9883bccb15132dc933a23de24082c01c49e03a67e2d9a43a0",
+    "eval/revalidation.json": "4233dec808f4262eb3e89e569eb9f023fc6234f0a6c6180b187a61970cdd3141",
+    "runs/2026-10-12-backup-publication-upload-failure.json": "03365a9b1604e1519ed25f56915a063a66cd08407cd72808effb7662327b3647",
+    "runs/2026-10-12-session-revision-connection-failure.json": "60894a16b791eade0f945737980a5aa19327f0dbfa6df8abd60af28772436867",
+    "runs/2026-10-12-session-revision-linux.json": "9cd84d0d39fd58fbc61669bd88d3377f182fbc5ba875818fb573e237b7c924c1",
+    "runs/2026-10-12-session-revision-local.json": "15485cea95ad0c788058ab58cbaf8f3c0d4004eece9492a6237fcaf1857fb0fc",
+    "scripts/prepare-session-revision-demo.py": "a310c274fc8233347cec33471205141710f067b9c2444887bd64900931c3d4d4",
+    "scripts/prepare-session-selections.py": "42c43645e79b4c2720fcd7d021948d8576856e5cb40a7ecc57fe1fd84368eecb",
+    "scripts/review-session-revision.py": "db37559bfb079b1b02c7a8cf324144461edbbb885929d4cea45e9ebcce73cfc6",
+    "scripts/verify-route-boundaries.py": "b92f118b69b7c993b8481bb45191a9f3e32003aea8ddd919f40c1fa6eba575ea",
+    "scripts/verify-session-revisions.py": "91c54feade6e68ee7590690ff728f9cae4e58fd6db0b23b0928561164781c609",
+    "site/public/reference/public-scope.json": "f45ea8d734af6cd96f9dccc34a09a9ec99d2c5ad4b527296424820323388980f",
+    "site/public/reference/session-revision-plan.md": "8c48f988200fdd534fa859edd39656693d0fdd955098f4cace85a4142e3814da",
+    "site/public/reference/session-revision-result.md": "aff10859135c4a37b1c03433f0f7f98f88feedfd5fbf8de706f0aa3ff81be61d",
+    "site/public/reference/session-revisions.md": "01876099857ffbb9883bccb15132dc933a23de24082c01c49e03a67e2d9a43a0",
+    "site/scripts/prepare.mjs": "3e971fed198fc1be62d23155bcebc6a368dfb8d481b4f2e31641565cf3dbaa02",
+    "site/src/public-scope.json": "f45ea8d734af6cd96f9dccc34a09a9ec99d2c5ad4b527296424820323388980f",
+    "site/src/scope-manifest.json": "4eb54c326f10c85d36e1c85a53aae8882850a26e6a94e66204488ca7c805874e",
+    "state.json": "fb68b88abd43925729601356f76e892d39ecfdf5a5d20962ac08ab3e715ff36f",
+    "tests/test_session_revisions.py": "f6e0f8919fd7c3b63bafece8b90eae0e0633a352d7883c45807419921941a865",
+    "tests/test_website_evidence_inputs.py": "54ede454d7c64418adce7638c6f6c056b0b904ec9b7bff666569f56b1c709cf0",
+    "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-local.json",
+      "sha256": "15485cea95ad0c788058ab58cbaf8f3c0d4004eece9492a6237fcaf1857fb0fc"
+    },
+    {
+      "path": "runs/2026-10-12-session-revision-linux.json",
+      "sha256": "9cd84d0d39fd58fbc61669bd88d3377f182fbc5ba875818fb573e237b7c924c1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_session_revisions.py",
+        "tests/test_website_evidence_inputs.py",
+        "tests/test_blind_review_privacy.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T16:36:48.273359+00:00"
+    }
+  ]
+}

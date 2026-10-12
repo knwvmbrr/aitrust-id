@@ -2750,9 +2750,11 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-12T16:35:55.076184+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — private selected-literal context component; original derivability hypothesis remains unimplemented and unvalidated"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
@@ -2762,7 +2764,12 @@
         "next_fix": "Deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/session-revision-plan.md",
+          "docs/session-revisions.md",
+          "docs/session-revision-result.md",
+          "runs/2026-10-12-session-revision-local.json",
+          "runs/2026-10-12-session-revision-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
