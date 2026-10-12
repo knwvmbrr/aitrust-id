@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-022547-restore-reaping-full-source-accepted-becf2c70
+
+Recorded 2026-10-12T02:25:47.572141+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the repaired full current source execution after the hosted procfs observation failure.
+- **Evidence.** 2493 Python tests passed, checked sources unchanged; current personal capability receipts remain source-bound. [Change record](./runs/changes/2026-10-12-022547-restore-reaping-full-source-accepted-becf2c70.json).
+- **Not claimed.** One platform-specific skip and one upstream warning; protected head and production recovery acceptance remain pending.
+
+
+### 2026-10-12-022347-restore-ci-reaped-process-observation-3fb098da
+
+Recorded 2026-10-12T02:23:47.254007+00:00 · Contributor: Codex · change
+
+- **Changed.** Handle the verified Linux procfs ESRCH reaping race in the existing owned-process test without relaxing running-process or permission-error checks.
+- **Evidence.** 82 focused tests pass; both ENOENT and ESRCH require a second process-disappearance confirmation. The actual failed hosted run is retained. [Change record](./runs/changes/2026-10-12-022347-restore-ci-reaped-process-observation-3fb098da.json).
+- **Not claimed.** The new protected head still needs its full suite; no production/model/tag behavior or required CI policy changed.
+
+
 ### 2026-10-12-022000-restore-complete-engineering-d8c51289
 
 Recorded 2026-10-12T02:20:00.393277+00:00 · Contributor: Codex · change

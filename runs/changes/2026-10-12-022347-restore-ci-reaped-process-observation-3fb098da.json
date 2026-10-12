@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-022347-restore-ci-reaped-process-observation-3fb098da",
+  "recorded_at": "2026-10-12T02:23:47.254007+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5c2d1987b5f17a6a4f56def22acf1f233b4d0d61",
+  "changed": "Handle the verified Linux procfs ESRCH reaping race in the existing owned-process test without relaxing running-process or permission-error checks.",
+  "proves": "82 focused tests pass; both ENOENT and ESRCH require a second process-disappearance confirmation. The actual failed hosted run is retained.",
+  "limits": "The new protected head still needs its full suite; no production/model/tag behavior or required CI policy changed.",
+  "scope_ids": [
+    "F-073",
+    "F-016",
+    "F-020b"
+  ],
+  "files": {
+    "tests/test_nli_reference_cli.py": "007b68d599d6f4b5d39aff56619778e9e05aef6c223e666e4cd94c773f76db44",
+    "docs/restore-isolation-result.md": "4df060e63cc5c6e47a921c86fb563109eda171e4d09922031bbc5492cd2a96fe",
+    "state.json": "32f2c184f465cf35d1bd15ba2851378701424ce43ed91d3df72a1852673f5a78",
+    "eval/route-boundaries.json": "7dcceac9a6ec2d890db36a4f47e27ad221cf6b8b4a8d6a1ff0915a955a1e0b87",
+    "runs/2026-10-12-restore-ci-reaping-refusal.json": "6b322fba071221bd956463f8b77b38d233bf92b96547feb0459a3bf3f9ea04f6",
+    "runs/2026-10-12-restore-ci-reaping-focused-repair.json": "e32cff3996078aa29066dc904c8b6ea0edb51645c2e44651e692cde19a271f07",
+    "runs/2026-10-12-restore-ci-reaping-boundaries.json": "06d6e43a8ca3f4667fc8b677fdb651b99d57e7163a3e16c9fcf26507f00a6c7f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-restore-ci-reaping-focused-repair.json",
+      "sha256": "e32cff3996078aa29066dc904c8b6ea0edb51645c2e44651e692cde19a271f07"
+    },
+    {
+      "path": "runs/2026-10-12-restore-ci-reaping-refusal.json",
+      "sha256": "6b322fba071221bd956463f8b77b38d233bf92b96547feb0459a3bf3f9ea04f6"
+    },
+    {
+      "path": "runs/2026-10-12-restore-ci-reaping-boundaries.json",
+      "sha256": "06d6e43a8ca3f4667fc8b677fdb651b99d57e7163a3e16c9fcf26507f00a6c7f"
+    }
+  ],
+  "checks": []
+}

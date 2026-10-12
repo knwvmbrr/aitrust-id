@@ -151,15 +151,16 @@ def assert_owned_descendant_stopped(child):
     # running state. Permission/read failures still fail the check.
     try:
         stat = Path(f'/proc/{child}/stat').read_text()
-    except FileNotFoundError:
+    except (FileNotFoundError, ProcessLookupError):
         with pytest.raises(ProcessLookupError):
             os.kill(child, 0)
     else:
         assert stat.rsplit(')', 1)[1].split()[0] == 'Z'
 
 
-def test_reaped_descendant_between_observation_and_read_is_accepted(monkeypatch):
-    def gone(*args, **kwargs): raise FileNotFoundError()
+@pytest.mark.parametrize("disappeared", [FileNotFoundError, ProcessLookupError])
+def test_reaped_descendant_between_observation_and_read_is_accepted(monkeypatch, disappeared):
+    def gone(*args, **kwargs): raise disappeared()
     def absent(*args, **kwargs): raise ProcessLookupError()
     monkeypatch.setattr(Path, 'read_text', gone)
     monkeypatch.setattr(os, 'kill', absent)

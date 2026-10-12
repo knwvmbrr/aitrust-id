@@ -9,3 +9,7 @@ F-073 and N-011 remain open with their original full acceptance. Named operation
 [Kernel evidence](../runs/2026-10-12-restore-isolation-kernel.json) · [Staging cleanup](../runs/2026-10-12-restore-isolation-staging-cleanup.json)
 
 The complete current Python suite passes 2492 tests (one platform-specific skip and one upstream warning), with checked sources unchanged during execution. All five selected capability checks and all eight website checks pass. The failed first website receipt remains available; its changelog ordering was repaired before the successful rerun. [Full suite](../runs/2026-10-12-restore-isolation-full-suite.json) · [Focused controls](../runs/2026-10-12-restore-isolation-focused.json).
+
+## Hosted process-observation repair
+
+Both new kernel/host-config runs passed. One existing no-egress test observed ESRCH while reading a child that had just been reaped. Its helper now treats ENOENT and ESRCH as candidate disappearance, still requiring a second kill(0) failure; running/zombie interpretation and permission-error refusal are preserved. Eighty-two focused recovery/reference-process tests pass, including both disappearance regressions. This changes test observation, not model deadlines, recovery controls or required CI policy. The failed hosted run is retained and the new exact head must pass before merge.

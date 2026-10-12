@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-12T02:23:45.489562+00:00",
+  "pass": false,
+  "source_head": "5c2d198",
+  "failed_check": "no-egress",
+  "actual_job_id": 114636765132,
+  "reason": "A killed child was reaped after procfs open and before read, producing ESRCH/ProcessLookupError not handled by the older test helper.",
+  "failed_test": "test_outer_deadline_ends_nested_worker_session",
+  "ci_tests_failed": 1,
+  "ci_tests_passed": 2457,
+  "ci_tests_skipped": 3,
+  "diagnostic_sha256": "092fd10b4c4a08f52801c184709808a25485164b3060f124cbec76dcde6e1f60",
+  "production_restore_changed": false,
+  "merge_performed": false
+}
