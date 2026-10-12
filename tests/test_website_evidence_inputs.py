@@ -143,3 +143,14 @@ def test_feedback_analysis_consumers_bind_shared_schema_and_private_workflow(cap
         commands = fingerprint(capability)['commands']
         assert ['{python}', 'scripts/verify-feedback-analysis.py', '--output',
                 'output/verification/feedback-analysis.json'] in commands
+
+
+@pytest.mark.parametrize('capability', ['protocol', 'website'])
+def test_backup_retention_consumers_bind_real_guard_and_private_writer(capability):
+    required = {'tools/backup_retention.py', 'scripts/verify-backup-retention.py',
+        'tests/test_backup_retention.py', 'deploy/backup/restore.py',
+        'tools/blind_review_io.py', 'protocol/reports.py', 'docs/backup-retention.md',
+        '.github/workflows/ci.yml'}
+    assert required <= fingerprint(capability)['sources'].keys()
+    assert ['{python}', '-m', 'pytest', 'tests/test_backup_retention.py',
+            'tests/test_restore_isolation.py', '-q'] in fingerprint(capability)['commands']

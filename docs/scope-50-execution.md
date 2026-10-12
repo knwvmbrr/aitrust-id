@@ -62,3 +62,20 @@ setup remain separate. No automatic source test can close them.
    authorship, update scope/state/changelog, and publish verified increments.
 
 The queue target is an outcome, not permission to manufacture fifty completions.
+
+## 2026-10-12 — continue past external gates
+
+Feedback comparison is protected-merged and published: corrected no-change
+states, 67 selected Linux tests, 11 actual CLI controls and 762 published
+artifact comparisons. Backup retention is the next implemented component:
+seven actual encrypted PostgreSQL/pgBackRest controls and seven unsafe-run
+refusals on disposable invented data. Raw logs stay private; source-bound
+receipts and operator instructions are public. Retained failures include root
+bytecode cleanup and setup-order errors, each corrected before re-execution.
+
+All 202 full requirements and their existing percentages remain. 115 are
+complete, 87 remain open, and 37 full closures are needed for the target of 50.
+These components advance N-011/F-073 without claiming participant consent,
+physical erasure, real intake, a replacement-host recovery or human acceptance.
+The owner will review personal requirements nearer the target; unavailable
+human/legal/device gates do not stop independent implementation work.

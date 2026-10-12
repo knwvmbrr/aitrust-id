@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-12T15:43:30.541365+00:00",
+  "pass": false,
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/56",
+  "review_thread": "PRRT_kwDOVBYh3s6rhqmy",
+  "tested_prior_head": "c76955c478b2469e4c3aca96f8923fe639226182",
+  "failure": "Cancellation could read an unset ordinary-failure variable and be replaced by a traceback; finally-return also suppressed interruptions",
+  "fix": "Preserve BaseException cancellations after owned cleanup, remove finally-return, retain original cancellation through repeated cleanup interruption",
+  "current_linux_unit_tests": 21,
+  "cancellation_regressions": 4,
+  "real_database_started_by_unit_tests": false,
+  "requirements_closed": 0
+}

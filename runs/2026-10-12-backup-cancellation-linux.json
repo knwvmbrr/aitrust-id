@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-12T15:42:15.314203+00:00",
+  "pass": true,
+  "selected_python_tests": 21,
+  "cancellation_regressions": 4,
+  "non_root": true,
+  "isolated_network_namespace_verified": true,
+  "real_database_started_by_unit_tests": false,
+  "ipv4_ipv6_external_connections_refused": 2,
+  "sources": {
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "scripts/verify-backup-retention.py": "24afd1c8796e4b7905153de7b593b95607f794457941cabb565731ab6127ef79",
+    "tests/test_backup_retention.py": "c53ebd846aeb4fc5ff973e99679abf01aa42fbe5795b379d59bbaf8662bf760a",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09"
+  },
+  "source_unchanged_during_execution": true,
+  "independent_accuracy_evidence": false,
+  "production_changes": false,
+  "requirements_closed": 0,
+  "owned_staging_removed": true
+}

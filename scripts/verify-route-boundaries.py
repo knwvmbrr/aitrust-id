@@ -189,6 +189,7 @@ PATTERNS += ('deploy/research/metadata-invitation-development.sql','scripts/veri
              'docs/research-invitations.md','docs/research-invitation-result.md')
 
 PATTERNS += ('tools/feedback_analysis.py', 'scripts/analyze-feedback.py', 'scripts/prepare-feedback-analysis-demo.py', 'scripts/verify-feedback-analysis.py', 'tests/test_feedback_analysis.py', 'docs/feedback-analysis-plan.md', 'docs/feedback-analysis.md', 'docs/feedback-analysis-result.md')
+PATTERNS += ('tools/backup_retention.py', 'scripts/verify-backup-retention.py', 'tests/test_backup_retention.py', 'docs/backup-retention-plan.md', 'docs/backup-retention.md', 'docs/backup-retention-result.md', 'deploy/backup/restore.py', 'tools/blind_review_io.py', 'protocol/reports.py')
 PATTERNS += ('tools/research_admission.py','scripts/research-admission.py','scripts/verify-research-admission.py',
              'tests/test_research_admission.py','docs/research-admission-plan.md',
              'docs/research-admission.md','docs/research-admission-result.md')

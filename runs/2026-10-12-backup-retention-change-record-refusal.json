@@ -1,0 +1,8 @@
+{
+  "captured_at": "2026-10-12T15:20:00.060461+00:00",
+  "pass": false,
+  "reason": "Change record correctly refused its own CHANGELOG.md as a hashed input",
+  "event_written": false,
+  "fix": "Exclude the append-only changelog from its own input hash set; retain actual source/evidence files",
+  "requirements_closed": 0
+}

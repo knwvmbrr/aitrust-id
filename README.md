@@ -101,6 +101,8 @@ The separate [reference comparison command](docs/nli-references.md) selects pass
 
 [Understand feedback](docs/feedback-analysis.md) with a free offline practice workflow. Compare invented metadata batches, inspect explicit record denominators and keep reports separate from confirmed errors, people, accuracy and training. This preparation tool collects and uploads nothing; the real participant pilot remains a separate gate.
 
+[Check backup retention](docs/backup-retention.md) on a dedicated Linux development host. The encrypted practice drill demonstrates deletion, retained recovery and expiry using invented data; it changes no production database or retention policy.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual

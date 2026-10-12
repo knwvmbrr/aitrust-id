@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-10-12T15:07:01.040915+00:00",
+  "pass": true,
+  "controls": [
+    {
+      "case": "non_root_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "host_namespace_root_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "root_account_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "unknown_account_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "optimized_checks_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "private_argument_not_echoed",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "extra_interface_refused",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "no_report_or_project_bytecode_created": true,
+  "owned_staging_removed": true,
+  "production_changes": false,
+  "requirements_closed": 0
+}

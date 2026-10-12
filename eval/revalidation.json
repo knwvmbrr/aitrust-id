@@ -144,7 +144,15 @@
         "tests/test_feedback_analysis.py",
         "docs/feedback-analysis-plan.md",
         "docs/feedback-analysis.md",
-        "docs/feedback-analysis-result.md"
+        "docs/feedback-analysis-result.md",
+        "tools/backup_retention.py",
+        "scripts/verify-backup-retention.py",
+        "tests/test_backup_retention.py",
+        "docs/backup-retention-plan.md",
+        "docs/backup-retention.md",
+        "docs/backup-retention-result.md",
+        "deploy/backup/restore.py",
+        "protocol/reports.py"
       ],
       "commands": [
         [
@@ -200,6 +208,14 @@
           "pytest",
           "tests/test_feedback_analysis.py",
           "tests/test_research_admission.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_backup_retention.py",
+          "tests/test_restore_isolation.py",
           "-q"
         ]
       ]
@@ -417,7 +433,15 @@
         "tests/test_feedback_analysis.py",
         "docs/feedback-analysis-plan.md",
         "docs/feedback-analysis.md",
-        "docs/feedback-analysis-result.md"
+        "docs/feedback-analysis-result.md",
+        "tools/backup_retention.py",
+        "scripts/verify-backup-retention.py",
+        "tests/test_backup_retention.py",
+        "docs/backup-retention-plan.md",
+        "docs/backup-retention.md",
+        "docs/backup-retention-result.md",
+        "deploy/backup/restore.py",
+        "protocol/reports.py"
       ],
       "commands": [
         [
@@ -491,6 +515,14 @@
           "scripts/verify-feedback-analysis.py",
           "--output",
           "output/verification/feedback-analysis.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_backup_retention.py",
+          "tests/test_restore_isolation.py",
+          "-q"
         ]
       ]
     }

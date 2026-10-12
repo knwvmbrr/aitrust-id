@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-12T15:43:30.541365+00:00",
+  "pass": false,
+  "attempts": [
+    {
+      "tests_failed": 4,
+      "tests_passed": 76,
+      "failure": "Linux fixture used macOS ENETUNREACH value"
+    },
+    {
+      "tests_failed": 4,
+      "tests_passed": 76,
+      "failure": "Linux-only temporary path resolved through macOS private tmp symlink"
+    },
+    {
+      "reason": "Copied private staging-prefix assertion mismatched new owned directory prefix",
+      "source_copied_or_tests_executed": false,
+      "exact_empty_owned_directory_removed": true
+    }
+  ],
+  "fix": "Run the four Linux-specific lifecycle tests on actual isolated Linux; explicitly skip them on macOS. Correct the private staging prefix before a fresh run.",
+  "current_linux_tests_passed": 21,
+  "current_mac_focused_tests_passed": 76,
+  "current_mac_platform_skips": 4,
+  "production_changes": false,
+  "requirements_closed": 0
+}

@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-12T15:12:47.515342+00:00",
+  "pass": false,
+  "failure": "owned_staging_cleanup_failed_after_successful_synthetic_controls",
+  "root_cause": "Root imports created project bytecode directories before privilege drop",
+  "fixed_by": "Disable bytecode writing before project imports; fresh owned Linux drill passed all seven controls and cleanup",
+  "owned_cleanup_executed": true,
+  "production_changes": false,
+  "requirements_closed": 0
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-154428-backup-cancellation-review-correction-23182923",
+  "recorded_at": "2026-10-12T15:44:28.577809+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c76955c478b2469e4c3aca96f8923fe639226182",
+  "changed": "Preserve original cancellation through owned cleanup and remove the cleanup finally-return; bind interruption regressions and prepared static projections.",
+  "proves": "21 selected safety tests including four interruption regressions pass on isolated Linux. Corrected source passes seven actual encrypted controls and seven early refusals again with cleanup.",
+  "limits": "Unit interruption tests use mocked subprocess boundaries. Current integrated rechecks and protected publication remain pending; no production, physical erasure, independent accuracy or full closure claim.",
+  "scope_ids": [
+    "N-011",
+    "F-073"
+  ],
+  "files": {
+    "docs/backup-retention-plan.md": "f5d40f22dbd8449ee202c16e095728871e2556051355e8a9472be424bb63383e",
+    "docs/backup-retention-result.md": "a22c5bdafafbed29824e128b2ecd3ab64f6668b9bf81ee0f70a4cf340feac1c4",
+    "docs/backup-retention.md": "81a99cdf445c0ff1c432ff07adbb3313a88ee77a4fed86609dad27f009356617",
+    "docs/scope-progress.json": "f9579326a30b108e247f4e3348cfdf20b1eab714859a17e8e0b5a1643a6d3e42",
+    "docs/scope-progress.md": "5711c271a0782223e152c619ac911c64ae6d1d1408b417908089e8394484734c",
+    "site/public/reference/backup-retention.md": "81a99cdf445c0ff1c432ff07adbb3313a88ee77a4fed86609dad27f009356617",
+    "site/public/reference/public-scope.json": "5e07526a7ec50a1212e6fd9bbfc5af192e938edd2644719906da906d4cc94672",
+    "site/src/public-scope.json": "5e07526a7ec50a1212e6fd9bbfc5af192e938edd2644719906da906d4cc94672",
+    "site/src/scope-manifest.json": "92e2eded677f4826c59a53ab660385f484683bee0a507dc9489a4344890e72a7",
+    "state.json": "40473ffc8428a673351c5b5cf393d7ddefac7a2238932f9495052ed53cb5070c",
+    "tests/test_backup_retention.py": "c53ebd846aeb4fc5ff973e99679abf01aa42fbe5795b379d59bbaf8662bf760a",
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "runs/2026-10-12-backup-cancellation-encrypted.json": "080e5688942c4f3f36e2c26d34fb3de618f4ed334b2ccce5e72db0213e53632d",
+    "runs/2026-10-12-backup-cancellation-linux.json": "5f4886f401a7c742e0dca948055c1953763319f0893be20857f8b6f318b5427f",
+    "runs/2026-10-12-backup-cancellation-refusals.json": "7907458d689c490d9adbdc0843eb424b1ecfe6f5b0f13bed9c27206e31d8ee03",
+    "runs/2026-10-12-backup-cancellation-review-finding.json": "0617484aadf5c03f3776d1c2cb7516959ae2addab41fa83657211b16c663485f",
+    "runs/2026-10-12-backup-cancellation-test-platform-refusals.json": "d001f16e61ee076f7a8fd9b2f233ddb6953fbcc9d1ddecd35af35c1359e48a89"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-backup-cancellation-linux.json",
+      "sha256": "5f4886f401a7c742e0dca948055c1953763319f0893be20857f8b6f318b5427f"
+    },
+    {
+      "path": "runs/2026-10-12-backup-cancellation-encrypted.json",
+      "sha256": "080e5688942c4f3f36e2c26d34fb3de618f4ed334b2ccce5e72db0213e53632d"
+    },
+    {
+      "path": "runs/2026-10-12-backup-cancellation-refusals.json",
+      "sha256": "7907458d689c490d9adbdc0843eb424b1ecfe6f5b0f13bed9c27206e31d8ee03"
+    },
+    {
+      "path": "runs/2026-10-12-backup-cancellation-review-finding.json",
+      "sha256": "0617484aadf5c03f3776d1c2cb7516959ae2addab41fa83657211b16c663485f"
+    }
+  ],
+  "checks": []
+}
