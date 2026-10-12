@@ -115,6 +115,12 @@ PATTERNS += ('scripts/asset_notices.py', 'scripts/verify-asset-notices.py', 'tes
              'sbom/assets/*', 'site/public/device-licenses/*', 'site/public/fonts/*',
              'eval/vectors/unicode/LICENSE.txt', 'docs/asset-notices-plan.md', 'docs/asset-notices.md', 'docs/asset-notices-result.md')
 
+PATTERNS += ('tools/newsroom.py','tools/editorial_cli.py','scripts/editorial-review.py',
+             'scripts/prepare-editorial-review.py','scripts/prepare-editorial-demo.py',
+             'scripts/verify-editorial-cli.py','scripts/verify-editorial-workflow.cjs',
+             'tests/test_newsroom.py','tests/test_editorial_cli.py','tests/test_local_cli.py',
+             'docs/editorial-workflow-plan.md','docs/editorial-workflow.md','docs/editorial-workflow-result.md')
+
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',

@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-12T01:29:22.450050+00:00",
+  "pass": true,
+  "original_ledger_pass": false,
+  "failure_signature": "Unsupported 100% F-157: closed records must have no pending fix or unfulfilled acceptance.",
+  "corrective_action": "Keep the full original acceptance text as fulfilled_acceptance and in unchanged master scope; clear only its now-completed pending fields. Existing validator unchanged.",
+  "scope_id": "F-157",
+  "original_acceptance": [
+    "Deliver Newsroom integration \u2014 labels in an editorial workflow. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "function_evidence": "runs/2026-10-12-editorial-function-acceptance.json",
+  "requirements_removed": 0,
+  "independent_accuracy_evidence": false
+}

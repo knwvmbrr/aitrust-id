@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-013431-editorial-final-publication-preflight-da1f3fab",
+  "recorded_at": "2026-10-12T01:34:31.979352+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "684357c12fb0fe3fd21516d20b9544f1feeff1f3",
+  "changed": "Bind completed editorial acceptance to the final eight passing website checks and unchanged reviewed personal route boundaries.",
+  "proves": "The 115-complete / 87-open ledger and actual guide/export workflow are source-bound; no extra public endpoint, permissions or asserted tag were introduced.",
+  "limits": "Protected publication pending. No independent tag accuracy or human/physical-phone validation is claimed. Retain the corrected final tool-runtime failure.",
+  "scope_ids": [
+    "F-157",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "620cb8cc63909557f5d40496c9fdc940df95195791d1abca7f90b97e3e229a86",
+    "eval/route-boundaries.json": "ffe674b829dd1278bfd9f571a25f1659afe5939c8b86560d89bae9d743018237",
+    "runs/2026-10-12-editorial-complete-website.json": "7b47203c04cac6cc5a57c67469f767d0f9b0dcbdb1f0efd15dbd33803528338a",
+    "runs/2026-10-12-editorial-complete-route-review.json": "c19a189ffb21e605690abe3dad8f8110d7bd0d3fff8724342ad8ab90a646f6ab",
+    "runs/2026-10-12-editorial-final-tool-runtime-repair.json": "ad8f66f97d3b6fd28b816d1f3ac2acaa89476afb696a16c49cbffdc615ea0e33"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-complete-website.json",
+      "sha256": "7b47203c04cac6cc5a57c67469f767d0f9b0dcbdb1f0efd15dbd33803528338a"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-complete-route-review.json",
+      "sha256": "c19a189ffb21e605690abe3dad8f8110d7bd0d3fff8724342ad8ab90a646f6ab"
+    }
+  ],
+  "checks": []
+}

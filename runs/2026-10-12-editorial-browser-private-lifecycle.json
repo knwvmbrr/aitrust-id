@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-12T01:00:33.102Z",
+  "pass": false,
+  "phase": "actual-detailed-web-export",
+  "completed_cases": [],
+  "failure_kind": "TimeoutError",
+  "sources": {
+    "tools/newsroom.py": "a230b2bccedb932df58f724db27d50b29a2eefdf8a40060227e1b985f9cc82ed",
+    "tools/editorial_cli.py": "87129a769c45f40b0fa031ade2e60d82d7e7b06a66b4661acec4bef19498ebbe",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/editorial-review.py": "859792092673cf2345e315bcbad635fd66dce4f90c4c37d6c331a2311337575c",
+    "scripts/prepare-editorial-review.py": "b565e669abdaa85d7f8efda6b784f5a9a78d47e298a81fbde7f23761bb721b82",
+    "scripts/verify-editorial-workflow.cjs": "e27ff114fa89eb83ad6db8226e5a5367852557a8c6fb1f06919accc57972d07e",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/replay.py": "1276d36794919a538b70799cc4603de7294789c96c1fff79f5250958cc3f43dd",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+  },
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

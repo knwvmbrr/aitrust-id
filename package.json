@@ -57,7 +57,8 @@
     "key-backup": "node scripts/key-backup.cjs",
     "test:author-choice": "node --test tests/author-choice.cjs",
     "test:self-declaration": "node --test tests/conformance-statement.cjs",
-    "self-declaration": "node scripts/conformance-statement.cjs"
+    "self-declaration": "node scripts/conformance-statement.cjs",
+    "verify:editorial": "python3 scripts/verify-editorial-cli.py && node scripts/verify-editorial-workflow.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

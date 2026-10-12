@@ -116,3 +116,9 @@ verify-primitives:
 verify-measurements:
 	$(PYTHON) scripts/verify-dataset-provenance.py
 	$(PYTHON) scripts/verify-measurements.py
+
+.PHONY: verify-editorial
+verify-editorial:
+	python3 -m pytest tests/test_newsroom.py tests/test_editorial_cli.py -q
+	python3 scripts/verify-editorial-cli.py
+	node scripts/verify-editorial-workflow.cjs
