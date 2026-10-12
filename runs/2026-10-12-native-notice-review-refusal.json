@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-12T00:37:09.971851+00:00",
+  "author": "Codex",
+  "pass": false,
+  "merge_attempted": false,
+  "head": "6a92f9aa67162e9db2622c4ad6a4647096f7d5ef",
+  "required_ci_checks_passed": 22,
+  "unresolved_review_threads": 1,
+  "reason": "Standalone native packaging verified Unicode bytes but did not bind the other three runtime notices to the retained manifest.",
+  "finding_path": "scripts/native_bundle.py",
+  "planned_fix": "Execute the exact selected asset/notice binding check before packaging; test alterations to all three notices.",
+  "independent_accuracy_evidence": false
+}

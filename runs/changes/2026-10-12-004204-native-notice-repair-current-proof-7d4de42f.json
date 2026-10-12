@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-004204-native-notice-repair-current-proof-7d4de42f",
+  "recorded_at": "2026-10-12T00:42:04.247060+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6a92f9aa67162e9db2622c4ad6a4647096f7d5ef",
+  "changed": "Recorded stable website revalidation and exact current source/access review after direct packaging repair.",
+  "proves": "All current website commands pass with unchanged source; final route inventory binds the repaired packaging code and its regressions.",
+  "limits": "No new tag, endpoint, permission, data collection, legal clearance or physical phone acceptance. New exact-head protected CI remains required.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    "docs/asset-notices-result.md": "30024107e33a4881e8ed70e1356c071745071e6cfc593c89553411c6e95249b9",
+    "eval/route-boundaries.json": "ca0f48b530b34fb881751fa02962aa1321578e37bdaadf63d2602a74d8b35049",
+    "runs/2026-10-12-native-all-notice-website.json": "4ffd396846d78db1141daddd6c3bbf3426176b570ab231d1411b1ed6dad7e29d",
+    "runs/2026-10-12-native-notice-direct-repair.json": "b51ca564e8c668dcbf0ba3cb16a39d9ff9cfd02cde3a4605ff20991163acb8d3",
+    "runs/2026-10-12-native-notice-linux-repair.json": "ad7830c510532703cc02a0a58392f201d127e229b70ed65c4a0383d767667863",
+    "runs/2026-10-12-native-notice-repair-boundaries.json": "a37ba0004778e336b3f719d7d8ae89dbce57337dbc6865114a0714bfa1b6f326",
+    "runs/2026-10-12-native-notice-repair-cleanup.json": "6d14e237c6d96ca4735be155fbd8c6820a54680919e478b317d271de361139d6",
+    "runs/2026-10-12-native-notice-review-refusal.json": "7e756f7a840e91f19695724085fe6f5bd6ee389011463d6914a7cc103084af11",
+    "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+    "state.json": "93e3db44e1f6a5764ac3e1e656dc3091ab1390f223ec2023a7fa29bfc8c2fd75",
+    "tests/test_native_bundle.py": "bdcee6fec732c8d9c482e6cdea2293de9a36fc7ca190223eea1ab23f42d98a12"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-native-all-notice-website.json",
+      "sha256": "4ffd396846d78db1141daddd6c3bbf3426176b570ab231d1411b1ed6dad7e29d"
+    },
+    {
+      "path": "runs/2026-10-12-native-notice-repair-boundaries.json",
+      "sha256": "a37ba0004778e336b3f719d7d8ae89dbce57337dbc6865114a0714bfa1b6f326"
+    }
+  ],
+  "checks": []
+}

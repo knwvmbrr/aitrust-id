@@ -17,6 +17,10 @@ def assets():
             or any(not file.is_file() or file.is_symlink() for file in notice_root.iterdir())
             or (notice_root / 'unicode-license.txt').read_bytes() != (ROOT / 'eval/vectors/unicode/LICENSE.txt').read_bytes()):
         raise ValueError('Exact runtime and Unicode notices required')
+    # A direct package command must enforce the same retained identities as CI.
+    # Checking filenames alone would copy altered runtime notices into the ZIP.
+    from scripts.asset_notices import verify
+    verify(root=ROOT)
     manifest = json.loads((ROOT / 'site/src/device-manifest.json').read_text())
     expected = {'method_sha256', 'bundle_sha256', 'path', 'runtime', 'max_codepoints', 'normalization_id', 'normalization_data_sha256'}
     if (set(manifest) != expected or manifest['runtime'] != '314.0.7' or type(manifest['max_codepoints']) is not int

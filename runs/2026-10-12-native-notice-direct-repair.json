@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-12T00:37:09.973588+00:00",
+  "author": "Codex",
+  "pass": true,
+  "tests_passed": 54,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_asset_notices.py",
+    "tests/test_native_bundle.py",
+    "-q"
+  ],
+  "all_four_notices_checked_before_actual_packaging": true,
+  "altered_runtime_notice_regressions": 3,
+  "sources": {
+    "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+    "tests/test_native_bundle.py": "bdcee6fec732c8d9c482e6cdea2293de9a36fc7ca190223eea1ab23f42d98a12",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2"
+  },
+  "scope": "Direct resource packaging only; no license clearance or phone app."
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-12T00:29:04.378705+00:00",
+  "reviewed_at": "2026-10-12T00:46:39.224586+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -28,7 +28,7 @@
     "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
     "deploy/research/metadata-development.sql": "a6df9e0e344a9910adb5e9576a028106966dbaa907e7221f8c73ce8d5586a32f",
     "docs/asset-notices-plan.md": "4f873738c57d36af66683321fc58bf4baa92e1b7428fd2194337f858a5d40f5f",
-    "docs/asset-notices-result.md": "df2219ae617e6f7a100480976e93834352b990b26e3f79d7482966ae9bb5cc3f",
+    "docs/asset-notices-result.md": "3546fe6fda381af88f711caf3f3bb9cc6d99ac64ec360400ea4c36008f5d77b5",
     "docs/asset-notices.md": "5d50bd25913fabc0c6b179221c5d1e499a14ebd8be719c3da13e9310e19cd78a",
     "docs/choice-framing-plan.md": "829b29cff518dc377bfb92b947bd48ca9727e92259618538bb9a440583cca6cf",
     "docs/choice-framing.md": "01963f1713ea282d738588ddcc66b7096f7e12749d7bf3a35429285de8de2d0e",
@@ -417,7 +417,7 @@
     "scripts/measure-redaction-development.py": "8b78a6983aeca0d913cdec6d97344df0ab4e765df4e1cdbc91923c23bf0410d9",
     "scripts/metadata-store-sandbox.py": "3e08e5c3000d95ba65be31ffbcfcffa80009c8d37758a2360395c7666f717f9d",
     "scripts/native-probe-cases.py": "ce378e5dd9654693723717d5a4570316c7f92273d1e00f0e49c12bd570c0ce2f",
-    "scripts/native_bundle.py": "53179c58d0616140d538844409dd22a3bb2c4e4f873010dba1797e3c22fb482f",
+    "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
     "scripts/package-proximity.py": "c631c439e311d093dc1b397ed6aa259d734f89b49cd6fa8318890baefc81b3d7",
     "scripts/prepare-choice-demo.py": "d1551ca26405ed37972ada0a94e77d98e52b7a612ef25e0f433aef135c3689a6",
     "scripts/prepare-native-bundle.py": "a86227e42ac02e803ba65491fbf3e3846667c6a3c62b5a5cc834b820b59609b1",
@@ -612,7 +612,7 @@
     "tests/test_manifest_inspection.py": "f776087710a57b0ace9268282c59633f19718c293592dd3e169eaf65386e05c3",
     "tests/test_manifest_workflow.py": "8ec74c48c3f2cb64448f44f190a6e92ed9e9186f3c7d72c77315304725612a89",
     "tests/test_metadata_store.py": "3616ec0a1d03e719dfd81aaf4c6f5c6471c8830e1353486dfdbc9ad4eebbd840",
-    "tests/test_native_bundle.py": "93187325a34ca8d9cd7a102708a43efd2df80ac896e2acd8751a5862557fd750",
+    "tests/test_native_bundle.py": "bdcee6fec732c8d9c482e6cdea2293de9a36fc7ca190223eea1ab23f42d98a12",
     "tests/test_nli_cli.py": "3bb1a1deb8e65bf9e792332ab2d913efc5325db019660d8303b167a99fa70388",
     "tests/test_nli_network.py": "9596ec557f98f7f33dd60e65a81f6e64cbdcf4ba2078750f43f5bbc0b07c7c40",
     "tests/test_nli_pairs.py": "5f5212f1cdc2c2a5132fd05cf75ee773f4d237d059aa2908d27ac7992727f054",
@@ -653,7 +653,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-12-selected-assets-current-extension.json",
-    "website": "runs/2026-10-12-selected-assets-stable-website.json"
+    "website": "runs/2026-10-12-native-all-notice-website.json"
   },
   "device_evidence": {
     "source_commit": "c2226fb67047b737246804ce2bd6a0134b1a0ff3",

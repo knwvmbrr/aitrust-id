@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-004640-native-notice-repaired-combined-suite-66a51fbf
+
+Recorded 2026-10-12T00:46:40.594303+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded repaired combined test coverage and final exact source review before new-head protected CI.
+- **Evidence.** 2346 tests pass with one existing Linux-only Mac skip and upstream warning. All four native notice identities are checked before producing an archive; current website and final source/access boundaries pass. [Change record](./runs/changes/2026-10-12-004640-native-notice-repaired-combined-suite-66a51fbf.json).
+- **Not claimed.** Full license obligations, physical Share and independent tag accuracy remain separate and open. The original unresolved-review head was not merged.
+
+
+### 2026-10-12-004204-native-notice-repair-current-proof-7d4de42f
+
+Recorded 2026-10-12T00:42:04.247060+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded stable website revalidation and exact current source/access review after direct packaging repair.
+- **Evidence.** All current website commands pass with unchanged source; final route inventory binds the repaired packaging code and its regressions. [Change record](./runs/changes/2026-10-12-004204-native-notice-repair-current-proof-7d4de42f.json).
+- **Not claimed.** No new tag, endpoint, permission, data collection, legal clearance or physical phone acceptance. New exact-head protected CI remains required.
+
+
+### 2026-10-12-003816-native-all-notice-binding-repair-bd6fe905
+
+Recorded 2026-10-12T00:38:16.729069+00:00 · Contributor: Codex · change
+
+- **Changed.** Made standalone native resource packaging enforce the exact retained asset/notice bindings before output; retained the unresolved-review merge refusal and added altered-runtime-notice tests.
+- **Evidence.** 54 focused Mac controls and 51 same-source source-only network-denied Linux controls pass. Three prepared-resource tests remain distinct on Linux. The owned repair staging directory is removed. [Change record](./runs/changes/2026-10-12-003816-native-all-notice-binding-repair-bd6fe905.json).
+- **Not claimed.** The prior 22-check head was not merged due to the unresolved direct-packaging finding. New exact-head CI and current website/source review are required; no legal clearance or phone app is asserted.
+
+
 ### 2026-10-12-002906-selected-assets-combined-verification-20abcc5a
 
 Recorded 2026-10-12T00:29:06.560242+00:00 · Contributor: Codex · change

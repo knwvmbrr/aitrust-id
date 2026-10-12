@@ -58,6 +58,12 @@ def source_copy(tmp_path, monkeypatch):
     # generated device manifest that happens to exist on the developer's Mac.
     for name in ['protocol/unicode15-data.json', 'services/evaluator/app.py', 'eval/vectors/unicode/LICENSE.txt', 'site/public/device-licenses/unicode-license.txt', 'site/public/device-licenses/pyodide-MPL-2.0.txt', 'site/public/device-licenses/python-license.txt', 'site/public/device-licenses/source.txt']:
         target = root / name; target.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(ROOT / name, target)
+    inventory = json.loads((ROOT / 'sbom/assets/notices.json').read_text())
+    bound = {'sbom/assets/notices.json', *inventory['sources']}
+    for row in inventory['assets']:
+        bound.add(row['path']); bound.update(notice['path'] for notice in row['notices'])
+    for name in bound:
+        target = root / name; target.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(ROOT / name, target)
     method, source_hash = runpy.run_path(str(ROOT / 'scripts/build-device-detector.py'))['project']((ROOT / 'services/evaluator/app.py').read_bytes())
     bundle_hash = hashlib.sha256(method).hexdigest()
     manifest = {'method_sha256': source_hash, 'bundle_sha256': bundle_hash,
@@ -97,4 +103,11 @@ def test_unreviewed_notice_is_never_packaged(source_copy, change):
     elif change == 'extra': (notice.parent / 'unreviewed.txt').write_text('extra')
     else:
         notice.unlink(); notice.symlink_to(source_copy / 'eval/vectors/unicode/LICENSE.txt')
+    with pytest.raises(ValueError): builder.assets()
+
+
+@pytest.mark.parametrize('name', ['pyodide-MPL-2.0.txt', 'python-license.txt', 'source.txt'])
+def test_direct_packager_refuses_altered_runtime_notice_bytes(source_copy, name):
+    notice = source_copy / 'site/public/device-licenses' / name
+    notice.write_bytes(notice.read_bytes() + b'changed runtime notice')
     with pytest.raises(ValueError): builder.assets()

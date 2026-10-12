@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-004640-native-notice-repaired-combined-suite-66a51fbf",
+  "recorded_at": "2026-10-12T00:46:40.594303+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6a92f9aa67162e9db2622c4ad6a4647096f7d5ef",
+  "changed": "Recorded repaired combined test coverage and final exact source review before new-head protected CI.",
+  "proves": "2346 tests pass with one existing Linux-only Mac skip and upstream warning. All four native notice identities are checked before producing an archive; current website and final source/access boundaries pass.",
+  "limits": "Full license obligations, physical Share and independent tag accuracy remain separate and open. The original unresolved-review head was not merged.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    "docs/asset-notices-result.md": "3546fe6fda381af88f711caf3f3bb9cc6d99ac64ec360400ea4c36008f5d77b5",
+    "eval/route-boundaries.json": "526e0769263d3b103d893c07f60be3e77d55521b8d7fea776f61248e5682a229",
+    "runs/2026-10-12-native-all-notice-final-boundaries.json": "0dff581cb78642aa467f1541992e0919086901f7a19d5bd100fe78bdf69d1f0a",
+    "runs/2026-10-12-native-all-notice-website.json": "4ffd396846d78db1141daddd6c3bbf3426176b570ab231d1411b1ed6dad7e29d",
+    "runs/2026-10-12-native-notice-direct-repair.json": "b51ca564e8c668dcbf0ba3cb16a39d9ff9cfd02cde3a4605ff20991163acb8d3",
+    "runs/2026-10-12-native-notice-linux-repair.json": "ad7830c510532703cc02a0a58392f201d127e229b70ed65c4a0383d767667863",
+    "runs/2026-10-12-native-notice-repair-boundaries.json": "a37ba0004778e336b3f719d7d8ae89dbce57337dbc6865114a0714bfa1b6f326",
+    "runs/2026-10-12-native-notice-repair-cleanup.json": "6d14e237c6d96ca4735be155fbd8c6820a54680919e478b317d271de361139d6",
+    "runs/2026-10-12-native-notice-repaired-full-suite.json": "9f2b45ee357104a1302c5fcdb2f23ceb26028de0fdb79ed006ccf5e5a501366f",
+    "runs/2026-10-12-native-notice-review-refusal.json": "7e756f7a840e91f19695724085fe6f5bd6ee389011463d6914a7cc103084af11",
+    "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+    "state.json": "21c9c3a02c46c21489e3a640f972518663018c9620b97253bef400b2486e3e94",
+    "tests/test_native_bundle.py": "bdcee6fec732c8d9c482e6cdea2293de9a36fc7ca190223eea1ab23f42d98a12"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-native-notice-repaired-full-suite.json",
+      "sha256": "9f2b45ee357104a1302c5fcdb2f23ceb26028de0fdb79ed006ccf5e5a501366f"
+    },
+    {
+      "path": "runs/2026-10-12-native-all-notice-final-boundaries.json",
+      "sha256": "0dff581cb78642aa467f1541992e0919086901f7a19d5bd100fe78bdf69d1f0a"
+    }
+  ],
+  "checks": []
+}
