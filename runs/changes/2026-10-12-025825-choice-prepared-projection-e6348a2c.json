@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-025825-choice-prepared-projection-e6348a2c",
+  "recorded_at": "2026-10-12T02:58:25.252572+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "42f3f20453f4d6e8638c20798d38fe2ac8acf3bb",
+  "changed": "Recorded prepared scope projections and retained the website build refusal before rerunning current-source verification.",
+  "proves": "The changelog guard refused generated files absent from the pre-preparation event; preparing first and recording their final digests preserves the guard.",
+  "limits": "The earlier website receipt failed; no acceptance inferred from it. No tag accuracy or collection claim.",
+  "scope_ids": [
+    "F-019b"
+  ],
+  "files": {
+    "docs/choice-framing-plan.md": "3eba3eb016c66836544fe782ff81c451f8ebe793e38fe1b1adc415e92a4d79ea",
+    "docs/choice-framing.md": "f80be1a744607482394905bf827f8c018efaa892e643f94408a95774ccefec18",
+    "docs/choice-grammar-result.md": "8c5a11d1ddebc530f05b5383ee76d474ad5575af6ac57380cbd7a29fd166e43a",
+    "docs/scope-progress.json": "b1a4db5f02cef6ab955593683e75445e516ad2e716ab77730d3184742263e94a",
+    "docs/scope-progress.md": "842d6bc1f248c56acd81e3508bf3d76f613e245cf4780df373fe6f10f513710f",
+    "runs/2026-10-12-choice-grammar-canonical-cleanup.json": "4e3feaed87294b93868ce30215711fffbc5a0eb95c313a33ea3eb8ef169d5350",
+    "runs/2026-10-12-choice-grammar-canonical-linux.json": "5d238ba39ad30ea1f737375556f71be5c530040b93f8dc9f14efb1c69c4db2fa",
+    "runs/2026-10-12-choice-grammar-canonical-mac-controls.json": "7625644922e1aa062bc9f350492346143dd7469e377c6b2116fd5c944195309e",
+    "runs/2026-10-12-choice-grammar-engineering.json": "ed09f4e45fb74500cf5b388ce4a530e341dc558b117e23abf493d628b3fc5316",
+    "runs/2026-10-12-choice-grammar-fixture-refusal.json": "d6d35a207fd114a480731212cb8d4a3ac2b20fceba45f8b0f9d84edd387b8bb6",
+    "runs/2026-10-12-choice-grammar-initial-cleanup.json": "ce71c0f16db05da804b6f23e17e48717ec518aab59e48a33277551674710813c",
+    "runs/2026-10-12-choice-grammar-initial-linux.json": "d34488afc2de777e51c9039f4402b05fdeb2c81918a7fd0aff9ab17404010c68",
+    "runs/2026-10-12-choice-grammar-mac-controls.json": "0458bcc39c8e83ecca97a0885f9f9e5720c074af06a129c3726add2046347a33",
+    "runs/2026-10-12-choice-grammar-marker-refusal.json": "0054fa4a0aa8fffdca737f12768b11549dc45bfd0f0a501a7072bcbe0dfd62ae",
+    "runs/2026-10-12-choice-grammar-prepared-website.json": "79458822b931022e41a994e3e24b0912e02bac74105f69d3b106e9f5db3c22c6",
+    "runs/2026-10-12-choice-grammar-selection-refusal.json": "fab7a6f0592945516614f40bc587b6059cecccf0cfbb133cfa87554f171d0a54",
+    "runs/2026-10-12-invitation-primary-preservation.json": "adb1a63f86044c30fe9ccdeea1eabbbccb01b3dff35d9455e757716a891eab98",
+    "runs/2026-10-12-invitation-protected-merge.json": "208852e64417570f3d9b59aef26bb0129dec65b5ca58255ad85f83ed7b744e7d",
+    "scripts/check-choice-framing.py": "58b19b3dbf42591ac07ddc065f966911040ff1a5e1ba33f74bcc2e14d139c39a",
+    "scripts/verify-choice-framing.py": "f3d17d064e4559579dd67982ab0f4d5516551782a12355478059d31d78c9b883",
+    "scripts/verify-route-boundaries.py": "dcf2629f39bbce92fcd353e6ad80fb32c45bb808b95208b61c207cb224173473",
+    "site/public/reference/public-scope.json": "84f09d25f39bff4612073cd20dfab3f04f1608c084b2088d18798729099e9256",
+    "site/src/public-scope.json": "84f09d25f39bff4612073cd20dfab3f04f1608c084b2088d18798729099e9256",
+    "site/src/scope-manifest.json": "0cb0574f247739bca042c41c744fa15c7d42ec7a991ddfadb32efc15caaa29cc",
+    "tests/test_choice_framing.py": "3ec7608ec988da295ee0732fa89e7e44d8f0c3a69fb61ed28b071d0f7a5e88a3",
+    "tools/choice_framing.py": "323cdaec96f9e63068c6e4b7f21232dcb5df000b84ba2b66f691d1329d96af5e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-choice-grammar-prepared-website.json",
+      "sha256": "79458822b931022e41a994e3e24b0912e02bac74105f69d3b106e9f5db3c22c6"
+    }
+  ],
+  "checks": []
+}
