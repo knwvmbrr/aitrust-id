@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-000037-native-repair-current-browser-review-1c2d789c",
+  "recorded_at": "2026-10-12T00:00:37.491731+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7c103f5e737c6684d6a4057c70cc5e9bbeb14b74",
+  "changed": "Bound the successful website rerun and reviewed native fixture repair to current state and the unchanged 612-file access review.",
+  "proves": "All five current capability receipts pass and route review succeeds with repaired source-only native refusal tests; native packaging remains a separately executed post-build check.",
+  "limits": "Protected CI must pass on the repaired head; no independent tag validation, Share acceptance, physical phone, legal clearance or requirement closure is implied.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "0598e4f9128afad9ca78ba6292199df5dacd49252f19bb0b12398d7c4dc32ff5",
+    "eval/route-boundaries.json": "a136696575d16a69827a4ab5954ecb20db773e11b5b99ed962bfcad0e95a5f9e",
+    "runs/2026-10-12-native-ci-repaired-website-accepted.json": "76052c682b26d4b4879b3448ded0003d382aba150078fd01aa618605710bc143",
+    "runs/2026-10-12-native-ci-repaired-route-review.json": "047a55bd8292ce7c9cc65d5565892ac01b962cc7ee5aef52eaa4f021fb04e5e2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-native-ci-repaired-website-accepted.json",
+      "sha256": "76052c682b26d4b4879b3448ded0003d382aba150078fd01aa618605710bc143"
+    },
+    {
+      "path": "runs/2026-10-12-native-ci-repaired-route-review.json",
+      "sha256": "047a55bd8292ce7c9cc65d5565892ac01b962cc7ee5aef52eaa4f021fb04e5e2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T00:00:37.736907+00:00"
+    }
+  ]
+}

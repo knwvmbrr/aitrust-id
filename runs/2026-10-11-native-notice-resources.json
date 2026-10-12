@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-10-11T23:07:53.348189+00:00",
+  "pass": true,
+  "kind": "resource_and_notice_identity_not_new_simulator_execution",
+  "resource_fingerprints_match_observed_engine": true,
+  "current_native_resources": {
+    "/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+    "/device-manifest.json": "37a6b5f6e3c8601a41d15a4d2ae20e09d4c1f700d904d83ef24e1c2f6e378cac",
+    "/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "/method.py": "59d43c94897957ef3284c4dddafefe8499611886978014491ff21528db70e86f",
+    "/runtime/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+    "/runtime/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+    "/runtime/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+    "/runtime/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+    "/runtime/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+  },
+  "preserved_notices": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "Notices/pyodide-MPL-2.0.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "Notices/python-license.txt": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+    "Notices/source.txt": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+  },
+  "sources": {
+    "scripts/native_bundle.py": "2c259c69ac79d2e699fb745f4024a8b2854526e1c594c0c7e229946db37c27db",
+    "scripts/prepare-native-bundle.py": "a86227e42ac02e803ba65491fbf3e3846667c6a3c62b5a5cc834b820b59609b1",
+    "tests/test_native_bundle.py": "99ac2fa7f34dc40e230a46f0b82b94b4c411cb8653f1b47a2fba5b89465384ff"
+  },
+  "observed_engine": "runs/2026-10-11-native-engine-observed.json",
+  "current_simulator_boot_passed": false,
+  "physical_device": false,
+  "independent_accuracy": false
+}

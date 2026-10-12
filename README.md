@@ -478,3 +478,7 @@ The [staging pipeline timing tool](docs/pipeline-performance.md) measures the co
 The [reviewer-agreement tool](docs/reviewer-agreement.md) compares supplied MT
 labels locally and exports aggregate counts only. Run `python3 scripts/reviewer-agreement.py /path/to/private/ratings.json`.
 It checks consistency, not correctness or reviewer independence; MT remains planned.
+
+The optional [organization term-check component](docs/private-policy.md) applies a reviewed, file-bound literal policy locally. Its qualified private observations cannot rewrite public assertions. Run `python3 scripts/prepare-private-policy-demo.py --output /path/to/new/private/practice`, inspect the invented policy, then use `python3 scripts/check-private-policy.py --packet /path/to/new/private/practice --reviewed-policy`. Organization rollout and ownership remain open.
+
+The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The Share prototype failed and is retained as an explicitly unreleased source archive; no native phone app is offered.

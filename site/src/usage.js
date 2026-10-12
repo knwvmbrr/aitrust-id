@@ -16,7 +16,7 @@ export function usage(tag) {
     audit:'Try PS on this device and download its result summary. A detailed record is a separate, optional export. “Download details” in this panel saves the offering description, not a checked answer.',
     sso:'Compare the proposed configure, view, review and export permissions with your team’s groups. Tell us what needs to change.',
     support:'Use Report an issue for a defect. For a vulnerability, choose the private security channel; do not post sensitive details publicly.',
-    proprietary:'Review the proposed private-policy boundaries. Share your requirements without including confidential documents.'};
+    proprietary:'Open the local practice guide in How it works. Read its invented policy before checking the example; share requirements without confidential documents.'};
   const tagNext={
     NF:'Suggest a claim and the reference passage that supports it.',
     FI:'Share a claim and a reference passage that disagree.',

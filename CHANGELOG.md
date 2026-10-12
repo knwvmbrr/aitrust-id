@@ -1,6 +1,89 @@
 # Changelog
 
+## Unreleased — 2026-10-12
+
+### 2026-10-12-000517-repaired-private-policy-full-suite-ab8b6ab1
+
+Recorded 2026-10-12T00:05:17.648688+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the complete Mac regression rerun after both CI test repairs and updated the current test count.
+- **Evidence.** 2301 Python tests pass, one platform skip and one upstream warning; the source-only native fixture and process-race refusals remain separately reproducible. [Change record](./runs/changes/2026-10-12-000517-repaired-private-policy-full-suite-ab8b6ab1.json).
+- **Not claimed.** The repaired exact head must pass protected Linux CI before publication. 88 full requirements remain open; no accuracy, native Share or physical-device acceptance is granted.
+
+
+### 2026-10-12-000416-nli-owned-child-reaping-race-3dd28a26
+
+Recorded 2026-10-12T00:04:16.695344+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed the process-cleanup test race between /proc existence and read while retaining rejection of running children and unknown read failures.
+- **Evidence.** 41 focused reference-CLI tests pass, including actual owned nested-worker timeout and three regression controls; current protocol and 612-file route review pass. [Change record](./runs/changes/2026-10-12-000416-nli-owned-child-reaping-race-3dd28a26.json).
+- **Not claimed.** Linux isolation CI must rerun on the repaired head. Native Share, independent semantic accuracy, physical devices and full requirement acceptance remain open.
+
+
+### 2026-10-12-000037-native-repair-current-browser-review-1c2d789c
+
+Recorded 2026-10-12T00:00:37.491731+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the successful website rerun and reviewed native fixture repair to current state and the unchanged 612-file access review.
+- **Evidence.** All five current capability receipts pass and route review succeeds with repaired source-only native refusal tests; native packaging remains a separately executed post-build check. [Change record](./runs/changes/2026-10-12-000037-native-repair-current-browser-review-1c2d789c.json).
+- **Not claimed.** Protected CI must pass on the repaired head; no independent tag validation, Share acceptance, physical phone, legal clearance or requirement closure is implied.
+
+
 ## Unreleased — 2026-10-11
+
+### 2026-10-11-235804-native-repair-browser-environment-refusal-425947b5
+
+Recorded 2026-10-11T23:58:04.891063+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained the website revalidation refusal caused by invoking its npm build without the existing npm directory in the verification PATH.
+- **Evidence.** The receipt records one passing test command and the refused website build with unchanged source. The native clean-checkout controls separately pass. [Change record](./runs/changes/2026-10-11-235804-native-repair-browser-environment-refusal-425947b5.json).
+- **Not claimed.** No website pass is inferred from this failed attempt; the complete verification must run in the existing selected toolchain before publication.
+
+
+### 2026-10-11-235713-native-clean-clone-fixture-repair-c96fdbed
+
+Recorded 2026-10-11T23:57:13.136515+00:00 · Contributor: Codex · change
+
+- **Changed.** Removed the native refusal test dependency on an ignored generated website manifest; retained the actual clean-clone CI failure.
+- **Evidence.** Seven refusal controls pass in an actual source-only temporary checkout without npm or generated device assets; all ten packaging/refusal tests pass after the real prepared build. [Change record](./runs/changes/2026-10-11-235713-native-clean-clone-fixture-repair-c96fdbed.json).
+- **Not claimed.** Native Share remains unavailable and full precommit CI must rerun on the repaired head; no gate, network boundary, permission or production route is relaxed.
+
+
+### 2026-10-11-235242-private-policy-final-document-review-bc12a2f5
+
+Recorded 2026-10-11T23:52:42.834247+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed the unchanged 612-file review set for the final private-policy result documentation and retained the precommit refusal.
+- **Evidence.** The current route/access verifier executes successfully after reviewing the final result document; no route, permission or guard is relaxed. [Change record](./runs/changes/2026-10-11-235242-private-policy-final-document-review-bc12a2f5.json).
+- **Not claimed.** Full organization, native Share, independent accuracy and physical-device acceptance remain open; requirement count is unchanged.
+
+
+### 2026-10-11-235142-private-policy-current-verification-19058556
+
+Recorded 2026-10-11T23:51:42.695412+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed current private-policy website, route and combined-suite checks; repaired state chronology and retained failed attempts.
+- **Evidence.** 2298 current Python tests pass with one platform skip; five capability receipts and the 612-file route/access review pass. Website narrow light/dark automated accessibility checks pass. [Change record](./runs/changes/2026-10-11-235142-private-policy-current-verification-19058556.json).
+- **Not claimed.** 88 full requirements remain open; no independent accuracy, physical phone, Share workflow, namespace ownership, commercial service or legal clearance is claimed.
+
+
+### 2026-10-11-234507-private-policy-and-native-refusal-tools-9de45252
+
+Recorded 2026-10-11T23:45:07.581380+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement a separate caller-bound offline organization literal-policy component, private practice/details workflow and exact native-engine/resource refusal tooling. Retain the unavailable native Share experiment without offering an app. Update the scope, independent PRIVATE description, guides and guarded source inventory.
+- **Evidence.** 96 focused policy tests and 24 actual CLI controls on both Mac and network-denied Linux; exact PS output unchanged; ten native resource packaging controls and ten temporary-copy refusals passed. Historical native engine execution passed 137 cases with unchanged current engine/resource bytes. [Change record](./runs/changes/2026-10-11-234507-private-policy-and-native-refusal-tools-9de45252.json).
+- **Not claimed.** No organization service, namespace ownership/adoption, employee consent, independent accuracy or physical phone acceptance. Share failed; later fresh-simulator startup was unavailable. N-010 advances to 60 percent; N-013 stays open at 20 percent. 114 complete and 88 open; no final requirement closure in this increment.
+
+
+### 2026-10-11-220332-choice-publication-and-native-architecture-a55b9bad
+
+Recorded 2026-10-11T22:03:32.519412+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded protected choice-framing publication and native Share architecture before implementation.
+- **Evidence.** 22 required exact-head CI executions, 741 exact hosted artifact comparisons and 12 preserved unrelated files; two invented native simulator examples exercise the same bundled PS method. [Change record](./runs/changes/2026-10-11-220332-choice-publication-and-native-architecture-a55b9bad.json).
+- **Not claimed.** Two native compatibility examples are not a Share extension, physical phone, human accessibility or independent tag accuracy. File-origin CORS and harness extraction failures remain documented. No full requirement closes.
+
 
 ### 2026-10-11-215046-choice-current-accepted-engineering-2e006e2d
 

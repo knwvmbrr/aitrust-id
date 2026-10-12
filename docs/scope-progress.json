@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-11T21:44:33.615410+00:00",
+  "audited_at": "2026-10-11T23:05:16.789989+00:00",
   "client_date": "2026-10-11",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -7660,16 +7660,18 @@
       "id": "N-010",
       "kind": "requirement",
       "title": "Personal/team/enterprise/proprietary tag offering boundaries",
-      "percent_complete": 40,
+      "percent_complete": 60,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-10-11T23:05:16.789989+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -7677,15 +7679,24 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold.",
+      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
       "next_owner": "Codex",
       "evidence": [
         "site/src/policies.js",
         "docs/scope-delivery.md",
         "docs/approachable-tag-modals.md",
-        "runs/2026-10-09-approachable-public.json"
+        "runs/2026-10-09-approachable-public.json",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+      "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
       "required_acceptance": [
         "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
       ],
@@ -7867,19 +7878,30 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T23:05:16.789989+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "next_fix": "Repair selected-text Share transport and clear/lifecycle failures, pass the actual native workflow, then perform physical iPhone install/memory/VoiceOver and removal acceptance. Exact engine parity was observed; later fresh-simulator boot attempts were unavailable. Do not infer working Share from engine or packaging tests.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/native-share-plan.md",
+        "docs/native-engine-checks.md",
+        "docs/experiments/native-share-unreleased.json",
+        "runs/2026-10-11-native-engine-observed.json",
+        "runs/2026-10-11-native-engine-resource-identity.json",
+        "runs/2026-10-11-native-copy-controls.json",
+        "runs/2026-10-11-native-share-unavailable.json",
+        "runs/2026-10-11-native-runtime-attempt-4.json",
+        "runs/2026-10-11-native-runtime-attempt-5.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
@@ -9003,15 +9025,17 @@
       "id": "ORG-PRIVATE",
       "kind": "package",
       "title": "Proprietary organization tag policies",
-      "percent_complete": 40,
+      "percent_complete": 60,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T23:05:16.789989+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 prior session/run attribution"
+        "Codex \u2014 prior session/run attribution",
+        "Codex \u2014 caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -9019,12 +9043,21 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Specify personal/team/enterprise/proprietary access boundaries.; Namespace custom tags, bind policy versions and define customer-owned inputs.; Validate each custom job, permission and export boundary independently. Final acceptance: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale.",
+      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md#org-private"
+        "docs/scope-delivery.md#org-private",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
       "required_acceptance": [
         "Specify personal/team/enterprise/proprietary access boundaries.; Namespace custom tags, bind policy versions and define customer-owned inputs.; Validate each custom job, permission and export boundary independently. Final acceptance: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale."
       ],
@@ -12094,25 +12127,38 @@
       "id": "ORG-PRIVATE-A01",
       "kind": "subtask",
       "title": "Specify personal/team/enterprise/proprietary access boundaries.",
-      "percent_complete": 20,
+      "percent_complete": 60,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T23:05:16.789989+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Specify personal/team/enterprise/proprietary access boundaries. Demonstrate: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale.",
+      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md#org-private"
+        "docs/scope-delivery.md#org-private",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
       "required_acceptance": [
         "Specify personal/team/enterprise/proprietary access boundaries. Demonstrate: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale."
       ],
@@ -12122,25 +12168,38 @@
       "id": "ORG-PRIVATE-A02",
       "kind": "subtask",
       "title": "Namespace custom tags, bind policy versions and define customer-owned inputs.",
-      "percent_complete": 20,
+      "percent_complete": 60,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T23:05:16.789989+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Namespace custom tags, bind policy versions and define customer-owned inputs. Demonstrate: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale.",
+      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md#org-private"
+        "docs/scope-delivery.md#org-private",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
       "required_acceptance": [
         "Namespace custom tags, bind policy versions and define customer-owned inputs. Demonstrate: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale."
       ],
@@ -12150,25 +12209,38 @@
       "id": "ORG-PRIVATE-A03",
       "kind": "subtask",
       "title": "Validate each custom job, permission and export boundary independently.",
-      "percent_complete": 20,
+      "percent_complete": 60,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-11T23:05:16.789989+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Validate each custom job, permission and export boundary independently. Demonstrate: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale.",
+      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
       "next_owner": "Codex prepares; independent reviewers execute required human judgment",
       "evidence": [
-        "docs/scope-delivery.md#org-private"
+        "docs/scope-delivery.md#org-private",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
       "required_acceptance": [
         "Validate each custom job, permission and export boundary independently. Demonstrate: Private policy changes cannot redefine NF/PS/other public codes.; No closed or paid mandatory dependency in the public personal pipeline.; Actual custom scope, ownership and licensing must be agreed before sale."
       ],

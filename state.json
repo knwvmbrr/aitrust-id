@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-11T21:50:46.290947+00:00",
+  "updated": "2026-10-12T00:05:17.614606+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2192,
+  "python_tests_passed": 2301,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://ec373651.aitrust-id.pages.dev",
+    "deployment_url": "https://36a93a24.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-nli-reference-publication.json",
+    "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -296,7 +296,7 @@
     "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
     "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "59235baf65f55c64ff2e47ec93b2d6bea1158466",
+    "source_commit": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "Current managed-source full Python suite: 2192 passed, one Linux-only Mac skip and one upstream TestClient warning; no independent accuracy implied.",
+  "python_tests_scope": "Current Mac Python 3.12.14 source after CI fixture and process-observation repairs: 2301 passed, one Linux-only skip, one upstream TestClient deprecation warning. Separate actual isolated Linux policy controls pass; no independent tag accuracy or physical device claim.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T21:44:33.615410+00:00",
+    "audited_at": "2026-10-11T23:05:16.789989+00:00",
     "completed_records": 114,
     "open_records": 88,
     "records_preserved": 202,
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-choice-framing-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-11-choice-framing-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-11-choice-framing-current-protocol.json",
-    "extension": "runs/2026-10-11-choice-framing-current-extension.json",
-    "website": "runs/2026-10-11-choice-framing-accepted-website.json",
+    "PS": "runs/2026-10-11-private-policy-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-11-private-policy-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-nli-child-repaired-protocol.json",
+    "extension": "runs/2026-10-11-private-policy-current-extension.json",
+    "website": "runs/2026-10-12-native-ci-repaired-website-accepted.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-11T21:50:46.290947+00:00",
+  "updated_at": "2026-10-12T00:05:17.614606+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1750,7 +1750,7 @@
     "protected_merge": "runs/2026-10-11-nli-reference-protected-merge.json"
   },
   "choice_framing": {
-    "status": "optional_research_command_mac_linux_checked_publication_pending",
+    "status": "optional_research_protected_merge_and_publication_verified",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-019b"
@@ -1775,6 +1775,36 @@
     },
     "full_python_tests_passed": 2192,
     "full_python_execution": "runs/2026-10-11-choice-framing-accepted-full-python.json",
-    "current_boundaries": "runs/2026-10-11-choice-framing-current-boundaries.json"
+    "current_boundaries": "runs/2026-10-11-choice-framing-current-boundaries.json",
+    "publication": "runs/2026-10-11-choice-framing-publication.json",
+    "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
+  },
+  "native_sharing": {
+    "status": "share_unavailable_engine_observation_and_refusal_tools_only",
+    "architecture": "docs/native-share-plan.md",
+    "compatibility": "runs/2026-10-11-native-bundle-compatibility.json",
+    "physical_device": false,
+    "share_extension_implemented": false,
+    "requirements_closed": 0,
+    "installable_app_offered": false,
+    "current_simulator_boot_passed": false,
+    "engine_observed": "runs/2026-10-11-native-engine-observed.json",
+    "resource_identity": "runs/2026-10-11-native-engine-resource-identity.json",
+    "share_failure": "runs/2026-10-11-native-share-unavailable.json",
+    "source_archive": "docs/experiments/native-share-unreleased.json",
+    "guide": "docs/native-engine-checks.md"
+  },
+  "organization_policy": {
+    "status": "offline_literal_component_development_only",
+    "record": "N-010",
+    "milestone_percent": 60,
+    "architecture": "docs/private-policy-plan.md",
+    "result": "docs/private-policy-result.md",
+    "guide": "docs/private-policy.md",
+    "mac_controls": "runs/2026-10-11-private-policy-mac-controls.json",
+    "linux_controls": "runs/2026-10-11-private-policy-linux-controls.json",
+    "organization_service_running": false,
+    "standard_namespace_adopted": false,
+    "requirements_closed": 0
   }
 }

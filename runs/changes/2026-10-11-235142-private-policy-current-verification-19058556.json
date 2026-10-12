@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-235142-private-policy-current-verification-19058556",
+  "recorded_at": "2026-10-11T23:51:42.695412+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+  "changed": "Completed current private-policy website, route and combined-suite checks; repaired state chronology and retained failed attempts.",
+  "proves": "2298 current Python tests pass with one platform skip; five capability receipts and the 612-file route/access review pass. Website narrow light/dark automated accessibility checks pass.",
+  "limits": "88 full requirements remain open; no independent accuracy, physical phone, Share workflow, namespace ownership, commercial service or legal clearance is claimed.",
+  "scope_ids": [
+    "N-010",
+    "N-013"
+  ],
+  "files": {
+    "state.json": "1fad59401e7785e229d52dd0730fb780ad8df2ccc99439b09af7c23103175421",
+    "eval/route-boundaries.json": "28c619188b5789dac489a0977d2ab6dab881bb520d1c39ef605d1838cfaf16a2",
+    "docs/private-policy-result.md": "a6a23141cc4727950057c8082ed45e329a84ea1e7971a9bd06e53d2adf0e30c4",
+    "runs/2026-10-11-private-policy-accepted-website.json": "5f4ec8a0d8286622ca4f12d8b7dea4585dd8ffeca41f260494e100547325c46b",
+    "runs/2026-10-11-private-policy-route-current.json": "d7f82c2b92ebdb24fe170b3cd290906ce6409c9db06f826be7e3517bc1a487b1",
+    "runs/2026-10-11-private-policy-full-suite-state-refusal.json": "cf7669a14b9a8fb3e85b4c3d679063e33b554b261032f26849e7211235d94bd2",
+    "runs/2026-10-11-private-policy-date-only-state-refusal.json": "0f70f4ce562580eff22c4ec0d25f4f43f6ef92424fb4e3267fea4c483adf7922",
+    "runs/2026-10-11-private-policy-full-suite-accepted.json": "3927d6823e17ffbd48e4fc54ca4671c362cbbafa21b495504801287735a5540a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-private-policy-full-suite-accepted.json",
+      "sha256": "3927d6823e17ffbd48e4fc54ca4671c362cbbafa21b495504801287735a5540a"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-accepted-website.json",
+      "sha256": "5f4ec8a0d8286622ca4f12d8b7dea4585dd8ffeca41f260494e100547325c46b"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-route-current.json",
+      "sha256": "d7f82c2b92ebdb24fe170b3cd290906ce6409c9db06f826be7e3517bc1a487b1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-11T23:51:43.008162+00:00"
+    }
+  ]
+}

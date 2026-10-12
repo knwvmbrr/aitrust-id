@@ -145,6 +145,38 @@ def test_prepared_request_bound_is_not_silently_truncated(packet):
     record['manifest_sha256']=corpus.sha(corpus.encoded({'format':record['format'],'documents':record['documents']}))
     with pytest.raises(PairError):references.prepare(record,value)
 
+def assert_owned_descendant_stopped(child):
+    # Read directly: init can reap a killed child between exists() and read().
+    # Only a disappeared process or a zombie is accepted, never an unknown or
+    # running state. Permission/read failures still fail the check.
+    try:
+        stat = Path(f'/proc/{child}/stat').read_text()
+    except FileNotFoundError:
+        with pytest.raises(ProcessLookupError):
+            os.kill(child, 0)
+    else:
+        assert stat.rsplit(')', 1)[1].split()[0] == 'Z'
+
+
+def test_reaped_descendant_between_observation_and_read_is_accepted(monkeypatch):
+    def gone(*args, **kwargs): raise FileNotFoundError()
+    def absent(*args, **kwargs): raise ProcessLookupError()
+    monkeypatch.setattr(Path, 'read_text', gone)
+    monkeypatch.setattr(os, 'kill', absent)
+    assert_owned_descendant_stopped(123)
+
+
+def test_running_descendant_is_still_rejected(monkeypatch):
+    monkeypatch.setattr(Path, 'read_text', lambda *a, **k: '123 (synthetic python) S 1')
+    with pytest.raises(AssertionError): assert_owned_descendant_stopped(123)
+
+
+def test_unknown_descendant_read_failure_is_not_a_pass(monkeypatch):
+    def refused(*args, **kwargs): raise PermissionError()
+    monkeypatch.setattr(Path, 'read_text', refused)
+    with pytest.raises(PermissionError): assert_owned_descendant_stopped(123)
+
+
 def test_outer_deadline_ends_nested_worker_session(tmp_path):
     pid_file=tmp_path/'pid'
     child_code='import time; time.sleep(60)'
@@ -157,7 +189,4 @@ def test_outer_deadline_ends_nested_worker_session(tmp_path):
     child=int(pid_file.read_text())
     # A killed descendant may briefly be a zombie awaiting init reaping. It must
     # never remain a running process. This is a synthetic process, not a model.
-    if Path(f'/proc/{child}/stat').exists():
-        assert Path(f'/proc/{child}/stat').read_text().split()[2]=='Z'
-    else:
-        with pytest.raises(ProcessLookupError):os.kill(child,0)
+    assert_owned_descendant_stopped(child)

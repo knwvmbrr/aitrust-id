@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-000517-repaired-private-policy-full-suite-ab8b6ab1",
+  "recorded_at": "2026-10-12T00:05:17.648688+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "60c77c4650b475bf4fc797ba663531027f8b5a5b",
+  "changed": "Recorded the complete Mac regression rerun after both CI test repairs and updated the current test count.",
+  "proves": "2301 Python tests pass, one platform skip and one upstream warning; the source-only native fixture and process-race refusals remain separately reproducible.",
+  "limits": "The repaired exact head must pass protected Linux CI before publication. 88 full requirements remain open; no accuracy, native Share or physical-device acceptance is granted.",
+  "scope_ids": [
+    "N-010",
+    "N-013",
+    "F-020b"
+  ],
+  "files": {
+    "state.json": "7632d1aa14581268f99970d69538e0a3b3724d1e8d1bb3268fa59660919df36b",
+    "runs/2026-10-12-private-policy-repaired-full-suite.json": "1c4621e4b051d1865b688af369ceaa94e61e7ecf84453a53c69b160407a84603"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-private-policy-repaired-full-suite.json",
+      "sha256": "1c4621e4b051d1865b688af369ceaa94e61e7ecf84453a53c69b160407a84603"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T00:05:18.014097+00:00"
+    }
+  ]
+}

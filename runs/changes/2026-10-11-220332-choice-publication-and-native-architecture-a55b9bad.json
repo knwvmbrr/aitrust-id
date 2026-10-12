@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-220332-choice-publication-and-native-architecture-a55b9bad",
+  "recorded_at": "2026-10-11T22:03:32.519412+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+  "changed": "Recorded protected choice-framing publication and native Share architecture before implementation.",
+  "proves": "22 required exact-head CI executions, 741 exact hosted artifact comparisons and 12 preserved unrelated files; two invented native simulator examples exercise the same bundled PS method.",
+  "limits": "Two native compatibility examples are not a Share extension, physical phone, human accessibility or independent tag accuracy. File-origin CORS and harness extraction failures remain documented. No full requirement closes.",
+  "scope_ids": [
+    "F-019b",
+    "N-013"
+  ],
+  "files": {
+    "docs/choice-framing-result.md": "6597200c0a7c330f70e04190566c506778b984e25e6dcb44a8992ee7d75777df",
+    "docs/native-share-plan.md": "0c0556b6171f91054fab760a238869464ed733ffd1253cc60e6d856419884f1b",
+    "runs/2026-10-11-choice-framing-auth-text-refusal.json": "4a156f9428f0ef9210b8c5dd2e80c8cfe2aeaccd9ead0c0bde567805b4e47f5a",
+    "runs/2026-10-11-choice-framing-primary-ff.json": "dc42108d43894e89334fa8ecf178da1329d102a0cb04a1a337811c627a605382",
+    "runs/2026-10-11-choice-framing-protected-merge.json": "94dec10f4dc3f814b6ec50e11c3b2b70ccbb060b70d30402c2ae46a8437fad81",
+    "runs/2026-10-11-choice-framing-publication.json": "e34fcd328c9cb123d9cb72d5f6aea91d1fed9b657d2f7cd40394f5ada3ddeecb",
+    "runs/2026-10-11-native-bundle-compatibility.json": "67c4558446ef5755193597e0eb6be6e9838c2cf6688e3731add8e85a9107742f",
+    "state.json": "d9bd97651c9dedeac74ae8fed496ac60fa605d314d2b1aaa2076ad5c9e1a5f7a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-choice-framing-publication.json",
+      "sha256": "e34fcd328c9cb123d9cb72d5f6aea91d1fed9b657d2f7cd40394f5ada3ddeecb"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-protected-merge.json",
+      "sha256": "94dec10f4dc3f814b6ec50e11c3b2b70ccbb060b70d30402c2ae46a8437fad81"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-primary-ff.json",
+      "sha256": "dc42108d43894e89334fa8ecf178da1329d102a0cb04a1a337811c627a605382"
+    },
+    {
+      "path": "runs/2026-10-11-choice-framing-auth-text-refusal.json",
+      "sha256": "4a156f9428f0ef9210b8c5dd2e80c8cfe2aeaccd9ead0c0bde567805b4e47f5a"
+    },
+    {
+      "path": "runs/2026-10-11-native-bundle-compatibility.json",
+      "sha256": "67c4558446ef5755193597e0eb6be6e9838c2cf6688e3731add8e85a9107742f"
+    }
+  ],
+  "checks": []
+}

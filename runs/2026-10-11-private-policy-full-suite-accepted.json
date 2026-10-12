@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-11T23:51:42.605216+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "python_version": "3.12.14",
+  "passed": 2298,
+  "failed": 0,
+  "skipped": 1,
+  "skipped_scope": "Linux-only network filter test on macOS; separate real Linux private-policy controls recorded",
+  "warning_count": 1,
+  "warning": "upstream_starlette_testclient_deprecation",
+  "elapsed_seconds": 55.66,
+  "private_output_sha256": "a9d11273ef2821f8f9db52c7ba10b9b09009f932b044d51bc3710c01db31eeb1",
+  "independent_accuracy_evidence": false,
+  "full_requirement_closures": 0
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-235713-native-clean-clone-fixture-repair-c96fdbed",
+  "recorded_at": "2026-10-11T23:57:13.136515+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7c103f5e737c6684d6a4057c70cc5e9bbeb14b74",
+  "changed": "Removed the native refusal test dependency on an ignored generated website manifest; retained the actual clean-clone CI failure.",
+  "proves": "Seven refusal controls pass in an actual source-only temporary checkout without npm or generated device assets; all ten packaging/refusal tests pass after the real prepared build.",
+  "limits": "Native Share remains unavailable and full precommit CI must rerun on the repaired head; no gate, network boundary, permission or production route is relaxed.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "tests/test_native_bundle.py": "e8f9d6e91fbb652d54f08f2f73b3a99107840b8b38de7b4ff38726620bd3dc1d",
+    "runs/2026-10-12-native-clean-clone-ci-refusal.json": "fcdeb5f83630c00c1bb0bb4516938c3b3c8b73b9e5c05237f16db86f522e34d0",
+    "runs/2026-10-12-native-clean-clone-fixture-repair.json": "3f67a4dc515b7e70cb40751d3b2f014964b5c54a941c8402d5b52963300c18db",
+    "runs/2026-10-12-native-prebuild-refusal-controls.json": "fe2ced655daec6908d1e1225c5f670c49a9a7011fc3f8db223d8bb34a84d2f5c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-native-prebuild-refusal-controls.json",
+      "sha256": "fe2ced655daec6908d1e1225c5f670c49a9a7011fc3f8db223d8bb34a84d2f5c"
+    },
+    {
+      "path": "runs/2026-10-12-native-clean-clone-fixture-repair.json",
+      "sha256": "3f67a4dc515b7e70cb40751d3b2f014964b5c54a941c8402d5b52963300c18db"
+    }
+  ],
+  "checks": []
+}

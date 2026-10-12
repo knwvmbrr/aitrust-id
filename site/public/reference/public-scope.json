@@ -12249,7 +12249,7 @@
       "job": "Specify and deliver personal/team/enterprise/proprietary tag offering boundaries.",
       "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
       "owner": "Michael",
-      "status": "normalized_scope; runtime unverified",
+      "status": "selected offline literal component executed; organization service and final acceptance open",
       "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "failure": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
       "dependencies": [
@@ -12269,16 +12269,18 @@
         "id": "N-010",
         "kind": "requirement",
         "title": "Personal/team/enterprise/proprietary tag offering boundaries",
-        "percent_complete": 40,
+        "percent_complete": 60,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T17:06:15.922874+00:00",
+        "audited_at": "2026-10-11T23:05:16.789989+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+          "Codex — caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -12286,15 +12288,24 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold.",
+        "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
         "next_owner": "Codex",
         "evidence": [
           "site/src/policies.js",
           "docs/scope-delivery.md",
           "docs/approachable-tag-modals.md",
-          "runs/2026-10-09-approachable-public.json"
+          "runs/2026-10-09-approachable-public.json",
+          "docs/private-policy-plan.md",
+          "docs/private-policy-result.md",
+          "docs/private-policy.md",
+          "tools/private_policy.py",
+          "tests/test_private_policy.py",
+          "tests/test_private_policy_cli.py",
+          "runs/2026-10-11-private-policy-mac-controls.json",
+          "runs/2026-10-11-private-policy-linux-controls.json",
+          "runs/2026-10-11-private-policy-staging-cleanup.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+        "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
         "required_acceptance": [
           "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
         ],
@@ -12603,7 +12614,7 @@
       "job": "Receive selected text through an iPhone Share extension with explicit user action.",
       "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
       "owner": "Codex",
-      "status": "preserved future delivery route; not implemented",
+      "status": "Share unavailable; exact engine observation and refusal tooling retained; physical acceptance open",
       "acceptance": "Signed containing app and Share extension tested on real iPhones; bounded input, process lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
       "failure": "Expose UNAVAILABLE or unsupported status; do not invent a verdict. Delivery failure cannot disable other tag methods or delivery routes.",
       "dependencies": [
@@ -12628,19 +12639,30 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-11T23:05:16.789989+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+        "next_fix": "Repair selected-text Share transport and clear/lifecycle failures, pass the actual native workflow, then perform physical iPhone install/memory/VoiceOver and removal acceptance. Exact engine parity was observed; later fresh-simulator boot attempts were unavailable. Do not infer working Share from engine or packaging tests.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/native-share-plan.md",
+          "docs/native-engine-checks.md",
+          "docs/experiments/native-share-unreleased.json",
+          "runs/2026-10-11-native-engine-observed.json",
+          "runs/2026-10-11-native-engine-resource-identity.json",
+          "runs/2026-10-11-native-copy-controls.json",
+          "runs/2026-10-11-native-share-unavailable.json",
+          "runs/2026-10-11-native-runtime-attempt-4.json",
+          "runs/2026-10-11-native-runtime-attempt-5.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [

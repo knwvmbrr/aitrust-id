@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-11T23:02:00.456299+00:00",
+  "pass": true,
+  "kind": "current_resource_identity_comparison_not_new_engine_execution",
+  "historical_engine_evidence": "runs/2026-10-11-native-engine-observed.json",
+  "exact_compiled_sources_unchanged": [
+    "mobile/ios/Source/Assets.swift",
+    "mobile/ios/Web/index.html",
+    "mobile/ios/Web/bridge.mjs",
+    "mobile/ios/Tests/BundleProbe.swift",
+    "services/evaluator/app.py",
+    "protocol/normalization.py",
+    "protocol/unicode15-data.json"
+  ],
+  "all_nine_asset_fingerprints_match": true,
+  "sources": {
+    "scripts/native_bundle.py": "eb31c1606c629a1c4d5f691e7e6046672ab1ca2b382bf5f55a41f5cfd4dab40c",
+    "scripts/prepare-native-bundle.py": "a86227e42ac02e803ba65491fbf3e3846667c6a3c62b5a5cc834b820b59609b1",
+    "tests/test_native_bundle.py": "e40e8c2cf1482e622076af4ef78e67ad1809f19c9be0645b2e141f7341fad31f",
+    "mobile/ios/Source/Assets.swift": "624106664544cb5282a8964b3112e6acda5eaff4d6b32cb6e227f23d3c03c6ea",
+    "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "mobile/ios/Web/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+    "mobile/ios/Tests/BundleProbe.swift": "94bb25822b5cafd600808818e26ed8e3e58b823dc147cc43b510ee575ba91682",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "current_simulator_run_passed": false,
+  "physical_device": false,
+  "independent_accuracy": false
+}

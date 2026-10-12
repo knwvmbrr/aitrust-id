@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-11T23:45:07.345108+00:00",
+  "pass": false,
+  "stage": "change_record_input_validation",
+  "reason": "nested_change_event_in_changed_file_list_refused",
+  "event_written": false,
+  "deployment_performed": false,
+  "fix": "Exclude prior runs/changes events; retain their immutable attribution."
+}

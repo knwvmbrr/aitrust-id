@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-11-234507-private-policy-and-native-refusal-tools-9de45252",
+  "recorded_at": "2026-10-11T23:45:07.581380+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+  "changed": "Implement a separate caller-bound offline organization literal-policy component, private practice/details workflow and exact native-engine/resource refusal tooling. Retain the unavailable native Share experiment without offering an app. Update the scope, independent PRIVATE description, guides and guarded source inventory.",
+  "proves": "96 focused policy tests and 24 actual CLI controls on both Mac and network-denied Linux; exact PS output unchanged; ten native resource packaging controls and ten temporary-copy refusals passed. Historical native engine execution passed 137 cases with unchanged current engine/resource bytes.",
+  "limits": "No organization service, namespace ownership/adoption, employee consent, independent accuracy or physical phone acceptance. Share failed; later fresh-simulator startup was unavailable. N-010 advances to 60 percent; N-013 stays open at 20 percent. 114 complete and 88 open; no final requirement closure in this increment.",
+  "scope_ids": [
+    "N-010",
+    "N-013"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "d6e0ebded9eb4dbfb77124fd120cd3368c64ce0ab708b1ea87e543fda46542e2",
+    "README.md": "c79f3f10ca8d0ec5338ae3e77f3f85c334464e52ad0e77d4b81cc47c700280e8",
+    "docs/choice-framing-result.md": "6597200c0a7c330f70e04190566c506778b984e25e6dcb44a8992ee7d75777df",
+    "docs/experiments/native-share-unreleased.json": "31d0ea2dc9b72227f35476d3e00dc8b44ce623b85cdba50fee2394a43d58884c",
+    "docs/master-scope.json": "156d82dc25dbaeb539d3478b84d24ee5ab0dbec4e88e7ba57730bcf9d3a962a2",
+    "docs/master-scope.md": "79020736adcdf6b2bcfa6858d0ff72eee1321d611436bb16c0636829b61e6def",
+    "docs/native-engine-checks.md": "3148f88b2fa95e80e5267ead569a7f07b7b853590dc6314a0a4cf14388609b5f",
+    "docs/native-share-plan.md": "cbb199c196175127217c0835ee089970800e1c62c1b7a08b0763ff63d9136742",
+    "docs/private-policy-plan.md": "2757d71e1ab31d8f243225aa755d7eed443d4b4bbc29d699cbb13f617b84b221",
+    "docs/private-policy-result.md": "79b8c73666e0be2a60f472ef3272402ff02c5201881c9bd66f0402edab427adb",
+    "docs/private-policy.md": "6ca65a93b3a3c908cea337ff7a8e210b1161d202fb2ebdb8d6b15e3e47045ad0",
+    "docs/scope-delivery.md": "9cd5c2141c545b26fe25c07c7c5c3f3d64ddfd6880371379f58ea4ea21384d49",
+    "docs/scope-progress.json": "3c9ccb57e5a3c67a25c7300a5bbc207c11b8264ff16ca6047303e35e7dedf8c7",
+    "docs/scope-progress.md": "551f43a6bf312e202b988bcb688dcf517e0c8d67ac45a9e31f989452cb738af6",
+    "docs/scope-task-index.md": "ff83fcb051f8c9a26d045730e88c3b03eaa0b00892d574e76181644ea7a50099",
+    "eval/revalidation.json": "832279f3d98a6e42e1e665c7276dc586367a114a21b3cfb9201cfb8bc6186b3f",
+    "eval/route-boundaries.json": "8114188594616e1382fa8238fb671bc89e8fd7674d3cffb38fa676cd4a38c09e",
+    "mobile/ios/Source/Assets.swift": "624106664544cb5282a8964b3112e6acda5eaff4d6b32cb6e227f23d3c03c6ea",
+    "mobile/ios/Source/SharedText.swift": "628fc0ab21351dea1bb8a66ed74a480815c1f812f5a6f63cc249b5cded29167a",
+    "mobile/ios/Tests/BundleProbe.swift": "94bb25822b5cafd600808818e26ed8e3e58b823dc147cc43b510ee575ba91682",
+    "mobile/ios/Tests/SharedTextChecks.swift": "750f01303f1a4fff9f2e15d6e847362820b8a5f3773c73c8a79449aaa05805ec",
+    "mobile/ios/Web/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+    "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "runs/2026-10-11-choice-framing-auth-text-refusal.json": "4a156f9428f0ef9210b8c5dd2e80c8cfe2aeaccd9ead0c0bde567805b4e47f5a",
+    "runs/2026-10-11-choice-framing-primary-ff.json": "dc42108d43894e89334fa8ecf178da1329d102a0cb04a1a337811c627a605382",
+    "runs/2026-10-11-choice-framing-protected-merge.json": "94dec10f4dc3f814b6ec50e11c3b2b70ccbb060b70d30402c2ae46a8437fad81",
+    "runs/2026-10-11-choice-framing-publication.json": "e34fcd328c9cb123d9cb72d5f6aea91d1fed9b657d2f7cd40394f5ada3ddeecb",
+    "runs/2026-10-11-native-bundle-compatibility.json": "67c4558446ef5755193597e0eb6be6e9838c2cf6688e3731add8e85a9107742f",
+    "runs/2026-10-11-native-copy-controls.json": "cd4ce9b9b3d13884c4810fc5ae5787116c03981603170eb97447a9f6d0e12db9",
+    "runs/2026-10-11-native-engine-observed.json": "4a8d537b2f2ea802e4f5ab1e0cae38375e0b8c87d59631739833ba859bfb2e76",
+    "runs/2026-10-11-native-engine-resource-identity.json": "feb52bd1f16316c7f75e7b47c4e0bd162c4fce1e2f48d19e9084a74228734e66",
+    "runs/2026-10-11-native-notice-resources.json": "e7aae732130a95fa98b2323cb5e6a281d9f65071aafca9881fe15ece9b849818",
+    "runs/2026-10-11-native-runtime-attempt-4.json": "dcd2bc51ce944fa6cf59e9da64b31dfebddc4ca7ef1839a6d6695fcb6afccfac",
+    "runs/2026-10-11-native-runtime-attempt-5.json": "c986e340fee11c5aac0836eeac5fbe18a8b652ebe82efc74f8463af455000d00",
+    "runs/2026-10-11-native-share-unavailable.json": "401b1e337b1060cb55fd96332c9fd16cb77e8ae57d5b93dccd9b2b00bed03d09",
+    "runs/2026-10-11-private-changelog-preflight-refusal.json": "22af402ca7b1e9af49cd7800703c0927fcb8a87161746a8196f9d98c0cd9dcb8",
+    "runs/2026-10-11-private-policy-current-PII_REDACTED.json": "98e19076f4f62d597a99ca2da6f593a92b9e8a1fd1ef99812e4f7582e999570f",
+    "runs/2026-10-11-private-policy-current-PS.json": "e1ba6f1823f59b69b40279164f1ff80581facc27470e9c79e07ae750322e6483",
+    "runs/2026-10-11-private-policy-current-extension.json": "103c9b2f53bce22130953e6b998dc2ddc2ec4cd8c6d5d5b4dbe1158a5bdb5d22",
+    "runs/2026-10-11-private-policy-current-protocol.json": "196263e661bd44f6f80651b88a69a053ce7c5102207b2c570ae9a6787e03c5fe",
+    "runs/2026-10-11-private-policy-linux-controls.json": "a767f4b4c7389baca5a8e52e8b4411a2e1db4a1c6dd87f8ccbccfe356a6fd6c1",
+    "runs/2026-10-11-private-policy-mac-controls.json": "e7ca9ca6add04bcaa338dea3c59330ff35a4986cf7828b76f9746cba536cbc8c",
+    "runs/2026-10-11-private-policy-scope.json": "0530951f095e4f2b90277bb6a732b68781c921b8d8f5af97e7c585d4fda146d4",
+    "runs/2026-10-11-private-policy-staging-cleanup.json": "bd12bd1069b18ae807f498ce76dd5fe280bfc82551697de49abf18c2da2b0fd3",
+    "runs/2026-10-11-private-reference-preflight-refusal.json": "6b6e68d4feb828ba5e64c2674f83817e626591d044d3ad364584c4b4d1edd74a",
+    "scripts/check-private-policy.py": "8c7bd974b4a1d33a579ba88136d4ed2d5ff61324d578bb46a140794c59bfa6df",
+    "scripts/native-probe-cases.py": "ce378e5dd9654693723717d5a4570316c7f92273d1e00f0e49c12bd570c0ce2f",
+    "scripts/native_bundle.py": "2c259c69ac79d2e699fb745f4024a8b2854526e1c594c0c7e229946db37c27db",
+    "scripts/prepare-native-bundle.py": "a86227e42ac02e803ba65491fbf3e3846667c6a3c62b5a5cc834b820b59609b1",
+    "scripts/prepare-private-policy-demo.py": "6a2743909233bc6e6fb60e5ddb9d8dabe6d8730a1982bf5d0bfe99d4588c5213",
+    "scripts/verify-ios-bundle.py": "64fda7d52d70a14c461a067375025fb8f11097b8c21342aeb387cacd5324e938",
+    "scripts/verify-private-policy.py": "22b5725b403f87e4ecdb68663b66994320074e4439c5a6d618e0e88d011f0197",
+    "scripts/verify-route-boundaries.py": "cf1552784bdfab7859cb4b73087600b4e8e1f18c2f36709f5dee41a36c60a90b",
+    "scripts/verify-shared-text.py": "10ffe441e802ed0ea67fa3414629eaeb4cc7c3d4d2fceacf4634b8cb2d1d9d0a",
+    "site/index.html": "04511f4787b6e4c172811aa3ab8139f5021f6ad2aef5d23fdc882ca5e060aa44",
+    "site/public/reference/native-engine-checks.md": "3148f88b2fa95e80e5267ead569a7f07b7b853590dc6314a0a4cf14388609b5f",
+    "site/public/reference/private-policy.md": "6ca65a93b3a3c908cea337ff7a8e210b1161d202fb2ebdb8d6b15e3e47045ad0",
+    "site/public/reference/public-scope.json": "83bb8eeb9e8f1ddb800b1cbe7923ffd76493e9e488a93c4e0ce67aeddbe6781a",
+    "site/scripts/prepare.mjs": "e0630bdb863404b18be87784d9c7df89bdb80003c5a17525587d8edd1ecac28a",
+    "site/scripts/render-reference.mjs": "734e208b4b18231f164c63af68502db2bd5d7d8c568448f3b14c99df17154bdd",
+    "site/src/catalog.js": "099f57cca9d8ffaeeabf19974fefcf45de468c3cb697ff30b0bafb99c82ea7c0",
+    "site/src/public-scope.json": "83bb8eeb9e8f1ddb800b1cbe7923ffd76493e9e488a93c4e0ce67aeddbe6781a",
+    "site/src/scope-manifest.json": "864a53a59bb2bf6ff040720049b8bf2bd2be30d3c683878c743920ffe9e7141d",
+    "site/src/usage.js": "084b6def3da10f31a9083e54197e6d78323595558e98263052e5d060c8cbaa62",
+    "state.json": "ebec58fd06e19c106e21df2c1150365220b051c34903a9f3c603ef76886d4625",
+    "tests/test_native_bundle.py": "99ac2fa7f34dc40e230a46f0b82b94b4c411cb8653f1b47a2fba5b89465384ff",
+    "tests/test_private_policy.py": "701700ed4a4ef7e3ba5e25683ef99c6b5593f1e3fc6b26b38cbc952b7d4cbb2d",
+    "tests/test_private_policy_cli.py": "aa9ad2b556bdd519bb925f3ec9f0c0057d128c0fb873a6c4706be9aa017ececd",
+    "tools/private_policy.py": "bcc69df1dc1615e1574c0e870760ebb36edc42140a8ab5fdbbfd695ba4d8f11e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-11-private-changelog-preflight-refusal.json",
+      "sha256": "22af402ca7b1e9af49cd7800703c0927fcb8a87161746a8196f9d98c0cd9dcb8"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-current-PII_REDACTED.json",
+      "sha256": "98e19076f4f62d597a99ca2da6f593a92b9e8a1fd1ef99812e4f7582e999570f"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-current-PS.json",
+      "sha256": "e1ba6f1823f59b69b40279164f1ff80581facc27470e9c79e07ae750322e6483"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-current-extension.json",
+      "sha256": "103c9b2f53bce22130953e6b998dc2ddc2ec4cd8c6d5d5b4dbe1158a5bdb5d22"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-current-protocol.json",
+      "sha256": "196263e661bd44f6f80651b88a69a053ce7c5102207b2c570ae9a6787e03c5fe"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-linux-controls.json",
+      "sha256": "a767f4b4c7389baca5a8e52e8b4411a2e1db4a1c6dd87f8ccbccfe356a6fd6c1"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-mac-controls.json",
+      "sha256": "e7ca9ca6add04bcaa338dea3c59330ff35a4986cf7828b76f9746cba536cbc8c"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-scope.json",
+      "sha256": "0530951f095e4f2b90277bb6a732b68781c921b8d8f5af97e7c585d4fda146d4"
+    },
+    {
+      "path": "runs/2026-10-11-private-policy-staging-cleanup.json",
+      "sha256": "bd12bd1069b18ae807f498ce76dd5fe280bfc82551697de49abf18c2da2b0fd3"
+    },
+    {
+      "path": "runs/2026-10-11-private-reference-preflight-refusal.json",
+      "sha256": "6b6e68d4feb828ba5e64c2674f83817e626591d044d3ad364584c4b4d1edd74a"
+    },
+    {
+      "path": "runs/2026-10-11-native-bundle-compatibility.json",
+      "sha256": "67c4558446ef5755193597e0eb6be6e9838c2cf6688e3731add8e85a9107742f"
+    },
+    {
+      "path": "runs/2026-10-11-native-copy-controls.json",
+      "sha256": "cd4ce9b9b3d13884c4810fc5ae5787116c03981603170eb97447a9f6d0e12db9"
+    },
+    {
+      "path": "runs/2026-10-11-native-engine-observed.json",
+      "sha256": "4a8d537b2f2ea802e4f5ab1e0cae38375e0b8c87d59631739833ba859bfb2e76"
+    },
+    {
+      "path": "runs/2026-10-11-native-engine-resource-identity.json",
+      "sha256": "feb52bd1f16316c7f75e7b47c4e0bd162c4fce1e2f48d19e9084a74228734e66"
+    },
+    {
+      "path": "runs/2026-10-11-native-notice-resources.json",
+      "sha256": "e7aae732130a95fa98b2323cb5e6a281d9f65071aafca9881fe15ece9b849818"
+    },
+    {
+      "path": "runs/2026-10-11-native-runtime-attempt-4.json",
+      "sha256": "dcd2bc51ce944fa6cf59e9da64b31dfebddc4ca7ef1839a6d6695fcb6afccfac"
+    },
+    {
+      "path": "runs/2026-10-11-native-runtime-attempt-5.json",
+      "sha256": "c986e340fee11c5aac0836eeac5fbe18a8b652ebe82efc74f8463af455000d00"
+    },
+    {
+      "path": "runs/2026-10-11-native-share-unavailable.json",
+      "sha256": "401b1e337b1060cb55fd96332c9fd16cb77e8ae57d5b93dccd9b2b00bed03d09"
+    }
+  ],
+  "checks": []
+}
