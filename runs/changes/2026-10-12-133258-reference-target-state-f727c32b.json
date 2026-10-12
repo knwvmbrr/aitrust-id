@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-133258-reference-target-state-f727c32b",
+  "recorded_at": "2026-10-12T13:32:58.728070+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+  "changed": "Pointed the target ledger at the latest reference-revision increment and completed current-source suite while retaining the original full completion counts.",
+  "proves": "The current source suite passed 2813 tests with stable reviewed source bytes; the state references that exact evidence and a timestamp after its execution.",
+  "limits": "There are still 87 full requirements open and 37 further closures needed to reach 50; no partial component is counted as a full closure.",
+  "scope_ids": [
+    "F-120",
+    "T-NF",
+    "T-FI",
+    "F-020a",
+    "F-020b"
+  ],
+  "files": {
+    "state.json": "3cbf8678e42759beae46f0cbdbfc05adce2623687ac4248d8441dd91778fd839"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-reference-full-suite.json",
+      "sha256": "08f485372ae927bd29cc7b460fe7a1efd41f7f4e0220d3a5f5e83726d3f40891"
+    }
+  ],
+  "checks": []
+}

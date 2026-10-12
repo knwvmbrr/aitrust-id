@@ -930,13 +930,19 @@
         "next_fix": "Deliver NF Non-Fiction. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The reader sees which claim is supported by which source and passage, and the limits of that support.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/reference-revision-plan.md",
+          "docs/reference-revisions.md",
+          "tools/reference_revision.py",
+          "runs/2026-10-12-reference-revision-practice-local.json",
+          "runs/2026-10-12-reference-revision-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
           "Deliver NF Non-Fiction. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The reader sees which claim is supported by which source and passage, and the limits of that support."
         ],
-        "queue": "open"
+        "queue": "open",
+        "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established."
       }
     },
     {
@@ -984,13 +990,19 @@
         "next_fix": "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/reference-revision-plan.md",
+          "docs/reference-revisions.md",
+          "tools/reference_revision.py",
+          "runs/2026-10-12-reference-revision-practice-local.json",
+          "runs/2026-10-12-reference-revision-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
           "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated."
         ],
-        "queue": "open"
+        "queue": "open",
+        "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established."
       }
     },
     {
@@ -2441,13 +2453,19 @@
           "docs/nli-reference-plan.md",
           "runs/2026-10-11-nli-reference-current-engineering.json",
           "runs/2026-10-11-nli-reference-mac-owned-session-controls.json",
-          "runs/2026-10-11-nli-reference-linux-controls.json"
+          "runs/2026-10-11-nli-reference-linux-controls.json",
+          "docs/reference-revision-plan.md",
+          "docs/reference-revisions.md",
+          "tools/reference_revision.py",
+          "runs/2026-10-12-reference-revision-practice-local.json",
+          "runs/2026-10-12-reference-revision-linux.json"
         ],
         "evidence_scope": "Working exact-reference-bound optional local model observation, source-only contracts and actual network-denied Mac/Linux synthetic commands. No independent accuracy, truth, freshness, corroboration, FI mapping or release acceptance.",
         "required_acceptance": [
           "Representative held-out reference/category validation, freshness/claim selection contract, calibrated accepted tag mapping, full FI integration and required human operation."
         ],
-        "queue": "open"
+        "queue": "open",
+        "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established."
       }
     },
     {
@@ -12777,13 +12795,15 @@
           "runs/2026-10-11-native-copy-controls.json",
           "runs/2026-10-11-native-share-unavailable.json",
           "runs/2026-10-11-native-runtime-attempt-4.json",
-          "runs/2026-10-11-native-runtime-attempt-5.json"
+          "runs/2026-10-11-native-runtime-attempt-5.json",
+          "runs/2026-10-12-native-python-private-candidate.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],
-        "queue": "open"
+        "queue": "open",
+        "native_candidate_limit": "Private embedded-Python candidate matched 137 original full JSON results; the next native bridge/audit control attempt timed out during fresh owned simulator boot and was removed. Native Share remains unavailable."
       }
     },
     {

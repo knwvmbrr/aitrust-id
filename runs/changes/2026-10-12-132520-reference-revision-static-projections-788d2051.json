@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-132520-reference-revision-static-projections-788d2051",
+  "recorded_at": "2026-10-12T13:25:20.459448+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+  "changed": "Rendered the reference-revision guide and independent NF/FI reference links, and regenerated complete 202-record public scope projections without changing completion percentages.",
+  "proves": "The actual site build completed and produced the guide, tag reference pages and scope projections from the reviewed source.",
+  "limits": "Generated pages do not establish independently validated tags or close any requirement.",
+  "scope_ids": [
+    "T-NF",
+    "T-FI",
+    "F-020a",
+    "F-020b"
+  ],
+  "files": {
+    "site/index.html": "fc32675b721e09131a01850423be04ea39f9a081db2e8ec819d67dd6e5edf008",
+    "site/public/reference/public-scope.json": "815a1d8fdff2c8f16418c178108f30d5be6983d03c3d8587beff1561b2493f0a",
+    "site/src/public-scope.json": "815a1d8fdff2c8f16418c178108f30d5be6983d03c3d8587beff1561b2493f0a",
+    "site/src/scope-manifest.json": "d28ac14f93508fccb3da63712049238db667780222d59b834b40aed6841a3221",
+    "site/public/reference/reference-revisions.md": "1b006fe82a6e70a763a9bcf056eb331c40d558ff94fd44f9e9ebd12c29462cb5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-reference-revision-practice-local.json",
+      "sha256": "b5f1b5a0f75a696acbda0b434b1a1fbcf640747526d6940aeedeb8e55058c0d5"
+    },
+    {
+      "path": "runs/2026-10-12-reference-revision-linux.json",
+      "sha256": "e20a73a97e0766b13becc5e6714fa620320bf227df5ef760ba8667e0e148ced9"
+    }
+  ],
+  "checks": []
+}

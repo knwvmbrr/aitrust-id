@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-133227-reference-final-execution-records-49c86b6b",
+  "recorded_at": "2026-10-12T13:32:27.854789+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+  "changed": "Updated current state, source-bound route review and immutable full execution records for the reference-revision increment.",
+  "proves": "All five capability checks passed, including all ten website commands; the route review covers 694 current source files. The full Python suite passed 2813 tests with one platform skip and stable reviewed source hashes.",
+  "limits": "Protected merge and publication are pending. The independent release gate and full human, physical-device, source-authority and tag-accuracy acceptance remain open; 115 complete and 87 open requirements are unchanged.",
+  "scope_ids": [
+    "F-120",
+    "T-NF",
+    "T-FI",
+    "F-020a",
+    "F-020b"
+  ],
+  "files": {
+    "state.json": "18021f5aa316263336b35a44944a0aba0a98482891a99fa8a61074fcf58f0d05",
+    "eval/route-boundaries.json": "81869ce4a03621035643cb82ee5c996839f601050c07de09226ae95dd11de871",
+    "runs/2026-10-12-reference-prepared-website.json": "f7d32eb20b35fb71a7b0e1d236b53e43db89bda89a8d9eec0c8c75e53998a6c6",
+    "runs/2026-10-12-reference-reviewed-routes.json": "5222cb8a6d7b5c2551f3633310b085467bb840c23aa3444b5e4e6e4af2a54965",
+    "runs/2026-10-12-reference-full-suite.json": "08f485372ae927bd29cc7b460fe7a1efd41f7f4e0220d3a5f5e83726d3f40891"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-reference-prepared-website.json",
+      "sha256": "f7d32eb20b35fb71a7b0e1d236b53e43db89bda89a8d9eec0c8c75e53998a6c6"
+    },
+    {
+      "path": "runs/2026-10-12-reference-reviewed-routes.json",
+      "sha256": "5222cb8a6d7b5c2551f3633310b085467bb840c23aa3444b5e4e6e4af2a54965"
+    },
+    {
+      "path": "runs/2026-10-12-reference-full-suite.json",
+      "sha256": "08f485372ae927bd29cc7b460fe7a1efd41f7f4e0220d3a5f5e83726d3f40891"
+    }
+  ],
+  "checks": []
+}

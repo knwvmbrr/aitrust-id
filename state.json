@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T11:49:00.944745+00:00",
-  "active_increment": "Synthetic research request admission; final source verification and protected publication pending",
+  "updated": "2026-10-12T13:32:58.604557+00:00",
+  "active_increment": "Offline reference-revision dependency checks and private practice workflow; native simulator block retained and skipped",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2732,
+  "python_tests_passed": 2813,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "2732 current Python engineering tests pass; one platform test skipped. Independent tag accuracy, actual participants and physical phones remain unverified.",
+  "python_tests_scope": "2813 current Python engineering tests pass; one platform test skipped and one upstream warning. Independent tag accuracy, actual participants and physical phones remain unverified.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -618,7 +618,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -736,7 +736,7 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/research-admission-result.md",
+    "latest_increment": "docs/reference-revision-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -746,7 +746,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-12-admission-full-suite.json",
+    "current_target_verification": "runs/2026-10-12-reference-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-12"
@@ -964,7 +964,7 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current_source_checks_pass; protected_merge_pending",
+    "status": "current_source_checks_pass; protected_merge_and_exact_bytes_publication_verified",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-12-admission-reviewed-routes.json",
     "source_files": 687,
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-12-admission-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-12-admission-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-admission-current-protocol.json",
-    "extension": "runs/2026-10-12-admission-current-extension.json",
-    "website": "runs/2026-10-12-admission-current-website.json",
+    "PS": "runs/2026-10-12-reference-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-12-reference-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-reference-current-protocol.json",
+    "extension": "runs/2026-10-12-reference-current-extension.json",
+    "website": "runs/2026-10-12-reference-prepared-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T11:49:00.944745+00:00",
+  "updated_at": "2026-10-12T13:32:58.604557+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,9 +1099,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "bc3f348c57072395ed33ed9451ee461189f16821",
-    "preview": "https://f8e2c952.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-12-review-publication.json",
+    "source_commit": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+    "preview": "https://e38973eb.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-12-admission-publication.json",
     "matching_artifacts": 756,
     "independent_accuracy_evidence": false
   },
@@ -1365,7 +1365,7 @@
     "active_retention_days_proposed": 30,
     "backup_expiry_days_proposed": 7,
     "invitation_only_proposed": true,
-    "owner_role_proposed": "Michael \u2014 accountable pilot operator and access approver",
+    "owner_role_proposed": "Michael — accountable pilot operator and access approver",
     "real_data_allowed": false,
     "new_endpoint_approved": false
   },
@@ -1791,7 +1791,8 @@
     "resource_identity": "runs/2026-10-11-native-engine-resource-identity.json",
     "share_failure": "runs/2026-10-11-native-share-unavailable.json",
     "source_archive": "docs/experiments/native-share-unreleased.json",
-    "guide": "docs/native-engine-checks.md"
+    "guide": "docs/native-engine-checks.md",
+    "private_python_candidate": "runs/2026-10-12-native-python-private-candidate.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2004,7 +2005,7 @@
     "primary_preservation": "runs/2026-10-12-review-primary-preservation.json"
   },
   "research_admission": {
-    "status": "actual_synthetic_mac_and_linux_controls_pass; protected_publication_pending",
+    "status": "synthetic_component_protected_merged_and_exact_publication_verified; actual_participant_intake_pending",
     "implemented_by": "Codex",
     "records": [
       "N-011",
@@ -2034,6 +2035,36 @@
     "full_python_tests_passed": 2732,
     "website_evidence": "runs/2026-10-12-admission-current-website.json",
     "route_evidence": "runs/2026-10-12-admission-reviewed-routes.json",
-    "route_runtime_refusal": "runs/2026-10-12-admission-route-runtime-refusal.json"
+    "route_runtime_refusal": "runs/2026-10-12-admission-route-runtime-refusal.json",
+    "protected_merge": "runs/2026-10-12-admission-protected-merge.json",
+    "publication": "runs/2026-10-12-admission-publication.json",
+    "primary_preservation": "runs/2026-10-12-admission-primary-preservation.json"
+  },
+  "reference_revision": {
+    "status": "implemented_and_executed; protected_merge_and_publication_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "T-NF",
+      "T-FI",
+      "F-020a",
+      "F-020b"
+    ],
+    "architecture": "docs/reference-revision-plan.md",
+    "guide": "docs/reference-revisions.md",
+    "local_controls": "runs/2026-10-12-reference-revision-practice-local.json",
+    "linux_controls": "runs/2026-10-12-reference-revision-linux.json",
+    "retained_archive_refusal": "runs/2026-10-12-reference-revision-staging-refusal.json",
+    "focused_mac_python_tests": 147,
+    "linux_selected_python_tests": 131,
+    "actual_cli_control_groups": 10,
+    "source_freshness_authenticated": false,
+    "tags_asserted": false,
+    "new_endpoints": 0,
+    "requirements_closed": 0,
+    "full_suite": "runs/2026-10-12-reference-full-suite.json",
+    "full_python_tests_passed": 2813,
+    "website_evidence": "runs/2026-10-12-reference-prepared-website.json",
+    "retained_website_order_refusal": "runs/2026-10-12-reference-current-website.json",
+    "route_evidence": "runs/2026-10-12-reference-reviewed-routes.json"
   }
 }

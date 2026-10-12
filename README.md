@@ -97,6 +97,8 @@ Its model error cases are retained; retrieved-passage work remains separate.
 
 The separate [reference comparison command](docs/nli-references.md) selects passages from your owner-held corpus and compares them with a claim. It distinguishes a missing search match from uncalibrated model observations, keeps exact evidence private and issues no NF/FI or truth verdict.
 
+[Review changed references](docs/reference-revisions.md) to identify which earlier comparisons need another check. The free offline command keeps unchanged pair context separate from stale passage ranking, offers a private practice example, and treats declared review windows as reminders rather than proof of freshness. It issues no NF/FI tag.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual

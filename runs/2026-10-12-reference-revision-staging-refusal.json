@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-12T13:23:10.839225+00:00",
+  "pass": false,
+  "stage": "selected_linux_regression_archive",
+  "failure": "existing_corpus_support_cli_omitted_from_owned_source_package",
+  "python_tests_passed": 127,
+  "python_tests_failed": 1,
+  "corrective_action": "Fresh owned archive included scripts/corpus-support.py; final 131 selected tests and 10 actual CLI controls passed.",
+  "owned_staging_removed": true,
+  "production_changes": false,
+  "requirements_closed": 0
+}

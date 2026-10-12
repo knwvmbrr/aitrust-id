@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-132712-reference-source-check-records-1a339542",
+  "recorded_at": "2026-10-12T13:27:12.952596+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+  "changed": "Recorded four passing current capability checks and the retained website prebuild refusal; corrected bookkeeping order before a fresh website run.",
+  "proves": "PS, PII_REDACTED, protocol and extension checks passed with stable source identities. The website gate correctly refused newly created receipts without matching changelog events; this event supplies those records before rebuilding.",
+  "limits": "The first website receipt remains failed. No independent accuracy, additional tag or full requirement completion is credited.",
+  "scope_ids": [
+    "F-120",
+    "T-NF",
+    "T-FI",
+    "F-020a",
+    "F-020b"
+  ],
+  "files": {
+    "runs/2026-10-12-reference-current-PS.json": "96855e0ec1aece230b8e1142334614c56c51c51f0fa8b169008023e50552c9cc",
+    "runs/2026-10-12-reference-current-PII_REDACTED.json": "38624cb2707a42c4b89f80330a7b6f7daa43c72d982933d87b22399f4f389555",
+    "runs/2026-10-12-reference-current-protocol.json": "58406bad710e5ed87ab297c1308b07db3343ea059ad68daa660af1ab7695e81a",
+    "runs/2026-10-12-reference-current-extension.json": "e5f28c2e63a8735d62e292e85858b9c885478014f4b19d1bc21cb477991ea03a",
+    "runs/2026-10-12-reference-current-website.json": "97e03a4b4544c032e30d73c9af1244c5b218a1112a5171e1ca1321f6972ffdfa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-reference-current-PS.json",
+      "sha256": "96855e0ec1aece230b8e1142334614c56c51c51f0fa8b169008023e50552c9cc"
+    },
+    {
+      "path": "runs/2026-10-12-reference-current-PII_REDACTED.json",
+      "sha256": "38624cb2707a42c4b89f80330a7b6f7daa43c72d982933d87b22399f4f389555"
+    },
+    {
+      "path": "runs/2026-10-12-reference-current-protocol.json",
+      "sha256": "58406bad710e5ed87ab297c1308b07db3343ea059ad68daa660af1ab7695e81a"
+    },
+    {
+      "path": "runs/2026-10-12-reference-current-extension.json",
+      "sha256": "e5f28c2e63a8735d62e292e85858b9c885478014f4b19d1bc21cb477991ea03a"
+    },
+    {
+      "path": "runs/2026-10-12-reference-current-website.json",
+      "sha256": "97e03a4b4544c032e30d73c9af1244c5b218a1112a5171e1ca1321f6972ffdfa"
+    }
+  ],
+  "checks": []
+}
