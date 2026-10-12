@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-10-12T11:39:22.332829+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "python_tests_passed": 177,
+  "sources": {
+    "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
+    "scripts/research-admission.py": "b8e8d67addf9611a8127486df3e8405de903569c4af942c995441f2a3d1f30cd",
+    "scripts/verify-research-admission.py": "251d5ec4fa6da4630fbf8a56971f9f5dacbcaebf639b46272fa9f37312251b07",
+    "tests/test_research_admission.py": "789f3844eb217bdfd0b62d7600d0fed89976bcc3bbba1272860fdf10465905d1"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_research_admission.py",
+    "tests/test_research_invitations.py",
+    "tests/test_metadata_store.py"
+  ],
+  "only_synthetic_records": true,
+  "actual_postgresql_checked_here": false,
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0
+}

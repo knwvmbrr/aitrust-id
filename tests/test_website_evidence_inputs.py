@@ -109,3 +109,13 @@ def test_route_inventory_is_also_independent_of_the_derived_manifest(tmp_path):
 def test_selected_review_recipe_inputs_are_bound_in_consumer_receipts(capability):
     from tools.review_execution import SOURCE_FILES
     assert set(SOURCE_FILES) <= fingerprint(capability)["sources"].keys()
+
+
+@pytest.mark.parametrize("capability",["protocol","website"])
+def test_synthetic_admission_consumers_bind_executable_and_database_contract(capability):
+    required={'tools/research_admission.py','scripts/research-admission.py',
+        'scripts/verify-research-admission.py','scripts/metadata-store-sandbox.py',
+        'scripts/verify-metadata-store.py','scripts/verify-research-invitations.py',
+        'deploy/research/metadata-development.sql','deploy/research/metadata-invitation-development.sql',
+        'tests/test_research_admission.py','.github/workflows/metadata-storage.yml'}
+    assert required <= fingerprint(capability)['sources'].keys()

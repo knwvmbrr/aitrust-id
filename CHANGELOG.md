@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-114901-admission-current-integration-894497fd
+
+Recorded 2026-10-12T11:49:01.055273+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind current website execution, reviewed route inventory and full-suite evidence; refresh machine-readable truth after all referenced receipts.
+- **Evidence.** Nine website commands pass with 414 bound inputs; all 2732 Python tests pass with one platform skip against 687 unchanged route inputs. Fixed orchestration runtime refusal is retained. [Change record](./runs/changes/2026-10-12-114901-admission-current-integration-894497fd.json).
+- **Not claimed.** Protected hosted checks and publication pending; 115 complete / 87 open remain unchanged. No independent accuracy or participant/live intake claim.
+
+
+### 2026-10-12-114322-admission-four-capability-revalidation-6850eca2
+
+Recorded 2026-10-12T11:43:22.387238+00:00 · Contributor: Codex · change
+
+- **Changed.** Record four current source-bound capability executions after integrating private synthetic admission.
+- **Evidence.** PS, redaction, protocol and extension check commands pass against unchanged selected source inventories; protocol runs the 177-test admission contract suite. [Change record](./runs/changes/2026-10-12-114322-admission-four-capability-revalidation-6850eca2.json).
+- **Not claimed.** Engineering evidence only; website revalidation, protected merge and real participant/independent tag acceptance remain pending.
+
+
+### 2026-10-12-114208-synthetic-research-admission-bd3f753b
+
+Recorded 2026-10-12T11:42:08.300808+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement private synthetic request admission and withdrawal, isolated PostgreSQL controls, Node parity in CI, operating instructions and current scope attribution; record the previously verified review publication.
+- **Evidence.** 177 selected local tests and 174 selected Linux tests pass; 62 actual PostgreSQL control groups pass in a distinct network namespace, all private clusters and owned staging removed. Published review source had 22 required CI successes and exact 756 artifact comparisons. [Change record](./runs/changes/2026-10-12-114208-synthetic-research-admission-bd3f753b.json).
+- **Not claimed.** No live participant intake, new endpoint, production authentication, consent, training or independent tag accuracy; N-011 and F-141 remain open. Linux lacks two Node parity checks, which passed locally; existing platform check skips.
+
+
 ### 2026-10-12-040828-review-state-chronology-repair-f9a49b1e
 
 Recorded 2026-10-12T04:08:28.274555+00:00 · Contributor: Codex · change

@@ -184,6 +184,10 @@ PATTERNS += ('deploy/research/metadata-invitation-development.sql','scripts/veri
              'tests/test_research_invitations.py','docs/research-invitation-plan.md',
              'docs/research-invitations.md','docs/research-invitation-result.md')
 
+PATTERNS += ('tools/research_admission.py','scripts/research-admission.py','scripts/verify-research-admission.py',
+             'tests/test_research_admission.py','docs/research-admission-plan.md',
+             'docs/research-admission.md','docs/research-admission-result.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T04:08:28.240160+00:00",
-  "active_increment": "public_runnable_development_preview",
+  "updated": "2026-10-12T11:49:00.944745+00:00",
+  "active_increment": "Synthetic research request admission; final source verification and protected publication pending",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2586,
+  "python_tests_passed": 2732,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "2586 current-source engineering regression tests pass; 1 skipped and 1 warning. Independent accuracy, human/device and legal gates remain separate.",
+  "python_tests_scope": "2732 current Python engineering tests pass; one platform test skipped. Independent tag accuracy, actual participants and physical phones remain unverified.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-12T03:57:28.989146+00:00",
+    "audited_at": "2026-10-12T11:41:37.279669+00:00",
     "completed_records": 115,
     "open_records": 87,
     "records_preserved": 202,
@@ -736,7 +736,7 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/review-execution-binding-result.md",
+    "latest_increment": "docs/research-admission-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -746,10 +746,10 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-12-review-final-full-suite.json",
+    "current_target_verification": "runs/2026-10-12-admission-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
-    "latest_owner_direction_date": "2026-10-11"
+    "latest_owner_direction_date": "2026-10-12"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -964,10 +964,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current_source_checks_pass; next_protected_merge_pending",
+    "status": "current_source_checks_pass; protected_merge_pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-12-review-final-reviewed-routes.json",
-    "source_files": 680,
+    "evidence": "runs/2026-10-12-admission-reviewed-routes.json",
+    "source_files": 687,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-12-review-final-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-12-review-final-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-review-final-current-protocol.json",
-    "extension": "runs/2026-10-12-review-final-current-extension.json",
-    "website": "runs/2026-10-12-review-final-current-website.json",
+    "PS": "runs/2026-10-12-admission-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-12-admission-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-admission-current-protocol.json",
+    "extension": "runs/2026-10-12-admission-current-extension.json",
+    "website": "runs/2026-10-12-admission-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T04:08:28.240160+00:00",
+  "updated_at": "2026-10-12T11:49:00.944745+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,9 +1099,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "3c001bd91487d6776c65bd2a1b731b6a157aaf41",
-    "preview": "https://601bcfc0.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-12-choice-grammar-publication.json",
+    "source_commit": "bc3f348c57072395ed33ed9451ee461189f16821",
+    "preview": "https://f8e2c952.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-12-review-publication.json",
     "matching_artifacts": 756,
     "independent_accuracy_evidence": false
   },
@@ -1962,7 +1962,7 @@
     "current_capability_receipt": "runs/2026-10-12-review-final-current-website.json"
   },
   "review_execution_binding": {
-    "status": "component_executed; protected_publication_pending",
+    "status": "protected_merged_and_exact_bytes_publication_verified",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-050",
@@ -1998,6 +1998,42 @@
     "reviewed_routes": "runs/2026-10-12-review-final-reviewed-routes.json",
     "declared_installed_dependencies": 16,
     "genuine_pre_v2_packet_compared_without_manifest_rewrite": true,
-    "consumer_recipe_inputs_bound": true
+    "consumer_recipe_inputs_bound": true,
+    "merge": "runs/2026-10-12-review-protected-merge.json",
+    "publication": "runs/2026-10-12-review-publication.json",
+    "primary_preservation": "runs/2026-10-12-review-primary-preservation.json"
+  },
+  "research_admission": {
+    "status": "actual_synthetic_mac_and_linux_controls_pass; protected_publication_pending",
+    "implemented_by": "Codex",
+    "records": [
+      "N-011",
+      "F-141"
+    ],
+    "architecture": "docs/research-admission-plan.md",
+    "guide": "docs/research-admission.md",
+    "result": "docs/research-admission-result.md",
+    "local_evidence": "runs/2026-10-12-admission-local-controls.json",
+    "linux_evidence": "runs/2026-10-12-admission-linux-controls.json",
+    "retained_worker_failure": "runs/2026-10-12-admission-worker-shadowing-refusal.json",
+    "retained_uuid_contract_failure": "runs/2026-10-12-admission-uuid-contract-refusal.json",
+    "local_selected_python_tests": 177,
+    "linux_selected_python_tests": 174,
+    "linux_node_checks_unavailable": 2,
+    "linux_platform_skips": 1,
+    "postgresql_control_groups": 62,
+    "admission_control_groups": 8,
+    "production_login_authentication_verified": false,
+    "participant_consent_verified": false,
+    "research_service_running": false,
+    "production_database_changed": false,
+    "new_endpoints": 0,
+    "independent_accuracy_evidence": false,
+    "requirements_closed": 0,
+    "full_suite": "runs/2026-10-12-admission-full-suite.json",
+    "full_python_tests_passed": 2732,
+    "website_evidence": "runs/2026-10-12-admission-current-website.json",
+    "route_evidence": "runs/2026-10-12-admission-reviewed-routes.json",
+    "route_runtime_refusal": "runs/2026-10-12-admission-route-runtime-refusal.json"
   }
 }

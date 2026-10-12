@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-12T11:47:15.069890+00:00",
+  "pass": false,
+  "failure_cause": "The orchestration invoked system python3 instead of the configured verification virtual environment; pydantic was unavailable during the gateway boundary check. No service started.",
+  "checks_before_failure": [
+    "reviewed_source_inventory",
+    "browser_receipts_current"
+  ],
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0
+}

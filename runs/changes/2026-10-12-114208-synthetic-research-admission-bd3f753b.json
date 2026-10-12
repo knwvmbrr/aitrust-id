@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-114208-synthetic-research-admission-bd3f753b",
+  "recorded_at": "2026-10-12T11:42:08.300808+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bc3f348c57072395ed33ed9451ee461189f16821",
+  "changed": "Implement private synthetic request admission and withdrawal, isolated PostgreSQL controls, Node parity in CI, operating instructions and current scope attribution; record the previously verified review publication.",
+  "proves": "177 selected local tests and 174 selected Linux tests pass; 62 actual PostgreSQL control groups pass in a distinct network namespace, all private clusters and owned staging removed. Published review source had 22 required CI successes and exact 756 artifact comparisons.",
+  "limits": "No live participant intake, new endpoint, production authentication, consent, training or independent tag accuracy; N-011 and F-141 remain open. Linux lacks two Node parity checks, which passed locally; existing platform check skips.",
+  "scope_ids": [
+    "N-011",
+    "F-141",
+    "F-120"
+  ],
+  "files": {
+    ".github/workflows/metadata-storage.yml": "efbeca80da6ad12bff4c2e7e6373701e2afe38995aa0c21c5071528d1a0d158a",
+    "docs/research-admission-plan.md": "12ce770b6b3246d77386973a54d158eca52387e6eac8ead5b167ed6ad8f7c963",
+    "docs/research-admission-result.md": "7183227762afd23f5fcdc17ccc3cf7f88589d64388fef27e148dc15dda5c6e68",
+    "docs/research-admission.md": "3d3d45e3dd38c66392c87b147d06bfe69a7b56843f33d4eb68c1d2ddfb1e3be8",
+    "docs/scope-progress.json": "c6c8b40c53138370e5ac252f8f85727d7eb59c47af63d7fbe1770c0915c4f821",
+    "docs/scope-progress.md": "65e2e426c1e04a03e3d4289e04d8b7439bcc5526389be6d0c66b7a82153d6874",
+    "eval/revalidation.json": "f0f0a7c19a9dd720b3ab485c31279dea17f069605ef21d2bce65bb2233f91e52",
+    "runs/2026-10-12-admission-egress-probe-refusal.json": "4fbd2557fe1af41181d4d534560dec90b2b38e3c5de8c3e31312c4ea037dee7e",
+    "runs/2026-10-12-admission-linux-controls.json": "d271760c5d06957df5abb97b75775a608eb5678fbfbfdd57a0d7ea45f5545273",
+    "runs/2026-10-12-admission-linux-node-unavailable.json": "562e12c9078a85e52460563367964b52352e95d1c3bdd40a9b84a2e4e3a049e1",
+    "runs/2026-10-12-admission-local-controls.json": "f5b7d2a54a2ae23c6feb7685e95c363074e80b0a2517c3aec5181724c8491103",
+    "runs/2026-10-12-admission-namespace-refusal.json": "553afd717eeeb0e2fe3dbde0c52dff1d712fb6435d5cbe4fb7bfcd2601f32d3f",
+    "runs/2026-10-12-admission-uuid-contract-refusal.json": "d6db7a92c4675c545b55716235fc1a45d2f06d9b537c8df9641a6d19ad543de7",
+    "runs/2026-10-12-admission-worker-shadowing-refusal.json": "8755ab97faef9d53f5b4df7320189c87e56cf63d33b97d527c879c50a3da716a",
+    "runs/2026-10-12-review-primary-preservation.json": "7cd9d3d9ed7fc34197c16ca449d2707481769cc1ecd80019da26f13035489176",
+    "runs/2026-10-12-review-protected-merge.json": "c6b79e0635735b79e46c2790dfc0fd18cbea9bd8e3f8cd419b4b3c386dac232f",
+    "runs/2026-10-12-review-publication.json": "452bd2c514988767916d3923e423dfcdf8ef3b7fa266da264a75e0531c01c3f3",
+    "scripts/metadata-store-sandbox.py": "8a61c701118027de126fc3ba78c02fe27749139e0a31bd5f1b886b48e5c4c954",
+    "scripts/research-admission.py": "b8e8d67addf9611a8127486df3e8405de903569c4af942c995441f2a3d1f30cd",
+    "scripts/verify-research-admission.py": "251d5ec4fa6da4630fbf8a56971f9f5dacbcaebf639b46272fa9f37312251b07",
+    "scripts/verify-route-boundaries.py": "11761d9ee98a42125d2ba59f6229049b4507310b34f35c7619e5f9194ee2a98c",
+    "site/public/reference/public-scope.json": "2999585271573bd0bbd5f27dd6bc880d223fb3085b8dfb383b4b41c8c84502ad",
+    "site/src/public-scope.json": "2999585271573bd0bbd5f27dd6bc880d223fb3085b8dfb383b4b41c8c84502ad",
+    "site/src/scope-manifest.json": "308ef6427a58484de03cba754da8030650957277c1b0ec11cc84254025b1eedd",
+    "state.json": "dff23c32ced1157fc73b6ebc8048ebcdc45a96be80ed77ccd506d610339276c7",
+    "tests/test_research_admission.py": "789f3844eb217bdfd0b62d7600d0fed89976bcc3bbba1272860fdf10465905d1",
+    "tests/test_website_evidence_inputs.py": "06dc057804dc118e89f6b6bee2632d44f99a8c8ee89a3ee9131b600d23f50fa3",
+    "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-admission-linux-controls.json",
+      "sha256": "d271760c5d06957df5abb97b75775a608eb5678fbfbfdd57a0d7ea45f5545273"
+    },
+    {
+      "path": "runs/2026-10-12-admission-local-controls.json",
+      "sha256": "f5b7d2a54a2ae23c6feb7685e95c363074e80b0a2517c3aec5181724c8491103"
+    },
+    {
+      "path": "runs/2026-10-12-admission-worker-shadowing-refusal.json",
+      "sha256": "8755ab97faef9d53f5b4df7320189c87e56cf63d33b97d527c879c50a3da716a"
+    },
+    {
+      "path": "runs/2026-10-12-review-publication.json",
+      "sha256": "452bd2c514988767916d3923e423dfcdf8ef3b7fa266da264a75e0531c01c3f3"
+    }
+  ],
+  "checks": []
+}

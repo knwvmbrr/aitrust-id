@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-12T11:27:05.620050+00:00",
+  "pass": false,
+  "stage": "private_driver_selected_unit_suite",
+  "error_signature": "FileNotFoundError: node in existing metadata export parity test",
+  "python_tests_passed": 167,
+  "python_tests_skipped": 1,
+  "tests_deselected": 1,
+  "database_started": false,
+  "fix": "Run both Node-dependent export parity tests on the existing local Node host and in the explicitly configured CI Node24 job; declare these two unavailable in this ordinary Linux test environment. Continue real PostgreSQL controls separately.",
+  "owned_staging_removed": true,
+  "private_diagnostics_retained": true,
+  "production_changes": false
+}
