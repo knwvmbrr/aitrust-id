@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-12T03:01:48.199263+00:00",
+  "pass": false,
+  "tests_failed": 5,
+  "tests_passed": 2,
+  "cause": "the new synthetic receipt fixture omitted captured_at and could not pass baseline assessment",
+  "repair": "provide actual UTC capture and assert valid baseline before every mutation; production assessor unchanged",
+  "independent_accuracy_evidence": false
+}

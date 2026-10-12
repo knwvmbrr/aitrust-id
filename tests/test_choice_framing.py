@@ -74,6 +74,64 @@ def test_all_context_validates_before_any_output():
     with pytest.raises(module.FrameError):module.observe(TEXT,record,context)
 
 
+@pytest.mark.parametrize('text,construction,markers,negation',[
+    ('Either agree or oppose.','either_or',['Either','or'],[]),
+    ('Only agree or oppose.','only_or',['Only','or'],[]),
+    ('Neither agree nor oppose.','neither_nor',['Neither','nor'],['Neither','nor']),
+    ('Not only agree or oppose.','only_or',['only','or'],['Not']),
+    ('A lesson: "neither agree nor oppose."','neither_nor',['neither','nor'],['neither','nor']),
+    ('A menu offers only agree or oppose.','only_or',['only','or'],[]),
+    ('Safety directions: either agree or oppose.','either_or',['either','or'],[]),
+    ('EITHER agree, OR oppose.','either_or',['EITHER','OR'],[]),
+])
+def test_distinct_marker_constructions_keep_exact_locations_without_intent(text,construction,markers,negation):
+    record,context=packet(text)
+    result=module.observe(text,record,context);row=result['observations'][0]
+    assert result['profile']=='caller-bound-choice-framing-observation/1.1.0'
+    assert row['construction']==construction
+    assert [text[a:b] for a,b in row['binary_marker_spans']]==markers
+    assert [text[a:b] for a,b in row['negation_marker_spans']]==negation
+    assert row['proposed_signal']==(None if negation else 'sig.false_dilemma.v1')
+    assert not row['negation_scope_resolved'] and not row['exhaustiveness_established']
+    assert not row['additional_option_verified'] and not row['manipulation_established']
+    assert not row['quoted_or_recommended_resolved'] and not result['tag_asserted']
+
+
+@pytest.mark.parametrize('text',[
+    'Either agree nor oppose.', 'Neither agree or oppose.',
+    'Only agree and oppose.', 'I agree or oppose.',
+    'Notonly agree or oppose.', '_only agree or oppose.',
+    'Either agree or perhaps oppose.', 'Neither agree nor maybe oppose.',
+    'eİther agree or oppose.', 'NEıTHER agree nor oppose.',
+    'éonly agree or oppose.',
+])
+def test_unsupported_or_mixed_marker_grammar_is_unmatched(text):
+    record,context=packet(text)
+    result=module.observe(text,record,context)
+    assert result['state']=='NO_SUPPORTED_PATTERN' and result['observations']==[]
+    assert result['unmatched_selected_frames']==[[0,len(text)]]
+    assert not result['tag_asserted'] and not result['truth_established']
+
+
+@pytest.mark.parametrize('text,words',[
+    ('Either not agree or oppose.',('not agree','oppose')),
+    ('Either agree or not oppose.',('agree','not oppose')),
+])
+def test_negation_inside_a_selected_choice_is_recorded_without_scope_inference(text,words):
+    record,context=packet(text,words=words)
+    row=module.observe(text,record,context)['observations'][0]
+    assert [text[a:b] for a,b in row['negation_marker_spans']]==['not']
+    assert row['proposed_signal'] is None and not row['negation_scope_resolved']
+
+
+def test_negation_in_nominated_source_does_not_change_selected_frame_observation():
+    record,context=packet(source='The additional passage does not prove relevance.')
+    row=module.observe(TEXT,record,context)['observations'][0]
+    assert row['negation_marker_spans']==[]
+    assert row['proposed_signal']=='sig.false_dilemma.v1'
+    assert not row['additional_option_verified']
+
+
 def test_reference_unicode_spans_bind_normalized_text():
     from protocol.normalization import normalize_nfc
     source='The menu also lists cafe\u0301 options.'

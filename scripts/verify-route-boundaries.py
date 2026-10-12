@@ -97,7 +97,8 @@ PATTERNS += ('scripts/check-nli-references.py','scripts/verify-nli-references.py
              'docs/nli-references.md','docs/nli-reference-plan.md')
 PATTERNS += ('tools/choice_framing.py','scripts/check-choice-framing.py','scripts/prepare-choice-demo.py',
              'scripts/verify-choice-framing.py','tests/test_choice_framing.py','tests/test_choice_framing_cli.py',
-             'docs/choice-framing.md','docs/choice-framing-plan.md')
+             'docs/choice-framing.md','docs/choice-framing-plan.md','docs/choice-grammar-result.md','docs/changelog-policy.md',
+             'eval/revalidation.json','tests/test_website_evidence_inputs.py')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.

@@ -276,7 +276,34 @@
         "scripts/verify-editorial-workflow.cjs",
         "tests/test_newsroom.py",
         "tests/test_editorial_cli.py",
-        "docs/editorial-workflow.md"
+        "docs/editorial-workflow.md",
+        "docs/**/*",
+        "spec/**/*",
+        "rfcs/**/*",
+        "eval/datasets/**/*",
+        "eval/vectors/**/*",
+        "DECISIONS.md",
+        "SECURITY.md",
+        "GOVERNANCE.md",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        "ACCESSIBILITY.md",
+        "LICENSE",
+        "tests/test_website_evidence_inputs.py",
+        "runs/2026-10-10-evidence-resistance.json",
+        "runs/2026-10-10-context-v6-unicode-stress.json",
+        "runs/2026-10-10-context-v6-real-service.json",
+        "runs/2026-10-10-frozen-service-conformance.json",
+        "runs/2026-10-10-frozen-normalization-node24.json",
+        "runs/2026-10-10-bounded-service-conformance.json",
+        "runs/2026-10-10-service-resource-faults.json",
+        "runs/2026-10-08-regression-gates.json",
+        "runs/2026-10-08-container-checks.json",
+        "runs/2026-10-08-live-gap-implementation.json",
+        "runs/2026-10-08-browser-checks.json",
+        "runs/2026-10-08-extension-integration.json",
+        "runs/2026-10-08-ps-routing-regressions.json",
+        "runs/2026-10-08-ps-routing-gates.json"
       ],
       "commands": [
         [
@@ -284,6 +311,7 @@
           "-m",
           "pytest",
           "tests/test_changelog_pipeline.py",
+          "tests/test_website_evidence_inputs.py",
           "-q"
         ],
         [

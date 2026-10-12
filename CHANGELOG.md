@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-031146-choice-grammar-verified-6f8c067b
+
+Recorded 2026-10-12T03:11:46.258790+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete choice-grammar and publication-input verification; preserve protected merge and exact-byte publication evidence for the invitation development increment.
+- **Evidence.** 2545 source-bound development tests pass; 128 focused tests and 23 CLI controls on both macOS and Linux; all five capabilities freshly checked, including 378 website inputs and 672 reviewed route files. [Change record](./runs/changes/2026-10-12-031146-choice-grammar-verified-6f8c067b.json).
+- **Not claimed.** 87 requirements remain open. No independent tag accuracy, production research intake, physical phone or human accessibility acceptance claimed.
+
+
+### 2026-10-12-030657-publication-input-reviewed-routes-c17ab97c
+
+Recorded 2026-10-12T03:06:57.186300+00:00 · Contributor: Codex · change
+
+- **Changed.** Reviewed all five current capability receipts and personal route inventory after complete publication-input recapture.
+- **Evidence.** All eight website checks and seven copied-input controls pass; the changed shared manifest is exercised by all five capabilities with no independent release inference. [Change record](./runs/changes/2026-10-12-030657-publication-input-reviewed-routes-c17ab97c.json).
+- **Not claimed.** Full-suite and protected merge still pending for the current grammar and evidence changes. Original 202 scope records retained; 87 open.
+
+
+### 2026-10-12-030327-publication-input-coverage-68b206dd
+
+Recorded 2026-10-12T03:03:27.531219+00:00 · Contributor: Codex · change
+
+- **Changed.** Expanded website publication-input fingerprints and executable stale-receipt controls; recaptured four unaffected runtime capabilities under the new shared manifest.
+- **Evidence.** Seven coverage controls pass. PS, PII, protocol and extension checks pass; protected invitation publication matches 756 artifact responses after a recorded TLS refusal and fresh lower-concurrency comparison. [Change record](./runs/changes/2026-10-12-030327-publication-input-coverage-68b206dd.json).
+- **Not claimed.** Website and full-suite acceptance remain pending under the expanded manifest. New research intake and independent tag accuracy are not enabled.
+
+
+### 2026-10-12-025825-choice-prepared-projection-e6348a2c
+
+Recorded 2026-10-12T02:58:25.252572+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded prepared scope projections and retained the website build refusal before rerunning current-source verification.
+- **Evidence.** The changelog guard refused generated files absent from the pre-preparation event; preparing first and recording their final digests preserves the guard. [Change record](./runs/changes/2026-10-12-025825-choice-prepared-projection-e6348a2c.json).
+- **Not claimed.** The earlier website receipt failed; no acceptance inferred from it. No tag accuracy or collection claim.
+
+
+### 2026-10-12-025637-distinct-choice-grammar-46d7770d
+
+Recorded 2026-10-12T02:56:37.911413+00:00 · Contributor: Codex · change
+
+- **Changed.** Added distinct caller-selected paired-choice constructions and lexical negation locations; negated wording has no proposed false-dilemma candidate.
+- **Evidence.** Exact current source passes 128 focused tests and 23 private CLI controls on Mac and socket-denied Linux, with owned staging cleanup. [Change record](./runs/changes/2026-10-12-025637-distinct-choice-grammar-46d7770d.json).
+- **Not claimed.** General negation scope, intent, context, feasibility, independent accuracy and MT integration remain open. Fixture, selection and Unicode-marker defects are retained with repairs. No requirement marked complete.
+
+
 ### 2026-10-12-024729-invitation-accepted-suite-bd431771
 
 Recorded 2026-10-12T02:47:29.255395+00:00 · Contributor: Codex · change

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect selected either/or wording with caller-provided context; no accusation."""
+"""Inspect selected paired choice markers with caller-provided context; no accusation."""
 import argparse
 import json
 from pathlib import Path
@@ -21,8 +21,8 @@ def summary(result,saved):
     return {'profile':result['profile'],'state':result['state'],
         'selected_frames_checked':count+len(result['unmatched_selected_frames']),
         'supported_binary_patterns':count,
-        'result':('Selected wording presents two choices; the extra passage is your nominated context, not a verified alternative.'
-            if count else 'No supported either/or pattern matched your selected frames. This does not clear the wording or judge its intent.'),
+        'result':('Selected wording mentions two choices. The extra passage is your nominated context, not a verified alternative.'
+            if count else 'No supported paired choice markers matched your selected frames. This does not clear the wording or judge its intent.'),
         'detailed_output_saved':saved,'additional_options_verified':False,
         'manipulation_established':False,'truth_established':False,
         'independent_corroboration':False,'tag_asserted':False,'release_approved':False}
