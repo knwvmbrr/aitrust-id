@@ -1,0 +1,8 @@
+{
+  "captured_at": "2026-10-12T02:54:22.962185+00:00",
+  "pass": false,
+  "cause": "Unicode case-insensitive matching accepted dotted-I either and produced a construction outside the declared three-form vocabulary",
+  "observed_construction": "ei\\u0307ther_or",
+  "tag_asserted": false,
+  "repair": "Require the case-folded marker to belong to the explicit three-form vocabulary, retaining Unicode word boundaries; re-run source-bound controls"
+}

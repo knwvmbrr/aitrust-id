@@ -39,6 +39,14 @@ An exclusive lock and unique filenames prevent writers overwriting each other;
 normal failures roll back the event. A process crash between writes is caught as
 an inconsistent record by the verifier and needs repair before continuing.
 
+## Site verification order
+
+For a scope or public-reference change, run `node site/scripts/prepare.mjs` first, then record a fresh change event covering the resulting tracked projections. Capture the source-bound website run only after that event. Preparation changes tracked public-scope files, so an event recorded before preparation cannot cover their final hashes. Record newly produced public run files in another event before the next build or commit. A failed run remains in history; do not overwrite it.
+
+The website evidence manifest also binds public documentation, specification/RFC/data-vector sources, copied root policies and the builder’s named historical run inputs. Appended changelog/event and newly produced run bookkeeping are excluded from that behavioral fingerprint to avoid self-reference; published release bytes are checked separately at every origin.
+
+Before the full Python suite, review the current personal route inventory with the selected current extension and website receipts. Changing the review inventory does not grant new collection permissions or independent accuracy. Keep state timestamps later than every evidence file they reference, and verify accountability before staging and before a protected merge.
+
 ## Enforcement
 
 `npm run verify:changelog` compares working files, including staged changes and

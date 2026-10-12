@@ -39,19 +39,29 @@ def observe(original,record,context):
         # These positions are an explicit caller selection, not an automatic
         # parse, quotation classification or proof that other options work.
         prefix=subject[left:first[0]];gap=subject[first[1]:second[0]]
-        either=list(re.finditer(r'\beither\s*$',prefix,re.I))
-        connector=re.fullmatch(r'[\s,]*or[\s,:]*',gap,re.I)
-        if not either or connector is None:
+        leading=re.search(r'\b(either|only|neither)\s*$',prefix,re.I)
+        if leading and leading.group(1).casefold() not in ('either','only','neither'):
+            leading=None
+        expected='nor' if leading and leading.group(1).casefold()=='neither' else 'or'
+        connector=re.fullmatch(r'[\s,]*'+expected+r'[\s,:]*',gap,re.I)
+        if leading is None or connector is None:
             unmatched.append([left,right]);continue
-        match=either[-1];or_match=re.search(r'\bor\b',gap,re.I)
-        markers=[[left+match.start(),left+match.start()+6],[first[1]+or_match.start(),first[1]+or_match.end()]]
-        rows.append({'proposed_signal':'sig.false_dilemma.v1','frame_span':[left,right],
+        trailing=re.search(r'\b'+expected+r'\b',gap,re.I)
+        construction=leading.group(1).casefold()+'_'+expected
+        markers=[[left+leading.start(),left+leading.end(1)],
+                 [first[1]+trailing.start(),first[1]+trailing.end()]]
+        negation=[[left+m.start(),left+m.end()] for m in
+                  re.finditer(r'\b(?:not|neither|nor)\b',subject[left:right],re.I)
+                  if m.group().casefold() in ('not','neither','nor')]
+        rows.append({'proposed_signal':None if negation else 'sig.false_dilemma.v1','frame_span':[left,right],
             'choice_spans':[list(first),list(second)],'binary_marker_spans':markers,
+            'construction':construction,'negation_marker_spans':negation,
+            'negation_scope_resolved':False,
             'additional_reference':{**ref,'normalized_source_sha256':source_hash},
-            'meaning':'caller_selected_either_or_with_caller_nominated_additional_passage',
+            'meaning':'caller_selected_two_mentioned_choices_with_caller_nominated_additional_passage',
             'additional_option_verified':False,'exhaustiveness_established':False,
             'quoted_or_recommended_resolved':False,'manipulation_established':False})
-    return {'profile':'caller-bound-choice-framing-observation/1.0.0',
+    return {'profile':'caller-bound-choice-framing-observation/1.1.0',
         'state':'OBSERVATIONS' if rows else 'NO_SUPPORTED_PATTERN','language':'en',
         'subject_sha256':digest(subject),'manifest_sha256':record['manifest_sha256'],
         'method_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

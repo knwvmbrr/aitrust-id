@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-030657-publication-input-reviewed-routes-c17ab97c",
+  "recorded_at": "2026-10-12T03:06:57.186300+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "42f3f20453f4d6e8638c20798d38fe2ac8acf3bb",
+  "changed": "Reviewed all five current capability receipts and personal route inventory after complete publication-input recapture.",
+  "proves": "All eight website checks and seven copied-input controls pass; the changed shared manifest is exercised by all five capabilities with no independent release inference.",
+  "limits": "Full-suite and protected merge still pending for the current grammar and evidence changes. Original 202 scope records retained; 87 open.",
+  "scope_ids": [
+    "F-019b",
+    "F-120"
+  ],
+  "files": {
+    "docs/changelog-policy.md": "4537155e3f8aeaab47453ce33345af84ba3ed0c62e15142a3efa6e09fceb9462",
+    "docs/choice-framing-plan.md": "feb940e0a99518476c4b2ed5a98844f6ad90cf0dee731e2714f83af298bcd699",
+    "docs/choice-framing.md": "f80be1a744607482394905bf827f8c018efaa892e643f94408a95774ccefec18",
+    "docs/choice-grammar-result.md": "a929c29985ceb248edd2e85d834724989714f34b1c2ff27f5d46264f3d837b13",
+    "docs/scope-progress.json": "b1a4db5f02cef6ab955593683e75445e516ad2e716ab77730d3184742263e94a",
+    "docs/scope-progress.md": "842d6bc1f248c56acd81e3508bf3d76f613e245cf4780df373fe6f10f513710f",
+    "eval/revalidation.json": "aca9afd07f235817919fef6dbac70fc93a4e755423e03764324861db296f2483",
+    "eval/route-boundaries.json": "a7e7037769fec8005c90b0f35aaa2eb4b12d5839f5ac5461a8cc62ee9fe94aba",
+    "runs/2026-10-12-choice-grammar-canonical-cleanup.json": "4e3feaed87294b93868ce30215711fffbc5a0eb95c313a33ea3eb8ef169d5350",
+    "runs/2026-10-12-choice-grammar-canonical-linux.json": "5d238ba39ad30ea1f737375556f71be5c530040b93f8dc9f14efb1c69c4db2fa",
+    "runs/2026-10-12-choice-grammar-canonical-mac-controls.json": "7625644922e1aa062bc9f350492346143dd7469e377c6b2116fd5c944195309e",
+    "runs/2026-10-12-choice-grammar-engineering.json": "ed09f4e45fb74500cf5b388ce4a530e341dc558b117e23abf493d628b3fc5316",
+    "runs/2026-10-12-choice-grammar-fixture-refusal.json": "d6d35a207fd114a480731212cb8d4a3ac2b20fceba45f8b0f9d84edd387b8bb6",
+    "runs/2026-10-12-choice-grammar-initial-cleanup.json": "ce71c0f16db05da804b6f23e17e48717ec518aab59e48a33277551674710813c",
+    "runs/2026-10-12-choice-grammar-initial-linux.json": "d34488afc2de777e51c9039f4402b05fdeb2c81918a7fd0aff9ab17404010c68",
+    "runs/2026-10-12-choice-grammar-mac-controls.json": "0458bcc39c8e83ecca97a0885f9f9e5720c074af06a129c3726add2046347a33",
+    "runs/2026-10-12-choice-grammar-marker-refusal.json": "0054fa4a0aa8fffdca737f12768b11549dc45bfd0f0a501a7072bcbe0dfd62ae",
+    "runs/2026-10-12-choice-grammar-prepared-website.json": "79458822b931022e41a994e3e24b0912e02bac74105f69d3b106e9f5db3c22c6",
+    "runs/2026-10-12-choice-grammar-recorded-website.json": "9803cac50d604308a1c71b0abd3342f4dfaaebf55b40f2099805dc89e5b7fb27",
+    "runs/2026-10-12-choice-grammar-selection-refusal.json": "fab7a6f0592945516614f40bc587b6059cecccf0cfbb133cfa87554f171d0a54",
+    "runs/2026-10-12-invitation-primary-preservation.json": "adb1a63f86044c30fe9ccdeea1eabbbccb01b3dff35d9455e757716a891eab98",
+    "runs/2026-10-12-invitation-protected-merge.json": "208852e64417570f3d9b59aef26bb0129dec65b5ca58255ad85f83ed7b744e7d",
+    "runs/2026-10-12-invitation-publication-network-refusal.json": "65c94500a5d93273be9d3cf3074fe5e212a410a9e072d464eca4a87adbda0656",
+    "runs/2026-10-12-invitation-publication.json": "e752b6335b4cadaf848c8f9dc547a3b96fae497d17c0b3e54cd6e40899695186",
+    "runs/2026-10-12-publication-input-current-PII_REDACTED.json": "c30c6ab26b7dc6fc7309daea7f5d576b8b94492bc24c3bd7c3d63bdf5874f189",
+    "runs/2026-10-12-publication-input-current-PS.json": "c3ef421063d385c6dfb032fa6c64837568e5dd3cf338a71ed7c9857898010597",
+    "runs/2026-10-12-publication-input-current-extension.json": "525f9ef952983a84132862b16abc9b69d654ec4c966a3c56077e44e25165ecbc",
+    "runs/2026-10-12-publication-input-current-protocol.json": "1dd03e65d747d7f0054986300d2d5e7f84145bb0109b0a2698b8dc6717e8b9f6",
+    "runs/2026-10-12-publication-input-current-website.json": "b738e06cbe1be8530d1c37697b3e1fd4093cf6df7cff5f3318c9450fe7630a0d",
+    "runs/2026-10-12-publication-input-reviewed-boundaries.json": "c1637bfaca327cfe007a0705ddeded02938b887cc173d26335769487f0661735",
+    "runs/2026-10-12-website-input-coverage-focused.json": "e1607bcc3565ca53b8c8bfe17a8aeb493789c4ec0aebd864e58b587f8d68d0fe",
+    "runs/2026-10-12-website-input-coverage-gap.json": "0d707b7a4d4c1d2d40b12d687af44e590fa77e63523691cd58cce00045f3c5d9",
+    "runs/2026-10-12-website-input-fixture-refusal.json": "af3ce1277f577f98fa2c84cd7e2982d6aab1442bc86851841bbd0626c5f74d38",
+    "scripts/check-choice-framing.py": "58b19b3dbf42591ac07ddc065f966911040ff1a5e1ba33f74bcc2e14d139c39a",
+    "scripts/verify-choice-framing.py": "f3d17d064e4559579dd67982ab0f4d5516551782a12355478059d31d78c9b883",
+    "scripts/verify-route-boundaries.py": "ed05890ef144a4e6d24482fd7110d346820824a5348ac206e1668cc4a4a9d15c",
+    "site/public/reference/public-scope.json": "84f09d25f39bff4612073cd20dfab3f04f1608c084b2088d18798729099e9256",
+    "site/src/public-scope.json": "84f09d25f39bff4612073cd20dfab3f04f1608c084b2088d18798729099e9256",
+    "site/src/scope-manifest.json": "0cb0574f247739bca042c41c744fa15c7d42ec7a991ddfadb32efc15caaa29cc",
+    "tests/test_choice_framing.py": "3ec7608ec988da295ee0732fa89e7e44d8f0c3a69fb61ed28b071d0f7a5e88a3",
+    "tests/test_website_evidence_inputs.py": "9c8ee63f0f9be1465cc074657d5f94fa2c8e0bdb4888512757d2ba5ceb9ed37e",
+    "tools/choice_framing.py": "323cdaec96f9e63068c6e4b7f21232dcb5df000b84ba2b66f691d1329d96af5e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-publication-input-current-website.json",
+      "sha256": "b738e06cbe1be8530d1c37697b3e1fd4093cf6df7cff5f3318c9450fe7630a0d"
+    },
+    {
+      "path": "runs/2026-10-12-publication-input-reviewed-boundaries.json",
+      "sha256": "c1637bfaca327cfe007a0705ddeded02938b887cc173d26335769487f0661735"
+    }
+  ],
+  "checks": []
+}

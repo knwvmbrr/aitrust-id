@@ -21,6 +21,7 @@ def verify(executable):
         manifest=base/'corpus.json';corpus.create([('reference',ref)],manifest)
         record=corpus.load(manifest)
         text='Either agree or oppose.'
+        private_subjects=[text]
         query=base/'subject.txt';query.write_text(text);query.chmod(0o600)
         context={'format':'choice-frame-context/v1','language':'en',
             'subject_sha256':digest(text),'manifest_sha256':record['manifest_sha256'],
@@ -34,7 +35,7 @@ def verify(executable):
             result=subprocess.run(command+extra,cwd=ROOT,capture_output=True,timeout=15)
             assert result.returncode==expected,name
             assert str(base).encode() not in result.stdout+result.stderr,name
-            assert text.encode() not in result.stdout+result.stderr,name
+            assert all(value.encode() not in result.stdout+result.stderr for value in private_subjects),name
             assert b'synthetic-private-canary' not in result.stdout+result.stderr,name
             controls.append({'case':name,'pass':True,'exit_status':expected})
             if expected:assert not result.stdout,name
@@ -65,6 +66,29 @@ def verify(executable):
         annotation.write_text(json.dumps(context))
         missed=json.loads(run('no_supported_pattern_is_not_safety_clearance',args,0).stdout)
         assert missed['state']=='NO_SUPPORTED_PATTERN' and not missed['manipulation_established']
+        for name,wording,construction,negated in [
+            ('exclusive_only_markers','Only agree or oppose.','only_or',False),
+            ('paired_negation_markers','Neither agree nor oppose.','neither_nor',True),
+            ('not_only_has_no_signal_candidate','Not only agree or oppose.','only_or',True),
+            ('mismatched_neither_or_is_unmatched','Neither agree or oppose.',None,False),
+        ]:
+            private_subjects.append(wording);query.write_text(wording)
+            context['subject_sha256']=digest(wording)
+            context['frames'][0].update(span=[0,len(wording)],choices=[
+                [wording.index(word),wording.index(word)+len(word)] for word in ('agree','oppose')])
+            annotation.write_text(json.dumps(context))
+            detail=base/name
+            parsed=json.loads(run(name,args+['--details',str(detail)],0).stdout)
+            actual=json.loads((detail/'choice-observations.json').read_text())
+            assert not parsed['tag_asserted'] and not parsed['manipulation_established']
+            if construction is None:
+                assert actual['state']=='NO_SUPPORTED_PATTERN' and actual['observations']==[]
+            else:
+                row=actual['observations'][0]
+                assert row['construction']==construction and not row['negation_scope_resolved']
+                assert bool(row['negation_marker_spans'])==negated
+                assert row['proposed_signal']==(None if negated else 'sig.false_dilemma.v1')
+                assert not row['additional_option_verified'] and not row['manipulation_established']
         run('arguments_do_not_echo_private_values',['--synthetic-private-canary'],2)
         demo=base/'practice'
         prepared=subprocess.run([str(executable),str(ROOT/'scripts/prepare-choice-demo.py'),
