@@ -115,6 +115,10 @@ jobs:
         run: |
           python -m pytest tests/test_reference_revision.py tests/test_corpus_support.py tests/test_nli_references.py -q
           python scripts/verify-reference-revision.py --output output/verification/reference-revisions.json
+      - name: Exercise private synthetic feedback analysis without collecting participant data
+        run: |
+          python -m pytest tests/test_feedback_analysis.py tests/test_research_admission.py -q
+          python scripts/verify-feedback-analysis.py --output output/verification/feedback-analysis.json
       - name: Check distinct caller-bound choice framing without a manipulation verdict
         run: python -m pytest tests/test_choice_framing.py tests/test_choice_framing_cli.py -q
       - name: Refuse altered source snapshots and unsafe signing policy

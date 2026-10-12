@@ -99,6 +99,8 @@ The separate [reference comparison command](docs/nli-references.md) selects pass
 
 [Review changed references](docs/reference-revisions.md) to identify which earlier comparisons need another check. The free offline command keeps unchanged pair context separate from stale passage ranking, offers a private practice example, and treats declared review windows as reminders rather than proof of freshness. It issues no NF/FI tag.
 
+[Understand feedback](docs/feedback-analysis.md) with a free offline practice workflow. Compare invented metadata batches, inspect explicit record denominators and keep reports separate from confirmed errors, people, accuracy and training. This preparation tool collects and uploads nothing; the real participant pilot remains a separate gate.
+
 ## Extension and local services
 
 After explicit opt-in in settings, the Chrome extension captures individual

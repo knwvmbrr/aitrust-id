@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-142154-feedback-current-execution-state-baa12f36
+
+Recorded 2026-10-12T14:21:54.679299+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded passing current website, route and full-suite execution and refreshed machine-readable state after all referenced receipts.
+- **Evidence.** All twelve website commands pass; the full Python suite passes 2879 tests with one platform skip and stable 702-source inventory. Personal checking remains independent of collection, identity, account and payment. [Change record](./runs/changes/2026-10-12-142154-feedback-current-execution-state-baa12f36.json).
+- **Not claimed.** Protected merge and exact public artifact verification remain pending. The failed website consumer invocation remains recorded. No participant pilot, independent accuracy, training label or full requirement closure is claimed; 87 remain open.
+
+
+### 2026-10-12-141524-feedback-repaired-capability-records-7e485fee
+
+Recorded 2026-10-12T14:15:24.576176+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded four fresh current-source capability checks after repairing the website verifier consumer argument.
+- **Evidence.** PS, PII_REDACTED, protocol and extension again pass with stable source inventories; the repaired manifest remains covered by the publication-input tests. [Change record](./runs/changes/2026-10-12-141524-feedback-repaired-capability-records-7e485fee.json).
+- **Not claimed.** Website revalidation and protected publication still pending; failed earlier website receipt retained and no full requirement closure claimed.
+
+
+### 2026-10-12-141437-feedback-verifier-consumer-repair-3be64b32
+
+Recorded 2026-10-12T14:14:37.924253+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed the website consumer to supply the feedback verifier required output argument and added a consumer-contract regression assertion.
+- **Evidence.** Eleven of twelve website commands passed; the last refused because its required --output argument was absent. The unchanged verifier already passes on Mac and isolated Linux with that argument. [Change record](./runs/changes/2026-10-12-141437-feedback-verifier-consumer-repair-3be64b32.json).
+- **Not claimed.** The first full website receipt remains failed; fresh current-source capability checks must pass before publication. No requirement is closed by this repair.
+
+
+### 2026-10-12-141117-feedback-four-capability-records-9c23a847
+
+Recorded 2026-10-12T14:11:17.628534+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded four successful current-source capability checks before the website rebuild consumes newly created receipts.
+- **Evidence.** PS, PII_REDACTED, protocol and extension commands passed against their stable selected source identities; protocol also executes the feedback contract tests. [Change record](./runs/changes/2026-10-12-141117-feedback-four-capability-records-9c23a847.json).
+- **Not claimed.** These engineering results do not approve independent accuracy, a real participant pilot or full requirement completion.
+
+
+### 2026-10-12-141017-feedback-static-projections-0a327644
+
+Recorded 2026-10-12T14:10:17.501349+00:00 · Contributor: Codex · change
+
+- **Changed.** Generated the private feedback practice guide and refreshed public 202-record scope projections; corrected a rejected changelog invocation by attaching actual execution evidence.
+- **Evidence.** The actual site build passed and preserved all 202 original completion percentages; only N-011 and F-141 gained component evidence. The rejected invocation wrote no event. [Change record](./runs/changes/2026-10-12-141017-feedback-static-projections-0a327644.json).
+- **Not claimed.** Generated pages do not turn practice counts into independent accuracy or complete the real recruited pilot. The observed build receipt makes no before/after source-stability claim.
+
+
+### 2026-10-12-140929-feedback-analysis-component-09990447
+
+Recorded 2026-10-12T14:09:29.249350+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented private invented-metadata feedback distributions, exact rate comparisons, a usable practice generator, strict input refusals, CI checks and source-bound publication evidence; recorded the prior reference publication.
+- **Evidence.** 64 selected component tests and eleven actual CLI groups passed on isolated non-root Linux with all eighty metadata combinations exercised, stable source bytes, external IPv4/IPv6 refusal and removed owned staging; the same CLI groups passed locally. [Change record](./runs/changes/2026-10-12-140929-feedback-analysis-component-09990447.json).
+- **Not claimed.** No participant intake, production database, independent accuracy, calibrated anomaly detection, person counting or training labels; full requirements remain at 115 complete and 87 open. The first setup assertion failure is retained and its empty staging directory was removed.
+
+
+### 2026-10-12-135700-reference-protected-publication-f40d9af9
+
+Recorded 2026-10-12T13:57:00.507916+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded normal protected PR 51 merge, clean exact publication, primary-checkout preservation and current state before continuing independent feedback analysis.
+- **Evidence.** All 22 required checks passed under unchanged strict policy with zero unresolved threads. All 759 artifact comparisons and four exact header values per origin passed at preview, apex and www. Twelve unrelated primary files stayed byte-identical. [Change record](./runs/changes/2026-10-12-135700-reference-protected-publication-f40d9af9.json).
+- **Not claimed.** A Python HEAD request returned 403; the same header values passed via bounded HTTPS curl requests. No NF/FI release, native Share, independent accuracy, real participant intake or full requirement closure is claimed.
+
+
 ### 2026-10-12-133258-reference-target-state-f727c32b
 
 Recorded 2026-10-12T13:32:58.728070+00:00 · Contributor: Codex · change
