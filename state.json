@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T14:21:54.572022+00:00",
-  "active_increment": "Synthetic feedback distributions and private practice workflow; protected publication pending",
+  "updated": "2026-10-12T14:40:28.883251+00:00",
+  "active_increment": "Private feedback analysis and three distinct result states; current checks passed, protected publication pending",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2879,
+  "python_tests_passed": 2882,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-12T14:08:57.449037+00:00",
+    "audited_at": "2026-10-12T14:31:07.991105+00:00",
     "completed_records": 115,
     "open_records": 87,
     "records_preserved": 202,
@@ -746,7 +746,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-12-feedback-full-suite.json",
+    "current_target_verification": "runs/2026-10-12-feedback-no-change-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-12"
@@ -966,7 +966,7 @@
   "personal_route_boundaries": {
     "status": "current source checks passed; feedback increment protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-12-feedback-reviewed-routes.json",
+    "evidence": "runs/2026-10-12-feedback-no-change-routes.json",
     "source_files": 702,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1028,13 +1028,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-12-feedback-repaired-current-PS.json",
     "PII_REDACTED": "runs/2026-10-12-feedback-repaired-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-feedback-repaired-current-protocol.json",
+    "protocol": "runs/2026-10-12-feedback-no-change-protocol.json",
     "extension": "runs/2026-10-12-feedback-repaired-current-extension.json",
-    "website": "runs/2026-10-12-feedback-repaired-website.json",
+    "website": "runs/2026-10-12-feedback-no-change-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T14:21:54.572022+00:00",
+  "updated_at": "2026-10-12T14:40:28.883251+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1962,7 +1962,7 @@
     "full_suite": "runs/2026-10-12-clean-checkout-reviewed-full-suite.json",
     "clean_source": "runs/2026-10-12-clean-source-fingerprint.json",
     "current_capability_inputs": 433,
-    "current_capability_receipt": "runs/2026-10-12-feedback-repaired-website.json"
+    "current_capability_receipt": "runs/2026-10-12-feedback-no-change-website.json"
   },
   "review_execution_binding": {
     "status": "protected_merged_and_exact_bytes_publication_verified",
@@ -2075,7 +2075,7 @@
     "public_guide": "https://aitrustid.com/reference/reference-revisions.md"
   },
   "feedback_analysis": {
-    "status": "offline_synthetic_component_executed; participant_pilot_pending",
+    "status": "corrected current source checks passed; protected merge and publication pending",
     "implemented_by": "Codex",
     "records": [
       "N-011",
@@ -2084,10 +2084,10 @@
     "architecture": "docs/feedback-analysis-plan.md",
     "guide": "docs/feedback-analysis.md",
     "result": "docs/feedback-analysis-result.md",
-    "local_evidence": "runs/2026-10-12-feedback-analysis-explanations-local.json",
-    "linux_evidence": "runs/2026-10-12-feedback-analysis-linux.json",
+    "local_evidence": "runs/2026-10-12-feedback-no-change-local.json",
+    "linux_evidence": "runs/2026-10-12-feedback-no-change-linux.json",
     "retained_setup_failure": "runs/2026-10-12-feedback-analysis-staging-refusal.json",
-    "selected_linux_python_tests": 64,
+    "selected_linux_python_tests": 67,
     "actual_cli_control_groups": 11,
     "metadata_combinations_exercised": 80,
     "actual_participant_data": false,
@@ -2097,10 +2097,12 @@
     "new_endpoints": 0,
     "production_changes": false,
     "requirements_closed": 0,
-    "full_suite": "runs/2026-10-12-feedback-full-suite.json",
-    "full_python_tests_passed": 2879,
-    "website_evidence": "runs/2026-10-12-feedback-repaired-website.json",
+    "full_suite": "runs/2026-10-12-feedback-no-change-full-suite.json",
+    "full_python_tests_passed": 2882,
+    "website_evidence": "runs/2026-10-12-feedback-no-change-website.json",
     "retained_consumer_argument_failure": "runs/2026-10-12-feedback-prepared-website.json",
-    "route_evidence": "runs/2026-10-12-feedback-reviewed-routes.json"
+    "route_evidence": "runs/2026-10-12-feedback-no-change-routes.json",
+    "focused_local_python_tests": 229,
+    "review_finding": "runs/2026-10-12-feedback-review-state-gap.json"
   }
 }

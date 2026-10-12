@@ -1,0 +1,106 @@
+{
+  "captured_at": "2026-10-12T14:29:51.005788+00:00",
+  "pass": true,
+  "selected_python_tests": 67,
+  "actual_cli_controls": 11,
+  "non_root": true,
+  "isolated_network_namespace_verified": true,
+  "ipv4_ipv6_external_connections_refused": 2,
+  "sources": {
+    "tools/feedback_analysis.py": "6cb0cd1651686769d4b39dfb400d96b3de2af3059251d24ef41ba6de1f317085",
+    "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/analyze-feedback.py": "3c03e00d5eb0e450b1e1c636677742ac357571369e0839312ef719fbd5a569da",
+    "scripts/prepare-feedback-analysis-demo.py": "51ce57aabd9ec6b274aa035b60662beeede5c2986508c4db95e2ac1a93d05569",
+    "scripts/verify-feedback-analysis.py": "76d341aa8a6dddf4f9d1bc8eb8b28241ea57284a25531d9efa9d4bd4248f658a",
+    "tests/test_feedback_analysis.py": "3ce6be9064f4cdeb0194d003ce313803ef2526d6d12b8c9150af9d338b6eb89b",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+  },
+  "source_unchanged_during_execution": true,
+  "controls": {
+    "captured_at": "2026-10-12T14:29:50.991343+00:00",
+    "pass": true,
+    "sources": {
+      "tools/feedback_analysis.py": "6cb0cd1651686769d4b39dfb400d96b3de2af3059251d24ef41ba6de1f317085",
+      "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
+      "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+      "scripts/analyze-feedback.py": "3c03e00d5eb0e450b1e1c636677742ac357571369e0839312ef719fbd5a569da",
+      "scripts/prepare-feedback-analysis-demo.py": "51ce57aabd9ec6b274aa035b60662beeede5c2986508c4db95e2ac1a93d05569",
+      "scripts/verify-feedback-analysis.py": "76d341aa8a6dddf4f9d1bc8eb8b28241ea57284a25531d9efa9d4bd4248f658a",
+      "tests/test_feedback_analysis.py": "3ce6be9064f4cdeb0194d003ce313803ef2526d6d12b8c9150af9d338b6eb89b"
+    },
+    "source_unchanged_during_execution": true,
+    "controls": [
+      {
+        "case": "actual_private_practice_generator",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "actual_counts_and_explicit_inspection_prompts",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "new_private_details",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "existing_details_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "insufficient_count_rule",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "nonfinite_rule_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "extra_private_text_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "public_input_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "hardlinked_input_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "invalid_utf8_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "all_eighty_combinations_with_unequal_denominators",
+        "pass": true,
+        "exit_status": 0
+      }
+    ],
+    "metadata_combinations_exercised": 80,
+    "synthetic_only": true,
+    "actual_participant_data": false,
+    "private_test_files_removed": true,
+    "accuracy_measured": false,
+    "people_counted": false,
+    "anomaly_diagnosed": false,
+    "training_labels_created": false,
+    "new_endpoints": 0,
+    "production_changes": false,
+    "requirements_closed": 0
+  },
+  "independent_accuracy_evidence": false,
+  "production_changes": false,
+  "requirements_closed": 0,
+  "owned_staging_removed": true
+}

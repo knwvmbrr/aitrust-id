@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-144028-feedback-no-change-integrated-state-b50e6d48
+
+Recorded 2026-10-12T14:40:28.966325+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded corrected full-source verification, current website and route execution and refreshed machine-readable state after all referenced evidence.
+- **Evidence.** All five capability receipts match current source; all twelve website commands pass; 2882 Python tests pass with one platform skip against 702 unchanged source inputs. [Change record](./runs/changes/2026-10-12-144028-feedback-no-change-integrated-state-b50e6d48.json).
+- **Not claimed.** Protected review and exact public artifact verification remain pending. Full requirements retain 115 complete and 87 open; no participant, independent accuracy or training claim.
+
+
+### 2026-10-12-143322-feedback-no-change-protocol-record-d5984fc7
+
+Recorded 2026-10-12T14:33:22.195614+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current protocol revalidation after the no-change-state repair, before the website consumes its new receipt.
+- **Evidence.** All protocol command groups pass with stable selected source bytes. Existing PS, redaction and extension receipts still match their unchanged source inventories. [Change record](./runs/changes/2026-10-12-143322-feedback-no-change-protocol-record-d5984fc7.json).
+- **Not claimed.** Website, full-suite and protected publication of the corrected head remain pending; no independent accuracy or full requirement completion claimed.
+
+
+### 2026-10-12-143150-feedback-no-change-projections-6de4598d
+
+Recorded 2026-10-12T14:31:50.514625+00:00 · Contributor: Codex · change
+
+- **Changed.** Built the corrected feedback guide and refreshed evidence-only scope projections before source revalidation.
+- **Evidence.** The actual build completed; all 202 scope IDs and completion percentages are retained. Current source-bound Linux controls exercise the repaired output states. [Change record](./runs/changes/2026-10-12-143150-feedback-no-change-projections-6de4598d.json).
+- **Not claimed.** No full requirement closes and no independent accuracy or recruited-pilot acceptance is implied by the generated pages.
+
+
+### 2026-10-12-143108-feedback-no-change-state-acc487bc
+
+Recorded 2026-10-12T14:31:08.223437+00:00 · Contributor: Codex · change
+
+- **Changed.** Repaired protected-review finding by distinguishing unchanged category proportions, small descriptive changes and insufficient record counts; updated private CLI next steps and consumer regressions.
+- **Evidence.** 229 focused local tests and 67 selected isolated Linux tests pass; eleven actual CLI control groups assert no-change behavior on all eighty combinations with unequal denominators. Current sources stay unchanged and private Linux staging is removed. [Change record](./runs/changes/2026-10-12-143108-feedback-no-change-state-acc487bc.json).
+- **Not claimed.** Earlier receipts and the review finding remain available; corrected integration and protected publication pending. No new participant intake, training or full requirement closure.
+
+
 ### 2026-10-12-142154-feedback-current-execution-state-baa12f36
 
 Recorded 2026-10-12T14:21:54.679299+00:00 · Contributor: Codex · change

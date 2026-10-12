@@ -22,7 +22,7 @@ percentage-point change. The defaults, 20 records and 10 points, are preparation
 settings, not scientific thresholds or release gates. Exact fractions determine
 whether the rule is met; displayed changes are rounded to six decimal places.
 Both increases and decreases can prompt inspection. Insufficient counts are
-reported separately and produce no inspection prompt.
+reported separately and produce no inspection prompt. A sufficient batch with unchanged category proportions has its own no-change state, even when record totals differ. Small changes below the chosen rule remain changes with zero inspection prompts.
 
 ## Try the whole workflow
 

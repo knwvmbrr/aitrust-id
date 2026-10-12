@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-144028-feedback-no-change-integrated-state-b50e6d48",
+  "recorded_at": "2026-10-12T14:40:28.966325+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "84a86e8eb422337cd6f8da98eddf6353a3681fc5",
+  "changed": "Recorded corrected full-source verification, current website and route execution and refreshed machine-readable state after all referenced evidence.",
+  "proves": "All five capability receipts match current source; all twelve website commands pass; 2882 Python tests pass with one platform skip against 702 unchanged source inputs.",
+  "limits": "Protected review and exact public artifact verification remain pending. Full requirements retain 115 complete and 87 open; no participant, independent accuracy or training claim.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "docs/feedback-analysis-result.md": "15413490a8648635fcc7b70c6e5da9dea22615e1b6aa63f8ced7d8ee9c32195a",
+    "docs/feedback-analysis.md": "8da85563122867e1e019091b229f0922e2466ce719e084829bbc86d8ca60418d",
+    "docs/scope-progress.json": "1762dcf29d8ac9a0c9a2b53a1cf279b5fc11042a971e8354f865cfeff22e17e3",
+    "docs/scope-progress.md": "fdba74d3735b61afbbd8326355be0662dd3e9ccc4e7c45113916a0899edbcff7",
+    "eval/route-boundaries.json": "fe96a654a3a601000acf4375b76c9680610191fe27c5c3734d3c1184af0f79c3",
+    "runs/2026-10-12-feedback-no-change-full-suite.json": "dd735fb5070cd79d6cbfc65e5e5765c295a161a9477ae2ca89a7c233e215b710",
+    "runs/2026-10-12-feedback-no-change-linux.json": "715fd3cba4a47c9894e249364c2ddfba37dd3ec97331153547c4cbab81587d99",
+    "runs/2026-10-12-feedback-no-change-local.json": "97749d7975fa9a23a6186c1b9224cb5952feeb752a7ec1013e3e53792f71ab82",
+    "runs/2026-10-12-feedback-no-change-protocol.json": "d9931828a505537043a5e5f4f5daf954933994ffdd5dbc97bc3154136986d514",
+    "runs/2026-10-12-feedback-no-change-routes.json": "4107fb7c2b342ee50cf9e038563f0a8337f39cce617dd36bc82451326046810a",
+    "runs/2026-10-12-feedback-no-change-website.json": "b7cdd1b44a202a5db71574ac562677a956d9079aa7b60098029d2d0c97b21324",
+    "runs/2026-10-12-feedback-review-state-gap.json": "aa395dafa303703cde2cfc73ed434cd7505aef87d2e7d82749738e363d574153",
+    "scripts/analyze-feedback.py": "3c03e00d5eb0e450b1e1c636677742ac357571369e0839312ef719fbd5a569da",
+    "scripts/verify-feedback-analysis.py": "76d341aa8a6dddf4f9d1bc8eb8b28241ea57284a25531d9efa9d4bd4248f658a",
+    "site/public/reference/feedback-analysis.md": "8da85563122867e1e019091b229f0922e2466ce719e084829bbc86d8ca60418d",
+    "site/public/reference/public-scope.json": "b5d51af73b581ef51291f698b3b504f58aec426740db31e341a49542f3673a0d",
+    "site/src/public-scope.json": "b5d51af73b581ef51291f698b3b504f58aec426740db31e341a49542f3673a0d",
+    "site/src/scope-manifest.json": "a68f16714c877ea80b64dff1125f7a7c990e500d5712816c51e46b9d3a34366f",
+    "state.json": "47e9f0e961f9cae888e5eaf7b69c3efdecb9b4bfce597f644b20eb2fa9d2174d",
+    "tests/test_feedback_analysis.py": "3ce6be9064f4cdeb0194d003ce313803ef2526d6d12b8c9150af9d338b6eb89b",
+    "tools/feedback_analysis.py": "6cb0cd1651686769d4b39dfb400d96b3de2af3059251d24ef41ba6de1f317085"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-feedback-no-change-full-suite.json",
+      "sha256": "dd735fb5070cd79d6cbfc65e5e5765c295a161a9477ae2ca89a7c233e215b710"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-no-change-website.json",
+      "sha256": "b7cdd1b44a202a5db71574ac562677a956d9079aa7b60098029d2d0c97b21324"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-no-change-routes.json",
+      "sha256": "4107fb7c2b342ee50cf9e038563f0a8337f39cce617dd36bc82451326046810a"
+    }
+  ],
+  "checks": []
+}

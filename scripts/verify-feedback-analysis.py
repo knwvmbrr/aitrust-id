@@ -53,6 +53,7 @@ def verify():
   (base/'after.json').write_text(json.dumps(batch(rows*2)))
   all_choices=json.loads(run('all_eighty_combinations_with_unequal_denominators').stdout)
   assert all_choices['before_records']==80 and all_choices['after_records']==160 and all_choices['inspection_prompts']==0
+  assert all_choices['state']=='no_category_rate_change' and 'did not change' in all_choices['next_step']
  assert before==hashes() and not base.exists()
  return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,'sources':before,
   'source_unchanged_during_execution':True,'controls':controls,'metadata_combinations_exercised':80,

@@ -165,3 +165,13 @@ def test_actual_practice_generation_refuses_unsafe_destination(tmp_path,unsafe):
  result=invoke([sys.executable,str(ROOT/'scripts/prepare-feedback-analysis-demo.py'),'--output',str(target)])
  assert result.returncode==2 and not result.stdout
  assert not (tmp_path/'elsewhere').exists()
+
+
+@pytest.mark.parametrize(('first','second','minimum','threshold','state'), [
+    ([ROWS[0]]*20, [ROWS[0]]*40, 20, 10, 'no_category_rate_change'),
+    ([ROWS[0]]*20, [ROWS[0]]*19+[ROWS[-1]], 20, 10, 'descriptive_changes'),
+    ([ROWS[0]]*19, [ROWS[0]]*20, 20, 10, 'insufficient_records_for_selected_inspection_rule'),
+])
+def test_no_change_small_change_and_insufficient_counts_remain_distinct(first,second,minimum,threshold,state):
+    result=a.compare(batch(first),batch(second),minimum,threshold)
+    assert result['state']==state and not any(r['inspection_prompt'] for r in result['comparisons'])

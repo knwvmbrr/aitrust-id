@@ -84,7 +84,8 @@ def compare(first, second, minimum_records=20, percentage_points=10):
     return {'profile': RESULT, 'synthetic_only': True, 'tag': FIXED['tag'], 'method_version': FIXED['method_version'],
         'before': before, 'after': after, 'comparisons': rows,
         'inspection_rule': {'minimum_records_in_each_batch': minimum_records, 'absolute_percentage_point_change': percentage_points},
-        'state': 'descriptive_changes' if sufficient else 'insufficient_records_for_selected_inspection_rule',
+        'state': ('descriptive_changes' if any(row['direction'] != 'unchanged' for row in rows)
+                  else 'no_category_rate_change') if sufficient else 'insufficient_records_for_selected_inspection_rule',
         'records_are_people': False, 'repeated_metadata_establishes_duplicate_people': False,
         'reports_are_verified_errors': False, 'accuracy_measured': False, 'anomaly_diagnosed': False,
         'independent_evidence': False, 'training_labels_created': False, 'tags_asserted': [], 'network_used': False}
