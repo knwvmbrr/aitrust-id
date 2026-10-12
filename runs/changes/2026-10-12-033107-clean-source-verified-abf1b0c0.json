@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-033107-clean-source-verified-abf1b0c0",
+  "recorded_at": "2026-10-12T03:31:07.589790+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b33987c2eb6bb4516e5be51452adfba5d9fdc00e",
+  "changed": "Complete the clean-checkout source identity correction and retain refused attempts; refresh all five capabilities and current route review.",
+  "proves": "2548 source-bound tests pass; eight website checks bind 381 source inputs, and 671 route inputs pass review. Derived outputs remain covered by build/publication checks.",
+  "limits": "87 requirements remain open. Independent accuracy and physical-device acceptance are not replaced.",
+  "scope_ids": [
+    "F-120",
+    "N-007"
+  ],
+  "files": {
+    "docs/choice-framing-plan.md": "d0ffd3a1236d795b59b4623f474906be9c80093e2c745f14fc5fa5e45574bf51",
+    "eval/revalidation.json": "d33f105d28cc31919507cb38e933c72906a658e88c6670d9de3805d2aa7211c7",
+    "eval/route-boundaries.json": "edaaaa89fcb76336d0d312b5982bd2fcd383e056ed0077c379d550a0b8d5bcd1",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "runs/2026-10-12-clean-checkout-current-PII_REDACTED.json": "9c1708d785b1a75332ead10ffa663f79f1c1ffd409bcd159d7ee4fee40d87fe0",
+    "runs/2026-10-12-clean-checkout-current-PS.json": "b540f6021f3d631f057b9c4c73c14cb58afd61cea25c9af0246607098412cd54",
+    "runs/2026-10-12-clean-checkout-current-extension.json": "73c753264cf6e237e57aca766d93bc75be28bfe77d30bbcfccd01774dbb0f4cf",
+    "runs/2026-10-12-clean-checkout-current-protocol.json": "8c378e83a9888e88e763fb14794ba7a397ede4ade62398014c12727f40d69b2f",
+    "runs/2026-10-12-clean-checkout-current-website.json": "fb11bb3fa67481d7f0fd4aff910ffb5d76c674db86fc7e59960d7ab76f4d8601",
+    "runs/2026-10-12-clean-checkout-full-suite.json": "0c7841d864dd18b9017d0b3b102519ee0078795c5d29bfa67975ca6776103714",
+    "runs/2026-10-12-clean-checkout-recorded-website.json": "987635f36c5320ecd7afb8d3391f577c1db2b32efc22d0e755b044a3b97d0f49",
+    "runs/2026-10-12-clean-checkout-reviewed-full-suite.json": "cc2f45bbc5435d7811f3eb6b1d58b87990e08f7ba6c07d1098218f31e55b92e2",
+    "runs/2026-10-12-clean-checkout-reviewed-routes.json": "0f1697fb41fb05c485de38987c0b829b6c3d843c70b8b057df1fa2a963aae6dc",
+    "runs/2026-10-12-clean-source-fingerprint.json": "240aa881fa0c2171766ae0ca68a6220dfbd4a1d2aa4e5a97ea56bceec980d864",
+    "scripts/verify-route-boundaries.py": "2b91d7dbce0b6c1fa7be52dc54c8aa4a12a5bf17b87a2dd073ac1fa6d7e4561f",
+    "state.json": "73c20e2f746978d1ac5b9fc87beb5c6ba89ba92b83dbfc2637b69fff82d0d7a5",
+    "tests/test_website_evidence_inputs.py": "b0cd08d777eb1ee394b9682b0092a04077d4bb7c43225de672a615fa7742d626"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-clean-checkout-reviewed-full-suite.json",
+      "sha256": "cc2f45bbc5435d7811f3eb6b1d58b87990e08f7ba6c07d1098218f31e55b92e2"
+    },
+    {
+      "path": "runs/2026-10-12-clean-checkout-recorded-website.json",
+      "sha256": "987635f36c5320ecd7afb8d3391f577c1db2b32efc22d0e755b044a3b97d0f49"
+    },
+    {
+      "path": "runs/2026-10-12-clean-checkout-reviewed-routes.json",
+      "sha256": "0f1697fb41fb05c485de38987c0b829b6c3d843c70b8b057df1fa2a963aae6dc"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T03:31:07.895931+00:00"
+    }
+  ]
+}

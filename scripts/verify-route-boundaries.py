@@ -99,6 +99,7 @@ PATTERNS += ('tools/choice_framing.py','scripts/check-choice-framing.py','script
              'scripts/verify-choice-framing.py','tests/test_choice_framing.py','tests/test_choice_framing_cli.py',
              'docs/choice-framing.md','docs/choice-framing-plan.md','docs/choice-grammar-result.md','docs/changelog-policy.md',
              'eval/revalidation.json','tests/test_website_evidence_inputs.py')
+PATTERNS += ('scripts/build-device-detector.py',)
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
@@ -190,7 +191,8 @@ def inventory(root):
                 raise ValueError('Boundary source symlink refused')
             if file.is_file():
                 relative = file.relative_to(root).as_posix()
-                if relative == HOST_RENDERED_ASSET:
+                if (relative in (HOST_RENDERED_ASSET, 'site/src/device-manifest.json')
+                        or re.fullmatch(r'site/public/device/method-[a-f0-9]{64}\.py', relative)):
                     continue
                 found[relative] = hashlib.sha256(file.read_bytes()).hexdigest()
     if not found:
