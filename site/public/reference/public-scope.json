@@ -8179,7 +8179,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-12T15:19:38.859270+00:00",
+        "audited_at": "2026-10-12T15:43:30.541365+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -8208,7 +8208,11 @@
           "runs/2026-10-12-backup-retention-cache-failure.json",
           "runs/2026-10-12-backup-retention-ordered-linux.json",
           "runs/2026-10-12-backup-retention-ordered-refusals.json",
-          "runs/2026-10-12-backup-retention-order-fix.json"
+          "runs/2026-10-12-backup-retention-order-fix.json",
+          "runs/2026-10-12-backup-cancellation-linux.json",
+          "runs/2026-10-12-backup-cancellation-encrypted.json",
+          "runs/2026-10-12-backup-cancellation-refusals.json",
+          "runs/2026-10-12-backup-cancellation-review-finding.json"
         ],
         "evidence_scope": "Includes current disposable encrypted Linux retention controls, source binding and cleanup; logical deletion and named expiry are not physical erasure, production retention acceptance or replacement-host recovery.",
         "required_acceptance": [
@@ -12650,7 +12654,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-12T15:19:38.859270+00:00",
+        "audited_at": "2026-10-12T15:43:30.541365+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -12723,7 +12727,11 @@
           "runs/2026-10-12-backup-retention-cache-failure.json",
           "runs/2026-10-12-backup-retention-ordered-linux.json",
           "runs/2026-10-12-backup-retention-ordered-refusals.json",
-          "runs/2026-10-12-backup-retention-order-fix.json"
+          "runs/2026-10-12-backup-retention-order-fix.json",
+          "runs/2026-10-12-backup-cancellation-linux.json",
+          "runs/2026-10-12-backup-cancellation-encrypted.json",
+          "runs/2026-10-12-backup-cancellation-refusals.json",
+          "runs/2026-10-12-backup-cancellation-review-finding.json"
         ],
         "evidence_scope": "Includes current disposable encrypted Linux retention controls, source binding and cleanup; logical deletion and named expiry are not physical erasure, production retention acceptance or replacement-host recovery.",
         "required_acceptance": [

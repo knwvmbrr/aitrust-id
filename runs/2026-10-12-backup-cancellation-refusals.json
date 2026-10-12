@@ -1,0 +1,53 @@
+{
+  "captured_at": "2026-10-12T15:40:12.474964+00:00",
+  "pass": true,
+  "controls": [
+    {
+      "case": "non_root_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "host_namespace_root_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "root_account_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "unknown_account_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "optimized_checks_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "private_argument_not_echoed",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "extra_interface_refused",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "no_report_or_project_bytecode_created": true,
+  "owned_staging_removed": true,
+  "production_changes": false,
+  "requirements_closed": 0,
+  "sources": {
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "scripts/verify-backup-retention.py": "24afd1c8796e4b7905153de7b593b95607f794457941cabb565731ab6127ef79",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09"
+  },
+  "staged_archive_sha256": "3607a7184db59c7d4b6f6717526efd0dc35b8d76ff54a4f48b2478a1ade77f4e"
+}

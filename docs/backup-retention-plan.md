@@ -46,3 +46,11 @@ Register owned clusters before attempting startup so timeout cleanup cannot omit
 a server that started just before its launcher failed. Failed cleanup cannot claim
 success or remove a running owned database directory. Publish only sanitized
 statuses/source hashes; optional raw logs remain private and outside the checkout.
+
+Protected-review correction, before refactor: KeyboardInterrupt/SystemExit
+must remain cancellations after owned cleanup, never become a control result or
+an unset-variable failure. Remove the return from the cleanup finally block.
+Retain the original cancellation if cleanup is interrupted again, attempt the
+other owned stops, and leave any unresolved active cluster directory intact.
+Test interruptions before startup, after registration/start, repeated cleanup
+cancellation and SystemExit; no real or production database in those unit tests.

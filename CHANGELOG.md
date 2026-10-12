@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-155307-backup-cancellation-final-current-state-a5664723
+
+Recorded 2026-10-12T15:53:07.395112+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the cancellation-safe full-suite run and current state before updating protected review.
+- **Evidence.** 2901 local Python tests pass with five platform skips; four Linux-specific interruption cases and all 21 selected safety tests pass on actual isolated Linux. Five current capability receipts assess successfully. [Change record](./runs/changes/2026-10-12-155307-backup-cancellation-final-current-state-a5664723.json).
+- **Not claimed.** Protected publication is pending; logical expiry is not physical erasure, a recruited pilot or full replacement-host recovery. No independent release or full requirement closure.
+
+
+### 2026-10-12-155101-backup-cancellation-current-website-routes-c7efcb47
+
+Recorded 2026-10-12T15:51:01.258724+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the corrected cancellation-safe source to stable website and reviewed route evidence.
+- **Evidence.** All five current engineering receipts assess successfully; thirteen website commands pass and 708 reviewed route inputs match. [Change record](./runs/changes/2026-10-12-155101-backup-cancellation-current-website-routes-c7efcb47.json).
+- **Not claimed.** Full-suite recheck and protected publication remain pending; release and full requirement gates are unchanged.
+
+
+### 2026-10-12-154600-backup-cancellation-current-protocol-de4d9b96
+
+Recorded 2026-10-12T15:46:00.300925+00:00 · Contributor: Codex · change
+
+- **Changed.** Register the current cancellation-safe protocol receipt before website verification.
+- **Evidence.** All eight selected protocol commands pass with unchanged source hashes; actual Linux interruption and encrypted controls are retained separately. [Change record](./runs/changes/2026-10-12-154600-backup-cancellation-current-protocol-de4d9b96.json).
+- **Not claimed.** Current website/full-suite rechecks and protected publication remain pending; no full requirement closure or independent release claim.
+
+
+### 2026-10-12-154428-backup-cancellation-review-correction-23182923
+
+Recorded 2026-10-12T15:44:28.577809+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve original cancellation through owned cleanup and remove the cleanup finally-return; bind interruption regressions and prepared static projections.
+- **Evidence.** 21 selected safety tests including four interruption regressions pass on isolated Linux. Corrected source passes seven actual encrypted controls and seven early refusals again with cleanup. [Change record](./runs/changes/2026-10-12-154428-backup-cancellation-review-correction-23182923.json).
+- **Not claimed.** Unit interruption tests use mocked subprocess boundaries. Current integrated rechecks and protected publication remain pending; no production, physical erasure, independent accuracy or full closure claim.
+
+
 ### 2026-10-12-153159-backup-retention-final-current-state-3956fec7
 
 Recorded 2026-10-12T15:31:59.344283+00:00 · Contributor: Codex · change

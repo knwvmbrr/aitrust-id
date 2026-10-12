@@ -48,7 +48,8 @@ contract could not be met. Check the exit status as well as the JSON.
 The retention value is for this disposable test only. It does not adopt or change
 a production retention policy. The test stops every owned cluster, removes its
 temporary database directory and binds the result to five source-file hashes.
-Cleanup failure prevents a passing result. It never deletes another backup or
+Cleanup failure prevents a passing result. Ctrl-C and other cancellations remain
+cancellations after cleanup; an unresolved active cluster directory is kept intact. It never deletes another backup or
 cluster to make a check pass.
 
 Raw command logs may contain the temporary test encryption key. They are discarded

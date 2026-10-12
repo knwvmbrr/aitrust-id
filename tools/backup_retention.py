@@ -83,6 +83,7 @@ def verify(namespace):
           if expected_rows:assert sql('SELECT value FROM invented_feedback;',6541)=='synthetic-choice'
          finally:stop(target)
          controls.append({'case':name,'pass':True,'rows':expected_rows})
+        cancellation=None;failure=None
         try:
          version=run([backrest,'version']).stdout.decode().strip();pgversion=run([pg/'postgres','--version']).stdout.decode().strip()
          parsed=re.fullmatch(r'pgBackRest ([0-9]+)\.([0-9]+)\.([0-9]+)',version)
@@ -107,14 +108,21 @@ def verify(namespace):
          b('--repo1-retention-full=1','expire');labels=info();assert len(labels)==1 and labels[0]['label']==new
          run([backrest,'--config='+str(config),'--config-include-path='+str(empty_config),'--stanza=practice','--pg1-path='+str(work/'expired-restore'),'--set='+old,'restore'],expected='refuse');controls.append({'case':'expired_exact_label_refused','pass':True})
          restore(new,'retained-after-expiry',0);success=True
-        except Exception as error:
-         failure={'type':type(error).__name__,'reason':'synthetic_backup_control_refused'}
+        except BaseException as error:
+         if isinstance(error,Exception):failure={'type':type(error).__name__,'reason':'synthetic_backup_control_refused'}
+         else:cancellation=error
         finally:
          cleanup=True
          for path in list(active):
           try:stop(path)
-          except Exception:cleanup=False
-         log.close();raw=(work/'execution.log').read_bytes()
+          except BaseException as error:
+           cleanup=False
+           if not isinstance(error,Exception) and cancellation is None:cancellation=error
+         log.close()
+         if cancellation is not None:
+          if cleanup:shutil.rmtree(work)
+          raise cancellation
+         raw=(work/'execution.log').read_bytes()
          proof={'captured_at':datetime.now(timezone.utc).isoformat(),'pass':success and cleanup,'controls':controls,'external_connections_refused':len(blocked),'non_root':True,'socket_only_clusters':True,'isolated_network_namespace':True,'pgbackrest_version':locals().get('version'),'postgresql_version':locals().get('pgversion'),'logical_sql_deletion_only':True,'physical_erasure_verified':False,'provider_copies_deleted':False,'production_changes':False,'actual_participant_data':False,'requirements_closed':0,'stdout_sha256':hashlib.sha256(raw).hexdigest(),'clusters_stopped':cleanup}
          if not success:proof['private_failure']=failure
          if cleanup:shutil.rmtree(work)
@@ -122,7 +130,7 @@ def verify(namespace):
          proof['sources']=before
          proof['source_unchanged_during_execution']=before==hashes()
          proof['pass']=proof['pass'] and proof['source_unchanged_during_execution'] and proof['owned_database_directory_removed']
-         return proof,raw
+        return proof,raw
     finally:
         if 'log' in locals() and not log.closed:log.close()
         if work is not None and work.exists() and not active:

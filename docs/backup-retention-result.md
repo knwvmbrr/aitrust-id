@@ -52,3 +52,18 @@ namespace check set the process umask before refusing, affecting a later file-mo
 test. The namespace guard now runs before changing umask, and its regression
 forbids that state change on refusal. The failed run is retained; current-source
 Linux controls are rerun after this correction.
+
+Protected review found cancellation could read an unset failure variable, while
+a return in finally could suppress the cancellation. The corrected cleanup
+preserves the original KeyboardInterrupt/SystemExit, including a second cleanup
+interruption, and retains unresolved active directories. All 21 selected safety
+tests, including four mocked-process interruption regressions, passed on isolated
+Linux; these unit tests start no real database. The four Linux-specific tests are
+explicitly skipped on macOS, where 76 other focused checks pass. The corrected
+source separately passed all seven actual encrypted controls and seven early
+refusals again. Source hashes and staging cleanup passed.
+
+[Current Linux interruption regressions](../runs/2026-10-12-backup-cancellation-linux.json),
+[current encrypted controls](../runs/2026-10-12-backup-cancellation-encrypted.json),
+[current early refusals](../runs/2026-10-12-backup-cancellation-refusals.json), and
+[retained review finding](../runs/2026-10-12-backup-cancellation-review-finding.json).
