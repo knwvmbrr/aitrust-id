@@ -1,0 +1,92 @@
+{
+  "captured_at": "2026-10-12T12:09:06.794528+00:00",
+  "pass": true,
+  "source_commit": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+  "preview": "https://e38973eb.aitrust-id.pages.dev",
+  "matching_artifacts": 756,
+  "artifacts_per_origin": 252,
+  "origins": [
+    {
+      "origin": "https://e38973eb.aitrust-id.pages.dev",
+      "matching_artifacts": 252,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "matching_artifacts": 252,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://www.aitrustid.com",
+      "matching_artifacts": 252,
+      "security_headers_present": true
+    }
+  ],
+  "actual_publication_verification": {
+    "captured_at": "2026-10-12T12:01:30.943Z",
+    "pass": true,
+    "source_commit": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+    "artifacts_per_origin": 252,
+    "origins": [
+      {
+        "origin": "https://e38973eb.aitrust-id.pages.dev",
+        "matching_artifacts": 252,
+        "security_headers_present": true
+      },
+      {
+        "origin": "https://aitrustid.com",
+        "matching_artifacts": 252,
+        "security_headers_present": true
+      },
+      {
+        "origin": "https://www.aitrustid.com",
+        "matching_artifacts": 252,
+        "security_headers_present": true
+      }
+    ],
+    "matching_artifacts": 756,
+    "scope": "Exact decoded HTTP bytes of the reviewed build; not an independent source audit or detector accuracy test",
+    "independent_accuracy_evidence": false
+  },
+  "actual_headers_verification": {
+    "captured_at": "2026-10-12T12:06:36.528Z",
+    "pass": true,
+    "origins": [
+      {
+        "origin": "https://e38973eb.aitrust-id.pages.dev",
+        "pass": true,
+        "verified_header_names": [
+          "content-security-policy",
+          "cache-control",
+          "x-content-type-options",
+          "referrer-policy"
+        ]
+      },
+      {
+        "origin": "https://aitrustid.com",
+        "pass": true,
+        "verified_header_names": [
+          "content-security-policy",
+          "cache-control",
+          "x-content-type-options",
+          "referrer-policy"
+        ]
+      },
+      {
+        "origin": "https://www.aitrustid.com",
+        "pass": true,
+        "verified_header_names": [
+          "content-security-policy",
+          "cache-control",
+          "x-content-type-options",
+          "referrer-policy"
+        ]
+      }
+    ]
+  },
+  "clean_exact_source_built_check_passed": true,
+  "whoami_immediately_before_deploy": true,
+  "scope": "Exact decoded HTTP artifact bytes and four index delivery headers at three origins; not detector accuracy, live research intake or whole-site security certification.",
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0
+}

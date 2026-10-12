@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-133258-reference-target-state-f727c32b
+
+Recorded 2026-10-12T13:32:58.728070+00:00 · Contributor: Codex · change
+
+- **Changed.** Pointed the target ledger at the latest reference-revision increment and completed current-source suite while retaining the original full completion counts.
+- **Evidence.** The current source suite passed 2813 tests with stable reviewed source bytes; the state references that exact evidence and a timestamp after its execution. [Change record](./runs/changes/2026-10-12-133258-reference-target-state-f727c32b.json).
+- **Not claimed.** There are still 87 full requirements open and 37 further closures needed to reach 50; no partial component is counted as a full closure.
+
+
+### 2026-10-12-133227-reference-final-execution-records-49c86b6b
+
+Recorded 2026-10-12T13:32:27.854789+00:00 · Contributor: Codex · change
+
+- **Changed.** Updated current state, source-bound route review and immutable full execution records for the reference-revision increment.
+- **Evidence.** All five capability checks passed, including all ten website commands; the route review covers 694 current source files. The full Python suite passed 2813 tests with one platform skip and stable reviewed source hashes. [Change record](./runs/changes/2026-10-12-133227-reference-final-execution-records-49c86b6b.json).
+- **Not claimed.** Protected merge and publication are pending. The independent release gate and full human, physical-device, source-authority and tag-accuracy acceptance remain open; 115 complete and 87 open requirements are unchanged.
+
+
+### 2026-10-12-132712-reference-source-check-records-1a339542
+
+Recorded 2026-10-12T13:27:12.952596+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded four passing current capability checks and the retained website prebuild refusal; corrected bookkeeping order before a fresh website run.
+- **Evidence.** PS, PII_REDACTED, protocol and extension checks passed with stable source identities. The website gate correctly refused newly created receipts without matching changelog events; this event supplies those records before rebuilding. [Change record](./runs/changes/2026-10-12-132712-reference-source-check-records-1a339542.json).
+- **Not claimed.** The first website receipt remains failed. No independent accuracy, additional tag or full requirement completion is credited.
+
+
+### 2026-10-12-132520-reference-revision-static-projections-788d2051
+
+Recorded 2026-10-12T13:25:20.459448+00:00 · Contributor: Codex · change
+
+- **Changed.** Rendered the reference-revision guide and independent NF/FI reference links, and regenerated complete 202-record public scope projections without changing completion percentages.
+- **Evidence.** The actual site build completed and produced the guide, tag reference pages and scope projections from the reviewed source. [Change record](./runs/changes/2026-10-12-132520-reference-revision-static-projections-788d2051.json).
+- **Not claimed.** Generated pages do not establish independently validated tags or close any requirement.
+
+
+### 2026-10-12-132409-reference-revision-dependency-controls-1a0ff652
+
+Recorded 2026-10-12T13:24:09.518121+00:00 · Contributor: Codex · change
+
+- **Changed.** Implemented offline selective reference-dependency review, separate global ranking invalidation, untrusted declared review windows, private practice preparation and publication-source coverage; retained and skipped the unavailable native simulator control attempt.
+- **Evidence.** 147 focused local Python tests passed; 131 selected tests and ten actual CLI control groups passed on isolated non-root Linux with stable source hashes and removed private staging. Altered evidence, unsafe files and stale ranking are refused. [Change record](./runs/changes/2026-10-12-132409-reference-revision-dependency-controls-1a0ff652.json).
+- **Not claimed.** No full requirement closes, no NF/FI tag or independently validated accuracy is established, declared dates do not authenticate freshness, and the native Share route and physical phones remain unverified.
+
+
+### 2026-10-12-120906-admission-protected-publication-bb0f88cc
+
+Recorded 2026-10-12T12:09:06.988675+00:00 · Contributor: Codex · change
+
+- **Changed.** Record protected synthetic admission merge, live exact artifact verification and preserved owner checkout; move to the next native runtime investigation.
+- **Evidence.** 22 required checks and two PostgreSQL jobs passed on the exact PR head; normal protected merge; 756 live artifact comparisons and four headers at all three origins; 12 unrelated local files preserved. [Change record](./runs/changes/2026-10-12-120906-admission-protected-publication-bb0f88cc.json).
+- **Not claimed.** No full requirement closed or participant/service/independent accuracy claim. The next native-runtime candidate is private and is not a released Share app.
+
+
 ### 2026-10-12-114901-admission-current-integration-894497fd
 
 Recorded 2026-10-12T11:49:01.055273+00:00 · Contributor: Codex · change

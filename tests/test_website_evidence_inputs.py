@@ -119,3 +119,13 @@ def test_synthetic_admission_consumers_bind_executable_and_database_contract(cap
         'deploy/research/metadata-development.sql','deploy/research/metadata-invitation-development.sql',
         'tests/test_research_admission.py','.github/workflows/metadata-storage.yml'}
     assert required <= fingerprint(capability)['sources'].keys()
+
+
+@pytest.mark.parametrize('capability', ['protocol', 'website'])
+def test_reference_revision_consumers_bind_source_and_privacy_contract(capability):
+    required = {'tools/reference_revision.py', 'scripts/review-reference-revision.py',
+        'scripts/prepare-reference-revision-demo.py', 'scripts/verify-reference-revision.py',
+        'tests/test_reference_revision.py', 'tools/blind_review_io.py', 'protocol/corpus.py',
+        'protocol/corpus_support.py', 'protocol/normalization.py', 'protocol/unicode15-data.json',
+        'docs/reference-revisions.md', '.github/workflows/ci.yml'}
+    assert required <= fingerprint(capability)['sources'].keys()

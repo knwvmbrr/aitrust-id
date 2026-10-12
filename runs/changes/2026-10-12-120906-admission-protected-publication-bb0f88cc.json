@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-120906-admission-protected-publication-bb0f88cc",
+  "recorded_at": "2026-10-12T12:09:06.988675+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "99dd9b2b429a421bd8dda7c5abdb4349ffe213f6",
+  "changed": "Record protected synthetic admission merge, live exact artifact verification and preserved owner checkout; move to the next native runtime investigation.",
+  "proves": "22 required checks and two PostgreSQL jobs passed on the exact PR head; normal protected merge; 756 live artifact comparisons and four headers at all three origins; 12 unrelated local files preserved.",
+  "limits": "No full requirement closed or participant/service/independent accuracy claim. The next native-runtime candidate is private and is not a released Share app.",
+  "scope_ids": [
+    "N-011",
+    "F-141",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "1474cd253efaa83c9fcbff7c904c1dc28f8d3772ad808d32cee56e858e225955",
+    "runs/2026-10-12-admission-protected-merge.json": "fd39fdd3c3289279bf69c0d534039de77b669479034d45bc238384b53e5f8c2f",
+    "runs/2026-10-12-admission-publication.json": "b0a1c426919b416dd1d69b213a33e4bde879b1b98d7d1669aecd4e3d8bc8fc98",
+    "runs/2026-10-12-admission-primary-preservation.json": "1193067824ff4b2932547293619dd007b917b36aef5a00653a3808e04f476e33"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-admission-protected-merge.json",
+      "sha256": "fd39fdd3c3289279bf69c0d534039de77b669479034d45bc238384b53e5f8c2f"
+    },
+    {
+      "path": "runs/2026-10-12-admission-publication.json",
+      "sha256": "b0a1c426919b416dd1d69b213a33e4bde879b1b98d7d1669aecd4e3d8bc8fc98"
+    },
+    {
+      "path": "runs/2026-10-12-admission-primary-preservation.json",
+      "sha256": "1193067824ff4b2932547293619dd007b917b36aef5a00653a3808e04f476e33"
+    }
+  ],
+  "checks": []
+}

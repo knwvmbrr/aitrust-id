@@ -127,7 +127,16 @@
         "tests/test_research_admission.py",
         "tests/test_research_invitations.py",
         "tests/test_metadata_store.py",
-        ".github/workflows/metadata-storage.yml"
+        ".github/workflows/metadata-storage.yml",
+        "tools/reference_revision.py",
+        "scripts/review-reference-revision.py",
+        "scripts/prepare-reference-revision-demo.py",
+        "scripts/verify-reference-revision.py",
+        "tests/test_reference_revision.py",
+        "protocol/corpus.py",
+        "protocol/corpus_support.py",
+        "docs/reference-revisions.md",
+        ".github/workflows/ci.yml"
       ],
       "commands": [
         [
@@ -166,6 +175,15 @@
           "tests/test_research_admission.py",
           "tests/test_research_invitations.py",
           "tests/test_metadata_store.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_reference_revision.py",
+          "tests/test_corpus_support.py",
+          "tests/test_nli_references.py",
           "-q"
         ]
       ]
@@ -366,7 +384,16 @@
         "tests/test_research_admission.py",
         "tests/test_research_invitations.py",
         "tests/test_metadata_store.py",
-        ".github/workflows/metadata-storage.yml"
+        ".github/workflows/metadata-storage.yml",
+        "tools/reference_revision.py",
+        "scripts/review-reference-revision.py",
+        "scripts/prepare-reference-revision-demo.py",
+        "scripts/verify-reference-revision.py",
+        "tests/test_reference_revision.py",
+        "protocol/corpus.py",
+        "protocol/corpus_support.py",
+        "docs/reference-revisions.md",
+        ".github/workflows/ci.yml"
       ],
       "commands": [
         [
@@ -416,6 +443,15 @@
           "tests/test_research_admission.py",
           "tests/test_research_invitations.py",
           "tests/test_metadata_store.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_reference_revision.py",
+          "tests/test_corpus_support.py",
+          "tests/test_nli_references.py",
           "-q"
         ]
       ]

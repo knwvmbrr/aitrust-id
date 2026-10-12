@@ -111,6 +111,10 @@ jobs:
         run: |
           python scripts/verify-nli-profile.py
           python -m pytest tests/test_nli_pairs.py tests/test_nli_network.py tests/test_nli_cli.py tests/test_nli_references.py tests/test_nli_reference_cli.py tests/test_captured_corpus.py -q
+      - name: Verify selective reference revision without a truth or freshness verdict
+        run: |
+          python -m pytest tests/test_reference_revision.py tests/test_corpus_support.py tests/test_nli_references.py -q
+          python scripts/verify-reference-revision.py --output output/verification/reference-revisions.json
       - name: Check distinct caller-bound choice framing without a manipulation verdict
         run: python -m pytest tests/test_choice_framing.py tests/test_choice_framing_cli.py -q
       - name: Refuse altered source snapshots and unsafe signing policy

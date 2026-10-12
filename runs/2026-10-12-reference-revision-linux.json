@@ -1,0 +1,110 @@
+{
+  "captured_at": "2026-10-12T13:22:05.852413+00:00",
+  "pass": true,
+  "selected_python_tests": 131,
+  "actual_cli_controls": 10,
+  "non_root": true,
+  "isolated_network_namespace_verified": true,
+  "ipv4_ipv6_external_connections_refused": 2,
+  "sources": {
+    "scripts/prepare-reference-revision-demo.py": "99778cd31fa437fc949adb9dc24347b5be3d352e21b03cb7c3d7d7a70a775779",
+    "scripts/corpus-support.py": "cd814151d1a3999f7b914617311c86435429839a14bcd6024e1c30b0881e900f",
+    "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/review-reference-revision.py": "730d44d5235b3ac4b4f392e2fa1afee3dc8441f5fa822fe459761cf672662e24",
+    "scripts/verify-reference-revision.py": "30d9f98daaf8102115e5ce45af49fdd7b300dc78f256b87dee5a658ed15e90e1",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "research/__init__.py": "0308a3fc46d8d46a75b07d9d06dce9bce19d8e03e40565e99092c1e04e6385fa",
+    "research/nli/__init__.py": "9744225a1f33a76437ca7c234dbd8235e131daff6e4d32d3b610332e789320b0",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938",
+    "tests/test_reference_revision.py": "538d45623534f68507d956bbc5e7f8c5fb9a0e9a42029492dbf1f6b6abb8432a",
+    "tests/test_corpus_support.py": "ccea0063b7bf8b0ec86e6269c55ca39407baf1ba2cd6db5b033ae02144e700ea",
+    "tests/test_nli_references.py": "9a858ad2e3eeb2b501e26dccc1b4fd4d14f8c933a699c0bb17c3071de5c8c578"
+  },
+  "source_unchanged_during_execution": true,
+  "controls": {
+    "captured_at": "2026-10-12T13:22:05.837155+00:00",
+    "pass": true,
+    "synthetic_only": true,
+    "controls": [
+      {
+        "case": "actual_private_practice_generator",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "changed_source_selectively_invalidates_context_and_global_ranking",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "explicit_new_private_details",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "existing_details_never_overwritten",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "identical_corpus_unknown_declared_windows",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "policy_bound_to_wrong_corpus_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "elapsed_boundary_separate_from_pair_context",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "altered_truth_claim_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "public_subject_refused",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "invalid_utf8_private_input_refused",
+        "pass": true,
+        "exit_status": 2
+      }
+    ],
+    "sources": {
+      "scripts/prepare-reference-revision-demo.py": "99778cd31fa437fc949adb9dc24347b5be3d352e21b03cb7c3d7d7a70a775779",
+      "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+      "scripts/review-reference-revision.py": "730d44d5235b3ac4b4f392e2fa1afee3dc8441f5fa822fe459761cf672662e24",
+      "scripts/verify-reference-revision.py": "30d9f98daaf8102115e5ce45af49fdd7b300dc78f256b87dee5a658ed15e90e1",
+      "tests/test_reference_revision.py": "538d45623534f68507d956bbc5e7f8c5fb9a0e9a42029492dbf1f6b6abb8432a",
+      "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+    },
+    "source_unchanged_during_execution": true,
+    "private_test_directory_removed": true,
+    "tag_asserted": false,
+    "independent_accuracy_evidence": false,
+    "physical_device_tested": false,
+    "source_freshness_authenticated": false,
+    "requirements_closed": 0
+  },
+  "independent_accuracy_evidence": false,
+  "production_changes": false,
+  "requirements_closed": 0,
+  "owned_staging_removed": true
+}
