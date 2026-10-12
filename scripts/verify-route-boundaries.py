@@ -76,7 +76,7 @@ PATTERNS += ('scripts/measure-pipeline-performance.py', 'tests/test_pipeline_per
              'runs/2026-10-11-staging-pipeline-identity-checked.json')
 PATTERNS += ('tools/reviewer_agreement.py', 'scripts/reviewer-agreement.py',
              'scripts/verify-reviewer-agreement.py', 'tests/test_reviewer_agreement.py')
-PATTERNS += ('scripts/verify-scope-plan.py', 'tests/test_scope_index.py')
+PATTERNS += ('scripts/verify-scope-plan.py', 'scripts/render-scope-plan.py', 'tests/test_scope_index.py')
 PATTERNS += ('scripts/verify-workflows.cjs',)
 PATTERNS += ('tools/redaction_observations.py', 'scripts/measure-redaction-development.py',
              'scripts/redaction-development-worker.py', 'scripts/build-redaction-performance.py',
@@ -110,6 +110,10 @@ PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-prob
              'scripts/check-private-policy.py', 'scripts/prepare-private-policy-demo.py',
              'scripts/verify-private-policy.py', 'tests/test_private_policy.py', 'tests/test_private_policy_cli.py',
              'docs/private-policy-plan.md', 'docs/private-policy.md', 'docs/private-policy-result.md')
+
+PATTERNS += ('scripts/asset_notices.py', 'scripts/verify-asset-notices.py', 'tests/test_asset_notices.py',
+             'sbom/assets/*', 'site/public/device-licenses/*', 'site/public/fonts/*',
+             'eval/vectors/unicode/LICENSE.txt', 'docs/asset-notices-plan.md', 'docs/asset-notices.md', 'docs/asset-notices-result.md')
 
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',

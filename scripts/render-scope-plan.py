@@ -191,7 +191,13 @@ for row in plan['records']:index+='| '+cell(row['task_id'])+' | '+cell(row.get('
 # Render master table after enriching dependency mappings.
 master='# Three-layer master scope\n\nAll 202 records and their dispositions remain preserved. UC, SC and BT remain proposals; no rename or new release is implied. Jobs/outcomes define scope, not implementation. Read the [execution plan](scope-delivery.md) and [task index](scope-task-index.md) for accountable work packages. `state.json` and `runs/` hold executed truth.\n\n| ID | Layer | Baseline job | Outcome | Work package |\n|---|---|---|---|---|\n'
 for row in scope['records']:master+='| '+' | '.join(map(cell,[row['id'],row['layer'],row['baseline_job'],row['outcome'],', '.join(row['delivery']['work_packages'])]))+' |\n'
-(ROOT/'docs/master-scope.md').write_text(master)
+# Dated component observations are historical evidence, not generated status.
+master_path = ROOT / 'docs/master-scope.md'
+previous_master = master_path.read_text() if master_path.exists() else ''
+marker = '\n## Executed component update'
+if marker in previous_master:
+ master += previous_master[previous_master.index(marker):]
+master_path.write_text(master)
 for pkg in plan['packages']:
  if not pkg['id'].startswith('TAG-') or pkg['id'] in ['TAG-PS','TAG-PII_REDACTED']:continue
  doc=f"# {pkg['id'][4:]}-01 — {pkg['name']}\n\nPlanning contract · 2026-10-08. No new runtime support, registration or release is asserted.\n\n"

@@ -482,3 +482,5 @@ It checks consistency, not correctness or reviewer independence; MT remains plan
 The optional [organization term-check component](docs/private-policy.md) applies a reviewed, file-bound literal policy locally. Its qualified private observations cannot rewrite public assertions. Run `python3 scripts/prepare-private-policy-demo.py --output /path/to/new/private/practice`, inspect the invented policy, then use `python3 scripts/check-private-policy.py --packet /path/to/new/private/practice --reviewed-policy`. Organization rollout and ownership remain open.
 
 The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The Share prototype failed and is retained as an explicitly unreleased source archive; no native phone app is offered.
+
+Selected public fonts, Unicode resources, runtime identities and model-card declarations can be checked offline with `python3 scripts/verify-asset-notices.py`. See [the short notice guide](docs/asset-notices.md); consistency is distinct from legal clearance.

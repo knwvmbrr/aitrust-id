@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T00:05:17.614606+00:00",
+  "updated": "2026-10-12T00:29:04.080077+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2301,
+  "python_tests_passed": 2343,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-11-private-policy-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-11-private-policy-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-nli-child-repaired-protocol.json",
-    "extension": "runs/2026-10-11-private-policy-current-extension.json",
-    "website": "runs/2026-10-12-native-ci-repaired-website-accepted.json",
+    "PS": "runs/2026-10-12-selected-assets-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-12-selected-assets-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-selected-assets-current-protocol.json",
+    "extension": "runs/2026-10-12-selected-assets-current-extension.json",
+    "website": "runs/2026-10-12-selected-assets-stable-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T00:05:17.614606+00:00",
+  "updated_at": "2026-10-12T00:29:04.080077+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,10 +1099,10 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
-    "deployment_url": "https://a0cd81f0.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-11-authenticated-publication.json",
-    "matching_artifacts": 684,
+    "source_commit": "47d27703c6bca4783d677d409c8c48b6036b150f",
+    "deployment_url": "https://320eb984.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-12-private-policy-publication.json",
+    "matching_artifacts": 747,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
@@ -1806,5 +1806,23 @@
     "organization_service_running": false,
     "standard_namespace_adopted": false,
     "requirements_closed": 0
+  },
+  "selected_asset_notice_evidence": {
+    "implemented_by": "Codex",
+    "asset_bindings": 16,
+    "mac_evidence": "runs/2026-10-12-selected-asset-mac.json",
+    "actual_runtime_archive_evidence": "runs/2026-10-12-selected-runtime-archive.json",
+    "source_only_linux_evidence": "runs/2026-10-12-selected-assets-linux.json",
+    "focused_mac_controls": 51,
+    "source_only_linux_tests": 48,
+    "source_only_linux_prepared_runtime_skips": 3,
+    "unicode_notice_bundled": true,
+    "license_release_pass": false,
+    "full_dependency_coverage": false,
+    "scope_records": [
+      "F-057",
+      "X-02"
+    ],
+    "full_python_evidence": "runs/2026-10-12-selected-assets-full-suite.json"
   }
 }

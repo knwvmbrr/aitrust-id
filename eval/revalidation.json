@@ -257,7 +257,15 @@
         "docs/native-engine-checks.md",
         "scripts/native_bundle.py",
         "scripts/prepare-native-bundle.py",
-        "tests/test_native_bundle.py"
+        "tests/test_native_bundle.py",
+        "scripts/asset_notices.py",
+        "scripts/verify-asset-notices.py",
+        "tests/test_asset_notices.py",
+        "sbom/assets/*",
+        "site/public/fonts/*",
+        "site/public/device-licenses/*",
+        "eval/vectors/unicode/LICENSE.txt",
+        "docs/asset-notices.md"
       ],
       "commands": [
         [
@@ -282,6 +290,11 @@
         [
           "node",
           "scripts/verify-blind-review-browser.cjs"
+        ],
+        [
+          "{python}",
+          "scripts/verify-asset-notices.py",
+          "--prepared-runtime"
         ]
       ]
     }

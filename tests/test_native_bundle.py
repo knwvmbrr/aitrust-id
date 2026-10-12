@@ -38,7 +38,8 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
             assert hashlib.sha256(package.read('Assets' + name)).hexdigest() == expected
         assert len(config['hashes']) == 9
         assert 'LICENSE' in package.namelist()
-        assert any(name.startswith('Notices/') for name in package.namelist())
+        assert {n for n in package.namelist() if n.startswith('Notices/')} == {'Notices/pyodide-MPL-2.0.txt', 'Notices/python-license.txt', 'Notices/source.txt', 'Notices/unicode-license.txt'}
+        assert package.read('Notices/unicode-license.txt') == (ROOT / 'eval/vectors/unicode/LICENSE.txt').read_bytes()
         assert all(name == 'LICENSE' or name.startswith(('Assets/', 'Notices/')) for name in package.namelist())
     again = subprocess.run([sys.executable, str(ROOT / 'scripts/prepare-native-bundle.py'), '--output', str(destination)], capture_output=True, timeout=30)
     assert again.returncode == 2
@@ -55,7 +56,7 @@ def source_copy(tmp_path, monkeypatch):
     # Refusal controls must run before any website/npm build in a clean clone.
     # Derive their valid starting identity from tracked sources, not an ignored
     # generated device manifest that happens to exist on the developer's Mac.
-    for name in ['protocol/unicode15-data.json', 'services/evaluator/app.py']:
+    for name in ['protocol/unicode15-data.json', 'services/evaluator/app.py', 'eval/vectors/unicode/LICENSE.txt', 'site/public/device-licenses/unicode-license.txt', 'site/public/device-licenses/pyodide-MPL-2.0.txt', 'site/public/device-licenses/python-license.txt', 'site/public/device-licenses/source.txt']:
         target = root / name; target.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(ROOT / name, target)
     method, source_hash = runpy.run_path(str(ROOT / 'scripts/build-device-detector.py'))['project']((ROOT / 'services/evaluator/app.py').read_bytes())
     bundle_hash = hashlib.sha256(method).hexdigest()
@@ -86,3 +87,14 @@ def test_existing_destination_symlink_is_never_followed(tmp_path, prepared_asset
     result = subprocess.run([sys.executable, str(ROOT / 'scripts/prepare-native-bundle.py'), '--output', str(link)], capture_output=True, timeout=30)
     assert result.returncode == 2 and sentinel.read_text() == 'unchanged' and list(actual.iterdir()) == [sentinel]
     assert str(tmp_path).encode() not in result.stdout + result.stderr
+
+
+@pytest.mark.parametrize('change', ['missing', 'different', 'extra', 'linked'])
+def test_unreviewed_notice_is_never_packaged(source_copy, change):
+    notice = source_copy / 'site/public/device-licenses/unicode-license.txt'
+    if change == 'missing': notice.unlink()
+    elif change == 'different': notice.write_text('replacement notice')
+    elif change == 'extra': (notice.parent / 'unreviewed.txt').write_text('extra')
+    else:
+        notice.unlink(); notice.symlink_to(source_copy / 'eval/vectors/unicode/LICENSE.txt')
+    with pytest.raises(ValueError): builder.assets()

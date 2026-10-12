@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-001925-selected-asset-notices-031069fb",
+  "recorded_at": "2026-10-12T00:19:25.830675+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "47d27703c6bca4783d677d409c8c48b6036b150f",
+  "changed": "Added an offline selected asset/notice verifier and exact Unicode notice inclusion in public and native resources; recorded the prior protected private-policy publication.",
+  "proves": "51 focused controls pass. Prepared runtime bytes and actual pinned archive members match retained observations; 747 files from the prior merged build match across three hosted origins.",
+  "limits": "No legal clearance, full transitive/native/platform audit, phone Share release or independent tag accuracy. Final named requirements remain open.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    "docs/asset-notices-plan.md": "75e3030fa38752b61d15d12fe64691cd07cacb57faf5bd4ee5003228c67f5aff",
+    "docs/asset-notices.md": "5d50bd25913fabc0c6b179221c5d1e499a14ebd8be719c3da13e9310e19cd78a",
+    "docs/dependency-notices.md": "27f8068c77161efb2f5c9b7fe504e7cd2ec128ff9ebe8346c8d025baf62f23a6",
+    "README.md": "6a1f9aae6a9361c63576246b4afa1703e65c8fccca33a5f4a2ee76139b5cbc54",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "scripts/verify-asset-notices.py": "a8c15fd8823ced24f6e1d1bc7f18f2123710dcb9875417142865192e7fc08bd1",
+    "scripts/native_bundle.py": "53179c58d0616140d538844409dd22a3bb2c4e4f873010dba1797e3c22fb482f",
+    "tests/test_asset_notices.py": "940207f5a6634cb1ae98cda2834683c371a0a6fa91254049fae394d2082e57c3",
+    "tests/test_native_bundle.py": "93187325a34ca8d9cd7a102708a43efd2df80ac896e2acd8751a5862557fd750",
+    "sbom/assets/notices.json": "658b51fbfe59526e0a7db86c8d4b53b2de6a6464680db709a4fb1888791e8f18",
+    "site/public/device-licenses/unicode-license.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "site/scripts/prepare.mjs": "7ddf8bc2a7ab97370dec9abfc3d4633b8c7ba9131183a60db1a9c438601894b0",
+    "site/scripts/render-reference.mjs": "96bea48813925a35bc5478f344cabfe378ebd3d5ec2724372bea392e89ac96dd",
+    ".github/workflows/ci.yml": "ef7fbc3254aca6a06ed90a9b999eab196d6afa9808b58b4eaf9e448614917c57",
+    "scripts/verify-route-boundaries.py": "5f4fe21a778f1581789e3925bbbdfb696b4de02caafaee0d39a9850aeab26d27",
+    "eval/revalidation.json": "64a56b51c822be1e92988cbdccbcb7db6038da8a86409e2db48ead3f1c2fc011",
+    "runs/2026-10-12-selected-asset-mac.json": "60a6dae64f1bca937f5746260b4bb0fbd86987c2f6dba380d3e0de66ab00cd33",
+    "runs/2026-10-12-selected-runtime-archive.json": "6f5565a2a54ce632ea221d3c56ae5275713b48959a50d78add13dc44e26060d1",
+    "runs/2026-10-12-selected-assets-focused-tests.json": "843c2dc9c0b6a64117f3b1f2fe80583e7e485f86720c5293e6c5c1782341086f",
+    "runs/2026-10-12-private-policy-publication.json": "866c9040b5912974bcbc9ad4bf24309688384c8525f5f33310990d10ae0117ee"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-selected-asset-mac.json",
+      "sha256": "60a6dae64f1bca937f5746260b4bb0fbd86987c2f6dba380d3e0de66ab00cd33"
+    },
+    {
+      "path": "runs/2026-10-12-selected-runtime-archive.json",
+      "sha256": "6f5565a2a54ce632ea221d3c56ae5275713b48959a50d78add13dc44e26060d1"
+    },
+    {
+      "path": "runs/2026-10-12-selected-assets-focused-tests.json",
+      "sha256": "843c2dc9c0b6a64117f3b1f2fe80583e7e485f86720c5293e6c5c1782341086f"
+    },
+    {
+      "path": "runs/2026-10-12-private-policy-publication.json",
+      "sha256": "866c9040b5912974bcbc9ad4bf24309688384c8525f5f33310990d10ae0117ee"
+    }
+  ],
+  "checks": []
+}

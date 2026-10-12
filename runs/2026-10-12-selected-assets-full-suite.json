@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-10-12T00:29:04.080077+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "exit_status": 0,
+  "tests_passed": 2343,
+  "tests_skipped": 1,
+  "skip_scope": "One existing Linux-only worker isolation test on this Mac",
+  "warnings": 1,
+  "warning_scope": "Upstream Starlette TestClient httpx deprecation",
+  "duration_seconds": 54.13,
+  "source_base": "47d27703c6bca4783d677d409c8c48b6036b150f",
+  "selected_source_sha256": {
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "scripts/verify-asset-notices.py": "a8c15fd8823ced24f6e1d1bc7f18f2123710dcb9875417142865192e7fc08bd1",
+    "scripts/native_bundle.py": "53179c58d0616140d538844409dd22a3bb2c4e4f873010dba1797e3c22fb482f",
+    "scripts/render-scope-plan.py": "a92b7c55066029a99acb85c0978ed284761abe0ee0c533cc89f77d8f19e2dea6",
+    "tests/test_asset_notices.py": "940207f5a6634cb1ae98cda2834683c371a0a6fa91254049fae394d2082e57c3",
+    "tests/test_native_bundle.py": "93187325a34ca8d9cd7a102708a43efd2df80ac896e2acd8751a5862557fd750",
+    "tests/test_scope_index.py": "63956fe4016b0cadfed713737c8ca99b06c4423eed6ca997eed92cbfe79574b3"
+  },
+  "independent_accuracy_evidence": false,
+  "license_release_pass": false,
+  "physical_phone_tested": false
+}

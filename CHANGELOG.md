@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-002906-selected-assets-combined-verification-20abcc5a
+
+Recorded 2026-10-12T00:29:06.560242+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the combined tested source, exact final source review and actual current website acceptance without changing any completion or release gate.
+- **Evidence.** 2343 tests pass with one existing Linux-only Mac skip and one upstream warning. Current capability receipts, prepared asset binding, actual guide download and final route review pass. [Change record](./runs/changes/2026-10-12-002906-selected-assets-combined-verification-20abcc5a.json).
+- **Not claimed.** 88 full requirements remain open. License permission, other native/transitive/platform obligations, phone Share and independent human validation remain unfulfilled.
+
+
+### 2026-10-12-002724-selected-assets-current-boundaries-529ca087
+
+Recorded 2026-10-12T00:27:24.728274+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the stable current website receipt and expanded exact source review to selected assets/notices and preservation of dated scope notes.
+- **Evidence.** All six current website commands pass with stable source identity; the actual notice guide download matches repository bytes. Five capability receipts and the expanded current route/access review pass. [Change record](./runs/changes/2026-10-12-002724-selected-assets-current-boundaries-529ca087.json).
+- **Not claimed.** No endpoint, capture permission, collection or public tag changed. Full license permission, physical devices, human accessibility and independent accuracy remain open.
+
+
+### 2026-10-12-002509-selected-assets-stable-build-inputs-c1a5daf0
+
+Recorded 2026-10-12T00:25:09.094926+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved dated scope notes across actual repeated rendering and recorded rebuilt scope projections before current website revalidation.
+- **Evidence.** All six website commands passed, including actual guide download and prepared asset bindings, but the receipt correctly refused source stability after the build refreshed two generated scope inputs. Twelve renderer controls pass with all 202 IDs retained. [Change record](./runs/changes/2026-10-12-002509-selected-assets-stable-build-inputs-c1a5daf0.json).
+- **Not claimed.** The source-changing receipt remains failed. A fresh receipt is required against stable generated inputs; no release or legal permission is inferred.
+
+
+### 2026-10-12-002240-selected-assets-current-receipts-da6830b0
+
+Recorded 2026-10-12T00:22:40.098002+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current PS, redaction, protocol and extension checks and retained a refused website run before retrying with a fresh receipt.
+- **Evidence.** Four current capability checks pass. The website build guard refused unrecorded new receipts and state changes; no deployment occurred. [Change record](./runs/changes/2026-10-12-002240-selected-assets-current-receipts-da6830b0.json).
+- **Not claimed.** Website acceptance pending this rerun; no clearance, independent accuracy or native Share acceptance.
+
+
+### 2026-10-12-002152-asset-notice-download-control-3f150d03
+
+Recorded 2026-10-12T00:21:52.354370+00:00 · Contributor: Codex · change
+
+- **Changed.** Require the actual browser notice-guide download to match repository bytes and its expected filename.
+- **Evidence.** The updated browser verifier passes syntax checking. Current website revalidation will execute the download path; no runtime result is inferred here. [Change record](./runs/changes/2026-10-12-002152-asset-notice-download-control-3f150d03.json).
+- **Not claimed.** The first attempted record was refused because it lacked executed evidence. Syntax alone is not download success, license permission or independent validation.
+
+
+### 2026-10-12-002107-selected-assets-execution-record-9cb1fd5d
+
+Recorded 2026-10-12T00:21:07.990542+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded selected source-only asset controls on isolated Linux and retained all full license/phone acceptance gates; updated scope attribution and current publication truth.
+- **Evidence.** 48 source-only controls pass on the same source bytes with network creation denied. Three packaging tests explicitly await prepared runtime assets. The owned staging directory is removed; no production settings changed. [Change record](./runs/changes/2026-10-12-002107-selected-assets-execution-record-9cb1fd5d.json).
+- **Not claimed.** 114 complete and 88 open remain; selected component evidence cannot complete full named license requirements. Legal clearance and native Share remain unapproved.
+
+
+### 2026-10-12-001925-selected-asset-notices-031069fb
+
+Recorded 2026-10-12T00:19:25.830675+00:00 · Contributor: Codex · change
+
+- **Changed.** Added an offline selected asset/notice verifier and exact Unicode notice inclusion in public and native resources; recorded the prior protected private-policy publication.
+- **Evidence.** 51 focused controls pass. Prepared runtime bytes and actual pinned archive members match retained observations; 747 files from the prior merged build match across three hosted origins. [Change record](./runs/changes/2026-10-12-001925-selected-asset-notices-031069fb.json).
+- **Not claimed.** No legal clearance, full transitive/native/platform audit, phone Share release or independent tag accuracy. Final named requirements remain open.
+
+
 ### 2026-10-12-000517-repaired-private-policy-full-suite-ab8b6ab1
 
 Recorded 2026-10-12T00:05:17.648688+00:00 · Contributor: Codex · change

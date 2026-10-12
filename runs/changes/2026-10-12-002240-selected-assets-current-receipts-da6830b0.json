@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-002240-selected-assets-current-receipts-da6830b0",
+  "recorded_at": "2026-10-12T00:22:40.098002+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "47d27703c6bca4783d677d409c8c48b6036b150f",
+  "changed": "Recorded current PS, redaction, protocol and extension checks and retained a refused website run before retrying with a fresh receipt.",
+  "proves": "Four current capability checks pass. The website build guard refused unrecorded new receipts and state changes; no deployment occurred.",
+  "limits": "Website acceptance pending this rerun; no clearance, independent accuracy or native Share acceptance.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "ef7fbc3254aca6a06ed90a9b999eab196d6afa9808b58b4eaf9e448614917c57",
+    "README.md": "6a1f9aae6a9361c63576246b4afa1703e65c8fccca33a5f4a2ee76139b5cbc54",
+    "docs/asset-notices-plan.md": "75e3030fa38752b61d15d12fe64691cd07cacb57faf5bd4ee5003228c67f5aff",
+    "docs/asset-notices-result.md": "06dca619fb242c0150ede6524efdeb1ff42371686c72cc24d3cbf8abc6228881",
+    "docs/asset-notices.md": "5d50bd25913fabc0c6b179221c5d1e499a14ebd8be719c3da13e9310e19cd78a",
+    "docs/dependency-notices.md": "27f8068c77161efb2f5c9b7fe504e7cd2ec128ff9ebe8346c8d025baf62f23a6",
+    "docs/master-scope.md": "4572da0c5a9b51c9cee1dd8d3d9f8c253eed98c38743663f865477062c644b07",
+    "docs/scope-progress.json": "6b12d34e4ef7a9d8229067d9472bcc3b72361ceac7525747bb8ef79ddc7af72c",
+    "docs/scope-progress.md": "6239fba2d7f8bd8e59b86ca03d4404fb238f00670f251ccea09484e247a5dfb2",
+    "eval/revalidation.json": "64a56b51c822be1e92988cbdccbcb7db6038da8a86409e2db48ead3f1c2fc011",
+    "runs/2026-10-12-private-policy-primary-preservation.json": "a789acfa37776685850295acd6bc67c06092fe54236a2b903ad80114fe7be0cc",
+    "runs/2026-10-12-private-policy-protected-merge.json": "5acfc6f180d541a6b705344d86a1c775697e9932cf9e4ce09d949ff59c682ce0",
+    "runs/2026-10-12-private-policy-publication.json": "866c9040b5912974bcbc9ad4bf24309688384c8525f5f33310990d10ae0117ee",
+    "runs/2026-10-12-selected-asset-mac.json": "60a6dae64f1bca937f5746260b4bb0fbd86987c2f6dba380d3e0de66ab00cd33",
+    "runs/2026-10-12-selected-assets-current-PII_REDACTED.json": "313aa55e925be065ee99c3ccfba420db22a8cc98bf84fe3ff20d4bcb00892c69",
+    "runs/2026-10-12-selected-assets-current-PS.json": "d2f96e820ae633c3ff8166b31744f88ac8e8f74dac5c175bf236137b88c350a8",
+    "runs/2026-10-12-selected-assets-current-extension.json": "be84185159719d7e1921c030f20db423d06d95de4214af21871885ffb1619352",
+    "runs/2026-10-12-selected-assets-current-protocol.json": "aec7b34782272e66dab36153a2562940ed6d0f973dfc198c6a6059f29c3466cd",
+    "runs/2026-10-12-selected-assets-current-website.json": "7a32db28f3b3eb68e44954d9b055c9a21cccfcc07881753adebaf878fa82b9dc",
+    "runs/2026-10-12-selected-assets-focused-tests.json": "843c2dc9c0b6a64117f3b1f2fe80583e7e485f86720c5293e6c5c1782341086f",
+    "runs/2026-10-12-selected-assets-linux.json": "242fdbcc2f6e870006a594d347b6bd56aff2088c246f84e6e6d9cc917767cde6",
+    "runs/2026-10-12-selected-assets-scope.json": "63cef80093b66c6bc30d04a27cce3e9799e4bf68b3435c4c6a5e7e62867b2060",
+    "runs/2026-10-12-selected-assets-staging-cleanup.json": "0a9680037ac3843be6162cdb7ad2b1f970d1e30eb2a67ea446f207a011f44198",
+    "runs/2026-10-12-selected-runtime-archive.json": "6f5565a2a54ce632ea221d3c56ae5275713b48959a50d78add13dc44e26060d1",
+    "sbom/assets/notices.json": "658b51fbfe59526e0a7db86c8d4b53b2de6a6464680db709a4fb1888791e8f18",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "scripts/native_bundle.py": "53179c58d0616140d538844409dd22a3bb2c4e4f873010dba1797e3c22fb482f",
+    "scripts/verify-asset-notices.py": "a8c15fd8823ced24f6e1d1bc7f18f2123710dcb9875417142865192e7fc08bd1",
+    "scripts/verify-offline-download.cjs": "0f32723eb3853080f126fb932d0380c47cecf21b8a83cb43f850ac2ac57995c1",
+    "scripts/verify-route-boundaries.py": "5f4fe21a778f1581789e3925bbbdfb696b4de02caafaee0d39a9850aeab26d27",
+    "site/public/device-licenses/unicode-license.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "site/scripts/prepare.mjs": "7ddf8bc2a7ab97370dec9abfc3d4633b8c7ba9131183a60db1a9c438601894b0",
+    "site/scripts/render-reference.mjs": "96bea48813925a35bc5478f344cabfe378ebd3d5ec2724372bea392e89ac96dd",
+    "state.json": "8bdc0b51e7b32ce4cb34665458d5ebb30f88f8337812fb166ba5a5bcdb0dc089",
+    "tests/test_asset_notices.py": "940207f5a6634cb1ae98cda2834683c371a0a6fa91254049fae394d2082e57c3",
+    "tests/test_native_bundle.py": "93187325a34ca8d9cd7a102708a43efd2df80ac896e2acd8751a5862557fd750"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-selected-assets-current-PS.json",
+      "sha256": "d2f96e820ae633c3ff8166b31744f88ac8e8f74dac5c175bf236137b88c350a8"
+    },
+    {
+      "path": "runs/2026-10-12-selected-assets-current-PII_REDACTED.json",
+      "sha256": "313aa55e925be065ee99c3ccfba420db22a8cc98bf84fe3ff20d4bcb00892c69"
+    },
+    {
+      "path": "runs/2026-10-12-selected-assets-current-protocol.json",
+      "sha256": "aec7b34782272e66dab36153a2562940ed6d0f973dfc198c6a6059f29c3466cd"
+    },
+    {
+      "path": "runs/2026-10-12-selected-assets-current-extension.json",
+      "sha256": "be84185159719d7e1921c030f20db423d06d95de4214af21871885ffb1619352"
+    },
+    {
+      "path": "runs/2026-10-12-selected-assets-current-website.json",
+      "sha256": "7a32db28f3b3eb68e44954d9b055c9a21cccfcc07881753adebaf878fa82b9dc"
+    }
+  ],
+  "checks": []
+}
