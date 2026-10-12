@@ -67,11 +67,17 @@ def verify():
              lambda r:r['execution_binding_verified'] is True or (_ for _ in ()).throw(ValueError('Missing execution binding')))
         file=packet/'manifest.json';bound=file.read_bytes();legacy=json.loads(bound)
         legacy['format']='ai-trust-id-blind-ps-review/v1';legacy.pop('execution_context_sha256')
+        legacy['method_sha256']=hashlib.sha256((ROOT/'services/evaluator/app.py').read_bytes()).hexdigest()
+        bound_forms={slot:(packet/f'reviewer-{slot}.json').read_bytes() for slot in (1,2)}
+        for slot in (1,2):
+            form=json.loads(bound_forms[slot]);form['method_sha256']=legacy['method_sha256']
+            (packet/f'reviewer-{slot}.json').write_text(json.dumps(form))
         file.write_text(json.dumps(legacy))
         call('legacy_labels_only',['compare',packet,'--format','json'],True,
              lambda r:r['execution_binding_verified'] is False or (_ for _ in ()).throw(ValueError('False legacy binding')))
         call('legacy_required_binding_refused',['compare',packet,'--format','json','--require-execution-binding'],False)
         file.write_bytes(bound)
+        for slot in (1,2):(packet/f'reviewer-{slot}.json').write_bytes(bound_forms[slot])
         file=packet/'manifest.json';original=file.read_bytes()
         file.write_bytes(original.replace(b'"format":',b'"format":"duplicate", "format":',1));call('duplicate_manifest_refused',['compare',packet,'--format','json'],False);file.write_bytes(original)
         value=json.loads(original);value['independence_verified']=True;file.write_text(json.dumps(value));call('forged_independence_refused',['compare',packet,'--format','json'],False);file.write_bytes(original)

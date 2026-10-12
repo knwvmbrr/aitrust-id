@@ -106,7 +106,9 @@ def freeze(source, destination):
         files[f'reviewer-{reviewer}.csv'] = output.getvalue().encode()
     manifest = {'format': 'ai-trust-id-blind-ps-review/v2', 'item_count': len(rows),
         'input_sha256': sha(raw), 'dataset_sha256': sha(items),
-        'method_sha256': sha((ROOT/'services/evaluator/app.py').read_bytes()),
+        # Existing form fields are opaque digests. For v2, bind each reviewer
+        # form to the complete selected recipe, not only the evaluator file.
+        'method_sha256': execution_digest(execution),
         'gates_sha256': sha((ROOT/'eval/gates.yaml').read_bytes()),
         'protocol_sha256': sha((ROOT/'docs/independent-review.md').read_bytes()),
         'execution_context_sha256': execution_digest(execution),
@@ -150,7 +152,8 @@ def compare(packet, format='csv', require_execution_binding=False):
         forms={i:member(packet_fd,f'reviewer-{i}.'+format,PHONE_LIMIT if format=='json' else MEMBER_LIMIT) for i in (1,2)}
     if sha(items) != manifest['dataset_sha256']:
         raise ValueError('Frozen dataset changed')
-    if sha((ROOT/'services/evaluator/app.py').read_bytes()) != manifest['method_sha256']:
+    expected_method=execution_digest(execution) if execution_bound else sha((ROOT/'services/evaluator/app.py').read_bytes())
+    if expected_method != manifest['method_sha256']:
         raise ValueError('Detector changed after freeze; start a new review')
     if sha((ROOT/'eval/gates.yaml').read_bytes()) != manifest['gates_sha256'] or sha((ROOT/'docs/independent-review.md').read_bytes()) != manifest['protocol_sha256']:
         raise ValueError('Review policy changed after freeze')

@@ -42,6 +42,8 @@ def test_new_recipe_is_private_and_verified_without_predictions(tmp_path):
     f = packet/'execution-context.json'
     assert f.stat().st_mode & 0o777 == 0o600
     assert hashlib.sha256(f.read_bytes()).hexdigest() == manifest['execution_context_sha256']
+    form=json.loads((packet/'reviewer-1.json').read_text())
+    assert form['method_sha256']==manifest['execution_context_sha256']==manifest['method_sha256']
     result = review.compare(packet, 'json', True)
     assert result['execution_binding_verified'] and result['agreement_count'] == 1
     assert not result['predictions_run'] and not result['release_assessed']
@@ -85,6 +87,9 @@ def test_legacy_labels_remain_readable_but_cannot_supply_binding(tmp_path):
     packet, manifest = completed(tmp_path)
     manifest['format'] = 'ai-trust-id-blind-ps-review/v1'
     del manifest['execution_context_sha256']
+    manifest['method_sha256']=hashlib.sha256((review.ROOT/'services/evaluator/app.py').read_bytes()).hexdigest()
+    for slot in (1,2):
+        f=packet/f'reviewer-{slot}.json';value=json.loads(f.read_text());value['method_sha256']=manifest['method_sha256'];f.write_text(json.dumps(value))
     (packet/'manifest.json').write_text(json.dumps(manifest))
     (packet/'execution-context.json').unlink()
     result = review.compare(packet,'json')
@@ -126,3 +131,11 @@ def test_source_reader_refuses_nonordinary_or_unbounded_files(tmp_path,kind):
     else:
         with p.open('wb') as f:f.truncate(32_000_001)
     with pytest.raises(ValueError):Reader().hashed(p)
+
+
+def test_missing_dependency_uses_fixed_unavailable_error(monkeypatch):
+    from tools import review_execution
+    def missing(_):raise review_execution.metadata.PackageNotFoundError('PrivateHostMarker')
+    monkeypatch.setattr(review_execution.metadata,'distribution',missing)
+    with pytest.raises(ValueError,match='^Execution dependency is unavailable$'):
+        execution_context(review.ROOT)

@@ -6,11 +6,11 @@ Comparison checks frozen normalization, preparation/evaluation sources, selected
 Python runtime/standard-library code and ten declared installed import dependencies
 before reading labels and again after comparison. It does not run the detector.
 
-84 focused tests and 21 actual CLI controls passed on both macOS and Linux. The
+85 focused tests and 21 actual CLI controls passed on both macOS and Linux. The
 Linux run denied IPv4, IPv6 and Unix sockets to the worker and its children. Source
 hashes matched; only the owned staging directory was removed. See the source-bound
-`runs/2026-10-12-review-execution-focused.json`, `review-execution-cli.json`,
-`review-execution-linux.json` and `review-execution-linux-cleanup.json` records.
+`runs/2026-10-12-review-execution-current-focused.json`, `review-execution-current-cli.json`,
+`review-execution-current-linux.json` and `review-execution-current-cleanup.json` records.
 
 Controls cover changed normalization code/data, evaluation/preparation helpers,
 Python/stdlib/dependency version and code drift, missing or altered recipes,

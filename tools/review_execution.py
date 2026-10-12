@@ -65,7 +65,10 @@ def execution_context(root):
             ('typing_extensions', 'typing_extensions.py'), ('typing_inspection', 'typing_inspection'),
             ('annotated_types', 'annotated_types'), ('annotated_doc', 'annotated_doc'),
             ('anyio', 'anyio'), ('idna', 'idna')):
-        installed = metadata.distribution(distribution)
+        try:
+            installed = metadata.distribution(distribution)
+        except metadata.PackageNotFoundError:
+            raise ValueError('Execution dependency is unavailable') from None
         base = Path(installed.locate_file(package)).resolve(strict=True)
         if not base.is_dir() and not base.is_file():
             raise ValueError('Execution dependency is unavailable')

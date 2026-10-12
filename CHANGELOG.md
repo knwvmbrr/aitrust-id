@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-033617-review-form-execution-binding-9499b34f
+
+Recorded 2026-10-12T03:36:17.106874+00:00 · Contributor: Codex · change
+
+- **Changed.** Tighten selected review binding: forms pin the complete execution recipe, missing dependencies produce fixed diagnostics, and browser controls require the bound v2 packet.
+- **Evidence.** 85 source-bound tests and 21 CLI controls pass on both macOS and Linux; Linux sources match and owned stages are removed. [Change record](./runs/changes/2026-10-12-033617-review-form-execution-binding-9499b34f.json).
+- **Not claimed.** Broader website and route integration rerun remains pending; no humans, accuracy approval or requirement closure.
+
+
 ### 2026-10-12-032910-blind-review-execution-binding-a3d6f718
 
 Recorded 2026-10-12T03:29:10.391362+00:00 · Contributor: Codex · change

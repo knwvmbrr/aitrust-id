@@ -29,3 +29,9 @@ text. Test changed normalization, helper, interpreter/dependency identities,
 missing/tampered members, legacy labels-only handling, private file attacks,
 actual CLI round trips and source stability. Retain disagreement and ambiguous
 items; independent humans, sampling and calibration stay separate open gates.
+
+Before publication, bind the existing opaque reviewer-form method digest to the
+complete selected execution recipe for manifest v2. Legacy v1 keeps its original
+evaluator-file digest. This prevents forms silently crossing dependency contexts
+without changing phone-form fields. Missing installed dependencies must produce
+fixed unavailable diagnostics; they must not print exception values or paths.

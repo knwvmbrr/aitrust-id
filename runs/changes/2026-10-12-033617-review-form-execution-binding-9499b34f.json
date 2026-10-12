@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-033617-review-form-execution-binding-9499b34f",
+  "recorded_at": "2026-10-12T03:36:17.106874+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a9f6f06676082e51da7b9ece113f4dc9d78e3d76",
+  "changed": "Tighten selected review binding: forms pin the complete execution recipe, missing dependencies produce fixed diagnostics, and browser controls require the bound v2 packet.",
+  "proves": "85 source-bound tests and 21 CLI controls pass on both macOS and Linux; Linux sources match and owned stages are removed.",
+  "limits": "Broader website and route integration rerun remains pending; no humans, accuracy approval or requirement closure.",
+  "scope_ids": [
+    "F-050",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "docs/independent-review.md": "1b8eb5745459f3096a2edc08e1338b9df24fa6e6f499ac42d5ce517a55528ea5",
+    "docs/review-execution-binding-plan.md": "1c8489299e128ef0f30ce7b53b5c217f310062e666710d39fc61c0010ffdf818",
+    "docs/review-execution-binding-result.md": "819cf85a67eb75126e032ac4e7c1c07a44a49d0e18c63a4f1bc29b35c3186f07",
+    "runs/2026-10-12-review-execution-current-cleanup.json": "4b02d7e67acd389ad12fb108532b1a3e699a240624cc082760a01d38cc47a035",
+    "runs/2026-10-12-review-execution-current-cli.json": "e019ab0b723b71e2ae0ad3853e7f148122667d6b3e52d84aa65f0c8aed1d62ad",
+    "runs/2026-10-12-review-execution-current-focused.json": "2cdaeec3cc652429fc875190a520108c54b43684ac1fb4943dbd79e93422192e",
+    "runs/2026-10-12-review-execution-current-linux.json": "8254493ee4ed3fb744ecddd7e26fe26031cac511069ae4f7c905413d9a365bd2",
+    "scripts/prepare-ps-review.py": "4c075933a9c389df0a66e9b8dd6325e2065533fd47049f4d176ee1dccb7e32b5",
+    "scripts/verify-blind-review-browser.cjs": "0db7054b35e7487eea454c9f29ff7b7a10f69f4ef3b82603bf4185e6938ae739",
+    "scripts/verify-blind-review-privacy.py": "b83eb2564300ff75e178f06a8fcfba38aafcf456ccc0c7423a35224fffc205e2",
+    "state.json": "8b30f792dbfaa5ccfbf3bf1d7aadb814b81e905e754ec1c047f5a64844b2f0b9",
+    "tests/test_review_execution_binding.py": "b271cfb6d9ea5c6fd48e4027c3f1bcc077c12e50d6ac9577477fcb27cde30c37",
+    "tools/review_execution.py": "71ee0c5084616a184987871a7505392c8d1cca7d533a28d68437ad93f1c2ddc8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-review-execution-current-focused.json",
+      "sha256": "2cdaeec3cc652429fc875190a520108c54b43684ac1fb4943dbd79e93422192e"
+    },
+    {
+      "path": "runs/2026-10-12-review-execution-current-cli.json",
+      "sha256": "e019ab0b723b71e2ae0ad3853e7f148122667d6b3e52d84aa65f0c8aed1d62ad"
+    },
+    {
+      "path": "runs/2026-10-12-review-execution-current-linux.json",
+      "sha256": "8254493ee4ed3fb744ecddd7e26fe26031cac511069ae4f7c905413d9a365bd2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T03:36:17.482196+00:00"
+    }
+  ]
+}
