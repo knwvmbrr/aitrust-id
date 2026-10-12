@@ -49,6 +49,8 @@ Place that file in a private input folder and save the exact answer you checked 
 
 The other supported input is the current unsigned gateway wire assertion, version `0.1.0`, with its complete preprocessing identity. Select the exact **already-redacted evaluated text**, not the original text before redaction. Current PS and procedural PII_REDACTED findings are retained separately. A historical or different method, signature requiring unimplemented trust verification, unsupported code, malformed record, mismatch or changed file is refused rather than reinterpreted. Vendor manifest and watermark evidence are not converted into content truth.
 
+The web preview accepts up to 20,000 characters; a current gateway record accepts up to 200,000. The private reader preserves each producer’s own limit, including multi-byte UTF-8 text. Every PS finding must include evidence positions and a score consistent with its recorded signals.
+
 ## Choose what you mean
 
 | Decision | Meaning |

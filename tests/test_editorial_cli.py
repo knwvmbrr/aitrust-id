@@ -117,3 +117,16 @@ def test_malformed_evaluator_metadata_has_no_traceback_or_private_diagnostic(tmp
     assert r.returncode==2 and not (tmp_path/'packet').exists()
     assert 'Traceback' not in r.stderr and 'PRIVATE_EDITORIAL_CANARY' not in r.stdout+r.stderr
     assert str(tmp_path) not in r.stdout+r.stderr
+
+
+@pytest.mark.parametrize('length,filler',[(80001,'x'),(200000,'x'),(200000,'😀')])
+def test_long_gateway_subject_is_usable_at_both_cli_stages(tmp_path,assertion,length,filler):
+ source=copy.deepcopy(assertion);text=(TEXT.decode()+filler*(length-len(TEXT))).encode()
+ source['subject']['sha256']=newsroom.sha(text);source['subject']['char_len']=length
+ a,t=inputs(tmp_path,source);t.write_bytes(text)
+ assert prepare(tmp_path,a,t).returncode==0
+ out=tmp_path/'result';r=call('editorial-review.py','--packet',tmp_path/'packet','--output',out,'--reviewed-record')
+ assert r.returncode==0
+ row=json.loads((out/'editorial-review.json').read_bytes())
+ assert row['subject_char_len']==length and not row['subject_included']
+ assert text not in (out/'editorial-review.html').read_bytes()

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-015422-editorial-reviewed-publication-binding-c28dcc91",
+  "recorded_at": "2026-10-12T01:54:22.733680+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "26287fdc641cef4b27170132472e789c48eb0bfc",
+  "changed": "Bind final reviewed editorial scope metadata, eight passing website checks and unchanged route boundaries before the repaired protected head.",
+  "proves": "All five capability receipts are current; the complete reviewed source passes 2455 tests. Three identified protected-review defects are repaired.",
+  "limits": "Protected publication pending; no independent tag accuracy, automatic collection, authenticated editor or new endpoint.",
+  "scope_ids": [
+    "F-157",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "d8e223d3a5e99c994e7168faaa3eced2dd7338f4d3794001ea8ea126599d0a8a",
+    "eval/route-boundaries.json": "9eeebd36b8f38f457bf5ce2dc3c88453be5b9b5b578486ecd99a0c48a5501de5",
+    "docs/editorial-workflow-result.md": "bba1e26ecbf24fc599e48b986483452fc6532f756c2e3a8cf288ee4d89d62646",
+    "runs/2026-10-12-editorial-reviewed-website.json": "fde7248b184706fa2fff4ff46a0a23dda00010374d4c4196f4a3bfac43092825",
+    "runs/2026-10-12-editorial-reviewed-route-review.json": "9105805b3700f93ad95d6bcc9d03648911e472f76850674a0b1cb6fc35380c30"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-reviewed-website.json",
+      "sha256": "fde7248b184706fa2fff4ff46a0a23dda00010374d4c4196f4a3bfac43092825"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-reviewed-route-review.json",
+      "sha256": "9105805b3700f93ad95d6bcc9d03648911e472f76850674a0b1cb6fc35380c30"
+    }
+  ],
+  "checks": []
+}

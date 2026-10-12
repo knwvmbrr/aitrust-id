@@ -16,7 +16,9 @@ def read_packet(path, root, supersede=False):
     with directory(path, root) as fd:
         expected = {'source.json', 'subject.txt', 'review.json'} | ({'previous.json'} if supersede else set())
         newsroom.require(set(os.listdir(fd)) == expected)
-        result = [member(fd, 'source.json', 2_000_000), member(fd, 'subject.txt', 80_000),
+        raw = member(fd, 'source.json', 2_000_000)
+        source_format, _, _, _, _ = newsroom.inspect_source(newsroom.parse(raw, 2_000_000), root)
+        result = [raw, member(fd, 'subject.txt', newsroom.SUBJECT_LIMITS[source_format][1]),
                   member(fd, 'review.json', 16_384)]
         previous = member(fd, 'previous.json', 2_000_000) if supersede else None
     return result, previous
@@ -64,9 +66,9 @@ def prepare(argv, root):
     try:
         newsroom.require(a.reviewed_record is True)
         raw = source(a.source, root, 2_000_000)
-        text = source(a.subject, root, 80_000)
+        source_format, subject, _, _, _ = newsroom.inspect_source(newsroom.parse(raw, 2_000_000), root)
+        text = source(a.subject, root, newsroom.SUBJECT_LIMITS[source_format][1])
         previous = source(a.previous, root, 2_000_000) if a.previous else None
-        _, subject, _, _, _ = newsroom.inspect_source(newsroom.parse(raw, 2_000_000), root)
         selection = {'profile': newsroom.PROFILE, 'assertion_sha256': newsroom.sha(raw),
                      'subject_sha256': subject['sha256'], 'reviewer_handle': a.reviewer,
                      'decision': a.decision, 'reason': a.reason,

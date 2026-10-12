@@ -9919,10 +9919,11 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-12T01:28:45.525565+00:00",
+        "audited_at": "2026-10-12T01:51:09.269649+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex"
+          "Codex",
+          "Codex — protected-review range/evidence/score repairs, 130 focused and 2455 combined tests, 35 current Mac/Linux CLI checks"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -9930,7 +9931,7 @@
         "completed_by": [
           "Codex"
         ],
-        "completed_at": "2026-10-12T01:28:45.525565+00:00",
+        "completed_at": "2026-10-12T01:51:09.269649+00:00",
         "completion_timestamp_basis": "Current source-bound full-suite and complete declared editorial lifecycle acceptance; exact publication tracked separately.",
         "next_fix": null,
         "next_owner": null,
@@ -9943,7 +9944,10 @@
           "runs/2026-10-12-editorial-repaired-browser-workflow.json",
           "runs/2026-10-12-editorial-final-full-suite.json",
           "runs/2026-10-12-editorial-accepted-website.json",
-          "runs/2026-10-12-editorial-accepted-route-review.json"
+          "runs/2026-10-12-editorial-accepted-route-review.json",
+          "runs/2026-10-12-editorial-reviewed-full-suite.json",
+          "runs/2026-10-12-editorial-review-focused.json",
+          "runs/2026-10-12-editorial-review-linux-cli.json"
         ],
         "evidence_scope": "Full F-157 editorial labels workflow on declared Linux/macOS CLI and offline Chromium/WebKit views, importing current detailed PS browser exports or unsigned current gateway text records; unsupported/stale inputs fail explicitly, corrections retain source findings and prior history, removal and personal workflow independence executed. No CMS, vendor watermark detector, authenticated reporter identity, content truth, automatic collection, new tag adoption or independent tag accuracy is claimed.",
         "required_acceptance": [],

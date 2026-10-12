@@ -12,6 +12,7 @@ from protocol.evidence import unique, reject, finite
 from protocol.replay import inspect_record
 
 PROFILE = 'owner-editorial-review/v1'
+SUBJECT_LIMITS = {'gateway-wire-0.1.0': (200_000, 800_000), 'device-preview-v1': (20_000, 80_000)}
 DECISIONS = {'needs_review': 'Needs review', 'reviewed': 'Reviewed by the named editor', 'withheld': 'Held back by the editor'}
 REASONS = {'needs_context': 'More context is needed.', 'source_checked': 'The editor reports checking the source.',
            'disagreed': 'The editor disagrees with this finding.', 'privacy': 'The editor is holding this back for privacy.',
@@ -83,9 +84,10 @@ def analyze(raw_assertion, raw_subject, raw_selection, *, root, raw_previous=Non
     require(isinstance(selection['reviewer_handle'], str) and re.fullmatch(r'[a-z0-9][a-z0-9_-]{2,63}', selection['reviewer_handle']))
     require(isinstance(selection['decision'], str) and selection['decision'] in DECISIONS and isinstance(selection['reason'], str) and selection['reason'] in REASONS)
     source_format, subject, tags, abstentions, models = inspect_source(assertion, Path(root))
-    require(isinstance(raw_subject, bytes) and 0 < len(raw_subject) <= 80_000)
+    character_limit, byte_limit = SUBJECT_LIMITS[source_format]
+    require(isinstance(raw_subject, bytes) and 0 < len(raw_subject) <= byte_limit)
     text = normalize_nfc(raw_subject.decode('utf-8'))
-    require(text.strip() and len(text) <= 20_000 and '\x00' not in text)
+    require(text.strip() and len(text) <= character_limit and '\x00' not in text)
     require(sha(text.encode()) == subject['sha256'] == selection['subject_sha256'] and len(text) == subject['char_len'])
     require(len(tags) <= 2 and len(abstentions) <= 16 and len({tag['code'] for tag in tags}) == len(tags))
     for row in abstentions:
@@ -103,7 +105,8 @@ def analyze(raw_assertion, raw_subject, raw_selection, *, root, raw_previous=Non
         require(set(tag) == expected)
         if tag['code'] == 'PS':
             require((source_format != 'gateway-wire-0.1.0' or tag['floor'] == assertion['evaluator']['preprocessing']['configuration']['rule_floor'])
-                    and tag['confidence'] >= .7)
+                    and tag['confidence'] >= .7
+                    and tag['confidence'] == max(signal['score'] for signal in tag['signals']))
         else:
             require(tag['confidence'] == 1 and 'floor' not in tag)
         for signal in tag['signals']:
@@ -119,7 +122,8 @@ def analyze(raw_assertion, raw_subject, raw_selection, *, root, raw_previous=Non
                         and len(set(detail['entities'])) == len(detail['entities'])
                         and type(detail['count']) is int and len(detail['entities']) <= detail['count'] <= 20000)
             spans = signal.get('spans', [])
-            require(len(spans) <= 128 and all(0 <= a < b <= len(text) for a, b in spans))
+            require((tag['code'] != 'PS' or len(spans) >= 1)
+                    and len(spans) <= 128 and all(0 <= a < b <= len(text) for a, b in spans))
     previous_hash = selection['previous_record_sha256']
     if raw_previous is None: require(previous_hash is None)
     else:

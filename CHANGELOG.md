@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-015422-editorial-reviewed-publication-binding-c28dcc91
+
+Recorded 2026-10-12T01:54:22.733680+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind final reviewed editorial scope metadata, eight passing website checks and unchanged route boundaries before the repaired protected head.
+- **Evidence.** All five capability receipts are current; the complete reviewed source passes 2455 tests. Three identified protected-review defects are repaired. [Change record](./runs/changes/2026-10-12-015422-editorial-reviewed-publication-binding-c28dcc91.json).
+- **Not claimed.** Protected publication pending; no independent tag accuracy, automatic collection, authenticated editor or new endpoint.
+
+
+### 2026-10-12-015132-editorial-reviewed-full-acceptance-d0b2ce1a
+
+Recorded 2026-10-12T01:51:32.141500+00:00 · Contributor: Codex · change
+
+- **Changed.** Record repaired full editorial acceptance and current 2455-test evidence; preserve all 202 jobs and the 115-complete / 87-open ledger.
+- **Evidence.** Current gateway/device importer bounds, positions and confidence invariants pass. Human and tag release gates remain separate; scope metadata is refreshed after execution. [Change record](./runs/changes/2026-10-12-015132-editorial-reviewed-full-acceptance-d0b2ce1a.json).
+- **Not claimed.** Protected publication pending. Whole-suite diagnostics stay private; public proof carries counts and hashes. No independently accurate tag or legal institution is asserted.
+
+
+### 2026-10-12-014457-editorial-protected-review-repair-808261df
+
+Recorded 2026-10-12T01:44:57.569075+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair all three protected-review importer findings: preserve gateway text range, require PS positions and enforce current gateway signal-score consistency.
+- **Evidence.** 130 focused regressions and 35 current Mac/Linux command cases pass, including actual in-process gateway long-text production and both CLI stages. [Change record](./runs/changes/2026-10-12-014457-editorial-protected-review-repair-808261df.json).
+- **Not claimed.** Protected publication and new whole-suite evidence pending; sources remain unsigned, scores heuristic and independent tag release unapproved. Earlier merge refusals retained.
+
+
 ### 2026-10-12-013431-editorial-final-publication-preflight-da1f3fab
 
 Recorded 2026-10-12T01:34:31.979352+00:00 · Contributor: Codex · change

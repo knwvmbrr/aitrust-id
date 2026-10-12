@@ -183,3 +183,42 @@ def test_withheld_capability_stays_separate_from_asserted_findings(assertion):
 def test_abstention_inconsistent_with_current_pipeline_is_refused(assertion,row):
  a=copy.deepcopy(assertion);a['abstentions']=[row]
  with pytest.raises(ValueError):newsroom.analyze(*arguments(a),root=ROOT)
+
+
+@pytest.mark.parametrize('length,filler',[(20001,'x'),(80001,'x'),(200000,'x'),(200000,'😀')])
+def test_gateway_preserves_its_supported_subject_range(assertion,length,filler):
+ a=copy.deepcopy(assertion); text=(TEXT.decode()+filler*(length-len(TEXT))).encode()
+ a['subject']['sha256']=newsroom.sha(text);a['subject']['char_len']=length
+ args=list(arguments(a));args[1]=text
+ row,decoded=newsroom.analyze(*args,root=ROOT)
+ assert row['subject_char_len']==length and decoded.encode()==text
+
+
+def test_gateway_refuses_over_its_character_limit(assertion):
+ a=copy.deepcopy(assertion);text=b'x'*200001;a['subject']['sha256']=newsroom.sha(text);a['subject']['char_len']=len(text)
+ args=list(arguments(a));args[1]=text
+ with pytest.raises(ValueError):newsroom.analyze(*args,root=ROOT)
+
+
+@pytest.mark.parametrize('producer',['gateway','device'])
+def test_empty_evidence_is_refused_after_selection_rebinding(assertion,device_record,producer):
+ a=copy.deepcopy(assertion if producer=='gateway' else device_record)
+ a['tags' if producer=='gateway' else 'candidates'][0]['signals'][0]['spans']=[]
+ with pytest.raises(ValueError):newsroom.analyze(*arguments(a),root=ROOT)
+
+
+def test_gateway_score_inconsistent_with_its_evidence_is_refused(assertion):
+ a=copy.deepcopy(assertion);a['tags'][0]['confidence']=.71
+ assert max(signal['score'] for signal in a['tags'][0]['signals'])!=.71
+ with pytest.raises(ValueError):newsroom.analyze(*arguments(a),root=ROOT)
+
+
+@pytest.mark.parametrize('length',[20000,20001])
+def test_device_subject_limit_remains_unchanged(device_record,length):
+ a=copy.deepcopy(device_record);text=(TEXT.decode()+'😀'*(length-len(TEXT))).encode()
+ a['subject']['sha256']=newsroom.sha(text);a['subject']['codepoint_count']=length
+ args=list(arguments(a));args[1]=text
+ if length==20000:
+  row,_=newsroom.analyze(*args,root=ROOT);assert row['subject_char_len']==length
+ else:
+  with pytest.raises(ValueError):newsroom.analyze(*args,root=ROOT)

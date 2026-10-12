@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-12T01:44:57.429050+00:00",
+  "pass": false,
+  "protected_merge_performed": false,
+  "required_checks": "first attempt had one required site check pending; second had all 22 successful but three unresolved source findings",
+  "findings": [
+    "gateway input range was incorrectly reduced to device limits",
+    "empty PS evidence spans were accepted",
+    "gateway confidence was not bound to maximum evidence score"
+  ],
+  "corrective_action": "Preserve producer-specific range; require nonempty positions and method-consistent score; rerun private CLI, Linux, browser, full suite and exact-head CI.",
+  "independent_accuracy_evidence": false
+}
