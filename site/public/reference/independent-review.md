@@ -53,8 +53,8 @@ python3 scripts/prepare-ps-review.py freeze ../ai-trust-id-review/items.jsonl ..
 
 The CLI works on Linux/macOS with private owner-held directories (700) and files (600). It refuses reused destinations, file links, shared permissions, duplicate JSON fields and malformed text. Source JSONL and phone forms are limited to 10 MB, items/CSV to 16 MB each, the manifest to 64 KB and the generated packet to 32 MB total. Oversized output fails before any packet is created. Identifiers must be unique opaque IDs; spreadsheet-escaped IDs must also remain unique. Source and category fields each allow 1,000 characters. These limits protect your machine; they do not establish a representative sample.
 
-The tool creates two separately shuffled CSV and phone-friendly JSON forms, the frozen items, and a hash
-manifest. No detector is called. Spreadsheet formula prefixes are escaped in the
+The tool creates two separately shuffled CSV and phone-friendly JSON forms, the frozen items, a hash
+manifest and an owner-private execution-context member. New packets use private manifest v2; reviewer forms stay v1. Their opaque `method_sha256` binds the complete selected execution recipe; its raw evaluator-file hash is retained inside the private context. The context binds the selected Python evaluator, frozen NFC code/data, evaluation and preparation sources, Python executable/regex code and ten declared installed import dependencies. Compare checks this recipe before labels and again afterwards. A dependency or runtime update needs a fresh packet; a packet prepared on another host may not match this coordinator host. This is a selected offline route identity, not whole-host attestation, a timestamp authority or a service/browser measurement. No detector is called. Spreadsheet formula prefixes are escaped in the
 forms; the original frozen text is retained only in the private packet. Each
 reviewer independently fills `label` with `positive`, `negative`, or `ambiguous`
 and fills `reason`. Leave every other field unchanged. A PS positive is the
@@ -73,6 +73,14 @@ and agree their reporting policy before evaluating. Two agreeing files alone do
 not prove two independent humans reviewed them. The current harness's externally
 supplied summary is not an attestation verifier; retain the full review evidence.
 Calibration, accepted sampling, runtime and accessibility checks remain separate.
+
+For current packets, require the execution binding explicitly:
+
+```sh
+python3 scripts/prepare-ps-review.py compare ../ai-trust-id-review/packet --format json --require-execution-binding
+```
+
+Legacy manifest v1 packets can still be compared for their labels with the original command. The report says `execution_binding_verified: false`: those packets pinned only the evaluator file. The require-binding option refuses them. Retain the old files; do not rewrite their manifest to manufacture historical dependency evidence. Hashes can be rewritten by whoever controls a packet, and agreeing files do not prove independent humans. No freeze or comparison runs the detector, evaluates accuracy, uploads content or approves release.
 
 To volunteer, use the site's **Help improve this tag** control on PS, choose
 **Independent labels**, and post a privacy-safe draft in the linked public GitHub

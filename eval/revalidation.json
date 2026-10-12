@@ -307,7 +307,14 @@
         "scripts/build-device-detector.py",
         "services/evaluator/app.py",
         "protocol/normalization.py",
-        "protocol/unicode15-data.json"
+        "protocol/unicode15-data.json",
+        "scripts/prepare-ps-review.py",
+        "scripts/verify-blind-review-privacy.py",
+        "tools/review_execution.py",
+        "services/evaluator/requirements.lock",
+        "tests/test_review_execution_binding.py",
+        "tests/test_blind_review.py",
+        "tests/test_blind_review_privacy.py"
       ],
       "commands": [
         [
@@ -316,6 +323,9 @@
           "pytest",
           "tests/test_changelog_pipeline.py",
           "tests/test_website_evidence_inputs.py",
+          "tests/test_review_execution_binding.py",
+          "tests/test_blind_review.py",
+          "tests/test_blind_review_privacy.py",
           "-q"
         ],
         [

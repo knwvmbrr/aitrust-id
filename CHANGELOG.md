@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-034604-review-recipe-integration-verified-193b7362
+
+Recorded 2026-10-12T03:46:04.832956+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete current selected review-recipe integration and retain normal protected merge/publication evidence for the prior choice-grammar increment.
+- **Evidence.** 2571 source-bound Python tests pass; eight website checks bind 390 inputs, 675 route inputs pass review, and actual phone-view downloads compare against bound recipes in both engines. [Change record](./runs/changes/2026-10-12-034604-review-recipe-integration-verified-193b7362.json).
+- **Not claimed.** 87 full requirements remain open; independent labels, sampling, calibration, physical devices and human accessibility remain separate.
+
+
+### 2026-10-12-034008-review-recipe-capability-receipts-54656c73
+
+Recorded 2026-10-12T03:40:08.095189+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the four passing current capability receipts before executing the integrated website checks.
+- **Evidence.** PS, PII_REDACTED, protocol and extension checks pass against the current shared recipe manifest. [Change record](./runs/changes/2026-10-12-034008-review-recipe-capability-receipts-54656c73.json).
+- **Not claimed.** Website and current route review are next; independent accuracy remains separate.
+
+
+### 2026-10-12-033740-review-integrated-source-inputs-68b78cfd
+
+Recorded 2026-10-12T03:37:40.301558+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate the selected review-execution recipe into website capability checks and the personal-route source inventory.
+- **Evidence.** Prepared scope/reference projections preserve all 202 records; website now executes packet drift controls and browser download comparisons with required execution binding. [Change record](./runs/changes/2026-10-12-033740-review-integrated-source-inputs-68b78cfd.json).
+- **Not claimed.** Current combined capability checks and whole-suite remain pending; no human or accuracy acceptance.
+
+
 ### 2026-10-12-033706-review-clean-source-integration-caa810e0
 
 Recorded 2026-10-12T03:37:06.101414+00:00 · Contributor: Codex · change

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-034008-review-recipe-capability-receipts-54656c73",
+  "recorded_at": "2026-10-12T03:40:08.095189+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d9e5ab4b6990cb966bbf66a463ca817a3887607a",
+  "changed": "Record the four passing current capability receipts before executing the integrated website checks.",
+  "proves": "PS, PII_REDACTED, protocol and extension checks pass against the current shared recipe manifest.",
+  "limits": "Website and current route review are next; independent accuracy remains separate.",
+  "scope_ids": [
+    "F-050",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "eval/revalidation.json": "7c2b1b46bc94083acd025390faa1f7d7e3c9f1ba1f5f95321b645dc23be8f9a3",
+    "runs/2026-10-12-review-recipe-current-PII_REDACTED.json": "5c7265f73538e9dfab18844bfa0b03e6f2a048c94156b93ff56762dfe42764ee",
+    "runs/2026-10-12-review-recipe-current-PS.json": "a7ab389ba46512288470358c7827df9ea890421b69261c33de3b0a595e53de03",
+    "runs/2026-10-12-review-recipe-current-extension.json": "ba2ef565bd632df3000635db2e346057915bb6f373d6efc66359c0170032bcd9",
+    "runs/2026-10-12-review-recipe-current-protocol.json": "a4379851812049cf2d81957db3213bfdef161a8068cda38f594e19630b14e55d",
+    "scripts/verify-route-boundaries.py": "58f7295bf3d087b139664ada9d494eef2699643b213d4fb48876a49963768f97",
+    "site/public/reference/independent-review.md": "1b8eb5745459f3096a2edc08e1338b9df24fa6e6f499ac42d5ce517a55528ea5",
+    "site/public/reference/public-scope.json": "0c66124a4d705a1c05af3adcd0cee6d3342ca3d3d492d1a74e09a9091d1e5f6c",
+    "site/src/public-scope.json": "0c66124a4d705a1c05af3adcd0cee6d3342ca3d3d492d1a74e09a9091d1e5f6c",
+    "site/src/scope-manifest.json": "b752d353f10fbfc96e8bd5e12e25eef30305c057f477ca270c92e33cf4e0e791"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-review-recipe-current-PS.json",
+      "sha256": "a7ab389ba46512288470358c7827df9ea890421b69261c33de3b0a595e53de03"
+    },
+    {
+      "path": "runs/2026-10-12-review-recipe-current-PII_REDACTED.json",
+      "sha256": "5c7265f73538e9dfab18844bfa0b03e6f2a048c94156b93ff56762dfe42764ee"
+    },
+    {
+      "path": "runs/2026-10-12-review-recipe-current-protocol.json",
+      "sha256": "a4379851812049cf2d81957db3213bfdef161a8068cda38f594e19630b14e55d"
+    },
+    {
+      "path": "runs/2026-10-12-review-recipe-current-extension.json",
+      "sha256": "ba2ef565bd632df3000635db2e346057915bb6f373d6efc66359c0170032bcd9"
+    }
+  ],
+  "checks": []
+}
