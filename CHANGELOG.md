@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-174136-revision-links-final-regressions-3c34c64a
+
+Recorded 2026-10-12T17:41:36.332638+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete passing corrected-link regression suite and current state chronology.
+- **Evidence.** 2,943 tests pass, five explicit platform skips, and all 715 source inputs unchanged. All five capability receipts assess current. [Change record](./runs/changes/2026-10-12-174136-revision-links-final-regressions-3c34c64a.json).
+- **Not claimed.** Original F-029a derivability acceptance and independent tag/human gates remain open. Zero full closures.
+
+
+### 2026-10-12-173746-revision-links-stable-website-976bb522
+
+Recorded 2026-10-12T17:37:46.081024+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all sixteen passing corrected-link website commands and the reviewed 715-input route controls. Refresh state after both receipts.
+- **Evidence.** Website and route checks pass with unchanged sources; public link tests execute inside the source-bound website check. [Change record](./runs/changes/2026-10-12-173746-revision-links-stable-website-976bb522.json).
+- **Not claimed.** Independent accuracy, human acceptance and full original derivability acceptance remain open. Full-regression repeat is next.
+
+
+### 2026-10-12-173333-revision-link-current-capabilities-6ad209fb
+
+Recorded 2026-10-12T17:33:33.923420+00:00 · Contributor: Codex · change
+
+- **Changed.** Record four current capability executions and the corrected-link route source inventory before website verification.
+- **Evidence.** All four executions pass with unchanged input hashes; source inventory now binds the public-link regression. [Change record](./runs/changes/2026-10-12-173333-revision-link-current-capabilities-6ad209fb.json).
+- **Not claimed.** Website and full-regression repeats remain pending. Actual revision methods and isolated Linux control sources are unchanged; no full closure or tag release.
+
+
+### 2026-10-12-173128-revision-public-receipt-links-65267be1
+
+Recorded 2026-10-12T17:31:28.461304+00:00 · Contributor: Codex · change
+
+- **Changed.** Fix three copied guide receipt links and add real public-context link-resolution regressions, CI and source binding.
+- **Evidence.** All four link tests and 36 unchanged revision unit tests passed. Missing relative site receipt paths are explicitly refused; actual repository or published reference files resolve. [Change record](./runs/changes/2026-10-12-173128-revision-public-receipt-links-65267be1.json).
+- **Not claimed.** The previous head was not published; current source checks and protected review must repeat before publication. No method, tag, collection or full requirement closure change.
+
+
 ### 2026-10-12-172007-revision-final-regressions-362b46c9
 
 Recorded 2026-10-12T17:20:07.645738+00:00 · Contributor: Codex · change

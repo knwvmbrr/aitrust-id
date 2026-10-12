@@ -161,7 +161,8 @@
         "tests/test_session_revisions.py",
         "docs/session-revision-plan.md",
         "docs/session-revisions.md",
-        "docs/session-revision-result.md"
+        "docs/session-revision-result.md",
+        "tests/test_revision_public_links.py"
       ],
       "commands": [
         [
@@ -239,6 +240,13 @@
           "scripts/verify-session-revisions.py",
           "--output",
           "output/verification/session-revisions.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_revision_public_links.py",
+          "-q"
         ]
       ]
     },
@@ -472,7 +480,8 @@
         "tests/test_session_revisions.py",
         "docs/session-revision-plan.md",
         "docs/session-revisions.md",
-        "docs/session-revision-result.md"
+        "docs/session-revision-result.md",
+        "tests/test_revision_public_links.py"
       ],
       "commands": [
         [
@@ -567,6 +576,13 @@
           "scripts/verify-session-revisions.py",
           "--output",
           "output/verification/session-revisions.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_revision_public_links.py",
+          "-q"
         ]
       ]
     }

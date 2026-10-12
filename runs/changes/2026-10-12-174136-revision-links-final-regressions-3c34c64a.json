@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-174136-revision-links-final-regressions-3c34c64a",
+  "recorded_at": "2026-10-12T17:41:36.332638+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "33190e709190c1352eb315e00a28353eaf705fcd",
+  "changed": "Record the complete passing corrected-link regression suite and current state chronology.",
+  "proves": "2,943 tests pass, five explicit platform skips, and all 715 source inputs unchanged. All five capability receipts assess current.",
+  "limits": "Original F-029a derivability acceptance and independent tag/human gates remain open. Zero full closures.",
+  "scope_ids": [
+    "F-029a"
+  ],
+  "files": {
+    "runs/2026-10-12-session-revision-links-full-suite.json": "ac6a9e80d081042399052a4131bd98eb0abe2ded544e6e5fc8e568cb61962866",
+    "state.json": "a69103c9e75d99b19dc8749b89b0804b8a6ce97e653d4ed52621164fe3816ba3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-session-revision-links-full-suite.json",
+      "sha256": "ac6a9e80d081042399052a4131bd98eb0abe2ded544e6e5fc8e568cb61962866"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T17:41:36.699122+00:00"
+    }
+  ]
+}

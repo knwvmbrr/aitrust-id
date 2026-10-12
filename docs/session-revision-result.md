@@ -26,9 +26,9 @@ All 202 scope records remain: 115 complete, 87 open. Zero full closures are
 credited by this component. Its value is a usable private observation and an
 explicit boundary for later research, rather than an unsupported accusation.
 
-[Local controls](../runs/2026-10-12-session-revision-local.json) ·
-[Isolated Linux controls](../runs/2026-10-12-session-revision-linux.json) ·
-[Retained connection failure](../runs/2026-10-12-session-revision-connection-failure.json)
+[Local controls](https://github.com/knwvmbrr/aitrust-id/blob/main/runs/2026-10-12-session-revision-local.json) ·
+[Isolated Linux controls](https://github.com/knwvmbrr/aitrust-id/blob/main/runs/2026-10-12-session-revision-linux.json) ·
+[Retained connection failure](https://github.com/knwvmbrr/aitrust-id/blob/main/runs/2026-10-12-session-revision-connection-failure.json)
 
 The first Linux connection timed out before setup output. A read-only follow-up
 found no matching temporary directory. The repeat used the same source and

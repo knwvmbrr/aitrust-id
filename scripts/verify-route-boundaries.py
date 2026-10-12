@@ -80,7 +80,8 @@ PATTERNS += ('scripts/verify-scope-plan.py', 'scripts/render-scope-plan.py', 'te
 PATTERNS += ('scripts/verify-workflows.cjs',)
 PATTERNS += ('tools/session_revisions.py', 'scripts/review-session-revision.py',
              'scripts/prepare-session-revision-demo.py', 'scripts/prepare-session-selections.py',
-             'scripts/verify-session-revisions.py', 'tests/test_session_revisions.py')
+             'scripts/verify-session-revisions.py', 'tests/test_session_revisions.py',
+             'tests/test_revision_public_links.py')
 PATTERNS += ('tools/redaction_observations.py', 'scripts/measure-redaction-development.py',
              'scripts/redaction-development-worker.py', 'scripts/build-redaction-performance.py',
              'eval/fixtures/pii-recognition-development.json', 'tests/test_complete_ipv6.py',

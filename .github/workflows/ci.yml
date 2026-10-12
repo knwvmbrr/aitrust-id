@@ -121,7 +121,7 @@ jobs:
           python scripts/verify-feedback-analysis.py --output output/verification/feedback-analysis.json
       - name: Compare private selected revisions without an origin or knowledge verdict
         run: |
-          python -m pytest tests/test_session_revisions.py -q
+          python -m pytest tests/test_session_revisions.py tests/test_revision_public_links.py -q
           python scripts/verify-session-revisions.py --output output/verification/session-revisions.json
       - name: Refuse unsafe synthetic backup execution before database creation
         run: python -m pytest tests/test_backup_retention.py tests/test_restore_isolation.py -q
