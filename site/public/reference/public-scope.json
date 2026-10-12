@@ -8486,10 +8486,11 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-10T17:31:33.618951+00:00",
+        "audited_at": "2026-10-12T11:41:37.279669+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — metadata-only local feedback form and executed tests, 2026-10-10T17:31:33.618951+00:00"
+          "Codex — metadata-only local feedback form and executed tests, 2026-10-10T17:31:33.618951+00:00",
+          "Codex — synthetic private request admission and withdrawal, 177 local tests and 62 actual PostgreSQL control groups, 2026-10-12T11:41:37.279669+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -8502,9 +8503,19 @@
         "evidence": [
           "docs/scope-delivery.md",
           "docs/owner-operation.md",
-          "runs/2026-10-10-owner-feedback-browser.json"
+          "runs/2026-10-10-owner-feedback-browser.json",
+          "docs/research-admission-plan.md",
+          "docs/research-admission.md",
+          "docs/research-admission-result.md",
+          "tools/research_admission.py",
+          "scripts/research-admission.py",
+          "scripts/verify-research-admission.py",
+          "tests/test_research_admission.py",
+          "runs/2026-10-12-admission-linux-controls.json",
+          "runs/2026-10-12-admission-local-controls.json",
+          "runs/2026-10-12-admission-worker-shadowing-refusal.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation The real private CLI now exercises digest translation, selected role admission, capacity and withdrawal using invented requests; no live authentication, participant or service is credited.",
         "required_acceptance": [
           "Recruit and record a small consenting pilot, run the real workflow, review user feedback and close defects. Metadata preview/download is tested; it is not a running recruited pilot."
         ],
@@ -12593,12 +12604,13 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-12T02:37:16.715765+00:00",
+        "audited_at": "2026-10-12T11:41:37.279669+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — synthetic-only PostgreSQL storage/grant/withdrawal/expiry controls and owned Unix-socket harness, 2026-10-11T16:17:29.010903+00:00",
-          "Codex — source-bound synthetic invitation/quota component"
+          "Codex — source-bound synthetic invitation/quota component",
+          "Codex — synthetic private request admission and withdrawal, 177 local tests and 62 actual PostgreSQL control groups, 2026-10-12T11:41:37.279669+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -12606,7 +12618,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Accept the collection/purpose/roles/retention/withdrawal contract and endpoint; integrate the tested synthetic invitation mechanism with real authentication and reviewed provider/proxy handling; prove encrypted backup expiry and replacement-host recovery, then run a consenting pilot. No real intake or participant acceptance is credited.",
+        "next_fix": "Accept the collection/purpose/roles/retention/withdrawal contract and endpoint; connect the tested private synthetic request/invitation mechanism to genuine authentication and reviewed provider/proxy handling; prove encrypted backup expiry and replacement-host recovery, then run a consenting pilot. Training and anomaly analysis are separate jobs; no real intake or participant acceptance is credited.",
         "next_owner": "Michael data policy; Codex application",
         "evidence": [
           "docs/data-growth-plan.md",
@@ -12627,9 +12639,19 @@
           "docs/research-invitation-result.md",
           "runs/2026-10-12-invitation-expanded-linux.json",
           "runs/2026-10-12-invitation-base-linux.json",
-          "runs/2026-10-12-invitation-focused.json"
+          "runs/2026-10-12-invitation-focused.json",
+          "docs/research-admission-plan.md",
+          "docs/research-admission.md",
+          "docs/research-admission-result.md",
+          "tools/research_admission.py",
+          "scripts/research-admission.py",
+          "scripts/verify-research-admission.py",
+          "tests/test_research_admission.py",
+          "runs/2026-10-12-admission-linux-controls.json",
+          "runs/2026-10-12-admission-local-controls.json",
+          "runs/2026-10-12-admission-worker-shadowing-refusal.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation 39 actual non-root PostgreSQL controls (including all 80 supported enum combinations) exercise synthetic development storage only. No participant data, endpoint, production database change or training/anomaly operation is claimed.",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation 39 actual non-root PostgreSQL controls (including all 80 supported enum combinations) exercise synthetic development storage only. No participant data, endpoint, production database change or training/anomaly operation is claimed. The real private CLI now exercises digest translation, selected role admission, capacity and withdrawal using invented requests; no live authentication, participant or service is credited.",
         "required_acceptance": [
           "Accept the proposed collection/purpose/roles/retention/withdrawal contract and endpoint; implement invitation quotas and reviewed proxy/provider handling; prove encrypted backup expiry and replacement-host recovery; then run a consenting pilot. Training, example sharing and anomaly analysis remain separate jobs. Synthetic storage controls are implemented, not a deployed intake."
         ],

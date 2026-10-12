@@ -31,7 +31,8 @@ def failure_record(stage,result=None):
         'source_snapshot_at_failure':{path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() if (ROOT/path).is_file() else None
             for path in ('deploy/research/metadata-development.sql','scripts/metadata-store-sandbox.py',
                          'scripts/verify-metadata-store.py','protocol/reports.py','site/src/research-feedback.js',
-                         'deploy/research/metadata-invitation-development.sql','scripts/verify-research-invitations.py')}}
+                         'deploy/research/metadata-invitation-development.sql','scripts/verify-research-invitations.py',
+                         'tools/research_admission.py','scripts/research-admission.py','scripts/verify-research-admission.py')}}
     if result is not None:
         record.update(worker_exit_status=result.returncode,
             stdout_sha256=hashlib.sha256(result.stdout).hexdigest(),
@@ -53,7 +54,7 @@ def failure_record(stage,result=None):
 
 
 def run_control(output, profile='base'):
-    if profile not in ('base', 'invitation'):
+    if profile not in ('base', 'invitation', 'admission'):
         raise ValueError('Use an explicitly supported synthetic storage profile.')
     if sys.platform!='linux' or os.geteuid()==0:
         raise ValueError('Run as an ordinary Linux user with PostgreSQL 18 installed.')
@@ -77,7 +78,8 @@ def run_control(output, profile='base'):
         attempted=True;stopped=False;stage='startup'
         run(control+['-l',str(directory/'server.log'),'-w','start'])
         stage='verification'
-        worker='verify-metadata-store.py' if profile=='base' else 'verify-research-invitations.py'
+        worker={'base':'verify-metadata-store.py','invitation':'verify-research-invitations.py',
+                'admission':'verify-research-admission.py'}[profile]
         result=subprocess.run([sys.executable,str(ROOT/'scripts'/worker),
             '--sandbox-dir',str(directory)],cwd=ROOT,capture_output=True,
             env=environment,timeout=180)
@@ -114,7 +116,7 @@ def run_control(output, profile='base'):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',default='output/verification/metadata-store.json')
-    parser.add_argument('--profile',choices=['base','invitation'],default='base')
+    parser.add_argument('--profile',choices=['base','invitation','admission'],default='base')
     args=parser.parse_args()
     try:
         record=json.loads(run_control(args.output,args.profile))

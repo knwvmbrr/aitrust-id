@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-114901-admission-current-integration-894497fd",
+  "recorded_at": "2026-10-12T11:49:01.055273+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bc3f348c57072395ed33ed9451ee461189f16821",
+  "changed": "Bind current website execution, reviewed route inventory and full-suite evidence; refresh machine-readable truth after all referenced receipts.",
+  "proves": "Nine website commands pass with 414 bound inputs; all 2732 Python tests pass with one platform skip against 687 unchanged route inputs. Fixed orchestration runtime refusal is retained.",
+  "limits": "Protected hosted checks and publication pending; 115 complete / 87 open remain unchanged. No independent accuracy or participant/live intake claim.",
+  "scope_ids": [
+    "N-011",
+    "F-141",
+    "F-120"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "3420c8fd4095f82e51e20608877e7f63aadda0c71b29ed5d9543cb65c14b446e",
+    "state.json": "077a8926c766bbf335b41975bd4afdf7459e604a7f6d09f12c85e35072ddddc9",
+    "runs/2026-10-12-admission-current-website.json": "beefc6ec5a30def27a8cbeb192660592705189ce06554027ceb37f8573899746",
+    "runs/2026-10-12-admission-reviewed-routes.json": "a1cfc7a90e8166dba2f0a917db12b0b38309659e2080d9440fcdad6ae5b12256",
+    "runs/2026-10-12-admission-full-suite.json": "b18cc0e873592c651477d35f93619d230701525cc141a4311e6bf5e28898441f",
+    "runs/2026-10-12-admission-route-runtime-refusal.json": "2917ffcbefe6945875f4c9a1ce86cf1b016cb05451886be60d095438aa58681a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-admission-current-website.json",
+      "sha256": "beefc6ec5a30def27a8cbeb192660592705189ce06554027ceb37f8573899746"
+    },
+    {
+      "path": "runs/2026-10-12-admission-reviewed-routes.json",
+      "sha256": "a1cfc7a90e8166dba2f0a917db12b0b38309659e2080d9440fcdad6ae5b12256"
+    },
+    {
+      "path": "runs/2026-10-12-admission-full-suite.json",
+      "sha256": "b18cc0e873592c651477d35f93619d230701525cc141a4311e6bf5e28898441f"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-114322-admission-four-capability-revalidation-6850eca2",
+  "recorded_at": "2026-10-12T11:43:22.387238+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bc3f348c57072395ed33ed9451ee461189f16821",
+  "changed": "Record four current source-bound capability executions after integrating private synthetic admission.",
+  "proves": "PS, redaction, protocol and extension check commands pass against unchanged selected source inventories; protocol runs the 177-test admission contract suite.",
+  "limits": "Engineering evidence only; website revalidation, protected merge and real participant/independent tag acceptance remain pending.",
+  "scope_ids": [
+    "N-011",
+    "F-141",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-10-12-admission-current-PS.json": "0df83e0771881679bcee00b9a14c1a2a92cda952f655f38aa0deae11e1569bc5",
+    "runs/2026-10-12-admission-current-PII_REDACTED.json": "ef82a9ff329d449ba5e5a16f5fb9f8c56b38372b6125a25e6f422135350288e5",
+    "runs/2026-10-12-admission-current-protocol.json": "532b8039c290ac97add7c348815179445e7ae961328f914c91ee2d0ce8b4a6eb",
+    "runs/2026-10-12-admission-current-extension.json": "9f9dac34d7cc03ba3c175843161e4da6b2edf9dc33217068351abad5192b1278"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-admission-current-PS.json",
+      "sha256": "0df83e0771881679bcee00b9a14c1a2a92cda952f655f38aa0deae11e1569bc5"
+    },
+    {
+      "path": "runs/2026-10-12-admission-current-PII_REDACTED.json",
+      "sha256": "ef82a9ff329d449ba5e5a16f5fb9f8c56b38372b6125a25e6f422135350288e5"
+    },
+    {
+      "path": "runs/2026-10-12-admission-current-protocol.json",
+      "sha256": "532b8039c290ac97add7c348815179445e7ae961328f914c91ee2d0ce8b4a6eb"
+    },
+    {
+      "path": "runs/2026-10-12-admission-current-extension.json",
+      "sha256": "9f9dac34d7cc03ba3c175843161e4da6b2edf9dc33217068351abad5192b1278"
+    }
+  ],
+  "checks": []
+}

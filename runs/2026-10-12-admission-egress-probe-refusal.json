@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-12T11:24:48.299637+00:00",
+  "pass": false,
+  "stage": "private_driver_ipv6_no_route_control",
+  "error_signature": "EADDRNOTAVAIL was not in the denied-connection errno set",
+  "tests_started": false,
+  "database_started": false,
+  "fix": "Accept the observed inability to assign an IPv6 source address as a refused connection, while still requiring a different actual kernel namespace and refusing any successful connection",
+  "owned_staging_removed": true,
+  "private_diagnostics_retained": true,
+  "production_changes": false
+}
