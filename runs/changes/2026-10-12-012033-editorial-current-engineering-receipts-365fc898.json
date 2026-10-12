@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-012033-editorial-current-engineering-receipts-365fc898",
+  "recorded_at": "2026-10-12T01:20:33.177205+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "684357c12fb0fe3fd21516d20b9544f1feeff1f3",
+  "changed": "Record four current capability passes and the website refusal for unrecorded fresh execution receipts; preserve failure and attribute those receipts before rebuilding.",
+  "proves": "PS, redaction, protocol and extension source-bound checks pass; the website guard correctly refuses an incomplete changelog.",
+  "limits": "Website acceptance and final full suite remain pending. No independent accuracy or new tag release.",
+  "scope_ids": [
+    "F-157",
+    "F-003",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "ceaff8d6320b35d477854bbf28f40cb4f61fa9f59ce2e17bb2a42bd12ff4bdaa",
+    "runs/2026-10-12-editorial-current-PS.json": "8606fd51cee99503df37cf441fb224b512d1a982925f4a6cd650110fb8c41ba8",
+    "runs/2026-10-12-editorial-current-PII_REDACTED.json": "38b007102b36907fbe50f76b398a2e1f4e145fd9e9e2dc292838436caa12cec9",
+    "runs/2026-10-12-editorial-current-protocol.json": "4d1db9150a2cdc8e8fcecd2b7b5e4c35e0f3b2e991b7eeb15d3b5710ec91e5e0",
+    "runs/2026-10-12-editorial-current-extension.json": "180ddab54cb9631eb77f363ea12956b0264190a0306449e07ea7238518c8e016",
+    "runs/2026-10-12-editorial-current-website.json": "7e01dd4808161fe231aacedf9dbc8a3c5263d7e8947c5d49d5e73f695cc7e660"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-current-PS.json",
+      "sha256": "8606fd51cee99503df37cf441fb224b512d1a982925f4a6cd650110fb8c41ba8"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-current-PII_REDACTED.json",
+      "sha256": "38b007102b36907fbe50f76b398a2e1f4e145fd9e9e2dc292838436caa12cec9"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-current-protocol.json",
+      "sha256": "4d1db9150a2cdc8e8fcecd2b7b5e4c35e0f3b2e991b7eeb15d3b5710ec91e5e0"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-current-extension.json",
+      "sha256": "180ddab54cb9631eb77f363ea12956b0264190a0306449e07ea7238518c8e016"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-current-website.json",
+      "sha256": "7e01dd4808161fe231aacedf9dbc8a3c5263d7e8947c5d49d5e73f695cc7e660"
+    }
+  ],
+  "checks": []
+}

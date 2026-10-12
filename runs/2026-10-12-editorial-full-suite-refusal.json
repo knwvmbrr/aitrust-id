@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-12T01:12:55.742907+00:00",
+  "pass": false,
+  "failed": 27,
+  "passed": 2410,
+  "skipped": 1,
+  "warning_count": 1,
+  "duration_seconds": 98.28,
+  "log_sha256": "99e8d86942f813fe4b2bee1d2021649ce9f5cc0ed47f3c301857f78f6adcf818",
+  "failure_signatures": [
+    "Current gateway fixtures inherited a stale fingerprint after test_local_cli.assertion shared the live evaluator MODELS list.",
+    "Current route differs from reviewed source inventory."
+  ],
+  "corrective_actions": [
+    "Deep-copy test method metadata and exercise the mutating test followed by the actual gateway consumer.",
+    "Refresh source-bound route evidence only after current checks; no bypass or skip."
+  ],
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

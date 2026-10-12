@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8",
+  "recorded_at": "2026-10-12T01:58:41.424662+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d5f2bc6884b8366d5739ad5bb010a93a5319f76f",
+  "changed": "Repair final state/report write order after CI correctly refused a snapshot predating its referenced route evidence.",
+  "proves": "40 existing accountability tests and the complete current ownership/count/chronology contract pass; its validator is unchanged.",
+  "limits": "Repaired protected-head CI and publication still pending. Failed Linux CI remains retained and is not a pass.",
+  "scope_ids": [
+    "F-157",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "5573e7b670dab253f11b1baddf44e36464b66c16c4c23790e43fe45419b60b3d",
+    "runs/2026-10-12-editorial-ci-chronology-refusal.json": "189c264f3bb4b40a0c8ec153292ed6281816a29c7c6de46504bdd7f0787e33c1",
+    "runs/2026-10-12-editorial-ci-chronology-repair.json": "26092df358fd831705779e038b9b5d876e801cf8254e34c3345518ce7836eae0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-ci-chronology-repair.json",
+      "sha256": "26092df358fd831705779e038b9b5d876e801cf8254e34c3345518ce7836eae0"
+    }
+  ],
+  "checks": []
+}

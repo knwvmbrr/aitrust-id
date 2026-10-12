@@ -484,3 +484,5 @@ The optional [organization term-check component](docs/private-policy.md) applies
 The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The Share prototype failed and is retained as an explicitly unreleased source archive; no native phone app is offered.
 
 Selected public fonts, Unicode resources, runtime identities and model-card declarations can be checked offline with `python3 scripts/verify-asset-notices.py`. See [the short notice guide](docs/asset-notices.md); consistency is distinct from legal clearance.
+
+For an editorial workflow, keep a selected finding and a separate editor decision in private files. The [editorial review guide](docs/editorial-workflow.md) covers the current detailed PS web export, unsigned current gateway records, corrections, offline views and removal. It performs no upload, automatic collection or independent accuracy validation.

@@ -2,6 +2,78 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8
+
+Recorded 2026-10-12T01:58:41.424662+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair final state/report write order after CI correctly refused a snapshot predating its referenced route evidence.
+- **Evidence.** 40 existing accountability tests and the complete current ownership/count/chronology contract pass; its validator is unchanged. [Change record](./runs/changes/2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8.json).
+- **Not claimed.** Repaired protected-head CI and publication still pending. Failed Linux CI remains retained and is not a pass.
+
+
+### 2026-10-12-015422-editorial-reviewed-publication-binding-c28dcc91
+
+Recorded 2026-10-12T01:54:22.733680+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind final reviewed editorial scope metadata, eight passing website checks and unchanged route boundaries before the repaired protected head.
+- **Evidence.** All five capability receipts are current; the complete reviewed source passes 2455 tests. Three identified protected-review defects are repaired. [Change record](./runs/changes/2026-10-12-015422-editorial-reviewed-publication-binding-c28dcc91.json).
+- **Not claimed.** Protected publication pending; no independent tag accuracy, automatic collection, authenticated editor or new endpoint.
+
+
+### 2026-10-12-015132-editorial-reviewed-full-acceptance-d0b2ce1a
+
+Recorded 2026-10-12T01:51:32.141500+00:00 · Contributor: Codex · change
+
+- **Changed.** Record repaired full editorial acceptance and current 2455-test evidence; preserve all 202 jobs and the 115-complete / 87-open ledger.
+- **Evidence.** Current gateway/device importer bounds, positions and confidence invariants pass. Human and tag release gates remain separate; scope metadata is refreshed after execution. [Change record](./runs/changes/2026-10-12-015132-editorial-reviewed-full-acceptance-d0b2ce1a.json).
+- **Not claimed.** Protected publication pending. Whole-suite diagnostics stay private; public proof carries counts and hashes. No independently accurate tag or legal institution is asserted.
+
+
+### 2026-10-12-014457-editorial-protected-review-repair-808261df
+
+Recorded 2026-10-12T01:44:57.569075+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair all three protected-review importer findings: preserve gateway text range, require PS positions and enforce current gateway signal-score consistency.
+- **Evidence.** 130 focused regressions and 35 current Mac/Linux command cases pass, including actual in-process gateway long-text production and both CLI stages. [Change record](./runs/changes/2026-10-12-014457-editorial-protected-review-repair-808261df.json).
+- **Not claimed.** Protected publication and new whole-suite evidence pending; sources remain unsigned, scores heuristic and independent tag release unapproved. Earlier merge refusals retained.
+
+
+### 2026-10-12-013431-editorial-final-publication-preflight-da1f3fab
+
+Recorded 2026-10-12T01:34:31.979352+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind completed editorial acceptance to the final eight passing website checks and unchanged reviewed personal route boundaries.
+- **Evidence.** The 115-complete / 87-open ledger and actual guide/export workflow are source-bound; no extra public endpoint, permissions or asserted tag were introduced. [Change record](./runs/changes/2026-10-12-013431-editorial-final-publication-preflight-da1f3fab.json).
+- **Not claimed.** Protected publication pending. No independent tag accuracy or human/physical-phone validation is claimed. Retain the corrected final tool-runtime failure.
+
+
+### 2026-10-12-012924-editorial-full-function-acceptance-28b5f676
+
+Recorded 2026-10-12T01:29:24.576517+00:00 · Contributor: Codex · change
+
+- **Changed.** Record full declared editorial workflow acceptance, current source-bound route/build checks and 2442 passing regressions. Preserve original acceptance as fulfilled and all 202 scope records; ledger now 115 complete / 87 open.
+- **Evidence.** Full suite passed with unchanged sources; Mac and socket-denied Linux lifecycle, actual browser export/correction, personal checker independence and offline accessible views pass. Existing route, source and completion validators retained. [Change record](./runs/changes/2026-10-12-012924-editorial-full-function-acceptance-28b5f676.json).
+- **Not claimed.** Protected publication pending; no independently validated tag, new taxonomy/endpoint, authenticated reviewer, CMS or automatic data collection. Earlier failed/interrupted checks are retained.
+
+
+### 2026-10-12-012033-editorial-current-engineering-receipts-365fc898
+
+Recorded 2026-10-12T01:20:33.177205+00:00 · Contributor: Codex · change
+
+- **Changed.** Record four current capability passes and the website refusal for unrecorded fresh execution receipts; preserve failure and attribute those receipts before rebuilding.
+- **Evidence.** PS, redaction, protocol and extension source-bound checks pass; the website guard correctly refuses an incomplete changelog. [Change record](./runs/changes/2026-10-12-012033-editorial-current-engineering-receipts-365fc898.json).
+- **Not claimed.** Website acceptance and final full suite remain pending. No independent accuracy or new tag release.
+
+
+### 2026-10-12-011457-independent-editorial-workflow-7028b9e2
+
+Recorded 2026-10-12T01:14:57.906292+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement private editorial review, corrections and offline views for actual detailed PS web downloads and current unsigned gateway records; repair a shared-metadata test fixture and publish the selected asset release audit.
+- **Evidence.** 117 focused controls, 29 Mac and 29 same-source socket-denied Linux commands, actual browser export and unchanged personal checks; current full build/route review/publication still pending. [Change record](./runs/changes/2026-10-12-011457-independent-editorial-workflow-7028b9e2.json).
+- **Not claimed.** Unsigned source and declared reviewers remain unauthenticated; no content truth, independent tag accuracy, CMS, automatic collection, new endpoint or new tag adoption. Failed full/preflight/export runs retained honestly.
+
+
 ### 2026-10-12-004640-native-notice-repaired-combined-suite-66a51fbf
 
 Recorded 2026-10-12T00:46:40.594303+00:00 · Contributor: Codex · change

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-011457-independent-editorial-workflow-7028b9e2",
+  "recorded_at": "2026-10-12T01:14:57.906292+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "684357c12fb0fe3fd21516d20b9544f1feeff1f3",
+  "changed": "Implement private editorial review, corrections and offline views for actual detailed PS web downloads and current unsigned gateway records; repair a shared-metadata test fixture and publish the selected asset release audit.",
+  "proves": "117 focused controls, 29 Mac and 29 same-source socket-denied Linux commands, actual browser export and unchanged personal checks; current full build/route review/publication still pending.",
+  "limits": "Unsigned source and declared reviewers remain unauthenticated; no content truth, independent tag accuracy, CMS, automatic collection, new endpoint or new tag adoption. Failed full/preflight/export runs retained honestly.",
+  "scope_ids": [
+    "F-157",
+    "F-121",
+    "F-097",
+    "N-010"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "395c79baf23d9678a60c873dff70aec78b7200bb9537d2ac420a3da6ae9066f9",
+    "Makefile": "9a4c8ebc20b0ed256aac5b2710a7c9bc18cd8f7aa048057d13cf7b7f9cae825e",
+    "README.md": "94557f0dab7638eb7c461bec92d1fe4ada10a65621869fdf68ebce1b40514610",
+    "docs/editorial-workflow-plan.md": "8b3c3853ed14f5b2607683d923bfd7178a2276c9551c25bbc3e18336a6480113",
+    "docs/editorial-workflow-result.md": "32d2a852d2b3fc0e14d37547e024f123ca985dc62095b2bdde00b9ae7145e2ca",
+    "docs/editorial-workflow.md": "ece74ec11b6d30c29bceb7d9f8f09886f7e18970dd4bbcc8aea54e9fbd82af98",
+    "docs/master-scope.md": "9a978063dcdb114e35917c3a0742e3b4f216293487ce3b91f38298bab3c121e0",
+    "docs/scope-progress.json": "4b4b8ba03d271cd6c7da6d7ca04ce8af13c741dc7aee750fc0495d440b316eec",
+    "docs/scope-task-index.md": "5cdba499f08ce1db62dd14986418ee5fc9996f32a83e09df095e360c9340810d",
+    "eval/revalidation.json": "e350fe61c6e1cb854ff79898d699adefd29db16e04ed2e10ad956991b4651aea",
+    "package.json": "8ad1e7f63c99ea195e0e715ed6054a3725522239d44e06fee41497579bbcc46e",
+    "runs/2026-10-12-editorial-actual-export-accepted.json": "d006fe95dd23d16c40714ebae04a727346c496c9fdb139e3797cf6eadb41d36d",
+    "runs/2026-10-12-editorial-browser-private-lifecycle-repaired.json": "51a8b3b9983bb208d016cdc3519a4a396900701ea7ebac1ed50755b0dc99dd0b",
+    "runs/2026-10-12-editorial-browser-private-lifecycle.json": "3f19944bbfc07e1239bb4cb4027095081a1c075cb16c8a8b88862367f8d2ca47",
+    "runs/2026-10-12-editorial-current-linux-cli.json": "5c7c5c237349359569c320796ab2658e28f79a4f9f876856d00eb7e2bfdb3fa8",
+    "runs/2026-10-12-editorial-final-browser-workflow.json": "a28d39df36fa4ba27019a348a78b15ec2d5e4aafbdb5d144c86bc1269289e887",
+    "runs/2026-10-12-editorial-final-macos-cli.json": "9f640083b49ae43980ec1ad13a898fa5d790d25d47f3b555cb06a904c0cc1e7a",
+    "runs/2026-10-12-editorial-focused-regressions.json": "0afb4b802b857731cf25b016be0a97e94075256d72940ef079e371546c23be55",
+    "runs/2026-10-12-editorial-full-suite-refusal.json": "0a564adc7af169e3365f31c2c9786406409eddebb2699b3fb764757d84e4e241",
+    "runs/2026-10-12-editorial-linux-first-lifecycle.json": "d3ef8773964a319d68ef8fab8bb7554f0e1d8c81178c8a79cd36f953483398c2",
+    "runs/2026-10-12-editorial-linux-source-lifecycle.json": "295151d97d2f3621d384dc42f2b17446902a74618ba6e327940edb9de24ef23d",
+    "runs/2026-10-12-editorial-linux-transfer-refusal.json": "d3fdf0c38bb75aaddc28d8890f4f3c5875087747d36ffd478f82c6887ac5e894",
+    "runs/2026-10-12-editorial-macos-cli-lifecycle.json": "c05c80edd9f1a2fcaf62de81be92124e6c08f2824d3b22cddccd0458d7e347f2",
+    "runs/2026-10-12-editorial-personal-workflow-preserved.json": "af0c341bed14730e52594e5ae62fd423173c54e74480e60c7605784864c59858",
+    "runs/2026-10-12-editorial-repaired-browser-workflow.json": "9ef4bbbe5cf2d61092266319eee0a57220ec277addb0563fc5bb97c2631faafc",
+    "runs/2026-10-12-editorial-repaired-macos-cli.json": "eb307c770aad1c3d282c790e45841a798c1c469469ba46709f19a1eab67961d9",
+    "runs/2026-10-12-editorial-staging-cleanup.json": "e3b4ec9f5f0beb7d85aa04d222ee3d646e5de74c3438ede70fd1d67257cb98d3",
+    "runs/2026-10-12-selected-assets-merge-audit.json": "a978fe1dee27460202e21900eda648ebdb8d6269923d54fe57e5eca938718841",
+    "runs/2026-10-12-selected-assets-primary-preservation.json": "d503ca4b87967c1725ced8d96f1aeb5e7b9134eb5cf170213fbb92a56e046170",
+    "runs/2026-10-12-selected-assets-publication-command-repair.json": "69b2057fdc7edbcd6b80f5b9906aa528eb98a6602fac553dd59b3373da998852",
+    "runs/2026-10-12-selected-assets-publication.json": "a4611d906268a233998bd1b0b610937214db43d8d55c897ecb7d4a5cb2605ca3",
+    "scripts/editorial-review.py": "859792092673cf2345e315bcbad635fd66dce4f90c4c37d6c331a2311337575c",
+    "scripts/prepare-editorial-demo.py": "7a3840113a02369dacfaa32bc34a44153ab7bc0970c0dc58cfe0fbd184ac0559",
+    "scripts/prepare-editorial-review.py": "b565e669abdaa85d7f8efda6b784f5a9a78d47e298a81fbde7f23761bb721b82",
+    "scripts/verify-editorial-cli.py": "25107a8c79b650858a825b61d0a7b7dc5cda924c42fc5131b29fa04ff78d8eda",
+    "scripts/verify-editorial-workflow.cjs": "e0040b6c9992d0c3331e80aed961525bc2d27b29cf5cdc3f16a7f876f2dc5406",
+    "scripts/verify-offline-download.cjs": "42f5c67f109973a01c994c53344849826552091a133596758d9711bf499e39b0",
+    "scripts/verify-route-boundaries.py": "58079f973597750fa7fa3af50223bf5154888c11e468ecfc131ed59936a3bff4",
+    "site/public/reference/public-scope.json": "c626dcf35cfe00fb23e3326344aa9faeb1c7fc87ee6d1d46378733a98b42c521",
+    "site/scripts/render-reference.mjs": "625e8013c92b3ad5a753e1e1a2cdbb8bde6a7bb06cd693f3b622dbe0ee29cb8c",
+    "site/src/public-scope.json": "c626dcf35cfe00fb23e3326344aa9faeb1c7fc87ee6d1d46378733a98b42c521",
+    "site/src/scope-manifest.json": "1dc3038d320c28d1777905fe80a62c46d710fd73e53c06d3fd071f1d7e282ecb",
+    "state.json": "4770d673ad0f58e887d340ce95296ad49a48203abaddc10187e923228960e017",
+    "tests/test_editorial_cli.py": "07daa56fa3709cd0a522931a52ba96b2fef832c86f88205fe2dc4d7c97817b88",
+    "tests/test_local_cli.py": "575d86b1f93e3915a056d70fdb059be98c9b1a015ec6938a62d6d506a10c663d",
+    "tests/test_newsroom.py": "2130c7f3d431f0efc84288519ad737c4406410f8a449494a4885b6366cd3fa1a",
+    "tools/editorial_cli.py": "87129a769c45f40b0fa031ade2e60d82d7e7b06a66b4661acec4bef19498ebbe",
+    "tools/newsroom.py": "99ab8b894a6f2da15f968431b5076f95bb06b77c4ed1a24d9bb0be37ae6fc300"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-focused-regressions.json",
+      "sha256": "0afb4b802b857731cf25b016be0a97e94075256d72940ef079e371546c23be55"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-current-linux-cli.json",
+      "sha256": "5c7c5c237349359569c320796ab2658e28f79a4f9f876856d00eb7e2bfdb3fa8"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-repaired-browser-workflow.json",
+      "sha256": "9ef4bbbe5cf2d61092266319eee0a57220ec277addb0563fc5bb97c2631faafc"
+    },
+    {
+      "path": "runs/2026-10-12-selected-assets-publication.json",
+      "sha256": "a4611d906268a233998bd1b0b610937214db43d8d55c897ecb7d4a5cb2605ca3"
+    }
+  ],
+  "checks": []
+}

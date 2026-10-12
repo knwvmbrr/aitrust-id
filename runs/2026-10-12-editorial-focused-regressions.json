@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-10-12T01:14:27.749823+00:00",
+  "pass": true,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_local_cli.py",
+    "tests/test_newsroom.py",
+    "tests/test_editorial_cli.py",
+    "-q"
+  ],
+  "passed": 117,
+  "warning_count": 1,
+  "duration_seconds": 12.66,
+  "log_sha256": "fdb0b17abf0fab46b40da220f719548efc66ba940451ef7c734772176508c89f",
+  "sources": {
+    "tools/newsroom.py": "99ab8b894a6f2da15f968431b5076f95bb06b77c4ed1a24d9bb0be37ae6fc300",
+    "tools/editorial_cli.py": "87129a769c45f40b0fa031ade2e60d82d7e7b06a66b4661acec4bef19498ebbe",
+    "scripts/editorial-review.py": "859792092673cf2345e315bcbad635fd66dce4f90c4c37d6c331a2311337575c",
+    "scripts/prepare-editorial-review.py": "b565e669abdaa85d7f8efda6b784f5a9a78d47e298a81fbde7f23761bb721b82",
+    "scripts/prepare-editorial-demo.py": "7a3840113a02369dacfaa32bc34a44153ab7bc0970c0dc58cfe0fbd184ac0559",
+    "tests/test_newsroom.py": "2130c7f3d431f0efc84288519ad737c4406410f8a449494a4885b6366cd3fa1a",
+    "tests/test_editorial_cli.py": "07daa56fa3709cd0a522931a52ba96b2fef832c86f88205fe2dc4d7c97817b88",
+    "tests/test_local_cli.py": "575d86b1f93e3915a056d70fdb059be98c9b1a015ec6938a62d6d506a10c663d"
+  },
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

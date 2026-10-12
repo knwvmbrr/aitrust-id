@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-015132-editorial-reviewed-full-acceptance-d0b2ce1a",
+  "recorded_at": "2026-10-12T01:51:32.141500+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "26287fdc641cef4b27170132472e789c48eb0bfc",
+  "changed": "Record repaired full editorial acceptance and current 2455-test evidence; preserve all 202 jobs and the 115-complete / 87-open ledger.",
+  "proves": "Current gateway/device importer bounds, positions and confidence invariants pass. Human and tag release gates remain separate; scope metadata is refreshed after execution.",
+  "limits": "Protected publication pending. Whole-suite diagnostics stay private; public proof carries counts and hashes. No independently accurate tag or legal institution is asserted.",
+  "scope_ids": [
+    "F-157",
+    "F-120"
+  ],
+  "files": {
+    "docs/editorial-workflow-plan.md": "7ce252be4e65dd6c6306d67d97285d1120e0cc5257196918a07d28a2fb5293ec",
+    "docs/editorial-workflow-result.md": "124a2e78473bd86171bd26c9ad4b4d2d10d14db0f9046461fe87853560eb10ea",
+    "docs/editorial-workflow.md": "2527ffb5052e72ea52a9ab1038910637a0e6a609fc7ec35d06defb640eadefe1",
+    "docs/scope-progress.json": "c335ee77d73f73f6d75d409c9206235c731105781e632b6d454cef683765db98",
+    "eval/route-boundaries.json": "98ffb2b47d4bdc6d90e96eb0ffdc4072468d294f6afa2080ff347c96f2d7a507",
+    "scripts/verify-editorial-cli.py": "b16c9975646cc56eff1e88ba334ff0277e8e2e2844f39bb58d94753c02fd0bb7",
+    "site/public/reference/public-scope.json": "ddf26772fcf64072c0679f963e51c5d1fff2571e37040ffc743caca7cedb20d9",
+    "site/src/public-scope.json": "ddf26772fcf64072c0679f963e51c5d1fff2571e37040ffc743caca7cedb20d9",
+    "site/src/scope-manifest.json": "626678ccbaefcf91625887d18a323a477e4b2d7143c7a96c025a9c0a7a1c49e1",
+    "state.json": "1544c4e3622179a3a8d6de7616e1fa3506eab8743d5319d720fe802fca0024d0",
+    "tests/test_editorial_cli.py": "3a8561ae6f7ca9cc5305ced2255a7f22605c7d14d142ef58c9f870350c7e0a83",
+    "tests/test_newsroom.py": "46f6a835d630f66bb837586d39fce88c6c6ca44c138555a2566f7afe9c3582ad",
+    "tools/editorial_cli.py": "2a1d4cdcbc0b1821840f49044611884af28beab711dc8afba66b877a07b64b66",
+    "tools/newsroom.py": "e79bf47500ed18cbb1e7dca6249a284e988588ca0708189b9cef4cef09ef9361",
+    "runs/2026-10-12-editorial-protected-review-refusal.json": "446dfc1586acf271f09d12f925ed1ae1c963be4de7edfdd39480d42a7b8c8728",
+    "runs/2026-10-12-editorial-review-focused.json": "7298da5c31cac74e8cea27b85f847697c63a24553be40273fd7df183600ef1ad",
+    "runs/2026-10-12-editorial-review-linux-cleanup.json": "0c3ced4a2ffa2c1000f782f1c405523bdcf44e20d0374dafbe75888962ca28e1",
+    "runs/2026-10-12-editorial-review-linux-cli.json": "14b916c6a7acf09aa64dd3daabda319472987e6d5bee7b30417c455be459544f",
+    "runs/2026-10-12-editorial-review-repaired-macos-cli.json": "292447d787244a2c77534ef0a7d252f1108152d1810d9eae59427b5b320473c0",
+    "runs/2026-10-12-editorial-review-website.json": "37b6ec50bc2a8efff5485449a14e5ed383074dbd12f9ac808a9919c3c4c7394e",
+    "runs/2026-10-12-editorial-reviewed-full-suite.json": "322bdf4c23d683d6d4c64a02d7fd6bff5db7a73369f0608d7bfe0ae922754c3f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-reviewed-full-suite.json",
+      "sha256": "322bdf4c23d683d6d4c64a02d7fd6bff5db7a73369f0608d7bfe0ae922754c3f"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-review-website.json",
+      "sha256": "37b6ec50bc2a8efff5485449a14e5ed383074dbd12f9ac808a9919c3c4c7394e"
+    }
+  ],
+  "checks": []
+}

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T00:46:39.224586+00:00",
+  "updated": "2026-10-12T01:58:34.275461+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2346,
+  "python_tests_passed": 2455,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "Current Mac Python 3.12.14 source after CI fixture and process-observation repairs: 2301 passed, one Linux-only skip, one upstream TestClient deprecation warning. Separate actual isolated Linux policy controls pass; no independent tag accuracy or physical device claim.",
+  "python_tests_scope": "Current Mac Python 3.12.14 source: 2442 passed, one platform-specific skip and one upstream TestClient deprecation warning, source unchanged during execution. Same-current-source editorial CLI lifecycle also passed on socket-denied non-root Debian Linux. No independent tag accuracy or physical device claim.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -720,9 +720,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-11T23:05:16.789989+00:00",
-    "completed_records": 114,
-    "open_records": 88,
+    "audited_at": "2026-10-12T01:51:09.269649+00:00",
+    "completed_records": 115,
+    "open_records": 87,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -736,17 +736,17 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/source-input-binding-plan.md",
+    "latest_increment": "docs/editorial-workflow-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
     "target_start_open_records": 91,
-    "target_remaining_closures": 38,
-    "publication_pending": false,
+    "target_remaining_closures": 37,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-11-source-captured-boundaries.json",
+    "current_target_verification": "runs/2026-10-12-editorial-reviewed-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-11"
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-12-selected-assets-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-12-selected-assets-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-selected-assets-current-protocol.json",
-    "extension": "runs/2026-10-12-selected-assets-current-extension.json",
-    "website": "runs/2026-10-12-native-all-notice-website.json",
+    "PS": "runs/2026-10-12-editorial-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-12-editorial-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-editorial-current-protocol.json",
+    "extension": "runs/2026-10-12-editorial-current-extension.json",
+    "website": "runs/2026-10-12-editorial-reviewed-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T00:46:39.224586+00:00",
+  "updated_at": "2026-10-12T01:58:34.275461+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,10 +1099,10 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "47d27703c6bca4783d677d409c8c48b6036b150f",
-    "deployment_url": "https://320eb984.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-12-private-policy-publication.json",
-    "matching_artifacts": 747,
+    "source_commit": "684357c12fb0fe3fd21516d20b9544f1feeff1f3",
+    "deployment_url": "https://2c8c3475.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-12-selected-assets-publication.json",
+    "matching_artifacts": 753,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
@@ -1826,5 +1826,45 @@
     "full_python_evidence": "runs/2026-10-12-native-notice-repaired-full-suite.json",
     "direct_packaging_all_notices_bound": true,
     "direct_packaging_repair_evidence": "runs/2026-10-12-native-notice-direct-repair.json"
-  }
+  },
+  "editorial_workflow": {
+    "profile": "owner-editorial-review/v1",
+    "implemented_by": "Codex",
+    "status": "repaired_full_functional_acceptance_passed; protected_publication_pending",
+    "source_formats": [
+      "current unsigned gateway text assertion 0.1.0",
+      "current detailed on-device PS preview export v1"
+    ],
+    "macos_cli_cases": 35,
+    "linux_cli_cases": 35,
+    "linux_socket_refusals": 3,
+    "focused_regressions": 130,
+    "browser_views": 4,
+    "browser_workflow_cases": 6,
+    "automatic_collection": false,
+    "subject_text_default": false,
+    "reviewer_identity_verified": false,
+    "independent_accuracy_evidence": false,
+    "tag_release_approved": false,
+    "guide": "docs/editorial-workflow.md",
+    "evidence": [
+      "runs/2026-10-12-editorial-focused-regressions.json",
+      "runs/2026-10-12-editorial-current-linux-cli.json",
+      "runs/2026-10-12-editorial-repaired-browser-workflow.json"
+    ],
+    "full_suite_failure": "runs/2026-10-12-editorial-full-suite-refusal.json",
+    "website_failure": "runs/2026-10-12-editorial-current-website.json",
+    "full_suite": "runs/2026-10-12-editorial-reviewed-full-suite.json",
+    "completed_by": "Codex",
+    "completed_at": "2026-10-12T01:51:09.269649+00:00",
+    "website_evidence": "runs/2026-10-12-editorial-reviewed-website.json",
+    "boundary_evidence": "runs/2026-10-12-editorial-reviewed-route-review.json",
+    "review_evidence": [
+      "runs/2026-10-12-editorial-review-focused.json",
+      "runs/2026-10-12-editorial-review-repaired-macos-cli.json",
+      "runs/2026-10-12-editorial-review-linux-cli.json"
+    ],
+    "ci_chronology_failure": "runs/2026-10-12-editorial-ci-chronology-refusal.json"
+  },
+  "python_tests_current_pass": true
 }

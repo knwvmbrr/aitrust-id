@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-014457-editorial-protected-review-repair-808261df",
+  "recorded_at": "2026-10-12T01:44:57.569075+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "26287fdc641cef4b27170132472e789c48eb0bfc",
+  "changed": "Repair all three protected-review importer findings: preserve gateway text range, require PS positions and enforce current gateway signal-score consistency.",
+  "proves": "130 focused regressions and 35 current Mac/Linux command cases pass, including actual in-process gateway long-text production and both CLI stages.",
+  "limits": "Protected publication and new whole-suite evidence pending; sources remain unsigned, scores heuristic and independent tag release unapproved. Earlier merge refusals retained.",
+  "scope_ids": [
+    "F-157",
+    "F-120"
+  ],
+  "files": {
+    "tools/newsroom.py": "e79bf47500ed18cbb1e7dca6249a284e988588ca0708189b9cef4cef09ef9361",
+    "tools/editorial_cli.py": "2a1d4cdcbc0b1821840f49044611884af28beab711dc8afba66b877a07b64b66",
+    "scripts/verify-editorial-cli.py": "b16c9975646cc56eff1e88ba334ff0277e8e2e2844f39bb58d94753c02fd0bb7",
+    "tests/test_newsroom.py": "46f6a835d630f66bb837586d39fce88c6c6ca44c138555a2566f7afe9c3582ad",
+    "tests/test_editorial_cli.py": "3a8561ae6f7ca9cc5305ced2255a7f22605c7d14d142ef58c9f870350c7e0a83",
+    "docs/editorial-workflow-plan.md": "7ce252be4e65dd6c6306d67d97285d1120e0cc5257196918a07d28a2fb5293ec",
+    "docs/editorial-workflow.md": "2527ffb5052e72ea52a9ab1038910637a0e6a609fc7ec35d06defb640eadefe1",
+    "docs/editorial-workflow-result.md": "9e7d5c02fa2aaf52867341372e92f9f73916c86ab621d7c351ccbe32d8041b14",
+    "state.json": "2d1b383278914b24f4ee3544483840b5ed1dea9da24e483fc22f13d750800d4d",
+    "runs/2026-10-12-editorial-review-focused.json": "7298da5c31cac74e8cea27b85f847697c63a24553be40273fd7df183600ef1ad",
+    "runs/2026-10-12-editorial-review-repaired-macos-cli.json": "292447d787244a2c77534ef0a7d252f1108152d1810d9eae59427b5b320473c0",
+    "runs/2026-10-12-editorial-review-linux-cli.json": "14b916c6a7acf09aa64dd3daabda319472987e6d5bee7b30417c455be459544f",
+    "runs/2026-10-12-editorial-review-linux-cleanup.json": "0c3ced4a2ffa2c1000f782f1c405523bdcf44e20d0374dafbe75888962ca28e1",
+    "runs/2026-10-12-editorial-protected-review-refusal.json": "446dfc1586acf271f09d12f925ed1ae1c963be4de7edfdd39480d42a7b8c8728"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-editorial-review-focused.json",
+      "sha256": "7298da5c31cac74e8cea27b85f847697c63a24553be40273fd7df183600ef1ad"
+    },
+    {
+      "path": "runs/2026-10-12-editorial-review-linux-cli.json",
+      "sha256": "14b916c6a7acf09aa64dd3daabda319472987e6d5bee7b30417c455be459544f"
+    }
+  ],
+  "checks": []
+}

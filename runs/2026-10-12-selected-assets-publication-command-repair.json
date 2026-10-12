@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-12T01:00:03.599496+00:00",
+  "pass": true,
+  "original_command_pass": false,
+  "failure_signature": "Publication verifier filename was relative to the wrong working directory. No comparisons executed.",
+  "corrective_action": "Used the existing verifier absolute path in the source checkout; a fresh receipt records all 753 exact comparisons.",
+  "evidence": "runs/2026-10-12-selected-assets-publication.json",
+  "scope_counts_changed": false
+}

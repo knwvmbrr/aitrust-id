@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-12T01:58:34.273005+00:00",
+  "pass": false,
+  "head": "d5f2bc6884b8366d5739ad5bb010a93a5319f76f",
+  "failed_required_contexts": [
+    "scope-plan",
+    "no-egress"
+  ],
+  "cause": "State update timestamp was saved immediately before its referenced final route review, so the snapshot predated that evidence. Thirteen accountability tests rejected the same contradiction.",
+  "ci_counts": {
+    "failed": 13,
+    "passed": 2408,
+    "skipped": 3,
+    "warnings": 1
+  },
+  "protected_merge_performed": false,
+  "corrective_action": "Write referenced evidence first, then save a current state timestamp; execute the complete accountability contract before staging and merge. Do not weaken chronology validation.",
+  "private_scope_log_sha256": "2763fc265274a942c9ae785a40fd779855a99e5f1876bb26842c1ea7064d3574",
+  "private_suite_log_sha256": "92b3a53fd5b4cf11fb89b38371fa113077a300863adddd8ed16adc1672bb34c4"
+}

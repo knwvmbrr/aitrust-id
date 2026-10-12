@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-12T01:25:08.025268+00:00",
+  "pass": true,
+  "original_boundary_pass": false,
+  "failure_signature": "Missing selected browser evidence: the updater supplied five keys to a contract requiring extension and website only.",
+  "full_suite_started_before_failed_guard_was_honored": true,
+  "owned_full_suite_interrupted": true,
+  "partial_log_sha256": "68522847ae13f1aecd7bca8d4ee8ef0b41b28b9fbdc3cf11c5ca0a9db5bad3c2",
+  "partial_run_is_not_a_full_pass": true,
+  "corrective_action": "Restore the existing two-key contract, validate the candidate before atomic write, and require the successful guard exit before launching a full suite. No validator or required policy weakened.",
+  "accepted_guard": "runs/2026-10-12-editorial-accepted-route-review.json",
+  "production_configuration_changed": false,
+  "independent_accuracy_evidence": false
+}

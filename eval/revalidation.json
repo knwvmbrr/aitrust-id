@@ -265,7 +265,18 @@
         "site/public/fonts/*",
         "site/public/device-licenses/*",
         "eval/vectors/unicode/LICENSE.txt",
-        "docs/asset-notices.md"
+        "docs/asset-notices.md",
+        "tools/newsroom.py",
+        "tools/editorial_cli.py",
+        "tools/blind_review_io.py",
+        "scripts/editorial-review.py",
+        "scripts/prepare-editorial-review.py",
+        "scripts/prepare-editorial-demo.py",
+        "scripts/verify-editorial-cli.py",
+        "scripts/verify-editorial-workflow.cjs",
+        "tests/test_newsroom.py",
+        "tests/test_editorial_cli.py",
+        "docs/editorial-workflow.md"
       ],
       "commands": [
         [
@@ -295,6 +306,14 @@
           "{python}",
           "scripts/verify-asset-notices.py",
           "--prepared-runtime"
+        ],
+        [
+          "{python}",
+          "scripts/verify-editorial-cli.py"
+        ],
+        [
+          "node",
+          "scripts/verify-editorial-workflow.cjs"
         ]
       ]
     }

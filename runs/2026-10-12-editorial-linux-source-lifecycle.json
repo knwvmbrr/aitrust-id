@@ -1,0 +1,262 @@
+{
+  "captured_at": "2026-10-12T01:09:53.993379+00:00",
+  "pass": true,
+  "case_count": 29,
+  "cases": [
+    {
+      "case": "gateway-prepare",
+      "pass": true
+    },
+    {
+      "case": "gateway-use",
+      "pass": true
+    },
+    {
+      "case": "gateway-never-overwrite",
+      "pass": true
+    },
+    {
+      "case": "gateway-missing-review-choice",
+      "pass": true
+    },
+    {
+      "case": "gateway-unexpected-supersession",
+      "pass": true
+    },
+    {
+      "case": "gateway-prepare-correction",
+      "pass": true
+    },
+    {
+      "case": "gateway-apply-correction",
+      "pass": true
+    },
+    {
+      "case": "gateway-changed-source",
+      "pass": true
+    },
+    {
+      "case": "gateway-unexpected-packet-member",
+      "pass": true
+    },
+    {
+      "case": "gateway-mismatched-subject",
+      "pass": true
+    },
+    {
+      "case": "gateway-nonprivate-input",
+      "pass": true
+    },
+    {
+      "case": "gateway-symlink-input",
+      "pass": true
+    },
+    {
+      "case": "gateway-stale-method",
+      "pass": true
+    },
+    {
+      "case": "gateway-owned-removal-originals-unchanged",
+      "pass": true
+    },
+    {
+      "case": "device-prepare",
+      "pass": true
+    },
+    {
+      "case": "device-use",
+      "pass": true
+    },
+    {
+      "case": "device-never-overwrite",
+      "pass": true
+    },
+    {
+      "case": "device-missing-review-choice",
+      "pass": true
+    },
+    {
+      "case": "device-unexpected-supersession",
+      "pass": true
+    },
+    {
+      "case": "device-prepare-correction",
+      "pass": true
+    },
+    {
+      "case": "device-apply-correction",
+      "pass": true
+    },
+    {
+      "case": "device-changed-source",
+      "pass": true
+    },
+    {
+      "case": "device-unexpected-packet-member",
+      "pass": true
+    },
+    {
+      "case": "device-mismatched-subject",
+      "pass": true
+    },
+    {
+      "case": "device-nonprivate-input",
+      "pass": true
+    },
+    {
+      "case": "device-symlink-input",
+      "pass": true
+    },
+    {
+      "case": "device-stale-method",
+      "pass": true
+    },
+    {
+      "case": "device-owned-removal-originals-unchanged",
+      "pass": true
+    },
+    {
+      "case": "invented-practice-preparation",
+      "pass": true
+    }
+  ],
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "sources": {
+    "tools/newsroom.py": "a7534da026357a462ac7e90d857dd47c7be6409b2d6a577b3a2ade007544f9ab",
+    "tools/editorial_cli.py": "87129a769c45f40b0fa031ade2e60d82d7e7b06a66b4661acec4bef19498ebbe",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/editorial-review.py": "859792092673cf2345e315bcbad635fd66dce4f90c4c37d6c331a2311337575c",
+    "scripts/prepare-editorial-review.py": "b565e669abdaa85d7f8efda6b784f5a9a78d47e298a81fbde7f23761bb721b82",
+    "scripts/prepare-editorial-demo.py": "7a3840113a02369dacfaa32bc34a44153ab7bc0970c0dc58cfe0fbd184ac0559",
+    "scripts/verify-editorial-cli.py": "25107a8c79b650858a825b61d0a7b7dc5cda924c42fc5131b29fa04ff78d8eda",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/replay.py": "1276d36794919a538b70799cc4603de7294789c96c1fff79f5250958cc3f43dd",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "tests/test_assertion_replay.py": "73b99f41e7f0c14760bb05bdd7528cce427890698fc66d0a0e9ce116a867836d",
+    "tests/replay_fixture.py": "293c963d5cd9e34f9583ed81ca39e82e987b3a97a703506d6e5b2f672770528a",
+    "tests/test_gateway_integration.py": "2e7b4fbc90782484c7549de7c15a9c7406eb8f2f84224ba88898ea128271aac0",
+    "tests/test_release_policy.py": "69fd31c303485918911df8251209c56bc1346df111e848bd7745a3f40847a2fd",
+    "eval/harness.py": "4d5c16f3081347ba0dcf793301ffdc6406be66450024f662efe9f3902b082c84",
+    "research/nli/network.py": "90afdb1f6a9892f94788148de90f288b2ca4e010179b2e54498b6ef051af0223",
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938"
+  },
+  "source_unchanged_during_execution": true,
+  "only_authored_synthetic_inputs": true,
+  "gateway_producer": "Actual current gateway with explicit in-process mocked redactor/evaluator transport before the filter; not a production observation.",
+  "linux_network_filter_enforced": true,
+  "network_filter": {
+    "profile": "linux-worker-network-denial/1.0.0",
+    "mechanism": "system_libseccomp",
+    "native_architecture": "x86_64",
+    "no_new_privileges": true,
+    "denied_syscalls": [
+      "socket",
+      "socketpair",
+      "connect",
+      "bind",
+      "listen",
+      "accept",
+      "accept4",
+      "sendto",
+      "sendmsg",
+      "sendmmsg",
+      "recvfrom",
+      "recvmsg",
+      "recvmmsg",
+      "getsockopt",
+      "setsockopt",
+      "getsockname",
+      "getpeername",
+      "shutdown",
+      "io_uring_setup",
+      "io_uring_enter",
+      "io_uring_register"
+    ],
+    "io_uring_denied": true,
+    "existing_threads_synchronized": true
+  },
+  "actual_socket_refusals": [
+    {
+      "family": 2,
+      "denied": true,
+      "errno": 1
+    },
+    {
+      "family": 10,
+      "denied": true,
+      "errno": 1
+    },
+    {
+      "family": 1,
+      "denied": true,
+      "errno": 1
+    }
+  ],
+  "owned_private_outputs_removed": true,
+  "production_configuration_changed": false,
+  "automatic_collection": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false,
+  "transferred_sources": {
+    "eval/harness.py": "4d5c16f3081347ba0dcf793301ffdc6406be66450024f662efe9f3902b082c84",
+    "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+    "protocol/measurements.py": "2b850a3416e7ac680367a1a64bc93d64e1ad1078da1124b1212063fca607a818",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+    "protocol/replay.py": "1276d36794919a538b70799cc4603de7294789c96c1fff79f5250958cc3f43dd",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+    "protocol/revalidation.py": "a61897d9effe8aaf494e3fb0a06833296dbf0521b969cd2ec7be1638a4e0de1a",
+    "protocol/signals.py": "a2d3e52b5ec6760f8f7b2db4a38741b424a31f767e59c16d745a9d897af65f71",
+    "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+    "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "research/nli/network.py": "90afdb1f6a9892f94788148de90f288b2ca4e010179b2e54498b6ef051af0223",
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "scripts/editorial-review.py": "859792092673cf2345e315bcbad635fd66dce4f90c4c37d6c331a2311337575c",
+    "scripts/prepare-editorial-demo.py": "7a3840113a02369dacfaa32bc34a44153ab7bc0970c0dc58cfe0fbd184ac0559",
+    "scripts/prepare-editorial-review.py": "b565e669abdaa85d7f8efda6b784f5a9a78d47e298a81fbde7f23761bb721b82",
+    "scripts/verify-editorial-cli.py": "25107a8c79b650858a825b61d0a7b7dc5cda924c42fc5131b29fa04ff78d8eda",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "spec/image-provenance-boundary.json": "8ed330580783ec7f61e2ea0e537a6d402764beef765ecc6aa8e8f9b9222b3f1c",
+    "spec/signal-registry.json": "d38dbb33574cfb1d7d72a91ce20c36769b0aa23a21185684fd7bad2391b7f1a9",
+    "spec/subject-profiles.json": "66b9cfd6b09d3a36c5e3ef1c33aa2d0f0e0d49a3b1b1db113c8a6526999eb462",
+    "spec/vocabulary.json": "d3c14256da3d44c3a02f252c591a2f9039ebc2944b73837c7c521d8adac0002a",
+    "tests/replay_fixture.py": "293c963d5cd9e34f9583ed81ca39e82e987b3a97a703506d6e5b2f672770528a",
+    "tests/test_assertion_replay.py": "73b99f41e7f0c14760bb05bdd7528cce427890698fc66d0a0e9ce116a867836d",
+    "tests/test_gateway_integration.py": "2e7b4fbc90782484c7549de7c15a9c7406eb8f2f84224ba88898ea128271aac0",
+    "tests/test_release_policy.py": "69fd31c303485918911df8251209c56bc1346df111e848bd7745a3f40847a2fd",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/editorial_cli.py": "87129a769c45f40b0fa031ade2e60d82d7e7b06a66b4661acec4bef19498ebbe",
+    "tools/newsroom.py": "a7534da026357a462ac7e90d857dd47c7be6409b2d6a577b3a2ade007544f9ab"
+  },
+  "transferred_source_unchanged": true
+}

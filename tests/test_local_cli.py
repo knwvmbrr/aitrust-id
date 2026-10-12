@@ -1,4 +1,5 @@
 import importlib.util
+import copy
 import io
 import json
 import os
@@ -28,7 +29,7 @@ def assertion():
     row = json.loads((ROOT / 'runs/2026-10-08-container-assertion.json').read_text())
     # Preserve the historical run; use the current method in this unit fixture.
     row['evaluator']['calibration_id'] = evaluator.CALIBRATION_ID
-    row['evaluator']['models'] = evaluator.MODELS
+    row['evaluator']['models'] = copy.deepcopy(evaluator.MODELS)
     return row
 
 
@@ -165,6 +166,14 @@ def test_stale_or_wrong_evaluator_cannot_claim_a_reproducible_check():
     row['evaluator']['models'][0]['sha256'] = '0' * 64
     with pytest.raises(cli.LocalCheckError, match='differs'):
         cli.validate_result(row)
+
+
+def test_stale_fixture_mutation_does_not_corrupt_later_actual_method_metadata():
+    from test_release_policy import evaluator
+    original=copy.deepcopy(evaluator.MODELS)
+    row=assertion();row['evaluator']['models'][0]['sha256']='0'*64
+    assert evaluator.MODELS==original
+    assert assertion()['evaluator']['models']==original
 
 
 @pytest.mark.parametrize('change', ['signature', 'bad_date', 'future_version'])

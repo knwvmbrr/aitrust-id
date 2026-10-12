@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-10-12T01:00:03.597395+00:00",
+  "pass": true,
+  "pull_request": 44,
+  "source_head": "6ceb8be6e3f0c3155edee414cce31aaa2abb2077",
+  "merge_commit": "684357c12fb0fe3fd21516d20b9544f1feeff1f3",
+  "required_check_count": 22,
+  "required_policy_unchanged": true,
+  "ordinary_protected_merge": true,
+  "admin_bypass_used": false,
+  "review_finding_fixed_and_resolved": true,
+  "independent_release_gate_pass": false,
+  "ancestry_observed_after_merge": true,
+  "preflight_completion": false,
+  "preflight_failure": "The final ancestry subprocess was run outside the checkout; the merge command was issued before its failure was treated as a stop. GitHub enforced the unchanged required policy. This receipt is a post-merge audit, not a passing preflight.",
+  "corrective_action": "Run every preflight in the checkout; dependent merge commands must be conditional on its zero exit status."
+}

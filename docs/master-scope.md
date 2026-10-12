@@ -214,3 +214,11 @@ N-010 now includes the separately tested offline organization literal-policy com
 ## Executed component update — 2026-10-12
 
 F-057 and X-02 now include the independently executable selected asset/notice check and exact Unicode notice packaging. Full transitive/native/platform/source-offer and permission review remains open. See [the short guide](asset-notices.md), [executed evidence](asset-notices-result.md) and [completion ledger](scope-progress.md). No record or acceptance criterion is removed.
+
+## Executed component update — 2026-10-12 editorial review
+
+F-157 now has a working private Linux/macOS review and correction workflow for actual detailed PS browser downloads and current unsigned gateway records. The editor decision remains separate from the finding. Current operation, failure, offline-view and removal evidence is in docs/editorial-workflow-result.md. Final current full-suite, route review and protected publication are pending; no independent accuracy, CMS or new tag adoption is implied. All 202 original records remain.
+
+## Executed component update — 2026-10-12 editorial acceptance
+
+F-157 passes its full functioning supported editorial workflow: existing detailed PS browser export/current unsigned gateway text record → separate private editor decision → offline view → bound correction → owned removal, with the personal checker still working. Mac and socket-denied Linux commands, actual browser export, four accessible offline browser views, eight website checks and 2442 full-suite tests pass. 115 records are complete and 87 remain open; all 202 original jobs/outcomes and independent tag release gates are preserved. This does not issue a new tag, authenticate an editor or declare content true. Protected publication remains separately tracked.
