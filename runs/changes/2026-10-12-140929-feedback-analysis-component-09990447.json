@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-140929-feedback-analysis-component-09990447",
+  "recorded_at": "2026-10-12T14:09:29.249350+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "69f013b9cab0bd60be5f0c4d0e14fd787cb9f43c",
+  "changed": "Implemented private invented-metadata feedback distributions, exact rate comparisons, a usable practice generator, strict input refusals, CI checks and source-bound publication evidence; recorded the prior reference publication.",
+  "proves": "64 selected component tests and eleven actual CLI groups passed on isolated non-root Linux with all eighty metadata combinations exercised, stable source bytes, external IPv4/IPv6 refusal and removed owned staging; the same CLI groups passed locally.",
+  "limits": "No participant intake, production database, independent accuracy, calibrated anomaly detection, person counting or training labels; full requirements remain at 115 complete and 87 open. The first setup assertion failure is retained and its empty staging directory was removed.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "71424023304836bf784b308e19270543d8e12bc541604f14298a64419679bad4",
+    "README.md": "b7f32af43f175acdbbc9a46c7c45ce24b12efeee359dad9aa3383570d7a50d2b",
+    "docs/feedback-analysis-plan.md": "13345c071f4865aa5b3e49f8f41a6b2dfef3a1a89a9f0979a357aba0500b9231",
+    "docs/feedback-analysis-result.md": "91f2b124bce54cc3843c7791a09c75d17813008696d82ccbd1de5bd465edba9b",
+    "docs/feedback-analysis.md": "351021f8fe673ddc94cfe0cd91210e6e565e23a486a894adba404d69cffa0333",
+    "docs/scope-progress.json": "660dda4ba3e539849cfc105430c0a1a21424f2df422fd9db08fea488e9957bd4",
+    "docs/scope-progress.md": "459c9ab8010ef3174fa23bb5e63ebca0134994437715e1ac541302532cfb97a6",
+    "eval/revalidation.json": "d2f0543f896cc967d2af9fbc20631a2833c227d8f7c064682aeb9fa63a9018c5",
+    "runs/2026-10-12-feedback-analysis-explanations-local.json": "4935ec072ba77c22e6a873ba9440cab409779cd9b0d02e614e8721ae15c36b34",
+    "runs/2026-10-12-feedback-analysis-linux.json": "14c9112ac0e18b9f4c057a554bdac389e06505132098680aeb9494a2259f5532",
+    "runs/2026-10-12-feedback-analysis-local.json": "ded92e18c2cdcf29977ef529d0d3e20e4cfea374b4a8fdf4d003ff0263388291",
+    "runs/2026-10-12-feedback-analysis-staging-refusal.json": "873470e238d80741d63584f0e5569a6cda9d0180254e2e492d4ec1575501d26a",
+    "runs/2026-10-12-reference-primary-preservation.json": "f8190884bce1b9d0b0234f688dd8af8ae4786aca05ba458aae29cabc675685fa",
+    "runs/2026-10-12-reference-protected-merge.json": "f0fdca9754521262b84444132ece2203f05a1392e2a99f9e83b1bbb3bf1b9fde",
+    "runs/2026-10-12-reference-publication.json": "0cad1c60abdf3009f7ba9c4531f350653a6479aed38ab0c3bd500976e761e499",
+    "scripts/analyze-feedback.py": "0a85b655594b57754aa6e160f2a074767842d26255732facf933144a70f9e545",
+    "scripts/prepare-feedback-analysis-demo.py": "51ce57aabd9ec6b274aa035b60662beeede5c2986508c4db95e2ac1a93d05569",
+    "scripts/verify-feedback-analysis.py": "16633d64f5e1740eb8338c69ec4a031353b8a9a7393b340544d377b6f67ae994",
+    "scripts/verify-route-boundaries.py": "feca971027e6e0610b0884cdc0504abc48e2e6a5af75b0eab3ea7410b9c296cb",
+    "site/scripts/prepare.mjs": "a637be6ec5539871015188e63d77362e25653889ac053591fdbf80c7badddf2c",
+    "state.json": "d2ba3fcfd5491b0664151fd0b740a18aa7817b1f0c01c309ab7a369bfaf35568",
+    "tests/test_feedback_analysis.py": "d9418a3702a384581747809f3ed706e889bf5801e5e68f547c4f7f2cf108d268",
+    "tests/test_website_evidence_inputs.py": "5f8deb639937d191aad08961530ac743dab6dbf15d1c3cab0360d1a38357e620",
+    "tools/feedback_analysis.py": "c1fdb497e2210cf720a2f91d97750ac3834a64eb0acbee7e807972ba4c143d62"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-feedback-analysis-explanations-local.json",
+      "sha256": "4935ec072ba77c22e6a873ba9440cab409779cd9b0d02e614e8721ae15c36b34"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-analysis-linux.json",
+      "sha256": "14c9112ac0e18b9f4c057a554bdac389e06505132098680aeb9494a2259f5532"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-analysis-staging-refusal.json",
+      "sha256": "873470e238d80741d63584f0e5569a6cda9d0180254e2e492d4ec1575501d26a"
+    }
+  ],
+  "checks": []
+}

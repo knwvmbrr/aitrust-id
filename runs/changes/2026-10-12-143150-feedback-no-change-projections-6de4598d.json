@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-143150-feedback-no-change-projections-6de4598d",
+  "recorded_at": "2026-10-12T14:31:50.514625+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "84a86e8eb422337cd6f8da98eddf6353a3681fc5",
+  "changed": "Built the corrected feedback guide and refreshed evidence-only scope projections before source revalidation.",
+  "proves": "The actual build completed; all 202 scope IDs and completion percentages are retained. Current source-bound Linux controls exercise the repaired output states.",
+  "limits": "No full requirement closes and no independent accuracy or recruited-pilot acceptance is implied by the generated pages.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "docs/feedback-analysis-result.md": "15413490a8648635fcc7b70c6e5da9dea22615e1b6aa63f8ced7d8ee9c32195a",
+    "docs/feedback-analysis.md": "8da85563122867e1e019091b229f0922e2466ce719e084829bbc86d8ca60418d",
+    "docs/scope-progress.json": "1762dcf29d8ac9a0c9a2b53a1cf279b5fc11042a971e8354f865cfeff22e17e3",
+    "docs/scope-progress.md": "fdba74d3735b61afbbd8326355be0662dd3e9ccc4e7c45113916a0899edbcff7",
+    "runs/2026-10-12-feedback-no-change-linux.json": "715fd3cba4a47c9894e249364c2ddfba37dd3ec97331153547c4cbab81587d99",
+    "runs/2026-10-12-feedback-no-change-local.json": "97749d7975fa9a23a6186c1b9224cb5952feeb752a7ec1013e3e53792f71ab82",
+    "runs/2026-10-12-feedback-review-state-gap.json": "aa395dafa303703cde2cfc73ed434cd7505aef87d2e7d82749738e363d574153",
+    "scripts/analyze-feedback.py": "3c03e00d5eb0e450b1e1c636677742ac357571369e0839312ef719fbd5a569da",
+    "scripts/verify-feedback-analysis.py": "76d341aa8a6dddf4f9d1bc8eb8b28241ea57284a25531d9efa9d4bd4248f658a",
+    "site/public/reference/feedback-analysis.md": "8da85563122867e1e019091b229f0922e2466ce719e084829bbc86d8ca60418d",
+    "site/public/reference/public-scope.json": "b5d51af73b581ef51291f698b3b504f58aec426740db31e341a49542f3673a0d",
+    "site/src/public-scope.json": "b5d51af73b581ef51291f698b3b504f58aec426740db31e341a49542f3673a0d",
+    "site/src/scope-manifest.json": "a68f16714c877ea80b64dff1125f7a7c990e500d5712816c51e46b9d3a34366f",
+    "state.json": "853c33dabd3a996f212a24f2d6c01565c6cbfdca7fd75ddf4b0bfefd756727fb",
+    "tests/test_feedback_analysis.py": "3ce6be9064f4cdeb0194d003ce313803ef2526d6d12b8c9150af9d338b6eb89b",
+    "tools/feedback_analysis.py": "6cb0cd1651686769d4b39dfb400d96b3de2af3059251d24ef41ba6de1f317085"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-feedback-no-change-linux.json",
+      "sha256": "715fd3cba4a47c9894e249364c2ddfba37dd3ec97331153547c4cbab81587d99"
+    }
+  ],
+  "checks": []
+}

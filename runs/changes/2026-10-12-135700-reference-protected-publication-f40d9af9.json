@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-135700-reference-protected-publication-f40d9af9",
+  "recorded_at": "2026-10-12T13:57:00.507916+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "69f013b9cab0bd60be5f0c4d0e14fd787cb9f43c",
+  "changed": "Recorded normal protected PR 51 merge, clean exact publication, primary-checkout preservation and current state before continuing independent feedback analysis.",
+  "proves": "All 22 required checks passed under unchanged strict policy with zero unresolved threads. All 759 artifact comparisons and four exact header values per origin passed at preview, apex and www. Twelve unrelated primary files stayed byte-identical.",
+  "limits": "A Python HEAD request returned 403; the same header values passed via bounded HTTPS curl requests. No NF/FI release, native Share, independent accuracy, real participant intake or full requirement closure is claimed.",
+  "scope_ids": [
+    "F-120",
+    "T-NF",
+    "T-FI",
+    "F-020a",
+    "F-020b"
+  ],
+  "files": {
+    "state.json": "9f78b18ba262eaaea438fcbeae0cd3ca02c6fd2b4f3ffa8ad7d21557f779e5b7",
+    "runs/2026-10-12-reference-protected-merge.json": "f0fdca9754521262b84444132ece2203f05a1392e2a99f9e83b1bbb3bf1b9fde",
+    "runs/2026-10-12-reference-publication.json": "0cad1c60abdf3009f7ba9c4531f350653a6479aed38ab0c3bd500976e761e499",
+    "runs/2026-10-12-reference-primary-preservation.json": "f8190884bce1b9d0b0234f688dd8af8ae4786aca05ba458aae29cabc675685fa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-reference-protected-merge.json",
+      "sha256": "f0fdca9754521262b84444132ece2203f05a1392e2a99f9e83b1bbb3bf1b9fde"
+    },
+    {
+      "path": "runs/2026-10-12-reference-publication.json",
+      "sha256": "0cad1c60abdf3009f7ba9c4531f350653a6479aed38ab0c3bd500976e761e499"
+    },
+    {
+      "path": "runs/2026-10-12-reference-primary-preservation.json",
+      "sha256": "f8190884bce1b9d0b0234f688dd8af8ae4786aca05ba458aae29cabc675685fa"
+    }
+  ],
+  "checks": []
+}

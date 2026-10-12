@@ -129,3 +129,17 @@ def test_reference_revision_consumers_bind_source_and_privacy_contract(capabilit
         'protocol/corpus_support.py', 'protocol/normalization.py', 'protocol/unicode15-data.json',
         'docs/reference-revisions.md', '.github/workflows/ci.yml'}
     assert required <= fingerprint(capability)['sources'].keys()
+
+
+@pytest.mark.parametrize('capability', ['protocol', 'website'])
+def test_feedback_analysis_consumers_bind_shared_schema_and_private_workflow(capability):
+    required = {'tools/feedback_analysis.py', 'tools/research_admission.py',
+        'tools/blind_review_io.py', 'scripts/analyze-feedback.py',
+        'scripts/prepare-feedback-analysis-demo.py', 'scripts/verify-feedback-analysis.py',
+        'tests/test_feedback_analysis.py', 'docs/feedback-analysis.md',
+        '.github/workflows/ci.yml'}
+    assert required <= fingerprint(capability)['sources'].keys()
+    if capability == 'website':
+        commands = fingerprint(capability)['commands']
+        assert ['{python}', 'scripts/verify-feedback-analysis.py', '--output',
+                'output/verification/feedback-analysis.json'] in commands

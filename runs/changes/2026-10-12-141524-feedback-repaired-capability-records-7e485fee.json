@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-141524-feedback-repaired-capability-records-7e485fee",
+  "recorded_at": "2026-10-12T14:15:24.576176+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "69f013b9cab0bd60be5f0c4d0e14fd787cb9f43c",
+  "changed": "Recorded four fresh current-source capability checks after repairing the website verifier consumer argument.",
+  "proves": "PS, PII_REDACTED, protocol and extension again pass with stable source inventories; the repaired manifest remains covered by the publication-input tests.",
+  "limits": "Website revalidation and protected publication still pending; failed earlier website receipt retained and no full requirement closure claimed.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "71424023304836bf784b308e19270543d8e12bc541604f14298a64419679bad4",
+    "README.md": "b7f32af43f175acdbbc9a46c7c45ce24b12efeee359dad9aa3383570d7a50d2b",
+    "docs/feedback-analysis-plan.md": "13345c071f4865aa5b3e49f8f41a6b2dfef3a1a89a9f0979a357aba0500b9231",
+    "docs/feedback-analysis-result.md": "91f2b124bce54cc3843c7791a09c75d17813008696d82ccbd1de5bd465edba9b",
+    "docs/feedback-analysis.md": "351021f8fe673ddc94cfe0cd91210e6e565e23a486a894adba404d69cffa0333",
+    "docs/scope-progress.json": "660dda4ba3e539849cfc105430c0a1a21424f2df422fd9db08fea488e9957bd4",
+    "docs/scope-progress.md": "459c9ab8010ef3174fa23bb5e63ebca0134994437715e1ac541302532cfb97a6",
+    "eval/revalidation.json": "56b6b63273ad90ff38af180ff2170f0203cf4a5ce8f2dac8cce1083b092b08ab",
+    "runs/2026-10-12-feedback-analysis-explanations-local.json": "4935ec072ba77c22e6a873ba9440cab409779cd9b0d02e614e8721ae15c36b34",
+    "runs/2026-10-12-feedback-analysis-linux.json": "14c9112ac0e18b9f4c057a554bdac389e06505132098680aeb9494a2259f5532",
+    "runs/2026-10-12-feedback-analysis-local.json": "ded92e18c2cdcf29977ef529d0d3e20e4cfea374b4a8fdf4d003ff0263388291",
+    "runs/2026-10-12-feedback-analysis-staging-refusal.json": "873470e238d80741d63584f0e5569a6cda9d0180254e2e492d4ec1575501d26a",
+    "runs/2026-10-12-feedback-build.json": "f87758f430ae0747744e745fffbf667f054d26ef90e8bb38fa62a9dec656961b",
+    "runs/2026-10-12-feedback-change-record-refusal.json": "5e7308c8480af136e86d2ad982404e80e8f0404eabbbf195d99c4fc2d42b8a51",
+    "runs/2026-10-12-feedback-current-PII_REDACTED.json": "17c24c716808d5ef6ca405d8fd1b6bfa7ca3a7c277cf6a9b48cf3bf65330e323",
+    "runs/2026-10-12-feedback-current-PS.json": "fbda30767c9c88aaed023a51c39e2c9d89237e4ace1a8658690d2bba086917b2",
+    "runs/2026-10-12-feedback-current-extension.json": "a46e17b63c88c5d1247be30a433d1d1acdc85458333c776df48c5dfe9e737989",
+    "runs/2026-10-12-feedback-current-protocol.json": "81fe64b6495b50b383a5f043d5ccce05ed20df21f1951bff96041289c35c8664",
+    "runs/2026-10-12-feedback-prepared-website.json": "6458ded0abeae3fb06cc63e8e851c24aca37ea8787406cad1c2af3009d37491a",
+    "runs/2026-10-12-feedback-repaired-current-PII_REDACTED.json": "7d6f8862c9729d63789d52cc0a3a67280b7c0adb479920b4bd037707973415dd",
+    "runs/2026-10-12-feedback-repaired-current-PS.json": "62cf3ba12627412cc2921d736a99995b938e8c249b8e5980a3761c9658b7899f",
+    "runs/2026-10-12-feedback-repaired-current-extension.json": "66ca708534a6cbcd76c0fe82fd781c09b7c078c2cdf78d60b66be545d27a7497",
+    "runs/2026-10-12-feedback-repaired-current-protocol.json": "fc9b65bf636429e4d2c33b70a36d53af3f45e167a9442329540b947ed4ebacaa",
+    "runs/2026-10-12-reference-primary-preservation.json": "f8190884bce1b9d0b0234f688dd8af8ae4786aca05ba458aae29cabc675685fa",
+    "runs/2026-10-12-reference-protected-merge.json": "f0fdca9754521262b84444132ece2203f05a1392e2a99f9e83b1bbb3bf1b9fde",
+    "runs/2026-10-12-reference-publication.json": "0cad1c60abdf3009f7ba9c4531f350653a6479aed38ab0c3bd500976e761e499",
+    "scripts/analyze-feedback.py": "0a85b655594b57754aa6e160f2a074767842d26255732facf933144a70f9e545",
+    "scripts/prepare-feedback-analysis-demo.py": "51ce57aabd9ec6b274aa035b60662beeede5c2986508c4db95e2ac1a93d05569",
+    "scripts/verify-feedback-analysis.py": "16633d64f5e1740eb8338c69ec4a031353b8a9a7393b340544d377b6f67ae994",
+    "scripts/verify-route-boundaries.py": "feca971027e6e0610b0884cdc0504abc48e2e6a5af75b0eab3ea7410b9c296cb",
+    "site/public/reference/feedback-analysis.md": "351021f8fe673ddc94cfe0cd91210e6e565e23a486a894adba404d69cffa0333",
+    "site/public/reference/public-scope.json": "84b7a287b7bfe55d4a376663279c067062f4c12c97bd93c2d67c53fd17e9a9e6",
+    "site/scripts/prepare.mjs": "a637be6ec5539871015188e63d77362e25653889ac053591fdbf80c7badddf2c",
+    "site/src/public-scope.json": "84b7a287b7bfe55d4a376663279c067062f4c12c97bd93c2d67c53fd17e9a9e6",
+    "site/src/scope-manifest.json": "a8ec36d4ba193b4ba04eec4700aec79a2f617abbae091c0727f99f392d8778af",
+    "state.json": "d2ba3fcfd5491b0664151fd0b740a18aa7817b1f0c01c309ab7a369bfaf35568",
+    "tests/test_feedback_analysis.py": "d9418a3702a384581747809f3ed706e889bf5801e5e68f547c4f7f2cf108d268",
+    "tests/test_website_evidence_inputs.py": "04728570f0d7f4f3b40239d3232867482440304ba903758e2239c543422ade0e",
+    "tools/feedback_analysis.py": "c1fdb497e2210cf720a2f91d97750ac3834a64eb0acbee7e807972ba4c143d62"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-feedback-repaired-current-PS.json",
+      "sha256": "62cf3ba12627412cc2921d736a99995b938e8c249b8e5980a3761c9658b7899f"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-repaired-current-PII_REDACTED.json",
+      "sha256": "7d6f8862c9729d63789d52cc0a3a67280b7c0adb479920b4bd037707973415dd"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-repaired-current-protocol.json",
+      "sha256": "fc9b65bf636429e4d2c33b70a36d53af3f45e167a9442329540b947ed4ebacaa"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-repaired-current-extension.json",
+      "sha256": "66ca708534a6cbcd76c0fe82fd781c09b7c078c2cdf78d60b66be545d27a7497"
+    }
+  ],
+  "checks": []
+}
