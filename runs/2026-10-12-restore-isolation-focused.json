@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-10-12T02:11:08.232648+00:00",
+  "pass": true,
+  "tests_passed": 40,
+  "new_guard_controls": 37,
+  "existing_backup_protocol_controls": 3,
+  "stdout_sha256": "f18f49ff997cf48f6ca5ee9f1a7a56f7ad913f19e3209fa5dd2c717ce84c86ea",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sources": {
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "tests/test_restore_isolation.py": "4b30ab89ddc58f2d2adf6f7b907cf8cfbc0eaa8061a8945b74de7df295ffdb5b",
+    "tests/test_backup_protocol.py": "3c7f216d0cb8a6867f6e35559628bcd49f76f9a8f1fca0f979cf8efab940b3fc",
+    "tests/restore_isolation_kernel.py": "080d16540926b449201d0eefd5e0e56aa5a052b15e65e0bf630be5cb398cc68c"
+  },
+  "production_installed": false,
+  "actual_restore_executed": false,
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0
+}

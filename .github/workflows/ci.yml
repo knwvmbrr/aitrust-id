@@ -32,6 +32,10 @@ jobs:
       - run: make host-build
       - run: shellcheck -e SC1091 deploy/host/bootstrap.sh deploy/host/deploy.sh deploy/host/verify.sh
       - run: make backup-build
+      - name: Refuse unsafe restore boundaries before secrets or filesystem changes
+        run: |
+          sudo python3 tests/restore_isolation_kernel.py host
+          sudo unshare --net -- python3 tests/restore_isolation_kernel.py isolated
       - run: shellcheck -e SC1091 deploy/backup/bootstrap.sh deploy/backup/deploy.sh deploy/backup/verify.sh deploy/backup/schedule.sh deploy/backup/source-monitor.sh
       - run: make alerts-build
       - run: shellcheck deploy/alerts/install.sh
@@ -83,6 +87,8 @@ jobs:
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install --require-hashes -r eval/requirements.lock
       - run: python -m pytest tests/test_gateway_integration.py -q
+      - name: Exercise protected restore generation and namespace refusal cases
+        run: python -m pytest tests/test_restore_isolation.py tests/test_backup_protocol.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
       - name: Check preserved component notice identity without claiming legal clearance

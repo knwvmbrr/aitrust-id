@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-022000-restore-complete-engineering-d8c51289
+
+Recorded 2026-10-12T02:20:00.393277+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the full current recovery-guard execution and final reviewed source boundaries.
+- **Evidence.** 2492 Python tests passed; all selected capability checks and actual Linux guards passed without changing the tag gate or production hosts. [Change record](./runs/changes/2026-10-12-022000-restore-complete-engineering-d8c51289.json).
+- **Not claimed.** One platform-specific skip; production guard installation and full replacement-host recovery remain pending. No requirements marked complete.
+
+
+### 2026-10-12-021726-restore-reviewed-boundaries-b8f720a6
+
+Recorded 2026-10-12T02:17:26.446332+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected editorial publication and current recovery-source route review with passing website checks.
+- **Evidence.** 756 exact published artifact matches; all eight source-bound website checks and unchanged personal endpoint/access review pass. [Change record](./runs/changes/2026-10-12-021726-restore-reviewed-boundaries-b8f720a6.json).
+- **Not claimed.** Recovery guard is not installed on production; independent tag release, real restore and owner acceptance remain pending.
+
+
+### 2026-10-12-021417-restore-build-order-refusal-bcecbdd9
+
+Recorded 2026-10-12T02:14:17.740450+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the failed website receipt after the changelog entry refused a missing evidence argument; correct the record before retrying the build.
+- **Evidence.** The build refused undocumented current changes; the failed receipt is retained and does not count as passing. [Change record](./runs/changes/2026-10-12-021417-restore-build-order-refusal-bcecbdd9.json).
+- **Not claimed.** No runtime code or acceptance gate was relaxed.
+
+
+### 2026-10-12-021357-restore-current-engineering-08c1d062
+
+Recorded 2026-10-12T02:13:57.429120+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current personal engineering checks and recovery guard evidence; retain deployment-preflight refusals without touching unrelated drafts.
+- **Evidence.** Four selected capability checks passed on current source; restore guard execution and limitations are recorded in machine-readable state. [Change record](./runs/changes/2026-10-12-021357-restore-current-engineering-08c1d062.json).
+- **Not claimed.** Publication is pending actual HTTP checks; no production recovery installation or tag release validation.
+
+
+### 2026-10-12-021142-restore-early-isolation-554415d0
+
+Recorded 2026-10-12T02:11:42.514569+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse unsafe synthetic recovery before secrets, filesystem changes or subprocesses; bind the current Linux and permission tests to protected CI.
+- **Evidence.** Forty focused controls and eighteen actual kernel/filesystem checks pass on invented fixtures; owned remote staging removed. [Change record](./runs/changes/2026-10-12-021142-restore-early-isolation-554415d0.json).
+- **Not claimed.** No real restore, production installation or full security acceptance. F-073 and N-011 remain open.
+
+
 ### 2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8
 
 Recorded 2026-10-12T01:58:41.424662+00:00 · Contributor: Codex · change

@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "proofs": [
+    {
+      "pass": true,
+      "mode": "host",
+      "checks": {
+        "host_namespace_refused": true,
+        "actual_cli_refused_before_generation": true
+      },
+      "restore_source_sha256": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+      "actual_restore_executed": false,
+      "production_configuration_changed": false
+    },
+    {
+      "pass": true,
+      "mode": "isolated",
+      "checks": {
+        "fresh_loopback_namespace_passed": true,
+        "root_private_generation_passed": true,
+        "root_private_member_passed": true,
+        "root_private_hardlink_passed": true,
+        "shared_member_refused": true,
+        "service_owned_member_refused": true,
+        "linked_member_refused": true,
+        "special_member_refused": true,
+        "shared_generation_refused": true,
+        "service_owned_generation_refused": true,
+        "shared_container_refused": true,
+        "linked_generation_refused": true,
+        "linked_ancestor_refused": true,
+        "changed_namespace_identity_refused": true,
+        "connected_namespace_refused": true,
+        "owned_root_fixture_removed": true
+      },
+      "restore_source_sha256": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+      "actual_restore_executed": false,
+      "production_configuration_changed": false
+    }
+  ],
+  "kernel_script_sha256": "080d16540926b449201d0eefd5e0e56aa5a052b15e65e0bf630be5cb398cc68c",
+  "captured_at": "2026-10-12T02:07:50.087561+00:00",
+  "actual_kernel_check_count": 18,
+  "scope": "Early namespace and protected-generation topology/permission refusal only; not a backup restore, production install or complete security/recovery acceptance."
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-021142-restore-early-isolation-554415d0",
+  "recorded_at": "2026-10-12T02:11:42.514569+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "51b523870cf76489df19c29fbe605e28149865b5",
+  "changed": "Refuse unsafe synthetic recovery before secrets, filesystem changes or subprocesses; bind the current Linux and permission tests to protected CI.",
+  "proves": "Forty focused controls and eighteen actual kernel/filesystem checks pass on invented fixtures; owned remote staging removed.",
+  "limits": "No real restore, production installation or full security acceptance. F-073 and N-011 remain open.",
+  "scope_ids": [
+    "F-073",
+    "N-011"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "217585c9bf30b0b621d6c3c76b5cd555bed76a1d8a56530b6e7a785b619c5ec4",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "docs/backup-implementation.md": "a0bbc95ac8e26edb8def058c5353c05b249b450956d414f75b19b93a6221a687",
+    "scripts/verify-route-boundaries.py": "05aac012a57a03bfbe8f49b2bd5b82d5b860aa57ad5e70aa71071fdbe724d02e",
+    "docs/restore-isolation-plan.md": "a73fb314de9a43b097bb6715c273f34235c06616bc6bfcb4bb279557e784c3a6",
+    "docs/restore-isolation-result.md": "e75ceec7beb4a85f1b94767508b7cd745c3f462dfbd26002693d22554411ec0a",
+    "tests/restore_isolation_kernel.py": "080d16540926b449201d0eefd5e0e56aa5a052b15e65e0bf630be5cb398cc68c",
+    "tests/test_restore_isolation.py": "4b30ab89ddc58f2d2adf6f7b907cf8cfbc0eaa8061a8945b74de7df295ffdb5b",
+    "runs/2026-10-12-restore-isolation-focused.json": "9fd5b8d16e9db59a6e15e3513ea69c6da43dc33313372045473e3531376bf1d0",
+    "runs/2026-10-12-restore-isolation-kernel.json": "d662f5abec16dba0db6b626a1198e99a70fa9501c61ca9b431a8cd47c5140c17",
+    "runs/2026-10-12-restore-isolation-staging-cleanup.json": "47c571b4c31d6b66b535d4a5d751552e7f14ee5842bb4e7a8fcafefb7fb4a6c7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-restore-isolation-focused.json",
+      "sha256": "9fd5b8d16e9db59a6e15e3513ea69c6da43dc33313372045473e3531376bf1d0"
+    },
+    {
+      "path": "runs/2026-10-12-restore-isolation-kernel.json",
+      "sha256": "d662f5abec16dba0db6b626a1198e99a70fa9501c61ca9b431a8cd47c5140c17"
+    },
+    {
+      "path": "runs/2026-10-12-restore-isolation-staging-cleanup.json",
+      "sha256": "47c571b4c31d6b66b535d4a5d751552e7f14ee5842bb4e7a8fcafefb7fb4a6c7"
+    }
+  ],
+  "checks": []
+}

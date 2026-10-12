@@ -117,3 +117,9 @@ The [pgBackRest repository-host guide](https://pgbackrest.org/user-guide.html)
 defines the remote-host and encryption contracts; the
 [configuration reference](https://pgbackrest.org/configuration.html) defines the
 supported options. Recovery targets remain proposed until measured.
+
+## Early restore refusal
+
+The synthetic drill now requires root on Linux in a separate loopback-only network namespace before creating files or reading recovery configuration. It refuses host/connected namespaces and rechecks the identity before restoration and startup. Select the explicit protected generation; linked, shared or service-owned directories and members are refused. Root-owned private regular-file hard links between protected generations remain permitted. Inspection is bounded to 100,000 visited entries and 30 seconds, and must stay on one filesystem. Those limits must be reviewed before larger recovery workloads.
+
+The owned kernel checks create only temporary synthetic fixtures, exercise host and connected-namespace refusal, then remove their files. They do not restore a backup, establish a valid backup or complete replacement-host recovery. Keep using the explicit `sudo unshare --net` invocation above. No production configuration is automatically updated by this source repair.

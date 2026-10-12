@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T01:58:34.275461+00:00",
+  "updated": "2026-10-12T02:20:00.091460+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2455,
+  "python_tests_passed": 2492,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -964,10 +964,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current_source_checks_pass_publication_pending",
+    "status": "current_source_checks_pass; next_protected_merge_pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-11-choice-framing-current-boundaries.json",
-    "source_files": 588,
+    "evidence": "runs/2026-10-12-restore-isolation-final-boundaries.json",
+    "source_files": 662,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-12-editorial-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-12-editorial-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-editorial-current-protocol.json",
-    "extension": "runs/2026-10-12-editorial-current-extension.json",
-    "website": "runs/2026-10-12-editorial-reviewed-website.json",
+    "PS": "runs/2026-10-12-restore-isolation-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-12-restore-isolation-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-restore-isolation-current-protocol.json",
+    "extension": "runs/2026-10-12-restore-isolation-current-extension.json",
+    "website": "runs/2026-10-12-restore-isolation-repaired-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T01:58:34.275461+00:00",
+  "updated_at": "2026-10-12T02:20:00.091460+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,10 +1099,10 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "684357c12fb0fe3fd21516d20b9544f1feeff1f3",
-    "deployment_url": "https://2c8c3475.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-12-selected-assets-publication.json",
-    "matching_artifacts": 753,
+    "source_commit": "51b523870cf76489df19c29fbe605e28149865b5",
+    "deployment_url": "https://099f0479.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-12-editorial-publication.json",
+    "matching_artifacts": 756,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
   },
@@ -1830,7 +1830,7 @@
   "editorial_workflow": {
     "profile": "owner-editorial-review/v1",
     "implemented_by": "Codex",
-    "status": "repaired_full_functional_acceptance_passed; protected_publication_pending",
+    "status": "full_functional_acceptance_passed; protected_merge_and_publication_verified",
     "source_formats": [
       "current unsigned gateway text assertion 0.1.0",
       "current detailed on-device PS preview export v1"
@@ -1864,7 +1864,34 @@
       "runs/2026-10-12-editorial-review-repaired-macos-cli.json",
       "runs/2026-10-12-editorial-review-linux-cli.json"
     ],
-    "ci_chronology_failure": "runs/2026-10-12-editorial-ci-chronology-refusal.json"
+    "ci_chronology_failure": "runs/2026-10-12-editorial-ci-chronology-refusal.json",
+    "publication_preflight_refusals": "runs/2026-10-12-editorial-publication-preflight-refusals.json",
+    "publication": "runs/2026-10-12-editorial-publication.json",
+    "protected_merge": "runs/2026-10-12-editorial-protected-merge.json",
+    "primary_preservation": "runs/2026-10-12-editorial-primary-preservation.json"
   },
-  "python_tests_current_pass": true
+  "python_tests_current_pass": true,
+  "restore_isolation": {
+    "status": "development_guard_executed; protected_merge_and_production_installation_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-073",
+      "N-011"
+    ],
+    "architecture": "docs/restore-isolation-plan.md",
+    "result": "docs/restore-isolation-result.md",
+    "focused_controls": 40,
+    "actual_kernel_controls": 18,
+    "focused_evidence": "runs/2026-10-12-restore-isolation-focused.json",
+    "kernel_evidence": "runs/2026-10-12-restore-isolation-kernel.json",
+    "cleanup": "runs/2026-10-12-restore-isolation-staging-cleanup.json",
+    "actual_restore_executed": false,
+    "production_installed": false,
+    "requirements_closed": 0,
+    "website_evidence": "runs/2026-10-12-restore-isolation-repaired-website.json",
+    "failed_website_evidence": "runs/2026-10-12-restore-isolation-current-website.json",
+    "boundary_evidence": "runs/2026-10-12-restore-isolation-final-boundaries.json",
+    "full_python_evidence": "runs/2026-10-12-restore-isolation-full-suite.json",
+    "full_python_tests_passed": 2492
+  }
 }
