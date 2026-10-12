@@ -123,6 +123,9 @@ PATTERNS += ('tools/newsroom.py','tools/editorial_cli.py','scripts/editorial-rev
              'tests/test_newsroom.py','tests/test_editorial_cli.py','tests/test_local_cli.py',
              'docs/editorial-workflow-plan.md','docs/editorial-workflow.md','docs/editorial-workflow-result.md')
 
+PATTERNS += ('tests/fixtures/legacy-review-v1/*', 'tools/review_execution.py', 'tests/test_review_execution_binding.py',
+             'docs/review-execution-binding-plan.md', 'docs/review-execution-binding-result.md')
+
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',

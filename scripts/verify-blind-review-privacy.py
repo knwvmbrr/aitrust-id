@@ -14,7 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from protocol.reports import write_report
 FILES = ['scripts/prepare-ps-review.py','tools/blind_review_io.py','protocol/evidence.py',
-         'services/evaluator/app.py','eval/gates.yaml','docs/independent-review.md']
+         'services/evaluator/app.py','eval/gates.yaml','docs/independent-review.md',
+         'tools/review_execution.py','protocol/normalization.py','protocol/unicode15-data.json',
+         'services/evaluator/requirements.lock','eval/harness.py','protocol/categories.py','eval/gates.schema.json',
+         *['tests/fixtures/legacy-review-v1/'+name for name in ('origin.json','manifest.json','items.jsonl','reviewer-1.json','reviewer-2.json')]]
 
 
 def verify():
@@ -61,6 +64,21 @@ def verify():
             assert all(value[k] is False for k in ['independence_verified','predictions_run','release_assessed'])
         call('csv_disagreements_preserved',['compare',packet],True,disagreements)
         call('phone_disagreements_preserved',['compare',packet,'--format','json'],True,disagreements)
+        call('bound_phone_comparison',['compare',packet,'--format','json','--require-execution-binding'],True,
+             lambda r:r['execution_binding_verified'] is True or (_ for _ in ()).throw(ValueError('Missing execution binding')))
+        file=packet/'manifest.json';bound=file.read_bytes();legacy=json.loads(bound)
+        legacy['format']='ai-trust-id-blind-ps-review/v1';legacy.pop('execution_context_sha256')
+        legacy['method_sha256']=hashlib.sha256((ROOT/'services/evaluator/app.py').read_bytes()).hexdigest()
+        bound_forms={slot:(packet/f'reviewer-{slot}.json').read_bytes() for slot in (1,2)}
+        for slot in (1,2):
+            form=json.loads(bound_forms[slot]);form['method_sha256']=legacy['method_sha256']
+            (packet/f'reviewer-{slot}.json').write_text(json.dumps(form))
+        file.write_text(json.dumps(legacy))
+        call('legacy_labels_only',['compare',packet,'--format','json'],True,
+             lambda r:r['execution_binding_verified'] is False or (_ for _ in ()).throw(ValueError('False legacy binding')))
+        call('legacy_required_binding_refused',['compare',packet,'--format','json','--require-execution-binding'],False)
+        file.write_bytes(bound)
+        for slot in (1,2):(packet/f'reviewer-{slot}.json').write_bytes(bound_forms[slot])
         file=packet/'manifest.json';original=file.read_bytes()
         file.write_bytes(original.replace(b'"format":',b'"format":"duplicate", "format":',1));call('duplicate_manifest_refused',['compare',packet,'--format','json'],False);file.write_bytes(original)
         value=json.loads(original);value['independence_verified']=True;file.write_text(json.dumps(value));call('forged_independence_refused',['compare',packet,'--format','json'],False);file.write_bytes(original)
@@ -73,6 +91,17 @@ def verify():
         large=private/'large.jsonl'
         with large.open('wb') as handle:handle.truncate(10_000_001)
         large.chmod(0o600);call('oversized_source_refused',['freeze',large,private/'oversized-packet'],False);assert not (private/'oversized-packet').exists()
+        historical=private/'historical';historical.mkdir(mode=0o700)
+        fixture=ROOT/'tests/fixtures/legacy-review-v1'
+        origin=json.loads((fixture/'origin.json').read_text())
+        for name,expected in origin['files'].items():
+            raw=(fixture/name).read_bytes();assert hashlib.sha256(raw).hexdigest()==expected
+            (historical/name).write_bytes(raw);(historical/name).chmod(0o600)
+        historical_before={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in historical.iterdir()}
+        call('actual_pre_v2_packet_labels_preserved',['compare',historical,'--format','json'],True,
+             lambda r:(r['policy_matches_current'] is False and r['execution_binding_verified'] is False and r['disagreement_ids']==['historical-one']) or (_ for _ in ()).throw(ValueError('False historical compatibility')))
+        call('actual_pre_v2_packet_binding_refused',['compare',historical,'--format','json','--require-execution-binding'],False)
+        assert historical_before=={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in historical.iterdir()}
         source.chmod(0o644);call('public_source_refused',['freeze',source,private/'public-packet'],False);source.chmod(0o600);assert not (private/'public-packet').exists()
         public=private/'public-parent';public.mkdir(mode=0o755);public.chmod(0o755)
         call('public_destination_parent_refused',['freeze',source,public/'packet'],False);assert not (public/'packet').exists()

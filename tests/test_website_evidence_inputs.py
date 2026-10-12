@@ -103,3 +103,9 @@ def test_route_inventory_is_also_independent_of_the_derived_manifest(tmp_path):
     generated.unlink()
     bundle.unlink()
     assert routes.inventory(tmp_path)==before
+
+
+@pytest.mark.parametrize("capability",["protocol","website"])
+def test_selected_review_recipe_inputs_are_bound_in_consumer_receipts(capability):
+    from tools.review_execution import SOURCE_FILES
+    assert set(SOURCE_FILES) <= fingerprint(capability)["sources"].keys()

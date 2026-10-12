@@ -1,0 +1,21 @@
+{
+  "kind": "synthetic_pre_v2_cli_packet",
+  "source_commit": "3c001bd91487d6776c65bd2a1b731b6a157aaf41",
+  "generator_sources": {
+    "scripts/prepare-ps-review.py": "f36497626d5b67d4b2398daf478985eb7eaf6f7b24a764a3eb6936201b3242ec",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "services/evaluator/app.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+    "docs/independent-review.md": "4a0a5dc7182e59164e0eb8797ceb71bac7b023f11e490e410c501134718313de"
+  },
+  "manifest_unchanged_after_freeze": true,
+  "human_ratings": false,
+  "independent_validation": false,
+  "files": {
+    "items.jsonl": "3adb92c33754633cc0ce22d4aa01824ed6fe332a5d33afaaa714669345fe2dc4",
+    "reviewer-1.json": "885223f9e99fb26ac1d7598e094a8302ac52b01a3ce87dae71a0983e4aa0d338",
+    "reviewer-2.json": "3f768f661e60d665826de28437852fd1f4584de5d982b3d1528644a1f9a12f87",
+    "manifest.json": "eef3a90ae88e72f72d53ab9658a977b749c1e0d32ac287ab31ab54d56f15a656"
+  }
+}

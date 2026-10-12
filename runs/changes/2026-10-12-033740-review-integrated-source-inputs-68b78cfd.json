@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-033740-review-integrated-source-inputs-68b78cfd",
+  "recorded_at": "2026-10-12T03:37:40.301558+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d9e5ab4b6990cb966bbf66a463ca817a3887607a",
+  "changed": "Integrate the selected review-execution recipe into website capability checks and the personal-route source inventory.",
+  "proves": "Prepared scope/reference projections preserve all 202 records; website now executes packet drift controls and browser download comparisons with required execution binding.",
+  "limits": "Current combined capability checks and whole-suite remain pending; no human or accuracy acceptance.",
+  "scope_ids": [
+    "F-050",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "eval/revalidation.json": "7c2b1b46bc94083acd025390faa1f7d7e3c9f1ba1f5f95321b645dc23be8f9a3",
+    "scripts/verify-route-boundaries.py": "58f7295bf3d087b139664ada9d494eef2699643b213d4fb48876a49963768f97",
+    "site/public/reference/independent-review.md": "1b8eb5745459f3096a2edc08e1338b9df24fa6e6f499ac42d5ce517a55528ea5",
+    "site/public/reference/public-scope.json": "0c66124a4d705a1c05af3adcd0cee6d3342ca3d3d492d1a74e09a9091d1e5f6c",
+    "site/src/public-scope.json": "0c66124a4d705a1c05af3adcd0cee6d3342ca3d3d492d1a74e09a9091d1e5f6c",
+    "site/src/scope-manifest.json": "b752d353f10fbfc96e8bd5e12e25eef30305c057f477ca270c92e33cf4e0e791"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T03:37:41.270437+00:00"
+    }
+  ]
+}

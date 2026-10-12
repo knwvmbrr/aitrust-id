@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-12T04:08:28.238250+00:00",
+  "pass": false,
+  "stage": "post_suite_state_chronology",
+  "error_signature": "Naive or future state evidence timestamp",
+  "cause": "updated was mistakenly reduced to a date without timezone",
+  "fix": "Keep updated and updated_at as full timezone-aware timestamps after referenced receipts",
+  "runtime_sources_changed": false,
+  "public_merge_performed": false
+}

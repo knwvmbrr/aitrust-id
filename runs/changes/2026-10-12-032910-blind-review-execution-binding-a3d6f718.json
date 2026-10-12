@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-032910-blind-review-execution-binding-a3d6f718",
+  "recorded_at": "2026-10-12T03:29:10.391362+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b33987c2eb6bb4516e5be51452adfba5d9fdc00e",
+  "changed": "Bind new blind PS review packets to the selected execution recipe; retain legacy label-only comparison and explicit require-binding control.",
+  "proves": "84 source-bound tests and 21 actual private CLI controls pass on macOS and Linux, with Linux network-denial checks and owned-stage cleanup.",
+  "limits": "No human review, sampling acceptance, accuracy measurement or requirement closure. Broader route/build integration and protected publication remain pending.",
+  "scope_ids": [
+    "F-050",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "docs/independent-review.md": "0d62b15c888ec6869bdb61d679dc811ade401ca4c6b0724fc3140406882a136a",
+    "docs/review-execution-binding-plan.md": "cd3e3c664c3a25769033c9f8aee13e01fc878cde572da805117e3df346fb6834",
+    "docs/review-execution-binding-result.md": "27f16402464c78bf0ea8e9a90940e377ffe170bbf9b4d22d0b6a3cc732b04a07",
+    "docs/scope-progress.json": "0ffc2ab3642f6114aa4f957d285f24d28baac0bf65cba195587e4dd2c9a7835e",
+    "docs/scope-progress.md": "e4dd2812e860b365600bb44d62250c967dee58f946a2e365a410ce06be65fbde",
+    "runs/2026-10-12-review-execution-cli.json": "1741d8311785ed0434baee2a05f4af28a12e7af146d71f9e57af19bbee5519ee",
+    "runs/2026-10-12-review-execution-focused.json": "c226aeba4752facfb0de3178c697bc3b2435a02f540be14614605dc29616a778",
+    "runs/2026-10-12-review-execution-linux-cleanup.json": "cdfc002c21df25a46caca713286bef2591144918ae3fdf4177876169183b57a3",
+    "runs/2026-10-12-review-execution-linux.json": "9bbf55dfb035c0756316aa37efb855df6399e66bf39c886fa68cc89ee83c0478",
+    "scripts/prepare-ps-review.py": "87c0475aca7a59f349338984008d19002024320d484649c6f6f1471aa64ad7af",
+    "scripts/verify-blind-review-privacy.py": "ea9793b0329c2d6d7c92a4c73595781715120d373e0cc987d74499f944e2d1b2",
+    "state.json": "3eb08de6fb98596e9495827007a002b1b33b34753207533580313818f6bc6902",
+    "tests/test_review_execution_binding.py": "75123bb04c5f4076624da8764dc49cb0947b041b20614ffafc3c28a1773a6686",
+    "tools/review_execution.py": "8edfac84b599f4a435ba651e0a4172f1bf278164f90462acb3a8a65cb2aecc09"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-review-execution-focused.json",
+      "sha256": "c226aeba4752facfb0de3178c697bc3b2435a02f540be14614605dc29616a778"
+    },
+    {
+      "path": "runs/2026-10-12-review-execution-cli.json",
+      "sha256": "1741d8311785ed0434baee2a05f4af28a12e7af146d71f9e57af19bbee5519ee"
+    },
+    {
+      "path": "runs/2026-10-12-review-execution-linux.json",
+      "sha256": "9bbf55dfb035c0756316aa37efb855df6399e66bf39c886fa68cc89ee83c0478"
+    },
+    {
+      "path": "runs/2026-10-12-review-execution-linux-cleanup.json",
+      "sha256": "cdfc002c21df25a46caca713286bef2591144918ae3fdf4177876169183b57a3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T03:29:11.362915+00:00"
+    }
+  ]
+}

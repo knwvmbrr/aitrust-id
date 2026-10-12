@@ -5599,10 +5599,12 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-12T03:57:28.989170+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — manifest-v2 selected execution recipe, legacy label-only comparison and 84/21 macOS/Linux controls, 2026-10-12T03:27:21.911845+00:00",
+          "Codex — repaired selected execution inputs and genuine pre-v2 label compatibility; actual Mac/Linux controls 2026-10-12T03:57:28.989170+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -5616,7 +5618,18 @@
           "runs/2026-10-09-scope-completion-checks.json",
           "runs/2026-10-09-scope-regressions.json",
           "eval/gates.yaml",
-          "docs/independent-review.md"
+          "docs/independent-review.md",
+          "docs/review-execution-binding-plan.md",
+          "docs/review-execution-binding-result.md",
+          "tools/review_execution.py",
+          "tests/test_review_execution_binding.py",
+          "runs/2026-10-12-review-execution-focused.json",
+          "runs/2026-10-12-review-execution-cli.json",
+          "runs/2026-10-12-review-execution-linux.json",
+          "runs/2026-10-12-review-execution-linux-cleanup.json",
+          "runs/2026-10-12-review-repaired-focused.json",
+          "runs/2026-10-12-review-repaired-cli.json",
+          "runs/2026-10-12-review-repaired-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -5896,11 +5909,13 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-11T19:47:23.935934+00:00",
+        "audited_at": "2026-10-12T03:57:28.989175+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — bounded private packet files and strict phone parser; 60 focused Python, 34 Node and 32 Mac/Linux CLI controls, 2026-10-11T19:44:26.208892+00:00"
+          "Codex — bounded private packet files and strict phone parser; 60 focused Python, 34 Node and 32 Mac/Linux CLI controls, 2026-10-11T19:44:26.208892+00:00",
+          "Codex — manifest-v2 selected execution recipe, legacy label-only comparison and 84/21 macOS/Linux controls, 2026-10-12T03:27:21.911845+00:00",
+          "Codex — repaired selected execution inputs and genuine pre-v2 label compatibility; actual Mac/Linux controls 2026-10-12T03:57:28.989175+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -5919,7 +5934,18 @@
           "runs/2026-10-11-blind-private-linux-cli.json",
           "runs/2026-10-11-blind-private-linux-current.json",
           "runs/2026-10-11-blind-private-browser.json",
-          "runs/2026-10-11-blind-private-device.json"
+          "runs/2026-10-11-blind-private-device.json",
+          "docs/review-execution-binding-plan.md",
+          "docs/review-execution-binding-result.md",
+          "tools/review_execution.py",
+          "tests/test_review_execution_binding.py",
+          "runs/2026-10-12-review-execution-focused.json",
+          "runs/2026-10-12-review-execution-cli.json",
+          "runs/2026-10-12-review-execution-linux.json",
+          "runs/2026-10-12-review-execution-linux-cleanup.json",
+          "runs/2026-10-12-review-repaired-focused.json",
+          "runs/2026-10-12-review-repaired-cli.json",
+          "runs/2026-10-12-review-repaired-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -7025,10 +7051,12 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-12T03:57:28.989180+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — manifest-v2 selected execution recipe, legacy label-only comparison and 84/21 macOS/Linux controls, 2026-10-12T03:27:21.911845+00:00",
+          "Codex — repaired selected execution inputs and genuine pre-v2 label compatibility; actual Mac/Linux controls 2026-10-12T03:57:28.989180+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -7040,7 +7068,18 @@
         "next_owner": "Codex",
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
-          "docs/open-validation-path.md"
+          "docs/open-validation-path.md",
+          "docs/review-execution-binding-plan.md",
+          "docs/review-execution-binding-result.md",
+          "tools/review_execution.py",
+          "tests/test_review_execution_binding.py",
+          "runs/2026-10-12-review-execution-focused.json",
+          "runs/2026-10-12-review-execution-cli.json",
+          "runs/2026-10-12-review-execution-linux.json",
+          "runs/2026-10-12-review-execution-linux-cleanup.json",
+          "runs/2026-10-12-review-repaired-focused.json",
+          "runs/2026-10-12-review-repaired-cli.json",
+          "runs/2026-10-12-review-repaired-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-034604-review-recipe-integration-verified-193b7362",
+  "recorded_at": "2026-10-12T03:46:04.832956+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d9e5ab4b6990cb966bbf66a463ca817a3887607a",
+  "changed": "Complete current selected review-recipe integration and retain normal protected merge/publication evidence for the prior choice-grammar increment.",
+  "proves": "2571 source-bound Python tests pass; eight website checks bind 390 inputs, 675 route inputs pass review, and actual phone-view downloads compare against bound recipes in both engines.",
+  "limits": "87 full requirements remain open; independent labels, sampling, calibration, physical devices and human accessibility remain separate.",
+  "scope_ids": [
+    "F-050",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "eval/revalidation.json": "7c2b1b46bc94083acd025390faa1f7d7e3c9f1ba1f5f95321b645dc23be8f9a3",
+    "eval/route-boundaries.json": "c6c87349f534cfaeab868350c3c098b2ec5f0370e4decf40312da8ff508160f6",
+    "runs/2026-10-12-choice-grammar-primary-preservation.json": "1830ef13f3863f919ba43d8e2b3cba3a4836c4617f539f08f2931668080f5d66",
+    "runs/2026-10-12-choice-grammar-protected-merge.json": "78d198135f3de827d8613e7fcd7894776aa22cb0e3c906b4a88fe29f38a44c3b",
+    "runs/2026-10-12-choice-grammar-publication.json": "47f8136de4bccd262a4a4d05b071ca2c4b69c2a62068ca7870e8bd26546f1cd7",
+    "runs/2026-10-12-review-recipe-browser.json": "b4a65ed787bb5da673b4a3f1310c3f732f341db4c1e6b199e0ddf02da5e82ee4",
+    "runs/2026-10-12-review-recipe-current-PII_REDACTED.json": "5c7265f73538e9dfab18844bfa0b03e6f2a048c94156b93ff56762dfe42764ee",
+    "runs/2026-10-12-review-recipe-current-PS.json": "a7ab389ba46512288470358c7827df9ea890421b69261c33de3b0a595e53de03",
+    "runs/2026-10-12-review-recipe-current-extension.json": "ba2ef565bd632df3000635db2e346057915bb6f373d6efc66359c0170032bcd9",
+    "runs/2026-10-12-review-recipe-current-protocol.json": "a4379851812049cf2d81957db3213bfdef161a8068cda38f594e19630b14e55d",
+    "runs/2026-10-12-review-recipe-current-website.json": "f328961c94e581b63e608315eeccaaf173c93b155da45f948058aa023f21b9bc",
+    "runs/2026-10-12-review-recipe-full-suite.json": "0a9dfa6d2e52b75724b9ba1575b490f3c59e6d383c027eef04d04a1bf371bb06",
+    "runs/2026-10-12-review-recipe-reviewed-routes.json": "8633054dbd81f2cd885ee3f798fb7f822518b67c9bd8d5517da49cdd2898b260",
+    "scripts/verify-route-boundaries.py": "58f7295bf3d087b139664ada9d494eef2699643b213d4fb48876a49963768f97",
+    "site/public/reference/independent-review.md": "1b8eb5745459f3096a2edc08e1338b9df24fa6e6f499ac42d5ce517a55528ea5",
+    "site/public/reference/public-scope.json": "0c66124a4d705a1c05af3adcd0cee6d3342ca3d3d492d1a74e09a9091d1e5f6c",
+    "site/src/public-scope.json": "0c66124a4d705a1c05af3adcd0cee6d3342ca3d3d492d1a74e09a9091d1e5f6c",
+    "site/src/scope-manifest.json": "b752d353f10fbfc96e8bd5e12e25eef30305c057f477ca270c92e33cf4e0e791",
+    "state.json": "25303d958041a54ac8514dd051ff0c5e137ee0a1cc5a2c6a72b35d16160a7a34"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-review-recipe-full-suite.json",
+      "sha256": "0a9dfa6d2e52b75724b9ba1575b490f3c59e6d383c027eef04d04a1bf371bb06"
+    },
+    {
+      "path": "runs/2026-10-12-review-recipe-current-website.json",
+      "sha256": "f328961c94e581b63e608315eeccaaf173c93b155da45f948058aa023f21b9bc"
+    },
+    {
+      "path": "runs/2026-10-12-review-recipe-browser.json",
+      "sha256": "b4a65ed787bb5da673b4a3f1310c3f732f341db4c1e6b199e0ddf02da5e82ee4"
+    },
+    {
+      "path": "runs/2026-10-12-choice-grammar-publication.json",
+      "sha256": "47f8136de4bccd262a4a4d05b071ca2c4b69c2a62068ca7870e8bd26546f1cd7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T03:46:05.203519+00:00"
+    }
+  ]
+}

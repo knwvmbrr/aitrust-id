@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from tools.blind_review_io import PacketError, directory, member, source as private_source, create as private_create
 from protocol.evidence import unique, reject, finite
+from tools.review_execution import execution_context, canonical as execution_bytes, digest as execution_digest
 INPUT_LIMIT = 10_000_000
 MEMBER_LIMIT = 16_000_000
 PACKET_LIMIT = 32_000_000
@@ -72,8 +73,10 @@ def spreadsheet(value):
 def validate_manifest(value):
     hashes={'input_sha256','dataset_sha256','method_sha256','gates_sha256','protocol_sha256'}
     flags={'independence_verified','sampling_accepted','predictions_run','release_assessed'}
+    version=value.get('format') if isinstance(value,dict) else None
+    if version=='ai-trust-id-blind-ps-review/v2':hashes.add('execution_context_sha256')
     if (not isinstance(value,dict) or set(value)!={'format','item_count','note',*hashes,*flags}
-            or value['format']!='ai-trust-id-blind-ps-review/v1' or value['note']!=NOTE
+            or version not in ('ai-trust-id-blind-ps-review/v1','ai-trust-id-blind-ps-review/v2') or value['note']!=NOTE
             or type(value['item_count']) is not int or not 1<=value['item_count']<=1000
             or any(value[k] is not False for k in flags)
             or any(not isinstance(value[k],str) or not re.fullmatch('[a-f0-9]{64}',value[k]) for k in hashes)):
@@ -82,6 +85,7 @@ def validate_manifest(value):
 
 
 def freeze(source, destination):
+    execution=execution_context(ROOT)
     raw = private_source(source, ROOT, INPUT_LIMIT)
     rows = parse_items(raw)
     if len({spreadsheet(r['id']) for r in rows})!=len(rows):
@@ -100,15 +104,19 @@ def freeze(source, destination):
             writer.writerow({**{k: spreadsheet(v)
                                for k, v in row.items()}, 'label': '', 'reason': ''})
         files[f'reviewer-{reviewer}.csv'] = output.getvalue().encode()
-    manifest = {'format': 'ai-trust-id-blind-ps-review/v1', 'item_count': len(rows),
+    manifest = {'format': 'ai-trust-id-blind-ps-review/v2', 'item_count': len(rows),
         'input_sha256': sha(raw), 'dataset_sha256': sha(items),
-        'method_sha256': sha((ROOT/'services/evaluator/app.py').read_bytes()),
+        # Existing form fields are opaque digests. For v2, bind each reviewer
+        # form to the complete selected recipe, not only the evaluator file.
+        'method_sha256': execution_digest(execution),
         'gates_sha256': sha((ROOT/'eval/gates.yaml').read_bytes()),
         'protocol_sha256': sha((ROOT/'docs/independent-review.md').read_bytes()),
+        'execution_context_sha256': execution_digest(execution),
         'independence_verified': False, 'sampling_accepted': False,
         'predictions_run': False, 'release_assessed': False,
         'note': NOTE}
     files['manifest.json'] = (json.dumps(manifest, indent=2) + '\n').encode()
+    files['execution-context.json'] = execution_bytes(execution)
     for reviewer in (1, 2):
         order = list(rows)
         random.SystemRandom().shuffle(order)
@@ -118,22 +126,41 @@ def freeze(source, destination):
         files[f'reviewer-{reviewer}.json'] = (json.dumps(form, ensure_ascii=False, indent=2)+'\n').encode()
     if (any(len(raw)>(PHONE_LIMIT if name.startswith('reviewer-') and name.endswith('.json') else MANIFEST_LIMIT if name=='manifest.json' else MEMBER_LIMIT) for name,raw in files.items()) or sum(map(len,files.values()))>PACKET_LIMIT):
         raise ValueError('Prepared packet exceeds the safe output byte limit')
+    if execution_context(ROOT)!=execution:
+        raise ValueError('Execution recipe changed during freeze; no packet created')
     private_create(destination, ROOT, files)
     return manifest
 
 
-def compare(packet, format='csv'):
+def compare(packet, format='csv', require_execution_binding=False):
     if format not in ('csv','json'):raise ValueError('Unsupported review format')
+    if type(require_execution_binding) is not bool:raise ValueError('Invalid execution binding requirement')
     with directory(packet, ROOT) as packet_fd:
         raw_manifest=member(packet_fd,'manifest.json',MANIFEST_LIMIT)
+        manifest = validate_manifest(strict_json(raw_manifest))
+        execution_bound=manifest['format']=='ai-trust-id-blind-ps-review/v2'
+        if require_execution_binding and not execution_bound:
+            raise ValueError('Legacy packet has no execution binding; label comparison only')
+        if execution_bound:
+            raw_execution=member(packet_fd,'execution-context.json',MANIFEST_LIMIT)
+            execution=strict_json(raw_execution)
+            if execution_digest(execution)!=manifest['execution_context_sha256']:
+                raise ValueError('Frozen execution context changed')
+            if execution!=execution_context(ROOT):
+                raise ValueError('Execution dependency changed after freeze; start a new review')
         items=member(packet_fd,'items.jsonl',MEMBER_LIMIT)
         forms={i:member(packet_fd,f'reviewer-{i}.'+format,PHONE_LIMIT if format=='json' else MEMBER_LIMIT) for i in (1,2)}
-    manifest = validate_manifest(strict_json(raw_manifest))
     if sha(items) != manifest['dataset_sha256']:
         raise ValueError('Frozen dataset changed')
-    if sha((ROOT/'services/evaluator/app.py').read_bytes()) != manifest['method_sha256']:
+    expected_method=execution_digest(execution) if execution_bound else sha((ROOT/'services/evaluator/app.py').read_bytes())
+    method_matches_current = expected_method == manifest['method_sha256']
+    gates_match_current = sha((ROOT/'eval/gates.yaml').read_bytes()) == manifest['gates_sha256']
+    policy_matches_current = sha((ROOT/'docs/independent-review.md').read_bytes()) == manifest['protocol_sha256']
+    # Legacy labels describe their frozen historical packet, not today's
+    # evaluator or policy. Retain them without manufacturing a new identity.
+    if execution_bound and not method_matches_current:
         raise ValueError('Detector changed after freeze; start a new review')
-    if sha((ROOT/'eval/gates.yaml').read_bytes()) != manifest['gates_sha256'] or sha((ROOT/'docs/independent-review.md').read_bytes()) != manifest['protocol_sha256']:
+    if execution_bound and not (gates_match_current and policy_matches_current):
         raise ValueError('Review policy changed after freeze')
     rows = {row['id']: row for row in parse_items(items)}
     if len(rows)!=manifest['item_count']:raise ValueError('Frozen item count changed')
@@ -189,9 +216,16 @@ def compare(packet, format='csv'):
         reviews.append(labels)
     disagreements = [key for key in rows if reviews[0][key] != reviews[1][key]]
     ambiguous = [key for key in rows if any(r[key] == 'ambiguous' for r in reviews)]
+    if execution_bound and execution_context(ROOT)!=execution:
+        raise ValueError('Execution dependency changed during comparison')
     return {'item_count':len(rows), 'disagreement_ids':disagreements,
             'ambiguous_ids':ambiguous, 'agreement_count':len(rows)-len(disagreements),
             'independence_verified':False, 'predictions_run':False,
+            'execution_binding_verified':execution_bound,
+            'execution_scope':'selected_offline_python_recipe' if execution_bound else 'historical_labels_only',
+            'method_matches_current': method_matches_current,
+            'gates_match_current': gates_match_current,
+            'policy_matches_current': policy_matches_current,
             'release_assessed':False, 'next':'Record independent reviewer attestations, sampling acceptance and adjudication before evaluation.'}
 
 
@@ -208,9 +242,11 @@ def main():
     review = commands.add_parser('compare')
     review.add_argument('packet', type=Path)
     review.add_argument('--format', choices=['csv','json'], default='csv')
+    review.add_argument('--require-execution-binding',action='store_true',
+                        help='Refuse legacy packets that only pinned the evaluator file')
     args = parser.parse_args()
     try:
-        result = freeze(args.source, args.destination) if args.command == 'freeze' else compare(args.packet, args.format)
+        result = freeze(args.source, args.destination) if args.command == 'freeze' else compare(args.packet, args.format,args.require_execution_binding)
     except (OSError, ValueError, KeyError, TypeError, UnicodeError, RecursionError, RuntimeError):
         print('Review operation failed. Check input format, unique packet path, frozen hashes and completed labels. No validation accepted.', file=sys.stderr)
         return 1
