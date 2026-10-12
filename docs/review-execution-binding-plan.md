@@ -35,3 +35,12 @@ complete selected execution recipe for manifest v2. Legacy v1 keeps its original
 evaluator-file digest. This prevents forms silently crossing dependency contexts
 without changing phone-form fields. Missing installed dependencies must produce
 fixed unavailable diagnostics; they must not print exception values or paths.
+
+Review repair before publication: the selected evaluation route also reads category
+code, the gate schema and YAML, and installed PyYAML/jsonschema and their required
+schema/reference packages. Bind these sources and package data explicitly. Test
+real byte drift, not just a changed dictionary. Historical v1 label comparison
+must use its own frozen hashes even after current policies change: report current
+policy/method matches separately, keep execution binding false, and never treat
+comparison as authorization to evaluate or release. Exercise a packet generated
+by the actual pre-v2 CLI without rewriting its manifest.

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-040219-review-recipe-consumer-input-coverage-e3cc40a3",
+  "recorded_at": "2026-10-12T04:02:19.652699+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "def2b137e8fd0f35a7c577f92de973bf20643a4f",
+  "changed": "Bind every selected review-recipe source in both protocol and website receipt consumers; preserve intermediate source-bound results.",
+  "proves": "Coverage tests prevent unbound category, gate schema, gate YAML or harness source from leaving stale consumer receipts current.",
+  "limits": "New manifest invalidates prior capability receipts; fresh execution pending. Independent validation is still open.",
+  "scope_ids": [
+    "F-050",
+    "F-108",
+    "F-120"
+  ],
+  "files": {
+    "docs/independent-review.md": "cf7edebd36be6e5777aa7f291bfada601f36cff13068bab350162ac857636202",
+    "docs/review-execution-binding-plan.md": "21556a340c627243b2d4f5b6090ac63d721e1295a184807fb66514846d325608",
+    "docs/review-execution-binding-result.md": "ffc2fc3359ac8e7839e2f08f2b75cdef43b03d9122fc4ac05baaef37d61f8d38",
+    "docs/scope-progress.json": "857d9c5e4d1829767fcf2b24c896ee2798e23acf3497a868453676f627ff38f4",
+    "eval/revalidation.json": "71203e3cb2ab39921c688e579160f94fb2d5c17d9b6997332e59d8916ad15adc",
+    "runs/2026-10-12-review-repaired-cleanup.json": "1b2bc4d3bfcd87a6cc694dae605287084c11db62b02bd3b37af89557060665f6",
+    "runs/2026-10-12-review-repaired-cli.json": "c7f55aeb5a7a6312e4633d729f34f4ce905eac5737284c054b7611778b5a3a20",
+    "runs/2026-10-12-review-repaired-current-PII_REDACTED.json": "7b884f211681d5fe9ec30ee76d20f159f31f877683139a670ad1e260cd437ddf",
+    "runs/2026-10-12-review-repaired-current-PS.json": "cad90fa70a28f0e274098a72b951fe52edaaa988ad676c5dc23218549bc84c43",
+    "runs/2026-10-12-review-repaired-current-extension.json": "f99df28a5748a6ff229675b4aa503d4bf3ce355e79d18f85f47bf6cf8033f794",
+    "runs/2026-10-12-review-repaired-current-protocol.json": "6dc4e124945f3a852e48a90581a5bbbd65d81a1710634d23f27a3f77a1b3128c",
+    "runs/2026-10-12-review-repaired-current-website.json": "31eb9688f19f9219d27ff4844642a0a0071e83d21154df65d8cc845f89ba1c3c",
+    "runs/2026-10-12-review-repaired-focused.json": "07f6a6647bb3be689a33e32a8e11bb3834311a496d6d86867cbac18f6cc6ad06",
+    "runs/2026-10-12-review-repaired-linux.json": "e599b5046fc2ff43a02671f09c023aeef3e5809f2af5697a57f0b5cf726ecf7e",
+    "runs/2026-10-12-review-repaired-verified-website.json": "4adfd4f147e69c242012d0b636de97f51d1ba61f83c214a3907d957f62ed39dc",
+    "scripts/prepare-ps-review.py": "d42f0ded28be966ed9f98be57327c8c808b996a5faca3b30e9af61c13c07e475",
+    "scripts/verify-blind-review-browser.cjs": "b24874f8d937dc9b43643a0962c367541e90c406bfff89800bf9fe3846b99752",
+    "scripts/verify-blind-review-privacy.py": "9706f3b8fc3ab9901c6b2b1207a4b2f99c07b2011bd914a59818391551000404",
+    "scripts/verify-route-boundaries.py": "f22ec69fa673ab0bc71305b6e14fa66d8a9ae42858e4419992ca619e8462aeb5",
+    "site/public/reference/independent-review.md": "cf7edebd36be6e5777aa7f291bfada601f36cff13068bab350162ac857636202",
+    "site/public/reference/public-scope.json": "276c079012a1d2f0e591dfd7cb9e244499ba5f69ebb1c7a7866e31621cb0d867",
+    "site/src/public-scope.json": "276c079012a1d2f0e591dfd7cb9e244499ba5f69ebb1c7a7866e31621cb0d867",
+    "site/src/scope-manifest.json": "e14bab06969d48016f67e63059f4f5fba3c6241951c8171e3a4c2100ce0f2efb",
+    "tests/fixtures/legacy-review-v1/items.jsonl": "3adb92c33754633cc0ce22d4aa01824ed6fe332a5d33afaaa714669345fe2dc4",
+    "tests/fixtures/legacy-review-v1/manifest.json": "eef3a90ae88e72f72d53ab9658a977b749c1e0d32ac287ab31ab54d56f15a656",
+    "tests/fixtures/legacy-review-v1/origin.json": "a61901b538ec10038c625e670a6eaeb4da3acf28d97e2e1f011d000118d92ee1",
+    "tests/fixtures/legacy-review-v1/reviewer-1.json": "885223f9e99fb26ac1d7598e094a8302ac52b01a3ce87dae71a0983e4aa0d338",
+    "tests/fixtures/legacy-review-v1/reviewer-2.json": "3f768f661e60d665826de28437852fd1f4584de5d982b3d1528644a1f9a12f87",
+    "tests/test_review_execution_binding.py": "a2932c80361d545723cd6f6bff1848f6f9cc34da77cf455d2cf22352c1912882",
+    "tests/test_website_evidence_inputs.py": "063d9fad01959db4c3d7331db1634125b498a0e0357f7fdd68ffa9d554e8f48a",
+    "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-review-repaired-verified-website.json",
+      "sha256": "4adfd4f147e69c242012d0b636de97f51d1ba61f83c214a3907d957f62ed39dc"
+    }
+  ],
+  "checks": []
+}

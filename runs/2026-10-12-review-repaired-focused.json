@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-10-12T03:57:28.979043+00:00",
+  "pass": true,
+  "focused_tests": 98,
+  "actual_cli_controls": 23,
+  "sources": {
+    "scripts/prepare-ps-review.py": "d42f0ded28be966ed9f98be57327c8c808b996a5faca3b30e9af61c13c07e475",
+    "scripts/verify-blind-review-privacy.py": "9706f3b8fc3ab9901c6b2b1207a4b2f99c07b2011bd914a59818391551000404",
+    "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "docs/independent-review.md": "cf7edebd36be6e5777aa7f291bfada601f36cff13068bab350162ac857636202",
+    "docs/review-execution-binding-plan.md": "21556a340c627243b2d4f5b6090ac63d721e1295a184807fb66514846d325608",
+    "tests/test_review_execution_binding.py": "a2932c80361d545723cd6f6bff1848f6f9cc34da77cf455d2cf22352c1912882",
+    "tests/test_blind_review.py": "f1f19dca67b4f62a604729ed57f27de540183f8187f5cf76fb6eb81c4e88897c",
+    "tests/test_blind_review_privacy.py": "08e2393232b9c869d125b3d46e37285e3935026dbb4ee40561654a39409c4f64",
+    "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+    "eval/gates.schema.json": "8798635d95ba86cb297bd115f87f3de23ba56d9a086697dfc4080094e8ebaf85",
+    "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+    "tests/fixtures/legacy-review-v1/items.jsonl": "3adb92c33754633cc0ce22d4aa01824ed6fe332a5d33afaaa714669345fe2dc4",
+    "tests/fixtures/legacy-review-v1/origin.json": "a61901b538ec10038c625e670a6eaeb4da3acf28d97e2e1f011d000118d92ee1",
+    "tests/fixtures/legacy-review-v1/reviewer-1.json": "885223f9e99fb26ac1d7598e094a8302ac52b01a3ce87dae71a0983e4aa0d338",
+    "tests/fixtures/legacy-review-v1/reviewer-2.json": "3f768f661e60d665826de28437852fd1f4584de5d982b3d1528644a1f9a12f87",
+    "tests/fixtures/legacy-review-v1/manifest.json": "eef3a90ae88e72f72d53ab9658a977b749c1e0d32ac287ab31ab54d56f15a656"
+  },
+  "matches_executed_linux_sources": true,
+  "macos_test_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_review_execution_binding.py",
+    "tests/test_blind_review.py",
+    "tests/test_blind_review_privacy.py"
+  ],
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0
+}

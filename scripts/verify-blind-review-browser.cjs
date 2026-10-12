@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),
 const {execFileSync}=require('node:child_process');const {chromium,webkit}=require('playwright');
 const {parseHeaders,headersFor}=require('./static-headers.cjs');const {writeReport}=require('./execution-report.cjs');
 const root=path.resolve(__dirname,'..'),dist=path.join(root,'site/dist'),python=process.env.AITRUST_VERIFY_PYTHON||'python3';
-const names=['scripts/prepare-ps-review.py','tools/blind_review_io.py','tools/review_execution.py','protocol/evidence.py','protocol/normalization.py','protocol/unicode15-data.json','services/evaluator/app.py','services/evaluator/requirements.lock','eval/harness.py','eval/gates.yaml','docs/independent-review.md','site/src/handheld.jsx','site/src/review-file.js','scripts/verify-blind-review-browser.cjs'];
+const names=['scripts/prepare-ps-review.py','tools/blind_review_io.py','tools/review_execution.py','protocol/evidence.py','protocol/normalization.py','protocol/unicode15-data.json','services/evaluator/app.py','services/evaluator/requirements.lock','eval/harness.py','protocol/categories.py','eval/gates.schema.json','eval/gates.yaml','docs/independent-review.md','site/src/handheld.jsx','site/src/review-file.js','scripts/verify-blind-review-browser.cjs'];
 const hash=raw=>crypto.createHash('sha256').update(raw).digest('hex');const sources=()=>Object.fromEntries(names.map(n=>[n,hash(fs.readFileSync(path.join(root,n)))]));const before=sources();
 const rules=parseHeaders(fs.readFileSync(path.join(dist,'_headers'),'utf8'));
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2','.png':'image/png','.wasm':'application/wasm'};

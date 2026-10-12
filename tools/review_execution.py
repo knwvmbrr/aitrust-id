@@ -13,7 +13,8 @@ SOURCE_FILES = (
     'services/evaluator/app.py', 'services/evaluator/requirements.lock',
     'protocol/normalization.py', 'protocol/unicode15-data.json',
     'scripts/prepare-ps-review.py', 'tools/blind_review_io.py',
-    'tools/review_execution.py', 'protocol/evidence.py', 'eval/harness.py',
+    'tools/review_execution.py', 'protocol/evidence.py', 'eval/harness.py', 'protocol/categories.py',
+    'eval/gates.schema.json', 'eval/gates.yaml',
 )
 MAX_FILE = 32_000_000
 MAX_TOTAL = 100_000_000
@@ -64,7 +65,9 @@ def execution_context(root):
             ('pydantic_core', 'pydantic_core'), ('starlette', 'starlette'),
             ('typing_extensions', 'typing_extensions.py'), ('typing_inspection', 'typing_inspection'),
             ('annotated_types', 'annotated_types'), ('annotated_doc', 'annotated_doc'),
-            ('anyio', 'anyio'), ('idna', 'idna')):
+            ('anyio', 'anyio'), ('idna', 'idna'), ('PyYAML', 'yaml'),
+            ('jsonschema', 'jsonschema'), ('attrs', 'attr'), ('referencing', 'referencing'),
+            ('rpds-py', 'rpds'), ('jsonschema-specifications', 'jsonschema_specifications')):
         try:
             installed = metadata.distribution(distribution)
         except metadata.PackageNotFoundError:
@@ -80,8 +83,16 @@ def execution_context(root):
                 raise ValueError('Execution dependency inventory exceeds its bound')
             if file.is_symlink():
                 raise ValueError('Linked execution dependency refused')
-            if file.is_file() and file.suffix in ('.py', '.so', '.pyd', '.dll', '.dylib'):
+            if file.is_file() and file.suffix in ('.py', '.so', '.pyd', '.dll', '.dylib', '.json', '.yaml', '.yml'):
                 entries[file.relative_to(base).as_posix() if base.is_dir() else base.name] = reader.hashed(file)
+        # jsonschema imports both the legacy attr namespace and its attrs
+        # wrapper. Bind that second installed namespace under the same dist.
+        if distribution == 'attrs':
+            wrapper = Path(installed.locate_file('attrs')).resolve(strict=True)
+            for file in sorted(wrapper.glob('*.py')):
+                entries['attrs/' + file.name] = reader.hashed(file)
+            if not any(name.startswith('attrs/') for name in entries):
+                raise ValueError('Execution dependency is unavailable')
         if not entries:
             raise ValueError('Empty execution dependency refused')
         dependencies[distribution] = {'version': installed.version,

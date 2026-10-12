@@ -29,7 +29,7 @@ def test_actual_selected_context_binds_normalization_runtime_and_installed_code(
     value = execution_context(review.ROOT)
     assert set(value['sources']) == set(SOURCE_FILES)
     assert value['sources']['protocol/unicode15-data.json'] == hashlib.sha256((review.ROOT/'protocol/unicode15-data.json').read_bytes()).hexdigest()
-    assert len(value['dependencies']) == 10
+    assert len(value['dependencies']) == 16
     assert all(x['code_files'] > 0 for x in value['dependencies'].values())
     assert len(value['runtime']['executable_sha256']) == 64
     assert not value['remote_attestation'] and not value['independence_verified']
@@ -49,7 +49,7 @@ def test_new_recipe_is_private_and_verified_without_predictions(tmp_path):
     assert not result['predictions_run'] and not result['release_assessed']
 
 
-@pytest.mark.parametrize('target', ['normalization_code','normalization_data','harness', 'helper',
+@pytest.mark.parametrize('target', ['normalization_code','normalization_data','harness', 'helper', 'categories', 'gate_schema', 'gate_config',
                                    'python','stdlib','dependency_version','dependency_code'])
 def test_execution_drift_refuses_labels(tmp_path, monkeypatch, target):
     packet, _ = completed(tmp_path)
@@ -58,7 +58,9 @@ def test_execution_drift_refuses_labels(tmp_path, monkeypatch, target):
         value = copy.deepcopy(real(root))
         sources = {'normalization_code':'protocol/normalization.py',
                    'normalization_data':'protocol/unicode15-data.json',
-                   'harness':'eval/harness.py', 'helper':'tools/review_execution.py'}
+                   'harness':'eval/harness.py', 'helper':'tools/review_execution.py',
+                   'categories':'protocol/categories.py', 'gate_schema':'eval/gates.schema.json',
+                   'gate_config':'eval/gates.yaml'}
         if target in sources: value['sources'][sources[target]] = '0'*64
         elif target == 'python': value['runtime']['version'] = '99.0.0'
         elif target == 'stdlib': value['runtime']['standard_library']['shlex.py'] = '0'*64
@@ -94,7 +96,7 @@ def test_legacy_labels_remain_readable_but_cannot_supply_binding(tmp_path):
     (packet/'execution-context.json').unlink()
     result = review.compare(packet,'json')
     assert not result['execution_binding_verified'] and result['agreement_count']==1
-    assert result['execution_scope']=='legacy_evaluator_file_only'
+    assert result['execution_scope']=='historical_labels_only'
     with pytest.raises(ValueError, match='Legacy packet'): review.compare(packet,'json',True)
 
 
@@ -139,3 +141,59 @@ def test_missing_dependency_uses_fixed_unavailable_error(monkeypatch):
     monkeypatch.setattr(review_execution.metadata,'distribution',missing)
     with pytest.raises(ValueError,match='^Execution dependency is unavailable$'):
         execution_context(review.ROOT)
+
+
+def test_genuine_pre_v2_packet_preserves_historical_labels(tmp_path):
+    import shutil
+    origin = review.ROOT/'tests/fixtures/legacy-review-v1'
+    identity = json.loads((origin/'origin.json').read_text())
+    tmp_path.chmod(0o700)
+    packet = tmp_path/'historical'
+    packet.mkdir(mode=0o700)
+    for name, expected in identity['files'].items():
+        raw=(origin/name).read_bytes()
+        assert hashlib.sha256(raw).hexdigest()==expected
+        (packet/name).write_bytes(raw);(packet/name).chmod(0o600)
+    before={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in packet.iterdir()}
+    result=review.compare(packet,'json')
+    assert result['disagreement_ids']==['historical-one']
+    assert result['ambiguous_ids']==['historical-one']
+    assert result['execution_scope']=='historical_labels_only'
+    assert result['policy_matches_current'] is False
+    assert not result['execution_binding_verified'] and not result['release_assessed']
+    with pytest.raises(ValueError,match='Legacy packet'):review.compare(packet,'json',True)
+    assert before=={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in packet.iterdir()}
+
+
+@pytest.mark.parametrize('name',['protocol/categories.py','eval/gates.schema.json','eval/gates.yaml'])
+def test_actual_direct_input_byte_drift_refuses(tmp_path,monkeypatch,name):
+    import shutil
+    root=tmp_path/'checkout';root.mkdir()
+    for entry in (*SOURCE_FILES,'docs/independent-review.md'):
+        target=root/entry;target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(review.ROOT/entry,target)
+    monkeypatch.setattr(review,'ROOT',root)
+    packet,_=completed(tmp_path)
+    target=root/name;target.write_bytes(target.read_bytes()+b'\n')
+    with pytest.raises(ValueError,match='dependency changed'):review.compare(packet,'json',True)
+
+
+@pytest.mark.parametrize('distribution,package',[('PyYAML','yaml'),('jsonschema','jsonschema'),
+    ('attrs','attr'),('referencing','referencing'),('rpds-py','rpds'),
+    ('jsonschema-specifications','jsonschema_specifications')])
+def test_actual_harness_package_and_schema_data_drift(tmp_path,monkeypatch,distribution,package):
+    from tools import review_execution
+    real=review_execution.metadata.distribution
+    package_root=tmp_path/'installed'/package;package_root.mkdir(parents=True)
+    (package_root/'__init__.py').write_text('# Selected synthetic package identity\n')
+    data=package_root/('schema.json' if distribution=='jsonschema-specifications' else 'module.py')
+    data.write_text('{}\n' if data.suffix=='.json' else '# Original installed code\n')
+    class Installed:
+        version=real(distribution).version
+        def locate_file(self,entry):
+            assert entry==package or distribution=='attrs' and entry=='attrs'
+            return package_root
+    monkeypatch.setattr(review_execution.metadata,'distribution',lambda name:Installed() if name==distribution else real(name))
+    packet,_=completed(tmp_path)
+    data.write_bytes(data.read_bytes()+b'\n')
+    with pytest.raises(ValueError,match='dependency changed'):review.compare(packet,'json',True)

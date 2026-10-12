@@ -103,7 +103,19 @@
         "scripts/verify-private-policy.py",
         "tests/test_private_policy.py",
         "tests/test_private_policy_cli.py",
-        "docs/private-policy.md"
+        "docs/private-policy.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "tests/fixtures/legacy-review-v1/*",
+        "services/evaluator/app.py",
+        "services/evaluator/requirements.lock",
+        "protocol/normalization.py",
+        "protocol/unicode15-data.json",
+        "protocol/evidence.py",
+        "eval/harness.py",
+        "protocol/categories.py",
+        "eval/gates.schema.json",
+        "eval/gates.yaml"
       ],
       "commands": [
         [
@@ -116,6 +128,7 @@
           "tests/test_tag_performance.py",
           "tests/test_blind_review.py",
           "tests/test_blind_review_privacy.py",
+          "tests/test_review_execution_binding.py",
           "-q"
         ],
         [
@@ -314,7 +327,13 @@
         "services/evaluator/requirements.lock",
         "tests/test_review_execution_binding.py",
         "tests/test_blind_review.py",
-        "tests/test_blind_review_privacy.py"
+        "tests/test_blind_review_privacy.py",
+        "tests/fixtures/legacy-review-v1/*",
+        "protocol/evidence.py",
+        "eval/harness.py",
+        "protocol/categories.py",
+        "eval/gates.schema.json",
+        "eval/gates.yaml"
       ],
       "commands": [
         [

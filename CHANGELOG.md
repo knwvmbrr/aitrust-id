@@ -2,6 +2,78 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-040828-review-state-chronology-repair-f9a49b1e
+
+Recorded 2026-10-12T04:08:28.274555+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the state chronology refusal and restore both state timestamps to timezone-aware instants after their referenced evidence.
+- **Evidence.** Current state chronology and existing evidence-reference checks execute without relaxing the timestamp rule. [Change record](./runs/changes/2026-10-12-040828-review-state-chronology-repair-f9a49b1e.json).
+- **Not claimed.** Bookkeeping correction; no runtime source changes, requirement closure or independent accuracy acceptance.
+
+
+### 2026-10-12-040800-review-final-full-suite-verified-da729efb
+
+Recorded 2026-10-12T04:08:00.903824+00:00 · Contributor: Codex · change
+
+- **Changed.** Update machine state after full repaired-source regression verification; preserve all intermediate failures and receipts.
+- **Evidence.** 2586 tests pass with unchanged source hashes; 399 website and 680 route inputs are current. Genuine pre-v2 labels remain readable with no manufactured execution evidence. [Change record](./runs/changes/2026-10-12-040800-review-final-full-suite-verified-da729efb.json).
+- **Not claimed.** 115 full requirements complete, 87 open, 37 additional closures to target; no independent human, sample, accuracy or physical-phone acceptance. Protected merge/publication pending.
+
+
+### 2026-10-12-040612-review-full-runner-import-correction-4ebdcf57
+
+Recorded 2026-10-12T04:06:12.102719+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the full-suite orchestrator startup refusal and remove its unused optional test-package import.
+- **Evidence.** No test was started by the refused cell; the corrected runner uses the installed pytest command. [Change record](./runs/changes/2026-10-12-040612-review-full-runner-import-correction-4ebdcf57.json).
+- **Not claimed.** Full suite execution still pending; this is a tooling correction, not a requirement closure.
+
+
+### 2026-10-12-040548-review-final-integrated-routes-fceceef9
+
+Recorded 2026-10-12T04:05:48.940108+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current browser workflow, all five capability receipts and reviewed route identity before the full regression execution.
+- **Evidence.** Eight website checks pass on 399 inputs; actual Chromium/WebKit label downloads preserve frozen recipe hashes; current route receipt consumers are verified. [Change record](./runs/changes/2026-10-12-040548-review-final-integrated-routes-fceceef9.json).
+- **Not claimed.** Full suite follows this record. No independent humans, sample validation, physical phone acceptance or requirements closed.
+
+
+### 2026-10-12-040309-review-final-capability-receipts-43ed9ad0
+
+Recorded 2026-10-12T04:03:09.880663+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the freshly executed capability receipts after consumer source coverage repair.
+- **Evidence.** PS, redaction, protocol and extension commands pass with unchanged source hashes; website execution follows this recorded evidence. [Change record](./runs/changes/2026-10-12-040309-review-final-capability-receipts-43ed9ad0.json).
+- **Not claimed.** No independent labels, sampling, physical-device acceptance or full requirement closure.
+
+
+### 2026-10-12-040219-review-recipe-consumer-input-coverage-e3cc40a3
+
+Recorded 2026-10-12T04:02:19.652699+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind every selected review-recipe source in both protocol and website receipt consumers; preserve intermediate source-bound results.
+- **Evidence.** Coverage tests prevent unbound category, gate schema, gate YAML or harness source from leaving stale consumer receipts current. [Change record](./runs/changes/2026-10-12-040219-review-recipe-consumer-input-coverage-e3cc40a3.json).
+- **Not claimed.** New manifest invalidates prior capability receipts; fresh execution pending. Independent validation is still open.
+
+
+### 2026-10-12-035944-review-repaired-capability-receipts-2ae125d9
+
+Recorded 2026-10-12T03:59:44.521349+00:00 · Contributor: Codex · change
+
+- **Changed.** Record fresh PS, redaction, protocol and extension execution receipts and preserve the refused website build.
+- **Evidence.** The first four source-bound capabilities pass; the website guard correctly refused unlogged new receipt files. [Change record](./runs/changes/2026-10-12-035944-review-repaired-capability-receipts-2ae125d9.json).
+- **Not claimed.** Website revalidation pending; no independent tag validation or full requirement closure.
+
+
+### 2026-10-12-035756-review-p1-dependency-legacy-repairs-d7ec7d9c
+
+Recorded 2026-10-12T03:57:56.170900+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind category/schema/YAML evaluation inputs and installed parser/schema code; preserve genuine pre-v2 labels without rewriting the original packet.
+- **Evidence.** 98 focused tests and 23 actual CLI controls pass on Mac and isolated Linux; a real pre-v2 CLI-generated synthetic packet keeps its manifest and current policy mismatch is explicit. [Change record](./runs/changes/2026-10-12-035756-review-p1-dependency-legacy-repairs-d7ec7d9c.json).
+- **Not claimed.** Selected route consistency only; no independent humans, accuracy, hostile-host attestation or requirement closure. Full integration revalidation remains pending.
+
+
 ### 2026-10-12-034604-review-recipe-integration-verified-193b7362
 
 Recorded 2026-10-12T03:46:04.832956+00:00 · Contributor: Codex · change

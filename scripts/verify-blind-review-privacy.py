@@ -16,7 +16,8 @@ from protocol.reports import write_report
 FILES = ['scripts/prepare-ps-review.py','tools/blind_review_io.py','protocol/evidence.py',
          'services/evaluator/app.py','eval/gates.yaml','docs/independent-review.md',
          'tools/review_execution.py','protocol/normalization.py','protocol/unicode15-data.json',
-         'services/evaluator/requirements.lock','eval/harness.py']
+         'services/evaluator/requirements.lock','eval/harness.py','protocol/categories.py','eval/gates.schema.json',
+         *['tests/fixtures/legacy-review-v1/'+name for name in ('origin.json','manifest.json','items.jsonl','reviewer-1.json','reviewer-2.json')]]
 
 
 def verify():
@@ -90,6 +91,17 @@ def verify():
         large=private/'large.jsonl'
         with large.open('wb') as handle:handle.truncate(10_000_001)
         large.chmod(0o600);call('oversized_source_refused',['freeze',large,private/'oversized-packet'],False);assert not (private/'oversized-packet').exists()
+        historical=private/'historical';historical.mkdir(mode=0o700)
+        fixture=ROOT/'tests/fixtures/legacy-review-v1'
+        origin=json.loads((fixture/'origin.json').read_text())
+        for name,expected in origin['files'].items():
+            raw=(fixture/name).read_bytes();assert hashlib.sha256(raw).hexdigest()==expected
+            (historical/name).write_bytes(raw);(historical/name).chmod(0o600)
+        historical_before={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in historical.iterdir()}
+        call('actual_pre_v2_packet_labels_preserved',['compare',historical,'--format','json'],True,
+             lambda r:(r['policy_matches_current'] is False and r['execution_binding_verified'] is False and r['disagreement_ids']==['historical-one']) or (_ for _ in ()).throw(ValueError('False historical compatibility')))
+        call('actual_pre_v2_packet_binding_refused',['compare',historical,'--format','json','--require-execution-binding'],False)
+        assert historical_before=={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in historical.iterdir()}
         source.chmod(0o644);call('public_source_refused',['freeze',source,private/'public-packet'],False);source.chmod(0o600);assert not (private/'public-packet').exists()
         public=private/'public-parent';public.mkdir(mode=0o755);public.chmod(0o755)
         call('public_destination_parent_refused',['freeze',source,public/'packet'],False);assert not (public/'packet').exists()

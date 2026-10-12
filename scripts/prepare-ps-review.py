@@ -153,9 +153,14 @@ def compare(packet, format='csv', require_execution_binding=False):
     if sha(items) != manifest['dataset_sha256']:
         raise ValueError('Frozen dataset changed')
     expected_method=execution_digest(execution) if execution_bound else sha((ROOT/'services/evaluator/app.py').read_bytes())
-    if expected_method != manifest['method_sha256']:
+    method_matches_current = expected_method == manifest['method_sha256']
+    gates_match_current = sha((ROOT/'eval/gates.yaml').read_bytes()) == manifest['gates_sha256']
+    policy_matches_current = sha((ROOT/'docs/independent-review.md').read_bytes()) == manifest['protocol_sha256']
+    # Legacy labels describe their frozen historical packet, not today's
+    # evaluator or policy. Retain them without manufacturing a new identity.
+    if execution_bound and not method_matches_current:
         raise ValueError('Detector changed after freeze; start a new review')
-    if sha((ROOT/'eval/gates.yaml').read_bytes()) != manifest['gates_sha256'] or sha((ROOT/'docs/independent-review.md').read_bytes()) != manifest['protocol_sha256']:
+    if execution_bound and not (gates_match_current and policy_matches_current):
         raise ValueError('Review policy changed after freeze')
     rows = {row['id']: row for row in parse_items(items)}
     if len(rows)!=manifest['item_count']:raise ValueError('Frozen item count changed')
@@ -217,7 +222,10 @@ def compare(packet, format='csv', require_execution_binding=False):
             'ambiguous_ids':ambiguous, 'agreement_count':len(rows)-len(disagreements),
             'independence_verified':False, 'predictions_run':False,
             'execution_binding_verified':execution_bound,
-            'execution_scope':'selected_offline_python_recipe' if execution_bound else 'legacy_evaluator_file_only',
+            'execution_scope':'selected_offline_python_recipe' if execution_bound else 'historical_labels_only',
+            'method_matches_current': method_matches_current,
+            'gates_match_current': gates_match_current,
+            'policy_matches_current': policy_matches_current,
             'release_assessed':False, 'next':'Record independent reviewer attestations, sampling acceptance and adjudication before evaluation.'}
 
 
