@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8
+
+Recorded 2026-10-12T01:58:41.424662+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair final state/report write order after CI correctly refused a snapshot predating its referenced route evidence.
+- **Evidence.** 40 existing accountability tests and the complete current ownership/count/chronology contract pass; its validator is unchanged. [Change record](./runs/changes/2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8.json).
+- **Not claimed.** Repaired protected-head CI and publication still pending. Failed Linux CI remains retained and is not a pass.
+
+
 ### 2026-10-12-015422-editorial-reviewed-publication-binding-c28dcc91
 
 Recorded 2026-10-12T01:54:22.733680+00:00 · Contributor: Codex · change
