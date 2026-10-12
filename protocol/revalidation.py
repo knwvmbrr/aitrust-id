@@ -10,6 +10,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 COMMON = ('eval/revalidation.json','protocol/revalidation.py','scripts/revalidate.py','protocol/evidence.py')
 CAPABILITIES = {'PS','PII_REDACTED','protocol','extension','website'}
+# Exact derived output only. Its generator and method inputs are bound by the
+# website manifest, and every website execution rebuilds/checks the output.
+GENERATED_OUTPUTS = {'website': frozenset({'site/src/device-manifest.json'})}
 
 def sha(raw):
     return hashlib.sha256(raw).hexdigest()
@@ -45,6 +48,8 @@ def fingerprint(capability,root=ROOT):
             if p.is_symlink() or any(parent.is_symlink() for parent in p.parents if parent!=root and root in parent.parents):
                 raise ValueError('Source symlink refused')
             if p.is_file() and '__pycache__' not in p.parts:
+                if p.relative_to(root).as_posix() in GENERATED_OUTPUTS.get(capability, ()):
+                    continue
                 found.append(p.relative_to(root).as_posix())
         if not found:
             raise ValueError('Missing required source pattern')

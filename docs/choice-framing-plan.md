@@ -19,3 +19,11 @@ Risks: `not only`, quoted examples, legitimate exclusive choices and emergencies
 ## Publication-input evidence amendment — before manifest changes
 
 The website fingerprint omitted some source documents copied by the reference builder. Conservatively bind all versioned documentation/spec/RFC/data-vector inputs, the copied root policy/license files, and the builder’s explicitly named historical run inputs. Keep appended CHANGELOG and newly produced run/event bookkeeping outside the behavioral fingerprint to avoid a receipt/event self-reference cycle; exact published bytes remain verified separately. Add a test that the actual builder’s copied literal inputs are covered, plus mutation controls proving published-document and historical-evidence changes make a successful receipt stale. Manifest changes invalidate all five capability receipts through their shared contract, so re-execute all five before acceptance. This changes evidence coverage, no product endpoint, taxonomy, host permission or detector method.
+
+Clean-checkout correction before merge: the ignored device manifest is a derived
+output, so exclude that exact file from the website source fingerprint and that file plus
+content-addressed generated method bundles from the route source inventory. Bind
+the generator, evaluator and frozen normalization inputs explicitly instead. The
+build and device verification still regenerate/check its bytes. Test fingerprints
+before creation, after generation and after deletion, then refresh every capability
+receipt affected by the shared identity implementation. No arbitrary source exclusions.

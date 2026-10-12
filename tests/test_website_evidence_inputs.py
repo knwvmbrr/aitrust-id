@@ -67,3 +67,39 @@ def test_append_only_bookkeeping_has_no_receipt_cycle(small_root):
     (small_root/'CHANGELOG.md').write_text('new attributed event\n')
     (small_root/'runs/new-execution.json').write_text('{}\n')
     assert assess(old,'website',small_root)['pass']
+
+
+def test_clean_checkout_and_generated_manifest_have_same_source_identity(small_root):
+    p=small_root/'eval/revalidation.json';manifest=json.loads(p.read_text())
+    manifest['capabilities']['website']['patterns'].append('site/src/**/*')
+    p.write_text(json.dumps(manifest))
+    source=small_root/'site/src/app.jsx';source.parent.mkdir(parents=True);source.write_text('source\n')
+    before=fingerprint('website',small_root)
+    generated=small_root/'site/src/device-manifest.json';generated.write_text('derived output\n')
+    assert fingerprint('website',small_root)==before
+    generated.unlink()
+    assert fingerprint('website',small_root)==before
+    source.write_text('changed source\n')
+    assert fingerprint('website',small_root)!=before
+
+
+def test_derived_manifest_exclusion_keeps_generator_inputs_bound():
+    required={'scripts/build-device-detector.py','services/evaluator/app.py',
+              'protocol/normalization.py','protocol/unicode15-data.json'}
+    observed=fingerprint('website')['sources']
+    assert required <= observed.keys()
+    assert 'site/src/device-manifest.json' not in observed
+
+
+def test_route_inventory_is_also_independent_of_the_derived_manifest(tmp_path):
+    from test_release_policy import module
+    routes=module('scripts/verify-route-boundaries.py')
+    source=tmp_path/'site/src/app.jsx';source.parent.mkdir(parents=True);source.write_text('source\n')
+    before=routes.inventory(tmp_path)
+    generated=source.with_name('device-manifest.json');generated.write_text('derived\n')
+    bundle=tmp_path/('site/public/device/method-'+'a'*64+'.py')
+    bundle.parent.mkdir(parents=True);bundle.write_text('generated method\n')
+    assert routes.inventory(tmp_path)==before
+    generated.unlink()
+    bundle.unlink()
+    assert routes.inventory(tmp_path)==before
