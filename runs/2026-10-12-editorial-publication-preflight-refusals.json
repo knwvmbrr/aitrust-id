@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-12T02:13:43.874435+00:00",
+  "pass": false,
+  "deployment_attempted": false,
+  "failures": [
+    {
+      "boundary": "source_inventory",
+      "reason": "Primary ignored device projection did not match the merged source; regeneration restored exact method identity.",
+      "log_sha256": "5e01481ac7afe03dff5b02cd7b9f9e44bf92a1f8499cc356344978ee400dc850"
+    },
+    {
+      "boundary": "changelog",
+      "reason": "Twelve unrelated untracked files prevented a primary-checkout build. They were preserved; clean merged checkout used.",
+      "log_sha256": "624c5f2bac685be0d0a29be841afd771b5d3455ce3583974d4f435704b2c87b1"
+    },
+    {
+      "boundary": "browser_test_target",
+      "reason": "Direct verify:site used a pre-existing local server and timed out on an absent current selector. Current-build verifier uses its own server.",
+      "log_sha256": "81a319f8b323c70c5a44d64e582c76d4d889868e81cb93dade622a40a4903f7a"
+    }
+  ],
+  "independent_accuracy_evidence": false
+}

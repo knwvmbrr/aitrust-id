@@ -173,6 +173,9 @@ def device_evidence(binding, root=ROOT):
     return len(report['engines'])
 
 
+PATTERNS += ('deploy/backup/*','tests/test_restore_isolation.py','tests/restore_isolation_kernel.py',
+             'docs/restore-isolation-plan.md','docs/restore-isolation-result.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

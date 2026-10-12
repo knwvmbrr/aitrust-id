@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-022000-restore-complete-engineering-d8c51289",
+  "recorded_at": "2026-10-12T02:20:00.393277+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "51b523870cf76489df19c29fbe605e28149865b5",
+  "changed": "Record the full current recovery-guard execution and final reviewed source boundaries.",
+  "proves": "2492 Python tests passed; all selected capability checks and actual Linux guards passed without changing the tag gate or production hosts.",
+  "limits": "One platform-specific skip; production guard installation and full replacement-host recovery remain pending. No requirements marked complete.",
+  "scope_ids": [
+    "F-073",
+    "N-011"
+  ],
+  "files": {
+    "state.json": "506b48acca9b4cb952ddbeca254d3bfce3f92620c08e7f2da4cf3f60243570ed",
+    "docs/restore-isolation-result.md": "d9a25c3cfcc60ffc339b93a926876280acf6446ec8ae23d259ba014c0f2d4528",
+    "eval/route-boundaries.json": "0b3be492d7c8db09cef0c07660e0972f780d761bc2341966813da61fa2daf85b",
+    "runs/2026-10-12-restore-isolation-full-suite.json": "eaae5d4bda5865d93b91a4bb65a2044b87e4aab9f3b2038d320b5aa78c1440b8",
+    "runs/2026-10-12-restore-isolation-final-boundaries.json": "d84657325bd5abe3d008bb18ec1aa6b98acd8d084716f7b689918d5f6a93bafb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-restore-isolation-full-suite.json",
+      "sha256": "eaae5d4bda5865d93b91a4bb65a2044b87e4aab9f3b2038d320b5aa78c1440b8"
+    },
+    {
+      "path": "runs/2026-10-12-restore-isolation-final-boundaries.json",
+      "sha256": "d84657325bd5abe3d008bb18ec1aa6b98acd8d084716f7b689918d5f6a93bafb"
+    }
+  ],
+  "checks": []
+}

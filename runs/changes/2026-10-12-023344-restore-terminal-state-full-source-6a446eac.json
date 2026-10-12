@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-023344-restore-terminal-state-full-source-6a446eac",
+  "recorded_at": "2026-10-12T02:33:44.538770+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f2f6786a91de438b36c3e7c70b2c37891098ff59",
+  "changed": "Record the full current-source test execution after the documented Linux terminal-state repair.",
+  "proves": "All full-suite tests passed; captured sources remained unchanged; active and unknown process states remain refused.",
+  "limits": "One platform-specific skip and one upstream warning; no production recovery installation, tag accuracy acceptance or CI-policy bypass.",
+  "scope_ids": [
+    "F-073",
+    "F-016",
+    "F-020b"
+  ],
+  "files": {
+    "state.json": "1cc4ba346d749b4325e8eb49827a7e835bef93dbba8335fc7c51b10d39de29b3",
+    "runs/2026-10-12-restore-terminal-state-full-suite.json": "a89e904e3b5e8b69cd85c08642a1a2d3ebe1d31b62f73cbcf601983e6ff4759d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-restore-terminal-state-full-suite.json",
+      "sha256": "a89e904e3b5e8b69cd85c08642a1a2d3ebe1d31b62f73cbcf601983e6ff4759d"
+    }
+  ],
+  "checks": []
+}

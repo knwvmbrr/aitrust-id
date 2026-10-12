@@ -2,6 +2,87 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-023344-restore-terminal-state-full-source-6a446eac
+
+Recorded 2026-10-12T02:33:44.538770+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the full current-source test execution after the documented Linux terminal-state repair.
+- **Evidence.** All full-suite tests passed; captured sources remained unchanged; active and unknown process states remain refused. [Change record](./runs/changes/2026-10-12-023344-restore-terminal-state-full-source-6a446eac.json).
+- **Not claimed.** One platform-specific skip and one upstream warning; no production recovery installation, tag accuracy acceptance or CI-policy bypass.
+
+
+### 2026-10-12-023147-restore-linux-dead-state-observation-ecc4fb76
+
+Recorded 2026-10-12T02:31:47.940200+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the older cleanup test to accept documented terminal Linux states while explicitly refusing active, unknown and unreadable states.
+- **Evidence.** 94 focused tests pass; both actual hosted failures retained; disappearance still requires second confirmation. [Change record](./runs/changes/2026-10-12-023147-restore-linux-dead-state-observation-ecc4fb76.json).
+- **Not claimed.** Test interpretation only; production/model code and strict required-check policy unchanged; full-source protected checks pending.
+
+
+### 2026-10-12-022547-restore-reaping-full-source-accepted-becf2c70
+
+Recorded 2026-10-12T02:25:47.572141+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the repaired full current source execution after the hosted procfs observation failure.
+- **Evidence.** 2493 Python tests passed, checked sources unchanged; current personal capability receipts remain source-bound. [Change record](./runs/changes/2026-10-12-022547-restore-reaping-full-source-accepted-becf2c70.json).
+- **Not claimed.** One platform-specific skip and one upstream warning; protected head and production recovery acceptance remain pending.
+
+
+### 2026-10-12-022347-restore-ci-reaped-process-observation-3fb098da
+
+Recorded 2026-10-12T02:23:47.254007+00:00 · Contributor: Codex · change
+
+- **Changed.** Handle the verified Linux procfs ESRCH reaping race in the existing owned-process test without relaxing running-process or permission-error checks.
+- **Evidence.** 82 focused tests pass; both ENOENT and ESRCH require a second process-disappearance confirmation. The actual failed hosted run is retained. [Change record](./runs/changes/2026-10-12-022347-restore-ci-reaped-process-observation-3fb098da.json).
+- **Not claimed.** The new protected head still needs its full suite; no production/model/tag behavior or required CI policy changed.
+
+
+### 2026-10-12-022000-restore-complete-engineering-d8c51289
+
+Recorded 2026-10-12T02:20:00.393277+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the full current recovery-guard execution and final reviewed source boundaries.
+- **Evidence.** 2492 Python tests passed; all selected capability checks and actual Linux guards passed without changing the tag gate or production hosts. [Change record](./runs/changes/2026-10-12-022000-restore-complete-engineering-d8c51289.json).
+- **Not claimed.** One platform-specific skip; production guard installation and full replacement-host recovery remain pending. No requirements marked complete.
+
+
+### 2026-10-12-021726-restore-reviewed-boundaries-b8f720a6
+
+Recorded 2026-10-12T02:17:26.446332+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected editorial publication and current recovery-source route review with passing website checks.
+- **Evidence.** 756 exact published artifact matches; all eight source-bound website checks and unchanged personal endpoint/access review pass. [Change record](./runs/changes/2026-10-12-021726-restore-reviewed-boundaries-b8f720a6.json).
+- **Not claimed.** Recovery guard is not installed on production; independent tag release, real restore and owner acceptance remain pending.
+
+
+### 2026-10-12-021417-restore-build-order-refusal-bcecbdd9
+
+Recorded 2026-10-12T02:14:17.740450+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the failed website receipt after the changelog entry refused a missing evidence argument; correct the record before retrying the build.
+- **Evidence.** The build refused undocumented current changes; the failed receipt is retained and does not count as passing. [Change record](./runs/changes/2026-10-12-021417-restore-build-order-refusal-bcecbdd9.json).
+- **Not claimed.** No runtime code or acceptance gate was relaxed.
+
+
+### 2026-10-12-021357-restore-current-engineering-08c1d062
+
+Recorded 2026-10-12T02:13:57.429120+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current personal engineering checks and recovery guard evidence; retain deployment-preflight refusals without touching unrelated drafts.
+- **Evidence.** Four selected capability checks passed on current source; restore guard execution and limitations are recorded in machine-readable state. [Change record](./runs/changes/2026-10-12-021357-restore-current-engineering-08c1d062.json).
+- **Not claimed.** Publication is pending actual HTTP checks; no production recovery installation or tag release validation.
+
+
+### 2026-10-12-021142-restore-early-isolation-554415d0
+
+Recorded 2026-10-12T02:11:42.514569+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse unsafe synthetic recovery before secrets, filesystem changes or subprocesses; bind the current Linux and permission tests to protected CI.
+- **Evidence.** Forty focused controls and eighteen actual kernel/filesystem checks pass on invented fixtures; owned remote staging removed. [Change record](./runs/changes/2026-10-12-021142-restore-early-isolation-554415d0.json).
+- **Not claimed.** No real restore, production installation or full security acceptance. F-073 and N-011 remain open.
+
+
 ### 2026-10-12-015841-editorial-ci-chronology-repair-ac0740b8
 
 Recorded 2026-10-12T01:58:41.424662+00:00 · Contributor: Codex · change

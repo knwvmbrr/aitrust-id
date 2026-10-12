@@ -10,12 +10,85 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import socket
+import stat
+import sys
 import time
 import uuid
 
 
 def run(args, check=True):
     return subprocess.run(args, capture_output=True, text=True, check=check, timeout=240)
+
+
+# Refuse outside the declared synthetic offline restore boundary.
+def require_isolated_network():
+    if sys.platform != 'linux' or os.geteuid() != 0:
+        raise ValueError('An isolated root Linux restore process is required')
+    try:
+        current = os.stat('/proc/self/ns/net')
+        initial = os.stat('/proc/1/ns/net')
+        identity = (current.st_dev, current.st_ino)
+        baseline = (initial.st_dev, initial.st_ino)
+        interfaces = socket.if_nameindex()
+    except OSError:
+        raise ValueError('Cannot verify the restore network boundary') from None
+    if identity == baseline or (len(interfaces) != 1 or interfaces[0][1] != 'lo'):
+        raise ValueError('Run the synthetic restore in a fresh loopback-only network namespace')
+    return identity
+
+
+def require_same_network(expected):
+    if require_isolated_network() != expected:
+        raise ValueError('The restore network namespace changed')
+
+
+def protected_generation(name, protected=Path('/var/lib/aitrust-id/protected')):
+    # Protected hard links are intentional; links through a selected directory
+    # are not. No resolving a symlink before deciding whether it is allowed.
+    if not re.fullmatch(r'\d{8}T\d{6}Z-[a-f0-9]{8}', name):
+        raise ValueError('Invalid protected generation')
+    try:
+        if not protected.is_absolute():
+            raise ValueError('Invalid protected generation')
+        for parent in [*reversed(protected.parents), protected]:
+            observed = parent.lstat()
+            if not stat.S_ISDIR(observed.st_mode) or observed.st_uid != 0 or observed.st_mode & 0o022:
+                raise ValueError('Invalid protected directory boundary')
+        container = protected.lstat()
+        candidate = protected / name
+        selected = candidate.lstat()
+        if (stat.S_IMODE(container.st_mode) != 0o700 or not stat.S_ISDIR(selected.st_mode)
+                or selected.st_uid != 0 or stat.S_IMODE(selected.st_mode) != 0o700):
+            raise ValueError('Invalid protected generation')
+    except OSError:
+        raise ValueError('Cannot inspect the protected generation') from None
+    # The protected copier keeps every member root-owned and private. Do not
+    # follow links or accept a service-writable inode through an outside hard link.
+    started = time.monotonic()
+    seen = 1
+    pending = [candidate]
+    try:
+        while pending:
+            folder = pending.pop()
+            if time.monotonic()-started > 30:
+                raise ValueError('Protected generation exceeds the reviewed inspection budget')
+            with os.scandir(folder) as entries:
+                for entry in entries:
+                    seen += 1
+                    if seen > 100_000 or time.monotonic()-started > 30:
+                        raise ValueError('Protected generation exceeds the reviewed inspection budget')
+                    observed = entry.stat(follow_symlinks=False)
+                    directory = stat.S_ISDIR(observed.st_mode)
+                    if (not (directory or stat.S_ISREG(observed.st_mode)) or observed.st_uid != 0
+                            or stat.S_IMODE(observed.st_mode) != (0o700 if directory else 0o600)
+                            or observed.st_dev != selected.st_dev):
+                        raise ValueError('Invalid protected generation member')
+                    if directory:
+                        pending.append(Path(entry.path))
+    except OSError:
+        raise ValueError('Cannot inspect the protected generation') from None
+    return candidate
 
 
 def main():
@@ -36,12 +109,13 @@ def main():
         raise SystemExit('Only an explicitly named protected generation is allowed')
     if not re.fullmatch(r'\d{8}-\d{6}F(?:_\d{8}-\d{6}[DI])?', args.backup_label):
         raise SystemExit('Invalid explicit backup label')
+    try:
+        namespace = require_isolated_network()
+        generation = protected_generation(args.generation)
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
     started = time.monotonic()
     os.umask(0o077)
-    protected = Path('/var/lib/aitrust-id/protected')
-    generation = (protected/args.generation).resolve(strict=True)
-    if generation.parent != protected or generation.is_symlink():
-        raise SystemExit('Invalid protected generation')
     parent = Path('/var/lib/aitrust-id/restore-drill')
     parent.mkdir(mode=0o750, exist_ok=True)
     parent.chmod(0o750)
@@ -68,6 +142,7 @@ def main():
     restore_config.write_text('[global]\nrepo1-path='+str(repo)+'\nrepo1-cipher-type=aes-256-cbc\nrepo1-cipher-pass='+config['global']['repo1-cipher-pass']+'\nlog-level-console=warn\nlog-level-file=off\nlock-path='+str(work/'locks')+'\n\n[aitrustid]\npg1-path='+str(data)+'\n')
     restore_config.chmod(0o640)
     run(['chown','root:postgres',str(restore_config)])
+    require_same_network(namespace)
     run(['pgbackrest','--config='+str(restore_config),'--stanza=aitrustid','--set='+args.backup_label,'--type=name',
          '--target='+args.target,'--target-action=promote','--archive-mode=off','restore'])
     locks = work/'locks'
@@ -104,6 +179,7 @@ def main():
         return run([*command,'-c',query], check=check)
 
     try:
+        require_same_network(namespace)
         run([*pgctl,'-o','-c config_file='+str(pgconfig),'-l',str(log),'-w','start'])
         deadline = time.monotonic() + 30
         while sql('SELECT pg_is_in_recovery()').stdout.strip() != 'f':
@@ -111,7 +187,7 @@ def main():
                 raise RuntimeError('Named recovery target did not complete and promote')
             time.sleep(0.1)
         checks['target_promoted']=True
-        checks['network_namespace_isolated']=os.stat('/proc/self/ns/net').st_ino != os.stat('/proc/1/ns/net').st_ino
+        checks['network_namespace_isolated']=require_isolated_network() == namespace
         checks['synthetic_rows']=int(sql('SELECT count(*) FROM '+args.schema+'.probe').stdout.strip())==args.expected_rows
         checks['checksums']=sql('SHOW data_checksums').stdout.strip()=='on'
         checks['socket_only']=sql('SHOW listen_addresses').stdout.strip()==''
