@@ -5,7 +5,9 @@ on:
       - 'deploy/research/**'
       - 'scripts/metadata-store-sandbox.py'
       - 'scripts/verify-metadata-store.py'
+      - 'scripts/verify-research-invitations.py'
       - 'tests/test_metadata_store.py'
+      - 'tests/test_research_invitations.py'
       - 'site/src/research-feedback.js'
       - 'protocol/reports.py'
       - '.github/workflows/metadata-storage.yml'
@@ -14,7 +16,9 @@ on:
       - 'deploy/research/**'
       - 'scripts/metadata-store-sandbox.py'
       - 'scripts/verify-metadata-store.py'
+      - 'scripts/verify-research-invitations.py'
       - 'tests/test_metadata_store.py'
+      - 'tests/test_research_invitations.py'
       - 'site/src/research-feedback.js'
       - 'protocol/reports.py'
       - '.github/workflows/metadata-storage.yml'
@@ -45,9 +49,13 @@ jobs:
           sudo apt-get install -y postgresql-18 postgresql-client-18
       - name: Run actual storage controls as the ordinary runner, private socket only
         run: python scripts/metadata-store-sandbox.py --output output/verification/metadata-store.json
+      - name: Run separately applied invitation capacity, role and replay controls
+        run: python scripts/metadata-store-sandbox.py --profile invitation --output output/verification/research-invitations.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: synthetic-metadata-storage
-          path: output/verification/metadata-store.json
+          path: |
+            output/verification/metadata-store.json
+            output/verification/research-invitations.json
           if-no-files-found: error

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T02:33:44.307205+00:00",
+  "updated": "2026-10-12T02:47:29.205326+00:00",
   "active_increment": "public_runnable_development_preview",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2505,
+  "python_tests_passed": 2516,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -350,7 +350,7 @@
     "current_method_container_evidence": "runs/2026-10-10-context-v6-real-service.json",
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json"
   },
-  "python_tests_scope": "Current Mac Python 3.12.14 source: 2442 passed, one platform-specific skip and one upstream TestClient deprecation warning, source unchanged during execution. Same-current-source editorial CLI lifecycle also passed on socket-denied non-root Debian Linux. No independent tag accuracy or physical device claim.",
+  "python_tests_scope": "Current Mac Python 3.12.14 source: 2516 passed, one platform-specific skip and one upstream TestClient warning; checked source inventory unchanged during execution. Dedicated Linux PostgreSQL base/invitation controls were separate. No independent accuracy or physical-device acceptance.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -966,8 +966,8 @@
   "personal_route_boundaries": {
     "status": "current_source_checks_pass; next_protected_merge_pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-12-restore-terminal-state-boundaries.json",
-    "source_files": 662,
+    "evidence": "runs/2026-10-12-invitation-reviewed-boundaries.json",
+    "source_files": 668,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1030,11 +1030,11 @@
     "PII_REDACTED": "runs/2026-10-12-restore-isolation-current-PII_REDACTED.json",
     "protocol": "runs/2026-10-12-restore-isolation-current-protocol.json",
     "extension": "runs/2026-10-12-restore-isolation-current-extension.json",
-    "website": "runs/2026-10-12-restore-isolation-repaired-website.json",
+    "website": "runs/2026-10-12-invitation-prepared-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T02:33:44.307205+00:00",
+  "updated_at": "2026-10-12T02:47:29.205326+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,9 +1099,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "51b523870cf76489df19c29fbe605e28149865b5",
-    "deployment_url": "https://099f0479.aitrust-id.pages.dev",
-    "receipt": "runs/2026-10-12-editorial-publication.json",
+    "source_commit": "301be34177d92cda992f936a1ecbe6fb066fb267",
+    "deployment_url": "https://8586e3b8.aitrust-id.pages.dev",
+    "receipt": "runs/2026-10-12-restore-publication.json",
     "matching_artifacts": 756,
     "independent_accuracy_evidence": false,
     "bookkeeping_commit_is_not_a_new_runtime_deployment": true
@@ -1872,7 +1872,7 @@
   },
   "python_tests_current_pass": true,
   "restore_isolation": {
-    "status": "development_guard_executed; protected_merge_and_production_installation_pending",
+    "status": "development_guard_protected_merge_and_publication_verified; production_installation_pending",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-073",
@@ -1896,6 +1896,35 @@
     "ci_process_observation_failure": "runs/2026-10-12-restore-ci-reaping-refusal.json",
     "ci_process_observation_repair": "runs/2026-10-12-restore-ci-reaping-focused-repair.json",
     "ci_terminal_state_failure": "runs/2026-10-12-restore-ci-terminal-state-refusal.json",
-    "ci_terminal_state_repair": "runs/2026-10-12-restore-ci-terminal-state-focused.json"
+    "ci_terminal_state_repair": "runs/2026-10-12-restore-ci-terminal-state-focused.json",
+    "protected_merge": "runs/2026-10-12-restore-protected-merge.json",
+    "publication": "runs/2026-10-12-restore-publication.json",
+    "primary_preservation": "runs/2026-10-12-restore-primary-preservation.json"
+  },
+  "research_invitations": {
+    "status": "synthetic_database_component_executed; protected_publication_pending",
+    "implemented_by": "Codex",
+    "record": "N-011",
+    "architecture": "docs/research-invitation-plan.md",
+    "guide": "docs/research-invitations.md",
+    "result": "docs/research-invitation-result.md",
+    "mac_focused": "runs/2026-10-12-invitation-focused.json",
+    "base_linux": "runs/2026-10-12-invitation-base-linux.json",
+    "invitation_linux": "runs/2026-10-12-invitation-expanded-linux.json",
+    "staging_cleanup": "runs/2026-10-12-invitation-staging-cleanup.json",
+    "archive_refusal": "runs/2026-10-12-invitation-archive-refusal.json",
+    "control_groups": 15,
+    "concurrent_requests": 6,
+    "concurrent_slots": 2,
+    "production_database_changed": false,
+    "research_service_running": false,
+    "participant_consent_verified": false,
+    "requirements_closed": 0,
+    "website_evidence": "runs/2026-10-12-invitation-prepared-website.json",
+    "failed_website_evidence": "runs/2026-10-12-invitation-current-website.json",
+    "full_suite_order_refusal": "runs/2026-10-12-invitation-route-order-refusal.json",
+    "boundary_evidence": "runs/2026-10-12-invitation-reviewed-boundaries.json",
+    "full_python_evidence": "runs/2026-10-12-invitation-reviewed-full-suite.json",
+    "full_python_tests_passed": 2516
   }
 }

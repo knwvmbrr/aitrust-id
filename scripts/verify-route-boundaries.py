@@ -175,6 +175,9 @@ def device_evidence(binding, root=ROOT):
 
 PATTERNS += ('deploy/backup/*','tests/test_restore_isolation.py','tests/restore_isolation_kernel.py',
              'docs/restore-isolation-plan.md','docs/restore-isolation-result.md')
+PATTERNS += ('deploy/research/metadata-invitation-development.sql','scripts/verify-research-invitations.py',
+             'tests/test_research_invitations.py','docs/research-invitation-plan.md',
+             'docs/research-invitations.md','docs/research-invitation-result.md')
 
 def inventory(root):
     found = {}

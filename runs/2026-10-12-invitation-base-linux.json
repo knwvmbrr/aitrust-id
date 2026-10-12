@@ -1,0 +1,184 @@
+{
+  "captured_at": "2026-10-12T02:34:33.091650+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "private_nonroot_socket_cluster_and_schema",
+      "pass": true
+    },
+    {
+      "case": "valid_insert_and_idempotent_duplicate",
+      "pass": true
+    },
+    {
+      "case": "conflicting_duplicate_cannot_overwrite",
+      "pass": true
+    },
+    {
+      "case": "unknown_prompt",
+      "pass": true
+    },
+    {
+      "case": "nested_content",
+      "pass": true
+    },
+    {
+      "case": "not_synthetic",
+      "pass": true
+    },
+    {
+      "case": "wrong_format",
+      "pass": true
+    },
+    {
+      "case": "download_is_not_consent",
+      "pass": true
+    },
+    {
+      "case": "unsupported_method",
+      "pass": true
+    },
+    {
+      "case": "unsupported_tag",
+      "pass": true
+    },
+    {
+      "case": "wrong_version",
+      "pass": true
+    },
+    {
+      "case": "null_enum",
+      "pass": true
+    },
+    {
+      "case": "nested_enum",
+      "pass": true
+    },
+    {
+      "case": "unknown_result",
+      "pass": true
+    },
+    {
+      "case": "unknown_failure",
+      "pass": true
+    },
+    {
+      "case": "false_sharing_marker",
+      "pass": true
+    },
+    {
+      "case": "sql_injection_value",
+      "pass": true
+    },
+    {
+      "case": "malformed_json",
+      "pass": true
+    },
+    {
+      "case": "array_json",
+      "pass": true
+    },
+    {
+      "case": "null_json",
+      "pass": true
+    },
+    {
+      "case": "oversized_json",
+      "pass": true
+    },
+    {
+      "case": "duplicate_top_key",
+      "pass": true
+    },
+    {
+      "case": "duplicate_nested_key",
+      "pass": true
+    },
+    {
+      "case": "escaped_duplicate_key",
+      "pass": true
+    },
+    {
+      "case": "escaped_nul_key",
+      "pass": true
+    },
+    {
+      "case": "escaped_surrogate_key",
+      "pass": true
+    },
+    {
+      "case": "escaped_surrogate_value",
+      "pass": true
+    },
+    {
+      "case": "null_digest",
+      "pass": true
+    },
+    {
+      "case": "short_digest",
+      "pass": true
+    },
+    {
+      "case": "ait_metadata_intake_cannot_read_or_mutate_private_tables",
+      "pass": true
+    },
+    {
+      "case": "ait_metadata_review_cannot_read_or_mutate_private_tables",
+      "pass": true
+    },
+    {
+      "case": "ait_metadata_maintenance_cannot_read_or_mutate_private_tables",
+      "pass": true
+    },
+    {
+      "case": "restricted_function_grants_and_nonlogin_roles",
+      "pass": true
+    },
+    {
+      "case": "review_exposes_only_five_record_enum_groups",
+      "pass": true
+    },
+    {
+      "case": "temporary_relation_shadow_cannot_redirect_definer",
+      "pass": true
+    },
+    {
+      "case": "wrong_digest_isolation_withdrawal_and_no_resurrection",
+      "pass": true
+    },
+    {
+      "case": "restored_rows_hidden_and_pending_deletion_applied",
+      "pass": true
+    },
+    {
+      "case": "expired_rows_and_finished_deletion_instructions_removed",
+      "pass": true
+    },
+    {
+      "case": "all_80_supported_feedback_enum_combinations",
+      "pass": true
+    }
+  ],
+  "case_count": 39,
+  "sources": {
+    "deploy/research/metadata-development.sql": "a6df9e0e344a9910adb5e9576a028106966dbaa907e7221f8c73ce8d5586a32f",
+    "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
+    "scripts/metadata-store-sandbox.py": "787d3afd57f5b145e1a438ef7cbe2ffccaa1eb2bb655c463e5f5af687f04e928",
+    "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+  },
+  "source_unchanged_during_execution": true,
+  "server_version_num": "180006",
+  "nonroot_execution": true,
+  "database_tcp_listening": false,
+  "only_synthetic_records": true,
+  "participant_consent_verified": false,
+  "production_database_changed": false,
+  "new_endpoints": 0,
+  "real_backup_expiry_verified": false,
+  "complete_restore_or_anonymity_claim": false,
+  "independent_accuracy_evidence": false,
+  "sandbox_shutdown_verified": true,
+  "private_cluster_removed": true,
+  "shutdown_verified_at": "2026-10-12T02:34:33.223340+00:00"
+}
