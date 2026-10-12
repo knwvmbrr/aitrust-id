@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-12T01:51:09.269649+00:00",
+  "audited_at": "2026-10-12T02:37:16.715771+00:00",
   "client_date": "2026-10-11",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -7841,11 +7841,12 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-11T16:55:59.524526+00:00",
+      "audited_at": "2026-10-12T02:37:16.715765+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 synthetic-only PostgreSQL storage/grant/withdrawal/expiry controls and owned Unix-socket harness, 2026-10-11T16:17:29.010903+00:00"
+        "Codex \u2014 synthetic-only PostgreSQL storage/grant/withdrawal/expiry controls and owned Unix-socket harness, 2026-10-11T16:17:29.010903+00:00",
+        "Codex \u2014 source-bound synthetic invitation/quota component"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -7853,7 +7854,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Accept the proposed collection/purpose/roles/retention/withdrawal contract and endpoint; implement invitation quotas and reviewed proxy/provider handling; prove encrypted backup expiry and replacement-host recovery; then run a consenting pilot. Training, example sharing and anomaly analysis remain separate jobs. Synthetic storage controls are implemented, not a deployed intake.",
+      "next_fix": "Accept the collection/purpose/roles/retention/withdrawal contract and endpoint; integrate the tested synthetic invitation mechanism with real authentication and reviewed provider/proxy handling; prove encrypted backup expiry and replacement-host recovery, then run a consenting pilot. No real intake or participant acceptance is credited.",
       "next_owner": "Michael data policy; Codex application",
       "evidence": [
         "docs/data-growth-plan.md",
@@ -7870,7 +7871,11 @@
         "runs/2026-10-11-metadata-storage-bounded-diagnostics.json",
         "runs/2026-10-11-metadata-storage-merged-source.json",
         "runs/2026-10-11-metadata-storage-protected-merge.json",
-        "runs/2026-10-11-metadata-store-diagnostics-linux.json"
+        "runs/2026-10-11-metadata-store-diagnostics-linux.json",
+        "docs/research-invitation-result.md",
+        "runs/2026-10-12-invitation-expanded-linux.json",
+        "runs/2026-10-12-invitation-base-linux.json",
+        "runs/2026-10-12-invitation-focused.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation 39 actual non-root PostgreSQL controls (including all 80 supported enum combinations) exercise synthetic development storage only. No participant data, endpoint, production database change or training/anomaly operation is claimed.",
       "required_acceptance": [

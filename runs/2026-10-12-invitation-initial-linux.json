@@ -1,0 +1,91 @@
+{
+  "captured_at": "2026-10-12T02:32:13.646241+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "owned_private_socket_cluster_and_separate_synthetic_profile",
+      "pass": true
+    },
+    {
+      "case": "maintenance_issuance_duplicate_cannot_expand_capacity",
+      "pass": true
+    },
+    {
+      "case": "strict_digest_lifetime_and_capacity_limits",
+      "pass": true
+    },
+    {
+      "case": "unknown_invitation_inserts_nothing",
+      "pass": true
+    },
+    {
+      "case": "valid_record_and_duplicate_use_one_lifetime_slot",
+      "pass": true
+    },
+    {
+      "case": "withdrawal_digest_cannot_move_between_invitations",
+      "pass": true
+    },
+    {
+      "case": "conflicting_and_private_invalid_payload_roll_back_quota_and_rows",
+      "pass": true
+    },
+    {
+      "case": "full_capacity_refuses_new_record_but_allows_exact_duplicate",
+      "pass": true
+    },
+    {
+      "case": "withdrawal_never_refunds_capacity_or_resurrects_after_tombstone_expiry",
+      "pass": true
+    },
+    {
+      "case": "no_legacy_insert_issuance_prune_or_private_table_role_bypass",
+      "pass": true
+    },
+    {
+      "case": "revoked_and_expired_invitations_refuse",
+      "pass": true
+    },
+    {
+      "case": "six_concurrent_submissions_cannot_exceed_two_slots",
+      "pass": true
+    },
+    {
+      "case": "temporary_shadow_and_public_execute_privilege_refused",
+      "pass": true
+    },
+    {
+      "case": "retained_issuance_count_is_bounded_at_one_hundred",
+      "pass": true
+    },
+    {
+      "case": "expired_feedback_and_invitation_bindings_pruned_together",
+      "pass": true
+    }
+  ],
+  "case_count": 15,
+  "sources": {
+    "deploy/research/metadata-development.sql": "a6df9e0e344a9910adb5e9576a028106966dbaa907e7221f8c73ce8d5586a32f",
+    "deploy/research/metadata-invitation-development.sql": "539679c23c689b369a2ee11b2ed933acb8821bf16d7f377edaf589d7263040f4",
+    "scripts/metadata-store-sandbox.py": "787d3afd57f5b145e1a438ef7cbe2ffccaa1eb2bb655c463e5f5af687f04e928",
+    "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
+    "scripts/verify-research-invitations.py": "5d7a76e12b91e6d63175fad1c90455aa14e75cc72cf69403a84d5a6a70422c98",
+    "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+  },
+  "source_unchanged_during_execution": true,
+  "server_version_num": "180006",
+  "nonroot_execution": true,
+  "database_tcp_listening": false,
+  "only_synthetic_records": true,
+  "participant_consent_verified": false,
+  "production_database_changed": false,
+  "new_endpoints": 0,
+  "real_backup_expiry_verified": false,
+  "independent_accuracy_evidence": false,
+  "research_service_running": false,
+  "requirements_closed": 0,
+  "sandbox_shutdown_verified": true,
+  "private_cluster_removed": true,
+  "shutdown_verified_at": "2026-10-12T02:32:13.778279+00:00"
+}

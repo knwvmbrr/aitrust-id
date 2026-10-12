@@ -30,7 +30,8 @@ def failure_record(stage,result=None):
         'independent_accuracy_evidence':False,'completed_cases':[],
         'source_snapshot_at_failure':{path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() if (ROOT/path).is_file() else None
             for path in ('deploy/research/metadata-development.sql','scripts/metadata-store-sandbox.py',
-                         'scripts/verify-metadata-store.py','protocol/reports.py','site/src/research-feedback.js')}}
+                         'scripts/verify-metadata-store.py','protocol/reports.py','site/src/research-feedback.js',
+                         'deploy/research/metadata-invitation-development.sql','scripts/verify-research-invitations.py')}}
     if result is not None:
         record.update(worker_exit_status=result.returncode,
             stdout_sha256=hashlib.sha256(result.stdout).hexdigest(),
@@ -51,7 +52,9 @@ def failure_record(stage,result=None):
     return record
 
 
-def run_control(output):
+def run_control(output, profile='base'):
+    if profile not in ('base', 'invitation'):
+        raise ValueError('Use an explicitly supported synthetic storage profile.')
     if sys.platform!='linux' or os.geteuid()==0:
         raise ValueError('Run as an ordinary Linux user with PostgreSQL 18 installed.')
     for name in ('initdb','pg_ctl','psql','postgres'):
@@ -74,7 +77,8 @@ def run_control(output):
         attempted=True;stopped=False;stage='startup'
         run(control+['-l',str(directory/'server.log'),'-w','start'])
         stage='verification'
-        result=subprocess.run([sys.executable,str(ROOT/'scripts/verify-metadata-store.py'),
+        worker='verify-metadata-store.py' if profile=='base' else 'verify-research-invitations.py'
+        result=subprocess.run([sys.executable,str(ROOT/'scripts'/worker),
             '--sandbox-dir',str(directory)],cwd=ROOT,capture_output=True,
             env=environment,timeout=180)
         if result.returncode:
@@ -109,9 +113,11 @@ def run_control(output):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',default='output/verification/metadata-store.json');args=parser.parse_args()
+    parser.add_argument('--output',default='output/verification/metadata-store.json')
+    parser.add_argument('--profile',choices=['base','invitation'],default='base')
+    args=parser.parse_args()
     try:
-        record=json.loads(run_control(args.output))
+        record=json.loads(run_control(args.output,args.profile))
         if record.get('pass') is not True:raise ValueError('Synthetic verification did not pass.')
         if any(hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=expected
                for path,expected in record['sources'].items()):

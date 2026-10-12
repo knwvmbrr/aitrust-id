@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-023749-synthetic-invitation-capacity-9fd67e08",
+  "recorded_at": "2026-10-12T02:37:49.110362+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "791d0229e0e4219aa55042fc5b5754b4ffa2a1c6",
+  "changed": "Add the separately applied synthetic PostgreSQL invitation/quota profile, bounded role grants, concurrency/withdrawal controls and owner practice guide; update the partial scope evidence.",
+  "proves": "33 local controls, 39 actual original-profile groups and 15 actual invitation groups passed on current-source fresh Linux socket-only databases; both clusters and owned staging removed.",
+  "limits": "No live intake, participant policy, authentication credential or production database change. N-011 stays open at 60%; tag release and full backup/recovery acceptance remain separate.",
+  "scope_ids": [
+    "N-011"
+  ],
+  "files": {
+    ".github/workflows/metadata-storage.yml": "35ce8ec265ed754dd78c565ada4f0c36ae01f927029fd3c0d3a18999b9d06e9f",
+    "scripts/metadata-store-sandbox.py": "787d3afd57f5b145e1a438ef7cbe2ffccaa1eb2bb655c463e5f5af687f04e928",
+    "scripts/verify-route-boundaries.py": "9cfa7bf009e93bbf47760c1cf9d4c92a61dbb9e2f87d973cb53ce322d62b88f3",
+    "deploy/research/metadata-invitation-development.sql": "539679c23c689b369a2ee11b2ed933acb8821bf16d7f377edaf589d7263040f4",
+    "scripts/verify-research-invitations.py": "cc7898ca6cba88211117a52aebe45a84feba155ef9e1851689b96bf70c3490e6",
+    "tests/test_research_invitations.py": "641ac086f6915bdf89a1f431126831284002ff78c02637bdd326d013aa716073",
+    "docs/research-invitation-plan.md": "6feac70aea34aae5858666779ae06d0bc80a47fb4437a426afbea2c6b34d0042",
+    "docs/research-invitations.md": "1c57b3faf2cdd584f7b76dd6baa3c1aa733b5e9689a28ea2e0f7586b8d23b2ab",
+    "docs/research-invitation-result.md": "1c0cef1c1ef5a048c4701208d5fa29e05d2e10c8855a013174af9c664df6d381",
+    "docs/scope-progress.json": "990ca4415ae37b9c1badb1b7b0b48975805b82656699c9e2f270a056c7229417",
+    "docs/scope-progress.md": "f488d59c105cacedbe10ee7db1c97af0b7b8d53ef16cf85c680de8e549b3be4d",
+    "state.json": "5ac1ec59ac2b92110587099d286801edd7cf517ae0781892d859407c6225f5c3",
+    "runs/2026-10-12-invitation-initial-linux.json": "996af7c325e9873c79c03a84642402a0b5adf5d4e273a482b5960709454c9b9e",
+    "runs/2026-10-12-invitation-base-linux.json": "0150b929db1f5008530099fe528eb24d30c5b65a6f00dfec8c315a4954cdeac9",
+    "runs/2026-10-12-invitation-expanded-linux.json": "f476ce91fd8c34f3540c24a2fc576b08527226b59550e8859c94e7d15beccd56",
+    "runs/2026-10-12-invitation-staging-cleanup.json": "56808ea261a1a95bdc2f6c94067e6548fcf3d315fd098fe4052c538204657eba",
+    "runs/2026-10-12-invitation-focused.json": "e9bef1606e5d401fa4f4135688ac2d8329429c1e5399f5fd98b019a09945f986",
+    "runs/2026-10-12-invitation-archive-refusal.json": "a7227d1b08b1c70571049a3f7ce4a69de1559ce8bd3efb56a4f949d35c42bd83"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-invitation-expanded-linux.json",
+      "sha256": "f476ce91fd8c34f3540c24a2fc576b08527226b59550e8859c94e7d15beccd56"
+    },
+    {
+      "path": "runs/2026-10-12-invitation-base-linux.json",
+      "sha256": "0150b929db1f5008530099fe528eb24d30c5b65a6f00dfec8c315a4954cdeac9"
+    },
+    {
+      "path": "runs/2026-10-12-invitation-focused.json",
+      "sha256": "e9bef1606e5d401fa4f4135688ac2d8329429c1e5399f5fd98b019a09945f986"
+    }
+  ],
+  "checks": []
+}

@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-024729-invitation-accepted-suite-bd431771
+
+Recorded 2026-10-12T02:47:29.255395+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded accepted source-stable whole-suite verification and exact three-origin recovery publication; current state reflects the passing invitation checks.
+- **Evidence.** 2516 Python tests pass; 33 focused controls and 39 base/15 invitation PostgreSQL groups pass; 756 served artifacts match the protected recovery merge. [Change record](./runs/changes/2026-10-12-024729-invitation-accepted-suite-bd431771.json).
+- **Not claimed.** No new requirement marked complete, no participant intake or production recovery installation; independent PS and PII accuracy remain open. Invitation protected CI and merge are pending.
+
+
+### 2026-10-12-024607-invitation-review-order-222ea837
+
+Recorded 2026-10-12T02:46:07.106229+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded protected recovery merge and preserved primary files; reviewed invitation source inventory and corrected verification ordering.
+- **Evidence.** Recovery exact head passed 22 required checks, all eight prepared website checks pass, four unaffected capability receipts remain current, and route review succeeds. [Change record](./runs/changes/2026-10-12-024607-invitation-review-order-222ea837.json).
+- **Not claimed.** Nine stale-inventory full-suite failures retained; accepted whole-suite rerun remains required. No participant intake, production restoration or independent accuracy credited.
+
+
+### 2026-10-12-024141-invitation-projection-sequencing-df7edadf
+
+Recorded 2026-10-12T02:41:41.809478+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved website verification refusal caused by generated scope files changing during execution; prepared projections before fresh source-bound verification.
+- **Evidence.** All eight execution checks passed but the source-change guard correctly refused the earlier receipt. [Change record](./runs/changes/2026-10-12-024141-invitation-projection-sequencing-df7edadf.json).
+- **Not claimed.** No tag accuracy, physical-device or participant validation; scope completion unchanged.
+
+
+### 2026-10-12-023749-synthetic-invitation-capacity-9fd67e08
+
+Recorded 2026-10-12T02:37:49.110362+00:00 · Contributor: Codex · change
+
+- **Changed.** Add the separately applied synthetic PostgreSQL invitation/quota profile, bounded role grants, concurrency/withdrawal controls and owner practice guide; update the partial scope evidence.
+- **Evidence.** 33 local controls, 39 actual original-profile groups and 15 actual invitation groups passed on current-source fresh Linux socket-only databases; both clusters and owned staging removed. [Change record](./runs/changes/2026-10-12-023749-synthetic-invitation-capacity-9fd67e08.json).
+- **Not claimed.** No live intake, participant policy, authentication credential or production database change. N-011 stays open at 60%; tag release and full backup/recovery acceptance remain separate.
+
+
 ### 2026-10-12-023344-restore-terminal-state-full-source-6a446eac
 
 Recorded 2026-10-12T02:33:44.538770+00:00 · Contributor: Codex · change
