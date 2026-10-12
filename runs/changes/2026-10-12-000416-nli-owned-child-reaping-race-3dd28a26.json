@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-000416-nli-owned-child-reaping-race-3dd28a26",
+  "recorded_at": "2026-10-12T00:04:16.695344+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "60c77c4650b475bf4fc797ba663531027f8b5a5b",
+  "changed": "Fixed the process-cleanup test race between /proc existence and read while retaining rejection of running children and unknown read failures.",
+  "proves": "41 focused reference-CLI tests pass, including actual owned nested-worker timeout and three regression controls; current protocol and 612-file route review pass.",
+  "limits": "Linux isolation CI must rerun on the repaired head. Native Share, independent semantic accuracy, physical devices and full requirement acceptance remain open.",
+  "scope_ids": [
+    "F-020b"
+  ],
+  "files": {
+    "tests/test_nli_reference_cli.py": "14fc31a8cac9df52237ccc5cf5323e236c7daa2e28d8dd10020ef356f014f0be",
+    "state.json": "971e0c730490989bc0c77f89ac2aacee46c37a8e5821baa22ce6ce860f90c8ea",
+    "eval/route-boundaries.json": "ed03b51adb26cfd973e6ce015186c471a8c642e4f3cb025ec7732439f90b5723",
+    "runs/2026-10-12-nli-reaped-child-ci-refusal.json": "c770c509ceade607f00bb62ae46703d0653fcb6b347b1e242bd8a303926b71e7",
+    "runs/2026-10-12-nli-reaped-child-repair.json": "6641d31aae19a85dc12a0c05d58f46324063d07a4f2a5d226130c16366b8b43a",
+    "runs/2026-10-12-nli-child-repaired-protocol.json": "862ad8a8fb42b50138a57ffa33d7fdc2a257b2d7e0f9192d5c600bc6fb06eb83",
+    "runs/2026-10-12-nli-child-repaired-route-review.json": "3e0d54005fb6c112bc2ac22d48fd7cd05f9b3946cbb59e6eb7b1db6a9adcdcd0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-nli-reaped-child-repair.json",
+      "sha256": "6641d31aae19a85dc12a0c05d58f46324063d07a4f2a5d226130c16366b8b43a"
+    },
+    {
+      "path": "runs/2026-10-12-nli-child-repaired-route-review.json",
+      "sha256": "3e0d54005fb6c112bc2ac22d48fd7cd05f9b3946cbb59e6eb7b1db6a9adcdcd0"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T00:04:16.949937+00:00"
+    }
+  ]
+}

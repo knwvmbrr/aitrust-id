@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-000517-repaired-private-policy-full-suite-ab8b6ab1
+
+Recorded 2026-10-12T00:05:17.648688+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the complete Mac regression rerun after both CI test repairs and updated the current test count.
+- **Evidence.** 2301 Python tests pass, one platform skip and one upstream warning; the source-only native fixture and process-race refusals remain separately reproducible. [Change record](./runs/changes/2026-10-12-000517-repaired-private-policy-full-suite-ab8b6ab1.json).
+- **Not claimed.** The repaired exact head must pass protected Linux CI before publication. 88 full requirements remain open; no accuracy, native Share or physical-device acceptance is granted.
+
+
+### 2026-10-12-000416-nli-owned-child-reaping-race-3dd28a26
+
+Recorded 2026-10-12T00:04:16.695344+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed the process-cleanup test race between /proc existence and read while retaining rejection of running children and unknown read failures.
+- **Evidence.** 41 focused reference-CLI tests pass, including actual owned nested-worker timeout and three regression controls; current protocol and 612-file route review pass. [Change record](./runs/changes/2026-10-12-000416-nli-owned-child-reaping-race-3dd28a26.json).
+- **Not claimed.** Linux isolation CI must rerun on the repaired head. Native Share, independent semantic accuracy, physical devices and full requirement acceptance remain open.
+
+
 ### 2026-10-12-000037-native-repair-current-browser-review-1c2d789c
 
 Recorded 2026-10-12T00:00:37.491731+00:00 · Contributor: Codex · change
