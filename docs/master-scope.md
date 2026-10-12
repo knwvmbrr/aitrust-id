@@ -210,3 +210,7 @@ All 202 records and their dispositions remain preserved. UC, SC and BT remain pr
 ## Executed component update — 2026-10-11
 
 N-010 now includes the separately tested offline organization literal-policy component. Its full ownership, custom workflow and commercial acceptance remain open. N-013 retains observed exact engine parity and file-refusal tooling; the attempted Share workflow failed and is not offered as a phone app. See [policy result](private-policy-result.md), [native boundaries](native-engine-checks.md) and the [current completion ledger](scope-progress.md). All 202 records remain.
+
+## Executed component update — 2026-10-12
+
+F-057 and X-02 now include the independently executable selected asset/notice check and exact Unicode notice packaging. Full transitive/native/platform/source-offer and permission review remains open. See [the short guide](asset-notices.md), [executed evidence](asset-notices-result.md) and [completion ledger](scope-progress.md). No record or acceptance criterion is removed.

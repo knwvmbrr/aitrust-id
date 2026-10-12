@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-12T00:46:39.224586+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "-q"
+  ],
+  "exit_status": 0,
+  "tests_passed": 2346,
+  "tests_skipped": 1,
+  "warnings": 1,
+  "skip_scope": "Existing Linux-only worker isolation on Mac",
+  "warning_scope": "Upstream Starlette TestClient deprecation",
+  "duration_seconds": 54.54,
+  "selected_source_sha256": {
+    "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+    "tests/test_native_bundle.py": "bdcee6fec732c8d9c482e6cdea2293de9a36fc7ca190223eea1ab23f42d98a12",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2"
+  },
+  "source_base": "6a92f9aa67162e9db2622c4ad6a4647096f7d5ef",
+  "license_release_pass": false,
+  "independent_accuracy_evidence": false
+}

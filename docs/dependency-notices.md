@@ -58,3 +58,5 @@ project's Apache license does not replace it.
 [Actual archive extraction check](../runs/2026-10-11-license-archives-checkout-bytes.json)
 
 Checkout preserves original bytes for source, locks and notices, even with Git line-ending conversion enabled. Fifty focused controls include actual synthetic clones with core.autocrlf=true and input. All 224 committed notice blobs were checked against their retained content digests. Only upstream notice formatting is exempt from whitespace cleanup.
+
+The separate [selected asset check](asset-notices.md) now binds self-hosted fonts, frozen Unicode resources and their bundled notice, runtime member observations and the optional model-card declaration. It does not replace this dependency audit or grant broader clearance.

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-002152-asset-notice-download-control-3f150d03",
+  "recorded_at": "2026-10-12T00:21:52.354370+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "47d27703c6bca4783d677d409c8c48b6036b150f",
+  "changed": "Require the actual browser notice-guide download to match repository bytes and its expected filename.",
+  "proves": "The updated browser verifier passes syntax checking. Current website revalidation will execute the download path; no runtime result is inferred here.",
+  "limits": "The first attempted record was refused because it lacked executed evidence. Syntax alone is not download success, license permission or independent validation.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "scripts/verify-offline-download.cjs": "0f32723eb3853080f126fb932d0380c47cecf21b8a83cb43f850ac2ac57995c1"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-offline-download.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-12T00:21:52.433850+00:00"
+    }
+  ]
+}

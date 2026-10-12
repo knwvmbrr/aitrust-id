@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-10-12T00:19:25.790728+00:00",
+  "author": "Codex",
+  "pass": true,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_asset_notices.py",
+    "tests/test_native_bundle.py",
+    "-q"
+  ],
+  "tests_passed": 51,
+  "source_files": {
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "scripts/verify-asset-notices.py": "a8c15fd8823ced24f6e1d1bc7f18f2123710dcb9875417142865192e7fc08bd1",
+    "tests/test_asset_notices.py": "940207f5a6634cb1ae98cda2834683c371a0a6fa91254049fae394d2082e57c3",
+    "scripts/native_bundle.py": "53179c58d0616140d538844409dd22a3bb2c4e4f873010dba1797e3c22fb482f",
+    "tests/test_native_bundle.py": "93187325a34ca8d9cd7a102708a43efd2df80ac896e2acd8751a5862557fd750"
+  },
+  "scope": "Selected public asset binding refusals and actual native resource packaging; not a phone app or legal clearance",
+  "independent_accuracy_evidence": false
+}

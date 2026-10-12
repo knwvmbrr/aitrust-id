@@ -22,3 +22,19 @@ def test_orphan_row_refused():
  with pytest.raises(ValueError):m.verify_task_percentages(index()+'\n'+row('Unknown',60),RECORDS)
 def test_missing_evidence_link_refused():
  with pytest.raises(ValueError):m.verify_task_percentages(index().replace('(scope-progress.md)','(elsewhere.md)'),RECORDS)
+
+
+def test_actual_renderer_preserves_dated_notes_without_duplication(tmp_path):
+ import shutil,subprocess,sys
+ root=tmp_path/'checkout';(root/'scripts').mkdir(parents=True);(root/'docs').mkdir()
+ for name in ['scripts/render-scope-plan.py','docs/scope-delivery.json','docs/master-scope.json','docs/scope-progress.json','docs/master-scope.md']:
+  shutil.copyfile(ROOT/name,root/name)
+ plan=json.loads((root/'docs/scope-delivery.json').read_text())
+ for package in plan['packages']:(root/package['contract']).parent.mkdir(parents=True,exist_ok=True)
+ note=(root/'docs/master-scope.md').read_text().split('\n## Executed component update',1)[1]
+ for _ in range(2):
+  subprocess.run([sys.executable,str(root/'scripts/render-scope-plan.py')],cwd=root,check=True,capture_output=True,timeout=20)
+  output=(root/'docs/master-scope.md').read_text()
+  assert output.split('\n## Executed component update',1)[1]==note
+  assert output.count('## Executed component update')==note.count('## Executed component update')+1
+  assert len([line for line in output.splitlines() if line.startswith('| F-') or line.startswith('| T-') or line.startswith('| X-') or line.startswith('| N-')])==202
