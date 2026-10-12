@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-12T15:19:38.859270+00:00",
+  "pass": false,
+  "retained_failure": "runs/2026-10-12-backup-retention-full-suite.json",
+  "root_causes": [
+    "Reviewed route inventory was not refreshed before full-suite execution",
+    "Rejected namespace check changed process umask before validation"
+  ],
+  "fix": [
+    "Rebuild website and update actual reviewed route receipts before full-suite rerun",
+    "Require namespace before setting private umask; guard regression prohibits state changes on refusal"
+  ],
+  "current_focused_tests_passed": 39,
+  "production_changes": false,
+  "requirements_closed": 0
+}

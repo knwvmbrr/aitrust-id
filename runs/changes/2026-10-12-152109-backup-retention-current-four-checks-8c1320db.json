@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-152109-backup-retention-current-four-checks-8c1320db",
+  "recorded_at": "2026-10-12T15:21:09.472046+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a7cbbafba35c6fa09af9bc41739261035f8d595d",
+  "changed": "Register corrected current source checks before rebuilding the website.",
+  "proves": "PS, PII_REDACTED, protocol and extension engineering checks pass on their unchanged bound sources.",
+  "limits": "Website and route verification follow; independent release and full scope requirements remain open.",
+  "scope_ids": [
+    "N-011",
+    "F-073"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "156bcfd19b895c86aa78c6d29f752516ac51181cf43854c3066da4ff8038d857",
+    "README.md": "357e2e621f7be1da110832c0ea88360e8abc65ddb6624e4f0d6a9a0b878c02b6",
+    "docs/scope-50-execution.md": "70ad246abebabaeb44baa2a51737027e46bf9a1d8add5375cb5efd8a2c88eba1",
+    "docs/scope-progress.json": "27730219f16d55cfd3875c4e111fc9c81bcaa560a08dbb18ef03e4c07f5bc6e2",
+    "docs/scope-progress.md": "0fdf992e0f33c76ef7a74b5a661e7a99ea38e12df068cb2f2602a7d5f8993ca5",
+    "eval/revalidation.json": "fe61a81a07cfa80f232d345193051dccb11a035302f895dc7486ca58ba83dd8b",
+    "scripts/verify-route-boundaries.py": "7afcf553b82faf0d7da96ff7dfcdf67c842ea0583e4ffd088b6f9f5eae55ad16",
+    "site/scripts/prepare.mjs": "82661ade6cdb5cf661c31a31e8d41787c49a63dc34fd4eaea58e8de766a51459",
+    "state.json": "038f8ac30affe6bf5dce3e11d34d24b22c421cc6a94be3e8fe26899faee01328",
+    "tests/test_website_evidence_inputs.py": "865d699687e51e56b33314baaf54088788fca83cd5a55ad70b5f6cb9d5d76f8a",
+    "docs/backup-retention-plan.md": "0ff063454c2958d6a20aa48466eeee2c3c2ab7428d799c95c2ca48bce30d7ef0",
+    "docs/backup-retention-result.md": "c1697320679f2d2005c2fb10b84b3d06630bb849dc9368b55af2f734434f3c4b",
+    "docs/backup-retention.md": "86173aebc1c9da5126a06430f98a7544f6a3298208caf6d53157ffc4cee749cc",
+    "runs/2026-10-12-backup-retention-PII_REDACTED.json": "c90ae6399e4f218399767fa949d392d3dfc81b5662065acb6ec8b80e5216cbb8",
+    "runs/2026-10-12-backup-retention-PS.json": "5e514a90dc8f0137ec4db4e1af0c2798b27bc34c94ed70fe89b213f2fe7184f3",
+    "runs/2026-10-12-backup-retention-cache-failure.json": "73789e9124823473f8c2e9d1ed0ac7b21d532f5e6894963e5755ffcfe3c059d5",
+    "runs/2026-10-12-backup-retention-change-record-refusal.json": "d30a99d636b62faf2e7284ce0db6be44ffecd07e55eed13939bb3a6a1db2dc02",
+    "runs/2026-10-12-backup-retention-current-refusals.json": "51c48d020354b5e6f71014b8e0fe280b5955839e877d7e6a684e2f6ec107cf28",
+    "runs/2026-10-12-backup-retention-early-refusals.json": "7bdef69a6577eac3aca1fe03abf997519e257c236a59da545e468880a4c7f358",
+    "runs/2026-10-12-backup-retention-extension.json": "4e605d224fb41857971e7c50c2c1a60e65ca64c64e7e180a3bb06ce15e7598b7",
+    "runs/2026-10-12-backup-retention-full-suite.json": "c56e600a253dbe4f181d532099e4199de92ad2f3d7c9f354efb2eefca804723d",
+    "runs/2026-10-12-backup-retention-linux.json": "a393fc45e55af339a06c4cc564c9641d692345d0ce5b7b3c5181513182c62cc3",
+    "runs/2026-10-12-backup-retention-order-fix.json": "b1a78a4d7baff29d1f1715256c692d0a1e1eef3c1263b489c51486f5afcc1c57",
+    "runs/2026-10-12-backup-retention-ordered-linux.json": "8caa4254668f9cf5db02ea2b05c737cec7ea86e92e402dbe56a88fa9e82223c2",
+    "runs/2026-10-12-backup-retention-ordered-protocol.json": "74619f8f4092120407c2c3bb81dbaa37972e277a2dd372c0262f6be72bbdeafb",
+    "runs/2026-10-12-backup-retention-ordered-refusals.json": "4c595261d545d99012f238f3c480fde843cfffc564c9a1c968a009c4b95dc100",
+    "runs/2026-10-12-backup-retention-protocol.json": "ffd957c075aba69a0d6ff2b327fad4b97f9507c215cb0e3bf350706ae740bbae",
+    "runs/2026-10-12-backup-retention-setup-refusals.json": "7f4405206b4c299377d266be203ddc9f9c00c42c9d8dcac11db37011a7ea61ea",
+    "runs/2026-10-12-backup-retention-source-order-failure.json": "60ebd750242507d92a0c44b4b3375e05812067dc0ba89a1d3a8d63281799f8e6",
+    "runs/2026-10-12-feedback-primary-preservation.json": "b272098081004b0f5703b3b0be31296ac8e7c3d3f6c60fc623a9da90e9e5adcb",
+    "runs/2026-10-12-feedback-protected-merge.json": "195e2660db8a52bea37f147dc995ec674a4088f4717021887476c9f348864272",
+    "runs/2026-10-12-feedback-publication.json": "19e5df8e65d6850204b3661d3572c8ac1622fddaf48b7f6584950880873cd8f6",
+    "scripts/verify-backup-retention.py": "24afd1c8796e4b7905153de7b593b95607f794457941cabb565731ab6127ef79",
+    "tests/test_backup_retention.py": "ecc6b1c20d9b55ff395c1af322342c9e2117920ebca4d89e9fcd1582a743b73f",
+    "tools/backup_retention.py": "e7442e4188d7bbd843f0f569eeedf6dc124adae69c824ad0263289e508c7de92"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-backup-retention-PS.json",
+      "sha256": "5e514a90dc8f0137ec4db4e1af0c2798b27bc34c94ed70fe89b213f2fe7184f3"
+    },
+    {
+      "path": "runs/2026-10-12-backup-retention-PII_REDACTED.json",
+      "sha256": "c90ae6399e4f218399767fa949d392d3dfc81b5662065acb6ec8b80e5216cbb8"
+    },
+    {
+      "path": "runs/2026-10-12-backup-retention-ordered-protocol.json",
+      "sha256": "74619f8f4092120407c2c3bb81dbaa37972e277a2dd372c0262f6be72bbdeafb"
+    },
+    {
+      "path": "runs/2026-10-12-backup-retention-extension.json",
+      "sha256": "4e605d224fb41857971e7c50c2c1a60e65ca64c64e7e180a3bb06ce15e7598b7"
+    }
+  ],
+  "checks": []
+}

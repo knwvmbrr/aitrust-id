@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-12
 
+### 2026-10-12-153159-backup-retention-final-current-state-3956fec7
+
+Recorded 2026-10-12T15:31:59.344283+00:00 · Contributor: Codex · change
+
+- **Changed.** Record corrected source-bound full-suite results and current execution state before protected review.
+- **Evidence.** 2901 Python tests pass with one platform skip and unchanged 708 source inputs; all five current engineering capability receipts assess successfully. [Change record](./runs/changes/2026-10-12-153159-backup-retention-final-current-state-3956fec7.json).
+- **Not claimed.** Protected publication remains pending; independent tag accuracy, physical devices, production expiry, replacement-host recovery and full requirement gates remain open.
+
+
+### 2026-10-12-152931-backup-retention-verified-website-routes-7aaf2eae
+
+Recorded 2026-10-12T15:29:31.128194+00:00 · Contributor: Codex · change
+
+- **Changed.** Record stable built website and reviewed source/access boundaries for the backup increment.
+- **Evidence.** Thirteen website commands and all reviewed route controls pass; 708 source files bound, existing extension access and declared endpoints preserved. [Change record](./runs/changes/2026-10-12-152931-backup-retention-verified-website-routes-7aaf2eae.json).
+- **Not claimed.** Independent release, physical phones, full replacement-host recovery and full requirements remain open; protected publication is pending.
+
+
+### 2026-10-12-152636-backup-retention-prepared-source-projections-a7c0b21a
+
+Recorded 2026-10-12T15:26:36.599968+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture deterministic static scope projections and refreshed route inventory before final website checks.
+- **Evidence.** Thirteen previous website commands passed, while their receipt correctly failed after generated scope changes. The later unrecorded build was refused and retained. [Change record](./runs/changes/2026-10-12-152636-backup-retention-prepared-source-projections-a7c0b21a.json).
+- **Not claimed.** A new stable-source website run and full-suite verification remain required; no release validation or full requirement closure.
+
+
+### 2026-10-12-152109-backup-retention-current-four-checks-8c1320db
+
+Recorded 2026-10-12T15:21:09.472046+00:00 · Contributor: Codex · change
+
+- **Changed.** Register corrected current source checks before rebuilding the website.
+- **Evidence.** PS, PII_REDACTED, protocol and extension engineering checks pass on their unchanged bound sources. [Change record](./runs/changes/2026-10-12-152109-backup-retention-current-four-checks-8c1320db.json).
+- **Not claimed.** Website and route verification follow; independent release and full scope requirements remain open.
+
+
+### 2026-10-12-152000-backup-retention-order-correction-c10d841a
+
+Recorded 2026-10-12T15:20:00.176156+00:00 · Contributor: Codex · change
+
+- **Changed.** Run isolation validation before setting private file modes; preserve the failed full-suite result and correct evidence ordering.
+- **Evidence.** Corrected actual Linux drill and seven early refusal controls pass with source binding and owned cleanup; 39 focused local guard/CLI tests pass. [Change record](./runs/changes/2026-10-12-152000-backup-retention-order-correction-c10d841a.json).
+- **Not claimed.** No production changes, real research intake, physical erasure, full replacement-host recovery or full requirement closures.
+
+
+### 2026-10-12-151530-encrypted-backup-retention-controls-0a2da9e5
+
+Recorded 2026-10-12T15:15:30.286014+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a disposable encrypted backup retention drill, safe-run guards, operator guide and source-bound CI coverage; record the verified feedback publication.
+- **Evidence.** Seven actual encrypted Linux control groups and seven early refusals passed; feedback publication matched 762 artifacts and four exact headers per origin. [Change record](./runs/changes/2026-10-12-151530-encrypted-backup-retention-controls-0a2da9e5.json).
+- **Not claimed.** Logical SQL deletion and named backup expiry are not physical erasure, production policy acceptance, replacement-host recovery, participant acceptance or full requirement closure.
+
+
 ### 2026-10-12-144028-feedback-no-change-integrated-state-b50e6d48
 
 Recorded 2026-10-12T14:40:28.966325+00:00 · Contributor: Codex · change

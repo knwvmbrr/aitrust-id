@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-10-12T15:18:58.863861+00:00",
+  "pass": true,
+  "controls": [
+    {
+      "case": "before-withdrawal",
+      "pass": true,
+      "rows": 1
+    },
+    {
+      "case": "after-withdrawal",
+      "pass": true,
+      "rows": 0
+    },
+    {
+      "case": "retained-old-before-expiry",
+      "pass": true,
+      "rows": 1
+    },
+    {
+      "case": "wrong_cipher_key_refused",
+      "pass": true
+    },
+    {
+      "case": "corrupt_repository_refused",
+      "pass": true
+    },
+    {
+      "case": "expired_exact_label_refused",
+      "pass": true
+    },
+    {
+      "case": "retained-after-expiry",
+      "pass": true,
+      "rows": 0
+    }
+  ],
+  "external_connections_refused": 2,
+  "non_root": true,
+  "socket_only_clusters": true,
+  "isolated_network_namespace": true,
+  "pgbackrest_version": "pgBackRest 2.59.3",
+  "postgresql_version": "postgres (PostgreSQL) 18.6 (Debian 18.6-1.pgdg13+2)",
+  "logical_sql_deletion_only": true,
+  "physical_erasure_verified": false,
+  "provider_copies_deleted": false,
+  "production_changes": false,
+  "actual_participant_data": false,
+  "requirements_closed": 0,
+  "stdout_sha256": "f254057c58b638a0be2ecd17674f973fb773ca2a6d3603c2b8fe9b065ca2a4e6",
+  "clusters_stopped": true,
+  "owned_database_directory_removed": true,
+  "sources": {
+    "tools/backup_retention.py": "e7442e4188d7bbd843f0f569eeedf6dc124adae69c824ad0263289e508c7de92",
+    "scripts/verify-backup-retention.py": "24afd1c8796e4b7905153de7b593b95607f794457941cabb565731ab6127ef79",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09"
+  },
+  "source_unchanged_during_execution": true,
+  "owned_staging_removed": true
+}

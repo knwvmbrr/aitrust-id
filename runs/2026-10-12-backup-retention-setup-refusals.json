@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-12T15:12:47.515342+00:00",
+  "pass": false,
+  "attempts": [
+    {
+      "reason": "non_root_cannot_inspect_initial_process_network_namespace",
+      "database_started": false
+    },
+    {
+      "reason": "version_command_rejects_configuration_flags",
+      "exit_status": 31,
+      "database_started": false
+    }
+  ],
+  "fixed_by": [
+    "Use existing trusted root namespace preflight then irreversible ordinary-account drop",
+    "Use option-free version command and explicit private include path on config-consuming commands"
+  ],
+  "owned_staging_removed": true,
+  "production_changes": false,
+  "requirements_closed": 0
+}

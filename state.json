@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T14:40:28.883251+00:00",
-  "active_increment": "Private feedback analysis and three distinct result states; current checks passed, protected publication pending",
+  "updated": "2026-10-12T15:31:58.921020+00:00",
+  "active_increment": "Corrected encrypted backup retention drill; current engineering checks passed, protected publication pending",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2882,
+  "python_tests_passed": 2901,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -618,7 +618,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -720,7 +720,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-12T14:31:07.991105+00:00",
+    "audited_at": "2026-10-12T15:19:38.859270+00:00",
     "completed_records": 115,
     "open_records": 87,
     "records_preserved": 202,
@@ -736,7 +736,7 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/feedback-analysis-result.md",
+    "latest_increment": "docs/backup-retention-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -746,7 +746,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-12-feedback-no-change-full-suite.json",
+    "current_target_verification": "runs/2026-10-12-backup-retention-final-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Do not stop at a requirement that cannot be completed; continue to the next buildable item toward 50 open.",
     "latest_owner_direction_date": "2026-10-12"
@@ -964,10 +964,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "current source checks passed; feedback increment protected publication pending",
+    "status": "current source and route checks passed; encrypted backup increment protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-12-feedback-no-change-routes.json",
-    "source_files": 702,
+    "evidence": "runs/2026-10-12-backup-retention-final-routes.json",
+    "source_files": 708,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1026,15 +1026,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-12-feedback-repaired-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-12-feedback-repaired-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-feedback-no-change-protocol.json",
-    "extension": "runs/2026-10-12-feedback-repaired-current-extension.json",
-    "website": "runs/2026-10-12-feedback-no-change-website.json",
+    "PS": "runs/2026-10-12-backup-retention-PS.json",
+    "PII_REDACTED": "runs/2026-10-12-backup-retention-PII_REDACTED.json",
+    "protocol": "runs/2026-10-12-backup-retention-ordered-protocol.json",
+    "extension": "runs/2026-10-12-backup-retention-extension.json",
+    "website": "runs/2026-10-12-backup-retention-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T14:40:28.883251+00:00",
+  "updated_at": "2026-10-12T15:31:58.921020+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1099,10 +1099,10 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "69f013b9cab0bd60be5f0c4d0e14fd787cb9f43c",
-    "preview": "https://01d8a527.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-12-reference-publication.json",
-    "all_artifacts_verified": 759,
+    "source_commit": "a7cbbafba35c6fa09af9bc41739261035f8d595d",
+    "preview": "https://68b8a403.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-12-feedback-publication.json",
+    "all_artifacts_verified": 762,
     "exact_headers_verified_per_origin": 4,
     "primary_unrelated_files_preserved": 12,
     "full_requirements_closed": 0
@@ -1367,7 +1367,7 @@
     "active_retention_days_proposed": 30,
     "backup_expiry_days_proposed": 7,
     "invitation_only_proposed": true,
-    "owner_role_proposed": "Michael \u2014 accountable pilot operator and access approver",
+    "owner_role_proposed": "Michael — accountable pilot operator and access approver",
     "real_data_allowed": false,
     "new_endpoint_approved": false
   },
@@ -2075,7 +2075,7 @@
     "public_guide": "https://aitrustid.com/reference/reference-revisions.md"
   },
   "feedback_analysis": {
-    "status": "corrected current source checks passed; protected merge and publication pending",
+    "status": "protected-merged and exact published artifact/header checks passed",
     "implemented_by": "Codex",
     "records": [
       "N-011",
@@ -2103,6 +2103,32 @@
     "retained_consumer_argument_failure": "runs/2026-10-12-feedback-prepared-website.json",
     "route_evidence": "runs/2026-10-12-feedback-no-change-routes.json",
     "focused_local_python_tests": 229,
-    "review_finding": "runs/2026-10-12-feedback-review-state-gap.json"
+    "review_finding": "runs/2026-10-12-feedback-review-state-gap.json",
+    "protected_merge": "runs/2026-10-12-feedback-protected-merge.json",
+    "publication": "runs/2026-10-12-feedback-publication.json"
+  },
+  "backup_retention_controls": {
+    "status": "current source and full-suite checks passed; protected merge and publication pending",
+    "implemented_by": "Codex",
+    "records": [
+      "N-011",
+      "F-073"
+    ],
+    "architecture": "docs/backup-retention-plan.md",
+    "guide": "docs/backup-retention.md",
+    "result": "docs/backup-retention-result.md",
+    "linux_evidence": "runs/2026-10-12-backup-retention-ordered-linux.json",
+    "early_refusal_evidence": "runs/2026-10-12-backup-retention-ordered-refusals.json",
+    "actual_encrypted_controls": 7,
+    "actual_early_refusals": 7,
+    "physical_erasure_verified": false,
+    "production_changes": false,
+    "actual_participant_data": false,
+    "replacement_host_recovery_verified": false,
+    "requirements_closed": 0,
+    "website_evidence": "runs/2026-10-12-backup-retention-final-website.json",
+    "route_evidence": "runs/2026-10-12-backup-retention-final-routes.json",
+    "full_suite": "runs/2026-10-12-backup-retention-final-full-suite.json",
+    "full_python_tests_passed": 2901
   }
 }

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-151530-encrypted-backup-retention-controls-0a2da9e5",
+  "recorded_at": "2026-10-12T15:15:30.286014+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a7cbbafba35c6fa09af9bc41739261035f8d595d",
+  "changed": "Add a disposable encrypted backup retention drill, safe-run guards, operator guide and source-bound CI coverage; record the verified feedback publication.",
+  "proves": "Seven actual encrypted Linux control groups and seven early refusals passed; feedback publication matched 762 artifacts and four exact headers per origin.",
+  "limits": "Logical SQL deletion and named backup expiry are not physical erasure, production policy acceptance, replacement-host recovery, participant acceptance or full requirement closure.",
+  "scope_ids": [
+    "N-011",
+    "F-073"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "156bcfd19b895c86aa78c6d29f752516ac51181cf43854c3066da4ff8038d857",
+    "README.md": "357e2e621f7be1da110832c0ea88360e8abc65ddb6624e4f0d6a9a0b878c02b6",
+    "docs/scope-50-execution.md": "70ad246abebabaeb44baa2a51737027e46bf9a1d8add5375cb5efd8a2c88eba1",
+    "docs/scope-progress.json": "68abdc0869e01786f56e1af32c37f13b66f6bc65119a193fcaad0d0db95fa846",
+    "docs/scope-progress.md": "874d3c6c593add7e80af3d4ab7f0f0901f2a0e85b4f03a3668ab526f98b2690d",
+    "eval/revalidation.json": "fe61a81a07cfa80f232d345193051dccb11a035302f895dc7486ca58ba83dd8b",
+    "scripts/verify-route-boundaries.py": "7afcf553b82faf0d7da96ff7dfcdf67c842ea0583e4ffd088b6f9f5eae55ad16",
+    "site/scripts/prepare.mjs": "82661ade6cdb5cf661c31a31e8d41787c49a63dc34fd4eaea58e8de766a51459",
+    "state.json": "054b42a002f3d8dcb1827232e369673c26fd3f31ec94916fc09627eb9bb6502b",
+    "tests/test_website_evidence_inputs.py": "865d699687e51e56b33314baaf54088788fca83cd5a55ad70b5f6cb9d5d76f8a",
+    "docs/backup-retention-plan.md": "0ff063454c2958d6a20aa48466eeee2c3c2ab7428d799c95c2ca48bce30d7ef0",
+    "docs/backup-retention-result.md": "fcb89c5c39262df17516e2c755cb9ba5a2bd51780ea3647ac66474562dac8ab3",
+    "docs/backup-retention.md": "86173aebc1c9da5126a06430f98a7544f6a3298208caf6d53157ffc4cee749cc",
+    "runs/2026-10-12-backup-retention-cache-failure.json": "73789e9124823473f8c2e9d1ed0ac7b21d532f5e6894963e5755ffcfe3c059d5",
+    "runs/2026-10-12-backup-retention-current-refusals.json": "51c48d020354b5e6f71014b8e0fe280b5955839e877d7e6a684e2f6ec107cf28",
+    "runs/2026-10-12-backup-retention-early-refusals.json": "7bdef69a6577eac3aca1fe03abf997519e257c236a59da545e468880a4c7f358",
+    "runs/2026-10-12-backup-retention-linux.json": "a393fc45e55af339a06c4cc564c9641d692345d0ce5b7b3c5181513182c62cc3",
+    "runs/2026-10-12-backup-retention-setup-refusals.json": "7f4405206b4c299377d266be203ddc9f9c00c42c9d8dcac11db37011a7ea61ea",
+    "runs/2026-10-12-backup-retention-source-order-failure.json": "60ebd750242507d92a0c44b4b3375e05812067dc0ba89a1d3a8d63281799f8e6",
+    "runs/2026-10-12-feedback-primary-preservation.json": "b272098081004b0f5703b3b0be31296ac8e7c3d3f6c60fc623a9da90e9e5adcb",
+    "runs/2026-10-12-feedback-protected-merge.json": "195e2660db8a52bea37f147dc995ec674a4088f4717021887476c9f348864272",
+    "runs/2026-10-12-feedback-publication.json": "19e5df8e65d6850204b3661d3572c8ac1622fddaf48b7f6584950880873cd8f6",
+    "scripts/verify-backup-retention.py": "24afd1c8796e4b7905153de7b593b95607f794457941cabb565731ab6127ef79",
+    "tests/test_backup_retention.py": "b315b203231659f719e8abc13215244396a385d0de630214d6538f65646236f2",
+    "tools/backup_retention.py": "b1a7abbfb5050d94ddc10434df97640f5f7ced08effa117fa9c8ac9df2d5dea1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-12-backup-retention-linux.json",
+      "sha256": "a393fc45e55af339a06c4cc564c9641d692345d0ce5b7b3c5181513182c62cc3"
+    },
+    {
+      "path": "runs/2026-10-12-backup-retention-current-refusals.json",
+      "sha256": "51c48d020354b5e6f71014b8e0fe280b5955839e877d7e6a684e2f6ec107cf28"
+    },
+    {
+      "path": "runs/2026-10-12-feedback-publication.json",
+      "sha256": "19e5df8e65d6850204b3661d3572c8ac1622fddaf48b7f6584950880873cd8f6"
+    }
+  ],
+  "checks": []
+}
