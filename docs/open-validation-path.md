@@ -17,7 +17,9 @@ Independent accuracy, accessibility and acceptance remain separate release gates
 Use Python 3.12+, Git, and an already installed Linux Podman engine. The
 setup command does not install or grant access to a privileged engine. Engine
 permissions must already work (`podman info`). Initial image/package downloads
-require a network. Docker Engine is an alternative selected with `--engine docker`;
+require a network. The one-command acceptance was executed with Linux Podman and cached pinned
+dependencies. The `--engine docker` branch has not been runtime-tested; the older
+manual Docker Compose path remains available.
 Docker Desktop has separate vendor licensing. Node is not needed for this checker.
 
 ```sh

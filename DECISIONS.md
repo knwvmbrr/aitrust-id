@@ -122,4 +122,4 @@ The recording times are current, not invented historical approval times.
 
 ## 2026-10-13 — Setup and human acceptance separated
 
-Michael replied “Yes — separate setup from human acceptance.” F-105’s named job is one documented command from a clean clone to a running local stack, with actual clean Linux setup and failure checks. F-142 retains real-person installation and accessibility acceptance. No human, physical-phone or independent accuracy result is inferred from setup. Exact question/reply: [owner receipt](../runs/2026-10-13-clean-setup-owner-decision.json).
+Michael replied “Yes — separate setup from human acceptance.” F-105 covers actual one-command clean Linux setup and failure checks. F-142 retains outside-person installation, physical-device and accessibility acceptance. No human or independent accuracy result is inferred. [Exact owner reply](../runs/2026-10-13-clean-setup-owner-decision.json).

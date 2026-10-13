@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T21:56:03.579686+00:00",
+  "updated": "2026-10-13T23:12:30.611182+00:00",
   "active_increment": "Eight original named jobs complete; current checks pass (3249 tests), protected publication pending; 79 open toward target 43",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -723,9 +723,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-13T20:52:24.400811+00:00",
-    "completed_records": 123,
-    "open_records": 79,
+    "audited_at": "2026-10-13T22:49:20.606326+00:00",
+    "completed_records": 124,
+    "open_records": 78,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -739,30 +739,24 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/scope-grouping-result.md",
+    "latest_increment": "docs/local-setup-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 43,
     "target_start_open_records": 87,
-    "target_remaining_closures": 36,
+    "target_remaining_closures": 35,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
-    "current_target_verification": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
+    "current_target_verification": "runs/2026-10-13-local-setup-current-routes.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
     "latest_owner_direction_date": "2026-10-13",
     "latest_increment_completed_ids": [
-      "F-003",
-      "F-147",
-      "F-044",
-      "F-019",
-      "F-020",
-      "F-021",
-      "F-022",
-      "F-029"
-    ]
+      "F-105"
+    ],
+    "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -977,10 +971,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current personal route review passes; new offline components and Firefox preview bound; protected publication pending",
+    "status": "Current review passes after replay/service-cleanup fixes; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-accepted-contracts-format-routes.json",
-    "source_files": 763,
+    "evidence": "runs/2026-10-13-local-setup-current-routes.json",
+    "source_files": 770,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1039,15 +1033,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-13-accepted-contracts-reviewed-PS.json",
-    "PII_REDACTED": "runs/2026-10-13-accepted-contracts-reviewed-PII_REDACTED.json",
-    "protocol": "runs/2026-10-13-accepted-contracts-reviewed-protocol.json",
-    "extension": "runs/2026-10-13-accepted-contracts-format-extension.json",
-    "website": "runs/2026-10-13-accepted-contracts-published-website.json",
+    "PS": "runs/2026-10-13-local-setup-final-PS.json",
+    "PII_REDACTED": "runs/2026-10-13-local-setup-final-PII_REDACTED.json",
+    "protocol": "runs/2026-10-13-local-setup-current-protocol.json",
+    "extension": "runs/2026-10-13-local-setup-final-extension.json",
+    "website": "runs/2026-10-13-local-setup-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T21:56:03.579686+00:00",
+  "updated_at": "2026-10-13T23:12:30.611182+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1895,13 +1889,11 @@
     "primary_preservation": "runs/2026-10-12-editorial-primary-preservation.json"
   },
   "python_tests_current_pass": {
-    "passed": 3249,
+    "passed": 3317,
     "skipped": 5,
-    "upstream_warning": 1,
-    "evidence": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
-    "source_unchanged_during_execution": true,
-    "independent_accuracy_evidence": false,
-    "post_suite_change": "One trailing whitespace removed from test driver; 37 package/driver controls and extension/route review refreshed. Hosted exact-head full suite required before merge."
+    "source_unchanged": true,
+    "evidence": "runs/2026-10-13-local-setup-current-full-suite.json",
+    "independent_accuracy_evidence": false
   },
   "restore_isolation": {
     "status": "development_guard_protected_merge_and_publication_verified; production_installation_pending",
@@ -2456,11 +2448,17 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "implementation under test; clean Linux run pending",
+    "status": "actual clean Linux setup and ten failure controls pass; protected publication pending",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
     "collection_enabled": false,
-    "independent_release_validated": false
+    "independent_release_validated": false,
+    "evidence": "runs/2026-10-13-one-command-linux-setup.json",
+    "cache_scope": "Installed usable Podman and pinned dependency caches; not a blank-host installer",
+    "human_acceptance_complete": false,
+    "physical_phone_tested": false,
+    "retained_refusals": "runs/2026-10-13-one-command-setup-refusals.json",
+    "fixture_cleanup": "runs/2026-10-13-one-command-fixture-cleanup.json"
   }
 }

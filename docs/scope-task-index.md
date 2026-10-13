@@ -90,7 +90,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-104 | Defined dependency-failure behaviour | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-044 | Optional registry and retention proposal | [ORG-AUDIT](scope-delivery.md#org-audit) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-045 | Reporting intake, hash-only | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-105 | One documented command: clean clone → running stack | [WP-MOBILE](scope-delivery.md#wp-mobile) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-105 | One documented command: clean clone → running stack | [WP-MOBILE](scope-delivery.md#wp-mobile) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-050 | Gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-051 | Executable evaluation harness | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-106 | Wilson confidence intervals, lower-bound gating, n published beside every figure | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |

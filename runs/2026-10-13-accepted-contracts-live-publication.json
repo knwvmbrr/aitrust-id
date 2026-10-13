@@ -1,0 +1,93 @@
+{
+  "captured_at": "2026-10-13T22:58:23.834297+00:00",
+  "pass": true,
+  "source_commit": "61379e8f588d99a8af93b14daa69e8f1249b04af",
+  "protected_pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/67",
+  "reviewed_head": "2a2e667139c4a543ab9a7e5d4329509cba429184",
+  "required_ci_successes": 22,
+  "unresolved_review_threads": 0,
+  "protected_policy_unchanged": true,
+  "actual_public_byte_verification": {
+    "captured_at": "2026-10-13T22:27:04.755220+00:00",
+    "pass": true,
+    "source_commit": "61379e8f588d99a8af93b14daa69e8f1249b04af",
+    "artifacts_per_origin": 259,
+    "matching_artifacts": 777,
+    "origins": [
+      {
+        "origin": "https://f5cffceb.aitrust-id.pages.dev",
+        "matching_artifacts": 259,
+        "security_headers_present": true
+      },
+      {
+        "origin": "https://aitrustid.com",
+        "matching_artifacts": 259,
+        "security_headers_present": true
+      },
+      {
+        "origin": "https://www.aitrustid.com",
+        "matching_artifacts": 259,
+        "security_headers_present": true
+      }
+    ],
+    "scope": "Exact decoded HTTP bytes of the reviewed build; not independent source, accuracy or physical-device validation",
+    "independent_accuracy_evidence": false
+  },
+  "actual_public_header_verification": {
+    "captured_at": "2026-10-13T22:36:11.561064+00:00",
+    "pass": true,
+    "exact_headers_per_origin": 5,
+    "origins": [
+      {
+        "origin": "https://f5cffceb.aitrust-id.pages.dev",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer",
+          "permissions-policy": "camera=(), microphone=(), geolocation=()"
+        }
+      },
+      {
+        "origin": "https://aitrustid.com",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer",
+          "permissions-policy": "camera=(), microphone=(), geolocation=()"
+        }
+      },
+      {
+        "origin": "https://www.aitrustid.com",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer",
+          "permissions-policy": "camera=(), microphone=(), geolocation=()"
+        }
+      }
+    ],
+    "source_commit": "61379e8f588d99a8af93b14daa69e8f1249b04af",
+    "scope": "Exact reviewed static header values over HTTPS; not universal security or independent tag accuracy."
+  },
+  "closed_jobs": [
+    "F-003",
+    "F-044",
+    "F-147",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "scope_counts_at_publication": {
+    "completed": 123,
+    "open": 79,
+    "preserved": 202
+  },
+  "independent_release_validated": false,
+  "research_collection_enabled": false,
+  "scope": "Publication of the accepted eight-job increment; later setup work is separate and remains publication pending."
+}

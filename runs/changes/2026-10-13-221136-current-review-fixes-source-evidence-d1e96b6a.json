@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-221136-current-review-fixes-source-evidence-d1e96b6a",
+  "recorded_at": "2026-10-13T22:11:36.932301+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "892d878451c9061e318793f34c2d7fb87209d25c",
+  "changed": "Bind the current replay receipt, renewed browser/site checks and full test results after review fixes; select current evidence in preservation-negative tests.",
+  "proves": "3,253 Python tests pass with 5 platform skips and stable source. All five capability reviews, all eight website phases and 15 real Linux replay cases pass. Current personal endpoint, production source, device inputs and Chrome permissions are unchanged.",
+  "limits": "The first full rerun caught three tests pinned to historical replay source; that failed receipt is retained. Independent release remains unmet, Firefox human/current-vendor acceptance remains open, and protected publication is pending.",
+  "scope_ids": [
+    "F-003",
+    "F-156",
+    "F-093"
+  ],
+  "files": {
+    "tests/test_route_boundaries.py": "48ce82cbbbf69130ee753f665169c7ed9fbe6b6647a3f67676a8fe384c4b08e8",
+    "eval/route-boundaries.json": "4833b5303716d79faae159a10d9905624100690396569faf41b77829cda6ef62",
+    "state.json": "f3661439495613fb57faa5639a520efe45731c46482a8a8c2fa67f03e1b1299e",
+    "runs/2026-10-13-review-fixes-current-website.json": "be3e67a149d6cfa05cde30a3ef3abaad22d7e695406cdd6739bab3d997c477e1",
+    "runs/2026-10-13-review-fixes-eight-phases.json": "c1aca06185528bc76377b51f2468aa411051bad607e31e386661e8096b004d73",
+    "runs/2026-10-13-review-fixes-routes.json": "fa2bb745236820a533aa52f76739c199f1564768a28654e32491859a65ff9029",
+    "runs/2026-10-13-review-fixes-full-suite.json": "86f5b76d64debc219175bae319574a2be91ddc7a31194d8dee567501c20b8641",
+    "runs/2026-10-13-review-fixes-current-full-suite.json": "952a227ca50a342986bcaeaa632976898140e3f4dd4b9fd5b02c7e4bd8e3a588",
+    "runs/2026-10-13-review-fixes-current-routes.json": "4787e2b9868e657b2aaf58a7d1591c164b1c1f30f8cb2848a37fbc429e39ddf8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-review-fixes-current-full-suite.json",
+      "sha256": "952a227ca50a342986bcaeaa632976898140e3f4dd4b9fd5b02c7e4bd8e3a588"
+    },
+    {
+      "path": "runs/2026-10-13-review-fixes-current-routes.json",
+      "sha256": "4787e2b9868e657b2aaf58a7d1591c164b1c1f30f8cb2848a37fbc429e39ddf8"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:11:37.349721+00:00"
+    }
+  ]
+}

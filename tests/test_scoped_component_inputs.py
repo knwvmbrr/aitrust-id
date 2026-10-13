@@ -6,7 +6,8 @@ import pytest
 from protocol import revalidation as r
 ROOT=Path(__file__).resolve().parents[1]
 REQUIRED={'protocol':['docs/master-scope.json','docs/scope-progress.json','GOVERNANCE.md',
-                       'deploy/research/metadata-pilot-policy.json','runs/2026-10-13-metadata-pilot-owner-decision.json'],
+                       'deploy/research/metadata-pilot-policy.json','runs/2026-10-13-metadata-pilot-owner-decision.json','scripts/setup-local.py','tests/test_local_setup.py',
+                       'runs/2026-10-13-clean-setup-owner-decision.json','runs/2026-10-13-one-command-linux-setup.json'],
           'extension':['LICENSE','scripts/build-firefox-extension.py','extension/src/firefox/permissions.js']}
 
 

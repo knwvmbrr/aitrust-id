@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-220256-website-environment-refusal-71cfe0ad",
+  "recorded_at": "2026-10-13T22:02:56.601472+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "892d878451c9061e318793f34c2d7fb87209d25c",
+  "changed": "Preserve the failed website renewal after an incomplete command PATH prevented npm startup.",
+  "proves": "The build controller invalidated success and reported child_startup_failed; no passing website receipt or publication was claimed.",
+  "limits": "Retry uses the existing configured Node/npm runtime; no source behavior change or requirement completion.",
+  "scope_ids": [
+    "F-093"
+  ],
+  "files": {
+    "runs/2026-10-13-review-fixes-website.json": "ae199b98f03c31e34dd8e72585de5ac0899bc34e1238daa566a2c9ee389753f7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-review-fixes-website.json",
+      "sha256": "ae199b98f03c31e34dd8e72585de5ac0899bc34e1238daa566a2c9ee389753f7"
+    }
+  ],
+  "checks": []
+}

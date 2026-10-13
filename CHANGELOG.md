@@ -2,6 +2,78 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-231230-verified-one-command-setup-increment-ee8983fb
+
+Recorded 2026-10-13T23:12:30.694697+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete source-bound setup acceptance, renew the five component checks and eight website phases, record full combined regression and remove owned staging fixtures.
+- **Evidence.** 3,317 tests pass with five platform skips and stable source. All current capability checks and the route guard pass. Actual clean-clone Linux setup and ten failure controls pass; eight owned temporary directories, one stale owned network and nine prime tags were removed without global pruning. Staging is healthy. [Change record](./runs/changes/2026-10-13-231230-verified-one-command-setup-increment-ee8983fb.json).
+- **Not claimed.** 124 complete and 78 open; target 43 remains unmet. This is cached-dependency Linux Podman setup, not outside-person/physical-phone/accessibility or independent tag-release acceptance. Protected publication remains pending.
+
+
+### 2026-10-13-230627-corrected-setup-protocol-review-0cbba77f
+
+Recorded 2026-10-13T23:06:27.759313+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew the protocol recipe after correcting generated decision prose and retain the owner-approved setup acceptance.
+- **Evidence.** The exact current protocol recipe passes; real Linux setup evidence remains source-matched and human acceptance remains separate. [Change record](./runs/changes/2026-10-13-230627-corrected-setup-protocol-review-0cbba77f.json).
+- **Not claimed.** Website and full-suite renewals and protected publication remain pending. No independent tag release or data collection.
+
+
+### 2026-10-13-230523-prepared-generated-setup-decision-612b9c87
+
+Recorded 2026-10-13T23:05:23.512808+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the public decision download from the corrected generated decision prose.
+- **Evidence.** The site builds and the public decision reference reflects the exact preserved history and owner approval. [Change record](./runs/changes/2026-10-13-230523-prepared-generated-setup-decision-612b9c87.json).
+- **Not claimed.** Combined regression renewal and protected publication remain pending.
+
+
+### 2026-10-13-230514-setup-review-and-prior-publication-receipts-1dcb6712
+
+Recorded 2026-10-13T23:05:14.437697+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the current setup route/state review, retained failed-attempt summary and the actual protected/live publication of the prior eight-job increment.
+- **Evidence.** PR 67 merged with unchanged protected checks; 777 public responses and five exact headers per origin match the reviewed build. Current setup source and ten Linux failure controls remain valid. [Change record](./runs/changes/2026-10-13-230514-setup-review-and-prior-publication-receipts-1dcb6712.json).
+- **Not claimed.** The current setup increment remains publication pending. A documentation-source correction requires fresh protocol/website review; no independent tag accuracy or human acceptance is granted.
+
+
+### 2026-10-13-230310-generated-setup-decision-reconciliation-183f9b89
+
+Recorded 2026-10-13T23:03:10.385143+00:00 · Contributor: Codex · change
+
+- **Changed.** Render the accepted setup separation through the actual decision-history generator, preserving all 15 seed decisions and existing dated approvals.
+- **Evidence.** The exact decision-prose source check passes. The full suite exposed this one stale generated-prose assertion; its failed receipt remains recorded. [Change record](./runs/changes/2026-10-13-230310-generated-setup-decision-reconciliation-183f9b89.json).
+- **Not claimed.** No seed proposal, taxonomy or institutional role is adopted. Current protocol/website evidence is renewed after this documentation correction.
+
+
+### 2026-10-13-225637-setup-current-component-checks-f797f0c7
+
+Recorded 2026-10-13T22:56:37.299284+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew source-bound detector, redaction, protocol and extension checks after binding the completed Linux setup and preserving the latest merged fixes.
+- **Evidence.** All four capability recipes pass with unchanged consumed inputs during execution. Setup evidence remains source-matched; detector method and independent accuracy are unchanged. [Change record](./runs/changes/2026-10-13-225637-setup-current-component-checks-f797f0c7.json).
+- **Not claimed.** Website renewal, full combined-suite execution and protected publication are still pending; no human acceptance or tag release is granted.
+
+
+### 2026-10-13-225500-prepared-setup-scope-navigation-3863f9a1
+
+Recorded 2026-10-13T22:55:00.210219+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the public scope and decision downloads with the accepted setup/human separation and actual F-105 evidence.
+- **Evidence.** The site builds from the combined source; 202 scope identities and every pending human/tag gate remain. Actual setup evidence validates against the current implementation. [Change record](./runs/changes/2026-10-13-225500-prepared-setup-scope-navigation-3863f9a1.json).
+- **Not claimed.** This prepared build is not yet published; the 43-open target remains unmet and independent tag accuracy is unchanged.
+
+
+### 2026-10-13-225117-actual-clean-linux-setup-closure-b09fd7e1
+
+Recorded 2026-10-13T22:51:17.552164+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the owner-approved one-command Linux setup job, retain human acceptance under F-142, and source-bind its actual runtime/failure evidence in CI and revalidation.
+- **Evidence.** A clean committed Linux clone started three constrained source-matched services, passed the real authenticated schema/PS/redaction pipeline and ten actual failure/privacy/owned-cleanup controls. Original staging IDs, images and configuration were restored. All 202 records remain: 124 complete, 78 open. [Change record](./runs/changes/2026-10-13-225117-actual-clean-linux-setup-closure-b09fd7e1.json).
+- **Not claimed.** The 43-open target remains unmet. Installed usable Linux Podman and cached pinned dependencies were prerequisites; no cold-host daemon install, tested Docker branch, human/phone/accessibility acceptance, tag release or collection is claimed.
+
+
 ### 2026-10-13-223907-bounded-private-service-addresses-ac7859fa
 
 Recorded 2026-10-13T22:39:07.987296+00:00 · Contributor: Codex · change
@@ -54,6 +126,31 @@ Recorded 2026-10-13T21:56:03.670947+00:00 · Contributor: Codex · change
 - **Changed.** Implement exclusive private one-command local setup and owned cleanup; record the owner-approved separation from human acceptance.
 - **Evidence.** 49 focused setup and existing checker tests pass; credentials, port conflicts, ownership changes and weakened effective limits are refused. [Change record](./runs/changes/2026-10-13-215603-one-command-setup-implementation-1269ef28.json).
 - **Not claimed.** Actual clean Linux setup is still pending. F-105 remains open; F-142, independent accuracy and collection remain unaccepted.
+### 2026-10-13-221136-current-review-fixes-source-evidence-d1e96b6a
+
+Recorded 2026-10-13T22:11:36.932301+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current replay receipt, renewed browser/site checks and full test results after review fixes; select current evidence in preservation-negative tests.
+- **Evidence.** 3,253 Python tests pass with 5 platform skips and stable source. All five capability reviews, all eight website phases and 15 real Linux replay cases pass. Current personal endpoint, production source, device inputs and Chrome permissions are unchanged. [Change record](./runs/changes/2026-10-13-221136-current-review-fixes-source-evidence-d1e96b6a.json).
+- **Not claimed.** The first full rerun caught three tests pinned to historical replay source; that failed receipt is retained. Independent release remains unmet, Firefox human/current-vendor acceptance remains open, and protected publication is pending.
+
+
+### 2026-10-13-220256-website-environment-refusal-71cfe0ad
+
+Recorded 2026-10-13T22:02:56.601472+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the failed website renewal after an incomplete command PATH prevented npm startup.
+- **Evidence.** The build controller invalidated success and reported child_startup_failed; no passing website receipt or publication was claimed. [Change record](./runs/changes/2026-10-13-220256-website-environment-refusal-71cfe0ad.json).
+- **Not claimed.** Retry uses the existing configured Node/npm runtime; no source behavior change or requirement completion.
+
+
+### 2026-10-13-220133-review-replay-and-service-cleanup-7541cf0e
+
+Recorded 2026-10-13T22:01:33.121423+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep missing replay assertion/credentials invalid and reserve Unavailable for absent originals; reap owned Firefox fixture children after graceful shutdown stalls.
+- **Evidence.** 81 focused tests pass, including actual children that ignore pipe shutdown and SIGTERM. Fifteen actual Linux pipeline replay cases pass on current source. All four non-website capability revalidations pass. [Change record](./runs/changes/2026-10-13-220133-review-replay-and-service-cleanup-7541cf0e.json).
+- **Not claimed.** Firefox remains an unreleased preview; full actual Firefox integration evidence predates this cleanup-only fix. No independent accuracy or physical device acceptance is granted.
 
 
 ### 2026-10-13-214856-final-driver-source-review-6ee0d8a7

@@ -15,12 +15,12 @@ class InputUnavailable(ValueError):
 EXIT={'matched':0,'mismatch':1,'input_mismatch':2,'unavailable':3,'invalid':4}
 
 
-def read_private(path,limit,credential=False):
+def read_private(path,limit,credential=False,allow_absent=False):
     path=Path(path)
     if any(p.is_symlink() for p in path.parents):raise ValueError('Unsupported input')
     try:fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
     except OSError as exc:
-        if exc.errno==errno.ENOENT:raise InputUnavailable('Input unavailable') from None
+        if exc.errno==errno.ENOENT and allow_absent:raise InputUnavailable('Input unavailable') from None
         raise ValueError('Unsupported input') from None
     with os.fdopen(fd,'rb') as stream:
         info=os.fstat(stream.fileno())
@@ -49,7 +49,7 @@ def main():
             if refused:
                 result=refused
             else:
-                text=read_private(a.original_text_file,800_000,credential=True).decode('utf-8',errors='strict')
+                text=read_private(a.original_text_file,800_000,credential=True,allow_absent=True).decode('utf-8',errors='strict')
                 token=read_private(a.token_file,257,credential=True).decode('ascii').rstrip('\n')
                 result=replay(record,text,token)
     except InputUnavailable:

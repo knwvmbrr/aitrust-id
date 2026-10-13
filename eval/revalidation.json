@@ -197,7 +197,16 @@
         "docs/master-scope.json",
         "docs/scope-progress.json",
         "GOVERNANCE.md",
-        "tests/test_scoped_component_inputs.py"
+        "tests/test_scoped_component_inputs.py",
+        "scripts/setup-local.py",
+        "scripts/verify-local-setup-evidence.py",
+        "tests/test_local_setup.py",
+        "tests/test_local_setup_evidence.py",
+        "docs/local-setup-plan.md",
+        "docs/local-setup-result.md",
+        "docs/open-validation-path.md",
+        "runs/2026-10-13-clean-setup-owner-decision.json",
+        "runs/2026-10-13-one-command-linux-setup.json"
       ],
       "commands": [
         [
@@ -333,6 +342,19 @@
           "pytest",
           "tests/test_scoped_component_inputs.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_local_setup.py",
+          "tests/test_local_setup_evidence.py",
+          "tests/test_local_cli.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-local-setup-evidence.py"
         ]
       ]
     },
