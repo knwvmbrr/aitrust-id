@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-174541-ps-efficiency-publication-evidence-72283494
+
+Recorded 2026-10-13T17:45:41.102004+00:00 · Contributor: Codex · change
+
+- **Changed.** Record verified PS efficiency publication, protected merge, exact served bytes/headers and preservation of unrelated primary files; clear dated publication-pending state.
+- **Evidence.** Reviewed code is merged normally, 777 served artifacts match across three origins, four exact headers per origin match, all five capability receipts remain current and 12 unrelated files remain byte-identical. [Change record](./runs/changes/2026-10-13-174541-ps-efficiency-publication-evidence-72283494.json).
+- **Not claimed.** The increment closes zero full requirements: 87 remain open against target 43. No independent accuracy, physical-device, hardware-attestation, whole-service speedup or tag-release claim.
+
+
 ### 2026-10-13-173100-ps-reviewed-final-verification-8727e244
 
 Recorded 2026-10-13T17:31:00.176198+00:00 · Contributor: Codex · change

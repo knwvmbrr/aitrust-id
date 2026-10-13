@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-174541-ps-efficiency-publication-evidence-72283494",
+  "recorded_at": "2026-10-13T17:45:41.102004+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "783c50aa78f5925764e810d3fd5ccbc1601f21df",
+  "changed": "Record verified PS efficiency publication, protected merge, exact served bytes/headers and preservation of unrelated primary files; clear dated publication-pending state.",
+  "proves": "Reviewed code is merged normally, 777 served artifacts match across three origins, four exact headers per origin match, all five capability receipts remain current and 12 unrelated files remain byte-identical.",
+  "limits": "The increment closes zero full requirements: 87 remain open against target 43. No independent accuracy, physical-device, hardware-attestation, whole-service speedup or tag-release claim.",
+  "scope_ids": [
+    "F-113",
+    "F-003",
+    "N-012"
+  ],
+  "files": {
+    "runs/2026-10-13-ps-efficiency-final-delivery.json": "8c8e45929ae863037d05cc5254d43b024c0c6ac4c4de72980157cb224b5934f0",
+    "runs/2026-10-13-ps-efficiency-primary-preservation.json": "67a7d41099bba692abf999731e6480badb3f34de2014b368362c9ad9d8465481",
+    "runs/2026-10-13-ps-efficiency-protected-merge.json": "76d8fe0f570a35376e140c45ac309e6061dc9456d4ef259f4dd04213b8d17210",
+    "runs/2026-10-13-ps-efficiency-publication.json": "18773e26e3c883a5073ae04069594049b33c005983ee1f9a357865e2b4aa9ca7",
+    "state.json": "91a0a543eb9d174b52fe1432ecd1755c00ea9b9c60def9f078204592c64c3c81"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-efficiency-publication.json",
+      "sha256": "18773e26e3c883a5073ae04069594049b33c005983ee1f9a357865e2b4aa9ca7"
+    },
+    {
+      "path": "runs/2026-10-13-ps-efficiency-final-delivery.json",
+      "sha256": "8c8e45929ae863037d05cc5254d43b024c0c6ac4c4de72980157cb224b5934f0"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T17:45:41.570446+00:00"
+    }
+  ]
+}
