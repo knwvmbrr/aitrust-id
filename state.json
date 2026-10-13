@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T17:14:55.855416+00:00",
+  "updated": "2026-10-13T17:31:00.074165+00:00",
   "active_increment": "Preserve PS findings while reducing unnecessary work; target 43 open, current 87 retained",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3066,
+  "python_tests_passed": 3093,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -749,7 +749,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
-    "current_target_verification": "runs/2026-10-13-ps-lazy-full-suite-complete.json",
+    "current_target_verification": "runs/2026-10-13-ps-lazy-reviewed-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
     "latest_owner_direction_date": "2026-10-13"
@@ -969,7 +969,7 @@
   "personal_route_boundaries": {
     "status": "Current personal route boundaries pass for lazy PS and source-matched service/replay; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-ps-lazy-routes-final.json",
+    "evidence": "runs/2026-10-13-ps-lazy-reviewed-routes.json",
     "source_files": 743,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1031,13 +1031,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-13-ps-lazy-current-PS.json",
     "PII_REDACTED": "runs/2026-10-13-ps-lazy-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-13-ps-lazy-current-protocol.json",
+    "protocol": "runs/2026-10-13-ps-lazy-final-protocol.json",
     "extension": "runs/2026-10-13-ps-lazy-current-extension.json",
-    "website": "runs/2026-10-13-ps-lazy-current-website.json",
+    "website": "runs/2026-10-13-ps-lazy-reviewed-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T17:14:55.855416+00:00",
+  "updated_at": "2026-10-13T17:31:00.074165+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2336,7 +2336,7 @@
     "delivery": "runs/2026-10-13-classifier-confidence-final-delivery.json"
   },
   "ps_execution_efficiency": {
-    "status": "3066 full-suite tests and all five current capabilities pass; protected merge and publication pending",
+    "status": "3093 full-suite tests and five current capabilities pass after CI timing fixture and review metadata repairs; protected merge and publication pending",
     "current_method_source_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
     "logical_revision": "context-v6",
     "paired_evidence": "runs/2026-10-13-ps-lazy-context-paired.json",
@@ -2347,9 +2347,9 @@
     "whole_pipeline_speedup_demonstrated": false,
     "physical_device_tested": false,
     "requirements_closed": 0,
-    "route_evidence": "runs/2026-10-13-ps-lazy-routes-final.json",
-    "website_evidence": "runs/2026-10-13-ps-lazy-current-website.json",
-    "actual_build_phases": "runs/2026-10-13-ps-lazy-eight-phases.json",
+    "route_evidence": "runs/2026-10-13-ps-lazy-reviewed-routes.json",
+    "website_evidence": "runs/2026-10-13-ps-lazy-reviewed-website.json",
+    "actual_build_phases": "runs/2026-10-13-ps-lazy-reviewed-eight-phases.json",
     "result": "docs/ps-lazy-context-performance-result.md",
     "retained_failed_revalidations": [
       "runs/2026-10-13-ps-lazy-PS.json",
@@ -2360,11 +2360,15 @@
       "runs/2026-10-13-ps-lazy-staging-dependency-refusal.json",
       "runs/2026-10-13-ps-lazy-service-client-upload-refused.json"
     ],
-    "full_suite": "runs/2026-10-13-ps-lazy-full-suite-complete.json",
-    "tests_passed": 3066,
+    "full_suite": "runs/2026-10-13-ps-lazy-reviewed-full-suite.json",
+    "tests_passed": 3093,
     "tests_skipped": 5,
     "retained_full_suite_failure": "runs/2026-10-13-ps-lazy-full-suite-accepted.json",
     "golden_bundle_repaired": "Exact new projection hash measured in both browser engines; deterministic projection acceptance unchanged",
-    "publication_pending": true
+    "publication_pending": true,
+    "review_repair": "runs/2026-10-13-ps-lazy-provenance-repair.json",
+    "reviewed_head_before_repair": "7e514c1934f5e5032ce0c0a62b5aa8e92e9a763e",
+    "fresh_review_of_corrected_head_claimed": false,
+    "retained_ci_failure": "runs/2026-10-13-ps-lazy-ci-timing-fixture-refusal.json"
   }
 }

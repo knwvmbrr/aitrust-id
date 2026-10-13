@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-173100-ps-reviewed-final-verification-8727e244
+
+Recorded 2026-10-13T17:31:00.176198+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete review-metadata and CI timing dependency repairs; refresh exact-source website, protocol, route and full-suite evidence without promoting the scope counter.
+- **Evidence.** 3093 tests pass with five platform skips and 743 unchanged bound inputs; all five capabilities assess current, actual eight website phases pass, and 31 JavaScript timing checks pass. [Change record](./runs/changes/2026-10-13-173100-ps-reviewed-final-verification-8727e244.json).
+- **Not claimed.** Earlier automated review was on the previous head; no new review invented. 87 requirements remain open, target 43 unmet; no independent accuracy, physical-device, hardware-attestation or release claim.
+
+
+### 2026-10-13-172502-ps-reviewed-protocol-revalidation-af0fddeb
+
+Recorded 2026-10-13T17:25:02.295288+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh protocol source receipt after adding paired-provenance refusal tests to CI; preserve earlier website execution as historical after the metadata validator changed.
+- **Evidence.** Current protocol commands pass against the updated CI source; benchmark validation and independent gate boundaries remain distinct. [Change record](./runs/changes/2026-10-13-172502-ps-reviewed-protocol-revalidation-af0fddeb.json).
+- **Not claimed.** Fresh website and full-suite review-repair verification remain pending; no accuracy, release or requirement completion promoted.
+
+
+### 2026-10-13-172347-ps-provenance-review-repair-39594947
+
+Recorded 2026-10-13T17:23:47.339049+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair review finding on paired benchmark provenance: admit only exact metadata schemas, UTC measurement time, supported host-field types/ranges and scalar profile conditions; include the refusal tests in CI.
+- **Evidence.** 59 selected tests pass; timestamp, host, extra claims, missing conditions and unsafe condition types are rejected. Exact-source benchmark observations remain unchanged. [Change record](./runs/changes/2026-10-13-172347-ps-provenance-review-repair-39594947.json).
+- **Not claimed.** Declared execution metadata is not independent hardware attestation; no new speed, accuracy, tag release or requirement closure claim. Prior reviewed head differs from corrected source.
+
+
+### 2026-10-13-171733-ps-ci-timing-fixture-6470233a
+
+Recorded 2026-10-13T17:17:33.268673+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair the CI-only JavaScript timing test to consume the current measured evaluator source, preserving all stale-source and corruption refusals.
+- **Evidence.** All 31 JavaScript timing tests pass with the current actual staging report; initial scope-plan check failure retained. [Change record](./runs/changes/2026-10-13-171733-ps-ci-timing-fixture-6470233a.json).
+- **Not claimed.** The earlier full Python pass did not exercise this JavaScript suite. No gate bypass, accuracy claim or requirement closure; final website/source bindings being refreshed.
+
+
 ### 2026-10-13-171455-ps-efficiency-final-verification-29064226
 
 Recorded 2026-10-13T17:14:55.963777+00:00 · Contributor: Codex · change

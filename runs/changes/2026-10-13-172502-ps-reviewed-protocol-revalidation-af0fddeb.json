@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-172502-ps-reviewed-protocol-revalidation-af0fddeb",
+  "recorded_at": "2026-10-13T17:25:02.295288+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7e514c1934f5e5032ce0c0a62b5aa8e92e9a763e",
+  "changed": "Refresh protocol source receipt after adding paired-provenance refusal tests to CI; preserve earlier website execution as historical after the metadata validator changed.",
+  "proves": "Current protocol commands pass against the updated CI source; benchmark validation and independent gate boundaries remain distinct.",
+  "limits": "Fresh website and full-suite review-repair verification remain pending; no accuracy, release or requirement completion promoted.",
+  "scope_ids": [
+    "F-113"
+  ],
+  "files": {
+    "runs/2026-10-13-ps-lazy-final-protocol.json": "33108bb5d623d4fa2d65ad366c02452138a64237c32457e57c08b1f937e6fc5c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-lazy-final-protocol.json",
+      "sha256": "33108bb5d623d4fa2d65ad366c02452138a64237c32457e57c08b1f937e6fc5c"
+    }
+  ],
+  "checks": []
+}

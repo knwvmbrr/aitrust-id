@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-13T17:12:12.779338+00:00",
+  "reviewed_at": "2026-10-13T17:27:55.587308+00:00",
   "reviewed_by": "Codex \u2014 unchanged PS finding semantics with lazy context; refreshed current source-bound service, replay, browser and website evidence; personal access and collection boundaries unchanged",
   "rules": [
     "X-01",
@@ -21,7 +21,7 @@
     ".gitattributes": "8f69fdb101cf018af8e37f66cf305518dbbe95ee7356e6a05ff7e601ac7678c9",
     ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
     ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
-    ".github/workflows/ci.yml": "747d97abbbcf90f0c1858648c54bf9f1427ba1740a51db57fe5a1d0fabed7606",
+    ".github/workflows/ci.yml": "a127ff46eaa8d882b1d3d9e4e123bb3a630f9df724a2950b386983596939205d",
     ".github/workflows/manifest-inspection.yml": "451b8df145c747ca53c6295ef8dcb534aedfb5c4ccf9608814715d85b962a220",
     ".github/workflows/metadata-storage.yml": "efbeca80da6ad12bff4c2e7e6373701e2afe38995aa0c21c5071528d1a0d158a",
     "deploy/backup/bootstrap.sh": "88edbdfcdf3c641ffb358ab193a51597d5bfcc1f34acf070ecdbb963a9512762",
@@ -515,7 +515,7 @@
     "scripts/verify-nli-profile.py": "8bf7165d012d04a5755d7c1df8c2be3b70960af25ec3352f90693e2fd344fdf7",
     "scripts/verify-nli-references.py": "9a738042491d2b87b55293e5dae5fc965793b926063278f583708d2d465e9a4d",
     "scripts/verify-private-policy.py": "22b5725b403f87e4ecdb68663b66994320074e4439c5a6d618e0e88d011f0197",
-    "scripts/verify-ps-efficiency.py": "eb4503b8d0a798841dfe29b5b5164f25279618d496cc0c68274f79360f90e07d",
+    "scripts/verify-ps-efficiency.py": "99c08706ba84cc0efb6751ccd6b24d85e122b89838c2854a11677ed0bf6c30ac",
     "scripts/verify-quantitative-observations.py": "7a49df7f59671810e0943abcf86731e2264a6361564310ec53090f9779f71de0",
     "scripts/verify-redistribution-notices.py": "25a47193c9e1ee1eb4582047fa575234badfecc9eb1d15d76d9e5fe4140002e1",
     "scripts/verify-reference-review-windows.py": "fd1c118e04e5f919a3d2eb950ada2715ec6c4ccd7cd228b3154062cacab6c1f6",
@@ -664,7 +664,7 @@
     "tests/group-receipts.cjs": "4704ada4d0732654b1b651eb7fb90decc1114f83a40970dfddb8b4f4866fc829",
     "tests/key-backup.cjs": "60065961d7258d6913d3c31eaabe2506647c5ec3f4a9f137e98631645fd4a4d4",
     "tests/offline-revocation.cjs": "6047130192d5e73e6e58e525b7fe108b54ba9533a9b0584fa5ffe59b200891db",
-    "tests/pipeline-timing.cjs": "d6297ab3d60a3ea5794ae3403f49340e0c2a57db1544d77f35866a1448dcf4d6",
+    "tests/pipeline-timing.cjs": "38c5c320df845ffde50fceedc86dfa079a17b4f8e31b3e6c508719272cea6a97",
     "tests/redaction-performance.cjs": "e7d4514bcb194a3f5e38258a123f07f7d0c4e36208bba92fb768c3ac2742c59f",
     "tests/restore_isolation_kernel.py": "080d16540926b449201d0eefd5e0e56aa5a052b15e65e0bf630be5cb398cc68c",
     "tests/stream-observer.cjs": "8aa27abbddb76d1cd552ee344614e7c309579e9dc251354610db5d2533fb92a8",
@@ -711,7 +711,7 @@
     "tests/test_pipeline_performance.py": "b6d9f9683edb4f0e7aabb7ca86540880560bcaae09b0c2d73c8497200dc63b71",
     "tests/test_private_policy.py": "701700ed4a4ef7e3ba5e25683ef99c6b5593f1e3fc6b26b38cbc952b7d4cbb2d",
     "tests/test_private_policy_cli.py": "aa9ad2b556bdd519bb925f3ec9f0c0057d128c0fb873a6c4706be9aa017ececd",
-    "tests/test_ps_efficiency_evidence.py": "329117f21ff6305c786871cf0a1d94462c8004cda48c0c55baf2b99fd6da700a",
+    "tests/test_ps_efficiency_evidence.py": "a518218452bd1dbead265eefe109bf19df8d288f7f09d31de5c608ab72921be4",
     "tests/test_python_input_pins.py": "59573588df5ba336c8bc2ecb859a7e1ed599534cfb61db13069ceeff944beb1f",
     "tests/test_quantitative_observations.py": "f842b79ac44b522ddf5af01f8506f875327076b328264c125cf34786cebfaa83",
     "tests/test_redaction_development_builder.py": "3f96ae25400041e1c2bbaccd6eb326bb2a215b67bbfa96ef003d948bace61fb6",
@@ -763,7 +763,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-13-ps-lazy-current-extension.json",
-    "website": "runs/2026-10-13-ps-lazy-current-website.json"
+    "website": "runs/2026-10-13-ps-lazy-reviewed-website.json"
   },
   "device_evidence": {
     "source_commit": "2cc5d265ab8ff5a94de9760ed3514031c8691e85",

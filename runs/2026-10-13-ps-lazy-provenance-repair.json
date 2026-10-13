@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-10-13T17:23:47.218478+00:00",
+  "pass": true,
+  "selected_tests_passed": 59,
+  "source_sha256": {
+    "scripts/verify-ps-efficiency.py": "99c08706ba84cc0efb6751ccd6b24d85e122b89838c2854a11677ed0bf6c30ac",
+    "tests/test_ps_efficiency_evidence.py": "a518218452bd1dbead265eefe109bf19df8d288f7f09d31de5c608ab72921be4",
+    ".github/workflows/ci.yml": "a127ff46eaa8d882b1d3d9e4e123bb3a630f9df724a2950b386983596939205d",
+    "tests/pipeline-timing.cjs": "38c5c320df845ffde50fceedc86dfa079a17b4f8e31b3e6c508719272cea6a97"
+  },
+  "log_sha256": "6307e3267a0cce292aff440e76adca986e86afec4c4740e69538061187f4f7c2",
+  "review_finding": "PR65 paired-evidence timestamp, host metadata and unexpected-field admission",
+  "repair": "Exact top-level, host and profile schemas; aware nonfuture UTC timestamp, explicit host types/ranges and safe scalar profile conditions; all new negative tests included in CI.",
+  "reviewed_head": "7e514c1934f5e5032ce0c0a62b5aa8e92e9a763e",
+  "host_metadata_is_declared_not_independent_attestation": true,
+  "requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

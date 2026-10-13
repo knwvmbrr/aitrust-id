@@ -3,12 +3,35 @@ import hashlib
 import importlib.util
 import json
 import math
+import re
+from datetime import datetime, timezone
 from pathlib import Path
 import statistics
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = 'runs/2026-10-13-ps-lazy-context-paired.json'
 
 def validate(data, root=ROOT):
+    fields = {'captured_at','pass','kind','sources','source_unchanged_during_execution',
+              'execution_host','profiles','repeats_per_profile','alternating_execution_order',
+              'scope','population_performance_claimed','independent_accuracy_evidence',
+              'user_content_used','commands_executed','network_requests','release_approved'}
+    if type(data) is not dict or set(data)!=fields:
+        raise ValueError('Unexpected paired evidence fields')
+    raw_date=data['captured_at']
+    if type(raw_date) is not str:raise ValueError('Invalid measurement timestamp')
+    try:date=datetime.fromisoformat(raw_date)
+    except ValueError:raise ValueError('Invalid measurement timestamp') from None
+    if date.utcoffset() is None or date.utcoffset().total_seconds()!=0 or date>datetime.now(timezone.utc):
+        raise ValueError('Measurement timestamp must be past or current UTC')
+    host=data['execution_host']
+    if (type(host) is not dict or set(host)!={'system','machine','logical_cpus','python'} or
+        host['system'] not in ('Darwin','Linux','Windows') or type(host['system']) is not str or
+        type(host['machine']) is not str or host['machine'] not in ('arm64','aarch64','x86_64','AMD64') or
+        type(host['logical_cpus']) is not int or not 1<=host['logical_cpus']<=4096 or
+        type(host['python']) is not str or not re.fullmatch(r'3\.[0-9]{1,2}\.[0-9]{1,3}',host['python'])):
+        raise ValueError('Invalid declared measurement host')
+    if type(data['repeats_per_profile']) is not int or type(data['network_requests']) is not int:
+        raise ValueError('Invalid measurement count types')
     spec = importlib.util.spec_from_file_location('paired_measure', root/'scripts/measure-ps-efficiency.py')
     measure = importlib.util.module_from_spec(spec); spec.loader.exec_module(measure)
     if data.get('kind') != 'paired_synthetic_ps_efficiency' or data.get('pass') is not True:
@@ -28,6 +51,12 @@ def validate(data, root=ROOT):
     if not isinstance(profiles,list) or len(profiles)!=12:raise ValueError('Incomplete paired profiles')
     def positive(v):return type(v) in (int,float) and math.isfinite(v) and v>0
     for row in profiles:
+        if type(row) is not dict or set(row)!={'profile','input_codepoints','before','after',
+                'paired_median_speedup','before_peak_python_traced_bytes','after_peak_python_traced_bytes',
+                'peak_measurement_is_not_process_rss','candidate_outputs_equal'}:
+            raise ValueError('Unexpected paired profile fields')
+        if type(row['profile']) is not str or type(row['input_codepoints']) is not int:
+            raise ValueError('Invalid profile condition types')
         key=(row.get('profile'),row.get('input_codepoints'))
         if key in seen or key[0] not in measure.FORMS or type(key[1]) is not int or key[1] not in measure.SIZES:
             raise ValueError('Unknown or duplicate profile')

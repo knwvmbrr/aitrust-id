@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-171733-ps-ci-timing-fixture-6470233a",
+  "recorded_at": "2026-10-13T17:17:33.268673+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7e514c1934f5e5032ce0c0a62b5aa8e92e9a763e",
+  "changed": "Repair the CI-only JavaScript timing test to consume the current measured evaluator source, preserving all stale-source and corruption refusals.",
+  "proves": "All 31 JavaScript timing tests pass with the current actual staging report; initial scope-plan check failure retained.",
+  "limits": "The earlier full Python pass did not exercise this JavaScript suite. No gate bypass, accuracy claim or requirement closure; final website/source bindings being refreshed.",
+  "scope_ids": [
+    "F-113"
+  ],
+  "files": {
+    "runs/2026-10-13-ps-lazy-ci-timing-fixture-refusal.json": "e8fd82746f6db58225f70c7a90fd9d9bfd8b6a15a8b0ba92a457d8be436ce174",
+    "tests/pipeline-timing.cjs": "38c5c320df845ffde50fceedc86dfa079a17b4f8e31b3e6c508719272cea6a97"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-lazy-staging-timing.json",
+      "sha256": "0ebc792efc60dbd7b6c07c8b050fee9c02d139c8541d1b9413517ea798464289"
+    },
+    {
+      "path": "runs/2026-10-13-ps-lazy-ci-timing-fixture-refusal.json",
+      "sha256": "e8fd82746f6db58225f70c7a90fd9d9bfd8b6a15a8b0ba92a457d8be436ce174"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/pipeline-timing.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T17:17:34.804259+00:00"
+    }
+  ]
+}
