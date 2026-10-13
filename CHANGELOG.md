@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-121228-verified-reference-window-48bbe4e6
+
+Recorded 2026-10-13T12:12:28.372841+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed current reference-window capability, website, route and full regression verification; updated source-bound execution evidence and current state.
+- **Evidence.** 2997 Python tests pass with five platform skips; all five current capability receipts pass; eighteen website commands and eight actual build phases pass on stable sources; 727 route source inputs match. [Change record](./runs/changes/2026-10-13-121228-verified-reference-window-48bbe4e6.json).
+- **Not claimed.** Caller declarations remain unverified as source freshness or reviewer identity. Linux optional inference environment remains unavailable, and no independent tag accuracy or full requirement closure is credited.
+
+
+### 2026-10-13-120640-reference-window-current-capabilities-44ce2696
+
+Recorded 2026-10-13T12:06:40.490216+00:00 · Contributor: Codex · change
+
+- **Changed.** Executed current source-bound PS, PII, protocol and extension verification after adding the optional reference guard to the check manifest.
+- **Evidence.** All four capability receipts pass with stable sources; protocol executes its added declared-window command and 178 selected compatibility tests. Current core tag and extension boundaries remain enforced. [Change record](./runs/changes/2026-10-13-120640-reference-window-current-capabilities-44ce2696.json).
+- **Not claimed.** Engineering revalidation only. No independent tag accuracy, actual source freshness, phone acceptance or full requirement closure.
+
+
+### 2026-10-13-120451-reference-window-scope-projection-736f7470
+
+Recorded 2026-10-13T12:04:51.603664+00:00 · Contributor: Codex · change
+
+- **Changed.** Updated generated public scope projections for the reference window component while preserving all 202 original jobs, percentages and full acceptance gates.
+- **Evidence.** The scope ledger and generated projections retain 115 complete and 87 open records; declared windows are identified as a component, not actual source freshness. [Change record](./runs/changes/2026-10-13-120451-reference-window-scope-projection-736f7470.json).
+- **Not claimed.** Planning and projection consistency only; no independent tag validation, human acceptance or full requirement closure.
+
+
+### 2026-10-13-120401-declared-reference-window-31a895a4
+
+Recorded 2026-10-13T12:04:01.164497+00:00 · Contributor: Codex · change
+
+- **Changed.** Added optional declared review-window preflight and private policy preparation to reference research; preserved default observation profiles and actual-freshness limits. Recorded footer publication and retained setup failures.
+- **Evidence.** 178 selected tests, 14 Mac command controls including actual model comparison, and 13 isolated non-root Linux controls pass. Forty-five new window tests include pre-worker refusal, post-worker expiry, clock reversal, private preparation and unchanged legacy defaults. [Change record](./runs/changes/2026-10-13-120401-declared-reference-window-31a895a4.json).
+- **Not claimed.** Caller-declared dates are not reviewer authentication or actual source freshness. The old Linux model environment is unavailable and skipped. No new tag, endpoint, training collection, independent accuracy or full requirement closure.
+
+
 ### 2026-10-13-113102-verified-footer-columns-615c079d
 
 Recorded 2026-10-13T11:31:02.003741+00:00 · Contributor: Codex · change

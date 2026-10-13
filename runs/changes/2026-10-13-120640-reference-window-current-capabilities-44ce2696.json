@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-120640-reference-window-current-capabilities-44ce2696",
+  "recorded_at": "2026-10-13T12:06:40.490216+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ac47fcecb33fbfded1084a238dbd54d512c8e2a2",
+  "changed": "Executed current source-bound PS, PII, protocol and extension verification after adding the optional reference guard to the check manifest.",
+  "proves": "All four capability receipts pass with stable sources; protocol executes its added declared-window command and 178 selected compatibility tests. Current core tag and extension boundaries remain enforced.",
+  "limits": "Engineering revalidation only. No independent tag accuracy, actual source freshness, phone acceptance or full requirement closure.",
+  "scope_ids": [
+    "F-020b",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-10-13-reference-window-current-PS.json": "9ddcb428ead1dae15308fe4ed603b6d5bb81b5196350ad6ac9d999ab5a256f24",
+    "runs/2026-10-13-reference-window-current-PII_REDACTED.json": "493233c0d1e629c69a1d1b88bff8d1fc329629003b81383b274e5501ae7802b9",
+    "runs/2026-10-13-reference-window-current-protocol.json": "c0bdf348e9250c02260c43fc9b474d0e41e15f4735547b8368eb46505b79facb",
+    "runs/2026-10-13-reference-window-current-extension.json": "c778a75669d1fb90ebdefba3ecc181666f39e357dd1fcd74c93c0ca048791921"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-reference-window-current-protocol.json",
+      "sha256": "c0bdf348e9250c02260c43fc9b474d0e41e15f4735547b8368eb46505b79facb"
+    }
+  ],
+  "checks": []
+}

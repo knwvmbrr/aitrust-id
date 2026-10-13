@@ -2435,10 +2435,11 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-11T21:06:24.197420+00:00",
+        "audited_at": "2026-10-13T12:03:02.338136+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — separate pinned-model reference observation and executed Mac/Linux controls"
+          "Codex — separate pinned-model reference observation and executed Mac/Linux controls",
+          "Codex — optional hash-bound declared-window preflight, private preparation command and actual Mac/Linux controls, 2026-10-13"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -2458,14 +2459,21 @@
           "docs/reference-revisions.md",
           "tools/reference_revision.py",
           "runs/2026-10-12-reference-revision-practice-local.json",
-          "runs/2026-10-12-reference-revision-linux.json"
+          "runs/2026-10-12-reference-revision-linux.json",
+          "docs/reference-review-window-plan.md",
+          "tools/reference_review_window.py",
+          "scripts/prepare-reference-review-windows.py",
+          "scripts/verify-reference-review-windows.py",
+          "runs/2026-10-13-reference-window-mac-current.json",
+          "runs/2026-10-13-reference-window-linux.json"
         ],
         "evidence_scope": "Working exact-reference-bound optional local model observation, source-only contracts and actual network-denied Mac/Linux synthetic commands. No independent accuracy, truth, freshness, corroboration, FI mapping or release acceptance.",
         "required_acceptance": [
           "Representative held-out reference/category validation, freshness/claim selection contract, calibrated accepted tag mapping, full FI integration and required human operation."
         ],
         "queue": "open",
-        "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established."
+        "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established.",
+        "declared_review_window_component": "Caller-declared windows bind every attached document, refuse before model use and recheck before saving. Actual source freshness and reviewer identity remain unestablished; no NF/FI mapping or independent validation is credited."
       }
     },
     {

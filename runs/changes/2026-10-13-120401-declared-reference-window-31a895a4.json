@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-120401-declared-reference-window-31a895a4",
+  "recorded_at": "2026-10-13T12:04:01.164497+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ac47fcecb33fbfded1084a238dbd54d512c8e2a2",
+  "changed": "Added optional declared review-window preflight and private policy preparation to reference research; preserved default observation profiles and actual-freshness limits. Recorded footer publication and retained setup failures.",
+  "proves": "178 selected tests, 14 Mac command controls including actual model comparison, and 13 isolated non-root Linux controls pass. Forty-five new window tests include pre-worker refusal, post-worker expiry, clock reversal, private preparation and unchanged legacy defaults.",
+  "limits": "Caller-declared dates are not reviewer authentication or actual source freshness. The old Linux model environment is unavailable and skipped. No new tag, endpoint, training collection, independent accuracy or full requirement closure.",
+  "scope_ids": [
+    "F-020b",
+    "T-NF",
+    "T-FI",
+    "F-120",
+    "F-139"
+  ],
+  "files": {
+    "docs/nli-references.md": "7374970de626f8933e460208a1939f587d7b128fc195fe318f7e78ea60e4c0b8",
+    "docs/reference-review-window-plan.md": "c1b74fd3e23919982b50c623b3fb611808f818722fd0d63ea4bbf338d3f8c27f",
+    "scripts/check-nli-references.py": "053dfa9cdf6a198d811337a9dec04dffd2d8eb2f995a1d6aec70aed31bfb4992",
+    "scripts/prepare-reference-review-windows.py": "11d729f1ad5e9a552cafae461070bc1e8ba7fab50fcb4f1b7414216959c8cc2e",
+    "scripts/verify-reference-review-windows.py": "fd1c118e04e5f919a3d2eb950ada2715ec6c4ccd7cd228b3154062cacab6c1f6",
+    "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+    "tests/test_reference_review_window.py": "62dff6565a42a82db28df4263963b2a0e4f1200610a3ef7f2bccdef63ad6d659",
+    "eval/revalidation.json": "51b70e8e73918e410a2c2c231d8e553050e6af9091d102992393a1c94c74c10f",
+    "scripts/verify-route-boundaries.py": "25134131e8a355d772e2df8dc4d759b22098aef9b3ceb1a6e394117f389e14f4",
+    ".github/workflows/ci.yml": "0824d02c2dd27fe1bb03a0b620d379039f8f90ff14cd80b222fee5d5281b1187",
+    "docs/scope-progress.json": "2169250e962b976809fe271977178da635986cabf1461fbc32a1ed573d520710",
+    "docs/scope-progress.md": "8e086f79f0ab490729b94d2e00586bc728fe69390be61f5bebc6dec63604b3db",
+    "state.json": "fdeb92bfd5227630cdc5742596c7aa28a9d135addd367b60a253c5f50463f7f1",
+    "runs/2026-10-13-reference-window-mac.json": "d9c42803b86c3489999639646a86b49a10dcf77ea15ea8428d836f14592ad86e",
+    "runs/2026-10-13-reference-window-mac-current.json": "77d5cc0bc916fa710cc8d6054ef4ff2e92e66b97251c9d028768693a2cc886ad",
+    "runs/2026-10-13-reference-window-missing-cache.json": "748d3c5f50a56b793b54c76bc626373c5230734981437a18accf1c11b7d9d808",
+    "runs/2026-10-13-reference-window-linux-preparation-failed.json": "04fe258c2ba5afe3a8be80e14cc233cd9b40740c8966006dfbdcaccf2a863b7c",
+    "runs/2026-10-13-reference-window-linux-model-unavailable.json": "cfc669012d3b86403b53af8605fb3c35e50e6e603f2e7297cdc9781e4a5c4a7b",
+    "runs/2026-10-13-reference-window-linux.json": "b460f606ae30a0c31b9f9471433bd678779280ec98e356013084359b5e076910",
+    "runs/2026-10-13-footer-columns-protected-merge.json": "3de277700fcfb14f15c60cffe42027a3658b4f6664e7ee6cefae77e5f3820c8f",
+    "runs/2026-10-13-footer-columns-publication.json": "9f4a5d2a9ab5492f0b10b1130f6f3f55eb61fc84387ef3471eb61522497601dc",
+    "runs/2026-10-13-footer-columns-live-layout.json": "4c4fb8d0fec478a07d251aa3f0d992f21da078337b80fe7952a4b550b5453398",
+    "runs/2026-10-13-footer-columns-primary-preservation.json": "f98a5c3aada213c9115250ee7d3854b81f759c373ea4e68f9f530029b2b01494"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-reference-window-mac-current.json",
+      "sha256": "77d5cc0bc916fa710cc8d6054ef4ff2e92e66b97251c9d028768693a2cc886ad"
+    },
+    {
+      "path": "runs/2026-10-13-reference-window-linux.json",
+      "sha256": "b460f606ae30a0c31b9f9471433bd678779280ec98e356013084359b5e076910"
+    }
+  ],
+  "checks": []
+}

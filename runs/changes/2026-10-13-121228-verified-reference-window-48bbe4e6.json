@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-121228-verified-reference-window-48bbe4e6",
+  "recorded_at": "2026-10-13T12:12:28.372841+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ac47fcecb33fbfded1084a238dbd54d512c8e2a2",
+  "changed": "Completed current reference-window capability, website, route and full regression verification; updated source-bound execution evidence and current state.",
+  "proves": "2997 Python tests pass with five platform skips; all five current capability receipts pass; eighteen website commands and eight actual build phases pass on stable sources; 727 route source inputs match.",
+  "limits": "Caller declarations remain unverified as source freshness or reviewer identity. Linux optional inference environment remains unavailable, and no independent tag accuracy or full requirement closure is credited.",
+  "scope_ids": [
+    "F-020b",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "9f28755b16b737fbb1935aa3b2dbf22eb2d38658293f5d44070b9d8458dfdcbe",
+    "eval/route-boundaries.json": "bc593d71abbaa1b4849394686220308553e07293bf9293fb27c3bd07930b22a3",
+    "runs/2026-10-13-reference-window-website.json": "06ebd462b41f3a344173222c1409f58a85f0c42cd8103a0191c1fe8e927f4a52",
+    "runs/2026-10-13-reference-window-full-suite.json": "918fbd17931adae6172649be1416bba26b1c697b145816db66eedd29fd515b21",
+    "runs/2026-10-13-reference-window-routes.json": "085f754a29a469f9bf4649d90ab7449d52aee1bba409f0bde2586aaf86e53e4d",
+    "runs/2026-10-13-reference-window-eight-phases.json": "7a8e6ce56941a5b980ca2de15c6d5412ceca2c5911c38f04f817a254704524d6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-reference-window-website.json",
+      "sha256": "06ebd462b41f3a344173222c1409f58a85f0c42cd8103a0191c1fe8e927f4a52"
+    },
+    {
+      "path": "runs/2026-10-13-reference-window-full-suite.json",
+      "sha256": "918fbd17931adae6172649be1416bba26b1c697b145816db66eedd29fd515b21"
+    },
+    {
+      "path": "runs/2026-10-13-reference-window-routes.json",
+      "sha256": "085f754a29a469f9bf4649d90ab7449d52aee1bba409f0bde2586aaf86e53e4d"
+    }
+  ],
+  "checks": []
+}
