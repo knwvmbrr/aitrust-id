@@ -278,9 +278,11 @@ def healthz():
 @app.post('/signals')
 def signals(doc: Doc):
     signals = []
-    context = build_context(doc.text)
+    context = None
     for pattern, name, score in [(PIPED_INSTALLER,'sig.piped_installer.v4',.97),(OBFUSCATED,'sig.obfuscated_payload.v3',.88)]:
         for match in (pipe_matches(doc.text) if pattern is PIPED_INSTALLER else pattern.finditer(doc.text)):
+            if context is None:
+                context = build_context(doc.text)
             if (not mentioned(doc.text,match.start(),context)
                     and (pattern is not PIPED_INSTALLER or
                          (not pipe_mentioned(doc.text, match,context) and fetches_stdout(match.group('fetch'))))):
@@ -289,6 +291,8 @@ def signals(doc: Doc):
                           (PROCESS_SUBSTITUTION, 'sig.remote_process_substitution.v4'),
                           (BACKTICK_SUBSTITUTION, 'sig.remote_backtick_substitution.v3')]:
         for match in pattern.finditer(doc.text):
+            if context is None:
+                context = build_context(doc.text)
             if (not substitution_mentioned(doc.text, match,context)
                     and (pattern is PROCESS_SUBSTITUTION or shell_evaluation_layer(match))
                     and fetches_stdout(match.group('fetch'))):

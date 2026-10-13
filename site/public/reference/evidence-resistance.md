@@ -1,8 +1,8 @@
 # Current evidence resistance
 
 The executable assessment is `scripts/assess-evidence-resistance.py`; its dated
-observations are in `runs/2026-10-10-evidence-resistance.json`. It inventories all
-38 signal versions and separates active measurements, inactive proposals and
+observations are in `runs/2026-10-13-ps-lazy-resistance.json`. It inventories all
+39 signal versions and separates active measurements, inactive proposals and
 unmeasured redactor coverage. It does not rank hypothetical classes as proven.
 
 For the four current shell methods, eight synthetic spellings pass Bash syntax

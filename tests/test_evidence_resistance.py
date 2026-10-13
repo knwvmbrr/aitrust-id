@@ -62,7 +62,7 @@ def test_source_changed_during_assessment_is_not_a_pass(tmp_path, monkeypatch):
 
 
 def test_published_observations_are_bound_to_current_method():
-    record = json.loads((assessment.ROOT/'runs/2026-10-10-evidence-resistance.json').read_text())
+    record = json.loads((assessment.ROOT/'runs/2026-10-13-ps-lazy-resistance.json').read_text())
     assert record['method_sha256'] == hashlib.sha256(
         (assessment.ROOT/'services/evaluator/app.py').read_bytes()).hexdigest()
     assert record['independent_accuracy_evidence'] is False

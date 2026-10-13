@@ -1,0 +1,11 @@
+# PS execution efficiency — architecture before refactor
+
+Owner direction, October 13, 2026: reduce 87 open requirements to at most 43 and measure whether enhancements improve the product. Preserve every existing acceptance gate; component progress alone is not a whole-requirement closure.
+
+The active PS method currently allocates and fills line, whitespace and quote indexes before knowing whether any command-pattern candidate exists. Build that unchanged context only when a candidate first needs it, once per evaluation. Keep the same matching order, offsets, scores, use/mention decisions, supported cases and logical context-v6 revision. The exact source SHA identifies the changed implementation. No new tag, signal meaning, confidence claim, model, permission, endpoint or collection is introduced.
+
+Before publication, compare candidate/evidence output to a frozen exact-source reference over current fixtures and deterministic mixed/Unicode/quote cases. Exercise missing-context and one-context-per-evaluation invariants. Measure old and new code in alternating order on the same host, with bounded synthetic ordinary and command-bearing text at declared sizes; retain all samples and distinguish warm calls from imports. Report time and allocation changes without inferring independent accuracy or phone performance. An unchanged or slower result remains visible.
+
+Rebuild the exact browser projection, refresh affected method-bound development charts and source receipts, and execute real browser parity. The complete gateway/redaction path must be remeasured on the existing isolated staging service before its charts can accept the new method SHA. Do not start local Docker or update production services. Retain old records and source identity so past results remain interpretable. Independent human labels and physical-device acceptance remain open.
+
+Risks: accidentally reordering candidates; repeated rather than single context construction; confusing exact source identity with an unchanged logical method; invalidating device/pipeline evidence; claiming a detector-only gain for the whole service. Mitigate with frozen-reference comparisons, current source bindings, explicit measurement scope and fail-closed chart admission. Reuse unchanged checks only when their fingerprints still assess valid.

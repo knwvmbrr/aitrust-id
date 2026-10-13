@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-172347-ps-provenance-review-repair-39594947",
+  "recorded_at": "2026-10-13T17:23:47.339049+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7e514c1934f5e5032ce0c0a62b5aa8e92e9a763e",
+  "changed": "Repair review finding on paired benchmark provenance: admit only exact metadata schemas, UTC measurement time, supported host-field types/ranges and scalar profile conditions; include the refusal tests in CI.",
+  "proves": "59 selected tests pass; timestamp, host, extra claims, missing conditions and unsafe condition types are rejected. Exact-source benchmark observations remain unchanged.",
+  "limits": "Declared execution metadata is not independent hardware attestation; no new speed, accuracy, tag release or requirement closure claim. Prior reviewed head differs from corrected source.",
+  "scope_ids": [
+    "F-113"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "a127ff46eaa8d882b1d3d9e4e123bb3a630f9df724a2950b386983596939205d",
+    "runs/2026-10-13-ps-lazy-ci-timing-fixture-refusal.json": "e8fd82746f6db58225f70c7a90fd9d9bfd8b6a15a8b0ba92a457d8be436ce174",
+    "runs/2026-10-13-ps-lazy-final-website.json": "9efdce16266c5638e50e7a4eae31dcc86f19e2d377e1e0fd97638a4f2edef26b",
+    "runs/2026-10-13-ps-lazy-provenance-repair.json": "515230d3a2e37d285259463c1f9bba34b87379191d87ed8f232c087725bc4967",
+    "scripts/verify-ps-efficiency.py": "99c08706ba84cc0efb6751ccd6b24d85e122b89838c2854a11677ed0bf6c30ac",
+    "tests/pipeline-timing.cjs": "38c5c320df845ffde50fceedc86dfa079a17b4f8e31b3e6c508719272cea6a97",
+    "tests/test_ps_efficiency_evidence.py": "a518218452bd1dbead265eefe109bf19df8d288f7f09d31de5c608ab72921be4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-lazy-provenance-repair.json",
+      "sha256": "515230d3a2e37d285259463c1f9bba34b87379191d87ed8f232c087725bc4967"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-ps-efficiency.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T17:23:47.589130+00:00"
+    }
+  ]
+}

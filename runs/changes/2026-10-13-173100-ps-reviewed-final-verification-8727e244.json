@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-173100-ps-reviewed-final-verification-8727e244",
+  "recorded_at": "2026-10-13T17:31:00.176198+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7e514c1934f5e5032ce0c0a62b5aa8e92e9a763e",
+  "changed": "Complete review-metadata and CI timing dependency repairs; refresh exact-source website, protocol, route and full-suite evidence without promoting the scope counter.",
+  "proves": "3093 tests pass with five platform skips and 743 unchanged bound inputs; all five capabilities assess current, actual eight website phases pass, and 31 JavaScript timing checks pass.",
+  "limits": "Earlier automated review was on the previous head; no new review invented. 87 requirements remain open, target 43 unmet; no independent accuracy, physical-device, hardware-attestation or release claim.",
+  "scope_ids": [
+    "F-113",
+    "F-003",
+    "N-012"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "a127ff46eaa8d882b1d3d9e4e123bb3a630f9df724a2950b386983596939205d",
+    "eval/route-boundaries.json": "474f624305dc0033d2981a9eb684b8e9f918eb502d60549c66b48eee283adb46",
+    "runs/2026-10-13-ps-lazy-ci-timing-fixture-refusal.json": "e8fd82746f6db58225f70c7a90fd9d9bfd8b6a15a8b0ba92a457d8be436ce174",
+    "runs/2026-10-13-ps-lazy-final-protocol.json": "33108bb5d623d4fa2d65ad366c02452138a64237c32457e57c08b1f937e6fc5c",
+    "runs/2026-10-13-ps-lazy-final-website.json": "9efdce16266c5638e50e7a4eae31dcc86f19e2d377e1e0fd97638a4f2edef26b",
+    "runs/2026-10-13-ps-lazy-provenance-repair.json": "515230d3a2e37d285259463c1f9bba34b87379191d87ed8f232c087725bc4967",
+    "runs/2026-10-13-ps-lazy-reviewed-eight-phases.json": "617b97a30446c5b41198e5f985ab66061c4cb181db3a4d1079a8febd32dfd5bf",
+    "runs/2026-10-13-ps-lazy-reviewed-full-suite.json": "a5caf60cc8a7cf3e9fd9c1c41b06c4df5b738ae8d2594add3480baa1f715adcd",
+    "runs/2026-10-13-ps-lazy-reviewed-routes.json": "b7aefc355e3338158d9ae21da847f869b6c5b5f795bfcc8d32eef5c3b3262089",
+    "runs/2026-10-13-ps-lazy-reviewed-website.json": "f51b8abb7aafc07507d97c28207012bff75533385cd7b4ccf05e4300abe49456",
+    "scripts/verify-ps-efficiency.py": "99c08706ba84cc0efb6751ccd6b24d85e122b89838c2854a11677ed0bf6c30ac",
+    "state.json": "111460a251bdde17b157506975a3469a5b4f99d8c973ed0a100fd75270f5e9a7",
+    "tests/pipeline-timing.cjs": "38c5c320df845ffde50fceedc86dfa079a17b4f8e31b3e6c508719272cea6a97",
+    "tests/test_ps_efficiency_evidence.py": "a518218452bd1dbead265eefe109bf19df8d288f7f09d31de5c608ab72921be4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-lazy-reviewed-full-suite.json",
+      "sha256": "a5caf60cc8a7cf3e9fd9c1c41b06c4df5b738ae8d2594add3480baa1f715adcd"
+    },
+    {
+      "path": "runs/2026-10-13-ps-lazy-reviewed-routes.json",
+      "sha256": "b7aefc355e3338158d9ae21da847f869b6c5b5f795bfcc8d32eef5c3b3262089"
+    },
+    {
+      "path": "runs/2026-10-13-ps-lazy-reviewed-website.json",
+      "sha256": "f51b8abb7aafc07507d97c28207012bff75533385cd7b4ccf05e4300abe49456"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T17:31:00.766128+00:00"
+    }
+  ]
+}

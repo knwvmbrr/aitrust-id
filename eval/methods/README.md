@@ -8,3 +8,10 @@ Apache-2.0 license. It is never a container build input or an active detector.
 Do not launch its ASGI application. New code must not silently reuse an old
 signal version for changed behavior. This archive is not an independent detector
 validation, recognizer identity record or complete old-assertion replay.
+
+`context-v6-eager.py` retains the exact active source before the October 13 lazy
+context optimization, SHA-256
+`b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6`.
+It is inactive and used only as the paired/differential reference. The logical
+context-v6 rules and signal meanings are retained; the changed active source
+SHA distinguishes the execution implementation. No new accuracy claim follows.

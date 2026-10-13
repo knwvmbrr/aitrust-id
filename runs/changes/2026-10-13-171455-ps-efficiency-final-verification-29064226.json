@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-171455-ps-efficiency-final-verification-29064226",
+  "recorded_at": "2026-10-13T17:14:55.963777+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2cc5d265ab8ff5a94de9760ed3514031c8691e85",
+  "changed": "Complete source-bound capability, actual website, route and full-suite verification; refresh method-specific performance projections, scope evidence and target state without closing unfinished requirements.",
+  "proves": "3066 full-suite tests passed with five platform skips across 743 unchanged reviewed inputs. Verified 86 development cases, two engines with 137 parity cases each, 26 staging HTTP checks and 13 replay CLI cases.",
+  "limits": "Scope remains 115 complete and 87 open; target 43 is unmet. No independent accuracy, physical-phone, whole-service speedup or release approval. Protected merge and publication pending.",
+  "scope_ids": [
+    "F-003",
+    "F-009",
+    "F-010",
+    "F-113",
+    "N-012"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "747d97abbbcf90f0c1858648c54bf9f1427ba1740a51db57fe5a1d0fabed7606",
+    "docs/device-build-reference.json": "b6bf6ffb3c662b88ff1c59b06e58ee442201803357a1c506b4b14844982e482f",
+    "docs/evidence-resistance.md": "c56ff916dccc46c581df68fe5da71ddde9d19ec00a83c773c058db8b8d18d8c6",
+    "docs/ps-lazy-context-performance-result.md": "649abeb7acd322480be5e22828de309568eda0d725b2d0372bba8b2d31211112",
+    "docs/scope-progress.json": "8673948483fa5ecce60575686189b201fbf205750344e73c8ccb25a667f96ed7",
+    "docs/scope-progress.md": "7acbd2ff6f7c980e62e951cd05a0975d6ac66ba0fe48758d68e54d7041a38162",
+    "eval/methods/README.md": "abcc6b5b1963dcbdf6f89d923a09c6235ede1db29028dd452ac272667ef53202",
+    "eval/revalidation.json": "ed75798aa8ea9c394280dc2d54d7ff1497e49dcf4d6c4a3ea39a52ad8ac42be4",
+    "eval/route-boundaries.json": "0f63ff7acd9bb3154f4856f24170f1fc4ada65109213b93877d9f3c3e6e0efca",
+    "eval/tag-performance-evidence.json": "91513456f4d227ffe614eca58148556133d60c6de222ed8a6f177f01b02aa5a8",
+    "runs/2026-10-13-ps-lazy-full-suite-accepted.json": "628e2d7034ca64eeb57a9b8ab2ebb4335fd95a1bdc2dac6a0c780e819782901f",
+    "runs/2026-10-13-ps-lazy-full-suite-complete.json": "6c23b0155f174f46fdf1480c627bc75cfe57181c83d1de25a6f663d41e3ea36e",
+    "runs/2026-10-13-ps-lazy-routes-final.json": "4ca27f9a4093114a5a8a878623746a3f930ad367529ae472a440b6475bd5b062",
+    "runs/2026-10-13-ps-lazy-routes.json": "0fa20627f17662613f647f74cb2ba44441bfee0d1421580700950cc5ca5918cf",
+    "scripts/measure-ps-efficiency.py": "1fd462008897d14e2a37866f54d2e7d336e306a5bac3bc5e5362d6c3d9d73581",
+    "scripts/verify-performance.cjs": "14a9e22bf053a03858b156c80bcd30be247b95356bf9b00f4cd4facfab720a29",
+    "scripts/verify-ps-efficiency.py": "eb4503b8d0a798841dfe29b5b5164f25279618d496cc0c68274f79360f90e07d",
+    "scripts/verify-route-boundaries.py": "03eebd7cf4f5612e5f91fa42b61b4ce4bbb10f43b59d4e16cf01d04b1cf75564",
+    "site/index.html": "5853ebbd921e65eb5f9d9292f3b1beca763c74eb93c2cb1d1a022f3afafa2d6e",
+    "site/public/reference/evidence-resistance.json": "99c0fc1fb7119de4e285559d3b870f8631df35f7863040ac1f6cc5458c94902b",
+    "site/public/reference/evidence-resistance.md": "c56ff916dccc46c581df68fe5da71ddde9d19ec00a83c773c058db8b8d18d8c6",
+    "site/public/reference/performance-device.json": "4a2b6c27480b723f2be0537f9c04a36e39a4e8513f2218de27d928ec6068e5b4",
+    "site/public/reference/performance-regressions.json": "ee626702e569d93b0029167189bb743b3ab33b554a34c4dede1aa1980f18ca5d",
+    "site/public/reference/pipeline-performance.json": "150f87292c208d120dc16eb3235878dd5af9c634db7117f0b87ff7a6d8108295",
+    "site/public/reference/ps-efficiency.json": "6ce81ec748d3adc30f2aa64381dca3b5b01fc61b52e3a2760a084332974ee21a",
+    "site/public/reference/public-scope.json": "cbecbaa832bb3808d0b9dde2be7f99eee44c03e986e936ae2caa1a1d1adcac29",
+    "site/public/reference/tag-performance-evidence.json": "91513456f4d227ffe614eca58148556133d60c6de222ed8a6f177f01b02aa5a8",
+    "site/public/reference/tag-performance.json": "4932b588ad4e103b4c2a34a2b17917fc3031f53fee9b6b62dfc3dff798bdc013",
+    "site/scripts/prepare-performance.mjs": "6b343ef159867eae6d48ec934c06272095282bf50b49d164ae23868affb14417",
+    "site/scripts/prepare.mjs": "4e56a4736b102f83ad0b6bcc6f8bc7cf6a91b2cfb6f01b658da4d0c3c695e81b",
+    "site/src/performance-model.js": "28f2dd36c09e0907ce39c6a656b98b92da6299358dd8b5cf3c137ca16826349d",
+    "site/src/performance.jsx": "32499c5ab927a6ebcda94cde6b88c15537ed5b196ac3d11f6cd5c4990cf8595f",
+    "site/src/public-scope.json": "cbecbaa832bb3808d0b9dde2be7f99eee44c03e986e936ae2caa1a1d1adcac29",
+    "site/src/scope-manifest.json": "d0989361d9af94bb2bebbc117317028fbdd0cb2f6a872cdad1325c73d55a75b2",
+    "site/src/tag-performance.json": "4932b588ad4e103b4c2a34a2b17917fc3031f53fee9b6b62dfc3dff798bdc013",
+    "state.json": "1b724ea321cb456a363cba76bd202845d131798437bd958154d6b913ff399e5d",
+    "tests/test_device_bundle_determinism.py": "8192c50e4f86eef6723a747c5d99cd5b3035c2485681655eb824442972cb6d14",
+    "tests/test_evidence_resistance.py": "7fe6a875351e7a7fcae4f46b255d4c5d48a436a9849c1213ceb1b024be3348ef",
+    "tests/test_ps_efficiency_evidence.py": "329117f21ff6305c786871cf0a1d94462c8004cda48c0c55baf2b99fd6da700a",
+    "tests/test_tag_performance.py": "8ad7119419c501cc6953836be0f6add164ddfe66912189dbf04cb39977650612"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-lazy-full-suite-complete.json",
+      "sha256": "6c23b0155f174f46fdf1480c627bc75cfe57181c83d1de25a6f663d41e3ea36e"
+    },
+    {
+      "path": "runs/2026-10-13-ps-lazy-routes-final.json",
+      "sha256": "4ca27f9a4093114a5a8a878623746a3f930ad367529ae472a440b6475bd5b062"
+    },
+    {
+      "path": "runs/2026-10-13-ps-lazy-current-website.json",
+      "sha256": "5ba63cc3d46389a1eccb495aa97aaa00caee2bbc98b8b348a379656e0cc224ba"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T17:14:56.576557+00:00"
+    }
+  ]
+}

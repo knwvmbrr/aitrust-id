@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-13T16:43:30.896721+00:00",
+  "pass": true,
+  "kind": "isolated_staging_ps_lazy_context_integration",
+  "source_before": {
+    "gateway": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "anonymizer": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "evaluator": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6"
+  },
+  "source_after": {
+    "gateway": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "anonymizer": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "evaluator": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "prior_image_retained": true,
+  "old_image_id": "5776e1d019164e3d888f693a497c83f943597504451535564ac3fb54c21251c2",
+  "new_image_id": "d5a27a13e580fae25b2e41e33847898aef5b2f28d4bcd07ba571c304d8b82ab8",
+  "only_evaluator_image_changed": true,
+  "three_existing_staging_containers_recreated": true,
+  "gateway_image_unchanged": true,
+  "redactor_image_unchanged": true,
+  "read_only_nonroot_pids_capabilities_ports_unchanged": true,
+  "image_build_network": "none; existing pinned image/dependency layers reused",
+  "production_services_modified": false,
+  "real_user_data": false,
+  "whole_route_acceptance_pending": true,
+  "independent_accuracy_evidence": false
+}
