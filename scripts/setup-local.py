@@ -178,6 +178,33 @@ def inspection_address(row, network_id):
     return str(address)
 
 
+def build_dns(paths=(Path('/etc/resolv.conf'), Path('/run/systemd/resolve/resolv.conf'))):
+    """Reuse configured upstream DNS; a host loopback stub cannot serve a builder."""
+    for path in paths:
+        try:
+            text = path.read_text()
+        except OSError:
+            continue
+        if len(text) > 65536:
+            raise SetupError('Configured DNS file is too large.')
+        addresses = []
+        for line in text.splitlines():
+            fields = line.split('#', 1)[0].split()
+            if len(fields) != 2 or fields[0] != 'nameserver':
+                continue
+            try:
+                address = ipaddress.ip_address(fields[1])
+            except ValueError:
+                continue
+            if not (address.is_loopback or address.is_unspecified or address.is_multicast):
+                value = str(address)
+                if value not in addresses:
+                    addresses.append(value)
+        if addresses:
+            return addresses[:3]
+    raise SetupError('Container builds need reachable DNS configured on this Linux host.')
+
+
 def build_and_start(engine, folder, state):
     project = state['project']
     images = {}
@@ -185,6 +212,9 @@ def build_and_start(engine, folder, state):
         print('Building ' + role + '…', flush=True)
         tag = project + '-' + role + ':local'
         build_args = ['build'] + (['--layers'] if engine.name == 'podman' else [])
+        if engine.name == 'podman':
+            for address in build_dns():
+                build_args.extend(['--dns', address])
         engine.run(*build_args, '--label', LABEL + '=' + project, '-t', tag,
                    '-f', 'services/' + role + '/Dockerfile', '.', timeout=1200)
         image = owned(engine, 'image', tag, project)

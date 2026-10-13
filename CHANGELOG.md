@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-232735-configured-linux-builder-dns-550063e9
+
+Recorded 2026-10-13T23:27:35.616707+00:00 · Contributor: Codex · change
+
+- **Changed.** Use the Linux host configured upstream DNS for isolated Podman builds when resolv.conf points to a host-only loopback stub.
+- **Evidence.** 69 focused setup/checker controls pass, including refusal of unusable resolvers without adding an arbitrary external DNS provider. Build networking stays isolated and artifact hashes remain mandatory. [Change record](./runs/changes/2026-10-13-232735-configured-linux-builder-dns-550063e9.json).
+- **Not claimed.** The complete-input cold-build attempt refused readiness and restored staging. Its actual retry and full combined checks remain pending; no tag accuracy or human acceptance is claimed.
+
+
 ### 2026-10-13-232139-complete-setup-build-input-review-4acc7eb6
 
 Recorded 2026-10-13T23:21:39.401880+00:00 · Contributor: Codex · change

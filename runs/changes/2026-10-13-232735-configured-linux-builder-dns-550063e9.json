@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-232735-configured-linux-builder-dns-550063e9",
+  "recorded_at": "2026-10-13T23:27:35.616707+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4c9f8f5c39e70f2a32018f0d234fd75a1c2a55e8",
+  "changed": "Use the Linux host configured upstream DNS for isolated Podman builds when resolv.conf points to a host-only loopback stub.",
+  "proves": "69 focused setup/checker controls pass, including refusal of unusable resolvers without adding an arbitrary external DNS provider. Build networking stays isolated and artifact hashes remain mandatory.",
+  "limits": "The complete-input cold-build attempt refused readiness and restored staging. Its actual retry and full combined checks remain pending; no tag accuracy or human acceptance is claimed.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "3d73ac709d8c78b71a57004c402d10f1d231efc44072d503416a9b844c8c70f1",
+    "tests/test_local_setup.py": "1b80b54f28ab0eb22f47d326a8a68704537ee0aa2a1e18e1c4323286e3811a6f"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:27:36.757805+00:00"
+    }
+  ]
+}

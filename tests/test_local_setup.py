@@ -124,6 +124,23 @@ def test_dependency_address_must_match_recorded_network():
         setup.inspection_address(row, 'b' * 64)
 
 
+def test_build_dns_uses_configured_upstream_instead_of_host_stub(tmp_path):
+    stub = tmp_path / 'stub'
+    upstream = tmp_path / 'upstream'
+    stub.write_text('nameserver 127.0.0.53\n')
+    upstream.write_text('nameserver 192.0.2.53\nnameserver 192.0.2.53\n')
+    assert setup.build_dns((stub, upstream)) == ['192.0.2.53']
+
+
+@pytest.mark.parametrize('text', ['nameserver 127.0.0.1', 'nameserver ::1',
+                                'nameserver 0.0.0.0', 'nameserver 224.0.0.1', 'nameserver invalid'])
+def test_unusable_builder_resolvers_refused_without_arbitrary_fallback(tmp_path, text):
+    path = tmp_path / 'resolver'
+    path.write_text(text)
+    with pytest.raises(setup.SetupError):
+        setup.build_dns((path,))
+
+
 def test_actual_port_collision_precedes_state_creation(tmp_path, monkeypatch, capsys):
     engine = Mock()
     monkeypatch.setattr(setup, 'Engine', lambda name: engine)
