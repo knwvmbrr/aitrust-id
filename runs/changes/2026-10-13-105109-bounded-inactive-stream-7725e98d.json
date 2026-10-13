@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-105109-bounded-inactive-stream-7725e98d",
+  "recorded_at": "2026-10-13T10:51:09.269823+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fd58ce594a44c5996ce3d2e4d3e2d1dde383671d",
+  "changed": "Retired the unused automatic fetch tap and replaced it with an inert bounded stream observer; corrected adapter contract and bound real controls into CI and revalidation.",
+  "proves": "Ten real web-stream controls pass on Node 20 and 24. Observer preserves the original response, refuses malformed or oversized streams, and settles cancellation without partial text. Installed manifest remains DOM-only.",
+  "limits": "Synthetic developer profile only; no live vendor capture, new permission, tag, independent validation or full requirement closure. Native Share diagnostic retained as unavailable and skipped.",
+  "scope_ids": [
+    "F-030",
+    "N-008",
+    "F-037",
+    "F-120",
+    "N-013"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "edad4096145728c949db121269900641067b99a101b42d7fae4ce467f1b7969b",
+    "docs/scope-progress.json": "5335c6e2959ad0f5d5f13412608693372f68944942d40b103b0e577c31b5b465",
+    "docs/scope-progress.md": "8cbe7a4241265cb041935e6fc5194da2254e81dd4cb554e7d3a16059001ab77d",
+    "docs/stream-observer-plan.md": "11ca902e8ff681fdb65b30637e6e9decc4f809c1c9a69bdd6f8563c7ccdf3a9e",
+    "eval/revalidation.json": "66d8537da7cc704700ce7c367bcb3bc4f0124818f3d039d86ba064dc98a1838f",
+    "extension/src/adapters/README.md": "96f8b739ce57bf19ed5e6c168fdc20b8f57431fb6e2ee41d4b58c62a09d1c366",
+    "extension/src/main-world/tap.js": null,
+    "extension/src/main-world/stream-observer.mjs": "f878ba3b984b2fd9d19ad90f1956fa7df7844e680d338c00c41982f1416faff2",
+    "scripts/verify-route-boundaries.py": "90b17304dbd44f36f2df4b5c5f988a32f3ca12461e9217e2003828ed21de26e8",
+    "tests/stream-observer.cjs": "8aa27abbddb76d1cd552ee344614e7c309579e9dc251354610db5d2533fb92a8",
+    "tests/test_stream_observer.py": "34d7d94d2472c3cddd2b498cc6d7ceb175627a7b048e200c65f31934e2c8395d",
+    "state.json": "39e828b970ea923602910b3d93339210871142a900e818146ed42c43e799cdf8",
+    "runs/2026-10-13-build-diagnostics-protected-merge.json": "df6c66f3b790b86fe335403c97dfb52d50479aeaa7bebbacaaccdefc344a4980",
+    "runs/2026-10-13-build-diagnostics-publication.json": "9b0f4807e6bdc6eb7231da7bd941cfd380874aca250ac519518f3ffe2d7de674",
+    "runs/2026-10-13-build-diagnostics-primary-preservation.json": "e4cbfe5f9bcb0a097681f871dca2a76577f7bab3c3338ab0981d405d36d4b3d6",
+    "runs/2026-10-13-native-provider-timeout.json": "1d3163e1ff626aec8bada5e9da4a63347de649a6fb8c08d97a16ed122d65c22b",
+    "runs/2026-10-13-stream-boundaries-current-PS.json": "86c9c0ea786b6d557484858a1a581da6a1d5d5e0d36edc0b713401a36cf2e1fd",
+    "runs/2026-10-13-stream-boundaries-current-PII_REDACTED.json": "b70530f3ab1ba325af0b387f2c7827672093337efc0bbbf235f5bc827ebf454c",
+    "runs/2026-10-13-stream-boundaries-current-protocol.json": "9dc838a64facf88f8484c9ada2b63756ba265b1f109107e50db72b2a0118dda5",
+    "runs/2026-10-13-stream-boundaries-current-extension.json": "2e46707a512a1843fc9bf65a20020fe66d0f13e1c3fd236282606732c877e1a4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-build-diagnostics-publication.json",
+      "sha256": "9b0f4807e6bdc6eb7231da7bd941cfd380874aca250ac519518f3ffe2d7de674"
+    },
+    {
+      "path": "runs/2026-10-13-native-provider-timeout.json",
+      "sha256": "1d3163e1ff626aec8bada5e9da4a63347de649a6fb8c08d97a16ed122d65c22b"
+    }
+  ],
+  "checks": []
+}

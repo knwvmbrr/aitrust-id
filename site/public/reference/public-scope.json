@@ -3701,10 +3701,11 @@
           "bounded_contract",
           "implemented_mechanism"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T10:47:59.195628+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — bounded inactive developer observer and original prototype retirement, 2026-10-13"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -3715,10 +3716,12 @@
         "next_fix": "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
         "next_owner": "Codex",
         "evidence": [
-          "extension/src/main-world/tap.js",
+          "extension/src/main-world/stream-observer.mjs",
+          "docs/stream-observer-plan.md",
+          "tests/stream-observer.cjs",
           "runs/2026-10-08-browser-checks.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Bounded inactive developer stream component only. The unsafe automatic fetch prototype was retired; installed capture remains user-invoked DOM-only. No live MAIN-world vendor capture, stream-origin authenticity, tag or independent acceptance is credited.",
         "required_acceptance": [
           "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
         ],

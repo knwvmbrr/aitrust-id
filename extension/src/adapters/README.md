@@ -1,11 +1,15 @@
 # Site adapters
 
-Each adapter declares, for one AI surface:
+The installed extension has one supported adapter: ChatGPT's rendered assistant
+responses. Its interface supplies `responses`, `responseId`, `text`, `streaming`,
+`anchor` and `site` to the user-invoked content bridge. It does not read prompts or
+automatically intercept the vendor's network stream. Changed markup can make the
+adapter unavailable; there is no guaranteed fallback.
 
-* `endpointMatchers` — URL patterns whose response bodies carry model output
-* `extract(raw)` — parse that vendor's SSE / JSON-lines into plain text
-* `containerSelector` — where the rendered response lives, for the DOM fallback
-* `mountSelector` — where the label bar is appended, for the badge
-
-Adapters are the only vendor-specific code in the project. When a vendor changes their
-API, exactly one file needs to change and the DOM fallback covers the gap in the meantime.
+`../main-world/stream-observer.mjs` is an inactive developer component. No manifest
+entry or installed script imports it. It observes only an explicitly supplied
+Response using a synthetic, closed assistant-text profile. It has no vendor URL
+matcher, fetch patch, message broadcast or tag mapping. See
+[the stream observer plan](../../../docs/stream-observer-plan.md) for its limits.
+F-030 still needs a supported live vendor contract and workflow acceptance, or an
+accepted decision replacing that capture route. A local stream test cannot close it.

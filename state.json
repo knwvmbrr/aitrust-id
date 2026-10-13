@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-12T19:20:39.511986+00:00",
-  "active_increment": "Corrected private revision guide links; current checks pass, protected publication pending",
+  "updated": "2026-10-13T10:59:32.259615+00:00",
+  "active_increment": "Retired inactive unbounded stream prototype; bounded observer and current-route verification in progress",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2901,
+  "python_tests_passed": 2952,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -737,7 +737,7 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/website-build-diagnostics-plan.md",
+    "latest_increment": "docs/stream-observer-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -747,10 +747,10 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-12-build-diagnostics-interruption-full-suite.json",
+    "current_target_verification": "runs/2026-10-13-stream-boundaries-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
-    "latest_owner_direction_date": "2026-10-12"
+    "latest_owner_direction_date": "2026-10-13"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -965,10 +965,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current whole-build and route checks passed; protected diagnostics publication pending",
+    "status": "Current website and personal route boundaries passed; protected stream repair publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-12-build-diagnostics-interruption-routes.json",
-    "source_files": 720,
+    "evidence": "runs/2026-10-13-stream-boundaries-routes.json",
+    "source_files": 722,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1027,15 +1027,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-12-build-diagnostics-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-12-build-diagnostics-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-12-build-diagnostics-current-protocol.json",
-    "extension": "runs/2026-10-12-build-diagnostics-current-extension.json",
-    "website": "runs/2026-10-12-build-diagnostics-interruption-website.json",
+    "PS": "runs/2026-10-13-stream-boundaries-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-13-stream-boundaries-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-13-stream-boundaries-current-protocol.json",
+    "extension": "runs/2026-10-13-stream-boundaries-current-extension.json",
+    "website": "runs/2026-10-13-stream-boundaries-stable-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-12T19:20:39.511986+00:00",
+  "updated_at": "2026-10-13T10:59:32.259615+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1100,9 +1100,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "616cf20c03dd810b666636ab7169ec48a71f8c75",
-    "preview": "https://fc048b19.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-12-session-revision-publication.json",
+    "source_commit": "fd58ce594a44c5996ce3d2e4d3e2d1dde383671d",
+    "preview": "https://195e229b.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-13-build-diagnostics-publication.json",
     "all_artifacts_verified": 774,
     "exact_headers_verified_per_origin": 4,
     "primary_unrelated_files_preserved": 12,
@@ -1795,7 +1795,9 @@
     "share_failure": "runs/2026-10-11-native-share-unavailable.json",
     "source_archive": "docs/experiments/native-share-unreleased.json",
     "guide": "docs/native-engine-checks.md",
-    "private_python_candidate": "runs/2026-10-12-native-python-private-candidate.json"
+    "private_python_candidate": "runs/2026-10-12-native-python-private-candidate.json",
+    "latest_provider_diagnostic": "runs/2026-10-13-native-provider-timeout.json",
+    "provider_diagnostic_status": "Owned synthetic simulator app built; UI automation startup timed out; owned simulator removed; Share delivery and tag check not verified; skipped unchanged retry."
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2203,15 +2205,45 @@
     "human_accessibility_verified": false,
     "independent_accuracy_evidence": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "route_evidence": "runs/2026-10-12-build-diagnostics-interruption-routes.json",
     "actual_controller_controls": 3,
     "controller_review": "runs/2026-10-12-build-diagnostics-controller-review.json",
-    "status": "Current controller, whole website and full regressions passed; protected publication pending",
+    "status": "Protected-merged and published; 774 exact artifact comparisons and four exact headers per origin passed",
     "full_suite": "runs/2026-10-12-build-diagnostics-interruption-full-suite.json",
     "tests_passed": 2951,
     "tests_skipped": 5,
     "source_files": 720,
-    "actual_build_phases": "runs/2026-10-12-build-diagnostics-interruption-eight-phases.json"
+    "actual_build_phases": "runs/2026-10-12-build-diagnostics-interruption-eight-phases.json",
+    "publication": "runs/2026-10-13-build-diagnostics-publication.json",
+    "protected_merge": "runs/2026-10-13-build-diagnostics-protected-merge.json"
+  },
+  "stream_observer": {
+    "status": "Bounded inactive component, all five current capabilities and full regressions passed; protected publication pending",
+    "architecture": "docs/stream-observer-plan.md",
+    "source": "extension/src/main-world/stream-observer.mjs",
+    "implemented_by": "Codex",
+    "manifest_registered": false,
+    "installed_capture": "ChatGPT DOM-only, user-invoked",
+    "automatic_fetch_patch": false,
+    "raw_message_broadcast": false,
+    "new_permissions": false,
+    "new_endpoints": 0,
+    "live_vendor_validated": false,
+    "tag_issued": false,
+    "requirements_closed": 0,
+    "engineering_evidence": "runs/2026-10-13-stream-boundaries-current-extension.json",
+    "route_evidence": "runs/2026-10-13-stream-boundaries-routes.json",
+    "website_evidence": "runs/2026-10-13-stream-boundaries-stable-website.json",
+    "actual_build_phases": "runs/2026-10-13-stream-boundaries-eight-phases.json",
+    "publication_pending": true,
+    "retained_failures": [
+      "runs/2026-10-13-stream-boundaries-website.json",
+      "runs/2026-10-13-stream-boundaries-verified-website.json"
+    ],
+    "full_suite": "runs/2026-10-13-stream-boundaries-full-suite.json",
+    "tests_passed": 2952,
+    "tests_skipped": 5,
+    "source_files": 722
   }
 }

@@ -106,6 +106,7 @@ PATTERNS += ('tools/choice_framing.py','scripts/check-choice-framing.py','script
              'docs/choice-framing.md','docs/choice-framing-plan.md','docs/choice-grammar-result.md','docs/changelog-policy.md',
              'eval/revalidation.json','tests/test_website_evidence_inputs.py')
 PATTERNS += ('scripts/build-device-detector.py',)
+PATTERNS += ('tests/stream-observer.cjs', 'tests/test_stream_observer.py')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
