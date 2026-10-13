@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T11:11:19.539763+00:00",
-  "active_increment": "Bounded inactive stream repair and source-bound execution evidence published; continue independent engineering past external acceptance gates",
+  "updated": "2026-10-13T11:30:48.831263+00:00",
+  "active_increment": "Footer Community and Understand column layout checked; protected publication pending",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -965,9 +965,9 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current whole-build and personal-route checks passed; bounded inactive stream component protected-merged and published",
+    "status": "Current whole website and footer layout route checks passed; protected layout publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-stream-boundaries-routes.json",
+    "evidence": "runs/2026-10-13-footer-columns-routes.json",
     "source_files": 722,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1031,11 +1031,11 @@
     "PII_REDACTED": "runs/2026-10-13-stream-boundaries-current-PII_REDACTED.json",
     "protocol": "runs/2026-10-13-stream-boundaries-current-protocol.json",
     "extension": "runs/2026-10-13-stream-boundaries-current-extension.json",
-    "website": "runs/2026-10-13-stream-boundaries-stable-website.json",
+    "website": "runs/2026-10-13-footer-columns-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T11:11:19.539763+00:00",
+  "updated_at": "2026-10-13T11:30:48.831263+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2247,5 +2247,16 @@
     "source_files": 722,
     "publication": "runs/2026-10-13-stream-boundaries-publication.json",
     "protected_merge": "runs/2026-10-13-stream-boundaries-protected-merge.json"
+  },
+  "footer_layout": {
+    "status": "Two side-by-side groups with single vertical link stacks; current source and six light/dark width checks passed; protected publication pending",
+    "implemented_by": "Codex",
+    "website_evidence": "runs/2026-10-13-footer-columns-website.json",
+    "layout_evidence": "runs/2026-10-13-footer-columns-layout.json",
+    "route_evidence": "runs/2026-10-13-footer-columns-routes.json",
+    "responsive_small_screen_stack": true,
+    "workflow_links_preserved": 8,
+    "scope_requirements_closed": 0,
+    "publication_pending": true
   }
 }

@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-113102-verified-footer-columns-615c079d
+
+Recorded 2026-10-13T11:31:02.003741+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified and recorded the footer column layout in both themes and at desktop, tablet and narrow-screen widths; refreshed the current website and route evidence.
+- **Evidence.** Six actual layout checks preserve all eight destinations, use one vertical list per group and avoid horizontal overflow. All sixteen website commands passed with stable sources; other capability receipts remain valid. [Change record](./runs/changes/2026-10-13-113102-verified-footer-columns-615c079d.json).
+- **Not claimed.** Layout-only verification, not physical-device or independent tag validation. No full Python suite repeat or full requirement closure is claimed for this edit.
+
+
+### 2026-10-13-112653-footer-vertical-columns-4d53efc3
+
+Recorded 2026-10-13T11:26:53.287578+00:00 · Contributor: Codex · change
+
+- **Changed.** Arrange footer workflows as two side-by-side groups, with each group containing one vertical stack of links.
+- **Evidence.** The nested two-column grid is removed while the existing responsive outer grid and all eight independent destinations remain. [Change record](./runs/changes/2026-10-13-112653-footer-vertical-columns-4d53efc3.json).
+- **Not claimed.** Layout-only change; phone screens retain a stacked group layout. No tag status, permission, policy, scope acceptance or requirement completion changes.
+
+
 ### 2026-10-13-111119-published-stream-evidence-0080db42
 
 Recorded 2026-10-13T11:11:19.582925+00:00 · Contributor: Codex · change
