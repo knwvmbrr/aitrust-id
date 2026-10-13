@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-175934-ps-latest-publication-summary-29a3ae51
+
+Recorded 2026-10-13T17:59:34.047565+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the explicitly named latest-runtime publication summary from the actual PS publication; resolve stale source, preview, receipt and artifact count noted in review.
+- **Evidence.** Summary now matches source 783c50a and 777 served-file comparisons; all five capability receipts still assess current and state chronology is verified. [Change record](./runs/changes/2026-10-13-175934-ps-latest-publication-summary-29a3ae51.json).
+- **Not claimed.** Metadata correction only; runtime code and acceptance gates unchanged, zero requirements closed. The review is attributed to the earlier metadata head.
+
+
 ### 2026-10-13-174541-ps-efficiency-publication-evidence-72283494
 
 Recorded 2026-10-13T17:45:41.102004+00:00 · Contributor: Codex · change

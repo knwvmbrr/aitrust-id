@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-175934-ps-latest-publication-summary-29a3ae51",
+  "recorded_at": "2026-10-13T17:59:34.047565+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0b387ea0abec927c77a32b775169012448ff81f3",
+  "changed": "Refresh the explicitly named latest-runtime publication summary from the actual PS publication; resolve stale source, preview, receipt and artifact count noted in review.",
+  "proves": "Summary now matches source 783c50a and 777 served-file comparisons; all five capability receipts still assess current and state chronology is verified.",
+  "limits": "Metadata correction only; runtime code and acceptance gates unchanged, zero requirements closed. The review is attributed to the earlier metadata head.",
+  "scope_ids": [
+    "F-113"
+  ],
+  "files": {
+    "runs/2026-10-13-ps-efficiency-summary-repair.json": "77c7c5f0f89ca1c345753101cf244c633b4066affb83177ba44c05c98c302022",
+    "state.json": "55fed8b75f8f7755cd09ad5e634e1e40475fef7e33dfe89b29d3287d878eae4b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-efficiency-summary-repair.json",
+      "sha256": "77c7c5f0f89ca1c345753101cf244c633b4066affb83177ba44c05c98c302022"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T17:59:35.376314+00:00"
+    }
+  ]
+}
