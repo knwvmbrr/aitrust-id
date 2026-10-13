@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-190151-firefox-permission-diagnosis-8ec7ba98",
+  "recorded_at": "2026-10-13T19:01:51.457305+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Inspect the selected Firefox vendor/loopback permission state and require a real assistant fixture; request shutdown through the owned browser driver before OS termination.",
+  "proves": "Thirty focused controls pass without granting origins, disabling TLS or altering Chrome.",
+  "limits": "Firefox capture remains unverified pending the actual isolated run.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "45aa64513a629f399e09ab5ca2426862fbaa6dc6168a2256cd4fde6cb47436bc"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:01:52.058385+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "a1601c5e4941e7849ef2fe5d58c70d25cdc4e4422b5e67c41b570392ebd4cc04",
+    "original_preserved_privately": true
+  }
+}

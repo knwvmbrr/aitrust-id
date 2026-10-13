@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-191724-firefox-browser-evidence-and-guide-7b851000",
+  "recorded_at": "2026-10-13T19:17:24.908708+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Retain exact source-bound actual Linux Firefox integration evidence, preceding failures and a usable temporary-install guide.",
+  "proves": "The current source matches all fourteen passing actual Firefox controls; supported test scope and port-level permission limits are explicit.",
+  "limits": "F-156 is not fully accepted. No Mac/live vendor/store/phone/human/independent accuracy acceptance or complete requirement is inferred.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "docs/firefox-preview.md": "8fcb0deaf1602fe5d7d272fa752e7e3f38eb23a1f2ee252049c35dee6271172b",
+    "docs/firefox-adapter-result.md": "5725d6777235b6e09a7515cf4c3f521a43a67769d175212d00a31034c3b76674",
+    "runs/2026-10-13-firefox-linux-integration.json": "c6cea209302b6ec79ecfbcc4604e3a9f0e84d6a9c2d64f707a054ce2a7f18636",
+    "runs/2026-10-13-firefox-linux-attempt-3.json": "629369e1b0c192fc9ee739391718493a510a52e2624f99bd9a57de4a694e0341",
+    "runs/2026-10-13-firefox-linux-attempt-4.json": "d97df05b3192fb2b3ebee7619bdc812567b25f066038ad86b2cf77d49890d563",
+    "runs/2026-10-13-firefox-linux-attempt-5.json": "083ac7144eca135ec5790840d0b87b58c0c96eb1732f4dd87f72a2cbb4debda8",
+    "runs/2026-10-13-firefox-linux-attempt-6.json": "31f16b34a82cc1d8ef7a1ca9e98b3541264043324de44a9804c13b48b0b735d5",
+    "runs/2026-10-13-firefox-linux-attempt-7.json": "d509b1c3cfb350e4f8350a18eaa417575c58bacfd9279ae40487c97200b83e24"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-firefox-linux-integration.json",
+      "sha256": "c6cea209302b6ec79ecfbcc4604e3a9f0e84d6a9c2d64f707a054ce2a7f18636"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:17:25.578605+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "0363b186f231a2a280b866c9091c7ecaf8e182824c8098f2124a4271b3d4cb7c",
+    "original_preserved_privately": true
+  }
+}

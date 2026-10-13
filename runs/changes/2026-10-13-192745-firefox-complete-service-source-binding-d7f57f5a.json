@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-192745-firefox-complete-service-source-binding-d7f57f5a",
+  "recorded_at": "2026-10-13T19:27:45.610596+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Bind every selected real-service helper and protocol source before launch, rejecting changed or linked files as well as application drift.",
+  "proves": "Thirty-six executable package/framing/service-binding controls pass; all sixteen distinct source paths are checked.",
+  "limits": "Copied image dependencies are observed build inputs, not legal clearance or independent accuracy; the actual-service run remains pending.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "1510e2215da4d0a66c94a9f4d98e53f768e2e9102a10579db2dfd5840afaea5b",
+    "tests/test_firefox_driver_protocol.py": "e63ea326f886300f4546fa9f2dfda5aaed485e56920e45dd27287ef248c5236d"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:27:46.244249+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "290e5fa7e4df4ef94ba0a1e854ea91a3826f196482f4f5b63075e62705450419",
+    "original_preserved_privately": true
+  }
+}

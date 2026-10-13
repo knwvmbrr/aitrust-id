@@ -114,6 +114,12 @@ PATTERNS += ('tools/choice_framing.py','scripts/check-choice-framing.py','script
              'eval/revalidation.json','tests/test_website_evidence_inputs.py')
 PATTERNS += ('scripts/build-device-detector.py',)
 PATTERNS += ('tests/stream-observer.cjs', 'tests/test_stream_observer.py')
+PATTERNS += ('tools/conformance_recusal.py','scripts/check-conformance-votes.py','scripts/verify-conformance-votes.py',
+             'tests/test_conformance_recusal.py','tests/test_scoped_component_inputs.py','tools/research_policy.py','scripts/verify-research-policy.py',
+             'tests/test_research_policy.py','deploy/research/metadata-pilot-policy.json',
+             'scripts/build-firefox-extension.py','scripts/verify-firefox-extension.py','scripts/verify-firefox-permissions.cjs',
+             'tests/test_firefox_package.py','tests/test_firefox_driver_protocol.py','tests/firefox-permissions.cjs',
+             'docs/scope-groups.json','scripts/verify-scope-groups.py','tests/test_scope_groups.py')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
@@ -345,7 +351,7 @@ def replay_evidence(relative, root=ROOT):
     report=read_json(root/relative)
     required=['ordinary','command','pii','both_unicode','quoted_warning','download_only',
               'wrong_original','altered_finding','historical_identity_missing','different_source',
-              'invalid_digest','future_wire','credential_permissions']
+              'invalid_digest','future_wire','credential_permissions','missing_original','history_before_missing_original']
     if (report.get('pass') is not True or report.get('synthetic_only') is not True
             or report.get('actual_pipeline_and_cli_executed') is not True
             or report.get('private_markers_absent_from_logs') is not True
@@ -363,10 +369,13 @@ def replay_evidence(relative, root=ROOT):
     if report.get('sources')!={n:hashlib.sha256((root/n).read_bytes()).hexdigest() for n in expected}:
         raise ValueError('Replay execution source changed')
     states=[('matched',0)]*6+[('input_mismatch',2),('mismatch',1),('unavailable',3),
-                             ('unavailable',3),('invalid',4),('unavailable',3),('invalid',4)]
+                             ('unavailable',3),('invalid',4),('unavailable',3),('invalid',4),('unavailable',3),('unavailable',3)]
     for row,(state,code) in zip(report['cases'],states):
         if row.get('status')!=state or row.get('exit_code')!=code or row.get('output_contains_no_private_marker') is not True:
             raise ValueError('Replay outcome control failed')
+    for row,reason in zip(report['cases'][-2:],['required_private_input_unavailable','historical_preprocessing_identity_missing']):
+        if row.get('record_unchanged') is not True or row.get('original_not_created') is not True or row.get('reason')!=reason:
+            raise ValueError('Incomplete history preservation failed')
     return len(required)
 
 def evaluate(manifest, root=ROOT):

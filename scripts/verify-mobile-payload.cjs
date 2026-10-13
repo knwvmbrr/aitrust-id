@@ -46,9 +46,10 @@ async function main(){
       const count=await exportDetails(page,dialog,ps);
       await page.keyboard.press('Escape');await page.goto(base+'/#scope');
       await page.getByLabel('Search preserved scope').fill('F-019c');
-      // This signal and its preserved grouping job both mention the queried ID.
-      await page.getByRole('status').filter({hasText:'2 records match'}).waitFor();
-      assert.equal(await page.getByRole('dialog').locator('li details').count(),2);
+      // Exact ID lookup selects the signal; its preserved grouping has its own ID.
+      await page.getByRole('status').filter({hasText:'1 records match'}).waitFor();
+      assert.equal(await page.getByRole('dialog').locator('li details').count(),1);
+      assert.equal(await page.getByRole('dialog').locator('summary[data-record-id="F-019c"]').count(),1,'Exact signal record missing');
       assert.equal(requests.filter(url=>url===asset).length,1,'One build must reuse one verified in-memory scope');
       assert.equal(errors.length,0,errors.join('; '));
       engines.push({engine:name,viewport_width:390,no_eager_scope_request:true,complete_export_records:count,scope_search:true,verified_scope_cache:true,page_errors:errors});

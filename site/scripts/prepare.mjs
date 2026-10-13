@@ -15,7 +15,9 @@ const scope=JSON.parse(fs.readFileSync(path.join(repo,'docs/master-scope.json'))
 execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/scope-progress.py')],{stdio:'pipe'});
 const progress=JSON.parse(fs.readFileSync(path.join(repo,'docs/scope-progress.json')));
 const progressBy=new Map(progress.records.map(r=>[r.id,r]));
-const records=scope.records.map(r=>({id:r.id,title:r.display_title||r.title,layer:r.layer,disposition:r.disposition,job:r.baseline_job,outcome:r.outcome,owner:r.owner,status:r.status,acceptance:r.acceptance,failure:r.failure_behavior,dependencies:r.dependencies,delivery:r.delivery,progress:progressBy.get(r.id)}));
+const groupProjection=JSON.parse(execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/verify-scope-groups.py'),'--projection'],{encoding:'utf8'}));
+const groupBy=new Map(groupProjection.map(group=>[group.id,group]));
+const records=scope.records.map(r=>({id:r.id,title:r.display_title||r.title,layer:r.layer,disposition:r.disposition,job:r.baseline_job,outcome:r.outcome,owner:r.owner,status:r.status,acceptance:r.acceptance,failure:r.failure_behavior,dependencies:r.dependencies,delivery:r.delivery,progress:progressBy.get(r.id),...(groupBy.has(r.id)?{legacy_group:groupBy.get(r.id)}:{})}));
 const data={date:scope.date,layers:['Tag types and evidence','Shared tag capabilities','Personal and organization workflows'],records};
 const scopeBytes=Buffer.from(JSON.stringify(data,null,2)+'\n');
 fs.writeFileSync(path.join(site,'src/public-scope.json'),scopeBytes);

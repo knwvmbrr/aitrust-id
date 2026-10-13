@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-214629-browser-driver-format-check-72eaaec2",
+  "recorded_at": "2026-10-13T21:46:29.309051+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2a67ac980d7c9f5325459ccb8a80dbb097ef7173",
+  "changed": "Remove one trailing whitespace character caught by the staged diff check.",
+  "proves": "All 37 Firefox driver/package controls pass; the installed extension archive and service code are unchanged.",
+  "limits": "Linux browser evidence remains the dated execution of the same archive; source-bound extension receipt and route inventory must be refreshed for the format change.",
+  "scope_ids": [
+    "F-156",
+    "N-006"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "5a11298a8a6eea00f707fd73655f7037baa269c239dacf0d9650a88bb3f3aa8e"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_firefox_driver_protocol.py",
+        "tests/test_firefox_package.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T21:46:30.183079+00:00"
+    }
+  ]
+}

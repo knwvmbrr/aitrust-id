@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-203616-conformance-recusal-rule-f5d55ba8",
+  "recorded_at": "2026-10-13T20:36:16.116295+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Deliver offline signed-ballot conflict-of-interest rule with separately pinned role and decision inputs, CI controls and guide.",
+  "proves": "F-147 original rule is functioning: 49 focused tests and 19 actual CLI controls on both Mac and Linux, including conflicted abstention, scope and signature tampering.",
+  "limits": "No real role assignments, independent people, disclosure truth, operating board, RFC adoption or certification. F-076 and institutional requirements remain open.",
+  "scope_ids": [
+    "F-147",
+    "F-076"
+  ],
+  "files": {
+    "tools/conformance_recusal.py": "af0b047e8d4d708c5232bc4abfd1b92973e5b0e4a12d326056871144ce82df43",
+    "scripts/check-conformance-votes.py": "849a3eac7004151a7adf30aa92e2a1609eb77f036b6c67b0dbf241b00bd2eb96",
+    "scripts/verify-conformance-votes.py": "7bb4d305d54d810cd15249dfd67169f31ed8d49f97275550578a80c10a391c87",
+    "tests/test_conformance_recusal.py": "ab206c391a181966b13054a4ade266714014d3d1031e77b80b57cd3221310fd7",
+    "docs/recusal-enforcement-plan.md": "8773e5cd578e1cc2f73dbde100d7818409e0157d7dfee6e85c7be2ab0722af9e",
+    "docs/conformance-recusal.md": "8414b75583ca8ede586bf6a226501312703779b8d68caf32b16409e9f1b01f97",
+    "README.md": "9f63f06db41cebd493e14cd67ec730c754578841ad4af284ab2e8b36c30dc532",
+    "Makefile": "27fcc35a5ca3b4e6235bac574071f450728d6185bf4225e74c65c489e4bd56a2",
+    ".github/workflows/ci.yml": "08e8b45214005f6514aa8a95f4519de5a908601d9f77e8e4976d3ffce932cfb6",
+    "docs/scope-progress.json": "077b2d0f10707b8f840f8e432bc30c6c26936b0a853977ccd7b33ff1a9d88c3f",
+    "docs/scope-progress.md": "f40995e374a75a980ded509b1cb5e93626739fd4dd8ff92c449210c7ecb5710b",
+    "docs/scope-task-index.md": "2140751daa8d1c1661678a9c4e84638b8dbba93b4e0844f3502a24a5bacd73fa",
+    "state.json": "f97f1e70d6ea159ba91689c89db885d3b3ca0e57c689ef013c629255a5a528fa",
+    "runs/2026-10-13-conformance-recusal-local.json": "2ae5030fa7819dd2cefe775e53cef1238acef5a59da64e458dfd7e3b3a823b21",
+    "runs/2026-10-13-conformance-recusal-linux.json": "ddbf17c21fe7df9cf90c8658c1eaee08a991d988610999c0fb358543612b4c31"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-conformance-recusal-local.json",
+      "sha256": "2ae5030fa7819dd2cefe775e53cef1238acef5a59da64e458dfd7e3b3a823b21"
+    },
+    {
+      "path": "runs/2026-10-13-conformance-recusal-linux.json",
+      "sha256": "ddbf17c21fe7df9cf90c8658c1eaee08a991d988610999c0fb358543612b4c31"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-213107-safe-renewed-component-evidence-56a12e23",
+  "recorded_at": "2026-10-13T21:31:07.275915+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Record renewed component checks and privacy-redact uncommitted draft interpreter locations while preserving raw originals privately.",
+  "proves": "Protocol and extension checks pass; no committed history, executed arguments, result or timestamp was changed. Website prebuild refused unrecorded concurrent receipts.",
+  "limits": "Website must be rerun after these receipt events. Redacted interpreter fields are explicit templates, not literal host paths. No independent accuracy or release approval.",
+  "scope_ids": [
+    "F-150",
+    "N-006"
+  ],
+  "files": {
+    "runs/2026-10-13-accepted-contracts-reviewed-protocol.json": "2b26f6603cc71c79dfd5ffe6bdf208099b201585446d9a0f4fa685ff64b06e79",
+    "runs/2026-10-13-accepted-contracts-reviewed-extension.json": "c9e8957e8b7843f311d083640265c1212dcac4a7443c549dd9a74ca1cd837105",
+    "runs/2026-10-13-accepted-contracts-reviewed-website.json": "66e38bdcff67c4b4c727ab7d091dbd3e24d72065ef3106c0d50cda31984d79c0",
+    "runs/2026-10-13-unpublished-command-location-redaction.json": "963644733476a50fa21d8e4923024f723f1146d37ffeb193e85e87564f87601c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-reviewed-protocol.json",
+      "sha256": "2b26f6603cc71c79dfd5ffe6bdf208099b201585446d9a0f4fa685ff64b06e79"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-reviewed-extension.json",
+      "sha256": "c9e8957e8b7843f311d083640265c1212dcac4a7443c549dd9a74ca1cd837105"
+    },
+    {
+      "path": "runs/2026-10-13-unpublished-command-location-redaction.json",
+      "sha256": "963644733476a50fa21d8e4923024f723f1146d37ffeb193e85e87564f87601c"
+    }
+  ],
+  "checks": []
+}

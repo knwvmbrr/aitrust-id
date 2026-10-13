@@ -1,0 +1,137 @@
+{
+  "pass": true,
+  "groups": [
+    {
+      "id": "F-019",
+      "kind": "legacy_grouping",
+      "members": [
+        {
+          "id": "F-019a",
+          "title": "sig.urgency_frame.v1 \u2014 time-pressure lexicon plus imperative density",
+          "percent_complete": 80,
+          "queue": "open",
+          "next_fix": "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
+        },
+        {
+          "id": "F-019b",
+          "title": "sig.false_dilemma.v1 \u2014 binary framing where alternatives exist",
+          "percent_complete": 60,
+          "queue": "open",
+          "next_fix": "Complete broader exclusive/negated grammar, automatic selection, quotation/context and negation-scope interpretation; validate additional-option relevance and feasibility, source freshness, held-out contextual errors and accepted MT integration/human operation. Three caller-selected paired-marker forms work without an MT verdict."
+        },
+        {
+          "id": "F-019c",
+          "title": "sig.authority_appeal.v1 \u2014 unattributed appeals to expertise or consensus",
+          "percent_complete": 80,
+          "queue": "open",
+          "next_fix": "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent."
+        }
+      ],
+      "independent_detector": false,
+      "parent_completion_completes_members": false,
+      "grouping_is_tag_release": false
+    },
+    {
+      "id": "F-020",
+      "kind": "legacy_grouping",
+      "members": [
+        {
+          "id": "F-020a",
+          "title": "sig.corpus_support.v1 \u2014 retrieval similarity against an attached local corpus",
+          "percent_complete": 100,
+          "queue": "completed",
+          "next_fix": ""
+        },
+        {
+          "id": "F-020b",
+          "title": "sig.corpus_contradiction.v1 \u2014 NLI contradiction against a retrieved passage",
+          "percent_complete": 60,
+          "queue": "open",
+          "next_fix": "Validate representative reference selection, contextual and temporal errors, source freshness and model calibration; accept the proposed signal/tag mapping and complete full FI integration and human acceptance. The working offline research command preserves a default lexical miss and is not an FI or falsehood verdict."
+        }
+      ],
+      "independent_detector": false,
+      "parent_completion_completes_members": false,
+      "grouping_is_tag_release": false
+    },
+    {
+      "id": "F-021",
+      "kind": "legacy_grouping",
+      "members": [
+        {
+          "id": "T-FA",
+          "title": "FA Full AI Augmentation",
+          "percent_complete": 20,
+          "queue": "open",
+          "next_fix": "Deliver FA Full AI Augmentation. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The reader sees the origin assertion, source of evidence and supported observation window."
+        },
+        {
+          "id": "T-PA",
+          "title": "PA Partially Augmented",
+          "percent_complete": 20,
+          "queue": "open",
+          "next_fix": "Deliver PA Partially Augmented. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The reader can distinguish documented contribution/edit events from unobserved authorship."
+        }
+      ],
+      "independent_detector": false,
+      "parent_completion_completes_members": false,
+      "grouping_is_tag_release": false
+    },
+    {
+      "id": "F-022",
+      "kind": "legacy_grouping",
+      "members": [
+        {
+          "id": "T-IV",
+          "title": "IV Independently Verified",
+          "percent_complete": 20,
+          "queue": "open",
+          "next_fix": "Deliver IV Independently Verified. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The reader knows who reviewed what, against which evidence and when, including withdrawal or correction."
+        }
+      ],
+      "independent_detector": false,
+      "parent_completion_completes_members": false,
+      "grouping_is_tag_release": false
+    },
+    {
+      "id": "F-029",
+      "kind": "legacy_grouping",
+      "members": [
+        {
+          "id": "F-029a",
+          "title": "sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session",
+          "percent_complete": 20,
+          "queue": "open",
+          "next_fix": "Deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
+        },
+        {
+          "id": "F-029b",
+          "title": "sig.attention_shape.v1 \u2014 read-pause-write rhythm from focus and visibility events",
+          "percent_complete": 100,
+          "queue": "completed",
+          "next_fix": null
+        },
+        {
+          "id": "F-029c",
+          "title": "sig.paste_burst.v1 \u2014 large insertion with no preceding keystrokes",
+          "percent_complete": 100,
+          "queue": "completed",
+          "next_fix": null
+        }
+      ],
+      "independent_detector": false,
+      "parent_completion_completes_members": false,
+      "grouping_is_tag_release": false
+    }
+  ],
+  "sources": {
+    "docs/scope-groups.json": "5c7954eb92746d5e1575249624142038040f324e34f95f316ff7915fd49fce7c",
+    "docs/master-scope.json": "156d82dc25dbaeb539d3478b84d24ee5ab0dbec4e88e7ba57730bcf9d3a962a2",
+    "docs/scope-progress.json": "8689e0959b343c76be494f0a3ef56903fb04e91df7df2961ff902a39b19246bc",
+    "protocol/scope_groups.py": "885bc5cb213d0f098546c0c507fc30c0c6a30a08744f85c4dedd2477f462e3d9"
+  },
+  "scope_ids_preserved": 202,
+  "children_completed_by_grouping": false,
+  "independent_accuracy_verified": false,
+  "captured_at": "2026-10-13T20:45:38.914590+00:00"
+}

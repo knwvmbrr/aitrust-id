@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-185952-firefox-staging-diagnostic-repair-45e57876",
+  "recorded_at": "2026-10-13T18:59:52.176284+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Retain bounded private browser diagnostics and refuse an unconfirmed Firefox process cleanup without losing the failure receipt.",
+  "proves": "Thirty focused package/protocol controls pass; staging cleanup failure stays a failure.",
+  "limits": "No browser pass, scope closure, live compatibility or weakened sandbox is claimed.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "968fc0afccd71b3a7fffd0aa11dbb2c7957e52a6b6480e559eae44184a610c07"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T18:59:57.191105+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "73b34bd05c61fc59a97e1c9c0e04b53c69d3386cccc56b7ea3b3ae4c2bce1f8d",
+    "original_preserved_privately": true
+  }
+}

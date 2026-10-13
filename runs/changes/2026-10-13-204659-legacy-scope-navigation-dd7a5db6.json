@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-204659-legacy-scope-navigation-dd7a5db6",
+  "recorded_at": "2026-10-13T20:46:59.456065+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Implement five preserved legacy grouping links with exact child navigation, focus restoration and unchanged constituent status.",
+  "proves": "20 positive/negative mapping controls pass; all 202 records retained. Grouping never issues a detector, releases a tag or completes children.",
+  "limits": "Five grouping jobs remain open until current build/browser integration passes. Actual signal/tag accuracy, owner roles and human route gates remain independent.",
+  "scope_ids": [
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029",
+    "N-006"
+  ],
+  "files": {
+    "docs/scope-grouping-plan.md": "29b48df2fe9e1e9a4752a3840646e1986a5e9305e55eb1a5836d5478f837e799",
+    "docs/scope-groups.json": "5c7954eb92746d5e1575249624142038040f324e34f95f316ff7915fd49fce7c",
+    "protocol/scope_groups.py": "885bc5cb213d0f098546c0c507fc30c0c6a30a08744f85c4dedd2477f462e3d9",
+    "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
+    "tests/test_scope_groups.py": "9fa2c52560f94bd0e0157c4914f3ec52f8e729c74232fd08a98320463f2d4ceb",
+    "site/scripts/prepare.mjs": "a7e4e41c85e505a3ca2d0b0b4c139c269b9ff207264449c67d51b0761b2a7670",
+    "site/src/workflows/Scope.jsx": "d2a34c10efe1c2b097c74953e67baf2b9bc1e0f6ae5e942a32fcc6cfa68384b0",
+    "scripts/verify-workflows.cjs": "ebcd7a0d26335f2654850337a2571f502affdc9fd5070416979a09db46781f8d",
+    "eval/revalidation.json": "1f3bdd8381bd00ac17268c3ae11e20628376cd6cef5af7b3f861c8270ad04965",
+    ".github/workflows/ci.yml": "d16cbd78f01e27375afe7b7249ba0793a04eaf42a06a7cc2dfd3d883a8a61d12",
+    "runs/2026-10-13-legacy-group-mapping.json": "e0ce73c61b4ffe8b2b765372846bc772ee53d7a5a87271fb9b15f83edb2229f8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-legacy-group-mapping.json",
+      "sha256": "e0ce73c61b4ffe8b2b765372846bc772ee53d7a5a87271fb9b15f83edb2229f8"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scope_groups.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T20:46:59.984503+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "072ac2e629dc8b7ccd9899197108001f7d005d10147482b316a7c96b236035a4",
+    "original_preserved_privately": true
+  }
+}

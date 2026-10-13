@@ -245,3 +245,12 @@ def test_selected_adjudicator_refusal_inputs_are_review_bound():
         "rfcs/0001-behavioral-provenance.md", "rfcs/0002-authorship-receipts.md",
     }
     assert required <= set(guard.inventory(ROOT))
+
+
+@pytest.mark.parametrize('field,value',[('record_unchanged',False),('original_not_created',False),('reason','matched')])
+def test_incomplete_history_cannot_be_claimed_as_repaired(field,value,monkeypatch):
+    import copy
+    path=guard.read_json(ROOT/'eval/route-boundaries.json')['replay_evidence']
+    row=copy.deepcopy(guard.read_json(ROOT/path));row['cases'][-1][field]=value
+    monkeypatch.setattr(guard,'read_json',lambda _:row)
+    with pytest.raises(ValueError,match='preservation failed'):guard.replay_evidence(path)

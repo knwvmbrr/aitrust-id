@@ -122,3 +122,8 @@ verify-editorial:
 	python3 -m pytest tests/test_newsroom.py tests/test_editorial_cli.py -q
 	python3 scripts/verify-editorial-cli.py
 	node scripts/verify-editorial-workflow.cjs
+
+.PHONY: verify-recusal
+verify-recusal:
+	$(PYTHON) -m pytest tests/test_conformance_recusal.py -q
+	$(PYTHON) scripts/verify-conformance-votes.py --output output/verification/recusal.json

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-200021-firefox-scope-and-real-service-evidence-ce32148b",
+  "recorded_at": "2026-10-13T20:00:21.771863+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Record F-156 at 80% with actual Firefox/real-service evidence, implementation credit, timestamp and remaining full acceptance; preserve all 202 scope records and the 87-open target arithmetic.",
+  "proves": "Current actual sources match the fifteen passing application/browser controls; no incomplete requirement is promoted to 100%.",
+  "limits": "Live vendor, outside-user/stable distribution, actual phones, screen readers and independent tag accuracy remain open. No production deployment is claimed.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "docs/scope-progress.json": "e4c64999dacd36ac5b7fcd0d0419b7251673f6663382bfd46d8af2ea1a7ba6f4",
+    "docs/scope-progress.md": "89b73ccc903d4565f77c736518111567c43229ed99eaaf6381a0a65d58f73355",
+    "docs/scope-task-index.md": "42f76b2dd82f6f99c0fd524b43519ceda46610c6f5313cc15dc0be9d28097664",
+    "docs/scope-delivery.md": "9cd5c2141c545b26fe25c07c7c5c3f3d64ddfd6880371379f58ea4ea21384d49",
+    "docs/master-scope.md": "0b9e545b29166fc9572dece7ec3608564b89387be97dbb425addf6afd4c09e03",
+    "state.json": "56e13c6e2b431fbe0c29d15cf3e67d8b48e4ea81f4a7552a8db533879c85a8aa",
+    "docs/firefox-adapter-result.md": "3c8a22e3c59bfff48262e7b2c62ae564b882915d9a28aa59bafc5e4500354d2e",
+    "runs/2026-10-13-firefox-real-services-linux.json": "194a79ec820d1ed1cc0122b4c87f300c7a3f049c2ddddd770669a5af2980b4b5",
+    "runs/2026-10-13-firefox-real-services-attempt-9.json": "225d9276482b11bbc089e246b55ccb610d996c413777acccdb4275a451b4371c",
+    "runs/2026-10-13-firefox-real-services-attempt-10.json": "75b691b6a6714f07abd6242563ca238fbafed29c8036e403392fa96349aa2bf6",
+    "runs/2026-10-13-firefox-real-services-attempt-11.json": "4823cdcd60d32fefaa213d6459b48839c1ef538ae8efc339b63f7f8cd739d911",
+    "runs/2026-10-13-firefox-real-services-attempt-12.json": "97c42f9baf43fe3a33b9945d8be0c2dc7872d48cd9f7f5153aefcfa217acfcc0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-firefox-real-services-linux.json",
+      "sha256": "194a79ec820d1ed1cc0122b4c87f300c7a3f049c2ddddd770669a5af2980b4b5"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T20:00:21.877224+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "a5d725d13f9a3f160d1ec532e60fa8061d1bb7947e18d8bfd889a2299c13a299",
+    "original_preserved_privately": true
+  }
+}

@@ -206,3 +206,15 @@ settle timer per response revision, clear it on manual check or invalidation, an
 set its handle to null when it fires. Exercise a continuously changing unrelated
 node and manual-check-before-settle; neither may starve or duplicate an evaluation.
 This verifies the DOM mechanism, not current vendor coverage or human usability.
+
+## Accepted contracts and original grouping jobs — 2026-10-13
+
+The owner-approved complete-record replay/Unavailable-history contract closes
+F-003 after current Linux service/CLI checks. The functioning signed-ballot recusal
+rule closes F-147 without claiming a board. The accepted fields/access/retention/
+deletion definition before storage closes F-044, with collection still disabled.
+Five legacy grouping records now have verified links, exact navigation and visible
+unchanged child status. They close their grouping jobs without completing their
+constituent tags/signals. All 202 records remain, now 123 complete / 79 open; the
+43-open target remains unmet. Actual independent labels, phones, human accessibility,
+role operation, legal review and deployment/recovery gates remain in their own jobs.

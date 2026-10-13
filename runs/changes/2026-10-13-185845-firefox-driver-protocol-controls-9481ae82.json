@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-185845-firefox-driver-protocol-controls-9481ae82",
+  "recorded_at": "2026-10-13T18:58:45.917730+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Exercise bounded Marionette framing and exact response identity without Firefox or a network connection.",
+  "proves": "Eighteen package controls and twelve local driver controls pass.",
+  "limits": "Protocol unit checks do not prove actual browser installation or live compatibility.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "tests/test_firefox_driver_protocol.py": "0aa09d57f62cc5ff02456264499edd91076619e75db5333c83b5315f4e4caf9f"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T18:58:46.771645+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "2dc9744e5cdf6579849349a79fe44c18faa25d0684134066a841b6cd8ae843f8",
+    "original_preserved_privately": true
+  }
+}

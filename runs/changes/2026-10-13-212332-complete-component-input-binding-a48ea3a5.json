@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-212332-complete-component-input-binding-a48ea3a5",
+  "recorded_at": "2026-10-13T21:23:32.617584+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Bind consumed scope, governance and archive-license inputs to their component checks; preserve the existing UTF-8 ledger formatting.",
+  "proves": "The reviewed full suite passed 3240 tests with stable sources; nine additional input-binding controls refuse changed consumed contracts/assets.",
+  "limits": "The expanded fingerprint manifest requires renewed capability receipts before publication. No scope gate, tag method, endpoint, Chrome permission or release requirement changed.",
+  "scope_ids": [
+    "N-006",
+    "F-003",
+    "F-044",
+    "F-147",
+    "F-156",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "docs/scope-progress.json": "ad9583f2906423d84fe81176ba65bd824c1ab26fdc62686c49e26bb581c3a989",
+    "eval/revalidation.json": "7c3475410b1ba73cd96b2250902876772e6d6d48c3c9930e015e04800eb36bbb",
+    "tests/test_scoped_component_inputs.py": "d4909664776a5432377a51be7cfca70d8806f60c69743f37c9be849ac5ef3900",
+    "runs/2026-10-13-accepted-contracts-reviewed-full-suite.json": "f24faba5be7c4e35fad421eaedefd0f7d01ab2d463d7aa8d3c46264caa02c31b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-reviewed-full-suite.json",
+      "sha256": "f24faba5be7c4e35fad421eaedefd0f7d01ab2d463d7aa8d3c46264caa02c31b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scoped_component_inputs.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T21:23:33.092576+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "21e4a2bce7369827742c3f5033beb348bcb54fc63d48871acabbb3fb5b4b86df",
+    "original_preserved_privately": true
+  }
+}

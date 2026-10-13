@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-214856-final-driver-source-review-6ee0d8a7",
+  "recorded_at": "2026-10-13T21:48:56.658418+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2a67ac980d7c9f5325459ccb8a80dbb097ef7173",
+  "changed": "Refresh extension and route source bindings after the driver whitespace correction.",
+  "proves": "Current extension checks and exact route boundary review pass with the verified dependency environment; archive, detector, service behavior and personal endpoints remain unchanged.",
+  "limits": "Hosted full exact-head checks required before merge; no independent accuracy, real phone or production Firefox support inferred. A system interpreter lacking pydantic was refused and corrected.",
+  "scope_ids": [
+    "F-156",
+    "N-006"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "5a11298a8a6eea00f707fd73655f7037baa269c239dacf0d9650a88bb3f3aa8e",
+    "eval/route-boundaries.json": "14666df9bf35b3df054a0e3c414e8c955038b6f8d0ffbcd193e2b4bc812fa22c",
+    "state.json": "4a7760fdf548994195619c28b2fcd556dc8804f1e5f25396e2efdaf4bf708a39",
+    "runs/2026-10-13-accepted-contracts-format-extension.json": "fc95c7413540a1d5bacb71343068752be18b8f41f872744760a361b9329cf04e",
+    "runs/2026-10-13-accepted-contracts-format-routes.json": "5d4dd8477c84abe02e22aaaff4b9185943210a8c1894f6a27f7628c3d6161969"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-format-extension.json",
+      "sha256": "fc95c7413540a1d5bacb71343068752be18b8f41f872744760a361b9329cf04e"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-format-routes.json",
+      "sha256": "5d4dd8477c84abe02e22aaaff4b9185943210a8c1894f6a27f7628c3d6161969"
+    }
+  ],
+  "checks": []
+}

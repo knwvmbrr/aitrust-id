@@ -56,6 +56,16 @@ def verify(env_file,project):
         a=copy.deepcopy(saved);a['evaluator']['preprocessing']['sha256']='0'*64;cli('invalid_digest',a,saved_text,'invalid',4)
         a=copy.deepcopy(saved);a['spec_version']='0.2.0';cli('future_wire',a,saved_text,'unavailable',3)
         key.chmod(0o644);cli('credential_permissions',saved,saved_text,'invalid',4)
+        key.chmod(0o600);text.unlink()
+        for name,value in [('missing_original',saved),('history_before_missing_original',dict(saved,evaluator={k:v for k,v in saved['evaluator'].items() if k!='preprocessing'}))]:
+            record.write_text(json.dumps(value));record.chmod(0o600);before=record.read_bytes()
+            r=subprocess.run([sys.executable,str(ROOT/'scripts/replay-assertion.py'),str(record),str(text),'--local-gateway','--token-file',str(key)],capture_output=True,timeout=30)
+            result=json.loads(r.stdout)
+            if r.returncode!=3 or result['status']!='unavailable' or r.stderr or record.read_bytes()!=before or text.exists():
+                raise ValueError('Incomplete history must be unavailable and preserved')
+            if token.encode() in r.stdout or str(folder).encode() in r.stdout:raise ValueError('Replay output disclosed private context')
+            cases.append({'name':name,'status':result['status'],'reason':result['reason'],'exit_code':r.returncode,'record_unchanged':True,'original_not_created':True,'output_contains_no_private_marker':True,'output_sha256':hashlib.sha256(r.stdout).hexdigest()})
+
     log_safe=True
     for service in ['gateway','anonymizer','evaluator']:
         r=subprocess.run(['podman','ps','--filter','label=com.docker.compose.project='+project,'--filter','label=com.docker.compose.service='+service,'-q'],capture_output=True,text=True,timeout=10,check=True)

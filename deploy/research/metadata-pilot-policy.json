@@ -1,0 +1,63 @@
+{
+  "profile": "metadata-pilot-policy/v1",
+  "operator": "Michael",
+  "endpoint": "https://research.aitrustid.com/v1/feedback",
+  "owner_decision": {
+    "path": "runs/2026-10-13-metadata-pilot-owner-decision.json",
+    "sha256": "c547ef86524d46f47be95eb8d9ef2fe5fcfdb6817be278446681067b88c259b2"
+  },
+  "collection_enabled": false,
+  "checking_requires_account": false,
+  "submission_default": "off",
+  "permission": "separate_metadata_preview_and_confirm",
+  "audience": "private_invited_pilot",
+  "purpose": "PS_preview_usability_and_failure_review",
+  "tag": "PS",
+  "method_versions": [
+    "context-v6"
+  ],
+  "fields": [
+    "schema_version",
+    "purpose",
+    "tag",
+    "method_version",
+    "reported_result",
+    "failure_category",
+    "feedback",
+    "sharing"
+  ],
+  "submission_marker": "consented_metadata_submission",
+  "free_text_allowed": false,
+  "examples_allowed": false,
+  "subject_hashes_allowed": false,
+  "spans_allowed": false,
+  "participant_identity_allowed": false,
+  "client_time_allowed": false,
+  "model_training_authorized": false,
+  "public_aggregation_authorized": false,
+  "retention": {
+    "active_days": 30,
+    "encrypted_backup_max_days": 7,
+    "restore_applies_withdrawal_and_expiry_before_access": true,
+    "deletion_instructions_retained_through_affected_backup_expiry": true,
+    "immediate_backup_erasure_promised": false
+  },
+  "roles": {
+    "operator": "Michael",
+    "migration": "separate",
+    "intake": "write_minimum",
+    "review": "assigned_read_only",
+    "maintenance": "expiry_and_withdrawal"
+  },
+  "required_before_collection": [
+    "security",
+    "withdrawal",
+    "active_expiry",
+    "encrypted_backup_expiry",
+    "replacement_host_recovery",
+    "effective_database_grants",
+    "proxy_and_provider_review",
+    "owner_operation",
+    "current_privacy_notice"
+  ]
+}

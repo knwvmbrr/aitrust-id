@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-10-13T19:05:28.348971+00:00",
+  "pass": false,
+  "stage": "paused_vendor_fixture",
+  "error_class": "ValueError",
+  "completed_cases": [
+    "TLS_verification_enabled",
+    "actual_temporary_install",
+    "default_paused",
+    "token_save_does_not_enable",
+    "key_save_does_not_enable",
+    "paused_no_capture"
+  ],
+  "sources": {
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+    "extension/src/content/badge.js": "13ae07b3580198976448bf7432c4b22583154ca6eee48141d53990e06a113967",
+    "extension/src/content/bridge.js": "821ca77c4d480dfd7ecf133710316b5633215de0f4f4fb06a76c49691dddbdba",
+    "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64",
+    "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "extension/src/firefox/permissions.js": "4cd489c3df50a27f3b0d3617fd05d745734e9bb8642ae76d43107bf76711a3c7",
+    "scripts/build-firefox-extension.py": "09f8624d3fce86b72e0c189f3be9b5216b48b3565b40c5f01b1f64bab456f062",
+    "scripts/verify-firefox-extension.py": "a1f0df4de48d09e7bfd9dd590466a97731732c328b0c344317ddd2c563726865"
+  },
+  "requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "diagnostic_observation": {}
+}

@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-13T20:57:07.547456+00:00",
+  "pass": true,
+  "owned_fixture_directory_removed": true,
+  "no_running_owned_test_containers": true,
+  "owned_image_removal": [
+    {
+      "owned_tag": "localhost/aitrust-firefox-fullservice:20261013",
+      "removed_without_force": true
+    },
+    {
+      "owned_tag": "localhost/aitrust-firefox-fixture:20261013",
+      "removed_without_force": true
+    }
+  ],
+  "original_staging_containers_unchanged_and_healthy": {
+    "gateway": "healthy",
+    "anonymizer": "healthy",
+    "evaluator": "healthy"
+  },
+  "shared_image_prune_performed": false,
+  "production_services_changed": false,
+  "independent_accuracy_evidence": false
+}

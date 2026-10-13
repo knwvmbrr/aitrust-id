@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-185551-firefox-integration-driver-2482e799",
+  "recorded_at": "2026-10-13T18:55:51.032993+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Add an owned-profile Firefox integration driver with locally trusted fixture TLS, synthetic authenticated loopback responses, explicit consent/reset and temporary uninstall checks.",
+  "proves": "Driver syntax passes; actual browser execution is pending.",
+  "limits": "This test fixture is not live vendor compatibility, a physical device, store signing or a completed scope requirement.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "9fdff84477dab284144b410596d88ae410f3bc1e537b47566f4520a7170edac9"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "py_compile",
+        "scripts/verify-firefox-extension.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T18:55:51.143296+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "c275a9e5c85fafd7be387ed595201702a9afea70d2ebb38f45c92ca2f3ad8016",
+    "original_preserved_privately": true
+  }
+}

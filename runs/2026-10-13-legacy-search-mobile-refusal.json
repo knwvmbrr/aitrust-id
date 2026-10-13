@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "kind": "website_build_phases",
+  "captured_at": "2026-10-13T21:00:47.337Z",
+  "pass": false,
+  "expected_phases": [
+    "private-file-controls",
+    "build",
+    "catalogue",
+    "performance",
+    "workflows",
+    "accessibility",
+    "mobile-payload",
+    "feedback"
+  ],
+  "phases": [
+    {
+      "phase": "private-file-controls",
+      "started_at": "2026-10-13T20:58:59.193Z",
+      "finished_at": "2026-10-13T20:58:59.323Z",
+      "elapsed_ms": 130,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "build",
+      "started_at": "2026-10-13T20:58:59.323Z",
+      "finished_at": "2026-10-13T20:59:07.991Z",
+      "elapsed_ms": 8669,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "catalogue",
+      "started_at": "2026-10-13T20:59:07.997Z",
+      "finished_at": "2026-10-13T20:59:20.375Z",
+      "elapsed_ms": 12378,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "performance",
+      "started_at": "2026-10-13T20:59:20.375Z",
+      "finished_at": "2026-10-13T20:59:30.198Z",
+      "elapsed_ms": 9823,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "workflows",
+      "started_at": "2026-10-13T20:59:30.199Z",
+      "finished_at": "2026-10-13T20:59:35.245Z",
+      "elapsed_ms": 5047,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "accessibility",
+      "started_at": "2026-10-13T20:59:35.245Z",
+      "finished_at": "2026-10-13T21:00:16.407Z",
+      "elapsed_ms": 41162,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "mobile-payload",
+      "started_at": "2026-10-13T21:00:16.408Z",
+      "finished_at": "2026-10-13T21:00:47.334Z",
+      "elapsed_ms": 30927,
+      "exit_status": 1,
+      "signal": null,
+      "failure": "child_exit_failed",
+      "pass": false
+    }
+  ],
+  "sequence_request_refused": false,
+  "controller_aborted": true,
+  "raw_child_output_included": false,
+  "command_arguments_included": false,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_verified": false,
+  "diagnosis": "Mobile-payload test still expected substring search to return the grouping and child; the implemented exact-ID navigation correctly returns one child. Timed-out outdated expectation refused publication."
+}

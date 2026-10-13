@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-204117-approved-storage-definition-b14e45db",
+  "recorded_at": "2026-10-13T20:41:17.912239+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Complete the preserved approved-fields/access/retention/deletion definition before storage; keep collection disabled and bind new controls into revalidation.",
+  "proves": "F-044 original definition is functioning under exact owner approval: closed fields and retention, policy-drift/unsafe-activation refusal, 35 policy controls and 80 fixed-choice combinations.",
+  "limits": "No deployed registry/intake, real participant, backup erasure, model training or independent labels. F-045/F-141/N-011/F-161 remain open. Full refreshed regression and publication are pending.",
+  "scope_ids": [
+    "F-044",
+    "N-011",
+    "F-141",
+    "F-147",
+    "F-003",
+    "F-156",
+    "N-006"
+  ],
+  "files": {
+    "tools/research_policy.py": "5a9fae8dedcb7edb81c2b0b4d6fbb54be061ff4846e80bcf9db3dd99bebc1b67",
+    "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
+    "tests/test_research_policy.py": "921c682a137a702908e50b4822ae8713e627afcd658d50b72c09525d1991262d",
+    "deploy/research/metadata-pilot-policy.json": "ba1e64ef0f97f67c91d0dac4a3127f619b08f23680c3691709c8450bb21d7cbd",
+    "docs/registry-contract-plan.md": "8dd02eb657a440c6103a26c6233b4d6c5eb6da05d26bd3f7f8234a7726db231c",
+    "docs/registry-contract-result.md": "a6f4c41d67fe2e74c4f01fdd217287f9278cd6d66aa1a8d54b2c559bfc2f4c23",
+    "README.md": "e3e24366ecc621dcc793df52812c68dd848de6d3c2dcf1f36b93daf79ee29b96",
+    ".github/workflows/ci.yml": "d1ccbf48748590dda8afa8cf671ccf3a8d448c99c61c75844860ff4eab033aa5",
+    "docs/scope-progress.json": "8689e0959b343c76be494f0a3ef56903fb04e91df7df2961ff902a39b19246bc",
+    "docs/scope-progress.md": "d9d1d29daf1a48ed93fa1ece081c5e8fd6d2d208013f495cec81920fe760427d",
+    "docs/scope-task-index.md": "48a5b64f130274682f5be8d72f8365d41c362bceca5f5ad2ad297be914b74425",
+    "state.json": "a389162d95020d5992d4f22006d46995a40455d96fa92f9a8e95e5da5dfe353d",
+    "eval/revalidation.json": "d2431182b5fa02838659bc8a95e87b07bdb4893531b81096532b458ba84c39ad",
+    "runs/2026-10-13-approved-registry-policy.json": "91a9b42ca26bac2f78ae18bb5729e822d9d0d5ed52315f25a5a9b327b635078d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-approved-registry-policy.json",
+      "sha256": "91a9b42ca26bac2f78ae18bb5729e822d9d0d5ed52315f25a5a9b327b635078d"
+    },
+    {
+      "path": "runs/2026-10-13-metadata-pilot-owner-decision.json",
+      "sha256": "c547ef86524d46f47be95eb8d9ef2fe5fcfdb6817be278446681067b88c259b2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_research_policy.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T20:41:18.572093+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "64b62e59a7a7d4c809677f4ea9ea473ddbbeb9d5df1b86f87f1f90c8dd787ccd",
+    "original_preserved_privately": true
+  }
+}

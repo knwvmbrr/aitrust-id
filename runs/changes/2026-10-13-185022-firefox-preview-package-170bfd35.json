@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-185022-firefox-preview-package-170bfd35",
+  "recorded_at": "2026-10-13T18:50:22.184246+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Build a deterministic Firefox temporary preview from unchanged Chrome sources with strict permission, import, path and output protections.",
+  "proves": "Focused executable package reproducibility and refusal controls pass.",
+  "limits": "No Firefox store signing, live vendor verification, human acceptance, independent accuracy or full requirement closure is claimed.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "docs/firefox-adapter-plan.md": "3db8d1ce0c44ce1adbca6759272e2bfc90bae30a16f59f6b34c7b7bbd46685ff",
+    "scripts/build-firefox-extension.py": "c7f00c39658285c9686a81cded520944f8d56ef7a359116b92554b5e2d269778",
+    "tests/test_firefox_package.py": "af1f20fda2b34c6410346116c012692a0a6ca2c17155da240111721fb527207b"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T18:50:22.870072+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "950ab4f782da64ad2377a1893ea58d0422a21beab4883b6e2e8f8c4b746b0743",
+    "original_preserved_privately": true
+  }
+}

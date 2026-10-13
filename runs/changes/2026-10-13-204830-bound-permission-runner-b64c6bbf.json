@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-204830-bound-permission-runner-b64c6bbf",
+  "recorded_at": "2026-10-13T20:48:30.182391+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Use a repository-script permission runner compatible with the strict revalidation manifest, and record legacy navigation fields.",
+  "proves": "All ten Firefox consent/race/revocation cases pass through the bound Node runner.",
+  "limits": "Linux fixture preview only; no live vendor, store signing, physical phone or independent accuracy. Group browser checks are pending.",
+  "scope_ids": [
+    "F-156",
+    "N-006",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "eval/revalidation.json": "37221d80ea094821903ea9bf350a8a4660bfb14561e01cc03903d98a85187560",
+    "scripts/verify-firefox-permissions.cjs": "e26212fea782c25af7e00455993b8940973c7d8c2b1d160bea4373cd5d29eeca",
+    "scripts/verify-workflows.cjs": "14083f0b50305861200afbf31c696215e1fac6b05adf03468513d948f2c8f19b"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{node}",
+        "scripts/verify-firefox-permissions.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T20:48:31.265080+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "9984c7644beccfc4fffd2fe815f6bd4fde81bbd506d54d9cc9e592b5b611e1b5",
+    "original_preserved_privately": true
+  }
+}

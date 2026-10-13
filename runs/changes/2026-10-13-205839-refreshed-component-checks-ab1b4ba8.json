@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-205839-refreshed-component-checks-ab1b4ba8",
+  "recorded_at": "2026-10-13T20:58:39.769665+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Record current source-bound PS, PII, protocol and extension checks, current scope projections and cleanup of owned Linux browser fixtures.",
+  "proves": "All four capability executions pass with stable sources. Three original staging containers remain unchanged and healthy; only owned fixture resources were removed.",
+  "limits": "Website revalidation, full reviewed suite, protected CI and publication are pending; no independent accuracy or physical phone claim.",
+  "scope_ids": [
+    "N-006",
+    "F-003",
+    "F-147",
+    "F-044",
+    "F-156",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "runs/2026-10-13-accepted-contracts-current-PS.json": "3bf969c741dc4ec28dc23de5de96f9f32388d48af1074737dc08f354a1ba5ee7",
+    "runs/2026-10-13-accepted-contracts-current-PII_REDACTED.json": "32a366e4065ce740d050804235da878c40dde6ddd472fde9265fb5fee26196bf",
+    "runs/2026-10-13-accepted-contracts-current-protocol.json": "aba58da9cc7d03c8ab57a9a99ab83a973d9f8a5115302f712b1a24d3d7879e17",
+    "runs/2026-10-13-accepted-contracts-current-extension.json": "26579b280466b2a65ae3dc611e0c513f02f06e9aaba18281dbb840b3937dc6c0",
+    "runs/2026-10-13-firefox-owned-cleanup.json": "55e8ae670df65c07027fe9754f64738ced75c0a01d2e71c4c070ec647fb294c2",
+    "site/public/reference/public-scope.json": "48562ee6f30c813ea89452b17771610f6e605a1e68bb648910310742acb95a60",
+    "site/src/public-scope.json": "48562ee6f30c813ea89452b17771610f6e605a1e68bb648910310742acb95a60",
+    "site/src/scope-manifest.json": "7bb131c1d467867976ebbfd557ced10085f90e65d7e194ca7bce08ac7992f243"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-current-PS.json",
+      "sha256": "3bf969c741dc4ec28dc23de5de96f9f32388d48af1074737dc08f354a1ba5ee7"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-current-PII_REDACTED.json",
+      "sha256": "32a366e4065ce740d050804235da878c40dde6ddd472fde9265fb5fee26196bf"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-current-protocol.json",
+      "sha256": "aba58da9cc7d03c8ab57a9a99ab83a973d9f8a5115302f712b1a24d3d7879e17"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-current-extension.json",
+      "sha256": "26579b280466b2a65ae3dc611e0c513f02f06e9aaba18281dbb840b3937dc6c0"
+    },
+    {
+      "path": "runs/2026-10-13-firefox-owned-cleanup.json",
+      "sha256": "55e8ae670df65c07027fe9754f64738ced75c0a01d2e71c4c070ec647fb294c2"
+    }
+  ],
+  "checks": []
+}

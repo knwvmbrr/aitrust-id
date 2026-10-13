@@ -140,3 +140,43 @@ def test_current_identity_files_are_in_container_build_allowlist():
     assert 'protocol/replay_identity.py' in (ROOT/'services/gateway/Dockerfile').read_text()
     assert 'protocol/replay_identity.py' in (ROOT/'services/anonymizer/Dockerfile').read_text()
     assert 'services/anonymizer/replay_metadata.py' in (ROOT/'services/anonymizer/Dockerfile').read_text()
+
+
+@pytest.mark.parametrize('missing',['history','original'])
+def test_incomplete_history_or_absent_original_is_unavailable_without_mutation(tmp_path,assertion,missing):
+    record=copy.deepcopy(assertion)
+    if missing=='history':record['evaluator'].pop('preprocessing')
+    raw=json.dumps(record).encode();file=tmp_path/'record.json';file.write_bytes(raw)
+    original=tmp_path/'absent-original.txt';token=tmp_path/'absent-token'
+    r=subprocess.run([sys.executable,str(ROOT/'scripts/replay-assertion.py'),str(file),str(original),
+        '--local-gateway','--token-file',str(token)],capture_output=True,text=True,timeout=20)
+    result=json.loads(r.stdout)
+    assert r.returncode==3 and result['status']=='unavailable' and not r.stderr
+    expected='historical_preprocessing_identity_missing' if missing=='history' else 'required_private_input_unavailable'
+    assert result['reason']==expected
+    assert file.read_bytes()==raw and not original.exists() and not token.exists()
+    assert str(tmp_path) not in r.stdout and result['tool_retains_input'] is False
+
+
+def test_complete_record_replay_never_mutates_stored_record(assertion):
+    raw=json.dumps(assertion,sort_keys=True)
+    result=replay(assertion,'PRIVATE_CANARY',TOKEN,transport=httpx.MockTransport(
+        lambda _:httpx.Response(200,json=copy.deepcopy(assertion))))
+    assert result['status']=='matched'
+    assert json.dumps(assertion,sort_keys=True)==raw
+
+
+@pytest.mark.parametrize('missing',['record','token'])
+def test_missing_record_or_credential_is_invalid_not_absent_original(tmp_path,assertion,missing):
+    file=tmp_path/'record.json';original=tmp_path/'original.txt';token=tmp_path/'token'
+    if missing!='record':file.write_text(json.dumps(assertion))
+    original.write_text('PRIVATE_CANARY');original.chmod(0o600)
+    if missing!='token':token.write_text(TOKEN);token.chmod(0o600)
+    before={p:p.read_bytes() for p in [file,original,token] if p.exists()}
+    r=subprocess.run([sys.executable,str(ROOT/'scripts/replay-assertion.py'),str(file),str(original),
+        '--local-gateway','--token-file',str(token)],capture_output=True,text=True,timeout=20)
+    result=json.loads(r.stdout)
+    assert r.returncode==4 and result['status']=='invalid' and not r.stderr
+    assert result['reason']=='input_or_credential_unavailable'
+    assert all(p.read_bytes()==raw for p,raw in before.items())
+    assert str(tmp_path) not in r.stdout and 'PRIVATE_CANARY' not in r.stdout and TOKEN not in r.stdout
