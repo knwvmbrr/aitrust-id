@@ -34,8 +34,41 @@ Bounds: 2,000 subject characters and 32 nonempty lines; 512 ASCII word tokens pe
 
 ## Check and remove
 
+### Optional: limit when your saved references may be used
+
+You can supply a date window for the references you reviewed. First inspect their
+content yourself and choose a UTC start and expiry. This is your declaration;
+neither preparing the file nor passing the date check proves a source is current
+or true. Preparing it automatically binds the dates to every attached document,
+so you do not have to copy fingerprints by hand.
+
+Use real dates you have chosen in place of `START` and `EXPIRY`, in
+`YYYY-MM-DDTHH:MM:SSZ` format. `PRIVATE/windows` must be a new private folder.
+
+```sh
+python3 REPO/scripts/prepare-reference-review-windows.py --corpus PRIVATE/corpus.json --opens-at START --expires-at EXPIRY --output PRIVATE/windows
+PRIVATE/nli-env/bin/python REPO/scripts/check-nli-references.py --corpus PRIVATE/corpus.json --subject PRIVATE/claim.txt --model-cache PRIVATE/nli-assets --review-windows PRIVATE/windows/review-windows.json --details PRIVATE/result
+```
+
+The checker uses its UTC machine clock. Every attached document must be inside
+its declared window, both before and after comparison. Start is inclusive; expiry
+is exclusive. Missing, changed, unopened or expired policies stop the guarded
+command. A clock moving backwards during the comparison also refuses. If expiry
+occurs while the model runs, no partial result folder is written.
+
+The short summary says whether the **caller-declared window** passed; it still
+reports actual reference freshness as **unestablished**. With `--details`, a
+separate `reference-window-check.json` saves exact check times and binding hashes
+in your private result folder. Those details can link information: keep them
+private. The existing `reference-observations.json` retains its own profile.
+Omitting `--review-windows` preserves the earlier workflow. Nobody is silently
+enrolled, and no policy file is automatically uploaded or renewed.
+
+### Verify the command
+
 ```sh
 python3 REPO/scripts/verify-nli-profile.py
+python3 REPO/scripts/verify-reference-review-windows.py
 PRIVATE/nli-env/bin/python REPO/scripts/verify-nli-references.py --python PRIVATE/nli-env/bin/python --model-cache PRIVATE/nli-assets --output output/verification/nli-reference-controls.json
 ```
 

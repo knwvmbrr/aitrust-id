@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-120451-reference-window-scope-projection-736f7470",
+  "recorded_at": "2026-10-13T12:04:51.603664+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ac47fcecb33fbfded1084a238dbd54d512c8e2a2",
+  "changed": "Updated generated public scope projections for the reference window component while preserving all 202 original jobs, percentages and full acceptance gates.",
+  "proves": "The scope ledger and generated projections retain 115 complete and 87 open records; declared windows are identified as a component, not actual source freshness.",
+  "limits": "Planning and projection consistency only; no independent tag validation, human acceptance or full requirement closure.",
+  "scope_ids": [
+    "F-020b",
+    "F-120"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "5ce182516d83be751225d67aae7dfc0b95cb1a100799f489cbfc1731d803c772",
+    "site/src/public-scope.json": "5ce182516d83be751225d67aae7dfc0b95cb1a100799f489cbfc1731d803c772",
+    "site/src/scope-manifest.json": "64f886545451219928f1c1e9050d3496089d7f32b79e91328d78b232e2c40fec"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T12:04:51.713406+00:00"
+    }
+  ]
+}

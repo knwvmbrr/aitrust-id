@@ -1,0 +1,104 @@
+{
+  "captured_at": "2026-10-13T11:51:31.831366+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "legacy_default_no_match",
+      "pass": true,
+      "exit_status": 0,
+      "stdout_sha256": "55e40beae9f48bf026a92220fec78e55ac95fe1938b828a51c86f173dff62a5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "active_window_no_model_and_private_details",
+      "pass": true,
+      "exit_status": 0,
+      "stdout_sha256": "a2b3c7e46ff58fd328d773bed296547416f2ca8be027678c2572891fd0a04bbb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "existing_details_refused",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "expired_policy_precedes_model_cache_access",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "39d9497befa30a9dcfad99b8f192bb4326a664b098be667668a76e37fb213a81"
+    },
+    {
+      "case": "not_open_policy_precedes_model_cache_access",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c234d4e54cb6f455e4a2fa5fd887148fb698aee9b32f1f86cee0fa38286b5bb7"
+    },
+    {
+      "case": "missing_document_window",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "de1bed814496c4a3fb8b50e173447fa580c3692cd3a62681e8988434b55a8b93"
+    },
+    {
+      "case": "different_corpus_policy",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b236ead43b66d0d637595a00c5377ffc20e7dab4ff82841afdcc882f329070af"
+    },
+    {
+      "case": "duplicate_policy_keys",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b236ead43b66d0d637595a00c5377ffc20e7dab4ff82841afdcc882f329070af"
+    },
+    {
+      "case": "public_policy_permissions",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "symlink_policy",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "hardlinked_policy",
+      "pass": true,
+      "exit_status": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "actual_guarded_model_comparison",
+      "pass": true,
+      "exit_status": 0,
+      "stdout_sha256": "49574061d75d30862d6f263dc558de45888253890e3814f237bdcb05f20d1d23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "actual_model_inference": true,
+  "invented_inputs_only": true,
+  "sources": {
+    "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+    "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "scripts/check-nli-references.py": "053dfa9cdf6a198d811337a9dec04dffd2d8eb2f995a1d6aec70aed31bfb4992",
+    "scripts/verify-reference-review-windows.py": "b1d4a712234812622e6ae3a196b7cfbf627c66509dd6eb8fed83b2b3f4758547"
+  },
+  "private_test_directory_removed": true,
+  "independent_accuracy_evidence": false,
+  "source_freshness_established": false,
+  "requirements_closed": 0,
+  "tag_asserted": false
+}

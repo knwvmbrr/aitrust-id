@@ -1,0 +1,152 @@
+{
+  "captured_at": "2026-10-13T12:01:02.975407+00:00",
+  "pass": true,
+  "selected_python_tests": 178,
+  "actual_cli_controls": 13,
+  "actual_model_inference": false,
+  "model_environment_unavailable": true,
+  "non_root": true,
+  "isolated_network_namespace_verified": true,
+  "ipv4_ipv6_external_connections_refused": 2,
+  "sources": {
+    "scripts/check-nli-references.py": "053dfa9cdf6a198d811337a9dec04dffd2d8eb2f995a1d6aec70aed31bfb4992",
+    "scripts/check-nli-pairs.py": "4a90c7dea6195a50b06243d723d00a3ca262557adcc21521847d74f4e30fd516",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/review-reference-revision.py": "730d44d5235b3ac4b4f392e2fa1afee3dc8441f5fa822fe459761cf672662e24",
+    "scripts/prepare-reference-revision-demo.py": "99778cd31fa437fc949adb9dc24347b5be3d352e21b03cb7c3d7d7a70a775779",
+    "scripts/corpus-support.py": "cd814151d1a3999f7b914617311c86435429839a14bcd6024e1c30b0881e900f",
+    "scripts/verify-reference-revision.py": "30d9f98daaf8102115e5ce45af49fdd7b300dc78f256b87dee5a658ed15e90e1",
+    "scripts/prepare-reference-review-windows.py": "11d729f1ad5e9a552cafae461070bc1e8ba7fab50fcb4f1b7414216959c8cc2e",
+    "scripts/verify-reference-review-windows.py": "fd1c118e04e5f919a3d2eb950ada2715ec6c4ccd7cd228b3154062cacab6c1f6",
+    "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+    "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "research/__init__.py": "0308a3fc46d8d46a75b07d9d06dce9bce19d8e03e40565e99092c1e04e6385fa",
+    "research/nli/__init__.py": "9744225a1f33a76437ca7c234dbd8235e131daff6e4d32d3b610332e789320b0",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "research/nli/network.py": "90afdb1f6a9892f94788148de90f288b2ca4e010179b2e54498b6ef051af0223",
+    "tests/test_reference_review_window.py": "62dff6565a42a82db28df4263963b2a0e4f1200610a3ef7f2bccdef63ad6d659",
+    "tests/test_nli_reference_cli.py": "c774c28a5c24fa3d75a99c73284f653bef1f392b1f1b4452495d3a4c316ef0d6",
+    "tests/test_reference_revision.py": "538d45623534f68507d956bbc5e7f8c5fb9a0e9a42029492dbf1f6b6abb8432a"
+  },
+  "source_unchanged_during_execution": true,
+  "controls": {
+    "captured_at": "2026-10-13T12:01:02.917086+00:00",
+    "pass": true,
+    "cases": [
+      {
+        "case": "actual_private_policy_preparation",
+        "pass": true,
+        "exit_status": 0
+      },
+      {
+        "case": "policy_preparation_refuses_existing_folder",
+        "pass": true,
+        "exit_status": 2
+      },
+      {
+        "case": "legacy_default_no_match",
+        "pass": true,
+        "exit_status": 0,
+        "stdout_sha256": "55e40beae9f48bf026a92220fec78e55ac95fe1938b828a51c86f173dff62a5c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "active_window_no_model_and_private_details",
+        "pass": true,
+        "exit_status": 0,
+        "stdout_sha256": "a2b3c7e46ff58fd328d773bed296547416f2ca8be027678c2572891fd0a04bbb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "existing_details_refused",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+      },
+      {
+        "case": "expired_policy_precedes_model_cache_access",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "39d9497befa30a9dcfad99b8f192bb4326a664b098be667668a76e37fb213a81"
+      },
+      {
+        "case": "not_open_policy_precedes_model_cache_access",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "c234d4e54cb6f455e4a2fa5fd887148fb698aee9b32f1f86cee0fa38286b5bb7"
+      },
+      {
+        "case": "missing_document_window",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "de1bed814496c4a3fb8b50e173447fa580c3692cd3a62681e8988434b55a8b93"
+      },
+      {
+        "case": "different_corpus_policy",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "b236ead43b66d0d637595a00c5377ffc20e7dab4ff82841afdcc882f329070af"
+      },
+      {
+        "case": "duplicate_policy_keys",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "b236ead43b66d0d637595a00c5377ffc20e7dab4ff82841afdcc882f329070af"
+      },
+      {
+        "case": "public_policy_permissions",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+      },
+      {
+        "case": "symlink_policy",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+      },
+      {
+        "case": "hardlinked_policy",
+        "pass": true,
+        "exit_status": 2,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+      }
+    ],
+    "actual_model_inference": false,
+    "invented_inputs_only": true,
+    "sources": {
+      "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+      "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "scripts/prepare-reference-review-windows.py": "11d729f1ad5e9a552cafae461070bc1e8ba7fab50fcb4f1b7414216959c8cc2e",
+      "scripts/check-nli-references.py": "053dfa9cdf6a198d811337a9dec04dffd2d8eb2f995a1d6aec70aed31bfb4992",
+      "scripts/verify-reference-review-windows.py": "fd1c118e04e5f919a3d2eb950ada2715ec6c4ccd7cd228b3154062cacab6c1f6"
+    },
+    "private_test_directory_removed": true,
+    "independent_accuracy_evidence": false,
+    "source_freshness_established": false,
+    "requirements_closed": 0,
+    "tag_asserted": false
+  },
+  "independent_accuracy_evidence": false,
+  "production_changes": false,
+  "requirements_closed": 0,
+  "owned_staging_removed": true
+}

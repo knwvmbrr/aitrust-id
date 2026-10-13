@@ -115,6 +115,10 @@ jobs:
         run: |
           python -m pytest tests/test_reference_revision.py tests/test_corpus_support.py tests/test_nli_references.py -q
           python scripts/verify-reference-revision.py --output output/verification/reference-revisions.json
+      - name: Enforce caller-declared reference windows without a freshness or tag claim
+        run: |
+          python -m pytest tests/test_reference_review_window.py -q
+          python scripts/verify-reference-review-windows.py --output output/verification/reference-windows.json
       - name: Exercise private synthetic feedback analysis without collecting participant data
         run: |
           python -m pytest tests/test_feedback_analysis.py tests/test_research_admission.py -q

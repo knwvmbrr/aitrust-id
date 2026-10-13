@@ -19,6 +19,8 @@ from research.nli import references
 from research.nli.pairs import PairError, require, validate
 from source_snapshot import unique
 from tools.blind_review_io import PacketError, create, source
+from tools import reference_review_window as review_window
+from tools.reference_revision import MAX_POLICY_BYTES
 
 class ReferenceFailure(ValueError):
     def __init__(self,category,action):
@@ -120,14 +122,29 @@ def main(argv=None):
     parser.add_argument('--threshold',type=float,default=.75)
     parser.add_argument('--maximum',type=int,default=5)
     parser.add_argument('--details',type=Path,help='New private output folder; never overwrite.')
+    parser.add_argument('--review-windows',type=Path,
+        help='Optional private declared-window policy for every attached reference; not freshness evidence.')
     args=parser.parse_args(argv)
     try:
         record=corpus.parse(source(args.corpus,REPO,corpus.MAX_STORE_BYTES))
         subject=source(args.subject,REPO,8000).decode('utf-8','strict')
+        policy = review_window.capture(source(args.review_windows, REPO, MAX_POLICY_BYTES)) if args.review_windows else None
+        before = review_window.preflight(record, policy, review_window.utc_now()) if policy is not None else None
         result=check(record,subject,args.model_cache,args.threshold,args.maximum)
+        after = review_window.preflight(record, policy, review_window.utc_now()) if policy is not None else None
+        window_summary = review_window.summary(before, after) if policy is not None else None
         if args.details:
-            create(args.details,REPO,{'reference-observations.json':(json.dumps(result,indent=2,allow_nan=False)+'\n').encode()})
-        print(json.dumps(summary(result,args.details is not None),ensure_ascii=True,allow_nan=False));return 0
+            files={'reference-observations.json':(json.dumps(result,indent=2,allow_nan=False)+'\n').encode()}
+            if policy is not None:
+                files['reference-window-check.json']=(json.dumps({'before':before,'after':after},indent=2,allow_nan=False)+'\n').encode()
+            create(args.details,REPO,files)
+        console=summary(result,args.details is not None)
+        if policy is not None:console['declared_review_windows']=window_summary
+        print(json.dumps(console,ensure_ascii=True,allow_nan=False));return 0
+    except review_window.WindowFailure as error:
+        print(json.dumps({'state':'UNAVAILABLE','reason':error.category,
+            'next_step':'Review every attached source and its declared window; passing dates do not prove freshness or truth.',
+            'tag_asserted':False}),file=sys.stderr);return 2
     except ReferenceFailure as error:
         print(json.dumps({'state':'UNAVAILABLE','reason':error.category,'next_step':error.action,'tag_asserted':False}),file=sys.stderr);return 2
     except (ValueError,OSError,KeyError,TypeError,RuntimeError,RecursionError,ImportError,AttributeError,subprocess.SubprocessError,PacketError):

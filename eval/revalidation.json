@@ -162,7 +162,12 @@
         "docs/session-revision-plan.md",
         "docs/session-revisions.md",
         "docs/session-revision-result.md",
-        "tests/test_revision_public_links.py"
+        "tests/test_revision_public_links.py",
+        "tools/reference_review_window.py",
+        "scripts/prepare-reference-review-windows.py",
+        "scripts/verify-reference-review-windows.py",
+        "tests/test_reference_review_window.py",
+        "docs/reference-review-window-plan.md"
       ],
       "commands": [
         [
@@ -247,6 +252,21 @@
           "pytest",
           "tests/test_revision_public_links.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_reference_review_window.py",
+          "tests/test_nli_reference_cli.py",
+          "tests/test_reference_revision.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-reference-review-windows.py",
+          "--output",
+          "output/verification/reference-windows.json"
         ]
       ]
     },
@@ -497,7 +517,12 @@
         "site/public/reference/session-revision-plan.md",
         "site/public/reference/session-revisions.md",
         "site/public/reference/session-revision-result.md",
-        "tests/test_website_build_diagnostics.py"
+        "tests/test_website_build_diagnostics.py",
+        "tools/reference_review_window.py",
+        "scripts/prepare-reference-review-windows.py",
+        "scripts/verify-reference-review-windows.py",
+        "tests/test_reference_review_window.py",
+        "docs/reference-review-window-plan.md"
       ],
       "commands": [
         [
@@ -600,6 +625,21 @@
           "pytest",
           "tests/test_revision_public_links.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_reference_review_window.py",
+          "tests/test_nli_reference_cli.py",
+          "tests/test_reference_revision.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-reference-review-windows.py",
+          "--output",
+          "output/verification/reference-windows.json"
         ]
       ]
     }
