@@ -1,4 +1,4 @@
-# Experimental adjudication policy — 1.0.1
+# Experimental adjudication policy — 1.0.2
 
 Reviewed 2026-10-09. A proposed research component, not an adopted tag, complete
 C2PA validator, institutional certification or independent accuracy result.
@@ -61,7 +61,11 @@ fabricates a success string can still lie; it needs separate verification.
 ## Per-claim adjudication input and output
 
 `Signal` identifies a layer, claim, value and attributed source; classifiers need
-a bounded confidence. MANIFEST and WATERMARK require explicit `verified=True`
+a finite native integer or float from 0 to 1, inclusive. Booleans, numeric
+strings, nonfinite values and objects are refused with a fixed diagnostic;
+no conversion is attempted. This is a supplied score, not a measured probability.
+An optional confidence on another layer obeys the same input contract and cannot
+change standing. MANIFEST and WATERMARK require explicit `verified=True`
 from their trusted adapter. MANIFEST additionally requires `verdict_state='valid'`.
 Omitted or invalid verification removes strong standing. The flag and state are
 not themselves cryptographic evidence. All signals must describe the same subject

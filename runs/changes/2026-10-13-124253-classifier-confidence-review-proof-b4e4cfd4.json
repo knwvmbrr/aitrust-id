@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-124253-classifier-confidence-review-proof-b4e4cfd4",
+  "recorded_at": "2026-10-13T12:42:53.128281+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "baee09d68b3356b99f785416301be272ec6ef734",
+  "changed": "Record corrected selected-source proof and the expanded reviewed refusal input inventory.",
+  "proves": "All 135 selected cases pass with the missing verifier, refusal test and its RFC inputs included; all five unchanged capability fingerprints still assess valid.",
+  "limits": "Earlier partial-inventory receipts remain historical; corrected full regression and protected review remain pending.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "84c981d63931ecab975a11bb7456aa3760f82b67adeee1d31d9cbdc7335ac7a2",
+    "runs/2026-10-13-classifier-confidence-routes-current.json": "435677f18198e3fc292c1a439cb11ed5d84d6f3028dcebf35dad3a4311a9d3e0",
+    "runs/2026-10-13-classifier-confidence-selected-current.json": "71dcf8dae05c357ce6c817bc4e1056b239e074822877b44fd7401c84e1248394",
+    "scripts/verify-route-boundaries.py": "4c040404a89a702a5f0995707cc7183bedf0ecddd0b02785c920ce467e26d15c",
+    "state.json": "ca4c2954d2b40f26673488815cb21f991b3ea3eb3c19636e07b9dc5a8d9c418e",
+    "tests/test_route_boundaries.py": "ff36ab40da4506174c2f9a58f130910172d0b66e5f3129d42e33efa941ac5a78"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-selected-current.json",
+      "sha256": "71dcf8dae05c357ce6c817bc4e1056b239e074822877b44fd7401c84e1248394"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-routes-current.json",
+      "sha256": "435677f18198e3fc292c1a439cb11ed5d84d6f3028dcebf35dad3a4311a9d3e0"
+    }
+  ],
+  "checks": []
+}

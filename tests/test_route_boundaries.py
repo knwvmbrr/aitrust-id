@@ -231,3 +231,17 @@ def test_host_rendered_asset_cannot_hide_symlink(tmp_path):
     (public / 'share-card.png').symlink_to(target)
     with pytest.raises(ValueError, match='symlink'):
         guard.inventory(tmp_path)
+
+
+def test_selected_adjudicator_refusal_inputs_are_review_bound():
+    required = {
+        "eval/measure.py", "services/adjudicator/adjudicate.py",
+        "services/adjudicator/verdict.py", "services/adjudicator/tag_bridge.py",
+        "services/gateway/app.py", "services/evaluator/app.py",
+        "protocol/normalization.py", "protocol/unicode15-data.json",
+        "tests/test_adjudicator_confidence.py", "tests/test_adjudicator.py",
+        "tests/test_adjudicator_boundaries.py", "tests/test_verdict_refusals.py",
+        "scripts/verify-verdict-boundaries.py",
+        "rfcs/0001-behavioral-provenance.md", "rfcs/0002-authorship-receipts.md",
+    }
+    assert required <= set(guard.inventory(ROOT))

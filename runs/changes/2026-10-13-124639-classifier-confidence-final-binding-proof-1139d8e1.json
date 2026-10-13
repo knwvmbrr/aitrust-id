@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-124639-classifier-confidence-final-binding-proof-1139d8e1",
+  "recorded_at": "2026-10-13T12:46:39.432093+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "baee09d68b3356b99f785416301be272ec6ef734",
+  "changed": "Record selected proof and reviewed inventory with the complete audited local dependency set.",
+  "proves": "135 selected regressions pass with every directly loaded local module and read RFC bound; existing capability receipts still assess valid.",
+  "limits": "Retained interim inventories are partial historical evidence; final full regression is pending.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "8d5f52eb26d6e4937839ade9d9692ce0508513c4a2574e40390616e736e68dc1",
+    "runs/2026-10-13-classifier-confidence-full-suite-current.json": "6710d9d2190b3cc6bca3ba6581791c7a6d97da1626007b936d06e7bde267b4cc",
+    "runs/2026-10-13-classifier-confidence-routes-current.json": "435677f18198e3fc292c1a439cb11ed5d84d6f3028dcebf35dad3a4311a9d3e0",
+    "runs/2026-10-13-classifier-confidence-routes-final.json": "214563549df5c2b00dfc9046fe95df44e41f6ddc36eef5e1e35944a44f2b8761",
+    "runs/2026-10-13-classifier-confidence-selected-current.json": "71dcf8dae05c357ce6c817bc4e1056b239e074822877b44fd7401c84e1248394",
+    "runs/2026-10-13-classifier-confidence-selected-final.json": "03ae77820bd2b5941755c19a6c836444a958ddba10100340469e164b20b00240",
+    "scripts/verify-route-boundaries.py": "ad282145e088a7242897fb248251929d2bcf957d12f098bbe4c3ce88d053d2ab",
+    "state.json": "f8542fe5a0fc157479fae56d8972fad7e7b53f8cf0840ca668e12c79ab8cf6c5",
+    "tests/test_route_boundaries.py": "3318020f741d56916250d8a944ef6ac9681e1003477228692ee8228f01f42dc9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-selected-final.json",
+      "sha256": "03ae77820bd2b5941755c19a6c836444a958ddba10100340469e164b20b00240"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-routes-final.json",
+      "sha256": "214563549df5c2b00dfc9046fe95df44e41f6ddc36eef5e1e35944a44f2b8761"
+    }
+  ],
+  "checks": []
+}

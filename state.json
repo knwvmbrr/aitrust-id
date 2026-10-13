@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T12:12:28.332565+00:00",
-  "active_increment": "Optional declared reference window preflight; current source verification in progress",
+  "updated": "2026-10-13T12:49:09.049456+00:00",
+  "active_increment": "Experimental confidence contract repair; current source verification in progress",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 2997,
+  "python_tests_passed": 3047,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -737,7 +737,7 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/reference-review-window-plan.md",
+    "latest_increment": "docs/classifier-confidence-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 50,
@@ -747,7 +747,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-13-reference-window-full-suite.json",
+    "current_target_verification": "runs/2026-10-13-classifier-confidence-full-suite-final.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
     "latest_owner_direction_date": "2026-10-13"
@@ -965,10 +965,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current whole website and personal-route checks passed; optional window publication pending",
+    "status": "Current website and personal routes verified; experimental confidence source publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-reference-window-routes.json",
-    "source_files": 727,
+    "evidence": "runs/2026-10-13-classifier-confidence-routes-final.json",
+    "source_files": 735,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1029,13 +1029,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-13-reference-window-current-PS.json",
     "PII_REDACTED": "runs/2026-10-13-reference-window-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-13-reference-window-current-protocol.json",
     "extension": "runs/2026-10-13-reference-window-current-extension.json",
-    "website": "runs/2026-10-13-reference-window-website.json",
+    "protocol": "runs/2026-10-13-classifier-confidence-protocol.json",
+    "website": "runs/2026-10-13-classifier-confidence-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T12:12:28.332565+00:00",
+  "updated_at": "2026-10-13T12:49:09.049456+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1100,9 +1100,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "ac47fcecb33fbfded1084a238dbd54d512c8e2a2",
-    "preview": "https://6a84750e.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-13-footer-columns-publication.json",
+    "source_commit": "28b10057582dea4cb7737d70dc010ff7efd03f3b",
+    "preview": "https://eca2a564.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-13-reference-window-publication.json",
     "all_artifacts_verified": 774,
     "exact_headers_verified_per_origin": 4,
     "primary_unrelated_files_preserved": 12,
@@ -2263,7 +2263,7 @@
     "protected_merge": "runs/2026-10-13-footer-columns-protected-merge.json"
   },
   "reference_review_window": {
-    "status": "Optional reference guard, all five current capabilities and full regressions passed; protected publication pending",
+    "status": "Optional reference guard source protected-merged and published; exact files and headers verified at three origins",
     "implemented_by": "Codex",
     "architecture": "docs/reference-review-window-plan.md",
     "guide": "docs/nli-references.md",
@@ -2286,13 +2286,48 @@
     "tag_asserted": false,
     "production_backend_changes": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "website_evidence": "runs/2026-10-13-reference-window-website.json",
     "route_evidence": "runs/2026-10-13-reference-window-routes.json",
     "actual_build_phases": "runs/2026-10-13-reference-window-eight-phases.json",
     "full_suite": "runs/2026-10-13-reference-window-full-suite.json",
     "tests_passed": 2997,
     "tests_skipped": 5,
-    "source_files": 727
+    "source_files": 727,
+    "publication": "runs/2026-10-13-reference-window-publication.json",
+    "protected_merge": "runs/2026-10-13-reference-window-protected-merge.json"
+  },
+  "classifier_confidence_contract": {
+    "status": "Supplied confidence repair, all five current capability assessments and full regressions passed; protected publication pending",
+    "implemented_by": "Codex",
+    "architecture": "docs/classifier-confidence-plan.md",
+    "spec_version": "adjudication/1.0.2",
+    "native_finite_numeric_only": true,
+    "boolean_confidence_refused": true,
+    "classifier_standing": 0,
+    "production_integration": false,
+    "calibration_evidence": false,
+    "requirements_closed": 0,
+    "publication_pending": true,
+    "selected_tests": 135,
+    "new_confidence_tests": 49,
+    "selected_evidence": "runs/2026-10-13-classifier-confidence-selected-final.json",
+    "website_evidence": "runs/2026-10-13-classifier-confidence-website.json",
+    "route_evidence": "runs/2026-10-13-classifier-confidence-routes-final.json",
+    "actual_build_phases": "runs/2026-10-13-classifier-confidence-eight-phases.json",
+    "retained_failure": "runs/2026-10-13-classifier-confidence-website-bookkeeping-refused.json",
+    "full_suite": "runs/2026-10-13-classifier-confidence-full-suite-final.json",
+    "tests_passed": 3047,
+    "tests_skipped": 5,
+    "source_files": 735,
+    "retained_partial_inventory_receipts": [
+      "runs/2026-10-13-classifier-confidence-selected.json",
+      "runs/2026-10-13-classifier-confidence-full-suite.json",
+      "runs/2026-10-13-classifier-confidence-routes.json",
+      "runs/2026-10-13-classifier-confidence-selected-current.json",
+      "runs/2026-10-13-classifier-confidence-full-suite-current.json",
+      "runs/2026-10-13-classifier-confidence-routes-current.json"
+    ],
+    "review_binding_repair": "All selected test inputs, their measurement module, verifier and read RFCs are now bound; a regression checks this dependency closure."
   }
 }

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-124205-classifier-confidence-review-binding-7bdc022d",
+  "recorded_at": "2026-10-13T12:42:05.652765+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "baee09d68b3356b99f785416301be272ec6ef734",
+  "changed": "Bind the six selected verdict refusal tests, their verifier and its two RFC inputs; add an inventory regression check.",
+  "proves": "The review identified incomplete binding in the prior 135-test receipt; prior receipts are retained rather than rewritten.",
+  "limits": "Corrected execution proof is pending; no accuracy, tag release or complete-requirement claim.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "scripts/verify-route-boundaries.py": "4c040404a89a702a5f0995707cc7183bedf0ecddd0b02785c920ce467e26d15c",
+    "tests/test_route_boundaries.py": "ff36ab40da4506174c2f9a58f130910172d0b66e5f3129d42e33efa941ac5a78"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-selected.json",
+      "sha256": "42e72c43ca142db352a23bc45fcd97da0f1bc66c41f37c81cd12266e51ad84e6"
+    }
+  ],
+  "checks": []
+}

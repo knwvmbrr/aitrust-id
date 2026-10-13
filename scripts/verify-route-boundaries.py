@@ -20,7 +20,10 @@ from protocol.revalidation import assess
 from protocol.evidence import read_evidence
 from scripts.dependency_pins import verify_root_inputs
 
-PATTERNS = ('services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
+PATTERNS = ('eval/measure.py', 'rfcs/0001-behavioral-provenance.md', 'rfcs/0002-authorship-receipts.md',
+            'tests/test_verdict_refusals.py', 'scripts/verify-verdict-boundaries.py',
+            'tests/test_adjudicator_confidence.py', 'tests/test_adjudicator.py',
+            'tests/test_adjudicator_boundaries.py', 'services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',
             'site/scripts/*', 'site/functions/**/*', 'site/public/*',
             'site/public/device/*', 'site/index.html', '.github/workflows/*',
             'deploy/docker-compose.yml', 'package.json', 'site/package.json',

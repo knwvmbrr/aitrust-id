@@ -799,10 +799,11 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T21:07:46.641291+00:00",
+      "audited_at": "2026-10-13T12:28:15.241425+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Claude — initial bridge draft; Codex — repaired typed/subject/conflict research seam; no media adapter or released tag"
+        "Claude — initial bridge draft; Codex — repaired typed/subject/conflict research seam; no media adapter or released tag",
+        "Codex — reject boolean/nonfinite/non-numeric supplied confidence without granting classifier standing, 2026-10-13"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
@@ -819,13 +820,16 @@
         "runs/2026-10-09-provenance-boundary-python.json",
         "runs/2026-10-09-provenance-boundary-demo.json",
         "runs/2026-10-09-device-matrix-checkout-correction.json",
-        "runs/2026-10-09-provenance-boundary-final-python.json"
+        "runs/2026-10-09-provenance-boundary-final-python.json",
+        "docs/classifier-confidence-plan.md",
+        "tests/test_adjudicator_confidence.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
       "required_acceptance": [
         "Deliver FA Full AI Augmentation. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The reader sees the origin assertion, source of evidence and supported observation window."
       ],
-      "queue": "open"
+      "queue": "open",
+      "confidence_contract_component": "Native finite numeric scores only; no coercion, model probability claim, adapter implementation or tag release."
     },
     {
       "id": "T-PA",
@@ -835,10 +839,11 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T21:07:46.641291+00:00",
+      "audited_at": "2026-10-13T12:28:15.241434+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Claude — initial bridge draft; Codex — repaired typed/subject/conflict research seam; no media adapter or released tag"
+        "Claude — initial bridge draft; Codex — repaired typed/subject/conflict research seam; no media adapter or released tag",
+        "Codex — reject boolean/nonfinite/non-numeric supplied confidence without granting classifier standing, 2026-10-13"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
@@ -855,13 +860,16 @@
         "runs/2026-10-09-provenance-boundary-python.json",
         "runs/2026-10-09-provenance-boundary-demo.json",
         "runs/2026-10-09-device-matrix-checkout-correction.json",
-        "runs/2026-10-09-provenance-boundary-final-python.json"
+        "runs/2026-10-09-provenance-boundary-final-python.json",
+        "docs/classifier-confidence-plan.md",
+        "tests/test_adjudicator_confidence.py"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
       "required_acceptance": [
         "Deliver PA Partially Augmented. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The reader can distinguish documented contribution/edit events from unobserved authorship."
       ],
-      "queue": "open"
+      "queue": "open",
+      "confidence_contract_component": "Native finite numeric scores only; no coercion, model probability claim, adapter implementation or tag release."
     },
     {
       "id": "T-UNK",
