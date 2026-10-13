@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-111119-published-stream-evidence-0080db42
+
+Recorded 2026-10-13T11:11:19.582925+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded protected merge, exact live publication and unrelated-file preservation for the completed inactive stream repair; updated machine-readable current truth.
+- **Evidence.** Twenty-two required hosted checks passed, review completed without findings, 774 deployed artifact bytes and four exact headers per origin match the clean merged build; all five capability receipts remain current. [Change record](./runs/changes/2026-10-13-111119-published-stream-evidence-0080db42.json).
+- **Not claimed.** Publication evidence only; installed extension stays DOM-only. No live vendor stream, native Share, independent tag validation or full requirement closure. 115 complete, 87 open, 202 retained.
+
+
 ### 2026-10-13-105932-verified-stream-boundaries-f0c47b03
 
 Recorded 2026-10-13T10:59:32.298928+00:00 · Contributor: Codex · change
