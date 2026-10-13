@@ -62,3 +62,27 @@ def test_linked_actual_sources_never_start(tmp_path):
  root=prepared(tmp_path/'roles');path=root/'gateway/app/protocol/transport_signing.py'
  raw=path.read_bytes();path.unlink();outside=tmp_path/'other';outside.write_bytes(raw);path.symlink_to(outside)
  with pytest.raises(ValueError):m.bind_service_sources(root)
+
+
+def test_pipe_unresponsive_service_is_actually_terminated_and_reaped():
+ import subprocess,sys
+ proc=subprocess.Popen([sys.executable,'-c','import time;time.sleep(60)'],stdin=subprocess.PIPE)
+ try:
+  errors=m.stop_owned_service(proc,graceful_timeout=.1,forced_timeout=1)
+  assert 'TimeoutExpired' in errors and proc.poll() is not None
+ finally:
+  if proc.poll() is None:proc.kill();proc.wait(timeout=3)
+
+
+def test_term_unresponsive_service_is_actually_killed_and_reaped():
+ import subprocess,sys
+ proc=subprocess.Popen([sys.executable,'-c',
+  'import signal,time,sys;signal.signal(signal.SIGTERM,signal.SIG_IGN);print("ready",flush=True);time.sleep(60)'],
+  stdin=subprocess.PIPE,stdout=subprocess.PIPE)
+ try:
+  assert proc.stdout.readline()==b'ready\n'
+  errors=m.stop_owned_service(proc,graceful_timeout=.1,forced_timeout=.1)
+  assert errors.count('TimeoutExpired')==2 and proc.poll() is not None
+ finally:
+  if proc.poll() is None:proc.kill();proc.wait(timeout=3)
+  proc.stdout.close()

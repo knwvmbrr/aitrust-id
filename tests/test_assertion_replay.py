@@ -164,3 +164,19 @@ def test_complete_record_replay_never_mutates_stored_record(assertion):
         lambda _:httpx.Response(200,json=copy.deepcopy(assertion))))
     assert result['status']=='matched'
     assert json.dumps(assertion,sort_keys=True)==raw
+
+
+@pytest.mark.parametrize('missing',['record','token'])
+def test_missing_record_or_credential_is_invalid_not_absent_original(tmp_path,assertion,missing):
+    file=tmp_path/'record.json';original=tmp_path/'original.txt';token=tmp_path/'token'
+    if missing!='record':file.write_text(json.dumps(assertion))
+    original.write_text('PRIVATE_CANARY');original.chmod(0o600)
+    if missing!='token':token.write_text(TOKEN);token.chmod(0o600)
+    before={p:p.read_bytes() for p in [file,original,token] if p.exists()}
+    r=subprocess.run([sys.executable,str(ROOT/'scripts/replay-assertion.py'),str(file),str(original),
+        '--local-gateway','--token-file',str(token)],capture_output=True,text=True,timeout=20)
+    result=json.loads(r.stdout)
+    assert r.returncode==4 and result['status']=='invalid' and not r.stderr
+    assert result['reason']=='input_or_credential_unavailable'
+    assert all(p.read_bytes()==raw for p,raw in before.items())
+    assert str(tmp_path) not in r.stdout and 'PRIVATE_CANARY' not in r.stdout and TOKEN not in r.stdout

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-220133-review-replay-and-service-cleanup-7541cf0e",
+  "recorded_at": "2026-10-13T22:01:33.121423+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "892d878451c9061e318793f34c2d7fb87209d25c",
+  "changed": "Keep missing replay assertion/credentials invalid and reserve Unavailable for absent originals; reap owned Firefox fixture children after graceful shutdown stalls.",
+  "proves": "81 focused tests pass, including actual children that ignore pipe shutdown and SIGTERM. Fifteen actual Linux pipeline replay cases pass on current source. All four non-website capability revalidations pass.",
+  "limits": "Firefox remains an unreleased preview; full actual Firefox integration evidence predates this cleanup-only fix. No independent accuracy or physical device acceptance is granted.",
+  "scope_ids": [
+    "F-003",
+    "F-156"
+  ],
+  "files": {
+    "scripts/replay-assertion.py": "67cb3f99545fe9d14fe26bfec7bdf56331e40afef8b1d4a943f85c668da2097b",
+    "scripts/verify-firefox-extension.py": "8ffda7d5417ff345aba5e9044334957e7ee97a8702b2f5816a1bd77be1b4a5d3",
+    "tests/test_assertion_replay.py": "b7bcae3c75817fcab106732ca1bb473ab9bc4ccbbd93da4854394dfb0f6441ce",
+    "tests/test_firefox_driver_protocol.py": "9dca6b26ea54d31462dc871245c1cde431f53eb7a051b5a38db42a68d95ab1a1",
+    "runs/2026-10-13-review-fixes-PS.json": "0adfd1d8303230c1b86dd25cd1880d8ab9dccbf38d370bcedd1c8019f1bb8c5f",
+    "runs/2026-10-13-review-fixes-PII_REDACTED.json": "5525d96057194e0c614af1917d1c5ac23a342d256c8b9fe53100e817e096fdf3",
+    "runs/2026-10-13-review-fixes-protocol.json": "b126197f25f058e64ef5cb5db195051d05e986f3394253d84820c7cfcdc037aa",
+    "runs/2026-10-13-review-fixes-extension.json": "08335688874b6500086ca661eff6cd7fd5dc5a22967eb4b49cce63ec09fc1e2d",
+    "runs/2026-10-13-review-fixes-replay-service.json": "fd9efeff4a4777eef3782b530eb4ee48cb0ba7072182a01eb7a7827832994dfa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-review-fixes-replay-service.json",
+      "sha256": "fd9efeff4a4777eef3782b530eb4ee48cb0ba7072182a01eb7a7827832994dfa"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_assertion_replay.py",
+        "tests/test_firefox_driver_protocol.py",
+        "tests/test_firefox_package.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:01:36.643077+00:00"
+    }
+  ]
+}

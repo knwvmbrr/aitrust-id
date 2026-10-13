@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-13T21:48:55.496227+00:00",
-  "reviewed_by": "Codex \u2014 unchanged personal endpoints/Chrome permissions/device source; owner-approved replay and disabled metadata definition, signed-ballot recusal, legacy navigation and Firefox-only preview controls",
+  "reviewed_at": "2026-10-13T22:08:55.159155+00:00",
+  "reviewed_by": "Codex \u2014 current replay missing-input classification and owned Firefox service reap; unchanged personal endpoint, production source, device inputs and Chrome permissions",
   "rules": [
     "X-01",
     "X-03",
@@ -489,7 +489,7 @@
     "scripts/receipt.cjs": "c771968409fbd34fd673847d40e8fa6a73c8520475ba416004289aaa73ebd950",
     "scripts/redaction-development-worker.py": "04b74a58800213c9c4ec1051a8d9c5f828229a571e0245d7a6e78cdc7e79920a",
     "scripts/render-scope-plan.py": "a92b7c55066029a99acb85c0978ed284761abe0ee0c533cc89f77d8f19e2dea6",
-    "scripts/replay-assertion.py": "3f3d29d432b4347b446226ae9006192f7caf5bbd74371d4bc0a41d7c10145bd3",
+    "scripts/replay-assertion.py": "67cb3f99545fe9d14fe26bfec7bdf56331e40afef8b1d4a943f85c668da2097b",
     "scripts/research-admission.py": "b8e8d67addf9611a8127486df3e8405de903569c4af942c995441f2a3d1f30cd",
     "scripts/review-reference-revision.py": "730d44d5235b3ac4b4f392e2fa1afee3dc8441f5fa822fe459761cf672662e24",
     "scripts/review-session-revision.py": "db37559bfb079b1b02c7a8cf324144461edbbb885929d4cea45e9ebcce73cfc6",
@@ -512,7 +512,7 @@
     "scripts/verify-editorial-cli.py": "b16c9975646cc56eff1e88ba334ff0277e8e2e2844f39bb58d94753c02fd0bb7",
     "scripts/verify-editorial-workflow.cjs": "e0040b6c9992d0c3331e80aed961525bc2d27b29cf5cdc3f16a7f876f2dc5406",
     "scripts/verify-feedback-analysis.py": "76d341aa8a6dddf4f9d1bc8eb8b28241ea57284a25531d9efa9d4bd4248f658a",
-    "scripts/verify-firefox-extension.py": "5a11298a8a6eea00f707fd73655f7037baa269c239dacf0d9650a88bb3f3aa8e",
+    "scripts/verify-firefox-extension.py": "8ffda7d5417ff345aba5e9044334957e7ee97a8702b2f5816a1bd77be1b4a5d3",
     "scripts/verify-firefox-permissions.cjs": "e26212fea782c25af7e00455993b8940973c7d8c2b1d160bea4373cd5d29eeca",
     "scripts/verify-image-provenance-boundary.py": "aae341bef5856f4b158f3ec6e141ced99cec7b8685232f8699876578941e4563",
     "scripts/verify-independent-observations.py": "3b543a55d6bcb3bdfe2f52eacd5b190ac5979a4259113a4090f3764c36b2288f",
@@ -683,7 +683,7 @@
     "tests/test_adjudicator.py": "af90950673bcbc7f9a31a1b224e59c7f39f0ad600fa50d64be261b0bb1125c08",
     "tests/test_adjudicator_boundaries.py": "397026ef7ffcd98bd505319f1d7a9691d7e378344b37d8e6162d4358d54d494a",
     "tests/test_adjudicator_confidence.py": "47fa688c0e7e4b6c7c2484cda895d98efc5e5200af7684f08a7489ec56365c2d",
-    "tests/test_assertion_replay.py": "57f4597b64e12002a8395d6b20afd43aa8e039dfe672a6b6bd7f68336b09b9ca",
+    "tests/test_assertion_replay.py": "b7bcae3c75817fcab106732ca1bb473ab9bc4ccbbd93da4854394dfb0f6441ce",
     "tests/test_asset_notices.py": "940207f5a6634cb1ae98cda2834683c371a0a6fa91254049fae394d2082e57c3",
     "tests/test_backup_retention.py": "c53ebd846aeb4fc5ff973e99679abf01aa42fbe5795b379d59bbaf8662bf760a",
     "tests/test_blind_review.py": "f1f19dca67b4f62a604729ed57f27de540183f8187f5cf76fb6eb81c4e88897c",
@@ -701,7 +701,7 @@
     "tests/test_device_bundle_determinism.py": "8192c50e4f86eef6723a747c5d99cd5b3035c2485681655eb824442972cb6d14",
     "tests/test_editorial_cli.py": "3a8561ae6f7ca9cc5305ced2255a7f22605c7d14d142ef58c9f870350c7e0a83",
     "tests/test_feedback_analysis.py": "3ce6be9064f4cdeb0194d003ce313803ef2526d6d12b8c9150af9d338b6eb89b",
-    "tests/test_firefox_driver_protocol.py": "e63ea326f886300f4546fa9f2dfda5aaed485e56920e45dd27287ef248c5236d",
+    "tests/test_firefox_driver_protocol.py": "9dca6b26ea54d31462dc871245c1cde431f53eb7a051b5a38db42a68d95ab1a1",
     "tests/test_firefox_package.py": "55a4fb56a1eaf23da3e7a08f2fb7c8b00dfb4722ec1b7d1781722a95e9b0a589",
     "tests/test_group_receipts.py": "baf197c2038aa826b670e2b96d1a17200f7fed4f7efb6137dccfc00b833a3c05",
     "tests/test_independent_timestamp.py": "95dac4386ebe0f245206eb12715f437471806f6227e63faa1470b52df22cfd18",
@@ -742,7 +742,7 @@
     "tests/test_review_execution_binding.py": "a2932c80361d545723cd6f6bff1848f6f9cc34da77cf455d2cf22352c1912882",
     "tests/test_reviewer_agreement.py": "d4db4344c4100e57ce39284711d56da4c4a0da18bacf94f0419c97e705767229",
     "tests/test_revision_public_links.py": "df0dea45e70a9ea602cc7adcee03e4a96a5dee421c5f024e42f6acbbd119c654",
-    "tests/test_route_boundaries.py": "519bb74f1192057eae71395c737d40ddb8618ca2074b37fced50c28e17e6ad54",
+    "tests/test_route_boundaries.py": "48ce82cbbbf69130ee753f665169c7ed9fbe6b6647a3f67676a8fe384c4b08e8",
     "tests/test_scope_groups.py": "9fa2c52560f94bd0e0157c4914f3ec52f8e729c74232fd08a98320463f2d4ceb",
     "tests/test_scope_index.py": "63956fe4016b0cadfed713737c8ca99b06c4423eed6ca997eed92cbfe79574b3",
     "tests/test_scoped_component_inputs.py": "d4909664776a5432377a51be7cfca70d8806f60c69743f37c9be849ac5ef3900",
@@ -782,8 +782,8 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "extension": "runs/2026-10-13-accepted-contracts-format-extension.json",
-    "website": "runs/2026-10-13-accepted-contracts-published-website.json"
+    "extension": "runs/2026-10-13-review-fixes-extension.json",
+    "website": "runs/2026-10-13-review-fixes-current-website.json"
   },
   "device_evidence": {
     "source_commit": "2cc5d265ab8ff5a94de9760ed3514031c8691e85",
@@ -804,5 +804,5 @@
   },
   "service_evidence": "runs/2026-10-13-ps-lazy-service.json",
   "registry_evidence": "runs/2026-10-10-registry-deferral-linux-corrected.json",
-  "replay_evidence": "runs/2026-10-13-replay-contract-service.json"
+  "replay_evidence": "runs/2026-10-13-review-fixes-replay-service.json"
 }

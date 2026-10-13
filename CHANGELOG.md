@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-221136-current-review-fixes-source-evidence-d1e96b6a
+
+Recorded 2026-10-13T22:11:36.932301+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current replay receipt, renewed browser/site checks and full test results after review fixes; select current evidence in preservation-negative tests.
+- **Evidence.** 3,253 Python tests pass with 5 platform skips and stable source. All five capability reviews, all eight website phases and 15 real Linux replay cases pass. Current personal endpoint, production source, device inputs and Chrome permissions are unchanged. [Change record](./runs/changes/2026-10-13-221136-current-review-fixes-source-evidence-d1e96b6a.json).
+- **Not claimed.** The first full rerun caught three tests pinned to historical replay source; that failed receipt is retained. Independent release remains unmet, Firefox human/current-vendor acceptance remains open, and protected publication is pending.
+
+
+### 2026-10-13-220256-website-environment-refusal-71cfe0ad
+
+Recorded 2026-10-13T22:02:56.601472+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the failed website renewal after an incomplete command PATH prevented npm startup.
+- **Evidence.** The build controller invalidated success and reported child_startup_failed; no passing website receipt or publication was claimed. [Change record](./runs/changes/2026-10-13-220256-website-environment-refusal-71cfe0ad.json).
+- **Not claimed.** Retry uses the existing configured Node/npm runtime; no source behavior change or requirement completion.
+
+
+### 2026-10-13-220133-review-replay-and-service-cleanup-7541cf0e
+
+Recorded 2026-10-13T22:01:33.121423+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep missing replay assertion/credentials invalid and reserve Unavailable for absent originals; reap owned Firefox fixture children after graceful shutdown stalls.
+- **Evidence.** 81 focused tests pass, including actual children that ignore pipe shutdown and SIGTERM. Fifteen actual Linux pipeline replay cases pass on current source. All four non-website capability revalidations pass. [Change record](./runs/changes/2026-10-13-220133-review-replay-and-service-cleanup-7541cf0e.json).
+- **Not claimed.** Firefox remains an unreleased preview; full actual Firefox integration evidence predates this cleanup-only fix. No independent accuracy or physical device acceptance is granted.
+
+
 ### 2026-10-13-214856-final-driver-source-review-6ee0d8a7
 
 Recorded 2026-10-13T21:48:56.658418+00:00 · Contributor: Codex · change

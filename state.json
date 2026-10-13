@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T21:48:56.597945+00:00",
+  "updated": "2026-10-13T22:11:36.901791+00:00",
   "active_increment": "Eight original named jobs complete; current checks pass (3249 tests), protected publication pending; 79 open toward target 43",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -749,7 +749,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
-    "current_target_verification": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
+    "current_target_verification": "runs/2026-10-13-review-fixes-current-routes.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
     "latest_owner_direction_date": "2026-10-13",
@@ -977,9 +977,9 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current personal route review passes; new offline components and Firefox preview bound; protected publication pending",
+    "status": "Current review passes after replay/service-cleanup fixes; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-accepted-contracts-format-routes.json",
+    "evidence": "runs/2026-10-13-review-fixes-current-routes.json",
     "source_files": 763,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1039,15 +1039,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-13-accepted-contracts-reviewed-PS.json",
-    "PII_REDACTED": "runs/2026-10-13-accepted-contracts-reviewed-PII_REDACTED.json",
-    "protocol": "runs/2026-10-13-accepted-contracts-reviewed-protocol.json",
-    "extension": "runs/2026-10-13-accepted-contracts-format-extension.json",
-    "website": "runs/2026-10-13-accepted-contracts-published-website.json",
+    "PS": "runs/2026-10-13-review-fixes-PS.json",
+    "PII_REDACTED": "runs/2026-10-13-review-fixes-PII_REDACTED.json",
+    "protocol": "runs/2026-10-13-review-fixes-protocol.json",
+    "extension": "runs/2026-10-13-review-fixes-extension.json",
+    "website": "runs/2026-10-13-review-fixes-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T21:48:56.597945+00:00",
+  "updated_at": "2026-10-13T22:11:36.901791+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1895,13 +1895,11 @@
     "primary_preservation": "runs/2026-10-12-editorial-primary-preservation.json"
   },
   "python_tests_current_pass": {
-    "passed": 3249,
+    "passed": 3253,
     "skipped": 5,
-    "upstream_warning": 1,
-    "evidence": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
-    "source_unchanged_during_execution": true,
-    "independent_accuracy_evidence": false,
-    "post_suite_change": "One trailing whitespace removed from test driver; 37 package/driver controls and extension/route review refreshed. Hosted exact-head full suite required before merge."
+    "source_unchanged": true,
+    "evidence": "runs/2026-10-13-review-fixes-current-full-suite.json",
+    "independent_accuracy_evidence": false
   },
   "restore_isolation": {
     "status": "development_guard_protected_merge_and_publication_verified; production_installation_pending",

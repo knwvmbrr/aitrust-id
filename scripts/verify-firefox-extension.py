@@ -48,6 +48,32 @@ def bind_service_sources(service_root, root=ROOT):
 
 
 
+def stop_owned_service(proc, graceful_timeout=8, forced_timeout=5):
+    """Request pipe shutdown, then reap this exact child even after a timeout."""
+    errors=[]
+    if proc.poll() is not None:
+        proc.wait(timeout=forced_timeout)
+        return errors
+    try:
+        proc.stdin.write(b'\0');proc.stdin.flush();proc.stdin.close()
+        proc.wait(timeout=graceful_timeout)
+    except (OSError,subprocess.TimeoutExpired) as error:
+        errors.append(type(error).__name__)
+    if proc.poll() is None:
+        try:
+            proc.terminate()
+            proc.wait(timeout=forced_timeout)
+        except (OSError,subprocess.TimeoutExpired) as error:
+            errors.append(type(error).__name__)
+    if proc.poll() is None:
+        try:
+            proc.kill()
+            proc.wait(timeout=forced_timeout)
+        except (OSError,subprocess.TimeoutExpired) as error:
+            errors.append(type(error).__name__)
+    return errors
+
+
 class Driver:
     def __init__(self, port):
         self.socket = socket.create_connection(('127.0.0.1', port), timeout=3)
@@ -400,30 +426,23 @@ def verify(binary, diagnostics=None, service_root=None):
                     descriptor=os.open(diagnostics/filename,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
                     with os.fdopen(descriptor,'wb') as output:
                         output.write(log_file.read_bytes()[-32000:])
+            browser_cleanup_failed=False
             if process and process.poll() is None:
                 try:
                     process.terminate()
                     try:process.wait(timeout=8)
                     except subprocess.TimeoutExpired:process.kill();process.wait(timeout=5)
                 except (OSError,subprocess.TimeoutExpired):
-                    return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':False,
-                        'stage':'browser_cleanup','preceding_stage':stage,'completed_cases':cases,
-                        'sources':before,'requirements_closed':0,'independent_accuracy_evidence':False,'diagnostic_observation':observation}
+                    browser_cleanup_failed=True
             for server in servers:server.shutdown();server.server_close()
             service_cleanup_errors=[]
             for proc in reversed(service_processes):
-                if proc.poll() is None:
-                    try:
-                        # An owned pipe requests shutdown inside the service; no
-                        # capability escalation or new administrative endpoint.
-                        proc.stdin.write(b'\0');proc.stdin.flush();proc.stdin.close()
-                        proc.wait(timeout=8)
-                    except (OSError,subprocess.TimeoutExpired) as error:
-                        service_cleanup_errors.append(type(error).__name__)
+                service_cleanup_errors.extend(stop_owned_service(proc))
             for log in service_logs:log.close()
-            if service_cleanup_errors:
+            if service_cleanup_errors or browser_cleanup_failed:
                 return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':False,
-                    'stage':'service_cleanup','preceding_stage':stage,'cleanup_errors':service_cleanup_errors,
+                    'stage':'browser_cleanup' if browser_cleanup_failed else 'service_cleanup',
+                    'preceding_stage':stage,'cleanup_errors':service_cleanup_errors,
                     'completed_cases':cases,'sources':before,'requirements_closed':0,
                     'independent_accuracy_evidence':False,'diagnostic_observation':observation}
 
