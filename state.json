@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T12:49:09.049456+00:00",
-  "active_increment": "Experimental confidence contract repair; current source verification in progress",
+  "updated": "2026-10-13T13:07:59.403027+00:00",
+  "active_increment": "Verified reference-window and confidence safeguards published; deployment evidence recorded without promoting a tag or requirement",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -743,7 +743,7 @@
     "target_open_records": 50,
     "target_start_open_records": 91,
     "target_remaining_closures": 37,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
@@ -965,7 +965,7 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current website and personal routes verified; experimental confidence source publication pending",
+    "status": "Current website and personal routes verified; confidence repair protected-merged and published",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-13-classifier-confidence-routes-final.json",
     "source_files": 735,
@@ -1035,7 +1035,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T12:49:09.049456+00:00",
+  "updated_at": "2026-10-13T13:07:59.403027+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1100,9 +1100,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "28b10057582dea4cb7737d70dc010ff7efd03f3b",
-    "preview": "https://eca2a564.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-13-reference-window-publication.json",
+    "source_commit": "356338748b650407e55648d0955f2e4728e99adc",
+    "preview": "https://1a2b7c9e.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-13-classifier-confidence-publication.json",
     "all_artifacts_verified": 774,
     "exact_headers_verified_per_origin": 4,
     "primary_unrelated_files_preserved": 12,
@@ -2298,7 +2298,7 @@
     "protected_merge": "runs/2026-10-13-reference-window-protected-merge.json"
   },
   "classifier_confidence_contract": {
-    "status": "Supplied confidence repair, all five current capability assessments and full regressions passed; protected publication pending",
+    "status": "Confidence input contract repaired, review finding resolved, source protected-merged and published; exact live artifacts and headers verified",
     "implemented_by": "Codex",
     "architecture": "docs/classifier-confidence-plan.md",
     "spec_version": "adjudication/1.0.2",
@@ -2308,7 +2308,7 @@
     "production_integration": false,
     "calibration_evidence": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "selected_tests": 135,
     "new_confidence_tests": 49,
     "selected_evidence": "runs/2026-10-13-classifier-confidence-selected-final.json",
@@ -2328,6 +2328,9 @@
       "runs/2026-10-13-classifier-confidence-full-suite-current.json",
       "runs/2026-10-13-classifier-confidence-routes-current.json"
     ],
-    "review_binding_repair": "All selected test inputs, their measurement module, verifier and read RFCs are now bound; a regression checks this dependency closure."
+    "review_binding_repair": "All selected test inputs, their measurement module, verifier and read RFCs are now bound; a regression checks this dependency closure.",
+    "publication": "runs/2026-10-13-classifier-confidence-publication.json",
+    "protected_merge": "runs/2026-10-13-classifier-confidence-protected-merge.json",
+    "delivery": "runs/2026-10-13-classifier-confidence-final-delivery.json"
   }
 }

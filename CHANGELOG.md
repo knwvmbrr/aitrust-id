@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-130759-confidence-publication-record-38e44eff
+
+Recorded 2026-10-13T13:07:59.476400+00:00 · Contributor: Codex · change
+
+- **Changed.** Record verified confidence repair deployment, protected merge and unrelated-file preservation; clear pre-deployment state flags.
+- **Evidence.** Actual source publication matched 774 artifacts and four headers at each origin; all five unchanged source receipts remain valid. [Change record](./runs/changes/2026-10-13-130759-confidence-publication-record-38e44eff.json).
+- **Not claimed.** Metadata only; no additional tag, acceptance closure, independent accuracy or physical accessibility claim.
+
+
 ### 2026-10-13-124909-classifier-confidence-reviewed-regression-f0177509
 
 Recorded 2026-10-13T12:49:09.352133+00:00 · Contributor: Codex · change

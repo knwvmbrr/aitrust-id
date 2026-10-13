@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-10-13T13:03:51.338034+00:00",
+  "pass": true,
+  "source_commit": "356338748b650407e55648d0955f2e4728e99adc",
+  "artifacts_per_origin": 258,
+  "matching_artifacts": 774,
+  "origins": [
+    {
+      "origin": "https://1a2b7c9e.aitrust-id.pages.dev",
+      "matching_artifacts": 258,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "matching_artifacts": 258,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://www.aitrustid.com",
+      "matching_artifacts": 258,
+      "security_headers_present": true
+    }
+  ],
+  "scope": "Exact decoded HTTP bytes of the reviewed build; not independent source, accuracy or physical-device validation",
+  "independent_accuracy_evidence": false,
+  "preview": "https://1a2b7c9e.aitrust-id.pages.dev",
+  "checked_by": "Codex",
+  "clean_merged_source_built": true,
+  "existing_pages_grant_verified_before_deploy": true,
+  "exact_security_headers_per_origin": 4,
+  "security_header_proof": {
+    "captured_at": "2026-10-13T13:03:52.370127+00:00",
+    "pass": true,
+    "origins": [
+      {
+        "origin": "https://1a2b7c9e.aitrust-id.pages.dev",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer"
+        }
+      },
+      {
+        "origin": "https://aitrustid.com",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer"
+        }
+      },
+      {
+        "origin": "https://www.aitrustid.com",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer"
+        }
+      }
+    ],
+    "exact_header_values_verified": true,
+    "transport": "HTTPS curl HEAD"
+  },
+  "production_backend_changes": false,
+  "requirements_closed": 0
+}
