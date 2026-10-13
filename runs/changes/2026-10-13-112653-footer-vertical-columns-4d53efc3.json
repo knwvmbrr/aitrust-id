@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-112653-footer-vertical-columns-4d53efc3",
+  "recorded_at": "2026-10-13T11:26:53.287578+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0bb698e12de623a9f9061ef5bdd85bd362c0a10f",
+  "changed": "Arrange footer workflows as two side-by-side groups, with each group containing one vertical stack of links.",
+  "proves": "The nested two-column grid is removed while the existing responsive outer grid and all eight independent destinations remain.",
+  "limits": "Layout-only change; phone screens retain a stacked group layout. No tag status, permission, policy, scope acceptance or requirement completion changes.",
+  "scope_ids": [
+    "F-135",
+    "F-136",
+    "F-139"
+  ],
+  "files": {
+    "site/src/main.jsx": "7019da33a7af8e478cb2a39d3bd1e997c91eb5e05ca432977d7193be3a7a9e45"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T11:26:53.452330+00:00"
+    }
+  ]
+}

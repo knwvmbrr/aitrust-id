@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-113102-verified-footer-columns-615c079d",
+  "recorded_at": "2026-10-13T11:31:02.003741+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0bb698e12de623a9f9061ef5bdd85bd362c0a10f",
+  "changed": "Verified and recorded the footer column layout in both themes and at desktop, tablet and narrow-screen widths; refreshed the current website and route evidence.",
+  "proves": "Six actual layout checks preserve all eight destinations, use one vertical list per group and avoid horizontal overflow. All sixteen website commands passed with stable sources; other capability receipts remain valid.",
+  "limits": "Layout-only verification, not physical-device or independent tag validation. No full Python suite repeat or full requirement closure is claimed for this edit.",
+  "scope_ids": [
+    "F-135",
+    "F-136",
+    "F-139"
+  ],
+  "files": {
+    "state.json": "abfa8511e080e1c54558d9a4e7eafe4f6aba73626b38931ac7249da10fe36414",
+    "eval/route-boundaries.json": "d23bf20a735aabb36ba3e661336974a3ed4657790874f76bbb1d846a21cd4691",
+    "runs/2026-10-13-footer-columns-website.json": "00faf292cd67e7f6fe8f154ce344dac6f38525dc6b7e59482d55931182b8f472",
+    "runs/2026-10-13-footer-columns-routes.json": "709f276e0dfad5844321491d922ad25bbf462b8e64e44f87878f3f07aad71c9c",
+    "runs/2026-10-13-footer-columns-layout.json": "d0446030f6d8a1eb1c48ba4739c4a6d6c91bb116879fec39d8d8bc1875b20e72",
+    "runs/2026-10-13-footer-columns-eight-phases.json": "00c1d5211b518f89e7017e878d948c52927b2b680b1552faaab61d8c868cb54a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-footer-columns-website.json",
+      "sha256": "00faf292cd67e7f6fe8f154ce344dac6f38525dc6b7e59482d55931182b8f472"
+    },
+    {
+      "path": "runs/2026-10-13-footer-columns-layout.json",
+      "sha256": "d0446030f6d8a1eb1c48ba4739c4a6d6c91bb116879fec39d8d8bc1875b20e72"
+    }
+  ],
+  "checks": []
+}
