@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-130759-confidence-publication-record-38e44eff",
+  "recorded_at": "2026-10-13T13:07:59.476400+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "356338748b650407e55648d0955f2e4728e99adc",
+  "changed": "Record verified confidence repair deployment, protected merge and unrelated-file preservation; clear pre-deployment state flags.",
+  "proves": "Actual source publication matched 774 artifacts and four headers at each origin; all five unchanged source receipts remain valid.",
+  "limits": "Metadata only; no additional tag, acceptance closure, independent accuracy or physical accessibility claim.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-020b"
+  ],
+  "files": {
+    "runs/2026-10-13-classifier-confidence-final-delivery.json": "03e89eed9e2c92a464cc0190d806990735abc0c0c4db4fb30291311e614795ca",
+    "runs/2026-10-13-classifier-confidence-primary-preservation.json": "30813ee4f62ccc16927bd01e64ad9e0cd8e41f3643b05d3d018b97d9ce7ec6d8",
+    "runs/2026-10-13-classifier-confidence-protected-merge.json": "cfee860fbf94bf722c57ff9c60172cc4a0ab96a80f69d7cfa29b5d17c80be313",
+    "runs/2026-10-13-classifier-confidence-publication.json": "7a7347363da8081fda944bbfb437431c5f886641cce4247f6f382ade673b1c02",
+    "state.json": "18cd6d605d46f350e7abf2c86351d2563ff51bf48422fe170ecd34a803a5ef5a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-protected-merge.json",
+      "sha256": "cfee860fbf94bf722c57ff9c60172cc4a0ab96a80f69d7cfa29b5d17c80be313"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-publication.json",
+      "sha256": "7a7347363da8081fda944bbfb437431c5f886641cce4247f6f382ade673b1c02"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-primary-preservation.json",
+      "sha256": "30813ee4f62ccc16927bd01e64ad9e0cd8e41f3643b05d3d018b97d9ce7ec6d8"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-final-delivery.json",
+      "sha256": "03e89eed9e2c92a464cc0190d806990735abc0c0c4db4fb30291311e614795ca"
+    }
+  ],
+  "checks": []
+}
