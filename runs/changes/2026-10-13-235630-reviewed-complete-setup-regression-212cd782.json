@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-235630-reviewed-complete-setup-regression-212cd782",
+  "recorded_at": "2026-10-13T23:56:30.751362+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "59e6440e9b6a6c2a908d8f3d6518dc47ef6a76e5",
+  "changed": "Close review gaps with byte-identical downloaded-source verification, complete build/checker input binding and a fresh actual Linux receipt; renew all component and route evidence.",
+  "proves": "3,335 Python tests pass with five platform skips and unchanged inputs. All five capability recipes and eight website phases pass. The actual 27-input clean Linux setup and ten failure controls pass; original staging is restored.",
+  "limits": "124 complete and 78 open; target 43 remains unmet. Build-only host mode was explicitly selected for downloads; runtime stays constrained. Independent tag accuracy, human/phone/accessibility and Docker-branch acceptance remain separate.",
+  "scope_ids": [
+    "F-105",
+    "F-142"
+  ],
+  "files": {
+    "docs/scope-progress.json": "da50e3889ac75fc2e3dbe79541c7b1b94079afc657ca184677f637d6e63574b5",
+    "docs/scope-progress.md": "8a61453865fadc5342096a5e2075b0f37b49a49bbd20879834b5594e415d1133",
+    "docs/open-validation-path.md": "a5ab118929fbd659683e2585d3358d6ee7889183fc64eb2f8c8d02119e6dfb5f",
+    "docs/local-setup-result.md": "e1fb7ff9302cc2169ff7b2d70d9e9ee81f26c187f43ed243bfb9629b87303e16",
+    "state.json": "dfffd4c48d6a4987f389deb27a067b1c4fa3f5464aec2cca9bbce072b75e6487",
+    "eval/revalidation.json": "fc784866721c5bd387cc7a3094c16fd49e714fb92e0ce8d1f79bc404aca00e3f",
+    "eval/route-boundaries.json": "2d8ad4ef95ba777fdfe36fd37db5e5a0595abc885c381deab88b8decf009355d",
+    "tests/test_scoped_component_inputs.py": "5904f3d6982202f63bdbe37f8c0051c0131b4541d31ad054bb2ecaf45a618f77",
+    "site/src/public-scope.json": "c7f050ab399e6d01cb6c8733db083fa3c68b58d8bb39d0167a2dc393671cb14e",
+    "site/src/scope-manifest.json": "bdfc9371ffe0d9d5c841f2ce2edc1d9b68482306afee0b521d9d53fcc2986b8c",
+    "site/public/reference/public-scope.json": "c7f050ab399e6d01cb6c8733db083fa3c68b58d8bb39d0167a2dc393671cb14e",
+    "runs/2026-10-13-complete-setup-reviewed-PS.json": "ff2617f457eb5f718a445cc7de94fa343c475e521282c696bce36f34e7a8c34d",
+    "runs/2026-10-13-complete-setup-reviewed-PII_REDACTED.json": "f29f72ae2424fc24c7881517ae5efb6f1b1f3bf2d9b2087b9b31324773302aee",
+    "runs/2026-10-13-complete-setup-reviewed-protocol.json": "fead0ae8c9ef229c141a9c05f0b68dc094922dd3ce7f1464ad608062b1e6e4ea",
+    "runs/2026-10-13-complete-setup-reviewed-extension.json": "358c0ef5fc3a57758d8a988a9713d214c4b2d0f65765ccfa0ee15480861a5f62",
+    "runs/2026-10-13-complete-setup-reviewed-website.json": "2820a30185471171dc8a64993ae261d4d2631f73dd2ff540ef6fbe0782dcc44e",
+    "runs/2026-10-13-complete-setup-reviewed-eight-phases.json": "d72550601d1d26481265fd6fdb7b6291a590645fb0c01ebc822cfcaff5fe93ca",
+    "runs/2026-10-13-complete-setup-reviewed-routes.json": "78fa0cd4dd710001bf000ae87697a780ba377ca3666cc6614f7abb3f0b7fdbfd",
+    "runs/2026-10-13-complete-setup-reviewed-full-suite.json": "088f7c4d22f9ca3ed76a32f37b7756e08030d6ab2dbbca5dfc486ea0737b00c6",
+    "runs/2026-10-13-one-command-complete-input-linux.json": "5414d073c9e86a51334417e82146616c4725495bb231ab6fe452d0ef8a3f728e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-one-command-complete-input-linux.json",
+      "sha256": "5414d073c9e86a51334417e82146616c4725495bb231ab6fe452d0ef8a3f728e"
+    },
+    {
+      "path": "runs/2026-10-13-complete-setup-reviewed-full-suite.json",
+      "sha256": "088f7c4d22f9ca3ed76a32f37b7756e08030d6ab2dbbca5dfc486ea0737b00c6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:56:31.220631+00:00"
+    }
+  ]
+}

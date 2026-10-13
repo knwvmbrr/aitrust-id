@@ -45,6 +45,16 @@ LOCAL_STATE="$HOME/.config/aitrust-id/local-stack"
 "$LOCAL_STATE/checker/bin/python" scripts/aitrust.py check response.txt --env-file "$LOCAL_STATE/runtime.env"
 ```
 
+The recorded complete-input Linux acceptance used `--build-network host` for
+initial dependency downloads, an explicit option when an isolated builder cannot
+reach DNS. This permits image-build processes to reach host networking; choose
+it only for the reviewed, hash-locked build. Runtime service networks, ownership,
+resource limits and loopback binding stay isolated. The default remains private.
+
+```sh
+python3 scripts/setup-local.py --engine podman --build-network host
+```
+
 The setup path is an unsigned CLI development preview. Extension signing/key
 installation is separate; see [gateway authentication](gateway-authentication.md).
 It does not release PS, complete human accessibility acceptance or collect data.

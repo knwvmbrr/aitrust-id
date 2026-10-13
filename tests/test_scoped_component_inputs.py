@@ -15,6 +15,15 @@ def test_actual_new_component_inputs_are_bound():
     for cap,paths in REQUIRED.items():assert set(paths)<=r.fingerprint(cap)['sources'].keys()
 
 
+def test_complete_local_stack_build_and_checker_inputs_are_bound():
+    import importlib.util
+    spec=importlib.util.spec_from_file_location('setup_inputs',ROOT/'scripts/verify-local-setup-evidence.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    bound=r.fingerprint('protocol')['sources']
+    assert set(module.build_inputs())<=set(bound)
+    assert module.RECEIPT in bound
+
+
 @pytest.mark.parametrize('cap,path',[(c,p) for c,paths in REQUIRED.items() for p in paths])
 def test_each_input_change_requires_new_evidence(tmp_path,cap,path):
     for common in r.COMMON:

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-234708-complete-input-linux-acceptance-18a315e8",
+  "recorded_at": "2026-10-13T23:47:08.401206+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "59e6440e9b6a6c2a908d8f3d6518dc47ef6a76e5",
+  "changed": "Reclose setup acceptance after a fresh clean Linux run with 27 complete input hashes and ten real failure/privacy/owned-cleanup controls; bind every consumed input in protocol revalidation.",
+  "proves": "99 setup/checker/evidence tests pass. Actual complete-input startup and all ten controls pass; source remains unchanged, downloaded-source verification needs no Git history, and original staging is restored. All 202 records remain: 124 complete, 78 open.",
+  "limits": "Build-only host networking was explicitly selected for initial downloads; runtime isolation is unchanged and private builds remain the default. No human/physical-device, independent tag release, blanket security or cold-host installer acceptance.",
+  "scope_ids": [
+    "F-105",
+    "F-142"
+  ],
+  "files": {
+    "docs/scope-progress.json": "da50e3889ac75fc2e3dbe79541c7b1b94079afc657ca184677f637d6e63574b5",
+    "docs/scope-progress.md": "8a61453865fadc5342096a5e2075b0f37b49a49bbd20879834b5594e415d1133",
+    "state.json": "9e0d9395250674c7a2e447673826489bd6848eb86646b75bb56248adc5bf340a",
+    "eval/revalidation.json": "fc784866721c5bd387cc7a3094c16fd49e714fb92e0ce8d1f79bc404aca00e3f",
+    "docs/open-validation-path.md": "a5ab118929fbd659683e2585d3358d6ee7889183fc64eb2f8c8d02119e6dfb5f",
+    "docs/local-setup-result.md": "e1fb7ff9302cc2169ff7b2d70d9e9ee81f26c187f43ed243bfb9629b87303e16",
+    "runs/2026-10-13-one-command-complete-input-linux.json": "5414d073c9e86a51334417e82146616c4725495bb231ab6fe452d0ef8a3f728e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-one-command-complete-input-linux.json",
+      "sha256": "5414d073c9e86a51334417e82146616c4725495bb231ab6fe452d0ef8a3f728e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:47:08.837896+00:00"
+    }
+  ]
+}

@@ -5627,7 +5627,7 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-13T22:49:20.606326+00:00",
+        "audited_at": "2026-10-13T23:47:08.225860+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -5639,8 +5639,8 @@
         "completed_by": [
           "Codex"
         ],
-        "completed_at": "2026-10-13T22:49:20.606326+00:00",
-        "completion_timestamp_basis": "Current actual clean-clone Linux startup, real failure controls and full named setup-job acceptance under the owner-approved separation; no historical/human acceptance invented.",
+        "completed_at": "2026-10-13T23:47:08.225860+00:00",
+        "completion_timestamp_basis": "Actual complete-input Linux clean-clone run and ten failure controls, 27 input hashes and downloaded-tree verification; no historical/human acceptance invented.",
         "next_fix": null,
         "next_owner": null,
         "evidence": [
@@ -5654,15 +5654,21 @@
           "docs/local-setup-plan.md",
           "docs/local-setup-result.md",
           "runs/2026-10-13-clean-setup-owner-decision.json",
-          "runs/2026-10-13-one-command-linux-setup.json"
+          "runs/2026-10-13-one-command-linux-setup.json",
+          "runs/2026-10-13-one-command-complete-input-linux.json"
         ],
-        "evidence_scope": "One command from a clean committed Linux clone starts the authenticated, source-matched constrained stack; ten actual failure/privacy/cleanup controls pass. Cached pinned dependencies and usable Podman are prerequisites. Human/physical-device/accessibility acceptance remains F-142.",
+        "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
         "required_acceptance": [],
         "queue": "completed",
         "historical_required_acceptance": [
           "Demonstrate clean-clone local stack setup on the current source and a supported outside-user machine; keep the account-free phone preview instructions separate."
         ],
-        "acceptance_decision": "runs/2026-10-13-clean-setup-owner-decision.json"
+        "acceptance_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
+        "prior_completion_observation": {
+          "completed_at": "2026-10-13T22:49:20.606326+00:00",
+          "evidence": "runs/2026-10-13-one-command-linux-setup.json",
+          "reason": "Real running-stack proof retained; review identified incomplete build-input binding, requiring a fuller execution receipt."
+        }
       }
     },
     {

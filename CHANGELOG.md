@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-235630-reviewed-complete-setup-regression-212cd782
+
+Recorded 2026-10-13T23:56:30.751362+00:00 · Contributor: Codex · change
+
+- **Changed.** Close review gaps with byte-identical downloaded-source verification, complete build/checker input binding and a fresh actual Linux receipt; renew all component and route evidence.
+- **Evidence.** 3,335 Python tests pass with five platform skips and unchanged inputs. All five capability recipes and eight website phases pass. The actual 27-input clean Linux setup and ten failure controls pass; original staging is restored. [Change record](./runs/changes/2026-10-13-235630-reviewed-complete-setup-regression-212cd782.json).
+- **Not claimed.** 124 complete and 78 open; target 43 remains unmet. Build-only host mode was explicitly selected for downloads; runtime stays constrained. Independent tag accuracy, human/phone/accessibility and Docker-branch acceptance remain separate.
+
+
+### 2026-10-13-234910-complete-setup-component-renewal-ef074ca8
+
+Recorded 2026-10-13T23:49:10.941982+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew detector, redaction, protocol and extension source-bound recipes after completing build-input coverage and recording the fresh actual Linux run.
+- **Evidence.** All four capability recipes pass with stable inputs; all 27 build/checker inputs and the current runtime receipt are bound. Detector accuracy and method remain unchanged. [Change record](./runs/changes/2026-10-13-234910-complete-setup-component-renewal-ef074ca8.json).
+- **Not claimed.** Website and full-suite renewals and protected publication remain pending. No independent or human tag-release acceptance.
+
+
+### 2026-10-13-234752-complete-input-scope-preparation-92ef0cff
+
+Recorded 2026-10-13T23:47:52.168124+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the public scope download from the complete-input setup acceptance.
+- **Evidence.** The site builds with all 202 records; F-105 is complete under the approved contract and F-142 remains open. [Change record](./runs/changes/2026-10-13-234752-complete-input-scope-preparation-92ef0cff.json).
+- **Not claimed.** Publication and final combined regression remain pending.
+
+
+### 2026-10-13-234741-full-setup-input-coverage-regression-50acea25
+
+Recorded 2026-10-13T23:47:41.686792+00:00 · Contributor: Codex · change
+
+- **Changed.** Require every discovered setup build/checker input and its current complete-input receipt to appear in protocol revalidation.
+- **Evidence.** The regression verifies complete consumption coverage, including Dockerfiles, locks, health checks, copied protocol modules and CLI validators. [Change record](./runs/changes/2026-10-13-234741-full-setup-input-coverage-regression-50acea25.json).
+- **Not claimed.** This is engineering coverage, not independent accuracy or human acceptance. Final suite and protected publication remain pending.
+
+
+### 2026-10-13-234708-complete-input-linux-acceptance-18a315e8
+
+Recorded 2026-10-13T23:47:08.401206+00:00 · Contributor: Codex · change
+
+- **Changed.** Reclose setup acceptance after a fresh clean Linux run with 27 complete input hashes and ten real failure/privacy/owned-cleanup controls; bind every consumed input in protocol revalidation.
+- **Evidence.** 99 setup/checker/evidence tests pass. Actual complete-input startup and all ten controls pass; source remains unchanged, downloaded-source verification needs no Git history, and original staging is restored. All 202 records remain: 124 complete, 78 open. [Change record](./runs/changes/2026-10-13-234708-complete-input-linux-acceptance-18a315e8.json).
+- **Not claimed.** Build-only host networking was explicitly selected for initial downloads; runtime isolation is unchanged and private builds remain the default. No human/physical-device, independent tag release, blanket security or cold-host installer acceptance.
+
+
 ### 2026-10-13-233400-explicit-build-network-option-c6eebd21
 
 Recorded 2026-10-13T23:34:00.469488+00:00 · Contributor: Codex · change

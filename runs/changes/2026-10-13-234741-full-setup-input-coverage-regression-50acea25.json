@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-234741-full-setup-input-coverage-regression-50acea25",
+  "recorded_at": "2026-10-13T23:47:41.686792+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "59e6440e9b6a6c2a908d8f3d6518dc47ef6a76e5",
+  "changed": "Require every discovered setup build/checker input and its current complete-input receipt to appear in protocol revalidation.",
+  "proves": "The regression verifies complete consumption coverage, including Dockerfiles, locks, health checks, copied protocol modules and CLI validators.",
+  "limits": "This is engineering coverage, not independent accuracy or human acceptance. Final suite and protected publication remain pending.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "tests/test_scoped_component_inputs.py": "5904f3d6982202f63bdbe37f8c0051c0131b4541d31ad054bb2ecaf45a618f77"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_scoped_component_inputs.py",
+        "tests/test_local_setup_evidence.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:47:42.305014+00:00"
+    }
+  ]
+}
