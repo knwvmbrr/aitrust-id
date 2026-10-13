@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-124556-classifier-confidence-dependency-closure-1a900a77",
+  "recorded_at": "2026-10-13T12:45:56.408108+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "baee09d68b3356b99f785416301be272ec6ef734",
+  "changed": "Complete selected dependency binding with the measurement module and assert coverage of directly loaded modules and normalization data.",
+  "proves": "The dependency audit additionally found the selected measurement module was missing; earlier partial inventories remain retained.",
+  "limits": "Final source-bound execution is pending; no production integration or independent accuracy claim.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "84c981d63931ecab975a11bb7456aa3760f82b67adeee1d31d9cbdc7335ac7a2",
+    "runs/2026-10-13-classifier-confidence-full-suite-current.json": "6710d9d2190b3cc6bca3ba6581791c7a6d97da1626007b936d06e7bde267b4cc",
+    "runs/2026-10-13-classifier-confidence-routes-current.json": "435677f18198e3fc292c1a439cb11ed5d84d6f3028dcebf35dad3a4311a9d3e0",
+    "runs/2026-10-13-classifier-confidence-selected-current.json": "71dcf8dae05c357ce6c817bc4e1056b239e074822877b44fd7401c84e1248394",
+    "scripts/verify-route-boundaries.py": "ad282145e088a7242897fb248251929d2bcf957d12f098bbe4c3ce88d053d2ab",
+    "state.json": "ca4c2954d2b40f26673488815cb21f991b3ea3eb3c19636e07b9dc5a8d9c418e",
+    "tests/test_route_boundaries.py": "3318020f741d56916250d8a944ef6ac9681e1003477228692ee8228f01f42dc9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-selected-current.json",
+      "sha256": "71dcf8dae05c357ce6c817bc4e1056b239e074822877b44fd7401c84e1248394"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-full-suite-current.json",
+      "sha256": "6710d9d2190b3cc6bca3ba6581791c7a6d97da1626007b936d06e7bde267b4cc"
+    }
+  ],
+  "checks": []
+}

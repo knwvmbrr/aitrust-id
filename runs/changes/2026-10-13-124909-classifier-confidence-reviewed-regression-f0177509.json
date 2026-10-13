@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-124909-classifier-confidence-reviewed-regression-f0177509",
+  "recorded_at": "2026-10-13T12:49:09.352133+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "baee09d68b3356b99f785416301be272ec6ef734",
+  "changed": "Record final corrected source inventory and full regression after resolving the selected dependency gap.",
+  "proves": "3047 tests pass with five platform skips; 735 reviewed inputs remain unchanged during execution, and the selected dependency coverage regression passes.",
+  "limits": "Earlier partial inventories remain historical; no independent tag validation, production integration or full requirement closure.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "8d5f52eb26d6e4937839ade9d9692ce0508513c4a2574e40390616e736e68dc1",
+    "runs/2026-10-13-classifier-confidence-full-suite-current.json": "6710d9d2190b3cc6bca3ba6581791c7a6d97da1626007b936d06e7bde267b4cc",
+    "runs/2026-10-13-classifier-confidence-full-suite-final.json": "4662c466fa2866445ae63e8be33a682f13a4d78950c1a8127efdc5b6fdb81550",
+    "runs/2026-10-13-classifier-confidence-routes-current.json": "435677f18198e3fc292c1a439cb11ed5d84d6f3028dcebf35dad3a4311a9d3e0",
+    "runs/2026-10-13-classifier-confidence-routes-final.json": "214563549df5c2b00dfc9046fe95df44e41f6ddc36eef5e1e35944a44f2b8761",
+    "runs/2026-10-13-classifier-confidence-selected-current.json": "71dcf8dae05c357ce6c817bc4e1056b239e074822877b44fd7401c84e1248394",
+    "runs/2026-10-13-classifier-confidence-selected-final.json": "03ae77820bd2b5941755c19a6c836444a958ddba10100340469e164b20b00240",
+    "scripts/verify-route-boundaries.py": "ad282145e088a7242897fb248251929d2bcf957d12f098bbe4c3ce88d053d2ab",
+    "state.json": "274e3b630348431b924cb70d6d92eabe424c55bdcd48c6613577db1a46cc4c2e",
+    "tests/test_route_boundaries.py": "3318020f741d56916250d8a944ef6ac9681e1003477228692ee8228f01f42dc9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-full-suite-final.json",
+      "sha256": "4662c466fa2866445ae63e8be33a682f13a4d78950c1a8127efdc5b6fdb81550"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-selected-final.json",
+      "sha256": "03ae77820bd2b5941755c19a6c836444a958ddba10100340469e164b20b00240"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-routes-final.json",
+      "sha256": "214563549df5c2b00dfc9046fe95df44e41f6ddc36eef5e1e35944a44f2b8761"
+    }
+  ],
+  "checks": []
+}

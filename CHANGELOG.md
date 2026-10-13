@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-124909-classifier-confidence-reviewed-regression-f0177509
+
+Recorded 2026-10-13T12:49:09.352133+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final corrected source inventory and full regression after resolving the selected dependency gap.
+- **Evidence.** 3047 tests pass with five platform skips; 735 reviewed inputs remain unchanged during execution, and the selected dependency coverage regression passes. [Change record](./runs/changes/2026-10-13-124909-classifier-confidence-reviewed-regression-f0177509.json).
+- **Not claimed.** Earlier partial inventories remain historical; no independent tag validation, production integration or full requirement closure.
+
+
+### 2026-10-13-124639-classifier-confidence-final-binding-proof-1139d8e1
+
+Recorded 2026-10-13T12:46:39.432093+00:00 · Contributor: Codex · change
+
+- **Changed.** Record selected proof and reviewed inventory with the complete audited local dependency set.
+- **Evidence.** 135 selected regressions pass with every directly loaded local module and read RFC bound; existing capability receipts still assess valid. [Change record](./runs/changes/2026-10-13-124639-classifier-confidence-final-binding-proof-1139d8e1.json).
+- **Not claimed.** Retained interim inventories are partial historical evidence; final full regression is pending.
+
+
+### 2026-10-13-124556-classifier-confidence-dependency-closure-1a900a77
+
+Recorded 2026-10-13T12:45:56.408108+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete selected dependency binding with the measurement module and assert coverage of directly loaded modules and normalization data.
+- **Evidence.** The dependency audit additionally found the selected measurement module was missing; earlier partial inventories remain retained. [Change record](./runs/changes/2026-10-13-124556-classifier-confidence-dependency-closure-1a900a77.json).
+- **Not claimed.** Final source-bound execution is pending; no production integration or independent accuracy claim.
+
+
+### 2026-10-13-124253-classifier-confidence-review-proof-b4e4cfd4
+
+Recorded 2026-10-13T12:42:53.128281+00:00 · Contributor: Codex · change
+
+- **Changed.** Record corrected selected-source proof and the expanded reviewed refusal input inventory.
+- **Evidence.** All 135 selected cases pass with the missing verifier, refusal test and its RFC inputs included; all five unchanged capability fingerprints still assess valid. [Change record](./runs/changes/2026-10-13-124253-classifier-confidence-review-proof-b4e4cfd4.json).
+- **Not claimed.** Earlier partial-inventory receipts remain historical; corrected full regression and protected review remain pending.
+
+
+### 2026-10-13-124205-classifier-confidence-review-binding-7bdc022d
+
+Recorded 2026-10-13T12:42:05.652765+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the six selected verdict refusal tests, their verifier and its two RFC inputs; add an inventory regression check.
+- **Evidence.** The review identified incomplete binding in the prior 135-test receipt; prior receipts are retained rather than rewritten. [Change record](./runs/changes/2026-10-13-124205-classifier-confidence-review-binding-7bdc022d.json).
+- **Not claimed.** Corrected execution proof is pending; no accuracy, tag release or complete-requirement claim.
+
+
 ### 2026-10-13-123521-classifier-confidence-full-regression-4cf45e4c
 
 Recorded 2026-10-13T12:35:21.704767+00:00 · Contributor: Codex · change

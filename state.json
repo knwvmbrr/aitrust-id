@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T12:35:21.639217+00:00",
+  "updated": "2026-10-13T12:49:09.049456+00:00",
   "active_increment": "Experimental confidence contract repair; current source verification in progress",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3046,
+  "python_tests_passed": 3047,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -747,7 +747,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
-    "current_target_verification": "runs/2026-10-13-classifier-confidence-full-suite.json",
+    "current_target_verification": "runs/2026-10-13-classifier-confidence-full-suite-final.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
     "latest_owner_direction_date": "2026-10-13"
@@ -967,8 +967,8 @@
   "personal_route_boundaries": {
     "status": "Current website and personal routes verified; experimental confidence source publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-classifier-confidence-routes.json",
-    "source_files": 730,
+    "evidence": "runs/2026-10-13-classifier-confidence-routes-final.json",
+    "source_files": 735,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1035,7 +1035,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T12:35:21.639217+00:00",
+  "updated_at": "2026-10-13T12:49:09.049456+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2311,14 +2311,23 @@
     "publication_pending": true,
     "selected_tests": 135,
     "new_confidence_tests": 49,
-    "selected_evidence": "runs/2026-10-13-classifier-confidence-selected.json",
+    "selected_evidence": "runs/2026-10-13-classifier-confidence-selected-final.json",
     "website_evidence": "runs/2026-10-13-classifier-confidence-website.json",
-    "route_evidence": "runs/2026-10-13-classifier-confidence-routes.json",
+    "route_evidence": "runs/2026-10-13-classifier-confidence-routes-final.json",
     "actual_build_phases": "runs/2026-10-13-classifier-confidence-eight-phases.json",
     "retained_failure": "runs/2026-10-13-classifier-confidence-website-bookkeeping-refused.json",
-    "full_suite": "runs/2026-10-13-classifier-confidence-full-suite.json",
-    "tests_passed": 3046,
+    "full_suite": "runs/2026-10-13-classifier-confidence-full-suite-final.json",
+    "tests_passed": 3047,
     "tests_skipped": 5,
-    "source_files": 730
+    "source_files": 735,
+    "retained_partial_inventory_receipts": [
+      "runs/2026-10-13-classifier-confidence-selected.json",
+      "runs/2026-10-13-classifier-confidence-full-suite.json",
+      "runs/2026-10-13-classifier-confidence-routes.json",
+      "runs/2026-10-13-classifier-confidence-selected-current.json",
+      "runs/2026-10-13-classifier-confidence-full-suite-current.json",
+      "runs/2026-10-13-classifier-confidence-routes-current.json"
+    ],
+    "review_binding_repair": "All selected test inputs, their measurement module, verifier and read RFCs are now bound; a regression checks this dependency closure."
   }
 }
