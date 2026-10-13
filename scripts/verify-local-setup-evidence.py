@@ -4,17 +4,17 @@ import hashlib
 import json
 from pathlib import Path
 import re
-import subprocess
+import shlex
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from protocol.evidence import read_evidence
 
-RECEIPT = 'runs/2026-10-13-one-command-linux-setup.json'
-SOURCES = ('scripts/setup-local.py', 'scripts/aitrust.py', 'services/gateway/app.py',
-           'services/anonymizer/app.py', 'services/evaluator/app.py',
-           'eval/requirements.lock', 'spec/assertion.schema.json')
+RECEIPT = 'runs/2026-10-13-one-command-complete-input-linux.json'
+CLI_INPUTS = ('.dockerignore', 'scripts/setup-local.py', 'scripts/aitrust.py',
+              'scripts/check-assertion.py', 'protocol/assertions.py',
+              'protocol/evidence.py', 'eval/requirements.lock', 'spec/assertion.schema.json')
 CASES = ['actual_port_collision_preserves_running_installation',
          'actual_changed_ownership_refuses_all_removal',
          'actual_user_checker_finding_exit_2_without_input_execution',
@@ -24,6 +24,44 @@ CASES = ['actual_port_collision_preserves_running_installation',
          'actual_missing_engine_refused_before_mutation',
          'actual_hash_locked_dependency_failure_without_credential',
          'actual_build_failure_owned_cleanup', 'actual_startup_failure_owned_cleanup']
+
+
+def build_inputs(root=ROOT):
+    """Bind the actual simple COPY graph; refuse unsupported external/build-stage inputs."""
+    inputs = set(CLI_INPUTS)
+    for role in ('gateway', 'anonymizer', 'evaluator'):
+        name = 'services/' + role + '/Dockerfile'
+        inputs.add(name)
+        for line in (root / name).read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            if line.endswith('\\'):
+                raise ValueError('Unsupported multiline container build input')
+            parts = shlex.split(line)
+            instruction = parts[0].upper()
+            if instruction == 'FROM' and (len(parts) != 2 or not re.fullmatch(r'[^\s]+@sha256:[a-f0-9]{64}', parts[1])):
+                raise ValueError('Container base identity is not pinned')
+            if instruction == 'ADD':
+                raise ValueError('Unbound container ADD input')
+            if instruction != 'COPY':
+                continue
+            args = parts[1:]
+            if args and args[0].startswith('--chmod='):
+                args = args[1:]
+            if len(args) < 2:
+                raise ValueError('Invalid container COPY input')
+            for source in args[:-1]:
+                if (not re.fullmatch(r'[a-zA-Z0-9_./-]+', source)
+                        or Path(source).is_absolute() or '..' in Path(source).parts):
+                    raise ValueError('Unsupported container COPY input')
+                inputs.add(source)
+    for name in inputs:
+        path = root / name
+        if path.is_symlink() or not path.is_file() or any(
+                parent.is_symlink() for parent in path.parents if parent != root and root in parent.parents):
+            raise ValueError('Container/CLI build input is missing or linked')
+    return {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in sorted(inputs)}
 
 
 def verify(row=None, root=ROOT):
@@ -45,15 +83,17 @@ def verify(row=None, root=ROOT):
         raise ValueError('Unsupported setup evidence scope')
     if row.get('cases') != CASES or type(row.get('case_count')) is not int or row['case_count'] != 10:
         raise ValueError('Missing actual setup failure controls')
-    expected = {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in SOURCES}
+    if row.get('source_binding_profile') != 'local-stack-complete-build-inputs/v1':
+        raise ValueError('Incomplete setup build-input profile')
+    expected = build_inputs(root)
     if row.get('sources') != expected:
         raise ValueError('Setup execution source changed')
     commit = row.get('source_commit')
     if not isinstance(commit, str) or not re.fullmatch(r'[a-f0-9]{40}', commit):
         raise ValueError('Invalid setup source commit')
-    result = subprocess.run(['git', 'merge-base', '--is-ancestor', commit, 'HEAD'], cwd=root, capture_output=True)
-    if result.returncode:
-        raise ValueError('Setup execution commit is not in current history')
+    # A downloaded tree or an ordinary squash may not retain the execution
+    # commit. Exact input bytes establish identity; the commit is an execution
+    # reference, never a Git-history prerequisite or independent attestation.
     services = row.get('services', {})
     if set(services) != {'gateway', 'anonymizer', 'evaluator'}:
         raise ValueError('Missing actual service identity')
@@ -64,7 +104,8 @@ def verify(row=None, root=ROOT):
                 or any(service.get(key) is not True for key in ('read_only', 'capabilities_dropped', 'no_new_privileges'))):
             raise ValueError('Actual service safety/identity changed')
     return {'pass': True, 'requirement': 'F-105', 'actual_failure_cases': 10,
-            'source_files': len(SOURCES), 'human_acceptance_requirement': 'F-142',
+            'source_files': len(expected), 'human_acceptance_requirement': 'F-142',
+            'git_history_required': False,
             'independent_accuracy_evidence': False, 'collection_enabled': False,
             'scope': 'Source-bound cached-dependency Linux clean-clone setup; no outside-user or tag release acceptance.'}
 

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-232139-complete-setup-build-input-review-4acc7eb6
+
+Recorded 2026-10-13T23:21:39.401880+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the full COPY/Dockerfile/lock/health/CLI input graph and allow byte-identical downloaded trees without Git ancestry. Reopen final setup acceptance pending a fuller actual Linux receipt.
+- **Evidence.** The prior actual running-stack/failure proof is retained. Current binding enumerates each supported build input and refuses unsupported external/stage inputs; all 202 records remain. [Change record](./runs/changes/2026-10-13-232139-complete-setup-build-input-review-4acc7eb6.json).
+- **Not claimed.** F-105 is temporarily 80% until complete-input runtime evidence and the combined suite pass. No execution result, human acceptance or independent tag accuracy is invented.
+
+
 ### 2026-10-13-231230-verified-one-command-setup-increment-ee8983fb
 
 Recorded 2026-10-13T23:12:30.694697+00:00 · Contributor: Codex · change

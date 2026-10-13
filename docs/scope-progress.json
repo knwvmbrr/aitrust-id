@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-13T22:49:20.606326+00:00",
+  "audited_at": "2026-10-13T23:21:39.245038+00:00",
   "client_date": "2026-10-13",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3508,15 +3508,14 @@
       "id": "F-105",
       "kind": "requirement",
       "title": "One documented command: clean clone \u2192 running stack",
-      "percent_complete": 100,
+      "percent_complete": 80,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
         "executable_checks",
-        "selected_integration",
-        "final_acceptance"
+        "selected_integration"
       ],
-      "audited_at": "2026-10-13T22:49:20.606326+00:00",
+      "audited_at": "2026-10-13T23:21:39.245038+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -3525,13 +3524,11 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [
-        "Codex"
-      ],
-      "completed_at": "2026-10-13T22:49:20.606326+00:00",
-      "completion_timestamp_basis": "Current actual clean-clone Linux startup, real failure controls and full named setup-job acceptance under the owner-approved separation; no historical/human acceptance invented.",
-      "next_fix": null,
-      "next_owner": null,
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Repeat actual clean-clone Linux setup with complete Dockerfile/COPY/lock/health/CLI input identity; verify the downloaded-tree profile without requiring Git history. Human acceptance remains F-142.",
+      "next_owner": "Codex",
       "evidence": [
         "runs/2026-10-09-scope-completion-checks.json",
         "tests/test_local_cli.py",
@@ -3546,12 +3543,19 @@
         "runs/2026-10-13-one-command-linux-setup.json"
       ],
       "evidence_scope": "One command from a clean committed Linux clone starts the authenticated, source-matched constrained stack; ten actual failure/privacy/cleanup controls pass. Cached pinned dependencies and usable Podman are prerequisites. Human/physical-device/accessibility acceptance remains F-142.",
-      "required_acceptance": [],
-      "queue": "completed",
+      "required_acceptance": [
+        "Complete source-bound Linux setup acceptance after review."
+      ],
+      "queue": "open",
       "historical_required_acceptance": [
         "Demonstrate clean-clone local stack setup on the current source and a supported outside-user machine; keep the account-free phone preview instructions separate."
       ],
-      "acceptance_decision": "runs/2026-10-13-clean-setup-owner-decision.json"
+      "acceptance_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
+      "prior_completion_observation": {
+        "completed_at": "2026-10-13T22:49:20.606326+00:00",
+        "evidence": "runs/2026-10-13-one-command-linux-setup.json",
+        "reason": "Real running-stack proof retained; review identified incomplete build-input binding, requiring a fuller execution receipt."
+      }
     },
     {
       "id": "F-050",
