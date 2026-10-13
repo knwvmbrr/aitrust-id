@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-170732-ps-device-source-anchor-22a96285
+
+Recorded 2026-10-13T17:07:32.441213+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain passed eight-phase website receipt and refusal of an incorrectly typed device binding; anchor the changed detector and measured device report in Git before final route acceptance.
+- **Evidence.** Current website checks passed all eight phases; immutable source binding still required by the guard. [Change record](./runs/changes/2026-10-13-170732-ps-device-source-anchor-22a96285.json).
+- **Not claimed.** No final route or full-suite acceptance claimed from the interrupted run; no release or requirement promotion.
+
+
+### 2026-10-13-170256-ps-current-capability-checks-94143800
+
+Recorded 2026-10-13T17:02:56.611719+00:00 · Contributor: Codex · change
+
+- **Changed.** Record corrected current capability checks and performance outcome; verify the PS efficiency download on both modal and static routes.
+- **Evidence.** PS, PII, protocol and extension checks passed against the corrected current bindings; failed prior receipts retained. [Change record](./runs/changes/2026-10-13-170256-ps-current-capability-checks-94143800.json).
+- **Not claimed.** Website and full-suite final revalidation remain pending; no full requirement closure or independent accuracy claim.
+
+
+### 2026-10-13-170111-ps-method-binding-repair-6ca8c5a9
+
+Recorded 2026-10-13T17:01:11.032136+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh lexical resistance and current source-matched staging/replay records; repair replay-export and resistance evidence dependencies and preserve failed revalidation/client-upload records.
+- **Evidence.** 26 HTTP staging checks and 13 actual replay CLI cases pass on the changed evaluator; current attack trials remain visible, including all eight lexical evasions. [Change record](./runs/changes/2026-10-13-170111-ps-method-binding-repair-6ca8c5a9.json).
+- **Not claimed.** Resistance is unchanged and bounded; no stronger accuracy or attack-resistance claim. Revalidation still pending for corrected manifest; historical records retained.
+
+
+### 2026-10-13-165607-ps-efficiency-admission-cfa055f5
+
+Recorded 2026-10-13T16:56:07.226509+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh exact-source browser observations, full-service timing, scope evidence and target; expose downloadable paired efficiency observations and reject stale or embellished timing evidence during build.
+- **Evidence.** Both emulated engines passed 137 parity cases; new evidence validator rejects stale source, forged samples/quantiles, memory scope and accuracy claims. [Change record](./runs/changes/2026-10-13-165607-ps-efficiency-admission-cfa055f5.json).
+- **Not claimed.** 87 open requirements remain; target 43 is not achieved. No physical-phone or independent held-out accuracy acceptance; no end-to-end speedup inferred.
+
+
+### 2026-10-13-165358-ps-lazy-context-7c62e58c
+
+Recorded 2026-10-13T16:53:58.302317+00:00 · Contributor: Codex · change
+
+- **Changed.** Defer PS context indexes until a lexical candidate needs them; retain exact eager reference and fresh synthetic staging/device measurements.
+- **Evidence.** Paired warm rule calls show lower ordinary-text allocation and timing; deterministic comparisons preserve findings. Three isolated staging containers recreated, only evaluator image changed. [Change record](./runs/changes/2026-10-13-165358-ps-lazy-context-7c62e58c.json).
+- **Not claimed.** No independent accuracy, physical-phone acceptance, whole-pipeline speedup or full-requirement closure; first single-container replacement refused and rolled back.
+
+
 ### 2026-10-13-130759-confidence-publication-record-38e44eff
 
 Recorded 2026-10-13T13:07:59.476400+00:00 · Contributor: Codex · change

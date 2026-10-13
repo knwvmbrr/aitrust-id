@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-165607-ps-efficiency-admission-cfa055f5",
+  "recorded_at": "2026-10-13T16:56:07.226509+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "645755938ad28bdecea2912d01eb292f0a42e1c8",
+  "changed": "Refresh exact-source browser observations, full-service timing, scope evidence and target; expose downloadable paired efficiency observations and reject stale or embellished timing evidence during build.",
+  "proves": "Both emulated engines passed 137 parity cases; new evidence validator rejects stale source, forged samples/quantiles, memory scope and accuracy claims.",
+  "limits": "87 open requirements remain; target 43 is not achieved. No physical-phone or independent held-out accuracy acceptance; no end-to-end speedup inferred.",
+  "scope_ids": [
+    "F-113",
+    "F-010",
+    "N-012"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "747d97abbbcf90f0c1858648c54bf9f1427ba1740a51db57fe5a1d0fabed7606",
+    "docs/device-build-reference.json": "b6bf6ffb3c662b88ff1c59b06e58ee442201803357a1c506b4b14844982e482f",
+    "docs/ps-lazy-context-performance-plan.md": "59f05ffc831e8455bfd129fcb53b0d738ec0c0e731546aba27d29c59d6a10109",
+    "docs/scope-progress.json": "2b6d85c0fcda16da7c2715cc9a228c7220662d2f7dbd37f666c1a6ebbf5f065d",
+    "docs/scope-progress.md": "d139f5ceb1b9eadfb31b402cf49687144509ef4464e9af719f4346ef7ee438ef",
+    "eval/methods/README.md": "abcc6b5b1963dcbdf6f89d923a09c6235ede1db29028dd452ac272667ef53202",
+    "eval/methods/context-v6-eager.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
+    "eval/revalidation.json": "846b587ab95cb1c7cebf1e3bdd0b366db5a32691a9aa4f064f3ce052eafe247d",
+    "eval/tag-performance-evidence.json": "91513456f4d227ffe614eca58148556133d60c6de222ed8a6f177f01b02aa5a8",
+    "runs/2026-10-13-ps-lazy-context-paired.json": "6ce81ec748d3adc30f2aa64381dca3b5b01fc61b52e3a2760a084332974ee21a",
+    "runs/2026-10-13-ps-lazy-device-engines.json": "4a2b6c27480b723f2be0537f9c04a36e39a4e8513f2218de27d928ec6068e5b4",
+    "runs/2026-10-13-ps-lazy-regressions.json": "ee626702e569d93b0029167189bb743b3ab33b554a34c4dede1aa1980f18ca5d",
+    "runs/2026-10-13-ps-lazy-staging-dependency-refusal.json": "bf03c5bd1bcd5f37b183ee80fde8109dced7442512a441dce31a9419935b5803",
+    "runs/2026-10-13-ps-lazy-staging-integration.json": "2d49a3ee2cb5d02224214df2bf5a84ce8d0411c66886636af4dc35366700ca5c",
+    "runs/2026-10-13-ps-lazy-staging-source-witness.json": "74837c8311de059fd780bbcbb321ccafc33a456e4c9bf925f30ca85b2177e83d",
+    "runs/2026-10-13-ps-lazy-staging-timing.json": "0ebc792efc60dbd7b6c07c8b050fee9c02d139c8541d1b9413517ea798464289",
+    "scripts/measure-ps-efficiency.py": "1fd462008897d14e2a37866f54d2e7d336e306a5bac3bc5e5362d6c3d9d73581",
+    "scripts/verify-ps-efficiency.py": "eb4503b8d0a798841dfe29b5b5164f25279618d496cc0c68274f79360f90e07d",
+    "scripts/verify-route-boundaries.py": "1ea3266fe0ebc2afcafbd2564303cb281fa7f59268544a74d2137dc767ecf141",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "site/index.html": "5853ebbd921e65eb5f9d9292f3b1beca763c74eb93c2cb1d1a022f3afafa2d6e",
+    "site/public/reference/performance-regressions.json": "ee626702e569d93b0029167189bb743b3ab33b554a34c4dede1aa1980f18ca5d",
+    "site/public/reference/pipeline-performance.json": "150f87292c208d120dc16eb3235878dd5af9c634db7117f0b87ff7a6d8108295",
+    "site/public/reference/ps-efficiency.json": "6ce81ec748d3adc30f2aa64381dca3b5b01fc61b52e3a2760a084332974ee21a",
+    "site/public/reference/tag-performance-evidence.json": "4261d76faf92847f22f1d69220d41d2aaf76a72afd6738f8b7cb7dded0db4c72",
+    "site/public/reference/tag-performance.json": "228a82bdf1de4ee9ff0e452a1e972f52420c029345f1b890b24a10ae1368d663",
+    "site/scripts/prepare-performance.mjs": "6b343ef159867eae6d48ec934c06272095282bf50b49d164ae23868affb14417",
+    "site/src/performance-model.js": "28f2dd36c09e0907ce39c6a656b98b92da6299358dd8b5cf3c137ca16826349d",
+    "site/src/performance.jsx": "32499c5ab927a6ebcda94cde6b88c15537ed5b196ac3d11f6cd5c4990cf8595f",
+    "site/src/tag-performance.json": "228a82bdf1de4ee9ff0e452a1e972f52420c029345f1b890b24a10ae1368d663",
+    "state.json": "072e8b6c517f650b0419bdda735dd4a4c7e39aa57124b285842d42b82199d2ee",
+    "tests/test_lazy_ps_context.py": "2f3862b183a52a3352d8c74b24d5ec65cdbc8dd5fcae8a761552ba187979441b",
+    "tests/test_ps_efficiency_evidence.py": "329117f21ff6305c786871cf0a1d94462c8004cda48c0c55baf2b99fd6da700a",
+    "tests/test_tag_performance.py": "8ad7119419c501cc6953836be0f6add164ddfe66912189dbf04cb39977650612"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-ps-lazy-device-engines.json",
+      "sha256": "4a2b6c27480b723f2be0537f9c04a36e39a4e8513f2218de27d928ec6068e5b4"
+    },
+    {
+      "path": "runs/2026-10-13-ps-lazy-context-paired.json",
+      "sha256": "6ce81ec748d3adc30f2aa64381dca3b5b01fc61b52e3a2760a084332974ee21a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-ps-efficiency.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T16:56:07.423814+00:00"
+    }
+  ]
+}
