@@ -155,6 +155,14 @@ def resource_id(text):
     return text
 
 
+def no_process_capabilities(raw):
+    values = json.loads(raw)
+    required = {'CapInh', 'CapPrm', 'CapEff', 'CapBnd', 'CapAmb'}
+    return (isinstance(values, dict) and set(values) == required
+            and all(isinstance(value, str) and re.fullmatch(r'[a-fA-F0-9]{16}', value)
+                    and int(value, 16) == 0 for value in values.values()))
+
+
 def build_and_start(engine, folder, state):
     project = state['project']
     images = {}
@@ -208,7 +216,7 @@ def verify_security(engine, state):
         host = row['HostConfig']
         if (row['Config']['User'] != '10001:10001' or host.get('ReadonlyRootfs') is not True
                 or host.get('PidsLimit') != 128 or host.get('Memory') != MEMORY[role] * 1024 * 1024
-                or not any(value in ('ALL', 'CAP_ALL') for value in host.get('CapDrop', []))
+                or not host.get('CapDrop')
                 or not any(value in ('no-new-privileges', 'no-new-privileges:true')
                            for value in host.get('SecurityOpt', []))):
             raise SetupError('Effective container security differs from the required configuration.')
@@ -230,6 +238,15 @@ def verify_security(engine, state):
         expected = hashlib.sha256((ROOT / 'services' / role / 'app.py').read_bytes()).hexdigest()
         if source != expected:
             raise SetupError('Running service source differs from the checkout.')
+        # Podman expands ALL into individual capability names. Verify actual
+        # inherited/permitted/effective/bounding/ambient process sets instead of
+        # trusting either engine's display spelling of the requested flag.
+        caps = engine.run('exec', identity, 'python', '-c',
+            'import json;keys={"CapInh","CapPrm","CapEff","CapBnd","CapAmb"};'
+            'print(json.dumps({k:v.strip() for k,v in '
+            '(line.split(":",1) for line in open("/proc/self/status") if ":" in line) if k in keys}))')
+        if not no_process_capabilities(caps):
+            raise SetupError('A service retains Linux process capabilities.')
         result[role] = {'source_sha256': source, 'uid': 10001, 'read_only': True,
                         'pids_limit': 128, 'memory_mib': MEMORY[role],
                         'capabilities_dropped': True, 'no_new_privileges': True}

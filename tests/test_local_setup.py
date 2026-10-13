@@ -100,6 +100,16 @@ def test_podman_lowercase_network_labels_are_checked():
         setup.owned(engine, 'network', 'c' * 64, row['project'])
 
 
+@pytest.mark.parametrize('field', ['CapInh', 'CapPrm', 'CapEff', 'CapBnd', 'CapAmb'])
+def test_actual_capability_sets_must_all_be_empty(field):
+    values = {name: '0000000000000000' for name in ['CapInh', 'CapPrm', 'CapEff', 'CapBnd', 'CapAmb']}
+    assert setup.no_process_capabilities(json.dumps(values))
+    values[field] = '0000000000000001'
+    assert not setup.no_process_capabilities(json.dumps(values))
+    values.pop(field)
+    assert not setup.no_process_capabilities(json.dumps(values))
+
+
 def test_actual_port_collision_precedes_state_creation(tmp_path, monkeypatch, capsys):
     engine = Mock()
     monkeypatch.setattr(setup, 'Engine', lambda name: engine)

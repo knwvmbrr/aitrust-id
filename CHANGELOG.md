@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-220447-actual-process-capability-verification-e4ac6580
+
+Recorded 2026-10-13T22:04:47.339540+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify all five actual Linux process capability sets are empty instead of assuming Podman spells cap-drop ALL literally.
+- **Evidence.** 55 focused controls pass, including refusal of any nonzero inherited, permitted, effective, bounding or ambient capability set. [Change record](./runs/changes/2026-10-13-220447-actual-process-capability-verification-e4ac6580.json).
+- **Not claimed.** The actual Linux startup is still pending. The previous run refused readiness and cleaned recorded resources; no acceptance threshold is lowered.
+
+
 ### 2026-10-13-220257-podman-network-inspection-contract-812e429b
 
 Recorded 2026-10-13T22:02:57.633420+00:00 · Contributor: Codex · change
