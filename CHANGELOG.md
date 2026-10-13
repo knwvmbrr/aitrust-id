@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-123521-classifier-confidence-full-regression-4cf45e4c
+
+Recorded 2026-10-13T12:35:21.704767+00:00 · Contributor: Codex · change
+
+- **Changed.** Record full source-bound regression results and current state for the confidence input repair.
+- **Evidence.** 3046 Python tests pass with five platform skips and unchanged bound source; selected cases preserve proposed ranking and production tag refusal. [Change record](./runs/changes/2026-10-13-123521-classifier-confidence-full-regression-4cf45e4c.json).
+- **Not claimed.** Regression evidence is not independent tag accuracy; FA and PA remain proposed and no full requirements close.
+
+
+### 2026-10-13-123335-classifier-confidence-verified-routes-2a58a6ce
+
+Recorded 2026-10-13T12:33:35.504003+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current website verification, refreshed reviewed route inventory and actual build phases for confidence repair.
+- **Evidence.** All five capabilities have valid source-bound receipts; 18 website commands and the personal route inventory passed. [Change record](./runs/changes/2026-10-13-123335-classifier-confidence-verified-routes-2a58a6ce.json).
+- **Not claimed.** No independently validated FA or PA tag; remaining acceptance requirements and runtime routes are unchanged.
+
+
+### 2026-10-13-123043-classifier-confidence-current-proof-a8c7ddfb
+
+Recorded 2026-10-13T12:30:43.179553+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual selected and protocol checks, retaining the website refusal for missing receipt bookkeeping.
+- **Evidence.** 135 selected regressions and 13 protocol commands passed with unchanged bound source; website failed before completing the build. [Change record](./runs/changes/2026-10-13-123043-classifier-confidence-current-proof-a8c7ddfb.json).
+- **Not claimed.** The first website attempt is retained as failed; no deployment or accuracy claim follows from it.
+
+
+### 2026-10-13-122909-classifier-confidence-scope-projection-0fd66793
+
+Recorded 2026-10-13T12:29:09.010122+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the preserved scope projections after recording confidence contract repair credit.
+- **Evidence.** All 202 scope records retain the same completion percentage, acceptance requirements and next action. [Change record](./runs/changes/2026-10-13-122909-classifier-confidence-scope-projection-0fd66793.json).
+- **Not claimed.** The repair is a component; FA and PA remain proposed and 87 requirements remain open.
+
+
+### 2026-10-13-122827-classifier-confidence-contract-49f7317d
+
+Recorded 2026-10-13T12:28:27.079656+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse boolean and nonnumeric confidence in the experimental adjudicator; backfill verified reference-window publication and preservation.
+- **Evidence.** Exact live reference artifacts and headers match the protected merge; native numeric confidence cannot grant classifier standing. [Change record](./runs/changes/2026-10-13-122827-classifier-confidence-contract-49f7317d.json).
+- **Not claimed.** No adapter, calibrated probability, independently validated tag, production integration or full requirement closure.
+
+
 ### 2026-10-13-121228-verified-reference-window-48bbe4e6
 
 Recorded 2026-10-13T12:12:28.372841+00:00 · Contributor: Codex · change

@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Iterable, Sequence
 
-SPEC_VERSION = "adjudication/1.0.1"
+SPEC_VERSION = "adjudication/1.0.2"
 
 
 class Layer(Enum):
@@ -76,7 +76,8 @@ class Signal:
       value: the asserted value, e.g. "human" / "ai" / "ai_assisted".
       source: free-text provenance of the signal itself, for the audit record.
         Required: an unattributable signal is not evidence.
-      confidence: 0..1. Only meaningful for CLASSIFIER; ignored for precedence.
+      confidence: a finite native int or float in 0..1; bool is refused.
+        Only meaningful for CLASSIFIER; ignored for precedence.
       verdict_state: for MANIFEST signals, the `Verdict.state` from
         verdict.py. A manifest whose own verdict is not assertable forfeits
         standing -- a revoked or tampered manifest does not get to win an
@@ -148,8 +149,12 @@ class Signal:
                 "Signal.source is required: an unattributable signal is not "
                 "evidence and must not enter adjudication."
             )
-        if self.confidence is not None and not 0.0 <= self.confidence <= 1.0:
-            raise ValueError(f"confidence must be in [0,1], got {self.confidence}")
+        if self.confidence is not None:
+            # bool is an int subclass; accepting it invents a classifier score.
+            # Exact native types also prevent coercion or custom comparisons.
+            # Range comparisons reject NaN/infinities without converting huge ints.
+            if type(self.confidence) not in (int, float) or not 0.0 <= self.confidence <= 1.0:
+                raise ValueError("Signal.confidence must be a finite number in [0,1]")
         if self.layer is Layer.CLASSIFIER and self.confidence is None:
             raise ValueError(
                 "A CLASSIFIER signal must carry a confidence. An unquantified "

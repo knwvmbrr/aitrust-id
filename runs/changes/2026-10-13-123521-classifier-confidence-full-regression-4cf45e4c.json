@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-123521-classifier-confidence-full-regression-4cf45e4c",
+  "recorded_at": "2026-10-13T12:35:21.704767+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "28b10057582dea4cb7737d70dc010ff7efd03f3b",
+  "changed": "Record full source-bound regression results and current state for the confidence input repair.",
+  "proves": "3046 Python tests pass with five platform skips and unchanged bound source; selected cases preserve proposed ranking and production tag refusal.",
+  "limits": "Regression evidence is not independent tag accuracy; FA and PA remain proposed and no full requirements close.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "7582b6d319d9f22a136bb6b2455353d1402cbec883469ccd6a56756a78adfb35",
+    "docs/adjudication-spec.md": "d68a32549a1522424a0c58a5ffae99a310d907719df6d5e8664fe5e3eb797304",
+    "docs/classifier-confidence-plan.md": "5aa6dd75f163f3f23dd6d84c16e42fc2045fb8aea02d10259367c1bfcee76946",
+    "docs/scope-progress.json": "b24a5589dfdf2729ca2bc06968f9a4a4f5e7eb03976684434d36c7d53b34bdf5",
+    "docs/scope-progress.md": "f107aad23b846f4f3b068b067ef92d92880573d9905db4f809127e999ce334b2",
+    "eval/route-boundaries.json": "6aaa96c1534f2b3108c359cb194088d148f2b5a7ee0673f872aa2dcbeb617684",
+    "runs/2026-10-13-classifier-confidence-eight-phases.json": "42c3a32dd0232a12323355ffb93e3ffc2b337c83d5b0aecd47982c5cda046645",
+    "runs/2026-10-13-classifier-confidence-full-suite.json": "d94f004619c74e078ba753c9477ffdaf8be4ab728f4b42dc9f15908bbeb0363f",
+    "runs/2026-10-13-classifier-confidence-protocol.json": "e355fe1c2683c1a3351dabf6c06a177daacf0ef9d13c37fb4523bda7b0b9b90c",
+    "runs/2026-10-13-classifier-confidence-routes.json": "d9390ecd296b5fe35e59acb0ea9f7b51a128e7ad7897cd4ddf095cff29d700d9",
+    "runs/2026-10-13-classifier-confidence-selected.json": "42e72c43ca142db352a23bc45fcd97da0f1bc66c41f37c81cd12266e51ad84e6",
+    "runs/2026-10-13-classifier-confidence-website-bookkeeping-refused.json": "ad7010f2c7acee104ea2fce9a1c5f178391fb53b7543b7fc49bc061e0ccefb41",
+    "runs/2026-10-13-classifier-confidence-website.json": "78135f71eb57c84a1709898fd2575a839705cf7b3727f48955ea3e9ce5328b1d",
+    "runs/2026-10-13-reference-window-primary-preservation.json": "1521a107cfc03692b5ecdce15eac555d4f0e519b10fc6490a24ddd9726c97b7a",
+    "runs/2026-10-13-reference-window-protected-merge.json": "148ebc150bf3b2519b710ac1b1ca56730e197974d864972e3c8c7c492f280f7a",
+    "runs/2026-10-13-reference-window-publication.json": "ed01f9a8c62173168a36c7b76662ab01bcbba765be17e59c1c48f7c53fbaf5af",
+    "scripts/verify-route-boundaries.py": "c015a2056c472aa3ec79fea21f023d847b8491e15372fcda0a2b4dbb88a272ed",
+    "services/adjudicator/adjudicate.py": "4de7e783c0f2c0620b793fdfb02b62e2b9a6c536a8e1dbb33c4d262020019deb",
+    "site/public/reference/public-scope.json": "c7a8f6fee1bf868c2af3cad586165a716aecbb366d470a57d6c18efc9459cb38",
+    "site/src/public-scope.json": "c7a8f6fee1bf868c2af3cad586165a716aecbb366d470a57d6c18efc9459cb38",
+    "site/src/scope-manifest.json": "a09250834145c00dd10701ff2171a0b82c93f34b5bc3d31b0ca55a637b008d68",
+    "state.json": "3d1759997347cce92c93c73d9c3de9bdca0515335069e5f7053bf410cc5e558b",
+    "tests/test_adjudicator_confidence.py": "47fa688c0e7e4b6c7c2484cda895d98efc5e5200af7684f08a7489ec56365c2d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-classifier-confidence-full-suite.json",
+      "sha256": "d94f004619c74e078ba753c9477ffdaf8be4ab728f4b42dc9f15908bbeb0363f"
+    },
+    {
+      "path": "runs/2026-10-13-classifier-confidence-selected.json",
+      "sha256": "42e72c43ca142db352a23bc45fcd97da0f1bc66c41f37c81cd12266e51ad84e6"
+    }
+  ],
+  "checks": []
+}
