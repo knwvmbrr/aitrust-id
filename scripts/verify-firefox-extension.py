@@ -408,7 +408,7 @@ def verify(binary, diagnostics=None, service_root=None):
                 except (OSError,subprocess.TimeoutExpired):
                     return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':False,
                         'stage':'browser_cleanup','preceding_stage':stage,'completed_cases':cases,
-                        'sources':before,'requirements_closed':0,'independent_accuracy_evidence':False,'diagnostic_observation':observation} 
+                        'sources':before,'requirements_closed':0,'independent_accuracy_evidence':False,'diagnostic_observation':observation}
             for server in servers:server.shutdown();server.server_close()
             service_cleanup_errors=[]
             for proc in reversed(service_processes):

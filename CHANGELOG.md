@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-214856-final-driver-source-review-6ee0d8a7
+
+Recorded 2026-10-13T21:48:56.658418+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh extension and route source bindings after the driver whitespace correction.
+- **Evidence.** Current extension checks and exact route boundary review pass with the verified dependency environment; archive, detector, service behavior and personal endpoints remain unchanged. [Change record](./runs/changes/2026-10-13-214856-final-driver-source-review-6ee0d8a7.json).
+- **Not claimed.** Hosted full exact-head checks required before merge; no independent accuracy, real phone or production Firefox support inferred. A system interpreter lacking pydantic was refused and corrected.
+
+
+### 2026-10-13-214629-browser-driver-format-check-72eaaec2
+
+Recorded 2026-10-13T21:46:29.309051+00:00 · Contributor: Codex · change
+
+- **Changed.** Remove one trailing whitespace character caught by the staged diff check.
+- **Evidence.** All 37 Firefox driver/package controls pass; the installed extension archive and service code are unchanged. [Change record](./runs/changes/2026-10-13-214629-browser-driver-format-check-72eaaec2.json).
+- **Not claimed.** Linux browser evidence remains the dated execution of the same archive; source-bound extension receipt and route inventory must be refreshed for the format change.
+
+
 ### 2026-10-13-214046-eight-job-final-regression-a266f1cb
 
 Recorded 2026-10-13T21:40:46.842549+00:00 · Contributor: Codex · change
