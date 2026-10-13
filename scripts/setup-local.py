@@ -190,13 +190,18 @@ def build_and_start(engine, folder, state):
         write_state(folder, state)
         owned(engine, 'network', identity, project)
     for role in ROLES:
+        first_network = 'edge' if role == 'gateway' else 'inspection'
         args = ['create', '--name', project + '-' + role, '--label', LABEL + '=' + project,
                 '--read-only', '--cap-drop=ALL', '--security-opt=no-new-privileges',
                 '--pids-limit=128', '--memory=' + str(MEMORY[role]) + 'm',
-                '--tmpfs=/tmp:rw,noexec,nosuid,size=64m', '--network', networks['inspection'],
+                '--tmpfs=/tmp:rw,noexec,nosuid,size=64m', '--network', networks[first_network],
                 '--network-alias', role, '--health-cmd=python healthcheck.py',
                 '--health-interval=5s', '--health-timeout=3s', '--health-retries=12']
         if role == 'gateway':
+            if engine.name == 'podman':
+                # Configure the complete DNS/network scope before Podman starts
+                # the container; late attachment changes its resolver setup.
+                args.extend(['--network', networks['inspection']])
             args.extend(['--env-file', str(folder / 'runtime.env'),
                          '--env=ANONYMIZER_URL=http://anonymizer:8000',
                          '--env=EVALUATOR_URL=http://evaluator:8000',
@@ -204,8 +209,8 @@ def build_and_start(engine, folder, state):
         identity = resource_id(engine.run(*args, images[role]))
         state['containers'].append(identity)
         write_state(folder, state)
-        if role == 'gateway':
-            engine.run('network', 'connect', networks['edge'], identity)
+        if role == 'gateway' and engine.name != 'podman':
+            engine.run('network', 'connect', networks['inspection'], identity)
         engine.run('start', identity)
 
 

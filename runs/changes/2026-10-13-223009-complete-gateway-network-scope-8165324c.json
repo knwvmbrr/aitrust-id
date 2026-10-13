@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-223009-complete-gateway-network-scope-8165324c",
+  "recorded_at": "2026-10-13T22:30:09.478235+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "96c96f3280851dca2d25c1a3465119c487773689",
+  "changed": "Create the Podman gateway with its complete edge and inspection network scope before startup; retain private-only redactor/evaluator and loopback publishing.",
+  "proves": "55 focused setup/checker controls pass; current Podman API supports repeated network arguments. No network or process security limit is removed.",
+  "limits": "The clean Linux runtime proof remains pending after an actual unhealthy-gateway refusal; original staging gateway was restored.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "9c0b209b9b173d536eb6612bab1b8519b5a5e91275acf5865dd04ce1c435623a"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:30:14.774386+00:00"
+    }
+  ]
+}

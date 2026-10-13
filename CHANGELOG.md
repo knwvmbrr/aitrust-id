@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-223009-complete-gateway-network-scope-8165324c
+
+Recorded 2026-10-13T22:30:09.478235+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the Podman gateway with its complete edge and inspection network scope before startup; retain private-only redactor/evaluator and loopback publishing.
+- **Evidence.** 55 focused setup/checker controls pass; current Podman API supports repeated network arguments. No network or process security limit is removed. [Change record](./runs/changes/2026-10-13-223009-complete-gateway-network-scope-8165324c.json).
+- **Not claimed.** The clean Linux runtime proof remains pending after an actual unhealthy-gateway refusal; original staging gateway was restored.
+
+
 ### 2026-10-13-220447-actual-process-capability-verification-e4ac6580
 
 Recorded 2026-10-13T22:04:47.339540+00:00 · Contributor: Codex · change
