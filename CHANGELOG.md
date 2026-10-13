@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-220257-podman-network-inspection-contract-812e429b
+
+Recorded 2026-10-13T22:02:57.633420+00:00 · Contributor: Codex · change
+
+- **Changed.** Read Podman network identity/labels using its actual inspection contract and record new network IDs before checking ownership.
+- **Evidence.** 50 focused controls pass. The first actual setup correctly refused readiness and removed its recorded resources when network inspection mismatched. [Change record](./runs/changes/2026-10-13-220257-podman-network-inspection-contract-812e429b.json).
+- **Not claimed.** Clean Linux pipeline startup remains pending; no F-105 completion claimed. A newly created network from the failed inspection is checked by exact label before cleanup.
+
+
 ### 2026-10-13-215951-local-setup-build-cache-785338ef
 
 Recorded 2026-10-13T21:59:51.666950+00:00 · Contributor: Codex · change

@@ -90,6 +90,16 @@ def test_cleanup_removes_only_matching_recorded_ids():
     assert all(row[key] == [] for key in ('containers', 'networks', 'images'))
 
 
+def test_podman_lowercase_network_labels_are_checked():
+    engine = Mock()
+    row = state()
+    engine.inspect.return_value = {'labels': {setup.LABEL: row['project']}, 'internal': True}
+    assert setup.owned(engine, 'network', 'c' * 64, row['project'])['internal'] is True
+    engine.inspect.return_value['labels'][setup.LABEL] = 'other'
+    with pytest.raises(setup.SetupError):
+        setup.owned(engine, 'network', 'c' * 64, row['project'])
+
+
 def test_actual_port_collision_precedes_state_creation(tmp_path, monkeypatch, capsys):
     engine = Mock()
     monkeypatch.setattr(setup, 'Engine', lambda name: engine)

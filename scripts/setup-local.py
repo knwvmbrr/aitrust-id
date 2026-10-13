@@ -102,7 +102,7 @@ class Engine:
 
 def owned(engine, kind, identity, project):
     row = engine.inspect(kind, identity)
-    labels = row.get('Labels', {}) if kind == 'network' else row.get('Config', {}).get('Labels', {})
+    labels = row.get('Labels', row.get('labels', {})) if kind == 'network' else row.get('Config', {}).get('Labels', {})
     if labels.get(LABEL) != project:
         raise SetupError('Resource ownership changed; it is preserved.')
     return row
@@ -174,12 +174,13 @@ def build_and_start(engine, folder, state):
         args = ['network', 'create', '--label', LABEL + '=' + project]
         if name == 'inspection':
             args.append('--internal')
-        engine.run(*args, project + '-' + name)
-        network = owned(engine, 'network', project + '-' + name, project)
-        identity = resource_id(network.get('Id', network.get('id', '')))
+        created = engine.run(*args, project + '-' + name)
+        network = engine.inspect('network', project + '-' + name)
+        identity = resource_id(network.get('Id', network.get('id', created)))
         state['networks'].append(identity)
         networks[name] = identity
         write_state(folder, state)
+        owned(engine, 'network', identity, project)
     for role in ROLES:
         args = ['create', '--name', project + '-' + role, '--label', LABEL + '=' + project,
                 '--read-only', '--cap-drop=ALL', '--security-opt=no-new-privileges',

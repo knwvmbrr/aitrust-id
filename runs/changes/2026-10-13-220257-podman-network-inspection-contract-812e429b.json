@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-220257-podman-network-inspection-contract-812e429b",
+  "recorded_at": "2026-10-13T22:02:57.633420+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "41754655f91310b00562bc26f2227f25735b8507",
+  "changed": "Read Podman network identity/labels using its actual inspection contract and record new network IDs before checking ownership.",
+  "proves": "50 focused controls pass. The first actual setup correctly refused readiness and removed its recorded resources when network inspection mismatched.",
+  "limits": "Clean Linux pipeline startup remains pending; no F-105 completion claimed. A newly created network from the failed inspection is checked by exact label before cleanup.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "05edcb66da285d598e60debf888b28b8e154a514f47aaf1d3a76d726e53e6a9d",
+    "tests/test_local_setup.py": "bd269c07a7b8f3ded0ec73cb507f398733c0187df26597c780e7b5fa6113887d"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:02:58.713399+00:00"
+    }
+  ]
+}
