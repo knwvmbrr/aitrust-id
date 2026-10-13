@@ -110,6 +110,20 @@ def test_actual_capability_sets_must_all_be_empty(field):
     assert not setup.no_process_capabilities(json.dumps(values))
 
 
+@pytest.mark.parametrize('address', ['127.0.0.1', '0.0.0.0', '1.1.1.1', '169.254.1.2', '::1', 'example.test', None])
+def test_dependency_addresses_are_bounded_private_inspection_only(address):
+    row = {'NetworkSettings': {'Networks': {'private': {'NetworkID': 'a' * 64, 'IPAddress': address}}}}
+    with pytest.raises(setup.SetupError):
+        setup.inspection_address(row, 'a' * 64)
+
+
+def test_dependency_address_must_match_recorded_network():
+    row = {'NetworkSettings': {'Networks': {'private': {'NetworkID': 'a' * 64, 'IPAddress': '10.89.1.2'}}}}
+    assert setup.inspection_address(row, 'a' * 64) == '10.89.1.2'
+    with pytest.raises(setup.SetupError):
+        setup.inspection_address(row, 'b' * 64)
+
+
 def test_actual_port_collision_precedes_state_creation(tmp_path, monkeypatch, capsys):
     engine = Mock()
     monkeypatch.setattr(setup, 'Engine', lambda name: engine)

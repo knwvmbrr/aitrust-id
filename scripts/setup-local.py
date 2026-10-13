@@ -2,6 +2,7 @@
 """Build an isolated, authenticated development stack; never execute submitted AI text."""
 import argparse
 import hashlib
+import ipaddress
 import json
 import os
 from pathlib import Path
@@ -163,6 +164,20 @@ def no_process_capabilities(raw):
                     and int(value, 16) == 0 for value in values.values()))
 
 
+def inspection_address(row, network_id):
+    matches = [value.get('IPAddress') for value in row['NetworkSettings']['Networks'].values()
+               if value.get('NetworkID') == network_id]
+    if len(matches) != 1:
+        raise SetupError('A dependency lacks its recorded private network address.')
+    try:
+        address = ipaddress.IPv4Address(matches[0])
+    except (ValueError, TypeError):
+        raise SetupError('A dependency has an unsupported network address.') from None
+    if not any(address in ipaddress.ip_network(cidr) for cidr in ('10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16')):
+        raise SetupError('A dependency address is not in a private IPv4 network.')
+    return str(address)
+
+
 def build_and_start(engine, folder, state):
     project = state['project']
     images = {}
@@ -189,6 +204,7 @@ def build_and_start(engine, folder, state):
         networks[name] = identity
         write_state(folder, state)
         owned(engine, 'network', identity, project)
+    addresses = {}
     for role in ROLES:
         first_network = 'edge' if role == 'gateway' else 'inspection'
         args = ['create', '--name', project + '-' + role, '--label', LABEL + '=' + project,
@@ -203,8 +219,8 @@ def build_and_start(engine, folder, state):
                 # the container; late attachment changes its resolver setup.
                 args.extend(['--network', networks['inspection']])
             args.extend(['--env-file', str(folder / 'runtime.env'),
-                         '--env=ANONYMIZER_URL=http://anonymizer:8000',
-                         '--env=EVALUATOR_URL=http://evaluator:8000',
+                         '--env=ANONYMIZER_URL=http://' + addresses['anonymizer'] + ':8000',
+                         '--env=EVALUATOR_URL=http://' + addresses['evaluator'] + ':8000',
                          '--publish=127.0.0.1:8787:8000'])
         identity = resource_id(engine.run(*args, images[role]))
         state['containers'].append(identity)
@@ -212,6 +228,8 @@ def build_and_start(engine, folder, state):
         if role == 'gateway' and engine.name != 'podman':
             engine.run('network', 'connect', networks['inspection'], identity)
         engine.run('start', identity)
+        if role != 'gateway':
+            addresses[role] = inspection_address(owned(engine, 'container', identity, project), networks['inspection'])
 
 
 def verify_security(engine, state):

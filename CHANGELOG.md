@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-223907-bounded-private-service-addresses-ac7859fa
+
+Recorded 2026-10-13T22:39:07.987296+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind gateway dependencies to inspected private IPv4 addresses of its owned redactor/evaluator containers, eliminating container DNS as a pipeline prerequisite.
+- **Evidence.** 63 focused controls pass; public, loopback, link-local, missing, wrong-network and unsupported dependency addresses are refused. [Change record](./runs/changes/2026-10-13-223907-bounded-private-service-addresses-ac7859fa.json).
+- **Not claimed.** The actual clean-clone pipeline proof remains pending. No public endpoint, production source, credential grant or security limit is changed.
+
+
 ### 2026-10-13-223009-complete-gateway-network-scope-8165324c
 
 Recorded 2026-10-13T22:30:09.478235+00:00 · Contributor: Codex · change
