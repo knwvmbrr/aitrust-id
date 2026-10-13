@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-215951-local-setup-build-cache-785338ef",
+  "recorded_at": "2026-10-13T21:59:51.666950+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a8e5cc4be8873e7cc09723a4936fea0360ff2177",
+  "changed": "Enable normal Podman layer reuse for pinned dependency builds without bypassing source or runtime checks.",
+  "proves": "49 focused setup/checker controls still pass; the actual clean-clone attempt remains pending.",
+  "limits": "Build DNS failed during staging preparation; no working clean-clone stack or F-105 completion is claimed.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "5d8534aba4a3347e3d18ea84ec4082a7dfbf13a853edfe296994c78175ffb716"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T21:59:52.937397+00:00"
+    }
+  ]
+}

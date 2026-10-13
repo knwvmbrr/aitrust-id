@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-215951-local-setup-build-cache-785338ef
+
+Recorded 2026-10-13T21:59:51.666950+00:00 · Contributor: Codex · change
+
+- **Changed.** Enable normal Podman layer reuse for pinned dependency builds without bypassing source or runtime checks.
+- **Evidence.** 49 focused setup/checker controls still pass; the actual clean-clone attempt remains pending. [Change record](./runs/changes/2026-10-13-215951-local-setup-build-cache-785338ef.json).
+- **Not claimed.** Build DNS failed during staging preparation; no working clean-clone stack or F-105 completion is claimed.
+
+
 ### 2026-10-13-215603-one-command-setup-implementation-1269ef28
 
 Recorded 2026-10-13T21:56:03.670947+00:00 · Contributor: Codex · change

@@ -161,7 +161,8 @@ def build_and_start(engine, folder, state):
     for role in ROLES:
         print('Building ' + role + '…', flush=True)
         tag = project + '-' + role + ':local'
-        engine.run('build', '--label', LABEL + '=' + project, '-t', tag,
+        build_args = ['build'] + (['--layers'] if engine.name == 'podman' else [])
+        engine.run(*build_args, '--label', LABEL + '=' + project, '-t', tag,
                    '-f', 'services/' + role + '/Dockerfile', '.', timeout=1200)
         image = owned(engine, 'image', tag, project)
         identity = resource_id(image['Id'].removeprefix('sha256:'))
