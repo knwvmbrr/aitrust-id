@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-111119-published-stream-evidence-0080db42",
+  "recorded_at": "2026-10-13T11:11:19.582925+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cc999be0e7bbdb7dad840ef5f9d933423efd820d",
+  "changed": "Recorded protected merge, exact live publication and unrelated-file preservation for the completed inactive stream repair; updated machine-readable current truth.",
+  "proves": "Twenty-two required hosted checks passed, review completed without findings, 774 deployed artifact bytes and four exact headers per origin match the clean merged build; all five capability receipts remain current.",
+  "limits": "Publication evidence only; installed extension stays DOM-only. No live vendor stream, native Share, independent tag validation or full requirement closure. 115 complete, 87 open, 202 retained.",
+  "scope_ids": [
+    "F-030",
+    "F-120",
+    "N-008"
+  ],
+  "files": {
+    "state.json": "954c3d383cbab4ee6ccc41cd705ebf530693a8fbbb144c898f20d9602959a578",
+    "runs/2026-10-13-stream-boundaries-protected-merge.json": "a700fe5004617aa635b98753913d950b8e087b90c9d9fc10739a36bde6756689",
+    "runs/2026-10-13-stream-boundaries-publication.json": "19dda9591d03cb0d04d04bbc003aedeeb47569a28a247926f204a4bcd5fb1186",
+    "runs/2026-10-13-stream-boundaries-primary-preservation.json": "10785bd636dbcdab6a3758d5a5df8ad2dcc8c7afa31da631462745356c1b5ee5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-stream-boundaries-publication.json",
+      "sha256": "19dda9591d03cb0d04d04bbc003aedeeb47569a28a247926f204a4bcd5fb1186"
+    },
+    {
+      "path": "runs/2026-10-13-stream-boundaries-protected-merge.json",
+      "sha256": "a700fe5004617aa635b98753913d950b8e087b90c9d9fc10739a36bde6756689"
+    }
+  ],
+  "checks": []
+}

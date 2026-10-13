@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T10:59:32.259615+00:00",
-  "active_increment": "Retired inactive unbounded stream prototype; bounded observer and current-route verification in progress",
+  "updated": "2026-10-13T11:11:19.539763+00:00",
+  "active_increment": "Bounded inactive stream repair and source-bound execution evidence published; continue independent engineering past external acceptance gates",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -743,7 +743,7 @@
     "target_open_records": 50,
     "target_start_open_records": 91,
     "target_remaining_closures": 37,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/authenticated-results-plan.md",
     "target_direction_date": "2026-10-11",
@@ -965,7 +965,7 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current website and personal route boundaries passed; protected stream repair publication pending",
+    "status": "Current whole-build and personal-route checks passed; bounded inactive stream component protected-merged and published",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-13-stream-boundaries-routes.json",
     "source_files": 722,
@@ -1035,7 +1035,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T10:59:32.259615+00:00",
+  "updated_at": "2026-10-13T11:11:19.539763+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1100,9 +1100,9 @@
     "public_site_checks_passed": true
   },
   "latest_runtime_publication": {
-    "source_commit": "fd58ce594a44c5996ce3d2e4d3e2d1dde383671d",
-    "preview": "https://195e229b.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-13-build-diagnostics-publication.json",
+    "source_commit": "cc999be0e7bbdb7dad840ef5f9d933423efd820d",
+    "preview": "https://a6c0e518.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-13-stream-boundaries-publication.json",
     "all_artifacts_verified": 774,
     "exact_headers_verified_per_origin": 4,
     "primary_unrelated_files_preserved": 12,
@@ -2219,7 +2219,7 @@
     "protected_merge": "runs/2026-10-13-build-diagnostics-protected-merge.json"
   },
   "stream_observer": {
-    "status": "Bounded inactive component, all five current capabilities and full regressions passed; protected publication pending",
+    "status": "Inactive bounded developer component protected-merged and published with current checks; no live vendor capture or tag claim",
     "architecture": "docs/stream-observer-plan.md",
     "source": "extension/src/main-world/stream-observer.mjs",
     "implemented_by": "Codex",
@@ -2236,7 +2236,7 @@
     "route_evidence": "runs/2026-10-13-stream-boundaries-routes.json",
     "website_evidence": "runs/2026-10-13-stream-boundaries-stable-website.json",
     "actual_build_phases": "runs/2026-10-13-stream-boundaries-eight-phases.json",
-    "publication_pending": true,
+    "publication_pending": false,
     "retained_failures": [
       "runs/2026-10-13-stream-boundaries-website.json",
       "runs/2026-10-13-stream-boundaries-verified-website.json"
@@ -2244,6 +2244,8 @@
     "full_suite": "runs/2026-10-13-stream-boundaries-full-suite.json",
     "tests_passed": 2952,
     "tests_skipped": 5,
-    "source_files": 722
+    "source_files": 722,
+    "publication": "runs/2026-10-13-stream-boundaries-publication.json",
+    "protected_merge": "runs/2026-10-13-stream-boundaries-protected-merge.json"
   }
 }
