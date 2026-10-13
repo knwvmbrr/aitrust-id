@@ -28,6 +28,7 @@ export function PerformanceEvidence({tag}) {
   {r.categories?.length>0&&<details className="mt-3"><summary className="min-h-11 cursor-pointer py-3 font-semibold">Test breakdown</summary><p className="mb-2 text-muted">Development input groups, not a representative accuracy study.</p><dl className="space-y-2">{r.categories.map(c=><div key={c.id} className="border-b border-line pb-2"><dt className="font-semibold">{c.label}</dt><dd className="tabular-nums">{c.n} examples · {c.fp} false alerts · {c.fn} missed patterns</dd></div>)}</dl></details>}
   {r.redaction&&<RedactionTests data={r.redaction}/>}
   {r.pipeline&&<ServiceTiming data={r.pipeline}/>}
+  {r.id==='PS'&&<p className="mt-3 text-muted">Efficiency checks compare old and new rule code on the same computer. They measure warm checks and temporary Python allocations, not accuracy or whole-service speed. <a className="inline-block min-h-11 py-3 underline underline-offset-4" href="/reference/ps-efficiency.json" download>Download paired efficiency tests</a></p>}
   {r.measured_at&&<p className="mt-2 text-muted">Measured {r.measured_at.slice(0,10)}</p>}
   <p className="mt-2"><strong>Next test:</strong> {r.next_test}</p>
   {r.sources.length>0&&<a className="mt-2 inline-block min-h-11 py-3 underline underline-offset-4" href={r.sources[0]} download>Download measured data</a>}

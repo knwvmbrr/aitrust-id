@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-171455-ps-efficiency-final-verification-29064226
+
+Recorded 2026-10-13T17:14:55.963777+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete source-bound capability, actual website, route and full-suite verification; refresh method-specific performance projections, scope evidence and target state without closing unfinished requirements.
+- **Evidence.** 3066 full-suite tests passed with five platform skips across 743 unchanged reviewed inputs. Verified 86 development cases, two engines with 137 parity cases each, 26 staging HTTP checks and 13 replay CLI cases. [Change record](./runs/changes/2026-10-13-171455-ps-efficiency-final-verification-29064226.json).
+- **Not claimed.** Scope remains 115 complete and 87 open; target 43 is unmet. No independent accuracy, physical-phone, whole-service speedup or release approval. Protected merge and publication pending.
+
+
 ### 2026-10-13-170732-ps-device-source-anchor-22a96285
 
 Recorded 2026-10-13T17:07:32.441213+00:00 · Contributor: Codex · change

@@ -22,7 +22,11 @@
         "tests/test_command_performance.py",
         "scripts/assess-evidence-resistance.py",
         "scripts/measure-command-performance.py",
-        "tests/test_evidence_resistance.py"
+        "tests/test_evidence_resistance.py",
+        "eval/methods/context-v6-eager.py",
+        "tests/test_lazy_ps_context.py",
+        "tests/test_command_performance.py",
+        "scripts/measure-ps-efficiency.py"
       ],
       "commands": [
         [
@@ -35,6 +39,14 @@
           "pytest",
           "tests/test_command_performance.py",
           "tests/test_evidence_resistance.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_lazy_ps_context.py",
+          "tests/test_command_performance.py",
           "-q"
         ]
       ]
@@ -434,7 +446,7 @@
         "ACCESSIBILITY.md",
         "LICENSE",
         "tests/test_website_evidence_inputs.py",
-        "runs/2026-10-10-evidence-resistance.json",
+        "runs/2026-10-13-ps-lazy-resistance.json",
         "runs/2026-10-10-context-v6-unicode-stress.json",
         "runs/2026-10-10-context-v6-real-service.json",
         "runs/2026-10-10-frozen-service-conformance.json",
@@ -522,7 +534,13 @@
         "scripts/prepare-reference-review-windows.py",
         "scripts/verify-reference-review-windows.py",
         "tests/test_reference_review_window.py",
-        "docs/reference-review-window-plan.md"
+        "docs/reference-review-window-plan.md",
+        "scripts/verify-ps-efficiency.py",
+        "tests/test_ps_efficiency_evidence.py",
+        "scripts/measure-ps-efficiency.py",
+        "eval/methods/context-v6-eager.py",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json"
       ],
       "commands": [
         [
@@ -640,6 +658,13 @@
           "scripts/verify-reference-review-windows.py",
           "--output",
           "output/verification/reference-windows.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_ps_efficiency_evidence.py",
+          "-q"
         ]
       ]
     }

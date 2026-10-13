@@ -1,0 +1,15 @@
+# PS efficiency increment — observed results
+
+Codex, October 13, 2026. The target is at most 43 open requirement records; this increment closes no full requirement. The ledger retains 115 complete and 87 open of 202. Existing scope and acceptance gates remain intact.
+
+PS now constructs its context indexes once, only when a candidate needs them. Candidate meaning, ordering, spans and heuristic scores stay the same. The exact source SHA changed; the logical context-v6 method remains unchanged. The frozen eager reference is retained for differential checks.
+
+Twenty-one alternating old/new warm measurements per profile on Darwin arm64, eight logical CPUs, Python 3.12.14 show ordinary-text median paired speed factors of 1.13, 1.10 and 1.11 at 2,000, 20,000 and 200,000 code points. This corresponds to roughly 9–12% less time in these controlled rule calls. Command and warning profiles show little change, including one slightly slower result. Every raw sample is in [the paired report](../runs/2026-10-13-ps-lazy-context-paired.json). At 20,000 ordinary code points, the separate traced Python peak fell from 1,323,580 to 1,827 bytes. This is temporary Python allocation, not process or handset memory.
+
+Both desktop-hosted browser engines preserve all 137 parity cases; the Python differential test preserves findings over 652 deterministic mixed/quote/Unicode strings. The 86 development examples remain 31 true positives, 55 true negatives, zero false positives and zero false negatives. They were used in development and do not establish independent accuracy.
+
+The [new full-service timing](../runs/2026-10-13-ps-lazy-staging-timing.json) uses 253 authenticated synthetic requests on isolated Linux staging with four logical CPUs. The slowest 20,000-character warm round-trip p95 is about 1.60 seconds. This includes English redaction. It is a fresh current-method measurement, not a paired end-to-end speedup experiment or a physical-phone result.
+
+The [service checks](../runs/2026-10-13-ps-lazy-service.json) and [replay CLI checks](../runs/2026-10-13-ps-lazy-replay.json) exercised the actual changed container source. The first single-container replacement failed because Podman retained the gateway dependency; source verification caught the unchanged image and preserved the prior stack. The corrected procedure recreated three existing staging containers while changing only the evaluator image. No production service or local Docker daemon was changed. A later verification upload omitted healthcheck.py; that failed client packet was retained, corrected and rerun.
+
+The product gains lower wasted work, refreshed source-bound charts and a downloadable old/new comparison. It does not gain a new released tag, a measured accuracy improvement or stronger resistance. All eight measured lexical evasion trials still evade PS; [the current assessment](../runs/2026-10-13-ps-lazy-resistance.json) makes that visible. Independent sampling/labels, physical phones, human accessibility, live vendor coverage and route budget acceptance remain separate open jobs.

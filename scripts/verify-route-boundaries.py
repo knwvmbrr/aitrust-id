@@ -20,7 +20,8 @@ from protocol.revalidation import assess
 from protocol.evidence import read_evidence
 from scripts.dependency_pins import verify_root_inputs
 
-PATTERNS = ('eval/measure.py', 'rfcs/0001-behavioral-provenance.md', 'rfcs/0002-authorship-receipts.md',
+PATTERNS = ('tests/test_device_bundle_determinism.py', 'scripts/verify-ps-efficiency.py', 'tests/test_ps_efficiency_evidence.py', 'runs/2026-10-13-ps-lazy-staging-timing.json', 'runs/2026-10-13-ps-lazy-context-paired.json', 'eval/methods/context-v6-eager.py', 'scripts/measure-ps-efficiency.py',
+            'tests/test_lazy_ps_context.py', 'eval/measure.py', 'rfcs/0001-behavioral-provenance.md', 'rfcs/0002-authorship-receipts.md',
             'tests/test_verdict_refusals.py', 'scripts/verify-verdict-boundaries.py',
             'tests/test_adjudicator_confidence.py', 'tests/test_adjudicator.py',
             'tests/test_adjudicator_boundaries.py', 'services/**/*', 'protocol/*', 'extension/**/*', 'site/src/**/*',

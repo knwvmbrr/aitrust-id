@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-12T16:35:55.076184+00:00",
-  "client_date": "2026-10-12",
+  "audited_at": "2026-10-13T16:56:07.018769+00:00",
+  "client_date": "2026-10-13",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
   "attribution_rule": "Session/run attribution distinguished from owner-reported Claude additions; Git account author is not substituted for actual implementer",
@@ -352,7 +352,8 @@
         "runs/2026-10-10-capture-extension-revalidation.json",
         "runs/2026-10-10-evidence-resistance.json",
         "docs/evidence-resistance.md",
-        "tests/test_evidence_resistance.py"
+        "tests/test_evidence_resistance.py",
+        "runs/2026-10-13-ps-lazy-resistance.json"
       ],
       "evidence_scope": "Source-bound assessment inventories all current signal versions and measures lexical evasion without executing payloads; inactive and recognizer attack coverage remain explicitly unmeasured.",
       "required_acceptance": [],
@@ -990,10 +991,11 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-13T16:56:07.018769+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex — prior session/run attribution"
+        "Codex — prior session/run attribution",
+        "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
@@ -1009,7 +1011,12 @@
         "runs/2026-10-08-upgrade-device-public.json",
         "runs/2026-10-10-context-v6-unicode-regressions.json",
         "runs/2026-10-10-context-v6-fixed-device-engines.json",
-        "runs/2026-10-10-evidence-resistance.json"
+        "runs/2026-10-10-evidence-resistance.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
@@ -4074,11 +4081,12 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-11T19:23:11.937023+00:00",
+      "audited_at": "2026-10-13T16:56:07.018769+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex",
-        "Codex — actual authenticated staging timing across declared input sizes and source-bound display controls, 2026-10-11T17:26:41.852967+00:00"
+        "Codex — actual authenticated staging timing across declared input sizes and source-bound display controls, 2026-10-11T17:26:41.852967+00:00",
+        "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
@@ -4108,7 +4116,12 @@
         "runs/2026-10-11-pii-labels-compact.json",
         "runs/2026-10-11-pii-labels-service.json",
         "runs/2026-10-11-pii-labels-replay.json",
-        "runs/2026-10-11-pii-labels-timing.json"
+        "runs/2026-10-11-pii-labels-timing.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation The corrected benchmark validates the full self-reported pipeline identity on every response, matches each selected service source and rejects drift; this is not cryptographic remote attestation. The original evaluator-only run remains historical.",
       "required_acceptance": [
@@ -8067,10 +8080,11 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-10T17:31:33.618951+00:00",
+      "audited_at": "2026-10-13T16:56:07.018769+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex — prior session/run attribution"
+        "Codex — prior session/run attribution",
+        "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
@@ -8085,7 +8099,12 @@
         "runs/2026-10-08-scope-plan-site-public.json",
         "docs/handheld-delivery.md",
         "docs/owner-operation.md",
-        "runs/2026-10-10-owner-feedback-browser.json"
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [

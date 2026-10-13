@@ -8,10 +8,11 @@ import {allTags} from '../src/catalog.js';
 import {validateEvidence,performanceFor} from '../src/performance-model.js';
 import {validatePipelineTiming} from '../src/pipeline-timing-model.js';
 const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const root=path.dirname(site);
+execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/verify-ps-efficiency.py'],{cwd:root,stdio:'pipe'});
 const input=JSON.parse(fs.readFileSync(path.join(root,'eval/tag-performance-evidence.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 validateEvidence(input,hash);
-const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-11-pii-labels-timing.json'),'utf8'));
+const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-13-ps-lazy-staging-timing.json'),'utf8'));
 validatePipelineTiming(timing,hash,s=>crypto.createHash('sha256').update(s).digest('hex'));
 const redaction=redactionSummary(JSON.parse(execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/build-redaction-performance.py'],{cwd:root,encoding:'utf8',maxBuffer:200000})));
 const data={format:'ai-trust-id-tag-performance/v1',records:allTags.map(tag=>performanceFor(tag,input,timing,redaction))};
@@ -27,3 +28,5 @@ console.log(`Prepared ${data.records.length} per-tag performance panels from met
 
 fs.copyFileSync(path.join(root,'runs/2026-10-11-pii-labels-compact.json'),path.join(publicDir,'redaction-compact-addresses.json'));
 fs.copyFileSync(path.join(root,'eval/fixtures/pii-compact-addresses.json'),path.join(publicDir,'pii-compact-addresses.json'));
+
+fs.copyFileSync(path.join(root,'runs/2026-10-13-ps-lazy-context-paired.json'),path.join(publicDir,'ps-efficiency.json'));

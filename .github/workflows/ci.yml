@@ -91,6 +91,8 @@ jobs:
         run: python -m pytest tests/test_restore_isolation.py tests/test_backup_protocol.py -q
       - name: Refuse invalid experimental confidence without granting evidence standing
         run: python -m pytest tests/test_adjudicator_confidence.py tests/test_adjudicator.py tests/test_adjudicator_boundaries.py -q
+      - name: Preserve PS findings while refusing unnecessary context work
+        run: python -m pytest tests/test_lazy_ps_context.py tests/test_command_performance.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
       - name: Check preserved component notice identity without claiming legal clearance

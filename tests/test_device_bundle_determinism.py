@@ -42,7 +42,7 @@ def test_strings_and_comments_are_untouched():
 def test_projection_matches_reviewed_frozen_normalization_bundle():
     data, method = B.project(RAW)
     assert method == hashlib.sha256(RAW).hexdigest()
-    assert hashlib.sha256(data).hexdigest() == '59d43c94897957ef3284c4dddafefe8499611886978014491ff21528db70e86f'
+    assert hashlib.sha256(data).hexdigest() == 'ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0'
 
 def test_fresh_build_matches_manifest(output):
     manifest = B.main()
