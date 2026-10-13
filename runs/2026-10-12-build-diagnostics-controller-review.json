@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-12T18:37:18.085424+00:00",
+  "pass": true,
+  "selected_python_tests_passed": 8,
+  "real_child_controls_passed": 8,
+  "real_controller_controls_passed": 3,
+  "retained_finding": "A previous successful scratch report could survive hard parent interruption before the finalizer. Write a fresh incomplete report before starting any child.",
+  "test_correction": "The actual Node --test wrapper reports an exit-7 test worker as status 1; direct-child exit 7 is checked separately. The initial assertion was corrected after one failure, not hidden.",
+  "previous_success_invalidated_before_children": true,
+  "symlink_report_refused_before_first_child": true,
+  "owned_group_interruption_remains_incomplete": true,
+  "human_accessibility_verified": false,
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0
+}

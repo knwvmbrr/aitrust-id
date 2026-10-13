@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "website_build_phases",
+  "captured_at": "2026-10-12T18:31:52.535Z",
+  "pass": true,
+  "expected_phases": [
+    "private-file-controls",
+    "build",
+    "catalogue",
+    "performance",
+    "workflows",
+    "accessibility",
+    "mobile-payload",
+    "feedback"
+  ],
+  "phases": [
+    {
+      "phase": "private-file-controls",
+      "started_at": "2026-10-12T18:30:03.520Z",
+      "finished_at": "2026-10-12T18:30:03.646Z",
+      "elapsed_ms": 126,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "build",
+      "started_at": "2026-10-12T18:30:03.646Z",
+      "finished_at": "2026-10-12T18:30:12.848Z",
+      "elapsed_ms": 9203,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "catalogue",
+      "started_at": "2026-10-12T18:30:12.861Z",
+      "finished_at": "2026-10-12T18:30:28.081Z",
+      "elapsed_ms": 15220,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "performance",
+      "started_at": "2026-10-12T18:30:28.082Z",
+      "finished_at": "2026-10-12T18:30:41.042Z",
+      "elapsed_ms": 12960,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "workflows",
+      "started_at": "2026-10-12T18:30:41.042Z",
+      "finished_at": "2026-10-12T18:30:47.079Z",
+      "elapsed_ms": 6037,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "accessibility",
+      "started_at": "2026-10-12T18:30:47.079Z",
+      "finished_at": "2026-10-12T18:31:30.083Z",
+      "elapsed_ms": 43004,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "mobile-payload",
+      "started_at": "2026-10-12T18:31:30.083Z",
+      "finished_at": "2026-10-12T18:31:47.494Z",
+      "elapsed_ms": 17411,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "feedback",
+      "started_at": "2026-10-12T18:31:47.494Z",
+      "finished_at": "2026-10-12T18:31:52.534Z",
+      "elapsed_ms": 5040,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    }
+  ],
+  "sequence_request_refused": false,
+  "controller_aborted": false,
+  "raw_child_output_included": false,
+  "command_arguments_included": false,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_verified": false,
+  "source_bound_website_execution": "runs/2026-10-12-build-diagnostics-recorded-website.json",
+  "requirements_closed": 0
+}

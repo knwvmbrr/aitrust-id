@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "website_build_phases",
+  "captured_at": "2026-10-12T17:58:06.456Z",
+  "pass": false,
+  "expected_phases": [
+    "private-file-controls",
+    "build",
+    "catalogue",
+    "performance",
+    "workflows",
+    "accessibility",
+    "mobile-payload",
+    "feedback"
+  ],
+  "phases": [
+    {
+      "phase": "private-file-controls",
+      "started_at": "2026-10-12T17:57:42.449Z",
+      "finished_at": "2026-10-12T17:57:42.785Z",
+      "elapsed_ms": 336,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "build",
+      "started_at": "2026-10-12T17:57:42.785Z",
+      "finished_at": "2026-10-12T17:58:06.447Z",
+      "elapsed_ms": 23662,
+      "exit_status": 1,
+      "signal": null,
+      "failure": "child_exit_failed",
+      "pass": false
+    }
+  ],
+  "sequence_request_refused": false,
+  "controller_aborted": true,
+  "raw_child_output_included": false,
+  "command_arguments_included": false,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_verified": false,
+  "explanation": "Build correctly refused freshly generated execution receipts without matching changelog events. Record those events before the next build; no product or gate criterion changed."
+}
