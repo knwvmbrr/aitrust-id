@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-210316-exact-id-mobile-contract-c24bd0c3",
+  "recorded_at": "2026-10-13T21:03:16.604280+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Align the mobile exact-record search check with the implemented exact-ID navigation; retain its timed-out old substring expectation.",
+  "proves": "The seven-phase run identified the mobile-payload phase; earlier browser checks already verified exact child lookup and focus. Payload budgets and corruption/timeout recovery checks remain intact.",
+  "limits": "The full website check must pass after correction; no physical phone, human review or release validation is implied.",
+  "scope_ids": [
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029",
+    "N-006",
+    "N-012"
+  ],
+  "files": {
+    "scripts/verify-mobile-payload.cjs": "b182d1564e5df0b76f444b0477bebeccc7a452b904916e309918aff881b49dac",
+    "runs/2026-10-13-accepted-contracts-current-website.json": "07ea51169be1226a40698d72566b2d75ef9e9f20089387de3e6bc4a4aa36ecdd",
+    "runs/2026-10-13-legacy-search-mobile-refusal.json": "68870d3ce753ef4afba57a378c1bb89f6089b7e60fcb85c8ad1b523cb3069bad"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-current-website.json",
+      "sha256": "07ea51169be1226a40698d72566b2d75ef9e9f20089387de3e6bc4a4aa36ecdd"
+    },
+    {
+      "path": "runs/2026-10-13-legacy-search-mobile-refusal.json",
+      "sha256": "68870d3ce753ef4afba57a378c1bb89f6089b7e60fcb85c8ad1b523cb3069bad"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{node}",
+        "--check",
+        "scripts/verify-mobile-payload.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T21:03:16.973542+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "51600818ac162d5c6556bf3390b63e5af3aadf2a7e5e768aff5172f14aa58549",
+    "original_preserved_privately": true
+  }
+}

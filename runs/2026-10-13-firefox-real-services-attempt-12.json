@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-10-13T19:35:31.269012+00:00",
+  "pass": false,
+  "stage": "service_cleanup",
+  "preceding_stage": "source_stability",
+  "cleanup_errors": [
+    "PermissionError",
+    "PermissionError",
+    "PermissionError"
+  ],
+  "completed_cases": [
+    "three_actual_source_verified_services_ready",
+    "TLS_verification_enabled",
+    "actual_temporary_install",
+    "default_paused",
+    "token_save_does_not_enable",
+    "key_save_does_not_enable",
+    "paused_no_capture",
+    "assistant_only_capture",
+    "authenticated_compact_tag_rendered",
+    "unsigned_cannot_render_a_finding",
+    "tampered_cannot_render_a_finding",
+    "pause_refuses_new_capture",
+    "reset_clears_token_key_and_consent",
+    "uninstall_removes_route",
+    "source_unchanged"
+  ],
+  "sources": {
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+    "extension/src/content/badge.js": "13ae07b3580198976448bf7432c4b22583154ca6eee48141d53990e06a113967",
+    "extension/src/content/bridge.js": "821ca77c4d480dfd7ecf133710316b5633215de0f4f4fb06a76c49691dddbdba",
+    "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64",
+    "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "extension/src/firefox/permissions.js": "b5b0883c122fc10868a7ea0dab995e6e3e2a48ea1046caaa896431b717b2a611",
+    "scripts/build-firefox-extension.py": "c8543d7e538a9759ab67691dd51f3427b36337ecf2db668965296456fe380918",
+    "scripts/verify-firefox-extension.py": "8333b118b35b43ea57434703c6d2337f732fff0575a455dc4b1c9557b4907bd8",
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "services/gateway/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "services/gateway/requirements.lock": "230b685d1c222b0bb59562ee046090debc4e75ef55a7c651819f5ae066042b59",
+    "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "services/evaluator/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+    "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+    "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+  },
+  "requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "diagnostic_observation": {
+    "origin_prompt_open": false,
+    "allowed_origins": {
+      "vendor": true,
+      "loopback": true
+    },
+    "fixture_visible": true
+  }
+}

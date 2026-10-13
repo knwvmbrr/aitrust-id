@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-213654-final-scope-component-review-0fe32bb3",
+  "recorded_at": "2026-10-13T21:36:54.081670+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Review the final source inventory and expanded input-bound capability checks after safe receipt sequencing.",
+  "proves": "All five capabilities pass against current consumed inputs; eight website phases, signed browser controls and 15 actual replay cases remain current.",
+  "limits": "Full final suite, protected CI and live publication remain pending. No independent accuracy, real phone, operating institution or research collection enabled.",
+  "scope_ids": [
+    "N-006",
+    "F-003",
+    "F-044",
+    "F-147",
+    "F-156",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "fa5aaa65acb5ed4338314e7da8accc997ddad09d095e47124eb5e0c77ddcf9ad",
+    "state.json": "b13b050ffdd522ac9d61de3614e3997354d098e9ff3a17887587f5d8e91761c3",
+    "runs/2026-10-13-accepted-contracts-published-website.json": "96a83310945ad231de404a221425edaae9c4528f781fcecb816abd9367234ddb",
+    "runs/2026-10-13-accepted-contracts-published-eight-phases.json": "a4cc6d510664db7a75768de785204ea040ea6cc874962243414820015d3865bc",
+    "runs/2026-10-13-accepted-contracts-published-routes.json": "29fb10f8b7a88a7649ebe3e97de2065710daffe4fef024159b294860ea93945d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-published-website.json",
+      "sha256": "96a83310945ad231de404a221425edaae9c4528f781fcecb816abd9367234ddb"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-published-routes.json",
+      "sha256": "29fb10f8b7a88a7649ebe3e97de2065710daffe4fef024159b294860ea93945d"
+    }
+  ],
+  "checks": []
+}

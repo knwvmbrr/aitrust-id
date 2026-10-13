@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-195612-firefox-archive-source-license-4f9542e7",
+  "recorded_at": "2026-10-13T19:56:12.055241+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Include the actual Apache project license in the standalone Firefox archive, bind its bytes and refuse an unreviewed replacement license.",
+  "proves": "Thirty-seven package/framing/service-binding controls pass; generated archives carry their source license.",
+  "limits": "This does not clear broader native/model/font dependency obligations, sign a store release or independently validate a tag.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/build-firefox-extension.py": "3d3d02a3c83868c24604951e16f8830dbc610551185ed22943f788290cc2105a",
+    "tests/test_firefox_package.py": "55a4fb56a1eaf23da3e7a08f2fb7c8b00dfb4722ec1b7d1781722a95e9b0a589"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:56:12.756218+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "dd22fc6c09e172f3418ac1f8d26a53084d742a87a2dfc4bf6aab46889c45e1aa",
+    "original_preserved_privately": true
+  }
+}

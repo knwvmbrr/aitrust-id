@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-10-13T20:56:04.228326+00:00",
+  "pass": false,
+  "exit_status": 1,
+  "tests_passed": 3228,
+  "tests_failed": 9,
+  "tests_skipped": 5,
+  "failure_signature": "Current route differs from reviewed source inventory",
+  "failed_tests": [
+    "tests/test_route_boundaries.py::test_actual_current_guard",
+    "tests/test_route_boundaries.py::test_upload_payment_and_promotion_endpoints_refused\nFAILED",
+    "tests/test_route_boundaries.py::test_broader_extension_access_refused[host_permissions-value1]\nFAILED",
+    "tests/test_route_boundaries.py::test_failed_or_stale_execution_refused\nFAILED",
+    "tests/test_route_boundaries.py::test_unsafe_receipt_path_refused",
+    "tests/test_route_boundaries.py::test_registry_deferral_is_reviewed_without_approving_future_registry\n9"
+  ],
+  "stdout_sha256": "3cd9d1410bee7c5a8a4fcdde7729ba7e6ab39a27578e88bb9ce4813eeb095929",
+  "root_cause": "Changed legitimate sources require fresh source inventory and capability receipts; the old reviewed route correctly refuses them.",
+  "fix": "Refresh current capability checks, then review the exact unchanged endpoint/permission/device boundaries and rerun the complete suite.",
+  "guards_weakened": false,
+  "independent_accuracy_evidence": false
+}

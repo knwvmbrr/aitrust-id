@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-190426-firefox-explicit-origin-permission-15d91b51",
+  "recorded_at": "2026-10-13T19:04:26.483320+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Separate Firefox browser-origin permission from application consent, requesting only ChatGPT and the existing loopback service through an explicit enable click; permission removal pauses checks.",
+  "proves": "Thirty package/protocol checks pass; Chrome manifest and scripts remain byte-identical.",
+  "limits": "Firefox fixture capture and permission-prompt execution remain unverified until the next actual run; no release or requirement closure is claimed.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "extension/src/firefox/permissions.js": "6769bdbc35e61f79b65aa2da8b4049afdb7176d73aadf1f8375ccfc96a4c4491",
+    "scripts/build-firefox-extension.py": "09f8624d3fce86b72e0c189f3be9b5216b48b3565b40c5f01b1f64bab456f062",
+    "scripts/verify-firefox-extension.py": "a1f0df4de48d09e7bfd9dd590466a97731732c328b0c344317ddd2c563726865",
+    "tests/test_firefox_package.py": "20a8aaeca0abee5540db737b7d0b4b110eced761a2021e8e347727ea841f0257"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:04:27.108000+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "223bb015bc8e977812a18459fa4dce3cf594a732b9f654eea566b4829b9e1f8f",
+    "original_preserved_privately": true
+  }
+}

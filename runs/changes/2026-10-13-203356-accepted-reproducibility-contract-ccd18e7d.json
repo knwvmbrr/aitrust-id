@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-203356-accepted-reproducibility-contract-ccd18e7d",
+  "recorded_at": "2026-10-13T20:33:56.482528+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Adopt owner-approved supported-record replay and metadata pilot contract; inspect history before private files and preserve unavailable records.",
+  "proves": "F-003 completes the approved job: 15 current Linux service/CLI cases and 87 focused controls. Exact owner replies are recorded without invented historical timestamps.",
+  "limits": "No universal historical reconstruction, independent accuracy, outside-user acceptance, new tag, operating institution or enabled research collection.",
+  "scope_ids": [
+    "F-003",
+    "N-011",
+    "F-044",
+    "F-151"
+  ],
+  "files": {
+    "scripts/replay-assertion.py": "3f3d29d432b4347b446226ae9006192f7caf5bbd74371d4bc0a41d7c10145bd3",
+    "scripts/verify-assertion-replay.py": "c16a98c89644bc8432e7c001594c4e83f4f0176ee221f58e6ab48746a4fa3f34",
+    "tests/test_assertion_replay.py": "57f4597b64e12002a8395d6b20afd43aa8e039dfe672a6b6bd7f68336b09b9ca",
+    "docs/assertion-replay-plan.md": "29b38090c08104caaf54cf9d5703cfeb9e75be5fc18ea5034aef3cb8ba2a4094",
+    "docs/assertion-replay.md": "0f92b6ed7768f647d93a2d318e77a9401027cf2ee8180e1ab91f518df2339bcd",
+    "docs/assertion-replay-result.md": "b5d36b51ac3c514ea8e30fd239839597486f7ad55a719f18e22dd9a6453df9ac",
+    "docs/scope-progress.json": "d8b03fb1065ed33dbd01a52f909eaa4534c030c49b84c69a367b52d18c7e4265",
+    "docs/scope-progress.md": "b14c14afabbcf63bbd0405e45ba4c7ff7b33519e147ad5a06d23533e599b5560",
+    "docs/scope-task-index.md": "7739bd6b4d8f556196d87f94566aa21f89c4c1e0e712b31c82b60d11c5fc4633",
+    "docs/decision-history.md": "54c7c7c03aa03cf70d0e1b642465a1c6d0319c5dfeb304362e098dc20db24190",
+    "DECISIONS.md": "aa05a50c2b7c6d136097f1f103f02dbb3df2e80cd0047f32e6c8871a27a87984",
+    "docs/metadata-pilot-contract.md": "270e550659740e2b7a43d36f1414597d3a0c06a09f77adfe55df39b220786ab0",
+    "state.json": "f395e6cd55d26447e053d471ee4760d9057124b568c4d8886c805a787da7ece7",
+    "runs/2026-10-13-historical-reproducibility-owner-decision.json": "a41142ac7d2089187b09f154aacd320a1579673164f58e18f01aa0707a6598d6",
+    "runs/2026-10-13-metadata-pilot-owner-decision.json": "c547ef86524d46f47be95eb8d9ef2fe5fcfdb6817be278446681067b88c259b2",
+    "runs/2026-10-13-replay-contract-service.json": "91344c477783ac40e7cbb38af520329fe902cb6a81e05c901f6ac89e2b76eed0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-replay-contract-service.json",
+      "sha256": "91344c477783ac40e7cbb38af520329fe902cb6a81e05c901f6ac89e2b76eed0"
+    },
+    {
+      "path": "runs/2026-10-13-historical-reproducibility-owner-decision.json",
+      "sha256": "a41142ac7d2089187b09f154aacd320a1579673164f58e18f01aa0707a6598d6"
+    }
+  ],
+  "checks": []
+}

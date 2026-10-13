@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T17:59:33.690842+00:00",
-  "active_increment": "Measured PS efficiency gain published; target 43 open requirements remains unmet at 87",
+  "updated": "2026-10-13T21:40:46.753768+00:00",
+  "active_increment": "Eight original named jobs complete; current checks pass (3249 tests), protected publication pending; 79 open toward target 43",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -399,14 +399,14 @@
     "database_connected": false,
     "automatic_forwarding": false,
     "provider": "OVHcloud US; dedicated AI Trust ID VPS purchased and provider reports Active",
-    "collection_policy": "unresolved; no automatic collection",
-    "retention_policy": "unresolved",
+    "collection_policy": "Approved invited metadata-only pilot; disabled pending operational gates. No examples, training or automatic collection authorized.",
+    "retention_policy": "Approved pilot: 30-day active / 7-day encrypted-backup limit; not yet implemented in a deployed pilot boundary. Other purposes and legacy protected generations remain separate.",
     "pending": [
       "Independent offline recovery-key copy, recovery-secret retrieval check and full replacement-host recovery drill",
-      "Accepted contribution/consent and retention policy before real submission",
       "Implement application auth, object isolation, quotas and synthetic intake",
       "Public live-community security, moderation and retraction checks",
-      "Desktop alert permission; independent uptime monitoring and renewal verification"
+      "Desktop alert permission; independent uptime monitoring and renewal verification",
+      "Execute approved pilot authorization/privacy/withdrawal, separate 7-day encrypted backup and replacement-host recovery gates before accepting real submissions"
     ],
     "reuse_THT": false,
     "project_isolation_required": true,
@@ -723,9 +723,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-13T16:56:07.018769+00:00",
-    "completed_records": 115,
-    "open_records": 87,
+    "audited_at": "2026-10-13T20:52:24.400811+00:00",
+    "completed_records": 123,
+    "open_records": 79,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -739,20 +739,30 @@
     "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
-    "latest_increment": "docs/ps-lazy-context-performance-result.md",
+    "latest_increment": "docs/scope-grouping-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 43,
     "target_start_open_records": 87,
-    "target_remaining_closures": 44,
-    "publication_pending": false,
+    "target_remaining_closures": 36,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
-    "current_target_verification": "runs/2026-10-13-ps-lazy-reviewed-full-suite.json",
+    "current_target_verification": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
-    "latest_owner_direction_date": "2026-10-13"
+    "latest_owner_direction_date": "2026-10-13",
+    "latest_increment_completed_ids": [
+      "F-003",
+      "F-147",
+      "F-044",
+      "F-019",
+      "F-020",
+      "F-021",
+      "F-022",
+      "F-029"
+    ]
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -967,10 +977,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current personal route boundaries verified; lazy PS and provenance repairs protected-merged and published",
+    "status": "Current personal route review passes; new offline components and Firefox preview bound; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-ps-lazy-reviewed-routes.json",
-    "source_files": 743,
+    "evidence": "runs/2026-10-13-accepted-contracts-published-routes.json",
+    "source_files": 763,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1029,22 +1039,22 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-13-ps-lazy-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-13-ps-lazy-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-13-ps-lazy-final-protocol.json",
-    "extension": "runs/2026-10-13-ps-lazy-current-extension.json",
-    "website": "runs/2026-10-13-ps-lazy-reviewed-website.json",
+    "PS": "runs/2026-10-13-accepted-contracts-reviewed-PS.json",
+    "PII_REDACTED": "runs/2026-10-13-accepted-contracts-reviewed-PII_REDACTED.json",
+    "protocol": "runs/2026-10-13-accepted-contracts-reviewed-protocol.json",
+    "extension": "runs/2026-10-13-accepted-contracts-reviewed-extension.json",
+    "website": "runs/2026-10-13-accepted-contracts-published-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T17:59:33.690842+00:00",
+  "updated_at": "2026-10-13T21:40:46.753768+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
     "evidence": "runs/2026-10-10-owner-feedback-browser.json",
     "intake_connected": false,
     "examples_authorized": false,
-    "retention_accepted": false,
+    "retention_accepted": true,
     "pilot_group_operating": false,
     "publication_pending": false,
     "owner_device": "iPhone 14 Plus",
@@ -1055,7 +1065,8 @@
     "publication": "runs/2026-10-10-owner-pilot-deployment.json",
     "public_url": "https://aitrustid.com/reference/operate/",
     "public_evidence": "runs/2026-10-10-owner-pilot-feedback-public.json",
-    "source_commit": "c0486f90671ae6c111778917ed7199fe47d8e92a"
+    "source_commit": "c0486f90671ae6c111778917ed7199fe47d8e92a",
+    "operating_contract_approved": true
   },
   "legal_review": {
     "source_inventory": "docs/legal/source-inventory.json",
@@ -1083,7 +1094,7 @@
   },
   "assertion_replay": {
     "status": "current_unsigned_local_service_replay_executed",
-    "scope_percent": 80,
+    "scope_percent": 100,
     "actual_linux_service_cases": 32,
     "actual_cli_cases": 13,
     "actual_browser_download_replayed": true,
@@ -1099,7 +1110,11 @@
     "current_source_boundaries_verified": true,
     "source_commit": "9810441e7f5555da7083405d73263d2a8400fbb0",
     "publication_evidence": "runs/2026-10-10-replay-publication.json",
-    "public_site_checks_passed": true
+    "public_site_checks_passed": true,
+    "accepted_completion_contract": "complete supported records repeat; missing history/original input unavailable; preserve old bytes",
+    "actual_current_cli_cases": 15,
+    "current_evidence": "runs/2026-10-13-replay-contract-service.json",
+    "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
     "source_commit": "783c50aa78f5925764e810d3fd5ccbc1601f21df",
@@ -1359,7 +1374,7 @@
     "publication_timing_full_regressions": "runs/2026-10-11-publication-timing-full-regressions.json"
   },
   "metadata_pilot_contract": {
-    "status": "proposal_pending_owner_approval; no endpoint or collection enabled",
+    "status": "owner_approved; collection_disabled_until_operational_gates_pass",
     "contract": "docs/metadata-pilot-contract.md",
     "scope_ids": [
       "F-044",
@@ -1367,12 +1382,14 @@
       "F-141",
       "N-011"
     ],
-    "active_retention_days_proposed": 30,
-    "backup_expiry_days_proposed": 7,
-    "invitation_only_proposed": true,
-    "owner_role_proposed": "Michael \u2014 accountable pilot operator and access approver",
     "real_data_allowed": false,
-    "new_endpoint_approved": false
+    "new_endpoint_approved": true,
+    "active_retention_days": 30,
+    "backup_expiry_days": 7,
+    "invitation_only": true,
+    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
+    "policy": "deploy/research/metadata-pilot-policy.json"
   },
   "independent_signal_components": {
     "scope_ids": [
@@ -1877,7 +1894,14 @@
     "protected_merge": "runs/2026-10-12-editorial-protected-merge.json",
     "primary_preservation": "runs/2026-10-12-editorial-primary-preservation.json"
   },
-  "python_tests_current_pass": true,
+  "python_tests_current_pass": {
+    "passed": 3249,
+    "skipped": 5,
+    "upstream_warning": 1,
+    "evidence": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
+    "source_unchanged_during_execution": true,
+    "independent_accuracy_evidence": false
+  },
   "restore_isolation": {
     "status": "development_guard_protected_merge_and_publication_verified; production_installation_pending",
     "implemented_by": "Codex",
@@ -2376,5 +2400,58 @@
     "primary_preservation": "runs/2026-10-13-ps-efficiency-primary-preservation.json",
     "scope_open_before": 87,
     "scope_open_after": 87
+  },
+  "firefox_preview": {
+    "status": "executed Linux developer preview; full F-156 acceptance open",
+    "scope_id": "F-156",
+    "percent_complete": 80,
+    "implemented_by": "Codex",
+    "audited_at": "2026-10-13T20:00:21.591438+00:00",
+    "package_profile": "firefox-temporary-preview/v1",
+    "actual_browser": "Firefox 153.4.0 Linux",
+    "actual_service_integration": "runs/2026-10-13-firefox-real-services-linux.json",
+    "guide": "docs/firefox-preview.md",
+    "Chrome_sources_changed": false,
+    "production_services_changed": false,
+    "live_vendor_verified": false,
+    "store_signed": false,
+    "independent_accuracy_evidence": false,
+    "full_requirements_closed": 0
+  },
+  "registry_reproducibility": {
+    "status": "complete_supported_record_contract",
+    "scope_id": "F-003",
+    "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json",
+    "service_receipt": "runs/2026-10-13-replay-contract-service.json",
+    "actual_service_cli_cases": 15,
+    "history_rewritten": false,
+    "missing_history_or_input": "unavailable",
+    "independent_accuracy_verified": false,
+    "outside_user_verified": false
+  },
+  "conformance_recusal": {
+    "status": "functioning_project_policy_rule",
+    "scope_id": "F-147",
+    "guide": "docs/conformance-recusal.md",
+    "local_receipt": "runs/2026-10-13-conformance-recusal-local.json",
+    "linux_receipt": "runs/2026-10-13-conformance-recusal-linux.json",
+    "actual_cli_cases_per_platform": 19,
+    "operating_institution": false,
+    "actual_role_assignments": false,
+    "independent_people_verified": false,
+    "certification_granted": false
+  },
+  "legacy_scope_grouping": {
+    "complete_ids": [
+      "F-019",
+      "F-020",
+      "F-021",
+      "F-022",
+      "F-029"
+    ],
+    "guide": "docs/scope-grouping-result.md",
+    "browser": "runs/2026-10-13-scope-group-browser.json",
+    "grouping_is_tag_release": false,
+    "child_statuses_unchanged": true
   }
 }

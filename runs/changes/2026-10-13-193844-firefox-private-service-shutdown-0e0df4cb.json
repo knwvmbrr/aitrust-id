@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-193844-firefox-private-service-shutdown-0e0df4cb",
+  "recorded_at": "2026-10-13T19:38:44.706498+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Use private inherited shutdown pipes for owned test services, preserving capability drops and avoiding a new administrative endpoint or relaxed peer-signal policy.",
+  "proves": "Thirty-six source-binding/framing/package controls pass; application sources and signed response checks remain unchanged.",
+  "limits": "Full actual-service execution including shutdown remains pending; the preceding passing assertions plus failed cleanup are retained as a failed run.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "docs/firefox-adapter-plan.md": "e3b215832de2127715d3743e013ee47de73cb957956f09d0b820974a38c60c04",
+    "scripts/verify-firefox-extension.py": "50d80cc8949fac19306d1c963cea0bf9a95c339110f7d50f9a642e794284bf53"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:38:45.788576+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "4fdb260ffec93f3fa9dbc33f2885455626cac0940d01ec58c4b5f30395c2b374",
+    "original_preserved_privately": true
+  }
+}

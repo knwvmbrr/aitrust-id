@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-185646-firefox-driver-native-controls-3e1eb85f",
+  "recorded_at": "2026-10-13T18:56:46.430492+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Use Firefox WebDriver shadow-root and accessible-label operations to inspect the existing closed tag UI; align fixture settings actions with actual form controls.",
+  "proves": "Driver syntax and deterministic package controls pass.",
+  "limits": "Actual Firefox execution remains pending; no closed requirement is claimed.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "4a63834fee2458de3389563d874d032b7e51c51e25ed96ffaed92760d4ea1dbb"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "py_compile",
+        "scripts/verify-firefox-extension.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T18:56:46.563515+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "dc2f78c1ed5c00f4e898234b70a244259a791c8bc082bb81ba1aa604a2c3cb66",
+    "original_preserved_privately": true
+  }
+}

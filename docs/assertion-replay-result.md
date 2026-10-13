@@ -59,3 +59,20 @@ The website regression check also caught a scalar execution-credit field in the
 new F-003 ledger entry. It crashed the Scope workflow before publication. Codex
 corrected the entry and added five negative list-contract cases; the site now
 validates the ledger before generating public copies. No broken build was deployed.
+
+## Later accepted completion — recorded 2026-10-13
+
+The earlier 80% assessment remains a dated historical observation. Michael
+accepted the supported-record/Unavailable-history contract. Codex changed the CLI
+to inspect support before opening original input or credentials and return
+Unavailable for absent required private files, preserving existing record bytes.
+The current source passed 87 focused replay/revalidation controls and **15 actual
+Linux service/CLI cases**, including absent preprocessing history and absent
+original input. Source hashes match the current gateway, redactor, detector, replay
+CLI and verifier. Evidence: [executed current service checks](../runs/2026-10-13-replay-contract-service.json)
+and [exact owner decision](../runs/2026-10-13-historical-reproducibility-owner-decision.json).
+
+F-003 is 100% for the approved registry/reproducibility job. No historical data was
+repaired or guessed. Outside-user operation (F-119), tag sampling/calibration,
+human accessibility and actual phones remain separate open gates. Registration
+and matching results do not establish accuracy or independent corroboration.

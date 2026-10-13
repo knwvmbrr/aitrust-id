@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-10-13T19:12:34.398756+00:00",
+  "pass": false,
+  "stage": "browser_cleanup",
+  "preceding_stage": "source_stability",
+  "completed_cases": [
+    "TLS_verification_enabled",
+    "actual_temporary_install",
+    "default_paused",
+    "token_save_does_not_enable",
+    "key_save_does_not_enable",
+    "paused_no_capture",
+    "assistant_only_capture",
+    "authenticated_compact_tag_rendered",
+    "unsigned_cannot_render_a_finding",
+    "tampered_cannot_render_a_finding",
+    "pause_refuses_new_capture",
+    "reset_clears_token_key_and_consent",
+    "uninstall_removes_route",
+    "source_unchanged"
+  ],
+  "sources": {
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+    "extension/src/content/badge.js": "13ae07b3580198976448bf7432c4b22583154ca6eee48141d53990e06a113967",
+    "extension/src/content/bridge.js": "821ca77c4d480dfd7ecf133710316b5633215de0f4f4fb06a76c49691dddbdba",
+    "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64",
+    "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "extension/src/firefox/permissions.js": "b5b0883c122fc10868a7ea0dab995e6e3e2a48ea1046caaa896431b717b2a611",
+    "scripts/build-firefox-extension.py": "c8543d7e538a9759ab67691dd51f3427b36337ecf2db668965296456fe380918",
+    "scripts/verify-firefox-extension.py": "d94025e787ed62a2488ec7249570959ca231372ff88cfd0c7e3c9029bf96a24f"
+  },
+  "requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "diagnostic_observation": {
+    "origin_prompt_open": false,
+    "allowed_origins": {
+      "vendor": true,
+      "loopback": true
+    },
+    "fixture_visible": true
+  }
+}

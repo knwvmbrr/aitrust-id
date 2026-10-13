@@ -76,3 +76,24 @@ Owner requested per-item timestamped milestone completion, execution attribution
 ## 2026-10-11 — Unsupported-media compatibility accepted
 
 Michael approved the F-102 compatibility question (answer “1”). The supported gateway evaluates text only; all reserved non-text modalities and unknown modality values return HTTP 422 before redaction or detector execution. The UI contract exposes Unsupported for unsupported input/records. It does not invent an UNK assertion. The original UNK + unsupported_modality requirement remains in the master scope historical baseline and the [dated owner decision](../runs/2026-10-11-unsupported-modality-owner-decision.json). This approval does not adopt the general UNK replacement, UC/SC/BT or a new schema version.
+
+## 2026-10-13 — Owner-approved reproducibility and optional pilot contracts
+
+Michael replied “Yes — adopt that reproducibility contract” to the historical
+replay question. Complete supported records must be repeatable with matching
+method/preprocessing identity and private original input. Missing history returns
+Unavailable; older records remain unchanged. This retires the unsupported promise
+that signal IDs alone reproduce every assertion. Outside-user operation and
+independent accuracy remain separate requirements. The exact question/reply and
+current recording time are in
+[runs/2026-10-13-historical-reproducibility-owner-decision.json](../runs/2026-10-13-historical-reproducibility-owner-decision.json).
+
+Michael selected option 1, “Approve this pilot contract,” for invited metadata-only
+submissions at research.aitrustid.com/v1/feedback, Michael as operator, 30-day
+active retention and a 7-day encrypted-backup limit. Checking stays account-free
+and sharing optional. **Collection remains disabled until security, withdrawal
+and recovery tests pass.** This approves the route and operating contract; it does
+not constitute deployment, recruitment, training consent or independent labels.
+The exact question/reply are in
+[runs/2026-10-13-metadata-pilot-owner-decision.json](../runs/2026-10-13-metadata-pilot-owner-decision.json).
+The recording times are current, not invented historical approval times.

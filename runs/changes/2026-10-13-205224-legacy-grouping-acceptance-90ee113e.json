@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-205224-legacy-grouping-acceptance-90ee113e",
+  "recorded_at": "2026-10-13T20:52:24.636496+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Complete five original legacy-grouping jobs after actual build/browser navigation and mapping checks; preserve every child status and all 202 records.",
+  "proves": "Exact five-parent mapping, child keyboard navigation/focus restoration, eight independent workflows, 320px/200% reflow and zero automated accessibility violations.",
+  "limits": "79 requirements still open, target 43 unmet. Grouping completion is not detector/tag validation; physical phones, independent labels and human reviews remain open.",
+  "scope_ids": [
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "docs/scope-grouping-result.md": "7776c2732e87fe9bbb38495d3c863874a26ae701f440d2bd41851c0411d22d09",
+    "docs/scope-progress.json": "41ccb8deba2b6b4fd9ec560d0ac905c6a49f128f3c86c0beb6e0c89cd07e52b3",
+    "docs/scope-progress.md": "ca1b44516c975c2603dd72b75c69fc864011afd373a32caf2cea185f642bc341",
+    "docs/scope-task-index.md": "d64390a4002f206a572f7919d192542e29a2eeabe825bafadc00376d5bc1ae87",
+    "docs/scope-100-execution.md": "70d427fedd8504b78ee41ba775365e52f15a526cbb86ec3cad6b18dcdb3eabc0",
+    "state.json": "0086c6c2be1b7a2d57572f3e001019d95b59be3ac29a972d07135164c6c175dc",
+    "runs/2026-10-13-scope-group-browser.json": "80977c4c78579ce992a70d34ade0aca6919b7be15c927870dc5e8e5203703a3d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-scope-group-browser.json",
+      "sha256": "80977c4c78579ce992a70d34ade0aca6919b7be15c927870dc5e8e5203703a3d"
+    },
+    {
+      "path": "runs/2026-10-13-legacy-group-mapping.json",
+      "sha256": "e0ce73c61b4ffe8b2b765372846bc772ee53d7a5a87271fb9b15f83edb2229f8"
+    }
+  ],
+  "checks": []
+}

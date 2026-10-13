@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-191213-firefox-authentication-and-removal-f9e4188b",
+  "recorded_at": "2026-10-13T19:12:13.071748+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Exercise real Firefox refusal of unsigned and altered gateway bytes, and uninstall from a vendor tab so removing the options page cannot invalidate the test window.",
+  "proves": "Thirty package/protocol checks pass; the prior actual native capture pass is retained while uninstall/negative cases are rerun.",
+  "limits": "Browser fixtures remain synthetic; current live vendor, store distribution, independent tag accuracy and full scope completion are not inferred.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "d94025e787ed62a2488ec7249570959ca231372ff88cfd0c7e3c9029bf96a24f"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:12:13.680410+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "6540a82b2b0353b727b1d84a9b6d88b278b0b9930a97b8fc7e96978ac20348d4",
+    "original_preserved_privately": true
+  }
+}

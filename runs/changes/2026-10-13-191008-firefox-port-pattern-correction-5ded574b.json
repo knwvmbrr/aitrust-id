@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-191008-firefox-port-pattern-correction-5ded574b",
+  "recorded_at": "2026-10-13T19:10:08.683472+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Use Firefox-supported portless loopback permission while retaining the fixed 8787 request destination and independent application consent; document the broader browser-level port grant accurately.",
+  "proves": "Thirty package/driver controls and ten permission lifecycle cases remain executable; the unsupported port pattern is removed only from the Firefox variant.",
+  "limits": "Browser permission is not a network destination guarantee by itself. Live vendor, stable store distribution and independent validation remain pending.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/build-firefox-extension.py": "c8543d7e538a9759ab67691dd51f3427b36337ecf2db668965296456fe380918",
+    "extension/src/firefox/permissions.js": "b5b0883c122fc10868a7ea0dab995e6e3e2a48ea1046caaa896431b717b2a611",
+    "scripts/verify-firefox-extension.py": "d223721dabbaf2b750f72bcfb25ccd4a40c5017f0de4b992d3b967f76ecb783e",
+    "tests/test_firefox_package.py": "3ba95f502d1b26694ac87338433349165545bca9ab949f4bb531a00797b298c3",
+    "tests/firefox-permissions.cjs": "86dc463b6009f23d266a5caaa10a9709a53c03f5618eea356dbd73b27aace9e7",
+    "docs/firefox-adapter-plan.md": "db9f42d46b5e0251d25976246c39f5b1bcb5d17286307009e0dcac9f69e831b2"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:10:09.269047+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "84f08e293e2e9ef12f7e65375642567fcfdee923eb29650ad571103963f95b58",
+    "original_preserved_privately": true
+  }
+}

@@ -48,3 +48,14 @@ computer; this tool cannot make a compromised local host safe. Historical record
 without sufficient identity/input remain unreplayable and keep full historical
 reproduction acceptance open. No new endpoint, tag adoption, remote collection,
 calibration claim or legal assurance is introduced.
+
+## Owner-approved completion contract — recorded 2026-10-13
+
+The owner accepts repeatability for complete supported records and Unavailable for
+incomplete history. Preserve legacy bytes; neither a signal ID nor guessed input
+can reconstruct missing history. Inspect record support before opening original
+text or credentials. A missing original file is Unavailable; malformed, exposed
+or linked private files remain invalid. Risks: accidentally sending private input
+for unsupported history, changing existing exit semantics indiscriminately, or
+treating replay as independent accuracy. Test the real CLI file/transport boundary
+and existing matching/mismatch cases without changing wire, detector or tags.

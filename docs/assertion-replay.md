@@ -69,3 +69,15 @@ hashes identify installation metadata; they do not themselves verify every runti
 package file. English model assets separately pass the pre-load integrity check.
 Current consumer checks validate metadata shape/consistency; the gateway and replay
 command check the digest. No independent detector or security certification follows.
+
+## Completion contract adopted by the owner
+
+The exact owner approval is in
+[runs/2026-10-13-historical-reproducibility-owner-decision.json](../runs/2026-10-13-historical-reproducibility-owner-decision.json).
+Complete supported records must replay with matching implementation, preprocessing
+and owner-held original input. Missing preprocessing history or unavailable
+original bytes returns `unavailable`, exit 3, without repairing or rewriting the
+record. The CLI checks record support before opening text or credentials. Linked,
+exposed or malformed files remain invalid rather than being guessed.
+Historical records are preserved; neither registration nor replay is independent
+accuracy, human acceptance, signature trust or universal historical reconstruction.

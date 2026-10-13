@@ -302,8 +302,9 @@ purchased the separate VPS. Key-only SSH and native PostgreSQL 18.6 are now
 verified after reboot on the patched kernel; PostgreSQL accepts local sockets
 only. All 46 [host checks](runs/2026-10-08-private-host-checks.json) pass.
 Independent encrypted backup and synthetic restoration checks now pass. Public
-intake, application authorization, full-host recovery and collection policy remain
-incomplete. Local tags remain independent of research submissions.
+intake, application authorization and full-host recovery remain incomplete. The
+owner approved the [invited metadata-only pilot contract](docs/metadata-pilot-contract.md);
+collection stays disabled until its security, withdrawal and recovery gates pass. Local tags remain independent of research submissions.
 See [host operations](docs/private-host-operations.md),
 [public communication and protected data](docs/public-community-and-private-data.md)
 and [backup options](docs/backup-option-review.md).
@@ -494,3 +495,19 @@ The [native engine verification guide](docs/native-engine-checks.md) separates e
 Selected public fonts, Unicode resources, runtime identities and model-card declarations can be checked offline with `python3 scripts/verify-asset-notices.py`. See [the short notice guide](docs/asset-notices.md); consistency is distinct from legal clearance.
 
 For an editorial workflow, keep a selected finding and a separate editor decision in private files. The [editorial review guide](docs/editorial-workflow.md) covers the current detailed PS web export, unsigned current gateway records, corrections, offline views and removal. It performs no upload, automatic collection or independent accuracy validation.
+
+### Commercial-interest recusal check
+
+The [offline rule checker](docs/conformance-recusal.md) verifies signed ballots
+against separately pinned role and decision registers. Conflicted approval and
+abstention are refused; explicit recusal is recorded. This is a functioning
+project-policy control, not an operating board, certification or proof that
+different keys identify independent people. Actual role assignment and disclosure
+truth remain the accountable operator’s responsibility.
+
+The optional registry’s [accepted metadata policy](docs/metadata-pilot-contract.md)
+defines permitted fields, private access and deletion before storage. Run
+`python scripts/verify-research-policy.py` to detect drift. It refuses enabled
+collection; real submissions still require security, withdrawal and recovery
+evidence. This completes the definition, without activating the historical
+hash-only dashboard or authorizing examples and model training.

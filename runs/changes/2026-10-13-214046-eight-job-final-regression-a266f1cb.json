@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-214046-eight-job-final-regression-a266f1cb",
+  "recorded_at": "2026-10-13T21:40:46.842549+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Record the final full regression and exact eight completed named jobs, retaining 79 open requirements toward target 43.",
+  "proves": "3249 tests pass, five platform cases skip and one upstream warning remains; reviewed source is unchanged during execution. All five capability receipts and current website phases pass.",
+  "limits": "Protected review/publication pending. No independent accuracy, real phone, operating foundation, enabled collection or completed 43-open target claimed.",
+  "scope_ids": [
+    "F-003",
+    "F-044",
+    "F-147",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029",
+    "N-006"
+  ],
+  "files": {
+    "state.json": "9ccc2a411c8f72338aad479bbba05aba27485b38fc6f2f50c8993806e21f690e",
+    "runs/2026-10-13-accepted-contracts-published-full-suite.json": "0162525b14f20e6646a07f2adf68f1d5bdb128be7adb6844b6bfec5e85482b41"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-published-full-suite.json",
+      "sha256": "0162525b14f20e6646a07f2adf68f1d5bdb128be7adb6844b6bfec5e85482b41"
+    }
+  ],
+  "checks": []
+}

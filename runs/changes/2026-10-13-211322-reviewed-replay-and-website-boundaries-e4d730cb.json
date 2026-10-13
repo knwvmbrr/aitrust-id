@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-211322-reviewed-replay-and-website-boundaries-e4d730cb",
+  "recorded_at": "2026-10-13T21:13:22.660669+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Review exact current source and all five capability receipts, bind all 15 actual replay cases and refuse invented historical reconstruction.",
+  "proves": "Five stable capability executions, all eight current-build website phases and 36 route refusal cases pass. Existing personal endpoints/Chrome permissions/device source remain unchanged.",
+  "limits": "Protected CI, full final suite and publication pending; no independent tag release, real phone, new collection or operating institution.",
+  "scope_ids": [
+    "F-003",
+    "N-006",
+    "F-044",
+    "F-147",
+    "F-156",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "fc18845a577fdbaebb9ed95c602e4014da93bd2b7b5cec3994947dea93eedbdd",
+    "scripts/verify-route-boundaries.py": "b5bc0dd805ae9037cbe604d2ccabda456e63f83981b108c258054a6b314cc452",
+    "tests/test_route_boundaries.py": "519bb74f1192057eae71395c737d40ddb8618ca2074b37fced50c28e17e6ad54",
+    "state.json": "4a9dc1fe5b4f75ec48584ab54d73f6c053c64801655688b23d3f7d4a49da48cf",
+    "runs/2026-10-13-accepted-contracts-eight-phases.json": "c1830eacd7734fcd5edde13fe79f098000ad6a62976f9ce6b8ecbae243bfb68a",
+    "runs/2026-10-13-accepted-contracts-final-website.json": "b2ec7f20a843dda85398445b41612a138213f678f63fcc0ca2af7b70d7374328",
+    "runs/2026-10-13-accepted-contracts-reviewed-routes.json": "db26cca9a771df811974d78cd800096ba9f630de9bd45165cc51689ba70dd530"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-final-website.json",
+      "sha256": "b2ec7f20a843dda85398445b41612a138213f678f63fcc0ca2af7b70d7374328"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-reviewed-routes.json",
+      "sha256": "db26cca9a771df811974d78cd800096ba9f630de9bd45165cc51689ba70dd530"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-eight-phases.json",
+      "sha256": "c1830eacd7734fcd5edde13fe79f098000ad6a62976f9ce6b8ecbae243bfb68a"
+    }
+  ],
+  "checks": []
+}

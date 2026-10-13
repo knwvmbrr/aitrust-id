@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-212607-renewed-detection-input-checks-294abe87",
+  "recorded_at": "2026-10-13T21:26:07.314658+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Renew PS and PII evidence after the complete component-input manifest update.",
+  "proves": "Both source-bound current capability checks pass without detector or redactor changes.",
+  "limits": "Protocol/extension/website renewal and protected publication are still in progress; independent tag gates remain unchanged.",
+  "scope_ids": [
+    "N-006",
+    "F-003"
+  ],
+  "files": {
+    "runs/2026-10-13-accepted-contracts-reviewed-PS.json": "edde1fce945580dada4e9efc169f90c50c2bd1516bbb88141a9b8fb6ef3d1ba7",
+    "runs/2026-10-13-accepted-contracts-reviewed-PII_REDACTED.json": "36665e9632328dba0b7a4d7479d8df841357f69b5ea839324090bddda8dac64d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-reviewed-PS.json",
+      "sha256": "edde1fce945580dada4e9efc169f90c50c2bd1516bbb88141a9b8fb6ef3d1ba7"
+    },
+    {
+      "path": "runs/2026-10-13-accepted-contracts-reviewed-PII_REDACTED.json",
+      "sha256": "36665e9632328dba0b7a4d7479d8df841357f69b5ea839324090bddda8dac64d"
+    }
+  ],
+  "checks": []
+}

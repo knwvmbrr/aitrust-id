@@ -179,7 +179,25 @@
         "scripts/prepare-reference-review-windows.py",
         "scripts/verify-reference-review-windows.py",
         "tests/test_reference_review_window.py",
-        "docs/reference-review-window-plan.md"
+        "docs/reference-review-window-plan.md",
+        "tools/conformance_recusal.py",
+        "scripts/check-conformance-votes.py",
+        "scripts/verify-conformance-votes.py",
+        "tests/test_conformance_recusal.py",
+        "tools/research_policy.py",
+        "scripts/verify-research-policy.py",
+        "tests/test_research_policy.py",
+        "deploy/research/metadata-pilot-policy.json",
+        "runs/2026-10-13-metadata-pilot-owner-decision.json",
+        "runs/2026-10-13-historical-reproducibility-owner-decision.json",
+        "docs/scope-groups.json",
+        "protocol/scope_groups.py",
+        "scripts/verify-scope-groups.py",
+        "tests/test_scope_groups.py",
+        "docs/master-scope.json",
+        "docs/scope-progress.json",
+        "GOVERNANCE.md",
+        "tests/test_scoped_component_inputs.py"
       ],
       "commands": [
         [
@@ -279,6 +297,42 @@
           "scripts/verify-reference-review-windows.py",
           "--output",
           "output/verification/reference-windows.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_conformance_recusal.py",
+          "tests/test_research_policy.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-conformance-votes.py",
+          "--output",
+          "output/verification/recusal.json"
+        ],
+        [
+          "{python}",
+          "scripts/verify-research-policy.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_scope_groups.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-scope-groups.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_scoped_component_inputs.py",
+          "-q"
         ]
       ]
     },
@@ -313,7 +367,14 @@
         "tests/test_gateway_integration.py",
         "tests/stream-observer.cjs",
         "tests/test_stream_observer.py",
-        "docs/stream-observer-plan.md"
+        "docs/stream-observer-plan.md",
+        "scripts/build-firefox-extension.py",
+        "scripts/verify-firefox-extension.py",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "tests/firefox-permissions.cjs",
+        "scripts/verify-firefox-permissions.cjs",
+        "LICENSE"
       ],
       "commands": [
         [
@@ -349,6 +410,18 @@
           "pytest",
           "tests/test_stream_observer.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_firefox_package.py",
+          "tests/test_firefox_driver_protocol.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-firefox-permissions.cjs"
         ]
       ]
     },

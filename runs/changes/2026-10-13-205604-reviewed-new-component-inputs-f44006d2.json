@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-205604-reviewed-new-component-inputs-f44006d2",
+  "recorded_at": "2026-10-13T20:56:04.311653+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Bind new offline components and Firefox tests into route review; record stale-boundary regression refusals and generated public projections.",
+  "proves": "The first full run passed 3228 tests and refused nine stale boundary checks before new review; no actual endpoint, Chrome permission or device source changed.",
+  "limits": "Full-suite pass and publication are pending refreshed capability receipts and reviewed inventory. No bypass or independent tag release.",
+  "scope_ids": [
+    "N-006",
+    "F-003",
+    "F-147",
+    "F-044",
+    "F-156",
+    "F-019",
+    "F-020",
+    "F-021",
+    "F-022",
+    "F-029"
+  ],
+  "files": {
+    "scripts/verify-route-boundaries.py": "b53bfa93bff0e991608eca45c5fba894439695a7180c8c91fec212cabf8966ad",
+    "runs/2026-10-13-accepted-contracts-stale-boundary-refusal.json": "071294aa408a85d2046e50765131179dd2caa047748ac4fa2e2594a5e6561f0c",
+    "site/public/reference/decisions.md": "aa05a50c2b7c6d136097f1f103f02dbb3df2e80cd0047f32e6c8871a27a87984",
+    "site/public/reference/public-scope.json": "d9dde3aaa9a205cb09f0222f5147aca9908b864a1f08a1a28ca28d9a813999f3",
+    "site/src/public-scope.json": "d9dde3aaa9a205cb09f0222f5147aca9908b864a1f08a1a28ca28d9a813999f3",
+    "site/src/scope-manifest.json": "90475c31c6798e0ca6152af83965ec01a0c02645829e634bb7dd4cddb53d7d4d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-accepted-contracts-stale-boundary-refusal.json",
+      "sha256": "071294aa408a85d2046e50765131179dd2caa047748ac4fa2e2594a5e6561f0c"
+    },
+    {
+      "path": "runs/2026-10-13-scope-group-browser.json",
+      "sha256": "80977c4c78579ce992a70d34ade0aca6919b7be15c927870dc5e8e5203703a3d"
+    }
+  ],
+  "checks": []
+}

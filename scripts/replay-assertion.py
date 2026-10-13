@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """Owner-run current-service replay. Never prints private text, token or paths."""
 import argparse
+import errno
 import json
 import os
 from pathlib import Path
 import stat
 import sys
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+class InputUnavailable(ValueError):
+    """Absent original bytes are not a negative replay finding."""
+
+
 EXIT={'matched':0,'mismatch':1,'input_mismatch':2,'unavailable':3,'invalid':4}
 
 
@@ -14,7 +19,9 @@ def read_private(path,limit,credential=False):
     path=Path(path)
     if any(p.is_symlink() for p in path.parents):raise ValueError('Unsupported input')
     try:fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
-    except OSError:raise ValueError('Unsupported input') from None
+    except OSError as exc:
+        if exc.errno==errno.ENOENT:raise InputUnavailable('Input unavailable') from None
+        raise ValueError('Unsupported input') from None
     with os.fdopen(fd,'rb') as stream:
         info=os.fstat(stream.fileno())
         if not stat.S_ISREG(info.st_mode):raise ValueError('Unsupported input')
@@ -35,12 +42,18 @@ def main():
     try:
         if a.local_gateway and a.token_file:
             from protocol.evidence import unique,reject,finite
-            from protocol.replay import replay
+            from protocol.replay import replay,inspect_record
             record=json.loads(read_private(a.assertion_file,2_000_000).decode('utf-8'),object_pairs_hook=unique,parse_constant=reject);finite(record)
             if not isinstance(record,dict):raise ValueError('Unsupported assertion')
-            text=read_private(a.original_text_file,800_000,credential=True).decode('utf-8',errors='strict')
-            token=read_private(a.token_file,257,credential=True).decode('ascii').rstrip('\n')
-            result=replay(record,text,token)
+            refused=inspect_record(record)
+            if refused:
+                result=refused
+            else:
+                text=read_private(a.original_text_file,800_000,credential=True).decode('utf-8',errors='strict')
+                token=read_private(a.token_file,257,credential=True).decode('ascii').rstrip('\n')
+                result=replay(record,text,token)
+    except InputUnavailable:
+        result={'status':'unavailable','reason':'required_private_input_unavailable','tool_retains_input':False,'independent_accuracy_verified':False}
     except RuntimeError:
         result={'status':'unavailable','reason':'dependency_configuration_unavailable','tool_retains_input':False,'independent_accuracy_verified':False}
     except ImportError:

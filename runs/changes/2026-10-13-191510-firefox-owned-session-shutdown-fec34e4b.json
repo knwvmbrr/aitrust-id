@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-191510-firefox-owned-session-shutdown-fec34e4b",
+  "recorded_at": "2026-10-13T19:15:10.992348+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Keep the owned Firefox session available until IPC shutdown, so a successful run cannot lose its cleanup channel before the browser exits.",
+  "proves": "Thirty focused controls pass; fourteen actual Linux browser assertions passed in the preceding run, whose cleanup failure remains retained.",
+  "limits": "The complete actual run must pass shutdown as well; no partial pass becomes a closed requirement.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "b12e16b44017544e8ea96a9a63b1ca8f684c0c5dad411f26a631e968dfba7667"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:15:11.675599+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "f734dbacc92ab26492f3b067c760014a4d70467fb4c53d232baf8f82206dadb0",
+    "original_preserved_privately": true
+  }
+}

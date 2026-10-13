@@ -153,26 +153,30 @@
         "id": "F-003",
         "kind": "requirement",
         "title": "Signal registry, 22 registered IDs with version suffixes",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-10T19:36:04.973854+00:00",
+        "audited_at": "2026-10-13T20:33:56.200419+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — current pipeline identity, protected replay CLI, explicit browser export and executed Linux/browser integration"
+          "Codex — current pipeline identity, protected replay CLI, explicit browser export and executed Linux/browser integration",
+          "Codex — owner-approved complete-record replay and missing-history/private-input Unavailable enforcement, 2026-10-13T20:33:56.200419+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Resolve full historical reproducibility without guessing absent preprocessing configuration or original private input; preserve unavailable history and obtain remaining outside-user acceptance. Current selected service replay is implemented and executed.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:33:56.200419+00:00",
+        "completion_timestamp_basis": "Current source-bound execution and owner-approved supported-history contract; no historical completion date invented.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "docs/scope-delivery.md",
           "spec/signal-registry.json",
@@ -183,13 +187,19 @@
           "runs/2026-10-10-replay-source-verified-service.json",
           "runs/2026-10-10-replay-corrected-cli.json",
           "runs/2026-10-10-replay-browser-export-final.json",
-          "runs/2026-10-10-replay-browser-to-service.json"
+          "runs/2026-10-10-replay-browser-to-service.json",
+          "runs/2026-10-13-historical-reproducibility-owner-decision.json",
+          "runs/2026-10-13-replay-contract-service.json",
+          "scripts/replay-assertion.py",
+          "tests/test_assertion_replay.py"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Versioned catalogue and repeatability for complete supported current records; incomplete history returns Unavailable and is preserved unchanged. Actual current Linux service/CLI checks and existing explicit browser export exercised. Signal IDs alone, unknown private inputs, independent accuracy and outside-user operation are not inferred; F-119 and individual tag gates stay open.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "historical_required_acceptance": [
           "Full per-assertion current and historical method/source/input identity and replay contract, with private-input handling and explicit unsupported failure."
         ],
-        "queue": "open"
+        "acceptance_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
       }
     },
     {
@@ -5482,29 +5492,49 @@
         "id": "F-044",
         "kind": "requirement",
         "title": "Optional registry and retention proposal",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:41:17.693562+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — owner-approved storage policy, closed vocabulary and disabled-collection validator with executed positive/negative checks, 2026-10-13T20:41:17.693562+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Optional registry and retention proposal. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: Users are not silently enrolled in storage; the historical 30-day/hash-only proposal is not adopted automatically.",
-        "next_owner": "Codex",
-        "evidence": [
-          "docs/scope-delivery.md"
+        "completed_by": [
+          "Codex"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "completed_at": "2026-10-13T20:41:17.693562+00:00",
+        "completion_timestamp_basis": "Current owner-approved definition and executable refusal/consent controls; no deployment or historical completion invented.",
+        "next_fix": null,
+        "next_owner": null,
+        "evidence": [
+          "docs/scope-delivery.md",
+          "docs/metadata-pilot-contract.md",
+          "docs/registry-contract-plan.md",
+          "docs/registry-contract-result.md",
+          "deploy/research/metadata-pilot-policy.json",
+          "tools/research_policy.py",
+          "scripts/verify-research-policy.py",
+          "tests/test_research_policy.py",
+          "tests/research-feedback.cjs",
+          "runs/2026-10-13-metadata-pilot-owner-decision.json",
+          "runs/2026-10-13-approved-registry-policy.json"
+        ],
+        "evidence_scope": "Full preserved definition job before storage: actual owner-approved purpose/fields/roles/retention/withdrawal contract, disabled policy validator, 35 negative/positive policy checks and 4 exhaustive fixed-choice feedback groups. No deployed dashboard/intake, participant recruitment, backup erasure, model training or independent validation inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "historical_required_acceptance": [
           "Deliver Optional registry and retention proposal. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: Users are not silently enrolled in storage; the historical 30-day/hash-only proposal is not adopted automatically."
         ],
-        "queue": "open"
+        "acceptance_alignment": "Preserved master-scope baseline: define approved registry fields, access, retention and deletion before enabling storage. The approved metadata pilot is explicit and separate from the unadopted legacy hash dashboard. Actual intake/pilot/training/long-horizon outcomes remain F-045/F-141/N-011/F-161."
       }
     },
     {
@@ -8961,34 +8991,49 @@
         "id": "F-147",
         "kind": "requirement",
         "title": "Conflict-of-interest recusal rule for maintainers with a commercial interest",
-        "percent_complete": 40,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
-          "implemented_mechanism"
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:36:15.918498+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — separately pinned signed-ballot recusal policy and executed Mac/Linux CLI acceptance, 2026-10-13T20:36:15.918498+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board.",
-        "next_owner": "Michael and reviewers",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:36:15.918498+00:00",
+        "completion_timestamp_basis": "Current functioning original rule and source-bound positive/negative Mac/Linux execution; no historical role or institutional completion invented.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "CONTRIBUTING.md",
           "GOVERNANCE.md",
-          "DECISIONS.md"
+          "DECISIONS.md",
+          "docs/recusal-enforcement-plan.md",
+          "docs/conformance-recusal.md",
+          "tools/conformance_recusal.py",
+          "scripts/check-conformance-votes.py",
+          "tests/test_conformance_recusal.py",
+          "runs/2026-10-13-conformance-recusal-local.json",
+          "runs/2026-10-13-conformance-recusal-linux.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Full original conflict-of-interest rule with authenticated ballots under independently operator-selected role/scope inputs. Actual 19 Mac and 19 Linux CLI cases plus 49 focused tests; no real role assignment, disclosure truth, board, RFC adoption, certification or independent people inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "historical_required_acceptance": [
           "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
         ],
-        "queue": "open"
+        "acceptance_alignment": "Original F-147 baseline is the delivered recusal rule. Broader real RFC/board execution remains F-076/F-075/F-143/F-145/F-146; the earlier audit duplicated that separate outcome onto this rule."
       }
     },
     {
@@ -10001,23 +10046,38 @@
         "id": "F-156",
         "kind": "requirement",
         "title": "Additional browser and site adapters",
-        "percent_complete": 20,
+        "percent_complete": 80,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:00:21.591438+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — deterministic licensed Firefox package, separate origin consent and actual Linux browser/three-service integration, 2026-10-13T20:00:21.591438+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Additional browser and site adapters. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow.",
-        "next_owner": "Codex",
+        "next_fix": "Complete current live vendor use and the stable outside-user Firefox installation/removal acceptance. Only Linux Firefox 153.4.0 temporary installation and the declared synthetic DOM profile with actual source-verified services are demonstrated; other browsers/sites are not claimed.",
+        "next_owner": "Codex and outside users",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/firefox-adapter-plan.md",
+          "docs/firefox-preview.md",
+          "docs/firefox-adapter-result.md",
+          "scripts/build-firefox-extension.py",
+          "scripts/verify-firefox-extension.py",
+          "tests/test_firefox_package.py",
+          "tests/test_firefox_driver_protocol.py",
+          "tests/firefox-permissions.cjs",
+          "runs/2026-10-13-firefox-linux-integration.json",
+          "runs/2026-10-13-firefox-real-services-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -11532,34 +11592,84 @@
         "id": "F-019",
         "kind": "requirement",
         "title": "Legacy grouping for F-019a, F-019b, F-019c",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:52:24.400811+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded legacy mapping, verified immutable projection, exact-ID navigation and keyboard focus restoration, 2026-10-13T20:52:24.400811+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Close the child jobs individually: F-019a, F-019b, F-019c. This grouping does not create another implementation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:52:24.400811+00:00",
+        "completion_timestamp_basis": "Current original grouping job and actual browser/resolver acceptance; no historical detector completion inferred.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/scope-grouping-plan.md",
+          "docs/scope-grouping-result.md",
+          "docs/scope-groups.json",
+          "protocol/scope_groups.py",
+          "scripts/verify-scope-groups.py",
+          "tests/test_scope_groups.py",
+          "site/src/workflows/Scope.jsx",
+          "scripts/verify-workflows.cjs",
+          "runs/2026-10-13-legacy-group-mapping.json",
+          "runs/2026-10-13-scope-group-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Legacy grouping for F-019a, F-019b, F-019c. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
-        ],
-        "queue": "open",
+        "evidence_scope": "Full named legacy-grouping job; 20 mapping controls and actual 8-workflow Chromium checks including all five keyboard child navigation/focus cases, 320px/200% reflow and zero axe violations. No child percentage, detector accuracy, tag release, physical phone or human accessibility inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
         "children": [
           "F-019a",
           "F-019b",
           "F-019c"
-        ]
+        ],
+        "historical_required_acceptance": [
+          "Deliver Legacy grouping for F-019a, F-019b, F-019c. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
+        ],
+        "acceptance_alignment": "Preserved baseline explicitly names the legacy grouping. Functional exact links and child status complete this job; child detectors/tags retain independent acceptance."
+      },
+      "legacy_group": {
+        "id": "F-019",
+        "kind": "legacy_grouping",
+        "members": [
+          {
+            "id": "F-019a",
+            "title": "sig.urgency_frame.v1 — time-pressure lexicon plus imperative density",
+            "percent_complete": 80,
+            "queue": "open",
+            "next_fix": "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
+          },
+          {
+            "id": "F-019b",
+            "title": "sig.false_dilemma.v1 — binary framing where alternatives exist",
+            "percent_complete": 60,
+            "queue": "open",
+            "next_fix": "Complete broader exclusive/negated grammar, automatic selection, quotation/context and negation-scope interpretation; validate additional-option relevance and feasibility, source freshness, held-out contextual errors and accepted MT integration/human operation. Three caller-selected paired-marker forms work without an MT verdict."
+          },
+          {
+            "id": "F-019c",
+            "title": "sig.authority_appeal.v1 — unattributed appeals to expertise or consensus",
+            "percent_complete": 80,
+            "queue": "open",
+            "next_fix": "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent."
+          }
+        ],
+        "independent_detector": false,
+        "parent_completion_completes_members": false,
+        "grouping_is_tag_release": false
       }
     },
     {
@@ -11592,33 +11702,76 @@
         "id": "F-020",
         "kind": "requirement",
         "title": "Legacy grouping for F-020a, F-020b",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:52:24.400811+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded legacy mapping, verified immutable projection, exact-ID navigation and keyboard focus restoration, 2026-10-13T20:52:24.400811+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Close the child jobs individually: F-020a, F-020b. This grouping does not create another implementation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:52:24.400811+00:00",
+        "completion_timestamp_basis": "Current original grouping job and actual browser/resolver acceptance; no historical detector completion inferred.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/scope-grouping-plan.md",
+          "docs/scope-grouping-result.md",
+          "docs/scope-groups.json",
+          "protocol/scope_groups.py",
+          "scripts/verify-scope-groups.py",
+          "tests/test_scope_groups.py",
+          "site/src/workflows/Scope.jsx",
+          "scripts/verify-workflows.cjs",
+          "runs/2026-10-13-legacy-group-mapping.json",
+          "runs/2026-10-13-scope-group-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Legacy grouping for F-020a, F-020b. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
-        ],
-        "queue": "open",
+        "evidence_scope": "Full named legacy-grouping job; 20 mapping controls and actual 8-workflow Chromium checks including all five keyboard child navigation/focus cases, 320px/200% reflow and zero axe violations. No child percentage, detector accuracy, tag release, physical phone or human accessibility inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
         "children": [
           "F-020a",
           "F-020b"
-        ]
+        ],
+        "historical_required_acceptance": [
+          "Deliver Legacy grouping for F-020a, F-020b. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
+        ],
+        "acceptance_alignment": "Preserved baseline explicitly names the legacy grouping. Functional exact links and child status complete this job; child detectors/tags retain independent acceptance."
+      },
+      "legacy_group": {
+        "id": "F-020",
+        "kind": "legacy_grouping",
+        "members": [
+          {
+            "id": "F-020a",
+            "title": "sig.corpus_support.v1 — retrieval similarity against an attached local corpus",
+            "percent_complete": 100,
+            "queue": "completed",
+            "next_fix": ""
+          },
+          {
+            "id": "F-020b",
+            "title": "sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage",
+            "percent_complete": 60,
+            "queue": "open",
+            "next_fix": "Validate representative reference selection, contextual and temporal errors, source freshness and model calibration; accept the proposed signal/tag mapping and complete full FI integration and human acceptance. The working offline research command preserves a default lexical miss and is not an FI or falsehood verdict."
+          }
+        ],
+        "independent_detector": false,
+        "parent_completion_completes_members": false,
+        "grouping_is_tag_release": false
       }
     },
     {
@@ -11651,33 +11804,76 @@
         "id": "F-021",
         "kind": "requirement",
         "title": "Legacy grouping for T-FA, T-PA",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:52:24.400811+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded legacy mapping, verified immutable projection, exact-ID navigation and keyboard focus restoration, 2026-10-13T20:52:24.400811+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Close the child jobs individually: T-FA, T-PA. This grouping does not create another implementation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:52:24.400811+00:00",
+        "completion_timestamp_basis": "Current original grouping job and actual browser/resolver acceptance; no historical detector completion inferred.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/scope-grouping-plan.md",
+          "docs/scope-grouping-result.md",
+          "docs/scope-groups.json",
+          "protocol/scope_groups.py",
+          "scripts/verify-scope-groups.py",
+          "tests/test_scope_groups.py",
+          "site/src/workflows/Scope.jsx",
+          "scripts/verify-workflows.cjs",
+          "runs/2026-10-13-legacy-group-mapping.json",
+          "runs/2026-10-13-scope-group-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Legacy grouping for T-FA, T-PA. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
-        ],
-        "queue": "open",
+        "evidence_scope": "Full named legacy-grouping job; 20 mapping controls and actual 8-workflow Chromium checks including all five keyboard child navigation/focus cases, 320px/200% reflow and zero axe violations. No child percentage, detector accuracy, tag release, physical phone or human accessibility inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
         "children": [
           "T-FA",
           "T-PA"
-        ]
+        ],
+        "historical_required_acceptance": [
+          "Deliver Legacy grouping for T-FA, T-PA. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
+        ],
+        "acceptance_alignment": "Preserved baseline explicitly names the legacy grouping. Functional exact links and child status complete this job; child detectors/tags retain independent acceptance."
+      },
+      "legacy_group": {
+        "id": "F-021",
+        "kind": "legacy_grouping",
+        "members": [
+          {
+            "id": "T-FA",
+            "title": "FA Full AI Augmentation",
+            "percent_complete": 20,
+            "queue": "open",
+            "next_fix": "Deliver FA Full AI Augmentation. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The reader sees the origin assertion, source of evidence and supported observation window."
+          },
+          {
+            "id": "T-PA",
+            "title": "PA Partially Augmented",
+            "percent_complete": 20,
+            "queue": "open",
+            "next_fix": "Deliver PA Partially Augmented. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The reader can distinguish documented contribution/edit events from unobserved authorship."
+          }
+        ],
+        "independent_detector": false,
+        "parent_completion_completes_members": false,
+        "grouping_is_tag_release": false
       }
     },
     {
@@ -11709,32 +11905,68 @@
         "id": "F-022",
         "kind": "requirement",
         "title": "Legacy grouping for T-IV",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:52:24.400811+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded legacy mapping, verified immutable projection, exact-ID navigation and keyboard focus restoration, 2026-10-13T20:52:24.400811+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Close the child jobs individually: T-IV. This grouping does not create another implementation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:52:24.400811+00:00",
+        "completion_timestamp_basis": "Current original grouping job and actual browser/resolver acceptance; no historical detector completion inferred.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/scope-grouping-plan.md",
+          "docs/scope-grouping-result.md",
+          "docs/scope-groups.json",
+          "protocol/scope_groups.py",
+          "scripts/verify-scope-groups.py",
+          "tests/test_scope_groups.py",
+          "site/src/workflows/Scope.jsx",
+          "scripts/verify-workflows.cjs",
+          "runs/2026-10-13-legacy-group-mapping.json",
+          "runs/2026-10-13-scope-group-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Legacy grouping for T-IV. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
-        ],
-        "queue": "open",
+        "evidence_scope": "Full named legacy-grouping job; 20 mapping controls and actual 8-workflow Chromium checks including all five keyboard child navigation/focus cases, 320px/200% reflow and zero axe violations. No child percentage, detector accuracy, tag release, physical phone or human accessibility inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
         "children": [
           "T-IV"
-        ]
+        ],
+        "historical_required_acceptance": [
+          "Deliver Legacy grouping for T-IV. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
+        ],
+        "acceptance_alignment": "Preserved baseline explicitly names the legacy grouping. Functional exact links and child status complete this job; child detectors/tags retain independent acceptance."
+      },
+      "legacy_group": {
+        "id": "F-022",
+        "kind": "legacy_grouping",
+        "members": [
+          {
+            "id": "T-IV",
+            "title": "IV Independently Verified",
+            "percent_complete": 20,
+            "queue": "open",
+            "next_fix": "Deliver IV Independently Verified. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The reader knows who reviewed what, against which evidence and when, including withdrawal or correction."
+          }
+        ],
+        "independent_detector": false,
+        "parent_completion_completes_members": false,
+        "grouping_is_tag_release": false
       }
     },
     {
@@ -11766,34 +11998,84 @@
         "id": "F-029",
         "kind": "requirement",
         "title": "Legacy grouping for F-029a, F-029b, F-029c",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T20:52:24.400811+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded legacy mapping, verified immutable projection, exact-ID navigation and keyboard focus restoration, 2026-10-13T20:52:24.400811+00:00"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Close the child jobs individually: F-029a, F-029b, F-029c. This grouping does not create another implementation.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T20:52:24.400811+00:00",
+        "completion_timestamp_basis": "Current original grouping job and actual browser/resolver acceptance; no historical detector completion inferred.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/scope-grouping-plan.md",
+          "docs/scope-grouping-result.md",
+          "docs/scope-groups.json",
+          "protocol/scope_groups.py",
+          "scripts/verify-scope-groups.py",
+          "tests/test_scope_groups.py",
+          "site/src/workflows/Scope.jsx",
+          "scripts/verify-workflows.cjs",
+          "runs/2026-10-13-legacy-group-mapping.json",
+          "runs/2026-10-13-scope-group-browser.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
-          "Deliver Legacy grouping for F-029a, F-029b, F-029c. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
-        ],
-        "queue": "open",
+        "evidence_scope": "Full named legacy-grouping job; 20 mapping controls and actual 8-workflow Chromium checks including all five keyboard child navigation/focus cases, 320px/200% reflow and zero axe violations. No child percentage, detector accuracy, tag release, physical phone or human accessibility inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
         "children": [
           "F-029a",
           "F-029b",
           "F-029c"
-        ]
+        ],
+        "historical_required_acceptance": [
+          "Deliver Legacy grouping for F-029a, F-029b, F-029c. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The named capability has observable behavior and is tracked independently of implementation status."
+        ],
+        "acceptance_alignment": "Preserved baseline explicitly names the legacy grouping. Functional exact links and child status complete this job; child detectors/tags retain independent acceptance."
+      },
+      "legacy_group": {
+        "id": "F-029",
+        "kind": "legacy_grouping",
+        "members": [
+          {
+            "id": "F-029a",
+            "title": "sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session",
+            "percent_complete": 20,
+            "queue": "open",
+            "next_fix": "Deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
+          },
+          {
+            "id": "F-029b",
+            "title": "sig.attention_shape.v1 — read-pause-write rhythm from focus and visibility events",
+            "percent_complete": 100,
+            "queue": "completed",
+            "next_fix": null
+          },
+          {
+            "id": "F-029c",
+            "title": "sig.paste_burst.v1 — large insertion with no preceding keystrokes",
+            "percent_complete": 100,
+            "queue": "completed",
+            "next_fix": null
+          }
+        ],
+        "independent_detector": false,
+        "parent_completion_completes_members": false,
+        "grouping_is_tag_release": false
       }
     },
     {
@@ -12693,7 +12975,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-12T15:43:30.541365+00:00",
+        "audited_at": "2026-10-13T20:41:17.693562+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -12701,7 +12983,8 @@
           "Codex — source-bound synthetic invitation/quota component",
           "Codex — synthetic private request admission and withdrawal, 177 local tests and 62 actual PostgreSQL control groups, 2026-10-12T11:41:37.279669+00:00",
           "Codex — synthetic offline feedback distributions and private practice workflow; 64 Linux tests and 11 actual CLI control groups, 2026-10-12T14:08:57.449037+00:00",
-          "Codex — seven actual encrypted synthetic backup controls and seven unsafe-execution refusals; production and replacement-host recovery remain separate, 2026-10-12T15:14:52.561826+00:00"
+          "Codex — seven actual encrypted synthetic backup controls and seven unsafe-execution refusals; production and replacement-host recovery remain separate, 2026-10-12T15:14:52.561826+00:00",
+          "Codex — accepted pilot contract recording and disabled-policy drift/refusal gate, 2026-10-13T20:41:17.693562+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -12709,7 +12992,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Accept the collection/purpose/roles/retention/withdrawal contract and endpoint; connect the tested private synthetic request/invitation mechanism to genuine authentication and reviewed provider/proxy handling; prove encrypted backup expiry and replacement-host recovery, then run a consenting pilot. Training and anomaly analysis are separate jobs; no real intake or participant acceptance is credited.",
+        "next_fix": "Deploy and review the approved invited metadata-only route with effective least-privilege authorization, proxy/provider handling and owner operations; prove actual encrypted 7-day backup expiry and replacement-host recovery before enabling any real collection. Run a consenting pilot. Example sharing, model training and anomaly purposes remain separately unapproved.",
         "next_owner": "Michael data policy; Codex application",
         "evidence": [
           "docs/data-growth-plan.md",
@@ -12770,11 +13053,14 @@
           "runs/2026-10-12-backup-cancellation-linux.json",
           "runs/2026-10-12-backup-cancellation-encrypted.json",
           "runs/2026-10-12-backup-cancellation-refusals.json",
-          "runs/2026-10-12-backup-cancellation-review-finding.json"
+          "runs/2026-10-12-backup-cancellation-review-finding.json",
+          "docs/metadata-pilot-contract.md",
+          "runs/2026-10-13-metadata-pilot-owner-decision.json",
+          "deploy/research/metadata-pilot-policy.json"
         ],
         "evidence_scope": "Includes current disposable encrypted Linux retention controls, source binding and cleanup; logical deletion and named expiry are not physical erasure, production retention acceptance or replacement-host recovery.",
         "required_acceptance": [
-          "Accept the proposed collection/purpose/roles/retention/withdrawal contract and endpoint; implement invitation quotas and reviewed proxy/provider handling; prove encrypted backup expiry and replacement-host recovery; then run a consenting pilot. Training, example sharing and anomaly analysis remain separate jobs. Synthetic storage controls are implemented, not a deployed intake."
+          "Deploy and review the approved invited metadata-only route with effective least-privilege authorization, proxy/provider handling and owner operations; prove actual encrypted 7-day backup expiry and replacement-host recovery before enabling any real collection. Run a consenting pilot. Example sharing, model training and anomaly purposes remain separately unapproved."
         ],
         "queue": "open"
       }

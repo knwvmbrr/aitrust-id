@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-13T20:32:01.750817+00:00",
+  "owner": "Michael",
+  "requirement": "F-003",
+  "approval_source": "Owner reply to request_user_input_async call_d1ce4774505b490c954f61a15126c7c7, question 0",
+  "question": "Older assertions that lack preprocessing identity or private original input cannot be reconstructed. May the registry\u2019s completion contract explicitly require repeatable checks for complete supported records and an honest Unavailable result for incomplete history, with old records preserved unchanged? This retires the unsupported promise that signal IDs alone reproduce every historical assertion.",
+  "answer": "Yes \u2014 adopt that reproducibility contract",
+  "accepted_contract": "Complete supported records replay against matching method, preprocessing and private original input; incomplete history is preserved unchanged and returns Unavailable. Signal IDs alone do not reconstruct assertions.",
+  "timestamp_basis": "Current receipt recording time; original reply timestamp not supplied.",
+  "independent_accuracy_accepted": false,
+  "taxonomy_changed": false,
+  "collection_enabled": false
+}

@@ -1,0 +1,161 @@
+{
+  "captured_at": "2026-10-13T20:34:31.361856+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "name": "unconflicted_approval",
+      "pass": true,
+      "exit_code": 0,
+      "input_bytes_unchanged": true,
+      "output_sha256": "e4156246ae0c530b51c52ac0ddda058fca8b9195c60d2e5a6ea30f9d0ac404a6"
+    },
+    {
+      "name": "unconflicted_rejection",
+      "pass": true,
+      "exit_code": 0,
+      "input_bytes_unchanged": true,
+      "output_sha256": "ba4856242754537e31495b249d054298482e08663158dba28be9c5cd4af8336d"
+    },
+    {
+      "name": "explicit_conflicted_recusal",
+      "pass": true,
+      "exit_code": 0,
+      "input_bytes_unchanged": true,
+      "output_sha256": "bc656a473a1ef53a650489b68a5943374e86555cfa1c09da5c1173cce12cf429"
+    },
+    {
+      "name": "conflicted_approval_refused",
+      "pass": true,
+      "exit_code": 1,
+      "input_bytes_unchanged": true,
+      "output_sha256": "10bf3891661669c1dd15bb3b75c9b297326a15384c826c28ccc4765a139dc2d9"
+    },
+    {
+      "name": "conflicted_abstention_refused",
+      "pass": true,
+      "exit_code": 1,
+      "input_bytes_unchanged": true,
+      "output_sha256": "912a1581440a08ee1e75ff6c6234672a2612151dc3500b76eb456ab9a8a15ca3"
+    },
+    {
+      "name": "unrelated_interest",
+      "pass": true,
+      "exit_code": 0,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4384c2defced5ba7b64795868274b8756226840ef2ce3334a74ee5585782bdd5"
+    },
+    {
+      "name": "withheld_disclosure_refused",
+      "pass": true,
+      "exit_code": 1,
+      "input_bytes_unchanged": true,
+      "output_sha256": "2de55aba30fae29922a01e7b60f72df68300c80e9d8856a73f01e846cb87f4fe"
+    },
+    {
+      "name": "unfilled_role_refused",
+      "pass": true,
+      "exit_code": 1,
+      "input_bytes_unchanged": true,
+      "output_sha256": "70d8f60befa7321b42ff66fc5f4ff13c93e899c61408638fb8252c6d7004d143"
+    },
+    {
+      "name": "observer_refused",
+      "pass": true,
+      "exit_code": 1,
+      "input_bytes_unchanged": true,
+      "output_sha256": "86248de5c2acada69f932864027bdb1f6d4ee931a51e834d760340a5748c26a5"
+    },
+    {
+      "name": "voluntary_recusal_without_disclosure",
+      "pass": true,
+      "exit_code": 0,
+      "input_bytes_unchanged": true,
+      "output_sha256": "e3bf32eb3c8e61b8057f862d6ba747f047aa10e078dc422db815901fff09bac6"
+    },
+    {
+      "name": "tampered_signed_choice_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "decision_pin_tampering_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "roster_pin_tampering_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "duplicate_member_ballot_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "private_text_field_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "oversize_ballots_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "duplicate_json_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "linked_ballots_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    },
+    {
+      "name": "fifo_ballots_refused",
+      "pass": true,
+      "exit_code": 2,
+      "input_bytes_unchanged": true,
+      "output_sha256": "4edb888a408945e63f0b3d2ecfc82b0c8dc6255669dd7dc274fee2aaaae9663f"
+    }
+  ],
+  "sources": {
+    "tools/conformance_recusal.py": "af0b047e8d4d708c5232bc4abfd1b92973e5b0e4a12d326056871144ce82df43",
+    "scripts/check-conformance-votes.py": "849a3eac7004151a7adf30aa92e2a1609eb77f036b6c67b0dbf241b00bd2eb96",
+    "scripts/verify-conformance-votes.py": "7bb4d305d54d810cd15249dfd67169f31ed8d49f97275550578a80c10a391c87",
+    "tests/test_conformance_recusal.py": "ab206c391a181966b13054a4ade266714014d3d1031e77b80b57cd3221310fd7",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "GOVERNANCE.md": "865b1d8e2d15e9ee156da0ec01cbe2c5943dd30afdcfdc46586b78b88ac604d7"
+  },
+  "platform": "darwin",
+  "python": "3.12.14",
+  "synthetic_keys_and_roles_only": true,
+  "actual_cli_executed": true,
+  "source_unchanged_during_execution": true,
+  "private_directory_removed": true,
+  "real_role_assignments": false,
+  "operating_institution": false,
+  "certification_granted": false,
+  "independent_people_verified": false,
+  "independent_accuracy_evidence": false
+}

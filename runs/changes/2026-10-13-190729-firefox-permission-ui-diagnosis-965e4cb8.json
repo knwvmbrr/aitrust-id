@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-190729-firefox-permission-ui-diagnosis-965e4cb8",
+  "recorded_at": "2026-10-13T19:07:29.742179+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Check an actually open Firefox permission panel and retain bounded UI/driver stage diagnostics rather than guessing why capture is paused.",
+  "proves": "Thirty protocol/package controls pass; diagnostics include no credential or response text.",
+  "limits": "Full Firefox integration remains pending; no scope requirement is marked complete.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "e4edd9ae314861e40b8bc3e458664b9e6a336db91187e7a74fe6b376e9b98c59"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:07:30.360752+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "992a5977fa20e4bd21920bf859192d79b207fdd52c4e397792cdff380b92537e",
+    "original_preserved_privately": true
+  }
+}

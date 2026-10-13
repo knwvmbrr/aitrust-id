@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-193459-firefox-service-failure-evidence-280c2dc5",
+  "recorded_at": "2026-10-13T19:34:59.690902+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "01772f529a04c98e18f7cd7018c4e2f185bfe241",
+  "changed": "Keep actual-service diagnostics private and retain explicit cleanup failures rather than allowing a termination exception to erase the failing stage.",
+  "proves": "Thirty-six package/framing/source-binding controls pass; failed service cleanup cannot yield a pass.",
+  "limits": "Actual three-service browser integration has not passed; no full requirement closure or changed security boundary is claimed.",
+  "scope_ids": [
+    "F-156"
+  ],
+  "files": {
+    "scripts/verify-firefox-extension.py": "8333b118b35b43ea57434703c6d2337f732fff0575a455dc4b1c9557b4907bd8"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T19:35:00.322085+00:00",
+      "local_executable_location_redacted": true
+    }
+  ],
+  "draft_privacy_redaction": {
+    "before_first_publication": true,
+    "field": "checks.argv[0]",
+    "reason": "Private local executable location replaced by an explicit interpreter template; executed arguments, results and timestamps unchanged.",
+    "original_record_sha256": "4801bdf8a5ce8491a76754e4c97456e8930fc58d9a91877ed7bcfec3d8d7be7a",
+    "original_preserved_privately": true
+  }
+}

@@ -2,6 +2,321 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-214046-eight-job-final-regression-a266f1cb
+
+Recorded 2026-10-13T21:40:46.842549+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the final full regression and exact eight completed named jobs, retaining 79 open requirements toward target 43.
+- **Evidence.** 3249 tests pass, five platform cases skip and one upstream warning remains; reviewed source is unchanged during execution. All five capability receipts and current website phases pass. [Change record](./runs/changes/2026-10-13-214046-eight-job-final-regression-a266f1cb.json).
+- **Not claimed.** Protected review/publication pending. No independent accuracy, real phone, operating foundation, enabled collection or completed 43-open target claimed.
+
+
+### 2026-10-13-213654-final-scope-component-review-0fe32bb3
+
+Recorded 2026-10-13T21:36:54.081670+00:00 · Contributor: Codex · change
+
+- **Changed.** Review the final source inventory and expanded input-bound capability checks after safe receipt sequencing.
+- **Evidence.** All five capabilities pass against current consumed inputs; eight website phases, signed browser controls and 15 actual replay cases remain current. [Change record](./runs/changes/2026-10-13-213654-final-scope-component-review-0fe32bb3.json).
+- **Not claimed.** Full final suite, protected CI and live publication remain pending. No independent accuracy, real phone, operating institution or research collection enabled.
+
+
+### 2026-10-13-213107-safe-renewed-component-evidence-56a12e23
+
+Recorded 2026-10-13T21:31:07.275915+00:00 · Contributor: Codex · change
+
+- **Changed.** Record renewed component checks and privacy-redact uncommitted draft interpreter locations while preserving raw originals privately.
+- **Evidence.** Protocol and extension checks pass; no committed history, executed arguments, result or timestamp was changed. Website prebuild refused unrecorded concurrent receipts. [Change record](./runs/changes/2026-10-13-213107-safe-renewed-component-evidence-56a12e23.json).
+- **Not claimed.** Website must be rerun after these receipt events. Redacted interpreter fields are explicit templates, not literal host paths. No independent accuracy or release approval.
+
+
+### 2026-10-13-212607-renewed-detection-input-checks-294abe87
+
+Recorded 2026-10-13T21:26:07.314658+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew PS and PII evidence after the complete component-input manifest update.
+- **Evidence.** Both source-bound current capability checks pass without detector or redactor changes. [Change record](./runs/changes/2026-10-13-212607-renewed-detection-input-checks-294abe87.json).
+- **Not claimed.** Protocol/extension/website renewal and protected publication are still in progress; independent tag gates remain unchanged.
+
+
+### 2026-10-13-212508-bind-input-regression-controls-2acf387b
+
+Recorded 2026-10-13T21:25:08.069824+00:00 · Contributor: Codex · change
+
+- **Changed.** Include the new input-drift regression controls in the reviewed route inventory.
+- **Evidence.** Nine component input-binding controls pass; changed consumed contracts and license assets require renewed evidence. [Change record](./runs/changes/2026-10-13-212508-bind-input-regression-controls-2acf387b.json).
+- **Not claimed.** Review inventory and refreshed capability receipts must be renewed before publication; no release gate changed.
+
+
+### 2026-10-13-212332-complete-component-input-binding-a48ea3a5
+
+Recorded 2026-10-13T21:23:32.617584+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind consumed scope, governance and archive-license inputs to their component checks; preserve the existing UTF-8 ledger formatting.
+- **Evidence.** The reviewed full suite passed 3240 tests with stable sources; nine additional input-binding controls refuse changed consumed contracts/assets. [Change record](./runs/changes/2026-10-13-212332-complete-component-input-binding-a48ea3a5.json).
+- **Not claimed.** The expanded fingerprint manifest requires renewed capability receipts before publication. No scope gate, tag method, endpoint, Chrome permission or release requirement changed.
+
+
+### 2026-10-13-211322-reviewed-replay-and-website-boundaries-e4d730cb
+
+Recorded 2026-10-13T21:13:22.660669+00:00 · Contributor: Codex · change
+
+- **Changed.** Review exact current source and all five capability receipts, bind all 15 actual replay cases and refuse invented historical reconstruction.
+- **Evidence.** Five stable capability executions, all eight current-build website phases and 36 route refusal cases pass. Existing personal endpoints/Chrome permissions/device source remain unchanged. [Change record](./runs/changes/2026-10-13-211322-reviewed-replay-and-website-boundaries-e4d730cb.json).
+- **Not claimed.** Protected CI, full final suite and publication pending; no independent tag release, real phone, new collection or operating institution.
+
+
+### 2026-10-13-210316-exact-id-mobile-contract-c24bd0c3
+
+Recorded 2026-10-13T21:03:16.604280+00:00 · Contributor: Codex · change
+
+- **Changed.** Align the mobile exact-record search check with the implemented exact-ID navigation; retain its timed-out old substring expectation.
+- **Evidence.** The seven-phase run identified the mobile-payload phase; earlier browser checks already verified exact child lookup and focus. Payload budgets and corruption/timeout recovery checks remain intact. [Change record](./runs/changes/2026-10-13-210316-exact-id-mobile-contract-c24bd0c3.json).
+- **Not claimed.** The full website check must pass after correction; no physical phone, human review or release validation is implied.
+
+
+### 2026-10-13-205839-refreshed-component-checks-ab1b4ba8
+
+Recorded 2026-10-13T20:58:39.769665+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current source-bound PS, PII, protocol and extension checks, current scope projections and cleanup of owned Linux browser fixtures.
+- **Evidence.** All four capability executions pass with stable sources. Three original staging containers remain unchanged and healthy; only owned fixture resources were removed. [Change record](./runs/changes/2026-10-13-205839-refreshed-component-checks-ab1b4ba8.json).
+- **Not claimed.** Website revalidation, full reviewed suite, protected CI and publication are pending; no independent accuracy or physical phone claim.
+
+
+### 2026-10-13-205604-reviewed-new-component-inputs-f44006d2
+
+Recorded 2026-10-13T20:56:04.311653+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind new offline components and Firefox tests into route review; record stale-boundary regression refusals and generated public projections.
+- **Evidence.** The first full run passed 3228 tests and refused nine stale boundary checks before new review; no actual endpoint, Chrome permission or device source changed. [Change record](./runs/changes/2026-10-13-205604-reviewed-new-component-inputs-f44006d2.json).
+- **Not claimed.** Full-suite pass and publication are pending refreshed capability receipts and reviewed inventory. No bypass or independent tag release.
+
+
+### 2026-10-13-205224-legacy-grouping-acceptance-90ee113e
+
+Recorded 2026-10-13T20:52:24.636496+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete five original legacy-grouping jobs after actual build/browser navigation and mapping checks; preserve every child status and all 202 records.
+- **Evidence.** Exact five-parent mapping, child keyboard navigation/focus restoration, eight independent workflows, 320px/200% reflow and zero automated accessibility violations. [Change record](./runs/changes/2026-10-13-205224-legacy-grouping-acceptance-90ee113e.json).
+- **Not claimed.** 79 requirements still open, target 43 unmet. Grouping completion is not detector/tag validation; physical phones, independent labels and human reviews remain open.
+
+
+### 2026-10-13-204830-bound-permission-runner-b64c6bbf
+
+Recorded 2026-10-13T20:48:30.182391+00:00 · Contributor: Codex · change
+
+- **Changed.** Use a repository-script permission runner compatible with the strict revalidation manifest, and record legacy navigation fields.
+- **Evidence.** All ten Firefox consent/race/revocation cases pass through the bound Node runner. [Change record](./runs/changes/2026-10-13-204830-bound-permission-runner-b64c6bbf.json).
+- **Not claimed.** Linux fixture preview only; no live vendor, store signing, physical phone or independent accuracy. Group browser checks are pending.
+
+
+### 2026-10-13-204659-legacy-scope-navigation-dd7a5db6
+
+Recorded 2026-10-13T20:46:59.456065+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement five preserved legacy grouping links with exact child navigation, focus restoration and unchanged constituent status.
+- **Evidence.** 20 positive/negative mapping controls pass; all 202 records retained. Grouping never issues a detector, releases a tag or completes children. [Change record](./runs/changes/2026-10-13-204659-legacy-scope-navigation-dd7a5db6.json).
+- **Not claimed.** Five grouping jobs remain open until current build/browser integration passes. Actual signal/tag accuracy, owner roles and human route gates remain independent.
+
+
+### 2026-10-13-204117-approved-storage-definition-b14e45db
+
+Recorded 2026-10-13T20:41:17.912239+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the preserved approved-fields/access/retention/deletion definition before storage; keep collection disabled and bind new controls into revalidation.
+- **Evidence.** F-044 original definition is functioning under exact owner approval: closed fields and retention, policy-drift/unsafe-activation refusal, 35 policy controls and 80 fixed-choice combinations. [Change record](./runs/changes/2026-10-13-204117-approved-storage-definition-b14e45db.json).
+- **Not claimed.** No deployed registry/intake, real participant, backup erasure, model training or independent labels. F-045/F-141/N-011/F-161 remain open. Full refreshed regression and publication are pending.
+
+
+### 2026-10-13-203616-conformance-recusal-rule-f5d55ba8
+
+Recorded 2026-10-13T20:36:16.116295+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver offline signed-ballot conflict-of-interest rule with separately pinned role and decision inputs, CI controls and guide.
+- **Evidence.** F-147 original rule is functioning: 49 focused tests and 19 actual CLI controls on both Mac and Linux, including conflicted abstention, scope and signature tampering. [Change record](./runs/changes/2026-10-13-203616-conformance-recusal-rule-f5d55ba8.json).
+- **Not claimed.** No real role assignments, independent people, disclosure truth, operating board, RFC adoption or certification. F-076 and institutional requirements remain open.
+
+
+### 2026-10-13-203356-accepted-reproducibility-contract-ccd18e7d
+
+Recorded 2026-10-13T20:33:56.482528+00:00 · Contributor: Codex · change
+
+- **Changed.** Adopt owner-approved supported-record replay and metadata pilot contract; inspect history before private files and preserve unavailable records.
+- **Evidence.** F-003 completes the approved job: 15 current Linux service/CLI cases and 87 focused controls. Exact owner replies are recorded without invented historical timestamps. [Change record](./runs/changes/2026-10-13-203356-accepted-reproducibility-contract-ccd18e7d.json).
+- **Not claimed.** No universal historical reconstruction, independent accuracy, outside-user acceptance, new tag, operating institution or enabled research collection.
+
+
+### 2026-10-13-200021-firefox-scope-and-real-service-evidence-ce32148b
+
+Recorded 2026-10-13T20:00:21.771863+00:00 · Contributor: Codex · change
+
+- **Changed.** Record F-156 at 80% with actual Firefox/real-service evidence, implementation credit, timestamp and remaining full acceptance; preserve all 202 scope records and the 87-open target arithmetic.
+- **Evidence.** Current actual sources match the fifteen passing application/browser controls; no incomplete requirement is promoted to 100%. [Change record](./runs/changes/2026-10-13-200021-firefox-scope-and-real-service-evidence-ce32148b.json).
+- **Not claimed.** Live vendor, outside-user/stable distribution, actual phones, screen readers and independent tag accuracy remain open. No production deployment is claimed.
+
+
+### 2026-10-13-195612-firefox-archive-source-license-4f9542e7
+
+Recorded 2026-10-13T19:56:12.055241+00:00 · Contributor: Codex · change
+
+- **Changed.** Include the actual Apache project license in the standalone Firefox archive, bind its bytes and refuse an unreviewed replacement license.
+- **Evidence.** Thirty-seven package/framing/service-binding controls pass; generated archives carry their source license. [Change record](./runs/changes/2026-10-13-195612-firefox-archive-source-license-4f9542e7.json).
+- **Not claimed.** This does not clear broader native/model/font dependency obligations, sign a store release or independently validate a tag.
+
+
+### 2026-10-13-193844-firefox-private-service-shutdown-0e0df4cb
+
+Recorded 2026-10-13T19:38:44.706498+00:00 · Contributor: Codex · change
+
+- **Changed.** Use private inherited shutdown pipes for owned test services, preserving capability drops and avoiding a new administrative endpoint or relaxed peer-signal policy.
+- **Evidence.** Thirty-six source-binding/framing/package controls pass; application sources and signed response checks remain unchanged. [Change record](./runs/changes/2026-10-13-193844-firefox-private-service-shutdown-0e0df4cb.json).
+- **Not claimed.** Full actual-service execution including shutdown remains pending; the preceding passing assertions plus failed cleanup are retained as a failed run.
+
+
+### 2026-10-13-193459-firefox-service-failure-evidence-280c2dc5
+
+Recorded 2026-10-13T19:34:59.690902+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep actual-service diagnostics private and retain explicit cleanup failures rather than allowing a termination exception to erase the failing stage.
+- **Evidence.** Thirty-six package/framing/source-binding controls pass; failed service cleanup cannot yield a pass. [Change record](./runs/changes/2026-10-13-193459-firefox-service-failure-evidence-280c2dc5.json).
+- **Not claimed.** Actual three-service browser integration has not passed; no full requirement closure or changed security boundary is claimed.
+
+
+### 2026-10-13-192745-firefox-complete-service-source-binding-d7f57f5a
+
+Recorded 2026-10-13T19:27:45.610596+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind every selected real-service helper and protocol source before launch, rejecting changed or linked files as well as application drift.
+- **Evidence.** Thirty-six executable package/framing/service-binding controls pass; all sixteen distinct source paths are checked. [Change record](./runs/changes/2026-10-13-192745-firefox-complete-service-source-binding-d7f57f5a.json).
+- **Not claimed.** Copied image dependencies are observed build inputs, not legal clearance or independent accuracy; the actual-service run remains pending.
+
+
+### 2026-10-13-192336-firefox-full-service-test-route-7454eb49
+
+Recorded 2026-10-13T19:23:36.012052+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a source-verified three-service Firefox integration mode using isolated import roots, private test credentials and unchanged signed request/response bytes.
+- **Evidence.** Thirty focused framing/package controls pass and driver syntax compiles; full actual-service execution is the next gate. [Change record](./runs/changes/2026-10-13-192336-firefox-full-service-test-route-7454eb49.json).
+- **Not claimed.** No actual-service pass, live vendor compatibility, release or requirement closure is inferred before execution.
+
+
+### 2026-10-13-191724-firefox-browser-evidence-and-guide-7b851000
+
+Recorded 2026-10-13T19:17:24.908708+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain exact source-bound actual Linux Firefox integration evidence, preceding failures and a usable temporary-install guide.
+- **Evidence.** The current source matches all fourteen passing actual Firefox controls; supported test scope and port-level permission limits are explicit. [Change record](./runs/changes/2026-10-13-191724-firefox-browser-evidence-and-guide-7b851000.json).
+- **Not claimed.** F-156 is not fully accepted. No Mac/live vendor/store/phone/human/independent accuracy acceptance or complete requirement is inferred.
+
+
+### 2026-10-13-191510-firefox-owned-session-shutdown-fec34e4b
+
+Recorded 2026-10-13T19:15:10.992348+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep the owned Firefox session available until IPC shutdown, so a successful run cannot lose its cleanup channel before the browser exits.
+- **Evidence.** Thirty focused controls pass; fourteen actual Linux browser assertions passed in the preceding run, whose cleanup failure remains retained. [Change record](./runs/changes/2026-10-13-191510-firefox-owned-session-shutdown-fec34e4b.json).
+- **Not claimed.** The complete actual run must pass shutdown as well; no partial pass becomes a closed requirement.
+
+
+### 2026-10-13-191213-firefox-authentication-and-removal-f9e4188b
+
+Recorded 2026-10-13T19:12:13.071748+00:00 · Contributor: Codex · change
+
+- **Changed.** Exercise real Firefox refusal of unsigned and altered gateway bytes, and uninstall from a vendor tab so removing the options page cannot invalidate the test window.
+- **Evidence.** Thirty package/protocol checks pass; the prior actual native capture pass is retained while uninstall/negative cases are rerun. [Change record](./runs/changes/2026-10-13-191213-firefox-authentication-and-removal-f9e4188b.json).
+- **Not claimed.** Browser fixtures remain synthetic; current live vendor, store distribution, independent tag accuracy and full scope completion are not inferred.
+
+
+### 2026-10-13-191008-firefox-port-pattern-correction-5ded574b
+
+Recorded 2026-10-13T19:10:08.683472+00:00 · Contributor: Codex · change
+
+- **Changed.** Use Firefox-supported portless loopback permission while retaining the fixed 8787 request destination and independent application consent; document the broader browser-level port grant accurately.
+- **Evidence.** Thirty package/driver controls and ten permission lifecycle cases remain executable; the unsupported port pattern is removed only from the Firefox variant. [Change record](./runs/changes/2026-10-13-191008-firefox-port-pattern-correction-5ded574b.json).
+- **Not claimed.** Browser permission is not a network destination guarantee by itself. Live vendor, stable store distribution and independent validation remain pending.
+
+
+### 2026-10-13-190729-firefox-permission-ui-diagnosis-965e4cb8
+
+Recorded 2026-10-13T19:07:29.742179+00:00 · Contributor: Codex · change
+
+- **Changed.** Check an actually open Firefox permission panel and retain bounded UI/driver stage diagnostics rather than guessing why capture is paused.
+- **Evidence.** Thirty protocol/package controls pass; diagnostics include no credential or response text. [Change record](./runs/changes/2026-10-13-190729-firefox-permission-ui-diagnosis-965e4cb8.json).
+- **Not claimed.** Full Firefox integration remains pending; no scope requirement is marked complete.
+
+
+### 2026-10-13-190622-firefox-permission-race-controls-af8a81c5
+
+Recorded 2026-10-13T19:06:22.284038+00:00 · Contributor: Codex · change
+
+- **Changed.** Cancel stale Firefox permission grants after reset, token/key changes or revocation, and pause on canonicalized origin removal.
+- **Evidence.** Ten executable permission-lifecycle controls pass, including delayed grant cancellation; browser origins and Chrome behavior are preserved. [Change record](./runs/changes/2026-10-13-190622-firefox-permission-race-controls-af8a81c5.json).
+- **Not claimed.** These synthetic controls do not independently validate a tag or prove live Firefox compatibility.
+
+
+### 2026-10-13-190426-firefox-explicit-origin-permission-15d91b51
+
+Recorded 2026-10-13T19:04:26.483320+00:00 · Contributor: Codex · change
+
+- **Changed.** Separate Firefox browser-origin permission from application consent, requesting only ChatGPT and the existing loopback service through an explicit enable click; permission removal pauses checks.
+- **Evidence.** Thirty package/protocol checks pass; Chrome manifest and scripts remain byte-identical. [Change record](./runs/changes/2026-10-13-190426-firefox-explicit-origin-permission-15d91b51.json).
+- **Not claimed.** Firefox fixture capture and permission-prompt execution remain unverified until the next actual run; no release or requirement closure is claimed.
+
+
+### 2026-10-13-190151-firefox-permission-diagnosis-8ec7ba98
+
+Recorded 2026-10-13T19:01:51.457305+00:00 · Contributor: Codex · change
+
+- **Changed.** Inspect the selected Firefox vendor/loopback permission state and require a real assistant fixture; request shutdown through the owned browser driver before OS termination.
+- **Evidence.** Thirty focused controls pass without granting origins, disabling TLS or altering Chrome. [Change record](./runs/changes/2026-10-13-190151-firefox-permission-diagnosis-8ec7ba98.json).
+- **Not claimed.** Firefox capture remains unverified pending the actual isolated run.
+
+
+### 2026-10-13-185952-firefox-staging-diagnostic-repair-45e57876
+
+Recorded 2026-10-13T18:59:52.176284+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain bounded private browser diagnostics and refuse an unconfirmed Firefox process cleanup without losing the failure receipt.
+- **Evidence.** Thirty focused package/protocol controls pass; staging cleanup failure stays a failure. [Change record](./runs/changes/2026-10-13-185952-firefox-staging-diagnostic-repair-45e57876.json).
+- **Not claimed.** No browser pass, scope closure, live compatibility or weakened sandbox is claimed.
+
+
+### 2026-10-13-185845-firefox-driver-protocol-controls-9481ae82
+
+Recorded 2026-10-13T18:58:45.917730+00:00 · Contributor: Codex · change
+
+- **Changed.** Exercise bounded Marionette framing and exact response identity without Firefox or a network connection.
+- **Evidence.** Eighteen package controls and twelve local driver controls pass. [Change record](./runs/changes/2026-10-13-185845-firefox-driver-protocol-controls-9481ae82.json).
+- **Not claimed.** Protocol unit checks do not prove actual browser installation or live compatibility.
+
+
+### 2026-10-13-185646-firefox-driver-native-controls-3e1eb85f
+
+Recorded 2026-10-13T18:56:46.430492+00:00 · Contributor: Codex · change
+
+- **Changed.** Use Firefox WebDriver shadow-root and accessible-label operations to inspect the existing closed tag UI; align fixture settings actions with actual form controls.
+- **Evidence.** Driver syntax and deterministic package controls pass. [Change record](./runs/changes/2026-10-13-185646-firefox-driver-native-controls-3e1eb85f.json).
+- **Not claimed.** Actual Firefox execution remains pending; no closed requirement is claimed.
+
+
+### 2026-10-13-185551-firefox-integration-driver-2482e799
+
+Recorded 2026-10-13T18:55:51.032993+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an owned-profile Firefox integration driver with locally trusted fixture TLS, synthetic authenticated loopback responses, explicit consent/reset and temporary uninstall checks.
+- **Evidence.** Driver syntax passes; actual browser execution is pending. [Change record](./runs/changes/2026-10-13-185551-firefox-integration-driver-2482e799.json).
+- **Not claimed.** This test fixture is not live vendor compatibility, a physical device, store signing or a completed scope requirement.
+
+
+### 2026-10-13-185022-firefox-preview-package-170bfd35
+
+Recorded 2026-10-13T18:50:22.184246+00:00 · Contributor: Codex · change
+
+- **Changed.** Build a deterministic Firefox temporary preview from unchanged Chrome sources with strict permission, import, path and output protections.
+- **Evidence.** Focused executable package reproducibility and refusal controls pass. [Change record](./runs/changes/2026-10-13-185022-firefox-preview-package-170bfd35.json).
+- **Not claimed.** No Firefox store signing, live vendor verification, human acceptance, independent accuracy or full requirement closure is claimed.
+
+
 ### 2026-10-13-175934-ps-latest-publication-summary-29a3ae51
 
 Recorded 2026-10-13T17:59:34.047565+00:00 · Contributor: Codex · change

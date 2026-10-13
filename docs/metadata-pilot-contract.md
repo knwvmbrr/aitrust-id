@@ -1,8 +1,10 @@
-# Metadata pilot — proposed operating contract
+# Metadata pilot — owner-approved operating contract
 
 Prepared by Codex on 2026-10-11 for F-044, F-045, F-141 and N-011.
-The owner approved metadata-only feedback. **This additional contract is not
-accepted or deployed.** It closes no full requirement and authorizes no intake.
+Michael approved this additional contract on the recorded owner reply: see
+[runs/2026-10-13-metadata-pilot-owner-decision.json](../runs/2026-10-13-metadata-pilot-owner-decision.json).
+**Collection is not deployed or enabled.** Approval authorizes engineering of the
+listed route; real intake requires the security, withdrawal and recovery gates.
 
 ## What a participant would do
 
@@ -22,12 +24,12 @@ Unknown fields and free text are refused. No answer, prompt, example, hash,
 span, device identity, client timestamp or claimed independent label is accepted.
 Method-version matching must be checked against a published supported list.
 
-## Proposed storage and access
+## Accepted storage and access
 
 Use the dedicated AI Trust ID Linux/PostgreSQL environment, separate from THT.
-The proposed new HTTPS intake is
-`https://research.aitrustid.com/v1/feedback`; it must not be implemented or added
-to an active route until the owner approves that endpoint and this contract.
+The approved HTTPS intake is
+`https://research.aitrustid.com/v1/feedback`; implementation is authorized, but it must not accept real submissions before
+the security, withdrawal, recovery and privacy gates below pass.
 Database credentials stay server-side. PostgreSQL remains private; separate
 migration, runtime, expiration and read-only review roles receive only the
 permissions they need. Administration is private and key authenticated.
@@ -40,14 +42,14 @@ withdrawal capability once, and store its digest. Neither capability is an
 identity or independent accuracy label. A lost withdrawal capability cannot be
 recovered by asking the person for content or a new identity dossier.
 
-Michael is the proposed accountable pilot operator and access approver. That role
-requires his acceptance; it is not a claim of a staffed review team. Reviewers
+Michael is the accepted accountable pilot operator and access approver. This is
+not a claim of a staffed review team. Reviewers
 receive read-only metadata access only after assignment. Agents do not acquire
 standing administrator access by being listed as implementation contributors.
 Access grants, revocations, schema changes and expiration-job failures produce
 private operational audit events containing no feedback values or capabilities.
 
-## Proposed retention and withdrawal
+## Accepted retention and withdrawal
 
 Keep individual feedback for **30 days from server receipt**. Keep the server
 receipt/expiry time privately for enforcement, not as a public participant
@@ -85,10 +87,11 @@ Do not accept real data before these gates pass and the privacy policy describes
 the observed workflow. A successful metadata pilot does not release PS, start a
 certification program or complete the wider training/anomaly requirement.
 
-## Decisions needed
+## Approval boundary
 
-Approve or revise the proposed endpoint, 30-day active retention, 7-day backup
-expiry, invitation-only pilot and Michael's accountable operator role. The owner
-may decline or change any part. A reply must be recorded verbatim with a timestamp
-before implementation proceeds; acceptance of this proposal does not silently
-adopt the historical hash-only registry or authorize collection of examples.
+The exact approved contract and reply are preserved in the dated owner decision
+above. The legacy hash-only registry has not been adopted. No example collection,
+training, public participant metadata, indefinite retention, mandatory account
+or additional purpose is authorized. Changes to the agreed purpose or retention
+need a separate owner decision and participant notice; approval never substitutes
+for executed deployment and recovery gates.
