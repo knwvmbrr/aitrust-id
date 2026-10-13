@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-10-13T17:43:30.778919+00:00",
+  "pass": true,
+  "source_commit": "783c50aa78f5925764e810d3fd5ccbc1601f21df",
+  "artifacts_per_origin": 259,
+  "matching_artifacts": 777,
+  "origins": [
+    {
+      "origin": "https://c7f7f12b.aitrust-id.pages.dev",
+      "matching_artifacts": 259,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "matching_artifacts": 259,
+      "security_headers_present": true
+    },
+    {
+      "origin": "https://www.aitrustid.com",
+      "matching_artifacts": 259,
+      "security_headers_present": true
+    }
+  ],
+  "scope": "Exact decoded HTTP bytes of the reviewed build; not independent source, accuracy or physical-device validation",
+  "independent_accuracy_evidence": false,
+  "security_headers": {
+    "captured_at": "2026-10-13T17:43:31.703057+00:00",
+    "pass": true,
+    "origins": [
+      {
+        "origin": "https://c7f7f12b.aitrust-id.pages.dev",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer"
+        }
+      },
+      {
+        "origin": "https://aitrustid.com",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer"
+        }
+      },
+      {
+        "origin": "https://www.aitrustid.com",
+        "matching_headers": {
+          "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "cache-control": "public, max-age=0, must-revalidate, no-transform",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "no-referrer"
+        }
+      }
+    ],
+    "exact_header_values_verified": true,
+    "transport": "HTTPS curl HEAD"
+  },
+  "clean_candidate_actual_eight_phase_verified": true,
+  "checked_candidate_head": "a07e34c6453774cb2602e9564934c4f20034de19",
+  "merged_tree_identical_to_checked_head": true,
+  "merged_build_performed": true,
+  "merged_eight_phases_reexecuted": false,
+  "production_service_code_changed": false,
+  "requirements_closed": 0
+}
