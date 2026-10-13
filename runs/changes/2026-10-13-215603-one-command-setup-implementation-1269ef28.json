@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-215603-one-command-setup-implementation-1269ef28",
+  "recorded_at": "2026-10-13T21:56:03.670947+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "892d878451c9061e318793f34c2d7fb87209d25c",
+  "changed": "Implement exclusive private one-command local setup and owned cleanup; record the owner-approved separation from human acceptance.",
+  "proves": "49 focused setup and existing checker tests pass; credentials, port conflicts, ownership changes and weakened effective limits are refused.",
+  "limits": "Actual clean Linux setup is still pending. F-105 remains open; F-142, independent accuracy and collection remain unaccepted.",
+  "scope_ids": [
+    "F-105",
+    "F-142"
+  ],
+  "files": {
+    "scripts/setup-local.py": "33fd6ebc068e7a5553be726fd8e0035c4bbd5a0a62cb45fe0f73ed2e2f0c8946",
+    "tests/test_local_setup.py": "2a259be7fa32dd2cda9526b9a57c200c1de22a0e4bb383011e38d4f815da22e7",
+    "docs/local-setup-plan.md": "f195e4c2a694e05b9f1d6e880419282d5fb1b848936fbbb3d935edb3779d6ea4",
+    "docs/open-validation-path.md": "efd511b332495ece807ec34ec96185edda7ac0ab3c59726e40543fce6ac4929b",
+    "README.md": "31d01cedc7c833e603c073de7bf23cb35e5f000ec32075d5aa6e4348f9eb8397",
+    "DECISIONS.md": "df5fe367d4fb2032d968d960d78417e438f7219adcb15a2077db0371cdb51d20",
+    "state.json": "5dfda955896a6eb45e3e6c11021f2480acdfa9331c1d893bb0cfb523b2b4d3d2",
+    "runs/2026-10-13-clean-setup-owner-decision.json": "34b464eac19a534636174dc4be86d18ac61b1c3174ad3e11685611af8400f1a8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-clean-setup-owner-decision.json",
+      "sha256": "34b464eac19a534636174dc4be86d18ac61b1c3174ad3e11685611af8400f1a8"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T21:56:04.660602+00:00"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T21:48:56.597945+00:00",
+  "updated": "2026-10-13T21:56:03.579686+00:00",
   "active_increment": "Eight original named jobs complete; current checks pass (3249 tests), protected publication pending; 79 open toward target 43",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1047,7 +1047,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T21:48:56.597945+00:00",
+  "updated_at": "2026-10-13T21:56:03.579686+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2454,5 +2454,13 @@
     "browser": "runs/2026-10-13-scope-group-browser.json",
     "grouping_is_tag_release": false,
     "child_statuses_unchanged": true
+  },
+  "one_command_setup": {
+    "status": "implementation under test; clean Linux run pending",
+    "scope_id": "F-105",
+    "human_acceptance_scope": "F-142",
+    "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
+    "collection_enabled": false,
+    "independent_release_validated": false
   }
 }

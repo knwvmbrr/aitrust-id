@@ -511,3 +511,13 @@ defines permitted fields, private access and deletion before storage. Run
 collection; real submissions still require security, withdrawal and recovery
 evidence. This completes the definition, without activating the historical
 hash-only dashboard or authorizing examples and model training.
+
+### One-command Linux development setup
+
+After cloning, run `python3 scripts/setup-local.py --engine podman` with Python
+3.12+ and an installed, usable Podman engine. The command creates private
+credentials outside the checkout, builds the existing three-service stack and
+verifies the real authenticated pipeline before announcing readiness. It refuses
+existing installations and port conflicts. Use `--stop` to remove only resources
+owned by this installation. See [the local checker guide](docs/open-validation-path.md).
+This setup job is separate from human acceptance and independent tag accuracy.

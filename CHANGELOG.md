@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-215603-one-command-setup-implementation-1269ef28
+
+Recorded 2026-10-13T21:56:03.670947+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement exclusive private one-command local setup and owned cleanup; record the owner-approved separation from human acceptance.
+- **Evidence.** 49 focused setup and existing checker tests pass; credentials, port conflicts, ownership changes and weakened effective limits are refused. [Change record](./runs/changes/2026-10-13-215603-one-command-setup-implementation-1269ef28.json).
+- **Not claimed.** Actual clean Linux setup is still pending. F-105 remains open; F-142, independent accuracy and collection remain unaccepted.
+
+
 ### 2026-10-13-214856-final-driver-source-review-6ee0d8a7
 
 Recorded 2026-10-13T21:48:56.658418+00:00 · Contributor: Codex · change
