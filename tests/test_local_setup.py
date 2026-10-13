@@ -167,7 +167,8 @@ def test_failed_build_cleans_only_owned_ids_and_never_prints_diagnostics(tmp_pat
     monkeypatch.setattr(setup, 'Engine', lambda name: engine)
     monkeypatch.setattr(setup, 'preflight', lambda engine: None)
     monkeypatch.setattr(setup, 'install_checker', lambda *args: 'unused')
-    def fail(engine, folder, row):
+    def fail(engine, folder, row, build_network):
+        assert build_network == 'private'
         row['containers'].append('b' * 64)
         engine.inspect.return_value = {'Config': {'Labels': {setup.LABEL: row['project']}}}
         raise OSError('secret-token-and-private-engine-output')

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-233400-explicit-build-network-option-c6eebd21
+
+Recorded 2026-10-13T23:34:00.469488+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an explicit build-only host-network option for Linux download failures while preserving private default builds and unchanged runtime isolation.
+- **Evidence.** 69 focused setup/checker controls pass; default failure handling remains private-network mode. Operator selection is explicit and hash-locked dependencies remain mandatory. [Change record](./runs/changes/2026-10-13-233400-explicit-build-network-option-c6eebd21.json).
+- **Not claimed.** Host build networking increases reach during dependency installation; no credentials are mounted. Actual complete-input run remains pending; no universal security, human or tag-release claim.
+
+
 ### 2026-10-13-232735-configured-linux-builder-dns-550063e9
 
 Recorded 2026-10-13T23:27:35.616707+00:00 · Contributor: Codex · change

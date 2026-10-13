@@ -30,3 +30,12 @@ positive and negative checks, private credentials, least-privilege effective
 configuration, source identity, no printed token/input, port/preexisting-file/
 dependency/build/health refusal and owned cleanup. Synthetic and automated
 checks do not complete F-142, independent accuracy or extension signing setup.
+
+An explicit `--build-network host` option is limited to initial image builds on
+Linux hosts whose isolated builder cannot reach configured DNS/downloads. It
+increases network reach for pinned dependency installation and must be chosen
+by the operator; private builder networking remains the default. Builds still
+have their container filesystem, hash-locked artifacts and allowlisted context.
+No host credential directories are mounted. Runtime service networks, UID,
+capabilities, resource limits and loopback publishing remain unchanged. This is
+not a promise against compromised dependencies or host administration.

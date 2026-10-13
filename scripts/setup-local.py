@@ -205,14 +205,16 @@ def build_dns(paths=(Path('/etc/resolv.conf'), Path('/run/systemd/resolve/resolv
     raise SetupError('Container builds need reachable DNS configured on this Linux host.')
 
 
-def build_and_start(engine, folder, state):
+def build_and_start(engine, folder, state, build_network='private'):
     project = state['project']
     images = {}
     for role in ROLES:
         print('Building ' + role + '…', flush=True)
         tag = project + '-' + role + ':local'
         build_args = ['build'] + (['--layers'] if engine.name == 'podman' else [])
-        if engine.name == 'podman':
+        if build_network == 'host':
+            build_args.extend(['--network', 'host'])
+        elif engine.name == 'podman':
             for address in build_dns():
                 build_args.extend(['--dns', address])
         engine.run(*build_args, '--label', LABEL + '=' + project, '-t', tag,
@@ -343,6 +345,8 @@ def main(argv=None):
     parser.add_argument('--state-dir', type=Path, default=DEFAULT_STATE)
     parser.add_argument('--stop', action='store_true', help='Stop only this recorded installation; retain private files')
     parser.add_argument('--wheelhouse', type=Path, help='Optional offline wheel directory; all lock hashes remain mandatory')
+    parser.add_argument('--build-network', choices=('private', 'host'), default='private',
+                        help='Explicit host mode lets only image-build steps reach host networking for downloads; runtime stays isolated')
     args = parser.parse_args(argv)
     state = None
     folder = None
@@ -363,11 +367,12 @@ def main(argv=None):
         folder = private_directory(args.state_dir, create=True)
         state = {'version': 1, 'engine': args.engine, 'project': 'aitrust-local-' + uuid.uuid4().hex,
                  'containers': [], 'networks': [], 'images': [], 'status': 'starting',
+                 'build_network': args.build_network,
                  'independent_release_validated': False, 'collection_enabled': False}
         write_state(folder, state)
         python = install_checker(folder, args.wheelhouse)
         aitrust.init_config(folder / 'runtime.env')
-        build_and_start(engine, folder, state)
+        build_and_start(engine, folder, state, args.build_network)
         state['security'] = verify_security(engine, state)
         print('Checking the authenticated pipeline…', flush=True)
         verify_pipeline(python, folder)

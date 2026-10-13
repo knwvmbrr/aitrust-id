@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-233400-explicit-build-network-option-c6eebd21",
+  "recorded_at": "2026-10-13T23:34:00.469488+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1b32472f2200434fbe47ffd5ba153d278c91f7ad",
+  "changed": "Add an explicit build-only host-network option for Linux download failures while preserving private default builds and unchanged runtime isolation.",
+  "proves": "69 focused setup/checker controls pass; default failure handling remains private-network mode. Operator selection is explicit and hash-locked dependencies remain mandatory.",
+  "limits": "Host build networking increases reach during dependency installation; no credentials are mounted. Actual complete-input run remains pending; no universal security, human or tag-release claim.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "88cdee8ad3eb0bd4593d90572ead527d0ddbb8819222c1629be4502d0c7f0634",
+    "tests/test_local_setup.py": "eeb5af830305dcdbe0824929d149ad709b666116cfd57e59bd7ee057d92c4232",
+    "docs/local-setup-plan.md": "7b81e3097906fe3d99fafa49a09f8c7588f3ca8755f59d24dfef1d8b813d765e"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:34:01.431632+00:00"
+    }
+  ]
+}
