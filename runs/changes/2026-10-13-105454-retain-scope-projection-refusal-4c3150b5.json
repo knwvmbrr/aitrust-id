@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-105454-retain-scope-projection-refusal-4c3150b5",
+  "recorded_at": "2026-10-13T10:54:54.602246+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fd58ce594a44c5996ce3d2e4d3e2d1dde383671d",
+  "changed": "Updated the generated public scope projections for the unchanged F-030 percentage and corrected evidence; retained the source-drift refusal from a build that regenerated those inputs during verification.",
+  "proves": "All sixteen website commands exited zero, but the receipt refused a pass because two generated source projections changed. Current projections are now generated before the next source fingerprint.",
+  "limits": "The refused receipt is not valid current evidence. All 202 original jobs and full acceptance gates remain; F-030 remains open at 40 percent.",
+  "scope_ids": [
+    "F-030",
+    "F-120",
+    "N-008"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "739fb7339a0b8f5649a3895ed267d17a57c25548788bd57a7f21bb2ec8500fce",
+    "site/src/public-scope.json": "739fb7339a0b8f5649a3895ed267d17a57c25548788bd57a7f21bb2ec8500fce",
+    "site/src/scope-manifest.json": "eeec53009b044817d3ad88d4c661022aef95bfd60fe078b0879b6a2f9fc8b3de",
+    "runs/2026-10-13-stream-boundaries-verified-website.json": "c0c0cacb5784925ea848cdf89e0f63b2bf5cb55e1921e86ec674cfd091d6b3e3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-stream-boundaries-verified-website.json",
+      "sha256": "c0c0cacb5784925ea848cdf89e0f63b2bf5cb55e1921e86ec674cfd091d6b3e3"
+    }
+  ],
+  "checks": []
+}

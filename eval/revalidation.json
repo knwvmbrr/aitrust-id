@@ -278,7 +278,10 @@
         "services/gateway/requirements*",
         "services/gateway/Dockerfile",
         ".dockerignore",
-        "tests/test_gateway_integration.py"
+        "tests/test_gateway_integration.py",
+        "tests/stream-observer.cjs",
+        "tests/test_stream_observer.py",
+        "docs/stream-observer-plan.md"
       ],
       "commands": [
         [
@@ -307,6 +310,13 @@
           "scripts/verify-replay-export.cjs",
           "--python",
           "{python}"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_stream_observer.py",
+          "-q"
         ]
       ]
     },

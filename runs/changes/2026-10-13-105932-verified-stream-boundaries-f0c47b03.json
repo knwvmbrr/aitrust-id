@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-105932-verified-stream-boundaries-f0c47b03",
+  "recorded_at": "2026-10-13T10:59:32.298928+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fd58ce594a44c5996ce3d2e4d3e2d1dde383671d",
+  "changed": "Completed current capability, personal-route and full regression verification for the bounded inactive stream repair; updated state and retained both refused website attempts.",
+  "proves": "All five source-bound capability receipts pass; sixteen website commands and eight build phases pass on stable source; 2952 Python tests pass with five platform skips; 722 route source inputs remain stable.",
+  "limits": "No live MAIN-world capture or physical Share success, independent accuracy, new intake, production backend change or full requirement closure. All 202 IDs and existing acceptance gates remain; 87 open.",
+  "scope_ids": [
+    "F-030",
+    "F-120",
+    "N-008",
+    "N-013"
+  ],
+  "files": {
+    "state.json": "dc4248d6f6e340142fc8156cc05ac24789e625099a4e76a79b81817682f9affa",
+    "eval/route-boundaries.json": "254994cd796db9842b1cea0795254cc5e075e1e14e2c9f95332080b4d2cd4d2c",
+    "runs/2026-10-13-stream-boundaries-stable-website.json": "0693eeb9ffb4c441d4b501e38a96d64488a32e8585b503e6fbc7213e0038460e",
+    "runs/2026-10-13-stream-boundaries-full-suite.json": "0a3a10f06680d64073868096bfd03888efcae07427f19319d9f06b502cfebb6c",
+    "runs/2026-10-13-stream-boundaries-routes.json": "474b67d3a5a1f468328c4515312de133495c4f499d54508a4b2c27b8d46bb6b9",
+    "runs/2026-10-13-stream-boundaries-eight-phases.json": "198b965450fa7cf02a7d5e66f8f650bce84bcd3c05b3e10583fe35a73b2f3af1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-stream-boundaries-stable-website.json",
+      "sha256": "0693eeb9ffb4c441d4b501e38a96d64488a32e8585b503e6fbc7213e0038460e"
+    },
+    {
+      "path": "runs/2026-10-13-stream-boundaries-full-suite.json",
+      "sha256": "0a3a10f06680d64073868096bfd03888efcae07427f19319d9f06b502cfebb6c"
+    },
+    {
+      "path": "runs/2026-10-13-stream-boundaries-routes.json",
+      "sha256": "474b67d3a5a1f468328c4515312de133495c4f499d54508a4b2c27b8d46bb6b9"
+    }
+  ],
+  "checks": []
+}

@@ -133,6 +133,8 @@ jobs:
         with: { node-version: '24' }
       - name: Exercise real build-phase children and refuse partial success
         run: node --test tests/website-build-phases.cjs
+      - name: Exercise inactive stream boundaries without capture permissions
+        run: node --test tests/stream-observer.cjs
       - name: Verify real public timestamp evidence and refuse tampering without network
         run: python -m pytest tests/test_independent_timestamp.py -q
       - run: python -m pytest tests/test_assertion_formats.py tests/test_http_privacy.py -q

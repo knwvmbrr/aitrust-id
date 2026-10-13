@@ -1,5 +1,43 @@
 # Changelog
 
+## Unreleased — 2026-10-13
+
+### 2026-10-13-105932-verified-stream-boundaries-f0c47b03
+
+Recorded 2026-10-13T10:59:32.298928+00:00 · Contributor: Codex · change
+
+- **Changed.** Completed current capability, personal-route and full regression verification for the bounded inactive stream repair; updated state and retained both refused website attempts.
+- **Evidence.** All five source-bound capability receipts pass; sixteen website commands and eight build phases pass on stable source; 2952 Python tests pass with five platform skips; 722 route source inputs remain stable. [Change record](./runs/changes/2026-10-13-105932-verified-stream-boundaries-f0c47b03.json).
+- **Not claimed.** No live MAIN-world capture or physical Share success, independent accuracy, new intake, production backend change or full requirement closure. All 202 IDs and existing acceptance gates remain; 87 open.
+
+
+### 2026-10-13-105454-retain-scope-projection-refusal-4c3150b5
+
+Recorded 2026-10-13T10:54:54.602246+00:00 · Contributor: Codex · change
+
+- **Changed.** Updated the generated public scope projections for the unchanged F-030 percentage and corrected evidence; retained the source-drift refusal from a build that regenerated those inputs during verification.
+- **Evidence.** All sixteen website commands exited zero, but the receipt refused a pass because two generated source projections changed. Current projections are now generated before the next source fingerprint. [Change record](./runs/changes/2026-10-13-105454-retain-scope-projection-refusal-4c3150b5.json).
+- **Not claimed.** The refused receipt is not valid current evidence. All 202 original jobs and full acceptance gates remain; F-030 remains open at 40 percent.
+
+
+### 2026-10-13-105158-retain-interpreter-refusal-f927c6e2
+
+Recorded 2026-10-13T10:51:58.828194+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained a website revalidation refusal caused by invoking the verifier with the system Python instead of the configured verification environment.
+- **Evidence.** The failed receipt reports exit 2 at test collection and no passing website result; corrected execution uses the existing pinned environment. [Change record](./runs/changes/2026-10-13-105158-retain-interpreter-refusal-f927c6e2.json).
+- **Not claimed.** Execution environment correction only; no dependency installation, source change, website pass or requirement closure is inferred from this failure.
+
+
+### 2026-10-13-105109-bounded-inactive-stream-7725e98d
+
+Recorded 2026-10-13T10:51:09.269823+00:00 · Contributor: Codex · change
+
+- **Changed.** Retired the unused automatic fetch tap and replaced it with an inert bounded stream observer; corrected adapter contract and bound real controls into CI and revalidation.
+- **Evidence.** Ten real web-stream controls pass on Node 20 and 24. Observer preserves the original response, refuses malformed or oversized streams, and settles cancellation without partial text. Installed manifest remains DOM-only. [Change record](./runs/changes/2026-10-13-105109-bounded-inactive-stream-7725e98d.json).
+- **Not claimed.** Synthetic developer profile only; no live vendor capture, new permission, tag, independent validation or full requirement closure. Native Share diagnostic retained as unavailable and skipped.
+
+
 ## Unreleased — 2026-10-12
 
 ### 2026-10-12-192041-build-diagnostics-current-execution-705b0dfb
