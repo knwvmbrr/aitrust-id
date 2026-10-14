@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-231230-verified-one-command-setup-increment-ee8983fb",
+  "recorded_at": "2026-10-13T23:12:30.694697+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee2d6cebcb73a7c161b59c6b1fe2f7330495ccbf",
+  "changed": "Complete source-bound setup acceptance, renew the five component checks and eight website phases, record full combined regression and remove owned staging fixtures.",
+  "proves": "3,317 tests pass with five platform skips and stable source. All current capability checks and the route guard pass. Actual clean-clone Linux setup and ten failure controls pass; eight owned temporary directories, one stale owned network and nine prime tags were removed without global pruning. Staging is healthy.",
+  "limits": "124 complete and 78 open; target 43 remains unmet. This is cached-dependency Linux Podman setup, not outside-person/physical-phone/accessibility or independent tag-release acceptance. Protected publication remains pending.",
+  "scope_ids": [
+    "F-105",
+    "F-142"
+  ],
+  "files": {
+    "state.json": "c42746444c31a02a0bcd19205efe0d6cfe203f2df24b11e9f5bb48191777f39c",
+    "eval/route-boundaries.json": "98164e73fdd3f4d8ade53d18802b10b25c391cd62f83ef441426d61a0c725ec0",
+    "runs/2026-10-13-local-setup-current-protocol.json": "07361213460311d2a5c5e8d77ba770f6f087f496d1d71ac8b211d094770a3812",
+    "runs/2026-10-13-local-setup-current-website.json": "7d755c1826543dad13d2980b35e9409b44a773f20a31a22d4a1a5c02841cc31d",
+    "runs/2026-10-13-local-setup-current-eight-phases.json": "8a23c34daa1a9a56e3573247db97f78f82470b2b99d413b32aad133bae370d9d",
+    "runs/2026-10-13-local-setup-current-routes.json": "4edf6a9b4d020af14dc201846cc175a555f6df1b9394abfe04b853aeaeeb063f",
+    "runs/2026-10-13-local-setup-current-full-suite.json": "053e140f40e147cb48d8af5435faa8d50d0c994665b1706fb43afb1c25117598",
+    "runs/2026-10-13-one-command-fixture-cleanup.json": "2d6c9772f58cc9ec359e15965592eaffb66f3e96283f1e7093538079c6b940a8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-local-setup-current-full-suite.json",
+      "sha256": "053e140f40e147cb48d8af5435faa8d50d0c994665b1706fb43afb1c25117598"
+    },
+    {
+      "path": "runs/2026-10-13-one-command-linux-setup.json",
+      "sha256": "acab76526b9896b47f1b0426fbdfed4050f84cdaf501e380edc3964b9a6463e2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:12:31.063361+00:00"
+    }
+  ]
+}

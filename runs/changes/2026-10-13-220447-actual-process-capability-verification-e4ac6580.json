@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-220447-actual-process-capability-verification-e4ac6580",
+  "recorded_at": "2026-10-13T22:04:47.339540+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0985d23e08bd3398f203f22fa8caa3684d5783d5",
+  "changed": "Verify all five actual Linux process capability sets are empty instead of assuming Podman spells cap-drop ALL literally.",
+  "proves": "55 focused controls pass, including refusal of any nonzero inherited, permitted, effective, bounding or ambient capability set.",
+  "limits": "The actual Linux startup is still pending. The previous run refused readiness and cleaned recorded resources; no acceptance threshold is lowered.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "fc87f0c33f2cd5f4d323dcd7f2c1f36010700297b457b61901b1e3ab39f034ab",
+    "tests/test_local_setup.py": "f8e6b69bfcd5e92ec3c1490c949a4103a76e461f53cb15c0aa298d6dce04e151"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:04:49.014765+00:00"
+    }
+  ]
+}

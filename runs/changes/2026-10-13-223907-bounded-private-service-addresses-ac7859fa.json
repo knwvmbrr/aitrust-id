@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-223907-bounded-private-service-addresses-ac7859fa",
+  "recorded_at": "2026-10-13T22:39:07.987296+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cb41584135cf1071585d7940153457cb49a9409d",
+  "changed": "Bind gateway dependencies to inspected private IPv4 addresses of its owned redactor/evaluator containers, eliminating container DNS as a pipeline prerequisite.",
+  "proves": "63 focused controls pass; public, loopback, link-local, missing, wrong-network and unsupported dependency addresses are refused.",
+  "limits": "The actual clean-clone pipeline proof remains pending. No public endpoint, production source, credential grant or security limit is changed.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "scripts/setup-local.py": "f16bd5a894944f6350c53e3125fa187c3213abf1ea19642ef459056974cb3282",
+    "tests/test_local_setup.py": "2fd06aa2c1885c1e02f3d2f3a30cf3c77ddc9957421f3666528f942320ded476"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:39:12.501696+00:00"
+    }
+  ]
+}

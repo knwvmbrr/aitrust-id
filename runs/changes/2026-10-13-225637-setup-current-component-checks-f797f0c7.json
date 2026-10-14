@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-225637-setup-current-component-checks-f797f0c7",
+  "recorded_at": "2026-10-13T22:56:37.299284+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee2d6cebcb73a7c161b59c6b1fe2f7330495ccbf",
+  "changed": "Renew source-bound detector, redaction, protocol and extension checks after binding the completed Linux setup and preserving the latest merged fixes.",
+  "proves": "All four capability recipes pass with unchanged consumed inputs during execution. Setup evidence remains source-matched; detector method and independent accuracy are unchanged.",
+  "limits": "Website renewal, full combined-suite execution and protected publication are still pending; no human acceptance or tag release is granted.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "runs/2026-10-13-local-setup-final-PS.json": "f2a04e7ef28913d9998f59c19d8958d0395b73fe4db8c87afe03c1b7e69b7c26",
+    "runs/2026-10-13-local-setup-final-PII_REDACTED.json": "00d2c7d7fd5cf8137a6268125c727e9c6ec5f6dbfc9beb374e31d9c28912b235",
+    "runs/2026-10-13-local-setup-final-protocol.json": "d321a9e46cba0d1a7584114f3a92a40e398cc25d667c0236bd1e0dd6bdbe2ce2",
+    "runs/2026-10-13-local-setup-final-extension.json": "8cbfd7a0946664c3c6218048d82c5ab13072cb8f2705f41702b1d937d6cfd25c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-one-command-linux-setup.json",
+      "sha256": "acab76526b9896b47f1b0426fbdfed4050f84cdaf501e380edc3964b9a6463e2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:56:37.456523+00:00"
+    }
+  ]
+}

@@ -2,6 +2,202 @@
 
 ## Unreleased — 2026-10-13
 
+### 2026-10-13-235630-reviewed-complete-setup-regression-212cd782
+
+Recorded 2026-10-13T23:56:30.751362+00:00 · Contributor: Codex · change
+
+- **Changed.** Close review gaps with byte-identical downloaded-source verification, complete build/checker input binding and a fresh actual Linux receipt; renew all component and route evidence.
+- **Evidence.** 3,335 Python tests pass with five platform skips and unchanged inputs. All five capability recipes and eight website phases pass. The actual 27-input clean Linux setup and ten failure controls pass; original staging is restored. [Change record](./runs/changes/2026-10-13-235630-reviewed-complete-setup-regression-212cd782.json).
+- **Not claimed.** 124 complete and 78 open; target 43 remains unmet. Build-only host mode was explicitly selected for downloads; runtime stays constrained. Independent tag accuracy, human/phone/accessibility and Docker-branch acceptance remain separate.
+
+
+### 2026-10-13-234910-complete-setup-component-renewal-ef074ca8
+
+Recorded 2026-10-13T23:49:10.941982+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew detector, redaction, protocol and extension source-bound recipes after completing build-input coverage and recording the fresh actual Linux run.
+- **Evidence.** All four capability recipes pass with stable inputs; all 27 build/checker inputs and the current runtime receipt are bound. Detector accuracy and method remain unchanged. [Change record](./runs/changes/2026-10-13-234910-complete-setup-component-renewal-ef074ca8.json).
+- **Not claimed.** Website and full-suite renewals and protected publication remain pending. No independent or human tag-release acceptance.
+
+
+### 2026-10-13-234752-complete-input-scope-preparation-92ef0cff
+
+Recorded 2026-10-13T23:47:52.168124+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the public scope download from the complete-input setup acceptance.
+- **Evidence.** The site builds with all 202 records; F-105 is complete under the approved contract and F-142 remains open. [Change record](./runs/changes/2026-10-13-234752-complete-input-scope-preparation-92ef0cff.json).
+- **Not claimed.** Publication and final combined regression remain pending.
+
+
+### 2026-10-13-234741-full-setup-input-coverage-regression-50acea25
+
+Recorded 2026-10-13T23:47:41.686792+00:00 · Contributor: Codex · change
+
+- **Changed.** Require every discovered setup build/checker input and its current complete-input receipt to appear in protocol revalidation.
+- **Evidence.** The regression verifies complete consumption coverage, including Dockerfiles, locks, health checks, copied protocol modules and CLI validators. [Change record](./runs/changes/2026-10-13-234741-full-setup-input-coverage-regression-50acea25.json).
+- **Not claimed.** This is engineering coverage, not independent accuracy or human acceptance. Final suite and protected publication remain pending.
+
+
+### 2026-10-13-234708-complete-input-linux-acceptance-18a315e8
+
+Recorded 2026-10-13T23:47:08.401206+00:00 · Contributor: Codex · change
+
+- **Changed.** Reclose setup acceptance after a fresh clean Linux run with 27 complete input hashes and ten real failure/privacy/owned-cleanup controls; bind every consumed input in protocol revalidation.
+- **Evidence.** 99 setup/checker/evidence tests pass. Actual complete-input startup and all ten controls pass; source remains unchanged, downloaded-source verification needs no Git history, and original staging is restored. All 202 records remain: 124 complete, 78 open. [Change record](./runs/changes/2026-10-13-234708-complete-input-linux-acceptance-18a315e8.json).
+- **Not claimed.** Build-only host networking was explicitly selected for initial downloads; runtime isolation is unchanged and private builds remain the default. No human/physical-device, independent tag release, blanket security or cold-host installer acceptance.
+
+
+### 2026-10-13-233400-explicit-build-network-option-c6eebd21
+
+Recorded 2026-10-13T23:34:00.469488+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an explicit build-only host-network option for Linux download failures while preserving private default builds and unchanged runtime isolation.
+- **Evidence.** 69 focused setup/checker controls pass; default failure handling remains private-network mode. Operator selection is explicit and hash-locked dependencies remain mandatory. [Change record](./runs/changes/2026-10-13-233400-explicit-build-network-option-c6eebd21.json).
+- **Not claimed.** Host build networking increases reach during dependency installation; no credentials are mounted. Actual complete-input run remains pending; no universal security, human or tag-release claim.
+
+
+### 2026-10-13-232735-configured-linux-builder-dns-550063e9
+
+Recorded 2026-10-13T23:27:35.616707+00:00 · Contributor: Codex · change
+
+- **Changed.** Use the Linux host configured upstream DNS for isolated Podman builds when resolv.conf points to a host-only loopback stub.
+- **Evidence.** 69 focused setup/checker controls pass, including refusal of unusable resolvers without adding an arbitrary external DNS provider. Build networking stays isolated and artifact hashes remain mandatory. [Change record](./runs/changes/2026-10-13-232735-configured-linux-builder-dns-550063e9.json).
+- **Not claimed.** The complete-input cold-build attempt refused readiness and restored staging. Its actual retry and full combined checks remain pending; no tag accuracy or human acceptance is claimed.
+
+
+### 2026-10-13-232139-complete-setup-build-input-review-4acc7eb6
+
+Recorded 2026-10-13T23:21:39.401880+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the full COPY/Dockerfile/lock/health/CLI input graph and allow byte-identical downloaded trees without Git ancestry. Reopen final setup acceptance pending a fuller actual Linux receipt.
+- **Evidence.** The prior actual running-stack/failure proof is retained. Current binding enumerates each supported build input and refuses unsupported external/stage inputs; all 202 records remain. [Change record](./runs/changes/2026-10-13-232139-complete-setup-build-input-review-4acc7eb6.json).
+- **Not claimed.** F-105 is temporarily 80% until complete-input runtime evidence and the combined suite pass. No execution result, human acceptance or independent tag accuracy is invented.
+
+
+### 2026-10-13-231230-verified-one-command-setup-increment-ee8983fb
+
+Recorded 2026-10-13T23:12:30.694697+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete source-bound setup acceptance, renew the five component checks and eight website phases, record full combined regression and remove owned staging fixtures.
+- **Evidence.** 3,317 tests pass with five platform skips and stable source. All current capability checks and the route guard pass. Actual clean-clone Linux setup and ten failure controls pass; eight owned temporary directories, one stale owned network and nine prime tags were removed without global pruning. Staging is healthy. [Change record](./runs/changes/2026-10-13-231230-verified-one-command-setup-increment-ee8983fb.json).
+- **Not claimed.** 124 complete and 78 open; target 43 remains unmet. This is cached-dependency Linux Podman setup, not outside-person/physical-phone/accessibility or independent tag-release acceptance. Protected publication remains pending.
+
+
+### 2026-10-13-230627-corrected-setup-protocol-review-0cbba77f
+
+Recorded 2026-10-13T23:06:27.759313+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew the protocol recipe after correcting generated decision prose and retain the owner-approved setup acceptance.
+- **Evidence.** The exact current protocol recipe passes; real Linux setup evidence remains source-matched and human acceptance remains separate. [Change record](./runs/changes/2026-10-13-230627-corrected-setup-protocol-review-0cbba77f.json).
+- **Not claimed.** Website and full-suite renewals and protected publication remain pending. No independent tag release or data collection.
+
+
+### 2026-10-13-230523-prepared-generated-setup-decision-612b9c87
+
+Recorded 2026-10-13T23:05:23.512808+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the public decision download from the corrected generated decision prose.
+- **Evidence.** The site builds and the public decision reference reflects the exact preserved history and owner approval. [Change record](./runs/changes/2026-10-13-230523-prepared-generated-setup-decision-612b9c87.json).
+- **Not claimed.** Combined regression renewal and protected publication remain pending.
+
+
+### 2026-10-13-230514-setup-review-and-prior-publication-receipts-1dcb6712
+
+Recorded 2026-10-13T23:05:14.437697+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the current setup route/state review, retained failed-attempt summary and the actual protected/live publication of the prior eight-job increment.
+- **Evidence.** PR 67 merged with unchanged protected checks; 777 public responses and five exact headers per origin match the reviewed build. Current setup source and ten Linux failure controls remain valid. [Change record](./runs/changes/2026-10-13-230514-setup-review-and-prior-publication-receipts-1dcb6712.json).
+- **Not claimed.** The current setup increment remains publication pending. A documentation-source correction requires fresh protocol/website review; no independent tag accuracy or human acceptance is granted.
+
+
+### 2026-10-13-230310-generated-setup-decision-reconciliation-183f9b89
+
+Recorded 2026-10-13T23:03:10.385143+00:00 · Contributor: Codex · change
+
+- **Changed.** Render the accepted setup separation through the actual decision-history generator, preserving all 15 seed decisions and existing dated approvals.
+- **Evidence.** The exact decision-prose source check passes. The full suite exposed this one stale generated-prose assertion; its failed receipt remains recorded. [Change record](./runs/changes/2026-10-13-230310-generated-setup-decision-reconciliation-183f9b89.json).
+- **Not claimed.** No seed proposal, taxonomy or institutional role is adopted. Current protocol/website evidence is renewed after this documentation correction.
+
+
+### 2026-10-13-225637-setup-current-component-checks-f797f0c7
+
+Recorded 2026-10-13T22:56:37.299284+00:00 · Contributor: Codex · change
+
+- **Changed.** Renew source-bound detector, redaction, protocol and extension checks after binding the completed Linux setup and preserving the latest merged fixes.
+- **Evidence.** All four capability recipes pass with unchanged consumed inputs during execution. Setup evidence remains source-matched; detector method and independent accuracy are unchanged. [Change record](./runs/changes/2026-10-13-225637-setup-current-component-checks-f797f0c7.json).
+- **Not claimed.** Website renewal, full combined-suite execution and protected publication are still pending; no human acceptance or tag release is granted.
+
+
+### 2026-10-13-225500-prepared-setup-scope-navigation-3863f9a1
+
+Recorded 2026-10-13T22:55:00.210219+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the public scope and decision downloads with the accepted setup/human separation and actual F-105 evidence.
+- **Evidence.** The site builds from the combined source; 202 scope identities and every pending human/tag gate remain. Actual setup evidence validates against the current implementation. [Change record](./runs/changes/2026-10-13-225500-prepared-setup-scope-navigation-3863f9a1.json).
+- **Not claimed.** This prepared build is not yet published; the 43-open target remains unmet and independent tag accuracy is unchanged.
+
+
+### 2026-10-13-225117-actual-clean-linux-setup-closure-b09fd7e1
+
+Recorded 2026-10-13T22:51:17.552164+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the owner-approved one-command Linux setup job, retain human acceptance under F-142, and source-bind its actual runtime/failure evidence in CI and revalidation.
+- **Evidence.** A clean committed Linux clone started three constrained source-matched services, passed the real authenticated schema/PS/redaction pipeline and ten actual failure/privacy/owned-cleanup controls. Original staging IDs, images and configuration were restored. All 202 records remain: 124 complete, 78 open. [Change record](./runs/changes/2026-10-13-225117-actual-clean-linux-setup-closure-b09fd7e1.json).
+- **Not claimed.** The 43-open target remains unmet. Installed usable Linux Podman and cached pinned dependencies were prerequisites; no cold-host daemon install, tested Docker branch, human/phone/accessibility acceptance, tag release or collection is claimed.
+
+
+### 2026-10-13-223907-bounded-private-service-addresses-ac7859fa
+
+Recorded 2026-10-13T22:39:07.987296+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind gateway dependencies to inspected private IPv4 addresses of its owned redactor/evaluator containers, eliminating container DNS as a pipeline prerequisite.
+- **Evidence.** 63 focused controls pass; public, loopback, link-local, missing, wrong-network and unsupported dependency addresses are refused. [Change record](./runs/changes/2026-10-13-223907-bounded-private-service-addresses-ac7859fa.json).
+- **Not claimed.** The actual clean-clone pipeline proof remains pending. No public endpoint, production source, credential grant or security limit is changed.
+
+
+### 2026-10-13-223009-complete-gateway-network-scope-8165324c
+
+Recorded 2026-10-13T22:30:09.478235+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the Podman gateway with its complete edge and inspection network scope before startup; retain private-only redactor/evaluator and loopback publishing.
+- **Evidence.** 55 focused setup/checker controls pass; current Podman API supports repeated network arguments. No network or process security limit is removed. [Change record](./runs/changes/2026-10-13-223009-complete-gateway-network-scope-8165324c.json).
+- **Not claimed.** The clean Linux runtime proof remains pending after an actual unhealthy-gateway refusal; original staging gateway was restored.
+
+
+### 2026-10-13-220447-actual-process-capability-verification-e4ac6580
+
+Recorded 2026-10-13T22:04:47.339540+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify all five actual Linux process capability sets are empty instead of assuming Podman spells cap-drop ALL literally.
+- **Evidence.** 55 focused controls pass, including refusal of any nonzero inherited, permitted, effective, bounding or ambient capability set. [Change record](./runs/changes/2026-10-13-220447-actual-process-capability-verification-e4ac6580.json).
+- **Not claimed.** The actual Linux startup is still pending. The previous run refused readiness and cleaned recorded resources; no acceptance threshold is lowered.
+
+
+### 2026-10-13-220257-podman-network-inspection-contract-812e429b
+
+Recorded 2026-10-13T22:02:57.633420+00:00 · Contributor: Codex · change
+
+- **Changed.** Read Podman network identity/labels using its actual inspection contract and record new network IDs before checking ownership.
+- **Evidence.** 50 focused controls pass. The first actual setup correctly refused readiness and removed its recorded resources when network inspection mismatched. [Change record](./runs/changes/2026-10-13-220257-podman-network-inspection-contract-812e429b.json).
+- **Not claimed.** Clean Linux pipeline startup remains pending; no F-105 completion claimed. A newly created network from the failed inspection is checked by exact label before cleanup.
+
+
+### 2026-10-13-215951-local-setup-build-cache-785338ef
+
+Recorded 2026-10-13T21:59:51.666950+00:00 · Contributor: Codex · change
+
+- **Changed.** Enable normal Podman layer reuse for pinned dependency builds without bypassing source or runtime checks.
+- **Evidence.** 49 focused setup/checker controls still pass; the actual clean-clone attempt remains pending. [Change record](./runs/changes/2026-10-13-215951-local-setup-build-cache-785338ef.json).
+- **Not claimed.** Build DNS failed during staging preparation; no working clean-clone stack or F-105 completion is claimed.
+
+
+### 2026-10-13-215603-one-command-setup-implementation-1269ef28
+
+Recorded 2026-10-13T21:56:03.670947+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement exclusive private one-command local setup and owned cleanup; record the owner-approved separation from human acceptance.
+- **Evidence.** 49 focused setup and existing checker tests pass; credentials, port conflicts, ownership changes and weakened effective limits are refused. [Change record](./runs/changes/2026-10-13-215603-one-command-setup-implementation-1269ef28.json).
+- **Not claimed.** Actual clean Linux setup is still pending. F-105 remains open; F-142, independent accuracy and collection remain unaccepted.
 ### 2026-10-13-221136-current-review-fixes-source-evidence-d1e96b6a
 
 Recorded 2026-10-13T22:11:36.932301+00:00 · Contributor: Codex · change

@@ -127,3 +127,10 @@ verify-editorial:
 verify-recusal:
 	$(PYTHON) -m pytest tests/test_conformance_recusal.py -q
 	$(PYTHON) scripts/verify-conformance-votes.py --output output/verification/recusal.json
+
+.PHONY: setup-local verify-local-setup
+setup-local:
+	$(PYTHON) scripts/setup-local.py --engine podman
+verify-local-setup:
+	$(PYTHON) -m pytest tests/test_local_setup.py tests/test_local_setup_evidence.py -q
+	$(PYTHON) scripts/verify-local-setup-evidence.py

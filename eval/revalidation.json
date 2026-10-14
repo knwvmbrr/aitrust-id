@@ -197,7 +197,37 @@
         "docs/master-scope.json",
         "docs/scope-progress.json",
         "GOVERNANCE.md",
-        "tests/test_scoped_component_inputs.py"
+        "tests/test_scoped_component_inputs.py",
+        "scripts/setup-local.py",
+        "scripts/verify-local-setup-evidence.py",
+        "tests/test_local_setup.py",
+        "tests/test_local_setup_evidence.py",
+        "docs/local-setup-plan.md",
+        "docs/local-setup-result.md",
+        "docs/open-validation-path.md",
+        "runs/2026-10-13-clean-setup-owner-decision.json",
+        "runs/2026-10-13-one-command-linux-setup.json",
+        ".dockerignore",
+        "eval/requirements.lock",
+        "protocol/assertions.py",
+        "protocol/http_privacy.py",
+        "protocol/replay_identity.py",
+        "protocol/transport_signing.py",
+        "scripts/aitrust.py",
+        "scripts/check-assertion.py",
+        "services/anonymizer/Dockerfile",
+        "services/anonymizer/app.py",
+        "services/anonymizer/healthcheck.py",
+        "services/anonymizer/model_identity.py",
+        "services/anonymizer/replay_metadata.py",
+        "services/anonymizer/requirements.lock",
+        "services/evaluator/Dockerfile",
+        "services/evaluator/healthcheck.py",
+        "services/gateway/Dockerfile",
+        "services/gateway/app.py",
+        "services/gateway/healthcheck.py",
+        "services/gateway/requirements.lock",
+        "runs/2026-10-13-one-command-complete-input-linux.json"
       ],
       "commands": [
         [
@@ -333,6 +363,19 @@
           "pytest",
           "tests/test_scoped_component_inputs.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_local_setup.py",
+          "tests/test_local_setup_evidence.py",
+          "tests/test_local_cli.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-local-setup-evidence.py"
         ]
       ]
     },

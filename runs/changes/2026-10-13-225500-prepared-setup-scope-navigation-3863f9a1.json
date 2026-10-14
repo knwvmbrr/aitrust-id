@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-225500-prepared-setup-scope-navigation-3863f9a1",
+  "recorded_at": "2026-10-13T22:55:00.210219+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee2d6cebcb73a7c161b59c6b1fe2f7330495ccbf",
+  "changed": "Prepare the public scope and decision downloads with the accepted setup/human separation and actual F-105 evidence.",
+  "proves": "The site builds from the combined source; 202 scope identities and every pending human/tag gate remain. Actual setup evidence validates against the current implementation.",
+  "limits": "This prepared build is not yet published; the 43-open target remains unmet and independent tag accuracy is unchanged.",
+  "scope_ids": [
+    "F-105",
+    "F-142"
+  ],
+  "files": {
+    "site/public/reference/decisions.md": "df5fe367d4fb2032d968d960d78417e438f7219adcb15a2077db0371cdb51d20",
+    "site/public/reference/public-scope.json": "42ded42d60957e1ecccfdd5afb04a0543559df419af8a4002b81423902bb0bd4",
+    "site/src/public-scope.json": "42ded42d60957e1ecccfdd5afb04a0543559df419af8a4002b81423902bb0bd4",
+    "site/src/scope-manifest.json": "ed8343751d1991a9ac737af0a331eb7eb1cedba2858d04675f0070b3260eac36"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:55:00.273542+00:00"
+    }
+  ]
+}

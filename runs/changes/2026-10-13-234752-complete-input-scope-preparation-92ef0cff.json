@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-234752-complete-input-scope-preparation-92ef0cff",
+  "recorded_at": "2026-10-13T23:47:52.168124+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "59e6440e9b6a6c2a908d8f3d6518dc47ef6a76e5",
+  "changed": "Prepare the public scope download from the complete-input setup acceptance.",
+  "proves": "The site builds with all 202 records; F-105 is complete under the approved contract and F-142 remains open.",
+  "limits": "Publication and final combined regression remain pending.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "site/src/public-scope.json": "c7f050ab399e6d01cb6c8733db083fa3c68b58d8bb39d0167a2dc393671cb14e",
+    "site/src/scope-manifest.json": "bdfc9371ffe0d9d5c841f2ce2edc1d9b68482306afee0b521d9d53fcc2986b8c",
+    "site/public/reference/public-scope.json": "c7f050ab399e6d01cb6c8733db083fa3c68b58d8bb39d0167a2dc393671cb14e"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:47:52.221681+00:00"
+    }
+  ]
+}

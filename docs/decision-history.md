@@ -97,3 +97,7 @@ not constitute deployment, recruitment, training consent or independent labels.
 The exact question/reply are in
 [runs/2026-10-13-metadata-pilot-owner-decision.json](../runs/2026-10-13-metadata-pilot-owner-decision.json).
 The recording times are current, not invented historical approval times.
+
+## 2026-10-13 — Setup and human acceptance separated
+
+Michael replied “Yes — separate setup from human acceptance.” F-105 covers actual one-command clean Linux setup and failure checks. F-142 retains outside-person installation, physical-device and accessibility acceptance. No human or independent accuracy result is inferred. [Exact owner reply](../runs/2026-10-13-clean-setup-owner-decision.json).

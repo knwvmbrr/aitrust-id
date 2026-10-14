@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-10-13T22:42:46.859427+00:00",
+  "pass": true,
+  "source_commit": "ee2d6cebcb73a7c161b59c6b1fe2f7330495ccbf",
+  "sources": {
+    "scripts/setup-local.py": "f16bd5a894944f6350c53e3125fa187c3213abf1ea19642ef459056974cb3282",
+    "scripts/aitrust.py": "cce8263e6b03864735400e186e28ac8855e407d8c7a17f5a9f8ef0ec8cad2b40",
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+  },
+  "cases": [
+    "actual_port_collision_preserves_running_installation",
+    "actual_changed_ownership_refuses_all_removal",
+    "actual_user_checker_finding_exit_2_without_input_execution",
+    "synthetic_input_and_token_absent_from_application_logs",
+    "actual_owned_stop_and_private_credential_retention",
+    "actual_existing_private_installation_never_overwritten",
+    "actual_missing_engine_refused_before_mutation",
+    "actual_hash_locked_dependency_failure_without_credential",
+    "actual_build_failure_owned_cleanup",
+    "actual_startup_failure_owned_cleanup"
+  ],
+  "case_count": 10,
+  "actual_clean_clone": true,
+  "actual_one_command_start": true,
+  "actual_container_engine": "Podman",
+  "isolated_engine_storage": false,
+  "isolated_network_namespace": false,
+  "initial_dependency_downloads_cached": true,
+  "services": {
+    "anonymizer": {
+      "source_sha256": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+      "uid": 10001,
+      "read_only": true,
+      "pids_limit": 128,
+      "memory_mib": 1024,
+      "capabilities_dropped": true,
+      "no_new_privileges": true
+    },
+    "evaluator": {
+      "source_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "uid": 10001,
+      "read_only": true,
+      "pids_limit": 128,
+      "memory_mib": 256,
+      "capabilities_dropped": true,
+      "no_new_privileges": true
+    },
+    "gateway": {
+      "source_sha256": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+      "uid": 10001,
+      "read_only": true,
+      "pids_limit": 128,
+      "memory_mib": 256,
+      "capabilities_dropped": true,
+      "no_new_privileges": true
+    }
+  },
+  "real_pipeline_and_schema_verified": true,
+  "loopback_only": true,
+  "credential_permissions_0600": true,
+  "state_permissions_0700": true,
+  "source_unchanged": true,
+  "original_input_executed": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false,
+  "human_acceptance_complete": false,
+  "physical_phone_tested": false,
+  "scope": "One-command Linux clean-clone development setup and actual failure checks with cached pinned dependencies. Not a blank-host daemon installation, human acceptance, extension signing setup or independent tag validation.",
+  "original_staging_restored_same_ids_images_configuration": true
+}

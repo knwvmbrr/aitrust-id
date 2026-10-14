@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-230310-generated-setup-decision-reconciliation-183f9b89",
+  "recorded_at": "2026-10-13T23:03:10.385143+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee2d6cebcb73a7c161b59c6b1fe2f7330495ccbf",
+  "changed": "Render the accepted setup separation through the actual decision-history generator, preserving all 15 seed decisions and existing dated approvals.",
+  "proves": "The exact decision-prose source check passes. The full suite exposed this one stale generated-prose assertion; its failed receipt remains recorded.",
+  "limits": "No seed proposal, taxonomy or institutional role is adopted. Current protocol/website evidence is renewed after this documentation correction.",
+  "scope_ids": [
+    "F-105"
+  ],
+  "files": {
+    "DECISIONS.md": "338a65ee884ab0c616f64e4f89513fdde462de056def900646815fde8b4a6c0d",
+    "runs/2026-10-13-local-setup-final-website.json": "6bc3b7e729ecd1b92cc16d88176a6ab89c9eb4113969a6b6f41d8c66f0933477",
+    "runs/2026-10-13-local-setup-final-eight-phases.json": "acaabcede7a241ab9e91e2b3925966b970f066e017ec233303c678011e302454",
+    "runs/2026-10-13-local-setup-final-routes.json": "d766d255bd673f7683de262cf4170cdeb1d954132a893bff68ad2b00d701dc7a",
+    "runs/2026-10-13-local-setup-final-full-suite.json": "2f51594611d48de19c1316d82723894ad210574623c6b3e91b3d565e4bbe5ab0"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-decisions.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T23:03:10.441310+00:00"
+    }
+  ]
+}

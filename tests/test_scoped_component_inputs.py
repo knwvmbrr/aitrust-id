@@ -6,12 +6,22 @@ import pytest
 from protocol import revalidation as r
 ROOT=Path(__file__).resolve().parents[1]
 REQUIRED={'protocol':['docs/master-scope.json','docs/scope-progress.json','GOVERNANCE.md',
-                       'deploy/research/metadata-pilot-policy.json','runs/2026-10-13-metadata-pilot-owner-decision.json'],
+                       'deploy/research/metadata-pilot-policy.json','runs/2026-10-13-metadata-pilot-owner-decision.json','scripts/setup-local.py','tests/test_local_setup.py',
+                       'runs/2026-10-13-clean-setup-owner-decision.json','runs/2026-10-13-one-command-linux-setup.json'],
           'extension':['LICENSE','scripts/build-firefox-extension.py','extension/src/firefox/permissions.js']}
 
 
 def test_actual_new_component_inputs_are_bound():
     for cap,paths in REQUIRED.items():assert set(paths)<=r.fingerprint(cap)['sources'].keys()
+
+
+def test_complete_local_stack_build_and_checker_inputs_are_bound():
+    import importlib.util
+    spec=importlib.util.spec_from_file_location('setup_inputs',ROOT/'scripts/verify-local-setup-evidence.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    bound=r.fingerprint('protocol')['sources']
+    assert set(module.build_inputs())<=set(bound)
+    assert module.RECEIPT in bound
 
 
 @pytest.mark.parametrize('cap,path',[(c,p) for c,paths in REQUIRED.items() for p in paths])

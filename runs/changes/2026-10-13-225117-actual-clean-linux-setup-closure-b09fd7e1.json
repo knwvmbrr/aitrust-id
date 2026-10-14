@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-225117-actual-clean-linux-setup-closure-b09fd7e1",
+  "recorded_at": "2026-10-13T22:51:17.552164+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee2d6cebcb73a7c161b59c6b1fe2f7330495ccbf",
+  "changed": "Complete the owner-approved one-command Linux setup job, retain human acceptance under F-142, and source-bind its actual runtime/failure evidence in CI and revalidation.",
+  "proves": "A clean committed Linux clone started three constrained source-matched services, passed the real authenticated schema/PS/redaction pipeline and ten actual failure/privacy/owned-cleanup controls. Original staging IDs, images and configuration were restored. All 202 records remain: 124 complete, 78 open.",
+  "limits": "The 43-open target remains unmet. Installed usable Linux Podman and cached pinned dependencies were prerequisites; no cold-host daemon install, tested Docker branch, human/phone/accessibility acceptance, tag release or collection is claimed.",
+  "scope_ids": [
+    "F-105",
+    "F-142"
+  ],
+  "files": {
+    "docs/decision-history.md": "9a555b8b50dddef09ecacabff675d69a764f729052806f1c79b78a095340d15d",
+    "docs/scope-progress.json": "99691e5c8c40367f166642121702ff02970adaa1fcfe671f0429f75926cdeb32",
+    "docs/scope-progress.md": "1d09bc9a3aa7ee229c15fa205d36a3ae94402813b703f46056a5449ee9ad2d84",
+    "docs/scope-task-index.md": "e37cb5cb08ca9138dad8755a3e1052d48490dfbd277887dfb4045f5767d5d0ac",
+    "docs/scope-100-execution.md": "2dd87478672556a6bb80f0daada139b11e28b42377ef13de31bcd8f96fb7729a",
+    "docs/scope-delivery.md": "9cd5c2141c545b26fe25c07c7c5c3f3d64ddfd6880371379f58ea4ea21384d49",
+    "docs/master-scope.md": "0b9e545b29166fc9572dece7ec3608564b89387be97dbb425addf6afd4c09e03",
+    "site/src/public-scope.json": "48562ee6f30c813ea89452b17771610f6e605a1e68bb648910310742acb95a60",
+    "site/src/scope-manifest.json": "7bb131c1d467867976ebbfd557ced10085f90e65d7e194ca7bce08ac7992f243",
+    "site/public/reference/public-scope.json": "48562ee6f30c813ea89452b17771610f6e605a1e68bb648910310742acb95a60",
+    "state.json": "52a5947c844be7664f49027baf55f1cbc10eae46dee3acc154d3259994aeab70",
+    "docs/local-setup-result.md": "5ed5154354c3a30905add7df3780989b770bfc696579218af0fc4f5d752afa66",
+    "docs/open-validation-path.md": "0beff5104547ce0fba1c8cda20aa8e33bfac6ad58873ded077e595ae71b3166b",
+    "scripts/verify-local-setup-evidence.py": "79ee5e3cf5b99e281ccb7491ede833f99f8fa668af00236b15f61ac3dca9b064",
+    "tests/test_local_setup_evidence.py": "041fbb9f4bf41b4f8575d05d1701bb6a151baf737bd4c98a067f88513297067b",
+    "eval/revalidation.json": "d1ba65d1094d1954962eb0c8a608309e759c37777bce0b8e3d8e21a9835b7dfe",
+    "tests/test_scoped_component_inputs.py": "6c470d255f244c9249a5aba057d7d99fdbb42e51a698e04fe376c3c6709ba7bc",
+    "scripts/verify-route-boundaries.py": "762c4330fbbe496b48fa7b36403fb33d0ad93afd6aba1df0e1c1df1c6af9c49a",
+    ".github/workflows/ci.yml": "015626c849d127c8f7d5ab9d10efdfba8b793d2aa5dacdbc5791efd00d34ecb6",
+    "Makefile": "3c40e0bff431d60c268e0ccdf160db5dacbb090fb8c02df110355b2e3754121b",
+    "runs/2026-10-13-one-command-linux-setup.json": "acab76526b9896b47f1b0426fbdfed4050f84cdaf501e380edc3964b9a6463e2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-one-command-linux-setup.json",
+      "sha256": "acab76526b9896b47f1b0426fbdfed4050f84cdaf501e380edc3964b9a6463e2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-13T22:51:17.899773+00:00"
+    }
+  ]
+}

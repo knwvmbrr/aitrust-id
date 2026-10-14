@@ -5619,35 +5619,56 @@
         "id": "F-105",
         "kind": "requirement",
         "title": "One documented command: clean clone → running stack",
-        "percent_complete": 60,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks"
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-13T23:47:08.225860+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — private one-command setup, effective-runtime inspection and actual Linux execution, 2026-10-13T22:49:20.606326+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Demonstrate clean-clone local stack setup on the current source and a supported outside-user machine; keep the account-free phone preview instructions separate.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-10-13T23:47:08.225860+00:00",
+        "completion_timestamp_basis": "Actual complete-input Linux clean-clone run and ten failure controls, 27 input hashes and downloaded-tree verification; no historical/human acceptance invented.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
           "tests/test_local_cli.py",
-          "docs/open-validation-path.md"
+          "docs/open-validation-path.md",
+          "scripts/setup-local.py",
+          "tests/test_local_setup.py",
+          "scripts/verify-local-setup-evidence.py",
+          "tests/test_local_setup_evidence.py",
+          "docs/local-setup-plan.md",
+          "docs/local-setup-result.md",
+          "runs/2026-10-13-clean-setup-owner-decision.json",
+          "runs/2026-10-13-one-command-linux-setup.json",
+          "runs/2026-10-13-one-command-complete-input-linux.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "historical_required_acceptance": [
           "Demonstrate clean-clone local stack setup on the current source and a supported outside-user machine; keep the account-free phone preview instructions separate."
         ],
-        "queue": "open"
+        "acceptance_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
+        "prior_completion_observation": {
+          "completed_at": "2026-10-13T22:49:20.606326+00:00",
+          "evidence": "runs/2026-10-13-one-command-linux-setup.json",
+          "reason": "Real running-stack proof retained; review identified incomplete build-input binding, requiring a fuller execution receipt."
+        }
       }
     },
     {

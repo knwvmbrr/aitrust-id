@@ -53,6 +53,8 @@ jobs:
       - run: python scripts/verify-scope-plan.py
       - run: python scripts/scope-progress.py
       - run: python scripts/verify-accountability.py
+      - name: Bind the actual clean Linux setup without granting human/tag acceptance
+        run: python scripts/verify-local-setup-evidence.py
       - run: python scripts/verify-decisions.py
       - name: Keep the approved metadata pilot disabled until operational gates pass
         run: python scripts/verify-research-policy.py

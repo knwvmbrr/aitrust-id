@@ -218,3 +218,7 @@ unchanged child status. They close their grouping jobs without completing their
 constituent tags/signals. All 202 records remain, now 123 complete / 79 open; the
 43-open target remains unmet. Actual independent labels, phones, human accessibility,
 role operation, legal review and deployment/recovery gates remain in their own jobs.
+
+## 2026-10-13 — One-command Linux setup accepted
+
+F-105 closes under the recorded owner separation from human acceptance. Actual clean-clone setup and ten failure/privacy/owned-cleanup controls pass; source and effective runtime are bound in the receipt. All 202 records remain: 124 complete, 78 open. The target of 43 open remains unmet, with 35 closures still needed. F-142, independent accuracy and collection gates remain open. See [setup result](local-setup-result.md).

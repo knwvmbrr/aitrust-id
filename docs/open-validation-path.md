@@ -14,23 +14,57 @@ Independent accuracy, accessibility and acceptance remain separate release gates
 
 ## Install and use
 
-Use Python 3.12+, Docker Engine with Compose (or existing Docker Desktop), and
-Git. Linux Engine/Compose is the open-source route; Docker Desktop has separate
-vendor licensing. Node 22+ is needed for browser/site tests, not this checker.
-Initial image/package/model downloads require a network.
+Use Python 3.12+, Git, and an already installed Linux Podman engine. The
+setup command does not install or grant access to a privileged engine. Engine
+permissions must already work (`podman info`). Initial image/package downloads
+require a network. The one-command acceptance was executed with Linux Podman and cached pinned
+dependencies. The `--engine docker` branch has not been runtime-tested; the older
+manual Docker Compose path remains available.
+Docker Desktop has separate vendor licensing. Node is not needed for this checker.
 
 ```sh
 git clone https://github.com/knwvmbrr/aitrust-id.git
 cd aitrust-id
-python3 -m venv .venv
-.venv/bin/python -m pip install --require-hashes -r eval/requirements.lock
-python3 scripts/aitrust.py init
-make deploy ENV_FILE="$HOME/.config/aitrust-id/runtime.env"
-.venv/bin/python scripts/aitrust.py doctor
-.venv/bin/python scripts/aitrust.py check response.txt
+python3 scripts/setup-local.py --engine podman
 ```
 
-Alternatively paste into `.venv/bin/python scripts/aitrust.py check`, then Ctrl-D.
+That single setup command creates an owner-private token and checker environment,
+builds three constrained services, verifies their effective limits and source
+identity, and tests the authenticated redaction/evaluation pipeline. It uses
+127.0.0.1:8787. A port conflict or existing setup directory fails without adopting
+or replacing another installation. The default private directory is
+`~/.config/aitrust-id/local-stack`; `--state-dir` selects another new private
+location outside the repository. An optional `--wheelhouse` supports offline,
+hash-locked checker installation with previously downloaded wheels. Image builds
+still need their initial downloads or an existing verified build cache.
+
+Check your own text after setup:
+
+```sh
+LOCAL_STATE="$HOME/.config/aitrust-id/local-stack"
+"$LOCAL_STATE/checker/bin/python" scripts/aitrust.py check response.txt --env-file "$LOCAL_STATE/runtime.env"
+```
+
+The recorded complete-input Linux acceptance used `--build-network host` for
+initial dependency downloads, an explicit option when an isolated builder cannot
+reach DNS. This permits image-build processes to reach host networking; choose
+it only for the reviewed, hash-locked build. Runtime service networks, ownership,
+resource limits and loopback binding stay isolated. The default remains private.
+
+```sh
+python3 scripts/setup-local.py --engine podman --build-network host
+```
+
+The setup path is an unsigned CLI development preview. Extension signing/key
+installation is separate; see [gateway authentication](gateway-authentication.md).
+It does not release PS, complete human accessibility acceptance or collect data.
+
+The existing manual Compose path remains available: create a private credential
+with `scripts/aitrust.py init`, install the hashed evaluation requirements in your
+own virtual environment, then use `make deploy` with that credential file.
+Do not mix the two installations on port 8787.
+
+Alternatively omit `response.txt` in the checker command, paste text, then Ctrl-D.
 `--json` prints the schema-validated record, without response text.
 `--fail-on-finding` returns 2 for a PS finding, 0 for a completed check otherwise,
 and 1 when no valid evaluation could be obtained. Uncertain is not a safety pass.
@@ -93,11 +127,17 @@ exists. Successful setup does not override it.
 Stop only this project's services:
 
 ```sh
-make down ENV_FILE="$HOME/.config/aitrust-id/runtime.env"
+python3 scripts/setup-local.py --stop
+# For the older manual Compose installation only:
+# make down ENV_FILE="$HOME/.config/aitrust-id/runtime.env"
 ```
 
 Remove the extension token before unloading it. Retain or remove your own local
-configuration separately. No unrelated Docker cleanup is part of uninstall.
+configuration separately. The stop command checks recorded resource IDs and matching ownership labels. It
+retains private files, removes only its own containers/networks/images, and
+refuses resources whose ownership changed. No unrelated engine cleanup occurs.
+A failed setup keeps its private record; inspect it before removing private files
+and retrying. Failure is not readiness.
 Do not upload real content to the research hosts.
 
 

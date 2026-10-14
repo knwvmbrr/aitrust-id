@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-10-13T22:59:33.881494+00:00",
+  "requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "collection_enabled": false,
+  "scope": "Retained failed automated setup/fixture attempts; none counted as acceptance. Current success has its own actual Linux receipt.",
+  "failures": [
+    {
+      "stage": "preparation",
+      "signature": "uppercase_test_image_tag_rejected",
+      "kind": "fixture"
+    },
+    {
+      "stage": "dependency_build",
+      "signature": "build_DNS_resolution_unavailable",
+      "kind": "environment"
+    },
+    {
+      "stage": "network_ownership_inspection",
+      "signature": "lowercase_Podman_network_labels_not_recognized",
+      "kind": "implementation"
+    },
+    {
+      "stage": "runtime_capability_inspection",
+      "signature": "ALL_expanded_by_Podman",
+      "kind": "implementation"
+    },
+    {
+      "stage": "isolated_namespace_runtime",
+      "signature": "DNS_helper_namespace_and_global_runtime_directory_mismatch",
+      "kind": "fixture"
+    },
+    {
+      "stage": "gateway_pipeline",
+      "signature": "container_DNS_alias_dependencies_unavailable",
+      "kind": "implementation"
+    }
+  ],
+  "resolution": "Current setup validates all actual process capability sets, uses the real engine inspection contracts and pins gateway URLs to owned private-network addresses. Actual setup, log/privacy checks and ten real failure controls pass; staging was restored."
+}

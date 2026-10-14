@@ -120,6 +120,9 @@ PATTERNS += ('tools/conformance_recusal.py','scripts/check-conformance-votes.py'
              'scripts/build-firefox-extension.py','scripts/verify-firefox-extension.py','scripts/verify-firefox-permissions.cjs',
              'tests/test_firefox_package.py','tests/test_firefox_driver_protocol.py','tests/firefox-permissions.cjs',
              'docs/scope-groups.json','scripts/verify-scope-groups.py','tests/test_scope_groups.py')
+PATTERNS += ('scripts/setup-local.py','scripts/verify-local-setup-evidence.py',
+             'tests/test_local_setup.py','tests/test_local_setup_evidence.py',
+             'docs/local-setup-plan.md','docs/local-setup-result.md','docs/open-validation-path.md')
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
