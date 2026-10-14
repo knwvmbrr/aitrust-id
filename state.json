@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T12:07:57.575237+00:00",
+  "updated": "2026-10-14T12:27:25.179572+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3356,
+  "python_tests_passed": 3493,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -365,7 +365,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "Complete current tests/ suite against 743 unchanged reviewed source inputs; five platform skips and one upstream warning; not independent tag accuracy.",
+  "python_tests_scope": "Complete current tests/ suite on 786 unchanged reviewed source inputs; five platform skips and one upstream warning. Not independent accuracy or physical-device acceptance.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -1055,7 +1055,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T12:07:57.575237+00:00",
+  "updated_at": "2026-10-14T12:27:25.179572+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1904,10 +1904,10 @@
     "primary_preservation": "runs/2026-10-12-editorial-primary-preservation.json"
   },
   "python_tests_current_pass": {
-    "passed": 3335,
+    "passed": 3493,
     "skipped": 5,
     "source_unchanged": true,
-    "evidence": "runs/2026-10-13-complete-setup-reviewed-full-suite.json",
+    "evidence": "runs/2026-10-14-tag-isolation-full-suite-v2.json",
     "independent_accuracy_evidence": false
   },
   "restore_isolation": {
@@ -2543,7 +2543,7 @@
   },
   "tag_failure_isolation": {
     "plan": "docs/tag-failure-isolation-plan.md",
-    "status": "actual_linux_multi_tag_faults_and_current_five_component_revalidation_pass; full_suite_and_publication_pending",
+    "status": "current_source_and_actual_linux_browser_full_suite_pass; protected_publication_pending",
     "gateway_reservations": {
       "complete_pipeline": 3,
       "privacy_only": 1
@@ -2563,6 +2563,14 @@
     "actual_batch_failure_cases": 4,
     "result": "docs/tag-failure-isolation-result.md",
     "fixture_cleanup": "runs/2026-10-14-tag-isolation-fixture-cleanup.json",
-    "current_component_commands": 68
+    "current_component_commands": 68,
+    "python_tests_passed": 3493,
+    "python_tests_skipped": 5,
+    "full_suite": "runs/2026-10-14-tag-isolation-full-suite-v2.json",
+    "browser_survival": "runs/2026-10-14-tag-isolation-device-browser.json",
+    "browser_engines": 2,
+    "platform_browser_failure_cases": 6,
+    "whole_requirements_closed": 0,
+    "publication_pending": true
   }
 }

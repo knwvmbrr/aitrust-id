@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-122725-complete-tag-isolation-regression-and-bindings-275929a0
+
+Recorded 2026-10-14T12:27:25.259014+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete current-source regression pass, preserve its first five-failure run, align unsupported-media tests with the reserved three-plus-one slots and bind the freshly committed browser evidence.
+- **Evidence.** 3493 tests pass with five platform skips and unchanged source; the current route boundary guard verifies 786 inputs and the new committed two-engine device evidence. All 202 scope records remain, 124 complete and 78 open; goal 45. [Change record](./runs/changes/2026-10-14-122725-complete-tag-isolation-regression-and-bindings-275929a0.json).
+- **Not claimed.** Software/browser/Linux tests do not replace independent labels, physical devices, human accessibility or legal acceptance. No new full requirement closure or tag release.
+
+
 ### 2026-10-14-121146-current-independent-tag-browser-acceptance-4fcc5da2
 
 Recorded 2026-10-14T12:11:46.478530+00:00 · Contributor: Codex · change
