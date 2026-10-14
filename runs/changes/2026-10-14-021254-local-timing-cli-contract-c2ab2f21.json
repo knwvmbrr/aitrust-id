@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-021254-local-timing-cli-contract-c2ab2f21",
+  "recorded_at": "2026-10-14T02:12:54.099085+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "09b461c26a98b4e7b488c50f0a448c276516e0ba",
+  "changed": "Update the timing command parser to pass exact generated local identifiers through the existing strict measurement admission, and test the actual CLI boundary.",
+  "proves": "54 timing admission and privacy controls pass, including function and CLI local-project support.",
+  "limits": "New timing measurements are still pending; an isolated dependency-download preflight failed before services were changed and is being diagnosed.",
+  "scope_ids": [
+    "F-113"
+  ],
+  "files": {
+    "scripts/measure-pipeline-performance.py": "83f223a2b15de9a3c3a038ac7225d27061efd6fb1066c14348138d16e9b5dae4",
+    "tests/test_pipeline_performance.py": "134d012e7be672d98065fbc3ef5c1e21fc70bb4c0609718fa2288c5941a1a69a"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_pipeline_performance.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T02:12:56.315391+00:00"
+    }
+  ]
+}

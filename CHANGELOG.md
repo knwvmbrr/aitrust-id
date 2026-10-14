@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-021254-local-timing-cli-contract-c2ab2f21
+
+Recorded 2026-10-14T02:12:54.099085+00:00 · Contributor: Codex · change
+
+- **Changed.** Update the timing command parser to pass exact generated local identifiers through the existing strict measurement admission, and test the actual CLI boundary.
+- **Evidence.** 54 timing admission and privacy controls pass, including function and CLI local-project support. [Change record](./runs/changes/2026-10-14-021254-local-timing-cli-contract-c2ab2f21.json).
+- **Not claimed.** New timing measurements are still pending; an isolated dependency-download preflight failed before services were changed and is being diagnosed.
+
+
 ### 2026-10-14-021019-privacy-current-browser-and-timing-contract-a604d32f
 
 Recorded 2026-10-14T02:10:19.129438+00:00 · Contributor: Codex · change

@@ -118,6 +118,20 @@ def test_unselected_local_project_refuses_before_http(tmp_path,monkeypatch,proje
     assert not opener.requests
 
 
+def test_cli_passes_generated_local_project_to_the_same_admission_contract(tmp_path,monkeypatch):
+    project='aitrust-local-'+'a'*32
+    seen=[]
+    monkeypatch.setattr(module.sys,'argv',['measure','--env-file',str(tmp_path/'private.env'),
+        '--project',project,'--output',str(tmp_path/'result.json')])
+    def selected(env_file,selected_project):
+        seen.append((env_file,selected_project))
+        return {'pass':True,'profile_count':12}
+    monkeypatch.setattr(module,'measure',selected)
+    monkeypatch.setattr(module,'write_report',lambda *_:None)
+    assert module.main()==0
+    assert seen==[(tmp_path/'private.env',project)]
+
+
 @pytest.mark.parametrize('corrupt',[
     lambda r:r['evaluator']['models'][0].__setitem__('sha256','b'*64),
     lambda r:r['subject'].__setitem__('sha256','b'*64),

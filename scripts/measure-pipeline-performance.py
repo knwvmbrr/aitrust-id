@@ -196,7 +196,8 @@ def measure(env_file,project,opener=None,clock=time.perf_counter):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--env-file',type=Path,required=True)
-    parser.add_argument('--project',required=True,choices=['aitrust-staging'])
+    parser.add_argument('--project',required=True,
+        help='aitrust-staging or the exact generated aitrust-local project identifier')
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
     try:record=measure(args.env_file,args.project)
