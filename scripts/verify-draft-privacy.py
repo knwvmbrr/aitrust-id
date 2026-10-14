@@ -53,6 +53,11 @@ def verify(env_file,setup_state=None,replay_python=None):
                 # Engine health may retain its pre-stop value. Probe the newly
                 # started process before trusting readiness after a restart.
                 engine.run('exec',identity,'python','healthcheck.py')
+                target=setup.inspection_address(row,state['networks'][0])
+                probe="import json,sys,urllib.request;op=urllib.request.build_opener(urllib.request.ProxyHandler({}));" \
+                      "r=op.open('http://"+target+":8000/healthz',timeout=2);" \
+                      "sys.exit(0 if r.status==200 and json.load(r).get('ok') is True else 1)"
+                engine.run('exec',state['containers'][2],'python','-c',probe)
                 if row['State']['Running']:return
             except setup.SetupError:pass
             time.sleep(.5)
@@ -121,7 +126,27 @@ def verify(env_file,setup_state=None,replay_python=None):
                 if setup.inspection_address(after_row,state['networks'][0])!=address:
                     raise ValueError('A private dependency address changed across restart')
                 stopped.remove(identity)
-            check('actual_dependencies_restored_privacy_works')
+            try:check('actual_dependencies_restored_privacy_works')
+            except aitrust.LocalCheckError:
+                # Diagnose only fixed status/contract fields, never bodies,
+                # exception messages, private addresses or environment values.
+                diagnostic="""import json,httpx,os
+from app import Redaction
+try:
+ with httpx.Client(timeout=10,trust_env=False) as client:
+  response=client.post(os.environ['ANONYMIZER_URL']+'/redact',json={'text':'Email alice@example.com'})
+ result={'status':response.status_code,'valid_contract':False}
+ if response.status_code==200:
+  try:Redaction.model_validate(response.json());result['valid_contract']=True
+  except ValueError:pass
+except Exception:result={'status':'transport_unavailable','valid_contract':False}
+print(json.dumps(result))"""
+                data=json.loads(engine.run('exec',state['containers'][2],'python','-c',diagnostic))
+                write_report(ROOT/'output/verification/privacy-recovery-diagnostic.json',{
+                    'captured_at':datetime.now(timezone.utc).isoformat(),'pass':False,
+                    'redactor_status':data['status'],'redactor_contract_valid':data['valid_contract'],
+                    'independent_accuracy_evidence':False},root=ROOT)
+                raise
             for identity in state['containers']:
                 setup.owned(engine,'container',identity,state['project'])
                 logged=subprocess.run([engine.binary,'logs',identity],capture_output=True,timeout=30)

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-014459-privacy-network-path-readiness-77469043",
+  "recorded_at": "2026-10-14T01:44:59.230141+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6efd9d7b7b1f6a55fb8df814e0272ec93bc03cc4",
+  "changed": "Probe readiness through the owned gateway network after restart and record only fixed redactor status/contract diagnostics on failure.",
+  "proves": "The verifier compiles; a cached container health flag alone cannot now declare network recovery.",
+  "limits": "Actual repaired recovery remains to be demonstrated; no acceptance is claimed by syntax verification.",
+  "scope_ids": [
+    "F-024",
+    "F-105",
+    "F-073"
+  ],
+  "files": {
+    "scripts/verify-draft-privacy.py": "86b0bb958bfd975f506ff601ce107dc7d84e40093f15e12444c07acbbebc8c51"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/verify-draft-privacy.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T01:44:59.283043+00:00"
+    }
+  ]
+}

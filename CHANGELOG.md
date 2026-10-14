@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-014459-privacy-network-path-readiness-77469043
+
+Recorded 2026-10-14T01:44:59.230141+00:00 · Contributor: Codex · change
+
+- **Changed.** Probe readiness through the owned gateway network after restart and record only fixed redactor status/contract diagnostics on failure.
+- **Evidence.** The verifier compiles; a cached container health flag alone cannot now declare network recovery. [Change record](./runs/changes/2026-10-14-014459-privacy-network-path-readiness-77469043.json).
+- **Not claimed.** Actual repaired recovery remains to be demonstrated; no acceptance is claimed by syntax verification.
+
+
 ### 2026-10-14-013129-reserve-private-backend-addresses-4d8b3ba4
 
 Recorded 2026-10-14T01:31:29.974879+00:00 · Contributor: Codex · change
