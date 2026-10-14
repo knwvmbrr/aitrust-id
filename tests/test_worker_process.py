@@ -44,12 +44,20 @@ def test_deadline_kills_descendant_holding_the_output_pipe(tmp_path):
     code='import os,sys,time;pid=os.fork();open('+repr(str(marker))+',"w").write(str(pid)) if pid else time.sleep(30)'
     with pytest.raises(subprocess.TimeoutExpired):run(code,timeout=.3)
     pid=int(marker.read_text())
-    # A killed orphan can briefly remain a zombie before init reaps it.
-    status=Path('/proc')/str(pid)/'stat'
-    if status.exists():assert status.read_text().split()[2]=='Z'
-    else:
-        observed=subprocess.run(['ps','-o','stat=','-p',str(pid)],capture_output=True,timeout=2)
-        assert observed.returncode!=0 or observed.stdout.strip().startswith(b'Z')
+    # Signal delivery to descendants can lag behind the reaped group leader.
+    # Require observed exit/zombie within a bounded grace period, on both OSes.
+    deadline=time.monotonic()+2
+    while True:
+        status=Path('/proc')/str(pid)/'stat'
+        if status.exists():
+            try:dead=status.read_text().split()[2]=='Z'
+            except FileNotFoundError:dead=True
+        else:
+            observed=subprocess.run(['ps','-o','stat=','-p',str(pid)],capture_output=True,timeout=2)
+            dead=observed.returncode!=0 or observed.stdout.strip().startswith(b'Z')
+        if dead:break
+        assert time.monotonic()<deadline,'Owned descendant remained running after group kill'
+        time.sleep(.02)
 
 
 def test_stderr_is_discarded_and_nonzero_exit_preserved():

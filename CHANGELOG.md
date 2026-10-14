@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-125617-observe-worker-descendant-termination-dff9e45e
+
+Recorded 2026-10-14T12:56:17.410347+00:00 · Contributor: Codex · change
+
+- **Changed.** Observe descendant termination within a bounded two-second signal-delivery grace period rather than assuming every OS schedules the killed descendant before the parent is reaped.
+- **Evidence.** Actual flood and deadline controls still require the owned process to exit or become a zombie; running descendants fail the check. This does not skip or weaken the group-kill requirement. [Change record](./runs/changes/2026-10-14-125617-observe-worker-descendant-termination-dff9e45e.json).
+- **Not claimed.** A killed zombie is not a running worker. Remaining Linux, current-source and protected publication checks are pending; no new scope closure or tag accuracy claim.
+
+
 ### 2026-10-14-124830-enforce-tag-worker-output-budget-c9bc47d0
 
 Recorded 2026-10-14T12:48:30.640693+00:00 · Contributor: Codex · change
