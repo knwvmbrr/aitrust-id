@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-111225-isolate-privacy-contract-and-browser-failures-6de7a2c2
+
+Recorded 2026-10-14T11:12:25.888961+00:00 · Contributor: Codex · change
+
+- **Changed.** Place privacy independence acceptance in its existing PII-01 contract, remove an accidental duplicate filename, and require the catalogue and other tag panel to remain usable after PS worker corruption, unsupported worker and timeout.
+- **Evidence.** Existing tag package crosswalk retains all 202 scope records and rejects cross-tag dependencies. Browser navigation checks are implemented and syntax checked; their runtime execution is pending. [Change record](./runs/changes/2026-10-14-111225-isolate-privacy-contract-and-browser-failures-6de7a2c2.json).
+- **Not claimed.** The added browser scenarios are not yet runtime verified. Real Linux and source-bound component/browser verification remain pending. No scope closure or independent accuracy claim.
+
+
 ### 2026-10-14-110502-independent-tag-usage-and-fault-tests-bde23bc2
 
 Recorded 2026-10-14T11:05:02.157027+00:00 · Contributor: Codex · change

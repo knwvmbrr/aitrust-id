@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-14T11:08:34.832760+00:00",
+  "pass": false,
+  "phase": "private_linux_isolation_driver",
+  "failure_signature": "NameError: state",
+  "cause": "New private fault-injection block referenced the setup state before binding it",
+  "fix": "Load the existing setup module and bind the inspected initial state; check global dependencies before clean rerun",
+  "application_defect_asserted": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false
+}
