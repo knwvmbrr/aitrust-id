@@ -107,7 +107,9 @@
         "runs/2026-10-14-tag-isolation-real-linux.json",
         "runs/2026-10-14-tag-isolation-privacy-linux.json",
         "runs/2026-10-14-tag-isolation-service-linux.json",
-        "runs/2026-10-14-tag-isolation-replay-linux.json"
+        "runs/2026-10-14-tag-isolation-replay-linux.json",
+        "scripts/verify-tag-isolation.py",
+        "tests/test_tag_isolation_verifier.py"
       ],
       "commands": [
         [
@@ -134,6 +136,13 @@
           "pytest",
           "tests/test_tag_failure_isolation.py",
           "tests/test_gateway_runtime_isolation.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_tag_isolation_verifier.py",
           "-q"
         ]
       ]
@@ -297,7 +306,9 @@
         "runs/2026-10-14-tag-isolation-real-linux.json",
         "runs/2026-10-14-tag-isolation-privacy-linux.json",
         "runs/2026-10-14-tag-isolation-service-linux.json",
-        "runs/2026-10-14-tag-isolation-replay-linux.json"
+        "runs/2026-10-14-tag-isolation-replay-linux.json",
+        "scripts/verify-tag-isolation.py",
+        "tests/test_tag_isolation_verifier.py"
       ],
       "commands": [
         [
@@ -461,6 +472,13 @@
           "tests/test_tag_failure_isolation.py",
           "tests/test_gateway_runtime_isolation.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_tag_isolation_verifier.py",
+          "-q"
         ]
       ]
     },
@@ -522,7 +540,9 @@
         "runs/2026-10-14-tag-isolation-real-linux.json",
         "runs/2026-10-14-tag-isolation-privacy-linux.json",
         "runs/2026-10-14-tag-isolation-service-linux.json",
-        "runs/2026-10-14-tag-isolation-replay-linux.json"
+        "runs/2026-10-14-tag-isolation-replay-linux.json",
+        "scripts/verify-tag-isolation.py",
+        "tests/test_tag_isolation_verifier.py"
       ],
       "commands": [
         [
@@ -584,6 +604,13 @@
           "pytest",
           "tests/test_tag_failure_isolation.py",
           "tests/test_gateway_runtime_isolation.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_tag_isolation_verifier.py",
           "-q"
         ]
       ]

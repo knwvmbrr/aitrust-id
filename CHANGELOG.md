@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-111727-reusable-owned-tag-fault-verifier-9846f152
+
+Recorded 2026-10-14T11:17:27.286162+00:00 · Contributor: Codex · change
+
+- **Changed.** Replace the fragile private fault block with a reusable public owned-setup verifier that checks source identity and the schema environment before pausing any dependency, refuses unrelated runtimes and restores failures.
+- **Evidence.** Nine verifier refusal/preflight tests pass. Current gateway saturation and standalone method checks pass; the new actual Linux verifier is prepared for execution. [Change record](./runs/changes/2026-10-14-111727-reusable-owned-tag-fault-verifier-9846f152.json).
+- **Not claimed.** The reusable fault verifier still needs its actual Linux run. Previous private-driver failures are retained; no independent accuracy, all-tag operation or new full scope closure is asserted.
+
+
 ### 2026-10-14-111225-isolate-privacy-contract-and-browser-failures-6de7a2c2
 
 Recorded 2026-10-14T11:12:25.888961+00:00 · Contributor: Codex · change
