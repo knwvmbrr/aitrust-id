@@ -28,3 +28,20 @@ independence with the owned evaluator stopped. Refresh the complete-input Linux
 setup and replay evidence when bound sources change. No local Docker is used.
 Keep physical/human acceptance and independently labeled PII recognition open;
 manual pre-send checking is not browser interception or an outbound-tag release.
+
+## Observed recovery defect and repair plan
+
+The real privacy-only request worked with the owned evaluator stopped. Recovery
+then failed. A separate owned-container probe confirmed that Podman's dynamic
+private address changes across stop/start, while an explicitly reserved address
+does not. The gateway's inspected private URLs must therefore bind reserved
+backend addresses. Select two usable IPv4 addresses only from the newly owned
+internal subnet, exclude its gateway and broadcast, refuse ambiguous/public or
+undersized networks, pass explicit IPs at container creation and verify their
+effective values. The gateway's published port and network isolation stay fixed.
+This changes the setup input and requires fresh clean-clone acceptance.
+
+Also replace cached engine-health trust after restart with a live health command.
+Check address stability and actual privacy/replay behavior after recovery; never
+count a cached Healthy flag as successful restoration. The original staging
+services stay unchanged; only newly owned synthetic dependencies are disrupted.

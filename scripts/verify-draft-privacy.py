@@ -49,8 +49,11 @@ def verify(env_file,setup_state=None,replay_python=None):
         deadline=time.monotonic()+60
         while time.monotonic()<deadline:
             row=setup.owned(engine,'container',identity,state['project'])
-            if row['State'].get('Health',{}).get('Status')=='healthy':return
-            try:engine.run('exec',identity,'python','healthcheck.py')
+            try:
+                # Engine health may retain its pre-stop value. Probe the newly
+                # started process before trusting readiness after a restart.
+                engine.run('exec',identity,'python','healthcheck.py')
+                if row['State']['Running']:return
             except setup.SetupError:pass
             time.sleep(.5)
         raise ValueError('Owned dependency health was not restored')
@@ -105,14 +108,19 @@ def verify(env_file,setup_state=None,replay_python=None):
             cli_checks(folder/'checker/bin/python')
             for role,index in [('evaluator',1),('anonymizer',0)]:
                 identity=state['containers'][index]
-                setup.owned(engine,'container',identity,state['project'])
+                before_row=setup.owned(engine,'container',identity,state['project'])
+                address=setup.inspection_address(before_row,state['networks'][0])
                 engine.run('stop','--time','15',identity);stopped.append(identity)
                 if role=='evaluator':
                     check('actual_evaluator_down_privacy_still_works')
                     refusal('actual_evaluator_down_full_check_unavailable',{'text':'synthetic'})
                 else:
                     refusal('actual_redactor_down_privacy_unavailable',{'text':'synthetic','check_mode':'privacy'})
-                restore(identity);stopped.remove(identity)
+                restore(identity)
+                after_row=setup.owned(engine,'container',identity,state['project'])
+                if setup.inspection_address(after_row,state['networks'][0])!=address:
+                    raise ValueError('A private dependency address changed across restart')
+                stopped.remove(identity)
             check('actual_dependencies_restored_privacy_works')
             for identity in state['containers']:
                 setup.owned(engine,'container',identity,state['project'])

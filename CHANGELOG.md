@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-013129-reserve-private-backend-addresses-4d8b3ba4
+
+Recorded 2026-10-14T01:31:29.974879+00:00 · Contributor: Codex · change
+
+- **Changed.** Reserve checked backend addresses inside the newly owned internal IPv4 subnet and verify live readiness/address stability after restart.
+- **Evidence.** The actual Podman probe changes a dynamic address and preserves an explicitly reserved address. 211 focused checks pass, including invalid/public/ambiguous subnet refusals. [Change record](./runs/changes/2026-10-14-013129-reserve-private-backend-addresses-4d8b3ba4.json).
+- **Not claimed.** The failed real recovery remains recorded. Complete repaired Linux setup/service/privacy checks are still required; no independent accuracy or new tag release is claimed.
+
+
 ### 2026-10-14-011413-privacy-safe-failure-diagnostics-950e0f98
 
 Recorded 2026-10-14T01:14:13.102702+00:00 · Contributor: Codex · change

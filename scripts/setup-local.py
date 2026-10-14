@@ -178,6 +178,42 @@ def inspection_address(row, network_id):
     return str(address)
 
 
+def private_dependency_addresses(network):
+    """Reserve restart-stable backends only in the newly owned internal subnet."""
+    if network.get('Internal', network.get('internal')) is not True:
+        raise SetupError('Backend address reservation requires an internal network.')
+    if 'subnets' in network:rows=network['subnets']
+    else:
+        if not isinstance(network.get('IPAM'),dict):
+            raise SetupError('Private network subnet information is unavailable.')
+        rows=network['IPAM'].get('Config',[])
+    if not isinstance(rows,list) or not 1<=len(rows)<=8:
+        raise SetupError('Private network subnet information is unavailable.')
+    choices=[]
+    for row in rows:
+        if not isinstance(row,dict):raise SetupError('Private network subnet information is invalid.')
+        try:
+            subnet=ipaddress.ip_network(row.get('subnet',row.get('Subnet','')),strict=True)
+        except (ValueError,TypeError):
+            raise SetupError('Private network subnet information is invalid.') from None
+        if subnet.version!=4:continue
+        try:gateway=ipaddress.ip_address(row.get('gateway',row.get('Gateway','')))
+        except (ValueError,TypeError):raise SetupError('Private network gateway is invalid.') from None
+        if (subnet.num_addresses<8 or gateway not in subnet
+                or gateway in (subnet.network_address,subnet.broadcast_address)
+                or not any(subnet.subnet_of(ipaddress.ip_network(c))
+                           for c in ('10.0.0.0/8','172.16.0.0/12','192.168.0.0/16'))):
+            raise SetupError('A usable private IPv4 subnet is required.')
+        choices.append((subnet,gateway))
+    if len(choices)!=1:raise SetupError('Private IPv4 address reservation is ambiguous.')
+    subnet,gateway=choices[0]
+    candidates=[subnet.network_address+i for i in range(2,7)
+                if subnet.network_address+i<subnet.broadcast_address
+                and subnet.network_address+i!=gateway]
+    if len(candidates)<2:raise SetupError('Private subnet lacks two backend addresses.')
+    return {'anonymizer':str(candidates[0]),'evaluator':str(candidates[1])}
+
+
 def build_dns(paths=(Path('/etc/resolv.conf'), Path('/run/systemd/resolve/resolv.conf'))):
     """Reuse configured upstream DNS; a host loopback stub cannot serve a builder."""
     for path in paths:
@@ -236,6 +272,7 @@ def build_and_start(engine, folder, state, build_network='private'):
         networks[name] = identity
         write_state(folder, state)
         owned(engine, 'network', identity, project)
+    reserved=private_dependency_addresses(owned(engine,'network',networks['inspection'],project))
     addresses = {}
     for role in ROLES:
         first_network = 'edge' if role == 'gateway' else 'inspection'
@@ -246,6 +283,7 @@ def build_and_start(engine, folder, state, build_network='private'):
                 '--tmpfs=/tmp:rw,noexec,nosuid,size=64m', '--network', networks[first_network],
                 '--network-alias', role, '--health-cmd=python healthcheck.py',
                 '--health-interval=5s', '--health-timeout=3s', '--health-retries=12']
+        if role!='gateway':args.extend(['--ip',reserved[role]])
         if role == 'gateway':
             if engine.name == 'podman':
                 # Configure the complete DNS/network scope before Podman starts
@@ -263,6 +301,8 @@ def build_and_start(engine, folder, state, build_network='private'):
         engine.run('start', identity)
         if role != 'gateway':
             addresses[role] = inspection_address(owned(engine, 'container', identity, project), networks['inspection'])
+            if addresses[role]!=reserved[role]:
+                raise SetupError('The engine did not apply the reserved backend address.')
 
 
 def verify_security(engine, state):

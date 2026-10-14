@@ -20,6 +20,37 @@ def state():
             'containers': ['b' * 64], 'networks': ['c' * 64], 'images': ['d' * 64], 'status': 'starting'}
 
 
+@pytest.mark.parametrize('network',[
+    {'internal':True,'subnets':[{'subnet':'10.89.0.0/24','gateway':'10.89.0.1'}]},
+    {'Internal':True,'IPAM':{'Config':[{'Subnet':'10.89.0.0/24','Gateway':'10.89.0.1'}]}},
+])
+def test_backends_get_distinct_reserved_private_addresses(network):
+    assert setup.private_dependency_addresses(network)=={'anonymizer':'10.89.0.2','evaluator':'10.89.0.3'}
+
+
+def test_reserved_addresses_exclude_a_nonstandard_gateway():
+    row={'internal':True,'subnets':[{'subnet':'172.22.0.0/24','gateway':'172.22.0.2'}]}
+    assert setup.private_dependency_addresses(row)=={'anonymizer':'172.22.0.3','evaluator':'172.22.0.4'}
+
+
+@pytest.mark.parametrize('network',[
+    {'internal':False,'subnets':[{'subnet':'10.89.0.0/24','gateway':'10.89.0.1'}]},
+    {'internal':True,'subnets':[]},
+    {'internal':True,'IPAM':None},
+    {'internal':True,'subnets':[None]},
+    {'internal':True,'subnets':[{'subnet':'bad','gateway':'10.89.0.1'}]},
+    {'internal':True,'subnets':[{'subnet':'8.8.8.0/24','gateway':'8.8.8.1'}]},
+    {'internal':True,'subnets':[{'subnet':'10.89.0.0/31','gateway':'10.89.0.1'}]},
+    {'internal':True,'subnets':[{'subnet':'10.89.0.0/24','gateway':'10.90.0.1'}]},
+    {'internal':True,'subnets':[{'subnet':'10.89.0.0/24','gateway':'10.89.0.0'}]},
+    {'internal':True,'subnets':[{'subnet':'fd00::/64'}]},
+    {'internal':True,'subnets':[{'subnet':'10.89.0.0/24','gateway':'10.89.0.1'},
+                              {'subnet':'10.90.0.0/24','gateway':'10.90.0.1'}]},
+])
+def test_untrusted_or_ambiguous_subnet_cannot_choose_backend_addresses(network):
+    with pytest.raises(setup.SetupError):setup.private_dependency_addresses(network)
+
+
 def test_state_is_private_exclusive_and_outside_repo(tmp_path):
     folder = setup.private_directory(tmp_path / 'private', create=True)
     setup.write_state(folder, state())
