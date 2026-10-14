@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-030154-publication-summary-review-correction-b208ffa9",
+  "recorded_at": "2026-10-14T03:01:54.823851+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6776c268a0d4bde6287f04fb8b9005e83b76ce99",
+  "changed": "Correct the second latest-runtime summary identified by review, retaining its previous snapshot and aligning current source, preview, artifact/header counts and closure count with actual publication evidence.",
+  "proves": "Latest runtime and website summaries agree with the immutable actual launch receipt: df715ce source, 783 matched artifacts, six exact headers per origin and zero additional requirement closures.",
+  "limits": "This is metadata reconciliation; no runtime, tag release or accuracy claim changes. The review finding is fixed before protected merge.",
+  "scope_ids": [
+    "F-024",
+    "F-105"
+  ],
+  "files": {
+    "state.json": "e7b75cbe03833ceb6c056e9de47051893fe378b354aebaacbe595df1c62f29fd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-draft-privacy-live-publication.json",
+      "sha256": "1bcbedc31ef179c4f8a6acaf575d1d7d77dd04202be86e77077acfbb7a597b2f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T03:01:55.973147+00:00"
+    }
+  ]
+}

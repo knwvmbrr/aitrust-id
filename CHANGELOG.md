@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-030154-publication-summary-review-correction-b208ffa9
+
+Recorded 2026-10-14T03:01:54.823851+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the second latest-runtime summary identified by review, retaining its previous snapshot and aligning current source, preview, artifact/header counts and closure count with actual publication evidence.
+- **Evidence.** Latest runtime and website summaries agree with the immutable actual launch receipt: df715ce source, 783 matched artifacts, six exact headers per origin and zero additional requirement closures. [Change record](./runs/changes/2026-10-14-030154-publication-summary-review-correction-b208ffa9.json).
+- **Not claimed.** This is metadata reconciliation; no runtime, tag release or accuracy claim changes. The review finding is fixed before protected merge.
+
+
 ### 2026-10-14-025214-draft-privacy-live-publication-33a7c9cc
 
 Recorded 2026-10-14T02:52:14.097291+00:00 · Contributor: Codex · change
