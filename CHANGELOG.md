@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased — 2026-10-14
+
+### 2026-10-14-001610-floor-audit-current-regressions-a6e47700
+
+Recorded 2026-10-14T00:16:10.480691+00:00 · Contributor: Codex · change
+
+- **Changed.** Record successful current website phases, reviewed personal route inventory and full regression execution after refreshing browser evidence.
+- **Evidence.** All 3356 Python tests pass with five platform skips; all five capability receipts and eight website phases pass on stable current source. [Change record](./runs/changes/2026-10-14-001610-floor-audit-current-regressions-a6e47700.json).
+- **Not claimed.** The prior stale-evidence failure is retained. No independent accuracy, human acceptance, new tag release or additional scope closure is claimed.
+
+
+### 2026-10-14-001141-floor-current-source-receipts-74228ebe
+
+Recorded 2026-10-14T00:11:41.090487+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh current protocol and extension receipts and generated public scope after the confidence-floor HTTP audit; retain the full-suite refusal of stale browser evidence.
+- **Evidence.** Current protocol and extension executions pass; stale browser receipts are refused before publication. [Change record](./runs/changes/2026-10-14-001141-floor-current-source-receipts-74228ebe.json).
+- **Not claimed.** The retained full-suite attempt fails two boundary checks until the refreshed website and current review are recorded. No new requirement is completed.
+
+
+### 2026-10-14-000837-setup-publication-and-floor-enforcement-audit-8c67e6f2
+
+Recorded 2026-10-14T00:08:37.987664+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected F-105 deployment, complete-input fixture cleanup and exact live build; expand HTTP confidence-floor and inactive-code checks and reconcile F-005 to its evidenced 60% milestone.
+- **Evidence.** All 777 live artifact comparisons and five headers per origin match; all 59 focused HTTP/release/refusal tests pass; all 202 scope records remain with 124 complete and 78 open. [Change record](./runs/changes/2026-10-14-000837-setup-publication-and-floor-enforcement-audit-8c67e6f2.json).
+- **Not claimed.** F-005 calibration remains open; synthetic upstream responses are not independent accuracy. F-142 real-person install and accessibility acceptance remains open; collection stays disabled.
+
+
 ## Unreleased — 2026-10-13
 
 ### 2026-10-13-235630-reviewed-complete-setup-regression-212cd782

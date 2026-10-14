@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-001610-floor-audit-current-regressions-a6e47700",
+  "recorded_at": "2026-10-14T00:16:10.480691+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
+  "changed": "Record successful current website phases, reviewed personal route inventory and full regression execution after refreshing browser evidence.",
+  "proves": "All 3356 Python tests pass with five platform skips; all five capability receipts and eight website phases pass on stable current source.",
+  "limits": "The prior stale-evidence failure is retained. No independent accuracy, human acceptance, new tag release or additional scope closure is claimed.",
+  "scope_ids": [
+    "F-005",
+    "F-105"
+  ],
+  "files": {
+    "docs/confidence-floor-audit.md": "9e8963b711f5a17e85e415f0c86a57c65bc786914ced39cbf489213927f5ed6f",
+    "docs/scope-progress.json": "91dc6327d289ce9b56dd2b0174718cf116a5b0ba34e9d1a58dda3c529b5db05c",
+    "docs/scope-progress.md": "65b889c58e373fe95ce571c65a3e6db5419ac03fdfb0193907177151ef874f04",
+    "docs/scope-task-index.md": "37c81650d6f6697246d555cd0c5eadd9fdbb7b5d31c66c847d6f3b6c137b99a6",
+    "eval/route-boundaries.json": "f415435975368033b01dbac8075bba74d59bacac9e106eb211102729ddaaff07",
+    "runs/2026-10-13-complete-setup-fixture-cleanup.json": "9a53a74cd6ab65fcce9458e676a10e06a423f0e36a3722be7f3b110ee22eb3df",
+    "runs/2026-10-13-confidence-floor-http-audit.json": "ad7463e2b9e7be83cda1f178ae3d1b28de294b06f34ab462041893bb7407f31e",
+    "runs/2026-10-13-setup-live-publication.json": "3c5bf211ba7ef163d80e1fd7390975eaf93a163e1978011ea8b1902d4f50763e",
+    "runs/2026-10-13-setup-protected-merge.json": "2423ab751836ad7adf7c2185dd04e334b295dfe55ea9ee60ab864896be9ad3f8",
+    "runs/2026-10-14-setup-published-eight-phases.json": "b2118d7485dd112806b9cb4165ef9ab50d2045b6e45b52938afd3717e7f8503c",
+    "runs/2026-10-14-setup-published-extension.json": "7d2ea7a177c5a2e0c804247801b6e0d69e5eb1e54f14c72ffb095d6c54b39af3",
+    "runs/2026-10-14-setup-published-floor-full-suite-current.json": "c717c174574b8a0bf9528beb60e25f1431f8694e893d592d65dbeec61273ceb5",
+    "runs/2026-10-14-setup-published-floor-full-suite.json": "3c3c25e4fc6be83f967cde1244090e486498622a706daa2a657011923cabd9c4",
+    "runs/2026-10-14-setup-published-protocol.json": "65a689d2d305db2b0752d60cb331152bc0130b8188fb9f0a69c98a12e93976f1",
+    "runs/2026-10-14-setup-published-routes.json": "aa33cffeacacd6935b594dbc437315f8e9886d98a936cd0070e6deef7447c06c",
+    "runs/2026-10-14-setup-published-website.json": "f54eed2b74d6b136a2cdc2261c8fac31af16d42bca69ec6c5853aea2b306dc80",
+    "site/public/reference/public-scope.json": "1a118bd591edc17464f0cfb6020b8b27772fa1dd10320a8c4324289079ffc2cd",
+    "site/src/public-scope.json": "1a118bd591edc17464f0cfb6020b8b27772fa1dd10320a8c4324289079ffc2cd",
+    "site/src/scope-manifest.json": "5c5ca21236ed8678c9d9e388e4c3fc4f01db8e016418fb547100da6d88e8d351",
+    "state.json": "61744cb48a200c4faeb791227fc1d27ccade9f42d38fbe044720d47e80d1f94a",
+    "tests/test_gateway_integration.py": "053d4ba1ee0a71fc161fd0b41501464a91d67f61459ff77f9af076e7b0e691c7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-setup-published-floor-full-suite-current.json",
+      "sha256": "c717c174574b8a0bf9528beb60e25f1431f8694e893d592d65dbeec61273ceb5"
+    },
+    {
+      "path": "runs/2026-10-14-setup-published-eight-phases.json",
+      "sha256": "b2118d7485dd112806b9cb4165ef9ab50d2045b6e45b52938afd3717e7f8503c"
+    },
+    {
+      "path": "runs/2026-10-14-setup-published-routes.json",
+      "sha256": "aa33cffeacacd6935b594dbc437315f8e9886d98a936cd0070e6deef7447c06c"
+    },
+    {
+      "path": "runs/2026-10-14-setup-published-website.json",
+      "sha256": "f54eed2b74d6b136a2cdc2261c8fac31af16d42bca69ec6c5853aea2b306dc80"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T00:16:10.969443+00:00"
+    }
+  ]
+}
