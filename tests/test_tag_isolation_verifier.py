@@ -53,3 +53,17 @@ def test_owned_runtime_mismatch_is_refused_before_faults(monkeypatch,tmp_path,fa
     monkeypatch.setattr(v.aitrust,'read_token',lambda file:'synthetic-test-token')
     with pytest.raises(ValueError):v.verify(tmp_path,tmp_path/'runtime.env')
     assert all(c[0]=='exec' for c in calls)
+
+
+def test_verifier_standalone_invocation_checks_stdin_not_an_inventory_filename():
+    import ast,subprocess
+    tree=ast.parse((ROOT/'scripts/verify-tag-isolation.py').read_text())
+    invocation=next(node for node in ast.walk(tree) if isinstance(node,ast.Call)
+        and isinstance(node.func,ast.Attribute) and node.func.attr=='run'
+        and node.args and isinstance(node.args[0],ast.List)
+        and any(isinstance(value,ast.Constant) and value.value=='--fail-on-finding' for value in node.args[0].elts))
+    argv=[__import__('sys').executable if isinstance(value,ast.Attribute) else ast.literal_eval(value) for value in invocation.args[0].elts]
+    raw=next(value.value for value in invocation.keywords if value.arg=='input')
+    result=subprocess.run(argv,input=ast.literal_eval(raw),cwd=ROOT,capture_output=True,timeout=15)
+    assert result.returncode==2 and b'No redaction' in result.stdout
+    assert b'example.test/install' not in result.stdout+result.stderr

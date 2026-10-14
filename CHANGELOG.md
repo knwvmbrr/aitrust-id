@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-130818-correct-standalone-fault-probe-input-2eeb8c37
+
+Recorded 2026-10-14T13:08:18.279046+00:00 · Contributor: Codex · change
+
+- **Changed.** Remove an accidentally inserted inventory filename from the real standalone fault-probe argv, keep the helper in its source inventory and execute the actual selected invocation in a regression test.
+- **Evidence.** The source-owned fault probe now checks its invented stdin command and returns the expected PS finding with no redaction. It cannot silently inspect a source file instead. [Change record](./runs/changes/2026-10-14-130818-correct-standalone-fault-probe-input-2eeb8c37.json).
+- **Not claimed.** Fresh real Linux fault and all source-bound acceptance remain required; no independent accuracy or full scope closure.
+
+
 ### 2026-10-14-130207-require-new-bounded-source-evidence-e71c1179
 
 Recorded 2026-10-14T13:02:07.312263+00:00 · Contributor: Codex · change

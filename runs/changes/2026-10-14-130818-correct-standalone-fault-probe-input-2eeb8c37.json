@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-130818-correct-standalone-fault-probe-input-2eeb8c37",
+  "recorded_at": "2026-10-14T13:08:18.279046+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2ea378ae520b8f65713a6982e1ec5eb59b4b59e3",
+  "changed": "Remove an accidentally inserted inventory filename from the real standalone fault-probe argv, keep the helper in its source inventory and execute the actual selected invocation in a regression test.",
+  "proves": "The source-owned fault probe now checks its invented stdin command and returns the expected PS finding with no redaction. It cannot silently inspect a source file instead.",
+  "limits": "Fresh real Linux fault and all source-bound acceptance remain required; no independent accuracy or full scope closure.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "scripts/verify-tag-isolation.py": "f7274122c94e98d3755f240a5958441f4088ab537ad24dba504dd052679ec63d",
+    "tests/test_tag_isolation_verifier.py": "23767a2f1497502964fb3bc7e8e2157024b87b62344c2363995be5c74a45130e"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T13:08:18.752403+00:00"
+    }
+  ]
+}
