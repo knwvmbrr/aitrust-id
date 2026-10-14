@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-184518-research-http-browser-pointer-aligned-890ffc71
+
+Recorded 2026-10-14T18:45:18.167165+00:00 · Contributor: Codex · change
+
+- **Changed.** Align the remaining current website verification pointer with the newly published browser receipt and preserve its old value in history.
+- **Evidence.** All nine current publication, source, deployment and verification pointers resolve to the same actual published snapshot; chronology and scope accounting pass. [Change record](./runs/changes/2026-10-14-184518-research-http-browser-pointer-aligned-890ffc71.json).
+- **Not claimed.** Bookkeeping only; the deployed source stays a8347bdebd33e6c2223aafeeb754341e6340058f, and collection, independent release and scope closure status do not change.
+
+
 ### 2026-10-14-183153-research-http-protected-live-delivery-2b8cdd83
 
 Recorded 2026-10-14T18:31:53.834733+00:00 · Contributor: Codex · change

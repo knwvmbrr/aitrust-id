@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-184518-research-http-browser-pointer-aligned-890ffc71",
+  "recorded_at": "2026-10-14T18:45:18.167165+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e56d31a9d6dad6b81bbf866c4e4eea9dfebd1b52",
+  "changed": "Align the remaining current website verification pointer with the newly published browser receipt and preserve its old value in history.",
+  "proves": "All nine current publication, source, deployment and verification pointers resolve to the same actual published snapshot; chronology and scope accounting pass.",
+  "limits": "Bookkeeping only; the deployed source stays a8347bdebd33e6c2223aafeeb754341e6340058f, and collection, independent release and scope closure status do not change.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "ba2f9dd144370805e197285854df4bfc7bc981191242c3875ef7152049265c09"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-live-publication.json",
+      "sha256": "bb051246573b219e06729c93ebaa8dd62a52a3590511b9cc92aae87268e4c49b"
+    },
+    {
+      "path": "runs/2026-10-14-research-http-live-browser.json",
+      "sha256": "9d9be8ed42349d54b5eb5e04a5099795c9a25b50f5c1c4413cbf376d800fb371"
+    }
+  ],
+  "checks": []
+}

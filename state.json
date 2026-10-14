@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T18:31:52.905486+00:00",
+  "updated": "2026-10-14T18:45:17.588588+00:00",
   "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-14-draft-privacy-live-browser.json",
+    "verification": "runs/2026-10-14-research-http-live-browser.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -333,6 +333,13 @@
           "deployment": "https://a5a14097.aitrust-id.pages.dev",
           "deployment_url": "https://a5a14097.aitrust-id.pages.dev"
         }
+      },
+      {
+        "superseded_at": "2026-10-14T18:45:17.588588+00:00",
+        "prior_values": {
+          "verification": "runs/2026-10-14-draft-privacy-live-browser.json"
+        },
+        "reason": "Align the current browser receipt with the published source snapshot."
       }
     ]
   },
@@ -1070,7 +1077,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T18:31:52.905486+00:00",
+  "updated_at": "2026-10-14T18:45:17.588588+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
