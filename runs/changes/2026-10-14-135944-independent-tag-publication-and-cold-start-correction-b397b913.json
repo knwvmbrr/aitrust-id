@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-135944-independent-tag-publication-and-cold-start-correction-b397b913",
+  "recorded_at": "2026-10-14T13:59:44.521482+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c0e2b13bae7fe3bab5f014e20ef8f72ee4c5ef30",
+  "changed": "Record the protected PR72 merge and exact live site verification; remove Compose evaluator readiness as a privacy startup prerequisite and retain the required redactor prerequisite.",
+  "proves": "261 release artifacts match on three origins, six declared headers match per origin, and all 20 live catalogue panels pass. The startup dependency contract and focused gateway/setup checks pass.",
+  "limits": "Fresh actual Compose cold-start execution and source-bound checks remain pending. No new full scope closure, independently validated tag release, real collection or physical-phone acceptance.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "deploy/docker-compose.yml": "eb0d64e8cc0f41b4d88547de6bbcd1efb3bf085d6b3e67624eb5cc5d40b7ce29",
+    "docs/tag-failure-isolation-plan.md": "d9e6304bfc8303cf6a3cd922882458e0c2cbed7a16c481a0749e1a0e8f26de02",
+    "docs/tag-failure-isolation-result.md": "f39a966450941ca4743d4b37ba00f7a603bae5cc4717368eaed83da859f9a86d",
+    "runs/2026-10-14-tag-isolation-live-bytes.json": "10df44525b843c398939746c21c8c24fdc0e4308486c67d0af346624f5a5b93a",
+    "runs/2026-10-14-tag-isolation-live-catalogue.json": "a96f8de8a968ce6ca87882b1f45b80dfca7848f09651d91d1ff6208ba71b5527",
+    "runs/2026-10-14-tag-isolation-live-headers.json": "6ecf440f5eb66ebf3c3cf5908bde3ed334f700b8142e9e9243e7573a5bd592a1",
+    "runs/2026-10-14-tag-isolation-live-publication.json": "3d36d5d8aa11f137dc1091b471434833c8727f3cfeec6fd735f6c2389b8afa36",
+    "runs/2026-10-14-tag-isolation-protected-merge.json": "686b6b872be4769dfe4bcd5348f128b04d9aae82855b193e078a613165f79777",
+    "state.json": "818b586b8743b77316e5ebc2962d7f09d5ee4e30f2ce57aa8b11dc3d7c4fe8bf",
+    "tests/test_tag_failure_isolation.py": "bdcc85b30bccc4746520e3490b0706f666e7e8ba65730c062486e76d05b0f15a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-live-publication.json",
+      "sha256": "3d36d5d8aa11f137dc1091b471434833c8727f3cfeec6fd735f6c2389b8afa36"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-protected-merge.json",
+      "sha256": "686b6b872be4769dfe4bcd5348f128b04d9aae82855b193e078a613165f79777"
+    }
+  ],
+  "checks": []
+}

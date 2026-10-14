@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-163917-complete-cold-start-website-and-binding-acceptance-560a3bb8",
+  "recorded_at": "2026-10-14T16:39:17.519046+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c0e2b13bae7fe3bab5f014e20ef8f72ee4c5ef30",
+  "changed": "Bind fresh website execution after repairing the transitive package-notice metadata chain, and update current state chronology.",
+  "proves": "All 72 current component checks pass, including eight actual website build phases. The reviewed 788-input guard, six actual Compose controls, 117 focused artifact/native checks and historical package identity carry-forward pass.",
+  "limits": "The final full suite and protected publication remain required. No independently validated tag release, permission clearance or new full scope closure.",
+  "scope_ids": [
+    "F-096",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "deploy/docker-compose.yml": "eb0d64e8cc0f41b4d88547de6bbcd1efb3bf085d6b3e67624eb5cc5d40b7ce29",
+    "docs/tag-failure-isolation-plan.md": "d9e6304bfc8303cf6a3cd922882458e0c2cbed7a16c481a0749e1a0e8f26de02",
+    "docs/tag-failure-isolation-result.md": "033a975ae94bd134e2593180244872a226f805bed42da3bde5d5c98c049a3a67",
+    "eval/dependencies/runtime-sbom.json": "4547fc412ad2fc6b44c6d8cee9db43638787e6777ad5be2fc47a0cdb03f9cb28",
+    "eval/route-boundaries.json": "e3cb4551bad9d8f35e28a77fb9c5a6b69d2ed48df5382882021957c828fafd59",
+    "runs/2026-10-14-runtime-license-inventory.json": "19a4225b5b53db2721ee8f01df04789d2da7d458b05de8f4fff8923c236b1a0b",
+    "runs/2026-10-14-tag-isolation-cold-accepted-website.json": "068be65f77852457e523377a3060d09d1d019b4555d56b7e9a7301531e4d0ecd",
+    "runs/2026-10-14-tag-isolation-cold-current-PII_REDACTED.json": "08fdde1d6e7d57de3e6163b2ddf12415e3dbfcb865ee71a3d83d64bc84b9cde7",
+    "runs/2026-10-14-tag-isolation-cold-current-PS.json": "c2f876a8c82d5d7f3ed30fb46f3e42c356b477a6e76a769f69b0d4e1e03c5551",
+    "runs/2026-10-14-tag-isolation-cold-current-extension.json": "170c19f2fabcc57590247b2cfb78f0a14ed9519154af75f2033221463add99de",
+    "runs/2026-10-14-tag-isolation-cold-current-protocol.json": "905202c5e7be27c21e8d33755fe8009baf5cffa9b0d00212464705384d243380",
+    "runs/2026-10-14-tag-isolation-cold-current-website.json": "51a6c638da11fb7c5728641d1552e3503cf7f89f1b877c1e60593fc4cc1fec65",
+    "runs/2026-10-14-tag-isolation-cold-driver-refusals.json": "84c32923d2d87cc03e02b46ba958dca57329fc59f7dc6a76335fc9fcb99ea653",
+    "runs/2026-10-14-tag-isolation-cold-final-full-suite.json": "c14d4704ea1e28c433f98b084f066b4e3dc58e3bbd340bb7d21f0f18d1571d99",
+    "runs/2026-10-14-tag-isolation-cold-final-website.json": "2a9a24e498451688e9d9e379a9cae7b0a2ca9b1de46e252fd17a54ed88013d6b",
+    "runs/2026-10-14-tag-isolation-cold-full-suite.json": "2365931d941bb62ffcfda87882cca29f1cfb4ec28822a4f668ac2d77cfb57c76",
+    "runs/2026-10-14-tag-isolation-cold-package-website.json": "494dcb9c356bd75021d6b8d92de4e305b79ea8377a7440e675bb77fffe9321b3",
+    "runs/2026-10-14-tag-isolation-cold-repaired-full-suite.json": "e2d848ac3e98ae7e4a6699b0ee3bff5c8167e93642e517622221950f1fd251c8",
+    "runs/2026-10-14-tag-isolation-cold-website-phases-refusal.json": "91c78270b4d0b6ed89132c9163dd8d2a7472a93cf6211031a28878a9131a7edf",
+    "runs/2026-10-14-tag-isolation-compose-cold-start.json": "15a8638c94627efacff277f753e724a9437377a6c518a8c58096952d8a4745c1",
+    "runs/2026-10-14-tag-isolation-inventory-recheck.json": "da771bc8ce80b072ce3781b60d37a9ede30c264ad8ff5b0c3b782bc2d65cf4fc",
+    "runs/2026-10-14-tag-isolation-live-bytes.json": "10df44525b843c398939746c21c8c24fdc0e4308486c67d0af346624f5a5b93a",
+    "runs/2026-10-14-tag-isolation-live-catalogue.json": "a96f8de8a968ce6ca87882b1f45b80dfca7848f09651d91d1ff6208ba71b5527",
+    "runs/2026-10-14-tag-isolation-live-headers.json": "6ecf440f5eb66ebf3c3cf5908bde3ed334f700b8142e9e9243e7573a5bd592a1",
+    "runs/2026-10-14-tag-isolation-live-publication.json": "3d36d5d8aa11f137dc1091b471434833c8727f3cfeec6fd735f6c2389b8afa36",
+    "runs/2026-10-14-tag-isolation-protected-merge.json": "686b6b872be4769dfe4bcd5348f128b04d9aae82855b193e078a613165f79777",
+    "sbom/assets/notices.json": "29afaecdb0b6cf6f935d13d3beed67800b8e5f2f1408df75e4ffd6d52b1c66d5",
+    "sbom/notices/manifest.json": "76ef3d73025195737c1d5701604607ce0f73ed163e9099466f34164acd33ff97",
+    "state.json": "ddaae006970ac46eea00b89b190202d9ae249bc24a0ffb39e126859c026c99c8",
+    "tests/test_tag_failure_isolation.py": "bdcc85b30bccc4746520e3490b0706f666e7e8ba65730c062486e76d05b0f15a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-cold-package-website.json",
+      "sha256": "494dcb9c356bd75021d6b8d92de4e305b79ea8377a7440e675bb77fffe9321b3"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-inventory-recheck.json",
+      "sha256": "da771bc8ce80b072ce3781b60d37a9ede30c264ad8ff5b0c3b782bc2d65cf4fc"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-compose-cold-start.json",
+      "sha256": "15a8638c94627efacff277f753e724a9437377a6c518a8c58096952d8a4745c1"
+    }
+  ],
+  "checks": []
+}

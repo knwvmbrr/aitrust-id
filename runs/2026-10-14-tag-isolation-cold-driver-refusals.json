@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-10-14T14:05:16.319135+00:00",
+  "pass": false,
+  "kind": "retained_test_driver_failures",
+  "checked_by": "Codex",
+  "attempts": [
+    {
+      "attempt": 1,
+      "signature": "privacy_startup_unavailable",
+      "diagnosis": "Podman Compose recreated the redactor after configuration changed; its private address changed. No cold-start success claimed."
+    },
+    {
+      "attempt": 2,
+      "signature": "privacy_startup_unavailable",
+      "diagnosis": "Private network diagnostics confirmed the recreated redactor had a different address. Reserved the owned fixture address before repeating."
+    },
+    {
+      "attempt": 3,
+      "signature": "expected_unavailable_status_not_recognized",
+      "diagnosis": "The test driver omitted the gateway existing documented 504 timeout status. It now recognizes 502, 503 and 504 as Unavailable. No product threshold or success state was weakened."
+    }
+  ],
+  "initial_driver_auth_header_corrected_before_validated_request": true,
+  "report_destination_refusal": {
+    "diagnosis": "The public browser verifier rejects report paths outside runs/ or output/. Repeated with an approved runs/ destination; retained the original private refusal."
+  },
+  "final_actual_evidence": "runs/2026-10-14-tag-isolation-compose-cold-start.json",
+  "new_full_requirements_closed": 0
+}

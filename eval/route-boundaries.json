@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-14T13:23:58.916456+00:00",
+  "reviewed_at": "2026-10-14T16:39:16.273628+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -37,7 +37,7 @@
     "deploy/backup/verify.py": "3b25431257f94e5cad62c1fc2fd9f51d189f3b57ad4603127fa8009fad3422f0",
     "deploy/backup/verify.sh": "0cfddccb427172ed3b6db8337673b5be3b333f3cf593d309bf96effb1a71ddb3",
     "deploy/docker-compose.signing.yml": "0b89234c9e3af2b930a2f4eaf9e5c95a45bc04caf430e8b6fc9a706f79ccbbdf",
-    "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
+    "deploy/docker-compose.yml": "eb0d64e8cc0f41b4d88547de6bbcd1efb3bf085d6b3e67624eb5cc5d40b7ce29",
     "deploy/research/metadata-development.sql": "a6df9e0e344a9910adb5e9576a028106966dbaa907e7221f8c73ce8d5586a32f",
     "deploy/research/metadata-invitation-development.sql": "539679c23c689b369a2ee11b2ed933acb8821bf16d7f377edaf589d7263040f4",
     "deploy/research/metadata-pilot-policy.json": "ba1e64ef0f97f67c91d0dac4a3127f619b08f23680c3691709c8450bb21d7cbd",
@@ -87,11 +87,11 @@
     "docs/review-execution-binding-plan.md": "21556a340c627243b2d4f5b6090ac63d721e1295a184807fb66514846d325608",
     "docs/review-execution-binding-result.md": "ffc2fc3359ac8e7839e2f08f2b75cdef43b03d9122fc4ac05baaef37d61f8d38",
     "docs/scope-groups.json": "5c7954eb92746d5e1575249624142038040f324e34f95f316ff7915fd49fce7c",
-    "docs/tag-failure-isolation-plan.md": "9f0dd6943de618902676b724144a92c60fe363e2deef705baccef3f29b88c246",
-    "docs/tag-failure-isolation-result.md": "7238e6552225610fbaaefbe01d8f2773477ff2c24ced10efb3378418a092cca5",
+    "docs/tag-failure-isolation-plan.md": "d9e6304bfc8303cf6a3cd922882458e0c2cbed7a16c481a0749e1a0e8f26de02",
+    "docs/tag-failure-isolation-result.md": "033a975ae94bd134e2593180244872a226f805bed42da3bde5d5c98c049a3a67",
     "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
     "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
-    "eval/dependencies/runtime-sbom.json": "293c01d2ecddca10f85e64aaa57411f6715d83f379994bfaa8aba80d996cac99",
+    "eval/dependencies/runtime-sbom.json": "4547fc412ad2fc6b44c6d8cee9db43638787e6777ad5be2fc47a0cdb03f9cb28",
     "eval/fixtures/pii-compact-addresses.json": "a9eda7f5fb5c2aaeeb20e1af7d8eaaf3b2d15aadb3db1472af1f9bf8b1d689d8",
     "eval/fixtures/pii-recognition-development.json": "bbce463bb23425a9d49e4d5c8bfc70af7201957b739d53c753b49eb8ec5c52c6",
     "eval/measure.py": "10481b433440ce93820c90c3fdea12b2dde6b6d051c3eb21231065ab43a2b7ec",
@@ -216,7 +216,7 @@
     "runs/2026-10-11-staging-pipeline-performance.json": "54551d3b8597b17c6efd6e507f4aee6056119fd9ced3413a13fb231946c88a5f",
     "runs/2026-10-13-ps-lazy-context-paired.json": "6ce81ec748d3adc30f2aa64381dca3b5b01fc61b52e3a2760a084332974ee21a",
     "runs/2026-10-14-draft-privacy-pipeline-timing.json": "56b069bbe9cef9dd3279362d42926983193a495ec0383c43de7718e349156ec3",
-    "sbom/assets/notices.json": "658b51fbfe59526e0a7db86c8d4b53b2de6a6464680db709a4fb1888791e8f18",
+    "sbom/assets/notices.json": "29afaecdb0b6cf6f935d13d3beed67800b8e5f2f1408df75e4ffd6d52b1c66d5",
     "sbom/notices/007bc30a58fa40a996e772047120de4eaf31f5110e4f9c3b5f93fcdfbe2eaca1.txt": "007bc30a58fa40a996e772047120de4eaf31f5110e4f9c3b5f93fcdfbe2eaca1",
     "sbom/notices/02c197fa26ad056ed2382bb8c3e6323d47edfda4539f727b4ab3f4dbf64ac413.txt": "02c197fa26ad056ed2382bb8c3e6323d47edfda4539f727b4ab3f4dbf64ac413",
     "sbom/notices/04f9fb974e10f6ca0cd226811f72b3855f8383daad0e5de7adac8d5b0b7796c3.txt": "04f9fb974e10f6ca0cd226811f72b3855f8383daad0e5de7adac8d5b0b7796c3",
@@ -441,7 +441,7 @@
     "sbom/notices/fe5876a94047cafbeb8b164fd98304912d94b6028e19415f08b7a8a2f90645fe.txt": "fe5876a94047cafbeb8b164fd98304912d94b6028e19415f08b7a8a2f90645fe",
     "sbom/notices/fe99ed9e409014494a8147a5276cd079eae73f6998179af39ba596e7de75e8a9.txt": "fe99ed9e409014494a8147a5276cd079eae73f6998179af39ba596e7de75e8a9",
     "sbom/notices/fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf.txt": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
-    "sbom/notices/manifest.json": "dba9a459ec32c2d788d44d56976b7063494f8470086615f683e785fbd200c3f3",
+    "sbom/notices/manifest.json": "76ef3d73025195737c1d5701604607ce0f73ed163e9099466f34164acd33ff97",
     "sbom/runtime/anonymizer-linux-amd64.spdx.json": "709ee8f1aee249d10408d126b9dc850c4e72cbdb4a6754f2e1521ce4a0fd1603",
     "sbom/runtime/evaluator-linux-amd64.spdx.json": "b9aca7ebff7f203ba2ba8fdc4cb71875abc16be50e4a5fccd36f1b2daec73750",
     "sbom/runtime/gateway-linux-amd64.spdx.json": "e15577b5cc4c642021bccc148d746717ebf1eb8455133ab39eea8462d5340137",
@@ -772,7 +772,7 @@
     "tests/test_spdx_inventory.py": "9b5a6859e1b80d48e4f996b8eaafba53d49af57b6163777e31e22bc4f8db8437",
     "tests/test_standalone_ps.py": "18e1e80eff7340bea44794c4fda990a65b429876708db2cbcdf7dcf21b442edc",
     "tests/test_stream_observer.py": "34d7d94d2472c3cddd2b498cc6d7ceb175627a7b048e200c65f31934e2c8395d",
-    "tests/test_tag_failure_isolation.py": "e089e1b7bddba9b51fd5207cbbe4e51402eaee2a1d47df9509aed0c948fbef39",
+    "tests/test_tag_failure_isolation.py": "bdcc85b30bccc4746520e3490b0706f666e7e8ba65730c062486e76d05b0f15a",
     "tests/test_tag_isolation_verifier.py": "23767a2f1497502964fb3bc7e8e2157024b87b62344c2363995be5c74a45130e",
     "tests/test_transport_signing.py": "230f05007da4814ab2eab4893917499e59bf8285ae9d4f3a74febab03a26254b",
     "tests/test_verdict_refusals.py": "425d7074186daf545e6ce1547fd50268d667213e615a98a0b0858fc234772839",
@@ -807,8 +807,8 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "extension": "runs/2026-10-14-tag-isolation-bounded-current-extension.json",
-    "website": "runs/2026-10-14-tag-isolation-bounded-accepted-website.json"
+    "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
+    "website": "runs/2026-10-14-tag-isolation-cold-package-website.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

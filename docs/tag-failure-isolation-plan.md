@@ -92,3 +92,17 @@ timeout and cleanup, including a flood in one selected tag while the other keeps
 its result. Refresh source-bound CLI/runtime receipts when these worker inputs
 change. CI's unshared network namespace must enable only lo for its owned HTTP
 fixtures; it gains no external interface or route. Keep no-egress enforcement.
+
+## Cold-start correction
+
+Compose still made gateway startup depend on a healthy evaluator. Remove only
+that evaluator startup prerequisite; keep the redactor prerequisite. The gateway
+continues to check the prerequisites for the requested mode and the default
+complete-pipeline health contract still fails while PS is unavailable.
+
+Test the actual Compose dependency graph using an owned Linux fixture with the
+current source-matched images: start only the gateway and redactor, leave the PS
+evaluator absent, verify privacy health and a valid privacy assertion, refuse a
+complete check, then restart the gateway and repeat. Keep loopback publication,
+internal service networking, authentication, resource limits and cleanup intact.
+This does not infer a fully working legacy combined pipeline from privacy health.

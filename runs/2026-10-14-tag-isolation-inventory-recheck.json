@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "fresh_oci_exports": [
+    {
+      "role": "gateway",
+      "image_id": "08891934508d918533aa00b8de3c41ea887304e1859c8eb6272687c27b095b9b",
+      "observed_oci_export_manifest_digest": "322cf72533583291dec032e1a156ca6e30356a69a06b5b4c3ed28c8c153c3c3e",
+      "historical_manifest_matches": true
+    },
+    {
+      "role": "evaluator",
+      "image_id": "5776e1d019164e3d888f693a497c83f943597504451535564ac3fb54c21251c2",
+      "observed_oci_export_manifest_digest": "a2fe288e0a51b84d6afbc59fc8ec1d37b44b709cf09ba67a60e54e76a938f31b",
+      "historical_manifest_matches": true
+    },
+    {
+      "role": "anonymizer",
+      "image_id": "9f74213987efa910d085afb516623e60e6cd1b73b3a07a64e341f0c1103054bd",
+      "observed_oci_export_manifest_digest": "e9a7f2243b7dcdab7c0f5e94d02333d23315ee7706ee9e9fe65ef7d104c837f9",
+      "historical_manifest_matches": true
+    }
+  ],
+  "owned_archives_removed": true,
+  "captured_at": "2026-10-14T15:46:11.410091+00:00",
+  "checked_by": "Codex",
+  "historical_scan_evidence": "runs/2026-10-11-runtime-license-inventory.json",
+  "package_build_inputs_unchanged": true,
+  "compose_change_only_evaluator_startup_dependency": true,
+  "fresh_scanner_executed": false,
+  "license_cleared": false,
+  "release_signed": false
+}
