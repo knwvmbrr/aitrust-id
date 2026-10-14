@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-181656-research-http-repaired-full-regressions-94d04a46",
+  "recorded_at": "2026-10-14T18:16:56.528990+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "45aa51196c204c6efa47fc170ae5c257ac70a461",
+  "changed": "Capture the full source-stable regression result after the CI consumer repair.",
+  "proves": "3556 Python tests pass with five platform skips. Both real parsed CI command steps execute and the folded-command regression refuses; all five active capability receipts remain current.",
+  "limits": "No scope requirement closes. The 78 open requirements, physical devices, independent accuracy and participant collection gates remain open.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "5689faee4f174006afea6ab9df88a240239ce267108dcc04dd9e42fe5284add5",
+    "runs/2026-10-14-research-http-ci-repaired-full-suite.json": "62186c48f5b40084ecce3af15382c24c6214637ad3105090a24cfe72e4eb8a11"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-ci-repaired-full-suite.json",
+      "sha256": "62186c48f5b40084ecce3af15382c24c6214637ad3105090a24cfe72e4eb8a11"
+    }
+  ],
+  "checks": []
+}

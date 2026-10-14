@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-181424-research-http-repaired-website-review-cd53172d",
+  "recorded_at": "2026-10-14T18:14:24.709145+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "45aa51196c204c6efa47fc170ae5c257ac70a461",
+  "changed": "Capture the repaired source-stable website checks and refresh its reviewed personal boundary inventory.",
+  "proves": "All 19 website commands pass with unchanged sources; active personal routes remain independent of research.",
+  "limits": "Maintainer source review is not independent validation or production research deployment.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "536340f09ddb64f2caac1b997f7d13b83d76b3faa34c0c7a6a4cbba8fb560fbd",
+    "eval/route-boundaries.json": "fa1e616aadb2557d15428de57172e82dbebc1a7872e1d1de35189dd0e054c8a5",
+    "runs/2026-10-14-research-http-ci-repaired-website.json": "798b78e26d47f76a0e405af28710edf64090f721c34ab9330bf51cbda578f633"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-ci-repaired-website.json",
+      "sha256": "798b78e26d47f76a0e405af28710edf64090f721c34ab9330bf51cbda578f633"
+    }
+  ],
+  "checks": []
+}

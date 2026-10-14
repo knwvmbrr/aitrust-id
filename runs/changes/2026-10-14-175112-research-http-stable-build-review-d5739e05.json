@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-175112-research-http-stable-build-review-d5739e05",
+  "recorded_at": "2026-10-14T17:51:12.024766+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f98c1879b0722caef436b5a78f706077e18588a7",
+  "changed": "Capture the successful source-stable website run and review the current personal route boundary inventory alongside the separate synthetic transport.",
+  "proves": "All 19 website commands pass against unchanged sources; existing PS/privacy/extension receipts remain current; no tag or inference endpoint changed.",
+  "limits": "Maintainer source review is not independent security review, real participant collection or tag release validation.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "af2c33573409a17db02ed8baaf23d19402e332d00d22355cf78fa0d0f011cd4b",
+    "eval/route-boundaries.json": "e80d90c00daa483572a344751d7b506499d8fc04b054049a28185a04a2c76b81",
+    "runs/2026-10-14-research-http-stable-website.json": "baeb27319e0809183ea2e814e3b345396437931cee8df34d4659e9008b6a06d7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-stable-website.json",
+      "sha256": "baeb27319e0809183ea2e814e3b345396437931cee8df34d4659e9008b6a06d7"
+    }
+  ],
+  "checks": []
+}

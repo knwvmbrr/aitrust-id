@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-175730-research-http-accepted-regressions-b3e3e84d",
+  "recorded_at": "2026-10-14T17:57:30.603828+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f98c1879b0722caef436b5a78f706077e18588a7",
+  "changed": "Record the accepted full regression run after repairing state chronology.",
+  "proves": "3553 Python tests pass, five platform skips, unchanged selected source throughout execution. All five active capability receipts remain source-current. Correction: the prior timestamp entry undercounted the separate accountability run; the actual result was 40 passing checks, not 31.",
+  "limits": "No full requirement closes; 78 remain open. The skipped platform checks, physical devices, independent tag accuracy and real research pilot remain unaccepted.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "1718be65085119d71b05929fa463e7e4fdea02e2ab84ad1dff0744a982e42c70",
+    "runs/2026-10-14-research-http-accepted-full-suite.json": "fd33ea007eab04b2eba10870e22b136e8ee6b4d37e578892613799ade2bc48ef"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-accepted-full-suite.json",
+      "sha256": "fd33ea007eab04b2eba10870e22b136e8ee6b4d37e578892613799ade2bc48ef"
+    }
+  ],
+  "checks": []
+}

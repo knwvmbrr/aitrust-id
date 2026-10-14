@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-174154-research-http-boundary-9be86da7",
+  "recorded_at": "2026-10-14T17:41:54.393939+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f98c1879b0722caef436b5a78f706077e18588a7",
+  "changed": "Add an independent optional-feedback HTTP transport, permanently disabled default entry point and separately constructed synthetic worker/database verifier.",
+  "proves": "235 selected Mac regressions and 58 current isolated Linux checks; seven actual HTTP/PostgreSQL control groups with verified cleanup; standalone PS still works while both research slots are busy.",
+  "limits": "Collection remains disabled. No participant, production listener, proxy/provider/grants/recovery acceptance, tag release or full requirement closure; 78 remain open.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "322e4727291fd4a4a31c4352aa60f68ec5cfc54a3a76f4e7fbb70ea05fd77283",
+    ".github/workflows/metadata-storage.yml": "c95287600d2d9cf3093de4a6e147d8e0f5cff3a258971ed8c02a648e20ad3b36",
+    "README.md": "a7088be8b1d6e655aee445e090b85d313ed2e97145d8c84c85abeb05d539bdc7",
+    "docs/research-http-plan.md": "8b10b828a58a46dd94f3e226ee593e56d7bb0069eb854751f423a6e1295857a1",
+    "docs/research-http-result.md": "89e9f178691fcbbd689a175284b73777272ea9bc68ac12aee39dbda49a86876e",
+    "docs/research-http.md": "24a5d4f9b2597edff560de1da1a3eddf77673fb9e1a10127952eeb4a43378fbc",
+    "docs/scope-progress.json": "857733dd179ba32563f8724e7a0858ed995f42704c6251ebf3ccb3d8bf2b8501",
+    "docs/scope-progress.md": "501379309170f5e83e3f94463f669fe863bf5a1f5d336eb63eaafeed31d4a25c",
+    "runs/2026-10-14-research-http-current-linux.json": "feb275c4566c2e18add967a911c92fbf996d5c1dc8bafaf3196223ade8162769",
+    "runs/2026-10-14-research-http-linux.json": "69672dac4a4aeee68be6f8d426c52893dbd4563ff23f4f96b2b299f707b8c49d",
+    "runs/2026-10-14-research-http-test-expectation-refusal.json": "92094377b398aa8fa391ab18f8f144c5d65f9e7c8e7b9af7e18bde0eb8e84d6d",
+    "scripts/metadata-store-sandbox.py": "eef78dfc68a9d51944d777b7de3a3fab08bf6f8e7e630cb8c654387ea9c619de",
+    "scripts/verify-research-http.py": "002a4e9f32449ea57673a234d4181affd06818bfe689e707d4cd559eeeefa770",
+    "scripts/verify-route-boundaries.py": "fc5ebfafa857debcb043d33f1b9ca087426ebf2a6999cc6dd64bb04ea0015e7f",
+    "services/research/README.md": "e11abacded59695fc1e387fabc4bf0624130c602b2ee127eb4fa19ea687d1947",
+    "services/research/app.py": "fda68d9e7a2116a7077df0eb3228185ed93759c3921424321e6793321d0a1644",
+    "services/research/worker.py": "afdd46992e45f38661c8f3d9fbb10c4e30195e697cd81816cb1ef4448bd9b685",
+    "state.json": "2da2fa673f8951f00da8305dae83319167efa93458a9ab20a09f60d2ea08c326",
+    "tests/test_research_http.py": "a58413f6ecf2d3a76aef67baa043884369ca57790e3accfc5522ef036a167328"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-current-linux.json",
+      "sha256": "feb275c4566c2e18add967a911c92fbf996d5c1dc8bafaf3196223ade8162769"
+    },
+    {
+      "path": "runs/2026-10-14-research-http-test-expectation-refusal.json",
+      "sha256": "92094377b398aa8fa391ab18f8f144c5d65f9e7c8e7b9af7e18bde0eb8e84d6d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_research_http.py",
+        "tests/test_research_admission.py",
+        "tests/test_research_invitations.py",
+        "tests/test_metadata_store.py",
+        "tests/test_worker_process.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T17:41:56.705656+00:00"
+    }
+  ]
+}

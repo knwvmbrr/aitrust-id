@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-174344-research-http-protocol-checks-791eca34",
+  "recorded_at": "2026-10-14T17:43:44.016254+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f98c1879b0722caef436b5a78f706077e18588a7",
+  "changed": "Capture all 26 current protocol checks after adding the separate synthetic research transport.",
+  "proves": "Source-bound protocol checks pass with unchanged inputs during execution.",
+  "limits": "No participant collection, production research service, independent tag accuracy or full scope closure.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "35fa3b13b1d8024a192df31cf113e83d9ffc732b7946f947b1af33b7629090b0",
+    "runs/2026-10-14-research-http-protocol.json": "3db799b0e00abd01d06f013ebdf2f30c264a12e5193ce6a84ed78064b7b8a6a3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-protocol.json",
+      "sha256": "3db799b0e00abd01d06f013ebdf2f30c264a12e5193ce6a84ed78064b7b8a6a3"
+    }
+  ],
+  "checks": []
+}
