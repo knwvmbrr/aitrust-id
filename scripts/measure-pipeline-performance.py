@@ -92,7 +92,9 @@ def summary(values):
 
 
 def measure(env_file,project,opener=None,clock=time.perf_counter):
-    if project!='aitrust-staging' or os.geteuid()==0:
+    selected=(project=='aitrust-staging' or isinstance(project,str) and
+              re.fullmatch(r'aitrust-local-[a-f0-9]{32}',project) is not None)
+    if not selected or os.geteuid()==0:
         raise MeasurementError('ordinary_user_existing_staging_only')
     token=staging_token(env_file)
     source_hashes=lambda:{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUT_SOURCES}

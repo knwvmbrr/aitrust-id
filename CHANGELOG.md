@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-021019-privacy-current-browser-and-timing-contract-a604d32f
+
+Recorded 2026-10-14T02:10:19.129438+00:00 · Contributor: Codex · change
+
+- **Changed.** Record a complete successful current browser execution and admit exact generated local projects for the source-bound loopback timing client.
+- **Evidence.** All nine extension checks execute successfully with unchanged source; strict local identifiers are tested and the measurement client remains ordinary-user, read-only and fixed-loopback. [Change record](./runs/changes/2026-10-14-021019-privacy-current-browser-and-timing-contract-a604d32f.json).
+- **Not claimed.** The earlier browser failures remain retained; their intermittent cause is not established. New actual Linux timing is still required before the site can build.
+
+
+### 2026-10-14-020829-privacy-recorded-website-build-refusal-9386419c
+
+Recorded 2026-10-14T02:08:29.773619+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the second website build refusal before inspecting the direct build diagnostic.
+- **Evidence.** The failed receipt remains immutable and is not used as website acceptance. [Change record](./runs/changes/2026-10-14-020829-privacy-recorded-website-build-refusal-9386419c.json).
+- **Not claimed.** Publication remains blocked pending a successful exact-source build.
+
+
+### 2026-10-14-020726-privacy-browser-safe-failure-location-9133b900
+
+Recorded 2026-10-14T02:07:26.155200+00:00 · Contributor: Codex · change
+
+- **Changed.** Add credential-safe source locations to synthetic browser privacy failures, retaining the failed website receipt before rebuilding.
+- **Evidence.** The diagnostics include only a fixed filename and numeric source position; raw Playwright messages, credentials, form contents and full stacks remain excluded. [Change record](./runs/changes/2026-10-14-020726-privacy-browser-safe-failure-location-9133b900.json).
+- **Not claimed.** The intermittent browser-sequence failure is under diagnosis. The first website build correctly refused an unrecorded new execution file; no failing receipt is overwritten or accepted.
+
+
+### 2026-10-14-020522-draft-privacy-result-and-instructions-5a775ca5
+
+Recorded 2026-10-14T02:05:22.584710+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish the independent draft privacy engineering result and README entry with actual Linux evidence and explicit remaining browser and human acceptance.
+- **Evidence.** The result links immutable service, replay, privacy, clean-setup and owned-cleanup evidence; each claim remains bounded to executed work. [Change record](./runs/changes/2026-10-14-020522-draft-privacy-result-and-instructions-5a775ca5.json).
+- **Not claimed.** The captured extension revalidation failed again while standalone privacy verification passed; both failures are preserved for diagnosis. Site publication is pending, and no additional scope record is closed.
+
+
+### 2026-10-14-020230-draft-privacy-component-checks-and-cleanup-a8d1a8bd
+
+Recorded 2026-10-14T02:02:30.882357+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current PS, PII and protocol engineering checks and clean up four owned Linux test directories after restoring the original staging services.
+- **Evidence.** PS, PII and protocol checks pass; bounded fixture cleanup passes with no global prune and all three original staging roles healthy. [Change record](./runs/changes/2026-10-14-020230-draft-privacy-component-checks-and-cleanup-a8d1a8bd.json).
+- **Not claimed.** The first current extension check failed in its synthetic privacy workflow; this failure is retained and will be diagnosed before publication. No independent accuracy or scope closure is inferred.
+
+
+### 2026-10-14-015637-draft-privacy-real-linux-acceptance-705e18c8
+
+Recorded 2026-10-14T01:56:37.913104+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual independent privacy checking, CLI/export/replay, stopped-evaluator operation, restored dependency paths and the fresh complete-input Linux setup. Update privacy instructions and reconcile accepted pilot policy language.
+- **Evidence.** 26 full-service checks, 15 full-pipeline replay checks, 16 privacy-route checks and all ten clean-setup failure controls pass. Original staging services restored. F-105 is reclosed on the fresh source; F-024 advances to 80%. [Change record](./runs/changes/2026-10-14-015637-draft-privacy-real-linux-acceptance-705e18c8.json).
+- **Not claimed.** Manual draft review does not intercept browser sends, issue PII_OUTBOUND, establish independent recognition accuracy or complete human/physical acceptance. All 202 records remain; 124 complete and 78 open.
+
+
 ### 2026-10-14-014459-privacy-network-path-readiness-77469043
 
 Recorded 2026-10-14T01:44:59.230141+00:00 · Contributor: Codex · change

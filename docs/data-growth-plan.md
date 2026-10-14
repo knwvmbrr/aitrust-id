@@ -15,8 +15,10 @@ Do not link to a public catalogue until its deployment is verified.
 First implement and verify the concise explanation and structured local export.
 No endpoint is introduced and no automatic transmission is enabled in this pass.
 The dedicated database host is selected and its private foundation is deployed;
-application authorization, collection choice and retention remain unresolved.
-The owner requires remote hosting, low cost, open-source software,
+the owner later approved the invited metadata-only PS pilot contract at
+`research.aitrustid.com/v1/feedback`, with 30-day active retention and a 7-day
+encrypted-backup limit. Effective authorization, recovery and pilot acceptance
+remain required before collection. The owner requires remote hosting, low cost, open-source software,
 control over data and a reviewed security boundary. Local-only production storage
 is excluded; development verification may use isolated synthetic fixtures.
 
@@ -53,8 +55,9 @@ Use a separate AI Trust ID server/VM, database, application roles, secrets and
 backup namespace. Do not expose PostgreSQL directly to the public internet. Use
 private application access and separate migration-owner and runtime roles. Verify
 encrypted transport where traffic crosses hosts, backup encryption/restoration,
-updates and capacity. Collection and retention remain unresolved; forwarding is
-disabled. A dedicated VM isolates the project logically, but does not imply
+updates and capacity. Collection remains disabled under the accepted metadata-only
+policy; forwarding is not enabled merely because its destination and retention
+have been approved. A dedicated VM isolates the project logically, but does not imply
 exclusive physical hardware at a hosting provider.
 
 Shared storage requires roles for submitters, reviewers and administrators,
@@ -68,15 +71,18 @@ mandatory central storage or automatic telemetry. Preserve X-03, X-06 and F-086;
 do not interpret the database direction as permission to capture all users.
 The owner accepted a metadata-only first pilot on 2026-10-10: tag result, method
 version, failure category and structured feedback. Examples require a separate
-preview, redaction review and permission. Retention and intake remain unselected. Local evaluation remains useful without
-submission. Individual users must control contribution of their own content.
+preview, redaction review and permission. The later accepted intake/retention
+contract permits only invited PS usability/failure metadata, with 30-day active
+retention and at most 7 days in encrypted backups. Examples, hashes, spans,
+participant identity, free text, model training and public aggregation are not
+authorized. Local evaluation remains useful without submission. Individual users must control contribution of their own content.
 No paid gate is added to tag explanations or evidence.
 
 Product owner: destination, permitted collection, retention and release acceptance.
 Codex: record format, concise UI, storage implementation and executed checks.
 Claude/reviewers: claim boundaries, collection review and independent labeling.
 Existing scope is retained; the database direction is recorded here while its
-collection boundary is being resolved.
+accepted collection boundary awaits its mandatory operational acceptance.
 
 ## Acceptance
 
@@ -128,3 +134,12 @@ The owner also requires public live community communication. Public posts and
 private research contributions have separate audiences and consent; publication
 does not authorize training. See [communication and data boundaries](public-community-and-private-data.md).
 No public forum, streaming route or automatic contribution is implemented.
+
+## Current accepted contract
+
+The [versioned pilot policy](../deploy/research/metadata-pilot-policy.json) and
+[owner decision](../runs/2026-10-13-metadata-pilot-owner-decision.json) supersede
+the earlier unselected-intake/retention language. F-044 completes the policy
+definition; N-011 and F-141 keep effective deployment, recovery and a consenting
+pilot open. Collection remains disabled. The manual privacy check adds no
+permission to submit drafts or PII metadata, and does not expand the PS pilot.

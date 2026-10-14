@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-020829-privacy-recorded-website-build-refusal-9386419c",
+  "recorded_at": "2026-10-14T02:08:29.773619+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d30bdf271cbb0e60ca267ba6151ef1e1a27c23be",
+  "changed": "Retain the second website build refusal before inspecting the direct build diagnostic.",
+  "proves": "The failed receipt remains immutable and is not used as website acceptance.",
+  "limits": "Publication remains blocked pending a successful exact-source build.",
+  "scope_ids": [
+    "F-024"
+  ],
+  "files": {
+    "README.md": "6b80ea68b3f9ca42e6dab330939bcf2ed9b9c570260916648c069d43e51020cc",
+    "docs/data-growth-plan.md": "97405374ad54ace8c3a51fa68a089a873351c50e80b1d31da1403d431afbe42b",
+    "docs/draft-privacy-result.md": "eb6067a7f581fe09e3ab2d110dbaa152025ae76016ad7c79a95aa5752554eb31",
+    "docs/public-community-and-private-data.md": "bc844416b7f5226652624bde80c88107f63f421e5b9fc27ab09c9d7aa1b5243c",
+    "docs/scope-progress.json": "20015f89ca57c8f7aa75508fd4fe4fcdfd5c2f558a48c82e66b030330f2d133d",
+    "docs/scope-progress.md": "68db0b8a2174ad3ae78c3e340816d0a4f9991306479da187e6df83c0525c5dfd",
+    "docs/scope-task-index.md": "b1c625a38d58585578a45a1534ea79fcc70c37f45521e631bf9ab04519895bd8",
+    "eval/revalidation.json": "d3b402c6378f188465c7e85dce3f431ff0ec689c3e57a6db0bc0c6f8bbda1cbe",
+    "eval/route-boundaries.json": "19faa06904bacefdbd47347274bc0c72940f50b44a5856b0172a4ed65699e123",
+    "runs/2026-10-13-draft-privacy-clean-setup-linux.json": "2605cd92488df3c0f36c114bff1e698e086afb77ac9f179802d8452b6fab4e95",
+    "runs/2026-10-13-draft-privacy-real-linux.json": "db8508426eb98c047fe883b786f54fb649e07f0747a204f1acbcc976215048c8",
+    "runs/2026-10-13-draft-privacy-real-replay.json": "697d3e336d23ada2ebb73fc44de3fd90f66d31eaf362f87ceb25b796aa5ec975",
+    "runs/2026-10-13-draft-privacy-real-services.json": "75e8de93aea1efea179a428ffbbff72cd2334e5e101f0482920e3ff72ea58148",
+    "runs/2026-10-14-draft-privacy-current-PII_REDACTED.json": "81b21e981b26206c578fc84ce4a5bfeae7e94ab06d34c89116b900e6c954be75",
+    "runs/2026-10-14-draft-privacy-current-PS.json": "b5abe427fc017c994e58cead70ad0428aab096fe42db3b5a63b56106b63d56a0",
+    "runs/2026-10-14-draft-privacy-current-extension-sequential.json": "abde1d80e81db4d727aec1ca92ecb0d6124a370297395f08064798efe8ed18ad",
+    "runs/2026-10-14-draft-privacy-current-extension.json": "070691eb78a0df866f2233e80af37d12e273e7d3005047d08b2829282c28a85e",
+    "runs/2026-10-14-draft-privacy-current-protocol.json": "884e3125512e120a89ce8b1f2e844a22e29f9d3cf293ca4c4fc11e2ca432de2c",
+    "runs/2026-10-14-draft-privacy-current-website.json": "e1b0ad55fb4c6754d8d6ae7eeb64785e7f7c8f88d6647dc999a736f1dbe9fa2e",
+    "runs/2026-10-14-draft-privacy-fixture-cleanup.json": "c7bd705ce4b726e9abf855b82e72edff73d600263910de1e20d6d968eb227801",
+    "runs/2026-10-14-draft-privacy-recorded-website.json": "3298c51cee5c1e336b9466e5d866c0300a7f69e965b6281666d2c5afc16fd087",
+    "scripts/verify-extension-privacy.cjs": "e296bf946e1b7835a45181b886525a893b3435551b8ca106be7b06ba6e4a1426",
+    "scripts/verify-local-setup-evidence.py": "73f33901b92cf2513f14cc060c9c72c05b119cba0870e12994d89e5116cecd5b",
+    "site/index.html": "0ce28e4629ef8fc6103e532125afb30f3fb0311e57d39d37558f3dba041197e0",
+    "site/public/reference/draft-privacy.md": "8eb1986620992a2c526c6a6bd1ab3ce6fd97ab7e5f90bad53ab58d1efafec291",
+    "site/public/reference/open-validation-path.md": "a5ab118929fbd659683e2585d3358d6ee7889183fc64eb2f8c8d02119e6dfb5f",
+    "site/public/reference/public-scope.json": "1d90310176c0afc6bafeecb192377d0f355d69dcf43dcbb62c1b93eed62f93dc",
+    "site/src/public-scope.json": "1d90310176c0afc6bafeecb192377d0f355d69dcf43dcbb62c1b93eed62f93dc",
+    "site/src/scope-manifest.json": "05397add32d6bba8a272660a16548aa062031728dcf61954636fe1627555ea79",
+    "state.json": "6c3be01711feb9ef1c540509bd198b5f6a93dfea4828ee01bb24340ad647e38c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-draft-privacy-recorded-website.json",
+      "sha256": "3298c51cee5c1e336b9466e5d866c0300a7f69e965b6281666d2c5afc16fd087"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-extension-privacy.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T02:08:30.051212+00:00"
+    }
+  ]
+}

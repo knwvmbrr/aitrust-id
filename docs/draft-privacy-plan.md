@@ -45,3 +45,18 @@ Also replace cached engine-health trust after restart with a live health command
 Check address stability and actual privacy/replay behavior after recovery; never
 count a cached Healthy flag as successful restoration. The original staging
 services stay unchanged; only newly owned synthetic dependencies are disrupted.
+
+## Current speed evidence before publication
+
+The website correctly refuses the previous timing receipt because privacy mode
+changed the gateway source. Measure the new default full pipeline on a newly
+owned local Linux setup using invented input only. The measurement client may
+admit an exact generated local-setup project identifier in addition to the
+existing staging identifier; it still requires an ordinary user, private
+credential file, fixed loopback destination, no redirects and matching actual
+per-response source identities. It performs no container or production mutation.
+Temporarily stop and restore only the existing synthetic staging gateway to free
+its loopback port. Preserve its identity and configuration. Restore all original
+services and remove only the new owned setup afterwards. Replace the site's
+current timing reference with a new immutable receipt and include it in the
+source inventories. Preserve the old measurement without rewriting its hashes.

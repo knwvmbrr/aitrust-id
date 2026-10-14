@@ -99,6 +99,25 @@ def test_actual_client_protocol_measures_all_profiles_without_private_reports(tm
     assert report['runtime_identity']['configuration']['redactor']['configuration']['sources']['app']==hashlib.sha256((ROOT/'services/anonymizer/app.py').read_bytes()).hexdigest()
 
 
+def test_generated_local_setup_is_measured_without_changing_source_checks(tmp_path,monkeypatch):
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    opener=SyntheticOpener()
+    result=module.measure(private_token(tmp_path),'aitrust-local-'+'a'*32,opener)
+    assert result['pass'] and len(opener.requests)==253
+    assert result['runtime_identity_verified_on_each_response']
+
+
+@pytest.mark.parametrize('project',['aitrust-local-', 'aitrust-local-'+'A'*32,
+    'aitrust-local-'+'a'*31,'aitrust-local-'+'a'*33,'aitrust-local-'+'g'*32,
+    'aitrust-staging-extra'])
+def test_unselected_local_project_refuses_before_http(tmp_path,monkeypatch,project):
+    monkeypatch.setattr(module.os,'geteuid',lambda:1000)
+    opener=SyntheticOpener()
+    with pytest.raises(module.MeasurementError):
+        module.measure(private_token(tmp_path),project,opener)
+    assert not opener.requests
+
+
 @pytest.mark.parametrize('corrupt',[
     lambda r:r['evaluator']['models'][0].__setitem__('sha256','b'*64),
     lambda r:r['subject'].__setitem__('sha256','b'*64),

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T01:02:14.059336+00:00",
+  "updated": "2026-10-14T01:55:51.933768+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -723,9 +723,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-14T01:02:14.056231+00:00",
-    "completed_records": 123,
-    "open_records": 79,
+    "audited_at": "2026-10-14T01:55:51.928931+00:00",
+    "completed_records": 124,
+    "open_records": 78,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -744,7 +744,7 @@
     "open_subtasks": 116,
     "target_open_records": 43,
     "target_start_open_records": 87,
-    "target_remaining_closures": 36,
+    "target_remaining_closures": 35,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
@@ -848,7 +848,7 @@
   },
   "current_source_service_conformance": {
     "captured_at": "2026-10-11T11:59:31.235197+00:00",
-    "evidence": "runs/2026-10-11-authenticated-service.json",
+    "evidence": "runs/2026-10-13-draft-privacy-real-services.json",
     "http_checks": 32,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
@@ -1041,7 +1041,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T01:02:14.059336+00:00",
+  "updated_at": "2026-10-14T01:55:51.933768+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2415,7 +2415,7 @@
     "status": "complete_supported_record_contract",
     "scope_id": "F-003",
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json",
-    "service_receipt": "runs/2026-10-13-replay-contract-service.json",
+    "service_receipt": "runs/2026-10-13-draft-privacy-real-replay.json",
     "actual_service_cli_cases": 15,
     "history_rewritten": false,
     "missing_history_or_input": "unavailable",
@@ -2448,19 +2448,19 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Candidate source changed for explicit privacy mode; prior public setup remains historical; fresh actual setup required",
+    "status": "Fresh complete-input Linux setup and all ten failure controls pass after privacy and reserved-address repair; publication pending",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
     "collection_enabled": false,
     "independent_release_validated": false,
-    "evidence": "runs/2026-10-13-one-command-complete-input-linux.json",
+    "evidence": "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
     "cache_scope": "Installed usable Podman and pinned dependency caches; not a blank-host installer",
     "human_acceptance_complete": false,
     "physical_phone_tested": false,
     "retained_refusals": "runs/2026-10-13-one-command-setup-refusals.json",
     "fixture_cleanup": "runs/2026-10-13-one-command-fixture-cleanup.json",
-    "current_acceptance_reopened": true,
+    "current_acceptance_reopened": false,
     "bound_source_inputs": 27,
     "selected_build_network": "host",
     "default_build_network": "private",
@@ -2484,5 +2484,25 @@
     "website_evidence": "runs/2026-10-14-setup-published-website.json",
     "route_evidence": "runs/2026-10-14-setup-published-routes.json",
     "actual_build_phases": "runs/2026-10-14-setup-published-eight-phases.json"
+  },
+  "draft_privacy": {
+    "status": "Actual local privacy mode, CLI, replay, evaluator outage and restart recovery pass; publication pending",
+    "scope_ids": [
+      "F-024",
+      "T-PII",
+      "T-OUT"
+    ],
+    "implemented_by": "Codex",
+    "privacy_check_mode": "privacy",
+    "endpoint": "http://127.0.0.1:8787/v1/evaluate",
+    "actual_linux_evidence": "runs/2026-10-13-draft-privacy-real-linux.json",
+    "actual_service_cases": 26,
+    "actual_replay_cases": 15,
+    "actual_privacy_cases": 16,
+    "collection_enabled": false,
+    "outbound_interception": false,
+    "outbound_tag_released": false,
+    "independent_accuracy_evidence": false,
+    "publication_pending": true
   }
 }

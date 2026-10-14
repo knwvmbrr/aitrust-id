@@ -521,3 +521,12 @@ verifies the real authenticated pipeline before announcing readiness. It refuses
 existing installations and port conflicts. Use `--stop` to remove only resources
 owned by this installation. See [the local checker guide](docs/open-validation-path.md).
 This setup job is separate from human acceptance and independent tag accuracy.
+
+### Check a draft for personal details
+
+The [local draft privacy preview](docs/draft-privacy.md) checks text you choose
+without running PS. Use the setup's checker with `scripts/aitrust.py privacy
+draft.txt --env-file "$LOCAL_STATE/runtime.env"`. It returns a short reminder,
+does not change or send your draft, and stays available when only the PS
+evaluator is stopped. No finding is a privacy clearance. Automatic browser
+pre-send protection and independent recognition acceptance remain unfinished.
