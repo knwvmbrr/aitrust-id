@@ -21,7 +21,9 @@ SOURCES=['scripts/verify-draft-privacy.py','scripts/aitrust.py','scripts/setup-l
          'services/anonymizer/model_identity.py','services/anonymizer/replay_metadata.py',
          'services/anonymizer/requirements.lock','services/evaluator/app.py',
          'protocol/assertions.py','protocol/replay_identity.py','protocol/replay.py',
-         'protocol/normalization.py','protocol/unicode15-data.json','spec/assertion.schema.json']
+         'protocol/normalization.py','protocol/unicode15-data.json','spec/assertion.schema.json',
+         'protocol/evidence.py','protocol/reports.py','scripts/replay-assertion.py',
+         'eval/requirements.lock','services/gateway/requirements.lock','protocol/http_privacy.py']
 
 
 def verify(env_file,setup_state=None,replay_python=None):

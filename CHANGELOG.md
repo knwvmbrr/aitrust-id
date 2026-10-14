@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-010534-privacy-verifier-input-coverage-33c2b7b2
+
+Recorded 2026-10-14T01:05:34.412473+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind privacy verification to its report, evidence, replay and dependency inputs before actual service execution.
+- **Evidence.** Verifier CLI imports and parses; its source inventory includes the directly consumed helpers and locks. [Change record](./runs/changes/2026-10-14-010534-privacy-verifier-input-coverage-33c2b7b2.json).
+- **Not claimed.** CLI import/syntax and source coverage are not actual service or independent accuracy evidence.
+
+
 ### 2026-10-14-010214-independent-draft-privacy-candidate-bae956fb
 
 Recorded 2026-10-14T01:02:14.233205+00:00 · Contributor: Codex · change
