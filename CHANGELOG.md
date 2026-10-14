@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-132715-complete-bounded-tag-worker-validation-1d887cc1
+
+Recorded 2026-10-14T13:27:15.066520+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final bounded-worker component receipts and source inventory, preserve current full regressions and cleanup, and update machine-readable current truth.
+- **Evidence.** 3506 tests pass with five platform skips and unchanged 788-input source inventory; 72 current component commands pass; real Linux eight-case isolation and five-case multi-tag/flood checks pass. All 202 scope records remain, 124 complete and 78 open, target 45. [Change record](./runs/changes/2026-10-14-132715-complete-bounded-tag-worker-validation-1d887cc1.json).
+- **Not claimed.** Independent accuracy, real humans, physical devices, legal acceptance and 12 unbuilt/proposed tags remain open. No new full scope closure or independently validated tag release.
+
+
+### 2026-10-14-131924-current-bounded-component-passes-2191e478
+
+Recorded 2026-10-14T13:19:24.898173+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the current bounded-source PS/privacy/protocol/extension passes before the next site build and retain its prebuild refusal.
+- **Evidence.** Seven PS, six privacy, 26 protocol and 14 extension commands pass with unchanged current source. Fresh bounded Linux eight-case isolation and five-case batch/flood evidence are preserved. [Change record](./runs/changes/2026-10-14-131924-current-bounded-component-passes-2191e478.json).
+- **Not claimed.** Website/full regression/protected publication remain pending. Current engineering checks do not release any independently unvalidated tag or close a full scope record.
+
+
 ### 2026-10-14-131621-bounded-worker-real-linux-acceptance-784b044d
 
 Recorded 2026-10-14T13:16:21.452926+00:00 · Contributor: Codex · change
