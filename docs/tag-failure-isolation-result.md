@@ -31,8 +31,8 @@ owner doctor still worked. The redactor was actually stopped; privacy withheld
 its result while standalone PS still found the supported pattern. All owned
 services recovered with their identities and configuration preserved.
 
-Four actual multi-tag scenarios passed: both findings; privacy unavailable;
-PS worker crash; PS worker timeout. The faulted checker source was restored.
+Five actual multi-tag scenarios passed: both findings; privacy unavailable;
+PS worker crash; PS worker timeout; PS stdout flooding. The faulted checker source was restored.
 PS and privacy subject hashes differed as expected; their spans were not merged.
 Fresh timing covers 12 profiles and 253 requests to the current full pipeline.
 This measures speed on declared Linux hardware, not independent accuracy.
@@ -57,8 +57,21 @@ bypassed. The legacy combined assertion remains a complete-pipeline contract;
 independent multi-tag use preserves separate records instead of pretending a
 partial combined assertion was valid.
 
-Current browser and full-suite receipts will be listed in state after execution.
+PR72 passed 22 required exact-head checks and was normally merged. The deployed
+site passed all 20 catalogue panels and matched 261 artifacts on each of its three
+origins. The preceding full-suite receipt records 3,506 passing tests and five
+platform skips. A subsequent cold-start review found Compose still gated privacy
+startup on evaluator health; six actual Linux Compose controls now prove privacy starts and restarts without
+creating an evaluator container. Default full health and complete requests remain
+Unavailable. The isolated fixture was removed and original staging stayed unchanged.
+Its reserved address avoids Podman fixture recreation changing the backend address;
+three failed driver attempts remain recorded. These are engineering controls, not
+independent accuracy or a new tag release.
 [Architecture](tag-failure-isolation-plan.md) · [Usage](open-validation-path.md)
-· [Actual Linux isolation](../runs/2026-10-14-tag-isolation-real-linux.json)
-· [Actual multi-tag checks](../runs/2026-10-14-tag-isolation-batch-linux.json)
-· [Standalone method parity](../runs/2026-10-14-standalone-ps-regressions.json).
+· [Actual Linux isolation](../runs/2026-10-14-tag-isolation-bounded-real-linux.json)
+· [Actual multi-tag checks](../runs/2026-10-14-tag-isolation-bounded-batch-linux.json)
+· [Standalone method parity](../runs/2026-10-14-tag-isolation-bounded-ps.json).
+
+[Actual cold-start controls](../runs/2026-10-14-tag-isolation-compose-cold-start.json)
+· [Retained driver refusals](../runs/2026-10-14-tag-isolation-cold-driver-refusals.json)
+· [Verified live catalogue](../runs/2026-10-14-tag-isolation-live-publication.json).

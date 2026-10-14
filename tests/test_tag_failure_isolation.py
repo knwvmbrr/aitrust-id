@@ -113,3 +113,17 @@ def test_owner_doctor_can_select_privacy_without_ps(tmp_path,monkeypatch,capsys)
     assert calls[0]==('/healthz?check_mode=privacy',None)
     assert calls[1][1]['check_mode']=='privacy'
     assert 'privacy check ready' in capsys.readouterr().out
+
+
+def test_compose_privacy_startup_cannot_depend_on_the_ps_evaluator():
+    import yaml
+    from pathlib import Path
+    config = yaml.safe_load((Path(__file__).resolve().parents[1] /
+                             'deploy/docker-compose.yml').read_text())
+    gateway = config['services']['gateway']
+    assert gateway['depends_on'] == {'anonymizer': {'condition': 'service_healthy'}}
+    assert gateway['ports'] == ['127.0.0.1:8787:8000']
+    assert config['networks']['inspection']['internal'] is True
+    assert gateway['cap_drop'] == ['ALL']
+    assert gateway['read_only'] is True
+    assert gateway['mem_limit'] == '256m'

@@ -2,6 +2,123 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-164216-final-independent-tag-source-acceptance-2de86e6b
+
+Recorded 2026-10-14T16:42:16.938180+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the final 3507-test source-bound suite, current component checks and actual independent startup/failure controls in state before protected publication.
+- **Evidence.** 3507 tests pass with five platform skips and 788 unchanged source inputs. All 72 component commands and six actual Compose cold-start controls pass. Historical package and notice evidence is retained only after three fresh OCI exports reproduce its manifests. [Change record](./runs/changes/2026-10-14-164216-final-independent-tag-source-acceptance-2de86e6b.json).
+- **Not claimed.** Protected publication of the cold-start correction remains pending. Scope stays 124 complete / 78 open, target 45; independent accuracy, humans, physical phones, legal acceptance and 12 unbuilt/proposed tags remain open.
+
+
+### 2026-10-14-163917-complete-cold-start-website-and-binding-acceptance-560a3bb8
+
+Recorded 2026-10-14T16:39:17.519046+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind fresh website execution after repairing the transitive package-notice metadata chain, and update current state chronology.
+- **Evidence.** All 72 current component checks pass, including eight actual website build phases. The reviewed 788-input guard, six actual Compose controls, 117 focused artifact/native checks and historical package identity carry-forward pass. [Change record](./runs/changes/2026-10-14-163917-complete-cold-start-website-and-binding-acceptance-560a3bb8.json).
+- **Not claimed.** The final full suite and protected publication remain required. No independently validated tag release, permission clearance or new full scope closure.
+
+
+### 2026-10-14-160404-refresh-cold-start-transitive-source-inventory-967f3658
+
+Recorded 2026-10-14T16:04:04.684751+00:00 · Contributor: Codex · change
+
+- **Changed.** Update the reviewed source inventory for the selected-asset binding and retain the source guard refusal until fresh website checks run.
+- **Evidence.** The guard detects the newly changed asset metadata dependency instead of accepting stale website evidence. PS, privacy, protocol and extension receipts still match current source. [Change record](./runs/changes/2026-10-14-160404-refresh-cold-start-transitive-source-inventory-967f3658.json).
+- **Not claimed.** Fresh website execution and full regression remain pending; no permission or accuracy clearance.
+
+
+### 2026-10-14-155754-complete-transitive-notice-metadata-binding-0098124d
+
+Recorded 2026-10-14T15:57:54.474154+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the final downstream selected-asset metadata binding after proving every package, notice, runtime and model artifact is unchanged.
+- **Evidence.** The notice manifest differs only in its inventory metadata hash and review timestamp; original observation times and all actual content remain identical. Asset/native/notice/SPDX controls pass. [Change record](./runs/changes/2026-10-14-155754-complete-transitive-notice-metadata-binding-0098124d.json).
+- **Not claimed.** Retained full-suite failures are not accepted evidence. No fresh scan, permission clearance, native human acceptance or scope closure is inferred.
+
+
+### 2026-10-14-155155-preserve-notices-through-startup-metadata-change-cfbf73e7
+
+Recorded 2026-10-14T15:51:55.783886+00:00 · Contributor: Codex · change
+
+- **Changed.** Carry forward the unchanged notice collection across the runtime inventory metadata refresh after proving identical OCI image manifests and unchanged package/notice artifacts.
+- **Evidence.** Every original notice byte, npm lock and image artifact is unchanged; original runtime/npm collection timestamps are preserved. Focused notice checks pass. The three-failure full-suite receipt remains retained. [Change record](./runs/changes/2026-10-14-155155-preserve-notices-through-startup-metadata-change-cfbf73e7.json).
+- **Not claimed.** This refresh does not recollect notices, clear licenses or execute a new scanner. Full suite is repeated before protected publication; no full scope closure or tag release.
+
+
+### 2026-10-14-154803-reviewed-cold-start-inventory-final-c1db7fc4
+
+Recorded 2026-10-14T15:48:03.828146+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current package inventory carry-forward and Compose startup correction in the reviewed source manifest after focused acceptance.
+- **Evidence.** 95 focused chronology and SPDX controls pass, and the current 788-input route boundary guard passes. Three actual OCI exports reproduce the historical scanned image manifests. [Change record](./runs/changes/2026-10-14-154803-reviewed-cold-start-inventory-final-c1db7fc4.json).
+- **Not claimed.** Full regression rerun and protected publication remain pending. License clearance and independently validated tags remain unclaimed.
+
+
+### 2026-10-14-154625-correct-cold-start-chronology-and-package-binding-e9ee0425
+
+Recorded 2026-10-14T15:46:25.962686+00:00 · Contributor: Codex · change
+
+- **Changed.** Update state chronology and carry forward the historical package scan after actually re-exporting all three identical images and reproducing their OCI manifest hashes; bind the one Compose startup-only change.
+- **Evidence.** Fresh OCI exports match all three historical manifest digests; package/build inputs and scanned artifacts are unchanged, and owned archives are removed. Focused chronology and SPDX checks pass. [Change record](./runs/changes/2026-10-14-154625-correct-cold-start-chronology-and-package-binding-e9ee0425.json).
+- **Not claimed.** No fresh scanner execution, license clearance or signed release is claimed. The retained first full suite failed on stale chronology and package/config binding; a new full suite is still required. No scope closure or independent tag release.
+
+
+### 2026-10-14-153337-current-cold-start-boundary-binding-7bbcda33
+
+Recorded 2026-10-14T15:33:37.180911+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the boundary inventory helper invocation to provide its required root, then bind and actually verify the current source inventory and fresh browser receipts.
+- **Evidence.** The reviewed 788-input inventory now verifies against current source, fresh extension/website execution, unchanged actual service and replay evidence. All 72 component checks and six cold-start controls are retained. [Change record](./runs/changes/2026-10-14-153337-current-cold-start-boundary-binding-7bbcda33.json).
+- **Not claimed.** The preceding bookkeeping helper failed before binding; its change record is preserved and corrected here. Full regressions and protected publication remain pending. No new scope closure or independent release.
+
+
+### 2026-10-14-153250-frozen-independent-tag-component-acceptance-0e5a0928
+
+Recorded 2026-10-14T15:32:50.200094+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the frozen-source website acceptance and current component receipts in the reviewed route inventory and state.
+- **Evidence.** All 72 current component commands pass with unchanged source; all eight actual website phases pass. Six actual Compose cold-start controls show independent privacy startup and restart; prior failed receipts are retained. [Change record](./runs/changes/2026-10-14-153250-frozen-independent-tag-component-acceptance-0e5a0928.json).
+- **Not claimed.** Full regression and protected merge/publication still pending; 124 complete and 78 open remains the truthful count, target 45. No independent tag release or physical/human acceptance.
+
+
+### 2026-10-14-152809-retain-website-source-stability-refusal-3f3ce4e8
+
+Recorded 2026-10-14T15:28:09.138713+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain a website execution in which all 19 commands passed but an explanatory result-document edit invalidated source stability; freeze sources before repeating.
+- **Evidence.** The source-bound gate correctly refuses acceptance when an input document changes during execution. All eight actual build phases and 19 commands completed, but this receipt remains failed. [Change record](./runs/changes/2026-10-14-152809-retain-website-source-stability-refusal-3f3ce4e8.json).
+- **Not claimed.** This failed receipt is not accepted current website evidence; no independent accuracy or scope closure is inferred.
+
+
+### 2026-10-14-152339-retain-cold-start-website-refusal-02e0373a
+
+Recorded 2026-10-14T15:23:39.336364+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the first cold-start website revalidation and build-phase refusal before directly diagnosing its failing catalogue child.
+- **Evidence.** The build and private-file controls pass; the catalogue child exits unsuccessfully after 122 seconds. The failed receipt remains failed and is not current acceptance. [Change record](./runs/changes/2026-10-14-152339-retain-cold-start-website-refusal-02e0373a.json).
+- **Not claimed.** Website acceptance and full suite remain pending; no scope closure or release validation.
+
+
+### 2026-10-14-140516-actual-independent-privacy-cold-start-cfafe31c
+
+Recorded 2026-10-14T14:05:16.404912+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the six actual Linux Compose cold-start controls and three failed test-driver attempts, refresh four component receipts and correct the isolation result to reference current evidence.
+- **Evidence.** Privacy starts and restarts without any PS evaluator container; full health and full requests remain Unavailable. The owned fixture is removed and original staging is unchanged. 53 current PS/privacy/protocol/extension commands pass. [Change record](./runs/changes/2026-10-14-140516-actual-independent-privacy-cold-start-cfafe31c.json).
+- **Not claimed.** Website/full regression/protected publication checks for this correction remain pending. The ledger remains 124 complete and 78 open, target 45. Independent accuracy, human operation and physical devices remain open.
+
+
+### 2026-10-14-135944-independent-tag-publication-and-cold-start-correction-b397b913
+
+Recorded 2026-10-14T13:59:44.521482+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected PR72 merge and exact live site verification; remove Compose evaluator readiness as a privacy startup prerequisite and retain the required redactor prerequisite.
+- **Evidence.** 261 release artifacts match on three origins, six declared headers match per origin, and all 20 live catalogue panels pass. The startup dependency contract and focused gateway/setup checks pass. [Change record](./runs/changes/2026-10-14-135944-independent-tag-publication-and-cold-start-correction-b397b913.json).
+- **Not claimed.** Fresh actual Compose cold-start execution and source-bound checks remain pending. No new full scope closure, independently validated tag release, real collection or physical-phone acceptance.
+
+
 ### 2026-10-14-132715-complete-bounded-tag-worker-validation-1d887cc1
 
 Recorded 2026-10-14T13:27:15.066520+00:00 · Contributor: Codex · change

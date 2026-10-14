@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-10-14T14:04:14.084380+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "source_unchanged": true,
+  "sources": {
+    "deploy/docker-compose.yml": "eb0d64e8cc0f41b4d88547de6bbcd1efb3bf085d6b3e67624eb5cc5d40b7ce29",
+    "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+    "services/gateway/healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+  },
+  "actual_owned_linux_compose": true,
+  "case_count": 6,
+  "cases": [
+    "actual_compose_privacy_cold_start_without_evaluator",
+    "actual_compose_never_creates_evaluator_dependency",
+    "actual_default_complete_health_unavailable",
+    "actual_full_check_unavailable_without_ps",
+    "actual_privacy_restart_without_evaluator",
+    "actual_no_credential_or_example_in_service_logs"
+  ],
+  "fixture_changes": [
+    "private loopback port 18787",
+    "source-matched cached images",
+    "reserved private anonymizer address for Podman Compose recreation",
+    "owned labels and restart disabled for cleanup"
+  ],
+  "original_staging_unchanged": true,
+  "owned_resources_removed": true,
+  "production_configuration_modified": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false,
+  "full_requirements_closed": 0
+}

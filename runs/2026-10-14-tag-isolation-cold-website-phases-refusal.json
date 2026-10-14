@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "kind": "website_build_phases",
+  "captured_at": "2026-10-14T14:08:41.646Z",
+  "pass": false,
+  "expected_phases": [
+    "private-file-controls",
+    "build",
+    "catalogue",
+    "performance",
+    "workflows",
+    "accessibility",
+    "mobile-payload",
+    "feedback"
+  ],
+  "phases": [
+    {
+      "phase": "private-file-controls",
+      "started_at": "2026-10-14T14:06:20.851Z",
+      "finished_at": "2026-10-14T14:06:20.992Z",
+      "elapsed_ms": 142,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "build",
+      "started_at": "2026-10-14T14:06:20.992Z",
+      "finished_at": "2026-10-14T14:06:39.696Z",
+      "elapsed_ms": 18704,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "catalogue",
+      "started_at": "2026-10-14T14:06:39.703Z",
+      "finished_at": "2026-10-14T14:08:41.643Z",
+      "elapsed_ms": 121940,
+      "exit_status": 1,
+      "signal": null,
+      "failure": "child_exit_failed",
+      "pass": false
+    }
+  ],
+  "sequence_request_refused": false,
+  "controller_aborted": true,
+  "raw_child_output_included": false,
+  "command_arguments_included": false,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_verified": false
+}

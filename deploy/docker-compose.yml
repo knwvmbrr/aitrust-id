@@ -41,7 +41,7 @@ services:
     networks: [inspection, edge]
     depends_on:
       anonymizer: {condition: service_healthy}
-      evaluator: {condition: service_healthy}
+      # PS readiness is checked only for full evaluation, never privacy startup.
     restart: unless-stopped
 
   anonymizer:

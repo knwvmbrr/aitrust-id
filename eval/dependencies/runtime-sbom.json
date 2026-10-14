@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "kind": "unsigned_observed_runtime_sbom",
-  "captured_at": "2026-10-11T11:46:46.912287+00:00",
+  "captured_at": "2026-10-14T15:46:11.410091+00:00",
   "scanner": "syft 1.54.1",
   "scanner_archive_sha256": "c069905b391cc4c20a5ba65ad5c10be2a7ba074f8ea6ad203e24d14e303dad47",
   "scanner_signed_identity_verified": false,
@@ -36,7 +36,7 @@
   ],
   "sources": {
     ".dockerignore": "0a386c4e319b74842ce59f20a81caf2f86138292e30a1ac2e6e75e18bd16e5f8",
-    "deploy/docker-compose.yml": "b7b8448fa826e77b037b6f73ccf8ac6dcd2a3a13522685f4a4980335b306a3b8",
+    "deploy/docker-compose.yml": "eb0d64e8cc0f41b4d88547de6bbcd1efb3bf085d6b3e67624eb5cc5d40b7ce29",
     "services/gateway/Dockerfile": "8133c09d2b32878bc036fc8cedf381de158d46576ab65ac64250aa20f292c992",
     "services/gateway/requirements.lock": "230b685d1c222b0bb59562ee046090debc4e75ef55a7c651819f5ae066042b59",
     "services/evaluator/Dockerfile": "adb032a393577f2b87f891e7ad170eee0fa0e3b03cce99e28009acf7a6da1963",
@@ -44,5 +44,5 @@
     "services/anonymizer/Dockerfile": "9f562b7330f8eee4f22e9955a8a672436e45d2171d0e95e421c80da137910ac9",
     "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
   },
-  "inventory_evidence": "runs/2026-10-11-runtime-license-inventory.json"
+  "inventory_evidence": "runs/2026-10-14-runtime-license-inventory.json"
 }

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T13:27:14.989515+00:00",
-  "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
+  "updated": "2026-10-14T16:42:16.887256+00:00",
+  "active_increment": "Independent tag startup, failure, saturation and recovery exercised; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3506,
+  "python_tests_passed": 3507,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -634,7 +634,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -752,7 +752,7 @@
     "publication": "runs/2026-10-11-blind-private-publication.json",
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
-    "latest_measurement_publication": "runs/2026-10-13-setup-live-publication.json",
+    "latest_measurement_publication": "runs/2026-10-14-tag-isolation-live-publication.json",
     "latest_increment": "docs/tag-failure-isolation-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
@@ -1047,15 +1047,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-14-tag-isolation-bounded-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-14-tag-isolation-bounded-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-14-tag-isolation-bounded-current-protocol.json",
-    "extension": "runs/2026-10-14-tag-isolation-bounded-current-extension.json",
-    "website": "runs/2026-10-14-tag-isolation-bounded-accepted-website.json",
+    "PS": "runs/2026-10-14-tag-isolation-cold-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-14-tag-isolation-cold-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-14-tag-isolation-cold-current-protocol.json",
+    "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
+    "website": "runs/2026-10-14-tag-isolation-cold-package-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T13:27:14.989515+00:00",
+  "updated_at": "2026-10-14T16:42:16.887256+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1125,9 +1125,9 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
-    "preview": "https://a5a14097.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "source_commit": "c0e2b13bae7fe3bab5f014e20ef8f72ee4c5ef30",
+    "preview": "https://dd99ec4a.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-14-tag-isolation-live-publication.json",
     "all_artifacts_verified": 783,
     "exact_headers_verified_per_origin": 6,
     "primary_unrelated_files_preserved": 12,
@@ -1395,7 +1395,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -1904,10 +1904,10 @@
     "primary_preservation": "runs/2026-10-12-editorial-primary-preservation.json"
   },
   "python_tests_current_pass": {
-    "passed": 3506,
+    "passed": 3507,
     "skipped": 5,
     "source_unchanged": true,
-    "evidence": "runs/2026-10-14-tag-isolation-bounded-full-suite.json",
+    "evidence": "runs/2026-10-14-tag-isolation-cold-accepted-full-suite.json",
     "independent_accuracy_evidence": false
   },
   "restore_isolation": {
@@ -2463,7 +2463,7 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Current complete-input Linux setup and ten actual failure controls pass; new source publication pending",
+    "status": "Source-bound complete-input Linux setup and ten actual failure controls pass; PR72 publication verified",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
@@ -2480,10 +2480,10 @@
     "selected_build_network": "host",
     "default_build_network": "private",
     "runtime_networks_unchanged": true,
-    "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
-    "protected_merge": "runs/2026-10-14-draft-privacy-protected-merge.json",
+    "publication": "runs/2026-10-14-tag-isolation-live-publication.json",
+    "protected_merge": "runs/2026-10-14-tag-isolation-protected-merge.json",
     "complete_fixture_cleanup": "runs/2026-10-14-tag-isolation-fixture-cleanup.json",
-    "publication_pending": true
+    "publication_pending": false
   },
   "confidence_floor_audit": {
     "scope_id": "F-005",
@@ -2533,17 +2533,17 @@
     "published_source": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31"
   },
   "prior_runtime_publication": {
-    "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
-    "preview": "https://30a8a624.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-13-setup-live-publication.json",
-    "all_artifacts_verified": 777,
-    "exact_headers_verified_per_origin": 5,
+    "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+    "preview": "https://a5a14097.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "all_artifacts_verified": 783,
+    "exact_headers_verified_per_origin": 6,
     "primary_unrelated_files_preserved": 12,
-    "full_requirements_closed": 1
+    "full_requirements_closed": 0
   },
   "tag_failure_isolation": {
     "plan": "docs/tag-failure-isolation-plan.md",
-    "status": "bounded_current_linux_component_browser_and_full_suite_pass; protected_publication_pending",
+    "status": "Current source-bound Linux cold-start, component/browser and full-suite checks pass; PR72 runtime/site publication verified; cold-start correction ready for protected merge",
     "gateway_reservations": {
       "complete_pipeline": 3,
       "privacy_only": 1
@@ -2564,9 +2564,9 @@
     "result": "docs/tag-failure-isolation-result.md",
     "fixture_cleanup": "runs/2026-10-14-tag-isolation-fixture-cleanup.json",
     "current_component_commands": 72,
-    "python_tests_passed": 3506,
+    "python_tests_passed": 3507,
     "python_tests_skipped": 5,
-    "full_suite": "runs/2026-10-14-tag-isolation-bounded-full-suite.json",
+    "full_suite": "runs/2026-10-14-tag-isolation-cold-accepted-full-suite.json",
     "browser_survival": "runs/2026-10-14-tag-isolation-device-browser.json",
     "browser_engines": 2,
     "platform_browser_failure_cases": 6,
@@ -2577,6 +2577,12 @@
       "macOS"
     ],
     "caller_output_cap_enforced_while_reading": true,
-    "bounded_fixture_cleanup": "runs/2026-10-14-tag-isolation-bounded-cleanup.json"
+    "bounded_fixture_cleanup": "runs/2026-10-14-tag-isolation-bounded-cleanup.json",
+    "publication": "runs/2026-10-14-tag-isolation-live-publication.json",
+    "cold_start_status": "Six actual owned Linux Compose controls passed; no evaluator container created, privacy starts and restarts, full checks unavailable",
+    "cold_start_evidence": "runs/2026-10-14-tag-isolation-compose-cold-start.json",
+    "retained_cold_driver_refusals": "runs/2026-10-14-tag-isolation-cold-driver-refusals.json",
+    "full_suite_refusal": "runs/2026-10-14-tag-isolation-cold-full-suite.json",
+    "inventory_recheck": "runs/2026-10-14-tag-isolation-inventory-recheck.json"
   }
 }
