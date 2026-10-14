@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-170456-verified-independent-tag-live-publication-f7ef3b38",
+  "recorded_at": "2026-10-14T17:04:56.801457+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "89235359fd284d893858124298316d54cb631d69",
+  "changed": "Record the protected PR73 merge and deployed runtime/site snapshot; resolve publication pending flags with actual browser, header and all-artifact evidence.",
+  "proves": "22 exact-head protected checks passed. All 261 files match on preview, apex and www; six headers match per origin and all 20 live catalogue panels pass. Linux startup/failure checks, 72 component commands and 3507 tests remain source-bound.",
+  "limits": "Publication evidence only; no runtime source changes. Scope stays 124 complete / 78 open, target 45. Independent accuracy, human/physical/legal acceptance and 12 unbuilt/proposed tags stay open; research collection remains disabled.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "runs/2026-10-14-tag-isolation-cold-live-browser.json": "f924a8ec22d7bc37a21c41b80a8a89df08f9c43dfab3647057fe50de1ca2d3af",
+    "runs/2026-10-14-tag-isolation-cold-live-bytes.json": "b8dadab8feb8b5a238b047e656a8914897afeb43543eb5d3f091f48e675f8d17",
+    "runs/2026-10-14-tag-isolation-cold-live-headers.json": "c91fd5087871a2c16838e85b4d909175a69f0fbb9294b8839d10fe49fb94d7a3",
+    "runs/2026-10-14-tag-isolation-cold-live-publication.json": "89228afcedbf4b62b764a5a0b15bf41f80a11d246a5049452ce048b98159fd6c",
+    "runs/2026-10-14-tag-isolation-cold-protected-merge.json": "0511008b134eaa1eff4fa3db2b849ad3afd9bb5a7fdb227ca12222e6edec404e",
+    "state.json": "752ca5bbb3d4d52c72df1874c331d6f3ef6252330b4304f4f4cead9a2313d462"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-cold-live-publication.json",
+      "sha256": "89228afcedbf4b62b764a5a0b15bf41f80a11d246a5049452ce048b98159fd6c"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-cold-protected-merge.json",
+      "sha256": "0511008b134eaa1eff4fa3db2b849ad3afd9bb5a7fdb227ca12222e6edec404e"
+    }
+  ],
+  "checks": []
+}

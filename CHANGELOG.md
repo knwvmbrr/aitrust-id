@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-170456-verified-independent-tag-live-publication-f7ef3b38
+
+Recorded 2026-10-14T17:04:56.801457+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected PR73 merge and deployed runtime/site snapshot; resolve publication pending flags with actual browser, header and all-artifact evidence.
+- **Evidence.** 22 exact-head protected checks passed. All 261 files match on preview, apex and www; six headers match per origin and all 20 live catalogue panels pass. Linux startup/failure checks, 72 component commands and 3507 tests remain source-bound. [Change record](./runs/changes/2026-10-14-170456-verified-independent-tag-live-publication-f7ef3b38.json).
+- **Not claimed.** Publication evidence only; no runtime source changes. Scope stays 124 complete / 78 open, target 45. Independent accuracy, human/physical/legal acceptance and 12 unbuilt/proposed tags stay open; research collection remains disabled.
+
+
 ### 2026-10-14-164216-final-independent-tag-source-acceptance-2de86e6b
 
 Recorded 2026-10-14T16:42:16.938180+00:00 · Contributor: Codex · change
