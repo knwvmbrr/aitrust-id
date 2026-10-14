@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-110502-independent-tag-usage-and-fault-tests-bde23bc2",
+  "recorded_at": "2026-10-14T11:05:02.157027+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c5858238af9b0745d007326762e6fa386dbcd428",
+  "changed": "Add an independent PS Terminal disclosure and selected privacy doctor instructions, exercise real gateway HTTP isolation and exact standalone engine parity in CI, and retain the Linux test-driver path failure.",
+  "proves": "176 selected software checks passed; the standalone method matches all 86 active authored development regressions. All 202 scope identities and independent tag planning contracts are retained.",
+  "limits": "Clean Linux replay/setup, timing and complete component/browser revalidation remain pending. Zero new full requirements or independent tag releases claimed.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-024",
+    "F-113"
+  ],
+  "files": {
+    "docs/tags/PII_REDACTED-01.md": "98b8f8f1c0fd33cdeb942577e2288853f24d0b76b40ca5bb3563fa81a17a5516",
+    "docs/tags/PS-01.md": "f092ae4579175cdc4d3f98443471219e8741b64e8e7b4d77d28f9a5f15b60d8e",
+    "eval/revalidation.json": "2ed2bd5d721821dc942fc9a7435e419095064ebc8f613ee9fbce0c7a1d16eab7",
+    "runs/2026-10-14-tag-isolation-driver-path-failure.json": "f7ebb4401b2207206bbfca1d7ff22ad091ebdea5836f801c9993dd10373cd7a5",
+    "runs/2026-10-14-tag-isolation-focused.json": "d847c9b2bbb90cf5ec6ee539b17cf7f0a6fff178395e334e2910ced775365522",
+    "site/src/main.jsx": "ad6748e995955990108c28076cdbff631a117b9c9393287e50d7a38e98661e11",
+    "site/src/usage.js": "e9bf345ca2842176f47da091d377384e0f8a1290e80f13296a1ba66b27611465"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-driver-path-failure.json",
+      "sha256": "f7ebb4401b2207206bbfca1d7ff22ad091ebdea5836f801c9993dd10373cd7a5"
+    },
+    {
+      "path": "runs/2026-10-14-standalone-ps-regressions.json",
+      "sha256": "0f13a796f632ba95851bae0994b53df805d374cfacc2a3296f92940928acdefd"
+    }
+  ],
+  "checks": []
+}

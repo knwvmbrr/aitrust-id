@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-130207-require-new-bounded-source-evidence-e71c1179",
+  "recorded_at": "2026-10-14T13:02:07.312263+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f1255b6fd23184db98e1fe547010ba75caf55038",
+  "changed": "Require new source-bound Linux privacy/isolation/batch records after worker supervision changes; retain existing service/setup evidence only for their unchanged inputs.",
+  "proves": "The worker/client source is implemented and its budget/preflight refusal tests execute. Old receipts are not rehashed into current evidence.",
+  "limits": "New runtime receipts remain pending and must execute before any current pass or protected publication. No requirement closure or tag release.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "eval/revalidation.json": "b47df02138eeb0018514e77b5b6abafd20010ca2b29a00b5930f7b50c72ba9b0"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T13:02:08.375855+00:00"
+    }
+  ]
+}

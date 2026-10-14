@@ -27,6 +27,7 @@ A reader can tell what was evaluated and why a tag could not provide its claim.
 - Unavailable processing cannot appear as evaluated uncertainty or success.
 - No-finding never certifies safety.
 - Protocol changes require compatibility tests and the established approval process.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 Numeric thresholds, supported languages/subjects and hardware/latency requirements are defined and accepted for this claim before independent evaluation; no PS threshold is borrowed by default. Existing editorial floors are not measured accuracy.
 

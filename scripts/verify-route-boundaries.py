@@ -475,6 +475,9 @@ def intake_controls(root=ROOT):
             'undeclared_intake_fields_refused': len(controls), 'network_executed': False}
 
 
+
+PATTERNS += ('scripts/worker_process.py','tests/test_worker_process.py','scripts/check-ps.py','scripts/check-tags.py','scripts/verify-standalone-ps.py','scripts/verify-tag-isolation.py','scripts/verify-replay-receipt-input.cjs','tests/test_standalone_ps.py','tests/test_independent_tag_batch.py','tests/test_tag_failure_isolation.py','tests/test_gateway_runtime_isolation.py','tests/test_tag_isolation_verifier.py','docs/tag-failure-isolation-plan.md','docs/tag-failure-isolation-result.md')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

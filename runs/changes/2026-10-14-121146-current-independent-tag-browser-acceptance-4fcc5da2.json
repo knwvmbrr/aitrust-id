@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-121146-current-independent-tag-browser-acceptance-4fcc5da2",
+  "recorded_at": "2026-10-14T12:11:46.478530+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "52eca4806753f6dfae88eb1b8ad0dbf5dd09b3a2",
+  "changed": "Record current component and website verification, both real browser engines and their six platform-survival scenarios; bind the new independent checker, verifier and tests in the route source inventory; preserve owned fixture cleanup.",
+  "proves": "Six PS, five privacy, 25 protocol, 13 extension and 19 website commands pass. Android Chromium and iPhone WebKit each check 137 authored cases and retain catalogue/other-panel navigation after corruption, unavailable worker and timeout. Five owned Linux fixtures were removed and original staging remains healthy.",
+  "limits": "Browser engines are not physical devices or human accessibility acceptance. Full regression and protected publication remain pending. Zero new full requirements or independent tag releases.",
+  "scope_ids": [
+    "F-003",
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "scripts/verify-route-boundaries.py": "e744c7a8a294f32cf22104864e0474a41e0453abdfb22b47150455c276e604ad",
+    "state.json": "be0cb0bfb2f63700886382c5ff13b764dfbe368fbee28b9f52fc7ba4b147b72c",
+    "eval/route-boundaries.json": "0c4f062b888f31cd1d191065acacdc4a3b173a27719e388bc6263a9877f3e834",
+    "runs/2026-10-14-tag-isolation-accepted-website-v4.json": "ba6161e774d6d8e335dfb8cbdfbc62ed26e1c0d88cf4f1d2db29d80335d5bd32",
+    "runs/2026-10-14-tag-isolation-device-browser.json": "9297dfbaf688fb5cd7ef2418e59275598dcd2a1e98e7dff66ca2d2ec7beb4435",
+    "runs/2026-10-14-tag-isolation-fixture-cleanup.json": "6d51aa8630274649a47d76040175662a75ec74990519549de854b315834af9d3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-accepted-website-v4.json",
+      "sha256": "ba6161e774d6d8e335dfb8cbdfbc62ed26e1c0d88cf4f1d2db29d80335d5bd32"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-device-browser.json",
+      "sha256": "9297dfbaf688fb5cd7ef2418e59275598dcd2a1e98e7dff66ca2d2ec7beb4435"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T12:11:46.540086+00:00"
+    }
+  ]
+}

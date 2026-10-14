@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-131924-current-bounded-component-passes-2191e478",
+  "recorded_at": "2026-10-14T13:19:24.898173+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7f58d0a51c4b8e68b9904fc2b007ac058d75ae18",
+  "changed": "Record the current bounded-source PS/privacy/protocol/extension passes before the next site build and retain its prebuild refusal.",
+  "proves": "Seven PS, six privacy, 26 protocol and 14 extension commands pass with unchanged current source. Fresh bounded Linux eight-case isolation and five-case batch/flood evidence are preserved.",
+  "limits": "Website/full regression/protected publication remain pending. Current engineering checks do not release any independently unvalidated tag or close a full scope record.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "runs/2026-10-14-tag-isolation-bounded-current-PS.json": "7db552c74dc9054510e1e6024edf7c8a68b62fce92665c045ffd59b5ffe6c57c",
+    "runs/2026-10-14-tag-isolation-bounded-current-PII_REDACTED.json": "551863baff6822ad9ca96ec37ea20b5e3c4fc6677fbb46431e145ce2a200c3ce",
+    "runs/2026-10-14-tag-isolation-bounded-current-protocol.json": "a6f0ff72752fc545b8af76fe90cb4f9d386a97f98886456e3f05604bc8fc15e1",
+    "runs/2026-10-14-tag-isolation-bounded-current-extension.json": "1fe5b93fabb8d21540d96533c66d1d994f7f62f3bc34166dd4531670e5380e40",
+    "runs/2026-10-14-tag-isolation-bounded-current-website.json": "6e978d78651528028835dc34a3e041a54d12dfd47a0165eea11748deac2d7df3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-real-linux.json",
+      "sha256": "122e3e0ccb1200c7994e8a3514d6201eb47b166203727c052844952063251007"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
+      "sha256": "e05564cdcaf4cb8436b578c33c2f3b06c38f41c7af91d8965a18d12cf7e4d246"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T13:19:24.953549+00:00"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-120253-verify-both-independent-downloads-241e66ed",
+  "recorded_at": "2026-10-14T12:02:53.809599+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "52eca4806753f6dfae88eb1b8ad0dbf5dd09b3a2",
+  "changed": "Require both independent PS setup disclosures to link to the exact downloadable source; remove the old test assumption that one download link serves all workflows, and retain the failed catalogue run.",
+  "proves": "The failing real catalogue run identified an ambiguous single-link locator after the second independent workflow was added. The corrected gate checks both links explicitly; syntax is checked.",
+  "limits": "The corrected catalogue and full website runtime checks remain pending. No independent accuracy, physical-device acceptance or new full scope closure.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "F-142"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "649912e23ce098bc6e5b04db215b0f4fd9de2c88af2b8f14b9fcd0dc4647ad4c",
+    "runs/2026-10-14-tag-isolation-accepted-website-v3.json": "436f331c1e4dbfec1893875388e996595ae2e939aafe821fac345de39663d987"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T12:02:54.018924+00:00"
+    }
+  ]
+}

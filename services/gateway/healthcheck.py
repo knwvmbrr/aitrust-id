@@ -5,7 +5,9 @@ import urllib.request
 def ready():
     try:
         opener=urllib.request.build_opener(urllib.request.ProxyHandler({}))
-        with opener.open('http://127.0.0.1:8000/healthz',timeout=2) as response:
+        # A PS outage must not mark a usable privacy gateway down. The default
+        # healthz still reports complete-pipeline readiness to existing clients.
+        with opener.open('http://127.0.0.1:8000/healthz?check_mode=privacy',timeout=2) as response:
             body=response.read(4097)
             return response.status==200 and len(body)<=4096 and json.loads(body).get('ok') is True
     except (OSError,ValueError,TypeError,AttributeError):

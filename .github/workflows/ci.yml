@@ -93,6 +93,10 @@ jobs:
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install --require-hashes -r eval/requirements.lock
       - run: python -m pytest tests/test_gateway_integration.py -q
+      - name: Keep tag routes independent under real HTTP saturation and worker failures
+        run: |
+          python -m pytest tests/test_tag_failure_isolation.py tests/test_gateway_runtime_isolation.py tests/test_standalone_ps.py tests/test_independent_tag_batch.py tests/test_tag_isolation_verifier.py tests/test_gateway_cancellation.py tests/test_draft_privacy.py -q
+          python scripts/verify-standalone-ps.py --output output/verification/standalone-ps.json
       - name: Exercise protected restore generation and namespace refusal cases
         run: python -m pytest tests/test_restore_isolation.py tests/test_backup_protocol.py -q
       - name: Refuse invalid experimental confidence without granting evidence standing
@@ -170,7 +174,7 @@ jobs:
         with: { node-version: '24' }
       # Source-bound browser/deploy controls need prepared device assets and a
       # normal-owner Git checkout. The site job below runs that complete file.
-      - run: sudo unshare -n "$(which python)" -m pytest tests --ignore=tests/test_route_boundaries.py -q
+      - run: sudo unshare -n sh -c 'ip link set lo up && exec "$@"' sh "$(which python)" -m pytest tests --ignore=tests/test_route_boundaries.py -q
       - run: echo "network-isolated evaluator tests complete"
 
   regressions:

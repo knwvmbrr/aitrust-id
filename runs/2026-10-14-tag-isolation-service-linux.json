@@ -1,0 +1,266 @@
+{
+  "captured_at": "2026-10-14T11:19:20.445297+00:00",
+  "pass": true,
+  "engine": "podman",
+  "engine_version": "podman version 5.4.2",
+  "project": "aitrust-local-dac76690fd294f8aa38727a844be3080",
+  "cases": [
+    {
+      "name": "ready",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 18.81
+    },
+    {
+      "name": "missing_auth",
+      "status": 401,
+      "pass": true,
+      "latency_ms": 1.29
+    },
+    {
+      "name": "wrong_auth",
+      "status": 401,
+      "pass": true,
+      "latency_ms": 1.03
+    },
+    {
+      "name": "private_error_fields_not_reflected",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.07
+    },
+    {
+      "name": "page_origin_rejected",
+      "status": 403,
+      "pass": true,
+      "latency_ms": 1.04
+    },
+    {
+      "name": "unsupported_code",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.12
+    },
+    {
+      "name": "unsupported_image",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.17
+    },
+    {
+      "name": "unsupported_audio",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.24
+    },
+    {
+      "name": "unsupported_video",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.09
+    },
+    {
+      "name": "unsupported_document",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.11
+    },
+    {
+      "name": "unsupported_made-up",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.09
+    },
+    {
+      "name": "empty",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.07
+    },
+    {
+      "name": "extra_field",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.08
+    },
+    {
+      "name": "oversize_chars",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 2.14
+    },
+    {
+      "name": "wrong_type",
+      "status": 422,
+      "pass": true,
+      "latency_ms": 1.14
+    },
+    {
+      "name": "pipeline",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 489190814.77
+    },
+    {
+      "name": "homebrew",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 489194850.56
+    },
+    {
+      "name": "download_only",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 38.66
+    },
+    {
+      "name": "wget_file",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 31.36
+    },
+    {
+      "name": "warning",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 36.3
+    },
+    {
+      "name": "literal_display",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 33.67
+    },
+    {
+      "name": "encoded",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 489195022.21
+    },
+    {
+      "name": "benign",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 31.11
+    },
+    {
+      "name": "unicode",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 489181091.03
+    },
+    {
+      "name": "frozen_unicode15",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 489186123.22
+    },
+    {
+      "name": "detected_redaction_before_evaluation",
+      "status": 200,
+      "pass": true,
+      "latency_ms": 489168156.05
+    }
+  ],
+  "services": {
+    "gateway": {
+      "source_sha256": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+      "uid": 10001,
+      "read_only": true,
+      "runtime_file_sha256": {
+        "app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+      },
+      "memory_limit_bytes": 268435456,
+      "pid_limit": 128,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "engine_readiness_probe_passed": true,
+      "published_port_scope": "127.0.0.1:8787",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    },
+    "anonymizer": {
+      "source_sha256": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+      "uid": 10001,
+      "read_only": true,
+      "runtime_file_sha256": {
+        "app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+        "model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29"
+      },
+      "memory_limit_bytes": 1073741824,
+      "pid_limit": 128,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "engine_readiness_probe_passed": true,
+      "published_port_scope": "none",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ],
+      "model_identity": {
+        "model_name": "en_core_web_sm",
+        "model_version": "3.8.0",
+        "manifest_sha256": "6b06fb1fec36a07e1591763903717d996d11ff412df4e74ec9ddb4264e88a3a7",
+        "asset_files": 29,
+        "verified_before_load": true
+      }
+    },
+    "evaluator": {
+      "source_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "uid": 10001,
+      "read_only": true,
+      "runtime_file_sha256": {
+        "app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b"
+      },
+      "memory_limit_bytes": 268435456,
+      "pid_limit": 128,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "engine_readiness_probe_passed": true,
+      "published_port_scope": "none",
+      "unexpected_application_filesystem_changes": [],
+      "runtime_generated_directory_changes": [
+        "C /etc"
+      ],
+      "bounded_external_tcp_reachable": [
+        false,
+        false
+      ]
+    }
+  },
+  "offline_redaction": true,
+  "redacted_subject_hash_and_length_verified": true,
+  "synthetic_markers_absent_from_application_logs": true,
+  "application_log_streams_checked": [
+    "stdout",
+    "stderr"
+  ],
+  "private_validation_errors_checked_on_all_services": true,
+  "no_store_headers_checked_on_all_gateway_cases": true,
+  "request_url_access_logging_disabled": true,
+  "dependency_failure_recovery_exercised": false,
+  "gateway_edge_egress_observed": false,
+  "isolation_scope": "Two external IPv4/IPv6 TCP destinations; evaluator/redactor only",
+  "latency_budget_accepted": false,
+  "independent_accuracy_evidence": false,
+  "release_validated": false,
+  "human_or_device_acceptance": false
+}

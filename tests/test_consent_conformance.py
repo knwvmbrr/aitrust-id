@@ -58,4 +58,5 @@ def test_actual_gateway_refuses_modality_before_dependencies(monkeypatch,modalit
     assert result.status_code == 422
     assert result.json()['detail']=='Unsupported modality; only text is currently evaluated'
     assert calls == []
-    assert gateway.LIMIT._value == 4
+    assert gateway.LIMIT._value == 3
+    assert gateway.PRIVACY_LIMIT._value == 1

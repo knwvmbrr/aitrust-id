@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-114535-retain-replay-source-selection-failure-f3688026",
+  "recorded_at": "2026-10-14T11:45:35.947812+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "800bbf91a9f8441e9eb221973c98493d1cb71623",
+  "changed": "Retain the diagnosed stale replay-input failure as a public attributed run rather than replacing it with the corrected pass.",
+  "proves": "Current public replay input passed browser export and eight path refusal controls after explicitly selecting the source-matched service record.",
+  "limits": "The retained failure remains a failure; it is not independent accuracy, current-source final revalidation or a scope closure.",
+  "scope_ids": [
+    "F-003",
+    "F-096"
+  ],
+  "files": {
+    "runs/2026-10-14-tag-isolation-replay-input-failure.json": "f3b8ecaf28425636eb2701488dcfb9b25897d5db40b47f0da90805c51fdd950b"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "scripts/verify-replay-receipt-input.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T11:45:36.307897+00:00"
+    }
+  ]
+}

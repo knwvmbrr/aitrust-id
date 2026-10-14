@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-111225-isolate-privacy-contract-and-browser-failures-6de7a2c2",
+  "recorded_at": "2026-10-14T11:12:25.888961+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8429ce16e8969171b5311a85cf759f816009bf5c",
+  "changed": "Place privacy independence acceptance in its existing PII-01 contract, remove an accidental duplicate filename, and require the catalogue and other tag panel to remain usable after PS worker corruption, unsupported worker and timeout.",
+  "proves": "Existing tag package crosswalk retains all 202 scope records and rejects cross-tag dependencies. Browser navigation checks are implemented and syntax checked; their runtime execution is pending.",
+  "limits": "The added browser scenarios are not yet runtime verified. Real Linux and source-bound component/browser verification remain pending. No scope closure or independent accuracy claim.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "docs/tags/PII-01.md": "e4082c487066ae6243d9c2b874074757251b94d039e5a8280ebd743480e592b1",
+    "docs/tags/PII_REDACTED-01.md": null,
+    "runs/2026-10-14-tag-isolation-PS.json": "2cc3b5c638bf7ca6fd3a34d0626e6b9cc88773904f5c640493763dadf5e73a6c",
+    "runs/2026-10-14-tag-isolation-driver-state-failure.json": "bd3e7da49836056619bc6711e2935a9755087660d3a30b6488512aa13243dc4b",
+    "runs/2026-10-14-tag-isolation-focused.json": "d847c9b2bbb90cf5ec6ee539b17cf7f0a6fff178395e334e2910ced775365522",
+    "scripts/verify-device.cjs": "ed0171ba53c66a78181c9f0cba4eb437c58983969a1f5d1a6241e23c188a0749"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-focused.json",
+      "sha256": "d847c9b2bbb90cf5ec6ee539b17cf7f0a6fff178395e334e2910ced775365522"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-driver-state-failure.json",
+      "sha256": "bd3e7da49836056619bc6711e2935a9755087660d3a30b6488512aa13243dc4b"
+    }
+  ],
+  "checks": []
+}

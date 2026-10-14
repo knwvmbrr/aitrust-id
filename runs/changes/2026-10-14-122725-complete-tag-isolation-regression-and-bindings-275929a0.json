@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-122725-complete-tag-isolation-regression-and-bindings-275929a0",
+  "recorded_at": "2026-10-14T12:27:25.259014+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8c8c99306eeb763b39115ef04fe61f683ff20023",
+  "changed": "Record the complete current-source regression pass, preserve its first five-failure run, align unsupported-media tests with the reserved three-plus-one slots and bind the freshly committed browser evidence.",
+  "proves": "3493 tests pass with five platform skips and unchanged source; the current route boundary guard verifies 786 inputs and the new committed two-engine device evidence. All 202 scope records remain, 124 complete and 78 open; goal 45.",
+  "limits": "Software/browser/Linux tests do not replace independent labels, physical devices, human accessibility or legal acceptance. No new full requirement closure or tag release.",
+  "scope_ids": [
+    "F-003",
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "tests/test_consent_conformance.py": "f9ece3e716976f985ec11d0497228c4f1de535860c00dd2ce8764fc85cdc4be8",
+    "eval/route-boundaries.json": "d60711a4cd6f1586be4933ece7b52472e09e8d3f1425a7a354c8396e8063417e",
+    "state.json": "44c41096265278c559c728bcbada1a10420e696f7df334356633b89a8e307ba1",
+    "runs/2026-10-14-tag-isolation-full-suite.json": "fa4cc2b14c89322a4f8539c3485d91ff1d801912f4825943b1761e578a3b2466",
+    "runs/2026-10-14-tag-isolation-full-suite-v2.json": "3e597005f35174da4c742aaa8bfab542e2398e715f45f4a16fc54395fe1192dc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-full-suite-v2.json",
+      "sha256": "3e597005f35174da4c742aaa8bfab542e2398e715f45f4a16fc54395fe1192dc"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-route-boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T12:27:26.631232+00:00"
+    }
+  ]
+}

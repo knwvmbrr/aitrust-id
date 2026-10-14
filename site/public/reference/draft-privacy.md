@@ -60,3 +60,17 @@ privacy CLI needs only the hash-locked checker environment.
 This is a manual privacy-preview enhancement, not released PII_OUTBOUND browser
 interception. No new tag code or confidence threshold is adopted. Independent
 PII recognition, physical-device and human accessibility acceptance stay open.
+
+## Check this route when PS is unavailable
+
+```sh
+LOCAL_STATE="$HOME/.config/aitrust-id/local-stack"
+"$LOCAL_STATE/checker/bin/python" scripts/aitrust.py doctor --privacy --env-file "$LOCAL_STATE/runtime.env"
+```
+
+This checks only privacy readiness and makes an authenticated synthetic privacy
+request. PS saturation has its own reserved admission capacity. Privacy saturation
+cannot take the full-service route's slots either. Both service routes still need
+a working redactor; a failed redactor never triggers raw-input forwarding. Use
+`python3 scripts/check-ps.py response.txt` for an explicit standalone PS check
+without the local services. It performs no redaction or PII check.

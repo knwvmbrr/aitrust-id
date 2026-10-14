@@ -3,14 +3,35 @@
 ## Architecture and claim
 
 The downloadable repository and site are public entry points. The checker runs
-on the person's machine, through the same authenticated gateway, redactor and
-evaluator as the Chrome adapter. It adds no remote inference endpoint, upload
+on the person's machine. The standalone PS command needs no services. The combined
+service route uses the authenticated gateway, redactor and evaluator as the Chrome adapter. It adds no remote inference endpoint, upload
 collection or paid API. Code supplied as input is never run.
 
 PS reports supported command-risk patterns. It does not validate an AI answer's
 truth, identify a scam, certify a publisher, or clear untagged content as safe.
 Its schema-validated record binds a versioned method to the redacted subject.
 Independent accuracy, accessibility and acceptance remain separate release gates.
+
+## PS without any local service
+
+Download the source and open its folder. On Linux or macOS with Python 3.12+, save an answer as
+`response.txt` and run:
+
+```sh
+python3 scripts/check-ps.py response.txt
+```
+
+This independent PS route needs no container engine, token, gateway or privacy
+service. It uses the same frozen method as the website and runs in its own child
+process. Limit: 20,000 characters and a ten-second execution deadline. No command
+in the answer is run; no draft is edited. **No redaction is performed.** The
+ordinary result is short; `--json` explicitly exports potentially identifying
+hashes and offsets. `--fail-on-finding` returns 2 for a finding, 0 for a completed
+check without a supported finding, and 1 for Unavailable. Unavailable is never
+No finding, and No finding is never a safety clearance. This is a development
+preview; independent release validation remains required.
+
+[Independent routes and failure tests](tag-failure-isolation-plan.md).
 
 ## Install and use
 
@@ -145,3 +166,26 @@ Public reference downloads also work with ordinary curl or an identified
 `AITrust-ID-Validator/0.1` user agent. The observed default Python urllib agent
 received Cloudflare error 1010; that transport response is not an evaluation
 result. The full repository includes the evidence and datasets for offline use.
+
+## Check multiple tags independently
+
+After optional local-service setup, use its checker environment to run both checks:
+
+```sh
+LOCAL_STATE="$HOME/.config/aitrust-id/local-stack"
+"$LOCAL_STATE/checker/bin/python" scripts/check-tags.py response.txt --tag PS --tag PII_REDACTED --env-file "$LOCAL_STATE/runtime.env"
+```
+
+Each result appears when ready. PS runs in its own process without redaction;
+privacy runs through the independent local redactor. A failing check does not
+remove the other's finding. Select just `--tag PS` to run without services or a
+token. Each tag keeps its own input limit and evidence record. PS handles up to
+20,000 characters; larger supported privacy input can still be checked separately.
+
+Exit 0 means the selected checks completed; `--fail-on-finding` uses exit 2 for a
+completed finding. Exit 3 means only part of the batch completed; exit 1 means no
+valid batch result was obtained. Do not treat a partial result as a successful
+check of every selected tag. `--json` explicitly exports separate full records,
+including potentially identifying hashes/offsets. PS and privacy subjects differ:
+the coordinator never flattens their spans or claims they independently corroborate
+one another. These remain development previews with their own release gates.

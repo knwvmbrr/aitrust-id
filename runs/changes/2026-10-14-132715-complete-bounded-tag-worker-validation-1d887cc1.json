@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-132715-complete-bounded-tag-worker-validation-1d887cc1",
+  "recorded_at": "2026-10-14T13:27:15.066520+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7f58d0a51c4b8e68b9904fc2b007ac058d75ae18",
+  "changed": "Bind the final bounded-worker component receipts and source inventory, preserve current full regressions and cleanup, and update machine-readable current truth.",
+  "proves": "3506 tests pass with five platform skips and unchanged 788-input source inventory; 72 current component commands pass; real Linux eight-case isolation and five-case multi-tag/flood checks pass. All 202 scope records remain, 124 complete and 78 open, target 45.",
+  "limits": "Independent accuracy, real humans, physical devices, legal acceptance and 12 unbuilt/proposed tags remain open. No new full scope closure or independently validated tag release.",
+  "scope_ids": [
+    "F-003",
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "state.json": "789587157073ee41ce8c1f8ba9122069e4c925e15f57a1b58c1f3d17b306f475",
+    "eval/route-boundaries.json": "1e1947512ab43864f1e849b63dd330d50b8dab25b0aaceb026741c7112dac529",
+    "runs/2026-10-14-tag-isolation-bounded-accepted-website.json": "db9b92785282027552dc31e4bd0d881ee622e26bf93f7210c4c3bf778393c01c",
+    "runs/2026-10-14-tag-isolation-bounded-cleanup.json": "3c013f25d7f36977db6f8b600d5542334e9ac5d03b7a7d0bc6c93a1171efb720",
+    "runs/2026-10-14-tag-isolation-bounded-full-suite.json": "38658b96ddf11e76499ed3678a74db2c7010c587ffbc969c11efc9195fbf643c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-full-suite.json",
+      "sha256": "38658b96ddf11e76499ed3678a74db2c7010c587ffbc969c11efc9195fbf643c"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
+      "sha256": "e05564cdcaf4cb8436b578c33c2f3b06c38f41c7af91d8965a18d12cf7e4d246"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-route-boundaries.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T13:27:16.433940+00:00"
+    }
+  ]
+}

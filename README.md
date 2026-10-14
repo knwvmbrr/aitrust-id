@@ -58,6 +58,13 @@ Native iPhone/Android sharing interfaces are tracked future work, not shipped ap
 
 ## Try the local checker
 
+For PS alone, download the source and run `python3 scripts/check-ps.py response.txt`
+on Linux or macOS with Python 3.12+. This process-isolated development checker requires no token,
+container, gateway or privacy service. It accepts up to 20,000 characters and
+performs **no redaction**. Failure is Unavailable, never a safety clearance.
+The combined service checker and independent privacy checker are separate routes.
+[Tag independence architecture](docs/tag-failure-isolation-plan.md).
+
 [Download the source](https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip)
 or clone this repository. Follow the [installation and verification guide](docs/open-validation-path.md).
 PS checks bounded command-risk patterns in text you supply; it does not certify

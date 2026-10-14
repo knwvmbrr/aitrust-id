@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-125617-observe-worker-descendant-termination-dff9e45e",
+  "recorded_at": "2026-10-14T12:56:17.410347+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "568f98dfebc5ac2b9e8b8259b4ce7f97b76b96ad",
+  "changed": "Observe descendant termination within a bounded two-second signal-delivery grace period rather than assuming every OS schedules the killed descendant before the parent is reaped.",
+  "proves": "Actual flood and deadline controls still require the owned process to exit or become a zombie; running descendants fail the check. This does not skip or weaken the group-kill requirement.",
+  "limits": "A killed zombie is not a running worker. Remaining Linux, current-source and protected publication checks are pending; no new scope closure or tag accuracy claim.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "tests/test_worker_process.py": "34143622ce835f452533e93a5d921dd8f38ddd2fb3bdd37d0cebec83a333fe2d"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T12:56:18.375424+00:00"
+    }
+  ]
+}

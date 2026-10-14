@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-111727-reusable-owned-tag-fault-verifier-9846f152",
+  "recorded_at": "2026-10-14T11:17:27.286162+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7b9908d3121a2a7e96ad6eabcc008ed25bb1857f",
+  "changed": "Replace the fragile private fault block with a reusable public owned-setup verifier that checks source identity and the schema environment before pausing any dependency, refuses unrelated runtimes and restores failures.",
+  "proves": "Nine verifier refusal/preflight tests pass. Current gateway saturation and standalone method checks pass; the new actual Linux verifier is prepared for execution.",
+  "limits": "The reusable fault verifier still needs its actual Linux run. Previous private-driver failures are retained; no independent accuracy, all-tag operation or new full scope closure is asserted.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "scripts/verify-tag-isolation.py": "793ecc97a8768430f14cb6d1a0b873c60b16c1918f9c4322e8e675e0dcbb8712",
+    "tests/test_tag_isolation_verifier.py": "0fa9055f2af138d6f6531d14488c197855a8e743a22eab8807656c813e404602",
+    "eval/revalidation.json": "87b7e9550d87bf43d1dfe8a8e03d16a968910c7ac90ce5f8f62c1c9840995052"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T11:17:27.590801+00:00"
+    }
+  ]
+}

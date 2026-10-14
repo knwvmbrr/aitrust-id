@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-10-14T11:21:10.032834+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "sources": {
+    "scripts/verify-tag-isolation.py": "793ecc97a8768430f14cb6d1a0b873c60b16c1918f9c4322e8e675e0dcbb8712",
+    "scripts/setup-local.py": "8b9abd1a846b254e89da35b7b81a255cd55ca5552b45b96a25657bd3dd37af06",
+    "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+    "scripts/check-ps.py": "3bcf9502c6cb9c3bcd3656d5c9822232fc7410a68c86853812506f4ef48999f9",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+    "services/gateway/healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+  },
+  "source_unchanged": true,
+  "actual_new_owned_linux_services": true,
+  "cases": [
+    "actual_excess_full_request_refused",
+    "actual_paused_ps_full_queue_privacy_survives",
+    "actual_privacy_doctor_survives",
+    "actual_full_requests_recover_after_unpause",
+    "actual_redactor_down_privacy_unavailable",
+    "actual_standalone_ps_without_redactor",
+    "actual_all_service_recovery",
+    "actual_identity_preserved_and_private_input_absent_from_logs"
+  ],
+  "case_count": 8,
+  "owned_service_identities_restored": true,
+  "production_configuration_modified": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "scope": "Actual newly owned Linux service saturation, independent routes and recovery; no independent accuracy or all-tag release."
+}

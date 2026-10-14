@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-10-14T12:46:07.800558+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "sources": {
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/verify-standalone-ps.py": "546b63388b8bebc7e67938d6d29f5cb08de0156574d939b6edbfbec622ad74d1",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "eval/datasets/unsafe_code/manifest.json": "ec9d5ce24bb4c13b31d7e95320f65bd1b989bac8dee5caeb204ad1f88b4a1181",
+    "eval/datasets/unsafe_code/ps_v1.jsonl": "7b74ca1bb7f93142170e554adc9c20dea93e565c993b61142eaeeafaef32bde4",
+    "eval/datasets/unsafe_code/fetch_execute_v1.jsonl": "8a04b43a74a03d1d58eac0065d61e5dc3f5d3512a6044083d72814098fdd4c10",
+    "eval/datasets/unsafe_code/counterexamples_v2.jsonl": "82fc37b54cb3d90bbe4db72ca747d91272d864c20b4435e714543fc00c59d274",
+    "eval/datasets/unsafe_code/live_gap_v1.jsonl": "0d18a3e31a3fcb894926894a4898a4d138ca1fe2d4a7834f9a860f969ddec5a9",
+    "eval/datasets/unsafe_code/routing_boundaries_v1.jsonl": "639715fb9ebb6e755fb5028adab57f14f9b04733433b98810666bb4f93a63b62"
+  },
+  "source_unchanged": true,
+  "actual_child_processes": 86,
+  "fixture_files": 5,
+  "finding_cases": 31,
+  "no_finding_cases": 55,
+  "exact_current_method_parity": true,
+  "original_input_executed": false,
+  "gateway_required": false,
+  "redactor_required": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "scope": "Standalone process parity on all active authored PS development regressions; no accuracy release or human acceptance."
+}

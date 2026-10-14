@@ -2,6 +2,186 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-132715-complete-bounded-tag-worker-validation-1d887cc1
+
+Recorded 2026-10-14T13:27:15.066520+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final bounded-worker component receipts and source inventory, preserve current full regressions and cleanup, and update machine-readable current truth.
+- **Evidence.** 3506 tests pass with five platform skips and unchanged 788-input source inventory; 72 current component commands pass; real Linux eight-case isolation and five-case multi-tag/flood checks pass. All 202 scope records remain, 124 complete and 78 open, target 45. [Change record](./runs/changes/2026-10-14-132715-complete-bounded-tag-worker-validation-1d887cc1.json).
+- **Not claimed.** Independent accuracy, real humans, physical devices, legal acceptance and 12 unbuilt/proposed tags remain open. No new full scope closure or independently validated tag release.
+
+
+### 2026-10-14-131924-current-bounded-component-passes-2191e478
+
+Recorded 2026-10-14T13:19:24.898173+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the current bounded-source PS/privacy/protocol/extension passes before the next site build and retain its prebuild refusal.
+- **Evidence.** Seven PS, six privacy, 26 protocol and 14 extension commands pass with unchanged current source. Fresh bounded Linux eight-case isolation and five-case batch/flood evidence are preserved. [Change record](./runs/changes/2026-10-14-131924-current-bounded-component-passes-2191e478.json).
+- **Not claimed.** Website/full regression/protected publication remain pending. Current engineering checks do not release any independently unvalidated tag or close a full scope record.
+
+
+### 2026-10-14-131621-bounded-worker-real-linux-acceptance-784b044d
+
+Recorded 2026-10-14T13:16:21.452926+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain fresh bounded-worker Linux isolation and five multi-tag scenarios including stdout flooding; prepare the Linux/macOS-only terminal instructions and preserve unchanged baseline privacy evidence.
+- **Evidence.** Actual owned Linux fault verifier passes eight controls, multi-tag runner passes five controls, and loopback-only isolated namespace executes its worker and HTTP tests. Original staging restored unchanged. Seven PS revalidation commands pass on unchanged current source. [Change record](./runs/changes/2026-10-14-131621-bounded-worker-real-linux-acceptance-784b044d.json).
+- **Not claimed.** Current privacy/protocol/extension/website and full-suite refresh remain pending. No independent accuracy, physical devices or new scope closure.
+
+
+### 2026-10-14-130818-correct-standalone-fault-probe-input-2eeb8c37
+
+Recorded 2026-10-14T13:08:18.279046+00:00 · Contributor: Codex · change
+
+- **Changed.** Remove an accidentally inserted inventory filename from the real standalone fault-probe argv, keep the helper in its source inventory and execute the actual selected invocation in a regression test.
+- **Evidence.** The source-owned fault probe now checks its invented stdin command and returns the expected PS finding with no redaction. It cannot silently inspect a source file instead. [Change record](./runs/changes/2026-10-14-130818-correct-standalone-fault-probe-input-2eeb8c37.json).
+- **Not claimed.** Fresh real Linux fault and all source-bound acceptance remain required; no independent accuracy or full scope closure.
+
+
+### 2026-10-14-130207-require-new-bounded-source-evidence-e71c1179
+
+Recorded 2026-10-14T13:02:07.312263+00:00 · Contributor: Codex · change
+
+- **Changed.** Require new source-bound Linux privacy/isolation/batch records after worker supervision changes; retain existing service/setup evidence only for their unchanged inputs.
+- **Evidence.** The worker/client source is implemented and its budget/preflight refusal tests execute. Old receipts are not rehashed into current evidence. [Change record](./runs/changes/2026-10-14-130207-require-new-bounded-source-evidence-e71c1179.json).
+- **Not claimed.** New runtime receipts remain pending and must execute before any current pass or protected publication. No requirement closure or tag release.
+
+
+### 2026-10-14-125906-diagnose-owned-verifier-without-private-values-abea0d9a
+
+Recorded 2026-10-14T12:59:06.019777+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose only exception type and source filename/line in a failed owned fault-verification run so its failure can be repaired without logging exception messages, tokens or input.
+- **Evidence.** The diagnostic names code positions only; owner/runtime refusals and schema preflight remain tested before mutation. [Change record](./runs/changes/2026-10-14-125906-diagnose-owned-verifier-without-private-values-abea0d9a.json).
+- **Not claimed.** Current bounded Linux run did not complete the reusable verifier and remains unaccepted. All current-source, independent-label and publication gates remain required.
+
+
+### 2026-10-14-125617-observe-worker-descendant-termination-dff9e45e
+
+Recorded 2026-10-14T12:56:17.410347+00:00 · Contributor: Codex · change
+
+- **Changed.** Observe descendant termination within a bounded two-second signal-delivery grace period rather than assuming every OS schedules the killed descendant before the parent is reaped.
+- **Evidence.** Actual flood and deadline controls still require the owned process to exit or become a zombie; running descendants fail the check. This does not skip or weaken the group-kill requirement. [Change record](./runs/changes/2026-10-14-125617-observe-worker-descendant-termination-dff9e45e.json).
+- **Not claimed.** A killed zombie is not a running worker. Remaining Linux, current-source and protected publication checks are pending; no new scope closure or tag accuracy claim.
+
+
+### 2026-10-14-124830-enforce-tag-worker-output-budget-c9bc47d0
+
+Recorded 2026-10-14T12:48:30.640693+00:00 · Contributor: Codex · change
+
+- **Changed.** Enforce output and input budgets while supervising nonblocking worker pipes, kill the owned process group on failure before reaping, keep stderr/content out of storage, and support the verified Linux/macOS terminal control path. Enable only loopback in CI isolated network namespaces.
+- **Evidence.** Selected worker/client tests exercise actual flooding with stalled input, timeouts, process-group cleanup and both tag clients. All 86 authored PS regressions preserve the exact current method. Zombie observation uses POSIX process state on macOS as well as Linux procfs. [Change record](./runs/changes/2026-10-14-124830-enforce-tag-worker-output-budget-c9bc47d0.json).
+- **Not claimed.** New helper source requires fresh Linux fault, component, browser and full-suite evidence; prior receipts remain historical. No independent accuracy, physical device or new full requirement closure.
+
+
+### 2026-10-14-122725-complete-tag-isolation-regression-and-bindings-275929a0
+
+Recorded 2026-10-14T12:27:25.259014+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the complete current-source regression pass, preserve its first five-failure run, align unsupported-media tests with the reserved three-plus-one slots and bind the freshly committed browser evidence.
+- **Evidence.** 3493 tests pass with five platform skips and unchanged source; the current route boundary guard verifies 786 inputs and the new committed two-engine device evidence. All 202 scope records remain, 124 complete and 78 open; goal 45. [Change record](./runs/changes/2026-10-14-122725-complete-tag-isolation-regression-and-bindings-275929a0.json).
+- **Not claimed.** Software/browser/Linux tests do not replace independent labels, physical devices, human accessibility or legal acceptance. No new full requirement closure or tag release.
+
+
+### 2026-10-14-121146-current-independent-tag-browser-acceptance-4fcc5da2
+
+Recorded 2026-10-14T12:11:46.478530+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current component and website verification, both real browser engines and their six platform-survival scenarios; bind the new independent checker, verifier and tests in the route source inventory; preserve owned fixture cleanup.
+- **Evidence.** Six PS, five privacy, 25 protocol, 13 extension and 19 website commands pass. Android Chromium and iPhone WebKit each check 137 authored cases and retain catalogue/other-panel navigation after corruption, unavailable worker and timeout. Five owned Linux fixtures were removed and original staging remains healthy. [Change record](./runs/changes/2026-10-14-121146-current-independent-tag-browser-acceptance-4fcc5da2.json).
+- **Not claimed.** Browser engines are not physical devices or human accessibility acceptance. Full regression and protected publication remain pending. Zero new full requirements or independent tag releases.
+
+
+### 2026-10-14-120253-verify-both-independent-downloads-241e66ed
+
+Recorded 2026-10-14T12:02:53.809599+00:00 · Contributor: Codex · change
+
+- **Changed.** Require both independent PS setup disclosures to link to the exact downloadable source; remove the old test assumption that one download link serves all workflows, and retain the failed catalogue run.
+- **Evidence.** The failing real catalogue run identified an ambiguous single-link locator after the second independent workflow was added. The corrected gate checks both links explicitly; syntax is checked. [Change record](./runs/changes/2026-10-14-120253-verify-both-independent-downloads-241e66ed.json).
+- **Not claimed.** The corrected catalogue and full website runtime checks remain pending. No independent accuracy, physical-device acceptance or new full scope closure.
+
+
+### 2026-10-14-115340-accepted-component-runs-before-site-build-285fa86f
+
+Recorded 2026-10-14T11:53:40.618487+00:00 · Contributor: Codex · change
+
+- **Changed.** Record fresh source-bound PS, privacy, protocol and extension passes before site build; preserve both failed website attempts, including the omitted npm path and the enforced missing-change-record refusal.
+- **Evidence.** Current source is unchanged across six PS, five privacy, 25 protocol and 13 extension commands. The current replay receipt passes browser export; unsafe receipt paths remain refused. [Change record](./runs/changes/2026-10-14-115340-accepted-component-runs-before-site-build-285fa86f.json).
+- **Not claimed.** Both website attempts failed before browser acceptance and remain failures. No independent accuracy, human/device acceptance or new full requirement closure.
+
+
+### 2026-10-14-114535-retain-replay-source-selection-failure-f3688026
+
+Recorded 2026-10-14T11:45:35.947812+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the diagnosed stale replay-input failure as a public attributed run rather than replacing it with the corrected pass.
+- **Evidence.** Current public replay input passed browser export and eight path refusal controls after explicitly selecting the source-matched service record. [Change record](./runs/changes/2026-10-14-114535-retain-replay-source-selection-failure-f3688026.json).
+- **Not claimed.** The retained failure remains a failure; it is not independent accuracy, current-source final revalidation or a scope closure.
+
+
+### 2026-10-14-114402-bind-current-replay-export-input-c4d3f246
+
+Recorded 2026-10-14T11:44:02.210796+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current actual-service replay receipt explicitly in the extension verification command, refuse unsafe receipt paths and refresh the selected route evidence references.
+- **Evidence.** Actual browser export of the fresh service assertion passes its current schema/digest, keyboard/permission and accessibility checks. Eight unsafe receipt-path cases are refused. [Change record](./runs/changes/2026-10-14-114402-bind-current-replay-export-input-c4d3f246.json).
+- **Not claimed.** Previous stale-input verification failure remains recorded. Source-bound components will be rerun after this contract correction. No independent accuracy, human/device acceptance or new scope closure is claimed.
+
+
+### 2026-10-14-113850-current-tag-isolation-evidence-and-scope-da87bcba
+
+Recorded 2026-10-14T11:38:50.567143+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current Linux service, privacy, replay, isolation, four independent batch scenarios and 12-profile timing receipts; update the full preserved scope and target of 45 without declaring new closures; prepare public source mirrors.
+- **Evidence.** Actual current-source clean Linux setup, isolated selected routes, independent multi-tag crash/timeout survival and fresh full-pipeline timing all passed. All 202 scope records remain: 124 complete and 78 open. [Change record](./runs/changes/2026-10-14-113850-current-tag-isolation-evidence-and-scope-da87bcba.json).
+- **Not claimed.** Final component/browser, full regression and publication verification remain pending. Independent accuracy, human operation, physical phones and planned tags remain open.
+
+
+### 2026-10-14-112856-independent-multiple-tag-results-ff8b9476
+
+Recorded 2026-10-14T11:28:56.488319+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an explicit local multi-tag command with separate processes, lazy per-tag imports, immediate brief results, separate records and honest partial-result exits. Preserve new real Linux saturation, recovery and clean-setup receipts.
+- **Evidence.** 17 selected multi-tag checks pass, including a real minimal interpreter preserving PS when privacy is unavailable, independent checker import failures and prompt result delivery. Actual Linux verification passed ten setup controls, 26 service controls, 15 replay controls, 16 privacy controls and eight isolation controls. [Change record](./runs/changes/2026-10-14-112856-independent-multiple-tag-results-ff8b9476.json).
+- **Not claimed.** The multi-tag command still needs real simultaneous Linux success and per-worker crash/timeout execution. Independent accuracy, human/device acceptance and new scope closure are not claimed.
+
+
+### 2026-10-14-111727-reusable-owned-tag-fault-verifier-9846f152
+
+Recorded 2026-10-14T11:17:27.286162+00:00 · Contributor: Codex · change
+
+- **Changed.** Replace the fragile private fault block with a reusable public owned-setup verifier that checks source identity and the schema environment before pausing any dependency, refuses unrelated runtimes and restores failures.
+- **Evidence.** Nine verifier refusal/preflight tests pass. Current gateway saturation and standalone method checks pass; the new actual Linux verifier is prepared for execution. [Change record](./runs/changes/2026-10-14-111727-reusable-owned-tag-fault-verifier-9846f152.json).
+- **Not claimed.** The reusable fault verifier still needs its actual Linux run. Previous private-driver failures are retained; no independent accuracy, all-tag operation or new full scope closure is asserted.
+
+
+### 2026-10-14-111225-isolate-privacy-contract-and-browser-failures-6de7a2c2
+
+Recorded 2026-10-14T11:12:25.888961+00:00 · Contributor: Codex · change
+
+- **Changed.** Place privacy independence acceptance in its existing PII-01 contract, remove an accidental duplicate filename, and require the catalogue and other tag panel to remain usable after PS worker corruption, unsupported worker and timeout.
+- **Evidence.** Existing tag package crosswalk retains all 202 scope records and rejects cross-tag dependencies. Browser navigation checks are implemented and syntax checked; their runtime execution is pending. [Change record](./runs/changes/2026-10-14-111225-isolate-privacy-contract-and-browser-failures-6de7a2c2.json).
+- **Not claimed.** The added browser scenarios are not yet runtime verified. Real Linux and source-bound component/browser verification remain pending. No scope closure or independent accuracy claim.
+
+
+### 2026-10-14-110502-independent-tag-usage-and-fault-tests-bde23bc2
+
+Recorded 2026-10-14T11:05:02.157027+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an independent PS Terminal disclosure and selected privacy doctor instructions, exercise real gateway HTTP isolation and exact standalone engine parity in CI, and retain the Linux test-driver path failure.
+- **Evidence.** 176 selected software checks passed; the standalone method matches all 86 active authored development regressions. All 202 scope identities and independent tag planning contracts are retained. [Change record](./runs/changes/2026-10-14-110502-independent-tag-usage-and-fault-tests-bde23bc2.json).
+- **Not claimed.** Clean Linux replay/setup, timing and complete component/browser revalidation remain pending. Zero new full requirements or independent tag releases claimed.
+
+
+### 2026-10-14-105857-independent-tag-queues-and-standalone-ps-8ce35e5c
+
+Recorded 2026-10-14T10:58:57.792885+00:00 · Contributor: Codex · change
+
+- **Changed.** Reserve separate full-service and privacy admission, expose selected privacy readiness, add a process-isolated stdlib PS command and its own usage path, and apply the owner direction of 45 open requirements to all tag planning contracts.
+- **Evidence.** 176 selected checks passed, including a real gateway process with HTTP saturation in both directions, failure recovery and minimal-interpreter standalone PS. All 86 authored PS regressions match the unchanged frozen method. [Change record](./runs/changes/2026-10-14-105857-independent-tag-queues-and-standalone-ps-8ce35e5c.json).
+- **Not claimed.** Actual clean Linux setup and full source-bound component/browser revalidation are still required. No independent accuracy, physical phone, all-tag operation or new full scope closure is claimed.
+
+
 ### 2026-10-14-030154-publication-summary-review-correction-b208ffa9
 
 Recorded 2026-10-14T03:01:54.823851+00:00 · Contributor: Codex · change

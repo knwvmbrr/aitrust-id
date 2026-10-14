@@ -2,8 +2,16 @@
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),crypto=require('node:crypto'),{spawnSync}=require('node:child_process');
 const {chromium}=require('playwright'),{assess}=require('./axe-gate.cjs'),{writeReport}=require('./execution-report.cjs');
 const assert=(v,m)=>{if(!v)throw Error(m)};
+function receiptPath(value,root=path.resolve(__dirname,'..')){
+ assert(typeof value==='string'&&/^runs\/[A-Za-z0-9_.-]+\.json$/.test(value),'A public replay receipt is required');
+ const file=path.join(root,value);
+ assert(!fs.lstatSync(path.join(root,'runs')).isSymbolicLink()&&!fs.lstatSync(file).isSymbolicLink()&&fs.statSync(file).isFile()&&fs.statSync(file).size<=2000000,'Public replay receipt unavailable');
+ return file;
+}
 async function verify(){
- const receipt=JSON.parse(fs.readFileSync(process.env.AITRUST_REPLAY_RECEIPT||JSON.parse(fs.readFileSync('eval/route-boundaries.json')).replay_evidence));
+ const receiptOption=process.argv.indexOf('--receipt');
+ const selected=receiptOption>=0?process.argv[receiptOption+1]:process.env.AITRUST_REPLAY_RECEIPT||JSON.parse(fs.readFileSync('eval/route-boundaries.json')).replay_evidence;
+ const receipt=JSON.parse(fs.readFileSync(receiptPath(selected)));
  assert(receipt.pass===true&&receipt.synthetic_only===true&&receipt.actual_pipeline_and_cli_executed===true,'Require executed synthetic service evidence');
  const a=receipt.synthetic_browser_fixture;assert(a&&a.tags.length===2,'Missing both-tag synthetic fixture');
  const root=path.resolve(__dirname,'..');let browser;
@@ -53,4 +61,4 @@ async function verify(){
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r))}
 }
 if(require.main===module)verify().then(r=>{writeReport(process.env.AITRUST_REPLAY_EXPORT_REPORT||'output/verification/replay-export.json',r);console.log(JSON.stringify({pass:r.pass,download_sha256:r.download_sha256}))}).catch(e=>{console.error(e.message);process.exitCode=1});
-module.exports={verify};
+module.exports={verify,receiptPath};

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-125906-diagnose-owned-verifier-without-private-values-abea0d9a",
+  "recorded_at": "2026-10-14T12:59:06.019777+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f1255b6fd23184db98e1fe547010ba75caf55038",
+  "changed": "Expose only exception type and source filename/line in a failed owned fault-verification run so its failure can be repaired without logging exception messages, tokens or input.",
+  "proves": "The diagnostic names code positions only; owner/runtime refusals and schema preflight remain tested before mutation.",
+  "limits": "Current bounded Linux run did not complete the reusable verifier and remains unaccepted. All current-source, independent-label and publication gates remain required.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "scripts/verify-tag-isolation.py": "ed5abc740401c4d5622b065ced2a88490777fb5cba6aefeb916851aab358d1f7"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T12:59:06.290674+00:00"
+    }
+  ]
+}
