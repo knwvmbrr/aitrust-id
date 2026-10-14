@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-113850-current-tag-isolation-evidence-and-scope-da87bcba",
+  "recorded_at": "2026-10-14T11:38:50.567143+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "800bbf91a9f8441e9eb221973c98493d1cb71623",
+  "changed": "Bind the current Linux service, privacy, replay, isolation, four independent batch scenarios and 12-profile timing receipts; update the full preserved scope and target of 45 without declaring new closures; prepare public source mirrors.",
+  "proves": "Actual current-source clean Linux setup, isolated selected routes, independent multi-tag crash/timeout survival and fresh full-pipeline timing all passed. All 202 scope records remain: 124 complete and 78 open.",
+  "limits": "Final component/browser, full regression and publication verification remain pending. Independent accuracy, human operation, physical phones and planned tags remain open.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-024",
+    "F-113"
+  ],
+  "files": {
+    "docs/scope-progress.json": "2d7b17f543e70e4b51f9c20a7007661a14e22eb9de043d7d9b246795ed3c3146",
+    "docs/scope-progress.md": "dda58afd4998943a7a371c22b6fd6a2b524165880959ca3d5596dc7bd1291d79",
+    "docs/tag-failure-isolation-result.md": "7238e6552225610fbaaefbe01d8f2773477ff2c24ced10efb3378418a092cca5",
+    "eval/revalidation.json": "b7833d3798ccb6069994abca67ce33a0c92f184b83922a3d30bfcd43d9bb9e05",
+    "runs/2026-10-14-tag-isolation-batch-linux.json": "e3da17707d40fa550b0f3058388ef04b794694c099642702c1139301aeba49de",
+    "runs/2026-10-14-tag-isolation-current-PII_REDACTED.json": "5928185e82fc86a8cdf44ebde18546b8371a5f4a11e0b2bdeff42df34b6c21a8",
+    "runs/2026-10-14-tag-isolation-current-PS.json": "dcf7ef699577bfd47dd323378918823047d4ec8863a2e22ecb8a7ac521a179a1",
+    "runs/2026-10-14-tag-isolation-current-extension.json": "88914bce9dd229be69231486662186f97bafb45801b462c07a28799a01145641",
+    "runs/2026-10-14-tag-isolation-current-protocol.json": "4668bc7bdc0c532d1ea25eaea4a8cb9b250c9cb9dfb18dc05b5864e50d22ed83",
+    "runs/2026-10-14-tag-isolation-pipeline-timing.json": "51d55c6e94f1f1bacf13038fe9cb625aa9c6b9bfd595b87773184ce38e15248c",
+    "site/index.html": "439be12528b6eddb132c5af4dbca7ad5a68f1c0d475a0a4489ca8435d209f3bb",
+    "site/public/reference/PS-01.md": "f092ae4579175cdc4d3f98443471219e8741b64e8e7b4d77d28f9a5f15b60d8e",
+    "site/public/reference/draft-privacy.md": "aeea14d3e125f27d137cfefaed3a4086e3d746d0f4ef34751f5353dbf13f6b77",
+    "site/public/reference/open-validation-path.md": "5591ac785280279e4655970559c2f624749467bf67ddcd0f622d946c3f8dfd8f",
+    "site/public/reference/pipeline-performance.json": "f7007514f8648a86f21fb57e7a662c492d20d7f86f0eb84fa0d62be4c3fff54c",
+    "site/public/reference/public-scope.json": "fe3f3d42b98c379acc2a01d5aa5335c782ea5884ab3b5cf4361fd18fb8deb48c",
+    "site/public/reference/tag-performance.json": "28837e77c8de1a9d8d19d0f495a8128ddb50f9f0796d3ff12559ae95d767adad",
+    "site/scripts/prepare-performance.mjs": "7818048f434cdb4c46f34beeb43ca6ffeb2ca631fdd9bd61a188e1413f5435bb",
+    "site/src/public-scope.json": "fe3f3d42b98c379acc2a01d5aa5335c782ea5884ab3b5cf4361fd18fb8deb48c",
+    "site/src/scope-manifest.json": "ab60e20dc002e8554ef082b8bbad203f1a3d67f5b336e01e28d84794a54f09d0",
+    "site/src/tag-performance.json": "28837e77c8de1a9d8d19d0f495a8128ddb50f9f0796d3ff12559ae95d767adad",
+    "state.json": "ea7ac9f4371ab0271575288bb8af34e94f059ecbda0ef45218d3812e381ce9d7",
+    "tests/pipeline-timing.cjs": "35e8e3215ed6e28a4e0c65a804da853485fd4aa6bfbf3e65bfd1654c6e7aa5d1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
+      "sha256": "19534be16f520a737fba63ab0dace0b5c739a1e9f0fe6247e4dda650ba9d2062"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-real-linux.json",
+      "sha256": "5064c8142f3dbe73310daff70c1188ba40b8b6bcb6bf7c07e34ebeedbbce8e9f"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-batch-linux.json",
+      "sha256": "e3da17707d40fa550b0f3058388ef04b794694c099642702c1139301aeba49de"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-pipeline-timing.json",
+      "sha256": "51d55c6e94f1f1bacf13038fe9cb625aa9c6b9bfd595b87773184ce38e15248c"
+    }
+  ],
+  "checks": []
+}

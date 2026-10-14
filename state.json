@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T10:57:11.284848+00:00",
+  "updated": "2026-10-14T11:38:02.001046+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -737,7 +737,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-14T01:55:51.928931+00:00",
+    "audited_at": "2026-10-14T11:38:02.001046+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -753,11 +753,11 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-13-setup-live-publication.json",
-    "latest_increment": "docs/local-setup-result.md",
+    "latest_increment": "docs/tag-failure-isolation-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 45,
-    "target_start_open_records": 87,
+    "target_start_open_records": 78,
     "target_remaining_closures": 33,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
@@ -767,9 +767,7 @@
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "All tags must operate independently without depending on another tag. An individual tag failure must not disable healthy tag routes or the platform. Continue toward 45 open full requirements, preserving all scope and actual acceptance.",
     "latest_owner_direction_date": "2026-10-14",
-    "latest_increment_completed_ids": [
-      "F-105"
-    ],
+    "latest_increment_completed_ids": [],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json"
   },
   "research_components": {
@@ -861,8 +859,8 @@
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
   },
   "current_source_service_conformance": {
-    "captured_at": "2026-10-14T01:49:24.420146+00:00",
-    "evidence": "runs/2026-10-13-draft-privacy-real-services.json",
+    "captured_at": "2026-10-14T11:19:20.445297+00:00",
+    "evidence": "runs/2026-10-14-tag-isolation-service-linux.json",
     "http_checks": 26,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
@@ -878,8 +876,8 @@
     "all_pid_limits": 128,
     "gateway_evaluator_memory_limit_mib": 256,
     "anonymizer_memory_limit_mib": 1024,
-    "current_dependency_recovery_evidence": "runs/2026-10-13-draft-privacy-real-linux.json",
-    "current_dependency_recovery_scope": "Explicit owned privacy route; nondisruptive full-service conformance is separate"
+    "current_dependency_recovery_evidence": "runs/2026-10-14-tag-isolation-real-linux.json",
+    "current_dependency_recovery_scope": "Actual owned Linux paused evaluator/full queue, privacy survival, stopped redactor/standalone PS survival and restored identity/configuration"
   },
   "local_reference_corpus": {
     "format": "local-reference-corpus/v1",
@@ -1057,7 +1055,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T10:57:11.284848+00:00",
+  "updated_at": "2026-10-14T11:38:02.001046+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2465,13 +2463,13 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Published source; fresh complete-input Linux setup and all ten failure controls pass; human acceptance remains separate",
+    "status": "Current complete-input Linux setup and ten actual failure controls pass; new source publication pending",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
     "collection_enabled": false,
     "independent_release_validated": false,
-    "evidence": "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
+    "evidence": "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
     "cache_scope": "Installed usable Podman and pinned dependency caches; not a blank-host installer",
     "human_acceptance_complete": false,
     "physical_phone_tested": false,
@@ -2485,7 +2483,7 @@
     "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
     "protected_merge": "runs/2026-10-14-draft-privacy-protected-merge.json",
     "complete_fixture_cleanup": "runs/2026-10-14-draft-privacy-fixture-cleanup.json",
-    "publication_pending": false
+    "publication_pending": true
   },
   "confidence_floor_audit": {
     "scope_id": "F-005",
@@ -2545,7 +2543,7 @@
   },
   "tag_failure_isolation": {
     "plan": "docs/tag-failure-isolation-plan.md",
-    "status": "implemented_candidate; focused_checks_pass; full_source_and_actual_linux_revalidation_pending",
+    "status": "actual_linux_and_selected_checks_pass; full_component_browser_and_publication_pending",
     "gateway_reservations": {
       "complete_pipeline": 3,
       "privacy_only": 1
@@ -2558,6 +2556,11 @@
     "new_requirements_closed": 0,
     "remaining_open": 78,
     "target_open": 45,
-    "standalone_regression_evidence": "runs/2026-10-14-standalone-ps-regressions.json"
+    "standalone_regression_evidence": "runs/2026-10-14-standalone-ps-regressions.json",
+    "multi_tag_checker": "scripts/check-tags.py",
+    "actual_linux_evidence": "runs/2026-10-14-tag-isolation-real-linux.json",
+    "actual_batch_evidence": "runs/2026-10-14-tag-isolation-batch-linux.json",
+    "actual_batch_failure_cases": 4,
+    "result": "docs/tag-failure-isolation-result.md"
   }
 }

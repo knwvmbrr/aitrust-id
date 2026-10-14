@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const data=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-14-draft-privacy-pipeline-timing.json'),'utf8'));
+const data=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-10-14-tag-isolation-pipeline-timing.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 const digest=s=>crypto.createHash('sha256').update(s).digest('hex');
 let model;

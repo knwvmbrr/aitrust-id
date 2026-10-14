@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-114535-retain-replay-source-selection-failure-f3688026
+
+Recorded 2026-10-14T11:45:35.947812+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the diagnosed stale replay-input failure as a public attributed run rather than replacing it with the corrected pass.
+- **Evidence.** Current public replay input passed browser export and eight path refusal controls after explicitly selecting the source-matched service record. [Change record](./runs/changes/2026-10-14-114535-retain-replay-source-selection-failure-f3688026.json).
+- **Not claimed.** The retained failure remains a failure; it is not independent accuracy, current-source final revalidation or a scope closure.
+
+
+### 2026-10-14-114402-bind-current-replay-export-input-c4d3f246
+
+Recorded 2026-10-14T11:44:02.210796+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current actual-service replay receipt explicitly in the extension verification command, refuse unsafe receipt paths and refresh the selected route evidence references.
+- **Evidence.** Actual browser export of the fresh service assertion passes its current schema/digest, keyboard/permission and accessibility checks. Eight unsafe receipt-path cases are refused. [Change record](./runs/changes/2026-10-14-114402-bind-current-replay-export-input-c4d3f246.json).
+- **Not claimed.** Previous stale-input verification failure remains recorded. Source-bound components will be rerun after this contract correction. No independent accuracy, human/device acceptance or new scope closure is claimed.
+
+
+### 2026-10-14-113850-current-tag-isolation-evidence-and-scope-da87bcba
+
+Recorded 2026-10-14T11:38:50.567143+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current Linux service, privacy, replay, isolation, four independent batch scenarios and 12-profile timing receipts; update the full preserved scope and target of 45 without declaring new closures; prepare public source mirrors.
+- **Evidence.** Actual current-source clean Linux setup, isolated selected routes, independent multi-tag crash/timeout survival and fresh full-pipeline timing all passed. All 202 scope records remain: 124 complete and 78 open. [Change record](./runs/changes/2026-10-14-113850-current-tag-isolation-evidence-and-scope-da87bcba.json).
+- **Not claimed.** Final component/browser, full regression and publication verification remain pending. Independent accuracy, human operation, physical phones and planned tags remain open.
+
+
 ### 2026-10-14-112856-independent-multiple-tag-results-ff8b9476
 
 Recorded 2026-10-14T11:28:56.488319+00:00 · Contributor: Codex · change

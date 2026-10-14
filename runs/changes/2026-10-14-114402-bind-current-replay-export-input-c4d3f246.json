@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-114402-bind-current-replay-export-input-c4d3f246",
+  "recorded_at": "2026-10-14T11:44:02.210796+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "800bbf91a9f8441e9eb221973c98493d1cb71623",
+  "changed": "Bind the current actual-service replay receipt explicitly in the extension verification command, refuse unsafe receipt paths and refresh the selected route evidence references.",
+  "proves": "Actual browser export of the fresh service assertion passes its current schema/digest, keyboard/permission and accessibility checks. Eight unsafe receipt-path cases are refused.",
+  "limits": "Previous stale-input verification failure remains recorded. Source-bound components will be rerun after this contract correction. No independent accuracy, human/device acceptance or new scope closure is claimed.",
+  "scope_ids": [
+    "F-003",
+    "F-096",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "scripts/verify-replay-export.cjs": "6dbf716c6e903ebc5f030f6ab83de236c62db337664bca2f5548757e0055099d",
+    "scripts/verify-replay-receipt-input.cjs": "edd828c6055505a7e3c30a9a2e21841c00ae28b29afc3025c5ecdb23f7b457b6",
+    "eval/revalidation.json": "61e5a3d0661fee5a03dd2ec658af4c5a126c33cd10b16bf6bfed7c07cc51148a",
+    "eval/route-boundaries.json": "ea9a7d4e913e03c8076e73cd7b394b4324ae59d2db632c8a11458f3cc175c6f4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-replay-input-failure.json",
+      "sha256": "f3b8ecaf28425636eb2701488dcfb9b25897d5db40b47f0da90805c51fdd950b"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-replay-linux.json",
+      "sha256": "c6f130cfd81e0ffcf0f46de78ab2995c3c800cb06c2295118e89e9073ae35bc4"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "scripts/verify-replay-receipt-input.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T11:44:02.573541+00:00"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-14T11:44:02.141667+00:00",
+  "pass": false,
+  "phase": "extension_replay_export_revalidation",
+  "failure_signature": "Downloaded assertion or digest invalid",
+  "cause": "Browser export verifier selected a historical service receipt whose gateway identity no longer matches current source",
+  "fix": "Bind the actual current public replay receipt explicitly in the revalidation command; refuse private, escaped, linked and oversized receipt paths",
+  "independent_accuracy_evidence": false,
+  "collection_enabled": false
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-14T01:55:51.928931+00:00",
-  "client_date": "2026-10-13",
+  "audited_at": "2026-10-14T11:38:02.001046+00:00",
+  "client_date": "2026-10-14",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
   "attribution_rule": "Session/run attribution distinguished from owner-reported Claude additions; Git account author is not substituted for actual implementer",
@@ -740,13 +740,14 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-10T03:28:32.219175+00:00",
+      "audited_at": "2026-10-14T11:38:02.001046+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
         "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
         "Codex \u2014 deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
-        "Codex \u2014 calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00"
+        "Codex \u2014 calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00",
+        "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -773,7 +774,10 @@
         "runs/2026-10-10-calm-a11y-final-local.json",
         "runs/2026-10-10-context-v6-unicode-regressions.json",
         "runs/2026-10-10-context-v6-fixed-device-engines.json",
-        "runs/2026-10-10-evidence-resistance.json"
+        "runs/2026-10-10-evidence-resistance.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "required_acceptance": [
@@ -928,11 +932,12 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-11T19:23:11.937023+00:00",
+      "audited_at": "2026-10-14T11:38:02.001046+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 complete IPv6 span correction, 42-case synthetic engine recognition/masking diagnostic and selected staging service/replay integration, 2026-10-11T18:51:10.358494+00:00"
+        "Codex \u2014 complete IPv6 span correction, 42-case synthetic engine recognition/masking diagnostic and selected staging service/replay integration, 2026-10-11T18:51:10.358494+00:00",
+        "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -961,7 +966,10 @@
         "runs/2026-10-11-pii-labels-compact.json",
         "runs/2026-10-11-pii-labels-service.json",
         "runs/2026-10-11-pii-labels-replay.json",
-        "runs/2026-10-11-pii-labels-timing.json"
+        "runs/2026-10-11-pii-labels-timing.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
@@ -2048,10 +2056,11 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-14T01:55:51.928925+00:00",
+      "audited_at": "2026-10-14T11:38:02.001046+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 explicit independent privacy mode, manual draft CLI, private export/replay and actual stopped-evaluator/restart controls"
+        "Codex \u2014 explicit independent privacy mode, manual draft CLI, private export/replay and actual stopped-evaluator/restart controls",
+        "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -2067,7 +2076,10 @@
         "docs/draft-privacy.md",
         "scripts/verify-draft-privacy.py",
         "tests/test_draft_privacy.py",
-        "runs/2026-10-13-draft-privacy-real-linux.json"
+        "runs/2026-10-13-draft-privacy-real-linux.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
@@ -3044,11 +3056,12 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-10-10T13:47:05.800829+00:00",
+      "audited_at": "2026-10-14T11:38:02.001046+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00"
+        "Codex \u2014 current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00",
+        "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3067,7 +3080,10 @@
         "runs/2026-10-10-consumer-current-service.json",
         "runs/2026-10-10-extension-consumer-faults-corrected.json",
         "runs/2026-10-10-six-state-consumer-browser.json",
-        "docs/extension-consumer-plan.md"
+        "docs/extension-consumer-plan.md",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
       ],
       "evidence_scope": "Current selected local-service graceful degradation: real Linux authentication/readiness/dependency outage and recovery; bounded extension HTTP/body/token failures and unsupported-page fixture behavior. Outside-user and broader vendor acceptance remain separate open jobs.",
       "required_acceptance": [],
@@ -3534,11 +3550,12 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-10-14T01:55:51.928914+00:00",
+      "audited_at": "2026-10-14T11:38:02.001046+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 private one-command setup, effective-runtime inspection and actual Linux execution, 2026-10-13T22:49:20.606326+00:00"
+        "Codex \u2014 private one-command setup, effective-runtime inspection and actual Linux execution, 2026-10-13T22:49:20.606326+00:00",
+        "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3565,7 +3582,11 @@
         "runs/2026-10-13-one-command-complete-input-linux.json",
         "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
         "runs/2026-10-13-draft-privacy-real-linux.json",
-        "runs/2026-10-13-private-address-restart-probe.json"
+        "runs/2026-10-13-private-address-restart-probe.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "runs/2026-10-14-tag-isolation-clean-setup-linux.json"
       ],
       "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
       "required_acceptance": [],
@@ -4153,12 +4174,13 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-13T16:56:07.018769+00:00",
+      "audited_at": "2026-10-14T11:38:02.001046+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex",
         "Codex \u2014 actual authenticated staging timing across declared input sizes and source-bound display controls, 2026-10-11T17:26:41.852967+00:00",
-        "Codex \u2014 lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
+        "Codex \u2014 lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements",
+        "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4193,7 +4215,11 @@
         "runs/2026-10-13-ps-lazy-context-paired.json",
         "runs/2026-10-13-ps-lazy-regressions.json",
         "runs/2026-10-13-ps-lazy-device-engines.json",
-        "runs/2026-10-13-ps-lazy-staging-timing.json"
+        "runs/2026-10-13-ps-lazy-staging-timing.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "runs/2026-10-14-tag-isolation-pipeline-timing.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation The corrected benchmark validates the full self-reported pipeline identity on every response, matches each selected service source and rejects drift; this is not cryptographic remote attestation. The original evaluator-only run remains historical.",
       "required_acceptance": [

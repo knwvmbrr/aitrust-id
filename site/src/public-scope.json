@@ -912,7 +912,7 @@
       "outcome": "The reader sees which claim is supported by which source and passage, and the limits of that support.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Independent claim/passage labels measure support accuracy and unsupported-claim coverage.; No corpus means unsupported/unavailable for NF, not an NF verdict.; Changing a source invalidates only findings derived from that source.",
+      "acceptance": "Independent claim/passage labels measure support accuracy and unsupported-claim coverage.; No corpus means unsupported/unavailable for NF, not an NF verdict.; Changing a source invalidates only findings derived from that source. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Changing a source invalidates only findings derived from that source.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -972,7 +972,7 @@
       "outcome": "The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Blind labels distinguish contradiction from missing evidence.; Offline non-resolution alone never establishes that a source does not exist anywhere.; Publish error rates by evidence type; NF and FI may describe different claims in one answer.",
+      "acceptance": "Blind labels distinguish contradiction from missing evidence.; Offline non-resolution alone never establishes that a source does not exist anywhere.; Publish error rates by evidence type; NF and FI may describe different claims in one answer. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Publish error rates by evidence type; NF and FI may describe different claims in one answer.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -1032,7 +1032,7 @@
       "outcome": "The reader knows which inconsistency or unsupported detail warrants checking and why.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Independent labels and comparison with simpler baselines establish useful indicator performance.; The release claim names the supported indicator; it does not infer model intent.; No source lookup capability is misrepresented as a factual verification.",
+      "acceptance": "Independent labels and comparison with simpler baselines establish useful indicator performance.; The release claim names the supported indicator; it does not infer model intent.; No source lookup capability is misrepresented as a factual verification. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. No source lookup capability is misrepresented as a factual verification.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -1085,7 +1085,7 @@
       "outcome": "The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Report agreement, category errors and confidence calibration separately.; Existing alpha 0.55 and accuracy values remain candidates until the protocol is accepted.; MT disagreement never blocks PS, provenance or privacy tag release.",
+      "acceptance": "Report agreement, category errors and confidence calibration separately.; Existing alpha 0.55 and accuracy values remain candidates until the protocol is accepted.; MT disagreement never blocks PS, provenance or privacy tag release. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. MT disagreement never blocks PS, provenance or privacy tag release.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -1142,7 +1142,7 @@
       "outcome": "The reader sees the hazardous instruction pattern before acting, with exact evidence and a challenge path.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Use PS-01 and its 17-scenario acceptance packet plus phone/device checks.; Candidate 95% Wilson lower-bound precision 0.93 and recall 0.75 require prior protocol acceptance and independent labels.; Maintain all 86 current regression cases and publish category failures; no scam-intent inference.",
+      "acceptance": "Use PS-01 and its 17-scenario acceptance packet plus phone/device checks.; Candidate 95% Wilson lower-bound precision 0.93 and recall 0.75 require prior protocol acceptance and independent labels.; Maintain all 86 current regression cases and publish category failures; no scam-intent inference. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Maintain all 86 current regression cases and publish category failures; no scam-intent inference.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -1168,13 +1168,14 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-10T03:28:32.219175+00:00",
+        "audited_at": "2026-10-14T11:38:02.001046+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
           "Codex — deterministic device builds, real-site accessibility probes and PS field validation, recorded 2026-10-09T20:05:11.817894+00:00",
-          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00"
+          "Codex — calmer independent tag panels and nested Escape repair, recorded 2026-10-10T03:28:32.219175+00:00",
+          "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -1201,7 +1202,10 @@
           "runs/2026-10-10-calm-a11y-final-local.json",
           "runs/2026-10-10-context-v6-unicode-regressions.json",
           "runs/2026-10-10-context-v6-fixed-device-engines.json",
-          "runs/2026-10-10-evidence-resistance.json"
+          "runs/2026-10-10-evidence-resistance.json",
+          "docs/tag-failure-isolation-result.md",
+          "runs/2026-10-14-tag-isolation-real-linux.json",
+          "runs/2026-10-14-tag-isolation-batch-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
         "required_acceptance": [
@@ -1219,7 +1223,7 @@
       "outcome": "The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim’s accuracy.",
+      "acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim’s accuracy. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Review identity and signature integrity are tested separately from the reviewed claim’s accuracy.",
       "dependencies": [
         "WP-INTEGRITY",
@@ -1273,7 +1277,7 @@
       "outcome": "The reader sees the origin assertion, source of evidence and supported observation window.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Absent typing, paste bursts or missing human evidence never establish FA.; Valid signatures establish the signer/record, not the truth of its origin claim.; Independent provenance cases include assisted-input users and incomplete capture.",
+      "acceptance": "Absent typing, paste bursts or missing human evidence never establish FA.; Valid signatures establish the signer/record, not the truth of its origin claim.; Independent provenance cases include assisted-input users and incomplete capture. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Independent provenance cases include assisted-input users and incomplete capture.",
       "dependencies": [
         "WP-INTEGRITY",
@@ -1339,7 +1343,7 @@
       "outcome": "The reader can distinguish documented contribution/edit events from unobserved authorship.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Behavioral indicators alone must first demonstrate that they support the bounded claim.; No per-person timing template or absent-human inference.; Do not use outside knowledge as proof of human authorship.",
+      "acceptance": "Behavioral indicators alone must first demonstrate that they support the bounded claim.; No per-person timing template or absent-human inference.; Do not use outside knowledge as proof of human authorship. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Do not use outside knowledge as proof of human authorship.",
       "dependencies": [
         "WP-INTEGRITY",
@@ -1405,7 +1409,7 @@
       "outcome": "A reader can tell what was evaluated and why a tag could not provide its claim.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Unavailable processing cannot appear as evaluated uncertainty or success.; No-finding never certifies safety.; Protocol changes require compatibility tests and the established approval process.",
+      "acceptance": "Unavailable processing cannot appear as evaluated uncertainty or success.; No-finding never certifies safety.; Protocol changes require compatibility tests and the established approval process. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Protocol changes require compatibility tests and the established approval process.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -1458,7 +1462,7 @@
       "outcome": "The reader knows what category-level transformation occurred and that detection may miss information.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Transformation/order correctness and recognition accuracy are separate measurements.; Invalid or failed required redaction stops the affected service route.; The on-device PS route does not claim this tag or pretend to redact its input.",
+      "acceptance": "Transformation/order correctness and recognition accuracy are separate measurements.; Invalid or failed required redaction stops the affected service route.; The on-device PS route does not claim this tag or pretend to redact its input. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. The on-device PS route does not claim this tag or pretend to redact its input.",
       "dependencies": [
         "WP-PRIVACY",
@@ -1486,11 +1490,12 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-11T19:23:11.937023+00:00",
+        "audited_at": "2026-10-14T11:38:02.001046+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — complete IPv6 span correction, 42-case synthetic engine recognition/masking diagnostic and selected staging service/replay integration, 2026-10-11T18:51:10.358494+00:00"
+          "Codex — complete IPv6 span correction, 42-case synthetic engine recognition/masking diagnostic and selected staging service/replay integration, 2026-10-11T18:51:10.358494+00:00",
+          "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -1519,7 +1524,10 @@
           "runs/2026-10-11-pii-labels-compact.json",
           "runs/2026-10-11-pii-labels-service.json",
           "runs/2026-10-11-pii-labels-replay.json",
-          "runs/2026-10-11-pii-labels-timing.json"
+          "runs/2026-10-11-pii-labels-timing.json",
+          "docs/tag-failure-isolation-result.md",
+          "runs/2026-10-14-tag-isolation-real-linux.json",
+          "runs/2026-10-14-tag-isolation-batch-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -1537,7 +1545,7 @@
       "outcome": "The user controls disclosure before sending, without an invisible copy of their prompt.",
       "owner": "Claude",
       "status": "normalized_scope; runtime unverified",
-      "acceptance": "Supported send paths cannot transmit before the warning decision.; Unsupported paths are disclosed; no blanket coverage claim.; Consent, cancel and reset tests verify no hidden retention or secondary upload.",
+      "acceptance": "Supported send paths cannot transmit before the warning decision.; Unsupported paths are disclosed; no blanket coverage claim.; Consent, cancel and reset tests verify no hidden retention or secondary upload. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. Consent, cancel and reset tests verify no hidden retention or secondary upload.",
       "dependencies": [
         "WP-CAPTURE",
@@ -3325,10 +3333,11 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-14T01:55:51.928925+00:00",
+        "audited_at": "2026-10-14T11:38:02.001046+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — explicit independent privacy mode, manual draft CLI, private export/replay and actual stopped-evaluator/restart controls"
+          "Codex — explicit independent privacy mode, manual draft CLI, private export/replay and actual stopped-evaluator/restart controls",
+          "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -3344,7 +3353,10 @@
           "docs/draft-privacy.md",
           "scripts/verify-draft-privacy.py",
           "tests/test_draft_privacy.py",
-          "runs/2026-10-13-draft-privacy-real-linux.json"
+          "runs/2026-10-13-draft-privacy-real-linux.json",
+          "docs/tag-failure-isolation-result.md",
+          "runs/2026-10-14-tag-isolation-real-linux.json",
+          "runs/2026-10-14-tag-isolation-batch-linux.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
@@ -4836,11 +4848,12 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-10T13:47:05.800829+00:00",
+        "audited_at": "2026-10-14T11:38:02.001046+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00"
+          "Codex — current consumer/schema/dependency corrections and execution, 2026-10-10T13:47:05.800829+00:00",
+          "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -4859,7 +4872,10 @@
           "runs/2026-10-10-consumer-current-service.json",
           "runs/2026-10-10-extension-consumer-faults-corrected.json",
           "runs/2026-10-10-six-state-consumer-browser.json",
-          "docs/extension-consumer-plan.md"
+          "docs/extension-consumer-plan.md",
+          "docs/tag-failure-isolation-result.md",
+          "runs/2026-10-14-tag-isolation-real-linux.json",
+          "runs/2026-10-14-tag-isolation-batch-linux.json"
         ],
         "evidence_scope": "Current selected local-service graceful degradation: real Linux authentication/readiness/dependency outage and recovery; bounded extension HTTP/body/token failures and unsupported-page fixture behavior. Outside-user and broader vendor acceptance remain separate open jobs.",
         "required_acceptance": [],
@@ -5645,11 +5661,12 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-10-14T01:55:51.928914+00:00",
+        "audited_at": "2026-10-14T11:38:02.001046+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — private one-command setup, effective-runtime inspection and actual Linux execution, 2026-10-13T22:49:20.606326+00:00"
+          "Codex — private one-command setup, effective-runtime inspection and actual Linux execution, 2026-10-13T22:49:20.606326+00:00",
+          "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -5676,7 +5693,11 @@
           "runs/2026-10-13-one-command-complete-input-linux.json",
           "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
           "runs/2026-10-13-draft-privacy-real-linux.json",
-          "runs/2026-10-13-private-address-restart-probe.json"
+          "runs/2026-10-13-private-address-restart-probe.json",
+          "docs/tag-failure-isolation-result.md",
+          "runs/2026-10-14-tag-isolation-real-linux.json",
+          "runs/2026-10-14-tag-isolation-batch-linux.json",
+          "runs/2026-10-14-tag-isolation-clean-setup-linux.json"
         ],
         "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
         "required_acceptance": [],
@@ -6605,12 +6626,13 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-13T16:56:07.018769+00:00",
+        "audited_at": "2026-10-14T11:38:02.001046+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex",
           "Codex — actual authenticated staging timing across declared input sizes and source-bound display controls, 2026-10-11T17:26:41.852967+00:00",
-          "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
+          "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements",
+          "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6645,7 +6667,11 @@
           "runs/2026-10-13-ps-lazy-context-paired.json",
           "runs/2026-10-13-ps-lazy-regressions.json",
           "runs/2026-10-13-ps-lazy-device-engines.json",
-          "runs/2026-10-13-ps-lazy-staging-timing.json"
+          "runs/2026-10-13-ps-lazy-staging-timing.json",
+          "docs/tag-failure-isolation-result.md",
+          "runs/2026-10-14-tag-isolation-real-linux.json",
+          "runs/2026-10-14-tag-isolation-batch-linux.json",
+          "runs/2026-10-14-tag-isolation-pipeline-timing.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation The corrected benchmark validates the full self-reported pipeline identity on every response, matches each selected service source and rejects drift; this is not cryptographic remote attestation. The original evaluator-only run remains historical.",
         "required_acceptance": [
@@ -12833,7 +12859,7 @@
       "outcome": "A proposed migration explains exactly which meaning changes and how old PS records remain interpretable.",
       "owner": "Claude",
       "status": "proposed; not accepted or implemented",
-      "acceptance": "No rename or new live taxonomy code without owner/RFC acceptance.; Historic PS records retain their original meaning.; A naming change is not new independent accuracy evidence.",
+      "acceptance": "No rename or new live taxonomy code without owner/RFC acceptance.; Historic PS records retain their original meaning.; A naming change is not new independent accuracy evidence. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. A naming change is not new independent accuracy evidence.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -12886,7 +12912,7 @@
       "outcome": "The reader can inspect each validated indicator and dismiss a warning without an accusation of intent.",
       "owner": "Claude",
       "status": "proposed; not accepted or implemented",
-      "acceptance": "Two-family co-occurrence is a hypothesis, not independent corroboration.; Publish measured false-positive rates and category misses; hedged wording and one-action dismissal are required.; If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim.",
+      "acceptance": "Two-family co-occurrence is a hypothesis, not independent corroboration.; Publish measured false-positive rates and category misses; hedged wording and one-action dismissal are required.; If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim.",
       "dependencies": [
         "WP-PROTOCOL",
@@ -12939,7 +12965,7 @@
       "outcome": "A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot.",
       "owner": "Claude",
       "status": "proposed; not accepted or implemented",
-      "acceptance": "Absence of human evidence never issues BT.; Repetition, template structure and timing regularity alone are not accepted proof.; No deployment if the proposed evidence cannot support the declared claim.",
+      "acceptance": "Absence of human evidence never issues BT.; Repetition, template structure and timing regularity alone are not accepted proof.; No deployment if the proposed evidence cannot support the declared claim. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "failure": "Withhold the unsupported claim or expose the affected failure; retain independent findings from other tags. No deployment if the proposed evidence cannot support the declared claim.",
       "dependencies": [
         "WP-PROTOCOL",

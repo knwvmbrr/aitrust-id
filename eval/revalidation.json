@@ -120,7 +120,8 @@
         "scripts/verify-tag-isolation.py",
         "tests/test_tag_isolation_verifier.py",
         "scripts/check-tags.py",
-        "tests/test_independent_tag_batch.py"
+        "tests/test_independent_tag_batch.py",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
       ],
       "commands": [
         [
@@ -328,7 +329,8 @@
         "scripts/verify-tag-isolation.py",
         "tests/test_tag_isolation_verifier.py",
         "scripts/check-tags.py",
-        "tests/test_independent_tag_batch.py"
+        "tests/test_independent_tag_batch.py",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
       ],
       "commands": [
         [
@@ -571,7 +573,9 @@
         "scripts/verify-tag-isolation.py",
         "tests/test_tag_isolation_verifier.py",
         "scripts/check-tags.py",
-        "tests/test_independent_tag_batch.py"
+        "tests/test_independent_tag_batch.py",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "scripts/verify-replay-receipt-input.cjs"
       ],
       "commands": [
         [
@@ -599,7 +603,9 @@
           "node",
           "scripts/verify-replay-export.cjs",
           "--python",
-          "{python}"
+          "{python}",
+          "--receipt",
+          "runs/2026-10-14-tag-isolation-replay-linux.json"
         ],
         [
           "{python}",
@@ -648,6 +654,10 @@
           "pytest",
           "tests/test_independent_tag_batch.py",
           "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-replay-receipt-input.cjs"
         ]
       ]
     },
@@ -839,7 +849,8 @@
         "scripts/measure-ps-efficiency.py",
         "eval/methods/context-v6-eager.py",
         "runs/2026-10-13-ps-lazy-context-paired.json",
-        "runs/2026-10-14-draft-privacy-pipeline-timing.json"
+        "runs/2026-10-14-draft-privacy-pipeline-timing.json",
+        "runs/2026-10-14-tag-isolation-pipeline-timing.json"
       ],
       "commands": [
         [
