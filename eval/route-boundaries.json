@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-14T17:51:11.764423+00:00",
+  "reviewed_at": "2026-10-14T18:14:24.448598+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -21,9 +21,9 @@
     ".gitattributes": "8f69fdb101cf018af8e37f66cf305518dbbe95ee7356e6a05ff7e601ac7678c9",
     ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
     ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
-    ".github/workflows/ci.yml": "322e4727291fd4a4a31c4352aa60f68ec5cfc54a3a76f4e7fbb70ea05fd77283",
+    ".github/workflows/ci.yml": "2df1569078d77e7cb6b594fc93b99c08a2dfd9dc1b036e19ed51baa706e5cb99",
     ".github/workflows/manifest-inspection.yml": "451b8df145c747ca53c6295ef8dcb534aedfb5c4ccf9608814715d85b962a220",
-    ".github/workflows/metadata-storage.yml": "c95287600d2d9cf3093de4a6e147d8e0f5cff3a258971ed8c02a648e20ad3b36",
+    ".github/workflows/metadata-storage.yml": "a7afc65d193a4b97f0f7adabb7c480ada349f5f74ea82c70a1819532633decf0",
     "deploy/backup/bootstrap.sh": "88edbdfcdf3c641ffb358ab193a51597d5bfcc1f34acf070ecdbb963a9512762",
     "deploy/backup/configure.py": "f5e7039a452d0d18326cec2116606e821ed7f655917208e55eaeb7cffa122892",
     "deploy/backup/cycle.py": "d7305df7fb9d65c9cb82a05ca750a49bf7e077ddde98419ff5781a16239b4a3d",
@@ -80,7 +80,7 @@
     "docs/research-admission-result.md": "7183227762afd23f5fcdc17ccc3cf7f88589d64388fef27e148dc15dda5c6e68",
     "docs/research-admission.md": "3d3d45e3dd38c66392c87b147d06bfe69a7b56843f33d4eb68c1d2ddfb1e3be8",
     "docs/research-http-plan.md": "8b10b828a58a46dd94f3e226ee593e56d7bb0069eb854751f423a6e1295857a1",
-    "docs/research-http-result.md": "89e9f178691fcbbd689a175284b73777272ea9bc68ac12aee39dbda49a86876e",
+    "docs/research-http-result.md": "123f2f13f1e3bdd390441d0867c303e675e79be71a39e8999e44682034a45eb9",
     "docs/research-http.md": "24a5d4f9b2597edff560de1da1a3eddf77673fb9e1a10127952eeb4a43378fbc",
     "docs/research-invitation-plan.md": "6feac70aea34aae5858666779ae06d0bc80a47fb4437a426afbea2c6b34d0042",
     "docs/research-invitation-result.md": "1688def8468dc2c6212c4a67989370cc43e7cb5e3e08c073c8367f0311392918",
@@ -553,7 +553,7 @@
     "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "fc5ebfafa857debcb043d33f1b9ca087426ebf2a6999cc6dd64bb04ea0015e7f",
+    "scripts/verify-route-boundaries.py": "8203a73845f17a76cc0363c7803c91162a72ed7901d1a4d55c618a94d031b9d8",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
@@ -765,6 +765,7 @@
     "tests/test_registry_deferral.py": "3d90be7b2dfcee63f8d1f2da1c0e279725dfd75f191845af9364b32a9fe67bb0",
     "tests/test_research_admission.py": "789f3844eb217bdfd0b62d7600d0fed89976bcc3bbba1272860fdf10465905d1",
     "tests/test_research_http.py": "a58413f6ecf2d3a76aef67baa043884369ca57790e3accfc5522ef036a167328",
+    "tests/test_research_http_workflow.py": "00ab99a431d0d45f664f1e3162236120c00d98e2b0e16f29590684e7190563f9",
     "tests/test_research_invitations.py": "641ac086f6915bdf89a1f431126831284002ff78c02637bdd326d013aa716073",
     "tests/test_research_policy.py": "921c682a137a702908e50b4822ae8713e627afcd658d50b72c09525d1991262d",
     "tests/test_restore_isolation.py": "4b30ab89ddc58f2d2adf6f7b907cf8cfbc0eaa8061a8945b74de7df295ffdb5b",
@@ -816,7 +817,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
-    "website": "runs/2026-10-14-research-http-stable-website.json"
+    "website": "runs/2026-10-14-research-http-ci-repaired-website.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

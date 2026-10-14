@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-181158-research-http-repaired-protocol-65b02324",
+  "recorded_at": "2026-10-14T18:11:58.446210+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "45aa51196c204c6efa47fc170ae5c257ac70a461",
+  "changed": "Recapture all protocol checks after the CI consumer repair.",
+  "proves": "All 26 protocol commands pass against unchanged current source.",
+  "limits": "Independent release validation and real collection remain disabled.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "f486ab1a115575f681244b7c28a0694e1da202100c99b63a6e2a2ba07edcb8ec",
+    "runs/2026-10-14-research-http-repaired-protocol.json": "b316d6c56c8f881fa9b298f13a0b1eea16241ad58279d433736651f30e6ae733"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-repaired-protocol.json",
+      "sha256": "b316d6c56c8f881fa9b298f13a0b1eea16241ad58279d433736651f30e6ae733"
+    }
+  ],
+  "checks": []
+}

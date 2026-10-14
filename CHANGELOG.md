@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-181656-research-http-repaired-full-regressions-94d04a46
+
+Recorded 2026-10-14T18:16:56.528990+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture the full source-stable regression result after the CI consumer repair.
+- **Evidence.** 3556 Python tests pass with five platform skips. Both real parsed CI command steps execute and the folded-command regression refuses; all five active capability receipts remain current. [Change record](./runs/changes/2026-10-14-181656-research-http-repaired-full-regressions-94d04a46.json).
+- **Not claimed.** No scope requirement closes. The 78 open requirements, physical devices, independent accuracy and participant collection gates remain open.
+
+
+### 2026-10-14-181424-research-http-repaired-website-review-cd53172d
+
+Recorded 2026-10-14T18:14:24.709145+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture the repaired source-stable website checks and refresh its reviewed personal boundary inventory.
+- **Evidence.** All 19 website commands pass with unchanged sources; active personal routes remain independent of research. [Change record](./runs/changes/2026-10-14-181424-research-http-repaired-website-review-cd53172d.json).
+- **Not claimed.** Maintainer source review is not independent validation or production research deployment.
+
+
+### 2026-10-14-181158-research-http-repaired-protocol-65b02324
+
+Recorded 2026-10-14T18:11:58.446210+00:00 · Contributor: Codex · change
+
+- **Changed.** Recapture all protocol checks after the CI consumer repair.
+- **Evidence.** All 26 protocol commands pass against unchanged current source. [Change record](./runs/changes/2026-10-14-181158-research-http-repaired-protocol-65b02324.json).
+- **Not claimed.** Independent release validation and real collection remain disabled.
+
+
+### 2026-10-14-181013-research-http-ci-consumer-repair-8ac230ab
+
+Recorded 2026-10-14T18:10:13.649560+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair the folded CI command boundary and exercise the parsed consumer commands, including the known broken form.
+- **Evidence.** Three actual-shell workflow controls pass; both intended parsed steps execute, and the original folded form refuses. The failed protected spec job is retained and was not merged. [Change record](./runs/changes/2026-10-14-181013-research-http-ci-consumer-repair-8ac230ab.json).
+- **Not claimed.** Current source-bound capability and full-suite checks must be recaptured after the workflow repair. Collection remains disabled and no requirement is newly complete.
+
+
 ### 2026-10-14-175730-research-http-accepted-regressions-b3e3e84d
 
 Recorded 2026-10-14T17:57:30.603828+00:00 · Contributor: Codex · change

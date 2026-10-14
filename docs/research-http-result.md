@@ -36,3 +36,10 @@ test expectation used the wrong capitalization for the existing PS message; the
 subprocess had succeeded. That failed test is retained in
 [the refusal record](../runs/2026-10-14-research-http-test-expectation-refusal.json);
 the corrected assertion and five private worker refusal controls pass.
+
+The first protected CI run refused a command-wiring defect: the inserted step
+interrupted an existing multiline block, so YAML folded a feedback verifier
+command into pytest arguments. It was not merged. The repair restores the two
+separate steps. Three consumer controls execute both actual parsed workflow
+commands and confirm that the known folded command refuses.
+[CI refusal](../runs/2026-10-14-research-http-ci-command-refusal.json).

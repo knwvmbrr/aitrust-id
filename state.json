@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T17:57:30.533076+00:00",
+  "updated": "2026-10-14T18:16:56.458486+00:00",
   "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3553,
+  "python_tests_passed": 3556,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1049,13 +1049,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-14-tag-isolation-cold-current-PS.json",
     "PII_REDACTED": "runs/2026-10-14-tag-isolation-cold-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-14-research-http-protocol.json",
+    "protocol": "runs/2026-10-14-research-http-repaired-protocol.json",
     "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
-    "website": "runs/2026-10-14-research-http-stable-website.json",
+    "website": "runs/2026-10-14-research-http-ci-repaired-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T17:57:30.533076+00:00",
+  "updated_at": "2026-10-14T18:16:56.458486+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2609,16 +2609,18 @@
     "local_selected_tests": 235,
     "linux_selected_tests": 58,
     "actual_http_database_control_groups": 7,
-    "website_revalidation": "runs/2026-10-14-research-http-stable-website.json",
-    "protocol_revalidation": "runs/2026-10-14-research-http-protocol.json",
+    "website_revalidation": "runs/2026-10-14-research-http-ci-repaired-website.json",
+    "protocol_revalidation": "runs/2026-10-14-research-http-repaired-protocol.json",
     "implemented_by": "Codex",
     "accountable_pilot_operator": "Michael",
     "retained_failed_checks": [
       "runs/2026-10-14-research-http-test-expectation-refusal.json",
       "runs/2026-10-14-research-http-website.json",
-      "runs/2026-10-14-research-http-full-suite.json"
+      "runs/2026-10-14-research-http-full-suite.json",
+      "runs/2026-10-14-research-http-ci-command-refusal.json"
     ],
-    "full_suite_evidence": "runs/2026-10-14-research-http-accepted-full-suite.json",
-    "full_python_tests_passed": 3553
+    "full_suite_evidence": "runs/2026-10-14-research-http-ci-repaired-full-suite.json",
+    "full_python_tests_passed": 3556,
+    "parsed_ci_command_controls": 3
   }
 }

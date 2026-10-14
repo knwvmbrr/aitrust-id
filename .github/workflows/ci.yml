@@ -138,9 +138,11 @@ jobs:
       - name: Exercise private synthetic feedback analysis without collecting participant data
         run: |
           python -m pytest tests/test_feedback_analysis.py tests/test_research_admission.py -q
+          python scripts/verify-feedback-analysis.py --output output/verification/feedback-analysis.json
       - name: Refuse research collection and bound synthetic transport independently of tag routes
         run: python -m pytest tests/test_research_http.py tests/test_worker_process.py -q
-          python scripts/verify-feedback-analysis.py --output output/verification/feedback-analysis.json
+      - name: Execute parsed feedback and research CI commands to detect folded arguments
+        run: python -m pytest tests/test_research_http_workflow.py -q
       - name: Compare private selected revisions without an origin or knowledge verdict
         run: |
           python -m pytest tests/test_session_revisions.py tests/test_revision_public_links.py -q
