@@ -34,7 +34,11 @@ is not a production authorization design for both services.
 
 Public discussion does not consent to model training. Research contribution does
 not consent to public publication. Neither is silently inferred from using a tag.
-The owner must still select collection, retention and dataset-release policy.
+The owner accepted an invited metadata-only PS pilot with 30-day active and
+7-day encrypted-backup limits. Its [versioned policy](../deploy/research/metadata-pilot-policy.json)
+keeps collection disabled until operational acceptance; it does not authorize
+examples, model training, public aggregation or public dataset release.
+Community publication and dataset-release policy remain separate decisions.
 
 ## Security requirements and failure thresholds
 

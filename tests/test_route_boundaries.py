@@ -21,6 +21,7 @@ def test_actual_current_guard():
     assert result['rules'] == list(guard.RULES)
     assert not result['release_approved'] and not result['network_executed']
     assert result['python_manifest_lock_roots_verified'] == 4
+    assert result['intake_modes_checked'] == ['all', 'privacy']
 
 
 @pytest.mark.parametrize('field,value', [('rules', []), ('wire_version', '0.2.0'),

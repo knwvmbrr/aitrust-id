@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from protocol.evidence import read_evidence
 
-RECEIPT = 'runs/2026-10-13-one-command-complete-input-linux.json'
+RECEIPT = 'runs/2026-10-13-draft-privacy-clean-setup-linux.json'
 CLI_INPUTS = ('.dockerignore', 'scripts/setup-local.py', 'scripts/aitrust.py',
               'scripts/check-assertion.py', 'protocol/assertions.py',
               'protocol/evidence.py', 'eval/requirements.lock', 'spec/assertion.schema.json')

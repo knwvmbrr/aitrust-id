@@ -92,7 +92,9 @@ def summary(values):
 
 
 def measure(env_file,project,opener=None,clock=time.perf_counter):
-    if project!='aitrust-staging' or os.geteuid()==0:
+    selected=(project=='aitrust-staging' or isinstance(project,str) and
+              re.fullmatch(r'aitrust-local-[a-f0-9]{32}',project) is not None)
+    if not selected or os.geteuid()==0:
         raise MeasurementError('ordinary_user_existing_staging_only')
     token=staging_token(env_file)
     source_hashes=lambda:{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUT_SOURCES}
@@ -194,7 +196,8 @@ def measure(env_file,project,opener=None,clock=time.perf_counter):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--env-file',type=Path,required=True)
-    parser.add_argument('--project',required=True,choices=['aitrust-staging'])
+    parser.add_argument('--project',required=True,
+        help='aitrust-staging or the exact generated aitrust-local project identifier')
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
     try:record=measure(args.env_file,args.project)

@@ -82,4 +82,11 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
   const result={captured_at:new Date().toISOString(),pass:true,actual_unpacked_extension:true,synthetic_vendor_page:true,synthetic_loopback_service:true,invalid_auth_requests:invalidAuth,invalid_token_is_unavailable_not_finding:true,default_paused:true,token_save_is_not_consent:true,key_save_is_not_consent:true,authenticated_finding_rendered:true,unauthenticated_verdicts_refused:rejectionCases,explicit_enable:true,pause_aborts_inflight:true,late_result_cannot_remount:true,resume_requires_fresh_check:true,reset_removes_token_and_consent:true,reset_removes_public_key:true,slow_key_import_cannot_undo_reset:true,oversize_public_file_refused:true,key_rotation_aborts_inflight:true,old_key_cannot_render_after_rotation:true,reset_persists_across_reload:true,no_answer_in_extension_storage:true,no_token_in_options_dom:true,settings_axe_violations:settingsA11y.violations,settings_320px_no_horizontal_overflow:true,evaluation_requests:requests,cancelled_requests:cancelled,real_vendor_compatibility:false,physical_device:false,independent_accuracy:false,source_sha256:Object.fromEntries(['extension/src/sw/service-worker.js','extension/src/content/bridge.js','extension/src/options.js','extension/src/options.html','extension/src/shared/transport.js'].map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]))};
   writeReport(process.env.AITRUST_PRIVACY_REPORT||'output/verification/extension-privacy.json',result);console.log(JSON.stringify(result));
  }finally{if(context)await context.close();await new Promise(resolve=>server.close(resolve));fs.rmSync(profile,{recursive:true,force:true});}
-})().catch(()=>{console.error('Extension privacy verification failed; inspect the synthetic test without logging credentials or answer text.');process.exitCode=1;});
+})().catch(error=>{
+ // Location only: Playwright's message/call log can contain credentials entered
+ // into synthetic forms. Never include that message or the complete stack.
+ const location=String(error?.stack||'').match(/verify-extension-privacy\.cjs:(\d+):(\d+)/);
+ console.error(JSON.stringify({pass:false,reason:'extension_privacy_verification_failed',
+  source:'scripts/verify-extension-privacy.cjs',line:location?Number(location[1]):null,
+  column:location?Number(location[2]):null}));process.exitCode=1;
+});

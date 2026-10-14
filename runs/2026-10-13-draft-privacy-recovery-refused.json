@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-10-14T01:19:04.903079+00:00",
+  "pass": false,
+  "reason": "actual_privacy_verification_unavailable",
+  "error_type": "LocalCheckError",
+  "failed_at": [
+    {
+      "file": "verify-draft-privacy.py",
+      "function": "<module>",
+      "line": 149
+    },
+    {
+      "file": "verify-draft-privacy.py",
+      "function": "verify",
+      "line": 116
+    },
+    {
+      "file": "verify-draft-privacy.py",
+      "function": "check",
+      "line": 35
+    },
+    {
+      "file": "aitrust.py",
+      "function": "local_request",
+      "line": 99
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "checked_by": "Codex",
+  "source_commit": "6aa2a2f",
+  "actual_full_pipeline_checks_before_failure": 26,
+  "actual_replay_checks_before_failure": 15,
+  "original_staging_restored": true,
+  "collection_enabled": false,
+  "scope": "Actual privacy check passed while evaluator was stopped, then recovery was refused. The failure stays retained, not completion evidence."
+}

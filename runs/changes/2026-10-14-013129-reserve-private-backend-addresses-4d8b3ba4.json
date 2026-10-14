@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-013129-reserve-private-backend-addresses-4d8b3ba4",
+  "recorded_at": "2026-10-14T01:31:29.974879+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6aa2a2fa040dc7f60d35fe7ba2930c8ab00f55d8",
+  "changed": "Reserve checked backend addresses inside the newly owned internal IPv4 subnet and verify live readiness/address stability after restart.",
+  "proves": "The actual Podman probe changes a dynamic address and preserves an explicitly reserved address. 211 focused checks pass, including invalid/public/ambiguous subnet refusals.",
+  "limits": "The failed real recovery remains recorded. Complete repaired Linux setup/service/privacy checks are still required; no independent accuracy or new tag release is claimed.",
+  "scope_ids": [
+    "F-105",
+    "F-024",
+    "F-073",
+    "T-PII"
+  ],
+  "files": {
+    "docs/draft-privacy-plan.md": "511c793e586139e63e4da614dfb835718869e81f53800c547747c92f6c8645a1",
+    "runs/2026-10-13-draft-privacy-recovery-focused.json": "5bbcf5a0950630168f9c8560a8b272334f5fd9bffd9ce500dd70dbb5a6076d95",
+    "runs/2026-10-13-draft-privacy-recovery-refused.json": "cac3f5a255037e582e256b971df116a82f2a09bcfbce26c8d282c2827f0f11bc",
+    "runs/2026-10-13-private-address-restart-probe.json": "2a3c4c663f215117a9f9d5ab35190c92701237e5e3399de5a5e6d011e387b68a",
+    "scripts/setup-local.py": "8b9abd1a846b254e89da35b7b81a255cd55ca5552b45b96a25657bd3dd37af06",
+    "scripts/verify-draft-privacy.py": "83e7ff38e21f097bf3966df95a90480071f0bbc83157b2395d62aa61c96016a0",
+    "tests/test_local_setup.py": "6c36201596b445d8e71f58c9beccf847a251357e1909c0fb1c71102d93b2a28e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-private-address-restart-probe.json",
+      "sha256": "2a3c4c663f215117a9f9d5ab35190c92701237e5e3399de5a5e6d011e387b68a"
+    },
+    {
+      "path": "runs/2026-10-13-draft-privacy-recovery-refused.json",
+      "sha256": "cac3f5a255037e582e256b971df116a82f2a09bcfbce26c8d282c2827f0f11bc"
+    },
+    {
+      "path": "runs/2026-10-13-draft-privacy-recovery-focused.json",
+      "sha256": "5bbcf5a0950630168f9c8560a8b272334f5fd9bffd9ce500dd70dbb5a6076d95"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T01:31:30.440589+00:00"
+    }
+  ]
+}

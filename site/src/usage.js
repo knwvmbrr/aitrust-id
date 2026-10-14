@@ -3,11 +3,14 @@ export const repository = 'https://github.com/knwvmbrr/aitrust-id';
 export const sourceDownload = repository + '/archive/refs/heads/main.zip';
 export const quickstart = repository + '/blob/main/docs/open-validation-path.md';
 const setup = [
-  {title:'Get the source',body:'Download the ZIP and read its README, or use Git:',command:'git clone https://github.com/knwvmbrr/aitrust-id.git\ncd aitrust-id'},
-  {title:'Prepare the checker',body:'From the repository folder, install its checker dependencies:',command:'python3.12 -m venv .venv\n.venv/bin/python -m pip install --require-hashes -r eval/requirements.lock\npython3 scripts/aitrust.py init'},
-  {title:'Start your local services',body:'With Docker Engine and Compose running, build and start only AI Trust ID:',command:'make deploy ENV_FILE="$HOME/.config/aitrust-id/runtime.env"\n.venv/bin/python scripts/aitrust.py doctor'},
-  {title:'Check an answer',body:'Save the answer as response.txt in this folder, then run:',command:'.venv/bin/python scripts/aitrust.py check response.txt'},
+  {title:'Get the source',body:'Download and unzip the source, then open its folder. Or use Git:',command:'git clone https://github.com/knwvmbrr/aitrust-id.git\ncd aitrust-id'},
+  {title:'Start your own checker',body:'On Linux with Python 3.12+ and a working Podman engine, run this from the source folder. It creates a private installation and checks that it works:',command:'python3 scripts/setup-local.py --engine podman'},
 ];
+const localState='LOCAL_STATE="$HOME/.config/aitrust-id/local-stack"';
+const checkStep=tag=>tag.id==='PII_REDACTED'
+  ? {title:'Review a draft before sharing',body:'Save text as draft.txt. This optional privacy check uses your local redactor and does not depend on PS. It does not edit or send the draft:',command:localState+'\n"$LOCAL_STATE/checker/bin/python" scripts/aitrust.py privacy draft.txt --env-file "$LOCAL_STATE/runtime.env"'}
+  : {title:'Check an answer',body:'Save an answer as response.txt, then run:',command:localState+'\n"$LOCAL_STATE/checker/bin/python" scripts/aitrust.py check response.txt --env-file "$LOCAL_STATE/runtime.env"'};
+
 export function usage(tag) {
   const available = ['PS','PII_REDACTED'].includes(tag.id);
   const orgNext={
@@ -26,7 +29,7 @@ export function usage(tag) {
     FA:'Suggest a generation record that could show where an item came from.',
     PA:'Suggest a consented example of an AI draft and the edits made afterward.',
     UNK:'Share a case where a checker should say it does not have enough evidence.',
-    PII_OUTBOUND:'Help identify where a useful privacy reminder should appear before sending.',
+    PII_OUTBOUND:'Try the manual draft privacy check in the PII instructions. A browser reminder or send interception is still planned.',
     UC:'Review the proposed name and command scope in How it works.',
     SC:'Suggest a suspicious message and a similar everyday request to compare.',
     BT:'Suggest verifiable automation evidence and a human example that could look similar.'};
@@ -37,19 +40,19 @@ export function usage(tag) {
     steps:[],next:orgNext[tag.id]||tagNext[tag.id]};
   return {available:true,summary:tag.id==='PS'
     ? 'Copy an AI answer, paste it and check. No account or install needed. Commands are checked, never run.'
-    : 'PII runs before PS in the local service. Set it up once and detected personal details are redacted automatically. This is not part of the website’s on-device checker.',
-    prerequisites:'Developer preview: Linux or macOS, Python 3.12+, Git, make, and Docker Engine with Compose. First setup downloads packages and models. A one-click installer and a Chrome Web Store release are not available yet.',
+    : 'Check a draft with your own local redactor before you share it. Review the result and make any edits yourself. This is a local-service preview, separate from the website’s on-device PS checker.',
+    prerequisites:'Developer preview: Linux, Python 3.12+ and an installed, working Podman engine. First setup downloads pinned dependencies. Read the full guide for private build-network options and the older manual Docker Compose path. This command does not install an engine; no Chrome Web Store release is offered.',
     phone:tag.id==='PS' ? 'Open aitrustid.com/#person/PS and choose Check on this device. Optional: save the public app for offline use and add it to your home screen. No answer is uploaded; the phone preview performs no redaction.' : null,
-    steps:setup,next:tag.id==='PS'
+    steps:[...setup,checkStep(tag)],next:tag.id==='PS'
       ? 'A PS finding asks you to review a command pattern. No finding means no supported pattern was found, not “safe.” If a check cannot finish, it says so.'
-      : 'A PII tag means detected values were redacted. Without a tag, private details may still be present.',
+      : 'A finding means supported detections were masked during this local check. Your original draft is unchanged. No finding does not mean all private details are absent.',
     browser:'Optional Chrome tags: follow docs/gateway-authentication.md in the downloaded repository to set up gateway signing. Open chrome://extensions, enable Developer mode, choose Load unpacked and select the extension folder. In its settings, choose your gateway public-key JSON, confirm its fingerprint separately and enter your local token. Turn on Enable checks on ChatGPT when ready. Keep your services running. Tags appear below supported answers; click for a short explanation. Unsigned or altered results stay unavailable. Pause or reset at any time.',
     privacy:'Your answer goes to your own local service, not this website or a training database. Keep your token private. Do not paste it into a public report.',
-    stop:'make down ENV_FILE="$HOME/.config/aitrust-id/runtime.env"'};
+    stop:'python3 scripts/setup-local.py --engine podman --stop'};
 }
 export function usageHTML(tag,esc) {
   const use=usage(tag);
   return `<section data-tag-usage><h2>${use.available?'Use this tag':'What you can do'}</h2><p>${esc(use.available?use.summary:use.next)}</p>${use.available
-    ? `${use.phone ? `<p class="mt-2"><a href="/#person/PS">Check on this device</a></p><p>${esc(use.phone)}</p><h3 class="mt-3 font-semibold">Developer local service (optional)</h3>` : ''}<p class="mt-2 text-sm text-muted">${esc(use.prerequisites)}</p><p class="mt-3"><a href="${sourceDownload}">Download source</a> · <a href="${quickstart}">Full setup guide</a></p><ol class="mt-3 list-decimal space-y-3 pl-5">${use.steps.map(step=>`<li><h3 class="font-semibold">${esc(step.title)}</h3><p>${esc(step.body)}</p><pre class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(step.command)}</code></pre></li>`).join('')}</ol><p class="mt-3">${esc(use.next)}</p><p class="mt-3">${esc(use.browser)}</p><p class="mt-3">${esc(use.privacy)}</p><p class="mt-3"><a href="${repository}/blob/main/docs/assertion-replay.md">Repeat a saved local-service check</a>. This compares your saved findings against the same method; it does not send research data to us.</p><h3 class="mt-3 font-semibold">Stop the checker</h3><pre class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(use.stop)}</code></pre>`
+    ? `${use.phone ? `<p class="mt-2"><a href="/#person/PS">Check on this device</a></p><p>${esc(use.phone)}</p><h3 class="mt-3 font-semibold">Developer local service (optional)</h3>` : ''}<p class="mt-2 text-sm text-muted">${esc(use.prerequisites)}</p><p class="mt-3"><a href="${sourceDownload}">Download source</a> · <a href="${quickstart}">Full setup guide</a></p><ol class="mt-3 list-decimal space-y-3 pl-5">${use.steps.map(step=>`<li><h3 class="font-semibold">${esc(step.title)}</h3><p>${esc(step.body)}</p><pre tabindex="0" class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(step.command)}</code></pre></li>`).join('')}</ol><p class="mt-3">${esc(use.next)}</p><p class="mt-3">${esc(use.browser)}</p><p class="mt-3">${esc(use.privacy)}</p><p class="mt-3"><a href="${repository}/blob/main/docs/assertion-replay.md">Repeat a saved local-service check</a>. This compares your saved findings against the same method; it does not send research data to us.</p><h3 class="mt-3 font-semibold">Stop the checker</h3><pre tabindex="0" class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(use.stop)}</code></pre>`
     : `${tag.today?`<p data-tag-today class="mt-3">${esc(tag.today)}</p>`:''}${tag.id==='audit'?'<p class="mt-3"><a href="/#person/PS">Try PS exports</a></p>':''}`}</section>`;
 }

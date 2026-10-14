@@ -55,7 +55,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-083 | The governing rule: a provenance signal may raise toward PA or FA but may never lower a tag toward a human-negative verdict. Absence of human signal produces UNK, never FA | [TAG-FA](scope-delivery.md#tag-fa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-023 | Detected PII redaction | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-041 | Detected redaction before local-service evaluation | [TAG-PII_REDACTED](scope-delivery.md#tag-pii_redacted) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-024 | PII_OUTBOUND pre-send warning — you are about to paste personal data into a model | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-024 | PII_OUTBOUND pre-send warning — you are about to paste personal data into a model | [TAG-PII_OUTBOUND](scope-delivery.md#tag-pii_outbound) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-043 | No-egress network topology — internal: true, loopback binding | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-084 | No content logging — a verified clause, not a promise | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-085 | No application-controlled content persistence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |

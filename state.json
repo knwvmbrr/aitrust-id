@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T00:16:10.384179+00:00",
+  "updated": "2026-10-14T02:37:20.238251+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -723,7 +723,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-14T00:08:20.101816+00:00",
+    "audited_at": "2026-10-14T01:55:51.928931+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -745,7 +745,7 @@
     "target_open_records": 43,
     "target_start_open_records": 87,
     "target_remaining_closures": 35,
-    "publication_pending": false,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
@@ -847,12 +847,12 @@
     "correction": "runs/2026-10-09-device-matrix-checkout-correction.json"
   },
   "current_source_service_conformance": {
-    "captured_at": "2026-10-11T11:59:31.235197+00:00",
-    "evidence": "runs/2026-10-11-authenticated-service.json",
-    "http_checks": 32,
+    "captured_at": "2026-10-14T01:49:24.420146+00:00",
+    "evidence": "runs/2026-10-13-draft-privacy-real-services.json",
+    "http_checks": 26,
     "engine": "Podman 5.4.2 on dedicated primary Linux staging",
     "local_docker_started": false,
-    "upstream_failure_and_recovery": true,
+    "upstream_failure_and_recovery": false,
     "redacted_subject_binding_verified": true,
     "loopback_only_port_verified": true,
     "release_validated": false,
@@ -863,7 +863,9 @@
     "engine_readiness_executed": true,
     "all_pid_limits": 128,
     "gateway_evaluator_memory_limit_mib": 256,
-    "anonymizer_memory_limit_mib": 1024
+    "anonymizer_memory_limit_mib": 1024,
+    "current_dependency_recovery_evidence": "runs/2026-10-13-draft-privacy-real-linux.json",
+    "current_dependency_recovery_scope": "Explicit owned privacy route; nondisruptive full-service conformance is separate"
   },
   "local_reference_corpus": {
     "format": "local-reference-corpus/v1",
@@ -1033,15 +1035,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-13-complete-setup-reviewed-PS.json",
-    "PII_REDACTED": "runs/2026-10-13-complete-setup-reviewed-PII_REDACTED.json",
-    "protocol": "runs/2026-10-14-setup-published-protocol.json",
-    "extension": "runs/2026-10-14-setup-published-extension.json",
-    "website": "runs/2026-10-14-setup-published-website.json",
+    "PS": "runs/2026-10-14-draft-privacy-final-PS.json",
+    "PII_REDACTED": "runs/2026-10-14-draft-privacy-accessible-PII_REDACTED.json",
+    "protocol": "runs/2026-10-14-draft-privacy-accessible-protocol.json",
+    "extension": "runs/2026-10-14-draft-privacy-accessible-extension.json",
+    "website": "runs/2026-10-14-draft-privacy-accessible-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T00:16:10.384179+00:00",
+  "updated_at": "2026-10-14T02:37:20.238251+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1540,23 +1542,23 @@
     "status": "per_response_source_identity_and_display_verified",
     "implemented_by": "Codex",
     "guide": "docs/pipeline-performance.md",
-    "execution": "runs/2026-10-11-pii-labels-timing.json",
-    "source_witness": "runs/2026-10-11-staging-pipeline-identity-witness.json",
+    "execution": "runs/2026-10-14-draft-privacy-pipeline-timing.json",
+    "source_witness": "runs/2026-10-14-draft-privacy-pipeline-witness.json",
     "expectation_failure": "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
     "authenticated_requests": 253,
     "profiles": 12,
     "repeated_samples_per_profile": 20,
-    "focused_python_controls": 46,
+    "focused_python_controls": 54,
     "timing_display_controls": 31,
     "accepted_latency_budget_ms": null,
     "physical_phone_measured": false,
     "independent_accuracy_evidence": false,
-    "publication_pending": false,
+    "publication_pending": true,
     "requirements_closed": 0,
     "current_capabilities": "runs/2026-10-11-pipeline-identity-current-capabilities.json",
-    "website_execution": "runs/2026-10-11-pipeline-identity-website-current.json",
+    "website_execution": "runs/2026-10-14-draft-privacy-accessible-website.json",
     "private_raw_failure_logs_enabled_for_operator_runs": true,
-    "current_boundaries": "runs/2026-10-11-pipeline-identity-boundaries.json",
+    "current_boundaries": "runs/2026-10-14-draft-privacy-current-boundaries.json",
     "python_checks": 1643,
     "python_execution": "runs/2026-10-11-pipeline-identity-python.json",
     "full_suite_failure": "runs/2026-10-11-pipeline-timing-python.json",
@@ -1565,7 +1567,8 @@
     "runtime_identity_remote_attested": false,
     "publication": "runs/2026-10-11-pipeline-publication.json",
     "protected_merge": "runs/2026-10-11-pipeline-protected-merge.json",
-    "published_source": "07b2c1f97b94c87d608ea07df019433197d5113c"
+    "published_source": "07b2c1f97b94c87d608ea07df019433197d5113c",
+    "retained_prior_timing_execution": "runs/2026-10-11-pii-labels-timing.json"
   },
   "reviewer_agreement": {
     "status": "standalone_nominal_computation",
@@ -2415,7 +2418,7 @@
     "status": "complete_supported_record_contract",
     "scope_id": "F-003",
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json",
-    "service_receipt": "runs/2026-10-13-replay-contract-service.json",
+    "service_receipt": "runs/2026-10-13-draft-privacy-real-replay.json",
     "actual_service_cli_cases": 15,
     "history_rewritten": false,
     "missing_history_or_input": "unavailable",
@@ -2448,13 +2451,13 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Protected-merged and published; complete-input Linux setup and ten real controls pass; human acceptance remains F-142",
+    "status": "Fresh complete-input Linux setup and all ten failure controls pass after privacy and reserved-address repair; publication pending",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
     "collection_enabled": false,
     "independent_release_validated": false,
-    "evidence": "runs/2026-10-13-one-command-complete-input-linux.json",
+    "evidence": "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
     "cache_scope": "Installed usable Podman and pinned dependency caches; not a blank-host installer",
     "human_acceptance_complete": false,
     "physical_phone_tested": false,
@@ -2467,8 +2470,8 @@
     "runtime_networks_unchanged": true,
     "publication": "runs/2026-10-13-setup-live-publication.json",
     "protected_merge": "runs/2026-10-13-setup-protected-merge.json",
-    "complete_fixture_cleanup": "runs/2026-10-13-complete-setup-fixture-cleanup.json",
-    "publication_pending": false
+    "complete_fixture_cleanup": "runs/2026-10-14-draft-privacy-fixture-cleanup.json",
+    "publication_pending": true
   },
   "confidence_floor_audit": {
     "scope_id": "F-005",
@@ -2484,5 +2487,34 @@
     "website_evidence": "runs/2026-10-14-setup-published-website.json",
     "route_evidence": "runs/2026-10-14-setup-published-routes.json",
     "actual_build_phases": "runs/2026-10-14-setup-published-eight-phases.json"
+  },
+  "draft_privacy": {
+    "status": "Actual local privacy mode, CLI, replay, evaluator outage and restart recovery pass; publication pending",
+    "scope_ids": [
+      "F-024",
+      "T-PII",
+      "T-OUT"
+    ],
+    "implemented_by": "Codex",
+    "privacy_check_mode": "privacy",
+    "endpoint": "http://127.0.0.1:8787/v1/evaluate",
+    "actual_linux_evidence": "runs/2026-10-13-draft-privacy-real-linux.json",
+    "actual_service_cases": 26,
+    "actual_replay_cases": 15,
+    "actual_privacy_cases": 16,
+    "collection_enabled": false,
+    "outbound_interception": false,
+    "outbound_tag_released": false,
+    "independent_accuracy_evidence": false,
+    "publication_pending": true,
+    "timing": "runs/2026-10-14-draft-privacy-pipeline-timing.json",
+    "fixture_cleanup": "runs/2026-10-14-draft-privacy-timing-fixture-cleanup.json",
+    "current_boundaries": "runs/2026-10-14-draft-privacy-current-boundaries.json",
+    "website_evidence": "runs/2026-10-14-draft-privacy-accessible-website.json",
+    "keyboard_command_blocks_verified": true,
+    "full_python_evidence": "runs/2026-10-14-draft-privacy-full-suite.json",
+    "full_python_passed": 3424,
+    "full_python_skipped": 5,
+    "source_unchanged_during_full_suite": true
   }
 }

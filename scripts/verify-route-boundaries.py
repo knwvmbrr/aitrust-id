@@ -20,7 +20,7 @@ from protocol.revalidation import assess
 from protocol.evidence import read_evidence
 from scripts.dependency_pins import verify_root_inputs
 
-PATTERNS = ('tests/test_device_bundle_determinism.py', 'scripts/verify-ps-efficiency.py', 'tests/test_ps_efficiency_evidence.py', 'runs/2026-10-13-ps-lazy-staging-timing.json', 'runs/2026-10-13-ps-lazy-context-paired.json', 'eval/methods/context-v6-eager.py', 'scripts/measure-ps-efficiency.py',
+PATTERNS = ('tests/test_device_bundle_determinism.py', 'scripts/verify-ps-efficiency.py', 'tests/test_ps_efficiency_evidence.py', 'runs/2026-10-14-draft-privacy-pipeline-timing.json', 'runs/2026-10-13-ps-lazy-context-paired.json', 'eval/methods/context-v6-eager.py', 'scripts/measure-ps-efficiency.py',
             'tests/test_lazy_ps_context.py', 'eval/measure.py', 'rfcs/0001-behavioral-provenance.md', 'rfcs/0002-authorship-receipts.md',
             'tests/test_verdict_refusals.py', 'scripts/verify-verdict-boundaries.py',
             'tests/test_adjudicator_confidence.py', 'tests/test_adjudicator.py',
@@ -120,6 +120,7 @@ PATTERNS += ('tools/conformance_recusal.py','scripts/check-conformance-votes.py'
              'scripts/build-firefox-extension.py','scripts/verify-firefox-extension.py','scripts/verify-firefox-permissions.cjs',
              'tests/test_firefox_package.py','tests/test_firefox_driver_protocol.py','tests/firefox-permissions.cjs',
              'docs/scope-groups.json','scripts/verify-scope-groups.py','tests/test_scope_groups.py')
+PATTERNS += ('scripts/verify-draft-privacy.py','tests/test_draft_privacy.py','docs/draft-privacy-plan.md','docs/draft-privacy.md')
 PATTERNS += ('scripts/setup-local.py','scripts/verify-local-setup-evidence.py',
              'tests/test_local_setup.py','tests/test_local_setup_evidence.py',
              'docs/local-setup-plan.md','docs/local-setup-result.md','docs/open-validation-path.md')
@@ -450,20 +451,27 @@ def intake_controls(root=ROOT):
         else:
             os.environ['AITRUST_TOKEN'] = previous
     request = module.EvalRequest.model_validate({'text': 'An ordinary answer.'})
-    if request.model_dump() != {'text': 'An ordinary answer.', 'origin_host': 'unknown', 'modality': 'text'}:
+    if request.model_dump() != {'text': 'An ordinary answer.', 'origin_host': 'unknown',
+                               'modality': 'text', 'check_mode': 'all'}:
         raise ValueError('Personal check acquired an extra prerequisite')
+    privacy = module.EvalRequest.model_validate({'text': 'An ordinary answer.', 'check_mode': 'privacy'})
+    if privacy.model_dump() != {**request.model_dump(), 'check_mode': 'privacy'}:
+        raise ValueError('Privacy check acquired an extra prerequisite')
     controls = ['payment', 'subscription', 'receipt', 'author_id', 'keystroke_template',
                 'biometric_profile', 'telemetry', 'training_consent', 'pilot_upload',
                 'report_attachment', 'promotion_destination']
-    for field in controls:
-        try:
-            module.EvalRequest.model_validate({'text': 'An ordinary answer.', field: 'synthetic-control'})
-        except module.ValidationError:
-            continue
-        raise ValueError('Undeclared intake field accepted')
+    for mode in ('all', 'privacy'):
+        for field in controls:
+            try:
+                module.EvalRequest.model_validate({'text': 'An ordinary answer.',
+                    'check_mode': mode, field: 'synthetic-control'})
+            except module.ValidationError:
+                continue
+            raise ValueError('Undeclared intake field accepted')
     if module.PRODUCTION_TAGS != frozenset({'PS', 'PII_REDACTED'}):
         raise ValueError('Production capabilities changed')
     return {'ordinary_text_without_account_payment_receipt': True,
+            'intake_modes_checked': ['all', 'privacy'],
             'undeclared_intake_fields_refused': len(controls), 'network_executed': False}
 
 

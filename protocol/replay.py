@@ -42,6 +42,12 @@ def inspect_record(record,root=ROOT):
     if any(hashlib.sha256(file.read_bytes()).hexdigest()!=sha for file,sha in hashes.items()):
         return outcome('unavailable','historical_or_different_pipeline_sources')
     models=record['evaluator']['models']
+    if record['evaluator']['calibration_id']=='procedural-redaction-v1':
+        from scripts.aitrust import validate_privacy
+        try:validate_privacy(record,root)
+        except (ValueError,KeyError,TypeError):
+            return outcome('invalid','inconsistent_privacy_evidence')
+        return None
     expected=[{'name':'presidio-redaction','revision':config.redactor.version,'sha256':config.redactor.sha256},
               {'name':'gateway-pipeline','revision':identity.version,'sha256':identity.sha256}]
     if len(models)!=3 or models[1:]!=expected:
@@ -79,9 +85,12 @@ def replay(record,text,token,*,root=ROOT,transport=None):
     # Neither an assertion nor an environment variable can choose a destination.
     # The optional transport is an in-process test seam, never a CLI option.
     try:
+        payload={'text':text,'origin_host':record['subject']['origin_host'],'modality':'text'}
+        if record['evaluator']['calibration_id']=='procedural-redaction-v1':
+            payload['check_mode']='privacy'
         with httpx.Client(timeout=20,trust_env=False,follow_redirects=False,transport=transport) as client:
             with client.stream('POST',LOCAL_GATEWAY,headers={'Authorization':'Bearer '+token},
-                    json={'text':text,'origin_host':record['subject']['origin_host'],'modality':'text'}) as response:
+                    json=payload) as response:
                 if response.status_code!=200:return outcome('unavailable','local_service_unavailable')
                 raw=bytearray()
                 for chunk in response.iter_bytes():

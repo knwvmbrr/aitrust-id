@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-10-14T01:02:14.049439+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "tests_passed": 197,
+  "warnings": 1,
+  "sources": {
+    "services/gateway/app.py": "e4a963e0c928b6ca3396324b3a2b800732e720dceb1fc7533340a4369f597da2",
+    "scripts/aitrust.py": "ec758e37410b21e8500f1d4aad3f9ea3f84424ec8c0bb95ffcefe7049019d077",
+    "protocol/replay.py": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6",
+    "scripts/setup-local.py": "54cb2edd95edccec29c21d27e2e819a72d7f67e701b85081e7e42fec61598639",
+    "tests/test_draft_privacy.py": "8bdea6d1d8a85a756492c73925dec52826dd5c5731e409050a00a004b99a41c9",
+    "tests/test_gateway_integration.py": "053d4ba1ee0a71fc161fd0b41501464a91d67f61459ff77f9af076e7b0e691c7",
+    "tests/test_gateway_cancellation.py": "13491da183fd6f2dede378b729691f964024563da085309db5826f294e63ac15",
+    "tests/test_local_cli.py": "575d86b1f93e3915a056d70fdb059be98c9b1a015ec6938a62d6d506a10c663d",
+    "tests/test_assertion_replay.py": "b7bcae3c75817fcab106732ca1bb473ab9bc4ccbbd93da4854394dfb0f6441ce",
+    "tests/test_local_setup.py": "eeb5af830305dcdbe0824929d149ad709b666116cfd57e59bd7ee057d92c4232"
+  },
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests/test_draft_privacy.py",
+    "tests/test_gateway_integration.py",
+    "tests/test_gateway_cancellation.py",
+    "tests/test_local_cli.py",
+    "tests/test_assertion_replay.py",
+    "tests/test_local_setup.py",
+    "-q"
+  ],
+  "scope": "Synthetic HTTP and CLI contracts; actual service independence not yet verified",
+  "actual_service_independence": false,
+  "independent_accuracy_evidence": false,
+  "full_requirements_closed": 0
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-010214-independent-draft-privacy-candidate-bae956fb",
+  "recorded_at": "2026-10-14T01:02:14.233205+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "68bab46d0948a78ec303326df41058cccc4980a9",
+  "changed": "Add explicit privacy-only mode to the existing authenticated gateway, a source-checked privacy CLI and mode-preserving replay; add owned local verification, per-role labels, local setup instructions and privacy-specific usage.",
+  "proves": "197 focused synthetic HTTP/CLI/cancellation/replay/setup checks pass. Default full evaluation remains supported; privacy mode does not call the evaluator.",
+  "limits": "Real service independence and refreshed source-bound setup are still required. F-105 is reopened at 80% on this candidate; independent recognition, human acceptance and outbound browser interception remain open. No new endpoint or tag code is introduced.",
+  "scope_ids": [
+    "F-105",
+    "F-023",
+    "F-024",
+    "T-PII",
+    "T-OUT",
+    "F-003"
+  ],
+  "files": {
+    "docs/draft-privacy-plan.md": "8a2c896435a2847c35b13a6a2e444123167cef9cabb30f58580b2558c922713b",
+    "docs/draft-privacy.md": "8eb1986620992a2c526c6a6bd1ab3ce6fd97ab7e5f90bad53ab58d1efafec291",
+    "docs/scope-progress.json": "625cc9a2438b7e4c9215badb6ee070cb984beee25ff86f72bc04af7ca31bc238",
+    "docs/scope-progress.md": "1f1cb0ac0810631b08df311decf17a49690faa6c65bfd2be10457401d0d6656f",
+    "docs/scope-task-index.md": "7b1230d818fa3f025c28cbfa6c67fa08dcf7accad7d05776b2eb41098c26eef0",
+    "eval/revalidation.json": "0df2df013ba0db22c5b9b9f23130217d60350ece935edc465edaf6b44320e85d",
+    "protocol/replay.py": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6",
+    "runs/2026-10-13-draft-privacy-focused.json": "f4a5a82148523416d213b2e3c326c93526bdc977a2c7ca8ec40fd3baba79ffc3",
+    "scripts/aitrust.py": "ec758e37410b21e8500f1d4aad3f9ea3f84424ec8c0bb95ffcefe7049019d077",
+    "scripts/setup-local.py": "54cb2edd95edccec29c21d27e2e819a72d7f67e701b85081e7e42fec61598639",
+    "scripts/verify-assertion-replay.py": "dc95a1c3962095f03ca70a23724d9e0b8ccbaf96aca2d36a0adc203253c3d00f",
+    "scripts/verify-draft-privacy.py": "a0514ab6ed749ca097d592e781867711dfb9f1c076f2d630374c575b5cfdb012",
+    "scripts/verify-route-boundaries.py": "52dc4a0f5510708aa35c0f60fffcb0f4f54a2821acaa69fd9c1ac2ad790b1936",
+    "scripts/verify-service.py": "dbd748d85931b25c4d6b847babb44c6c737349ec28282bb122813921add591de",
+    "services/gateway/app.py": "e4a963e0c928b6ca3396324b3a2b800732e720dceb1fc7533340a4369f597da2",
+    "site/scripts/prepare.mjs": "dfab52ee520f6667000c977372edf9cf8628553f8c16e08b1471574bef1a0892",
+    "site/src/catalog.js": "01e3de56e00eaf21c3ee823e6c4c9411a70b05d2bdbc5627531f5c394dbbbd3a",
+    "site/src/usage.js": "0a8b4578501baba284ff00b7629bcc07fc0bd82685d47b4fe1e617e7a06c3e5b",
+    "state.json": "6da829ddc9a51ee9db823ae0e8b0f0176c86c6852b7a6babbf0fd9178bf4d390",
+    "tests/test_draft_privacy.py": "8bdea6d1d8a85a756492c73925dec52826dd5c5731e409050a00a004b99a41c9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-draft-privacy-focused.json",
+      "sha256": "f4a5a82148523416d213b2e3c326c93526bdc977a2c7ca8ec40fd3baba79ffc3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T01:02:14.697680+00:00"
+    }
+  ]
+}

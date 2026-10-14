@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-14T00:08:20.101816+00:00",
+  "audited_at": "2026-10-14T01:55:51.928931+00:00",
   "client_date": "2026-10-13",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -2041,27 +2041,38 @@
       "id": "F-024",
       "kind": "requirement",
       "title": "PII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model",
-      "percent_complete": 20,
+      "percent_complete": 80,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-10-14T01:55:51.928925+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 explicit independent privacy mode, manual draft CLI, private export/replay and actual stopped-evaluator/restart controls"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver PII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model. Next package action: Define supported compose/send surfaces and capture permissions. Required outcome: Catches the mistake before it leaves your machine, not after",
+      "next_fix": "Complete accepted browser compose/send capture, explicit edit/cancel/proceed and supported send-path enforcement, then independent recognition and human acceptance. The manual draft privacy route works but does not intercept sending or issue PII_OUTBOUND.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/draft-privacy-plan.md",
+        "docs/draft-privacy.md",
+        "scripts/verify-draft-privacy.py",
+        "tests/test_draft_privacy.py",
+        "runs/2026-10-13-draft-privacy-real-linux.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
-        "Deliver PII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model. Next package action: Define supported compose/send surfaces and capture permissions. Required outcome: Catches the mistake before it leaves your machine, not after"
+        "Supported compose/send intervention and explicit permission boundaries.",
+        "Independent recognition and human operation before outbound-tag release."
       ],
       "queue": "open"
     },
@@ -3523,7 +3534,7 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-10-13T23:47:08.225860+00:00",
+      "audited_at": "2026-10-14T01:55:51.928914+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -3535,8 +3546,8 @@
       "completed_by": [
         "Codex"
       ],
-      "completed_at": "2026-10-13T23:47:08.225860+00:00",
-      "completion_timestamp_basis": "Actual complete-input Linux clean-clone run and ten failure controls, 27 input hashes and downloaded-tree verification; no historical/human acceptance invented.",
+      "completed_at": "2026-10-14T01:55:51.928534+00:00",
+      "completion_timestamp_basis": "Fresh actual complete-input Linux run on the privacy-mode and reserved-address source; all ten failure controls and restoration passed.",
       "next_fix": null,
       "next_owner": null,
       "evidence": [
@@ -3551,7 +3562,10 @@
         "docs/local-setup-result.md",
         "runs/2026-10-13-clean-setup-owner-decision.json",
         "runs/2026-10-13-one-command-linux-setup.json",
-        "runs/2026-10-13-one-command-complete-input-linux.json"
+        "runs/2026-10-13-one-command-complete-input-linux.json",
+        "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
+        "runs/2026-10-13-draft-privacy-real-linux.json",
+        "runs/2026-10-13-private-address-restart-probe.json"
       ],
       "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
       "required_acceptance": [],

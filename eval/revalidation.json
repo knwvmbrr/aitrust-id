@@ -69,7 +69,16 @@
         "tests/test_redaction_development_builder.py",
         "runs/2026-10-11-pii-labels-recognition.json",
         "eval/fixtures/pii-compact-addresses.json",
-        "runs/2026-10-11-pii-labels-compact.json"
+        "runs/2026-10-11-pii-labels-compact.json",
+        "scripts/verify-draft-privacy.py",
+        "tests/test_draft_privacy.py",
+        "docs/draft-privacy-plan.md",
+        "docs/draft-privacy.md",
+        "scripts/aitrust.py",
+        "scripts/setup-local.py",
+        "protocol/replay.py",
+        "scripts/verify-service.py",
+        "scripts/verify-assertion-replay.py"
       ],
       "commands": [
         [
@@ -82,6 +91,13 @@
           "tests/test_redaction_observations.py",
           "tests/test_redaction_development_client.py",
           "tests/test_redaction_development_builder.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_draft_privacy.py",
+          "-q"
         ]
       ]
     },
@@ -227,7 +243,13 @@
         "services/gateway/app.py",
         "services/gateway/healthcheck.py",
         "services/gateway/requirements.lock",
-        "runs/2026-10-13-one-command-complete-input-linux.json"
+        "runs/2026-10-13-draft-privacy-clean-setup-linux.json",
+        "scripts/verify-draft-privacy.py",
+        "tests/test_draft_privacy.py",
+        "docs/draft-privacy-plan.md",
+        "docs/draft-privacy.md",
+        "protocol/replay.py",
+        "scripts/verify-service.py"
       ],
       "commands": [
         [
@@ -376,6 +398,13 @@
         [
           "{python}",
           "scripts/verify-local-setup-evidence.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_draft_privacy.py",
+          "-q"
         ]
       ]
     },
@@ -417,7 +446,15 @@
         "tests/test_firefox_driver_protocol.py",
         "tests/firefox-permissions.cjs",
         "scripts/verify-firefox-permissions.cjs",
-        "LICENSE"
+        "LICENSE",
+        "scripts/verify-draft-privacy.py",
+        "tests/test_draft_privacy.py",
+        "docs/draft-privacy-plan.md",
+        "docs/draft-privacy.md",
+        "scripts/aitrust.py",
+        "scripts/setup-local.py",
+        "protocol/replay.py",
+        "scripts/verify-service.py"
       ],
       "commands": [
         [
@@ -465,6 +502,13 @@
         [
           "node",
           "scripts/verify-firefox-permissions.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_draft_privacy.py",
+          "-q"
         ]
       ]
     },
@@ -656,7 +700,7 @@
         "scripts/measure-ps-efficiency.py",
         "eval/methods/context-v6-eager.py",
         "runs/2026-10-13-ps-lazy-context-paired.json",
-        "runs/2026-10-13-ps-lazy-staging-timing.json"
+        "runs/2026-10-14-draft-privacy-pipeline-timing.json"
       ],
       "commands": [
         [

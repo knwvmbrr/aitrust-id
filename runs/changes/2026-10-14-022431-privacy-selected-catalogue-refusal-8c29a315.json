@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-022431-privacy-selected-catalogue-refusal-8c29a315",
+  "recorded_at": "2026-10-14T02:24:31.688588+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "804cfdfe7660d2611dacd59d7916eb13c9bcf19d",
+  "changed": "Retain the selected-checker catalogue refusal and enable private child diagnostics for the next website execution.",
+  "proves": "Failed website receipts remain immutable and cannot satisfy source-bound acceptance.",
+  "limits": "The current build succeeds but catalogue browser acceptance still fails. No publication is performed until its concrete assertion is diagnosed and corrected.",
+  "scope_ids": [
+    "F-024",
+    "F-105"
+  ],
+  "files": {
+    "docs/draft-privacy-result.md": "fa8dd9d5b9afc48cb4d1285aef2d6a1fe576d31964dceefb933c2cc83397f7c1",
+    "eval/revalidation.json": "c6034be52691fa6d27e4af3fbfacc7f04443d9e0ab034428af44575e3a8ad6e3",
+    "runs/2026-10-14-draft-privacy-final-PII_REDACTED.json": "1cb5b0b43c18e797755d561b2fcc2f6ace12214e8ad33358c21f4401b1395a30",
+    "runs/2026-10-14-draft-privacy-final-PS.json": "1c596d545daa845a0082b24f247033a7aeb6f6bda84fd98d9720ada0eeb5a66e",
+    "runs/2026-10-14-draft-privacy-final-extension.json": "641289d9afb893320bb8bb93ae66ec162ac8ac1df9ea5256c0ef16d88afc15d9",
+    "runs/2026-10-14-draft-privacy-final-protocol.json": "32d25a5230a110ae1322e3ccda4a7edac98deef5a117a0357a881fd428db4292",
+    "runs/2026-10-14-draft-privacy-final-website.json": "4b19f05b62d786322f1ac16c6baf76ceab42488a21fb23070b4768d6d85091f6",
+    "runs/2026-10-14-draft-privacy-pipeline-timing.json": "56b069bbe9cef9dd3279362d42926983193a495ec0383c43de7718e349156ec3",
+    "runs/2026-10-14-draft-privacy-pipeline-witness.json": "31efac860dcc3f0318473e178f61ccb6613438c0a2dbc961a2b6f5094ff7ab10",
+    "runs/2026-10-14-draft-privacy-selected-website.json": "3ccee54139023bd99449283062b908890bd9038d40ec6abd1d9f60c73015493c",
+    "runs/2026-10-14-draft-privacy-timing-fixture-cleanup.json": "b8f76f4a7fd4383b6771202ce599db119fe4a856ab52fa8740fc6df7e3d9154b",
+    "scripts/verify-route-boundaries.py": "e44cb60d794786aa2be32fa0c2ee11a340e55ea6af07256e8de7626fb71ddfca",
+    "scripts/verify-site.cjs": "ed3a6a391cb26c6dfeedd7695602f55103a2eeb757a754f3799c467502229d68",
+    "site/index.html": "5466181b4d68eea6344fc485d9b989ece27711e2f7df094257695e28dfc028ab",
+    "site/public/reference/pipeline-performance.json": "b25b5566de986cf89cc5829eb87a6f8296ccac2b568962563fbacad33146de45",
+    "site/public/reference/tag-performance.json": "199a883d5eba88da55b42e4d97416ac46ce24176202fd9c153b6e830899e3cc5",
+    "site/scripts/prepare-performance.mjs": "553e77f33f795b2652335ac329cd96393a0aadba584f69567f14c3481bd20a11",
+    "site/src/tag-performance.json": "199a883d5eba88da55b42e4d97416ac46ce24176202fd9c153b6e830899e3cc5",
+    "state.json": "1b937c44dbd884fcbe2b3598670330316e7b13bab0f3e2e34ece24b587782996",
+    "tests/pipeline-timing.cjs": "a65bd6d7a56a1099afd88e401472d26bcbeb4a75fef226269a693ffd9d50a6d2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-draft-privacy-selected-website.json",
+      "sha256": "3ccee54139023bd99449283062b908890bd9038d40ec6abd1d9f60c73015493c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T02:24:32.011096+00:00"
+    }
+  ]
+}

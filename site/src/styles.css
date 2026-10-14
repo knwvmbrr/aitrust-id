@@ -40,8 +40,8 @@
 }
 @layer base {
   body { @apply m-0 bg-canvas text-ink; font-family:'Nunito Sans',system-ui,sans-serif; }
-  button,a,input,select,textarea,summary { @apply outline-offset-4; }
-  button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible { @apply outline-2 outline-ink; }
+  button,a,input,select,textarea,summary,pre[tabindex="0"] { @apply outline-offset-4; }
+  button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,pre[tabindex="0"]:focus-visible { @apply outline-2 outline-ink; }
   p { @apply text-pretty; }
   h1,h2,h3 { @apply text-balance; }
   button:not(:disabled),a { @apply cursor-pointer; }

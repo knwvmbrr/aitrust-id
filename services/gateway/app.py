@@ -39,6 +39,7 @@ class EvalRequest(StrictModel):
     text:str=Field(min_length=1,max_length=200_000)
     origin_host:str=Field(default='unknown',max_length=253)
     modality:Literal['text','code','image','audio','video','document']='text'
+    check_mode:Literal['all','privacy']='all'
 class Redaction(StrictModel):
     text:str=Field(max_length=200_000)
     # Entity values never belong in an assertion. This is the inspected English
@@ -121,7 +122,11 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
             red.text=normalize_nfc(red.text)
             if red.entity_count and red.text==normalized:
                 raise ValueError('Redactor reports detections without changing text')
-            ev=await post_validated(client,EVALUATOR+'/signals',{'text':red.text},Evaluation)
+            if req.check_mode=='privacy':
+                # Procedural masking does not depend on a command-risk detector.
+                ev=Evaluation(candidates=[],models=[],calibration_id='procedural-redaction-v1')
+            else:
+                ev=await post_validated(client,EVALUATOR+'/signals',{'text':red.text},Evaluation)
         return red,ev
     async def watch_disconnect():
         # FastAPI has already consumed the validated body. Wait for the next
