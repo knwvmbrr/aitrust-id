@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-112856-independent-multiple-tag-results-ff8b9476",
+  "recorded_at": "2026-10-14T11:28:56.488319+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c2cc10023abdf79bb434370951a7c5a90568d9ac",
+  "changed": "Add an explicit local multi-tag command with separate processes, lazy per-tag imports, immediate brief results, separate records and honest partial-result exits. Preserve new real Linux saturation, recovery and clean-setup receipts.",
+  "proves": "17 selected multi-tag checks pass, including a real minimal interpreter preserving PS when privacy is unavailable, independent checker import failures and prompt result delivery. Actual Linux verification passed ten setup controls, 26 service controls, 15 replay controls, 16 privacy controls and eight isolation controls.",
+  "limits": "The multi-tag command still needs real simultaneous Linux success and per-worker crash/timeout execution. Independent accuracy, human/device acceptance and new scope closure are not claimed.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-024",
+    "F-113"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "955ad4e33fe57bdb3d39aa6aa105dc56531367932314520966ba4a778dd95dc1",
+    "docs/open-validation-path.md": "5591ac785280279e4655970559c2f624749467bf67ddcd0f622d946c3f8dfd8f",
+    "docs/tag-failure-isolation-plan.md": "8912b59faf97adadb826636ec564b313407f4a6b41c50af96d961658c39cfdd0",
+    "eval/revalidation.json": "f95180109d0437d6744a3ef9cb8ea19cc4514b063b2d66d322f6b7fd6a6f6974",
+    "runs/2026-10-14-tag-isolation-clean-setup-linux.json": "19534be16f520a737fba63ab0dace0b5c739a1e9f0fe6247e4dda650ba9d2062",
+    "runs/2026-10-14-tag-isolation-driver-environment-failure.json": "b0f435c7976db53788bbd8b064f6749b7f653226b0048d445ca4014c3caa820a",
+    "runs/2026-10-14-tag-isolation-final-PS.json": "d5424a09a63823b2c5cb3a6daae9be161e38ccd6f5cf386a1c7dd02d37d6aff3",
+    "runs/2026-10-14-tag-isolation-privacy-linux.json": "a7857c20c32a2748e086e2155d60650c7718c7f1a1b2dd9a593b1686076a15df",
+    "runs/2026-10-14-tag-isolation-real-linux.json": "5064c8142f3dbe73310daff70c1188ba40b8b6bcb6bf7c07e34ebeedbbce8e9f",
+    "runs/2026-10-14-tag-isolation-replay-linux.json": "c6f130cfd81e0ffcf0f46de78ab2995c3c800cb06c2295118e89e9073ae35bc4",
+    "runs/2026-10-14-tag-isolation-service-linux.json": "9e794886ce3cefc8208f90a3b3cce43d040d8096db95731708da24e232148bfc",
+    "scripts/check-tags.py": "9545a0db51660211c6cab1d7df2f93c533be088f0ffec87053660bf4194704b8",
+    "tests/test_independent_tag_batch.py": "d2c1fe8bbe8a265b7138ba45ef8f432e30607d73ca037c2be8b817671523dd6c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
+      "sha256": "19534be16f520a737fba63ab0dace0b5c739a1e9f0fe6247e4dda650ba9d2062"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-real-linux.json",
+      "sha256": "5064c8142f3dbe73310daff70c1188ba40b8b6bcb6bf7c07e34ebeedbbce8e9f"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-privacy-linux.json",
+      "sha256": "a7857c20c32a2748e086e2155d60650c7718c7f1a1b2dd9a593b1686076a15df"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-service-linux.json",
+      "sha256": "9e794886ce3cefc8208f90a3b3cce43d040d8096db95731708da24e232148bfc"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-replay-linux.json",
+      "sha256": "c6f130cfd81e0ffcf0f46de78ab2995c3c800cb06c2295118e89e9073ae35bc4"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-driver-environment-failure.json",
+      "sha256": "b0f435c7976db53788bbd8b064f6749b7f653226b0048d445ca4014c3caa820a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_independent_tag_batch.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T11:28:57.066848+00:00"
+    }
+  ]
+}

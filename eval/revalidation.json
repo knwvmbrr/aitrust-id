@@ -32,7 +32,9 @@
         "tests/test_tag_failure_isolation.py",
         "tests/test_gateway_runtime_isolation.py",
         "services/gateway/healthcheck.py",
-        "docs/tag-failure-isolation-plan.md"
+        "docs/tag-failure-isolation-plan.md",
+        "scripts/check-tags.py",
+        "tests/test_independent_tag_batch.py"
       ],
       "commands": [
         [
@@ -65,6 +67,13 @@
         [
           "{python}",
           "scripts/verify-standalone-ps.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_independent_tag_batch.py",
+          "-q"
         ]
       ]
     },
@@ -109,7 +118,9 @@
         "runs/2026-10-14-tag-isolation-service-linux.json",
         "runs/2026-10-14-tag-isolation-replay-linux.json",
         "scripts/verify-tag-isolation.py",
-        "tests/test_tag_isolation_verifier.py"
+        "tests/test_tag_isolation_verifier.py",
+        "scripts/check-tags.py",
+        "tests/test_independent_tag_batch.py"
       ],
       "commands": [
         [
@@ -143,6 +154,13 @@
           "-m",
           "pytest",
           "tests/test_tag_isolation_verifier.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_independent_tag_batch.py",
           "-q"
         ]
       ]
@@ -308,7 +326,9 @@
         "runs/2026-10-14-tag-isolation-service-linux.json",
         "runs/2026-10-14-tag-isolation-replay-linux.json",
         "scripts/verify-tag-isolation.py",
-        "tests/test_tag_isolation_verifier.py"
+        "tests/test_tag_isolation_verifier.py",
+        "scripts/check-tags.py",
+        "tests/test_independent_tag_batch.py"
       ],
       "commands": [
         [
@@ -479,6 +499,13 @@
           "pytest",
           "tests/test_tag_isolation_verifier.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_independent_tag_batch.py",
+          "-q"
         ]
       ]
     },
@@ -542,7 +569,9 @@
         "runs/2026-10-14-tag-isolation-service-linux.json",
         "runs/2026-10-14-tag-isolation-replay-linux.json",
         "scripts/verify-tag-isolation.py",
-        "tests/test_tag_isolation_verifier.py"
+        "tests/test_tag_isolation_verifier.py",
+        "scripts/check-tags.py",
+        "tests/test_independent_tag_batch.py"
       ],
       "commands": [
         [
@@ -611,6 +640,13 @@
           "-m",
           "pytest",
           "tests/test_tag_isolation_verifier.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_independent_tag_batch.py",
           "-q"
         ]
       ]

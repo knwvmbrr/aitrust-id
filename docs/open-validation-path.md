@@ -166,3 +166,26 @@ Public reference downloads also work with ordinary curl or an identified
 `AITrust-ID-Validator/0.1` user agent. The observed default Python urllib agent
 received Cloudflare error 1010; that transport response is not an evaluation
 result. The full repository includes the evidence and datasets for offline use.
+
+## Check multiple tags independently
+
+After optional local-service setup, use its checker environment to run both checks:
+
+```sh
+LOCAL_STATE="$HOME/.config/aitrust-id/local-stack"
+"$LOCAL_STATE/checker/bin/python" scripts/check-tags.py response.txt --tag PS --tag PII_REDACTED --env-file "$LOCAL_STATE/runtime.env"
+```
+
+Each result appears when ready. PS runs in its own process without redaction;
+privacy runs through the independent local redactor. A failing check does not
+remove the other's finding. Select just `--tag PS` to run without services or a
+token. Each tag keeps its own input limit and evidence record. PS handles up to
+20,000 characters; larger supported privacy input can still be checked separately.
+
+Exit 0 means the selected checks completed; `--fail-on-finding` uses exit 2 for a
+completed finding. Exit 3 means only part of the batch completed; exit 1 means no
+valid batch result was obtained. Do not treat a partial result as a successful
+check of every selected tag. `--json` explicitly exports separate full records,
+including potentially identifying hashes/offsets. PS and privacy subjects differ:
+the coordinator never flattens their spans or claims they independently corroborate
+one another. These remain development previews with their own release gates.

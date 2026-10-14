@@ -62,3 +62,15 @@ Record this direction and the current count in state and the change log. Keep
 unperformed acceptance open; a stronger completed requirement may need reopening
 until its new acceptance passes. A passing isolation component does not complete
 all 14 tag packages or manufacture the 33 remaining closures.
+
+## Independent multi-tag use
+
+Add a local-only coordinator for explicitly selected PS and PII_REDACTED checks.
+It launches separate checker processes in parallel, using the standalone PS
+route and privacy-only gateway route. A completed result can appear immediately
+while its sibling is pending. Keep each tag's record separate: PS describes the
+unredacted input and privacy describes its redacted subject, so combining their
+hashes or spans into one assertion would be false. Default output is brief; full
+records require an explicit JSON export. A partial batch returns a distinct exit
+status and never turns an unavailable sibling into No finding. Unknown or duplicate
+selected codes are rejected. Per-tag limits and timeouts stay independent.

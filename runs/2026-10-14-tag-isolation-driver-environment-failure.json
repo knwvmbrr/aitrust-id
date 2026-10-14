@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-14T11:17:34.912572+00:00",
+  "pass": false,
+  "phase": "private_linux_fault_driver_validation",
+  "failure_signature": "Required assertion format checker missing",
+  "cause": "Private fault driver used the system interpreter instead of the hash-locked checker environment",
+  "fix": "Reusable source-owned verifier checks schema readiness before mutation and runs with the locked verification interpreter",
+  "application_defect_asserted": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false
+}

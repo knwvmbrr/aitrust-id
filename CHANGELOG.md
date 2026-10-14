@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-112856-independent-multiple-tag-results-ff8b9476
+
+Recorded 2026-10-14T11:28:56.488319+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an explicit local multi-tag command with separate processes, lazy per-tag imports, immediate brief results, separate records and honest partial-result exits. Preserve new real Linux saturation, recovery and clean-setup receipts.
+- **Evidence.** 17 selected multi-tag checks pass, including a real minimal interpreter preserving PS when privacy is unavailable, independent checker import failures and prompt result delivery. Actual Linux verification passed ten setup controls, 26 service controls, 15 replay controls, 16 privacy controls and eight isolation controls. [Change record](./runs/changes/2026-10-14-112856-independent-multiple-tag-results-ff8b9476.json).
+- **Not claimed.** The multi-tag command still needs real simultaneous Linux success and per-worker crash/timeout execution. Independent accuracy, human/device acceptance and new scope closure are not claimed.
+
+
 ### 2026-10-14-111727-reusable-owned-tag-fault-verifier-9846f152
 
 Recorded 2026-10-14T11:17:27.286162+00:00 · Contributor: Codex · change
