@@ -9,6 +9,7 @@ from pathlib import Path
 import subprocess
 import sys
 import time
+import traceback
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'scripts'))
@@ -127,6 +128,7 @@ if __name__=='__main__':
         row=verify(args.setup_state,args.env_file)
         if args.output:write_report(args.output,row)
         print(json.dumps({'pass':True,'actual_cases':row['case_count']}))
-    except (OSError,ValueError,TypeError,KeyError,RuntimeError,subprocess.SubprocessError):
-        print('Owned tag-isolation verification unavailable; no private diagnostics displayed.',file=sys.stderr)
+    except (OSError,ValueError,TypeError,KeyError,RuntimeError,subprocess.SubprocessError) as error:
+        print(json.dumps({'pass':False,'failure_type':type(error).__name__,'positions':[{'source':Path(frame.filename).name,'line':frame.lineno} for frame in traceback.extract_tb(error.__traceback__)]}),file=sys.stderr)
+        print('Owned tag-isolation verification unavailable; exception messages and private values omitted.',file=sys.stderr)
         raise SystemExit(1)

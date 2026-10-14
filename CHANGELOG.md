@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-130207-require-new-bounded-source-evidence-e71c1179
+
+Recorded 2026-10-14T13:02:07.312263+00:00 · Contributor: Codex · change
+
+- **Changed.** Require new source-bound Linux privacy/isolation/batch records after worker supervision changes; retain existing service/setup evidence only for their unchanged inputs.
+- **Evidence.** The worker/client source is implemented and its budget/preflight refusal tests execute. Old receipts are not rehashed into current evidence. [Change record](./runs/changes/2026-10-14-130207-require-new-bounded-source-evidence-e71c1179.json).
+- **Not claimed.** New runtime receipts remain pending and must execute before any current pass or protected publication. No requirement closure or tag release.
+
+
+### 2026-10-14-125906-diagnose-owned-verifier-without-private-values-abea0d9a
+
+Recorded 2026-10-14T12:59:06.019777+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose only exception type and source filename/line in a failed owned fault-verification run so its failure can be repaired without logging exception messages, tokens or input.
+- **Evidence.** The diagnostic names code positions only; owner/runtime refusals and schema preflight remain tested before mutation. [Change record](./runs/changes/2026-10-14-125906-diagnose-owned-verifier-without-private-values-abea0d9a.json).
+- **Not claimed.** Current bounded Linux run did not complete the reusable verifier and remains unaccepted. All current-source, independent-label and publication gates remain required.
+
+
 ### 2026-10-14-125617-observe-worker-descendant-termination-dff9e45e
 
 Recorded 2026-10-14T12:56:17.410347+00:00 · Contributor: Codex · change
