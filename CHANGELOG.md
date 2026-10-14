@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-124830-enforce-tag-worker-output-budget-c9bc47d0
+
+Recorded 2026-10-14T12:48:30.640693+00:00 · Contributor: Codex · change
+
+- **Changed.** Enforce output and input budgets while supervising nonblocking worker pipes, kill the owned process group on failure before reaping, keep stderr/content out of storage, and support the verified Linux/macOS terminal control path. Enable only loopback in CI isolated network namespaces.
+- **Evidence.** Selected worker/client tests exercise actual flooding with stalled input, timeouts, process-group cleanup and both tag clients. All 86 authored PS regressions preserve the exact current method. Zombie observation uses POSIX process state on macOS as well as Linux procfs. [Change record](./runs/changes/2026-10-14-124830-enforce-tag-worker-output-budget-c9bc47d0.json).
+- **Not claimed.** New helper source requires fresh Linux fault, component, browser and full-suite evidence; prior receipts remain historical. No independent accuracy, physical device or new full requirement closure.
+
+
 ### 2026-10-14-122725-complete-tag-isolation-regression-and-bindings-275929a0
 
 Recorded 2026-10-14T12:27:25.259014+00:00 · Contributor: Codex · change

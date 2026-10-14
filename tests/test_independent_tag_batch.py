@@ -82,7 +82,7 @@ def test_no_finding_is_not_a_safety_clearance():
 
 @pytest.mark.parametrize('code',['PS','PII_REDACTED'])
 def test_child_timeout_never_becomes_no_finding(monkeypatch,code):
-    monkeypatch.setattr(batch.subprocess,'run',lambda *args,**kw:(_ for _ in ()).throw(subprocess.TimeoutExpired('PRIVATE',1)))
+    monkeypatch.setattr(batch,'run_worker',lambda *args,**kw:(_ for _ in ()).throw(subprocess.TimeoutExpired('PRIVATE',1)))
     row=batch.run_tag(code,TEXT,Path('unused'))
     assert row['state']=='UNAVAILABLE' and 'PRIVATE' not in json.dumps(row)
 
@@ -99,7 +99,7 @@ def test_selected_checker_import_failure_is_contained(monkeypatch,failed):
         if name==('check-ps.py' if failed=='PS' else 'aitrust.py'):raise ImportError('PRIVATE')
         return Checker()
     monkeypatch.setattr(batch,'load_checker',load)
-    monkeypatch.setattr(batch.subprocess,'run',lambda *args,**kw:subprocess.CompletedProcess([],0,b'{}',b''))
+    monkeypatch.setattr(batch,'run_worker',lambda *args,**kw:subprocess.CompletedProcess([],0,b'{}',b''))
     row=batch.check_tags(TEXT,list(batch.CODES),Path('unused'))
     assert row['state']=='PARTIAL'
     assert {r['code']:r['state'] for r in row['checks']}[failed]=='UNAVAILABLE'

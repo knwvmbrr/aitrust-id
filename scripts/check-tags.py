@@ -6,6 +6,7 @@ import importlib.util
 import json
 from pathlib import Path
 import subprocess
+import runpy
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -33,6 +34,7 @@ def load_checker(name):
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
     return module
 CODES=('PS','PII_REDACTED')
+run_worker=runpy.run_path(str(ROOT/'scripts/worker_process.py'))['run_worker']
 
 
 def run_tag(code,text,env_file):
@@ -43,7 +45,7 @@ def run_tag(code,text,env_file):
         else:
             argv=[sys.executable,'-B',str(ROOT/'scripts/aitrust.py'),'privacy','--env-file',str(env_file),'--json']
             deadline=30
-        child=subprocess.run(argv,input=text.encode('utf-8'),capture_output=True,timeout=deadline,check=False)
+        child=run_worker(argv,input=text.encode('utf-8'),timeout=deadline,output_limit=2_000_000)
         if child.returncode or len(child.stdout)>2_000_000:raise ValueError('Selected checker unavailable')
         row=json.loads(child.stdout,object_pairs_hook=unique,
             parse_constant=lambda value:(_ for _ in ()).throw(ValueError('Invalid result number')))

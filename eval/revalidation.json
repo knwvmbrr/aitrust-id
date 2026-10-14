@@ -34,7 +34,9 @@
         "services/gateway/healthcheck.py",
         "docs/tag-failure-isolation-plan.md",
         "scripts/check-tags.py",
-        "tests/test_independent_tag_batch.py"
+        "tests/test_independent_tag_batch.py",
+        "scripts/worker_process.py",
+        "tests/test_worker_process.py"
       ],
       "commands": [
         [
@@ -73,6 +75,13 @@
           "-m",
           "pytest",
           "tests/test_independent_tag_batch.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_worker_process.py",
           "-q"
         ]
       ]
@@ -121,7 +130,9 @@
         "tests/test_tag_isolation_verifier.py",
         "scripts/check-tags.py",
         "tests/test_independent_tag_batch.py",
-        "runs/2026-10-14-tag-isolation-batch-linux.json"
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "scripts/worker_process.py",
+        "tests/test_worker_process.py"
       ],
       "commands": [
         [
@@ -162,6 +173,13 @@
           "-m",
           "pytest",
           "tests/test_independent_tag_batch.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_worker_process.py",
           "-q"
         ]
       ]
@@ -330,7 +348,9 @@
         "tests/test_tag_isolation_verifier.py",
         "scripts/check-tags.py",
         "tests/test_independent_tag_batch.py",
-        "runs/2026-10-14-tag-isolation-batch-linux.json"
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "scripts/worker_process.py",
+        "tests/test_worker_process.py"
       ],
       "commands": [
         [
@@ -508,6 +528,13 @@
           "pytest",
           "tests/test_independent_tag_batch.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_worker_process.py",
+          "-q"
         ]
       ]
     },
@@ -575,7 +602,9 @@
         "scripts/check-tags.py",
         "tests/test_independent_tag_batch.py",
         "runs/2026-10-14-tag-isolation-batch-linux.json",
-        "scripts/verify-replay-receipt-input.cjs"
+        "scripts/verify-replay-receipt-input.cjs",
+        "scripts/worker_process.py",
+        "tests/test_worker_process.py"
       ],
       "commands": [
         [
@@ -658,6 +687,13 @@
         [
           "node",
           "scripts/verify-replay-receipt-input.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_worker_process.py",
+          "-q"
         ]
       ]
     },

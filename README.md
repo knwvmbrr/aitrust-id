@@ -59,7 +59,7 @@ Native iPhone/Android sharing interfaces are tracked future work, not shipped ap
 ## Try the local checker
 
 For PS alone, download the source and run `python3 scripts/check-ps.py response.txt`
-with Python 3.12+. This process-isolated development checker requires no token,
+on Linux or macOS with Python 3.12+. This process-isolated development checker requires no token,
 container, gateway or privacy service. It accepts up to 20,000 characters and
 performs **no redaction**. Failure is Unavailable, never a safety clearance.
 The combined service checker and independent privacy checker are separate routes.

@@ -20,7 +20,7 @@ def verify():
     original=importlib.util.module_from_spec(spec);spec.loader.exec_module(original)
     folder=ROOT/'eval/datasets/unsafe_code'
     manifest=json.loads((folder/'manifest.json').read_text())
-    names=['scripts/check-ps.py','scripts/verify-standalone-ps.py',
+    names=['scripts/check-ps.py','scripts/worker_process.py','scripts/verify-standalone-ps.py',
            'scripts/build-device-detector.py','services/evaluator/app.py',
            'protocol/normalization.py','protocol/unicode15-data.json',
            'eval/datasets/unsafe_code/manifest.json']+['eval/datasets/unsafe_code/'+r['file'] for r in manifest['active']]

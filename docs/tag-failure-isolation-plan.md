@@ -74,3 +74,21 @@ hashes or spans into one assertion would be false. Default output is brief; full
 records require an explicit JSON export. A partial batch returns a distinct exit
 status and never turns an unavailable sibling into No finding. Unknown or duplicate
 selected codes are rejected. Per-tag limits and timeouts stay independent.
+
+## Review correction: bound output before buffering
+
+A PR review found that checking stdout length after subprocess.run is too late:
+a faulty worker can fill parent memory first. Replace capture_output in both tag
+entry points with a neutral POSIX worker supervisor. It uses nonblocking stdin and
+stdout, reads at most the remaining output budget plus one byte, enforces a wall
+deadline, discards stderr and kills its newly created process group before reaping
+on failure. No temporary response-content files are written. This bounds caller
+output memory; it does not claim a general process sandbox or host-compromise
+protection. The standalone/multi-tag terminal routes are currently Linux/macOS;
+unsupported process-control platforms fail honestly before spawning.
+
+Exercise actual stdout flooding, exact-bound output, blocked stdin, worker exit,
+timeout and cleanup, including a flood in one selected tag while the other keeps
+its result. Refresh source-bound CLI/runtime receipts when these worker inputs
+change. CI's unshared network namespace must enable only lo for its owned HTTP
+fixtures; it gains no external interface or route. Keep no-egress enforcement.

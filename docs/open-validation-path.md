@@ -14,7 +14,7 @@ Independent accuracy, accessibility and acceptance remain separate release gates
 
 ## PS without any local service
 
-Download the source and open its folder. With Python 3.12+, save an answer as
+Download the source and open its folder. On Linux or macOS with Python 3.12+, save an answer as
 `response.txt` and run:
 
 ```sh

@@ -55,7 +55,7 @@ def test_child_fault_is_unavailable_and_other_checks_can_continue(monkeypatch,ca
         if failure=='crash':return subprocess.CompletedProcess([],7,b'PRIVATE',b'PRIVATE')
         raw={'json':b'{','huge':b'a'*(ps.MAX_RESULT+1),'duplicate':b'{"state":"NO_FINDING","state":"FINDING"}'}[failure]
         return subprocess.CompletedProcess([],0,raw,b'PRIVATE')
-    monkeypatch.setattr(ps.subprocess,'run',run)
+    monkeypatch.setattr(ps,'run_worker',run)
     monkeypatch.setattr(ps.sys,'stdin',io.TextIOWrapper(io.BytesIO(TEXT.encode())))
     assert ps.main([])==1
     captured=capsys.readouterr()
@@ -89,9 +89,9 @@ def test_actual_child_timeout_crash_invalid_output_and_recovery(monkeypatch,prog
     original=subprocess.run
     def failed_worker(argv,**kwargs):
         # Only the test child is replaced; launch a real disposable process.
-        return original([sys.executable,'-I','-S','-B','-c',program],**kwargs)
+        kwargs.pop('output_limit');return original([sys.executable,'-I','-S','-B','-c',program],capture_output=True,**kwargs)
     with monkeypatch.context() as patch:
-        patch.setattr(ps.subprocess,'run',failed_worker)
+        patch.setattr(ps,'run_worker',failed_worker)
         patch.setattr(ps,'DEADLINE',.1)
         with pytest.raises((ValueError,subprocess.TimeoutExpired)):ps.check(TEXT)
     assert ps.check(TEXT)['state']=='FINDING'

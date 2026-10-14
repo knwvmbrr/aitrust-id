@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-124830-enforce-tag-worker-output-budget-c9bc47d0",
+  "recorded_at": "2026-10-14T12:48:30.640693+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "81ef6ccd1fab46781d0b46f5b9f8ea3a9129f393",
+  "changed": "Enforce output and input budgets while supervising nonblocking worker pipes, kill the owned process group on failure before reaping, keep stderr/content out of storage, and support the verified Linux/macOS terminal control path. Enable only loopback in CI isolated network namespaces.",
+  "proves": "Selected worker/client tests exercise actual flooding with stalled input, timeouts, process-group cleanup and both tag clients. All 86 authored PS regressions preserve the exact current method. Zombie observation uses POSIX process state on macOS as well as Linux procfs.",
+  "limits": "New helper source requires fresh Linux fault, component, browser and full-suite evidence; prior receipts remain historical. No independent accuracy, physical device or new full requirement closure.",
+  "scope_ids": [
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "d64aa8bd9e7100268592dcfe887071434735aa1fe390afbd85baa0813f6d394c",
+    "README.md": "ec3fba6f0fa0421c323ad1badee82a2eb5ee1632e140125700431d61a18f57dc",
+    "docs/open-validation-path.md": "685363e48cc42794125a752cde287e8294801ac77859f6a7d19bbeedae2ad324",
+    "docs/tag-failure-isolation-plan.md": "9f0dd6943de618902676b724144a92c60fe363e2deef705baccef3f29b88c246",
+    "eval/revalidation.json": "91958412efb22ff9a4167bfb42e45f4ddc3c5b56092b7d7c3af21a2a099d6fa3",
+    "runs/2026-10-14-tag-isolation-bounded-ps.json": "4d0ec67de909cf5c0ed43f9c49f9acf7698ea10deb645cf09f6296275d64ef2d",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/verify-route-boundaries.py": "3f81dbf751bb28e2339e47911b66aff41e065e8c8a1d7cd8d858d12919bf082d",
+    "scripts/verify-standalone-ps.py": "546b63388b8bebc7e67938d6d29f5cb08de0156574d939b6edbfbec622ad74d1",
+    "scripts/verify-tag-isolation.py": "b6bc94e92021774d3328979bcab2bd37e34a72d6279acf88390cf284dce98661",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "site/src/usage.js": "c724980851832f827fbb9757e68fc452e95b265502648b07101cd64e18aaff6c",
+    "tests/test_independent_tag_batch.py": "33cd371fd2552e243035dc6e30d36969a28e47811e3f9fe0ac8abcf768f13c02",
+    "tests/test_standalone_ps.py": "18e1e80eff7340bea44794c4fda990a65b429876708db2cbcdf7dcf21b442edc",
+    "tests/test_worker_process.py": "5c2eb606c2d12b99f28029bcc44844d28b3baad346d23c0407dabd56c221660b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-ps.json",
+      "sha256": "4d0ec67de909cf5c0ed43f9c49f9acf7698ea10deb645cf09f6296275d64ef2d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "tests/test_standalone_ps.py",
+        "tests/test_independent_tag_batch.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T12:48:40.552451+00:00"
+    }
+  ]
+}

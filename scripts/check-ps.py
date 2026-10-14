@@ -13,6 +13,7 @@ MAX_CHARS=20000
 MAX_BYTES=MAX_CHARS*4
 MAX_RESULT=2_000_000
 DEADLINE=10
+run_worker=runpy.run_path(str(ROOT/'scripts/worker_process.py'))['run_worker']
 
 
 def unique(pairs):
@@ -73,9 +74,8 @@ def check(text):
         raise ValueError('Input outside supported range')
     # Isolate method imports and exceptions from other tags and the caller.
     # Inspected text is pipe data, never command-line code or an executed file.
-    child=subprocess.run([sys.executable,'-I','-S','-B',str(Path(__file__).resolve()),'--worker'],
-        input=text.encode('utf-8'),stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,
-        timeout=DEADLINE,check=False)
+    child=run_worker([sys.executable,'-I','-S','-B',str(Path(__file__).resolve()),'--worker'],
+        input=text.encode('utf-8'),timeout=DEADLINE,output_limit=MAX_RESULT)
     if child.returncode or len(child.stdout)>MAX_RESULT:raise ValueError('Worker unavailable')
     row=json.loads(child.stdout,object_pairs_hook=unique,
                    parse_constant=lambda value:(_ for _ in ()).throw(ValueError('Invalid number')))

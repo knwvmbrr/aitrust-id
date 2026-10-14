@@ -174,7 +174,7 @@ jobs:
         with: { node-version: '24' }
       # Source-bound browser/deploy controls need prepared device assets and a
       # normal-owner Git checkout. The site job below runs that complete file.
-      - run: sudo unshare -n "$(which python)" -m pytest tests --ignore=tests/test_route_boundaries.py -q
+      - run: sudo unshare -n sh -c 'ip link set lo up && exec "$@"' sh "$(which python)" -m pytest tests --ignore=tests/test_route_boundaries.py -q
       - run: echo "network-isolated evaluator tests complete"
 
   regressions:
