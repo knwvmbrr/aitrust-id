@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-110502-independent-tag-usage-and-fault-tests-bde23bc2
+
+Recorded 2026-10-14T11:05:02.157027+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an independent PS Terminal disclosure and selected privacy doctor instructions, exercise real gateway HTTP isolation and exact standalone engine parity in CI, and retain the Linux test-driver path failure.
+- **Evidence.** 176 selected software checks passed; the standalone method matches all 86 active authored development regressions. All 202 scope identities and independent tag planning contracts are retained. [Change record](./runs/changes/2026-10-14-110502-independent-tag-usage-and-fault-tests-bde23bc2.json).
+- **Not claimed.** Clean Linux replay/setup, timing and complete component/browser revalidation remain pending. Zero new full requirements or independent tag releases claimed.
+
+
 ### 2026-10-14-105857-independent-tag-queues-and-standalone-ps-8ce35e5c
 
 Recorded 2026-10-14T10:58:57.792885+00:00 · Contributor: Codex · change

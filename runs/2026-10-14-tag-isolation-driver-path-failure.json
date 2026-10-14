@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-14T11:02:40.844167+00:00",
+  "pass": false,
+  "phase": "private_clean_linux_driver",
+  "failure_signature": "ModuleNotFoundError: aitrust",
+  "cause": "Private test driver omitted its inspected clone/scripts import path",
+  "fix": "Insert that path before importing the existing CLI and rerun in a new owned clean clone",
+  "application_defect_asserted": false,
+  "original_staging_live_health": [
+    {
+      "role": "gateway",
+      "live_health_check_passed": true
+    },
+    {
+      "role": "anonymizer",
+      "live_health_check_passed": true
+    },
+    {
+      "role": "evaluator",
+      "live_health_check_passed": true
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "collection_enabled": false
+}
