@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-011413-privacy-safe-failure-diagnostics-950e0f98",
+  "recorded_at": "2026-10-14T01:14:13.102702+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a40dc693301f8c6e1e3f8275ba64c1ede0363c9",
+  "changed": "Add fixed privacy-verifier failure locations and exception type without exception text, paths, draft values or credentials.",
+  "proves": "The failure-report code compiles; actual first privacy refusal remains a refusal.",
+  "limits": "A new actual verification is required to diagnose the failed Linux privacy route; no completion or accuracy is asserted.",
+  "scope_ids": [
+    "F-024",
+    "T-PII",
+    "F-105"
+  ],
+  "files": {
+    "scripts/verify-draft-privacy.py": "5d175a4e8f33b86d2383e2933d1b1b7c7d532a6d982c364cd5222a83bee1ca63"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/verify-draft-privacy.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T01:14:13.179474+00:00"
+    }
+  ]
+}

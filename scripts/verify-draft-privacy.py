@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import traceback
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'scripts'))
@@ -147,9 +148,12 @@ if __name__=='__main__':
     try:
         record=verify(a.env_file,a.setup_state,a.replay_python);write_report(a.output,record,root=ROOT)
         print(json.dumps({'pass':True,'actual_cases':record['case_count'],'independent_accuracy':False}))
-    except (ValueError,KeyError,TypeError,OSError,AssertionError,subprocess.SubprocessError):
+    except (ValueError,KeyError,TypeError,OSError,AssertionError,subprocess.SubprocessError) as error:
         write_report(a.output,{'captured_at':datetime.now(timezone.utc).isoformat(),
             'pass':False,'reason':'actual_privacy_verification_unavailable',
+            'error_type':type(error).__name__,
+            'failed_at':[{'file':Path(frame.filename).name,'function':frame.name,'line':frame.lineno}
+                         for frame in traceback.extract_tb(error.__traceback__)],
             'independent_accuracy_evidence':False},root=ROOT)
         print('Actual draft privacy verification unavailable; no acceptance is claimed.',file=sys.stderr)
         raise SystemExit(1)

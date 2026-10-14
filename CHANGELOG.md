@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-011413-privacy-safe-failure-diagnostics-950e0f98
+
+Recorded 2026-10-14T01:14:13.102702+00:00 · Contributor: Codex · change
+
+- **Changed.** Add fixed privacy-verifier failure locations and exception type without exception text, paths, draft values or credentials.
+- **Evidence.** The failure-report code compiles; actual first privacy refusal remains a refusal. [Change record](./runs/changes/2026-10-14-011413-privacy-safe-failure-diagnostics-950e0f98.json).
+- **Not claimed.** A new actual verification is required to diagnose the failed Linux privacy route; no completion or accuracy is asserted.
+
+
 ### 2026-10-14-010534-privacy-verifier-input-coverage-33c2b7b2
 
 Recorded 2026-10-14T01:05:34.412473+00:00 · Contributor: Codex · change
