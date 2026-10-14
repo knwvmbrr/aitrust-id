@@ -167,7 +167,7 @@ restricted to protected main after the required engineering checks. Actual
 signing evidence is required before claiming a particular download authenticated;
 this does not release a tag or clear every dependency license.
 
-The current development source passed 1,692 Python checks, including
+The earlier 2026-10-11 development source passed 1,692 Python checks, including
 all 32 route-boundary checks. Execution is recorded in
 `runs/2026-10-11-reviewer-agreement-index-python.json` and
 `runs/2026-10-11-reviewer-agreement-index-boundaries.json`. All five active development fixture
@@ -312,6 +312,11 @@ Independent encrypted backup and synthetic restoration checks now pass. Public
 intake, application authorization and full-host recovery remain incomplete. The
 owner approved the [invited metadata-only pilot contract](docs/metadata-pilot-contract.md);
 collection stays disabled until its security, withdrawal and recovery gates pass. Local tags remain independent of research submissions.
+
+The [optional feedback transport developer check](docs/research-http.md) now
+exercises actual loopback HTTP, separate bounded workers and a disposable
+PostgreSQL database. It uses invented metadata only. Its default service entry
+point refuses collection before reading request bodies; it is not a live pilot.
 See [host operations](docs/private-host-operations.md),
 [public communication and protected data](docs/public-community-and-private-data.md)
 and [backup options](docs/backup-option-review.md).

@@ -477,6 +477,8 @@ def intake_controls(root=ROOT):
 
 
 PATTERNS += ('scripts/worker_process.py','tests/test_worker_process.py','scripts/check-ps.py','scripts/check-tags.py','scripts/verify-standalone-ps.py','scripts/verify-tag-isolation.py','scripts/verify-replay-receipt-input.cjs','tests/test_standalone_ps.py','tests/test_independent_tag_batch.py','tests/test_tag_failure_isolation.py','tests/test_gateway_runtime_isolation.py','tests/test_tag_isolation_verifier.py','docs/tag-failure-isolation-plan.md','docs/tag-failure-isolation-result.md')
+PATTERNS += ('scripts/verify-research-http.py', 'tests/test_research_http.py',
+             'docs/research-http-plan.md', 'docs/research-http.md', 'docs/research-http-result.md')
 
 def verify(root=ROOT):
     before = inventory(root)

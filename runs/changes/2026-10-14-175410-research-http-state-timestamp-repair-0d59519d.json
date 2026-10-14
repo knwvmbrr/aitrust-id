@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-175410-research-http-state-timestamp-repair-0d59519d",
+  "recorded_at": "2026-10-14T17:54:10.864864+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f98c1879b0722caef436b5a78f706077e18588a7",
+  "changed": "Synchronize both current-state timestamps and distinguish Codex implementation from Michael\u2019s accepted pilot operator role.",
+  "proves": "All 31 accountability controls pass after repair. The failed full run is retained: 3540 passes and 13 timestamp-consistency failures.",
+  "limits": "The failed broad run is not acceptance. A new full run is required; real collection and all uncompleted scope gates remain open.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "state.json": "2176fe6c40bb927197df8efb69f4fa558e4ae7e1eb902f69505676864d157b4b",
+    "runs/2026-10-14-research-http-full-suite.json": "0ceebba9bdcab4d1c2c6d6b3e8c20e72b8daa764692df88056c9329747ef8c3e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-full-suite.json",
+      "sha256": "0ceebba9bdcab4d1c2c6d6b3e8c20e72b8daa764692df88056c9329747ef8c3e"
+    }
+  ],
+  "checks": []
+}

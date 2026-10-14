@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-175730-research-http-accepted-regressions-b3e3e84d
+
+Recorded 2026-10-14T17:57:30.603828+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the accepted full regression run after repairing state chronology.
+- **Evidence.** 3553 Python tests pass, five platform skips, unchanged selected source throughout execution. All five active capability receipts remain source-current. Correction: the prior timestamp entry undercounted the separate accountability run; the actual result was 40 passing checks, not 31. [Change record](./runs/changes/2026-10-14-175730-research-http-accepted-regressions-b3e3e84d.json).
+- **Not claimed.** No full requirement closes; 78 remain open. The skipped platform checks, physical devices, independent tag accuracy and real research pilot remain unaccepted.
+
+
+### 2026-10-14-175410-research-http-state-timestamp-repair-0d59519d
+
+Recorded 2026-10-14T17:54:10.864864+00:00 · Contributor: Codex · change
+
+- **Changed.** Synchronize both current-state timestamps and distinguish Codex implementation from Michael’s accepted pilot operator role.
+- **Evidence.** All 31 accountability controls pass after repair. The failed full run is retained: 3540 passes and 13 timestamp-consistency failures. [Change record](./runs/changes/2026-10-14-175410-research-http-state-timestamp-repair-0d59519d.json).
+- **Not claimed.** The failed broad run is not acceptance. A new full run is required; real collection and all uncompleted scope gates remain open.
+
+
+### 2026-10-14-175112-research-http-stable-build-review-d5739e05
+
+Recorded 2026-10-14T17:51:12.024766+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture the successful source-stable website run and review the current personal route boundary inventory alongside the separate synthetic transport.
+- **Evidence.** All 19 website commands pass against unchanged sources; existing PS/privacy/extension receipts remain current; no tag or inference endpoint changed. [Change record](./runs/changes/2026-10-14-175112-research-http-stable-build-review-d5739e05.json).
+- **Not claimed.** Maintainer source review is not independent security review, real participant collection or tag release validation.
+
+
+### 2026-10-14-174746-research-http-scope-projections-beaf0d16
+
+Recorded 2026-10-14T17:47:46.810079+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the generated scope projections before repeating source-stable website verification.
+- **Evidence.** The first run completed all 19 commands successfully but refused because the scope projection changed during execution; failed receipt preserved. [Change record](./runs/changes/2026-10-14-174746-research-http-scope-projections-beaf0d16.json).
+- **Not claimed.** This failed source-stability receipt is not acceptance; the current prepared files require a fresh execution.
+
+
+### 2026-10-14-174344-research-http-protocol-checks-791eca34
+
+Recorded 2026-10-14T17:43:44.016254+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture all 26 current protocol checks after adding the separate synthetic research transport.
+- **Evidence.** Source-bound protocol checks pass with unchanged inputs during execution. [Change record](./runs/changes/2026-10-14-174344-research-http-protocol-checks-791eca34.json).
+- **Not claimed.** No participant collection, production research service, independent tag accuracy or full scope closure.
+
+
+### 2026-10-14-174154-research-http-boundary-9be86da7
+
+Recorded 2026-10-14T17:41:54.393939+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an independent optional-feedback HTTP transport, permanently disabled default entry point and separately constructed synthetic worker/database verifier.
+- **Evidence.** 235 selected Mac regressions and 58 current isolated Linux checks; seven actual HTTP/PostgreSQL control groups with verified cleanup; standalone PS still works while both research slots are busy. [Change record](./runs/changes/2026-10-14-174154-research-http-boundary-9be86da7.json).
+- **Not claimed.** Collection remains disabled. No participant, production listener, proxy/provider/grants/recovery acceptance, tag release or full requirement closure; 78 remain open.
+
+
 ### 2026-10-14-170456-verified-independent-tag-live-publication-f7ef3b38
 
 Recorded 2026-10-14T17:04:56.801457+00:00 · Contributor: Codex · change

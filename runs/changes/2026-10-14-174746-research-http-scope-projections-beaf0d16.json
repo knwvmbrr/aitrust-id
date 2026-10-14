@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-174746-research-http-scope-projections-beaf0d16",
+  "recorded_at": "2026-10-14T17:47:46.810079+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f98c1879b0722caef436b5a78f706077e18588a7",
+  "changed": "Record the generated scope projections before repeating source-stable website verification.",
+  "proves": "The first run completed all 19 commands successfully but refused because the scope projection changed during execution; failed receipt preserved.",
+  "limits": "This failed source-stability receipt is not acceptance; the current prepared files require a fresh execution.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "1e86db54c22670a482a9bce3099e312a6923d27fc7cd2a0a5d4dbb24b82f9e2c",
+    "site/src/public-scope.json": "1e86db54c22670a482a9bce3099e312a6923d27fc7cd2a0a5d4dbb24b82f9e2c",
+    "site/src/scope-manifest.json": "fa838c0bf10204986381e27cae2c35ab7da7f4ffbe680c1cd137c9a20f41ee8d",
+    "runs/2026-10-14-research-http-website.json": "3970b66db46e356ab3bae9630735818a1583853ed636b37f24ae4e74986257eb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-website.json",
+      "sha256": "3970b66db46e356ab3bae9630735818a1583853ed636b37f24ae4e74986257eb"
+    }
+  ],
+  "checks": []
+}

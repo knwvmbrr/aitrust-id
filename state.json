@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T17:04:56.725146+00:00",
-  "active_increment": "Independent tag startup, failure, saturation and recovery exercised; target remains 45 open full requirements",
+  "updated": "2026-10-14T17:57:30.533076+00:00",
+  "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3507,
+  "python_tests_passed": 3553,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -1049,13 +1049,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-14-tag-isolation-cold-current-PS.json",
     "PII_REDACTED": "runs/2026-10-14-tag-isolation-cold-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-14-tag-isolation-cold-current-protocol.json",
+    "protocol": "runs/2026-10-14-research-http-protocol.json",
     "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
-    "website": "runs/2026-10-14-tag-isolation-cold-package-website.json",
+    "website": "runs/2026-10-14-research-http-stable-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T17:04:56.725146+00:00",
+  "updated_at": "2026-10-14T17:57:30.533076+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2586,5 +2586,39 @@
     "inventory_recheck": "runs/2026-10-14-tag-isolation-inventory-recheck.json",
     "protected_merge": "runs/2026-10-14-tag-isolation-cold-protected-merge.json",
     "runtime_source_commit": "89235359fd284d893858124298316d54cb631d69"
+  },
+  "research_http": {
+    "status": "synthetic_transport_executed_collection_disabled",
+    "checked_at": "2026-10-14T17:41:54.258196+00:00",
+    "architecture": "docs/research-http-plan.md",
+    "guide": "docs/research-http.md",
+    "result": "docs/research-http-result.md",
+    "linux_evidence": "runs/2026-10-14-research-http-current-linux.json",
+    "actual_loopback_http": true,
+    "actual_synthetic_postgresql": true,
+    "separate_worker_processes": true,
+    "default_entrypoint_reads_body": false,
+    "environment_activation": false,
+    "collection_enabled": false,
+    "production_listener_deployed": false,
+    "participant_data_accepted": false,
+    "requirements_closed": [],
+    "open_requirement_count": 78,
+    "target_open_requirement_count": 45,
+    "independent_accuracy_evidence": false,
+    "local_selected_tests": 235,
+    "linux_selected_tests": 58,
+    "actual_http_database_control_groups": 7,
+    "website_revalidation": "runs/2026-10-14-research-http-stable-website.json",
+    "protocol_revalidation": "runs/2026-10-14-research-http-protocol.json",
+    "implemented_by": "Codex",
+    "accountable_pilot_operator": "Michael",
+    "retained_failed_checks": [
+      "runs/2026-10-14-research-http-test-expectation-refusal.json",
+      "runs/2026-10-14-research-http-website.json",
+      "runs/2026-10-14-research-http-full-suite.json"
+    ],
+    "full_suite_evidence": "runs/2026-10-14-research-http-accepted-full-suite.json",
+    "full_python_tests_passed": 3553
   }
 }
