@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-10-14T13:15:35.148502+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "sources": {
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+    "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+  },
+  "actual_owned_linux_services": true,
+  "actual_cases": [
+    "actual_both_tags_complete_with_separate_subjects",
+    "actual_privacy_unavailable_preserves_ps",
+    "actual_ps_worker_crash_preserves_privacy",
+    "actual_ps_worker_timeout_preserves_privacy",
+    "actual_ps_worker_stdout_flood_preserves_privacy"
+  ],
+  "case_count": 5,
+  "faulted_checker_source_restored": true,
+  "subjects_kept_separate": true,
+  "input_executed": false,
+  "production_configuration_modified": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false
+}

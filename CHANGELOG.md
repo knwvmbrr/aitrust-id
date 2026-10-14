@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-131621-bounded-worker-real-linux-acceptance-784b044d
+
+Recorded 2026-10-14T13:16:21.452926+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain fresh bounded-worker Linux isolation and five multi-tag scenarios including stdout flooding; prepare the Linux/macOS-only terminal instructions and preserve unchanged baseline privacy evidence.
+- **Evidence.** Actual owned Linux fault verifier passes eight controls, multi-tag runner passes five controls, and loopback-only isolated namespace executes its worker and HTTP tests. Original staging restored unchanged. Seven PS revalidation commands pass on unchanged current source. [Change record](./runs/changes/2026-10-14-131621-bounded-worker-real-linux-acceptance-784b044d.json).
+- **Not claimed.** Current privacy/protocol/extension/website and full-suite refresh remain pending. No independent accuracy, physical devices or new scope closure.
+
+
 ### 2026-10-14-130818-correct-standalone-fault-probe-input-2eeb8c37
 
 Recorded 2026-10-14T13:08:18.279046+00:00 · Contributor: Codex · change

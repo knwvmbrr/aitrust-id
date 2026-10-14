@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-131621-bounded-worker-real-linux-acceptance-784b044d",
+  "recorded_at": "2026-10-14T13:16:21.452926+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "289b63ee7e3477ed052b1c405418a42dfa6ed716",
+  "changed": "Retain fresh bounded-worker Linux isolation and five multi-tag scenarios including stdout flooding; prepare the Linux/macOS-only terminal instructions and preserve unchanged baseline privacy evidence.",
+  "proves": "Actual owned Linux fault verifier passes eight controls, multi-tag runner passes five controls, and loopback-only isolated namespace executes its worker and HTTP tests. Original staging restored unchanged. Seven PS revalidation commands pass on unchanged current source.",
+  "limits": "Current privacy/protocol/extension/website and full-suite refresh remain pending. No independent accuracy, physical devices or new scope closure.",
+  "scope_ids": [
+    "F-096",
+    "T-PS",
+    "T-PII",
+    "F-142",
+    "N-012"
+  ],
+  "files": {
+    "eval/revalidation.json": "80e761787dc6d63c9a96ed5bdf3aede462f033169390e2d61015494530e4594e",
+    "runs/2026-10-14-tag-isolation-bounded-batch-linux.json": "e05564cdcaf4cb8436b578c33c2f3b06c38f41c7af91d8965a18d12cf7e4d246",
+    "runs/2026-10-14-tag-isolation-bounded-current-PS.json": "7db552c74dc9054510e1e6024edf7c8a68b62fce92665c045ffd59b5ffe6c57c",
+    "runs/2026-10-14-tag-isolation-bounded-real-linux.json": "122e3e0ccb1200c7994e8a3514d6201eb47b166203727c052844952063251007",
+    "site/index.html": "bcef2e6801558ca510ad5fee90e5971b2e0c43539ebf2c877536fa020bdd29c1",
+    "site/public/reference/open-validation-path.md": "685363e48cc42794125a752cde287e8294801ac77859f6a7d19bbeedae2ad324"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-real-linux.json",
+      "sha256": "122e3e0ccb1200c7994e8a3514d6201eb47b166203727c052844952063251007"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
+      "sha256": "e05564cdcaf4cb8436b578c33c2f3b06c38f41c7af91d8965a18d12cf7e4d246"
+    },
+    {
+      "path": "runs/2026-10-14-tag-isolation-bounded-current-PS.json",
+      "sha256": "7db552c74dc9054510e1e6024edf7c8a68b62fce92665c045ffd59b5ffe6c57c"
+    }
+  ],
+  "checks": []
+}
