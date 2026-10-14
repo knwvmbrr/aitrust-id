@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-183153-research-http-protected-live-delivery-2b8cdd83",
+  "recorded_at": "2026-10-14T18:31:53.834733+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+  "changed": "Record the protected source merge, exact live site verification and current publication pointers.",
+  "proves": "22 required exact-head checks and both database jobs passed; both actual review findings resolved. All 783 artifact comparisons, six headers per origin and 20 live panels pass. All five capability receipts remain current; twelve unrelated primary files remain unchanged.",
+  "limits": "Source and site metadata are published; no production research service or real collection was enabled. No tag release or full requirement closure; 78 remain open, target 45.",
+  "scope_ids": [
+    "N-011",
+    "F-141"
+  ],
+  "files": {
+    "runs/2026-10-14-research-http-live-browser.json": "9d9be8ed42349d54b5eb5e04a5099795c9a25b50f5c1c4413cbf376d800fb371",
+    "runs/2026-10-14-research-http-live-bytes.json": "e3c985bc3f4fe3b4bf6e3c05cb0781474026b6f65b86777d52ed353dfaba3c27",
+    "runs/2026-10-14-research-http-live-headers.json": "06a38209daf73ffdc08c2f8e21de91972557247785903c0aa0e378afd7a15a45",
+    "runs/2026-10-14-research-http-live-publication.json": "bb051246573b219e06729c93ebaa8dd62a52a3590511b9cc92aae87268e4c49b",
+    "runs/2026-10-14-research-http-protected-merge.json": "4deb0185930f323da3d49486a780e8e7a720445e0aa871dcfdba65a5d9eee6bd",
+    "state.json": "05d30d555fab6e798d646dca5d0b2eae8eb3f6aebfb839c904e3866d2c2b03e7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-research-http-protected-merge.json",
+      "sha256": "4deb0185930f323da3d49486a780e8e7a720445e0aa871dcfdba65a5d9eee6bd"
+    },
+    {
+      "path": "runs/2026-10-14-research-http-live-publication.json",
+      "sha256": "bb051246573b219e06729c93ebaa8dd62a52a3590511b9cc92aae87268e4c49b"
+    }
+  ],
+  "checks": []
+}

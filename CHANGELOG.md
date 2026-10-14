@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-183153-research-http-protected-live-delivery-2b8cdd83
+
+Recorded 2026-10-14T18:31:53.834733+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected source merge, exact live site verification and current publication pointers.
+- **Evidence.** 22 required exact-head checks and both database jobs passed; both actual review findings resolved. All 783 artifact comparisons, six headers per origin and 20 live panels pass. All five capability receipts remain current; twelve unrelated primary files remain unchanged. [Change record](./runs/changes/2026-10-14-183153-research-http-protected-live-delivery-2b8cdd83.json).
+- **Not claimed.** Source and site metadata are published; no production research service or real collection was enabled. No tag release or full requirement closure; 78 remain open, target 45.
+
+
 ### 2026-10-14-181656-research-http-repaired-full-regressions-94d04a46
 
 Recorded 2026-10-14T18:16:56.528990+00:00 · Contributor: Codex · change
