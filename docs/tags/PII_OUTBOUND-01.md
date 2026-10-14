@@ -27,6 +27,7 @@ The user controls disclosure before sending, without an invisible copy of their 
 - Supported send paths cannot transmit before the warning decision.
 - Unsupported paths are disclosed; no blanket coverage claim.
 - Consent, cancel and reset tests verify no hidden retention or secondary upload.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 Numeric thresholds, supported languages/subjects and hardware/latency requirements are defined and accepted for this claim before independent evaluation; no PS threshold is borrowed by default. Existing editorial floors are not measured accuracy.
 

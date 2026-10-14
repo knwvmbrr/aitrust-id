@@ -13,6 +13,7 @@ def test_readiness_requires_valid_bounded_json(monkeypatch,body,status,expected)
     monkeypatch.setattr(m.urllib.request,'build_opener',lambda *args:opener)
     assert m.ready() is expected
     assert opener.open.call_args.kwargs['timeout']==2
+    assert opener.open.call_args.args[0]=='http://127.0.0.1:8000/healthz?check_mode=privacy'
 
 def test_outage_returns_false_without_traceback(monkeypatch):
     opener=Mock();opener.open.side_effect=OSError('synthetic private detail')

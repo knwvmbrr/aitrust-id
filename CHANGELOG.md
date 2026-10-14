@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-105857-independent-tag-queues-and-standalone-ps-8ce35e5c
+
+Recorded 2026-10-14T10:58:57.792885+00:00 · Contributor: Codex · change
+
+- **Changed.** Reserve separate full-service and privacy admission, expose selected privacy readiness, add a process-isolated stdlib PS command and its own usage path, and apply the owner direction of 45 open requirements to all tag planning contracts.
+- **Evidence.** 176 selected checks passed, including a real gateway process with HTTP saturation in both directions, failure recovery and minimal-interpreter standalone PS. All 86 authored PS regressions match the unchanged frozen method. [Change record](./runs/changes/2026-10-14-105857-independent-tag-queues-and-standalone-ps-8ce35e5c.json).
+- **Not claimed.** Actual clean Linux setup and full source-bound component/browser revalidation are still required. No independent accuracy, physical phone, all-tag operation or new full scope closure is claimed.
+
+
 ### 2026-10-14-030154-publication-summary-review-correction-b208ffa9
 
 Recorded 2026-10-14T03:01:54.823851+00:00 · Contributor: Codex · change

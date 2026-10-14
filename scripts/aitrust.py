@@ -239,6 +239,8 @@ def main(argv=None):
     for name in ('init', 'doctor', 'check', 'privacy'):
         sub = commands.add_parser(name)
         sub.add_argument('--env-file', type=Path, default=DEFAULT_ENV)
+        if name == 'doctor':
+            sub.add_argument('--privacy', action='store_true', help='Check only the independent privacy route')
         if name in ('check','privacy'):
             sub.add_argument('file', nargs='?', default='-', help='UTF-8 text file, or - for stdin')
             sub.add_argument('--json', action='store_true', help='Print the schema-validated assertion, without response text')
@@ -251,10 +253,15 @@ def main(argv=None):
             return 0
         token = read_token(args.env_file)
         if args.command == 'doctor':
-            if local_request('/healthz').get('ok') is not True:
+            privacy=args.privacy
+            path='/healthz?check_mode=privacy' if privacy else '/healthz'
+            if local_request(path).get('ok') is not True:
                 raise LocalCheckError('Local dependencies are not healthy.')
-            result = validate_result(local_request('/v1/evaluate', {'text': 'Synthetic health check.', 'origin_host': 'manual-local'}, token))
-            print('Authenticated local pipeline ready; valid assertion received. Development checks only.')
+            payload={'text':'Synthetic health check.','origin_host':'manual-local'}
+            if privacy:payload['check_mode']='privacy'
+            result = validate_result(local_request('/v1/evaluate',payload,token),privacy=privacy)
+            print('Authenticated local privacy check ready; valid assertion received. Development checks only.' if privacy else
+                  'Authenticated local pipeline ready; valid assertion received. Development checks only.')
             return 0
         if args.file == '-':
             if sys.stdin.isatty():

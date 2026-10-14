@@ -28,7 +28,10 @@ EVALUATOR=os.environ.get('EVALUATOR_URL','http://evaluator:8000')
 PRODUCTION_TAGS=frozenset({'PS','PII_REDACTED'})
 KNOWN_CODES=frozenset({'NF','FI','HP','MT','PS','IV','FA','PA','UNK','PII_REDACTED'})
 FLOORS={'PS':.70}
-LIMIT=asyncio.Semaphore(4)
+# Fixed reservations: waiting command checks cannot starve privacy checks, or
+# vice versa. The total admitted work remains four; neither pool borrows slots.
+LIMIT=asyncio.Semaphore(3)
+PRIVACY_LIMIT=asyncio.Semaphore(1)
 SIGNING_KEY=load_private_key(os.environ['AITRUST_SIGNING_KEY_FILE']) if os.environ.get('AITRUST_SIGNING_KEY_FILE') else None
 app=FastAPI(title='AITrust-ID Gateway',version=SPEC_VERSION)
 app.add_middleware(RequestBodyLimitMiddleware,max_body_size=1_250_000)
@@ -83,13 +86,15 @@ async def post_validated(client,url,payload,model):
     return model.model_validate(response.json())
 
 @app.get('/healthz')
-async def healthz():
+async def healthz(check_mode:Literal['all','privacy']='all'):
     try:
         async with httpx.AsyncClient(timeout=2,trust_env=False) as client:
-            for url in (ANONYMIZER,EVALUATOR):
+            urls=(ANONYMIZER,) if check_mode=='privacy' else (ANONYMIZER,EVALUATOR)
+            for url in urls:
                 response=await client.get(url+'/healthz')
                 response.raise_for_status()
-                if response.json().get('ok') is not True:
+                body=response.json()
+                if not isinstance(body,dict) or body.get('ok') is not True:
                     raise ValueError('not ready')
     except (httpx.HTTPError,ValueError):
         raise HTTPException(503,'Local dependencies are unavailable')
@@ -110,10 +115,11 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
     if nonce is not None and SIGNING_KEY is None:
         raise HTTPException(503,'Gateway response signing is not configured')
     t0=time.perf_counter()
+    admission=PRIVACY_LIMIT if req.check_mode=='privacy' else LIMIT
     try:
-        await asyncio.wait_for(LIMIT.acquire(),timeout=.1)
+        await asyncio.wait_for(admission.acquire(),timeout=.1)
     except TimeoutError:
-        raise HTTPException(503,'Evaluator is busy; retry later')
+        raise HTTPException(503,'Selected check is busy; retry later')
     work=disconnect=None
     async def pipeline():
         async with httpx.AsyncClient(timeout=10,trust_env=False) as client:
@@ -157,7 +163,7 @@ async def evaluate(req:EvalRequest,request:Request,authorization:str=Header(defa
         for task in tasks:
             if not task.done():task.cancel()
         await asyncio.gather(*tasks,return_exceptions=True)
-        LIMIT.release()
+        admission.release()
     if red.entity_count:
         tags.append({'code':'PII_REDACTED','confidence':1.,'state':'asserted','signals':[{'id':'presidio.entity.v1','score':1.,'detail':{'entities':red.entities,'count':red.entity_count}}]})
     from protocol import normalization

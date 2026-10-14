@@ -25,8 +25,14 @@
         "tests/test_evidence_resistance.py",
         "eval/methods/context-v6-eager.py",
         "tests/test_lazy_ps_context.py",
-        "tests/test_command_performance.py",
-        "scripts/measure-ps-efficiency.py"
+        "scripts/measure-ps-efficiency.py",
+        "scripts/check-ps.py",
+        "scripts/verify-standalone-ps.py",
+        "tests/test_standalone_ps.py",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "services/gateway/healthcheck.py",
+        "docs/tag-failure-isolation-plan.md"
       ],
       "commands": [
         [
@@ -48,6 +54,17 @@
           "tests/test_lazy_ps_context.py",
           "tests/test_command_performance.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_standalone_ps.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-standalone-ps.py"
         ]
       ]
     },
@@ -78,7 +95,14 @@
         "scripts/setup-local.py",
         "protocol/replay.py",
         "scripts/verify-service.py",
-        "scripts/verify-assertion-replay.py"
+        "scripts/verify-assertion-replay.py",
+        "scripts/check-ps.py",
+        "scripts/verify-standalone-ps.py",
+        "tests/test_standalone_ps.py",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "services/gateway/healthcheck.py",
+        "docs/tag-failure-isolation-plan.md"
       ],
       "commands": [
         [
@@ -97,6 +121,14 @@
           "-m",
           "pytest",
           "tests/test_draft_privacy.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_tag_failure_isolation.py",
+          "tests/test_gateway_runtime_isolation.py",
           "-q"
         ]
       ]
@@ -249,7 +281,13 @@
         "docs/draft-privacy-plan.md",
         "docs/draft-privacy.md",
         "protocol/replay.py",
-        "scripts/verify-service.py"
+        "scripts/verify-service.py",
+        "scripts/check-ps.py",
+        "scripts/verify-standalone-ps.py",
+        "tests/test_standalone_ps.py",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "docs/tag-failure-isolation-plan.md"
       ],
       "commands": [
         [
@@ -405,6 +443,14 @@
           "pytest",
           "tests/test_draft_privacy.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_tag_failure_isolation.py",
+          "tests/test_gateway_runtime_isolation.py",
+          "-q"
         ]
       ]
     },
@@ -454,7 +500,14 @@
         "scripts/aitrust.py",
         "scripts/setup-local.py",
         "protocol/replay.py",
-        "scripts/verify-service.py"
+        "scripts/verify-service.py",
+        "scripts/check-ps.py",
+        "scripts/verify-standalone-ps.py",
+        "tests/test_standalone_ps.py",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "services/gateway/healthcheck.py",
+        "docs/tag-failure-isolation-plan.md"
       ],
       "commands": [
         [
@@ -508,6 +561,14 @@
           "-m",
           "pytest",
           "tests/test_draft_privacy.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_tag_failure_isolation.py",
+          "tests/test_gateway_runtime_isolation.py",
           "-q"
         ]
       ]

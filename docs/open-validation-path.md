@@ -3,14 +3,35 @@
 ## Architecture and claim
 
 The downloadable repository and site are public entry points. The checker runs
-on the person's machine, through the same authenticated gateway, redactor and
-evaluator as the Chrome adapter. It adds no remote inference endpoint, upload
+on the person's machine. The standalone PS command needs no services. The combined
+service route uses the authenticated gateway, redactor and evaluator as the Chrome adapter. It adds no remote inference endpoint, upload
 collection or paid API. Code supplied as input is never run.
 
 PS reports supported command-risk patterns. It does not validate an AI answer's
 truth, identify a scam, certify a publisher, or clear untagged content as safe.
 Its schema-validated record binds a versioned method to the redacted subject.
 Independent accuracy, accessibility and acceptance remain separate release gates.
+
+## PS without any local service
+
+Download the source and open its folder. With Python 3.12+, save an answer as
+`response.txt` and run:
+
+```sh
+python3 scripts/check-ps.py response.txt
+```
+
+This independent PS route needs no container engine, token, gateway or privacy
+service. It uses the same frozen method as the website and runs in its own child
+process. Limit: 20,000 characters and a ten-second execution deadline. No command
+in the answer is run; no draft is edited. **No redaction is performed.** The
+ordinary result is short; `--json` explicitly exports potentially identifying
+hashes and offsets. `--fail-on-finding` returns 2 for a finding, 0 for a completed
+check without a supported finding, and 1 for Unavailable. Unavailable is never
+No finding, and No finding is never a safety clearance. This is a development
+preview; independent release validation remains required.
+
+[Independent routes and failure tests](tag-failure-isolation-plan.md).
 
 ## Install and use
 

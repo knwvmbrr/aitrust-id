@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T03:01:54.749337+00:00",
+  "updated": "2026-10-14T10:57:11.284848+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -756,17 +756,17 @@
     "latest_increment": "docs/local-setup-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
-    "target_open_records": 43,
+    "target_open_records": 45,
     "target_start_open_records": 87,
-    "target_remaining_closures": 35,
+    "target_remaining_closures": 33,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
-    "target_plan": "docs/ps-lazy-context-performance-plan.md",
-    "target_direction_date": "2026-10-13",
+    "target_plan": "docs/tag-failure-isolation-plan.md",
+    "target_direction_date": "2026-10-14",
     "current_target_verification": "runs/2026-10-14-setup-published-routes.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
-    "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
-    "latest_owner_direction_date": "2026-10-13",
+    "latest_owner_direction": "All tags must operate independently without depending on another tag. An individual tag failure must not disable healthy tag routes or the platform. Continue toward 45 open full requirements, preserving all scope and actual acceptance.",
+    "latest_owner_direction_date": "2026-10-14",
     "latest_increment_completed_ids": [
       "F-105"
     ],
@@ -1057,7 +1057,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T03:01:54.749337+00:00",
+  "updated_at": "2026-10-14T10:57:11.284848+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2542,5 +2542,22 @@
     "exact_headers_verified_per_origin": 5,
     "primary_unrelated_files_preserved": 12,
     "full_requirements_closed": 1
+  },
+  "tag_failure_isolation": {
+    "plan": "docs/tag-failure-isolation-plan.md",
+    "status": "implemented_candidate; focused_checks_pass; full_source_and_actual_linux_revalidation_pending",
+    "gateway_reservations": {
+      "complete_pipeline": 3,
+      "privacy_only": 1
+    },
+    "standalone_ps": "scripts/check-ps.py",
+    "standalone_requires_gateway": false,
+    "standalone_requires_redactor": false,
+    "unimplemented_tags_operational": false,
+    "independent_tag_release_validated": false,
+    "new_requirements_closed": 0,
+    "remaining_open": 78,
+    "target_open": 45,
+    "standalone_regression_evidence": "runs/2026-10-14-standalone-ps-regressions.json"
   }
 }

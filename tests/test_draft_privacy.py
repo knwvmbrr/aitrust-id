@@ -95,12 +95,12 @@ def test_privacy_disconnect_cancels_redaction_and_releases_slot(monkeypatch):
             except asyncio.CancelledError:cancelled.set();raise
         original=httpx.AsyncClient
         monkeypatch.setattr(g.httpx,'AsyncClient',lambda **kw:original(transport=httpx.MockTransport(handle),**kw))
-        monkeypatch.setattr(g,'LIMIT',asyncio.Semaphore(4))
+        monkeypatch.setattr(g,'PRIVACY_LIMIT',asyncio.Semaphore(1))
         request=Request();task=asyncio.create_task(g.evaluate(
             g.EvalRequest(text=TEXT,check_mode='privacy'),request,'Bearer '+g.TOKEN,''))
         await asyncio.wait_for(started.wait(),1);request.disconnected.set()
         with pytest.raises(HTTPException) as exc:await asyncio.wait_for(task,1)
-        assert exc.value.status_code==408 and cancelled.is_set() and g.LIMIT._value==4
+        assert exc.value.status_code==408 and cancelled.is_set() and g.PRIVACY_LIMIT._value==1
     asyncio.run(scenario())
 
 

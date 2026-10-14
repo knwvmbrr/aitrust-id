@@ -230,6 +230,7 @@ References are not claims that the entire package is done.
 - Independent claim/passage labels measure support accuracy and unsupported-claim coverage.
 - No corpus means unsupported/unavailable for NF, not an NF verdict.
 - Changing a source invalidates only findings derived from that source.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -268,6 +269,7 @@ References are not claims that the entire package is done.
 - Blind labels distinguish contradiction from missing evidence.
 - Offline non-resolution alone never establishes that a source does not exist anywhere.
 - Publish error rates by evidence type; NF and FI may describe different claims in one answer.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -306,6 +308,7 @@ References are not claims that the entire package is done.
 - Independent labels and comparison with simpler baselines establish useful indicator performance.
 - The release claim names the supported indicator; it does not infer model intent.
 - No source lookup capability is misrepresented as a factual verification.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -344,6 +347,7 @@ References are not claims that the entire package is done.
 - Report agreement, category errors and confidence calibration separately.
 - Existing alpha 0.55 and accuracy values remain candidates until the protocol is accepted.
 - MT disagreement never blocks PS, provenance or privacy tag release.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -382,6 +386,7 @@ References are not claims that the entire package is done.
 - Use PS-01 and its 17-scenario acceptance packet plus phone/device checks.
 - Candidate 95% Wilson lower-bound precision 0.93 and recall 0.75 require prior protocol acceptance and independent labels.
 - Maintain all 86 current regression cases and publish category failures; no scam-intent inference.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -422,6 +427,7 @@ References are not claims that the entire package is done.
 - A machine never assigns IV merely because a detector passed.
 - Changing the subject or review scope invalidates that attestation.
 - Review identity and signature integrity are tested separately from the reviewed claim’s accuracy.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -460,6 +466,7 @@ References are not claims that the entire package is done.
 - Absent typing, paste bursts or missing human evidence never establish FA.
 - Valid signatures establish the signer/record, not the truth of its origin claim.
 - Independent provenance cases include assisted-input users and incomplete capture.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -498,6 +505,7 @@ References are not claims that the entire package is done.
 - Behavioral indicators alone must first demonstrate that they support the bounded claim.
 - No per-person timing template or absent-human inference.
 - Do not use outside knowledge as proof of human authorship.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -536,6 +544,7 @@ References are not claims that the entire package is done.
 - Unavailable processing cannot appear as evaluated uncertainty or success.
 - No-finding never certifies safety.
 - Protocol changes require compatibility tests and the established approval process.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -574,6 +583,7 @@ References are not claims that the entire package is done.
 - Transformation/order correctness and recognition accuracy are separate measurements.
 - Invalid or failed required redaction stops the affected service route.
 - The on-device PS route does not claim this tag or pretend to redact its input.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -614,6 +624,7 @@ References are not claims that the entire package is done.
 - Supported send paths cannot transmit before the warning decision.
 - Unsupported paths are disclosed; no blanket coverage claim.
 - Consent, cancel and reset tests verify no hidden retention or secondary upload.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -652,6 +663,7 @@ References are not claims that the entire package is done.
 - No rename or new live taxonomy code without owner/RFC acceptance.
 - Historic PS records retain their original meaning.
 - A naming change is not new independent accuracy evidence.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -694,6 +706,7 @@ References are not claims that the entire package is done.
 - Two-family co-occurrence is a hypothesis, not independent corroboration.
 - Publish measured false-positive rates and category misses; hedged wording and one-action dismissal are required.
 - If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
@@ -736,6 +749,7 @@ References are not claims that the entire package is done.
 - Absence of human evidence never issues BT.
 - Repetition, template structure and timing regularity alone are not accepted proof.
 - No deployment if the proposed evidence cannot support the declared claim.
+- Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate.
 
 **Failure containment:** Withhold or disable only the affected claim/route. Required auth, privacy or integrity failures must not be bypassed. Independent routes stay available where their own prerequisites are met.
 
