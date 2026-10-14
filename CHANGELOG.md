@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-030154-publication-summary-review-correction-b208ffa9
+
+Recorded 2026-10-14T03:01:54.823851+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the second latest-runtime summary identified by review, retaining its previous snapshot and aligning current source, preview, artifact/header counts and closure count with actual publication evidence.
+- **Evidence.** Latest runtime and website summaries agree with the immutable actual launch receipt: df715ce source, 783 matched artifacts, six exact headers per origin and zero additional requirement closures. [Change record](./runs/changes/2026-10-14-030154-publication-summary-review-correction-b208ffa9.json).
+- **Not claimed.** This is metadata reconciliation; no runtime, tag release or accuracy claim changes. The review finding is fixed before protected merge.
+
+
+### 2026-10-14-025214-draft-privacy-live-publication-33a7c9cc
+
+Recorded 2026-10-14T02:52:14.097291+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected merge, actual deployment and live-source checks for the independent draft privacy increment; replace stale current website publication fields while preserving their prior values.
+- **Evidence.** All 22 exact-head required checks pass. The live browser passes all 20 panels, themes, keyboard/focus, 320px reflow, downloads and production policy; 783 exact artifacts and six exact headers per origin match the reviewed build. Primary checkout retains all 12 unrelated files byte-for-byte. [Change record](./runs/changes/2026-10-14-025214-draft-privacy-live-publication-33a7c9cc.json).
+- **Not claimed.** Publication is a development preview, not independent tag release. PII is a local manual workflow; browser send interception, physical devices, human screen-reader acceptance and optional collection remain open. Scope stays 124 complete and 78 open.
+
+
 ### 2026-10-14-023720-privacy-full-current-regression-0ecda99d
 
 Recorded 2026-10-14T02:37:20.304307+00:00 · Contributor: Codex · change

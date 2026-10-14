@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T02:37:20.238251+00:00",
+  "updated": "2026-10-14T03:01:54.749337+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
+    "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://c7f7f12b.aitrust-id.pages.dev",
+    "deployment_url": "https://a5a14097.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
+    "publication_evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-11-consent-live-site.json",
+    "verification": "runs/2026-10-14-draft-privacy-live-browser.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -293,10 +293,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
-    "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
-    "deployment": "https://1e246e84.aitrust-id.pages.dev",
-    "source_commit": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+    "published_source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+    "public_static_source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+    "deployment": "https://a5a14097.aitrust-id.pages.dev",
+    "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -305,7 +305,21 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-10-11-agreement-publication.json"
+    "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "prior_current_publication_fields": {
+      "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
+      "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
+      "publication": "runs/2026-10-11-agreement-publication.json",
+      "verification": "runs/2026-10-11-consent-live-site.json",
+      "published_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
+      "public_static_source_commit": "7cd96559721841ebe6fdb775ea2bbcfc97885af1",
+      "source_commit": "8b376508216a98d7e434ae59a9b1ece52b1cb120",
+      "deployment": "https://1e246e84.aitrust-id.pages.dev",
+      "deployment_url": "https://c7f7f12b.aitrust-id.pages.dev"
+    },
+    "exact_current_build_artifacts_per_origin": 261,
+    "exact_current_matching_artifacts": 783,
+    "current_security_headers_matching": 6
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -1043,7 +1057,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T02:37:20.238251+00:00",
+  "updated_at": "2026-10-14T03:01:54.749337+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1113,13 +1127,13 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
-    "preview": "https://30a8a624.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-13-setup-live-publication.json",
-    "all_artifacts_verified": 777,
-    "exact_headers_verified_per_origin": 5,
+    "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+    "preview": "https://a5a14097.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "all_artifacts_verified": 783,
+    "exact_headers_verified_per_origin": 6,
     "primary_unrelated_files_preserved": 12,
-    "full_requirements_closed": 1
+    "full_requirements_closed": 0
   },
   "ci_portability": {
     "status": "protected_normal_merge_and_ready_negative_control_both_verified",
@@ -1553,7 +1567,7 @@
     "accepted_latency_budget_ms": null,
     "physical_phone_measured": false,
     "independent_accuracy_evidence": false,
-    "publication_pending": true,
+    "publication_pending": false,
     "requirements_closed": 0,
     "current_capabilities": "runs/2026-10-11-pipeline-identity-current-capabilities.json",
     "website_execution": "runs/2026-10-14-draft-privacy-accessible-website.json",
@@ -1565,9 +1579,9 @@
     "visual_review": "Codex inspected 390px light/dark synthetic local-service timing detail; emulation only",
     "runtime_identity_verified_on_each_response": true,
     "runtime_identity_remote_attested": false,
-    "publication": "runs/2026-10-11-pipeline-publication.json",
-    "protected_merge": "runs/2026-10-11-pipeline-protected-merge.json",
-    "published_source": "07b2c1f97b94c87d608ea07df019433197d5113c",
+    "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "protected_merge": "runs/2026-10-14-draft-privacy-protected-merge.json",
+    "published_source": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
     "retained_prior_timing_execution": "runs/2026-10-11-pii-labels-timing.json"
   },
   "reviewer_agreement": {
@@ -2451,7 +2465,7 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Fresh complete-input Linux setup and all ten failure controls pass after privacy and reserved-address repair; publication pending",
+    "status": "Published source; fresh complete-input Linux setup and all ten failure controls pass; human acceptance remains separate",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
@@ -2468,10 +2482,10 @@
     "selected_build_network": "host",
     "default_build_network": "private",
     "runtime_networks_unchanged": true,
-    "publication": "runs/2026-10-13-setup-live-publication.json",
-    "protected_merge": "runs/2026-10-13-setup-protected-merge.json",
+    "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "protected_merge": "runs/2026-10-14-draft-privacy-protected-merge.json",
     "complete_fixture_cleanup": "runs/2026-10-14-draft-privacy-fixture-cleanup.json",
-    "publication_pending": true
+    "publication_pending": false
   },
   "confidence_floor_audit": {
     "scope_id": "F-005",
@@ -2489,7 +2503,7 @@
     "actual_build_phases": "runs/2026-10-14-setup-published-eight-phases.json"
   },
   "draft_privacy": {
-    "status": "Actual local privacy mode, CLI, replay, evaluator outage and restart recovery pass; publication pending",
+    "status": "Published source and instructions; actual independent privacy, recovery and current-source regression pass",
     "scope_ids": [
       "F-024",
       "T-PII",
@@ -2506,7 +2520,7 @@
     "outbound_interception": false,
     "outbound_tag_released": false,
     "independent_accuracy_evidence": false,
-    "publication_pending": true,
+    "publication_pending": false,
     "timing": "runs/2026-10-14-draft-privacy-pipeline-timing.json",
     "fixture_cleanup": "runs/2026-10-14-draft-privacy-timing-fixture-cleanup.json",
     "current_boundaries": "runs/2026-10-14-draft-privacy-current-boundaries.json",
@@ -2515,6 +2529,18 @@
     "full_python_evidence": "runs/2026-10-14-draft-privacy-full-suite.json",
     "full_python_passed": 3424,
     "full_python_skipped": 5,
-    "source_unchanged_during_full_suite": true
+    "source_unchanged_during_full_suite": true,
+    "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "protected_merge": "runs/2026-10-14-draft-privacy-protected-merge.json",
+    "published_source": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31"
+  },
+  "prior_runtime_publication": {
+    "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
+    "preview": "https://30a8a624.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-13-setup-live-publication.json",
+    "all_artifacts_verified": 777,
+    "exact_headers_verified_per_origin": 5,
+    "primary_unrelated_files_preserved": 12,
+    "full_requirements_closed": 1
   }
 }

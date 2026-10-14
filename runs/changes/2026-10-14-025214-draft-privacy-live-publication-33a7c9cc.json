@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-025214-draft-privacy-live-publication-33a7c9cc",
+  "recorded_at": "2026-10-14T02:52:14.097291+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+  "changed": "Record the protected merge, actual deployment and live-source checks for the independent draft privacy increment; replace stale current website publication fields while preserving their prior values.",
+  "proves": "All 22 exact-head required checks pass. The live browser passes all 20 panels, themes, keyboard/focus, 320px reflow, downloads and production policy; 783 exact artifacts and six exact headers per origin match the reviewed build. Primary checkout retains all 12 unrelated files byte-for-byte.",
+  "limits": "Publication is a development preview, not independent tag release. PII is a local manual workflow; browser send interception, physical devices, human screen-reader acceptance and optional collection remain open. Scope stays 124 complete and 78 open.",
+  "scope_ids": [
+    "F-024",
+    "F-105",
+    "T-PII",
+    "T-OUT"
+  ],
+  "files": {
+    "runs/2026-10-14-draft-privacy-live-browser.json": "280552580655e0f1dd0c3074ed16c37759d8176f3f3835baf23fbcccbab0f862",
+    "runs/2026-10-14-draft-privacy-live-bytes.json": "8a59a167d9db4e9ad81e43c8d17a79ece81c6045f95298a235f37777f4644e3e",
+    "runs/2026-10-14-draft-privacy-live-headers.json": "9c30765640fd56408926402cf5d10789f6ac0e3d6b7e269e6c767b3bf9d21478",
+    "runs/2026-10-14-draft-privacy-live-publication.json": "1bcbedc31ef179c4f8a6acaf575d1d7d77dd04202be86e77077acfbb7a597b2f",
+    "runs/2026-10-14-draft-privacy-protected-merge.json": "b2cf2f03053298b8cc6f040460e9f1b5e251a5b3ff1cbaeff64e036c06aa3c08",
+    "state.json": "598b1f432a28df0045d407e2b96411bb3e002f46f76cfb517ab0d974aeed1a7c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-draft-privacy-live-publication.json",
+      "sha256": "1bcbedc31ef179c4f8a6acaf575d1d7d77dd04202be86e77077acfbb7a597b2f"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-live-browser.json",
+      "sha256": "280552580655e0f1dd0c3074ed16c37759d8176f3f3835baf23fbcccbab0f862"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-live-bytes.json",
+      "sha256": "8a59a167d9db4e9ad81e43c8d17a79ece81c6045f95298a235f37777f4644e3e"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-live-headers.json",
+      "sha256": "9c30765640fd56408926402cf5d10789f6ac0e3d6b7e269e6c767b3bf9d21478"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-protected-merge.json",
+      "sha256": "b2cf2f03053298b8cc6f040460e9f1b5e251a5b3ff1cbaeff64e036c06aa3c08"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T02:52:14.531827+00:00"
+    }
+  ]
+}
