@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T18:16:56.458486+00:00",
+  "updated": "2026-10-14T18:45:17.588588+00:00",
   "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "evidence": "runs/2026-10-14-research-http-live-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://a5a14097.aitrust-id.pages.dev",
+    "deployment_url": "https://842da8d4.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "publication_evidence": "runs/2026-10-14-research-http-live-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -95,7 +95,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-14-draft-privacy-live-browser.json",
+    "verification": "runs/2026-10-14-research-http-live-browser.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -293,10 +293,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
-    "public_static_source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
-    "deployment": "https://a5a14097.aitrust-id.pages.dev",
-    "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+    "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+    "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+    "deployment": "https://842da8d4.aitrust-id.pages.dev",
+    "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -305,7 +305,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "publication": "runs/2026-10-14-research-http-live-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -319,7 +319,29 @@
     },
     "exact_current_build_artifacts_per_origin": 261,
     "exact_current_matching_artifacts": 783,
-    "current_security_headers_matching": 6
+    "current_security_headers_matching": 6,
+    "publication_field_history": [
+      {
+        "superseded_at": "2026-10-14T18:31:52.905486+00:00",
+        "prior_values": {
+          "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+          "publication_evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+          "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
+          "published_source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+          "public_static_source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+          "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
+          "deployment": "https://a5a14097.aitrust-id.pages.dev",
+          "deployment_url": "https://a5a14097.aitrust-id.pages.dev"
+        }
+      },
+      {
+        "superseded_at": "2026-10-14T18:45:17.588588+00:00",
+        "prior_values": {
+          "verification": "runs/2026-10-14-draft-privacy-live-browser.json"
+        },
+        "reason": "Align the current browser receipt with the published source snapshot."
+      }
+    ]
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -737,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-14T11:38:02.001046+00:00",
+    "audited_at": "2026-10-14T17:41:54.258196+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -752,8 +774,8 @@
     "publication": "runs/2026-10-11-blind-private-publication.json",
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
-    "latest_measurement_publication": "runs/2026-10-14-tag-isolation-cold-live-publication.json",
-    "latest_increment": "docs/tag-failure-isolation-result.md",
+    "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
+    "latest_increment": "docs/research-http-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 45,
@@ -1055,7 +1077,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T18:16:56.458486+00:00",
+  "updated_at": "2026-10-14T18:45:17.588588+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1125,9 +1147,9 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "89235359fd284d893858124298316d54cb631d69",
-    "preview": "https://83e7e435.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-14-tag-isolation-cold-live-publication.json",
+    "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+    "preview": "https://842da8d4.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-14-research-http-live-publication.json",
     "all_artifacts_verified": 783,
     "exact_headers_verified_per_origin": 6,
     "primary_unrelated_files_preserved": 12,
@@ -2621,6 +2643,14 @@
     ],
     "full_suite_evidence": "runs/2026-10-14-research-http-ci-repaired-full-suite.json",
     "full_python_tests_passed": 3556,
-    "parsed_ci_command_controls": 3
+    "parsed_ci_command_controls": 3,
+    "delivery": {
+      "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+      "protected_merge": "runs/2026-10-14-research-http-protected-merge.json",
+      "site_metadata_publication": "runs/2026-10-14-research-http-live-publication.json",
+      "source_published": true,
+      "production_research_service_deployed": false,
+      "collection_enabled": false
+    }
   }
 }

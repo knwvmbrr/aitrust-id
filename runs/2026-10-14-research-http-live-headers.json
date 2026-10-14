@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-10-14T18:29:07.573Z",
+  "pass": true,
+  "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+  "origins": [
+    {
+      "origin": "https://842da8d4.aitrust-id.pages.dev",
+      "pass": true,
+      "exact_reviewed_headers": [
+        "content-security-policy",
+        "x-content-type-options",
+        "referrer-policy",
+        "permissions-policy",
+        "x-frame-options",
+        "cache-control"
+      ]
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "pass": true,
+      "exact_reviewed_headers": [
+        "content-security-policy",
+        "x-content-type-options",
+        "referrer-policy",
+        "permissions-policy",
+        "x-frame-options",
+        "cache-control"
+      ]
+    },
+    {
+      "origin": "https://www.aitrustid.com",
+      "pass": true,
+      "exact_reviewed_headers": [
+        "content-security-policy",
+        "x-content-type-options",
+        "referrer-policy",
+        "permissions-policy",
+        "x-frame-options",
+        "cache-control"
+      ]
+    }
+  ],
+  "security_headers_per_origin": 6,
+  "independent_accuracy_evidence": false
+}
