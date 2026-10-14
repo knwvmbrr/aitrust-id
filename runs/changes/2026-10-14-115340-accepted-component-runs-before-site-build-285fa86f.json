@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-115340-accepted-component-runs-before-site-build-285fa86f",
+  "recorded_at": "2026-10-14T11:53:40.618487+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "52eca4806753f6dfae88eb1b8ad0dbf5dd09b3a2",
+  "changed": "Record fresh source-bound PS, privacy, protocol and extension passes before site build; preserve both failed website attempts, including the omitted npm path and the enforced missing-change-record refusal.",
+  "proves": "Current source is unchanged across six PS, five privacy, 25 protocol and 13 extension commands. The current replay receipt passes browser export; unsafe receipt paths remain refused.",
+  "limits": "Both website attempts failed before browser acceptance and remain failures. No independent accuracy, human/device acceptance or new full requirement closure.",
+  "scope_ids": [
+    "F-003",
+    "F-096",
+    "F-105",
+    "T-PS",
+    "T-PII"
+  ],
+  "files": {
+    "runs/2026-10-14-tag-isolation-accepted-PS.json": "3844c72ac24112c97e5495c56b07dacc0844a7806472e9cbede1193a62595eb5",
+    "runs/2026-10-14-tag-isolation-accepted-PII_REDACTED.json": "c3fb5830c719cf20f64fb987a7017ccf7ed9b62803a9282cb2b7854a20b01490",
+    "runs/2026-10-14-tag-isolation-accepted-protocol.json": "3754dc15d43bf37ad70ca1f0d61c5bb1305ca594c5ac71c5d034b90e74cc5d0f",
+    "runs/2026-10-14-tag-isolation-accepted-extension.json": "bfe53a368c12c8dbccf663487580e2e0c8be37313734843b05f95fad1458085d",
+    "runs/2026-10-14-tag-isolation-accepted-website.json": "6e24fd257f124b3b9013b1ac1409a9f056f0b2e023b9947d0b577d4327d85b04",
+    "runs/2026-10-14-tag-isolation-accepted-website-v2.json": "096d8fdf87e46b2f2f7a9cc9528f909df42be459652fee4e7cd945059ebeacec"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "scripts/verify-replay-receipt-input.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T11:53:41.014002+00:00"
+    }
+  ]
+}

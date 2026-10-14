@@ -61,7 +61,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     }
 
     if(id==='PS'){
-     assert(await dialog.locator('[data-tag-usage] a').filter({hasText:'Download source'}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','PS download path missing');
+     const downloads=await dialog.locator('[data-tag-usage] a').filter({hasText:'Download source'}).evaluateAll(nodes=>nodes.map(e=>e.getAttribute('href')));assert(downloads.length===2&&downloads.every(href=>href==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip'),'Both independent PS setup paths need the correct source download');
      assert(await dialog.locator('[data-tag-usage] a').filter({hasText:'Try locally'}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
      await axe();
      await dialog.getByRole('button',{name:'Report an issue',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();

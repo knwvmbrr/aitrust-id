@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T11:38:02.001046+00:00",
+  "updated": "2026-10-14T12:07:57.575237+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1047,15 +1047,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-14-draft-privacy-final-PS.json",
-    "PII_REDACTED": "runs/2026-10-14-draft-privacy-accessible-PII_REDACTED.json",
-    "protocol": "runs/2026-10-14-draft-privacy-accessible-protocol.json",
-    "extension": "runs/2026-10-14-draft-privacy-accessible-extension.json",
-    "website": "runs/2026-10-14-draft-privacy-accessible-website.json",
+    "PS": "runs/2026-10-14-tag-isolation-accepted-PS.json",
+    "PII_REDACTED": "runs/2026-10-14-tag-isolation-accepted-PII_REDACTED.json",
+    "protocol": "runs/2026-10-14-tag-isolation-accepted-protocol.json",
+    "extension": "runs/2026-10-14-tag-isolation-accepted-extension.json",
+    "website": "runs/2026-10-14-tag-isolation-accepted-website-v4.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T11:38:02.001046+00:00",
+  "updated_at": "2026-10-14T12:07:57.575237+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2482,7 +2482,7 @@
     "runtime_networks_unchanged": true,
     "publication": "runs/2026-10-14-draft-privacy-live-publication.json",
     "protected_merge": "runs/2026-10-14-draft-privacy-protected-merge.json",
-    "complete_fixture_cleanup": "runs/2026-10-14-draft-privacy-fixture-cleanup.json",
+    "complete_fixture_cleanup": "runs/2026-10-14-tag-isolation-fixture-cleanup.json",
     "publication_pending": true
   },
   "confidence_floor_audit": {
@@ -2543,7 +2543,7 @@
   },
   "tag_failure_isolation": {
     "plan": "docs/tag-failure-isolation-plan.md",
-    "status": "actual_linux_and_selected_checks_pass; full_component_browser_and_publication_pending",
+    "status": "actual_linux_multi_tag_faults_and_current_five_component_revalidation_pass; full_suite_and_publication_pending",
     "gateway_reservations": {
       "complete_pipeline": 3,
       "privacy_only": 1
@@ -2561,6 +2561,8 @@
     "actual_linux_evidence": "runs/2026-10-14-tag-isolation-real-linux.json",
     "actual_batch_evidence": "runs/2026-10-14-tag-isolation-batch-linux.json",
     "actual_batch_failure_cases": 4,
-    "result": "docs/tag-failure-isolation-result.md"
+    "result": "docs/tag-failure-isolation-result.md",
+    "fixture_cleanup": "runs/2026-10-14-tag-isolation-fixture-cleanup.json",
+    "current_component_commands": 68
   }
 }

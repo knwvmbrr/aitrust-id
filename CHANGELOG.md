@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-121146-current-independent-tag-browser-acceptance-4fcc5da2
+
+Recorded 2026-10-14T12:11:46.478530+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current component and website verification, both real browser engines and their six platform-survival scenarios; bind the new independent checker, verifier and tests in the route source inventory; preserve owned fixture cleanup.
+- **Evidence.** Six PS, five privacy, 25 protocol, 13 extension and 19 website commands pass. Android Chromium and iPhone WebKit each check 137 authored cases and retain catalogue/other-panel navigation after corruption, unavailable worker and timeout. Five owned Linux fixtures were removed and original staging remains healthy. [Change record](./runs/changes/2026-10-14-121146-current-independent-tag-browser-acceptance-4fcc5da2.json).
+- **Not claimed.** Browser engines are not physical devices or human accessibility acceptance. Full regression and protected publication remain pending. Zero new full requirements or independent tag releases.
+
+
+### 2026-10-14-120253-verify-both-independent-downloads-241e66ed
+
+Recorded 2026-10-14T12:02:53.809599+00:00 · Contributor: Codex · change
+
+- **Changed.** Require both independent PS setup disclosures to link to the exact downloadable source; remove the old test assumption that one download link serves all workflows, and retain the failed catalogue run.
+- **Evidence.** The failing real catalogue run identified an ambiguous single-link locator after the second independent workflow was added. The corrected gate checks both links explicitly; syntax is checked. [Change record](./runs/changes/2026-10-14-120253-verify-both-independent-downloads-241e66ed.json).
+- **Not claimed.** The corrected catalogue and full website runtime checks remain pending. No independent accuracy, physical-device acceptance or new full scope closure.
+
+
+### 2026-10-14-115340-accepted-component-runs-before-site-build-285fa86f
+
+Recorded 2026-10-14T11:53:40.618487+00:00 · Contributor: Codex · change
+
+- **Changed.** Record fresh source-bound PS, privacy, protocol and extension passes before site build; preserve both failed website attempts, including the omitted npm path and the enforced missing-change-record refusal.
+- **Evidence.** Current source is unchanged across six PS, five privacy, 25 protocol and 13 extension commands. The current replay receipt passes browser export; unsafe receipt paths remain refused. [Change record](./runs/changes/2026-10-14-115340-accepted-component-runs-before-site-build-285fa86f.json).
+- **Not claimed.** Both website attempts failed before browser acceptance and remain failures. No independent accuracy, human/device acceptance or new full requirement closure.
+
+
 ### 2026-10-14-114535-retain-replay-source-selection-failure-f3688026
 
 Recorded 2026-10-14T11:45:35.947812+00:00 · Contributor: Codex · change
