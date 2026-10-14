@@ -290,27 +290,34 @@
         "id": "F-005",
         "kind": "requirement",
         "title": "Per-tag confidence floors",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-14T00:08:20.101809+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — current HTTP rule-floor boundaries, malformed-confidence refusals and inactive-code checks; no detector changes"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver Per-tag confidence floors. Next package action: Version the assertion/schema and signal registry. Required outcome: No tag is shown below the confidence its evidence supports",
+        "next_fix": "Agree and independently validate evidence-supported per-tag calibration/confidence policy, then complete integration and final acceptance. Current 0.70 PS rule-score enforcement works but is not a measured probability or the 0.93 precision gate.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "docs/confidence-floor-audit.md",
+          "runs/2026-10-13-confidence-floor-http-audit.json",
+          "tests/test_gateway_integration.py"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Deliver Per-tag confidence floors. Next package action: Version the assertion/schema and signal registry. Required outcome: No tag is shown below the confidence its evidence supports"
+          "Agree and independently validate evidence-supported per-tag calibration/confidence policy, then complete integration and final acceptance. Current 0.70 PS rule-score enforcement works but is not a measured probability or the 0.93 precision gate."
         ],
         "queue": "open"
       }

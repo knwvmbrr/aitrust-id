@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-000837-setup-publication-and-floor-enforcement-audit-8c67e6f2",
+  "recorded_at": "2026-10-14T00:08:37.987664+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
+  "changed": "Record the protected F-105 deployment, complete-input fixture cleanup and exact live build; expand HTTP confidence-floor and inactive-code checks and reconcile F-005 to its evidenced 60% milestone.",
+  "proves": "All 777 live artifact comparisons and five headers per origin match; all 59 focused HTTP/release/refusal tests pass; all 202 scope records remain with 124 complete and 78 open.",
+  "limits": "F-005 calibration remains open; synthetic upstream responses are not independent accuracy. F-142 real-person install and accessibility acceptance remains open; collection stays disabled.",
+  "scope_ids": [
+    "F-105",
+    "F-142",
+    "F-005"
+  ],
+  "files": {
+    "docs/confidence-floor-audit.md": "9e8963b711f5a17e85e415f0c86a57c65bc786914ced39cbf489213927f5ed6f",
+    "docs/scope-progress.json": "91dc6327d289ce9b56dd2b0174718cf116a5b0ba34e9d1a58dda3c529b5db05c",
+    "docs/scope-progress.md": "65b889c58e373fe95ce571c65a3e6db5419ac03fdfb0193907177151ef874f04",
+    "docs/scope-task-index.md": "37c81650d6f6697246d555cd0c5eadd9fdbb7b5d31c66c847d6f3b6c137b99a6",
+    "runs/2026-10-13-complete-setup-fixture-cleanup.json": "9a53a74cd6ab65fcce9458e676a10e06a423f0e36a3722be7f3b110ee22eb3df",
+    "runs/2026-10-13-confidence-floor-http-audit.json": "ad7463e2b9e7be83cda1f178ae3d1b28de294b06f34ab462041893bb7407f31e",
+    "runs/2026-10-13-setup-live-publication.json": "3c5bf211ba7ef163d80e1fd7390975eaf93a163e1978011ea8b1902d4f50763e",
+    "runs/2026-10-13-setup-protected-merge.json": "2423ab751836ad7adf7c2185dd04e334b295dfe55ea9ee60ab864896be9ad3f8",
+    "state.json": "36d7928918b103e381dc6cd7d9499f46130169c61f91f5d3ceda52e585071121",
+    "tests/test_gateway_integration.py": "053d4ba1ee0a71fc161fd0b41501464a91d67f61459ff77f9af076e7b0e691c7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-13-setup-live-publication.json",
+      "sha256": "3c5bf211ba7ef163d80e1fd7390975eaf93a163e1978011ea8b1902d4f50763e"
+    },
+    {
+      "path": "runs/2026-10-13-confidence-floor-http-audit.json",
+      "sha256": "ad7463e2b9e7be83cda1f178ae3d1b28de294b06f34ab462041893bb7407f31e"
+    },
+    {
+      "path": "runs/2026-10-13-complete-setup-fixture-cleanup.json",
+      "sha256": "9a53a74cd6ab65fcce9458e676a10e06a423f0e36a3722be7f3b110ee22eb3df"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T00:08:38.461786+00:00"
+    }
+  ]
+}

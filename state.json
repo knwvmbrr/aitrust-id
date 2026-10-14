@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-13T23:56:30.674374+00:00",
-  "active_increment": "Eight original named jobs complete; current checks pass (3249 tests), protected publication pending; 79 open toward target 43",
+  "updated": "2026-10-14T00:16:10.384179+00:00",
+  "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -17,7 +17,7 @@
     "Review dependency proposals through operating protected checks; independent tag accuracy and human acceptance remain unmet"
   ],
   "scope_record_count": 202,
-  "python_tests_passed": 3093,
+  "python_tests_passed": 3356,
   "deferred_scope": [
     "Non-text file decoding, detector support and adoption; prepared-artifact subject contracts are implemented separately",
     "Semantic/provenance tags",
@@ -723,7 +723,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-13T23:47:08.225860+00:00",
+    "audited_at": "2026-10-14T00:08:20.101816+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -736,20 +736,20 @@
     "structural_evidence": "runs/2026-10-11-consent-scope.json",
     "claude_review": "docs/competitive-differentiation.md",
     "publication": "runs/2026-10-11-blind-private-publication.json",
-    "source_commit": "07b2c1f97b94c87d608ea07df019433197d5113c",
+    "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
-    "latest_measurement_publication": "runs/2026-10-09-performance-deployment.json",
+    "latest_measurement_publication": "runs/2026-10-13-setup-live-publication.json",
     "latest_increment": "docs/local-setup-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 43,
     "target_start_open_records": 87,
     "target_remaining_closures": 35,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
-    "current_target_verification": "runs/2026-10-13-complete-setup-reviewed-routes.json",
+    "current_target_verification": "runs/2026-10-14-setup-published-routes.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue past owner-dependent or uncompletable requirements to the next independent buildable job; retain all acceptance gates and review owner items closer to target.",
     "latest_owner_direction_date": "2026-10-13",
@@ -973,7 +973,7 @@
   "personal_route_boundaries": {
     "status": "Current review passes after replay/service-cleanup fixes; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-13-complete-setup-reviewed-routes.json",
+    "evidence": "runs/2026-10-14-setup-published-routes.json",
     "source_files": 770,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1035,13 +1035,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-13-complete-setup-reviewed-PS.json",
     "PII_REDACTED": "runs/2026-10-13-complete-setup-reviewed-PII_REDACTED.json",
-    "protocol": "runs/2026-10-13-complete-setup-reviewed-protocol.json",
-    "extension": "runs/2026-10-13-complete-setup-reviewed-extension.json",
-    "website": "runs/2026-10-13-complete-setup-reviewed-website.json",
+    "protocol": "runs/2026-10-14-setup-published-protocol.json",
+    "extension": "runs/2026-10-14-setup-published-extension.json",
+    "website": "runs/2026-10-14-setup-published-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-13T23:56:30.674374+00:00",
+  "updated_at": "2026-10-14T00:16:10.384179+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1111,13 +1111,13 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "783c50aa78f5925764e810d3fd5ccbc1601f21df",
-    "preview": "https://c7f7f12b.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
+    "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
+    "preview": "https://30a8a624.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-13-setup-live-publication.json",
     "all_artifacts_verified": 777,
-    "exact_headers_verified_per_origin": 4,
+    "exact_headers_verified_per_origin": 5,
     "primary_unrelated_files_preserved": 12,
-    "full_requirements_closed": 0
+    "full_requirements_closed": 1
   },
   "ci_portability": {
     "status": "protected_normal_merge_and_ready_negative_control_both_verified",
@@ -2448,7 +2448,7 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Complete-input Linux setup and ten failure controls pass; review/publication pending",
+    "status": "Protected-merged and published; complete-input Linux setup and ten real controls pass; human acceptance remains F-142",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
@@ -2464,6 +2464,25 @@
     "bound_source_inputs": 27,
     "selected_build_network": "host",
     "default_build_network": "private",
-    "runtime_networks_unchanged": true
+    "runtime_networks_unchanged": true,
+    "publication": "runs/2026-10-13-setup-live-publication.json",
+    "protected_merge": "runs/2026-10-13-setup-protected-merge.json",
+    "complete_fixture_cleanup": "runs/2026-10-13-complete-setup-fixture-cleanup.json",
+    "publication_pending": false
+  },
+  "confidence_floor_audit": {
+    "scope_id": "F-005",
+    "percent_complete": 60,
+    "evidence": "runs/2026-10-13-confidence-floor-http-audit.json",
+    "gateway_changed": false,
+    "calibrated_accuracy": false,
+    "full_requirements_closed": 0,
+    "retained_bookkeeping_failure": "runs/2026-10-14-setup-published-floor-full-suite.json",
+    "full_suite": "runs/2026-10-14-setup-published-floor-full-suite-current.json",
+    "tests_passed": 3356,
+    "tests_skipped": 5,
+    "website_evidence": "runs/2026-10-14-setup-published-website.json",
+    "route_evidence": "runs/2026-10-14-setup-published-routes.json",
+    "actual_build_phases": "runs/2026-10-14-setup-published-eight-phases.json"
   }
 }

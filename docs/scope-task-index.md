@@ -8,7 +8,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-002 | Nine-label taxonomy (plus UNK, PII_REDACTED) | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-003 | Signal registry, 22 registered IDs with version suffixes | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-004 | Abstention as a first-class state — UNK | [TAG-UNK](scope-delivery.md#tag-unk) | 80% · [evidence/fix](scope-progress.md) |
-| TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-005 | Per-tag confidence floors | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-006 | Six-modality reservation with normative subject definitions | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-007 | Content-free assertion records | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-008 | Signed assertion integrity | [WP-INTEGRITY](scope-delivery.md#wp-integrity) | 100% · [evidence/fix](scope-progress.md) |

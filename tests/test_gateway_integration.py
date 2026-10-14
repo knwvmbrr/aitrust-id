@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import importlib.util
+import math
 from pathlib import Path
 import httpx
 import pytest
@@ -96,7 +97,7 @@ def test_unicode_redaction_subject_vector(monkeypatch):
     assert signal['id']==vector['signal_id']
     assert signal['spans']==[vector['span']]
 
-@pytest.mark.parametrize('code',['HP','MT','PII_REDACTED','UNKNOWN','UC','SC','BT'])
+@pytest.mark.parametrize('code',['NF','FI','HP','MT','IV','FA','PA','UNK','PII_REDACTED','UNKNOWN','UC','SC','BT'])
 def test_candidate_policy_through_http_and_full_schema(monkeypatch,code):
     def handle(req):
         if req.url.path=='/redact':
@@ -117,3 +118,46 @@ def test_candidate_policy_through_http_and_full_schema(monkeypatch,code):
         assertion_validator().validate(assertion)
         assert assertion['tags']==[]
         assert assertion['abstentions']==[{'code':code,'confidence':1.,'floor':None,'reason':'not_in_production_allowlist'}]
+
+@pytest.mark.parametrize('confidence,expected',[
+    (0.,'withheld'), (.69,'withheld'),
+    (math.nextafter(.70,0.),'withheld'),
+    (.70,'asserted'), (math.nextafter(.70,1.),'asserted'), (1.,'asserted'),
+    (True,'invalid'), (False,'invalid'), ('0.9','invalid'), (None,'invalid'),
+    (-.01,'invalid'), (1.01,'invalid'),
+    (float('inf'),'invalid'), (float('-inf'),'invalid'), (float('nan'),'invalid'),
+])
+def test_rule_floor_and_invalid_confidence_through_http(monkeypatch,confidence,expected):
+    """Enforce the rule-score boundary; this does not establish calibration."""
+    def handle(req):
+        if req.url.path=='/redact':
+            return httpx.Response(200,json={'identity':synthetic_identity(),
+                'text':'ordinary text','entities':[],'entity_count':0})
+        payload={'candidates':[{'code':'PS','confidence':confidence,
+            'signals':[{'id':'review.observation.v1','score':.99,'spans':[[0,1]]}]}],
+            'models':[{'name':'floor-test','sha256':'a'*64,'revision':'test'}],
+            'calibration_id':'uncalibrated-test'}
+        # Deliberately include hostile non-standard numeric JSON responses.
+        return httpx.Response(200,content=json.dumps(payload).encode(),
+                              headers={'content-type':'application/json'})
+    original=httpx.AsyncClient
+    monkeypatch.setattr(g.httpx,'AsyncClient',lambda **kw:original(transport=httpx.MockTransport(handle),**kw))
+    with TestClient(g.app) as client:
+        response=client.post('/v1/evaluate',headers={'authorization':'Bearer '+g.TOKEN},
+                             json={'text':'ordinary text'})
+    if expected=='invalid':
+        assert response.status_code==502
+        assert response.json()=={'detail':'Local dependency returned an invalid evaluation'}
+        return
+    assert response.status_code==200,response.text
+    assertion=response.json();assertion_validator().validate(assertion)
+    if expected=='withheld':
+        assert assertion['tags']==[]
+        assert assertion['abstentions']==[{'code':'PS','confidence':confidence,
+                                          'floor':.70,'reason':'below_floor'}]
+    else:
+        assert assertion['abstentions']==[]
+        assert len(assertion['tags'])==1
+        assert assertion['tags'][0]['code']=='PS'
+        assert assertion['tags'][0]['floor']==.70
+        assert assertion['tags'][0]['confidence']==confidence

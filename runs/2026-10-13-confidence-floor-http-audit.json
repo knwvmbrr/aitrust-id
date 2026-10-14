@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-10-14T00:08:20.096225+00:00",
+  "pass": true,
+  "checked_by": "Codex",
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_gateway_integration.py",
+    "tests/test_release_policy.py",
+    "tests/test_verdict_refusals.py"
+  ],
+  "passed": 59,
+  "warnings": 1,
+  "rule_floor": 0.7,
+  "floor_boundary_cases": 6,
+  "malformed_confidence_cases": 9,
+  "http_candidate_codes": 13,
+  "transport": "Actual FastAPI HTTP handler with synthetic in-process upstream responses; not live independently scored examples",
+  "sources": {
+    "services/gateway/app.py": "27fde4d6a27845a79f6a7f94c8da65d75c0cc71499364f5689508773be4681ec",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "tests/test_gateway_integration.py": "053d4ba1ee0a71fc161fd0b41501464a91d67f61459ff77f9af076e7b0e691c7",
+    "tests/test_release_policy.py": "69fd31c303485918911df8251209c56bc1346df111e848bd7745a3f40847a2fd",
+    "tests/test_verdict_refusals.py": "425d7074186daf545e6ce1547fd50268d667213e615a98a0b0858fc234772839",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "scripts/verify-verdict-boundaries.py": "fafc72e42dd304c00ada0c7ca5efdec1f6eb6860ff3b5121a68e2580ce4b6011"
+  },
+  "method_changed": false,
+  "independent_accuracy_evidence": false,
+  "measured_probability": false,
+  "new_scope_closures": 0
+}
