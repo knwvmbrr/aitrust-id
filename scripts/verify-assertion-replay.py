@@ -4,6 +4,7 @@ import copy
 from datetime import datetime,timezone
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -15,7 +16,8 @@ from protocol.reports import write_report
 
 
 def verify(env_file,project):
-    if sys.platform!='linux' or not project.startswith('aitrust-staging'):
+    local=bool(re.fullmatch(r'aitrust-local-[a-f0-9]{32}',project))
+    if sys.platform!='linux' or not (local or project.startswith('aitrust-staging')):
         raise ValueError('Require a dedicated Linux staging stack')
     rows=[r.split('=',1)[1] for r in env_file.read_text().splitlines() if r.startswith('AITRUST_TOKEN=')]
     if len(rows)!=1:raise ValueError('Staging credential unavailable')
@@ -68,7 +70,7 @@ def verify(env_file,project):
 
     log_safe=True
     for service in ['gateway','anonymizer','evaluator']:
-        r=subprocess.run(['podman','ps','--filter','label=com.docker.compose.project='+project,'--filter','label=com.docker.compose.service='+service,'-q'],capture_output=True,text=True,timeout=10,check=True)
+        r=subprocess.run(['podman','ps','--filter','label='+('org.aitrust.local-setup=' if local else 'com.docker.compose.project=')+project,'--filter','label='+('org.aitrust.local-role=' if local else 'com.docker.compose.service=')+service,'-q'],capture_output=True,text=True,timeout=10,check=True)
         cids=r.stdout.strip().splitlines()
         if len(cids)!=1:raise ValueError('Ambiguous staging service ownership')
         logs=subprocess.run(['podman','logs',cids[0]],capture_output=True,timeout=30,check=True)

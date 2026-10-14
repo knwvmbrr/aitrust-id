@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-010214-independent-draft-privacy-candidate-bae956fb
+
+Recorded 2026-10-14T01:02:14.233205+00:00 · Contributor: Codex · change
+
+- **Changed.** Add explicit privacy-only mode to the existing authenticated gateway, a source-checked privacy CLI and mode-preserving replay; add owned local verification, per-role labels, local setup instructions and privacy-specific usage.
+- **Evidence.** 197 focused synthetic HTTP/CLI/cancellation/replay/setup checks pass. Default full evaluation remains supported; privacy mode does not call the evaluator. [Change record](./runs/changes/2026-10-14-010214-independent-draft-privacy-candidate-bae956fb.json).
+- **Not claimed.** Real service independence and refreshed source-bound setup are still required. F-105 is reopened at 80% on this candidate; independent recognition, human acceptance and outbound browser interception remain open. No new endpoint or tag code is introduced.
+
+
 ### 2026-10-14-001610-floor-audit-current-regressions-a6e47700
 
 Recorded 2026-10-14T00:16:10.480691+00:00 · Contributor: Codex · change

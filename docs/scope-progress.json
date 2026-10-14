@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-14T00:08:20.101816+00:00",
+  "audited_at": "2026-10-14T01:02:14.056231+00:00",
   "client_date": "2026-10-13",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3515,15 +3515,14 @@
       "id": "F-105",
       "kind": "requirement",
       "title": "One documented command: clean clone \u2192 running stack",
-      "percent_complete": 100,
+      "percent_complete": 80,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
         "executable_checks",
-        "selected_integration",
-        "final_acceptance"
+        "selected_integration"
       ],
-      "audited_at": "2026-10-13T23:47:08.225860+00:00",
+      "audited_at": "2026-10-14T01:02:14.056225+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -3532,13 +3531,11 @@
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [
-        "Codex"
-      ],
-      "completed_at": "2026-10-13T23:47:08.225860+00:00",
-      "completion_timestamp_basis": "Actual complete-input Linux clean-clone run and ten failure controls, 27 input hashes and downloaded-tree verification; no historical/human acceptance invented.",
-      "next_fix": null,
-      "next_owner": null,
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Refresh complete-input Linux setup and failure evidence for the changed gateway and CLI before restoring 100%. Human acceptance remains F-142.",
+      "next_owner": "Codex",
       "evidence": [
         "runs/2026-10-09-scope-completion-checks.json",
         "tests/test_local_cli.py",
@@ -3554,8 +3551,10 @@
         "runs/2026-10-13-one-command-complete-input-linux.json"
       ],
       "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
-      "required_acceptance": [],
-      "queue": "completed",
+      "required_acceptance": [
+        "Fresh complete-input Linux setup on the changed source."
+      ],
+      "queue": "open",
       "historical_required_acceptance": [
         "Demonstrate clean-clone local stack setup on the current source and a supported outside-user machine; keep the account-free phone preview instructions separate."
       ],

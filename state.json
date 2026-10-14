@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T00:16:10.384179+00:00",
+  "updated": "2026-10-14T01:02:14.059336+00:00",
   "active_increment": "Source-bound one-command Linux setup published; confidence-floor enforcement audited; remaining independent, human and owner acceptance preserved",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -723,9 +723,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-14T00:08:20.101816+00:00",
-    "completed_records": 124,
-    "open_records": 78,
+    "audited_at": "2026-10-14T01:02:14.056231+00:00",
+    "completed_records": 123,
+    "open_records": 79,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -744,8 +744,8 @@
     "open_subtasks": 116,
     "target_open_records": 43,
     "target_start_open_records": 87,
-    "target_remaining_closures": 35,
-    "publication_pending": false,
+    "target_remaining_closures": 36,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/ps-lazy-context-performance-plan.md",
     "target_direction_date": "2026-10-13",
@@ -1041,7 +1041,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T00:16:10.384179+00:00",
+  "updated_at": "2026-10-14T01:02:14.059336+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2448,7 +2448,7 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Protected-merged and published; complete-input Linux setup and ten real controls pass; human acceptance remains F-142",
+    "status": "Candidate source changed for explicit privacy mode; prior public setup remains historical; fresh actual setup required",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
@@ -2460,7 +2460,7 @@
     "physical_phone_tested": false,
     "retained_refusals": "runs/2026-10-13-one-command-setup-refusals.json",
     "fixture_cleanup": "runs/2026-10-13-one-command-fixture-cleanup.json",
-    "current_acceptance_reopened": false,
+    "current_acceptance_reopened": true,
     "bound_source_inputs": 27,
     "selected_build_network": "host",
     "default_build_network": "private",

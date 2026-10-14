@@ -120,6 +120,7 @@ PATTERNS += ('tools/conformance_recusal.py','scripts/check-conformance-votes.py'
              'scripts/build-firefox-extension.py','scripts/verify-firefox-extension.py','scripts/verify-firefox-permissions.cjs',
              'tests/test_firefox_package.py','tests/test_firefox_driver_protocol.py','tests/firefox-permissions.cjs',
              'docs/scope-groups.json','scripts/verify-scope-groups.py','tests/test_scope_groups.py')
+PATTERNS += ('scripts/verify-draft-privacy.py','tests/test_draft_privacy.py','docs/draft-privacy-plan.md','docs/draft-privacy.md')
 PATTERNS += ('scripts/setup-local.py','scripts/verify-local-setup-evidence.py',
              'tests/test_local_setup.py','tests/test_local_setup_evidence.py',
              'docs/local-setup-plan.md','docs/local-setup-result.md','docs/open-validation-path.md')

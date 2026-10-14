@@ -240,6 +240,7 @@ def build_and_start(engine, folder, state, build_network='private'):
     for role in ROLES:
         first_network = 'edge' if role == 'gateway' else 'inspection'
         args = ['create', '--name', project + '-' + role, '--label', LABEL + '=' + project,
+                '--label', 'org.aitrust.local-role=' + role,
                 '--read-only', '--cap-drop=ALL', '--security-opt=no-new-privileges',
                 '--pids-limit=128', '--memory=' + str(MEMORY[role]) + 'm',
                 '--tmpfs=/tmp:rw,noexec,nosuid,size=64m', '--network', networks[first_network],
