@@ -36,3 +36,11 @@ edit/cancel/proceed enforcement remain unimplemented. T-PII remains 80% pending
 independent recognition and human acceptance. All 202 scope records remain:
 124 complete and 78 open. No new tag is adopted, no browser send is intercepted,
 no research collection is enabled and no physical-device result is inferred.
+
+[New default full-pipeline timing](../runs/2026-10-14-draft-privacy-pipeline-timing.json)
+executes 253 authenticated loopback requests across 12 invented profiles, with
+20 repeats per profile. Actual running sources and per-response identities match
+the current code. These measurements are not a privacy-only speed measurement,
+a physical-phone result, independent accuracy or a population speed guarantee.
+The website now consumes this new receipt; the older chart source stays in
+history. A second owned setup was removed and original staging was restored.

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-023430-privacy-current-all-route-acceptance-89b41316",
+  "recorded_at": "2026-10-14T02:34:30.643372+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "804cfdfe7660d2611dacd59d7916eb13c9bcf19d",
+  "changed": "Update intake boundary acceptance for the optional privacy selector, preserving the no-account default and refusing collection fields in both modes. Link all final current receipts and the source-bound route review without changing device access.",
+  "proves": "All five current receipts, 19 website commands, eight website phases, 26 real service controls, 15 real replay controls and both account-free input modes pass the route guard. Privacy has its separate 16 actual controls.",
+  "limits": "The guard first correctly flagged its retired request shape. The selector is optional, default full behavior is preserved and every undeclared collection/payment/identity field is refused. No independent accuracy, physical phone, human screen-reader or collection acceptance is claimed.",
+  "scope_ids": [
+    "F-024",
+    "F-035",
+    "F-105",
+    "F-113"
+  ],
+  "files": {
+    "docs/draft-privacy-plan.md": "730a7e671c13b93702990dd10c5472524b3baa44928289478f9aeff88d0a708b",
+    "docs/draft-privacy-result.md": "fa8dd9d5b9afc48cb4d1285aef2d6a1fe576d31964dceefb933c2cc83397f7c1",
+    "eval/revalidation.json": "c6034be52691fa6d27e4af3fbfacc7f04443d9e0ab034428af44575e3a8ad6e3",
+    "eval/route-boundaries.json": "4ab71eae958357b66c638fa41a8f578360f3f8740d108f96b3bf5708cb7879c8",
+    "runs/2026-10-14-draft-privacy-accessible-PII_REDACTED.json": "3f20639475ae8e8e283e182a632a613494461b6a0f52c7e6c6e3819365129bcd",
+    "runs/2026-10-14-draft-privacy-accessible-extension.json": "81385ad8d3a93bbd38d9ab214cdf25d003bb57c47a5249f1b8ac010247151133",
+    "runs/2026-10-14-draft-privacy-accessible-protocol.json": "29d38781d27653ab2d9735f1591d41315dbbd74a4c786e09cc90313d9c20c5af",
+    "runs/2026-10-14-draft-privacy-accessible-website.json": "9db80a46d31285e75bb2551b1af5a9b36a423b33d853594fc2abbea7037d2ae4",
+    "runs/2026-10-14-draft-privacy-build-phases.json": "2c9b0bcf7ea44e5920a439ee8e786ad2f931347b3cc058089d9d37d0ea262686",
+    "runs/2026-10-14-draft-privacy-current-boundaries.json": "fe070e3287d14e5967f481928f5ada3a8f5e9775e320328ea34400f2cc4f068b",
+    "runs/2026-10-14-draft-privacy-diagnostic-website.json": "0b874d20e8a44c382031e22c05dca58443f75cb756441e56abc678f5ace5396c",
+    "runs/2026-10-14-draft-privacy-final-PII_REDACTED.json": "1cb5b0b43c18e797755d561b2fcc2f6ace12214e8ad33358c21f4401b1395a30",
+    "runs/2026-10-14-draft-privacy-final-PS.json": "1c596d545daa845a0082b24f247033a7aeb6f6bda84fd98d9720ada0eeb5a66e",
+    "runs/2026-10-14-draft-privacy-final-extension.json": "641289d9afb893320bb8bb93ae66ec162ac8ac1df9ea5256c0ef16d88afc15d9",
+    "runs/2026-10-14-draft-privacy-final-protocol.json": "32d25a5230a110ae1322e3ccda4a7edac98deef5a117a0357a881fd428db4292",
+    "runs/2026-10-14-draft-privacy-final-website.json": "4b19f05b62d786322f1ac16c6baf76ceab42488a21fb23070b4768d6d85091f6",
+    "runs/2026-10-14-draft-privacy-pipeline-timing.json": "56b069bbe9cef9dd3279362d42926983193a495ec0383c43de7718e349156ec3",
+    "runs/2026-10-14-draft-privacy-pipeline-witness.json": "31efac860dcc3f0318473e178f61ccb6613438c0a2dbc961a2b6f5094ff7ab10",
+    "runs/2026-10-14-draft-privacy-selected-website.json": "3ccee54139023bd99449283062b908890bd9038d40ec6abd1d9f60c73015493c",
+    "runs/2026-10-14-draft-privacy-timing-fixture-cleanup.json": "b8f76f4a7fd4383b6771202ce599db119fe4a856ab52fa8740fc6df7e3d9154b",
+    "scripts/verify-route-boundaries.py": "516c389e53be94ab24b1b5efc76fbe15ddddc5fb31c366d409ee36d0b588364c",
+    "scripts/verify-site.cjs": "870848db2168af491dad2b7eadfe8098b48573af227b0aae71691eebae524f2e",
+    "site/index.html": "1737de2689fab1d06fd0079fd3053c689dfaf56a5869b47b963ad974740ab86a",
+    "site/public/reference/pipeline-performance.json": "b25b5566de986cf89cc5829eb87a6f8296ccac2b568962563fbacad33146de45",
+    "site/public/reference/tag-performance.json": "199a883d5eba88da55b42e4d97416ac46ce24176202fd9c153b6e830899e3cc5",
+    "site/scripts/prepare-performance.mjs": "553e77f33f795b2652335ac329cd96393a0aadba584f69567f14c3481bd20a11",
+    "site/src/main.jsx": "c1804179188bba9f9f141439c1a0b0ba8e6601c36d262c50d36d8f977cbb849a",
+    "site/src/styles.css": "76b056cd59251d5f6ec3538f6ef54cd659fec52a4a963d6741ed4ec39980aed2",
+    "site/src/tag-performance.json": "199a883d5eba88da55b42e4d97416ac46ce24176202fd9c153b6e830899e3cc5",
+    "site/src/usage.js": "f0531faf5049b304e0659b0c32411d2f33068a5d4b033659ec73c58bd773c29d",
+    "state.json": "3bb4d844d2d3a1b9b31d6cda26ab52f9794772132c91cfa009e07d35d2e0ac96",
+    "tests/pipeline-timing.cjs": "a65bd6d7a56a1099afd88e401472d26bcbeb4a75fef226269a693ffd9d50a6d2",
+    "tests/test_route_boundaries.py": "477c0b50e7d05b5f92bc44f47faef7400817b5ab4e7be0b7ae798b573d0de97e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-14-draft-privacy-accessible-PII_REDACTED.json",
+      "sha256": "3f20639475ae8e8e283e182a632a613494461b6a0f52c7e6c6e3819365129bcd"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-accessible-protocol.json",
+      "sha256": "29d38781d27653ab2d9735f1591d41315dbbd74a4c786e09cc90313d9c20c5af"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-accessible-extension.json",
+      "sha256": "81385ad8d3a93bbd38d9ab214cdf25d003bb57c47a5249f1b8ac010247151133"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-current-boundaries.json",
+      "sha256": "fe070e3287d14e5967f481928f5ada3a8f5e9775e320328ea34400f2cc4f068b"
+    },
+    {
+      "path": "runs/2026-10-14-draft-privacy-build-phases.json",
+      "sha256": "2c9b0bcf7ea44e5920a439ee8e786ad2f931347b3cc058089d9d37d0ea262686"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T02:34:31.072745+00:00"
+    }
+  ]
+}

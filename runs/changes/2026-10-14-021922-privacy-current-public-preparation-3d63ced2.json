@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-021922-privacy-current-public-preparation-3d63ced2",
+  "recorded_at": "2026-10-14T02:19:22.910141+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "804cfdfe7660d2611dacd59d7916eb13c9bcf19d",
+  "changed": "Regenerate the no-JavaScript catalogue and public guides from current privacy instructions and actual service timing, with matching state timestamps before exact-source browser verification.",
+  "proves": "Preparation and accountability pass with all 202 records retained and actual runtime evidence predating the state audit.",
+  "limits": "Prepared HTML is not live publication or independent validation. The accountability check first refused unequal state timestamps; matching actual update times correct that bookkeeping error.",
+  "scope_ids": [
+    "F-024",
+    "F-113"
+  ],
+  "files": {
+    "docs/draft-privacy-result.md": "fa8dd9d5b9afc48cb4d1285aef2d6a1fe576d31964dceefb933c2cc83397f7c1",
+    "eval/revalidation.json": "c6034be52691fa6d27e4af3fbfacc7f04443d9e0ab034428af44575e3a8ad6e3",
+    "runs/2026-10-14-draft-privacy-pipeline-timing.json": "56b069bbe9cef9dd3279362d42926983193a495ec0383c43de7718e349156ec3",
+    "runs/2026-10-14-draft-privacy-pipeline-witness.json": "31efac860dcc3f0318473e178f61ccb6613438c0a2dbc961a2b6f5094ff7ab10",
+    "runs/2026-10-14-draft-privacy-timing-fixture-cleanup.json": "b8f76f4a7fd4383b6771202ce599db119fe4a856ab52fa8740fc6df7e3d9154b",
+    "scripts/verify-route-boundaries.py": "e44cb60d794786aa2be32fa0c2ee11a340e55ea6af07256e8de7626fb71ddfca",
+    "site/index.html": "5466181b4d68eea6344fc485d9b989ece27711e2f7df094257695e28dfc028ab",
+    "site/public/reference/pipeline-performance.json": "b25b5566de986cf89cc5829eb87a6f8296ccac2b568962563fbacad33146de45",
+    "site/public/reference/tag-performance.json": "199a883d5eba88da55b42e4d97416ac46ce24176202fd9c153b6e830899e3cc5",
+    "site/scripts/prepare-performance.mjs": "553e77f33f795b2652335ac329cd96393a0aadba584f69567f14c3481bd20a11",
+    "site/src/tag-performance.json": "199a883d5eba88da55b42e4d97416ac46ce24176202fd9c153b6e830899e3cc5",
+    "state.json": "cd513b9e781687620ace4b32b76814dbf3f302ac62dd72701e835c42529b37e2",
+    "tests/pipeline-timing.cjs": "a65bd6d7a56a1099afd88e401472d26bcbeb4a75fef226269a693ffd9d50a6d2"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-14T02:19:23.294831+00:00"
+    }
+  ]
+}

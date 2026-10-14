@@ -60,3 +60,13 @@ its loopback port. Preserve its identity and configuration. Restore all original
 services and remove only the new owned setup afterwards. Replace the site's
 current timing reference with a new immutable receipt and include it in the
 source inventories. Preserve the old measurement without rewriting its hashes.
+
+## Scrollable setup commands
+
+Actual catalogue axe execution found a serious keyboard defect on the longer
+third-step command: horizontal scrolling without a focusable container. Keep
+the native pre/code structure and add ordinary tab stops to command blocks in
+both interactive and no-JavaScript instructions. Preserve visible browser/global
+focus outlines and the existing dialog focus trap. Verify keyboard focus on the
+selected command and rerun axe; do not loosen the accessibility threshold or
+rewrite unrelated UI.

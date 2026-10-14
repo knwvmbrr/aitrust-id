@@ -2,6 +2,96 @@
 
 ## Unreleased — 2026-10-14
 
+### 2026-10-14-023720-privacy-full-current-regression-0ecda99d
+
+Recorded 2026-10-14T02:37:20.304307+00:00 · Contributor: Codex · change
+
+- **Changed.** Record full current Python regression after real Linux privacy, clean setup, timing and complete accessible website acceptance.
+- **Evidence.** 3424 tests pass, 5 skip, and the reviewed source inventory is unchanged during execution. All five current receipts and the route guard pass; actual service and replay receipts remain source-bound. [Change record](./runs/changes/2026-10-14-023720-privacy-full-current-regression-0ecda99d.json).
+- **Not claimed.** No independent recognition accuracy, physical-device use, human screen-reader acceptance, automatic browser send interception or research collection is credited. All 202 requirements remain: 124 complete and 78 open. Publication remains pending protected checks.
+
+
+### 2026-10-14-023430-privacy-current-all-route-acceptance-89b41316
+
+Recorded 2026-10-14T02:34:30.643372+00:00 · Contributor: Codex · change
+
+- **Changed.** Update intake boundary acceptance for the optional privacy selector, preserving the no-account default and refusing collection fields in both modes. Link all final current receipts and the source-bound route review without changing device access.
+- **Evidence.** All five current receipts, 19 website commands, eight website phases, 26 real service controls, 15 real replay controls and both account-free input modes pass the route guard. Privacy has its separate 16 actual controls. [Change record](./runs/changes/2026-10-14-023430-privacy-current-all-route-acceptance-89b41316.json).
+- **Not claimed.** The guard first correctly flagged its retired request shape. The selector is optional, default full behavior is preserved and every undeclared collection/payment/identity field is refused. No independent accuracy, physical phone, human screen-reader or collection acceptance is claimed.
+
+
+### 2026-10-14-023113-privacy-accessible-website-execution-1f57565c
+
+Recorded 2026-10-14T02:31:13.115689+00:00 · Contributor: Codex · change
+
+- **Changed.** Record complete accessible website execution and the current source review manifest before final component refresh.
+- **Evidence.** All 19 website commands and eight build phases pass after the command-scroll keyboard repair. [Change record](./runs/changes/2026-10-14-023113-privacy-accessible-website-execution-1f57565c.json).
+- **Not claimed.** The route guard correctly refused stale PII, protocol and extension receipts after architecture-note changes; those three are being executed again. No source hash is substituted for execution and no new scope closure is claimed.
+
+
+### 2026-10-14-022641-privacy-all-command-focus-states-6b9950c9
+
+Recorded 2026-10-14T02:26:41.346691+00:00 · Contributor: Codex · change
+
+- **Changed.** Extend native command-block tab stops to removal commands and apply the existing themed visible focus outline to all focusable pre blocks.
+- **Evidence.** Modal and no-JavaScript setup/removal blocks retain readable native code, ordinary tab order and the same visible focus treatment as other controls. [Change record](./runs/changes/2026-10-14-022641-privacy-all-command-focus-states-6b9950c9.json).
+- **Not claimed.** Automated browser and axe acceptance must still run; no human screen-reader result is inferred.
+
+
+### 2026-10-14-022609-privacy-setup-command-keyboard-repair-33c62a2e
+
+Recorded 2026-10-14T02:26:09.482014+00:00 · Contributor: Codex · change
+
+- **Changed.** Make scrollable setup command blocks keyboard focusable in the modal and no-JavaScript reference, retaining native pre/code semantics and visible focus.
+- **Evidence.** The browser contract now explicitly focuses the selected command before testing its independent copy action; actual axe identified this serious defect rather than the gate being weakened. [Change record](./runs/changes/2026-10-14-022609-privacy-setup-command-keyboard-repair-33c62a2e.json).
+- **Not claimed.** The failed accessibility receipt is retained. Complete corrected browser execution follows; real screen-reader and physical phone acceptance remain open.
+
+
+### 2026-10-14-022431-privacy-selected-catalogue-refusal-8c29a315
+
+Recorded 2026-10-14T02:24:31.688588+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the selected-checker catalogue refusal and enable private child diagnostics for the next website execution.
+- **Evidence.** Failed website receipts remain immutable and cannot satisfy source-bound acceptance. [Change record](./runs/changes/2026-10-14-022431-privacy-selected-catalogue-refusal-8c29a315.json).
+- **Not claimed.** The current build succeeds but catalogue browser acceptance still fails. No publication is performed until its concrete assertion is diagnosed and corrected.
+
+
+### 2026-10-14-022238-selected-three-step-setup-browser-contract-1c291d9a
+
+Recorded 2026-10-14T02:22:38.326042+00:00 · Contributor: Codex · change
+
+- **Changed.** Update browser acceptance from the retired four-step manual setup to source, one-command start and the selected independent checker; verify copied PS and privacy commands separately.
+- **Evidence.** The browser gate now checks three actual setup steps and ensures PII copies privacy draft checking while PS copies response checking, with the private credential file reference. [Change record](./runs/changes/2026-10-14-022238-selected-three-step-setup-browser-contract-1c291d9a.json).
+- **Not claimed.** The earlier catalogue phase correctly caught the stale four-step expectation. Its failed receipt is retained; complete current website execution follows.
+
+
+### 2026-10-14-022104-privacy-final-component-execution-c1137e1d
+
+Recorded 2026-10-14T02:21:04.243697+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final current-source PS, PII, protocol and extension checks after the timing correction.
+- **Evidence.** All 36 component commands pass and all four receipts match current source. The browser privacy sequence passes with credential-safe failure diagnostics. [Change record](./runs/changes/2026-10-14-022104-privacy-final-component-execution-c1137e1d.json).
+- **Not claimed.** Independent accuracy, physical phones, browser send interception and research collection remain uncredited. Website acceptance and full regression are still pending.
+
+
+### 2026-10-14-021922-privacy-current-public-preparation-3d63ced2
+
+Recorded 2026-10-14T02:19:22.910141+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the no-JavaScript catalogue and public guides from current privacy instructions and actual service timing, with matching state timestamps before exact-source browser verification.
+- **Evidence.** Preparation and accountability pass with all 202 records retained and actual runtime evidence predating the state audit. [Change record](./runs/changes/2026-10-14-021922-privacy-current-public-preparation-3d63ced2.json).
+- **Not claimed.** Prepared HTML is not live publication or independent validation. The accountability check first refused unequal state timestamps; matching actual update times correct that bookkeeping error.
+
+
+### 2026-10-14-021839-privacy-current-measured-service-chart-beb7f94a
+
+Recorded 2026-10-14T02:18:39.730600+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the service chart, generators and source inventories to new actual current-gateway timing; distinguish the 26 nondisruptive service checks from separate privacy recovery controls in state.
+- **Evidence.** Twelve current default pipeline profiles execute 253 authenticated requests; running sources match, original staging is restored and two additional owned test directories are removed. Historical timing is preserved. [Change record](./runs/changes/2026-10-14-021839-privacy-current-measured-service-chart-beb7f94a.json).
+- **Not claimed.** Synthetic Linux warm p95 is not phone startup, privacy-only speed, population performance, an accepted latency guarantee or tag accuracy. Browser evidence needs fresh execution after this source change.
+
+
 ### 2026-10-14-021254-local-timing-cli-contract-c2ab2f21
 
 Recorded 2026-10-14T02:12:54.099085+00:00 · Contributor: Codex · change
