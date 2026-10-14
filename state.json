@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T16:42:16.887256+00:00",
+  "updated": "2026-10-14T17:04:56.725146+00:00",
   "active_increment": "Independent tag startup, failure, saturation and recovery exercised; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -752,14 +752,14 @@
     "publication": "runs/2026-10-11-blind-private-publication.json",
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
-    "latest_measurement_publication": "runs/2026-10-14-tag-isolation-live-publication.json",
+    "latest_measurement_publication": "runs/2026-10-14-tag-isolation-cold-live-publication.json",
     "latest_increment": "docs/tag-failure-isolation-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 45,
     "target_start_open_records": 78,
     "target_remaining_closures": 33,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/tag-failure-isolation-plan.md",
     "target_direction_date": "2026-10-14",
@@ -1055,7 +1055,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T16:42:16.887256+00:00",
+  "updated_at": "2026-10-14T17:04:56.725146+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1125,9 +1125,9 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "c0e2b13bae7fe3bab5f014e20ef8f72ee4c5ef30",
-    "preview": "https://dd99ec4a.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-14-tag-isolation-live-publication.json",
+    "source_commit": "89235359fd284d893858124298316d54cb631d69",
+    "preview": "https://83e7e435.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-14-tag-isolation-cold-live-publication.json",
     "all_artifacts_verified": 783,
     "exact_headers_verified_per_origin": 6,
     "primary_unrelated_files_preserved": 12,
@@ -2533,9 +2533,9 @@
     "published_source": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31"
   },
   "prior_runtime_publication": {
-    "source_commit": "df715ce2dc78f4e306c8a263f0fb66d5651b9d31",
-    "preview": "https://a5a14097.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-14-draft-privacy-live-publication.json",
+    "source_commit": "c0e2b13bae7fe3bab5f014e20ef8f72ee4c5ef30",
+    "preview": "https://dd99ec4a.aitrust-id.pages.dev",
+    "evidence": "runs/2026-10-14-tag-isolation-live-publication.json",
     "all_artifacts_verified": 783,
     "exact_headers_verified_per_origin": 6,
     "primary_unrelated_files_preserved": 12,
@@ -2543,7 +2543,7 @@
   },
   "tag_failure_isolation": {
     "plan": "docs/tag-failure-isolation-plan.md",
-    "status": "Current source-bound Linux cold-start, component/browser and full-suite checks pass; PR72 runtime/site publication verified; cold-start correction ready for protected merge",
+    "status": "Current Linux/browser/full-suite evidence passed; protected merge and runtime/site publication verified",
     "gateway_reservations": {
       "complete_pipeline": 3,
       "privacy_only": 1
@@ -2571,18 +2571,20 @@
     "browser_engines": 2,
     "platform_browser_failure_cases": 6,
     "whole_requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "terminal_control_platforms": [
       "Linux",
       "macOS"
     ],
     "caller_output_cap_enforced_while_reading": true,
     "bounded_fixture_cleanup": "runs/2026-10-14-tag-isolation-bounded-cleanup.json",
-    "publication": "runs/2026-10-14-tag-isolation-live-publication.json",
+    "publication": "runs/2026-10-14-tag-isolation-cold-live-publication.json",
     "cold_start_status": "Six actual owned Linux Compose controls passed; no evaluator container created, privacy starts and restarts, full checks unavailable",
     "cold_start_evidence": "runs/2026-10-14-tag-isolation-compose-cold-start.json",
     "retained_cold_driver_refusals": "runs/2026-10-14-tag-isolation-cold-driver-refusals.json",
     "full_suite_refusal": "runs/2026-10-14-tag-isolation-cold-full-suite.json",
-    "inventory_recheck": "runs/2026-10-14-tag-isolation-inventory-recheck.json"
+    "inventory_recheck": "runs/2026-10-14-tag-isolation-inventory-recheck.json",
+    "protected_merge": "runs/2026-10-14-tag-isolation-cold-protected-merge.json",
+    "runtime_source_commit": "89235359fd284d893858124298316d54cb631d69"
   }
 }
