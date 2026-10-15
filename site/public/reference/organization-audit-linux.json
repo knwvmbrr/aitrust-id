@@ -1,0 +1,160 @@
+{
+  "captured_at": "2026-10-15T14:59:23.196634+00:00",
+  "pass": true,
+  "controls": [
+    {
+      "case": "actual_dedicated_database_install",
+      "pass": true
+    },
+    {
+      "case": "existing_database_reinstall_refused",
+      "pass": true
+    },
+    {
+      "case": "privileged_principal_enrollment_refused",
+      "pass": true
+    },
+    {
+      "case": "database_owner_cannot_be_tenant_principal",
+      "pass": true
+    },
+    {
+      "case": "unaccepted_policy_refused",
+      "pass": true
+    },
+    {
+      "case": "concurrent_first_append_serialized",
+      "pass": true
+    },
+    {
+      "case": "actual_checker_prepare_append_retry",
+      "pass": true
+    },
+    {
+      "case": "conflicting_overwrite_refused",
+      "pass": true
+    },
+    {
+      "case": "direct_sql_raw_text_bypass_refused",
+      "pass": true
+    },
+    {
+      "case": "direct_sql_span_overrun_refused",
+      "pass": true
+    },
+    {
+      "case": "server_side_closed_metadata_validation",
+      "pass": true
+    },
+    {
+      "case": "null_policy_acceptance_refused",
+      "pass": true
+    },
+    {
+      "case": "role_and_unauthorized_session_denied",
+      "pass": true
+    },
+    {
+      "case": "tenant_isolation_and_direct_table_denial",
+      "pass": true
+    },
+    {
+      "case": "temporary_table_tenant_spoof_refused",
+      "pass": true
+    },
+    {
+      "case": "supersession_and_fixed_choice_review",
+      "pass": true
+    },
+    {
+      "case": "paged_export_and_external_checkpoint",
+      "pass": true
+    },
+    {
+      "case": "pinned_history_tampering_refused",
+      "pass": true
+    },
+    {
+      "case": "metadata_tampering_refused",
+      "pass": true
+    },
+    {
+      "case": "actual_encrypted_full_backup_with_quarantine",
+      "pass": true
+    },
+    {
+      "case": "restored_database_refuses_tenant_access",
+      "pass": true
+    },
+    {
+      "case": "old_backup_deletion_limit_explicit",
+      "pass": true
+    },
+    {
+      "case": "missing_wrong_or_stale_recovery_authority_refused",
+      "pass": true
+    },
+    {
+      "case": "current_deletion_overlay_before_access",
+      "pass": true
+    },
+    {
+      "case": "expired_metadata_hidden_before_sweep",
+      "pass": true
+    },
+    {
+      "case": "declared_audit_prefix_retention",
+      "pass": true
+    },
+    {
+      "case": "post_deletion_encrypted_backup",
+      "pass": true
+    },
+    {
+      "case": "expired_backup_label_cannot_restore",
+      "pass": true
+    },
+    {
+      "case": "personal_checker_works_with_audit_store_stopped",
+      "pass": true
+    }
+  ],
+  "private_failure": null,
+  "python_version": "3.13.5",
+  "postgresql_version": "postgres (PostgreSQL) 18.6 (Debian 18.6-1.pgdg13+2)",
+  "pgbackrest_version": "pgBackRest 2.59.3",
+  "non_root": true,
+  "isolated_network_namespace": true,
+  "actual_participant_data": false,
+  "production_changes": false,
+  "physical_erasure_verified": false,
+  "independent_tag_accuracy_evidence": false,
+  "clusters_stopped": true,
+  "owned_scratch_removed": true,
+  "sources": {
+    "tools/organization_audit.py": "8a4c5c85c7225788e227a843e85d055e5cc7981e9240f6a6bd7479e287586e91",
+    "tools/organization_audit_store.py": "0913861828c8f2d4eb5b1330ed797eee3b8c5b652d78c3cfd3b73a8649e78eb9",
+    "tools/organization_audit_lab.py": "893369fc3f2eb465b97dc4614b4e96a75e97b1cca981e7d5963a43e830462a88",
+    "scripts/organization-audit.py": "d37daae9cbc53b8b4d18286084e4a70c81a3295194a8677763f1458cae5a9b60",
+    "scripts/verify-organization-audit.py": "0bc48696ffa41849f8794fa30b0b3e27a750563a7b68b4c69c1a885ce559527a",
+    "deploy/audit/store.sql": "aff20a33fa64b6f7257448e133187f76be9b69ff763968bc7fe208639a0cfa10",
+    "spec/organization-audit-metadata.schema.json": "ddc883924d3620161eb2d74dbbc59e2188cf72e90ee9bc5424af94ba462ca651",
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "source_unchanged_during_execution": true,
+  "private_log_sha256": "0aeb69c0af934e7ecbcb0607df5117e1108da969ac5598d3622d90dfd577fcb6"
+}

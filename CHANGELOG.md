@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-15
 
+### 2026-10-15-150749-organization-audit-current-delivery-bfef2ac0
+
+Recorded 2026-10-15T15:07:49.025944+00:00 · Contributor: Codex · change
+
+- **Changed.** Record successful current checks for all five affected capability manifests and the exact eight-phase website build; retain one full F-161 closure and prepare protected delivery.
+- **Evidence.** All five source-bound revalidation receipts assess as current, the website passes all 20 selected commands, and personal route boundaries pass. Only F-161 changed in the full requirement ledger. [Change record](./runs/changes/2026-10-15-150749-organization-audit-current-delivery-bfef2ac0.json).
+- **Not claimed.** This is engineering and audit software acceptance; no independent tag release or hosted collection is enabled. The target is still 60, with 77 open and 17 full closures remaining.
+
+
+### 2026-10-15-150102-organization-audit-boundary-inventory-c2ba97b7
+
+Recorded 2026-10-15T15:01:02.777007+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the reviewed personal route inventory after the independent audit software and catalogue changes.
+- **Evidence.** The inventory binds current source; the separate Linux audit receipt binds the optional organization tool. [Change record](./runs/changes/2026-10-15-150102-organization-audit-boundary-inventory-c2ba97b7.json).
+- **Not claimed.** No personal endpoint, permission, detector, release threshold or collection policy changes.
+
+
+### 2026-10-15-150021-organization-audit-operator-acceptance-171df383
+
+Recorded 2026-10-15T15:00:21.673630+00:00 · Contributor: Codex · change
+
+- **Changed.** Execute the documented operator CLI throughout the Linux audit and encrypted recovery drill; bind its published guide and fresh receipt to website checks.
+- **Evidence.** The final 29-control Linux run and 38 focused tests pass on current implementation bytes. F-161 remains the single full closure, with 125 complete and 77 open. [Change record](./runs/changes/2026-10-15-150021-organization-audit-operator-acceptance-171df383.json).
+- **Not claimed.** Previous run records remain unchanged. No other acceptance is relaxed; 17 full closures remain to reach 60.
+
+
+### 2026-10-15-145536-organization-audit-complete-3af3aacd
+
+Recorded 2026-10-15T14:55:36.551501+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver optional organization-owned PostgreSQL audit software with explicit metadata and retention policies, tenant roles, version/review history, checkpointed exports and encrypted recovery; close F-161 at 125 complete and 77 open.
+- **Evidence.** Thirty-eight focused tests and 29 source-bound actual Linux controls cover supported operation and failures, including deletion recovery and standalone personal checking while the audit store is stopped. [Change record](./runs/changes/2026-10-15-145536-organization-audit-complete-3af3aacd.json).
+- **Not claimed.** No company-hosted audit service, automatic collection, certification, independent tag accuracy, physical erasure or whole-host recovery is claimed. Other full acceptance remains unchanged; 17 closures remain to reach 60.
+
+
 ### 2026-10-15-042311-quiet-paused-protocol-binding-0a57aeab
 
 Recorded 2026-10-15T04:23:11.114308+00:00 · Contributor: Codex · change

@@ -2,6 +2,11 @@ name: synthetic-metadata-storage
 on:
   push:
     paths:
+      - 'deploy/audit/**'
+      - 'tools/organization_audit*.py'
+      - 'scripts/*organization-audit*.py'
+      - 'spec/organization-audit-metadata.schema.json'
+      - 'tests/test_organization_audit.py'
       - 'deploy/research/**'
       - 'scripts/metadata-store-sandbox.py'
       - 'scripts/verify-metadata-store.py'
@@ -25,6 +30,11 @@ on:
       - '.github/workflows/metadata-storage.yml'
   pull_request:
     paths:
+      - 'deploy/audit/**'
+      - 'tools/organization_audit*.py'
+      - 'scripts/*organization-audit*.py'
+      - 'spec/organization-audit-metadata.schema.json'
+      - 'tests/test_organization_audit.py'
       - 'deploy/research/**'
       - 'scripts/metadata-store-sandbox.py'
       - 'scripts/verify-metadata-store.py'
@@ -51,7 +61,7 @@ permissions:
 jobs:
   postgres-synthetic:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -76,7 +86,7 @@ jobs:
           printf '%s\n' 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main' | sudo tee /etc/apt/sources.list.d/aitrust-pgdg.list >/dev/null
           printf '\ncreate_main_cluster = false\n' | sudo tee -a /etc/postgresql-common/createcluster.conf >/dev/null
           sudo apt-get update -q
-          sudo apt-get install -y postgresql-18 postgresql-client-18
+          sudo apt-get install -y postgresql-18 postgresql-client-18 pgbackrest
       - name: Run actual storage controls as the ordinary runner, private socket only
         run: python scripts/metadata-store-sandbox.py --output output/verification/metadata-store.json
       - name: Run separately applied invitation capacity, role and replay controls
@@ -85,11 +95,14 @@ jobs:
         run: python scripts/metadata-store-sandbox.py --profile admission --output output/verification/research-admission.json
       - name: Run actual loopback HTTP admission, database quota, withdrawal and replay controls
         run: python scripts/metadata-store-sandbox.py --profile http --output output/verification/research-http.json
+      - name: Execute independent organization audit storage and encrypted recovery controls
+        run: sudo unshare --net -- "$(command -v python)" scripts/verify-organization-audit.py --run-as "$(id -un)" --output output/verification/organization-audit.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: synthetic-metadata-storage
           path: |
+            output/verification/organization-audit.json
             output/verification/metadata-store.json
             output/verification/research-invitations.json
             output/verification/research-admission.json

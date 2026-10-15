@@ -164,7 +164,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-158 | Agent identity — labelling output from autonomous agents | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-159 | Fleet deployment and policy management | [ORG-FLEET](scope-delivery.md#org-fleet) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-160 | Host-level capture agents | [ORG-HOST](scope-delivery.md#org-host) | 20% · [evidence/fix](scope-progress.md) |
-| TASK-F-161 | Long-horizon retention and audit trails | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-161 | Long-horizon retention and audit trails | [ORG-AUDIT](scope-delivery.md#org-audit) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-162 | SSO and directory integration | [ORG-SSO](scope-delivery.md#org-sso) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-163 | Support with an SLA | [ORG-SUPPORT](scope-delivery.md#org-support) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-X-01 | A paid API or any metered inference | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |

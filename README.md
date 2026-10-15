@@ -551,3 +551,14 @@ draft.txt --env-file "$LOCAL_STATE/runtime.env"`. It returns a short reminder,
 does not change or send your draft, and stays available when only the PS
 evaluator is stopped. No finding is a privacy clearance. Automatic browser
 pre-send protection and independent recognition acceptance remain unfinished.
+
+### Organization-owned audit history
+
+The optional [audit tool](docs/organization-audit.md) retains approved metadata in
+your own PostgreSQL 18 database, with separate permissions, append/correction and
+review history, private exports, explicit retention and encrypted-backup recovery.
+Preview a detailed result before storing it; no automatic upload or hosted audit
+service is enabled. Personal checking remains independent. Run
+`python3 scripts/organization-audit.py --help` for commands and
+`python3 scripts/verify-organization-audit-evidence.py` to check the source-bound
+Linux execution evidence. This is audit software, not independent tag validation.

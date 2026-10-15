@@ -355,7 +355,18 @@
         "scripts/verify-native-dependencies.py",
         "tests/test_native_inventory.py",
         "sbom/native/*",
-        "sbom/native/sources/*"
+        "sbom/native/sources/*",
+        "tools/organization_audit.py",
+        "tools/organization_audit_store.py",
+        "tools/organization_audit_lab.py",
+        "scripts/organization-audit.py",
+        "scripts/verify-organization-audit.py",
+        "scripts/verify-organization-audit-evidence.py",
+        "spec/organization-audit-metadata.schema.json",
+        "deploy/audit/store.sql",
+        "tests/test_organization_audit.py",
+        "docs/organization-audit.md",
+        "docs/organization-audit-plan.md"
       ],
       "commands": [
         [
@@ -544,6 +555,10 @@
         [
           "{python}",
           "scripts/verify-native-dependencies.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-organization-audit-evidence.py"
         ]
       ]
     },
@@ -895,7 +910,9 @@
         "eval/methods/context-v6-eager.py",
         "runs/2026-10-13-ps-lazy-context-paired.json",
         "runs/2026-10-14-draft-privacy-pipeline-timing.json",
-        "runs/2026-10-14-tag-isolation-pipeline-timing.json"
+        "runs/2026-10-14-tag-isolation-pipeline-timing.json",
+        "docs/organization-audit.md",
+        "runs/2026-10-15-organization-audit-cli-linux.json"
       ],
       "commands": [
         [
@@ -909,6 +926,10 @@
           "tests/test_blind_review_privacy.py",
           "tests/test_website_build_diagnostics.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-organization-audit-evidence.py"
         ],
         [
           "node",
