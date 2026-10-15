@@ -1,0 +1,8 @@
+{
+  "captured_at": "2026-10-15T04:16:19.194509+00:00",
+  "pass": false,
+  "kind": "regression_diagnostic_extraction",
+  "reason": "The existing privacy verifier sanitizes error messages. The first diagnostic incorrectly expected a raw assertion string; it credited no regression proof.",
+  "repair": "Record only the failed synthetic assertion message in a disposable instrumented test copy; verify the exact message and retain the instrumented source hash.",
+  "product_source_changed": false
+}

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T04:13:25.297207+00:00",
-  "active_increment": "Native dependency evidence integrated; target 60 open full requirements; no independent-release waiver",
+  "updated": "2026-10-15T04:23:09.259855+00:00",
+  "active_increment": "Quiet paused checks implemented; target remains 60 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -759,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-15T04:05:36.961144+00:00",
+    "audited_at": "2026-10-15T04:17:14.320733+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -775,7 +775,7 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/native-dependency-evidence.md",
+    "latest_increment": "docs/quiet-paused-checks.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
@@ -1084,13 +1084,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-15-native-current-PS.json",
     "PII_REDACTED": "runs/2026-10-15-native-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-15-native-current-protocol.json",
-    "extension": "runs/2026-10-15-native-current-extension.json",
-    "website": "runs/2026-10-15-native-accepted-website.json",
+    "protocol": "runs/2026-10-15-quiet-paused-current-protocol.json",
+    "extension": "runs/2026-10-15-quiet-paused-current-extension.json",
+    "website": "runs/2026-10-15-quiet-paused-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T04:13:25.297207+00:00",
+  "updated_at": "2026-10-15T04:23:09.259855+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2690,7 +2690,7 @@
     "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/77"
   },
   "native_dependency_evidence": {
-    "status": "actual_archive_replay_and_focused_controls_pass; protected_delivery_pending",
+    "status": "merged_through_protected_checks; permission_and_transitive_review_open",
     "implemented_by": "Codex",
     "artifacts": 205,
     "native_executable_candidates": 146,
@@ -2709,7 +2709,25 @@
     "full_requirements_closed": [],
     "current_protocol_receipt": "runs/2026-10-15-native-current-protocol.json",
     "current_website_receipt": "runs/2026-10-15-native-accepted-website.json",
-    "retained_website_refusal": "runs/2026-10-15-native-current-website.json"
+    "retained_website_refusal": "runs/2026-10-15-native-current-website.json",
+    "source_commit": "42c9aba74b80ee2766904727cdaa81d381010e74",
+    "protected_merge": "runs/2026-10-15-native-protected-merge.json"
   },
-  "current_capture_attempt": "runs/2026-10-15-current-capture-paused-observation.json"
+  "current_capture_attempt": "runs/2026-10-15-current-capture-paused-observation.json",
+  "quiet_paused_checks": {
+    "implemented_by": "Codex",
+    "status": "actual_unpacked_extension_controls_pass; protected_delivery_pending",
+    "plan": "docs/quiet-paused-checks-plan.md",
+    "guide": "docs/quiet-paused-checks.md",
+    "evidence": "runs/2026-10-15-quiet-paused-privacy.json",
+    "regression": "runs/2026-10-15-quiet-paused-regression.json",
+    "diagnostic_refusal": "runs/2026-10-15-quiet-paused-regression-extraction-refusal.json",
+    "current_live_vendor_evaluation": false,
+    "human_screen_reader_acceptance": false,
+    "independent_accuracy_evidence": false,
+    "full_requirements_closed": [],
+    "current_extension_receipt": "runs/2026-10-15-quiet-paused-current-extension.json",
+    "current_website_receipt": "runs/2026-10-15-quiet-paused-current-website.json",
+    "current_protocol_receipt": "runs/2026-10-15-quiet-paused-current-protocol.json"
+  }
 }

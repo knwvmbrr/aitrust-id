@@ -59,6 +59,11 @@
     }
     if(message!==captureMessage){captureMessage=message;update(document.body,'UNSUPPORTED',null,message);}
   }
+  function pause() {
+    captureStatus('');
+    // Paused checks are a setting, never a response verdict or live finding.
+    if(live){live.remove();live=null;}
+  }
   function evidence(item, code) {
     const {root,assertion,reason,state}=item;
     const container=root.querySelector('.evidence');container.replaceChildren();
@@ -185,5 +190,5 @@
     const panel=item.root.querySelector('.panel');if(panel.open)panel.close();
     item.holder.remove();roots.delete(host);
   }
-  globalThis.AITrust={mount,update,unmount,captureStatus};
+  globalThis.AITrust={mount,update,unmount,captureStatus,pause};
 })();

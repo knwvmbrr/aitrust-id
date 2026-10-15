@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-041715-quiet-paused-checks-62a5ab59",
+  "recorded_at": "2026-10-15T04:17:15.128595+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8769bb3156c2278c4fa2511517504543c587c083",
+  "changed": "Keep paused extension pages quiet; remove generic Unsupported response controls and stale live announcements; preserve explicit settings consent.",
+  "proves": "Actual unpacked-extension lifecycle passes and the same new assertion fails against the previous extension. Enabled authenticated checks and late-result refusal remain functioning.",
+  "limits": "No full requirement closes. Current live-vendor lifecycle, physical phones, human accessibility and independent tag validation remain open. No permission, endpoint or method change.",
+  "scope_ids": [
+    "F-035"
+  ],
+  "files": {
+    "docs/extension-consent-plan.md": "5c356e41e2a6400dc8e9c52198d07c06de220918166eba2d7c316cd1cea392f1",
+    "docs/quiet-paused-checks-plan.md": "0f7f2d75245e303eff22cb51c54355465526e63a6b35194c15b7ed3fe4662445",
+    "docs/quiet-paused-checks.md": "e64d233b87e093a948136f6683d4f6b8efd89fed622c76702bd32d4f3f5c8e9a",
+    "docs/scope-progress.json": "d1d10e30554227ba88e46ea7dc838d6c2c0508958a0ecc9e301bc4c31f33bda8",
+    "docs/scope-progress.md": "2b8084e2443be516c8a53da46df44caf64eb5f947a249ace99ae516fe8f1e01d",
+    "extension/src/content/badge.js": "fb66db5111dc7739c4fc360dca2085588bf6882062e5696995bed9ccb90d5a23",
+    "extension/src/content/bridge.js": "c1f6ec8cdef417609635709664576c706abc94cf808cce0333c937d4251650f1",
+    "runs/2026-10-15-quiet-paused-privacy.json": "3b96e199d131e2cbd15faab04bd460010fe306c7de2749e78764d21efedac8e9",
+    "runs/2026-10-15-quiet-paused-regression-extraction-refusal.json": "43ec77ab05bcc2a89ddfd469a9112faa9e66f1b36d4fcc116477d7d43c6a2a28",
+    "runs/2026-10-15-quiet-paused-regression.json": "068c9807a5a9456be8972059abdee725622e81e846962a2f1273e11253c94730",
+    "scripts/verify-extension-privacy.cjs": "d3ebdad1186a193a7f47433debf55ac40d3ef3ad0fb787efc9bd5ed19d00c821",
+    "site/public/reference/public-scope.json": "b45e1c52deda761a59298c1d3f5decc19cea7dbaf2bcf24f55ba2c08c96185b8",
+    "site/src/public-scope.json": "b45e1c52deda761a59298c1d3f5decc19cea7dbaf2bcf24f55ba2c08c96185b8",
+    "site/src/scope-manifest.json": "829985fc2048e092cc2dfa63da16b172e66fdd43a92aba10fbcd1ad0e1e432fb",
+    "state.json": "9dc1210f7cffe808527bc2da50c4ee4ea74095f9835cf22e7df82f138fc627ff"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-quiet-paused-privacy.json",
+      "sha256": "3b96e199d131e2cbd15faab04bd460010fe306c7de2749e78764d21efedac8e9"
+    },
+    {
+      "path": "runs/2026-10-15-quiet-paused-regression.json",
+      "sha256": "068c9807a5a9456be8972059abdee725622e81e846962a2f1273e11253c94730"
+    },
+    {
+      "path": "runs/2026-10-15-quiet-paused-regression-extraction-refusal.json",
+      "sha256": "43ec77ab05bcc2a89ddfd469a9112faa9e66f1b36d4fcc116477d7d43c6a2a28"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T04:17:15.626988+00:00"
+    }
+  ]
+}
