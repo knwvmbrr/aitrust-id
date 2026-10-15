@@ -149,6 +149,10 @@ jobs:
         run: |
           python -m pytest tests/test_session_revisions.py tests/test_revision_public_links.py -q
           python scripts/verify-session-revisions.py --output output/verification/session-revisions.json
+      - name: Bind the complete organization audit workflow to actual Linux execution
+        run: |
+          python scripts/verify-organization-audit-evidence.py
+          python -m pytest tests/test_organization_audit.py -q
       - name: Refuse unsafe synthetic backup execution before database creation
         run: python -m pytest tests/test_backup_retention.py tests/test_restore_isolation.py -q
       - name: Check distinct caller-bound choice framing without a manipulation verdict

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-15T04:17:14.320733+00:00",
+  "audited_at": "2026-10-15T15:20:12.803775+00:00",
   "client_date": "2026-10-15",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -6594,34 +6594,51 @@
       "id": "F-161",
       "kind": "requirement",
       "title": "Long-horizon retention and audit trails",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-10-15T15:20:12.803775+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 complete organization-operated audit software, actual Linux/backup integration, private CLI and documentation, 2026-10-15T14:54:44.658593+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Long-horizon retention and audit trails. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: The application extends supported tags without disabling the personal workflow.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-10-15T15:20:12.803775+00:00",
+      "completion_timestamp_basis": "Current full software audit after both PR review defects were corrected and the actual 31-control Linux workflow and 44 focused tests passed.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md",
-        "docs/approachable-tag-modals.md",
-        "runs/2026-10-09-approachable-public.json",
-        "scripts/verify-enterprise.cjs"
+        "docs/organization-audit.md",
+        "docs/organization-audit-plan.md",
+        "spec/organization-audit-metadata.schema.json",
+        "deploy/audit/store.sql",
+        "scripts/organization-audit.py",
+        "scripts/verify-organization-audit-evidence.py",
+        "runs/2026-10-15-organization-audit-linux.json",
+        "runs/2026-10-15-organization-audit-focused.json",
+        "runs/2026-10-15-organization-audit-acceptance.json",
+        "docs/organization-audit-result.md",
+        "runs/2026-10-15-organization-audit-cli-linux.json",
+        "runs/2026-10-15-organization-audit-final-focused.json",
+        "runs/2026-10-15-organization-audit-reviewed-linux.json",
+        "runs/2026-10-15-organization-audit-reviewed-focused.json",
+        "runs/2026-10-15-organization-audit-reviewed-acceptance.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
-      "required_acceptance": [
-        "Deliver Long-horizon retention and audit trails. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: The application extends supported tags without disabling the personal workflow."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full F-161 software job demonstrated on supported and failure cases: organization-operated metadata retention/audit with policy, roles, append/supersession/review, export, deletion/expiry and encrypted recovery. Hosted business operation, research collection, independent tag accuracy, actual users and whole-host recovery remain separate open acceptance. No other requirement or adopted tag changes.",
+      "required_acceptance": [],
+      "queue": "completed",
+      "acceptance_alignment": "Original full named software job retained. No outside-human, legal, hosted-service or independent accuracy criterion removed from another record. The supported operator-owned PostgreSQL workflow is implemented and executed; personal checking was run successfully with its store stopped."
     },
     {
       "id": "F-162",

@@ -134,3 +134,8 @@ setup-local:
 verify-local-setup:
 	$(PYTHON) -m pytest tests/test_local_setup.py tests/test_local_setup_evidence.py -q
 	$(PYTHON) scripts/verify-local-setup-evidence.py
+
+.PHONY: verify-organization-audit
+verify-organization-audit:
+	$(PYTHON) scripts/verify-organization-audit-evidence.py
+	$(PYTHON) -m pytest tests/test_organization_audit.py -q

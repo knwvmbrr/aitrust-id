@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-10-15T15:01:12.198466+00:00",
+  "pass": true,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "PII_REDACTED",
+    "sources": {
+      "docs/draft-privacy-plan.md": "730a7e671c13b93702990dd10c5472524b3baa44928289478f9aeff88d0a708b",
+      "docs/draft-privacy.md": "aeea14d3e125f27d137cfefaed3a4086e3d746d0f4ef34751f5353dbf13f6b77",
+      "docs/tag-failure-isolation-plan.md": "d9e6304bfc8303cf6a3cd922882458e0c2cbed7a16c481a0749e1a0e8f26de02",
+      "eval/fixtures/pii-compact-addresses.json": "a9eda7f5fb5c2aaeeb20e1af7d8eaaf3b2d15aadb3db1472af1f9bf8b1d689d8",
+      "eval/fixtures/pii-recognition-development.json": "bbce463bb23425a9d49e4d5c8bfc70af7201957b739d53c753b49eb8ec5c52c6",
+      "eval/revalidation.json": "1bf5edebb9fcc3d0bd89227a701a652963a66244f3c587d73302a60ed3cb70c6",
+      "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+      "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+      "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+      "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+      "protocol/measurements.py": "2b850a3416e7ac680367a1a64bc93d64e1ad1078da1124b1212063fca607a818",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+      "protocol/replay.py": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6",
+      "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+      "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+      "protocol/scope_groups.py": "885bc5cb213d0f098546c0c507fc30c0c6a30a08744f85c4dedd2477f462e3d9",
+      "protocol/signals.py": "a2d3e52b5ec6760f8f7b2db4a38741b424a31f767e59c16d745a9d897af65f71",
+      "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+      "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+      "runs/2026-10-11-pii-labels-compact.json": "c08585edc7c33be833494eeb6614fa848d5434f49f48aef75e34ccfe5818e270",
+      "runs/2026-10-11-pii-labels-recognition.json": "3b918cd7f88d9756b3eec3cb8c1209b8a53265d6f0664bfde4d71bbe83d1db08",
+      "runs/2026-10-14-tag-isolation-bounded-batch-linux.json": "e05564cdcaf4cb8436b578c33c2f3b06c38f41c7af91d8965a18d12cf7e4d246",
+      "runs/2026-10-14-tag-isolation-bounded-real-linux.json": "122e3e0ccb1200c7994e8a3514d6201eb47b166203727c052844952063251007",
+      "runs/2026-10-14-tag-isolation-clean-setup-linux.json": "19534be16f520a737fba63ab0dace0b5c739a1e9f0fe6247e4dda650ba9d2062",
+      "runs/2026-10-14-tag-isolation-privacy-linux.json": "a7857c20c32a2748e086e2155d60650c7718c7f1a1b2dd9a593b1686076a15df",
+      "runs/2026-10-14-tag-isolation-replay-linux.json": "c6f130cfd81e0ffcf0f46de78ab2995c3c800cb06c2295118e89e9073ae35bc4",
+      "runs/2026-10-14-tag-isolation-service-linux.json": "9e794886ce3cefc8208f90a3b3cce43d040d8096db95731708da24e232148bfc",
+      "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+      "scripts/build-redaction-performance.py": "a8b7a2d463faa420a3f60a5d05b203215894b2545c34be7a9be70963151cbde5",
+      "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+      "scripts/measure-redaction-development.py": "8b78a6983aeca0d913cdec6d97344df0ab4e765df4e1cdbc91923c23bf0410d9",
+      "scripts/redaction-development-worker.py": "04b74a58800213c9c4ec1051a8d9c5f828229a571e0245d7a6e78cdc7e79920a",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/setup-local.py": "8b9abd1a846b254e89da35b7b81a255cd55ca5552b45b96a25657bd3dd37af06",
+      "scripts/verify-assertion-replay.py": "dc95a1c3962095f03ca70a23724d9e0b8ccbaf96aca2d36a0adc203253c3d00f",
+      "scripts/verify-draft-privacy.py": "86b0bb958bfd975f506ff601ce107dc7d84e40093f15e12444c07acbbebc8c51",
+      "scripts/verify-service.py": "dbd748d85931b25c4d6b847babb44c6c737349ec28282bb122813921add591de",
+      "scripts/verify-standalone-ps.py": "546b63388b8bebc7e67938d6d29f5cb08de0156574d939b6edbfbec622ad74d1",
+      "scripts/verify-tag-isolation.py": "f7274122c94e98d3755f240a5958441f4088ab537ad24dba504dd052679ec63d",
+      "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+      "services/anonymizer/Dockerfile": "9f562b7330f8eee4f22e9955a8a672436e45d2171d0e95e421c80da137910ac9",
+      "services/anonymizer/app.py": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+      "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+      "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+      "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
+      "services/anonymizer/requirements.freeze": "f141eec1fa11d21c9a9333a65a94a5d0f76df43e6a4da62dfdfe8b645b448b45",
+      "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+      "services/anonymizer/requirements.txt": "7121535fd693a31d90cbb802f72e1476525191f5ee5565f2ed84d6231cfae39f",
+      "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+      "services/gateway/healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
+      "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+      "tests/test_complete_ipv6.py": "6575ce8175f629bcea4e4d9677b34e3395ad3d734b2ffa5b25d9a7c1e2e2d64e",
+      "tests/test_draft_privacy.py": "bde3cf98b1555894215cf1e1d17a6de73990ef6bd35a429db144e69bffb0758f",
+      "tests/test_gateway_runtime_isolation.py": "64f9f1a1a4185e386b10b496bae2945425acfa0c1ba4469160016cc0adc35672",
+      "tests/test_independent_tag_batch.py": "33cd371fd2552e243035dc6e30d36969a28e47811e3f9fe0ac8abcf768f13c02",
+      "tests/test_redaction_contract.py": "2aa451161052f39e3c78f7ae5467ce3cfef66eabbfcdea569c356c155abf62b1",
+      "tests/test_redaction_development_builder.py": "3f96ae25400041e1c2bbaccd6eb326bb2a215b67bbfa96ef003d948bace61fb6",
+      "tests/test_redaction_development_client.py": "dedb76b453f56c41f9e26e70e8d2b1f42fd4a2c888fbf00ad73e09cd61a3d438",
+      "tests/test_redaction_observations.py": "1e5ba2792b850aed95e870fa78562b08d9d358069576dfcff80630761d54f83b",
+      "tests/test_standalone_ps.py": "18e1e80eff7340bea44794c4fda990a65b429876708db2cbcdf7dcf21b442edc",
+      "tests/test_tag_failure_isolation.py": "bdcc85b30bccc4746520e3490b0706f666e7e8ba65730c062486e76d05b0f15a",
+      "tests/test_tag_isolation_verifier.py": "23767a2f1497502964fb3bc7e8e2157024b87b62344c2363995be5c74a45130e",
+      "tests/test_worker_process.py": "34143622ce835f452533e93a5d921dd8f38ddd2fb3bdd37d0cebec83a333fe2d",
+      "tools/redaction_observations.py": "fed317d28b1a45f9a7e526bfaccf9eb2284fd6c94bb43bd02aeb50bc90b8cdea"
+    },
+    "sha256": "17e67188a1d156bf7f7fb6cbaa1b52adc7e9b14a2882dd43ec31a6af0337937c",
+    "commands": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_redaction_contract.py",
+        "-q",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_draft_privacy.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_independent_tag_batch.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "-q"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_redaction_contract.py",
+        "-q",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "7dcd6850cea4ee3621e82405005ea21bc8f01d6cb4b66c57e564b81e44ba9eed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_draft_privacy.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "ee5ec664a4856fcb01beb9c97501b4756d7a2d0e51b45295f4e83a8d38cf0e0d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "fdb6c8c3cea35eb6223cf337eea974c477f93dcc871e5a2fceb2af24b9292d10",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "be5c7c2a77651d7dbb2df36d92841b653019bc5a0572bffa08bd3c43016c9b08",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_independent_tag_batch.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "aeecf27adc1a434609d5d96624f01cadd7a36fb9bcec1af2f675f33ddd1a8c99",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2388777a8cef79827635a20e2538ae0e62789fd86e42469f8bfcb80dfe21e22f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

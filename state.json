@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T04:23:09.259855+00:00",
-  "active_increment": "Quiet paused checks implemented; target remains 60 open full requirements",
+  "updated": "2026-10-15T15:28:07.126798+00:00",
+  "active_increment": "Organization-operated audit software complete; 77 open full requirements, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -387,7 +387,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "Complete current tests/ suite on 788 unchanged reviewed source inputs; five platform skips and one upstream warning; no independent accuracy or physical/human acceptance.",
+  "python_tests_scope": "The 3556 figure is a historical full-suite result. This increment ran 44 focused audit tests and 31 actual Linux controls; protected CI records its own current suite execution. Test totals are not requirement closures.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -759,9 +759,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-15T04:17:14.320733+00:00",
-    "completed_records": 124,
-    "open_records": 78,
+    "audited_at": "2026-10-15T15:20:12.803775+00:00",
+    "completed_records": 125,
+    "open_records": 77,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -775,12 +775,12 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/quiet-paused-checks.md",
+    "latest_increment": "docs/organization-audit-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
-    "target_remaining_closures": 18,
+    "target_remaining_closures": 17,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
@@ -789,7 +789,9 @@
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-10-14",
-    "latest_increment_completed_ids": [],
+    "latest_increment_completed_ids": [
+      "F-161"
+    ],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
       {
@@ -1082,15 +1084,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-15-native-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-15-native-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-15-quiet-paused-current-protocol.json",
-    "extension": "runs/2026-10-15-quiet-paused-current-extension.json",
-    "website": "runs/2026-10-15-quiet-paused-current-website.json",
+    "PS": "runs/2026-10-15-organization-audit-reviewed-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-15-organization-audit-reviewed-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-15-organization-audit-reviewed-current-protocol.json",
+    "extension": "runs/2026-10-15-organization-audit-reviewed-current-extension.json",
+    "website": "runs/2026-10-15-organization-audit-reviewed-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T04:23:09.259855+00:00",
+  "updated_at": "2026-10-15T15:28:07.126798+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2729,5 +2731,23 @@
     "current_extension_receipt": "runs/2026-10-15-quiet-paused-current-extension.json",
     "current_website_receipt": "runs/2026-10-15-quiet-paused-current-website.json",
     "current_protocol_receipt": "runs/2026-10-15-quiet-paused-current-protocol.json"
+  },
+  "organization_audit": {
+    "scope_id": "F-161",
+    "software_complete": true,
+    "hosted_service_operating": false,
+    "guide": "docs/organization-audit.md",
+    "actual_linux_evidence": "runs/2026-10-15-organization-audit-reviewed-linux.json",
+    "focused_evidence": "runs/2026-10-15-organization-audit-reviewed-focused.json",
+    "full_acceptance": "runs/2026-10-15-organization-audit-reviewed-acceptance.json",
+    "actual_linux_controls": 31,
+    "focused_tests": 44,
+    "operator_owned": true,
+    "new_http_endpoints": 0,
+    "company_collection_enabled": false,
+    "personal_checking_independent": true,
+    "physical_erasure_verified": false,
+    "independent_tag_accuracy_evidence": false,
+    "website_checks": "runs/2026-10-15-organization-audit-reviewed-site-phases.json"
   }
 }

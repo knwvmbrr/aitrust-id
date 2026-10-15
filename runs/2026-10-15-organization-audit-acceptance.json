@@ -1,0 +1,104 @@
+{
+  "captured_at": "2026-10-15T14:54:44.658593+00:00",
+  "pass": true,
+  "completed_by": "Codex",
+  "completed_ids": [
+    "F-161"
+  ],
+  "previous_full_acceptance": {
+    "id": "F-161",
+    "kind": "requirement",
+    "title": "Long-horizon retention and audit trails",
+    "percent_complete": 20,
+    "milestones_passed": [
+      "bounded_contract"
+    ],
+    "audited_at": "2026-10-09T17:06:15.922874+00:00",
+    "checked_by": "Codex",
+    "implemented_by": [
+      "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+    ],
+    "planning_contributors": [
+      "Codex \u2014 scope normalization and package contract"
+    ],
+    "completed_by": [],
+    "completed_at": null,
+    "completion_timestamp_basis": null,
+    "next_fix": "Deliver Long-horizon retention and audit trails. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: The application extends supported tags without disabling the personal workflow.",
+    "next_owner": "Codex",
+    "evidence": [
+      "docs/scope-delivery.md",
+      "docs/approachable-tag-modals.md",
+      "runs/2026-10-09-approachable-public.json",
+      "scripts/verify-enterprise.cjs"
+    ],
+    "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+    "required_acceptance": [
+      "Deliver Long-horizon retention and audit trails. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: The application extends supported tags without disabling the personal workflow."
+    ],
+    "queue": "open"
+  },
+  "original_master_record": {
+    "id": "F-161",
+    "layer": 3,
+    "source_sections": [
+      13
+    ],
+    "status": "normalized_scope; runtime unverified",
+    "owner": "Michael",
+    "release": "unassigned",
+    "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+    "disposition": "retained",
+    "title": "Long-horizon retention and audit trails",
+    "baseline_job": "Specify and deliver long-horizon retention and audit trails.",
+    "outcome": "The application extends supported tags without disabling the personal workflow.",
+    "source": "Supplied scope baseline, section 13",
+    "reviewer": "Codex",
+    "dependencies": [
+      "WP-OPERATIONS",
+      "WP-PRIVACY",
+      "WP-PROTOCOL"
+    ],
+    "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+    "pricing": {
+      "personal": "free complete workflow",
+      "organizational": "proposal; no price or gate accepted",
+      "operating_cost": "to be estimated separately"
+    },
+    "delivery": {
+      "task_id": "TASK-F-161",
+      "work_packages": [
+        "ORG-AUDIT"
+      ],
+      "plan": "docs/scope-delivery.md",
+      "planning_status": "mapped; not evidence of implementation"
+    }
+  },
+  "full_job_acceptance": {
+    "closed_metadata_and_explicit_policy": "actual_checker_prepare_append_retry; unaccepted_policy_refused; server_side_closed_metadata_validation",
+    "restricted_role_and_tenant_access": "role_and_unauthorized_session_denied; tenant_isolation_and_direct_table_denial; temporary_table_tenant_spoof_refused; database_owner_cannot_be_tenant_principal",
+    "immutable_history_and_corrections": "concurrent_first_append_serialized; conflicting_overwrite_refused; supersession_and_fixed_choice_review",
+    "inspectable_versioned_export": "paged_export_and_external_checkpoint; pinned_history_tampering_refused; metadata_tampering_refused",
+    "retention_removal_and_recovery": "current_deletion_overlay_before_access; expired_metadata_hidden_before_sweep; declared_audit_prefix_retention; actual_encrypted_full_backup_with_quarantine; expired_backup_label_cannot_restore",
+    "independent_personal_workflow": "personal_checker_works_with_audit_store_stopped"
+  },
+  "runtime_evidence": "runs/2026-10-15-organization-audit-linux.json",
+  "focused_evidence": "runs/2026-10-15-organization-audit-focused.json",
+  "before": {
+    "complete": 124,
+    "open": 78
+  },
+  "after": {
+    "complete": 125,
+    "open": 77
+  },
+  "records_preserved": 202,
+  "target_open": 60,
+  "remaining_full_closures": 17,
+  "other_acceptance_relaxed": false,
+  "company_collection_enabled": false,
+  "managed_audit_service_operating": false,
+  "independent_accuracy_or_tag_release_asserted": false,
+  "physical_erasure_verified": false,
+  "latest_recovery_authority_is_operator_duty": true
+}

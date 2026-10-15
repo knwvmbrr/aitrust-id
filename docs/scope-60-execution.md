@@ -41,3 +41,18 @@ The scope ledger is authoritative. A case count is not a closure count. Each
 100% record requires actual completed-by attribution, timestamp, full acceptance
 and inspectable evidence. All 202 IDs remain. Target arithmetic in state.json
 must equal the current ledger; no renamed subtasks count as full requirements.
+
+## Full audit-storage closure — October 15
+
+F-161 now has an implemented organization-owned PostgreSQL workflow: explicit
+policy and roles, closed metadata admission, immutable version/review history,
+checkpointed export, expiry/deletion and an actual encrypted recovery drill.
+The source-bound Linux run passed 31 controls, including concurrent append,
+temporary-table spoof refusal and a working personal checker with the store
+stopped. See [operator instructions](organization-audit.md). This completes the
+software job without enabling a hosted service, research intake, certification
+or independent tag release. All other full acceptance remains unchanged.
+
+After this one full closure, the ledger is 125 complete / 77 open. Seventeen
+more full closures are required to reach 60. F-119's acceptance separation
+question remains unanswered; no outside-user criterion has been removed.

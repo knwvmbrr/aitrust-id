@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-145536-organization-audit-complete-3af3aacd",
+  "recorded_at": "2026-10-15T14:55:36.551501+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f67c7e612e14009dc1a413e7be4d4162be56aac5",
+  "changed": "Deliver optional organization-owned PostgreSQL audit software with explicit metadata and retention policies, tenant roles, version/review history, checkpointed exports and encrypted recovery; close F-161 at 125 complete and 77 open.",
+  "proves": "Thirty-eight focused tests and 29 source-bound actual Linux controls cover supported operation and failures, including deletion recovery and standalone personal checking while the audit store is stopped.",
+  "limits": "No company-hosted audit service, automatic collection, certification, independent tag accuracy, physical erasure or whole-host recovery is claimed. Other full acceptance remains unchanged; 17 closures remain to reach 60.",
+  "scope_ids": [
+    "F-161"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "fbb5c7ec3fb2beead9c6aed02295f276a68b8259f0a8186b353b723e6f9703d7",
+    ".github/workflows/metadata-storage.yml": "463541fe855c89c224859e6f9484a3e40f15c9ae2f749b40df559e05c644ae49",
+    "Makefile": "632c4da23318b3e84f977b7be25330067cf78461bcd3f4130cda6b4c6298fc8e",
+    "README.md": "80a41ac7e370f6a08cd175f2f7d8cecf09973b23e6ff1ce0192e46fcc385e29a",
+    "deploy/audit/store.sql": "aff20a33fa64b6f7257448e133187f76be9b69ff763968bc7fe208639a0cfa10",
+    "docs/organization-audit-plan.md": "b0d165ad9b184a5db35c5da0f11737c5246829bdc930e0869c80d3705a00fa24",
+    "docs/organization-audit.md": "8267bb84f888aae2e27530965b45b56f7e5b7bd360a52282c1e177954b7c6e47",
+    "docs/scope-60-execution.md": "e86f79edc889d5dda74fcf1451d005edbb1a19d0aba31a77b21bd1312d9d051c",
+    "docs/scope-progress.json": "67e91a2ac87ef5770b3d0152daf1d63c42952165ec6ee5a3e0a51d885e43ba43",
+    "docs/scope-progress.md": "7cc2270619169eb2319f1bbcb7f3af6cee2bbc3394b421fc77352061be37d910",
+    "docs/scope-task-index.md": "5cc8d91f1fcd1f9ffa9d49301695b0f5fa3d2d859df539c6ce1e407c32942e84",
+    "eval/revalidation.json": "0ff8a1f0c07799cc3c1a0dfd2e30f2c7fd59f7f605879cfadff41066e840cfc4",
+    "eval/route-boundaries.json": "998c283d29f8d1fa615ffc912d0e86bd35cfecae406e15405df91ee0b271fa89",
+    "runs/2026-10-15-organization-audit-acceptance.json": "531f4dcdeca96943af4490a347586e64c33a02d1efad7a11cc692f0ca8e52f06",
+    "runs/2026-10-15-organization-audit-focused.json": "f730497925fe8d937344bf89bbcd476be473607f455b5a36b5be0933a81a5ff4",
+    "runs/2026-10-15-organization-audit-linux.json": "d2e366197a32f7b918e91d8ea4e71c278361244f622c279addef70a70e6deb61",
+    "scripts/organization-audit.py": "d37daae9cbc53b8b4d18286084e4a70c81a3295194a8677763f1458cae5a9b60",
+    "scripts/verify-organization-audit-evidence.py": "7c62c77ae20efe83388ef63fd51a5aa8cc97ca4f2b4839ae01965a57211848a9",
+    "scripts/verify-organization-audit.py": "0bc48696ffa41849f8794fa30b0b3e27a750563a7b68b4c69c1a885ce559527a",
+    "site/index.html": "300647a880792b9f0d09ec041d5b92e40e3c7f6bbcac07f66b19b2b7b4051e20",
+    "site/public/reference/organization-audit-linux.json": "d2e366197a32f7b918e91d8ea4e71c278361244f622c279addef70a70e6deb61",
+    "site/public/reference/organization-audit.md": "8267bb84f888aae2e27530965b45b56f7e5b7bd360a52282c1e177954b7c6e47",
+    "site/public/reference/public-scope.json": "17e637b175aa218e6bc450d0be8e50b190d7fc03e83faeee9c7061b86b598b42",
+    "site/scripts/prepare.mjs": "1cac01bbe654fcaff5c34db1e9208f39d7445735cad259985eeff2e74fc296de",
+    "site/src/catalog.js": "b7f8f7927d608d95ab007b8022aa93db2a23e7279fe8de0fa790c35c0cdeadb8",
+    "site/src/public-scope.json": "17e637b175aa218e6bc450d0be8e50b190d7fc03e83faeee9c7061b86b598b42",
+    "site/src/scope-manifest.json": "bc46f9b02b90bc45b6002a8fa3b0e12a2f796d05a37799b562ff9a92117a578c",
+    "site/src/usage.js": "802319952cffcedec9704485cccefbf7564f82d2fe37e98ff4f00db0a090d6b1",
+    "spec/organization-audit-metadata.schema.json": "ddc883924d3620161eb2d74dbbc59e2188cf72e90ee9bc5424af94ba462ca651",
+    "state.json": "00617debe09f6737e6da4aead2f4bf2c3374da86eab0f6303fec09b48218d1ce",
+    "tests/test_organization_audit.py": "0cd3b8646f9e4b0d226dffb7e5020264777d38953b0e8c8ca77a57d93d69b530",
+    "tools/organization_audit.py": "8a4c5c85c7225788e227a843e85d055e5cc7981e9240f6a6bd7479e287586e91",
+    "tools/organization_audit_lab.py": "d5648a5d566ac5c2b89e6fa7742dce59d52d09b1e59a68d675c4f1cac30660bc",
+    "tools/organization_audit_store.py": "0913861828c8f2d4eb5b1330ed797eee3b8c5b652d78c3cfd3b73a8649e78eb9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-organization-audit-linux.json",
+      "sha256": "d2e366197a32f7b918e91d8ea4e71c278361244f622c279addef70a70e6deb61"
+    },
+    {
+      "path": "runs/2026-10-15-organization-audit-focused.json",
+      "sha256": "f730497925fe8d937344bf89bbcd476be473607f455b5a36b5be0933a81a5ff4"
+    },
+    {
+      "path": "runs/2026-10-15-organization-audit-acceptance.json",
+      "sha256": "531f4dcdeca96943af4490a347586e64c33a02d1efad7a11cc692f0ca8e52f06"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T14:55:36.963637+00:00"
+    }
+  ]
+}
