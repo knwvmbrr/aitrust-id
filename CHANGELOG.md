@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-15
 
+### 2026-10-15-032556-bind-assessed-evidence-snapshot-0d2c7676
+
+Recorded 2026-10-15T03:25:56.132920+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind evidence assessment, captured file digests and final pattern membership to one source snapshot, explicitly fail receipt rows on source capture errors, and give the output-flood test a separate reliable startup budget.
+- **Evidence.** Both new race tests fail against the prior committed implementation and pass after repair. All 24 focused tests and all 28 reference case/profile checks pass. The actual packet still accepts all five current capability receipts and preserves 78 open requirements. [Change record](./runs/changes/2026-10-15-032556-bind-assessed-evidence-snapshot-0d2c7676.json).
+- **Not claimed.** Earlier evidence is preserved. No full requirement closure, acceptance reassignment, independent validation, release, site deployment or collection. Required hosted checks must run on this repaired commit.
+
+
 ### 2026-10-15-031759-conformance-current-evidence-dc0a1d28
 
 Recorded 2026-10-15T03:17:59.318341+00:00 · Contributor: Codex · change

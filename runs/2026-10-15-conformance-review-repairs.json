@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "conformance_review_repairs",
+  "captured_at": "2026-10-15T03:25:56.096078+00:00",
+  "executed_by": "Codex",
+  "pass": true,
+  "review_findings": [
+    "PRRT_kwDOVBYh3s6sm7Nv",
+    "PRRT_kwDOVBYh3s6sm7N0"
+  ],
+  "prior_source_commit": "343ea6ad065014683b7f11846b1a960c172e1871",
+  "prior_implementation_expected_race_failures": 2,
+  "prior_implementation_test_exit": 1,
+  "repaired_focused_tests_passed": 24,
+  "repaired_focused_test_exit": 0,
+  "repaired_stdout_sha256": "dd255e0a48a8ee52bbd72d12d53a84efc1d2eddfd6283cc63db0f8058d22151a",
+  "actual_reference_case_checks_passed": 28,
+  "actual_packet_current_receipts": 5,
+  "actual_packet_open_records": 78,
+  "source_files": {
+    "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+    "tools/evidence_packet.py": "67007cd587505c3a719c523792b5a9685b127d70111efa455fc3b4b095a4f343",
+    "tests/test_conformance_vectors.py": "80e47e6bce0338975f09e2bba371b64bdab58df91b983b4005e7d5afddc6d7af",
+    "tests/test_evidence_packet.py": "f1bbc831a709951cf0e6f73eeb311a7d47f05d65279ceeefa99f13a96a56c92e"
+  },
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "local_full_regression_suite_rerun": false
+}

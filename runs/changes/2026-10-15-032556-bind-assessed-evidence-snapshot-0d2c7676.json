@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-032556-bind-assessed-evidence-snapshot-0d2c7676",
+  "recorded_at": "2026-10-15T03:25:56.132920+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "343ea6ad065014683b7f11846b1a960c172e1871",
+  "changed": "Bind evidence assessment, captured file digests and final pattern membership to one source snapshot, explicitly fail receipt rows on source capture errors, and give the output-flood test a separate reliable startup budget.",
+  "proves": "Both new race tests fail against the prior committed implementation and pass after repair. All 24 focused tests and all 28 reference case/profile checks pass. The actual packet still accepts all five current capability receipts and preserves 78 open requirements.",
+  "limits": "Earlier evidence is preserved. No full requirement closure, acceptance reassignment, independent validation, release, site deployment or collection. Required hosted checks must run on this repaired commit.",
+  "scope_ids": [
+    "F-119",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-10-15-conformance-review-repairs.json": "b7dfde46c9ad13d8bc6efde47865a11a31e4a7c787a53c19f5dd2eb6b4ab3d98",
+    "runs/2026-10-15-conformance-reviewed-reference.json": "9973413056a3cd19d655b11010829563a9c045bc1cadd47661046105addfa976",
+    "state.json": "4d8b874beb9114f14868cdae99173ca4a3bf3b00f63671ff24f8f5365d57bcab",
+    "tests/test_conformance_vectors.py": "80e47e6bce0338975f09e2bba371b64bdab58df91b983b4005e7d5afddc6d7af",
+    "tests/test_evidence_packet.py": "f1bbc831a709951cf0e6f73eeb311a7d47f05d65279ceeefa99f13a96a56c92e",
+    "tools/evidence_packet.py": "67007cd587505c3a719c523792b5a9685b127d70111efa455fc3b4b095a4f343"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-conformance-reviewed-reference.json",
+      "sha256": "9973413056a3cd19d655b11010829563a9c045bc1cadd47661046105addfa976"
+    },
+    {
+      "path": "runs/2026-10-15-conformance-review-repairs.json",
+      "sha256": "b7dfde46c9ad13d8bc6efde47865a11a31e4a7c787a53c19f5dd2eb6b4ab3d98"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T03:25:56.589827+00:00"
+    }
+  ]
+}

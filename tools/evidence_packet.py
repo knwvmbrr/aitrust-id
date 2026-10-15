@@ -33,6 +33,8 @@ def build(root=ROOT):
     if type(selected) is not dict:
         raise ValueError('Selected receipt map refused')
     checks = []
+    snapshots = {}
+    source_drift = False
     for capability in sorted(CAPABILITIES):
         name = selected.get(capability)
         if (type(name) is not str or not re.fullmatch(r'runs/[a-zA-Z0-9_-]+\.json', name)):
@@ -41,15 +43,29 @@ def build(root=ROOT):
         try:
             raw, receipt = capture(root, name)
             captured[name] = raw
+            # Bind assessment, captured bytes and the final source check to
+            # the same fingerprint. A later fingerprint cannot replace it.
+            current = fingerprint(capability, root)
+            snapshots[capability] = current
             assessment = assess(receipt, capability, root)
+            if assessment['pass'] and receipt.get('fingerprint') != current:
+                source_drift = True
+                raise ValueError('Assessment snapshot changed')
             row.update(assessment)
             row['receipt_sha256'] = hashlib.sha256(raw).hexdigest()
             row['executed_at'] = receipt['captured_at'] if assessment['pass'] else None
             # Pin the actual selected source inputs too, including inputs which
             # differ from an older receipt. The index must expose stale evidence.
-            for path in fingerprint(capability, root)['sources']:
-                captured[path] = read_file(root / path, 32_000_000)
+            for path, expected_digest in current['sources'].items():
+                raw_source = read_file(root / path, 32_000_000)
+                if hashlib.sha256(raw_source).hexdigest() != expected_digest:
+                    source_drift = True
+                    raise ValueError('Captured source differs from assessed snapshot')
+                captured[path] = raw_source
         except (OSError, ValueError, TypeError, KeyError, RecursionError):
+            row['pass'] = False
+            row['revalidation_required'] = True
+            row['executed_at'] = None
             row['failures'] = ['receipt_or_current_sources_unavailable']
         checks.append(row)
     records = ledger.get('records')
@@ -62,7 +78,11 @@ def build(root=ROOT):
         raise ValueError('Full scope identity required')
     open_records = [{'id': r['id'], 'required_acceptance': r['required_acceptance']}
                     for r in records if r['percent_complete'] < 100]
-    stable = all(read_file(root / name, 32_000_000) == raw for name, raw in captured.items())
+    stable = (not source_drift
+              and all(fingerprint(capability, root) == snapshot
+                      for capability, snapshot in snapshots.items())
+              and all(read_file(root / name, 32_000_000) == raw
+                      for name, raw in captured.items()))
     return {'schema_version': 1, 'kind': 'source_bound_evidence_packet',
             'captured_at': datetime.now(timezone.utc).isoformat(),
             'packet_valid': stable, 'source_unchanged_during_inspection': stable,

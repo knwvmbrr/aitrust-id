@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T03:17:56.471807+00:00",
+  "updated": "2026-10-15T03:25:56.096759+00:00",
   "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1090,7 +1090,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T03:17:56.471807+00:00",
+  "updated_at": "2026-10-15T03:25:56.096759+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2670,10 +2670,12 @@
     "status": "implemented_and_focused_checked; current_protocol_and_website_checks_pass; protected_delivery_pending",
     "vector_profile": "aitrust-assertion-vectors/1.0.0",
     "reference_cases_passed": 28,
-    "focused_tests_passed": 22,
+    "focused_tests_passed": 24,
     "evidence": [
       "runs/2026-10-15-conformance-evidence-focused.json",
-      "runs/2026-10-15-conformance-reference-vectors.json"
+      "runs/2026-10-15-conformance-reference-vectors.json",
+      "runs/2026-10-15-conformance-reviewed-reference.json",
+      "runs/2026-10-15-conformance-review-repairs.json"
     ],
     "conformance_guide": "docs/conformance-runner.md",
     "evidence_guide": "docs/evidence-packet.md",

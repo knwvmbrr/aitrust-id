@@ -21,7 +21,7 @@ def fixture(tmp_path):
         path.write_text(json.dumps(value))
     for c in module.CAPABILITIES:
         path=tmp_path/('runs/'+c+'.json');path.parent.mkdir(exist_ok=True)
-        path.write_text(json.dumps({'captured_at':'2026-10-10T10:00:00Z'}))
+        path.write_text(json.dumps({'captured_at':'2026-10-10T10:00:00Z', 'fingerprint': {'sources': {}}}))
     return state
 
 
@@ -86,3 +86,34 @@ def test_actual_current_repository_packet_and_cli():
     assert not cli.stderr
     assert cli.returncode==(0 if value['engineering_checks_current'] else 1)
     assert value['release_approved'] is False
+
+
+def test_source_edit_after_assessment_cannot_become_the_accepted_snapshot(tmp_path,monkeypatch):
+    import hashlib
+    fixture(tmp_path);controls(monkeypatch)
+    source=tmp_path/'selected.py';source.write_bytes(b'old')
+    snapshot={'sources':{'selected.py':hashlib.sha256(b'old').hexdigest()}}
+    for c in module.CAPABILITIES:
+        p=tmp_path/('runs/'+c+'.json');v=json.loads(p.read_text());v['fingerprint']=snapshot;p.write_text(json.dumps(v))
+    monkeypatch.setattr(module,'fingerprint',lambda c,root:snapshot)
+    original=module.assess
+    def edit_after_assessment(receipt,c,root):
+        result=original(receipt,c,root)
+        source.write_bytes(b'new')
+        return result
+    monkeypatch.setattr(module,'assess',edit_after_assessment)
+    result=module.build(tmp_path)
+    assert result['packet_valid'] is False
+    assert result['engineering_checks_current'] is False
+
+
+def test_new_matching_source_after_assessment_invalidates_snapshot(tmp_path,monkeypatch):
+    fixture(tmp_path);controls(monkeypatch)
+    calls=0
+    def changing_fingerprint(c,root):
+        nonlocal calls
+        calls+=1
+        return {'sources':{}} if calls<=len(module.CAPABILITIES) else {'sources':{'new-source.py':'a'*64}}
+    monkeypatch.setattr(module,'fingerprint',changing_fingerprint)
+    result=module.build(tmp_path)
+    assert result['packet_valid'] is False and result['engineering_checks_current'] is False

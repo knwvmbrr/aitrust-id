@@ -70,12 +70,12 @@ def test_missing_executable_is_unavailable_without_echo(tmp_path):
 
 
 def test_output_flood_and_timeout_are_bounded(tmp_path):
-    for program, expected in [('import sys\nsys.stdout.write("x"*100_000)',
-                               'implementation_output_limit'),
-                              ('import time\ntime.sleep(5)', 'implementation_timeout')]:
+    for program, expected, budget in [('import sys\nsys.stdout.write("x"*100_000)',
+                                       'implementation_output_limit', 1.0),
+                                      ('import time\ntime.sleep(5)', 'implementation_timeout', .05)]:
         command = adapter(tmp_path, program)
         def short(argv, **kwargs):
-            return run_worker(argv, **{**kwargs, 'timeout': .05})
+            return run_worker(argv, **{**kwargs, 'timeout': budget})
         result = module.run(command, ('schema',), supervisor=short)
         assert not result['pass']
         assert all(r['failure'] == expected for r in result['checks'])
