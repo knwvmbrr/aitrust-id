@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-15T03:11:02.842307+00:00",
+  "kind": "focused_conformance_evidence_checks",
+  "executed_by": "Codex",
+  "pass": true,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_conformance_vectors.py",
+        "-q"
+      ],
+      "exit": 0,
+      "passed": 12,
+      "observed_seconds": 6.0
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_evidence_packet.py",
+        "-q"
+      ],
+      "exit": 0,
+      "passed": 10,
+      "observed_seconds": 1.72
+    }
+  ],
+  "sources_captured_after_execution": {
+    "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+    "scripts/check-conformance-vectors.py": "11d50fbc2b6c0a04cb3de12880bb381bea16b52dd1f80356456fa3d5fdf29504",
+    "eval/conformance/assertion-v1.json": "aa30aef56eeff6657b68b315dc4f64b1756ee9eb8c9c54db76159a633c09b745",
+    "tests/test_conformance_vectors.py": "9edd36f9e54c897abbe5509375825b9d0a56febf33c5d19c029cd9285428b9be",
+    "tools/evidence_packet.py": "8cc6ff36af6cc2ef2a86b575d6e3c04d2ff1601c3cd4559bb25f7b77d1381b80",
+    "scripts/build-evidence-packet.py": "3c24083e5de227cd8289bf2d6529d0acf6ba93e19dbe42f227441030d9fe6a13",
+    "tests/test_evidence_packet.py": "13c007c79a6f4876abba26519b74b4547e2960e8497d5c507e9991375b0b0078"
+  },
+  "local_full_regression_suite_rerun": false,
+  "independent_accuracy_evidence": false,
+  "outside_person_acceptance": false,
+  "release_approved": false
+}

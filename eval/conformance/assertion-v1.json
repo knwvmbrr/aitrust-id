@@ -1,0 +1,120 @@
+{
+  "profile": "aitrust-assertion-vectors/1.0.0",
+  "spec_version": "0.1.0",
+  "synthetic_only": true,
+  "independent_accuracy_evidence": false,
+  "cases": [
+    {
+      "id": "supported-record",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "accepted"
+      }
+    },
+    {
+      "id": "no-finding",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "accepted"
+      }
+    },
+    {
+      "id": "impossible-date",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-02-31T00:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "invalid",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "invalid-identity",
+      "raw": "{\"assertion_id\":\"invalid\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "invalid",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "below-floor",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.6,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "outside-subject",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[0,101]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "duplicate-tag",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]},{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "untrusted-signature",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1},\"signature\":{\"alg\":\"ed25519\",\"key_id\":\"untrusted\",\"sig\":\"unverified\"}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "unsupported"
+      }
+    },
+    {
+      "id": "reserved-modality",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"image\"},\"tags\":[{\"code\":\"PS\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "accepted",
+        "extension": "unsupported"
+      }
+    },
+    {
+      "id": "unknown-tag",
+      "raw": "{\"assertion_id\":\"eadf909b-7723-4431-b200-1a4cb56c538b\",\"spec_version\":\"0.1.0\",\"subject\":{\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"char_len\":100,\"origin_host\":\"chatgpt.com\",\"captured_at\":\"2026-10-10T10:00:00Z\",\"modality\":\"text\"},\"tags\":[{\"code\":\"UNKNOWN\",\"state\":\"asserted\",\"confidence\":0.97,\"floor\":0.7,\"signals\":[{\"id\":\"sig.piped_installer.v3\",\"score\":0.97,\"spans\":[[4,20]]}]}],\"abstentions\":[],\"evaluator\":{\"models\":[{\"name\":\"rules-only\",\"sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}],\"calibration_id\":\"synthetic\",\"latency_ms\":1}}",
+      "expected": {
+        "schema": "invalid",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "future-layout",
+      "raw": "{\"spec_version\":\"0.2.0\",\"new_layout\":{}}",
+      "expected": {
+        "schema": "unsupported",
+        "extension": "unsupported"
+      }
+    },
+    {
+      "id": "duplicate-key",
+      "raw": "{\"spec_version\":\"0.1.0\",\"spec_version\":\"0.2.0\"}",
+      "expected": {
+        "schema": "invalid",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "nonfinite",
+      "raw": "NaN",
+      "expected": {
+        "schema": "invalid",
+        "extension": "invalid"
+      }
+    },
+    {
+      "id": "nonobject",
+      "raw": "[]",
+      "expected": {
+        "schema": "invalid",
+        "extension": "invalid"
+      }
+    }
+  ]
+}

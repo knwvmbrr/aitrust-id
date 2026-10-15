@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased — 2026-10-15
+
+### 2026-10-15-032556-bind-assessed-evidence-snapshot-0d2c7676
+
+Recorded 2026-10-15T03:25:56.132920+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind evidence assessment, captured file digests and final pattern membership to one source snapshot, explicitly fail receipt rows on source capture errors, and give the output-flood test a separate reliable startup budget.
+- **Evidence.** Both new race tests fail against the prior committed implementation and pass after repair. All 24 focused tests and all 28 reference case/profile checks pass. The actual packet still accepts all five current capability receipts and preserves 78 open requirements. [Change record](./runs/changes/2026-10-15-032556-bind-assessed-evidence-snapshot-0d2c7676.json).
+- **Not claimed.** Earlier evidence is preserved. No full requirement closure, acceptance reassignment, independent validation, release, site deployment or collection. Required hosted checks must run on this repaired commit.
+
+
+### 2026-10-15-031759-conformance-current-evidence-dc0a1d28
+
+Recorded 2026-10-15T03:17:59.318341+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the successful current protocol and website checks, preserve the earlier changelog-prebuild refusal, and refresh the selected unchanged personal-route boundary inventory after adding public tool guides.
+- **Evidence.** 26 protocol commands and 19 website commands pass with stable sources. The actual require-current evidence-packet command accepts all five selected receipts and retains 78 open requirements and false release approval. Route-boundary and state chronology checks pass. [Change record](./runs/changes/2026-10-15-031759-conformance-current-evidence-dc0a1d28.json).
+- **Not claimed.** No new full closure, independent labels, physical-phone/human acceptance, license clearance, site deployment or production collection. Acceptance reassignment remains pending the owner answer.
+
+
+### 2026-10-15-031447-conformance-tools-and-scope-target-4d4d75cf
+
+Recorded 2026-10-15T03:14:47.736089+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a pinned 28-check interoperability runner for explicitly selected local implementations, a source-bound evidence packet index, public usage guides and the owner-directed target of 60 open requirements; correct the owner guide to the already approved pilot contract.
+- **Evidence.** Actual reference vectors pass 28/28; 12 focused runner tests and 10 focused packet tests pass; 49 existing accountability/scope checks pass; the current protocol receipt passes 26 commands. [Change record](./runs/changes/2026-10-15-031447-conformance-tools-and-scope-target-4d4d75cf.json).
+- **Not claimed.** No full requirement closure or acceptance reassignment; existing outside-person, independent accuracy, license and human gates remain. The first website attempt stopped at the required changelog prebuild gate because this event was not yet recorded; the failed receipt is preserved. No production collection or site deployment occurred.
+
+
 ## Unreleased — 2026-10-14
 
 ### 2026-10-14-184518-research-http-browser-pointer-aligned-890ffc71

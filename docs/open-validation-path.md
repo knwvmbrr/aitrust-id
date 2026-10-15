@@ -115,6 +115,24 @@ Check a record from your own implementation entirely offline:
 .venv/bin/python scripts/check-assertion.py --profile extension your-record.json
 ```
 
+Run the published interoperability cases against the reference checker:
+
+```sh
+python3 scripts/check-conformance-vectors.py
+```
+
+To test your own trusted local checker, supply its executable and arguments:
+
+```sh
+python3 scripts/check-conformance-vectors.py --implementation python3 /path/to/your/checker.py
+```
+
+The runner sends invented JSON to standard input and appends `--profile schema`
+or `--profile extension`. It checks all 28 case/profile combinations against the
+versioned expected results. It launches executable code you select; it is not a
+sandbox. A pass covers these cases only, not accuracy, certification or outside
+human acceptance. See [the adapter contract and results](conformance-runner.md).
+
 The first command checks the full schema and required date/UUID formats. The
 second also uses the actual current extension profile (Node is required for that
 profile). Exit 0 means the selected structural checks accepted the record; 1 means
