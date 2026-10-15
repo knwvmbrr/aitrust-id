@@ -2,3 +2,6 @@
 * -text
 # Preserve upstream notice formatting without applying source whitespace cleanup.
 sbom/notices/*.txt -text -whitespace
+
+# Preserve upstream native licensing declaration formatting.
+sbom/native/sources/*.txt -whitespace

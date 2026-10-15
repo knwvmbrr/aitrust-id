@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-10-15T04:05:36.960080+00:00",
+  "started_at": "2026-10-15T04:05:36.476833+00:00",
+  "implemented_by": "Codex",
+  "pass": true,
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_native_inventory.py",
+    "-q"
+  ],
+  "exit_status": 0,
+  "stdout_sha256": "33ab5521f069d67100385932f9b224cca1a30999519f56b10c81ecd820d8e643",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "focused_tests_passed": 32,
+  "archive_replay": "runs/2026-10-15-native-archive-replay.json",
+  "sources": {
+    "tools/native_inventory.py": "a839c3043e3a542634ecba6e3a289dd5035efbf66081ccd33974445b740c2bf9",
+    "scripts/verify-native-dependencies.py": "6de88de15c06808040d2c675df6ef13f591980a10ab457600064f14b73f3e46d",
+    "tests/test_native_inventory.py": "e0e919841f954ccdcf86247338708fce946d06d4a178e3ea32c8bf5c09489dcf",
+    "sbom/native/manifest.json": "5553b42d8ff154fd7596174e884e48ea83839c0aefa8170d01c2c3a5c1f58a33"
+  },
+  "initial_refusal": {
+    "reason": "Three locked workerd executable members exceed the default 128 MiB bound",
+    "inventory_written": false,
+    "repair": "Exact archive SHA-256 and member-name exceptions; all other members retain original bound"
+  },
+  "full_requirements_closed": [],
+  "independent_accuracy_evidence": false,
+  "permission_cleared": false
+}

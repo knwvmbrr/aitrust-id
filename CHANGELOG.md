@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-10-15
 
+### 2026-10-15-041326-native-current-capabilities-b41c43cd
+
+Recorded 2026-10-15T04:13:26.849306+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh affected capability receipts for the shared manifest change; distinguish successful native Chrome opening from the earlier unavailable browser bridge and record paused-control wording defect.
+- **Evidence.** All five capability receipts and route boundary checks are current. The live vendor observation used an existing response with checks paused and no data processing. [Change record](./runs/changes/2026-10-15-041326-native-current-capabilities-b41c43cd.json).
+- **Not claimed.** The observed paused-control wording needs a separate repair. No live evaluation, source-SHA match, human accessibility or independent tag accuracy is credited; no full requirement closes.
+
+
+### 2026-10-15-041046-native-accepted-evidence-82f635a7
+
+Recorded 2026-10-15T04:10:46.315124+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current protocol and website acceptance, source-bound route inventory, and the unavailable current Chrome capture attempt.
+- **Evidence.** 27 protocol commands and 19 website commands pass; current route inventory binds the added native verifier. Chrome availability failure is retained without a live-vendor claim. [Change record](./runs/changes/2026-10-15-041046-native-accepted-evidence-82f635a7.json).
+- **Not claimed.** No full requirement closes; independent accuracy, legal permission and actual current vendor capture remain open. Production services and collection unchanged.
+
+
+### 2026-10-15-040744-native-execution-records-826c7fd1
+
+Recorded 2026-10-15T04:07:44.420813+00:00 · Contributor: Codex · change
+
+- **Changed.** Record successful current protocol checks and preserved website refusal caused by newly unrecorded execution files.
+- **Evidence.** 27 protocol checks pass on current source; the changelog gate refuses new evidence files until attributed. [Change record](./runs/changes/2026-10-15-040744-native-execution-records-826c7fd1.json).
+- **Not claimed.** First website execution refused prebuild bookkeeping, not detector behavior. Full acceptance unchanged.
+
+
+### 2026-10-15-040546-native-dependency-observations-a25c6827
+
+Recorded 2026-10-15T04:05:46.728602+00:00 · Contributor: Codex · change
+
+- **Changed.** Add bounded native dependency observations, unchanged upstream declarations, archive replay and CI verification; record PR77 protected delivery.
+- **Evidence.** All 205 locked artifacts replayed; 32 focused checks pass; native and executable candidates and declarations remain inspectable. [Change record](./runs/changes/2026-10-15-040546-native-dependency-observations-a25c6827.json).
+- **Not claimed.** No full requirement closes. One nested archive remains uninspected; upstream declarations are not license clearance, authenticated publishers or independent accuracy. Existing acceptance remains unchanged.
+
+
 ### 2026-10-15-032556-bind-assessed-evidence-snapshot-0d2c7676
 
 Recorded 2026-10-15T03:25:56.132920+00:00 · Contributor: Codex · change

@@ -109,6 +109,8 @@ jobs:
       - run: python scripts/verify-dependencies.py
       - name: Check preserved component notice identity without claiming legal clearance
         run: python scripts/verify-redistribution-notices.py
+      - name: Verify native observations without claiming transitive or license clearance
+        run: python scripts/verify-native-dependencies.py
       - name: Refuse corrupted notice evidence and permission promotion
         run: python -m pytest tests/test_license_notices.py -q
       - name: Exercise independent editorial choices and private input refusals

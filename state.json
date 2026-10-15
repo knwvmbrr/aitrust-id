@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T03:25:56.096759+00:00",
-  "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
+  "updated": "2026-10-15T04:13:25.297207+00:00",
+  "active_increment": "Native dependency evidence integrated; target 60 open full requirements; no independent-release waiver",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -759,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-15T03:11:02.842307+00:00",
+    "audited_at": "2026-10-15T04:05:36.961144+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -775,13 +775,13 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/conformance-evidence-result.md",
+    "latest_increment": "docs/native-dependency-evidence.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 18,
-    "publication_pending": false,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
@@ -1082,15 +1082,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-14-tag-isolation-cold-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-14-tag-isolation-cold-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-15-conformance-current-protocol.json",
-    "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
-    "website": "runs/2026-10-15-conformance-recorded-website.json",
+    "PS": "runs/2026-10-15-native-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-15-native-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-15-native-current-protocol.json",
+    "extension": "runs/2026-10-15-native-current-extension.json",
+    "website": "runs/2026-10-15-native-accepted-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T03:25:56.096759+00:00",
+  "updated_at": "2026-10-15T04:13:25.297207+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2667,7 +2667,7 @@
     }
   },
   "conformance_tools": {
-    "status": "implemented_and_focused_checked; current_protocol_and_website_checks_pass; protected_delivery_pending",
+    "status": "merged_through_protected_checks; independent_accuracy_and_outside_acceptance_open",
     "vector_profile": "aitrust-assertion-vectors/1.0.0",
     "reference_cases_passed": 28,
     "focused_tests_passed": 24,
@@ -2684,6 +2684,32 @@
     "release_approved": false,
     "acceptance_reallocation": "pending_owner_answer; existing criteria retained",
     "current_protocol_receipt": "runs/2026-10-15-conformance-current-protocol.json",
-    "current_website_receipt": "runs/2026-10-15-conformance-recorded-website.json"
-  }
+    "current_website_receipt": "runs/2026-10-15-conformance-recorded-website.json",
+    "source_commit": "9e40a5a8c37d42ab999a5331a8a87f08883b5be1",
+    "protected_merge": "runs/2026-10-15-conformance-protected-merge.json",
+    "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/77"
+  },
+  "native_dependency_evidence": {
+    "status": "actual_archive_replay_and_focused_controls_pass; protected_delivery_pending",
+    "implemented_by": "Codex",
+    "artifacts": 205,
+    "native_executable_candidates": 146,
+    "licensing_declarations": 54,
+    "version_declarations": 14,
+    "uninspected_nested_archives": 1,
+    "focused_tests_passed": 32,
+    "guide": "docs/native-dependency-evidence.md",
+    "inventory": "sbom/native/manifest.json",
+    "archive_replay": "runs/2026-10-15-native-archive-replay.json",
+    "focused_controls": "runs/2026-10-15-native-focused-controls.json",
+    "observation_authenticated": false,
+    "permission_cleared": false,
+    "complete_transitive_coverage": false,
+    "independent_accuracy_evidence": false,
+    "full_requirements_closed": [],
+    "current_protocol_receipt": "runs/2026-10-15-native-current-protocol.json",
+    "current_website_receipt": "runs/2026-10-15-native-accepted-website.json",
+    "retained_website_refusal": "runs/2026-10-15-native-current-website.json"
+  },
+  "current_capture_attempt": "runs/2026-10-15-current-capture-paused-observation.json"
 }
