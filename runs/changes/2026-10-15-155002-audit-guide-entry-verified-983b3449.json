@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-155002-audit-guide-entry-verified-983b3449",
+  "recorded_at": "2026-10-15T15:50:02.633855+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "24ec1ff5a365441ffe19b772c7121664af77b12b",
+  "changed": "Verify the actual interactive audit-guide entry and carry the protected audit-software merge and byte-matched public deployment into the repository.",
+  "proves": "All 20 current website commands and all eight build phases pass; unchanged personal/protocol receipts stay current. Published scope remains 125 complete and 77 open.",
+  "limits": "No new requirement closure, hosted service, collection or independent tag validation.",
+  "scope_ids": [
+    "F-161"
+  ],
+  "files": {
+    "docs/audit-guide-entry-plan.md": "94a8afcec5ddcb530909ccfd6579863af3720e87b98b36d4f27c932e8ef1cc91",
+    "eval/route-boundaries.json": "63a2ec43667c4a1feaffd96ae02b3fccdaa26e520983c79603cbb05a373b551d",
+    "runs/2026-10-15-audit-guide-entry-phases.json": "5d8c7386b0f789a21670a54b076d62023f511ce8e231c60a6e98d74cbd3d5f4f",
+    "runs/2026-10-15-audit-guide-entry-website.json": "37e13b74d4d1edd7a40b369582211de4c879f7c2899d28989ab8ad393d3ba5ad",
+    "runs/2026-10-15-organization-audit-protected-publication.json": "3dc1b4c9d1d0f50750ae1d9da52405792bb59b6656b0dd14b621a5f3bea23e09",
+    "scripts/verify-site.cjs": "3de9e6a4ceab90bfb098ebe7af551294eb5fdcedfdef978535510df4498a018a",
+    "site/index.html": "8e3b134e7c09df39a64e51693d29a6628717d197ad525b20fcaf2f502165d700",
+    "site/public/reference/tag-performance.json": "cf0265244c7eba136bda1dfeca678728c7ddd0ed1fe0a26a9609a3872189cf35",
+    "site/src/main.jsx": "fbcd595633b313993abc3b0ad00a78616a37f0590c3a156f08d06d082a5cf75a",
+    "site/src/performance-model.js": "238a7b7faab1c37d7a74ef02af52fa51fa41317e6a98aa618df89f60cea2c3a5",
+    "site/src/tag-performance.json": "cf0265244c7eba136bda1dfeca678728c7ddd0ed1fe0a26a9609a3872189cf35",
+    "site/src/usage.js": "2e35469ebebb44a8d17c33ad741b0549f3848b3e148d4c0e6d05edad3af281b6",
+    "state.json": "a93e39e76301f05473a2858fbfa60ae49fe9500d58841313d42414d6a1c243b6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-audit-guide-entry-website.json",
+      "sha256": "37e13b74d4d1edd7a40b369582211de4c879f7c2899d28989ab8ad393d3ba5ad"
+    },
+    {
+      "path": "runs/2026-10-15-audit-guide-entry-phases.json",
+      "sha256": "5d8c7386b0f789a21670a54b076d62023f511ce8e231c60a6e98d74cbd3d5f4f"
+    },
+    {
+      "path": "runs/2026-10-15-organization-audit-protected-publication.json",
+      "sha256": "3dc1b4c9d1d0f50750ae1d9da52405792bb59b6656b0dd14b621a5f3bea23e09"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T15:50:03.223552+00:00"
+    }
+  ]
+}

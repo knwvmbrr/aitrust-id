@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-154420-audit-guide-rendered-model-c269da11",
+  "recorded_at": "2026-10-15T15:44:20.724342+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "24ec1ff5a365441ffe19b772c7121664af77b12b",
+  "changed": "Refresh the generated performance and static catalogue models for the corrected audit-guide entry.",
+  "proves": "Unchanged PS, privacy, protocol and extension receipts remain current; only website behavior is affected.",
+  "limits": "No new scope closure, detector change or hosted-service claim.",
+  "scope_ids": [
+    "F-161"
+  ],
+  "files": {
+    "docs/audit-guide-entry-plan.md": "94a8afcec5ddcb530909ccfd6579863af3720e87b98b36d4f27c932e8ef1cc91",
+    "scripts/verify-site.cjs": "3de9e6a4ceab90bfb098ebe7af551294eb5fdcedfdef978535510df4498a018a",
+    "site/index.html": "8e3b134e7c09df39a64e51693d29a6628717d197ad525b20fcaf2f502165d700",
+    "site/public/reference/tag-performance.json": "cf0265244c7eba136bda1dfeca678728c7ddd0ed1fe0a26a9609a3872189cf35",
+    "site/src/main.jsx": "fbcd595633b313993abc3b0ad00a78616a37f0590c3a156f08d06d082a5cf75a",
+    "site/src/performance-model.js": "238a7b7faab1c37d7a74ef02af52fa51fa41317e6a98aa618df89f60cea2c3a5",
+    "site/src/tag-performance.json": "cf0265244c7eba136bda1dfeca678728c7ddd0ed1fe0a26a9609a3872189cf35",
+    "site/src/usage.js": "2e35469ebebb44a8d17c33ad741b0549f3848b3e148d4c0e6d05edad3af281b6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-organization-audit-reviewed-linux.json",
+      "sha256": "3ec450a004117cc88dd4bcb1e631e39a1bcebd51152ac287815dc9d8c55ae8c9"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T15:44:21.232237+00:00"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T15:28:07.126798+00:00",
-  "active_increment": "Organization-operated audit software complete; 77 open full requirements, target 60",
+  "updated": "2026-10-15T15:50:00.629441+00:00",
+  "active_increment": "Audit guide entry corrected and checked; 77 open full requirements, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-14-research-http-live-publication.json",
+    "evidence": "runs/2026-10-15-organization-audit-protected-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -296,7 +296,7 @@
     "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "deployment": "https://842da8d4.aitrust-id.pages.dev",
-    "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+    "source_commit": "24ec1ff5a365441ffe19b772c7121664af77b12b",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -781,7 +781,7 @@
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 17,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
@@ -805,7 +805,8 @@
         },
         "reason": "Owner changed immediate target from 45 to 60; preserve full scope and acceptance."
       }
-    ]
+    ],
+    "latest_increment_publication": "runs/2026-10-15-organization-audit-protected-publication.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1088,11 +1089,11 @@
     "PII_REDACTED": "runs/2026-10-15-organization-audit-reviewed-current-PII_REDACTED.json",
     "protocol": "runs/2026-10-15-organization-audit-reviewed-current-protocol.json",
     "extension": "runs/2026-10-15-organization-audit-reviewed-current-extension.json",
-    "website": "runs/2026-10-15-organization-audit-reviewed-current-website.json",
+    "website": "runs/2026-10-15-audit-guide-entry-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T15:28:07.126798+00:00",
+  "updated_at": "2026-10-15T15:50:00.629441+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2748,6 +2749,19 @@
     "personal_checking_independent": true,
     "physical_erasure_verified": false,
     "independent_tag_accuracy_evidence": false,
-    "website_checks": "runs/2026-10-15-organization-audit-reviewed-site-phases.json"
+    "website_checks": "runs/2026-10-15-organization-audit-reviewed-site-phases.json",
+    "publication": "runs/2026-10-15-organization-audit-protected-publication.json",
+    "source_published": true
+  },
+  "audit_guide_entry": {
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-161"
+    ],
+    "website": "runs/2026-10-15-audit-guide-entry-website.json",
+    "build_phases": "runs/2026-10-15-audit-guide-entry-phases.json",
+    "requirements_closed": 0,
+    "guide_link_and_software_status_verified": true,
+    "publication_pending": true
   }
 }

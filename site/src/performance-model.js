@@ -66,7 +66,7 @@ const nextTests={
  BT:'Test positive automation evidence against human and assistive-input counterexamples.',
  fleet:'Test deployment, version rollback and per-tag policy isolation.',
  host:'Test consented capture, permissions and artifact binding.',
- audit:'Test record retention, corrections, authorized access and deletion.',
+ audit:'Independent security review and managed-service operating acceptance.',
  sso:'Test access roles, revocation and organization separation.',
  support:'Validate the actual support workflow before promising response times.',
  proprietary:'Test private-policy boundaries without weakening public tag standards.'
@@ -78,6 +78,7 @@ export function performanceFor(tag,evidence,timing=null,redaction=null) {
   summary:tag.id==='PII_REDACTED'?'Redaction procedure checked; recognition accuracy not measured.':tag.audience==='enterprise'?'Organization capability; performance not measured.':'No measured results for this tag yet.',
   sources:[],device:null,pipeline:timing?pipelineTimingFor(tag,timing):null};
  if(tag.id==='PII_REDACTED'&&redaction)return {...base,summary:'English redaction development checks · not independent validation',redaction,measured_at:redaction.measured_at,sources:[redaction.sources.report],next_test:'Independently review recognition, extra masking and real-user operation.'};
+ if(tag.id==='audit')return {...base,stage:'Self-hosted software',summary:'Self-hosted workflow checked; hosted-service performance not measured.',sources:['/reference/organization-audit-linux.json']};
  if(tag.id!=='PS')return base;
  return {...base,accuracy_measured:true,summary:'Development examples · not an independent accuracy study',
   categories:categoryGroups(evidence.category_metrics),measured_at:evidence.captured_at,metrics:evidence.metrics,counts:evidence.counts,case_count:evidence.case_count,

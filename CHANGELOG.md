@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-15
 
+### 2026-10-15-155002-audit-guide-entry-verified-983b3449
+
+Recorded 2026-10-15T15:50:02.633855+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify the actual interactive audit-guide entry and carry the protected audit-software merge and byte-matched public deployment into the repository.
+- **Evidence.** All 20 current website commands and all eight build phases pass; unchanged personal/protocol receipts stay current. Published scope remains 125 complete and 77 open. [Change record](./runs/changes/2026-10-15-155002-audit-guide-entry-verified-983b3449.json).
+- **Not claimed.** No new requirement closure, hosted service, collection or independent tag validation.
+
+
+### 2026-10-15-154420-audit-guide-rendered-model-c269da11
+
+Recorded 2026-10-15T15:44:20.724342+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the generated performance and static catalogue models for the corrected audit-guide entry.
+- **Evidence.** Unchanged PS, privacy, protocol and extension receipts remain current; only website behavior is affected. [Change record](./runs/changes/2026-10-15-154420-audit-guide-rendered-model-c269da11.json).
+- **Not claimed.** No new scope closure, detector change or hosted-service claim.
+
+
+### 2026-10-15-154309-audit-guide-entry-f5928a10
+
+Recorded 2026-10-15T15:43:09.987921+00:00 · Contributor: Codex · change
+
+- **Changed.** Give the interactive and static AUDIT panels the same direct self-hosted guide and personal export links; distinguish checked software from unmeasured hosted-service performance.
+- **Evidence.** The browser gate now checks the actual guide anchor, served instructions and correct per-offering status. No detection accuracy or hosted availability is inferred. [Change record](./runs/changes/2026-10-15-154309-audit-guide-entry-f5928a10.json).
+- **Not claimed.** Navigation and wording correction only; 125 complete and 77 open remain unchanged.
+
+
 ### 2026-10-15-152808-organization-audit-reviewed-current-84de0b94
 
 Recorded 2026-10-15T15:28:08.658649+00:00 · Contributor: Codex · change
