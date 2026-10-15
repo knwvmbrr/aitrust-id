@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-15T15:28:07.350675+00:00",
+  "reviewed_at": "2026-10-15T15:50:00.934494+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -658,7 +658,7 @@
     "services/research/README.md": "e11abacded59695fc1e387fabc4bf0624130c602b2ee127eb4fa19ea687d1947",
     "services/research/app.py": "fda68d9e7a2116a7077df0eb3228185ed93759c3921424321e6793321d0a1644",
     "services/research/worker.py": "afdd46992e45f38661c8f3d9fbb10c4e30195e697cd81816cb1ef4448bd9b685",
-    "site/index.html": "6aaf98d075cfd428a7187ff4a1cc9d498d9de58c125f9873ad1d4ffbfd392db3",
+    "site/index.html": "8e3b134e7c09df39a64e51693d29a6628717d197ad525b20fcaf2f502165d700",
     "site/package.json": "d9cd79fad161ea17a8521ad721a19eebab0b766a4209bdcd56d74d83fa66a11d",
     "site/public/404.html": "c142135861339de18d96d48923da0012af2c1a894f8ea2179416030b9557c8f1",
     "site/public/_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
@@ -692,9 +692,9 @@
     "site/src/device-client.js": "53e6e8fe5de3f6650bbd894f4af9138e92a7c697e0d827bdce13921edf3e39c5",
     "site/src/device-worker.js": "b327e1c5984d954e3a2a6f369e3462b6ccc13d3e6d6db7fe56dd2dccfb0d39ee",
     "site/src/handheld.jsx": "438815d794b55490d9ac68c209469d9f98f299c229f77315685a447457c9fbf8",
-    "site/src/main.jsx": "ad6748e995955990108c28076cdbff631a117b9c9393287e50d7a38e98661e11",
+    "site/src/main.jsx": "fbcd595633b313993abc3b0ad00a78616a37f0590c3a156f08d06d082a5cf75a",
     "site/src/model-tools.js": "933a9eeadc5b8e4b2f49f287443de834f056496c63b24cbca79f643f8911b83e",
-    "site/src/performance-model.js": "28f2dd36c09e0907ce39c6a656b98b92da6299358dd8b5cf3c137ca16826349d",
+    "site/src/performance-model.js": "238a7b7faab1c37d7a74ef02af52fa51fa41317e6a98aa618df89f60cea2c3a5",
     "site/src/performance.jsx": "32499c5ab927a6ebcda94cde6b88c15537ed5b196ac3d11f6cd5c4990cf8595f",
     "site/src/pipeline-timing-model.js": "3e5feb2b4088a1022b84b2e5c6aeb3c192c221c5dc27eb36cd11b0956ce9e0cc",
     "site/src/policies.js": "4e375fb0c7852b5134af7adc8fe98fff403bac69460dff3d8fc6234c9dbea03f",
@@ -708,8 +708,8 @@
     "site/src/scope-manifest.json": "b59c1f9fc4f49b2a15188fd91ed16f9bd90c3db600ffa8d09f5b7ba2893e0148",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "76b056cd59251d5f6ec3538f6ef54cd659fec52a4a963d6741ed4ec39980aed2",
-    "site/src/tag-performance.json": "28837e77c8de1a9d8d19d0f495a8128ddb50f9f0796d3ff12559ae95d767adad",
-    "site/src/usage.js": "802319952cffcedec9704485cccefbf7564f82d2fe37e98ff4f00db0a090d6b1",
+    "site/src/tag-performance.json": "cf0265244c7eba136bda1dfeca678728c7ddd0ed1fe0a26a9609a3872189cf35",
+    "site/src/usage.js": "2e35469ebebb44a8d17c33ad741b0549f3848b3e148d4c0e6d05edad3af281b6",
     "site/src/workflows/About.jsx": "a59306cff4d0ce922462965aa2da9ce33322f85e3966b628912762a8a6509f99",
     "site/src/workflows/Assist.jsx": "96ffd98b5c65a8b84ba9f4860aafc1378ef74d6a6ba0a3211d210833b4617106",
     "site/src/workflows/HowTagsWork.jsx": "c45c28fcfb0d53ccab848d1081c07cfe6faa54389dc75d7779b756951be04674",
@@ -877,7 +877,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-15-organization-audit-reviewed-current-extension.json",
-    "website": "runs/2026-10-15-organization-audit-reviewed-current-website.json"
+    "website": "runs/2026-10-15-audit-guide-entry-website.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

@@ -1,0 +1,60 @@
+{
+  "captured_at": "2026-10-15T15:46:55.227Z",
+  "pass": true,
+  "source_commit": "24ec1ff5a365441ffe19b772c7121664af77b12b",
+  "reviewed_head": "5d554e7f2880d6c81566d74ad73a1a24fc254a3c",
+  "deployment_url": "https://8c39fd7c.aitrust-id.pages.dev",
+  "production_origin": "https://aitrustid.com",
+  "transport": "node_default_https_fetch",
+  "selected_assets": [
+    {
+      "path": "/reference/public-scope.json",
+      "status": 200,
+      "sha256": "eb353c41491f6e77073ee4c85aa8fcd31f1c23c4e1a8e8c81fa6b45f0faf654f",
+      "matches_verified_artifact": true
+    },
+    {
+      "path": "/reference/organization-audit.md",
+      "status": 200,
+      "sha256": "8267bb84f888aae2e27530965b45b56f7e5b7bd360a52282c1e177954b7c6e47",
+      "matches_verified_artifact": true
+    },
+    {
+      "path": "/reference/organization-audit-linux.json",
+      "status": 200,
+      "sha256": "3ec450a004117cc88dd4bcb1e631e39a1bcebd51152ac287815dc9d8c55ae8c9",
+      "matches_verified_artifact": true
+    },
+    {
+      "path": "/assets/index-CFZzk8Zp.js",
+      "status": 200,
+      "sha256": "85d612139a9864f9943d30cb4a55f699f573107246bc980a8dc461a697dd52ec",
+      "matches_verified_artifact": true
+    },
+    {
+      "path": "/assets/index-BPTTGs2d.css",
+      "status": 200,
+      "sha256": "56e79a40d366fed6d5d5ecc7672ce000e90b4d6edff5857927c6c5ae320ea0e6",
+      "matches_verified_artifact": true
+    }
+  ],
+  "completed_records": 125,
+  "open_records": 77,
+  "target_open_records": 60,
+  "scope_ids_preserved": 202,
+  "required_exact_head_checks": 22,
+  "actual_linux_ci_successes": 2,
+  "independent_release_gate_failures_preserved": true,
+  "production_database_changed": false,
+  "company_collection_enabled": false,
+  "protected_merge": {
+    "headRefOid": "5d554e7f2880d6c81566d74ad73a1a24fc254a3c",
+    "mergeCommit": {
+      "oid": "24ec1ff5a365441ffe19b772c7121664af77b12b"
+    },
+    "mergedAt": "2026-10-15T15:35:27Z",
+    "state": "MERGED"
+  },
+  "review_findings_resolved": 2,
+  "admin_override_used": false
+}

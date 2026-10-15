@@ -2301,13 +2301,15 @@
     },
     {
       "id": "audit",
-      "stage": "Not running",
+      "stage": "Self-hosted software",
       "independently_validated": false,
       "accuracy_measured": false,
       "metrics": [],
-      "next_test": "Test record retention, corrections, authorized access and deletion.",
-      "summary": "Organization capability; performance not measured.",
-      "sources": [],
+      "next_test": "Independent security review and managed-service operating acceptance.",
+      "summary": "Self-hosted workflow checked; hosted-service performance not measured.",
+      "sources": [
+        "/reference/organization-audit-linux.json"
+      ],
       "device": null,
       "pipeline": null
     },

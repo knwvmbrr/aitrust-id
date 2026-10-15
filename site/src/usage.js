@@ -37,7 +37,7 @@ export function usage(tag) {
     ? 'Explore the plan and tell us what your team needs. This offering is not available to buy.'
     : tag.proposed ? 'Read the proposal or share an example that would help us test it.'
     : 'Explore how this tag would work, or share an example to help us build it.',
-    steps:[],next:orgNext[tag.id]||tagNext[tag.id]};
+    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:[]};
   return {available:true,summary:tag.id==='PS'
     ? 'Copy an AI answer, paste it and check. No account or install needed. Commands are checked, never run.'
     : 'Check a draft with your own local redactor before you share it. Review the result and make any edits yourself. This is a local-service preview, separate from the website’s on-device PS checker.',
@@ -55,5 +55,5 @@ export function usageHTML(tag,esc) {
   const use=usage(tag);
   return `<section data-tag-usage><h2>${use.available?'Use this tag':'What you can do'}</h2><p>${esc(use.available?use.summary:use.next)}</p>${use.available
     ? `${use.standalone ? `<h3 class="mt-3 font-semibold">PS in Terminal</h3><p>${esc(use.standalone.description)}</p><p><a href="${sourceDownload}">Download source</a></p><pre tabindex="0" class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(use.standalone.command)}</code></pre>` : ''}${use.phone ? `<p class="mt-2"><a href="/#person/PS">Check on this device</a></p><p>${esc(use.phone)}</p><h3 class="mt-3 font-semibold">Developer local service (optional)</h3>` : ''}<p class="mt-2 text-sm text-muted">${esc(use.prerequisites)}</p><p class="mt-3"><a href="${sourceDownload}">Download source</a> · <a href="${quickstart}">Full setup guide</a></p><ol class="mt-3 list-decimal space-y-3 pl-5">${use.steps.map(step=>`<li><h3 class="font-semibold">${esc(step.title)}</h3><p>${esc(step.body)}</p><pre tabindex="0" class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(step.command)}</code></pre></li>`).join('')}</ol><p class="mt-3">${esc(use.next)}</p><p class="mt-3">${esc(use.browser)}</p><p class="mt-3">${esc(use.privacy)}</p><p class="mt-3"><a href="${repository}/blob/main/docs/assertion-replay.md">Repeat a saved local-service check</a>. This compares your saved findings against the same method; it does not send research data to us.</p><h3 class="mt-3 font-semibold">Stop the checker</h3><pre tabindex="0" class="my-2 overflow-x-auto rounded-lg border border-line bg-canvas p-3 text-sm"><code>${esc(use.stop)}</code></pre>`
-    : `${tag.today?`<p data-tag-today class="mt-3">${esc(tag.today)}</p>`:''}${tag.id==='audit'?'<p class="mt-3"><a href="/reference/organization-audit.md">Self-hosted audit guide</a> · <a href="/#person/PS">Try personal PS exports</a></p>':''}`}</section>`;
+    : `${tag.today?`<p data-tag-today class="mt-3">${esc(tag.today)}</p>`:''}${use.links?.length?`<p class="mt-3">${use.links.map(link=>`<a href="${esc(link.href)}">${esc(link.label)}</a>`).join(' · ')}</p>`:''}`}</section>`;
 }
