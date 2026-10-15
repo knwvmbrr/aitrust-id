@@ -109,3 +109,32 @@ def test_linux_receipt_cannot_be_reused_after_source_or_acceptance_changes(mutat
     elif mutation=='runtime':receipt['postgresql_version']='postgres (PostgreSQL) 17.0'
     elif mutation=='future':receipt['captured_at']='2099-01-01T00:00:00+00:00'
     with pytest.raises(ValueError):gate.verify(receipt)
+
+
+def test_sql_transport_accepts_large_recovery_and_refuses_oversize():
+    from tools.organization_audit_store import Store
+    db=Store.__new__(Store);db.service_raw=b'[test]\n';db.pass_raw=b'';db.env={'PATH':'/usr/bin:/bin'};db.diagnostics=None
+    db.argv=[sys.executable,'-c','import sys; print(len(sys.stdin.buffer.read()))']
+    statement='SELECT '+('x'*1_400_000)+';'
+    assert db.sql(statement)==str(len(statement))
+    with pytest.raises(ValueError):db.sql('x'*3_000_001)
+
+
+@pytest.mark.parametrize('mutation',['changed','missing','naive','extra','boolean_sequence'])
+def test_visible_event_time_and_shape_are_bound_without_a_checkpoint(device_record,mutation):
+    from tools.organization_audit import digest
+    v=prepare(encoded(device_record));material=encoded(v).decode();metadata_hash=digest(material.encode());rid=v['source_record_sha256']
+    at='2026-10-15T00:00:00+00:00';expires='2026-11-14T00:00:00+00:00';p=policy(30,40,24)
+    row={'sequence':1,'action':'append','record':rid,'detail':{'metadata_sha256':metadata_hash,'predecessor':None,'received_at':at,'expires_at':expires},'principal':'audit_writer','at':at}
+    event_material=encoded(row).decode();head=digest(bytes(32)+event_material.encode())
+    packet={'header':{'format':'organization-audit-export/v1','metadata_only':True,'independent_witness':False,'policy':p,'policy_sha256':digest(encoded(p)),'base_seq':0,'base_hash':'0'*64,'next_seq':2,'head':head,'active_count':1,'event_count':1,'captured_at':'2026-10-15T01:00:00+00:00'},
+      'records':[{'id':rid,'metadata':v,'metadata_material':material,'metadata_hash':metadata_hash,'predecessor':None,'received_at':at,'expires_at':expires}],
+      'events':[{'seq':1,'material':event_material,'previous':'0'*64,'hash':head,'created_at':at}]}
+    assert verify_export(packet)['valid'] is True
+    event=packet['events'][0]
+    if mutation=='changed':event['created_at']='2026-01-01T00:00:00+00:00'
+    elif mutation=='missing':del event['created_at']
+    elif mutation=='naive':event['created_at']='2026-10-15T00:00:00'
+    elif mutation=='extra':event['display_time']='2020-01-01'
+    else:event['seq']=True
+    with pytest.raises(ValueError):verify_export(packet)

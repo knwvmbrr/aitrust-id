@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-10-15T15:20:12.803775+00:00",
+  "pass": true,
+  "completed_ids": [
+    "F-161"
+  ],
+  "completed_by": "Codex",
+  "supersedes": "runs/2026-10-15-organization-audit-acceptance.json",
+  "previous_completion_timestamp": "2026-10-15T14:54:44.658593+00:00",
+  "corrected_completion_timestamp": "2026-10-15T15:20:12.803775+00:00",
+  "reason": "Pre-merge automated review found two acceptance gaps; the original approval was premature for the large-authority and visible-timeline cases. Both are fixed and executed before protected delivery.",
+  "fixes": {
+    "P1": "SQL stdin budget is 3 MB, covering the bounded 2 MB authority plus fixed SQL; 10,000-ID authority exercised through real CLI/PostgreSQL.",
+    "P2": "Exact event shape and timezone-aware visible/embedded timestamp equality are required without a checkpoint."
+  },
+  "linux_evidence": "runs/2026-10-15-organization-audit-reviewed-linux.json",
+  "focused_evidence": "runs/2026-10-15-organization-audit-reviewed-focused.json",
+  "completed_records": 125,
+  "open_records": 77,
+  "records_preserved": 202,
+  "target_open_records": 60,
+  "other_acceptance_relaxed": false,
+  "tag_release_asserted": false,
+  "company_collection_enabled": false
+}

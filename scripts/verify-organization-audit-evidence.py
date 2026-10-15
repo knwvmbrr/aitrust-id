@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools.organization_audit_lab import hashes
 from tools.organization_audit import parse,require
 
-EVIDENCE='runs/2026-10-15-organization-audit-cli-linux.json'
+EVIDENCE='runs/2026-10-15-organization-audit-reviewed-linux.json'
 CASES={
  'actual_dedicated_database_install','existing_database_reinstall_refused','privileged_principal_enrollment_refused',
  'database_owner_cannot_be_tenant_principal','unaccepted_policy_refused','concurrent_first_append_serialized',
@@ -15,6 +15,7 @@ CASES={
  'direct_sql_span_overrun_refused','server_side_closed_metadata_validation','null_policy_acceptance_refused',
  'role_and_unauthorized_session_denied','tenant_isolation_and_direct_table_denial','temporary_table_tenant_spoof_refused',
  'supersession_and_fixed_choice_review','paged_export_and_external_checkpoint','pinned_history_tampering_refused',
+ 'event_timestamp_tampering_refused_without_checkpoint','large_recovery_authority_through_actual_cli',
  'metadata_tampering_refused','actual_encrypted_full_backup_with_quarantine','restored_database_refuses_tenant_access',
  'old_backup_deletion_limit_explicit','missing_wrong_or_stale_recovery_authority_refused',
  'current_deletion_overlay_before_access','expired_metadata_hidden_before_sweep','declared_audit_prefix_retention',

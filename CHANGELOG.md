@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-15
 
+### 2026-10-15-152808-organization-audit-reviewed-current-84de0b94
+
+Recorded 2026-10-15T15:28:08.658649+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all five current capability receipts and website phases after verified review corrections; preserve the single full closure and original acceptance history.
+- **Evidence.** Current protocol, extension, PS, privacy and website checks pass. All eight website phases and current personal route boundaries pass on the corrected source. [Change record](./runs/changes/2026-10-15-152808-organization-audit-reviewed-current-84de0b94.json).
+- **Not claimed.** Engineering acceptance only; no new collection, independent tag release or additional requirement closure.
+
+
+### 2026-10-15-152106-organization-audit-proven-review-regressions-3a282389
+
+Recorded 2026-10-15T15:21:06.384085+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve executed regressions against the reviewed PR version: supported large SQL was refused and five visible-event mutations were wrongly accepted.
+- **Evidence.** The old source fails the new regression expectations; current focused and real PostgreSQL evidence pass. The fix changes behavior, rather than just its description. [Change record](./runs/changes/2026-10-15-152106-organization-audit-proven-review-regressions-3a282389.json).
+- **Not claimed.** Invented records only; no independent tag accuracy or new scope closure.
+
+
+### 2026-10-15-152013-organization-audit-review-corrections-4e194773
+
+Recorded 2026-10-15T15:20:13.829105+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct both pre-merge review defects: transport a bounded large recovery authority and bind visible audit-event timestamps and exact shape to the protected material.
+- **Evidence.** The actual Linux/CLI/PostgreSQL drill passes 31 controls including a 10,000-ID recovery authority; 44 focused tests pass. The reviewed acceptance supersedes the premature original timestamp without erasing it. [Change record](./runs/changes/2026-10-15-152013-organization-audit-review-corrections-4e194773.json).
+- **Not claimed.** One full F-161 closure remains: 125 complete, 77 open. No other full acceptance is relaxed and no tag release or hosted collection is enabled.
+
+
 ### 2026-10-15-150749-organization-audit-current-delivery-bfef2ac0
 
 Recorded 2026-10-15T15:07:49.025944+00:00 · Contributor: Codex · change

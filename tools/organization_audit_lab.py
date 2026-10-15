@@ -124,6 +124,12 @@ def verify(namespace):
         denied(lambda:verify_export(tampered,pin));case('pinned_history_tampering_refused')
         changed=json.loads(encoded(packet));changed['records'][0]['metadata']['calibration_sha256']='0'*64
         denied(lambda:verify_export(changed,pin));case('metadata_tampering_refused')
+        for mutation in ('changed','missing'):
+            bad=json.loads(encoded(packet))
+            if mutation=='changed':bad['events'][0]['created_at']='2020-01-01T00:00:00+00:00'
+            else:del bad['events'][0]['created_at']
+            denied(lambda:verify_export(bad))
+        case('event_timestamp_tampering_refused_without_checkpoint')
         # The supported physical backup captures a locked store. It is unavailable after restore.
         result=json.loads(cli('admin','backup','--config',config,'--empty-include-directory',empty,'--stanza','audit').stdout);require(result['restores_quarantined']);case('actual_encrypted_full_backup_with_quarantine')
         old=json.loads(backrest('--output=json','info').stdout)[0]['backup'][0]['label']
@@ -138,7 +144,14 @@ def verify(namespace):
         denied(lambda:reconcile(restored,authority,'0'*64,60))
         stale=dict(authority);stale['issued_at']=(datetime.now(timezone.utc)-timedelta(hours=2)).isoformat()
         denied(lambda:reconcile(restored,stale,digest(encoded(stale)),60));case('missing_wrong_or_stale_recovery_authority_refused')
+        # Invented later authority: 10,000 retained IDs, most unavailable in this older backup.
+        large=json.loads(encoded(authority));tenant=next(t for t in large['tenants'] if t['tenant']==ta)
+        for i in range(9999):tenant['keep'][digest(('missing-newer-record-'+str(i)).encode())]=digest(str(i).encode())
+        tenant['next_seq']=10005;tenant['head']=digest(b'invented-newer-authority-head')
+        require(len(tenant['keep'])==10000 and len(encoded(large))>1_000_000)
+        current_pin=digest(encoded(large));(authority_output/'recovery.json').write_bytes(encoded(large)+b'\n')
         cli('restored','reconcile','--input',authority_output/'recovery.json','--expected-sha256',current_pin,'--maximum-age-minutes','60')
+        case('large_recovery_authority_through_actual_cli')
         recovered=rr.export();require([r['id'] for r in recovered['records']]==[second['source_record_sha256']]);require(recovered['header']['recovery']['authority_sha256']==current_pin and recovered['header']['recovery']['newer_history_unavailable'] is True);case('current_deletion_overlay_before_access')
         stop(target)
         # Server-clock expiry and marker pruning are exercised without waiting 40 days.

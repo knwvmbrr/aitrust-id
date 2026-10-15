@@ -47,7 +47,7 @@ must equal the current ledger; no renamed subtasks count as full requirements.
 F-161 now has an implemented organization-owned PostgreSQL workflow: explicit
 policy and roles, closed metadata admission, immutable version/review history,
 checkpointed export, expiry/deletion and an actual encrypted recovery drill.
-The source-bound Linux run passed 29 controls, including concurrent append,
+The source-bound Linux run passed 31 controls, including concurrent append,
 temporary-table spoof refusal and a working personal checker with the store
 stopped. See [operator instructions](organization-audit.md). This completes the
 software job without enabling a hosted service, research intake, certification

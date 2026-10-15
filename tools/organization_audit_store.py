@@ -8,7 +8,7 @@ import stat
 import subprocess
 import uuid
 from datetime import datetime, timezone
-from tools.organization_audit import ROOT, SCHEMA, parse, require, encoded, digest, hash_value, validate_metadata
+from tools.organization_audit import ROOT, SCHEMA, parse, require, encoded, digest, hash_value, validate_metadata, fixed
 
 
 def literal(value):
@@ -32,7 +32,7 @@ def private_file(path):
 
 def bounded_command(argv,env,*,input=None,timeout=25,diagnostics=None):
     import tempfile,signal
-    require(input is None or type(input) is bytes and len(input)<=1_000_000)
+    require(input is None or type(input) is bytes and len(input)<=3_000_000)
     with tempfile.TemporaryFile() as out:
         def limits():
             import resource
@@ -64,7 +64,7 @@ class Store:
                    '--dbname','service='+service+' sslmode=verify-full connect_timeout=5']
 
     def sql(self, sql):
-        require(type(sql) is str and len(sql.encode())<=1_000_000)
+        require(type(sql) is str and len(sql.encode())<=3_000_000)
         # Private temporary output bounds disk growth and keeps diagnostics out of public logs.
         import tempfile
         with tempfile.TemporaryDirectory(prefix='aitrust-audit-credentials-') as secret_dir:
@@ -112,10 +112,16 @@ def verify_export(packet, checkpoint=None):
     seq=h['base_seq'];previous=hash_value(h['base_hash'])
     require(type(seq) is int and seq>=0 and len(packet['events'])==h['event_count'] and len(packet['records'])==h['active_count'])
     for event in packet['events']:
+        fixed(event,{'seq','material','previous','hash','created_at'})
+        require(type(event['seq']) is int)
         seq+=1;require(event['seq']==seq and event['previous']==previous)
         material=event['material'];require(type(material) is str)
         require(event['hash']==digest(bytes.fromhex(previous)+material.encode()))
-        row=parse(material.encode());require(row['sequence']==seq)
+        row=parse(material.encode());fixed(row,{'sequence','action','record','detail','principal','at'})
+        require(type(row['sequence']) is int and row['sequence']==seq)
+        require(type(event['created_at']) is str and type(row['at']) is str)
+        visible=datetime.fromisoformat(event['created_at']);protected=datetime.fromisoformat(row['at'])
+        require(visible.tzinfo is not None and protected.tzinfo is not None and visible==protected)
         require(row['action'] in {'append','review','remove','expire'})
         previous=event['hash']
     require(previous==h['head'] and seq+1==h['next_seq'])

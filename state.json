@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T15:07:47.627270+00:00",
+  "updated": "2026-10-15T15:28:07.126798+00:00",
   "active_increment": "Organization-operated audit software complete; 77 open full requirements, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -387,7 +387,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "The 3556 figure is a historical full-suite result. This increment ran 38 focused audit tests and 29 actual Linux controls; protected CI records its own current suite execution. Test totals are not requirement closures.",
+  "python_tests_scope": "The 3556 figure is a historical full-suite result. This increment ran 44 focused audit tests and 31 actual Linux controls; protected CI records its own current suite execution. Test totals are not requirement closures.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -759,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-15T14:54:44.658593+00:00",
+    "audited_at": "2026-10-15T15:20:12.803775+00:00",
     "completed_records": 125,
     "open_records": 77,
     "records_preserved": 202,
@@ -1084,15 +1084,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-15-organization-audit-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-15-organization-audit-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-15-organization-audit-current-protocol.json",
-    "extension": "runs/2026-10-15-organization-audit-current-extension.json",
-    "website": "runs/2026-10-15-organization-audit-current-website.json",
+    "PS": "runs/2026-10-15-organization-audit-reviewed-current-PS.json",
+    "PII_REDACTED": "runs/2026-10-15-organization-audit-reviewed-current-PII_REDACTED.json",
+    "protocol": "runs/2026-10-15-organization-audit-reviewed-current-protocol.json",
+    "extension": "runs/2026-10-15-organization-audit-reviewed-current-extension.json",
+    "website": "runs/2026-10-15-organization-audit-reviewed-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T15:07:47.627270+00:00",
+  "updated_at": "2026-10-15T15:28:07.126798+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2737,17 +2737,17 @@
     "software_complete": true,
     "hosted_service_operating": false,
     "guide": "docs/organization-audit.md",
-    "actual_linux_evidence": "runs/2026-10-15-organization-audit-cli-linux.json",
-    "focused_evidence": "runs/2026-10-15-organization-audit-final-focused.json",
-    "full_acceptance": "runs/2026-10-15-organization-audit-acceptance.json",
-    "actual_linux_controls": 29,
-    "focused_tests": 38,
+    "actual_linux_evidence": "runs/2026-10-15-organization-audit-reviewed-linux.json",
+    "focused_evidence": "runs/2026-10-15-organization-audit-reviewed-focused.json",
+    "full_acceptance": "runs/2026-10-15-organization-audit-reviewed-acceptance.json",
+    "actual_linux_controls": 31,
+    "focused_tests": 44,
     "operator_owned": true,
     "new_http_endpoints": 0,
     "company_collection_enabled": false,
     "personal_checking_independent": true,
     "physical_erasure_verified": false,
     "independent_tag_accuracy_evidence": false,
-    "website_checks": "runs/2026-10-15-organization-audit-site-phases.json"
+    "website_checks": "runs/2026-10-15-organization-audit-reviewed-site-phases.json"
   }
 }

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-152808-organization-audit-reviewed-current-84de0b94",
+  "recorded_at": "2026-10-15T15:28:08.658649+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "208d600cffdf9a1eccac7c09c3a6a631b20b4ca6",
+  "changed": "Record all five current capability receipts and website phases after verified review corrections; preserve the single full closure and original acceptance history.",
+  "proves": "Current protocol, extension, PS, privacy and website checks pass. All eight website phases and current personal route boundaries pass on the corrected source.",
+  "limits": "Engineering acceptance only; no new collection, independent tag release or additional requirement closure.",
+  "scope_ids": [
+    "F-161"
+  ],
+  "files": {
+    "docs/organization-audit-result.md": "37ab9b97b36c0928fff8de411f10d732e714dd7b5f05f316f95a40ba61466ba6",
+    "docs/scope-60-execution.md": "391a81a6552f8c398d1e25133590da09a84f6ae6619ab2dc8b646789e560411b",
+    "docs/scope-progress.json": "890a8a7185a0201a5ec5eb2ae33e451fe9681c0fb4298de6307f10cca9bc8708",
+    "docs/scope-progress.md": "f0975f60d528f86b4db8c802a831aea61559ea95f940daeab08370ff5eb2916a",
+    "eval/revalidation.json": "a92c9b961b5225a5b53e660677f56ab672a6ab0280e1cad09108f094da22de78",
+    "eval/route-boundaries.json": "1f57eea6dfaf8cdf3b2bbb7f4e5cb3be3b9ddd0d8bb91b9dfb7ecf9fb3df7d58",
+    "runs/2026-10-15-organization-audit-review-regressions.json": "0e14e9b719dadae0b8f729e73d32e6eea64c02ca5420a1a01610a35c98ac03e7",
+    "runs/2026-10-15-organization-audit-reviewed-acceptance.json": "77e6eea756ef60e486a27e5088d3913d25dc8c3919f65459a8a8cc39b11046d4",
+    "runs/2026-10-15-organization-audit-reviewed-current-PII_REDACTED.json": "943da63d8476529997a172079098cfe998e002a992d05c079052d3230dd67193",
+    "runs/2026-10-15-organization-audit-reviewed-current-PS.json": "1fdfca27872a37ec910d8c5f71696f7eab5d92146619c306cc4f8fd1306134ca",
+    "runs/2026-10-15-organization-audit-reviewed-current-extension.json": "9c9a6f7d616f43b176d0d2e024cec935431ee5bb63c44c48e055bfadf4f6d18b",
+    "runs/2026-10-15-organization-audit-reviewed-current-protocol.json": "c12bd449aa62dbaf24deb59f6f11c45a297d757b5c1c0d9fa6803686f16152bc",
+    "runs/2026-10-15-organization-audit-reviewed-current-website.json": "77da6c260b35385c6778a5bab58f33bede6a3990db0ac69e53927b3b64cb7a93",
+    "runs/2026-10-15-organization-audit-reviewed-focused.json": "19a3b239a4ee964167fd3a44ac78054e1437f382a12763c2eeae4eaa1aa1d641",
+    "runs/2026-10-15-organization-audit-reviewed-linux.json": "3ec450a004117cc88dd4bcb1e631e39a1bcebd51152ac287815dc9d8c55ae8c9",
+    "runs/2026-10-15-organization-audit-reviewed-site-phases.json": "be8766339768a295b21481e4e6d4ccdd2f6fe78144dcedec049efc5151cf7a41",
+    "scripts/verify-organization-audit-evidence.py": "8ff9bf1cf0e5a2f99de0e4da41253118eaf771e3693e64f7b163b5f198d930b3",
+    "site/index.html": "6aaf98d075cfd428a7187ff4a1cc9d498d9de58c125f9873ad1d4ffbfd392db3",
+    "site/public/reference/organization-audit-linux.json": "3ec450a004117cc88dd4bcb1e631e39a1bcebd51152ac287815dc9d8c55ae8c9",
+    "site/public/reference/public-scope.json": "eb353c41491f6e77073ee4c85aa8fcd31f1c23c4e1a8e8c81fa6b45f0faf654f",
+    "site/scripts/prepare.mjs": "f1485b6cd2c39a253d0fe55e1b6dfb523e637718ef37473cd488ecbce9ca0ae4",
+    "site/src/catalog.js": "4fc33a8a2d0a3639d6179626b92ced9a88fe5eac115cd50cbffdceaa353c2582",
+    "site/src/public-scope.json": "eb353c41491f6e77073ee4c85aa8fcd31f1c23c4e1a8e8c81fa6b45f0faf654f",
+    "site/src/scope-manifest.json": "b59c1f9fc4f49b2a15188fd91ed16f9bd90c3db600ffa8d09f5b7ba2893e0148",
+    "state.json": "e571f4ee64f2d9c18ed2f3dec84d127827d178fbd5eb8e310022f70bb3005609",
+    "tests/test_organization_audit.py": "7bc4906145b5c3632bab3f9eeed78b043f0521d40eed166d5f241cec2eb05acb",
+    "tools/organization_audit_lab.py": "f767f89a16c0a55c58ddf779ea805d69d72aa2db2994b42a82ad4a52f3e6b7c9",
+    "tools/organization_audit_store.py": "476957577728d3f17fd54f93a43eb37c9b053b693b2b37829a811e64390da97d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-organization-audit-reviewed-current-protocol.json",
+      "sha256": "c12bd449aa62dbaf24deb59f6f11c45a297d757b5c1c0d9fa6803686f16152bc"
+    },
+    {
+      "path": "runs/2026-10-15-organization-audit-reviewed-current-website.json",
+      "sha256": "77da6c260b35385c6778a5bab58f33bede6a3990db0ac69e53927b3b64cb7a93"
+    },
+    {
+      "path": "runs/2026-10-15-organization-audit-reviewed-site-phases.json",
+      "sha256": "be8766339768a295b21481e4e6d4ccdd2f6fe78144dcedec049efc5151cf7a41"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T15:28:09.204756+00:00"
+    }
+  ]
+}

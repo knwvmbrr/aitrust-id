@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-15T14:59:23.196634+00:00",
+  "captured_at": "2026-10-15T15:17:53.236095+00:00",
   "pass": true,
   "controls": [
     {
@@ -79,6 +79,10 @@
       "pass": true
     },
     {
+      "case": "event_timestamp_tampering_refused_without_checkpoint",
+      "pass": true
+    },
+    {
       "case": "actual_encrypted_full_backup_with_quarantine",
       "pass": true
     },
@@ -92,6 +96,10 @@
     },
     {
       "case": "missing_wrong_or_stale_recovery_authority_refused",
+      "pass": true
+    },
+    {
+      "case": "large_recovery_authority_through_actual_cli",
       "pass": true
     },
     {
@@ -133,8 +141,8 @@
   "owned_scratch_removed": true,
   "sources": {
     "tools/organization_audit.py": "8a4c5c85c7225788e227a843e85d055e5cc7981e9240f6a6bd7479e287586e91",
-    "tools/organization_audit_store.py": "0913861828c8f2d4eb5b1330ed797eee3b8c5b652d78c3cfd3b73a8649e78eb9",
-    "tools/organization_audit_lab.py": "893369fc3f2eb465b97dc4614b4e96a75e97b1cca981e7d5963a43e830462a88",
+    "tools/organization_audit_store.py": "476957577728d3f17fd54f93a43eb37c9b053b693b2b37829a811e64390da97d",
+    "tools/organization_audit_lab.py": "f767f89a16c0a55c58ddf779ea805d69d72aa2db2994b42a82ad4a52f3e6b7c9",
     "scripts/organization-audit.py": "d37daae9cbc53b8b4d18286084e4a70c81a3295194a8677763f1458cae5a9b60",
     "scripts/verify-organization-audit.py": "0bc48696ffa41849f8794fa30b0b3e27a750563a7b68b4c69c1a885ce559527a",
     "deploy/audit/store.sql": "aff20a33fa64b6f7257448e133187f76be9b69ff763968bc7fe208639a0cfa10",
@@ -156,5 +164,5 @@
     "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
   },
   "source_unchanged_during_execution": true,
-  "private_log_sha256": "0aeb69c0af934e7ecbcb0607df5117e1108da969ac5598d3622d90dfd577fcb6"
+  "private_log_sha256": "54b744bdfe9921246fc2bfae36c5b78d867c8bc2315af6cc43831951d184cab3"
 }

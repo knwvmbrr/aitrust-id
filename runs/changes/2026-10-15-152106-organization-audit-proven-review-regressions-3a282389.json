@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-152106-organization-audit-proven-review-regressions-3a282389",
+  "recorded_at": "2026-10-15T15:21:06.384085+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "208d600cffdf9a1eccac7c09c3a6a631b20b4ca6",
+  "changed": "Preserve executed regressions against the reviewed PR version: supported large SQL was refused and five visible-event mutations were wrongly accepted.",
+  "proves": "The old source fails the new regression expectations; current focused and real PostgreSQL evidence pass. The fix changes behavior, rather than just its description.",
+  "limits": "Invented records only; no independent tag accuracy or new scope closure.",
+  "scope_ids": [
+    "F-161"
+  ],
+  "files": {
+    "docs/organization-audit-result.md": "37ab9b97b36c0928fff8de411f10d732e714dd7b5f05f316f95a40ba61466ba6",
+    "docs/scope-60-execution.md": "391a81a6552f8c398d1e25133590da09a84f6ae6619ab2dc8b646789e560411b",
+    "docs/scope-progress.json": "890a8a7185a0201a5ec5eb2ae33e451fe9681c0fb4298de6307f10cca9bc8708",
+    "docs/scope-progress.md": "f0975f60d528f86b4db8c802a831aea61559ea95f940daeab08370ff5eb2916a",
+    "eval/revalidation.json": "a92c9b961b5225a5b53e660677f56ab672a6ab0280e1cad09108f094da22de78",
+    "runs/2026-10-15-organization-audit-review-regressions.json": "0e14e9b719dadae0b8f729e73d32e6eea64c02ca5420a1a01610a35c98ac03e7",
+    "runs/2026-10-15-organization-audit-reviewed-acceptance.json": "77e6eea756ef60e486a27e5088d3913d25dc8c3919f65459a8a8cc39b11046d4",
+    "runs/2026-10-15-organization-audit-reviewed-focused.json": "19a3b239a4ee964167fd3a44ac78054e1437f382a12763c2eeae4eaa1aa1d641",
+    "runs/2026-10-15-organization-audit-reviewed-linux.json": "3ec450a004117cc88dd4bcb1e631e39a1bcebd51152ac287815dc9d8c55ae8c9",
+    "scripts/verify-organization-audit-evidence.py": "8ff9bf1cf0e5a2f99de0e4da41253118eaf771e3693e64f7b163b5f198d930b3",
+    "site/index.html": "6aaf98d075cfd428a7187ff4a1cc9d498d9de58c125f9873ad1d4ffbfd392db3",
+    "site/public/reference/organization-audit-linux.json": "3ec450a004117cc88dd4bcb1e631e39a1bcebd51152ac287815dc9d8c55ae8c9",
+    "site/public/reference/public-scope.json": "eb353c41491f6e77073ee4c85aa8fcd31f1c23c4e1a8e8c81fa6b45f0faf654f",
+    "site/scripts/prepare.mjs": "f1485b6cd2c39a253d0fe55e1b6dfb523e637718ef37473cd488ecbce9ca0ae4",
+    "site/src/catalog.js": "4fc33a8a2d0a3639d6179626b92ced9a88fe5eac115cd50cbffdceaa353c2582",
+    "site/src/public-scope.json": "eb353c41491f6e77073ee4c85aa8fcd31f1c23c4e1a8e8c81fa6b45f0faf654f",
+    "site/src/scope-manifest.json": "b59c1f9fc4f49b2a15188fd91ed16f9bd90c3db600ffa8d09f5b7ba2893e0148",
+    "state.json": "3d65468a12f3169b4de908fbce11bdadc4342c95ff55477f54975587c60e68f7",
+    "tests/test_organization_audit.py": "7bc4906145b5c3632bab3f9eeed78b043f0521d40eed166d5f241cec2eb05acb",
+    "tools/organization_audit_lab.py": "f767f89a16c0a55c58ddf779ea805d69d72aa2db2994b42a82ad4a52f3e6b7c9",
+    "tools/organization_audit_store.py": "476957577728d3f17fd54f93a43eb37c9b053b693b2b37829a811e64390da97d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-organization-audit-review-regressions.json",
+      "sha256": "0e14e9b719dadae0b8f729e73d32e6eea64c02ca5420a1a01610a35c98ac03e7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T15:21:07.139283+00:00"
+    }
+  ]
+}
