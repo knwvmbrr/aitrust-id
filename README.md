@@ -70,6 +70,15 @@ or clone this repository. Follow the [installation and verification guide](docs/
 PS checks bounded command-risk patterns in text you supply; it does not certify
 the accuracy or safety of an AI answer. The complete personal workflow runs locally.
 
+## Test an implementation and inspect its evidence
+
+Run `python3 scripts/check-conformance-vectors.py` for the public protocol cases,
+or add `--implementation` followed by your trusted local checker command to
+check another build. [Adapter instructions](docs/conformance-runner.md).
+Run `python3 scripts/build-evidence-packet.py --require-current` to identify
+current, stale or missing execution receipts. [Evidence instructions](docs/evidence-packet.md).
+These tools do not grant independent accuracy, certification or tag release.
+
 ## Attach your own references
 
 The [local corpus tool](docs/local-reference-corpus.md) imports plain-text or

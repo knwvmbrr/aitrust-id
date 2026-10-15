@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-14T17:41:54.258196+00:00",
+  "audited_at": "2026-10-15T03:11:02.842307+00:00",
   "client_date": "2026-10-14",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -4528,11 +4528,12 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-10T13:47:05.800829+00:00",
+      "audited_at": "2026-10-15T03:11:02.842307+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
+        "Codex \u2014 bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00",
+        "Codex \u2014 actual versioned two-profile conformance runner, 28 selected reference checks and focused hostile-process checks; no outside-person acceptance, 2026-10-15T03:11:02.842307+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4550,9 +4551,17 @@
         "scripts/check-assertion.py",
         "tests/test_assertion_conformance.py",
         "runs/2026-10-10-six-state-consumer-browser.json",
-        "runs/2026-10-10-consumer-schema-python-corrected.json"
+        "runs/2026-10-10-consumer-schema-python-corrected.json",
+        "docs/conformance-runner-plan.md",
+        "docs/conformance-runner.md",
+        "tools/conformance_vectors.py",
+        "scripts/check-conformance-vectors.py",
+        "eval/conformance/assertion-v1.json",
+        "tests/test_conformance_vectors.py",
+        "runs/2026-10-15-conformance-reference-vectors.json",
+        "runs/2026-10-15-conformance-evidence-focused.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Versioned synthetic interoperability runner and source-bound evidence index now execute. Actual outside-person acceptance and existing full release criteria remain unfulfilled; no completion percentage changed.",
       "required_acceptance": [
         "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
       ],
@@ -4568,12 +4577,14 @@
         "implemented_mechanism",
         "executable_checks"
       ],
-      "audited_at": "2026-10-12T03:57:28.989180+00:00",
+      "audited_at": "2026-10-15T03:11:02.842307+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
         "Codex \u2014 manifest-v2 selected execution recipe, legacy label-only comparison and 84/21 macOS/Linux controls, 2026-10-12T03:27:21.911845+00:00",
-        "Codex \u2014 repaired selected execution inputs and genuine pre-v2 label compatibility; actual Mac/Linux controls 2026-10-12T03:57:28.989180+00:00"
+        "Codex \u2014 repaired selected execution inputs and genuine pre-v2 label compatibility; actual Mac/Linux controls 2026-10-12T03:57:28.989180+00:00",
+        "Codex \u2014 actual versioned two-profile conformance runner, 28 selected reference checks and focused hostile-process checks; no outside-person acceptance, 2026-10-15T03:11:02.842307+00:00",
+        "Codex \u2014 current/stale/missing execution-receipt index preserving all scope and open gates; no release acceptance, 2026-10-15T03:11:02.842307+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4596,9 +4607,22 @@
         "runs/2026-10-12-review-execution-linux-cleanup.json",
         "runs/2026-10-12-review-repaired-focused.json",
         "runs/2026-10-12-review-repaired-cli.json",
-        "runs/2026-10-12-review-repaired-linux.json"
+        "runs/2026-10-12-review-repaired-linux.json",
+        "docs/conformance-runner-plan.md",
+        "docs/conformance-runner.md",
+        "tools/conformance_vectors.py",
+        "scripts/check-conformance-vectors.py",
+        "eval/conformance/assertion-v1.json",
+        "tests/test_conformance_vectors.py",
+        "runs/2026-10-15-conformance-reference-vectors.json",
+        "runs/2026-10-15-conformance-evidence-focused.json",
+        "docs/evidence-packet-plan.md",
+        "docs/evidence-packet.md",
+        "tools/evidence_packet.py",
+        "scripts/build-evidence-packet.py",
+        "tests/test_evidence_packet.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Versioned synthetic interoperability runner and source-bound evidence index now execute. Actual outside-person acceptance and existing full release criteria remain unfulfilled; no completion percentage changed.",
       "required_acceptance": [
         "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required."
       ],

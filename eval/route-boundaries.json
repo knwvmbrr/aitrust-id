@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-10-14T18:14:24.448598+00:00",
+  "reviewed_at": "2026-10-15T03:17:56.512015+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -69,7 +69,7 @@
     "docs/nli-pairs.md": "a04371ba9b36a311a1234d1f16be18dd225a34e6964fc899c9c7df31f288df65",
     "docs/nli-reference-plan.md": "f6a7f796032031e288c71804a09891a2011344385c9644e4676cc684964e6c49",
     "docs/nli-references.md": "7374970de626f8933e460208a1939f587d7b128fc195fe318f7e78ea60e4c0b8",
-    "docs/open-validation-path.md": "685363e48cc42794125a752cde287e8294801ac77859f6a7d19bbeedae2ad324",
+    "docs/open-validation-path.md": "6a1673733bc3c1789ec07c96d75d99da8b2fa3453922fbc4417e640edd57ee12",
     "docs/private-policy-plan.md": "2757d71e1ab31d8f243225aa755d7eed443d4b4bbc29d699cbb13f617b84b221",
     "docs/private-policy-result.md": "a6a23141cc4727950057c8082ed45e329a84ea1e7971a9bd06e53d2adf0e30c4",
     "docs/private-policy.md": "6ca65a93b3a3c908cea337ff7a8e210b1161d202fb2ebdb8d6b15e3e47045ad0",
@@ -625,7 +625,7 @@
     "site/scripts/prepare-device.mjs": "9e6011d991f923dcd2c089ce4b5bce524fe7536f00200da8ec849143d8d6e021",
     "site/scripts/prepare-offline.mjs": "882f4b6a46f0d0e2c130b52ca9bc46f931764bf327bc3f6893a665453e06be3a",
     "site/scripts/prepare-performance.mjs": "7818048f434cdb4c46f34beeb43ca6ffeb2ca631fdd9bd61a188e1413f5435bb",
-    "site/scripts/prepare.mjs": "dfab52ee520f6667000c977372edf9cf8628553f8c16e08b1471574bef1a0892",
+    "site/scripts/prepare.mjs": "98cceec7fad35ed878273eac3749b19de0de5330c1a8d45a86c07588c512a74f",
     "site/scripts/render-reference.mjs": "625e8013c92b3ad5a753e1e1a2cdbb8bde6a7bb06cd693f3b622dbe0ee29cb8c",
     "site/scripts/seo.mjs": "65e89eb18d7d472b9a04572e506334381c52a77f898fdb39fac33e8c9596bd5b",
     "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
@@ -642,12 +642,12 @@
     "site/src/policies.js": "4e375fb0c7852b5134af7adc8fe98fff403bac69460dff3d8fc6234c9dbea03f",
     "site/src/presentation.js": "5c8bb4ee51a848c1884e42239d47cc40487f33264d9c0ff7dca29820479be418",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "1e86db54c22670a482a9bce3099e312a6923d27fc7cd2a0a5d4dbb24b82f9e2c",
+    "site/src/public-scope.json": "d6e7287db8942d19fc41f6ddd37063301c5e4b440a9a7bbd118bde682dc98587",
     "site/src/redaction-performance-model.js": "4633a77f3866572f470c7895570c3b032fad4c061c0c71260bd1a00175e7630a",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "fa838c0bf10204986381e27cae2c35ab7da7f4ffbe680c1cd137c9a20f41ee8d",
+    "site/src/scope-manifest.json": "c5080779027b21a198c7b0ea47eac882c6d23ddf560b4c890e0bbaa64f262dca",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "76b056cd59251d5f6ec3538f6ef54cd659fec52a4a963d6741ed4ec39980aed2",
     "site/src/tag-performance.json": "28837e77c8de1a9d8d19d0f495a8128ddb50f9f0796d3ff12559ae95d767adad",
@@ -817,7 +817,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
-    "website": "runs/2026-10-14-research-http-ci-repaired-website.json"
+    "website": "runs/2026-10-15-conformance-recorded-website.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

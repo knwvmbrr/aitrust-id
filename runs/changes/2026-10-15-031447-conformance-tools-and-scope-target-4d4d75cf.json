@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-15-031447-conformance-tools-and-scope-target-4d4d75cf",
+  "recorded_at": "2026-10-15T03:14:47.736089+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1ce0f35f773084fe6b34ed9d8ab1f715b7e1c917",
+  "changed": "Add a pinned 28-check interoperability runner for explicitly selected local implementations, a source-bound evidence packet index, public usage guides and the owner-directed target of 60 open requirements; correct the owner guide to the already approved pilot contract.",
+  "proves": "Actual reference vectors pass 28/28; 12 focused runner tests and 10 focused packet tests pass; 49 existing accountability/scope checks pass; the current protocol receipt passes 26 commands.",
+  "limits": "No full requirement closure or acceptance reassignment; existing outside-person, independent accuracy, license and human gates remain. The first website attempt stopped at the required changelog prebuild gate because this event was not yet recorded; the failed receipt is preserved. No production collection or site deployment occurred.",
+  "scope_ids": [
+    "F-119",
+    "F-120",
+    "N-011"
+  ],
+  "files": {
+    "README.md": "30d81bb0da36819b0261904da9a20c0ebd05edad06b6baceecad68fcf0447085",
+    "docs/conformance-evidence-result.md": "4cc05245dee572b401ed0cacac06d9acf212e8773137fcac6d9b199ca7607fba",
+    "docs/conformance-runner-plan.md": "d2d2b9d4e0565d0444e41683a8cd0483d783c851df916bdd2afbca365ff615f4",
+    "docs/conformance-runner.md": "933fac3257e185378f5f0a9561be103c16c7171b4cff1533e9df3e24ff017796",
+    "docs/evidence-packet-plan.md": "59d33067a7a5c7efdb6e8e69fee770a51a6193e976836143458863c6c3095bfe",
+    "docs/evidence-packet.md": "c8f18b0df35cfc347620cf51b66ca03c44a80e7ba755eddee8a3801170b73994",
+    "docs/open-validation-path.md": "6a1673733bc3c1789ec07c96d75d99da8b2fa3453922fbc4417e640edd57ee12",
+    "docs/owner-operation.md": "1ef9b7e8ad8fd9974f9dfb5c8754669f3408b75d1001d3390b8083918af4347c",
+    "docs/scope-60-execution.md": "c54d3951a3d6fb697f700903a4d431292c032fa6f5c3d36021e03d04151903ed",
+    "docs/scope-progress.json": "87d96c72458700b0b5b2df73d80deee1bd1f2d95a06d7e2904d65adf42dc429b",
+    "docs/scope-progress.md": "1abd7142d55e62c50b0c6c9e76f0598e240786a457ecad29c4834d5fbacbf91b",
+    "eval/conformance/assertion-v1.json": "aa30aef56eeff6657b68b315dc4f64b1756ee9eb8c9c54db76159a633c09b745",
+    "runs/2026-10-15-conformance-current-protocol.json": "1c5796bfa90e359754ee8235a5e540f9d9a9f62120323f54163e3750c50ae9ae",
+    "runs/2026-10-15-conformance-current-website.json": "48729ce64b102dc730b47f1a692797729f351274d9e5e1a9d66a184817abd7de",
+    "runs/2026-10-15-conformance-evidence-focused.json": "bb800483bda5811cdd38356aa354a07a81b3d3e486d2d5881cb1d0f12c5a8fc8",
+    "runs/2026-10-15-conformance-reference-vectors.json": "5d5712299a97f354c14e826ce70fdb6e3808ec69fb6e893ad4bf121977e2733d",
+    "scripts/build-evidence-packet.py": "3c24083e5de227cd8289bf2d6529d0acf6ba93e19dbe42f227441030d9fe6a13",
+    "scripts/check-conformance-vectors.py": "11d50fbc2b6c0a04cb3de12880bb381bea16b52dd1f80356456fa3d5fdf29504",
+    "site/public/reference/conformance-runner.md": "933fac3257e185378f5f0a9561be103c16c7171b4cff1533e9df3e24ff017796",
+    "site/public/reference/evidence-packet.md": "c8f18b0df35cfc347620cf51b66ca03c44a80e7ba755eddee8a3801170b73994",
+    "site/public/reference/open-validation-path.md": "6a1673733bc3c1789ec07c96d75d99da8b2fa3453922fbc4417e640edd57ee12",
+    "site/public/reference/public-scope.json": "d6e7287db8942d19fc41f6ddd37063301c5e4b440a9a7bbd118bde682dc98587",
+    "site/scripts/prepare.mjs": "98cceec7fad35ed878273eac3749b19de0de5330c1a8d45a86c07588c512a74f",
+    "site/src/public-scope.json": "d6e7287db8942d19fc41f6ddd37063301c5e4b440a9a7bbd118bde682dc98587",
+    "site/src/scope-manifest.json": "c5080779027b21a198c7b0ea47eac882c6d23ddf560b4c890e0bbaa64f262dca",
+    "state.json": "0cd2497c3b7292e2136a337f4002056e620d37d206d15ba63149ffde511af301",
+    "tests/test_conformance_vectors.py": "9edd36f9e54c897abbe5509375825b9d0a56febf33c5d19c029cd9285428b9be",
+    "tests/test_evidence_packet.py": "13c007c79a6f4876abba26519b74b4547e2960e8497d5c507e9991375b0b0078",
+    "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+    "tools/evidence_packet.py": "8cc6ff36af6cc2ef2a86b575d6e3c04d2ff1601c3cd4559bb25f7b77d1381b80"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-10-15-conformance-reference-vectors.json",
+      "sha256": "5d5712299a97f354c14e826ce70fdb6e3808ec69fb6e893ad4bf121977e2733d"
+    },
+    {
+      "path": "runs/2026-10-15-conformance-evidence-focused.json",
+      "sha256": "bb800483bda5811cdd38356aa354a07a81b3d3e486d2d5881cb1d0f12c5a8fc8"
+    },
+    {
+      "path": "runs/2026-10-15-conformance-current-protocol.json",
+      "sha256": "1c5796bfa90e359754ee8235a5e540f9d9a9f62120323f54163e3750c50ae9ae"
+    },
+    {
+      "path": "runs/2026-10-15-conformance-current-website.json",
+      "sha256": "48729ce64b102dc730b47f1a692797729f351274d9e5e1a9d66a184817abd7de"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-10-15T03:14:48.203815+00:00"
+    }
+  ]
+}

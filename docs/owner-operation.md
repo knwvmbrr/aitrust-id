@@ -16,6 +16,9 @@ screen-reader and outside-user installation remain separate open requirements.
 
 The first research pilot is metadata-only by owner acceptance: result, method
 version, failure category and structured feedback. Example sharing requires a
-separate later preview/redaction/permission flow. Retention and intake are still
-unselected; this step cannot collect users centrally. No signup is required to
+separate later preview/redaction/permission flow. The invited pilot operating contract is approved: metadata-only intake at
+`research.aitrustid.com/v1/feedback`, Michael as operator, 30-day active retention
+and a seven-day encrypted-backup limit. Collection remains disabled pending its
+security, withdrawal, recovery and real pilot acceptance; this local file step
+cannot collect users centrally. No signup is required to
 use the checker or make a local feedback file.

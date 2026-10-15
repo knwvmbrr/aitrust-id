@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-14T18:45:17.588588+00:00",
+  "updated": "2026-10-15T03:17:56.471807+00:00",
   "active_increment": "Independent optional research HTTP transport exercised; collection disabled; target remains 45 open full requirements",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -656,7 +656,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID™",
+    "observed_mark": "AI Trust ID\u2122",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -759,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-14T17:41:54.258196+00:00",
+    "audited_at": "2026-10-15T03:11:02.842307+00:00",
     "completed_records": 124,
     "open_records": 78,
     "records_preserved": 202,
@@ -775,22 +775,35 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/research-http-result.md",
+    "latest_increment": "docs/conformance-evidence-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
-    "target_open_records": 45,
+    "target_open_records": 60,
     "target_start_open_records": 78,
-    "target_remaining_closures": 33,
+    "target_remaining_closures": 18,
     "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
-    "target_plan": "docs/tag-failure-isolation-plan.md",
+    "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
     "current_target_verification": "runs/2026-10-14-setup-published-routes.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
-    "latest_owner_direction": "All tags must operate independently without depending on another tag. An individual tag failure must not disable healthy tag routes or the platform. Continue toward 45 open full requirements, preserving all scope and actual acceptance.",
+    "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-10-14",
     "latest_increment_completed_ids": [],
-    "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json"
+    "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
+    "target_history": [
+      {
+        "replaced_at": "2026-10-15T03:09:17.635699+00:00",
+        "previous": {
+          "target_open_records": 45,
+          "target_start_open_records": 78,
+          "target_remaining_closures": 33,
+          "target_plan": "docs/tag-failure-isolation-plan.md",
+          "latest_owner_direction": "All tags must operate independently without depending on another tag. An individual tag failure must not disable healthy tag routes or the platform. Continue toward 45 open full requirements, preserving all scope and actual acceptance."
+        },
+        "reason": "Owner changed immediate target from 45 to 60; preserve full scope and acceptance."
+      }
+    ]
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1071,13 +1084,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-10-14-tag-isolation-cold-current-PS.json",
     "PII_REDACTED": "runs/2026-10-14-tag-isolation-cold-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-14-research-http-repaired-protocol.json",
+    "protocol": "runs/2026-10-15-conformance-current-protocol.json",
     "extension": "runs/2026-10-14-tag-isolation-cold-current-extension.json",
-    "website": "runs/2026-10-14-research-http-ci-repaired-website.json",
+    "website": "runs/2026-10-15-conformance-recorded-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-14T18:45:17.588588+00:00",
+  "updated_at": "2026-10-15T03:17:56.471807+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1417,7 +1430,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael — accepted accountable pilot operator and access approver",
+    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -2652,5 +2665,23 @@
       "production_research_service_deployed": false,
       "collection_enabled": false
     }
+  },
+  "conformance_tools": {
+    "status": "implemented_and_focused_checked; current_protocol_and_website_checks_pass; protected_delivery_pending",
+    "vector_profile": "aitrust-assertion-vectors/1.0.0",
+    "reference_cases_passed": 28,
+    "focused_tests_passed": 22,
+    "evidence": [
+      "runs/2026-10-15-conformance-evidence-focused.json",
+      "runs/2026-10-15-conformance-reference-vectors.json"
+    ],
+    "conformance_guide": "docs/conformance-runner.md",
+    "evidence_guide": "docs/evidence-packet.md",
+    "independent_accuracy_evidence": false,
+    "outside_person_acceptance": false,
+    "release_approved": false,
+    "acceptance_reallocation": "pending_owner_answer; existing criteria retained",
+    "current_protocol_receipt": "runs/2026-10-15-conformance-current-protocol.json",
+    "current_website_receipt": "runs/2026-10-15-conformance-recorded-website.json"
   }
 }
