@@ -26,7 +26,7 @@
     }catch{if(current())ui.update(host,'UNAVAILABLE',null,'Check the local service and token settings.');}
   }
   function scan(){
-    if(!enabled){ui.captureStatus('Checks are paused. Open settings to enable assistant-response checks on ChatGPT.',()=>chrome.runtime.sendMessage({type:'open_settings'}),'Open settings');return;}
+    if(!enabled){ui.pause();return;}
     const hosts=adapter.responses();
     for(const host of tracked){
       if(!hosts.includes(host)){

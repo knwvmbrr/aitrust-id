@@ -4476,10 +4476,11 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-10-15T04:17:14.320733+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — prior session/run attribution"
+          "Codex — prior session/run attribution",
+          "Codex — quiet paused-page and live-announcement cleanup, actual unpacked-extension lifecycle and previous-behavior regression, 2026-10-15T04:17:14.320733+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -4492,9 +4493,13 @@
         "evidence": [
           "runs/2026-10-08-browser-checks.json",
           "scripts/browser-acceptance.js",
-          "scripts/live-dom-acceptance.js"
+          "scripts/live-dom-acceptance.js",
+          "docs/quiet-paused-checks-plan.md",
+          "docs/quiet-paused-checks.md",
+          "runs/2026-10-15-quiet-paused-privacy.json",
+          "runs/2026-10-15-quiet-paused-regression.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Paused checks now leave no tag/status or stale live announcement in actual synthetic extension controls. Current live-vendor lifecycle and required human understanding/screen-reader acceptance are still open.",
         "required_acceptance": [
           "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
         ],

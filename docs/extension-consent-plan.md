@@ -9,9 +9,10 @@ the server credential or delete the conversation owned by ChatGPT.
 
 Keep the existing permissions and endpoint. Read only the consent flag in the
 content script. While paused, do not read assistant response text, mount response
-tags or dispatch evaluations. A compact page-level settings prompt explains the
-paused state without inventing a wire result state. Settings can be opened only
-by an extension message from the supported page. No prompt, keystroke, document,
+tags, retain a tag announcement or dispatch evaluations. Paused pages stay
+quiet; the existing extension settings explain and control enablement. Pause is
+not an Unsupported evaluation result. The existing extension message for opening
+settings remains limited to the supported page. No prompt, keystroke, document,
 other-site or background capture is added.
 
 On pause/reset/token change, the service worker cancels active requests and its

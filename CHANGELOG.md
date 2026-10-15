@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-10-15
 
+### 2026-10-15-042311-quiet-paused-protocol-binding-0a57aeab
+
+Recorded 2026-10-15T04:23:11.114308+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the ledger-bound protocol receipt after the paused-check acceptance evidence update.
+- **Evidence.** All five current source-bound capability receipts and the route-boundary verifier pass; the protocol executes its 27 selected commands. [Change record](./runs/changes/2026-10-15-042311-quiet-paused-protocol-binding-0a57aeab.json).
+- **Not claimed.** Engineering checks do not establish independent accuracy, actual human accessibility or full F-035 acceptance. Count remains 78 open requirements.
+
+
+### 2026-10-15-042138-quiet-paused-current-evidence-47e62d31
+
+Recorded 2026-10-15T04:21:38.875182+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected native-inventory merge and current quiet-paused extension, website and route evidence.
+- **Evidence.** The prior-behavior regression fails as expected; current extension and website commands pass. Native tooling passed all 22 required head checks before normal merge. [Change record](./runs/changes/2026-10-15-042138-quiet-paused-current-evidence-47e62d31.json).
+- **Not claimed.** Updating the ledger invalidated the earlier ledger-bound protocol receipt, which must be refreshed before delivery. Full requirement count remains 78; no independent accuracy or human acceptance is inferred and no production site deployment is claimed.
+
+
+### 2026-10-15-041715-quiet-paused-checks-62a5ab59
+
+Recorded 2026-10-15T04:17:15.128595+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep paused extension pages quiet; remove generic Unsupported response controls and stale live announcements; preserve explicit settings consent.
+- **Evidence.** Actual unpacked-extension lifecycle passes and the same new assertion fails against the previous extension. Enabled authenticated checks and late-result refusal remain functioning. [Change record](./runs/changes/2026-10-15-041715-quiet-paused-checks-62a5ab59.json).
+- **Not claimed.** No full requirement closes. Current live-vendor lifecycle, physical phones, human accessibility and independent tag validation remain open. No permission, endpoint or method change.
+
+
 ### 2026-10-15-041326-native-current-capabilities-b41c43cd
 
 Recorded 2026-10-15T04:13:26.849306+00:00 · Contributor: Codex · change
