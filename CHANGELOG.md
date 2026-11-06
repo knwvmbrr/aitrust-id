@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-235204-directory-review-output-and-journal-5884da94
+
+Recorded 2026-11-06T23:52:04.675706+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse every Git checkout as a CLI output destination before provider access, and let the bounded private journal reach logout rollover and recovery.
+- **Evidence.** Three actual CLI refusal cases and a populated 10000-logout journal regression pass with the 57-case focused suite. [Change record](./runs/changes/2026-11-06-235204-directory-review-output-and-journal-5884da94.json).
+- **Not claimed.** The prior real-provider receipt is stale after these repairs; current-source provider execution and publication checks must pass again before merge.
+
+
 ### 2026-11-06-234625-directory-current-source-publication-22dd0e09
 
 Recorded 2026-11-06T23:46:25.246285+00:00 · Contributor: Codex · change

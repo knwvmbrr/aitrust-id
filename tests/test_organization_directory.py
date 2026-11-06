@@ -194,3 +194,32 @@ def test_complete_provider_contract_accepts_group_array_and_immutable_group_bind
 def test_complete_provider_contract_rejects_bad_identity_or_timing(selected,overrides):
     provider=network_fixture(selected,**overrides)
     with pytest.raises(Exception):provider.current('synthetic-user-token')
+
+
+@pytest.mark.parametrize('command',['begin','finish','call'])
+def test_cli_refuses_other_checkout_output_before_provider_or_credentials(selected,command,monkeypatch,capsys):
+    import runpy,sys
+    root=selected[4];checkout=root/'other-checkout';checkout.mkdir(mode=0o700);(checkout/'.git').write_text('gitdir: other')
+    script=Path(__file__).resolve().parents[1]/'scripts/organization-directory.py'
+    cli=runpy.run_path(str(script));called=[]
+    cli['main'].__globals__['config']=lambda path:called.append(path)
+    args=[str(script),'--config',str(selected[1]),command,'--output',str(checkout/'private')]
+    if command=='finish':args+=['--pending',str(root/'not-read.json')]
+    monkeypatch.setattr(sys,'argv',args)
+    assert cli['main']()==2 and called==[] and not (checkout/'private').exists()
+    assert 'organization_directory_contract_refused' in capsys.readouterr().err
+
+
+def test_busy_logout_journal_can_roll_over_and_recover(selected):
+    b,p,s=prepared(selected,[d.ROLES['configure']]);now=int(time.time())
+    with b.journal.db() as db:
+        db.executemany('INSERT INTO logged_out VALUES(?,?)',[(d.digest(str(i).encode()),now) for i in range(10000)])
+        db.executemany('INSERT INTO events(at,actor,operation,outcome) VALUES(?,?,?,?)',[(now,'a'*64,'configure','allowed') for _ in range(10000)])
+    assert Path(selected[0]['state_file']).stat().st_size>2_000_000
+    assert b.journal.logout('additional-realistic-token')=={'local_logout':True}
+    p.issued=now+1
+    result=b.journal.recover(selected[3],'fresh-replacement-token',p)
+    assert result['recovered'] is True
+    with b.journal.db() as db:
+        assert db.execute('SELECT count(*) FROM logged_out').fetchone()[0]==1
+        assert db.execute('SELECT count(*) FROM events').fetchone()[0]<=10000

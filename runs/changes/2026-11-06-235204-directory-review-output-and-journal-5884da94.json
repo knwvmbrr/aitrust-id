@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-235204-directory-review-output-and-journal-5884da94",
+  "recorded_at": "2026-11-06T23:52:04.675706+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7013dd64c2332d15274f16083aa44f803e45e531",
+  "changed": "Refuse every Git checkout as a CLI output destination before provider access, and let the bounded private journal reach logout rollover and recovery.",
+  "proves": "Three actual CLI refusal cases and a populated 10000-logout journal regression pass with the 57-case focused suite.",
+  "limits": "The prior real-provider receipt is stale after these repairs; current-source provider execution and publication checks must pass again before merge.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "scripts/organization-directory.py": "4a8f13f6a6fffe5bb73910e95118a02749d3c0a6e47fbb89c338108d59fe2bbb",
+    "tools/organization_directory.py": "b0710e0bb17ded5f88e76eb4e022ff8f0ce2b00bcdc9ef67cee659a6226d3218",
+    "tests/test_organization_directory.py": "e73c45c37f0928cad779c1d40c54d9fb689fe06887c12ee20ec34c99ef3cc553",
+    "docs/organization-directory.md": "9f9ebfd3cdefe08f3f26dc47a8231363b460ab9bc88e84b551c107aa2cf8fba0"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T23:52:05.232396+00:00"
+    }
+  ]
+}

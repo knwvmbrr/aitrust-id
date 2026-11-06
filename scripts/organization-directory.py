@@ -4,7 +4,7 @@ import argparse,json,sys
 from pathlib import Path
 sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from tools.organization_directory import config,Provider,Broker,parse,encoded,private_file,create
+from tools.organization_directory import config,Provider,Broker,parse,encoded,private_file,create,outside_git
 class Parser(argparse.ArgumentParser):
     def error(self,message):self.exit(2,'Directory command refused; use --help.\n')
 def main():
@@ -17,6 +17,7 @@ def main():
     q=sub.add_parser('recover');q.add_argument('--compromised-subject',required=True);q.add_argument('--replacement-session',type=Path,required=True)
     a=p.parse_args();broker=None
     try:
+        if hasattr(a,'output'):a.output=outside_git(a.output)
         c=config(a.config);broker=Broker(c)
         if a.command=='initialize':result=broker.journal.initialize()
         elif a.command=='begin':

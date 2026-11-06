@@ -156,10 +156,16 @@ class Journal:
     @contextmanager
     def db(self):
         # Owner-private parent and no-follow regular-file read are required before SQLite.
-        private_file(self.path)
+        outside_git(self.path)
+        with directory(self.path.parent,ROOT) as parent:
+            fd=os.open(self.path.name,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK,dir_fd=parent)
+            try:
+                info=os.fstat(fd)
+                check(stat.S_ISREG(info.st_mode) and info.st_uid==os.getuid() and info.st_nlink==1 and not info.st_mode&0o077 and info.st_size<=32*1024**2)
+            finally:os.close(fd)
         db=sqlite3.connect('file:'+quote(str(self.path),safe='/')+'?mode=rw',uri=True,timeout=5)
         try:
-            db.execute('PRAGMA trusted_schema=OFF');db.execute('BEGIN IMMEDIATE')
+            db.execute('PRAGMA trusted_schema=OFF');db.execute('PRAGMA max_page_count=8192');db.execute('BEGIN IMMEDIATE')
             yield db;db.commit()
         except BaseException:db.rollback();raise
         finally:db.close()
