@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-135020-conformance-corrected-source-revalidation-ab815489",
+  "recorded_at": "2026-11-06T13:50:20.970923+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "682e79449fbb758c929d5b039db0e8762884a350",
+  "changed": "Record the corrected CI/decision source checks and refresh the affected protocol and website evidence and route review.",
+  "proves": "32 protocol and 22 website check commands pass on unchanged current source; route and decision verifiers pass. 127 requirements complete and 75 open.",
+  "limits": "No actual outside-user, independent accuracy or tag release evidence. Corrected protected Linux CI must still pass before merge.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    "state.json": "0f695a0d7cee7d0bc7d157fe69339762c41e9046bd9b5569b6db1855711b44a6",
+    "eval/route-boundaries.json": "a055ebc37aa9e6056dcf092348209060a9f7661395993500398a3cea43d08033",
+    "runs/2026-11-06-conformance-ci-protocol.json": "edd74a039dcaaa2499f9c7c7e9fc2689181a30e30ccde9779fa139b93d49895a",
+    "runs/2026-11-06-conformance-ci-website.json": "7605232a3d6ec288d249c299c49c4a021f8258c51a464865d4a197eea5438435",
+    "runs/2026-11-06-conformance-ci-repair.json": "64363c23b72fe1c98b0b2536abf25dad5d5d051ebdd83dbe8988f72a8114aafc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-ci-protocol.json",
+      "sha256": "edd74a039dcaaa2499f9c7c7e9fc2689181a30e30ccde9779fa139b93d49895a"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-ci-website.json",
+      "sha256": "7605232a3d6ec288d249c299c49c4a021f8258c51a464865d4a197eea5438435"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-ci-repair.json",
+      "sha256": "64363c23b72fe1c98b0b2536abf25dad5d5d051ebdd83dbe8988f72a8114aafc"
+    }
+  ],
+  "checks": []
+}

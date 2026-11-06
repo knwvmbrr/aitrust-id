@@ -77,6 +77,8 @@ jobs:
       - run: python scripts/verify-vocabulary.py
       - uses: actions/setup-node@v4
         with: { node-version: '24' }
+      - name: Install hashed conformance test dependencies
+        run: pip install --require-hashes -r eval/requirements.lock
       - name: Keep approved conformance software separate from outside-human acceptance
         run: |
           python scripts/verify-conformance-delivery.py

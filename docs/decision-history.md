@@ -101,3 +101,14 @@ The recording times are current, not invented historical approval times.
 ## 2026-10-13 — Setup and human acceptance separated
 
 Michael replied “Yes — separate setup from human acceptance.” F-105 covers actual one-command clean Linux setup and failure checks. F-142 retains outside-person installation, physical-device and accessibility acceptance. No human or independent accuracy result is inferred. [Exact owner reply](../runs/2026-10-13-clean-setup-owner-decision.json).
+
+## 2026-11-06 — Conformance software and outside-user acceptance separated
+
+Michael replied “Yes — separate software and human acceptance” to the explicit
+F-119 question. F-119 covers the evidenced runnable conformance software. Its
+exact previous outside-implementer criterion is preserved under F-142 and in the
+[owner decision](../runs/2026-11-06-conformance-software-owner-decision.json).
+Independent accuracy remains under F-108. No outside person, independent validator,
+certification or detector release is inferred. This approval does not reallocate
+F-057 or F-120. Current processing time is recorded; no earlier approval time is
+invented.

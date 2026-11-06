@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-134655-conformance-ci-decision-repair-39444ee7",
+  "recorded_at": "2026-11-06T13:46:55.893508+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "682e79449fbb758c929d5b039db0e8762884a350",
+  "changed": "Install hashed conformance check dependencies in their own CI job and preserve the explicit approval in the generated decision history source.",
+  "proves": "25 focused conformance and decision checks pass; canonical decision prose verifies. The CI failures were missing job-local dependencies and an unrendered history entry.",
+  "limits": "Required clean Linux CI remains the acceptance check for the corrected workflow. No external-person, accuracy or tag-release evidence is inferred.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "3ea44498e1ec160039887476cd322ba8bd71da6e1047b9ba88477a4ec3412fbe",
+    "docs/decision-history.md": "feee44d63b1d58501fcb05653d7c5e5f939a85afefbf42aaff3e79a965b99133"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-software-owner-decision.json",
+      "sha256": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-decisions.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T13:46:56.120946+00:00"
+    }
+  ]
+}

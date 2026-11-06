@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-135020-conformance-corrected-source-revalidation-ab815489
+
+Recorded 2026-11-06T13:50:20.970923+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the corrected CI/decision source checks and refresh the affected protocol and website evidence and route review.
+- **Evidence.** 32 protocol and 22 website check commands pass on unchanged current source; route and decision verifiers pass. 127 requirements complete and 75 open. [Change record](./runs/changes/2026-11-06-135020-conformance-corrected-source-revalidation-ab815489.json).
+- **Not claimed.** No actual outside-user, independent accuracy or tag release evidence. Corrected protected Linux CI must still pass before merge.
+
+
+### 2026-11-06-134655-conformance-ci-decision-repair-39444ee7
+
+Recorded 2026-11-06T13:46:55.893508+00:00 · Contributor: Codex · change
+
+- **Changed.** Install hashed conformance check dependencies in their own CI job and preserve the explicit approval in the generated decision history source.
+- **Evidence.** 25 focused conformance and decision checks pass; canonical decision prose verifies. The CI failures were missing job-local dependencies and an unrendered history entry. [Change record](./runs/changes/2026-11-06-134655-conformance-ci-decision-repair-39444ee7.json).
+- **Not claimed.** Required clean Linux CI remains the acceptance check for the corrected workflow. No external-person, accuracy or tag-release evidence is inferred.
+
+
 ### 2026-11-06-133935-conformance-current-acceptance-evidence-54c50ac4
 
 Recorded 2026-11-06T13:39:35.212251+00:00 · Contributor: Codex · change
