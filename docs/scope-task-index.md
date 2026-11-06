@@ -161,7 +161,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-155 | SynthID and vendor watermarking | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-156 | Additional browser and site adapters | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-157 | Newsroom integration — labels in an editorial workflow | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-158 | Agent identity — labelling output from autonomous agents | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-158 | Agent identity — labelling output from autonomous agents | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-159 | Fleet deployment and policy management | [ORG-FLEET](scope-delivery.md#org-fleet) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-160 | Host-level capture agents | [ORG-HOST](scope-delivery.md#org-host) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-161 | Long-horizon retention and audit trails | [ORG-AUDIT](scope-delivery.md#org-audit) | 100% · [evidence/fix](scope-progress.md) |

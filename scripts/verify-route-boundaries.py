@@ -156,6 +156,8 @@ PATTERNS += ('tools/reference_revision.py','scripts/review-reference-revision.py
              'scripts/prepare-reference-revision-demo.py','scripts/verify-reference-revision.py',
              'tests/test_reference_revision.py','docs/reference-revision-plan.md','docs/reference-revisions.md')
 
+PATTERNS += ('scripts/scope-progress.py', 'tests/test_scope_render_command.py', 'docs/scope-render-plan.md')
+
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',
@@ -491,6 +493,8 @@ PATTERNS += ('runs/2026-11-06-host-capture-final-macos.json', 'runs/2026-11-06-h
 PATTERNS += ('tools/conformance_vectors.py', 'scripts/check-conformance-vectors.py', 'scripts/verify-conformance-delivery.py', 'tests/test_conformance_vectors.py', 'tests/test_conformance_delivery.py', 'eval/conformance/assertion-v1.json', 'docs/conformance-runner.md', 'docs/conformance-acceptance-plan.md', 'runs/2026-11-06-conformance-software-execution.json', 'runs/2026-11-06-conformance-software-owner-decision.json')
 
 PATTERNS += ('scripts/ci-ubuntu-mirror.py', 'tests/test_ci_ubuntu_mirror.py', 'docs/ci-browser-install-plan.md')
+
+PATTERNS += ('tools/agent_output.py', 'scripts/agent-output.py', 'scripts/agent-signature.cjs', 'scripts/verify-agent-output.py', 'scripts/verify-agent-output-view.cjs', 'tests/test_agent_output.py', 'tests/test_agent_output_evidence.py', 'docs/agent-output-plan.md', 'docs/agent-output.md', 'runs/2026-11-06-agent-output-*.json')
 
 def verify(root=ROOT):
     before = inventory(root)

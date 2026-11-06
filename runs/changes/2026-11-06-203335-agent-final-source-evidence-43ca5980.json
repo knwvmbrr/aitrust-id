@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-203335-agent-final-source-evidence-43ca5980",
+  "recorded_at": "2026-11-06T20:33:35.416007+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f65986549820812dbaf4b0fa2cdf702a311a891e",
+  "changed": "Record the final source-bound capability checks and refresh current route review after the Linux agent acceptance and audit-pipeline repairs.",
+  "proves": "PS 7, redaction 6, extension 14, protocol 35 and website 23 current check commands pass; the selected personal route boundary review passes with retained privacy and failure rules.",
+  "limits": "These engineering checks do not grant independent tag accuracy, human acceptance or certification. F-158 is the only full requirement closure in this increment.",
+  "scope_ids": [
+    "F-158",
+    "F-139"
+  ],
+  "files": {
+    "state.json": "bb7b9c2552ce62cf16cbcffeb4c0f1169610741da0c055fda127ba29164618be",
+    "eval/route-boundaries.json": "2ab86548e06b573e8baf6672c3cf5d748bde97ad102733cd93f7489b13d815eb",
+    "runs/2026-11-06-agent-final-PS.json": "54da26d98d6c4c7fd39b872b05f4818c65233d72cf7b245a1c3b524fc338d497",
+    "runs/2026-11-06-agent-final-PII_REDACTED.json": "28a73a3cff9ed12525c69d6dee8c829cea0af21a866cb78119caa342a6d43c08",
+    "runs/2026-11-06-agent-final-extension.json": "e862b61501291947a40f30e3feb27541c841ea065dcb4f0d1a11fa2353be3021",
+    "runs/2026-11-06-agent-final-protocol.json": "7e3bfcd9b5313ea759e1471c2cd9237b81e0f69f4fab05b5b8191b00be581881",
+    "runs/2026-11-06-agent-final-website.json": "2d9f31fc0be9441b03d4ac0d48c4af047b0a741b7481a8fe7c7097cfc488c7d5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-final-protocol.json",
+      "sha256": "7e3bfcd9b5313ea759e1471c2cd9237b81e0f69f4fab05b5b8191b00be581881"
+    },
+    {
+      "path": "runs/2026-11-06-agent-final-website.json",
+      "sha256": "2d9f31fc0be9441b03d4ac0d48c4af047b0a741b7481a8fe7c7097cfc488c7d5"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-202715-multi-commit-evidence-provenance-d58a03f2",
+  "recorded_at": "2026-11-06T20:27:15.045339+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f65986549820812dbaf4b0fa2cdf702a311a891e",
+  "changed": "Preserve committed per-change evidence snapshots across multi-commit progress, and require fresh evidence and file coverage for current changes.",
+  "proves": "Real Git history tests accept the original snapshot while refusing missing original evidence, undocumented later changes and edited events. Historical changelog bytes remain unchanged.",
+  "limits": "This repairs audit provenance only; it does not independently validate a tag or grant another requirement closure.",
+  "scope_ids": [
+    "F-139",
+    "F-158"
+  ],
+  "files": {
+    "docs/scope-render-plan.md": "8ae724a783f618d1ff9170a05a12df1038e243b82b684784c68cc98e620690b7",
+    "scripts/changelog_core.py": "b9074f37f9a75fcc556bfc64555b5a3301c82af89823f2074386b7ee826a5f4b",
+    "tests/test_changelog_pipeline.py": "24a7e1800ee18d9f49e409b210b7b1016d64fde72e1f425c2ac5cde75ad2a444",
+    "eval/revalidation.json": "161859d532fbfced40a765d17e1deae6b27b26f0ba0901397b0402c313aec7a4"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_changelog_pipeline.py",
+        "tests/test_scope_render_command.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T20:27:21.434341+00:00"
+    }
+  ]
+}

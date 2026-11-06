@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-203621-agent-current-scope-summary-67e69229",
+  "recorded_at": "2026-11-06T20:36:21.019700+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4999b3a5580c4c63740df9a0fc162a99b39da8db",
+  "changed": "Point the current scope increment summary to the actual F-158 completion and preserved acceptance packet.",
+  "proves": "The latest scoped job, date, completed-ID list and target evidence now reference this delivered software increment; prior publication evidence remains historical.",
+  "limits": "No additional requirement closure or acceptance claim.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "state.json": "d4d0f251eca025047dcf65929cfb92ce24e22ddb83e5e3b559c9a15c05c8ee54"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-integration-acceptance.json",
+      "sha256": "e1b8a0d794ab9ec8499cbd85e4bd76b1d7efbf41a36a0bcb048e69c8609774ef"
+    }
+  ],
+  "checks": []
+}

@@ -118,6 +118,37 @@ class ChangePipeline(unittest.TestCase):
         r,n=self.record(checks=[],evidence=[{'path':'runs/missing.json','sha256':'0'*64}]);self.assertTrue(m.validate_record(self.root,r,n,current=True))
     def test_changed_evidence_rejected(self):
         (self.root/'runs/proof.json').write_text('{}');r,n=self.record(evidence=[{'path':'runs/proof.json','sha256':m.digest(self.root,'runs/proof.json')}]);(self.root/'runs/proof.json').write_text('{"pass":true}');self.assertTrue(m.validate_record(self.root,r,n,current=True))
+    def test_prior_committed_event_keeps_exact_then_current_evidence(self):
+        proof=self.root/'runs/proof.json';proof.write_text('{"count": 75}\n')
+        r,n=self.record(files={'runs/proof.json':m.digest(self.root,'runs/proof.json')},evidence=[{'path':'runs/proof.json','sha256':m.digest(self.root,'runs/proof.json')}])
+        self.commit()
+        proof.write_text('{"count": 74}\n')
+        self.record(id='test-event-two', files={'runs/proof.json':m.digest(self.root,'runs/proof.json')})
+        self.commit()
+        self.assertTrue(m.verify(self.root,self.base)['pass'])
+    def test_historical_evidence_does_not_cover_new_undocumented_change(self):
+        proof=self.root/'runs/proof.json';proof.write_text('{}')
+        self.record(files={'runs/proof.json':m.digest(self.root,'runs/proof.json')},evidence=[{'path':'runs/proof.json','sha256':m.digest(self.root,'runs/proof.json')}]);self.commit()
+        proof.write_text('{"new":true}');self.commit()
+        result=m.verify(self.root,self.base)
+        self.assertFalse(result['pass'])
+        self.assertIn('New change missing fresh matching event: runs/proof.json',result['errors'])
+    def test_bad_evidence_when_original_event_committed_is_still_rejected(self):
+        proof=self.root/'runs/proof.json';proof.write_text('{}')
+        self.record(files={'runs/proof.json':m.digest(self.root,'runs/proof.json')},evidence=[{'path':'runs/proof.json','sha256':'0'*64}]);self.commit()
+        self.assertFalse(m.verify(self.root,self.base)['pass'])
+    def test_uncommitted_changed_event_cannot_borrow_committed_evidence(self):
+        proof=self.root/'runs/proof.json';proof.write_text('{}')
+        r,n=self.record(files={'runs/proof.json':m.digest(self.root,'runs/proof.json')},evidence=[{'path':'runs/proof.json','sha256':m.digest(self.root,'runs/proof.json')}]);self.commit()
+        r['changed']='Edited event.';(self.root/n).write_text(json.dumps(r,indent=2)+'\n')
+        proof.write_text('{"new":true}')
+        self.assertIsNone(m.committed_event_origin(self.root,n,'HEAD'))
+        self.assertFalse(m.verify(self.root,self.base)['pass'])
+    def test_readded_event_cannot_borrow_the_original_snapshot(self):
+        r,n=self.record();raw=(self.root/n).read_bytes();self.commit()
+        (self.root/n).unlink();self.commit()
+        (self.root/n).write_bytes(raw);self.commit()
+        self.assertIsNone(m.committed_event_origin(self.root,n,'HEAD'))
     def test_unrelated_pass_cannot_support_release_claim(self):
         r,n=self.record(changed='PS is independently validated.');self.assertTrue(m.validate_record(self.root,r,n))
     def test_failed_gate_rejected(self):

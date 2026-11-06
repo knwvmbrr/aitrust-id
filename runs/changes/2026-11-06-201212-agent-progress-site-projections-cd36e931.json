@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-201212-agent-progress-site-projections-cd36e931",
+  "recorded_at": "2026-11-06T20:12:12.978900+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+  "changed": "Regenerate the public scope projections for the evidenced F-158 partial implementation, retaining 202 records and 75 open requirements.",
+  "proves": "The published-source projection matches the current scoped implementation and pending Linux/final acceptance; no full completion is inferred.",
+  "limits": "Generated projections are not runtime, human or independent accuracy evidence.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "7d8e88689bfb4bb319715d995e3271fefdb9bb48715fd10fe40fc2020c13e5c4",
+    "site/src/public-scope.json": "7d8e88689bfb4bb319715d995e3271fefdb9bb48715fd10fe40fc2020c13e5c4",
+    "site/src/scope-manifest.json": "eaa7befe05df418588dc1bb762809cd789c7321f1bdfb063f0159add54477355"
+  },
+  "evidence": [
+    {
+      "path": "docs/scope-progress.json",
+      "sha256": "0a9d764c2ca0bc01766437bd7a99a542d6bf1733a3c7858327001030c85d1f4b"
+    }
+  ],
+  "checks": []
+}

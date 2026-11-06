@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-11-06T20:10:17.615091+00:00",
+  "author": "Codex",
+  "findings": [
+    {
+      "component": "new browser verifier",
+      "failure": "Referenced a nonexistent report.cjs writer.",
+      "fix": "Use the existing execution-report.cjs writer.",
+      "runtime_adapter_changed": false
+    },
+    {
+      "component": "synthetic macOS browser fixture",
+      "failure": "OS temporary path used /var alias; strict program source reader refused the symlink ancestor.",
+      "fix": "Canonicalize only the owned verifier fixture directory. Reader protections retained.",
+      "runtime_adapter_changed": false
+    },
+    {
+      "component": "verification shell setup",
+      "failure": "An overridden PATH omitted npm.",
+      "fix": "Restore the established pinned runtime PATH including npm before build.",
+      "runtime_adapter_changed": false
+    },
+    {
+      "component": "Linux evidence availability",
+      "failure": "Existing server staging runtime has no Node.",
+      "fix": "Leave server unchanged and use clean required GitHub runner execution.",
+      "server_changed": false
+    }
+  ],
+  "verification": "runs/2026-11-06-agent-output-view-current.json",
+  "macos_tests": 33,
+  "guard_tests": 12,
+  "independent_accuracy_evidence": false,
+  "new_tag_release": false
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-195040-agent-output-software-and-os-proof-e10b9f38",
+  "recorded_at": "2026-11-06T19:50:40.683517+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+  "changed": "Implement the optional reviewed Python agent-output adapter, pinned-key source statements, private offline view and independent optional PS route; collect actual macOS evidence and a clean Linux proof job.",
+  "proves": "33 actual process/source/privacy failure cases pass on macOS; the private browser view passes light/dark 320px/200% keyboard and axe checks without external requests. Eleven evidence guard cases reject stale or overstated results. Prior protected publication is retained.",
+  "limits": "F-158 remains open until Linux and final source acceptance are evidenced. No new BT/FA/PA verdict, independently attested execution, AI-generation proof, sandbox, production service or independent tag release is claimed. The selected agent is trusted executable code with OS-user privileges.",
+  "scope_ids": [
+    "F-158",
+    "T-BT",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "docs/agent-output-plan.md": "518218894187780b436bdd69baa6afe3d773de71e838ebe1c2c0ce2a44a4036c",
+    "docs/agent-output.md": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
+    "tools/agent_output.py": "9eb283f5c66ae408a4ee4f768ad2e5c6dcac33b694aa26178bd0fbaaac066247",
+    "scripts/agent-output.py": "4127bb578b7be1c3aef3a2d2f24b027ca03a43c6cce6c621c2baa11025c78e2d",
+    "scripts/agent-signature.cjs": "7654f96f1d080e6c6025b98258c123e952ffc1daeb9c49e35f8eb1a6ee168ccc",
+    "scripts/verify-agent-output.py": "8590ef2b7016f981606b5b7471734725722451169a7631087484c4eba4f4e0d0",
+    "scripts/verify-agent-output-view.cjs": "62a27ec450408c9afca74063aa205133678a0f6094e3b3508564933119f1e99e",
+    "tests/test_agent_output.py": "b35a49b1a79c088dfb4f1291f8207fab1d40864c74741fa5b5698550c184c18b",
+    "tests/test_agent_output_evidence.py": "0c93f331ee971d5be1225e19fe6ad0a3fcf4118132d85798f43bba2b33e56730",
+    ".github/workflows/agent-output-proof.yml": "221f30fdedfb4c09f3caffe85ba02024a1061cfdb2a573cef36a4ccae94ddc6e",
+    "runs/2026-11-06-agent-output-macos.json": "716534fea2e86705758bbfca287eee8ac1b55022fa83b3bc8edc6261b1384f97",
+    "runs/2026-11-06-agent-output-view.json": "6d9e55b002872c6ccc7fd79d315e42334b19c62f84ebecc2e2e24725470c9333",
+    "runs/2026-11-06-conformance-protected-publication.json": "2ad4f3d390066375aaa1c907b6a14d3b29bb57a648eaab5cb0593ec279e2cb99"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-output-macos.json",
+      "sha256": "716534fea2e86705758bbfca287eee8ac1b55022fa83b3bc8edc6261b1384f97"
+    },
+    {
+      "path": "runs/2026-11-06-agent-output-view.json",
+      "sha256": "6d9e55b002872c6ccc7fd79d315e42334b19c62f84ebecc2e2e24725470c9333"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-protected-publication.json",
+      "sha256": "2ad4f3d390066375aaa1c907b6a14d3b29bb57a648eaab5cb0593ec279e2cb99"
+    }
+  ],
+  "checks": []
+}

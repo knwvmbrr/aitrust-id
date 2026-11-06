@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_findings",
+  "pass": true,
+  "findings": [
+    {
+      "error": "Clean Linux no-egress and scope-plan CI rejected stale F-158 task-index percentage",
+      "root_cause": "The canonical scope-progress --render command updated the ledger page without calling the existing scope-plan/index renderer.",
+      "fix": "Coordinate both existing renderers, validate all 202 index percentages and propagate secondary rendering errors.",
+      "verification": "26 focused scope, index and agent evidence tests pass; both Mac and Linux 33-case agent execution receipts remain current."
+    },
+    {
+      "error": "Initial command test could not parse JSON stdout",
+      "root_cause": "Secondary renderer printed progress onto the machine-readable channel.",
+      "fix": "Redirect secondary renderer progress to stderr, preserving one JSON result.",
+      "verification": "Actual CLI regression and forced secondary-failure checks both pass."
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "human_acceptance": false
+}

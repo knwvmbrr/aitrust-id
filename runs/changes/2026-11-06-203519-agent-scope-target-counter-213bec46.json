@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-203519-agent-scope-target-counter-213bec46",
+  "recorded_at": "2026-11-06T20:35:19.746286+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fbf65d902ef7e0129bc263b3bda6af75b3c7ba35",
+  "changed": "Correct the derived distance-to-target counter after F-158 completion so state agrees with the acceptance ledger.",
+  "proves": "Accountability verification confirms 128 complete, 74 open, target 60 and 14 closures still needed; all referenced evidence chronology and responsible lanes validate.",
+  "limits": "This repairs a state projection; it grants no extra closure and does not weaken any acceptance.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "state.json": "d94efc3d9cf7a9742ea4331ab25bb27016e907fe61f5bd6c01a07827e16c5c02",
+    "runs/2026-11-06-agent-scope-counter-repair.json": "6002b482cacaa9c3e09b794f7058835959e13f542e7a64a28b1b2feda71cf006"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-scope-counter-repair.json",
+      "sha256": "6002b482cacaa9c3e09b794f7058835959e13f542e7a64a28b1b2feda71cf006"
+    }
+  ],
+  "checks": []
+}

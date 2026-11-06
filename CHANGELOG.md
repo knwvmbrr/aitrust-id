@@ -2,6 +2,114 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-203621-agent-current-scope-summary-67e69229
+
+Recorded 2026-11-06T20:36:21.019700+00:00 · Contributor: Codex · change
+
+- **Changed.** Point the current scope increment summary to the actual F-158 completion and preserved acceptance packet.
+- **Evidence.** The latest scoped job, date, completed-ID list and target evidence now reference this delivered software increment; prior publication evidence remains historical. [Change record](./runs/changes/2026-11-06-203621-agent-current-scope-summary-67e69229.json).
+- **Not claimed.** No additional requirement closure or acceptance claim.
+
+
+### 2026-11-06-203519-agent-scope-target-counter-213bec46
+
+Recorded 2026-11-06T20:35:19.746286+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the derived distance-to-target counter after F-158 completion so state agrees with the acceptance ledger.
+- **Evidence.** Accountability verification confirms 128 complete, 74 open, target 60 and 14 closures still needed; all referenced evidence chronology and responsible lanes validate. [Change record](./runs/changes/2026-11-06-203519-agent-scope-target-counter-213bec46.json).
+- **Not claimed.** This repairs a state projection; it grants no extra closure and does not weaken any acceptance.
+
+
+### 2026-11-06-203335-agent-final-source-evidence-43ca5980
+
+Recorded 2026-11-06T20:33:35.416007+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the final source-bound capability checks and refresh current route review after the Linux agent acceptance and audit-pipeline repairs.
+- **Evidence.** PS 7, redaction 6, extension 14, protocol 35 and website 23 current check commands pass; the selected personal route boundary review passes with retained privacy and failure rules. [Change record](./runs/changes/2026-11-06-203335-agent-final-source-evidence-43ca5980.json).
+- **Not claimed.** These engineering checks do not grant independent tag accuracy, human acceptance or certification. F-158 is the only full requirement closure in this increment.
+
+
+### 2026-11-06-202952-changelog-readd-refusal-94d36e8e
+
+Recorded 2026-11-06T20:29:52.649601+00:00 · Contributor: Codex · change
+
+- **Changed.** Reject deleted-and-readded change events as a source for historical evidence, preserving one immutable introduction.
+- **Evidence.** The actual Git delete/re-add regression refuses to borrow evidence from the old introduction. [Change record](./runs/changes/2026-11-06-202952-changelog-readd-refusal-94d36e8e.json).
+- **Not claimed.** No requirement count or detector claim changes.
+
+
+### 2026-11-06-202752-agent-completed-scope-projections-71609024
+
+Recorded 2026-11-06T20:27:52.135770+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate all public scope projections after the completed agent software acceptance and consistent 202-record task render.
+- **Evidence.** The source ledger and website projections show 128 complete and 74 open requirements with F-158 software complete. [Change record](./runs/changes/2026-11-06-202752-agent-completed-scope-projections-71609024.json).
+- **Not claimed.** Site projections do not independently validate detector accuracy or close human/legal acceptance.
+
+
+### 2026-11-06-202715-multi-commit-evidence-provenance-d58a03f2
+
+Recorded 2026-11-06T20:27:15.045339+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve committed per-change evidence snapshots across multi-commit progress, and require fresh evidence and file coverage for current changes.
+- **Evidence.** Real Git history tests accept the original snapshot while refusing missing original evidence, undocumented later changes and edited events. Historical changelog bytes remain unchanged. [Change record](./runs/changes/2026-11-06-202715-multi-commit-evidence-provenance-d58a03f2.json).
+- **Not claimed.** This repairs audit provenance only; it does not independently validate a tag or grant another requirement closure.
+
+
+### 2026-11-06-202542-agent-software-acceptance-and-scope-render-381e60ee
+
+Recorded 2026-11-06T20:25:42.852992+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the source-bound Mac and clean Linux agent-output integration and repair canonical scope rendering so ledger and all 202 task percentages stay consistent.
+- **Evidence.** F-158 fulfills its preserved software acceptance contract with 33 executed cases on each OS, private view failure isolation and explicit source-claim limits. The scope now has 128 complete and 74 open requirements. [Change record](./runs/changes/2026-11-06-202542-agent-software-acceptance-and-scope-render-381e60ee.json).
+- **Not claimed.** No original acceptance reassigned or waived, independent accuracy, outside-user acceptance, proposed tag adoption or sandbox claim. Protected publication still pending.
+
+
+### 2026-11-06-201212-agent-progress-site-projections-cd36e931
+
+Recorded 2026-11-06T20:12:12.978900+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the public scope projections for the evidenced F-158 partial implementation, retaining 202 records and 75 open requirements.
+- **Evidence.** The published-source projection matches the current scoped implementation and pending Linux/final acceptance; no full completion is inferred. [Change record](./runs/changes/2026-11-06-201212-agent-progress-site-projections-cd36e931.json).
+- **Not claimed.** Generated projections are not runtime, human or independent accuracy evidence.
+
+
+### 2026-11-06-201018-agent-registered-source-checks-0a1c4862
+
+Recorded 2026-11-06T20:10:18.967052+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain strict OS/view closure requirements, register current agent integration source receipts, and document corrected verifier/setup failures before clean Linux evidence.
+- **Evidence.** PS 7, redaction 6, extension 14, protocol 34 and website 23 check commands pass on current source. Source-bound route review passes. The full scope still has 75 open requirements. [Change record](./runs/changes/2026-11-06-201018-agent-registered-source-checks-0a1c4862.json).
+- **Not claimed.** No full F-158 closure before current Linux execution. No false tag adoption, independent accuracy, real human/phone acceptance, production activation or runtime sandbox claim.
+
+
+### 2026-11-06-195926-agent-source-bound-ci-and-use-guide-173690ee
+
+Recorded 2026-11-06T19:59:26.443422+00:00 · Contributor: Codex · change
+
+- **Changed.** Wire actual clean Linux execution into required CI, bind the agent sources and failure checks to revalidation, and expose the runnable source-and-tag guide on the existing developer page.
+- **Evidence.** The source-bound private view passes current 320px/200%, keyboard, CSP and axe controls. Twelve evidence guard tests retain the missing-Linux gate before full F-158 closure. The public guide has an actual browser request check. [Change record](./runs/changes/2026-11-06-195926-agent-source-bound-ci-and-use-guide-173690ee.json).
+- **Not claimed.** Clean Linux execution and final source publication remain pending. No human, independent accuracy, new public tag, new API listener or enterprise activation is inferred.
+
+
+### 2026-11-06-195216-agent-output-current-progress-e607e726
+
+Recorded 2026-11-06T19:52:16.064249+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual agent-adapter implementation and executable checks in scope without claiming Linux or full closure; retain all 202 records and 75 open requirements.
+- **Evidence.** F-158 has its contract, implementation and Mac failure checks evidenced at 60%; Linux and final integration remain open. The prior conformance publication is linked to its actual protected merge. [Change record](./runs/changes/2026-11-06-195216-agent-output-current-progress-e607e726.json).
+- **Not claimed.** No full requirement closed yet. No original acceptance was removed or reassigned; physical/human/accuracy and proposed tag decisions remain unchanged.
+
+
+### 2026-11-06-195040-agent-output-software-and-os-proof-e10b9f38
+
+Recorded 2026-11-06T19:50:40.683517+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement the optional reviewed Python agent-output adapter, pinned-key source statements, private offline view and independent optional PS route; collect actual macOS evidence and a clean Linux proof job.
+- **Evidence.** 33 actual process/source/privacy failure cases pass on macOS; the private browser view passes light/dark 320px/200% keyboard and axe checks without external requests. Eleven evidence guard cases reject stale or overstated results. Prior protected publication is retained. [Change record](./runs/changes/2026-11-06-195040-agent-output-software-and-os-proof-e10b9f38.json).
+- **Not claimed.** F-158 remains open until Linux and final source acceptance are evidenced. No new BT/FA/PA verdict, independently attested execution, AI-generation proof, sandbox, production service or independent tag release is claimed. The selected agent is trusted executable code with OS-user privileges.
+
+
 ### 2026-11-06-144648-browser-ci-current-source-evidence-e6818f6b
 
 Recorded 2026-11-06T14:46:48.348106+00:00 · Contributor: Codex · change
