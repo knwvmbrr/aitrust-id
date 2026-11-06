@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-203621-agent-current-scope-summary-67e69229
+
+Recorded 2026-11-06T20:36:21.019700+00:00 · Contributor: Codex · change
+
+- **Changed.** Point the current scope increment summary to the actual F-158 completion and preserved acceptance packet.
+- **Evidence.** The latest scoped job, date, completed-ID list and target evidence now reference this delivered software increment; prior publication evidence remains historical. [Change record](./runs/changes/2026-11-06-203621-agent-current-scope-summary-67e69229.json).
+- **Not claimed.** No additional requirement closure or acceptance claim.
+
+
 ### 2026-11-06-203519-agent-scope-target-counter-213bec46
 
 Recorded 2026-11-06T20:35:19.746286+00:00 · Contributor: Codex · change

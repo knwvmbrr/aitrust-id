@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-06T20:35:19.288477+00:00",
+  "updated": "2026-11-06T20:36:20.566565+00:00",
   "active_increment": "Agent-output F-158 full supported software acceptance; 74 full requirements open, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -759,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-06T13:21:20.339568+00:00",
+    "audited_at": "2026-11-06T20:36:20.566565+00:00",
     "completed_records": 128,
     "open_records": 74,
     "records_preserved": 202,
@@ -775,7 +775,7 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/conformance-evidence-result.md",
+    "latest_increment": "docs/agent-output.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
@@ -785,12 +785,12 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-06-conformance-software-execution.json",
+    "current_target_verification": "runs/2026-11-06-agent-integration-acceptance.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
-    "latest_owner_direction_date": "2026-10-14",
+    "latest_owner_direction_date": "2026-11-06",
     "latest_increment_completed_ids": [
-      "F-161"
+      "F-158"
     ],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
@@ -1093,7 +1093,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-06T20:35:19.288477+00:00",
+  "updated_at": "2026-11-06T20:36:20.566565+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
