@@ -1,5 +1,97 @@
 # Changelog
 
+## Unreleased — 2026-11-06
+
+### 2026-11-06-045502-host-corrected-publication-boundaries-55efaf92
+
+Recorded 2026-11-06T04:55:02.607487+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final foreground/job-control and cross-checkout privacy fixes to passing current engineering receipts, deployment boundaries and machine-readable state.
+- **Evidence.** All five current source-bound capabilities pass. Final macOS and isolated Linux controls remain 19 per OS; all 202 IDs are retained with 76 full requirements open. [Change record](./runs/changes/2026-11-06-045502-host-corrected-publication-boundaries-55efaf92.json).
+- **Not claimed.** Independent managed-deployment security/human acceptance and detector accuracy remain unperformed. No collection or new tag release.
+
+
+### 2026-11-06-045129-host-reviewed-route-execution-22fa7119
+
+Recorded 2026-11-06T04:51:29.925007+00:00 · Contributor: Codex · change
+
+- **Changed.** Record corrected-source PS, privacy, protocol and extension execution; refresh the generated HOST performance statement to the 19-control OS evidence.
+- **Evidence.** All four current route executions pass. The website commands also passed, but their first source-bound receipt correctly refused a generated performance input that changed during build; it will be rerun on the now-stable generated input. [Change record](./runs/changes/2026-11-06-045129-host-reviewed-route-execution-22fa7119.json).
+- **Not claimed.** No additional scope closure or independent accuracy evidence; a failed stability receipt is not accepted as success.
+
+
+### 2026-11-06-044705-enforce-host-foreground-job-control-d923fd00
+
+Recorded 2026-11-06T04:47:05.457305+00:00 · Contributor: Codex · change
+
+- **Changed.** Cancel foreground file capture on terminal ownership loss; Ctrl-Z exits and SIGSTOP/bg cannot resume captures behind the shell. Retain the cross-checkout journal refusal and source-bound final OS evidence.
+- **Evidence.** 19 actual terminal controls pass per OS, including real Bash job control on macOS and non-root isolated Linux. Two evidence tests reject stale or overstated acceptance. One software closure only. [Change record](./runs/changes/2026-11-06-044705-enforce-host-foreground-job-control-d923fd00.json).
+- **Not claimed.** No managed deployment, independent security review, human usability acceptance or detector accuracy claim.
+
+
+### 2026-11-06-044220-refuse-cross-checkout-host-records-6afa953e
+
+Recorded 2026-11-06T04:42:20.894407+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse optional host metadata directories inside any other Git checkout before writing; add a regression and repeat both actual OS lifecycles on the corrected source.
+- **Evidence.** Prior PR source reproduced the cross-checkout admission. Corrected macOS and non-root isolated Linux runs pass all 17 controls, including that refusal; old evidence is preserved and superseded. [Change record](./runs/changes/2026-11-06-044220-refuse-cross-checkout-host-records-6afa953e.json).
+- **Not claimed.** No additional closure or independent security approval. Managed-deployment review and human/accuracy acceptance remain open.
+
+
+### 2026-11-06-043744-host-current-release-boundaries-e4149039
+
+Recorded 2026-11-06T04:37:44.279274+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final protocol/website executions and unchanged extension to current source boundaries and machine-readable state for the foreground host-file delivery.
+- **Evidence.** All five current engineering capabilities pass their source-bound checks; original tag methods are unchanged, 202 scope IDs remain and only F-160 software closes. [Change record](./runs/changes/2026-11-06-043744-host-current-release-boundaries-e4149039.json).
+- **Not claimed.** 76 requirements remain open, including independent managed-deployment review, real users and tag accuracy. Production publication follows protected merge.
+
+
+### 2026-11-06-043426-host-deployment-task-evidence-f121f355
+
+Recorded 2026-11-06T04:34:26.611893+00:00 · Contributor: Codex · change
+
+- **Changed.** Attach actual OS evidence to the three HOST deployment tasks, retain each at 80 percent pending independent security/human acceptance, and record the passing current website execution.
+- **Evidence.** One software closure only, with all 202 original requirements preserved. The managed-deployment package and its three tasks remain open. [Change record](./runs/changes/2026-11-06-043426-host-deployment-task-evidence-f121f355.json).
+- **Not claimed.** No extra requirement closure, human review or managed-service acceptance is inferred from mechanical tests.
+
+
+### 2026-11-06-043100-host-verified-integration-records-8229e5d4
+
+Recorded 2026-11-06T04:31:00.658642+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the current PS, privacy, protocol and extension executions alongside the host capture implementation and regenerated scope projections.
+- **Evidence.** Existing independent personal routes retain passing engineering receipts; HOST capture-only remains usable without detector files. [Change record](./runs/changes/2026-11-06-043100-host-verified-integration-records-8229e5d4.json).
+- **Not claimed.** No independent detector release, managed-service acceptance or human usability evidence.
+
+
+### 2026-11-06-042949-host-performance-classification-201c6993
+
+Recorded 2026-11-06T04:29:49.327603+00:00 · Contributor: Codex · change
+
+- **Changed.** Extend the performance UI gate to verify completed HOST engineering controls separately from unmeasured tag accuracy; retain zero accuracy tracks and pending independent review.
+- **Evidence.** The gate checks the exact 17-control-per-OS statement and independent security/human review obligation rather than treating all unlaunched organization services as unimplemented software. [Change record](./runs/changes/2026-11-06-042949-host-performance-classification-201c6993.json).
+- **Not claimed.** Engineering terminal controls are not accuracy, independent security review or an operating team service.
+
+
+### 2026-11-06-042644-host-guide-scope-projections-35da4a2c
+
+Recorded 2026-11-06T04:26:44.956909+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the current scope task percentages and public HOST software introduction; verify the real guide, source download and separate per-OS evidence in the interactive modal.
+- **Evidence.** Full 202-record identity is retained; host software is distinguished from unaccepted managed deployment, and actual OS receipts stay separate from accuracy claims. [Change record](./runs/changes/2026-11-06-042644-host-guide-scope-projections-35da4a2c.json).
+- **Not claimed.** No new independent labels, human review, managed service or tag release.
+
+
+### 2026-11-06-042610-foreground-file-adapter-b90c3f8a
+
+Recorded 2026-11-06T04:26:10.473091+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver a foreground private-file adapter with optional independent PS checks, visible controls, bounded metadata and source-change refusal; publish per-OS evidence and guide.
+- **Evidence.** 17 real foreground-terminal controls per OS pass on macOS and non-root isolated Linux; source-bound guards reject stale or overstated evidence. F-160 software closes, ORG-HOST deployment remains 80 percent. [Change record](./runs/changes/2026-11-06-042610-foreground-file-adapter-b90c3f8a.json).
+- **Not claimed.** No independent accuracy, human pilot, security approval, phone agent, hosted service or collection. All 202 IDs retained: 126 complete and 76 open.
+
+
 ## Unreleased — 2026-10-15
 
 ### 2026-10-15-155002-audit-guide-entry-verified-983b3449

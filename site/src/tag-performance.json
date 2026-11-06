@@ -2289,13 +2289,16 @@
     },
     {
       "id": "host",
-      "stage": "Not running",
+      "stage": "Foreground software",
       "independently_validated": false,
       "accuracy_measured": false,
       "metrics": [],
-      "next_test": "Test consented capture, permissions and artifact binding.",
-      "summary": "Organization capability; performance not measured.",
-      "sources": [],
+      "next_test": "Independent security review and actual-user acceptance before managed deployment.",
+      "summary": "19 terminal controls checked separately on macOS and Linux; not a tag-accuracy study.",
+      "sources": [
+        "/reference/host-capture-macos.json",
+        "/reference/host-capture-linux.json"
+      ],
       "device": null,
       "pipeline": null
     },

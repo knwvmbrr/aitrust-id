@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-10-15T15:50:00.629441+00:00",
-  "active_increment": "Audit guide entry corrected and checked; 77 open full requirements, target 60",
+  "updated": "2026-11-06T04:55:02.572515+00:00",
+  "active_increment": "Foreground host-file adapter implemented and checked; 76 open full requirements, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -387,7 +387,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "The 3556 figure is a historical full-suite result. This increment ran 44 focused audit tests and 31 actual Linux controls; protected CI records its own current suite execution. Test totals are not requirement closures.",
+  "python_tests_scope": "3556 is historical. This increment has 19 actual foreground adapter controls per OS plus two evidence-guard tests. CI records its own current suite; test counts are not requirement closures.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -759,9 +759,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-10-15T15:20:12.803775+00:00",
-    "completed_records": 125,
-    "open_records": 77,
+    "audited_at": "2026-11-06T04:47:04.474978+00:00",
+    "completed_records": 126,
+    "open_records": 76,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -775,17 +775,17 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/organization-audit-result.md",
+    "latest_increment": "docs/host-capture-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
-    "target_remaining_closures": 17,
-    "publication_pending": false,
+    "target_remaining_closures": 16,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-10-14-setup-published-routes.json",
+    "current_target_verification": "runs/2026-11-06-host-capture-final-acceptance.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-10-14",
@@ -1085,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-10-15-organization-audit-reviewed-current-PS.json",
-    "PII_REDACTED": "runs/2026-10-15-organization-audit-reviewed-current-PII_REDACTED.json",
-    "protocol": "runs/2026-10-15-organization-audit-reviewed-current-protocol.json",
-    "extension": "runs/2026-10-15-organization-audit-reviewed-current-extension.json",
-    "website": "runs/2026-10-15-audit-guide-entry-website.json",
+    "PS": "runs/2026-11-06-host-release-PS.json",
+    "PII_REDACTED": "runs/2026-11-06-host-release-PII_REDACTED.json",
+    "protocol": "runs/2026-11-06-host-release-protocol.json",
+    "extension": "runs/2026-11-06-host-release-extension.json",
+    "website": "runs/2026-11-06-host-release-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-10-15T15:50:00.629441+00:00",
+  "updated_at": "2026-11-06T04:55:02.572515+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2763,5 +2763,30 @@
     "requirements_closed": 0,
     "guide_link_and_software_status_verified": true,
     "publication_pending": true
+  },
+  "host_capture": {
+    "software_requirement": "F-160",
+    "status": "bounded_foreground_software_checked",
+    "supported_os": [
+      "macOS",
+      "Linux"
+    ],
+    "controls_per_os": 19,
+    "evidence": [
+      "runs/2026-11-06-host-capture-final-macos.json",
+      "runs/2026-11-06-host-capture-final-linux.json"
+    ],
+    "guide": "docs/host-capture.md",
+    "source_changes_stop_capture": true,
+    "network_upload": false,
+    "persistent_capture_default": false,
+    "original_text_stored": false,
+    "managed_deployment_package_percent": 80,
+    "independent_security_review": false,
+    "human_acceptance": false,
+    "independent_accuracy_evidence": false,
+    "current_engineering_evidence": "runs/2026-11-06-host-release-protocol.json",
+    "foreground_job_control_verified": true,
+    "cross_repository_output_refused": true
   }
 }

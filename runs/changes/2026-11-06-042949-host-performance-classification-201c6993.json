@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-042949-host-performance-classification-201c6993",
+  "recorded_at": "2026-11-06T04:29:49.327603+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7ac4459cfb1ff82fdd31de0898ad1262b2917577",
+  "changed": "Extend the performance UI gate to verify completed HOST engineering controls separately from unmeasured tag accuracy; retain zero accuracy tracks and pending independent review.",
+  "proves": "The gate checks the exact 17-control-per-OS statement and independent security/human review obligation rather than treating all unlaunched organization services as unimplemented software.",
+  "limits": "Engineering terminal controls are not accuracy, independent security review or an operating team service.",
+  "scope_ids": [
+    "F-160",
+    "ORG-HOST"
+  ],
+  "files": {
+    "scripts/verify-performance.cjs": "5cc5f877d4ca3d96c47421916bd69155b86f15144cdc776679b7320b58a8b3a1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-host-capture-macos.json",
+      "sha256": "c5c26f107f4fb4b6d7128cd97e38759e34046f0b88dc09b860547747e8a843e9"
+    },
+    {
+      "path": "runs/2026-11-06-host-capture-linux.json",
+      "sha256": "8c6babc827eccb0d8a84c899651368cc8c379be219f84afb496d407805a98b99"
+    }
+  ],
+  "checks": []
+}

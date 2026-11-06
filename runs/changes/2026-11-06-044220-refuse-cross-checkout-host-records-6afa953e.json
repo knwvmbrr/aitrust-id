@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-044220-refuse-cross-checkout-host-records-6afa953e",
+  "recorded_at": "2026-11-06T04:42:20.894407+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5870b14420320daec39844212cfec9351982c1d4",
+  "changed": "Refuse optional host metadata directories inside any other Git checkout before writing; add a regression and repeat both actual OS lifecycles on the corrected source.",
+  "proves": "Prior PR source reproduced the cross-checkout admission. Corrected macOS and non-root isolated Linux runs pass all 17 controls, including that refusal; old evidence is preserved and superseded.",
+  "limits": "No additional closure or independent security approval. Managed-deployment review and human/accuracy acceptance remain open.",
+  "scope_ids": [
+    "F-160",
+    "ORG-HOST"
+  ],
+  "files": {
+    "docs/host-capture-result.md": "2dc9386d20cd56cdd61d484a33a30d0e99b491cc0af4d104460e755d6feb8551",
+    "docs/scope-delivery.md": "6785ac5d348ad599331efbf98ca8d518a271299403df8f6b2ca04227fb95dd73",
+    "docs/scope-progress.json": "ba4743b0d8c3e62758861fc1db60e22cdebc6afd8fc5552dd46cdb745f8ad87c",
+    "docs/scope-progress.md": "95a1435257cc18549267feb3bb05a244784bc0157d8459ecd111e4ac1972f707",
+    "eval/revalidation.json": "dedc2801c45b086d451bba5d31cf38a7e2ba52abbfaa717731e7ba6e42cc8e25",
+    "runs/2026-11-06-host-capture-reviewed-acceptance.json": "2b008499e7ae1ea08732268bf1929d2779c96aff7dc3a3efa5a428423f250559",
+    "runs/2026-11-06-host-capture-reviewed-linux.json": "f1744e5487d409c88a744d8fd31c7fca564a53e3c80d1c916f425a550694f2bf",
+    "runs/2026-11-06-host-capture-reviewed-macos.json": "def5d26b2814ecb290366747beb8a7dc65546f5bddbcc98b2e0591ad2f37535c",
+    "scripts/verify-host-capture-evidence.py": "ef072d2413a4927b8c568d5c1dc31d994d9ce3fa340298ad2f66ca5feb6f597a",
+    "scripts/verify-route-boundaries.py": "c387a74794ac816b59925bf6ce120b94d7891c9e574f98eb2a3b7394874100fa",
+    "site/public/reference/host-capture-linux.json": "f1744e5487d409c88a744d8fd31c7fca564a53e3c80d1c916f425a550694f2bf",
+    "site/public/reference/host-capture-macos.json": "def5d26b2814ecb290366747beb8a7dc65546f5bddbcc98b2e0591ad2f37535c",
+    "site/public/reference/public-scope.json": "32dcb9e935a966cad9e56e6c9f08ad09937d3866fcc0c5c79502d6d723ed607a",
+    "site/scripts/prepare.mjs": "4dfa36a1d1fb59dc25119ab59a9761c4a2bc9798e5c517aad69b300cd92542e7",
+    "site/src/public-scope.json": "32dcb9e935a966cad9e56e6c9f08ad09937d3866fcc0c5c79502d6d723ed607a",
+    "site/src/scope-manifest.json": "fe5d3128c7f5ff0e6f1b0c2220cd8cb683d7cf6523d07d3b39b4c1d74ed5f677",
+    "state.json": "b9b63d1e31a3f78be54116999b0a05d3073baefdb8efe072bdae6be31b782943",
+    "tests/test_host_capture.py": "246f7f4f669afdfac34a3380bddcf88c8959c8542c140afa46f2dcc49e188cb1",
+    "tests/test_host_capture_evidence.py": "6da8468a75daa9f22d5811bd6f6d159f38211f6e33869eadabbdb0a9e68f3ea2",
+    "tools/host_capture.py": "ad40313929397bc77d2ed1a969571387d7880eaabdbbaf46a6a57ed256736de5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-host-capture-reviewed-macos.json",
+      "sha256": "def5d26b2814ecb290366747beb8a7dc65546f5bddbcc98b2e0591ad2f37535c"
+    },
+    {
+      "path": "runs/2026-11-06-host-capture-reviewed-linux.json",
+      "sha256": "f1744e5487d409c88a744d8fd31c7fca564a53e3c80d1c916f425a550694f2bf"
+    },
+    {
+      "path": "runs/2026-11-06-host-capture-reviewed-acceptance.json",
+      "sha256": "2b008499e7ae1ea08732268bf1929d2779c96aff7dc3a3efa5a428423f250559"
+    }
+  ],
+  "checks": []
+}

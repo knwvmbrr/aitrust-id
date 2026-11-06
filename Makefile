@@ -139,3 +139,8 @@ verify-local-setup:
 verify-organization-audit:
 	$(PYTHON) scripts/verify-organization-audit-evidence.py
 	$(PYTHON) -m pytest tests/test_organization_audit.py -q
+
+.PHONY: verify-host-capture
+verify-host-capture:
+	$(PYTHON) scripts/verify-host-capture-evidence.py
+	$(PYTHON) -m pytest tests/test_host_capture.py tests/test_host_capture_evidence.py -q

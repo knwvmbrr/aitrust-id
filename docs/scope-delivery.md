@@ -1271,7 +1271,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** A team obtains relevant tag evidence across approved host workflows without covert monitoring.
 
-**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 80% · audited 2026-11-06T04:47:04.474978+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-160.
 

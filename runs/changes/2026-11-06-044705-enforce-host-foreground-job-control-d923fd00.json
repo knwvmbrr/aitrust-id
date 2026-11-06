@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-044705-enforce-host-foreground-job-control-d923fd00",
+  "recorded_at": "2026-11-06T04:47:05.457305+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5870b14420320daec39844212cfec9351982c1d4",
+  "changed": "Cancel foreground file capture on terminal ownership loss; Ctrl-Z exits and SIGSTOP/bg cannot resume captures behind the shell. Retain the cross-checkout journal refusal and source-bound final OS evidence.",
+  "proves": "19 actual terminal controls pass per OS, including real Bash job control on macOS and non-root isolated Linux. Two evidence tests reject stale or overstated acceptance. One software closure only.",
+  "limits": "No managed deployment, independent security review, human usability acceptance or detector accuracy claim.",
+  "scope_ids": [
+    "F-160",
+    "ORG-HOST"
+  ],
+  "files": {
+    "docs/host-capture-plan.md": "62de9c70015cba39dda9eeaa1cf3f0ae72d04ef51f208482fa1c345b111984a1",
+    "docs/host-capture-result.md": "f1ad08d0cc41a6f2c73c8e58516e0073f935f2cc1b24781282ab3380c5456071",
+    "docs/host-capture.md": "a7d7f8ac4f43a29b13ab94855f3b5765a8dc518660262e906c28d4990020a86d",
+    "docs/scope-60-execution.md": "53f400c8f3b8930b81fa93d4bc924fc66efdc76dd6123d15c6942efc6c466c99",
+    "docs/scope-delivery.md": "f60fb75984965b84492a87613be12d19f4a27e7cb8df0c3b30b470a68b1e2c1c",
+    "docs/scope-progress.json": "2553ae42a24125941b7a7464822740e2e4d8606aed1303ccec0e369e7d47e0e6",
+    "docs/scope-progress.md": "8b34818878c2881bf022bbd4d06c0736708da0c754753ce25b624c7fb0273134",
+    "eval/revalidation.json": "79f02d8375e0a0d5833de67d95945dc4bdbd320a40c37ab856120f10fb9148b7",
+    "runs/2026-11-06-host-capture-final-acceptance.json": "9c54ddd4009d72991a55fab8f5ea663e3191fd74af97b6f5c9c6440f2ebd484d",
+    "runs/2026-11-06-host-capture-final-linux.json": "e246a44f972873987616a401bb2971d938c8981b64a18ee48eb141fd4d2986c8",
+    "runs/2026-11-06-host-capture-final-macos.json": "cad4dc4a13c73dc8cc288d4cc3e8ad3a83a9ee325feffc8ac1ab6a1fa8e7704d",
+    "runs/2026-11-06-host-capture-reviewed-acceptance.json": "2b008499e7ae1ea08732268bf1929d2779c96aff7dc3a3efa5a428423f250559",
+    "runs/2026-11-06-host-capture-reviewed-linux.json": "f1744e5487d409c88a744d8fd31c7fca564a53e3c80d1c916f425a550694f2bf",
+    "runs/2026-11-06-host-capture-reviewed-macos.json": "def5d26b2814ecb290366747beb8a7dc65546f5bddbcc98b2e0591ad2f37535c",
+    "scripts/verify-host-capture-evidence.py": "90451dcbd87b643fde10798d318ca055ab135481207f6908fbe31b2d49edf149",
+    "scripts/verify-performance.cjs": "1a5bf502abcccdad0fe45640f46c04a685b82dcf9d5e0e86a9baaeef8ae70a5e",
+    "scripts/verify-route-boundaries.py": "f69d8d89bc2bc05b37f6e4dbd6062611b2bf23756fbd7710d0fcb5e4446ef2b0",
+    "scripts/verify-site.cjs": "7ef72f16e2416cefba3383ffdd39b58af912d47d7835d97b6ba313c1e2d95244",
+    "site/index.html": "510f454accea9a8c4dd4a32038d360458189b55da48d46955a5a266df9ab9a88",
+    "site/public/reference/host-capture-linux.json": "e246a44f972873987616a401bb2971d938c8981b64a18ee48eb141fd4d2986c8",
+    "site/public/reference/host-capture-macos.json": "cad4dc4a13c73dc8cc288d4cc3e8ad3a83a9ee325feffc8ac1ab6a1fa8e7704d",
+    "site/public/reference/host-capture.md": "a7d7f8ac4f43a29b13ab94855f3b5765a8dc518660262e906c28d4990020a86d",
+    "site/public/reference/public-scope.json": "e59926bbdfda1b3708fe1df8415969a6f57dd2f2acf0efce12c1bee084920703",
+    "site/scripts/prepare.mjs": "d94f387a59d7539e3cd989115cfb291be687933fcc6752914d97b85d87439771",
+    "site/src/catalog.js": "5b08145feb74282163f1aa6ff644fd42b22310ceae34a62a1e5219e9be414b26",
+    "site/src/performance-model.js": "043029d25472bec93ea7a495d8cf69a3cbf0a94c54cc31c80f7f651649c90181",
+    "site/src/public-scope.json": "e59926bbdfda1b3708fe1df8415969a6f57dd2f2acf0efce12c1bee084920703",
+    "site/src/scope-manifest.json": "6d0399cebfbc5b3baefb392a6c4912611adefac0e34933c52b90aaa7fba95a5d",
+    "state.json": "d0e43ddff3d2aa0dd9a328e65bbdded88bb9757bf18b408aaec51dc63ebf3c2e",
+    "tests/test_host_capture.py": "b1722ffdfc35f6bd671dc127555979b7e526e5021f73c67c293a5bd2720a4854",
+    "tests/test_host_capture_evidence.py": "acb69a7f85b1b80e2d7d3bbe5014f5731629c6a4df60a1e0622e5ab09d24cb30",
+    "tools/host_capture.py": "259165814011ece258407edce44ae2b5900fec0bf7e4cac6e0cfd857cea696fb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-host-capture-final-macos.json",
+      "sha256": "cad4dc4a13c73dc8cc288d4cc3e8ad3a83a9ee325feffc8ac1ab6a1fa8e7704d"
+    },
+    {
+      "path": "runs/2026-11-06-host-capture-final-linux.json",
+      "sha256": "e246a44f972873987616a401bb2971d938c8981b64a18ee48eb141fd4d2986c8"
+    },
+    {
+      "path": "runs/2026-11-06-host-capture-final-acceptance.json",
+      "sha256": "9c54ddd4009d72991a55fab8f5ea663e3191fd74af97b6f5c9c6440f2ebd484d"
+    }
+  ],
+  "checks": []
+}
