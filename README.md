@@ -567,6 +567,17 @@ service is enabled. Personal checking remains independent. Run
 `python3 scripts/verify-organization-audit-evidence.py` to check the source-bound
 Linux execution evidence. This is audit software, not independent tag validation.
 
+### Organization directory access
+
+The optional [directory broker](docs/organization-directory.md) connects a self-hosted
+Keycloak device sign-in to private PostgreSQL audit operations. Current direct
+permission groups separate viewing, export, organization feedback and access
+controls. Logout, tenant denial and a separately enrolled replacement operator are
+exercised against the real provider/database. It adds no public sign-in service;
+personal checks remain account-free. Run
+`python3 scripts/verify-organization-directory-evidence.py` to check its current
+software evidence. No sign-in or organization feedback establishes tag accuracy.
+
 ### Check a saved file outside the browser
 
 The optional [foreground file adapter](docs/host-capture.md) watches one explicitly

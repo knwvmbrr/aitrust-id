@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-232747-directory-software-full-acceptance-6f76914a",
+  "recorded_at": "2026-11-06T23:27:47.274040+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "30c02e2116c4171a018d18efa2fdfccee9cac8c8",
+  "changed": "Complete F-162 for the actual self-hosted Linux directory/audit profile and publish distinct operator instructions and bounded software evidence in its offering.",
+  "proves": "All 27 current-source real Keycloak/TLS/PostgreSQL controls and 53 local authorization boundaries pass. Original acceptance is preserved; the ledger now has 129 complete and 73 open requirements, with 13 closures remaining to target 60.",
+  "limits": "No hosted organization login, paid service, human/independent detector validation or new tag is enabled. Broader managed-deployment acceptance remains open.",
+  "scope_ids": [
+    "F-162",
+    "ORG-SSO"
+  ],
+  "files": {
+    "docs/scope-60-execution.md": "e02daeb6bb03900cb4530b91b5930ede4356bb812ebadd8d0f2e0b71c381fd82",
+    "docs/scope-delivery.md": "303875357e6caa0b33fcc2a26df066411511ebe65755895434ffe93f2a3c9238",
+    "docs/scope-progress.json": "71b38dcb2aeb05e28c1cdab0055f2e1d43811ce36d6a1eda9dd1d31bf67fb7c5",
+    "docs/scope-progress.md": "f7c901246b07ac01b3e9a5c916db2a16a1204230f667bd1afb423e42cb516007",
+    "docs/scope-task-index.md": "8ae00ca1a086f897c78c17c809c747c940b83822289251b5d7870ff8b7b4737e",
+    "eval/revalidation.json": "a1d0f162d80e7191e33bfbf18109648c3ca3b3e4a0b4b5ca1d69281785d70e49",
+    "runs/2026-11-06-directory-final-linux.json": "32fd259318c09b7aa04244f45ed7531844368af19f8035d5c2c889c1f2dbd100",
+    "runs/2026-11-06-directory-software-acceptance.json": "f12b73b3608a32d0248bf84182632da16f3d26e63055ca340c0554ac56f8a900",
+    "scripts/verify-enterprise.cjs": "2e2b15543461413954ee590a6bee24b63aafe0ea2faa23a0b1da7009401be791",
+    "scripts/verify-organization-directory-evidence.py": "337c4670a0af405854eca9a5f0c9cafa366377a6fd57d52433b2861dba8c03d4",
+    "scripts/verify-route-boundaries.py": "d1edf8c3e627fb0bc9f899ae8bf89e2f77bee2535e28d1e487fa7868534c4952",
+    "site/scripts/render-reference.mjs": "e5fd6e9782bda626238a55bb14b626840546f5529635d652b78df2b8a00ffc9b",
+    "site/src/catalog.js": "58bc4a79442677de201008d22c62b19b0dbb74e9548eaa842b862686f8b911c1",
+    "site/src/usage.js": "791a8b0a7ea98d588c7cb502b9483f15b0e0341c0489b8588ab40d62cb9b7bc7",
+    "state.json": "4a0e578074fe2a360693cff24f6471046c60fb489972418179fb5f97b9ab77d6",
+    "tests/test_organization_directory_evidence.py": "84d772def4775146d51a7d0c93b316290b89ebc15dd94098a1e667ad0512d4fa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-final-linux.json",
+      "sha256": "32fd259318c09b7aa04244f45ed7531844368af19f8035d5c2c889c1f2dbd100"
+    },
+    {
+      "path": "runs/2026-11-06-directory-software-acceptance.json",
+      "sha256": "f12b73b3608a32d0248bf84182632da16f3d26e63055ca340c0554ac56f8a900"
+    }
+  ],
+  "checks": []
+}

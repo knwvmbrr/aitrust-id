@@ -26,6 +26,6 @@ def test_bad_evidence_refused(mutation):
 def test_full_scope_closure_requires_the_actual_receipt():
     row=next(r for r in json.loads((ROOT/'docs/scope-progress.json').read_bytes())['records'] if r['id']=='F-162')
     if row['percent_complete']==100:
-        receipt=json.loads((ROOT/'runs/2026-11-06-organization-directory-linux.json').read_bytes());assert v['verify'](receipt)['pass'] is True
+        receipt=json.loads((ROOT/'runs/2026-11-06-directory-final-linux.json').read_bytes());assert v['verify'](receipt)['pass'] is True
         assert row['required_acceptance']==[] and row['completed_by'] and row['completed_at']
     else:assert row['required_acceptance'] and row['completed_at'] is None

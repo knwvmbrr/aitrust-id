@@ -408,7 +408,19 @@
         "tests/test_scope_render_command.py",
         "docs/scope-render-plan.md",
         "scripts/changelog_core.py",
-        "tests/test_changelog_pipeline.py"
+        "tests/test_changelog_pipeline.py",
+        "tools/organization_directory.py",
+        "tools/organization_directory_lab.py",
+        "scripts/organization-directory.py",
+        "scripts/verify-organization-directory.py",
+        "scripts/verify-organization-directory-evidence.py",
+        "scripts/directory-device-browser.cjs",
+        "tests/test_organization_directory.py",
+        "tests/test_organization_directory_evidence.py",
+        "docs/organization-directory-plan.md",
+        "docs/organization-directory.md",
+        ".github/workflows/organization-directory.yml",
+        "runs/2026-11-06-directory-final-linux.json"
       ],
       "commands": [
         [
@@ -648,6 +660,18 @@
           "tests/test_scope_render_command.py",
           "tests/test_scope_index.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_organization_directory.py",
+          "tests/test_organization_directory_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-organization-directory-evidence.py"
         ]
       ]
     },
@@ -1041,7 +1065,20 @@
         "runs/2026-11-06-agent-output-*.json",
         "scripts/render-scope-plan.py",
         "tests/test_scope_render_command.py",
-        "docs/scope-render-plan.md"
+        "docs/scope-render-plan.md",
+        "tools/organization_directory.py",
+        "tools/organization_directory_lab.py",
+        "scripts/organization-directory.py",
+        "scripts/verify-organization-directory.py",
+        "scripts/verify-organization-directory-evidence.py",
+        "scripts/directory-device-browser.cjs",
+        "tests/test_organization_directory.py",
+        "tests/test_organization_directory_evidence.py",
+        "docs/organization-directory-plan.md",
+        "docs/organization-directory.md",
+        ".github/workflows/organization-directory.yml",
+        "runs/2026-11-06-directory-final-linux.json",
+        "scripts/verify-enterprise.cjs"
       ],
       "commands": [
         [
@@ -1182,6 +1219,14 @@
         [
           "node",
           "scripts/verify-agent-output-view.cjs"
+        ],
+        [
+          "{python}",
+          "scripts/verify-organization-directory-evidence.py"
+        ],
+        [
+          "node",
+          "scripts/verify-enterprise.cjs"
         ]
       ]
     }

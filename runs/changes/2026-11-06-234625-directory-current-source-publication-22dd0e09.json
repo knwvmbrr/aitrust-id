@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-234625-directory-current-source-publication-22dd0e09",
+  "recorded_at": "2026-11-06T23:46:25.246285+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "30c02e2116c4171a018d18efa2fdfccee9cac8c8",
+  "changed": "Complete the supported organization directory software against real Keycloak and PostgreSQL, publish its distinct guide and preserve all 202 requirements with 73 open.",
+  "proves": "Twenty-seven real-provider controls and current-source capability evidence support F-162 software completion; no acceptance criterion was moved or waived.",
+  "limits": "Hosted SSO, enterprise human acceptance, independent security review, research collection and per-tag accuracy acceptance remain unavailable or open.",
+  "scope_ids": [
+    "F-162",
+    "F-119"
+  ],
+  "files": {
+    "README.md": "41cbe3b63b5ea0ebaf6584c41e8ab534871490570fe1d4b615e1a723d63e65c9",
+    "docs/scope-60-execution.md": "e02daeb6bb03900cb4530b91b5930ede4356bb812ebadd8d0f2e0b71c381fd82",
+    "docs/scope-delivery.md": "303875357e6caa0b33fcc2a26df066411511ebe65755895434ffe93f2a3c9238",
+    "docs/scope-progress.json": "71b38dcb2aeb05e28c1cdab0055f2e1d43811ce36d6a1eda9dd1d31bf67fb7c5",
+    "docs/scope-progress.md": "f7c901246b07ac01b3e9a5c916db2a16a1204230f667bd1afb423e42cb516007",
+    "docs/scope-task-index.md": "8ae00ca1a086f897c78c17c809c747c940b83822289251b5d7870ff8b7b4737e",
+    "eval/revalidation.json": "e7312c9a31dcdd071f1484342ab5a508fd69d1e3411304536c2f5215a48e41e0",
+    "eval/route-boundaries.json": "e9f0ced42a3e100259bed3a5c122a6417ca9b1264f971eff5a45fa3f81963744",
+    "runs/2026-11-06-directory-current-PII_REDACTED.json": "7bc62b8d86a62aa4aeda615e4692b1ba094fcf615e26e89194f6de526f10d5d7",
+    "runs/2026-11-06-directory-current-PS.json": "cf3a76eb60199a2de2ab86b1feaa3ac984a1412e38eb94bee0acd5af81b5251c",
+    "runs/2026-11-06-directory-current-extension.json": "d221b3402cee099d5867503c70cb5a81eefd0cd9a456910a3dfed6a203f5991e",
+    "runs/2026-11-06-directory-current-protocol.json": "45039a4ae4ae510409051f9676f00422c03a2491a92d4c85be2d27c636129053",
+    "runs/2026-11-06-directory-current-website.json": "1d2f28c48303cc531a2377d0022c71a3e10854dcb7d1faf208e51e28cbb8ec54",
+    "runs/2026-11-06-directory-final-linux.json": "32fd259318c09b7aa04244f45ed7531844368af19f8035d5c2c889c1f2dbd100",
+    "runs/2026-11-06-directory-software-acceptance.json": "f12b73b3608a32d0248bf84182632da16f3d26e63055ca340c0554ac56f8a900",
+    "scripts/verify-enterprise.cjs": "2e2b15543461413954ee590a6bee24b63aafe0ea2faa23a0b1da7009401be791",
+    "scripts/verify-organization-directory-evidence.py": "337c4670a0af405854eca9a5f0c9cafa366377a6fd57d52433b2861dba8c03d4",
+    "scripts/verify-route-boundaries.py": "d1edf8c3e627fb0bc9f899ae8bf89e2f77bee2535e28d1e487fa7868534c4952",
+    "scripts/verify-site.cjs": "26aadf1348f0fc86852d80aea28f55106277b94c321ba8519c729fabb9439bc6",
+    "site/index.html": "acd48bb7547049c9fead0e7f9d5fb27b020c930aed0b8769e2a3cab0a7fc04b6",
+    "site/public/reference/directory-software-linux.json": "32fd259318c09b7aa04244f45ed7531844368af19f8035d5c2c889c1f2dbd100",
+    "site/public/reference/organization-directory.md": "2e654d56e1a93833c57af6993030bc4421b1904b017cd15ddfdb375c53cb0e82",
+    "site/public/reference/public-scope.json": "7ddacc9af310433714ae03d0755f9b231f39ada775f1820e28ff5fb9590503b9",
+    "site/scripts/prepare.mjs": "b8d5f5a793f3bd64143fe9693b6a2ff64151acc7a1f1f834eb77ecf4e93034b5",
+    "site/scripts/render-reference.mjs": "e5fd6e9782bda626238a55bb14b626840546f5529635d652b78df2b8a00ffc9b",
+    "site/src/catalog.js": "58bc4a79442677de201008d22c62b19b0dbb74e9548eaa842b862686f8b911c1",
+    "site/src/public-scope.json": "7ddacc9af310433714ae03d0755f9b231f39ada775f1820e28ff5fb9590503b9",
+    "site/src/scope-manifest.json": "f9277fe2d70ea2cd64137c9b809b2662cb7e661b7ca8291ce61114fdf671c58b",
+    "site/src/usage.js": "791a8b0a7ea98d588c7cb502b9483f15b0e0341c0489b8588ab40d62cb9b7bc7",
+    "state.json": "9fc20460b2bab4cefbe16252fbdd89eddf84988e27a86de281539544f8c6ccc4",
+    "tests/test_organization_directory_evidence.py": "84d772def4775146d51a7d0c93b316290b89ebc15dd94098a1e667ad0512d4fa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-final-linux.json",
+      "sha256": "32fd259318c09b7aa04244f45ed7531844368af19f8035d5c2c889c1f2dbd100"
+    },
+    {
+      "path": "runs/2026-11-06-directory-software-acceptance.json",
+      "sha256": "f12b73b3608a32d0248bf84182632da16f3d26e63055ca340c0554ac56f8a900"
+    },
+    {
+      "path": "runs/2026-11-06-directory-current-website.json",
+      "sha256": "1d2f28c48303cc531a2377d0022c71a3e10854dcb7d1faf208e51e28cbb8ec54"
+    },
+    {
+      "path": "runs/2026-11-06-directory-current-protocol.json",
+      "sha256": "45039a4ae4ae510409051f9676f00422c03a2491a92d4c85be2d27c636129053"
+    }
+  ],
+  "checks": []
+}

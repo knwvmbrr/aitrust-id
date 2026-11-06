@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-234625-directory-current-source-publication-22dd0e09
+
+Recorded 2026-11-06T23:46:25.246285+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the supported organization directory software against real Keycloak and PostgreSQL, publish its distinct guide and preserve all 202 requirements with 73 open.
+- **Evidence.** Twenty-seven real-provider controls and current-source capability evidence support F-162 software completion; no acceptance criterion was moved or waived. [Change record](./runs/changes/2026-11-06-234625-directory-current-source-publication-22dd0e09.json).
+- **Not claimed.** Hosted SSO, enterprise human acceptance, independent security review, research collection and per-tag accuracy acceptance remain unavailable or open.
+
+
+### 2026-11-06-234231-directory-browser-route-coverage-c953a88f
+
+Recorded 2026-11-06T23:42:31.753061+00:00 · Contributor: Codex · change
+
+- **Changed.** Check the implemented SSO guide, source download and real-provider evidence independently of HOST.
+- **Evidence.** Browser route checks cover both implemented organization software workflows and retain the no-hosted-service boundary. [Change record](./runs/changes/2026-11-06-234231-directory-browser-route-coverage-c953a88f.json).
+- **Not claimed.** Software evidence is not independent security, human acceptance, accuracy validation or a hosted SSO service.
+
+
+### 2026-11-06-233010-directory-current-website-contract-cd67c5bb
+
+Recorded 2026-11-06T23:30:10.211961+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the enterprise honesty gate to current website execution and retain passing directory identity evidence while fixing the local npm command path.
+- **Evidence.** The enterprise gate checks all 27 actual software controls and their current source hashes; the real source-bound directory verifier passes. Earlier build invocation could not find npm; no build success was claimed. [Change record](./runs/changes/2026-11-06-233010-directory-current-website-contract-cd67c5bb.json).
+- **Not claimed.** The website build and final capability records still must complete before protected publication.
+
+
+### 2026-11-06-232926-directory-final-site-projections-3df2f94b
+
+Recorded 2026-11-06T23:29:26.947993+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh final public progress projections after directory acceptance and managed-deployment limits were recorded.
+- **Evidence.** The 202-record projection consistently shows 129 complete and 73 open requirements, preserving the current thirteen-closure distance to 60. [Change record](./runs/changes/2026-11-06-232926-directory-final-site-projections-3df2f94b.json).
+- **Not claimed.** Projection changes do not add independent accuracy or human acceptance.
+
+
+### 2026-11-06-232926-directory-reference-generation-5637c1b1
+
+Recorded 2026-11-06T23:29:26.202250+00:00 · Contributor: Codex · change
+
+- **Changed.** Copy the directory guide and actual software proof before catalogue reference validation, and expose the optional operator workflow in the README.
+- **Evidence.** The first site preparation correctly refused missing catalogue references; both named public files are now generated before that gate. [Change record](./runs/changes/2026-11-06-232926-directory-reference-generation-5637c1b1.json).
+- **Not claimed.** This is website integration plumbing, not another requirement closure or a hosted identity endpoint.
+
+
+### 2026-11-06-232747-directory-software-full-acceptance-6f76914a
+
+Recorded 2026-11-06T23:27:47.274040+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete F-162 for the actual self-hosted Linux directory/audit profile and publish distinct operator instructions and bounded software evidence in its offering.
+- **Evidence.** All 27 current-source real Keycloak/TLS/PostgreSQL controls and 53 local authorization boundaries pass. Original acceptance is preserved; the ledger now has 129 complete and 73 open requirements, with 13 closures remaining to target 60. [Change record](./runs/changes/2026-11-06-232747-directory-software-full-acceptance-6f76914a.json).
+- **Not claimed.** No hosted organization login, paid service, human/independent detector validation or new tag is enabled. Broader managed-deployment acceptance remains open.
+
+
 ### 2026-11-06-231738-directory-final-evidence-gate-f25435f4
 
 Recorded 2026-11-06T23:17:38.734765+00:00 · Contributor: Codex · change

@@ -17,7 +17,7 @@ export function usage(tag) {
     fleet:'Review the extension permissions in the public source, then tell us how your team manages installs and updates.',
     host:'Open the file-checking guide. Choose one private text file, verify the source fingerprint and keep the terminal visible. Pause or stop whenever you choose.',
     audit:'Open the self-hosted audit guide. Choose your retention policy, preview one detailed result, then store it with a writer account. Personal checking needs none of this.',
-    sso:'Compare the proposed configure, view, review and export permissions with your team’s groups. Tell us what needs to change.',
+    sso:'Read the operator guide, connect your own directory to a dedicated audit store, then test one member’s access and removal. Personal checking needs no login.',
     support:'Use Report an issue for a defect. For a vulnerability, choose the private security channel; do not post sensitive details publicly.',
     proprietary:'Open the local practice guide in How it works. Read its invented policy before checking the example; share requirements without confidential documents.'};
   const tagNext={
@@ -37,7 +37,7 @@ export function usage(tag) {
     ? 'Explore the plan and tell us what your team needs. This offering is not available to buy.'
     : tag.proposed ? 'Read the proposal or share an example that would help us test it.'
     : 'Explore how this tag would work, or share an example to help us build it.',
-    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:tag.id==='host'?[{label:'Check a file while you work',href:'/reference/host-capture.md'},{label:'Download source',href:sourceDownload}]:[]};
+    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:tag.id==='sso'?[{label:'Organization sign-in guide',href:'/reference/organization-directory.md'},{label:'Download source',href:sourceDownload}]:tag.id==='host'?[{label:'Check a file while you work',href:'/reference/host-capture.md'},{label:'Download source',href:sourceDownload}]:[]};
   return {available:true,summary:tag.id==='PS'
     ? 'Copy an AI answer, paste it and check. No account or install needed. Commands are checked, never run.'
     : 'Check a draft with your own local redactor before you share it. Review the result and make any edits yourself. This is a local-service preview, separate from the website’s on-device PS checker.',

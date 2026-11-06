@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-06T22:05:21.259636+00:00",
+  "audited_at": "2026-11-06T23:27:46.466440+00:00",
   "client_date": "2026-11-06",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -6696,26 +6696,31 @@
       "id": "F-162",
       "kind": "requirement",
       "title": "SSO and directory integration",
-      "percent_complete": 60,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-11-06T22:05:21.259636+00:00",
+      "audited_at": "2026-11-06T23:27:46.466440+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-        "Codex \u2014 organization directory broker and local boundary checks, 2026-11-06T22:05:21.259636+00:00"
+        "Codex \u2014 organization directory broker and local boundary checks, 2026-11-06T22:05:21.259636+00:00",
+        "Codex \u2014 real OIDC group/directory, private audit integration and software acceptance, 2026-11-06T23:27:46.466440+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Run the actual isolated Keycloak HTTPS/device-login and PostgreSQL acceptance, close all observed authorization/recovery failures, then verify final supported integration and publication. No real provider or production login is claimed yet.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-11-06T23:27:46.466440+00:00",
+      "completion_timestamp_basis": "Current source-bound local and actual isolated provider/database software acceptance verified now; not an invented historical finish.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "docs/scope-delivery.md",
         "docs/approachable-tag-modals.md",
@@ -6725,13 +6730,16 @@
         "tools/organization_directory.py",
         "scripts/organization-directory.py",
         "tests/test_organization_directory.py",
-        "runs/2026-11-06-directory-local.json"
+        "runs/2026-11-06-directory-local.json",
+        "docs/organization-directory.md",
+        "runs/2026-11-06-directory-final-linux.json",
+        "scripts/verify-organization-directory-evidence.py",
+        "tests/test_organization_directory_evidence.py",
+        "runs/2026-11-06-directory-software-acceptance.json"
       ],
-      "evidence_scope": "Thirty-seven local software boundary tests on the operator-owned broker. Real provider/database acceptance remains pending.",
-      "required_acceptance": [
-        "Deliver SSO and directory integration. Next package action: Define role and tenant boundaries, admin recovery and audit events. Required outcome: The application extends supported tags without disabling the personal workflow."
-      ],
-      "queue": "open"
+      "evidence_scope": "Complete supported operator-owned Linux software profile: 27 actual pinned-HTTPS Keycloak/PostgreSQL controls, 53 local boundaries, separate private logout and owner recovery; no hosted service, independent detector or human acceptance inferred.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-163",
@@ -9597,23 +9605,31 @@
       "id": "ORG-SSO",
       "kind": "package",
       "title": "Organization access and directory",
-      "percent_complete": 20,
+      "percent_complete": 80,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-06T23:27:46.466440+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 supported directory broker software and actual provider integration, 2026-11-06T23:27:46.466440+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Define role and tenant boundaries, admin recovery and audit events.; Integrate an accepted open protocol/provider route without a compulsory personal login.; Test cross-tenant denial, logout, revocation and compromised admin recovery. Final acceptance: Personal checks remain account-free where supported.; Revoked users cannot access private retained records.; SSO outages cannot corrupt public tag evidence.",
-      "next_owner": "Codex",
+      "next_fix": "Complete independent access-control/security review and actual-user organization deployment acceptance. The supported operator-owned software job is complete; no hosted identity service is activated.",
+      "next_owner": "Michael recruits independent/organization reviewers; Codex addresses findings",
       "evidence": [
-        "docs/scope-delivery.md#org-sso"
+        "docs/scope-delivery.md#org-sso",
+        "docs/organization-directory.md",
+        "runs/2026-11-06-directory-software-acceptance.json",
+        "runs/2026-11-06-directory-final-linux.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [
