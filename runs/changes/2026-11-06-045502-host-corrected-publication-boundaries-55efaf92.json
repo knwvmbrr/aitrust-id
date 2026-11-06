@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-045502-host-corrected-publication-boundaries-55efaf92",
+  "recorded_at": "2026-11-06T04:55:02.607487+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5870b14420320daec39844212cfec9351982c1d4",
+  "changed": "Bind the final foreground/job-control and cross-checkout privacy fixes to passing current engineering receipts, deployment boundaries and machine-readable state.",
+  "proves": "All five current source-bound capabilities pass. Final macOS and isolated Linux controls remain 19 per OS; all 202 IDs are retained with 76 full requirements open.",
+  "limits": "Independent managed-deployment security/human acceptance and detector accuracy remain unperformed. No collection or new tag release.",
+  "scope_ids": [
+    "F-160",
+    "ORG-HOST"
+  ],
+  "files": {
+    "docs/host-capture-plan.md": "62de9c70015cba39dda9eeaa1cf3f0ae72d04ef51f208482fa1c345b111984a1",
+    "docs/host-capture-result.md": "f1ad08d0cc41a6f2c73c8e58516e0073f935f2cc1b24781282ab3380c5456071",
+    "docs/host-capture.md": "a7d7f8ac4f43a29b13ab94855f3b5765a8dc518660262e906c28d4990020a86d",
+    "docs/scope-60-execution.md": "53f400c8f3b8930b81fa93d4bc924fc66efdc76dd6123d15c6942efc6c466c99",
+    "docs/scope-delivery.md": "f60fb75984965b84492a87613be12d19f4a27e7cb8df0c3b30b470a68b1e2c1c",
+    "docs/scope-progress.json": "2553ae42a24125941b7a7464822740e2e4d8606aed1303ccec0e369e7d47e0e6",
+    "docs/scope-progress.md": "8b34818878c2881bf022bbd4d06c0736708da0c754753ce25b624c7fb0273134",
+    "eval/revalidation.json": "79f02d8375e0a0d5833de67d95945dc4bdbd320a40c37ab856120f10fb9148b7",
+    "eval/route-boundaries.json": "5cc1da4412684c08c3b7bcb24ef8430ceb37d58aea11519677e41d5807b61eed",
+    "runs/2026-11-06-host-capture-final-acceptance.json": "9c54ddd4009d72991a55fab8f5ea663e3191fd74af97b6f5c9c6440f2ebd484d",
+    "runs/2026-11-06-host-capture-final-linux.json": "e246a44f972873987616a401bb2971d938c8981b64a18ee48eb141fd4d2986c8",
+    "runs/2026-11-06-host-capture-final-macos.json": "cad4dc4a13c73dc8cc288d4cc3e8ad3a83a9ee325feffc8ac1ab6a1fa8e7704d",
+    "runs/2026-11-06-host-capture-reviewed-acceptance.json": "2b008499e7ae1ea08732268bf1929d2779c96aff7dc3a3efa5a428423f250559",
+    "runs/2026-11-06-host-capture-reviewed-linux.json": "f1744e5487d409c88a744d8fd31c7fca564a53e3c80d1c916f425a550694f2bf",
+    "runs/2026-11-06-host-capture-reviewed-macos.json": "def5d26b2814ecb290366747beb8a7dc65546f5bddbcc98b2e0591ad2f37535c",
+    "runs/2026-11-06-host-release-PII_REDACTED.json": "2dc472e971cfca976a767add78c515a440bfcf7a6000e4b2dee3cbc9b9522ea5",
+    "runs/2026-11-06-host-release-PS.json": "71c7f760e15b106815ed0ee36c43ac646c2a6904cea44e69e915d89638b1708d",
+    "runs/2026-11-06-host-release-extension.json": "b2214809cdef80c3be669826c68a466286732b7b84771af108c72a9a67607d71",
+    "runs/2026-11-06-host-release-protocol.json": "6d3cbcac01e02d71ba776f0b6ff0589f30c99c96bd1b5031db5be0376b8bd1db",
+    "runs/2026-11-06-host-release-website.json": "b1c378d70b135ca16bf4baa6e0e6b2e2704b3c9a95fce29dd57e1bdb197e4130",
+    "scripts/verify-host-capture-evidence.py": "90451dcbd87b643fde10798d318ca055ab135481207f6908fbe31b2d49edf149",
+    "scripts/verify-performance.cjs": "1a5bf502abcccdad0fe45640f46c04a685b82dcf9d5e0e86a9baaeef8ae70a5e",
+    "scripts/verify-route-boundaries.py": "f69d8d89bc2bc05b37f6e4dbd6062611b2bf23756fbd7710d0fcb5e4446ef2b0",
+    "scripts/verify-site.cjs": "7ef72f16e2416cefba3383ffdd39b58af912d47d7835d97b6ba313c1e2d95244",
+    "site/index.html": "ade4004ad229a6f869ceb90f8c6f1b3ba34922c5ee45c9c24d891958ca084836",
+    "site/public/reference/host-capture-linux.json": "e246a44f972873987616a401bb2971d938c8981b64a18ee48eb141fd4d2986c8",
+    "site/public/reference/host-capture-macos.json": "cad4dc4a13c73dc8cc288d4cc3e8ad3a83a9ee325feffc8ac1ab6a1fa8e7704d",
+    "site/public/reference/host-capture.md": "a7d7f8ac4f43a29b13ab94855f3b5765a8dc518660262e906c28d4990020a86d",
+    "site/public/reference/public-scope.json": "e59926bbdfda1b3708fe1df8415969a6f57dd2f2acf0efce12c1bee084920703",
+    "site/public/reference/tag-performance.json": "2ed3e88abe92bf093d5716347c46ba57bcdfe7637ab0c9dfe6be4bd1ed71ec22",
+    "site/scripts/prepare.mjs": "d94f387a59d7539e3cd989115cfb291be687933fcc6752914d97b85d87439771",
+    "site/src/catalog.js": "5b08145feb74282163f1aa6ff644fd42b22310ceae34a62a1e5219e9be414b26",
+    "site/src/performance-model.js": "043029d25472bec93ea7a495d8cf69a3cbf0a94c54cc31c80f7f651649c90181",
+    "site/src/public-scope.json": "e59926bbdfda1b3708fe1df8415969a6f57dd2f2acf0efce12c1bee084920703",
+    "site/src/scope-manifest.json": "6d0399cebfbc5b3baefb392a6c4912611adefac0e34933c52b90aaa7fba95a5d",
+    "site/src/tag-performance.json": "2ed3e88abe92bf093d5716347c46ba57bcdfe7637ab0c9dfe6be4bd1ed71ec22",
+    "state.json": "77fc10f2e19e347df8b4d6bd713acb504e4c9315aaac97bf8a0fb984582a9392",
+    "tests/test_host_capture.py": "b1722ffdfc35f6bd671dc127555979b7e526e5021f73c67c293a5bd2720a4854",
+    "tests/test_host_capture_evidence.py": "acb69a7f85b1b80e2d7d3bbe5014f5731629c6a4df60a1e0622e5ab09d24cb30",
+    "tools/host_capture.py": "259165814011ece258407edce44ae2b5900fec0bf7e4cac6e0cfd857cea696fb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-host-release-website.json",
+      "sha256": "b1c378d70b135ca16bf4baa6e0e6b2e2704b3c9a95fce29dd57e1bdb197e4130"
+    },
+    {
+      "path": "runs/2026-11-06-host-release-protocol.json",
+      "sha256": "6d3cbcac01e02d71ba776f0b6ff0589f30c99c96bd1b5031db5be0376b8bd1db"
+    },
+    {
+      "path": "runs/2026-11-06-host-capture-final-acceptance.json",
+      "sha256": "9c54ddd4009d72991a55fab8f5ea663e3191fd74af97b6f5c9c6440f2ebd484d"
+    }
+  ],
+  "checks": []
+}

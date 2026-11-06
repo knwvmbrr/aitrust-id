@@ -78,7 +78,7 @@ export function performanceFor(tag,evidence,timing=null,redaction=null) {
   summary:tag.id==='PII_REDACTED'?'Redaction procedure checked; recognition accuracy not measured.':tag.audience==='enterprise'?'Organization capability; performance not measured.':'No measured results for this tag yet.',
   sources:[],device:null,pipeline:timing?pipelineTimingFor(tag,timing):null};
  if(tag.id==='PII_REDACTED'&&redaction)return {...base,summary:'English redaction development checks · not independent validation',redaction,measured_at:redaction.measured_at,sources:[redaction.sources.report],next_test:'Independently review recognition, extra masking and real-user operation.'};
- if(tag.id==='host')return {...base,stage:'Foreground software',summary:'17 terminal controls checked separately on macOS and Linux; not a tag-accuracy study.',sources:['/reference/host-capture-macos.json','/reference/host-capture-linux.json']};
+ if(tag.id==='host')return {...base,stage:'Foreground software',summary:'19 terminal controls checked separately on macOS and Linux; not a tag-accuracy study.',sources:['/reference/host-capture-macos.json','/reference/host-capture-linux.json']};
  if(tag.id==='audit')return {...base,stage:'Self-hosted software',summary:'Self-hosted workflow checked; hosted-service performance not measured.',sources:['/reference/organization-audit-linux.json']};
  if(tag.id!=='PS')return base;
  return {...base,accuracy_measured:true,summary:'Development examples · not an independent accuracy study',

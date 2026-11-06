@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('host_evidence',ROOT/'scripts/verify-host-capture-evidence.py')
 evidence=importlib.util.module_from_spec(spec);spec.loader.exec_module(evidence)
 class HostEvidence(unittest.TestCase):
- def row(self):return json.loads((ROOT/'runs/2026-11-06-host-capture-linux.json').read_bytes())
+ def row(self):return json.loads((ROOT/'runs/2026-11-06-host-capture-final-linux.json').read_bytes())
  def test_current_actual_os_evidence(self):self.assertTrue(evidence.verify(self.row(),'linux'))
  def test_missing_stale_or_weakened_evidence_refused(self):
   variants=[]

@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-045502-host-corrected-publication-boundaries-55efaf92
+
+Recorded 2026-11-06T04:55:02.607487+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final foreground/job-control and cross-checkout privacy fixes to passing current engineering receipts, deployment boundaries and machine-readable state.
+- **Evidence.** All five current source-bound capabilities pass. Final macOS and isolated Linux controls remain 19 per OS; all 202 IDs are retained with 76 full requirements open. [Change record](./runs/changes/2026-11-06-045502-host-corrected-publication-boundaries-55efaf92.json).
+- **Not claimed.** Independent managed-deployment security/human acceptance and detector accuracy remain unperformed. No collection or new tag release.
+
+
+### 2026-11-06-045129-host-reviewed-route-execution-22fa7119
+
+Recorded 2026-11-06T04:51:29.925007+00:00 · Contributor: Codex · change
+
+- **Changed.** Record corrected-source PS, privacy, protocol and extension execution; refresh the generated HOST performance statement to the 19-control OS evidence.
+- **Evidence.** All four current route executions pass. The website commands also passed, but their first source-bound receipt correctly refused a generated performance input that changed during build; it will be rerun on the now-stable generated input. [Change record](./runs/changes/2026-11-06-045129-host-reviewed-route-execution-22fa7119.json).
+- **Not claimed.** No additional scope closure or independent accuracy evidence; a failed stability receipt is not accepted as success.
+
+
+### 2026-11-06-044705-enforce-host-foreground-job-control-d923fd00
+
+Recorded 2026-11-06T04:47:05.457305+00:00 · Contributor: Codex · change
+
+- **Changed.** Cancel foreground file capture on terminal ownership loss; Ctrl-Z exits and SIGSTOP/bg cannot resume captures behind the shell. Retain the cross-checkout journal refusal and source-bound final OS evidence.
+- **Evidence.** 19 actual terminal controls pass per OS, including real Bash job control on macOS and non-root isolated Linux. Two evidence tests reject stale or overstated acceptance. One software closure only. [Change record](./runs/changes/2026-11-06-044705-enforce-host-foreground-job-control-d923fd00.json).
+- **Not claimed.** No managed deployment, independent security review, human usability acceptance or detector accuracy claim.
+
+
+### 2026-11-06-044220-refuse-cross-checkout-host-records-6afa953e
+
+Recorded 2026-11-06T04:42:20.894407+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse optional host metadata directories inside any other Git checkout before writing; add a regression and repeat both actual OS lifecycles on the corrected source.
+- **Evidence.** Prior PR source reproduced the cross-checkout admission. Corrected macOS and non-root isolated Linux runs pass all 17 controls, including that refusal; old evidence is preserved and superseded. [Change record](./runs/changes/2026-11-06-044220-refuse-cross-checkout-host-records-6afa953e.json).
+- **Not claimed.** No additional closure or independent security approval. Managed-deployment review and human/accuracy acceptance remain open.
+
+
 ### 2026-11-06-043744-host-current-release-boundaries-e4149039
 
 Recorded 2026-11-06T04:37:44.279274+00:00 · Contributor: Codex · change

@@ -64,6 +64,10 @@ def load_script(name):
     return module
 
 
+class ForegroundLost(BaseException):
+    pass
+
+
 class SourceGuard:
     def __init__(self,expected,tag=None):
         self.tag=tag
@@ -104,6 +108,8 @@ class Journal:
     """Optional owner-requested metadata. Delete only verified generated members."""
     def __init__(self,path,header):
         self.path=Path(path).expanduser().absolute();self.owned={};self.seq=0;self.bytes=0
+        parent=self.path.parent.resolve(strict=True)
+        require(not any((p/'.git').exists() for p in (parent,*parent.parents)))
         raw=encode(header)+b'\n';create(self.path,ROOT,{'session.json':raw})
         self.context=directory(self.path,ROOT);self.fd=self.context.__enter__()
         self.identity=(os.fstat(self.fd).st_dev,os.fstat(self.fd).st_ino)
@@ -226,12 +232,18 @@ def foreground(stdin,stdout):
 
 
 @contextmanager
-def interrupt_cleanup():
-    """Ordinary termination runs the same cancellation/finally path as Ctrl-C."""
-    prior={sig:signal.getsignal(sig) for sig in (signal.SIGTERM,signal.SIGHUP)}
+def interrupt_cleanup(stdin,stdout):
+    """Job control cannot resume a blocked terminal read behind the shell."""
+    prior={sig:signal.getsignal(sig) for sig in
+           (signal.SIGTERM,signal.SIGHUP,signal.SIGTSTP,signal.SIGTTIN,signal.SIGTTOU,signal.SIGCONT)}
     def stop(signum,frame):raise KeyboardInterrupt
+    def lost(signum,frame):raise ForegroundLost
+    def continued(signum,frame):
+        try:foreground(stdin,stdout)
+        except (OSError,ValueError):raise ForegroundLost from None
     try:
-        for sig in prior:signal.signal(sig,stop)
+        for sig in prior:signal.signal(sig,continued if sig==signal.SIGCONT else
+                                        lost if sig in (signal.SIGTTIN,signal.SIGTTOU) else stop)
         yield
     finally:
         for sig,handler in prior.items():signal.signal(sig,handler)
@@ -261,11 +273,15 @@ def run(root,name,expected,*,consent,tag=None,record_dir=None,stdin=sys.stdin,st
             'source_sha256':expected,'scope':'one_private_text_file','analysis':tag,'text_included':False,'upload_enabled':False})
         selector.register(stdin.fileno(),selectors.EVENT_READ)
         context=frozen_worker(guard) if tag else nullcontext((None,None))
-        with interrupt_cleanup(),context as (script,script_hash):
+        with interrupt_cleanup(stdin,stdout),context as (script,script_hash):
             record('start');say('HOST ACTIVE · one approved local text file · nothing uploaded')
             say('p: pause | c: continue | r: reset and pause | d: delete records and stop | q: stop')
             if tag:say('PS development check selected. No redaction or independent accuracy validation.')
             while running:
+                try:foreground(stdin,stdout)
+                except (OSError,ValueError):
+                    cancel();record('interrupted',reason='foreground_ownership_lost')
+                    say('HOST UNAVAILABLE · foreground terminal ownership lost; start a new visible session');return 2
                 # Read bounded command bytes directly; buffered readline can hide
                 # queued commands from select and can block on an incomplete line.
                 for _,_ in selector.select(.02):
@@ -302,7 +318,8 @@ def run(root,name,expected,*,consent,tag=None,record_dir=None,stdin=sys.stdin,st
                 if paused:continue
                 if now>=next_scan:
                     next_scan=now+.25
-                    try:snapshot,text=scope.snapshot()
+                    try:
+                        foreground(stdin,stdout);snapshot,text=scope.snapshot()
                     except (OSError,ValueError,UnicodeError):
                         cancel();last=None
                         if last_status!='unavailable':
@@ -324,8 +341,8 @@ def run(root,name,expected,*,consent,tag=None,record_dir=None,stdin=sys.stdin,st
                         completed=True
                         row=json.loads(raw);active_epoch,active_revision,snapshot,text=pending
                         require((active_epoch,active_revision)==(epoch,revision))
-                        current,_=scope.snapshot();require(current==snapshot)
-                        guard.check();row=validator(row,text)
+                        foreground(stdin,stdout);current,_=scope.snapshot();require(current==snapshot)
+                        guard.check();row=validator(row,text);foreground(stdin,stdout)
                     except (OSError,ValueError,UnicodeError,RuntimeError,subprocess.SubprocessError):
                         completed=True
                         record('analysis_unavailable',code='PS')
@@ -339,6 +356,9 @@ def run(root,name,expected,*,consent,tag=None,record_dir=None,stdin=sys.stdin,st
             cancel()
             if journal and journal.fd is not None:record('stop')
             say('HOST STOPPED · input file unchanged');return 0
+    except ForegroundLost:
+        cancel();record('interrupted',reason='foreground_ownership_lost')
+        say('HOST UNAVAILABLE · foreground terminal ownership lost; start a new visible session');return 2
     finally:
         cancel();selector.close()
         if journal:journal.close()

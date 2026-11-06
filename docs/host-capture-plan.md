@@ -41,3 +41,7 @@ There are no real-user samples, company intake, new tag adoption, authorship
 verdicts, detector-accuracy claims or hosted-agent service in this increment.
 Only the full demonstrated software job may close F-160; security/human pilot
 and institutional claims stay in their existing acceptance tracks.
+
+Foreground ownership must remain valid throughout a session, including before
+reads/results and when continuing a suspended job. Ctrl-Z stops capture; a job
+forced into SIGSTOP and resumed behind the shell must refuse any new capture.

@@ -45,7 +45,10 @@ Type a letter below and press Return:
 | `d` | Delete this session's verified generated metadata and stop. The input stays. |
 | `q` | Stop; keep any explicitly requested metadata. |
 
-Ctrl-C, terminal hangup and ordinary termination also stop the session. Nothing
+Ctrl-C, Ctrl-Z, terminal hangup and ordinary termination stop the session.
+Ctrl-Z exits rather than leaving a capture job that could resume with `bg`.
+Foreground ownership is checked throughout capture and before publishing a
+result; ownership loss stops the session without reading another saved version. Nothing
 registers a startup task or restarts automatically. After a forced kill, retained
 records describe an interrupted session; a session directory is never resumed.
 A code-only temporary worker may remain after abrupt termination; it contains no

@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import pty
 import select
+import shlex
 import shutil
 import signal
 import stat
@@ -21,10 +22,11 @@ from tools import host_capture as host
 
 
 class Terminal:
-    def __init__(self,args,script=None):
+    def __init__(self,args,script=None,argv=None):
         self.pid,self.fd=pty.fork();self.raw=bytearray();self.status=None
         if self.pid==0:
-            os.execv(sys.executable,[sys.executable,'-B',str(script or ROOT/'scripts/host-capture.py'),*args])
+            command=argv or [sys.executable,'-B',str(script or ROOT/'scripts/host-capture.py'),*args]
+            os.execv(command[0],command)
     def read(self,timeout=.1):
         if select.select([self.fd],[],[],timeout)[0]:
             try:chunk=os.read(self.fd,65536)
@@ -181,6 +183,9 @@ class HostCapture(unittest.TestCase):
         with self.assertRaises(ValueError):host.FileScope(ROOT,'answer.txt')
 
     def test_journal_refuses_unowned_modified_or_existing_files(self):
+        other=self.base/'another-checkout';other.mkdir(mode=0o700);(other/'.git').mkdir()
+        with self.assertRaises(ValueError):host.Journal(other/'records',{'session':'synthetic'})
+        self.assertFalse((other/'records').exists())
         journal=host.Journal(self.output,{'session':'synthetic'})
         try:
             journal.append({'action':'synthetic'})
@@ -287,6 +292,30 @@ class HostCapture(unittest.TestCase):
             if child:
                 try:os.kill(child,signal.SIGKILL)
                 except ProcessLookupError:pass
+
+    def test_ctrl_z_stops_instead_of_creating_a_background_capture_job(self):
+        with Terminal([],argv=['/bin/bash','--noprofile','--norc','-i']) as terminal:
+            terminal.send(shlex.join([sys.executable,'-B',str(ROOT/'scripts/host-capture.py'),*self.args('PS')]))
+            terminal.until('HOST CAPTURED');os.write(terminal.fd,b'\x1a')
+            terminal.until('HOST STOPPED · interrupted')
+            self.write('A changed file after terminal suspension.');time.sleep(.4)
+            self.assertEqual(sum(r['action']=='captured' for r in self.rows()),1)
+            terminal.send('exit 0');self.assertEqual(terminal.finish(),0)
+
+    def test_background_resume_refuses_new_capture_after_sigstop(self):
+        with Terminal([],argv=['/bin/bash','--noprofile','--norc','-i']) as terminal:
+            terminal.send(shlex.join([sys.executable,'-B',str(ROOT/'scripts/host-capture.py'),*self.args('PS')]))
+            terminal.until('HOST CAPTURED')
+            processes=subprocess.check_output(['ps','-axo','pid=,ppid='],text=True)
+            children=[int(row.split()[0]) for row in processes.splitlines() if int(row.split()[1])==terminal.pid]
+            self.assertEqual(len(children),1);os.kill(children[0],signal.SIGSTOP)
+            terminal.send('printf "FOREGROUND_READY\\n"');terminal.until('\r\nFOREGROUND_READY\r\n')
+            terminal.send('bg');self.write('Changed while shell owns the foreground.')
+            terminal.until('foreground terminal ownership lost')
+            time.sleep(.3);self.assertEqual(sum(r['action']=='captured' for r in self.rows()),1)
+            self.assertFalse(any(r.get('revision',0)>1 for r in self.rows()))
+            self.assertEqual(self.rows()[-1]['reason'],'foreground_ownership_lost')
+            terminal.send('exit 0');self.assertEqual(terminal.finish(),0)
 
     def test_frozen_normalization_and_record_identity(self):
         self.write('Cafe\u0301')

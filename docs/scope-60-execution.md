@@ -60,7 +60,7 @@ question remains unanswered; no outside-user criterion has been removed.
 ## Foreground host adapter — November 5 (UTC November 6)
 
 F-160's bounded software job now checks one explicitly selected private text file
-on macOS and Linux. Both OS runs passed 17 real foreground-terminal controls,
+on macOS and Linux. Both final OS runs passed 19 real foreground-terminal controls,
 including pause/reset/delete, optional detector failure, source updates, crashes
 and independent personal checking. The broader ORG-HOST deployment package stays
 at 80% awaiting independent capture-boundary review and actual-user pilot

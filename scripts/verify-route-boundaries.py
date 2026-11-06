@@ -484,6 +484,10 @@ PATTERNS += ('scripts/verify-research-http.py', 'tests/test_research_http.py', '
 
 PATTERNS += ('tools/host_capture.py', 'scripts/host-capture.py', 'scripts/verify-host-capture.py', 'scripts/verify-host-capture-evidence.py', 'tests/test_host_capture.py', 'tests/test_host_capture_evidence.py', 'docs/host-capture-plan.md', 'docs/host-capture.md', 'runs/2026-11-06-host-capture-macos.json', 'runs/2026-11-06-host-capture-linux.json')
 
+PATTERNS += ('runs/2026-11-06-host-capture-reviewed-macos.json', 'runs/2026-11-06-host-capture-reviewed-linux.json')
+
+PATTERNS += ('runs/2026-11-06-host-capture-final-macos.json', 'runs/2026-11-06-host-capture-final-linux.json')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

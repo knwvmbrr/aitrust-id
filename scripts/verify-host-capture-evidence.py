@@ -9,6 +9,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 spec=importlib.util.spec_from_file_location('host_capture_verification',ROOT/'scripts/verify-host-capture.py')
 implementation=importlib.util.module_from_spec(spec);spec.loader.exec_module(implementation)
 CASES={
+ 'test_ctrl_z_stops_instead_of_creating_a_background_capture_job',
+ 'test_background_resume_refuses_new_capture_after_sigstop',
  'test_capture_lifecycle_duplicate_pause_reset_delete','test_capture_only_survives_broken_optional_detector',
  'test_consent_pin_and_foreground_are_required','test_directory_change_and_sensitive_scope_refused',
  'test_failed_optional_analysis_recovers_on_next_revision','test_file_boundaries','test_frozen_normalization_and_record_identity',
@@ -35,7 +37,7 @@ def verify(row,platform):
 def main():
     try:
         for platform,label in (('darwin','macos'),('linux','linux')):
-            verify(json.loads((ROOT/('runs/2026-11-06-host-capture-'+label+'.json')).read_bytes()),platform)
+            verify(json.loads((ROOT/('runs/2026-11-06-host-capture-final-'+label+'.json')).read_bytes()),platform)
         print(json.dumps({'pass':True,'supported_os':['macOS','Linux'],'controls_per_os':len(CASES),
             'current_source_bound':True,'independent_accuracy_evidence':False,'human_acceptance_complete':False}));return 0
     except Exception:print('Host capture OS execution evidence refused.',file=sys.stderr);return 1

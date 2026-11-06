@@ -47,7 +47,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      assert(await use.getByRole('link',{name:'Check a file while you work',exact:true}).getAttribute('href')==='/reference/host-capture.md','HOST guide route missing');
      assert(await use.getByRole('link',{name:'Download source',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','HOST source route missing');
      const guideResponse=await context.request.get(base+'/reference/host-capture.md');assert(guideResponse.status()===200&&(await guideResponse.text()).includes('Check a file while you work'),'HOST guide unavailable');
-     for(const os of ['macos','linux']){const response=await context.request.get(base+'/reference/host-capture-'+os+'.json');assert(response.status()===200,'HOST OS evidence missing');const row=await response.json();assert(row.pass===true&&row.test_count===17&&row.independent_accuracy_evidence===false,'HOST OS evidence overstated');}
+     for(const os of ['macos','linux']){const response=await context.request.get(base+'/reference/host-capture-'+os+'.json');assert(response.status()===200,'HOST OS evidence missing');const row=await response.json();assert(row.pass===true&&row.test_count===19&&row.independent_accuracy_evidence===false,'HOST OS evidence overstated');}
      assert((await dialog.locator('[data-tag-limit]').innerText()).includes('managed deployment still needs independent review'),'HOST deployment limit hidden');
      await use.scrollIntoViewIfNeeded();await page.screenshot({path:'output/playwright/host-file-guide.png'});
     }

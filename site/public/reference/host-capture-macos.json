@@ -1,17 +1,19 @@
 {
   "format": "ai-trust-id-host-capture-engineering/v1",
-  "captured_at": "2026-11-06T04:21:46.204070+00:00",
+  "captured_at": "2026-11-06T04:46:02.474522+00:00",
   "pass": true,
   "platform": "darwin",
   "python_version": "3.12.14",
   "non_root": true,
   "isolated_network_namespace": false,
   "actual_foreground_pty": true,
-  "test_count": 17,
+  "test_count": 19,
   "cases": [
+    "test_background_resume_refuses_new_capture_after_sigstop",
     "test_capture_lifecycle_duplicate_pause_reset_delete",
     "test_capture_only_survives_broken_optional_detector",
     "test_consent_pin_and_foreground_are_required",
+    "test_ctrl_z_stops_instead_of_creating_a_background_capture_job",
     "test_directory_change_and_sensitive_scope_refused",
     "test_failed_optional_analysis_recovers_on_next_revision",
     "test_file_boundaries",
@@ -32,7 +34,7 @@
   "skipped": 0,
   "source_unchanged": true,
   "sources": {
-    "tools/host_capture.py": "c4d653bc05d78eaa8f6da257a250b383cc55c2b687bc0f270f15064f4ef5a506",
+    "tools/host_capture.py": "259165814011ece258407edce44ae2b5900fec0bf7e4cac6e0cfd857cea696fb",
     "scripts/host-capture.py": "ac22b64fc7daef22ba651c2b203f452f32fd2678a0542371901e39366a19a8b8",
     "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
     "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
@@ -41,9 +43,9 @@
     "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
     "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
     "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
-    "tests/test_host_capture.py": "99ea37e3bb4037f4a32d7047b98d3372af4b1232801790aa08fa93bdd637c57e",
+    "tests/test_host_capture.py": "b1722ffdfc35f6bd671dc127555979b7e526e5021f73c67c293a5bd2720a4854",
     "scripts/verify-host-capture.py": "cea82a899bb91104ef994a4efc60e4c6bdfab66c044abb34a9e545aa6614c29a",
-    "docs/host-capture.md": "f4804e4a0169108a68fe646118d1150e8d1639da4cedcb784878f943e9ee8be8"
+    "docs/host-capture.md": "a7d7f8ac4f43a29b13ab94855f3b5765a8dc518660262e906c28d4990020a86d"
   },
   "synthetic_inputs_only": true,
   "automatic_upload": false,
