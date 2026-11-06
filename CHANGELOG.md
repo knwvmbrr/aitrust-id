@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-203519-agent-scope-target-counter-213bec46
+
+Recorded 2026-11-06T20:35:19.746286+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the derived distance-to-target counter after F-158 completion so state agrees with the acceptance ledger.
+- **Evidence.** Accountability verification confirms 128 complete, 74 open, target 60 and 14 closures still needed; all referenced evidence chronology and responsible lanes validate. [Change record](./runs/changes/2026-11-06-203519-agent-scope-target-counter-213bec46.json).
+- **Not claimed.** This repairs a state projection; it grants no extra closure and does not weaken any acceptance.
+
+
 ### 2026-11-06-203335-agent-final-source-evidence-43ca5980
 
 Recorded 2026-11-06T20:33:35.416007+00:00 · Contributor: Codex · change

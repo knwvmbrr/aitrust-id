@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-11-06T20:35:19.288477+00:00",
+  "author": "Codex",
+  "error": "Required accountability check refused stale target_remaining_closures after F-158 closure.",
+  "root_cause": "The closure updated complete/open counts but missed the derived distance-to-target field.",
+  "fix": "Derive all four current scope counters from the same completion ledger; 128 complete, 74 open, target 60, 14 closures remain.",
+  "scope_changed": false,
+  "independent_accuracy_evidence": false
+}
