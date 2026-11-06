@@ -9,6 +9,8 @@ from tools.backup_retention import require_namespace
 ROOT=d.ROOT
 SOURCES=('tools/organization_directory.py','tools/organization_directory_lab.py','scripts/organization-directory.py','scripts/verify-organization-directory.py','scripts/directory-device-browser.cjs','tests/test_organization_directory.py','docs/organization-directory-plan.md','docs/organization-directory.md','tools/organization_audit.py','tools/organization_audit_store.py','deploy/audit/store.sql','spec/organization-audit-metadata.schema.json','tools/blind_review_io.py','scripts/check-ps.py','services/evaluator/app.py','protocol/normalization.py','protocol/unicode15-data.json','package-lock.json','.github/workflows/organization-directory.yml','scripts/verify-organization-directory.py')
 
+SOURCES += ('protocol/evidence.py','protocol/assertions.py','spec/assertion.schema.json','protocol/reports.py','tools/backup_retention.py','deploy/backup/restore.py','eval/requirements.lock','scripts/worker_process.py')
+
 def hashes():return {name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES}
 
 def verify(keycloak,namespace):

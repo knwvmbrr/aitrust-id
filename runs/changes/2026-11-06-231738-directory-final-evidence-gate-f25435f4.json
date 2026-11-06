@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-231738-directory-final-evidence-gate-f25435f4",
+  "recorded_at": "2026-11-06T23:17:38.734765+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c3350938c12563155a7e28e31d7ffda924bb3462",
+  "changed": "Require all 27 real directory controls with exact current sources before F-162 completion, including provider parser, namespace and worker dependencies.",
+  "proves": "The first 27-control provider run passed; evidence refusal tests reject stale, missing, failed, future and overclaimed runs. The expanded final source set must be exercised again before closure.",
+  "limits": "The earlier passing run is historical after this source-binding expansion. F-162 stays open pending the final current-source run.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory_lab.py": "6c5349a0f01cff0b1bbd8ec7081c0c0343eef2f5542d7e70c718a4aefd16f7d0",
+    "scripts/verify-organization-directory-evidence.py": "a652a63eba011f0956e8120902c64a3296dda88a5ce2114449bbb09475ddec36",
+    "tests/test_organization_directory_evidence.py": "f405758a87b6a4505f7db777b9771ec3560122d769d522b3fe24b2abd9b14890",
+    "runs/2026-11-06-organization-directory-linux.json": "8f610b8eda11f9e221a8daed2eb8cfeb9d0a57bb50d7e91c1784cffe14600c17"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory_evidence.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T23:17:39.123968+00:00"
+    }
+  ]
+}

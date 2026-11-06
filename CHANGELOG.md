@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-231738-directory-final-evidence-gate-f25435f4
+
+Recorded 2026-11-06T23:17:38.734765+00:00 · Contributor: Codex · change
+
+- **Changed.** Require all 27 real directory controls with exact current sources before F-162 completion, including provider parser, namespace and worker dependencies.
+- **Evidence.** The first 27-control provider run passed; evidence refusal tests reject stale, missing, failed, future and overclaimed runs. The expanded final source set must be exercised again before closure. [Change record](./runs/changes/2026-11-06-231738-directory-final-evidence-gate-f25435f4.json).
+- **Not claimed.** The earlier passing run is historical after this source-binding expansion. F-162 stays open pending the final current-source run.
+
+
 ### 2026-11-06-231252-directory-provider-array-contract-88e0326c
 
 Recorded 2026-11-06T23:12:52.981095+00:00 · Contributor: Codex · change
