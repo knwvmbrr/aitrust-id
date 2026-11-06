@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-06T04:55:02.572515+00:00",
-  "active_increment": "Foreground host-file adapter implemented and checked; 76 open full requirements, target 60",
+  "updated": "2026-11-06T14:46:46.766291+00:00",
+  "active_increment": "Owner-approved F-119 conformance software acceptance; 75 full requirements open, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-10-15-organization-audit-protected-publication.json",
+    "evidence": "runs/2026-11-06-host-protected-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Native optional model-tool integration unverified",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://842da8d4.aitrust-id.pages.dev",
+    "deployment_url": "https://d2d13663.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -387,7 +387,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "3556 is historical. This increment has 19 actual foreground adapter controls per OS plus two evidence-guard tests. CI records its own current suite; test counts are not requirement closures.",
+  "python_tests_scope": "3556 is historical. This increment executes 28 conformance interface checks, 12 existing runner tests and 11 evidence-guard cases; source-bound capability and required CI checks are recorded separately. No test count grants human or accuracy acceptance.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -759,9 +759,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-06T04:47:04.474978+00:00",
-    "completed_records": 126,
-    "open_records": 76,
+    "audited_at": "2026-11-06T13:21:20.339568+00:00",
+    "completed_records": 127,
+    "open_records": 75,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -775,17 +775,17 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/host-capture-result.md",
+    "latest_increment": "docs/conformance-evidence-result.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
-    "target_remaining_closures": 16,
+    "target_remaining_closures": 15,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-06-host-capture-final-acceptance.json",
+    "current_target_verification": "runs/2026-11-06-conformance-software-execution.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-10-14",
@@ -1085,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-06-host-release-PS.json",
-    "PII_REDACTED": "runs/2026-11-06-host-release-PII_REDACTED.json",
-    "protocol": "runs/2026-11-06-host-release-protocol.json",
-    "extension": "runs/2026-11-06-host-release-extension.json",
-    "website": "runs/2026-11-06-host-release-website.json",
+    "PS": "runs/2026-11-06-conformance-archive-PS.json",
+    "PII_REDACTED": "runs/2026-11-06-conformance-archive-PII_REDACTED.json",
+    "protocol": "runs/2026-11-06-conformance-archive-protocol.json",
+    "extension": "runs/2026-11-06-conformance-archive-extension.json",
+    "website": "runs/2026-11-06-conformance-archive-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-06T04:55:02.572515+00:00",
+  "updated_at": "2026-11-06T14:46:46.766291+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2670,7 +2670,7 @@
     }
   },
   "conformance_tools": {
-    "status": "merged_through_protected_checks; independent_accuracy_and_outside_acceptance_open",
+    "status": "F-119_bounded_software_complete; actual_outside_user_and_independent_accuracy_open",
     "vector_profile": "aitrust-assertion-vectors/1.0.0",
     "reference_cases_passed": 28,
     "focused_tests_passed": 24,
@@ -2678,19 +2678,27 @@
       "runs/2026-10-15-conformance-evidence-focused.json",
       "runs/2026-10-15-conformance-reference-vectors.json",
       "runs/2026-10-15-conformance-reviewed-reference.json",
-      "runs/2026-10-15-conformance-review-repairs.json"
+      "runs/2026-10-15-conformance-review-repairs.json",
+      "runs/2026-11-06-conformance-software-owner-decision.json",
+      "runs/2026-11-06-conformance-software-execution.json"
     ],
     "conformance_guide": "docs/conformance-runner.md",
     "evidence_guide": "docs/evidence-packet.md",
     "independent_accuracy_evidence": false,
     "outside_person_acceptance": false,
     "release_approved": false,
-    "acceptance_reallocation": "pending_owner_answer; existing criteria retained",
-    "current_protocol_receipt": "runs/2026-10-15-conformance-current-protocol.json",
-    "current_website_receipt": "runs/2026-10-15-conformance-recorded-website.json",
+    "acceptance_reallocation": "F-119_only_accepted_by_owner_2026-11-06; exact_prior_criterion_retained_under_F-142; F-108_accuracy_and_F-057_F-120_criteria_unchanged",
+    "current_protocol_receipt": "runs/2026-11-06-conformance-archive-protocol.json",
+    "current_website_receipt": "runs/2026-11-06-conformance-archive-website.json",
     "source_commit": "9e40a5a8c37d42ab999a5331a8a87f08883b5be1",
     "protected_merge": "runs/2026-10-15-conformance-protected-merge.json",
-    "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/77"
+    "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/77",
+    "owner_decision": "runs/2026-11-06-conformance-software-owner-decision.json",
+    "software_requirement": "F-119",
+    "software_complete": true,
+    "focused_runner_tests": 12,
+    "evidence_guard_tests": 12,
+    "guard_evidence": "runs/2026-11-06-conformance-boundary-guards.json"
   },
   "native_dependency_evidence": {
     "status": "merged_through_protected_checks; permission_and_transitive_review_open",
@@ -2787,6 +2795,20 @@
     "independent_accuracy_evidence": false,
     "current_engineering_evidence": "runs/2026-11-06-host-release-protocol.json",
     "foreground_job_control_verified": true,
-    "cross_repository_output_refused": true
+    "cross_repository_output_refused": true,
+    "protected_publication": "runs/2026-11-06-host-protected-publication.json"
+  },
+  "browser_ci_installation": {
+    "status": "local_policy_checks_pass; corrected_hosted_execution_pending",
+    "plan": "docs/ci-browser-install-plan.md",
+    "diagnosis": "runs/2026-11-06-browser-ci-install-diagnosis.json",
+    "context": "Only disposable GitHub-hosted Ubuntu 24.04 browser jobs; no production/local host changes.",
+    "policy_tests_passed": 6,
+    "install_timeout_minutes": 15,
+    "job_timeout_minutes": 30,
+    "required_tests_removed": 0,
+    "dependency_versions_changed": false,
+    "actual_speed_improvement_claimed": false,
+    "release_approved": false
   }
 }

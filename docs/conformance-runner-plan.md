@@ -26,3 +26,12 @@ Acceptance: run both actual reference profiles; run an independently written
 adapter using the documented process contract; detect a lying always-pass
 adapter, mismatched exits, forged certification, invalid/duplicate-key output,
 missing tooling, output floods, timeouts and child cleanup. Use focused checks.
+
+## November 6 owner decision
+
+The pending answer above was received for F-119 only. Its bounded software job
+can complete from actual interface/failure evidence; the outside person's own
+build acceptance is retained under F-142 and accuracy under F-108. The existing
+separately launched delegating adapter proves the executable interface, not an
+independently written validator. F-057/F-120 remain under their existing criteria.
+See conformance-acceptance-plan.md and the exact dated decision receipt.

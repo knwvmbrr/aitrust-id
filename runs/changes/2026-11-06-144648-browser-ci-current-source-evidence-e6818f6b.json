@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-144648-browser-ci-current-source-evidence-e6818f6b",
+  "recorded_at": "2026-11-06T14:46:48.348106+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5909a7e62975004314d223195b27f41c1dad9210",
+  "changed": "Refresh all five engineering receipts and source-bound route review after the browser CI archive and bounded-install change.",
+  "proves": "PS 7, redaction 6, extension 14, protocol 33 and website 22 check commands pass on unchanged current sources. All 202 records remain, with 127 complete and 75 open.",
+  "limits": "Local checks do not prove the corrected GitHub-hosted archive format or install speed. Protected checks, actual outside use and independent accuracy retain their separate gates.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    "state.json": "acf3701f309cdbd60ed2fa31b2dcc6886ff67db10cde9187443c41f731cdd9b6",
+    "eval/route-boundaries.json": "e7f7175636e03b6d2f41d397b577b33b7235f92227ef5c05e78a5f6a7f79c510",
+    "runs/2026-11-06-conformance-archive-PS.json": "8d2c4cd38c65e9fb5f0a1c15a969645dca37d267d39c79d6246701f571d93b57",
+    "runs/2026-11-06-conformance-archive-PII_REDACTED.json": "ca75e3ad7c4b723b5da39259ce0223f1095464a1a9a561fd1b1cb75a7cde838d",
+    "runs/2026-11-06-conformance-archive-extension.json": "55d3d96e2d178d2c90a2107cf5f1bbbc1784838bc1e14b8987ee8534a9049904",
+    "runs/2026-11-06-conformance-archive-protocol.json": "6c0e9556f7a2a5821b25bb122baf1662aca98435a82d83b98ed0691e82b0221c",
+    "runs/2026-11-06-conformance-archive-website.json": "923b2b2ed56b6cbb24d2519407ac2bc7d98c1114d74c7e0b27de131bb329fd86"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-archive-protocol.json",
+      "sha256": "6c0e9556f7a2a5821b25bb122baf1662aca98435a82d83b98ed0691e82b0221c"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-archive-website.json",
+      "sha256": "923b2b2ed56b6cbb24d2519407ac2bc7d98c1114d74c7e0b27de131bb329fd86"
+    }
+  ],
+  "checks": []
+}

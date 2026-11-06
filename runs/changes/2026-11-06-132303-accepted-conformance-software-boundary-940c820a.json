@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-132303-accepted-conformance-software-boundary-940c820a",
+  "recorded_at": "2026-11-06T13:23:03.142743+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a89482cd1b992ee76063d4a18800aa196ae6f38",
+  "changed": "Complete the evidenced conformance software job under Michael\u2019s explicit decision, preserve its original outside-implementer criterion under F-142, add a source-bound CI acceptance guard and publish a readable adapter guide and execution download.",
+  "proves": "The actual CLI passes 28 interface checks; 12 focused runner tests and 11 evidence-refusal cases pass. All 202 IDs remain, 127 complete and 75 open. Prior HOST deployment evidence is retained.",
+  "limits": "No actual outside implementer, independent accuracy, certification or new detector release is credited. F-057 and F-120 criteria are unchanged.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "9f05f0f9f613dbb5a0779f8f7bacded0007fa78642683f74b82672a11388f28b",
+    "DECISIONS.md": "3ee8a70fb2d028328b7bcb9d07fb147c8d6f136b4ab80275219508d76a461db4",
+    "README.md": "70765bb21ebc71bd21574664f344a42012e08ee7ab0da566a74782628e7938b0",
+    "docs/conformance-acceptance-plan.md": "16dfba78d295d98a566e3486181c5e9584b59e44016b37f22e30944a2564f702",
+    "docs/conformance-evidence-result.md": "57d5173c3bfc110b3f7951c99d161453d54d39be715d4f606a24796ab7c2cd75",
+    "docs/conformance-runner-plan.md": "4945008afc89cb6ed100ec5421ae6353f4d9f9398437f9a605c20b9f769b7af9",
+    "docs/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+    "docs/scope-60-execution.md": "363fd6f58e29df67844f844a210c7fcd65199e1ab107080bb61bcaf9c05de1b5",
+    "docs/scope-progress.json": "26c30f7fc75e9519f1a960695cb058038c8440a863511e162b67dc4f2e81e652",
+    "docs/scope-progress.md": "b2cfc1390146cf8dcb08132e3ee526df782fc0780caeb369359c25c4011ee547",
+    "docs/scope-task-index.md": "0cdf385e41251b5aeb9b2c09188c5868740bde8ced290b36202b0f12f035be68",
+    "eval/revalidation.json": "34dd244c638fba1d0fbf863c904088df159a3ad086ea0805679d713ac1dd4665",
+    "runs/2026-11-06-conformance-software-execution.json": "72fc2914c03cd925f44f0693bac77145d2ef29a5d13fa9c7ba67ffe8d1210d0a",
+    "runs/2026-11-06-conformance-software-owner-decision.json": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e",
+    "runs/2026-11-06-host-protected-publication.json": "820fedf99c8ccb28867ef44067be00ea6fb1d90e78b4f560bd24fc13cc9cbfff",
+    "scripts/verify-conformance-delivery.py": "d68ad81c81a00eddc22f46ea0cea24223736335b9846d4bf9c18c9ae02f98ef0",
+    "scripts/verify-route-boundaries.py": "b4de6823c8e39b337bba2bd3c3baf6e3cc292cf1e7e5cb7811a367367219e3a5",
+    "scripts/verify-workflows.cjs": "e49e6a617fd72edc74b5bd48a30a144b9d71696d6a660a91f971a0659e136f6a",
+    "site/public/reference/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+    "site/public/reference/decisions.md": "3ee8a70fb2d028328b7bcb9d07fb147c8d6f136b4ab80275219508d76a461db4",
+    "site/public/reference/public-scope.json": "f0c18cf3f84df2168baa7c8824747722d3b1d21753232cb4e77fdd2349ee556a",
+    "site/scripts/render-reference.mjs": "f58c2135f0dfc3aac583e3ba5db969d0f3ccf62de6dc03c58e12f427b3566fd6",
+    "site/src/public-scope.json": "f0c18cf3f84df2168baa7c8824747722d3b1d21753232cb4e77fdd2349ee556a",
+    "site/src/scope-manifest.json": "90b7f4464d31b28f1ceffe5d1dbf8d8c4226d190bde8a332a73834b12be58ba2",
+    "state.json": "3470bde21a9738171ec54601414922376d106595f5047647aaeac02f7de81b37",
+    "tests/test_conformance_delivery.py": "e6d874a630ed1793c1f2e02db2466f7eca0ee36ae366894173be811288b2d237"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-software-owner-decision.json",
+      "sha256": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-software-execution.json",
+      "sha256": "72fc2914c03cd925f44f0693bac77145d2ef29a5d13fa9c7ba67ffe8d1210d0a"
+    },
+    {
+      "path": "runs/2026-11-06-host-protected-publication.json",
+      "sha256": "820fedf99c8ccb28867ef44067be00ea6fb1d90e78b4f560bd24fc13cc9cbfff"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-conformance-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T13:23:03.380406+00:00"
+    }
+  ]
+}

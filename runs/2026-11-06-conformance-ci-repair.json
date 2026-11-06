@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-11-06T13:49:53.409750+00:00",
+  "author": "Codex",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "observed_failures": [
+    {
+      "job": "scope-plan",
+      "job_id": 127924387155,
+      "root_cause": "The explicit owner acceptance was appended to generated DECISIONS.md rather than docs/decision-history.md; canonical prose verification failed before the new check.",
+      "fix": "Preserve the same approval in decision-history.md and regenerate DECISIONS.md."
+    },
+    {
+      "job": "no-egress",
+      "job_id": 127924387196,
+      "root_cause": "test_dated_prose_is_exact_current_source rejected that generated/source mismatch.",
+      "fix": "Keep the maintained decision source and generated prose identical."
+    },
+    {
+      "review": "PR 83 dependency finding",
+      "root_cause": "The new conformance pytest step had no job-local evaluation dependencies.",
+      "fix": "Install the existing hashed eval/requirements.lock in scope-plan before invoking the conformance tests."
+    }
+  ],
+  "focused_check": {
+    "argv": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_reproducibility_controls.py::test_dated_prose_is_exact_current_source",
+      "tests/test_conformance_delivery.py",
+      "tests/test_conformance_vectors.py",
+      "-q"
+    ],
+    "exit": 0,
+    "passed": 25
+  },
+  "canonical_decisions_verified": true,
+  "required_linux_ci": "pending_after_corrected_head",
+  "outside_person_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}

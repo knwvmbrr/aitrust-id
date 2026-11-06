@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-11-06T13:26:05.959653+00:00",
+  "pass": true,
+  "actual_command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_conformance_delivery.py",
+    "-q"
+  ],
+  "counts": {
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_unchanged": true,
+  "sources": {
+    "scripts/verify-conformance-delivery.py": "d68ad81c81a00eddc22f46ea0cea24223736335b9846d4bf9c18c9ae02f98ef0",
+    "tests/test_conformance_delivery.py": "e6d874a630ed1793c1f2e02db2466f7eca0ee36ae366894173be811288b2d237",
+    "runs/2026-11-06-conformance-software-execution.json": "72fc2914c03cd925f44f0693bac77145d2ef29a5d13fa9c7ba67ffe8d1210d0a"
+  },
+  "stdout_sha256": "9862f55084ae5e9cd3a8f654347eed398a33358316edf44bbf3ec7920bc8c3f0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "independent_accuracy_evidence": false,
+  "outside_person_acceptance": false
+}

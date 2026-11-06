@@ -6094,9 +6094,10 @@
           "runs/2026-10-12-review-execution-linux-cleanup.json",
           "runs/2026-10-12-review-repaired-focused.json",
           "runs/2026-10-12-review-repaired-cli.json",
-          "runs/2026-10-12-review-repaired-linux.json"
+          "runs/2026-10-12-review-repaired-linux.json",
+          "runs/2026-11-06-conformance-software-owner-decision.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; F-119 software completion grants no independent accuracy acceptance, by the explicit 2026-11-06 owner decision.",
         "required_acceptance": [
           "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not."
         ],
@@ -7149,28 +7150,32 @@
         "id": "F-119",
         "kind": "requirement",
         "title": "Conformance test suite an outside implementer can run against their own build",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-15T03:11:02.842307+00:00",
+        "audited_at": "2026-11-06T13:21:20.339568+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00",
-          "Codex — actual versioned two-profile conformance runner, 28 selected reference checks and focused hostile-process checks; no outside-person acceptance, 2026-10-15T03:11:02.842307+00:00"
+          "Codex — actual versioned two-profile conformance runner, 28 selected reference checks and focused hostile-process checks; no outside-person acceptance, 2026-10-15T03:11:02.842307+00:00",
+          "Codex — existing runner implementation, current source-bound execution and accepted scope reconciliation, 2026-11-06T13:21:20.339568+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-11-06T13:21:20.339568+00:00",
+        "completion_timestamp_basis": "Current 28-case CLI execution and 12 focused software tests, with explicit owner-approved separation of outside-user/accuracy acceptance.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
           "docs/open-validation-path.md",
@@ -7187,13 +7192,20 @@
           "eval/conformance/assertion-v1.json",
           "tests/test_conformance_vectors.py",
           "runs/2026-10-15-conformance-reference-vectors.json",
-          "runs/2026-10-15-conformance-evidence-focused.json"
+          "runs/2026-10-15-conformance-evidence-focused.json",
+          "runs/2026-11-06-conformance-software-owner-decision.json",
+          "runs/2026-11-06-conformance-software-execution.json",
+          "scripts/verify-conformance-delivery.py",
+          "tests/test_conformance_delivery.py",
+          "tools/conformance_vectors.py",
+          "scripts/check-conformance-vectors.py",
+          "tests/test_conformance_vectors.py",
+          "docs/conformance-runner.md",
+          "docs/conformance-acceptance-plan.md"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Versioned synthetic interoperability runner and source-bound evidence index now execute. Actual outside-person acceptance and existing full release criteria remain unfulfilled; no completion percentage changed.",
-        "required_acceptance": [
-          "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
-        ],
-        "queue": "open"
+        "evidence_scope": "The bounded runnable software job only: 14 invented vectors under both profiles, explicit trusted implementation command, complete failure reporting and bounded children. Actual outside-person own-build acceptance remains under F-142; independent accuracy under F-108. No comprehensive protocol correctness, certification or detector release.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {
@@ -8781,7 +8793,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-11-06T13:21:20.339568+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution"
@@ -8792,16 +8804,18 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate.",
+        "next_fix": "Perform the existing physical-device, screen-reader and outside-user setup tasks, and obtain an actual outside implementer run against their own build with recorded acceptance. F-119 software checks do not satisfy these human tasks.",
         "next_owner": "Human device/accessibility testers; Codex fixes",
         "evidence": [
           "runs/2026-10-08-upgrade-device-public.json",
           "runs/2026-10-08-scope-plan-site-public.json",
-          "docs/handheld-delivery.md"
+          "docs/handheld-delivery.md",
+          "runs/2026-11-06-conformance-software-owner-decision.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
-          "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate."
+          "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate.",
+          "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
         ],
         "queue": "open"
       }

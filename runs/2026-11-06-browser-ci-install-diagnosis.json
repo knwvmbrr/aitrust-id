@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-11-06T14:42:14.114896+00:00",
+  "author": "Codex",
+  "scope_ids": [
+    "F-119"
+  ],
+  "source_head": "5909a7e62975004314d223195b27f41c1dad9210",
+  "stopped_job": 127929071753,
+  "stopped_run": 42228808884,
+  "install_started_at": "2026-11-06T13:52:06Z",
+  "install_cutoff": "2026-11-06T14:37:06Z",
+  "raw_log_sha256": "0de14f4a0e6a3db191c451601a3b4c17972b51439ed5fdd2119ab3fa9eccb5a6",
+  "raw_log_published": false,
+  "observed": [
+    "The Ubuntu apt package phase was still downloading from azure.archive.ubuntu.com after 45 minutes.",
+    "The log records a retry for libgtk-4-1. Browser tests had not started.",
+    "Matching exact-source job 127929042245 passed in 5m34s."
+  ],
+  "fix": [
+    "Pin the observed Ubuntu 24.04 browser CI host.",
+    "Prepare known signed Ubuntu source formats for the canonical HTTPS archive; refuse changed keys/suites/trust or unsupported configuration.",
+    "Bound the existing browser install steps to 15 minutes and jobs to 30 minutes.",
+    "Keep all required tests and dependency/browser versions unchanged."
+  ],
+  "local_parser_and_policy_tests_passed": 6,
+  "actual_corrected_github_hosted_execution": "pending",
+  "root_cause": "Observed Ubuntu package download slowness and retry; no detector/runtime failure inferred.",
+  "independent_accuracy_evidence": false,
+  "outside_person_acceptance": false,
+  "release_approved": false
+}
