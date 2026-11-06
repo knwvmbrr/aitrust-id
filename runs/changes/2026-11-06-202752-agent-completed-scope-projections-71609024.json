@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-202752-agent-completed-scope-projections-71609024",
+  "recorded_at": "2026-11-06T20:27:52.135770+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f65986549820812dbaf4b0fa2cdf702a311a891e",
+  "changed": "Regenerate all public scope projections after the completed agent software acceptance and consistent 202-record task render.",
+  "proves": "The source ledger and website projections show 128 complete and 74 open requirements with F-158 software complete.",
+  "limits": "Site projections do not independently validate detector accuracy or close human/legal acceptance.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "4a5cdc5a669bbbb293dc090dca0c9c688cc4d6b57b62dec279bd0c6777e96b29",
+    "site/src/public-scope.json": "4a5cdc5a669bbbb293dc090dca0c9c688cc4d6b57b62dec279bd0c6777e96b29",
+    "site/src/scope-manifest.json": "6ee3b7791c23ecbaf6153e126b450de21f66010ab657b657e7c4dc44d076df05"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-integration-acceptance.json",
+      "sha256": "e1b8a0d794ab9ec8499cbd85e4bd76b1d7efbf41a36a0bcb048e69c8609774ef"
+    }
+  ],
+  "checks": []
+}

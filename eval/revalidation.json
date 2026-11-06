@@ -403,7 +403,12 @@
         "tests/test_agent_output_evidence.py",
         "docs/agent-output-plan.md",
         "docs/agent-output.md",
-        "runs/2026-11-06-agent-output-*.json"
+        "runs/2026-11-06-agent-output-*.json",
+        "scripts/render-scope-plan.py",
+        "tests/test_scope_render_command.py",
+        "docs/scope-render-plan.md",
+        "scripts/changelog_core.py",
+        "tests/test_changelog_pipeline.py"
       ],
       "commands": [
         [
@@ -634,6 +639,14 @@
           "pytest",
           "tests/test_agent_output.py",
           "tests/test_agent_output_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_scope_render_command.py",
+          "tests/test_scope_index.py",
           "-q"
         ]
       ]
@@ -1025,7 +1038,10 @@
         "tests/test_agent_output_evidence.py",
         "docs/agent-output-plan.md",
         "docs/agent-output.md",
-        "runs/2026-11-06-agent-output-*.json"
+        "runs/2026-11-06-agent-output-*.json",
+        "scripts/render-scope-plan.py",
+        "tests/test_scope_render_command.py",
+        "docs/scope-render-plan.md"
       ],
       "commands": [
         [

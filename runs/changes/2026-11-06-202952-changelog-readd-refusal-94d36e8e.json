@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-202952-changelog-readd-refusal-94d36e8e",
+  "recorded_at": "2026-11-06T20:29:52.649601+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f65986549820812dbaf4b0fa2cdf702a311a891e",
+  "changed": "Reject deleted-and-readded change events as a source for historical evidence, preserving one immutable introduction.",
+  "proves": "The actual Git delete/re-add regression refuses to borrow evidence from the old introduction.",
+  "limits": "No requirement count or detector claim changes.",
+  "scope_ids": [
+    "F-139"
+  ],
+  "files": {
+    "scripts/changelog_core.py": "21f36594be004e8cc4ae7d8eaf49408952b0d8fa0c506a94503f9c42c6521a95",
+    "tests/test_changelog_pipeline.py": "3b9604d29b9f5cb41549135563fc6ad130417fb51e1597ee05eddfa3f49c38c8"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_changelog_pipeline.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T20:29:59.688723+00:00"
+    }
+  ]
+}

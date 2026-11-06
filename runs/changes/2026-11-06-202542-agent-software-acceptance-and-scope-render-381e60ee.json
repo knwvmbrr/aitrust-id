@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-202542-agent-software-acceptance-and-scope-render-381e60ee",
+  "recorded_at": "2026-11-06T20:25:42.852992+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f65986549820812dbaf4b0fa2cdf702a311a891e",
+  "changed": "Complete the source-bound Mac and clean Linux agent-output integration and repair canonical scope rendering so ledger and all 202 task percentages stay consistent.",
+  "proves": "F-158 fulfills its preserved software acceptance contract with 33 executed cases on each OS, private view failure isolation and explicit source-claim limits. The scope now has 128 complete and 74 open requirements.",
+  "limits": "No original acceptance reassigned or waived, independent accuracy, outside-user acceptance, proposed tag adoption or sandbox claim. Protected publication still pending.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "docs/scope-progress.json": "d5f607dd5d12cc2250638858ec0b7a885c41d526e76f61cfe75cc0f7f75a92a1",
+    "docs/scope-progress.md": "e85905c6ef4e9a23cd902e67b0840b02f334388be2dbc789267fe818c823802d",
+    "docs/scope-render-plan.md": "4237e735285fe4fc78f678b0b3a9a1688d1552dd3056433247b7b05b3bc346ed",
+    "docs/scope-task-index.md": "4abacf8acdab886bb572498b53454e916aa23cbb545c92e65303327ab76c40ce",
+    "eval/revalidation.json": "9cabc63e34dba1691320690aed1a6704388a99d87ef40cf02ace8fc18552b844",
+    "runs/2026-11-06-agent-integration-acceptance.json": "e1b8a0d794ab9ec8499cbd85e4bd76b1d7efbf41a36a0bcb048e69c8609774ef",
+    "runs/2026-11-06-agent-output-linux.json": "1c32fd0c2c11a8d09992b7d043109221e6d0640cd3fe1deaa6615a00e7a91198",
+    "runs/2026-11-06-scope-render-repair.json": "65b6351455a5bb7329437549ff00207d49bfc91e8331ea6896370d72ceb216b9",
+    "scripts/scope-progress.py": "6adce2f296884001bc6c52fe868388b384acccd316f6b431766b8ab481eca001",
+    "scripts/verify-route-boundaries.py": "fd6dcd3d7f383be4df818c3b74106a9a5e8b82c62becc9e74be21c710f2c0139",
+    "state.json": "fcb4b9603048a578a0f28c82737ae2d5cdbd1e1e5af9e8922b61ecdaa36f5465",
+    "tests/test_scope_render_command.py": "315da0831b6bacd4ff259a80305c10a9ab0fcc99249a20a8d1baa03eae6dcd68"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-output-linux.json",
+      "sha256": "1c32fd0c2c11a8d09992b7d043109221e6d0640cd3fe1deaa6615a00e7a91198"
+    },
+    {
+      "path": "runs/2026-11-06-agent-integration-acceptance.json",
+      "sha256": "e1b8a0d794ab9ec8499cbd85e4bd76b1d7efbf41a36a0bcb048e69c8609774ef"
+    },
+    {
+      "path": "runs/2026-11-06-scope-render-repair.json",
+      "sha256": "65b6351455a5bb7329437549ff00207d49bfc91e8331ea6896370d72ceb216b9"
+    }
+  ],
+  "checks": []
+}

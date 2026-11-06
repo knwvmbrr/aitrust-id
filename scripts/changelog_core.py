@@ -81,7 +81,21 @@ def entry(record, name):
             f"- **Evidence.** {record['proves']} [Change record](./{name}).\n"
             f"- **Not claimed.** {record['limits']}\n")
 
-def validate_record(root, record, name, current=False):
+def committed_event_origin(root, name, head):
+    """Only the original reachable addition can bind a committed event's evidence."""
+    commits = git(root, 'log', '--reverse', '--format=%H', '--diff-filter=A', head, '--', name).splitlines()
+    if len(commits) != 1:
+        return None
+    first = commits[0]
+    try:
+        if git(root, 'show', first + ':' + name) == (root / name).read_text():
+            return first
+    except subprocess.CalledProcessError:
+        pass
+    return None
+
+
+def validate_record(root, record, name, current=False, evidence_commit=None):
     errors = []
     try:
         if record['schema_version'] != 1 or record['claim_level'] != 'engineering_only' or record['independent_release_validated'] is not False:
@@ -121,7 +135,16 @@ def validate_record(root, record, name, current=False):
             if not re.fullmatch(r'[0-9a-f]{64}', e['sha256']):
                 raise ValueError('Invalid evidence hash')
             if current and digest(root, e['path']) != e['sha256']:
-                raise ValueError('Missing or changed evidence: ' + e['path'])
+                historical = None
+                if evidence_commit:
+                    try:
+                        # Evidence is text JSON/source in this protocol. Preserve raw bytes,
+                        # including non-ASCII, through Git's existing UTF-8 transport.
+                        historical = hashlib.sha256(git(root, 'show', evidence_commit + ':' + e['path']).encode()).hexdigest()
+                    except (subprocess.CalledProcessError, UnicodeError):
+                        pass
+                if historical != e['sha256']:
+                    raise ValueError('Missing or changed evidence: ' + e['path'])
         for check in record['checks']:
             if not isinstance(check['argv'], list) or not check['argv'] or not all(isinstance(a, str) for a in check['argv']) or type(check['exit_status']) is not int or check['exit_status'] != 0 or check['pass'] is not True:
                 raise ValueError('Check did not pass or has invalid argv')
@@ -172,7 +195,8 @@ def verify(root=ROOT, base=None, head='HEAD'):
                 errors.append('Committed change record was edited/deleted: ' + n)
     new = {n: r for n, r in records.items() if n not in previous}
     for name, r in new.items():
-        errors += validate_record(root, r, name, current=True)
+        errors += validate_record(root, r, name, current=True,
+                                  evidence_commit=committed_event_origin(root, name, head))
     changed = changes(root, base, head)
     for f in changed:
         if not any(r['kind'] == 'change' and f in r['files'] and r['files'][f] == digest(root, f) for r in new.values()):

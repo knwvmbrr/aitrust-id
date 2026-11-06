@@ -156,6 +156,8 @@ PATTERNS += ('tools/reference_revision.py','scripts/review-reference-revision.py
              'scripts/prepare-reference-revision-demo.py','scripts/verify-reference-revision.py',
              'tests/test_reference_revision.py','docs/reference-revision-plan.md','docs/reference-revisions.md')
 
+PATTERNS += ('scripts/scope-progress.py', 'tests/test_scope_render_command.py', 'docs/scope-render-plan.md')
+
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'site/src/ps-result.js', 'site/src/handheld.jsx', 'site/src/review-file.js',

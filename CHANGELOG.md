@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-203335-agent-final-source-evidence-43ca5980
+
+Recorded 2026-11-06T20:33:35.416007+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the final source-bound capability checks and refresh current route review after the Linux agent acceptance and audit-pipeline repairs.
+- **Evidence.** PS 7, redaction 6, extension 14, protocol 35 and website 23 current check commands pass; the selected personal route boundary review passes with retained privacy and failure rules. [Change record](./runs/changes/2026-11-06-203335-agent-final-source-evidence-43ca5980.json).
+- **Not claimed.** These engineering checks do not grant independent tag accuracy, human acceptance or certification. F-158 is the only full requirement closure in this increment.
+
+
+### 2026-11-06-202952-changelog-readd-refusal-94d36e8e
+
+Recorded 2026-11-06T20:29:52.649601+00:00 · Contributor: Codex · change
+
+- **Changed.** Reject deleted-and-readded change events as a source for historical evidence, preserving one immutable introduction.
+- **Evidence.** The actual Git delete/re-add regression refuses to borrow evidence from the old introduction. [Change record](./runs/changes/2026-11-06-202952-changelog-readd-refusal-94d36e8e.json).
+- **Not claimed.** No requirement count or detector claim changes.
+
+
+### 2026-11-06-202752-agent-completed-scope-projections-71609024
+
+Recorded 2026-11-06T20:27:52.135770+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate all public scope projections after the completed agent software acceptance and consistent 202-record task render.
+- **Evidence.** The source ledger and website projections show 128 complete and 74 open requirements with F-158 software complete. [Change record](./runs/changes/2026-11-06-202752-agent-completed-scope-projections-71609024.json).
+- **Not claimed.** Site projections do not independently validate detector accuracy or close human/legal acceptance.
+
+
+### 2026-11-06-202715-multi-commit-evidence-provenance-d58a03f2
+
+Recorded 2026-11-06T20:27:15.045339+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve committed per-change evidence snapshots across multi-commit progress, and require fresh evidence and file coverage for current changes.
+- **Evidence.** Real Git history tests accept the original snapshot while refusing missing original evidence, undocumented later changes and edited events. Historical changelog bytes remain unchanged. [Change record](./runs/changes/2026-11-06-202715-multi-commit-evidence-provenance-d58a03f2.json).
+- **Not claimed.** This repairs audit provenance only; it does not independently validate a tag or grant another requirement closure.
+
+
+### 2026-11-06-202542-agent-software-acceptance-and-scope-render-381e60ee
+
+Recorded 2026-11-06T20:25:42.852992+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the source-bound Mac and clean Linux agent-output integration and repair canonical scope rendering so ledger and all 202 task percentages stay consistent.
+- **Evidence.** F-158 fulfills its preserved software acceptance contract with 33 executed cases on each OS, private view failure isolation and explicit source-claim limits. The scope now has 128 complete and 74 open requirements. [Change record](./runs/changes/2026-11-06-202542-agent-software-acceptance-and-scope-render-381e60ee.json).
+- **Not claimed.** No original acceptance reassigned or waived, independent accuracy, outside-user acceptance, proposed tag adoption or sandbox claim. Protected publication still pending.
+
+
 ### 2026-11-06-201212-agent-progress-site-projections-cd36e931
 
 Recorded 2026-11-06T20:12:12.978900+00:00 · Contributor: Codex · change

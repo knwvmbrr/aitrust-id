@@ -1,7 +1,10 @@
 """Verify and render the evidence-based completion ledger; no status inference."""
 import argparse
+from contextlib import redirect_stdout
 import datetime
 import json
+import runpy
+import sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MILESTONES = ['bounded_contract','implemented_mechanism','executable_checks','selected_integration','final_acceptance']
@@ -93,6 +96,9 @@ Future source/route/acceptance changes reopen affected records.
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--render',action='store_true');parser.add_argument('--report');a=parser.parse_args()
     data=json.loads((ROOT/'docs/scope-progress.json').read_text());result=verify(data)
-    if a.render:render(data)
+    if a.render:
+        render(data)
+        with redirect_stdout(sys.stderr):
+            runpy.run_path(str(ROOT/'scripts/render-scope-plan.py'),run_name='__main__')
     if a.report:(ROOT/a.report).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result))

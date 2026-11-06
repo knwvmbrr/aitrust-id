@@ -1,0 +1,60 @@
+{
+  "captured_at": "2026-11-06T20:22:38.876039+00:00",
+  "author": "Codex",
+  "requirement": "F-158",
+  "job": "Agent-output identity integration",
+  "supported_profile": "reviewed single-file Python stdio agent on macOS/Linux; selected-key source statement and independent optional PS check",
+  "original_required_acceptance": [
+    "Deliver Agent identity \u2014 labelling output from autonomous agents. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "software_acceptance": [
+    {
+      "job": "Actual agent execution, source statement and separate selected-key verification",
+      "evidence": [
+        "runs/2026-11-06-agent-output-macos.json",
+        "runs/2026-11-06-agent-output-linux.json"
+      ],
+      "actual_cases_per_os": 33
+    },
+    {
+      "job": "Failure containment, source/descriptor/byte identity and privacy",
+      "evidence": [
+        "tests/test_agent_output.py"
+      ],
+      "actual_cases_included_in_os_execution": true
+    },
+    {
+      "job": "Private offline view, keyboard, narrow/enlarged layout, escaping/CSP and no external requests",
+      "evidence": [
+        "runs/2026-11-06-agent-output-view-current.json"
+      ]
+    },
+    {
+      "job": "Runnable guide and developer-page integration",
+      "evidence": [
+        "docs/agent-output.md",
+        "site/scripts/render-reference.mjs",
+        "scripts/verify-workflows.cjs"
+      ]
+    }
+  ],
+  "linux_execution": {
+    "source_commit": "f65986549820812dbaf4b0fa2cdf702a311a891e",
+    "workflow_run": 42286369506,
+    "job": 128128125245,
+    "artifact_id": 13538535113,
+    "artifact_name": "agent-output-linux-software",
+    "non_root": true,
+    "source_hashes_match_current": true
+  },
+  "outside_person_acceptance": false,
+  "ai_generation_proven": false,
+  "execution_independently_attested": false,
+  "independent_accuracy_evidence": false,
+  "certification": false,
+  "new_tag_release": false,
+  "physical_phone_tested": false,
+  "collection_enabled": false,
+  "original_criteria_moved_or_waived": false,
+  "broader_package_acceptance": "Retained separately; this software integration does not complete all additional ecosystems or any public detector."
+}
