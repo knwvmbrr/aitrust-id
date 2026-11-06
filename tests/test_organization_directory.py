@@ -9,7 +9,7 @@ from tools import organization_directory as d
 def selected(tmp_path):
     root=tmp_path.resolve();root.chmod(0o700);tenant=str(uuid.uuid4());sub=str(uuid.uuid4());other=str(uuid.uuid4())
     binding={'service':'reader','service_file':str(root/'database.conf'),'pass_file':None,'principal':'audit_reader'}
-    cfg={'format':d.FORMAT,'tenant':tenant,'issuer':'https://identity.example.invalid/realms/test','realm':'test','client_id':'aitrust-broker','directory_client_uuid':str(uuid.uuid4()),'client_secret':'synthetic-not-a-live-credential','bindings':{sub:binding,other:dict(binding)},'state_file':str(root/'access.sqlite'),'event_days':7,'allow_loopback_http':False,'ca_file':None}
+    cfg={'format':d.FORMAT,'tenant':tenant,'issuer':'https://identity.example.invalid/realms/test','realm':'test','client_id':'aitrust-broker','role_groups':{op:str(uuid.uuid4()) for op in d.OPS},'client_secret':'synthetic-not-a-live-credential','bindings':{sub:binding,other:dict(binding)},'state_file':str(root/'access.sqlite'),'event_days':7,'allow_loopback_http':False,'ca_file':None}
     path=root/'config.json';path.write_bytes(d.encoded(cfg));path.chmod(0o600)
     return cfg,path,sub,other,root
 

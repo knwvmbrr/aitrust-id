@@ -34,8 +34,10 @@ def secret(value):
     check(type(value) is str and 1<=len(value)<=16384 and all(33<=ord(c)<=126 for c in value));return value
 
 def config(path):
-    d=parse(private_file(path));check(type(d) is dict and set(d)=={'format','tenant','issuer','realm','client_id','directory_client_uuid','client_secret','bindings','state_file','event_days','allow_loopback_http','ca_file'})
-    check(d['format']==FORMAT);identifier(d['tenant']);identifier(d['directory_client_uuid'])
+    d=parse(private_file(path));check(type(d) is dict and set(d)=={'format','tenant','issuer','realm','client_id','role_groups','client_secret','bindings','state_file','event_days','allow_loopback_http','ca_file'})
+    check(d['format']==FORMAT);identifier(d['tenant'])
+    check(type(d['role_groups']) is dict and set(d['role_groups'])==OPS and len(set(d['role_groups'].values()))==4)
+    for identity in d['role_groups'].values():identifier(identity)
     check(type(d['event_days']) is int and 1<=d['event_days']<=30 and type(d['allow_loopback_http']) is bool)
     check(type(d['realm']) is str and re.fullmatch('[a-zA-Z0-9_-]{1,64}',d['realm']))
     check(type(d['client_id']) is str and re.fullmatch('[a-zA-Z0-9_-]{1,64}',d['client_id']));secret(d['client_secret'])
@@ -94,21 +96,26 @@ class Provider:
     def current(self,token):
         self.last_step='introspection'
         d=self.discovery();r=self.post(d,'introspection_endpoint',{'token':secret(token)})
-        self.last_step='token_contract'
+        self.last_step='token_issuer_and_client'
         check(type(r) is dict and r.get('active') is True and r.get('iss')==self.c['issuer'] and r.get('client_id')==self.c['client_id'])
+        self.last_step='token_audience'
         aud=r.get('aud');check(aud==self.c['client_id'] or type(aud) is list and self.c['client_id'] in aud)
+        self.last_step='token_timing'
         check(type(r.get('exp')) is int and type(r.get('iat')) is int and r['iat']<=time.time()+5 and r['exp']>time.time() and time.time()-r['iat']<=900)
+        self.last_step='subject_binding'
         sub=identifier(r.get('sub'));check(sub in self.c['bindings'])
         self.last_step='directory_service'
         service=self.post(d,'token_endpoint',{'grant_type':'client_credentials','scope':'kc-admin-api'});service_token=secret(service['access_token'])
         base=self.base+'/admin/realms/'+self.c['realm']+'/users/'+sub
         self.last_step='directory_user'
         user=self.request(base,bearer=service_token,admin=True);check(user.get('id')==sub and user.get('enabled') is True)
-        self.last_step='directory_roles'
-        roles=self.request(base+'/role-mappings/clients/'+self.c['directory_client_uuid']+'/composite',bearer=service_token,admin=True)
-        check(type(roles) is list and len(roles)<=256 and all(type(x) is dict and type(x.get('name')) is str for x in roles))
+        self.last_step='directory_groups'
+        groups=self.request(base+'/groups',bearer=service_token,admin=True)
+        check(type(groups) is list and len(groups)<=256 and all(type(x) is dict and type(x.get('id')) is str for x in groups))
+        membership={x['id'] for x in groups}
+        roles={ROLES[op] for op,group in self.c['role_groups'].items() if group in membership}
         self.last_step='authorized_identity'
-        return sub,r['iat'],{x['name'] for x in roles}
+        return sub,r['iat'],roles
     def begin(self):
         d=self.discovery();r=self.post(d,'device_authorization_endpoint',{'scope':'openid'})
         for k in ('device_code','user_code'):secret(r.get(k))

@@ -42,18 +42,20 @@ def verify(keycloak,namespace):
         public=run(['openssl','x509','-in',cert,'-pubkey','-noout']);der=run(['openssl','pkey','-pubin','-outform','DER'],raw=public)
         import base64
         spki=base64.b64encode(hashlib.sha256(der).digest()).decode()
+        role_groups={op:str(uuid.uuid4()) for op in d.OPS}
         tenant=str(uuid.uuid4());foreign_tenant=str(uuid.uuid4());client_uuid=str(uuid.uuid4());client_secret=secrets.token_urlsafe(32);controller_secret=secrets.token_urlsafe(32)
         people={name:{'id':str(uuid.uuid4()),'password':secrets.token_urlsafe(24)} for name in ['view','export','review','admin','backup','other']}
         roles={name:[d.ROLES[name]] for name in ['view','export','review']};roles.update(admin=[d.ROLES['configure']],backup=[d.ROLES['configure'],d.ROLES['view']],other=[d.ROLES['view']])
         def realm(name):
             identities=people if name=='directory_lab' else {n:{**v,'id':str(uuid.uuid4())} for n,v in people.items()}
             selected_client_uuid=client_uuid if name=='directory_lab' else str(uuid.uuid4())
-            return {'realm':name,'enabled':True,'sslRequired':'all','loginTheme':'keycloak','accessTokenLifespan':300,'oauth2DeviceCodeLifespan':300,'oauth2DevicePollingInterval':5,'roles':{'client':{'aitrust-broker':[{'name':r} for r in d.ROLES.values()]}},'clients':[
-             {'id':selected_client_uuid,'clientId':'aitrust-broker','secret':client_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'defaultClientScopes':['roles','profile','email'],'optionalClientScopes':['kc-admin-api'],'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False,'attributes':{'oauth2.device.authorization.grant.enabled':'true'},'protocolMappers':[{'name':'broker-audience','protocol':'openid-connect','protocolMapper':'oidc-audience-mapper','config':{'included.client.audience':'aitrust-broker','access.token.claim':'true','id.token.claim':'false'}}]},
-             {'clientId':'lab-controller','secret':controller_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'defaultClientScopes':['roles','profile','email'],'optionalClientScopes':['kc-admin-api'],'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False}],
-             'users':[{'id':v['id'],'username':'lab_'+n,'firstName':'Synthetic','lastName':'Test','email':'lab_'+n+'@example.invalid','enabled':True,'emailVerified':True,'credentials':[{'type':'password','value':v['password'],'temporary':False}],'clientRoles':{'aitrust-broker':roles[n]}} for n,v in identities.items()]+[
+            selected_groups=role_groups if name=='directory_lab' else {op:str(uuid.uuid4()) for op in d.OPS}
+            return {'realm':name,'enabled':True,'sslRequired':'all','loginTheme':'keycloak','accessTokenLifespan':300,'oauth2DeviceCodeLifespan':300,'oauth2DevicePollingInterval':5,'groups':[{'id':selected_groups[op],'name':d.ROLES[op]} for op in d.OPS],'clients':[
+             {'id':selected_client_uuid,'clientId':'aitrust-broker','secret':client_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'defaultClientScopes':['basic','roles','profile','email'],'optionalClientScopes':['kc-admin-api'],'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False,'attributes':{'oauth2.device.authorization.grant.enabled':'true'},'protocolMappers':[{'name':'broker-audience','protocol':'openid-connect','protocolMapper':'oidc-audience-mapper','config':{'included.client.audience':'aitrust-broker','access.token.claim':'true','id.token.claim':'false'}}]},
+             {'clientId':'lab-controller','secret':controller_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'defaultClientScopes':['basic','roles','profile','email'],'optionalClientScopes':['kc-admin-api'],'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False}],
+             'users':[{'id':v['id'],'username':'lab_'+n,'firstName':'Synthetic','lastName':'Test','email':'lab_'+n+'@example.invalid','enabled':True,'emailVerified':True,'credentials':[{'type':'password','value':v['password'],'temporary':False}],'groups':['/'+r for r in roles[n]]} for n,v in identities.items()]+[
               {'username':'service-account-aitrust-broker','enabled':True,'serviceAccountClientId':'aitrust-broker','clientRoles':{'realm-management':['view-users']}},
-              {'username':'service-account-lab-controller','enabled':True,'serviceAccountClientId':'lab-controller','clientRoles':{'realm-management':['manage-users','view-users','manage-clients','view-clients']}}]}
+              {'username':'service-account-lab-controller','enabled':True,'serviceAccountClientId':'lab-controller','clientRoles':{'realm-management':['manage-users','view-users']}}]}
         imported=keycloak/'data/import';imported.mkdir(parents=True,exist_ok=True);write(imported/'directory_lab-realm.json',realm('directory_lab'))
         # A separate realm proves that a valid foreign issuer's token is refused.
         write(imported/'directory_other-realm.json',realm('directory_other'))
@@ -75,7 +77,7 @@ def verify(keycloak,namespace):
         for n,v in people.items():
             enroll(admin,foreign_tenant if n=='other' else tenant,'directory_'+n,['read','review'] if n=='review' else ['read'])
             store(n,'directory_'+n);bindings[v['id']]={'service':n,'service_file':str(servicefile),'pass_file':None,'principal':'directory_'+n}
-        cfg={'format':d.FORMAT,'tenant':tenant,'issuer':'https://127.0.0.1:18443/realms/directory_lab','realm':'directory_lab','client_id':'aitrust-broker','directory_client_uuid':client_uuid,'client_secret':client_secret,'bindings':bindings,'state_file':str(work/'access.sqlite'),'event_days':7,'allow_loopback_http':False,'ca_file':str(cert)}
+        cfg={'format':d.FORMAT,'tenant':tenant,'issuer':'https://127.0.0.1:18443/realms/directory_lab','realm':'directory_lab','client_id':'aitrust-broker','role_groups':role_groups,'client_secret':client_secret,'bindings':bindings,'state_file':str(work/'access.sqlite'),'event_days':7,'allow_loopback_http':False,'ca_file':str(cert)}
         cfg_path=write(work/'broker.json',cfg);provider=d.Provider(d.config(cfg_path));broker=d.Broker(d.config(cfg_path));cli('initialize')
         stage='wait_for_actual_provider_https'
         deadline=time.monotonic()+100
@@ -125,10 +127,10 @@ def verify(keycloak,namespace):
             url=provider.base+'/admin/realms/directory_lab/'+path;provider.url(url,admin=True)
             raw=encoded(value);r=provider.opener.open(Request(url,data=raw,headers={'Authorization':'Bearer '+controller,'Content-Type':'application/json'},method=method),timeout=5)
             d.check(r.status in (200,204));r.close()
-        rolebase='users/'+people['view']['id']+'/role-mappings/clients/'+client_uuid
-        role_rows=provider.request(provider.base+'/admin/realms/directory_lab/'+rolebase,bearer=controller,admin=True)
-        change(rolebase,'DELETE',[x for x in role_rows if x['name']==d.ROLES['view']]);refused(lambda:broker.dispatch(req(view)),'current_directory_role_removal_denies_old_token')
-        change(rolebase,'POST',[x for x in role_rows if x['name']==d.ROLES['view']]);d.check(broker.dispatch(req(view))['records']);case('restored_directory_role_works')
+        membership_path='users/'+people['view']['id']+'/groups/'+role_groups['view']
+        change(membership_path,'DELETE',{})
+        refused(lambda:broker.dispatch(req(view)),'current_directory_role_removal_denies_old_token')
+        change(membership_path,'PUT',{});d.check(broker.dispatch(req(view))['records']);case('restored_directory_role_works')
         change('users/'+people['view']['id'],'PUT',{'enabled':False});refused(lambda:broker.dispatch(req(view)),'disabled_directory_user_denied')
         change('users/'+people['view']['id'],'PUT',{'enabled':True})
         stage='local_revoke_restore_and_compromised_admin_recovery'

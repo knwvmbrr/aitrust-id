@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-230755-directory-least-privilege-memberships-61124a28
+
+Recorded 2026-11-06T23:07:55.220276+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the four permissions to immutable direct-group memberships, preserving a view-users-only provider identity, and retain the standard basic token scope.
+- **Evidence.** Current Keycloak GroupPermissions source grants group reads with view-users. Thirty-eight local boundary cases pass. The operator guide and actual lab now use direct group grants and revocations without client-secret viewing authority. [Change record](./runs/changes/2026-11-06-230755-directory-least-privilege-memberships-61124a28.json).
+- **Not claimed.** The previous actual provider run failed its token contract. No full directory acceptance is claimed until the revised real run passes; nested-group permissions are outside this profile.
+
+
 ### 2026-11-06-230209-directory-admin-api-audience-48b0d1d3
 
 Recorded 2026-11-06T23:02:09.737376+00:00 · Contributor: Codex · change

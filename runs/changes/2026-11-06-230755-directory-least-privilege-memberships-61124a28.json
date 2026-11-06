@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-230755-directory-least-privilege-memberships-61124a28",
+  "recorded_at": "2026-11-06T23:07:55.220276+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "00554306a287f0fc1bf5fd6a1e6b40b3f59bbdb4",
+  "changed": "Bind the four permissions to immutable direct-group memberships, preserving a view-users-only provider identity, and retain the standard basic token scope.",
+  "proves": "Current Keycloak GroupPermissions source grants group reads with view-users. Thirty-eight local boundary cases pass. The operator guide and actual lab now use direct group grants and revocations without client-secret viewing authority.",
+  "limits": "The previous actual provider run failed its token contract. No full directory acceptance is claimed until the revised real run passes; nested-group permissions are outside this profile.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "69f0165cc4c1ca8c10180b8c73bb4af50f86f61e72c224fd3598517440530909",
+    "tools/organization_directory_lab.py": "816e929d18ad73ca5c10ebe370fa2034f78c27bc3d549722048eb8fe954342fc",
+    "tests/test_organization_directory.py": "f36d42d7f53384c07cd391c20b1c09710e80928e5d062b53ac3716814a491519",
+    "docs/organization-directory.md": "2e654d56e1a93833c57af6993030bc4421b1904b017cd15ddfdb375c53cb0e82",
+    "docs/organization-directory-plan.md": "d5751c2d05e8ae36184253ded42243bdc2edf54ae1fa7bf7aaff800990ec9d02"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T23:07:55.711854+00:00"
+    }
+  ]
+}

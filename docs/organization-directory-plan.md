@@ -17,8 +17,8 @@ proxies and cross-origin endpoints. Require verified HTTPS, with an explicit
 on unavailable identity or directory checks; no fallback to unchecked JWT claims.
 
 Every private operation freshly introspects the token and queries current enabled
-user and client-role membership through a read-only provider service identity.
-Bind subject, tenant, issuer, audience, client, expiry and issue time. Do not use
+user and direct directory-group membership through a read-only provider service identity.
+Bind subject, tenant, issuer, audience, client, expiry and issue time. Bind the four permission groups by immutable UUID, without inherited or name-based grants. Do not use
 roles copied into an older token after a directory role has been removed. Map only
 explicit local subject bindings to existing least-privilege database profiles.
 The database's tenant and capability checks remain effective behind the broker.

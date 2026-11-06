@@ -4,7 +4,7 @@ This optional tool controls who may view, export or leave feedback on your team'
 retained tag records. Signing in never makes a finding more accurate. Personal
 checking stays free and account-free, including when the directory is unavailable.
 
-**Current status:** implemented locally; actual provider acceptance is in progress.
+Execution status and remaining acceptance are recorded in the [completion ledger](scope-progress.md).
 No identity provider is connected to the public website and no managed SSO service
 is offered. The supported operator profile uses self-hosted Keycloak 26.8.2,
 OpenID Connect device authorization, Python 3.12+ and the existing PostgreSQL 18
@@ -18,17 +18,19 @@ configuration to a member's device. The callable broker and command line add no
 web listener. Connect an existing controlled operator transport separately before
 remote use; this is not a public login endpoint or a deployment service.
 
+The broker binds group UUIDs, not editable names. Inherited or nested-group permissions are not supported by this profile.
+
 The provider needs a confidential `aitrust-broker` client, device authorization
-and service accounts enabled, the standard `roles` client scope enabled, direct password grants disabled, and an audience
+and service accounts enabled, the standard `basic` and `roles` client scopes enabled, direct password grants disabled, and an audience
 mapper including that client in access tokens. Its service identity needs the
 realm's **view-users** role to inspect current enabled users and effective client
 roles. It does not need user/client write permissions. Assign the built-in `kc-admin-api` optional client scope; the broker requests it only for its service identity. Keycloak 26.8 checks the Admin API audience and scope. See the [provider administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html). Use HTTPS with a trusted
 certificate. A private CA is an explicit operator choice; verification is never
 disabled. The HTTP development option accepts only literal `127.0.0.1`.
 
-Create four client roles and assign them to the people who need each job:
+Create four direct-membership directory groups and assign the people who need each job:
 
-| Client role | Job |
+| Directory group | Job |
 | --- | --- |
 | `aitrust-view` | View private retained records |
 | `aitrust-export` | Export your team's retained metadata and history |
@@ -50,7 +52,7 @@ one existing database profile; directory display names and email are not keys.
 
 Create a mode-0700 directory **outside every Git checkout**. Save the configuration
 below as a mode-0600 `broker.json`; replace each placeholder privately. Obtain the
-client UUID and immutable user subject UUID from your own provider. Never paste a
+four immutable group UUIDs and user subject UUID from your own provider. Never paste a
 real client secret or a session token into chat, a Git issue or the source tree.
 
 ```json
@@ -60,7 +62,12 @@ real client secret or a session token into chat, a Git issue or the source tree.
   "issuer": "https://YOUR_PROVIDER/realms/YOUR_REALM",
   "realm": "YOUR_REALM",
   "client_id": "aitrust-broker",
-  "directory_client_uuid": "YOUR_PROVIDER_CLIENT_UUID",
+  "role_groups": {
+    "view": "YOUR_VIEW_GROUP_UUID",
+    "export": "YOUR_EXPORT_GROUP_UUID",
+    "review": "YOUR_REVIEW_GROUP_UUID",
+    "configure": "YOUR_CONFIGURE_GROUP_UUID"
+  },
   "client_secret": "YOUR_PRIVATE_CLIENT_SECRET",
   "bindings": {
     "YOUR_USER_SUBJECT_UUID": {
@@ -119,9 +126,9 @@ An existing operator transport must protect the request and its destination.
 pre-enrolled subject UUID and `revoke` / `restore`. Output is saved as a private
 `result.json`; it is not sent to this company or a research database.
 
-Each action checks the live token, enabled user, current directory roles, local
+Each action checks the live token, enabled user, current direct group membership, local
 revocation and recovery fence, then the actual database principal and tenant.
-Removing a provider role applies to the next action even if the older token still
+Removing a permission-group membership applies to the next action even if the older token still
 contains that role. Database and provider administrators remain trusted; this is
 not protection against an administrator reading their own database directly.
 
