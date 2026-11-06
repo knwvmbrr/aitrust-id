@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-222446-directory-standard-role-scope-c4b90eb8
+
+Recorded 2026-11-06T22:24:46.908461+00:00 · Contributor: Codex · change
+
+- **Changed.** Include the provider standard roles client scope so the read-only service identity carries its explicitly assigned directory permissions.
+- **Evidence.** The actual sign-in failure reached the directory-user API and returned HTTP 401. The revised profile retains view-users only and adds no user/client write authority. [Change record](./runs/changes/2026-11-06-222446-directory-standard-role-scope-c4b90eb8.json).
+- **Not claimed.** This is a configuration correction pending actual integration execution, not a successful SSO or full requirement closure.
+
+
 ### 2026-11-06-221757-directory-safe-failure-stage-85c52597
 
 Recorded 2026-11-06T22:17:57.863874+00:00 · Contributor: Codex · change

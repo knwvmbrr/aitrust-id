@@ -19,7 +19,7 @@ web listener. Connect an existing controlled operator transport separately befor
 remote use; this is not a public login endpoint or a deployment service.
 
 The provider needs a confidential `aitrust-broker` client, device authorization
-and service accounts enabled, direct password grants disabled, and an audience
+and service accounts enabled, the standard `roles` client scope enabled, direct password grants disabled, and an audience
 mapper including that client in access tokens. Its service identity needs the
 realm's **view-users** role to inspect current enabled users and effective client
 roles. It does not need user/client write permissions. Use HTTPS with a trusted
