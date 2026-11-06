@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-221131-directory-lab-runtime-boundary-5c34f912
+
+Recorded 2026-11-06T22:11:31.735734+00:00 · Contributor: Codex · change
+
+- **Changed.** Pin the lab Java and Node executables across sudo privilege dropping, restore the non-root browser home, and retain sanitized disposable-provider startup diagnostics.
+- **Evidence.** The failed actual Linux run was recorded at provider startup with no passing controls; the next run will use the selected Java 21 and Node 24 instead of sudo runtime discovery. [Change record](./runs/changes/2026-11-06-221131-directory-lab-runtime-boundary-5c34f912.json).
+- **Not claimed.** Actual provider acceptance remains failed and F-162 remains open. Diagnostic output is restricted to invented lab identities and redacts long credential-like strings.
+
+
 ### 2026-11-06-220728-directory-realm-and-session-preflight-368d0399
 
 Recorded 2026-11-06T22:07:28.936537+00:00 · Contributor: Codex · change

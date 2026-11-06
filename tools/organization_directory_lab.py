@@ -15,7 +15,7 @@ def verify(keycloak,namespace):
     require_namespace(namespace);before=hashes();os.umask(0o077)
     work=Path(tempfile.mkdtemp(prefix='aitrust-directory-',dir='/tmp')).resolve();work.chmod(0o700)
     controls=[];stage='initialize';provider=None;pg_started=False;process=None;passed=False;failure=None
-    pg=Path('/usr/lib/postgresql/18/bin');keycloak=Path(keycloak).resolve();env={'PATH':os.environ['PATH'],'HOME':os.environ['HOME'],'LANG':'C.UTF-8','TZ':'UTC'}
+    pg=Path('/usr/lib/postgresql/18/bin');keycloak=Path(keycloak).resolve();env={'PATH':os.environ['PATH'],'HOME':os.environ['HOME'],'LANG':'C.UTF-8','TZ':'UTC','JAVA_HOME':os.environ['JAVA_HOME']}
     def run(args,*,raw=None,limit=60):
         r=subprocess.run(list(map(str,args)),input=raw,capture_output=True,env=env,timeout=limit)
         if r.returncode:raise RuntimeError('Disposable integration subprocess failed')
@@ -142,7 +142,15 @@ def verify(keycloak,namespace):
         for session in sessions.values():d.check(session['access_token'].encode() not in raw and session['refresh_token'].encode() not in raw)
         d.check(client_secret.encode() not in raw and b'never-executed' not in raw);case('journal_contains_no_tokens_credentials_or_response_text')
         passed=True
-    except Exception as error:failure={'stage':stage,'exception_class':type(error).__name__,'provider_http_status':getattr(provider,'last_status',None)}
+    except Exception as error:
+        failure={'stage':stage,'exception_class':type(error).__name__,'provider_http_status':getattr(provider,'last_status',None)}
+        if logfile:
+            logfile.flush()
+            diagnostic=(work/'provider.log').read_text(errors='replace')[-6000:]
+            import re
+            diagnostic=re.sub(r'[A-Za-z0-9_+/=-]{16,}','[redacted]',diagnostic)
+            failure['disposable_provider_diagnostic']=diagnostic
+
     finally:
         if process is not None:
             process.terminate()

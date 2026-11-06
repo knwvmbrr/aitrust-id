@@ -58,7 +58,7 @@ jobs:
           mkdir -m 700 "$RUNNER_TEMP/aitrust-directory-provider"
           tar -xzf "$RUNNER_TEMP/aitrust-keycloak.tar.gz" --strip-components=1 -C "$RUNNER_TEMP/aitrust-directory-provider"
       - name: Exercise actual provider and audit access in a fresh network namespace
-        run: sudo unshare --net -- "$(command -v python)" scripts/verify-organization-directory.py --run-as "$(id -un)" --keycloak "$RUNNER_TEMP/aitrust-directory-provider" --output output/verification/organization-directory-linux.json
+        run: sudo unshare --net -- "$(command -v python)" scripts/verify-organization-directory.py --run-as "$(id -un)" --keycloak "$RUNNER_TEMP/aitrust-directory-provider" --java "$(command -v java)" --node "$(command -v node)" --output output/verification/organization-directory-linux.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
