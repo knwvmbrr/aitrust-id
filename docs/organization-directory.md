@@ -22,7 +22,7 @@ The provider needs a confidential `aitrust-broker` client, device authorization
 and service accounts enabled, the standard `roles` client scope enabled, direct password grants disabled, and an audience
 mapper including that client in access tokens. Its service identity needs the
 realm's **view-users** role to inspect current enabled users and effective client
-roles. It does not need user/client write permissions. Use HTTPS with a trusted
+roles. It does not need user/client write permissions. Assign the built-in `kc-admin-api` optional client scope; the broker requests it only for its service identity. Keycloak 26.8 checks the Admin API audience and scope. See the [provider administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html). Use HTTPS with a trusted
 certificate. A private CA is an explicit operator choice; verification is never
 disabled. The HTTP development option accepts only literal `127.0.0.1`.
 

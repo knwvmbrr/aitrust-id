@@ -100,7 +100,7 @@ class Provider:
         check(type(r.get('exp')) is int and type(r.get('iat')) is int and r['iat']<=time.time()+5 and r['exp']>time.time() and time.time()-r['iat']<=900)
         sub=identifier(r.get('sub'));check(sub in self.c['bindings'])
         self.last_step='directory_service'
-        service=self.post(d,'token_endpoint',{'grant_type':'client_credentials'});service_token=secret(service['access_token'])
+        service=self.post(d,'token_endpoint',{'grant_type':'client_credentials','scope':'kc-admin-api'});service_token=secret(service['access_token'])
         base=self.base+'/admin/realms/'+self.c['realm']+'/users/'+sub
         self.last_step='directory_user'
         user=self.request(base,bearer=service_token,admin=True);check(user.get('id')==sub and user.get('enabled') is True)

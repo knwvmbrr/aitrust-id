@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-230209-directory-admin-api-audience-48b0d1d3
+
+Recorded 2026-11-06T23:02:09.737376+00:00 · Contributor: Codex · change
+
+- **Changed.** Request the documented Keycloak 26.8 Admin API audience scope for the read-only service identity, without expanding its permissions.
+- **Evidence.** Current upstream AdminRoot code requires kc-admin-api and its audience; the provider guide and service-token request now follow that contract. Ordinary device-user tokens do not request the administrative scope. [Change record](./runs/changes/2026-11-06-230209-directory-admin-api-audience-48b0d1d3.json).
+- **Not claimed.** The previous HTTP 401 remains a failed integration. The corrected provider path must execute before any full closure.
+
+
 ### 2026-11-06-222446-directory-standard-role-scope-c4b90eb8
 
 Recorded 2026-11-06T22:24:46.908461+00:00 · Contributor: Codex · change
