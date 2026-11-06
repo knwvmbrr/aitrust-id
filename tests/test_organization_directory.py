@@ -103,7 +103,7 @@ def test_provider_outage_fails_closed_without_store_or_personal_import(selected)
 
 def test_local_logout_survives_provider_outage_and_process_restart(selected):
     b,p,s=prepared(selected,[d.ROLES['view']]);p.failed=True
-    session={'issuer':selected[0]['issuer'],'client_id':selected[0]['client_id'],'access_token':'invented-token'}
+    session={'format':'directory-session/v1','issuer':selected[0]['issuer'],'client_id':selected[0]['client_id'],'access_token':'invented-token','refresh_token':'invented-refresh'}
     r=b.logout(session);assert r=={'local_logout':True,'provider_revocation':'unavailable'}
     p.failed=False;b=d.Broker(d.config(selected[1]),provider=p,store_factory=s.factory)
     with pytest.raises(Exception):b.dispatch(request(selected))

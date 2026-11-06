@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-220728-directory-realm-and-session-preflight-368d0399",
+  "recorded_at": "2026-11-06T22:07:28.936537+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "054d5a1d83b99529e5a41da89f80dda6fb0fbf80",
+  "changed": "Separate disposable realm identities, provide complete synthetic user profiles, exercise a valid foreign-issuer token, and require the complete private logout-session contract.",
+  "proves": "Local boundary tests pass with the exact logout-session shape. The lab assigns unique database identifiers to each realm and tests the wrong-issuer route against an actually active foreign token.",
+  "limits": "The provider workflow has not yet passed; source inspection and local checks do not complete F-162.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "84280cfc3cbb664b49c668dd62b7fd477c22c1dc86c8c3b19e8847302caeade0",
+    "tools/organization_directory_lab.py": "70e2773888cdedceb1959eb53ac7edca032235fbf1546e49097ca013fe6ddea3",
+    "tests/test_organization_directory.py": "443b7cab2b9db281bd5717c905b012a54863e225150c6510c1fb32ae22803d3a"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T22:07:29.403330+00:00"
+    }
+  ]
+}

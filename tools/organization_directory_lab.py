@@ -40,10 +40,12 @@ def verify(keycloak,namespace):
         people={name:{'id':str(uuid.uuid4()),'password':secrets.token_urlsafe(24)} for name in ['view','export','review','admin','backup','other']}
         roles={name:[d.ROLES[name]] for name in ['view','export','review']};roles.update(admin=[d.ROLES['configure']],backup=[d.ROLES['configure'],d.ROLES['view']],other=[d.ROLES['view']])
         def realm(name):
+            identities=people if name=='directory_lab' else {n:{**v,'id':str(uuid.uuid4())} for n,v in people.items()}
+            selected_client_uuid=client_uuid if name=='directory_lab' else str(uuid.uuid4())
             return {'realm':name,'enabled':True,'sslRequired':'all','loginTheme':'keycloak','accessTokenLifespan':300,'oauth2DeviceCodeLifespan':300,'oauth2DevicePollingInterval':5,'roles':{'client':{'aitrust-broker':[{'name':r} for r in d.ROLES.values()]}},'clients':[
-             {'id':client_uuid,'clientId':'aitrust-broker','secret':client_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False,'attributes':{'oauth2.device.authorization.grant.enabled':'true'},'protocolMappers':[{'name':'broker-audience','protocol':'openid-connect','protocolMapper':'oidc-audience-mapper','config':{'included.client.audience':'aitrust-broker','access.token.claim':'true','id.token.claim':'false'}}]},
+             {'id':selected_client_uuid,'clientId':'aitrust-broker','secret':client_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False,'attributes':{'oauth2.device.authorization.grant.enabled':'true'},'protocolMappers':[{'name':'broker-audience','protocol':'openid-connect','protocolMapper':'oidc-audience-mapper','config':{'included.client.audience':'aitrust-broker','access.token.claim':'true','id.token.claim':'false'}}]},
              {'clientId':'lab-controller','secret':controller_secret,'enabled':True,'protocol':'openid-connect','publicClient':False,'serviceAccountsEnabled':True,'standardFlowEnabled':False,'directAccessGrantsEnabled':False}],
-             'users':[{'id':v['id'],'username':'lab_'+n,'enabled':True,'emailVerified':True,'credentials':[{'type':'password','value':v['password'],'temporary':False}],'clientRoles':{'aitrust-broker':roles[n]}} for n,v in people.items()]+[
+             'users':[{'id':v['id'],'username':'lab_'+n,'firstName':'Synthetic','lastName':'Test','email':'lab_'+n+'@example.invalid','enabled':True,'emailVerified':True,'credentials':[{'type':'password','value':v['password'],'temporary':False}],'clientRoles':{'aitrust-broker':roles[n]}} for n,v in identities.items()]+[
               {'username':'service-account-aitrust-broker','enabled':True,'serviceAccountClientId':'aitrust-broker','clientRoles':{'realm-management':['view-users']}},
               {'username':'service-account-lab-controller','enabled':True,'serviceAccountClientId':'lab-controller','clientRoles':{'realm-management':['manage-users','view-users','manage-clients','view-clients']}}]}
         imported=keycloak/'data/import';imported.mkdir(parents=True,exist_ok=True);write(imported/'directory-lab-realm.json',realm('directory_lab'))
@@ -78,6 +80,11 @@ def verify(keycloak,namespace):
                 if process.poll() is not None:raise RuntimeError('Disposable provider stopped')
                 time.sleep(1)
         case('actual_https_provider_with_explicit_test_ca')
+        foreign_config={**cfg,'issuer':cfg['issuer'].replace('directory_lab','directory_other'),'realm':'directory_other'}
+        foreign_provider=d.Provider(foreign_config);foreign_discovery=foreign_provider.discovery()
+        foreign_token=foreign_provider.post(foreign_discovery,'token_endpoint',{'grant_type':'client_credentials'})['access_token']
+        foreign_active=foreign_provider.post(foreign_discovery,'introspection_endpoint',{'token':foreign_token});d.check(foreign_active['active'] is True)
+        refused(lambda:broker.dispatch({'tenant':tenant,'operation':'view','token':foreign_token,'arguments':{}}),'valid_foreign_issuer_token_refused')
         untrusted=copy.deepcopy(cfg);untrusted['ca_file']=None;refused(lambda:d.Provider(untrusted).discovery(),'untrusted_tls_certificate_refused')
         def login(n,configuration=cfg):
             p=d.Provider(configuration);pending=p.begin();browser={'synthetic_only':True,'uri':pending['verification_uri'],'code':pending['user_code'],'username':'lab_'+n,'password':people[n]['password'],'spki':spki}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-220728-directory-realm-and-session-preflight-368d0399
+
+Recorded 2026-11-06T22:07:28.936537+00:00 · Contributor: Codex · change
+
+- **Changed.** Separate disposable realm identities, provide complete synthetic user profiles, exercise a valid foreign-issuer token, and require the complete private logout-session contract.
+- **Evidence.** Local boundary tests pass with the exact logout-session shape. The lab assigns unique database identifiers to each realm and tests the wrong-issuer route against an actually active foreign token. [Change record](./runs/changes/2026-11-06-220728-directory-realm-and-session-preflight-368d0399.json).
+- **Not claimed.** The provider workflow has not yet passed; source inspection and local checks do not complete F-162.
+
+
 ### 2026-11-06-220621-directory-ci-consumer-contract-24c348b5
 
 Recorded 2026-11-06T22:06:21.016205+00:00 · Contributor: Codex · change

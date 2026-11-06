@@ -195,7 +195,8 @@ class Broker:
             self.journal.event(local,sub,op,'allowed')
             return result
     def logout(self,session):
-        check(type(session) is dict and session.get('issuer')==self.c['issuer'] and session.get('client_id')==self.c['client_id'])
+        check(type(session) is dict and set(session)=={'format','issuer','client_id','access_token','refresh_token'} and session.get('format')=='directory-session/v1' and session.get('issuer')==self.c['issuer'] and session.get('client_id')==self.c['client_id'])
+        secret(session['refresh_token'])
         result=self.journal.logout(secret(session['access_token']))
         try:self.provider.revoke(session);result['provider_revocation']='completed'
         except Exception:result['provider_revocation']='unavailable'
