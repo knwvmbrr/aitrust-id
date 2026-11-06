@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-201018-agent-registered-source-checks-0a1c4862",
+  "recorded_at": "2026-11-06T20:10:18.967052+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+  "changed": "Retain strict OS/view closure requirements, register current agent integration source receipts, and document corrected verifier/setup failures before clean Linux evidence.",
+  "proves": "PS 7, redaction 6, extension 14, protocol 34 and website 23 check commands pass on current source. Source-bound route review passes. The full scope still has 75 open requirements.",
+  "limits": "No full F-158 closure before current Linux execution. No false tag adoption, independent accuracy, real human/phone acceptance, production activation or runtime sandbox claim.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "state.json": "4dfc449294a36fa1bef0a67149790e81aa60454ca5285bd7da7baafe33361d2d",
+    "eval/route-boundaries.json": "06d6c9133b3d661f57ae851d07b288e1959927f16b6d11bef354fa3a189ce12c",
+    "tests/test_agent_output_evidence.py": "362a8b484e63510b55a633f1b87e43f182b8b31bb607651c13b08c606490ec49",
+    "runs/2026-11-06-agent-integration-PS.json": "ce7875b280436cf3233f4d808aa18b0620aead8d3b3c1e30ea4ca12588148436",
+    "runs/2026-11-06-agent-integration-PII_REDACTED.json": "964f7b3940f8042e12bb980dece9d4862a467ef96b61e487e187cd9b9c743645",
+    "runs/2026-11-06-agent-integration-extension.json": "1665dd81cd81fcd1f52f668dc898ce286b9d6486cda726a05f4ad45338761c41",
+    "runs/2026-11-06-agent-integration-protocol.json": "a973bbf4fa91c225dc3c042b51b9ef35a9e01c2b9b56089e404dd9c61c44cedf",
+    "runs/2026-11-06-agent-integration-website.json": "eba7760ac3a20c71316c7c4d31f7964b8f4ced645395601fc7e8650fe0839fe5",
+    "runs/2026-11-06-agent-development-findings.json": "883088c99409f3c0024135b7b9cb4c2b3a48adc077333f30e207ba6a3010f654"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-integration-protocol.json",
+      "sha256": "a973bbf4fa91c225dc3c042b51b9ef35a9e01c2b9b56089e404dd9c61c44cedf"
+    },
+    {
+      "path": "runs/2026-11-06-agent-integration-website.json",
+      "sha256": "eba7760ac3a20c71316c7c4d31f7964b8f4ced645395601fc7e8650fe0839fe5"
+    },
+    {
+      "path": "runs/2026-11-06-agent-development-findings.json",
+      "sha256": "883088c99409f3c0024135b7b9cb4c2b3a48adc077333f30e207ba6a3010f654"
+    }
+  ],
+  "checks": []
+}

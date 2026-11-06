@@ -393,7 +393,17 @@
         "runs/2026-11-06-conformance-software-owner-decision.json",
         "scripts/ci-ubuntu-mirror.py",
         "tests/test_ci_ubuntu_mirror.py",
-        "docs/ci-browser-install-plan.md"
+        "docs/ci-browser-install-plan.md",
+        "tools/agent_output.py",
+        "scripts/agent-output.py",
+        "scripts/agent-signature.cjs",
+        "scripts/verify-agent-output.py",
+        "scripts/verify-agent-output-view.cjs",
+        "tests/test_agent_output.py",
+        "tests/test_agent_output_evidence.py",
+        "docs/agent-output-plan.md",
+        "docs/agent-output.md",
+        "runs/2026-11-06-agent-output-*.json"
       ],
       "commands": [
         [
@@ -616,6 +626,14 @@
           "-m",
           "pytest",
           "tests/test_ci_ubuntu_mirror.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_agent_output.py",
+          "tests/test_agent_output_evidence.py",
           "-q"
         ]
       ]
@@ -997,7 +1015,17 @@
         "runs/2026-11-06-conformance-software-owner-decision.json",
         "scripts/ci-ubuntu-mirror.py",
         "tests/test_ci_ubuntu_mirror.py",
-        "docs/ci-browser-install-plan.md"
+        "docs/ci-browser-install-plan.md",
+        "tools/agent_output.py",
+        "scripts/agent-output.py",
+        "scripts/agent-signature.cjs",
+        "scripts/verify-agent-output.py",
+        "scripts/verify-agent-output-view.cjs",
+        "tests/test_agent_output.py",
+        "tests/test_agent_output_evidence.py",
+        "docs/agent-output-plan.md",
+        "docs/agent-output.md",
+        "runs/2026-11-06-agent-output-*.json"
       ],
       "commands": [
         [
@@ -1134,6 +1162,10 @@
         [
           "{python}",
           "scripts/verify-conformance-delivery.py"
+        ],
+        [
+          "node",
+          "scripts/verify-agent-output-view.cjs"
         ]
       ]
     }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-06T13:21:20.339568+00:00",
+  "audited_at": "2026-11-06T19:52:15.937614+00:00",
   "client_date": "2026-11-06",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -6514,25 +6514,36 @@
       "id": "F-158",
       "kind": "requirement",
       "title": "Agent identity \u2014 labelling output from autonomous agents",
-      "percent_complete": 20,
+      "percent_complete": 60,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-06T19:52:15.937614+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 reviewed stdio agent adapter, signed source statements, private offline view and optional PS isolation"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver Agent identity \u2014 labelling output from autonomous agents. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow.",
+      "next_fix": "Complete current-source clean Linux execution and final integration/publication acceptance for the supported Python stdio agent profile. Mac execution and private browser controls pass; no BT/FA/PA, autonomous-origin or independent-accuracy verdict is inferred.",
       "next_owner": "Codex",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/agent-output-plan.md",
+        "docs/agent-output.md",
+        "tools/agent_output.py",
+        "scripts/agent-output.py",
+        "tests/test_agent_output.py",
+        "runs/2026-11-06-agent-output-macos.json",
+        "runs/2026-11-06-agent-output-view.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Actual macOS execution: 33 selected process, identity, privacy and failure cases. Actual private HTML browser checks pass at 320px/200% in light/dark, with no external requests and zero axe violations. Linux and final supported integration acceptance remain pending.",
       "required_acceptance": [
         "Deliver Agent identity \u2014 labelling output from autonomous agents. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
       ],

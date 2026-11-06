@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-06T14:46:46.766291+00:00",
-  "active_increment": "Owner-approved F-119 conformance software acceptance; 75 full requirements open, target 60",
+  "updated": "2026-11-06T20:10:17.361451+00:00",
+  "active_increment": "Agent-output F-158 software integration; 75 full requirements open, target 60; clean Linux evidence pending",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1085,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-06-conformance-archive-PS.json",
-    "PII_REDACTED": "runs/2026-11-06-conformance-archive-PII_REDACTED.json",
-    "protocol": "runs/2026-11-06-conformance-archive-protocol.json",
-    "extension": "runs/2026-11-06-conformance-archive-extension.json",
-    "website": "runs/2026-11-06-conformance-archive-website.json",
+    "PS": "runs/2026-11-06-agent-integration-PS.json",
+    "PII_REDACTED": "runs/2026-11-06-agent-integration-PII_REDACTED.json",
+    "protocol": "runs/2026-11-06-agent-integration-protocol.json",
+    "extension": "runs/2026-11-06-agent-integration-extension.json",
+    "website": "runs/2026-11-06-agent-integration-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-06T14:46:46.766291+00:00",
+  "updated_at": "2026-11-06T20:10:17.361451+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2688,8 +2688,8 @@
     "outside_person_acceptance": false,
     "release_approved": false,
     "acceptance_reallocation": "F-119_only_accepted_by_owner_2026-11-06; exact_prior_criterion_retained_under_F-142; F-108_accuracy_and_F-057_F-120_criteria_unchanged",
-    "current_protocol_receipt": "runs/2026-11-06-conformance-archive-protocol.json",
-    "current_website_receipt": "runs/2026-11-06-conformance-archive-website.json",
+    "current_protocol_receipt": "runs/2026-11-06-agent-integration-protocol.json",
+    "current_website_receipt": "runs/2026-11-06-agent-integration-website.json",
     "source_commit": "9e40a5a8c37d42ab999a5331a8a87f08883b5be1",
     "protected_merge": "runs/2026-10-15-conformance-protected-merge.json",
     "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/77",
@@ -2810,5 +2810,27 @@
     "dependency_versions_changed": false,
     "actual_speed_improvement_claimed": false,
     "release_approved": false
+  },
+  "agent_output_integration": {
+    "status": "macos_and_private_view_checked; linux_and_final_acceptance_pending",
+    "requirement": "F-158",
+    "profile": "reviewed single-file Python stdio agent",
+    "sources": "docs/agent-output-plan.md",
+    "guide": "docs/agent-output.md",
+    "macos_evidence": "runs/2026-11-06-agent-output-macos.json",
+    "browser_evidence": "runs/2026-11-06-agent-output-view.json",
+    "focused_cases": 33,
+    "checker_optional": true,
+    "automatic_upload": false,
+    "sandbox": false,
+    "ai_generation_proven": false,
+    "independent_accuracy_evidence": false,
+    "new_tag_release": false
+  },
+  "last_protected_publication": {
+    "evidence": "runs/2026-11-06-conformance-protected-publication.json",
+    "merge_commit": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+    "publicly_verified": true,
+    "required_checks_passed": 22
   }
 }

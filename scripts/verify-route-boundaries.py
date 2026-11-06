@@ -492,6 +492,8 @@ PATTERNS += ('tools/conformance_vectors.py', 'scripts/check-conformance-vectors.
 
 PATTERNS += ('scripts/ci-ubuntu-mirror.py', 'tests/test_ci_ubuntu_mirror.py', 'docs/ci-browser-install-plan.md')
 
+PATTERNS += ('tools/agent_output.py', 'scripts/agent-output.py', 'scripts/agent-signature.cjs', 'scripts/verify-agent-output.py', 'scripts/verify-agent-output-view.cjs', 'tests/test_agent_output.py', 'tests/test_agent_output_evidence.py', 'docs/agent-output-plan.md', 'docs/agent-output.md', 'runs/2026-11-06-agent-output-*.json')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

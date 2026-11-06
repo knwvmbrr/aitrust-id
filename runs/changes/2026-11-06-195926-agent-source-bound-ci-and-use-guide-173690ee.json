@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-195926-agent-source-bound-ci-and-use-guide-173690ee",
+  "recorded_at": "2026-11-06T19:59:26.443422+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+  "changed": "Wire actual clean Linux execution into required CI, bind the agent sources and failure checks to revalidation, and expose the runnable source-and-tag guide on the existing developer page.",
+  "proves": "The source-bound private view passes current 320px/200%, keyboard, CSP and axe controls. Twelve evidence guard tests retain the missing-Linux gate before full F-158 closure. The public guide has an actual browser request check.",
+  "limits": "Clean Linux execution and final source publication remain pending. No human, independent accuracy, new public tag, new API listener or enterprise activation is inferred.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "bec581b0c88bddc3acf66f401fdcd7ee37d3445eac37cd0ffe5341d80ab9420a",
+    "site/scripts/render-reference.mjs": "8a375a9f54f23bbb4419a6e58224875be7d9220e67a628dee570b8c70d5785fd",
+    "scripts/verify-workflows.cjs": "9e2308c8fde794cbb0037edf97a5359291f96b8a243cce8e4a7c48b8f5f7b36f",
+    "eval/revalidation.json": "2bce556344df619c89b23ebdccc0107adc1a98bedb0c01e7717b4013c2cc5fea",
+    "scripts/verify-route-boundaries.py": "8b27cdf6c979b710fb6eceb31db03ac6fe926e9e9e0f289858e475ce4b05e39a",
+    "scripts/verify-agent-output-view.cjs": "03ccf44210a9f6c404e2514cc594e609d3b7749824e90eae37a3921baf991c6c",
+    "tests/test_agent_output_evidence.py": "9d97262ab617d5f3912b754e474ae5631c64a14d09790e2e8c62ffe87667cf1b",
+    "runs/2026-11-06-agent-output-view-current.json": "43cd8c7eb891e7dd795fd6ab0b4e3ec990ff4c790960f40d54cee330e203918b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-output-view-current.json",
+      "sha256": "43cd8c7eb891e7dd795fd6ab0b4e3ec990ff4c790960f40d54cee330e203918b"
+    }
+  ],
+  "checks": []
+}

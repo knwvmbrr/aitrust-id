@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-195216-agent-output-current-progress-e607e726",
+  "recorded_at": "2026-11-06T19:52:16.064249+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+  "changed": "Record actual agent-adapter implementation and executable checks in scope without claiming Linux or full closure; retain all 202 records and 75 open requirements.",
+  "proves": "F-158 has its contract, implementation and Mac failure checks evidenced at 60%; Linux and final integration remain open. The prior conformance publication is linked to its actual protected merge.",
+  "limits": "No full requirement closed yet. No original acceptance was removed or reassigned; physical/human/accuracy and proposed tag decisions remain unchanged.",
+  "scope_ids": [
+    "F-158"
+  ],
+  "files": {
+    "docs/scope-progress.json": "0a9d764c2ca0bc01766437bd7a99a542d6bf1733a3c7858327001030c85d1f4b",
+    "docs/scope-progress.md": "d8e2423c0b6f4deafa6dabcee01434105e679c35ac05a1833b09db86f1c6a040",
+    "state.json": "21f824a9cb3ce3856e31212474ca212aae0c398626253ee22490841cd6ce9e12"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-agent-output-macos.json",
+      "sha256": "716534fea2e86705758bbfca287eee8ac1b55022fa83b3bc8edc6261b1384f97"
+    },
+    {
+      "path": "runs/2026-11-06-agent-output-view.json",
+      "sha256": "6d9e55b002872c6ccc7fd79d315e42334b19c62f84ebecc2e2e24725470c9333"
+    }
+  ],
+  "checks": []
+}
