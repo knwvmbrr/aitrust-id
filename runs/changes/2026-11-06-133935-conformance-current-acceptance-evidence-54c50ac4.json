@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-133935-conformance-current-acceptance-evidence-54c50ac4",
+  "recorded_at": "2026-11-06T13:39:35.212251+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a89482cd1b992ee76063d4a18800aa196ae6f38",
+  "changed": "Record all five current source-bound capabilities and 12 acceptance-guard cases for the owner-approved F-119 software closure; bind current state and route review to those executions.",
+  "proves": "Current engineering checks pass; the exact human criterion remains under F-142 and independent accuracy remains under F-108. Scope retains 202 IDs, 127 complete and 75 open.",
+  "limits": "No detector behavior, human acceptance, independent accuracy or certification is added; F-057/F-120 criteria remain unchanged.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "9f05f0f9f613dbb5a0779f8f7bacded0007fa78642683f74b82672a11388f28b",
+    "DECISIONS.md": "3ee8a70fb2d028328b7bcb9d07fb147c8d6f136b4ab80275219508d76a461db4",
+    "README.md": "70765bb21ebc71bd21574664f344a42012e08ee7ab0da566a74782628e7938b0",
+    "docs/conformance-acceptance-plan.md": "16dfba78d295d98a566e3486181c5e9584b59e44016b37f22e30944a2564f702",
+    "docs/conformance-evidence-result.md": "57d5173c3bfc110b3f7951c99d161453d54d39be715d4f606a24796ab7c2cd75",
+    "docs/conformance-runner-plan.md": "4945008afc89cb6ed100ec5421ae6353f4d9f9398437f9a605c20b9f769b7af9",
+    "docs/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+    "docs/scope-60-execution.md": "363fd6f58e29df67844f844a210c7fcd65199e1ab107080bb61bcaf9c05de1b5",
+    "docs/scope-progress.json": "26c30f7fc75e9519f1a960695cb058038c8440a863511e162b67dc4f2e81e652",
+    "docs/scope-progress.md": "b2cfc1390146cf8dcb08132e3ee526df782fc0780caeb369359c25c4011ee547",
+    "docs/scope-task-index.md": "0cdf385e41251b5aeb9b2c09188c5868740bde8ced290b36202b0f12f035be68",
+    "eval/revalidation.json": "34dd244c638fba1d0fbf863c904088df159a3ad086ea0805679d713ac1dd4665",
+    "eval/route-boundaries.json": "37d862941a287a68d2c84ed926d61a9122fd06918d3da1a4f9078219f62c36e3",
+    "runs/2026-11-06-conformance-boundary-guards.json": "dc3a004e055959b5d4af539d78e86b39aa98279460108a338bf3a6f6e2e0fbec",
+    "runs/2026-11-06-conformance-current-PII_REDACTED.json": "6968834e9218af7220e3c3be6cf4f2084fc53bccd5824dcb462a023e24978109",
+    "runs/2026-11-06-conformance-current-PS.json": "3f1ebc0ec909bd898c28e96e4cf53a440a74011710bb33af7eefcee3c202665f",
+    "runs/2026-11-06-conformance-current-extension.json": "b69c44448853b4b06e36947a158ca43e08cbe446e214b7c7fddb02ca5f53ff22",
+    "runs/2026-11-06-conformance-current-protocol.json": "040e8efa2fbb16eaca36150b3b0e3ee4b72b51155997c59b0228ff7245f4420e",
+    "runs/2026-11-06-conformance-current-website.json": "ea825ca8e78efa319ba9c796f996b5e55206e877d56fadf69e00b196590d79bc",
+    "runs/2026-11-06-conformance-delivery-guards.json": "46f370f89c9a5f0a7edae3d585971d30067d1cdd86551d913cb8d24a1fb17e3f",
+    "runs/2026-11-06-conformance-software-execution.json": "72fc2914c03cd925f44f0693bac77145d2ef29a5d13fa9c7ba67ffe8d1210d0a",
+    "runs/2026-11-06-conformance-software-owner-decision.json": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e",
+    "runs/2026-11-06-host-protected-publication.json": "820fedf99c8ccb28867ef44067be00ea6fb1d90e78b4f560bd24fc13cc9cbfff",
+    "scripts/verify-conformance-delivery.py": "d68ad81c81a00eddc22f46ea0cea24223736335b9846d4bf9c18c9ae02f98ef0",
+    "scripts/verify-route-boundaries.py": "b4de6823c8e39b337bba2bd3c3baf6e3cc292cf1e7e5cb7811a367367219e3a5",
+    "scripts/verify-workflows.cjs": "e49e6a617fd72edc74b5bd48a30a144b9d71696d6a660a91f971a0659e136f6a",
+    "site/public/reference/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+    "site/public/reference/decisions.md": "3ee8a70fb2d028328b7bcb9d07fb147c8d6f136b4ab80275219508d76a461db4",
+    "site/public/reference/public-scope.json": "f0c18cf3f84df2168baa7c8824747722d3b1d21753232cb4e77fdd2349ee556a",
+    "site/scripts/render-reference.mjs": "f58c2135f0dfc3aac583e3ba5db969d0f3ccf62de6dc03c58e12f427b3566fd6",
+    "site/src/public-scope.json": "f0c18cf3f84df2168baa7c8824747722d3b1d21753232cb4e77fdd2349ee556a",
+    "site/src/scope-manifest.json": "90b7f4464d31b28f1ceffe5d1dbf8d8c4226d190bde8a332a73834b12be58ba2",
+    "state.json": "68750f035a63b07e1fa2c0d867b86db7ec0e13f1e7aadaa43b885b617ed04dc4",
+    "tests/test_conformance_delivery.py": "819636aca3b715d7f15e613862615acca348021e7340bb49076c99a2cb7fdcd7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-current-protocol.json",
+      "sha256": "040e8efa2fbb16eaca36150b3b0e3ee4b72b51155997c59b0228ff7245f4420e"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-current-website.json",
+      "sha256": "ea825ca8e78efa319ba9c796f996b5e55206e877d56fadf69e00b196590d79bc"
+    },
+    {
+      "path": "runs/2026-11-06-conformance-boundary-guards.json",
+      "sha256": "dc3a004e055959b5d4af539d78e86b39aa98279460108a338bf3a6f6e2e0fbec"
+    }
+  ],
+  "checks": []
+}

@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-133935-conformance-current-acceptance-evidence-54c50ac4
+
+Recorded 2026-11-06T13:39:35.212251+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all five current source-bound capabilities and 12 acceptance-guard cases for the owner-approved F-119 software closure; bind current state and route review to those executions.
+- **Evidence.** Current engineering checks pass; the exact human criterion remains under F-142 and independent accuracy remains under F-108. Scope retains 202 IDs, 127 complete and 75 open. [Change record](./runs/changes/2026-11-06-133935-conformance-current-acceptance-evidence-54c50ac4.json).
+- **Not claimed.** No detector behavior, human acceptance, independent accuracy or certification is added; F-057/F-120 criteria remain unchanged.
+
+
+### 2026-11-06-133509-allow-conformance-software-reopening-e5e59c78
+
+Recorded 2026-11-06T13:35:09.227313+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep the acceptance regression focused on preserving the human criterion, without requiring F-119 to stay permanently at 100 percent if a future defect reopens it.
+- **Evidence.** The 12 acceptance/evidence guard cases pass; the exact outside-implementer criterion remains under open F-142. [Change record](./runs/changes/2026-11-06-133509-allow-conformance-software-reopening-e5e59c78.json).
+- **Not claimed.** No independent acceptance is added and no future defect is concealed by a fixed completion assertion.
+
+
+### 2026-11-06-133124-preserve-approved-conformance-human-criterion-93c79d97
+
+Recorded 2026-11-06T13:31:24.092357+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an executable scope regression requiring the exact former F-119 outside-implementer criterion to remain under open F-142 after the accepted software separation.
+- **Evidence.** The 12-case evidence/acceptance guard suite passes and the approved decision explicitly leaves F-057/F-120 reallocation unauthorized. [Change record](./runs/changes/2026-11-06-133124-preserve-approved-conformance-human-criterion-93c79d97.json).
+- **Not claimed.** No human or independent accuracy result is fabricated; actual acceptance keeps its own requirements.
+
+
+### 2026-11-06-132637-conformance-guard-execution-record-544b1fe2
+
+Recorded 2026-11-06T13:26:37.717595+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the executed 11-case conformance acceptance guard suite, including stale, incomplete, failed and overclaimed evidence refusal.
+- **Evidence.** Actual tests pass with zero skips; source hashes and captured output digests are retained. Outside-person and independent accuracy acceptance remain false. [Change record](./runs/changes/2026-11-06-132637-conformance-guard-execution-record-544b1fe2.json).
+- **Not claimed.** Evidence-filter tests are software checks, not human acceptance, complete protocol correctness or detector accuracy.
+
+
+### 2026-11-06-132303-accepted-conformance-software-boundary-940c820a
+
+Recorded 2026-11-06T13:23:03.142743+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the evidenced conformance software job under Michael’s explicit decision, preserve its original outside-implementer criterion under F-142, add a source-bound CI acceptance guard and publish a readable adapter guide and execution download.
+- **Evidence.** The actual CLI passes 28 interface checks; 12 focused runner tests and 11 evidence-refusal cases pass. All 202 IDs remain, 127 complete and 75 open. Prior HOST deployment evidence is retained. [Change record](./runs/changes/2026-11-06-132303-accepted-conformance-software-boundary-940c820a.json).
+- **Not claimed.** No actual outside implementer, independent accuracy, certification or new detector release is credited. F-057 and F-120 criteria are unchanged.
+
+
 ### 2026-11-06-045502-host-corrected-publication-boundaries-55efaf92
 
 Recorded 2026-11-06T04:55:02.607487+00:00 · Contributor: Codex · change

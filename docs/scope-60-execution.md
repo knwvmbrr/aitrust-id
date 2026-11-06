@@ -68,3 +68,11 @@ acceptance. No detector accuracy, phone support or hosted service is inferred.
 
 The ledger retains all 202 IDs: 126 complete / 76 open. Sixteen more full closures
 are needed for 60. The earlier unanswered acceptance question is still pending.
+
+## Conformance software acceptance — November 6
+
+Michael approved the F-119 software/human separation. The full bounded runner job
+has actual 28-case CLI execution and 12 focused interface/failure tests; a source
+binding guard and CI retain that boundary. The original outside-implementer run
+criterion remains under F-142, independent accuracy under F-108. F-057/F-120
+remain unchanged. The ledger is 127 complete / 75 open, 15 closures to reach 60.

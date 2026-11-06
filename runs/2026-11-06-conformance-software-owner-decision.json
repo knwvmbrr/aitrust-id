@@ -1,0 +1,73 @@
+{
+  "format": "ai-trust-id-owner-scope-decision/v1",
+  "recorded_at": "2026-11-06T13:21:20.339568+00:00",
+  "owner": "Michael",
+  "question": "F-119\u2019s conformance runner is built and currently passes its 28 interface checks, but the scope ledger also requires an outside implementer\u2019s run. May I separate these outcomes as we did for setup: finish the evidenced software job, while keeping actual outside-user acceptance open under F-142 and independent accuracy under F-108? The original criterion and decision history would be preserved.",
+  "answer": "Yes \u2014 separate software and human acceptance",
+  "source": "Explicit user reply in this chat on 2026-11-06; recording time is not an invented earlier approval time.",
+  "accepted_scope": [
+    "F-119 bounded conformance software job",
+    "Actual outside implementer acceptance retained under F-142",
+    "Independent accuracy retained under F-108"
+  ],
+  "not_authorized": [
+    "F-057 or F-120 acceptance reallocation",
+    "New taxonomy adoption",
+    "Certification or independent detector release"
+  ],
+  "original_F119": {
+    "id": "F-119",
+    "kind": "requirement",
+    "title": "Conformance test suite an outside implementer can run against their own build",
+    "percent_complete": 80,
+    "milestones_passed": [
+      "bounded_contract",
+      "implemented_mechanism",
+      "executable_checks",
+      "selected_integration"
+    ],
+    "audited_at": "2026-10-15T03:11:02.842307+00:00",
+    "checked_by": "Codex",
+    "implemented_by": [
+      "Codex \u2014 prior session/run attribution",
+      "Codex \u2014 bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00",
+      "Codex \u2014 actual versioned two-profile conformance runner, 28 selected reference checks and focused hostile-process checks; no outside-person acceptance, 2026-10-15T03:11:02.842307+00:00"
+    ],
+    "planning_contributors": [
+      "Codex \u2014 scope normalization and package contract"
+    ],
+    "completed_by": [],
+    "completed_at": null,
+    "completion_timestamp_basis": null,
+    "next_fix": "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people.",
+    "next_owner": "Codex",
+    "evidence": [
+      "runs/2026-10-09-scope-completion-checks.json",
+      "docs/open-validation-path.md",
+      "docs/extension-consumer-plan.md",
+      "docs/assertion-conformance-plan.md",
+      "scripts/check-assertion.py",
+      "tests/test_assertion_conformance.py",
+      "runs/2026-10-10-six-state-consumer-browser.json",
+      "runs/2026-10-10-consumer-schema-python-corrected.json",
+      "docs/conformance-runner-plan.md",
+      "docs/conformance-runner.md",
+      "tools/conformance_vectors.py",
+      "scripts/check-conformance-vectors.py",
+      "eval/conformance/assertion-v1.json",
+      "tests/test_conformance_vectors.py",
+      "runs/2026-10-15-conformance-reference-vectors.json",
+      "runs/2026-10-15-conformance-evidence-focused.json"
+    ],
+    "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Versioned synthetic interoperability runner and source-bound evidence index now execute. Actual outside-person acceptance and existing full release criteria remain unfulfilled; no completion percentage changed.",
+    "required_acceptance": [
+      "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
+    ],
+    "queue": "open"
+  },
+  "original_required_acceptance": [
+    "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
+  ],
+  "retained_under": "F-142",
+  "independent_accuracy_under": "F-108"
+}

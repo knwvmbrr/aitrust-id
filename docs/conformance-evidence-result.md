@@ -30,3 +30,15 @@ The owner guide also now describes the already approved metadata pilot contract
 rather than incorrectly calling retention/intake unselected. Collection is still
 disabled. Broader local regression suites were not rerun for this increment;
 focused checks and required protected-branch checks are the delivery evidence.
+
+## November 6 — owner-approved F-119 software closure
+
+The owner explicitly approved separating F-119 software acceptance from actual
+outside-user acceptance. Current CLI execution passed 28/28 interface checks and
+the 12 focused runner tests; the added evidence guard rejects stale, partial or
+overstated receipts. The original outside-implementer criterion remains under
+F-142, and independent accuracy under F-108. F-057 and F-120 stay open under
+their original criteria. No outside-person run or tag release is asserted.
+
+All 202 IDs remain: 127 complete / 75 open, with 15 more closures needed for 60.
+The execution and exact owner decision are in the November 6 run records.

@@ -78,6 +78,10 @@ check another build. [Adapter instructions](docs/conformance-runner.md).
 Run `python3 scripts/build-evidence-packet.py --require-current` to identify
 current, stale or missing execution receipts. [Evidence instructions](docs/evidence-packet.md).
 These tools do not grant independent accuracy, certification or tag release.
+F-119’s bounded software acceptance is complete under the November 6 owner
+decision: 28 interface checks and 12 focused runner tests. Actual outside-user
+acceptance stays under F-142, independent accuracy under F-108. Check the current
+source-bound receipt with `python3 scripts/verify-conformance-delivery.py`.
 
 ## Attach your own references
 
@@ -390,7 +394,7 @@ research candidates, missing evidence and conflicts. A valid credential alone
 does not imply AI participation. This is synthetic input processing, not a live
 tag or media verifier. See [the boundary contract](docs/adjudication-spec.md#experimental-provenance-to-tag-bridge--020-research).
 
-## Current engineering increment — 2026-10-10
+## Recorded engineering increment — 2026-10-10
 
 The current context-v6 pipeline passed 32 synthetic HTTP checks on the dedicated
 Linux staging host, with source hashes, loopback binding, real redacted subject

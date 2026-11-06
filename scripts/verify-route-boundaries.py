@@ -488,6 +488,8 @@ PATTERNS += ('runs/2026-11-06-host-capture-reviewed-macos.json', 'runs/2026-11-0
 
 PATTERNS += ('runs/2026-11-06-host-capture-final-macos.json', 'runs/2026-11-06-host-capture-final-linux.json')
 
+PATTERNS += ('tools/conformance_vectors.py', 'scripts/check-conformance-vectors.py', 'scripts/verify-conformance-delivery.py', 'tests/test_conformance_vectors.py', 'tests/test_conformance_delivery.py', 'eval/conformance/assertion-v1.json', 'docs/conformance-runner.md', 'docs/conformance-acceptance-plan.md', 'runs/2026-11-06-conformance-software-execution.json', 'runs/2026-11-06-conformance-software-owner-decision.json')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

@@ -77,6 +77,10 @@ jobs:
       - run: python scripts/verify-vocabulary.py
       - uses: actions/setup-node@v4
         with: { node-version: '24' }
+      - name: Keep approved conformance software separate from outside-human acceptance
+        run: |
+          python scripts/verify-conformance-delivery.py
+          python -m pytest tests/test_conformance_vectors.py tests/test_conformance_delivery.py -q
       - name: Validate source-bound service timing and refuse altered measurements
         run: node --test tests/pipeline-timing.cjs
       - run: make verify-primitives

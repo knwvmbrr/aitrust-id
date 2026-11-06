@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-133124-preserve-approved-conformance-human-criterion-93c79d97",
+  "recorded_at": "2026-11-06T13:31:24.092357+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a89482cd1b992ee76063d4a18800aa196ae6f38",
+  "changed": "Add an executable scope regression requiring the exact former F-119 outside-implementer criterion to remain under open F-142 after the accepted software separation.",
+  "proves": "The 12-case evidence/acceptance guard suite passes and the approved decision explicitly leaves F-057/F-120 reallocation unauthorized.",
+  "limits": "No human or independent accuracy result is fabricated; actual acceptance keeps its own requirements.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    "tests/test_conformance_delivery.py": "4d031964dac5cd4395df7e655e6a506166d4f84160ea153021a8c104a53e34d9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-software-owner-decision.json",
+      "sha256": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-conformance-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T13:31:24.196571+00:00"
+    }
+  ]
+}

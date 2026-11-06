@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-132637-conformance-guard-execution-record-544b1fe2",
+  "recorded_at": "2026-11-06T13:26:37.717595+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a89482cd1b992ee76063d4a18800aa196ae6f38",
+  "changed": "Record the executed 11-case conformance acceptance guard suite, including stale, incomplete, failed and overclaimed evidence refusal.",
+  "proves": "Actual tests pass with zero skips; source hashes and captured output digests are retained. Outside-person and independent accuracy acceptance remain false.",
+  "limits": "Evidence-filter tests are software checks, not human acceptance, complete protocol correctness or detector accuracy.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    "runs/2026-11-06-conformance-delivery-guards.json": "46f370f89c9a5f0a7edae3d585971d30067d1cdd86551d913cb8d24a1fb17e3f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-delivery-guards.json",
+      "sha256": "46f370f89c9a5f0a7edae3d585971d30067d1cdd86551d913cb8d24a1fb17e3f"
+    }
+  ],
+  "checks": []
+}

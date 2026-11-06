@@ -380,7 +380,17 @@
         "runs/2026-11-06-host-capture-reviewed-macos.json",
         "runs/2026-11-06-host-capture-reviewed-linux.json",
         "runs/2026-11-06-host-capture-final-macos.json",
-        "runs/2026-11-06-host-capture-final-linux.json"
+        "runs/2026-11-06-host-capture-final-linux.json",
+        "tools/conformance_vectors.py",
+        "scripts/check-conformance-vectors.py",
+        "scripts/verify-conformance-delivery.py",
+        "tests/test_conformance_vectors.py",
+        "tests/test_conformance_delivery.py",
+        "eval/conformance/assertion-v1.json",
+        "docs/conformance-runner.md",
+        "docs/conformance-acceptance-plan.md",
+        "runs/2026-11-06-conformance-software-execution.json",
+        "runs/2026-11-06-conformance-software-owner-decision.json"
       ],
       "commands": [
         [
@@ -584,6 +594,18 @@
           "pytest",
           "tests/test_host_capture.py",
           "tests/test_host_capture_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-conformance-delivery.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_conformance_vectors.py",
+          "tests/test_conformance_delivery.py",
           "-q"
         ]
       ]
@@ -952,7 +974,17 @@
         "runs/2026-11-06-host-capture-reviewed-macos.json",
         "runs/2026-11-06-host-capture-reviewed-linux.json",
         "runs/2026-11-06-host-capture-final-macos.json",
-        "runs/2026-11-06-host-capture-final-linux.json"
+        "runs/2026-11-06-host-capture-final-linux.json",
+        "tools/conformance_vectors.py",
+        "scripts/check-conformance-vectors.py",
+        "scripts/verify-conformance-delivery.py",
+        "tests/test_conformance_vectors.py",
+        "tests/test_conformance_delivery.py",
+        "eval/conformance/assertion-v1.json",
+        "docs/conformance-runner.md",
+        "docs/conformance-acceptance-plan.md",
+        "runs/2026-11-06-conformance-software-execution.json",
+        "runs/2026-11-06-conformance-software-owner-decision.json"
       ],
       "commands": [
         [
@@ -1085,6 +1117,10 @@
         [
           "{python}",
           "scripts/verify-host-capture-evidence.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-conformance-delivery.py"
         ]
       ]
     }

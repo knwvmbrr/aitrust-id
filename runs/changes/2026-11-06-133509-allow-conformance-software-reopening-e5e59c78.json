@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-133509-allow-conformance-software-reopening-e5e59c78",
+  "recorded_at": "2026-11-06T13:35:09.227313+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a89482cd1b992ee76063d4a18800aa196ae6f38",
+  "changed": "Keep the acceptance regression focused on preserving the human criterion, without requiring F-119 to stay permanently at 100 percent if a future defect reopens it.",
+  "proves": "The 12 acceptance/evidence guard cases pass; the exact outside-implementer criterion remains under open F-142.",
+  "limits": "No independent acceptance is added and no future defect is concealed by a fixed completion assertion.",
+  "scope_ids": [
+    "F-119",
+    "F-142",
+    "F-108"
+  ],
+  "files": {
+    "tests/test_conformance_delivery.py": "819636aca3b715d7f15e613862615acca348021e7340bb49076c99a2cb7fdcd7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-conformance-software-owner-decision.json",
+      "sha256": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e"
+    }
+  ],
+  "checks": []
+}

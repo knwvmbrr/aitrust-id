@@ -55,3 +55,19 @@ protocol behavior, establish accuracy, replace an outside person's acceptance or
 release a tag. A supplied executable can access your files and network with your
 permissions. Process deadlines and output limits are resource controls, not a
 security sandbox. Never run an untrusted implementation on your own computer.
+
+## Separate acceptance tracks
+
+On November 6, Michael approved completing F-119’s evidenced software job while
+retaining the actual outside-implementer own-build run under F-142 and independent
+accuracy under F-108. The original criterion is preserved in the
+[decision record](https://github.com/knwvmbrr/aitrust-id/blob/main/runs/2026-11-06-conformance-software-owner-decision.json).
+An adapter which delegates to our checker demonstrates the command interface;
+it is not a separately written validator or an independent person's acceptance.
+
+The current source-bound software record contains 28 actual reference checks and
+12 focused runner tests. `python3 scripts/verify-conformance-delivery.py` refuses
+stale, incomplete, failed or overstated evidence. To produce a fresh engineering
+record yourself, use `--execute --output output/verification/conformance.json`.
+That executes the trusted reference CLI and focused tests, never a detector
+accuracy study. CI also reruns the runner and evidence-refusal tests.
