@@ -1,0 +1,57 @@
+{
+  "format": "ai-trust-id-host-capture-acceptance/v1",
+  "captured_at": "2026-11-06T04:24:57.021692+00:00",
+  "pass": true,
+  "requirement": "F-160",
+  "before": {
+    "id": "F-160",
+    "kind": "requirement",
+    "title": "Host-level capture agents",
+    "percent_complete": 20,
+    "milestones_passed": [
+      "bounded_contract"
+    ],
+    "audited_at": "2026-10-09T17:06:15.922874+00:00",
+    "checked_by": "Codex",
+    "implemented_by": [
+      "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+    ],
+    "planning_contributors": [
+      "Codex \u2014 scope normalization and package contract"
+    ],
+    "completed_by": [],
+    "completed_at": null,
+    "completion_timestamp_basis": null,
+    "next_fix": "Deliver Host-level capture agents. Next package action: Define OS permission/capture boundaries and visible stop controls. Required outcome: The application extends supported tags without disabling the personal workflow.",
+    "next_owner": "Codex",
+    "evidence": [
+      "docs/scope-delivery.md",
+      "docs/approachable-tag-modals.md",
+      "runs/2026-10-09-approachable-public.json",
+      "scripts/verify-enterprise.cjs"
+    ],
+    "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+    "required_acceptance": [
+      "Deliver Host-level capture agents. Next package action: Define OS permission/capture boundaries and visible stop controls. Required outcome: The application extends supported tags without disabling the personal workflow."
+    ],
+    "queue": "open"
+  },
+  "after_percent": 100,
+  "implemented_by": "Codex",
+  "source_evidence": [
+    "runs/2026-11-06-host-capture-macos.json",
+    "runs/2026-11-06-host-capture-linux.json"
+  ],
+  "controls_per_os": 17,
+  "software_contract": "Original ORG-HOST mechanical tasks and three acceptance scenarios, bounded to foreground private text on macOS/Linux. Other OS/surfaces unsupported.",
+  "original_job_changed": false,
+  "managed_deployment_package_percent": 80,
+  "human_or_independent_security_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "company_collection_enabled": false,
+  "records_preserved": 202,
+  "completed_records": 126,
+  "open_records": 76,
+  "target_open": 60,
+  "remaining_full_closures": 16
+}

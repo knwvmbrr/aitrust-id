@@ -562,3 +562,12 @@ service is enabled. Personal checking remains independent. Run
 `python3 scripts/organization-audit.py --help` for commands and
 `python3 scripts/verify-organization-audit-evidence.py` to check the source-bound
 Linux execution evidence. This is audit software, not independent tag validation.
+
+### Check a saved file outside the browser
+
+The optional [foreground file adapter](docs/host-capture.md) watches one explicitly
+chosen private text file on macOS/Linux. Select PS for the same development
+command-pattern check, or capture versions without a detector. It has visible
+pause, reset, delete and stop controls; no account, local Docker or upload is
+needed. Managed deployment, independent security review and tag release are
+separate gates. Run `make verify-host-capture` for its focused checks.

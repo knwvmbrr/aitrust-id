@@ -10404,34 +10404,50 @@
         "id": "F-160",
         "kind": "requirement",
         "title": "Host-level capture agents",
-        "percent_complete": 20,
+        "percent_complete": 100,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks",
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-09T17:06:15.922874+00:00",
+        "audited_at": "2026-11-06T04:24:57.021692+00:00",
         "checked_by": "Codex",
         "implemented_by": [
-          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+          "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+          "Codex — foreground capture implementation and actual macOS/Linux execution, 2026-11-06T04:24:57.021692+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Deliver Host-level capture agents. Next package action: Define OS permission/capture boundaries and visible stop controls. Required outcome: The application extends supported tags without disabling the personal workflow.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex"
+        ],
+        "completed_at": "2026-11-06T04:24:57.021692+00:00",
+        "completion_timestamp_basis": "Actual current-source macOS/Linux foreground execution; bounded software job only, managed-deployment human/security acceptance remains open in ORG-HOST.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "docs/scope-delivery.md",
           "docs/approachable-tag-modals.md",
           "runs/2026-10-09-approachable-public.json",
-          "scripts/verify-enterprise.cjs"
+          "scripts/verify-enterprise.cjs",
+          "tools/host_capture.py",
+          "scripts/host-capture.py",
+          "scripts/verify-host-capture.py",
+          "scripts/verify-host-capture-evidence.py",
+          "tests/test_host_capture.py",
+          "tests/test_host_capture_evidence.py",
+          "docs/host-capture-plan.md",
+          "docs/host-capture.md",
+          "runs/2026-11-06-host-capture-macos.json",
+          "runs/2026-11-06-host-capture-linux.json",
+          "runs/2026-11-06-host-capture-acceptance.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
-        "required_acceptance": [
-          "Deliver Host-level capture agents. Next package action: Define OS permission/capture boundaries and visible stop controls. Required outcome: The application extends supported tags without disabling the personal workflow."
-        ],
-        "queue": "open"
+        "evidence_scope": "Complete foreground one-private-text-file adapter, optional independent PS worker, source-change refusal, visible controls and actual OS/failure checks. No hosted agent, independent security/human acceptance, accuracy or phone support.",
+        "required_acceptance": [],
+        "queue": "completed"
       }
     },
     {

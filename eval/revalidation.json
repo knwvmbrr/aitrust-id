@@ -366,7 +366,17 @@
         "deploy/audit/store.sql",
         "tests/test_organization_audit.py",
         "docs/organization-audit.md",
-        "docs/organization-audit-plan.md"
+        "docs/organization-audit-plan.md",
+        "tools/host_capture.py",
+        "scripts/host-capture.py",
+        "scripts/verify-host-capture.py",
+        "scripts/verify-host-capture-evidence.py",
+        "tests/test_host_capture.py",
+        "tests/test_host_capture_evidence.py",
+        "docs/host-capture-plan.md",
+        "docs/host-capture.md",
+        "runs/2026-11-06-host-capture-macos.json",
+        "runs/2026-11-06-host-capture-linux.json"
       ],
       "commands": [
         [
@@ -559,6 +569,18 @@
         [
           "{python}",
           "scripts/verify-organization-audit-evidence.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-host-capture-evidence.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_host_capture.py",
+          "tests/test_host_capture_evidence.py",
+          "-q"
         ]
       ]
     },
@@ -912,7 +934,17 @@
         "runs/2026-10-14-draft-privacy-pipeline-timing.json",
         "runs/2026-10-14-tag-isolation-pipeline-timing.json",
         "docs/organization-audit.md",
-        "runs/2026-10-15-organization-audit-reviewed-linux.json"
+        "runs/2026-10-15-organization-audit-reviewed-linux.json",
+        "tools/host_capture.py",
+        "scripts/host-capture.py",
+        "scripts/verify-host-capture.py",
+        "scripts/verify-host-capture-evidence.py",
+        "tests/test_host_capture.py",
+        "tests/test_host_capture_evidence.py",
+        "docs/host-capture-plan.md",
+        "docs/host-capture.md",
+        "runs/2026-11-06-host-capture-macos.json",
+        "runs/2026-11-06-host-capture-linux.json"
       ],
       "commands": [
         [
@@ -1041,6 +1073,10 @@
           "pytest",
           "tests/test_ps_efficiency_evidence.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-host-capture-evidence.py"
         ]
       ]
     }

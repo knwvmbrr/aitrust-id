@@ -56,3 +56,15 @@ or independent tag release. All other full acceptance remains unchanged.
 After this one full closure, the ledger is 125 complete / 77 open. Seventeen
 more full closures are required to reach 60. F-119's acceptance separation
 question remains unanswered; no outside-user criterion has been removed.
+
+## Foreground host adapter — November 5 (UTC November 6)
+
+F-160's bounded software job now checks one explicitly selected private text file
+on macOS and Linux. Both OS runs passed 17 real foreground-terminal controls,
+including pause/reset/delete, optional detector failure, source updates, crashes
+and independent personal checking. The broader ORG-HOST deployment package stays
+at 80% awaiting independent capture-boundary review and actual-user pilot
+acceptance. No detector accuracy, phone support or hosted service is inferred.
+
+The ledger retains all 202 IDs: 126 complete / 76 open. Sixteen more full closures
+are needed for 60. The earlier unanswered acceptance question is still pending.

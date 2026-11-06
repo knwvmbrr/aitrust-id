@@ -1,5 +1,61 @@
 # Changelog
 
+## Unreleased — 2026-11-06
+
+### 2026-11-06-043744-host-current-release-boundaries-e4149039
+
+Recorded 2026-11-06T04:37:44.279274+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the final protocol/website executions and unchanged extension to current source boundaries and machine-readable state for the foreground host-file delivery.
+- **Evidence.** All five current engineering capabilities pass their source-bound checks; original tag methods are unchanged, 202 scope IDs remain and only F-160 software closes. [Change record](./runs/changes/2026-11-06-043744-host-current-release-boundaries-e4149039.json).
+- **Not claimed.** 76 requirements remain open, including independent managed-deployment review, real users and tag accuracy. Production publication follows protected merge.
+
+
+### 2026-11-06-043426-host-deployment-task-evidence-f121f355
+
+Recorded 2026-11-06T04:34:26.611893+00:00 · Contributor: Codex · change
+
+- **Changed.** Attach actual OS evidence to the three HOST deployment tasks, retain each at 80 percent pending independent security/human acceptance, and record the passing current website execution.
+- **Evidence.** One software closure only, with all 202 original requirements preserved. The managed-deployment package and its three tasks remain open. [Change record](./runs/changes/2026-11-06-043426-host-deployment-task-evidence-f121f355.json).
+- **Not claimed.** No extra requirement closure, human review or managed-service acceptance is inferred from mechanical tests.
+
+
+### 2026-11-06-043100-host-verified-integration-records-8229e5d4
+
+Recorded 2026-11-06T04:31:00.658642+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the current PS, privacy, protocol and extension executions alongside the host capture implementation and regenerated scope projections.
+- **Evidence.** Existing independent personal routes retain passing engineering receipts; HOST capture-only remains usable without detector files. [Change record](./runs/changes/2026-11-06-043100-host-verified-integration-records-8229e5d4.json).
+- **Not claimed.** No independent detector release, managed-service acceptance or human usability evidence.
+
+
+### 2026-11-06-042949-host-performance-classification-201c6993
+
+Recorded 2026-11-06T04:29:49.327603+00:00 · Contributor: Codex · change
+
+- **Changed.** Extend the performance UI gate to verify completed HOST engineering controls separately from unmeasured tag accuracy; retain zero accuracy tracks and pending independent review.
+- **Evidence.** The gate checks the exact 17-control-per-OS statement and independent security/human review obligation rather than treating all unlaunched organization services as unimplemented software. [Change record](./runs/changes/2026-11-06-042949-host-performance-classification-201c6993.json).
+- **Not claimed.** Engineering terminal controls are not accuracy, independent security review or an operating team service.
+
+
+### 2026-11-06-042644-host-guide-scope-projections-35da4a2c
+
+Recorded 2026-11-06T04:26:44.956909+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the current scope task percentages and public HOST software introduction; verify the real guide, source download and separate per-OS evidence in the interactive modal.
+- **Evidence.** Full 202-record identity is retained; host software is distinguished from unaccepted managed deployment, and actual OS receipts stay separate from accuracy claims. [Change record](./runs/changes/2026-11-06-042644-host-guide-scope-projections-35da4a2c.json).
+- **Not claimed.** No new independent labels, human review, managed service or tag release.
+
+
+### 2026-11-06-042610-foreground-file-adapter-b90c3f8a
+
+Recorded 2026-11-06T04:26:10.473091+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver a foreground private-file adapter with optional independent PS checks, visible controls, bounded metadata and source-change refusal; publish per-OS evidence and guide.
+- **Evidence.** 17 real foreground-terminal controls per OS pass on macOS and non-root isolated Linux; source-bound guards reject stale or overstated evidence. F-160 software closes, ORG-HOST deployment remains 80 percent. [Change record](./runs/changes/2026-11-06-042610-foreground-file-adapter-b90c3f8a.json).
+- **Not claimed.** No independent accuracy, human pilot, security approval, phone agent, hosted service or collection. All 202 IDs retained: 126 complete and 76 open.
+
+
 ## Unreleased — 2026-10-15
 
 ### 2026-10-15-155002-audit-guide-entry-verified-983b3449

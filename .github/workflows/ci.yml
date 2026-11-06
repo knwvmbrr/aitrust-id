@@ -153,6 +153,10 @@ jobs:
         run: |
           python scripts/verify-organization-audit-evidence.py
           python -m pytest tests/test_organization_audit.py -q
+      - name: Exercise foreground host capture without granting managed deployment or tag release
+        run: |
+          python scripts/verify-host-capture-evidence.py
+          python -m pytest tests/test_host_capture.py tests/test_host_capture_evidence.py -q
       - name: Refuse unsafe synthetic backup execution before database creation
         run: python -m pytest tests/test_backup_retention.py tests/test_restore_isolation.py -q
       - name: Check distinct caller-bound choice framing without a manipulation verdict
