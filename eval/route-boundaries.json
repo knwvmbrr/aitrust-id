@@ -21,7 +21,7 @@
     ".gitattributes": "1bfd1c773f30ef109c447140a2e080cb3365ede5b61deca2b9740ae873c02880",
     ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
     ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
-    ".github/workflows/ci.yml": "3ea44498e1ec160039887476cd322ba8bd71da6e1047b9ba88477a4ec3412fbe",
+    ".github/workflows/ci.yml": "6c73673f29428931f92ec16e5e5e97a88519094b0f6e93c0d9dc0fd15d79d194",
     ".github/workflows/manifest-inspection.yml": "451b8df145c747ca53c6295ef8dcb534aedfb5c4ccf9608814715d85b962a220",
     ".github/workflows/metadata-storage.yml": "463541fe855c89c224859e6f9484a3e40f15c9ae2f749b40df559e05c644ae49",
     "deploy/backup/bootstrap.sh": "88edbdfcdf3c641ffb358ab193a51597d5bfcc1f34acf070ecdbb963a9512762",
@@ -51,6 +51,7 @@
     "docs/choice-framing-plan.md": "d0ffd3a1236d795b59b4623f474906be9c80093e2c745f14fc5fa5e45574bf51",
     "docs/choice-framing.md": "f80be1a744607482394905bf827f8c018efaa892e643f94408a95774ccefec18",
     "docs/choice-grammar-result.md": "a929c29985ceb248edd2e85d834724989714f34b1c2ff27f5d46264f3d837b13",
+    "docs/ci-browser-install-plan.md": "873f1ef39f66d79e75d2a6d8a0334f30c92edaba711e0d4fd11022c3f5d9ac1c",
     "docs/conformance-acceptance-plan.md": "16dfba78d295d98a566e3486181c5e9584b59e44016b37f22e30944a2564f702",
     "docs/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
     "docs/draft-privacy-plan.md": "730a7e671c13b93702990dd10c5472524b3baa44928289478f9aeff88d0a708b",
@@ -106,7 +107,7 @@
     "eval/methods/context-v6-eager.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
     "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
     "eval/requirements.txt": "4cb4f554f9e4247e11edf4dfdccd084513efeed6cde4b5e19546ec017caf1c44",
-    "eval/revalidation.json": "34dd244c638fba1d0fbf863c904088df159a3ad086ea0805679d713ac1dd4665",
+    "eval/revalidation.json": "fbf3f5236b90b7e7e10f3dcca265a87be22889b8eb68c8cf52ae7378185e74f4",
     "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
     "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
     "extension/src/adapters/README.md": "96f8b739ce57bf19ed5e6c168fdc20b8f57431fb6e2ee41d4b58c62a09d1c366",
@@ -535,6 +536,7 @@
     "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
     "scripts/check-repetition.py": "9ea741e4235c05c66bee8be32e5b40b162837864e77f21d79cc8dcf6cf1c4071",
     "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/ci-ubuntu-mirror.py": "433df28df2bded20badc5b8b7edccca5eac919376f8dd6532b51bc3230056669",
     "scripts/collect-runtime-notices.py": "e07118f8457f442b8507a9a43599e54a92cb913ca8c83f162cb2dfa64ce8567f",
     "scripts/conformance-statement.cjs": "bce368ff8dd53bc417de147960314b3f9d309b4d91bea7638ba56065bcc238d7",
     "scripts/corpus-support.py": "cd814151d1a3999f7b914617311c86435429839a14bcd6024e1c30b0881e900f",
@@ -629,7 +631,7 @@
     "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "b4de6823c8e39b337bba2bd3c3baf6e3cc292cf1e7e5cb7811a367367219e3a5",
+    "scripts/verify-route-boundaries.py": "94aeb2fca7f43431b2506571838315f44e18e643df154be14dfea40056ffd068",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
@@ -790,6 +792,7 @@
     "tests/test_captured_corpus.py": "55dbaa047ef12af02d1b3fafd5499b6bcef1a8babbf6e9bf6f94e0808b154b33",
     "tests/test_choice_framing.py": "3ec7608ec988da295ee0732fa89e7e44d8f0c3a69fb61ed28b071d0f7a5e88a3",
     "tests/test_choice_framing_cli.py": "2618d847830bf059a1ca44746b92880f4a89a653caac87f16a27124b37510f82",
+    "tests/test_ci_ubuntu_mirror.py": "1e5a0231a392bb7adb1ee311f8f12bd325615e1b3b3193a9d9ec32ec2f468503",
     "tests/test_complete_ipv6.py": "6575ce8175f629bcea4e4d9677b34e3395ad3d734b2ffa5b25d9a7c1e2e2d64e",
     "tests/test_conformance_delivery.py": "819636aca3b715d7f15e613862615acca348021e7340bb49076c99a2cb7fdcd7",
     "tests/test_conformance_recusal.py": "ab206c391a181966b13054a4ade266714014d3d1031e77b80b57cd3221310fd7",
@@ -900,8 +903,8 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "extension": "runs/2026-11-06-conformance-current-extension.json",
-    "website": "runs/2026-11-06-conformance-ci-website.json"
+    "extension": "runs/2026-11-06-conformance-archive-extension.json",
+    "website": "runs/2026-11-06-conformance-archive-website.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

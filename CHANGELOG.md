@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-144648-browser-ci-current-source-evidence-e6818f6b
+
+Recorded 2026-11-06T14:46:48.348106+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh all five engineering receipts and source-bound route review after the browser CI archive and bounded-install change.
+- **Evidence.** PS 7, redaction 6, extension 14, protocol 33 and website 22 check commands pass on unchanged current sources. All 202 records remain, with 127 complete and 75 open. [Change record](./runs/changes/2026-11-06-144648-browser-ci-current-source-evidence-e6818f6b.json).
+- **Not claimed.** Local checks do not prove the corrected GitHub-hosted archive format or install speed. Protected checks, actual outside use and independent accuracy retain their separate gates.
+
+
+### 2026-11-06-144214-bounded-signed-browser-ci-install-fa7d9a46
+
+Recorded 2026-11-06T14:42:14.216526+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound browser CI dependency installation and select the signed canonical Ubuntu archive on disposable Ubuntu 24.04 browser jobs after diagnosing the overlong apt download.
+- **Evidence.** Six focused archive/context/workflow refusal tests pass. The existing tests, dependency pins and Ubuntu archive signing key remain. Source-bound checks include this helper. [Change record](./runs/changes/2026-11-06-144214-bounded-signed-browser-ci-install-fa7d9a46.json).
+- **Not claimed.** No speed or actual hosted compatibility claim until clean corrected GitHub jobs pass. No developer/production host configuration, detector behavior, human acceptance or tag release changes.
+
+
 ### 2026-11-06-135020-conformance-corrected-source-revalidation-ab815489
 
 Recorded 2026-11-06T13:50:20.970923+00:00 · Contributor: Codex · change

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-06T13:50:19.340393+00:00",
+  "updated": "2026-11-06T14:46:46.766291+00:00",
   "active_increment": "Owner-approved F-119 conformance software acceptance; 75 full requirements open, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1085,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-06-conformance-current-PS.json",
-    "PII_REDACTED": "runs/2026-11-06-conformance-current-PII_REDACTED.json",
-    "protocol": "runs/2026-11-06-conformance-ci-protocol.json",
-    "extension": "runs/2026-11-06-conformance-current-extension.json",
-    "website": "runs/2026-11-06-conformance-ci-website.json",
+    "PS": "runs/2026-11-06-conformance-archive-PS.json",
+    "PII_REDACTED": "runs/2026-11-06-conformance-archive-PII_REDACTED.json",
+    "protocol": "runs/2026-11-06-conformance-archive-protocol.json",
+    "extension": "runs/2026-11-06-conformance-archive-extension.json",
+    "website": "runs/2026-11-06-conformance-archive-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-06T13:50:19.340393+00:00",
+  "updated_at": "2026-11-06T14:46:46.766291+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2688,8 +2688,8 @@
     "outside_person_acceptance": false,
     "release_approved": false,
     "acceptance_reallocation": "F-119_only_accepted_by_owner_2026-11-06; exact_prior_criterion_retained_under_F-142; F-108_accuracy_and_F-057_F-120_criteria_unchanged",
-    "current_protocol_receipt": "runs/2026-11-06-conformance-ci-protocol.json",
-    "current_website_receipt": "runs/2026-11-06-conformance-ci-website.json",
+    "current_protocol_receipt": "runs/2026-11-06-conformance-archive-protocol.json",
+    "current_website_receipt": "runs/2026-11-06-conformance-archive-website.json",
     "source_commit": "9e40a5a8c37d42ab999a5331a8a87f08883b5be1",
     "protected_merge": "runs/2026-10-15-conformance-protected-merge.json",
     "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/77",
@@ -2797,5 +2797,18 @@
     "foreground_job_control_verified": true,
     "cross_repository_output_refused": true,
     "protected_publication": "runs/2026-11-06-host-protected-publication.json"
+  },
+  "browser_ci_installation": {
+    "status": "local_policy_checks_pass; corrected_hosted_execution_pending",
+    "plan": "docs/ci-browser-install-plan.md",
+    "diagnosis": "runs/2026-11-06-browser-ci-install-diagnosis.json",
+    "context": "Only disposable GitHub-hosted Ubuntu 24.04 browser jobs; no production/local host changes.",
+    "policy_tests_passed": 6,
+    "install_timeout_minutes": 15,
+    "job_timeout_minutes": 30,
+    "required_tests_removed": 0,
+    "dependency_versions_changed": false,
+    "actual_speed_improvement_claimed": false,
+    "release_approved": false
   }
 }

@@ -390,7 +390,10 @@
         "docs/conformance-runner.md",
         "docs/conformance-acceptance-plan.md",
         "runs/2026-11-06-conformance-software-execution.json",
-        "runs/2026-11-06-conformance-software-owner-decision.json"
+        "runs/2026-11-06-conformance-software-owner-decision.json",
+        "scripts/ci-ubuntu-mirror.py",
+        "tests/test_ci_ubuntu_mirror.py",
+        "docs/ci-browser-install-plan.md"
       ],
       "commands": [
         [
@@ -606,6 +609,13 @@
           "pytest",
           "tests/test_conformance_vectors.py",
           "tests/test_conformance_delivery.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_ci_ubuntu_mirror.py",
           "-q"
         ]
       ]
@@ -984,7 +994,10 @@
         "docs/conformance-runner.md",
         "docs/conformance-acceptance-plan.md",
         "runs/2026-11-06-conformance-software-execution.json",
-        "runs/2026-11-06-conformance-software-owner-decision.json"
+        "runs/2026-11-06-conformance-software-owner-decision.json",
+        "scripts/ci-ubuntu-mirror.py",
+        "tests/test_ci_ubuntu_mirror.py",
+        "docs/ci-browser-install-plan.md"
       ],
       "commands": [
         [

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-144214-bounded-signed-browser-ci-install-fa7d9a46",
+  "recorded_at": "2026-11-06T14:42:14.216526+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5909a7e62975004314d223195b27f41c1dad9210",
+  "changed": "Bound browser CI dependency installation and select the signed canonical Ubuntu archive on disposable Ubuntu 24.04 browser jobs after diagnosing the overlong apt download.",
+  "proves": "Six focused archive/context/workflow refusal tests pass. The existing tests, dependency pins and Ubuntu archive signing key remain. Source-bound checks include this helper.",
+  "limits": "No speed or actual hosted compatibility claim until clean corrected GitHub jobs pass. No developer/production host configuration, detector behavior, human acceptance or tag release changes.",
+  "scope_ids": [
+    "F-119"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "6c73673f29428931f92ec16e5e5e97a88519094b0f6e93c0d9dc0fd15d79d194",
+    "scripts/ci-ubuntu-mirror.py": "433df28df2bded20badc5b8b7edccca5eac919376f8dd6532b51bc3230056669",
+    "tests/test_ci_ubuntu_mirror.py": "1e5a0231a392bb7adb1ee311f8f12bd325615e1b3b3193a9d9ec32ec2f468503",
+    "docs/ci-browser-install-plan.md": "873f1ef39f66d79e75d2a6d8a0334f30c92edaba711e0d4fd11022c3f5d9ac1c",
+    "eval/revalidation.json": "fbf3f5236b90b7e7e10f3dcca265a87be22889b8eb68c8cf52ae7378185e74f4",
+    "scripts/verify-route-boundaries.py": "94aeb2fca7f43431b2506571838315f44e18e643df154be14dfea40056ffd068",
+    "runs/2026-11-06-browser-ci-install-diagnosis.json": "55864414063fd09f93f7456bc0630a16f72d9e3e61668313afb22f3443ec375f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-browser-ci-install-diagnosis.json",
+      "sha256": "55864414063fd09f93f7456bc0630a16f72d9e3e61668313afb22f3443ec375f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_ci_ubuntu_mirror.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T14:42:14.629605+00:00"
+    }
+  ]
+}
