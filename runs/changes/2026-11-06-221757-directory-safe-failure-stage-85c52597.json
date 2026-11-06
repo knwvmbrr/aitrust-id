@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-221757-directory-safe-failure-stage-85c52597",
+  "recorded_at": "2026-11-06T22:17:57.863874+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b05e544e9a84dbcd8143238198158819ff691683",
+  "changed": "Add optional fixed-stage numeric diagnostics for operator troubleshooting without exposing provider bodies, identities, tokens or database errors.",
+  "proves": "The actual provider now passes trusted HTTPS, foreign-issuer and both untrusted-CA refusals. The remaining actual CLI failure is retained; the next run records its fixed authorization stage.",
+  "limits": "Four provider controls passed but the full job failed. No F-162 closure or production-service claim follows.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "d115f2949702de9c45592085002d561e0ce60203f444e6e034a54305ee0060b8",
+    "scripts/organization-directory.py": "64790a58905610c7796fdfafb1379146f63f39a2f47c75f407a7324a2f8aed2c",
+    "tools/organization_directory_lab.py": "7ee7605643bc88338a5b77b79b6c9487c3ffd8a057c3d165964fa4c7c5b19202"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-local.json",
+      "sha256": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9"
+    }
+  ],
+  "checks": []
+}

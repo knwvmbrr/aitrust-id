@@ -62,7 +62,7 @@ class NoRedirect(HTTPRedirectHandler):
 
 class Provider:
     def __init__(self,c):
-        self.c=c;self.last_status=None;context=ssl.create_default_context()
+        self.c=c;self.last_status=None;self.last_step='configuration';context=ssl.create_default_context()
         if c['ca_file'] is not None:context.load_verify_locations(cadata=private_file(c['ca_file']).decode('ascii'))
         self.opener=build_opener(ProxyHandler({}),NoRedirect(),HTTPSHandler(context=context))
         self.origin=urlsplit(c['issuer']);self.base=c['issuer'].rsplit('/realms/',1)[0]
@@ -92,16 +92,22 @@ class Provider:
     def post(self,discovery,key,fields):
         return self.request(discovery[key],{'client_id':self.c['client_id'],'client_secret':self.c['client_secret'],**fields},allow_empty=key=='revocation_endpoint')
     def current(self,token):
+        self.last_step='introspection'
         d=self.discovery();r=self.post(d,'introspection_endpoint',{'token':secret(token)})
+        self.last_step='token_contract'
         check(type(r) is dict and r.get('active') is True and r.get('iss')==self.c['issuer'] and r.get('client_id')==self.c['client_id'])
         aud=r.get('aud');check(aud==self.c['client_id'] or type(aud) is list and self.c['client_id'] in aud)
         check(type(r.get('exp')) is int and type(r.get('iat')) is int and r['iat']<=time.time()+5 and r['exp']>time.time() and time.time()-r['iat']<=900)
         sub=identifier(r.get('sub'));check(sub in self.c['bindings'])
+        self.last_step='directory_service'
         service=self.post(d,'token_endpoint',{'grant_type':'client_credentials'});service_token=secret(service['access_token'])
         base=self.base+'/admin/realms/'+self.c['realm']+'/users/'+sub
+        self.last_step='directory_user'
         user=self.request(base,bearer=service_token,admin=True);check(user.get('id')==sub and user.get('enabled') is True)
+        self.last_step='directory_roles'
         roles=self.request(base+'/role-mappings/clients/'+self.c['directory_client_uuid']+'/composite',bearer=service_token,admin=True)
         check(type(roles) is list and len(roles)<=256 and all(type(x) is dict and type(x.get('name')) is str for x in roles))
+        self.last_step='authorized_identity'
         return sub,r['iat'],{x['name'] for x in roles}
     def begin(self):
         d=self.discovery();r=self.post(d,'device_authorization_endpoint',{'scope':'openid'})

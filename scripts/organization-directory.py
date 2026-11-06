@@ -8,14 +8,14 @@ from tools.organization_directory import config,Provider,Broker,parse,encoded,pr
 class Parser(argparse.ArgumentParser):
     def error(self,message):self.exit(2,'Directory command refused; use --help.\n')
 def main():
-    p=Parser(description=__doc__);p.add_argument('--config',required=True,type=Path)
+    p=Parser(description=__doc__);p.add_argument('--config',required=True,type=Path);p.add_argument('--diagnostics',action='store_true',help='Include only fixed provider-stage and numeric HTTP status on refusal')
     sub=p.add_subparsers(dest='command',required=True);sub.add_parser('initialize')
     q=sub.add_parser('begin');q.add_argument('--output',type=Path,required=True)
     q=sub.add_parser('finish');q.add_argument('--pending',type=Path,required=True);q.add_argument('--output',type=Path,required=True)
     q=sub.add_parser('call');q.add_argument('--output',type=Path,required=True)
     q=sub.add_parser('logout');q.add_argument('--session',type=Path,required=True)
     q=sub.add_parser('recover');q.add_argument('--compromised-subject',required=True);q.add_argument('--replacement-session',type=Path,required=True)
-    a=p.parse_args()
+    a=p.parse_args();broker=None
     try:
         c=config(a.config);broker=Broker(c)
         if a.command=='initialize':result=broker.journal.initialize()
@@ -31,5 +31,7 @@ def main():
             session=parse(private_file(a.replacement_session));result=broker.journal.recover(a.compromised_subject,session['access_token'],broker.provider)
         print(json.dumps(result));return 0
     except Exception:
-        print('{"state":"UNAVAILABLE","reason":"organization_directory_contract_refused"}',file=sys.stderr);return 2
+        error={'state':'UNAVAILABLE','reason':'organization_directory_contract_refused'}
+        if a.diagnostics:error['diagnostics']={'provider_step':getattr(getattr(broker,'provider',None),'last_step','configuration'),'provider_status':getattr(getattr(broker,'provider',None),'last_status',None)}
+        print(json.dumps(error),file=sys.stderr);return 2
 if __name__=='__main__':raise SystemExit(main())

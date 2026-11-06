@@ -14,11 +14,17 @@ def hashes():return {name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() f
 def verify(keycloak,namespace):
     require_namespace(namespace);before=hashes();os.umask(0o077)
     work=Path(tempfile.mkdtemp(prefix='aitrust-directory-',dir='/tmp')).resolve();work.chmod(0o700)
-    controls=[];stage='initialize';provider=None;pg_started=False;process=None;passed=False;failure=None
+    controls=[];stage='initialize';child_failure=None;provider=None;pg_started=False;process=None;passed=False;failure=None
     pg=Path('/usr/lib/postgresql/18/bin');keycloak=Path(keycloak).resolve();env={'PATH':os.environ['PATH'],'HOME':os.environ['HOME'],'LANG':'C.UTF-8','TZ':'UTC','JAVA_HOME':os.environ['JAVA_HOME']}
     def run(args,*,raw=None,limit=60):
+        nonlocal child_failure
         r=subprocess.run(list(map(str,args)),input=raw,capture_output=True,env=env,timeout=limit)
-        if r.returncode:raise RuntimeError('Disposable integration subprocess failed')
+        if r.returncode:
+            try:
+                error=json.loads(r.stderr);info=error.get('diagnostics')
+                if type(info) is dict and set(info)=={'provider_step','provider_status'}:child_failure=info
+            except (ValueError,AttributeError):pass
+            raise RuntimeError('Disposable integration subprocess failed')
         return r.stdout
     def write(path,value):path.write_bytes(value if isinstance(value,bytes) else encoded(value));path.chmod(0o600);return path
     def case(name):controls.append({'case':name,'pass':True})
@@ -26,7 +32,7 @@ def verify(keycloak,namespace):
         try:fn()
         except Exception:case(name);return
         raise RuntimeError('Required integration refusal missing')
-    def cli(*args,raw=None):return json.loads(run([sys.executable,ROOT/'scripts/organization-directory.py','--config',cfg_path,*args],raw=raw))
+    def cli(*args,raw=None):return json.loads(run([sys.executable,ROOT/'scripts/organization-directory.py','--config',cfg_path,'--diagnostics',*args],raw=raw))
     logfile=None
     try:
         stage='generate_pinned_tls_and_provider_import'
@@ -147,7 +153,7 @@ def verify(keycloak,namespace):
         d.check(client_secret.encode() not in raw and b'never-executed' not in raw);case('journal_contains_no_tokens_credentials_or_response_text')
         passed=True
     except Exception as error:
-        failure={'stage':stage,'exception_class':type(error).__name__,'provider_http_status':getattr(provider,'last_status',None)}
+        failure={'stage':stage,'exception_class':type(error).__name__,'provider_http_status':getattr(provider,'last_status',None),'command_diagnostic':child_failure}
         if logfile:
             logfile.flush()
             diagnostic=(work/'provider.log').read_text(errors='replace')[-6000:]

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-221757-directory-safe-failure-stage-85c52597
+
+Recorded 2026-11-06T22:17:57.863874+00:00 · Contributor: Codex · change
+
+- **Changed.** Add optional fixed-stage numeric diagnostics for operator troubleshooting without exposing provider bodies, identities, tokens or database errors.
+- **Evidence.** The actual provider now passes trusted HTTPS, foreign-issuer and both untrusted-CA refusals. The remaining actual CLI failure is retained; the next run records its fixed authorization stage. [Change record](./runs/changes/2026-11-06-221757-directory-safe-failure-stage-85c52597.json).
+- **Not claimed.** Four provider controls passed but the full job failed. No F-162 closure or production-service claim follows.
+
+
 ### 2026-11-06-221411-directory-import-and-private-boundaries-8081fd18
 
 Recorded 2026-11-06T22:14:11.918770+00:00 · Contributor: Codex · change
