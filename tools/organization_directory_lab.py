@@ -7,7 +7,7 @@ from tools.organization_audit_store import Store,install,tenant_create,policy,en
 from tools.organization_audit import prepare,encoded
 from tools.backup_retention import require_namespace
 ROOT=d.ROOT
-SOURCES=('tools/organization_directory.py','tools/organization_directory_lab.py','scripts/organization-directory.py','scripts/verify-organization-directory.py','scripts/directory-device-browser.cjs','tests/test_organization_directory.py','docs/organization-directory-plan.md','tools/organization_audit.py','tools/organization_audit_store.py','deploy/audit/store.sql','spec/organization-audit-metadata.schema.json','tools/blind_review_io.py','scripts/check-ps.py','services/evaluator/app.py','protocol/normalization.py','protocol/unicode15-data.json','package-lock.json','.github/workflows/organization-directory.yml','scripts/verify-organization-directory.py')
+SOURCES=('tools/organization_directory.py','tools/organization_directory_lab.py','scripts/organization-directory.py','scripts/verify-organization-directory.py','scripts/directory-device-browser.cjs','tests/test_organization_directory.py','docs/organization-directory-plan.md','docs/organization-directory.md','tools/organization_audit.py','tools/organization_audit_store.py','deploy/audit/store.sql','spec/organization-audit-metadata.schema.json','tools/blind_review_io.py','scripts/check-ps.py','services/evaluator/app.py','protocol/normalization.py','protocol/unicode15-data.json','package-lock.json','.github/workflows/organization-directory.yml','scripts/verify-organization-directory.py')
 
 def hashes():return {name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES}
 
@@ -48,9 +48,9 @@ def verify(keycloak,namespace):
              'users':[{'id':v['id'],'username':'lab_'+n,'firstName':'Synthetic','lastName':'Test','email':'lab_'+n+'@example.invalid','enabled':True,'emailVerified':True,'credentials':[{'type':'password','value':v['password'],'temporary':False}],'clientRoles':{'aitrust-broker':roles[n]}} for n,v in identities.items()]+[
               {'username':'service-account-aitrust-broker','enabled':True,'serviceAccountClientId':'aitrust-broker','clientRoles':{'realm-management':['view-users']}},
               {'username':'service-account-lab-controller','enabled':True,'serviceAccountClientId':'lab-controller','clientRoles':{'realm-management':['manage-users','view-users','manage-clients','view-clients']}}]}
-        imported=keycloak/'data/import';imported.mkdir(parents=True,exist_ok=True);write(imported/'directory-lab-realm.json',realm('directory_lab'))
+        imported=keycloak/'data/import';imported.mkdir(parents=True,exist_ok=True);write(imported/'directory_lab-realm.json',realm('directory_lab'))
         # A separate realm proves that a valid foreign issuer's token is refused.
-        write(imported/'directory-other-realm.json',realm('directory_other'))
+        write(imported/'directory_other-realm.json',realm('directory_other'))
         logfile=(work/'provider.log').open('wb')
         process=subprocess.Popen([str(check_keycloak),'start-dev','--import-realm','--http-enabled=false','--https-port=18443','--hostname=https://127.0.0.1:18443','--https-certificate-file='+str(cert),'--https-certificate-key-file='+str(key),'--log-level=warn'],stdout=logfile,stderr=logfile,env={**env,'JAVA_OPTS_KC_HEAP':'-Xms128m -Xmx768m'},start_new_session=True)
         stage='start_socket_only_postgresql'
@@ -86,6 +86,10 @@ def verify(keycloak,namespace):
         foreign_active=foreign_provider.post(foreign_discovery,'introspection_endpoint',{'token':foreign_token});d.check(foreign_active['active'] is True)
         refused(lambda:broker.dispatch({'tenant':tenant,'operation':'view','token':foreign_token,'arguments':{}}),'valid_foreign_issuer_token_refused')
         untrusted=copy.deepcopy(cfg);untrusted['ca_file']=None;refused(lambda:d.Provider(untrusted).discovery(),'untrusted_tls_certificate_refused')
+        wrong_ca=work/'wrong-ca.pem';wrong_key=work/'wrong-key.pem'
+        run(['openssl','req','-x509','-newkey','rsa:2048','-nodes','-keyout',wrong_key,'-out',wrong_ca,'-days','1','-subj','/CN=wrong-lab-ca']);wrong_ca.chmod(0o600)
+        wrong_trust=copy.deepcopy(cfg);wrong_trust['ca_file']=str(wrong_ca)
+        refused(lambda:d.Provider(wrong_trust).discovery(),'wrong_selected_ca_refused')
         def login(n,configuration=cfg):
             p=d.Provider(configuration);pending=p.begin();browser={'synthetic_only':True,'uri':pending['verification_uri'],'code':pending['user_code'],'username':'lab_'+n,'password':people[n]['password'],'spki':spki}
             result=json.loads(run(['node',ROOT/'scripts/directory-device-browser.cjs'],raw=encoded(browser),limit=45));d.check(result['pass'] is True)

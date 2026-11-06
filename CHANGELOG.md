@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-221411-directory-import-and-private-boundaries-8081fd18
+
+Recorded 2026-11-06T22:14:11.918770+00:00 · Contributor: Codex · change
+
+- **Changed.** Use exact Keycloak realm import filenames, bind the operator guide to integration evidence, and reject private material in any Git checkout.
+- **Evidence.** The actual provider diagnostic identified the filename/realm mismatch. Thirty-eight local tests now include cross-worktree privacy refusal; the operator guide describes sign-in, roles, logout, recovery and deployment limits. [Change record](./runs/changes/2026-11-06-221411-directory-import-and-private-boundaries-8081fd18.json).
+- **Not claimed.** F-162 stays open until a passing current-source real provider/database run. The previous startup failures remain failures; no production service or human acceptance is claimed.
+
+
 ### 2026-11-06-221131-directory-lab-runtime-boundary-5c34f912
 
 Recorded 2026-11-06T22:11:31.735734+00:00 · Contributor: Codex · change

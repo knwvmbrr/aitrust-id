@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-221411-directory-import-and-private-boundaries-8081fd18",
+  "recorded_at": "2026-11-06T22:14:11.918770+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bd6e041ef0d9b717df0a044ddb7249d9966335b1",
+  "changed": "Use exact Keycloak realm import filenames, bind the operator guide to integration evidence, and reject private material in any Git checkout.",
+  "proves": "The actual provider diagnostic identified the filename/realm mismatch. Thirty-eight local tests now include cross-worktree privacy refusal; the operator guide describes sign-in, roles, logout, recovery and deployment limits.",
+  "limits": "F-162 stays open until a passing current-source real provider/database run. The previous startup failures remain failures; no production service or human acceptance is claimed.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "59c26e16789385da45787720a4b1b41b808d0f2abe403d11dd25c95bc135efa6",
+    "tools/organization_directory_lab.py": "a6aa557a588b5904498b35c4e910a45ea79c2c3df5137a0f8a1b7e44b84ac545",
+    "tests/test_organization_directory.py": "2a3e2bbbb8eef922f2ddd90457368795701e97341c1a51e9c167a208b3eaa630",
+    "docs/organization-directory.md": "70b97d77e29c07714e6a105ac1002e4e043e8a4bcf1a5f4a6612c23dcb05a060"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T22:14:12.352499+00:00"
+    }
+  ]
+}

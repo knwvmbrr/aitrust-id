@@ -5,8 +5,19 @@ from pathlib import Path
 from urllib.parse import urlsplit,urlencode,quote
 from urllib.request import Request,build_opener,ProxyHandler,HTTPRedirectHandler,HTTPSHandler
 from tools.organization_audit import ROOT,parse,encoded,require,digest
-from tools.organization_audit_store import private_file,Store
+from tools.organization_audit_store import private_file as audit_private_file,Store
 from tools.blind_review_io import directory,create
+
+def outside_git(path):
+    path=Path(path).absolute()
+    check(not path.is_symlink())
+    resolved=path.resolve()
+    check(not any((parent/'.git').exists() for parent in [resolved.parent,*resolved.parents]))
+    return resolved
+
+def private_file(path):
+    outside_git(path)
+    return audit_private_file(path)
 
 FORMAT='organization-directory/v1'
 ROLES={'view':'aitrust-view','export':'aitrust-export','review':'aitrust-review','configure':'aitrust-configure'}
@@ -38,9 +49,11 @@ def config(path):
         check(re.fullmatch('[a-zA-Z0-9_-]{1,64}',b['service']) and re.fullmatch('[a-z_][a-z0-9_]{0,62}',b['principal']))
         check(type(b['service_file']) is str and Path(b['service_file']).is_absolute())
         check(b['pass_file'] is None or type(b['pass_file']) is str and Path(b['pass_file']).is_absolute())
+        outside_git(b['service_file'])
+        if b['pass_file'] is not None:outside_git(b['pass_file'])
     check(d['ca_file'] is None or type(d['ca_file']) is str and Path(d['ca_file']).is_absolute())
     if d['ca_file'] is not None:private_file(d['ca_file'])
-    p=Path(d['state_file']);check(p.is_absolute())
+    p=Path(d['state_file']);check(p.is_absolute());p=outside_git(p);d['state_file']=str(p)
     with directory(p.parent,ROOT):pass
     return d
 

@@ -153,3 +153,12 @@ def test_cross_origin_discovery_endpoint_redirect_and_encoded_admin_path_refused
     for url in ['https://attacker.example/realms/test/token',selected[0]['issuer']+'/token?redirect=x',selected[0]['issuer']+'/%2e%2e/token']:
         with pytest.raises(Exception):p.url(url)
     with pytest.raises(Exception):d.NoRedirect().redirect_request(None,None,None,None,None,None)
+
+
+def test_private_material_in_another_git_checkout_is_refused(selected):
+    cfg,path,sub,other,root=selected
+    other_checkout=root/'different-checkout';other_checkout.mkdir(mode=0o700);(other_checkout/'.git').write_text('gitdir: arbitrary')
+    target=other_checkout/'config.json';target.write_bytes(d.encoded(cfg));target.chmod(0o600)
+    with pytest.raises(Exception):d.config(target)
+    cfg['state_file']=str(other_checkout/'state.sqlite');path.write_bytes(d.encoded(cfg))
+    with pytest.raises(Exception):d.config(path)
