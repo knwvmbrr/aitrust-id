@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-220523-directory-partial-site-projections-1b7745ba
+
+Recorded 2026-11-06T22:05:23.350890+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh public scope projections for the evidenced partial directory implementation.
+- **Evidence.** F-162 is 60 percent; all 202 records remain and 74 full requirements stay open. [Change record](./runs/changes/2026-11-06-220523-directory-partial-site-projections-1b7745ba.json).
+- **Not claimed.** A progress projection is not provider integration or a tag release.
+
+
+### 2026-11-06-220521-directory-local-progress-9f90631a
+
+Recorded 2026-11-06T22:05:21.763706+00:00 · Contributor: Codex · change
+
+- **Changed.** Record F-162 local implementation at 60 percent while retaining 74 open requirements and the full provider acceptance gate; link the actual preceding agent publication.
+- **Evidence.** Thirty-seven source-bound local tests pass. All 202 task percentages and state counts remain consistent; no full requirement closure is granted before the real provider run. [Change record](./runs/changes/2026-11-06-220521-directory-local-progress-9f90631a.json).
+- **Not claimed.** No real Keycloak integration, production identity access, human acceptance or detector release is established.
+
+
+### 2026-11-06-220426-directory-broker-local-implementation-035edf39
+
+Recorded 2026-11-06T22:04:26.428298+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement the optional organization directory broker, private session and recovery controls, and an actual isolated Keycloak/PostgreSQL acceptance workflow.
+- **Evidence.** Thirty-seven local authorization, privacy, role-change, logout and recovery tests pass; Python and browser helper syntax parse. Architecture and source-bound real-provider lab are present. [Change record](./runs/changes/2026-11-06-220426-directory-broker-local-implementation-035edf39.json).
+- **Not claimed.** F-162 remains open. Actual provider/database integration has not run; no hosted login, production identity provider, managed service, independent accuracy or human acceptance is claimed.
+
+
 ### 2026-11-06-203621-agent-current-scope-summary-67e69229
 
 Recorded 2026-11-06T20:36:21.019700+00:00 · Contributor: Codex · change

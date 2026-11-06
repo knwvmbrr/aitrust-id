@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-06T20:22:38.876039+00:00",
+  "audited_at": "2026-11-06T22:05:21.259636+00:00",
   "client_date": "2026-11-06",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -6696,14 +6696,17 @@
       "id": "F-162",
       "kind": "requirement",
       "title": "SSO and directory integration",
-      "percent_complete": 20,
+      "percent_complete": 60,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-11-06T22:05:21.259636+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 organization directory broker and local boundary checks, 2026-11-06T22:05:21.259636+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -6711,15 +6714,20 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver SSO and directory integration. Next package action: Define role and tenant boundaries, admin recovery and audit events. Required outcome: The application extends supported tags without disabling the personal workflow.",
+      "next_fix": "Run the actual isolated Keycloak HTTPS/device-login and PostgreSQL acceptance, close all observed authorization/recovery failures, then verify final supported integration and publication. No real provider or production login is claimed yet.",
       "next_owner": "Codex",
       "evidence": [
         "docs/scope-delivery.md",
         "docs/approachable-tag-modals.md",
         "runs/2026-10-09-approachable-public.json",
-        "scripts/verify-enterprise.cjs"
+        "scripts/verify-enterprise.cjs",
+        "docs/organization-directory-plan.md",
+        "tools/organization_directory.py",
+        "scripts/organization-directory.py",
+        "tests/test_organization_directory.py",
+        "runs/2026-11-06-directory-local.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
+      "evidence_scope": "Thirty-seven local software boundary tests on the operator-owned broker. Real provider/database acceptance remains pending.",
       "required_acceptance": [
         "Deliver SSO and directory integration. Next package action: Define role and tenant boundaries, admin recovery and audit events. Required outcome: The application extends supported tags without disabling the personal workflow."
       ],

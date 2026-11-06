@@ -1,0 +1,62 @@
+name: organization-directory-software
+on:
+  push:
+    paths: ['tools/organization_directory*.py', 'scripts/*organization-directory*.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory*.py', '.github/workflows/organization-directory.yml']
+  pull_request:
+    paths: ['tools/organization_directory*.py', 'scripts/*organization-directory*.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory*.py', '.github/workflows/organization-directory.yml']
+permissions:
+  contents: read
+jobs:
+  directory-software:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - uses: actions/setup-java@v4
+        with: { distribution: 'temurin', java-version: '21' }
+      - name: Install existing hash-pinned Python dependencies
+        run: python -m pip install --require-hashes -r eval/requirements.lock -r services/gateway/requirements.lock
+      - run: npm ci
+      - name: Exercise local authorization and privacy failures
+        run: python -m pytest tests/test_organization_directory.py -q
+      - name: Use signed canonical Ubuntu sources for browser dependencies
+        run: python scripts/ci-ubuntu-mirror.py --plan output/verification/directory-browser-apt-plan.json --apply
+      - name: Install the pinned browser engine
+        timeout-minutes: 10
+        run: npx playwright install --with-deps chromium
+      - name: Install PostgreSQL 18 from fingerprint-checked upstream
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -q
+          sudo apt-get install -y ca-certificates curl gnupg postgresql-common
+          curl --fail --silent --show-error --proto '=https' --tlsv1.2 https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /tmp/aitrust-pgdg.asc
+          fingerprint=$(gpg --show-keys --with-colons /tmp/aitrust-pgdg.asc | awk -F: '$1=="fpr" { print $10; exit }')
+          test "$fingerprint" = B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+          sudo install -m 0644 /tmp/aitrust-pgdg.asc /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          printf '%s\n' 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main' | sudo tee /etc/apt/sources.list.d/aitrust-pgdg.list >/dev/null
+          printf '\ncreate_main_cluster = false\n' | sudo tee -a /etc/postgresql-common/createcluster.conf >/dev/null
+          sudo apt-get update -q
+          sudo apt-get install -y postgresql-18 postgresql-client-18 pgbackrest
+      - name: Fetch exact open-source provider archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --proto '=https' --tlsv1.2 https://github.com/keycloak/keycloak/releases/download/26.8.2/keycloak-26.8.2.tar.gz -o "$RUNNER_TEMP/aitrust-keycloak.tar.gz"
+          echo 'dd124787283918bc597628887168333465ee2a811a389e0003569e52be7e487f  '"$RUNNER_TEMP/aitrust-keycloak.tar.gz" | sha256sum -c -
+          mkdir -m 700 "$RUNNER_TEMP/aitrust-directory-provider"
+          tar -xzf "$RUNNER_TEMP/aitrust-keycloak.tar.gz" --strip-components=1 -C "$RUNNER_TEMP/aitrust-directory-provider"
+      - name: Exercise actual provider and audit access in a fresh network namespace
+        run: sudo unshare --net -- "$(command -v python)" scripts/verify-organization-directory.py --run-as "$(id -un)" --keycloak "$RUNNER_TEMP/aitrust-directory-provider" --output output/verification/organization-directory-linux.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: organization-directory-linux-software
+          path: output/verification/organization-directory-linux.json
+          if-no-files-found: error
+          retention-days: 7

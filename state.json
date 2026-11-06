@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-06T20:36:20.566565+00:00",
+  "updated": "2026-11-06T22:05:21.259636+00:00",
   "active_increment": "Agent-output F-158 full supported software acceptance; 74 full requirements open, target 60",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1093,7 +1093,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-06T20:36:20.566565+00:00",
+  "updated_at": "2026-11-06T22:05:21.259636+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2812,7 +2812,7 @@
     "release_approved": false
   },
   "agent_output_integration": {
-    "status": "macos_linux_and_private_view_accepted; protected_publication_pending",
+    "status": "protected_merge_and_live_publication_verified",
     "requirement": "F-158",
     "profile": "reviewed single-file Python stdio agent",
     "sources": "docs/agent-output-plan.md",
@@ -2830,7 +2830,8 @@
     "acceptance": "runs/2026-11-06-agent-integration-acceptance.json",
     "completed_by": "Codex",
     "completed_at": "2026-11-06T20:22:38.876039+00:00",
-    "publication_pending": true
+    "publication_pending": false,
+    "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
     "evidence": "runs/2026-11-06-conformance-protected-publication.json",
@@ -2845,5 +2846,16 @@
     "target_open": 60,
     "closures_needed": 14,
     "ledger": "docs/scope-progress.json"
+  },
+  "organization_directory": {
+    "status": "implemented_local_checks_only; actual_provider_pending",
+    "requirement": "F-162",
+    "profile": "operator-owned OIDC broker for private PostgreSQL audit records",
+    "plan": "docs/organization-directory-plan.md",
+    "local_evidence": "runs/2026-11-06-directory-local.json",
+    "hosted_login_enabled": false,
+    "collection_enabled": false,
+    "human_acceptance": false,
+    "independent_accuracy_evidence": false
   }
 }

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-220521-directory-local-progress-9f90631a",
+  "recorded_at": "2026-11-06T22:05:21.763706+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9f7cc7a55e84393331951ce2555efb3fd6739323",
+  "changed": "Record F-162 local implementation at 60 percent while retaining 74 open requirements and the full provider acceptance gate; link the actual preceding agent publication.",
+  "proves": "Thirty-seven source-bound local tests pass. All 202 task percentages and state counts remain consistent; no full requirement closure is granted before the real provider run.",
+  "limits": "No real Keycloak integration, production identity access, human acceptance or detector release is established.",
+  "scope_ids": [
+    "F-162",
+    "F-158"
+  ],
+  "files": {
+    ".github/workflows/organization-directory.yml": "ae0d5cc140b9074e1a5faea2e7203df823091a716a5a7d61959ae236deb4c477",
+    "docs/organization-directory-plan.md": "642e51ba64ef65c9a6a42e589210009c3a470aca91e24dd9d4d5322adfd391a5",
+    "docs/scope-progress.json": "006cf814dec76d5db005b17e1ce4ebf44857b11ae8ce6944f40cf15ae415d88a",
+    "docs/scope-progress.md": "950818b0d1bf48075350ed3a3e1cbbe9d2d6977941c65318881e34853f52bb93",
+    "docs/scope-task-index.md": "6d330f528f72ec7fa0d7f10a9b7378099ab0c2f5bacc292d40db83fdc31de18d",
+    "runs/2026-11-06-agent-protected-publication.json": "cf36394fa2e506968cdf3014c1660540d88e5e192b0bfdeba966faf5e30d27ef",
+    "runs/2026-11-06-directory-local.json": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9",
+    "scripts/directory-device-browser.cjs": "b9e3a888df7da67b36acc21ec5e7fcddb837f2bf621b5af1a86c35923fbd8c73",
+    "scripts/organization-directory.py": "a6bcbb0f2b643f7125a410007e70c9ddb6c4142b4f665a968cf9075c6d92b3c8",
+    "scripts/verify-organization-directory.py": "521dd3b04d988cf206a8db9f3d91f6fbcfa08c0c35a84ca6f28d5f39b944db11",
+    "state.json": "6b91a83b75efc8e57923f1de5b5320606e886b24015d5f2ccfacb91e1499f309",
+    "tests/test_organization_directory.py": "479efbc541fb96365d4fb1b3571beff91334d8db7be9e2efe0f512e439f03c80",
+    "tools/organization_directory.py": "bb1852ad53464fdd7210ffdf664754659fe85b71e6b9e52186d846649caba1f2",
+    "tools/organization_directory_lab.py": "8d2d4d7e11e2226dc0ff5878dcd373cfb58ebb324989cd31f0b0ca3b8550ef6f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-local.json",
+      "sha256": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9"
+    },
+    {
+      "path": "runs/2026-11-06-agent-protected-publication.json",
+      "sha256": "cf36394fa2e506968cdf3014c1660540d88e5e192b0bfdeba966faf5e30d27ef"
+    }
+  ],
+  "checks": []
+}
