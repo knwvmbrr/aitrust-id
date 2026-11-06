@@ -25,7 +25,13 @@ jobs:
       - name: Exercise local authorization and privacy failures
         run: python -m pytest tests/test_organization_directory.py -q
       - name: Use signed canonical Ubuntu sources for browser dependencies
-        run: python scripts/ci-ubuntu-mirror.py --plan output/verification/directory-browser-apt-plan.json --apply
+        env:
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
+        run: |
+          aitrust_apt_dir="$(mktemp -d "$RUNNER_TEMP/aitrust-apt.XXXXXXXX")"
+          AITRUST_CI_SOURCE_DIR="$aitrust_apt_dir" python3 scripts/ci-ubuntu-mirror.py --output "$aitrust_apt_dir/aitrust-ubuntu.sources"
+          sudo install -o root -g root -m 0644 -- "$aitrust_apt_dir/aitrust-ubuntu.sources" /etc/apt/sources.list.d/ubuntu.sources
       - name: Install the pinned browser engine
         timeout-minutes: 10
         run: npx playwright install --with-deps chromium

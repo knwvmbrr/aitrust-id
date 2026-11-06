@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-220621-directory-ci-consumer-contract-24c348b5",
+  "recorded_at": "2026-11-06T22:06:21.016205+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "19a74ee243cc2a50b4107147258d5920f34fe02e",
+  "changed": "Use the existing archive helper consumer contract and reviewed signed-source installation recipe in the new directory lab workflow.",
+  "proves": "Preflight inspection confirms the helper accepts --output, with disposable-runner environment checks; the workflow now supplies those exact inputs.",
+  "limits": "The initial workflow guessed unsupported --plan/--apply flags. This correction is not a successful provider run or a requirement closure.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    ".github/workflows/organization-directory.yml": "e6076ded7248914997ad7327bab21cae65646457adc4c54afc3e23a7dc2e6e51"
+  },
+  "evidence": [
+    {
+      "path": "scripts/ci-ubuntu-mirror.py",
+      "sha256": "433df28df2bded20badc5b8b7edccca5eac919376f8dd6532b51bc3230056669"
+    }
+  ],
+  "checks": []
+}

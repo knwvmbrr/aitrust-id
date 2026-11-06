@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-220621-directory-ci-consumer-contract-24c348b5
+
+Recorded 2026-11-06T22:06:21.016205+00:00 · Contributor: Codex · change
+
+- **Changed.** Use the existing archive helper consumer contract and reviewed signed-source installation recipe in the new directory lab workflow.
+- **Evidence.** Preflight inspection confirms the helper accepts --output, with disposable-runner environment checks; the workflow now supplies those exact inputs. [Change record](./runs/changes/2026-11-06-220621-directory-ci-consumer-contract-24c348b5.json).
+- **Not claimed.** The initial workflow guessed unsupported --plan/--apply flags. This correction is not a successful provider run or a requirement closure.
+
+
 ### 2026-11-06-220523-directory-partial-site-projections-1b7745ba
 
 Recorded 2026-11-06T22:05:23.350890+00:00 · Contributor: Codex · change
