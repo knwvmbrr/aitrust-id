@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-231252-directory-provider-array-contract-88e0326c",
+  "recorded_at": "2026-11-06T23:12:52.981095+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5a67401457b8fb1e856ba36282548fc4bf5bcdd7",
+  "changed": "Parse bounded provider JSON arrays under their own contract while retaining object-only audit admission and strict duplicate/nonfinite checks.",
+  "proves": "The actual provider reached the group-list API with HTTP 200; the reused audit parser correctly rejected arrays. Fifty-three local cases now cover valid current identity/group responses and bad issuer, audience, expiry, bindings and provider JSON.",
+  "limits": "The completed real provider workflow still must pass. No audit schema was loosened and F-162 is not marked complete.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "5d92ca8814ab4f994546dc9981ed5b1e2f0ce4afc6bee0c763c98fd62647652b",
+    "tests/test_organization_directory.py": "635d388175d5950fb60a3c6b4c9a4e26173135a42dafacaad3cf8bfeba1d34bc"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-06T23:12:53.396547+00:00"
+    }
+  ]
+}

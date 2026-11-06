@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-231252-directory-provider-array-contract-88e0326c
+
+Recorded 2026-11-06T23:12:52.981095+00:00 · Contributor: Codex · change
+
+- **Changed.** Parse bounded provider JSON arrays under their own contract while retaining object-only audit admission and strict duplicate/nonfinite checks.
+- **Evidence.** The actual provider reached the group-list API with HTTP 200; the reused audit parser correctly rejected arrays. Fifty-three local cases now cover valid current identity/group responses and bad issuer, audience, expiry, bindings and provider JSON. [Change record](./runs/changes/2026-11-06-231252-directory-provider-array-contract-88e0326c.json).
+- **Not claimed.** The completed real provider workflow still must pass. No audit schema was loosened and F-162 is not marked complete.
+
+
 ### 2026-11-06-230755-directory-least-privilege-memberships-61124a28
 
 Recorded 2026-11-06T23:07:55.220276+00:00 · Contributor: Codex · change

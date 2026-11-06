@@ -162,3 +162,35 @@ def test_private_material_in_another_git_checkout_is_refused(selected):
     with pytest.raises(Exception):d.config(target)
     cfg['state_file']=str(other_checkout/'state.sqlite');path.write_bytes(d.encoded(cfg))
     with pytest.raises(Exception):d.config(path)
+
+
+def test_provider_arrays_use_the_network_contract_without_relaxing_audit_records():
+    assert d.provider_json(b'[{"id":"group"}]')==[{'id':'group'}]
+    with pytest.raises(Exception):d.parse(b'[{"id":"group"}]')
+
+@pytest.mark.parametrize('raw',[b'null',b'123',b'{"active":true,"active":false}',b'{"score":NaN}',b'\xff',b'['+b' '*262144+b']'])
+def test_provider_json_refuses_ambiguous_unbounded_or_nonfinite_input(raw):
+    with pytest.raises(Exception):d.provider_json(raw)
+
+def network_fixture(selected,**token_overrides):
+    cfg,path,sub,other,root=selected
+    provider=d.Provider(d.config(path));base=cfg['issuer']
+    metadata={'issuer':base,'device_authorization_endpoint':base+'/device','token_endpoint':base+'/token','introspection_endpoint':base+'/introspect','revocation_endpoint':base+'/revoke'}
+    token={'active':True,'iss':base,'client_id':cfg['client_id'],'aud':[cfg['client_id']],'exp':int(time.time())+300,'iat':int(time.time())-1,'sub':sub,**token_overrides}
+    def read(url,fields=None,bearer=None,**kwargs):
+        if url.endswith('openid-configuration'):return d.provider_json(d.encoded(metadata))
+        if url.endswith('/introspect'):return d.provider_json(d.encoded(token))
+        if url.endswith('/token'):return d.provider_json(b'{"access_token":"synthetic-service-token"}')
+        if url.endswith('/groups'):return d.provider_json(d.encoded([{'id':cfg['role_groups']['view'],'name':'an-editable-name-is-not-a-key'}]))
+        return d.provider_json(d.encoded({'id':sub,'enabled':True}))
+    provider.request=read
+    return provider
+
+def test_complete_provider_contract_accepts_group_array_and_immutable_group_binding(selected):
+    provider=network_fixture(selected);sub,issued,roles=provider.current('synthetic-user-token')
+    assert sub==selected[2] and roles=={d.ROLES['view']}
+
+@pytest.mark.parametrize('overrides',[{'active':False},{'iss':'https://another.example/realms/test'},{'client_id':'another-client'},{'aud':['another-client']},{'exp':0},{'iat':int(time.time())-1000},{'sub':str(uuid.uuid4())}])
+def test_complete_provider_contract_rejects_bad_identity_or_timing(selected,overrides):
+    provider=network_fixture(selected,**overrides)
+    with pytest.raises(Exception):provider.current('synthetic-user-token')

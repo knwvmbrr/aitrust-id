@@ -7,6 +7,7 @@ from urllib.request import Request,build_opener,ProxyHandler,HTTPRedirectHandler
 from tools.organization_audit import ROOT,parse,encoded,require,digest
 from tools.organization_audit_store import private_file as audit_private_file,Store
 from tools.blind_review_io import directory,create
+from protocol.evidence import unique,reject,finite
 
 def outside_git(path):
     path=Path(path).absolute()
@@ -59,6 +60,11 @@ def config(path):
     with directory(p.parent,ROOT):pass
     return d
 
+def provider_json(raw):
+    check(type(raw) is bytes and 0<len(raw)<=262144)
+    value=json.loads(raw.decode('utf-8','strict'),object_pairs_hook=unique,parse_constant=reject)
+    finite(value);check(type(value) in (dict,list));return value
+
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs):raise Refused('Organization access unavailable')
 
@@ -83,7 +89,7 @@ class Provider:
                 self.last_status=response.status
                 check(response.status==200 and response.geturl()==url)
                 raw=response.read(262145)
-                return {} if allow_empty and raw==b'' else parse(raw,262144)
+                return {} if allow_empty and raw==b'' else provider_json(raw)
         except Exception as error:
             self.last_status=getattr(error,'code',self.last_status)
             raise Refused('Organization access unavailable') from None
