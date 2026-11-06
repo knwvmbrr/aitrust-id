@@ -165,3 +165,5 @@ Access-event pseudonyms and token hashes are linkable metadata, not anonymizatio
 No token, directory name, email, answer text or arbitrary notes go into the event
 journal. Event expiry is local and bounded; separately held backups and exports
 need the operator's retention policy. No training collection is enabled.
+
+Output destinations are checked against every Git checkout before any provider request. The private SQLite journal uses metadata-only ownership and permission checks with a 32 MiB capacity bound, rather than the 2 MB configuration-file reader. Its bounded 10,000-event and 10,000-logout history can reach rollover and owner recovery without locking the journal.

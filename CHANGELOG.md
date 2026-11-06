@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-235931-directory-final-reviewed-publication-e750ef3d
+
+Recorded 2026-11-06T23:59:31.638893+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish the current-source publication packet for the repaired directory workflow and preserve 73 open requirements.
+- **Evidence.** The actual repaired provider run, 68 focused control/evidence cases, all five capability checks and the personal boundary review pass on the current source. [Change record](./runs/changes/2026-11-06-235931-directory-final-reviewed-publication-e750ef3d.json).
+- **Not claimed.** No hosted SSO, human/independent-security acceptance, statistical tag approval, new public intake or additional tag is enabled.
+
+
+### 2026-11-06-235603-directory-reviewed-projections-and-run-binding-c512fbf1
+
+Recorded 2026-11-06T23:56:03.020677+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh generated directory references and bind the acceptance packet workflow number to its actual repaired source commit.
+- **Evidence.** The current SSO guide and source guards use the repaired provider evidence, with prior packets retained as superseded history. [Change record](./runs/changes/2026-11-06-235603-directory-reviewed-projections-and-run-binding-c512fbf1.json).
+- **Not claimed.** No hosted service, human acceptance, independent security review, tag accuracy approval or collection is claimed.
+
+
+### 2026-11-06-235534-directory-reviewed-current-acceptance-849b7d04
+
+Recorded 2026-11-06T23:55:34.393933+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind directory completion to the repaired 57-case source and a fresh real-provider Linux run, retaining prior evidence as history.
+- **Evidence.** Both review findings are repaired; the 27 actual controls pass on reviewed source, with 129 complete and 73 open requirements preserved. [Change record](./runs/changes/2026-11-06-235534-directory-reviewed-current-acceptance-849b7d04.json).
+- **Not claimed.** No hosted login, human acceptance, independent security certification, new tag release or real-data collection is enabled.
+
+
 ### 2026-11-06-235204-directory-review-output-and-journal-5884da94
 
 Recorded 2026-11-06T23:52:04.675706+00:00 · Contributor: Codex · change

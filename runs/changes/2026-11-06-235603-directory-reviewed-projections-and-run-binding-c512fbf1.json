@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-235603-directory-reviewed-projections-and-run-binding-c512fbf1",
+  "recorded_at": "2026-11-06T23:56:03.020677+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9cf2d5cc4db5b3ce6a9e859be23262184af42840",
+  "changed": "Refresh generated directory references and bind the acceptance packet workflow number to its actual repaired source commit.",
+  "proves": "The current SSO guide and source guards use the repaired provider evidence, with prior packets retained as superseded history.",
+  "limits": "No hosted service, human acceptance, independent security review, tag accuracy approval or collection is claimed.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "docs/scope-progress.json": "bf12a3d9988926b5186498f82e5ec7406839ebcfed46e1ed1385b616339d04bd",
+    "docs/scope-progress.md": "fa22a550bf5204ce6ee8e23b66ac1a26f0ae16746f161f0810e39fb38fbeec6d",
+    "eval/revalidation.json": "d0916cec4b84f3d6aefb04dd200a8cfd8889f45274e5337877a46201007378cc",
+    "runs/2026-11-06-directory-final-acceptance.json": "a0af3113eba8daa316558f41b46fc0a996f2b5a6c58c0ae6e97c443cf8462e68",
+    "runs/2026-11-06-directory-reviewed-acceptance.json": "ecd1d67aa579eb6597b4f18a0e3ce85812ba5669f53d9a457c733db7d7bcff5a",
+    "runs/2026-11-06-directory-reviewed-linux.json": "e5f637606b6a2b293a3c4e3565f73c89dcd54368c19b25e1e787f6863767bee8",
+    "scripts/verify-enterprise.cjs": "26305fffc05a2eefd942867b3c6f847aae42d6b9c7135d56e9c2e61c30fe63b6",
+    "scripts/verify-organization-directory-evidence.py": "35385a3d923d9d91df9f7e4032cfa2ae63032db0fdc674195663796dc3edbfe5",
+    "scripts/verify-route-boundaries.py": "0b087852b47a108d94a91eceb69e862de946818584811a7a82c9b6db8bcc3ab2",
+    "site/index.html": "2c33f3ecaf57b563a9a61f1e7e9b6051fb5a1ed123973e6d960a6de388faf1d1",
+    "site/public/reference/directory-software-linux.json": "e5f637606b6a2b293a3c4e3565f73c89dcd54368c19b25e1e787f6863767bee8",
+    "site/public/reference/organization-directory.md": "9f9ebfd3cdefe08f3f26dc47a8231363b460ab9bc88e84b551c107aa2cf8fba0",
+    "site/public/reference/public-scope.json": "3d4378228b4726bc61eb7c17d625be31c4df677df393845788d0a43b937dbf38",
+    "site/scripts/prepare.mjs": "f226d4b6fc8c517299a19b613aa74dc3861c9377e671c69ab469990e513ced1f",
+    "site/scripts/render-reference.mjs": "dd698044b8048904399aa4157feba0d90d275507202669e47d7acbb904a1a3ea",
+    "site/src/catalog.js": "39e09eba0bc30aa8f2ce78917e33d5d08a99272259d2a6d4fd68c33779e9f747",
+    "site/src/public-scope.json": "3d4378228b4726bc61eb7c17d625be31c4df677df393845788d0a43b937dbf38",
+    "site/src/scope-manifest.json": "5be3649d55f57166b4ddb9d3887bdcf5217fe25c04149504e57550d610583300",
+    "state.json": "a80b70f033041f2d8c45d38a2d5051e4e4d4b29a666b81cadab44893882c784d",
+    "tests/test_organization_directory_evidence.py": "7d40a5d5e0fef0ae9bf8885b6c4084bb7d4811a19f6ff280e1869de906800f21"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-reviewed-linux.json",
+      "sha256": "e5f637606b6a2b293a3c4e3565f73c89dcd54368c19b25e1e787f6863767bee8"
+    },
+    {
+      "path": "runs/2026-11-06-directory-final-acceptance.json",
+      "sha256": "a0af3113eba8daa316558f41b46fc0a996f2b5a6c58c0ae6e97c443cf8462e68"
+    }
+  ],
+  "checks": []
+}

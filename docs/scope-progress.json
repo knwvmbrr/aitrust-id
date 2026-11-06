@@ -6704,12 +6704,13 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-11-06T23:27:46.466440+00:00",
+      "audited_at": "2026-11-06T23:55:34.289380+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
         "Codex \u2014 organization directory broker and local boundary checks, 2026-11-06T22:05:21.259636+00:00",
-        "Codex \u2014 real OIDC group/directory, private audit integration and software acceptance, 2026-11-06T23:27:46.466440+00:00"
+        "Codex \u2014 real OIDC group/directory, private audit integration and software acceptance, 2026-11-06T23:27:46.466440+00:00",
+        "Codex \u2014 pre-merge output and journal review repairs; 57 local cases and 27 current-source real-provider controls, 2026-11-06T23:55:34.289380+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -6717,7 +6718,7 @@
       "completed_by": [
         "Codex"
       ],
-      "completed_at": "2026-11-06T23:27:46.466440+00:00",
+      "completed_at": "2026-11-06T23:55:34.289380+00:00",
       "completion_timestamp_basis": "Current source-bound local and actual isolated provider/database software acceptance verified now; not an invented historical finish.",
       "next_fix": null,
       "next_owner": null,
@@ -6732,10 +6733,12 @@
         "tests/test_organization_directory.py",
         "runs/2026-11-06-directory-local.json",
         "docs/organization-directory.md",
-        "runs/2026-11-06-directory-final-linux.json",
+        "runs/2026-11-06-directory-reviewed-linux.json",
         "scripts/verify-organization-directory-evidence.py",
         "tests/test_organization_directory_evidence.py",
-        "runs/2026-11-06-directory-software-acceptance.json"
+        "runs/2026-11-06-directory-software-acceptance.json",
+        "runs/2026-11-06-directory-reviewed-linux.json",
+        "runs/2026-11-06-directory-reviewed-acceptance.json"
       ],
       "evidence_scope": "Complete supported operator-owned Linux software profile: 27 actual pinned-HTTPS Keycloak/PostgreSQL controls, 53 local boundaries, separate private logout and owner recovery; no hosted service, independent detector or human acceptance inferred.",
       "required_acceptance": [],
@@ -9629,7 +9632,7 @@
         "docs/scope-delivery.md#org-sso",
         "docs/organization-directory.md",
         "runs/2026-11-06-directory-software-acceptance.json",
-        "runs/2026-11-06-directory-final-linux.json"
+        "runs/2026-11-06-directory-reviewed-linux.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "required_acceptance": [

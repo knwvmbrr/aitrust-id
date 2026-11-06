@@ -158,7 +158,7 @@ PATTERNS += ('tools/reference_revision.py','scripts/review-reference-revision.py
 
 PATTERNS += ('scripts/scope-progress.py', 'tests/test_scope_render_command.py', 'docs/scope-render-plan.md')
 
-PATTERNS += ('tools/organization_directory.py', 'tools/organization_directory_lab.py', 'scripts/organization-directory.py', 'scripts/verify-organization-directory.py', 'scripts/verify-organization-directory-evidence.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory.py', 'tests/test_organization_directory_evidence.py', 'docs/organization-directory-plan.md', 'docs/organization-directory.md', '.github/workflows/organization-directory.yml', 'runs/2026-11-06-directory-final-linux.json')
+PATTERNS += ('tools/organization_directory.py', 'tools/organization_directory_lab.py', 'scripts/organization-directory.py', 'scripts/verify-organization-directory.py', 'scripts/verify-organization-directory-evidence.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory.py', 'tests/test_organization_directory_evidence.py', 'docs/organization-directory-plan.md', 'docs/organization-directory.md', '.github/workflows/organization-directory.yml', 'runs/2026-11-06-directory-reviewed-linux.json')
 
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',

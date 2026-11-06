@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-235534-directory-reviewed-current-acceptance-849b7d04",
+  "recorded_at": "2026-11-06T23:55:34.393933+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9cf2d5cc4db5b3ce6a9e859be23262184af42840",
+  "changed": "Bind directory completion to the repaired 57-case source and a fresh real-provider Linux run, retaining prior evidence as history.",
+  "proves": "Both review findings are repaired; the 27 actual controls pass on reviewed source, with 129 complete and 73 open requirements preserved.",
+  "limits": "No hosted login, human acceptance, independent security certification, new tag release or real-data collection is enabled.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "docs/scope-progress.json": "bf12a3d9988926b5186498f82e5ec7406839ebcfed46e1ed1385b616339d04bd",
+    "docs/scope-progress.md": "fa22a550bf5204ce6ee8e23b66ac1a26f0ae16746f161f0810e39fb38fbeec6d",
+    "eval/revalidation.json": "d0916cec4b84f3d6aefb04dd200a8cfd8889f45274e5337877a46201007378cc",
+    "runs/2026-11-06-directory-reviewed-acceptance.json": "ecd1d67aa579eb6597b4f18a0e3ce85812ba5669f53d9a457c733db7d7bcff5a",
+    "runs/2026-11-06-directory-reviewed-linux.json": "e5f637606b6a2b293a3c4e3565f73c89dcd54368c19b25e1e787f6863767bee8",
+    "scripts/verify-organization-directory-evidence.py": "35385a3d923d9d91df9f7e4032cfa2ae63032db0fdc674195663796dc3edbfe5",
+    "scripts/verify-route-boundaries.py": "0b087852b47a108d94a91eceb69e862de946818584811a7a82c9b6db8bcc3ab2",
+    "site/scripts/prepare.mjs": "f226d4b6fc8c517299a19b613aa74dc3861c9377e671c69ab469990e513ced1f",
+    "site/src/catalog.js": "39e09eba0bc30aa8f2ce78917e33d5d08a99272259d2a6d4fd68c33779e9f747",
+    "state.json": "015179b49cf5e20f1dc7806d42e09936520aa96b921be4a93af3aba9b549aadb",
+    "tests/test_organization_directory_evidence.py": "7d40a5d5e0fef0ae9bf8885b6c4084bb7d4811a19f6ff280e1869de906800f21"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-reviewed-linux.json",
+      "sha256": "e5f637606b6a2b293a3c4e3565f73c89dcd54368c19b25e1e787f6863767bee8"
+    },
+    {
+      "path": "runs/2026-11-06-directory-reviewed-acceptance.json",
+      "sha256": "ecd1d67aa579eb6597b4f18a0e3ce85812ba5669f53d9a457c733db7d7bcff5a"
+    }
+  ],
+  "checks": []
+}
