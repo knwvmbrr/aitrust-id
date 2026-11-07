@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-004609-directory-real-provider-clock-skew-control-022276a2",
+  "recorded_at": "2026-11-07T00:46:09.510400+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "265411977eeabbab69f5c9861e732f06fbdb8b7e",
+  "changed": "Exercise clock-skew fencing against real Keycloak tokens by applying a controlled four-second lag only to the broker process.",
+  "proves": "The compiled source contract requires a real provider-issued future timestamp to be accepted and its older session refused after recovery, followed by a valid fresh login.",
+  "limits": "The actual current-source provider run is pending. This fault injection does not measure two independent physical host clocks or grant publication acceptance.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory_lab.py": "19ba8958fec2e76508d81c0dc0b25d46eb0ee4cffc7a33adeb2646a88f5037cc",
+    "scripts/verify-organization-directory-evidence.py": "a231ed4dceadafe94690e0aa434829ce328f49da313ffa882c56df3a4d5e1d68",
+    "docs/directory-clock-fence-plan.md": "371c74edd2a15b52710c44d8d22a2ab8cd87a501798b4ec3a3df719971a77285"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "tools/organization_directory_lab.py",
+        "scripts/verify-organization-directory-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-07T00:46:09.569361+00:00"
+    }
+  ]
+}

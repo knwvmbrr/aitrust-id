@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-005223-directory-login-wait-both-clock-directions-b05b5949",
+  "recorded_at": "2026-11-07T00:52:23.712108+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "13e48a1e1977a0b239f3931ff316a928aaff38a1",
+  "changed": "Expose a conservative twelve-second fresh-login wait that covers the accepted clock difference in either direction after recovery.",
+  "proves": "All 61 focused directory controls pass, including both future issue boundaries, both fresh-login clock directions and populated logout rollover.",
+  "limits": "Current-source real-provider execution is still required. No hosted sign-in, personal-account gate or additional directory privilege is introduced.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "7c294b80142eb25f583f2e5566bc91dbc8bf92ff86ccb8d175f62e1718cec47f",
+    "tools/organization_directory_lab.py": "4f58501f705df9a917675d53eb6adae52899b3753828c4138a628ea5184f0209",
+    "tests/test_organization_directory.py": "03604f5f97cdce371e5de9b08a637c82055e6f0e92a5a4351633f0bb3e691de6",
+    "docs/organization-directory.md": "03d9aafc07df1b2fb9235429c8f4e0c82f3935cc6b34ebf8d332e5506393763e",
+    "docs/directory-clock-fence-plan.md": "4e88a0338de2c64adee8090bd4f3c8bd0e8447ef70e0b821a73564a4c47a0874"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-07T00:52:24.292098+00:00"
+    }
+  ]
+}

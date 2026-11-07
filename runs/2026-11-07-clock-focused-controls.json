@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-11-07T01:01:29.592717+00:00",
+  "pass": true,
+  "directory_cases": 61,
+  "evidence_guard_cases": 11,
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests/test_organization_directory.py",
+    "tests/test_organization_directory_evidence.py",
+    "-q"
+  ],
+  "stdout_sha256": "e8f82efce8e4ea19b44526b676707f7750ef22d2b669eebcf1c6ea9a5b1fb40b",
+  "sources": {
+    "tools/organization_directory.py": "7c294b80142eb25f583f2e5566bc91dbc8bf92ff86ccb8d175f62e1718cec47f",
+    "tools/organization_directory_lab.py": "4f58501f705df9a917675d53eb6adae52899b3753828c4138a628ea5184f0209",
+    "tests/test_organization_directory.py": "03604f5f97cdce371e5de9b08a637c82055e6f0e92a5a4351633f0bb3e691de6",
+    "scripts/verify-organization-directory-evidence.py": "39080a21d01bb61ef15ee250cfb507f96088955b2a5dec6744bcc7920e1b0eae",
+    "tests/test_organization_directory_evidence.py": "aa2e0db5f5e4e4709eb660f72558516ad1570cb32df5700f0e009d7daa45c2b7"
+  },
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false
+}

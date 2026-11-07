@@ -109,11 +109,11 @@ def test_local_logout_survives_provider_outage_and_process_restart(selected):
     with pytest.raises(Exception):b.dispatch(request(selected))
     assert s.opened==0
 
-def test_compromised_admin_recovery_fences_old_tokens_and_cannot_be_undone_by_configure(selected):
+def test_compromised_admin_recovery_fences_old_tokens_and_cannot_be_undone_by_configure(selected,monkeypatch):
     b,p,s=prepared(selected,[d.ROLES['configure']]);old=selected[2];p.sub=selected[3]
     b.journal.recover(old,'replacement-session',p)
     with pytest.raises(Exception):b.dispatch(request(selected,'configure',{'subject':old,'action':'restore'}))
-    p.issued=int(time.time())+1
+    later=int(time.time())+d.CLOCK_SKEW_SECONDS+2;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later
     with pytest.raises(Exception):b.dispatch(request(selected,'configure',{'subject':old,'action':'restore'}))
     p.sub=old
     with pytest.raises(Exception):b.dispatch(request(selected,'configure',{'subject':selected[3],'action':'revoke'}))
@@ -210,16 +210,41 @@ def test_cli_refuses_other_checkout_output_before_provider_or_credentials(select
     assert 'organization_directory_contract_refused' in capsys.readouterr().err
 
 
-def test_busy_logout_journal_can_roll_over_and_recover(selected):
+def test_busy_logout_journal_can_roll_over_and_recover(selected,monkeypatch):
     b,p,s=prepared(selected,[d.ROLES['configure']]);now=int(time.time())
     with b.journal.db() as db:
-        db.executemany('INSERT INTO logged_out VALUES(?,?)',[(d.digest(str(i).encode()),now) for i in range(10000)])
+        db.executemany('INSERT INTO logged_out VALUES(?,?)',[(d.digest(('previously-logged-out-token' if i==0 else str(i)).encode()),now) for i in range(10000)])
         db.executemany('INSERT INTO events(at,actor,operation,outcome) VALUES(?,?,?,?)',[(now,'a'*64,'configure','allowed') for _ in range(10000)])
     assert Path(selected[0]['state_file']).stat().st_size>2_000_000
     assert b.journal.logout('additional-realistic-token')=={'local_logout':True}
-    p.issued=now+1
+    with b.journal.db() as db:
+        with pytest.raises(d.Refused):b.journal.allowed(db,selected[2],'previously-logged-out-token',now+3)
+    later=now+d.CLOCK_SKEW_SECONDS+2;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later
     result=b.journal.recover(selected[3],'fresh-replacement-token',p)
     assert result['recovered'] is True
     with b.journal.db() as db:
         assert db.execute('SELECT count(*) FROM logged_out').fetchone()[0]==1
         assert db.execute('SELECT count(*) FROM events').fetchone()[0]<=10000
+
+
+@pytest.mark.parametrize('skew',[1,5])
+def test_recovery_fence_covers_the_provider_accepted_future_issue_interval(selected,monkeypatch,skew):
+    now=int(time.time());monkeypatch.setattr(d.time,'time',lambda:now)
+    # The same provider contract explicitly accepts this issue timestamp.
+    _,issued,_=network_fixture(selected,iat=now+skew).current('synthetic-clock-token')
+    assert issued==now+skew
+    b,p,s=prepared(selected,[d.ROLES['configure'],d.ROLES['view']]);p.issued=issued
+    b.journal.recover(selected[3],'pre-recovery-session',p)
+    with pytest.raises(d.Refused):b.dispatch(request(selected,token='pre-recovery-session'))
+    later=now+d.CLOCK_SKEW_SECONDS+2;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later
+    assert b.dispatch(request(selected,token='fresh-after-fence'))['records']==[]
+
+
+@pytest.mark.parametrize('issuer_offset',[-5,5])
+def test_documented_login_wait_covers_either_clock_direction(selected,monkeypatch,issuer_offset):
+    now=int(time.time());monkeypatch.setattr(d.time,'time',lambda:now)
+    b,p,s=prepared(selected,[d.ROLES['configure'],d.ROLES['view']]);result=b.journal.recover(selected[3],'old-session',p)
+    assert result['new_login_wait_seconds']==d.LOGIN_WAIT_SECONDS==12
+    later=now+d.LOGIN_WAIT_SECONDS;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later+issuer_offset
+    assert network_fixture(selected,iat=p.issued).current('fresh-provider-token')[1]==p.issued
+    assert b.dispatch(request(selected,token='fresh-login'))['records']==[]

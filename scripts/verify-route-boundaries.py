@@ -158,7 +158,7 @@ PATTERNS += ('tools/reference_revision.py','scripts/review-reference-revision.py
 
 PATTERNS += ('scripts/scope-progress.py', 'tests/test_scope_render_command.py', 'docs/scope-render-plan.md')
 
-PATTERNS += ('tools/organization_directory.py', 'tools/organization_directory_lab.py', 'scripts/organization-directory.py', 'scripts/verify-organization-directory.py', 'scripts/verify-organization-directory-evidence.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory.py', 'tests/test_organization_directory_evidence.py', 'docs/organization-directory-plan.md', 'docs/organization-directory.md', '.github/workflows/organization-directory.yml', 'runs/2026-11-06-directory-reviewed-linux.json')
+PATTERNS += ('tools/organization_directory.py', 'tools/organization_directory_lab.py', 'scripts/organization-directory.py', 'scripts/verify-organization-directory.py', 'scripts/verify-organization-directory-evidence.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory.py', 'tests/test_organization_directory_evidence.py', 'docs/organization-directory-plan.md', 'docs/organization-directory.md', '.github/workflows/organization-directory.yml', 'runs/2026-11-07-directory-clock-linux.json')
 
 RULES = ('X-01', 'X-03', 'X-04', 'X-06', 'X-08', 'X-12', 'X-14', 'X-15', 'N-007', 'N-008')
 DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
@@ -227,6 +227,8 @@ PATTERNS += ('tools/research_admission.py','scripts/research-admission.py','scri
 PATTERNS += ('deploy/recovery/*.py', 'scripts/verify-host-recovery-evidence.py', 'tests/test_recovery_stream_boundary.py', 'tests/test_host_recovery_evidence.py', 'docs/full-host-recovery-plan.md', 'docs/security-operations.md', 'runs/2026-11-07-host-reviewed-acceptance.json', 'runs/2026-11-07-host-reviewed-guards.json', 'runs/2026-11-07-recovery-source-binding.json', 'runs/2026-11-07-adapter-incident-exercise.json', 'runs/2026-11-07-security-channel-status.json', 'runs/2026-11-07-security-reviewed-acceptance.json')
 
 PATTERNS += ('runs/2026-11-07-recovery-cache-reuse-linux.json',)
+
+PATTERNS += ('docs/directory-clock-fence-plan.md',)
 
 def inventory(root):
     found = {}

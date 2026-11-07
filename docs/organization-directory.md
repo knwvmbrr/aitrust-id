@@ -167,3 +167,7 @@ journal. Event expiry is local and bounded; separately held backups and exports
 need the operator's retention policy. No training collection is enabled.
 
 Output destinations are checked against every Git checkout before any provider request. The private SQLite journal uses metadata-only ownership and permission checks with a 32 MiB capacity bound, rather than the 2 MB configuration-file reader. Its bounded 10,000-event and 10,000-logout history can reach rollover and owner recovery without locking the journal.
+
+After owner recovery or a bulk logout-journal rollover, wait at least twelve seconds and sign in again. The fence covers the provider contract’s full five-second issue-time tolerance, including older tokens timestamped slightly ahead. Keep provider and broker clocks synchronized within that tolerance; a clock outside it is unsupported. No personal checker waits on this directory fence.
+
+The recovery result includes `new_login_wait_seconds`. Twelve seconds covers the accepted clock difference in either direction under stable clocks. If a fresh login remains unavailable, check clock synchronization rather than weakening the fence.

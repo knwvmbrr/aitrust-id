@@ -55,7 +55,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      assert(await use.getByRole('link',{name:'Organization sign-in guide',exact:true}).getAttribute('href')==='/reference/organization-directory.md','SSO guide route missing');
      assert(await use.getByRole('link',{name:'Download source',exact:true}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','SSO source route missing');
      const guide=await context.request.get(base+'/reference/organization-directory.md');assert(guide.status()===200&&(await guide.text()).includes('Keycloak'),'SSO guide unavailable');
-     const receipt=await context.request.get(base+'/reference/directory-software-linux.json');assert(receipt.status()===200,'SSO software evidence missing');const proof=await receipt.json();assert(proof.pass===true&&proof.controls.length===27&&proof.controls.every(row=>row.pass===true)&&proof.independent_accuracy_evidence===false,'SSO software evidence incomplete or overstated');
+     const receipt=await context.request.get(base+'/reference/directory-software-linux.json');assert(receipt.status()===200,'SSO software evidence missing');const proof=await receipt.json();assert(proof.pass===true&&proof.controls.length===28&&proof.controls.every(row=>row.pass===true)&&proof.independent_accuracy_evidence===false,'SSO software evidence incomplete or overstated');
      assert((await dialog.locator('[data-tag-availability]').innerText()).includes('No team service'),'SSO software confused with a hosted service');
     }
     if(id==='audit'){

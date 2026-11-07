@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-004757-directory-clock-control-cause-check-aaa83122",
+  "recorded_at": "2026-11-07T00:47:57.336246+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ecdab9fb62d422f113527d55ee1c35415e2fa34b",
+  "changed": "Require the real clock-skew case to reach an authorized provider identity and a fence at or beyond the older token issue time.",
+  "proves": "The compiled acceptance control cannot credit a provider outage as successful local recovery fencing.",
+  "limits": "Actual execution remains pending; this is a source-contract check only.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory_lab.py": "c6ccd2f70af3dabd0823d5d0d45b023b51635630e39eb635b0f1020fdc63b5ea"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "tools/organization_directory_lab.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-07T00:47:57.396150+00:00"
+    }
+  ]
+}

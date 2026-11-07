@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-004339-directory-clock-skew-fence-912433db",
+  "recorded_at": "2026-11-07T00:43:39.873149+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ce6c396ae69a2cba5405cd8a4fe530834333ddbc",
+  "changed": "Fence recovery and logout rollover beyond the provider contract\u2019s full accepted issue-time skew, and require a fresh login after the fence.",
+  "proves": "The 59-case focused suite covers both accepted future-time boundaries and prevents a previously logged-out token from reappearing after a 10000-entry rollover.",
+  "limits": "The earlier current-source provider receipt is stale for this repair. A fresh real provider run and protected acceptance are required before publication; no hosted service or personal dependency is added.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "29be74244148dc089a27e2bcd24ff7e51cf45e8dc6f019f002a67aac8ca1ba74",
+    "tools/organization_directory_lab.py": "524ca834fb7d21bca1fe5c254b4c30ef402dd0141fdf44187a230865849fd3fa",
+    "tests/test_organization_directory.py": "4103e1dbfdba26d37a0c2b9d471d71178831c1e930a1e6297109fc532a118644",
+    "docs/organization-directory.md": "f3947bd79ab05f74c1e834d763d9705009d4032b30aafd9d5a951743d76d6027",
+    "docs/directory-clock-fence-plan.md": "52d4734e7a4ae162ad48b2882ad34ee5bf8c801d5bd1abb42d8f855cd2fed2fe"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-07T00:43:40.429023+00:00"
+    }
+  ]
+}

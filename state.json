@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-07T00:28:09.781655+00:00",
+  "updated": "2026-11-07T01:01:29.929506+00:00",
   "active_increment": "Organization directory software accepted; 73 open requirements; continue toward 60 and skip owner-dependent gates.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -387,7 +387,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "25 actual full-host controls, 49 injected consumer cases, 9 actual private Linux cache controls, 14 current-source recovery guards and 19 evidence/closure checks. Empty source application database; no full current-source VM rerun, independent accuracy or human acceptance inferred.",
+  "python_tests_scope": "61 directory controls and 11 evidence guards; 28 actual isolated Linux provider/database controls include a controlled broker clock offset. Counts do not grant independent tag accuracy or human acceptance.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -759,7 +759,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-07T00:08:18.657583+00:00",
+    "audited_at": "2026-11-07T00:56:16.927454+00:00",
     "completed_records": 130,
     "open_records": 72,
     "records_preserved": 202,
@@ -775,7 +775,7 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/security-operations.md",
+    "latest_increment": "docs/directory-clock-fence-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
@@ -785,13 +785,11 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-07-security-reviewed-acceptance.json",
+    "current_target_verification": "runs/2026-11-07-directory-clock-acceptance.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-11-06",
-    "latest_increment_completed_ids": [
-      "F-073"
-    ],
+    "latest_increment_completed_ids": [],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
       {
@@ -806,7 +804,7 @@
         "reason": "Owner changed immediate target from 45 to 60; preserve full scope and acceptance."
       }
     ],
-    "latest_increment_publication": "runs/2026-10-15-organization-audit-protected-publication.json"
+    "latest_increment_publication": "runs/2026-11-07-scope-72-live-publication.json"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1085,15 +1083,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-07-recovery-reviewed-PS.json",
-    "PII_REDACTED": "runs/2026-11-07-recovery-reviewed-PII_REDACTED.json",
-    "protocol": "runs/2026-11-07-recovery-reviewed-protocol.json",
-    "extension": "runs/2026-11-07-recovery-reviewed-extension.json",
-    "website": "runs/2026-11-07-recovery-reviewed-website.json",
+    "PS": "runs/2026-11-07-clock-final-PS.json",
+    "PII_REDACTED": "runs/2026-11-07-clock-final-PII_REDACTED.json",
+    "protocol": "runs/2026-11-07-clock-final-protocol.json",
+    "extension": "runs/2026-11-07-clock-final-extension.json",
+    "website": "runs/2026-11-07-clock-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-07T00:28:09.781655+00:00",
+  "updated_at": "2026-11-07T01:01:29.929506+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2848,27 +2846,29 @@
     "ledger": "docs/scope-progress.json"
   },
   "organization_directory": {
-    "status": "source_bound_real_provider_software_accepted; protected_merge_verified; publication_pending",
+    "status": "clock_skew_fence_repaired_and_current_real_provider_accepted; protected_publication_pending",
     "requirement": "F-162",
     "profile": "operator-owned OIDC broker for private PostgreSQL audit records",
     "plan": "docs/organization-directory-plan.md",
-    "local_evidence": "runs/2026-11-07-directory-reviewed-focused.json",
+    "local_evidence": "runs/2026-11-07-clock-focused-controls.json",
     "hosted_login_enabled": false,
     "collection_enabled": false,
     "human_acceptance": false,
     "independent_accuracy_evidence": false,
-    "local_cases": 57,
-    "actual_provider_controls": 27,
-    "linux_evidence": "runs/2026-11-06-directory-reviewed-linux.json",
-    "acceptance": "runs/2026-11-06-directory-final-acceptance.json",
+    "local_cases": 61,
+    "actual_provider_controls": 28,
+    "linux_evidence": "runs/2026-11-07-directory-clock-linux.json",
+    "acceptance": "runs/2026-11-07-directory-clock-acceptance.json",
     "guide": "docs/organization-directory.md",
-    "completed_at": "2026-11-06T23:55:34.289380+00:00",
+    "completed_at": "2026-11-07T00:56:16.927454+00:00",
     "completed_by": "Codex",
     "publication_pending": true,
-    "protected_merge_evidence": "runs/2026-11-07-directory-protected-merge.json"
+    "protected_merge_evidence": "runs/2026-11-07-directory-protected-merge.json",
+    "clock_skew_seconds": 5,
+    "new_login_wait_seconds": 12
   },
   "recovery_operations": {
-    "status": "supported_security_reporting_response_and_recovery_profile_accepted; publication_pending",
+    "status": "supported_security_reporting_response_and_recovery_profile_accepted; live_publication_verified",
     "requirement": "F-073",
     "accountable_operator": "Michael",
     "guide": "docs/security-operations.md",
@@ -2886,10 +2886,11 @@
     "collection_enabled": false,
     "human_acceptance": false,
     "independent_security_certification": false,
-    "publication_pending": true,
+    "publication_pending": false,
     "primary_preservation_boundary": "runs/2026-11-07-primary-preservation-boundary.json",
     "source_host_unchanged_scope": "The six critical database/SSH/firewall snapshot fields match; QEMU tools, a nologin recovery account and secret-free helper cache remain installed. This is not a byte-for-byte unchanged host.",
     "actual_linux_cache_cases": 9,
-    "actual_linux_cache_evidence": "runs/2026-11-07-recovery-cache-reuse-linux.json"
+    "actual_linux_cache_evidence": "runs/2026-11-07-recovery-cache-reuse-linux.json",
+    "publication": "runs/2026-11-07-scope-72-live-publication.json"
   }
 }

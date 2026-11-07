@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-010131-directory-clock-final-publication-4afca26a
+
+Recorded 2026-11-07T01:01:31.659509+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish the source-bound clock-fence repair and public guide without adding a requirement closure.
+- **Evidence.** 61 directory cases, 11 evidence guards, 28 actual provider/database controls, all five capability checks and the current personal boundary review pass. The ledger remains 130 complete / 72 open. [Change record](./runs/changes/2026-11-07-010131-directory-clock-final-publication-4afca26a.json).
+- **Not claimed.** No hosted login, independent security or detector validation, physical device, additional tag release or research collection is claimed.
+
+
+### 2026-11-07-005619-directory-clock-public-projections-b04ce697
+
+Recorded 2026-11-07T00:56:19.245009+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the SSO guide, current provider-evidence download and preserved 202-record public scope after the clock-fence repair.
+- **Evidence.** Prepared public references describe 28 actual provider controls and 61 local checks, while the 130-complete / 72-open requirement totals remain unchanged. [Change record](./runs/changes/2026-11-07-005619-directory-clock-public-projections-b04ce697.json).
+- **Not claimed.** The identity service remains operator-owned software, not a hosted login or independently validated tag.
+
+
+### 2026-11-07-005617-directory-clock-current-acceptance-f0171325
+
+Recorded 2026-11-07T00:56:17.602874+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the repaired directory fence to 28 actual current-source provider/database controls and expose the safe fresh-login wait.
+- **Evidence.** The real provider skew case reaches an authorized identity and a fence covering the older issue time; 61 focused controls and 11 evidence guards pass. Prior 72-open publication is verified. [Change record](./runs/changes/2026-11-07-005617-directory-clock-current-acceptance-f0171325.json).
+- **Not claimed.** This repairs an existing completed software job and adds no closure, hosted sign-in, independent security/accuracy claim, physical-device result or real collection.
+
+
+### 2026-11-07-005223-directory-login-wait-both-clock-directions-b05b5949
+
+Recorded 2026-11-07T00:52:23.712108+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose a conservative twelve-second fresh-login wait that covers the accepted clock difference in either direction after recovery.
+- **Evidence.** All 61 focused directory controls pass, including both future issue boundaries, both fresh-login clock directions and populated logout rollover. [Change record](./runs/changes/2026-11-07-005223-directory-login-wait-both-clock-directions-b05b5949.json).
+- **Not claimed.** Current-source real-provider execution is still required. No hosted sign-in, personal-account gate or additional directory privilege is introduced.
+
+
+### 2026-11-07-004757-directory-clock-control-cause-check-aaa83122
+
+Recorded 2026-11-07T00:47:57.336246+00:00 · Contributor: Codex · change
+
+- **Changed.** Require the real clock-skew case to reach an authorized provider identity and a fence at or beyond the older token issue time.
+- **Evidence.** The compiled acceptance control cannot credit a provider outage as successful local recovery fencing. [Change record](./runs/changes/2026-11-07-004757-directory-clock-control-cause-check-aaa83122.json).
+- **Not claimed.** Actual execution remains pending; this is a source-contract check only.
+
+
+### 2026-11-07-004609-directory-real-provider-clock-skew-control-022276a2
+
+Recorded 2026-11-07T00:46:09.510400+00:00 · Contributor: Codex · change
+
+- **Changed.** Exercise clock-skew fencing against real Keycloak tokens by applying a controlled four-second lag only to the broker process.
+- **Evidence.** The compiled source contract requires a real provider-issued future timestamp to be accepted and its older session refused after recovery, followed by a valid fresh login. [Change record](./runs/changes/2026-11-07-004609-directory-real-provider-clock-skew-control-022276a2.json).
+- **Not claimed.** The actual current-source provider run is pending. This fault injection does not measure two independent physical host clocks or grant publication acceptance.
+
+
+### 2026-11-07-004339-directory-clock-skew-fence-912433db
+
+Recorded 2026-11-07T00:43:39.873149+00:00 · Contributor: Codex · change
+
+- **Changed.** Fence recovery and logout rollover beyond the provider contract’s full accepted issue-time skew, and require a fresh login after the fence.
+- **Evidence.** The 59-case focused suite covers both accepted future-time boundaries and prevents a previously logged-out token from reappearing after a 10000-entry rollover. [Change record](./runs/changes/2026-11-07-004339-directory-clock-skew-fence-912433db.json).
+- **Not claimed.** The earlier current-source provider receipt is stale for this repair. A fresh real provider run and protected acceptance are required before publication; no hosted service or personal dependency is added.
+
+
 ### 2026-11-07-002811-recovery-reviewed-final-publication-6858ccc3
 
 Recorded 2026-11-07T00:28:11.654575+00:00 · Contributor: Codex · change
