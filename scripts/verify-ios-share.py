@@ -134,13 +134,15 @@ def main():
         owned = simulator_identity(identity)
         command(['xcrun', 'simctl', 'boot', owned])
         command(['xcrun', 'simctl', 'bootstatus', owned, '-b'], timeout=180)
-        stage = 'build_and_ui'
-        command(['xcodebuild', '-project', str(project / 'AITrustID.xcodeproj'), '-scheme', 'AITrustID',
+        build = ['xcodebuild', '-project', str(project / 'AITrustID.xcodeproj'), '-scheme', 'AITrustID',
                  '-sdk', 'iphonesimulator', '-destination', 'platform=iOS Simulator,id=' + owned,
-                 '-derivedDataPath', str(output / 'derived'), '-resultBundlePath', str(output / 'workflow.xcresult'),
-                 '-parallel-testing-enabled', 'NO', '-test-timeouts-enabled', 'YES',
+                 '-derivedDataPath', str(output / 'derived'), '-parallel-testing-enabled', 'NO']
+        stage = 'build'
+        command([*build, 'build-for-testing', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
+        stage = 'ui_workflows'
+        command([*build, '-resultBundlePath', str(output / 'workflow.xcresult'), '-test-timeouts-enabled', 'YES',
                  '-default-test-execution-time-allowance', '60', '-maximum-test-execution-time-allowance', '90',
-                 'test', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
+                 'test-without-building', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
         stage = 'result'
         measured = json.loads(command(['xcrun', 'xcresulttool', 'get', 'test-results', 'summary',
                                       '--path', str(output / 'workflow.xcresult'), '--format', 'json']))
@@ -166,7 +168,7 @@ def main():
             stage = 'cleanup'
             clean = []
             for action in ['shutdown', 'delete']:
-                try: command(['xcrun', 'simctl', action, owned], cleanup=True); clean.append(action)
+                try: command(['xcrun', 'simctl', action, owned], timeout=90, cleanup=True); clean.append(action)
                 except (ValueError, OSError, subprocess.SubprocessError): pass
             report['owned_simulator_removed'] = clean == ['shutdown', 'delete']
             if not report['owned_simulator_removed']: report['pass'] = False

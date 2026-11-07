@@ -7,8 +7,9 @@ permissions:
   contents: read
 jobs:
   native-share:
-    runs-on: macos-latest
-    timeout-minutes: 25
+    # GitHub's standard Xcode 27 image; no paid xlarge runner.
+    runs-on: xcode-27
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: false }

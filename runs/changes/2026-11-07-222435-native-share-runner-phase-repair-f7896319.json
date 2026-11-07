@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-222435-native-share-runner-phase-repair-f7896319",
+  "recorded_at": "2026-11-07T22:24:35.057129+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "93a942bd490e9946b4e380e11e1add0158f1b8a1",
+  "changed": "Select GitHub\u2019s documented standard Xcode 27 runner and split native compilation, UI execution and cleanup budgets.",
+  "proves": "The revised producer passes all five actual local UI workflows, confirms cleanup and passes 67 focused controls.",
+  "limits": "The previous hosted result is retained as failed; no hosted, physical-phone or independent accuracy success is inferred.",
+  "scope_ids": [
+    "N-013",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "1ebac1eee84739b977d53a0d69a7e5e3006b43e2bce194f3ba7058e9dfda5b0a",
+    "docs/native-share-repair-plan.md": "5cf483e50f0024718926bac1adc68d5bf11ab897aec5d65780deb5341d072146",
+    "docs/scope-progress.json": "1f079be9444c428d81a1178e6b7ef5f19d527e19598802d6d8aaf99d30b92857",
+    "docs/scope-progress.md": "484cffab5cb06ac73fc6a0dea61d3f41ab64eccebf110a675a103c9cdefd1bc8",
+    "eval/revalidation.json": "cd656d03db118a23514d18378dce5d2224c7aeb209a7462ff12a400e035e4668",
+    "runs/2026-11-07-native-share-current-workflow.json": "8e55be07afa8294dc244596068f70af8e9fb38a47683d0165856b3e288e70a12",
+    "runs/2026-11-07-native-share-runner-repair.json": "15d89661474c555bbf6031ccd79f349a787795ab5b4d9e2bab9a7efda973414b",
+    "scripts/verify-ios-share.py": "d6a99b7f0bb6ab96d0553aa67ff7746cf60d771400fc3916eef1e6091865cb3a",
+    "scripts/verify-native-share-evidence.py": "43d311fe59e3a2317920991ef6b705cfc4aa80e720c7a4dec6bd0715adca7148",
+    "scripts/verify-route-boundaries.py": "5335c58aa32c12c6efea304666a5b79b923758b680fe789d0f84ad9307264c49",
+    "site/public/reference/native-share-workflow.json": "8e55be07afa8294dc244596068f70af8e9fb38a47683d0165856b3e288e70a12",
+    "site/public/reference/public-scope.json": "078ac082cf9a5cfd882d3d9849b21889dc609771d7845dcc7cf322bba61bc5b2",
+    "site/scripts/prepare.mjs": "48df8350581784ffe03fb5cd1b1dd6e0d4a1edbe8099f56966825307d9e86b9c",
+    "site/src/public-scope.json": "078ac082cf9a5cfd882d3d9849b21889dc609771d7845dcc7cf322bba61bc5b2",
+    "site/src/scope-manifest.json": "70311dfbe45104836c97975da31bd1bdd6e41c538b1508842933600e6886cad5",
+    "state.json": "3b13c12df10d5b934dfa8c0ce391e643d6995d0f9c9d774fe6dbd2c9cea0a25a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-native-share-runner-repair.json",
+      "sha256": "15d89661474c555bbf6031ccd79f349a787795ab5b4d9e2bab9a7efda973414b"
+    },
+    {
+      "path": "runs/2026-11-07-native-share-current-workflow.json",
+      "sha256": "8e55be07afa8294dc244596068f70af8e9fb38a47683d0165856b3e288e70a12"
+    }
+  ],
+  "checks": []
+}

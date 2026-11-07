@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-222835-native-share-current-runner-state-1c558032
+
+Recorded 2026-11-07T22:28:35.681617+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current source-bound receipts and the reviewed route inventory after the native runner-phase repair.
+- **Evidence.** All five current engineering capabilities and the actual split-phase local native run pass. [Change record](./runs/changes/2026-11-07-222835-native-share-current-runner-state-1c558032.json).
+- **Not claimed.** Hosted Xcode 27 execution is pending; no requirement, phone, human or independent-accuracy gate is bypassed.
+
+
+### 2026-11-07-222435-native-share-runner-phase-repair-f7896319
+
+Recorded 2026-11-07T22:24:35.057129+00:00 · Contributor: Codex · change
+
+- **Changed.** Select GitHub’s documented standard Xcode 27 runner and split native compilation, UI execution and cleanup budgets.
+- **Evidence.** The revised producer passes all five actual local UI workflows, confirms cleanup and passes 67 focused controls. [Change record](./runs/changes/2026-11-07-222435-native-share-runner-phase-repair-f7896319.json).
+- **Not claimed.** The previous hosted result is retained as failed; no hosted, physical-phone or independent accuracy success is inferred.
+
+
 ### 2026-11-07-220227-native-share-reviewed-source-state-87f2adca
 
 Recorded 2026-11-07T22:02:27.222015+00:00 · Contributor: Codex · change

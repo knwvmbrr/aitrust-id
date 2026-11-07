@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-11-07T22:24:35.030339+00:00",
+  "pass": true,
+  "kind": "native_share_runner_phase_repair",
+  "implemented_by": "Codex",
+  "actual_local_workflow": "runs/2026-11-07-native-share-current-workflow.json",
+  "fresh_ui_workflows": 5,
+  "focused_controls": 67,
+  "cleanup_verified": true,
+  "hosted_prior_failure": {
+    "runtime": "iOS 26.5",
+    "sdk": "26.5",
+    "xcode": "26.6",
+    "full_workflow_passed": false,
+    "cleanup_verified": false,
+    "meaning": "Application launch/termination failures and combined build/test interruption; retained diagnostics, no passing hosted claim."
+  },
+  "repair": [
+    "Select the documented standard Xcode 27 runner, without a paid larger-runner tier.",
+    "Separate compilation and UI execution deadlines; retain five passing cases and no skipped cases as acceptance.",
+    "Retain failed-stage logs and allow bounded cleanup time."
+  ],
+  "runner_source": "https://github.com/actions/runner-images/issues/14404",
+  "physical_device": false,
+  "human_accessibility": false,
+  "independent_accuracy": false,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "full_closures_this_increment": 0
+}

@@ -54,3 +54,15 @@ Keep actual background/dismissal invalidation; do not suppress privacy events to
 preserve an alert. Clear/edit/check generations clear the expanded evidence too.
 Exercise opening and hiding evidence, persistence of the current result and
 repeat sharing in the actual compiled extension.
+
+## Hosted runner diagnosis and harness repair
+
+The hosted default selected Xcode 26.6/iOS 26.5, while the passing local profile
+uses Xcode/SDK 27.2 and iOS 26.2. Its app launch/termination failures and interrupted
+combined build/test run are retained, including an unconfirmed simulator cleanup.
+Use GitHub's documented standard `xcode-27` image, not a paid larger runner.
+Give compilation and the actual five UI workflows separate bounded phases;
+retain per-test deadlines and require all five successful cases. Allow up to
+90 seconds per cleanup action on the loaded hosted machine. No failure, missing
+case or unconfirmed cleanup may become a passing proof. Verify the revised
+producer locally again and retain actual hosted results separately.

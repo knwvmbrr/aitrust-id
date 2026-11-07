@@ -13435,7 +13435,8 @@
           "scripts/verify-ios-share.py",
           "scripts/verify-native-share-evidence.py",
           "mobile/ios/Tests/UIFlows.swift",
-          "runs/2026-11-07-native-share-reviewed-workflow.json"
+          "runs/2026-11-07-native-share-reviewed-workflow.json",
+          "runs/2026-11-07-native-share-current-workflow.json"
         ],
         "evidence_scope": "Five actual current-source UI workflows passed on a newly created iPhone 14 Plus simulator running iOS 26.2, Xcode/SDK 27.2; source identities remained unchanged and the simulator was removed. Standalone PS, editing, native selected-text handoff, explicit checks, cancel/clear/repeat, inline evidence and background clearing are demonstrated using invented text. This is not physical-device, human accessibility, arbitrary share-source, independent accuracy or signed phone release acceptance.",
         "required_acceptance": [
