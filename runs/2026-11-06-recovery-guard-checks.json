@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-11-06T23:54:42.192429+00:00",
+  "pass": true,
+  "tests": 10,
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests/test_recovery_stream_boundary.py",
+    "-q"
+  ],
+  "stdout_sha256": "0b26df06618a210a79303b81bebf22dab6fab3639b69ea4b1dd1172bcf0ef28f",
+  "sources": {
+    "deploy/recovery/prepare.py": "420932a0a32038e37fa336ffa24df82232921a8d64951125f8675f581b1df209",
+    "deploy/recovery/guest.py": "1020ed70957e8b37722511151ddc6cd2100afa27a858f1cb8e5c9858647bc36a",
+    "deploy/recovery/isolate.py": "623c31b3626d5dab002b9fb0dbb40372c2f6ecd31532d9ea36e262d15d556c32",
+    "deploy/recovery/receive.py": "e2f1053357dad1da1da2e1d460aeecebf82cc747a3b1079bac2146bcfcfd2265",
+    "deploy/recovery/collect.py": "0c9faddb89fe9a1715960ffb1196100cdf73ad935c7a368edf2d81e570510c36",
+    "deploy/recovery/apply.py": "fc86b7b61929d29df020b4bfb033c26b77da3ceed15d225fa8db50b2479dd62d",
+    "deploy/recovery/restore-guest.py": "d4ec096d5e0f38d2ee05331ec292b0d4d0af6129015af33c3001fcf5c577d845",
+    "deploy/recovery/monitor.py": "c186a26634491510b654360da850cdbf81d534de72ef8c13cc4d544159286d7b",
+    "deploy/recovery/monitor-guest.py": "bebeed7dde7aa47e206ed03306ae353c1ede3467838a8d0393ba4befa854a50a",
+    "deploy/recovery/finish.py": "3c7d5c8ad0a7afc5cbab3761c2688354bd1a0b2f81643ca91915f988ad92ab4a",
+    "deploy/host/bootstrap.sh": "bd987a3c8e8103adda89ecd72e3aaa083e8b4bef9851ebcb2733ac66b4a01aab",
+    "deploy/host/verify.py": "a5ac727bd1a12e668d5a28989229a5aa211e81e8be2d86058714f527435be638",
+    "deploy/host/roles.sql": "30e5b297afe55b4c9998df309a6fd218387dd422ffeeaf9d6c0aa71552b7d459",
+    "deploy/host/postgresql.conf": "8dd3c1eabf4956f5fc876390156fe5643ea65ba0987e82d4bd3b4f199dfae004",
+    "deploy/host/pg_hba.conf": "2d1dcb09e5fcca9a194689907737f64ee0ba956e63b31514397b6b2a2db28d6d",
+    "deploy/host/pg_ident.conf": "2bcced9cc3546017df3368af0b9f84aaa710281ddd83bebb8700300fa4bf826e",
+    "deploy/host/sshd.conf": "8e998ae4fd085c97640f9d76549d3810f8a43a20561517c387ad7b2205abb1cb",
+    "deploy/host/nftables.conf": "c43b5852832a065c14bda0d933e61be2eb0fe60ef6fdb6aeb1b771d81a882348",
+    "deploy/alerts/alerts.py": "61be9da7e21527f8209287a2fc8cd5fb817131ab091fb7126d38c9d606c1bdb5",
+    "deploy/backup/source-health.py": "f53817f1f72c94203e739932e5c63ef37b46126e94606d498a1cc071f649bb0f",
+    "tests/test_recovery_stream_boundary.py": "85573488c748fd2a25a59a67774dd5cfe10d739e45d3b5f977a4d5c989d540aa",
+    "docs/full-host-recovery-plan.md": "fc3eb17b7c63d6aa0a122558d7bdac78ff172223f333ce26e96fcd9a879082b6",
+    "docs/security-operations.md": "b2329e5c15e51c82627292baabc7bf443c2b760a9bc9ff1402a5be0b3e4ed06b"
+  },
+  "full_vm_execution": false
+}

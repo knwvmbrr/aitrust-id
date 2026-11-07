@@ -420,7 +420,19 @@
         "docs/organization-directory-plan.md",
         "docs/organization-directory.md",
         ".github/workflows/organization-directory.yml",
-        "runs/2026-11-06-directory-reviewed-linux.json"
+        "runs/2026-11-06-directory-reviewed-linux.json",
+        "deploy/recovery/*.py",
+        "scripts/verify-host-recovery-evidence.py",
+        "tests/test_recovery_stream_boundary.py",
+        "tests/test_host_recovery_evidence.py",
+        "docs/full-host-recovery-plan.md",
+        "docs/security-operations.md",
+        "runs/2026-11-06-host-final-acceptance.json",
+        "runs/2026-11-06-host-final-guards.json",
+        "runs/2026-11-07-recovery-source-binding.json",
+        "runs/2026-11-07-adapter-incident-exercise.json",
+        "runs/2026-11-07-security-channel-status.json",
+        "runs/2026-11-07-security-operations-acceptance.json"
       ],
       "commands": [
         [
@@ -672,6 +684,18 @@
         [
           "{python}",
           "scripts/verify-organization-directory-evidence.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-host-recovery-evidence.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_recovery_stream_boundary.py",
+          "tests/test_host_recovery_evidence.py",
+          "-q"
         ]
       ]
     },
@@ -1078,7 +1102,19 @@
         "docs/organization-directory.md",
         ".github/workflows/organization-directory.yml",
         "runs/2026-11-06-directory-reviewed-linux.json",
-        "scripts/verify-enterprise.cjs"
+        "scripts/verify-enterprise.cjs",
+        "deploy/recovery/*.py",
+        "scripts/verify-host-recovery-evidence.py",
+        "tests/test_recovery_stream_boundary.py",
+        "tests/test_host_recovery_evidence.py",
+        "docs/full-host-recovery-plan.md",
+        "docs/security-operations.md",
+        "runs/2026-11-06-host-final-acceptance.json",
+        "runs/2026-11-06-host-final-guards.json",
+        "runs/2026-11-07-recovery-source-binding.json",
+        "runs/2026-11-07-adapter-incident-exercise.json",
+        "runs/2026-11-07-security-channel-status.json",
+        "runs/2026-11-07-security-operations-acceptance.json"
       ],
       "commands": [
         [
@@ -1227,6 +1263,10 @@
         [
           "node",
           "scripts/verify-enterprise.cjs"
+        ],
+        [
+          "{python}",
+          "scripts/verify-host-recovery-evidence.py"
         ]
       ]
     }

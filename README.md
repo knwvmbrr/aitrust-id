@@ -586,3 +586,7 @@ command-pattern check, or capture versions without a detector. It has visible
 pause, reset, delete and stop controls; no account, local Docker or upload is
 needed. Managed deployment, independent security review and tag release are
 separate gates. Run `make verify-host-capture` for its focused checks.
+
+### Security response and recovery
+
+[Operator runbook](docs/security-operations.md) covers private reporting, adapter failures and replacement-server recovery. A real isolated Debian/PostgreSQL recovery and owner-key login passed; the source database had no application tables. `make verify-host-recovery` checks the retained evidence and refusal controls without accessing a server or a secret. Physical owner custody, human acceptance and independent validation remain separate.

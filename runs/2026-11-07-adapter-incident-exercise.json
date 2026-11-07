@@ -1,0 +1,272 @@
+{
+  "captured_at": "2026-11-07T00:02:38.744Z",
+  "pass": true,
+  "cases": [
+    {
+      "name": "valid_authenticated",
+      "status": "ok",
+      "pass": true
+    },
+    {
+      "name": "unsigned_refused",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "missing_trusted_key",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_key_fingerprint",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "altered_response",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "replayed_nonce",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "altered_request",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "wrong_signer",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "default_no_consent",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "paused_no_capture",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "non_boolean_consent",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "credential_control_characters",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "wrong_origin",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "bad_sender",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "missing_token",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "absent_credential",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "short_credential",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "placeholder_credential",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "storage_failure",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "empty_text",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "unpaired_surrogate",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "oversized_text",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "astral_codepoint_boundary",
+      "status": "ok",
+      "pass": true
+    },
+    {
+      "name": "http_401",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "http_422",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "http_500",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "http_504",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "network_or_timeout",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "non_json",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "malformed_json",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_utf8",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "declared_oversize",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "chunked_oversize",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "future_version",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "signed_unverified",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "reserved_modality",
+      "status": "unsupported",
+      "pass": true
+    },
+    {
+      "name": "missing_subject_hash",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "malformed_hash",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "bad_uuid",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "bad_date",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "negative_length",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "unknown_tag",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "disabled_tag",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "below_floor_asserted",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_signal_id",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_span",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "invalid_score",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "missing_model",
+      "status": "unavailable",
+      "pass": true
+    },
+    {
+      "name": "duplicate_tag",
+      "status": "unavailable",
+      "pass": true
+    }
+  ],
+  "case_count": 49,
+  "stream_overflow_cancelled": true,
+  "one_terminal_response": true,
+  "closed_channel_safe": true,
+  "unrelated_messages_ignored": true,
+  "redirects_refused": true,
+  "browser_cache_disabled": true,
+  "credential_destination": "fixed_authenticated_loopback_only",
+  "real_web_stream_response_types": true,
+  "synthetic_chrome_storage_and_fetch": true,
+  "live_vendor_compatibility": false,
+  "installed_extension_refresh_verified": false,
+  "source_sha256": {
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "extension/src/content/bridge.js": "c1f6ec8cdef417609635709664576c706abc94cf808cce0333c937d4251650f1",
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "scripts/verify-extension-consumer.cjs": "b489f11ec575b7132da87b1175169cde5196bc5cac74b2e9b5f2707de7088ba6"
+  },
+  "exercise_scope": "Actual extension consumer JavaScript in Node VM with injected transport, sender, credential and signature failures; not a live vendor, production outage or human acceptance"
+}
