@@ -149,7 +149,9 @@ def verify(keycloak,namespace):
             time.time=lambda:real_clock()-4
             _,issued,_=provider.current(sessions['backup']['access_token']);d.check(issued>int(time.time()))
             broker.journal.recover(people['admin']['id'],sessions['backup']['access_token'],provider)
+            with broker.journal.db() as local:d.check(broker.journal.control(local)[2]>=issued)
             refused(lambda:broker.dispatch(req(sessions['backup'])),'actual_provider_clock_skew_session_fenced')
+            d.check(provider.last_step=='authorized_identity')
         finally:time.time=real_clock
         time.sleep(d.CLOCK_SKEW_SECONDS+2);sessions['backup']=login('backup');d.check(broker.dispatch(req(sessions['backup']))['records'])
         refused(lambda:broker.dispatch(req(sessions['backup'],'configure',{'subject':people['admin']['id'],'action':'restore'})),'directory_admin_cannot_undo_owner_compromise_fence')

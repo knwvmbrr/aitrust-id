@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-004757-directory-clock-control-cause-check-aaa83122
+
+Recorded 2026-11-07T00:47:57.336246+00:00 · Contributor: Codex · change
+
+- **Changed.** Require the real clock-skew case to reach an authorized provider identity and a fence at or beyond the older token issue time.
+- **Evidence.** The compiled acceptance control cannot credit a provider outage as successful local recovery fencing. [Change record](./runs/changes/2026-11-07-004757-directory-clock-control-cause-check-aaa83122.json).
+- **Not claimed.** Actual execution remains pending; this is a source-contract check only.
+
+
 ### 2026-11-07-004609-directory-real-provider-clock-skew-control-022276a2
 
 Recorded 2026-11-07T00:46:09.510400+00:00 · Contributor: Codex · change
