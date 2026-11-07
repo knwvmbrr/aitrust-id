@@ -141,7 +141,7 @@ def verify(keycloak,namespace):
         broker.dispatch(req(sessions['admin'],'configure',{'subject':target,'action':'restore'}));case('current_admin_can_restore_non_compromised_member')
         broker.journal.recover(people['admin']['id'],sessions['backup']['access_token'],provider);case('separate_owner_recovery_fences_compromised_admin')
         refused(lambda:broker.dispatch(req(sessions['backup'])),'pre_recovery_replacement_session_also_fenced')
-        time.sleep(2);sessions['backup']=login('backup');d.check(broker.dispatch(req(sessions['backup']))['records']);case('fresh_replacement_login_restores_authorized_access')
+        time.sleep(d.CLOCK_SKEW_SECONDS+2);sessions['backup']=login('backup');d.check(broker.dispatch(req(sessions['backup']))['records']);case('fresh_replacement_login_restores_authorized_access')
         refused(lambda:broker.dispatch(req(sessions['backup'],'configure',{'subject':people['admin']['id'],'action':'restore'})),'directory_admin_cannot_undo_owner_compromise_fence')
         stage='real_provider_logout_and_provider_outage'
         outcome=broker.logout(sessions['backup']);d.check(outcome['local_logout'] is True and outcome['provider_revocation']=='completed');case('actual_local_and_provider_token_revocation')

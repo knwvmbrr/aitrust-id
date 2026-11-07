@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-004339-directory-clock-skew-fence-912433db
+
+Recorded 2026-11-07T00:43:39.873149+00:00 · Contributor: Codex · change
+
+- **Changed.** Fence recovery and logout rollover beyond the provider contract’s full accepted issue-time skew, and require a fresh login after the fence.
+- **Evidence.** The 59-case focused suite covers both accepted future-time boundaries and prevents a previously logged-out token from reappearing after a 10000-entry rollover. [Change record](./runs/changes/2026-11-07-004339-directory-clock-skew-fence-912433db.json).
+- **Not claimed.** The earlier current-source provider receipt is stale for this repair. A fresh real provider run and protected acceptance are required before publication; no hosted service or personal dependency is added.
+
+
 ### 2026-11-07-002811-recovery-reviewed-final-publication-6858ccc3
 
 Recorded 2026-11-07T00:28:11.654575+00:00 · Contributor: Codex · change

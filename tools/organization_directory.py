@@ -21,6 +21,7 @@ def private_file(path):
     return audit_private_file(path)
 
 FORMAT='organization-directory/v1'
+CLOCK_SKEW_SECONDS=5
 ROLES={'view':'aitrust-view','export':'aitrust-export','review':'aitrust-review','configure':'aitrust-configure'}
 OPS=set(ROLES)
 class Refused(ValueError):pass
@@ -107,7 +108,7 @@ class Provider:
         self.last_step='token_audience'
         aud=r.get('aud');check(aud==self.c['client_id'] or type(aud) is list and self.c['client_id'] in aud)
         self.last_step='token_timing'
-        check(type(r.get('exp')) is int and type(r.get('iat')) is int and r['iat']<=time.time()+5 and r['exp']>time.time() and time.time()-r['iat']<=900)
+        check(type(r.get('exp')) is int and type(r.get('iat')) is int and r['iat']<=time.time()+CLOCK_SKEW_SECONDS and r['exp']>time.time() and time.time()-r['iat']<=900)
         self.last_step='subject_binding'
         sub=identifier(r.get('sub'));check(sub in self.c['bindings'])
         self.last_step='directory_service'
@@ -186,7 +187,7 @@ class Journal:
         with self.db() as db:
             self.control(db)
             if db.execute('SELECT count(*) FROM logged_out').fetchone()[0]>=10000:
-                db.execute('UPDATE control SET fence=max(fence,?) WHERE singleton=1',(int(time.time()),))
+                db.execute('UPDATE control SET fence=max(fence,?) WHERE singleton=1',(int(time.time())+CLOCK_SKEW_SECONDS+1,))
                 db.execute('DELETE FROM logged_out')
             db.execute('INSERT OR IGNORE INTO logged_out VALUES(?,?)',(digest(token.encode()),int(time.time())));self.event(db,'local-session','logout','blocked')
         return {'local_logout':True}
@@ -196,7 +197,7 @@ class Journal:
         with self.db() as db:
             self.allowed(db,sub,replacement,issued)
             db.execute('INSERT INTO blocked VALUES(?,1) ON CONFLICT(subject) DO UPDATE SET compromised=1',(self.pseudonym(db,compromised),))
-            db.execute('UPDATE control SET fence=? WHERE singleton=1',(int(time.time()),));self.event(db,sub,'owner-recovery','fenced')
+            db.execute('UPDATE control SET fence=max(fence,?) WHERE singleton=1',(int(time.time())+CLOCK_SKEW_SECONDS+1,));self.event(db,sub,'owner-recovery','fenced')
         return {'recovered':True,'pre_recovery_tokens_blocked':True,'new_login_required':True}
 
 class Broker:
