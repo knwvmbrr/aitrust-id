@@ -95,3 +95,7 @@ closures are needed to reach 60. The recovery work continues separately.
 ## Full recovery and response increment — 2026-11-07T00:08:18.657583+00:00
 
 F-073 now has its preserved supported-profile acceptance: named private reporting, accountable response planning, actual replacement OS/database recovery, owner-key administration, incident/adapter exercises, source preservation, reboot persistence and cleanup. The current ledger is 130 complete / 72 open of 202; twelve more full closures are needed for 60. The original criterion remains in the acceptance packet. No tag accuracy, human/phone acceptance, staffed SLA, occupied-application recovery, production-scale RTO or collection gate was waived.
+
+## Directory clock-skew correction — 2026-11-07T00:56:16.927454+00:00
+
+The accepted five-second provider issue-time interval is now covered by recovery and logout-rollover fences. A twelve-second fresh-login wait covers either supported clock direction. Current source passes 61 focused controls and 28 actual provider/database cases, including controlled broker clock lag. This is a repair of F-162, not a new requirement closure: 130 complete / 72 open of 202 remain, with twelve more closures needed for 60.

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-005617-directory-clock-current-acceptance-f0171325",
+  "recorded_at": "2026-11-07T00:56:17.602874+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "051e47f768f5d09a3f878f903e149139f3fd2f65",
+  "changed": "Bind the repaired directory fence to 28 actual current-source provider/database controls and expose the safe fresh-login wait.",
+  "proves": "The real provider skew case reaches an authorized identity and a fence covering the older issue time; 61 focused controls and 11 evidence guards pass. Prior 72-open publication is verified.",
+  "limits": "This repairs an existing completed software job and adds no closure, hosted sign-in, independent security/accuracy claim, physical-device result or real collection.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "docs/scope-60-execution.md": "fa21739153c23cadca26d1a779f0d909b2d2a1eaee74c874cec0b1fc039e29f8",
+    "docs/scope-progress.json": "002e91dd763e446bf293707a96fc176e80505fbe03f4ad72f6c7b8052b0d05b8",
+    "docs/scope-progress.md": "d1f321b601f09c4fac92da755352b40ec83ed34068ce5cdcc0bca79a614ed9bc",
+    "eval/revalidation.json": "811dd1e8909c349cbf0c0dabf11b739b2ad96b701cda77850fb9329bc5a95dd8",
+    "runs/2026-11-07-directory-clock-acceptance.json": "91558b28bb9e609af75bff73c5dc189f8df9a13080351ef6b22fcc5192642037",
+    "runs/2026-11-07-directory-clock-linux.json": "65fcea22244603f1993ce38d71d7fcedc4420a9ad88cb098118f2e201c0339fe",
+    "runs/2026-11-07-scope-72-live-publication.json": "f886714977431066b091a6ae4996bd7774ffc8f1c01177cdce9c19347660b7ad",
+    "scripts/verify-enterprise.cjs": "74317024d030b3cf1fdfd6bfde8523144a72e1de1c14d9c7a02f642079f0a893",
+    "scripts/verify-organization-directory-evidence.py": "39080a21d01bb61ef15ee250cfb507f96088955b2a5dec6744bcc7920e1b0eae",
+    "scripts/verify-route-boundaries.py": "57809f6564ff89c09ee337e6f7ab615d6d595fa6d75abff711f4e09dbd2c55d0",
+    "scripts/verify-site.cjs": "4ebb5cf6ad4c93f784d281e162b594c58396c3cc542f38ff1a12ba229f7821c2",
+    "site/scripts/prepare.mjs": "38d5a00b29566dfc9ea197a679118726c1b74c074faac23edbdb4e3ff85889f7",
+    "site/scripts/render-reference.mjs": "d046a65e8979ab26e82dbb2567e36a4e9c0a19c5193e9e22ed7e10b20bed0bc6",
+    "site/src/catalog.js": "17647f4632cd0da89f1ceff3a6fc61df4ada2d268158ade3a08cd3376f368925",
+    "state.json": "38da1e1518aa90e4c1d8c02da80fd62463ff791c76913e87e723a2c172ee84e2",
+    "tests/test_organization_directory_evidence.py": "aa2e0db5f5e4e4709eb660f72558516ad1570cb32df5700f0e009d7daa45c2b7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-directory-clock-linux.json",
+      "sha256": "65fcea22244603f1993ce38d71d7fcedc4420a9ad88cb098118f2e201c0339fe"
+    },
+    {
+      "path": "runs/2026-11-07-directory-clock-acceptance.json",
+      "sha256": "91558b28bb9e609af75bff73c5dc189f8df9a13080351ef6b22fcc5192642037"
+    },
+    {
+      "path": "runs/2026-11-07-scope-72-live-publication.json",
+      "sha256": "f886714977431066b091a6ae4996bd7774ffc8f1c01177cdce9c19347660b7ad"
+    }
+  ],
+  "checks": []
+}

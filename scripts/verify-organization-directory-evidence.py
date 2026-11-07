@@ -19,7 +19,7 @@ def verify(row):
     t=datetime.fromisoformat(row['captured_at']);check(t.tzinfo is not None and t<=datetime.now(timezone.utc))
     return {'pass':True,'actual_provider_controls':len(CASES),'sources_current':True,'hosted_service_enabled':False,'human_acceptance':False,'independent_accuracy_evidence':False}
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--receipt',type=Path,default=ROOT/'runs/2026-11-06-directory-reviewed-linux.json');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--receipt',type=Path,default=ROOT/'runs/2026-11-07-directory-clock-linux.json');a=p.parse_args()
     try:print(json.dumps(verify(read_evidence(a.receipt))));return 0
     except Exception:print('{"pass":false,"reason":"directory_execution_missing_or_stale"}');return 1
 if __name__=='__main__':raise SystemExit(main())

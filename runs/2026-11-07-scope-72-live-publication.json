@@ -1,0 +1,285 @@
+{
+  "captured_at": "2026-11-07T00:50:00.978341+00:00",
+  "pass": true,
+  "merge_commit": "ce6c396ae69a2cba5405cd8a4fe530834333ddbc",
+  "deployment_url": "https://4c0466bd.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "selected_assets": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "230896a9e794fe693a329146d4503e69e525163da30ef6c1b056febf1d03ecc0",
+      "bytes": 131415
+    },
+    {
+      "route": "/assets/index-36H1MQMA.js",
+      "status": 200,
+      "sha256": "b61f3b0a91c4830bbdf6949ddcdf5335e167bb7afffc2715e091d696efbfdc5a",
+      "bytes": 556110
+    },
+    {
+      "route": "/assets/index-3usITcEe.css",
+      "status": 200,
+      "sha256": "8526c74a4b375e4a9a2b4be7c94107ee16974433bd50ea312e27d27c60c0070f",
+      "bytes": 24015
+    },
+    {
+      "route": "/reference/conformance/",
+      "status": 200,
+      "sha256": "3af85effd4cb4c98a18341a3aa4f950ffe103d115bf32089db3142252bdacd7c",
+      "bytes": 9317
+    },
+    {
+      "route": "/reference/agent-output.md",
+      "status": 200,
+      "sha256": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
+      "bytes": 6494
+    },
+    {
+      "route": "/reference/organization-directory.md",
+      "status": 200,
+      "sha256": "9f9ebfd3cdefe08f3f26dc47a8231363b460ab9bc88e84b551c107aa2cf8fba0",
+      "bytes": 8798
+    },
+    {
+      "route": "/reference/directory-software-linux.json",
+      "status": 200,
+      "sha256": "e5f637606b6a2b293a3c4e3565f73c89dcd54368c19b25e1e787f6863767bee8",
+      "bytes": 5776
+    },
+    {
+      "route": "/reference/security-operations.md",
+      "status": 200,
+      "sha256": "36100d28611a2a47ba30159365e5ae24014ba6ebebae8a9472b394dd5a2f78fb",
+      "bytes": 8395
+    },
+    {
+      "route": "/reference/host-recovery.json",
+      "status": 200,
+      "sha256": "89a083a144084f2fc6d2659bc1927da838cf23d988dd1fe3ffc7a29b60a349d9",
+      "bytes": 8834
+    },
+    {
+      "route": "/reference/security-policy.md",
+      "status": 200,
+      "sha256": "c6522349a5f4ced07235e8246450dffa43dce70786cb12a406b205a64e7339f0",
+      "bytes": 2531
+    },
+    {
+      "route": "/reference/conformance-runner.md",
+      "status": 200,
+      "sha256": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+      "bytes": 3938
+    },
+    {
+      "route": "/reference/public-scope.json",
+      "status": 200,
+      "sha256": "cb8733d4a6c4764da52287164ea0eac3ea2f3828967537c38643ddfb5c34c1dd",
+      "bytes": 656165
+    },
+    {
+      "route": "/reference/changelog.md",
+      "status": 200,
+      "sha256": "cf90b8159d4c865a00731f2c61cdba1c68d2ff24c820ff7acd426bc27d30d136",
+      "bytes": 511677
+    }
+  ],
+  "selected_asset_count": 13,
+  "all_assets_claimed": false,
+  "scope_records": 202,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "closed_requirements": [
+    "F-162",
+    "F-073"
+  ],
+  "outside_person_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "certification": false,
+  "release_approved": false,
+  "protected_merge_proof": {
+    "captured_at": "2026-11-07T00:36:06.700360+00:00",
+    "pass": true,
+    "pull_request": 86,
+    "reviewed_head": "05890543e73934d90f93a135603a7f5dd11fbb6d",
+    "required_contexts": [
+      "accessibility",
+      "change-records",
+      "device-builder (3.12)",
+      "device-builder (3.13)",
+      "device-builder (3.14)",
+      "host-config",
+      "no-egress",
+      "regressions",
+      "scope-plan",
+      "site",
+      "spec"
+    ],
+    "required_check_instances": 22,
+    "review": {
+      "commit_sha": "05890543e73934d90f93a135603a7f5dd11fbb6d",
+      "has_any_findings": false,
+      "has_unresolved_findings": false,
+      "status": "completed"
+    },
+    "unresolved_threads": 0,
+    "checks": [
+      {
+        "name": "source-provenance",
+        "state": "SKIPPED",
+        "workflow": "ci"
+      },
+      {
+        "name": "source-provenance",
+        "state": "SKIPPED",
+        "workflow": "ci"
+      },
+      {
+        "name": "device-builder (3.13)",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "spec",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "site",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "accessibility",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "regressions",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "device-builder (3.14)",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "gates",
+        "state": "FAILURE",
+        "workflow": "ci"
+      },
+      {
+        "name": "no-egress",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "change-records",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "device-builder (3.12)",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "scope-plan",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "host-config",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "postgres-synthetic",
+        "state": "SUCCESS",
+        "workflow": "synthetic-metadata-storage"
+      },
+      {
+        "name": "spec",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "regressions",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "accessibility",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "device-builder (3.12)",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "gates",
+        "state": "FAILURE",
+        "workflow": "ci"
+      },
+      {
+        "name": "device-builder (3.13)",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "no-egress",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "device-builder (3.14)",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "scope-plan",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "site",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "host-config",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      },
+      {
+        "name": "change-records",
+        "state": "SUCCESS",
+        "workflow": "ci"
+      }
+    ],
+    "statistical_release_gate_pass": false,
+    "administrator_override_used": false,
+    "merge_commit": "ce6c396ae69a2cba5405cd8a4fe530834333ddbc",
+    "merged_tree_equals_reviewed_tree": true
+  },
+  "actual_site_verification": {
+    "captured_at": "2026-11-07T00:41:06.015Z",
+    "pass": true,
+    "tag_modals": 20,
+    "axe_violations": 0,
+    "unexpected_outbound_requests": 0,
+    "human_screen_reader_tested": false
+  },
+  "actual_workflow_verification": {
+    "captured_at": "2026-11-07T00:40:57.985Z",
+    "pass": true,
+    "workflows": 8,
+    "errors": [],
+    "violations": [],
+    "human_accessibility_verified": false
+  },
+  "physical_device_verified": false
+}

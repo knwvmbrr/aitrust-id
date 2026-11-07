@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-010131-directory-clock-final-publication-4afca26a
+
+Recorded 2026-11-07T01:01:31.659509+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish the source-bound clock-fence repair and public guide without adding a requirement closure.
+- **Evidence.** 61 directory cases, 11 evidence guards, 28 actual provider/database controls, all five capability checks and the current personal boundary review pass. The ledger remains 130 complete / 72 open. [Change record](./runs/changes/2026-11-07-010131-directory-clock-final-publication-4afca26a.json).
+- **Not claimed.** No hosted login, independent security or detector validation, physical device, additional tag release or research collection is claimed.
+
+
+### 2026-11-07-005619-directory-clock-public-projections-b04ce697
+
+Recorded 2026-11-07T00:56:19.245009+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the SSO guide, current provider-evidence download and preserved 202-record public scope after the clock-fence repair.
+- **Evidence.** Prepared public references describe 28 actual provider controls and 61 local checks, while the 130-complete / 72-open requirement totals remain unchanged. [Change record](./runs/changes/2026-11-07-005619-directory-clock-public-projections-b04ce697.json).
+- **Not claimed.** The identity service remains operator-owned software, not a hosted login or independently validated tag.
+
+
+### 2026-11-07-005617-directory-clock-current-acceptance-f0171325
+
+Recorded 2026-11-07T00:56:17.602874+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the repaired directory fence to 28 actual current-source provider/database controls and expose the safe fresh-login wait.
+- **Evidence.** The real provider skew case reaches an authorized identity and a fence covering the older issue time; 61 focused controls and 11 evidence guards pass. Prior 72-open publication is verified. [Change record](./runs/changes/2026-11-07-005617-directory-clock-current-acceptance-f0171325.json).
+- **Not claimed.** This repairs an existing completed software job and adds no closure, hosted sign-in, independent security/accuracy claim, physical-device result or real collection.
+
+
 ### 2026-11-07-005223-directory-login-wait-both-clock-directions-b05b5949
 
 Recorded 2026-11-07T00:52:23.712108+00:00 · Contributor: Codex · change
