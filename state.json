@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-07T01:01:29.929506+00:00",
+  "updated": "2026-11-07T01:19:21.076318+00:00",
   "active_increment": "Organization directory software accepted; 73 open requirements; continue toward 60 and skip owner-dependent gates.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -781,7 +781,7 @@
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 12,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
@@ -804,7 +804,8 @@
         "reason": "Owner changed immediate target from 45 to 60; preserve full scope and acceptance."
       }
     ],
-    "latest_increment_publication": "runs/2026-11-07-scope-72-live-publication.json"
+    "latest_increment_publication": "runs/2026-11-07-final-live-publication.json",
+    "published_source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1091,7 +1092,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-07T01:01:29.929506+00:00",
+  "updated_at": "2026-11-07T01:19:21.076318+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2846,7 +2847,7 @@
     "ledger": "docs/scope-progress.json"
   },
   "organization_directory": {
-    "status": "clock_skew_fence_repaired_and_current_real_provider_accepted; protected_publication_pending",
+    "status": "clock_skew_fence_repaired; current_real_provider_acceptance_and_live_publication_verified",
     "requirement": "F-162",
     "profile": "operator-owned OIDC broker for private PostgreSQL audit records",
     "plan": "docs/organization-directory-plan.md",
@@ -2862,10 +2863,12 @@
     "guide": "docs/organization-directory.md",
     "completed_at": "2026-11-07T00:56:16.927454+00:00",
     "completed_by": "Codex",
-    "publication_pending": true,
+    "publication_pending": false,
     "protected_merge_evidence": "runs/2026-11-07-directory-protected-merge.json",
     "clock_skew_seconds": 5,
-    "new_login_wait_seconds": 12
+    "new_login_wait_seconds": 12,
+    "publication": "runs/2026-11-07-final-live-publication.json",
+    "published_source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8"
   },
   "recovery_operations": {
     "status": "supported_security_reporting_response_and_recovery_profile_accepted; live_publication_verified",
@@ -2892,5 +2895,19 @@
     "actual_linux_cache_cases": 9,
     "actual_linux_cache_evidence": "runs/2026-11-07-recovery-cache-reuse-linux.json",
     "publication": "runs/2026-11-07-scope-72-live-publication.json"
+  },
+  "production_publication": {
+    "status": "live_and_verified",
+    "source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8",
+    "deployment_url": "https://8fbf089b.aitrust-id.pages.dev",
+    "public_url": "https://aitrustid.com",
+    "evidence": "runs/2026-11-07-final-live-publication.json",
+    "metadata_only_followup": true,
+    "meaning": "This state update records the verified deployment of the stated source commit. Subsequent verification metadata does not change the deployed application code.",
+    "scope_records": 202,
+    "completed_requirements": 130,
+    "open_requirements": 72,
+    "independent_tag_accuracy_approved": false,
+    "real_collection_enabled": false
   }
 }
