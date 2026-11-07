@@ -1,13 +1,15 @@
 # Check the PS engine in an iPhone simulator
 
-This is a developer verification route, not an iPhone app download. Native Share
-is still open: the tested prototype did not deliver the selected text reliably,
-and it is not distributed as an installable app. The website's separate phone
-checker remains available.
+This is a developer verification route, not an iPhone app download. The repaired
+[native Share developer workflow](native-share-developer.md) now passes five actual
+UI workflows on a fresh iPhone 14 Plus simulator with iOS 26.2 and Xcode/SDK 27.2.
+That includes selected-text handoff and explicit PS checks, not engine parity
+alone. Physical iPhone installation, memory, VoiceOver and outside-user acceptance
+remain open. The website's separate phone checker remains available.
 
-The failed prototype is retained in a
-[plain source archive](https://github.com/knwvmbrr/aitrust-id/blob/main/docs/experiments/native-share-unreleased.json)
-for inspection and future repair. It is not an app download or a passing workflow.
+The original failed prototype remains in its [source archive](https://github.com/knwvmbrr/aitrust-id/blob/main/docs/experiments/native-share-unreleased.json).
+It is historical evidence, not the repaired source or an app download. Current
+software and its limits have a [source-bound workflow proof](https://aitrustid.com/reference/native-share-workflow.json).
 
 The verification executable bundles the same PS Python method, frozen Unicode
 normalization and Pyodide runtime used by the device preview. It checks invented
@@ -41,11 +43,13 @@ app. It checks 86 development examples, 41 normalization witnesses and 10 Unicod
 boundary examples, with separate resource and invalid-input refusals. Those
 examples do not measure independent accuracy.
 
-The observed engine pass used Xcode 27.0, SDK 27.0 and the iPhone 14 Plus simulator
-on iOS 26.2. After factoring resource packaging out of the unreleased app
-prototype, two fresh-runtime attempts timed out during OS startup. The retained
-passing engine observation and exact resource comparison do not turn those
-later unavailable runs into passes.
+The current engine rerun used Xcode/SDK 27.2 and the iPhone 14 Plus simulator on
+iOS 26.2. All 137 development/normalization/Unicode cases, 11 resource refusals,
+five input refusals and the remote-fetch refusal passed. The owned simulator was removed after execution; private build artifacts remain
+in the owner output folder for inspection. No physical-phone credit is taken.
+See [the current engine proof](https://aitrustid.com/reference/native-share-engine.json).
+Earlier Xcode 27.0 observations and two subsequent fresh-boot timeouts remain
+historical evidence; they have not been rewritten into passes.
 
 ## Inspect the exact resources
 

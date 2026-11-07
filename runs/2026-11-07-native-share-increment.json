@@ -1,0 +1,53 @@
+{
+  "captured_at": "2026-11-07T15:40:14.419245+00:00",
+  "kind": "native_share_software_increment",
+  "implemented_by": "Codex",
+  "pass": true,
+  "scope_ids": [
+    "N-013",
+    "N-012",
+    "F-142"
+  ],
+  "original_acceptance_preserved": [
+    "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+  ],
+  "criteria_waived": false,
+  "records_preserved": 202,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "target_open": 60,
+  "full_closures_this_increment": 0,
+  "requirement_progress": {
+    "N-013": {
+      "before": 20,
+      "after": 80,
+      "complete": false
+    }
+  },
+  "checks": {
+    "fresh_simulator_ui_workflows": 5,
+    "focused_python_controls": 65,
+    "native_engine_development_unicode_cases": 137,
+    "provider_controls": "runs/2026-11-07-native-share-text-controls.json",
+    "ui_proof": "runs/2026-11-07-native-share-workflow.json",
+    "engine_proof": "runs/2026-11-07-native-share-engine.json"
+  },
+  "limits": [
+    "Physical iPhone install, memory/lifecycle, VoiceOver, real share sources and outside-user acceptance remain open.",
+    "No independent tag accuracy or signed physical-phone release.",
+    "Typed-provider compatibility API is deprecated in iOS 27.",
+    "Current production application source remains at the previous verified commit until protected merge and deployment."
+  ],
+  "failed_attempts_retained_privately": [
+    "Archived UI baseline: one passed, two failed; Share selection did not arrive.",
+    "Raw-data and modern-object provider attempts did not establish a working Share handoff.",
+    "Nested evidence alert lost the Share result; replaced with inline evidence.",
+    "Cold event-synthesis stalled; test and process deadlines now bound the run.",
+    "Fresh-driver simulator-ID lowercasing prevented Xcode destination selection; corrected and tested."
+  ],
+  "raw_inputs_exported": false,
+  "physical_device": false,
+  "independent_accuracy": false,
+  "collection_enabled": false,
+  "live_stream_capture_proven": false
+}

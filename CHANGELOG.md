@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-205856-native-share-verified-source-state-8cca171e
+
+Recorded 2026-11-07T20:58:56.470385+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all five passing current engineering receipts and refresh the reviewed route inventory for the native developer software increment.
+- **Evidence.** Current source checks and all 202 preserved scope records are evidenced; the native phone workflow remains at 80 percent with human and physical acceptance open. [Change record](./runs/changes/2026-11-07-205856-native-share-verified-source-state-8cca171e.json).
+- **Not claimed.** The full requirement count is unchanged at 130 complete and 72 open; source publication is pending protected review and merge.
+
+
+### 2026-11-07-180040-native-share-website-binding-86461477
+
+Recorded 2026-11-07T18:00:40.065069+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the new public native guide and proofs into website validation; require native source/proof guards in CI.
+- **Evidence.** The public source inputs are explicitly tracked and a simulator proof cannot close human or physical acceptance. [Change record](./runs/changes/2026-11-07-180040-native-share-website-binding-86461477.json).
+- **Not claimed.** Manifest changes require fresh engineering receipts; no new requirement closure or accuracy claim.
+
+
+### 2026-11-07-154154-native-share-public-projection-7c752c3a
+
+Recorded 2026-11-07T15:41:54.558756+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh generated scope projections and public native proof links; retain local browser readiness outside public source.
+- **Evidence.** All 202 scope IDs remain, N-013 is 80 percent, and full completion remains 130 complete / 72 open. [Change record](./runs/changes/2026-11-07-154154-native-share-public-projection-7c752c3a.json).
+- **Not claimed.** Native software evidence does not complete physical, human, independent-accuracy or future SDK acceptance.
+
+
+### 2026-11-07-154014-native-share-scope-and-proof-adff9d01
+
+Recorded 2026-11-07T15:40:14.966533+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish current native developer instructions and exact-source proof; update N-013 to 80 percent and correct the active increment to 72 open requirements.
+- **Evidence.** 65 focused software/proof-boundary cases, five real simulator UI workflows and 137 native engine witnesses pass. Original full acceptance is preserved. [Change record](./runs/changes/2026-11-07-154014-native-share-scope-and-proof-adff9d01.json).
+- **Not claimed.** No full requirement closure, physical iPhone acceptance, independent accuracy, production collection or live stream capture. Website publication remains pending.
+
+
+### 2026-11-07-153751-native-share-software-repair-8b3c1183
+
+Recorded 2026-11-07T15:37:51.256710+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair the unreleased iPhone Share handoff and lifecycle; add bounded inline evidence, fresh-simulator verification and a source-bound CI guard.
+- **Evidence.** Five actual current-source simulator UI workflows and 137 bundled-engine development/Unicode cases pass; provider, packaging and stale-proof controls execute. N-013 advances to 80 percent. [Change record](./runs/changes/2026-11-07-153751-native-share-software-repair-8b3c1183.json).
+- **Not claimed.** No full requirement closure: 130 complete and 72 open remain. Physical iPhone, human accessibility, arbitrary share-source and independent accuracy acceptance stay open. Typed-provider compatibility API is deprecated in iOS 27.
+
+
 ### 2026-11-07-011921-final-live-publication-state-c4d56ccc
 
 Recorded 2026-11-07T01:19:21.645351+00:00 · Contributor: Codex · change

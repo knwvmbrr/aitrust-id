@@ -1,0 +1,43 @@
+name: native-share-software
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['mobile/ios/**', 'scripts/*ios*.py', 'scripts/native_bundle.py', 'scripts/verify-shared-text.py', 'tests/test_ios*.py', '.github/workflows/native-share.yml']
+permissions:
+  contents: read
+jobs:
+  native-share:
+    runs-on: macos-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Install pinned public dependencies
+        run: |
+          python -m pip install --require-hashes -r eval/requirements.lock
+          npm ci
+          npm ci --prefix site
+      - name: Prepare exact public method and runtime assets
+        run: node site/scripts/prepare-device.mjs
+      - name: Use a private workspace outside source
+        run: |
+          workspace="$(mktemp -d "$RUNNER_TEMP/aitrust-native.XXXXXXXX")"
+          printf 'AITRUST_NATIVE_PROOF=%s\n' "$workspace" >> "$GITHUB_ENV"
+      - name: Exercise provider admission and stale delivery refusals
+        run: python scripts/verify-shared-text.py --output "$AITRUST_NATIVE_PROOF/text"
+      - name: Exercise current Share workflow on an owned simulator
+        run: |
+          runtime="$(xcrun simctl list runtimes --json | python -c 'import json,sys; rows=[r["identifier"] for r in json.load(sys.stdin)["runtimes"] if r.get("isAvailable") and r["identifier"].startswith("com.apple.CoreSimulator.SimRuntime.iOS-")]; assert rows, "Installed iOS runtime required"; print(sorted(rows)[-1])')"
+          python scripts/verify-ios-share.py --output "$AITRUST_NATIVE_PROOF/share" --runtime "$runtime"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-share-software-proof
+          path: |
+            ${{ env.AITRUST_NATIVE_PROOF }}/text/proof.json
+            ${{ env.AITRUST_NATIVE_PROOF }}/share/proof.json
+          retention-days: 7

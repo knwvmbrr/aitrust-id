@@ -302,7 +302,9 @@ jobs:
       - name: Bind prepared runtime bytes to retained upstream members
         run: python scripts/verify-asset-notices.py --prepared-runtime
       - name: Exercise native engine resources, freshness and private-output refusals
-        run: python -m pytest tests/test_native_bundle.py -q
+        run: |
+          python -m pytest tests/test_native_bundle.py tests/test_ios_project_package.py tests/test_ios_share_verifier.py tests/test_native_share_evidence.py -q
+          python scripts/verify-native-share-evidence.py
       - name: Exercise current-route deployment boundaries and violating profiles
         run: python -m pytest tests/test_route_boundaries.py -q
       - name: Prepare the signed canonical Ubuntu archive on disposable CI
