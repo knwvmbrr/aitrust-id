@@ -32,7 +32,7 @@ jobs:
         run: python scripts/verify-shared-text.py --output "$AITRUST_NATIVE_PROOF/text"
       - name: Exercise current Share workflow on an owned simulator
         run: |
-          runtime="$(xcrun simctl list runtimes --json | python -c 'import json,sys; rows=[r["identifier"] for r in json.load(sys.stdin)["runtimes"] if r.get("isAvailable") and r["identifier"].startswith("com.apple.CoreSimulator.SimRuntime.iOS-")]; assert rows, "Installed iOS runtime required"; print(sorted(rows)[-1])')"
+          runtime="$(xcrun simctl list runtimes --json | python scripts/select-ios-runtime.py)"
           python scripts/verify-ios-share.py --output "$AITRUST_NATIVE_PROOF/share" --runtime "$runtime"
       - uses: actions/upload-artifact@v4
         if: always()

@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-11-07T22:34:01.477457+00:00",
+  "pass": true,
+  "kind": "native_runtime_compatibility_selection",
+  "implemented_by": "Codex",
+  "focused_cases_passed": 13,
+  "actual_local_selection": "com.apple.CoreSimulator.SimRuntime.iOS-26-2",
+  "required_device": "com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus",
+  "hosted_failure": {
+    "xcode": "27.1",
+    "sdk": "27.1",
+    "runtime": "iOS 27.2 iPhone19-4-specific",
+    "stage": "owned_simulator",
+    "reason": "CoreSimulator rejected the incompatible device/runtime pair.",
+    "ui_workflows_executed": false
+  },
+  "repair": "Select only available runtimes whose supportedDeviceTypes explicitly include iPhone 14 Plus; sort compatible versions numerically.",
+  "current_app_or_producer_bytes_changed": false,
+  "full_closures_this_increment": 0,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "physical_device": false,
+  "independent_accuracy": false
+}

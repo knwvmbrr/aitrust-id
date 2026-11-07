@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-223403-native-runtime-device-compatibility-186d2f42
+
+Recorded 2026-11-07T22:34:03.329559+00:00 · Contributor: Codex · change
+
+- **Changed.** Choose the installed iOS simulator runtime by explicit iPhone 14 Plus support, rather than the newest identifier.
+- **Evidence.** Thirteen selection controls pass and real local CoreSimulator metadata chooses the compatible iOS 26.2 runtime. Current app and UI producer bytes remain unchanged. [Change record](./runs/changes/2026-11-07-223403-native-runtime-device-compatibility-186d2f42.json).
+- **Not claimed.** The incompatible hosted run executed no UI workflows and is not counted as a pass; physical and independent accuracy acceptance remain open.
+
+
 ### 2026-11-07-222835-native-share-current-runner-state-1c558032
 
 Recorded 2026-11-07T22:28:35.681617+00:00 · Contributor: Codex · change
