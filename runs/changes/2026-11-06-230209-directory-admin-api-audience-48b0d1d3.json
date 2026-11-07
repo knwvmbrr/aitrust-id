@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-230209-directory-admin-api-audience-48b0d1d3",
+  "recorded_at": "2026-11-06T23:02:09.737376+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ec77a171354011ccd405d294d35354219ce27831",
+  "changed": "Request the documented Keycloak 26.8 Admin API audience scope for the read-only service identity, without expanding its permissions.",
+  "proves": "Current upstream AdminRoot code requires kc-admin-api and its audience; the provider guide and service-token request now follow that contract. Ordinary device-user tokens do not request the administrative scope.",
+  "limits": "The previous HTTP 401 remains a failed integration. The corrected provider path must execute before any full closure.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory.py": "c6aab82c5b8b09618d6161bf7e861fc42658ebe6ef0e393895904209b29accdd",
+    "tools/organization_directory_lab.py": "f7b0b62be202882dd5a709f0cb8bd77ee9e76cf2c20639a73bdae12cc9aeeede",
+    "docs/organization-directory.md": "09b568e0351bcf92eabfb6c0600a4430a36081141714520548c4c0d189b69ad2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-local.json",
+      "sha256": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9"
+    }
+  ],
+  "checks": []
+}

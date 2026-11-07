@@ -2,6 +2,213 @@
 
 ## Unreleased — 2026-11-06
 
+### 2026-11-06-235931-directory-final-reviewed-publication-e750ef3d
+
+Recorded 2026-11-06T23:59:31.638893+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish the current-source publication packet for the repaired directory workflow and preserve 73 open requirements.
+- **Evidence.** The actual repaired provider run, 68 focused control/evidence cases, all five capability checks and the personal boundary review pass on the current source. [Change record](./runs/changes/2026-11-06-235931-directory-final-reviewed-publication-e750ef3d.json).
+- **Not claimed.** No hosted SSO, human/independent-security acceptance, statistical tag approval, new public intake or additional tag is enabled.
+
+
+### 2026-11-06-235603-directory-reviewed-projections-and-run-binding-c512fbf1
+
+Recorded 2026-11-06T23:56:03.020677+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh generated directory references and bind the acceptance packet workflow number to its actual repaired source commit.
+- **Evidence.** The current SSO guide and source guards use the repaired provider evidence, with prior packets retained as superseded history. [Change record](./runs/changes/2026-11-06-235603-directory-reviewed-projections-and-run-binding-c512fbf1.json).
+- **Not claimed.** No hosted service, human acceptance, independent security review, tag accuracy approval or collection is claimed.
+
+
+### 2026-11-06-235534-directory-reviewed-current-acceptance-849b7d04
+
+Recorded 2026-11-06T23:55:34.393933+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind directory completion to the repaired 57-case source and a fresh real-provider Linux run, retaining prior evidence as history.
+- **Evidence.** Both review findings are repaired; the 27 actual controls pass on reviewed source, with 129 complete and 73 open requirements preserved. [Change record](./runs/changes/2026-11-06-235534-directory-reviewed-current-acceptance-849b7d04.json).
+- **Not claimed.** No hosted login, human acceptance, independent security certification, new tag release or real-data collection is enabled.
+
+
+### 2026-11-06-235204-directory-review-output-and-journal-5884da94
+
+Recorded 2026-11-06T23:52:04.675706+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse every Git checkout as a CLI output destination before provider access, and let the bounded private journal reach logout rollover and recovery.
+- **Evidence.** Three actual CLI refusal cases and a populated 10000-logout journal regression pass with the 57-case focused suite. [Change record](./runs/changes/2026-11-06-235204-directory-review-output-and-journal-5884da94.json).
+- **Not claimed.** The prior real-provider receipt is stale after these repairs; current-source provider execution and publication checks must pass again before merge.
+
+
+### 2026-11-06-234625-directory-current-source-publication-22dd0e09
+
+Recorded 2026-11-06T23:46:25.246285+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete the supported organization directory software against real Keycloak and PostgreSQL, publish its distinct guide and preserve all 202 requirements with 73 open.
+- **Evidence.** Twenty-seven real-provider controls and current-source capability evidence support F-162 software completion; no acceptance criterion was moved or waived. [Change record](./runs/changes/2026-11-06-234625-directory-current-source-publication-22dd0e09.json).
+- **Not claimed.** Hosted SSO, enterprise human acceptance, independent security review, research collection and per-tag accuracy acceptance remain unavailable or open.
+
+
+### 2026-11-06-234231-directory-browser-route-coverage-c953a88f
+
+Recorded 2026-11-06T23:42:31.753061+00:00 · Contributor: Codex · change
+
+- **Changed.** Check the implemented SSO guide, source download and real-provider evidence independently of HOST.
+- **Evidence.** Browser route checks cover both implemented organization software workflows and retain the no-hosted-service boundary. [Change record](./runs/changes/2026-11-06-234231-directory-browser-route-coverage-c953a88f.json).
+- **Not claimed.** Software evidence is not independent security, human acceptance, accuracy validation or a hosted SSO service.
+
+
+### 2026-11-06-233010-directory-current-website-contract-cd67c5bb
+
+Recorded 2026-11-06T23:30:10.211961+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the enterprise honesty gate to current website execution and retain passing directory identity evidence while fixing the local npm command path.
+- **Evidence.** The enterprise gate checks all 27 actual software controls and their current source hashes; the real source-bound directory verifier passes. Earlier build invocation could not find npm; no build success was claimed. [Change record](./runs/changes/2026-11-06-233010-directory-current-website-contract-cd67c5bb.json).
+- **Not claimed.** The website build and final capability records still must complete before protected publication.
+
+
+### 2026-11-06-232926-directory-final-site-projections-3df2f94b
+
+Recorded 2026-11-06T23:29:26.947993+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh final public progress projections after directory acceptance and managed-deployment limits were recorded.
+- **Evidence.** The 202-record projection consistently shows 129 complete and 73 open requirements, preserving the current thirteen-closure distance to 60. [Change record](./runs/changes/2026-11-06-232926-directory-final-site-projections-3df2f94b.json).
+- **Not claimed.** Projection changes do not add independent accuracy or human acceptance.
+
+
+### 2026-11-06-232926-directory-reference-generation-5637c1b1
+
+Recorded 2026-11-06T23:29:26.202250+00:00 · Contributor: Codex · change
+
+- **Changed.** Copy the directory guide and actual software proof before catalogue reference validation, and expose the optional operator workflow in the README.
+- **Evidence.** The first site preparation correctly refused missing catalogue references; both named public files are now generated before that gate. [Change record](./runs/changes/2026-11-06-232926-directory-reference-generation-5637c1b1.json).
+- **Not claimed.** This is website integration plumbing, not another requirement closure or a hosted identity endpoint.
+
+
+### 2026-11-06-232747-directory-software-full-acceptance-6f76914a
+
+Recorded 2026-11-06T23:27:47.274040+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete F-162 for the actual self-hosted Linux directory/audit profile and publish distinct operator instructions and bounded software evidence in its offering.
+- **Evidence.** All 27 current-source real Keycloak/TLS/PostgreSQL controls and 53 local authorization boundaries pass. Original acceptance is preserved; the ledger now has 129 complete and 73 open requirements, with 13 closures remaining to target 60. [Change record](./runs/changes/2026-11-06-232747-directory-software-full-acceptance-6f76914a.json).
+- **Not claimed.** No hosted organization login, paid service, human/independent detector validation or new tag is enabled. Broader managed-deployment acceptance remains open.
+
+
+### 2026-11-06-231738-directory-final-evidence-gate-f25435f4
+
+Recorded 2026-11-06T23:17:38.734765+00:00 · Contributor: Codex · change
+
+- **Changed.** Require all 27 real directory controls with exact current sources before F-162 completion, including provider parser, namespace and worker dependencies.
+- **Evidence.** The first 27-control provider run passed; evidence refusal tests reject stale, missing, failed, future and overclaimed runs. The expanded final source set must be exercised again before closure. [Change record](./runs/changes/2026-11-06-231738-directory-final-evidence-gate-f25435f4.json).
+- **Not claimed.** The earlier passing run is historical after this source-binding expansion. F-162 stays open pending the final current-source run.
+
+
+### 2026-11-06-231252-directory-provider-array-contract-88e0326c
+
+Recorded 2026-11-06T23:12:52.981095+00:00 · Contributor: Codex · change
+
+- **Changed.** Parse bounded provider JSON arrays under their own contract while retaining object-only audit admission and strict duplicate/nonfinite checks.
+- **Evidence.** The actual provider reached the group-list API with HTTP 200; the reused audit parser correctly rejected arrays. Fifty-three local cases now cover valid current identity/group responses and bad issuer, audience, expiry, bindings and provider JSON. [Change record](./runs/changes/2026-11-06-231252-directory-provider-array-contract-88e0326c.json).
+- **Not claimed.** The completed real provider workflow still must pass. No audit schema was loosened and F-162 is not marked complete.
+
+
+### 2026-11-06-230755-directory-least-privilege-memberships-61124a28
+
+Recorded 2026-11-06T23:07:55.220276+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the four permissions to immutable direct-group memberships, preserving a view-users-only provider identity, and retain the standard basic token scope.
+- **Evidence.** Current Keycloak GroupPermissions source grants group reads with view-users. Thirty-eight local boundary cases pass. The operator guide and actual lab now use direct group grants and revocations without client-secret viewing authority. [Change record](./runs/changes/2026-11-06-230755-directory-least-privilege-memberships-61124a28.json).
+- **Not claimed.** The previous actual provider run failed its token contract. No full directory acceptance is claimed until the revised real run passes; nested-group permissions are outside this profile.
+
+
+### 2026-11-06-230209-directory-admin-api-audience-48b0d1d3
+
+Recorded 2026-11-06T23:02:09.737376+00:00 · Contributor: Codex · change
+
+- **Changed.** Request the documented Keycloak 26.8 Admin API audience scope for the read-only service identity, without expanding its permissions.
+- **Evidence.** Current upstream AdminRoot code requires kc-admin-api and its audience; the provider guide and service-token request now follow that contract. Ordinary device-user tokens do not request the administrative scope. [Change record](./runs/changes/2026-11-06-230209-directory-admin-api-audience-48b0d1d3.json).
+- **Not claimed.** The previous HTTP 401 remains a failed integration. The corrected provider path must execute before any full closure.
+
+
+### 2026-11-06-222446-directory-standard-role-scope-c4b90eb8
+
+Recorded 2026-11-06T22:24:46.908461+00:00 · Contributor: Codex · change
+
+- **Changed.** Include the provider standard roles client scope so the read-only service identity carries its explicitly assigned directory permissions.
+- **Evidence.** The actual sign-in failure reached the directory-user API and returned HTTP 401. The revised profile retains view-users only and adds no user/client write authority. [Change record](./runs/changes/2026-11-06-222446-directory-standard-role-scope-c4b90eb8.json).
+- **Not claimed.** This is a configuration correction pending actual integration execution, not a successful SSO or full requirement closure.
+
+
+### 2026-11-06-221757-directory-safe-failure-stage-85c52597
+
+Recorded 2026-11-06T22:17:57.863874+00:00 · Contributor: Codex · change
+
+- **Changed.** Add optional fixed-stage numeric diagnostics for operator troubleshooting without exposing provider bodies, identities, tokens or database errors.
+- **Evidence.** The actual provider now passes trusted HTTPS, foreign-issuer and both untrusted-CA refusals. The remaining actual CLI failure is retained; the next run records its fixed authorization stage. [Change record](./runs/changes/2026-11-06-221757-directory-safe-failure-stage-85c52597.json).
+- **Not claimed.** Four provider controls passed but the full job failed. No F-162 closure or production-service claim follows.
+
+
+### 2026-11-06-221411-directory-import-and-private-boundaries-8081fd18
+
+Recorded 2026-11-06T22:14:11.918770+00:00 · Contributor: Codex · change
+
+- **Changed.** Use exact Keycloak realm import filenames, bind the operator guide to integration evidence, and reject private material in any Git checkout.
+- **Evidence.** The actual provider diagnostic identified the filename/realm mismatch. Thirty-eight local tests now include cross-worktree privacy refusal; the operator guide describes sign-in, roles, logout, recovery and deployment limits. [Change record](./runs/changes/2026-11-06-221411-directory-import-and-private-boundaries-8081fd18.json).
+- **Not claimed.** F-162 stays open until a passing current-source real provider/database run. The previous startup failures remain failures; no production service or human acceptance is claimed.
+
+
+### 2026-11-06-221131-directory-lab-runtime-boundary-5c34f912
+
+Recorded 2026-11-06T22:11:31.735734+00:00 · Contributor: Codex · change
+
+- **Changed.** Pin the lab Java and Node executables across sudo privilege dropping, restore the non-root browser home, and retain sanitized disposable-provider startup diagnostics.
+- **Evidence.** The failed actual Linux run was recorded at provider startup with no passing controls; the next run will use the selected Java 21 and Node 24 instead of sudo runtime discovery. [Change record](./runs/changes/2026-11-06-221131-directory-lab-runtime-boundary-5c34f912.json).
+- **Not claimed.** Actual provider acceptance remains failed and F-162 remains open. Diagnostic output is restricted to invented lab identities and redacts long credential-like strings.
+
+
+### 2026-11-06-220728-directory-realm-and-session-preflight-368d0399
+
+Recorded 2026-11-06T22:07:28.936537+00:00 · Contributor: Codex · change
+
+- **Changed.** Separate disposable realm identities, provide complete synthetic user profiles, exercise a valid foreign-issuer token, and require the complete private logout-session contract.
+- **Evidence.** Local boundary tests pass with the exact logout-session shape. The lab assigns unique database identifiers to each realm and tests the wrong-issuer route against an actually active foreign token. [Change record](./runs/changes/2026-11-06-220728-directory-realm-and-session-preflight-368d0399.json).
+- **Not claimed.** The provider workflow has not yet passed; source inspection and local checks do not complete F-162.
+
+
+### 2026-11-06-220621-directory-ci-consumer-contract-24c348b5
+
+Recorded 2026-11-06T22:06:21.016205+00:00 · Contributor: Codex · change
+
+- **Changed.** Use the existing archive helper consumer contract and reviewed signed-source installation recipe in the new directory lab workflow.
+- **Evidence.** Preflight inspection confirms the helper accepts --output, with disposable-runner environment checks; the workflow now supplies those exact inputs. [Change record](./runs/changes/2026-11-06-220621-directory-ci-consumer-contract-24c348b5.json).
+- **Not claimed.** The initial workflow guessed unsupported --plan/--apply flags. This correction is not a successful provider run or a requirement closure.
+
+
+### 2026-11-06-220523-directory-partial-site-projections-1b7745ba
+
+Recorded 2026-11-06T22:05:23.350890+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh public scope projections for the evidenced partial directory implementation.
+- **Evidence.** F-162 is 60 percent; all 202 records remain and 74 full requirements stay open. [Change record](./runs/changes/2026-11-06-220523-directory-partial-site-projections-1b7745ba.json).
+- **Not claimed.** A progress projection is not provider integration or a tag release.
+
+
+### 2026-11-06-220521-directory-local-progress-9f90631a
+
+Recorded 2026-11-06T22:05:21.763706+00:00 · Contributor: Codex · change
+
+- **Changed.** Record F-162 local implementation at 60 percent while retaining 74 open requirements and the full provider acceptance gate; link the actual preceding agent publication.
+- **Evidence.** Thirty-seven source-bound local tests pass. All 202 task percentages and state counts remain consistent; no full requirement closure is granted before the real provider run. [Change record](./runs/changes/2026-11-06-220521-directory-local-progress-9f90631a.json).
+- **Not claimed.** No real Keycloak integration, production identity access, human acceptance or detector release is established.
+
+
+### 2026-11-06-220426-directory-broker-local-implementation-035edf39
+
+Recorded 2026-11-06T22:04:26.428298+00:00 · Contributor: Codex · change
+
+- **Changed.** Implement the optional organization directory broker, private session and recovery controls, and an actual isolated Keycloak/PostgreSQL acceptance workflow.
+- **Evidence.** Thirty-seven local authorization, privacy, role-change, logout and recovery tests pass; Python and browser helper syntax parse. Architecture and source-bound real-provider lab are present. [Change record](./runs/changes/2026-11-06-220426-directory-broker-local-implementation-035edf39.json).
+- **Not claimed.** F-162 remains open. Actual provider/database integration has not run; no hosted login, production identity provider, managed service, independent accuracy or human acceptance is claimed.
+
+
 ### 2026-11-06-203621-agent-current-scope-summary-67e69229
 
 Recorded 2026-11-06T20:36:21.019700+00:00 · Contributor: Codex · change

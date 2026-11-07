@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-06T23:27:46.466440+00:00",
+  "author": "Codex",
+  "requirement": "F-162",
+  "supported_profile": "Operator-owned Keycloak 26.8.2 OIDC device/group gate for private PostgreSQL 18 audit operations on Linux",
+  "original_required_acceptance": [
+    "Deliver SSO and directory integration. Next package action: Define role and tenant boundaries, admin recovery and audit events. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "criteria_moved_or_waived": false,
+  "provider_evidence": "runs/2026-11-06-directory-final-linux.json",
+  "workflow_run": 42310923811,
+  "source_commit": "30c02e2116c4171a018d18efa2fdfccee9cac8c8",
+  "actual_controls": 27,
+  "acceptance_mapping": {
+    "role_and_tenant_boundaries": "Actual current direct group membership, distinct view/export/feedback/configure jobs, wrong tenant/database binding and forged/foreign identity refusals",
+    "grant_revoke_logout_recovery": "Actual group removal/restoration and user disable, local revoke/restore, real provider logout, separate replacement and compromise fence",
+    "private_records": "Actual CLI device login through pinned HTTPS to protected PostgreSQL record view, export and feedback",
+    "personal_independence": "The existing standalone PS checker completes while the provider is stopped",
+    "no_coercive_attestation": "The broker has no signing or IV operation; feedback is explicitly organization feedback only"
+  },
+  "hosted_service_enabled": false,
+  "production_identity_provider_connected": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "certification": false,
+  "new_tag_release": false,
+  "collection_enabled": false,
+  "broader_organization_acceptance": "Managed deployment, independent security/user acceptance and any organization service activation remain open."
+}

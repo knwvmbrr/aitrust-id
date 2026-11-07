@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-220523-directory-partial-site-projections-1b7745ba",
+  "recorded_at": "2026-11-06T22:05:23.350890+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9f7cc7a55e84393331951ce2555efb3fd6739323",
+  "changed": "Refresh public scope projections for the evidenced partial directory implementation.",
+  "proves": "F-162 is 60 percent; all 202 records remain and 74 full requirements stay open.",
+  "limits": "A progress projection is not provider integration or a tag release.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "7de384afb5f777a6b8703beccbb2bf2a2aad1ef6d3a8b93f007111caf208b941",
+    "site/src/public-scope.json": "7de384afb5f777a6b8703beccbb2bf2a2aad1ef6d3a8b93f007111caf208b941",
+    "site/src/scope-manifest.json": "c82cb1c814589ea2cfa86dfdd46497c3b4d927ceff777efb65b1acc4b1b298f6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-local.json",
+      "sha256": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9"
+    }
+  ],
+  "checks": []
+}

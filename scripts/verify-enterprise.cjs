@@ -161,7 +161,17 @@ const FORBIDDEN = [
   if (!/not a checked answer/.test(audit.today)) fail('AUDIT does not distinguish descriptions from checked results');
   if (/every tag panel.*complete versioned record/i.test(audit.today)) fail('AUDIT falsely promises evaluated results from catalogue panels');
   const sso=tags.find(t=>t.id==='sso');
-  if (!/proposed/.test(sso.today)||!/not enforced/.test(sso.today)) fail('SSO presents design permissions as enforced access');
+  if (sso.references.includes('/reference/directory-software-linux.json')) {
+    const fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path');
+    const proof=JSON.parse(fs.readFileSync(path.join(__dirname,'../runs/2026-11-06-directory-reviewed-linux.json')));
+    if(proof.pass!==true||proof.source_unchanged!==true||proof.real_provider_and_database!==true||proof.production_changed!==false||proof.human_acceptance!==false||proof.controls.length!==27||!proof.controls.every(c=>c.pass===true))fail('SSO lacks its complete actual software evidence');
+    for(const [relative,expected] of Object.entries(proof.sources)) {
+      if(!/^[A-Za-z0-9_.\/-]+$/.test(relative)||relative.split('/').includes('..'))throw Error('Unsafe directory evidence source');
+      const file=path.join(__dirname,'..',relative);
+      if(fs.lstatSync(file).isSymbolicLink()||crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')!==expected)fail('SSO software source evidence is stale');
+    }
+    if(!/public website has no organization sign-in service/.test(sso.today))fail('SSO must distinguish self-hosted software from a hosted service');
+  } else if (!/proposed/.test(sso.today)||!/not enforced/.test(sso.today)) fail('SSO presents design permissions as enforced access');
   if (!sso.features.includes('F-128')||!/decline receipt issuance/.test(sso.release)) fail('SSO drops optional author receipts');
   const support=tags.find(t=>t.id==='support');
   if (!/private.*security|private vulnerability/.test(support.today)) fail('SUPPORT must route security disclosure privately');

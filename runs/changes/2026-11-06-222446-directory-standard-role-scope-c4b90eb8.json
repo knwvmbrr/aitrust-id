@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-222446-directory-standard-role-scope-c4b90eb8",
+  "recorded_at": "2026-11-06T22:24:46.908461+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4692303b23dec5bf6cf8c49a6fdffb3e97c5bcc1",
+  "changed": "Include the provider standard roles client scope so the read-only service identity carries its explicitly assigned directory permissions.",
+  "proves": "The actual sign-in failure reached the directory-user API and returned HTTP 401. The revised profile retains view-users only and adds no user/client write authority.",
+  "limits": "This is a configuration correction pending actual integration execution, not a successful SSO or full requirement closure.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "tools/organization_directory_lab.py": "efcd65e981d367cb1b8b470a8033a54a6f76be9a0d2fd6ffe92c6aa35ff8f602",
+    "docs/organization-directory.md": "d9f3473eb0ef63aeacdcdb7879f594775a1bf59e17a6e827378043241729f26e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-local.json",
+      "sha256": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9"
+    }
+  ],
+  "checks": []
+}

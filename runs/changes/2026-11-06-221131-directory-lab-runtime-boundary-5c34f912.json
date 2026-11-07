@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-221131-directory-lab-runtime-boundary-5c34f912",
+  "recorded_at": "2026-11-06T22:11:31.735734+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c324833469e6b311e689ba01cdd782880a8fbfb4",
+  "changed": "Pin the lab Java and Node executables across sudo privilege dropping, restore the non-root browser home, and retain sanitized disposable-provider startup diagnostics.",
+  "proves": "The failed actual Linux run was recorded at provider startup with no passing controls; the next run will use the selected Java 21 and Node 24 instead of sudo runtime discovery.",
+  "limits": "Actual provider acceptance remains failed and F-162 remains open. Diagnostic output is restricted to invented lab identities and redacts long credential-like strings.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "scripts/verify-organization-directory.py": "74159f0ff30dc3c9e3daa8f052e2b817a90807685c82419efd0fd75f8c3ff5fd",
+    "tools/organization_directory_lab.py": "fd755af1293f290b80361961958df613da48cfaceae049289842a1987e349137",
+    ".github/workflows/organization-directory.yml": "7c1668060036cf388cb93d78f10e63d047b5e0d2daad39c66742a5ce3e3f9551"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-local.json",
+      "sha256": "da5caa481bc6fac3ecd7ebd51f7a3b55d919fafcaa31df46ea8e42035ba84ea9"
+    }
+  ],
+  "checks": []
+}

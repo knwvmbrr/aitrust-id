@@ -62,3 +62,5 @@ for(const name of ['mark-usage','author-choice','image-provenance-boundary','cor
 
 fs.copyFileSync(path.join(root,'docs/conformance-runner.md'),path.join(dist,'reference/conformance-runner.md'));
 fs.copyFileSync(path.join(root,'runs/2026-11-06-conformance-software-execution.json'),path.join(dist,'reference/conformance-software-execution.json'));
+
+fs.copyFileSync(path.join(root,'runs/2026-11-06-directory-reviewed-linux.json'),path.join(dist,'reference/directory-software-linux.json'));

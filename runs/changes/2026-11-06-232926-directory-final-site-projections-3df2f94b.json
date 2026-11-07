@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-232926-directory-final-site-projections-3df2f94b",
+  "recorded_at": "2026-11-06T23:29:26.947993+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "30c02e2116c4171a018d18efa2fdfccee9cac8c8",
+  "changed": "Refresh final public progress projections after directory acceptance and managed-deployment limits were recorded.",
+  "proves": "The 202-record projection consistently shows 129 complete and 73 open requirements, preserving the current thirteen-closure distance to 60.",
+  "limits": "Projection changes do not add independent accuracy or human acceptance.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "site/public/reference/public-scope.json": "7ddacc9af310433714ae03d0755f9b231f39ada775f1820e28ff5fb9590503b9",
+    "site/src/public-scope.json": "7ddacc9af310433714ae03d0755f9b231f39ada775f1820e28ff5fb9590503b9",
+    "site/src/scope-manifest.json": "f9277fe2d70ea2cd64137c9b809b2662cb7e661b7ca8291ce61114fdf671c58b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-software-acceptance.json",
+      "sha256": "f12b73b3608a32d0248bf84182632da16f3d26e63055ca340c0554ac56f8a900"
+    }
+  ],
+  "checks": []
+}

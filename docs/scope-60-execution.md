@@ -76,3 +76,18 @@ has actual 28-case CLI execution and 12 focused interface/failure tests; a sourc
 binding guard and CI retain that boundary. The original outside-implementer run
 criterion remains under F-142, independent accuracy under F-108. F-057/F-120
 remain unchanged. The ledger is 127 complete / 75 open, 15 closures to reach 60.
+
+## Self-hosted organization directory — November 6
+
+F-162 is complete for the supported operator-owned Linux software profile. Real
+Keycloak 26.8.2 HTTPS/device login and PostgreSQL access passed all 27 controls,
+including current direct-group removal, tenant denial, logout, compromise recovery
+and a working personal checker with the provider stopped. Fifty-three local
+boundary cases and eleven evidence-refusal cases support the implementation.
+The original requirement acceptance is preserved in the software acceptance packet;
+no criterion was moved or waived. Managed organization deployment and independent
+security/user acceptance remain open under ORG-SSO and the offering boundaries.
+No hosted login, public account gate, new tag release or collection is enabled.
+
+All 202 requirements remain: 129 complete / 73 open. Thirteen additional full
+closures are needed to reach 60. The recovery work continues separately.

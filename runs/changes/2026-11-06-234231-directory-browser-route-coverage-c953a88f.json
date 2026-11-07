@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-06-234231-directory-browser-route-coverage-c953a88f",
+  "recorded_at": "2026-11-06T23:42:31.753061+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "30c02e2116c4171a018d18efa2fdfccee9cac8c8",
+  "changed": "Check the implemented SSO guide, source download and real-provider evidence independently of HOST.",
+  "proves": "Browser route checks cover both implemented organization software workflows and retain the no-hosted-service boundary.",
+  "limits": "Software evidence is not independent security, human acceptance, accuracy validation or a hosted SSO service.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "26aadf1348f0fc86852d80aea28f55106277b94c321ba8519c729fabb9439bc6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-directory-final-linux.json",
+      "sha256": "32fd259318c09b7aa04244f45ed7531844368af19f8035d5c2c889c1f2dbd100"
+    }
+  ],
+  "checks": []
+}
