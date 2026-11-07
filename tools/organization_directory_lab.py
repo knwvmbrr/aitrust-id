@@ -142,6 +142,16 @@ def verify(keycloak,namespace):
         broker.journal.recover(people['admin']['id'],sessions['backup']['access_token'],provider);case('separate_owner_recovery_fences_compromised_admin')
         refused(lambda:broker.dispatch(req(sessions['backup'])),'pre_recovery_replacement_session_also_fenced')
         time.sleep(d.CLOCK_SKEW_SECONDS+2);sessions['backup']=login('backup');d.check(broker.dispatch(req(sessions['backup']))['records']);case('fresh_replacement_login_restores_authorized_access')
+        # Keep Keycloak and TLS on the real host clock; inject only a supported
+        # four-second lag into this broker process, then restore it promptly.
+        real_clock=time.time
+        try:
+            time.time=lambda:real_clock()-4
+            _,issued,_=provider.current(sessions['backup']['access_token']);d.check(issued>int(time.time()))
+            broker.journal.recover(people['admin']['id'],sessions['backup']['access_token'],provider)
+            refused(lambda:broker.dispatch(req(sessions['backup'])),'actual_provider_clock_skew_session_fenced')
+        finally:time.time=real_clock
+        time.sleep(d.CLOCK_SKEW_SECONDS+2);sessions['backup']=login('backup');d.check(broker.dispatch(req(sessions['backup']))['records'])
         refused(lambda:broker.dispatch(req(sessions['backup'],'configure',{'subject':people['admin']['id'],'action':'restore'})),'directory_admin_cannot_undo_owner_compromise_fence')
         stage='real_provider_logout_and_provider_outage'
         outcome=broker.logout(sessions['backup']);d.check(outcome['local_logout'] is True and outcome['provider_revocation']=='completed');case('actual_local_and_provider_token_revocation')

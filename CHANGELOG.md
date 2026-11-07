@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-004609-directory-real-provider-clock-skew-control-022276a2
+
+Recorded 2026-11-07T00:46:09.510400+00:00 · Contributor: Codex · change
+
+- **Changed.** Exercise clock-skew fencing against real Keycloak tokens by applying a controlled four-second lag only to the broker process.
+- **Evidence.** The compiled source contract requires a real provider-issued future timestamp to be accepted and its older session refused after recovery, followed by a valid fresh login. [Change record](./runs/changes/2026-11-07-004609-directory-real-provider-clock-skew-control-022276a2.json).
+- **Not claimed.** The actual current-source provider run is pending. This fault injection does not measure two independent physical host clocks or grant publication acceptance.
+
+
 ### 2026-11-07-004339-directory-clock-skew-fence-912433db
 
 Recorded 2026-11-07T00:43:39.873149+00:00 · Contributor: Codex · change
