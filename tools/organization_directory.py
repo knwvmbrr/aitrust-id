@@ -22,6 +22,7 @@ def private_file(path):
 
 FORMAT='organization-directory/v1'
 CLOCK_SKEW_SECONDS=5
+LOGIN_WAIT_SECONDS=2*CLOCK_SKEW_SECONDS+2
 ROLES={'view':'aitrust-view','export':'aitrust-export','review':'aitrust-review','configure':'aitrust-configure'}
 OPS=set(ROLES)
 class Refused(ValueError):pass
@@ -198,7 +199,7 @@ class Journal:
             self.allowed(db,sub,replacement,issued)
             db.execute('INSERT INTO blocked VALUES(?,1) ON CONFLICT(subject) DO UPDATE SET compromised=1',(self.pseudonym(db,compromised),))
             db.execute('UPDATE control SET fence=max(fence,?) WHERE singleton=1',(int(time.time())+CLOCK_SKEW_SECONDS+1,));self.event(db,sub,'owner-recovery','fenced')
-        return {'recovered':True,'pre_recovery_tokens_blocked':True,'new_login_required':True}
+        return {'recovered':True,'pre_recovery_tokens_blocked':True,'new_login_required':True,'new_login_wait_seconds':LOGIN_WAIT_SECONDS}
 
 class Broker:
     def __init__(self,c,*,provider=None,store_factory=Store):

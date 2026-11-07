@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-005223-directory-login-wait-both-clock-directions-b05b5949
+
+Recorded 2026-11-07T00:52:23.712108+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose a conservative twelve-second fresh-login wait that covers the accepted clock difference in either direction after recovery.
+- **Evidence.** All 61 focused directory controls pass, including both future issue boundaries, both fresh-login clock directions and populated logout rollover. [Change record](./runs/changes/2026-11-07-005223-directory-login-wait-both-clock-directions-b05b5949.json).
+- **Not claimed.** Current-source real-provider execution is still required. No hosted sign-in, personal-account gate or additional directory privilege is introduced.
+
+
 ### 2026-11-07-004757-directory-clock-control-cause-check-aaa83122
 
 Recorded 2026-11-07T00:47:57.336246+00:00 · Contributor: Codex · change

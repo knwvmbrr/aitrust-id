@@ -21,3 +21,5 @@ security certification is introduced. Provider and broker clocks must be kept
 synchronized within the declared tolerance.
 
 The real-provider run also gives the broker a controlled four-second clock lag while Keycloak and TLS remain on the real host clock. It must accept the valid provider issue timestamp, fence the already-issued session on recovery, restore the broker clock, and admit a fresh login after the bounded wait. This is fault injection on one Linux host, not a claim about independently synchronized physical hosts.
+
+The documented twelve-second fresh-login wait covers a provider clock either five seconds ahead or five seconds behind a stable broker clock. The result exposes that wait to the operator. Focused cases validate both directions; an unavailable or unstable clock remains a fail-closed operating condition, not grounds to reduce the fence.

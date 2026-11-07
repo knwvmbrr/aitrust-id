@@ -238,3 +238,13 @@ def test_recovery_fence_covers_the_provider_accepted_future_issue_interval(selec
     with pytest.raises(d.Refused):b.dispatch(request(selected,token='pre-recovery-session'))
     later=now+d.CLOCK_SKEW_SECONDS+2;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later
     assert b.dispatch(request(selected,token='fresh-after-fence'))['records']==[]
+
+
+@pytest.mark.parametrize('issuer_offset',[-5,5])
+def test_documented_login_wait_covers_either_clock_direction(selected,monkeypatch,issuer_offset):
+    now=int(time.time());monkeypatch.setattr(d.time,'time',lambda:now)
+    b,p,s=prepared(selected,[d.ROLES['configure'],d.ROLES['view']]);result=b.journal.recover(selected[3],'old-session',p)
+    assert result['new_login_wait_seconds']==d.LOGIN_WAIT_SECONDS==12
+    later=now+d.LOGIN_WAIT_SECONDS;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later+issuer_offset
+    assert network_fixture(selected,iat=p.issued).current('fresh-provider-token')[1]==p.issued
+    assert b.dispatch(request(selected,token='fresh-login'))['records']==[]
