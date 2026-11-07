@@ -2,7 +2,7 @@
 
 ## Reporting
 
-Use the repository's **Security → Report a vulnerability** control when enabled.
+Use the repository's **Security → Report a vulnerability** control. The authenticated repository setting was verified enabled on November 6, 2026.
 Do not post exploits, credentials, prompts, personal data or private AI outputs
 in public issues. The owner created security@aitrustid.com; that particular inbox
 has not been independently tested. No guaranteed response SLA is claimed.
@@ -39,3 +39,5 @@ docs/registry-deferral-result.md for the executed boundaries.
 ## Threat model
 
 See THREAT_MODEL.md.
+
+[Security response and replacement-host recovery](docs/security-operations.md) names the accountable operator, containment steps, measured recovery boundaries and remaining human obligations. No staffed response deadline is promised.

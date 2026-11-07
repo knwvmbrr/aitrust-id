@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-000853-recovery-public-guides-and-scope-fc98e067",
+  "recorded_at": "2026-11-07T00:08:53.786051+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b8f4e0c098340401510e32560f9c0ead23309323",
+  "changed": "Expose the distinct security/recovery guide and regenerate the 202-record public scope with 130 complete and 72 open.",
+  "proves": "The full supported recovery/response acceptance and current source guards pass without server credentials; static guide preparation retains all tag and legal boundaries.",
+  "limits": "Operational software completion is not independent tag accuracy, human acceptance, a staffed response promise or an operating research intake.",
+  "scope_ids": [
+    "F-073"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "5d48dc55100733d982b284d914a9e2a60db6639f26fdeced6791707938812d7d",
+    "Makefile": "169fa3278fcc163540b474e7f886ad4bae80ce9b67ee7bb438bac19ee8db8f9a",
+    "README.md": "cf8c75df49d46eb055ac738dfd323736c9f2ebeabd900ebde189c770f64cab25",
+    "SECURITY.md": "c6522349a5f4ced07235e8246450dffa43dce70786cb12a406b205a64e7339f0",
+    "deploy/recovery/apply.py": "fc86b7b61929d29df020b4bfb033c26b77da3ceed15d225fa8db50b2479dd62d",
+    "deploy/recovery/collect.py": "0c9faddb89fe9a1715960ffb1196100cdf73ad935c7a368edf2d81e570510c36",
+    "deploy/recovery/finish.py": "3c7d5c8ad0a7afc5cbab3761c2688354bd1a0b2f81643ca91915f988ad92ab4a",
+    "deploy/recovery/guest.py": "1020ed70957e8b37722511151ddc6cd2100afa27a858f1cb8e5c9858647bc36a",
+    "deploy/recovery/isolate.py": "623c31b3626d5dab002b9fb0dbb40372c2f6ecd31532d9ea36e262d15d556c32",
+    "deploy/recovery/monitor-guest.py": "bebeed7dde7aa47e206ed03306ae353c1ede3467838a8d0393ba4befa854a50a",
+    "deploy/recovery/monitor.py": "c186a26634491510b654360da850cdbf81d534de72ef8c13cc4d544159286d7b",
+    "deploy/recovery/prepare.py": "420932a0a32038e37fa336ffa24df82232921a8d64951125f8675f581b1df209",
+    "deploy/recovery/receive.py": "e2f1053357dad1da1da2e1d460aeecebf82cc747a3b1079bac2146bcfcfd2265",
+    "deploy/recovery/restore-guest.py": "d4ec096d5e0f38d2ee05331ec292b0d4d0af6129015af33c3001fcf5c577d845",
+    "docs/full-host-recovery-plan.md": "fc3eb17b7c63d6aa0a122558d7bdac78ff172223f333ce26e96fcd9a879082b6",
+    "docs/scope-60-execution.md": "9c8ea5f9d6475a592ce14d04947ca7508c573df33ca742cf930cb7e091606192",
+    "docs/scope-progress.json": "6bba9564a539473eab243b79baa6c73a99ff7e6f7a133880855df61c282a5d91",
+    "docs/scope-progress.md": "56d8c3dccd6c48275ec7da3b27e2bd5b15664f743d302bab710cddf3e806f887",
+    "docs/scope-task-index.md": "a496dad8d6020665826159fd27e04de989b7642e28d40df0dbf197096bd46597",
+    "docs/security-operations.md": "ca1d8efae9362d28f0b3a58486ae67247d5bbf3a3aba956feba46e9d3ca39abc",
+    "eval/revalidation.json": "1e315144fc372238ed6a95099289c3bbfb274b6848e94d00cdfa53281e595642",
+    "runs/2026-11-06-full-host-recovery.json": "e77d985aff623f15c41d7d535aa2cc5202a2da434e9acf51e5f3d45c44a76137",
+    "runs/2026-11-06-host-final-acceptance.json": "c0a9e67a608dbf163af8bef929d472af01991666800672a4b8b2ab89b2bbba11",
+    "runs/2026-11-06-host-final-guards.json": "51b7f65a4c2815e34c9a2dadaf3270ed5a7d77eb567bcfeb3e57802c994bf395",
+    "runs/2026-11-06-host-recovery-acceptance.json": "5f27986d7a13196716074c0ee102d9fdc9705b3e1c0c581d1e55db9fb409c0ba",
+    "runs/2026-11-06-recovery-guard-checks.json": "b31e408cb0dbef20e28d0d15794bf9eb9cddcae02f3af37f5a5d3a9e72e3f3d7",
+    "runs/2026-11-07-adapter-incident-exercise.json": "c0fb917c3b51040a709460aea9fb854da4bf31526871e7338190ed5989672a91",
+    "runs/2026-11-07-directory-protected-merge.json": "f6e87c64e6e5727df1ffca5e17c43d1291381d7670130fe619743203565536c3",
+    "runs/2026-11-07-recovery-source-binding.json": "bd07e7e141366c09dd3ad9f12fec6ec4aad42e38a9334cdad73bb343a34ceb66",
+    "runs/2026-11-07-security-channel-status.json": "39675f04f4b37ee938e3a6a224000fe987297701e0c1c5f763534dfe301ec6ea",
+    "runs/2026-11-07-security-operations-acceptance.json": "f69ce35ec2ccc21dd809631f416820d1c40d7f885b49ac7a0228fa8d08994817",
+    "scripts/verify-host-recovery-evidence.py": "7170016e96a937c43670681d7faf96e8ebff1d41f3591b0a68d8b527ffd92b57",
+    "scripts/verify-route-boundaries.py": "d2db2527f17ad637ad679cddfe98a842739a153376ff3c83772c96092924c6ca",
+    "site/public/reference/host-recovery.json": "c0a9e67a608dbf163af8bef929d472af01991666800672a4b8b2ab89b2bbba11",
+    "site/public/reference/public-scope.json": "2e6e40daba11690e29c1f3a72c4d38916a4d2a348a07ebe357ac8e261c58be60",
+    "site/public/reference/security-operations.md": "ca1d8efae9362d28f0b3a58486ae67247d5bbf3a3aba956feba46e9d3ca39abc",
+    "site/public/reference/security-policy.md": "c6522349a5f4ced07235e8246450dffa43dce70786cb12a406b205a64e7339f0",
+    "site/scripts/prepare.mjs": "be99302f4e5583e99432c40dda74bd5c05958711d429fff59caa538faeb6c648",
+    "site/scripts/render-reference.mjs": "324f0d05a159ae15d9218a03ceb3483809e3f5ca656171ed1ddda3280e6d2bd5",
+    "site/src/public-scope.json": "2e6e40daba11690e29c1f3a72c4d38916a4d2a348a07ebe357ac8e261c58be60",
+    "site/src/scope-manifest.json": "1576848d38763557fa0a42fdd75fdb6162d251e4e4e1ba5634eff399e8b3946a",
+    "state.json": "56209fd6c2abd19f9375eb9e0c278900d53ceedbd5ce92fd34f1076848659f71",
+    "tests/test_host_recovery_evidence.py": "e2a46a338e5e9ade1d3ed35106f6e9212b2d7674cc5693e98baeb1726caa02b5",
+    "tests/test_recovery_stream_boundary.py": "85573488c748fd2a25a59a67774dd5cfe10d739e45d3b5f977a4d5c989d540aa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-06-host-final-acceptance.json",
+      "sha256": "c0a9e67a608dbf163af8bef929d472af01991666800672a4b8b2ab89b2bbba11"
+    },
+    {
+      "path": "runs/2026-11-07-security-operations-acceptance.json",
+      "sha256": "f69ce35ec2ccc21dd809631f416820d1c40d7f885b49ac7a0228fa8d08994817"
+    }
+  ],
+  "checks": []
+}

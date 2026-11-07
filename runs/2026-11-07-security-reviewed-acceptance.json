@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-07T00:22:00.501631+00:00",
+  "pass": true,
+  "requirement": "F-073",
+  "author": "Codex",
+  "original_required_acceptance": [
+    "Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings."
+  ],
+  "criteria_moved_or_waived": false,
+  "supported_profile": "Accountable private security reporting and response planning for the current account-free preview and operator-owned Debian/PostgreSQL profile",
+  "acceptance_mapping": {
+    "named_owner_and_channel": "docs/security-operations.md and runs/2026-11-07-security-channel-status.json",
+    "source_binding": "runs/2026-11-07-recovery-source-binding.json, current-source guard checks and separately retained executed helper identities",
+    "incident_and_adapter_response": "Actual replacement database outage/restart and bounded alert exercise; actual consumer code with injected failures and honest Unavailable responses",
+    "replacement_operating_system_recovery": "runs/2026-11-06-host-final-acceptance.json",
+    "known_drill_findings": "Transient unit shutdown, control stdin consumption, bounded reboot readiness, strict owner host-key alias and readiness data-state reporting corrected and evidenced; idempotent private receiver cache and requested reboot identity wait corrected under review"
+  },
+  "known_open_findings_in_this_selected_code_profile": [],
+  "evidence": [
+    "runs/2026-11-07-host-reviewed-acceptance.json",
+    "runs/2026-11-07-host-reviewed-guards.json",
+    "runs/2026-11-07-recovery-source-binding.json",
+    "runs/2026-11-07-adapter-incident-exercise.json",
+    "runs/2026-11-07-security-channel-status.json",
+    "runs/2026-11-07-recovery-cache-reuse-linux.json"
+  ],
+  "separate_obligations_retained": [
+    "N-011 owner custody, consenting pilot and real collection gates",
+    "F-142/N-012 physical phone and human operation",
+    "F-037/F-097 live vendor and outside-user compatibility",
+    "F-108 independent holdout and tag accuracy",
+    "F-148 qualified legal/privacy review"
+  ],
+  "current_source_full_vm_rerun_claimed": false,
+  "global_security_clearance": false,
+  "human_acceptance": false,
+  "staffed_response_sla_claimed": false,
+  "real_data_collection_enabled": false,
+  "supersedes": "runs/2026-11-07-security-operations-acceptance.json"
+}

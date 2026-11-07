@@ -1,5 +1,70 @@
 # Changelog
 
+## Unreleased — 2026-11-07
+
+### 2026-11-07-002811-recovery-reviewed-final-publication-6858ccc3
+
+Recorded 2026-11-07T00:28:11.654575+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind both repeat-use recovery review repairs to current source and fresh capability checks, retaining the full 130-complete / 72-open ledger.
+- **Evidence.** The nine actual cache controls, 33 focused guards/evidence cases, all five capability checks and personal boundary review pass after the repair. [Change record](./runs/changes/2026-11-07-002811-recovery-reviewed-final-publication-6858ccc3.json).
+- **Not claimed.** Full VM measurement and post-drill component repairs stay distinct; no current-source full VM rerun, independent security certificate, human acceptance, real intake or tag accuracy release is claimed.
+
+
+### 2026-11-07-002247-recovery-reviewed-public-projections-6bd86347
+
+Recorded 2026-11-07T00:22:47.386782+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the public recovery guide, evidence download and unchanged 130-complete / 72-open scope against the review repairs.
+- **Evidence.** Public source preparation uses current bounded evidence and preserves all original requirement IDs and separate human/accuracy gates. [Change record](./runs/changes/2026-11-07-002247-recovery-reviewed-public-projections-6bd86347.json).
+- **Not claimed.** Current component tests and actual cache reuse are separate from the retained full VM measurement.
+
+
+### 2026-11-07-002246-recovery-repeat-use-review-repairs-461d6832
+
+Recorded 2026-11-07T00:22:46.620400+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair repeat-use recovery: safely reuse the verified receiver cache and wait for the specific requested reboot identity change.
+- **Evidence.** Nine actual root/Linux cache controls and fourteen focused current-source guards pass; altered, unsafe, symlinked and hardlinked cache entries are refused, and a still-ready old boot cannot pass. [Change record](./runs/changes/2026-11-07-002246-recovery-repeat-use-review-repairs-461d6832.json).
+- **Not claimed.** The original full VM run remains separately identified. No second full restoration, occupied-table recovery, production-scale RTO, human acceptance or collection is claimed.
+
+
+### 2026-11-07-001321-recovery-final-current-source-publication-ab9f6a32
+
+Recorded 2026-11-07T00:13:21.838404+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the complete security/response/recovery increment to current capability, scope and personal-boundary evidence with 72 requirements left open.
+- **Evidence.** All five current capability checks, the 202-record scope, accountable ownership and explicit response/recovery acceptance pass without enabling real intake. [Change record](./runs/changes/2026-11-07-001321-recovery-final-current-source-publication-ab9f6a32.json).
+- **Not claimed.** The full VM used an empty application database. Post-drill focused repairs, source snapshot limits, retained tools, human/accuracy obligations and absent SLA remain explicit.
+
+
+### 2026-11-07-001130-recovery-primary-preservation-boundary-2b81953d
+
+Recorded 2026-11-07T00:11:30.054513+00:00 · Contributor: Codex · change
+
+- **Changed.** Make the primary preservation boundary explicit: critical PostgreSQL, SSH and firewall identity/configuration stayed unchanged; recovery tools and a nologin account remain installed.
+- **Evidence.** The recovery VM and private nonce staging are absent and no recovery VM process remains. [Change record](./runs/changes/2026-11-07-001130-recovery-primary-preservation-boundary-2b81953d.json).
+- **Not claimed.** This is logical cleanup and a matched critical snapshot, not physical erasure or a byte-for-byte unchanged host filesystem.
+
+
+### 2026-11-07-000853-recovery-public-guides-and-scope-fc98e067
+
+Recorded 2026-11-07T00:08:53.786051+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose the distinct security/recovery guide and regenerate the 202-record public scope with 130 complete and 72 open.
+- **Evidence.** The full supported recovery/response acceptance and current source guards pass without server credentials; static guide preparation retains all tag and legal boundaries. [Change record](./runs/changes/2026-11-07-000853-recovery-public-guides-and-scope-fc98e067.json).
+- **Not claimed.** Operational software completion is not independent tag accuracy, human acceptance, a staffed response promise or an operating research intake.
+
+
+### 2026-11-07-000818-recovery-and-response-full-acceptance-b071a3ef
+
+Recorded 2026-11-07T00:08:18.790205+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete accountable private security reporting and the supported replacement-host response/recovery profile; preserve all 202 requirements with 72 open.
+- **Evidence.** Actual encrypted backup restoration in a separate Debian kernel, owner-key access, operational failure/recovery, reboot, unchanged primary and cleanup pass. Source identities and post-drill guard checks are distinct. [Change record](./runs/changes/2026-11-07-000818-recovery-and-response-full-acceptance-b071a3ef.json).
+- **Not claimed.** The database had no application tables. No occupied-table recovery, current-source full VM rerun, independent security certification, human acceptance, staffed SLA, production-scale RTO or collection is claimed.
+
+
 ## Unreleased — 2026-11-06
 
 ### 2026-11-06-235931-directory-final-reviewed-publication-e750ef3d

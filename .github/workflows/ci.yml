@@ -37,6 +37,8 @@ jobs:
           sudo python3 tests/restore_isolation_kernel.py host
           sudo unshare --net -- python3 tests/restore_isolation_kernel.py isolated
       - run: shellcheck -e SC1091 deploy/backup/bootstrap.sh deploy/backup/deploy.sh deploy/backup/verify.sh deploy/backup/schedule.sh deploy/backup/source-monitor.sh
+      - name: Verify bounded replacement-host evidence without production credentials
+        run: make recovery-build
       - run: make alerts-build
       - run: shellcheck deploy/alerts/install.sh
       - run: make notifications-build

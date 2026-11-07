@@ -1,0 +1,53 @@
+{
+  "captured_at": "2026-11-07T00:21:00.196106+00:00",
+  "pass": true,
+  "platform": "linux",
+  "actual_root_private_cache": true,
+  "controls": [
+    {
+      "case": "existing_actual_receiver_reused",
+      "pass": true
+    },
+    {
+      "case": "existing_actual_receiver_reused_again",
+      "pass": true
+    },
+    {
+      "case": "new_private_receiver_installed",
+      "pass": true
+    },
+    {
+      "case": "matching_private_receiver_reused",
+      "pass": true
+    },
+    {
+      "case": "altered_existing_bytes_refused",
+      "pass": true
+    },
+    {
+      "case": "unsafe_existing_permissions_refused",
+      "pass": true
+    },
+    {
+      "case": "hardlinked_existing_receiver_refused",
+      "pass": true
+    },
+    {
+      "case": "symlinked_receiver_refused",
+      "pass": true
+    },
+    {
+      "case": "wrong_source_digest_refused",
+      "pass": true
+    }
+  ],
+  "synthetic_cache_objects_removed": true,
+  "existing_actual_receiver_unchanged": true,
+  "production_database_changed": false,
+  "full_vm_rerun": false,
+  "sources": {
+    "deploy/recovery/collect.py": "51b1d8f6ac7ade5f9c5d7614fea61ce2f145884fc437f8b15c750df7bd54d812",
+    "deploy/recovery/receive.py": "e2f1053357dad1da1da2e1d460aeecebf82cc747a3b1079bac2146bcfcfd2265"
+  },
+  "installer_code_sha256": "53524ef47f3f9e4b42bbdcb9bfeb775037b962c48253e560ab7c4dfe940f9f8d"
+}

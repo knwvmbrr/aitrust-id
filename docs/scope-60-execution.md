@@ -91,3 +91,7 @@ No hosted login, public account gate, new tag release or collection is enabled.
 
 All 202 requirements remain: 129 complete / 73 open. Thirteen additional full
 closures are needed to reach 60. The recovery work continues separately.
+
+## Full recovery and response increment — 2026-11-07T00:08:18.657583+00:00
+
+F-073 now has its preserved supported-profile acceptance: named private reporting, accountable response planning, actual replacement OS/database recovery, owner-key administration, incident/adapter exercises, source preservation, reboot persistence and cleanup. The current ledger is 130 complete / 72 open of 202; twelve more full closures are needed for 60. The original criterion remains in the acceptance packet. No tag accuracy, human/phone acceptance, staffed SLA, occupied-application recovery, production-scale RTO or collection gate was waived.

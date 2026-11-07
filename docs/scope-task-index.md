@@ -131,7 +131,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-135 | Report AI — public intake for AI content people want flagged | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-136 | Townhall — a community space for AI users to talk, with moderation | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-137 | Moderation ladder and escalation path derived from the code of conduct | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
-| TASK-F-073 | Security reporting and response-capacity planning | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-F-073 | Security reporting and response-capacity planning | [WP-OPERATIONS](scope-delivery.md#wp-operations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-074 | conduct@ with an enforcement ladder | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-138 | abuse@ and press@ | [WP-COMMUNITY](scope-delivery.md#wp-community) | 40% · [evidence/fix](scope-progress.md) |
 | TASK-F-139 | Site accessibility held to the same gate as the extension | [WP-SITE](scope-delivery.md#wp-site) | 100% · [evidence/fix](scope-progress.md) |

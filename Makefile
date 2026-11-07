@@ -144,3 +144,10 @@ verify-organization-audit:
 verify-host-capture:
 	$(PYTHON) scripts/verify-host-capture-evidence.py
 	$(PYTHON) -m pytest tests/test_host_capture.py tests/test_host_capture_evidence.py -q
+
+.PHONY: recovery-build verify-host-recovery
+recovery-build:
+	$(PYTHON) -m py_compile deploy/recovery/*.py
+	$(PYTHON) scripts/verify-host-recovery-evidence.py
+verify-host-recovery: recovery-build
+	$(PYTHON) -m pytest tests/test_recovery_stream_boundary.py tests/test_host_recovery_evidence.py -q
