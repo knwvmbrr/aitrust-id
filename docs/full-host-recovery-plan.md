@@ -59,3 +59,5 @@ archive or private-material transfer may inherit a supplied byte stream. Read th
 expected payload before readiness commands and test that a control child cannot
 consume its parent's recovery stream. This prevents accidental delivery to a
 control SSH command, including a command on the backup provider.
+
+Repeated drills must reuse an existing root-owned private receiver only after verifying its exact content hash; a mismatch, symlink, hardlink or unsafe permission is refused. Reboot finalization must wait for the requested pre-reboot boot identity to change, not merely for a guest that differs from its original preparation boot. Test these two review findings directly before rebinding completion evidence.

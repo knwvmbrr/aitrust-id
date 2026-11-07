@@ -8,6 +8,17 @@ def check(ok):
 def run(args, *, check_status=True, timeout=60):return subprocess.run(list(map(str,args)),stdin=subprocess.DEVNULL,capture_output=True,check=check_status,timeout=timeout)
 def load(path,prefix):
     check(path.parent==CACHE and re.fullmatch(prefix+'-[a-f0-9]{64}[.]py',path.name));s=path.lstat();check(s.st_uid==0 and not s.st_mode&0o077 and not path.is_symlink());check(hashlib.sha256(path.read_bytes()).hexdigest()==path.name[len(prefix)+1:-3]);return runpy.run_path(str(path))
+def wait_reboot(work,tools,before,*,timeout=60,pause=2):
+    check(re.fullmatch('[a-f0-9]{64}',before['sha256']) is not None)
+    deadline=time.monotonic()+timeout
+    while True:
+        try:
+            if tools['inspect'](work)['guest_ready'] is True:
+                boot=tools['ssh'](work,'cat /proc/sys/kernel/random/boot_id',isolated=True).stdout.decode().strip()
+                if hashlib.sha256(boot.encode()).hexdigest()!=before['sha256']:return boot
+        except (subprocess.CalledProcessError,subprocess.TimeoutExpired,OSError):pass
+        check(time.monotonic()<deadline);time.sleep(pause)
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['reboot','verify','cleanup']);p.add_argument('--work',required=True,type=Path);p.add_argument('--isolation-tool',required=True,type=Path);p.add_argument('--guest-tool',required=True,type=Path);a=p.parse_args()
     check(os.geteuid()==0);tools=load(a.isolation_tool,'isolate');w=tools['workdir'](a.work);controller=tools['ssh'];row=json.loads((w/'isolation.json').read_text());check(row['only_loopback'] is True)
@@ -18,10 +29,7 @@ def main():
         controller(w,'sudo systemd-run --quiet --on-active=2s /usr/bin/systemctl reboot',isolated=True)
         print(json.dumps({'reboot_requested':True}));return
     if a.action=='verify':
-        before=json.loads((w/'reboot-before.json').read_text());deadline=time.monotonic()+60
-        while tools['inspect'](w)['guest_ready'] is not True:
-            check(time.monotonic()<deadline);time.sleep(2)
-        boot=controller(w,'cat /proc/sys/kernel/random/boot_id',isolated=True).stdout.decode().strip();check(hashlib.sha256(boot.encode()).hexdigest()!=before['sha256'])
+        before=json.loads((w/'reboot-before.json').read_text());wait_reboot(w,tools,before)
         proof=json.loads(controller(w,'sudo python3 /etc/aitrust-recovery/restore-guest.py --nonce '+w.name+' --verify-only',isolated=True,timeout=120).stdout);check(proof['pass'] is True)
         host=load(a.guest_tool,'guest');check(host['snapshot']()==json.loads((w/'control.json').read_text())['primary_before'])
         monitor=json.loads((w/'monitoring-result.json').read_text());check(monitor['pass'] is True)

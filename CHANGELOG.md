@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-002811-recovery-reviewed-final-publication-6858ccc3
+
+Recorded 2026-11-07T00:28:11.654575+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind both repeat-use recovery review repairs to current source and fresh capability checks, retaining the full 130-complete / 72-open ledger.
+- **Evidence.** The nine actual cache controls, 33 focused guards/evidence cases, all five capability checks and personal boundary review pass after the repair. [Change record](./runs/changes/2026-11-07-002811-recovery-reviewed-final-publication-6858ccc3.json).
+- **Not claimed.** Full VM measurement and post-drill component repairs stay distinct; no current-source full VM rerun, independent security certificate, human acceptance, real intake or tag accuracy release is claimed.
+
+
+### 2026-11-07-002247-recovery-reviewed-public-projections-6bd86347
+
+Recorded 2026-11-07T00:22:47.386782+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the public recovery guide, evidence download and unchanged 130-complete / 72-open scope against the review repairs.
+- **Evidence.** Public source preparation uses current bounded evidence and preserves all original requirement IDs and separate human/accuracy gates. [Change record](./runs/changes/2026-11-07-002247-recovery-reviewed-public-projections-6bd86347.json).
+- **Not claimed.** Current component tests and actual cache reuse are separate from the retained full VM measurement.
+
+
+### 2026-11-07-002246-recovery-repeat-use-review-repairs-461d6832
+
+Recorded 2026-11-07T00:22:46.620400+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair repeat-use recovery: safely reuse the verified receiver cache and wait for the specific requested reboot identity change.
+- **Evidence.** Nine actual root/Linux cache controls and fourteen focused current-source guards pass; altered, unsafe, symlinked and hardlinked cache entries are refused, and a still-ready old boot cannot pass. [Change record](./runs/changes/2026-11-07-002246-recovery-repeat-use-review-repairs-461d6832.json).
+- **Not claimed.** The original full VM run remains separately identified. No second full restoration, occupied-table recovery, production-scale RTO, human acceptance or collection is claimed.
+
+
 ### 2026-11-07-001321-recovery-final-current-source-publication-ab9f6a32
 
 Recorded 2026-11-07T00:13:21.838404+00:00 · Contributor: Codex · change

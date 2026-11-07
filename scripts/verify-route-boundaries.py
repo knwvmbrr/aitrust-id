@@ -224,7 +224,9 @@ PATTERNS += ('tools/research_admission.py','scripts/research-admission.py','scri
              'tests/test_research_admission.py','docs/research-admission-plan.md',
              'docs/research-admission.md','docs/research-admission-result.md')
 
-PATTERNS += ('deploy/recovery/*.py', 'scripts/verify-host-recovery-evidence.py', 'tests/test_recovery_stream_boundary.py', 'tests/test_host_recovery_evidence.py', 'docs/full-host-recovery-plan.md', 'docs/security-operations.md', 'runs/2026-11-06-host-final-acceptance.json', 'runs/2026-11-06-host-final-guards.json', 'runs/2026-11-07-recovery-source-binding.json', 'runs/2026-11-07-adapter-incident-exercise.json', 'runs/2026-11-07-security-channel-status.json', 'runs/2026-11-07-security-operations-acceptance.json')
+PATTERNS += ('deploy/recovery/*.py', 'scripts/verify-host-recovery-evidence.py', 'tests/test_recovery_stream_boundary.py', 'tests/test_host_recovery_evidence.py', 'docs/full-host-recovery-plan.md', 'docs/security-operations.md', 'runs/2026-11-07-host-reviewed-acceptance.json', 'runs/2026-11-07-host-reviewed-guards.json', 'runs/2026-11-07-recovery-source-binding.json', 'runs/2026-11-07-adapter-incident-exercise.json', 'runs/2026-11-07-security-channel-status.json', 'runs/2026-11-07-security-reviewed-acceptance.json')
+
+PATTERNS += ('runs/2026-11-07-recovery-cache-reuse-linux.json',)
 
 def inventory(root):
     found = {}

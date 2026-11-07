@@ -49,3 +49,36 @@ def test_missing_image_utilities_refuse_before_any_host_package_change(monkeypat
     monkeypatch.setattr(sys,'argv',['prepare.py','--execute'])
     with pytest.raises(ValueError):tools['main']()
     assert called==[]
+
+
+def test_reboot_wait_does_not_accept_ready_pre_reboot_guest():
+    import runpy,types,hashlib
+    tools=runpy.run_path(str(ROOT/'deploy/recovery/finish.py'));boots=iter(['before','before','after']);seen=[]
+    def ssh(*args,**kwargs):
+        boot=next(boots);seen.append(boot);return types.SimpleNamespace(stdout=(boot+'\n').encode())
+    control={'inspect':lambda _: {'guest_ready':True},'ssh':ssh}
+    assert tools['wait_reboot'](None,control,{'sha256':hashlib.sha256(b'before').hexdigest()},pause=0)=='after'
+    assert seen==['before','before','after']
+
+
+def test_reboot_wait_recovers_from_transient_ssh_failure():
+    import runpy,types,hashlib
+    tools=runpy.run_path(str(ROOT/'deploy/recovery/finish.py'));seen=[]
+    def ssh(*args,**kwargs):
+        seen.append(1)
+        if len(seen)==1:raise subprocess.CalledProcessError(255,['ssh'])
+        return types.SimpleNamespace(stdout=b'after\n')
+    assert tools['wait_reboot'](None,{'inspect':lambda _: {'guest_ready':True},'ssh':ssh},{'sha256':hashlib.sha256(b'before').hexdigest()},pause=0)=='after'
+    assert len(seen)==2
+
+
+def test_reboot_wait_times_out_if_ready_guest_never_reboots():
+    import runpy,types,hashlib
+    tools=runpy.run_path(str(ROOT/'deploy/recovery/finish.py'))
+    with pytest.raises(ValueError):tools['wait_reboot'](None,{'inspect':lambda _: {'guest_ready':True},'ssh':lambda *a,**k:types.SimpleNamespace(stdout=b'before\n')},{'sha256':hashlib.sha256(b'before').hexdigest()},timeout=.01,pause=.001)
+
+
+def test_reboot_wait_refuses_invalid_record_before_accessing_guest():
+    import runpy
+    tools=runpy.run_path(str(ROOT/'deploy/recovery/finish.py'))
+    with pytest.raises(ValueError):tools['wait_reboot'](None,{}, {'sha256':'not-a-hash'})

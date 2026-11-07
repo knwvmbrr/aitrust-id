@@ -113,4 +113,6 @@ and any qualified legal/security review required for a broader deployment. These
 are not erased by a successful replacement-host drill. No promise that all
 possible security defects are absent is made.
 
-Three narrow repairs followed the complete VM run: explicit closed stdin in the guest launcher, readiness metadata that does not infer data-copy state, and an image-tool prerequisite check. Ten focused cases exercise the current repaired source. The evidence preserves the actual executed helper hashes separately; a second complete VM run of these later source edits is not claimed.
+Three narrow repairs followed the complete VM run: explicit closed stdin in the guest launcher, readiness metadata that does not infer data-copy state, and an image-tool prerequisite check. Fourteen focused cases exercise the current repaired source. The evidence preserves the actual executed helper hashes separately; a second complete VM run of these later source edits is not claimed.
+
+Review also tested repeat-use behavior: receiver installation reuses only a root-owned, private, single-link, hash-matching file; all other existing objects are refused. Reboot verification waits for the specific requested boot change through transient SSH unavailability. These repairs have focused source-bound tests, including an actual isolated receiver-cache exercise on Linux; they do not imply another complete VM restoration.

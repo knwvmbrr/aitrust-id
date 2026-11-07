@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-002247-recovery-reviewed-public-projections-6bd86347",
+  "recorded_at": "2026-11-07T00:22:47.386782+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b8eb067b3f381cf28795418847c1b4d4c479e9dc",
+  "changed": "Refresh the public recovery guide, evidence download and unchanged 130-complete / 72-open scope against the review repairs.",
+  "proves": "Public source preparation uses current bounded evidence and preserves all original requirement IDs and separate human/accuracy gates.",
+  "limits": "Current component tests and actual cache reuse are separate from the retained full VM measurement.",
+  "scope_ids": [
+    "F-073"
+  ],
+  "files": {
+    "deploy/recovery/collect.py": "51b1d8f6ac7ade5f9c5d7614fea61ce2f145884fc437f8b15c750df7bd54d812",
+    "deploy/recovery/finish.py": "c1b8b85dcb1301e87def5ae35dec0b2dada47ff7dd3f4dd57389171d624a8885",
+    "docs/full-host-recovery-plan.md": "fe08fcb328970539a4aa7c7ef97624beb7d5192e61cbe441b2876c90aab20b65",
+    "docs/scope-progress.json": "d02cf68085bd98645d03fd27754bff4b36c5340549f9f3b5b0cc987f35e104f4",
+    "docs/scope-progress.md": "8c70cc8e8d1aa55590da56a2613629ea348c5b6f7ab4337e628bac94dbd8e953",
+    "docs/security-operations.md": "36100d28611a2a47ba30159365e5ae24014ba6ebebae8a9472b394dd5a2f78fb",
+    "eval/revalidation.json": "8e1f44b96433089a4e3f1fcae633f4ca66790b256b0a0eb5268feb2bc5efec90",
+    "runs/2026-11-07-host-reviewed-acceptance.json": "89a083a144084f2fc6d2659bc1927da838cf23d988dd1fe3ffc7a29b60a349d9",
+    "runs/2026-11-07-host-reviewed-guards.json": "6c85e1c57e2631bd098efbf6530caa7269c63d93ad19c35138b7896fe9dd3b9c",
+    "runs/2026-11-07-recovery-cache-reuse-linux.json": "cafe013fef9aff20a872f2f705e510362e9e7eac9d83fdbfee807f56cb574274",
+    "runs/2026-11-07-security-reviewed-acceptance.json": "3188d9f3f0a7ceb53b7e68991895566db0c7c288a8fef49ab462fcf5256b62da",
+    "scripts/verify-host-recovery-evidence.py": "136292bd6b666a3d0b891671756199709f003cc6f294fbde4138e0b385a02b5a",
+    "scripts/verify-route-boundaries.py": "d831d7f1fe9e864f47bc4fb1a563a375afae248d04869cfb890a9b7e4d6e97fc",
+    "site/public/reference/host-recovery.json": "89a083a144084f2fc6d2659bc1927da838cf23d988dd1fe3ffc7a29b60a349d9",
+    "site/public/reference/public-scope.json": "cb8733d4a6c4764da52287164ea0eac3ea2f3828967537c38643ddfb5c34c1dd",
+    "site/public/reference/security-operations.md": "36100d28611a2a47ba30159365e5ae24014ba6ebebae8a9472b394dd5a2f78fb",
+    "site/scripts/prepare.mjs": "da98e8cda51e6984d007785a41284b21992b223998784f0d132a0ecc4c9e33cf",
+    "site/src/public-scope.json": "cb8733d4a6c4764da52287164ea0eac3ea2f3828967537c38643ddfb5c34c1dd",
+    "site/src/scope-manifest.json": "a97a3556b6de3aed0d5acb9d0ba6883ecffaf6293b1fd73bab865f29038c3d8d",
+    "state.json": "3f2fcfe8c2d82d2782e7f2562a600ea26f1ec83aa5bdfa503fb2ad3fc7a1f6d0",
+    "tests/test_host_recovery_evidence.py": "6a89ac4e858ce22025346b86b092bf43cef4d817cc80492dff7eb8da712c8c7d",
+    "tests/test_recovery_stream_boundary.py": "0d5e4be8f0ef4fb93ff300e671738b88365524e9a927cb9f85ee68d9da08472a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-host-reviewed-acceptance.json",
+      "sha256": "89a083a144084f2fc6d2659bc1927da838cf23d988dd1fe3ffc7a29b60a349d9"
+    }
+  ],
+  "checks": []
+}

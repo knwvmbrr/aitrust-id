@@ -9,6 +9,23 @@ def private(path):
     path=path.resolve(strict=True);s=path.stat();require(stat.S_ISREG(s.st_mode) and s.st_uid==os.getuid() and s.st_nlink==1 and not s.st_mode&0o077)
     require(not any((p/'.git').exists() for p in path.parents));return path
 
+RECEIVER_INSTALL = """import os,sys,hashlib,stat,re
+from pathlib import Path
+assert os.geteuid()==0
+raw=sys.stdin.buffer.read(100001);digest=sys.argv[1];p=Path(sys.argv[2]);parent=Path('/var/lib/aitrust-id/recovery-source')
+assert len(raw)<100001 and re.fullmatch('[a-f0-9]{64}',digest) and hashlib.sha256(raw).hexdigest()==digest
+assert p.parent==parent and p.name=='receive-'+digest+'.py'
+s=parent.lstat();assert stat.S_ISDIR(s.st_mode) and s.st_uid==0 and not s.st_mode&0o077
+if p.exists() or p.is_symlink():
+ s=p.lstat();assert stat.S_ISREG(s.st_mode) and s.st_uid==0 and s.st_nlink==1 and stat.S_IMODE(s.st_mode)==0o700
+ assert p.read_bytes()==raw
+else:
+ fd=os.open(p,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o700)
+ with os.fdopen(fd,'wb') as out:
+  out.write(raw);out.flush();os.fsync(out.fileno());os.fchmod(out.fileno(),0o700)
+assert hashlib.sha256(p.read_bytes()).hexdigest()==digest
+"""
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--primary',required=True);p.add_argument('--primary-key',type=Path,required=True);p.add_argument('--recovery-directory',type=Path,required=True);p.add_argument('--work',required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
     require(re.fullmatch('[A-Za-z0-9][A-Za-z0-9.:-]{0,252}',a.primary) and re.fullmatch('/var/lib/aitrust-id/recovery-vm/[a-f0-9]{32}',a.work))
@@ -25,7 +42,7 @@ def main():
     remote='sudo python3 -c '+shlex.quote(code)
     selected=json.loads(subprocess.check_output(ssh(backup,'ait-backup-admin',backup_key,remote),stdin=subprocess.DEVNULL,timeout=60));generation=selected['generation'];require(re.fullmatch(r'\d{8}T\d{6}Z-[a-f0-9]{8}',generation))
     receiver=(ROOT/'deploy/recovery/receive.py').read_bytes();digest=hashlib.sha256(receiver).hexdigest();target='/var/lib/aitrust-id/recovery-source/receive-'+digest+'.py'
-    upload="import os,sys,hashlib; from pathlib import Path; raw=sys.stdin.buffer.read(100001); assert len(raw)<100001 and hashlib.sha256(raw).hexdigest()==sys.argv[1]; p=Path(sys.argv[2]); assert p.parent==Path('/var/lib/aitrust-id/recovery-source') and not p.exists(); fd=os.open(p,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o700); os.write(fd,raw); os.close(fd)"
+    upload=RECEIVER_INSTALL
     subprocess.run(ssh(a.primary,'debian',key,'sudo python3 -c '+shlex.quote(upload)+' '+digest+' '+shlex.quote(target)),input=receiver,check=True,capture_output=True,timeout=30)
     # Verify owner recovery material against the current primary without printing it.
     cipher=private(bundle/'repository-cipher.txt').read_bytes().strip();require(len(cipher)>=48)

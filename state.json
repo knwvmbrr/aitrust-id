@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-07T00:13:19.885140+00:00",
+  "updated": "2026-11-07T00:28:09.781655+00:00",
   "active_increment": "Organization directory software accepted; 73 open requirements; continue toward 60 and skip owner-dependent gates.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -387,7 +387,7 @@
     "current_unpacked_extension_evidence": "runs/2026-10-10-current-extension-real-stack.json",
     "current_unpacked_extension_verified": false
   },
-  "python_tests_scope": "25 actual full-host recovery/monitoring/access controls, 49 injected extension-consumer cases, 10 current-source recovery guard cases and 16 evidence/closure checks. The source application database was empty. These counts do not establish independent accuracy, human acceptance or production-load recovery.",
+  "python_tests_scope": "25 actual full-host controls, 49 injected consumer cases, 9 actual private Linux cache controls, 14 current-source recovery guards and 19 evidence/closure checks. Empty source application database; no full current-source VM rerun, independent accuracy or human acceptance inferred.",
   "extension_ui": {
     "presentation": "compact_code_only_tags",
     "details": "brief_per_tag_explanation",
@@ -785,7 +785,7 @@
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-07-security-operations-acceptance.json",
+    "current_target_verification": "runs/2026-11-07-security-reviewed-acceptance.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-11-06",
@@ -1085,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-07-recovery-final-PS.json",
-    "PII_REDACTED": "runs/2026-11-07-recovery-final-PII_REDACTED.json",
-    "protocol": "runs/2026-11-07-recovery-final-protocol.json",
-    "extension": "runs/2026-11-07-recovery-final-extension.json",
-    "website": "runs/2026-11-07-recovery-final-website.json",
+    "PS": "runs/2026-11-07-recovery-reviewed-PS.json",
+    "PII_REDACTED": "runs/2026-11-07-recovery-reviewed-PII_REDACTED.json",
+    "protocol": "runs/2026-11-07-recovery-reviewed-protocol.json",
+    "extension": "runs/2026-11-07-recovery-reviewed-extension.json",
+    "website": "runs/2026-11-07-recovery-reviewed-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-07T00:13:19.885140+00:00",
+  "updated_at": "2026-11-07T00:28:09.781655+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2872,13 +2872,13 @@
     "requirement": "F-073",
     "accountable_operator": "Michael",
     "guide": "docs/security-operations.md",
-    "acceptance": "runs/2026-11-07-security-operations-acceptance.json",
-    "actual_vm_recovery": "runs/2026-11-06-host-final-acceptance.json",
+    "acceptance": "runs/2026-11-07-security-reviewed-acceptance.json",
+    "actual_vm_recovery": "runs/2026-11-07-host-reviewed-acceptance.json",
     "actual_application_tables": 0,
     "actual_recovery_controls": 25,
     "adapter_injected_failure_cases": 49,
-    "focused_guard_cases": 10,
-    "post_drill_evidence_cases": 16,
+    "focused_guard_cases": 14,
+    "post_drill_evidence_cases": 19,
     "current_source_full_vm_rerun_claimed": false,
     "source_host_unchanged": true,
     "temporary_vm_and_material_removed": true,
@@ -2888,6 +2888,8 @@
     "independent_security_certification": false,
     "publication_pending": true,
     "primary_preservation_boundary": "runs/2026-11-07-primary-preservation-boundary.json",
-    "source_host_unchanged_scope": "The six critical database/SSH/firewall snapshot fields match; QEMU tools, a nologin recovery account and secret-free helper cache remain installed. This is not a byte-for-byte unchanged host."
+    "source_host_unchanged_scope": "The six critical database/SSH/firewall snapshot fields match; QEMU tools, a nologin recovery account and secret-free helper cache remain installed. This is not a byte-for-byte unchanged host.",
+    "actual_linux_cache_cases": 9,
+    "actual_linux_cache_evidence": "runs/2026-11-07-recovery-cache-reuse-linux.json"
   }
 }

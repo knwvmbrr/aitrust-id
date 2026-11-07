@@ -22,16 +22,21 @@ def verify(d,root=ROOT):
     # The exact six measured helper hashes are retained separately. Do not
     # pretend the later metadata/stdin preflight repairs ran through the VM.
     old=d['full_vm_executed_helper_hashes'];check(set(old)=={'guest','isolate','apply','restore-guest','monitor','finish'})
-    for name in ['apply','restore-guest','monitor','finish']:check(old[name]==d['sources']['deploy/recovery/'+name+'.py'])
-    check(len(d['post_drill_repairs'])==3 and d['source_bound_focused_post_drill_checks_required'] is True)
-    guards=read_evidence(root/'runs/2026-11-06-host-final-guards.json');check(guards['pass'] is True and guards['tests']==10 and guards['sources']==hashes(root))
+    for name in ['apply','restore-guest','monitor']:check(old[name]==d['sources']['deploy/recovery/'+name+'.py'])
+    check(len(d['post_drill_repairs'])==5 and d['source_bound_focused_post_drill_checks_required'] is True)
+    guards=read_evidence(root/'runs/2026-11-07-host-reviewed-guards.json');check(guards['pass'] is True and guards['tests']==14 and guards['sources']==hashes(root))
     binding=read_evidence(root/'runs/2026-11-07-recovery-source-binding.json')
     expected={Path(name).name:d['sources'][name] for name in SOURCES if name.startswith('deploy/host/')}
     check(binding['pass'] is True and binding['actual_foundation_source_hashes']==expected and binding['source_host_configuration_matches_current'] is True and binding['source_production_configuration_changed'] is False)
+    cache=read_evidence(root/'runs/2026-11-07-recovery-cache-reuse-linux.json')
+    check(cache['pass'] is True and cache['platform']=='linux' and cache['actual_root_private_cache'] is True and cache['synthetic_cache_objects_removed'] is True and cache['existing_actual_receiver_unchanged'] is True and cache['production_database_changed'] is False)
+    cache_cases={'existing_actual_receiver_reused','existing_actual_receiver_reused_again','new_private_receiver_installed','matching_private_receiver_reused','altered_existing_bytes_refused','unsafe_existing_permissions_refused','hardlinked_existing_receiver_refused','symlinked_receiver_refused','wrong_source_digest_refused'}
+    check(len(cache['controls'])==9 and {r['case'] for r in cache['controls']}==cache_cases and all(r['pass'] is True for r in cache['controls']))
+    check(cache['sources']=={name:d['sources'][name] for name in ['deploy/recovery/collect.py','deploy/recovery/receive.py']})
     check(d['private_security_reporting_enabled'] is True and d['accountable_operator']=='Michael' and d['response_sla_claimed'] is False)
-    return {'pass':True,'controls':len(CASES),'focused_guard_cases':10,'actual_application_tables':0,'current_source_full_vm_rerun_claimed':False,'independent_security_certification':False,'collection_enabled':False}
+    return {'pass':True,'controls':len(CASES),'focused_guard_cases':14,'actual_application_tables':0,'current_source_full_vm_rerun_claimed':False,'independent_security_certification':False,'collection_enabled':False}
 def verify_operations(root=ROOT):
-    packet=read_evidence(root/'runs/2026-11-07-security-operations-acceptance.json')
+    packet=read_evidence(root/'runs/2026-11-07-security-reviewed-acceptance.json')
     check(packet['pass'] is True and packet['requirement']=='F-073' and packet['criteria_moved_or_waived'] is False)
     check(packet['original_required_acceptance']==['Maintain named operational owners and source-bound evidence; exercise incident/adapter response and full replacement-host recovery, then close outstanding security findings.'])
     check(packet['global_security_clearance'] is False and packet['staffed_response_sla_claimed'] is False and packet['real_data_collection_enabled'] is False)
@@ -44,6 +49,6 @@ def verify_operations(root=ROOT):
 
 if __name__=='__main__':
     import argparse
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--evidence',type=Path,default=ROOT/'runs/2026-11-06-host-final-acceptance.json');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--evidence',type=Path,default=ROOT/'runs/2026-11-07-host-reviewed-acceptance.json');a=p.parse_args()
     try:print(json.dumps({**verify(read_evidence(a.evidence)),**verify_operations()}))
     except (ValueError,KeyError,TypeError,OSError) as e:print(str(e),file=sys.stderr);raise SystemExit(1)

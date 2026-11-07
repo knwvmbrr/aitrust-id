@@ -8368,12 +8368,13 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-11-07T00:08:18.657583+00:00",
+        "audited_at": "2026-11-07T00:22:45.656607+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — seven actual encrypted synthetic backup controls and seven unsafe-execution refusals; production and replacement-host recovery remain separate, 2026-10-12T15:14:52.561826+00:00",
-          "Codex — actual Debian/KVM/PostgreSQL recovery and owner-key login, source preservation, incident/adapter exercises and source-bound refusal guards, 2026-11-07T00:08:18.657583+00:00"
+          "Codex — actual Debian/KVM/PostgreSQL recovery and owner-key login, source preservation, incident/adapter exercises and source-bound refusal guards, 2026-11-07T00:08:18.657583+00:00",
+          "Codex — review fixes: nine actual private-cache controls and fourteen current-source readiness/stdin/preflight guards, 2026-11-07T00:22:45.656607+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -8381,7 +8382,7 @@
         "completed_by": [
           "Codex"
         ],
-        "completed_at": "2026-11-07T00:08:18.657583+00:00",
+        "completed_at": "2026-11-07T00:22:45.656607+00:00",
         "completion_timestamp_basis": "Current supported-profile full acceptance verified at this audit; no independent security or human acceptance inferred.",
         "next_fix": null,
         "next_owner": null,
@@ -8414,7 +8415,11 @@
           "runs/2026-11-07-recovery-source-binding.json",
           "runs/2026-11-07-security-channel-status.json",
           "runs/2026-11-07-adapter-incident-exercise.json",
-          "runs/2026-11-07-security-operations-acceptance.json"
+          "runs/2026-11-07-security-operations-acceptance.json",
+          "runs/2026-11-07-host-reviewed-acceptance.json",
+          "runs/2026-11-07-host-reviewed-guards.json",
+          "runs/2026-11-07-security-reviewed-acceptance.json",
+          "runs/2026-11-07-recovery-cache-reuse-linux.json"
         ],
         "evidence_scope": "Current private reporting and named response planning; actual full operating-system recovery, incident/adapter failure exercises, source preservation and cleanup. Exact measured helper identities and post-drill focused repairs are distinguished. No occupied-table recovery, global security clearance, human operation, SLA or production collection is claimed.",
         "required_acceptance": [],

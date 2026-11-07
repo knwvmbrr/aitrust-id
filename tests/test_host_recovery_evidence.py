@@ -4,10 +4,10 @@ from pathlib import Path
 import pytest
 ROOT=Path(__file__).resolve().parents[1];v=runpy.run_path(str(ROOT/'scripts/verify-host-recovery-evidence.py'))
 def test_recorded_recovery_acceptance_is_current():
-    d=json.loads((ROOT/'runs/2026-11-06-host-final-acceptance.json').read_bytes());assert v['verify'](d)['pass'] is True
+    d=json.loads((ROOT/'runs/2026-11-07-host-reviewed-acceptance.json').read_bytes());assert v['verify'](d)['pass'] is True
 @pytest.mark.parametrize('bad',['stale','missing','duplicate','failed','retained_disk','physical_erasure','occupied_tables','human','scale','current_full_rerun','intake','source_changed','no_private_channel','sla'])
 def test_bad_recovery_evidence_refused(bad):
-    d=json.loads((ROOT/'runs/2026-11-06-host-final-acceptance.json').read_bytes())
+    d=json.loads((ROOT/'runs/2026-11-07-host-reviewed-acceptance.json').read_bytes())
     if bad=='stale':d['sources'][next(iter(d['sources']))]='0'*64
     elif bad=='missing':d['controls'].pop()
     elif bad=='duplicate':d['controls'][-1]=d['controls'][0]
@@ -30,6 +30,21 @@ def test_operational_acceptance_and_full_closure_preserve_the_original_job():
     row=next(r for r in json.loads((ROOT/'docs/scope-progress.json').read_bytes())['records'] if r['id']=='F-073')
     if row['percent_complete']==100:
         assert row['completed_by'] and row['completed_at'] and row['required_acceptance']==[]
-        assert 'runs/2026-11-07-security-operations-acceptance.json' in row['evidence']
-        assert v['verify'](json.loads((ROOT/'runs/2026-11-06-host-final-acceptance.json').read_bytes()))['pass'] is True
+        assert 'runs/2026-11-07-security-reviewed-acceptance.json' in row['evidence']
+        assert v['verify'](json.loads((ROOT/'runs/2026-11-07-host-reviewed-acceptance.json').read_bytes()))['pass'] is True
     else:assert row['required_acceptance'] and row['completed_at'] is None
+
+
+@pytest.mark.parametrize('bad',['missing_cache_case','cache_not_cleaned','stale_cache_source'])
+def test_bad_actual_cache_reuse_evidence_refused(bad,monkeypatch):
+    data=json.loads((ROOT/'runs/2026-11-07-host-reviewed-acceptance.json').read_bytes())
+    original=v['verify'].__globals__['read_evidence']
+    def read(path):
+        d=original(path)
+        if str(path).endswith('recovery-cache-reuse-linux.json'):
+            if bad=='missing_cache_case':d['controls'].pop()
+            elif bad=='cache_not_cleaned':d['synthetic_cache_objects_removed']=False
+            else:d['sources']['deploy/recovery/collect.py']='0'*64
+        return d
+    monkeypatch.setitem(v['verify'].__globals__,'read_evidence',read)
+    with pytest.raises(ValueError):v['verify'](data)
