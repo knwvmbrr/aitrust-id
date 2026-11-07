@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-07T22:34:01.477457+00:00",
+  "updated": "2026-11-07T23:00:37.927088+00:00",
   "active_increment": "Native Share developer software verified; 72 open requirements; continue toward 60 while retaining owner, physical-device and independent gates.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1089,11 +1089,11 @@
     "PII_REDACTED": "runs/2026-11-07-native-share-current-PII_REDACTED.json",
     "protocol": "runs/2026-11-07-native-share-current-protocol.json",
     "extension": "runs/2026-11-07-native-share-current-extension.json",
-    "website": "runs/2026-11-07-native-share-current-website.json",
+    "website": "runs/2026-11-07-native-share-bootstrap-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-07T22:34:01.477457+00:00",
+  "updated_at": "2026-11-07T23:00:37.927088+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1851,7 +1851,7 @@
     "status": "developer_share_workflow_passes_physical_acceptance_open",
     "requirement": "N-013",
     "percent_complete": 80,
-    "workflow_proof": "runs/2026-11-07-native-share-current-workflow.json",
+    "workflow_proof": "runs/2026-11-07-native-share-bootstrap-workflow.json",
     "provider_controls": "runs/2026-11-07-native-share-text-controls.json",
     "guide": "docs/native-share-developer.md",
     "ui_workflows_passed": 5,
@@ -1865,7 +1865,8 @@
     "increment_evidence": "runs/2026-11-07-native-share-increment.json",
     "review_repair": "runs/2026-11-07-native-share-asset-review.json",
     "runner_repair": "runs/2026-11-07-native-share-runner-repair.json",
-    "runtime_selection": "runs/2026-11-07-native-runtime-selection.json"
+    "runtime_selection": "runs/2026-11-07-native-runtime-selection.json",
+    "bootstrap_evidence": "runs/2026-11-07-native-bootstrap-separation.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",

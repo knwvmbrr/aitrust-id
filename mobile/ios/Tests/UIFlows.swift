@@ -1,6 +1,15 @@
 import XCTest
 
 final class UIFlows: XCTestCase {
+    override class func setUp() {
+        super.setUp()
+        // Establish the cold hosted XCTest automation session before applying
+        // the per-workflow budget. No text or tag check is supplied here.
+        // The producer's whole UI-phase deadline still bounds this setup.
+        let app = XCUIApplication(); app.launch()
+        XCTAssertTrue(app.wait(for: .runningForeground, timeout: 120))
+        app.terminate()
+    }
     override func setUpWithError() throws { continueAfterFailure = false; executionTimeAllowance = 60 }
     private func assertEmpty(_ input: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
         XCTAssertTrue(input.exists, file: file, line: line)

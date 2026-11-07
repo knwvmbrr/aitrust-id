@@ -66,3 +66,11 @@ retain per-test deadlines and require all five successful cases. Allow up to
 90 seconds per cleanup action on the loaded hosted machine. No failure, missing
 case or unconfirmed cleanup may become a passing proof. Verify the revised
 producer locally again and retain actual hosted results separately.
+
+The compatible hosted image passed four workflows; the first case exceeded its
+60-second allowance while XCTest was still establishing its initial automation
+session, before its product assertions. Prime that session in class setup with
+an empty app and no tag check. Keep all five workflow assertions, per-case limits
+and the producer's whole-UI-phase deadline. A failed bootstrap must fail the run,
+not skip a case or count as successful tag validation. Record this instrumentation
+setup separately from device/checker startup performance.

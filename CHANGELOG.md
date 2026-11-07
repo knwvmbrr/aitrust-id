@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-230039-native-bootstrap-current-state-f0bc2e41
+
+Recorded 2026-11-07T23:00:39.609284+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current website and route-inventory verification for the bounded native bootstrap repair.
+- **Evidence.** All current engineering receipts pass; five real local UI workflows and 80 focused controls execute. [Change record](./runs/changes/2026-11-07-230039-native-bootstrap-current-state-f0bc2e41.json).
+- **Not claimed.** The hosted rerun, physical phone, human accessibility and independent accuracy acceptance remain separate; 72 requirements remain open.
+
+
+### 2026-11-07-225637-native-xctest-bootstrap-separation-c037fcd7
+
+Recorded 2026-11-07T22:56:37.966829+00:00 · Contributor: Codex · change
+
+- **Changed.** Establish the cold XCTest automation session in bounded class setup before timing the five functional workflows.
+- **Evidence.** A new actual local run passes all five unchanged functional workflows and confirms simulator cleanup. [Change record](./runs/changes/2026-11-07-225637-native-xctest-bootstrap-separation-c037fcd7.json).
+- **Not claimed.** The earlier hosted 4-of-5 result remains failed. Physical, human, independent accuracy and application-startup gates are unchanged.
+
+
 ### 2026-11-07-223403-native-runtime-device-compatibility-186d2f42
 
 Recorded 2026-11-07T22:34:03.329559+00:00 · Contributor: Codex · change
