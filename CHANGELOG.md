@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-011921-final-live-publication-state-c4d56ccc
+
+Recorded 2026-11-07T01:19:21.645351+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the completed live deployment and mark its verification status complete, with the deployed source commit stated explicitly.
+- **Evidence.** 13 selected published files match the protected source, all20 tag panels and8 workflows pass live automated checks, the source download returns200, and12 unrelated local files remain unchanged. [Change record](./runs/changes/2026-11-07-011921-final-live-publication-state-c4d56ccc.json).
+- **Not claimed.** This is verification metadata for deployed commit36176af. It changes no application code and grants no independent accuracy, physical-device, human accessibility or real-data-collection acceptance.
+
+
 ### 2026-11-07-010131-directory-clock-final-publication-4afca26a
 
 Recorded 2026-11-07T01:01:31.659509+00:00 · Contributor: Codex · change

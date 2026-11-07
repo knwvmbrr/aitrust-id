@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-011921-final-live-publication-state-c4d56ccc",
+  "recorded_at": "2026-11-07T01:19:21.645351+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "36176afc79899b72a5d9a384bfe495c4087b43f8",
+  "changed": "Record the completed live deployment and mark its verification status complete, with the deployed source commit stated explicitly.",
+  "proves": "13 selected published files match the protected source, all20 tag panels and8 workflows pass live automated checks, the source download returns200, and12 unrelated local files remain unchanged.",
+  "limits": "This is verification metadata for deployed commit36176af. It changes no application code and grants no independent accuracy, physical-device, human accessibility or real-data-collection acceptance.",
+  "scope_ids": [
+    "F-162",
+    "F-073"
+  ],
+  "files": {
+    "state.json": "48ef4db809607591f8ede09e021d236f21147a402eefc886d71590853f9fa916",
+    "runs/2026-11-07-final-live-publication.json": "9d85629b24426d36178fa91d401a18ad3763165b2bef7fc3385d9c267e9219b7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-final-live-publication.json",
+      "sha256": "9d85629b24426d36178fa91d401a18ad3763165b2bef7fc3385d9c267e9219b7"
+    }
+  ],
+  "checks": []
+}
