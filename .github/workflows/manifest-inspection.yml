@@ -42,7 +42,7 @@ jobs:
           sudo unshare -n sh -c 'set -e
           test "$(readlink /proc/self/ns/net)" != "$(readlink /proc/1/ns/net)"
           exec setpriv --reuid "$1" --regid "$2" --init-groups "$3" scripts/verify-manifest-inspection.py --output output/verification/manifest-inspection.json' _ "$(id -u)" "$(id -g)" "$(which python)"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: optional-manifest-inspection
