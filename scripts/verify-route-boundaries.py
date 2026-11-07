@@ -134,7 +134,7 @@ HOST_RENDERED_ASSET = 'site/public/share-card.png'
 PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-probe-cases.py',
              'scripts/build-ios-project.py', 'scripts/verify-ios-share.py', 'scripts/verify-native-share-evidence.py',
              'tests/test_ios_project_package.py', 'tests/test_ios_share_verifier.py', 'tests/test_native_share_evidence.py',
-             'docs/native-share-repair-plan.md', 'docs/native-share-developer.md', 'runs/2026-11-07-native-share-workflow.json',
+             'docs/native-share-repair-plan.md', 'docs/native-share-developer.md', 'runs/2026-11-07-native-share-reviewed-workflow.json',
              'scripts/prepare-native-bundle.py', 'scripts/verify-ios-bundle.py', 'scripts/verify-shared-text.py',
              'tests/test_native_bundle.py', 'docs/native-share-plan.md', 'docs/native-engine-checks.md',
              'docs/experiments/native-share-unreleased.json', 'tools/private_policy.py',

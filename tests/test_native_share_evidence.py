@@ -14,7 +14,13 @@ def proof():
     return json.loads((ROOT / guard['PROOF']).read_text())
 
 
-def test_current_native_software_proof():
+@pytest.fixture
+def prepared_assets():
+    if not (ROOT / 'site/node_modules/pyodide/package.json').is_file() or not (ROOT / 'site/src/device-manifest.json').is_file():
+        pytest.skip('The required site job runs asset equality after preparing the pinned runtime.')
+
+
+def test_current_native_software_proof(prepared_assets):
     assert guard['verify']()['pass']
 
 
@@ -41,6 +47,23 @@ def test_unknown_asset_identity_refused():
     value = proof(); expected = value['asset_fingerprints'].pop('/bridge.mjs')
     value['asset_fingerprints']['/unreviewed.mjs'] = expected
     with pytest.raises(ValueError): guard['verify'](proof=value)
+
+
+def test_zeroed_executable_asset_digest_refused(prepared_assets):
+    value = proof(); value['asset_fingerprints']['/method.py'] = '0' * 64
+    with pytest.raises(ValueError, match='Native bundle differs'):
+        guard['verify'](proof=value)
+
+
+def test_projection_generator_change_invalidates_execution(tmp_path):
+    module = runpy.run_path(str(ROOT / 'scripts/verify-ios-share.py'))
+    for name in module['SOURCES']:
+        target = tmp_path / name; target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / name, target)
+    path = tmp_path / 'scripts/build-device-detector.py'
+    path.write_text(path.read_text() + '\n# A generator revision requires new native execution.\n')
+    with pytest.raises(ValueError, match='Native sources changed'):
+        guard['verify'](root=tmp_path, proof=proof())
 
 
 @pytest.mark.parametrize('field,value', [('percent_complete', 100),

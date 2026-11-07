@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-11-07T21:58:53.972317+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "kind": "native_share_asset_binding_review_repair",
+  "reviewed_finding": "PR89 asset hashes were syntactically checked without equality to the current bundle; projection generator was not recorded.",
+  "actual_current_workflow": "runs/2026-11-07-native-share-reviewed-workflow.json",
+  "fresh_simulator_ui_workflows": 5,
+  "focused_controls_passed": 67,
+  "asset_equality_verified": true,
+  "projection_generator_bound": true,
+  "negative_controls": [
+    "Zeroed method asset digest refused.",
+    "Projection generator revision invalidates the execution proof.",
+    "Missing/unknown asset, altered source and premature physical acceptance refused."
+  ],
+  "hosted_ci_status": "First hosted UI run failed and cleaned up its owned simulator; stage diagnostics retained for the next actual run. No hosted success is claimed.",
+  "physical_device": false,
+  "independent_accuracy": false,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "full_closures_this_increment": 0
+}

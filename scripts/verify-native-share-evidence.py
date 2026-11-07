@@ -8,7 +8,7 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-PROOF = 'runs/2026-11-07-native-share-workflow.json'
+PROOF = 'runs/2026-11-07-native-share-reviewed-workflow.json'
 ASSETS = {'/index.html', '/bridge.mjs', '/method.py', '/device-manifest.json',
           '/runtime/pyodide.mjs', '/runtime/pyodide.asm.mjs', '/runtime/pyodide.asm.wasm',
           '/runtime/python_stdlib.zip', '/runtime/pyodide-lock.json'}
@@ -46,6 +46,13 @@ def verify(root=ROOT, proof=None):
     row = next(r for r in progress['records'] if r['id'] == 'N-013')
     if row['percent_complete'] >= 100 or row.get('completed_at') or row.get('completed_by'):
         raise ValueError('Simulator evidence cannot complete physical/human acceptance')
+    try:
+        bundle = runpy.run_path(str(root / 'scripts/native_bundle.py'))['assets']()
+    except (ValueError, OSError, KeyError, TypeError):
+        raise ValueError('Prepare current native assets before validating their execution proof') from None
+    actual = json.loads(bundle['Assets/native-assets.json'])['hashes']
+    if hashes != actual:
+        raise ValueError('Native bundle differs from the executed assets; run the native workflow again')
     return {'pass': True, 'native_ui_workflows': 5, 'physical_device': False,
             'independent_accuracy': False, 'requirement_complete': False}
 

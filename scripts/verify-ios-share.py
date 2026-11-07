@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from tools.blind_review_io import create, PacketError
 
-SOURCES = ['scripts/verify-ios-share.py', 'scripts/build-ios-project.py',
+SOURCES = ['scripts/verify-ios-share.py', 'scripts/build-ios-project.py', 'scripts/build-device-detector.py',
            'scripts/native_bundle.py', 'scripts/asset_notices.py',
            'mobile/ios/Tests/UIFlows.swift', 'mobile/ios/Web/bridge.mjs',
            'mobile/ios/Web/index.html', 'services/evaluator/app.py',
@@ -85,9 +85,6 @@ def main():
                     time.sleep(.25)
                 log.seek(0)
                 raw = log.read()
-                if created:
-                    with (output / (stage + '.log')).open('ab') as saved:
-                        saved.write(raw)
                 if process.returncode:
                     raise ValueError('Verification command failed')
                 return raw.decode('utf-8', errors='strict').strip()
@@ -100,6 +97,11 @@ def main():
                         try: os.killpg(process.pid, signal.SIGKILL)
                         except ProcessLookupError: pass
                         process.wait()
+                # Keep diagnostics even when the deadline, not the tool, fails.
+                if created:
+                    log.seek(0)
+                    with (output / (stage + '.log')).open('ab') as saved:
+                        saved.write(log.read())
 
     try:
         output = destination(output)
@@ -114,6 +116,10 @@ def main():
         payload = builder['files']()
         create(output, ROOT, {'context.json': b'{"invented_examples_only":true}\n'})
         created = True
+        report.update({'attempted_sources': before, 'runtime': runtime['name'],
+                       'runtime_build': runtime['buildversion'],
+                       'xcode': command(['xcodebuild', '-version']),
+                       'sdk': command(['xcrun', '--sdk', 'iphonesimulator', '--show-sdk-version'])})
         project = output / 'project'
         project.mkdir(mode=0o700)
         for name, raw in payload.items():

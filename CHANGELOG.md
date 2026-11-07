@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-07
 
+### 2026-11-07-220227-native-share-reviewed-source-state-87f2adca
+
+Recorded 2026-11-07T22:02:27.222015+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the passing reviewed-source receipts and bind the updated public native proof to the reviewed route inventory.
+- **Evidence.** All five current engineering receipts and the actual reviewed native workflow pass after the asset-binding repair. [Change record](./runs/changes/2026-11-07-220227-native-share-reviewed-source-state-87f2adca.json).
+- **Not claimed.** The hosted native workflow still needs a successful run; no physical, human or independent release gate is waived.
+
+
+### 2026-11-07-215853-native-share-asset-equality-review-2838abb5
+
+Recorded 2026-11-07T21:58:53.998152+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the projection generator and compare the complete native asset hash map with the current prepared bundle; retain timeout-stage logs for hosted CI diagnosis.
+- **Evidence.** A new actual simulator run passes five workflows; 67 focused cases include the stale-generator and zeroed-asset reproductions. [Change record](./runs/changes/2026-11-07-215853-native-share-asset-equality-review-2838abb5.json).
+- **Not claimed.** No physical or independent accuracy acceptance; hosted simulator success remains unclaimed until a real passing run.
+
+
 ### 2026-11-07-205856-native-share-verified-source-state-8cca171e
 
 Recorded 2026-11-07T20:58:56.470385+00:00 · Contributor: Codex · change

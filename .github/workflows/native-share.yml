@@ -40,4 +40,5 @@ jobs:
           path: |
             ${{ env.AITRUST_NATIVE_PROOF }}/text/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/proof.json
+            ${{ env.AITRUST_NATIVE_PROOF }}/share/*.log
           retention-days: 7
