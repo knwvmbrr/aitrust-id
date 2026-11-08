@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-175708-pii-ledger-verification-b5a8c590
+
+Recorded 2026-11-08T17:57:08.322060+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the regenerated readable ledger to current protocol, website and route-boundary execution receipts.
+- **Evidence.** All selected current capabilities pass after the documentation projection update. Both scope ledgers retain 130 complete and 72 open records. [Change record](./runs/changes/2026-11-08-175708-pii-ledger-verification-b5a8c590.json).
+- **Not claimed.** No accuracy, physical-device, independent-human or new full-requirement acceptance is granted.
+
+
+### 2026-11-08-175315-pii-readable-ledger-7a46506f
+
+Recorded 2026-11-08T17:53:15.442257+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the readable completion ledger and public scope projection from the current timestamped machine ledger.
+- **Evidence.** The scope renderer retains all 202 records, 130 complete and 72 open, and now shows the current PII and renewed setup evidence in the human-readable ledger. [Change record](./runs/changes/2026-11-08-175315-pii-readable-ledger-7a46506f.json).
+- **Not claimed.** Formatting and timestamp reconciliation grant no new full requirement closure or independent accuracy acceptance.
+
+
 ### 2026-11-08-175116-pii-verified-publication-candidate-f9b0d61d
 
 Recorded 2026-11-08T17:51:16.153082+00:00 · Contributor: Codex · change
