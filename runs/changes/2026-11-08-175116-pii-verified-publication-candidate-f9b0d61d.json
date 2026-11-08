@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-175116-pii-verified-publication-candidate-f9b0d61d",
+  "recorded_at": "2026-11-08T17:51:16.153082+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "934cca1dfdf20304b0bee5a19f6b7a1c28b83f78",
+  "changed": "Refresh the scope and current engineering receipts for the corrected PII route, source-current downloads and phone-distribution readiness.",
+  "proves": "All five capability receipts and the actual service/replay/device boundary review pass against current sources. The rebuilt site checks 20 tag panels and eight workflow groups.",
+  "limits": "130 complete and 72 open remain; no full requirement was closed in this increment. Apple App ID registration and an unsigned archive are preparation only; no app record, signed upload, TestFlight install or public phone release exists.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105",
+    "F-113",
+    "N-013"
+  ],
+  "files": {
+    "docs/local-setup-result.md": "901acf9c41939aa33015c3b96995a8af5dd9ed190a2888fc008dca8da543b754",
+    "docs/pii-separator-correction-plan.md": "1875d58f32c804187aec13352159404226067a870de374645dcccb201e52e17a",
+    "docs/redaction-recognition.md": "e541437f098bc1c4e5f10ccccdb5dbca548aa3e8dc0c32c17912d64cf48881d6",
+    "docs/scope-progress.json": "de477acc69e5284400a3f07d359eabee8945f3397e077e25814e0bf7ab83626a",
+    "eval/revalidation.json": "8c94ca2e9646a59fcc84ea496fa6d9cbf27b75f0fd350e1e2c236b179903dc03",
+    "eval/route-boundaries.json": "fb4859247f587747e09c6273361edcf3d5bfb4cd4f94f9000e7f1ce50b2fe8d2",
+    "runs/2026-11-08-pii-separator-accepted-PII_REDACTED.json": "facd579ea305975a1b6641b32514b78176ea20c91c55938e0f6f756a37524360",
+    "runs/2026-11-08-pii-separator-accepted-PS.json": "4cd526b414f16e9ed35fba08bc8772e24fd8bdc577e7836a5131d21332470802",
+    "runs/2026-11-08-pii-separator-accepted-extension.json": "a104065c46d0b7218f04b015d298d4646142b465054364db14aae690bd2f5bcb",
+    "runs/2026-11-08-pii-separator-accepted-protocol.json": "aaa712dfd39249991cad9fafb5dc69911fcd8b78b404741f4d7e0fd94b9b3a8e",
+    "runs/2026-11-08-pii-separator-accepted-website.json": "f7d645dd41b61981af2ac19d5a00d470946252625b9f550a79e28bd6596839ce",
+    "runs/2026-11-08-pii-separator-boundaries.json": "26d81f9b8bad550a2c6d3003c9f11ca503e0a75e62f6074cc629426e2f0bbc27",
+    "runs/2026-11-08-pii-separator-clean-setup-linux.json": "b3e1f8f24efae4705fea75420448964c4789ba3ae12a0fc51c7f1529309b7075",
+    "runs/2026-11-08-pii-separator-compact-linux.json": "c5b0f1930e190e5c4e1e378c647bc77887f2d965edd3d04a17f2c382f7b17a5a",
+    "runs/2026-11-08-pii-separator-current-PII_REDACTED.json": "8707dedb955cf72e4cbca8227305d04ad9ca60a3414f54a43edc02377fb6450c",
+    "runs/2026-11-08-pii-separator-current-PS.json": "cbb58c32a45c37001650471c31a4c8cccd3294571876b44736f309bd3c3a7781",
+    "runs/2026-11-08-pii-separator-current-extension.json": "76a212331780e74ec08188071d96478cdff91e0b9c59577950ef6a7d5670ef85",
+    "runs/2026-11-08-pii-separator-current-protocol.json": "39fe6bb7b95dd869f2976d1c0ac85451d126a0fcc863f23c5289e32bb2896bbf",
+    "runs/2026-11-08-pii-separator-english-linux.json": "ce18562e413cb0dbc9fd46e3314ec41f8adb2e002c88a695c21de2d86d14d45b",
+    "runs/2026-11-08-pii-separator-final-PII_REDACTED.json": "49331a63da9017d89fa123346ad65f226e22fe5c6b033a639c7a528cd624368b",
+    "runs/2026-11-08-pii-separator-final-PS.json": "bd8962df35b16da6c79dd77206be712dfe2f6edc82dbb818094f6f61cd72ba2d",
+    "runs/2026-11-08-pii-separator-final-extension.json": "37571510314838c2f84ae158b3de17b6b446d6e26de8b0ebc55f8a5d2673cb21",
+    "runs/2026-11-08-pii-separator-final-protocol.json": "152efe80b43ae0b8509807de4b51c6f8100ec3e4bd75f1440beb451de976a547",
+    "runs/2026-11-08-pii-separator-final-website.json": "2b1b569b7cfb3e7407a24c76a5d670f650956b9a04c265b681f87ba8e5d849c1",
+    "runs/2026-11-08-pii-separator-integration.json": "b2db53299018d11d1d245ad86fea3ae4575852dc23c0eb6a084a1cd185218fb1",
+    "runs/2026-11-08-pii-separator-pipeline-timing-linux.json": "378cacb5e248a7c938167dd0aa27ce851d39d8ce1c237a31ea3ff42ed65c658a",
+    "runs/2026-11-08-pii-separator-published-website.json": "4a03260169c128d52f5a4d000ec1d712c68bde3e8dd094293db27e7fe5832492",
+    "runs/2026-11-08-pii-separator-replay-linux.json": "a3a04d729c30823319fe912d686510a39e9d68e1fa36821723064c8742ab078d",
+    "runs/2026-11-08-pii-separator-service-linux.json": "1f4971de5d7d4daf3ade824f95039a2357bab3a2d45972afa890ec232dfe614b",
+    "scripts/build-redaction-performance.py": "3d4a3a6ee5f5cf2b8fc0b51f4552d7612d908d7ef85d46b0b46056f1750d16db",
+    "scripts/verify-local-setup-evidence.py": "170a79e45a91a310822c27f87e256b71c020cadd40ca5928e9e3a9cca7b85dbe",
+    "scripts/verify-performance.cjs": "3f913852c0dc05ae1dfe9ee15ae2c36d1da13b98f846baa57fc882c2263e9428",
+    "scripts/verify-route-boundaries.py": "c2cb80e5789fd7231a05be28d5ffe6cbad0b36e0f0e6539d2f322c41643f36c6",
+    "site/index.html": "d24f9c709c47335e62ba07d2b03025858ac418e8789bc6e0fcb377bcfc96e204",
+    "site/public/reference/pipeline-performance.json": "7c1334b932a95b51e8574f8bcc66af93ec9681ef28da11345998d153d671300f",
+    "site/public/reference/public-scope.json": "3c0faca704e02b927a110ea5bb2a8705c3f809adcc51f01124327179e9ed822d",
+    "site/public/reference/redaction-compact-addresses.json": "c5b0f1930e190e5c4e1e378c647bc77887f2d965edd3d04a17f2c382f7b17a5a",
+    "site/public/reference/redaction-recognition.json": "ce18562e413cb0dbc9fd46e3314ec41f8adb2e002c88a695c21de2d86d14d45b",
+    "site/public/reference/redaction-recognition.md": "e541437f098bc1c4e5f10ccccdb5dbca548aa3e8dc0c32c17912d64cf48881d6",
+    "site/public/reference/tag-performance.json": "ff92c4c11147c2eb23428cebe567f367ea4deced6798f9abbfeb313540acbbbd",
+    "site/scripts/prepare-performance.mjs": "21e4acb67ecb47090e4ff0cfd7cf6525da834b81433cd892b45b39310e2d45af",
+    "site/src/public-scope.json": "3c0faca704e02b927a110ea5bb2a8705c3f809adcc51f01124327179e9ed822d",
+    "site/src/redaction-performance-model.js": "e6a9c38b194fdecebf9ac52ae7676e6561d4c374160f60b0983129423314834d",
+    "site/src/scope-manifest.json": "8cec33c8ff934a9536a26d046ceb3ab949f7fd149cf79627732133357f3e2713",
+    "site/src/tag-performance.json": "ff92c4c11147c2eb23428cebe567f367ea4deced6798f9abbfeb313540acbbbd",
+    "state.json": "84d1cc724d42ddd89e1468a6046c48b7d08c19c869d8b8933ebf4866bec15aac",
+    "tests/pipeline-timing.cjs": "eae1422fcea006f11fef7c42a1bd9bb7ecdc98556be7e25c195f72f6be1da97d",
+    "tests/redaction-performance.cjs": "c6f2a2f980d55f757afdad10cc4810c71a18947b53c28042d53e730fe2a5bf5f",
+    "tests/test_redaction_development_builder.py": "1dd7ddb5c0b2106ff9036b7cb4b180a90dad4e257c2536cedf8dd4f16660441a",
+    "tests/test_redaction_development_client.py": "5da9a8966c195d45b98ab48c675a94f64af2b07d1d345171a3409487a4d8f39f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-pii-separator-final-PS.json",
+      "sha256": "bd8962df35b16da6c79dd77206be712dfe2f6edc82dbb818094f6f61cd72ba2d"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-final-PII_REDACTED.json",
+      "sha256": "49331a63da9017d89fa123346ad65f226e22fe5c6b033a639c7a528cd624368b"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-final-protocol.json",
+      "sha256": "152efe80b43ae0b8509807de4b51c6f8100ec3e4bd75f1440beb451de976a547"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-final-extension.json",
+      "sha256": "37571510314838c2f84ae158b3de17b6b446d6e26de8b0ebc55f8a5d2673cb21"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-published-website.json",
+      "sha256": "4a03260169c128d52f5a4d000ec1d712c68bde3e8dd094293db27e7fe5832492"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-boundaries.json",
+      "sha256": "26d81f9b8bad550a2c6d3003c9f11ca503e0a75e62f6074cc629426e2f0bbc27"
+    }
+  ],
+  "checks": []
+}

@@ -46,4 +46,9 @@ python3 scripts/measure-redaction-development.py \
   --output output/verification/redaction-compact.json
 ```
 
-All six expected addresses were fully masked on the actual rebuilt engine. Three examples also lost 12 extra characters: two separator colons from overlapping IP candidates and a ten-character field label identified by another recognizer. These are remaining defects, not successful identifier detections. The six positive regression examples do not estimate false-positive rates or independent accuracy. They remain separate from the main 38 English development examples and four coverage challenges. Both raw reports and fixtures are public; downloads are bound to the measured source.
+All six expected addresses were fully masked on the actual rebuilt Linux engine. The 2026-11-08 correction preserves two separator colons that overlapping IP candidates previously removed. One example still loses a ten-character `ip_address` field label identified as `IN_PAN` by another recognizer. The unchanged 38 English cases still include six extra masked characters across two examples; the four out-of-coverage challenges still include one partial mask and one miss. These are remaining defects, not successful identifier detections. The six positive regression examples do not estimate false-positive rates or independent accuracy. They remain separate from the main 38 English development examples and four coverage challenges. Both raw reports and fixtures are public; downloads are bound to the measured source.
+
+
+### Preserve observations before masking
+
+The anonymizer merges candidate spans in place. The diagnostic now snapshots raw candidate entity types and boundaries before that operation and separately observes the spans actually applied. Older reports remain preserved; their candidate boundaries may reflect that merge. Current downloadable observations use the corrected observer and exact current engine sources. This fixes the measurement without removing any failing example or changing confidence thresholds.

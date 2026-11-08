@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-175708-pii-ledger-verification-b5a8c590",
+  "recorded_at": "2026-11-08T17:57:08.322060+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b276649977152054b40d917acc6335d0cc150788",
+  "changed": "Bind the regenerated readable ledger to current protocol, website and route-boundary execution receipts.",
+  "proves": "All selected current capabilities pass after the documentation projection update. Both scope ledgers retain 130 complete and 72 open records.",
+  "limits": "No accuracy, physical-device, independent-human or new full-requirement acceptance is granted.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105"
+  ],
+  "files": {
+    "docs/scope-progress.json": "1ea02d3f91d456771753a89c7a3de7206e7b09680d01f4a4df91f383bee5fb7f",
+    "docs/scope-progress.md": "fb59d44540aada6fe638fbecafc5118ec5abc903044aace6d1392fcb87f20d7b",
+    "eval/route-boundaries.json": "95735beb468f190b619e3fc4a81e9b0089c15942fa93293bd626433c3108c718",
+    "runs/2026-11-08-pii-separator-reader-boundaries.json": "fa41080fb67a7ba4055abf1f44fbecb347ec54fe8ac1d93cd1e0bca21f832d7d",
+    "runs/2026-11-08-pii-separator-reader-protocol.json": "3bde0b68abb842dc93c925299f27290b94616d6a0912a0074b6ca489bd018c1c",
+    "runs/2026-11-08-pii-separator-reader-website.json": "52a1ad3f072c9aeb25503319373c0391ac62a04af8a53a4fe3eede09bc654f2e",
+    "state.json": "ca2e4fbb10b4e52cbfa7520628315ef1b749753c46a0da4be25dc1d18458449c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-pii-separator-reader-protocol.json",
+      "sha256": "3bde0b68abb842dc93c925299f27290b94616d6a0912a0074b6ca489bd018c1c"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-reader-website.json",
+      "sha256": "52a1ad3f072c9aeb25503319373c0391ac62a04af8a53a4fe3eede09bc654f2e"
+    },
+    {
+      "path": "runs/2026-11-08-pii-separator-reader-boundaries.json",
+      "sha256": "fa41080fb67a7ba4055abf1f44fbecb347ec54fe8ac1d93cd1e0bca21f832d7d"
+    }
+  ],
+  "checks": []
+}

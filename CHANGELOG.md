@@ -2,6 +2,105 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-175708-pii-ledger-verification-b5a8c590
+
+Recorded 2026-11-08T17:57:08.322060+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the regenerated readable ledger to current protocol, website and route-boundary execution receipts.
+- **Evidence.** All selected current capabilities pass after the documentation projection update. Both scope ledgers retain 130 complete and 72 open records. [Change record](./runs/changes/2026-11-08-175708-pii-ledger-verification-b5a8c590.json).
+- **Not claimed.** No accuracy, physical-device, independent-human or new full-requirement acceptance is granted.
+
+
+### 2026-11-08-175315-pii-readable-ledger-7a46506f
+
+Recorded 2026-11-08T17:53:15.442257+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the readable completion ledger and public scope projection from the current timestamped machine ledger.
+- **Evidence.** The scope renderer retains all 202 records, 130 complete and 72 open, and now shows the current PII and renewed setup evidence in the human-readable ledger. [Change record](./runs/changes/2026-11-08-175315-pii-readable-ledger-7a46506f.json).
+- **Not claimed.** Formatting and timestamp reconciliation grant no new full requirement closure or independent accuracy acceptance.
+
+
+### 2026-11-08-175116-pii-verified-publication-candidate-f9b0d61d
+
+Recorded 2026-11-08T17:51:16.153082+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the scope and current engineering receipts for the corrected PII route, source-current downloads and phone-distribution readiness.
+- **Evidence.** All five capability receipts and the actual service/replay/device boundary review pass against current sources. The rebuilt site checks 20 tag panels and eight workflow groups. [Change record](./runs/changes/2026-11-08-175116-pii-verified-publication-candidate-f9b0d61d.json).
+- **Not claimed.** 130 complete and 72 open remain; no full requirement was closed in this increment. Apple App ID registration and an unsigned archive are preparation only; no app record, signed upload, TestFlight install or public phone release exists.
+
+
+### 2026-11-08-174753-pii-current-download-expectations-db8f1b4d
+
+Recorded 2026-11-08T17:47:53.611135+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind actual browser downloads to the new measured Linux PII artifacts and require the corrected compact masking counts.
+- **Evidence.** The syntax check passes; the prior browser run correctly refused October reports as the expected bytes for the current build. [Change record](./runs/changes/2026-11-08-174753-pii-current-download-expectations-db8f1b4d.json).
+- **Not claimed.** Exact download comparisons remain mandatory. The updated full website execution is pending; no independent accuracy or requirement closure follows.
+
+
+### 2026-11-08-174341-pii-source-current-service-timings-625bcb2b
+
+Recorded 2026-11-08T17:43:41.141897+00:00 · Contributor: Codex · change
+
+- **Changed.** Replace the stale selected timing evidence with 12 actual current-source Linux profiles. Keep the interrupted and refused-output attempts separate from passing evidence.
+- **Evidence.** The unchanged ordinary-user client measured all fixed profiles with runtime identity checks; staging was restored after the disposable stack stopped. Timing schema and corruption controls pass. [Change record](./runs/changes/2026-11-08-174341-pii-source-current-service-timings-625bcb2b.json).
+- **Not claimed.** My first output path was outside the report writer boundary and was refused; the corrected run uses its allowed output directory. These are synthetic Linux service timings, not phone startup, population speed or independent accuracy. No new full requirement closure.
+
+
+### 2026-11-08-154625-pii-current-linux-evidence-22d744cf
+
+Recorded 2026-11-08T15:46:25.684569+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish current-source PII development observations, fix the performance breakdown grammar, bind actual Linux service/replay checks, and renew clean-setup acceptance for the corrected source.
+- **Evidence.** Actual Linux execution: 48 fixed engine examples, 26 service controls, 15 pipeline/CLI replays and ten clean-clone setup/failure checks. Two separator colons are preserved; every expected compact address remains masked. [Change record](./runs/changes/2026-11-08-154625-pii-current-linux-evidence-22d744cf.json).
+- **Not claimed.** The IN_PAN field-label false positive, English extra masking and challenge misses remain public. No independent accuracy, real-phone or App Store release claim. All 202 records retained: 130 complete, 72 open.
+
+
+### 2026-11-08-150613-pii-ci-output-directory-63d18e22
+
+Recorded 2026-11-08T15:06:13.970365+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the disposable CI output directory before service and replay reporting.
+- **Evidence.** The prior job built healthy services but failed to save its report; the verifier CLI loads. Actual integration is rerunning. [Change record](./runs/changes/2026-11-08-150613-pii-ci-output-directory-63d18e22.json).
+- **Not claimed.** The failed job is not admitted as passing evidence. Scope remains 130 complete and 72 open.
+
+
+### 2026-11-08-144809-pii-linux-pipeline-verifier-2da272ac
+
+Recorded 2026-11-08T14:48:09.332310+00:00 · Contributor: Codex · change
+
+- **Changed.** Run existing personal service and replay checks in isolated Linux CI; add an explicit Docker option to the replay verifier while retaining Podman as its default.
+- **Evidence.** 103 focused controls pass; workflow shell blocks parse. The new integration job is awaiting execution. [Change record](./runs/changes/2026-11-08-144809-pii-linux-pipeline-verifier-2da272ac.json).
+- **Not claimed.** No local Docker started. No independent accuracy, physical-phone acceptance or requirement closure claimed.
+
+
+### 2026-11-08-081311-pii-ci-consumer-dependency-887b3b34
+
+Recorded 2026-11-08T08:13:11.583221+00:00 · Contributor: Codex · change
+
+- **Changed.** Install the existing hashed contract dependencies for the Linux diagnostic and check its import path before the image build.
+- **Evidence.** The first hosted failure is recorded as unavailable before any measurement; its missing Pydantic consumer dependency is identified. [Change record](./runs/changes/2026-11-08-081311-pii-ci-consumer-dependency-887b3b34.json).
+- **Not claimed.** The corrected hosted execution remains pending. No passing Linux cohort, accuracy claim or full requirement closure is inferred.
+
+
+### 2026-11-08-054024-ios-distribution-readiness-documentation-a6fc84a8
+
+Recorded 2026-11-08T05:40:24.062432+00:00 · Contributor: Codex · change
+
+- **Changed.** Document the registered app identifier, actual unsigned device archive and remaining store distribution work using current Apple guidance.
+- **Evidence.** The store route has a concrete reviewed sequence and actual compilation evidence; no App Store or phone-release claim is made. [Change record](./runs/changes/2026-11-08-054024-ios-distribution-readiness-documentation-a6fc84a8.json).
+- **Not claimed.** Signing, store record creation, artwork, in-app privacy, physical and human acceptance, per-tag validation and Apple review remain required. No account details, private keys or other-project data are published.
+
+
+### 2026-11-08-034748-pii-separator-candidate-and-store-readiness-e9d119f5
+
+Recorded 2026-11-08T03:47:48.203615+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct narrow IP field-separator overhangs, snapshot recognition before the anonymizer mutates findings, and add isolated Linux fixed-cohort verification. Record unsigned device compilation and the separate registered store bundle ID.
+- **Evidence.** 98 focused cases pass. Actual pinned Mac engine checks preserve all six compact identifiers while removing two unwanted separator masks; remaining false positives are retained. The existing iOS prototype builds a device archive. [Change record](./runs/changes/2026-11-08-034748-pii-separator-candidate-and-store-readiness-e9d119f5.json).
+- **Not claimed.** Linux and current chart integration are pending; this is a development candidate. No signed archive, App Store record, upload, physical-phone, independent accuracy or full requirement closure. Counts remain 130 complete and 72 open.
+
+
 ### 2026-11-08-011857-native-share-live-publication-537d5c98
 
 Recorded 2026-11-08T01:18:57.391210+00:00 · Contributor: Codex · change

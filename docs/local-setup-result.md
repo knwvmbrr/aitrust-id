@@ -40,3 +40,7 @@ Review strengthened this evidence to bind all 27 Dockerfile/COPY/lock/health/CLI
 inputs. The earlier seven-input receipt stays historical. Exact input bytes now
 allow verification of downloaded source without requiring Git ancestry. Changed
 COPY inputs, protocol helpers or dependency locks require a fresh actual run.
+
+## Current redactor source recheck — 2026-11-08
+
+The [new actual Linux receipt](../runs/2026-11-08-pii-separator-clean-setup-linux.json) repeats the same ten controls against the corrected redactor from a clean committed clone. All owned resources were removed and the original staging service IDs, images, configuration and health restored. The historical reports remain unchanged. F-105 stays complete for its existing software job; this recheck closes no new full requirement and does not substitute for F-142 human acceptance.

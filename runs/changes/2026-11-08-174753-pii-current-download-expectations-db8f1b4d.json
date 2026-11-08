@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-174753-pii-current-download-expectations-db8f1b4d",
+  "recorded_at": "2026-11-08T17:47:53.611135+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "934cca1dfdf20304b0bee5a19f6b7a1c28b83f78",
+  "changed": "Bind actual browser downloads to the new measured Linux PII artifacts and require the corrected compact masking counts.",
+  "proves": "The syntax check passes; the prior browser run correctly refused October reports as the expected bytes for the current build.",
+  "limits": "Exact download comparisons remain mandatory. The updated full website execution is pending; no independent accuracy or requirement closure follows.",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "scripts/verify-performance.cjs": "3f913852c0dc05ae1dfe9ee15ae2c36d1da13b98f846baa57fc882c2263e9428"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-performance.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-08T17:47:53.672579+00:00"
+    }
+  ]
+}

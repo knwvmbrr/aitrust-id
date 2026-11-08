@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-054024-ios-distribution-readiness-documentation-a6fc84a8",
+  "recorded_at": "2026-11-08T05:40:24.062432+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d7469b1539a9b09455183a6e6fc27fb060cbfa67",
+  "changed": "Document the registered app identifier, actual unsigned device archive and remaining store distribution work using current Apple guidance.",
+  "proves": "The store route has a concrete reviewed sequence and actual compilation evidence; no App Store or phone-release claim is made.",
+  "limits": "Signing, store record creation, artwork, in-app privacy, physical and human acceptance, per-tag validation and Apple review remain required. No account details, private keys or other-project data are published.",
+  "scope_ids": [
+    "N-013",
+    "F-142",
+    "F-057"
+  ],
+  "files": {
+    ".github/workflows/redaction-development.yml": "87b4458b2df3213cb4f147d7ee7a073dfc5fc179e6fc3e1d131ffd750cd3a60a",
+    "docs/app-store-readiness.md": "20bd3e1d6ac3bf5c530094d7f829d8bcae2cbdeeae28fcfa950d20783e45e1af",
+    "docs/pii-separator-correction-plan.md": "e60bf82ea72acec5103bd31b5ff992f9ea409cfa6f6e88d823af71df6c76e1ba",
+    "docs/scope-progress.json": "8a19d8930f980fc276de030ee30c535a8f9aaaf875b61dc95b231f7056d28350",
+    "docs/scope-progress.md": "d5303bbf7109c4ea4ed3e59023a1071ef92dcce8dec27b0612a6cf06c3b6b548",
+    "runs/2026-11-08-ios-archive-readiness.json": "466bf35c63caa5d7391fce9876a15dc1ee34139cfa3a2ad49d87931a54022122",
+    "runs/2026-11-08-pii-engine-probe.py": "5ffe2a44b270fbe7e08d68a4bfd219b4978a41a682be096ab8cff7765d89e8c4",
+    "runs/2026-11-08-pii-separator-mac-development.json": "ed67fa7b6da2c77f17af93f89a4542857dec7bb7581ab42977a756f6a923b851",
+    "scripts/redaction-development-worker.py": "abedcfb236c8bdc5703776524fe8e9fc792c8825fcd2c79d9fa3572cb5ffcb4e",
+    "services/anonymizer/app.py": "9ffb5808ced5245c7e99886f25199e8093659de71a7739207fac18599bd4da52",
+    "state.json": "f7ddac1789c6c1f5db09301bbcfc1c039cec0023f64b76d0422ed4771156434b",
+    "tests/test_complete_ipv6.py": "c89e892499841613ba82bbdbf676864b7a2cdfaa4640e454a79df570293291cb",
+    "tests/test_redaction_worker_observations.py": "3a6b15acdc8e16bf20937b8a4513eb4d2d0c85b7242e6309490baedeb16a8897"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-ios-archive-readiness.json",
+      "sha256": "466bf35c63caa5d7391fce9876a15dc1ee34139cfa3a2ad49d87931a54022122"
+    }
+  ],
+  "checks": []
+}

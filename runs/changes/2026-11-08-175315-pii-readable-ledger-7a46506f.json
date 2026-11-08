@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-175315-pii-readable-ledger-7a46506f",
+  "recorded_at": "2026-11-08T17:53:15.442257+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b276649977152054b40d917acc6335d0cc150788",
+  "changed": "Regenerate the readable completion ledger and public scope projection from the current timestamped machine ledger.",
+  "proves": "The scope renderer retains all 202 records, 130 complete and 72 open, and now shows the current PII and renewed setup evidence in the human-readable ledger.",
+  "limits": "Formatting and timestamp reconciliation grant no new full requirement closure or independent accuracy acceptance.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105"
+  ],
+  "files": {
+    "docs/scope-progress.json": "1ea02d3f91d456771753a89c7a3de7206e7b09680d01f4a4df91f383bee5fb7f",
+    "docs/scope-progress.md": "fb59d44540aada6fe638fbecafc5118ec5abc903044aace6d1392fcb87f20d7b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-pii-separator-integration.json",
+      "sha256": "b2db53299018d11d1d245ad86fea3ae4575852dc23c0eb6a084a1cd185218fb1"
+    }
+  ],
+  "checks": []
+}

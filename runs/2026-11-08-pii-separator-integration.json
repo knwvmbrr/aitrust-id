@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-08T15:46:24.863541+00:00",
+  "pass": true,
+  "kind": "bounded_pii_development_integration",
+  "implemented_by": "Codex",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105"
+  ],
+  "linux_workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42493101618",
+  "linux_engine_observations": [
+    "runs/2026-11-08-pii-separator-english-linux.json",
+    "runs/2026-11-08-pii-separator-compact-linux.json"
+  ],
+  "service_evidence": "runs/2026-11-08-pii-separator-service-linux.json",
+  "actual_http_controls": 26,
+  "replay_evidence": "runs/2026-11-08-pii-separator-replay-linux.json",
+  "actual_pipeline_cli_replay_cases": 15,
+  "clean_setup_evidence": "runs/2026-11-08-pii-separator-clean-setup-linux.json",
+  "actual_clean_setup_failure_cases": 10,
+  "original_staging_restored": true,
+  "owned_setup_resources_removed": true,
+  "disposable_linux_ci_profile_removed": true,
+  "local_docker_started": false,
+  "actual_user_data_used": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_acceptance": false,
+  "full_requirements_closed": [],
+  "records_preserved": 202,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "target_open_requirements": 60,
+  "limits": [
+    "Developer-authored fixed examples do not estimate population accuracy.",
+    "One compact IP field-label false positive still masks ten extra characters.",
+    "The main English cohort still masks six extra characters; one out-of-coverage challenge is partial and one untouched.",
+    "No public PII checker or App Store release is created by these checks."
+  ]
+}

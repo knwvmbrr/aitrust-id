@@ -132,7 +132,14 @@
         "tests/test_independent_tag_batch.py",
         "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
         "scripts/worker_process.py",
-        "tests/test_worker_process.py"
+        "tests/test_worker_process.py",
+        "runs/2026-11-08-pii-separator-english-linux.json",
+        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "tests/test_redaction_worker_observations.py",
+        "docs/pii-separator-correction-plan.md",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "runs/2026-11-08-pii-separator-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -144,7 +151,8 @@
           "tests/test_complete_ipv6.py",
           "tests/test_redaction_observations.py",
           "tests/test_redaction_development_client.py",
-          "tests/test_redaction_development_builder.py"
+          "tests/test_redaction_development_builder.py",
+          "tests/test_redaction_worker_observations.py"
         ],
         [
           "{python}",
@@ -434,7 +442,11 @@
         "runs/2026-11-07-security-channel-status.json",
         "runs/2026-11-07-security-reviewed-acceptance.json",
         "runs/2026-11-07-recovery-cache-reuse-linux.json",
-        "docs/directory-clock-fence-plan.md"
+        "docs/directory-clock-fence-plan.md",
+        "tests/test_replay_verifier_engine.py",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "runs/2026-11-08-pii-separator-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -698,6 +710,13 @@
           "tests/test_recovery_stream_boundary.py",
           "tests/test_host_recovery_evidence.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_replay_verifier_engine.py",
+          "-q"
         ]
       ]
     },
@@ -797,7 +816,7 @@
           "--python",
           "{python}",
           "--receipt",
-          "runs/2026-10-14-tag-isolation-replay-linux.json"
+          "runs/2026-11-08-pii-separator-replay-linux.json"
         ],
         [
           "{python}",
@@ -1130,7 +1149,15 @@
         "runs/2026-11-07-native-share-workflow.json",
         "runs/2026-11-07-native-share-engine.json",
         "runs/2026-11-07-native-share-reviewed-workflow.json",
-        "runs/*native-share*workflow.json"
+        "runs/*native-share*workflow.json",
+        "runs/2026-11-08-pii-separator-english-linux.json",
+        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "tests/test_redaction_worker_observations.py",
+        "docs/pii-separator-correction-plan.md",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "runs/2026-11-08-pii-separator-clean-setup-linux.json",
+        "runs/2026-11-08-pii-separator-pipeline-timing-linux.json"
       ],
       "commands": [
         [

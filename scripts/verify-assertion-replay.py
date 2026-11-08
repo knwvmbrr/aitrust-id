@@ -15,7 +15,8 @@ from protocol.replay_identity import digest
 from protocol.reports import write_report
 
 
-def verify(env_file,project):
+def verify(env_file,project,engine='podman'):
+    if engine not in ('podman','docker'):raise ValueError('Unsupported staging container engine')
     local=bool(re.fullmatch(r'aitrust-local-[a-f0-9]{32}',project))
     if sys.platform!='linux' or not (local or project.startswith('aitrust-staging')):
         raise ValueError('Require a dedicated Linux staging stack')
@@ -70,17 +71,17 @@ def verify(env_file,project):
 
     log_safe=True
     for service in ['gateway','anonymizer','evaluator']:
-        r=subprocess.run(['podman','ps','--filter','label='+('org.aitrust.local-setup=' if local else 'com.docker.compose.project=')+project,'--filter','label='+('org.aitrust.local-role=' if local else 'com.docker.compose.service=')+service,'-q'],capture_output=True,text=True,timeout=10,check=True)
+        r=subprocess.run([engine,'ps','--filter','label='+('org.aitrust.local-setup=' if local else 'com.docker.compose.project=')+project,'--filter','label='+('org.aitrust.local-role=' if local else 'com.docker.compose.service=')+service,'-q'],capture_output=True,text=True,timeout=10,check=True)
         cids=r.stdout.strip().splitlines()
         if len(cids)!=1:raise ValueError('Ambiguous staging service ownership')
-        logs=subprocess.run(['podman','logs',cids[0]],capture_output=True,timeout=30,check=True)
+        logs=subprocess.run([engine,'logs',cids[0]],capture_output=True,timeout=30,check=True)
         if any(marker.encode() in logs.stdout+logs.stderr for marker in [token,'alice@example.com','example.test/install','Different ordinary source.']):log_safe=False
     if not log_safe or sources!={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}:raise ValueError('Replay logs or source binding changed')
     return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,'cases':cases,'sources':sources,'synthetic_only':True,'actual_pipeline_and_cli_executed':True,'both_command_and_procedural_redaction_replayed':True,'application_logs_checked':['stdout','stderr'],'private_markers_absent_from_logs':True,'temporary_input_directory_removed':not folder.exists(),'public_intake_connected':False,'independent_accuracy_evidence':False,'historical_missing_identity_reconstructed':False,'synthetic_browser_fixture':browser_fixture}
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--env-file',type=Path,required=True);p.add_argument('--project',required=True);p.add_argument('--report',required=True);a=p.parse_args()
-    try:r=verify(a.env_file,a.project)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--env-file',type=Path,required=True);p.add_argument('--project',required=True);p.add_argument('--report',required=True);p.add_argument('--engine',choices=('podman','docker'),default='podman');a=p.parse_args()
+    try:r=verify(a.env_file,a.project,a.engine)
     except (ValueError,OSError,KeyError,subprocess.SubprocessError,httpx.HTTPError):
         r={'captured_at':datetime.now(timezone.utc).isoformat(),'pass':False,'reason':'isolated_replay_execution_failed','independent_accuracy_evidence':False}
     write_report(a.report,r);print(json.dumps(r));raise SystemExit(0 if r['pass'] else 1)

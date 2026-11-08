@@ -172,6 +172,13 @@ DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'services/evaluator/app.py', 'scripts/verify-device.cjs']
 
 
+PATTERNS += ('runs/2026-11-08-pii-separator-pipeline-timing-linux.json',
+             'runs/2026-11-08-pii-separator-clean-setup-linux.json', 'scripts/verify-local-setup-evidence.py',
+             'runs/2026-11-08-pii-separator-english-linux.json', 'runs/2026-11-08-pii-separator-compact-linux.json',
+             'runs/2026-11-08-pii-separator-service-linux.json', 'runs/2026-11-08-pii-separator-replay-linux.json',
+             'tests/test_redaction_worker_observations.py', 'tests/test_replay_verifier_engine.py',
+             'docs/pii-separator-correction-plan.md', 'docs/app-store-readiness.md')
+
 def read_json(file):
     return read_evidence(file)
 

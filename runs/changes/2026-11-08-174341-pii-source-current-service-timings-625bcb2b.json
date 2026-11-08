@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-174341-pii-source-current-service-timings-625bcb2b",
+  "recorded_at": "2026-11-08T17:43:41.141897+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "934cca1dfdf20304b0bee5a19f6b7a1c28b83f78",
+  "changed": "Replace the stale selected timing evidence with 12 actual current-source Linux profiles. Keep the interrupted and refused-output attempts separate from passing evidence.",
+  "proves": "The unchanged ordinary-user client measured all fixed profiles with runtime identity checks; staging was restored after the disposable stack stopped. Timing schema and corruption controls pass.",
+  "limits": "My first output path was outside the report writer boundary and was refused; the corrected run uses its allowed output directory. These are synthetic Linux service timings, not phone startup, population speed or independent accuracy. No new full requirement closure.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-113"
+  ],
+  "files": {
+    "docs/local-setup-result.md": "901acf9c41939aa33015c3b96995a8af5dd9ed190a2888fc008dca8da543b754",
+    "docs/pii-separator-correction-plan.md": "1875d58f32c804187aec13352159404226067a870de374645dcccb201e52e17a",
+    "docs/redaction-recognition.md": "e541437f098bc1c4e5f10ccccdb5dbca548aa3e8dc0c32c17912d64cf48881d6",
+    "docs/scope-progress.json": "de477acc69e5284400a3f07d359eabee8945f3397e077e25814e0bf7ab83626a",
+    "eval/revalidation.json": "8c94ca2e9646a59fcc84ea496fa6d9cbf27b75f0fd350e1e2c236b179903dc03",
+    "eval/route-boundaries.json": "4922348f5804e00a9803a2cc127e6f62928c51717baa1077bc3146a65a9fda8d",
+    "runs/2026-11-08-pii-separator-accepted-PII_REDACTED.json": "facd579ea305975a1b6641b32514b78176ea20c91c55938e0f6f756a37524360",
+    "runs/2026-11-08-pii-separator-accepted-PS.json": "4cd526b414f16e9ed35fba08bc8772e24fd8bdc577e7836a5131d21332470802",
+    "runs/2026-11-08-pii-separator-accepted-extension.json": "a104065c46d0b7218f04b015d298d4646142b465054364db14aae690bd2f5bcb",
+    "runs/2026-11-08-pii-separator-accepted-protocol.json": "aaa712dfd39249991cad9fafb5dc69911fcd8b78b404741f4d7e0fd94b9b3a8e",
+    "runs/2026-11-08-pii-separator-accepted-website.json": "f7d645dd41b61981af2ac19d5a00d470946252625b9f550a79e28bd6596839ce",
+    "runs/2026-11-08-pii-separator-clean-setup-linux.json": "b3e1f8f24efae4705fea75420448964c4789ba3ae12a0fc51c7f1529309b7075",
+    "runs/2026-11-08-pii-separator-compact-linux.json": "c5b0f1930e190e5c4e1e378c647bc77887f2d965edd3d04a17f2c382f7b17a5a",
+    "runs/2026-11-08-pii-separator-current-PII_REDACTED.json": "8707dedb955cf72e4cbca8227305d04ad9ca60a3414f54a43edc02377fb6450c",
+    "runs/2026-11-08-pii-separator-current-PS.json": "cbb58c32a45c37001650471c31a4c8cccd3294571876b44736f309bd3c3a7781",
+    "runs/2026-11-08-pii-separator-current-extension.json": "76a212331780e74ec08188071d96478cdff91e0b9c59577950ef6a7d5670ef85",
+    "runs/2026-11-08-pii-separator-current-protocol.json": "39fe6bb7b95dd869f2976d1c0ac85451d126a0fcc863f23c5289e32bb2896bbf",
+    "runs/2026-11-08-pii-separator-english-linux.json": "ce18562e413cb0dbc9fd46e3314ec41f8adb2e002c88a695c21de2d86d14d45b",
+    "runs/2026-11-08-pii-separator-integration.json": "b2db53299018d11d1d245ad86fea3ae4575852dc23c0eb6a084a1cd185218fb1",
+    "runs/2026-11-08-pii-separator-pipeline-timing-linux.json": "378cacb5e248a7c938167dd0aa27ce851d39d8ce1c237a31ea3ff42ed65c658a",
+    "runs/2026-11-08-pii-separator-replay-linux.json": "a3a04d729c30823319fe912d686510a39e9d68e1fa36821723064c8742ab078d",
+    "runs/2026-11-08-pii-separator-service-linux.json": "1f4971de5d7d4daf3ade824f95039a2357bab3a2d45972afa890ec232dfe614b",
+    "scripts/build-redaction-performance.py": "3d4a3a6ee5f5cf2b8fc0b51f4552d7612d908d7ef85d46b0b46056f1750d16db",
+    "scripts/verify-local-setup-evidence.py": "170a79e45a91a310822c27f87e256b71c020cadd40ca5928e9e3a9cca7b85dbe",
+    "scripts/verify-route-boundaries.py": "c2cb80e5789fd7231a05be28d5ffe6cbad0b36e0f0e6539d2f322c41643f36c6",
+    "site/index.html": "424d92c3bec4b2a352af5a83a57a20db388df20ab3a468a5feb5da51b6d03ca0",
+    "site/public/reference/public-scope.json": "3c0faca704e02b927a110ea5bb2a8705c3f809adcc51f01124327179e9ed822d",
+    "site/scripts/prepare-performance.mjs": "21e4acb67ecb47090e4ff0cfd7cf6525da834b81433cd892b45b39310e2d45af",
+    "site/src/public-scope.json": "3c0faca704e02b927a110ea5bb2a8705c3f809adcc51f01124327179e9ed822d",
+    "site/src/redaction-performance-model.js": "e6a9c38b194fdecebf9ac52ae7676e6561d4c374160f60b0983129423314834d",
+    "site/src/scope-manifest.json": "8cec33c8ff934a9536a26d046ceb3ab949f7fd149cf79627732133357f3e2713",
+    "state.json": "b8b0d0ae5a013e7e5728789b70a48320dd9c4da24aaed990848392e30efea692",
+    "tests/pipeline-timing.cjs": "eae1422fcea006f11fef7c42a1bd9bb7ecdc98556be7e25c195f72f6be1da97d",
+    "tests/redaction-performance.cjs": "c6f2a2f980d55f757afdad10cc4810c71a18947b53c28042d53e730fe2a5bf5f",
+    "tests/test_redaction_development_builder.py": "1dd7ddb5c0b2106ff9036b7cb4b180a90dad4e257c2536cedf8dd4f16660441a",
+    "tests/test_redaction_development_client.py": "5da9a8966c195d45b98ab48c675a94f64af2b07d1d345171a3409487a4d8f39f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-pii-separator-pipeline-timing-linux.json",
+      "sha256": "378cacb5e248a7c938167dd0aa27ce851d39d8ce1c237a31ea3ff42ed65c658a"
+    }
+  ],
+  "checks": []
+}

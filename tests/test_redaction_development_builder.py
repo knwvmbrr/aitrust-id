@@ -29,8 +29,8 @@ def test_altered_evidence_cannot_reach_chart(mutate):
 def test_compact_regressions_remain_separate_with_extra_masking_visible():
     summary=m.public_summary(r)
     assert summary['english']['cases']==38 and summary['compact']['cases']==6
-    assert summary['compact']['fully_masked']==6 and summary['compact']['cases_with_extra_masking']==3
-    assert summary['compact']['extra_masked_characters']==12
+    assert summary['compact']['fully_masked']==6 and summary['compact']['cases_with_extra_masking']==1
+    assert summary['compact']['extra_masked_characters']==10
 
 @pytest.mark.parametrize('change',[
  lambda d:d.update(real_user_data=True),lambda d:d['sources'].update(app='a'*64),
