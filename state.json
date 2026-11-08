@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-08T00:44:32.295257+00:00",
-  "active_increment": "Native Share developer software verified; 72 open requirements; continue toward 60 while retaining owner, physical-device and independent gates.",
+  "updated": "2026-11-08T01:18:57.345268+00:00",
+  "active_increment": "Native Share developer software verified and published; 72 open full requirements; target remains 60 with all owner, physical-device and independent gates retained.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -782,7 +782,7 @@
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 12,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
@@ -805,8 +805,8 @@
         "reason": "Owner changed immediate target from 45 to 60; preserve full scope and acceptance."
       }
     ],
-    "latest_increment_publication": "runs/2026-11-07-final-live-publication.json",
-    "published_source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8"
+    "latest_increment_publication": "runs/2026-11-08-native-share-publication.json",
+    "published_source_commit": "da851606501823d411f69c3ed2ebc783c15bfe01"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1093,7 +1093,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-08T00:44:32.295257+00:00",
+  "updated_at": "2026-11-08T01:18:57.345268+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1867,7 +1867,18 @@
     "runner_repair": "runs/2026-11-07-native-share-runner-repair.json",
     "runtime_selection": "runs/2026-11-07-native-runtime-selection.json",
     "bootstrap_evidence": "runs/2026-11-07-native-bootstrap-separation.json",
-    "automation_budget_evidence": "runs/2026-11-07-native-automation-budget.json"
+    "automation_budget_evidence": "runs/2026-11-07-native-automation-budget.json",
+    "publication": "runs/2026-11-08-native-share-publication.json",
+    "hosted_ci": {
+      "pass": true,
+      "run_id": 42431218728,
+      "source_commit": "94220dd831221c06f54a35ff959ad6aca9fbac25",
+      "ui_workflows_passed": 5,
+      "runtime": "iOS 27.2",
+      "sdk": "27.1",
+      "owned_simulator_removed": true
+    },
+    "code_and_guide_published": true
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2903,17 +2914,19 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8",
-    "deployment_url": "https://8fbf089b.aitrust-id.pages.dev",
+    "source_commit": "da851606501823d411f69c3ed2ebc783c15bfe01",
+    "deployment_url": "https://345b2718.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-07-final-live-publication.json",
+    "evidence": "runs/2026-11-08-native-share-publication.json",
     "metadata_only_followup": true,
-    "meaning": "This state update records the verified deployment of the stated source commit. Subsequent verification metadata does not change the deployed application code.",
+    "meaning": "This metadata records the verified application deployment of the stated source commit. The verification-only followup changes no deployed application code.",
     "scope_records": 202,
     "completed_requirements": 130,
     "open_requirements": 72,
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
-    "publication_pending": true
+    "phone_release_offered": false,
+    "publication_pending": false,
+    "previous_publication": "runs/2026-11-07-final-live-publication.json"
   }
 }

@@ -1,0 +1,361 @@
+{
+  "captured_at": "2026-11-08T01:18:57.345268+00:00",
+  "pass": true,
+  "merge_commit": "da851606501823d411f69c3ed2ebc783c15bfe01",
+  "deployment_url": "https://345b2718.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "selected_assets": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "5d7697b0961695de2db392ebe3927fa42ff070499c1424c7eecf536b5256ef7d",
+      "bytes": 131415
+    },
+    {
+      "route": "/assets/index-D2vh9Zx-.js",
+      "status": 200,
+      "sha256": "824774b471500da24b68603f617544b78787977f3fa73d5425771c9d7e315eac",
+      "bytes": 556110
+    },
+    {
+      "route": "/assets/index-CI7dZ8kM.css",
+      "status": 200,
+      "sha256": "60f9d40c96cbe952d7e67990e960a5297a5a30a7cdb3080ed70ad55f9a5ba301",
+      "bytes": 24038
+    },
+    {
+      "route": "/reference/conformance/",
+      "status": 200,
+      "sha256": "dc9cb71e3c0e7ec6b03cf67141a8d87256a9b317a1b078f21c18d51945c27ec6",
+      "bytes": 9317
+    },
+    {
+      "route": "/reference/agent-output.md",
+      "status": 200,
+      "sha256": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
+      "bytes": 6494
+    },
+    {
+      "route": "/reference/organization-directory.md",
+      "status": 200,
+      "sha256": "03d9aafc07df1b2fb9235429c8f4e0c82f3935cc6b34ebf8d332e5506393763e",
+      "bytes": 9438
+    },
+    {
+      "route": "/reference/directory-software-linux.json",
+      "status": 200,
+      "sha256": "65fcea22244603f1993ce38d71d7fcedc4420a9ad88cb098118f2e201c0339fe",
+      "bytes": 5867
+    },
+    {
+      "route": "/reference/security-operations.md",
+      "status": 200,
+      "sha256": "36100d28611a2a47ba30159365e5ae24014ba6ebebae8a9472b394dd5a2f78fb",
+      "bytes": 8395
+    },
+    {
+      "route": "/reference/host-recovery.json",
+      "status": 200,
+      "sha256": "89a083a144084f2fc6d2659bc1927da838cf23d988dd1fe3ffc7a29b60a349d9",
+      "bytes": 8834
+    },
+    {
+      "route": "/reference/security-policy.md",
+      "status": 200,
+      "sha256": "c6522349a5f4ced07235e8246450dffa43dce70786cb12a406b205a64e7339f0",
+      "bytes": 2531
+    },
+    {
+      "route": "/reference/conformance-runner.md",
+      "status": 200,
+      "sha256": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+      "bytes": 3938
+    },
+    {
+      "route": "/reference/public-scope.json",
+      "status": 200,
+      "sha256": "c0d8cf0beaa1416af63e7fa5fd065ff82de0427018041dcc20d18650bccb3615",
+      "bytes": 658015
+    },
+    {
+      "route": "/reference/changelog.md",
+      "status": 200,
+      "sha256": "42241a5006373c769d97086061fda80c61ecb706c6afe39ab0b2fcda42c47b7d",
+      "bytes": 527192
+    },
+    {
+      "route": "/reference/native-share-developer.md",
+      "status": 200,
+      "sha256": "6d4eaeafb51c235ce9a1cabafa7d614b92cff197e29bb77e56df10cc75706fce",
+      "bytes": 3928
+    },
+    {
+      "route": "/reference/native-share-workflow.json",
+      "status": 200,
+      "sha256": "5b4b38f05df6a390bb343d3ce7138f7f9adaef44980f94f786fc19cc583f0607",
+      "bytes": 5216
+    },
+    {
+      "route": "/reference/native-share-engine.json",
+      "status": 200,
+      "sha256": "e24d54ef774f932d41876ef872b9761af78aa803d5d5db8920cf5e31ee10d18b",
+      "bytes": 3941
+    },
+    {
+      "route": "/reference/native-engine-checks.md",
+      "status": 200,
+      "sha256": "ec7256162e4abb51e2b6af658ebc44d9ac1ce838168366a2397b2238fd529188",
+      "bytes": 4532
+    }
+  ],
+  "selected_asset_count": 17,
+  "all_assets_claimed": false,
+  "scope_records": 202,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "closed_requirements": [],
+  "advanced_requirement": {
+    "id": "N-013",
+    "from": 20,
+    "to": 80,
+    "physical_device_acceptance": false
+  },
+  "outside_person_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "certification": false,
+  "release_approved": false,
+  "protected_merge": {
+    "captured_at": "2026-11-08T00:58:40.850893+00:00",
+    "pass": true,
+    "pull_request": 89,
+    "reviewed_head": "94220dd831221c06f54a35ff959ad6aca9fbac25",
+    "required_check_instances": 22,
+    "checks": [
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308571",
+        "name": "regressions",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308697",
+        "name": "device-builder (3.13)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308534",
+        "name": "device-builder (3.14)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308569",
+        "name": "accessibility",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308425",
+        "name": "device-builder (3.12)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308401",
+        "name": "site",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308403",
+        "name": "spec",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308499",
+        "name": "change-records",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308488",
+        "name": "no-egress",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308482",
+        "name": "scope-plan",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218732/job/128580308228",
+        "name": "host-config",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296459",
+        "name": "scope-plan",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296581",
+        "name": "accessibility",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296788",
+        "name": "device-builder (3.12)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296671",
+        "name": "regressions",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296637",
+        "name": "device-builder (3.13)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296645",
+        "name": "no-egress",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296690",
+        "name": "device-builder (3.14)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296548",
+        "name": "spec",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296640",
+        "name": "site",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296582",
+        "name": "host-config",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431214853/job/128580296659",
+        "name": "change-records",
+        "state": "SUCCESS"
+      }
+    ],
+    "actual_native_share_check": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-08T00:58:29Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218728/job/128580308181",
+      "name": "native-share",
+      "startedAt": "2026-11-08T00:45:40Z",
+      "status": "COMPLETED",
+      "workflowName": "native-share-software"
+    },
+    "review": {
+      "commit_sha": "94220dd831221c06f54a35ff959ad6aca9fbac25",
+      "has_any_findings": false,
+      "has_unresolved_findings": false,
+      "status": "completed"
+    },
+    "unresolved_threads": 0,
+    "statistical_release_gate_pass": false,
+    "administrator_override_used": false,
+    "merge_commit": "da851606501823d411f69c3ed2ebc783c15bfe01",
+    "merged_tree_equals_reviewed_tree": true
+  },
+  "actual_hosted_native_workflow": {
+    "pass": true,
+    "physical_device": false,
+    "independent_accuracy": false,
+    "human_accessibility": false,
+    "installable_phone_release": false,
+    "started_at": "2026-11-08T00:46:27.866965+00:00",
+    "attempted_sources": {
+      "scripts/verify-ios-share.py": "e2262ed203b5994446e384cffd2106407168b8778b1ce80707d5a825f0830e52",
+      "scripts/build-ios-project.py": "f4811042e318524ccdfac150df82bf8ad25fb6300d523f77ddb4cce625231149",
+      "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+      "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+      "mobile/ios/Tests/UIFlows.swift": "3b389a4ce2f0d30cc25e0483a59f27de3e43ec5886167822a473b5fa2b65a28b",
+      "mobile/ios/Web/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+      "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+      "mobile/ios/Source/Assets.swift": "624106664544cb5282a8964b3112e6acda5eaff4d6b32cb6e227f23d3c03c6ea",
+      "mobile/ios/Source/CheckerController.swift": "05f4867dbe43eec8206e02ab445fa000593d70d3e229d00da2f58b02a92f0281",
+      "mobile/ios/Source/ShareController.swift": "2318d849221df78742571c556b0fb3c62e01f9ab10f8e2301d3460ed23fbd8a4",
+      "mobile/ios/Source/SharedText.swift": "f9d790cb79b331c90922dae58891060f3b6ed0f782605981f3b0306c5b4c732c"
+    },
+    "runtime": "iOS 27.2",
+    "runtime_build": "24B8117",
+    "xcode": "Xcode 27.1\nBuild version 27A9275",
+    "sdk": "27.1",
+    "sources": {
+      "scripts/verify-ios-share.py": "e2262ed203b5994446e384cffd2106407168b8778b1ce80707d5a825f0830e52",
+      "scripts/build-ios-project.py": "f4811042e318524ccdfac150df82bf8ad25fb6300d523f77ddb4cce625231149",
+      "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+      "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+      "mobile/ios/Tests/UIFlows.swift": "3b389a4ce2f0d30cc25e0483a59f27de3e43ec5886167822a473b5fa2b65a28b",
+      "mobile/ios/Web/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+      "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+      "mobile/ios/Source/Assets.swift": "624106664544cb5282a8964b3112e6acda5eaff4d6b32cb6e227f23d3c03c6ea",
+      "mobile/ios/Source/CheckerController.swift": "05f4867dbe43eec8206e02ab445fa000593d70d3e229d00da2f58b02a92f0281",
+      "mobile/ios/Source/ShareController.swift": "2318d849221df78742571c556b0fb3c62e01f9ab10f8e2301d3460ed23fbd8a4",
+      "mobile/ios/Source/SharedText.swift": "f9d790cb79b331c90922dae58891060f3b6ed0f782605981f3b0306c5b4c732c"
+    },
+    "source_unchanged_during_execution": true,
+    "test_count": 5,
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "asset_fingerprints": {
+      "/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+      "/device-manifest.json": "0d96f9814a059e210962c4927ebbecbe7fbcfd12a9828a2e9c07f304fb9e482c",
+      "/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+      "/method.py": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+      "/runtime/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+      "/runtime/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "/runtime/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "/runtime/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "/runtime/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+    },
+    "profile": "invented-text/UIActivityViewController/local-PS/simulator/v1",
+    "limits": [
+      "Typed-provider compatibility API deprecated in iOS 27; no future SDK guarantee.",
+      "Provider allocation and OS storage are not hard-bounded or physically erased.",
+      "No physical phone, arbitrary third-party share source or human accessibility acceptance."
+    ],
+    "owned_simulator_removed": true,
+    "captured_at": "2026-11-08T00:58:20.920764+00:00"
+  },
+  "hosted_run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42431218728",
+  "actual_site_verification": {
+    "captured_at": "2026-11-08T01:01:04.248Z",
+    "pass": true,
+    "tag_modals": 20,
+    "axe_violations": 0,
+    "unexpected_outbound_requests": 0,
+    "human_screen_reader_tested": false
+  },
+  "actual_workflow_verification": {
+    "captured_at": "2026-11-08T01:00:56.186Z",
+    "pass": true,
+    "workflows": 8,
+    "errors": [],
+    "violations": []
+  },
+  "public_source_download_status": 200,
+  "unrelated_primary_files_preserved": 12,
+  "full_requirement_closures": [],
+  "independent_tag_accuracy_approved": false,
+  "real_collection_enabled": false,
+  "physical_device_tested": false,
+  "phone_release_offered": false,
+  "verification_timing": "Actual public checks ran after deployment; native hosting evidence matches current reviewed source and assets."
+}
