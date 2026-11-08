@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-150613-pii-ci-output-directory-63d18e22
+
+Recorded 2026-11-08T15:06:13.970365+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the disposable CI output directory before service and replay reporting.
+- **Evidence.** The prior job built healthy services but failed to save its report; the verifier CLI loads. Actual integration is rerunning. [Change record](./runs/changes/2026-11-08-150613-pii-ci-output-directory-63d18e22.json).
+- **Not claimed.** The failed job is not admitted as passing evidence. Scope remains 130 complete and 72 open.
+
+
 ### 2026-11-08-144809-pii-linux-pipeline-verifier-2da272ac
 
 Recorded 2026-11-08T14:48:09.332310+00:00 · Contributor: Codex · change

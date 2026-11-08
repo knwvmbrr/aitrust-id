@@ -69,3 +69,5 @@ validated optional Docker engine argument while preserving Podman as the default
 Do not change replay outcomes, privacy controls, source bindings or endpoints.
 Check both verifier import paths before the build and retain unavailable/failing
 results rather than substituting the historical evidence.
+
+The first personal-profile job built healthy services but could not persist its result because the fresh runner had no output/verification directory. The workflow now creates its own output directory before executing either verifier; no passing report was manufactured from that failed attempt.

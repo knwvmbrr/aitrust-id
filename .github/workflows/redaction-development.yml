@@ -92,6 +92,7 @@ jobs:
         run: docker compose -p aitrust-staging --env-file "$AITRUST_TEST_ENV" -f deploy/docker-compose.yml up -d --build --wait --wait-timeout 180 gateway anonymizer evaluator
       - name: Verify actual service boundaries and private replay
         run: |
+          mkdir -p output/verification
           python scripts/verify-service.py --env-file "$AITRUST_TEST_ENV" --engine docker --project aitrust-staging --output output/verification/pii-service.json > "$RUNNER_TEMP/pii-service-check.log"
           python scripts/verify-assertion-replay.py --env-file "$AITRUST_TEST_ENV" --engine docker --project aitrust-staging --report output/verification/pii-replay.json > "$RUNNER_TEMP/pii-replay-check.log"
       - uses: actions/upload-artifact@v4
