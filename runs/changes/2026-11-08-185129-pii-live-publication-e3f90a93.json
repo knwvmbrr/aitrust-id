@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-185129-pii-live-publication-e3f90a93",
+  "recorded_at": "2026-11-08T18:51:29.671157+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b2152b85ae81bf8658921ed5b40377551c365964",
+  "changed": "Record the protected PII merge and verified production website publication, with current public downloads and reconciled scope ledgers.",
+  "proves": "15 selected deployed files match the built bytes; live checks cover 20 tag panels, performance downloads and eight workflows with no automated accessibility or unexpected outbound findings. The public source ZIP returns HTTP 200 anonymously. Twelve unrelated local files are unchanged.",
+  "limits": "Metadata-only followup to the identified application deployment. No independent accuracy, real-phone acceptance, App Store upload or full requirement closure; 130 complete and 72 open remain.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105",
+    "F-113",
+    "N-013"
+  ],
+  "files": {
+    "runs/2026-11-08-pii-publication.json": "f9785968f5f19a3b75d429e38e849ec64fe60789c60045cafe8e86ad9773a804",
+    "state.json": "6c97a3fa332393d7bd7abe71dec9c644765598701a55c516cfd215f8126148e4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-pii-publication.json",
+      "sha256": "f9785968f5f19a3b75d429e38e849ec64fe60789c60045cafe8e86ad9773a804"
+    }
+  ],
+  "checks": []
+}
