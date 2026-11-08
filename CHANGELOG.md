@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-144809-pii-linux-pipeline-verifier-2da272ac
+
+Recorded 2026-11-08T14:48:09.332310+00:00 · Contributor: Codex · change
+
+- **Changed.** Run existing personal service and replay checks in isolated Linux CI; add an explicit Docker option to the replay verifier while retaining Podman as its default.
+- **Evidence.** 103 focused controls pass; workflow shell blocks parse. The new integration job is awaiting execution. [Change record](./runs/changes/2026-11-08-144809-pii-linux-pipeline-verifier-2da272ac.json).
+- **Not claimed.** No local Docker started. No independent accuracy, physical-phone acceptance or requirement closure claimed.
+
+
 ### 2026-11-08-081311-pii-ci-consumer-dependency-887b3b34
 
 Recorded 2026-11-08T08:13:11.583221+00:00 · Contributor: Codex · change

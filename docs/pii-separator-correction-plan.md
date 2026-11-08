@@ -53,3 +53,19 @@ could not import Pydantic. It had installed only the evaluation lock. Install
 the existing gateway lock, as the other protocol consumers already do, and
 exercise the diagnostic --help import path before building. Keep the original
 failed run and obtain new actual measurements; no Linux result is inferred.
+
+## Source-current pipeline and replay integration
+
+The current route boundary also binds the actual gateway/redactor/evaluator
+service record and replay execution to the redactor source. Keep those checks.
+Run the existing three-service Compose profile only on a disposable Linux CI
+runner, with a private temporary test token, existing loopback port and existing
+least-privilege settings. Execute the service and replay verifiers and preserve
+their actual outputs. Remove only that owned project afterward. No Mac Docker,
+production stack or real input is involved.
+
+The replay verifier currently hard-codes Podman for its final log checks. Add a
+validated optional Docker engine argument while preserving Podman as the default.
+Do not change replay outcomes, privacy controls, source bindings or endpoints.
+Check both verifier import paths before the build and retain unavailable/failing
+results rather than substituting the historical evidence.
