@@ -69,3 +69,45 @@ def test_compact_partial_candidate_replaced_without_masking_label():
 
 def test_compact_ipv4_candidate_is_unchanged():
     text='IP:198.51.100.27';v=Finding('IP_ADDRESS',3,len(text),.9);r=recognizer([v]);assert r.analyze(text,['IP_ADDRESS'])==[v]
+
+
+@pytest.mark.parametrize('text,start,end', [('IPv6:::1',5,6),('IPv6:::1',5,8),('addr:::ffff:192.0.2.42',5,6),('addr:::ffff:192.0.2.42',5,22)])
+def test_compact_separator_overhang_preserves_the_separator(text,start,end):
+    wrong=Finding('IP_ADDRESS',start-1,end,.6)
+    values=recognizer([wrong]).analyze(text,['IP_ADDRESS'])
+    assert [(v.start,v.end) for v in values]==[(start,len(text))]
+    assert text[:values[0].start].endswith(':')
+
+@pytest.mark.parametrize('text,start,end', [('IPv6::::1',4,9),('word:::1',4,8),('Host:fe80::1%eth0',4,16)])
+def test_unverified_or_scoped_overlap_is_not_suppressed(text,start,end):
+    old=Finding('IP_ADDRESS',start,end,.8)
+    assert old in recognizer([old]).analyze(text,['IP_ADDRESS'])
+
+def test_wider_candidate_and_other_entity_are_preserved():
+    text='IPv6:::1';wide=Finding('IP_ADDRESS',0,len(text),.9)
+    other=Finding('PERSON',4,len(text),.95)
+    values=recognizer([wide,other]).analyze(text,['IP_ADDRESS'])
+    assert wide in values and other in values
+    assert wide.score==.9 and other.score==.95
+
+def test_canonical_score_is_retained_when_separator_duplicate_is_removed():
+    text='IPv6:::1';full=Finding('IP_ADDRESS',5,8,.85)
+    duplicate=Finding('IP_ADDRESS',4,8,.6)
+    assert recognizer([full,duplicate]).analyze(text,['IP_ADDRESS'])==[full]
+
+def test_two_labelled_addresses_preserve_unrelated_findings():
+    text='IPv6:::1 addr:::ffff:192.0.2.42';spans=m.complete_ipv6_spans(text)
+    old=[Finding('IP_ADDRESS',a-1,b,.6) for a,b in spans]
+    keep=Finding('PERSON',0,4,.9)
+    result=recognizer([*old,keep]).analyze(text,['IP_ADDRESS'])
+    assert keep in result
+    assert sorted((v.start,v.end) for v in result if v.entity_type=='IP_ADDRESS')==spans
+
+
+def test_separator_candidate_extending_beyond_the_valid_value_is_preserved():
+    text='IPv6:::1 tail';old=Finding('IP_ADDRESS',4,len(text),.9)
+    assert old in recognizer([old]).analyze(text,['IP_ADDRESS'])
+
+def test_more_than_one_outside_character_is_not_removed():
+    text='IPv6:::1';old=Finding('IP_ADDRESS',3,6,.9)
+    assert old in recognizer([old]).analyze(text,['IP_ADDRESS'])

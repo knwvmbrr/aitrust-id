@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-08T01:18:57.345268+00:00",
-  "active_increment": "Native Share developer software verified and published; 72 open full requirements; target remains 60 with all owner, physical-device and independent gates retained.",
+  "updated": "2026-11-08T03:47:48.086281+00:00",
+  "active_increment": "PII_REDACTED separator correction measured on pinned Mac engine; Linux verification and independent recognition gates remain open. App Store preparation is separate. Target: 60 open full requirements; current count: 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -776,13 +776,13 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/native-share-repair-plan.md",
+    "latest_increment": "docs/pii-separator-correction-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 12,
-    "publication_pending": false,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
@@ -1093,7 +1093,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-08T01:18:57.345268+00:00",
+  "updated_at": "2026-11-08T03:47:48.086281+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2926,7 +2926,22 @@
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
     "phone_release_offered": false,
-    "publication_pending": false,
+    "publication_pending": true,
     "previous_publication": "runs/2026-11-07-final-live-publication.json"
+  },
+  "pii_separator_correction": {
+    "status": "development_measured_pending_linux_integration",
+    "evidence": "runs/2026-11-08-pii-separator-mac-development.json",
+    "privacy_or_accuracy_release_approved": false,
+    "full_requirements_closed": []
+  },
+  "app_store_preparation": {
+    "registered_bundle_id": "com.aitrustid.app",
+    "device_archive_evidence": "runs/2026-11-08-ios-archive-readiness.json",
+    "archive_signed": false,
+    "store_bundle_configured": false,
+    "app_store_record_created": false,
+    "uploaded": false,
+    "released": false
   }
 }

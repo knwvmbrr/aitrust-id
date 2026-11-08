@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-11-08T03:47:48.086281+00:00",
+  "pass": true,
+  "meaning": "The existing developer prototype compiled into an unsigned physical-iOS device archive; this is not a distributable store build.",
+  "archive_built": true,
+  "archive_signed": false,
+  "archive_bundle_id": "com.aitrustid.personal.preview",
+  "registered_store_bundle_id": "com.aitrustid.app",
+  "store_bundle_configured": false,
+  "app_store_record_created": false,
+  "uploaded_to_apple": false,
+  "phone_release_offered": false,
+  "physical_device_tested": false,
+  "independent_accuracy_approved": false,
+  "sources": {
+    "scripts/verify-ios-share.py": "e2262ed203b5994446e384cffd2106407168b8778b1ce80707d5a825f0830e52",
+    "scripts/build-ios-project.py": "f4811042e318524ccdfac150df82bf8ad25fb6300d523f77ddb4cce625231149",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "scripts/native_bundle.py": "362cc16b7a541efc399f090f6ec8888b9ece0606798ed90202611554bb3018d3",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "mobile/ios/Tests/UIFlows.swift": "3b389a4ce2f0d30cc25e0483a59f27de3e43ec5886167822a473b5fa2b65a28b",
+    "mobile/ios/Web/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+    "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+    "mobile/ios/Source/Assets.swift": "624106664544cb5282a8964b3112e6acda5eaff4d6b32cb6e227f23d3c03c6ea",
+    "mobile/ios/Source/CheckerController.swift": "05f4867dbe43eec8206e02ab445fa000593d70d3e229d00da2f58b02a92f0281",
+    "mobile/ios/Source/ShareController.swift": "2318d849221df78742571c556b0fb3c62e01f9ab10f8e2301d3460ed23fbd8a4",
+    "mobile/ios/Source/SharedText.swift": "f9d790cb79b331c90922dae58891060f3b6ed0f782605981f3b0306c5b4c732c"
+  }
+}

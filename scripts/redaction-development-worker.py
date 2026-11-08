@@ -9,18 +9,27 @@ def hashes():return {k:hashlib.sha256(p.read_bytes()).hexdigest() for k,p in nam
 if hashes()!=expected:raise ValueError('Synthetic source identity differs')
 sys.path.insert(0,'/app');import app
 if app.REDACTOR_IDENTITY['configuration']['sources']!=expected:raise ValueError('Synthetic redactor identity differs')
-output=[]
-original_operate=app.anonymizer._operate
-applied=[]
-def observe_operation(*args,**kwargs):
- global applied
- applied=[{'entity':r.entity_type,'start':r.start,'end':r.end} for r in kwargs['pii_entities']]
- return original_operate(*args,**kwargs)
-app.anonymizer._operate=observe_operation
-for row in cases['rows']:
- findings=app.analyzer.analyze(text=row['text'],language='en',score_threshold=0.0)
- redacted=app.anonymizer.anonymize(text=row['text'],analyzer_results=findings)
- output.append({'id':row['id'],'predicted':[{'entity':r.entity_type,'start':r.start,'end':r.end} for r in findings],
-  'applied':applied,'redaction_changed':redacted.text!=row['text'],'expected_literal_values_still_present':sum(row['text'][r['start']:r['end']] in redacted.text for r in row['expected'])})
+def observe_cases(app,rows):
+ output=[]
+ original_operate=app.anonymizer._operate
+ applied=[]
+ def observe_operation(*args,**kwargs):
+  nonlocal applied
+  applied=[{'entity':r.entity_type,'start':r.start,'end':r.end} for r in kwargs['pii_entities']]
+  return original_operate(*args,**kwargs)
+ app.anonymizer._operate=observe_operation
+ try:
+  for row in rows:
+   findings=app.analyzer.analyze(text=row['text'],language='en',score_threshold=0.0)
+   # Presidio may mutate these objects while merging anonymization conflicts.
+   predicted=[{'entity':r.entity_type,'start':r.start,'end':r.end} for r in findings]
+   applied=[]
+   redacted=app.anonymizer.anonymize(text=row['text'],analyzer_results=findings)
+   output.append({'id':row['id'],'predicted':predicted,
+    'applied':applied,'redaction_changed':redacted.text!=row['text'],'expected_literal_values_still_present':sum(row['text'][r['start']:r['end']] in redacted.text for r in row['expected'])})
+ finally:
+  app.anonymizer._operate=original_operate
+ return output
+output=observe_cases(app,cases['rows'])
 if hashes()!=expected:raise ValueError('Synthetic source identity differs')
 print(json.dumps({'captured_at':datetime.now(timezone.utc).isoformat(),'pass':True,'kind':'synthetic_english_engine_observations','rows':output,'redactor_identity':app.REDACTOR_IDENTITY,'sources':expected,'fixture_sha256':hashlib.sha256(json.dumps(cases,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest(),'source_unchanged':True,'independent_accuracy_evidence':False,'real_user_data':False,'production_services_modified':False}))

@@ -1,0 +1,63 @@
+name: redaction-development
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'services/anonymizer/**'
+      - 'protocol/replay_identity.py'
+      - 'scripts/redaction-development-worker.py'
+      - 'scripts/measure-redaction-development.py'
+      - 'tools/redaction_observations.py'
+      - 'eval/fixtures/pii-*.json'
+      - 'tests/test_complete_ipv6.py'
+      - 'tests/test_redaction_worker_observations.py'
+      - '.github/workflows/redaction-development.yml'
+permissions:
+  contents: read
+jobs:
+  fixed-cohorts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install pinned diagnostic dependencies
+        run: python -m pip install --require-hashes -r eval/requirements.lock
+      - name: Build the exact existing redactor
+        run: docker build -f services/anonymizer/Dockerfile -t aitrust-redaction-development .
+      - name: Start a nonroot isolated synthetic engine
+        run: |
+          docker run -d --name aitrust-staging_anonymizer_1 \
+            --label com.docker.compose.project=aitrust-staging \
+            --network none --read-only --user 10001:10001 --cap-drop ALL \
+            --security-opt no-new-privileges --pids-limit 96 --memory 768m \
+            --tmpfs /tmp:rw,noexec,nosuid,size=32m aitrust-redaction-development
+          python - <<'PYREADY'
+          import subprocess,time
+          for attempt in range(45):
+              result=subprocess.run(['docker','exec','aitrust-staging_anonymizer_1','python','healthcheck.py'],capture_output=True,timeout=10)
+              if result.returncode==0:break
+              time.sleep(1)
+          else:raise SystemExit('The isolated synthetic redactor did not become healthy')
+          PYREADY
+      - name: Measure the unchanged fixed English and compact cohorts
+        run: |
+          python scripts/measure-redaction-development.py --engine docker --project aitrust-staging --profile english --output output/verification/redaction-english.json
+          python scripts/measure-redaction-development.py --engine docker --project aitrust-staging --profile compact --output output/verification/redaction-compact.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: redaction-development-observations
+          path: |
+            output/verification/redaction-english.json
+            output/verification/redaction-compact.json
+          retention-days: 7
+      - name: Remove only this workflow's disposable synthetic engine
+        if: always()
+        run: |
+          if docker inspect aitrust-staging_anonymizer_1 >/dev/null 2>&1; then
+            test "$(docker inspect --format '{{ index .Config.Labels "com.docker.compose.project" }}' aitrust-staging_anonymizer_1)" = aitrust-staging
+            docker rm -f aitrust-staging_anonymizer_1
+          fi

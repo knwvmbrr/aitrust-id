@@ -48,9 +48,21 @@ class CompleteIPv6Recognizer(IpRecognizer):
         original=super().analyze(text,entities,nlp_artifacts)
         if 'IP_ADDRESS' not in entities:return original
         full=complete_ipv6_spans(text)
-        # Keep upstream IPv4/scoped behavior; replace only truncated candidates
-        # wholly inside an independently parsed complete unscoped IPv6 token.
-        kept=[r for r in original if not any(start<=r.start and r.end<=end and (start,end)!=(r.start,r.end) for start,end in full)]
+        # Keep upstream IPv4/scoped behavior and all non-IP findings. A known
+        # compact label can make upstream include its separator in the address:
+        # IPv6:::1 has the value ::1, not :::1. Replace that exact overhang only.
+        labelled={(m.start('value'),m.start('value')+len(m['value'].rstrip('.')))
+                  for m in IPV6_LABEL_TOKEN.finditer(text)}
+        def replaced(result):
+            if result.entity_type!='IP_ADDRESS':return False
+            for start,end in full:
+                if start<=result.start and result.end<=end and (start,end)!=(result.start,result.end):
+                    return True
+                if ((start,end) in labelled and result.start==start-1
+                        and start<result.end<=end and text[result.start]==':'):
+                    return True
+            return False
+        kept=[r for r in original if not replaced(r)]
         existing={(r.start,r.end) for r in kept}
         return kept+[RecognizerResult('IP_ADDRESS',start,end,0.6) for start,end in full if (start,end) not in existing]
 analyzer.registry.remove_recognizer('IpRecognizer')

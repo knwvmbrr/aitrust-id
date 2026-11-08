@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-054024-ios-distribution-readiness-documentation-a6fc84a8
+
+Recorded 2026-11-08T05:40:24.062432+00:00 · Contributor: Codex · change
+
+- **Changed.** Document the registered app identifier, actual unsigned device archive and remaining store distribution work using current Apple guidance.
+- **Evidence.** The store route has a concrete reviewed sequence and actual compilation evidence; no App Store or phone-release claim is made. [Change record](./runs/changes/2026-11-08-054024-ios-distribution-readiness-documentation-a6fc84a8.json).
+- **Not claimed.** Signing, store record creation, artwork, in-app privacy, physical and human acceptance, per-tag validation and Apple review remain required. No account details, private keys or other-project data are published.
+
+
+### 2026-11-08-034748-pii-separator-candidate-and-store-readiness-e9d119f5
+
+Recorded 2026-11-08T03:47:48.203615+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct narrow IP field-separator overhangs, snapshot recognition before the anonymizer mutates findings, and add isolated Linux fixed-cohort verification. Record unsigned device compilation and the separate registered store bundle ID.
+- **Evidence.** 98 focused cases pass. Actual pinned Mac engine checks preserve all six compact identifiers while removing two unwanted separator masks; remaining false positives are retained. The existing iOS prototype builds a device archive. [Change record](./runs/changes/2026-11-08-034748-pii-separator-candidate-and-store-readiness-e9d119f5.json).
+- **Not claimed.** Linux and current chart integration are pending; this is a development candidate. No signed archive, App Store record, upload, physical-phone, independent accuracy or full requirement closure. Counts remain 130 complete and 72 open.
+
+
 ### 2026-11-08-011857-native-share-live-publication-537d5c98
 
 Recorded 2026-11-08T01:18:57.391210+00:00 · Contributor: Codex · change
