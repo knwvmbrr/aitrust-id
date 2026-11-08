@@ -10,7 +10,7 @@ final class UIFlows: XCTestCase {
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 120))
         app.terminate()
     }
-    override func setUpWithError() throws { continueAfterFailure = false; executionTimeAllowance = 60 }
+    override func setUpWithError() throws { continueAfterFailure = false; executionTimeAllowance = 120 }
     private func assertEmpty(_ input: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
         XCTAssertTrue(input.exists, file: file, line: line)
         // UIKit may omit the accessibility value for an empty Share text view.

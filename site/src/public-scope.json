@@ -13401,7 +13401,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-07T21:58:21.150655+00:00",
+        "audited_at": "2026-11-07T23:23:36.182503+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -13437,7 +13437,9 @@
           "mobile/ios/Tests/UIFlows.swift",
           "runs/2026-11-07-native-share-reviewed-workflow.json",
           "runs/2026-11-07-native-share-current-workflow.json",
-          "runs/2026-11-07-native-share-bootstrap-workflow.json"
+          "runs/2026-11-07-native-share-bootstrap-workflow.json",
+          "runs/2026-11-07-native-share-bounded-workflow.json",
+          "runs/2026-11-07-native-automation-budget.json"
         ],
         "evidence_scope": "Five actual current-source UI workflows passed on a newly created iPhone 14 Plus simulator running iOS 26.2, Xcode/SDK 27.2; source identities remained unchanged and the simulator was removed. Standalone PS, editing, native selected-text handoff, explicit checks, cancel/clear/repeat, inline evidence and background clearing are demonstrated using invented text. This is not physical-device, human accessibility, arbitrary share-source, independent accuracy or signed phone release acceptance.",
         "required_acceptance": [

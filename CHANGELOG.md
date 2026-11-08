@@ -1,6 +1,26 @@
 # Changelog
 
+## Unreleased — 2026-11-08
+
+### 2026-11-08-004447-native-bounded-current-state-3a2c4e4f
+
+Recorded 2026-11-08T00:44:47.230695+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind current native source, public scope projection, website revalidation and route inventory to the freshly executed bounded workflow.
+- **Evidence.** Current-source native workflow and website checks pass; all 202 scope records remain preserved with 130 complete and 72 open. [Change record](./runs/changes/2026-11-08-004447-native-bounded-current-state-3a2c4e4f.json).
+- **Not claimed.** No independent accuracy, physical-phone, human accessibility, phone latency or full requirement completion claimed. The hosted rerun remains pending.
+
+
 ## Unreleased — 2026-11-07
+
+### 2026-11-07-232348-native-bounded-automation-32faa000
+
+Recorded 2026-11-07T23:23:48.415135+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the native workflow watchdog after an actual hosted timeout; retain the five original workflow assertions and record a fresh current-source simulator run.
+- **Evidence.** Five fresh local UI workflows pass, owned simulator cleanup succeeds, and the exact current native bundle is bound to the executed source. The previous hosted failure is preserved explicitly. [Change record](./runs/changes/2026-11-07-232348-native-bounded-automation-32faa000.json).
+- **Not claimed.** No full requirement closure, physical-phone acceptance, independent tag accuracy, accepted phone latency budget or installable phone release. Hosted repair pass is not inferred from the failed run.
+
 
 ### 2026-11-07-230039-native-bootstrap-current-state-f0bc2e41
 

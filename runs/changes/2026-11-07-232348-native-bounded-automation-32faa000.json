@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-232348-native-bounded-automation-32faa000",
+  "recorded_at": "2026-11-07T23:23:48.415135+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "976cf7031e23f302dd99cccaff7742e34ac77962",
+  "changed": "Correct the native workflow watchdog after an actual hosted timeout; retain the five original workflow assertions and record a fresh current-source simulator run.",
+  "proves": "Five fresh local UI workflows pass, owned simulator cleanup succeeds, and the exact current native bundle is bound to the executed source. The previous hosted failure is preserved explicitly.",
+  "limits": "No full requirement closure, physical-phone acceptance, independent tag accuracy, accepted phone latency budget or installable phone release. Hosted repair pass is not inferred from the failed run.",
+  "scope_ids": [
+    "N-013",
+    "N-012",
+    "F-142"
+  ],
+  "files": {
+    "docs/native-share-developer.md": "6d4eaeafb51c235ce9a1cabafa7d614b92cff197e29bb77e56df10cc75706fce",
+    "docs/native-share-repair-plan.md": "82c0546abddf0bf3a1f57beb4bbd44a3f52994b713dc165f0c7e56dd6bb9c42c",
+    "docs/scope-progress.json": "0ab713a7f523920be64cafa9fcecc3de478020bdae01cfcc0a7685452955f5dd",
+    "docs/scope-progress.md": "d7caddc3e4d12cdad14241059473903a2cd6a7e3ce00925b95de386eb9a47e4e",
+    "mobile/ios/Tests/UIFlows.swift": "3b389a4ce2f0d30cc25e0483a59f27de3e43ec5886167822a473b5fa2b65a28b",
+    "runs/2026-11-07-native-automation-budget.json": "55172912409c582a24b8a607313c22a526aaf58634e44358bfdab178e8ee89b1",
+    "runs/2026-11-07-native-share-bounded-workflow.json": "5b4b38f05df6a390bb343d3ce7138f7f9adaef44980f94f786fc19cc583f0607",
+    "scripts/verify-ios-share.py": "e2262ed203b5994446e384cffd2106407168b8778b1ce80707d5a825f0830e52",
+    "scripts/verify-native-share-evidence.py": "4da84edae9fc538edd836dcb87ece27b192f3935fe6bfdda76de8aeae1464953",
+    "scripts/verify-route-boundaries.py": "cb55a6ef10ef92bf3966f174a2350a23b10a031acbebef30123bb293d1c13c78",
+    "site/public/reference/native-share-developer.md": "6d4eaeafb51c235ce9a1cabafa7d614b92cff197e29bb77e56df10cc75706fce",
+    "site/public/reference/native-share-workflow.json": "5b4b38f05df6a390bb343d3ce7138f7f9adaef44980f94f786fc19cc583f0607",
+    "site/public/reference/public-scope.json": "c0d8cf0beaa1416af63e7fa5fd065ff82de0427018041dcc20d18650bccb3615",
+    "site/scripts/prepare.mjs": "f999512c1a7d257031aae0fe5e0f08f464bb65cc3384a2629c6af055b30d31d3",
+    "site/src/public-scope.json": "c0d8cf0beaa1416af63e7fa5fd065ff82de0427018041dcc20d18650bccb3615",
+    "site/src/scope-manifest.json": "7a44e7dcc5f57b1346f3a7773c8999a879604181147e0b6e0b152bc20f6d5e4c",
+    "state.json": "48aa6e5a62445488b8dfd3de2567e75f5fd86b7ace36a0c60f94684345a0c2d9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-native-automation-budget.json",
+      "sha256": "55172912409c582a24b8a607313c22a526aaf58634e44358bfdab178e8ee89b1"
+    },
+    {
+      "path": "runs/2026-11-07-native-share-bounded-workflow.json",
+      "sha256": "5b4b38f05df6a390bb343d3ce7138f7f9adaef44980f94f786fc19cc583f0607"
+    }
+  ],
+  "checks": []
+}

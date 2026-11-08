@@ -141,7 +141,7 @@ def main():
         command([*build, 'build-for-testing', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
         stage = 'ui_workflows'
         command([*build, '-resultBundlePath', str(output / 'workflow.xcresult'), '-test-timeouts-enabled', 'YES',
-                 '-default-test-execution-time-allowance', '60', '-maximum-test-execution-time-allowance', '90',
+                 '-default-test-execution-time-allowance', '120', '-maximum-test-execution-time-allowance', '150',
                  'test-without-building', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
         stage = 'result'
         measured = json.loads(command(['xcrun', 'xcresulttool', 'get', 'test-results', 'summary',

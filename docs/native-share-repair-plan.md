@@ -74,3 +74,20 @@ an empty app and no tag check. Keep all five workflow assertions, per-case limit
 and the producer's whole-UI-phase deadline. A failed bootstrap must fail the run,
 not skip a case or count as successful tag validation. Record this instrumentation
 setup separately from device/checker startup performance.
+
+## Hosted workflow timer correction
+
+The Xcode 27.1 / iOS 27.2 hosted run at reviewed head 976cf70 passed
+background clearing, edit invalidation and the standalone check. Its native
+Share case reached the expected result and completed its assertions at 75
+seconds, after the whole-case 60-second watchdog had already declared failure.
+The resulting XCTest restart consumed the remaining whole-run budget and
+interrupted the repeat-share case. This is retained as a failed run.
+
+Use a 120-second whole-case allowance and 150-second Xcode ceiling. Preserve
+all five workflows, every content/privacy assertion and all existing per-action
+waits. Keep the overall UI phase bounded at 600 seconds and require exact
+five-pass / zero-failure / zero-skip acceptance and owned-device cleanup. This
+is a cloud automation allowance, not an accepted phone latency budget. A fresh
+local and hosted run must establish whether the correction works; no passing
+hosted evidence is inferred from its completed assertions.

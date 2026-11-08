@@ -32,7 +32,10 @@ rejects an existing output path or any output inside a Git checkout. Logs,
 generated code, the Xcode result bundle and `proof.json` stay in the private
 output directory. They use invented examples only. A boot, timeout, skipped case,
 source change, failed workflow or cleanup failure cannot produce a passing proof.
-Per-test deadlines prevent an event-synthesis stall from consuming half an hour.
+Each workflow has a 120-second automation allowance (150-second Xcode ceiling);
+the entire UI phase remains bounded at 600 seconds. Per-action waits and all
+five required workflows are unchanged. These are development-runner limits,
+not measured or accepted phone performance claims.
 
 For source inspection alone, run:
 
