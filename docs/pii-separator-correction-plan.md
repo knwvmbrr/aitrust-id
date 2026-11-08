@@ -45,3 +45,11 @@ Replace only an IP candidate that crosses the single known label delimiter and
 ends inside the independently validated full value. Preserve candidates reaching
 beyond that value and every other entity category. Test the real mutation and
 no-operation/failure paths, then rerun both unchanged fixed cohorts.
+
+## First Linux runner correction
+
+The first run built and started the isolated engine, but its host diagnostic
+could not import Pydantic. It had installed only the evaluation lock. Install
+the existing gateway lock, as the other protocol consumers already do, and
+exercise the diagnostic --help import path before building. Keep the original
+failed run and obtain new actual measurements; no Linux result is inferred.

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-081311-pii-ci-consumer-dependency-887b3b34",
+  "recorded_at": "2026-11-08T08:13:11.583221+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4da030d85078f79f572d70f1557e3017bc28b7b3",
+  "changed": "Install the existing hashed contract dependencies for the Linux diagnostic and check its import path before the image build.",
+  "proves": "The first hosted failure is recorded as unavailable before any measurement; its missing Pydantic consumer dependency is identified.",
+  "limits": "The corrected hosted execution remains pending. No passing Linux cohort, accuracy claim or full requirement closure is inferred.",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    ".github/workflows/redaction-development.yml": "4d9a2e7494a48c74a80094f61bcf9023d11d8e11b872c3805ce9eec9a63bc34d",
+    "docs/pii-separator-correction-plan.md": "72b1193b6ce9bb8af884eab005f4c550781b8528ea8ade21220fd8273e725303",
+    "runs/2026-11-08-pii-ci-consumer-dependency.json": "43881a71975316574fe78c4030cb81dffc7fc43da581fe39a8987c6b2ef6dee8",
+    "state.json": "aefa87a0faf81a5d8be35a56397fe27df1d06e4215bf9f07f123939164e01f59"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-pii-ci-consumer-dependency.json",
+      "sha256": "43881a71975316574fe78c4030cb81dffc7fc43da581fe39a8987c6b2ef6dee8"
+    }
+  ],
+  "checks": []
+}

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-08T03:47:48.086281+00:00",
+  "updated": "2026-11-08T08:13:11.542104+00:00",
   "active_increment": "PII_REDACTED separator correction measured on pinned Mac engine; Linux verification and independent recognition gates remain open. App Store preparation is separate. Target: 60 open full requirements; current count: 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1093,7 +1093,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-08T03:47:48.086281+00:00",
+  "updated_at": "2026-11-08T08:13:11.542104+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2933,7 +2933,8 @@
     "status": "development_measured_pending_linux_integration",
     "evidence": "runs/2026-11-08-pii-separator-mac-development.json",
     "privacy_or_accuracy_release_approved": false,
-    "full_requirements_closed": []
+    "full_requirements_closed": [],
+    "runner_dependency_repair": "runs/2026-11-08-pii-ci-consumer-dependency.json"
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",

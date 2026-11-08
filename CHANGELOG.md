@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-081311-pii-ci-consumer-dependency-887b3b34
+
+Recorded 2026-11-08T08:13:11.583221+00:00 · Contributor: Codex · change
+
+- **Changed.** Install the existing hashed contract dependencies for the Linux diagnostic and check its import path before the image build.
+- **Evidence.** The first hosted failure is recorded as unavailable before any measurement; its missing Pydantic consumer dependency is identified. [Change record](./runs/changes/2026-11-08-081311-pii-ci-consumer-dependency-887b3b34.json).
+- **Not claimed.** The corrected hosted execution remains pending. No passing Linux cohort, accuracy claim or full requirement closure is inferred.
+
+
 ### 2026-11-08-054024-ios-distribution-readiness-documentation-a6fc84a8
 
 Recorded 2026-11-08T05:40:24.062432+00:00 · Contributor: Codex · change

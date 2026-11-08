@@ -24,7 +24,11 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Install pinned diagnostic dependencies
-        run: python -m pip install --require-hashes -r eval/requirements.lock
+        run: |
+          python -m pip install --require-hashes -r services/gateway/requirements.lock
+          python -m pip install --require-hashes -r eval/requirements.lock
+      - name: Verify the diagnostic consumer loads before building
+        run: python scripts/measure-redaction-development.py --help
       - name: Build the exact existing redactor
         run: docker build -f services/anonymizer/Dockerfile -t aitrust-redaction-development .
       - name: Start a nonroot isolated synthetic engine

@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-11-08T08:13:11.542104+00:00",
+  "pass": false,
+  "kind": "development_runner_dependency_failure",
+  "run_id": 42461673764,
+  "source_commit": "4da030d85078f79f572d70f1557e3017bc28b7b3",
+  "error_signature": "ModuleNotFoundError: No module named 'pydantic'",
+  "diagnosis": "The diagnostic imports RedactorIdentity from the existing Pydantic contract; the runner installed only the evaluation dependencies.",
+  "measurements_obtained": false,
+  "correction": "Install the existing hash-locked gateway and evaluation dependencies; exercise --help before image build.",
+  "rerun_required": true,
+  "independent_accuracy_evidence": false,
+  "full_requirements_closed": []
+}
