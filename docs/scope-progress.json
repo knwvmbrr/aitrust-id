@@ -8511,14 +8511,18 @@
       "id": "N-013",
       "kind": "requirement",
       "title": "Native iPhone sharing into a tag check",
-      "percent_complete": 20,
+      "percent_complete": 80,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-11T23:05:16.789989+00:00",
+      "audited_at": "2026-11-07T23:23:36.182503+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00"
+        "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
+        "Codex \u2014 selected-text transport, generation cancellation, scoped controls and inline-evidence lifecycle repair; actual fresh-simulator workflow, 2026-11-07T15:35:42.008478+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8526,8 +8530,8 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Repair selected-text Share transport and clear/lifecycle failures, pass the actual native workflow, then perform physical iPhone install/memory/VoiceOver and removal acceptance. Exact engine parity was observed; later fresh-simulator boot attempts were unavailable. Do not infer working Share from engine or packaging tests.",
-      "next_owner": "Codex",
+      "next_fix": "Complete physical iPhone 14 Plus installation with actual iOS version, per-source Share compatibility, memory/lifecycle, VoiceOver, offline/update/removal and outside-user acceptance. Retain the original iPhone/Android acceptance obligations. Resolve the iOS-27-deprecated typed-provider compatibility path before claiming future SDK support.",
+      "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
         "docs/native-share-plan.md",
@@ -8539,14 +8543,27 @@
         "runs/2026-10-11-native-share-unavailable.json",
         "runs/2026-10-11-native-runtime-attempt-4.json",
         "runs/2026-10-11-native-runtime-attempt-5.json",
-        "runs/2026-10-12-native-python-private-candidate.json"
+        "runs/2026-10-12-native-python-private-candidate.json",
+        "docs/native-share-repair-plan.md",
+        "docs/native-share-developer.md",
+        "runs/2026-11-07-native-share-progress-baseline.json",
+        "runs/2026-11-07-native-share-workflow.json",
+        "runs/2026-11-07-native-share-text-controls.json",
+        "scripts/verify-ios-share.py",
+        "scripts/verify-native-share-evidence.py",
+        "mobile/ios/Tests/UIFlows.swift",
+        "runs/2026-11-07-native-share-reviewed-workflow.json",
+        "runs/2026-11-07-native-share-current-workflow.json",
+        "runs/2026-11-07-native-share-bootstrap-workflow.json",
+        "runs/2026-11-07-native-share-bounded-workflow.json",
+        "runs/2026-11-07-native-automation-budget.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Five actual current-source UI workflows passed on a newly created iPhone 14 Plus simulator running iOS 26.2, Xcode/SDK 27.2; source identities remained unchanged and the simulator was removed. Standalone PS, editing, native selected-text handoff, explicit checks, cancel/clear/repeat, inline evidence and background clearing are demonstrated using invented text. This is not physical-device, human accessibility, arbitrary share-source, independent accuracy or signed phone release acceptance.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
       "queue": "open",
-      "native_candidate_limit": "Private embedded-Python candidate matched 137 original full JSON results; the next native bridge/audit control attempt timed out during fresh owned simulator boot and was removed. Native Share remains unavailable."
+      "native_candidate_limit": "Current developer Share software passes its five UI workflows on the selected simulator. The original failed prototype and earlier boot failures remain historical evidence. The compatibility API is deprecated in iOS 27; physical-phone and outside-user acceptance remain open."
     },
     {
       "id": "N-014",

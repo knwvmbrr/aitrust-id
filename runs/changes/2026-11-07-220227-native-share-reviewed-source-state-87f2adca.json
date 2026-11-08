@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-220227-native-share-reviewed-source-state-87f2adca",
+  "recorded_at": "2026-11-07T22:02:27.222015+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2f82e8bfdbbd354723073ede08280e3f2a094a3c",
+  "changed": "Retain the passing reviewed-source receipts and bind the updated public native proof to the reviewed route inventory.",
+  "proves": "All five current engineering receipts and the actual reviewed native workflow pass after the asset-binding repair.",
+  "limits": "The hosted native workflow still needs a successful run; no physical, human or independent release gate is waived.",
+  "scope_ids": [
+    "N-013",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "3324c0fd5fe6ab48b1fabf5359ce76068bf944e44cff30752343adf2c52817f7",
+    "docs/scope-progress.json": "0e80c2a3b374f6f88ba851c42631368caca49df45ff449657f53756d48ad7745",
+    "docs/scope-progress.md": "8433319ccf798305a51866ed95b63b868d46e0ec7c5cb25e0f0364a5dfe79054",
+    "eval/revalidation.json": "c509b36030917345dc03a40a0b472c16baee78942b53f560a68d4ac6fe4d715e",
+    "eval/route-boundaries.json": "30632677f6479e54b374c181185832d64f61c88782f8ca2e26b2d0dc0cc367c0",
+    "runs/2026-11-07-native-share-asset-review.json": "0a9216965de6c1824eb38b2acc2e21e26f0bf978a33802a42011e24d51f5d24d",
+    "runs/2026-11-07-native-share-reviewed-PII_REDACTED.json": "4a1ffa403517bbe64293f57965354c42bbe96afc15e6b925d5ed6cc101c5c528",
+    "runs/2026-11-07-native-share-reviewed-PS.json": "23599becd2ce58655653e29ba25877d661f1d2f943d0f5ebd658627a7b702587",
+    "runs/2026-11-07-native-share-reviewed-extension.json": "4629687975b2c19873c956df31880cd0e8e11a5205c40a84168f2fb10571fb8f",
+    "runs/2026-11-07-native-share-reviewed-protocol.json": "adac6d70cc9c0e2b9e87438da03c72879a5e1e2cbaf6300795e1e582a40f0e95",
+    "runs/2026-11-07-native-share-reviewed-website.json": "d84b9acacae99251131e1378736e628615c3a6876026c34bf925d9443a344b8d",
+    "runs/2026-11-07-native-share-reviewed-workflow.json": "7c569cb9fd81acdda959a5ffa94a3d2177b7dcc3b88989f9d73fa92160fe259a",
+    "scripts/verify-ios-share.py": "aebd973ceac4862e9f2faa8987f761800d9e2da5c02538cd6a0ceb5b8a42a202",
+    "scripts/verify-native-share-evidence.py": "d6ac4f7be9284e790d62b4cbd179c6f5a4f97e8a91d3b1ecd67f53a94f3ea916",
+    "scripts/verify-route-boundaries.py": "d054b563123f2e89e97edf8a4bf035b3eda993f2597fcc84b4121592891864ea",
+    "site/public/reference/native-share-workflow.json": "7c569cb9fd81acdda959a5ffa94a3d2177b7dcc3b88989f9d73fa92160fe259a",
+    "site/public/reference/public-scope.json": "1c18c3df562abbdaaf38e4b05970f615a04499a0b31f03768b32211ed66f92e8",
+    "site/scripts/prepare.mjs": "511607b52d04ee55bbf5093a9ad4ceabb83c754425e87285af2c04ee7da4ad80",
+    "site/src/public-scope.json": "1c18c3df562abbdaaf38e4b05970f615a04499a0b31f03768b32211ed66f92e8",
+    "site/src/scope-manifest.json": "512045c99e689eaa7af0f0ac599c6e76e7c024cad76fbe0a770e083c14a4f414",
+    "state.json": "726671d0da40549e78f86cc8f0c0019b788747f46ddfc31b6ab11613834a8438",
+    "tests/test_native_share_evidence.py": "c30e1c057470f8b4e4a2c5c177c1b990866d2ef4a48c51fadebac4f9a8ac1bd8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-native-share-asset-review.json",
+      "sha256": "0a9216965de6c1824eb38b2acc2e21e26f0bf978a33802a42011e24d51f5d24d"
+    },
+    {
+      "path": "runs/2026-11-07-native-share-reviewed-website.json",
+      "sha256": "d84b9acacae99251131e1378736e628615c3a6876026c34bf925d9443a344b8d"
+    }
+  ],
+  "checks": []
+}

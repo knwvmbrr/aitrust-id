@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-11-07T23:23:36.182503+00:00",
+  "pass": true,
+  "profile": "native-automation-budget-repair/v1",
+  "failed_hosted_attempt": {
+    "run_id": 42423356473,
+    "source_commit": "976cf7031e23f302dd99cccaff7742e34ac77962",
+    "pass": false,
+    "sdk": "27.1",
+    "runtime": "iOS 27.2",
+    "passed_workflows": 3,
+    "share_assertions_completed_at_seconds": 75,
+    "share_workflow_pass": false,
+    "repeat_workflow_interrupted": true,
+    "owned_simulator_removed": true
+  },
+  "correction": {
+    "workflow_seconds": 120,
+    "xcode_ceiling_seconds": 150,
+    "whole_ui_phase_seconds": 600,
+    "required_workflows": 5,
+    "per_action_waits_changed": false,
+    "accuracy_or_phone_latency_gate_changed": false
+  },
+  "actual_fresh_local_proof": "runs/2026-11-07-native-share-bounded-workflow.json",
+  "local_workflows_passed": 5,
+  "hosted_repair_pass_not_yet_claimed": true,
+  "full_requirement_closures": [],
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "physical_device": false,
+  "independent_accuracy": false,
+  "phone_release_offered": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-225637-native-xctest-bootstrap-separation-c037fcd7",
+  "recorded_at": "2026-11-07T22:56:37.966829+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fd56b1c08cd67389cd0b6186d6df2be85157680a",
+  "changed": "Establish the cold XCTest automation session in bounded class setup before timing the five functional workflows.",
+  "proves": "A new actual local run passes all five unchanged functional workflows and confirms simulator cleanup.",
+  "limits": "The earlier hosted 4-of-5 result remains failed. Physical, human, independent accuracy and application-startup gates are unchanged.",
+  "scope_ids": [
+    "N-013",
+    "F-142"
+  ],
+  "files": {
+    "docs/native-share-repair-plan.md": "81a5c4e51e98706439ab34ae42af7a83b1a067f64d91a80718de1e34a6d4a9e2",
+    "docs/scope-progress.json": "6e3a2a44c4709edc564981967ff22e24925216cc795a5da9f6da1d7508b201ad",
+    "docs/scope-progress.md": "e6e4d482015eafb12bc9f0ce8a6dbbadf9ff4049f9a0fd13015db36359d625d6",
+    "mobile/ios/Tests/UIFlows.swift": "08593b6c3d48ebf791ce978c9263296e7da05445585399e35912e1d5baf733e2",
+    "runs/2026-11-07-native-bootstrap-separation.json": "b61feca48753961b6ea1129e5b046c9cb0c1d4e1fe30efbef285e565298b8102",
+    "runs/2026-11-07-native-share-bootstrap-workflow.json": "986da2bd809e23352614f5dcad4a5333423a51638278b9605b86f766fe28d321",
+    "scripts/verify-native-share-evidence.py": "b9a822123e19bcd475f367ca4011b3380dea128dd03ed6d68b33fb8813871f1d",
+    "scripts/verify-route-boundaries.py": "787eb1885985224f70cb131119349ea2074b44a4ea0760f6d4b435e3c1a8f36b",
+    "site/public/reference/native-share-workflow.json": "986da2bd809e23352614f5dcad4a5333423a51638278b9605b86f766fe28d321",
+    "site/public/reference/public-scope.json": "87c8d2e870c71c6932ae9bcd63a3baaed5ba1b4cce8234e0abd7ea0d586b26c0",
+    "site/scripts/prepare.mjs": "ab86ca0b4c488e2a5d1717001bce4f9ee2ee0b7d28e7e7cb53b7233138184573",
+    "site/src/public-scope.json": "87c8d2e870c71c6932ae9bcd63a3baaed5ba1b4cce8234e0abd7ea0d586b26c0",
+    "site/src/scope-manifest.json": "0e95e9d2dcd2e2e816c0c635681b6c49615084671e2e2ba1f70405aca430aaf8",
+    "state.json": "91b49feb5d3812840e470ca1d1787ad90e883d8861a11ded5937ebb72ae43799"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-native-bootstrap-separation.json",
+      "sha256": "b61feca48753961b6ea1129e5b046c9cb0c1d4e1fe30efbef285e565298b8102"
+    },
+    {
+      "path": "runs/2026-11-07-native-share-bootstrap-workflow.json",
+      "sha256": "986da2bd809e23352614f5dcad4a5333423a51638278b9605b86f766fe28d321"
+    }
+  ],
+  "checks": []
+}

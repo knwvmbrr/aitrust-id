@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-11-07T22:56:32.582246+00:00",
+  "pass": true,
+  "kind": "native_xctest_bootstrap_separation",
+  "actual_local_workflow": "runs/2026-11-07-native-share-bootstrap-workflow.json",
+  "functional_workflows_required": 5,
+  "functional_workflows_passed": 5,
+  "class_setup": "Empty app launch establishes XCTest automation; no text or tag check is supplied. Entire UI-phase deadline still applies.",
+  "previous_hosted_result": {
+    "functional_workflows_passed": 4,
+    "functional_workflows_required": 5,
+    "pass": false,
+    "first_case": "Initial automation session exceeded the per-workflow allowance before product assertions.",
+    "cleanup_verified": true
+  },
+  "tag_startup_or_accuracy_gate_changed": false,
+  "physical_device": false,
+  "independent_accuracy": false,
+  "full_requirement_closures": 0,
+  "completed_requirements": 130,
+  "open_requirements": 72
+}

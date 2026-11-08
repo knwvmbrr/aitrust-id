@@ -1118,7 +1118,19 @@
         "runs/2026-11-07-security-channel-status.json",
         "runs/2026-11-07-security-reviewed-acceptance.json",
         "runs/2026-11-07-recovery-cache-reuse-linux.json",
-        "docs/directory-clock-fence-plan.md"
+        "docs/directory-clock-fence-plan.md",
+        "docs/native-share-repair-plan.md",
+        "docs/native-share-developer.md",
+        "scripts/build-ios-project.py",
+        "scripts/verify-ios-share.py",
+        "scripts/verify-native-share-evidence.py",
+        "tests/test_ios_project_package.py",
+        "tests/test_ios_share_verifier.py",
+        "tests/test_native_share_evidence.py",
+        "runs/2026-11-07-native-share-workflow.json",
+        "runs/2026-11-07-native-share-engine.json",
+        "runs/2026-11-07-native-share-reviewed-workflow.json",
+        "runs/*native-share*workflow.json"
       ],
       "commands": [
         [
@@ -1271,6 +1283,19 @@
         [
           "{python}",
           "scripts/verify-host-recovery-evidence.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-native-share-evidence.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_ios_project_package.py",
+          "tests/test_ios_share_verifier.py",
+          "tests/test_native_share_evidence.py",
+          "-q"
         ]
       ]
     }

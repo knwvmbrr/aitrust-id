@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-222835-native-share-current-runner-state-1c558032",
+  "recorded_at": "2026-11-07T22:28:35.681617+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "93a942bd490e9946b4e380e11e1add0158f1b8a1",
+  "changed": "Record current source-bound receipts and the reviewed route inventory after the native runner-phase repair.",
+  "proves": "All five current engineering capabilities and the actual split-phase local native run pass.",
+  "limits": "Hosted Xcode 27 execution is pending; no requirement, phone, human or independent-accuracy gate is bypassed.",
+  "scope_ids": [
+    "N-013",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "1ebac1eee84739b977d53a0d69a7e5e3006b43e2bce194f3ba7058e9dfda5b0a",
+    "docs/native-share-repair-plan.md": "5cf483e50f0024718926bac1adc68d5bf11ab897aec5d65780deb5341d072146",
+    "docs/scope-progress.json": "1f079be9444c428d81a1178e6b7ef5f19d527e19598802d6d8aaf99d30b92857",
+    "docs/scope-progress.md": "484cffab5cb06ac73fc6a0dea61d3f41ab64eccebf110a675a103c9cdefd1bc8",
+    "eval/revalidation.json": "cd656d03db118a23514d18378dce5d2224c7aeb209a7462ff12a400e035e4668",
+    "eval/route-boundaries.json": "274c55685e306eb59a47a68e4cb7a293e4352380989177c36ff74f50fe702848",
+    "runs/2026-11-07-native-share-current-PII_REDACTED.json": "b99f2f74f02a93ea186ed7779da2db0ec8320cfc2caa4e1e87d6e6346d1c46fd",
+    "runs/2026-11-07-native-share-current-PS.json": "7d4378804d19625f5bdb8a3747e4c3945e8c93e540c17d3836febbdfee7ef1d5",
+    "runs/2026-11-07-native-share-current-extension.json": "8382fff842732a9e533ff40b27cb357519456490f8f4560210610596040d9679",
+    "runs/2026-11-07-native-share-current-protocol.json": "27b0b4184eda97d95fdb3c7b35c5a6335acdf1a5fb254ee1745a2ad9064e44e1",
+    "runs/2026-11-07-native-share-current-website.json": "e3851e010cb4d6e15dbf81b7b0c441f8db4d1c226099b4efc37b32dc42998124",
+    "runs/2026-11-07-native-share-current-workflow.json": "8e55be07afa8294dc244596068f70af8e9fb38a47683d0165856b3e288e70a12",
+    "runs/2026-11-07-native-share-runner-repair.json": "15d89661474c555bbf6031ccd79f349a787795ab5b4d9e2bab9a7efda973414b",
+    "scripts/verify-ios-share.py": "d6a99b7f0bb6ab96d0553aa67ff7746cf60d771400fc3916eef1e6091865cb3a",
+    "scripts/verify-native-share-evidence.py": "43d311fe59e3a2317920991ef6b705cfc4aa80e720c7a4dec6bd0715adca7148",
+    "scripts/verify-route-boundaries.py": "5335c58aa32c12c6efea304666a5b79b923758b680fe789d0f84ad9307264c49",
+    "site/public/reference/native-share-workflow.json": "8e55be07afa8294dc244596068f70af8e9fb38a47683d0165856b3e288e70a12",
+    "site/public/reference/public-scope.json": "078ac082cf9a5cfd882d3d9849b21889dc609771d7845dcc7cf322bba61bc5b2",
+    "site/scripts/prepare.mjs": "48df8350581784ffe03fb5cd1b1dd6e0d4a1edbe8099f56966825307d9e86b9c",
+    "site/src/public-scope.json": "078ac082cf9a5cfd882d3d9849b21889dc609771d7845dcc7cf322bba61bc5b2",
+    "site/src/scope-manifest.json": "70311dfbe45104836c97975da31bd1bdd6e41c538b1508842933600e6886cad5",
+    "state.json": "8e43b3055633862f2b16e1e66c04b15566577655c15019d16e5f14b927eac746"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-native-share-runner-repair.json",
+      "sha256": "15d89661474c555bbf6031ccd79f349a787795ab5b4d9e2bab9a7efda973414b"
+    },
+    {
+      "path": "runs/2026-11-07-native-share-current-website.json",
+      "sha256": "e3851e010cb4d6e15dbf81b7b0c441f8db4d1c226099b4efc37b32dc42998124"
+    }
+  ],
+  "checks": []
+}

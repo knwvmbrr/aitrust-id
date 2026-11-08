@@ -99,3 +99,14 @@ F-073 now has its preserved supported-profile acceptance: named private reportin
 ## Directory clock-skew correction — 2026-11-07T00:56:16.927454+00:00
 
 The accepted five-second provider issue-time interval is now covered by recovery and logout-rollover fences. A twelve-second fresh-login wait covers either supported clock direction. Current source passes 61 focused controls and 28 actual provider/database cases, including controlled broker clock lag. This is a repair of F-162, not a new requirement closure: 130 complete / 72 open of 202 remain, with twelve more closures needed for 60.
+
+## Native Share software repair — 2026-11-07T15:35:42.008478+00:00
+
+N-013 advances from 20% to 80% after five current-source UI workflows passed on a
+fresh owned iPhone 14 Plus simulator. The selected handoff now works; inline
+evidence avoids the observed nested-alert lifecycle failure. Cancellation,
+editing, clear/repeat and background clearing execute. The original acceptance
+text is preserved verbatim and physical/VoiceOver/outside-user acceptance stays
+open. No tag release or full requirement closure is credited: 130 complete /
+72 open of 202 remain, twelve full closures short of 60. The typed-provider
+compatibility API is deprecated in iOS 27; see the developer guide and proof.

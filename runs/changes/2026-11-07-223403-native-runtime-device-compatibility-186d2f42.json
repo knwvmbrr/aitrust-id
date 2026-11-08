@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-07-223403-native-runtime-device-compatibility-186d2f42",
+  "recorded_at": "2026-11-07T22:34:03.329559+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7bf43b908e330754ddef9a493d368838b5bac4a0",
+  "changed": "Choose the installed iOS simulator runtime by explicit iPhone 14 Plus support, rather than the newest identifier.",
+  "proves": "Thirteen selection controls pass and real local CoreSimulator metadata chooses the compatible iOS 26.2 runtime. Current app and UI producer bytes remain unchanged.",
+  "limits": "The incompatible hosted run executed no UI workflows and is not counted as a pass; physical and independent accuracy acceptance remain open.",
+  "scope_ids": [
+    "N-013",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "f18a57d1150f82bf9eab46c47ba70d909f366884a09bc96252d1e8627397a6c9",
+    "eval/route-boundaries.json": "73a5041ca37c144f2ad2900742d1b7c140f1f20dcc16b978d84bfc960df1e4a4",
+    "runs/2026-11-07-native-runtime-selection.json": "5118b3a50a6b6ed7928cccdff173c99e163d1d580e23c31b596a1490c3b8da5c",
+    "scripts/select-ios-runtime.py": "c5d0884571738cb715a821910ffc7486931415d95a394eb3817e14344e5a8909",
+    "scripts/verify-route-boundaries.py": "c34e24b7e2273eee96cf0fc66f120254cd9ea908f83f6932d08322162cee771c",
+    "state.json": "2dbb318dafdfa4aecd89f6d3d85ef43ba772e817f19f0bbd8fbd480455ebf396",
+    "tests/test_ios_runtime_selection.py": "3ac2c3a42b5c8fa76a7c7e0eac9972469adb6149284e5cf7815d98e4885d2a0b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-07-native-runtime-selection.json",
+      "sha256": "5118b3a50a6b6ed7928cccdff173c99e163d1d580e23c31b596a1490c3b8da5c"
+    }
+  ],
+  "checks": []
+}

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-07T01:19:21.076318+00:00",
-  "active_increment": "Organization directory software accepted; 73 open requirements; continue toward 60 and skip owner-dependent gates.",
+  "updated": "2026-11-08T00:44:32.295257+00:00",
+  "active_increment": "Native Share developer software verified; 72 open requirements; continue toward 60 while retaining owner, physical-device and independent gates.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -718,7 +718,8 @@
     "latest_emulation_evidence": "runs/2026-10-10-frozen-device-engines.json",
     "normalization_id": "NFC-Unicode-15.0.0/v1",
     "latest_engine_verification": "runs/2026-10-10-context-v6-fixed-device-engines.json",
-    "current_engine_evidence": "runs/2026-10-13-ps-lazy-device-engines.json"
+    "current_engine_evidence": "runs/2026-10-13-ps-lazy-device-engines.json",
+    "native_share_simulator_software_verified": true
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -759,7 +760,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-07T00:56:16.927454+00:00",
+    "audited_at": "2026-11-07T15:39:06.464055+00:00",
     "completed_records": 130,
     "open_records": 72,
     "records_preserved": 202,
@@ -775,20 +776,20 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
-    "latest_increment": "docs/directory-clock-fence-plan.md",
+    "latest_increment": "docs/native-share-repair-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 12,
-    "publication_pending": false,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-07-directory-clock-acceptance.json",
+    "current_target_verification": "runs/2026-11-07-native-share-increment.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
-    "latest_owner_direction_date": "2026-11-06",
+    "latest_owner_direction_date": "2026-11-07",
     "latest_increment_completed_ids": [],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
@@ -1084,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-07-clock-final-PS.json",
-    "PII_REDACTED": "runs/2026-11-07-clock-final-PII_REDACTED.json",
-    "protocol": "runs/2026-11-07-clock-final-protocol.json",
-    "extension": "runs/2026-11-07-clock-final-extension.json",
-    "website": "runs/2026-11-07-clock-final-website.json",
+    "PS": "runs/2026-11-07-native-share-current-PS.json",
+    "PII_REDACTED": "runs/2026-11-07-native-share-current-PII_REDACTED.json",
+    "protocol": "runs/2026-11-07-native-share-current-protocol.json",
+    "extension": "runs/2026-11-07-native-share-current-extension.json",
+    "website": "runs/2026-11-07-native-share-bounded-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-07T01:19:21.076318+00:00",
+  "updated_at": "2026-11-08T00:44:32.295257+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1847,22 +1848,26 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "share_unavailable_engine_observation_and_refusal_tools_only",
-    "architecture": "docs/native-share-plan.md",
-    "compatibility": "runs/2026-10-11-native-bundle-compatibility.json",
-    "physical_device": false,
-    "share_extension_implemented": false,
-    "requirements_closed": 0,
-    "installable_app_offered": false,
-    "current_simulator_boot_passed": false,
-    "engine_observed": "runs/2026-10-11-native-engine-observed.json",
-    "resource_identity": "runs/2026-10-11-native-engine-resource-identity.json",
-    "share_failure": "runs/2026-10-11-native-share-unavailable.json",
-    "source_archive": "docs/experiments/native-share-unreleased.json",
-    "guide": "docs/native-engine-checks.md",
-    "private_python_candidate": "runs/2026-10-12-native-python-private-candidate.json",
-    "latest_provider_diagnostic": "runs/2026-10-13-native-provider-timeout.json",
-    "provider_diagnostic_status": "Owned synthetic simulator app built; UI automation startup timed out; owned simulator removed; Share delivery and tag check not verified; skipped unchanged retry."
+    "status": "developer_share_workflow_passes_physical_acceptance_open",
+    "requirement": "N-013",
+    "percent_complete": 80,
+    "workflow_proof": "runs/2026-11-07-native-share-bounded-workflow.json",
+    "provider_controls": "runs/2026-11-07-native-share-text-controls.json",
+    "guide": "docs/native-share-developer.md",
+    "ui_workflows_passed": 5,
+    "physical_device_verified": false,
+    "human_accessibility_verified": false,
+    "independent_accuracy_verified": false,
+    "phone_release_offered": false,
+    "compatibility_limit": "Typed provider API is deprecated in iOS 27; no future SDK guarantee.",
+    "engine_proof": "runs/2026-11-07-native-share-engine.json",
+    "selected_engine_cases": 137,
+    "increment_evidence": "runs/2026-11-07-native-share-increment.json",
+    "review_repair": "runs/2026-11-07-native-share-asset-review.json",
+    "runner_repair": "runs/2026-11-07-native-share-runner-repair.json",
+    "runtime_selection": "runs/2026-11-07-native-runtime-selection.json",
+    "bootstrap_evidence": "runs/2026-11-07-native-bootstrap-separation.json",
+    "automation_budget_evidence": "runs/2026-11-07-native-automation-budget.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2908,6 +2913,7 @@
     "completed_requirements": 130,
     "open_requirements": 72,
     "independent_tag_accuracy_approved": false,
-    "real_collection_enabled": false
+    "real_collection_enabled": false,
+    "publication_pending": true
   }
 }

@@ -1,6 +1,134 @@
 # Changelog
 
+## Unreleased — 2026-11-08
+
+### 2026-11-08-004447-native-bounded-current-state-3a2c4e4f
+
+Recorded 2026-11-08T00:44:47.230695+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind current native source, public scope projection, website revalidation and route inventory to the freshly executed bounded workflow.
+- **Evidence.** Current-source native workflow and website checks pass; all 202 scope records remain preserved with 130 complete and 72 open. [Change record](./runs/changes/2026-11-08-004447-native-bounded-current-state-3a2c4e4f.json).
+- **Not claimed.** No independent accuracy, physical-phone, human accessibility, phone latency or full requirement completion claimed. The hosted rerun remains pending.
+
+
 ## Unreleased — 2026-11-07
+
+### 2026-11-07-232348-native-bounded-automation-32faa000
+
+Recorded 2026-11-07T23:23:48.415135+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the native workflow watchdog after an actual hosted timeout; retain the five original workflow assertions and record a fresh current-source simulator run.
+- **Evidence.** Five fresh local UI workflows pass, owned simulator cleanup succeeds, and the exact current native bundle is bound to the executed source. The previous hosted failure is preserved explicitly. [Change record](./runs/changes/2026-11-07-232348-native-bounded-automation-32faa000.json).
+- **Not claimed.** No full requirement closure, physical-phone acceptance, independent tag accuracy, accepted phone latency budget or installable phone release. Hosted repair pass is not inferred from the failed run.
+
+
+### 2026-11-07-230039-native-bootstrap-current-state-f0bc2e41
+
+Recorded 2026-11-07T23:00:39.609284+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current website and route-inventory verification for the bounded native bootstrap repair.
+- **Evidence.** All current engineering receipts pass; five real local UI workflows and 80 focused controls execute. [Change record](./runs/changes/2026-11-07-230039-native-bootstrap-current-state-f0bc2e41.json).
+- **Not claimed.** The hosted rerun, physical phone, human accessibility and independent accuracy acceptance remain separate; 72 requirements remain open.
+
+
+### 2026-11-07-225637-native-xctest-bootstrap-separation-c037fcd7
+
+Recorded 2026-11-07T22:56:37.966829+00:00 · Contributor: Codex · change
+
+- **Changed.** Establish the cold XCTest automation session in bounded class setup before timing the five functional workflows.
+- **Evidence.** A new actual local run passes all five unchanged functional workflows and confirms simulator cleanup. [Change record](./runs/changes/2026-11-07-225637-native-xctest-bootstrap-separation-c037fcd7.json).
+- **Not claimed.** The earlier hosted 4-of-5 result remains failed. Physical, human, independent accuracy and application-startup gates are unchanged.
+
+
+### 2026-11-07-223403-native-runtime-device-compatibility-186d2f42
+
+Recorded 2026-11-07T22:34:03.329559+00:00 · Contributor: Codex · change
+
+- **Changed.** Choose the installed iOS simulator runtime by explicit iPhone 14 Plus support, rather than the newest identifier.
+- **Evidence.** Thirteen selection controls pass and real local CoreSimulator metadata chooses the compatible iOS 26.2 runtime. Current app and UI producer bytes remain unchanged. [Change record](./runs/changes/2026-11-07-223403-native-runtime-device-compatibility-186d2f42.json).
+- **Not claimed.** The incompatible hosted run executed no UI workflows and is not counted as a pass; physical and independent accuracy acceptance remain open.
+
+
+### 2026-11-07-222835-native-share-current-runner-state-1c558032
+
+Recorded 2026-11-07T22:28:35.681617+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current source-bound receipts and the reviewed route inventory after the native runner-phase repair.
+- **Evidence.** All five current engineering capabilities and the actual split-phase local native run pass. [Change record](./runs/changes/2026-11-07-222835-native-share-current-runner-state-1c558032.json).
+- **Not claimed.** Hosted Xcode 27 execution is pending; no requirement, phone, human or independent-accuracy gate is bypassed.
+
+
+### 2026-11-07-222435-native-share-runner-phase-repair-f7896319
+
+Recorded 2026-11-07T22:24:35.057129+00:00 · Contributor: Codex · change
+
+- **Changed.** Select GitHub’s documented standard Xcode 27 runner and split native compilation, UI execution and cleanup budgets.
+- **Evidence.** The revised producer passes all five actual local UI workflows, confirms cleanup and passes 67 focused controls. [Change record](./runs/changes/2026-11-07-222435-native-share-runner-phase-repair-f7896319.json).
+- **Not claimed.** The previous hosted result is retained as failed; no hosted, physical-phone or independent accuracy success is inferred.
+
+
+### 2026-11-07-220227-native-share-reviewed-source-state-87f2adca
+
+Recorded 2026-11-07T22:02:27.222015+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the passing reviewed-source receipts and bind the updated public native proof to the reviewed route inventory.
+- **Evidence.** All five current engineering receipts and the actual reviewed native workflow pass after the asset-binding repair. [Change record](./runs/changes/2026-11-07-220227-native-share-reviewed-source-state-87f2adca.json).
+- **Not claimed.** The hosted native workflow still needs a successful run; no physical, human or independent release gate is waived.
+
+
+### 2026-11-07-215853-native-share-asset-equality-review-2838abb5
+
+Recorded 2026-11-07T21:58:53.998152+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the projection generator and compare the complete native asset hash map with the current prepared bundle; retain timeout-stage logs for hosted CI diagnosis.
+- **Evidence.** A new actual simulator run passes five workflows; 67 focused cases include the stale-generator and zeroed-asset reproductions. [Change record](./runs/changes/2026-11-07-215853-native-share-asset-equality-review-2838abb5.json).
+- **Not claimed.** No physical or independent accuracy acceptance; hosted simulator success remains unclaimed until a real passing run.
+
+
+### 2026-11-07-205856-native-share-verified-source-state-8cca171e
+
+Recorded 2026-11-07T20:58:56.470385+00:00 · Contributor: Codex · change
+
+- **Changed.** Record all five passing current engineering receipts and refresh the reviewed route inventory for the native developer software increment.
+- **Evidence.** Current source checks and all 202 preserved scope records are evidenced; the native phone workflow remains at 80 percent with human and physical acceptance open. [Change record](./runs/changes/2026-11-07-205856-native-share-verified-source-state-8cca171e.json).
+- **Not claimed.** The full requirement count is unchanged at 130 complete and 72 open; source publication is pending protected review and merge.
+
+
+### 2026-11-07-180040-native-share-website-binding-86461477
+
+Recorded 2026-11-07T18:00:40.065069+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the new public native guide and proofs into website validation; require native source/proof guards in CI.
+- **Evidence.** The public source inputs are explicitly tracked and a simulator proof cannot close human or physical acceptance. [Change record](./runs/changes/2026-11-07-180040-native-share-website-binding-86461477.json).
+- **Not claimed.** Manifest changes require fresh engineering receipts; no new requirement closure or accuracy claim.
+
+
+### 2026-11-07-154154-native-share-public-projection-7c752c3a
+
+Recorded 2026-11-07T15:41:54.558756+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh generated scope projections and public native proof links; retain local browser readiness outside public source.
+- **Evidence.** All 202 scope IDs remain, N-013 is 80 percent, and full completion remains 130 complete / 72 open. [Change record](./runs/changes/2026-11-07-154154-native-share-public-projection-7c752c3a.json).
+- **Not claimed.** Native software evidence does not complete physical, human, independent-accuracy or future SDK acceptance.
+
+
+### 2026-11-07-154014-native-share-scope-and-proof-adff9d01
+
+Recorded 2026-11-07T15:40:14.966533+00:00 · Contributor: Codex · change
+
+- **Changed.** Publish current native developer instructions and exact-source proof; update N-013 to 80 percent and correct the active increment to 72 open requirements.
+- **Evidence.** 65 focused software/proof-boundary cases, five real simulator UI workflows and 137 native engine witnesses pass. Original full acceptance is preserved. [Change record](./runs/changes/2026-11-07-154014-native-share-scope-and-proof-adff9d01.json).
+- **Not claimed.** No full requirement closure, physical iPhone acceptance, independent accuracy, production collection or live stream capture. Website publication remains pending.
+
+
+### 2026-11-07-153751-native-share-software-repair-8b3c1183
+
+Recorded 2026-11-07T15:37:51.256710+00:00 · Contributor: Codex · change
+
+- **Changed.** Repair the unreleased iPhone Share handoff and lifecycle; add bounded inline evidence, fresh-simulator verification and a source-bound CI guard.
+- **Evidence.** Five actual current-source simulator UI workflows and 137 bundled-engine development/Unicode cases pass; provider, packaging and stale-proof controls execute. N-013 advances to 80 percent. [Change record](./runs/changes/2026-11-07-153751-native-share-software-repair-8b3c1183.json).
+- **Not claimed.** No full requirement closure: 130 complete and 72 open remain. Physical iPhone, human accessibility, arbitrary share-source and independent accuracy acceptance stay open. Typed-provider compatibility API is deprecated in iOS 27.
+
 
 ### 2026-11-07-011921-final-live-publication-state-c4d56ccc
 

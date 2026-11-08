@@ -39,7 +39,9 @@ def main():
                             str(ROOT / names[0]), str(ROOT / names[1]), '-o', str(binary)],
                            cwd=ROOT, stdout=log, stderr=log, check=True, timeout=90)
         measured = json.loads(subprocess.check_output([str(binary)], timeout=15))
-        if measured != {'pass': True, 'accepted_utf8': True, 'refusals': 10, 'physical_device': False}:
+        if measured != {'pass': True, 'accepted_utf8': True, 'refusals': 10, 'object_acceptances': 4,
+                        'object_refusals': 8, 'actual_utf8_provider': True, 'data_refusals': 8,
+                        'delivery_refusals': 5, 'physical_device': False}:
             raise ValueError('Provider-copy controls failed')
         if sources != {n: hashlib.sha256((ROOT / n).read_bytes()).hexdigest() for n in names}:
             raise ValueError('Sources changed during execution')
