@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-011857-native-share-live-publication-537d5c98
+
+Recorded 2026-11-08T01:18:57.391210+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected native repair merge, actual hosted simulator success and verified production publication; clear both pending-publication state flags.
+- **Evidence.** All five hosted workflows pass against current source and assets. Seventeen selected live files match the built application; 20 tag modals and eight public workflow groups pass; the anonymous source download returns HTTP 200. [Change record](./runs/changes/2026-11-08-011857-native-share-live-publication-537d5c98.json).
+- **Not claimed.** Verification metadata only; no new application code, full requirement closure, physical-phone or human accessibility acceptance, independent tag accuracy or installable phone release. All 202 scope records remain, with 130 complete and 72 open.
+
+
 ### 2026-11-08-004447-native-bounded-current-state-3a2c4e4f
 
 Recorded 2026-11-08T00:44:47.230695+00:00 · Contributor: Codex · change

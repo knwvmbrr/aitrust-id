@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-08-011857-native-share-live-publication-537d5c98",
+  "recorded_at": "2026-11-08T01:18:57.391210+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "da851606501823d411f69c3ed2ebc783c15bfe01",
+  "changed": "Record the protected native repair merge, actual hosted simulator success and verified production publication; clear both pending-publication state flags.",
+  "proves": "All five hosted workflows pass against current source and assets. Seventeen selected live files match the built application; 20 tag modals and eight public workflow groups pass; the anonymous source download returns HTTP 200.",
+  "limits": "Verification metadata only; no new application code, full requirement closure, physical-phone or human accessibility acceptance, independent tag accuracy or installable phone release. All 202 scope records remain, with 130 complete and 72 open.",
+  "scope_ids": [
+    "N-013",
+    "N-012",
+    "F-142"
+  ],
+  "files": {
+    "runs/2026-11-08-native-share-publication.json": "5e5c7c96b617478f9fa5612743362b9b06f976fa11c57cd9ad487299e3920032",
+    "state.json": "90fc15e884d2b4639c91a458a199462d1dbb24dde14eb51febcd529ce4c517e2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-08-native-share-publication.json",
+      "sha256": "5e5c7c96b617478f9fa5612743362b9b06f976fa11c57cd9ad487299e3920032"
+    }
+  ],
+  "checks": []
+}
