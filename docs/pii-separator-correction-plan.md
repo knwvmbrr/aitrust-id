@@ -71,3 +71,9 @@ Check both verifier import paths before the build and retain unavailable/failing
 results rather than substituting the historical evidence.
 
 The first personal-profile job built healthy services but could not persist its result because the fresh runner had no output/verification directory. The workflow now creates its own output directory before executing either verifier; no passing report was manufactured from that failed attempt.
+
+## Preserve clean-setup acceptance
+
+The source-current checks correctly refuse the prior clean-setup receipt after a redactor change. Repeat the same ten real setup/ownership/dependency/failure controls on the owned Linux staging host from a clean committed clone. Keep Podman, pinned downloads, constrained runtime and complete build-input binding. Only the dedicated staging gateway pauses; restore its original ID, image, configuration and health in a finally block. Production site, database and backups remain outside this exercise. Admit a new receipt only after actual success; keep the old report unchanged. Select the new actual replay fixture explicitly in browser revalidation.
+
+The website also correctly refuses the earlier source-bound service timings. Measure the existing 12 synthetic profiles and fixed samples again against a separately owned current-source stack. Keep the ordinary-user timing client, actual runtime identity, masking outcomes and original source checks. Stop and remove only that test stack, then restore the original staging service configuration and health. Publish new timings with declared Linux hardware; never describe them as phone measurements or a population speed guarantee.

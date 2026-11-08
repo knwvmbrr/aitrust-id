@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-08T08:13:11.542104+00:00",
-  "active_increment": "PII_REDACTED separator correction measured on pinned Mac engine; Linux verification and independent recognition gates remain open. App Store preparation is separate. Target: 60 open full requirements; current count: 72.",
+  "updated": "2026-11-08T17:51:14.179551+00:00",
+  "active_increment": "PII_REDACTED separator correction: actual pinned Mac and Linux engine checks, 26 Linux service controls and 15 pipeline replay cases pass. Publishing current-source performance evidence; independent recognition and human acceptance remain open. Target 60; current open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -760,7 +760,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-07T15:39:06.464055+00:00",
+    "audited_at": "2026-11-08T15:46:24.863541+00:00",
     "completed_records": 130,
     "open_records": 72,
     "records_preserved": 202,
@@ -1085,15 +1085,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-07-native-share-current-PS.json",
-    "PII_REDACTED": "runs/2026-11-07-native-share-current-PII_REDACTED.json",
-    "protocol": "runs/2026-11-07-native-share-current-protocol.json",
-    "extension": "runs/2026-11-07-native-share-current-extension.json",
-    "website": "runs/2026-11-07-native-share-bounded-website.json",
+    "PS": "runs/2026-11-08-pii-separator-final-PS.json",
+    "PII_REDACTED": "runs/2026-11-08-pii-separator-final-PII_REDACTED.json",
+    "protocol": "runs/2026-11-08-pii-separator-final-protocol.json",
+    "extension": "runs/2026-11-08-pii-separator-final-extension.json",
+    "website": "runs/2026-11-08-pii-separator-published-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-08T08:13:11.542104+00:00",
+  "updated_at": "2026-11-08T17:51:14.179551+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1653,18 +1653,19 @@
     "published_source": "7cd96559721841ebe6fdb775ea2bbcfc97885af1"
   },
   "pii_recognition": {
-    "status": "source_bound_isolated_staging_development",
+    "status": "current_source_synthetic_linux_engine_and_pipeline_development",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-023",
       "T-PII"
     ],
-    "current_app_sha256": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "current_app_sha256": "9ffb5808ced5245c7e99886f25199e8093659de71a7739207fac18599bd4da52",
     "guide": "docs/redaction-recognition.md",
-    "architecture": "docs/redaction-recognition-plan.md",
-    "actual_engine_examples": 42,
+    "architecture": "docs/pii-separator-correction-plan.md",
+    "actual_engine_examples": 48,
     "english_examples": 38,
     "coverage_challenges": 4,
+    "compact_regression_examples": 6,
     "english_exact_counts": {
       "tp": 34,
       "fp": 17,
@@ -1672,39 +1673,38 @@
     },
     "english_expected_fully_masked": 34,
     "english_cases_with_extra_masking": 2,
+    "english_extra_masked_characters": 6,
+    "compact_expected_fully_masked": 6,
+    "compact_cases_with_extra_masking": 1,
+    "compact_extra_masked_characters": 10,
     "challenge_partial": 1,
     "challenge_untouched": 1,
-    "source_bound_observations": "runs/2026-10-11-pii-labels-recognition.json",
-    "runtime_integration": "runs/2026-10-11-pii-labels-integration.json",
-    "http_controls": "runs/2026-10-11-pii-labels-service.json",
-    "pipeline_replay": "runs/2026-10-11-pii-labels-replay.json",
-    "diagnosis": "runs/2026-10-11-pii-recognition-diagnosis.json",
-    "focused_checks": "runs/2026-10-11-pii-recognition-focused.json",
+    "source_bound_observations": "runs/2026-11-08-pii-separator-english-linux.json",
+    "compact_observations": "runs/2026-11-08-pii-separator-compact-linux.json",
+    "runtime_integration": "runs/2026-11-08-pii-separator-integration.json",
+    "http_controls": "runs/2026-11-08-pii-separator-service-linux.json",
+    "pipeline_replay": "runs/2026-11-08-pii-separator-replay-linux.json",
+    "clean_setup": "runs/2026-11-08-pii-separator-clean-setup-linux.json",
     "independent_accuracy_evidence": false,
     "privacy_clearance": false,
     "actual_user_data_used": false,
     "production_changed": false,
     "requirements_closed": 0,
-    "publication_pending": false,
-    "current_capabilities": "runs/2026-10-11-pii-labels-current-capabilities.json",
-    "website_execution": "runs/2026-10-11-pii-labels-bound-website.json",
-    "current_boundaries": "runs/2026-10-11-pii-labels-current-boundaries.json",
-    "python_execution": "runs/2026-10-11-pii-labels-python-chronology-corrected.json",
-    "full_python_tests": 1867,
-    "visual_review": "Codex inspected 390px light/dark synthetic redaction evidence; emulation only",
-    "review_correction": "runs/2026-10-11-pii-labels-review-diagnosis.json",
-    "compact_observations": "runs/2026-10-11-pii-labels-compact.json",
-    "compact_engine_examples": 6,
-    "compact_fully_masked": 6,
-    "compact_extra_masking_cases": 3,
-    "compact_extra_characters": 12,
-    "source_revalidation_pending": false,
-    "focused_python_controls": 175,
-    "focused_node_controls": 53,
-    "bookkeeping_failure": "runs/2026-10-11-pii-labels-current-python.json",
-    "publication": "runs/2026-10-11-pii-labels-publication.json",
-    "protected_merge": "runs/2026-10-11-pii-labels-protected-merge.json",
-    "published_source": "104b5e347c37a0d5bad464515391087dfdee6947"
+    "publication_pending": true,
+    "previous_development_evidence": [
+      "runs/2026-10-11-pii-labels-recognition.json",
+      "runs/2026-10-11-pii-labels-compact.json",
+      "runs/2026-10-11-pii-labels-integration.json"
+    ],
+    "pipeline_timing": "runs/2026-11-08-pii-separator-pipeline-timing-linux.json",
+    "website_execution": "runs/2026-11-08-pii-separator-published-website.json",
+    "current_capabilities": {
+      "PS": "runs/2026-11-08-pii-separator-final-PS.json",
+      "PII_REDACTED": "runs/2026-11-08-pii-separator-final-PII_REDACTED.json",
+      "protocol": "runs/2026-11-08-pii-separator-final-protocol.json",
+      "extension": "runs/2026-11-08-pii-separator-final-extension.json",
+      "website": "runs/2026-11-08-pii-separator-published-website.json"
+    }
   },
   "blind_review_privacy": {
     "status": "current_source_checks_pass_protected_merge_and_publication_verified",
@@ -2930,11 +2930,26 @@
     "previous_publication": "runs/2026-11-07-final-live-publication.json"
   },
   "pii_separator_correction": {
-    "status": "development_measured_pending_linux_integration",
+    "status": "engineering_checks_passed_pending_protected_publication",
     "evidence": "runs/2026-11-08-pii-separator-mac-development.json",
     "privacy_or_accuracy_release_approved": false,
     "full_requirements_closed": [],
-    "runner_dependency_repair": "runs/2026-11-08-pii-ci-consumer-dependency.json"
+    "runner_dependency_repair": "runs/2026-11-08-pii-ci-consumer-dependency.json",
+    "linux_cohort_evidence": [
+      "runs/2026-11-08-pii-separator-english-linux.json",
+      "runs/2026-11-08-pii-separator-compact-linux.json"
+    ],
+    "service_evidence": "runs/2026-11-08-pii-separator-service-linux.json",
+    "replay_evidence": "runs/2026-11-08-pii-separator-replay-linux.json",
+    "linux_workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42493101618",
+    "compact_expected_fully_masked": 6,
+    "compact_extra_masked_characters_before": 12,
+    "compact_extra_masked_characters_after": 10,
+    "compact_cases_with_extra_masking_before": 3,
+    "compact_cases_with_extra_masking_after": 1,
+    "integration_evidence": "runs/2026-11-08-pii-separator-integration.json",
+    "clean_setup_evidence": "runs/2026-11-08-pii-separator-clean-setup-linux.json",
+    "timing_evidence": "runs/2026-11-08-pii-separator-pipeline-timing-linux.json"
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
