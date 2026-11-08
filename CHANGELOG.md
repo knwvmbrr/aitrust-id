@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-08
 
+### 2026-11-08-185129-pii-live-publication-e3f90a93
+
+Recorded 2026-11-08T18:51:29.671157+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected PII merge and verified production website publication, with current public downloads and reconciled scope ledgers.
+- **Evidence.** 15 selected deployed files match the built bytes; live checks cover 20 tag panels, performance downloads and eight workflows with no automated accessibility or unexpected outbound findings. The public source ZIP returns HTTP 200 anonymously. Twelve unrelated local files are unchanged. [Change record](./runs/changes/2026-11-08-185129-pii-live-publication-e3f90a93.json).
+- **Not claimed.** Metadata-only followup to the identified application deployment. No independent accuracy, real-phone acceptance, App Store upload or full requirement closure; 130 complete and 72 open remain.
+
+
 ### 2026-11-08-175708-pii-ledger-verification-b5a8c590
 
 Recorded 2026-11-08T17:57:08.322060+00:00 · Contributor: Codex · change

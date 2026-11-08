@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-08T17:57:06.203119+00:00",
-  "active_increment": "PII_REDACTED separator correction: actual pinned Mac and Linux engine checks, 26 Linux service controls and 15 pipeline replay cases pass. Publishing current-source performance evidence; independent recognition and human acceptance remain open. Target 60; current open requirements 72.",
+  "updated": "2026-11-08T18:51:29.622571+00:00",
+  "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -782,11 +782,11 @@
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 12,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-07-native-share-increment.json",
+    "current_target_verification": "runs/2026-11-08-pii-publication.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-11-07",
@@ -1093,7 +1093,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-08T17:57:06.203119+00:00",
+  "updated_at": "2026-11-08T18:51:29.622571+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1690,7 +1690,7 @@
     "actual_user_data_used": false,
     "production_changed": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "previous_development_evidence": [
       "runs/2026-10-11-pii-labels-recognition.json",
       "runs/2026-10-11-pii-labels-compact.json",
@@ -1704,7 +1704,9 @@
       "protocol": "runs/2026-11-08-pii-separator-reader-protocol.json",
       "extension": "runs/2026-11-08-pii-separator-final-extension.json",
       "website": "runs/2026-11-08-pii-separator-reader-website.json"
-    }
+    },
+    "website_published": true,
+    "publication": "runs/2026-11-08-pii-publication.json"
   },
   "blind_review_privacy": {
     "status": "current_source_checks_pass_protected_merge_and_publication_verified",
@@ -2914,10 +2916,10 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "da851606501823d411f69c3ed2ebc783c15bfe01",
-    "deployment_url": "https://345b2718.aitrust-id.pages.dev",
+    "source_commit": "b2152b85ae81bf8658921ed5b40377551c365964",
+    "deployment_url": "https://c043b865.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-08-native-share-publication.json",
+    "evidence": "runs/2026-11-08-pii-publication.json",
     "metadata_only_followup": true,
     "meaning": "This metadata records the verified application deployment of the stated source commit. The verification-only followup changes no deployed application code.",
     "scope_records": 202,
@@ -2926,11 +2928,11 @@
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
     "phone_release_offered": false,
-    "publication_pending": true,
-    "previous_publication": "runs/2026-11-07-final-live-publication.json"
+    "publication_pending": false,
+    "previous_publication": "runs/2026-11-08-native-share-publication.json"
   },
   "pii_separator_correction": {
-    "status": "engineering_checks_passed_pending_protected_publication",
+    "status": "source_and_website_published_verified",
     "evidence": "runs/2026-11-08-pii-separator-mac-development.json",
     "privacy_or_accuracy_release_approved": false,
     "full_requirements_closed": [],
@@ -2949,7 +2951,9 @@
     "compact_cases_with_extra_masking_after": 1,
     "integration_evidence": "runs/2026-11-08-pii-separator-integration.json",
     "clean_setup_evidence": "runs/2026-11-08-pii-separator-clean-setup-linux.json",
-    "timing_evidence": "runs/2026-11-08-pii-separator-pipeline-timing-linux.json"
+    "timing_evidence": "runs/2026-11-08-pii-separator-pipeline-timing-linux.json",
+    "publication": "runs/2026-11-08-pii-publication.json",
+    "independent_accuracy_evidence": false
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
