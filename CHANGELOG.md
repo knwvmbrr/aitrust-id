@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-09
+
+### 2026-11-09-163450-pan-candidate-span-containment-0e4f0352
+
+Recorded 2026-11-09T16:34:50.941876+00:00 · Contributor: Codex · change
+
+- **Changed.** Constrain PAN recognizer evidence to its emitted span, preserving original patterns, scores, contexts and other categories; retain the candidate diagnostic and its corrected fixture-offset refusal.
+- **Evidence.** The real pinned 2.2.355 recognizer candidate passes nine synthetic controls and preserves high, medium and low positive shapes; 106 local adapter and IPv6 controls pass. [Change record](./runs/changes/2026-11-09-163450-pan-candidate-span-containment-0e4f0352.json).
+- **Not claimed.** This is a candidate recognizer diagnostic, not complete-engine or HTTP integration, independent accuracy, production deployment or a full scope closure. Current whole-engine observations remain required.
+
+
 ## Unreleased — 2026-11-08
 
 ### 2026-11-08-185129-pii-live-publication-e3f90a93
