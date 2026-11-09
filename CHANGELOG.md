@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-09
 
+### 2026-11-09-193033-pan-live-publication-1db70a8c
+
+Recorded 2026-11-09T19:30:33.659439+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected PAN source merge, current Cloudflare deployment, public catalogue/workflow checks, byte-matched selected assets and anonymous source download; clarify source publication separately from App Store release.
+- **Evidence.** Live checks cover 20 tag modals, eight workflows, 202 scope records and 16 selected byte-matched assets. The anonymous source ZIP matches the selected native/redactor sources. All five engineering receipts remain current. [Change record](./runs/changes/2026-11-09-193033-pan-live-publication-1db70a8c.json).
+- **Not claimed.** This verification-only followup changes no deployed application code. Scope remains 130 complete / 72 open; no independent accuracy, physical/human acceptance, signing, TestFlight upload or full requirement closure is claimed.
+
+
 ### 2026-11-09-190756-pan-final-reader-evidence-899fd536
 
 Recorded 2026-11-09T19:07:56.284410+00:00 · Contributor: Codex · change

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-193033-pan-live-publication-1db70a8c",
+  "recorded_at": "2026-11-09T19:30:33.659439+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+  "changed": "Record the protected PAN source merge, current Cloudflare deployment, public catalogue/workflow checks, byte-matched selected assets and anonymous source download; clarify source publication separately from App Store release.",
+  "proves": "Live checks cover 20 tag modals, eight workflows, 202 scope records and 16 selected byte-matched assets. The anonymous source ZIP matches the selected native/redactor sources. All five engineering receipts remain current.",
+  "limits": "This verification-only followup changes no deployed application code. Scope remains 130 complete / 72 open; no independent accuracy, physical/human acceptance, signing, TestFlight upload or full requirement closure is claimed.",
+  "scope_ids": [
+    "T-PII",
+    "F-023",
+    "F-105",
+    "N-013"
+  ],
+  "files": {
+    "runs/2026-11-09-pan-live-site.json": "411511b1c27a35ace6cf8b4b56e1ea6602c85a8e301e609c540843570f49c47c",
+    "runs/2026-11-09-pan-live-workflows.json": "5b1722a1e3d884f8ed4716a15ab9e9575a494af3cee8e988c7ad06b4968fbc4f",
+    "runs/2026-11-09-pan-publication.json": "835312482552cd05d0e79bd7e2a06e76d260ab00e9ef79d85701b7bdc05bca29",
+    "state.json": "f600bec20c2e822bc0c4ebc6633cfbaf29f19eed30fcc95df11ddf4584f4c8f2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-pan-publication.json",
+      "sha256": "835312482552cd05d0e79bd7e2a06e76d260ab00e9ef79d85701b7bdc05bca29"
+    },
+    {
+      "path": "runs/2026-11-09-pan-live-site.json",
+      "sha256": "411511b1c27a35ace6cf8b4b56e1ea6602c85a8e301e609c540843570f49c47c"
+    },
+    {
+      "path": "runs/2026-11-09-pan-live-workflows.json",
+      "sha256": "5b1722a1e3d884f8ed4716a15ab9e9575a494af3cee8e988c7ad06b4968fbc4f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T19:30:34.077300+00:00"
+    }
+  ]
+}

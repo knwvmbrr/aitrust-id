@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-09T19:07:55.592755+00:00",
+  "updated": "2026-11-09T19:30:32.396764+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -775,18 +775,18 @@
     "publication": "runs/2026-10-11-blind-private-publication.json",
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
-    "latest_measurement_publication": "runs/2026-10-14-research-http-live-publication.json",
+    "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
     "latest_increment": "docs/pii-pan-token-plan.md",
     "completed_subtasks": 1,
     "open_subtasks": 116,
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 12,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-08-pii-publication.json",
+    "current_target_verification": "runs/2026-11-09-pan-publication.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-11-09",
@@ -805,8 +805,8 @@
         "reason": "Owner changed immediate target from 45 to 60; preserve full scope and acceptance."
       }
     ],
-    "latest_increment_publication": "runs/2026-11-08-native-share-publication.json",
-    "published_source_commit": "da851606501823d411f69c3ed2ebc783c15bfe01"
+    "latest_increment_publication": "runs/2026-11-09-pan-publication.json",
+    "published_source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58"
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1094,7 +1094,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-09T19:07:55.592755+00:00",
+  "updated_at": "2026-11-09T19:30:32.396764+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1164,11 +1164,13 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
-    "preview": "https://842da8d4.aitrust-id.pages.dev",
-    "evidence": "runs/2026-10-14-research-http-live-publication.json",
-    "all_artifacts_verified": 783,
-    "exact_headers_verified_per_origin": 6,
+    "source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+    "preview": "https://7a65ed48.aitrust-id.pages.dev",
+    "evidence": "runs/2026-11-09-pan-publication.json",
+    "selected_assets_verified": 16,
+    "all_assets_claimed": false,
+    "live_catalogue": "runs/2026-11-09-pan-live-site.json",
+    "live_workflows": "runs/2026-11-09-pan-live-workflows.json",
     "primary_unrelated_files_preserved": 12,
     "full_requirements_closed": 0
   },
@@ -1691,7 +1693,7 @@
     "actual_user_data_used": false,
     "production_changed": false,
     "requirements_closed": 0,
-    "publication_pending": true,
+    "publication_pending": false,
     "previous_development_evidence": [
       "runs/2026-10-11-pii-labels-recognition.json",
       "runs/2026-10-11-pii-labels-compact.json",
@@ -1701,7 +1703,7 @@
     ],
     "pipeline_timing": "runs/2026-11-09-pan-pipeline-timing-linux.json",
     "website_execution": "runs/2026-11-09-pan-current-website-accepted.json",
-    "website_published": false,
+    "website_published": true,
     "previous_publication": "runs/2026-11-08-pii-publication.json",
     "previous_capabilities": {
       "PS": "runs/2026-11-08-pii-separator-final-PS.json",
@@ -1716,7 +1718,9 @@
       "extension": "runs/2026-11-09-pan-current-extension-accepted.json",
       "protocol": "runs/2026-11-09-pan-current-protocol.json",
       "website": "runs/2026-11-09-pan-current-website-accepted.json"
-    }
+    },
+    "publication": "runs/2026-11-09-pan-publication.json",
+    "public_browser": "runs/2026-11-09-pan-live-site.json"
   },
   "blind_review_privacy": {
     "status": "current_source_checks_pass_protected_merge_and_publication_verified",
@@ -1880,7 +1884,7 @@
     "runtime_selection": "runs/2026-11-07-native-runtime-selection.json",
     "bootstrap_evidence": "runs/2026-11-07-native-bootstrap-separation.json",
     "automation_budget_evidence": "runs/2026-11-07-native-automation-budget.json",
-    "publication": "runs/2026-11-08-native-share-publication.json",
+    "publication": "runs/2026-11-09-pan-publication.json",
     "hosted_ci": {
       "pass": true,
       "run_id": 42655612677,
@@ -1895,7 +1899,7 @@
     "code_and_guide_published": true,
     "distribution_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
     "workflow_current_source_pass": true,
-    "publication_pending": true
+    "publication_pending": false
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2866,8 +2870,8 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-06-conformance-protected-publication.json",
-    "merge_commit": "fa094dad8544a6ffb4e6ab2bb147480266263cca",
+    "evidence": "runs/2026-11-09-pan-publication.json",
+    "merge_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
     "publicly_verified": true,
     "required_checks_passed": 22
   },
@@ -2931,10 +2935,10 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "b2152b85ae81bf8658921ed5b40377551c365964",
-    "deployment_url": "https://c043b865.aitrust-id.pages.dev",
+    "source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+    "deployment_url": "https://7a65ed48.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-08-pii-publication.json",
+    "evidence": "runs/2026-11-09-pan-publication.json",
     "metadata_only_followup": true,
     "meaning": "This metadata records the verified application deployment of the stated source commit. The verification-only followup changes no deployed application code.",
     "scope_records": 202,
@@ -2944,7 +2948,7 @@
     "real_collection_enabled": false,
     "phone_release_offered": false,
     "publication_pending": false,
-    "previous_publication": "runs/2026-11-08-native-share-publication.json"
+    "previous_publication": "runs/2026-11-08-pii-publication.json"
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -2987,7 +2991,6 @@
     "draft_sign_in_required": false,
     "physical_device_acceptance": false,
     "independent_accuracy_evidence": false,
-    "publication_pending": true,
     "subtitle_saved": "Check shared text offline",
     "primary_category_saved": "Utilities",
     "privacy_policy_url_saved": "https://aitrustid.com/policies/privacy/",
@@ -3000,10 +3003,13 @@
     "existing_team_distribution_certificate_observed": true,
     "existing_certificate_expiry_observed": "2027-02-23",
     "existing_certificate_revoked": false,
-    "local_signing_identity_available": false
+    "local_signing_identity_available": false,
+    "source_and_guide_published": true,
+    "source_publication": "runs/2026-11-09-pan-publication.json",
+    "app_store_publication_pending": true
   },
   "pii_pan_containment": {
-    "status": "source_current_engine_and_pipeline_executed; publication_pending",
+    "status": "source_and_development_evidence_published; independent_acceptance_open",
     "implemented_by": "Codex",
     "plan": "docs/pii-pan-token-plan.md",
     "candidate_diagnostic": "runs/2026-11-09-pan-candidate-recognizer.json",
@@ -3021,6 +3027,38 @@
     "english_observations_unchanged": true,
     "independent_accuracy_evidence": false,
     "full_requirements_closed": [],
-    "publication_pending": true
-  }
+    "publication_pending": false,
+    "publication": "runs/2026-11-09-pan-publication.json"
+  },
+  "website_publication_history": [
+    {
+      "replaced_at": "2026-11-09T19:30:32.396764+00:00",
+      "previous_latest_runtime_publication": {
+        "source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+        "preview": "https://842da8d4.aitrust-id.pages.dev",
+        "evidence": "runs/2026-10-14-research-http-live-publication.json",
+        "all_artifacts_verified": 783,
+        "exact_headers_verified_per_origin": 6,
+        "primary_unrelated_files_preserved": 12,
+        "full_requirements_closed": 0
+      },
+      "previous_production_publication": {
+        "status": "live_and_verified",
+        "source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+        "deployment_url": "https://7a65ed48.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-09-pan-publication.json",
+        "metadata_only_followup": true,
+        "meaning": "This metadata records the verified application deployment of the stated source commit. The verification-only followup changes no deployed application code.",
+        "scope_records": 202,
+        "completed_requirements": 130,
+        "open_requirements": 72,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "phone_release_offered": false,
+        "publication_pending": false,
+        "previous_publication": "runs/2026-11-08-pii-publication.json"
+      }
+    }
+  ]
 }
