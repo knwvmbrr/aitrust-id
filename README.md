@@ -517,6 +517,12 @@ The optional [organization term-check component](docs/private-policy.md) applies
 
 The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The [native Share developer workflow](docs/native-share-developer.md) passes five actual simulator UI workflows, including offline privacy/license access. The separate [App Store preparation](docs/app-store-readiness.md) has a saved app record and an inspected unsigned device archive. Signing, upload, physical-phone and independent tag acceptance remain open; no signed native phone app is offered.
 
+The [PAN span correction](docs/pii-pan-token-plan.md) keeps a candidate's required
+evidence inside its own span. The unchanged six-example compact-address cohort
+retains full masking while extra masking falls from ten characters to zero.
+English and out-of-coverage errors remain disclosed; this is development evidence,
+not independent privacy clearance.
+
 Selected public fonts, Unicode resources, runtime identities and model-card declarations can be checked offline with `python3 scripts/verify-asset-notices.py`. See [the short notice guide](docs/asset-notices.md); consistency is distinct from legal clearance.
 
 For an editorial workflow, keep a selected finding and a separate editor decision in private files. The [editorial review guide](docs/editorial-workflow.md) covers the current detailed PS web export, unsigned current gateway records, corrections, offline views and removal. It performs no upload, automatic collection or independent accuracy validation.

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-171045-pan-current-engine-integration-a9a58149",
+  "recorded_at": "2026-11-09T17:10:45.021869+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "238035fea292ff3e190a81864aa6dd27387146ee",
+  "changed": "Select the source-current PAN-contained redactor, fixed-cohort masking observations, real Linux service/replay/setup/timing evidence and hosted native proof; preserve original scope and current App Store metadata facts.",
+  "proves": "The unchanged compact cohort fully masks six addresses with zero extra characters; English observations retain their known errors. Actual 26 service, 15 replay, ten clean-setup and twelve timing profiles pass; 198 focused Python controls and 22 chart controls pass.",
+  "limits": "No independent accuracy, privacy clearance, physical-phone or human acceptance, signing/upload or full requirement closure. All 202 records remain, 130 complete and 72 open.",
+  "scope_ids": [
+    "T-PII",
+    "F-023",
+    "F-105",
+    "N-013"
+  ],
+  "files": {
+    "README.md": "4eec75a7c4006410220c10c5194322e20a0470a7598bf6f5659504857a3f2859",
+    "docs/app-store-readiness.md": "7d698a182b29079bd2089bace8e482a45d1ff65bd8e0fd76e9be3222763ec74d",
+    "docs/pii-pan-token-plan.md": "fe0258b876ea1fb2f7e17e2577ea24464006c1b0dff1479dd4266fb61a629d06",
+    "docs/redaction-recognition.md": "f7b68e9563884d95904afeeab7a64d4bb3fb5e3009d2609b9a869b2776c7b3e0",
+    "docs/scope-progress.json": "1038a425137c34828cc934d44c52e972a7e852c425cdea22e076aa6cc47316bc",
+    "docs/scope-progress.md": "88d169715a271b71f1f69527e9f691e276a240e3bcd2469ee961beb59a6e2c1f",
+    "eval/revalidation.json": "6ee05ffd68454cee9b6ac241f417c8a00dd5104adfa8b0d9bbd36a41b104f7b0",
+    "runs/2026-11-09-ios-hosted-archive.json": "a4a74754521647a8ede8a6366448970daca63c6a1fd78079ece49e3d6cceb58a",
+    "runs/2026-11-09-native-share-hosted-startup-refusal.json": "ed452e21b4020f3ce40a27f948bacc237260d265f7fe3b95e15cde4eace1c8d6",
+    "runs/2026-11-09-native-share-hosted-workflow.json": "d0ab6dfd2dab4258c409ec0276e829fad0d9e547e8070ba325f9784a94fd76e8",
+    "runs/2026-11-09-pan-clean-setup-linux.json": "99ae0bafa6d08c8a21bf63906aaf5b181a13aeb1a5700aaa90c85552b5eb89a9",
+    "runs/2026-11-09-pan-compact-linux.json": "b29d5f7a30066ffae747a0e69e2d134d58a49f53e5cdbd7ac953340190d75a37",
+    "runs/2026-11-09-pan-english-linux.json": "c096b9f392d07d9429839f734d5bec88c5688cef1de43d09da348dfbeed48ad4",
+    "runs/2026-11-09-pan-pipeline-timing-linux.json": "3868e326a54a961750c015324cd6664b0ff0287054c91c396466f41576810cc8",
+    "runs/2026-11-09-pan-replay-linux.json": "55478b2cfb89ce26b82c141484a72170391334cbc94e9dd46c65c9ce6c9b5a4c",
+    "runs/2026-11-09-pan-runtime-integration.json": "9e399e8d48a65f0df98a5169186b8e383240037853fc6cfc5d0f6f9a500eb55b",
+    "runs/2026-11-09-pan-service-linux.json": "140a01a9e549f8843ddf545b35de152f7ef5037aa375fffb14e6f7ed839cff57",
+    "scripts/build-redaction-performance.py": "b39e2de1a4117edebf8146c19c0d223097bb75c29978a1db64ac5c23365c9381",
+    "scripts/verify-local-setup-evidence.py": "9de95ad195e5444493bd7b10438b67c398fcab7bda2fbbf70f5d08fbdd6803b5",
+    "scripts/verify-native-share-evidence.py": "447a59b96c0d16ea354e7984b61c05f8fe29e6863990dc9a3a8ab378fe2eb40f",
+    "scripts/verify-route-boundaries.py": "1a91d44dc5bd6881aa89c0ffef0cdbcbf9ea3e1ba523d8fad4ab45b6f0732f8e",
+    "site/scripts/prepare-performance.mjs": "2d263a4ec9096de224ba9cf0320c47ccc7a45ed364a8e045e0f9cefd75291bb3",
+    "site/scripts/prepare.mjs": "1f425680ff0f2208c77e8ef2668c3d3c79950e9d7a952460828df2693cb756af",
+    "state.json": "2f68ef0bafe1bd1e33d90f2cbe11e3f985663d3d5f3d9e9aebeddb871c8b2b7d",
+    "tests/redaction-performance.cjs": "7a53bec0be88f846225d8a2a15a075a43efcc623a28fb8140112b7a0cf866739",
+    "tests/test_redaction_development_builder.py": "7458d2ef30176c314d7441b045b7c42a3425defdf9b5c91142b6da7d1b97e691"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-pan-runtime-integration.json",
+      "sha256": "9e399e8d48a65f0df98a5169186b8e383240037853fc6cfc5d0f6f9a500eb55b"
+    },
+    {
+      "path": "runs/2026-11-09-pan-english-linux.json",
+      "sha256": "c096b9f392d07d9429839f734d5bec88c5688cef1de43d09da348dfbeed48ad4"
+    },
+    {
+      "path": "runs/2026-11-09-pan-compact-linux.json",
+      "sha256": "b29d5f7a30066ffae747a0e69e2d134d58a49f53e5cdbd7ac953340190d75a37"
+    },
+    {
+      "path": "runs/2026-11-09-pan-service-linux.json",
+      "sha256": "140a01a9e549f8843ddf545b35de152f7ef5037aa375fffb14e6f7ed839cff57"
+    },
+    {
+      "path": "runs/2026-11-09-pan-replay-linux.json",
+      "sha256": "55478b2cfb89ce26b82c141484a72170391334cbc94e9dd46c65c9ce6c9b5a4c"
+    },
+    {
+      "path": "runs/2026-11-09-pan-clean-setup-linux.json",
+      "sha256": "99ae0bafa6d08c8a21bf63906aaf5b181a13aeb1a5700aaa90c85552b5eb89a9"
+    },
+    {
+      "path": "runs/2026-11-09-pan-pipeline-timing-linux.json",
+      "sha256": "3868e326a54a961750c015324cd6664b0ff0287054c91c396466f41576810cc8"
+    },
+    {
+      "path": "runs/2026-11-09-native-share-hosted-workflow.json",
+      "sha256": "d0ab6dfd2dab4258c409ec0276e829fad0d9e547e8070ba325f9784a94fd76e8"
+    },
+    {
+      "path": "runs/2026-11-09-ios-hosted-archive.json",
+      "sha256": "a4a74754521647a8ede8a6366448970daca63c6a1fd78079ece49e3d6cceb58a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T17:10:47.723750+00:00"
+    }
+  ]
+}

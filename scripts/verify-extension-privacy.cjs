@@ -85,7 +85,10 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
 })().catch(error=>{
  // Location only: Playwright's message/call log can contain credentials entered
  // into synthetic forms. Never include that message or the complete stack.
- const location=String(error?.stack||'').match(/verify-extension-privacy\.cjs:(\d+):(\d+)/);
+ const frames=[...String(error?.stack||'').matchAll(/verify-extension-privacy\.cjs:(\d+):(\d+)/g)];
+ // A failed assertion starts in the shared helper; report its caller instead.
+ // Keep only numeric source coordinates, never the message or full stack.
+ const location=frames[1]||frames[0];
  console.error(JSON.stringify({pass:false,reason:'extension_privacy_verification_failed',
   source:'scripts/verify-extension-privacy.cjs',line:location?Number(location[1]):null,
   column:location?Number(location[2]):null}));process.exitCode=1;

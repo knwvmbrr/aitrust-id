@@ -5,6 +5,14 @@ Submission**, and registered identifiers `com.aitrustid.app` and
 `com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
 release. No build has been uploaded or submitted to Apple.
 
+The saved app-information draft uses **Check shared text offline**, category
+**Utilities**, and the existing public privacy-policy URL. Privacy disclosures
+remain unpublished. The owner has now signed into the existing developer team
+in Xcode. Its local certificate panel is empty and creation actions were disabled
+when inspected; that observation does not establish whether cloud signing is
+available. Signing and provisioning still need verification. No new external-agent access,
+certificate, private key, legal declaration or account permission was granted.
+
 The separate distribution profile now builds an actual unsigned physical-iOS
 archive with those identifiers, version 1.0, a compiled app icon and exact bundled
 privacy/license/runtime resources. The default developer profile remains

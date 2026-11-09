@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-11-09T17:17:47.805942+00:00",
+  "pass": false,
+  "kind": "retained_revalidation_refusals",
+  "pii_failure_receipt": "runs/2026-11-09-pan-current-PII_REDACTED.json",
+  "pii_diagnosis": "The positive diagnostic transport fixture referenced the historical engine report, whose source identity correctly failed current-source admission. It now follows the selected report.",
+  "extension_failure_receipt": "runs/2026-11-09-pan-current-extension.json",
+  "extension_diagnosis": "The privacy verifier reported its common assertion helper at line 5 instead of the failing caller. The exact earlier assertion is unresolved; a separate direct execution passed. Diagnostics now retain numeric caller coordinates only.",
+  "runtime_extension_sources_changed": false,
+  "gates_or_assertions_weakened": false,
+  "independent_accuracy": false,
+  "requirements_closed": []
+}

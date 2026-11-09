@@ -24,3 +24,31 @@ out of this increment. No endpoint, dependency, language or tag-release change.
 This addresses a known development false positive. PII independent representative
 recognition, out-of-coverage misses, human acceptance and privacy limits remain
 open. N-013 and the independent PS checker do not depend on this correction.
+
+## Executed results
+
+The nine-case pinned-recognizer diagnostic preserves high, medium and low
+positive shapes and removes three demonstrated candidates that borrowed their
+evidence. Its initial adjacent-token expected offset was wrong; the failed
+diagnostic is retained, with unchanged input/code and the corrected literal
+offset in the subsequent run.
+
+The complete source-current isolated Linux engine then processed the unchanged
+42 English/challenge and six compact-address examples. The compact cohort still
+masks all six expected addresses, with zero extra masked characters instead of
+ten. English observations are byte-equivalent at the row/measurement level,
+including two examples with six extra masked characters. The four out-of-coverage
+challenges still include one partially masked and one untouched identifier.
+
+The actual three-service route passed 26 controls and 15 private replay cases.
+The clean Linux clone passed its ten setup/ownership/failure controls. Twelve
+declared-host timing profiles were measured separately; no latency budget or
+population accuracy is inferred. The original staging configuration was restored
+and owned test resources removed. No Mac Docker or real user data was used.
+
+[Engine](../runs/2026-11-09-pan-english-linux.json) ·
+[Compact addresses](../runs/2026-11-09-pan-compact-linux.json) ·
+[Service](../runs/2026-11-09-pan-service-linux.json) ·
+[Replay](../runs/2026-11-09-pan-replay-linux.json) ·
+[Clean setup](../runs/2026-11-09-pan-clean-setup-linux.json) ·
+[Timing](../runs/2026-11-09-pan-pipeline-timing-linux.json)

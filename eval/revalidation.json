@@ -133,13 +133,13 @@
         "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
         "scripts/worker_process.py",
         "tests/test_worker_process.py",
-        "runs/2026-11-08-pii-separator-english-linux.json",
-        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "runs/2026-11-09-pan-english-linux.json",
+        "runs/2026-11-09-pan-compact-linux.json",
         "tests/test_redaction_worker_observations.py",
         "docs/pii-separator-correction-plan.md",
-        "runs/2026-11-08-pii-separator-service-linux.json",
-        "runs/2026-11-08-pii-separator-replay-linux.json",
-        "runs/2026-11-08-pii-separator-clean-setup-linux.json"
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -444,9 +444,9 @@
         "runs/2026-11-07-recovery-cache-reuse-linux.json",
         "docs/directory-clock-fence-plan.md",
         "tests/test_replay_verifier_engine.py",
-        "runs/2026-11-08-pii-separator-service-linux.json",
-        "runs/2026-11-08-pii-separator-replay-linux.json",
-        "runs/2026-11-08-pii-separator-clean-setup-linux.json"
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -816,7 +816,7 @@
           "--python",
           "{python}",
           "--receipt",
-          "runs/2026-11-08-pii-separator-replay-linux.json"
+          "runs/2026-11-09-pan-replay-linux.json"
         ],
         [
           "{python}",
@@ -1150,14 +1150,14 @@
         "runs/2026-11-07-native-share-engine.json",
         "runs/2026-11-07-native-share-reviewed-workflow.json",
         "runs/*native-share*workflow.json",
-        "runs/2026-11-08-pii-separator-english-linux.json",
-        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "runs/2026-11-09-pan-english-linux.json",
+        "runs/2026-11-09-pan-compact-linux.json",
         "tests/test_redaction_worker_observations.py",
         "docs/pii-separator-correction-plan.md",
-        "runs/2026-11-08-pii-separator-service-linux.json",
-        "runs/2026-11-08-pii-separator-replay-linux.json",
-        "runs/2026-11-08-pii-separator-clean-setup-linux.json",
-        "runs/2026-11-08-pii-separator-pipeline-timing-linux.json"
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json",
+        "runs/2026-11-09-pan-pipeline-timing-linux.json"
       ],
       "commands": [
         [

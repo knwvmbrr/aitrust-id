@@ -1490,14 +1490,15 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-08T15:11:57.378510+00:00",
+        "audited_at": "2026-11-09T17:07:00.240644+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — complete IPv6 span correction, 42-case synthetic engine recognition/masking diagnostic and selected staging service/replay integration, 2026-10-11T18:51:10.358494+00:00",
           "Codex — independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00",
           "Codex — source correction, mutation-safe observation and actual pinned Mac engine before/after development checks",
-          "Codex — corrected-source Linux engine observations, 26 actual service controls and 15 actual pipeline/CLI replay cases"
+          "Codex — corrected-source Linux engine observations, 26 actual service controls and 15 actual pipeline/CLI replay cases",
+          "Codex — contain PAN evidence within each candidate span; unchanged English cohort and corrected compact-field masking on isolated Linux; 2026-11-09T17:07:00.240644+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -1505,7 +1506,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Correct the retained IN_PAN field-label false positive, English extra masking and out-of-coverage challenge misses. Complete independent representative recognition and required human route acceptance before release. Current-source Linux engine, 26 service controls and 15 replay cases now pass.",
+        "next_fix": "Correct remaining English extra masking and out-of-coverage challenge misses; complete independent representative recognition and required human route acceptance. The PAN field-label false positive is corrected in source-current isolated Linux observations, service/replay, clean setup and timing checks.",
         "next_owner": "Codex",
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
@@ -1535,9 +1536,18 @@
           "runs/2026-11-08-pii-separator-english-linux.json",
           "runs/2026-11-08-pii-separator-compact-linux.json",
           "runs/2026-11-08-pii-separator-service-linux.json",
-          "runs/2026-11-08-pii-separator-replay-linux.json"
+          "runs/2026-11-08-pii-separator-replay-linux.json",
+          "docs/pii-pan-token-plan.md",
+          "tests/test_redaction_pan_token.py",
+          "runs/2026-11-09-pan-candidate-recognizer.json",
+          "runs/2026-11-09-pan-english-linux.json",
+          "runs/2026-11-09-pan-compact-linux.json",
+          "runs/2026-11-09-pan-service-linux.json",
+          "runs/2026-11-09-pan-replay-linux.json",
+          "runs/2026-11-09-pan-clean-setup-linux.json",
+          "runs/2026-11-09-pan-pipeline-timing-linux.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Unchanged 42-row English/challenge and six-row compact synthetic cohorts executed on isolated Linux. All six compact addresses remain fully masked; compact extra masking falls from ten characters to zero. English predictions and masking are unchanged, including retained errors. Actual service, private replay, clean-install and declared-host timing controls remain separate from independent accuracy and human acceptance.",
         "required_acceptance": [
           "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
         ],
@@ -3197,13 +3207,14 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-08T15:11:57.378510+00:00",
+        "audited_at": "2026-11-09T17:07:00.240644+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — complete IPv6 span correction, 42-case synthetic engine recognition/masking diagnostic and selected staging service/replay integration, 2026-10-11T18:51:10.358494+00:00",
           "Codex — source correction, mutation-safe observation and actual pinned Mac engine before/after development checks",
-          "Codex — corrected-source Linux engine observations, 26 actual service controls and 15 actual pipeline/CLI replay cases"
+          "Codex — corrected-source Linux engine observations, 26 actual service controls and 15 actual pipeline/CLI replay cases",
+          "Codex — contain PAN evidence within each candidate span; unchanged English cohort and corrected compact-field masking on isolated Linux; 2026-11-09T17:07:00.240644+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -3211,7 +3222,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Correct the retained IN_PAN field-label false positive, English extra masking and out-of-coverage challenge misses. Complete independent representative recognition and required human route acceptance before release. Current-source Linux engine, 26 service controls and 15 replay cases now pass.",
+        "next_fix": "Correct remaining English extra masking and out-of-coverage challenge misses; complete independent representative recognition and required human route acceptance. The PAN field-label false positive is corrected in source-current isolated Linux observations, service/replay, clean setup and timing checks.",
         "next_owner": "Codex",
         "evidence": [
           "runs/2026-10-09-scope-completion-checks.json",
@@ -3238,9 +3249,18 @@
           "runs/2026-11-08-pii-separator-english-linux.json",
           "runs/2026-11-08-pii-separator-compact-linux.json",
           "runs/2026-11-08-pii-separator-service-linux.json",
-          "runs/2026-11-08-pii-separator-replay-linux.json"
+          "runs/2026-11-08-pii-separator-replay-linux.json",
+          "docs/pii-pan-token-plan.md",
+          "tests/test_redaction_pan_token.py",
+          "runs/2026-11-09-pan-candidate-recognizer.json",
+          "runs/2026-11-09-pan-english-linux.json",
+          "runs/2026-11-09-pan-compact-linux.json",
+          "runs/2026-11-09-pan-service-linux.json",
+          "runs/2026-11-09-pan-replay-linux.json",
+          "runs/2026-11-09-pan-clean-setup-linux.json",
+          "runs/2026-11-09-pan-pipeline-timing-linux.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Unchanged 42-row English/challenge and six-row compact synthetic cohorts executed on isolated Linux. All six compact addresses remain fully masked; compact extra masking falls from ten characters to zero. English predictions and masking are unchanged, including retained errors. Actual service, private replay, clean-install and declared-host timing controls remain separate from independent accuracy and human acceptance.",
         "required_acceptance": [
           "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
         ],
@@ -5682,7 +5702,7 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-11-08T15:46:24.863541+00:00",
+        "audited_at": "2026-11-09T17:07:00.240644+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
@@ -5720,7 +5740,8 @@
           "runs/2026-10-14-tag-isolation-real-linux.json",
           "runs/2026-10-14-tag-isolation-batch-linux.json",
           "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
-          "runs/2026-11-08-pii-separator-clean-setup-linux.json"
+          "runs/2026-11-08-pii-separator-clean-setup-linux.json",
+          "runs/2026-11-09-pan-clean-setup-linux.json"
         ],
         "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
         "required_acceptance": [],
@@ -13424,7 +13445,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-09T16:17:10.971578+00:00",
+        "audited_at": "2026-11-09T17:07:00.240644+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -13472,9 +13493,12 @@
           "runs/2026-11-09-native-share-initial-workflow.json",
           "runs/2026-11-09-native-share-diagnostic-workflow.json",
           "runs/2026-11-09-native-share-distribution-workflow.json",
-          "runs/2026-11-09-ios-distribution-final-archive.json"
+          "runs/2026-11-09-ios-distribution-final-archive.json",
+          "runs/2026-11-09-native-share-hosted-workflow.json",
+          "runs/2026-11-09-ios-hosted-archive.json",
+          "runs/2026-11-09-native-share-hosted-startup-refusal.json"
         ],
-        "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed.",
+        "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed. The same current native sources also passed all five workflows and unsigned archive inspection on hosted iOS 27.2/SDK 27.1. A separate simulator-startup refusal is retained.",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],

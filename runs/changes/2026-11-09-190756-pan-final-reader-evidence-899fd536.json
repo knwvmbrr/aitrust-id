@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-190756-pan-final-reader-evidence-899fd536",
+  "recorded_at": "2026-11-09T19:07:56.284410+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "238035fea292ff3e190a81864aa6dd27387146ee",
+  "changed": "Refresh current-source execution receipts, public performance downloads, preserved scope and signing facts. Update stale verifier consumers and retain failed attempts with redacted diagnostics.",
+  "proves": "PS, PII, extension, protocol, website and route-boundary checks pass for the current sources. The fixed compact cohort keeps six complete masks with zero extra characters; known English and challenge errors remain visible.",
+  "limits": "The earlier unnamed extension assertion failure is retained; the current complete rerun passes. No independent privacy/accuracy, physical/human acceptance, App Store signing/upload or full requirement closure is claimed.",
+  "scope_ids": [
+    "T-PII",
+    "F-023",
+    "F-105",
+    "N-013",
+    "F-086"
+  ],
+  "files": {
+    "README.md": "4eec75a7c4006410220c10c5194322e20a0470a7598bf6f5659504857a3f2859",
+    "docs/app-store-readiness.md": "f6a2702bb95862bb661f96906a90d20809c84516bf714d47d5897d6a551c3a7a",
+    "docs/pii-pan-token-plan.md": "fe0258b876ea1fb2f7e17e2577ea24464006c1b0dff1479dd4266fb61a629d06",
+    "docs/redaction-recognition.md": "f7b68e9563884d95904afeeab7a64d4bb3fb5e3009d2609b9a869b2776c7b3e0",
+    "docs/scope-progress.json": "1038a425137c34828cc934d44c52e972a7e852c425cdea22e076aa6cc47316bc",
+    "docs/scope-progress.md": "88d169715a271b71f1f69527e9f691e276a240e3bcd2469ee961beb59a6e2c1f",
+    "eval/revalidation.json": "6ee05ffd68454cee9b6ac241f417c8a00dd5104adfa8b0d9bbd36a41b104f7b0",
+    "eval/route-boundaries.json": "07b84adee4bf8769fc6805f2c026fb493c4a17651a732425e3c3a5aec21c2262",
+    "runs/2026-11-09-ios-hosted-archive.json": "a4a74754521647a8ede8a6366448970daca63c6a1fd78079ece49e3d6cceb58a",
+    "runs/2026-11-09-native-share-hosted-startup-refusal.json": "ed452e21b4020f3ce40a27f948bacc237260d265f7fe3b95e15cde4eace1c8d6",
+    "runs/2026-11-09-native-share-hosted-workflow.json": "d0ab6dfd2dab4258c409ec0276e829fad0d9e547e8070ba325f9784a94fd76e8",
+    "runs/2026-11-09-pan-clean-setup-linux.json": "99ae0bafa6d08c8a21bf63906aaf5b181a13aeb1a5700aaa90c85552b5eb89a9",
+    "runs/2026-11-09-pan-compact-linux.json": "b29d5f7a30066ffae747a0e69e2d134d58a49f53e5cdbd7ac953340190d75a37",
+    "runs/2026-11-09-pan-consumer-refusals.json": "17408b4dffa73600ba21e4861fc6189bd653926f7ad39db14a86cf1ac11a36e1",
+    "runs/2026-11-09-pan-current-PII_REDACTED-accepted.json": "1688371788d71206faa0a1e3de2639286580a4482aac97a7e1b48dc09c63492c",
+    "runs/2026-11-09-pan-current-PII_REDACTED.json": "2db52aee9f527903f24c017c49d7bcf2a3f604ed60dea987a70d040ee48fb3e9",
+    "runs/2026-11-09-pan-current-PS.json": "fea403997e93d6a25c1df3ff685059233a3da030348e9a9b516c74616fd2676e",
+    "runs/2026-11-09-pan-current-boundaries.json": "727cdc5565718e78c26acd54bb2b930d26a47bc19216c098db9ca4e1184c60be",
+    "runs/2026-11-09-pan-current-extension-accepted.json": "8bd4a53bedd817c50d107ee730636b682c1cb027a208766536bba9f4b2bca032",
+    "runs/2026-11-09-pan-current-extension.json": "25ea4eb465cf53b16753e02d100cd7ba766a529146bc787c597227b6c8d2bd75",
+    "runs/2026-11-09-pan-current-protocol.json": "2fd2e47d77cca665b50b483ca66fefa34b2f5763721e83b5b6c333c210169144",
+    "runs/2026-11-09-pan-current-website-accepted.json": "12e7576d7737cec67992b1b2cebe997020cc2e27e7bbb79fcb1995e2cd1264e4",
+    "runs/2026-11-09-pan-current-website.json": "ab069a39a76460344303278a8b1b19794fb07b40cb8c2b9ed12d2f999770fbf5",
+    "runs/2026-11-09-pan-english-linux.json": "c096b9f392d07d9429839f734d5bec88c5688cef1de43d09da348dfbeed48ad4",
+    "runs/2026-11-09-pan-pipeline-timing-linux.json": "3868e326a54a961750c015324cd6664b0ff0287054c91c396466f41576810cc8",
+    "runs/2026-11-09-pan-replay-linux.json": "55478b2cfb89ce26b82c141484a72170391334cbc94e9dd46c65c9ce6c9b5a4c",
+    "runs/2026-11-09-pan-runtime-integration.json": "9e399e8d48a65f0df98a5169186b8e383240037853fc6cfc5d0f6f9a500eb55b",
+    "runs/2026-11-09-pan-service-linux.json": "140a01a9e549f8843ddf545b35de152f7ef5037aa375fffb14e6f7ed839cff57",
+    "runs/2026-11-09-pan-website-consumer-refusal.json": "7847b46a5ad1e575cc43fbd4f096236a5a8e5b1086524b2b273166f84cdc41d1",
+    "scripts/build-redaction-performance.py": "b39e2de1a4117edebf8146c19c0d223097bb75c29978a1db64ac5c23365c9381",
+    "scripts/verify-extension-privacy.cjs": "4378afcce9a350bfd205bc0c474d1f9c098098c641e08f223c3972a5790b77fe",
+    "scripts/verify-local-setup-evidence.py": "9de95ad195e5444493bd7b10438b67c398fcab7bda2fbbf70f5d08fbdd6803b5",
+    "scripts/verify-native-share-evidence.py": "447a59b96c0d16ea354e7984b61c05f8fe29e6863990dc9a3a8ab378fe2eb40f",
+    "scripts/verify-performance.cjs": "da80117de5a55dc30432df53ad3b17db133b048536ab78e5106f0194fe126859",
+    "scripts/verify-route-boundaries.py": "1a91d44dc5bd6881aa89c0ffef0cdbcbf9ea3e1ba523d8fad4ab45b6f0732f8e",
+    "site/index.html": "276e197e9ad8b26ffe599d670830cebc63915b746276bd06b886638c5e69ed70",
+    "site/public/reference/native-share-workflow.json": "d0ab6dfd2dab4258c409ec0276e829fad0d9e547e8070ba325f9784a94fd76e8",
+    "site/public/reference/pipeline-performance.json": "9ef93154fed86f55a255688bb0cde6cfe1e091eeb78ea031b9869919e5eead8d",
+    "site/public/reference/public-scope.json": "f2409b8b06373018f446cacc21bcc91272f0b725b5102d61f90c70724d31f98f",
+    "site/public/reference/redaction-compact-addresses.json": "b29d5f7a30066ffae747a0e69e2d134d58a49f53e5cdbd7ac953340190d75a37",
+    "site/public/reference/redaction-recognition.json": "c096b9f392d07d9429839f734d5bec88c5688cef1de43d09da348dfbeed48ad4",
+    "site/public/reference/redaction-recognition.md": "f7b68e9563884d95904afeeab7a64d4bb3fb5e3009d2609b9a869b2776c7b3e0",
+    "site/public/reference/tag-performance.json": "0cd0b7d99209ce785df42b22477c525af224db59904c15b9dc4afee72033e1a1",
+    "site/scripts/prepare-performance.mjs": "2d263a4ec9096de224ba9cf0320c47ccc7a45ed364a8e045e0f9cefd75291bb3",
+    "site/scripts/prepare.mjs": "1f425680ff0f2208c77e8ef2668c3d3c79950e9d7a952460828df2693cb756af",
+    "site/src/public-scope.json": "f2409b8b06373018f446cacc21bcc91272f0b725b5102d61f90c70724d31f98f",
+    "site/src/scope-manifest.json": "32ea7df3db64c685158c6fd7cd56c463503a3df7f261f91f5b924690c6d0e7b9",
+    "site/src/tag-performance.json": "0cd0b7d99209ce785df42b22477c525af224db59904c15b9dc4afee72033e1a1",
+    "state.json": "2d2ff99a1e9896c2f5cee19aecbd4e5918b8d08788d4483fbd7918b10f1a3e63",
+    "tests/pipeline-timing.cjs": "6aac248abb1d651641703114a120c2db7e95f35d7e29bc2534d883d3294e5dcb",
+    "tests/redaction-performance.cjs": "7a53bec0be88f846225d8a2a15a075a43efcc623a28fb8140112b7a0cf866739",
+    "tests/test_redaction_development_builder.py": "7458d2ef30176c314d7441b045b7c42a3425defdf9b5c91142b6da7d1b97e691",
+    "tests/test_redaction_development_client.py": "22648900453c1885cafd6cd46866740c7ef33a7e601e8ce74477708f09e322c6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-pan-current-PS.json",
+      "sha256": "fea403997e93d6a25c1df3ff685059233a3da030348e9a9b516c74616fd2676e"
+    },
+    {
+      "path": "runs/2026-11-09-pan-current-PII_REDACTED-accepted.json",
+      "sha256": "1688371788d71206faa0a1e3de2639286580a4482aac97a7e1b48dc09c63492c"
+    },
+    {
+      "path": "runs/2026-11-09-pan-current-extension-accepted.json",
+      "sha256": "8bd4a53bedd817c50d107ee730636b682c1cb027a208766536bba9f4b2bca032"
+    },
+    {
+      "path": "runs/2026-11-09-pan-current-protocol.json",
+      "sha256": "2fd2e47d77cca665b50b483ca66fefa34b2f5763721e83b5b6c333c210169144"
+    },
+    {
+      "path": "runs/2026-11-09-pan-current-website-accepted.json",
+      "sha256": "12e7576d7737cec67992b1b2cebe997020cc2e27e7bbb79fcb1995e2cd1264e4"
+    },
+    {
+      "path": "runs/2026-11-09-pan-current-boundaries.json",
+      "sha256": "727cdc5565718e78c26acd54bb2b930d26a47bc19216c098db9ca4e1184c60be"
+    },
+    {
+      "path": "runs/2026-11-09-pan-consumer-refusals.json",
+      "sha256": "17408b4dffa73600ba21e4861fc6189bd653926f7ad39db14a86cf1ac11a36e1"
+    },
+    {
+      "path": "runs/2026-11-09-pan-website-consumer-refusal.json",
+      "sha256": "7847b46a5ad1e575cc43fbd4f096236a5a8e5b1086524b2b273166f84cdc41d1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T19:07:56.821233+00:00"
+    }
+  ]
+}

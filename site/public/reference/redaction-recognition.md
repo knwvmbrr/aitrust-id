@@ -36,7 +36,7 @@ The pre-fix report is retained. Remaining unnecessary masking, raw candidate ove
 
 ## Compact IP labels
 
-Review added explicit IP/IPv6/address/addr/host label separators such as `IP:2001:db8::27`. All-hex prefixes remain address hextets; malformed, embedded and scoped tokens retain their existing boundaries. A generic label draft was rejected because it treated `x2001` as a label and matched a suffix. Eighty-three focused controls now include the exact separator and negative forms.
+Review added explicit IP/IPv6/address/addr/host label separators such as `IP:2001:db8::27`. All-hex prefixes remain address hextets; malformed, embedded and scoped tokens retain their existing boundaries. A generic label draft was rejected because it treated `x2001` as a label and matched a suffix. Focused controls include the exact separator and negative forms.
 
 Repeat the six fixed compact-address engine checks without supplying a user file:
 
@@ -46,7 +46,7 @@ python3 scripts/measure-redaction-development.py \
   --output output/verification/redaction-compact.json
 ```
 
-All six expected addresses were fully masked on the actual rebuilt Linux engine. The 2026-11-08 correction preserves two separator colons that overlapping IP candidates previously removed. One example still loses a ten-character `ip_address` field label identified as `IN_PAN` by another recognizer. The unchanged 38 English cases still include six extra masked characters across two examples; the four out-of-coverage challenges still include one partial mask and one miss. These are remaining defects, not successful identifier detections. The six positive regression examples do not estimate false-positive rates or independent accuracy. They remain separate from the main 38 English development examples and four coverage challenges. Both raw reports and fixtures are public; downloads are bound to the measured source.
+All six expected addresses remain fully masked on the actual rebuilt Linux engine. The 2026-11-08 correction preserved two separator colons. The [2026-11-09 PAN correction](pii-pan-token-plan.md) also preserves the ten-character `ip_address` label: candidate evidence must occur inside its own span. The compact cohort now has zero extra masked characters. The unchanged 38 English cases still include six extra masked characters across two examples; the four out-of-coverage challenges still include one partial mask and one miss. Those remain defects. These six compact regression examples do not estimate population false-positive rates or independent accuracy. They remain separate from the main 38 English examples and four coverage challenges. Earlier raw reports are preserved; current downloads are bound to the measured source.
 
 
 ### Preserve observations before masking

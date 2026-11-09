@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-09
 
+### 2026-11-09-190756-pan-final-reader-evidence-899fd536
+
+Recorded 2026-11-09T19:07:56.284410+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh current-source execution receipts, public performance downloads, preserved scope and signing facts. Update stale verifier consumers and retain failed attempts with redacted diagnostics.
+- **Evidence.** PS, PII, extension, protocol, website and route-boundary checks pass for the current sources. The fixed compact cohort keeps six complete masks with zero extra characters; known English and challenge errors remain visible. [Change record](./runs/changes/2026-11-09-190756-pan-final-reader-evidence-899fd536.json).
+- **Not claimed.** The earlier unnamed extension assertion failure is retained; the current complete rerun passes. No independent privacy/accuracy, physical/human acceptance, App Store signing/upload or full requirement closure is claimed.
+
+
+### 2026-11-09-171045-pan-current-engine-integration-a9a58149
+
+Recorded 2026-11-09T17:10:45.021869+00:00 · Contributor: Codex · change
+
+- **Changed.** Select the source-current PAN-contained redactor, fixed-cohort masking observations, real Linux service/replay/setup/timing evidence and hosted native proof; preserve original scope and current App Store metadata facts.
+- **Evidence.** The unchanged compact cohort fully masks six addresses with zero extra characters; English observations retain their known errors. Actual 26 service, 15 replay, ten clean-setup and twelve timing profiles pass; 198 focused Python controls and 22 chart controls pass. [Change record](./runs/changes/2026-11-09-171045-pan-current-engine-integration-a9a58149.json).
+- **Not claimed.** No independent accuracy, privacy clearance, physical-phone or human acceptance, signing/upload or full requirement closure. All 202 records remain, 130 complete and 72 open.
+
+
 ### 2026-11-09-163450-pan-candidate-span-containment-0e4f0352
 
 Recorded 2026-11-09T16:34:50.941876+00:00 · Contributor: Codex · change
