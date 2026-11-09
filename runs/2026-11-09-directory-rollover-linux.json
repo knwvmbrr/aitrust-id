@@ -1,0 +1,162 @@
+{
+  "format": "organization-directory-software/v1",
+  "captured_at": "2026-11-09T19:42:59.651010+00:00",
+  "pass": true,
+  "sources": {
+    "tools/organization_directory.py": "7c294b80142eb25f583f2e5566bc91dbc8bf92ff86ccb8d175f62e1718cec47f",
+    "tools/organization_directory_lab.py": "4f58501f705df9a917675d53eb6adae52899b3753828c4138a628ea5184f0209",
+    "scripts/organization-directory.py": "4a8f13f6a6fffe5bb73910e95118a02749d3c0a6e47fbb89c338108d59fe2bbb",
+    "scripts/verify-organization-directory.py": "74159f0ff30dc3c9e3daa8f052e2b817a90807685c82419efd0fd75f8c3ff5fd",
+    "scripts/directory-device-browser.cjs": "b9e3a888df7da67b36acc21ec5e7fcddb837f2bf621b5af1a86c35923fbd8c73",
+    "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0",
+    "docs/organization-directory-plan.md": "d5751c2d05e8ae36184253ded42243bdc2edf54ae1fa7bf7aaff800990ec9d02",
+    "docs/organization-directory.md": "03d9aafc07df1b2fb9235429c8f4e0c82f3935cc6b34ebf8d332e5506393763e",
+    "tools/organization_audit.py": "8a4c5c85c7225788e227a843e85d055e5cc7981e9240f6a6bd7479e287586e91",
+    "tools/organization_audit_store.py": "476957577728d3f17fd54f93a43eb37c9b053b693b2b37829a811e64390da97d",
+    "deploy/audit/store.sql": "aff20a33fa64b6f7257448e133187f76be9b69ff763968bc7fe208639a0cfa10",
+    "spec/organization-audit-metadata.schema.json": "ddc883924d3620161eb2d74dbbc59e2188cf72e90ee9bc5424af94ba462ca651",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+    ".github/workflows/organization-directory.yml": "7c1668060036cf388cb93d78f10e63d047b5e0d2daad39c66742a5ce3e3f9551",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd"
+  },
+  "source_unchanged": true,
+  "platform": "linux",
+  "non_root": true,
+  "isolated_network_namespace": true,
+  "keycloak_version": "26.8.2",
+  "postgresql_major": 18,
+  "real_provider_and_database": true,
+  "synthetic_identities_only": true,
+  "controls": [
+    {
+      "case": "actual_https_provider_with_explicit_test_ca",
+      "pass": true
+    },
+    {
+      "case": "valid_foreign_issuer_token_refused",
+      "pass": true
+    },
+    {
+      "case": "untrusted_tls_certificate_refused",
+      "pass": true
+    },
+    {
+      "case": "wrong_selected_ca_refused",
+      "pass": true
+    },
+    {
+      "case": "actual_device_login_and_private_record_view_cli",
+      "pass": true
+    },
+    {
+      "case": "actual_separate_export_permission",
+      "pass": true
+    },
+    {
+      "case": "actual_organization_feedback_review",
+      "pass": true
+    },
+    {
+      "case": "view_does_not_grant_export",
+      "pass": true
+    },
+    {
+      "case": "configuration_does_not_grant_review",
+      "pass": true
+    },
+    {
+      "case": "cross_tenant_request_refused",
+      "pass": true
+    },
+    {
+      "case": "wrong_database_tenant_binding_refused",
+      "pass": true
+    },
+    {
+      "case": "forged_token_refused",
+      "pass": true
+    },
+    {
+      "case": "current_directory_role_removal_denies_old_token",
+      "pass": true
+    },
+    {
+      "case": "restored_directory_role_works",
+      "pass": true
+    },
+    {
+      "case": "disabled_directory_user_denied",
+      "pass": true
+    },
+    {
+      "case": "local_membership_revoke_denies",
+      "pass": true
+    },
+    {
+      "case": "current_admin_can_restore_non_compromised_member",
+      "pass": true
+    },
+    {
+      "case": "separate_owner_recovery_fences_compromised_admin",
+      "pass": true
+    },
+    {
+      "case": "pre_recovery_replacement_session_also_fenced",
+      "pass": true
+    },
+    {
+      "case": "fresh_replacement_login_restores_authorized_access",
+      "pass": true
+    },
+    {
+      "case": "actual_provider_clock_skew_session_fenced",
+      "pass": true
+    },
+    {
+      "case": "directory_admin_cannot_undo_owner_compromise_fence",
+      "pass": true
+    },
+    {
+      "case": "actual_local_and_provider_token_revocation",
+      "pass": true
+    },
+    {
+      "case": "logged_out_private_access_denied",
+      "pass": true
+    },
+    {
+      "case": "provider_outage_denies_private_access",
+      "pass": true
+    },
+    {
+      "case": "personal_checker_runs_with_directory_offline",
+      "pass": true
+    },
+    {
+      "case": "local_logout_persists_during_provider_outage",
+      "pass": true
+    },
+    {
+      "case": "journal_contains_no_tokens_credentials_or_response_text",
+      "pass": true
+    }
+  ],
+  "failure": null,
+  "production_changed": false,
+  "collection_enabled": false,
+  "independent_accuracy_evidence": false,
+  "human_acceptance": false,
+  "certification": false
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-195324-directory-final-source-verification-217f85eb",
+  "recorded_at": "2026-11-09T19:53:24.530760+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "55519837de52d770e9bc62f905bc66731957eb92",
+  "changed": "Bind the repaired directory fixture and evidence consumers to a fresh actual Linux provider run and all five current engineering receipts.",
+  "proves": "All 28 real provider cases, 73 focused software/evidence controls and current route boundary checks pass. All five selected receipts match their current sources; the previous production publication matches the parent commit exactly.",
+  "limits": "Verification followup only. No production authorization change, new tag release, App Store upload, human/phone acceptance or full scope closure. The site remains at its separately verified e496049 deployment.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "docs/scope-60-execution.md": "2ab7a4321db369ba7592b0111b8ce513a7c619c6d1f4f0afd5907b98dfac20c5",
+    "eval/revalidation.json": "8e99d28b6a0be575febec624512ea3d4a2975e3473460f054e3310e8606dcfc7",
+    "eval/route-boundaries.json": "3f1427a735131de9629b72d311922c34864cd4bc1a9288290c2fbbc7bbc4caeb",
+    "runs/2026-11-09-directory-final-source-verification.json": "fb6577c6ca0c4b4e5aa48334743bcf181da718a1844868ed4b08dfbd4e843bc2",
+    "runs/2026-11-09-directory-rollover-linux.json": "78fa6134ebfbc15f0728726c09a792e924e887b80b8325002203e86d4bd2ddd6",
+    "runs/2026-11-09-directory-source-refresh.json": "e920db98d9bf9e96921e68104827c667b3e5ca62822e4f9e342c5491e3e9fc22",
+    "runs/2026-11-09-rollover-current-PII_REDACTED.json": "4b029028a1d62542bb360bb72711da76d35e21bdd27b99bfb76bd1a9ef814ffa",
+    "runs/2026-11-09-rollover-current-PS.json": "0e7b28db0d5b30cabe04b9e3807f13be8227f0b28cbabd2ffe3587c9aeeb4565",
+    "runs/2026-11-09-rollover-current-boundaries.json": "810a8881ccb0a5f9627c66c5b826bc8771506c44cee424c843db79509b7c639f",
+    "runs/2026-11-09-rollover-current-extension.json": "a2eeb790b5be60cd89632f8492356b64a2316a9768737eec042a6ec93256b2a0",
+    "runs/2026-11-09-rollover-current-protocol.json": "96693cc51885d95a7c143372c0d9868057eedd5cf3225bb1075f9597d0262476",
+    "runs/2026-11-09-rollover-current-website-accepted.json": "2a373697db1357c16a2f6e3bac58c251c47426459d1372c5c8cac4efbb1a4b39",
+    "runs/2026-11-09-rollover-current-website.json": "5bb400e7cf0ac9fd9cb470bb5c7acb209c37cc1c51a5d47cba8fe19e2d7a6ca9",
+    "scripts/verify-enterprise.cjs": "0641a503275d3bc0681407ae851a8b759a3c5b393beefe125f9f0ef5fbd8d5b0",
+    "scripts/verify-organization-directory-evidence.py": "20401e35cad5a6030348e1ffde57c659800dcba47d1a7cd8df27b1042d2a6c9f",
+    "scripts/verify-route-boundaries.py": "95807be676c36fe07ab0df71b178568727998b90a215460cc7e4bc04d15186ea",
+    "state.json": "203875896203021ac6ccc822ce5b75f078685fa07b896610548a6407dbb430c5",
+    "tests/test_organization_directory_evidence.py": "d8faab9ce6776628c3ae52059dda3517e5ee9531149e1c247a406e132fd9051c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-directory-final-source-verification.json",
+      "sha256": "fb6577c6ca0c4b4e5aa48334743bcf181da718a1844868ed4b08dfbd4e843bc2"
+    },
+    {
+      "path": "runs/2026-11-09-rollover-current-boundaries.json",
+      "sha256": "810a8881ccb0a5f9627c66c5b826bc8771506c44cee424c843db79509b7c639f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T19:53:25.119461+00:00"
+    }
+  ]
+}

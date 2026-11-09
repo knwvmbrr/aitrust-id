@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-11-09T19:53:23.680893+00:00",
+  "checked_by": "Codex",
+  "pass": true,
+  "production_directory_source_changed": false,
+  "actual_provider_evidence": "runs/2026-11-09-directory-rollover-linux.json",
+  "actual_provider_workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42685648677",
+  "actual_provider_cases": 28,
+  "focused_software_and_evidence_cases": 73,
+  "current_revalidation": {
+    "PS": {
+      "path": "runs/2026-11-09-rollover-current-PS.json",
+      "checks": 7,
+      "pass": true,
+      "sources_current": true
+    },
+    "PII_REDACTED": {
+      "path": "runs/2026-11-09-rollover-current-PII_REDACTED.json",
+      "checks": 6,
+      "pass": true,
+      "sources_current": true
+    },
+    "protocol": {
+      "path": "runs/2026-11-09-rollover-current-protocol.json",
+      "checks": 40,
+      "pass": true,
+      "sources_current": true
+    },
+    "extension": {
+      "path": "runs/2026-11-09-rollover-current-extension.json",
+      "checks": 14,
+      "pass": true,
+      "sources_current": true
+    },
+    "website": {
+      "path": "runs/2026-11-09-rollover-current-website-accepted.json",
+      "checks": 28,
+      "pass": true,
+      "sources_current": true
+    }
+  },
+  "current_boundaries": "runs/2026-11-09-rollover-current-boundaries.json",
+  "predecessor_publication_exactly_matches_parent": true,
+  "parent_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+  "retained_failed_website_receipt": "runs/2026-11-09-rollover-current-website.json",
+  "independent_accuracy_evidence": false,
+  "human_acceptance": false,
+  "app_store_uploaded": false,
+  "app_store_released": false,
+  "scope_records": 202,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "full_requirement_closures": 0
+}

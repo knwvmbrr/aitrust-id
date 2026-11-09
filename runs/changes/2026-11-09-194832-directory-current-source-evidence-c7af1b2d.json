@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-194832-directory-current-source-evidence-c7af1b2d",
+  "recorded_at": "2026-11-09T19:48:32.771483+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "55519837de52d770e9bc62f905bc66731957eb92",
+  "changed": "Refresh actual directory software evidence after the clock fixture repair, preserve prior publication history from its parent commit, and record native/redaction progress in the scope execution log.",
+  "proves": "Actual Linux Keycloak/PostgreSQL run passes 28 controls; 73 focused software/evidence controls pass. Prior November 8 publication is preserved as the predecessor of November 9.",
+  "limits": "No directory production behavior, App Store release, collection activation, independent tag accuracy or completion count change. Website evidence is being revalidated and the failed prebuild record is retained.",
+  "scope_ids": [
+    "F-162",
+    "N-013",
+    "F-023"
+  ],
+  "files": {
+    "docs/scope-60-execution.md": "2ab7a4321db369ba7592b0111b8ce513a7c619c6d1f4f0afd5907b98dfac20c5",
+    "eval/revalidation.json": "8e99d28b6a0be575febec624512ea3d4a2975e3473460f054e3310e8606dcfc7",
+    "eval/route-boundaries.json": "3f1427a735131de9629b72d311922c34864cd4bc1a9288290c2fbbc7bbc4caeb",
+    "runs/2026-11-09-directory-rollover-linux.json": "78fa6134ebfbc15f0728726c09a792e924e887b80b8325002203e86d4bd2ddd6",
+    "runs/2026-11-09-directory-source-refresh.json": "e920db98d9bf9e96921e68104827c667b3e5ca62822e4f9e342c5491e3e9fc22",
+    "runs/2026-11-09-rollover-current-PII_REDACTED.json": "4b029028a1d62542bb360bb72711da76d35e21bdd27b99bfb76bd1a9ef814ffa",
+    "runs/2026-11-09-rollover-current-PS.json": "0e7b28db0d5b30cabe04b9e3807f13be8227f0b28cbabd2ffe3587c9aeeb4565",
+    "runs/2026-11-09-rollover-current-extension.json": "a2eeb790b5be60cd89632f8492356b64a2316a9768737eec042a6ec93256b2a0",
+    "runs/2026-11-09-rollover-current-protocol.json": "96693cc51885d95a7c143372c0d9868057eedd5cf3225bb1075f9597d0262476",
+    "runs/2026-11-09-rollover-current-website.json": "5bb400e7cf0ac9fd9cb470bb5c7acb209c37cc1c51a5d47cba8fe19e2d7a6ca9",
+    "scripts/verify-enterprise.cjs": "0641a503275d3bc0681407ae851a8b759a3c5b393beefe125f9f0ef5fbd8d5b0",
+    "scripts/verify-organization-directory-evidence.py": "20401e35cad5a6030348e1ffde57c659800dcba47d1a7cd8df27b1042d2a6c9f",
+    "scripts/verify-route-boundaries.py": "95807be676c36fe07ab0df71b178568727998b90a215460cc7e4bc04d15186ea",
+    "state.json": "dd0347f93b438fba2db9da292576b91aecdf1a7d951ad0cdb514ef7fd4e27ea3",
+    "tests/test_organization_directory_evidence.py": "d8faab9ce6776628c3ae52059dda3517e5ee9531149e1c247a406e132fd9051c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-directory-source-refresh.json",
+      "sha256": "e920db98d9bf9e96921e68104827c667b3e5ca62822e4f9e342c5491e3e9fc22"
+    },
+    {
+      "path": "runs/2026-11-09-directory-rollover-linux.json",
+      "sha256": "78fa6134ebfbc15f0728726c09a792e924e887b80b8325002203e86d4bd2ddd6"
+    },
+    {
+      "path": "runs/2026-11-09-rollover-current-website.json",
+      "sha256": "5bb400e7cf0ac9fd9cb470bb5c7acb209c37cc1c51a5d47cba8fe19e2d7a6ca9"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T19:48:33.350855+00:00"
+    }
+  ]
+}

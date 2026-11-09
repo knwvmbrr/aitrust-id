@@ -210,16 +210,23 @@ def test_cli_refuses_other_checkout_output_before_provider_or_credentials(select
     assert 'organization_directory_contract_refused' in capsys.readouterr().err
 
 
-def test_busy_logout_journal_can_roll_over_and_recover(selected,monkeypatch):
-    b,p,s=prepared(selected,[d.ROLES['configure']]);now=int(time.time())
+@pytest.mark.parametrize('setup_elapsed',[0,3])
+def test_busy_logout_journal_can_roll_over_and_recover(selected,monkeypatch,setup_elapsed):
+    clock=[int(time.time())];monkeypatch.setattr(d.time,'time',lambda:clock[0])
+    b,p,s=prepared(selected,[d.ROLES['configure']]);now=clock[0]
     with b.journal.db() as db:
         db.executemany('INSERT INTO logged_out VALUES(?,?)',[(d.digest(('previously-logged-out-token' if i==0 else str(i)).encode()),now) for i in range(10000)])
         db.executemany('INSERT INTO events(at,actor,operation,outcome) VALUES(?,?,?,?)',[(now,'a'*64,'configure','allowed') for _ in range(10000)])
     assert Path(selected[0]['state_file']).stat().st_size>2_000_000
+    # Token freshness is relative to logout, not the start of a potentially slow setup.
+    clock[0]+=setup_elapsed
     assert b.journal.logout('additional-realistic-token')=={'local_logout':True}
     with b.journal.db() as db:
-        with pytest.raises(d.Refused):b.journal.allowed(db,selected[2],'previously-logged-out-token',now+3)
-    later=now+d.CLOCK_SKEW_SECONDS+2;monkeypatch.setattr(d.time,'time',lambda:later);p.issued=later
+        fence=b.journal.control(db)[2]
+        assert fence==clock[0]+d.CLOCK_SKEW_SECONDS+1
+        with pytest.raises(d.Refused):b.journal.allowed(db,selected[2],'previously-logged-out-token',clock[0]+3)
+        with pytest.raises(d.Refused):b.journal.allowed(db,selected[2],'not-logged-out-token',fence)
+    clock[0]=fence+1;p.issued=clock[0]
     result=b.journal.recover(selected[3],'fresh-replacement-token',p)
     assert result['recovered'] is True
     with b.journal.db() as db:

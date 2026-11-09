@@ -1,0 +1,141 @@
+{
+  "captured_at": "2026-11-09T19:30:32.394660+00:00",
+  "pass": true,
+  "selected_assets": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "007e00b370d3022c5dd9cece3f9d4611ffe1f7a83e69e2d9abee191bd8f79819",
+      "bytes": 131411
+    },
+    {
+      "route": "/tags/pii-redacted/",
+      "status": 200,
+      "sha256": "024d71e9875474929b5e71e38a76aead0efae588e67a160dd014469cec0ff742",
+      "bytes": 21091
+    },
+    {
+      "route": "/reference/redaction-recognition.json",
+      "status": 200,
+      "sha256": "c096b9f392d07d9429839f734d5bec88c5688cef1de43d09da348dfbeed48ad4",
+      "bytes": 48600
+    },
+    {
+      "route": "/reference/redaction-compact-addresses.json",
+      "status": 200,
+      "sha256": "b29d5f7a30066ffae747a0e69e2d134d58a49f53e5cdbd7ac953340190d75a37",
+      "bytes": 16811
+    },
+    {
+      "route": "/reference/redaction-recognition.md",
+      "status": 200,
+      "sha256": "f7b68e9563884d95904afeeab7a64d4bb3fb5e3009d2609b9a869b2776c7b3e0",
+      "bytes": 6564
+    },
+    {
+      "route": "/reference/pipeline-performance.json",
+      "status": 200,
+      "sha256": "9ef93154fed86f55a255688bb0cde6cfe1e091eeb78ea031b9869919e5eead8d",
+      "bytes": 32534
+    },
+    {
+      "route": "/reference/public-scope.json",
+      "status": 200,
+      "sha256": "f2409b8b06373018f446cacc21bcc91272f0b725b5102d61f90c70724d31f98f",
+      "bytes": 663091
+    },
+    {
+      "route": "/reference/changelog.md",
+      "status": 200,
+      "sha256": "5c371c41bdcbeab0888d81a9127ed484e6b7721c4a169fe2b76b1e095c08afaf",
+      "bytes": 542355
+    },
+    {
+      "route": "/reference/tag-performance.json",
+      "status": 200,
+      "sha256": "0cd0b7d99209ce785df42b22477c525af224db59904c15b9dc4afee72033e1a1",
+      "bytes": 88924
+    },
+    {
+      "route": "/reference/native-share-developer.md",
+      "status": 200,
+      "sha256": "d3ac17d93cb8658b993b470cf11b5b0ec87f90eee1e15bad64d58d680b57efa0",
+      "bytes": 6255
+    },
+    {
+      "route": "/reference/conformance/",
+      "status": 200,
+      "sha256": "3af85effd4cb4c98a18341a3aa4f950ffe103d115bf32089db3142252bdacd7c",
+      "bytes": 9317
+    },
+    {
+      "route": "/policies/privacy/",
+      "status": 200,
+      "sha256": "088539ec765356edb15042649d3ce88fc75c9383c3b14f375ed76a3303aa1ef0",
+      "bytes": 16752
+    },
+    {
+      "route": "/policies/terms/",
+      "status": 200,
+      "sha256": "e74d2c8789c1b0062b0ad4dbda96c6342a8dc87e1d3397b70878e6c48a47b621",
+      "bytes": 8953
+    },
+    {
+      "route": "/assets/index-ku2SrmsM.js",
+      "status": 200,
+      "sha256": "465e190140b0401f445f1a454044abfd06c91f9ff0475c759c00a80b766aff1a",
+      "bytes": 556109
+    },
+    {
+      "route": "/assets/index-3usITcEe.css",
+      "status": 200,
+      "sha256": "8526c74a4b375e4a9a2b4be7c94107ee16974433bd50ea312e27d27c60c0070f",
+      "bytes": 24015
+    },
+    {
+      "route": "/reference/native-share-workflow.json",
+      "status": 200,
+      "sha256": "d0ab6dfd2dab4258c409ec0276e829fad0d9e547e8070ba325f9784a94fd76e8",
+      "bytes": 5840
+    }
+  ],
+  "selected_asset_count": 16,
+  "all_assets_claimed": false,
+  "anonymous_source_download": {
+    "status": 200,
+    "anonymous": true,
+    "selected_source_bytes_match": true,
+    "sha256": "b3c5ac02a5eb05a56235605d6e88fdc7b732ae0a997e1caf7eb68481e8140c03"
+  },
+  "source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+  "scope_records": 202,
+  "completed_requirements": 130,
+  "open_requirements": 72,
+  "full_requirements_closed": [],
+  "independent_accuracy": false,
+  "physical_device_acceptance": false,
+  "app_store_released": false,
+  "deployment_url": "https://7a65ed48.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "merge_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+  "reviewed_head": "035da3ae1b97c98bd74225620c7a9043702befcd",
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/94",
+  "required_checks_passed": 22,
+  "code_review_findings": 0,
+  "unresolved_review_threads": 0,
+  "administrator_override_used": false,
+  "live_catalogue": "runs/2026-11-09-pan-live-site.json",
+  "live_workflows": "runs/2026-11-09-pan-live-workflows.json",
+  "pii_compact_expected_fully_masked": 6,
+  "pii_compact_extra_masked_characters": 0,
+  "known_english_errors_retained": true,
+  "outside_person_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "local_docker_started": false,
+  "primary_unrelated_files_preserved": 12,
+  "app_store_record_created": true,
+  "app_store_uploaded": false,
+  "xcode_account_configured": true,
+  "phone_release_offered": false
+}

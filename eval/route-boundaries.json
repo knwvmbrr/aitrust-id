@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-09T19:06:21.540929+00:00",
-  "reviewed_by": "Codex",
+  "reviewed_at": "2026-11-09T19:48:32.259787+00:00",
+  "reviewed_by": "Codex \u2014 current test/receipt consumer diff review; production directory authorization unchanged",
   "rules": [
     "X-01",
     "X-03",
@@ -132,7 +132,7 @@
     "eval/methods/context-v6-eager.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
     "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
     "eval/requirements.txt": "4cb4f554f9e4247e11edf4dfdccd084513efeed6cde4b5e19546ec017caf1c44",
-    "eval/revalidation.json": "6ee05ffd68454cee9b6ac241f417c8a00dd5104adfa8b0d9bbd36a41b104f7b0",
+    "eval/revalidation.json": "8e99d28b6a0be575febec624512ea3d4a2975e3473460f054e3310e8606dcfc7",
     "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
     "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
     "extension/src/adapters/README.md": "96f8b739ce57bf19ed5e6c168fdc20b8f57431fb6e2ee41d4b58c62a09d1c366",
@@ -282,6 +282,7 @@
     "runs/2026-11-07-recovery-source-binding.json": "bd07e7e141366c09dd3ad9f12fec6ec4aad42e38a9334cdad73bb343a34ceb66",
     "runs/2026-11-07-security-channel-status.json": "39675f04f4b37ee938e3a6a224000fe987297701e0c1c5f763534dfe301ec6ea",
     "runs/2026-11-07-security-reviewed-acceptance.json": "3188d9f3f0a7ceb53b7e68991895566db0c7c288a8fef49ab462fcf5256b62da",
+    "runs/2026-11-09-directory-rollover-linux.json": "78fa6134ebfbc15f0728726c09a792e924e887b80b8325002203e86d4bd2ddd6",
     "runs/2026-11-09-native-share-diagnostic-workflow.json": "daa99c783ad570bd5c3e128d147fd4ce7d1086513fc20be92f0a59bf6cdab3c8",
     "runs/2026-11-09-native-share-distribution-workflow.json": "7f450319fd0a2ce81ed85a8c35292ba128900b19f7e18f22ebf68b21bad1493c",
     "runs/2026-11-09-native-share-hosted-workflow.json": "d0ab6dfd2dab4258c409ec0276e829fad0d9e547e8070ba325f9784a94fd76e8",
@@ -687,7 +688,7 @@
     "scripts/verify-nli-pairs.py": "9d94977b198be4052aefee761e7cd5ae29a30f089c8b637eaae733de64766caf",
     "scripts/verify-nli-profile.py": "8bf7165d012d04a5755d7c1df8c2be3b70960af25ec3352f90693e2fd344fdf7",
     "scripts/verify-nli-references.py": "9a738042491d2b87b55293e5dae5fc965793b926063278f583708d2d465e9a4d",
-    "scripts/verify-organization-directory-evidence.py": "39080a21d01bb61ef15ee250cfb507f96088955b2a5dec6744bcc7920e1b0eae",
+    "scripts/verify-organization-directory-evidence.py": "20401e35cad5a6030348e1ffde57c659800dcba47d1a7cd8df27b1042d2a6c9f",
     "scripts/verify-organization-directory.py": "74159f0ff30dc3c9e3daa8f052e2b817a90807685c82419efd0fd75f8c3ff5fd",
     "scripts/verify-private-policy.py": "22b5725b403f87e4ecdb68663b66994320074e4439c5a6d618e0e88d011f0197",
     "scripts/verify-ps-efficiency.py": "99c08706ba84cc0efb6751ccd6b24d85e122b89838c2854a11677ed0bf6c30ac",
@@ -704,7 +705,7 @@
     "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "1a91d44dc5bd6881aa89c0ffef0cdbcbf9ea3e1ba523d8fad4ab45b6f0732f8e",
+    "scripts/verify-route-boundaries.py": "95807be676c36fe07ab0df71b178568727998b90a215460cc7e4bc04d15186ea",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
@@ -914,8 +915,8 @@
     "tests/test_nli_references.py": "9a858ad2e3eeb2b501e26dccc1b4fd4d14f8c933a699c0bb17c3071de5c8c578",
     "tests/test_observation_verifier.py": "2eef69e0657e9f90ce1878d21e79483704e8f350f902c036a40ecb87ac2804f3",
     "tests/test_offline_revocation.py": "4f638ed0779ef307714ce1b0c23b90a4adc62eede6e763c409dcb0f1ce7ea9d2",
-    "tests/test_organization_directory.py": "03604f5f97cdce371e5de9b08a637c82055e6f0e92a5a4351633f0bb3e691de6",
-    "tests/test_organization_directory_evidence.py": "aa2e0db5f5e4e4709eb660f72558516ad1570cb32df5700f0e009d7daa45c2b7",
+    "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0",
+    "tests/test_organization_directory_evidence.py": "d8faab9ce6776628c3ae52059dda3517e5ee9531149e1c247a406e132fd9051c",
     "tests/test_package_proximity.py": "b789d18cb0613cad336da111780c333f0d2f2ebd8f41a862fbbe3a14f887673b",
     "tests/test_pipeline_performance.py": "134d012e7be672d98065fbc3ef5c1e21fc70bb4c0609718fa2288c5941a1a69a",
     "tests/test_private_policy.py": "701700ed4a4ef7e3ba5e25683ef99c6b5593f1e3fc6b26b38cbc952b7d4cbb2d",
@@ -992,8 +993,8 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "extension": "runs/2026-11-09-pan-current-extension-accepted.json",
-    "website": "runs/2026-11-09-pan-current-website-accepted.json"
+    "extension": "runs/2026-11-09-rollover-current-extension.json",
+    "website": "runs/2026-11-09-rollover-current-website-accepted.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

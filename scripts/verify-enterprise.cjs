@@ -163,7 +163,7 @@ const FORBIDDEN = [
   const sso=tags.find(t=>t.id==='sso');
   if (sso.references.includes('/reference/directory-software-linux.json')) {
     const fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path');
-    const proof=JSON.parse(fs.readFileSync(path.join(__dirname,'../runs/2026-11-07-directory-clock-linux.json')));
+    const proof=JSON.parse(fs.readFileSync(path.join(__dirname,'../runs/2026-11-09-directory-rollover-linux.json')));
     if(proof.pass!==true||proof.source_unchanged!==true||proof.real_provider_and_database!==true||proof.production_changed!==false||proof.human_acceptance!==false||proof.controls.length!==28||!proof.controls.every(c=>c.pass===true))fail('SSO lacks its complete actual software evidence');
     for(const [relative,expected] of Object.entries(proof.sources)) {
       if(!/^[A-Za-z0-9_.\/-]+$/.test(relative)||relative.split('/').includes('..'))throw Error('Unsafe directory evidence source');
