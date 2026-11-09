@@ -1,5 +1,5 @@
 """Development diagnostic rejects stale sources and corrupt engine results."""
-import copy,importlib.util,json,hashlib,sys
+import copy,importlib.util,json,hashlib,sys,runpy
 from pathlib import Path
 from unittest.mock import patch
 import pytest
@@ -8,7 +8,10 @@ sys.path.insert(0,str(ROOT))
 spec=importlib.util.spec_from_file_location('client',ROOT/'scripts/measure-redaction-development.py')
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 fixture=json.loads((ROOT/m.FIXTURE).read_text())
-observed=json.loads((ROOT/'runs/2026-11-08-pii-separator-english-linux.json').read_text())
+# The positive transport fixture must represent the selected current engine;
+# historical source mismatches are exercised separately as refusal controls.
+selected=runpy.run_path(str(ROOT/'scripts/build-redaction-performance.py'))['REPORT']
+observed=json.loads((ROOT/selected).read_text())
 INSPECTION=[{'Config':{'User':'10001:10001','Labels':{'com.docker.compose.project':'aitrust-staging'}},'State':{'Running':True}}]
 def engine_result():return {k:copy.deepcopy(observed[k]) for k in ['captured_at','pass','kind','rows','redactor_identity','sources','fixture_sha256','source_unchanged','independent_accuracy_evidence','real_user_data','production_services_modified']}
 def test_actual_development_fixture_recomputes_baseline_error():

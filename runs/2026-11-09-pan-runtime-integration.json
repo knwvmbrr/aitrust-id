@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-11-09T17:09:36.666730+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "scope_ids": [
+    "T-PII",
+    "F-023",
+    "F-105"
+  ],
+  "sources": {
+    "services/anonymizer/app.py": "ae8da51d30008e00a8cc487dd39ba49b9e0971a0a10c41d40860c9e141a1f673"
+  },
+  "actual_isolated_linux_engine": true,
+  "fixed_cohorts_unchanged": true,
+  "compact_expected_fully_masked": 6,
+  "compact_extra_masked_characters_before": 10,
+  "compact_extra_masked_characters_after": 0,
+  "english_rows_and_measurements_unchanged": true,
+  "english_extra_masked_characters": 6,
+  "english_cases_with_extra_masking": 2,
+  "out_of_coverage_partial": 1,
+  "out_of_coverage_untouched": 1,
+  "service_controls_passed": 26,
+  "replay_cases_passed": 15,
+  "clean_setup_controls_passed": 10,
+  "timing_profiles": 12,
+  "focused_python_controls_passed": 198,
+  "chart_controls_passed": 22,
+  "local_docker_started": false,
+  "production_services_modified": false,
+  "independent_accuracy_evidence": false,
+  "human_acceptance_complete": false,
+  "requirements_closed": [],
+  "complete": 130,
+  "open": 72,
+  "target_open": 60,
+  "github_engine_run": 42656246907,
+  "ci_source_commit": "b21da04172cf42d853e32dd2050db3568fef5b79",
+  "original_staging_restored": true,
+  "owned_timing_resources_removed": true
+}

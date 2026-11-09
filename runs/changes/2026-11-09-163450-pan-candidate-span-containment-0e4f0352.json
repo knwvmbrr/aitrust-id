@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-163450-pan-candidate-span-containment-0e4f0352",
+  "recorded_at": "2026-11-09T16:34:50.941876+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "53b6bb04d558267844a490121de233b5e5182510",
+  "changed": "Constrain PAN recognizer evidence to its emitted span, preserving original patterns, scores, contexts and other categories; retain the candidate diagnostic and its corrected fixture-offset refusal.",
+  "proves": "The real pinned 2.2.355 recognizer candidate passes nine synthetic controls and preserves high, medium and low positive shapes; 106 local adapter and IPv6 controls pass.",
+  "limits": "This is a candidate recognizer diagnostic, not complete-engine or HTTP integration, independent accuracy, production deployment or a full scope closure. Current whole-engine observations remain required.",
+  "scope_ids": [
+    "T-PII",
+    "F-023"
+  ],
+  "files": {
+    "docs/pii-pan-token-plan.md": "0cdf6d4846538d4612281870bf41a4c1221f4a63567681b929f550d72fd0c1d2",
+    "runs/2026-11-09-pan-candidate-offset-refusal.json": "afda9fe2b1ee2d527cd45488b6a05cc1f24092779fceff9311e87205771ecde0",
+    "runs/2026-11-09-pan-candidate-recognizer.json": "751f7109a09b72ccd464d5f8832826e486290eeff6ebf6cd6d7ae5302ee49165",
+    "services/anonymizer/app.py": "ae8da51d30008e00a8cc487dd39ba49b9e0971a0a10c41d40860c9e141a1f673",
+    "tests/test_redaction_pan_token.py": "daa5b80a721de413573937652eab89f50da81ab458559fa71878f7b6e1837881"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-pan-candidate-recognizer.json",
+      "sha256": "751f7109a09b72ccd464d5f8832826e486290eeff6ebf6cd6d7ae5302ee49165"
+    },
+    {
+      "path": "runs/2026-11-09-pan-candidate-offset-refusal.json",
+      "sha256": "afda9fe2b1ee2d527cd45488b6a05cc1f24092779fceff9311e87205771ecde0"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_redaction_pan_token.py",
+        "tests/test_complete_ipv6.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T16:34:51.468627+00:00"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "captured_at": "2026-11-09T16:32:34.255555+00:00",
+  "pass": false,
+  "kind": "pinned_pan_recognizer_candidate",
+  "upstream_version": "2.2.355",
+  "upstream_class_sha256": "148393e75b4c41a6d3d04713d95039df752b7359b76f2f4c9e28111981e73c92",
+  "rows": [
+    {
+      "id": "compact_label",
+      "baseline": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "candidate": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "letters_later",
+      "baseline": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "candidate": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "digits_later",
+      "baseline": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "candidate": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "standalone_label",
+      "baseline": [],
+      "candidate": [],
+      "expected": [],
+      "pass": true
+    },
+    {
+      "id": "high",
+      "baseline": [
+        [
+          0,
+          10,
+          0.85
+        ]
+      ],
+      "candidate": [
+        [
+          0,
+          10,
+          0.85
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          10
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "id": "medium",
+      "baseline": [
+        [
+          0,
+          10,
+          0.6
+        ]
+      ],
+      "candidate": [
+        [
+          0,
+          10,
+          0.6
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          10
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "id": "low_punctuation",
+      "baseline": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "candidate": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          10
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "id": "low_order",
+      "baseline": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "candidate": [
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          10
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "id": "adjacent",
+      "baseline": [
+        [
+          24,
+          34,
+          0.85
+        ],
+        [
+          0,
+          10,
+          0.05
+        ]
+      ],
+      "candidate": [
+        [
+          24,
+          34,
+          0.85
+        ]
+      ],
+      "expected": [
+        [
+          23,
+          33
+        ]
+      ],
+      "pass": false
+    }
+  ],
+  "diagnostic_override": true,
+  "whole_engine_integration": false,
+  "http_route_tested": false,
+  "production_services_modified": false,
+  "independent_accuracy_evidence": false,
+  "candidate_class_sha256": "bc5f83e8c16e8ae1a263d8b08ca953d4487f860ad85d0d5a9b995b4a5e2a7023",
+  "real_user_data": false,
+  "failure_diagnosis": "The adjacent-token expected span was 23..33 instead of the literal token at 24..34; the candidate already returned 24..34. The corrected attempt preserves code and input."
+}

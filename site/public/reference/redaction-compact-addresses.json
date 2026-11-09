@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-11-08T08:15:48.216949+00:00",
+  "captured_at": "2026-11-09T16:35:52.269627+00:00",
   "pass": true,
   "kind": "synthetic_english_engine_observations",
   "rows": [
@@ -67,11 +67,6 @@
           "entity": "IP_ADDRESS",
           "start": 11,
           "end": 32
-        },
-        {
-          "entity": "IN_PAN",
-          "start": 0,
-          "end": 10
         }
       ],
       "applied": [
@@ -79,11 +74,6 @@
           "entity": "IP_ADDRESS",
           "start": 11,
           "end": 32
-        },
-        {
-          "entity": "IN_PAN",
-          "start": 0,
-          "end": 10
         }
       ],
       "redaction_changed": true,
@@ -130,7 +120,7 @@
   ],
   "redactor_identity": {
     "version": "presidio-offline-en/v1",
-    "sha256": "00b1a89ffcf50b786c02788fc8078858d932a33cca0f6df6add3d1001dd9d681",
+    "sha256": "bc916488a2bfcc79cbd69087cc635cf9af9029894f6ec8850d23f9febba894e7",
     "configuration": {
       "language": "en",
       "python": "3.12.15",
@@ -204,9 +194,9 @@
       },
       "model_name": "en_core_web_sm",
       "model_version": "3.8.0",
-      "model_manifest_sha256": "3313b683c3e8f52a4fac952330a4a292f73016b9ffc4abaf91b57a0a571f5a90",
+      "model_manifest_sha256": "e5263219fb82b45a82607bcc12af8a558a936146e51895af7eb6baa4dc5a1ba5",
       "sources": {
-        "app": "9ffb5808ced5245c7e99886f25199e8093659de71a7739207fac18599bd4da52",
+        "app": "ae8da51d30008e00a8cc487dd39ba49b9e0971a0a10c41d40860c9e141a1f673",
         "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
         "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
         "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
@@ -279,7 +269,7 @@
         "setuptools": "84.0.0",
         "idna": "3.20"
       },
-      "recognizer_configuration_sha256": "cef863393a00234a47aaa5ce7548da456b4f4d7b55666588e6f81f6d89a80ee1",
+      "recognizer_configuration_sha256": "10a6f8951ff4d44a29b0cf96e9c2c75ac4fd303c08523b9bc1a7828075872e98",
       "recognizer_count": 26,
       "analysis_score_threshold": 0.0,
       "email_suffix_refresh": false,
@@ -287,7 +277,7 @@
     }
   },
   "sources": {
-    "app": "9ffb5808ced5245c7e99886f25199e8093659de71a7739207fac18599bd4da52",
+    "app": "ae8da51d30008e00a8cc487dd39ba49b9e0971a0a10c41d40860c9e141a1f673",
     "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
     "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
     "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
@@ -299,7 +289,7 @@
   "real_user_data": false,
   "production_services_modified": false,
   "client_sources": {
-    "services/anonymizer/app.py": "9ffb5808ced5245c7e99886f25199e8093659de71a7739207fac18599bd4da52",
+    "services/anonymizer/app.py": "ae8da51d30008e00a8cc487dd39ba49b9e0971a0a10c41d40860c9e141a1f673",
     "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
     "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
     "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
@@ -317,27 +307,17 @@
       "en": {
         "cases": 6,
         "cases_with_misses": 0,
-        "cases_with_unexpected_predictions": 1,
+        "cases_with_unexpected_predictions": 0,
         "tp": 6,
-        "fp": 1,
+        "fp": 0,
         "fn": 0,
         "expected": 6,
-        "predicted": 7,
+        "predicted": 6,
         "duplicate_predictions_removed": 0
       },
       "out_of_coverage": {}
     },
     "categories": [
-      {
-        "coverage": "en",
-        "entity": "IN_PAN",
-        "tp": 0,
-        "fp": 1,
-        "fn": 0,
-        "expected": 0,
-        "predicted": 1,
-        "partial_overlap_predictions": 0
-      },
       {
         "coverage": "en",
         "entity": "IP_ADDRESS",
@@ -399,7 +379,7 @@
         "untouched_expected_spans": 0,
         "expected_characters": 21,
         "unmasked_expected_characters": 0,
-        "masked_outside_expected_characters": 10,
+        "masked_outside_expected_characters": 0,
         "masking_is_not_privacy_clearance": true
       },
       {

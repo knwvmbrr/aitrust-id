@@ -23,6 +23,20 @@ analyzer.registry.remove_recognizer('EmailRecognizer')
 analyzer.registry.add_recognizer(OfflineEmailRecognizer())
 import ipaddress
 import re
+from presidio_analyzer.predefined_recognizers import InPanRecognizer
+class ContainedPanRecognizer(InPanRecognizer):
+    def analyze(self,text,entities,nlp_artifacts=None):
+        original=super().analyze(text,entities,nlp_artifacts)
+        # Upstream's low-pattern lookaheads can borrow evidence from later
+        # text. Both original conditions must hold inside the candidate span.
+        def contained(result):
+            value=text[result.start:result.end]
+            return (result.entity_type!='IN_PAN' or
+                    (re.search(r'[A-Za-z]',value) is not None and
+                     re.search(r'[0-9]{4}',value) is not None))
+        return [result for result in original if contained(result)]
+analyzer.registry.remove_recognizer('InPanRecognizer')
+analyzer.registry.add_recognizer(ContainedPanRecognizer())
 IPV6_TOKEN=re.compile(r'(?<![0-9A-Za-z_:.])([0-9A-Fa-f:.]{2,64})(?![0-9A-Za-z_:.%])')
 IPV6_LABEL_TOKEN=re.compile(r'(?<![0-9A-Za-z_:.])(?P<label>ip(?:v6)?(?:_?address)?|addr(?:ess)?|host):(?P<value>[0-9A-Fa-f:.]{2,64})(?![0-9A-Za-z_:.%])',re.I)
 def complete_ipv6_spans(text):
