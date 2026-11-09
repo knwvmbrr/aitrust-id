@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-09
 
+### 2026-11-09-163025-ios-state-timestamp-repair-07b7e253
+
+Recorded 2026-11-09T16:30:25.957827+00:00 · Contributor: Codex · change
+
+- **Changed.** Restore timezone-aware UTC state timestamps after protected CI refused the date-only update field.
+- **Evidence.** The unchanged accountability verifier and all 40 focused accountability controls pass; native runtime sources and acceptance stay unchanged. [Change record](./runs/changes/2026-11-09-163025-ios-state-timestamp-repair-07b7e253.json).
+- **Not claimed.** This repairs metadata, not a tag, phone release or full requirement closure; the failed CI attempt remains visible.
+
+
 ### 2026-11-09-162444-ios-current-reader-evidence-57eb2df0
 
 Recorded 2026-11-09T16:24:44.032693+00:00 · Contributor: Codex · change
