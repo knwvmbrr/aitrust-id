@@ -51,6 +51,29 @@ def test_package_is_deterministic_for_identical_selected_sources(prepared_assets
     assert builder.files() == builder.files()
 
 
+@pytest.mark.parametrize('profile,bundle,version', [('developer', 'com.aitrustid.personal.preview', '0.1'),
+                                                  ('distribution', 'com.aitrustid.app', '1.0')])
+def test_profiles_package_their_own_identifiers_without_signing(profile, bundle, version, prepared_assets):
+    payload = builder.files(profile)
+    project = plistlib.loads(payload['AITrustID.xcodeproj/project.pbxproj'])
+    settings = [r['buildSettings'] for r in project['objects'].values() if r['isa'] == 'XCBuildConfiguration' and 'PRODUCT_BUNDLE_IDENTIFIER' in r['buildSettings']]
+    assert {r['PRODUCT_BUNDLE_IDENTIFIER'] for r in settings} == {bundle, bundle + '.share', bundle + '.uiTests'}
+    assert all(r['CODE_SIGNING_ALLOWED'] == 'NO' and 'DEVELOPMENT_TEAM' not in r for r in settings)
+    assert all(plistlib.loads(payload[t + '-Info.plist'])['CFBundleShortVersionString'] == version for t in ['App', 'Share'])
+    assert payload['AppLicense.txt'] == (ROOT / 'LICENSE').read_bytes()
+    assert payload['Privacy.txt'] == (ROOT / 'mobile/ios/Privacy.txt').read_bytes()
+    assert 'does not redact personal information' in payload['Privacy.txt'].decode()
+    assert payload['Artwork.xcassets/AppIcon.appiconset/AppIcon.png'] == (ROOT / 'mobile/ios/Artwork/AppIcon.png').read_bytes()
+    assert not any(name.endswith(('.p12', '.mobileprovision', '.entitlements')) for name in payload)
+
+
+@pytest.mark.parametrize('profile', ['', 'production', '../../private', None, True])
+def test_unknown_profile_refused_before_packaging(monkeypatch, profile):
+    monkeypatch.setattr(builder, 'ROOT', Path('/nonexistent-fixture-must-not-be-read'))
+    with pytest.raises(ValueError, match='Unknown native project profile'):
+        builder.files(profile)
+
+
 @pytest.fixture
 def source_copy(tmp_path, monkeypatch):
     root = tmp_path / 'checkout'; root.mkdir()

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-162444-ios-current-reader-evidence-57eb2df0",
+  "recorded_at": "2026-11-09T16:24:44.032693+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "53b6bb04d558267844a490121de233b5e5182510",
+  "changed": "Refresh the native developer guide, preserved scope projection, current protocol and website execution receipts, route review and machine-readable App Store preparation state.",
+  "proves": "All five selected engineering receipts are current; route-boundary checks pass; the 202-record scope ledger remains intact at 130 complete and 72 open.",
+  "limits": "Verification and source publication do not sign or upload an app, independently validate tag accuracy, prove physical-phone or human acceptance, or close a full requirement.",
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "15f1c28f23587765d4307b6593c787ad3efb7d7ae9949924fdf6e356ad6550a0",
+    "README.md": "8c27785a0be0627adc7d22cb17d2e76294754c235712f95bba786c7a077c5f62",
+    "docs/app-store-readiness.md": "3d96cd83f6b7ae98f318459a4338d9e05f32fab65d22559be8ec494756368b3d",
+    "docs/ios-distribution-plan.md": "d6c18b329fefd1675fd983d3c68c2839bda8a6527b8c02d45a528c34c4e3bf87",
+    "docs/native-share-developer.md": "d3ac17d93cb8658b993b470cf11b5b0ec87f90eee1e15bad64d58d680b57efa0",
+    "docs/scope-progress.json": "eef68c9105ee4ec627c5f16735cb7de7943c9b84d245bef3146f785ad39dbe1a",
+    "docs/scope-progress.md": "65da0ec5cb97d802caf1b08114abae5ef31976e6709579d32966ff6c3f0f7518",
+    "eval/route-boundaries.json": "bb87b1ec2ea83142a20b75805bc0c0b99334418266474cfd53674549cc52a5c2",
+    "mobile/ios/Artwork/AppIcon.png": "0cd0240047321d2f59df9764ba7f36ed4e167d59c51ff6a8dbb76ce5e2d4a866",
+    "mobile/ios/Artwork/AppIcon.svg": "46bb2cce671805c515570e3fd12adf65a11f98086ae8b1dfb9a05718ff1d3592",
+    "mobile/ios/Privacy.txt": "69b67d0265315b9368cf50e88b4b66dcc66ddb12eabe2a7bbc56f6579164bbc7",
+    "mobile/ios/Source/CheckerController.swift": "740a98d326f3227f57610da003a0dce7ed158353c9269ab28334784b656ae485",
+    "mobile/ios/Source/ShareController.swift": "c96ca77c1a3bfc08d3e13975cb1aba8daba727312bdd59d9a778bf04d0144453",
+    "mobile/ios/Tests/UIFlows.swift": "eea6178049c2465587d8a00c64e12f3a7e47fd9fb8ae63a59fa48044dd96efb8",
+    "runs/2026-11-09-ios-distribution-archive.json": "3149906d58b5198fc3e850bd287a8478c2a0ccfc84e63bd238116eb77e2ae3da",
+    "runs/2026-11-09-ios-distribution-boundaries.json": "a83c175def28f4f760810891cda9a55c9bae0e0611b6f503ae060a707dd5a40a",
+    "runs/2026-11-09-ios-distribution-final-archive.json": "9825773eab80b093f31739cded885a935ba4745673ee26c6514f53073719f1f7",
+    "runs/2026-11-09-ios-distribution-increment.json": "e26329091ac22529a7ee278dc2ce1f423fcc7d58102a960a04e0f4780e1eb91a",
+    "runs/2026-11-09-ios-distribution-protocol.json": "3616eac93641dfbd0a7eed03a890285962256b01b763e11fe96f29f8fe6b56d2",
+    "runs/2026-11-09-ios-distribution-website.json": "7119396f12238eff7a91c8ba7b8842e2662c363ec9f04276361e50246820ceba",
+    "runs/2026-11-09-native-share-diagnostic-workflow.json": "daa99c783ad570bd5c3e128d147fd4ce7d1086513fc20be92f0a59bf6cdab3c8",
+    "runs/2026-11-09-native-share-distribution-workflow.json": "7f450319fd0a2ce81ed85a8c35292ba128900b19f7e18f22ebf68b21bad1493c",
+    "runs/2026-11-09-native-share-initial-workflow.json": "10a00316869dabd4c846733826327f02b0c3c1b83fec867c8e8e6ca14b8874e7",
+    "scripts/build-ios-project.py": "e3e98f8b9cc52cff976816b016332c9067912e133217ec33b261e4f9006668ab",
+    "scripts/verify-ios-archive.py": "5a7123af1abff6212eaef68e0601d1b4adbbb8a33a74a7485877a52b34c5c173",
+    "scripts/verify-ios-share.py": "628c1b32384fd9ef8b318f61433e725b2cbe15dfcee1a1c771978bcaa3eedc7a",
+    "scripts/verify-native-share-evidence.py": "8ee28312bacb4687ed4435ea007bdc279b91218af3d6b2bdd7992086529fee23",
+    "site/public/reference/native-share-developer.md": "d3ac17d93cb8658b993b470cf11b5b0ec87f90eee1e15bad64d58d680b57efa0",
+    "site/public/reference/native-share-workflow.json": "7f450319fd0a2ce81ed85a8c35292ba128900b19f7e18f22ebf68b21bad1493c",
+    "site/public/reference/public-scope.json": "c8e5bd87ef52b8e9eb0dca924e171ffc2b8dd7b0033073ea9c50d55a9c8817d3",
+    "site/scripts/prepare.mjs": "02fefd83b36f8af3eae32ba2628e38210082ab65628a190db9c02b6d84a587ac",
+    "site/src/public-scope.json": "c8e5bd87ef52b8e9eb0dca924e171ffc2b8dd7b0033073ea9c50d55a9c8817d3",
+    "site/src/scope-manifest.json": "196978c4b75b618bba1d350108e1912c57af03f90016bbd4b32bfa98d6c54bb8",
+    "state.json": "07b94bc233c0435ee4044592de8d75e328a762bf2003b64a0eb200fb0f601652",
+    "tests/test_ios_archive.py": "4e27ae86152a243bcef9a141d15e59c3c2d63309c9c73d1550a9b27695b23a35",
+    "tests/test_ios_project_package.py": "329cc64df4ff3056811bc781fcfcc651a59834d4ff81004f8050c955c23109ab"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-ios-distribution-protocol.json",
+      "sha256": "3616eac93641dfbd0a7eed03a890285962256b01b763e11fe96f29f8fe6b56d2"
+    },
+    {
+      "path": "runs/2026-11-09-ios-distribution-website.json",
+      "sha256": "7119396f12238eff7a91c8ba7b8842e2662c363ec9f04276361e50246820ceba"
+    },
+    {
+      "path": "runs/2026-11-09-ios-distribution-boundaries.json",
+      "sha256": "a83c175def28f4f760810891cda9a55c9bae0e0611b6f503ae060a707dd5a40a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-native-share-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T16:24:44.427921+00:00"
+    }
+  ]
+}

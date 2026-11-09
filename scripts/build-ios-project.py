@@ -25,7 +25,10 @@ def uid(name):
     return digest(name.encode())[:24].upper()
 
 
-def project():
+def project(profile='developer'):
+    if profile not in ('developer', 'distribution'):
+        raise ValueError('Unknown native project profile')
+    bundle = 'com.aitrustid.app' if profile == 'distribution' else 'com.aitrustid.personal.preview'
     objects = {}
     def put(identity, isa, **fields):
         key = uid(identity); objects[key] = {"isa": isa, **fields}; return key
@@ -33,28 +36,34 @@ def project():
                    for name in ['App.swift', 'Assets.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift']}
     sources = put('source-group', 'PBXGroup', children=list(source_refs.values()), path='Source', sourceTree='<group>')
     assets = put('assets-folder', 'PBXFileReference', lastKnownFileType='folder', path='Assets', sourceTree='<group>')
+    extras = [put('resource-' + name, 'PBXFileReference', lastKnownFileType=kind, path=name, sourceTree='<group>')
+              for name, kind in [('Artwork.xcassets', 'folder.assetcatalog'), ('Notices', 'folder'),
+                                 ('Privacy.txt', 'text'), ('AppLicense.txt', 'text')]]
     products = {}
     for target, suffix, kind in [('App', 'app', 'wrapper.application'), ('Share', 'appex', 'wrapper.app-extension')]:
         products[target] = put('product-' + target, 'PBXFileReference', explicitFileType=kind, path='AITrustID' + ('Share' if target == 'Share' else '') + '.' + suffix, sourceTree='BUILT_PRODUCTS_DIR')
     product_group = put('product-group', 'PBXGroup', children=list(products.values()), name='Products', sourceTree='<group>')
     test_file = put('ui-file', 'PBXFileReference', lastKnownFileType='sourcecode.swift', path='UIFlows.swift', sourceTree='<group>')
     tests = put('test-group', 'PBXGroup', children=[test_file], path='Tests', sourceTree='<group>')
-    group = put('main-group', 'PBXGroup', children=[sources, tests, assets, product_group], sourceTree='<group>')
+    group = put('main-group', 'PBXGroup', children=[sources, tests, assets, *extras, product_group], sourceTree='<group>')
     targets = {}
     for target, main in [('App', 'App.swift'), ('Share', 'ShareController.swift')]:
         build_files = [put(target + '-source-' + name, 'PBXBuildFile', fileRef=source_refs[name]) for name in [main, 'Assets.swift', 'CheckerController.swift', 'SharedText.swift']]
         phases = [put(target + '-sources', 'PBXSourcesBuildPhase', buildActionMask=2147483647, files=build_files, runOnlyForDeploymentPostprocessing=0),
                   put(target + '-resources', 'PBXResourcesBuildPhase', buildActionMask=2147483647, files=[put(target + '-asset-build', 'PBXBuildFile', fileRef=assets)], runOnlyForDeploymentPostprocessing=0)]
+        extra_refs = extras if target == 'App' else extras[1:]
+        objects[phases[1]]['files'].extend(put(target + '-extra-' + reference, 'PBXBuildFile', fileRef=reference) for reference in extra_refs)
         if target == 'App':
             embedded = put('embed-share-build', 'PBXBuildFile', fileRef=products['Share'], settings={'ATTRIBUTES': ['CodeSignOnCopy', 'RemoveHeadersOnCopy']})
             phases.append(put('embed-share', 'PBXCopyFilesBuildPhase', buildActionMask=2147483647, dstPath='', dstSubfolderSpec=13, files=[embedded], name='Embed Share Extension', runOnlyForDeploymentPostprocessing=0))
         configurations = []
         for mode in ['Debug', 'Release']:
-            settings = {'PRODUCT_NAME': 'AITrustID' + ('Share' if target == 'Share' else ''), 'PRODUCT_BUNDLE_IDENTIFIER': 'com.aitrustid.personal.preview' + ('.share' if target == 'Share' else ''),
+            settings = {'PRODUCT_NAME': 'AITrustID' + ('Share' if target == 'Share' else ''), 'PRODUCT_BUNDLE_IDENTIFIER': bundle + ('.share' if target == 'Share' else ''),
                         'INFOPLIST_FILE': target + '-Info.plist', 'GENERATE_INFOPLIST_FILE': 'NO', 'CODE_SIGNING_ALLOWED': 'NO', 'SWIFT_VERSION': '5.0',
                         'IPHONEOS_DEPLOYMENT_TARGET': '18.0', 'TARGETED_DEVICE_FAMILY': '1,2', 'SUPPORTED_PLATFORMS': 'iphoneos iphonesimulator',
                         'LD_RUNPATH_SEARCH_PATHS': '$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks', 'SWIFT_OPTIMIZATION_LEVEL': '-Onone' if mode == 'Debug' else '-O'}
             if target == 'Share': settings.update(APPLICATION_EXTENSION_API_ONLY='YES', SKIP_INSTALL='YES')
+            else: settings['ASSETCATALOG_COMPILER_APPICON_NAME'] = 'AppIcon'
             configurations.append(put(target + '-config-' + mode, 'XCBuildConfiguration', buildSettings=settings, name=mode))
         configuration_list = put(target + '-configuration-list', 'XCConfigurationList', buildConfigurations=configurations, defaultConfigurationIsVisible=0, defaultConfigurationName='Debug')
         targets[target] = put('target-' + target, 'PBXNativeTarget', buildConfigurationList=configuration_list, buildPhases=phases, buildRules=[], dependencies=[], name='AITrustID' + ('Share' if target == 'Share' else ''), productName='AITrustID' + ('Share' if target == 'Share' else ''), productReference=products[target], productType='com.apple.product-type.application' if target == 'App' else 'com.apple.product-type.app-extension')
@@ -65,7 +74,7 @@ def project():
     objects[product_group]['children'].append(ui_product)
     ui_source = put('ui-source-build', 'PBXBuildFile', fileRef=test_file)
     ui_phase = put('ui-source-phase', 'PBXSourcesBuildPhase', buildActionMask=2147483647, files=[ui_source], runOnlyForDeploymentPostprocessing=0)
-    ui_configs = [put('ui-config-' + mode, 'XCBuildConfiguration', name=mode, buildSettings={'PRODUCT_NAME': 'AITrustIDUITests', 'PRODUCT_BUNDLE_IDENTIFIER': 'com.aitrustid.personal.preview.uiTests', 'GENERATE_INFOPLIST_FILE': 'YES', 'TEST_TARGET_NAME': 'AITrustID', 'SWIFT_VERSION': '5.0', 'IPHONEOS_DEPLOYMENT_TARGET': '18.0', 'TARGETED_DEVICE_FAMILY': '1,2', 'CODE_SIGNING_ALLOWED': 'NO', 'LD_RUNPATH_SEARCH_PATHS': '$(inherited) @executable_path/Frameworks @loader_path/Frameworks'}) for mode in ['Debug', 'Release']]
+    ui_configs = [put('ui-config-' + mode, 'XCBuildConfiguration', name=mode, buildSettings={'PRODUCT_NAME': 'AITrustIDUITests', 'PRODUCT_BUNDLE_IDENTIFIER': bundle + '.uiTests', 'GENERATE_INFOPLIST_FILE': 'YES', 'TEST_TARGET_NAME': 'AITrustID', 'SWIFT_VERSION': '5.0', 'IPHONEOS_DEPLOYMENT_TARGET': '18.0', 'TARGETED_DEVICE_FAMILY': '1,2', 'CODE_SIGNING_ALLOWED': 'NO', 'LD_RUNPATH_SEARCH_PATHS': '$(inherited) @executable_path/Frameworks @loader_path/Frameworks'}) for mode in ['Debug', 'Release']]
     ui_config_list = put('ui-config-list', 'XCConfigurationList', buildConfigurations=ui_configs, defaultConfigurationIsVisible=0, defaultConfigurationName='Debug')
     app_proxy = put('ui-app-proxy', 'PBXContainerItemProxy', containerPortal=uid('project'), proxyType=1, remoteGlobalIDString=targets['App'], remoteInfo='AITrustID')
     ui_dependency = put('ui-app-dependency', 'PBXTargetDependency', target=targets['App'], targetProxy=app_proxy)
@@ -94,7 +103,9 @@ def scheme():
     return ET.tostring(root, encoding='utf-8', xml_declaration=True)
 
 
-def files():
+def files(profile='developer'):
+    if profile not in ('developer', 'distribution'):
+        raise ValueError('Unknown native project profile')
     # Keep the current source/runtime/notice contract in one audited packager.
     native = runpy.run_path(str(SOURCE_ROOT / 'scripts/native_bundle.py'))
     native['assets'].__globals__['ROOT'] = ROOT
@@ -112,11 +123,20 @@ def files():
     payload['Tests/UIFlows.swift'] = file.read_bytes()
     for target in ['App', 'Share']:
         info = {'CFBundleDisplayName': 'AI Trust ID', 'CFBundleIdentifier': '$(PRODUCT_BUNDLE_IDENTIFIER)', 'CFBundleExecutable': '$(EXECUTABLE_NAME)', 'CFBundleName': '$(PRODUCT_NAME)',
-                'CFBundlePackageType': 'APPL' if target == 'App' else 'XPC!', 'CFBundleVersion': '1', 'CFBundleShortVersionString': '0.1', 'LSRequiresIPhoneOS': True}
-        if target == 'App': info.update(UILaunchScreen={}, UIApplicationSceneManifest={'UIApplicationSupportsMultipleScenes': False})
+                'CFBundlePackageType': 'APPL' if target == 'App' else 'XPC!', 'CFBundleVersion': '1', 'CFBundleShortVersionString': '1.0' if profile == 'distribution' else '0.1', 'LSRequiresIPhoneOS': True}
+        if target == 'App': info.update(UILaunchScreen={}, UIApplicationSceneManifest={'UIApplicationSupportsMultipleScenes': False},
+                                       UISupportedInterfaceOrientations=['UIInterfaceOrientationPortrait', 'UIInterfaceOrientationPortraitUpsideDown', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight'])
         else: info['NSExtension'] = {'NSExtensionPointIdentifier': 'com.apple.share-services', 'NSExtensionPrincipalClass': 'ShareController', 'NSExtensionAttributes': {'NSExtensionActivationRule': {'NSExtensionActivationSupportsText': True}}}
         payload[target + '-Info.plist'] = plistlib.dumps(info)
-    payload['AITrustID.xcodeproj/project.pbxproj'] = plistlib.dumps(project())
+    for name, target in [('Privacy.txt', 'Privacy.txt'), ('Artwork/AppIcon.png', 'Artwork.xcassets/AppIcon.appiconset/AppIcon.png')]:
+        file = ROOT / 'mobile/ios' / name
+        if file.is_symlink() or not file.is_file() or any(p.is_symlink() for p in file.parents if p != ROOT and ROOT in p.parents):
+            raise ValueError('Native disclosure or artwork source refused')
+        payload[target] = file.read_bytes()
+    payload['AppLicense.txt'] = payload['LICENSE']
+    payload['Artwork.xcassets/Contents.json'] = b'{"info":{"author":"xcode","version":1}}\n'
+    payload['Artwork.xcassets/AppIcon.appiconset/Contents.json'] = b'{"images":[{"filename":"AppIcon.png","idiom":"universal","platform":"ios","size":"1024x1024"}],"info":{"author":"xcode","version":1}}\n'
+    payload['AITrustID.xcodeproj/project.pbxproj'] = plistlib.dumps(project(profile))
     payload['AITrustID.xcodeproj/xcshareddata/xcschemes/AITrustID.xcscheme'] = scheme()
     return payload
 
@@ -124,9 +144,10 @@ def files():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--profile', choices=('developer', 'distribution'), default='developer')
     args = parser.parse_args()
     try:
-        payload = files()
+        payload = files(args.profile)
         archive = io.BytesIO()
         with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED) as package:
             for name, raw in sorted(payload.items()):
@@ -135,7 +156,7 @@ def main():
                 info = zipfile.ZipInfo(name); info.external_attr = 0o100600 << 16
                 package.writestr(info, raw, compress_type=zipfile.ZIP_DEFLATED)
         create(args.output, ROOT, {'AI-Trust-ID-iOS.zip': archive.getvalue()})
-        print(json.dumps({'pass': True, 'public_files_written': len(payload), 'credentials_generated': False, 'phone_signing_configured': False, 'independent_accuracy_evidence': False}))
+        print(json.dumps({'pass': True, 'profile': args.profile, 'public_files_written': len(payload), 'credentials_generated': False, 'phone_signing_configured': False, 'independent_accuracy_evidence': False}))
         return 0
     except (ValueError, OSError, KeyError, TypeError, PacketError):
         print('Native project unavailable: prepare current public assets and choose a new private folder outside the checkout.', file=sys.stderr); return 2
