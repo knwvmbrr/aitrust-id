@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-194022-directory-rollover-test-clock-e3487f8e",
+  "recorded_at": "2026-11-09T19:40:22.191195+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1f12fd299c47758a6daacfa8dc2aa64058316891",
+  "changed": "Control rollover recovery test time across slow database setup; retain the production security fence.",
+  "proves": "62 focused directory controls pass, including zero and three seconds of setup elapsed time, exact rollover fence and equality refusal.",
+  "limits": "No production authorization change, new requirement closure, independent validation or App Store release.",
+  "scope_ids": [
+    "F-162"
+  ],
+  "files": {
+    "runs/2026-11-09-directory-rollover-test-clock.json": "8266cebb7e1781629b72eb67e67034f6a8382df9bc15f80c3f5fe4eda3af51da",
+    "state.json": "59ad6013c08ffc039ad252228e94764c6c4f2090843a41bb3a76df97e81fa8ae",
+    "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-directory-rollover-test-clock.json",
+      "sha256": "8266cebb7e1781629b72eb67e67034f6a8382df9bc15f80c3f5fe4eda3af51da"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T19:40:22.838674+00:00"
+    }
+  ]
+}

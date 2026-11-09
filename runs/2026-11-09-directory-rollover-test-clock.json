@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-09T19:40:22.105027+00:00",
+  "checked_by": "Codex",
+  "pass": true,
+  "scope_ids": [
+    "F-162"
+  ],
+  "failure": {
+    "pass": false,
+    "job": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42684595960/job/129387896366",
+    "signature": "test_busy_logout_journal_can_roll_over_and_recover: Organization access unavailable at issued > fence",
+    "root_cause": "The test anchored replacement issue time before a 10,000-row setup, but logout establishes its security fence afterward. Slow setup can consume the assumed freshness interval. The production refusal is correct."
+  },
+  "plan": "Control the clock across the actual SQLite rollover and recovery workflow. Cover zero and three elapsed setup seconds, check the exact fence and equality refusal, then issue a fresh replacement strictly after that fence. Preserve production authorization and all database work.",
+  "source_sha256": {
+    "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0",
+    "tools/organization_directory.py": "7c294b80142eb25f583f2e5566bc91dbc8bf92ff86ccb8d175f62e1718cec47f"
+  },
+  "verification": {
+    "command": "python -m pytest tests/test_organization_directory.py -q",
+    "exit_status": 0,
+    "passed": 62,
+    "failed": 0,
+    "skipped": 0,
+    "setup_elapsed_seconds": [
+      0,
+      3
+    ],
+    "exact_fence_and_equality_refusal": true,
+    "production_source_changed": false
+  },
+  "limits": [
+    "Focused software check only; no new production provider/database acceptance.",
+    "No scope closure, independent tag accuracy or App Store release."
+  ],
+  "full_requirement_closures": 0
+}

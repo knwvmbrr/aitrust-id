@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-09
 
+### 2026-11-09-194022-directory-rollover-test-clock-e3487f8e
+
+Recorded 2026-11-09T19:40:22.191195+00:00 · Contributor: Codex · change
+
+- **Changed.** Control rollover recovery test time across slow database setup; retain the production security fence.
+- **Evidence.** 62 focused directory controls pass, including zero and three seconds of setup elapsed time, exact rollover fence and equality refusal. [Change record](./runs/changes/2026-11-09-194022-directory-rollover-test-clock-e3487f8e.json).
+- **Not claimed.** No production authorization change, new requirement closure, independent validation or App Store release.
+
+
 ### 2026-11-09-193033-pan-live-publication-1db70a8c
 
 Recorded 2026-11-09T19:30:33.659439+00:00 · Contributor: Codex · change

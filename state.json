@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-09T19:30:32.396764+00:00",
+  "updated": "2026-11-09T19:40:22.105027+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1094,7 +1094,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-09T19:30:32.396764+00:00",
+  "updated_at": "2026-11-09T19:40:22.105027+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3060,5 +3060,11 @@
         "previous_publication": "runs/2026-11-08-pii-publication.json"
       }
     }
-  ]
+  ],
+  "directory_rollover_test_clock": {
+    "status": "focused_verification_passed",
+    "evidence": "runs/2026-11-09-directory-rollover-test-clock.json",
+    "production_source_changed": false,
+    "full_requirement_closures": 0
+  }
 }
