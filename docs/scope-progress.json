@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-09T17:07:00.240644+00:00",
+  "audited_at": "2026-11-09T21:37:15.236103+00:00",
   "client_date": "2026-11-09",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -6620,34 +6620,48 @@
       "id": "F-159",
       "kind": "requirement",
       "title": "Fleet deployment and policy management",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T17:06:15.922874+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00"
+        "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
+        "Codex \u2014 approved-source fleet software and actual Mac/Linux acceptance, 2026-11-09T21:37:15.236103+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Deliver Fleet deployment and policy management. Next package action: Specify enrollment, rollout cohorts, policy precedence and consent visibility. Required outcome: The application extends supported tags without disabling the personal workflow.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-11-09T21:37:15.236103+00:00",
+      "completion_timestamp_basis": "Current Mac and isolated Linux software acceptance; no invented historical finish.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "docs/scope-delivery.md",
         "docs/approachable-tag-modals.md",
         "runs/2026-10-09-approachable-public.json",
-        "scripts/verify-enterprise.cjs"
+        "scripts/verify-enterprise.cjs",
+        "docs/fleet-deployment-plan.md",
+        "docs/fleet-deployment.md",
+        "tools/fleet.py",
+        "scripts/fleet.py",
+        "runs/2026-11-09-fleet-software-acceptance.json",
+        "runs/2026-11-09-fleet-accepted-macos.json",
+        "runs/2026-11-09-fleet-accepted-linux.json",
+        "scripts/verify-fleet-evidence.py",
+        "tests/test_fleet_evidence.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance",
-      "required_acceptance": [
-        "Deliver Fleet deployment and policy management. Next package action: Specify enrollment, rollout cohorts, policy precedence and consent visibility. Required outcome: The application extends supported tags without disabling the personal workflow."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full F-159 bounded software job: opt-in deployment, signed policy, two-cohort containment, private inventory, rollback, recovery and independent personal checking. No actual organization enrollment, browser force-install, tag accuracy or commercial activation.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "F-160",
@@ -8519,7 +8533,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-13T16:56:07.018769+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -8543,9 +8557,10 @@
         "runs/2026-10-13-ps-lazy-context-paired.json",
         "runs/2026-10-13-ps-lazy-regressions.json",
         "runs/2026-10-13-ps-lazy-device-engines.json",
-        "runs/2026-10-13-ps-lazy-staging-timing.json"
+        "runs/2026-10-13-ps-lazy-staging-timing.json",
+        "runs/2026-11-09-iphone-target-status.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
       "required_acceptance": [
         "Execute the owner guide on the identified physical iPhone 14 Plus with actual iOS version and VoiceOver; then Android/TalkBack, outside-user setup and human desktop screen-reader checks. Browser engines do not substitute."
       ],
@@ -8562,7 +8577,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-09T17:07:00.240644+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8613,9 +8628,10 @@
         "runs/2026-11-09-ios-distribution-final-archive.json",
         "runs/2026-11-09-native-share-hosted-workflow.json",
         "runs/2026-11-09-ios-hosted-archive.json",
-        "runs/2026-11-09-native-share-hosted-startup-refusal.json"
+        "runs/2026-11-09-native-share-hosted-startup-refusal.json",
+        "runs/2026-11-09-iphone-target-status.json"
       ],
-      "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed. The same current native sources also passed all five workflows and unsigned archive inspection on hosted iOS 27.2/SDK 27.1. A separate simulator-startup refusal is retained.",
+      "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed. The same current native sources also passed all five workflows and unsigned archive inspection on hosted iOS 27.2/SDK 27.1. A separate simulator-startup refusal is retained. Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
@@ -8661,7 +8677,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-11T19:47:23.935934+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -8684,9 +8700,10 @@
         "runs/2026-10-11-blind-private-linux-cli.json",
         "runs/2026-10-11-blind-private-linux-current.json",
         "runs/2026-10-11-blind-private-browser.json",
-        "runs/2026-10-11-blind-private-device.json"
+        "runs/2026-10-11-blind-private-device.json",
+        "runs/2026-11-09-iphone-target-status.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
       "required_acceptance": [
         "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not."
       ],
@@ -9598,27 +9615,41 @@
       "id": "ORG-FLEET",
       "kind": "package",
       "title": "Fleet deployment and policy",
-      "percent_complete": 20,
+      "percent_complete": 80,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 approved-source fleet software and actual Mac/Linux acceptance, 2026-11-09T21:37:15.236103+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Specify enrollment, rollout cohorts, policy precedence and consent visibility.; Implement signed configuration, inventory and rollback.; Test misconfiguration, unauthorized policy changes and offline devices. Final acceptance: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity.",
-      "next_owner": "Codex",
+      "next_fix": "Complete independent organization deployment/security and actual-user consent review; accept public tag releases and any paid service/provider terms. Stable browser distribution is separate from this local software profile.",
+      "next_owner": "Michael and independent reviewers",
       "evidence": [
-        "docs/scope-delivery.md#org-fleet"
+        "docs/scope-delivery.md#org-fleet",
+        "docs/fleet-deployment-plan.md",
+        "docs/fleet-deployment.md",
+        "tools/fleet.py",
+        "scripts/fleet.py",
+        "runs/2026-11-09-fleet-software-acceptance.json",
+        "runs/2026-11-09-fleet-accepted-macos.json",
+        "runs/2026-11-09-fleet-accepted-linux.json",
+        "scripts/verify-fleet-evidence.py",
+        "tests/test_fleet_evidence.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Full F-159 bounded software job: opt-in deployment, signed policy, two-cohort containment, private inventory, rollback, recovery and independent personal checking. No actual organization enrollment, browser force-install, tag accuracy or commercial activation.",
       "required_acceptance": [
-        "Specify enrollment, rollout cohorts, policy precedence and consent visibility.; Implement signed configuration, inventory and rollback.; Test misconfiguration, unauthorized policy changes and offline devices. Final acceptance: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
+        "Independent organization deployment/security and actual-user consent acceptance; public tag release, stable browser distribution and accepted paid provider/service terms before managed commercial activation."
       ],
       "queue": "open"
     },
@@ -12450,83 +12481,127 @@
       "id": "ORG-FLEET-A01",
       "kind": "subtask",
       "title": "Specify enrollment, rollout cohorts, policy precedence and consent visibility.",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 approved-source fleet software and actual Mac/Linux acceptance, 2026-11-09T21:37:15.236103+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Specify enrollment, rollout cohorts, policy precedence and consent visibility. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-11-09T21:37:15.236103+00:00",
+      "completion_timestamp_basis": "Current Mac and isolated Linux software acceptance; no invented historical finish.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md#org-fleet"
+        "docs/scope-delivery.md#org-fleet",
+        "docs/fleet-deployment-plan.md",
+        "docs/fleet-deployment.md",
+        "tools/fleet.py",
+        "scripts/fleet.py",
+        "runs/2026-11-09-fleet-software-acceptance.json",
+        "runs/2026-11-09-fleet-accepted-macos.json",
+        "runs/2026-11-09-fleet-accepted-linux.json",
+        "scripts/verify-fleet-evidence.py",
+        "tests/test_fleet_evidence.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Specify enrollment, rollout cohorts, policy precedence and consent visibility. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full F-159 bounded software job: opt-in deployment, signed policy, two-cohort containment, private inventory, rollback, recovery and independent personal checking. No actual organization enrollment, browser force-install, tag accuracy or commercial activation.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "ORG-FLEET-A02",
       "kind": "subtask",
       "title": "Implement signed configuration, inventory and rollback.",
-      "percent_complete": 20,
+      "percent_complete": 100,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 approved-source fleet software and actual Mac/Linux acceptance, 2026-11-09T21:37:15.236103+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Implement signed configuration, inventory and rollback. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex"
+      ],
+      "completed_at": "2026-11-09T21:37:15.236103+00:00",
+      "completion_timestamp_basis": "Current Mac and isolated Linux software acceptance; no invented historical finish.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
-        "docs/scope-delivery.md#org-fleet"
+        "docs/scope-delivery.md#org-fleet",
+        "docs/fleet-deployment-plan.md",
+        "docs/fleet-deployment.md",
+        "tools/fleet.py",
+        "scripts/fleet.py",
+        "runs/2026-11-09-fleet-software-acceptance.json",
+        "runs/2026-11-09-fleet-accepted-macos.json",
+        "runs/2026-11-09-fleet-accepted-linux.json",
+        "scripts/verify-fleet-evidence.py",
+        "tests/test_fleet_evidence.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-      "required_acceptance": [
-        "Implement signed configuration, inventory and rollback. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
-      ],
-      "queue": "open"
+      "evidence_scope": "Full F-159 bounded software job: opt-in deployment, signed policy, two-cohort containment, private inventory, rollback, recovery and independent personal checking. No actual organization enrollment, browser force-install, tag accuracy or commercial activation.",
+      "required_acceptance": [],
+      "queue": "completed"
     },
     {
       "id": "ORG-FLEET-A03",
       "kind": "subtask",
       "title": "Test misconfiguration, unauthorized policy changes and offline devices.",
-      "percent_complete": 20,
+      "percent_complete": 80,
       "milestones_passed": [
-        "bounded_contract"
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-09T21:37:15.236103+00:00",
       "checked_by": "Codex",
-      "implemented_by": [],
+      "implemented_by": [
+        "Codex \u2014 approved-source fleet software and actual Mac/Linux acceptance, 2026-11-09T21:37:15.236103+00:00"
+      ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Test misconfiguration, unauthorized policy changes and offline devices. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity.",
-      "next_owner": "Codex prepares; independent reviewers execute required human judgment",
+      "next_fix": "Complete independent organization deployment/security and actual-user consent review; accept public tag releases and any paid service/provider terms. Stable browser distribution is separate from this local software profile.",
+      "next_owner": "Michael and independent reviewers",
       "evidence": [
-        "docs/scope-delivery.md#org-fleet"
+        "docs/scope-delivery.md#org-fleet",
+        "docs/fleet-deployment-plan.md",
+        "docs/fleet-deployment.md",
+        "tools/fleet.py",
+        "scripts/fleet.py",
+        "runs/2026-11-09-fleet-software-acceptance.json",
+        "runs/2026-11-09-fleet-accepted-macos.json",
+        "runs/2026-11-09-fleet-accepted-linux.json",
+        "scripts/verify-fleet-evidence.py",
+        "tests/test_fleet_evidence.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Full F-159 bounded software job: opt-in deployment, signed policy, two-cohort containment, private inventory, rollback, recovery and independent personal checking. No actual organization enrollment, browser force-install, tag accuracy or commercial activation.",
       "required_acceptance": [
-        "Test misconfiguration, unauthorized policy changes and offline devices. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
+        "Independent organization deployment/security and actual-user consent acceptance; public tag release, stable browser distribution and accepted paid provider/service terms before managed commercial activation."
       ],
       "queue": "open"
     },

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-09
 
+### 2026-11-09-214359-fleet-approved-source-software-7d87a4f6
+
+Recorded 2026-11-09T21:43:59.980217+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver opt-in offline fleet deployment with signed cohort policy, source approvals, inventory, rollback and local withdrawal. Identify the connected physical iPhone target without changing security settings.
+- **Evidence.** 32 actual CLI controls pass separately on macOS and isolated non-root Linux, plus 13 evidence-refusal controls. Full bounded F-159 software acceptance is preserved; the ledger is 131 complete and 71 open of 202. [Change record](./runs/changes/2026-11-09-214359-fleet-approved-source-software-7d87a4f6.json).
+- **Not claimed.** No actual organization device enrollment, browser force-install, public tag release, independent accuracy, commercial activation or App Store upload. Phone status is read-only; signing and physical/human acceptance remain open.
+
+
 ### 2026-11-09-195324-directory-final-source-verification-217f85eb
 
 Recorded 2026-11-09T19:53:24.530760+00:00 · Contributor: Codex · change

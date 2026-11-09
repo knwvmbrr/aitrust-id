@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-09T19:53:23.680893+00:00",
+  "updated": "2026-11-09T21:42:01.550900+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -760,9 +760,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-09T17:07:00.240644+00:00",
-    "completed_records": 130,
-    "open_records": 72,
+    "audited_at": "2026-11-09T21:37:15.236103+00:00",
+    "completed_records": 131,
+    "open_records": 71,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -776,21 +776,23 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/pii-pan-token-plan.md",
-    "completed_subtasks": 1,
-    "open_subtasks": 116,
+    "latest_increment": "docs/fleet-deployment-plan.md",
+    "completed_subtasks": 3,
+    "open_subtasks": 114,
     "target_open_records": 60,
     "target_start_open_records": 78,
-    "target_remaining_closures": 12,
-    "publication_pending": false,
+    "target_remaining_closures": 11,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-09-pan-publication.json",
+    "current_target_verification": "runs/2026-11-09-fleet-scope.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-11-09",
-    "latest_increment_completed_ids": [],
+    "latest_increment_completed_ids": [
+      "F-159"
+    ],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
       {
@@ -1094,7 +1096,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-09T19:53:23.680893+00:00",
+  "updated_at": "2026-11-09T21:42:01.550900+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2877,10 +2879,10 @@
   },
   "scope_target_current": {
     "records": 202,
-    "complete": 130,
-    "open": 72,
+    "complete": 131,
+    "open": 71,
     "target_open": 60,
-    "closures_needed": 12,
+    "closures_needed": 11,
     "ledger": "docs/scope-progress.json"
   },
   "organization_directory": {
@@ -3068,5 +3070,29 @@
     "production_source_changed": false,
     "full_requirement_closures": 0,
     "final_verification": "runs/2026-11-09-directory-final-source-verification.json"
+  },
+  "fleet_deployment": {
+    "status": "bounded_software_complete; organization_acceptance_open",
+    "requirement": "F-159",
+    "profile": "owner-private approved-source offline PS development deployment on macOS/Linux",
+    "acceptance": "runs/2026-11-09-fleet-software-acceptance.json",
+    "macos_evidence": "runs/2026-11-09-fleet-accepted-macos.json",
+    "linux_evidence": "runs/2026-11-09-fleet-accepted-linux.json",
+    "controls_per_platform": 32,
+    "guide": "docs/fleet-deployment.md",
+    "production_changed": false,
+    "enrolled_real_devices": false,
+    "collection_enabled": false,
+    "commercial_service_activated": false,
+    "independent_accuracy_evidence": false,
+    "publication_pending": true
+  },
+  "native_device_observation": {
+    "evidence": "runs/2026-11-09-iphone-target-status.json",
+    "model": "iPhone 14 Plus",
+    "os_version": "27.0.1",
+    "connected": true,
+    "developer_mode_enabled": false,
+    "physical_workflow_tested": false
   }
 }

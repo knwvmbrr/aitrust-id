@@ -113,6 +113,10 @@ jobs:
         run: python -m pytest tests/test_lazy_ps_context.py tests/test_command_performance.py tests/test_ps_efficiency_evidence.py -q
       - name: Enforce commercial-interest recusal without asserting real governance
         run: make verify-recusal
+      - name: Require current actual fleet acceptance for its software closure
+        run: |
+          python scripts/verify-fleet-evidence.py
+          python -m pytest tests/test_fleet_evidence.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
       - name: Check preserved component notice identity without claiming legal clearance

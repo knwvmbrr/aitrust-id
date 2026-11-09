@@ -139,3 +139,20 @@ These are real software and distribution improvements, with no full acceptance
 waived: all 202 records remain, 130 complete / 72 open, twelve closures short of
 60. Native, redaction and directory evidence must not be counted as three new
 full requirement closures.
+
+
+## Approved-source fleet software — November 9
+
+F-159 now has its full bounded software acceptance: opt-in enrollment, separately
+selected authority and exact source approval, signed cohort/device policy,
+private inventory, synthetic installation preflight, rollback, interrupted-write
+recovery, local pause/removal and independent personal checking. Actual macOS
+and non-root isolated Linux runs each pass 32 controls, with 13 evidence-refusal
+controls. Original acceptance is preserved in the packet; no criterion was moved
+or waived. ORG-FLEET remains open for accepted public tag releases, independent
+organization rollout/consent and any commercial provider/service terms.
+
+All 202 records remain: **131 complete / 71 open**. Eleven more full closures
+are needed for 60. The connected phone is now identified as an iPhone 14 Plus on
+iOS 27.0.1; Developer Mode is off and no AI Trust ID signing profile or local
+identity was found. Those read-only facts do not complete native/physical use.

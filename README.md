@@ -28,6 +28,17 @@ is connected.
 distinguish related products from full product equivalence; business viability and
 comparative superiority are not established.
 
+## Deploy approved local checker versions
+
+The [offline fleet tool](docs/fleet-deployment.md) enrolls private macOS/Linux
+workspaces with exact source approval and a separately selected signing authority.
+Signed canary/stable policy, bounded inventory, local pause, rollback and interrupted
+update recovery work without a hosted service. Personal checking needs none of
+this. Both actual platform runs pass 32 CLI controls; this deploys the PS
+**development** checker and does not grant tag accuracy or commercial acceptance.
+Browser force-install, independent organization rollout and service terms remain
+separate. No real device was enrolled during those tests.
+
 ## Which personal tags can run today?
 
 Of 14 personal catalogue entries, **PS runs on this website**, **PII_REDACTED runs only in the local service**, and **12 are planned or proposed**. A working catalogue panel is not a working detector. Each tag retains its own job and acceptance gate.

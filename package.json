@@ -58,7 +58,10 @@
     "test:author-choice": "node --test tests/author-choice.cjs",
     "test:self-declaration": "node --test tests/conformance-statement.cjs",
     "self-declaration": "node scripts/conformance-statement.cjs",
-    "verify:editorial": "python3 scripts/verify-editorial-cli.py && node scripts/verify-editorial-workflow.cjs"
+    "verify:editorial": "python3 scripts/verify-editorial-cli.py && node scripts/verify-editorial-workflow.cjs",
+    "fleet": "python3 scripts/fleet.py",
+    "verify:fleet": "python3 scripts/verify-fleet.py",
+    "verify:fleet-evidence": "python3 scripts/verify-fleet-evidence.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",

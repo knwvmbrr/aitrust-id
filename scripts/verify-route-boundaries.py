@@ -241,6 +241,8 @@ PATTERNS += ('runs/2026-11-07-recovery-cache-reuse-linux.json',)
 
 PATTERNS += ('docs/directory-clock-fence-plan.md',)
 
+PATTERNS += ('tools/fleet.py','scripts/fleet.py','scripts/verify-fleet.py','scripts/verify-fleet-linux.py','scripts/verify-fleet-evidence.py','tests/test_fleet.py','tests/test_fleet_evidence.py','docs/fleet-deployment-plan.md','docs/fleet-deployment.md','.github/workflows/fleet.yml','runs/2026-11-09-fleet-accepted-macos.json','runs/2026-11-09-fleet-accepted-linux.json')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:
