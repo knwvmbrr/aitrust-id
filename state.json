@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-09T19:40:22.105027+00:00",
+  "updated": "2026-11-09T19:53:23.680893+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1046,7 +1046,7 @@
     "publication": "runs/2026-10-11-key-recovery-publication.json",
     "public_catalogue": "runs/2026-10-11-key-recovery-live-site.json",
     "public_policies": "runs/2026-10-11-key-recovery-live-policies.json",
-    "current_verification": "runs/2026-11-09-pan-current-boundaries.json"
+    "current_verification": "runs/2026-11-09-rollover-current-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1086,15 +1086,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-09-pan-current-PS.json",
-    "PII_REDACTED": "runs/2026-11-09-pan-current-PII_REDACTED-accepted.json",
-    "extension": "runs/2026-11-09-pan-current-extension-accepted.json",
-    "protocol": "runs/2026-11-09-pan-current-protocol.json",
-    "website": "runs/2026-11-09-pan-current-website-accepted.json",
+    "PS": "runs/2026-11-09-rollover-current-PS.json",
+    "PII_REDACTED": "runs/2026-11-09-rollover-current-PII_REDACTED.json",
+    "extension": "runs/2026-11-09-rollover-current-extension.json",
+    "protocol": "runs/2026-11-09-rollover-current-protocol.json",
+    "website": "runs/2026-11-09-rollover-current-website-accepted.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-09T19:40:22.105027+00:00",
+  "updated_at": "2026-11-09T19:53:23.680893+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2888,14 +2888,14 @@
     "requirement": "F-162",
     "profile": "operator-owned OIDC broker for private PostgreSQL audit records",
     "plan": "docs/organization-directory-plan.md",
-    "local_evidence": "runs/2026-11-07-clock-focused-controls.json",
+    "local_evidence": "runs/2026-11-09-directory-rollover-test-clock.json",
     "hosted_login_enabled": false,
     "collection_enabled": false,
     "human_acceptance": false,
     "independent_accuracy_evidence": false,
-    "local_cases": 61,
+    "local_cases": 62,
     "actual_provider_controls": 28,
-    "linux_evidence": "runs/2026-11-07-directory-clock-linux.json",
+    "linux_evidence": "runs/2026-11-09-directory-rollover-linux.json",
     "acceptance": "runs/2026-11-07-directory-clock-acceptance.json",
     "guide": "docs/organization-directory.md",
     "completed_at": "2026-11-07T00:56:16.927454+00:00",
@@ -2905,7 +2905,8 @@
     "clock_skew_seconds": 5,
     "new_login_wait_seconds": 12,
     "publication": "runs/2026-11-07-final-live-publication.json",
-    "published_source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8"
+    "published_source_commit": "36176afc79899b72a5d9a384bfe495c4087b43f8",
+    "source_refresh": "runs/2026-11-09-directory-source-refresh.json"
   },
   "recovery_operations": {
     "status": "supported_security_reporting_response_and_recovery_profile_accepted; live_publication_verified",
@@ -3044,10 +3045,10 @@
       },
       "previous_production_publication": {
         "status": "live_and_verified",
-        "source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
-        "deployment_url": "https://7a65ed48.aitrust-id.pages.dev",
+        "source_commit": "b2152b85ae81bf8658921ed5b40377551c365964",
+        "deployment_url": "https://c043b865.aitrust-id.pages.dev",
         "public_url": "https://aitrustid.com",
-        "evidence": "runs/2026-11-09-pan-publication.json",
+        "evidence": "runs/2026-11-08-pii-publication.json",
         "metadata_only_followup": true,
         "meaning": "This metadata records the verified application deployment of the stated source commit. The verification-only followup changes no deployed application code.",
         "scope_records": 202,
@@ -3057,14 +3058,15 @@
         "real_collection_enabled": false,
         "phone_release_offered": false,
         "publication_pending": false,
-        "previous_publication": "runs/2026-11-08-pii-publication.json"
+        "previous_publication": "runs/2026-11-08-native-share-publication.json"
       }
     }
   ],
   "directory_rollover_test_clock": {
-    "status": "focused_verification_passed",
+    "status": "current_source_and_actual_linux_verification_passed",
     "evidence": "runs/2026-11-09-directory-rollover-test-clock.json",
     "production_source_changed": false,
-    "full_requirement_closures": 0
+    "full_requirement_closures": 0,
+    "final_verification": "runs/2026-11-09-directory-final-source-verification.json"
   }
 }

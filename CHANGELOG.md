@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-09
 
+### 2026-11-09-195324-directory-final-source-verification-217f85eb
+
+Recorded 2026-11-09T19:53:24.530760+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the repaired directory fixture and evidence consumers to a fresh actual Linux provider run and all five current engineering receipts.
+- **Evidence.** All 28 real provider cases, 73 focused software/evidence controls and current route boundary checks pass. All five selected receipts match their current sources; the previous production publication matches the parent commit exactly. [Change record](./runs/changes/2026-11-09-195324-directory-final-source-verification-217f85eb.json).
+- **Not claimed.** Verification followup only. No production authorization change, new tag release, App Store upload, human/phone acceptance or full scope closure. The site remains at its separately verified e496049 deployment.
+
+
+### 2026-11-09-194832-directory-current-source-evidence-c7af1b2d
+
+Recorded 2026-11-09T19:48:32.771483+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh actual directory software evidence after the clock fixture repair, preserve prior publication history from its parent commit, and record native/redaction progress in the scope execution log.
+- **Evidence.** Actual Linux Keycloak/PostgreSQL run passes 28 controls; 73 focused software/evidence controls pass. Prior November 8 publication is preserved as the predecessor of November 9. [Change record](./runs/changes/2026-11-09-194832-directory-current-source-evidence-c7af1b2d.json).
+- **Not claimed.** No directory production behavior, App Store release, collection activation, independent tag accuracy or completion count change. Website evidence is being revalidated and the failed prebuild record is retained.
+
+
 ### 2026-11-09-194022-directory-rollover-test-clock-e3487f8e
 
 Recorded 2026-11-09T19:40:22.191195+00:00 · Contributor: Codex · change

@@ -110,3 +110,32 @@ text is preserved verbatim and physical/VoiceOver/outside-user acceptance stays
 open. No tag release or full requirement closure is credited: 130 complete /
 72 open of 202 remain, twelve full closures short of 60. The typed-provider
 compatibility API is deprecated in iOS 27; see the developer guide and proof.
+
+## Native distribution and redaction progress — November 9
+
+The App Store Connect draft now exists with the registered app and Share IDs,
+version 1.0, an offline-use description, Utilities category and public privacy
+link. Xcode is signed in. Five native UI workflows and unsigned Release archive
+inspection passed on actual Mac runners. Signing/provisioning, binary upload,
+platform declarations, physical iPhone operation, VoiceOver and independent
+acceptance remain open; no App Store release is claimed.
+
+The local-service PII adapter now confines PAN matching to its emitted token.
+Actual pinned Linux checks retain all six compact address masks while reducing
+extra masking from ten characters to zero. The English development cohort and
+its remaining errors are unchanged. Source and development evidence are public
+at the verified November 9 deployment; this is not independent accuracy or a
+new hosted PII inference service.
+
+A CI recovery test exposed a clock assumption across a large database setup.
+The test now controls elapsed setup time, verifies the exact security fence and
+refuses an equal-time token. Production authorization is unchanged. The fresh
+Linux Keycloak/PostgreSQL run passes all 28 actual controls; the original failed
+CI observation and new evidence are retained separately under
+`runs/2026-11-09-directory-rollover-test-clock.json` and
+`runs/2026-11-09-directory-rollover-linux.json`.
+
+These are real software and distribution improvements, with no full acceptance
+waived: all 202 records remain, 130 complete / 72 open, twelve closures short of
+60. Native, redaction and directory evidence must not be counted as three new
+full requirement closures.

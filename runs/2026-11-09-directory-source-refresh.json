@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-11-09T19:48:32.259787+00:00",
+  "checked_by": "Codex",
+  "pass": true,
+  "actual_workflow": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42685648677",
+  "actual_workflow_source": "55519837de52d770e9bc62f905bc66731957eb92",
+  "current_source_provider_receipt": "runs/2026-11-09-directory-rollover-linux.json",
+  "actual_provider_controls": 28,
+  "focused_controls": 73,
+  "production_directory_source_changed": false,
+  "retained_refusals": [
+    {
+      "path": "runs/2026-11-09-rollover-current-website.json",
+      "pass": false,
+      "reason": "Site prebuild correctly rejected newly edited files before a fresh matching change event existed."
+    },
+    {
+      "check": "Current route boundary inventory",
+      "pass": false,
+      "reason": "New test and evidence-consumer sources differed from the prior reviewed inventory; the review and actual provider run are now refreshed."
+    }
+  ],
+  "publication_history_correction": {
+    "review": "https://github.com/knwvmbrr/aitrust-id/pull/95",
+    "meaning": "The predecessor was inadvertently copied after updating the current object. It is now loaded directly from the parent commit.",
+    "parent_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+    "previous_source_commit": "b2152b85ae81bf8658921ed5b40377551c365964",
+    "previous_deployment": "https://c043b865.aitrust-id.pages.dev",
+    "current_source_commit": "e496049ed2a90fb0ea238cd18c81436fd8b47f58",
+    "current_deployment": "https://7a65ed48.aitrust-id.pages.dev"
+  },
+  "full_requirement_closures": 0,
+  "independent_accuracy_evidence": false,
+  "human_acceptance": false,
+  "public_product_code_changed": false
+}
