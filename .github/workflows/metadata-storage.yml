@@ -97,7 +97,7 @@ jobs:
         run: python scripts/metadata-store-sandbox.py --profile http --output output/verification/research-http.json
       - name: Execute independent organization audit storage and encrypted recovery controls
         run: sudo unshare --net -- "$(command -v python)" scripts/verify-organization-audit.py --run-as "$(id -un)" --output output/verification/organization-audit.json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: synthetic-metadata-storage
