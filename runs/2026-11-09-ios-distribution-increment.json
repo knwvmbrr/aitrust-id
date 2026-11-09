@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-11-09T16:17:45.965162+00:00",
+  "implemented_by": "Codex",
+  "pass": true,
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "F-142"
+  ],
+  "app_store_record_created": true,
+  "app_store_status": "Prepare for Submission",
+  "registered_identifiers": [
+    "com.aitrustid.app",
+    "com.aitrustid.app.share"
+  ],
+  "manual_release_saved": true,
+  "draft_requires_sign_in": false,
+  "evidence": {
+    "native_ui": "runs/2026-11-09-native-share-distribution-workflow.json",
+    "unsigned_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
+    "retained_failed_ui": [
+      "runs/2026-11-09-native-share-initial-workflow.json",
+      "runs/2026-11-09-native-share-diagnostic-workflow.json"
+    ]
+  },
+  "package_archive_controls_passed": 48,
+  "native_ui_workflows_passed": 5,
+  "signing_identity_available": false,
+  "private_credentials_generated": false,
+  "uploaded": false,
+  "testflight_installed": false,
+  "physical_device_acceptance": false,
+  "human_accessibility_acceptance": false,
+  "independent_accuracy": false,
+  "local_docker_started": false,
+  "requirements_closed": [],
+  "complete": 130,
+  "open": 72,
+  "target": 60,
+  "limits": [
+    "App record and unsigned archive are software preparation, not public distribution.",
+    "Physical iPhone 14 Plus, outside-user, human accessibility and independent tag gates remain open.",
+    "Privacy/export/seller declarations and owner-controlled signing remain unresolved."
+  ]
+}

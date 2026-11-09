@@ -34,6 +34,8 @@ jobs:
         run: |
           runtime="$(xcrun simctl list runtimes --json | python scripts/select-ios-runtime.py)"
           python scripts/verify-ios-share.py --output "$AITRUST_NATIVE_PROOF/share" --runtime "$runtime"
+      - name: Build and inspect the unsigned registered-ID device archive
+        run: python scripts/verify-ios-archive.py --output "$AITRUST_NATIVE_PROOF/archive"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -42,4 +44,6 @@ jobs:
             ${{ env.AITRUST_NATIVE_PROOF }}/text/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/*.log
+            ${{ env.AITRUST_NATIVE_PROOF }}/archive/proof.json
+            ${{ env.AITRUST_NATIVE_PROOF }}/archive/archive.log
           retention-days: 7

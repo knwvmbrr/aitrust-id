@@ -33,8 +33,9 @@ generated code, the Xcode result bundle and `proof.json` stay in the private
 output directory. They use invented examples only. A boot, timeout, skipped case,
 source change, failed workflow or cleanup failure cannot produce a passing proof.
 Each workflow has a 120-second automation allowance (150-second Xcode ceiling);
-the entire UI phase remains bounded at 600 seconds. Per-action waits and all
-five required workflows are unchanged. These are development-runner limits,
+the entire UI phase remains bounded at 600 seconds. All five original scenarios and their acceptance remain required. The first
+workflow also opens the offline privacy and license view. Keyboard readiness and
+completed Share dismissal are checked before subsequent actions. These are development-runner limits,
 not measured or accepted phone performance claims.
 
 For source inspection alone, run:
@@ -69,3 +70,46 @@ Physical iPhone 14 Plus installation, actual iOS version, Share from real source
 apps, device memory limits, VoiceOver, removal and outside-user acceptance remain
 required. A simulator workflow cannot satisfy these tasks or PS's independent
 accuracy gate. N-013 stays open until its full acceptance is completed.
+
+## Prepare the separate distribution project
+
+AI Trust ID now has its own App Store Connect record in **Prepare for Submission**.
+The app identifier is `com.aitrustid.app`; the separately registered Share
+identifier is `com.aitrustid.app.share`. The saved draft requires no app login
+and uses manual release. No build has been uploaded or approved.
+
+```sh
+python3 scripts/build-ios-project.py --profile distribution \
+  --output "$practice/distribution"
+```
+
+Build and inspect an actual unsigned iPhoneOS Release archive with:
+
+```sh
+python3 scripts/verify-ios-archive.py --output "$practice/device-archive"
+```
+
+This checks both registered identifiers, version 1.0, executable presence,
+compiled icon, orientations and exact privacy/license/runtime resources. It
+refuses signed/provisioned or altered contents and source changes during the
+build. Logs and the archive stay private; the proof contains source/resource
+identities. This check also runs in native CI. It does not create credentials,
+provision a phone or upload anything.
+
+The distribution profile uses version 1.0 and the registered identifiers, and
+packages the tag icon, offline privacy explanation and original runtime/code
+license notices. The default developer profile retains its preview identifiers
+and version 0.1. **Both profiles leave signing disabled.** Neither creates
+credentials, selects a developer team, fetches provisioning profiles or uploads
+a build. Keep private signing material outside Git and the generated source ZIP.
+
+Unzip the project into a private working folder and inspect it in Xcode. The
+owner must supply an appropriate signing identity and profiles for both targets
+before a signed archive or TestFlight upload. Selecting a distribution profile
+alone does not make an installable phone app. Do not reuse another project's
+identifiers or private signing files.
+
+In the containing app, **Privacy & open-source notices** opens bundled text and
+licenses. It does not open a browser, detect links or send selected text. This
+view and PS's local resources work offline. Apple/TestFlight feedback, device
+keyboards and operating-system services have separate privacy behavior.

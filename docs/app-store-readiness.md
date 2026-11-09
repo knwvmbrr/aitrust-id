@@ -1,23 +1,27 @@
 # iPhone distribution readiness
 
-AI Trust ID has its own registered bundle identifier, `com.aitrustid.app`.
-An unsigned physical-iOS archive of the existing developer prototype also built
-successfully. Its bundle identifier is still `com.aitrustid.personal.preview`;
-it is not a signed or upload-ready store package.
+AI Trust ID has a separate App Store Connect record, saved in **Prepare for
+Submission**, and registered identifiers `com.aitrustid.app` and
+`com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
+release. No build has been uploaded or submitted to Apple.
 
-[Device archive evidence](../runs/2026-11-08-ios-archive-readiness.json) records
-the actual result. No App Store record, uploaded binary, TestFlight installation
-or public phone release is claimed. Private account identifiers, credentials and
-other projects are excluded from this repository.
+The separate distribution profile now builds an actual unsigned physical-iOS
+archive with those identifiers, version 1.0, a compiled app icon and exact bundled
+privacy/license/runtime resources. The default developer profile remains
+separate. [Archive inspection](../runs/2026-11-09-ios-distribution-final-archive.json)
+records this bounded result. Signing remains disabled in both profiles. Private
+account identifiers, credentials and other projects remain outside the repo.
 
 ## Complete the distribution package
 
-1. Create the separate iOS App Store record, then register its Share extension
-   identifier and configure the stable bundle identifiers in a store build.
+1. Verify the separate app/Share identifiers and saved draft against the
+   generated distribution project; keep the preview build separate.
 2. Supply the owner-controlled signing identity and provisioning profiles.
    Keep private keys and account credentials outside source and public evidence.
-3. Package the current tag method/runtime, required notices, app artwork and
-   an accessible in-app privacy explanation with the published privacy URL.
+3. Finish the required-reason API, privacy-manifest and final data-use review
+   against the actual signed package and its bundled runtime. The icon and
+   offline privacy/license view are packaged; this is not redistribution or
+   privacy clearance for every transitive component.
 4. Inspect an actual signed archive, validate it, and upload the reviewed build
    to App Store Connect for an owner-run TestFlight pilot.
 5. Run the existing physical iPhone 14 Plus, Share-source, lifecycle, offline,
