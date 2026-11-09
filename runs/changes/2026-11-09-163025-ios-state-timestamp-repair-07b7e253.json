@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-163025-ios-state-timestamp-repair-07b7e253",
+  "recorded_at": "2026-11-09T16:30:25.957827+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cc13b7d7af6c1d09b7f20c93bc974d1bb4d557e2",
+  "changed": "Restore timezone-aware UTC state timestamps after protected CI refused the date-only update field.",
+  "proves": "The unchanged accountability verifier and all 40 focused accountability controls pass; native runtime sources and acceptance stay unchanged.",
+  "limits": "This repairs metadata, not a tag, phone release or full requirement closure; the failed CI attempt remains visible.",
+  "scope_ids": [
+    "N-013",
+    "F-070"
+  ],
+  "files": {
+    "state.json": "3b233f315844a4d703f08e9e6fefae2fcf190ae9588183eb482d2f85fe6c2fd2",
+    "runs/2026-11-09-ios-state-timestamp-repair.json": "1c5e69dde8cbe6548e8ed1263c55a1177e3339318f5f41ab8332a4b3c8cb59e6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-ios-state-timestamp-repair.json",
+      "sha256": "1c5e69dde8cbe6548e8ed1263c55a1177e3339318f5f41ab8332a4b3c8cb59e6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T16:30:26.437374+00:00"
+    }
+  ]
+}

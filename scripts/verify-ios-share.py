@@ -23,6 +23,7 @@ SOURCES = ['scripts/verify-ios-share.py', 'scripts/build-ios-project.py', 'scrip
            'mobile/ios/Tests/UIFlows.swift', 'mobile/ios/Web/bridge.mjs',
            'mobile/ios/Web/index.html', 'services/evaluator/app.py',
            'protocol/normalization.py', 'protocol/unicode15-data.json']
+SOURCES += ['mobile/ios/Privacy.txt', 'mobile/ios/Artwork/AppIcon.svg', 'mobile/ios/Artwork/AppIcon.png']
 SOURCES += ['mobile/ios/Source/' + name for name in
             ['App.swift', 'Assets.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift']]
 

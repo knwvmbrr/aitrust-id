@@ -40,6 +40,7 @@ import UniformTypeIdentifiers
                     self.status.text = refusal; return
                 }
                 self.input.text = text; self.status.text = "Review the selection, then choose Check with PS."
+                self.refreshCheckButton()
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in

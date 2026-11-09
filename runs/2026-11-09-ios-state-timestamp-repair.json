@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-11-09T16:30:25.919634+00:00",
+  "pass": true,
+  "kind": "state_timestamp_repair",
+  "failure": "state.updated was a date-only value without timezone; accountability CI refused it",
+  "repair": "Restore timezone-aware UTC updated and updated_at; retain chronology checks unchanged",
+  "accountability_controls_passed": 40,
+  "state_sha256": "3b233f315844a4d703f08e9e6fefae2fcf190ae9588183eb482d2f85fe6c2fd2",
+  "native_runtime_sources_changed": false,
+  "independent_accuracy": false,
+  "requirements_closed": []
+}

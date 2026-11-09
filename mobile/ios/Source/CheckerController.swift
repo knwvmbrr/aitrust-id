@@ -8,6 +8,7 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     private var web: WKWebView?, assets: Assets?, deadline: DispatchWorkItem?
     private var generation = 0, pendingText: String?, matches: [[String: Any]] = []
     private var busy = false
+    private var presentedForChecking = false
     private var backgroundObservers: [NSObjectProtocol] = []
     var shareMode = false
     private func identity(_ value: String) -> String { shareMode ? "share-" + value : value }
@@ -63,21 +64,35 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         evidence.numberOfLines = 0; evidence.font = font(.footnote)
         evidence.adjustsFontForContentSizeCategory = true; evidence.isHidden = true
         evidence.accessibilityIdentifier = identity("check-evidence"); stack.addArrangedSubview(evidence)
+        if !shareMode { stack.addArrangedSubview(button("Privacy & open-source notices", #selector(privacy), "privacy-notices")) }
         for name in [UIApplication.didEnterBackgroundNotification, NSNotification.Name.NSExtensionHostDidEnterBackground] {
             backgroundObservers.append(NotificationCenter.default.addObserver(forName: name,
                 object: nil, queue: .main) { [weak self] _ in self?.clear() })
         }
+        refreshCheckButton()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated); presentedForChecking = true; refreshCheckButton()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        presentedForChecking = false; refreshCheckButton(); super.viewWillDisappear(animated)
+    }
+    func refreshCheckButton() {
+        let text = input.text ?? ""
+        checkButton.isEnabled = presentedForChecking && !busy && !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && text.unicodeScalars.count <= 20000
+        checkButton.accessibilityHint = "Enter or share text, then choose this check."
     }
     deinit { for observer in backgroundObservers { NotificationCenter.default.removeObserver(observer) } }
     func textViewDidChange(_ textView: UITextView) { invalidate(); status.text = "" }
     private func invalidate() {
         generation += 1; deadline?.cancel(); deadline = nil; pendingText = nil; busy = false
-        checkButton.isEnabled = true; matches = []; result.text = nil; detailsButton.isHidden = true
+        matches = []; result.text = nil; detailsButton.isHidden = true
         evidence.text = nil; evidence.isHidden = true; detailsButton.configuration?.title = "Why PS?"
         web?.stopLoading(); web?.configuration.userContentController.removeScriptMessageHandler(forName: "lifecycle")
         web?.removeFromSuperview(); web = nil; assets = nil
+        refreshCheckButton()
     }
-    @objc func clear() { invalidate(); input.text = ""; status.text = "Cleared." }
+    @objc func clear() { input.text = ""; invalidate(); status.text = "Cleared." }
     @objc func finish() { clear(); extensionContext?.completeRequest(returningItems: nil) }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -156,4 +171,38 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         activity.popoverPresentationController?.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 1, height: 1)
         present(activity, animated: true)
     }
+    @objc private func privacy() {
+        let controller = NativeNoticesController()
+        present(UINavigationController(rootViewController: controller), animated: true)
+    }
+}
+
+/// Read-only bundled disclosures. No browser, account, input or network request.
+private final class NativeNoticesController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad(); title = "Privacy & notices"; view.backgroundColor = .systemBackground
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        navigationItem.rightBarButtonItem?.accessibilityIdentifier = "privacy-done"
+        let text = UITextView(); text.isEditable = false; text.isSelectable = true; text.dataDetectorTypes = []
+        text.font = .preferredFont(forTextStyle: .body); text.adjustsFontForContentSizeCategory = true
+        text.accessibilityIdentifier = "privacy-notices-text"; text.accessibilityLabel = "Offline privacy and open-source notices"
+        text.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 24, right: 16)
+        var sections: [String] = []
+        for name in ["Privacy.txt", "AppLicense.txt", "Notices/pyodide-MPL-2.0.txt", "Notices/python-license.txt", "Notices/unicode-license.txt", "Notices/source.txt"] {
+            guard let url = Bundle.main.resourceURL?.appendingPathComponent(name),
+                  let value = try? String(contentsOf: url, encoding: .utf8) else {
+                text.text = "Bundled notices are unavailable. This build needs repair before distribution."
+                install(text); return
+            }
+            sections.append(value)
+        }
+        text.text = sections.joined(separator: "\n\n────────────────\n\n"); install(text)
+    }
+    private func install(_ text: UITextView) {
+        text.translatesAutoresizingMaskIntoConstraints = false; view.addSubview(text)
+        NSLayoutConstraint.activate([text.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            text.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            text.leadingAnchor.constraint(equalTo: view.leadingAnchor), text.trailingAnchor.constraint(equalTo: view.trailingAnchor)])
+    }
+    @objc private func done() { dismiss(animated: true) }
 }

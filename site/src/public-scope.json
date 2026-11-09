@@ -6861,7 +6861,8 @@
           "Codex — collected 224 exact upstream notice texts from the three observed staging images and 205 integrity-checked npm artifacts; implemented offline identity and extraction checks",
           "Codex — descriptor-bound capture of signed source inputs, private tool handoff and actual Mac/network-isolated Linux signature checks",
           "Codex — bounded selected font/Unicode/runtime/model-card consistency, actual pinned runtime archive comparison, exact Unicode notice packaging and Mac/network-isolated Linux refusals",
-          "Codex — actual 205-artifact native/executable observation, unchanged upstream declarations, bounded offline verifier and exact archive replay; no permission clearance"
+          "Codex — actual 205-artifact native/executable observation, unchanged upstream declarations, bounded offline verifier and exact archive replay; no permission clearance",
+          "Codex — exact bundled native privacy, Apache and runtime notices inspected in unsigned app and Share archive; no full transitive/privacy/platform clearance, 2026-11-09T16:17:10.971578+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -6922,7 +6923,11 @@
           "scripts/verify-native-dependencies.py",
           "tests/test_native_inventory.py",
           "runs/2026-10-15-native-focused-controls.json",
-          "runs/2026-10-15-native-archive-replay.json"
+          "runs/2026-10-15-native-archive-replay.json",
+          "mobile/ios/Privacy.txt",
+          "scripts/verify-ios-archive.py",
+          "tests/test_ios_archive.py",
+          "runs/2026-11-09-ios-distribution-final-archive.json"
         ],
         "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged.",
         "required_acceptance": [
@@ -13419,11 +13424,12 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-07T23:23:36.182503+00:00",
+        "audited_at": "2026-11-09T16:17:10.971578+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
-          "Codex — selected-text transport, generation cancellation, scoped controls and inline-evidence lifecycle repair; actual fresh-simulator workflow, 2026-11-07T15:35:42.008478+00:00"
+          "Codex — selected-text transport, generation cancellation, scoped controls and inline-evidence lifecycle repair; actual fresh-simulator workflow, 2026-11-07T15:35:42.008478+00:00",
+          "Codex — separate App Store record, registered app/Share identifiers, unsigned distribution archive, bundled offline notices and presentation-ready explicit checks; 2026-11-09T16:17:10.971578+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -13431,7 +13437,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete physical iPhone 14 Plus installation with actual iOS version, per-source Share compatibility, memory/lifecycle, VoiceOver, offline/update/removal and outside-user acceptance. Retain the original iPhone/Android acceptance obligations. Resolve the iOS-27-deprecated typed-provider compatibility path before claiming future SDK support.",
+        "next_fix": "Provide owner-controlled signing identity and provisioning, finish actual privacy/platform declarations, inspect and upload the signed build for the owner-run pilot. Complete physical iPhone 14 Plus installation with actual iOS version, per-source Share compatibility, memory/lifecycle, VoiceOver, offline/update/removal and outside-user acceptance. Retain original Android obligations and resolve the iOS-27-deprecated provider path before claiming future support.",
         "next_owner": "Michael / physical-device testers / Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -13458,9 +13464,17 @@
           "runs/2026-11-07-native-share-bootstrap-workflow.json",
           "runs/2026-11-07-native-share-bounded-workflow.json",
           "runs/2026-11-07-native-automation-budget.json",
-          "runs/2026-11-08-ios-archive-readiness.json"
+          "runs/2026-11-08-ios-archive-readiness.json",
+          "docs/ios-distribution-plan.md",
+          "docs/app-store-readiness.md",
+          "scripts/verify-ios-archive.py",
+          "tests/test_ios_archive.py",
+          "runs/2026-11-09-native-share-initial-workflow.json",
+          "runs/2026-11-09-native-share-diagnostic-workflow.json",
+          "runs/2026-11-09-native-share-distribution-workflow.json",
+          "runs/2026-11-09-ios-distribution-final-archive.json"
         ],
-        "evidence_scope": "Five actual current-source UI workflows passed on a newly created iPhone 14 Plus simulator running iOS 26.2, Xcode/SDK 27.2; source identities remained unchanged and the simulator was removed. Standalone PS, editing, native selected-text handoff, explicit checks, cancel/clear/repeat, inline evidence and background clearing are demonstrated using invented text. This is not physical-device, human accessibility, arbitrary share-source, independent accuracy or signed phone release acceptance.",
+        "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed.",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],
