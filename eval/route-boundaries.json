@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-10T00:22:10.524981+00:00",
+  "reviewed_at": "2026-11-10T00:41:49.206211+00:00",
   "reviewed_by": "Codex \u2014 private hash-inbox, signed-source fleet and factual policy changes; no endpoint, company collection, tag-release or device-security activation",
   "rules": [
     "X-01",
@@ -21,7 +21,7 @@
     ".gitattributes": "1bfd1c773f30ef109c447140a2e080cb3365ede5b61deca2b9740ae873c02880",
     ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
     ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
-    ".github/workflows/ci.yml": "2c40a41045e723cbd413266e5da70b798167f24c4b16efac1db13d0747058e96",
+    ".github/workflows/ci.yml": "0dadbe6e33a19649de747774645439d7deaee6955b1c7f435ed94b5485140125",
     ".github/workflows/fleet.yml": "53eb16fdd7d03d017c9118f82cdd259f1342be0a35b29e51cfce0f5dda807fab",
     ".github/workflows/hash-reports.yml": "51948b61be3b820da5e4b04803580371041b0b4ac33a1c176981a6d9f7924d01",
     ".github/workflows/manifest-inspection.yml": "451b8df145c747ca53c6295ef8dcb534aedfb5c4ccf9608814715d85b962a220",
@@ -58,7 +58,7 @@
     "deploy/research/metadata-pilot-policy.json": "ba1e64ef0f97f67c91d0dac4a3127f619b08f23680c3691709c8450bb21d7cbd",
     "docs/agent-output-plan.md": "518218894187780b436bdd69baa6afe3d773de71e838ebe1c2c0ce2a44a4036c",
     "docs/agent-output.md": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
-    "docs/app-store-readiness.md": "2c27c2579342b86bb80a1fb64b1c7df5bf8d743c22f78bb519fd2f06e1008b34",
+    "docs/app-store-readiness.md": "85d2380eb17a7f0240fbd7c4d3824075de6bbb0453b461e927e119a3ee479662",
     "docs/asset-notices-plan.md": "4f873738c57d36af66683321fc58bf4baa92e1b7428fd2194337f858a5d40f5f",
     "docs/asset-notices-result.md": "3546fe6fda381af88f711caf3f3bb9cc6d99ac64ec360400ea4c36008f5d77b5",
     "docs/asset-notices.md": "5d50bd25913fabc0c6b179221c5d1e499a14ebd8be719c3da13e9310e19cd78a",
@@ -1022,7 +1022,7 @@
   },
   "engineering_receipts": {
     "extension": "runs/2026-11-10-private-tools-release-extension.json",
-    "website": "runs/2026-11-10-private-tools-release-website.json"
+    "website": "runs/2026-11-10-private-tools-ci-website.json"
   },
   "device_evidence": {
     "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",

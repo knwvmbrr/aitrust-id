@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-10T00:28:54.769832+00:00",
+  "updated": "2026-11-10T00:47:17.722434+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1026,7 +1026,7 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current private-tools source and selected personal boundaries pass; protected publication pending",
+    "status": "Current private-tools source and selected personal boundaries pass after CI privilege repair; protected publication pending",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-14-setup-published-routes.json",
     "source_files": 1002,
@@ -1049,7 +1049,7 @@
     "publication": "runs/2026-10-11-key-recovery-publication.json",
     "public_catalogue": "runs/2026-10-11-key-recovery-live-site.json",
     "public_policies": "runs/2026-10-11-key-recovery-live-policies.json",
-    "current_verification": "runs/2026-11-10-private-tools-release-boundaries.json"
+    "current_verification": "runs/2026-11-10-private-tools-ci-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1092,12 +1092,12 @@
     "PS": "runs/2026-11-10-private-tools-release-PS.json",
     "PII_REDACTED": "runs/2026-11-10-private-tools-release-PII_REDACTED.json",
     "extension": "runs/2026-11-10-private-tools-release-extension.json",
-    "protocol": "runs/2026-11-10-private-tools-release-protocol.json",
-    "website": "runs/2026-11-10-private-tools-release-website.json",
+    "protocol": "runs/2026-11-10-private-tools-ci-protocol.json",
+    "website": "runs/2026-11-10-private-tools-ci-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-10T00:28:54.769832+00:00",
+  "updated_at": "2026-11-10T00:47:17.722434+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3000,7 +3000,7 @@
     "privacy_policy_url_saved": "https://aitrustid.com/policies/privacy/",
     "privacy_declarations_published": false,
     "xcode_account_configured": true,
-    "owner_sign_in_required": true,
+    "owner_sign_in_required": false,
     "protected_merge": "a6f0a5181565addc7d54b2ac6d8941c784dd98ac",
     "local_certificate_panel_empty": true,
     "certificate_creation_disabled_when_observed": true,
@@ -3011,8 +3011,12 @@
     "source_and_guide_published": true,
     "source_publication": "runs/2026-11-09-pan-publication.json",
     "app_store_publication_pending": true,
-    "app_store_session_requires_sign_in": true,
-    "current_session_observation": "runs/2026-11-10-app-store-session-status.json"
+    "app_store_session_requires_sign_in": false,
+    "current_session_observation": "runs/2026-11-10-app-store-draft-reopened.json",
+    "promotional_text_saved": "Check selected text offline with the PS development preview. Review matched command patterns on your device, with no account.",
+    "review_contact_phone_requires_owner": true,
+    "review_contact_saved": false,
+    "screenshots_uploaded": false
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
@@ -3125,12 +3129,15 @@
     "website_commands": 32,
     "owned_build_phases": 9,
     "policies_checked_before_server_shutdown": true,
-    "boundary_evidence": "runs/2026-11-10-private-tools-release-boundaries.json",
+    "boundary_evidence": "runs/2026-11-10-private-tools-ci-boundaries.json",
     "publication_pending": true,
     "independent_accuracy_evidence": false,
     "full_requirement_closures": [
       "F-159",
       "F-045"
-    ]
+    ],
+    "revalidation_pending": [],
+    "ci_privilege_drop_evidence": "runs/2026-11-10-ci-nonroot-namespace-probe.json",
+    "protected_ci_repair_pending": true
   }
 }

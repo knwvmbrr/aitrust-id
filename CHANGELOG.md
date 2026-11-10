@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-10
 
+### 2026-11-10-004717-ci-privilege-repair-verified-10671329
+
+Recorded 2026-11-10T00:47:17.892060+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh only affected protocol/website and boundary receipts after the no-egress privilege repair; retain verified App Store draft progress.
+- **Evidence.** All five capability receipts match current sources. Both tools retain their root refusal and their complete actual non-root Mac/Linux acceptance; the corrected CI privilege drop is kernel-exercised. [Change record](./runs/changes/2026-11-10-004717-ci-privilege-repair-verified-10671329.json).
+- **Not claimed.** Full protected CI and review of this new commit remain pending; zero additional requirement closures, no App Store upload or tag accuracy approval.
+
+
+### 2026-11-10-004149-ci-owner-and-store-draft-468a511b
+
+Recorded 2026-11-10T00:41:49.244565+00:00 · Contributor: Codex · change
+
+- **Changed.** Run network-isolated application tests as the checkout owner with all capabilities removed; save and reload factual App Store preview copy after owner sign-in.
+- **Evidence.** Actual isolated Linux probe confirms non-root UID, empty groups, no-new-privileges, no effective/permitted/inheritable/bounding/ambient capabilities and loopback-only networking. App Store promotional copy persisted after reload; phone-dependent review contacts remain blank. [Change record](./runs/changes/2026-11-10-004149-ci-owner-and-store-draft-468a511b.json).
+- **Not claimed.** Fresh protocol/website checks and protected CI remain pending. No root allowance, skipped lifecycle cases, tag accuracy, new requirement closure, App Store binary or submission.
+
+
 ### 2026-11-10-002854-private-tools-release-acceptance-4af01782
 
 Recorded 2026-11-10T00:28:54.961984+00:00 · Contributor: Codex · change

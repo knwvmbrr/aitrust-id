@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-004717-ci-privilege-repair-verified-10671329",
+  "recorded_at": "2026-11-10T00:47:17.892060+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "38de0be3ef975e52f495b746791f14ac07bb1d29",
+  "changed": "Refresh only affected protocol/website and boundary receipts after the no-egress privilege repair; retain verified App Store draft progress.",
+  "proves": "All five capability receipts match current sources. Both tools retain their root refusal and their complete actual non-root Mac/Linux acceptance; the corrected CI privilege drop is kernel-exercised.",
+  "limits": "Full protected CI and review of this new commit remain pending; zero additional requirement closures, no App Store upload or tag accuracy approval.",
+  "scope_ids": [
+    "F-045",
+    "F-159",
+    "N-013",
+    "X-01",
+    "N-007"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "0dadbe6e33a19649de747774645439d7deaee6955b1c7f435ed94b5485140125",
+    "docs/app-store-readiness.md": "85d2380eb17a7f0240fbd7c4d3824075de6bbb0453b461e927e119a3ee479662",
+    "docs/private-tools-publication-plan.md": "1e880f937aa62498dd38f834c7bcd138820ea26035292238c0cfd4d48eba48a9",
+    "eval/route-boundaries.json": "b4d204134540b573256c74410fb4c568dc924b7b010627c0258aa2276e60f85d",
+    "runs/2026-11-10-app-store-draft-reopened.json": "05d7c230a99180af449e90b81bbd596b2f735b993ce12967f4da1a6b8952ccdd",
+    "runs/2026-11-10-ci-nonroot-namespace-probe.json": "89d02d4a8fa9d3cf76c1d33d2b879110f5d279385a7da93986a9c56a6bf866ab",
+    "runs/2026-11-10-private-tools-ci-boundaries.json": "3339601741c4aff995802b210a6a314991b9707f953d9b7c051fb21b29974092",
+    "runs/2026-11-10-private-tools-ci-protocol.json": "e7c987b86b4bbe124e05094459f0d3ae914cd0d0efca05bfb78b762ca82b0f6d",
+    "runs/2026-11-10-private-tools-ci-root-failure.json": "09a805d619d483af48a21f62b46a4dbc202f5210f4c0dfa61b17a23525e7ee22",
+    "runs/2026-11-10-private-tools-ci-website.json": "a653eca2da2c8877f4b18f141413ac6ba8e74d11e2014ceff57e05fdc86aac72",
+    "state.json": "a20ab6e656429a574e892874f23eb27efb74f74e04726a78e71222130577c899"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-private-tools-ci-protocol.json",
+      "sha256": "e7c987b86b4bbe124e05094459f0d3ae914cd0d0efca05bfb78b762ca82b0f6d"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-ci-website.json",
+      "sha256": "a653eca2da2c8877f4b18f141413ac6ba8e74d11e2014ceff57e05fdc86aac72"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-ci-boundaries.json",
+      "sha256": "3339601741c4aff995802b210a6a314991b9707f953d9b7c051fb21b29974092"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T00:47:18.475395+00:00"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-004149-ci-owner-and-store-draft-468a511b",
+  "recorded_at": "2026-11-10T00:41:49.244565+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "38de0be3ef975e52f495b746791f14ac07bb1d29",
+  "changed": "Run network-isolated application tests as the checkout owner with all capabilities removed; save and reload factual App Store preview copy after owner sign-in.",
+  "proves": "Actual isolated Linux probe confirms non-root UID, empty groups, no-new-privileges, no effective/permitted/inheritable/bounding/ambient capabilities and loopback-only networking. App Store promotional copy persisted after reload; phone-dependent review contacts remain blank.",
+  "limits": "Fresh protocol/website checks and protected CI remain pending. No root allowance, skipped lifecycle cases, tag accuracy, new requirement closure, App Store binary or submission.",
+  "scope_ids": [
+    "F-045",
+    "F-159",
+    "N-013",
+    "X-01",
+    "N-007"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "0dadbe6e33a19649de747774645439d7deaee6955b1c7f435ed94b5485140125",
+    "docs/app-store-readiness.md": "85d2380eb17a7f0240fbd7c4d3824075de6bbb0453b461e927e119a3ee479662",
+    "docs/private-tools-publication-plan.md": "1e880f937aa62498dd38f834c7bcd138820ea26035292238c0cfd4d48eba48a9",
+    "eval/route-boundaries.json": "b4d204134540b573256c74410fb4c568dc924b7b010627c0258aa2276e60f85d",
+    "runs/2026-11-10-app-store-draft-reopened.json": "05d7c230a99180af449e90b81bbd596b2f735b993ce12967f4da1a6b8952ccdd",
+    "runs/2026-11-10-ci-nonroot-namespace-probe.json": "89d02d4a8fa9d3cf76c1d33d2b879110f5d279385a7da93986a9c56a6bf866ab",
+    "runs/2026-11-10-private-tools-ci-root-failure.json": "09a805d619d483af48a21f62b46a4dbc202f5210f4c0dfa61b17a23525e7ee22",
+    "state.json": "56ace958243045ab807fc39e01e1abeda42d2b7b08a70b18a7f2be1373c55380"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-ci-nonroot-namespace-probe.json",
+      "sha256": "89d02d4a8fa9d3cf76c1d33d2b879110f5d279385a7da93986a9c56a6bf866ab"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-ci-root-failure.json",
+      "sha256": "09a805d619d483af48a21f62b46a4dbc202f5210f4c0dfa61b17a23525e7ee22"
+    },
+    {
+      "path": "runs/2026-11-10-app-store-draft-reopened.json",
+      "sha256": "05d7c230a99180af449e90b81bbd596b2f735b993ce12967f4da1a6b8952ccdd"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T00:41:50.565763+00:00"
+    }
+  ]
+}
