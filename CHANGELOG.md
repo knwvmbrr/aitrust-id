@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-10
 
+### 2026-11-10-010808-private-tools-live-state-16d60162
+
+Recorded 2026-11-10T01:08:08.183283+00:00 · Contributor: Codex · change
+
+- **Changed.** Finalize the verified private-tools publication packet and current state while keeping every deployed application/build input unchanged.
+- **Evidence.** Actual fingerprint assessments pass for all five selected capabilities. All 586 public/deployment artifact comparisons, live catalogue/workflow/policy checks, protected review and CI evidence are retained; publication history preserves the prior deployment separately. [Change record](./runs/changes/2026-11-10-010808-private-tools-live-state-16d60162.json).
+- **Not claimed.** 132 complete and 70 open, still ten closures short of 60. Optional research notes remain unpublished and unimplemented; no extra closure, tag release, company collection, real enrollment or App Store upload.
+
+
+### 2026-11-10-010542-private-tools-publication-proof-ce707712
+
+Recorded 2026-11-10T01:05:42.353152+00:00 · Contributor: Codex · change
+
+- **Changed.** Record verified protected deployment of the two completed private tools, actual live workflows/policies, preserved publication history and factual next watermark-integration findings.
+- **Evidence.** PR 96 passed all 22 required checks and exact-head review; all 293 artifacts match at both delivery origins, 20 modals, eight workflows and nine policies pass live checks. All 202 requirements remain, with 132 complete and 70 open. [Change record](./runs/changes/2026-11-10-010542-private-tools-publication-proof-ce707712.json).
+- **Not claimed.** Metadata and research findings only; deployed application source remains 0033207b3df5374958619108bf75d81b3e079f17. No extra closure, watermark implementation, independent accuracy approval, company collection, real enrollment or App Store upload.
+
+
 ### 2026-11-10-004717-ci-privilege-repair-verified-10671329
 
 Recorded 2026-11-10T00:47:17.892060+00:00 · Contributor: Codex · change

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-010808-private-tools-live-state-16d60162",
+  "recorded_at": "2026-11-10T01:08:08.183283+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0033207b3df5374958619108bf75d81b3e079f17",
+  "changed": "Finalize the verified private-tools publication packet and current state while keeping every deployed application/build input unchanged.",
+  "proves": "Actual fingerprint assessments pass for all five selected capabilities. All 586 public/deployment artifact comparisons, live catalogue/workflow/policy checks, protected review and CI evidence are retained; publication history preserves the prior deployment separately.",
+  "limits": "132 complete and 70 open, still ten closures short of 60. Optional research notes remain unpublished and unimplemented; no extra closure, tag release, company collection, real enrollment or App Store upload.",
+  "scope_ids": [
+    "F-045",
+    "F-159",
+    "N-013",
+    "X-01",
+    "N-007"
+  ],
+  "files": {
+    "runs/2026-11-10-private-tools-live-policies.json": "3fca82016d8a2a159f36ede8f215ae8b6c47e683161fdb86b377afe93286d491",
+    "runs/2026-11-10-private-tools-live-site.json": "14960a615d19bd7d1208899e5d73508fbaff2b8771875ba4c9cf99d2b163cf0d",
+    "runs/2026-11-10-private-tools-live-workflows.json": "8532bd3dd3a63b77ae348a8807a8648d076695820af7266db2981ce940c312e7",
+    "runs/2026-11-10-private-tools-publication-bytes.json": "c49c3dd89b8d3837b10bf73adf985c04d8e69d59637aa348858626e5efb42f00",
+    "runs/2026-11-10-private-tools-publication.json": "558274449809f4ffd40cb1ac98968c0bd9baa5096e3a668ce936c766803ef4b4",
+    "runs/2026-11-10-publication-metadata-fingerprint-refusal.json": "044fff53279c977f56eb729fb586a656afb443ef5fe8c3554e842a3b7fb48e17",
+    "state.json": "c9ebeb09afc8edba61e2f3b552790fb0f715f9c765ee6de3aaafb79cd66dd75c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-private-tools-publication.json",
+      "sha256": "558274449809f4ffd40cb1ac98968c0bd9baa5096e3a668ce936c766803ef4b4"
+    },
+    {
+      "path": "runs/2026-11-10-publication-metadata-fingerprint-refusal.json",
+      "sha256": "044fff53279c977f56eb729fb586a656afb443ef5fe8c3554e842a3b7fb48e17"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T01:08:08.862917+00:00"
+    }
+  ]
+}

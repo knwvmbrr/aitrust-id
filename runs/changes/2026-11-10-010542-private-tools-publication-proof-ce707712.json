@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-010542-private-tools-publication-proof-ce707712",
+  "recorded_at": "2026-11-10T01:05:42.353152+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0033207b3df5374958619108bf75d81b3e079f17",
+  "changed": "Record verified protected deployment of the two completed private tools, actual live workflows/policies, preserved publication history and factual next watermark-integration findings.",
+  "proves": "PR 96 passed all 22 required checks and exact-head review; all 293 artifacts match at both delivery origins, 20 modals, eight workflows and nine policies pass live checks. All 202 requirements remain, with 132 complete and 70 open.",
+  "limits": "Metadata and research findings only; deployed application source remains 0033207b3df5374958619108bf75d81b3e079f17. No extra closure, watermark implementation, independent accuracy approval, company collection, real enrollment or App Store upload.",
+  "scope_ids": [
+    "F-045",
+    "F-159",
+    "F-155",
+    "N-013",
+    "X-01",
+    "N-007"
+  ],
+  "files": {
+    "docs/scope-60-execution.md": "c10874eb28e8f7dac6af32b4dd8666bb3cf3c995b2c24d340a49a9b6d48daf81",
+    "docs/synthid-integration-review.md": "250effc99b405587aeb36fa7489b1fc5c7e286e83578fcdd06c1c9aaaef2edbd",
+    "runs/2026-11-10-private-tools-live-policies.json": "3fca82016d8a2a159f36ede8f215ae8b6c47e683161fdb86b377afe93286d491",
+    "runs/2026-11-10-private-tools-live-site.json": "14960a615d19bd7d1208899e5d73508fbaff2b8771875ba4c9cf99d2b163cf0d",
+    "runs/2026-11-10-private-tools-live-workflows.json": "8532bd3dd3a63b77ae348a8807a8648d076695820af7266db2981ce940c312e7",
+    "runs/2026-11-10-private-tools-publication-bytes.json": "c49c3dd89b8d3837b10bf73adf985c04d8e69d59637aa348858626e5efb42f00",
+    "runs/2026-11-10-private-tools-publication.json": "558274449809f4ffd40cb1ac98968c0bd9baa5096e3a668ce936c766803ef4b4",
+    "state.json": "e13d906a4c86cfcd8a26b53394d1b2c953db69c82570ed4ba04a20cab1456d7b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-private-tools-publication.json",
+      "sha256": "558274449809f4ffd40cb1ac98968c0bd9baa5096e3a668ce936c766803ef4b4"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-publication-bytes.json",
+      "sha256": "c49c3dd89b8d3837b10bf73adf985c04d8e69d59637aa348858626e5efb42f00"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-live-site.json",
+      "sha256": "14960a615d19bd7d1208899e5d73508fbaff2b8771875ba4c9cf99d2b163cf0d"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-live-workflows.json",
+      "sha256": "8532bd3dd3a63b77ae348a8807a8648d076695820af7266db2981ce940c312e7"
+    },
+    {
+      "path": "runs/2026-11-10-private-tools-live-policies.json",
+      "sha256": "3fca82016d8a2a159f36ede8f215ae8b6c47e683161fdb86b377afe93286d491"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T01:05:43.058919+00:00"
+    }
+  ]
+}
