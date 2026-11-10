@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-10T01:07:33.836853+00:00",
+  "pass": false,
+  "error_signature": "website source_dependency_fixture_or_check_changed",
+  "cause": "Two optional documentation additions matched the website docs/**/* input glob. Path.match checks had incorrectly suggested those single-level files were excluded. The actual fingerprint guard refused the stale receipt.",
+  "fix": "Keep this followup strictly publication metadata. Preserve the optional notes privately and restore the deployed documentation bytes; do not weaken the source fingerprint or claim the notes are implemented.",
+  "runtime_or_deployment_failure": false,
+  "fresh_verification": "All five actual fingerprint assessments must pass before committing this metadata followup.",
+  "full_requirement_closures": 0,
+  "independent_accuracy_evidence": false
+}
