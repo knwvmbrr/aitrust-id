@@ -35,6 +35,7 @@ async function main(){
   await run('accessibility',process.execPath,['scripts/verify-site-accessibility.cjs'],env);
   await run('mobile-payload',process.execPath,['scripts/verify-mobile-payload.cjs'],env);
  await run('feedback',process.execPath,['scripts/verify-research-feedback.cjs'],env);
+ await run('policies',process.execPath,['scripts/verify-policies.cjs'],env);
  }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 }
 // Invalidate any previous success before starting even the first child.

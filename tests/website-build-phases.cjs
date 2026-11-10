@@ -1,10 +1,10 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const {BuildPhases,PHASES,StageError}=require('../scripts/website-build-phases.cjs');
 const cwd=__dirname;
-test('only all eight successful real children form a passing record',async()=>{
+test('only all nine successful real children form a passing record',async()=>{
  const phases=new BuildPhases(cwd);assert.equal(phases.report().pass,false);
  for(const name of PHASES){await phases.run(name,process.execPath,['-e','process.exit(0)']);}
- const record=phases.report();assert.equal(record.pass,true);assert.equal(record.phases.length,8);
+ const record=phases.report();assert.equal(record.pass,true);assert.equal(record.phases.length,9);
  for(const row of record.phases){assert.equal(row.exit_status,0);assert.equal(row.pass,true);assert(row.elapsed_ms>=0);assert(new Date(row.finished_at)>=new Date(row.started_at));}
  record.phases[0].pass=false;assert.equal(phases.report().pass,true);
 });
@@ -42,7 +42,7 @@ test('an ignored invalid request cannot leave a passing aggregate record',async(
  const phases=new BuildPhases(cwd);
  for(const name of PHASES){await phases.run(name,process.execPath,['-e','process.exit(0)']);}
  await assert.rejects(phases.run('PRIVATE_STAGE_CANARY',process.execPath,[]),StageError);
- assert.equal(phases.report().pass,false);assert.equal(phases.report().phases.length,8);
+ assert.equal(phases.report().pass,false);assert.equal(phases.report().phases.length,9);
 });
 
 test('controller failure after successful children cannot produce a pass',async()=>{

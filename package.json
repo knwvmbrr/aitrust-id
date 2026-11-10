@@ -61,7 +61,10 @@
     "verify:editorial": "python3 scripts/verify-editorial-cli.py && node scripts/verify-editorial-workflow.cjs",
     "fleet": "python3 scripts/fleet.py",
     "verify:fleet": "python3 scripts/verify-fleet.py",
-    "verify:fleet-evidence": "python3 scripts/verify-fleet-evidence.py"
+    "verify:fleet-evidence": "python3 scripts/verify-fleet-evidence.py",
+    "hash-reports": "python3 scripts/hash-reports.py",
+    "verify:hash-reports": "python3 scripts/verify-hash-reports.py",
+    "verify:hash-reports-evidence": "python3 scripts/verify-hash-reports-evidence.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",

@@ -16,5 +16,5 @@ export default function Report({tag}){
  <Field id={id+'-record'} label="Tag record ID (optional)"><input id={id+'-record'} maxLength={100} value={receipt} onChange={e=>setReceipt(e.target.value)} className={input}/></Field><p id={id+'-error'} role="alert" className="text-sm">{error}</p>
  <Callout>Drafts stay in this panel until you copy or download. GitHub reports are public: use synthetic content, not private AI answers.</Callout>
  <div className="flex flex-wrap gap-2"><button type="submit" className={action}>Download draft</button><button type="button" className={action} onClick={copy}>Copy draft</button></div><p role="status" className="text-sm">{status}</p><Link href={issueURL}>Open public GitHub report</Link>
- </form>}</div>;
+ </form>}<section className="mt-6 rounded-xl border border-input p-4"><h4 className="text-base font-semibold">Keep report metadata on your own server</h4><p className="my-2 text-sm leading-6">Operators can use the optional private hash inbox. It accepts no answer text and sends nothing to AI Trust ID. It is separate from this public-report draft and optional research feedback.</p><Link href="/reference/hash-report-intake.md">Private hash inbox guide</Link></section></div>;
 }

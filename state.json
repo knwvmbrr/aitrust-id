@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-09T21:42:01.550900+00:00",
+  "updated": "2026-11-10T00:28:54.769832+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -760,9 +760,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-09T21:37:15.236103+00:00",
-    "completed_records": 131,
-    "open_records": 71,
+    "audited_at": "2026-11-09T22:10:37.890409+00:00",
+    "completed_records": 132,
+    "open_records": 70,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -776,22 +776,23 @@
     "source_commit": "64eea1c5fa881e98921829f642e4b06d0d7a6025",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/fleet-deployment-plan.md",
+    "latest_increment": "docs/hash-report-intake-plan.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 60,
     "target_start_open_records": 78,
-    "target_remaining_closures": 11,
+    "target_remaining_closures": 10,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-09-fleet-scope.json",
+    "current_target_verification": "runs/2026-11-09-hash-inbox-scope.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
     "latest_owner_direction_date": "2026-11-09",
     "latest_increment_completed_ids": [
-      "F-159"
+      "F-159",
+      "F-045"
     ],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
@@ -1025,10 +1026,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current review passes after replay/service-cleanup fixes; protected publication pending",
+    "status": "Current private-tools source and selected personal boundaries pass; protected publication pending",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-14-setup-published-routes.json",
-    "source_files": 770,
+    "source_files": 1002,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1048,7 +1049,7 @@
     "publication": "runs/2026-10-11-key-recovery-publication.json",
     "public_catalogue": "runs/2026-10-11-key-recovery-live-site.json",
     "public_policies": "runs/2026-10-11-key-recovery-live-policies.json",
-    "current_verification": "runs/2026-11-09-rollover-current-boundaries.json"
+    "current_verification": "runs/2026-11-10-private-tools-release-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1088,15 +1089,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-09-rollover-current-PS.json",
-    "PII_REDACTED": "runs/2026-11-09-rollover-current-PII_REDACTED.json",
-    "extension": "runs/2026-11-09-rollover-current-extension.json",
-    "protocol": "runs/2026-11-09-rollover-current-protocol.json",
-    "website": "runs/2026-11-09-rollover-current-website-accepted.json",
+    "PS": "runs/2026-11-10-private-tools-release-PS.json",
+    "PII_REDACTED": "runs/2026-11-10-private-tools-release-PII_REDACTED.json",
+    "extension": "runs/2026-11-10-private-tools-release-extension.json",
+    "protocol": "runs/2026-11-10-private-tools-release-protocol.json",
+    "website": "runs/2026-11-10-private-tools-release-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-09T21:42:01.550900+00:00",
+  "updated_at": "2026-11-10T00:28:54.769832+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2879,10 +2880,10 @@
   },
   "scope_target_current": {
     "records": 202,
-    "complete": 131,
-    "open": 71,
+    "complete": 132,
+    "open": 70,
     "target_open": 60,
-    "closures_needed": 11,
+    "closures_needed": 10,
     "ledger": "docs/scope-progress.json"
   },
   "organization_directory": {
@@ -2999,7 +3000,7 @@
     "privacy_policy_url_saved": "https://aitrustid.com/policies/privacy/",
     "privacy_declarations_published": false,
     "xcode_account_configured": true,
-    "owner_sign_in_required": false,
+    "owner_sign_in_required": true,
     "protected_merge": "a6f0a5181565addc7d54b2ac6d8941c784dd98ac",
     "local_certificate_panel_empty": true,
     "certificate_creation_disabled_when_observed": true,
@@ -3009,7 +3010,9 @@
     "local_signing_identity_available": false,
     "source_and_guide_published": true,
     "source_publication": "runs/2026-11-09-pan-publication.json",
-    "app_store_publication_pending": true
+    "app_store_publication_pending": true,
+    "app_store_session_requires_sign_in": true,
+    "current_session_observation": "runs/2026-11-10-app-store-session-status.json"
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
@@ -3075,10 +3078,10 @@
     "status": "bounded_software_complete; organization_acceptance_open",
     "requirement": "F-159",
     "profile": "owner-private approved-source offline PS development deployment on macOS/Linux",
-    "acceptance": "runs/2026-11-09-fleet-software-acceptance.json",
-    "macos_evidence": "runs/2026-11-09-fleet-accepted-macos.json",
-    "linux_evidence": "runs/2026-11-09-fleet-accepted-linux.json",
-    "controls_per_platform": 32,
+    "acceptance": "runs/2026-11-09-fleet-root-guard-acceptance.json",
+    "macos_evidence": "runs/2026-11-09-fleet-root-guard-macos.json",
+    "linux_evidence": "runs/2026-11-09-fleet-root-guard-linux.json",
+    "controls_per_platform": 33,
     "guide": "docs/fleet-deployment.md",
     "production_changed": false,
     "enrolled_real_devices": false,
@@ -3094,5 +3097,40 @@
     "connected": true,
     "developer_mode_enabled": false,
     "physical_workflow_tested": false
+  },
+  "private_hash_reporting": {
+    "status": "bounded_software_complete; public_reporting_and_research_separate",
+    "requirement": "F-045",
+    "guide": "docs/hash-report-intake.md",
+    "acceptance": "runs/2026-11-09-hash-inbox-software-acceptance.json",
+    "macos_evidence": "runs/2026-11-09-hash-inbox-current-macos.json",
+    "linux_evidence": "runs/2026-11-09-hash-inbox-current-linux.json",
+    "controls_per_platform": 29,
+    "company_collection_enabled": false,
+    "public_registry_enabled": false,
+    "automatic_forwarding": false,
+    "real_user_feedback_collected": false,
+    "training_labels_created": false,
+    "publication_pending": true
+  },
+  "private_tools_policy": {
+    "version": "1.11",
+    "effective_date": "2026-11-09",
+    "evidence": "runs/2026-11-09-private-tools-policy-archives.json",
+    "company_collection_enabled": false,
+    "publication_pending": true
+  },
+  "private_tools_release_verification": {
+    "all_five_capabilities_current": true,
+    "website_commands": 32,
+    "owned_build_phases": 9,
+    "policies_checked_before_server_shutdown": true,
+    "boundary_evidence": "runs/2026-11-10-private-tools-release-boundaries.json",
+    "publication_pending": true,
+    "independent_accuracy_evidence": false,
+    "full_requirement_closures": [
+      "F-159",
+      "F-045"
+    ]
   }
 }

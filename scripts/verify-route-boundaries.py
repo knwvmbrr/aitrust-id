@@ -243,6 +243,10 @@ PATTERNS += ('docs/directory-clock-fence-plan.md',)
 
 PATTERNS += ('tools/fleet.py','scripts/fleet.py','scripts/verify-fleet.py','scripts/verify-fleet-linux.py','scripts/verify-fleet-evidence.py','tests/test_fleet.py','tests/test_fleet_evidence.py','docs/fleet-deployment-plan.md','docs/fleet-deployment.md','.github/workflows/fleet.yml','runs/2026-11-09-fleet-accepted-macos.json','runs/2026-11-09-fleet-accepted-linux.json')
 
+PATTERNS += ('tools/hash_reports.py', 'scripts/hash-reports.py', 'scripts/verify-hash-reports.py', 'scripts/verify-hash-reports-linux.py', 'scripts/verify-hash-reports-evidence.py', 'tests/test_hash_reports.py', 'tests/test_hash_reports_evidence.py', 'docs/hash-report-intake-plan.md', 'docs/hash-report-intake.md', '.github/workflows/hash-reports.yml', 'runs/2026-11-09-hash-inbox-macos.json', 'runs/2026-11-09-hash-inbox-linux.json', 'runs/2026-11-09-fleet-root-guard-macos.json', 'runs/2026-11-09-fleet-root-guard-linux.json')
+
+PATTERNS += ('runs/2026-11-09-hash-inbox-current-macos.json','runs/2026-11-09-hash-inbox-current-linux.json')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

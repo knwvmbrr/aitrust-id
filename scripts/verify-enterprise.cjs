@@ -147,8 +147,8 @@ const FORBIDDEN = [
   if (fleet.references.includes('/reference/fleet-deployment.md')) {
     const path=require('node:path'),crypto=require('node:crypto');
     for (const [platform,name] of [['darwin','macos'],['linux','linux']]) {
-      const proof=JSON.parse(fs.readFileSync(path.join(__dirname,'../runs/2026-11-09-fleet-accepted-'+name+'.json')));
-      if(proof.platform!==platform||proof.pass!==true||proof.non_root!==true||proof.source_unchanged!==true||proof.actual_cli_processes!==true||proof.test_count!==32||proof.cases.length!==32||new Set(proof.cases).size!==32||proof.failures||proof.errors||proof.skipped)fail('FLEET lacks its complete actual '+platform+' software evidence');
+      const proof=JSON.parse(fs.readFileSync(path.join(__dirname,'../runs/2026-11-09-fleet-root-guard-'+name+'.json')));
+      if(proof.platform!==platform||proof.pass!==true||proof.non_root!==true||proof.source_unchanged!==true||proof.actual_cli_processes!==true||proof.test_count!==33||proof.cases.length!==33||new Set(proof.cases).size!==33||proof.failures||proof.errors||proof.skipped)fail('FLEET lacks its complete actual '+platform+' software evidence');
       if(platform==='linux'&&proof.isolated_network_namespace!==true)fail('FLEET Linux isolation claim is unsupported');
       for(const flag of ['enrolled_real_devices','production_changed','collection_enabled','commercial_service_activated','independent_accuracy_evidence','human_acceptance'])if(proof[flag]!==false)fail('FLEET overstates its '+flag+' boundary');
       for(const [relative,expected] of Object.entries(proof.sources)) {

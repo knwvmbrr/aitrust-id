@@ -1170,7 +1170,24 @@
         "docs/fleet-deployment.md",
         ".github/workflows/fleet.yml",
         "runs/2026-11-09-fleet-accepted-macos.json",
-        "runs/2026-11-09-fleet-accepted-linux.json"
+        "runs/2026-11-09-fleet-accepted-linux.json",
+        "tools/hash_reports.py",
+        "scripts/hash-reports.py",
+        "scripts/verify-hash-reports.py",
+        "scripts/verify-hash-reports-linux.py",
+        "scripts/verify-hash-reports-evidence.py",
+        "tests/test_hash_reports.py",
+        "tests/test_hash_reports_evidence.py",
+        "docs/hash-report-intake-plan.md",
+        "docs/hash-report-intake.md",
+        ".github/workflows/hash-reports.yml",
+        "runs/2026-11-09-hash-inbox-macos.json",
+        "runs/2026-11-09-hash-inbox-linux.json",
+        "runs/2026-11-09-fleet-root-guard-macos.json",
+        "runs/2026-11-09-fleet-root-guard-linux.json",
+        "runs/2026-11-09-hash-inbox-current-macos.json",
+        "runs/2026-11-09-hash-inbox-current-linux.json",
+        "scripts/verify-policies.cjs"
       ],
       "commands": [
         [
@@ -1346,6 +1363,17 @@
           "-m",
           "pytest",
           "tests/test_fleet_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-hash-reports-evidence.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_hash_reports_evidence.py",
           "-q"
         ]
       ]

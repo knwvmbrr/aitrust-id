@@ -1,5 +1,5 @@
 Privacy and data use
-AI TRUST ID · Version 1.10 · Effective 2026-10-11
+AI TRUST ID · Version 1.11 · Effective 2026-11-09
 Published by AI Trust ID.
 
 What stays on your device, what hosts receive and what sharing means.
@@ -65,6 +65,20 @@ Automatic training-data forwarding and website research intake are disabled. Mer
 
 Private security report: https://github.com/knwvmbrr/aitrust-id/security/advisories/new
 Project contact: mailto:admin@aitrustid.com
+
+Optional private deployment workspaces
+The separate fleet CLI runs only when an operator invokes it. A workspace holds an explicitly approved source package, selected public authority key, random device ID, signed cohort policy and at most 100 administration events. No answer text or subject hash enters this inventory. A signing key is created only by an explicit operator key-generation command and stays in the separately chosen private file; the software does not encrypt that file or upload it. Operators control access and backups.
+
+Local pause takes precedence over organization policy. Metadata export and transport are explicit operator decisions. Device and public-key fingerprints can link records. No company-hosted fleet, research sharing, forced receipt, independently validated tag release or paid service is activated by these commands.
+
+Fleet software and supported scope: /reference/fleet-deployment.md
+
+Optional operator-held hash inbox
+The separate hash-report CLI can run on an operator-owned Linux server or Mac. It accepts only a subject hash, method hash, supported tag code and fixed feedback category. Preview writes nothing; every stored intake requires explicit consent. The owner-private SQLite inbox is separate from this website, the research pilot and the proposed public registry. It does not accept answer text, free-form notes, credentials or identity, and does not automatically send records to AI Trust ID.
+
+Hashes remain linkable metadata. Feedback is unverified and is never a training label. A duplicate does not extend expiry. The operator selects one to thirty days; records are excluded and logically pruned at the next access or explicit prune, not erased from a powered-down disk on a promised wall-clock schedule. Withdrawal and removal do not delete exported copies, snapshots or backups. The operator owns disk encryption, access, cleanup scheduling and any separate sharing decision. This tool creates no research or training permission and changes no company PostgreSQL collection gate.
+
+Private hash-only reporting instructions: /reference/hash-report-intake.md
 
 Optional metadata feedback
 The owner-first guide lets you choose a PS result, method version, failure category and structured usability feedback. Preview and download save a local file; nothing is submitted, stored by the application or enrolled. The file excludes examples, personal identifiers, subject hashes and event timestamps. Feedback is user-reported, not independently verified ground truth. No example-sharing or training permission follows from this download. Changing answers clears the prior preview and download choice.

@@ -181,6 +181,10 @@ class Fleet(unittest.TestCase):
     def test_missing_optional_crypto_dependency_leaves_personal_checker_available(self):
         r=subprocess.run([sys.executable,'-I','-S','-B',str(ROOT/'scripts/fleet.py'),'inventory','--root',str(self.canary)],capture_output=True,timeout=10)
         self.assertEqual(r.returncode,2);self.assertIn(b'FLEET UNAVAILABLE',r.stderr);self.assertNotIn(b'Traceback',r.stderr);self.personal()
+    def test_reserved_new_enrollment_name_is_refused_before_writing(self):
+        target=self.base/'.ssh'
+        self.call('enroll','--root',target,'--public-key',self.public,'--package',self.pkg,'--cohort','canary','--consent-local-only',refuse=True)
+        self.assertFalse(target.exists())
     def test_key_and_package_outputs_never_overwrite(self):
         before=self.key.read_bytes();self.call('keygen','--private',self.key,'--public',self.public,refuse=True);self.assertEqual(before,self.key.read_bytes())
         before=self.pkg.read_bytes();self.call('package','--output',self.pkg,refuse=True);self.assertEqual(before,self.pkg.read_bytes())

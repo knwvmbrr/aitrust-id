@@ -65,4 +65,6 @@ fs.copyFileSync(path.join(root,'runs/2026-11-06-conformance-software-execution.j
 
 fs.copyFileSync(path.join(root,'runs/2026-11-09-directory-rollover-linux.json'),path.join(dist,'reference/directory-software-linux.json'));
 
-for(const [sourceName,targetName] of [["docs/fleet-deployment.md","fleet-deployment.md"],["runs/2026-11-09-fleet-accepted-macos.json","fleet-macos.json"],["runs/2026-11-09-fleet-accepted-linux.json","fleet-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));
+for(const [sourceName,targetName] of [["docs/fleet-deployment.md","fleet-deployment.md"],["runs/2026-11-09-fleet-root-guard-macos.json","fleet-macos.json"],["runs/2026-11-09-fleet-root-guard-linux.json","fleet-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));
+
+for(const [sourceName,targetName] of [["docs/hash-report-intake.md","hash-report-intake.md"],["runs/2026-11-09-hash-inbox-current-macos.json","hash-inbox-macos.json"],["runs/2026-11-09-hash-inbox-current-linux.json","hash-inbox-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));

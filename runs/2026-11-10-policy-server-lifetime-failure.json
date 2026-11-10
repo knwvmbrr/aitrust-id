@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-11-10T00:22:06.922719+00:00",
+  "pass": false,
+  "failed_receipt": "runs/2026-11-10-private-tools-website-frozen.json",
+  "checks_passed": 32,
+  "checks_attempted": 33,
+  "error_signature": "ERR_CONNECTION_REFUSED at http://127.0.0.1:5174/policies/",
+  "cause": "The new standalone policy capability command assumed a server already closed by the owned website controller.",
+  "fix": "Run unchanged policy assertions as the final named phase inside that controller before closing its server. Bind the checker explicitly and refresh all five receipts after the common manifest change.",
+  "full_requirement_closures": 0,
+  "independent_accuracy_evidence": false
+}

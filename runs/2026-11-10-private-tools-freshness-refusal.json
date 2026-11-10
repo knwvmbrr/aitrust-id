@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-10T00:18:17.007611+00:00",
+  "pass": false,
+  "failed_receipt": "runs/2026-11-10-private-tools-website-verified.json",
+  "error_signature": "New change missing fresh matching event: eval/route-boundaries.json",
+  "cause": "Boundary inventory was updated after the latest change event while the website prebuild freshness check ran.",
+  "fix": "Record the final boundary inventory and complete the fresh website run before any further source mutations.",
+  "full_requirement_closures": 0,
+  "independent_accuracy_evidence": false
+}

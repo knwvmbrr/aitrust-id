@@ -133,6 +133,7 @@ class Device:
     @staticmethod
     def enroll(path,public,cohort,packages,*,consent=False):
         require(consent is True and cohort in ('canary','stable') and 1<=len(packages)<=8)
+        require(Path(path).name.lower() not in SENSITIVE)
         key_record(encode(public));private_scope(Path(path).expanduser().absolute().parent)
         contents={};approved=[]
         for p in packages:

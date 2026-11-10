@@ -34,10 +34,22 @@ The [offline fleet tool](docs/fleet-deployment.md) enrolls private macOS/Linux
 workspaces with exact source approval and a separately selected signing authority.
 Signed canary/stable policy, bounded inventory, local pause, rollback and interrupted
 update recovery work without a hosted service. Personal checking needs none of
-this. Both actual platform runs pass 32 CLI controls; this deploys the PS
+this. Both actual platform runs pass 33 CLI controls; this deploys the PS
 **development** checker and does not grant tag accuracy or commercial acceptance.
 Browser force-install, independent organization rollout and service terms remain
 separate. No real device was enrolled during those tests.
+
+## Keep optional hash-only feedback under your control
+
+The [private reporting inbox](docs/hash-report-intake.md) accepts only subject and
+method hashes, a supported tag code and a fixed feedback category. Preview first;
+storage requires explicit consent for every report. Duplicate handling, bounded
+capacity, logical expiry/withdrawal and private export work on macOS/Linux. It
+can run on your own Linux server; it does not replace the separate PostgreSQL
+research design or activate company collection. Feedback remains unverified,
+with no training labels or automatic forwarding. Both platform runs pass 29
+actual software controls. Public reporting/moderation and a real research pilot
+remain separate open work.
 
 ## Which personal tags can run today?
 
