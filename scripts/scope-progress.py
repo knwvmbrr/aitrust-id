@@ -48,9 +48,9 @@ Audit timestamp: **{data['audited_at']}** (UTC; client date {client_date.strftim
 **{len(done)} complete requirement records; {202-len(done)} remain open.** All 202
 original IDs are retained. Completed records leave the open queue, not history.
 The 39 packages and 117 subtasks remain separately tracked: broad package
-completion cannot be inferred from one functioning feature. Four research
-opportunities are attached to existing packages, without expanding or replacing
-the adopted tag taxonomy.
+completion cannot be inferred from one functioning feature. {len(data['enhancements'])} separately tracked
+enhancements are attached to existing packages, without replacing the adopted
+tag taxonomy. Their progress does not reduce the open requirement count.
 
 ## How to read the percentages
 
@@ -90,7 +90,7 @@ Future source/route/acceptance changes reopen affected records.
             out+='| '+cell(x['id']+' — '+x['title'])+' | '+str(x['percent_complete'])+'% | '+cell(who)+' | '+cell(fix)+' | '+refs+' |\n'
         return out+'\n'
     text+=table(done)
-    for label,rows in [('Open tag requirements',[x for x in data['records'] if x['percent_complete']<100 and x['id'].startswith('T-')]),('All other open requirements',[x for x in data['records'] if x['percent_complete']<100 and not x['id'].startswith('T-')]),('Work packages',data['packages']),('Package subtasks',data['subtasks']),('Research enhancements — no adoption or release implied',data['enhancements'])]:
+    for label,rows in [('Open tag requirements',[x for x in data['records'] if x['percent_complete']<100 and x['id'].startswith('T-')]),('All other open requirements',[x for x in data['records'] if x['percent_complete']<100 and not x['id'].startswith('T-')]),('Work packages',data['packages']),('Package subtasks',data['subtasks']),('Enhancements — no implementation or release inferred from planning',data['enhancements'])]:
         text+='## '+label+'\n\n'+table(rows)
     (ROOT/'docs/scope-progress.md').write_text(text.rstrip()+'\n')
 if __name__=='__main__':

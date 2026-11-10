@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-163637-native-signing-and-future-communications-b522a7af",
+  "recorded_at": "2026-11-10T16:36:37.504125+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6f7c02fd951774f27af2f8e9026725eed85313ae",
+  "changed": "Capture owner-requested optional business/community notifications, retain app/tag priority, repair the expired Apple public intermediate prerequisite and record the rejected native typed-loader experiment.",
+  "proves": "All 202 original records remain at 132 complete and 70 open. The future notification enhancement has a bounded privacy/consent contract. Official WWDR G3 passes system trust verification and appears valid in login. Original native runtime bytes are restored and their existing five-workflow source proof still passes.",
+  "limits": "Notification delivery remains unimplemented. No owner signing identity, CSR, signed archive, upload, physical acceptance, independently validated tag or additional full requirement closure is claimed. Typed-loader experiment failed both actual Share workflows and was reverted; branch changes are not yet published.",
+  "scope_ids": [
+    "N-013",
+    "F-136",
+    "F-163"
+  ],
+  "files": {
+    "docs/scope-60-execution.md": "d9bdae441e5da49d16395becbb805747d0d6c417b3370282c6d813638dcfd590",
+    "docs/scope-progress.json": "2da0fac8aae74bf398ae587a57e205fad402d32b0b9d861c737346070adc0af5",
+    "docs/scope-progress.md": "d01da4ce34cc550ddeb660ec84353fd5e9d5aba5e37d3d7c23ef14add004736c",
+    "scripts/scope-progress.py": "e38d259cfcf8e5eed2827593cfd621d605991dce23ce15086ef98ed4ab4fcd43",
+    "state.json": "dce59a73d9baa7f62a858466e72c9fcc9da2472a4d7007ffe1efd8e1637d8139",
+    "docs/ios-typed-provider-plan.md": "8580bf03f1d8f4aa95281533e52f5cc82699ba28eb6967b94afb5df041d53d19",
+    "docs/optional-notifications-plan.md": "36c4c56121fec27072668e89044ea7924071f4d1cb4f7689c73d567b76d52856",
+    "runs/2026-11-10-apple-signing-prerequisites.json": "79ae21195003a478126123346a366ea4217f673edb4fd74a1dcc8d13529e5da4",
+    "runs/2026-11-10-native-typed-provider-rejected.json": "79658318d89bc2584dba0e70dc84760c6bd1609121adfbce8c79434511187e2b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-apple-signing-prerequisites.json",
+      "sha256": "79ae21195003a478126123346a366ea4217f673edb4fd74a1dcc8d13529e5da4"
+    },
+    {
+      "path": "runs/2026-11-10-native-typed-provider-rejected.json",
+      "sha256": "79658318d89bc2584dba0e70dc84760c6bd1609121adfbce8c79434511187e2b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T16:36:37.738984+00:00"
+    }
+  ]
+}

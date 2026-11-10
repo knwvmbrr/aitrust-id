@@ -1,13 +1,13 @@
-# Scope completion ledger — 2026-11-09
+# Scope completion ledger — 2026-11-10
 
-Audit timestamp: **2026-11-09T22:10:37.890409+00:00** (UTC; client date November 9).
+Audit timestamp: **2026-11-10T16:09:02.816242+00:00** (UTC; client date November 10).
 
 **132 complete requirement records; 70 remain open.** All 202
 original IDs are retained. Completed records leave the open queue, not history.
 The 39 packages and 117 subtasks remain separately tracked: broad package
-completion cannot be inferred from one functioning feature. Four research
-opportunities are attached to existing packages, without expanding or replacing
-the adopted tag taxonomy.
+completion cannot be inferred from one functioning feature. 5 separately tracked
+enhancements are attached to existing packages, without replacing the adopted
+tag taxonomy. Their progress does not reduce the open requirement count.
 
 ## How to read the percentages
 
@@ -418,7 +418,7 @@ Future source/route/acceptance changes reopen affected records.
 | WP-REFERENCES-A02 — Bind passage IDs, reference versions and retrieval parameters to findings. | 20% | No implementation credited; Codex planned | Bind passage IDs, reference versions and retrieval parameters to findings. Demonstrate: Corpus availability is a prerequisite only for reference-based claims.; Changing or failing the corpus does not disable command-risk or other independent checks.; No required paid retrieval service, invisible remote lookup or automatic reference upload. Owner: Codex | [scope-delivery.md#wp-references](../docs/scope-delivery.md#wp-references) |
 | WP-REFERENCES-A03 — Test empty, conflicting, changed, malicious and incomplete corpora under resource limits. | 20% | No implementation credited; Codex planned | Test empty, conflicting, changed, malicious and incomplete corpora under resource limits. Demonstrate: Corpus availability is a prerequisite only for reference-based claims.; Changing or failing the corpus does not disable command-risk or other independent checks.; No required paid retrieval service, invisible remote lookup or automatic reference upload. Owner: Codex prepares; independent reviewers execute required human judgment | [scope-delivery.md#wp-references](../docs/scope-delivery.md#wp-references) |
 
-## Research enhancements — no adoption or release implied
+## Enhancements — no implementation or release inferred from planning
 
 | ID / job | Complete | Who completed / implementation credit | Next fix and owner | Evidence |
 |---|---|---|---|---|
@@ -426,3 +426,4 @@ Future source/route/acceptance changes reopen affected records.
 | ENH-ACR — Reader accessibility conformance report | 20% | No implementation credited; Codex planned | Create criterion-by-criterion VPAT/ACR evidence matrix; run required human assistive-technology and device tasks; publish accurate supports/partial/does-not-support findings, not a guaranteed procurement claim. Owner: Codex evidence matrix; human accessibility reviewers | [ACCESSIBILITY.md](../ACCESSIBILITY.md), [competitive-differentiation.md](../docs/competitive-differentiation.md) |
 | ENH-REVOCATION — Privacy-preserving revocation evidence | 20% | No implementation credited; Codex planned | Specify issuer authentication, certificate identity, freshness, omission semantics, replay/rollback protection, signing-key rotation and applicable protocol conformance; then implement and test. Owner: Codex | [competitive-differentiation.md](../docs/competitive-differentiation.md) |
 | ENH-SURVIVAL — Manifest and soft-binding survival experiment | 40% | Claude — statistics component; Codex — input validation and coverage repairs | Build real instrumented fixture/adapters and accepted sampling protocol; collect lawful platform round-trips and report coverage/intervals. Current module computes supplied observations only. Owner: Codex | [2026-10-09-scope-completion-checks.json](../runs/2026-10-09-scope-completion-checks.json), [measure.py](../eval/measure.py) |
+| ENH-PUSH — Optional business and community push notifications | 20% | No implementation credited; Codex planned | Implement opt-in per-category notifications, then validate real-device consent, private payloads, destination authorization, rotation/removal, retention/recovery and outage isolation before collecting tokens. Owner: Codex implementation; Michael and independent device users acceptance | [optional-notifications-plan.md](../docs/optional-notifications-plan.md) |

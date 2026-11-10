@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-10
 
+### 2026-11-10-164132-owner-csr-ready-24f8af07
+
+Recorded 2026-11-10T16:41:32.678171+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify the owner-created saved-to-disk CSR and select its public request on Apple’s certificate page; retain final issuance as an owner action.
+- **Evidence.** CSR signature verifies with a 2048-bit RSA public key; Apple shows the selected file and enables Continue. Existing native application bytes remain unchanged and source-bound evidence still verifies. [Change record](./runs/changes/2026-11-10-164132-owner-csr-ready-24f8af07.json).
+- **Not claimed.** No private key was read or exported. No certificate issuance by Codex, signed archive, binary upload, TestFlight release, tag validation or additional requirement closure. New docs and state are pending source review/publication.
+
+
+### 2026-11-10-163637-native-signing-and-future-communications-b522a7af
+
+Recorded 2026-11-10T16:36:37.504125+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture owner-requested optional business/community notifications, retain app/tag priority, repair the expired Apple public intermediate prerequisite and record the rejected native typed-loader experiment.
+- **Evidence.** All 202 original records remain at 132 complete and 70 open. The future notification enhancement has a bounded privacy/consent contract. Official WWDR G3 passes system trust verification and appears valid in login. Original native runtime bytes are restored and their existing five-workflow source proof still passes. [Change record](./runs/changes/2026-11-10-163637-native-signing-and-future-communications-b522a7af.json).
+- **Not claimed.** Notification delivery remains unimplemented. No owner signing identity, CSR, signed archive, upload, physical acceptance, independently validated tag or additional full requirement closure is claimed. Typed-loader experiment failed both actual Share workflows and was reverted; branch changes are not yet published.
+
+
 ### 2026-11-10-010808-private-tools-live-state-16d60162
 
 Recorded 2026-11-10T01:08:08.183283+00:00 · Contributor: Codex · change

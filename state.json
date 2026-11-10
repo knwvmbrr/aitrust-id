@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-10T01:07:33.836853+00:00",
+  "updated": "2026-11-10T16:41:32.500373+00:00",
   "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-10T01:07:33.836853+00:00",
+  "updated_at": "2026-11-10T16:41:32.500373+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1906,7 +1906,8 @@
     "code_and_guide_published": true,
     "distribution_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
     "workflow_current_source_pass": true,
-    "publication_pending": false
+    "publication_pending": false,
+    "rejected_supported_provider_attempt": "runs/2026-11-10-native-typed-provider-rejected.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3021,7 +3022,16 @@
     "promotional_text_saved": "Check selected text offline with the PS development preview. Review matched command patterns on your device, with no account.",
     "review_contact_phone_requires_owner": true,
     "review_contact_saved": false,
-    "screenshots_uploaded": false
+    "screenshots_uploaded": false,
+    "signing_prerequisite_evidence": "runs/2026-11-10-apple-signing-prerequisites.json",
+    "public_wwdr_g3_installed": true,
+    "owner_csr_creation_still_pending": false,
+    "owner_csr_signature_verified": true,
+    "owner_csr_key_bits": 2048,
+    "current_signing_step": "Owner final certificate issuance on Apple page",
+    "current_signing_evidence": "runs/2026-11-10-owner-csr-ready.json",
+    "csr_selected_for_certificate_issuance": true,
+    "certificate_issuance_submitted": false
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
@@ -3179,5 +3189,18 @@
     "ci_privilege_drop_evidence": "runs/2026-11-10-ci-nonroot-namespace-probe.json",
     "protected_ci_repair_pending": false,
     "publication": "runs/2026-11-10-private-tools-publication.json"
+  },
+  "optional_notifications": {
+    "status": "planned_not_implemented",
+    "scope_enhancement": "ENH-PUSH",
+    "plan": "docs/optional-notifications-plan.md",
+    "requested_by": "Michael",
+    "client_date": "2026-11-10",
+    "enabled": false,
+    "permission_requested": false,
+    "device_tokens_collected": false,
+    "apple_push_credential_created": false,
+    "offline_checks_depend_on_push": false,
+    "priority": "future; app completion and independent tag development first"
   }
 }

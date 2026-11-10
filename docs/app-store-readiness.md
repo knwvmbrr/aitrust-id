@@ -74,3 +74,17 @@ requires an owner-supplied phone number; its other contact fields remain blank.
 Screenshots, copyright/provider review, final declarations and signed build
 upload remain unfinished. Nothing was added for review. See the
 [saved draft observation](../runs/2026-11-10-app-store-draft-reopened.json).
+
+## Owner-created signing request
+
+The owner's new saved-to-disk CSR has a verified signature and RSA 2048-bit public
+key. The public request is selected on Apple's certificate page, with Continue
+enabled; final issuance remains the owner's action. The expired 2023 WWDR
+intermediate was supplemented with Apple's official G3 intermediate, verified
+against existing system trust and displayed valid in login. No custom trust
+override was added. These changes do not establish which condition caused the
+earlier Certificate Assistant error. See the [prerequisite observation](../runs/2026-11-10-apple-signing-prerequisites.json)
+and [verified request handoff](../runs/2026-11-10-owner-csr-ready.json).
+
+No private key was read or exported by Codex, and no signed archive, build upload,
+TestFlight distribution, physical acceptance or public app release is credited.
