@@ -144,6 +144,22 @@ const FORBIDDEN = [
   const fs = require('node:fs');
   const manifest = JSON.parse(fs.readFileSync('extension/manifest.json','utf8'));
   const fleet = tags.find(t=>t.id==='fleet');
+  if (fleet.references.includes('/reference/fleet-deployment.md')) {
+    const path=require('node:path'),crypto=require('node:crypto');
+    for (const [platform,name] of [['darwin','macos'],['linux','linux']]) {
+      const proof=JSON.parse(fs.readFileSync(path.join(__dirname,'../runs/2026-11-09-fleet-root-guard-'+name+'.json')));
+      if(proof.platform!==platform||proof.pass!==true||proof.non_root!==true||proof.source_unchanged!==true||proof.actual_cli_processes!==true||proof.test_count!==33||proof.cases.length!==33||new Set(proof.cases).size!==33||proof.failures||proof.errors||proof.skipped)fail('FLEET lacks its complete actual '+platform+' software evidence');
+      if(platform==='linux'&&proof.isolated_network_namespace!==true)fail('FLEET Linux isolation claim is unsupported');
+      for(const flag of ['enrolled_real_devices','production_changed','collection_enabled','commercial_service_activated','independent_accuracy_evidence','human_acceptance'])if(proof[flag]!==false)fail('FLEET overstates its '+flag+' boundary');
+      for(const [relative,expected] of Object.entries(proof.sources)) {
+        if(!/^[A-Za-z0-9_.\/-]+$/.test(relative)||relative.split('/').includes('..'))throw Error('Unsafe fleet evidence source');
+        const file=path.join(__dirname,'..',relative);
+        if(fs.lstatSync(file).isSymbolicLink()||crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')!==expected)fail('FLEET software source evidence is stale');
+      }
+    }
+    if(!fleet.limits.some(x=>/browser force-install.*not implemented/i.test(x)))fail('FLEET must distinguish source deployment from browser installation');
+    if(!/development/.test(fleet.claim)||!/free/.test(fleet.today)||!usage(fleet).links.some(x=>x.href==='/reference/fleet-deployment.md'))fail('FLEET must expose its bounded free development workflow');
+  } else {
   for (const script of manifest.content_scripts || []) for (const match of script.matches || []) {
     if (!fleet.today.includes(new URL(match.replace('*','')).hostname)) fail('FLEET omits content-script page access');
   }
@@ -151,6 +167,9 @@ const FORBIDDEN = [
     if (!fleet.today.includes(new URL(host.replace('*','')).host)) fail('FLEET omits a permitted gateway host');
   }
   if (/whole surface|loopback (?:host )?only/i.test(fleet.today)) fail('FLEET describes host_permissions as the entire access surface');
+    const ledger=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/scope-progress.json')));
+    if(ledger.records.find(r=>r.id==='F-159').percent_complete===100)fail('Completed F-159 lacks its actual supported software workflow');
+  }
   const {catalogueExport} = await import('../site/src/catalogue-export.js');
   for (const t of [...personTags,...tags]) {
     const saved=catalogueExport(t,usage(t),null,[]);
@@ -186,6 +205,6 @@ const FORBIDDEN = [
   console.log(`PASS — ${tags.length} organization offerings, independently described.`);
   console.log(`  ${FIELDS.length} fields unique per offering; supported/limits unique; usage unique.`);
   console.log(`  every cited scope record exists; feature sets unique: ${tags.map((t)=>t.code+'='+t.features.length).join(' ')}`);
-  console.log('  Proposals remain unavailable; free personal workflow retained.');
-  console.log('  Manifest page access disclosed; catalogue/result exports distinct; SSO consent preserved; private security routing stated.');
+  console.log('  Managed services remain unavailable; free personal workflow retained.');
+  console.log('  Fleet source and permission claims bounded; catalogue/result exports distinct; SSO consent preserved; private security routing stated.');
 })().catch((e) => { console.error(e); process.exitCode = 1; });

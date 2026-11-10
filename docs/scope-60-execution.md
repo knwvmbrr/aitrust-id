@@ -139,3 +139,37 @@ These are real software and distribution improvements, with no full acceptance
 waived: all 202 records remain, 130 complete / 72 open, twelve closures short of
 60. Native, redaction and directory evidence must not be counted as three new
 full requirement closures.
+
+
+## Approved-source fleet software — November 9
+
+F-159 now has its full bounded software acceptance: opt-in enrollment, separately
+selected authority and exact source approval, signed cohort/device policy,
+private inventory, synthetic installation preflight, rollback, interrupted-write
+recovery, local pause/removal and independent personal checking. Actual macOS
+and non-root isolated Linux runs each pass 32 controls, with 13 evidence-refusal
+controls. Original acceptance is preserved in the packet; no criterion was moved
+or waived. ORG-FLEET remains open for accepted public tag releases, independent
+organization rollout/consent and any commercial provider/service terms.
+
+All 202 records remain: **131 complete / 71 open**. Eleven more full closures
+are needed for 60. The connected phone is now identified as an iPhone 14 Plus on
+iOS 27.0.1; Developer Mode is off and no AI Trust ID signing profile or local
+identity was found. Those read-only facts do not complete native/physical use.
+
+
+## Private hash-only reporting software — November 9
+
+F-045 now has its original bounded software acceptance: strict hash-only feedback
+admission, preview, explicit storage consent, duplicates without retention
+extension, bounded capacity, logical expiry/withdrawal, private export and
+process-crash recovery. Both actual macOS and non-root isolated Linux runs pass
+29 controls, with 13 evidence-refusal controls. This does not activate the
+unadopted public registry, N-011 research collection or F-135 public moderation.
+F-159 also retains all prior cases and now passes 33 current controls per platform
+after refusing reserved enrollment names before writing. That repair is no extra
+requirement closure.
+
+All 202 records remain: **132 complete / 70 open**. Ten additional full closures
+are still required for 60. Accepted public tag releases, human/physical-phone,
+qualified legal, actual organization and recruited-pilot obligations are retained.

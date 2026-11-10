@@ -1,0 +1,49 @@
+{
+  "captured_at": "2026-11-09T21:37:15.236103+00:00",
+  "completed_by": "Codex",
+  "requirement": "F-159",
+  "supported_profile": "Opt-in offline approved-source PS development fleet on owner-private macOS/Linux workspaces",
+  "original_required_acceptance": [
+    "Deliver Fleet deployment and policy management. Next package action: Specify enrollment, rollout cohorts, policy precedence and consent visibility. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "criteria_moved_or_waived": false,
+  "macos_evidence": "runs/2026-11-09-fleet-accepted-macos.json",
+  "linux_evidence": "runs/2026-11-09-fleet-accepted-linux.json",
+  "actual_controls_per_platform": 32,
+  "evidence_refusal_controls": 13,
+  "acceptance_mapping": {
+    "enrollment": "Explicit separately selected public authority and exact package approval; defaults paused; withdrawal and absence of consent tested.",
+    "cohorts": "Signed exact device/cohort targets; mixed canary/stable/unavailable rollout with unchanged stable state and no automatic enrollment.",
+    "policy_precedence": "Fixed source approvals and detector claim boundaries; signed policies cannot add thresholds, telemetry, capture or receipt requirements; local pause wins.",
+    "deployment_identity_inventory": "Content-addressed fixed source graph, private installed package, exact synthetic runtime preflight, bounded explicit inventory.",
+    "rollback_recovery": "New higher-sequence signed rollback to approved source; replay refused; actual killed pre-activation process recovers old state and releases lock.",
+    "independence": "Separate personal checker works after optional dependency, cache, policy and managed route failures.",
+    "failure_case": "Broken approved package cannot replace working policy; unauthorized source/key/time/fields/private-file changes refused."
+  },
+  "broader_organization_acceptance": "Accepted public tag releases, independent deployment/security and human consent review, stable browser distribution and any paid provider/service terms remain open under ORG-FLEET.",
+  "enrolled_real_devices": false,
+  "production_changed": false,
+  "collection_enabled": false,
+  "commercial_service_activated": false,
+  "independent_accuracy_evidence": false,
+  "human_acceptance": false,
+  "public_tag_release": false,
+  "full_requirement_closures": 1,
+  "original_acceptance_by_record": {
+    "F-159": [
+      "Deliver Fleet deployment and policy management. Next package action: Specify enrollment, rollout cohorts, policy precedence and consent visibility. Required outcome: The application extends supported tags without disabling the personal workflow."
+    ],
+    "ORG-FLEET": [
+      "Specify enrollment, rollout cohorts, policy precedence and consent visibility.; Implement signed configuration, inventory and rollback.; Test misconfiguration, unauthorized policy changes and offline devices. Final acceptance: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
+    ],
+    "ORG-FLEET-A01": [
+      "Specify enrollment, rollout cohorts, policy precedence and consent visibility. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
+    ],
+    "ORG-FLEET-A02": [
+      "Implement signed configuration, inventory and rollback. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
+    ],
+    "ORG-FLEET-A03": [
+      "Test misconfiguration, unauthorized policy changes and offline devices. Demonstrate: Organization settings cannot weaken a public tag\u2019s validation standard.; One failed rollout is contained to its cohort.; Paid activation requires accepted service terms and provider identity."
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-10T00:17:09.177503+00:00",
+  "failed_receipt": "runs/2026-11-09-private-tools-current-website-final.json",
+  "error_signature": "FLEET guide unavailable",
+  "cause": "The guide returned successfully but a new browser assertion searched for the literal lowercase word signed, absent from the guide.",
+  "fix": "Check exact served guide bytes against its allowlisted source instead of an incidental prose word.",
+  "pass": false,
+  "fresh_verification_pending": true,
+  "full_requirement_closures": 0,
+  "independent_accuracy_evidence": false
+}

@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-10T00:15:15.744569+00:00",
+  "kind": "website_packaging_followup",
+  "previous_failed_receipt": "runs/2026-11-09-private-tools-current-website-accepted.json",
+  "pass": false,
+  "error_signature": "Only implemented organization software has this source route",
+  "cause": "The browser check still limited software downloads to HOST and SSO after Fleet software was implemented.",
+  "fix": "Retain the closed allowlist, add Fleet with actual guide/download and both 33-case receipt checks, and distinguish local organization software from managed services.",
+  "verification": "Fresh full website revalidation pending. No requirement closure or accuracy claim from this repair.",
+  "independent_accuracy_evidence": false
+}

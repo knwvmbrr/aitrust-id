@@ -1,0 +1,27 @@
+name: fleet-software
+on:
+  push:
+    paths: ['tools/fleet.py', 'scripts/fleet.py', 'scripts/*fleet*.py', 'tests/test_fleet*.py', 'docs/fleet-deployment*.md', '.github/workflows/fleet.yml']
+  pull_request:
+    paths: ['tools/fleet.py', 'scripts/fleet.py', 'scripts/*fleet*.py', 'tests/test_fleet*.py', 'docs/fleet-deployment*.md', '.github/workflows/fleet.yml']
+permissions:
+  contents: read
+jobs:
+  fleet-software:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - name: Install existing hash-pinned environment
+        run: python -m pip install --require-hashes -r eval/requirements.lock
+      - name: Exercise opt-in CLI deployment without host networking or root
+        run: sudo unshare --net -- "$(command -v python)" scripts/verify-fleet-linux.py --run-as "$(id -un)" --output output/verification/fleet-linux.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fleet-linux-software
+          path: output/verification/fleet-linux.json
+          if-no-files-found: error
+          retention-days: 7

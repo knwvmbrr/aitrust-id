@@ -89,7 +89,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-103 | Health checks reporting dependency readiness, not process liveness | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-104 | Defined dependency-failure behaviour | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-044 | Optional registry and retention proposal | [ORG-AUDIT](scope-delivery.md#org-audit) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-045 | Reporting intake, hash-only | [ORG-AUDIT](scope-delivery.md#org-audit) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-045 | Reporting intake, hash-only | [ORG-AUDIT](scope-delivery.md#org-audit) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-105 | One documented command: clean clone → running stack | [WP-MOBILE](scope-delivery.md#wp-mobile) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-050 | Gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α | [WP-VALIDATION](scope-delivery.md#wp-validation) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-051 | Executable evaluation harness | [WP-VALIDATION](scope-delivery.md#wp-validation) | 100% · [evidence/fix](scope-progress.md) |
@@ -162,7 +162,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-156 | Additional browser and site adapters | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-157 | Newsroom integration — labels in an editorial workflow | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-158 | Agent identity — labelling output from autonomous agents | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-159 | Fleet deployment and policy management | [ORG-FLEET](scope-delivery.md#org-fleet) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-159 | Fleet deployment and policy management | [ORG-FLEET](scope-delivery.md#org-fleet) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-160 | Host-level capture agents | [ORG-HOST](scope-delivery.md#org-host) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-161 | Long-horizon retention and audit trails | [ORG-AUDIT](scope-delivery.md#org-audit) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-162 | SSO and directory integration | [ORG-SSO](scope-delivery.md#org-sso) | 100% · [evidence/fix](scope-progress.md) |

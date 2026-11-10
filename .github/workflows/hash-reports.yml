@@ -1,0 +1,25 @@
+name: private-hash-inbox-software
+on:
+  push:
+    paths: ['tools/hash_reports.py', 'scripts/*hash-reports*.py', 'tests/test_hash_reports*.py', 'docs/hash-report-intake*.md', '.github/workflows/hash-reports.yml']
+  pull_request:
+    paths: ['tools/hash_reports.py', 'scripts/*hash-reports*.py', 'tests/test_hash_reports*.py', 'docs/hash-report-intake*.md', '.github/workflows/hash-reports.yml']
+permissions:
+  contents: read
+jobs:
+  hash-inbox-software:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - name: Exercise private local software without host networking or root
+        run: sudo unshare --net -- "$(command -v python)" scripts/verify-hash-reports-linux.py --run-as "$(id -un)" --output output/verification/hash-inbox-linux.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: private-hash-inbox-linux
+          path: output/verification/hash-inbox-linux.json
+          if-no-files-found: error
+          retention-days: 7

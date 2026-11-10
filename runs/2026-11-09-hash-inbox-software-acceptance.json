@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-09T22:27:47.350787+00:00",
+  "completed_by": "Codex",
+  "requirement": "F-045",
+  "supported_profile": "Owner-private macOS/Linux hash-only feedback software, separate from public registry, research collection and moderation",
+  "original_required_acceptance": [
+    "Deliver Reporting intake, hash-only. Next package action: Separate legacy hash-only registry proposal from consented research and organizational retention. Required outcome: Local tag processing exposes success and dependency failures explicitly."
+  ],
+  "criteria_moved_or_waived": false,
+  "macos_evidence": "runs/2026-11-09-hash-inbox-current-macos.json",
+  "linux_evidence": "runs/2026-11-09-hash-inbox-current-linux.json",
+  "actual_controls_per_platform": 29,
+  "evidence_refusal_controls": 13,
+  "acceptance_mapping": {
+    "intake": "Strict five-field feedback admission for the implemented PS/PII_REDACTED routes; preview never writes and each stored intake requires explicit consent.",
+    "hash_only": "No text, notes, identity, credentials, URLs, evidence positions or training labels accepted; input errors never echo private contents.",
+    "success_and_failure": "Actual store, count, metadata export, duplicate and capacity behavior; malformed schema, unsafe private files, extra fields and unknown tag/code refused.",
+    "retention_and_withdrawal": "Duplicate intake does not extend expiry; active access/prune logically deletes expired records; explicit ticket withdrawal and verified removal work. No powered-down wall-clock erasure or deletion of exported copies is claimed.",
+    "durability": "Actual killed uncommitted process rolls back and releases locks; three concurrent intake processes share one duplicate ticket.",
+    "separation": "No HTTP endpoint, public registry activation, company research forwarding, public moderation or organization-audit mutation; damaged inbox does not disable personal PS checking."
+  },
+  "limitations": [
+    "Private operator software only; public content reporting and moderation remain open under F-135/N-005.",
+    "Company research/real consenting pilot remains open under N-011/F-141; no actual user feedback was collected.",
+    "Hashes are linkable metadata; no source/content verification, anonymity, physical erasure or training-label validity is inferred."
+  ],
+  "company_collection_enabled": false,
+  "public_registry_enabled": false,
+  "automatic_forwarding": false,
+  "production_changed": false,
+  "real_user_feedback_collected": false,
+  "training_labels_created": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closures": 1,
+  "previous_profile_evidence": [
+    "runs/2026-11-09-hash-inbox-macos.json",
+    "runs/2026-11-09-hash-inbox-linux.json"
+  ],
+  "schema_control": "Actual extra-table and reserved-prefix trigger refusal execute before intake."
+}

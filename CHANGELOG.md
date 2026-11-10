@@ -1,6 +1,98 @@
 # Changelog
 
+## Unreleased — 2026-11-10
+
+### 2026-11-10-004717-ci-privilege-repair-verified-10671329
+
+Recorded 2026-11-10T00:47:17.892060+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh only affected protocol/website and boundary receipts after the no-egress privilege repair; retain verified App Store draft progress.
+- **Evidence.** All five capability receipts match current sources. Both tools retain their root refusal and their complete actual non-root Mac/Linux acceptance; the corrected CI privilege drop is kernel-exercised. [Change record](./runs/changes/2026-11-10-004717-ci-privilege-repair-verified-10671329.json).
+- **Not claimed.** Full protected CI and review of this new commit remain pending; zero additional requirement closures, no App Store upload or tag accuracy approval.
+
+
+### 2026-11-10-004149-ci-owner-and-store-draft-468a511b
+
+Recorded 2026-11-10T00:41:49.244565+00:00 · Contributor: Codex · change
+
+- **Changed.** Run network-isolated application tests as the checkout owner with all capabilities removed; save and reload factual App Store preview copy after owner sign-in.
+- **Evidence.** Actual isolated Linux probe confirms non-root UID, empty groups, no-new-privileges, no effective/permitted/inheritable/bounding/ambient capabilities and loopback-only networking. App Store promotional copy persisted after reload; phone-dependent review contacts remain blank. [Change record](./runs/changes/2026-11-10-004149-ci-owner-and-store-draft-468a511b.json).
+- **Not claimed.** Fresh protocol/website checks and protected CI remain pending. No root allowance, skipped lifecycle cases, tag accuracy, new requirement closure, App Store binary or submission.
+
+
+### 2026-11-10-002854-private-tools-release-acceptance-4af01782
+
+Recorded 2026-11-10T00:28:54.961984+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish private-tool release evidence, current personal-route review, immutable privacy archives and factual App Store session status.
+- **Evidence.** All five source-bound capability runs pass, including 32 website commands with all nine build phases and the full policy check on its owned server; 1002 reviewed inputs match. Scope retains 202 records at 132 complete and 70 open. [Change record](./runs/changes/2026-11-10-002854-private-tools-release-acceptance-4af01782.json).
+- **Not claimed.** Protected review and publication pending. No new validated tag, real enrollment, company collection, App Store upload or human/physical-phone acceptance. Ten more full closures are needed for 60.
+
+
+### 2026-11-10-002230-owned-server-policy-check-c2123dda
+
+Recorded 2026-11-10T00:22:30.271725+00:00 · Contributor: Codex · change
+
+- **Changed.** Run the full policy browser check as the final owned-server build phase; preserve strict sequence and failure reporting.
+- **Evidence.** Eight existing controller/failure controls pass with nine required phases; all 32 previously completed website commands remain required, and policy assertions now have the correct server lifetime. [Change record](./runs/changes/2026-11-10-002230-owned-server-policy-check-c2123dda.json).
+- **Not claimed.** Fresh source-bound revalidation is required after the common manifest repair; scope remains 132 complete and 70 open.
+
+
+### 2026-11-10-001817-private-tools-boundary-inputs-414056a5
+
+Recorded 2026-11-10T00:18:17.165655+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final current private-tool boundary inventory before the website build.
+- **Evidence.** Retains the failed changelog freshness gate caused by mid-build inventory editing; all required checks remain enabled. [Change record](./runs/changes/2026-11-10-001817-private-tools-boundary-inputs-414056a5.json).
+- **Not claimed.** The new full website run is pending; scope remains 132 complete and 70 open.
+
+
+### 2026-11-10-001709-served-fleet-guide-identity-ffba200a
+
+Recorded 2026-11-10T00:17:09.352372+00:00 · Contributor: Codex · change
+
+- **Changed.** Check the exact served Fleet guide against its allowlisted source rather than an incidental word.
+- **Evidence.** Records the false test failure and preserves its failed receipt; no product validation was weakened. [Change record](./runs/changes/2026-11-10-001709-served-fleet-guide-identity-ffba200a.json).
+- **Not claimed.** Full current website run pending; zero additional requirement closures.
+
+
+### 2026-11-10-001516-fleet-browser-route-acceptance-ba26658d
+
+Recorded 2026-11-10T00:15:16.026087+00:00 · Contributor: Codex · change
+
+- **Changed.** Exercise Fleet guide, source and platform proofs in the actual site browser flow; distinguish existing local organization software from managed services.
+- **Evidence.** Retains both failed website attempts, verifies the source-current Fleet permission boundary, and preserves unchanged passing PS, PII, protocol and extension receipts. [Change record](./runs/changes/2026-11-10-001516-fleet-browser-route-acceptance-ba26658d.json).
+- **Not claimed.** Fresh full website and boundary runs remain pending; no additional requirement closure, tag accuracy or managed service activation.
+
+
 ## Unreleased — 2026-11-09
+
+### 2026-11-09-224008-private-tools-reference-order-47ba8fde
+
+Recorded 2026-11-09T22:40:08.516672+00:00 · Contributor: Codex · change
+
+- **Changed.** Copy allowlisted private-tool guides and proofs before site reference validation.
+- **Evidence.** Preserves the actual missing-reference build failure and fixes its copy ordering without weakening validation. [Change record](./runs/changes/2026-11-09-224008-private-tools-reference-order-47ba8fde.json).
+- **Not claimed.** Fresh website verification remains pending; no extra requirement closure or tag release.
+
+
+### 2026-11-09-222749-private-hash-report-intake-0c3407e6
+
+Recorded 2026-11-09T22:27:49.137259+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver private hash-only feedback intake with per-operation consent, fixed metadata fields, capacity, duplicate/expiry/withdrawal, explicit export and crash recovery. Add reserved enrollment-name refusal and publish factual policy version 1.11 without replacing prior archives.
+- **Evidence.** 29 actual inbox controls pass on each of Mac and isolated non-root Linux; current fleet profiles each pass 33. Both evidence gates pass their 26 combined refusal/acceptance controls. The preserved ledger is 132 complete and 70 open of 202, with ten full closures still needed for 60. [Change record](./runs/changes/2026-11-09-222749-private-hash-report-intake-0c3407e6.json).
+- **Not claimed.** Private operator software only. No public registry, company research collection, genuine pilot feedback, training label, independent tag accuracy, commercial service, signing credential or App Store upload is activated. Physical-phone and qualified/human acceptance remain open.
+
+
+### 2026-11-09-214359-fleet-approved-source-software-7d87a4f6
+
+Recorded 2026-11-09T21:43:59.980217+00:00 · Contributor: Codex · change
+
+- **Changed.** Deliver opt-in offline fleet deployment with signed cohort policy, source approvals, inventory, rollback and local withdrawal. Identify the connected physical iPhone target without changing security settings.
+- **Evidence.** 32 actual CLI controls pass separately on macOS and isolated non-root Linux, plus 13 evidence-refusal controls. Full bounded F-159 software acceptance is preserved; the ledger is 131 complete and 71 open of 202. [Change record](./runs/changes/2026-11-09-214359-fleet-approved-source-software-7d87a4f6.json).
+- **Not claimed.** No actual organization device enrollment, browser force-install, public tag release, independent accuracy, commercial activation or App Store upload. Phone status is read-only; signing and physical/human acceptance remain open.
+
 
 ### 2026-11-09-195324-directory-final-source-verification-217f85eb
 

@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-11-09T21:37:15.236103+00:00",
+  "checked_by": "Codex",
+  "pass": false,
+  "accepted_execution": false,
+  "attempts": [
+    {
+      "stage": "Initial Mac test harness",
+      "passed": 25,
+      "failed": 1,
+      "signature": "unittest has no attribute mock",
+      "fix": "Explicitly import unittest.mock; final controls pass with the original assertion retained."
+    },
+    {
+      "stage": "Initial Linux report publication",
+      "exit_status": 1,
+      "signature": "Invalid report destination",
+      "fix": "Use the permitted source output/verification directory; retain refused attempt and run fresh acceptance."
+    },
+    {
+      "stage": "Initial Linux workspace removal",
+      "exit_status": 1,
+      "signature": "Unprivileged removal of the disposable workspace failed; exact failing member was not captured",
+      "fix": "Disable root bootstrap bytecode as a precaution, remove only the owned disposable workspace with existing administrator rights, and verify absence",
+      "root_import_cache_cause_verified": false
+    }
+  ],
+  "owned_failed_workspace_removed": true,
+  "production_services_changed": false,
+  "selected_successful_profiles": [
+    "runs/2026-11-09-fleet-accepted-macos.json",
+    "runs/2026-11-09-fleet-accepted-linux.json"
+  ],
+  "meaning": "Failed development attempts retained; none grants acceptance."
+}

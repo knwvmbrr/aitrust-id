@@ -16,10 +16,10 @@ const descriptions = {
   UC: ['A proposed clearer name for the command warnings in PS.', 'The same bounded command-risk observation could have its own code, without implying a scam.', 'Proposal only. UC is not issued; existing PS records keep their meaning.'],
   SC: ['Explore warnings about possible scam patterns.', 'Review a message asking for an urgent payment, with each possible indicator explained in context.', 'Research proposal. Ordinary requests can look similar; no scam detector is available yet.'],
   BT: ['Explore evidence that a workflow was automated.', 'Review positive, consented observations instead of guessing from someone’s writing style.', 'Research proposal. Repetition, timing, templates or missing human activity alone are not proof of a bot.'],
-  fleet: ['Bring tag tools to your team’s devices.', 'An IT team rolls out the same checker without changing what its tags mean.', 'Planned. Managing devices must not weaken a tag’s evidence standard.'],
+  fleet: ['Deploy an approved checker to private team workspaces.', 'Approve the exact source, apply a signed policy, and pause or roll back locally.', 'Offline Mac and Linux software for the PS development checker. No browser force-install or managed team service.'],
   host: ['Check a file while you work.', 'Choose one private text file, save changes, and see optional PS results in a visible terminal.', 'Mac and Linux text files only. Nothing is uploaded; managed deployment still needs independent review.'],
   audit: ['Keep a clear history of findings and corrections.', 'A team follows which method produced a finding and how a later review changed it.', 'Self-hosted software is available. Keeping a record does not make its finding more certain.'],
-  sso: ['Give team members the access they need.', 'Map directory groups to separate permissions for configuration, viewing, review and export.', 'Planned. Signing in does not validate a finding or make author receipts compulsory.'],
+  sso: ['Give team members the access they need.', 'Map directory groups to separate permissions for configuration, viewing, review and export.', 'Self-hosted directory software is available. Signing in does not validate a finding or make author receipts compulsory.'],
   support: ['Get a clear owner for team help and maintenance.', 'A team knows where to ask for deployment help and who owns the agreed follow-up.', 'Planned. Paid support and response-time commitments are not available yet.'],
   proprietary: ['Add your team’s policies without changing the public meaning of a tag.', 'A team could require an extra review while keeping the tag’s evidence and limits visible.', 'Planned. Private rules must not weaken or misrepresent the public standard.'],
 };
@@ -27,20 +27,21 @@ const descriptions = {
 export function presentation(tag) {
   const text = descriptions[tag.id];
   if (!text) throw new Error('Missing plain-language introduction: ' + tag.id);
+  const localOrganization = ['host','audit','sso','fleet'].includes(tag.id);
   const working = tag.id === 'PS' || tag.id === 'PII_REDACTED';
   return {
     summary: text[0], example: text[1], limit: text[2], working,
     availability: tag.id==='PS' ? 'Works here: PS command-pattern preview.'
       : tag.id==='PII_REDACTED' ? 'Local setup required. PII does not run in this website checker.'
       : tag.audience==='person' ? 'Planned · No checker available yet.'
-      : tag.id==='host' ? 'Local software available. No team service is running.'
+      : localOrganization ? 'Local software available. No team service is running.'
       : 'Planned offering. No team service is running.',
-    stage: tag.id === 'PS' ? 'On-device preview' : working ? 'Local preview' : tag.proposed ? 'Research proposal' : 'Planned',
+    stage: tag.id === 'PS' ? 'On-device preview' : working ? 'Local preview' : localOrganization ? 'Local software' : tag.proposed ? 'Research proposal' : 'Planned',
     validationTitle: working ? 'Validation in progress' : 'Validation required before release',
     releasePolicy,
     validation: working
       ? 'Development checks pass. Independent accuracy checks and human accessibility review are still ahead.'
       : 'We will test this tag on its own before making it available.',
-    access: tag.audience === 'person' ? 'Free for personal use' : tag.id==='host' ? 'Open-source local software' : 'Proposed paid team offering',
+    access: tag.audience === 'person' ? 'Free for personal use' : localOrganization ? 'Open-source local software' : 'Proposed paid team offering',
   };
 }

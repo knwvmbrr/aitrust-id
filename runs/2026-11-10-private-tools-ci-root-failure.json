@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-11-10T00:37:34.010989+00:00",
+  "pass": false,
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/96",
+  "source_commit": "38de0be3ef975e52f495b746791f14ac07bb1d29",
+  "failed_job": "https://github.com/knwvmbrr/aitrust-id/actions/runs/42728815782/job/129541279884",
+  "error_signature": "62 new tool lifecycle failures during setup: FLEET UNAVAILABLE / HASH INBOX UNAVAILABLE",
+  "cause": "The broad no-egress job starts pytest as root. Both tools intentionally refuse privileged private workspaces. Their separate non-root namespace jobs passed.",
+  "fix": "Drop to the checkout owner, with empty supplementary groups, no capabilities and no-new-privileges, after creating the same network namespace. Keep the whole original test set; do not skip or permit root.",
+  "fresh_ci_verification_pending": true,
+  "full_requirement_closures": 0,
+  "independent_accuracy_evidence": false
+}

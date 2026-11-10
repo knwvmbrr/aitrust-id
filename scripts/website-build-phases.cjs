@@ -2,7 +2,7 @@ const {spawn}=require('node:child_process');
 const {performance}=require('node:perf_hooks');
 
 const PHASES=Object.freeze(['private-file-controls','build','catalogue','performance',
- 'workflows','accessibility','mobile-payload','feedback']);
+ 'workflows','accessibility','mobile-payload','feedback','policies']);
 class StageError extends Error {
  constructor(){super('Website check phase failed.');this.name='StageError';}
 }

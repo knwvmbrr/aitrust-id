@@ -54,3 +54,23 @@ Native sharing remains N-013 at 80%. Independent recognition, physical-phone
 and human acceptance remain open; membership, bundle registration and a compiled
 archive do not complete them. The website and standalone tools remain separate
 ways to use the supported checks.
+
+## Current physical target
+
+Apple device status identifies the paired, connected iPhone 14 Plus as running
+iOS 27.0.1. Developer Mode is disabled. The existing manual-profile download
+produced no AI Trust ID profile, and this Mac still has no valid local signing
+identity. Cloud signing remains unverified. No device security setting was
+changed, no credential was created or revoked, and no physical app workflow or
+upload is credited. See the [read-only observation](../runs/2026-11-09-iphone-target-status.json).
+
+## Reopened listing draft
+
+The owner reopened the signed-in App Store session. A short promotional line
+now explicitly describes the offline PS development preview; a reload confirmed
+it persisted alongside the existing description, keywords and support/marketing
+links. The version remains Prepare for Submission. The review-contact section
+requires an owner-supplied phone number; its other contact fields remain blank.
+Screenshots, copyright/provider review, final declarations and signed build
+upload remain unfinished. Nothing was added for review. See the
+[saved draft observation](../runs/2026-11-10-app-store-draft-reopened.json).

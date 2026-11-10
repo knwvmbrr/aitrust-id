@@ -1241,7 +1241,7 @@ References are not claims that the entire package is done.
 
 **Outcome:** Administrators know which method/version/policy is active and can roll back safely.
 
-**Completion:** 20% · audited 2026-10-09T13:29:52.810894+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
+**Completion:** 80% · audited 2026-11-09T22:10:37.890409+00:00 · checked by Codex. [Evidence and next fix](scope-progress.md).
 
 **Scope records:** F-159.
 

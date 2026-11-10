@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-214359-fleet-approved-source-software-7d87a4f6",
+  "recorded_at": "2026-11-09T21:43:59.980217+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8706d96c917b92a7c887c418b9710e8261014c75",
+  "changed": "Deliver opt-in offline fleet deployment with signed cohort policy, source approvals, inventory, rollback and local withdrawal. Identify the connected physical iPhone target without changing security settings.",
+  "proves": "32 actual CLI controls pass separately on macOS and isolated non-root Linux, plus 13 evidence-refusal controls. Full bounded F-159 software acceptance is preserved; the ledger is 131 complete and 71 open of 202.",
+  "limits": "No actual organization device enrollment, browser force-install, public tag release, independent accuracy, commercial activation or App Store upload. Phone status is read-only; signing and physical/human acceptance remain open.",
+  "scope_ids": [
+    "F-159",
+    "N-013"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "c27a072e2798d5c5f386ff5ee6982d45bbc5dbcc9bc120e83e9f6ed652287478",
+    ".github/workflows/fleet.yml": "53eb16fdd7d03d017c9118f82cdd259f1342be0a35b29e51cfce0f5dda807fab",
+    "README.md": "8d26b17f35731694bbd3521aab557dee0f72a4f47ff04430768224e6b12df55d",
+    "docs/app-store-readiness.md": "2c27c2579342b86bb80a1fb64b1c7df5bf8d743c22f78bb519fd2f06e1008b34",
+    "docs/fleet-deployment-plan.md": "5869ec331d653bef31874e6f1d75827b79fa103bf88daa79865866bd4d153253",
+    "docs/fleet-deployment.md": "8ae9fd2f0da39ba7c4bd65f2c5b8f966d4bd901678aa8892f30e7d250e1949b2",
+    "docs/scope-60-execution.md": "2c76d95a6ed3f6003fbf79baf37df20800ee76ea3370617cf2072b8286445c98",
+    "docs/scope-delivery.md": "a8ff30cf87ec8ecd37a23a365e94c0b7a01190b9899e2758697ea02eab4b7b4d",
+    "docs/scope-progress.json": "1b2d2ca48ab27dbc4a09f7c85fc8cd8174168f106c8547a2d6210fc5c1c7f372",
+    "docs/scope-progress.md": "4cdf4e803c3451fd1f9bdb5195d2a74d542757f44f96611c1d44700b03b1a42b",
+    "docs/scope-task-index.md": "f7c501a71cc77dc5183adc1f28bd7bd98986d2ebdc077dbdb95176f6a1972e64",
+    "eval/revalidation.json": "52150b8da74be9701b5c95fac9ef1c38017093d813104544241dfd3d2b7de356",
+    "eval/route-boundaries.json": "01b1c34e56d86df782ebf2491e7eede74a5edcd5dfac499f9fc2b21fb8492803",
+    "package.json": "e9a7137ed4b2bc9cd1ea6ca9ceeaa5b34c1f281d4528a7e499b9c553524d3f71",
+    "runs/2026-11-09-fleet-accepted-linux.json": "29c34faaaf0327c682f163432e1796a6865bbafac302dd87dd9d2d91677988ff",
+    "runs/2026-11-09-fleet-accepted-macos.json": "7e467600b081a719ee3a2ab5e74e0bd8482214aa5b739c4f38a1306c451195b4",
+    "runs/2026-11-09-fleet-development-refusals.json": "98725f0237ffc217e42ae591860e400ef25c4889e24896d6c5dedacfc8bdb97b",
+    "runs/2026-11-09-fleet-final-macos.json": "8f9e01cf34c9c099f05f20cc3d9f4bfff1808ec75faf897e6f0b89e5a32dfd9a",
+    "runs/2026-11-09-fleet-macos.json": "f52845f9f55572364b80714a846991e121efdc5ccb0eb53eb3758ad22561bc1d",
+    "runs/2026-11-09-fleet-scope.json": "d403c9d8c06136633659e4e110f44bd3e84e2c7ac42606ec7ea0f620a1b08109",
+    "runs/2026-11-09-fleet-software-acceptance.json": "17c3e4fd63a34053118f4cce1b4e2d0e04455ea1bc9a192b8c2350b2273b8f2e",
+    "runs/2026-11-09-iphone-target-status.json": "d4d167d91711c72569dc047b2898fbbac55bbc175c48bcc30213f9af82ee59bd",
+    "scripts/fleet.py": "a9c25344c6eb889ecd2c477d9f465fc2fa24f9a27b4b2a07669363bacb18b9e6",
+    "scripts/verify-enterprise.cjs": "72d563600b7efd61a0d773b1e5eacd04c51a9cb1ebcdc5edaf1b9e18d825806c",
+    "scripts/verify-fleet-evidence.py": "66066968ae1fa66bb3aecde9c329fd8d14f817f05ff4bfe21900e526d9354cda",
+    "scripts/verify-fleet-linux.py": "2bb23d7f163fb2880281f8aeb13d4352b2483499ba1a2c88b216aaebf29020d3",
+    "scripts/verify-fleet.py": "0a2a15a4196246ca3d0ac8dce81a62c45a9b3784cedbd57ae22040b9688de7d7",
+    "scripts/verify-route-boundaries.py": "fa9abddf2d6584a8f86dd10eb0fad1e172f2f8dac622d44db39b0d0e29d12978",
+    "site/scripts/prepare.mjs": "c8291307e4ef8bfe4250e0a7feaa07a5d2095acaa96eb1489a3a1a60ae422321",
+    "site/scripts/render-reference.mjs": "f6e8fd1a5649f12a2ffb31173038d8ce7fd6ddd50c908d4df904d192748ddf6b",
+    "site/src/catalog.js": "dc5fb84c2d547782811301d0633fc3b82d97c909e661c6f8ba6097efcceba9c8",
+    "site/src/usage.js": "08397b51dc674a54b70015305832d27dfe87d3e208e443e9f0311d32df1d5e76",
+    "state.json": "6179aa825902197c6c66a9e883cbb3d376cf33ed404ad4739073717087e04108",
+    "tests/test_fleet.py": "05a6a3cce7c6e94c404c44bcdaaafad6810f01a2b7a0eee4b5af16b388a14e5d",
+    "tests/test_fleet_evidence.py": "2495075fdfcd6a1f0aad089c2721bba614f4df9caa0d11217176e4b30af2b748",
+    "tools/fleet.py": "1d7d189927685da637dd71c5d2a4000ce6528b50e4aa7eea87e3aa7dde900fb4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-fleet-software-acceptance.json",
+      "sha256": "17c3e4fd63a34053118f4cce1b4e2d0e04455ea1bc9a192b8c2350b2273b8f2e"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-accepted-macos.json",
+      "sha256": "7e467600b081a719ee3a2ab5e74e0bd8482214aa5b739c4f38a1306c451195b4"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-accepted-linux.json",
+      "sha256": "29c34faaaf0327c682f163432e1796a6865bbafac302dd87dd9d2d91677988ff"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-development-refusals.json",
+      "sha256": "98725f0237ffc217e42ae591860e400ef25c4889e24896d6c5dedacfc8bdb97b"
+    },
+    {
+      "path": "runs/2026-11-09-iphone-target-status.json",
+      "sha256": "d4d167d91711c72569dc047b2898fbbac55bbc175c48bcc30213f9af82ee59bd"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-scope.json",
+      "sha256": "d403c9d8c06136633659e4e110f44bd3e84e2c7ac42606ec7ea0f620a1b08109"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T21:44:01.103896+00:00"
+    }
+  ]
+}

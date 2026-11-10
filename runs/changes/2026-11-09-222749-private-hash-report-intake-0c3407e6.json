@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09-222749-private-hash-report-intake-0c3407e6",
+  "recorded_at": "2026-11-09T22:27:49.137259+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "828e0c69711cb249c4fc5687fe1b841a55b6e1dd",
+  "changed": "Deliver private hash-only feedback intake with per-operation consent, fixed metadata fields, capacity, duplicate/expiry/withdrawal, explicit export and crash recovery. Add reserved enrollment-name refusal and publish factual policy version 1.11 without replacing prior archives.",
+  "proves": "29 actual inbox controls pass on each of Mac and isolated non-root Linux; current fleet profiles each pass 33. Both evidence gates pass their 26 combined refusal/acceptance controls. The preserved ledger is 132 complete and 70 open of 202, with ten full closures still needed for 60.",
+  "limits": "Private operator software only. No public registry, company research collection, genuine pilot feedback, training label, independent tag accuracy, commercial service, signing credential or App Store upload is activated. Physical-phone and qualified/human acceptance remain open.",
+  "scope_ids": [
+    "F-045",
+    "F-159"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "2c40a41045e723cbd413266e5da70b798167f24c4b16efac1db13d0747058e96",
+    ".github/workflows/hash-reports.yml": "51948b61be3b820da5e4b04803580371041b0b4ac33a1c176981a6d9f7924d01",
+    "README.md": "c5ffc7a7cab6a01fcedafd21862a4d6eaece22f335084bda3d23ee7f65821dd3",
+    "docs/hash-report-intake-plan.md": "a3cce5bbbc7637b9d9bab804b74f781f8bf8a90fa139819e7348759826404ef1",
+    "docs/hash-report-intake.md": "352971e22ae07af6928de1c96998948da950cb91718a5a4fd2599cc0e9680857",
+    "docs/scope-60-execution.md": "3b56285a391d605d87c0cc3232be5f597cd390af05a036953e3ca534ed6e70db",
+    "docs/scope-delivery.md": "5e2adb0607b4f400e2f53f10e71f53a661e291441831e730d70e4d9b7e365015",
+    "docs/scope-progress.json": "ba3ae51033810a6076400bc44362de1f72d71e7f8b73b0db0a292e36e61f0426",
+    "docs/scope-progress.md": "99dd2c0ecc4446bf5d4ecfd00c55181e50e2a26e14efc5064044bfea38b796e3",
+    "docs/scope-task-index.md": "b46cedb93fb2e96c0cb15f7e4a65ddbe9924c8a3f37da272859fd4ef18b5eb0a",
+    "eval/revalidation.json": "6af7459acc8c241c59ebec51411327ab9eeca12ece60084a4c98d668b5cf7506",
+    "eval/route-boundaries.json": "8a1f42894ca822715dbe3c371bc69ef1bd063689d571bb2555bd7d7492d4ff18",
+    "package.json": "b42a9e661668e14d0cd2587bebc685ce1773597ec7a00f36f83f722d983be460",
+    "runs/2026-11-09-fleet-root-guard-acceptance.json": "4c188140ff853dbdba01ae17462e4a18428112fb343d52d92e86ac30c4d3f3ca",
+    "runs/2026-11-09-fleet-root-guard-linux.json": "5cb24dee7d860839b88dc8cc5e971c5b171a31b98c00b56491ed3395a8869e2e",
+    "runs/2026-11-09-fleet-root-guard-macos.json": "662f50fcd3b734e291fedf08bf0189a4d2a6719b16ad873b0ca08060043a51e4",
+    "runs/2026-11-09-hash-inbox-current-linux.json": "496068b0af71bcb13a15b06095c11a9cd3e4344bb62ef0d28f1400df227b8c6a",
+    "runs/2026-11-09-hash-inbox-current-macos.json": "6f28f7644c0dc6e290ef5595915743e7976de4b720c659a53b59a0d9e2c4e82b",
+    "runs/2026-11-09-hash-inbox-linux.json": "8a94cb39f57b507ebda36c3ea246d464ac48f7440c04c2b05ff5348f87536117",
+    "runs/2026-11-09-hash-inbox-macos.json": "d565e383621216be78a6a5a8a9b5ce725625925c5e52edd671d12e2f55b68873",
+    "runs/2026-11-09-hash-inbox-scope.json": "152be085a5e98eeb812e3b0348f9cc7d699d1c0ad4db7e5c6646c08cb48b37b4",
+    "runs/2026-11-09-hash-inbox-software-acceptance.json": "969b61e84b29891574cfaaf29a05b186482d30ffaf07cc1eb56814d148b19034",
+    "runs/2026-11-09-private-tools-policy-archives.json": "ee3d04fdde33e5cad8aa3d018666f9c18fabdd7d09a649b30f2735e5c7030819",
+    "scripts/hash-reports.py": "a0784a8c5a61a04491d40eb55f17f997617ccfdcfea501b48a18c2ee246534a7",
+    "scripts/verify-enterprise.cjs": "5cd096f4e97dd0446b259f06db3d3541b8dfda32c1fc54b7f861b3010ac9d67b",
+    "scripts/verify-fleet-evidence.py": "31393f4bc6ffe7f37f3e1016eaaeeee2886a00c044b56773b6e3dd8099780810",
+    "scripts/verify-hash-reports-evidence.py": "0cf1b0e9aa4e733914d7693e18b7d0ad6e817eb6055372b55d9bb3bf143d8703",
+    "scripts/verify-hash-reports-linux.py": "57d85c874861e73cbdaada383398e8ed4c796b4266cc8a7840be4419543d2372",
+    "scripts/verify-hash-reports.py": "345ab4b361594a1aac8cccde995d11f8c1ddeb9b10b8b7b6eafb1f3c1db957eb",
+    "scripts/verify-route-boundaries.py": "59fdfb1ae27fe80bd8d1d53c3ce9b825bfab3d8b79e6471748af9841a69bbf44",
+    "site/public/reference/policies/access/v1.11.txt": "01e6529efebfae63f0d05bff74d4425d405ac5d058261f4341ad88fcf8431c08",
+    "site/public/reference/policies/community/v1.11.txt": "bfa79e10ebd86626a96a56338bae9b57e1f0fe385a18dd7f7fb58302cda32b4b",
+    "site/public/reference/policies/contributing/v1.11.txt": "ef19d204876ca538413566bf26253a7a2816634563a91523bb7684fd95bca91b",
+    "site/public/reference/policies/governance/v1.11.txt": "93371afc4fc867c3e2b771dc2c71de5dc9f7bb203789c1be59a6ab0c33f97814",
+    "site/public/reference/policies/licenses/v1.11.txt": "98facaa44abf79d77940296b37b2d0e3dcbd8a0f9e44cae7229243242ef54e7d",
+    "site/public/reference/policies/privacy/v1.11.txt": "d4448a35de1388fa5ba5a845c62825863600f669111a33ee0927b185750da6be",
+    "site/public/reference/policies/security/v1.11.txt": "60911f05dc0a68f485599d208e2ef4859db0299d2614c0069a8824f4dba61624",
+    "site/public/reference/policies/terms/v1.11.txt": "cb8b9cc3850ee6cfb321ed303e9b89039925a4ac4a9d2c0e8af453fb9d24e7bd",
+    "site/public/reference/policies/validation/v1.11.txt": "30382ae9bde4d641474c6096a7365d66935840247faef7cdbecc5ffd54a49f58",
+    "site/scripts/prepare.mjs": "2a455fbf854ff3e70b19a7fc3c40aabc6d71d1fe1df462cac7f1335cb5502ad0",
+    "site/scripts/render-reference.mjs": "3e0d9928b0327b41b41aaf4d1941267875778f2b223a91cf570bd3de58afcb04",
+    "site/src/catalog.js": "06348eb62645f1f9fe7ace3edfc385569bcb07c1def9dfbf25a03faf65ac8b27",
+    "site/src/policies.js": "f06f3e69fce96674991eaa1bd9169226a39da2ee9d80c38b06152af25a8de26b",
+    "site/src/workflows/Report.jsx": "7d2ddc7134b5eb736df0ae498aec811eee955681e7f58030388b28edea791df4",
+    "state.json": "1a533af4025c92444a1e1e303863f435ea1878f5dbfac77dbd68f6769fb64f5f",
+    "tests/test_fleet.py": "be633693d7ed0a7178f8d4af4ff7ed42339a0005ffd8ad81bbf51521e3b83881",
+    "tests/test_fleet_evidence.py": "0c2445c336255d414170a04fc0e4a1c03cc1855aae801b9649406a35446e37f7",
+    "tests/test_hash_reports.py": "670ba2bed7fd7203b02a91ecdeabed22def5270c0be2ea7672d6b83aa5c671b2",
+    "tests/test_hash_reports_evidence.py": "4dfd95442058d057f76f661c40b9023cb07beaa7901392f44e3871a7d71eff44",
+    "tools/fleet.py": "7b8d50160cf0f8e29698b77b70c01af5606e8876817435900bb9168fa0f89b16",
+    "tools/hash_reports.py": "7031f192399e51e4d5a5c35f153d04877cc7d04edda935d4da1e928cd0babe58"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-09-hash-inbox-software-acceptance.json",
+      "sha256": "969b61e84b29891574cfaaf29a05b186482d30ffaf07cc1eb56814d148b19034"
+    },
+    {
+      "path": "runs/2026-11-09-hash-inbox-current-macos.json",
+      "sha256": "6f28f7644c0dc6e290ef5595915743e7976de4b720c659a53b59a0d9e2c4e82b"
+    },
+    {
+      "path": "runs/2026-11-09-hash-inbox-current-linux.json",
+      "sha256": "496068b0af71bcb13a15b06095c11a9cd3e4344bb62ef0d28f1400df227b8c6a"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-root-guard-acceptance.json",
+      "sha256": "4c188140ff853dbdba01ae17462e4a18428112fb343d52d92e86ac30c4d3f3ca"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-root-guard-macos.json",
+      "sha256": "662f50fcd3b734e291fedf08bf0189a4d2a6719b16ad873b0ca08060043a51e4"
+    },
+    {
+      "path": "runs/2026-11-09-fleet-root-guard-linux.json",
+      "sha256": "5cb24dee7d860839b88dc8cc5e971c5b171a31b98c00b56491ed3395a8869e2e"
+    },
+    {
+      "path": "runs/2026-11-09-private-tools-policy-archives.json",
+      "sha256": "ee3d04fdde33e5cad8aa3d018666f9c18fabdd7d09a649b30f2735e5c7030819"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-09T22:27:49.685396+00:00"
+    }
+  ]
+}

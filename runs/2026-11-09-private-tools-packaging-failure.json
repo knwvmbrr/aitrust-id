@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-09T22:40:08.287302+00:00",
+  "kind": "website_packaging_failure",
+  "pass": false,
+  "failed_receipt": "runs/2026-11-09-private-tools-current-website.json",
+  "error_signature": "Missing reference /reference/fleet-deployment.md",
+  "cause": "New reference copies ran after catalog reference existence validation.",
+  "fix": "Move allowlisted Fleet and hash-inbox copies before catalog validation; do not bypass missing-reference checks.",
+  "verification": "Pending a fresh complete website revalidation; retained failing receipt unchanged.",
+  "independent_accuracy_evidence": false
+}

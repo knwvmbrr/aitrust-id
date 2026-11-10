@@ -113,6 +113,14 @@ jobs:
         run: python -m pytest tests/test_lazy_ps_context.py tests/test_command_performance.py tests/test_ps_efficiency_evidence.py -q
       - name: Enforce commercial-interest recusal without asserting real governance
         run: make verify-recusal
+      - name: Require actual private hash-report intake acceptance
+        run: |
+          python scripts/verify-hash-reports-evidence.py
+          python -m pytest tests/test_hash_reports_evidence.py -q
+      - name: Require current actual fleet acceptance for its software closure
+        run: |
+          python scripts/verify-fleet-evidence.py
+          python -m pytest tests/test_fleet_evidence.py -q
       - run: python scripts/verify-verdict-boundaries.py
       - run: python scripts/verify-dependencies.py
       - name: Check preserved component notice identity without claiming legal clearance
@@ -207,7 +215,9 @@ jobs:
         with: { node-version: '24' }
       # Source-bound browser/deploy controls need prepared device assets and a
       # normal-owner Git checkout. The site job below runs that complete file.
-      - run: sudo unshare -n sh -c 'ip link set lo up && exec "$@"' sh "$(which python)" -m pytest tests --ignore=tests/test_route_boundaries.py -q
+      # Only namespace setup needs root. Exercise application code as the
+      # existing checkout owner, with no groups, capabilities or privilege gain.
+      - run: sudo unshare -n sh -c 'ip link set lo up && exec setpriv --reuid "$1" --regid "$2" --clear-groups --no-new-privs --inh-caps=-all --ambient-caps=-all --bounding-set=-all -- "$3" -m pytest tests --ignore=tests/test_route_boundaries.py -q' sh "$(id -u)" "$(id -g)" "$(command -v python)"
       - run: echo "network-isolated evaluator tests complete"
 
   regressions:
