@@ -50,7 +50,7 @@ jobs:
         run: |
           python scripts/measure-redaction-development.py --engine docker --project aitrust-staging --profile english --output output/verification/redaction-english.json
           python scripts/measure-redaction-development.py --engine docker --project aitrust-staging --profile compact --output output/verification/redaction-compact.json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: redaction-development-observations
@@ -95,7 +95,7 @@ jobs:
           mkdir -p output/verification
           python scripts/verify-service.py --env-file "$AITRUST_TEST_ENV" --engine docker --project aitrust-staging --output output/verification/pii-service.json > "$RUNNER_TEMP/pii-service-check.log"
           python scripts/verify-assertion-replay.py --env-file "$AITRUST_TEST_ENV" --engine docker --project aitrust-staging --report output/verification/pii-replay.json > "$RUNNER_TEMP/pii-replay-check.log"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: pii-pipeline-replay
