@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-173917-ios-merged-current-readiness-f4d7f973
+
+Recorded 2026-11-12T17:39:17.260813+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current merged native/privacy integration and the reviewed boundaries; distinguished the repaired signed archive from the older rejected exported package.
+- **Evidence.** All 40 protocol and 32 website commands pass; unchanged PS, PII and extension receipts still match their sources. The native five-workflow proof remains current and the 1008-file personal boundary review passes. [Change record](./runs/changes/2026-11-12-173917-ios-merged-current-readiness-f4d7f973.json).
+- **Not claimed.** The first website attempt was stopped by missing changelog records for new receipts; its failure is retained and the unchanged-source rerun passes after correcting receipt staging. Apple validation, repaired IPA export/upload, physical acceptance and protected app CI remain pending. No requirement closure.
+
+
 ### 2026-11-12-172915-ios-protected-main-reconciliation-ca5ed002
 
 Recorded 2026-11-12T17:29:15.197416+00:00 · Contributor: Codex · change

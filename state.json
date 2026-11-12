@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T17:27:32.635918+00:00",
-  "active_increment": "Merged protected hidden-email privacy correction into native resource-repair branch; preserve current PII measurements and all app workflow/signing proofs. Apple validation remains unverified pending owner UI; 70 requirements remain open, target 60.",
+  "updated": "2026-11-12T17:39:16.456381+00:00",
+  "active_increment": "Merged native resource repair with protected hidden-email fix; all five current capability receipts and personal-boundary review pass. Protected app source CI pending; Apple validation remains unverified pending owner UI. 70 requirements remain open, target 60.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1091,13 +1091,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-12-hidden-email-current-PS.json",
     "PII_REDACTED": "runs/2026-11-12-hidden-email-current-PII_REDACTED.json",
-    "protocol": "runs/2026-11-12-hidden-email-current-protocol.json",
+    "protocol": "runs/2026-11-12-ios-merged-protocol.json",
     "extension": "runs/2026-11-12-hidden-email-current-extension.json",
-    "website": "runs/2026-11-12-hidden-email-current-website.json",
+    "website": "runs/2026-11-12-ios-merged-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T17:27:32.635918+00:00",
+  "updated_at": "2026-11-12T17:39:16.456381+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1906,9 +1906,10 @@
     "code_and_guide_published": true,
     "distribution_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
     "workflow_current_source_pass": true,
-    "publication_pending": false,
+    "publication_pending": true,
     "rejected_supported_provider_attempt": "runs/2026-11-10-native-typed-provider-rejected.json",
-    "previous_workflow_proof": "runs/2026-11-09-native-share-hosted-workflow.json"
+    "previous_workflow_proof": "runs/2026-11-09-native-share-hosted-workflow.json",
+    "current_merged_readiness": "runs/2026-11-12-ios-merged-readiness.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2987,7 +2988,7 @@
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
-    "device_archive_evidence": "runs/2026-11-09-ios-distribution-final-archive.json",
+    "device_archive_evidence": "runs/2026-11-12-ios-text-resource-signed-archive.json",
     "archive_signed": true,
     "store_bundle_configured": true,
     "app_store_record_created": true,
@@ -3033,13 +3034,13 @@
     "current_signing_evidence": "runs/2026-11-12-ios-text-resource-signed-archive.json",
     "csr_selected_for_certificate_issuance": true,
     "certificate_issuance_submitted": true,
-    "signed_archive_evidence": "runs/2026-11-10-ios-signed-archive.json",
+    "signed_archive_evidence": "runs/2026-11-12-ios-text-resource-signed-archive.json",
     "owner_certificate_matches_private_key": true,
     "distribution_profiles_available": true,
     "distribution_profiles_count": 2,
     "certificate_created_by": "Michael",
-    "signed_package_exported": true,
-    "signed_package_evidence": "runs/2026-11-10-ios-signed-package.json",
+    "signed_package_exported": false,
+    "signed_package_evidence": null,
     "app_store_validation_passed": false,
     "current_step": "Owner developer UI action required before the current Apple validation result can be verified.",
     "validation_failure": "runs/2026-11-12-apple-package-validation-failed.json",
@@ -3051,10 +3052,15 @@
       "full_requirement_closures": 0,
       "native_workflow": "runs/2026-11-12-ios-text-resource-workflow.json",
       "retained_failed_workflow": "runs/2026-11-12-ios-text-resource-workflow-failed.json",
-      "signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json"
+      "signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json",
+      "current_readiness": "runs/2026-11-12-ios-merged-readiness.json",
+      "protected_source_ci_pending": true
     },
     "revalidation_handoff": "runs/2026-11-12-ios-revalidation-in-progress.json",
-    "owner_ui_handoff": "runs/2026-11-12-ios-owner-ui-handoff.json"
+    "owner_ui_handoff": "runs/2026-11-12-ios-owner-ui-handoff.json",
+    "previous_signed_archive_evidence": "runs/2026-11-10-ios-signed-archive.json",
+    "previous_signed_package_exported": true,
+    "previous_signed_package_evidence": "runs/2026-11-10-ios-signed-package.json"
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
