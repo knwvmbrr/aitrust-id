@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-172915-ios-protected-main-reconciliation-ca5ed002",
+  "recorded_at": "2026-11-12T17:29:15.197416+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e1dc578be8fea2de4320f7634028a8b496abceaa",
+  "changed": "Reconciled the protected hidden-email correction with the native resource repair, preserving both histories, measurements, all scope records and disabled future push scope.",
+  "proves": "75 focused packaging/proof checks pass; the five actual native workflows remain source-bound; all 202 original requirements and five enhancements remain tracked.",
+  "limits": "No Apple validation success, binary upload, physical acceptance or full requirement closure. Initial unittest invocation ran zero tests and was replaced by the existing pytest runner. The changelog writer also rejected a self-referential file hash before writing; the corrected record excludes that generated index.",
+  "scope_ids": [
+    "N-013",
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "README.md": "706a424296a5abd0bb4d0cc42aac7ceb06d0196c62586b85a5369fa160e2faf5",
+    "docs/scope-progress.json": "3d8286a948b4f9b6e820c22dcd621176bbae9341fa397b579d5981a3e72bf393",
+    "docs/scope-progress.md": "0d3d34042bb2e1a67866b225b9e28966978e2089506a50dc846bb64b7af0e553",
+    "site/src/scope-manifest.json": "f3967bd132bceed8e9b62481952c5b293a9499b14c3f905229f40b9aa086c319",
+    "state.json": "0e864c3400b9810a1d53364f7ef01e51645bb8a785da10b3cca616da59880e41",
+    "site/public/reference/public-scope.json": "34a30b26a609c6737f81a5ddace6db546d9720ac3f017fe6d6140ab86f571c8b",
+    "site/src/public-scope.json": "34a30b26a609c6737f81a5ddace6db546d9720ac3f017fe6d6140ab86f571c8b",
+    "runs/2026-11-12-ios-main-reconciliation.json": "a4248179aaf8074a1756c76f48d6a49827087bd47f1d51ac7a6725cec646bebb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-main-reconciliation.json",
+      "sha256": "a4248179aaf8074a1756c76f48d6a49827087bd47f1d51ac7a6725cec646bebb"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T17:29:15.784472+00:00"
+    }
+  ]
+}

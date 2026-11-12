@@ -1,0 +1,109 @@
+{
+  "pass": true,
+  "kind": "isolated_redactor_asgi_regressions",
+  "real_user_data": false,
+  "independent_accuracy_evidence": false,
+  "production_services_modified": false,
+  "network_http_route": false,
+  "source_sha256": {
+    "app": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+    "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+    "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+    "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "identity_builder": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+  },
+  "case_ids": [
+    "email_0_2",
+    "email_0_5",
+    "email_0_10",
+    "email_1_2",
+    "email_1_5",
+    "email_1_10",
+    "email_2_2",
+    "email_2_5",
+    "email_2_10",
+    "email_3_2",
+    "email_3_5",
+    "email_3_10",
+    "ordinary_email",
+    "benign_text",
+    "wrong_type",
+    "extra_field",
+    "too_long",
+    "invalid_json",
+    "body_limit",
+    "unsupported_method",
+    "health"
+  ],
+  "requests_exercised": 21,
+  "source_unchanged": true,
+  "uid": 10001,
+  "network": "none",
+  "capabilities_empty": true,
+  "no_new_privileges": true,
+  "masking_observations": [
+    {
+      "case_id": "email_0_2",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 6
+    },
+    {
+      "case_id": "email_0_5",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 6
+    },
+    {
+      "case_id": "email_0_10",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 5
+    },
+    {
+      "case_id": "email_1_2",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    },
+    {
+      "case_id": "email_1_5",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    },
+    {
+      "case_id": "email_1_10",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    },
+    {
+      "case_id": "email_2_2",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 5
+    },
+    {
+      "case_id": "email_2_5",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 6
+    },
+    {
+      "case_id": "email_2_10",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    },
+    {
+      "case_id": "email_3_2",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    },
+    {
+      "case_id": "email_3_5",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    },
+    {
+      "case_id": "email_3_10",
+      "unmasked_expected_characters": 0,
+      "masked_outside_expected_characters": 0
+    }
+  ],
+  "cases_with_extra_masking": 5,
+  "probe_sha256": "86f84e9047e5be81017194e601105f5bbb6b73c0d0accf84bf6dace602a758e7",
+  "captured_at": "2026-11-12T15:49:14.754049+00:00"
+}

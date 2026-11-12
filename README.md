@@ -373,14 +373,15 @@ PS is also available in a phone/device browser without an account, Docker or ext
 PII remains a local service preview; other tags clearly state availability. Local service
 setup still requires technical Linux/macOS steps. Rebuild services after updating the source;
 the CLI rejects an evaluator whose hash differs from this checkout. The current
-PII increment ran a rebuilt isolated Linux staging pipeline: 26 HTTP controls,
-15 full-route replay controls and 42 synthetic recognition examples. It masks
-complete IPv6 addresses, including the suffix missed by the earlier engine.
-All 34 expected English identifiers were fully masked; 2 of 38 English examples
-also lost ordinary text. Six additional compact IP label examples were fully masked,
-without extra masking; the observations remain separately downloadable.
-Four coverage challenges include partial and missed
-masking. These development results are not independent accuracy or privacy clearance.
+PII development candidate passed 26 actual HTTP controls, 15 full-route replay
+controls and ten clean-install/failure controls on Linux. The fixed corpus has
+42 English/challenge examples plus six compact IP examples. All 34 expected
+English identifiers were fully masked; two of 38 English examples also lost
+ordinary text. All six compact addresses were fully masked without extra masking.
+Three of four out-of-coverage challenges are fully masked; one remains untouched.
+The invisible-email correction is measured, while remaining misses and extra
+masking stay disclosed. These results are not independent accuracy or privacy
+clearance; the candidate still needs protected publication.
 See [redaction observations and reproduction](docs/redaction-recognition.md).
 
 Independent reviewers can use the blind packet tool described in

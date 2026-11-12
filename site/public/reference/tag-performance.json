@@ -1870,7 +1870,7 @@
       },
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-11-09T16:47:19.602978+00:00",
+        "measured_at": "2026-11-12T16:39:31.463493+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1880,19 +1880,19 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 63.98644205182791
+            "p95_ms": 56.61000590771437
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 145.68376680836082
+            "p95_ms": 137.6026999205351
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 475.3189720213413
+            "p95_ms": 562.1547442860901
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1748.3004508540034
+            "p95_ms": 1790.8156258054078
           }
         ]
       },
@@ -1970,7 +1970,7 @@
       "device": null,
       "pipeline": {
         "kind": "synthetic_staging_pipeline_timing",
-        "measured_at": "2026-11-09T16:47:19.602978+00:00",
+        "measured_at": "2026-11-12T16:39:31.463493+00:00",
         "logical_cpus": 4,
         "sample_count_per_profile": 20,
         "profile_count": 12,
@@ -1980,25 +1980,25 @@
         "rows": [
           {
             "input_length_codepoints": 256,
-            "p95_ms": 63.98644205182791
+            "p95_ms": 56.61000590771437
           },
           {
             "input_length_codepoints": 2000,
-            "p95_ms": 145.68376680836082
+            "p95_ms": 137.6026999205351
           },
           {
             "input_length_codepoints": 8000,
-            "p95_ms": 475.3189720213413
+            "p95_ms": 562.1547442860901
           },
           {
             "input_length_codepoints": 20000,
-            "p95_ms": 1748.3004508540034
+            "p95_ms": 1790.8156258054078
           }
         ]
       },
       "redaction": {
         "format": "ai-trust-id-redaction-development/v1",
-        "measured_at": "2026-11-09T16:35:49.988694+00:00",
+        "measured_at": "2026-11-12T16:11:33.684830+00:00",
         "kind": "synthetic_development",
         "independently_validated": false,
         "population_accuracy_measured": false,
@@ -2021,16 +2021,16 @@
         },
         "challenges": {
           "cases": 4,
-          "cases_with_misses": 2,
+          "cases_with_misses": 1,
           "cases_with_unexpected_predictions": 3,
-          "tp": 2,
+          "tp": 3,
           "fp": 4,
-          "fn": 2,
+          "fn": 1,
           "expected": 4,
-          "predicted": 6,
+          "predicted": 7,
           "duplicate_predictions_removed": 0,
-          "fully_masked": 2,
-          "partial": 1,
+          "fully_masked": 3,
+          "partial": 0,
           "untouched": 1,
           "cases_with_extra_masking": 1,
           "extra_masked_characters": 8
@@ -2129,7 +2129,7 @@
         },
         "limits": "38 developer-authored English examples and four out-of-coverage challenges. Exact entity/span matches and actual masking are different measures; no population or independent accuracy claim."
       },
-      "measured_at": "2026-11-09T16:35:49.988694+00:00"
+      "measured_at": "2026-11-12T16:11:33.684830+00:00"
     },
     {
       "id": "NF",

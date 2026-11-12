@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-171131-hidden-email-reviewed-readiness-53d5b1a1",
+  "recorded_at": "2026-11-12T17:11:31.530190+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bc529bee132a0e4f8afdf2db7b5bd299c8f66a19",
+  "changed": "Selected the five completed current engineering receipts and reviewed personal-boundary inventory; corrected README to current source measurements.",
+  "proves": "All five capability sequences pass, including 32 website commands. The 1008-file boundary review passes with unchanged declared endpoints/access, 26 service cases and 15 current replay cases; independent release remains unapproved.",
+  "limits": "Protected CI, merge and deployment pending. No independent accuracy, human acceptance or full requirement closure. The initial review helper omitted its required root argument and was corrected before any review was written.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105"
+  ],
+  "files": {
+    "README.md": "d9d969e2156af12a4551229420c2e9b3326b69f3af3bcec1250765c9350a67ef",
+    "eval/revalidation.json": "3534b320471d3e94b38a4f7a73c0af9548104b15a9ed65a50be8f3f998bbaa4d",
+    "eval/route-boundaries.json": "254456a7296d0c3d75d5b7aa3f5a48fd8ac0dc9850b998db0f2d5b494a7b4cd0",
+    "runs/2026-11-12-hidden-email-browser-performance.json": "08213cbdcfecc5d9bc1c5311f4ce9f7e85a7f7f5544d18a66ccaaf961ae9eb1a",
+    "runs/2026-11-12-hidden-email-current-PII_REDACTED.json": "3a8ae9a99f8a9af5c7fca2a00c75f5d1f62d7125b554fade750d84a34a804aeb",
+    "runs/2026-11-12-hidden-email-current-PS.json": "05a93a70a026ec8149465adec00040d965a3221176c2321e6d79133b329b15d8",
+    "runs/2026-11-12-hidden-email-current-extension.json": "65510e5ed879087ac1cbed8d81c22f977bbc0915add7a6dcf9d68b5ef46f490c",
+    "runs/2026-11-12-hidden-email-current-protocol.json": "34b187bbcc415465c3d9e8fd7c5c68bc3decf843c0b98bc58a07cf8be382304d",
+    "runs/2026-11-12-hidden-email-current-timing.json": "ced64190216b2192eb7aa5aa42e8fb2956fab244c4c84aa851a3eaab90fce319",
+    "runs/2026-11-12-hidden-email-current-website.json": "37893eb79500933a44361ec93bf186a0cd5121491b25688f1b448b2352c6dd9a",
+    "runs/2026-11-12-hidden-email-final-PII_REDACTED.json": "d74cf9b086d06abea615ab194e7f5ac927a7c19ef7b727b6cff49aede51ade85",
+    "runs/2026-11-12-hidden-email-final-PS.json": "837d4662def48c3b3aad627df776a30dca1b477e35e324dc77b66d572ba9bb51",
+    "runs/2026-11-12-hidden-email-final-protocol.json": "e1cbcef68a3dadca19f1f4a415e48ea83d6221520eed70ee36001aca90636514",
+    "runs/2026-11-12-hidden-email-pipeline-timing-linux.json": "18e28f558f5373d33dbc3e9b345034e48a5efdad05a9c785ee9f17d1d34ac615",
+    "runs/2026-11-12-hidden-email-reviewed-boundaries.json": "0b09ab7df1d59222ecfa4f978d7d8ac40d25f11c24f72554a67579f46582fba6",
+    "scripts/verify-route-boundaries.py": "32dd66bdf5ab0326d9d1105218851c09a549c800c95ad1be88ee7e83b02c1266",
+    "site/index.html": "ceff1eddcd183592df19fce62ee8231fd982d2e507feffa0454d05198b0763e3",
+    "site/public/reference/pipeline-performance.json": "7102609dc8d7319c2c0e101ffdbef41dac7104f3f0d633746125ba1d58347ece",
+    "site/public/reference/redaction-compact-addresses.json": "efa7cc0f2decef33c1dd43a64ad1140a4879765852e31f0b9ac4d7493a1ec3b2",
+    "site/public/reference/redaction-recognition.json": "c484780b7fdbc7ba0e44900f9c129db6ee42a7c64be03fbe4b28c6af64c4f65b",
+    "site/public/reference/redaction-recognition.md": "61a0aefeaccae281905bf4fedc25493d20632a6e87cf6515dfa9b3807783c6fe",
+    "site/public/reference/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
+    "site/scripts/prepare-performance.mjs": "67fd775c7f0387297202f5be901d4380f15fa89143e9349b5b1fdfe865d0d340",
+    "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
+    "state.json": "3a7d9885862141d613844bd5eceff00d7dc6c59dfbb967e5101754b8daed948d",
+    "tests/pipeline-timing.cjs": "8ee4a40c0902dba3399d98eaf10681801389b78daafe77c8ada9f4eeb1f37453"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-hidden-email-current-website.json",
+      "sha256": "37893eb79500933a44361ec93bf186a0cd5121491b25688f1b448b2352c6dd9a"
+    },
+    {
+      "path": "runs/2026-11-12-hidden-email-reviewed-boundaries.json",
+      "sha256": "0b09ab7df1d59222ecfa4f978d7d8ac40d25f11c24f72554a67579f46582fba6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T17:11:32.093553+00:00"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T17:13:44.653006+00:00",
-  "active_increment": "Native resource repair passes current detector/workflow and signed-archive checks; Apple result requires owner UI continuation. Full open requirements remain 70; target 60.",
+  "updated": "2026-11-12T17:27:32.635918+00:00",
+  "active_increment": "Merged protected hidden-email privacy correction into native resource-repair branch; preserve current PII measurements and all app workflow/signing proofs. Apple validation remains unverified pending owner UI; 70 requirements remain open, target 60.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1026,10 +1026,10 @@
     "release_approved": false
   },
   "personal_route_boundaries": {
-    "status": "Current private-tools source and selected personal boundaries published and verified",
+    "status": "Current hidden-email source and existing personal boundaries reviewed; protected publication pending",
     "manifest": "eval/route-boundaries.json",
     "evidence": "runs/2026-10-14-setup-published-routes.json",
-    "source_files": 1002,
+    "source_files": 1008,
     "controls_and_ci_contract_tests": 57,
     "records": [
       "X-01",
@@ -1049,7 +1049,7 @@
     "publication": "runs/2026-11-10-private-tools-publication.json",
     "public_catalogue": "runs/2026-11-10-private-tools-live-site.json",
     "public_policies": "runs/2026-11-10-private-tools-live-policies.json",
-    "current_verification": "runs/2026-11-10-private-tools-ci-boundaries.json"
+    "current_verification": "runs/2026-11-12-hidden-email-reviewed-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1089,15 +1089,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-10-private-tools-release-PS.json",
-    "PII_REDACTED": "runs/2026-11-10-private-tools-release-PII_REDACTED.json",
-    "extension": "runs/2026-11-10-private-tools-release-extension.json",
-    "protocol": "runs/2026-11-10-private-tools-ci-protocol.json",
-    "website": "runs/2026-11-10-private-tools-ci-website.json",
+    "PS": "runs/2026-11-12-hidden-email-current-PS.json",
+    "PII_REDACTED": "runs/2026-11-12-hidden-email-current-PII_REDACTED.json",
+    "protocol": "runs/2026-11-12-hidden-email-current-protocol.json",
+    "extension": "runs/2026-11-12-hidden-email-current-extension.json",
+    "website": "runs/2026-11-12-hidden-email-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T17:13:44.653006+00:00",
+  "updated_at": "2026-11-12T17:27:32.635918+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3225,5 +3225,32 @@
     "apple_push_credential_created": false,
     "offline_checks_depend_on_push": false,
     "priority": "future; app completion and independent tag development first"
+  },
+  "pii_hidden_email_candidate": {
+    "status": "current_capability_and_boundary_checks_pass_protected_CI_pending",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-023",
+      "T-PII"
+    ],
+    "architecture": "docs/pii-hidden-separators-plan.md",
+    "evidence": "runs/2026-11-12-hidden-email-development.json",
+    "source_publication_pending": true,
+    "network_pipeline_integration_pending": false,
+    "current_public_charts_replaced": false,
+    "requirements_closed": 0,
+    "independent_accuracy_evidence": false,
+    "integration": "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+    "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/98",
+    "current_timing": "runs/2026-11-12-hidden-email-current-timing.json",
+    "current_capabilities": {
+      "PS": "runs/2026-11-12-hidden-email-current-PS.json",
+      "PII_REDACTED": "runs/2026-11-12-hidden-email-current-PII_REDACTED.json",
+      "protocol": "runs/2026-11-12-hidden-email-current-protocol.json",
+      "extension": "runs/2026-11-12-hidden-email-current-extension.json",
+      "website": "runs/2026-11-12-hidden-email-current-website.json"
+    },
+    "boundaries": "runs/2026-11-12-hidden-email-reviewed-boundaries.json",
+    "full_website_checks_passed": 32
   }
 }

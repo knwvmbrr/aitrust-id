@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-164136-hidden-email-current-timing-fa4b72c3",
+  "recorded_at": "2026-11-12T16:41:36.456489+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bc529bee132a0e4f8afdf2db7b5bd299c8f66a19",
+  "changed": "Replaced stale timing selection with a fresh source-bound synthetic Linux pipeline measurement; added current chart inputs to the review inventory and regenerated performance panels.",
+  "proves": "12 profiles with 20 warm repeats each plus first observations; all 31 timing admission/display/refusal checks pass. Staging restoration is recorded and current performance preparation succeeds.",
+  "limits": "Not independent accuracy, physical-phone timing, a latency guarantee or a deployed website. Full current browser/boundary review and protected checks remain pending; no full requirement closed.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-113"
+  ],
+  "files": {
+    "runs/2026-11-12-hidden-email-current-timing.json": "ced64190216b2192eb7aa5aa42e8fb2956fab244c4c84aa851a3eaab90fce319",
+    "runs/2026-11-12-hidden-email-pipeline-timing-linux.json": "18e28f558f5373d33dbc3e9b345034e48a5efdad05a9c785ee9f17d1d34ac615",
+    "scripts/verify-route-boundaries.py": "21e0b152b8492d255844715772019c61b88b0dffddd2babec1c9a754efbf5da1",
+    "site/index.html": "ceff1eddcd183592df19fce62ee8231fd982d2e507feffa0454d05198b0763e3",
+    "site/public/reference/pipeline-performance.json": "7102609dc8d7319c2c0e101ffdbef41dac7104f3f0d633746125ba1d58347ece",
+    "site/public/reference/redaction-compact-addresses.json": "efa7cc0f2decef33c1dd43a64ad1140a4879765852e31f0b9ac4d7493a1ec3b2",
+    "site/public/reference/redaction-recognition.json": "c484780b7fdbc7ba0e44900f9c129db6ee42a7c64be03fbe4b28c6af64c4f65b",
+    "site/public/reference/redaction-recognition.md": "61a0aefeaccae281905bf4fedc25493d20632a6e87cf6515dfa9b3807783c6fe",
+    "site/public/reference/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
+    "site/scripts/prepare-performance.mjs": "67fd775c7f0387297202f5be901d4380f15fa89143e9349b5b1fdfe865d0d340",
+    "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
+    "state.json": "c56a6588a39d643067ef822d226d5726465ccfb7ab62d38c46a9df793e17ac03",
+    "tests/pipeline-timing.cjs": "8ee4a40c0902dba3399d98eaf10681801389b78daafe77c8ada9f4eeb1f37453"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-hidden-email-current-timing.json",
+      "sha256": "ced64190216b2192eb7aa5aa42e8fb2956fab244c4c84aa851a3eaab90fce319"
+    },
+    {
+      "path": "runs/2026-11-12-hidden-email-pipeline-timing-linux.json",
+      "sha256": "18e28f558f5373d33dbc3e9b345034e48a5efdad05a9c785ee9f17d1d34ac615"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T16:41:37.065444+00:00"
+    }
+  ]
+}
