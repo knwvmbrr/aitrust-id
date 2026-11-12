@@ -34,7 +34,7 @@ import WebKit
             do { _ = try assets.resource(post); throw ProbeError.failed } catch Assets.AssetError.refused { refusals += 1 }
             var body = URLRequest(url: post.url!); body.httpBody = Data("input".utf8)
             do { _ = try assets.resource(body); throw ProbeError.failed } catch Assets.AssetError.refused { refusals += 1 }
-            let method = Bundle.main.bundleURL.appendingPathComponent("Assets/method.py")
+            let method = Bundle.main.bundleURL.appendingPathComponent("Assets/method.py.txt")
             let original = try Data(contentsOf: method)
             // Owned disposable probe bundle only, then restore before runtime use.
             try (original + Data("\nchanged".utf8)).write(to: method)

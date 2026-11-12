@@ -30,7 +30,9 @@ final class Assets: NSObject, WKURLSchemeHandler {
               request.httpBody == nil, request.httpBodyStream == nil,
               url.absoluteString == "aitrust-asset://bundle" + url.path,
               let expected = hashes[url.path], expected.count == 64 else { throw AssetError.refused }
-        let file = folder.appendingPathComponent(String(url.path.dropFirst()))
+        // The logical Python route serves sealed interpreted source text.
+        let relativePath = url.path == "/method.py" ? "method.py.txt" : String(url.path.dropFirst())
+        let file = folder.appendingPathComponent(relativePath)
         var parent = file.deletingLastPathComponent()
         while parent.path.hasPrefix(folder.path) {
             guard try parent.resourceValues(forKeys: [.isSymbolicLinkKey]).isSymbolicLink != true else { throw AssetError.refused }

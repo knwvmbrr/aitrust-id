@@ -112,3 +112,14 @@ checks passed, but did not detect this server rejection. The failed package is
 preserved. Resource packaging needs repair and a new actual Apple validation;
 no build upload, TestFlight distribution, physical acceptance or public release
 is credited. See the [actual validation failure](../runs/2026-11-12-apple-package-validation-failed.json).
+
+## Repaired resource candidate
+
+The fixed detector source is now a sealed `method.py.txt` resource, served through
+the unchanged `/method.py` logical route with the original bytes and hash. The
+current candidate passed 137 native detector cases and five app/Share simulator
+workflows on iOS 26.2. An earlier two-failure workflow run is preserved; the
+repeat does not establish why it failed. Xcode archived the manually provisioned
+repair and both signatures and 32 resource copies pass inspection. Actual Apple
+revalidation and upload remain pending. See the
+[repair plan and execution limits](ios-script-resource-plan.md).

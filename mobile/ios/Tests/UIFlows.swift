@@ -11,6 +11,17 @@ final class UIFlows: XCTestCase {
         app.terminate()
     }
     override func setUpWithError() throws { continueAfterFailure = false; executionTimeAllowance = 120 }
+    override func tearDownWithError() throws {
+        // This suite runs only fixed invented text in its own disposable app.
+        // Preserve diagnostics instead of retrying or relaxing a failed action.
+        if testRun?.hasSucceeded == false {
+            let app = XCUIApplication()
+            let image = XCTAttachment(screenshot: app.screenshot())
+            image.lifetime = .keepAlways; add(image)
+            let hierarchy = XCTAttachment(string: app.debugDescription)
+            hierarchy.lifetime = .keepAlways; add(hierarchy)
+        }
+    }
     private func assertEmpty(_ input: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
         XCTAssertTrue(input.exists, file: file, line: line)
         // UIKit may omit the accessibility value for an empty Share text view.

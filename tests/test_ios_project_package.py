@@ -36,7 +36,7 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
         assert all(not Path(name).is_absolute() and '..' not in Path(name).parts for name in names)
         config = json.loads(package.read('Assets/native-assets.json'))
         for name, expected in config['hashes'].items():
-            assert hashlib.sha256(package.read('Assets' + name)).hexdigest() == expected
+            assert hashlib.sha256(package.read('Assets/method.py.txt' if name == '/method.py' else 'Assets' + name)).hexdigest() == expected
         share = plistlib.loads(package.read('Share-Info.plist'))
         assert share['NSExtension']['NSExtensionPointIdentifier'] == 'com.apple.share-services'
         assert 'NSAppTransportSecurity' not in share

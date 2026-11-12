@@ -35,7 +35,7 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
     with zipfile.ZipFile(archive) as package:
         config = json.loads(package.read('Assets/native-assets.json'))
         for name, expected in config['hashes'].items():
-            assert hashlib.sha256(package.read('Assets' + name)).hexdigest() == expected
+            assert hashlib.sha256(package.read('Assets/method.py.txt' if name == '/method.py' else 'Assets' + name)).hexdigest() == expected
         assert len(config['hashes']) == 9
         assert 'LICENSE' in package.namelist()
         assert {n for n in package.namelist() if n.startswith('Notices/')} == {'Notices/pyodide-MPL-2.0.txt', 'Notices/python-license.txt', 'Notices/source.txt', 'Notices/unicode-license.txt'}
@@ -48,6 +48,18 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
 
 def test_package_is_deterministic_for_identical_selected_sources(prepared_assets):
     assert builder.assets() == builder.assets()
+
+
+def test_interpreted_source_text_keeps_its_logical_identity(prepared_assets):
+    payload=builder.assets()
+    assert 'Assets/method.py' not in payload
+    assert 'Assets/method.py.txt' in payload
+    manifest=json.loads(payload['Assets/device-manifest.json'])
+    fingerprints=json.loads(payload['Assets/native-assets.json'])['hashes']
+    source=(ROOT/'site/public'/manifest['path'].lstrip('/')).read_bytes()
+    assert payload['Assets/method.py.txt']==source
+    assert fingerprints['/method.py']==hashlib.sha256(source).hexdigest()
+    assert '/method.py.txt' not in fingerprints
 
 
 @pytest.fixture

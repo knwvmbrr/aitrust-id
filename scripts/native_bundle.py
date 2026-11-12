@@ -54,9 +54,11 @@ def assets():
         payload['Assets/runtime/' + file.name] = file.read_bytes()
     if len([key for key in payload if key.startswith('Assets/runtime/')]) != 5:
         raise ValueError('Incomplete runtime')
-    payload['Assets/method.py'] = method
+    # Interpreted source text is a sealed resource, not a native code object.
+    # Keep its logical route and exact identity independent of physical storage.
+    payload['Assets/method.py.txt'] = method
     payload['Assets/device-manifest.json'] = (json.dumps(manifest, sort_keys=True) + '\n').encode()
-    hashes = {'/' + name.removeprefix('Assets/'): digest(raw) for name, raw in payload.items() if name.startswith('Assets/')}
+    hashes = {('/method.py' if name == 'Assets/method.py.txt' else '/' + name.removeprefix('Assets/')): digest(raw) for name, raw in payload.items() if name.startswith('Assets/')}
     payload['Assets/native-assets.json'] = (json.dumps({'format': 'ai-trust-id-native-assets/v1', 'method_sha256': current, 'bundle_sha256': manifest['bundle_sha256'], 'hashes': hashes}, sort_keys=True) + '\n').encode()
     payload['LICENSE'] = (ROOT / 'LICENSE').read_bytes()
     notices = ROOT / 'site/public/device-licenses'

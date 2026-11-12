@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-155850-ios-script-resource-candidate-58be19a2",
+  "recorded_at": "2026-11-12T15:58:50.453560+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3f1234ccbf2f0cc50aea67d8bf2605b79921ab11",
+  "changed": "Package fixed interpreted detector as source text while preserving logical route, exact bytes and hashes; update native loader and package/mutation verification.",
+  "proves": "65 existing packaging and verifier checks pass, plus the new exact-byte/logical-route invariant. Actual iPhone simulator bundle passes all 137 detector cases and existing resource/input controls.",
+  "limits": "Apple rejected the previous package. Repair candidate still needs native app/Share workflow completion, fresh signing/export and actual Apple revalidation. No upload or scope closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/ios-script-resource-plan.md": "9ca322bde78cdef40408f410adb9bc050b9757c439e157b2c699f1244bdfdabd",
+    "mobile/ios/Source/Assets.swift": "e8af0423e0b1237d97a439f9058155ed5500ce9d3f135431b064f1a381da79e9",
+    "mobile/ios/Tests/BundleProbe.swift": "17f684f4d41042c993aae3078925936a2f1868b1ef037fad9db91a53bd4783e1",
+    "runs/2026-11-12-ios-text-resource-bundle.json": "0019bab044388d545edfd1ddc4cbe0f1c5d0e79ec334c9bfe6e1287fc29168d1",
+    "scripts/native_bundle.py": "3ac4d79e65f4786a3574925f86730361295ec1d18c4bea9ef5daf0cf731931ac",
+    "scripts/verify-ios-bundle.py": "cfb09c5c3cfad584567a4e389aa87e6fca9f26f9be89da5aed36bb3ddc361df0",
+    "state.json": "073b8ed44cf922b4beb6d5c631785a9bdc1aa32f210d5d25ba489f0e2de6e777",
+    "tests/test_ios_project_package.py": "bbc46e0e75cac8456611d7b3d088ef3aff001020e1d93db330382ca712cfcaf8",
+    "tests/test_native_bundle.py": "38d2945d783ae8644559a05398cb5de8155a6530c6ab4c282ef023a90cdbb5ad"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-text-resource-bundle.json",
+      "sha256": "0019bab044388d545edfd1ddc4cbe0f1c5d0e79ec334c9bfe6e1287fc29168d1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T15:58:55.020978+00:00"
+    }
+  ]
+}

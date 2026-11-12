@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-163443-ios-revalidation-handoff-d7990d70
+
+Recorded 2026-11-12T16:34:43.840633+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current Apple revalidation preparation and the owner-only protected prompt check after successful repaired-archive signing.
+- **Evidence.** The repaired signed archive is selected in Xcode; revalidation preparation reached Signing AITrustIDShare.appex. Current native execution and signing receipts remain separate. [Change record](./runs/changes/2026-11-12-163443-ios-revalidation-handoff-d7990d70.json).
+- **Not claimed.** No protected prompt was inspected or controlled. Apple validation has not yet returned a success, and no binary is uploaded or released.
+
+
+### 2026-11-12-163014-ios-resource-workflows-and-signing-0e2ff3c1
+
+Recorded 2026-11-12T16:30:14.662249+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved both native workflow attempts, added failure attachments for synthetic UI tests, bound the current five-workflow proof, and recorded inspected Xcode signing of the resource repair.
+- **Evidence.** The controlled current-source simulator run passes five native workflows; source-bound proof guard and 20 refusal controls pass. Both repaired archive signatures and all 32 resource copies match, using existing owner profiles. [Change record](./runs/changes/2026-11-12-163014-ios-resource-workflows-and-signing-0e2ff3c1.json).
+- **Not claimed.** Earlier two native UI failures and CLI errSecInternalComponent remain recorded; cause is not proven. Apple revalidation is in progress. No upload, physical/human acceptance or full requirement closure.
+
+
+### 2026-11-12-155850-ios-script-resource-candidate-58be19a2
+
+Recorded 2026-11-12T15:58:50.453560+00:00 · Contributor: Codex · change
+
+- **Changed.** Package fixed interpreted detector as source text while preserving logical route, exact bytes and hashes; update native loader and package/mutation verification.
+- **Evidence.** 65 existing packaging and verifier checks pass, plus the new exact-byte/logical-route invariant. Actual iPhone simulator bundle passes all 137 detector cases and existing resource/input controls. [Change record](./runs/changes/2026-11-12-155850-ios-script-resource-candidate-58be19a2.json).
+- **Not claimed.** Apple rejected the previous package. Repair candidate still needs native app/Share workflow completion, fresh signing/export and actual Apple revalidation. No upload or scope closure.
+
+
 ### 2026-11-12-155429-apple-package-validation-e53acf78
 
 Recorded 2026-11-12T15:54:29.317673+00:00 · Contributor: Codex · change
