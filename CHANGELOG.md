@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-171112-ios-readme-current-signing-ed2b74ce
+
+Recorded 2026-11-12T17:11:12.126945+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected README signing readiness and its older PII control/compact-error counts to match the actual branch evidence.
+- **Evidence.** The README now distinguishes the inspected signed repair from pending Apple validation and phone acceptance; prior stale control counts are replaced with recorded 26-service/15-replay and zero compact extra-masking observations. [Change record](./runs/changes/2026-11-12-171112-ios-readme-current-signing-ed2b74ce.json).
+- **Not claimed.** Documentation correction only. No new Apple result, binary upload, independent tag acceptance or requirement closure.
+
+
 ### 2026-11-12-163443-ios-revalidation-handoff-d7990d70
 
 Recorded 2026-11-12T16:34:43.840633+00:00 · Contributor: Codex · change

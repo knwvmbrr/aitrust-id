@@ -373,12 +373,12 @@ PS is also available in a phone/device browser without an account, Docker or ext
 PII remains a local service preview; other tags clearly state availability. Local service
 setup still requires technical Linux/macOS steps. Rebuild services after updating the source;
 the CLI rejects an evaluator whose hash differs from this checkout. The current
-PII increment ran a rebuilt isolated Linux staging pipeline: 32 HTTP controls,
-13 full-route replay controls and 42 synthetic recognition examples. It masks
+PII increment ran a rebuilt isolated Linux staging pipeline: 26 HTTP controls,
+15 full-route replay controls and 42 synthetic recognition examples. It masks
 complete IPv6 addresses, including the suffix missed by the earlier engine.
 All 34 expected English identifiers were fully masked; 2 of 38 English examples
 also lost ordinary text. Six additional compact IP label examples were fully masked,
-with extra characters removed in three; their errors are separately downloadable.
+without extra masking; the observations remain separately downloadable.
 Four coverage challenges include partial and missed
 masking. These development results are not independent accuracy or privacy clearance.
 See [redaction observations and reproduction](docs/redaction-recognition.md).
@@ -538,7 +538,7 @@ It checks consistency, not correctness or reviewer independence; MT remains plan
 
 The optional [organization term-check component](docs/private-policy.md) applies a reviewed, file-bound literal policy locally. Its qualified private observations cannot rewrite public assertions. Run `python3 scripts/prepare-private-policy-demo.py --output /path/to/new/private/practice`, inspect the invented policy, then use `python3 scripts/check-private-policy.py --packet /path/to/new/private/practice --reviewed-policy`. Organization rollout and ownership remain open.
 
-The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The [native Share developer workflow](docs/native-share-developer.md) passes five actual simulator UI workflows, including offline privacy/license access. The separate [App Store preparation](docs/app-store-readiness.md) has a saved app record and an inspected unsigned device archive. Signing, upload, physical-phone and independent tag acceptance remain open; no signed native phone app is offered.
+The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The [native Share developer workflow](docs/native-share-developer.md) passes five actual simulator UI workflows, including offline privacy/license access. The separate [App Store preparation](docs/app-store-readiness.md) has a saved app record and an inspected owner-signed device archive. The resource repair passes 137 native detector cases and five app/Share workflows. Actual Apple revalidation is preparing; upload, physical-phone and independent tag acceptance remain open. No native phone app has been released.
 
 The [PAN span correction](docs/pii-pan-token-plan.md) keeps a candidate's required
 evidence inside its own span. The unchanged six-example compact-address cohort
