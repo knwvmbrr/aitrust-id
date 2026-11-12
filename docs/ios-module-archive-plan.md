@@ -3,7 +3,7 @@
 **Current status:** the latest local source passes three host-app workflows and
 fails both Share workflows. N-013 is 60%; current selected-integration credit is
 withheld. The signed module archive passes local signature/resource inspection,
-but Apple validation awaits owner key authorization. Earlier passing snapshots
+but the latest Apple validation outcome is unverified after the Mac relocked. Earlier passing snapshots
 below are historical; the app is draft and unreleased.
 
 ## Observed failures

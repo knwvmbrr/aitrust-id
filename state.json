@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T20:55:56.853185+00:00",
-  "active_increment": "MT wording increment published separately in PR101. Current app archive signatures and 32 resources inspected; Apple validation needs owner key authorization. Latest native candidate passes three host workflows and fails two Share workflows; app remains draft and unreleased. 70 original requirements remain.",
+  "updated": "2026-11-12T20:59:30.097964+00:00",
+  "active_increment": "MT wording source merged in PR101. Signed app archive inspected, but Apple validation outcome is unverified after the Mac relocked. Current native candidate passes three host workflows and fails two Share workflows; draft only. 70 original requirements remain.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T20:55:56.853185+00:00",
+  "updated_at": "2026-11-12T20:59:30.097964+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3047,7 +3047,7 @@
     "signed_package_exported": false,
     "signed_package_evidence": null,
     "app_store_validation_passed": false,
-    "current_step": "Protected Apple validation key authorization and unresolved Share workflow failures; no upload or release.",
+    "current_step": "Mac relocked before latest Apple validation result could be read; outcome unverified. Share failures remain open.",
     "validation_failure": "runs/2026-11-12-ios-text-resource-apple-rejected.json",
     "packaging_repair": {
       "status": "signed_archive_inspected_current_share_workflows_failed",
@@ -3068,7 +3068,7 @@
       "focused_proof_and_input_checks": 63,
       "current_candidate_archive_signed": true,
       "current_candidate_archive_inspected": true,
-      "current_candidate_validation_status": "waiting_for_existing_key_authorization",
+      "current_candidate_validation_status": "unverified_after_mac_relocked",
       "previous_signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json",
       "current_boundaries": "runs/2026-11-12-ios-module-reviewed-boundaries.json",
       "retained_traced_keyboard_failure": "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
@@ -3078,7 +3078,7 @@
       "current_native_source_acceptance": false
     },
     "revalidation_handoff": "runs/2026-11-12-ios-revalidation-in-progress.json",
-    "owner_ui_handoff": "runs/2026-11-12-ios-module-signing-handoff.json",
+    "owner_ui_handoff": "runs/2026-11-12-ios-validation-relocked.json",
     "previous_signed_archive_evidence": "runs/2026-11-10-ios-signed-archive.json",
     "previous_signed_package_exported": true,
     "previous_signed_package_evidence": "runs/2026-11-10-ios-signed-package.json",

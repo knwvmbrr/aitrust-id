@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-205930-ios-validation-relocked-1510e959
+
+Recorded 2026-11-12T20:59:30.139477+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the Mac relocking before the latest Apple result could be read.
+- **Evidence.** Computer use reports the Mac locked; the previously observed signing process has ended. Neither observation establishes Apple validation success or failure. [Change record](./runs/changes/2026-11-12-205930-ios-validation-relocked-1510e959.json).
+- **Not claimed.** Owner unlock is required for UI verification. No new credential, security-policy change, Apple pass, release or requirement closure.
+
+
 ### 2026-11-12-205640-ios-current-status-summary-535de94d
 
 Recorded 2026-11-12T20:56:40.911322+00:00 · Contributor: Codex · change

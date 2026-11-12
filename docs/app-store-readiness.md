@@ -9,8 +9,8 @@ Apple package-validation attempts have been performed and rejected.
 **Latest release gates:** Apple rejected both standalone-source candidates,
 including `method.py.txt`. The replacement sealed module-archive candidate now
 has an actual signed device archive: both signatures, required entitlements and
-32 resource copies pass local inspection. Apple revalidation is waiting for
-owner approval of another use of the existing signing key. This is not an
+32 resource copies pass local inspection. Apple revalidation was started using the existing signing key. Its latest
+outcome is unverified because the Mac relocked before it could be read. This is not an
 Apple validation pass, upload, TestFlight release or App Review submission.
 The current hosted run failed during simulator setup before app tests. The
 latest local candidate passes three host-app workflows and fails both Share
