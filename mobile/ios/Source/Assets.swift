@@ -4,7 +4,7 @@ import CryptoKit
 
 /// Exact public bundle resources; no file, network or input-bearing URL fallback.
 final class Assets: NSObject, WKURLSchemeHandler {
-    private static let paths: Set<String> = ["/index.html", "/bridge.mjs", "/method.py", "/device-manifest.json", "/runtime/pyodide.mjs", "/runtime/pyodide.asm.mjs", "/runtime/pyodide.asm.wasm", "/runtime/python_stdlib.zip", "/runtime/pyodide-lock.json"]
+    private static let paths: Set<String> = ["/index.html", "/bridge.mjs", "/detector-source.zip", "/device-manifest.json", "/runtime/pyodide.mjs", "/runtime/pyodide.asm.mjs", "/runtime/pyodide.asm.wasm", "/runtime/python_stdlib.zip", "/runtime/pyodide-lock.json"]
     private static func fingerprint(_ value: String) -> Bool {
         value.count == 64 && value.allSatisfy { "0123456789abcdef".contains($0) }
     }
@@ -14,12 +14,14 @@ final class Assets: NSObject, WKURLSchemeHandler {
     init(bundle: Bundle = .main) throws {
         guard let folder = bundle.url(forResource: "Assets", withExtension: nil),
               let configuration = try JSONSerialization.jsonObject(with: Data(contentsOf: folder.appendingPathComponent("native-assets.json"))) as? [String: Any],
-              Set(configuration.keys) == ["format", "method_sha256", "bundle_sha256", "hashes"],
-              configuration["format"] as? String == "ai-trust-id-native-assets/v1",
+              Set(configuration.keys) == ["format", "method_sha256", "bundle_sha256", "archive_sha256", "hashes"],
+              configuration["format"] as? String == "ai-trust-id-native-assets/v2",
               let hashes = configuration["hashes"] as? [String: String],
               let methodHash = configuration["method_sha256"] as? String,
               Self.fingerprint(methodHash), Set(hashes.keys) == Self.paths, hashes.values.allSatisfy(Self.fingerprint),
-              hashes["/method.py"] == configuration["bundle_sha256"] as? String,
+              let bundleHash = configuration["bundle_sha256"] as? String, Self.fingerprint(bundleHash),
+              let archiveHash = configuration["archive_sha256"] as? String, Self.fingerprint(archiveHash),
+              hashes["/detector-source.zip"] == archiveHash,
               !hashes.isEmpty else { throw AssetError.refused }
         self.folder = folder; self.hashes = hashes; self.methodHash = methodHash
         super.init()

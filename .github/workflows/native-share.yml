@@ -44,6 +44,7 @@ jobs:
             ${{ env.AITRUST_NATIVE_PROOF }}/text/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/*.log
+            ${{ env.AITRUST_NATIVE_PROOF }}/share/workflow.xcresult
             ${{ env.AITRUST_NATIVE_PROOF }}/archive/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/archive/archive.log
           retention-days: 7

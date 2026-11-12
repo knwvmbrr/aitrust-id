@@ -2,6 +2,132 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4
+
+Recorded 2026-11-12T18:49:36.360822+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded source-current module-archive protocol and website execution, all five capability identities and the reviewed current personal boundary inventory.
+- **Evidence.** Protocol passes 40 commands and website passes 32; unchanged PS, PII and extension receipts still match. The selected actual five-workflow native proof is fingerprinted and the 1009-file boundary review passes. [Change record](./runs/changes/2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4.json).
+- **Not claimed.** The fresh archive is waiting for direct owner key authorization; its signature, Apple acceptance and upload are not credited. Current hosted/native, physical/human and independent accuracy acceptance remain separate. No full requirement closure.
+
+
+### 2026-11-12-183902-ios-module-signing-continuation-653e0d61
+
+Recorded 2026-11-12T18:39:02.135922+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the fresh archive reaching the existing-key codesign authorization handoff, with independent current native checks already complete.
+- **Evidence.** The active codesign target is the Share extension; a protected authorization process is waiting. The owner was asked to approve this key use once. No key material or security policy was changed. [Change record](./runs/changes/2026-11-12-183902-ios-module-signing-continuation-653e0d61.json).
+- **Not claimed.** Archive completion and Apple validation are not yet verified. Work requiring this protected prompt waits for direct owner action; no upload or requirement closure.
+
+
+### 2026-11-12-183537-ios-current-module-workflow-proof-5b762576
+
+Recorded 2026-11-12T18:35:37.567395+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the actual five-workflow module-archive execution, retained intermediate keyboard-failure sources, handled only the observed simulator banner, and added the missing selected-native-proof freshness check.
+- **Evidence.** 54 packaging/loader checks, 137 actual simulator detector cases and all five native workflows pass; 63 focused proof/website-input checks pass. The selected proof is fingerprinted. The new dependency check first failed on the historical unbound selection and passes on the current selection. [Change record](./runs/changes/2026-11-12-183537-ios-current-module-workflow-proof-5b762576.json).
+- **Not claimed.** The prior local and hosted failures remain. Exact notification handling does not establish a complete general failure cause. Fresh signing, Apple validation, current hosted iOS 27.2, physical/human acceptance and independent accuracy remain open. No requirement closure.
+
+
+### 2026-11-12-181623-ios-share-readiness-diagnostic-e13ebd2b
+
+Recorded 2026-11-12T18:16:23.267000+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the reproduced four-of-five local Share failure and recorded-frame observation; require the named activity image and stable hittable cell before the single selection tap.
+- **Evidence.** The full local result bundle retains actual screenshot, hierarchy and video; observed placeholder rendering around selection justifies explicit UI readiness. All existing post-selection result, privacy and finish assertions remain intact. [Change record](./runs/changes/2026-11-12-181623-ios-share-readiness-diagnostic-e13ebd2b.json).
+- **Not claimed.** Full native rerun is in progress. This does not establish the complete failure cause or credit a passing workflow, Apple acceptance, physical use or requirement closure. The initial only-failures attachment export omitted teardown attachments; explicit test-ID export recovered them.
+
+
+### 2026-11-12-180522-ios-sealed-module-archive-candidate-f086787b
+
+Recorded 2026-11-12T18:05:22.501702+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the renamed-resource Apple rejection and four-of-five hosted Share failure; package the unchanged detector as a sealed deterministic module archive with bounded source verification and retained hosted diagnostics.
+- **Evidence.** 54 actual packaging/loader controls pass. All 137 detector cases, 11 resource refusals, five input refusals and no-network/input-as-data controls pass on the owned iPhone simulator. PII scope now points to its verified publication, without closing its independent acceptance. [Change record](./runs/changes/2026-11-12-180522-ios-sealed-module-archive-candidate-f086787b.json).
+- **Not claimed.** Renaming did not fix Apple validation. Current archive candidate still needs full native workflows, fresh signing and actual Apple acceptance. Hosted Share-entry failure cause remains unproven; result attachments will be retained. No new tag accuracy, physical acceptance, binary upload or requirement closure.
+
+
+### 2026-11-12-174025-ios-current-publication-metadata-d214953a
+
+Recorded 2026-11-12T17:40:25.844128+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled the verified website publication metadata with the native repair branch; preserved both attributed histories and the pending Apple result.
+- **Evidence.** All five source-bound capability receipts remain current without repeating unchanged checks. Verified deployed source remains 544f52c; no native code or runtime access changes. [Change record](./runs/changes/2026-11-12-174025-ios-current-publication-metadata-d214953a.json).
+- **Not claimed.** Metadata reconciliation only. App protected CI and owner UI continuation remain; no Apple validation, upload, release or requirement closure.
+
+
+### 2026-11-12-173917-ios-merged-current-readiness-f4d7f973
+
+Recorded 2026-11-12T17:39:17.260813+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current merged native/privacy integration and the reviewed boundaries; distinguished the repaired signed archive from the older rejected exported package.
+- **Evidence.** All 40 protocol and 32 website commands pass; unchanged PS, PII and extension receipts still match their sources. The native five-workflow proof remains current and the 1008-file personal boundary review passes. [Change record](./runs/changes/2026-11-12-173917-ios-merged-current-readiness-f4d7f973.json).
+- **Not claimed.** The first website attempt was stopped by missing changelog records for new receipts; its failure is retained and the unchanged-source rerun passes after correcting receipt staging. Apple validation, repaired IPA export/upload, physical acceptance and protected app CI remain pending. No requirement closure.
+
+
+### 2026-11-12-172915-ios-protected-main-reconciliation-ca5ed002
+
+Recorded 2026-11-12T17:29:15.197416+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled the protected hidden-email correction with the native resource repair, preserving both histories, measurements, all scope records and disabled future push scope.
+- **Evidence.** 75 focused packaging/proof checks pass; the five actual native workflows remain source-bound; all 202 original requirements and five enhancements remain tracked. [Change record](./runs/changes/2026-11-12-172915-ios-protected-main-reconciliation-ca5ed002.json).
+- **Not claimed.** No Apple validation success, binary upload, physical acceptance or full requirement closure. Initial unittest invocation ran zero tests and was replaced by the existing pytest runner. The changelog writer also rejected a self-referential file hash before writing; the corrected record excludes that generated index.
+
+
+### 2026-11-12-171344-ios-owner-ui-continuation-310cb67f
+
+Recorded 2026-11-12T17:13:44.695801+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the owner UI continuation needed before the current Apple validation outcome can be verified.
+- **Evidence.** Existing signed-archive and native workflow evidence remains intact; the latest Apple result is explicitly unverified rather than inferred from signing progress. [Change record](./runs/changes/2026-11-12-171344-ios-owner-ui-continuation-310cb67f.json).
+- **Not claimed.** Owner UI action pending. No new validation success, upload, released app or requirement closure.
+
+
+### 2026-11-12-171112-ios-readme-current-signing-ed2b74ce
+
+Recorded 2026-11-12T17:11:12.126945+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected README signing readiness and its older PII control/compact-error counts to match the actual branch evidence.
+- **Evidence.** The README now distinguishes the inspected signed repair from pending Apple validation and phone acceptance; prior stale control counts are replaced with recorded 26-service/15-replay and zero compact extra-masking observations. [Change record](./runs/changes/2026-11-12-171112-ios-readme-current-signing-ed2b74ce.json).
+- **Not claimed.** Documentation correction only. No new Apple result, binary upload, independent tag acceptance or requirement closure.
+
+
+### 2026-11-12-163443-ios-revalidation-handoff-d7990d70
+
+Recorded 2026-11-12T16:34:43.840633+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current Apple revalidation preparation and the owner-only protected prompt check after successful repaired-archive signing.
+- **Evidence.** The repaired signed archive is selected in Xcode; revalidation preparation reached Signing AITrustIDShare.appex. Current native execution and signing receipts remain separate. [Change record](./runs/changes/2026-11-12-163443-ios-revalidation-handoff-d7990d70.json).
+- **Not claimed.** No protected prompt was inspected or controlled. Apple validation has not yet returned a success, and no binary is uploaded or released.
+
+
+### 2026-11-12-163014-ios-resource-workflows-and-signing-0e2ff3c1
+
+Recorded 2026-11-12T16:30:14.662249+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved both native workflow attempts, added failure attachments for synthetic UI tests, bound the current five-workflow proof, and recorded inspected Xcode signing of the resource repair.
+- **Evidence.** The controlled current-source simulator run passes five native workflows; source-bound proof guard and 20 refusal controls pass. Both repaired archive signatures and all 32 resource copies match, using existing owner profiles. [Change record](./runs/changes/2026-11-12-163014-ios-resource-workflows-and-signing-0e2ff3c1.json).
+- **Not claimed.** Earlier two native UI failures and CLI errSecInternalComponent remain recorded; cause is not proven. Apple revalidation is in progress. No upload, physical/human acceptance or full requirement closure.
+
+
+### 2026-11-12-155850-ios-script-resource-candidate-58be19a2
+
+Recorded 2026-11-12T15:58:50.453560+00:00 · Contributor: Codex · change
+
+- **Changed.** Package fixed interpreted detector as source text while preserving logical route, exact bytes and hashes; update native loader and package/mutation verification.
+- **Evidence.** 65 existing packaging and verifier checks pass, plus the new exact-byte/logical-route invariant. Actual iPhone simulator bundle passes all 137 detector cases and existing resource/input controls. [Change record](./runs/changes/2026-11-12-155850-ios-script-resource-candidate-58be19a2.json).
+- **Not claimed.** Apple rejected the previous package. Repair candidate still needs native app/Share workflow completion, fresh signing/export and actual Apple revalidation. No upload or scope closure.
+
+
+### 2026-11-12-155429-apple-package-validation-e53acf78
+
+Recorded 2026-11-12T15:54:29.317673+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual signed archive and IPA inspection, followed by Apple server validation rejecting the embedded Python method resource; preserved failed package and updated current readiness.
+- **Evidence.** Owner-created certificate and profiles sign both bundles; local Release archive and IPA export pass. Apple validation was executed and its failure recorded. [Change record](./runs/changes/2026-11-12-155429-apple-package-validation-e53acf78.json).
+- **Not claimed.** Server validation failed; no App Store Connect build uploaded, TestFlight installation, physical acceptance or release. No signing protection weakened. Packaging repair remains.
+
+
 ### 2026-11-12-173113-hidden-email-verified-publication-8a7c2e11
 
 Recorded 2026-11-12T17:31:13.853221+00:00 · Contributor: Codex · change
@@ -84,6 +210,33 @@ Recorded 2026-11-12T15:52:02.569088+00:00 · Contributor: Codex · change
 
 
 ## Unreleased — 2026-11-10
+
+### 2026-11-10-171843-signed-ios-package-d85199ad
+
+Recorded 2026-11-10T17:18:43.232723+00:00 · Contributor: Codex · change
+
+- **Changed.** Install the owner-issued matching distribution certificate, generate app-specific App Store profiles, and build/export the manually signed app and Share extension.
+- **Evidence.** The signed archive and 13,006,750-byte version 1.0 (1) IPA pass strict signature checks for both bundle IDs and preserve all 32 checker/disclosure files. Profile inspection confirms the new signer and disabled debugging. Code and runtime resources match the existing public native source proof. [Change record](./runs/changes/2026-11-10-171843-signed-ios-package-d85199ad.json).
+- **Not claimed.** Apple server validation is in progress. No upload, TestFlight or public release, physical-phone acceptance, independent accuracy or additional full requirement closure. Private keys and account/profile metadata stay outside Git.
+
+
+### 2026-11-10-164132-owner-csr-ready-24f8af07
+
+Recorded 2026-11-10T16:41:32.678171+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify the owner-created saved-to-disk CSR and select its public request on Apple’s certificate page; retain final issuance as an owner action.
+- **Evidence.** CSR signature verifies with a 2048-bit RSA public key; Apple shows the selected file and enables Continue. Existing native application bytes remain unchanged and source-bound evidence still verifies. [Change record](./runs/changes/2026-11-10-164132-owner-csr-ready-24f8af07.json).
+- **Not claimed.** No private key was read or exported. No certificate issuance by Codex, signed archive, binary upload, TestFlight release, tag validation or additional requirement closure. New docs and state are pending source review/publication.
+
+
+### 2026-11-10-163637-native-signing-and-future-communications-b522a7af
+
+Recorded 2026-11-10T16:36:37.504125+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture owner-requested optional business/community notifications, retain app/tag priority, repair the expired Apple public intermediate prerequisite and record the rejected native typed-loader experiment.
+- **Evidence.** All 202 original records remain at 132 complete and 70 open. The future notification enhancement has a bounded privacy/consent contract. Official WWDR G3 passes system trust verification and appears valid in login. Original native runtime bytes are restored and their existing five-workflow source proof still passes. [Change record](./runs/changes/2026-11-10-163637-native-signing-and-future-communications-b522a7af.json).
+- **Not claimed.** Notification delivery remains unimplemented. No owner signing identity, CSR, signed archive, upload, physical acceptance, independently validated tag or additional full requirement closure is claimed. Typed-loader experiment failed both actual Share workflows and was reverted; branch changes are not yet published.
+
 
 ### 2026-11-10-010808-private-tools-live-state-16d60162
 

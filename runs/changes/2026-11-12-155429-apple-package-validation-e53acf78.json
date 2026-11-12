@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-155429-apple-package-validation-e53acf78",
+  "recorded_at": "2026-11-12T15:54:29.317673+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8ab15b7b73423cbb895a2d719fdd4dbf3f0d3cc3",
+  "changed": "Recorded actual signed archive and IPA inspection, followed by Apple server validation rejecting the embedded Python method resource; preserved failed package and updated current readiness.",
+  "proves": "Owner-created certificate and profiles sign both bundles; local Release archive and IPA export pass. Apple validation was executed and its failure recorded.",
+  "limits": "Server validation failed; no App Store Connect build uploaded, TestFlight installation, physical acceptance or release. No signing protection weakened. Packaging repair remains.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "2e2a0f7e6281099271b6854943fed01cbeae1e71cf29edfba4fff43171267f9b",
+    "runs/2026-11-10-ios-signed-archive.json": "d15c70cd895b6281279915950ba82e27c57700e0bd978041c46960822254b5d6",
+    "runs/2026-11-10-ios-signed-package.json": "1a11e897da1e93ed36c6d351856a83d882be56488939abc546ffda071d581331",
+    "runs/2026-11-12-apple-package-validation-failed.json": "b483b74594288cbc92987cf5a1f926d117edf5386da5192a81639c4392c6d0c1",
+    "state.json": "60de16e2e66cece56b077f5d376449d1564290312aca47dd367a9238d57f4bff"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-ios-signed-package.json",
+      "sha256": "1a11e897da1e93ed36c6d351856a83d882be56488939abc546ffda071d581331"
+    },
+    {
+      "path": "runs/2026-11-12-apple-package-validation-failed.json",
+      "sha256": "b483b74594288cbc92987cf5a1f926d117edf5386da5192a81639c4392c6d0c1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T15:54:29.944120+00:00"
+    }
+  ]
+}

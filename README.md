@@ -381,7 +381,8 @@ ordinary text. All six compact addresses were fully masked without extra masking
 Three of four out-of-coverage challenges are fully masked; one remains untouched.
 The invisible-email correction is measured, while remaining misses and extra
 masking stay disclosed. These results are not independent accuracy or privacy
-clearance; the candidate still needs protected publication.
+clearance. The corrected source and measured development panels are published;
+existing local service installations must rebuild to adopt the change.
 See [redaction observations and reproduction](docs/redaction-recognition.md).
 
 Independent reviewers can use the blind packet tool described in
@@ -539,7 +540,7 @@ It checks consistency, not correctness or reviewer independence; MT remains plan
 
 The optional [organization term-check component](docs/private-policy.md) applies a reviewed, file-bound literal policy locally. Its qualified private observations cannot rewrite public assertions. Run `python3 scripts/prepare-private-policy-demo.py --output /path/to/new/private/practice`, inspect the invented policy, then use `python3 scripts/check-private-policy.py --packet /path/to/new/private/practice --reviewed-policy`. Organization rollout and ownership remain open.
 
-The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The [native Share developer workflow](docs/native-share-developer.md) passes five actual simulator UI workflows, including offline privacy/license access. The separate [App Store preparation](docs/app-store-readiness.md) has a saved app record and an inspected unsigned device archive. Signing, upload, physical-phone and independent tag acceptance remain open; no signed native phone app is offered.
+The [native engine verification guide](docs/native-engine-checks.md) separates bundled PS checks from phone acceptance. Earlier [native Share workflows](docs/native-share-developer.md) passed five simulator tests, but a newer hosted iOS 27.2 run passed four and failed Share entry. The [App Store preparation](docs/app-store-readiness.md) includes an inspected owner-signed archive; Apple rejected both standalone-source packaging candidates. A [sealed module-archive repair](docs/ios-module-archive-plan.md) is in development. Actual Apple acceptance, upload, physical-phone and independent tag acceptance remain open. No native phone app has been released.
 
 The [PAN span correction](docs/pii-pan-token-plan.md) keeps a candidate's required
 evidence inside its own span. The unchanged six-example compact-address cohort

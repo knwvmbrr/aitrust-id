@@ -173,3 +173,25 @@ requirement closure.
 All 202 records remain: **132 complete / 70 open**. Ten additional full closures
 are still required for 60. Accepted public tag releases, human/physical-phone,
 qualified legal, actual organization and recruited-pilot obligations are retained.
+
+## Native signing and delivery priorities — November 10
+
+The owner's current priorities are app completion and further independent tag
+development. The in-house community/communication platform remains in the
+original scope under F-135, F-136, F-137 and N-005. Optional push is now explicitly
+captured as [ENH-PUSH](optional-notifications-plan.md), without enabling a service,
+collecting device tokens or making personal tag checks depend on notifications.
+It is future delivery work, not a reason to defer the app or tag methods.
+
+Apple Developer is signed in and waiting for an owner-created CSR. The login
+keychain is unlocked and readable/writable. Its old system WWDR intermediate had
+expired in 2023; the official G3 intermediate now passes system trust verification
+and appears valid in the login keychain, with no custom trust override. The CSR
+error is not yet proven fixed. Owner signing-identity creation, actual signing,
+upload and physical/human acceptance remain open. The native typed-loader
+experiment failed actual Share operation and was reverted; it is not a completed
+compatibility repair. See the [signing observation](../runs/2026-11-10-apple-signing-prerequisites.json)
+and [rejected experiment](../runs/2026-11-10-native-typed-provider-rejected.json).
+
+There are still **132 complete / 70 open** original requirement records. The
+separate enhancement entry and signing prerequisites do not reduce that count.

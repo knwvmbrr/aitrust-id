@@ -26,15 +26,15 @@ import WebKit
         guard message.webView === web, let state = message.body as? [String: String], state["state"] == "ready", let child = web, let assets else { write(["pass": false, "stage": "bridge_startup"]); return }
         do {
             var refusals = 0
-            for path in ["https://example.invalid/", "file:///private/input", "aitrust-asset://other/method.py", "aitrust-asset://bundle/method.py?q=input", "aitrust-asset://bundle/method.py#input", "aitrust-asset://bundle/%6dethod.py", "aitrust-asset://bundle/../private", "aitrust-asset://bundle/unknown.py"] {
+            for path in ["https://example.invalid/", "file:///private/input", "aitrust-asset://other/detector-source.zip", "aitrust-asset://bundle/detector-source.zip?q=input", "aitrust-asset://bundle/detector-source.zip#input", "aitrust-asset://bundle/%64etector-source.zip", "aitrust-asset://bundle/../private", "aitrust-asset://bundle/unknown.py"] {
                 do { _ = try assets.resource(URLRequest(url: URL(string: path)!)); throw ProbeError.failed }
                 catch Assets.AssetError.refused { refusals += 1 }
             }
-            var post = URLRequest(url: URL(string: "aitrust-asset://bundle/method.py")!); post.httpMethod = "POST"
+            var post = URLRequest(url: URL(string: "aitrust-asset://bundle/detector-source.zip")!); post.httpMethod = "POST"
             do { _ = try assets.resource(post); throw ProbeError.failed } catch Assets.AssetError.refused { refusals += 1 }
             var body = URLRequest(url: post.url!); body.httpBody = Data("input".utf8)
             do { _ = try assets.resource(body); throw ProbeError.failed } catch Assets.AssetError.refused { refusals += 1 }
-            let method = Bundle.main.bundleURL.appendingPathComponent("Assets/method.py")
+            let method = Bundle.main.bundleURL.appendingPathComponent("Assets/detector-source.zip")
             let original = try Data(contentsOf: method)
             // Owned disposable probe bundle only, then restore before runtime use.
             try (original + Data("\nchanged".utf8)).write(to: method)

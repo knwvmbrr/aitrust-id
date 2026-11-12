@@ -85,7 +85,7 @@ def main():
         current_hashes = {n: hashlib.sha256((ROOT / n).read_bytes()).hexdigest() for n in SOURCES}
         if source_hashes != current_hashes: raise ValueError('Source changed during native execution')
         report['sources'] = source_hashes; report['source_unchanged_during_execution'] = True
-        report['bundle_sha256'] = builder.digest(payload['Assets/method.py']); report['asset_fingerprints'] = json.loads(payload['Assets/native-assets.json'])['hashes']; report['pass'] = True
+        report['bundle_sha256'] = json.loads(payload['Assets/device-manifest.json'])['bundle_sha256']; report['asset_fingerprints'] = json.loads(payload['Assets/native-assets.json'])['hashes']; report['pass'] = True
     except (ValueError, OSError, KeyError, TypeError, StopIteration, subprocess.SubprocessError, PacketError) as exc:
         report.update({'pass': False, 'failed_stage': stage, 'failure_type': type(exc).__name__})
         print('Native verification unavailable; inspect the private proof and SDK/build prerequisites.', file=sys.stderr)

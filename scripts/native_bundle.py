@@ -1,13 +1,28 @@
 """Exact public PS assets for native engine verification; no containing app or Share installer."""
 import hashlib
+import io
 import json
 from pathlib import Path
 import runpy
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
+
+
+def method_archive(source):
+    if not isinstance(source, bytes) or not 0 < len(source) <= 200_000:
+        raise ValueError('Native method size refused')
+    source.decode('utf-8', errors='strict')
+    output = io.BytesIO()
+    member = zipfile.ZipInfo('method.py', date_time=(1980, 1, 1, 0, 0, 0))
+    member.create_system = 3
+    member.external_attr = 0o100644 << 16
+    with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_STORED, allowZip64=False) as archive:
+        archive.writestr(member, source)
+    return output.getvalue()
 
 
 def assets():
@@ -54,10 +69,12 @@ def assets():
         payload['Assets/runtime/' + file.name] = file.read_bytes()
     if len([key for key in payload if key.startswith('Assets/runtime/')]) != 5:
         raise ValueError('Incomplete runtime')
-    payload['Assets/method.py'] = method
+    # A standard, inspectable module archive retains exact source identity.
+    archive = method_archive(method)
+    payload['Assets/detector-source.zip'] = archive
     payload['Assets/device-manifest.json'] = (json.dumps(manifest, sort_keys=True) + '\n').encode()
     hashes = {'/' + name.removeprefix('Assets/'): digest(raw) for name, raw in payload.items() if name.startswith('Assets/')}
-    payload['Assets/native-assets.json'] = (json.dumps({'format': 'ai-trust-id-native-assets/v1', 'method_sha256': current, 'bundle_sha256': manifest['bundle_sha256'], 'hashes': hashes}, sort_keys=True) + '\n').encode()
+    payload['Assets/native-assets.json'] = (json.dumps({'format': 'ai-trust-id-native-assets/v2', 'method_sha256': current, 'bundle_sha256': manifest['bundle_sha256'], 'archive_sha256': digest(archive), 'hashes': hashes}, sort_keys=True) + '\n').encode()
     payload['LICENSE'] = (ROOT / 'LICENSE').read_bytes()
     notices = ROOT / 'site/public/device-licenses'
     files = sorted(notices.rglob('*'))

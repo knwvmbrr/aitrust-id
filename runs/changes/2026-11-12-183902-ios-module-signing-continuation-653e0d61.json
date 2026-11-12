@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-183902-ios-module-signing-continuation-653e0d61",
+  "recorded_at": "2026-11-12T18:39:02.135922+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "318f8f0406d0f63244a3bc51d2a724203d4b036f",
+  "changed": "Recorded the fresh archive reaching the existing-key codesign authorization handoff, with independent current native checks already complete.",
+  "proves": "The active codesign target is the Share extension; a protected authorization process is waiting. The owner was asked to approve this key use once. No key material or security policy was changed.",
+  "limits": "Archive completion and Apple validation are not yet verified. Work requiring this protected prompt waits for direct owner action; no upload or requirement closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "9708a934afd9bcd21ec1769f2d1feb5e957155e671bba9d7388f8f0fba4515c1",
+    "runs/2026-11-12-ios-module-signing-handoff.json": "676cfd61315aaf7ea4b478c7682b7963eec7d766c73f75a39bdaec39c96477e9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-module-signing-handoff.json",
+      "sha256": "676cfd61315aaf7ea4b478c7682b7963eec7d766c73f75a39bdaec39c96477e9"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T18:39:02.655767+00:00"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-174025-ios-current-publication-metadata-d214953a",
+  "recorded_at": "2026-11-12T17:40:25.844128+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "26254b1a31d74468202c064f836d50c4739f8093",
+  "changed": "Reconciled the verified website publication metadata with the native repair branch; preserved both attributed histories and the pending Apple result.",
+  "proves": "All five source-bound capability receipts remain current without repeating unchanged checks. Verified deployed source remains 544f52c; no native code or runtime access changes.",
+  "limits": "Metadata reconciliation only. App protected CI and owner UI continuation remain; no Apple validation, upload, release or requirement closure.",
+  "scope_ids": [
+    "N-013",
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "state.json": "3f4ecae939bc57804d631754c17c5aee9cadbf62cf406cec23929b1645c3e411"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-merged-readiness.json",
+      "sha256": "a4a2a9931e46453ff330c84bee6ad7563094beb22e05be7a4ccbbb931ec65a56"
+    },
+    {
+      "path": "runs/2026-11-12-hidden-email-publication.json",
+      "sha256": "b1b3d15f153417272473e0a0833a503521b6bad91e8f87a2e11ec09a14e44804"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T17:40:26.350329+00:00"
+    }
+  ]
+}

@@ -50,7 +50,7 @@ def test_unknown_asset_identity_refused():
 
 
 def test_zeroed_executable_asset_digest_refused(prepared_assets):
-    value = proof(); value['asset_fingerprints']['/method.py'] = '0' * 64
+    value = proof(); value['asset_fingerprints']['/detector-source.zip'] = '0' * 64
     with pytest.raises(ValueError, match='Native bundle differs'):
         guard['verify'](proof=value)
 
