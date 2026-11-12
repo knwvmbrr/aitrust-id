@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-174025-ios-current-publication-metadata-d214953a
+
+Recorded 2026-11-12T17:40:25.844128+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled the verified website publication metadata with the native repair branch; preserved both attributed histories and the pending Apple result.
+- **Evidence.** All five source-bound capability receipts remain current without repeating unchanged checks. Verified deployed source remains 544f52c; no native code or runtime access changes. [Change record](./runs/changes/2026-11-12-174025-ios-current-publication-metadata-d214953a.json).
+- **Not claimed.** Metadata reconciliation only. App protected CI and owner UI continuation remain; no Apple validation, upload, release or requirement closure.
+
+
 ### 2026-11-12-173917-ios-merged-current-readiness-f4d7f973
 
 Recorded 2026-11-12T17:39:17.260813+00:00 · Contributor: Codex · change
@@ -72,6 +81,15 @@ Recorded 2026-11-12T15:54:29.317673+00:00 · Contributor: Codex · change
 - **Changed.** Recorded actual signed archive and IPA inspection, followed by Apple server validation rejecting the embedded Python method resource; preserved failed package and updated current readiness.
 - **Evidence.** Owner-created certificate and profiles sign both bundles; local Release archive and IPA export pass. Apple validation was executed and its failure recorded. [Change record](./runs/changes/2026-11-12-155429-apple-package-validation-e53acf78.json).
 - **Not claimed.** Server validation failed; no App Store Connect build uploaded, TestFlight installation, physical acceptance or release. No signing protection weakened. Packaging repair remains.
+
+
+### 2026-11-12-173113-hidden-email-verified-publication-8a7c2e11
+
+Recorded 2026-11-12T17:31:13.853221+00:00 · Contributor: Codex · change
+
+- **Changed.** Published the protected hidden-email correction source and updated development measurements; recorded current site and source publication separately from service installations and independent release.
+- **Evidence.** All 22 required CI executions pass. All 293 artifacts match on preview, apex and www; live catalogue, eight help/community workflows and nine policy pages pass. Twelve unrelated local drafts are preserved. [Change record](./runs/changes/2026-11-12-173113-hidden-email-verified-publication-8a7c2e11.json).
+- **Not claimed.** No full requirement closure: 132 complete, 70 open, 202 retained. Local services need rebuilding; independent accuracy, physical phones, human accessibility and App Store release remain open. No research collection or local Docker.
 
 
 ### 2026-11-12-171131-hidden-email-reviewed-readiness-53d5b1a1
