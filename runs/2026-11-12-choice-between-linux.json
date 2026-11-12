@@ -1,0 +1,172 @@
+{
+  "captured_at": "2026-11-12T19:10:28.896014+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "actual_synthetic_cli_controls": [
+    {
+      "case": "private_summary_no_raw_values",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "explicit_private_details",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "existing_details_unchanged",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_subject_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_annotations_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "public_corpus_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject_symlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "context_hardlink_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "malformed_utf8_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "subject_character_limit",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "duplicate_context_json_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "stale_subject_binding_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "stale_corpus_binding_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "no_supported_pattern_is_not_safety_clearance",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "exclusive_only_markers",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "paired_negation_markers",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "not_only_has_no_signal_candidate",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "mismatched_neither_or_is_unmatched",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "between_does_not_nominate_a_signal",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "not_between_is_unresolved",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "mismatched_between_or_is_unmatched",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "arguments_do_not_echo_private_values",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "actual_demo_prepared_privately",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "actual_demo_packet_command",
+      "pass": true,
+      "exit_status": 0
+    },
+    {
+      "case": "mixed_input_modes_refused",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "demo_never_overwrites",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "private_test_directory_removed": true,
+  "caller_alternative_verified": false,
+  "independent_accuracy_evidence": false,
+  "tag_asserted": false,
+  "release_approved": false,
+  "source_commit": "3cc1b77",
+  "host": "dedicated AI Trust Linux verification host",
+  "image_id": "fb378e5f4c178a596709b5e072cace6d4b31a21b8467e36f4688967a4878c81d",
+  "isolation_observed": {
+    "uid": 10001,
+    "effective_capabilities": "0000000000000000",
+    "no_new_privileges": 1,
+    "network_interfaces": [
+      "lo"
+    ]
+  },
+  "execution_configuration": {
+    "network": "none",
+    "root_filesystem": "read_only",
+    "source_mount": "read_only",
+    "memory_bytes": 536870912,
+    "pids_limit": 64
+  },
+  "container_exit": 0,
+  "owned_container_removed": true,
+  "owned_scratch_removed": true,
+  "initial_invocation": {
+    "exit_status": 1,
+    "failure": "External output refused by existing report-destination contract after controls executed.",
+    "correction": "Invoke the existing verification function and write its synthetic report into the private mounted output; source/report boundary unchanged."
+  },
+  "documentation_corrections": [
+    "Two attempted projection commands named nonexistent scripts; corrected using the repository inventory to scripts/scope-progress.py --render and site/scripts/prepare.mjs.",
+    "The accountability gate refused inconsistent state timestamps before writing a changelog; synchronized updated and updated_at."
+  ]
+}

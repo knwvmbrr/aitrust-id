@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-191259-choice-between-linux-6214de75",
+  "recorded_at": "2026-11-12T19:12:59.645363+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3cc1b771bb9564af875edb075fb567c59fdd1cd1",
+  "changed": "Verify the current four-form choice research component on isolated Linux and preserve the report-destination refusal.",
+  "proves": "All 26 actual private command controls pass on the committed source under UID 10001, no effective capabilities, no-new-privileges and loopback-only networking. Owned container and scratch removed.",
+  "limits": "Engineering controls only. F-019b remains 60 percent and 70 original requirements remain open. Independent contextual validation, MT integration and protected publication remain pending. Two incorrect projection script names and inconsistent state timestamps were corrected before this gate passed.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "docs/scope-progress.json": "fb952ad82fce189793326322721701e4fea78a4e5e916bfeec1ab57a8431c178",
+    "docs/scope-progress.md": "8241a8b1eda3458fffe2e561f6ba7221900ef7878b1e36d286913cafcc4b7ce1",
+    "runs/2026-11-12-choice-between-linux.json": "21288122a050ab6e64d2a465fa63a1eb4da660d71b97b02ccdd91308b90215e6",
+    "site/public/reference/public-scope.json": "872d0907740dd60a420298f1738fac878ff3f4f8f4fa7060aaf547e42b47489e",
+    "site/src/public-scope.json": "872d0907740dd60a420298f1738fac878ff3f4f8f4fa7060aaf547e42b47489e",
+    "site/src/scope-manifest.json": "4be87e09cacc67e6803c75ac114b6cbdb172e5e6f5bd837f529cd83d5d783ee8",
+    "state.json": "7ca09c678f8ce4f0a47aeded43c842cca1f167c0f469f967959e952eaa8c6599"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-choice-between-linux.json",
+      "sha256": "21288122a050ab6e64d2a465fa63a1eb4da660d71b97b02ccdd91308b90215e6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T19:13:00.171038+00:00"
+    }
+  ]
+}

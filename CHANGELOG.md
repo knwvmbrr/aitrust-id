@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-191259-choice-between-linux-6214de75
+
+Recorded 2026-11-12T19:12:59.645363+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify the current four-form choice research component on isolated Linux and preserve the report-destination refusal.
+- **Evidence.** All 26 actual private command controls pass on the committed source under UID 10001, no effective capabilities, no-new-privileges and loopback-only networking. Owned container and scratch removed. [Change record](./runs/changes/2026-11-12-191259-choice-between-linux-6214de75.json).
+- **Not claimed.** Engineering controls only. F-019b remains 60 percent and 70 original requirements remain open. Independent contextual validation, MT integration and protected publication remain pending. Two incorrect projection script names and inconsistent state timestamps were corrected before this gate passed.
+
+
 ### 2026-11-12-190100-choice-between-observation-c96806c8
 
 Recorded 2026-11-12T19:01:00.292768+00:00 · Contributor: Codex · change

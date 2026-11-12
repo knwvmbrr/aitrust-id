@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T19:00:32.851658+00:00",
+  "updated": "2026-11-12T19:12:40.523933+00:00",
   "active_increment": "Extend independent MT choice-wording research with between/and; 86 focused checks and 26 private Mac CLI controls pass. Linux and publication remain; no MT tag or requirement closure. 70 requirements remain.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T19:00:32.851658+00:00",
+  "updated_at": "2026-11-12T19:12:40.523933+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3247,9 +3247,10 @@
   "choice_between_candidate": {
     "scope_id": "F-019b",
     "profile": "caller-bound-choice-framing-observation/1.2.0",
-    "status": "Mac_verified_Linux_and_publication_pending",
+    "status": "Mac_and_isolated_Linux_verified_protected_publication_pending",
     "evidence": "runs/2026-11-12-choice-between-development.json",
     "tag_asserted": false,
-    "requirements_closed": 0
+    "requirements_closed": 0,
+    "linux_evidence": "runs/2026-11-12-choice-between-linux.json"
   }
 }
