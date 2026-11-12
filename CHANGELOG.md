@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-173113-hidden-email-verified-publication-8a7c2e11
+
+Recorded 2026-11-12T17:31:13.853221+00:00 · Contributor: Codex · change
+
+- **Changed.** Published the protected hidden-email correction source and updated development measurements; recorded current site and source publication separately from service installations and independent release.
+- **Evidence.** All 22 required CI executions pass. All 293 artifacts match on preview, apex and www; live catalogue, eight help/community workflows and nine policy pages pass. Twelve unrelated local drafts are preserved. [Change record](./runs/changes/2026-11-12-173113-hidden-email-verified-publication-8a7c2e11.json).
+- **Not claimed.** No full requirement closure: 132 complete, 70 open, 202 retained. Local services need rebuilding; independent accuracy, physical phones, human accessibility and App Store release remain open. No research collection or local Docker.
+
+
 ### 2026-11-12-171131-hidden-email-reviewed-readiness-53d5b1a1
 
 Recorded 2026-11-12T17:11:31.530190+00:00 · Contributor: Codex · change

@@ -1,0 +1,145 @@
+{
+  "captured_at": "2026-11-12T17:31:13.761508+00:00",
+  "pass": true,
+  "source_commit": "544f52ca3613c6f3fbe69b879f059e21c147a2f9",
+  "deployment_url": "https://642cc51a.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com",
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/98",
+  "reviewed_head": "39a2c3b36564aad80dcc21dcc4f0e9975e9fcd23",
+  "merge_commit": "544f52ca3613c6f3fbe69b879f059e21c147a2f9",
+  "required_checks": [
+    {
+      "name": "change-records",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680527"
+    },
+    {
+      "name": "change-records",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355639429"
+    },
+    {
+      "name": "host-config",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680829"
+    },
+    {
+      "name": "host-config",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355639166"
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680019"
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355638626"
+    },
+    {
+      "name": "spec",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680875"
+    },
+    {
+      "name": "spec",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355638855"
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680780"
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355638669"
+    },
+    {
+      "name": "regressions",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680656"
+    },
+    {
+      "name": "regressions",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355638213"
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680704"
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355639371"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355681022"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355639081"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680677"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355638497"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355680590"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355643206"
+    },
+    {
+      "name": "site",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267721388/job/131355681623"
+    },
+    {
+      "name": "site",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43267708565/job/131355639196"
+    }
+  ],
+  "required_checks_passed": 22,
+  "administrator_override_used": false,
+  "published_byte_evidence": "runs/2026-11-12-hidden-email-publication-bytes.json",
+  "artifacts_per_origin": 293,
+  "origins_verified": 3,
+  "matching_artifacts": 879,
+  "live_catalogue": "runs/2026-11-12-hidden-email-live-site.json",
+  "live_workflows": "runs/2026-11-12-hidden-email-live-workflows.json",
+  "live_policies": "runs/2026-11-12-hidden-email-live-policies.json",
+  "scope_records": 202,
+  "completed_requirements": 132,
+  "open_requirements": 70,
+  "full_requirements_closed": [],
+  "primary_unrelated_files_preserved": 12,
+  "independent_accuracy_evidence": false,
+  "physical_device_acceptance": false,
+  "human_accessibility_acceptance": false,
+  "app_store_uploaded": false,
+  "app_store_released": false,
+  "research_collection_enabled": false,
+  "local_docker_started": false,
+  "hosting_scope": "Static site, charts, guides and downloadable source. Existing separately operated local service installations require rebuilding to use the new anonymizer. No production collection or server runtime replacement is claimed.",
+  "initial_build_environment_failure": "Default shell python lacked pydantic; repeated the unchanged build in the existing pinned verification environment successfully."
+}

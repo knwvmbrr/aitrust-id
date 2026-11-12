@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-173113-hidden-email-verified-publication-8a7c2e11",
+  "recorded_at": "2026-11-12T17:31:13.853221+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "544f52ca3613c6f3fbe69b879f059e21c147a2f9",
+  "changed": "Published the protected hidden-email correction source and updated development measurements; recorded current site and source publication separately from service installations and independent release.",
+  "proves": "All 22 required CI executions pass. All 293 artifacts match on preview, apex and www; live catalogue, eight help/community workflows and nine policy pages pass. Twelve unrelated local drafts are preserved.",
+  "limits": "No full requirement closure: 132 complete, 70 open, 202 retained. Local services need rebuilding; independent accuracy, physical phones, human accessibility and App Store release remain open. No research collection or local Docker.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-140"
+  ],
+  "files": {
+    "state.json": "8f252d6c6710b73c61ebb2e3f75b3e47976e1ebde75c1f94598e9642d1f18310",
+    "runs/2026-11-12-hidden-email-publication.json": "b1b3d15f153417272473e0a0833a503521b6bad91e8f87a2e11ec09a14e44804",
+    "runs/2026-11-12-hidden-email-publication-bytes.json": "9c2e475c7dda9ed216db660e61fa51cd75d7dfb0d9483b604398ba40268bd9ae",
+    "runs/2026-11-12-hidden-email-live-site.json": "c759e9aca65b13948cc72c5a106aaed999028585f98ff014cf08e2848afb1b1f",
+    "runs/2026-11-12-hidden-email-live-workflows.json": "4b2809a6ba33f904c6a79e4e00af26f3188b156cea06f06c69e93b325f5fe1c7",
+    "runs/2026-11-12-hidden-email-live-policies.json": "7dd944706da5432ce6beb42fc6e7ab8408bafdc7bfa8c7af7c90ef37a467a123"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-hidden-email-publication.json",
+      "sha256": "b1b3d15f153417272473e0a0833a503521b6bad91e8f87a2e11ec09a14e44804"
+    },
+    {
+      "path": "runs/2026-11-12-hidden-email-publication-bytes.json",
+      "sha256": "9c2e475c7dda9ed216db660e61fa51cd75d7dfb0d9483b604398ba40268bd9ae"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T17:31:14.381916+00:00"
+    }
+  ]
+}
