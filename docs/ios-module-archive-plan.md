@@ -3,7 +3,8 @@
 **Current status:** the latest local source passes three host-app workflows and
 fails both Share workflows. N-013 is 60%; current selected-integration credit is
 withheld. The signed module archive passes local signature/resource inspection,
-but the latest Apple validation outcome is unverified after the Mac relocked. Earlier passing snapshots
+but validation preparation failed locally while re-signing the Share extension
+(`errSecInternalComponent`); server acceptance remains unverified. Earlier passing snapshots
 below are historical; the app is draft and unreleased.
 
 ## Observed failures
@@ -126,3 +127,22 @@ observations, not evidence of a single established root cause. Both failures and
 their attachments are retained. The owned simulator is removed. Do not repeat
 the run without a diagnosis, bypass the existing evidence guard, or describe
 the earlier five-pass result as current-source acceptance.
+
+## Latest distribution failure: local re-signing
+
+The saved distribution pipeline for the 1:50 PM module-archive candidate fails
+at `IDEDistributionCodesignStep` on `AITrustIDShare.appex` with
+`errSecInternalComponent`, at 19:36:58 UTC. Reinspection of the original archive
+still passes both strict signatures, expected entitlements and all 32 resource
+copies. Preserve the local failure separately from the two older server
+rejections. Old resource errors also appear in the fetched validation history;
+they are not a new rejection of this candidate.
+
+Apple's [signing error guidance](https://developer.apple.com/forums/thread/712005)
+explains that this error has multiple causes, including keychain access and
+execution context. The missed key authorization and later relock are consistent
+with an access failure, but the error alone does not prove the cause. Retry the
+existing archive only after owner unlock and with the owner present for the
+protected prompt. Do not revoke certificates, change key access policy, export
+a private key, change trust settings or repackage source based only on this
+error. Actual server validation and current Share workflow repair remain open.

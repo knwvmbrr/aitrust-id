@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-215213-ios-local-resign-diagnosis-662500ef
+
+Recorded 2026-11-12T21:52:13.620557+00:00 · Contributor: Codex · change
+
+- **Changed.** Identify the actual latest saved validation failure as local Share-extension re-signing, separate from older server rejections.
+- **Evidence.** The current distribution pipeline fails at IDEDistributionCodesignStep with errSecInternalComponent. Reinspection of the original archive passes both signatures, entitlements and all 32 resource comparisons; full diagnostic logs are preserved privately. [Change record](./runs/changes/2026-11-12-215213-ios-local-resign-diagnosis-662500ef.json).
+- **Not claimed.** Underlying cause remains unconfirmed. Missed key authorization and relock are consistent with access failure, not proof. Mac unlock and protected owner authorization are required for retry. No certificate, key ACL, trust, source package, runtime tag or security policy changed; no release or requirement closure.
+
+
 ### 2026-11-12-205930-ios-validation-relocked-1510e959
 
 Recorded 2026-11-12T20:59:30.139477+00:00 · Contributor: Codex · change

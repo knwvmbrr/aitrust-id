@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-215213-ios-local-resign-diagnosis-662500ef",
+  "recorded_at": "2026-11-12T21:52:13.620557+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5c3333c16b468ceee579ab58d5fb8fb12ae43129",
+  "changed": "Identify the actual latest saved validation failure as local Share-extension re-signing, separate from older server rejections.",
+  "proves": "The current distribution pipeline fails at IDEDistributionCodesignStep with errSecInternalComponent. Reinspection of the original archive passes both signatures, entitlements and all 32 resource comparisons; full diagnostic logs are preserved privately.",
+  "limits": "Underlying cause remains unconfirmed. Missed key authorization and relock are consistent with access failure, not proof. Mac unlock and protected owner authorization are required for retry. No certificate, key ACL, trust, source package, runtime tag or security policy changed; no release or requirement closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "README.md": "c7e1d4e070707f9a58404df8c14d8c75e3ee9b95c1e676461cf5a0931c9ddcda",
+    "docs/app-store-readiness.md": "1b9d20d7ddfddec0840f3f487d897b3701232943bc866ec8bf2ecb23b4dd29b5",
+    "docs/ios-module-archive-plan.md": "6b956a55365ac2ca439564d849de791efb7c9d024b2b7e5b70fbf9b444e007b6",
+    "docs/scope-progress.json": "4eadac5bd619941ef8237a6415ec674399db5a193815a5d34f5b8d9e55c64cd7",
+    "docs/scope-progress.md": "7f2ecacd67828f7b58489c5cc8e2066a61ed0e49e131b4ebf74557a2cd21b850",
+    "runs/2026-11-12-ios-local-resign-failed.json": "69f7d2edde22c3d2715df42f11154ccb866755f15a4f8e63a4db5ac18bdbf1ae",
+    "site/public/reference/public-scope.json": "2332c8bbb2fd11155da6c9db8877607f083e4b29ded44938a81a82a716d0adc1",
+    "site/src/public-scope.json": "2332c8bbb2fd11155da6c9db8877607f083e4b29ded44938a81a82a716d0adc1",
+    "site/src/scope-manifest.json": "2c1055160d4810ce535032b86947c6893a533ab5f4505b2d06c44ce59efdfad0",
+    "state.json": "0fc6d74722019bf5beb627c559c30ff00adb38914e307cd425ac635768053b6b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-local-resign-failed.json",
+      "sha256": "69f7d2edde22c3d2715df42f11154ccb866755f15a4f8e63a4db5ac18bdbf1ae"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T21:52:14.270180+00:00"
+    }
+  ]
+}

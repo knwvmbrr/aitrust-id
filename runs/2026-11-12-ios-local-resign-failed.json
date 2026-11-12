@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-11-12T21:52:12.689005+00:00",
+  "implemented_by": "Codex",
+  "pass": false,
+  "kind": "ios_distribution_preparation_failure",
+  "archive_candidate": "sealed module archive, version 1.0 (1)",
+  "failed_at": "2026-11-12T19:36:58+00:00",
+  "failed_stage": "IDEDistributionCodesignStep",
+  "bundle": "AITrustIDShare.appex",
+  "error": "errSecInternalComponent",
+  "pipeline_log_sha256": "71f7dcfcc5bc3bd4b66dad80b86e344ddfb6ce5579ceba5e0e7d35182b142be4",
+  "original_archive_reinspection": {
+    "pass": true,
+    "strict_signatures": 2,
+    "expected_entitlements": true,
+    "resource_copies_compared": 32
+  },
+  "diagnosis": "Latest saved attempt failed locally while re-signing the Share extension during validation preparation. This does not establish an Apple server rejection of the sealed module package.",
+  "cause_status": "unconfirmed",
+  "authorization_hypothesis": "Consistent with missed existing-key authorization or a locked keychain; the error has multiple causes and does not alone prove which one occurred.",
+  "next_step": "Unlock the Mac, inspect the Xcode failure details, and retry the existing archive with the owner present for protected signing-key prompts. No source/package change is justified by this error alone.",
+  "security_policy_changed": false,
+  "credential_created_or_revoked": false,
+  "apple_validation_passed": false,
+  "app_store_upload_claimed": false,
+  "physical_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirements_closed": [],
+  "official_reference": "https://developer.apple.com/forums/thread/712005",
+  "private_full_logs_preserved": true
+}
