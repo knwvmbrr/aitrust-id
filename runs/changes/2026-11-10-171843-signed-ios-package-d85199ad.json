@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-171843-signed-ios-package-d85199ad",
+  "recorded_at": "2026-11-10T17:18:43.232723+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8ab15b7b73423cbb895a2d719fdd4dbf3f0d3cc3",
+  "changed": "Install the owner-issued matching distribution certificate, generate app-specific App Store profiles, and build/export the manually signed app and Share extension.",
+  "proves": "The signed archive and 13,006,750-byte version 1.0 (1) IPA pass strict signature checks for both bundle IDs and preserve all 32 checker/disclosure files. Profile inspection confirms the new signer and disabled debugging. Code and runtime resources match the existing public native source proof.",
+  "limits": "Apple server validation is in progress. No upload, TestFlight or public release, physical-phone acceptance, independent accuracy or additional full requirement closure. Private keys and account/profile metadata stay outside Git.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "398865608857f3ac8e484d01834b6ccf7d1d1104aae518037f0b84cfe6e0c34a",
+    "docs/app-store-readiness.md": "e176429d31500422986b79c68b158d5d880967474aabab51f097cb673295217a",
+    "runs/2026-11-10-ios-signed-archive.json": "d15c70cd895b6281279915950ba82e27c57700e0bd978041c46960822254b5d6",
+    "runs/2026-11-10-ios-signed-package.json": "1a11e897da1e93ed36c6d351856a83d882be56488939abc546ffda071d581331"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-ios-signed-archive.json",
+      "sha256": "d15c70cd895b6281279915950ba82e27c57700e0bd978041c46960822254b5d6"
+    },
+    {
+      "path": "runs/2026-11-10-ios-signed-package.json",
+      "sha256": "1a11e897da1e93ed36c6d351856a83d882be56488939abc546ffda071d581331"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T17:18:43.939666+00:00"
+    }
+  ]
+}

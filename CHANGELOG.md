@@ -1,6 +1,26 @@
 # Changelog
 
+## Unreleased — 2026-11-12
+
+### 2026-11-12-155429-apple-package-validation-e53acf78
+
+Recorded 2026-11-12T15:54:29.317673+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual signed archive and IPA inspection, followed by Apple server validation rejecting the embedded Python method resource; preserved failed package and updated current readiness.
+- **Evidence.** Owner-created certificate and profiles sign both bundles; local Release archive and IPA export pass. Apple validation was executed and its failure recorded. [Change record](./runs/changes/2026-11-12-155429-apple-package-validation-e53acf78.json).
+- **Not claimed.** Server validation failed; no App Store Connect build uploaded, TestFlight installation, physical acceptance or release. No signing protection weakened. Packaging repair remains.
+
+
 ## Unreleased — 2026-11-10
+
+### 2026-11-10-171843-signed-ios-package-d85199ad
+
+Recorded 2026-11-10T17:18:43.232723+00:00 · Contributor: Codex · change
+
+- **Changed.** Install the owner-issued matching distribution certificate, generate app-specific App Store profiles, and build/export the manually signed app and Share extension.
+- **Evidence.** The signed archive and 13,006,750-byte version 1.0 (1) IPA pass strict signature checks for both bundle IDs and preserve all 32 checker/disclosure files. Profile inspection confirms the new signer and disabled debugging. Code and runtime resources match the existing public native source proof. [Change record](./runs/changes/2026-11-10-171843-signed-ios-package-d85199ad.json).
+- **Not claimed.** Apple server validation is in progress. No upload, TestFlight or public release, physical-phone acceptance, independent accuracy or additional full requirement closure. Private keys and account/profile metadata stay outside Git.
+
 
 ### 2026-11-10-164132-owner-csr-ready-24f8af07
 

@@ -7,25 +7,27 @@ release. No build has been uploaded or submitted to Apple.
 
 The saved app-information draft uses **Check shared text offline**, category
 **Utilities**, and the existing public privacy-policy URL. Privacy disclosures
-remain unpublished. The owner has now signed into the existing developer team
-in Xcode. Its local certificate panel is empty and creation actions were disabled
-when inspected; that observation does not establish whether cloud signing is
-available. Signing and provisioning still need verification. No new external-agent access,
-certificate, private key, legal declaration or account permission was granted.
+remain unpublished. The owner is signed into the existing developer team in
+Xcode and has created the matching Apple Distribution identity. Two App Store
+profiles and the signed Release archive are now inspected, as detailed below.
+Earlier empty-certificate-panel observations remain in their dated receipts;
+they are not the current signing state. Codex did not create or export a private
+key or grant external-agent access. Final platform declarations remain open.
 
 The separate distribution profile now builds an actual unsigned physical-iOS
 archive with those identifiers, version 1.0, a compiled app icon and exact bundled
 privacy/license/runtime resources. The default developer profile remains
 separate. [Archive inspection](../runs/2026-11-09-ios-distribution-final-archive.json)
-records this bounded result. Signing remains disabled in both profiles. Private
+records this bounded result. The public generator leaves signing disabled in
+both profiles; the separate owner-controlled private project is now signed. Private
 account identifiers, credentials and other projects remain outside the repo.
 
 ## Complete the distribution package
 
 1. Verify the separate app/Share identifiers and saved draft against the
    generated distribution project; keep the preview build separate.
-2. Supply the owner-controlled signing identity and provisioning profiles.
-   Keep private keys and account credentials outside source and public evidence.
+2. Preserve the now-configured owner-controlled identity and two provisioning
+   profiles outside source and public evidence; recheck them for every build.
 3. Finish the required-reason API, privacy-manifest and final data-use review
    against the actual signed package and its bundled runtime. The icon and
    offline privacy/license view are packaged; this is not redistribution or
@@ -58,11 +60,13 @@ ways to use the supported checks.
 ## Current physical target
 
 Apple device status identifies the paired, connected iPhone 14 Plus as running
-iOS 27.0.1. Developer Mode is disabled. The existing manual-profile download
-produced no AI Trust ID profile, and this Mac still has no valid local signing
-identity. Cloud signing remains unverified. No device security setting was
-changed, no credential was created or revoked, and no physical app workflow or
-upload is credited. See the [read-only observation](../runs/2026-11-09-iphone-target-status.json).
+iOS 27.0.1. Developer Mode is disabled. The earlier manual-profile download
+produced no AI Trust ID profile; that historical observation is retained. The
+owner-created local identity and two profiles are now available. Cloud signing
+remains unused. No device security setting was changed, and no physical app
+workflow or upload is credited. See the
+[earlier device observation](../runs/2026-11-09-iphone-target-status.json) and
+the current signing inspection below.
 
 ## Reopened listing draft
 
@@ -86,5 +90,25 @@ override was added. These changes do not establish which condition caused the
 earlier Certificate Assistant error. See the [prerequisite observation](../runs/2026-11-10-apple-signing-prerequisites.json)
 and [verified request handoff](../runs/2026-11-10-owner-csr-ready.json).
 
-No private key was read or exported by Codex, and no signed archive, build upload,
-TestFlight distribution, physical acceptance or public app release is credited.
+That request handoff is preserved as a historical observation. The owner has now
+issued and downloaded the matching Apple Distribution certificate. Its public
+key matches the CSR and private-key attributes in Keychain, and local code-signing
+certificate trust passes. Codex imported the public certificate; the private key
+was not read or exported.
+
+Separate App Store profiles now bind the app and Share IDs to that signer, with
+debugging disabled and no registered-device distribution. A private copy of the
+current generated project was manually configured with those exact profiles and
+identity. The signed Release archive passes strict signature verification for
+both executables, embeds the expected profiles and preserves all 32 selected
+runtime/disclosure resources. The public project generator continues to default
+to unsigned output. See the [signed archive inspection](../runs/2026-11-10-ios-signed-archive.json).
+Local App Store export now passes. The 13,006,750-byte IPA is version 1.0 (1),
+with both strict signatures verified and all 32 runtime/disclosure resources
+unchanged after export. See the [signed package inspection](../runs/2026-11-10-ios-signed-package.json).
+Apple server validation now returned an error: the Share extension’s bundled
+`Assets/method.py` is treated as unsigned code. Local archive and IPA signature
+checks passed, but did not detect this server rejection. The failed package is
+preserved. Resource packaging needs repair and a new actual Apple validation;
+no build upload, TestFlight distribution, physical acceptance or public release
+is credited. See the [actual validation failure](../runs/2026-11-12-apple-package-validation-failed.json).
