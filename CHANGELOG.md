@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-183902-ios-module-signing-continuation-653e0d61
+
+Recorded 2026-11-12T18:39:02.135922+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the fresh archive reaching the existing-key codesign authorization handoff, with independent current native checks already complete.
+- **Evidence.** The active codesign target is the Share extension; a protected authorization process is waiting. The owner was asked to approve this key use once. No key material or security policy was changed. [Change record](./runs/changes/2026-11-12-183902-ios-module-signing-continuation-653e0d61.json).
+- **Not claimed.** Archive completion and Apple validation are not yet verified. Work requiring this protected prompt waits for direct owner action; no upload or requirement closure.
+
+
+### 2026-11-12-183537-ios-current-module-workflow-proof-5b762576
+
+Recorded 2026-11-12T18:35:37.567395+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the actual five-workflow module-archive execution, retained intermediate keyboard-failure sources, handled only the observed simulator banner, and added the missing selected-native-proof freshness check.
+- **Evidence.** 54 packaging/loader checks, 137 actual simulator detector cases and all five native workflows pass; 63 focused proof/website-input checks pass. The selected proof is fingerprinted. The new dependency check first failed on the historical unbound selection and passes on the current selection. [Change record](./runs/changes/2026-11-12-183537-ios-current-module-workflow-proof-5b762576.json).
+- **Not claimed.** The prior local and hosted failures remain. Exact notification handling does not establish a complete general failure cause. Fresh signing, Apple validation, current hosted iOS 27.2, physical/human acceptance and independent accuracy remain open. No requirement closure.
+
+
+### 2026-11-12-181623-ios-share-readiness-diagnostic-e13ebd2b
+
+Recorded 2026-11-12T18:16:23.267000+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the reproduced four-of-five local Share failure and recorded-frame observation; require the named activity image and stable hittable cell before the single selection tap.
+- **Evidence.** The full local result bundle retains actual screenshot, hierarchy and video; observed placeholder rendering around selection justifies explicit UI readiness. All existing post-selection result, privacy and finish assertions remain intact. [Change record](./runs/changes/2026-11-12-181623-ios-share-readiness-diagnostic-e13ebd2b.json).
+- **Not claimed.** Full native rerun is in progress. This does not establish the complete failure cause or credit a passing workflow, Apple acceptance, physical use or requirement closure. The initial only-failures attachment export omitted teardown attachments; explicit test-ID export recovered them.
+
+
+### 2026-11-12-180522-ios-sealed-module-archive-candidate-f086787b
+
+Recorded 2026-11-12T18:05:22.501702+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the renamed-resource Apple rejection and four-of-five hosted Share failure; package the unchanged detector as a sealed deterministic module archive with bounded source verification and retained hosted diagnostics.
+- **Evidence.** 54 actual packaging/loader controls pass. All 137 detector cases, 11 resource refusals, five input refusals and no-network/input-as-data controls pass on the owned iPhone simulator. PII scope now points to its verified publication, without closing its independent acceptance. [Change record](./runs/changes/2026-11-12-180522-ios-sealed-module-archive-candidate-f086787b.json).
+- **Not claimed.** Renaming did not fix Apple validation. Current archive candidate still needs full native workflows, fresh signing and actual Apple acceptance. Hosted Share-entry failure cause remains unproven; result attachments will be retained. No new tag accuracy, physical acceptance, binary upload or requirement closure.
+
+
 ### 2026-11-12-174025-ios-current-publication-metadata-d214953a
 
 Recorded 2026-11-12T17:40:25.844128+00:00 · Contributor: Codex · change

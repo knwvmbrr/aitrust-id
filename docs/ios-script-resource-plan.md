@@ -55,3 +55,11 @@ Keychain status showed it unlocked. Do not infer a root cause from that. The
 same manually provisioned project then archived through Xcode. Both signatures,
 32 resource copies and the existing four entitlement keys were inspected. The
 repaired archive still requires actual Apple revalidation and upload.
+
+## Candidate rejected
+
+Actual Apple revalidation rejected `method.py.txt` with the same unsigned-code
+error. This naming candidate is superseded, not accepted. The additional hosted
+iOS 27.2 workflow passed four tests and failed Share entry; its cause is not yet
+established. Continue with [sealed module packaging](ios-module-archive-plan.md),
+preserving both failures and the unchanged detector source identity.

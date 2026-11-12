@@ -3,7 +3,14 @@
 AI Trust ID has a separate App Store Connect record, saved in **Prepare for
 Submission**, and registered identifiers `com.aitrustid.app` and
 `com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
-release. No build has been uploaded or submitted to Apple.
+release. No build is available in App Store Connect or submitted for App Review.
+Apple package-validation attempts have been performed and rejected.
+
+**Latest release gates:** Apple rejected both standalone-source candidates,
+including `method.py.txt`. The additional hosted iOS 27.2 run passed four of five
+workflows; one Share-entry failure remains unexplained. A sealed module-archive
+candidate is in development. The app is unmerged and unreleased; see
+[the current repair plan](ios-module-archive-plan.md).
 
 The saved app-information draft uses **Check shared text offline**, category
 **Utilities**, and the existing public privacy-policy URL. Privacy disclosures
@@ -113,13 +120,16 @@ preserved. Resource packaging needs repair and a new actual Apple validation;
 no build upload, TestFlight distribution, physical acceptance or public release
 is credited. See the [actual validation failure](../runs/2026-11-12-apple-package-validation-failed.json).
 
-## Repaired resource candidate
+## Renamed resource candidate — rejected
 
-The fixed detector source is now a sealed `method.py.txt` resource, served through
+The previous candidate packaged a sealed `method.py.txt` resource, served through
 the unchanged `/method.py` logical route with the original bytes and hash. The
-current candidate passed 137 native detector cases and five app/Share simulator
+candidate passed 137 native detector cases and five app/Share simulator
 workflows on iOS 26.2. An earlier two-failure workflow run is preserved; the
 repeat does not establish why it failed. Xcode archived the manually provisioned
-repair and both signatures and 32 resource copies pass inspection. Actual Apple
-revalidation and upload remain pending. See the
+repair and both signatures and 32 resource copies passed inspection. Apple
+revalidation then rejected that renamed file with the same unsigned-code error.
+Local resource sealing and mode 0644 were inspected; the server's classification
+cause is unproven. The new module archive still requires actual native execution,
+signing and Apple acceptance. Upload remains unavailable. See the
 [repair plan and execution limits](ios-script-resource-plan.md).
