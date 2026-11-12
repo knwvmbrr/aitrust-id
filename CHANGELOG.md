@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-171344-ios-owner-ui-continuation-310cb67f
+
+Recorded 2026-11-12T17:13:44.695801+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the owner UI continuation needed before the current Apple validation outcome can be verified.
+- **Evidence.** Existing signed-archive and native workflow evidence remains intact; the latest Apple result is explicitly unverified rather than inferred from signing progress. [Change record](./runs/changes/2026-11-12-171344-ios-owner-ui-continuation-310cb67f.json).
+- **Not claimed.** Owner UI action pending. No new validation success, upload, released app or requirement closure.
+
+
 ### 2026-11-12-171112-ios-readme-current-signing-ed2b74ce
 
 Recorded 2026-11-12T17:11:12.126945+00:00 · Contributor: Codex · change
