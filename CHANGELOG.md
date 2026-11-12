@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-192109-choice-between-current-boundaries-287b132e
+
+Recorded 2026-11-12T19:21:09.411061+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the choice increment to current protocol, website and reviewed route evidence.
+- **Evidence.** 40 protocol and 32 website commands pass with stable sources; 1008 reviewed files and unchanged endpoint, permission, production-tag and collection boundaries pass. The old-inventory CI refusal is retained in the readiness receipt. [Change record](./runs/changes/2026-11-12-192109-choice-between-current-boundaries-287b132e.json).
+- **Not claimed.** Engineering checks only. MT integration and independent contextual validation remain open; zero original requirement closures and 70 remain open. Protected CI and publication remain pending.
+
+
 ### 2026-11-12-191259-choice-between-linux-6214de75
 
 Recorded 2026-11-12T19:12:59.645363+00:00 · Contributor: Codex · change
