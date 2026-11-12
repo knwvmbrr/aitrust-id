@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-163013-hidden-email-rebuilt-integration-3373d3aa
+
+Recorded 2026-11-12T16:30:13.525083+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the hidden-email candidate to rebuilt hosted engine/service/replay observations and a fresh real Linux clean-install/failure run; prepared matching chart/download wiring and updated scope evidence.
+- **Evidence.** 48 fixed engine examples, 26 network service controls, 15 actual pipeline/CLI replay cases and ten clean setup/failure cases pass. The new chart preserves English errors and the remaining challenge miss; 22 chart controls pass. [Change record](./runs/changes/2026-11-12-163013-hidden-email-rebuilt-integration-3373d3aa.json).
+- **Not claimed.** Developer-authored examples only. Independent recognition and human acceptance remain open. Protected boundary/browser review and publication pending; live site unchanged. No new full requirement closure.
+
+
 ### 2026-11-12-155902-hidden-email-scope-projections-46a92706
 
 Recorded 2026-11-12T15:59:02.467275+00:00 · Contributor: Codex · change

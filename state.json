@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T15:51:26.770692+00:00",
-  "active_increment": "Hidden-separator PII email candidate passes fixed Linux engine and ASGI masking checks; source publication, real network/pipeline checks and independent acceptance remain pending. App Store work continues separately. 70 full requirements open; target 60.",
+  "updated": "2026-11-12T16:29:28.134941+00:00",
+  "active_increment": "Hidden-email candidate passes rebuilt Linux engine, 26 service, 15 replay and ten clean-setup controls; current-source chart wiring is prepared. Protected source/boundary/browser checks and publication remain pending. 70 requirements remain open; target 60.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T15:51:26.770692+00:00",
+  "updated_at": "2026-11-12T16:29:28.134941+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3181,7 +3181,7 @@
     "publication": "runs/2026-11-10-private-tools-publication.json"
   },
   "pii_hidden_email_candidate": {
-    "status": "development_candidate_not_deployed",
+    "status": "rebuilt_linux_integration_passed_publication_pending",
     "implemented_by": "Codex",
     "scope_ids": [
       "F-023",
@@ -3190,9 +3190,11 @@
     "architecture": "docs/pii-hidden-separators-plan.md",
     "evidence": "runs/2026-11-12-hidden-email-development.json",
     "source_publication_pending": true,
-    "network_pipeline_integration_pending": true,
+    "network_pipeline_integration_pending": false,
     "current_public_charts_replaced": false,
     "requirements_closed": 0,
-    "independent_accuracy_evidence": false
+    "independent_accuracy_evidence": false,
+    "integration": "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+    "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/98"
   }
 }

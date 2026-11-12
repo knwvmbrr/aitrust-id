@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-163013-hidden-email-rebuilt-integration-3373d3aa",
+  "recorded_at": "2026-11-12T16:30:13.525083+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "523190d70fcd2383d24d6ebdd71bb15ab0c10116",
+  "changed": "Bound the hidden-email candidate to rebuilt hosted engine/service/replay observations and a fresh real Linux clean-install/failure run; prepared matching chart/download wiring and updated scope evidence.",
+  "proves": "48 fixed engine examples, 26 network service controls, 15 actual pipeline/CLI replay cases and ten clean setup/failure cases pass. The new chart preserves English errors and the remaining challenge miss; 22 chart controls pass.",
+  "limits": "Developer-authored examples only. Independent recognition and human acceptance remain open. Protected boundary/browser review and publication pending; live site unchanged. No new full requirement closure.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-105"
+  ],
+  "files": {
+    "docs/redaction-recognition.md": "61a0aefeaccae281905bf4fedc25493d20632a6e87cf6515dfa9b3807783c6fe",
+    "docs/scope-progress.json": "5e9cf903771c42ac059415d8cad421bbb09c8a95f638b376ea6a8042f08a0cd9",
+    "docs/scope-progress.md": "2cbe2cc9c3c599aa59ae72047ae7aae8578ee7fc651d42face4af6e962057988",
+    "runs/2026-11-12-hidden-email-clean-setup-linux.json": "6a9d25de331b034f55a5b688e8192828a420fae27a929b68721c09fc8b7f45f4",
+    "runs/2026-11-12-hidden-email-hosted-compact.json": "efa7cc0f2decef33c1dd43a64ad1140a4879765852e31f0b9ac4d7493a1ec3b2",
+    "runs/2026-11-12-hidden-email-hosted-english.json": "c484780b7fdbc7ba0e44900f9c129db6ee42a7c64be03fbe4b28c6af64c4f65b",
+    "runs/2026-11-12-hidden-email-hosted-replay.json": "a9c22dbb799743f74905bb293625f12d6d36d97cf27342a7bff1dca6c98d719a",
+    "runs/2026-11-12-hidden-email-hosted-service.json": "1c13f30a2c641f924b01d075ecfbd51d6f0ca4ed1d6bf5fd7675c6866732d32e",
+    "runs/2026-11-12-hidden-email-rebuilt-integration.json": "02c801b24e9348832c34e366da04195014a8c00e1d1384010824ee7d41d02475",
+    "scripts/build-redaction-performance.py": "c52dd28cd20829cccbb6a45fa231472b5a4a68ef2a99e33c477502c84134859c",
+    "scripts/verify-local-setup-evidence.py": "1f809ea899789c06a32f84f85805c9f8e9a6a9b9e5aa29ffd1303018b0efbd85",
+    "scripts/verify-performance.cjs": "4d775b95c5a79740cb9cb929454341dfa355422e950cef85146ffb53c0cfbfbe",
+    "site/public/reference/public-scope.json": "358caa87b0224bc9f1e26b06e669e498bad7de76687b284cc8ba5c57218cd940",
+    "site/scripts/prepare-performance.mjs": "4a22666b3e8316fe5c0c12d5e61cf7b3d22276f4817a746cbbf4cb7b7155340b",
+    "site/src/public-scope.json": "358caa87b0224bc9f1e26b06e669e498bad7de76687b284cc8ba5c57218cd940",
+    "site/src/scope-manifest.json": "3dff404ad510b83d27364567177aecb6502a1f07e0e286a330494ca16b456121",
+    "state.json": "c4b5613caade3b2e8c10db030fb1c2b7a97b856474dced7b682c90207cbaca8b",
+    "tests/redaction-performance.cjs": "a7af9c56eb6b3eb3296d6e5e35f35d762209358753000736c28829d6eaa69d19",
+    "tests/test_redaction_development_builder.py": "e3f9e736b2dbc888e501abf9c7d95afa49d9f7f0684aa5143e50b589e7a92993",
+    "tests/test_redaction_development_client.py": "f3b964c65fecb91a2d1a2db5cca875a754ccc31c303972735295c09e6c6ac7aa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+      "sha256": "02c801b24e9348832c34e366da04195014a8c00e1d1384010824ee7d41d02475"
+    },
+    {
+      "path": "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+      "sha256": "6a9d25de331b034f55a5b688e8192828a420fae27a929b68721c09fc8b7f45f4"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T16:30:15.227522+00:00"
+    }
+  ]
+}

@@ -20,13 +20,13 @@ fs.writeFileSync(path.join(site,'src/tag-performance.json'),JSON.stringify(data,
 const publicDir=path.join(site,'public/reference');fs.mkdirSync(publicDir,{recursive:true});
 fs.writeFileSync(path.join(publicDir,'tag-performance.json'),JSON.stringify(data,null,2)+'\n');
 fs.writeFileSync(path.join(publicDir,'pipeline-performance.json'),JSON.stringify(timing,null,2)+'\n');
-fs.copyFileSync(path.join(root,'runs/2026-11-09-pan-english-linux.json'),path.join(publicDir,'redaction-recognition.json'));
+fs.copyFileSync(path.join(root,'runs/2026-11-12-hidden-email-hosted-english.json'),path.join(publicDir,'redaction-recognition.json'));
 fs.copyFileSync(path.join(root,'eval/fixtures/pii-recognition-development.json'),path.join(publicDir,'pii-recognition-development.json'));
 fs.copyFileSync(path.join(root,'docs/redaction-recognition.md'),path.join(publicDir,'redaction-recognition.md'));
 for(const [src,dest] of [['eval/tag-performance-evidence.json','tag-performance-evidence.json'],[input.evidence[0],'performance-regressions.json'],[input.evidence[1],'performance-device.json'],['docs/tag-performance-plan.md','tag-performance-plan.md'],['docs/measurement-provenance-plan.md','measurement-provenance-plan.md'],['eval/datasets/unsafe_code/provenance-v1.json','example-provenance.json'],['eval/datasets/unsafe_code/manifest.json','development-dataset-manifest.json']])fs.copyFileSync(path.join(root,src),path.join(publicDir,dest));
 console.log(`Prepared ${data.records.length} per-tag performance panels from method-bound measured records.`);
 
-fs.copyFileSync(path.join(root,'runs/2026-11-09-pan-compact-linux.json'),path.join(publicDir,'redaction-compact-addresses.json'));
+fs.copyFileSync(path.join(root,'runs/2026-11-12-hidden-email-hosted-compact.json'),path.join(publicDir,'redaction-compact-addresses.json'));
 fs.copyFileSync(path.join(root,'eval/fixtures/pii-compact-addresses.json'),path.join(publicDir,'pii-compact-addresses.json'));
 
 fs.copyFileSync(path.join(root,'runs/2026-10-13-ps-lazy-context-paired.json'),path.join(publicDir,'ps-efficiency.json'));
