@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4
+
+Recorded 2026-11-12T18:49:36.360822+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded source-current module-archive protocol and website execution, all five capability identities and the reviewed current personal boundary inventory.
+- **Evidence.** Protocol passes 40 commands and website passes 32; unchanged PS, PII and extension receipts still match. The selected actual five-workflow native proof is fingerprinted and the 1009-file boundary review passes. [Change record](./runs/changes/2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4.json).
+- **Not claimed.** The fresh archive is waiting for direct owner key authorization; its signature, Apple acceptance and upload are not credited. Current hosted/native, physical/human and independent accuracy acceptance remain separate. No full requirement closure.
+
+
 ### 2026-11-12-183902-ios-module-signing-continuation-653e0d61
 
 Recorded 2026-11-12T18:39:02.135922+00:00 · Contributor: Codex · change

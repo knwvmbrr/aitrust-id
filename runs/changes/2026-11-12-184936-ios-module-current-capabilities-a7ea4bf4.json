@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4",
+  "recorded_at": "2026-11-12T18:49:36.360822+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ff646e61963745ebba0ad9d0627ae9b64dfecc9a",
+  "changed": "Recorded source-current module-archive protocol and website execution, all five capability identities and the reviewed current personal boundary inventory.",
+  "proves": "Protocol passes 40 commands and website passes 32; unchanged PS, PII and extension receipts still match. The selected actual five-workflow native proof is fingerprinted and the 1009-file boundary review passes.",
+  "limits": "The fresh archive is waiting for direct owner key authorization; its signature, Apple acceptance and upload are not credited. Current hosted/native, physical/human and independent accuracy acceptance remain separate. No full requirement closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "41b49d7f584462eab5d06a26eccf8580529956c022be15328889a356e4f6ddd6",
+    "state.json": "0ac4537d59f561c607818d42ce8c1786a8f47c4ec4957a5afb8e2a2e6229ed43",
+    "runs/2026-11-12-ios-module-current-protocol.json": "d0c3651aa1d40be36fe95870cc5649bec17d9488a35068d9adcb61d5649e018c",
+    "runs/2026-11-12-ios-module-current-website.json": "e91917c289e91d91e50ff30132c689c99749e58f6801a3329b26e470793fbde3",
+    "runs/2026-11-12-ios-module-reviewed-boundaries.json": "1b0d02ed4136438c159cbf0cdcdc0b9392f506e91066c0299db537f357719cad",
+    "runs/2026-11-12-ios-module-current-readiness.json": "ed76b61e623c392f3a872e729e861053eb7377b5963e5c2bdd10c1e7a449bbb6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-module-current-readiness.json",
+      "sha256": "ed76b61e623c392f3a872e729e861053eb7377b5963e5c2bdd10c1e7a449bbb6"
+    },
+    {
+      "path": "runs/2026-11-12-ios-module-reviewed-boundaries.json",
+      "sha256": "1b0d02ed4136438c159cbf0cdcdc0b9392f506e91066c0299db537f357719cad"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T18:49:36.918212+00:00"
+    }
+  ]
+}
