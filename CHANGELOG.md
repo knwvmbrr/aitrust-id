@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-190100-choice-between-observation-c96806c8
+
+Recorded 2026-11-12T19:01:00.292768+00:00 · Contributor: Codex · change
+
+- **Changed.** Add the independent caller-selected between/and research construction, preserving original forms and requiring a null proposed signal for ranges and ordinary alternatives.
+- **Evidence.** 86 focused tests and all 26 actual private Mac CLI controls pass. Original-offset and NFC checks, malformed/mixed grammar, ordinary safety wording, quotations and numeric ranges are retained without an MT or manipulation verdict. [Change record](./runs/changes/2026-11-12-190100-choice-between-observation-c96806c8.json).
+- **Not claimed.** Independent contextual validation and accepted MT integration remain open; F-019b stays 60 percent. Isolated Linux and protected publication are pending. The new worktree initially lacked site dependencies; identical pinned lockfiles were checked before reusing the installed Mac dependencies and successfully regenerating scope projections.
+
+
 ### 2026-11-12-173113-hidden-email-verified-publication-8a7c2e11
 
 Recorded 2026-11-12T17:31:13.853221+00:00 · Contributor: Codex · change
