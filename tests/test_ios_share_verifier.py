@@ -54,3 +54,34 @@ def test_simulator_uuid_case_is_preserved_for_xcode_destination():
     assert verifier['simulator_identity'](identity) == identity
     for invalid in ['not-a-device', '{' + identity + '}', identity.replace('-', '')]:
         with pytest.raises(ValueError): verifier['simulator_identity'](invalid)
+
+
+@pytest.mark.parametrize('exit_status', [0, 7])
+def test_actual_command_exit_and_diagnostics_retained(tmp_path, exit_status):
+    import sys
+    report = {'command_events': []}
+    argv = [sys.executable, '-c', f"import sys; print('synthetic diagnostic'); sys.exit({exit_status})"]
+    options = dict(output=tmp_path, stage='synthetic', report=report, created=True)
+    if exit_status:
+        with pytest.raises(ValueError, match='command failed'):
+            verifier['run_command'](argv, **options)
+    else:
+        assert verifier['run_command'](argv, **options) == 'synthetic diagnostic'
+    event = report['command_events'][0]
+    assert event['returncode'] == exit_status
+    assert event['outcome'] == ('nonzero_exit' if exit_status else 'passed')
+    assert event['finished_at'] >= event['started_at']
+    assert 'synthetic diagnostic' in (tmp_path / 'synthetic.log').read_text()
+
+
+def test_actual_deadline_kills_child_and_records_failure(tmp_path):
+    import sys, os
+    pid = tmp_path / 'child.pid'
+    report = {'command_events': []}
+    code = f"import os,time,pathlib; pathlib.Path({str(pid)!r}).write_text(str(os.getpid())); time.sleep(20)"
+    with pytest.raises(ValueError, match='deadline'):
+        verifier['run_command']([sys.executable, '-c', code], output=tmp_path,
+            stage='synthetic_deadline', report=report, created=True, timeout=.5)
+    assert report['command_events'][0]['outcome'] == 'deadline'
+    with pytest.raises(ProcessLookupError): os.kill(int(pid.read_text()), 0)
+    assert (tmp_path / 'synthetic_deadline.log').exists()

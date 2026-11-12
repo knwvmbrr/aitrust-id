@@ -7,10 +7,18 @@ release. No build is available in App Store Connect or submitted for App Review.
 Apple package-validation attempts have been performed and rejected.
 
 **Latest release gates:** Apple rejected both standalone-source candidates,
-including `method.py.txt`. The additional hosted iOS 27.2 run passed four of five
-workflows; one Share-entry failure remains unexplained. A sealed module-archive
-candidate is in development. The app is unmerged and unreleased; see
-[the current repair plan](ios-module-archive-plan.md).
+including `method.py.txt`. The replacement sealed module-archive candidate now
+has an actual signed device archive: both signatures, required entitlements and
+32 resource copies pass local inspection. Apple revalidation is waiting for
+owner approval of another use of the existing signing key. This is not an
+Apple validation pass, upload, TestFlight release or App Review submission.
+The current hosted run failed during simulator setup before app tests. The
+latest local candidate passes three host-app workflows and fails both Share
+workflows; it is not a current five-workflow pass. Earlier failures and the
+earlier five-pass snapshot remain separately recorded. The app is
+unmerged and unreleased; see [the repair plan](ios-module-archive-plan.md),
+[signed inspection](../runs/2026-11-12-ios-module-signed-inspection.json) and
+[current hosted failure](../runs/2026-11-12-ios-module-hosted-setup-failed.json).
 
 The saved app-information draft uses **Check shared text offline**, category
 **Utilities**, and the existing public privacy-policy URL. Privacy disclosures
@@ -59,7 +67,7 @@ require completeness and on-device testing (2.1), self-contained software
 information (5.1). These sources were checked during this readiness review;
 this document does not establish Apple's approval.
 
-Native sharing remains N-013 at 80%. Independent recognition, physical-phone
+Native sharing is N-013 at 60%; current selected-integration credit is withheld after the latest Share failures. Independent recognition, physical-phone
 and human acceptance remain open; membership, bundle registration and a compiled
 archive do not complete them. The website and standalone tools remain separate
 ways to use the supported checks.

@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-12T20:55:56.853185+00:00",
+  "implemented_by": "Codex",
+  "kind": "native_candidate_revalidation",
+  "pass": false,
+  "signed_archive_local_inspection_pass": true,
+  "strict_signatures": 2,
+  "resource_copies_compared": 32,
+  "diagnostic_command_tests_passed": 23,
+  "latest_ui_tests_passed": 3,
+  "latest_ui_tests_failed": 2,
+  "owned_simulator_removed": true,
+  "native_evidence_gate_exit": 1,
+  "evidence_gate_refusal_expected": true,
+  "selected_native_proof_not_rewritten_as_pass": true,
+  "scope_adjustment": {
+    "id": "N-013",
+    "previous_percent": 80,
+    "current_percent": 60,
+    "withheld_milestone": "selected_integration"
+  },
+  "full_requirements_closed": [],
+  "open_original_requirements": 70,
+  "apple_validation": "waiting_for_owner_existing_key_authorization",
+  "build_available_in_app_store_connect": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_acceptance": false,
+  "evidence": [
+    "runs/2026-11-12-ios-module-signed-inspection.json",
+    "runs/2026-11-12-ios-module-hosted-setup-failed.json",
+    "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
+    "runs/2026-11-12-ios-first-line-share-failed.json"
+  ],
+  "operator_errors_preserved": [
+    "A focused test invocation named a nonexistent test_native_bundle_archive.py; pytest ran zero tests and this is not credited. The existing 23 verifier controls and actual native execution are recorded separately."
+  ]
+}

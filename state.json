@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T18:49:35.650896+00:00",
-  "active_increment": "All five source-bound capabilities, 137 native engine cases, five native workflows and 1009-file boundary review pass for module-archive candidate. Existing-key signing prompt needs owner action; protected CI and actual Apple/physical acceptance remain. 70 requirements remain.",
+  "updated": "2026-11-12T20:55:56.853185+00:00",
+  "active_increment": "MT wording increment published separately in PR101. Current app archive signatures and 32 resources inspected; Apple validation needs owner key authorization. Latest native candidate passes three host workflows and fails two Share workflows; app remains draft and unreleased. 70 original requirements remain.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T18:49:35.650896+00:00",
+  "updated_at": "2026-11-12T20:55:56.853185+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1868,13 +1868,13 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "developer_share_workflow_passes_physical_acceptance_open",
+    "status": "draft_current_source_share_failures_physical_acceptance_open",
     "requirement": "N-013",
-    "percent_complete": 80,
+    "percent_complete": 60,
     "workflow_proof": "runs/2026-11-12-native-share-module-archive-workflow.json",
     "provider_controls": "runs/2026-11-07-native-share-text-controls.json",
     "guide": "docs/native-share-developer.md",
-    "ui_workflows_passed": 5,
+    "ui_workflows_passed": 3,
     "physical_device_verified": false,
     "human_accessibility_verified": false,
     "independent_accuracy_verified": false,
@@ -1902,12 +1902,15 @@
     },
     "code_and_guide_published": true,
     "distribution_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
-    "workflow_current_source_pass": true,
+    "workflow_current_source_pass": false,
     "publication_pending": true,
     "rejected_supported_provider_attempt": "runs/2026-11-10-native-typed-provider-rejected.json",
     "previous_workflow_proof": "runs/2026-11-12-ios-text-resource-workflow.json",
     "current_merged_readiness": "runs/2026-11-12-ios-merged-readiness.json",
-    "current_hosted_failure": "runs/2026-11-12-ios-hosted-four-of-five.json"
+    "current_hosted_failure": "runs/2026-11-12-ios-module-hosted-setup-failed.json",
+    "current_native_failure": "runs/2026-11-12-ios-first-line-share-failed.json",
+    "previous_complete_ui_workflows_passed": 5,
+    "selected_integration_credit_withheld": true
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3032,11 +3035,11 @@
     "owner_csr_creation_still_pending": false,
     "owner_csr_signature_verified": true,
     "owner_csr_key_bits": 2048,
-    "current_signing_step": "Existing identity/profile signing succeeded; actual validation rejected the renamed resource.",
-    "current_signing_evidence": "runs/2026-11-12-ios-text-resource-signed-archive.json",
+    "current_signing_step": "Module-archive signed device archive inspected; Apple validation is waiting for owner authorization of another existing-key use.",
+    "current_signing_evidence": "runs/2026-11-12-ios-module-signed-inspection.json",
     "csr_selected_for_certificate_issuance": true,
     "certificate_issuance_submitted": true,
-    "signed_archive_evidence": "runs/2026-11-12-ios-text-resource-signed-archive.json",
+    "signed_archive_evidence": "runs/2026-11-12-ios-module-signed-inspection.json",
     "owner_certificate_matches_private_key": true,
     "distribution_profiles_available": true,
     "distribution_profiles_count": 2,
@@ -3044,10 +3047,10 @@
     "signed_package_exported": false,
     "signed_package_evidence": null,
     "app_store_validation_passed": false,
-    "current_step": "Fresh module-archive device build is waiting on owner codesign Keychain authorization; native source checks continue independently.",
+    "current_step": "Protected Apple validation key authorization and unresolved Share workflow failures; no upload or release.",
     "validation_failure": "runs/2026-11-12-ios-text-resource-apple-rejected.json",
     "packaging_repair": {
-      "status": "module_archive_current_137_detector_and_five_workflows_pass_fresh_signing_in_progress",
+      "status": "signed_archive_inspected_current_share_workflows_failed",
       "plan": "docs/ios-module-archive-plan.md",
       "simulator_detector": "runs/2026-11-12-ios-module-archive-engine.json",
       "apple_revalidation_passed": false,
@@ -3057,17 +3060,22 @@
       "current_readiness": "runs/2026-11-12-ios-module-current-readiness.json",
       "protected_source_ci_pending": true,
       "latest_failure": "runs/2026-11-12-ios-text-resource-apple-rejected.json",
-      "hosted_workflow_failure": "runs/2026-11-12-ios-hosted-four-of-five.json",
+      "hosted_workflow_failure": "runs/2026-11-12-ios-module-hosted-setup-failed.json",
       "module_archive_format": "ai-trust-id-native-assets/v2",
       "retained_module_workflow_failure": "runs/2026-11-12-ios-module-archive-workflow-failed.json",
       "retained_keyboard_failure": "runs/2026-11-12-ios-module-archive-keyboard-failed.json",
       "current_native_proof_dependency_bound": true,
       "focused_proof_and_input_checks": 63,
-      "current_candidate_archive_signed": false,
-      "current_candidate_archive_inspected": false,
-      "current_candidate_validation_status": "not_started",
+      "current_candidate_archive_signed": true,
+      "current_candidate_archive_inspected": true,
+      "current_candidate_validation_status": "waiting_for_existing_key_authorization",
       "previous_signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json",
-      "current_boundaries": "runs/2026-11-12-ios-module-reviewed-boundaries.json"
+      "current_boundaries": "runs/2026-11-12-ios-module-reviewed-boundaries.json",
+      "retained_traced_keyboard_failure": "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
+      "current_native_failure": "runs/2026-11-12-ios-first-line-share-failed.json",
+      "current_native_workflows_passed": 3,
+      "current_native_workflows_failed": 2,
+      "current_native_source_acceptance": false
     },
     "revalidation_handoff": "runs/2026-11-12-ios-revalidation-in-progress.json",
     "owner_ui_handoff": "runs/2026-11-12-ios-module-signing-handoff.json",
@@ -3309,5 +3317,5 @@
     "publication": "runs/2026-11-12-hidden-email-publication.json",
     "local_service_rebuild_required": true
   },
-  "current_engineering_revalidation_status": "All five selected receipts match current sources; protocol 40 and website 32 executed after module-archive changes. Independent acceptance remains separate."
+  "current_engineering_revalidation_status": "Previous module-archive capability receipts are historical. Current native source acceptance is failing; website evidence requires repair and a fresh complete native run. No independent acceptance or release."
 }

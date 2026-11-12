@@ -1,5 +1,11 @@
 # Package the fixed detector as a sealed module archive
 
+**Current status:** the latest local source passes three host-app workflows and
+fails both Share workflows. N-013 is 60%; current selected-integration credit is
+withheld. The signed module archive passes local signature/resource inspection,
+but Apple validation awaits owner key authorization. Earlier passing snapshots
+below are historical; the app is draft and unreleased.
+
 ## Observed failures
 
 Apple rejected both the original `method.py` resource and its renamed
@@ -89,3 +95,34 @@ included in the website source fingerprint. That new check fails on the prior
 unbound selection and passes on the current selection; 63 focused proof,
 packaging-verifier and website-input controls pass. The actual new signed archive
 and Apple validation remain separate pending gates.
+
+## Hosted simulator setup failure diagnostics
+
+The current 9b03598 hosted run failed before building or executing UI tests,
+at owned-simulator setup. Its empty boot/cleanup output does not distinguish
+a command deadline, nonzero exit, or capacity refusal. Do not infer an app
+failure or pass, extend a deadline, or blindly count a rerun as a fix. Record
+each fixed verification command's start, bound, finish and failure class in
+the proof, including cleanup, so the next execution can identify the stage.
+These are synthetic verifier operations; no user text, credentials, or
+application data is logged. Keep existing time, memory, test and cleanup gates.
+A failed attempt must retain its source identities and remain failed.
+
+The traced local run completes setup and both Share workflows, but passes only
+four of five tests: the keyboard does not appear after the edit test's center
+tap, with no onboarding banner visible. Preserve that result and its exact
+verifier source. The next test-only candidate sends its single tap inside the
+text view's first-line inset, after proving the field is hittable, rather than
+the middle of a large empty scrolling region. This is an ordinary text-entry
+action, not a retry, synthetic text injection or proven root-cause correction.
+Require the same keyboard and stale-result assertions, then run all five tests.
+
+The first-line candidate passes all three host-app workflows, including editing
+and stale-result invalidation, but both Share workflows fail. The first opens
+and receives the intended text, then never produces a result; the final status
+is still the pre-check selection instruction after the attempted check tap. The
+second never reaches the extension's finish control. These are different
+observations, not evidence of a single established root cause. Both failures and
+their attachments are retained. The owned simulator is removed. Do not repeat
+the run without a diagnosis, bypass the existing evidence guard, or describe
+the earlier five-pass result as current-source acceptance.

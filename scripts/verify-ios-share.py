@@ -59,6 +59,48 @@ def simulator_identity(value):
     return value
 
 
+def run_command(argv, *, output, stage, report, created, timeout=30, cleanup=False):
+    event = {'stage': stage, 'tool': Path(argv[0]).name,
+             'operation': argv[1:3], 'timeout_seconds': timeout, 'cleanup': cleanup,
+             'started_at': datetime.now(timezone.utc).isoformat(), 'outcome': 'unexpected_failure'}
+    report['command_events'].append(event)
+    with tempfile_log() as log:
+        process = subprocess.Popen(argv, cwd=ROOT, stdout=log, stderr=log, start_new_session=True)
+        try:
+            until = time.monotonic() + timeout
+            while process.poll() is None:
+                if time.monotonic() > until:
+                    event['outcome'] = 'deadline'
+                    raise ValueError('Verification deadline reached')
+                if not cleanup and shutil.disk_usage(output.parent).free < 2_000_000_000:
+                    event['outcome'] = 'capacity_reserve'
+                    raise ValueError('Build capacity reserve reached')
+                time.sleep(.25)
+            log.seek(0)
+            raw = log.read()
+            event['returncode'] = process.returncode
+            if process.returncode:
+                event['outcome'] = 'nonzero_exit'
+                raise ValueError('Verification command failed')
+            decoded = raw.decode('utf-8', errors='strict').strip()
+            event['outcome'] = 'passed'
+            return decoded
+        finally:
+            event['finished_at'] = datetime.now(timezone.utc).isoformat()
+            if process.poll() is None:
+                try: os.killpg(process.pid, signal.SIGTERM)
+                except ProcessLookupError: pass
+                try: process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    try: os.killpg(process.pid, signal.SIGKILL)
+                    except ProcessLookupError: pass
+                    process.wait()
+            # Keep diagnostics even when the deadline, not the tool, fails.
+            if created:
+                log.seek(0)
+                with (output / (stage + '.log')).open('ab') as saved:
+                    saved.write(log.read())
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
@@ -70,39 +112,12 @@ def main():
     stage = 'prerequisites'
     report = {'pass': False, 'physical_device': False, 'independent_accuracy': False,
               'human_accessibility': False, 'installable_phone_release': False,
-              'started_at': datetime.now(timezone.utc).isoformat()}
+              'started_at': datetime.now(timezone.utc).isoformat(), 'command_events': []}
     output = args.output
 
     def command(argv, timeout=30, cleanup=False):
-        with tempfile_log() as log:
-            process = subprocess.Popen(argv, cwd=ROOT, stdout=log, stderr=log, start_new_session=True)
-            try:
-                until = time.monotonic() + timeout
-                while process.poll() is None:
-                    if time.monotonic() > until:
-                        raise ValueError('Verification deadline reached')
-                    if not cleanup and shutil.disk_usage(output.parent).free < 2_000_000_000:
-                        raise ValueError('Build capacity reserve reached')
-                    time.sleep(.25)
-                log.seek(0)
-                raw = log.read()
-                if process.returncode:
-                    raise ValueError('Verification command failed')
-                return raw.decode('utf-8', errors='strict').strip()
-            finally:
-                if process.poll() is None:
-                    try: os.killpg(process.pid, signal.SIGTERM)
-                    except ProcessLookupError: pass
-                    try: process.wait(timeout=5)
-                    except subprocess.TimeoutExpired:
-                        try: os.killpg(process.pid, signal.SIGKILL)
-                        except ProcessLookupError: pass
-                        process.wait()
-                # Keep diagnostics even when the deadline, not the tool, fails.
-                if created:
-                    log.seek(0)
-                    with (output / (stage + '.log')).open('ab') as saved:
-                        saved.write(log.read())
+        return run_command(argv, output=output, stage=stage, report=report,
+                           created=created, timeout=timeout, cleanup=cleanup)
 
     try:
         output = destination(output)

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-205557-ios-signed-inspection-current-share-failures-3761a974",
+  "recorded_at": "2026-11-12T20:55:57.622233+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9b0359886090f3ec998dc6713f030c1143614424",
+  "changed": "Inspect the new signed module archive, retain hosted and local failures, add bounded verifier command diagnostics, and withhold current Share integration credit.",
+  "proves": "Both strict bundle signatures and all 32 resource copies pass local inspection. 23 verifier controls pass, including real command failure, timeout and child cleanup. The latest complete native execution passes three host tests and fails two Share tests; the owned simulator is removed and the stale-proof guard refuses.",
+  "limits": "App remains draft and unreleased; Apple validation waits for owner authorization of another existing-key use. N-013 falls from 80 to 60 because current selected integration is not passing; all 202 originals remain and 70 are open. No independent accuracy, physical acceptance, upload or requirement closure.",
+  "scope_ids": [
+    "N-013",
+    "N-012",
+    "F-142"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "1a86b710dba44ccc036c13bf082affad53591790e6818eb718f2db3f4feacf2f",
+    "docs/ios-module-archive-plan.md": "41b062e453b3292a74074ba4b42aaa5138d83e8bafb1319582b50fa1abeca01f",
+    "docs/scope-progress.json": "9e7b64467e8e9f7c20c37ffb31bf54bd614e3252314027252f1ebe49b734a7ed",
+    "docs/scope-progress.md": "b8f18f8405a215b83d0538ae9f0c0008392da25d84752ef0acf75421cab4ae30",
+    "docs/scope-task-index.md": "71570ac6b53bde2a96c4b7fff363902f4ffb877a31f6b47eb8c94b62adb8aba5",
+    "mobile/ios/Tests/UIFlows.swift": "f8eb5dd8e665108a2f01131f73db13f41469dfb29ab4be7e308ed189a05d987f",
+    "runs/2026-11-12-ios-command-trace-keyboard-failed.json": "29c0e90c35b687cb14887348e900b5c543418284ca180b4bb6e61286e047d75c",
+    "runs/2026-11-12-ios-current-gates-open.json": "9420cac945e6d55a7a37af0600feba7cd685ae7aa36c49cefca1bddde867cd0a",
+    "runs/2026-11-12-ios-first-line-share-failed.json": "411ec8b8d51a483373ee12788df24a9042db5a4216e58bc25efb2089b8a5c0c7",
+    "runs/2026-11-12-ios-module-hosted-setup-failed.json": "d880009659f5d9a24bbb6fd31691dbbbfb45b52d3b821bf2fa92799656e655d4",
+    "runs/2026-11-12-ios-module-signed-inspection.json": "e5e96b6e1542bc55452a1aea9269121ee5e5ba3e4fd0598e72aa2ebca0082366",
+    "runs/sources/2026-11-12-ios-command-trace-verifier.py": "863ae74111cd687c9d6e831dd8c9d0371f31ecd76cb62f8038608ef381c56fb3",
+    "scripts/verify-ios-share.py": "863ae74111cd687c9d6e831dd8c9d0371f31ecd76cb62f8038608ef381c56fb3",
+    "site/public/reference/public-scope.json": "598ddb09d210813272ccb5ca4f70088d02bfd64839df5ec7dce5621c5ab010df",
+    "site/src/public-scope.json": "598ddb09d210813272ccb5ca4f70088d02bfd64839df5ec7dce5621c5ab010df",
+    "site/src/scope-manifest.json": "4cfad6086dd52ed17a5e7571eb14bbd238b8ee2ee9e61e40e9fa1ad7b8535bb8",
+    "state.json": "8a335485c4b42ecb1747be0a7d6ef04c39307dc2f097bf4dfb8348879af409bc",
+    "tests/test_ios_share_verifier.py": "d5f33ee6920b9131c14c6a35517a944bfd855ba7adbea1529b99fbe91e41ca58"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-current-gates-open.json",
+      "sha256": "9420cac945e6d55a7a37af0600feba7cd685ae7aa36c49cefca1bddde867cd0a"
+    },
+    {
+      "path": "runs/2026-11-12-ios-module-signed-inspection.json",
+      "sha256": "e5e96b6e1542bc55452a1aea9269121ee5e5ba3e4fd0598e72aa2ebca0082366"
+    },
+    {
+      "path": "runs/2026-11-12-ios-module-hosted-setup-failed.json",
+      "sha256": "d880009659f5d9a24bbb6fd31691dbbbfb45b52d3b821bf2fa92799656e655d4"
+    },
+    {
+      "path": "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
+      "sha256": "29c0e90c35b687cb14887348e900b5c543418284ca180b4bb6e61286e047d75c"
+    },
+    {
+      "path": "runs/2026-11-12-ios-first-line-share-failed.json",
+      "sha256": "411ec8b8d51a483373ee12788df24a9042db5a4216e58bc25efb2089b8a5c0c7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T20:55:58.274526+00:00"
+    }
+  ]
+}

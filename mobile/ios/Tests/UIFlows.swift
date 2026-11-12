@@ -34,7 +34,11 @@ final class UIFlows: XCTestCase {
         return app
     }
     private func focus(_ input: XCUIElement, in app: XCUIApplication) {
-        XCTAssertTrue(input.waitForExistence(timeout: 20)); input.tap()
+        XCTAssertTrue(input.waitForExistence(timeout: 20))
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == true"), object: input)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
+        // One tap in the editable first-line inset, not the empty scroll area.
+        input.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.1)).tap()
         // Only the fresh disposable simulator's observed onboarding banner.
         // Never accept a permission, opt in, or dismiss an unknown alert.
         let notice = XCUIApplication(bundleIdentifier: "com.apple.springboard")
@@ -47,7 +51,7 @@ final class UIFlows: XCTestCase {
             notice.swipeUp()
             let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: notice)
             XCTAssertEqual(XCTWaiter.wait(for: [dismissed], timeout: 5), .completed)
-            input.tap()
+            input.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.1)).tap()
         }
         XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 10))
     }

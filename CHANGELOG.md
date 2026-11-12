@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-205640-ios-current-status-summary-535de94d
+
+Recorded 2026-11-12T20:56:40.911322+00:00 · Contributor: Codex · change
+
+- **Changed.** Synchronize the README and distribution guides with the withheld Share-integration milestone.
+- **Evidence.** Current entry points now state three passing host workflows, two failing Share workflows, inspected signatures/resources and owner-gated Apple validation. Earlier five-pass snapshots are explicitly historical. [Change record](./runs/changes/2026-11-12-205640-ios-current-status-summary-535de94d.json).
+- **Not claimed.** No new test result, app release, Apple acceptance or full requirement closure is claimed.
+
+
+### 2026-11-12-205557-ios-signed-inspection-current-share-failures-3761a974
+
+Recorded 2026-11-12T20:55:57.622233+00:00 · Contributor: Codex · change
+
+- **Changed.** Inspect the new signed module archive, retain hosted and local failures, add bounded verifier command diagnostics, and withhold current Share integration credit.
+- **Evidence.** Both strict bundle signatures and all 32 resource copies pass local inspection. 23 verifier controls pass, including real command failure, timeout and child cleanup. The latest complete native execution passes three host tests and fails two Share tests; the owned simulator is removed and the stale-proof guard refuses. [Change record](./runs/changes/2026-11-12-205557-ios-signed-inspection-current-share-failures-3761a974.json).
+- **Not claimed.** App remains draft and unreleased; Apple validation waits for owner authorization of another existing-key use. N-013 falls from 80 to 60 because current selected integration is not passing; all 202 originals remain and 70 are open. No independent accuracy, physical acceptance, upload or requirement closure.
+
+
 ### 2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4
 
 Recorded 2026-11-12T18:49:36.360822+00:00 · Contributor: Codex · change

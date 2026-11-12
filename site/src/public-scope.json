@@ -13508,14 +13508,13 @@
         "id": "N-013",
         "kind": "requirement",
         "title": "Native iPhone sharing into a tag check",
-        "percent_complete": 80,
+        "percent_complete": 60,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks",
-          "selected_integration"
+          "executable_checks"
         ],
-        "audited_at": "2026-11-12T18:32:42.222426+00:00",
+        "audited_at": "2026-11-12T20:55:56.853185+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -13529,7 +13528,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Finish fresh module-archive signing and actual Apple validation/upload; confirm the current hosted iOS Share workflow. Then complete physical iPhone 14 Plus, Share-source compatibility, lifecycle, VoiceOver, offline/update/removal and outside-user acceptance. Earlier native failures remain retained; independent tag acceptance is separate.",
+        "next_fix": "Current selected-integration credit withheld after fresh Share workflow failures (previously 80%, now 60%). Resolve current Share entry/check-action failures with retained screenshots, hierarchy and command traces; obtain a fresh five-workflow pass without removing assertions. Approve the existing-key use for actual Apple revalidation, finish final privacy/platform declarations and reviewed upload, then physical iPhone, VoiceOver and outside-user acceptance.",
         "next_owner": "Michael / physical-device testers / Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -13580,9 +13579,13 @@
           "docs/ios-module-archive-plan.md",
           "runs/2026-11-12-ios-module-archive-engine.json",
           "runs/2026-11-12-native-share-module-archive-workflow.json",
-          "runs/2026-11-12-ios-module-archive-keyboard-failed.json"
+          "runs/2026-11-12-ios-module-archive-keyboard-failed.json",
+          "runs/2026-11-12-ios-module-signed-inspection.json",
+          "runs/2026-11-12-ios-module-hosted-setup-failed.json",
+          "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
+          "runs/2026-11-12-ios-first-line-share-failed.json"
         ],
-        "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed. The same current native sources also passed all five workflows and unsigned archive inspection on hosted iOS 27.2/SDK 27.1. A separate simulator-startup refusal is retained. Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
+        "evidence_scope": "Signed archive: both strict signatures, expected entitlements and 32 resources pass inspection. Latest local source passes three host workflows and fails two Share workflows; owned simulator removed. Hosted source fails at simulator setup before UI tests. Apple revalidation waits on owner key authorization. No upload, physical acceptance, independent accuracy or requirement closure.",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],
