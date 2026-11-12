@@ -87,7 +87,7 @@ def test_all_context_validates_before_any_output():
 def test_distinct_marker_constructions_keep_exact_locations_without_intent(text,construction,markers,negation):
     record,context=packet(text)
     result=module.observe(text,record,context);row=result['observations'][0]
-    assert result['profile']=='caller-bound-choice-framing-observation/1.1.0'
+    assert result['profile']=='caller-bound-choice-framing-observation/1.2.0'
     assert row['construction']==construction
     assert [text[a:b] for a,b in row['binary_marker_spans']]==markers
     assert [text[a:b] for a,b in row['negation_marker_spans']]==negation
@@ -143,3 +143,46 @@ def test_reference_unicode_spans_bind_normalized_text():
     assert row['document_sha256']==corpus.sha(source.encode())
     assert row['normalized_source_sha256']==corpus.sha(normalized.encode())
     assert row['source_span']==[0,len(normalized)]
+
+
+@pytest.mark.parametrize('text,words',[
+    ('Choose between tea and coffee.',('tea','coffee')),
+    ('Safety advice: choose between evacuate and shelter.',('evacuate','shelter')),
+    ('A lesson quotes "between agree and oppose".',('agree','oppose')),
+    ('A value between 10 and 20.',('10','20')),
+    ('Not between agree and oppose.',('agree','oppose')),
+    ('BETWEEN agree, AND oppose.',('agree','oppose')),
+])
+def test_between_is_literal_evidence_without_a_signal_candidate(text,words):
+    record,context=packet(text,words=words)
+    result=module.observe(text,record,context);row=result['observations'][0]
+    assert row['construction']=='between_and'
+    assert [text[a:b].casefold() for a,b in row['binary_marker_spans']]==['between','and']
+    assert row['proposed_signal'] is None
+    assert not row['exhaustiveness_established'] and not row['additional_option_verified']
+    assert not row['negation_scope_resolved'] and not row['quoted_or_recommended_resolved']
+    assert not row['manipulation_established'] and not result['tag_asserted']
+
+
+@pytest.mark.parametrize('text',[
+    'Between agree or oppose.','Between agree nor oppose.',
+    'Between agree and perhaps oppose.','Inbetween agree and oppose.',
+    '_between agree and oppose.','ébetween agree and oppose.',
+])
+def test_between_mixed_or_embedded_grammar_is_unmatched(text):
+    record,context=packet(text)
+    result=module.observe(text,record,context)
+    assert result['state']=='NO_SUPPORTED_PATTERN'
+    assert result['unmatched_selected_frames']==[[0,len(text)]]
+
+
+def test_between_locations_use_normalized_unicode_codepoints():
+    from protocol.normalization import normalize_nfc
+    original='😀 Choose between cafe\u0301 and tea.'
+    normalized=normalize_nfc(original)
+    record,context=packet(normalized,source='Water is also listed.',words=('café','tea'))
+    result=module.observe(original,record,context);row=result['observations'][0]
+    assert [normalized[a:b] for a,b in row['choice_spans']]==['café','tea']
+    assert [normalized[a:b] for a,b in row['binary_marker_spans']]==['between','and']
+    assert result['normalization_id']=='NFC-Unicode-15.0.0/v1'
+    assert row['proposed_signal'] is None

@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-11-12T19:21:09.372352+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "protocol_commands": 40,
+  "website_commands": 32,
+  "reviewed_source_files": 1008,
+  "protocol": "runs/2026-11-12-choice-between-current-protocol.json",
+  "website": "runs/2026-11-12-choice-between-current-website.json",
+  "boundary": "runs/2026-11-12-choice-between-boundaries.json",
+  "retained_initial_ci_failure": {
+    "run": 43287976486,
+    "source": "dd62497",
+    "failure": "Site boundary checks correctly refused the old source inventory before current review and browser receipts were selected.",
+    "fixed_by": "Review changed source/access boundaries, execute current website and protocol checks, select actual current website receipt and verify boundary. No assertion or required check removed."
+  },
+  "requirements_closed": [],
+  "independent_accuracy_evidence": false,
+  "protected_publication_pending": true
+}
