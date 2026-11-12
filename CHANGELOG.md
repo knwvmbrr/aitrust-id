@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-12
 
+### 2026-11-12-155902-hidden-email-scope-projections-46a92706
+
+Recorded 2026-11-12T15:59:02.467275+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated the website scope projections from the updated evidence ledger.
+- **Evidence.** Site preparation exports all 202 scope records with the candidate work and remaining fixes; no requirement count changes. [Change record](./runs/changes/2026-11-12-155902-hidden-email-scope-projections-46a92706.json).
+- **Not claimed.** No deployment or new release claim. Existing public detector charts remain unchanged; candidate is not network/pipeline integrated.
+
+
 ### 2026-11-12-155202-hidden-email-candidate-73e6b6d2
 
 Recorded 2026-11-12T15:52:02.569088+00:00 · Contributor: Codex · change
