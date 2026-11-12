@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-10T01:07:33.836853+00:00",
-  "active_increment": "PII separator correction, measured development downloads and updated scope ledger are published and verified. Independent recognition, physical-phone/human acceptance and App Store distribution remain open. Target 60; current full open requirements 72.",
+  "updated": "2026-11-12T15:51:26.770692+00:00",
+  "active_increment": "Hidden-separator PII email candidate passes fixed Linux engine and ASGI masking checks; source publication, real network/pipeline checks and independent acceptance remain pending. App Store work continues separately. 70 full requirements open; target 60.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-10T01:07:33.836853+00:00",
+  "updated_at": "2026-11-12T15:51:26.770692+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3179,5 +3179,20 @@
     "ci_privilege_drop_evidence": "runs/2026-11-10-ci-nonroot-namespace-probe.json",
     "protected_ci_repair_pending": false,
     "publication": "runs/2026-11-10-private-tools-publication.json"
+  },
+  "pii_hidden_email_candidate": {
+    "status": "development_candidate_not_deployed",
+    "implemented_by": "Codex",
+    "scope_ids": [
+      "F-023",
+      "T-PII"
+    ],
+    "architecture": "docs/pii-hidden-separators-plan.md",
+    "evidence": "runs/2026-11-12-hidden-email-development.json",
+    "source_publication_pending": true,
+    "network_pipeline_integration_pending": true,
+    "current_public_charts_replaced": false,
+    "requirements_closed": 0,
+    "independent_accuracy_evidence": false
   }
 }

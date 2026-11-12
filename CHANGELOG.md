@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-12
+
+### 2026-11-12-155202-hidden-email-candidate-73e6b6d2
+
+Recorded 2026-11-12T15:52:02.569088+00:00 · Contributor: Codex · change
+
+- **Changed.** Added original-offset email recognition through four invisible separators, dedicated regression controls and a source-bound isolated Linux ASGI diagnostic; updated scope evidence without closing requirements.
+- **Evidence.** 58 focused checks pass. All 48 fixed engine rows executed: one challenge corrected, 47 unchanged. All twelve hidden-email service variants are fully masked across 21 ASGI requests. [Change record](./runs/changes/2026-11-12-155202-hidden-email-candidate-73e6b6d2.json).
+- **Not claimed.** Five added variants also mask surrounding context. Remaining English false masking and obfuscated addresses persist. Candidate not deployed; real network/pipeline, independent accuracy and human acceptance pending. 70 full requirements remain open.
+
+
 ## Unreleased — 2026-11-10
 
 ### 2026-11-10-010808-private-tools-live-state-16d60162
