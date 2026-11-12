@@ -133,13 +133,13 @@
         "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
         "scripts/worker_process.py",
         "tests/test_worker_process.py",
-        "runs/2026-11-09-pan-english-linux.json",
-        "runs/2026-11-09-pan-compact-linux.json",
+        "runs/2026-11-12-hidden-email-hosted-english.json",
+        "runs/2026-11-12-hidden-email-hosted-compact.json",
         "tests/test_redaction_worker_observations.py",
         "docs/pii-separator-correction-plan.md",
         "runs/2026-11-09-pan-service-linux.json",
-        "runs/2026-11-09-pan-replay-linux.json",
-        "runs/2026-11-09-pan-clean-setup-linux.json"
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -152,7 +152,8 @@
           "tests/test_redaction_observations.py",
           "tests/test_redaction_development_client.py",
           "tests/test_redaction_development_builder.py",
-          "tests/test_redaction_worker_observations.py"
+          "tests/test_redaction_worker_observations.py",
+          "tests/test_redaction_hidden_email.py"
         ],
         [
           "{python}",
@@ -445,8 +446,8 @@
         "docs/directory-clock-fence-plan.md",
         "tests/test_replay_verifier_engine.py",
         "runs/2026-11-09-pan-service-linux.json",
-        "runs/2026-11-09-pan-replay-linux.json",
-        "runs/2026-11-09-pan-clean-setup-linux.json"
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -816,7 +817,7 @@
           "--python",
           "{python}",
           "--receipt",
-          "runs/2026-11-09-pan-replay-linux.json"
+          "runs/2026-11-12-hidden-email-hosted-replay.json"
         ],
         [
           "{python}",
@@ -1150,14 +1151,14 @@
         "runs/2026-11-07-native-share-engine.json",
         "runs/2026-11-07-native-share-reviewed-workflow.json",
         "runs/*native-share*workflow.json",
-        "runs/2026-11-09-pan-english-linux.json",
-        "runs/2026-11-09-pan-compact-linux.json",
+        "runs/2026-11-12-hidden-email-hosted-english.json",
+        "runs/2026-11-12-hidden-email-hosted-compact.json",
         "tests/test_redaction_worker_observations.py",
         "docs/pii-separator-correction-plan.md",
         "runs/2026-11-09-pan-service-linux.json",
-        "runs/2026-11-09-pan-replay-linux.json",
-        "runs/2026-11-09-pan-clean-setup-linux.json",
-        "runs/2026-11-09-pan-pipeline-timing-linux.json",
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "runs/2026-11-12-hidden-email-pipeline-timing-linux.json",
         "runs/2026-11-09-directory-rollover-linux.json",
         "tools/fleet.py",
         "scripts/fleet.py",

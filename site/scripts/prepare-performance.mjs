@@ -12,7 +12,7 @@ execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/verify-ps-ef
 const input=JSON.parse(fs.readFileSync(path.join(root,'eval/tag-performance-evidence.json'),'utf8'));
 const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 validateEvidence(input,hash);
-const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-11-09-pan-pipeline-timing-linux.json'),'utf8'));
+const timing=JSON.parse(fs.readFileSync(path.join(root,'runs/2026-11-12-hidden-email-pipeline-timing-linux.json'),'utf8'));
 validatePipelineTiming(timing,hash,s=>crypto.createHash('sha256').update(s).digest('hex'));
 const redaction=redactionSummary(JSON.parse(execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/build-redaction-performance.py'],{cwd:root,encoding:'utf8',maxBuffer:200000})));
 const data={format:'ai-trust-id-tag-performance/v1',records:allTags.map(tag=>performanceFor(tag,input,timing,redaction))};
