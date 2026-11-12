@@ -7,8 +7,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from protocol.evidence import read_evidence
 spec=importlib.util.spec_from_file_location('redaction_development',ROOT/'scripts/measure-redaction-development.py')
 client=importlib.util.module_from_spec(spec);spec.loader.exec_module(client)
-REPORT='runs/2026-11-09-pan-english-linux.json'
-COMPACT_REPORT='runs/2026-11-09-pan-compact-linux.json'
+REPORT='runs/2026-11-12-hidden-email-hosted-english.json'
+COMPACT_REPORT='runs/2026-11-12-hidden-email-hosted-compact.json'
 ENTITIES=['EMAIL_ADDRESS','PHONE_NUMBER','PERSON','LOCATION','IP_ADDRESS','URL','DATE_TIME']
 def checked_observations(report,fixture_name):
     wanted={'captured_at','pass','kind','rows','redactor_identity','sources','fixture_sha256','source_unchanged','independent_accuracy_evidence','real_user_data','production_services_modified','client_sources','measurement','worker_operation_observed','http_route_tested','candidate_recognizer_override','source_identity_is_not_remote_attestation'}

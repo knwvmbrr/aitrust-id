@@ -7,7 +7,7 @@ m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 r=json.loads((ROOT/m.REPORT).read_text())
 def test_current_source_bound_errors_can_be_published_without_clearance():
  s=m.public_summary(r);assert s['english']['fully_masked']==34 and s['english']['partial']==0
- assert s['english']['cases_with_extra_masking']==2 and s['challenges']['fully_masked']==2
+ assert s['english']['cases_with_extra_masking']==2 and s['challenges']['fully_masked']==3
  assert len(s['categories'])==7 and not s['privacy_clearance']
 @pytest.mark.parametrize('mutate',[
  lambda d:d.update(candidate_recognizer_override=True),lambda d:d.update(privacy_clearance=True),

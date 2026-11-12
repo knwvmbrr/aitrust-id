@@ -52,3 +52,21 @@ All six expected addresses remain fully masked on the actual rebuilt Linux engin
 ### Preserve observations before masking
 
 The anonymizer merges candidate spans in place. The diagnostic now snapshots raw candidate entity types and boundaries before that operation and separately observes the spans actually applied. Older reports remain preserved; their candidate boundaries may reflect that merge. Current downloadable observations use the corrected observer and exact current engine sources. This fixes the measurement without removing any failing example or changing confidence thresholds.
+
+## November 12 development candidate
+
+The unchanged 42-row English/challenge cohort and six compact rows were run in
+a newly built isolated Linux image for the hidden-email candidate. The invisible
+separator challenge is now fully masked; the other 47 observations are unchanged.
+Three of the four out-of-coverage challenge spans are fully masked and one remains
+untouched. Those four examples do not establish support for another language or
+all obfuscations. The 38-row English false-masking counts remain unchanged.
+
+The actual rebuilt three-service profile passed 26 service controls and 15
+pipeline/CLI replay cases. A separate cached-dependency clean Linux clone passed
+one-command setup and ten real failure/cleanup controls, and the original
+staging service identities and configurations were restored. Current-source
+chart/download wiring uses these observations; the live site still uses its
+published source until a protected release. Independent representative and human
+acceptance remain open. See the
+[execution and limits](../runs/2026-11-12-hidden-email-rebuilt-integration.json).

@@ -4,7 +4,7 @@ MODEL_IDENTITY = verify_installed()
 from fastapi import FastAPI
 from starlette.middleware.body_limit import RequestBodyLimitMiddleware
 from pydantic import BaseModel, ConfigDict, Field
-from presidio_analyzer import AnalyzerEngine
+from presidio_analyzer import AnalyzerEngine, RecognizerResult
 from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_analyzer.predefined_recognizers import EmailRecognizer
@@ -19,6 +19,30 @@ class OfflineEmailRecognizer(EmailRecognizer):
     extractor=tldextract.TLDExtract(suffix_list_urls=(),cache_dir=None)
     def validate_result(self,pattern_text):
         return self.extractor(pattern_text).fqdn != ''
+    FORMAT_SEPARATORS=frozenset('\u200b\u200c\u200d\ufeff')
+    def analyze(self,text,entities,nlp_artifacts=None):
+        original=super().analyze(text,entities,nlp_artifacts)
+        if 'EMAIL_ADDRESS' not in entities or not any(c in text for c in self.FORMAT_SEPARATORS):
+            return original
+        # This projection is private to email recognition. Every returned span
+        # refers to the unchanged original text used by the anonymizer.
+        offsets=[i for i,c in enumerate(text) if c not in self.FORMAT_SEPARATORS]
+        if not offsets:return original
+        projected=''.join(text[i] for i in offsets)
+        seen={(r.entity_type,r.start,r.end) for r in original}
+        extra=[]
+        for result in super().analyze(projected,entities,None):
+            if result.entity_type!='EMAIL_ADDRESS' or not 0<=result.start<result.end<=len(offsets):
+                continue
+            start,end=offsets[result.start],offsets[result.end-1]+1
+            key=(result.entity_type,start,end)
+            if key in seen or not any(c in text[start:end] for c in self.FORMAT_SEPARATORS):
+                continue
+            extra.append(RecognizerResult(result.entity_type,start,end,result.score,
+                analysis_explanation=result.analysis_explanation,
+                recognition_metadata=dict(result.recognition_metadata or {})))
+            seen.add(key)
+        return original+extra
 analyzer.registry.remove_recognizer('EmailRecognizer')
 analyzer.registry.add_recognizer(OfflineEmailRecognizer())
 import ipaddress
@@ -56,7 +80,6 @@ def complete_ipv6_spans(text):
     return sorted(set(result))
 
 from presidio_analyzer.predefined_recognizers import IpRecognizer
-from presidio_analyzer import RecognizerResult
 class CompleteIPv6Recognizer(IpRecognizer):
     def analyze(self,text,entities,nlp_artifacts=None):
         original=super().analyze(text,entities,nlp_artifacts)

@@ -172,6 +172,8 @@ DEVICE_SOURCES = ['site/src/device-client.js', 'site/src/device-worker.js',
                   'services/evaluator/app.py', 'scripts/verify-device.cjs']
 
 
+PATTERNS += ('scripts/verify-hidden-email-service.py', 'tests/test_redaction_hidden_email.py', 'docs/pii-hidden-separators-plan.md')
+PATTERNS += ('runs/2026-11-12-hidden-email-pipeline-timing-linux.json', 'runs/2026-11-12-hidden-email-hosted-english.json', 'runs/2026-11-12-hidden-email-hosted-compact.json')
 PATTERNS += ('runs/2026-11-09-pan-pipeline-timing-linux.json',
              'runs/2026-11-09-pan-clean-setup-linux.json', 'scripts/verify-local-setup-evidence.py',
              'runs/2026-11-09-pan-english-linux.json', 'runs/2026-11-09-pan-compact-linux.json',

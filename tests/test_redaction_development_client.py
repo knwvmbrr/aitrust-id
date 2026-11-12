@@ -14,11 +14,11 @@ selected=runpy.run_path(str(ROOT/'scripts/build-redaction-performance.py'))['REP
 observed=json.loads((ROOT/selected).read_text())
 INSPECTION=[{'Config':{'User':'10001:10001','Labels':{'com.docker.compose.project':'aitrust-staging'}},'State':{'Running':True}}]
 def engine_result():return {k:copy.deepcopy(observed[k]) for k in ['captured_at','pass','kind','rows','redactor_identity','sources','fixture_sha256','source_unchanged','independent_accuracy_evidence','real_user_data','production_services_modified']}
-def test_actual_development_fixture_recomputes_baseline_error():
+def test_actual_development_fixture_recomputes_current_error():
  result=m.summarize_observations(engine_result(),fixture,observed['sources'])
  assert result['slices']['en']['fn']==0
  assert result['redaction_coverage'][0]['masking_is_not_privacy_clearance']
- assert result['slices']['out_of_coverage']['fn']==2
+ assert result['slices']['out_of_coverage']['fn']==1
  assert not result['privacy_clearance']
 def test_engine_call_is_fixed_staging_only_no_user_file_argument():
  with patch.object(m,'invoke',side_effect=[copy.deepcopy(INSPECTION),engine_result()]) as invoke:

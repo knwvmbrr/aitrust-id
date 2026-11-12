@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-11-12T15:51:26.770692+00:00",
+  "pass": true,
+  "kind": "hidden_email_candidate_development",
+  "implemented_by": "Codex",
+  "source_app_sha256": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+  "python_checks_passed": 58,
+  "python_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_redaction_hidden_email.py",
+    "tests/test_redaction_pan_token.py",
+    "tests/test_redaction_contract.py",
+    "tests/test_http_privacy.py",
+    "tests/test_redaction_worker_observations.py"
+  ],
+  "fixed_engine_examples": 48,
+  "unchanged_engine_cases": 47,
+  "changed_case_ids": [
+    "challenge_zero_width"
+  ],
+  "corrected_case_fully_masked": true,
+  "synthetic_asgi_requests": 21,
+  "additional_email_variants": 12,
+  "additional_variants_fully_masked": 12,
+  "additional_variants_with_extra_masking": 5,
+  "retained_probe_failures": [
+    {
+      "captured_at": "2026-11-11T03:44:59.040658+00:00",
+      "failed_stage": "email_0_2",
+      "cause": "Probe assumed a single EMAIL replacement with unchanged label; full engine merges an overlapping PERSON span."
+    },
+    {
+      "captured_at": "2026-11-12T15:47:08.824407+00:00",
+      "failed_stage": "email_0_2_mask",
+      "cause": "Diagnostic separated the failing assertion; synthetic response and original applied spans showed full masking plus six extra characters."
+    }
+  ],
+  "probe_correction": "Observe actual original-text anonymizer spans during the fixed ASGI request; require complete email masking and report all outside-span masking. Do not suppress other entity findings.",
+  "limitations": [
+    "Existing English false masking remains.",
+    "Five of twelve additional variants mask extra context; recorded per case.",
+    "Obfuscated [at]/[dot] challenge remains unmasked.",
+    "No representative independent accuracy or human acceptance.",
+    "ASGI in-process service checks do not prove network HTTP or gateway/replay integration.",
+    "Candidate code is not deployed and existing public charts are unchanged."
+  ],
+  "evidence": [
+    "runs/2026-11-12-hidden-email-english-linux.json",
+    "runs/2026-11-12-hidden-email-compact-linux.json",
+    "runs/2026-11-12-hidden-email-asgi-linux.json"
+  ],
+  "production_modified": false,
+  "local_docker_started": false,
+  "real_user_data": false,
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0,
+  "source_publication_pending": true
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-155202-hidden-email-candidate-73e6b6d2",
+  "recorded_at": "2026-11-12T15:52:02.569088+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6f7c02fd951774f27af2f8e9026725eed85313ae",
+  "changed": "Added original-offset email recognition through four invisible separators, dedicated regression controls and a source-bound isolated Linux ASGI diagnostic; updated scope evidence without closing requirements.",
+  "proves": "58 focused checks pass. All 48 fixed engine rows executed: one challenge corrected, 47 unchanged. All twelve hidden-email service variants are fully masked across 21 ASGI requests.",
+  "limits": "Five added variants also mask surrounding context. Remaining English false masking and obfuscated addresses persist. Candidate not deployed; real network/pipeline, independent accuracy and human acceptance pending. 70 full requirements remain open.",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "docs/pii-hidden-separators-plan.md": "df62c3fdfb9c802091925cfe3c76b96a52af1934a416099a9eab9bbd18e0e8ff",
+    "docs/scope-progress.json": "f0fd41cb793db138e1bc0d5ec2af17a1370775d968d6b3cddc1e5df41ba93a7a",
+    "docs/scope-progress.md": "26f901840288ea35310047559d18dc904a91f78a0c332030fb1d06f38fb03a31",
+    "runs/2026-11-12-hidden-email-asgi-linux.json": "8d37771cdafbc7e529259ef9d26abb7af5a3d1b4c2e9dbcac47fcbfb3087742f",
+    "runs/2026-11-12-hidden-email-compact-linux.json": "c48bce535b0d748ed4d0576fe5967b71eb2f73f0031cb782a128aa8762409380",
+    "runs/2026-11-12-hidden-email-development.json": "d023b52e0f858ebccf1b4575262cdbce3afc3ebadefba9d09555efb2df2d87e0",
+    "runs/2026-11-12-hidden-email-english-linux.json": "931c8990c7fc8e3d268e009ea1e001ed5a7988361e3f3846b53559ad97af00ac",
+    "scripts/verify-hidden-email-service.py": "86f84e9047e5be81017194e601105f5bbb6b73c0d0accf84bf6dace602a758e7",
+    "services/anonymizer/app.py": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+    "state.json": "c6bc693b63bda0d181c6a8e9d11c5aa80a3171e16225e2202f0067f96355926d",
+    "tests/test_redaction_hidden_email.py": "0d8e85592ba5886609aebd26a94c40e7bca3a2b082576738c972867dcc4ee093"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-hidden-email-development.json",
+      "sha256": "d023b52e0f858ebccf1b4575262cdbce3afc3ebadefba9d09555efb2df2d87e0"
+    },
+    {
+      "path": "runs/2026-11-12-hidden-email-asgi-linux.json",
+      "sha256": "8d37771cdafbc7e529259ef9d26abb7af5a3d1b4c2e9dbcac47fcbfb3087742f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T15:52:03.191736+00:00"
+    }
+  ]
+}

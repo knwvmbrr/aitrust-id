@@ -1,5 +1,79 @@
 # Changelog
 
+## Unreleased — 2026-11-12
+
+### 2026-11-12-171131-hidden-email-reviewed-readiness-53d5b1a1
+
+Recorded 2026-11-12T17:11:31.530190+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected the five completed current engineering receipts and reviewed personal-boundary inventory; corrected README to current source measurements.
+- **Evidence.** All five capability sequences pass, including 32 website commands. The 1008-file boundary review passes with unchanged declared endpoints/access, 26 service cases and 15 current replay cases; independent release remains unapproved. [Change record](./runs/changes/2026-11-12-171131-hidden-email-reviewed-readiness-53d5b1a1.json).
+- **Not claimed.** Protected CI, merge and deployment pending. No independent accuracy, human acceptance or full requirement closure. The initial review helper omitted its required root argument and was corrected before any review was written.
+
+
+### 2026-11-12-170050-hidden-email-current-capabilities-2acd5046
+
+Recorded 2026-11-12T17:00:50.578374+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current source-bound PS, PII, protocol and extension engineering execution after correcting the declared setup dependency.
+- **Evidence.** Current receipts pass all configured commands: PS seven, PII six, protocol forty and extension fourteen. Earlier dated receipts and the failed protocol dependency check are preserved. [Change record](./runs/changes/2026-11-12-170050-hidden-email-current-capabilities-2acd5046.json).
+- **Not claimed.** Engineering evidence is not independent accuracy or human acceptance. Full website, route/boundary review and protected CI remain before release; no full requirement closure.
+
+
+### 2026-11-12-165715-hidden-email-source-inputs-a52f8c83
+
+Recorded 2026-11-12T16:57:15.442192+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected the current clean-setup receipt dependency in the protocol profile and bound the added privacy probe, regression file and plan in the route inventory.
+- **Evidence.** The protocol pass was refused when its selected clean-setup receipt was not included in the source fingerprint; the exact current dependency is now declared. Earlier successful component runs remain dated evidence of their previous profile. [Change record](./runs/changes/2026-11-12-165715-hidden-email-source-inputs-a52f8c83.json).
+- **Not claimed.** Fresh capability receipts are required after this manifest correction. No stale receipt is promoted, no guard is relaxed and no scope completion is added.
+
+
+### 2026-11-12-165312-hidden-email-site-and-current-checks-19d32788
+
+Recorded 2026-11-12T16:53:12.102611+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the rebuilt site and actual performance/download/accessibility browser run; selected current rebuilt replay/cohort/timing data for engineering checks and included invisible-email regressions in the PII gate.
+- **Evidence.** Site build passes. 40 modal views and 20 static pages pass with no JavaScript, transport, unexpected-network or axe errors; actual downloads match current measured data. No independent accuracy is granted. [Change record](./runs/changes/2026-11-12-165312-hidden-email-site-and-current-checks-19d32788.json).
+- **Not claimed.** Draft review and full source-bound capability/boundary checks remain before merge or deployment. App revalidation still needs its separate owner prompt check. No full requirement closure.
+
+
+### 2026-11-12-164136-hidden-email-current-timing-fa4b72c3
+
+Recorded 2026-11-12T16:41:36.456489+00:00 · Contributor: Codex · change
+
+- **Changed.** Replaced stale timing selection with a fresh source-bound synthetic Linux pipeline measurement; added current chart inputs to the review inventory and regenerated performance panels.
+- **Evidence.** 12 profiles with 20 warm repeats each plus first observations; all 31 timing admission/display/refusal checks pass. Staging restoration is recorded and current performance preparation succeeds. [Change record](./runs/changes/2026-11-12-164136-hidden-email-current-timing-fa4b72c3.json).
+- **Not claimed.** Not independent accuracy, physical-phone timing, a latency guarantee or a deployed website. Full current browser/boundary review and protected checks remain pending; no full requirement closed.
+
+
+### 2026-11-12-163013-hidden-email-rebuilt-integration-3373d3aa
+
+Recorded 2026-11-12T16:30:13.525083+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the hidden-email candidate to rebuilt hosted engine/service/replay observations and a fresh real Linux clean-install/failure run; prepared matching chart/download wiring and updated scope evidence.
+- **Evidence.** 48 fixed engine examples, 26 network service controls, 15 actual pipeline/CLI replay cases and ten clean setup/failure cases pass. The new chart preserves English errors and the remaining challenge miss; 22 chart controls pass. [Change record](./runs/changes/2026-11-12-163013-hidden-email-rebuilt-integration-3373d3aa.json).
+- **Not claimed.** Developer-authored examples only. Independent recognition and human acceptance remain open. Protected boundary/browser review and publication pending; live site unchanged. No new full requirement closure.
+
+
+### 2026-11-12-155902-hidden-email-scope-projections-46a92706
+
+Recorded 2026-11-12T15:59:02.467275+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated the website scope projections from the updated evidence ledger.
+- **Evidence.** Site preparation exports all 202 scope records with the candidate work and remaining fixes; no requirement count changes. [Change record](./runs/changes/2026-11-12-155902-hidden-email-scope-projections-46a92706.json).
+- **Not claimed.** No deployment or new release claim. Existing public detector charts remain unchanged; candidate is not network/pipeline integrated.
+
+
+### 2026-11-12-155202-hidden-email-candidate-73e6b6d2
+
+Recorded 2026-11-12T15:52:02.569088+00:00 · Contributor: Codex · change
+
+- **Changed.** Added original-offset email recognition through four invisible separators, dedicated regression controls and a source-bound isolated Linux ASGI diagnostic; updated scope evidence without closing requirements.
+- **Evidence.** 58 focused checks pass. All 48 fixed engine rows executed: one challenge corrected, 47 unchanged. All twelve hidden-email service variants are fully masked across 21 ASGI requests. [Change record](./runs/changes/2026-11-12-155202-hidden-email-candidate-73e6b6d2.json).
+- **Not claimed.** Five added variants also mask surrounding context. Remaining English false masking and obfuscated addresses persist. Candidate not deployed; real network/pipeline, independent accuracy and human acceptance pending. 70 full requirements remain open.
+
+
 ## Unreleased — 2026-11-10
 
 ### 2026-11-10-010808-private-tools-live-state-16d60162
