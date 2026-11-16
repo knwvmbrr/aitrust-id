@@ -1,6 +1,6 @@
 # Tag status and ownership — 2026-11-16
 
-Recorded 2026-11-16T20:06:43.796533+00:00 · Codex PM
+Recorded 2026-11-16T20:48:32.373227+00:00 · Codex PM
 
 Five equal engineering/acceptance milestones from scope ledger. Completion percentage is not accuracy, perfection or a calibrated probability. 100 requires the complete agreed bounded job and final acceptance; no finite test proves perfection.
 
@@ -8,14 +8,14 @@ Five equal engineering/acceptance milestones from scope ledger. Completion perce
 
 | Tag | Completion | Current assignment | Remaining job |
 | --- | ---: | --- | --- |
-| NF | 20% | Codex reference-pair specialist (/root/seo) — active independent code lane | Claim units, declared corpus/freshness, evidence-to-claim matching, integration and independent validation. |
-| FI | 20% | Codex reference-pair specialist (/root/seo) — active independent code lane | Reference contradiction versus unresolved citation; evidence mapping, integration and independent validation. |
+| NF | 20% | Codex reference-pair specialist (/root/seo) — selected-reference evidence candidate implemented; parent tag incomplete | Claim units, declared corpus/freshness, evidence-to-claim matching, integration and independent validation. |
+| FI | 20% | Codex reference-pair specialist (/root/seo) — selected-reference evidence candidate implemented; parent tag incomplete | Reference contradiction versus unresolved citation; evidence mapping, integration and independent validation. |
 | HP | 20% | Codex PM; specialist slot queued — queued | Separate unsupported detail, contradiction and hedging methods; calibrated mapping and independent validation. |
 | MT | 20% | Codex MT specialist; PM integration — urgency candidate integrated; combined-source validation pending | Context/quotation and benign-safety discrimination, independent annotation agreement, integration and release measurement. |
 | PS | 80% | Codex PM/integration; Michael coordinates independent reviewers — release evidence pending | Frozen independently labeled current-method corpus, error bounds and human route acceptance. |
 | IV | 20% | Codex PM; specialist slot queued — queued | Consent, reviewer identity and independence, artifact-bound review scope, withdrawal and challenge handling. |
-| FA | 20% | Codex image evidence specialist (/root/web_camo) — image declaration evidence lane active; parent tag incomplete | Positive bound generation evidence, signer trust/revocation, unknown-source treatment and independent validation. |
-| PA | 20% | Codex image evidence specialist (/root/web_camo) — image declaration evidence lane active; parent tag incomplete | Explicit contribution/edit events and consent, binding and trust; no authorship inference from missing evidence. |
+| FA | 20% | Codex image evidence specialist (/root/web_camo) — image declaration evidence candidate implemented; parent tag incomplete | Positive bound generation evidence, signer trust/revocation, unknown-source treatment and independent validation. |
+| PA | 20% | Codex image evidence specialist (/root/web_camo) — image declaration evidence candidate implemented; parent tag incomplete | Explicit contribution/edit events and consent, binding and trust; no authorship inference from missing evidence. |
 | UNK | 20% | Codex PM; specialist slot queued — compatibility work queued | Adopt and verify the mapping of uncertainty, unsupported, unavailable and evaluation errors; not an accuracy detector. |
 | PII_REDACTED | 80% | Codex PM; dedicated next method slot queued — working local preview | Reduce false masking and missed obfuscated entities; independently assess supported entities/languages and actual user operation. |
 | PII_OUTBOUND | 20% | Codex PM; specialist slot queued — queued | Permissioned pre-send capture, warning/edit/cancel/proceed and independent recognition/route acceptance. |
@@ -29,8 +29,8 @@ PS development precision/recall are31/31, point100%, Wilson95% lower bound88.97%
 
 - **PM/integration (/root)**: active. Scope, ownership, source review, integration and release evidence; owns queued tag outcomes.
 - **Debugging Lead (/root/share_debugger)**: baseline behavior observed; candidate comparison and cleanup pending. Native switch intrinsic-size candidate typechecks; behavior and current Share full acceptance remain unverified.
-- **NF/FI evidence engineer (MT candidate delivered) (/root/seo)**: active implementation. Bound a caller-selected claim/reference pair to exact local corpus, hashes and spans; compare with existing pinned NLI worker without a truth/tag claim.
-- **Image evidence engineer (/root/web_camo)**: active implementation. Opt-in AI generation/edit declarations from active signed manifest; separate declaration, integrity, trust and unknown revocation. Text view integrated; no FA/PA released.
+- **NF/FI evidence engineer (MT candidate delivered) (/root/seo)**: candidate delivered; PM integration validation. Bound a caller-selected claim/reference pair to exact local corpus, hashes and spans; compare with existing pinned NLI worker without a truth/tag claim.
+- **Image evidence engineer (/root/web_camo)**: candidate delivered; PM integration validation. Opt-in AI generation/edit declarations from active signed manifest; separate declaration, integrity, trust and unknown revocation. Text view integrated; no FA/PA released.
 
 Four total slots: PM plus three specialist lanes. Dedicated ownership does not mean fourteen simultaneous running agents. Specialists rotate in explicit waves; queued tags are not represented as active.
 

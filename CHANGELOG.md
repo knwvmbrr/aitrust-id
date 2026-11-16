@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-205251-independent-evidence-current-verification-8a0369d3
+
+Recorded 2026-11-16T20:52:51.343634+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bind the combined independent evidence routes and readable guides to current-source website and personal-boundary checks, retaining private failure handling and unchanged tag release gates.
+- **Evidence.** All32 website capability commands and the complete current route boundary guard pass with stable source; Mac inspector21 controls and declaration12 case groups pass on the reconciled optional CLI. All202 originals remain132 complete/70 open; actual independent tag accuracy and human acceptance remain separate. [Change record](./runs/changes/2026-11-16-205251-independent-evidence-current-verification-8a0369d3.json).
+- **Not claimed.** Hosted Linux profile execution, protected merge and exact-site publication still pending. No released NF/FI/FA/PA, no AI-origin/truth certification, no automatic collection and no full original requirement closure. The earlier model/preparer source snapshots remain historical and are not rewritten.
+
+
+### 2026-11-16-204832-independent-evidence-discovery-and-boundaries-2d553d3b
+
+Recorded 2026-11-16T20:48:32.779287+00:00 · Contributor: Codex PM and NF/FI, image, debugging specialists · change
+
+- **Changed.** Expose the selected-reference guide and separate image evidence workflow, preserve independent optional failure paths, and bind all new source/fixture/CI inputs in the route inventory.
+- **Evidence.** Reconciled image CLI passes170 focused controls,21 actual inspector controls and12 actual new-profile case groups on Mac. Selected comparison has current-method CLI/model evidence plus the repaired private-path refusal. Scope/accountability preserve202 originals,132 complete,70 open and11 separately tracked enhancements. [Change record](./runs/changes/2026-11-16-204832-independent-evidence-discovery-and-boundaries-2d553d3b.json).
+- **Not claimed.** Supporting tools are not released NF/FI/FA/PA tags. New combined browser, hosted Linux and protected publication checks are pending; independent accuracy, actual humans/physical devices and full original closures remain open. Actual future CI savings are not inferred from YAML.
+
+
 ### 2026-11-16-204358-ci-event-efficiency-b1941b27
 
 Recorded 2026-11-16T20:43:58.493901+00:00 · Contributor: Codex CI efficiency lane · change

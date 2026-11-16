@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-204832-independent-evidence-discovery-and-boundaries-2d553d3b",
+  "recorded_at": "2026-11-16T20:48:32.779287+00:00",
+  "author": "Codex PM and NF/FI, image, debugging specialists",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "252e8e25601744c8b3340532594d9fbee2271834",
+  "changed": "Expose the selected-reference guide and separate image evidence workflow, preserve independent optional failure paths, and bind all new source/fixture/CI inputs in the route inventory.",
+  "proves": "Reconciled image CLI passes170 focused controls,21 actual inspector controls and12 actual new-profile case groups on Mac. Selected comparison has current-method CLI/model evidence plus the repaired private-path refusal. Scope/accountability preserve202 originals,132 complete,70 open and11 separately tracked enhancements.",
+  "limits": "Supporting tools are not released NF/FI/FA/PA tags. New combined browser, hosted Linux and protected publication checks are pending; independent accuracy, actual humans/physical devices and full original closures remain open. Actual future CI savings are not inferred from YAML.",
+  "scope_ids": [
+    "F-020b",
+    "F-025",
+    "T-NF",
+    "T-FI",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "docs/scope-priorities-2026-11-16.json": "a991e5d5bd1b3affb324a542cfc5cce1d5b274e376ad8ba3d2a7c39bd872de8f",
+    "docs/scope-progress.json": "82782c3420a048bef3fd35735efc798bd98c87a7e23e149dbdce135245ae6b9b",
+    "docs/scope-progress.md": "c10de32f35c0af6ab2834ba39a77c66f3849966b7fb6e7d488daf5b5ae6bdfb7",
+    "docs/tag-integration-2026-11-16.md": "ecae12e2a2d128587cd16a6f5ae3eeeeddc084e970c1d445e0057b6a278423ea",
+    "docs/tag-status-2026-11-16.json": "775035f1933ca3236772b71a69204b31378fde7f13287da7b18d20a0d7fedf2a",
+    "docs/tag-status-2026-11-16.md": "f47a0c398e08c2ef9c46daf67641bbcdde2d95b01ef0acf6a0c3ed20dd68fe9e",
+    "eval/route-boundaries.json": "01b2ece2aee207ea5b818d59b0e9468802d509c22efdf6dbec3bdd0ddae9de0c",
+    "runs/2026-11-16-integrated-image-declarations-macos.json": "db148203d4472336da01d0af8e41c186a698def24919e1f0638570caafda8a78",
+    "runs/2026-11-16-integrated-image-inspection-macos.json": "b7994ca95b0716298ac66b6e83b902a8a668a10b7a1da62ecc1b48b03041344f",
+    "scripts/verify-route-boundaries.py": "6f67e21a7d7604b1c1001cd9e143512af81323188d6a097e01cf20f259ec95b4",
+    "site/public/reference/public-scope.json": "4719a3efd848eb0af797ae4913d42b331e0c0cd0b168b7acd0fc66bf8102a7a3",
+    "site/public/reference/selected-reference-comparison.md": "025ba87f28202c32894e21a26f1a13885f308cfc1496cdaccacce5bef8f8d8bf",
+    "site/public/reference/selected-reference-pair-plan.md": "da395f28d91c4c78cdf8e258c065dfed1bad6ad57f7c14bda5641c7b2edfea71",
+    "site/scripts/prepare.mjs": "4c034764ad0cbfe98f13f73a977f3e0ce736c006e8254a8a3e5f267dd5077d8d",
+    "site/scripts/render-reference.mjs": "fed6373d3b5db9c105242e0c1c2f401c4499c91a15f09ff63c1197bd11336f4c",
+    "site/src/public-scope.json": "4719a3efd848eb0af797ae4913d42b331e0c0cd0b168b7acd0fc66bf8102a7a3",
+    "site/src/scope-manifest.json": "366e70c0aa171d4d85aa639ae808b4a709d17d9865b3356395ab03f126bf1a86",
+    "state.json": "6c3e99a27a41c69b65d28dcc104fa7fe4119934b4d537caf0eeb930a1cdca9a9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-evidence-lanes-merge.json",
+      "sha256": "545db5087f15f6fb16a1b59d170afc77f2de38f0780049b4e5a87bca91786dc3"
+    },
+    {
+      "path": "runs/2026-11-16-integrated-image-inspection-macos.json",
+      "sha256": "b7994ca95b0716298ac66b6e83b902a8a668a10b7a1da62ecc1b48b03041344f"
+    },
+    {
+      "path": "runs/2026-11-16-integrated-image-declarations-macos.json",
+      "sha256": "db148203d4472336da01d0af8e41c186a698def24919e1f0638570caafda8a78"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-preparer-fixed.json",
+      "sha256": "9f63ccd88bc26c91c290fa8421238a3edd7648dbdfc578e6ae06c704b06dbb70"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:48:33.467234+00:00"
+    }
+  ]
+}

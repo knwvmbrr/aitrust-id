@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-16T20:09:45.055440+00:00",
+  "audited_at": "2026-11-16T20:47:35.175951+00:00",
   "client_date": "2026-11-12",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -1628,7 +1628,19 @@
       ],
       "queue": "open",
       "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established.",
-      "declared_review_window_component": "Caller-declared windows bind every attached document, refuse before model use and recheck before saving. Actual source freshness and reviewer identity remain unestablished; no NF/FI mapping or independent validation is credited."
+      "declared_review_window_component": "Caller-declared windows bind every attached document, refuse before model use and recheck before saving. Actual source freshness and reviewer identity remain unestablished; no NF/FI mapping or independent validation is credited.",
+      "selected_reference_increment": {
+        "recorded_at": "2026-11-16T20:47:35.175951+00:00",
+        "implemented_by": "Codex NF/FI engineer; Debugging Lead refusal review; PM integration",
+        "job": "An explicitly selected private claim/reference-line pair bypasses automatic lexical retrieval without inventing a retrieval score; exact claims/corpus/spans, original worker limits and private export remain bound.",
+        "evidence": [
+          "runs/2026-11-16-selected-reference-pair.json",
+          "runs/2026-11-16-selected-reference-preparer-fixed.json"
+        ],
+        "parent_requirement_complete": false,
+        "independent_accuracy_evidence": false,
+        "comparison_cli_and_worker_unchanged_after_model_receipt": true
+      }
     },
     {
       "id": "F-081",
