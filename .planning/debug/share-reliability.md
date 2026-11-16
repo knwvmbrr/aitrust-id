@@ -1,5 +1,5 @@
 ---
-status: verifying
+status: diagnosing
 trigger: "Native iOS Practice sharing / Share explicit Check intermittently do not act on the first UI-test tap"
 created: 2026-11-16
 updated: 2026-11-16
@@ -7,7 +7,7 @@ updated: 2026-11-16
 
 ## Current focus
 
-Next verification: hosted iOS 27.2 standard exact-five run with the retained snapshot readiness and failure-count guard, original single taps, original assertions and bounds. Local uninstrumented candidate failed 0/2 with repeated upstream Recap HID corruption. The 200 ms duration hypothesis is falsified and reverted. No further unchanged local retry; no runtime Swift change; no selected proof replacement.
+Both final-source hosted attempts are unavailable at boot before any build/UI workflow. No third unchanged retry. The new diagnostic revision preserves live boot/migration progress through a PTY, records only numeric host capacity and exact command-output hashes, and leaves all deadlines, strict cleanup and exact-five acceptance unchanged. All 117 adjacent packaging/verifier controls pass; current complete native proof remains source-stale and unselected. Owner-dependent signing is deferred.
 
 ## Symptoms
 
@@ -68,3 +68,10 @@ root_cause: Captured cold Practice first action is cancelled upstream in Simulat
 fix: Retain one public cell snapshot per readiness poll plus actual failure-count diagnostic capture. Reject and revert the unsupported gesture-duration candidate. No production workaround.
 verification: Diagnostic original-source instrumented 2/2 and 5/5 are NOT acceptance; cold50ms reproduction failed; cold200ms overall failed on diagnostic teardown; uninstrumented200ms focused candidate failed 0/2. Current final five-source acceptance is pending hosted iOS27.2. All owned simulators removed.
 files_changed: mobile/ios/Tests/UIFlows.swift; docs/share-reliability-plan.md; .planning/debug/share-reliability.md
+
+
+## Hosted bootstrap follow-up
+
+Run 43908324857 attempt1: bootstatus180s deadline, owned cleanup succeeds. Attempt2 (one predeclared fresh host): bootstatus180s and shutdown90s deadlines, deletion eventually succeeds but strict cleanup remains false. Neither executes a UI workflow. Raw phase output is buffered/lost, so no application failure or startup remedy is inferred.
+
+A controlled stdout experiment reproduces the observability gap. The final runner uses nonblocking PTY capture only for bootstatus with documented migration detail. It retains exact output counts/hashes and final return codes; normal JSON stays unchanged. A first large-output helper control fails its five-second bound due to fixed-sleep draining; readiness-based waiting repairs it within the same bound. Final adjacent suite117/117 passes. A separate combined suite retains two expected stale-native-proof failures; nothing is waived. Next publish this diagnostic revision and inspect one bounded hosted run, rather than repeating an unchanged attempt.

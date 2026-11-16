@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T16:27:50.703905+00:00",
+  "updated": "2026-11-16T17:02:41.271088+00:00",
   "active_increment": "Apple package validation passed. Source branch reconciles the published MT increment without losing any of 202 originals. Focused Share diagnostic without active signing passes one test and fails one; full integration remains withheld. 70 requirements remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -760,7 +760,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-16T16:27:50.703905+00:00",
+    "audited_at": "2026-11-16T17:02:41.271088+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T16:27:50.703905+00:00",
+  "updated_at": "2026-11-16T17:02:41.271088+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1901,13 +1901,13 @@
       "retained_startup_refusal": "runs/2026-11-09-native-share-hosted-startup-refusal.json"
     },
     "code_and_guide_published": true,
-    "distribution_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
+    "distribution_archive": "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
     "workflow_current_source_pass": false,
     "publication_pending": true,
     "rejected_supported_provider_attempt": "runs/2026-11-10-native-typed-provider-rejected.json",
     "previous_workflow_proof": "runs/2026-11-12-ios-text-resource-workflow.json",
     "current_merged_readiness": "runs/2026-11-12-ios-merged-readiness.json",
-    "current_hosted_failure": "runs/2026-11-12-ios-module-hosted-setup-failed.json",
+    "current_hosted_failure": "runs/2026-11-16-native-hosted-boot-replicate-unavailable.json",
     "current_native_failure": "runs/2026-11-12-ios-first-line-share-failed.json",
     "previous_complete_ui_workflows_passed": 5,
     "selected_integration_credit_withheld": true,
@@ -1928,7 +1928,15 @@
       "replaces_full_five_workflow_proof": false
     },
     "current_full_workflow_executed": false,
-    "ui_workflows_scope": "Historical last full run only; final November16 snapshot-readiness source has no current complete five-workflow acceptance."
+    "ui_workflows_scope": "Historical last full run only; final November16 snapshot-readiness source has no current complete five-workflow acceptance.",
+    "hosted_replicate": "Both predeclared current-source attempts unavailable at boot before UI; second strict cleanup false. No further unchanged retry; bounded bootstrap diagnosis next.",
+    "boot_observability": {
+      "evidence": "runs/2026-11-16-native-boot-observability-controls.json",
+      "adjacent_controls_passed": 117,
+      "boot_startup_fix_established": false,
+      "deadlines_unchanged": true,
+      "exact_five_required": true
+    }
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3011,7 +3019,7 @@
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
-    "device_archive_evidence": "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+    "device_archive_evidence": "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
     "archive_signed": false,
     "store_bundle_configured": true,
     "app_store_record_created": true,
@@ -3043,7 +3051,7 @@
     "source_publication": "runs/2026-11-09-pan-publication.json",
     "app_store_publication_pending": true,
     "app_store_session_requires_sign_in": false,
-    "current_session_observation": "runs/2026-11-10-app-store-draft-reopened.json",
+    "current_session_observation": "runs/2026-11-16-testflight-information-saved.json",
     "promotional_text_saved": "Check selected text offline with the PS development preview. Review matched command patterns on your device, with no account.",
     "review_contact_phone_requires_owner": true,
     "review_contact_saved": false,
@@ -3114,11 +3122,14 @@
     "privacy_manifest_packaging": {
       "source": "mobile/ios/PrivacyInfo.xcprivacy",
       "controls": "runs/2026-11-16-ios-privacy-packaging-controls.json",
-      "archive": "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+      "archive": "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
       "actual_bundle_copies": 2,
       "actual_resources_compared": 34,
       "full_privacy_or_license_clearance": false
-    }
+    },
+    "beta_information_saved": true,
+    "beta_information_evidence": "runs/2026-11-16-testflight-information-saved.json",
+    "testflight_builds_observed": 0
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",

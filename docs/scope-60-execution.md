@@ -222,3 +222,14 @@ accuracy remain separate.
 All 202 original records remain: **132 complete / 70 open**, ten full closures
 short of 60. These repairs do not waive any original acceptance or close a full
 requirement. N-013 stays at 60% pending current integration evidence.
+
+
+TestFlight pilot instructions and feedback/privacy links are now saved, with no
+build uploaded. Two current-source hosted attempts stop at simulator boot; the
+second retains strict cleanup failure. The diagnostic revision now captures
+live boot phases and numeric capacity instead of losing buffered stdout. All
+117 adjacent verifier/package controls pass, and the source-current unsigned
+archive again passes 34 resource comparisons. Old selected native evidence is
+still rejected as stale; no acceptance predicate, timeout or source guard is
+weakened. These are software and operating improvements, with the original
+**132 complete / 70 open** count preserved.

@@ -172,3 +172,21 @@ Owner-dependent signing remains deferred. See the
 [bounded signing attempt](../runs/2026-11-16-ios-signed-candidate-timeout.json) and the
 [privacy manifest plan](ios-privacy-manifest-plan.md). Full dependency/privacy
 review and final platform declarations remain open.
+
+
+## Saved TestFlight pilot information — November 16
+
+The signed-in TestFlight page shows **No Builds**. Beta instructions, explicit
+Practice/Check/Clear steps, voluntary-feedback guidance, admin feedback address,
+marketing/privacy links and reviewer notes are now saved; Apple displays
+**Saved**. The [exact saved copy](testflight-preview-copy.json) and
+[observation](../runs/2026-11-16-testflight-information-saved.json) are versioned.
+Review contact fields remain blank, sign-in stays unnecessary, and the license
+agreement was not edited. No tester was invited or beta review submitted.
+
+The phone's observed Developer Mode setting concerns local Xcode/development
+installation. It is not a TestFlight prerequisite: Apple's
+[Developer Mode guidance](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)
+explicitly leaves normal TestFlight installation unaffected. No phone security
+setting needs to be weakened for that distribution route. Signing, reviewed
+upload and a real TestFlight build are still required.

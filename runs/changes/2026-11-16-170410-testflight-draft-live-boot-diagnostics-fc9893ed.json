@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-170410-testflight-draft-live-boot-diagnostics-fc9893ed",
+  "recorded_at": "2026-11-16T17:04:10.726977+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "22fca65df7cd967db5164e829199915ebec7f6e2",
+  "changed": "Save explicit TestFlight beta instructions and feedback links; retain both hosted boot failures and repair live boot/migration output capture with bounded numeric host capacity and exact output hashes.",
+  "proves": "Apple displays Saved for the beta draft and No Builds. All 117 adjacent real-process verifier/packaging controls pass; a new source-bound unsigned iPhoneOS archive passes 34 resource comparisons. Default JSON capture, all original UI scenarios/assertions/deadlines and strict cleanup remain unchanged.",
+  "limits": "This is observability, not a simulator startup fix. Both hosted attempts execute zero UI workflows; second strict cleanup is false. The old native proof still fails two source-freshness checks. No new signing, TestFlight upload, platform declaration, independent/physical/human acceptance or full requirement closure. Preserve 202 records, 132 complete and 70 open.",
+  "scope_ids": [
+    "N-013",
+    "F-120",
+    "F-057",
+    "X-02",
+    "F-150"
+  ],
+  "files": {
+    ".planning/debug/share-reliability.md": "873433c1d1bd5ca7616a972a9d40e8bc3fc0ce0671df643953d6186d111d141e",
+    "docs/app-store-readiness.md": "30b66b757d75ec8d90e4bae166ae460184d7e64330433fbf534c3680c050a7c6",
+    "docs/scope-60-execution.md": "0494d8ee51bcd1036a61cb1127bbfbd38dd197a2a22fadb8403d1e29db624679",
+    "docs/scope-progress.json": "ca3f1182844f5883c850d4b7ae61de2fe276f90eb9d086b43000c881454425fd",
+    "docs/scope-progress.md": "78474cac22ee3b74f1442734fb7a204e6c1d77248377faa266ff3123a89aae6c",
+    "docs/share-reliability-plan.md": "cf2ef39698ac5c329a552540ea175b3377fd7cef0d954a41e19c70fbee72067e",
+    "docs/testflight-preview-copy.json": "4db13feebc112dd7a65d58a657ace2e128c15851e07d083d19eed2dd74f7a68d",
+    "eval/route-boundaries.json": "e82c301da29854f9679efc3d947ec6815ae49999a57c9f6b57983b080a645b5e",
+    "scripts/verify-ios-share.py": "f9ec77837d0080f63e06b48621c47284bb63cd64549964e167f88c9cea1555de",
+    "site/public/reference/public-scope.json": "8a654e19caccb7ab2ace84c4eebd4943bd0222536599534c1bee3c9e9c787ca8",
+    "site/src/public-scope.json": "8a654e19caccb7ab2ace84c4eebd4943bd0222536599534c1bee3c9e9c787ca8",
+    "site/src/scope-manifest.json": "cb09408a29fbd115180df81852d7da891b20575707dd462fa3c2373a86d4d89f",
+    "state.json": "eb67d7562130917d447adc8154dab175a33560e0d7200ccda7facdce749f4c29",
+    "tests/test_ios_share_verifier.py": "1110a06d154db02dcec263d119bfa883b804793e72f9b4d598ee7a20255f290a",
+    "runs/2026-11-16-ios-observable-source-unsigned-archive.json": "3d01a0d06a65a29aad9edfcf9a724035dae991203905a251d2003b5bf24fc890",
+    "runs/2026-11-16-native-boot-observability-controls.json": "8d44fa8c4caec6ee95b2c5334799ccee2e9dac7577b8e5c75ff78c3179d179c0",
+    "runs/2026-11-16-native-hosted-boot-replicate-unavailable.json": "cd9a8b7c590d5fa2b7d16788317896f85c47f989f8a3e27226824d8f7c6737a5",
+    "runs/2026-11-16-native-hosted-boot-unavailable.json": "22a4d1bb52e8151181e674b65aec23f1eafaaf88ef901e3d1536bbe6dd033095",
+    "runs/2026-11-16-testflight-information-saved.json": "e138c95ceef3953d6eb5a2ffe3dd407a3afc9997f1ad5b67285d9fe667a16159"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
+      "sha256": "3d01a0d06a65a29aad9edfcf9a724035dae991203905a251d2003b5bf24fc890"
+    },
+    {
+      "path": "runs/2026-11-16-native-boot-observability-controls.json",
+      "sha256": "8d44fa8c4caec6ee95b2c5334799ccee2e9dac7577b8e5c75ff78c3179d179c0"
+    },
+    {
+      "path": "runs/2026-11-16-native-hosted-boot-replicate-unavailable.json",
+      "sha256": "cd9a8b7c590d5fa2b7d16788317896f85c47f989f8a3e27226824d8f7c6737a5"
+    },
+    {
+      "path": "runs/2026-11-16-native-hosted-boot-unavailable.json",
+      "sha256": "22a4d1bb52e8151181e674b65aec23f1eafaaf88ef901e3d1536bbe6dd033095"
+    },
+    {
+      "path": "runs/2026-11-16-testflight-information-saved.json",
+      "sha256": "e138c95ceef3953d6eb5a2ffe3dd407a3afc9997f1ad5b67285d9fe667a16159"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T17:04:11.307297+00:00"
+    }
+  ]
+}

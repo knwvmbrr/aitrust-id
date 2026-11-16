@@ -7011,7 +7011,8 @@
           "docs/ios-privacy-manifest-plan.md",
           "mobile/ios/PrivacyInfo.xcprivacy",
           "runs/2026-11-16-ios-privacy-packaging-controls.json",
-          "runs/2026-11-16-ios-privacy-unsigned-archive.json"
+          "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+          "runs/2026-11-16-ios-observable-source-unsigned-archive.json"
         ],
         "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. November16: both actual app/Share privacy-manifest copies match the reviewed false-tracking source;100 focused packaging/archive-refusal controls pass. Required-reason API, full transitive/source-offer permission and platform data-use review remain open; percentage unchanged.",
         "required_acceptance": [
@@ -7348,14 +7349,15 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-10-15T03:11:02.842307+00:00",
+        "audited_at": "2026-11-16T17:02:41.271088+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — manifest-v2 selected execution recipe, legacy label-only comparison and 84/21 macOS/Linux controls, 2026-10-12T03:27:21.911845+00:00",
           "Codex — repaired selected execution inputs and genuine pre-v2 label compatibility; actual Mac/Linux controls 2026-10-12T03:57:28.989180+00:00",
           "Codex — actual versioned two-profile conformance runner, 28 selected reference checks and focused hostile-process checks; no outside-person acceptance, 2026-10-15T03:11:02.842307+00:00",
-          "Codex — current/stale/missing execution-receipt index preserving all scope and open gates; no release acceptance, 2026-10-15T03:11:02.842307+00:00"
+          "Codex — current/stale/missing execution-receipt index preserving all scope and open gates; no release acceptance, 2026-10-15T03:11:02.842307+00:00",
+          "Codex — bounded native command-output retention, live boot phase and exact byte/hash/return-code controls; native acceptance remains unverified, 2026-11-16T17:02:41.271088+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -7391,9 +7393,11 @@
           "docs/evidence-packet.md",
           "tools/evidence_packet.py",
           "scripts/build-evidence-packet.py",
-          "tests/test_evidence_packet.py"
+          "tests/test_evidence_packet.py",
+          "docs/share-reliability-plan.md",
+          "runs/2026-11-16-native-boot-observability-controls.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Versioned synthetic interoperability runner and source-bound evidence index now execute. Actual outside-person acceptance and existing full release criteria remain unfulfilled; no completion percentage changed.",
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Versioned synthetic interoperability runner and source-bound evidence index now execute. Actual outside-person acceptance and existing full release criteria remain unfulfilled; no completion percentage changed. Native boot diagnostics now retain live terminal progress, output hashes and real failure codes under unchanged limits; this does not complete native/human/independent gate evidence.",
         "required_acceptance": [
           "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required."
         ],
@@ -11009,7 +11013,8 @@
           "docs/ios-privacy-manifest-plan.md",
           "mobile/ios/PrivacyInfo.xcprivacy",
           "runs/2026-11-16-ios-privacy-packaging-controls.json",
-          "runs/2026-11-16-ios-privacy-unsigned-archive.json"
+          "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+          "runs/2026-11-16-ios-observable-source-unsigned-archive.json"
         ],
         "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. November16: both actual app/Share privacy-manifest copies match the reviewed false-tracking source;100 focused packaging/archive-refusal controls pass. Required-reason API, full transitive/source-offer permission and platform data-use review remain open; percentage unchanged.",
         "required_acceptance": [
@@ -13531,7 +13536,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-11-16T16:27:50.703905+00:00",
+        "audited_at": "2026-11-16T17:02:41.271088+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -13539,7 +13544,8 @@
           "Codex — separate App Store record, registered app/Share identifiers, unsigned distribution archive, bundled offline notices and presentation-ready explicit checks; 2026-11-09T16:17:10.971578+00:00",
           "Codex — interpreted source resource packaging, 137-case native detector execution, five actual app/Share workflows with retained earlier failures, and inspected Xcode-signed archive; 2026-11-12T16:27:56.021042+00:00",
           "Codex — owner-present existing-key retry and actual Apple package-validation success; 2026-11-16T02:53:08.596732+00:00",
-          "Codex — captured local synthesized-touch cancellation, retained one-snapshot activity readiness/failure-count diagnostic repair, rejected longer-press workaround, and inspected both new privacy manifests in an actual unsigned archive; 2026-11-16T16:27:50.703905+00:00"
+          "Codex — captured local synthesized-touch cancellation, retained one-snapshot activity readiness/failure-count diagnostic repair, rejected longer-press workaround, and inspected both new privacy manifests in an actual unsigned archive; 2026-11-16T16:27:50.703905+00:00",
+          "Codex — live bounded boot diagnostics/output hashes,117 passing adjacent controls, current34-resource unsigned archive and saved TestFlight beta instructions; 2026-11-16T17:02:41.271088+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -13547,7 +13553,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Run exact current-source five-workflow verification on hosted iOS27.2 after the proved readiness-query and diagnostic-capture repairs. New privacy manifests pass actual unsigned app/Share archive inspection (34 resource copies). A bounded existing-identity signing attempt timed out at Share CodeSign without an established cause; defer owner-dependent signing/platform declarations and then complete reviewed upload, physical iPhone, VoiceOver and outside-user acceptance.",
+        "next_fix": "Inspect one bounded hosted run of the new live boot-phase/capacity diagnostics; both prior final-source hosts stopped at boot without UI execution, and the second strict cleanup result is false. Exact current-source five-workflow acceptance remains required. Actual current unsigned archive passes34 resource comparisons. Beta instructions/feedback links are saved in TestFlight with No Builds; owner-dependent signing, final declarations/contact, reviewed upload and physical/VoiceOver/outside-user acceptance remain open.",
         "next_owner": "Michael / physical-device testers / Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -13611,9 +13617,15 @@
           "runs/2026-11-16-native-share-reliability-diagnosis.json",
           "runs/2026-11-16-ios-privacy-packaging-controls.json",
           "runs/2026-11-16-ios-privacy-unsigned-archive.json",
-          "runs/2026-11-16-ios-signed-candidate-timeout.json"
+          "runs/2026-11-16-ios-signed-candidate-timeout.json",
+          "runs/2026-11-16-native-hosted-boot-unavailable.json",
+          "runs/2026-11-16-native-hosted-boot-replicate-unavailable.json",
+          "runs/2026-11-16-native-boot-observability-controls.json",
+          "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
+          "docs/testflight-preview-copy.json",
+          "runs/2026-11-16-testflight-information-saved.json"
         ],
-        "evidence_scope": "Actual Apple package validation passed for version 1.0 (1) on the sealed module archive, with existing identity/profiles and owner-authorized key use. Both original strict signatures, expected entitlements and 32 resource copies pass reinspection. Prior local/server and current Share failures are retained. No upload, App Review approval, physical acceptance, independent accuracy or full requirement closure. A focused unchanged-source diagnostic without active signing passes one of two Share workflows; it cannot replace the full five-workflow proof. The failed final screenshot shows the host app without a share sheet. November16: current selected integration remains withheld; final workflow source has no current full-five pass. Rejected200ms candidate failed0/2. Actual unsigned package inspection passes34 resource comparisons including both reviewed no-tracking manifests; no new signing/Apple validation/upload or requirement closure.",
+        "evidence_scope": "Actual Apple package validation passed for version 1.0 (1) on the sealed module archive, with existing identity/profiles and owner-authorized key use. Both original strict signatures, expected entitlements and 32 resource copies pass reinspection. Prior local/server and current Share failures are retained. No upload, App Review approval, physical acceptance, independent accuracy or full requirement closure. A focused unchanged-source diagnostic without active signing passes one of two Share workflows; it cannot replace the full five-workflow proof. The failed final screenshot shows the host app without a share sheet. November16: current selected integration remains withheld; final workflow source has no current full-five pass. Rejected200ms candidate failed0/2. Actual unsigned package inspection passes34 resource comparisons including both reviewed no-tracking manifests; no new signing/Apple validation/upload or requirement closure. Hosted attempts1/2 stop at boot before UI/build; neither grants integration, and attempt2 retains strict cleanup false. New diagnostic helper and package controls pass117/117; no startup fix is inferred. Actual TestFlight information saves; No Builds remains.",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],

@@ -35,3 +35,35 @@ The public [press(forDuration:)](https://developer.apple.com/documentation/xcuia
 The final repository change retains only one-snapshot readiness and failure-count diagnostic capture. In the failed focused run, the new activity-readiness condition did complete in about two seconds before the subsequent input loss. The original five workflow names, all assertions, single-tap count and every deadline remain; production runtime Swift is unchanged. The final source combination has no current full-five pass. Next verify it once on the newer hosted iOS 27.2 runtime. No unchanged local retry, source guard bypass, selected-proof replacement, physical-device claim or universal input-reliability guarantee is authorized by these diagnostics.
 
 The focused failed receipt hash is `d8fdf76a0524b967f3972954664f8a5cca0aca38f60ef3e270cdac069122ac08`; exact attempted generated test-source hash is `7eaea952a54af61d667dd797c3b958f882100a24b139729267faa97485a303ec`. Raw logs and result bundles remain private. The original untraced Check-result failure remains separate from the captured cancelled Practice contact.
+
+
+The first hosted final-source attempt (`43908324857`, attempt 1) is unavailable
+before compilation/UI execution: `simctl bootstatus` exceeds its existing
+180-second deadline on iOS 27.2. Owned simulator cleanup succeeds. No workflow
+pass or application defect is inferred from this unavailable host. Retain its
+receipt and perform exactly one fresh-host replicate at the same source, limits
+and cost tier. A repeated failure stays failed; do not retry until green.
+
+
+## Bounded boot observability
+
+The one fresh-host replicate also stops at boot, with a shutdown deadline and
+strict cleanup still false despite eventual deletion. No more unchanged retry
+is used. A controlled child process proves that regular-file stdout loses an
+unflushed phase on termination, while a terminal exposes that phase beforehand.
+
+Only bootstatus now uses a nonblocking PTY and its documented migration-detail
+option. Readiness-based draining preserves progress within the original
+180-second bound. Default JSON commands retain regular-file output; command
+events retain exact output byte counts/hashes and final return codes. Before
+boot, record only free space and documented numeric memory/CPU values under a
+five-second query bound. No hostname, environment or whole-system log is taken.
+
+Risks are terminal CRLF formatting, EIO at terminal close, a noisy child delaying
+a deadline, descriptor leaks, and accidentally treating a capture failure as
+command success. Real-process controls exercise these boundaries. A first burst
+control exposed fixed-sleep throttling; readiness-based waiting fixes it under
+the unchanged five-second synthetic limit. The failed candidate is retained.
+All 117 adjacent packaging/verifier controls pass on the final source. The two
+old native-proof checks still fail their source guard, as intended. No simulator
+startup, current full-five pass or TestFlight availability is inferred.

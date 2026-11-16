@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-170410-testflight-draft-live-boot-diagnostics-fc9893ed
+
+Recorded 2026-11-16T17:04:10.726977+00:00 · Contributor: Codex · change
+
+- **Changed.** Save explicit TestFlight beta instructions and feedback links; retain both hosted boot failures and repair live boot/migration output capture with bounded numeric host capacity and exact output hashes.
+- **Evidence.** Apple displays Saved for the beta draft and No Builds. All 117 adjacent real-process verifier/packaging controls pass; a new source-bound unsigned iPhoneOS archive passes 34 resource comparisons. Default JSON capture, all original UI scenarios/assertions/deadlines and strict cleanup remain unchanged. [Change record](./runs/changes/2026-11-16-170410-testflight-draft-live-boot-diagnostics-fc9893ed.json).
+- **Not claimed.** This is observability, not a simulator startup fix. Both hosted attempts execute zero UI workflows; second strict cleanup is false. The old native proof still fails two source-freshness checks. No new signing, TestFlight upload, platform declaration, independent/physical/human acceptance or full requirement closure. Preserve 202 records, 132 complete and 70 open.
+
+
 ### 2026-11-16-162932-share-diagnosis-privacy-package-3753b750
 
 Recorded 2026-11-16T16:29:32.165932+00:00 · Contributor: Codex · change

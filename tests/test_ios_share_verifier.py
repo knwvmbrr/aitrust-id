@@ -85,3 +85,111 @@ def test_actual_deadline_kills_child_and_records_failure(tmp_path):
     assert report['command_events'][0]['outcome'] == 'deadline'
     with pytest.raises(ProcessLookupError): os.kill(int(pid.read_text()), 0)
     assert (tmp_path / 'synthetic_deadline.log').exists()
+
+
+def test_terminal_progress_survives_actual_deadline(tmp_path):
+    import sys, hashlib
+    report = {'command_events': []}
+    # No explicit flush: native tools line-buffer only when stdout is a TTY.
+    code = "import sys,time; print('tty=' + str(sys.stdout.isatty())); print('synthetic boot phase'); time.sleep(20)"
+    with pytest.raises(ValueError, match='deadline'):
+        verifier['run_command']([sys.executable, '-c', code], output=tmp_path,
+            stage='terminal_deadline', report=report, created=True, timeout=1,
+            terminal_output=True)
+    retained = (tmp_path / 'terminal_deadline.log').read_bytes()
+    assert b'tty=True' in retained and b'synthetic boot phase' in retained
+    event = report['command_events'][0]
+    assert event['outcome'] == 'deadline' and event['returncode'] < 0
+    assert event['output_transport'] == 'pty'
+    assert event['output_bytes'] == len(retained)
+    assert event['output_sha256'] == hashlib.sha256(retained).hexdigest()
+
+
+@pytest.mark.parametrize('exit_status', [0, 7])
+def test_terminal_quick_exit_preserves_output_and_status(tmp_path, exit_status):
+    import sys
+    report = {'command_events': []}
+    argv = [sys.executable, '-c', f"import sys; print('synthetic boot phase'); sys.exit({exit_status})"]
+    options = dict(output=tmp_path, stage='terminal_exit', report=report,
+                   created=True, terminal_output=True)
+    if exit_status:
+        with pytest.raises(ValueError, match='command failed'):
+            verifier['run_command'](argv, **options)
+    else:
+        assert verifier['run_command'](argv, **options) == 'synthetic boot phase'
+    assert b'synthetic boot phase' in (tmp_path / 'terminal_exit.log').read_bytes()
+    assert report['command_events'][0]['returncode'] == exit_status
+
+
+def test_terminal_output_larger_than_pty_buffer_does_not_block(tmp_path):
+    import sys
+    report = {'command_events': []}
+    result = verifier['run_command']([sys.executable, '-c', "print('x' * 100000)"],
+        output=tmp_path, stage='terminal_burst', report=report, created=True,
+        timeout=5, terminal_output=True)
+    assert result == 'x' * 100000
+    assert report['command_events'][0]['outcome'] == 'passed'
+
+
+def test_terminal_descriptors_close_when_process_cannot_start(tmp_path, monkeypatch):
+    import os
+    captured = []
+    original = verifier['pty'].openpty
+    def opened():
+        pair = original(); captured.extend(pair); return pair
+    def unavailable(*args, **kwargs):
+        raise OSError('synthetic unavailable executable')
+    monkeypatch.setattr(verifier['pty'], 'openpty', opened)
+    monkeypatch.setattr(verifier['subprocess'], 'Popen', unavailable)
+    report = {'command_events': []}
+    with pytest.raises(OSError, match='unavailable executable'):
+        verifier['run_command'](['synthetic-unavailable'], output=tmp_path,
+            stage='terminal_spawn', report=report, created=True, terminal_output=True)
+    assert len(captured) == 2
+    for descriptor in captured:
+        with pytest.raises(OSError): os.fstat(descriptor)
+    assert report['command_events'][0]['outcome'] == 'unexpected_failure'
+
+
+def test_regular_json_output_is_not_given_terminal_formatting(tmp_path):
+    import sys, json
+    report = {'command_events': []}
+    result = verifier['run_command']([sys.executable, '-c',
+        "import json,sys; print(json.dumps({'tty':sys.stdout.isatty()}))"],
+        output=tmp_path, stage='regular_json', report=report, created=True)
+    assert json.loads(result) == {'tty': False}
+    assert 'output_transport' not in report['command_events'][0]
+
+
+def test_terminal_capture_failure_cannot_return_command_success(tmp_path, monkeypatch):
+    import sys, errno
+    masters = []
+    openpty = verifier['pty'].openpty
+    read = verifier['os'].read
+    def opened():
+        pair = openpty(); masters.append(pair[0]); return pair
+    def unavailable(descriptor, size):
+        if descriptor in masters: raise OSError(errno.EBADF, 'synthetic capture refusal')
+        return read(descriptor, size)
+    monkeypatch.setattr(verifier['pty'], 'openpty', opened)
+    monkeypatch.setattr(verifier['os'], 'read', unavailable)
+    report = {'command_events': []}
+    with pytest.raises(ValueError, match='capture unavailable'):
+        verifier['run_command']([sys.executable, '-c', 'import time; time.sleep(20)'],
+            output=tmp_path, stage='capture_refusal', report=report, created=True,
+            terminal_output=True)
+    event = report['command_events'][0]
+    assert event['outcome'] == 'capture_failure'
+    assert event['returncode'] < 0
+
+
+def test_only_numeric_documented_host_capacity_is_accepted():
+    assert verifier['host_capacity']('8589934592\n8\n', 6000000000) == {
+        'memory_bytes': 8589934592, 'logical_cpus': 8, 'disk_free_bytes': 6000000000}
+
+
+@pytest.mark.parametrize('raw', ['', '8', '8 2 extra', '0 2', '8 0', '-1 2',
+                                 '8 2.0', 'memory=8 cpu=2', '８ ２'])
+def test_missing_or_malformed_host_capacity_cannot_be_reported_as_numeric(raw):
+    with pytest.raises(ValueError, match='capacity unavailable'):
+        verifier['host_capacity'](raw, 6000000000)

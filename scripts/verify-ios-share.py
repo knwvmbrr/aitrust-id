@@ -2,11 +2,14 @@
 """Build and exercise the unreleased Share workflow on an owned simulator only."""
 import argparse
 from datetime import datetime, timezone
+import errno
 import hashlib
 import json
 import os
 from pathlib import Path
+import pty
 import runpy
+import select
 import shutil
 import signal
 import subprocess
@@ -60,23 +63,62 @@ def simulator_identity(value):
     return value
 
 
-def run_command(argv, *, output, stage, report, created, timeout=30, cleanup=False):
+def host_capacity(raw, free_bytes):
+    values = raw.split()
+    if len(values) != 2 or not all(value.isascii() and value.isdecimal() and int(value) > 0
+                                   for value in values):
+        raise ValueError('Numeric host memory and CPU capacity unavailable')
+    return {'memory_bytes': int(values[0]), 'logical_cpus': int(values[1]),
+            'disk_free_bytes': free_bytes}
+
+
+def run_command(argv, *, output, stage, report, created, timeout=30, cleanup=False,
+                terminal_output=False):
     event = {'stage': stage, 'tool': Path(argv[0]).name,
              'operation': argv[1:3], 'timeout_seconds': timeout, 'cleanup': cleanup,
              'started_at': datetime.now(timezone.utc).isoformat(), 'outcome': 'unexpected_failure'}
     report['command_events'].append(event)
     with tempfile_log() as log:
-        process = subprocess.Popen(argv, cwd=ROOT, stdout=log, stderr=log, start_new_session=True)
+        process = None
+        master = slave = None
+
+        def drain_terminal():
+            if master is None: return
+            # Bound each drain so a noisy child cannot postpone its deadline.
+            for _ in range(16):
+                try: chunk = os.read(master, 65536)
+                except BlockingIOError: return
+                except OSError as error:
+                    if error.errno != errno.EIO: event['capture_error'] = error.errno
+                    return
+                if not chunk: return
+                log.write(chunk)
+
         try:
+            if terminal_output:
+                master, slave = pty.openpty()
+                os.set_blocking(master, False)
+                event['output_transport'] = 'pty'
+            process = subprocess.Popen(argv, cwd=ROOT,
+                stdout=slave if terminal_output else log,
+                stderr=slave if terminal_output else log, start_new_session=True)
+            # Keep the parent's slave open until the final drain. On macOS the
+            # last slave close can discard queued output before we can read it.
             until = time.monotonic() + timeout
             while process.poll() is None:
+                drain_terminal()
+                if event.get('capture_error') is not None:
+                    event['outcome'] = 'capture_failure'
+                    raise ValueError('Terminal output capture unavailable')
                 if time.monotonic() > until:
                     event['outcome'] = 'deadline'
                     raise ValueError('Verification deadline reached')
                 if not cleanup and shutil.disk_usage(output.parent).free < 2_000_000_000:
                     event['outcome'] = 'capacity_reserve'
                     raise ValueError('Build capacity reserve reached')
-                time.sleep(.25)
+                if master is None: time.sleep(.25)
+                else: select.select([master], [], [], .25)
+            drain_terminal()
             log.seek(0)
             raw = log.read()
             event['returncode'] = process.returncode
@@ -87,8 +129,8 @@ def run_command(argv, *, output, stage, report, created, timeout=30, cleanup=Fal
             event['outcome'] = 'passed'
             return decoded
         finally:
-            event['finished_at'] = datetime.now(timezone.utc).isoformat()
-            if process.poll() is None:
+            drain_terminal()
+            if process is not None and process.poll() is None:
                 try: os.killpg(process.pid, signal.SIGTERM)
                 except ProcessLookupError: pass
                 try: process.wait(timeout=5)
@@ -96,11 +138,22 @@ def run_command(argv, *, output, stage, report, created, timeout=30, cleanup=Fal
                     try: os.killpg(process.pid, signal.SIGKILL)
                     except ProcessLookupError: pass
                     process.wait()
+            drain_terminal()
+            for descriptor in (slave, master):
+                if descriptor is not None: os.close(descriptor)
+            event['finished_at'] = datetime.now(timezone.utc).isoformat()
+            if process is not None: event['returncode'] = process.returncode
+            log.seek(0)
+            retained = log.read()
+            event['output_bytes'] = len(retained)
+            event['output_sha256'] = hashlib.sha256(retained).hexdigest()
             # Keep diagnostics even when the deadline, not the tool, fails.
             if created:
-                log.seek(0)
                 with (output / (stage + '.log')).open('ab') as saved:
-                    saved.write(log.read())
+                    saved.write(retained)
+            if event.get('capture_error') is not None and event['outcome'] == 'passed':
+                event['outcome'] = 'capture_failure'
+                raise ValueError('Terminal output capture unavailable')
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -116,9 +169,10 @@ def main():
               'started_at': datetime.now(timezone.utc).isoformat(), 'command_events': []}
     output = args.output
 
-    def command(argv, timeout=30, cleanup=False):
+    def command(argv, timeout=30, cleanup=False, terminal_output=False):
         return run_command(argv, output=output, stage=stage, report=report,
-                           created=created, timeout=timeout, cleanup=cleanup)
+                           created=created, timeout=timeout, cleanup=cleanup,
+                           terminal_output=terminal_output)
 
     try:
         output = destination(output)
@@ -145,12 +199,23 @@ def main():
             target = project / name
             target.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
             target.write_bytes(raw)
+        stage = 'host_capacity'
+        free_bytes = shutil.disk_usage(output.parent).free
+        report['host_capacity'] = {'disk_free_bytes': free_bytes, 'memory_cpu_query': 'unavailable'}
+        # sysctl(8) documents these read-only numeric keys. Never use -a, a
+        # hostname query, environment inventory or a whole-system diagnostic.
+        if Path('/usr/sbin/sysctl').is_file():
+            report['host_capacity'] = host_capacity(command(
+                ['/usr/sbin/sysctl', '-n', 'hw.memsize', 'hw.logicalcpu'], timeout=5), free_bytes)
         stage = 'owned_simulator'
         identity = command(['xcrun', 'simctl', 'create', 'AITrust-ID-Share-proof-' + uuid.uuid4().hex[:8],
                             'com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus', args.runtime])
         owned = simulator_identity(identity)
         command(['xcrun', 'simctl', 'boot', owned])
-        command(['xcrun', 'simctl', 'bootstatus', owned, '-b'], timeout=180)
+        # Native bootstatus output is buffered when redirected to a file. A PTY
+        # retains live phase/migration progress if this existing deadline fires.
+        command(['xcrun', 'simctl', 'bootstatus', owned, '-b', '-d'], timeout=180,
+                terminal_output=True)
         build = ['xcodebuild', '-project', str(project / 'AITrustID.xcodeproj'), '-scheme', 'AITrustID',
                  '-sdk', 'iphonesimulator', '-destination', 'platform=iOS Simulator,id=' + owned,
                  '-derivedDataPath', str(output / 'derived'), '-parallel-testing-enabled', 'NO']
