@@ -1,0 +1,67 @@
+{
+  "captured_at": "2026-11-16T19:44:41.003330+00:00",
+  "pass": true,
+  "author": "Codex - image-evidence lane",
+  "source_base": "2739570fc6864cf5cf6728d320bb7be5d301f8cf",
+  "host": "macOS arm64",
+  "component": "optional PNG evidence text readout",
+  "sources": {
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
+    "tools/manifest_presentation.py": "1c56a49c0f1dcd6b9e051cbab77de0526f00608c35ba2de94a3468f16572c018",
+    "scripts/inspect-manifest.py": "143488d7448e9cb18670e482ccd735c6beced7f14502fe15a091210ffacf8ca2",
+    "scripts/verify-manifest-inspection.py": "3cd7dbba35d7401ab13d7573d581eab38b5c61cdc49834b0983ee363dd9ed89e",
+    "tests/test_manifest_inspection.py": "f776087710a57b0ace9268282c59633f19718c293592dd3e169eaf65386e05c3",
+    "tests/test_manifest_presentation.py": "4d320f74cbd89c299b06e21ed33994f9958c1444716062364ce465118520178a",
+    "tests/test_manifest_workflow.py": "8ec74c48c3f2cb64448f44f190a6e92ed9e9186f3c7d72c77315304725612a89",
+    ".github/workflows/manifest-inspection.yml": "9382d57cf085d7f43bcc3ff132e0ad990d62e3ca45b179965d90ddaa2e2477ad"
+  },
+  "focused_tests": {
+    "pass": true,
+    "tests": 96,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "argv": [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_manifest_inspection.py",
+      "tests/test_manifest_presentation.py",
+      "tests/test_manifest_workflow.py"
+    ]
+  },
+  "real_sdk_cases": 21,
+  "real_sdk_evidence": "runs/2026-11-16-image-evidence-real-sdk-mac.json",
+  "reviewed_actual_outputs": [
+    {
+      "fixture": "signed.png",
+      "exit_status": 0,
+      "text": "AI TRUST ID - PNG evidence check\nMethod: attached-c2pa-inspection/1.0.1 (PNG only).\nAn attached Content Credential was inspected.\nImage binding: Matches the recorded image bytes.\nRecord signature: The record signature matches.\nSigner trust: Not trusted by the configured trust store; this alone is not fraud.\nRevocation: Unknown. Online revocation checks are disabled.\nAI origin: Unknown. This method does not determine whether AI made or edited the image.\nNo tag issued. Image contents and authorship are not verified.\n"
+    },
+    {
+      "fixture": "altered.png",
+      "exit_status": 0,
+      "text": "AI TRUST ID - PNG evidence check\nMethod: attached-c2pa-inspection/1.0.1 (PNG only).\nAn attached Content Credential was inspected.\nImage binding: Does not match the recorded image bytes.\nRecord signature: The record signature matches.\nSigner trust: Not trusted by the configured trust store; this alone is not fraud.\nRevocation: Unknown. Online revocation checks are disabled.\nAI origin: Unknown. This method does not determine whether AI made or edited the image.\nNo tag issued. Image contents and authorship are not verified.\n"
+    },
+    {
+      "fixture": "unsigned.png",
+      "exit_status": 0,
+      "text": "AI TRUST ID - PNG evidence check\nMethod: attached-c2pa-inspection/1.0.1 (PNG only).\nNo attached Content Credential was found in this supported PNG.\nImage binding: Not available.\nRecord signature: Not available.\nSigner trust: Not available.\nRevocation: Not applicable.\nAI origin: Unknown. This method does not determine whether AI made or edited the image.\nNo tag issued. Image contents and authorship are not verified.\n"
+    }
+  ],
+  "default_json_contract_unchanged": true,
+  "parser_source_unchanged": true,
+  "sdk_pins_unchanged": true,
+  "kernel_egress_isolation_claimed": false,
+  "fresh_linux_execution": false,
+  "physical_device": false,
+  "new_tag_releases": 0,
+  "independent_accuracy_evidence": false,
+  "full_original_requirement_percentages_changed": false,
+  "remaining": [
+    "PM wording/source review",
+    "Fresh isolated Linux optional SDK job",
+    "No AI-origin classifier or FA/PA release is implemented by this increment"
+  ]
+}

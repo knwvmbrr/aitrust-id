@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-201250-integrate-independent-tag-candidates-5071e195",
+  "recorded_at": "2026-11-16T20:12:50.836333+00:00",
+  "author": "Codex PM; MT and image specialists",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85b885f44a5c663a37bb962e85c5efe93aea64a7",
+  "changed": "Integrate independent MT urgency-locality and PNG text-readout candidates; cover new sources in the boundary inventory and publish explicit per-tag ownership, unchanged full acceptance gates, all requested enhancement contracts and a seventy-record gate audit.",
+  "proves": "Both attributed candidate histories are preserved. MT unit-locality has108 focused controls and22 actual Mac CLI controls; image readout has96 focused controls,21 actual Mac SDK controls and four byte-identical default JSON compatibility cases. Combined scope/accountability checks retain202 originals,132 complete and70 open. Eleven enhancement contracts are tracked; unmerged native implementation is not credited on main.",
+  "limits": "Fresh combined website, Linux SDK, protected merge and publication evidence remain pending. Retained initial website attempts failed at missing verification environment and missing fresh prebuild change records. No tag release, independently measured accuracy, physical/human/Apple acceptance or full original requirement closure. Count remains70.",
+  "scope_ids": [
+    "F-019a",
+    "F-025",
+    "T-MT",
+    "T-NF",
+    "T-FI",
+    "T-FA",
+    "T-PA",
+    "N-013",
+    "F-136",
+    "N-010"
+  ],
+  "files": {
+    "README.md": "14e6375f1f633bdbbf6e951d69521a488743d3700a692886b5e6ad1b6d5c08fd",
+    "docs/open-requirement-gates-2026-11-16.json": "15cd1ab28c7a60ced14996c3da3f1a20bea469e932fd3d75d456996c0af175f0",
+    "docs/optional-notifications-plan.md": "36c4c56121fec27072668e89044ea7924071f4d1cb4f7689c73d567b76d52856",
+    "docs/quiet-layer-architecture.md": "d91837f2f803b0050f218e5a4ecef4ecbf34f7c157aebfa86a363df2ff2fc7c8",
+    "docs/scope-priorities-2026-11-16.json": "899fa54b545827c7e6131a61b79d8fcc86bb6c15114eef34d625a0be3d984cb4",
+    "docs/scope-priorities-2026-11-16.md": "76224a59e67d356ea62868b959f89cbb0708ef731f01c7fc51868e47c2428b78",
+    "docs/scope-progress.json": "d9ee4d50e5a801a1bcfc7aaa53c0f3caf2b4b327a89f9d0220318d01a0d5996d",
+    "docs/scope-progress.md": "0ca352b9952f7a326fc95c8d5fbc5a3d988dd7c07c0df14d3b51cd3fef5e7603",
+    "docs/tag-integration-2026-11-16.md": "a0f8b7a695b8f61883651ebd5284753b8ca6d730a08f7aa6e6e04338605d3d83",
+    "docs/tag-status-2026-11-16.json": "f91bf875840b3c1c54d8aaa96e960d35e7738f356a2e18f6f13fa1186c153488",
+    "docs/tag-status-2026-11-16.md": "db548b55a92aa23e198bc1f4ebce3e3c07fcf37740c472a56229c3bdeb2d802b",
+    "eval/route-boundaries.json": "d3902da6a80b2e057c8bc1d2172dc6ad1310f64eea8b584b982ad2d5ad5e6742",
+    "runs/2026-11-16-tag-integration-missing-verification-environment.json": "b57bcb1492cc298effe63d38c200f269ea77a89c997713606daf09c7090a3ac6",
+    "runs/2026-11-16-tag-integration-prebuild-record-refusal.json": "e69773ad61c524fbdebb1de9788d710751934275cfce4d78c6c3dc47fbc7a823",
+    "scripts/verify-route-boundaries.py": "a57d5aed50fa578f0a9383df86e40b89ccc79b23c984d9b0d9f36a2f1cc80587",
+    "site/public/reference/public-scope.json": "5af9ffcb1fb386408b50770878cb4d9c6b8ae739dce53becba68df40a54d3e44",
+    "site/src/public-scope.json": "5af9ffcb1fb386408b50770878cb4d9c6b8ae739dce53becba68df40a54d3e44",
+    "site/src/scope-manifest.json": "15b7bc67123e0fc8e184054804575519f0d16f8f2ef9af0f22c085136a7cfcfd",
+    "state.json": "a56268ce277cf286cb0fd954d6cf9a00eb70b653b59c277775f2df4a0ed5184a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-mt-urgency-locality.json",
+      "sha256": "9843ce1a6c035d20082534453cdbbfc2743b9b39ccdcc07f7f49141600d7b38a"
+    },
+    {
+      "path": "runs/2026-11-16-image-evidence-text-component.json",
+      "sha256": "c0ddf6c334139b1514f5f55800f06c4dfc00269a6a5b9945dd58db1502b10d9e"
+    },
+    {
+      "path": "runs/2026-11-16-image-evidence-real-sdk-mac.json",
+      "sha256": "358f62fdb4598c20ca47e8fa2e33d0c75f6cc7abd17f888f84a4861117c6bd92"
+    },
+    {
+      "path": "runs/2026-11-16-image-evidence-json-compatibility.json",
+      "sha256": "850413a59f88876050bd028532c15eebc412d8591770c6ef05ee10c509621bf6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:12:51.490647+00:00"
+    }
+  ]
+}

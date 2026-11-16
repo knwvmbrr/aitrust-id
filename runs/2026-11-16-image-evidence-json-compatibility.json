@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-16T19:47:48.471230+00:00",
+  "pass": true,
+  "source_base": "2739570fc6864cf5cf6728d320bb7be5d301f8cf",
+  "baseline_cli_sha256": "2db79e574bc42b68aeb33bf9b7ec7aa89f1af07172e14021d73785857876dbbe",
+  "candidate_cli_sha256": "143488d7448e9cb18670e482ccd735c6beced7f14502fe15a091210ffacf8ca2",
+  "method_source_sha256": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
+  "host": "macOS arm64",
+  "actual_prior_vs_candidate_default_json_cases": [
+    {
+      "case": "signed",
+      "exit_status": 0,
+      "stdout_byte_identical": true,
+      "stdout_sha256": "dc8a8bc7a8a1b379f482c8b267af880e8198c021f60662a1d0f1fc735c69e9cb"
+    },
+    {
+      "case": "altered",
+      "exit_status": 0,
+      "stdout_byte_identical": true,
+      "stdout_sha256": "c5304c5ff3e5629d41c4d19128b1701bca142df517593eb45b4f1511f95f0b16"
+    },
+    {
+      "case": "unsigned",
+      "exit_status": 0,
+      "stdout_byte_identical": true,
+      "stdout_sha256": "aaa7116448f07da4794afec0538cefdf83872da3de9be60f6678f8a7d8aa3a72"
+    },
+    {
+      "case": "missing",
+      "exit_status": 2,
+      "stdout_byte_identical": true,
+      "stdout_sha256": "42c1b44b0237dbf69b9fd219773217af464ce4b1bd6ab873bf3ac9a94c7214ce"
+    }
+  ],
+  "new_tag_releases": 0,
+  "independent_accuracy_evidence": false
+}

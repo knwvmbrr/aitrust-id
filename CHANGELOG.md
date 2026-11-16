@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423
+
+Recorded 2026-11-16T20:21:54.427188+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bind the combined tag-candidate branch to fresh website and personal-route boundary execution; retain independent optional presentation failure handling.
+- **Evidence.** All32 website capability commands pass with stable source; current boundary verification passes1013 source identities, unchanged endpoints/permissions/production capabilities,26 existing service cases and15 replay cases. The unchanged extension receipt remains source-current. Scope remains202 originals,132 complete and70 open. [Change record](./runs/changes/2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423.json).
+- **Not claimed.** Source-bound engineering acceptance only. Fresh isolated Linux SDK and protected merge/publication are pending. No independently validated tag, new production detector, physical/human acceptance or original requirement closure.
+
+
+### 2026-11-16-201938-isolate-optional-image-presentation-f72985c9
+
+Recorded 2026-11-16T20:19:38.753692+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Load the optional PNG text formatter only for text mode; keep default JSON and native worker independent of presentation faults, and use a fixed unavailable text fallback.
+- **Evidence.** All100 focused parser/presentation/workflow controls pass, including simulated missing and syntactically broken formatter cases: JSON succeeds; text refuses before inspection/private export without error or metadata echo. [Change record](./runs/changes/2026-11-16-201938-isolate-optional-image-presentation-f72985c9.json).
+- **Not claimed.** Fault tests are engineering controls, not independent image detection accuracy. Earlier21 real SDK controls predate this CLI change and are retained as historical; fresh current-source isolated Linux execution remains pending. No original requirement closure or tag release.
+
+
+### 2026-11-16-201250-integrate-independent-tag-candidates-5071e195
+
+Recorded 2026-11-16T20:12:50.836333+00:00 · Contributor: Codex PM; MT and image specialists · change
+
+- **Changed.** Integrate independent MT urgency-locality and PNG text-readout candidates; cover new sources in the boundary inventory and publish explicit per-tag ownership, unchanged full acceptance gates, all requested enhancement contracts and a seventy-record gate audit.
+- **Evidence.** Both attributed candidate histories are preserved. MT unit-locality has108 focused controls and22 actual Mac CLI controls; image readout has96 focused controls,21 actual Mac SDK controls and four byte-identical default JSON compatibility cases. Combined scope/accountability checks retain202 originals,132 complete and70 open. Eleven enhancement contracts are tracked; unmerged native implementation is not credited on main. [Change record](./runs/changes/2026-11-16-201250-integrate-independent-tag-candidates-5071e195.json).
+- **Not claimed.** Fresh combined website, Linux SDK, protected merge and publication evidence remain pending. Retained initial website attempts failed at missing verification environment and missing fresh prebuild change records. No tag release, independently measured accuracy, physical/human/Apple acceptance or full original requirement closure. Count remains70.
+
+
+### 2026-11-16-194831-image-evidence-text-851aa341
+
+Recorded 2026-11-16T19:48:31.027480+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an optional readable PNG evidence result to the existing pinned manifest inspector, with separate binding, signature, trust, revocation and Unknown AI-origin explanations.
+- **Evidence.** 96 focused tests and 21 actual pinned-SDK CLI controls pass on Mac. Four prior-versus-candidate default JSON outputs and exit statuses are byte-identical. Fixed text omits embedded private metadata and refuses malformed states before private export. [Change record](./runs/changes/2026-11-16-194831-image-evidence-text-851aa341.json).
+- **Not claimed.** Candidate remains uncommitted and unpublished pending PM review and fresh isolated Linux execution. PNG only; no AI-origin classifier, FA/PA release, credential issuance, independent accuracy, full native sandbox or Mac kernel no-egress guarantee. Original requirement percentages remain unchanged at132 complete and70 open.
+
+
+### 2026-11-16-194236-mt-urgency-local-association-9dc8adb2
+
+Recorded 2026-11-16T19:42:36.216906+00:00 · Contributor: Codex MT owner · change
+
+- **Changed.** Urgency observations now pair a supported directive and time phrase within the same sentence unit, retaining global measurements and separate unpaired spans.
+- **Evidence.** One final adjacent run passes108 tests; the existing actual CLI consumer passes22 controls; six invented before/after examples retain the context and accuracy limits. [Change record](./runs/changes/2026-11-16-194236-mt-urgency-local-association-9dc8adb2.json).
+- **Not claimed.** Cross-sentence pressure can be missed. Grammar, quotation context, manipulation intent, independent accuracy, MT release, Linux integration and full requirement completion are not established.
+
+
 ### 2026-11-16-191827-q4-publication-evidence-8a149406
 
 Recorded 2026-11-16T19:18:27.195923+00:00 · Contributor: Codex · change

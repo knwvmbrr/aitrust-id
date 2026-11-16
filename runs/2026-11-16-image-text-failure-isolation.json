@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-11-16T20:19:38.601053+00:00",
+  "implemented_by": "Codex PM",
+  "pass": true,
+  "architecture_plan": "runs/2026-11-16-image-text-isolation-plan.json",
+  "source_sha256": {
+    "scripts/inspect-manifest.py": "c5afcae3cb34e0d276efb8a15f1115fdacb59b69f0e8dfc270bef1e3d7758460",
+    "tests/test_manifest_presentation.py": "68b454b74b0020ba02c2fa16ed54dd1e13bb65805ed756b6227a387d6c553a96",
+    "tools/manifest_presentation.py": "1c56a49c0f1dcd6b9e051cbab77de0526f00608c35ba2de94a3468f16572c018"
+  },
+  "pytest": {
+    "argv": [
+      "python3",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_manifest_presentation.py",
+      "tests/test_manifest_inspection.py",
+      "tests/test_manifest_workflow.py"
+    ],
+    "passed": 100,
+    "failed": 0,
+    "elapsed_seconds": 0.36
+  },
+  "scope": "Authored contract/fault tests. Optional formatter missing or syntactically broken cannot disable JSON; text refuses before inspection/export with fixed private-safe unavailable wording.",
+  "actual_sdk_rerun_after_this_source_change": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closures": 0,
+  "source_stability_snapshot_before_test": false
+}

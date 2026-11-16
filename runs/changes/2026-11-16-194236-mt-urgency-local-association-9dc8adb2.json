@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-194236-mt-urgency-local-association-9dc8adb2",
+  "recorded_at": "2026-11-16T19:42:36.216906+00:00",
+  "author": "Codex MT owner",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2739570fc6864cf5cf6728d320bb7be5d301f8cf",
+  "changed": "Urgency observations now pair a supported directive and time phrase within the same sentence unit, retaining global measurements and separate unpaired spans.",
+  "proves": "One final adjacent run passes108 tests; the existing actual CLI consumer passes22 controls; six invented before/after examples retain the context and accuracy limits.",
+  "limits": "Cross-sentence pressure can be missed. Grammar, quotation context, manipulation intent, independent accuracy, MT release, Linux integration and full requirement completion are not established.",
+  "scope_ids": [
+    "F-019a",
+    "T-MT"
+  ],
+  "files": {
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "scripts/verify-independent-observations.py": "59039a6bcd22ac296b6e9da8c41741b51ce70e58d3321e9fb282c5beea162748",
+    "tests/test_mt_urgency_locality.py": "e5fe86bdaac03f20baa963e505062941f5b6b7a860a96cd26cf9fb35ff18d372",
+    "docs/language-observations.md": "ed6a6c8be749916a24d699b301cf12f0165670da202682bf83fd358e5763fb5b",
+    "docs/mt-urgency-locality-plan.md": "9007c9c1cc96dd4a29fde209a7599850e9996d52958dc76c2e63c3ca343c4a00",
+    "docs/mt-urgency-locality-result.md": "b124698aecbbdd20436342ffe360c9a8c9add4789d9d48430c7752254fcedf3c",
+    "runs/2026-11-16-mt-urgency-consumer-macos.json": "70372e4316a3a7186703c54cee059965f314c65f2e60a57a13f0b493afcec160",
+    "runs/2026-11-16-mt-urgency-locality.json": "9843ce1a6c035d20082534453cdbbfc2743b9b39ccdcc07f7f49141600d7b38a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-mt-urgency-consumer-macos.json",
+      "sha256": "70372e4316a3a7186703c54cee059965f314c65f2e60a57a13f0b493afcec160"
+    },
+    {
+      "path": "runs/2026-11-16-mt-urgency-locality.json",
+      "sha256": "9843ce1a6c035d20082534453cdbbfc2743b9b39ccdcc07f7f49141600d7b38a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T19:42:36.745446+00:00"
+    }
+  ]
+}

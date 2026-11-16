@@ -15,7 +15,7 @@ downloaded source checkout:
 ```sh
 python3 -m venv "$HOME/aitrust-manifest-env"
 "$HOME/aitrust-manifest-env/bin/python" -m pip install --require-hashes -r eval/c2pa-inspection.lock
-"$HOME/aitrust-manifest-env/bin/python" scripts/inspect-manifest.py --image tests/fixtures/c2pa-inspection-2026/signed.png
+"$HOME/aitrust-manifest-env/bin/python" scripts/inspect-manifest.py --image tests/fixtures/c2pa-inspection-2026/signed.png --format text
 "$HOME/aitrust-manifest-env/bin/python" scripts/inspect-manifest.py --image tests/fixtures/c2pa-inspection-2026/altered.png
 "$HOME/aitrust-manifest-env/bin/python" scripts/verify-manifest-inspection.py
 ```
@@ -33,6 +33,20 @@ manifest and OCSP fetching disabled, no allowed network hosts and identity
 decoding disabled. It does not add a test root to its trust store.
 
 ## Read the result
+
+For a short explanation, add `--format text` to the same command. It explains
+image binding, record signature, signer trust and revocation separately. It
+always reports **AI origin: Unknown**: this method does not decide whether AI
+made or edited an image. A missing Content Credential is not evidence of human
+origin. Text output omits raw metadata, paths and asset hashes. It does not issue
+a tag, certify authenticity or establish the truth of what the image shows.
+
+Without `--format text`, the command still returns the existing JSON contract.
+Explicit `--format json` does the same. Both formats retain the same exit status:
+0 means an inspection result, including no attached manifest; 2 means unavailable.
+The optional private full report is separate and may still contain names, GPS or
+other identifying assertions. Text output acknowledges saving it without printing
+its location or contents.
 
 `OBSERVED` means an attached manifest and its full active validation results were
 read. `asset_binding: matched` means the SDK reported that supported asset bytes
