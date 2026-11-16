@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-16T20:18:27.034480+00:00",
+  "owner": "Codex PM",
+  "architecture": "Load optional text presentation only for text mode, before inspection/export. Default JSON and worker routes never import that module. Presentation-load failure returns fixed UNAVAILABLE text with no raw error or metadata; no fallback evaluation, export or invented clean result.",
+  "risks": [
+    "Optional import may otherwise break unchanged JSON route",
+    "Reusing a failed formatter in error handling can throw again or reveal a traceback",
+    "Default JSON formatting and exit codes must stay identical"
+  ],
+  "acceptance": [
+    "Remove or syntactically break the optional formatter in an isolated copied CLI profile: default JSON still functions",
+    "Text mode refuses before parser/export and produces fixed private-safe output",
+    "Original96 focused semantics/fault/privacy/default checks remain passing"
+  ],
+  "independent_accuracy_evidence": false
+}

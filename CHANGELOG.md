@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423
+
+Recorded 2026-11-16T20:21:54.427188+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bind the combined tag-candidate branch to fresh website and personal-route boundary execution; retain independent optional presentation failure handling.
+- **Evidence.** All32 website capability commands pass with stable source; current boundary verification passes1013 source identities, unchanged endpoints/permissions/production capabilities,26 existing service cases and15 replay cases. The unchanged extension receipt remains source-current. Scope remains202 originals,132 complete and70 open. [Change record](./runs/changes/2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423.json).
+- **Not claimed.** Source-bound engineering acceptance only. Fresh isolated Linux SDK and protected merge/publication are pending. No independently validated tag, new production detector, physical/human acceptance or original requirement closure.
+
+
+### 2026-11-16-201938-isolate-optional-image-presentation-f72985c9
+
+Recorded 2026-11-16T20:19:38.753692+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Load the optional PNG text formatter only for text mode; keep default JSON and native worker independent of presentation faults, and use a fixed unavailable text fallback.
+- **Evidence.** All100 focused parser/presentation/workflow controls pass, including simulated missing and syntactically broken formatter cases: JSON succeeds; text refuses before inspection/private export without error or metadata echo. [Change record](./runs/changes/2026-11-16-201938-isolate-optional-image-presentation-f72985c9.json).
+- **Not claimed.** Fault tests are engineering controls, not independent image detection accuracy. Earlier21 real SDK controls predate this CLI change and are retained as historical; fresh current-source isolated Linux execution remains pending. No original requirement closure or tag release.
+
+
 ### 2026-11-16-201250-integrate-independent-tag-candidates-5071e195
 
 Recorded 2026-11-16T20:12:50.836333+00:00 · Contributor: Codex PM; MT and image specialists · change

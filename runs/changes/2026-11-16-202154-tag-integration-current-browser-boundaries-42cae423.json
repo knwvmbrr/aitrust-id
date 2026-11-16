@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423",
+  "recorded_at": "2026-11-16T20:21:54.427188+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "221ef3b0ad77ed2ad2bff0b097066aed333f870e",
+  "changed": "Bind the combined tag-candidate branch to fresh website and personal-route boundary execution; retain independent optional presentation failure handling.",
+  "proves": "All32 website capability commands pass with stable source; current boundary verification passes1013 source identities, unchanged endpoints/permissions/production capabilities,26 existing service cases and15 replay cases. The unchanged extension receipt remains source-current. Scope remains202 originals,132 complete and70 open.",
+  "limits": "Source-bound engineering acceptance only. Fresh isolated Linux SDK and protected merge/publication are pending. No independently validated tag, new production detector, physical/human acceptance or original requirement closure.",
+  "scope_ids": [
+    "F-019a",
+    "F-025",
+    "T-MT",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "scripts/inspect-manifest.py": "c5afcae3cb34e0d276efb8a15f1115fdacb59b69f0e8dfc270bef1e3d7758460",
+    "tests/test_manifest_presentation.py": "68b454b74b0020ba02c2fa16ed54dd1e13bb65805ed756b6227a387d6c553a96",
+    "eval/route-boundaries.json": "22509afa9ed3dc1e26b59ae76c40c982f8b0dc89aee49e599a98ea9eb1cae3ea",
+    "state.json": "e26c0a4d0d2a1e666f45052a872f634d37d11057044b21b1029b06e94823388c",
+    "runs/2026-11-16-image-text-isolation-plan.json": "ba4f878f031eaf13305de6b5e0920ef7c4df059c84f503dec73a96da1cb637e4",
+    "runs/2026-11-16-image-text-failure-isolation.json": "37ef996ab24addc6c864fc994f845a544ab3f65775f7c0b3d14f81e096232b71",
+    "runs/2026-11-16-tag-integration-website.json": "849ead710f5da24eec10875594ae1edd47ea66946566a5cfddcdcfd1668381b6",
+    "runs/2026-11-16-tag-integration-boundaries.json": "875069e4f1ee89747e7fbddae951067abfd6a4b00638be28aa546957a7972f72"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-tag-integration-website.json",
+      "sha256": "849ead710f5da24eec10875594ae1edd47ea66946566a5cfddcdcfd1668381b6"
+    },
+    {
+      "path": "runs/2026-11-16-tag-integration-boundaries.json",
+      "sha256": "875069e4f1ee89747e7fbddae951067abfd6a4b00638be28aa546957a7972f72"
+    },
+    {
+      "path": "runs/2026-11-16-image-text-failure-isolation.json",
+      "sha256": "37ef996ab24addc6c864fc994f845a544ab3f65775f7c0b3d14f81e096232b71"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:21:54.987484+00:00"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 """Readable image evidence must not become an origin verdict or metadata echo."""
 import copy
+import builtins
 import importlib.util
 import json
 from pathlib import Path
@@ -152,4 +153,38 @@ def test_bad_text_envelope_is_refused_before_private_export(monkeypatch, capsys)
     assert cli.main() == 2
     output = capsys.readouterr()
     assert 'No valid inspection result was obtained.' in output.out
+    assert 'PRIVATE_CANARY' not in output.out and not output.err
+
+
+@pytest.mark.parametrize('failure', [ModuleNotFoundError('PRIVATE_CANARY'), SyntaxError('PRIVATE_CANARY')])
+def test_optional_formatter_fault_cannot_disable_json(monkeypatch, capsys, failure):
+    original_import = builtins.__import__
+    def fault(name, *args, **kwargs):
+        if name == 'tools.manifest_presentation':
+            raise failure
+        return original_import(name, *args, **kwargs)
+    monkeypatch.setattr(builtins, '__import__', fault)
+    monkeypatch.setattr(cli.tool, 'inspect', lambda _: (observed(), None))
+    monkeypatch.setattr(sys, 'argv', ['inspect-manifest', '--image', 'image.png'])
+    assert cli.main() == 0
+    output = capsys.readouterr()
+    assert json.loads(output.out)['state'] == 'OBSERVED' and not output.err
+
+
+@pytest.mark.parametrize('failure', [ModuleNotFoundError('PRIVATE_CANARY'), SyntaxError('PRIVATE_CANARY')])
+def test_optional_formatter_fault_stops_text_before_inspection_or_export(monkeypatch, capsys, failure):
+    original_import = builtins.__import__
+    def fault(name, *args, **kwargs):
+        if name == 'tools.manifest_presentation':
+            raise failure
+        return original_import(name, *args, **kwargs)
+    monkeypatch.setattr(builtins, '__import__', fault)
+    monkeypatch.setattr(cli.tool, 'inspect', lambda _: pytest.fail('Do not inspect after presentation load refusal'))
+    monkeypatch.setattr(cli.tool, 'save_private', lambda *_: pytest.fail('Do not export after presentation load refusal'))
+    monkeypatch.setattr(sys, 'argv', ['inspect-manifest', '--image', 'image.png',
+        '--format', 'text', '--private-report', '/PRIVATE_CANARY/result'])
+    assert cli.main() == 2
+    output = capsys.readouterr()
+    assert 'No valid inspection result was obtained.' in output.out
+    assert 'AI origin: Unknown.' in output.out and 'No tag issued.' in output.out
     assert 'PRIVATE_CANARY' not in output.out and not output.err

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-16T20:12:50.749322+00:00",
+  "reviewed_at": "2026-11-16T20:20:43.775709+00:00",
   "reviewed_by": "Codex PM \u2014 integrated MT unit-local urgency and privacy-minimal PNG text output; all production routes, tag allowlists, extension permissions and collection unchanged. Historical browser execution must independently remain current.",
   "rules": [
     "X-01",
@@ -634,7 +634,7 @@
     "scripts/hash-reports.py": "a0784a8c5a61a04491d40eb55f17f997617ccfdcfea501b48a18c2ee246534a7",
     "scripts/host-capture.py": "ac22b64fc7daef22ba651c2b203f452f32fd2678a0542371901e39366a19a8b8",
     "scripts/independent_timestamp.py": "99647176035369e030c8714671e20fbf9d19d5348de68f23a8d39c0c21f7c144",
-    "scripts/inspect-manifest.py": "143488d7448e9cb18670e482ccd735c6beced7f14502fe15a091210ffacf8ca2",
+    "scripts/inspect-manifest.py": "c5afcae3cb34e0d276efb8a15f1115fdacb59b69f0e8dfc270bef1e3d7758460",
     "scripts/key-backup.cjs": "b6e84f7b0a1510e25d729df360373b1d76adf4a9cf355ca200cd01ce7a84c4cf",
     "scripts/language-observations.py": "ac86473b87ce6e499c1185ce3fd81e569c99bfc4d78360af470d490fd18b0abb",
     "scripts/license_notices.py": "a1ff720900ff9e0d5dbd479087390c67fe1dac04839f75676e626acf59427ffa",
@@ -935,7 +935,7 @@
     "tests/test_local_setup.py": "6c36201596b445d8e71f58c9beccf847a251357e1909c0fb1c71102d93b2a28e",
     "tests/test_local_setup_evidence.py": "9135e2d057b22b9598f4f2c16b33b3399ae62e86d16f937e2480101d8222daba",
     "tests/test_manifest_inspection.py": "f776087710a57b0ace9268282c59633f19718c293592dd3e169eaf65386e05c3",
-    "tests/test_manifest_presentation.py": "4d320f74cbd89c299b06e21ed33994f9958c1444716062364ce465118520178a",
+    "tests/test_manifest_presentation.py": "68b454b74b0020ba02c2fa16ed54dd1e13bb65805ed756b6227a387d6c553a96",
     "tests/test_manifest_workflow.py": "8ec74c48c3f2cb64448f44f190a6e92ed9e9186f3c7d72c77315304725612a89",
     "tests/test_metadata_store.py": "3616ec0a1d03e719dfd81aaf4c6f5c6471c8830e1353486dfdbc9ad4eebbd840",
     "tests/test_mt_urgency_locality.py": "e5fe86bdaac03f20baa963e505062941f5b6b7a860a96cd26cf9fb35ff18d372",
@@ -1032,7 +1032,7 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-16-q4-website-current.json",
+    "website": "runs/2026-11-16-tag-integration-website.json",
     "extension": "runs/2026-11-16-q4-extension-current.json"
   },
   "device_evidence": {

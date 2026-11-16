@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-201938-isolate-optional-image-presentation-f72985c9",
+  "recorded_at": "2026-11-16T20:19:38.753692+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "221ef3b0ad77ed2ad2bff0b097066aed333f870e",
+  "changed": "Load the optional PNG text formatter only for text mode; keep default JSON and native worker independent of presentation faults, and use a fixed unavailable text fallback.",
+  "proves": "All100 focused parser/presentation/workflow controls pass, including simulated missing and syntactically broken formatter cases: JSON succeeds; text refuses before inspection/private export without error or metadata echo.",
+  "limits": "Fault tests are engineering controls, not independent image detection accuracy. Earlier21 real SDK controls predate this CLI change and are retained as historical; fresh current-source isolated Linux execution remains pending. No original requirement closure or tag release.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "scripts/inspect-manifest.py": "c5afcae3cb34e0d276efb8a15f1115fdacb59b69f0e8dfc270bef1e3d7758460",
+    "tests/test_manifest_presentation.py": "68b454b74b0020ba02c2fa16ed54dd1e13bb65805ed756b6227a387d6c553a96",
+    "runs/2026-11-16-image-text-isolation-plan.json": "ba4f878f031eaf13305de6b5e0920ef7c4df059c84f503dec73a96da1cb637e4",
+    "runs/2026-11-16-image-text-failure-isolation.json": "37ef996ab24addc6c864fc994f845a544ab3f65775f7c0b3d14f81e096232b71",
+    "eval/route-boundaries.json": "8edad98524f1cacf66199054ff3ef253670065f86fa719d91205a84ea3e84362"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-image-text-failure-isolation.json",
+      "sha256": "37ef996ab24addc6c864fc994f845a544ab3f65775f7c0b3d14f81e096232b71"
+    }
+  ],
+  "checks": []
+}
