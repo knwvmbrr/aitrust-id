@@ -1,0 +1,180 @@
+{
+  "profile": "scope-blocker-pareto/v1",
+  "recorded_at": "2026-11-16T19:09:40.101080+00:00",
+  "input_ledger": "docs/scope-progress.json",
+  "input_ledger_sha256": "d9ee4d50e5a801a1bcfc7aaa53c0f3caf2b4b327a89f9d0220318d01a0d5996d",
+  "original_requirements": 202,
+  "complete": 132,
+  "open": 70,
+  "method": "Manual primary-gate classification of each original open requirement exactly once; not failure frequency, effort, revenue or predicted closures. Tags and supporting signals overlap, so counts do not imply equal business impact.",
+  "categories": [
+    {
+      "category": "methods",
+      "title": "Tag methods, evidence mapping and format support",
+      "count": 22,
+      "share_percent": 31.4,
+      "cumulative_percent": 31.4,
+      "requirement_ids": [
+        "T-NF",
+        "T-FI",
+        "T-HP",
+        "T-MT",
+        "T-IV",
+        "T-FA",
+        "T-PA",
+        "T-OUT",
+        "T-SC",
+        "T-BT",
+        "F-012",
+        "F-013",
+        "F-015",
+        "F-016",
+        "F-018",
+        "F-019a",
+        "F-019b",
+        "F-019c",
+        "F-020b",
+        "F-029a",
+        "F-024",
+        "F-155"
+      ],
+      "owner": "CTO + independent tag agents",
+      "next_action": "Choose one bounded method increment per active tag; preserve provenance, abstention and own validation; do not issue unsupported tags."
+    },
+    {
+      "category": "delivery",
+      "title": "Device/vendor delivery and real-person acceptance",
+      "count": 13,
+      "share_percent": 18.6,
+      "cumulative_percent": 50.0,
+      "requirement_ids": [
+        "F-030",
+        "F-037",
+        "F-035",
+        "F-097",
+        "F-113",
+        "F-142",
+        "F-156",
+        "N-012",
+        "N-013",
+        "N-014",
+        "F-141",
+        "F-129",
+        "F-130"
+      ],
+      "owner": "Delivery engineers + Debugger + actual device users",
+      "next_action": "Finish current iOS software/packaging, then owner TestFlight use; keep vendor, Android and human accessibility jobs distinct."
+    },
+    {
+      "category": "validation",
+      "title": "Independent ground truth and claim calibration",
+      "count": 12,
+      "share_percent": 17.1,
+      "cumulative_percent": 67.1,
+      "requirement_ids": [
+        "T-PS",
+        "T-PII",
+        "F-005",
+        "F-010",
+        "F-011",
+        "F-014",
+        "F-023",
+        "F-050",
+        "F-108",
+        "F-056",
+        "F-114",
+        "N-015"
+      ],
+      "owner": "Tag agents + actual independent reviewers; Michael coordinates",
+      "next_action": "Finish sampling/labeling policy and one frozen independent test per tag; software may prepare packets, not replace human independence."
+    },
+    {
+      "category": "governance",
+      "title": "Institutional, legal, license and service commitments",
+      "count": 9,
+      "share_percent": 12.9,
+      "cumulative_percent": 80.0,
+      "requirement_ids": [
+        "F-076",
+        "F-057",
+        "F-075",
+        "F-143",
+        "F-145",
+        "F-146",
+        "F-148",
+        "X-02",
+        "F-163"
+      ],
+      "owner": "Michael/qualified counsel for decisions; CTO for technical evidence",
+      "next_action": "Complete software evidence and drafts autonomously; actual filings, qualified review, accreditation and staffed commitments remain real external gates."
+    },
+    {
+      "category": "community",
+      "title": "Live community, reporting and moderation operations",
+      "count": 6,
+      "share_percent": 8.6,
+      "cumulative_percent": 88.6,
+      "requirement_ids": [
+        "F-135",
+        "F-136",
+        "F-137",
+        "F-074",
+        "F-138",
+        "N-005"
+      ],
+      "owner": "Community engineer; Michael assigns real moderators",
+      "next_action": "Build a shared self-hosted service with web/mobile clients, authorized posting/retraction and bounded live updates; name operating owners before opening posting."
+    },
+    {
+      "category": "compatibility",
+      "title": "Adoption, compatibility and final acceptance decisions",
+      "count": 5,
+      "share_percent": 7.1,
+      "cumulative_percent": 95.7,
+      "requirement_ids": [
+        "F-004",
+        "T-UNK",
+        "T-UC",
+        "N-001",
+        "F-120"
+      ],
+      "owner": "PM prepares reviewable decisions; Michael adopts",
+      "next_action": "Preserve current schema and record meanings; prepare exact migration/acceptance proposals, never treat an unanswered proposal as adopted."
+    },
+    {
+      "category": "services",
+      "title": "Controlled production services and public trust operations",
+      "count": 3,
+      "share_percent": 4.3,
+      "cumulative_percent": 100.0,
+      "requirement_ids": [
+        "N-010",
+        "N-011",
+        "F-125"
+      ],
+      "owner": "CTO + service engineer; Michael operating policy",
+      "next_action": "Complete tenant/consent/revocation/retention/recovery controls before payment, research intake or public transparency service activation."
+    }
+  ],
+  "implementation_truth": {
+    "native_candidate": "4 of5 UI workflows passed; producer failed initial-input keyboard check with Simulator HID cancellation; no full integration acceptance",
+    "current_operational_checks": [
+      "PS bounded command-risk preview",
+      "PII procedural local privacy route"
+    ],
+    "all_personal_tags_operational": false,
+    "community_in_house_live": false,
+    "business_checkout_or_payment_entitlements": false,
+    "native_in_app_appearance_switch": "Implemented;46 focused checks and SDK typecheck pass. Actual rendering/current whole-package acceptance pending."
+  },
+  "new_enhancement_ids": [
+    "ENH-NATIVE-APPEARANCE",
+    "ENH-BUSINESS-ENTITLEMENTS",
+    "ENH-COMMUNITY-CLIENTS",
+    "ENH-QUIET-LAYER",
+    "ENH-MULTIMODAL-COVERAGE",
+    "ENH-DELIVERY-ROLES"
+  ],
+  "full_requirements_closed": [],
+  "integration_updated_at": "2026-11-16T20:09:45.055440+00:00"
+}

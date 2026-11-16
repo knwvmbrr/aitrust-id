@@ -1,0 +1,2325 @@
+{
+  "profile": "original-open70-read-only-audit/v1",
+  "recorded_at": "2026-11-16T20:00:42.968415+00:00",
+  "original_total": 202,
+  "complete": 132,
+  "open": 70,
+  "source_modified": false,
+  "executed_runtime_or_accuracy_validation": false,
+  "original_description_note": "Field absent in current master-scope records; retained title, baseline_job, outcome and full package contracts used. No lost original wording invented.",
+  "input_sha256": {
+    "docs/master-scope.json": "469f7f8d1e2a9bb02e0bc96cd7811a73d2d9913b3a95520c559ed6f870fecfac",
+    "docs/scope-progress.json": "50ea6fd40559861798d8084c28a4f28b1a65cc6ec96940625d4b7cf336ef0872",
+    "docs/scope-delivery.md": "5e2adb0607b4f400e2f53f10e71f53a661e291441831e730d70e4d9b7e365015",
+    "docs/tags/NF-01.md": "0705250550c836b7d9c341deb2b6a7339308312eccf9fceb7062f2e4debfa28f",
+    "docs/tags/FI-01.md": "15c73b60832074383984292c0ff66df0b879ba8e9381b65a4ade4abb66ff61e5",
+    "docs/tags/HP-01.md": "a99b5fa6e44654149bcb0519d7f6fd1d6a6a5769ace57f21650db242eacca2a5",
+    "docs/tags/IV-01.md": "1cb35d1a46fd39bf2e856313867f1b9f93ba7cdfecb4e896269f89da8806a221",
+    "docs/tags/UC-01.md": "13929874c3f3e8fb9620331ebbf09f133be7f87b6b256c70e90105b82b906c55",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "extension/src/adapters/README.md": "96f8b739ce57bf19ed5e6c168fdc20b8f57431fb6e2ee41d4b58c62a09d1c366",
+    "docs/firefox-preview.md": "8fcb0deaf1602fe5d7d272fa752e7e3f38eb23a1f2ee252049c35dee6271172b",
+    "docs/native-dependency-evidence.md": "877db806e21d7d50632ae58e0ed4be85a7c3c435471f4fbf7e18ebe6b24580b6",
+    "docs/open-dependency-audit-plan.md": "e455c7a676647b52aab6cd435d45eac22ba8220ba4522eee8c5744e1243e703d"
+  },
+  "conclusion": "No currently established autonomous full closure under unchanged acceptance. Software increments and gate preparation do not close parent requirements.",
+  "records": [
+    {
+      "id": "F-004",
+      "original_title": "Abstention as a first-class state \u2014 UNK",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver abstention as a first-class state \u2014 UNK.",
+      "outcome": "The tool says \"I don't know\" instead of guessing at you",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-UNK"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete owner adoption/compatibility decision for the proposed UNK replacement and required human understanding/accessibility checks. Current abstentions and six UI states work without emitting a new UNK verdict."
+      ],
+      "next_fix": "Complete owner adoption/compatibility decision for the proposed UNK replacement and required human understanding/accessibility checks. Current abstentions and six UI states work without emitting a new UNK verdict.",
+      "next_owner": "Codex",
+      "primary_gate_group": "compatibility",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/extension-consumer-plan.md",
+        "docs/assertion-conformance-plan.md",
+        "scripts/check-assertion.py",
+        "tests/test_assertion_conformance.py",
+        "runs/2026-10-10-six-state-consumer-browser.json",
+        "runs/2026-10-10-consumer-schema-python-corrected.json"
+      ]
+    },
+    {
+      "id": "F-005",
+      "original_title": "Per-tag confidence floors",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver per-tag confidence floors.",
+      "outcome": "No tag is shown below the confidence its evidence supports",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-PROTOCOL"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Agree and independently validate evidence-supported per-tag calibration/confidence policy, then complete integration and final acceptance. Current 0.70 PS rule-score enforcement works but is not a measured probability or the 0.93 precision gate."
+      ],
+      "next_fix": "Agree and independently validate evidence-supported per-tag calibration/confidence policy, then complete integration and final acceptance. Current 0.70 PS rule-score enforcement works but is not a measured probability or the 0.93 precision gate.",
+      "next_owner": "Codex",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/confidence-floor-audit.md",
+        "runs/2026-10-13-confidence-floor-http-audit.json",
+        "tests/test_gateway_integration.py"
+      ]
+    },
+    {
+      "id": "F-076",
+      "original_title": "RFC process \u2014 template, 14-day comment, evidence requirement",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver rFC process \u2014 template, 14-day comment, evidence requirement.",
+      "outcome": "The taxonomy cannot drift into noise by accretion",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-GOVERNANCE"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
+      ],
+      "next_fix": "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board.",
+      "next_owner": "Michael and reviewers",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "CONTRIBUTING.md",
+        "GOVERNANCE.md",
+        "DECISIONS.md"
+      ]
+    },
+    {
+      "id": "T-NF",
+      "original_title": "NF Non-Fiction",
+      "original_description_field_present": false,
+      "baseline_job": "Extract checkable claims and compare them with the supplied, versioned reference corpus.",
+      "outcome": "The reader sees which claim is supported by which source and passage, and the limits of that support.",
+      "baseline_acceptance": "Independent claim/passage labels measure support accuracy and unsupported-claim coverage.; No corpus means unsupported/unavailable for NF, not an NF verdict.; Changing a source invalidates only findings derived from that source. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-NF"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver NF Non-Fiction. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The reader sees which claim is supported by which source and passage, and the limits of that support."
+      ],
+      "next_fix": "Deliver NF Non-Fiction. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The reader sees which claim is supported by which source and passage, and the limits of that support.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/reference-revision-plan.md",
+        "docs/reference-revisions.md",
+        "tools/reference_revision.py",
+        "runs/2026-10-12-reference-revision-practice-local.json",
+        "runs/2026-10-12-reference-revision-linux.json"
+      ]
+    },
+    {
+      "id": "T-FI",
+      "original_title": "FI Fiction / Fabricated",
+      "original_description_field_present": false,
+      "baseline_job": "Distinguish contradicted claims from citations that cannot be resolved within the declared reference set.",
+      "outcome": "The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
+      "baseline_acceptance": "Blind labels distinguish contradiction from missing evidence.; Offline non-resolution alone never establishes that a source does not exist anywhere.; Publish error rates by evidence type; NF and FI may describe different claims in one answer. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-FI"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated."
+      ],
+      "next_fix": "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/reference-revision-plan.md",
+        "docs/reference-revisions.md",
+        "tools/reference_revision.py",
+        "runs/2026-10-12-reference-revision-practice-local.json",
+        "runs/2026-10-12-reference-revision-linux.json"
+      ]
+    },
+    {
+      "id": "T-HP",
+      "original_title": "HP Hallucination Possible",
+      "original_description_field_present": false,
+      "baseline_job": "Identify validated inconsistency and unsupported-specificity indicators without equating them with proven falsehood.",
+      "outcome": "The reader knows which inconsistency or unsupported detail warrants checking and why.",
+      "baseline_acceptance": "Independent labels and comparison with simpler baselines establish useful indicator performance.; The release claim names the supported indicator; it does not infer model intent.; No source lookup capability is misrepresented as a factual verification. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-HP"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver HP Hallucination Possible. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: The reader knows which inconsistency or unsupported detail warrants checking and why."
+      ],
+      "next_fix": "Deliver HP Hallucination Possible. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: The reader knows which inconsistency or unsupported detail warrants checking and why.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "T-MT",
+      "original_title": "MT Manipulative Tactic",
+      "original_description_field_present": false,
+      "baseline_job": "Evaluate contextual pressure, constrained-choice framing and unsupported authority appeals.",
+      "outcome": "The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.",
+      "baseline_acceptance": "Report agreement, category errors and confidence calibration separately.; Existing alpha 0.55 and accuracy values remain candidates until the protocol is accepted.; MT disagreement never blocks PS, provenance or privacy tag release. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-MT"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver MT Manipulative Tactic. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary."
+      ],
+      "next_fix": "Deliver MT Manipulative Tactic. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/calmer-tag-panels.md",
+        "runs/2026-10-10-calm-a11y-final-local.json"
+      ]
+    },
+    {
+      "id": "T-PS",
+      "original_title": "PS Potential Scam / Risk",
+      "original_description_field_present": false,
+      "baseline_job": "Complete the existing bounded command-risk release, then expand risk capabilities as separately validated increments.",
+      "outcome": "The reader sees the hazardous instruction pattern before acting, with exact evidence and a challenge path.",
+      "baseline_acceptance": "Use PS-01 and its 17-scenario acceptance packet plus phone/device checks.; Candidate 95% Wilson lower-bound precision 0.93 and recall 0.75 require prior protocol acceptance and independent labels.; Maintain all 86 current regression cases and publish category failures; no scam-intent inference. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-PS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+      "next_owner": "Michael coordinates independent reviewers; Codex tooling",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "docs/ps-result-clarity.md",
+        "runs/2026-10-09-ps-results-public.json",
+        "runs/2026-10-09-ps-results-deployment.json",
+        "runs/2026-10-09-performance-ui-public.json",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json",
+        "docs/calmer-tag-panels.md",
+        "runs/2026-10-10-calm-a11y-final-local.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
+      ]
+    },
+    {
+      "id": "T-IV",
+      "original_title": "IV Independently Verified",
+      "original_description_field_present": false,
+      "baseline_job": "Bind an explicit human review and its scope to the exact subject/version reviewed.",
+      "outcome": "The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.",
+      "baseline_acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim\u2019s accuracy. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-IV"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver IV Independently Verified. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The reader knows who reviewed what, against which evidence and when, including withdrawal or correction."
+      ],
+      "next_fix": "Deliver IV Independently Verified. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "T-FA",
+      "original_title": "FA Full AI Augmentation",
+      "original_description_field_present": false,
+      "baseline_job": "Evaluate positive origin evidence for full AI generation within an explicitly observed or attested workflow.",
+      "outcome": "The reader sees the origin assertion, source of evidence and supported observation window.",
+      "baseline_acceptance": "Absent typing, paste bursts or missing human evidence never establish FA.; Valid signatures establish the signer/record, not the truth of its origin claim.; Independent provenance cases include assisted-input users and incomplete capture. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-FA"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver FA Full AI Augmentation. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The reader sees the origin assertion, source of evidence and supported observation window."
+      ],
+      "next_fix": "Deliver FA Full AI Augmentation. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The reader sees the origin assertion, source of evidence and supported observation window.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/provenance-boundary-increment.md",
+        "docs/adjudication-spec.md",
+        "runs/2026-10-09-provenance-boundary-python.json",
+        "runs/2026-10-09-provenance-boundary-demo.json",
+        "runs/2026-10-09-device-matrix-checkout-correction.json",
+        "runs/2026-10-09-provenance-boundary-final-python.json",
+        "docs/classifier-confidence-plan.md",
+        "tests/test_adjudicator_confidence.py"
+      ]
+    },
+    {
+      "id": "T-PA",
+      "original_title": "PA Partially Augmented",
+      "original_description_field_present": false,
+      "baseline_job": "Describe supported AI contribution and subsequent human modification within the observed workflow.",
+      "outcome": "The reader can distinguish documented contribution/edit events from unobserved authorship.",
+      "baseline_acceptance": "Behavioral indicators alone must first demonstrate that they support the bounded claim.; No per-person timing template or absent-human inference.; Do not use outside knowledge as proof of human authorship. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-PA"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver PA Partially Augmented. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The reader can distinguish documented contribution/edit events from unobserved authorship."
+      ],
+      "next_fix": "Deliver PA Partially Augmented. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The reader can distinguish documented contribution/edit events from unobserved authorship.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/provenance-boundary-increment.md",
+        "docs/adjudication-spec.md",
+        "runs/2026-10-09-provenance-boundary-python.json",
+        "runs/2026-10-09-provenance-boundary-demo.json",
+        "runs/2026-10-09-device-matrix-checkout-correction.json",
+        "runs/2026-10-09-provenance-boundary-final-python.json",
+        "docs/classifier-confidence-plan.md",
+        "tests/test_adjudicator_confidence.py"
+      ]
+    },
+    {
+      "id": "T-UNK",
+      "original_title": "UNK Unknown",
+      "original_description_field_present": false,
+      "baseline_job": "Represent insufficient evaluated evidence separately from pending, no-finding, unsupported and unavailable results.",
+      "outcome": "A reader can tell what was evaluated and why a tag could not provide its claim.",
+      "baseline_acceptance": "Unavailable processing cannot appear as evaluated uncertainty or success.; No-finding never certifies safety.; Protocol changes require compatibility tests and the established approval process. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-UNK"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver UNK Unknown. Next package action: Reconcile existing protocol codes and six-state UI/proposal meanings without silent taxonomy changes. Required outcome: A reader can tell what was evaluated and why a tag could not provide its claim."
+      ],
+      "next_fix": "Deliver UNK Unknown. Next package action: Reconcile existing protocol codes and six-state UI/proposal meanings without silent taxonomy changes. Required outcome: A reader can tell what was evaluated and why a tag could not provide its claim.",
+      "next_owner": "Codex",
+      "primary_gate_group": "compatibility",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "T-PII",
+      "original_title": "PII_REDACTED",
+      "original_description_field_present": false,
+      "baseline_job": "Verify that supported detections were actually transformed before downstream local-service evaluation.",
+      "outcome": "The reader knows what category-level transformation occurred and that detection may miss information.",
+      "baseline_acceptance": "Transformation/order correctness and recognition accuracy are separate measurements.; Invalid or failed required redaction stops the affected service route.; The on-device PS route does not claim this tag or pretend to redact its input. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-PII_REDACTED"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
+      ],
+      "next_fix": "Improve remaining false masking and obfuscated addresses; complete independent representative recognition and required human route acceptance. Corrected source and measured development panels are published, and local service installations must rebuild to adopt the change.",
+      "next_owner": "Codex",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_redaction_contract.py",
+        "docs/tags/PII-01.md",
+        "docs/redaction-recognition.md",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py",
+        "runs/2026-10-11-pii-recognition-staging.json",
+        "runs/2026-10-11-pii-recognition-service.json",
+        "runs/2026-10-11-pii-recognition-replay.json",
+        "runs/2026-10-11-pii-recognition-integration.json",
+        "runs/2026-10-11-pii-recognition-focused.json",
+        "runs/2026-10-11-pii-labels-review-diagnosis.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "runs/2026-10-11-pii-labels-compact.json",
+        "runs/2026-10-11-pii-labels-service.json",
+        "runs/2026-10-11-pii-labels-replay.json",
+        "runs/2026-10-11-pii-labels-timing.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "runs/2026-11-08-pii-separator-mac-development.json",
+        "docs/pii-separator-correction-plan.md",
+        "runs/2026-11-08-pii-separator-english-linux.json",
+        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "docs/pii-pan-token-plan.md",
+        "tests/test_redaction_pan_token.py",
+        "runs/2026-11-09-pan-candidate-recognizer.json",
+        "runs/2026-11-09-pan-english-linux.json",
+        "runs/2026-11-09-pan-compact-linux.json",
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json",
+        "runs/2026-11-09-pan-pipeline-timing-linux.json",
+        "docs/pii-hidden-separators-plan.md",
+        "tests/test_redaction_hidden_email.py",
+        "scripts/verify-hidden-email-service.py",
+        "runs/2026-11-12-hidden-email-development.json",
+        "runs/2026-11-12-hidden-email-english-linux.json",
+        "runs/2026-11-12-hidden-email-compact-linux.json",
+        "runs/2026-11-12-hidden-email-asgi-linux.json",
+        "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+        "runs/2026-11-12-hidden-email-hosted-english.json",
+        "runs/2026-11-12-hidden-email-hosted-compact.json",
+        "runs/2026-11-12-hidden-email-hosted-service.json",
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "runs/2026-11-12-hidden-email-publication.json"
+      ]
+    },
+    {
+      "id": "T-OUT",
+      "original_title": "PII_OUTBOUND",
+      "original_description_field_present": false,
+      "baseline_job": "Warn about supported personal-information detections before a selected send action and let the user edit or cancel.",
+      "outcome": "The user controls disclosure before sending, without an invisible copy of their prompt.",
+      "baseline_acceptance": "Supported send paths cannot transmit before the warning decision.; Unsupported paths are disclosed; no blanket coverage claim.; Consent, cancel and reset tests verify no hidden retention or secondary upload. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-PII_OUTBOUND"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver PII_OUTBOUND. Next package action: Define supported compose/send surfaces and capture permissions. Required outcome: The user controls disclosure before sending, without an invisible copy of their prompt."
+      ],
+      "next_fix": "Deliver PII_OUTBOUND. Next package action: Define supported compose/send surfaces and capture permissions. Required outcome: The user controls disclosure before sending, without an invisible copy of their prompt.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "F-010",
+      "original_title": "sig.piped_installer.v1 \u2014 curl/wget piped to a shell",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.piped_installer.v1 \u2014 curl/wget piped to a shell.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+      "next_owner": "Michael coordinates independent reviewers; Codex tooling",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json"
+      ]
+    },
+    {
+      "id": "F-011",
+      "original_title": "sig.obfuscated_payload.v1 \u2014 base64/hex into eval/exec",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.obfuscated_payload.v1 \u2014 base64/hex into eval/exec.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+      "next_owner": "Michael coordinates independent reviewers; Codex tooling",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json"
+      ]
+    },
+    {
+      "id": "F-012",
+      "original_title": "sig.credential_exfil.v1 \u2014 reads a secret path, writes to a network sink",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.credential_exfil.v1 \u2014 reads a secret path, writes to a network sink.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete the proposed Semgrep/use-mention integration contract and independent credential-flow validation before any PS mapping. The separate bounded Python static-flow observation now runs on Mac and isolated Linux; unknown syntax is explicitly unavailable."
+      ],
+      "next_fix": "Complete the proposed Semgrep/use-mention integration contract and independent credential-flow validation before any PS mapping. The separate bounded Python static-flow observation now runs on Mac and isolated Linux; unknown syntax is explicitly unavailable.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tools/credential_flow.py",
+        "scripts/credential-flow.py",
+        "tests/test_credential_flow.py",
+        "docs/credential-flow.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
+      ]
+    },
+    {
+      "id": "F-013",
+      "original_title": "sig.typosquat.v1 \u2014 package name within edit distance 1\u20132 of a top-N name",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.typosquat.v1 \u2014 package name within edit distance 1\u20132 of a top-N name.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Obtain an independently supported ranked package snapshot, validate the recommendation/use-mention and benign-similarity boundaries, and complete held-out enhancement acceptance before any PS mapping. The offline ranking/import/edit-distance component is functioning."
+      ],
+      "next_fix": "Obtain an independently supported ranked package snapshot, validate the recommendation/use-mention and benign-similarity boundaries, and complete held-out enhancement acceptance before any PS mapping. The offline ranking/import/edit-distance component is functioning.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tools/package_proximity.py",
+        "scripts/package-proximity.py",
+        "tests/test_package_proximity.py",
+        "docs/package-proximity.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
+      ]
+    },
+    {
+      "id": "F-014",
+      "original_title": "Use/mention discriminator \u2014 is the command being recommended or discussed?",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver use/mention discriminator \u2014 is the command being recommended or discussed?.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "next_fix": "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy.",
+      "next_owner": "Michael coordinates independent reviewers; Codex tooling",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json"
+      ]
+    },
+    {
+      "id": "F-015",
+      "original_title": "sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-HP"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Deliver sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+      ],
+      "next_fix": "Validate contextual specificity, citation scope and useful indicator errors before HP integration. The separate literal numeric/date-shaped component now executes on Mac and isolated non-root Linux; it does not establish truth or source support.",
+      "next_owner": "Codex with independent reviewers",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/quantitative-observations.md",
+        "docs/quantitative-observation-plan.md",
+        "tools/quantitative_observations.py",
+        "scripts/quantitative-observations.py",
+        "scripts/verify-quantitative-observations.py",
+        "tests/test_quantitative_observations.py",
+        "runs/2026-10-11-quantitative-cli-final-mac.json",
+        "runs/2026-10-11-quantitative-cli-final-linux.json",
+        "runs/2026-10-11-quantitative-identifier-boundary-diagnosis.json",
+        "runs/2026-10-11-quantitative-cli-identifiers-mac.json",
+        "runs/2026-10-11-quantitative-cli-identifiers-linux.json"
+      ]
+    },
+    {
+      "id": "F-016",
+      "original_title": "sig.selfcontradiction.v1 \u2014 NLI entailment between sentence pairs",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.selfcontradiction.v1 \u2014 NLI entailment between sentence pairs.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-HP"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Representative self-contradiction selection and independent labeled/category error validation, agreed calibration/threshold policy, HP integration and human acceptance; no classifier score is treated as truth or independent corroboration."
+      ],
+      "next_fix": "Validate representative self-contradiction selection, category errors and model calibration; agree signal/tag mapping and finish the full HP integration and human acceptance. The working caller-selected research model has a retained neutral-pair error and issues no tag.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/nli-pairs.md",
+        "docs/nli-pairs-plan.md",
+        "runs/2026-10-11-nli-current-engineering.json",
+        "runs/2026-10-11-nli-mac-controls.json",
+        "runs/2026-10-11-nli-linux-controls.json"
+      ]
+    },
+    {
+      "id": "F-018",
+      "original_title": "sig.hedge_collapse.v1 \u2014 hedging absent where uncertainty is expected",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.hedge_collapse.v1 \u2014 hedging absent where uncertainty is expected.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-HP"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Validate contextual hedge/word-sense interpretation and complete the full HP integration acceptance. The English reference observation works for explicitly caller-selected, hash-bound expected-uncertainty spans; expectation is not inferred."
+      ],
+      "next_fix": "Validate contextual hedge/word-sense interpretation and complete the full HP integration acceptance. The English reference observation works for explicitly caller-selected, hash-bound expected-uncertainty spans; expectation is not inferred.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "tools/language_observations.py",
+        "scripts/language-observations.py",
+        "tests/test_language_observations.py",
+        "docs/language-observations.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
+      ]
+    },
+    {
+      "id": "F-019a",
+      "original_title": "sig.urgency_frame.v1 \u2014 time-pressure lexicon plus imperative density",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.urgency_frame.v1 \u2014 time-pressure lexicon plus imperative density.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-MT"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
+      ],
+      "next_fix": "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "tools/language_observations.py",
+        "scripts/language-observations.py",
+        "tests/test_language_observations.py",
+        "docs/language-observations.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
+      ]
+    },
+    {
+      "id": "F-019b",
+      "original_title": "sig.false_dilemma.v1 \u2014 binary framing where alternatives exist",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.false_dilemma.v1 \u2014 binary framing where alternatives exist.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-MT"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Full contextual/grammatical and additional-alternative validation, representative independent held-out labeling, accepted MT mapping, selected integration and required human operation."
+      ],
+      "next_fix": "Complete additional exclusive/negated grammar, automatic selection, contextual/quotation interpretation, feasible and fresh additional references, independent category errors and accepted MT/human integration. Four caller-selected paired-marker forms now work; the new between/and form never nominates a signal. This increment is published through protected PR101; remaining validation and integration work stays open.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/choice-framing.md",
+        "docs/choice-framing-plan.md",
+        "runs/2026-10-11-choice-framing-engineering.json",
+        "runs/2026-10-11-choice-framing-current-mac-controls.json",
+        "runs/2026-10-11-choice-framing-current-linux-controls.json",
+        "runs/2026-10-12-choice-grammar-engineering.json",
+        "runs/2026-10-12-choice-grammar-canonical-cleanup.json",
+        "docs/choice-grammar-result.md",
+        "docs/choice-between-plan.md",
+        "runs/2026-11-12-choice-between-development.json",
+        "runs/2026-11-12-choice-between-mac.json",
+        "runs/2026-11-12-choice-between-linux.json",
+        "runs/2026-11-15-main-reconciliation.json"
+      ]
+    },
+    {
+      "id": "F-019c",
+      "original_title": "sig.authority_appeal.v1 \u2014 unattributed appeals to expertise or consensus",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.authority_appeal.v1 \u2014 unattributed appeals to expertise or consensus.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-MT"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent."
+      ],
+      "next_fix": "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "tools/language_observations.py",
+        "scripts/language-observations.py",
+        "tests/test_language_observations.py",
+        "docs/language-observations.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
+      ]
+    },
+    {
+      "id": "F-020b",
+      "original_title": "sig.corpus_contradiction.v1 \u2014 NLI contradiction against a retrieved passage",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.corpus_contradiction.v1 \u2014 NLI contradiction against a retrieved passage.",
+      "outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-FI"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Representative held-out reference/category validation, freshness/claim selection contract, calibrated accepted tag mapping, full FI integration and required human operation."
+      ],
+      "next_fix": "Validate representative reference selection, contextual and temporal errors, source freshness and model calibration; accept the proposed signal/tag mapping and complete full FI integration and human acceptance. The working offline research command preserves a default lexical miss and is not an FI or falsehood verdict.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/nli-references.md",
+        "docs/nli-reference-plan.md",
+        "runs/2026-10-11-nli-reference-current-engineering.json",
+        "runs/2026-10-11-nli-reference-mac-owned-session-controls.json",
+        "runs/2026-10-11-nli-reference-linux-controls.json",
+        "docs/reference-revision-plan.md",
+        "docs/reference-revisions.md",
+        "tools/reference_revision.py",
+        "runs/2026-10-12-reference-revision-practice-local.json",
+        "runs/2026-10-12-reference-revision-linux.json",
+        "docs/reference-review-window-plan.md",
+        "tools/reference_review_window.py",
+        "scripts/prepare-reference-review-windows.py",
+        "scripts/verify-reference-review-windows.py",
+        "runs/2026-10-13-reference-window-mac-current.json",
+        "runs/2026-10-13-reference-window-linux.json"
+      ]
+    },
+    {
+      "id": "F-029a",
+      "original_title": "sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session.",
+      "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PA"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
+      ],
+      "next_fix": "Deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/session-revision-plan.md",
+        "docs/session-revisions.md",
+        "docs/session-revision-result.md",
+        "runs/2026-10-12-session-revision-local.json",
+        "runs/2026-10-12-session-revision-linux.json"
+      ]
+    },
+    {
+      "id": "F-023",
+      "original_title": "Detected PII redaction",
+      "original_description_field_present": false,
+      "baseline_job": "Remove recognized entities before evaluation",
+      "outcome": "Detected entities are redacted; coverage and missed-detection limitations remain visible.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PII_REDACTED"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
+      ],
+      "next_fix": "Improve remaining false masking and obfuscated addresses; complete independent representative recognition and required human route acceptance. Corrected source and measured development panels are published, and local service installations must rebuild to adopt the change.",
+      "next_owner": "Codex",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_redaction_contract.py",
+        "docs/tags/PII-01.md",
+        "docs/redaction-recognition.md",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py",
+        "runs/2026-10-11-pii-recognition-staging.json",
+        "runs/2026-10-11-pii-recognition-service.json",
+        "runs/2026-10-11-pii-recognition-replay.json",
+        "runs/2026-10-11-pii-recognition-integration.json",
+        "runs/2026-10-11-pii-recognition-focused.json",
+        "runs/2026-10-11-pii-labels-review-diagnosis.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "runs/2026-10-11-pii-labels-compact.json",
+        "runs/2026-10-11-pii-labels-service.json",
+        "runs/2026-10-11-pii-labels-replay.json",
+        "runs/2026-10-11-pii-labels-timing.json",
+        "runs/2026-11-08-pii-separator-mac-development.json",
+        "docs/pii-separator-correction-plan.md",
+        "runs/2026-11-08-pii-separator-english-linux.json",
+        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "docs/pii-pan-token-plan.md",
+        "tests/test_redaction_pan_token.py",
+        "runs/2026-11-09-pan-candidate-recognizer.json",
+        "runs/2026-11-09-pan-english-linux.json",
+        "runs/2026-11-09-pan-compact-linux.json",
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json",
+        "runs/2026-11-09-pan-pipeline-timing-linux.json",
+        "docs/pii-hidden-separators-plan.md",
+        "tests/test_redaction_hidden_email.py",
+        "scripts/verify-hidden-email-service.py",
+        "runs/2026-11-12-hidden-email-development.json",
+        "runs/2026-11-12-hidden-email-english-linux.json",
+        "runs/2026-11-12-hidden-email-compact-linux.json",
+        "runs/2026-11-12-hidden-email-asgi-linux.json",
+        "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+        "runs/2026-11-12-hidden-email-hosted-english.json",
+        "runs/2026-11-12-hidden-email-hosted-compact.json",
+        "runs/2026-11-12-hidden-email-hosted-service.json",
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "runs/2026-11-12-hidden-email-publication.json"
+      ]
+    },
+    {
+      "id": "F-024",
+      "original_title": "PII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver pII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model.",
+      "outcome": "Catches the mistake before it leaves your machine, not after",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-PII_OUTBOUND"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Supported compose/send intervention and explicit permission boundaries.",
+        "Independent recognition and human operation before outbound-tag release."
+      ],
+      "next_fix": "Complete accepted browser compose/send capture, explicit edit/cancel/proceed and supported send-path enforcement, then independent recognition and human acceptance. The manual draft privacy route works but does not intercept sending or issue PII_OUTBOUND.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/draft-privacy-plan.md",
+        "docs/draft-privacy.md",
+        "scripts/verify-draft-privacy.py",
+        "tests/test_draft_privacy.py",
+        "runs/2026-10-13-draft-privacy-real-linux.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
+      ]
+    },
+    {
+      "id": "F-030",
+      "original_title": "MV3 MAIN-world capture \u2014 fetch patch plus ReadableStream.tee()",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver mV3 MAIN-world capture \u2014 fetch patch plus ReadableStream.tee().",
+      "outcome": "Labels appear where you already read AI output, with no copy-paste",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-CAPTURE"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
+      ],
+      "next_fix": "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
+      "next_owner": "Codex",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "extension/src/main-world/stream-observer.mjs",
+        "docs/stream-observer-plan.md",
+        "tests/stream-observer.cjs",
+        "runs/2026-10-08-browser-checks.json"
+      ]
+    },
+    {
+      "id": "F-037",
+      "original_title": "Per-vendor site adapters",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver per-vendor site adapters.",
+      "outcome": "Reliable capture per site instead of a guess that works sometimes",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-CAPTURE"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Exercise the declared supported ChatGPT adapter and deliberate recheck lifecycle against current vendor markup; publish unsupported-page behavior and complete outside-user checks."
+      ],
+      "next_fix": "Exercise the declared supported ChatGPT adapter and deliberate recheck lifecycle against current vendor markup; publish unsupported-page behavior and complete outside-user checks.",
+      "next_owner": "Codex",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-browser-checks.json",
+        "extension/src/adapters/chatgpt.js"
+      ]
+    },
+    {
+      "id": "F-035",
+      "original_title": "Full screen-reader semantics, aria-live=\"polite\" never assertive",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver full screen-reader semantics, aria-live=\"polite\" never assertive.",
+      "outcome": "The label is announced without interrupting what you are reading",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-UX"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+      ],
+      "next_fix": "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures.",
+      "next_owner": "Codex",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-browser-checks.json",
+        "scripts/browser-acceptance.js",
+        "scripts/live-dom-acceptance.js",
+        "docs/quiet-paused-checks-plan.md",
+        "docs/quiet-paused-checks.md",
+        "runs/2026-10-15-quiet-paused-privacy.json",
+        "runs/2026-10-15-quiet-paused-regression.json"
+      ]
+    },
+    {
+      "id": "F-097",
+      "original_title": "User-invoked labelling \u2014 select a response, ask for a check",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver user-invoked labelling \u2014 select a response, ask for a check.",
+      "outcome": "Correct attribution even when automatic capture cannot be trusted",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-CAPTURE"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Exercise the declared supported ChatGPT adapter and deliberate recheck lifecycle against current vendor markup; publish unsupported-page behavior and complete outside-user checks."
+      ],
+      "next_fix": "Exercise the declared supported ChatGPT adapter and deliberate recheck lifecycle against current vendor markup; publish unsupported-page behavior and complete outside-user checks.",
+      "next_owner": "Codex",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-browser-checks.json",
+        "extension/src/adapters/chatgpt.js"
+      ]
+    },
+    {
+      "id": "F-050",
+      "original_title": "Gate thresholds in eval/gates.yaml \u2014 precision, recall, ECE, abstention band, latency, axe, \u03b1",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver gate thresholds in eval/gates.yaml \u2014 precision, recall, ECE, abstention band, latency, axe, \u03b1.",
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-VALIDATION"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
+      ],
+      "next_fix": "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels.",
+      "next_owner": "Codex",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-09-scope-regressions.json",
+        "eval/gates.yaml",
+        "docs/independent-review.md",
+        "docs/review-execution-binding-plan.md",
+        "docs/review-execution-binding-result.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "runs/2026-10-12-review-execution-focused.json",
+        "runs/2026-10-12-review-execution-cli.json",
+        "runs/2026-10-12-review-execution-linux.json",
+        "runs/2026-10-12-review-execution-linux-cleanup.json",
+        "runs/2026-10-12-review-repaired-focused.json",
+        "runs/2026-10-12-review-repaired-cli.json",
+        "runs/2026-10-12-review-repaired-linux.json"
+      ]
+    },
+    {
+      "id": "F-108",
+      "original_title": "Frozen held-out split with a manifest hash, separate from the regression suite",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver frozen held-out split with a manifest hash, separate from the regression suite.",
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-VALIDATION"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not."
+      ],
+      "next_fix": "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not.",
+      "next_owner": "Michael and independent reviewers",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_blind_review.py",
+        "docs/PS-reviewer-start.md",
+        "docs/blind-review-privacy-plan.md",
+        "runs/2026-10-11-blind-private-current-mac-cli.json",
+        "runs/2026-10-11-blind-private-linux-cli.json",
+        "runs/2026-10-11-blind-private-linux-current.json",
+        "runs/2026-10-11-blind-private-browser.json",
+        "runs/2026-10-11-blind-private-device.json",
+        "docs/review-execution-binding-plan.md",
+        "docs/review-execution-binding-result.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "runs/2026-10-12-review-execution-focused.json",
+        "runs/2026-10-12-review-execution-cli.json",
+        "runs/2026-10-12-review-execution-linux.json",
+        "runs/2026-10-12-review-execution-linux-cleanup.json",
+        "runs/2026-10-12-review-repaired-focused.json",
+        "runs/2026-10-12-review-repaired-cli.json",
+        "runs/2026-10-12-review-repaired-linux.json",
+        "runs/2026-11-06-conformance-software-owner-decision.json"
+      ]
+    },
+    {
+      "id": "F-056",
+      "original_title": "Krippendorff's \u03b1 published for MT, \u2265 0.55",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver krippendorff's \u03b1 published for MT, \u2265 0.55.",
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "TAG-MT"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Deliver Krippendorff's \u03b1 published for MT, \u2265 0.55. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      ],
+      "next_fix": "Accept the MT annotation and sampling protocol; collect real blinded independent human ratings, adjudicate disagreement, adopt the threshold and interval method, and publish the measured agreement. The nominal computation now executes on Mac and isolated Linux; synthetic examples are not an MT validation study.",
+      "next_owner": "Codex",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/reviewer-agreement.md",
+        "runs/2026-10-11-reviewer-agreement-mac.json",
+        "runs/2026-10-11-reviewer-agreement-linux.json"
+      ]
+    },
+    {
+      "id": "F-113",
+      "original_title": "Latency budget enforcement \u2014 p95 \u2264 100ms",
+      "original_description_field_present": false,
+      "baseline_job": "Measure route-specific startup/warm latency on declared hardware and input sizes before accepting an enforcement budget.",
+      "outcome": "Performance claims name their conditions; the historical p95 100 ms value remains a target until accepted.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-RELEASE"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Expand timing to declared larger input sizes, full service routes and physical phones; agree route-specific budgets and test enforcement before accepting the historical 100 ms target."
+      ],
+      "next_fix": "Measure physical-phone and other declared whole-route startup/update behavior; accept route-specific budgets and prove their enforcement. The complete local staging pipeline is now measured at four input sizes; the historical 100 ms target remains unaccepted.",
+      "next_owner": "Codex; human device testers",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/tag-performance-plan.md",
+        "scripts/verify-device.cjs",
+        "runs/2026-10-09-performance-device-local.json",
+        "docs/pipeline-performance.md",
+        "docs/pipeline-performance-plan.md",
+        "scripts/measure-pipeline-performance.py",
+        "tests/test_pipeline_performance.py",
+        "tests/pipeline-timing.cjs",
+        "runs/2026-10-11-staging-pipeline-performance.json",
+        "runs/2026-10-11-staging-pipeline-source-witness.json",
+        "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
+        "runs/2026-10-11-staging-pipeline-identity-checked.json",
+        "runs/2026-10-11-staging-pipeline-identity-witness.json",
+        "runs/2026-10-11-pii-pipeline-timing.json",
+        "runs/2026-10-11-pii-labels-review-diagnosis.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "runs/2026-10-11-pii-labels-compact.json",
+        "runs/2026-10-11-pii-labels-service.json",
+        "runs/2026-10-11-pii-labels-replay.json",
+        "runs/2026-10-11-pii-labels-timing.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "runs/2026-10-14-tag-isolation-pipeline-timing.json"
+      ]
+    },
+    {
+      "id": "F-114",
+      "original_title": "Abstention-rate band enforcement, 0.02\u20130.35",
+      "original_description_field_present": false,
+      "baseline_job": "Measure abstention and enforce only accepted method-appropriate bounds; deterministic methods have no forced minimum quota.",
+      "outcome": "The method can honestly report its evidence without inventing abstentions to meet an arbitrary global band.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-VALIDATION"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
+      ],
+      "next_fix": "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels.",
+      "next_owner": "Codex",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-09-scope-regressions.json",
+        "eval/gates.yaml",
+        "docs/independent-review.md"
+      ]
+    },
+    {
+      "id": "F-057",
+      "original_title": "SBOM plus Sigstore release signing",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver sBOM plus Sigstore release signing.",
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-RELEASE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
+      ],
+      "next_fix": "Complete remaining transitive/native/platform obligations, source offers and model permission review; bind the full conflict policy before claiming redistribution clearance. Selected asset identity and exact notice packaging now execute.",
+      "next_owner": "Codex",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/open-dependency-audit-plan.md",
+        "docs/runtime-sbom.md",
+        "runs/2026-10-10-runtime-license-inventory.json",
+        "runs/2026-10-10-runtime-sbom-identity.json",
+        "scripts/verify-runtime-sbom.py",
+        "tests/test_runtime_sbom.py",
+        "eval/dependencies/runtime-sbom.json",
+        "docs/spdx-validation-plan.md",
+        "docs/spdx-inventory-validation.md",
+        "scripts/spdx_inventory.py",
+        "scripts/verify-runtime-sbom-standard.py",
+        "tests/test_spdx_inventory.py",
+        "runs/2026-10-10-spdx-standard-inventory.json",
+        "runs/2026-10-10-spdx-validation-controls.json",
+        "docs/source-provenance.md",
+        "runs/2026-10-10-authenticated-source-download.json",
+        "runs/2026-10-10-source-download-hosted-checks.json",
+        "docs/license-evidence-plan.md",
+        "docs/dependency-notices.md",
+        "scripts/license_notices.py",
+        "scripts/verify-redistribution-notices.py",
+        "tests/test_license_notices.py",
+        "sbom/notices/manifest.json",
+        "runs/2026-10-11-license-notices-timestamped.json",
+        "runs/2026-10-11-license-archives-timestamped.json",
+        "docs/source-input-binding-plan.md",
+        "scripts/source_snapshot.py",
+        "scripts/verify-source-provenance.py",
+        "tests/test_source_provenance.py",
+        "runs/2026-10-11-source-captured-mac.json",
+        "runs/2026-10-11-source-captured-linux.json",
+        "docs/asset-notices-plan.md",
+        "docs/asset-notices.md",
+        "docs/asset-notices-result.md",
+        "scripts/asset_notices.py",
+        "scripts/verify-asset-notices.py",
+        "sbom/assets/notices.json",
+        "tests/test_asset_notices.py",
+        "runs/2026-10-12-selected-asset-mac.json",
+        "runs/2026-10-12-selected-runtime-archive.json",
+        "runs/2026-10-12-selected-assets-linux.json",
+        "runs/2026-10-12-selected-assets-staging-cleanup.json",
+        "docs/native-dependency-plan.md",
+        "docs/native-dependency-evidence.md",
+        "sbom/native/manifest.json",
+        "tools/native_inventory.py",
+        "scripts/verify-native-dependencies.py",
+        "tests/test_native_inventory.py",
+        "runs/2026-10-15-native-focused-controls.json",
+        "runs/2026-10-15-native-archive-replay.json",
+        "mobile/ios/Privacy.txt",
+        "scripts/verify-ios-archive.py",
+        "tests/test_ios_archive.py",
+        "runs/2026-11-09-ios-distribution-final-archive.json",
+        "docs/ios-privacy-manifest-plan.md",
+        "mobile/ios/PrivacyInfo.xcprivacy",
+        "runs/2026-11-16-ios-privacy-packaging-controls.json",
+        "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+        "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
+        "runs/2026-11-16-ios-reclaimed-source-unsigned-archive.json"
+      ]
+    },
+    {
+      "id": "F-120",
+      "original_title": "Evidence packets \u2014 committed transcripts per exit gate",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver evidence packets \u2014 committed transcripts per exit gate.",
+      "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-RELEASE"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required."
+      ],
+      "next_fix": "F-120 software/human acceptance allocation remains unaccepted; the recorded November6 decision applies to F-119 only. Retain the original versioned-vector/exit-packet/outside-user criterion. Existing packet tooling works, and failed native collection is preserved; do not close F-120 by silently reallocating its acceptance.",
+      "next_owner": "Michael \u2014 F-120 acceptance allocation; Codex \u2014 tooling; outside implementer \u2014 retained human acceptance",
+      "primary_gate_group": "compatibility",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "docs/open-validation-path.md",
+        "docs/review-execution-binding-plan.md",
+        "docs/review-execution-binding-result.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "runs/2026-10-12-review-execution-focused.json",
+        "runs/2026-10-12-review-execution-cli.json",
+        "runs/2026-10-12-review-execution-linux.json",
+        "runs/2026-10-12-review-execution-linux-cleanup.json",
+        "runs/2026-10-12-review-repaired-focused.json",
+        "runs/2026-10-12-review-repaired-cli.json",
+        "runs/2026-10-12-review-repaired-linux.json",
+        "docs/conformance-runner-plan.md",
+        "docs/conformance-runner.md",
+        "tools/conformance_vectors.py",
+        "scripts/check-conformance-vectors.py",
+        "eval/conformance/assertion-v1.json",
+        "tests/test_conformance_vectors.py",
+        "runs/2026-10-15-conformance-reference-vectors.json",
+        "runs/2026-10-15-conformance-evidence-focused.json",
+        "docs/evidence-packet-plan.md",
+        "docs/evidence-packet.md",
+        "tools/evidence_packet.py",
+        "scripts/build-evidence-packet.py",
+        "tests/test_evidence_packet.py",
+        "docs/share-reliability-plan.md",
+        "runs/2026-11-16-native-boot-observability-controls.json",
+        "docs/conformance-evidence-result.md",
+        "runs/2026-11-16-native-result-lifecycle-controls.json"
+      ]
+    },
+    {
+      "id": "F-125",
+      "original_title": "Per-device revocable keys plus a revocation transparency log",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver per-device revocable keys plus a revocation transparency log.",
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-RECEIPTS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Operating public revocation transparency and witness/distribution evidence; full outside-user per-device operation."
+      ],
+      "next_fix": "Deliver actual publicly distributed/witnessed revocation transparency, equivocation/completeness checks, rotation and outside-user per-device acceptance. Current signed cached history is not a public transparency service.",
+      "next_owner": "Codex and Michael",
+      "primary_gate_group": "services",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/offline-revocation-plan.md",
+        "docs/offline-revocation.md",
+        "protocol/revocation.cjs",
+        "scripts/revocation.cjs",
+        "tests/offline-revocation.cjs",
+        "runs/2026-10-11-offline-revocation-platforms.json"
+      ]
+    },
+    {
+      "id": "F-129",
+      "original_title": "Key custody and recovery for a non-technical author",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver key custody and recovery for a non-technical author.",
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-RECEIPTS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Actual nontechnical-author operation and recovery/compromise understanding on an independently operated computer; no automated terminal can substitute for human acceptance."
+      ],
+      "next_fix": "Complete actual nontechnical-author backup, lost-key restoration, separately saved public-key checking and compromise/replacement understanding on an owner-controlled second computer. Offline Mac/Linux engineering and hidden terminal controls are exercised; human custody acceptance is not.",
+      "next_owner": "Michael and outside author; Codex fixes",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/key-recovery-plan.md",
+        "docs/key-recovery.md",
+        "runs/2026-10-11-key-backup-platforms.json",
+        "runs/2026-10-11-key-backup-terminal-refusal.json",
+        "runs/2026-10-11-key-backup-atomic-repair.json",
+        "runs/2026-10-11-key-backup-atomic-final-platforms.json"
+      ]
+    },
+    {
+      "id": "F-130",
+      "original_title": "Group authorship \u2014 four signers or four receipts",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver group authorship \u2014 four signers or four receipts.",
+      "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-RECEIPTS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Complete outside-user multi-device group operation and the full authorship-receipt interpretation/acceptance. Current cryptographic agreement proves selected keys signed the same artifact-bound record; it does not prove authorship or distinct people, issue PA/FA/IV, implement revocation or adopt RFC-0002."
+      ],
+      "next_fix": "Complete outside-user multi-device group operation and the full authorship-receipt interpretation/acceptance. Current cryptographic agreement proves selected keys signed the same artifact-bound record; it does not prove authorship or distinct people, issue PA/FA/IV, implement revocation or adopt RFC-0002.",
+      "next_owner": "Michael and group participants; Codex interpretation and fixes",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/group-receipt-plan.md",
+        "docs/group-receipts.md",
+        "runs/2026-10-10-group-receipt-controls.json"
+      ]
+    },
+    {
+      "id": "F-135",
+      "original_title": "Report AI \u2014 public intake for AI content people want flagged",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver report AI \u2014 public intake for AI content people want flagged.",
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "next_fix": "Implement public report intake and official response/correction/appeal states with authorization, safe rendering and no private-example publication by default; verify a report through resolution. Link live discussion delivery to F-136 rather than treating a GitHub link as complete.",
+      "next_owner": "Community engineer; Michael assigns response owners",
+      "primary_gate_group": "community",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "F-136",
+      "original_title": "Townhall \u2014 a community space for AI users to talk, with moderation",
+      "original_description_field_present": false,
+      "baseline_job": "Provide public live community discussions and official replies with safe publication controls.",
+      "outcome": "Everyone can read public community messages and company replies; private reports and research remain outside the public stream.",
+      "baseline_acceptance": "Exercise two-user and moderator posting, safe rendering, object authorization, bounded live updates, reconnect/replay, throttling and retraction; verify private synthetic markers never reach public responses or logs.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "next_fix": "Build the self-hosted live community service and explicit web/iOS clients: public reading, authenticated posting/replies, bounded updates/reconnect/replay, moderation/retraction and privacy-marker tests. Name real moderators before opening public posting.",
+      "next_owner": "Community engineer; Michael assigns moderators",
+      "primary_gate_group": "community",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "F-137",
+      "original_title": "Moderation ladder and escalation path derived from the code of conduct",
+      "original_description_field_present": false,
+      "baseline_job": "Apply a documented moderation and appeal process with public safe action records.",
+      "outcome": "People see moderation reasons and appeal routes without removed secrets, private reports or reporter identities being republished.",
+      "baseline_acceptance": "Test moderator authorization, edits/retractions, safe tombstones and appeals; removed sensitive content must be absent from public history and event replay.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "next_fix": "Implement role-bound moderation, escalation, appeals, safe tombstones, and removal from public cache/replay/export; exercise two users plus an authorized moderator and retain accountability without republishing removed private material.",
+      "next_owner": "Community/security engineers; named human moderators",
+      "primary_gate_group": "community",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "F-074",
+      "original_title": "conduct@ with an enforcement ladder",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver conduct@ with an enforcement ladder.",
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "next_fix": "Verify conduct inbox delivery and access ownership, publish accountable response/escalation handling, and exercise a synthetic conduct report through the actual enforcement ladder. Do not infer staffed operations from an alias existing.",
+      "next_owner": "Michael names conduct operators; Codex verifies tooling",
+      "primary_gate_group": "community",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "F-138",
+      "original_title": "abuse@ and press@",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver abuse@ and press@.",
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "next_fix": "Verify abuse and press inbox delivery, responsible operators, private abuse triage versus authorized public press replies, and correction/escalation handling. Building the discussion UI alone does not operate these inboxes.",
+      "next_owner": "Michael names operators; Codex verifies routing",
+      "primary_gate_group": "community",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "F-141",
+      "original_title": "Pilot programme \u2014 small consenting group, feedback without collecting prompts or outputs",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver pilot programme \u2014 small consenting group, feedback without collecting prompts or outputs.",
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Recruit and record a small consenting pilot, run the real workflow, review user feedback and close defects. Metadata preview/download is tested; it is not a running recruited pilot."
+      ],
+      "next_fix": "Recruit and record a small consenting pilot, run the real workflow, review user feedback and close defects. Metadata preview/download is tested; it is not a running recruited pilot.",
+      "next_owner": "Michael recruits and accepts; Codex tooling",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/owner-operation.md",
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/research-admission-plan.md",
+        "docs/research-admission.md",
+        "docs/research-admission-result.md",
+        "tools/research_admission.py",
+        "scripts/research-admission.py",
+        "scripts/verify-research-admission.py",
+        "tests/test_research_admission.py",
+        "runs/2026-10-12-admission-linux-controls.json",
+        "runs/2026-10-12-admission-local-controls.json",
+        "runs/2026-10-12-admission-worker-shadowing-refusal.json",
+        "tools/feedback_analysis.py",
+        "scripts/analyze-feedback.py",
+        "scripts/prepare-feedback-analysis-demo.py",
+        "scripts/verify-feedback-analysis.py",
+        "tests/test_feedback_analysis.py",
+        "docs/feedback-analysis-plan.md",
+        "docs/feedback-analysis.md",
+        "docs/feedback-analysis-result.md",
+        "runs/2026-10-12-feedback-analysis-explanations-local.json",
+        "runs/2026-10-12-feedback-analysis-linux.json",
+        "runs/2026-10-12-feedback-analysis-staging-refusal.json",
+        "runs/2026-10-12-feedback-no-change-local.json",
+        "runs/2026-10-12-feedback-no-change-linux.json",
+        "runs/2026-10-12-feedback-review-state-gap.json"
+      ]
+    },
+    {
+      "id": "F-142",
+      "original_title": "Install and removal instructions, reproducible",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver install and removal instructions, reproducible.",
+      "outcome": "A person can access the public tag workflow and its support process.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-SITE"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate.",
+        "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
+      ],
+      "next_fix": "Perform the existing physical-device, screen-reader and outside-user setup tasks, and obtain an actual outside implementer run against their own build with recorded acceptance. F-119 software checks do not satisfy these human tasks.",
+      "next_owner": "Human device/accessibility testers; Codex fixes",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-08-scope-plan-site-public.json",
+        "docs/handheld-delivery.md",
+        "runs/2026-11-06-conformance-software-owner-decision.json"
+      ]
+    },
+    {
+      "id": "F-075",
+      "original_title": "Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top.",
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-GOVERNANCE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+      ],
+      "next_fix": "Deliver Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
+      "next_owner": "Codex",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "F-143",
+      "original_title": "Certification mark \u2014 filed, owned by the foundation",
+      "original_description_field_present": false,
+      "baseline_job": "Prepare qualified clearance, ownership and filing decisions before any certification-mark application or asset assignment.",
+      "outcome": "The public can distinguish a future institutional target from a mark or foundation that already exists.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-GOVERNANCE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Certification-mark ownership and filing work. Next package action: Separate current individual publisher from any future legal entity. Required outcome: The public can distinguish a future institutional target from a mark or foundation that already exists."
+      ],
+      "next_fix": "Deliver Certification-mark ownership and filing work. Next package action: Separate current individual publisher from any future legal entity. Required outcome: The public can distinguish a future institutional target from a mark or foundation that already exists.",
+      "next_owner": "Codex",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "F-145",
+      "original_title": "Certification programme \u2014 what a certifier must test, and how one is accredited",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver certification programme \u2014 what a certifier must test, and how one is accredited.",
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-GOVERNANCE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Certification programme \u2014 what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+      ],
+      "next_fix": "Deliver Certification programme \u2014 what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
+      "next_owner": "Codex",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "F-146",
+      "original_title": "Nonprofit formation and filings",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver nonprofit formation and filings.",
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-GOVERNANCE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Reconcile full safe public formation drafts, approve entity/tax choices with a realistic budget and qualified counsel, and perform actual filings. Inventory and proposed corrections are not formation."
+      ],
+      "next_fix": "Reconcile full safe public formation drafts, approve entity/tax choices with a realistic budget and qualified counsel, and perform actual filings. Inventory and proposed corrections are not formation.",
+      "next_owner": "Michael and qualified nonprofit/tax counsel",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/legal-operations-review.md",
+        "docs/legal/reviewed-corrections.md",
+        "docs/legal/source-inventory.json"
+      ]
+    },
+    {
+      "id": "F-148",
+      "original_title": "Qualified legal review of every biometric and privacy assurance",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver qualified legal review of every biometric and privacy assurance.",
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-GOVERNANCE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Qualified counsel must review actual privacy/biometric assurances and applicability. Codex targeted draft repairs and authoritative-source research do not constitute this qualified review."
+      ],
+      "next_fix": "Qualified counsel must review actual privacy/biometric assurances and applicability. Codex targeted draft repairs and authoritative-source research do not constitute this qualified review.",
+      "next_owner": "Michael engages qualified counsel",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/legal-operations-review.md",
+        "docs/legal/reviewed-corrections.md",
+        "docs/legal/source-inventory.json"
+      ]
+    },
+    {
+      "id": "F-155",
+      "original_title": "SynthID and vendor watermarking",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver synthID and vendor watermarking.",
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-INTEGRATIONS"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+      ],
+      "next_fix": "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "F-156",
+      "original_title": "Additional browser and site adapters",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver additional browser and site adapters.",
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-INTEGRATIONS"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Deliver Additional browser and site adapters. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+      ],
+      "next_fix": "Complete current live vendor use and the stable outside-user Firefox installation/removal acceptance. Only Linux Firefox 153.4.0 temporary installation and the declared synthetic DOM profile with actual source-verified services are demonstrated; other browsers/sites are not claimed.",
+      "next_owner": "Codex and outside users",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/firefox-adapter-plan.md",
+        "docs/firefox-preview.md",
+        "docs/firefox-adapter-result.md",
+        "scripts/build-firefox-extension.py",
+        "scripts/verify-firefox-extension.py",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "tests/firefox-permissions.cjs",
+        "runs/2026-10-13-firefox-linux-integration.json",
+        "runs/2026-10-13-firefox-real-services-linux.json"
+      ]
+    },
+    {
+      "id": "F-163",
+      "original_title": "Support with an SLA",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver support with an SLA.",
+      "outcome": "The application extends supported tags without disabling the personal workflow.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "ORG-SUPPORT"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Support with an SLA. Next package action: Define supported versions/hours, escalation, exclusions and service outcomes. Required outcome: The application extends supported tags without disabling the personal workflow."
+      ],
+      "next_fix": "Deliver Support with an SLA. Next package action: Define supported versions/hours, escalation, exclusions and service outcomes. Required outcome: The application extends supported tags without disabling the personal workflow.",
+      "next_owner": "Codex",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/approachable-tag-modals.md",
+        "runs/2026-10-09-approachable-public.json",
+        "scripts/verify-enterprise.cjs"
+      ]
+    },
+    {
+      "id": "X-02",
+      "original_title": "Any closed-source or paid dependency in the pipeline",
+      "original_description_field_present": false,
+      "baseline_job": "Prevent introduction of: Any closed-source or paid dependency in the pipeline",
+      "outcome": "The product excludes any closed-source or paid dependency in the pipeline, and changes are reviewed against this boundary.",
+      "baseline_acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "package_contracts": [
+        "WP-BOUNDARIES"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
+      ],
+      "next_fix": "Complete remaining transitive/native/platform obligations, source offers and model permission review; bind the full conflict policy before claiming redistribution clearance. Selected asset identity and exact notice packaging now execute.",
+      "next_owner": "Codex",
+      "primary_gate_group": "governance",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/open-dependency-audit-plan.md",
+        "docs/runtime-sbom.md",
+        "runs/2026-10-10-runtime-license-inventory.json",
+        "runs/2026-10-10-runtime-sbom-identity.json",
+        "scripts/verify-runtime-sbom.py",
+        "tests/test_runtime_sbom.py",
+        "eval/dependencies/runtime-sbom.json",
+        "docs/spdx-validation-plan.md",
+        "docs/spdx-inventory-validation.md",
+        "scripts/spdx_inventory.py",
+        "scripts/verify-runtime-sbom-standard.py",
+        "tests/test_spdx_inventory.py",
+        "runs/2026-10-10-spdx-standard-inventory.json",
+        "runs/2026-10-10-spdx-validation-controls.json",
+        "docs/license-evidence-plan.md",
+        "docs/dependency-notices.md",
+        "scripts/license_notices.py",
+        "scripts/verify-redistribution-notices.py",
+        "tests/test_license_notices.py",
+        "sbom/notices/manifest.json",
+        "runs/2026-10-11-license-notices-timestamped.json",
+        "runs/2026-10-11-license-archives-timestamped.json",
+        "docs/source-input-binding-plan.md",
+        "scripts/source_snapshot.py",
+        "scripts/verify-source-provenance.py",
+        "tests/test_source_provenance.py",
+        "runs/2026-10-11-source-captured-mac.json",
+        "runs/2026-10-11-source-captured-linux.json",
+        "docs/asset-notices-plan.md",
+        "docs/asset-notices.md",
+        "docs/asset-notices-result.md",
+        "scripts/asset_notices.py",
+        "scripts/verify-asset-notices.py",
+        "sbom/assets/notices.json",
+        "tests/test_asset_notices.py",
+        "runs/2026-10-12-selected-asset-mac.json",
+        "runs/2026-10-12-selected-runtime-archive.json",
+        "runs/2026-10-12-selected-assets-linux.json",
+        "runs/2026-10-12-selected-assets-staging-cleanup.json",
+        "docs/native-dependency-plan.md",
+        "docs/native-dependency-evidence.md",
+        "sbom/native/manifest.json",
+        "tools/native_inventory.py",
+        "scripts/verify-native-dependencies.py",
+        "tests/test_native_inventory.py",
+        "runs/2026-10-15-native-focused-controls.json",
+        "runs/2026-10-15-native-archive-replay.json",
+        "docs/ios-privacy-manifest-plan.md",
+        "mobile/ios/PrivacyInfo.xcprivacy",
+        "runs/2026-11-16-ios-privacy-packaging-controls.json",
+        "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+        "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
+        "runs/2026-11-16-ios-reclaimed-source-unsigned-archive.json"
+      ]
+    },
+    {
+      "id": "N-001",
+      "original_title": "Protocol compatibility and schema migration",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver protocol compatibility and schema migration.",
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-PROTOCOL"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed."
+      ],
+      "next_fix": "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed.",
+      "next_owner": "Codex",
+      "primary_gate_group": "compatibility",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/extension-consumer-plan.md",
+        "docs/assertion-conformance-plan.md",
+        "scripts/check-assertion.py",
+        "tests/test_assertion_conformance.py",
+        "runs/2026-10-10-six-state-consumer-browser.json",
+        "runs/2026-10-10-consumer-schema-python-corrected.json"
+      ]
+    },
+    {
+      "id": "N-005",
+      "original_title": "Label dispute, correction, and supersession workflow",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver label dispute, correction, and supersession workflow.",
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "WP-COMMUNITY"
+      ],
+      "percent_complete": 40,
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "next_fix": "Implement a versioned dispute-to-review-to-correction/supersession workflow bound to the original tag/method/evidence; preserve correction history and safe public visibility, allow appeal, and verify authorized reviewers plus ordinary-user understanding.",
+      "next_owner": "Community/tag engineers; Michael names review owners",
+      "primary_gate_group": "community",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "N-010",
+      "original_title": "Personal/team/enterprise/proprietary tag offering boundaries",
+      "original_description_field_present": false,
+      "baseline_job": "Specify and deliver personal/team/enterprise/proprietary tag offering boundaries.",
+      "outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "baseline_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "package_contracts": [
+        "ORG-PRIVATE"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
+      ],
+      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
+      "next_owner": "Codex",
+      "primary_gate_group": "services",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "site/src/policies.js",
+        "docs/scope-delivery.md",
+        "docs/approachable-tag-modals.md",
+        "runs/2026-10-09-approachable-public.json",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json",
+        "docs/scope-priorities-2026-11-16.md"
+      ]
+    },
+    {
+      "id": "T-UC",
+      "original_title": "Unsafe Command",
+      "original_description_field_present": false,
+      "baseline_job": "Research a clearer command-risk tag name/claim while preserving PS until a change is accepted.",
+      "outcome": "A proposed migration explains exactly which meaning changes and how old PS records remain interpretable.",
+      "baseline_acceptance": "No rename or new live taxonomy code without owner/RFC acceptance.; Historic PS records retain their original meaning.; A naming change is not new independent accuracy evidence. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-UC"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Unsafe Command. Next package action: Prepare an RFC decision and compatibility mapping. Required outcome: A proposed migration explains exactly which meaning changes and how old PS records remain interpretable."
+      ],
+      "next_fix": "Deliver Unsafe Command. Next package action: Prepare an RFC decision and compatibility mapping. Required outcome: A proposed migration explains exactly which meaning changes and how old PS records remain interpretable.",
+      "next_owner": "Codex",
+      "primary_gate_group": "compatibility",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "T-SC",
+      "original_title": "Scam Pattern",
+      "original_description_field_present": false,
+      "baseline_job": "Research whether contextual fraud indicators support a useful, bounded possible-scam finding.",
+      "outcome": "The reader can inspect each validated indicator and dismiss a warning without an accusation of intent.",
+      "baseline_acceptance": "Two-family co-occurrence is a hypothesis, not independent corroboration.; Publish measured false-positive rates and category misses; hedged wording and one-action dismissal are required.; If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-SC"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Scam Pattern. Next package action: Define pressure, value transfer, identity assertion and channel-switch labeling with benign controls. Required outcome: The reader can inspect each validated indicator and dismiss a warning without an accusation of intent."
+      ],
+      "next_fix": "Deliver Scam Pattern. Next package action: Define pressure, value transfer, identity assertion and channel-switch labeling with benign controls. Required outcome: The reader can inspect each validated indicator and dismiss a warning without an accusation of intent.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "T-BT",
+      "original_title": "Automation Pattern",
+      "original_description_field_present": false,
+      "baseline_job": "Research positive automation evidence without judging people from style, speed or absent human signals.",
+      "outcome": "A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot.",
+      "baseline_acceptance": "Absence of human evidence never issues BT.; Repetition, template structure and timing regularity alone are not accepted proof.; No deployment if the proposed evidence cannot support the declared claim. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "package_contracts": [
+        "TAG-BT"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Automation Pattern. Next package action: Define positive, verifiable automation evidence and its capture boundaries. Required outcome: A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot."
+      ],
+      "next_fix": "Deliver Automation Pattern. Next package action: Define positive, verifiable automation evidence and its capture boundaries. Required outcome: A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot.",
+      "next_owner": "Codex",
+      "primary_gate_group": "methods",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "N-011",
+      "original_title": "In-house research data, training and anomaly pipeline",
+      "original_description_field_present": false,
+      "baseline_job": "Organize approved tag outputs in a remotely hosted, controlled open-source data stack for independently reviewed training and pattern analysis.",
+      "outcome": "Versioned records, independent labels and approved examples support reproducible improvement without making collection a dependency of local tags.",
+      "baseline_acceptance": "Verify selected-tag record structure, no unapproved response text, independent-label separation, remote authentication/access isolation, bounded retry/deduplication, retention/deletion and dataset manifests before collection goes live.",
+      "package_contracts": [
+        "WP-RESEARCH"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Deploy and review the approved invited metadata-only route with effective least-privilege authorization, proxy/provider handling and owner operations; prove actual encrypted 7-day backup expiry and replacement-host recovery before enabling any real collection. Run a consenting pilot. Example sharing, model training and anomaly purposes remain separately unapproved."
+      ],
+      "next_fix": "Deploy the approved invited metadata pilot only after production authentication and least-privilege grants, TLS/proxy/provider handling, active and encrypted backup expiry, withdrawal, replacement-host recovery, current privacy notice and owner operation pass. Then run a genuinely consenting pilot. The separate HTTP/worker/database development path is exercised; collection stays disabled.",
+      "next_owner": "Michael data policy; Codex application",
+      "primary_gate_group": "services",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/data-growth-plan.md",
+        "runs/2026-10-08-private-host-foundation.json",
+        "docs/owner-operation.md",
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/metadata-storage-plan.md",
+        "docs/metadata-storage.md",
+        "deploy/research/metadata-development.sql",
+        "scripts/metadata-store-sandbox.py",
+        "scripts/verify-metadata-store.py",
+        "tests/test_metadata_store.py",
+        "runs/2026-10-11-metadata-store-unicode-linux.json",
+        "runs/2026-10-11-metadata-storage-bounded-diagnostics.json",
+        "runs/2026-10-11-metadata-storage-merged-source.json",
+        "runs/2026-10-11-metadata-storage-protected-merge.json",
+        "runs/2026-10-11-metadata-store-diagnostics-linux.json",
+        "docs/research-invitation-result.md",
+        "runs/2026-10-12-invitation-expanded-linux.json",
+        "runs/2026-10-12-invitation-base-linux.json",
+        "runs/2026-10-12-invitation-focused.json",
+        "docs/research-admission-plan.md",
+        "docs/research-admission.md",
+        "docs/research-admission-result.md",
+        "tools/research_admission.py",
+        "scripts/research-admission.py",
+        "scripts/verify-research-admission.py",
+        "tests/test_research_admission.py",
+        "runs/2026-10-12-admission-linux-controls.json",
+        "runs/2026-10-12-admission-local-controls.json",
+        "runs/2026-10-12-admission-worker-shadowing-refusal.json",
+        "tools/feedback_analysis.py",
+        "scripts/analyze-feedback.py",
+        "scripts/prepare-feedback-analysis-demo.py",
+        "scripts/verify-feedback-analysis.py",
+        "tests/test_feedback_analysis.py",
+        "docs/feedback-analysis-plan.md",
+        "docs/feedback-analysis.md",
+        "docs/feedback-analysis-result.md",
+        "runs/2026-10-12-feedback-analysis-explanations-local.json",
+        "runs/2026-10-12-feedback-analysis-linux.json",
+        "runs/2026-10-12-feedback-analysis-staging-refusal.json",
+        "runs/2026-10-12-feedback-no-change-local.json",
+        "runs/2026-10-12-feedback-no-change-linux.json",
+        "runs/2026-10-12-feedback-review-state-gap.json",
+        "docs/backup-retention-plan.md",
+        "docs/backup-retention.md",
+        "docs/backup-retention-result.md",
+        "tools/backup_retention.py",
+        "scripts/verify-backup-retention.py",
+        "tests/test_backup_retention.py",
+        "runs/2026-10-12-backup-retention-linux.json",
+        "runs/2026-10-12-backup-retention-current-refusals.json",
+        "runs/2026-10-12-backup-retention-cache-failure.json",
+        "runs/2026-10-12-backup-retention-ordered-linux.json",
+        "runs/2026-10-12-backup-retention-ordered-refusals.json",
+        "runs/2026-10-12-backup-retention-order-fix.json",
+        "runs/2026-10-12-backup-cancellation-linux.json",
+        "runs/2026-10-12-backup-cancellation-encrypted.json",
+        "runs/2026-10-12-backup-cancellation-refusals.json",
+        "runs/2026-10-12-backup-cancellation-review-finding.json",
+        "docs/metadata-pilot-contract.md",
+        "runs/2026-10-13-metadata-pilot-owner-decision.json",
+        "deploy/research/metadata-pilot-policy.json",
+        "docs/research-http-plan.md",
+        "docs/research-http.md",
+        "docs/research-http-result.md",
+        "runs/2026-10-14-research-http-linux.json",
+        "runs/2026-10-14-research-http-current-linux.json"
+      ]
+    },
+    {
+      "id": "N-012",
+      "original_title": "Phone and offline on-device tag checker",
+      "original_description_field_present": false,
+      "baseline_job": "Run a version-bound tag method on a phone without an account, extension or local containers.",
+      "outcome": "A person copies an answer from any app and receives a bounded PS preview without uploading the answer.",
+      "baseline_acceptance": "Compare full evidence for all active fixtures in Chromium and WebKit; test failed initialization, invalid source, timeout/cancellation, stale results, offline reload, clear/removal, no input-bearing requests/storage, keyboard, 320px and text enlargement.",
+      "package_contracts": [
+        "WP-MOBILE"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Execute the owner guide on the identified physical iPhone 14 Plus with actual iOS version and VoiceOver; then Android/TalkBack, outside-user setup and human desktop screen-reader checks. Browser engines do not substitute."
+      ],
+      "next_fix": "Execute the owner guide on the identified physical iPhone 14 Plus with actual iOS version and VoiceOver; then Android/TalkBack, outside-user setup and human desktop screen-reader checks. Browser engines do not substitute.",
+      "next_owner": "Michael first iPhone test; other human testers; Codex fixes",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-08-scope-plan-site-public.json",
+        "docs/handheld-delivery.md",
+        "docs/owner-operation.md",
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json",
+        "runs/2026-11-09-iphone-target-status.json"
+      ]
+    },
+    {
+      "id": "N-013",
+      "original_title": "Native iPhone sharing into a tag check",
+      "original_description_field_present": false,
+      "baseline_job": "Receive selected text through an iPhone Share extension with explicit user action.",
+      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "baseline_acceptance": "Signed containing app and Share extension tested on real iPhones; bounded input, process lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "package_contracts": [
+        "WP-MOBILE"
+      ],
+      "percent_complete": 60,
+      "required_acceptance": [
+        "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+      ],
+      "next_fix": "Run the source-current producer with strict one-attempt cleanup before result inspection and immediate post-UI/final source snapshots. The prior hosted run passes all five original UI cases but fails its30-second result collection; recovered summary cannot replace missing complete proof. Current unsigned archive passes34 resource comparisons. Keep signing/platform/contact, reviewed TestFlight upload and physical/VoiceOver/outside-user acceptance open.",
+      "next_owner": "Michael / physical-device testers / Codex",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md",
+        "docs/native-share-plan.md",
+        "docs/native-engine-checks.md",
+        "docs/experiments/native-share-unreleased.json",
+        "runs/2026-10-11-native-engine-observed.json",
+        "runs/2026-10-11-native-engine-resource-identity.json",
+        "runs/2026-10-11-native-copy-controls.json",
+        "runs/2026-10-11-native-share-unavailable.json",
+        "runs/2026-10-11-native-runtime-attempt-4.json",
+        "runs/2026-10-11-native-runtime-attempt-5.json",
+        "runs/2026-10-12-native-python-private-candidate.json",
+        "docs/native-share-repair-plan.md",
+        "docs/native-share-developer.md",
+        "runs/2026-11-07-native-share-progress-baseline.json",
+        "runs/2026-11-07-native-share-workflow.json",
+        "runs/2026-11-07-native-share-text-controls.json",
+        "scripts/verify-ios-share.py",
+        "scripts/verify-native-share-evidence.py",
+        "mobile/ios/Tests/UIFlows.swift",
+        "runs/2026-11-07-native-share-reviewed-workflow.json",
+        "runs/2026-11-07-native-share-current-workflow.json",
+        "runs/2026-11-07-native-share-bootstrap-workflow.json",
+        "runs/2026-11-07-native-share-bounded-workflow.json",
+        "runs/2026-11-07-native-automation-budget.json",
+        "runs/2026-11-08-ios-archive-readiness.json",
+        "docs/ios-distribution-plan.md",
+        "docs/app-store-readiness.md",
+        "scripts/verify-ios-archive.py",
+        "tests/test_ios_archive.py",
+        "runs/2026-11-09-native-share-initial-workflow.json",
+        "runs/2026-11-09-native-share-diagnostic-workflow.json",
+        "runs/2026-11-09-native-share-distribution-workflow.json",
+        "runs/2026-11-09-ios-distribution-final-archive.json",
+        "runs/2026-11-09-native-share-hosted-workflow.json",
+        "runs/2026-11-09-ios-hosted-archive.json",
+        "runs/2026-11-09-native-share-hosted-startup-refusal.json",
+        "runs/2026-11-09-iphone-target-status.json",
+        "docs/ios-script-resource-plan.md",
+        "runs/2026-11-12-apple-package-validation-failed.json",
+        "runs/2026-11-12-ios-text-resource-bundle.json",
+        "runs/2026-11-12-ios-text-resource-workflow-failed.json",
+        "runs/2026-11-12-ios-text-resource-workflow.json",
+        "runs/2026-11-12-ios-text-resource-signed-archive.json",
+        "runs/2026-11-12-ios-text-resource-apple-rejected.json",
+        "runs/2026-11-12-ios-hosted-four-of-five.json",
+        "docs/ios-module-archive-plan.md",
+        "runs/2026-11-12-ios-module-archive-engine.json",
+        "runs/2026-11-12-native-share-module-archive-workflow.json",
+        "runs/2026-11-12-ios-module-archive-keyboard-failed.json",
+        "runs/2026-11-12-ios-module-signed-inspection.json",
+        "runs/2026-11-12-ios-module-hosted-setup-failed.json",
+        "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
+        "runs/2026-11-12-ios-first-line-share-failed.json",
+        "runs/2026-11-12-ios-local-resign-failed.json",
+        "runs/2026-11-15-apple-package-validation-passed.json",
+        "runs/2026-11-15-share-context-diagnostic.json",
+        "docs/share-reliability-plan.md",
+        "docs/ios-privacy-manifest-plan.md",
+        "runs/2026-11-16-native-share-reliability-diagnosis.json",
+        "runs/2026-11-16-ios-privacy-packaging-controls.json",
+        "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+        "runs/2026-11-16-ios-signed-candidate-timeout.json",
+        "runs/2026-11-16-native-hosted-boot-unavailable.json",
+        "runs/2026-11-16-native-hosted-boot-replicate-unavailable.json",
+        "runs/2026-11-16-native-boot-observability-controls.json",
+        "runs/2026-11-16-ios-observable-source-unsigned-archive.json",
+        "docs/testflight-preview-copy.json",
+        "runs/2026-11-16-testflight-information-saved.json",
+        "runs/2026-11-16-hosted-five-ui-result-timeout.json",
+        "runs/2026-11-16-native-result-lifecycle-controls.json",
+        "runs/2026-11-16-ios-reclaimed-source-unsigned-archive.json",
+        "runs/2026-11-16-q4-native-exclusive-four-of-five.json",
+        "runs/2026-11-16-q4-native-appearance-observation.json",
+        "runs/2026-11-16-native-appearance-controls.json",
+        "docs/quiet-layer-architecture.md"
+      ]
+    },
+    {
+      "id": "N-014",
+      "original_title": "Native Android sharing into a tag check",
+      "original_description_field_present": false,
+      "baseline_job": "Receive selected text through an Android OS share interface with explicit user action.",
+      "outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "baseline_acceptance": "Receive supported share intents on real Android devices; bounds, lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "package_contracts": [
+        "WP-MOBILE"
+      ],
+      "percent_complete": 20,
+      "required_acceptance": [
+        "Deliver Native Android sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+      ],
+      "next_fix": "Deliver Native Android sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "next_owner": "Codex",
+      "primary_gate_group": "delivery",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "docs/scope-delivery.md"
+      ]
+    },
+    {
+      "id": "N-015",
+      "original_title": "Blind PS review from a phone",
+      "original_description_field_present": false,
+      "baseline_job": "Read a frozen reviewer JSON file, collect independent labels and export exact item fields for comparison.",
+      "outcome": "Reviewers can label without developer setup or detector predictions; incomplete and changed files fail coordinator comparison.",
+      "baseline_acceptance": "Validate frozen hashes, reviewer slot, exact original text, unique complete items and reasons; show disagreements and ambiguity; forbid hidden predictions, uploads, automatic persistence and claims of verified independence.",
+      "package_contracts": [
+        "WP-VALIDATION"
+      ],
+      "percent_complete": 80,
+      "required_acceptance": [
+        "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not."
+      ],
+      "next_fix": "Complete the identified physical iPhone 14 Plus owner-run review task and the independently coordinated representative holdout with two real blind reviewers and human adjudication. Current actual frozen-file browser downloads and private CLI comparisons are demonstrated using invented ratings only.",
+      "next_owner": "Michael and independent reviewers",
+      "primary_gate_group": "validation",
+      "autonomous_full_closure_established": false,
+      "evidence": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_blind_review.py",
+        "docs/PS-reviewer-start.md",
+        "docs/blind-review-privacy-plan.md",
+        "runs/2026-10-11-blind-private-current-mac-cli.json",
+        "runs/2026-10-11-blind-private-linux-cli.json",
+        "runs/2026-10-11-blind-private-linux-current.json",
+        "runs/2026-10-11-blind-private-browser.json",
+        "runs/2026-10-11-blind-private-device.json",
+        "runs/2026-11-09-iphone-target-status.json"
+      ]
+    }
+  ],
+  "audit_source": "Retained original jobs/outcomes and full delivery/tag acceptance contracts",
+  "integration_recorded_at": "2026-11-16T20:06:43.796533+00:00"
+}

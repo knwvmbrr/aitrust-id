@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-201250-integrate-independent-tag-candidates-5071e195
+
+Recorded 2026-11-16T20:12:50.836333+00:00 · Contributor: Codex PM; MT and image specialists · change
+
+- **Changed.** Integrate independent MT urgency-locality and PNG text-readout candidates; cover new sources in the boundary inventory and publish explicit per-tag ownership, unchanged full acceptance gates, all requested enhancement contracts and a seventy-record gate audit.
+- **Evidence.** Both attributed candidate histories are preserved. MT unit-locality has108 focused controls and22 actual Mac CLI controls; image readout has96 focused controls,21 actual Mac SDK controls and four byte-identical default JSON compatibility cases. Combined scope/accountability checks retain202 originals,132 complete and70 open. Eleven enhancement contracts are tracked; unmerged native implementation is not credited on main. [Change record](./runs/changes/2026-11-16-201250-integrate-independent-tag-candidates-5071e195.json).
+- **Not claimed.** Fresh combined website, Linux SDK, protected merge and publication evidence remain pending. Retained initial website attempts failed at missing verification environment and missing fresh prebuild change records. No tag release, independently measured accuracy, physical/human/Apple acceptance or full original requirement closure. Count remains70.
+
+
 ### 2026-11-16-194831-image-evidence-text-851aa341
 
 Recorded 2026-11-16T19:48:31.027480+00:00 · Contributor: Codex · change

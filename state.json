@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T19:48:29.787708+00:00",
+  "updated": "2026-11-16T20:09:45.055440+00:00",
   "active_increment": "Four-form caller-selected choice observation: 86 focused tests, 26 private CLI controls on Mac and isolated Linux, 40 protocol and 32 website checks, and reviewed 1008-file boundaries pass. Protected publication pending; 70 original requirements remain. No MT verdict or independent accuracy claim.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -785,7 +785,7 @@
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
-    "enhancements": 4,
+    "enhancements": 11,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
@@ -795,24 +795,21 @@
     "source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/hash-report-intake-plan.md",
+    "latest_increment": "docs/tag-integration-2026-11-16.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 10,
-    "publication_pending": false,
+    "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
     "current_target_verification": "runs/2026-11-09-hash-inbox-scope.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
-    "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
-    "latest_owner_direction_date": "2026-11-09",
-    "latest_increment_completed_ids": [
-      "F-159",
-      "F-045"
-    ],
+    "latest_owner_direction": "Integrate MT and image; independently advance other tags; target60 open, skip owner-only gates, close only fully functioning original requirements.",
+    "latest_owner_direction_date": "2026-11-16",
+    "latest_increment_completed_ids": [],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
       {
@@ -828,7 +825,11 @@
       }
     ],
     "latest_increment_publication": "runs/2026-11-10-private-tools-publication.json",
-    "published_source_commit": "0033207b3df5374958619108bf75d81b3e079f17"
+    "published_source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
+    "latest_increment_candidate_ids": [
+      "F-019a",
+      "F-025"
+    ]
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1116,7 +1117,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T19:48:29.787708+00:00",
+  "updated_at": "2026-11-16T20:09:45.055440+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1492,7 +1493,16 @@
     "current_source_receipts": "runs/2026-10-11-independent-signals-current-receipts.json",
     "ci_portability_failure": "runs/2026-10-11-independent-signals-ci-portability-failure.json",
     "source_commit": "e3b68e87e4d73a4d276289371e3bea9f51aab602",
-    "protected_merge": "runs/2026-10-11-independent-mobile-protected-merges.json"
+    "protected_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
+    "urgency_locality_increment": {
+      "method": "english-context-observations/1.1.0",
+      "receipt": "runs/2026-11-16-mt-urgency-locality.json",
+      "actual_mac_consumer": "runs/2026-11-16-mt-urgency-consumer-macos.json",
+      "integrated_candidate": true,
+      "combined_linux_acceptance_pending": true,
+      "independent_accuracy_evidence": false,
+      "tag_released": false
+    }
   },
   "mobile_scope_payload": {
     "implemented_by": "Codex",
@@ -3332,5 +3342,44 @@
     "metadata_only_followup": true,
     "earlier_candidate": "https://a9b05aba.aitrust-id.pages.dev",
     "retained_issue": "First deployed changelog export lacked the last operational change event; exact merged source was rebuilt, redeployed and all artifacts verified."
+  },
+  "tag_integration": {
+    "recorded_at": "2026-11-16T20:05:17.075045+00:00",
+    "plan": "docs/tag-integration-2026-11-16.md",
+    "integrated_candidates": [
+      "MT urgency locality",
+      "PNG evidence text readout"
+    ],
+    "scope_total": 202,
+    "complete": 132,
+    "open": 70,
+    "fully_closed_this_increment": 0,
+    "pending": [
+      "combined source/route verification",
+      "fresh isolated Linux parser execution",
+      "protected PR checks",
+      "publication"
+    ],
+    "owner_only_gates_skipped": true,
+    "gate_audit": "docs/open-requirement-gates-2026-11-16.json",
+    "next_active_lanes": [
+      "explicit selected NF/FI reference comparison",
+      "active signed image AI-declaration evidence"
+    ]
+  },
+  "tag_status": {
+    "recorded_at": "2026-11-16T20:06:43.796533+00:00",
+    "board": "docs/tag-status-2026-11-16.json",
+    "readable_board": "docs/tag-status-2026-11-16.md",
+    "complete_tags": 0,
+    "independently_release_validated_tags": 0,
+    "working_preview_tags": [
+      "PS",
+      "PII_REDACTED"
+    ],
+    "other_parent_tags": 12,
+    "original_open_requirements": 70,
+    "all_tags_concurrently_staffed": false,
+    "candidate_changes_integrated": true
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-16T19:48:29.787708+00:00",
+  "audited_at": "2026-11-16T20:09:45.055440+00:00",
   "client_date": "2026-11-12",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -1440,7 +1440,20 @@
       "required_acceptance": [
         "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
       ],
-      "queue": "open"
+      "queue": "open",
+      "method_increment": {
+        "recorded_at": "2026-11-16T20:05:17.071353+00:00",
+        "implemented_by": "Codex MT specialist; Codex PM integration",
+        "method": "english-context-observations/1.1.0",
+        "job": "Require directive/time association within the same existing sentence unit; retain raw global measurements and expose unpaired evidence.",
+        "evidence": [
+          "runs/2026-11-16-mt-urgency-locality.json",
+          "runs/2026-11-16-mt-urgency-consumer-macos.json"
+        ],
+        "parent_requirement_completed": false,
+        "independent_accuracy_evidence": false,
+        "linux_combined_source_acceptance_pending": true
+      }
     },
     {
       "id": "F-019b",
@@ -13695,6 +13708,296 @@
       "work_packages": [
         "WP-INTEGRATIONS",
         "WP-VALIDATION"
+      ]
+    },
+    {
+      "id": "ENH-PUSH",
+      "kind": "enhancement",
+      "title": "Optional business and community push notifications",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct request, November 10, 2026",
+        "Codex \u2014 bounded consent, privacy and independent-delivery plan"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Implement opt-in per-category notifications, then validate real-device consent, private payloads, destination authorization, rotation/removal, retention/recovery and outage isolation before collecting tokens.",
+      "next_owner": "Codex implementation; Michael and independent device users acceptance",
+      "evidence": [
+        "docs/optional-notifications-plan.md"
+      ],
+      "evidence_scope": "Written scope only. No service, token collection, Apple push credential, permission request or notification delivery is implemented or verified.",
+      "required_acceptance": [
+        "Implement opt-in per-category notifications, then validate real-device consent, private payloads, destination authorization, rotation/removal, retention/recovery and outage isolation before collecting tokens."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-MOBILE",
+        "WP-COMMUNITY",
+        "ORG-SUPPORT"
+      ],
+      "related_scope_ids": [
+        "N-013",
+        "F-136",
+        "F-163"
+      ]
+    },
+    {
+      "id": "ENH-NATIVE-APPEARANCE",
+      "kind": "enhancement",
+      "title": "Native Light / Dark / Auto switch",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct scope clarification, 2026-11-16",
+        "Codex PM and specialist audit"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Integrate the separately evidenced native appearance candidate, then complete its current package, physical/human and Apple-release acceptance. Build and inspect the current package, operate Light/Dark/Auto and large text on the owned Simulator without losing input/results, then complete physical/human and Apple-release acceptance. Host and Share preferences are separate; no App Groups or cross-app sharing is implied.",
+      "next_owner": "Native UX engineer; Debugger regression review",
+      "evidence": [
+        "docs/quarterly-brand-and-agent-plan.md",
+        "docs/scope-priorities-2026-11-16.md"
+      ],
+      "evidence_scope": "Contract tracked in this branch. Actual native appearance candidate exists on separate PR99; it is not integrated into main by this tag-method change. Component/runtime evidence stays on the native branch until reviewed integration.",
+      "required_acceptance": [
+        "Build and inspect the current package, operate Light/Dark/Auto and large text on the owned Simulator without losing input/results, then complete physical/human and Apple-release acceptance. Host and Share preferences are separate; no App Groups or cross-app sharing is implied."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-MOBILE",
+        "WP-UX"
+      ],
+      "related_scope_ids": [
+        "N-013",
+        "N-012",
+        "F-139"
+      ]
+    },
+    {
+      "id": "ENH-BUSINESS-ENTITLEMENTS",
+      "kind": "enhancement",
+      "title": "Verified payment to Business entitlement",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct scope clarification, 2026-11-16",
+        "Codex PM and specialist audit"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Define one real operating Business service, approved prices/provider/terms, authenticated tenant ownership, verified payment events, idempotent entitlement grants, server enforcement, cancellation/refund/revocation/recovery and outage isolation. Personal checks and existing open-source rights remain unaffected.",
+      "next_owner": "Business service engineer; CTO security; Michael commercial/provider decisions",
+      "evidence": [
+        "docs/scope-priorities-2026-11-16.md",
+        "docs/quarterly-brand-and-agent-plan.md"
+      ],
+      "evidence_scope": "Explicit written job/acceptance only; no implementation, release, payment, capture or training activation inferred.",
+      "required_acceptance": [
+        "Define one real operating Business service, approved prices/provider/terms, authenticated tenant ownership, verified payment events, idempotent entitlement grants, server enforcement, cancellation/refund/revocation/recovery and outage isolation. Personal checks and existing open-source rights remain unaffected."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "ORG-PRIVATE",
+        "ORG-SSO",
+        "ORG-SUPPORT"
+      ],
+      "related_scope_ids": [
+        "N-010",
+        "F-162",
+        "F-163"
+      ]
+    },
+    {
+      "id": "ENH-COMMUNITY-CLIENTS",
+      "kind": "enhancement",
+      "title": "Shared live community on web and native app",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct scope clarification, 2026-11-16",
+        "Codex PM and specialist audit"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "One moderated service and versioned action contract used by web and iOS clients, with public read, separate posting identity, authorized official replies, safe retract/appeal/reconnect/replay, accessibility and data retention/deletion acceptance.",
+      "next_owner": "Community engineer + native client engineer; Michael operating moderators",
+      "evidence": [
+        "docs/scope-priorities-2026-11-16.md",
+        "docs/quarterly-brand-and-agent-plan.md"
+      ],
+      "evidence_scope": "Explicit written job/acceptance only; no implementation, release, payment, capture or training activation inferred.",
+      "required_acceptance": [
+        "One moderated service and versioned action contract used by web and iOS clients, with public read, separate posting identity, authorized official replies, safe retract/appeal/reconnect/replay, accessibility and data retention/deletion acceptance."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-COMMUNITY",
+        "WP-MOBILE",
+        "WP-SITE"
+      ],
+      "related_scope_ids": [
+        "F-135",
+        "F-136",
+        "F-137",
+        "N-005"
+      ]
+    },
+    {
+      "id": "ENH-QUIET-LAYER",
+      "kind": "enhancement",
+      "title": "Nonblocking tags beside device/app content",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct scope clarification, 2026-11-16",
+        "Codex PM and specialist audit"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Per-platform authorized adapters bind observations and tags to exact content revisions; multiple compact tags must not intercept underlying actions, move focus, steal input or hide content. Verify per-tag fault containment, stale-result removal and supported OS/permission boundaries. No universal screen access is presumed.",
+      "next_owner": "CTO architecture; platform integration agents; Debugger",
+      "evidence": [
+        "docs/scope-priorities-2026-11-16.md",
+        "docs/quarterly-brand-and-agent-plan.md",
+        "docs/quiet-layer-architecture.md"
+      ],
+      "evidence_scope": "Explicit written job/acceptance only; no implementation, release, payment, capture or training activation inferred.",
+      "required_acceptance": [
+        "Per-platform authorized adapters bind observations and tags to exact content revisions; multiple compact tags must not intercept underlying actions, move focus, steal input or hide content. Verify per-tag fault containment, stale-result removal and supported OS/permission boundaries. No universal screen access is presumed."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-CAPTURE",
+        "WP-UX",
+        "WP-INTEGRATIONS",
+        "WP-MOBILE"
+      ],
+      "related_scope_ids": [
+        "F-033",
+        "F-037",
+        "F-160",
+        "N-013",
+        "N-014"
+      ]
+    },
+    {
+      "id": "ENH-MULTIMODAL-COVERAGE",
+      "kind": "enhancement",
+      "title": "Image-first expansion across every supported AI format",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct scope clarification, 2026-11-16",
+        "Codex PM and specialist audit"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Specify independent image provenance/signature/revocation, watermark and statistical AI-generation jobs; enumerate supported bytes/formats and attack/error cases, validate each before release. Extend the same contract to audio, video, documents, code/text and future formats; unknown profiles return Unsupported, never false clearance. No new live tag code is adopted by planning.",
+      "next_owner": "CTO + modality/tag engineers; independent evaluation per job",
+      "evidence": [
+        "docs/scope-priorities-2026-11-16.md",
+        "docs/quarterly-brand-and-agent-plan.md",
+        "docs/quiet-layer-architecture.md"
+      ],
+      "evidence_scope": "Explicit written job/acceptance only; no implementation, release, payment, capture or training activation inferred.",
+      "required_acceptance": [
+        "Specify independent image provenance/signature/revocation, watermark and statistical AI-generation jobs; enumerate supported bytes/formats and attack/error cases, validate each before release. Extend the same contract to audio, video, documents, code/text and future formats; unknown profiles return Unsupported, never false clearance. No new live tag code is adopted by planning."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-MODALITIES",
+        "WP-INTEGRITY",
+        "WP-INTEGRATIONS",
+        "WP-VALIDATION"
+      ],
+      "related_scope_ids": [
+        "F-006",
+        "F-154",
+        "F-155",
+        "T-FA",
+        "T-PA",
+        "T-HP",
+        "F-025"
+      ]
+    },
+    {
+      "id": "ENH-DELIVERY-ROLES",
+      "kind": "enhancement",
+      "title": "PM, CTO, Debugging Lead and independent tag ownership",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael \u2014 direct scope clarification, 2026-11-16",
+        "Codex PM and specialist audit"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Maintain distinct PM prioritization/scope/evidence, CTO architecture/security/resource boundaries, Debugger reproducible root causes, and tag-specific implementation/evaluation ownership. Bound WIP and serialize heavy local validation; audit handoffs, closure criteria, rollback and factual completion. Agent roles do not imply legal officers, human independence or continuous operation outside active work.",
+      "next_owner": "Michael product owner; Codex PM; assigned CTO/Debugger/tag agents",
+      "evidence": [
+        "docs/scope-priorities-2026-11-16.md",
+        "docs/quarterly-brand-and-agent-plan.md"
+      ],
+      "evidence_scope": "Explicit written job/acceptance only; no implementation, release, payment, capture or training activation inferred.",
+      "required_acceptance": [
+        "Maintain distinct PM prioritization/scope/evidence, CTO architecture/security/resource boundaries, Debugger reproducible root causes, and tag-specific implementation/evaluation ownership. Bound WIP and serialize heavy local validation; audit handoffs, closure criteria, rollback and factual completion. Agent roles do not imply legal officers, human independence or continuous operation outside active work."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-OPERATIONS",
+        "WP-RELEASE",
+        "WP-VALIDATION"
+      ],
+      "related_scope_ids": [
+        "F-150",
+        "F-153",
+        "N-003",
+        "N-006"
       ]
     }
   ],

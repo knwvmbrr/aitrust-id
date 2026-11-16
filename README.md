@@ -620,3 +620,6 @@ separate gates. Run `make verify-host-capture` for its focused checks.
 ### Security response and recovery
 
 [Operator runbook](docs/security-operations.md) covers private reporting, adapter failures and replacement-server recovery. A real isolated Debian/PostgreSQL recovery and owner-key login passed; the source database had no application tables. `make verify-host-recovery` checks the retained evidence and refusal controls without accessing a server or a secret. Physical owner custody, human acceptance and independent validation remain separate.
+
+
+Tag delivery and ownership: [all14 tag scores and gaps](docs/tag-status-2026-11-16.md). Completion and independent accuracy are separate; no complete tag is independently release validated.

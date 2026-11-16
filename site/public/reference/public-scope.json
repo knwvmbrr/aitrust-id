@@ -2275,7 +2275,20 @@
         "required_acceptance": [
           "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
         ],
-        "queue": "open"
+        "queue": "open",
+        "method_increment": {
+          "recorded_at": "2026-11-16T20:05:17.071353+00:00",
+          "implemented_by": "Codex MT specialist; Codex PM integration",
+          "method": "english-context-observations/1.1.0",
+          "job": "Require directive/time association within the same existing sentence unit; retain raw global measurements and expose unpaired evidence.",
+          "evidence": [
+            "runs/2026-11-16-mt-urgency-locality.json",
+            "runs/2026-11-16-mt-urgency-consumer-macos.json"
+          ],
+          "parent_requirement_completed": false,
+          "independent_accuracy_evidence": false,
+          "linux_combined_source_acceptance_pending": true
+        }
       }
     },
     {
