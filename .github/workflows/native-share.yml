@@ -36,7 +36,7 @@ jobs:
           python scripts/verify-ios-share.py --output "$AITRUST_NATIVE_PROOF/share" --runtime "$runtime"
       - name: Build and inspect the unsigned registered-ID device archive
         run: python scripts/verify-ios-archive.py --output "$AITRUST_NATIVE_PROOF/archive"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: native-share-software-proof
