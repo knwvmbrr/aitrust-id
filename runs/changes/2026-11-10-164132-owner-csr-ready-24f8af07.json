@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-10-164132-owner-csr-ready-24f8af07",
+  "recorded_at": "2026-11-10T16:41:32.678171+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6f7c02fd951774f27af2f8e9026725eed85313ae",
+  "changed": "Verify the owner-created saved-to-disk CSR and select its public request on Apple\u2019s certificate page; retain final issuance as an owner action.",
+  "proves": "CSR signature verifies with a 2048-bit RSA public key; Apple shows the selected file and enables Continue. Existing native application bytes remain unchanged and source-bound evidence still verifies.",
+  "limits": "No private key was read or exported. No certificate issuance by Codex, signed archive, binary upload, TestFlight release, tag validation or additional requirement closure. New docs and state are pending source review/publication.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "e7812567b37fb0d9afce71d58298a0f7c8dbbee86139e7a588afdf0eaf7acbee",
+    "docs/app-store-readiness.md": "acb7b0936a6fe5e3b91b2d01bcc7b9e3de15ff421bdfd2e81d25d4c96e8c8bc4",
+    "runs/2026-11-10-owner-csr-ready.json": "ba9cb4fea6cf2e0f0a99f21ec095a0c3bf09e8b169743651d6956212359c257f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-10-owner-csr-ready.json",
+      "sha256": "ba9cb4fea6cf2e0f0a99f21ec095a0c3bf09e8b169743651d6956212359c257f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-10T16:41:33.667160+00:00"
+    }
+  ]
+}

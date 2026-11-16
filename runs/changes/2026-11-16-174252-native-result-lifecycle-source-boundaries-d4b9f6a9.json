@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-174252-native-result-lifecycle-source-boundaries-d4b9f6a9",
+  "recorded_at": "2026-11-16T17:42:52.903690+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bd13d7720041040456eac61a33b9e09b7f55e773",
+  "changed": "Retain actual five-case hosted UI success with failed result collection; reclaim the completed owned simulator before summary parsing and persist post-UI/final source identity on failures.",
+  "proves": "The retained hosted result confirms five original UI cases passed with zero failures/skips; its overall producer remains failed. All 130 adjacent current lifecycle/package controls pass, including one-attempt cleanup, unchanged command bounds, strict exact-five refusal, source-change/unavailable capture and interruption preservation. Actual unsigned archive matches 34 resource copies.",
+  "limits": "Recovered summary is not substituted for the failed proof. New whole-producer acceptance remains pending. Memory pressure is not established as the collection-timeout cause. No TestFlight upload, signing completion, independent/physical/human acceptance or full requirement closure; preserve 202 records, 132 complete and 70 open. F-120 owner allocation stays open under the F-119-only decision.",
+  "scope_ids": [
+    "N-013",
+    "F-120",
+    "F-057",
+    "X-02",
+    "F-150"
+  ],
+  "files": {
+    ".planning/debug/share-reliability.md": "8f0c2a75bc4a3325c68d694abb77d1282f46cff97490da0a3cc7ce9021550e96",
+    "docs/app-store-readiness.md": "e61921cfe198a3fee2c190f71ee36d2a3fff25e1d3abae243f84e072c5172e17",
+    "docs/scope-60-execution.md": "801afe2959f52978e02c872b7f05c151cbf7f026f27bcc3b8a49669d4421809f",
+    "docs/scope-progress.json": "91213add6707493a06ad711582347cf9f562dd840f6774dcaba3d0cbc2885cb7",
+    "docs/scope-progress.md": "2519aa4ead4b57b37950a7f04e2fe15100ade6d66dcf3b34bcd19de59ad1a249",
+    "docs/share-reliability-plan.md": "e65473efec1ec0bc6e28f6539804e5562e4d6237f178182b427e98b020355e87",
+    "eval/route-boundaries.json": "f191f22a3e57d3b4ccdedbc8880b143bcfd216a5d79bf01c90ff912efd8c1269",
+    "scripts/verify-ios-share.py": "50117965eebf86cf77fce3cb4705fe25b276e0ca86c31f66246fe7b91b8bcd42",
+    "site/public/reference/public-scope.json": "ed1d06eb011a40f54529e34ca4e0cf08188983a10be4be2bbae8048b172c1222",
+    "site/src/public-scope.json": "ed1d06eb011a40f54529e34ca4e0cf08188983a10be4be2bbae8048b172c1222",
+    "site/src/scope-manifest.json": "a7169970735f4965e2e8daf27738c5426c5487850e9e2ab9c016bc7e32ac770e",
+    "state.json": "99e29c95dbf23ce18049c00c962563a5e0f066e013efa63200f84bed81712ff1",
+    "tests/test_ios_share_verifier.py": "5e282477dabb366282608bc4da6a4548bf8d124d95080626856e4ff4ccbbe210",
+    "runs/2026-11-16-hosted-five-ui-result-timeout.json": "e44a51de8ae12a23434730d6240e8ed5f390dc05abd7346e8766eac197f8c31b",
+    "runs/2026-11-16-ios-reclaimed-source-unsigned-archive.json": "c2c0e4b0e2fcc8c586830473b31a51f39f07ace15eae9674b7db7bbd8f7f4a15",
+    "runs/2026-11-16-native-result-lifecycle-controls.json": "29a2cd72a9e338e26c52459d15df358a21bb459f0413951844d8ad632199628a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-hosted-five-ui-result-timeout.json",
+      "sha256": "e44a51de8ae12a23434730d6240e8ed5f390dc05abd7346e8766eac197f8c31b"
+    },
+    {
+      "path": "runs/2026-11-16-ios-reclaimed-source-unsigned-archive.json",
+      "sha256": "c2c0e4b0e2fcc8c586830473b31a51f39f07ace15eae9674b7db7bbd8f7f4a15"
+    },
+    {
+      "path": "runs/2026-11-16-native-result-lifecycle-controls.json",
+      "sha256": "29a2cd72a9e338e26c52459d15df358a21bb459f0413951844d8ad632199628a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T17:42:53.606203+00:00"
+    }
+  ]
+}

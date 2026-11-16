@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-171112-ios-readme-current-signing-ed2b74ce",
+  "recorded_at": "2026-11-12T17:11:12.126945+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "17b739ec5d39c8c7fa1d2e90298e6384b5baa5d6",
+  "changed": "Corrected README signing readiness and its older PII control/compact-error counts to match the actual branch evidence.",
+  "proves": "The README now distinguishes the inspected signed repair from pending Apple validation and phone acceptance; prior stale control counts are replaced with recorded 26-service/15-replay and zero compact extra-masking observations.",
+  "limits": "Documentation correction only. No new Apple result, binary upload, independent tag acceptance or requirement closure.",
+  "scope_ids": [
+    "N-013",
+    "F-023"
+  ],
+  "files": {
+    "README.md": "3a3d076b4f32be7d2b0a80cde27ea07866e0ae81b8805a0e93ae705b1c2f4ea0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-text-resource-signed-archive.json",
+      "sha256": "9aeb3d744c2f1a285f6634ccb8f98432489884c562c4093e3ee9c40b518420ce"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T17:11:12.676760+00:00"
+    }
+  ]
+}

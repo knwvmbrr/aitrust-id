@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-11-16T16:59:31.316745+00:00",
+  "kind": "boot_observability_component_validation",
+  "verifier_cases_passed": 40,
+  "verifier_cases_failed": 0,
+  "combined_suite_passed": 58,
+  "combined_suite_failed": 2,
+  "combined_suite_failures": [
+    "test_current_native_software_proof",
+    "test_zeroed_executable_asset_digest_refused"
+  ],
+  "combined_failure_reason": "Unchanged selected-native-proof source guard rejects stale proof before acceptance/asset comparison",
+  "native_acceptance": false,
+  "native_boot_cause_established": false,
+  "native_ui_rerun_performed": false,
+  "deadlines_raised": false,
+  "strict_cleanup_unchanged": true,
+  "source_hashes": {
+    "scripts/verify-ios-share.py": "f9ec77837d0080f63e06b48621c47284bb63cd64549964e167f88c9cea1555de",
+    "tests/test_ios_share_verifier.py": "1110a06d154db02dcec263d119bfa883b804793e72f9b4d598ee7a20255f290a"
+  },
+  "preserved_initial_helper_test_failure": "boot-observability-initial-test-failure.json",
+  "preserved_initial_helper_source": "boot-observability-initial-candidate.py",
+  "buffering_control": {
+    "regular_file": {
+      "initialized": true,
+      "isatty": "False",
+      "captured_bytes_before_termination": 0,
+      "retained_phase": false,
+      "returncode": -15
+    },
+    "terminal": {
+      "initialized": true,
+      "isatty": "True",
+      "captured_bytes_before_termination": 28,
+      "retained_phase": true,
+      "returncode": -15
+    }
+  },
+  "recorded_at": "2026-11-16T17:00:58.797484+00:00",
+  "implemented_by": "Codex",
+  "scope_ids": [
+    "N-013",
+    "F-120"
+  ],
+  "adjacent_suite": {
+    "command": "python -m pytest -q tests/test_ios_project_package.py tests/test_ios_archive.py tests/test_ios_share_verifier.py tests/test_native_bundle.py",
+    "passed": 117,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 8.28
+  },
+  "prior_failed_helper_receipt_sha256": "1415365222cf0b654dbe1fea342fad51aa6923afed0289770dec953399d04334",
+  "requirements_closed": [],
+  "limits": [
+    "Real child-process timeout/output/refusal and default-JSON tests only; not simulator boot, UI integration or TestFlight acceptance.",
+    "The combined native-evidence suite still rejects the old selected source proof. Those two failed checks remain failed, not skipped or rewritten.",
+    "PTY capture and numeric host capacity reveal boot state; they do not establish a simulator startup fix.",
+    "The initial large-output helper failed at its unchanged five-second bound. Readiness-based draining repairs that throughput bug without a deadline change."
+  ]
+}

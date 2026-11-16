@@ -1,0 +1,284 @@
+{
+  "pass": false,
+  "physical_device": false,
+  "independent_accuracy": false,
+  "human_accessibility": false,
+  "installable_phone_release": false,
+  "started_at": "2026-11-16T17:06:07.423573+00:00",
+  "command_events": [
+    {
+      "stage": "prerequisites",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "list"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:07.423933+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:06:07.756087+00:00",
+      "output_bytes": 60604,
+      "output_sha256": "473623145dbbf7306ed4a6b89358bf8d16c8b1f93167deb19388718cd76cadd6"
+    },
+    {
+      "stage": "prerequisites",
+      "tool": "xcodebuild",
+      "operation": [
+        "-version"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:07.988222+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:06:08.318783+00:00",
+      "output_bytes": 33,
+      "output_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+    },
+    {
+      "stage": "prerequisites",
+      "tool": "xcrun",
+      "operation": [
+        "--sdk",
+        "iphonesimulator"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:08.320015+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:06:11.491827+00:00",
+      "output_bytes": 5,
+      "output_sha256": "27d73d70ecb0bcfc37d60b534a2298ae2c6e9ee26ed5154f558f11640d11d0b9"
+    },
+    {
+      "stage": "host_capacity",
+      "tool": "sysctl",
+      "operation": [
+        "-n",
+        "hw.memsize"
+      ],
+      "timeout_seconds": 5,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:11.529066+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:06:11.855689+00:00",
+      "output_bytes": 13,
+      "output_sha256": "a8aaf6041d05fef11f814755ad8cb2faf2923b9a42584ad589eb57c704f49eb7"
+    },
+    {
+      "stage": "owned_simulator",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "create"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:11.856489+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:06:12.464208+00:00",
+      "output_bytes": 37,
+      "output_sha256": "f7962b7e19c559adefd41315bc7aa1d959faa808c84649c88a146c64930b5b7f"
+    },
+    {
+      "stage": "owned_simulator",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "boot"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:12.464836+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:06:15.548459+00:00",
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "owned_simulator",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "bootstatus"
+      ],
+      "timeout_seconds": 180,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:06:15.549633+00:00",
+      "outcome": "passed",
+      "output_transport": "pty",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:08:48.477976+00:00",
+      "output_bytes": 3773,
+      "output_sha256": "8276b082446c2a3ba30df21ee0302235e775e780f38c20991d7b2f81df35d679"
+    },
+    {
+      "stage": "build",
+      "tool": "xcodebuild",
+      "operation": [
+        "-project",
+        "<owned-project-path>"
+      ],
+      "timeout_seconds": 600,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:08:48.561125+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:12:43.284030+00:00",
+      "output_bytes": 236517,
+      "output_sha256": "2e13813b1df440dc56d0659a73b1327a9c5aebfc0b2763aabd303d933d9b6d64"
+    },
+    {
+      "stage": "ui_workflows",
+      "tool": "xcodebuild",
+      "operation": [
+        "-project",
+        "<owned-project-path>"
+      ],
+      "timeout_seconds": 600,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:12:43.372889+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:20:25.095769+00:00",
+      "output_bytes": 88665,
+      "output_sha256": "3a71dcbd158647fb616dc073f0e4fee7bef1702d3346b5ccc8dece85a34f3431"
+    },
+    {
+      "stage": "result",
+      "tool": "xcrun",
+      "operation": [
+        "xcresulttool",
+        "get"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-16T17:20:25.150944+00:00",
+      "outcome": "deadline",
+      "finished_at": "2026-11-16T17:20:55.607753+00:00",
+      "returncode": -15,
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "cleanup",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "shutdown"
+      ],
+      "timeout_seconds": 90,
+      "cleanup": true,
+      "started_at": "2026-11-16T17:20:56.849221+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:21:22.839527+00:00",
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "cleanup",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "delete"
+      ],
+      "timeout_seconds": 90,
+      "cleanup": true,
+      "started_at": "2026-11-16T17:21:23.146653+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-16T17:21:30.670155+00:00",
+      "output_bytes": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "attempted_sources": {
+    "scripts/verify-ios-share.py": "f9ec77837d0080f63e06b48621c47284bb63cd64549964e167f88c9cea1555de",
+    "scripts/build-ios-project.py": "bc0bebb56766b1ac0b9bb0fef5fb2d01dfaa7c667b267b10c6a6b31e197ff280",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "scripts/native_bundle.py": "551017ab81ee63ea0ec258e07d39f364cd6ba265fd61082c0d3d7dbdbf765d8e",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "mobile/ios/Tests/UIFlows.swift": "a8ffaf2ebd07b2ddaf566a4e0b4077a82d397340f62c63fe15547614d8570a40",
+    "mobile/ios/Web/bridge.mjs": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007",
+    "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "mobile/ios/Privacy.txt": "69b67d0265315b9368cf50e88b4b66dcc66ddb12eabe2a7bbc56f6579164bbc7",
+    "mobile/ios/PrivacyInfo.xcprivacy": "a7081f1506c90e8e673100e5c161e765b8b7a624446e20bd4bd6efaca80808b8",
+    "mobile/ios/Artwork/AppIcon.svg": "46bb2cce671805c515570e3fd12adf65a11f98086ae8b1dfb9a05718ff1d3592",
+    "mobile/ios/Artwork/AppIcon.png": "0cd0240047321d2f59df9764ba7f36ed4e167d59c51ff6a8dbb76ce5e2d4a866",
+    "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+    "mobile/ios/Source/Assets.swift": "2f6cce866cc8d13ae55e78de19bcc9df270f59585183c9b9149e1f63af552b8a",
+    "mobile/ios/Source/CheckerController.swift": "740a98d326f3227f57610da003a0dce7ed158353c9269ab28334784b656ae485",
+    "mobile/ios/Source/ShareController.swift": "c96ca77c1a3bfc08d3e13975cb1aba8daba727312bdd59d9a778bf04d0144453",
+    "mobile/ios/Source/SharedText.swift": "f9d790cb79b331c90922dae58891060f3b6ed0f782605981f3b0306c5b4c732c"
+  },
+  "runtime": "iOS 27.2",
+  "runtime_build": "24B8117",
+  "xcode": "Xcode 27.1\nBuild version 27A9275",
+  "sdk": "27.1",
+  "host_capacity": {
+    "memory_bytes": 7516192768,
+    "logical_cpus": 3,
+    "disk_free_bytes": 37550510080
+  },
+  "failed_stage": "result",
+  "owned_simulator_removed": true,
+  "captured_at": "2026-11-16T17:21:30.676864+00:00",
+  "kind": "hosted_five_ui_passes_result_collection_failed",
+  "recorded_at": "2026-11-16T17:29:42.417971+00:00",
+  "run_id": 43914592758,
+  "run_attempt": 1,
+  "source_commit": "bd13d7720041040456eac61a33b9e09b7f55e773",
+  "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43914592758",
+  "ui_workflows_passed": 5,
+  "ui_case_names": [
+    "testBackgroundClearsInputAndResult",
+    "testEditInvalidatesOldFinding",
+    "testExplicitPSCheckAndClear",
+    "testNativePracticeShareRequiresExplicitCheck",
+    "testShareClearDuringCheckAndRepeat"
+  ],
+  "source_identity_after_ui_captured": false,
+  "original_private_report_sha256": "dc6fa5f1f5c0f04dffec7ccfab1ecc457684de9faeaba5c40ab1d54f4715dc61",
+  "public_command_paths_redacted": true,
+  "recovered_summary": {
+    "result": "Passed",
+    "totalTestCount": 5,
+    "passedTests": 5,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "testFailures": []
+  },
+  "recovered_summary_inspection": {
+    "accepted_summary": true,
+    "timeout_seconds": 30,
+    "events": [
+      {
+        "tool": "xcrun",
+        "timeout_seconds": 30,
+        "outcome": "passed",
+        "returncode": 0,
+        "output_bytes": 1021,
+        "output_sha256": "a749aa2f627e3460217ffadcf98846d11c5e9e7d827ae44b87e59bc8aa913bdd"
+      }
+    ]
+  },
+  "requirements_closed": [],
+  "selected_five_workflow_proof_replaced": false,
+  "limits": [
+    "Actual hosted boot/build and all five original UI cases pass; overall verifier remains failed at its30-second result-summary command.",
+    "Independent local inspection of the retained xcresult confirms exact5 pass0fail0skip within the original30-second summary bound.",
+    "Post-UI repository source identity was not captured by the failed worker. Recovered summary cannot manufacture the missing complete proof.",
+    "Memory pressure is a plausible resource concern on7GiB/3CPU, not an established cause of the summary timeout.",
+    "No native/physical/human/independent acceptance, signing, TestFlight upload or full requirement closure is granted."
+  ]
+}

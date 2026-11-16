@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-162932-share-diagnosis-privacy-package-3753b750",
+  "recorded_at": "2026-11-16T16:29:32.165932+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0038d7aab5379b2c552705539397660a6c46d6aa",
+  "changed": "Diagnose cancelled simulator Share contacts; remove repeated private image readiness queries and incomplete-run screenshot capture; package reviewed privacy manifests in both native targets; cancel superseded native CI runs.",
+  "proves": "100 focused packaging and refusal controls pass; actual unsigned iPhoneOS archive passes 34 exact resource comparisons including both manifest copies. Original five workflow names, all assertions, single-tap count and deadlines are preserved; production Swift and detector are unchanged.",
+  "limits": "The longer-press candidate failed both Share cases and was reverted. Final current-source full-five hosted acceptance remains pending; existing-identity signing timed out after 120 seconds at Share CodeSign without an established cause. No TestFlight upload, privacy/license clearance, physical/human/independent acceptance or full requirement closure. All 202 records remain: 132 complete and 70 open.",
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "X-02",
+    "F-054",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "15d95c68fd6e6991a7c082899b76bfef6b6e7b33029c42ec8be86bc0daf0b8e4",
+    ".planning/debug/share-reliability.md": "19818368508a25b7037c5409ca8bbe0b517fa1c72d8c476c1e094b914fad7167",
+    "docs/app-store-readiness.md": "a951d6da878acbc26edb8d09ae2f3c09f027bb20fc2890e9bc8535c1b92c9ddc",
+    "docs/native-share-developer.md": "acc6c1197e81d0147dfdd35ff1ee4e8bf821f374d0108fa2d8608f70cc30da62",
+    "docs/scope-60-execution.md": "9122da6c5bfaebdb25a297d1ff2010094f506d3e624e72300d16d288fde077c1",
+    "docs/scope-progress.json": "7996a228d1e2840cd2c061548d75ed1f8130ababda4e5cf80ca27034e63b3195",
+    "docs/scope-progress.md": "53e5c1381a5266387ada2e2f4ccb39f01edb315d4ca64f04937a462c7361bf61",
+    "docs/ios-privacy-manifest-plan.md": "01789d10c3beee67ed89d32f5b4e6ba38c5cf51ff273feddaac54b9984101d84",
+    "docs/share-reliability-plan.md": "a7c7727335b346b8289642d2b72147e3d95b18f0a9e7e2840a59b744518c648b",
+    "eval/route-boundaries.json": "c5e7a386759399fb4b25fc904f6c4ec44c14d10e41180f84530839dd53834e71",
+    "mobile/ios/Tests/UIFlows.swift": "a8ffaf2ebd07b2ddaf566a4e0b4077a82d397340f62c63fe15547614d8570a40",
+    "mobile/ios/PrivacyInfo.xcprivacy": "a7081f1506c90e8e673100e5c161e765b8b7a624446e20bd4bd6efaca80808b8",
+    "scripts/build-ios-project.py": "bc0bebb56766b1ac0b9bb0fef5fb2d01dfaa7c667b267b10c6a6b31e197ff280",
+    "scripts/verify-ios-archive.py": "b592ba4ee33dd40001fc2bb314d10bf8019c9ec6f010d024c6c21523c78d4ac8",
+    "scripts/verify-ios-share.py": "6e7d867030c96ec9b15af8841083cb5cffd6f158eeb97dc177a6e18233f1893c",
+    "site/public/reference/native-share-developer.md": "acc6c1197e81d0147dfdd35ff1ee4e8bf821f374d0108fa2d8608f70cc30da62",
+    "site/public/reference/public-scope.json": "c5887015312e269c37c7942cdb741b665e25de964d9199eae62a27a5faf3bbcd",
+    "site/src/public-scope.json": "c5887015312e269c37c7942cdb741b665e25de964d9199eae62a27a5faf3bbcd",
+    "site/src/scope-manifest.json": "f1a518921e5d6f4a17f89b486332d076608ac4277aa2d87fc7446a60fe552a05",
+    "state.json": "d4155d1a250aecd337602259abe11d5440e4ebf503f5ff3993541a384e22315e",
+    "tests/test_ios_archive.py": "8ad08e5febfb74b3c07a6eb7a121297aa8fafe6f95f67435db6a547a884562a9",
+    "tests/test_ios_project_package.py": "c0ba4734c716699f50490573670b19c3aa68758bb86ee0e75ae79cfab4f3081b",
+    "runs/2026-11-16-ios-privacy-packaging-controls.json": "8d126f9ac1fce44b351000cd54d32e453a9aaf4ee534f33880b739e25d01882c",
+    "runs/2026-11-16-native-ci-concurrency.json": "b0a98f4fb9168c72c8aef7f1ca1c8586c8d24f72ce35548288d084084dc31169",
+    "runs/2026-11-16-ios-privacy-unsigned-archive.json": "1a0d59d13714886ae3b2c1c67e16901da46c787ac196967daf71282ce8b3c2f4",
+    "runs/2026-11-16-ios-signed-candidate-timeout.json": "c8f8248aff642f98aeb30d16a98a328cd3a22134f0aa6c1d5ad1c30c20063a63",
+    "runs/2026-11-16-native-share-reliability-diagnosis.json": "3703b0733c0fef4909bd4c248c5b87777093d4649f0cdd96f441d99e589f17f1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-ios-privacy-packaging-controls.json",
+      "sha256": "8d126f9ac1fce44b351000cd54d32e453a9aaf4ee534f33880b739e25d01882c"
+    },
+    {
+      "path": "runs/2026-11-16-native-ci-concurrency.json",
+      "sha256": "b0a98f4fb9168c72c8aef7f1ca1c8586c8d24f72ce35548288d084084dc31169"
+    },
+    {
+      "path": "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+      "sha256": "1a0d59d13714886ae3b2c1c67e16901da46c787ac196967daf71282ce8b3c2f4"
+    },
+    {
+      "path": "runs/2026-11-16-ios-signed-candidate-timeout.json",
+      "sha256": "c8f8248aff642f98aeb30d16a98a328cd3a22134f0aa6c1d5ad1c30c20063a63"
+    },
+    {
+      "path": "runs/2026-11-16-native-share-reliability-diagnosis.json",
+      "sha256": "3703b0733c0fef4909bd4c248c5b87777093d4649f0cdd96f441d99e589f17f1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T16:29:32.694002+00:00"
+    }
+  ]
+}

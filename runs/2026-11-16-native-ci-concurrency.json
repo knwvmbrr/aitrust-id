@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-11-16T16:14:56.501519+00:00",
+  "pass": true,
+  "kind": "native_ci_concurrency_review",
+  "source_sha256": "15d95c68fd6e6991a7c082899b76bfef6b6e7b33029c42ec8be86bc0daf0b8e4",
+  "checks": {
+    "yaml_parsed": true,
+    "all_existing_jobs_steps_permissions_events_and_timeouts_unchanged": true,
+    "configured_to_cancel_superseded_same_pr_or_ref_runs": true,
+    "configured_with_pr_or_ref_and_workflow_specific_group": true
+  },
+  "official_source": "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency",
+  "hosted_execution_observed": false,
+  "requirements_closed": [],
+  "limits": [
+    "This is a configuration/semantic comparison, not hosted execution evidence.",
+    "A cancelled run cannot satisfy acceptance. The latest run must execute every original workflow/archive check.",
+    "Cancelling an obsolete hosted run may interrupt cleanup; its VM is disposable and no local or shared simulator is targeted."
+  ]
+}

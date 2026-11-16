@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-205640-ios-current-status-summary-535de94d",
+  "recorded_at": "2026-11-12T20:56:40.911322+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9b0359886090f3ec998dc6713f030c1143614424",
+  "changed": "Synchronize the README and distribution guides with the withheld Share-integration milestone.",
+  "proves": "Current entry points now state three passing host workflows, two failing Share workflows, inspected signatures/resources and owner-gated Apple validation. Earlier five-pass snapshots are explicitly historical.",
+  "limits": "No new test result, app release, Apple acceptance or full requirement closure is claimed.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "README.md": "796b2c028eac6199060aa5bf1bdce62e9b48a6048350d9d8c389f11ea1e54453",
+    "docs/app-store-readiness.md": "fdb94f6e460078a8df5943a9f7bbe149ca1397515853e2f64ac6758808841f01",
+    "docs/ios-module-archive-plan.md": "8cc7a70292dc0b6cc944017455077a0c9d3ff0307f8ec8a675cd82e27a42419d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-current-gates-open.json",
+      "sha256": "9420cac945e6d55a7a37af0600feba7cd685ae7aa36c49cefca1bddde867cd0a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T20:56:41.504028+00:00"
+    }
+  ]
+}

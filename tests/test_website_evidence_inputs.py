@@ -1,5 +1,6 @@
 """Published reference inputs must invalidate stale website evidence."""
 from datetime import datetime, timezone
+import ast
 import json
 import re
 from pathlib import Path
@@ -7,6 +8,16 @@ from pathlib import Path
 import pytest
 
 from protocol.revalidation import COMMON, ROOT, assess, fingerprint
+
+
+def test_selected_native_execution_proof_is_bound_to_website_receipt():
+    tree=ast.parse((ROOT/'scripts/verify-native-share-evidence.py').read_text())
+    selections=[node.value.value for node in tree.body if isinstance(node,ast.Assign)
+                and any(isinstance(target,ast.Name) and target.id=='PROOF' for target in node.targets)
+                and isinstance(node.value,ast.Constant) and isinstance(node.value.value,str)]
+    assert len(selections)==1
+    selected=selections[0]
+    assert selected in fingerprint('website')['sources'], 'Selected native proof can change without invalidating website evidence'
 
 
 def test_actual_builder_copy_inputs_are_bound_except_append_only_changelog():

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-031626-preserve-validated-ipa-9cd7e912",
+  "recorded_at": "2026-11-16T03:16:26.196042+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "14fa79d04c9cfb247962d0f14bd46091d9a5d72d",
+  "changed": "Preserve and inspect the exact IPA produced by successful Apple package validation.",
+  "proves": "The private 12,925,499-byte IPA has a recorded SHA-256; both extracted bundle signatures, expected entitlements, version 1.0 (1) and all 32 resource comparisons pass. No artifact is reconstructed or substituted.",
+  "limits": "Binary stays private and is not an install download, TestFlight build or App Review approval. Current Share behavior and physical/independent acceptance remain open; no full closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "451b3ac69de2a22e8457452525db4ad82df35aa972fd1298f3c934a56c660840",
+    "docs/app-store-readiness.md": "541f22355f6a7ac931eaf6fbc7a60189fba8fa4c891e4e1ea1454e6b02f4077d",
+    "runs/2026-11-15-validated-ipa-inspection.json": "25d35e4f05a664bc2119dd65215d3a4b4b2dbaf15f7e96d0fb1ca95ca79874ba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-15-validated-ipa-inspection.json",
+      "sha256": "25d35e4f05a664bc2119dd65215d3a4b4b2dbaf15f7e96d0fb1ca95ca79874ba"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T03:16:26.753910+00:00"
+    }
+  ]
+}

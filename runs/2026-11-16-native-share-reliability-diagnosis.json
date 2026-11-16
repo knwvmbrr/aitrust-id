@@ -1,0 +1,108 @@
+{
+  "captured_at": "2026-11-16T16:26:02.356327+00:00",
+  "kind": "native_share_reliability_diagnosis_and_rejected_gesture_candidate",
+  "implemented_by": "Codex",
+  "integration_accepted": false,
+  "requirements_closed": [],
+  "baseline_commit": "0038d7aab5379b2c552705539397660a6c46d6aa",
+  "current_ui_source_sha256": "a8ffaf2ebd07b2ddaf566a4e0b4077a82d397340f62c63fe15547614d8570a40",
+  "current_assertion_preservation": {
+    "workflows": [
+      "testExplicitPSCheckAndClear",
+      "testEditInvalidatesOldFinding",
+      "testNativePracticeShareRequiresExplicitCheck",
+      "testShareClearDuringCheckAndRepeat",
+      "testBackgroundClearsInputAndResult"
+    ],
+    "assertions": 54,
+    "timeouts": [
+      "120",
+      "20",
+      "20",
+      "10",
+      "10",
+      "5",
+      "10",
+      "15",
+      "15",
+      "10",
+      "20",
+      "20",
+      "10",
+      "60",
+      "60",
+      "5",
+      "60",
+      "10",
+      "20",
+      "20",
+      "20",
+      "15",
+      "60",
+      "20",
+      "20",
+      "15",
+      "60",
+      "5",
+      "10",
+      "60",
+      "10"
+    ],
+    "workflow_allowances": [
+      "120"
+    ],
+    "single_taps": 21
+  },
+  "production_runtime_swift_unchanged": true,
+  "retained_changes": [
+    "one public activity-cell snapshot per readiness poll; one public cell hittability query after one second of stable geometry",
+    "capture test diagnostics on actual failureCount rather than incomplete hasSucceeded"
+  ],
+  "rejected_change": "Replacing a single50ms XCTest tap with a single200ms public press did not resolve synthesized-contact cancellation and was reverted.",
+  "focused_rejected_candidate": {
+    "passed": 0,
+    "failed": 2,
+    "replaces_full_five_workflow_proof": false,
+    "private_evidence_sha256": {
+      "2026-11-16-share-reliability-focused/proof.json": "d8fdf76a0524b967f3972954664f8a5cca0aca38f60ef3e270cdac069122ac08",
+      "2026-11-16-share-reliability-focused/two_share_workflows.log": "cdd103544ca328bf22dceb6f72d4cf8d604a6ea8163b48a37057801b3e8c944f",
+      "2026-11-16-share-reliability-focused/project/Tests/UIFlows.swift": "7eaea952a54af61d667dd797c3b958f882100a24b139729267faa97485a303ec",
+      "2026-11-16-share-reliability-focused-diagnostics/first-practice.log": "37d6447bc654e79ce7dc53b6a0fbf0bef900e13dda5c81743dec544e4fa90af7",
+      "2026-11-16-share-reliability-focused-diagnostics/second-activity.log": "daa2ea1e1f1c2166592d22faaee58d1530458d11e3557aad34e5971f04c8d20a"
+    },
+    "candidate_sources": {
+      "scripts/verify-ios-share.py": "6e7d867030c96ec9b15af8841083cb5cffd6f158eeb97dc177a6e18233f1893c",
+      "scripts/build-ios-project.py": "bc0bebb56766b1ac0b9bb0fef5fb2d01dfaa7c667b267b10c6a6b31e197ff280",
+      "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "scripts/native_bundle.py": "551017ab81ee63ea0ec258e07d39f364cd6ba265fd61082c0d3d7dbdbf765d8e",
+      "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+      "mobile/ios/Tests/UIFlows.swift": "7eaea952a54af61d667dd797c3b958f882100a24b139729267faa97485a303ec",
+      "mobile/ios/Web/bridge.mjs": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007",
+      "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "mobile/ios/Privacy.txt": "69b67d0265315b9368cf50e88b4b66dcc66ddb12eabe2a7bbc56f6579164bbc7",
+      "mobile/ios/PrivacyInfo.xcprivacy": "a7081f1506c90e8e673100e5c161e765b8b7a624446e20bd4bd6efaca80808b8",
+      "mobile/ios/Artwork/AppIcon.svg": "46bb2cce671805c515570e3fd12adf65a11f98086ae8b1dfb9a05718ff1d3592",
+      "mobile/ios/Artwork/AppIcon.png": "0cd0240047321d2f59df9764ba7f36ed4e167d59c51ff6a8dbb76ce5e2d4a866",
+      "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+      "mobile/ios/Source/Assets.swift": "2f6cce866cc8d13ae55e78de19bcc9df270f59585183c9b9149e1f63af552b8a",
+      "mobile/ios/Source/CheckerController.swift": "740a98d326f3227f57610da003a0dce7ed158353c9269ab28334784b656ae485",
+      "mobile/ios/Source/ShareController.swift": "c96ca77c1a3bfc08d3e13975cb1aba8daba727312bdd59d9a778bf04d0144453",
+      "mobile/ios/Source/SharedText.swift": "f9d790cb79b331c90922dae58891060f3b6ed0f782605981f3b0306c5b4c732c"
+    }
+  },
+  "observations": [
+    "Captured cold Practice tap reaches intended button then is cancelled before touch-up and target-action. Backboardd records duplicate/unknown virtual Recap digitizer initialization and missing previous touch-down/skipped events.",
+    "Focused200ms candidate fails at Practice and activity selection with the same upstream skipped-contact signature. It is not evidence of an extension-launch failure.",
+    "Hosted prior-source failure shows visible populated activity but repeated private image accessibility queries consume the readiness budget. Snapshot correction removes those repeated queries without raising any timeout.",
+    "Earlier missing Check-result failure was not separately traced; no common cause is asserted.",
+    "Instrumented2/2 and5/5 runs are diagnostics only. Four200ms cold actions delivered, but that overall diagnostic failed teardown and is not a passing acceptance run."
+  ],
+  "next_check": "Exact current-source fullfive on hosted iOS27.2; no unchanged local retry loop.",
+  "physical_device_acceptance": false,
+  "human_accessibility": false,
+  "independent_accuracy": false,
+  "testflight_upload": false
+}

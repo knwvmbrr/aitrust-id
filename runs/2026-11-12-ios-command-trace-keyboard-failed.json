@@ -1,0 +1,183 @@
+{
+  "pass": false,
+  "physical_device": false,
+  "independent_accuracy": false,
+  "human_accessibility": false,
+  "installable_phone_release": false,
+  "started_at": "2026-11-12T19:13:13.353793+00:00",
+  "command_events": [
+    {
+      "stage": "prerequisites",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "list"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:13:13.354245+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:13:13.870166+00:00"
+    },
+    {
+      "stage": "prerequisites",
+      "tool": "xcodebuild",
+      "operation": [
+        "-version"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:13:13.969602+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:13:14.478392+00:00"
+    },
+    {
+      "stage": "prerequisites",
+      "tool": "xcrun",
+      "operation": [
+        "--sdk",
+        "iphonesimulator"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:13:14.478689+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:13:14.735943+00:00"
+    },
+    {
+      "stage": "owned_simulator",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "create"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:13:14.751907+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:13:15.264918+00:00"
+    },
+    {
+      "stage": "owned_simulator",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "boot"
+      ],
+      "timeout_seconds": 30,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:13:15.265281+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:13:17.559695+00:00"
+    },
+    {
+      "stage": "owned_simulator",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "bootstatus"
+      ],
+      "timeout_seconds": 180,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:13:17.560189+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:14:06.491431+00:00"
+    },
+    {
+      "stage": "build",
+      "tool": "xcodebuild",
+      "operation": [
+        "-project",
+        "<private generated project>"
+      ],
+      "timeout_seconds": 600,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:14:06.497066+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:15:24.417791+00:00"
+    },
+    {
+      "stage": "ui_workflows",
+      "tool": "xcodebuild",
+      "operation": [
+        "-project",
+        "<private generated project>"
+      ],
+      "timeout_seconds": 600,
+      "cleanup": false,
+      "started_at": "2026-11-12T19:15:24.428361+00:00",
+      "outcome": "nonzero_exit",
+      "returncode": 65,
+      "finished_at": "2026-11-12T19:19:37.719619+00:00"
+    },
+    {
+      "stage": "cleanup",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "shutdown"
+      ],
+      "timeout_seconds": 90,
+      "cleanup": true,
+      "started_at": "2026-11-12T19:19:37.730211+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:19:41.409565+00:00"
+    },
+    {
+      "stage": "cleanup",
+      "tool": "xcrun",
+      "operation": [
+        "simctl",
+        "delete"
+      ],
+      "timeout_seconds": 90,
+      "cleanup": true,
+      "started_at": "2026-11-12T19:19:41.410669+00:00",
+      "outcome": "passed",
+      "returncode": 0,
+      "finished_at": "2026-11-12T19:19:41.672473+00:00"
+    }
+  ],
+  "attempted_sources": {
+    "scripts/verify-ios-share.py": "863ae74111cd687c9d6e831dd8c9d0371f31ecd76cb62f8038608ef381c56fb3",
+    "scripts/build-ios-project.py": "e3e98f8b9cc52cff976816b016332c9067912e133217ec33b261e4f9006668ab",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "scripts/native_bundle.py": "551017ab81ee63ea0ec258e07d39f364cd6ba265fd61082c0d3d7dbdbf765d8e",
+    "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+    "mobile/ios/Tests/UIFlows.swift": "d4b8e7b075418bb2bafa0f7e28f15bfcc12400f3b5944031c25ca2f06b0bbdee",
+    "mobile/ios/Web/bridge.mjs": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007",
+    "mobile/ios/Web/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "mobile/ios/Privacy.txt": "69b67d0265315b9368cf50e88b4b66dcc66ddb12eabe2a7bbc56f6579164bbc7",
+    "mobile/ios/Artwork/AppIcon.svg": "46bb2cce671805c515570e3fd12adf65a11f98086ae8b1dfb9a05718ff1d3592",
+    "mobile/ios/Artwork/AppIcon.png": "0cd0240047321d2f59df9764ba7f36ed4e167d59c51ff6a8dbb76ce5e2d4a866",
+    "mobile/ios/Source/App.swift": "11bdf889820319ac371ac72bc9fdcb4d7f0e735549036bb1a80b2e19cc602cd3",
+    "mobile/ios/Source/Assets.swift": "2f6cce866cc8d13ae55e78de19bcc9df270f59585183c9b9149e1f63af552b8a",
+    "mobile/ios/Source/CheckerController.swift": "740a98d326f3227f57610da003a0dce7ed158353c9269ab28334784b656ae485",
+    "mobile/ios/Source/ShareController.swift": "c96ca77c1a3bfc08d3e13975cb1aba8daba727312bdd59d9a778bf04d0144453",
+    "mobile/ios/Source/SharedText.swift": "f9d790cb79b331c90922dae58891060f3b6ed0f782605981f3b0306c5b4c732c"
+  },
+  "runtime": "iOS 26.2",
+  "runtime_build": "23C54",
+  "xcode": "Xcode 27.2\nBuild version 27B52",
+  "sdk": "27.2",
+  "failed_stage": "ui_workflows",
+  "owned_simulator_removed": true,
+  "captured_at": "2026-11-12T19:19:41.672715+00:00",
+  "raw_private_proof_sha256": "7926df748c56f545b3b4a3b8f18208815e887398865e629ac51020e6d3b26ac4",
+  "private_project_paths_redacted": true,
+  "ui_workflows_passed": 4,
+  "failed_test": "testEditInvalidatesOldFinding",
+  "failure": "Keyboard-or-exact-banner readiness predicate did not complete. No keyboard or banner visible in final screenshot. Full cause remains unestablished.",
+  "requirements_closed": []
+}

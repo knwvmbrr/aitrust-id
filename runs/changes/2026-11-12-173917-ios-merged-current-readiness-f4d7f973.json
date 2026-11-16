@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-173917-ios-merged-current-readiness-f4d7f973",
+  "recorded_at": "2026-11-12T17:39:17.260813+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "946761731dcf237daba2d4d614c484231daa76a4",
+  "changed": "Recorded current merged native/privacy integration and the reviewed boundaries; distinguished the repaired signed archive from the older rejected exported package.",
+  "proves": "All 40 protocol and 32 website commands pass; unchanged PS, PII and extension receipts still match their sources. The native five-workflow proof remains current and the 1008-file personal boundary review passes.",
+  "limits": "The first website attempt was stopped by missing changelog records for new receipts; its failure is retained and the unchanged-source rerun passes after correcting receipt staging. Apple validation, repaired IPA export/upload, physical acceptance and protected app CI remain pending. No requirement closure.",
+  "scope_ids": [
+    "N-013",
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "cfd4134317f42231c30758f098137fba3d0e913783ea711e667e09596bd02b7c",
+    "state.json": "04599177c7ca4f2c40c40e7eceeb37eebbe5e2d75ab6a2054cdc77b26f02fb66",
+    "runs/2026-11-12-ios-merged-protocol.json": "d8236d09f227659e60abd1079a862dfe724b62975a24df850ae018294f594d02",
+    "runs/2026-11-12-ios-merged-website-failed.json": "8684f9058b2984116ac5ff142a22a6ef6a37c8789c1b7349fc1d7c84d7b06b7c",
+    "runs/2026-11-12-ios-merged-website.json": "d286de4915006913cead70abab337b3b27480aa658799dbf93882f64c7064783",
+    "runs/2026-11-12-ios-merged-boundaries.json": "5725741c171b27f6db40c357c1a17db02aa4dadac694a1d6a46f67a56b7ed9f9",
+    "runs/2026-11-12-ios-merged-readiness.json": "a4a2a9931e46453ff330c84bee6ad7563094beb22e05be7a4ccbbb931ec65a56"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-merged-readiness.json",
+      "sha256": "a4a2a9931e46453ff330c84bee6ad7563094beb22e05be7a4ccbbb931ec65a56"
+    },
+    {
+      "path": "runs/2026-11-12-ios-merged-boundaries.json",
+      "sha256": "5725741c171b27f6db40c357c1a17db02aa4dadac694a1d6a46f67a56b7ed9f9"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T17:39:17.830373+00:00"
+    }
+  ]
+}

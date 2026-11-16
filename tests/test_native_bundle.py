@@ -1,5 +1,6 @@
 """Exercise exact native-engine resource packaging, without installing a phone app."""
 import importlib.util
+import io
 import json
 import os
 from pathlib import Path
@@ -48,6 +49,83 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
 
 def test_package_is_deterministic_for_identical_selected_sources(prepared_assets):
     assert builder.assets() == builder.assets()
+
+
+def test_module_archive_keeps_exact_source_identity(prepared_assets):
+    payload=builder.assets()
+    assert not any(name.endswith(('.py', '.py.txt')) for name in payload)
+    raw=payload['Assets/detector-source.zip']
+    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+        assert archive.namelist()==['method.py']
+        source=archive.read('method.py')
+    manifest=json.loads(payload['Assets/device-manifest.json'])
+    config=json.loads(payload['Assets/native-assets.json'])
+    assert config['format']=='ai-trust-id-native-assets/v2'
+    assert source==(ROOT/'site/public'/manifest['path'].lstrip('/')).read_bytes()
+    assert hashlib.sha256(source).hexdigest()==manifest['bundle_sha256']==config['bundle_sha256']
+    assert hashlib.sha256(raw).hexdigest()==config['archive_sha256']==config['hashes']['/detector-source.zip']
+
+
+def run_module_loader(monkeypatch, raw, expected):
+    # Execute the actual fixed Python loader embedded in the native bridge.
+    loader=(ROOT/'mobile/ios/Web/bridge.mjs').read_text().split('const moduleLoader=String.raw`',1)[1].split('`;',1)[0]
+    original=zipfile.ZipFile
+    def open_memory(name):
+        assert name=='/tmp/aitrust-detector-source.zip'
+        return original(io.BytesIO(raw))
+    namespace={'_aitrust_expected_source':expected}
+    with monkeypatch.context() as patch:
+        patch.setattr(zipfile,'ZipFile',open_memory)
+        exec(compile(loader,'fixed-native-module-loader','exec'),namespace)
+    return namespace
+
+
+def test_actual_module_loader_retains_unicode_and_cleans_source(monkeypatch):
+    source='RESULT = "café 😀"\n'.encode()
+    result=run_module_loader(monkeypatch,builder.method_archive(source),hashlib.sha256(source).hexdigest())
+    assert result['RESULT']=='café 😀'
+    assert '_aitrust_source' not in result
+    assert '_aitrust_archive' not in result
+
+
+def test_module_loader_refuses_changed_source_before_execution(monkeypatch):
+    source=b'raise AssertionError("must never execute")\n'
+    with pytest.raises(ValueError,match='identity'):
+        run_module_loader(monkeypatch,builder.method_archive(source),'0'*64)
+
+
+@pytest.mark.parametrize('defect',['extra','duplicate','path','directory','compressed','oversized','executable','encrypted','comment','extra-field','truncated','crc','invalid-utf8'])
+def test_actual_module_loader_rejects_unreviewed_archive_shapes(monkeypatch,defect):
+    source=b'RESULT = 7\n'
+    if defect=='oversized':source=b'x' * 200_001
+    if defect=='invalid-utf8':source=b'\xff'
+    member=zipfile.ZipInfo('method.py',date_time=(1980,1,1,0,0,0))
+    member.create_system=3;member.external_attr=0o100644 << 16
+    if defect=='path':member.filename='../method.py'
+    if defect=='directory':member.filename='method.py/'
+    if defect=='compressed':member.compress_type=zipfile.ZIP_DEFLATED
+    if defect=='executable':member.external_attr=0o100755 << 16
+    if defect=='extra-field':member.extra=b'\x01\x00\x00\x00'
+    output=io.BytesIO()
+    import warnings
+    with warnings.catch_warnings():
+        warnings.simplefilter('ignore',UserWarning)
+        with zipfile.ZipFile(output,'w') as archive:
+            archive.writestr(member,source)
+            if defect in ('extra','duplicate'):archive.writestr('method.py' if defect=='duplicate' else 'other.py',b'RESULT = 8\n')
+            if defect=='comment':archive.comment=b'unreviewed'
+    raw=output.getvalue()
+    if defect=='truncated':raw=raw[:-30]
+    if defect=='crc':raw=raw.replace(source,b'RESULT = 9\n',1)
+    if defect=='encrypted':
+        raw=bytearray(raw);raw[6:8]=(1).to_bytes(2,'little');at=raw.index(b'PK\x01\x02');raw[at+8:at+10]=(1).to_bytes(2,'little');raw=bytes(raw)
+    with pytest.raises((ValueError,zipfile.BadZipFile,UnicodeDecodeError)):
+        run_module_loader(monkeypatch,raw,hashlib.sha256(source).hexdigest())
+
+
+@pytest.mark.parametrize('source',[b'',b'x'*200_001,'not bytes',b'\xff'])
+def test_module_packager_refuses_invalid_source(source):
+    with pytest.raises(ValueError):builder.method_archive(source)
 
 
 @pytest.fixture

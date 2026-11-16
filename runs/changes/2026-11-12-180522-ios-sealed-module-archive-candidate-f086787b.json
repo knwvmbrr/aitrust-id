@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-180522-ios-sealed-module-archive-candidate-f086787b",
+  "recorded_at": "2026-11-12T18:05:22.501702+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "318f8f0406d0f63244a3bc51d2a724203d4b036f",
+  "changed": "Preserved the renamed-resource Apple rejection and four-of-five hosted Share failure; package the unchanged detector as a sealed deterministic module archive with bounded source verification and retained hosted diagnostics.",
+  "proves": "54 actual packaging/loader controls pass. All 137 detector cases, 11 resource refusals, five input refusals and no-network/input-as-data controls pass on the owned iPhone simulator. PII scope now points to its verified publication, without closing its independent acceptance.",
+  "limits": "Renaming did not fix Apple validation. Current archive candidate still needs full native workflows, fresh signing and actual Apple acceptance. Hosted Share-entry failure cause remains unproven; result attachments will be retained. No new tag accuracy, physical acceptance, binary upload or requirement closure.",
+  "scope_ids": [
+    "N-013",
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "d58ac662750c53e5febd6954e9339f4f5dad6837654f97d5184eb4dab9db351f",
+    "README.md": "65df7df6adda9b0299fa1f23639fbb7ab063696759f33b1cb09d9322312feace",
+    "docs/app-store-readiness.md": "11773a53905b128a702dd0864ca216183041fd6f17df64f4f83d4625431793fa",
+    "docs/ios-module-archive-plan.md": "f49a665d265c1176eda7c1b9b119f573b16b906bcfc0054c9f25b1740efc561f",
+    "docs/ios-script-resource-plan.md": "457478d08ca2527dc0722843f9d5c62939c03816eac9b5cf2277b439be7cf463",
+    "docs/scope-progress.json": "193040cabaee9ff423d40b7083605171c1b8d1a2f63c4a647d7ca89e8ed31a36",
+    "docs/scope-progress.md": "5bc43e76458ad90934b049a5b0e0e7e33d85c1eac165f24fcc85ea97213ab374",
+    "mobile/ios/Source/Assets.swift": "2f6cce866cc8d13ae55e78de19bcc9df270f59585183c9b9149e1f63af552b8a",
+    "mobile/ios/Tests/BundleProbe.swift": "0f944ea147cf253e8953576f6403c01236024e23d57d5b4f294d7d71d8e23078",
+    "mobile/ios/Web/bridge.mjs": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007",
+    "runs/2026-11-12-ios-hosted-four-of-five.json": "f8a9094df90d14427e3367dc22ea45d654aa57dc9596227a7c761a5a3079c0b9",
+    "runs/2026-11-12-ios-module-archive-engine.json": "800421bfbbebfd2e22a746397e8cbb917e5d6e4839b72734a6627797eae4e0f7",
+    "runs/2026-11-12-ios-text-resource-apple-rejected.json": "20bfe18b8a0d6eff9a8ddb6e004975802998bbab67d0956708e0864975c5907b",
+    "scripts/native_bundle.py": "551017ab81ee63ea0ec258e07d39f364cd6ba265fd61082c0d3d7dbdbf765d8e",
+    "scripts/verify-ios-bundle.py": "0630ee511b7df755c1b0dd7ff0121f7681e6bab49fb9a0844db7ca920323673d",
+    "scripts/verify-native-share-evidence.py": "e94f7b3a509d6d3e30c9223faec0d419da7ec52f0ccaed4fe8eba8135610eb39",
+    "site/public/reference/public-scope.json": "5af697f3d980d1082b6e1670fe0c2acb7ab8a5987871dbd191ea54e6444de543",
+    "site/src/public-scope.json": "5af697f3d980d1082b6e1670fe0c2acb7ab8a5987871dbd191ea54e6444de543",
+    "site/src/scope-manifest.json": "97ca7853ad71887b06c54374f29d42339d6357f6af1eff6b1a28b11d1882fc2c",
+    "state.json": "47093d71518ad156bef1cd61ddc98391eae6aa4ab0750d9c02f41796dd2593b9",
+    "tests/test_ios_project_package.py": "329cc64df4ff3056811bc781fcfcc651a59834d4ff81004f8050c955c23109ab",
+    "tests/test_native_bundle.py": "b2fb110c3d539255f00b04498650ccf6046174fb1fd2801b18af2fa7b5267219",
+    "tests/test_native_share_evidence.py": "8c3a61325cf8fb5266d491cf4accef8381db83531aea1dc891473b15e3a38a60"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-module-archive-engine.json",
+      "sha256": "800421bfbbebfd2e22a746397e8cbb917e5d6e4839b72734a6627797eae4e0f7"
+    },
+    {
+      "path": "runs/2026-11-12-ios-text-resource-apple-rejected.json",
+      "sha256": "20bfe18b8a0d6eff9a8ddb6e004975802998bbab67d0956708e0864975c5907b"
+    },
+    {
+      "path": "runs/2026-11-12-ios-hosted-four-of-five.json",
+      "sha256": "f8a9094df90d14427e3367dc22ea45d654aa57dc9596227a7c761a5a3079c0b9"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T18:05:24.190313+00:00"
+    }
+  ]
+}

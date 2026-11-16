@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-11-16T17:35:16.559220+00:00",
+  "kind": "native_verifier_lifecycle_component_validation",
+  "counts": {
+    "tests": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "native_execution": false,
+  "original_failed_proof_modified": false,
+  "deadline_increases": false,
+  "source_hashes": {
+    "scripts/verify-ios-share.py": "7838f6cf95d15c0c1d734c1b3bb225b8908b3492bbd421d9e8d5432439deeeb5",
+    "tests/test_ios_share_verifier.py": "a12571e74f8328f17c01886d73505e18bfa8ef50450fdc07f4a59a184c59a2fa"
+  },
+  "architecture_plan": "native-verifier-lifecycle-plan.md",
+  "test_report": "native-verifier-lifecycle-tests.xml",
+  "recorded_at": "2026-11-16T17:39:31.159959+00:00",
+  "implemented_by": "Codex",
+  "scope_ids": [
+    "N-013",
+    "F-120"
+  ],
+  "final_sources": {
+    "scripts/verify-ios-share.py": "50117965eebf86cf77fce3cb4705fe25b276e0ca86c31f66246fe7b91b8bcd42",
+    "tests/test_ios_share_verifier.py": "5e282477dabb366282608bc4da6a4548bf8d124d95080626856e4ff4ccbbe210"
+  },
+  "adjacent_final_suite": {
+    "command": "python -m pytest -q tests/test_ios_project_package.py tests/test_ios_archive.py tests/test_ios_share_verifier.py tests/test_native_bundle.py",
+    "passed": 130,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 8.6
+  },
+  "interrupted_cleanup_preserves_report": true,
+  "original_ui_summary_recovery_does_not_replace_failed_proof": true,
+  "requirements_closed": [],
+  "limits": [
+    "Control-flow tests with synthetic external commands and real private report files; no native UI or TestFlight acceptance.",
+    "Cleanup now precedes result parsing under the original90-second per-command bounds. Summary remains30seconds and exact-five is mandatory.",
+    "Source identity is captured immediately after UI and again at final reporting, including later collection failure.",
+    "A new complete producer run remains required. The prior five UI passes/collection timeout remains failed."
+  ]
+}

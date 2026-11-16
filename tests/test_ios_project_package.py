@@ -42,6 +42,7 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
         assert 'NSAppTransportSecurity' not in share
         assert not any(name.endswith('.entitlements') or name.endswith('.mobileprovision') or name.endswith('.p12') for name in names)
         assert 'LICENSE' in names and any(name.startswith('Notices/') for name in names)
+        assert plistlib.loads(package.read('PrivacyInfo.xcprivacy')) == {'NSPrivacyTracking': False}
     before = archive.read_bytes()
     again = subprocess.run([sys.executable, str(ROOT / 'scripts/build-ios-project.py'), '--output', str(destination)], capture_output=True, timeout=30)
     assert again.returncode == 2 and archive.read_bytes() == before
@@ -62,6 +63,7 @@ def test_profiles_package_their_own_identifiers_without_signing(profile, bundle,
     assert all(plistlib.loads(payload[t + '-Info.plist'])['CFBundleShortVersionString'] == version for t in ['App', 'Share'])
     assert payload['AppLicense.txt'] == (ROOT / 'LICENSE').read_bytes()
     assert payload['Privacy.txt'] == (ROOT / 'mobile/ios/Privacy.txt').read_bytes()
+    assert payload['PrivacyInfo.xcprivacy'] == (ROOT / 'mobile/ios/PrivacyInfo.xcprivacy').read_bytes()
     assert 'does not redact personal information' in payload['Privacy.txt'].decode()
     assert payload['Artwork.xcassets/AppIcon.appiconset/AppIcon.png'] == (ROOT / 'mobile/ios/Artwork/AppIcon.png').read_bytes()
     assert not any(name.endswith(('.p12', '.mobileprovision', '.entitlements')) for name in payload)
@@ -77,6 +79,9 @@ def test_unknown_profile_refused_before_packaging(monkeypatch, profile):
 @pytest.fixture
 def source_copy(tmp_path, monkeypatch):
     root = tmp_path / 'checkout'; root.mkdir()
+    manifest = root / 'mobile/ios/PrivacyInfo.xcprivacy'
+    manifest.parent.mkdir(parents=True)
+    shutil.copyfile(ROOT / 'mobile/ios/PrivacyInfo.xcprivacy', manifest)
     # Refusal controls must run before any website/npm build in a clean clone.
     # Derive their valid starting identity from tracked sources, not an ignored
     # generated device manifest that happens to exist on the developer's Mac.
@@ -117,3 +122,35 @@ def test_existing_destination_symlink_is_never_followed(tmp_path, prepared_asset
     result = subprocess.run([sys.executable, str(ROOT / 'scripts/build-ios-project.py'), '--output', str(link)], capture_output=True, timeout=30)
     assert result.returncode == 2 and sentinel.read_text() == 'unchanged' and list(actual.iterdir()) == [sentinel]
     assert str(tmp_path).encode() not in result.stdout + result.stderr
+
+
+def test_privacy_manifest_is_a_resource_of_both_targets():
+    objects = builder.project()['objects']
+    for target in ['App', 'Share']:
+        phases = objects[builder.uid('target-' + target)]['buildPhases']
+        resources = [objects[p] for p in phases if objects[p]['isa'] == 'PBXResourcesBuildPhase']
+        names = [objects[objects[b]['fileRef']]['path'] for phase in resources for b in phase['files']]
+        assert names.count('PrivacyInfo.xcprivacy') == 1
+        assert names.count('Privacy.txt') == 1
+
+
+@pytest.mark.parametrize('mutation', ['tracking', 'empty_apis', 'unknown', 'duplicate', 'invalid',
+                                     'missing', 'file_link', 'parent_link'])
+def test_unreviewed_privacy_declarations_refused_before_packaging(source_copy, mutation):
+    path = source_copy / 'mobile/ios/PrivacyInfo.xcprivacy'
+    if mutation in {'tracking', 'empty_apis', 'unknown'}:
+        data = {'NSPrivacyTracking': False}
+        if mutation == 'tracking': data['NSPrivacyTracking'] = True
+        elif mutation == 'empty_apis': data['NSPrivacyAccessedAPITypes'] = []
+        else: data['unreviewed'] = False
+        path.write_bytes(plistlib.dumps(data))
+    elif mutation == 'duplicate':
+        path.write_bytes(path.read_bytes().replace(b'</dict>', b'<key>NSPrivacyTracking</key><true/></dict>'))
+    elif mutation == 'invalid': path.write_bytes(b'not a plist')
+    elif mutation == 'missing': path.unlink()
+    elif mutation == 'file_link':
+        actual = source_copy / 'elsewhere.xcprivacy'; path.rename(actual); path.symlink_to(actual)
+    elif mutation == 'parent_link':
+        actual = source_copy / 'elsewhere'; path.parent.rename(actual); path.parent.symlink_to(actual)
+    with pytest.raises(ValueError, match='Native privacy manifest'):
+        builder.files()

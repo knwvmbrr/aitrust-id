@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-181623-ios-share-readiness-diagnostic-e13ebd2b",
+  "recorded_at": "2026-11-12T18:16:23.267000+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "318f8f0406d0f63244a3bc51d2a724203d4b036f",
+  "changed": "Preserved the reproduced four-of-five local Share failure and recorded-frame observation; require the named activity image and stable hittable cell before the single selection tap.",
+  "proves": "The full local result bundle retains actual screenshot, hierarchy and video; observed placeholder rendering around selection justifies explicit UI readiness. All existing post-selection result, privacy and finish assertions remain intact.",
+  "limits": "Full native rerun is in progress. This does not establish the complete failure cause or credit a passing workflow, Apple acceptance, physical use or requirement closure. The initial only-failures attachment export omitted teardown attachments; explicit test-ID export recovered them.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "mobile/ios/Tests/UIFlows.swift": "8411b8c3b99a5aa256568924f55c7aa59f1b918535b70357d3ee5f3eb8e311b2",
+    "docs/ios-module-archive-plan.md": "29b60d586931e87bacd70641c57d3bf74cf016471e130d1bbb5b447e4352ab1f",
+    "state.json": "6d3f7d5c79309e8e9ee7bcb247ac2035ba739b9e7a6e2f012076aa7bfdcaab91",
+    "runs/2026-11-12-ios-module-archive-workflow-failed.json": "f35fe5386bda508646af6f6b5ecbd8c2e3a0c76164b1dde5ce54ad920b6c75ad"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-module-archive-workflow-failed.json",
+      "sha256": "f35fe5386bda508646af6f6b5ecbd8c2e3a0c76164b1dde5ce54ad920b6c75ad"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T18:16:25.312755+00:00"
+    }
+  ]
+}

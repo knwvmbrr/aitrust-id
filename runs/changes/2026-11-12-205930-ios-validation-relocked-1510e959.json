@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-205930-ios-validation-relocked-1510e959",
+  "recorded_at": "2026-11-12T20:59:30.139477+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a399b926247aae555c27a548706bcc0f021ec601",
+  "changed": "Record the Mac relocking before the latest Apple result could be read.",
+  "proves": "Computer use reports the Mac locked; the previously observed signing process has ended. Neither observation establishes Apple validation success or failure.",
+  "limits": "Owner unlock is required for UI verification. No new credential, security-policy change, Apple pass, release or requirement closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "README.md": "2f95e8703da56b19d96c1e3f1ce790d762ca6c15c1c2445a44f62d9c2474d21c",
+    "docs/app-store-readiness.md": "5c12f254d9f4125adc9a40e3642779072c30bee6a8b0806e09557ed18c7e0257",
+    "docs/ios-module-archive-plan.md": "93aac8b762fc36ae5dfbff9e7cb0906e803ff8ecfccc63a6817715832fea8ff9",
+    "runs/2026-11-12-ios-validation-relocked.json": "856e7e893a81605b23542193359427548d826c3b8fcb3c210b9790659b969fd5",
+    "state.json": "090127704e27510e83f5dda68b9d87dca9cd846be88594e72200f8263d3517e0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-validation-relocked.json",
+      "sha256": "856e7e893a81605b23542193359427548d826c3b8fcb3c210b9790659b969fd5"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T20:59:30.750726+00:00"
+    }
+  ]
+}

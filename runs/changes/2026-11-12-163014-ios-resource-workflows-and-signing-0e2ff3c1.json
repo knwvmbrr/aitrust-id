@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-163014-ios-resource-workflows-and-signing-0e2ff3c1",
+  "recorded_at": "2026-11-12T16:30:14.662249+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3f1234ccbf2f0cc50aea67d8bf2605b79921ab11",
+  "changed": "Preserved both native workflow attempts, added failure attachments for synthetic UI tests, bound the current five-workflow proof, and recorded inspected Xcode signing of the resource repair.",
+  "proves": "The controlled current-source simulator run passes five native workflows; source-bound proof guard and 20 refusal controls pass. Both repaired archive signatures and all 32 resource copies match, using existing owner profiles.",
+  "limits": "Earlier two native UI failures and CLI errSecInternalComponent remain recorded; cause is not proven. Apple revalidation is in progress. No upload, physical/human acceptance or full requirement closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "cc3b2a2fec9b079f9c5d7633915f1f14083d1e6642ce04547ffde5e16e8cb865",
+    "docs/ios-script-resource-plan.md": "624a86fc878103a8b00d9d08489ca91766137797abc15db911b62347eeabbd86",
+    "docs/scope-progress.json": "acf0a4d5ac7d87c4862d68a05f330a3e862acfbbc5438a2c0ce642b242fa9be5",
+    "docs/scope-progress.md": "1396dfad1ba6d269d514f6b7671ec86b2030dd6fe19ee20ff812255beb30afc4",
+    "mobile/ios/Source/Assets.swift": "e8af0423e0b1237d97a439f9058155ed5500ce9d3f135431b064f1a381da79e9",
+    "mobile/ios/Tests/BundleProbe.swift": "17f684f4d41042c993aae3078925936a2f1868b1ef037fad9db91a53bd4783e1",
+    "mobile/ios/Tests/UIFlows.swift": "502b3a1c6e55b2fe2795659006f6d76c4fdaebe38dedee1e4e75e06351ca2ab5",
+    "runs/2026-11-12-ios-text-resource-bundle.json": "0019bab044388d545edfd1ddc4cbe0f1c5d0e79ec334c9bfe6e1287fc29168d1",
+    "runs/2026-11-12-ios-text-resource-signed-archive.json": "9aeb3d744c2f1a285f6634ccb8f98432489884c562c4093e3ee9c40b518420ce",
+    "runs/2026-11-12-ios-text-resource-workflow-failed.json": "4e30b8fff90bba69ae459805e1285b5d806aa86d2086c6c74a6305c51b80bb21",
+    "runs/2026-11-12-ios-text-resource-workflow.json": "1113eceb1d498dd0eeb62bc848502bfeb38d2ae7e43fdc18cb5885192c4993f8",
+    "scripts/native_bundle.py": "3ac4d79e65f4786a3574925f86730361295ec1d18c4bea9ef5daf0cf731931ac",
+    "scripts/verify-ios-bundle.py": "cfb09c5c3cfad584567a4e389aa87e6fca9f26f9be89da5aed36bb3ddc361df0",
+    "scripts/verify-native-share-evidence.py": "9eb065917685215fd3683b94c03794f755b1f982661d31c7908dfc09ef34e6a9",
+    "site/public/reference/public-scope.json": "c07171d2e21ba16e8db1d04c7ea8ad169d3477985d4db22cb12a6cf41fda15bb",
+    "site/src/public-scope.json": "c07171d2e21ba16e8db1d04c7ea8ad169d3477985d4db22cb12a6cf41fda15bb",
+    "site/src/scope-manifest.json": "ea53fd82c886734082e1e9da934a700e4829a100886fd6b80d2251667ac3054d",
+    "state.json": "f8d633ef1463b1aa7c4f61e4afeea421c38b2a8fab940d841fd2199215fe5016",
+    "tests/test_ios_project_package.py": "bbc46e0e75cac8456611d7b3d088ef3aff001020e1d93db330382ca712cfcaf8",
+    "tests/test_native_bundle.py": "38d2945d783ae8644559a05398cb5de8155a6530c6ab4c282ef023a90cdbb5ad"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-ios-text-resource-workflow-failed.json",
+      "sha256": "4e30b8fff90bba69ae459805e1285b5d806aa86d2086c6c74a6305c51b80bb21"
+    },
+    {
+      "path": "runs/2026-11-12-ios-text-resource-workflow.json",
+      "sha256": "1113eceb1d498dd0eeb62bc848502bfeb38d2ae7e43fdc18cb5885192c4993f8"
+    },
+    {
+      "path": "runs/2026-11-12-ios-text-resource-signed-archive.json",
+      "sha256": "9aeb3d744c2f1a285f6634ccb8f98432489884c562c4093e3ee9c40b518420ce"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T16:30:15.268760+00:00"
+    }
+  ]
+}

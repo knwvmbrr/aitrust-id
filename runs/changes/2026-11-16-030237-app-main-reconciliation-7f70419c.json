@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-030237-app-main-reconciliation-7f70419c",
+  "recorded_at": "2026-11-16T03:02:37.379953+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4d91d17f6694773681dadb49eef9f469ed3749e5",
+  "changed": "Reconcile published MT source and attributed histories into the Apple-validated app candidate branch.",
+  "proves": "All 202 originals and both change histories are retained; only the incoming F-019b record is adopted alongside the app record. Published MT status is reconciled and generated scope projections agree.",
+  "limits": "70 original requirements remain open. Current Share, native five-workflow and browser-boundary execution acceptance remains blocked; no release or full closure. An invalid changelog self-hash request was refused and corrected before writing this record.",
+  "scope_ids": [
+    "N-013",
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "docs/scope-progress.json": "92084679f418097bb20308889de1913f52ed76a1e86ef1cfe0c1ed627876dde8",
+    "docs/scope-progress.md": "35e7ef6b77204492e6e42da6aa2ea78b30ae956b9918286e0940f70ce5ff266d",
+    "eval/route-boundaries.json": "b1c5be67fa1482226a5f0e5f3ba7bcaa4c18b893b948898e8d91a3cca7665641",
+    "site/src/scope-manifest.json": "a5976c529c10adf69782abc84d00d10c459a3d0290aa99585df03af7e47c0307",
+    "site/src/public-scope.json": "5a7f4d8299a1430ac4825cba13de40296aa425828053d428ac8cb0aec445c065",
+    "site/public/reference/public-scope.json": "5a7f4d8299a1430ac4825cba13de40296aa425828053d428ac8cb0aec445c065",
+    "state.json": "5acb4d9359ba427f8053919f90dae42eb29beaf709c898c5ef73c71dfb1b38ea",
+    "runs/2026-11-15-main-reconciliation.json": "101c6410dc5842419ad022cf4ac4d83aa30e8504bf0bc169b9d363caf8a57a40"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-15-main-reconciliation.json",
+      "sha256": "101c6410dc5842419ad022cf4ac4d83aa30e8504bf0bc169b9d363caf8a57a40"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T03:02:37.896925+00:00"
+    }
+  ]
+}

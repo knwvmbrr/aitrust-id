@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-12T18:49:35.650896+00:00",
+  "pass": true,
+  "engineering_receipts": {
+    "PS": "runs/2026-11-12-hidden-email-current-PS.json",
+    "PII_REDACTED": "runs/2026-11-12-hidden-email-current-PII_REDACTED.json",
+    "extension": "runs/2026-11-12-hidden-email-current-extension.json",
+    "protocol": "runs/2026-11-12-ios-module-current-protocol.json",
+    "website": "runs/2026-11-12-ios-module-current-website.json"
+  },
+  "newly_executed_capabilities": {
+    "protocol": 40,
+    "website": 32
+  },
+  "unchanged_source_receipts_reused": [
+    "PS",
+    "PII_REDACTED",
+    "extension"
+  ],
+  "native_workflow": "runs/2026-11-12-native-share-module-archive-workflow.json",
+  "native_engine": "runs/2026-11-12-ios-module-archive-engine.json",
+  "native_workflows_passed": 5,
+  "native_engine_cases": 137,
+  "current_boundary_review": "runs/2026-11-12-ios-module-reviewed-boundaries.json",
+  "selected_native_proof_fingerprinted": true,
+  "scope_records": 202,
+  "completed_requirements": 132,
+  "open_requirements": 70,
+  "full_requirements_closed": [],
+  "owner_signing_action_pending": true,
+  "fresh_archive_success_verified": false,
+  "apple_validation_passed": false,
+  "app_store_uploaded": false,
+  "physical_device_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "protected_source_ci_pending": true
+}

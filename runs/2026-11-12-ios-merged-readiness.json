@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-11-12T17:39:16.456381+00:00",
+  "pass": true,
+  "engineering_receipts": {
+    "PS": "runs/2026-11-12-hidden-email-current-PS.json",
+    "PII_REDACTED": "runs/2026-11-12-hidden-email-current-PII_REDACTED.json",
+    "protocol": "runs/2026-11-12-ios-merged-protocol.json",
+    "extension": "runs/2026-11-12-hidden-email-current-extension.json",
+    "website": "runs/2026-11-12-ios-merged-website.json"
+  },
+  "newly_executed_capabilities": {
+    "protocol": 40,
+    "website": 32
+  },
+  "unchanged_source_receipts_reused": [
+    "PS",
+    "PII_REDACTED",
+    "extension"
+  ],
+  "boundary_evidence": "runs/2026-11-12-ios-merged-boundaries.json",
+  "native_proof": "runs/2026-11-12-ios-text-resource-workflow.json",
+  "signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json",
+  "retained_website_failure": "runs/2026-11-12-ios-merged-website-failed.json",
+  "website_failure_cause": "The existing build changelog gate rejected newly placed run receipts lacking their attributed change record. Scratch receipts were moved to ignored verification output; unchanged source rerun passed. The gate was not weakened.",
+  "scope_records": 202,
+  "completed_requirements": 132,
+  "open_requirements": 70,
+  "full_requirements_closed": [],
+  "apple_validation_verified": false,
+  "app_store_uploaded": false,
+  "physical_device_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "protected_ci_pending": true
+}

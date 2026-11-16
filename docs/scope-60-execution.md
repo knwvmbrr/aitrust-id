@@ -173,3 +173,74 @@ requirement closure.
 All 202 records remain: **132 complete / 70 open**. Ten additional full closures
 are still required for 60. Accepted public tag releases, human/physical-phone,
 qualified legal, actual organization and recruited-pilot obligations are retained.
+
+## Native signing and delivery priorities — November 10
+
+The owner's current priorities are app completion and further independent tag
+development. The in-house community/communication platform remains in the
+original scope under F-135, F-136, F-137 and N-005. Optional push is now explicitly
+captured as [ENH-PUSH](optional-notifications-plan.md), without enabling a service,
+collecting device tokens or making personal tag checks depend on notifications.
+It is future delivery work, not a reason to defer the app or tag methods.
+
+Apple Developer is signed in and waiting for an owner-created CSR. The login
+keychain is unlocked and readable/writable. Its old system WWDR intermediate had
+expired in 2023; the official G3 intermediate now passes system trust verification
+and appears valid in the login keychain, with no custom trust override. The CSR
+error is not yet proven fixed. Owner signing-identity creation, actual signing,
+upload and physical/human acceptance remain open. The native typed-loader
+experiment failed actual Share operation and was reverted; it is not a completed
+compatibility repair. See the [signing observation](../runs/2026-11-10-apple-signing-prerequisites.json)
+and [rejected experiment](../runs/2026-11-10-native-typed-provider-rejected.json).
+
+There are still **132 complete / 70 open** original requirement records. The
+separate enhancement entry and signing prerequisites do not reduce that count.
+
+
+## Share reliability and current package — November 16
+
+Captured one local first-action failure before application target-action: the
+simulator cancels its synthesized contact after unknown/duplicate virtual
+digitizer initialization and missing prior-touch-down events. This is separate
+from a hosted readiness timeout caused by repeated remote image queries. The
+final test source keeps one snapshot per readiness poll and captures diagnostics
+on actual failures. Original five scenarios, assertions, single taps and all
+deadlines remain; the longer-press candidate failed both cases (0/2 passed) and was reverted. Current
+full-five hosted acceptance remains required. See the
+[diagnosis](../runs/2026-11-16-native-share-reliability-diagnosis.json).
+
+Both native bundles now carry the reviewed no-tracking privacy manifest. 100
+focused packaging/refusal tests pass; a real unsigned iPhoneOS Release archive
+passes 34 exact resource comparisons. Existing-identity signing timed out at
+Share CodeSign with no completed archive or established cause; no credential,
+key policy or trust change was attempted. The prior Apple-validated IPA is
+preserved, and its validation cannot transfer to changed package bytes. Native
+CI now cancels superseded runs for the same PR/ref, preserving every latest-run
+check. Final signing/platform declarations, physical/human use and independent
+accuracy remain separate.
+
+All 202 original records remain: **132 complete / 70 open**, ten full closures
+short of 60. These repairs do not waive any original acceptance or close a full
+requirement. N-013 stays at 60% pending current integration evidence.
+
+
+TestFlight pilot instructions and feedback/privacy links are now saved, with no
+build uploaded. Two current-source hosted attempts stop at simulator boot; the
+second retains strict cleanup failure. The diagnostic revision now captures
+live boot phases and numeric capacity instead of losing buffered stdout. All
+117 adjacent verifier/package controls pass, and the source-current unsigned
+archive again passes 34 resource comparisons. Old selected native evidence is
+still rejected as stale; no acceptance predicate, timeout or source guard is
+weakened. These are software and operating improvements, with the original
+**132 complete / 70 open** count preserved.
+
+
+The diagnostic producer later passes all five original hosted UI cases, then
+fails at result collection. The recovered exact summary remains separate from
+that failed proof. The next source revision captures source identity immediately
+after UI, performs one strict cleanup before parsing and records final identity
+even on a later failure. All 130 adjacent controls pass, and actual unsigned
+resource inspection stays complete. Current selected integration remains
+withheld until the whole producer passes. F-120's outstanding owner acceptance
+allocation was identified explicitly; the F-119-only decision is not extended
+to close another record. Count remains **132 complete / 70 open**.

