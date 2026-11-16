@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-191827-q4-publication-evidence-8a149406",
+  "recorded_at": "2026-11-16T19:18:27.195923+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3e974e1c5fab32bc77bc7f92211139293ce941fd",
+  "changed": "Verify the exact merged Q4 deployment on the owned domain and deployment origin; correct an initially stale changelog export.",
+  "proves": "All294 artifacts match the merged source on each of2 origins, with required security headers; protected PR102 engineering checks passed.",
+  "limits": "Metadata-only publication receipt; deployed application source remains3e974e1. Google indexing, native release, human and independent accuracy acceptance are separate; no full requirement closure.",
+  "scope_ids": [
+    "F-139",
+    "F-150"
+  ],
+  "files": {
+    "state.json": "be27c9ca68a0e977df4ca6f6de9c329e203abe052222f1e6f3f7094afe673d76",
+    "runs/2026-11-16-q4-web-publication.json": "a0f51b2e3283ed9865483f2821747e32a8c86a8b9b50cbe35aafa4dbbd2ef904"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-q4-web-publication.json",
+      "sha256": "a0f51b2e3283ed9865483f2821747e32a8c86a8b9b50cbe35aafa4dbbd2ef904"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T19:18:27.727471+00:00"
+    }
+  ]
+}
