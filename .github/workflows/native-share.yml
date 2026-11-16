@@ -5,6 +5,9 @@ on:
     paths: ['mobile/ios/**', 'scripts/*ios*.py', 'scripts/native_bundle.py', 'scripts/verify-shared-text.py', 'tests/test_ios*.py', '.github/workflows/native-share.yml']
 permissions:
   contents: read
+concurrency:
+  group: native-share-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   native-share:
     # GitHub's standard Xcode 27 image; no paid xlarge runner.

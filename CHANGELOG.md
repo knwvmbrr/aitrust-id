@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-162932-share-diagnosis-privacy-package-3753b750
+
+Recorded 2026-11-16T16:29:32.165932+00:00 · Contributor: Codex · change
+
+- **Changed.** Diagnose cancelled simulator Share contacts; remove repeated private image readiness queries and incomplete-run screenshot capture; package reviewed privacy manifests in both native targets; cancel superseded native CI runs.
+- **Evidence.** 100 focused packaging and refusal controls pass; actual unsigned iPhoneOS archive passes 34 exact resource comparisons including both manifest copies. Original five workflow names, all assertions, single-tap count and deadlines are preserved; production Swift and detector are unchanged. [Change record](./runs/changes/2026-11-16-162932-share-diagnosis-privacy-package-3753b750.json).
+- **Not claimed.** The longer-press candidate failed both Share cases and was reverted. Final current-source full-five hosted acceptance remains pending; existing-identity signing timed out after 120 seconds at Share CodeSign without an established cause. No TestFlight upload, privacy/license clearance, physical/human/independent acceptance or full requirement closure. All 202 records remain: 132 complete and 70 open.
+
+
 ### 2026-11-16-031626-preserve-validated-ipa-9cd7e912
 
 Recorded 2026-11-16T03:16:26.196042+00:00 · Contributor: Codex · change

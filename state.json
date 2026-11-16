@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T03:16:26.153320+00:00",
+  "updated": "2026-11-16T16:27:50.703905+00:00",
   "active_increment": "Apple package validation passed. Source branch reconciles the published MT increment without losing any of 202 originals. Focused Share diagnostic without active signing passes one test and fails one; full integration remains withheld. 70 requirements remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -656,7 +656,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -760,7 +760,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-09T22:10:37.890409+00:00",
+    "audited_at": "2026-11-16T16:27:50.703905+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -776,7 +776,7 @@
     "source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/hash-report-intake-plan.md",
+    "latest_increment": "docs/share-reliability-plan.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 60,
@@ -789,7 +789,7 @@
     "current_target_verification": "runs/2026-11-09-hash-inbox-scope.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Continue all autonomous scope work, skip blocked items, and aim for 60 open full requirements. Use focused checks; do not count test totals as closures.",
-    "latest_owner_direction_date": "2026-11-09",
+    "latest_owner_direction_date": "2026-11-16",
     "latest_increment_completed_ids": [
       "F-159",
       "F-045"
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T03:16:26.153320+00:00",
+  "updated_at": "2026-11-16T16:27:50.703905+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1440,7 +1440,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -1868,7 +1868,7 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "draft_apple_package_validated_current_share_failures_open",
+    "status": "draft_share_readiness_repaired_hosted_acceptance_pending",
     "requirement": "N-013",
     "percent_complete": 60,
     "workflow_proof": "runs/2026-11-12-native-share-module-archive-workflow.json",
@@ -1917,7 +1917,18 @@
       "passed": 1,
       "failed": 1,
       "replaces_full_five_workflow_proof": false
-    }
+    },
+    "reliability_diagnosis": "runs/2026-11-16-native-share-reliability-diagnosis.json",
+    "focused_rejected_candidate": {
+      "evidence": "runs/2026-11-16-native-share-reliability-diagnosis.json",
+      "executed": 2,
+      "passed": 0,
+      "failed": 2,
+      "longer_press_reverted": true,
+      "replaces_full_five_workflow_proof": false
+    },
+    "current_full_workflow_executed": false,
+    "ui_workflows_scope": "Historical last full run only; final November16 snapshot-readiness source has no current complete five-workflow acceptance."
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3000,8 +3011,8 @@
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
-    "device_archive_evidence": "runs/2026-11-12-ios-text-resource-signed-archive.json",
-    "archive_signed": true,
+    "device_archive_evidence": "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+    "archive_signed": false,
     "store_bundle_configured": true,
     "app_store_record_created": true,
     "uploaded": false,
@@ -3042,11 +3053,11 @@
     "owner_csr_creation_still_pending": false,
     "owner_csr_signature_verified": true,
     "owner_csr_key_bits": 2048,
-    "current_signing_step": "Owner-authorized re-signing succeeded using the existing identity/profiles; actual Apple package validation passed for 1.0 (1).",
-    "current_signing_evidence": "runs/2026-11-12-ios-module-signed-inspection.json",
+    "current_signing_step": "New privacy-manifest candidate passes unsigned archive inspection; bounded existing-identity signing stops at first Share CodeSign without completed archive or established cause. Owner-dependent signing deferred.",
+    "current_signing_evidence": "runs/2026-11-16-ios-signed-candidate-timeout.json",
     "csr_selected_for_certificate_issuance": true,
     "certificate_issuance_submitted": true,
-    "signed_archive_evidence": "runs/2026-11-12-ios-module-signed-inspection.json",
+    "signed_archive_evidence": null,
     "owner_certificate_matches_private_key": true,
     "distribution_profiles_available": true,
     "distribution_profiles_count": 2,
@@ -3054,10 +3065,10 @@
     "signed_package_exported": false,
     "signed_package_evidence": null,
     "app_store_validation_passed": true,
-    "current_step": "Apple package validation passed. Resolve current Share workflow failures and final platform/privacy/physical acceptance before reviewed upload or release.",
+    "current_step": "Finish current-source hosted five-workflow acceptance. Retain old validated IPA; current changed package needs its own signing/Apple validation and final platform review before TestFlight upload.",
     "validation_failure": "runs/2026-11-12-ios-text-resource-apple-rejected.json",
     "packaging_repair": {
-      "status": "apple_package_validation_passed_share_acceptance_open",
+      "status": "privacy_manifest_unsigned_archive_passed_current_signing_and_hosted_share_open",
       "plan": "docs/ios-module-archive-plan.md",
       "simulator_detector": "runs/2026-11-12-ios-module-archive-engine.json",
       "apple_revalidation_passed": true,
@@ -3066,16 +3077,16 @@
       "retained_failed_workflow": "runs/2026-11-12-ios-text-resource-workflow-failed.json",
       "current_readiness": "runs/2026-11-12-ios-module-current-readiness.json",
       "protected_source_ci_pending": true,
-      "latest_failure": "runs/2026-11-12-ios-local-resign-failed.json",
+      "latest_failure": "runs/2026-11-16-ios-signed-candidate-timeout.json",
       "hosted_workflow_failure": "runs/2026-11-12-ios-module-hosted-setup-failed.json",
       "module_archive_format": "ai-trust-id-native-assets/v2",
       "retained_module_workflow_failure": "runs/2026-11-12-ios-module-archive-workflow-failed.json",
       "retained_keyboard_failure": "runs/2026-11-12-ios-module-archive-keyboard-failed.json",
-      "current_native_proof_dependency_bound": true,
+      "current_native_proof_dependency_bound": false,
       "focused_proof_and_input_checks": 63,
-      "current_candidate_archive_signed": true,
+      "current_candidate_archive_signed": false,
       "current_candidate_archive_inspected": true,
-      "current_candidate_validation_status": "passed",
+      "current_candidate_validation_status": "not_revalidated",
       "previous_signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json",
       "current_boundaries": "runs/2026-11-12-ios-module-reviewed-boundaries.json",
       "retained_traced_keyboard_failure": "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
@@ -3083,11 +3094,12 @@
       "current_native_workflows_passed": 3,
       "current_native_workflows_failed": 2,
       "current_native_source_acceptance": false,
-      "latest_success": "runs/2026-11-15-apple-package-validation-passed.json"
+      "latest_success": "runs/2026-11-15-apple-package-validation-passed.json",
+      "current_candidate_archive_kind": "unsigned"
     },
     "revalidation_handoff": "runs/2026-11-12-ios-revalidation-in-progress.json",
     "owner_ui_handoff": "runs/2026-11-15-apple-package-validation-passed.json",
-    "previous_signed_archive_evidence": "runs/2026-11-10-ios-signed-archive.json",
+    "previous_signed_archive_evidence": "runs/2026-11-12-ios-module-signed-inspection.json",
     "previous_signed_package_exported": true,
     "previous_signed_package_evidence": "runs/2026-11-10-ios-signed-package.json",
     "owner_ui_handoff_pending": false,
@@ -3097,6 +3109,15 @@
       "bytes": 12925499,
       "sha256": "d1d8cc7abb5321865dbc7548014d5771febed4c480fbadf7d52c79df1e995db2",
       "redistributed": false
+    },
+    "app_store_validation_scope": "Historical preserved November15 IPA only; current privacy-manifest package is not Apple revalidated.",
+    "privacy_manifest_packaging": {
+      "source": "mobile/ios/PrivacyInfo.xcprivacy",
+      "controls": "runs/2026-11-16-ios-privacy-packaging-controls.json",
+      "archive": "runs/2026-11-16-ios-privacy-unsigned-archive.json",
+      "actual_bundle_copies": 2,
+      "actual_resources_compared": 34,
+      "full_privacy_or_license_clearance": false
     }
   },
   "pii_pan_containment": {
@@ -3343,5 +3364,11 @@
     "linux_evidence": "runs/2026-11-12-choice-between-linux.json",
     "readiness": "runs/2026-11-12-choice-between-current-readiness.json",
     "publication": "runs/2026-11-15-main-reconciliation.json"
+  },
+  "native_ci_concurrency": {
+    "evidence": "runs/2026-11-16-native-ci-concurrency.json",
+    "latest_same_pr_or_ref_only": true,
+    "jobs_permissions_timeouts_unchanged": true,
+    "hosted_execution_observed": false
   }
 }

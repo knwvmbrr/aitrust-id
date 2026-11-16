@@ -25,6 +25,18 @@ def uid(name):
     return digest(name.encode())[:24].upper()
 
 
+def privacy_manifest():
+    """Only package the reviewed declaration; reject silent privacy changes."""
+    source = ROOT / 'mobile/ios/PrivacyInfo.xcprivacy'
+    if (not source.is_file() or source.is_symlink()
+            or any(p.is_symlink() for p in source.parents if p != ROOT and ROOT in p.parents)):
+        raise ValueError('Native privacy manifest source refused')
+    raw = source.read_bytes()
+    if raw != plistlib.dumps({'NSPrivacyTracking': False}):
+        raise ValueError('Native privacy manifest requires review')
+    return raw
+
+
 def project(profile='developer'):
     if profile not in ('developer', 'distribution'):
         raise ValueError('Unknown native project profile')
@@ -38,7 +50,8 @@ def project(profile='developer'):
     assets = put('assets-folder', 'PBXFileReference', lastKnownFileType='folder', path='Assets', sourceTree='<group>')
     extras = [put('resource-' + name, 'PBXFileReference', lastKnownFileType=kind, path=name, sourceTree='<group>')
               for name, kind in [('Artwork.xcassets', 'folder.assetcatalog'), ('Notices', 'folder'),
-                                 ('Privacy.txt', 'text'), ('AppLicense.txt', 'text')]]
+                                 ('Privacy.txt', 'text'), ('AppLicense.txt', 'text'),
+                                 ('PrivacyInfo.xcprivacy', 'text.xml')]]
     products = {}
     for target, suffix, kind in [('App', 'app', 'wrapper.application'), ('Share', 'appex', 'wrapper.app-extension')]:
         products[target] = put('product-' + target, 'PBXFileReference', explicitFileType=kind, path='AITrustID' + ('Share' if target == 'Share' else '') + '.' + suffix, sourceTree='BUILT_PRODUCTS_DIR')
@@ -106,6 +119,7 @@ def scheme():
 def files(profile='developer'):
     if profile not in ('developer', 'distribution'):
         raise ValueError('Unknown native project profile')
+    reviewed_privacy = privacy_manifest()
     # Keep the current source/runtime/notice contract in one audited packager.
     native = runpy.run_path(str(SOURCE_ROOT / 'scripts/native_bundle.py'))
     native['assets'].__globals__['ROOT'] = ROOT
@@ -134,6 +148,7 @@ def files(profile='developer'):
             raise ValueError('Native disclosure or artwork source refused')
         payload[target] = file.read_bytes()
     payload['AppLicense.txt'] = payload['LICENSE']
+    payload['PrivacyInfo.xcprivacy'] = reviewed_privacy
     payload['Artwork.xcassets/Contents.json'] = b'{"info":{"author":"xcode","version":1}}\n'
     payload['Artwork.xcassets/AppIcon.appiconset/Contents.json'] = b'{"images":[{"filename":"AppIcon.png","idiom":"universal","platform":"ios","size":"1024x1024"}],"info":{"author":"xcode","version":1}}\n'
     payload['AITrustID.xcodeproj/project.pbxproj'] = plistlib.dumps(project(profile))

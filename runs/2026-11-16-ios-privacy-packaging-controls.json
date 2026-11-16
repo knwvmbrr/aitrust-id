@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-11-16T16:12:30.093488+00:00",
+  "pass": true,
+  "kind": "native_privacy_manifest_packaging_controls",
+  "implemented_by": "Codex",
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "X-02"
+  ],
+  "sources": {
+    "scripts/build-ios-project.py": "bc0bebb56766b1ac0b9bb0fef5fb2d01dfaa7c667b267b10c6a6b31e197ff280",
+    "scripts/verify-ios-archive.py": "b592ba4ee33dd40001fc2bb314d10bf8019c9ec6f010d024c6c21523c78d4ac8",
+    "scripts/verify-ios-share.py": "6e7d867030c96ec9b15af8841083cb5cffd6f158eeb97dc177a6e18233f1893c",
+    "mobile/ios/PrivacyInfo.xcprivacy": "a7081f1506c90e8e673100e5c161e765b8b7a624446e20bd4bd6efaca80808b8",
+    "tests/test_ios_project_package.py": "c0ba4734c716699f50490573670b19c3aa68758bb86ee0e75ae79cfab4f3081b",
+    "tests/test_ios_archive.py": "8ad08e5febfb74b3c07a6eb7a121297aa8fafe6f95f67435db6a547a884562a9",
+    "tests/test_ios_share_verifier.py": "d5f33ee6920b9131c14c6a35517a944bfd855ba7adbea1529b99fbe91e41ca58",
+    "tests/test_native_bundle.py": "b2fb110c3d539255f00b04498650ccf6046174fb1fd2801b18af2fa7b5267219"
+  },
+  "checks": [
+    {
+      "command": "python -m pytest -q tests/test_ios_project_package.py tests/test_ios_archive.py tests/test_ios_share_verifier.py tests/test_native_bundle.py",
+      "exit_code": 0,
+      "passed": 100,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 6.2
+    },
+    {
+      "command": "plutil -lint mobile/ios/PrivacyInfo.xcprivacy",
+      "exit_code": 0,
+      "result": "OK"
+    }
+  ],
+  "declared_manifest": {
+    "NSPrivacyTracking": false
+  },
+  "both_target_resource_membership_checked": true,
+  "refuses": [
+    "unreviewed tracking declaration",
+    "empty accessed-API array",
+    "unknown key",
+    "duplicate key",
+    "malformed plist",
+    "missing manifest",
+    "source or parent symlink",
+    "missing changed or linked bundle copy"
+  ],
+  "actual_xcode_archive_inspected": false,
+  "signing_or_apple_revalidation_performed": false,
+  "full_transitive_privacy_or_license_clearance": false,
+  "physical_device_acceptance": false,
+  "independent_accuracy": false,
+  "requirements_closed": [],
+  "limits": [
+    "Focused real generator/resource-membership and refusal tests; fixture archive mutation checks are not actual Xcode compilation.",
+    "Actual app/Share bundle copies must be inspected after the fresh unsigned archive build.",
+    "Previously validated IPA remains historical; adding these resources changes the signed package and requires its own signing/Apple validation.",
+    "No participant collection enabled, platform declaration submitted, required-reason identifier invented, or full requirement closed."
+  ]
+}

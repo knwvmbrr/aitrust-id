@@ -4,7 +4,7 @@ AI Trust ID has a separate App Store Connect record, saved in **Prepare for
 Submission**, and registered identifiers `com.aitrustid.app` and
 `com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
 release. No build is available in App Store Connect or submitted for App Review.
-Earlier package-validation attempts failed; the current sealed module archive passes actual Apple validation.
+Earlier package-validation attempts failed; the sealed module archive passed actual Apple validation on November 15, 2026.
 
 **Latest release gates:** actual Apple package validation **passed** for
 AITrustID 1.0 (1) on November 15, 2026, after owner authorization of the existing
@@ -14,10 +14,13 @@ expected entitlements and all 32 resource comparisons. Prior local signing and
 standalone-source rejection failures are preserved as history.
 
 This is package acceptance, not App Review approval, a TestFlight release,
-physical-device acceptance or independent tag validation. The last full native run passes three host workflows and fails both Share
-workflows. A newer focused Share diagnostic without active signing passes one
-of two cases; it does not replace the required complete run. Current Share
-integration, final platform/privacy review and reviewed upload remain open. See
+physical-device acceptance or independent tag validation. The final November 16
+source repairs activity-readiness queries and actual-failure diagnostics. Its
+complete five-workflow hosted acceptance remains pending. A longer-press test
+candidate failed both Share cases with captured upstream synthesized-input loss
+and was reverted. Earlier local and hosted failures are retained in the
+[reliability investigation](share-reliability-plan.md). Current Share integration,
+final platform/privacy review and reviewed upload remain open. See
 [the successful validation](../runs/2026-11-15-apple-package-validation-passed.json)
 and [the repair plan](ios-module-archive-plan.md).
 
@@ -148,9 +151,24 @@ signing and Apple acceptance. Upload remains unavailable. See the
 The exact 12,925,499-byte IPA produced by successful validation is preserved
 privately. Reinspection of that extracted IPA passes both strict signatures,
 expected entitlements, version 1.0 (1), and all 32 resource comparisons against
-current generated distribution inputs. Its SHA-256 is
+the generated distribution inputs recorded by that inspection. Its SHA-256 is
 `d1d8cc7abb5321865dbc7548014d5771febed4c480fbadf7d52c79df1e995db2`.
 See [the IPA inspection](../runs/2026-11-15-validated-ipa-inspection.json).
 The binary is not committed or offered as an installation download. App Store
 Connect/TestFlight availability, current Share acceptance and final platform
 declarations remain separate from this preserved artifact.
+
+The resource comparisons above describe the inputs at the time that IPA was
+validated. The current generator additionally packages a source-reviewed
+`PrivacyInfo.xcprivacy` in both targets. That changes bundle bytes. The old IPA
+remains valid historical evidence; its Apple validation does not apply to a new
+archive. [Focused packaging/refusal controls](../runs/2026-11-16-ios-privacy-packaging-controls.json)
+pass, and the actual unsigned Release archive passes all 34 resource-copy comparisons,
+including both manifest files. A 120-second existing-identity signing attempt
+stopped at the first Share CodeSign step without a completed archive or an
+established cause. No identity, trust or key-access setting was changed.
+Owner-dependent signing remains deferred. See the
+[unsigned archive](../runs/2026-11-16-ios-privacy-unsigned-archive.json),
+[bounded signing attempt](../runs/2026-11-16-ios-signed-candidate-timeout.json) and the
+[privacy manifest plan](ios-privacy-manifest-plan.md). Full dependency/privacy
+review and final platform declarations remain open.

@@ -96,6 +96,20 @@ build. Logs and the archive stay private; the proof contains source/resource
 identities. This check also runs in native CI. It does not create credentials,
 provision a phone or upload anything.
 
+Both app and Share targets include the reviewed `PrivacyInfo.xcprivacy` at the
+bundle root. The generator accepts only the tracked no-tracking declaration;
+missing, changed or linked manifests fail packaging. The archive verifier
+compares both actual copies against that source. Changing privacy behavior or
+using a required-reason API requires a fresh review and declaration, not editing
+the manifest to bypass the guard. See the
+[privacy packaging contract](ios-privacy-manifest-plan.md). This packaging
+control does not complete transitive dependency review or App Store disclosures.
+
+Native CI cancels an obsolete run when a newer commit for the same pull request
+or ref arrives. The latest run still has to complete every original check; a
+cancelled run supplies no acceptance evidence. Different pull requests retain
+separate concurrency groups.
+
 The distribution profile uses version 1.0 and the registered identifiers, and
 packages the tag icon, offline privacy explanation and original runtime/code
 license notices. The default developer profile retains its preview identifiers

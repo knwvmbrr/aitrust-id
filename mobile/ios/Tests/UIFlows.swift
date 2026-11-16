@@ -14,7 +14,7 @@ final class UIFlows: XCTestCase {
     override func tearDownWithError() throws {
         // This suite runs only fixed invented text in its own disposable app.
         // Preserve diagnostics instead of retrying or relaxing a failed action.
-        if testRun?.hasSucceeded == false {
+        if let testRun, testRun.failureCount > 0 {
             let app = XCUIApplication()
             let image = XCTAttachment(screenshot: app.screenshot())
             image.lifetime = .keepAlways; add(image)
@@ -71,20 +71,27 @@ final class UIFlows: XCTestCase {
     private func selectShareActivity(_ app: XCUIApplication) {
         let share = app.cells["AI Trust ID"].firstMatch
         XCTAssertTrue(share.waitForExistence(timeout: 20))
-        let image = share.images["activityImageView"].firstMatch
+        func containsVisibleImage(_ node: any XCUIElementSnapshot, in bounds: CGRect) -> Bool {
+            if node.elementType == .image && !node.frame.isEmpty && node.frame.intersects(bounds) { return true }
+            return node.children.contains { containsVisibleImage($0, in: bounds) }
+        }
         var previousFrame = CGRect.zero
         var stableSince = Date()
-        // The remote sheet exposes its label while placeholder content and
-        // layout are still moving. Do not send the one tap to that skeleton.
+        // Capture the remote cell once per evaluation. Repeated descendant
+        // exists/hittable queries can each fetch another remote hierarchy and
+        // consume this wait before a second stable sample can be observed.
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
-            guard share.exists, share.isHittable, image.exists, image.isHittable else {
-                stableSince = Date(); return false
+            guard let snapshot = try? share.snapshot(), snapshot.isEnabled,
+                  snapshot.label == "AI Trust ID", !snapshot.frame.isEmpty,
+                  containsVisibleImage(snapshot, in: snapshot.frame) else {
+                previousFrame = .zero; stableSince = Date(); return false
             }
-            let frame = share.frame
-            guard frame == previousFrame, !frame.isEmpty else {
+            let frame = snapshot.frame
+            guard frame == previousFrame else {
                 previousFrame = frame; stableSince = Date(); return false
             }
-            return Date().timeIntervalSince(stableSince) >= 1
+            guard Date().timeIntervalSince(stableSince) >= 1 else { return false }
+            return share.isHittable
         }, object: share)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 20), .completed)
         share.tap()
