@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T18:40:52.022290+00:00",
+  "updated": "2026-11-16T19:18:27.149686+00:00",
   "active_increment": "Four-form caller-selected choice observation: 86 focused tests, 26 private CLI controls on Mac and isolated Linux, 40 protocol and 32 website checks, and reviewed 1008-file boundaries pass. Protected publication pending; 70 original requirements remain. No MT verdict or independent accuracy claim.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -191,7 +191,7 @@
       "evidence": "runs/2026-10-09-branding-public.json",
       "quarter_theme": {
         "season": "2026-Q4",
-        "status": "built_and_focused_checks_passed_publication_pending",
+        "status": "published_exact_artifacts_verified",
         "background": "original woodland camouflage at 30% patch opacity",
         "pattern_scope": "decorative background only; solid tags, modals, inputs and results",
         "palette": "existing green family with coordinated light and dark variants",
@@ -202,7 +202,8 @@
           "WebKit"
         ],
         "panel_evidence": "runs/2026-11-16-q4-site-panels.json",
-        "webkit_evidence": "runs/2026-11-16-q4-theme-webkit.json"
+        "webkit_evidence": "runs/2026-11-16-q4-theme-webkit.json",
+        "publication": "runs/2026-11-16-q4-web-publication.json"
       }
     },
     "tag_performance": {
@@ -1115,7 +1116,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T18:40:52.022290+00:00",
+  "updated_at": "2026-11-16T19:18:27.149686+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3292,7 +3293,21 @@
     "retained_failed_attempt": "runs/2026-11-16-q4-extension-first-failure.json",
     "failure_cause_established": false,
     "indexing_verified": false,
-    "publication_pending": true,
-    "full_requirements_closed": []
+    "publication_pending": false,
+    "full_requirements_closed": [],
+    "publication": "runs/2026-11-16-q4-web-publication.json"
+  },
+  "q4_web_publication": {
+    "status": "live_verified",
+    "source_commit": "3e974e1c5fab32bc77bc7f92211139293ce941fd",
+    "deployment_url": "https://f9062c7d.aitrust-id.pages.dev",
+    "evidence": "runs/2026-11-16-q4-web-publication.json",
+    "artifacts_per_origin": 294,
+    "origins_verified": 2,
+    "google_indexing_verified": false,
+    "native_app_released": false,
+    "metadata_only_followup": true,
+    "earlier_candidate": "https://a9b05aba.aitrust-id.pages.dev",
+    "retained_issue": "First deployed changelog export lacked the last operational change event; exact merged source was rebuilt, redeployed and all artifacts verified."
   }
 }

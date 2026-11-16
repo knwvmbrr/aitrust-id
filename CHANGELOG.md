@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-191827-q4-publication-evidence-8a149406
+
+Recorded 2026-11-16T19:18:27.195923+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify the exact merged Q4 deployment on the owned domain and deployment origin; correct an initially stale changelog export.
+- **Evidence.** All294 artifacts match the merged source on each of2 origins, with required security headers; protected PR102 engineering checks passed. [Change record](./runs/changes/2026-11-16-191827-q4-publication-evidence-8a149406.json).
+- **Not claimed.** Metadata-only publication receipt; deployed application source remains3e974e1. Google indexing, native release, human and independent accuracy acceptance are separate; no full requirement closure.
+
+
 ### 2026-11-16-184123-q4-web-current-evidence-c93bf8fb
 
 Recorded 2026-11-16T18:41:23.568464+00:00 · Contributor: Codex · change
