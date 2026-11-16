@@ -1,0 +1,259 @@
+{
+  "format": "ai-trust-id-selected-reference-actual-model/v1",
+  "captured_at": "2026-11-16T20:13:45.627361+00:00",
+  "checked_by": "Codex NF/FI evidence lane",
+  "pass": true,
+  "sources": {
+    "research/nli/selected_references.py": "271c96287358fb2daf54c90ce9ad7fa11546f0592cbc69dbbc4eb3088379779e",
+    "scripts/prepare-reference-selection.py": "afc522821e35b0d6996f747841d398629447f976b90749c2ce17d09f5d4c2510",
+    "scripts/check-nli-references.py": "534b61c542a8e579e83ed757c247468c827d7a21526106f3d07e2ec0231f05e4",
+    "scripts/check-nli-pairs.py": "4a90c7dea6195a50b06243d723d00a3ca262557adcc21521847d74f4e30fd516",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "research/nli/assets.json": "d363b0c6d1d096c848252c6f1e64da5204a42e1267371b7810ced62de43e941a",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+    "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219"
+  },
+  "source_unchanged": true,
+  "cases": [
+    {
+      "case": "selected_contradictory_reference",
+      "exit_status": 0,
+      "wall_seconds": 7.641459416998259,
+      "console": {
+        "profile": "selected-reference-nli-observation/1.0.0",
+        "state": "observed_model_outputs",
+        "retrieval_evaluation_obtained": false,
+        "model_evaluation_obtained": true,
+        "passages_evaluated": 1,
+        "result": "A local model compared the selected reference passages. These are research observations, not verified facts.",
+        "network_control": "macos_sandbox_deny_network",
+        "detailed_output_saved": true,
+        "reference_freshness": "unestablished",
+        "calibrated_probability": false,
+        "independent_corroboration": false,
+        "truth_established": false,
+        "tag_asserted": false,
+        "release_approved": false
+      },
+      "automatic_default_selects_no_pair": true,
+      "actual_model_inference": true,
+      "actual_observations": [
+        {
+          "token_count": 15,
+          "logits": [
+            4.53749418258667,
+            -3.1762382984161377,
+            -1.6183977127075195
+          ],
+          "normalized_model_scores": {
+            "contradiction": 0.9974389759623583,
+            "entailment": 0.0004455073601578357,
+            "neutral": 0.0021155166774838286
+          },
+          "top_model_labels": [
+            "contradiction"
+          ],
+          "calibrated_probability": false,
+          "proposed_signal": "sig.corpus_contradiction.v1",
+          "claim_span": [
+            0,
+            29
+          ],
+          "reference": {
+            "document_id": "manual",
+            "document_sha256": "02f204aeef9b6bc0a72c9882c8479f62e2709d689cf8d59242be538af354ac2a",
+            "normalized_source_sha256": "02f204aeef9b6bc0a72c9882c8479f62e2709d689cf8d59242be538af354ac2a",
+            "line": 1,
+            "source_span": [
+              0,
+              18
+            ]
+          },
+          "direction": "reference_is_premise_claim_is_hypothesis"
+        }
+      ],
+      "actual_model_identity": {
+        "model_repository": "cross-encoder/nli-deberta-v3-xsmall",
+        "revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+        "artifacts": {
+          "model.onnx": "7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4",
+          "tokenizer.json": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+          "config.json": "8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342"
+        },
+        "runtime_versions": {
+          "anyio": "4.15.1",
+          "click": "8.5.0",
+          "filelock": "4.1.1",
+          "flatbuffers": "25.12.19",
+          "fsspec": "2026.9.0",
+          "h11": "0.16.0",
+          "hf-xet": "1.7.0",
+          "httpcore2": "2.13.1",
+          "httpx2": "2.13.1",
+          "huggingface_hub": "2.2.0",
+          "idna": "3.20",
+          "ml_dtypes": "0.6.0",
+          "numpy": "2.5.4",
+          "onnx": "1.23.2",
+          "onnxruntime": "1.31.0",
+          "packaging": "26.3",
+          "protobuf": "7.36.2",
+          "PyYAML": "6.0.3",
+          "tokenizers": "0.23.3",
+          "tqdm": "4.70.1",
+          "truststore": "0.10.4",
+          "typing_extensions": "4.16.0"
+        },
+        "python_runtime": {
+          "implementation": "CPython",
+          "version": "3.12.14",
+          "system": "Darwin",
+          "architecture": "arm64"
+        },
+        "provider": "CPUExecutionProvider",
+        "declared_label_order": [
+          "contradiction",
+          "entailment",
+          "neutral"
+        ],
+        "scores_calibrated": false,
+        "upstream_benchmark_is_product_accuracy": false
+      },
+      "network_control": "macos_sandbox_deny_network",
+      "output_sha256": "bccbb792a5bdbb41f4b2e75126c0ed5affb4147ca52defa934b5295f4d6d8117",
+      "error_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "details_private": true,
+      "authored_expected_label": "contradiction",
+      "matches_authored_expectation": true,
+      "pass": true
+    },
+    {
+      "case": "selected_exact_matching_reference",
+      "exit_status": 0,
+      "wall_seconds": 1.9733738750001066,
+      "console": {
+        "profile": "selected-reference-nli-observation/1.0.0",
+        "state": "observed_model_outputs",
+        "retrieval_evaluation_obtained": false,
+        "model_evaluation_obtained": true,
+        "passages_evaluated": 1,
+        "result": "A local model compared the selected reference passages. These are research observations, not verified facts.",
+        "network_control": "macos_sandbox_deny_network",
+        "detailed_output_saved": true,
+        "reference_freshness": "unestablished",
+        "calibrated_probability": false,
+        "independent_corroboration": false,
+        "truth_established": false,
+        "tag_asserted": false,
+        "release_approved": false
+      },
+      "automatic_default_selects_no_pair": false,
+      "actual_model_inference": true,
+      "actual_observations": [
+        {
+          "token_count": 13,
+          "logits": [
+            -4.141852855682373,
+            3.7399256229400635,
+            -1.2936656475067139
+          ],
+          "normalized_model_scores": {
+            "contradiction": 0.0003749762894960721,
+            "entailment": 0.9931542562153144,
+            "neutral": 0.006470767495189584
+          },
+          "top_model_labels": [
+            "entailment"
+          ],
+          "calibrated_probability": false,
+          "proposed_signal": "sig.corpus_contradiction.v1",
+          "claim_span": [
+            0,
+            18
+          ],
+          "reference": {
+            "document_id": "manual",
+            "document_sha256": "02f204aeef9b6bc0a72c9882c8479f62e2709d689cf8d59242be538af354ac2a",
+            "normalized_source_sha256": "02f204aeef9b6bc0a72c9882c8479f62e2709d689cf8d59242be538af354ac2a",
+            "line": 1,
+            "source_span": [
+              0,
+              18
+            ]
+          },
+          "direction": "reference_is_premise_claim_is_hypothesis"
+        }
+      ],
+      "actual_model_identity": {
+        "model_repository": "cross-encoder/nli-deberta-v3-xsmall",
+        "revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+        "artifacts": {
+          "model.onnx": "7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4",
+          "tokenizer.json": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+          "config.json": "8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342"
+        },
+        "runtime_versions": {
+          "anyio": "4.15.1",
+          "click": "8.5.0",
+          "filelock": "4.1.1",
+          "flatbuffers": "25.12.19",
+          "fsspec": "2026.9.0",
+          "h11": "0.16.0",
+          "hf-xet": "1.7.0",
+          "httpcore2": "2.13.1",
+          "httpx2": "2.13.1",
+          "huggingface_hub": "2.2.0",
+          "idna": "3.20",
+          "ml_dtypes": "0.6.0",
+          "numpy": "2.5.4",
+          "onnx": "1.23.2",
+          "onnxruntime": "1.31.0",
+          "packaging": "26.3",
+          "protobuf": "7.36.2",
+          "PyYAML": "6.0.3",
+          "tokenizers": "0.23.3",
+          "tqdm": "4.70.1",
+          "truststore": "0.10.4",
+          "typing_extensions": "4.16.0"
+        },
+        "python_runtime": {
+          "implementation": "CPython",
+          "version": "3.12.14",
+          "system": "Darwin",
+          "architecture": "arm64"
+        },
+        "provider": "CPUExecutionProvider",
+        "declared_label_order": [
+          "contradiction",
+          "entailment",
+          "neutral"
+        ],
+        "scores_calibrated": false,
+        "upstream_benchmark_is_product_accuracy": false
+      },
+      "network_control": "macos_sandbox_deny_network",
+      "output_sha256": "bccbb792a5bdbb41f4b2e75126c0ed5affb4147ca52defa934b5295f4d6d8117",
+      "error_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "details_private": true,
+      "authored_expected_label": "entailment",
+      "matches_authored_expectation": true,
+      "pass": true
+    }
+  ],
+  "actual_model_calls": 2,
+  "downloads_performed": false,
+  "existing_pinned_worker_validates_assets_before_graph": true,
+  "model_runtime_profile_changed": false,
+  "invented_inputs_only": true,
+  "independent_accuracy_evidence": false,
+  "tags_released": [],
+  "requirements_closed": 0,
+  "private_test_artifacts_retained": true
+}

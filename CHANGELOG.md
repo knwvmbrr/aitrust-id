@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-202244-selected-reference-pair-comparison-c5c76702
+
+Recorded 2026-11-16T20:22:44.962046+00:00 · Contributor: Codex NF/FI evidence lane · change
+
+- **Changed.** An explicit private claim/reference line selection now reaches the existing offline NLI worker without changing automatic retrieval; optional selection-module failure stays isolated from the default route.
+- **Evidence.** Final affected controls pass166 cases,3 current-source real CLI controls and1 current-source real model comparison; the original251 checks and2 model calls plus a corrected4-check candidate failure remain separately recorded. [Change record](./runs/changes/2026-11-16-202244-selected-reference-pair-comparison-c5c76702.json).
+- **Not claimed.** One caller-selected pair is not comprehensive search, truth, source authenticity, freshness, independent accuracy or NF/FI/HP release. No original requirement closes; Linux, human and broad integration acceptance remain separate.
+
+
 ### 2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423
 
 Recorded 2026-11-16T20:21:54.427188+00:00 · Contributor: Codex PM · change

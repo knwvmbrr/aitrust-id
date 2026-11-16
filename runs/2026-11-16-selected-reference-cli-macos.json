@@ -1,0 +1,107 @@
+{
+  "format": "ai-trust-id-selected-reference-cli-controls/v1",
+  "captured_at": "2026-11-16T20:09:49.167331+00:00",
+  "pass": true,
+  "checked_by": "Codex NF/FI evidence lane",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.13.0",
+  "sources": {
+    "research/nli/selected_references.py": "271c96287358fb2daf54c90ce9ad7fa11546f0592cbc69dbbc4eb3088379779e",
+    "scripts/prepare-reference-selection.py": "afc522821e35b0d6996f747841d398629447f976b90749c2ce17d09f5d4c2510",
+    "scripts/check-nli-references.py": "534b61c542a8e579e83ed757c247468c827d7a21526106f3d07e2ec0231f05e4",
+    "scripts/check-nli-pairs.py": "4a90c7dea6195a50b06243d723d00a3ca262557adcc21521847d74f4e30fd516",
+    "research/nli/references.py": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+    "research/nli/pairs.py": "c85b82315ef0f34257c92d80ae959eef3b2816482a1634d9472cc2cc01902938",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+    "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219"
+  },
+  "source_unchanged": true,
+  "cases": [
+    {
+      "case": "actual_private_selection_prepared",
+      "pass": true,
+      "exit_status": 0,
+      "state": "caller_selected_pair_prepared",
+      "reason": null,
+      "stdout_sha256": "5833cfaf3eed0788435198dd49c688ec7b8f7cff1eb8c3030c6b286338d203d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "existing_output_refused_without_overwrite",
+      "pass": true,
+      "exit_status": 2,
+      "state": "UNAVAILABLE",
+      "reason": "private_reference_selection_refused",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a95359a8bbda69e2bd11e3d5fa9b90ea349d7671649e57d687ac5ef42495d544"
+    },
+    {
+      "case": "automatic_default_miss_preserved_without_model",
+      "pass": true,
+      "exit_status": 0,
+      "state": "no_similar_passage",
+      "reason": null,
+      "stdout_sha256": "55e40beae9f48bf026a92220fec78e55ac95fe1938b828a51c86f173dff62a5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "selected_pair_requires_cache_not_no_match",
+      "pass": true,
+      "exit_status": 2,
+      "state": "UNAVAILABLE",
+      "reason": "model_cache_required",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "138767b1b1b852e3c6dbc5876c8bba3056d57809ba795e2193b58bbb2fa60142"
+    },
+    {
+      "case": "selected_retrieval_parameter_conflict",
+      "pass": true,
+      "exit_status": 2,
+      "state": "UNAVAILABLE",
+      "reason": "invalid_private_input_or_method_contract",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "changed_span_refused_before_cache",
+      "pass": true,
+      "exit_status": 2,
+      "state": "UNAVAILABLE",
+      "reason": "invalid_private_input_or_method_contract",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "selection_symlink_refused",
+      "pass": true,
+      "exit_status": 2,
+      "state": "UNAVAILABLE",
+      "reason": "invalid_private_input_or_method_contract",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    },
+    {
+      "case": "changed_claim_refused_before_cache",
+      "pass": true,
+      "exit_status": 2,
+      "state": "UNAVAILABLE",
+      "reason": "invalid_private_input_or_method_contract",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6f0a85c2970c96c57e437a56788b83ece388d0664a47a8abe7f72e6083a60a8"
+    }
+  ],
+  "case_count": 8,
+  "private_test_directory_removed": true,
+  "actual_model_inference": false,
+  "downloads_performed": false,
+  "independent_accuracy_evidence": false,
+  "tags_released": [],
+  "requirements_closed": 0
+}

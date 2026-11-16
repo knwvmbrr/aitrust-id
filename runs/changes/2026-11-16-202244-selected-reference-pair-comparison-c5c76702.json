@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-202244-selected-reference-pair-comparison-c5c76702",
+  "recorded_at": "2026-11-16T20:22:44.962046+00:00",
+  "author": "Codex NF/FI evidence lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85b885f44a5c663a37bb962e85c5efe93aea64a7",
+  "changed": "An explicit private claim/reference line selection now reaches the existing offline NLI worker without changing automatic retrieval; optional selection-module failure stays isolated from the default route.",
+  "proves": "Final affected controls pass166 cases,3 current-source real CLI controls and1 current-source real model comparison; the original251 checks and2 model calls plus a corrected4-check candidate failure remain separately recorded.",
+  "limits": "One caller-selected pair is not comprehensive search, truth, source authenticity, freshness, independent accuracy or NF/FI/HP release. No original requirement closes; Linux, human and broad integration acceptance remain separate.",
+  "scope_ids": [
+    "F-020b",
+    "T-NF",
+    "T-FI"
+  ],
+  "files": {
+    "research/nli/selected_references.py": "271c96287358fb2daf54c90ce9ad7fa11546f0592cbc69dbbc4eb3088379779e",
+    "scripts/prepare-reference-selection.py": "afc522821e35b0d6996f747841d398629447f976b90749c2ce17d09f5d4c2510",
+    "scripts/check-nli-references.py": "bc823bf1c6354cdae39908d613bf42abd4ed6f64a6fc8fb4b292a9c13eea0d9a",
+    "tests/test_selected_nli_references.py": "ab29ae0c0ff3ba174807a64f22a11b7e1d81b83d2be4000ea699dbbb1580400d",
+    "docs/nli-references.md": "9a678fb7edbfbc34ab315b90ccd3610eefa24b6027b5a70e7608bc292a7018ab",
+    "docs/selected-reference-comparison.md": "025ba87f28202c32894e21a26f1a13885f308cfc1496cdaccacce5bef8f8d8bf",
+    "docs/selected-reference-pair-plan.md": "da395f28d91c4c78cdf8e258c065dfed1bad6ad57f7c14bda5641c7b2edfea71",
+    "docs/selected-reference-pair-result.md": "de2bfd2795f195f3ae495e23c8da336d21012b7224d5d1ce479d826953c31e25",
+    "runs/2026-11-16-selected-reference-cli-macos.json": "1cebe41d643249429c37e137411e30cbca061b7ba87875550f24bf9624490666",
+    "runs/2026-11-16-selected-reference-model-macos.json": "9dd7bb905c0b2e38058be4855df414640eea53667eb483ccdb3be9fc79428083",
+    "runs/2026-11-16-selected-reference-isolation-refusal.json": "45a367e213e7421023dd61ac809a37855b050a69bf7d36c11a59200fea69fe23",
+    "runs/2026-11-16-selected-reference-isolated-cli-macos.json": "7c64c297e8018589148d7dc81cb54c4b77006b97577c1b2876a2c8f2a1c71b4b",
+    "runs/2026-11-16-selected-reference-isolated-model-macos.json": "b4b6d556800743cdc514bf491beb69100afa6235f24b19b9577d0d1489beecbf",
+    "runs/2026-11-16-selected-reference-pair.json": "00ec4d2e859cd3bc8b254c46db9f08833ce437d8e675e1077b43eeb97e8094a1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-selected-reference-isolated-model-macos.json",
+      "sha256": "b4b6d556800743cdc514bf491beb69100afa6235f24b19b9577d0d1489beecbf"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-isolated-cli-macos.json",
+      "sha256": "7c64c297e8018589148d7dc81cb54c4b77006b97577c1b2876a2c8f2a1c71b4b"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-pair.json",
+      "sha256": "00ec4d2e859cd3bc8b254c46db9f08833ce437d8e675e1077b43eeb97e8094a1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:22:45.468646+00:00"
+    }
+  ]
+}
