@@ -71,6 +71,9 @@ def verify(executable):
             ('paired_negation_markers','Neither agree nor oppose.','neither_nor',True),
             ('not_only_has_no_signal_candidate','Not only agree or oppose.','only_or',True),
             ('mismatched_neither_or_is_unmatched','Neither agree or oppose.',None,False),
+            ('between_does_not_nominate_a_signal','Between agree and oppose.','between_and',False),
+            ('not_between_is_unresolved','Not between agree and oppose.','between_and',True),
+            ('mismatched_between_or_is_unmatched','Between agree or oppose.',None,False),
         ]:
             private_subjects.append(wording);query.write_text(wording)
             context['subject_sha256']=digest(wording)
@@ -87,7 +90,7 @@ def verify(executable):
                 row=actual['observations'][0]
                 assert row['construction']==construction and not row['negation_scope_resolved']
                 assert bool(row['negation_marker_spans'])==negated
-                assert row['proposed_signal']==(None if negated else 'sig.false_dilemma.v1')
+                assert row['proposed_signal']==(None if negated or construction=='between_and' else 'sig.false_dilemma.v1')
                 assert not row['additional_option_verified'] and not row['manipulation_established']
         run('arguments_do_not_echo_private_values',['--synthetic-private-canary'],2)
         demo=base/'practice'

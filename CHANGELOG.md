@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-030237-app-main-reconciliation-7f70419c
+
+Recorded 2026-11-16T03:02:37.379953+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconcile published MT source and attributed histories into the Apple-validated app candidate branch.
+- **Evidence.** All 202 originals and both change histories are retained; only the incoming F-019b record is adopted alongside the app record. Published MT status is reconciled and generated scope projections agree. [Change record](./runs/changes/2026-11-16-030237-app-main-reconciliation-7f70419c.json).
+- **Not claimed.** 70 original requirements remain open. Current Share, native five-workflow and browser-boundary execution acceptance remains blocked; no release or full closure. An invalid changelog self-hash request was refused and corrected before writing this record.
+
+
 ### 2026-11-16-025309-apple-package-validation-passed-c3983e32
 
 Recorded 2026-11-16T02:53:09.580188+00:00 · Contributor: Codex · change
@@ -47,6 +56,33 @@ Recorded 2026-11-12T20:55:57.622233+00:00 · Contributor: Codex · change
 - **Changed.** Inspect the new signed module archive, retain hosted and local failures, add bounded verifier command diagnostics, and withhold current Share integration credit.
 - **Evidence.** Both strict bundle signatures and all 32 resource copies pass local inspection. 23 verifier controls pass, including real command failure, timeout and child cleanup. The latest complete native execution passes three host tests and fails two Share tests; the owned simulator is removed and the stale-proof guard refuses. [Change record](./runs/changes/2026-11-12-205557-ios-signed-inspection-current-share-failures-3761a974.json).
 - **Not claimed.** App remains draft and unreleased; Apple validation waits for owner authorization of another existing-key use. N-013 falls from 80 to 60 because current selected integration is not passing; all 202 originals remain and 70 are open. No independent accuracy, physical acceptance, upload or requirement closure.
+
+
+### 2026-11-12-192109-choice-between-current-boundaries-287b132e
+
+Recorded 2026-11-12T19:21:09.411061+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the choice increment to current protocol, website and reviewed route evidence.
+- **Evidence.** 40 protocol and 32 website commands pass with stable sources; 1008 reviewed files and unchanged endpoint, permission, production-tag and collection boundaries pass. The old-inventory CI refusal is retained in the readiness receipt. [Change record](./runs/changes/2026-11-12-192109-choice-between-current-boundaries-287b132e.json).
+- **Not claimed.** Engineering checks only. MT integration and independent contextual validation remain open; zero original requirement closures and 70 remain open. Protected CI and publication remain pending.
+
+
+### 2026-11-12-191259-choice-between-linux-6214de75
+
+Recorded 2026-11-12T19:12:59.645363+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify the current four-form choice research component on isolated Linux and preserve the report-destination refusal.
+- **Evidence.** All 26 actual private command controls pass on the committed source under UID 10001, no effective capabilities, no-new-privileges and loopback-only networking. Owned container and scratch removed. [Change record](./runs/changes/2026-11-12-191259-choice-between-linux-6214de75.json).
+- **Not claimed.** Engineering controls only. F-019b remains 60 percent and 70 original requirements remain open. Independent contextual validation, MT integration and protected publication remain pending. Two incorrect projection script names and inconsistent state timestamps were corrected before this gate passed.
+
+
+### 2026-11-12-190100-choice-between-observation-c96806c8
+
+Recorded 2026-11-12T19:01:00.292768+00:00 · Contributor: Codex · change
+
+- **Changed.** Add the independent caller-selected between/and research construction, preserving original forms and requiring a null proposed signal for ranges and ordinary alternatives.
+- **Evidence.** 86 focused tests and all 26 actual private Mac CLI controls pass. Original-offset and NFC checks, malformed/mixed grammar, ordinary safety wording, quotations and numeric ranges are retained without an MT or manipulation verdict. [Change record](./runs/changes/2026-11-12-190100-choice-between-observation-c96806c8.json).
+- **Not claimed.** Independent contextual validation and accepted MT integration remain open; F-019b stays 60 percent. Isolated Linux and protected publication are pending. The new worktree initially lacked site dependencies; identical pinned lockfiles were checked before reusing the installed Mac dependencies and successfully regenerating scope projections.
 
 
 ### 2026-11-12-184936-ios-module-current-capabilities-a7ea4bf4

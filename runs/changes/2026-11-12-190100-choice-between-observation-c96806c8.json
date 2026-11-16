@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-190100-choice-between-observation-c96806c8",
+  "recorded_at": "2026-11-12T19:01:00.292768+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee9b638c10ca64782c7601901c864feb5258234b",
+  "changed": "Add the independent caller-selected between/and research construction, preserving original forms and requiring a null proposed signal for ranges and ordinary alternatives.",
+  "proves": "86 focused tests and all 26 actual private Mac CLI controls pass. Original-offset and NFC checks, malformed/mixed grammar, ordinary safety wording, quotations and numeric ranges are retained without an MT or manipulation verdict.",
+  "limits": "Independent contextual validation and accepted MT integration remain open; F-019b stays 60 percent. Isolated Linux and protected publication are pending. The new worktree initially lacked site dependencies; identical pinned lockfiles were checked before reusing the installed Mac dependencies and successfully regenerating scope projections.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "docs/choice-between-plan.md": "f2754f05974a2611219970ef465f2d17cacd56696a9fc022de54de9b18211575",
+    "docs/choice-framing.md": "69e4241245e0331cc9202427bade948577fe3cd16c66271c15e8b73a78ed353d",
+    "docs/scope-progress.json": "b46f79b431294b9359d5d429d367d4b072c1b641059752b31ab99c0e799ac11a",
+    "docs/scope-progress.md": "967b05232937c66ab61fd5a256585ae40259799a7c8f9de1a1c0c3e798195b07",
+    "runs/2026-11-12-choice-between-development.json": "79054acd0cd942b0a39eb480e4fa70d173b95a2e8d250d4a0b03e5036bd7e575",
+    "runs/2026-11-12-choice-between-mac.json": "c92005313eeab80ab14fee215d5a507a9e692b555fbe5f3725afb7a2ff421940",
+    "scripts/verify-choice-framing.py": "caf5c2f324db2b9b65ced11a8fd818f481f3e5df6cc966ffca7f9092ac5ec9bb",
+    "site/public/reference/public-scope.json": "0864a2390897094c4af9e8587281dcd7f0f6a7c17135161d658d45c7d2088a78",
+    "site/src/public-scope.json": "0864a2390897094c4af9e8587281dcd7f0f6a7c17135161d658d45c7d2088a78",
+    "site/src/scope-manifest.json": "7f1d5279c94ccf9d607d6f3c2ce1e7c6c7df06dc11e5c2cab1faafff425af49f",
+    "state.json": "4c184391085e0216232b4adb1a575e00d820d6f62c2e125a12fc012264493d20",
+    "tests/test_choice_framing.py": "f944df5aa981b7e7a5db634e4c6701dc870001b25d17293d845c9a655730e917",
+    "tools/choice_framing.py": "0ba444f77f832fa7dc7967f0ada24457f21340f58d62597ec527fc44cfb2c122"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-choice-between-development.json",
+      "sha256": "79054acd0cd942b0a39eb480e4fa70d173b95a2e8d250d4a0b03e5036bd7e575"
+    },
+    {
+      "path": "runs/2026-11-12-choice-between-mac.json",
+      "sha256": "c92005313eeab80ab14fee215d5a507a9e692b555fbe5f3725afb7a2ff421940"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T19:01:00.899700+00:00"
+    }
+  ]
+}

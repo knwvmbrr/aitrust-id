@@ -44,7 +44,9 @@ The observer checks at most 16 ordered frames in 8,000 subject characters. A fra
 
 ## What remains to validate
 
-The caller-selected English forms `either A or B`, `only A or B`, and `neither A nor B` are supported. Details distinguish the constructions and record literal `not`, `neither` and `nor` locations. Negated selections carry no proposed false-dilemma signal. General negation scope, other exclusive wording, automatic selection, feasibility, source freshness, quotation/use context and independent error measurement remain open. Urgent safety advice and ordinary binary choices are retained as controls, without a manipulation verdict. This observation is proposed for `sig.false_dilemma.v1`; no tag mapping is accepted or activated.
+The caller-selected English forms `either A or B`, `only A or B`, `neither A nor B`, and `between A and B` are supported. Research profile 1.2.0 keeps the same bound v1 input context. Details distinguish the constructions and record literal `not`, `neither` and `nor` locations. Negated selections carry no proposed false-dilemma signal. The new `between … and …` form also always carries no proposed signal: it can describe an ordinary preference or a continuous range, not just two discrete options. The tool records the spans you selected; it does not resolve that meaning.
+
+General negation scope, other exclusive wording, automatic selection, feasibility, source freshness, quotation/use context and independent error measurement remain open. Urgent safety advice, quoted examples, ordinary choices and numeric ranges are retained as controls, without a manipulation verdict. The older unnegated forms retain their research proposal for `sig.false_dilemma.v1`; no tag mapping is accepted or activated.
 
 A modified checkout, malicious same-account process or compromised administrator can bypass local protections. This is not an identity, truth or host-security attestation.
 
@@ -56,4 +58,4 @@ From the repository, run:
 python3 scripts/verify-choice-framing.py --python "$(command -v python3)" --output output/verification/choice-controls.json
 ```
 
-The 23 controls use invented examples. They exercise private access, exact bindings, no-overwrite behavior, malformed input refusal, the practice path and unavailability. They do not measure independent MT accuracy. [Scope and evidence](scope-progress.md) keep the full requirement open.
+The 26 controls use invented examples. They exercise private access, exact bindings, no-overwrite behavior, malformed input refusal, the practice path, the new construction and unavailability. They do not measure independent MT accuracy. [Scope and evidence](scope-progress.md) keep the full requirement open.

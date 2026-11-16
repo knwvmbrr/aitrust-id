@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T02:53:08.596732+00:00",
+  "updated": "2026-11-16T03:01:46.973988+00:00",
   "active_increment": "Actual Apple package validation passed for AITrustID 1.0 (1) using the existing signed module archive and owner-authorized key use. Share integration, final platform/privacy and physical/independent tag acceptance remain open. 70 original requirements remain.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T02:53:08.596732+00:00",
+  "updated_at": "2026-11-16T03:01:46.973988+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3318,5 +3318,16 @@
     "publication": "runs/2026-11-12-hidden-email-publication.json",
     "local_service_rebuild_required": true
   },
-  "current_engineering_revalidation_status": "Previous module-archive capability receipts are historical. Current native source acceptance is failing; website evidence requires repair and a fresh complete native run. No independent acceptance or release."
+  "current_engineering_revalidation_status": "Previous module-archive capability receipts are historical. Current native source acceptance is failing; website evidence requires repair and a fresh complete native run. No independent acceptance or release.",
+  "choice_between_candidate": {
+    "scope_id": "F-019b",
+    "profile": "caller-bound-choice-framing-observation/1.2.0",
+    "status": "Mac_and_isolated_Linux_verified_source_published_PR101",
+    "evidence": "runs/2026-11-12-choice-between-development.json",
+    "tag_asserted": false,
+    "requirements_closed": 0,
+    "linux_evidence": "runs/2026-11-12-choice-between-linux.json",
+    "readiness": "runs/2026-11-12-choice-between-current-readiness.json",
+    "publication": "runs/2026-11-15-main-reconciliation.json"
+  }
 }

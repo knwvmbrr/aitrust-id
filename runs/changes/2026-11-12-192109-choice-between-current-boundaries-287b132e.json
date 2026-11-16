@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-12-192109-choice-between-current-boundaries-287b132e",
+  "recorded_at": "2026-11-12T19:21:09.411061+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dd6249777d6b21be3968a8d7ccdd9c027ab98aa1",
+  "changed": "Bind the choice increment to current protocol, website and reviewed route evidence.",
+  "proves": "40 protocol and 32 website commands pass with stable sources; 1008 reviewed files and unchanged endpoint, permission, production-tag and collection boundaries pass. The old-inventory CI refusal is retained in the readiness receipt.",
+  "limits": "Engineering checks only. MT integration and independent contextual validation remain open; zero original requirement closures and 70 remain open. Protected CI and publication remain pending.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "76bad25cb7101ebd0e9c222dae5716ac0d0ddc5747610b56503e527704261191",
+    "runs/2026-11-12-choice-between-boundaries.json": "febc086f80d7533e9f0c2e28bbccde681db98dd1653334d04fa90d49193de5d5",
+    "runs/2026-11-12-choice-between-current-protocol.json": "94f1a7f6dc386dc586e7922e2f607b201886aba8077821f6dfad0833790ad0be",
+    "runs/2026-11-12-choice-between-current-readiness.json": "de3f6697f28e988753cf07adcd63296848d295ffc5b8fe3d9f2c40135481da48",
+    "runs/2026-11-12-choice-between-current-website.json": "130bececc51b19a6846346c3040f458edac9a81c7b2ed17b67be17eded0920db",
+    "state.json": "4e19da230c1aca6107db88736b7dc7f8bb32a73f970bdc210d7384118e7dbe46"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-12-choice-between-current-readiness.json",
+      "sha256": "de3f6697f28e988753cf07adcd63296848d295ffc5b8fe3d9f2c40135481da48"
+    },
+    {
+      "path": "runs/2026-11-12-choice-between-current-protocol.json",
+      "sha256": "94f1a7f6dc386dc586e7922e2f607b201886aba8077821f6dfad0833790ad0be"
+    },
+    {
+      "path": "runs/2026-11-12-choice-between-current-website.json",
+      "sha256": "130bececc51b19a6846346c3040f458edac9a81c7b2ed17b67be17eded0920db"
+    },
+    {
+      "path": "runs/2026-11-12-choice-between-boundaries.json",
+      "sha256": "febc086f80d7533e9f0c2e28bbccde681db98dd1653334d04fa90d49193de5d5"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-12T19:21:10.070821+00:00"
+    }
+  ]
+}
