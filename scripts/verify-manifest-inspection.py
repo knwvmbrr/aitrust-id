@@ -21,7 +21,8 @@ def main():
     import argparse
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output');args=parser.parse_args()
     paths=['tools/manifest_inspection.py','scripts/inspect-manifest.py','scripts/verify-manifest-inspection.py',
-        'tests/test_manifest_inspection.py','eval/c2pa-inspection.lock','eval/dependencies/c2pa-inspection.json',
+        'tests/test_manifest_inspection.py','tools/manifest_presentation.py','tests/test_manifest_presentation.py',
+        'eval/c2pa-inspection.lock','eval/dependencies/c2pa-inspection.json',
         'protocol/corpus.py','protocol/normalization.py','protocol/unicode15-data.json','protocol/reports.py']
     paths += [p.relative_to(ROOT).as_posix() for p in (ROOT/'tests/fixtures/c2pa-inspection-2026').iterdir() if p.is_file()]
     def inventory():return {p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in sorted(paths)}
@@ -44,6 +45,26 @@ def main():
             assert value['asset_binding']==('matched' if name=='signed' else 'mismatched')
             assert value['revocation']=='unknown_skipped'
         cases.append({'case':name,'state':state,'minimal_output_no_private_metadata':True})
+    def invoke_text(arguments, exit_code):
+        result = subprocess.run([sys.executable, str(ROOT/'scripts/inspect-manifest.py'),
+            *arguments, '--format', 'text'], cwd=ROOT, capture_output=True, timeout=20)
+        assert result.returncode == exit_code and not result.stderr
+        text = result.stdout.decode('utf-8')
+        assert text.startswith('AI TRUST ID - PNG evidence check\n')
+        assert 'AI origin: Unknown.' in text and 'No tag issued.' in text
+        assert not any(marker in text for marker in ['FIXTURE_PRIVATE_METADATA_CANARY', str(ROOT), '\x1b', 'http://', 'https://'])
+        return text
+    for name in ['signed', 'altered', 'unsigned']:
+        text = invoke_text(['--image', str(fixture/(name+'.png'))], 0)
+        if name == 'unsigned':
+            assert 'No attached Content Credential was found' in text
+        else:
+            assert 'Record signature: The record signature matches.' in text
+            assert 'Revocation: Unknown. Online revocation checks are disabled.' in text
+            assert ('Image binding: Matches the recorded image bytes.' if name == 'signed' else
+                    'Image binding: Does not match the recorded image bytes.') in text
+        cases.append({'case': name+'_text', 'format': 'text', 'ai_origin': 'unknown',
+                      'separate_axes': True, 'private_metadata_omitted': True})
     value=invoke(['--image',str(fixture/'signed.png')],0,'OBSERVED',
         {**os.environ,'C2PA_LIBRARY_NAME':'/nonexistent/LOADER_PRIVATE_CANARY','LD_LIBRARY_PATH':'/nonexistent/LOADER_PRIVATE_CANARY'})
     assert value['asset_binding']=='matched' and value['active_assertion_count']==2
@@ -110,10 +131,19 @@ def main():
         linked=private/'link.png';linked.symlink_to(fixture/'signed.png')
         for name,path in [('malformed',malformed),('unsupported',unsupported),('oversized',oversized),('symlink',linked),('directory',private),('missing',private/'absent.png')]:
             invoke(['--image',str(path)],2,'UNAVAILABLE');cases.append({'case':name,'state':'UNAVAILABLE','no_path_or_metadata_echo':True})
+        text = invoke_text(['--image', str(malformed)], 2)
+        assert 'No valid inspection result was obtained.' in text
+        cases.append({'case':'malformed_text','state':'UNAVAILABLE','no_path_or_metadata_echo':True})
         report=private/'full.json';invoke(['--image',str(fixture/'signed.png'),'--private-report',str(report)],0,'OBSERVED')
         assert report.stat().st_mode&0o777==0o600 and 'FIXTURE_PRIVATE_METADATA_CANARY' in report.read_text()
         saved=report.read_bytes();invoke(['--image',str(fixture/'signed.png'),'--private-report',str(report)],2,'UNAVAILABLE');assert report.read_bytes()==saved
         cases.append({'case':'explicit_private_export_and_replacement_refusal','state':'OBSERVED','owner_private':True})
+        text_report=private/'text-full.json'
+        text=invoke_text(['--image',str(fixture/'signed.png'),'--private-report',str(text_report)],0)
+        assert text_report.stat().st_mode&0o777==0o600
+        assert 'FIXTURE_PRIVATE_METADATA_CANARY' in text_report.read_text()
+        assert 'saved privately; it may contain identifying metadata.' in text
+        cases.append({'case':'text_explicit_private_export','state':'OBSERVED','owner_private':True,'raw_metadata_omitted_from_text':True})
         public=private/'public';public.mkdir(mode=0o755)
         for name,path in [('public_directory',public/'out.json'),('source_checkout',ROOT/'private-do-not-create.json')]:
             invoke(['--image',str(fixture/'signed.png'),'--private-report',str(path)],2,'UNAVAILABLE');assert not path.exists()

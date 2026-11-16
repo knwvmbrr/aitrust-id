@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-194831-image-evidence-text-851aa341
+
+Recorded 2026-11-16T19:48:31.027480+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an optional readable PNG evidence result to the existing pinned manifest inspector, with separate binding, signature, trust, revocation and Unknown AI-origin explanations.
+- **Evidence.** 96 focused tests and 21 actual pinned-SDK CLI controls pass on Mac. Four prior-versus-candidate default JSON outputs and exit statuses are byte-identical. Fixed text omits embedded private metadata and refuses malformed states before private export. [Change record](./runs/changes/2026-11-16-194831-image-evidence-text-851aa341.json).
+- **Not claimed.** Candidate remains uncommitted and unpublished pending PM review and fresh isolated Linux execution. PNG only; no AI-origin classifier, FA/PA release, credential issuance, independent accuracy, full native sandbox or Mac kernel no-egress guarantee. Original requirement percentages remain unchanged at132 complete and70 open.
+
+
 ### 2026-11-16-194236-mt-urgency-local-association-9dc8adb2
 
 Recorded 2026-11-16T19:42:36.216906+00:00 · Contributor: Codex MT owner · change

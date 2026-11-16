@@ -3056,11 +3056,39 @@
           "runs/2026-10-11-manifest-merged-source-acceptance.json",
           "docs/manifest-loader-plan.md",
           "runs/2026-10-11-manifest-loader-merged-source.json",
-          "runs/2026-10-11-manifest-loader-protected-merge.json"
+          "runs/2026-10-11-manifest-loader-protected-merge.json",
+          "docs/image-evidence-readout-plan.md",
+          "docs/image-evidence-readout-result.md",
+          "runs/2026-11-16-image-evidence-text-component.json",
+          "runs/2026-11-16-image-evidence-real-sdk-mac.json",
+          "runs/2026-11-16-image-evidence-json-compatibility.json"
         ],
         "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release. The hosted job passes 13 real cases on both push and PR for be14b359; the protected merge d26acfc passes the same 13 cases from an anonymously downloaded source archive. Full embedded assertions can be explicitly exported privately. Broader formats, signer interpretation and FA/PA remain retained under the modality/tag jobs. The 1.0.1 loader now passed 16 actual cases per Mac/Linux platform, both hosted native runs and anonymous merged-source execution; the registry/FA/PA boundaries are unchanged.",
         "required_acceptance": [],
-        "queue": "completed"
+        "queue": "completed",
+        "presentation_increment": {
+          "id": "IMAGE-EVIDENCE-TEXT-01",
+          "job": "Provide a fixed, privacy-minimal human-readable view of existing attached-PNG observations.",
+          "percent_complete": 60,
+          "milestones_passed": [
+            "bounded_contract",
+            "implemented_mechanism",
+            "executable_checks"
+          ],
+          "audited_at": "2026-11-16T19:46:24.692751+00:00",
+          "implemented_by": "Codex - image-evidence engineering lane",
+          "next_fix": "Execute the same current-source readout on isolated Linux and complete PM wording/source review before publication. No FA/PA or image-origin release follows from this component.",
+          "next_owner": "Codex image-evidence lane; PM integration review",
+          "evidence": [
+            "docs/image-evidence-readout-plan.md",
+            "docs/image-evidence-readout-result.md",
+            "runs/2026-11-16-image-evidence-text-component.json",
+            "runs/2026-11-16-image-evidence-real-sdk-mac.json",
+            "runs/2026-11-16-image-evidence-json-compatibility.json"
+          ],
+          "new_tag_releases": 0,
+          "independent_accuracy_evidence": false
+        }
       }
     },
     {

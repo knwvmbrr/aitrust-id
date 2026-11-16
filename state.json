@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T19:18:27.149686+00:00",
+  "updated": "2026-11-16T19:48:29.787708+00:00",
   "active_increment": "Four-form caller-selected choice observation: 86 focused tests, 26 private CLI controls on Mac and isolated Linux, 40 protocol and 32 website checks, and reviewed 1008-file boundaries pass. Protected publication pending; 70 original requirements remain. No MT verdict or independent accuracy claim.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1116,7 +1116,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T19:18:27.149686+00:00",
+  "updated_at": "2026-11-16T19:48:29.787708+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1542,7 +1542,30 @@
     "loader_repair": "docs/manifest-loader-plan.md",
     "reproduced_fault": "runs/2026-10-11-manifest-shadow-reproduced.json",
     "loader_revalidation_pending": false,
-    "method": "attached-c2pa-inspection/1.0.1"
+    "method": "attached-c2pa-inspection/1.0.1",
+    "text_readout": {
+      "status": "implemented_mac_component_verified_pending_pm_and_linux",
+      "implemented_by": "Codex - image-evidence lane",
+      "scope_id": "F-025",
+      "component_percent_complete": 60,
+      "default_json_unchanged": true,
+      "opt_in_flag": "--format text",
+      "supported_container": "PNG only",
+      "ai_origin": "unknown",
+      "new_tag_releases": 0,
+      "independent_accuracy_evidence": false,
+      "focused_tests_passed": 96,
+      "actual_mac_cli_controls_passed": 21,
+      "fresh_linux_execution": false,
+      "publication_pending": true,
+      "plan": "docs/image-evidence-readout-plan.md",
+      "result": "docs/image-evidence-readout-result.md",
+      "evidence": [
+        "runs/2026-11-16-image-evidence-text-component.json",
+        "runs/2026-11-16-image-evidence-real-sdk-mac.json",
+        "runs/2026-11-16-image-evidence-json-compatibility.json"
+      ]
+    }
   },
   "dependency_notice_evidence": {
     "status": "observed_notice_identity_and_archive_extraction",

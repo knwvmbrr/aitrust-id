@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-194831-image-evidence-text-851aa341",
+  "recorded_at": "2026-11-16T19:48:31.027480+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2739570fc6864cf5cf6728d320bb7be5d301f8cf",
+  "changed": "Add an optional readable PNG evidence result to the existing pinned manifest inspector, with separate binding, signature, trust, revocation and Unknown AI-origin explanations.",
+  "proves": "96 focused tests and 21 actual pinned-SDK CLI controls pass on Mac. Four prior-versus-candidate default JSON outputs and exit statuses are byte-identical. Fixed text omits embedded private metadata and refuses malformed states before private export.",
+  "limits": "Candidate remains uncommitted and unpublished pending PM review and fresh isolated Linux execution. PNG only; no AI-origin classifier, FA/PA release, credential issuance, independent accuracy, full native sandbox or Mac kernel no-egress guarantee. Original requirement percentages remain unchanged at132 complete and70 open.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA",
+    "X-07"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "9382d57cf085d7f43bcc3ff132e0ad990d62e3ca45b179965d90ddaa2e2477ad",
+    "docs/manifest-inspection.md": "57d84384d7d43bd60c7ecdee31e2ac08c494d4981416eddf673a170a75918049",
+    "docs/image-evidence-readout-plan.md": "99397dd604783c6de2467245b24d9a96bcee2f7063d9b8b5d46457955d8e26bd",
+    "docs/image-evidence-readout-result.md": "0dc7d208115ad0faa7638a4eda919c1a4416ce69f9cb605bed35c989c04f1358",
+    "docs/scope-progress.json": "56c4c92523060efcbfc07dfc1d8d5ead799cc3c0bc94aeee77b7c191e2603fc2",
+    "docs/scope-progress.md": "343f62316eeccf4b0e5b9b0bd6b09dd7a3064472b3e9796c33cc509e92ee4aeb",
+    "tools/manifest_presentation.py": "1c56a49c0f1dcd6b9e051cbab77de0526f00608c35ba2de94a3468f16572c018",
+    "scripts/inspect-manifest.py": "143488d7448e9cb18670e482ccd735c6beced7f14502fe15a091210ffacf8ca2",
+    "scripts/verify-manifest-inspection.py": "3cd7dbba35d7401ab13d7573d581eab38b5c61cdc49834b0983ee363dd9ed89e",
+    "tests/test_manifest_presentation.py": "4d320f74cbd89c299b06e21ed33994f9958c1444716062364ce465118520178a",
+    "site/public/reference/public-scope.json": "6268b20f2de7c0c60d1ba0498605083ce6a65e7a3616f117ef389af57047b22c",
+    "site/src/public-scope.json": "6268b20f2de7c0c60d1ba0498605083ce6a65e7a3616f117ef389af57047b22c",
+    "site/src/scope-manifest.json": "b3100e277edfda87091ba178fa950de992688e069693fcc5e5f8f5ef7fdb242f",
+    "state.json": "9631172c9d02bb74d6069e0c805901dbba05e2a591400d7487bf9e5af6e3e6b9",
+    "runs/2026-11-16-image-evidence-real-sdk-mac.json": "358f62fdb4598c20ca47e8fa2e33d0c75f6cc7abd17f888f84a4861117c6bd92",
+    "runs/2026-11-16-image-evidence-text-component.json": "c0ddf6c334139b1514f5f55800f06c4dfc00269a6a5b9945dd58db1502b10d9e",
+    "runs/2026-11-16-image-evidence-json-compatibility.json": "850413a59f88876050bd028532c15eebc412d8591770c6ef05ee10c509621bf6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-image-evidence-real-sdk-mac.json",
+      "sha256": "358f62fdb4598c20ca47e8fa2e33d0c75f6cc7abd17f888f84a4861117c6bd92"
+    },
+    {
+      "path": "runs/2026-11-16-image-evidence-text-component.json",
+      "sha256": "c0ddf6c334139b1514f5f55800f06c4dfc00269a6a5b9945dd58db1502b10d9e"
+    },
+    {
+      "path": "runs/2026-11-16-image-evidence-json-compatibility.json",
+      "sha256": "850413a59f88876050bd028532c15eebc412d8591770c6ef05ee10c509621bf6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T19:48:31.752309+00:00"
+    }
+  ]
+}
