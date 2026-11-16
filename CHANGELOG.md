@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-031203-controlled-share-diagnostic-3785e9fe
+
+Recorded 2026-11-16T03:12:03.151401+00:00 · Contributor: Codex · change
+
+- **Changed.** Test the two failing Share workflows after successful signing, without a pending signing process or concurrent local build.
+- **Evidence.** Unchanged native sources and compiled project execute both diagnostic cases: one passes, one fails, zero skip. The failed final screenshot shows the host without a share sheet; the other case passes sharing, clear-during-check and repeat/details behavior. Owned simulator removed. [Change record](./runs/changes/2026-11-16-031203-controlled-share-diagnostic-3785e9fe.json).
+- **Not claimed.** One diagnostic pass is not reliable Share acceptance and cannot replace the full five-workflow proof. Root cause remains unconfirmed. Apple package validation is separately passed; no full requirement closure or app release.
+
+
 ### 2026-11-16-030237-app-main-reconciliation-7f70419c
 
 Recorded 2026-11-16T03:02:37.379953+00:00 · Contributor: Codex · change

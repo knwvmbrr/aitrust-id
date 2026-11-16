@@ -169,3 +169,14 @@ asset identities. Retain the original per-workflow deadlines and assertions.
 A two-test diagnostic cannot replace the required five-workflow proof or restore
 selected-integration credit. Preserve either result and remove only its owned
 simulator. No further source workaround is justified without the observation.
+
+The controlled diagnostic executes both tests without active codesign or another
+Xcode build at its start. Source and generated project identities match the
+previous compiled candidate. One Share workflow passes; the first practice-Share
+case fails to find the activity. The final screenshot and hierarchy contain only
+the host app, not an offscreen activity list or active Share sheet. The owned
+simulator is removed. App-only system logs show touch dispatch but no captured
+presentation warning; they do not establish whether the target action ran.
+Do not attribute this failure to the signing prompt or weaken the five-test gate.
+The next investigation should distinguish missing target-action delivery from a
+presentation/lifecycle failure, with bounded synthetic-only diagnostics.

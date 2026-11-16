@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-031203-controlled-share-diagnostic-3785e9fe",
+  "recorded_at": "2026-11-16T03:12:03.151401+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c833e7a36a72aaba6f785b52b571f024df1e706a",
+  "changed": "Test the two failing Share workflows after successful signing, without a pending signing process or concurrent local build.",
+  "proves": "Unchanged native sources and compiled project execute both diagnostic cases: one passes, one fails, zero skip. The failed final screenshot shows the host without a share sheet; the other case passes sharing, clear-during-check and repeat/details behavior. Owned simulator removed.",
+  "limits": "One diagnostic pass is not reliable Share acceptance and cannot replace the full five-workflow proof. Root cause remains unconfirmed. Apple package validation is separately passed; no full requirement closure or app release.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "README.md": "e38ffd77ab4026222c680d7b5e5d09ea1bb40ca60766db7b19fed49af4c56aed",
+    "docs/app-store-readiness.md": "d37f78239f38869137538cd5a0fec6e2667736fbbad2463055f3d4f42e228447",
+    "docs/ios-module-archive-plan.md": "fa2a898dc1fd23b81057753bac174ad6b7a6f490ff6a9330fc871c44a693f35f",
+    "docs/scope-progress.json": "6f6639dd090679d918f9e58424e6c693a9787bb5a52c26f3fa2df84c36e3d335",
+    "docs/scope-progress.md": "b4c2dc062bd99d3e0cfcdc6555a4acd2db174d4cf43b3259a8ac47fc738040b7",
+    "eval/route-boundaries.json": "ddff74c86314c463dd117245de5c5721370ee3c2711c194f7fc71a3c016e22d9",
+    "runs/2026-11-15-share-context-diagnostic.json": "c40a3c7fa667d76976a5e19462a1fe9b3acc7940b4f69ca12b4c5d05543ef30c",
+    "site/public/reference/public-scope.json": "63b14d493674ea108469ce42ff5d7a48879d4f8e67c006340cd856b7d1aabced",
+    "site/src/public-scope.json": "63b14d493674ea108469ce42ff5d7a48879d4f8e67c006340cd856b7d1aabced",
+    "site/src/scope-manifest.json": "6e422be26f977d9af51350210dd20e3138bd2acc62a1b3fd14ced6bcccc46c39",
+    "state.json": "3d5c8ea776bac7970393cfc5f0e548685688001502428d5d6958c8b0d0f181d4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-15-share-context-diagnostic.json",
+      "sha256": "c40a3c7fa667d76976a5e19462a1fe9b3acc7940b4f69ca12b4c5d05543ef30c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T03:12:03.724048+00:00"
+    }
+  ]
+}

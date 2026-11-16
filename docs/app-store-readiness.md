@@ -14,8 +14,9 @@ expected entitlements and all 32 resource comparisons. Prior local signing and
 standalone-source rejection failures are preserved as history.
 
 This is package acceptance, not App Review approval, a TestFlight release,
-physical-device acceptance or independent tag validation. The latest local source
-still passes three host workflows and fails both Share workflows. Current Share
+physical-device acceptance or independent tag validation. The last full native run passes three host workflows and fails both Share
+workflows. A newer focused Share diagnostic without active signing passes one
+of two cases; it does not replace the required complete run. Current Share
 integration, final platform/privacy review and reviewed upload remain open. See
 [the successful validation](../runs/2026-11-15-apple-package-validation-passed.json)
 and [the repair plan](ios-module-archive-plan.md).

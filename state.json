@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T03:01:46.973988+00:00",
-  "active_increment": "Actual Apple package validation passed for AITrustID 1.0 (1) using the existing signed module archive and owner-authorized key use. Share integration, final platform/privacy and physical/independent tag acceptance remain open. 70 original requirements remain.",
+  "updated": "2026-11-16T03:12:01.848034+00:00",
+  "active_increment": "Apple package validation passed. Source branch reconciles the published MT increment without losing any of 202 originals. Focused Share diagnostic without active signing passes one test and fails one; full integration remains withheld. 70 requirements remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T03:01:46.973988+00:00",
+  "updated_at": "2026-11-16T03:12:01.848034+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1910,7 +1910,14 @@
     "current_hosted_failure": "runs/2026-11-12-ios-module-hosted-setup-failed.json",
     "current_native_failure": "runs/2026-11-12-ios-first-line-share-failed.json",
     "previous_complete_ui_workflows_passed": 5,
-    "selected_integration_credit_withheld": true
+    "selected_integration_credit_withheld": true,
+    "focused_diagnostic": {
+      "evidence": "runs/2026-11-15-share-context-diagnostic.json",
+      "executed": 2,
+      "passed": 1,
+      "failed": 1,
+      "replaces_full_five_workflow_proof": false
+    }
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",

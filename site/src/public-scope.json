@@ -13521,7 +13521,7 @@
           "implemented_mechanism",
           "executable_checks"
         ],
-        "audited_at": "2026-11-16T02:53:08.596732+00:00",
+        "audited_at": "2026-11-16T03:12:01.848034+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -13593,9 +13593,10 @@
           "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
           "runs/2026-11-12-ios-first-line-share-failed.json",
           "runs/2026-11-12-ios-local-resign-failed.json",
-          "runs/2026-11-15-apple-package-validation-passed.json"
+          "runs/2026-11-15-apple-package-validation-passed.json",
+          "runs/2026-11-15-share-context-diagnostic.json"
         ],
-        "evidence_scope": "Actual Apple package validation passed for version 1.0 (1) on the sealed module archive, with existing identity/profiles and owner-authorized key use. Both original strict signatures, expected entitlements and 32 resource copies pass reinspection. Prior local/server and current Share failures are retained. No upload, App Review approval, physical acceptance, independent accuracy or full requirement closure.",
+        "evidence_scope": "Actual Apple package validation passed for version 1.0 (1) on the sealed module archive, with existing identity/profiles and owner-authorized key use. Both original strict signatures, expected entitlements and 32 resource copies pass reinspection. Prior local/server and current Share failures are retained. No upload, App Review approval, physical acceptance, independent accuracy or full requirement closure. A focused unchanged-source diagnostic without active signing passes one of two Share workflows; it cannot replace the full five-workflow proof. The failed final screenshot shows the host app without a share sheet.",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],
