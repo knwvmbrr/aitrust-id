@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-11-16T18:37:31.631Z",
+  "pass": true,
+  "engine": "chromium",
+  "season": "2026-Q4",
+  "background_patch_opacity": 0.3,
+  "contrast_bound": "conservative opaque-patch lower bound",
+  "base": "http://127.0.0.1:5189",
+  "worst_case_contrast": {
+    "light": {
+      "foreground": 11.161,
+      "secondary": 4.914,
+      "control": 3.082
+    },
+    "dark": {
+      "foreground": 11.702,
+      "secondary": 7.153,
+      "control": 4.121
+    }
+  },
+  "explicit_light_dark": true,
+  "system_light_dark": true,
+  "solid_reading_panels": true,
+  "forced_colors_pattern_removed": true,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "physical_device": false,
+  "full_wcag_conformance_asserted": false
+}

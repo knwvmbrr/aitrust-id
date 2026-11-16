@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased — 2026-11-16
+
+### 2026-11-16-184123-q4-web-current-evidence-c93bf8fb
+
+Recorded 2026-11-16T18:41:23.568464+00:00 · Contributor: Codex · change
+
+- **Changed.** Verify Q4 appearance in Chromium and WebKit, bind current website/extension evidence, and retain the failed first privacy-check attempt.
+- **Evidence.** All 32 website and 14 extension capability commands pass with stable source; 36 static canonical pages, 20 tag summaries and both theme engines pass; current route guard passes. [Change record](./runs/changes/2026-11-16-184123-q4-web-current-evidence-c93bf8fb.json).
+- **Not claimed.** No deployment yet; no Google indexing measurement, independent accuracy, physical-device or new full requirement acceptance. First extension failure remains preserved, cause unproven.
+
+
+### 2026-11-16-182840-q4-web-integration-fd8ef34a
+
+Recorded 2026-11-16T18:28:40.241867+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate quarterly background, truthful search metadata, protected CI checks, scope evidence and specialist ownership.
+- **Evidence.** Built 36 canonical pages and 20 purpose-specific summaries; theme contrast, system/light/dark and 20 modal accessibility workflows pass. [Change record](./runs/changes/2026-11-16-182840-q4-web-integration-fd8ef34a.json).
+- **Not claimed.** Publication pending. No Google indexing measurement, native TestFlight acceptance, collection or new full requirement closure.
+
+
+### 2026-11-16-182333-q4-camouflage-seo-ac373f21
+
+Recorded 2026-11-16T18:23:33.260021+00:00 · Contributor: Codex · change
+
+- **Changed.** Apply a subtle Q4 woodland background and purpose-specific search metadata; document parallel delivery ownership.
+- **Evidence.** Focused web theme checks cover light/dark, solid panels, narrow layouts and conservative contrast; eight metadata tests pass. [Change record](./runs/changes/2026-11-16-182333-q4-camouflage-seo-ac373f21.json).
+- **Not claimed.** Not yet deployed. Google indexing and ranking unmeasured. Native styling, TestFlight, independent tag accuracy and full requirement acceptance remain separate.
+
+
 ## Unreleased — 2026-11-12
 
 ### 2026-11-12-192109-choice-between-current-boundaries-287b132e

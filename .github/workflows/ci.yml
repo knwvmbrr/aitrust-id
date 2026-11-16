@@ -309,6 +309,8 @@ jobs:
         run: node --test tests/redaction-performance.cjs tests/blind-review-files.cjs
       - run: npm run verify:enterprise
       - run: npm run build:site
+      - name: Verify truthful search descriptions and crawlable static pages
+        run: npm run verify:seo
       - name: Bind prepared runtime bytes to retained upstream members
         run: python scripts/verify-asset-notices.py --prepared-runtime
       - name: Exercise native engine resources, freshness and private-output refusals
@@ -350,6 +352,7 @@ jobs:
             sleep 1
           done
           npm run verify:site
+          AITRUST_SITE_URL=http://127.0.0.1:5174 npm run verify:seasonal-theme
           npm run verify:performance
           npm run verify:approachability
           npm run verify:ps-results

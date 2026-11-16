@@ -10,7 +10,7 @@
   function apply() {
     const resolved = snapshot().split(':')[1];
     document.documentElement.dataset.theme = resolved;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', resolved === 'dark' ? '#101512' : '#f7f8f6');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', resolved === 'dark' ? '#11170f' : '#f3f1e7');
     document.querySelectorAll('[data-theme-toggle]').forEach(control => { control.checked = resolved === 'dark'; });
     document.querySelectorAll('[data-theme-state]').forEach(control => { control.textContent = resolved === 'dark' ? 'Dark' : 'Light'; });
     document.querySelectorAll('[data-theme-auto]').forEach(control => { control.setAttribute('aria-pressed', String(preference === 'system')); });

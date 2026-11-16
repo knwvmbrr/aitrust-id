@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-182333-q4-camouflage-seo-ac373f21",
+  "recorded_at": "2026-11-16T18:23:33.260021+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b6b83243db2901a4a29bdd663ba46f452e17f27",
+  "changed": "Apply a subtle Q4 woodland background and purpose-specific search metadata; document parallel delivery ownership.",
+  "proves": "Focused web theme checks cover light/dark, solid panels, narrow layouts and conservative contrast; eight metadata tests pass.",
+  "limits": "Not yet deployed. Google indexing and ranking unmeasured. Native styling, TestFlight, independent tag accuracy and full requirement acceptance remain separate.",
+  "scope_ids": [
+    "F-139",
+    "N-010",
+    "N-013"
+  ],
+  "files": {
+    "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
+    "site/public/camo-q4.svg": "01a426fecadfeece6a8380f92090903e6958cdb2d79fd984fb131e9305476d3b",
+    "site/public/theme.js": "c212d1069cb9da9cce8baf96707b92ed58d9d7b9050e922fce5382527c8d1ff7",
+    "site/scripts/seo.mjs": "13596d28b2574b6a20fb5a8457da4085d7a2cfaa942d9dfcd1c8600d6441bdf0",
+    "site/scripts/prepare.mjs": "a5d77ad0ba4047b441f040bd8a50d9c56844e81caa98b7b9687535486ec36b6a",
+    "site/scripts/render-reference.mjs": "1f834a7f6af86528efae13de7c2b7266ea93dee55ef0c101448eafd049b355c6",
+    "tests/seo-metadata.mjs": "0965bb030856f4926840b9b69ba88661aa2b5b57ca2cbb56f31c5f080547c2fc",
+    "scripts/verify-seo.mjs": "7d95a1a2470dc5c05a34716060f44a04fd13598334c80dea109bd35d294fd81b",
+    "scripts/verify-seasonal-theme.cjs": "0e47c30595215668e73f33848340312e6a5ec0c78eb9cdd9548216e1439baf3b",
+    "docs/seo-audit-2026-11-16.md": "92b7727b0b32be9e9d6625b392a8b684f140f65e7566077e2a2487aaebd5e3f5",
+    "docs/quarterly-brand-and-agent-plan.md": "81c202b73df9724557f3b27913b28e07531349392a2a3eb36373ad2134aa60ed"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/seo-metadata.mjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T18:23:33.463262+00:00"
+    }
+  ]
+}
