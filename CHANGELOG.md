@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-16
+
+### 2026-11-16-025309-apple-package-validation-passed-c3983e32
+
+Recorded 2026-11-16T02:53:09.580188+00:00 · Contributor: Codex · change
+
+- **Changed.** Complete actual Apple validation of the existing sealed module archive after owner-authorized signing.
+- **Evidence.** Xcode and the saved distribution log both confirm AITrustID 1.0 (1) passed package validation. Original archive reinspection passes both signatures, expected entitlements and 32 resource comparisons. Existing certificate/profiles reused; no source, credential, ACL or trust change. [Change record](./runs/changes/2026-11-16-025309-apple-package-validation-passed-c3983e32.json).
+- **Not claimed.** Package validation is separate from App Review, upload, TestFlight, current Share workflow reliability, physical-phone acceptance and independent tag accuracy. N-013 remains 60 percent and 70 original requirements remain open; no full closure.
+
+
 ## Unreleased — 2026-11-12
 
 ### 2026-11-12-215213-ios-local-resign-diagnosis-662500ef

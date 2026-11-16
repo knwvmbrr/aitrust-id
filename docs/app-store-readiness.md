@@ -4,23 +4,21 @@ AI Trust ID has a separate App Store Connect record, saved in **Prepare for
 Submission**, and registered identifiers `com.aitrustid.app` and
 `com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
 release. No build is available in App Store Connect or submitted for App Review.
-Apple package-validation attempts have been performed and rejected.
+Earlier package-validation attempts failed; the current sealed module archive passes actual Apple validation.
 
-**Latest release gates:** Apple rejected both standalone-source candidates,
-including `method.py.txt`. The replacement sealed module-archive candidate now
-has an actual signed device archive: both signatures, required entitlements and
-32 resource copies pass local inspection. The latest saved validation attempt failed locally while re-signing the Share
-extension (`errSecInternalComponent`). Original archive reinspection still
-passes. This is not evidence of an Apple server rejection of the sealed module
-package; the underlying signing-access cause and server acceptance are open. This is not an
-Apple validation pass, upload, TestFlight release or App Review submission.
-The current hosted run failed during simulator setup before app tests. The
-latest local candidate passes three host-app workflows and fails both Share
-workflows; it is not a current five-workflow pass. Earlier failures and the
-earlier five-pass snapshot remain separately recorded. The app is
-unmerged and unreleased; see [the repair plan](ios-module-archive-plan.md),
-[signed inspection](../runs/2026-11-12-ios-module-signed-inspection.json) and
-[current hosted failure](../runs/2026-11-12-ios-module-hosted-setup-failed.json).
+**Latest release gates:** actual Apple package validation **passed** for
+AITrustID 1.0 (1) on November 15, 2026, after owner authorization of the existing
+signing key. Xcode and the distribution log both confirm success for the sealed
+module archive. The original archive also passes both strict signatures,
+expected entitlements and all 32 resource comparisons. Prior local signing and
+standalone-source rejection failures are preserved as history.
+
+This is package acceptance, not App Review approval, a TestFlight release,
+physical-device acceptance or independent tag validation. The latest local source
+still passes three host workflows and fails both Share workflows. Current Share
+integration, final platform/privacy review and reviewed upload remain open. See
+[the successful validation](../runs/2026-11-15-apple-package-validation-passed.json)
+and [the repair plan](ios-module-archive-plan.md).
 
 The saved app-information draft uses **Check shared text offline**, category
 **Utilities**, and the existing public privacy-policy URL. Privacy disclosures

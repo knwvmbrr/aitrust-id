@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-025309-apple-package-validation-passed-c3983e32",
+  "recorded_at": "2026-11-16T02:53:09.580188+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bb826ea214a5adf40031c1a4f7b458b5fc48c364",
+  "changed": "Complete actual Apple validation of the existing sealed module archive after owner-authorized signing.",
+  "proves": "Xcode and the saved distribution log both confirm AITrustID 1.0 (1) passed package validation. Original archive reinspection passes both signatures, expected entitlements and 32 resource comparisons. Existing certificate/profiles reused; no source, credential, ACL or trust change.",
+  "limits": "Package validation is separate from App Review, upload, TestFlight, current Share workflow reliability, physical-phone acceptance and independent tag accuracy. N-013 remains 60 percent and 70 original requirements remain open; no full closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "README.md": "1452274c90227b60e3c252d45a7018184e231c9ac6288f68d739cd838036b891",
+    "docs/app-store-readiness.md": "6e1cc5fab67093a364b4062f41b736b2a40bcafb7b03ffd7f4d3c962c0fbb8d5",
+    "docs/ios-module-archive-plan.md": "0a808a1c80a57de3ab114c29dca73f030aa92a5f1be7aa7c618e6366013d6359",
+    "docs/scope-progress.json": "5158f595fac3b13fe28b281e571aabd157ccc0b0508a27eb7ba2a86fef611dce",
+    "docs/scope-progress.md": "2a2f987876defcd64b99d884aa00b40733bc9b2cd9ced3296acd79b2d19169b4",
+    "runs/2026-11-15-apple-package-validation-passed.json": "7e59c6c19378001a540cbd7e91b764330b6a51b57a7a679b071f613c11e8f675",
+    "site/public/reference/public-scope.json": "383cba4c5bbb5ffc536f541c18a40384752cc7e4d2378ccb10e149100e0fe916",
+    "site/src/public-scope.json": "383cba4c5bbb5ffc536f541c18a40384752cc7e4d2378ccb10e149100e0fe916",
+    "site/src/scope-manifest.json": "82005436172e588278f1c1864c0216a245f511d2abf1e9ff9bff6a349f5ec211",
+    "state.json": "7fdf508b5c732c02ee75d50f8e63c58b21fe46f0af01e649275d96c039c5914d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-15-apple-package-validation-passed.json",
+      "sha256": "7e59c6c19378001a540cbd7e91b764330b6a51b57a7a679b071f613c11e8f675"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T02:53:10.331787+00:00"
+    }
+  ]
+}

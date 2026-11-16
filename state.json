@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-12T21:52:12.689005+00:00",
-  "active_increment": "MT wording source merged in PR101. Original module archive signatures/resources pass reinspection; validation preparation failed locally with errSecInternalComponent while re-signing the Share extension. Current native Share failures remain open. App draft only; 70 original requirements remain.",
+  "updated": "2026-11-16T02:53:08.596732+00:00",
+  "active_increment": "Actual Apple package validation passed for AITrustID 1.0 (1) using the existing signed module archive and owner-authorized key use. Share integration, final platform/privacy and physical/independent tag acceptance remain open. 70 original requirements remain.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-12T21:52:12.689005+00:00",
+  "updated_at": "2026-11-16T02:53:08.596732+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1868,7 +1868,7 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "draft_current_source_share_failures_physical_acceptance_open",
+    "status": "draft_apple_package_validated_current_share_failures_open",
     "requirement": "N-013",
     "percent_complete": 60,
     "workflow_proof": "runs/2026-11-12-native-share-module-archive-workflow.json",
@@ -3035,7 +3035,7 @@
     "owner_csr_creation_still_pending": false,
     "owner_csr_signature_verified": true,
     "owner_csr_key_bits": 2048,
-    "current_signing_step": "Original signed archive reinspection passes two signatures and 32 resource comparisons; subsequent distribution-copy re-sign fails locally.",
+    "current_signing_step": "Owner-authorized re-signing succeeded using the existing identity/profiles; actual Apple package validation passed for 1.0 (1).",
     "current_signing_evidence": "runs/2026-11-12-ios-module-signed-inspection.json",
     "csr_selected_for_certificate_issuance": true,
     "certificate_issuance_submitted": true,
@@ -3046,14 +3046,14 @@
     "certificate_created_by": "Michael",
     "signed_package_exported": false,
     "signed_package_evidence": null,
-    "app_store_validation_passed": false,
-    "current_step": "Latest saved validation preparation failed locally while re-signing the Share extension: errSecInternalComponent. Mac unlock and owner-present existing-key retry required; Apple server acceptance remains unverified.",
+    "app_store_validation_passed": true,
+    "current_step": "Apple package validation passed. Resolve current Share workflow failures and final platform/privacy/physical acceptance before reviewed upload or release.",
     "validation_failure": "runs/2026-11-12-ios-text-resource-apple-rejected.json",
     "packaging_repair": {
-      "status": "signed_archive_inspected_current_share_workflows_failed",
+      "status": "apple_package_validation_passed_share_acceptance_open",
       "plan": "docs/ios-module-archive-plan.md",
       "simulator_detector": "runs/2026-11-12-ios-module-archive-engine.json",
-      "apple_revalidation_passed": false,
+      "apple_revalidation_passed": true,
       "full_requirement_closures": 0,
       "native_workflow": "runs/2026-11-12-native-share-module-archive-workflow.json",
       "retained_failed_workflow": "runs/2026-11-12-ios-text-resource-workflow-failed.json",
@@ -3068,21 +3068,22 @@
       "focused_proof_and_input_checks": 63,
       "current_candidate_archive_signed": true,
       "current_candidate_archive_inspected": true,
-      "current_candidate_validation_status": "local_resign_failed_before_server_acceptance",
+      "current_candidate_validation_status": "passed",
       "previous_signed_archive": "runs/2026-11-12-ios-text-resource-signed-archive.json",
       "current_boundaries": "runs/2026-11-12-ios-module-reviewed-boundaries.json",
       "retained_traced_keyboard_failure": "runs/2026-11-12-ios-command-trace-keyboard-failed.json",
       "current_native_failure": "runs/2026-11-12-ios-first-line-share-failed.json",
       "current_native_workflows_passed": 3,
       "current_native_workflows_failed": 2,
-      "current_native_source_acceptance": false
+      "current_native_source_acceptance": false,
+      "latest_success": "runs/2026-11-15-apple-package-validation-passed.json"
     },
     "revalidation_handoff": "runs/2026-11-12-ios-revalidation-in-progress.json",
-    "owner_ui_handoff": "runs/2026-11-12-ios-local-resign-failed.json",
+    "owner_ui_handoff": "runs/2026-11-15-apple-package-validation-passed.json",
     "previous_signed_archive_evidence": "runs/2026-11-10-ios-signed-archive.json",
     "previous_signed_package_exported": true,
     "previous_signed_package_evidence": "runs/2026-11-10-ios-signed-package.json",
-    "owner_ui_handoff_pending": true
+    "owner_ui_handoff_pending": false
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",

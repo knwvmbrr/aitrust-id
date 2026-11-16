@@ -1,11 +1,11 @@
 # Package the fixed detector as a sealed module archive
 
-**Current status:** the latest local source passes three host-app workflows and
-fails both Share workflows. N-013 is 60%; current selected-integration credit is
-withheld. The signed module archive passes local signature/resource inspection,
-but validation preparation failed locally while re-signing the Share extension
-(`errSecInternalComponent`); server acceptance remains unverified. Earlier passing snapshots
-below are historical; the app is draft and unreleased.
+**Current status:** actual Apple package validation passed for the sealed
+module archive on November 15, 2026, after owner authorization of the existing
+key. Both original signatures and 32 resources pass inspection. Current native
+Share acceptance remains open: the latest local source passes three host
+workflows and fails both Share workflows. N-013 remains 60%; this app is draft
+and unreleased. The failures below are preserved history.
 
 ## Observed failures
 
@@ -146,3 +146,26 @@ existing archive only after owner unlock and with the owner present for the
 protected prompt. Do not revoke certificates, change key access policy, export
 a private key, change trust settings or repackage source based only on this
 error. Actual server validation and current Share workflow repair remain open.
+
+## Owner-present retry passed Apple validation
+
+The same existing archive, certificate and two provisioning profiles were used.
+The owner approved the protected signing requests. Xcode reached package review
+for both app and Share with the expected identifiers, arm64, version 1.0 (1),
+`get-task-allow: false` and no optional symbols. Apple validation then passed;
+the distribution log records success at 02:47:37 UTC on November 16, equivalent
+to November 15 in the owner's timezone. No key ACL, trust policy, credential or
+source package changed. This clears the observed signing/package gate, while
+Share behavior, final declarations, reviewed upload and human acceptance remain.
+
+## Controlled Share diagnostic after the signing pause
+
+The two current Share failures occurred while a separate protected signing
+authorization was pending. That does not establish causation. Now that signing
+and validation have finished, exercise only those two unchanged synthetic Share
+workflows on one owned simulator, with no concurrent signing or other builds.
+Reuse the exact already-built project only after checking current source and
+asset identities. Retain the original per-workflow deadlines and assertions.
+A two-test diagnostic cannot replace the required five-workflow proof or restore
+selected-integration credit. Preserve either result and remove only its owned
+simulator. No further source workaround is justified without the observation.
