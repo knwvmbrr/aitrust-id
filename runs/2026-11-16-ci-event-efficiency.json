@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-16T20:43:33.872091+00:00",
+  "author": "Codex CI efficiency lane",
+  "claim_level": "engineering_only",
+  "source_base": "92364964334668ee0dad44c1b517a58d3a3ddcae",
+  "purpose": "Remove duplicate feature-branch push launches while preserving complete normal PR checks, main pushes and tag pushes.",
+  "pass": true,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "before_sha256": "9d439349cdd8f6a47eef833ed1811b41fd994c75694069f96b99c8720fca15b8",
+      "after_sha256": "5f5209b50929296ce86c5104040caa5866edc641a74641b7bfb0e1442dd229bd",
+      "before_events": [
+        "push",
+        "pull_request"
+      ],
+      "after_events": {
+        "push": {
+          "branches": [
+            "main"
+          ],
+          "tags": [
+            "**"
+          ]
+        },
+        "pull_request": ""
+      },
+      "all_non_event_fields_identical": true,
+      "job_ids_unchanged": true,
+      "job_count": 11,
+      "permissions_unchanged": true,
+      "pr_branch_and_path_filters_absent": true
+    },
+    {
+      "path": ".github/workflows/manifest-inspection.yml",
+      "before_sha256": "0c64b661e1b6085fcc416e76b2a2e498745d09ada0e816e78963caabe6062767",
+      "after_sha256": "30ba0401be7a4e39f1fb624fed0c07533616edd7836d825d9408b9436f4f1542",
+      "before_events": {
+        "push": {
+          "paths": [
+            "protocol/**",
+            "tests/test_manifest_inspection.py",
+            "tests/test_manifest_workflow.py",
+            "tools/manifest_inspection.py",
+            "tools/manifest_presentation.py",
+            "tools/manifest_declarations.py",
+            "tests/test_manifest_presentation.py",
+            "tests/test_manifest_declarations.py",
+            "scripts/inspect-manifest.py",
+            "scripts/verify-manifest-inspection.py",
+            "scripts/verify-manifest-declarations.py",
+            "eval/c2pa-inspection.lock",
+            "eval/dependencies/c2pa-inspection.json",
+            "tests/fixtures/c2pa-inspection-2026/**",
+            "tests/fixtures/c2pa-declarations-2026/**",
+            ".github/workflows/manifest-inspection.yml"
+          ]
+        },
+        "pull_request": {
+          "paths": [
+            "protocol/**",
+            "tests/test_manifest_inspection.py",
+            "tests/test_manifest_workflow.py",
+            "tools/manifest_inspection.py",
+            "tools/manifest_presentation.py",
+            "tools/manifest_declarations.py",
+            "tests/test_manifest_presentation.py",
+            "tests/test_manifest_declarations.py",
+            "scripts/inspect-manifest.py",
+            "scripts/verify-manifest-inspection.py",
+            "scripts/verify-manifest-declarations.py",
+            "eval/c2pa-inspection.lock",
+            "eval/dependencies/c2pa-inspection.json",
+            "tests/fixtures/c2pa-inspection-2026/**",
+            "tests/fixtures/c2pa-declarations-2026/**",
+            ".github/workflows/manifest-inspection.yml"
+          ]
+        }
+      },
+      "after_events": {
+        "push": {
+          "branches": [
+            "main"
+          ],
+          "tags": [
+            "**"
+          ],
+          "paths": [
+            "protocol/**",
+            "tests/test_manifest_inspection.py",
+            "tests/test_manifest_workflow.py",
+            "tools/manifest_inspection.py",
+            "tools/manifest_presentation.py",
+            "tools/manifest_declarations.py",
+            "tests/test_manifest_presentation.py",
+            "tests/test_manifest_declarations.py",
+            "scripts/inspect-manifest.py",
+            "scripts/verify-manifest-inspection.py",
+            "scripts/verify-manifest-declarations.py",
+            "eval/c2pa-inspection.lock",
+            "eval/dependencies/c2pa-inspection.json",
+            "tests/fixtures/c2pa-inspection-2026/**",
+            "tests/fixtures/c2pa-declarations-2026/**",
+            ".github/workflows/manifest-inspection.yml"
+          ]
+        },
+        "pull_request": {
+          "paths": [
+            "protocol/**",
+            "tests/test_manifest_inspection.py",
+            "tests/test_manifest_workflow.py",
+            "tools/manifest_inspection.py",
+            "tools/manifest_presentation.py",
+            "tools/manifest_declarations.py",
+            "tests/test_manifest_presentation.py",
+            "tests/test_manifest_declarations.py",
+            "scripts/inspect-manifest.py",
+            "scripts/verify-manifest-inspection.py",
+            "scripts/verify-manifest-declarations.py",
+            "eval/c2pa-inspection.lock",
+            "eval/dependencies/c2pa-inspection.json",
+            "tests/fixtures/c2pa-inspection-2026/**",
+            "tests/fixtures/c2pa-declarations-2026/**",
+            ".github/workflows/manifest-inspection.yml"
+          ]
+        }
+      },
+      "all_non_event_fields_identical": true,
+      "job_ids_unchanged": true,
+      "job_count": 1,
+      "permissions_unchanged": true,
+      "both_optional_path_lists_identical": true,
+      "optional_pr_event_identical": true
+    }
+  ],
+  "local_controls": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "tests/test_manifest_workflow.py",
+      "tests/test_source_provenance.py::test_main_only_signing_after_all_required_contexts",
+      "tests/test_ci_ubuntu_mirror.py::Mirror::test_only_browser_jobs_install_prepared_source_without_trust_override",
+      "-q"
+    ],
+    "exit_status": 0,
+    "passed": 6,
+    "pytest_seconds": 0.17,
+    "scope": "Existing workflow dependency coverage, main-only signing authority, and browser runner trust configuration; no SDK/model/browser/native invocation."
+  },
+  "environment_probe": {
+    "initial_research_environment_pytest_available": false,
+    "failure": "ModuleNotFoundError: No module named pytest",
+    "fallback": "Existing system python3 had pytest and yaml; no dependencies installed."
+  },
+  "documented_event_scenarios": {
+    "feature_branch_push": "not scheduled by these two workflows",
+    "normal_pull_request": "main CI scheduled without branch/path filters; optional SDK retains prior paths",
+    "main_push": "main CI scheduled; optional SDK retains prior paths",
+    "tag_push": "preserved explicitly for both workflows; GitHub does not apply paths to tag pushes"
+  },
+  "unchanged_contracts": [
+    "all jobs and their complete parsed contents",
+    "permissions and source-signing condition",
+    "runner and dependency pins",
+    "release gates",
+    "optional path filters",
+    "original scope completion counts"
+  ],
+  "not_proven": [
+    "Hosted event execution after integration",
+    "Actual CI minute savings",
+    "Any detector accuracy or release acceptance"
+  ],
+  "independent_release_validated": false,
+  "original_requirement_closures": 0
+}

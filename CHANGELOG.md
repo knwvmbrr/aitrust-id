@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-204358-ci-event-efficiency-b1941b27
+
+Recorded 2026-11-16T20:43:58.493901+00:00 · Contributor: Codex CI efficiency lane · change
+
+- **Changed.** Avoid duplicate feature-branch push executions for main CI and optional manifest inspection while preserving normal PR, main and tag checks.
+- **Evidence.** Six existing workflow consumer controls pass; parsed before/after comparisons preserve every non-event field, all 12 jobs, signing permissions and optional path lists. [Change record](./runs/changes/2026-11-16-204358-ci-event-efficiency-b1941b27.json).
+- **Not claimed.** Hosted event acceptance and CI-minute savings remain unproven. No release gate, job, protection policy or original requirement completion changed.
+
+
 ### 2026-11-16-204136-independent-evidence-lane-integration-bf45076c
 
 Recorded 2026-11-16T20:41:36.188506+00:00 · Contributor: Codex PM with independent tag/evidence specialists · change

@@ -1,6 +1,8 @@
 name: optional-manifest-inspection
 on:
   push:
+    branches: [main]
+    tags: ['**']
     paths:
       - 'protocol/**'
       - 'tests/test_manifest_inspection.py'
