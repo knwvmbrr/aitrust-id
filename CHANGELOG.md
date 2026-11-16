@@ -2,6 +2,105 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-210346-nonroot-declaration-evidence-diagnostic-ca462bff
+
+Recorded 2026-11-16T21:03:46.035246+00:00 · Contributor: Codex Debugging Lead; Codex PM · change
+
+- **Changed.** Make the optional declaration verifier report unreadable non-root proc diagnostics as unknown without changing the enforced network namespace or privilege drop.
+- **Evidence.** Five focused controls pass for denied self/init namespace reads, known same/different namespaces and Mac non-probing. Kernel assertion, SDK/settings/limits and all actual CLI controls are unchanged; current personal-route boundary check passes. First hosted collector failure is preserved. [Change record](./runs/changes/2026-11-16-210346-nonroot-declaration-evidence-diagnostic-ca462bff.json).
+- **Not claimed.** No Linux success inferred from the failed producer or unreadable diagnostic. Fresh hosted exact-source SDK run remains pending; no isolation guarantee is weakened, no new tag released and no original requirement closed. Scope132 complete/70 open.
+
+
+### 2026-11-16-205251-independent-evidence-current-verification-8a0369d3
+
+Recorded 2026-11-16T20:52:51.343634+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bind the combined independent evidence routes and readable guides to current-source website and personal-boundary checks, retaining private failure handling and unchanged tag release gates.
+- **Evidence.** All32 website capability commands and the complete current route boundary guard pass with stable source; Mac inspector21 controls and declaration12 case groups pass on the reconciled optional CLI. All202 originals remain132 complete/70 open; actual independent tag accuracy and human acceptance remain separate. [Change record](./runs/changes/2026-11-16-205251-independent-evidence-current-verification-8a0369d3.json).
+- **Not claimed.** Hosted Linux profile execution, protected merge and exact-site publication still pending. No released NF/FI/FA/PA, no AI-origin/truth certification, no automatic collection and no full original requirement closure. The earlier model/preparer source snapshots remain historical and are not rewritten.
+
+
+### 2026-11-16-204832-independent-evidence-discovery-and-boundaries-2d553d3b
+
+Recorded 2026-11-16T20:48:32.779287+00:00 · Contributor: Codex PM and NF/FI, image, debugging specialists · change
+
+- **Changed.** Expose the selected-reference guide and separate image evidence workflow, preserve independent optional failure paths, and bind all new source/fixture/CI inputs in the route inventory.
+- **Evidence.** Reconciled image CLI passes170 focused controls,21 actual inspector controls and12 actual new-profile case groups on Mac. Selected comparison has current-method CLI/model evidence plus the repaired private-path refusal. Scope/accountability preserve202 originals,132 complete,70 open and11 separately tracked enhancements. [Change record](./runs/changes/2026-11-16-204832-independent-evidence-discovery-and-boundaries-2d553d3b.json).
+- **Not claimed.** Supporting tools are not released NF/FI/FA/PA tags. New combined browser, hosted Linux and protected publication checks are pending; independent accuracy, actual humans/physical devices and full original closures remain open. Actual future CI savings are not inferred from YAML.
+
+
+### 2026-11-16-204358-ci-event-efficiency-b1941b27
+
+Recorded 2026-11-16T20:43:58.493901+00:00 · Contributor: Codex CI efficiency lane · change
+
+- **Changed.** Avoid duplicate feature-branch push executions for main CI and optional manifest inspection while preserving normal PR, main and tag checks.
+- **Evidence.** Six existing workflow consumer controls pass; parsed before/after comparisons preserve every non-event field, all 12 jobs, signing permissions and optional path lists. [Change record](./runs/changes/2026-11-16-204358-ci-event-efficiency-b1941b27.json).
+- **Not claimed.** Hosted event acceptance and CI-minute savings remain unproven. No release gate, job, protection policy or original requirement completion changed.
+
+
+### 2026-11-16-204136-independent-evidence-lane-integration-bf45076c
+
+Recorded 2026-11-16T20:41:36.188506+00:00 · Contributor: Codex PM with independent tag/evidence specialists · change
+
+- **Changed.** Combine the independently implemented selected-reference and active-image-declaration evidence paths; preserve default JSON, optional formatter isolation, structural/regional refusals and both attributed histories.
+- **Evidence.** All170 focused image parser/declaration/presentation/workflow controls pass on the reconciled CLI. NF/FI has166 affected contract controls, current actual private CLI/model execution, and a separately repaired cyclic-path refusal. Original202 records remain132 complete and70 open. [Change record](./runs/changes/2026-11-16-204136-independent-evidence-lane-integration-bf45076c.json).
+- **Not claimed.** New combined CLI/browser/Linux evidence remains pending. Supporting evidence paths do not issue NF/FI/FA/PA, establish AI origin/truth or satisfy independent/human tag validation. No full original requirement closure or TestFlight release.
+
+
+### 2026-11-16-203511-image-declarations-regional-scope-4fadc523
+
+Recorded 2026-11-16T20:35:11.299803+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Refuse unresolved assertion-metadata regions and action relatedAssertions before reporting a generative declaration; validate metadata and parameter mappings.
+- **Evidence.** Final166 focused controls and24 actual pinned-SDK profile calls pass.17 added scope/privacy controls preserve ordinary metadata, reject malformed mappings, and keep regional or related evidence Unknown without echoing embedded private text. [Change record](./runs/changes/2026-11-16-203511-image-declarations-regional-scope-4fadc523.json).
+- **Not claimed.** Semantic regional guards use bounded in-memory reports; no independently sourced regional corpus or accuracy claim. Prior receipts preserved. Component60%,132 complete/70 open remain; PM integration and fresh isolated Linux pending.
+
+
+### 2026-11-16-203316-image-declarations-structure-precision-ecc539de
+
+Recorded 2026-11-16T20:33:16.999335+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Treat multiple active creation/opening actions as unsupported structure with Unknown output, rather than claiming contradictory AI declarations.
+- **Evidence.** Final149 focused tests and24 actual pinned-SDK profile calls pass on corrected source. The exact fixed explanation and reason are tested; prior149-test and24-call receipts remain historical and unchanged. [Change record](./runs/changes/2026-11-16-203316-image-declarations-structure-precision-ecc539de.json).
+- **Not claimed.** No parser, dependency, SDK setting, tag release or original requirement percentage changed. Component60%,132 complete/70 open remain; PM integration and fresh isolated Linux still pending.
+
+
+### 2026-11-16-203006-image-declarations-evidence-inventory-a87be946
+
+Recorded 2026-11-16T20:30:06.610152+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Bind the four new declaration execution receipts as changed files in the accountability event.
+- **Evidence.** The first changelog verification correctly rejected four evidence files that were referenced but omitted from the explicit changed-file inventory; this follow-up supplies their current hashes. [Change record](./runs/changes/2026-11-16-203006-image-declarations-evidence-inventory-a87be946.json).
+- **Not claimed.** Metadata bookkeeping only; no additional test execution, source behavior, tag release or full requirement completion.
+
+
+### 2026-11-16-202937-image-action-declarations-9d7f4cd4
+
+Recorded 2026-11-16T20:29:37.736049+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Add an opt-in versioned PNG profile for explicit active-record generative creation/edit action declarations while keeping AI origin Unknown and issuing no tags.
+- **Evidence.** 149 focused tests pass; actual pinned SDK passes24 new-profile calls and21 original controls. Six default JSON/text outputs and statuses are byte-identical to the prior committed reader. Authored synthetic controls, privacy refusals and initial failures are retained. [Change record](./runs/changes/2026-11-16-202937-image-action-declarations-9d7f4cd4.json).
+- **Not claimed.** Component60% pending PM semantic/source integration and fresh isolated Linux execution; default parser pins/settings unchanged. No FA/PA release, independent accuracy, complete C2PA conformance, Mac kernel no-egress or original requirement closure.132 complete;70 open remain.
+
+
+### 2026-11-16-203500-reference-preparer-private-refusal-47526fcb
+
+Recorded 2026-11-16T20:35:00.997387+00:00 · Contributor: Codex Debugging Lead; Codex PM integration · change
+
+- **Changed.** Refuse self-referential output symlinks with a fixed private-safe error in the selected-reference preparer, preserving inputs and refusing overwrite.
+- **Evidence.** An independent engineering reviewer reproduced exit1/private-path traceback; two focused controls and the real repaired CLI reproduce exit2 with fixed Unavailable, no private echo/traceback, unchanged inputs and preserved symlink. Consumer/model/deadline/network/window code is unchanged. [Change record](./runs/changes/2026-11-16-203500-reference-preparer-private-refusal-47526fcb.json).
+- **Not claimed.** Engineering review is not independent accuracy. Earlier model receipts retain their exact original input inventory; no additional model execution, broad test suite, tag release or full requirement closure. Scope remains132 complete and70 open.
+
+
+### 2026-11-16-202244-selected-reference-pair-comparison-c5c76702
+
+Recorded 2026-11-16T20:22:44.962046+00:00 · Contributor: Codex NF/FI evidence lane · change
+
+- **Changed.** An explicit private claim/reference line selection now reaches the existing offline NLI worker without changing automatic retrieval; optional selection-module failure stays isolated from the default route.
+- **Evidence.** Final affected controls pass166 cases,3 current-source real CLI controls and1 current-source real model comparison; the original251 checks and2 model calls plus a corrected4-check candidate failure remain separately recorded. [Change record](./runs/changes/2026-11-16-202244-selected-reference-pair-comparison-c5c76702.json).
+- **Not claimed.** One caller-selected pair is not comprehensive search, truth, source authenticity, freshness, independent accuracy or NF/FI/HP release. No original requirement closes; Linux, human and broad integration acceptance remain separate.
+
+
 ### 2026-11-16-202154-tag-integration-current-browser-boundaries-42cae423
 
 Recorded 2026-11-16T20:21:54.427188+00:00 · Contributor: Codex PM · change

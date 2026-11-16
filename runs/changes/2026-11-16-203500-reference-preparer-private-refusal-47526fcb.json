@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-203500-reference-preparer-private-refusal-47526fcb",
+  "recorded_at": "2026-11-16T20:35:00.997387+00:00",
+  "author": "Codex Debugging Lead; Codex PM integration",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a471c979130a5d1531fe0beb7f4a637955987872",
+  "changed": "Refuse self-referential output symlinks with a fixed private-safe error in the selected-reference preparer, preserving inputs and refusing overwrite.",
+  "proves": "An independent engineering reviewer reproduced exit1/private-path traceback; two focused controls and the real repaired CLI reproduce exit2 with fixed Unavailable, no private echo/traceback, unchanged inputs and preserved symlink. Consumer/model/deadline/network/window code is unchanged.",
+  "limits": "Engineering review is not independent accuracy. Earlier model receipts retain their exact original input inventory; no additional model execution, broad test suite, tag release or full requirement closure. Scope remains132 complete and70 open.",
+  "scope_ids": [
+    "F-020b",
+    "T-NF",
+    "T-FI"
+  ],
+  "files": {
+    "scripts/prepare-reference-selection.py": "d39b462451eede9cef56508e35ff1bdd7b4662f5f422b7e9dcc255f0cda43b88",
+    "tests/test_selected_nli_references.py": "20efedbbdf3d9a94fd54771c0c1f7102d8b7a2c2c23c7eb58d238c393660b8d1",
+    "docs/selected-reference-pair-result.md": "b0da3ff05f68889bacda32de89a0ec723ab17045fe62f91747f8595a7dc9c25f",
+    "runs/2026-11-16-reference-preparer-refusal-plan.json": "3abf936926275565d9a880d231cdfb3e6ef454dfa5d154a5f7aa9a991db93b15",
+    "runs/2026-11-16-selected-reference-preparer-refusal.json": "d9dc52c673b6bad4aec75e9e219e0f0a99ae48a2a9d2570bce6a1c45b885546d",
+    "runs/2026-11-16-selected-reference-preparer-fixed.json": "9f63ccd88bc26c91c290fa8421238a3edd7648dbdfc578e6ae06c704b06dbb70",
+    "runs/2026-11-16-selected-reference-preparer-tests.json": "4b8758ab7c3d7ea87ec65aa28765c7ac887b8ef857178d7f7021253474765292"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-selected-reference-preparer-refusal.json",
+      "sha256": "d9dc52c673b6bad4aec75e9e219e0f0a99ae48a2a9d2570bce6a1c45b885546d"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-preparer-fixed.json",
+      "sha256": "9f63ccd88bc26c91c290fa8421238a3edd7648dbdfc578e6ae06c704b06dbb70"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-preparer-tests.json",
+      "sha256": "4b8758ab7c3d7ea87ec65aa28765c7ac887b8ef857178d7f7021253474765292"
+    }
+  ],
+  "checks": []
+}

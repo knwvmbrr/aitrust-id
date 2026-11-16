@@ -2565,7 +2565,19 @@
         ],
         "queue": "open",
         "reference_revision_component": "Offline selective pair-dependency invalidation, global-ranking invalidation and untrusted declared review windows executed on Mac and isolated non-root Linux. No NF/FI tag, source authority, actual freshness or independent accuracy is established.",
-        "declared_review_window_component": "Caller-declared windows bind every attached document, refuse before model use and recheck before saving. Actual source freshness and reviewer identity remain unestablished; no NF/FI mapping or independent validation is credited."
+        "declared_review_window_component": "Caller-declared windows bind every attached document, refuse before model use and recheck before saving. Actual source freshness and reviewer identity remain unestablished; no NF/FI mapping or independent validation is credited.",
+        "selected_reference_increment": {
+          "recorded_at": "2026-11-16T20:47:35.175951+00:00",
+          "implemented_by": "Codex NF/FI engineer; Debugging Lead refusal review; PM integration",
+          "job": "An explicitly selected private claim/reference-line pair bypasses automatic lexical retrieval without inventing a retrieval score; exact claims/corpus/spans, original worker limits and private export remain bound.",
+          "evidence": [
+            "runs/2026-11-16-selected-reference-pair.json",
+            "runs/2026-11-16-selected-reference-preparer-fixed.json"
+          ],
+          "parent_requirement_complete": false,
+          "independent_accuracy_evidence": false,
+          "comparison_cli_and_worker_unchanged_after_model_receipt": true
+        }
       }
     },
     {
@@ -3074,7 +3086,17 @@
           "docs/image-evidence-readout-result.md",
           "runs/2026-11-16-image-evidence-text-component.json",
           "runs/2026-11-16-image-evidence-real-sdk-mac.json",
-          "runs/2026-11-16-image-evidence-json-compatibility.json"
+          "runs/2026-11-16-image-evidence-json-compatibility.json",
+          "docs/image-declaration-profile-plan.md",
+          "docs/image-declaration-profile-result.md",
+          "runs/2026-11-16-image-declarations-component.json",
+          "runs/2026-11-16-image-declarations-real-sdk-mac.json",
+          "runs/2026-11-16-image-declarations-original-controls.json",
+          "runs/2026-11-16-image-declarations-default-compatibility.json",
+          "runs/2026-11-16-image-declarations-structure-correction.json",
+          "runs/2026-11-16-image-declarations-structure-real-sdk.json",
+          "runs/2026-11-16-image-declarations-regional-correction.json",
+          "runs/2026-11-16-image-declarations-regional-real-sdk.json"
         ],
         "evidence_scope": "Bounded attached PNG manifest/asset observations and explicit private assertion export, 62 fault/pin/privacy tests and 13 real SDK CLI controls on each platform. No content-truth, author identity, revocation clearance, FA/PA, certification or new tag release. The hosted job passes 13 real cases on both push and PR for be14b359; the protected merge d26acfc passes the same 13 cases from an anonymously downloaded source archive. Full embedded assertions can be explicitly exported privately. Broader formats, signer interpretation and FA/PA remain retained under the modality/tag jobs. The 1.0.1 loader now passed 16 actual cases per Mac/Linux platform, both hosted native runs and anonymous merged-source execution; the registry/FA/PA boundaries are unchanged.",
         "required_acceptance": [],
@@ -3098,6 +3120,34 @@
             "runs/2026-11-16-image-evidence-text-component.json",
             "runs/2026-11-16-image-evidence-real-sdk-mac.json",
             "runs/2026-11-16-image-evidence-json-compatibility.json"
+          ],
+          "new_tag_releases": 0,
+          "independent_accuracy_evidence": false
+        },
+        "declaration_increment": {
+          "id": "IMAGE-DECLARATIONS-01",
+          "job": "Read bounded, explicitly signer-created active-manifest generative creation/edit action declarations without inferring image origin.",
+          "percent_complete": 60,
+          "milestones_passed": [
+            "bounded_contract",
+            "implemented_mechanism",
+            "executable_checks"
+          ],
+          "audited_at": "2026-11-16T20:34:59.535543+00:00",
+          "implemented_by": "Codex - image-evidence engineering lane",
+          "next_fix": "PM semantic/source integration and fresh isolated Linux execution; no FA/PA or image-origin release follows from reading producer declarations.",
+          "next_owner": "Codex image-evidence lane; PM integration review",
+          "evidence": [
+            "docs/image-declaration-profile-plan.md",
+            "docs/image-declaration-profile-result.md",
+            "runs/2026-11-16-image-declarations-component.json",
+            "runs/2026-11-16-image-declarations-real-sdk-mac.json",
+            "runs/2026-11-16-image-declarations-original-controls.json",
+            "runs/2026-11-16-image-declarations-default-compatibility.json",
+            "runs/2026-11-16-image-declarations-structure-correction.json",
+            "runs/2026-11-16-image-declarations-structure-real-sdk.json",
+            "runs/2026-11-16-image-declarations-regional-correction.json",
+            "runs/2026-11-16-image-declarations-regional-real-sdk.json"
           ],
           "new_tag_releases": 0,
           "independent_accuracy_evidence": false

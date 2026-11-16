@@ -24,6 +24,13 @@ Omit `--details PRIVATE/result` for a short console summary only. Deliberately r
 
 **Unavailable:** no usable result was obtained. A short category explains whether to check private files, pinned cache, dependencies, supported sandbox or deadline. Exit status is `2`; the command returns no partial result or tag.
 
+## Choose a particular reference passage
+
+The optional [explicit reference-pair path](selected-reference-comparison.md) binds
+one claim line and one reference line you choose, then uses the same existing
+worker. It does not lower the retrieval threshold or claim automatic search.
+Its separate result profile reports that retrieval was not evaluated.
+
 ## Reproduce the limits
 
 The default ASCII word-count cosine selector uses `0.75`. “The room is empty.” and “There are people in the room.” score about `0.408`: the default misses a relevant contradictory reference. That failure remains in tests. An explicit `--threshold 0.4` exercises this particular selected pair; it is a research parameter, not a validated remedy or release threshold.

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "profile": "manifest-declaration-diagnostic-plan/v1",
+  "recorded_at": "2026-11-16T21:00:41.618831+00:00",
+  "author": "Codex Debugging Lead; parent-authorized Linux collector correction",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA"
+  ],
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "failure": "Post-loop non-root Linux diagnostic readlink of /proc/1/ns/net raises PermissionError and aborts collection after the CLI assertions.",
+  "architecture": "Extract only the namespace diagnostic into a small helper so its PermissionError path can be tested without invoking the optional SDK. Keep the existing boolean field null when unreadable or not applicable; add a separate explicit status. Bind the new focused test in the collector input inventory.",
+  "status_contract": {
+    "observed": "Both namespace links read successfully; comparison is a known boolean.",
+    "not_readable": "Linux OSError; comparison is null, not a guessed boolean.",
+    "not_applicable": "Non-Linux; do not probe proc and comparison is null."
+  },
+  "risks": [
+    "A missing diagnostic must never be presented as known isolation.",
+    "The CI privileged unshare/readlink assertion remains the enforcement point before privilege drop; the application diagnostic must not replace or weaken it."
+  ],
+  "owned_files": [
+    "scripts/verify-manifest-declarations.py",
+    "tests/test_manifest_declarations_verifier.py"
+  ],
+  "unchanged_controls": [
+    "CI workflow and pre-drop kernel assertion",
+    "unshare and setpriv arguments",
+    "optional SDK identity/settings",
+    "CLI invocation assertions and deadlines",
+    "input/fixture limits",
+    "source-stability assertion"
+  ],
+  "sources_before": {
+    "scripts/verify-manifest-declarations.py": "962ef8346ce170303ff3dc2b3642b27049d5ce84129f11a3c148f250f3c114e4",
+    ".github/workflows/manifest-inspection.yml": "30ba0401be7a4e39f1fb624fed0c07533616edd7836d825d9408b9436f4f1542"
+  },
+  "verification": "Focused helper permission-denial, known same/different and non-Linux no-probe controls; no SDK/model/browser execution. Actual Linux collector acceptance remains pending the normal rerun.",
+  "requirements_closed": []
+}

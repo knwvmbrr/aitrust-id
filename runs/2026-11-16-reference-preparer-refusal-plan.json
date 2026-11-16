@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "profile": "reference-preparer-refusal-fix-plan/v1",
+  "recorded_at": "2026-11-16T20:30:06.831295+00:00",
+  "author": "Codex Debugging Lead; parent-authorized cross-agent review",
+  "scope_ids": [
+    "T-NF",
+    "T-FI",
+    "F-020b"
+  ],
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "failure": "On Python3.12 a self-referential output symlink makes Path.resolve raise RuntimeError; preparer escapes its fixed refusal with exit1 and raw private-path traceback.",
+  "architecture": "Keep the existing descriptor-bound private/no-overwrite helper. Catch RuntimeError at the preparer CLI refusal boundary, matching the consumer; add a real subprocess regression for a final-component cycle.",
+  "risks": [
+    "A broad error catch could hide implementation faults; retain a fixed Unavailable outcome, no success/partial result and no automatic retry.",
+    "Do not weaken private-directory, symlink, hardlink, regular-file or no-overwrite checks."
+  ],
+  "owned_source_files": [
+    "scripts/prepare-reference-selection.py",
+    "tests/test_selected_nli_references.py"
+  ],
+  "source_sha256_before": {
+    "scripts/prepare-reference-selection.py": "afc522821e35b0d6996f747841d398629447f976b90749c2ce17d09f5d4c2510",
+    "tests/test_selected_nli_references.py": "ab29ae0c0ff3ba174807a64f22a11b7e1d81b83d2be4000ea699dbbb1580400d"
+  },
+  "unchanged_contract": [
+    "exact subject/corpus/hash/span binding",
+    "optional/default consumer behavior",
+    "model/cache identity and runtime locks",
+    "55-second outer and45-second inner worker deadlines",
+    "network denial and declared review-window pre/post checks"
+  ],
+  "verification": "One affected preparer test group, including actual CLI symlink-cycle refusal, plus one current actual malformed-path reproduction; no model, browser or build execution.",
+  "percentages_changed": false,
+  "requirements_closed": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-203316-image-declarations-structure-precision-ecc539de",
+  "recorded_at": "2026-11-16T20:33:16.999335+00:00",
+  "author": "Codex - image-evidence engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85b885f44a5c663a37bb962e85c5efe93aea64a7",
+  "changed": "Treat multiple active creation/opening actions as unsupported structure with Unknown output, rather than claiming contradictory AI declarations.",
+  "proves": "Final149 focused tests and24 actual pinned-SDK profile calls pass on corrected source. The exact fixed explanation and reason are tested; prior149-test and24-call receipts remain historical and unchanged.",
+  "limits": "No parser, dependency, SDK setting, tag release or original requirement percentage changed. Component60%,132 complete/70 open remain; PM integration and fresh isolated Linux still pending.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA",
+    "X-07"
+  ],
+  "files": {
+    "tools/manifest_declarations.py": "fb9fb2394f3cf326f1b4d9ce66ab25a970016f2212befd47ef69be04e96ef439",
+    "tests/test_manifest_declarations.py": "8bf81e712c705b7cf0375eff4e853b0d56d7e6a6d58887b1abd7264fde70f72b",
+    "docs/image-declaration-profile-plan.md": "da38c7830a7f935037c90d7276f4fa1b7c0028e62fca9fd5e661cd93874e9fa5",
+    "docs/image-declaration-profile-result.md": "597c6bed9b4f05d01184657089f5f5c1c7f72f79f92d592798d190f129f09b87",
+    "docs/scope-progress.json": "5c2ea4e5167833b25b4e8e111b6386a6ec06bda1693d49b605af5a2548a99d47",
+    "docs/scope-progress.md": "e7487eb9cd07ee85fbabfa21412951e86e4e356d122cb3c3ecdfef88a49abc37",
+    "state.json": "c394429c9e3cb5a8ea52a1582afa683ef662a9c07d65334fe574388110535c77",
+    "runs/2026-11-16-image-declarations-structure-correction.json": "53d3f5ba088e98dbed62d36585fd26951a3762fb869e5d0823a423039e45c6ba",
+    "runs/2026-11-16-image-declarations-structure-real-sdk.json": "1450356f499525d07e56f9fc42800689af4771bf74ff4f036bc77e47695d6687"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-image-declarations-structure-correction.json",
+      "sha256": "53d3f5ba088e98dbed62d36585fd26951a3762fb869e5d0823a423039e45c6ba"
+    },
+    {
+      "path": "runs/2026-11-16-image-declarations-structure-real-sdk.json",
+      "sha256": "1450356f499525d07e56f9fc42800689af4771bf74ff4f036bc77e47695d6687"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:33:17.489200+00:00"
+    }
+  ]
+}

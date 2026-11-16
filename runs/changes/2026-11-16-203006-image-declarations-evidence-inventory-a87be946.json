@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-203006-image-declarations-evidence-inventory-a87be946",
+  "recorded_at": "2026-11-16T20:30:06.610152+00:00",
+  "author": "Codex - image-evidence engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85b885f44a5c663a37bb962e85c5efe93aea64a7",
+  "changed": "Bind the four new declaration execution receipts as changed files in the accountability event.",
+  "proves": "The first changelog verification correctly rejected four evidence files that were referenced but omitted from the explicit changed-file inventory; this follow-up supplies their current hashes.",
+  "limits": "Metadata bookkeeping only; no additional test execution, source behavior, tag release or full requirement completion.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA",
+    "X-07"
+  ],
+  "files": {
+    "runs/2026-11-16-image-declarations-component.json": "e89cef9665866a898204666aecea5b5809f82a6dc1a0f954ca6deabc07134d8a",
+    "runs/2026-11-16-image-declarations-default-compatibility.json": "a3da2ecec6f0a19c638634cf1bf13790a8b262cf4de9e29674ff6a56851cda72",
+    "runs/2026-11-16-image-declarations-original-controls.json": "ee6ce422420bff5cb91b746ae4af4ee3be49f227dea584b8d5e3d9c71208eabd",
+    "runs/2026-11-16-image-declarations-real-sdk-mac.json": "acd7b077bca48c747177bfd9de6ce66e4c83b8de607ad1da6865fe45b63a03bd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-image-declarations-component.json",
+      "sha256": "e89cef9665866a898204666aecea5b5809f82a6dc1a0f954ca6deabc07134d8a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:30:07.067205+00:00"
+    }
+  ]
+}

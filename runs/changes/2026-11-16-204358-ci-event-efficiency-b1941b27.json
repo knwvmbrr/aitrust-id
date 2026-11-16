@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-204358-ci-event-efficiency-b1941b27",
+  "recorded_at": "2026-11-16T20:43:58.493901+00:00",
+  "author": "Codex CI efficiency lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "92364964334668ee0dad44c1b517a58d3a3ddcae",
+  "changed": "Avoid duplicate feature-branch push executions for main CI and optional manifest inspection while preserving normal PR, main and tag checks.",
+  "proves": "Six existing workflow consumer controls pass; parsed before/after comparisons preserve every non-event field, all 12 jobs, signing permissions and optional path lists.",
+  "limits": "Hosted event acceptance and CI-minute savings remain unproven. No release gate, job, protection policy or original requirement completion changed.",
+  "scope_ids": [
+    "F-054",
+    "F-152"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "5f5209b50929296ce86c5104040caa5866edc641a74641b7bfb0e1442dd229bd",
+    ".github/workflows/manifest-inspection.yml": "30ba0401be7a4e39f1fb624fed0c07533616edd7836d825d9408b9436f4f1542",
+    "docs/ci-event-efficiency-plan.md": "416fd346bc8070c69992613d10a6207f849b3faacf9fa5f1f904e3ac441ba470",
+    "runs/2026-11-16-ci-event-efficiency.json": "916e8714c856ec49e51de110cd7c23e50c0ba9da06811eecbf6874fb4f4d77bd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-ci-event-efficiency.json",
+      "sha256": "916e8714c856ec49e51de110cd7c23e50c0ba9da06811eecbf6874fb4f4d77bd"
+    }
+  ],
+  "checks": []
+}

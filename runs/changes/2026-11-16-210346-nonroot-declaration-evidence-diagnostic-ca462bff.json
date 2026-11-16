@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-210346-nonroot-declaration-evidence-diagnostic-ca462bff",
+  "recorded_at": "2026-11-16T21:03:46.035246+00:00",
+  "author": "Codex Debugging Lead; Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "22d3f55e0b77dc688b718f1bb087f903bc634128",
+  "changed": "Make the optional declaration verifier report unreadable non-root proc diagnostics as unknown without changing the enforced network namespace or privilege drop.",
+  "proves": "Five focused controls pass for denied self/init namespace reads, known same/different namespaces and Mac non-probing. Kernel assertion, SDK/settings/limits and all actual CLI controls are unchanged; current personal-route boundary check passes. First hosted collector failure is preserved.",
+  "limits": "No Linux success inferred from the failed producer or unreadable diagnostic. Fresh hosted exact-source SDK run remains pending; no isolation guarantee is weakened, no new tag released and no original requirement closed. Scope132 complete/70 open.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "9e9a67e0a44bcef39795753e8597b8be0d52f07503aa2365e12120e3c665cf99",
+    "eval/route-boundaries.json": "56c0bdd9295c0a9da95c38dc225a692d971b54da502d4d033cbfac54095da7ab",
+    "runs/2026-11-16-declaration-collector-boundaries.json": "01caa76b0e1d78c913d4add4b656c2f7fe0f7d1561f52cf177ae59026c74d517",
+    "runs/2026-11-16-manifest-declaration-diagnostic-controls.json": "556fa78973a303293eee3103f01c198431f32d84939e3c710ff58f4e164a4d2e",
+    "runs/2026-11-16-manifest-declaration-diagnostic-plan.json": "1a8705afcab7adfdc652360e6a010d12eae9f3469b717c8f1c92c074a78c77d2",
+    "runs/2026-11-16-manifest-declaration-linux-collector-failed.json": "da39e45aa33f059c69e58d26e3979e73dd58f9641a5f7351b39d3c51283d2929",
+    "scripts/verify-manifest-declarations.py": "1c41601c7f4a1601318e9e223d9caf23a0e1f78924c743a0a4ebcafb06c75e5d",
+    "scripts/verify-route-boundaries.py": "61979fb7dbd9e0c9edb3297c33fe879b9103dd5ea69bf8eda7e303e42161111f",
+    "state.json": "0b2a73819c1efc4332fa587926e90b6b5b3e7577e1cd64ec26f35b1ae1d248de",
+    "tests/test_manifest_declarations_verifier.py": "0436232452d587df6c1529cee908c54df7ca969d093edf8117effc017aa4cde5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-manifest-declaration-linux-collector-failed.json",
+      "sha256": "da39e45aa33f059c69e58d26e3979e73dd58f9641a5f7351b39d3c51283d2929"
+    },
+    {
+      "path": "runs/2026-11-16-manifest-declaration-diagnostic-controls.json",
+      "sha256": "556fa78973a303293eee3103f01c198431f32d84939e3c710ff58f4e164a4d2e"
+    },
+    {
+      "path": "runs/2026-11-16-declaration-collector-boundaries.json",
+      "sha256": "01caa76b0e1d78c913d4add4b656c2f7fe0f7d1561f52cf177ae59026c74d517"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T21:03:46.717404+00:00"
+    }
+  ]
+}

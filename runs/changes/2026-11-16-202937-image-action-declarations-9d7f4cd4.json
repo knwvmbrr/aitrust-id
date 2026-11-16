@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-202937-image-action-declarations-9d7f4cd4",
+  "recorded_at": "2026-11-16T20:29:37.736049+00:00",
+  "author": "Codex - image-evidence engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85b885f44a5c663a37bb962e85c5efe93aea64a7",
+  "changed": "Add an opt-in versioned PNG profile for explicit active-record generative creation/edit action declarations while keeping AI origin Unknown and issuing no tags.",
+  "proves": "149 focused tests pass; actual pinned SDK passes24 new-profile calls and21 original controls. Six default JSON/text outputs and statuses are byte-identical to the prior committed reader. Authored synthetic controls, privacy refusals and initial failures are retained.",
+  "limits": "Component60% pending PM semantic/source integration and fresh isolated Linux execution; default parser pins/settings unchanged. No FA/PA release, independent accuracy, complete C2PA conformance, Mac kernel no-egress or original requirement closure.132 complete;70 open remain.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA",
+    "X-07"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "0c64b661e1b6085fcc416e76b2a2e498745d09ada0e816e78963caabe6062767",
+    "README.md": "7c165b97ca1325239fcae11d5933cb50ca431f841c8eb2de26cde2ddf4ac12d6",
+    "docs/manifest-inspection.md": "07ed75a72a1b35d6b5a2ec2596687d14d54c7f18ef23bc114a8618f949dae46c",
+    "docs/scope-progress.json": "bb3093250c2de4ab1772ea17de82352a7d8ec2f714e43b08b3372290cd305d05",
+    "docs/scope-progress.md": "a6d14caa6c37d36c3a25f1a99f00d9e44af4f3dde1a6189f6b4f742e90376d42",
+    "scripts/inspect-manifest.py": "d2efc0fa6b2d76b71ad16802d65ca3c6c5a71a62f2feacae424d4136cf7ee05c",
+    "state.json": "17dbb75333f6ce52b8b0b360bf6a4da1b68ca10af9527601abad9644dc16e356",
+    "tests/test_manifest_workflow.py": "06252aaa124cce17401f96f5a3f15291370c1b40007ee6727057c48f4cd6cb77",
+    "docs/image-declaration-profile-plan.md": "fc40bbe089df363c33b0052a12135fd983aac3ff65c90c0ce3070007a3577cc2",
+    "docs/image-declaration-profile-result.md": "d32c103dd505a999c721e17ae0f3f615b0b3dbdbc14a7a176f9834e490c92d25",
+    "scripts/verify-manifest-declarations.py": "962ef8346ce170303ff3dc2b3642b27049d5ce84129f11a3c148f250f3c114e4",
+    "tests/test_manifest_declarations.py": "6374288fd29e73d4917ee17950bc8531ff58445caab624f57b6d3c38f1b81a54",
+    "tools/manifest_declarations.py": "b16e0fcb619ee846ef70fc940f4b244a4c61f61c644e28dafd0c88337cdb6304",
+    "tests/fixtures/c2pa-declarations-2026/compatible-declarations.png": "f8339b4e164b6eca556d723d55c990adaa224ea234b033b8054b67e63b3cd91d",
+    "tests/fixtures/c2pa-declarations-2026/generate.py": "29ed56a07c0f0f234006dd3ba0d93d81bc408357b19d0675ff6a6a87c63fb3a8",
+    "tests/fixtures/c2pa-declarations-2026/template-only.png": "7d16ec708b002f3ea814aac7fbd459296f68dd84257bd08f0b469873eebd504d",
+    "tests/fixtures/c2pa-declarations-2026/non-generative.png": "2fe6043ccd7c41b82e0e2d865372314efa4eb89fc047add644006d97eb1a7416",
+    "tests/fixtures/c2pa-declarations-2026/manifest.json": "54fd3b6929367181c30471840cd4cb3c50873cdd34acd606d66e38e37a8a1bdf",
+    "tests/fixtures/c2pa-declarations-2026/declared-creation.png": "2cc18ae4fd2173131cea4a6a793a510f5e4fea98259ffb1569d41e7a105dff9a",
+    "tests/fixtures/c2pa-declarations-2026/custom-declaration.png": "3d4d7bfe0da49c970f7eb260f7d81e4368895dc24fc78cfcaa72f78a3022ff43",
+    "tests/fixtures/c2pa-declarations-2026/declared-creation-altered.png": "bae017fce9e990e06ad547c4913d62c3426eeb7808daebdc2de7577b7b170161",
+    "tests/fixtures/c2pa-declarations-2026/declared-edit.png": "a437e1c5b206a75b09f3024e56ecfecbc202a9501040657c8cdb42735454764e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-image-declarations-component.json",
+      "sha256": "e89cef9665866a898204666aecea5b5809f82a6dc1a0f954ca6deabc07134d8a"
+    },
+    {
+      "path": "runs/2026-11-16-image-declarations-real-sdk-mac.json",
+      "sha256": "acd7b077bca48c747177bfd9de6ce66e4c83b8de607ad1da6865fe45b63a03bd"
+    },
+    {
+      "path": "runs/2026-11-16-image-declarations-original-controls.json",
+      "sha256": "ee6ce422420bff5cb91b746ae4af4ee3be49f227dea584b8d5e3d9c71208eabd"
+    },
+    {
+      "path": "runs/2026-11-16-image-declarations-default-compatibility.json",
+      "sha256": "a3da2ecec6f0a19c638634cf1bf13790a8b262cf4de9e29674ff6a56851cda72"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:29:38.288014+00:00"
+    }
+  ]
+}

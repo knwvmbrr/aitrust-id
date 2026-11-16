@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-16T20:33:06.767593+00:00",
+  "pass": true,
+  "author": "Codex - image-evidence engineering lane",
+  "correction": "Multiple inception actions are an unsupported structure, not contradictory AI declarations.",
+  "declaration_state": "UNKNOWN",
+  "reason": "multiple_inception_actions_not_supported",
+  "fixed_sentence": "The record contains multiple creation/opening actions; this profile cannot interpret it.",
+  "sources": {
+    "tools/manifest_declarations.py": "fb9fb2394f3cf326f1b4d9ce66ab25a970016f2212befd47ef69be04e96ef439",
+    "tests/test_manifest_declarations.py": "8bf81e712c705b7cf0375eff4e853b0d56d7e6a6d58887b1abd7264fde70f72b",
+    "scripts/inspect-manifest.py": "d2efc0fa6b2d76b71ad16802d65ca3c6c5a71a62f2feacae424d4136cf7ee05c",
+    "scripts/verify-manifest-declarations.py": "962ef8346ce170303ff3dc2b3642b27049d5ce84129f11a3c148f250f3c114e4"
+  },
+  "focused_tests": {
+    "tests": 149,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "real_profile_cli_calls": 24,
+  "real_profile_case_groups": 12,
+  "new_real_evidence": "runs/2026-11-16-image-declarations-structure-real-sdk.json",
+  "initial_correction_test_failure": {
+    "tests": 149,
+    "failures": 1,
+    "signature": "Negative test retained the removed conflict-branch sentence.",
+    "fix": "Assert exact Unknown reason and requested unsupported-structure explanation; no parser relaxation."
+  },
+  "prior_component_receipt_preserved": "runs/2026-11-16-image-declarations-component.json",
+  "prior_real_sdk_receipt_preserved": "runs/2026-11-16-image-declarations-real-sdk-mac.json",
+  "parser_pins_settings_unchanged": true,
+  "new_tag_releases": 0,
+  "original_requirement_percentages_changed": false,
+  "independent_accuracy_evidence": false,
+  "fresh_linux_execution": false
+}

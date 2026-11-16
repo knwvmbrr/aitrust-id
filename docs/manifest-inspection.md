@@ -119,3 +119,13 @@ Primary references: [pinned SDK](https://pypi.org/project/c2pa-python/0.38.0/),
 F-025’s declared attached-PNG inspection is complete as of 2026-10-11T15:19:36.016108+00:00. [PR 30](https://github.com/knwvmbrr/aitrust-id/pull/30) merged after 22 required engineering checks and two real optional SDK jobs passed on the reviewed source. The anonymously downloaded merged source also passed all 13 CLI controls. [Hosted execution and protected merge](../runs/2026-10-11-manifest-protected-acceptance.json) · [Merged-source execution](../runs/2026-10-11-manifest-merged-source-acceptance.json).
 
 This completes the parser job, with PNG as its supported format and explicit failures for other inputs. FA/PA tag release, broader media formats and fresh revocation checks stay open in their retained scope jobs. No accuracy or certification gate is waived.
+
+## Optional recorded-action declarations
+
+The separate `--profile action-declarations-v1` option reads bounded explicit
+generative creation/editing declarations in the active signed record. It retains
+separate image binding, signature, trust and unchecked revocation. Producer
+declarations do not independently establish AI origin; missing declarations do
+not establish human origin. No FA/PA tag is issued. See the
+[usage, coverage, tests and pending acceptance](image-declaration-profile-result.md)
+and [primary-source architecture plan](image-declaration-profile-plan.md).

@@ -1,18 +1,25 @@
 name: optional-manifest-inspection
 on:
   push:
+    branches: [main]
+    tags: ['**']
     paths:
       - 'protocol/**'
       - 'tests/test_manifest_inspection.py'
       - 'tests/test_manifest_workflow.py'
       - 'tools/manifest_inspection.py'
       - 'tools/manifest_presentation.py'
+      - 'tools/manifest_declarations.py'
       - 'tests/test_manifest_presentation.py'
+      - 'tests/test_manifest_declarations.py'
+      - 'tests/test_manifest_declarations_verifier.py'
       - 'scripts/inspect-manifest.py'
       - 'scripts/verify-manifest-inspection.py'
+      - 'scripts/verify-manifest-declarations.py'
       - 'eval/c2pa-inspection.lock'
       - 'eval/dependencies/c2pa-inspection.json'
       - 'tests/fixtures/c2pa-inspection-2026/**'
+      - 'tests/fixtures/c2pa-declarations-2026/**'
       - '.github/workflows/manifest-inspection.yml'
   pull_request:
     paths:
@@ -21,12 +28,17 @@ on:
       - 'tests/test_manifest_workflow.py'
       - 'tools/manifest_inspection.py'
       - 'tools/manifest_presentation.py'
+      - 'tools/manifest_declarations.py'
       - 'tests/test_manifest_presentation.py'
+      - 'tests/test_manifest_declarations.py'
+      - 'tests/test_manifest_declarations_verifier.py'
       - 'scripts/inspect-manifest.py'
       - 'scripts/verify-manifest-inspection.py'
+      - 'scripts/verify-manifest-declarations.py'
       - 'eval/c2pa-inspection.lock'
       - 'eval/dependencies/c2pa-inspection.json'
       - 'tests/fixtures/c2pa-inspection-2026/**'
+      - 'tests/fixtures/c2pa-declarations-2026/**'
       - '.github/workflows/manifest-inspection.yml'
 permissions:
   contents: read
@@ -46,9 +58,16 @@ jobs:
           sudo unshare -n sh -c 'set -e
           test "$(readlink /proc/self/ns/net)" != "$(readlink /proc/1/ns/net)"
           exec setpriv --reuid "$1" --regid "$2" --init-groups "$3" scripts/verify-manifest-inspection.py --output output/verification/manifest-inspection.json' _ "$(id -u)" "$(id -g)" "$(which python)"
+      - name: Exercise recorded declarations in network isolation
+        run: |
+          sudo unshare -n sh -c 'set -e
+          test "$(readlink /proc/self/ns/net)" != "$(readlink /proc/1/ns/net)"
+          exec setpriv --reuid "$1" --regid "$2" --init-groups "$3" scripts/verify-manifest-declarations.py --output output/verification/manifest-declarations.json' _ "$(id -u)" "$(id -g)" "$(which python)"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: optional-manifest-inspection
-          path: output/verification/manifest-inspection.json
+          path: |
+            output/verification/manifest-inspection.json
+            output/verification/manifest-declarations.json
           if-no-files-found: error

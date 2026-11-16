@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-16T20:34:59.535543+00:00",
+  "pass": true,
+  "author": "Codex - image-evidence engineering lane",
+  "source_review": "C2PA2.5 section16.9.1.5 permits assertion metadata to restrict evidence to part of an asset; current profile does not resolve that scope.",
+  "primary_source": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html#_region_of_interest",
+  "correction": "Require mapping metadata/parameters; return Unknown for any assertion metadata regionOfInterest and unresolved action parameters.relatedAssertions before accepting declarations.",
+  "unknown_reasons": [
+    "assertion_region_of_interest_not_supported",
+    "related_assertions_not_supported"
+  ],
+  "sources": {
+    "tools/manifest_declarations.py": "b09cb3fc4f09ae6e722ecb4b3518d708f302daa95f6ca9b67dba1d8d1f5b14ea",
+    "tests/test_manifest_declarations.py": "52825a2831aaa8907b0376356a3b2bad3a74a82767027ac455d1da89401bb0f3",
+    "scripts/inspect-manifest.py": "d2efc0fa6b2d76b71ad16802d65ca3c6c5a71a62f2feacae424d4136cf7ee05c",
+    "scripts/verify-manifest-declarations.py": "962ef8346ce170303ff3dc2b3642b27049d5ce84129f11a3c148f250f3c114e4"
+  },
+  "focused_tests": {
+    "tests": 166,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_scope_and_privacy_controls": 17
+  },
+  "real_profile_cli_calls": 24,
+  "real_profile_case_groups": 12,
+  "real_evidence": "runs/2026-11-16-image-declarations-regional-real-sdk.json",
+  "regional_and_related_semantic_guards_exercised_in": "in-memory bound-report focused controls; no independently sourced regional corpus",
+  "prior_receipts_preserved": [
+    "runs/2026-11-16-image-declarations-component.json",
+    "runs/2026-11-16-image-declarations-real-sdk-mac.json",
+    "runs/2026-11-16-image-declarations-structure-correction.json",
+    "runs/2026-11-16-image-declarations-structure-real-sdk.json"
+  ],
+  "parser_pins_settings_unchanged": true,
+  "new_tag_releases": 0,
+  "original_requirement_percentages_changed": false,
+  "independent_accuracy_evidence": false,
+  "fresh_linux_execution": false
+}

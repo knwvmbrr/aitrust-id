@@ -1,0 +1,16 @@
+{
+  "profile": "selected-reference-readonly-cross-review/v1",
+  "captured_at": "2026-11-16T20:27:45.567127+00:00",
+  "commit": "a471c979130a5d1531fe0beb7f4a637955987872",
+  "python": "3.12.14",
+  "case": "private output final-component self-referential symlink",
+  "expected_exit": 2,
+  "actual_exit": 1,
+  "traceback_present": true,
+  "private_path_canary_echoed": true,
+  "stdout_empty": true,
+  "model_invoked": false,
+  "repo_status_unchanged": true,
+  "stderr_sha256": "d78efd26abb4f44101a9b63ee66db38cdc3b3c9ba12701254e625e99c04c384c",
+  "finding": "prepare-reference-selection main omits RuntimeError from its fixed-diagnostic catch; Path.resolve on a symlink cycle raises RuntimeError on supported Python3.12."
+}

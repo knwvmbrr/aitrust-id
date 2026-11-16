@@ -1,0 +1,17 @@
+{
+  "format": "ai-trust-id-selected-reference-retained-failure/v1",
+  "captured_at": "2026-11-16T20:16:44.559081+00:00",
+  "pass": false,
+  "checked_by": "Codex NF/FI evidence lane",
+  "stage": "optional_module_import_isolation_candidate",
+  "error_signature": "AttributeError: list object has no attribute observe",
+  "root_cause": "New module variable selected was overwritten by the existing selected pair list in check().",
+  "failed_checks": 4,
+  "passed_checks": 162,
+  "source_sha256": "02f0ce152e2656117b4034cf7557cfc35de248bf85ab78496ee91a784a507d1b",
+  "junit_sha256": "bcab544d191370fffb8d8a2a0ebf8622c51bcddc4e3e28814a8ac025b1a0e8bb",
+  "actual_model_inference": false,
+  "independent_accuracy_evidence": false,
+  "requirements_closed": 0,
+  "fix": "Use distinct names for the optional module and validated worker pair list; rerun affected tests after that correction."
+}

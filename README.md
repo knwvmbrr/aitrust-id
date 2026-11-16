@@ -132,6 +132,12 @@ metadata; full assertions require an explicit new private report file. It neithe
 issues image credentials nor releases FA/PA. The documented C2PA signal remains
 a proposed observation, with its own runnable source and test fixtures.
 
+An opt-in [recorded-action declaration profile](docs/image-declaration-profile-result.md)
+can read supported generative creation/editing statements from the bound active
+PNG record. These remain producer claims: AI origin is Unknown and no tag is
+issued. Default inspection output is unchanged; this component awaits integration
+review and fresh isolated Linux execution.
+
 The optional [English sentence-pair model](docs/nli-pairs.md) compares selected
 passages locally in a separate pinned research environment. Real Mac and Linux
 execution, denied network access and private-output controls are recorded. It

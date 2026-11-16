@@ -31,6 +31,15 @@ class Parser(argparse.ArgumentParser):
     def error(self,message):
         self.exit(2,'Reference command refused; use --help for required arguments.\n')
 
+def selection_contract():
+    # A missing optional selection component cannot disable automatic retrieval.
+    try:
+        from research.nli import selected_references
+    except (ImportError,SyntaxError):
+        raise ReferenceFailure('selection_component_unavailable',
+            'Restore the reviewed optional selection component before using this route.') from None
+    return selected_references
+
 def pair_validator():
     spec=importlib.util.spec_from_file_location('reference_pair_contract',REPO/'scripts/check-nli-pairs.py')
     module=importlib.util.module_from_spec(spec)
@@ -87,8 +96,10 @@ def execute(request,cache,runner=run_owned):
         require(len(run.stdout)<=10000 and len(run.stderr)<=10000)
         return parse_details(source(base/'result/observations.json',REPO,100000),request)
 
-def check(record,subject,cache=None,threshold=.75,maximum=5,runner=run_owned):
-    request=references.prepare(record,subject,threshold,maximum)
+def check(record,subject,cache=None,threshold=.75,maximum=5,runner=run_owned,selection=None):
+    selected_contract=selection_contract() if selection is not None else None
+    request=(selected_contract.prepare(record,subject,selection) if selected_contract is not None
+        else references.prepare(record,subject,threshold,maximum))
     if request is None:
         result=references.observe(record,subject,None,None,threshold,maximum)
         result['network_control']='model_not_invoked'
@@ -99,14 +110,15 @@ def check(record,subject,cache=None,threshold=.75,maximum=5,runner=run_owned):
         (_,_,_,expected_premise,expected_hypothesis),row=next(rows)
         require((premise,hypothesis)==(expected_premise,expected_hypothesis))
         return row['logits'],row['token_count']
-    result=references.observe(record,subject,replay,output['model_identity'],threshold,maximum)
+    result=(selected_contract.observe(record,subject,selection,replay,output['model_identity'])
+        if selection is not None else references.observe(record,subject,replay,output['model_identity'],threshold,maximum))
     require(len(result['observations'])==len(output['pairs']))
     result['network_control']=control
     return result
 
 def summary(result,saved):
     return {'profile':result['profile'],'state':result['state'],
-        'retrieval_evaluation_obtained':True,'model_evaluation_obtained':result['model_evaluation_obtained'],
+        'retrieval_evaluation_obtained':result['retrieval_evaluation_obtained'],'model_evaluation_obtained':result['model_evaluation_obtained'],
         'passages_evaluated':len(result['observations']),
         'result':('A local model compared the selected reference passages. These are research observations, not verified facts.'
             if result['model_evaluation_obtained'] else 'No passage met this lexical selection threshold. This does not show the claim is false.'),
@@ -119,18 +131,29 @@ def main(argv=None):
     parser.add_argument('--corpus',type=Path,required=True)
     parser.add_argument('--subject',type=Path,required=True,help='Private UTF-8 text file, not shell argument text.')
     parser.add_argument('--model-cache',type=Path)
-    parser.add_argument('--threshold',type=float,default=.75)
-    parser.add_argument('--maximum',type=int,default=5)
+    parser.add_argument('--threshold',type=float,default=None)
+    parser.add_argument('--maximum',type=int,default=None)
+    parser.add_argument('--selection',type=Path,help='Explicit private selection.json; mutually exclusive with retrieval parameters.')
     parser.add_argument('--details',type=Path,help='New private output folder; never overwrite.')
     parser.add_argument('--review-windows',type=Path,
         help='Optional private declared-window policy for every attached reference; not freshness evidence.')
     args=parser.parse_args(argv)
     try:
+        require(args.selection is None or (args.threshold is None and args.maximum is None))
+        selection=None
+        if args.selection is not None:
+            selected=selection_contract()
+            selection=selected.capture(source(args.selection,REPO,selected.MAX_SELECTION_BYTES))
         record=corpus.parse(source(args.corpus,REPO,corpus.MAX_STORE_BYTES))
         subject=source(args.subject,REPO,8000).decode('utf-8','strict')
         policy = review_window.capture(source(args.review_windows, REPO, MAX_POLICY_BYTES)) if args.review_windows else None
         before = review_window.preflight(record, policy, review_window.utc_now()) if policy is not None else None
-        result=check(record,subject,args.model_cache,args.threshold,args.maximum)
+        threshold=.75 if args.threshold is None else args.threshold
+        maximum=5 if args.maximum is None else args.maximum
+        if selection is None:
+            result=check(record,subject,args.model_cache,threshold,maximum)
+        else:
+            result=check(record,subject,args.model_cache,selection=selection)
         after = review_window.preflight(record, policy, review_window.utc_now()) if policy is not None else None
         window_summary = review_window.summary(before, after) if policy is not None else None
         if args.details:

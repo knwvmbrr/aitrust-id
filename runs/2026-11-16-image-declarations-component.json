@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-11-16T20:28:23.840385+00:00",
+  "pass": true,
+  "author": "Codex - image-evidence engineering lane",
+  "source_base": "85b885f",
+  "profile": "attached-png-action-declarations/1.0.0",
+  "sources": {
+    "tools/manifest_declarations.py": "b16e0fcb619ee846ef70fc940f4b244a4c61f61c644e28dafd0c88337cdb6304",
+    "scripts/inspect-manifest.py": "d2efc0fa6b2d76b71ad16802d65ca3c6c5a71a62f2feacae424d4136cf7ee05c",
+    "scripts/verify-manifest-declarations.py": "962ef8346ce170303ff3dc2b3642b27049d5ce84129f11a3c148f250f3c114e4",
+    "tests/test_manifest_declarations.py": "6374288fd29e73d4917ee17950bc8531ff58445caab624f57b6d3c38f1b81a54",
+    "tests/test_manifest_workflow.py": "06252aaa124cce17401f96f5a3f15291370c1b40007ee6727057c48f4cd6cb77",
+    ".github/workflows/manifest-inspection.yml": "0c64b661e1b6085fcc416e76b2a2e498745d09ada0e816e78963caabe6062767"
+  },
+  "focused_tests": {
+    "tests": 149,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "pass": true
+  },
+  "first_failures_preserved": {
+    "fixture_authoring": {
+      "returncode": 1,
+      "error": "assertion.action.malformed: c2pa.created action must have a digitalSourceType",
+      "fix": "Negative template fixture now has explicit softwareImage; parser settings unchanged; ephemeral keys never written."
+    },
+    "focused_tests": {
+      "tests": 149,
+      "failures": 15,
+      "failed_cases": [
+        "test_bound_creation_is_a_recorded_statement_not_fa_or_truth",
+        "test_generation_and_generative_edit_are_compatible_not_a_human_sequence",
+        "test_instance_requires_its_own_exact_hashed_uri_success",
+        "test_revoked_signer_remains_visible_even_when_a_bound_declaration_is_read",
+        "test_multiple_inception_actions_are_a_visible_conflict_not_ai_origin",
+        "test_claimed_complete_history_is_not_verified_complete_history",
+        "test_malformed_or_oversized_action_data_refused[<lambda>1]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>2]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>3]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>4]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>5]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>6]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>7]",
+        "test_malformed_or_oversized_action_data_refused[<lambda>8]",
+        "test_optional_profile_cli_and_worker_refusal"
+      ],
+      "root_cause": "Exact-URI helper treated signer-untrusted status as cryptographic signature failure. Trust/revocation now remain separate, visible axes; other failures still block declaration binding."
+    },
+    "compatibility_runner": "First ad hoc comparison stopped on a nonexistent fixture filename. Retried using actual checked-in unsigned.png, signed.png and altered.png; no product source change."
+  },
+  "actual_new_profile_cli_calls": 24,
+  "actual_new_profile_case_groups": 12,
+  "actual_original_cli_controls": 21,
+  "actual_default_compatibility_cli_calls": 12,
+  "byte_identical_default_cases": 6,
+  "parser_pins_settings_unchanged": true,
+  "new_tag_releases": 0,
+  "independent_accuracy_evidence": false,
+  "original_requirement_percentages_changed": false,
+  "frozen_pixels_are_ai_origin_ground_truth": false,
+  "fresh_linux_execution": false,
+  "kernel_egress_isolation_claimed": false,
+  "remaining": [
+    "PM semantic/source review and integration with optional formatter isolation patch",
+    "Fresh hosted isolated Linux execution of exact integrated source",
+    "Real generation/editing evidence coverage and independent validation before any FA/PA tag release"
+  ]
+}
