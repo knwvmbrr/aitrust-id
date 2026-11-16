@@ -71,7 +71,8 @@ PATTERNS += ('tools/manifest_inspection.py', 'scripts/inspect-manifest.py',
 PATTERNS += ('tools/manifest_presentation.py', 'tests/test_manifest_presentation.py',
              'tests/test_mt_urgency_locality.py', 'docs/mt-urgency-locality-plan.md')
 PATTERNS += ('tools/manifest_declarations.py', 'scripts/verify-manifest-declarations.py',
-             'tests/test_manifest_declarations.py', 'tests/fixtures/c2pa-declarations-2026/*',
+             'tests/test_manifest_declarations.py', 'tests/test_manifest_declarations_verifier.py',
+             'tests/fixtures/c2pa-declarations-2026/*',
              'scripts/prepare-reference-selection.py', 'tests/test_selected_nli_references.py',
              'docs/selected-reference-pair-plan.md', 'docs/image-declaration-profile-plan.md',
              'docs/ci-event-efficiency-plan.md')

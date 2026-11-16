@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "profile": "manifest-declaration-namespace-diagnostic-controls/v1",
+  "captured_at": "2026-11-16T21:01:57.305099+00:00",
+  "pass": true,
+  "actual_focused_test_command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_manifest_declarations_verifier.py",
+    "-q"
+  ],
+  "exit_status": 0,
+  "deadline_seconds": 30,
+  "counts": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    "Linux self namespace PermissionError => null/not_readable",
+    "Linux init namespace PermissionError => null/not_readable",
+    "Readable same namespaces => false/observed",
+    "Readable different namespaces => true/observed",
+    "macOS => null/not_applicable without proc access"
+  ],
+  "sources": {
+    "scripts/verify-manifest-declarations.py": "1c41601c7f4a1601318e9e223d9caf23a0e1f78924c743a0a4ebcafb06c75e5d",
+    "tests/test_manifest_declarations_verifier.py": "0436232452d587df6c1529cee908c54df7ca969d093edf8117effc017aa4cde5",
+    ".github/workflows/manifest-inspection.yml": "30ba0401be7a4e39f1fb624fed0c07533616edd7836d825d9408b9436f4f1542",
+    "scripts/verify-manifest-inspection.py": "3cd7dbba35d7401ab13d7573d581eab38b5c61cdc49834b0983ee363dd9ed89e",
+    "scripts/inspect-manifest.py": "e546208d95e3c665b1fe84c67a9bbdad9f032b8a19d7b58e363d8fc10c3ccbc7",
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
+    "tools/manifest_declarations.py": "b09cb3fc4f09ae6e722ecb4b3518d708f302daa95f6ca9b67dba1d8d1f5b14ea",
+    "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+    "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129"
+  },
+  "protected_files_unchanged_from_head": {
+    ".github/workflows/manifest-inspection.yml": true,
+    "scripts/verify-manifest-inspection.py": true,
+    "scripts/inspect-manifest.py": true,
+    "tools/manifest_inspection.py": true,
+    "tools/manifest_declarations.py": true,
+    "eval/c2pa-inspection.lock": true,
+    "eval/dependencies/c2pa-inspection.json": true
+  },
+  "actual_linux_proc_namespace_probe_executed": false,
+  "optional_sdk_executed": false,
+  "model_or_browser_executed": false,
+  "first_failed_run_preserved": "runs/2026-11-16-manifest-declaration-linux-collector-failed.json",
+  "actual_linux_collector_rerun_passed": false,
+  "kernel_assertion_replaced_by_diagnostic": false,
+  "independent_accuracy_evidence": false,
+  "requirements_closed": [],
+  "focused_log_sha256": "bfd00bb3bcdda5d833f449da4cf05e88a8444575ee70f710224d8b98ecf82f59",
+  "focused_xml_sha256": "a7035c49a4e629142c9998453c218360f90c47e1f0d054f3d8d9bd1967eeed5b"
+}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-210346-nonroot-declaration-evidence-diagnostic-ca462bff
+
+Recorded 2026-11-16T21:03:46.035246+00:00 · Contributor: Codex Debugging Lead; Codex PM · change
+
+- **Changed.** Make the optional declaration verifier report unreadable non-root proc diagnostics as unknown without changing the enforced network namespace or privilege drop.
+- **Evidence.** Five focused controls pass for denied self/init namespace reads, known same/different namespaces and Mac non-probing. Kernel assertion, SDK/settings/limits and all actual CLI controls are unchanged; current personal-route boundary check passes. First hosted collector failure is preserved. [Change record](./runs/changes/2026-11-16-210346-nonroot-declaration-evidence-diagnostic-ca462bff.json).
+- **Not claimed.** No Linux success inferred from the failed producer or unreadable diagnostic. Fresh hosted exact-source SDK run remains pending; no isolation guarantee is weakened, no new tag released and no original requirement closed. Scope132 complete/70 open.
+
+
 ### 2026-11-16-205251-independent-evidence-current-verification-8a0369d3
 
 Recorded 2026-11-16T20:52:51.343634+00:00 · Contributor: Codex PM · change

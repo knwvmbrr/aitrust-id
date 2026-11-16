@@ -17,12 +17,27 @@ from tools import manifest_declarations as declarations
 from protocol.reports import write_report
 
 
+def network_namespace_observation():
+    """Diagnostic only; CI enforces isolation before dropping privileges."""
+    isolated = None
+    status = 'not_applicable'
+    if sys.platform == 'linux':
+        try:
+            isolated = os.readlink('/proc/self/ns/net') != os.readlink('/proc/1/ns/net')
+            status = 'observed'
+        except OSError:
+            status = 'not_readable'
+    return {'network_namespace_differs_from_init': isolated,
+            'network_namespace_probe_status': status}
+
+
 def main():
     args = argparse.ArgumentParser(description=__doc__)
     args.add_argument('--output'); args = args.parse_args()
     paths = ['tools/manifest_inspection.py', 'tools/manifest_presentation.py', 'tools/manifest_declarations.py',
              'scripts/inspect-manifest.py', 'scripts/verify-manifest-declarations.py',
              'tests/test_manifest_declarations.py', 'tests/test_manifest_workflow.py',
+             'tests/test_manifest_declarations_verifier.py',
              'eval/c2pa-inspection.lock', 'eval/dependencies/c2pa-inspection.json',
              'protocol/corpus.py', 'protocol/normalization.py', 'protocol/unicode15-data.json', 'protocol/reports.py']
     for folder in ['c2pa-inspection-2026', 'c2pa-declarations-2026']:
@@ -98,14 +113,12 @@ def main():
         assert output.read_bytes() == saved
         cases.append({'case': 'explicit_private_export_and_no_overwrite', 'owner_private': True})
     stable = inventory() == before; assert stable
-    isolated = None
-    if sys.platform == 'linux': isolated = os.readlink('/proc/self/ns/net') != os.readlink('/proc/1/ns/net')
     proof = {'captured_at': datetime.now(timezone.utc).isoformat(), 'pass': True,
         'profile': declarations.PROFILE, 'sources': before, 'source_unchanged_during_execution': stable,
         'cases': cases, 'case_count': len(cases), 'actual_cli_calls': calls,
         'package_version': pins['package_version'], 'sdk_version': pins['sdk_version'],
         'native_sha256': hashlib.sha256(Path(native).read_bytes()).hexdigest(),
-        'effective_user_is_root': os.geteuid() == 0, 'network_namespace_differs_from_init': isolated,
+        'effective_user_is_root': os.geteuid() == 0, **network_namespace_observation(),
         'settings': parser.SETTINGS, 'authored_declarations_are_ai_origin_ground_truth': False,
         'new_tag_releases': 0, 'independent_accuracy_evidence': False}
     if args.output: write_report(args.output, proof, root=ROOT)
