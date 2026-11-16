@@ -11,35 +11,38 @@
 }
 :root {
   color-scheme: light;
-  --page: #f7f8f6;
-  --panel: #ffffff;
-  --foreground: #202723;
-  --secondary: #56635c;
-  --divider: #d8dfd9;
-  --control-border: #77867c;
+  --page: #f3f1e7;
+  --panel: #fffef8;
+  --foreground: #20281e;
+  --secondary: #53604b;
+  --divider: #d7dccb;
+  --control-border: #72806a;
+  --seasonal-pattern: url("/camo-q4.svg#light");
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --page: #101512;
-  --panel: #19211c;
-  --foreground: #edf2ee;
-  --secondary: #afbeb3;
-  --divider: #46554b;
-  --control-border: #83978a;
+  --page: #11170f;
+  --panel: #1c2419;
+  --foreground: #f0f3e9;
+  --secondary: #b8c3ab;
+  --divider: #46523d;
+  --control-border: #879575;
+  --seasonal-pattern: url("/camo-q4.svg#dark");
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --page: #101512;
-    --panel: #19211c;
-    --foreground: #edf2ee;
-    --secondary: #afbeb3;
-    --divider: #46554b;
-    --control-border: #83978a;
+    --page: #11170f;
+    --panel: #1c2419;
+    --foreground: #f0f3e9;
+    --secondary: #b8c3ab;
+    --divider: #46523d;
+    --control-border: #879575;
+    --seasonal-pattern: url("/camo-q4.svg#dark");
   }
 }
 @layer base {
-  body { @apply m-0 bg-canvas text-ink; font-family:'Nunito Sans',system-ui,sans-serif; }
+  body { @apply m-0 bg-canvas text-ink; font-family:'Nunito Sans',system-ui,sans-serif; background-image: var(--seasonal-pattern); background-size: 480px 320px; }
   button,a,input,select,textarea,summary,pre[tabindex="0"] { @apply outline-offset-4; }
   button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,pre[tabindex="0"]:focus-visible { @apply outline-2 outline-ink; }
   p { @apply text-pretty; }
@@ -97,3 +100,11 @@
  .performance-target { background: CanvasText; }
 }
 .performance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: .75rem; }
+
+/* Q4 2026 woodland: decorative only; reading panels and tag meanings stay solid. */
+@media (forced-colors: active) {
+  body { background-image: none; }
+}
+@media print {
+  body { background-image: none; }
+}

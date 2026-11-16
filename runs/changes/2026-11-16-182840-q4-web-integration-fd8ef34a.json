@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-182840-q4-web-integration-fd8ef34a",
+  "recorded_at": "2026-11-16T18:28:40.241867+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b6b83243db2901a4a29bdd663ba46f452e17f27",
+  "changed": "Integrate quarterly background, truthful search metadata, protected CI checks, scope evidence and specialist ownership.",
+  "proves": "Built 36 canonical pages and 20 purpose-specific summaries; theme contrast, system/light/dark and 20 modal accessibility workflows pass.",
+  "limits": "Publication pending. No Google indexing measurement, native TestFlight acceptance, collection or new full requirement closure.",
+  "scope_ids": [
+    "F-139",
+    "N-010"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "9d439349cdd8f6a47eef833ed1811b41fd994c75694069f96b99c8720fca15b8",
+    "docs/scope-60-execution.md": "46063cfb9dc4d61d7f74ba3114866f3d884ac8be0ca4554436e40ded1b441217",
+    "docs/scope-progress.json": "8f19dfd433b211bc4685b6d9fae62985ec3a756352a8d64f8993b5ac2a884ca8",
+    "docs/scope-progress.md": "a5280bb7c5502a061d57c69b78771b22e4877ce287ad0bcdcb966336eb8965ad",
+    "package.json": "5d966de8b3cf218bc43aeaca9ccc642bfb50370edb1581b8386ebb5ffb035c96",
+    "site/index.html": "813f6059176f52616b7e2fa012c1e1db75082d3fcdd565049cfd5a865e93c0bf",
+    "site/public/reference/public-scope.json": "377479f4c83e159e9b3b9a34f963c18ca27cc7d1aeac62f1213d0976bf24fcbe",
+    "site/public/theme.js": "c212d1069cb9da9cce8baf96707b92ed58d9d7b9050e922fce5382527c8d1ff7",
+    "site/scripts/prepare.mjs": "a5d77ad0ba4047b441f040bd8a50d9c56844e81caa98b7b9687535486ec36b6a",
+    "site/scripts/render-reference.mjs": "1f834a7f6af86528efae13de7c2b7266ea93dee55ef0c101448eafd049b355c6",
+    "site/scripts/seo.mjs": "13596d28b2574b6a20fb5a8457da4085d7a2cfaa942d9dfcd1c8600d6441bdf0",
+    "site/src/public-scope.json": "377479f4c83e159e9b3b9a34f963c18ca27cc7d1aeac62f1213d0976bf24fcbe",
+    "site/src/scope-manifest.json": "44b33006363ad51fc807a07e5fe7abcf71926cce682f7627e9e755c47e616143",
+    "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
+    "state.json": "6d44f0e8bd7fa468564992fe3398dd13ca52c062aebc4530b5471430c40f0ae5",
+    "docs/quarterly-brand-and-agent-plan.md": "81c202b73df9724557f3b27913b28e07531349392a2a3eb36373ad2134aa60ed",
+    "docs/seo-audit-2026-11-16.md": "92b7727b0b32be9e9d6625b392a8b684f140f65e7566077e2a2487aaebd5e3f5",
+    "runs/2026-11-16-q4-web-theme-seo.json": "36a1dbb866607d8fc45aed86c6812fa1cea36d21bffdd82b8ef9e00ade314f5a",
+    "scripts/verify-seasonal-theme.cjs": "0e47c30595215668e73f33848340312e6a5ec0c78eb9cdd9548216e1439baf3b",
+    "scripts/verify-seo.mjs": "7d95a1a2470dc5c05a34716060f44a04fd13598334c80dea109bd35d294fd81b",
+    "site/public/camo-q4.svg": "01a426fecadfeece6a8380f92090903e6958cdb2d79fd984fb131e9305476d3b",
+    "tests/seo-metadata.mjs": "0965bb030856f4926840b9b69ba88661aa2b5b57ca2cbb56f31c5f080547c2fc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-q4-web-theme-seo.json",
+      "sha256": "36a1dbb866607d8fc45aed86c6812fa1cea36d21bffdd82b8ef9e00ade314f5a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T18:28:41.496873+00:00"
+    }
+  ]
+}

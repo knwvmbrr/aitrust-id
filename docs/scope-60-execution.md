@@ -173,3 +173,17 @@ requirement closure.
 All 202 records remain: **132 complete / 70 open**. Ten additional full closures
 are still required for 60. Accepted public tag releases, human/physical-phone,
 qualified legal, actual organization and recruited-pilot obligations are retained.
+
+
+## Q4 brand and independent execution lanes — November 16
+
+Preserve all 202 originals and **132 complete / 70 open**. The original rounded
+brand now has a subtle woodland background, solid reading surfaces and coherent
+light/dark tokens. Search descriptions use each tag's actual job and availability
+instead of implying every adopted tag has a checker. The web increment is
+isolated from native signing and Share verification, with separate specialist
+ownership and PM integration. The native and proprietary-assistance tracks remain
+subject to their own gates. No tag accuracy, human acceptance, collection or full
+requirement closure is inferred from visual/metadata checks. See
+[the plan](quarterly-brand-and-agent-plan.md) and
+[web checks](../runs/2026-11-16-q4-web-theme-seo.json).

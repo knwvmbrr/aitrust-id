@@ -1,13 +1,19 @@
+import {presentation} from '../src/presentation.js';
 export const origin='https://aitrustid.com';
-export const siteTitle='AI Trust ID — Explainable Tags and Evidence';
-export const siteDescription='Explore explainable tags and evidence for AI output. Try the free, open-source command-risk checker on your phone or computer. Each tag has its own validation gate before release.';
+export const siteTitle='AI Trust ID — Free, Open-Source AI Output Checks';
+export const siteDescription='Check AI answers for supported command-risk patterns with the free PS preview. Runs on your phone or computer. Explore each tag’s evidence, limits and validation.';
 export const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const tagPath=tag=>'/tags/'+tag.id.toLowerCase().replaceAll('_','-')+'/';
-export const tagDescription=tag=>`${tag.code} — ${tag.name}. ${tag.proposed?'Research proposal':'Development preview'}. Read its job, method, evidence, limits and validation gate.`;
+// Search and social summaries use the same purpose and availability as the page.
+// `proposed` alone cannot distinguish a working local tool from a planned tag.
+export function tagDescription(tag) {
+  const intro=presentation(tag);
+  return `${tag.code} — ${tag.name}. ${intro.summary} ${intro.availability}`;
+}
 export const website={'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:'AI Trust ID',description:siteDescription,inLanguage:'en'};
 export function metadata({title=siteTitle,description=siteDescription,path='/',schema}) {
   const url=origin+path;
-  const data=schema||{'@context':'https://schema.org','@graph':[website,{'@type':'CollectionPage','@id':url+'#page',url,name:title,description,inLanguage:'en',isPartOf:{'@id':website['@id']}}]};
+  const data=schema||{'@context':'https://schema.org','@graph':[website,{'@type':path==='/'||path==='/tags/'?'CollectionPage':'WebPage','@id':url+'#page',url,name:title,description,inLanguage:'en',isPartOf:{'@id':website['@id']}}]};
   const json=JSON.stringify(data).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
   return `<title>${escapeHTML(title)}</title>
 <meta name="description" content="${escapeHTML(description)}"/>

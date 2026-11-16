@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-16T18:27:21.174810+00:00",
+  "kind": "q4_web_branding_and_discovery",
+  "pass": true,
+  "scope": "Built-source engineering checks only; publication and Google indexing separate.",
+  "theme": {
+    "captured_at": "2026-11-16T18:25:27.723Z",
+    "pass": true,
+    "season": "2026-Q4",
+    "background_patch_opacity": 0.3,
+    "contrast_bound": "conservative opaque-patch lower bound",
+    "base": "http://127.0.0.1:5189",
+    "worst_case_contrast": {
+      "light": {
+        "foreground": 11.161,
+        "secondary": 4.914,
+        "control": 3.082
+      },
+      "dark": {
+        "foreground": 11.702,
+        "secondary": 7.153,
+        "control": 4.121
+      }
+    },
+    "explicit_light_dark": true,
+    "system_light_dark": true,
+    "solid_reading_panels": true,
+    "forced_colors_pattern_removed": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "physical_device": false,
+    "full_wcag_conformance_asserted": false
+  },
+  "built_seo": {
+    "pass": true,
+    "canonical_pages": 36,
+    "tag_summaries": 20
+  },
+  "metadata_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "build": {
+    "pass": true,
+    "environment": "existing verification Python with pinned project dependencies",
+    "retained_failure": "Initial default Python lacked pydantic; rebuilt successfully with the existing verification environment.",
+    "native_sources_in_this_branch_changed": false
+  },
+  "sources": {
+    "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
+    "site/public/camo-q4.svg": "01a426fecadfeece6a8380f92090903e6958cdb2d79fd984fb131e9305476d3b",
+    "site/public/theme.js": "c212d1069cb9da9cce8baf96707b92ed58d9d7b9050e922fce5382527c8d1ff7",
+    "site/scripts/seo.mjs": "13596d28b2574b6a20fb5a8457da4085d7a2cfaa942d9dfcd1c8600d6441bdf0",
+    "site/scripts/prepare.mjs": "a5d77ad0ba4047b441f040bd8a50d9c56844e81caa98b7b9687535486ec36b6a",
+    "site/scripts/render-reference.mjs": "1f834a7f6af86528efae13de7c2b7266ea93dee55ef0c101448eafd049b355c6",
+    "tests/seo-metadata.mjs": "0965bb030856f4926840b9b69ba88661aa2b5b57ca2cbb56f31c5f080547c2fc",
+    "scripts/verify-seo.mjs": "7d95a1a2470dc5c05a34716060f44a04fd13598334c80dea109bd35d294fd81b",
+    "scripts/verify-seasonal-theme.cjs": "0e47c30595215668e73f33848340312e6a5ec0c78eb9cdd9548216e1439baf3b",
+    ".github/workflows/ci.yml": "9d439349cdd8f6a47eef833ed1811b41fd994c75694069f96b99c8720fca15b8",
+    "package.json": "5d966de8b3cf218bc43aeaca9ccc642bfb50370edb1581b8386ebb5ffb035c96"
+  },
+  "requirements_closed": [],
+  "native_theme_accepted": false,
+  "independent_accuracy_evidence": false,
+  "google_indexing_verified": false,
+  "published": false
+}

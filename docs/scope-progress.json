@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-12T19:00:32.851658+00:00",
+  "audited_at": "2026-11-16T18:27:21.174810+00:00",
   "client_date": "2026-11-12",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -5556,7 +5556,9 @@
         "docs/reproducibility-controls-result.md",
         "tests/test_reproducibility_controls.py",
         "runs/2026-10-10-reproducibility-python.json",
-        "runs/2026-10-10-accessibility-release-refusal.json"
+        "runs/2026-10-10-accessibility-release-refusal.json",
+        "docs/quarterly-brand-and-agent-plan.md",
+        "runs/2026-11-16-q4-web-theme-seo.json"
       ],
       "evidence_scope": "Website and extension share identical actual human-review and fresh-engineering release requirements; both require NVDA and VoiceOver, and missing evidence fails.",
       "required_acceptance": [],
@@ -8384,7 +8386,8 @@
         "tests/test_private_policy_cli.py",
         "runs/2026-10-11-private-policy-mac-controls.json",
         "runs/2026-10-11-private-policy-linux-controls.json",
-        "runs/2026-10-11-private-policy-staging-cleanup.json"
+        "runs/2026-10-11-private-policy-staging-cleanup.json",
+        "docs/quarterly-brand-and-agent-plan.md"
       ],
       "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
       "required_acceptance": [

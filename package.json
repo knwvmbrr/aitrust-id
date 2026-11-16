@@ -64,7 +64,9 @@
     "verify:fleet-evidence": "python3 scripts/verify-fleet-evidence.py",
     "hash-reports": "python3 scripts/hash-reports.py",
     "verify:hash-reports": "python3 scripts/verify-hash-reports.py",
-    "verify:hash-reports-evidence": "python3 scripts/verify-hash-reports-evidence.py"
+    "verify:hash-reports-evidence": "python3 scripts/verify-hash-reports-evidence.py",
+    "verify:seo": "node --test tests/seo-metadata.mjs && node scripts/verify-seo.mjs",
+    "verify:seasonal-theme": "node scripts/verify-seasonal-theme.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",
