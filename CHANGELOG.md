@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-031626-preserve-validated-ipa-9cd7e912
+
+Recorded 2026-11-16T03:16:26.196042+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve and inspect the exact IPA produced by successful Apple package validation.
+- **Evidence.** The private 12,925,499-byte IPA has a recorded SHA-256; both extracted bundle signatures, expected entitlements, version 1.0 (1) and all 32 resource comparisons pass. No artifact is reconstructed or substituted. [Change record](./runs/changes/2026-11-16-031626-preserve-validated-ipa-9cd7e912.json).
+- **Not claimed.** Binary stays private and is not an install download, TestFlight build or App Review approval. Current Share behavior and physical/independent acceptance remain open; no full closure.
+
+
 ### 2026-11-16-031203-controlled-share-diagnostic-3785e9fe
 
 Recorded 2026-11-16T03:12:03.151401+00:00 · Contributor: Codex · change

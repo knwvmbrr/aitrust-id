@@ -142,3 +142,15 @@ Local resource sealing and mode 0644 were inspected; the server's classification
 cause is unproven. The new module archive still requires actual native execution,
 signing and Apple acceptance. Upload remains unavailable. See the
 [repair plan and execution limits](ios-script-resource-plan.md).
+
+## Preserved validated package
+
+The exact 12,925,499-byte IPA produced by successful validation is preserved
+privately. Reinspection of that extracted IPA passes both strict signatures,
+expected entitlements, version 1.0 (1), and all 32 resource comparisons against
+current generated distribution inputs. Its SHA-256 is
+`d1d8cc7abb5321865dbc7548014d5771febed4c480fbadf7d52c79df1e995db2`.
+See [the IPA inspection](../runs/2026-11-15-validated-ipa-inspection.json).
+The binary is not committed or offered as an installation download. App Store
+Connect/TestFlight availability, current Share acceptance and final platform
+declarations remain separate from this preserved artifact.

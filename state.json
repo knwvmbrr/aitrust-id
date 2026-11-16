@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T03:12:01.848034+00:00",
+  "updated": "2026-11-16T03:16:26.153320+00:00",
   "active_increment": "Apple package validation passed. Source branch reconciles the published MT increment without losing any of 202 originals. Focused Share diagnostic without active signing passes one test and fails one; full integration remains withheld. 70 requirements remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1097,7 +1097,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T03:12:01.848034+00:00",
+  "updated_at": "2026-11-16T03:16:26.153320+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3090,7 +3090,14 @@
     "previous_signed_archive_evidence": "runs/2026-11-10-ios-signed-archive.json",
     "previous_signed_package_exported": true,
     "previous_signed_package_evidence": "runs/2026-11-10-ios-signed-package.json",
-    "owner_ui_handoff_pending": false
+    "owner_ui_handoff_pending": false,
+    "validated_ipa_preserved": {
+      "private": true,
+      "evidence": "runs/2026-11-15-validated-ipa-inspection.json",
+      "bytes": 12925499,
+      "sha256": "d1d8cc7abb5321865dbc7548014d5771febed4c480fbadf7d52c79df1e995db2",
+      "redistributed": false
+    }
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
