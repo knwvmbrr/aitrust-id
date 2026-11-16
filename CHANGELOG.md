@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-174252-native-result-lifecycle-source-boundaries-d4b9f6a9
+
+Recorded 2026-11-16T17:42:52.903690+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain actual five-case hosted UI success with failed result collection; reclaim the completed owned simulator before summary parsing and persist post-UI/final source identity on failures.
+- **Evidence.** The retained hosted result confirms five original UI cases passed with zero failures/skips; its overall producer remains failed. All 130 adjacent current lifecycle/package controls pass, including one-attempt cleanup, unchanged command bounds, strict exact-five refusal, source-change/unavailable capture and interruption preservation. Actual unsigned archive matches 34 resource copies. [Change record](./runs/changes/2026-11-16-174252-native-result-lifecycle-source-boundaries-d4b9f6a9.json).
+- **Not claimed.** Recovered summary is not substituted for the failed proof. New whole-producer acceptance remains pending. Memory pressure is not established as the collection-timeout cause. No TestFlight upload, signing completion, independent/physical/human acceptance or full requirement closure; preserve 202 records, 132 complete and 70 open. F-120 owner allocation stays open under the F-119-only decision.
+
+
 ### 2026-11-16-170410-testflight-draft-live-boot-diagnostics-fc9893ed
 
 Recorded 2026-11-16T17:04:10.726977+00:00 · Contributor: Codex · change

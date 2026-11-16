@@ -67,3 +67,59 @@ the unchanged five-second synthetic limit. The failed candidate is retained.
 All 117 adjacent packaging/verifier controls pass on the final source. The two
 old native-proof checks still fail their source guard, as intended. No simulator
 startup, current full-five pass or TestFlight availability is inferred.
+
+
+## Result-collection lifecycle ordering
+
+### Evidence and limit
+
+Hosted run 43914592758 completes boot, build and all five original UI workflows,
+then reaches its unchanged 30-second xcresult summary deadline. Its owned
+simulator is cleaned up successfully afterward. A later separate inspection
+parses the retained result bundle and confirms five passed, none failed/skipped.
+The original proof remains failed; that recovered summary cannot replace it.
+The host reports 7 GiB memory, three logical CPUs and 37.5 GB free disk. Resource
+pressure as the cause of the summary deadline is not established.
+
+### Architecture before implementation
+
+After UI execution finishes, capture the selected source hashes immediately,
+even when the UI command itself failed. Retain these under explicit post-UI
+fields. Reclaim only the verifier's owned disposable simulator before parsing
+its result bundle. The xcodebuild command has already exited and the result
+bundle is stored in the private output directory; simulator deletion must not
+remove or rewrite that bundle, project, sources or logs.
+
+Use one cleanup function and one attempt flag for shutdown/delete. Always try
+delete after a failed shutdown, but require both commands to succeed. A failed
+cleanup stops acceptance before result parsing and must not be retried by the
+outer finally block. Failures before UI completion still reach the same cleanup
+function from finally. Record a final source snapshot when a post-UI boundary
+exists, including on later result failure; missing or changed source identity
+keeps the proof failed.
+
+Retain the existing 90-second bound for each cleanup command, 30-second result
+summary, 600-second UI/build commands, 180-second boot, exact five-test predicate,
+source identity gate and strict owned-simulator cleanup condition. No retries,
+new runner, recovered-summary override or increased deadline. The change
+releases an unnecessary live resource; it does not establish a memory diagnosis
+or guarantee the next summary command will finish.
+
+### Risks and verification
+
+Risks are duplicate cleanup, accidentally parsing after failed cleanup, masking
+an original failure, dropping post-UI source identity, or treating xcodebuild's
+zero exit as sufficient acceptance. Exercise main's real report lifecycle with
+fake external commands and real temporary report files: success order; summary
+deadline; invalid summary; shutdown/delete failure; UI/build failure; source
+change or unavailable capture; source change during result handling. Assert one
+cleanup attempt, original command bounds and exact-five/source/cleanup gates.
+Retain the existing real subprocess/PTY tests. No native/UI execution is part of
+these focused tests. Actual acceptance requires a new complete source-bound
+producer run after handoff.
+
+Final adjacent controls pass 130/130, including an interruption that retains the
+original interruption and a failed cleanup record instead of masking it with a
+missing-key error. These are lifecycle controls only; the next full producer run
+must still pass all five workflows, strict cleanup and the original summary
+deadline before the selected native proof can change.

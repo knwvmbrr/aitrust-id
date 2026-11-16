@@ -233,3 +233,14 @@ archive again passes 34 resource comparisons. Old selected native evidence is
 still rejected as stale; no acceptance predicate, timeout or source guard is
 weakened. These are software and operating improvements, with the original
 **132 complete / 70 open** count preserved.
+
+
+The diagnostic producer later passes all five original hosted UI cases, then
+fails at result collection. The recovered exact summary remains separate from
+that failed proof. The next source revision captures source identity immediately
+after UI, performs one strict cleanup before parsing and records final identity
+even on a later failure. All 130 adjacent controls pass, and actual unsigned
+resource inspection stays complete. Current selected integration remains
+withheld until the whole producer passes. F-120's outstanding owner acceptance
+allocation was identified explicitly; the F-119-only decision is not extended
+to close another record. Count remains **132 complete / 70 open**.

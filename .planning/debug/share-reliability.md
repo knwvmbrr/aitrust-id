@@ -1,5 +1,5 @@
 ---
-status: diagnosing
+status: verifying
 trigger: "Native iOS Practice sharing / Share explicit Check intermittently do not act on the first UI-test tap"
 created: 2026-11-16
 updated: 2026-11-16
@@ -7,9 +7,9 @@ updated: 2026-11-16
 
 ## Current focus
 
-Both final-source hosted attempts are unavailable at boot before any build/UI workflow. No third unchanged retry. The new diagnostic revision preserves live boot/migration progress through a PTY, records only numeric host capacity and exact command-output hashes, and leaves all deadlines, strict cleanup and exact-five acceptance unchanged. All 117 adjacent packaging/verifier controls pass; current complete native proof remains source-stale and unselected. Owner-dependent signing is deferred.
+Hosted diagnostic source bd13d77 completes all five original UI workflows, but the producer fails at its 30-second result command. The recovered summary confirms5/5 and remains separate; post-UI source identity was not captured by that failed worker. The lifecycle revision now captures post-UI/final identity and reclaims only its completed simulator before parsing, under unchanged bounds. All130 adjacent controls pass; the next complete producer is still required. No selected-proof replacement or requirement closure.
 
-## Symptoms
+## Initial symptoms
 
 Expected: first Practice sharing tap opens UIKit activity sheet; choose AI Trust ID; fixed synthetic text arrives; explicit Check returns PS; cancel/clear during check, repeat and details preserve lifecycle rules.
 Actual: latest full run 3/5 (host workflows pass, two Share failures); unchanged-source focused diagnostic 1/2 (first tap leaves host app only; clear/repeat passes). Earlier all-five pass is historical, not acceptance of repaired behavior.
@@ -75,3 +75,10 @@ files_changed: mobile/ios/Tests/UIFlows.swift; docs/share-reliability-plan.md; .
 Run 43908324857 attempt1: bootstatus180s deadline, owned cleanup succeeds. Attempt2 (one predeclared fresh host): bootstatus180s and shutdown90s deadlines, deletion eventually succeeds but strict cleanup remains false. Neither executes a UI workflow. Raw phase output is buffered/lost, so no application failure or startup remedy is inferred.
 
 A controlled stdout experiment reproduces the observability gap. The final runner uses nonblocking PTY capture only for bootstatus with documented migration detail. It retains exact output counts/hashes and final return codes; normal JSON stays unchanged. A first large-output helper control fails its five-second bound due to fixed-sleep draining; readiness-based waiting repairs it within the same bound. Final adjacent suite117/117 passes. A separate combined suite retains two expected stale-native-proof failures; nothing is waived. Next publish this diagnostic revision and inspect one bounded hosted run, rather than repeating an unchanged attempt.
+
+
+## Current producer lifecycle
+
+The actual third hosted run is retained under runs/2026-11-16-hosted-five-ui-result-timeout.json. Boot/build/UI pass; result collection times out; strict cleanup passes. Local summary extraction confirms5 passed,0failed,0skipped within30seconds. No pass is manufactured from that recovery.
+
+Before the next run, one cleanup function/attempt flag reclaims the completed owned guest before result parsing. Post-UI and final source snapshots persist on failure. All130 adjacent controls pass, including original-interruption preservation. Current source has no full producer pass yet; all deadlines/exact-five/source/cleanup gates remain.

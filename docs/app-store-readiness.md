@@ -190,3 +190,20 @@ installation. It is not a TestFlight prerequisite: Apple's
 explicitly leaves normal TestFlight installation unaffected. No phone security
 setting needs to be weakened for that distribution route. Signing, reviewed
 upload and a real TestFlight build are still required.
+
+
+## Actual five-case UI success; producer acceptance still open
+
+Hosted run 43914592758 completes boot, build and all five original app/Share UI
+workflows with no failures or skipped cases. It fails afterward at the existing
+30-second result-summary command. Separate inspection of the retained result
+bundle confirms 5/5, but cannot create the missing complete source-bound proof.
+The [failed producer and recovered summary](../runs/2026-11-16-hosted-five-ui-result-timeout.json)
+remain separate evidence.
+
+The lifecycle revision reclaims only the completed owned simulator before
+summary parsing, retains immediate post-UI/final source snapshots, and permits
+only one strict cleanup attempt. All 130 adjacent controls pass and the current
+unsigned archive again matches all 34 resources. A new complete producer run
+remains required; signing, Apple revalidation of changed bytes, final platform
+declarations and TestFlight upload remain open. N-013 stays 60%.

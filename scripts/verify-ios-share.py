@@ -162,6 +162,7 @@ def main():
     args = parser.parse_args()
     os.umask(0o077)
     owned = None
+    cleanup_attempted = False
     created = False
     stage = 'prerequisites'
     report = {'pass': False, 'physical_device': False, 'independent_accuracy': False,
@@ -173,6 +174,27 @@ def main():
         return run_command(argv, output=output, stage=stage, report=report,
                            created=created, timeout=timeout, cleanup=cleanup,
                            terminal_output=terminal_output)
+
+    def cleanup_owned():
+        nonlocal stage, cleanup_attempted
+        if owned is None: return True
+        if cleanup_attempted: return report['owned_simulator_removed']
+        cleanup_attempted = True
+        report['owned_simulator_removed'] = False
+        previous_stage = stage
+        stage = 'cleanup'
+        clean = []
+        try:
+            for action in ['shutdown', 'delete']:
+                try:
+                    command(['xcrun', 'simctl', action, owned], timeout=90, cleanup=True)
+                    clean.append(action)
+                except (ValueError, OSError, subprocess.SubprocessError): pass
+            report['owned_simulator_removed'] = clean == ['shutdown', 'delete']
+            if not report['owned_simulator_removed']: report['pass'] = False
+            return report['owned_simulator_removed']
+        finally:
+            stage = previous_stage
 
     try:
         output = destination(output)
@@ -222,15 +244,30 @@ def main():
         stage = 'build'
         command([*build, 'build-for-testing', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
         stage = 'ui_workflows'
-        command([*build, '-resultBundlePath', str(output / 'workflow.xcresult'), '-test-timeouts-enabled', 'YES',
-                 '-default-test-execution-time-allowance', '120', '-maximum-test-execution-time-allowance', '150',
-                 'test-without-building', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
+        try:
+            command([*build, '-resultBundlePath', str(output / 'workflow.xcresult'), '-test-timeouts-enabled', 'YES',
+                     '-default-test-execution-time-allowance', '120', '-maximum-test-execution-time-allowance', '150',
+                     'test-without-building', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
+        finally:
+            # Keep this boundary even if UI or later result parsing fails.
+            report['post_ui_source_unchanged'] = False
+            try:
+                report['post_ui_sources'] = source_hashes()
+                report['post_ui_source_unchanged'] = report['post_ui_sources'] == before
+            except OSError:
+                report['post_ui_sources_unavailable'] = True
+        # The completed result bundle is on disk outside this simulator. Reclaim
+        # the owned guest before parsing it; do not retry a failed cleanup.
+        stage = 'cleanup'
+        if not cleanup_owned(): raise ValueError('Owned simulator cleanup failed')
+        stage = 'source_integrity'
+        if not report['post_ui_source_unchanged']:
+            raise ValueError('Sources changed or unavailable after UI execution')
         stage = 'result'
         measured = json.loads(command(['xcrun', 'xcresulttool', 'get', 'test-results', 'summary',
                                       '--path', str(output / 'workflow.xcresult'), '--format', 'json']))
         if not accepted_summary(measured): raise ValueError('Native workflow acceptance failed')
-        if source_hashes() != before: raise ValueError('Sources changed during execution')
-        report.update({'pass': True, 'sources': before, 'source_unchanged_during_execution': True,
+        report.update({'pass': True, 'sources': before,
                        'test_count': 5, 'runtime': runtime['name'], 'runtime_build': runtime['buildversion'],
                        'xcode': command(['xcodebuild', '-version']),
                        'sdk': command(['xcrun', '--sdk', 'iphonesimulator', '--show-sdk-version']),
@@ -246,14 +283,18 @@ def main():
         report.pop('pass_', None)
         print('Native Share verification unavailable; inspect the private stage logs.', file=sys.stderr)
     finally:
-        if owned:
-            stage = 'cleanup'
-            clean = []
-            for action in ['shutdown', 'delete']:
-                try: command(['xcrun', 'simctl', action, owned], timeout=90, cleanup=True); clean.append(action)
-                except (ValueError, OSError, subprocess.SubprocessError): pass
-            report['owned_simulator_removed'] = clean == ['shutdown', 'delete']
-            if not report['owned_simulator_removed']: report['pass'] = False
+        cleanup_owned()
+        if 'post_ui_source_unchanged' in report:
+            report['source_unchanged_during_execution'] = False
+            try:
+                report['final_sources'] = source_hashes()
+                report['source_unchanged_during_execution'] = (
+                    report['post_ui_source_unchanged'] and report['final_sources'] == before)
+            except OSError:
+                report['final_sources_unavailable'] = True
+            if not report['source_unchanged_during_execution']:
+                report['pass'] = False
+                report.setdefault('failed_stage', 'source_integrity')
         report['captured_at'] = datetime.now(timezone.utc).isoformat()
         if created:
             with (output / 'proof.json').open('x') as stream:
