@@ -92,3 +92,8 @@ verdict. Historical Linux receipts are not relabeled current by this change.
 
 [Use the working route](selected-reference-comparison.md) ·
 [Architecture and risks](selected-reference-pair-plan.md).
+
+
+## Cross-review repair: cyclic output path
+
+A separate engineering reviewer reproduced a private-path traceback when the output path was a self-referential symlink on supported Python3.12. The preparer now includes RuntimeError in its bounded refusal handling. Two focused private-output tests and a real CLI reproduction pass: exit2 with fixed Unavailable, no traceback/path echo, no overwrite, and unchanged inputs/symlink. The failed case is retained. The comparison CLI, selected-pair module, model/cache/network controls and deadlines are unchanged; earlier model evidence is preserved at its original source inventory, not rehashed to this preparer. No model rerun or parent requirement closure is claimed.

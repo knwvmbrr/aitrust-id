@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-203500-reference-preparer-private-refusal-47526fcb
+
+Recorded 2026-11-16T20:35:00.997387+00:00 · Contributor: Codex Debugging Lead; Codex PM integration · change
+
+- **Changed.** Refuse self-referential output symlinks with a fixed private-safe error in the selected-reference preparer, preserving inputs and refusing overwrite.
+- **Evidence.** An independent engineering reviewer reproduced exit1/private-path traceback; two focused controls and the real repaired CLI reproduce exit2 with fixed Unavailable, no private echo/traceback, unchanged inputs and preserved symlink. Consumer/model/deadline/network/window code is unchanged. [Change record](./runs/changes/2026-11-16-203500-reference-preparer-private-refusal-47526fcb.json).
+- **Not claimed.** Engineering review is not independent accuracy. Earlier model receipts retain their exact original input inventory; no additional model execution, broad test suite, tag release or full requirement closure. Scope remains132 complete and70 open.
+
+
 ### 2026-11-16-202244-selected-reference-pair-comparison-c5c76702
 
 Recorded 2026-11-16T20:22:44.962046+00:00 · Contributor: Codex NF/FI evidence lane · change

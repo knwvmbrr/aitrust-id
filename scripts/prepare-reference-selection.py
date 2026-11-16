@@ -35,7 +35,7 @@ def main(argv=None):
             'retrieval_performed': False, 'model_evaluation_obtained': False,
             'truth_established': False, 'tag_asserted': False}))
         return 0
-    except (ValueError, OSError, TypeError, KeyError, UnicodeError, RecursionError, PacketError):
+    except (ValueError, OSError, TypeError, KeyError, UnicodeError, RuntimeError, RecursionError, PacketError):
         print(json.dumps({'state': 'UNAVAILABLE', 'reason': 'private_reference_selection_refused',
             'next_step': 'Use current private inputs, supported nonempty line numbers and a new private output folder.',
             'tag_asserted': False}), file=sys.stderr)

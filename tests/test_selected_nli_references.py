@@ -164,6 +164,29 @@ def test_actual_preparer_creates_private_bound_record_without_echo(packet):
     assert result.returncode==2 and path.read_bytes()==before
 
 
+def test_actual_preparer_refuses_output_symlink_cycle_without_echo(packet):
+    output=packet['base']/'PRIVATE_SELECTION_OUTPUT_CANARY'
+    output.symlink_to(output.name)
+    before=output.lstat()
+    members=set(packet['base'].iterdir())
+    inputs={path:path.read_bytes() for path in [packet['corpus'],packet['query'],packet['selection_path']]}
+    command=[sys.executable,str(ROOT/'scripts/prepare-reference-selection.py'),
+        '--corpus',str(packet['corpus']),'--subject',str(packet['query']),
+        '--claim-line','1','--reference-document','manual','--reference-line','1','--output',str(output)]
+    result=subprocess.run(command,capture_output=True,timeout=5)
+    assert result.returncode==2 and not result.stdout
+    assert json.loads(result.stderr)=={'state':'UNAVAILABLE','reason':'private_reference_selection_refused',
+        'next_step':'Use current private inputs, supported nonempty line numbers and a new private output folder.',
+        'tag_asserted':False}
+    assert b'Traceback' not in result.stderr and output.name.encode() not in result.stderr
+    assert str(packet['base']).encode() not in result.stderr
+    after=output.lstat()
+    assert output.is_symlink() and output.readlink()==Path(output.name)
+    assert (before.st_dev,before.st_ino)==(after.st_dev,after.st_ino)
+    assert set(packet['base'].iterdir())==members
+    assert all(path.read_bytes()==raw for path,raw in inputs.items())
+
+
 @pytest.mark.parametrize('flag',['--threshold','--maximum'])
 def test_explicit_selection_does_not_ignore_retrieval_flags(packet,flag,capsys,monkeypatch):
     monkeypatch.setattr(cli,'check',lambda *a,**k:pytest.fail('Conflicting options invoked model'))
