@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-204136-independent-evidence-lane-integration-bf45076c
+
+Recorded 2026-11-16T20:41:36.188506+00:00 · Contributor: Codex PM with independent tag/evidence specialists · change
+
+- **Changed.** Combine the independently implemented selected-reference and active-image-declaration evidence paths; preserve default JSON, optional formatter isolation, structural/regional refusals and both attributed histories.
+- **Evidence.** All170 focused image parser/declaration/presentation/workflow controls pass on the reconciled CLI. NF/FI has166 affected contract controls, current actual private CLI/model execution, and a separately repaired cyclic-path refusal. Original202 records remain132 complete and70 open. [Change record](./runs/changes/2026-11-16-204136-independent-evidence-lane-integration-bf45076c.json).
+- **Not claimed.** New combined CLI/browser/Linux evidence remains pending. Supporting evidence paths do not issue NF/FI/FA/PA, establish AI origin/truth or satisfy independent/human tag validation. No full original requirement closure or TestFlight release.
+
+
+### 2026-11-16-203511-image-declarations-regional-scope-4fadc523
+
+Recorded 2026-11-16T20:35:11.299803+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Refuse unresolved assertion-metadata regions and action relatedAssertions before reporting a generative declaration; validate metadata and parameter mappings.
+- **Evidence.** Final166 focused controls and24 actual pinned-SDK profile calls pass.17 added scope/privacy controls preserve ordinary metadata, reject malformed mappings, and keep regional or related evidence Unknown without echoing embedded private text. [Change record](./runs/changes/2026-11-16-203511-image-declarations-regional-scope-4fadc523.json).
+- **Not claimed.** Semantic regional guards use bounded in-memory reports; no independently sourced regional corpus or accuracy claim. Prior receipts preserved. Component60%,132 complete/70 open remain; PM integration and fresh isolated Linux pending.
+
+
+### 2026-11-16-203316-image-declarations-structure-precision-ecc539de
+
+Recorded 2026-11-16T20:33:16.999335+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Treat multiple active creation/opening actions as unsupported structure with Unknown output, rather than claiming contradictory AI declarations.
+- **Evidence.** Final149 focused tests and24 actual pinned-SDK profile calls pass on corrected source. The exact fixed explanation and reason are tested; prior149-test and24-call receipts remain historical and unchanged. [Change record](./runs/changes/2026-11-16-203316-image-declarations-structure-precision-ecc539de.json).
+- **Not claimed.** No parser, dependency, SDK setting, tag release or original requirement percentage changed. Component60%,132 complete/70 open remain; PM integration and fresh isolated Linux still pending.
+
+
+### 2026-11-16-203006-image-declarations-evidence-inventory-a87be946
+
+Recorded 2026-11-16T20:30:06.610152+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Bind the four new declaration execution receipts as changed files in the accountability event.
+- **Evidence.** The first changelog verification correctly rejected four evidence files that were referenced but omitted from the explicit changed-file inventory; this follow-up supplies their current hashes. [Change record](./runs/changes/2026-11-16-203006-image-declarations-evidence-inventory-a87be946.json).
+- **Not claimed.** Metadata bookkeeping only; no additional test execution, source behavior, tag release or full requirement completion.
+
+
+### 2026-11-16-202937-image-action-declarations-9d7f4cd4
+
+Recorded 2026-11-16T20:29:37.736049+00:00 · Contributor: Codex - image-evidence engineering lane · change
+
+- **Changed.** Add an opt-in versioned PNG profile for explicit active-record generative creation/edit action declarations while keeping AI origin Unknown and issuing no tags.
+- **Evidence.** 149 focused tests pass; actual pinned SDK passes24 new-profile calls and21 original controls. Six default JSON/text outputs and statuses are byte-identical to the prior committed reader. Authored synthetic controls, privacy refusals and initial failures are retained. [Change record](./runs/changes/2026-11-16-202937-image-action-declarations-9d7f4cd4.json).
+- **Not claimed.** Component60% pending PM semantic/source integration and fresh isolated Linux execution; default parser pins/settings unchanged. No FA/PA release, independent accuracy, complete C2PA conformance, Mac kernel no-egress or original requirement closure.132 complete;70 open remain.
+
+
 ### 2026-11-16-203500-reference-preparer-private-refusal-47526fcb
 
 Recorded 2026-11-16T20:35:00.997387+00:00 · Contributor: Codex Debugging Lead; Codex PM integration · change

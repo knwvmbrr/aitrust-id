@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T20:21:54.299526+00:00",
+  "updated": "2026-11-16T20:39:57.878935+00:00",
   "active_increment": "Four-form caller-selected choice observation: 86 focused tests, 26 private CLI controls on Mac and isolated Linux, 40 protocol and 32 website checks, and reviewed 1008-file boundaries pass. Protected publication pending; 70 original requirements remain. No MT verdict or independent accuracy claim.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1117,7 +1117,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T20:21:54.299526+00:00",
+  "updated_at": "2026-11-16T20:39:57.878935+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1577,6 +1577,38 @@
       ],
       "optional_import_failure_isolation": "runs/2026-11-16-image-text-failure-isolation.json",
       "current_source_linux_sdk_execution_pending": true
+    },
+    "action_declarations": {
+      "profile": "attached-png-action-declarations/1.0.0",
+      "status": "implemented_mac_component_verified_pending_pm_and_linux",
+      "implemented_by": "Codex - image-evidence engineering lane",
+      "component_percent_complete": 60,
+      "scope_id": "F-025",
+      "opt_in_flag": "--profile action-declarations-v1",
+      "supported_container": "PNG only",
+      "new_tag_releases": 0,
+      "ai_origin": "unknown",
+      "independent_accuracy_evidence": false,
+      "focused_tests_passed": 166,
+      "actual_mac_cli_controls_passed": 24,
+      "default_output_byte_identical_cases": 6,
+      "fresh_linux_execution": false,
+      "publication_pending": true,
+      "plan": "docs/image-declaration-profile-plan.md",
+      "result": "docs/image-declaration-profile-result.md",
+      "evidence": [
+        "runs/2026-11-16-image-declarations-component.json",
+        "runs/2026-11-16-image-declarations-real-sdk-mac.json",
+        "runs/2026-11-16-image-declarations-original-controls.json",
+        "runs/2026-11-16-image-declarations-default-compatibility.json",
+        "runs/2026-11-16-image-declarations-structure-correction.json",
+        "runs/2026-11-16-image-declarations-structure-real-sdk.json",
+        "runs/2026-11-16-image-declarations-regional-correction.json",
+        "runs/2026-11-16-image-declarations-regional-real-sdk.json"
+      ],
+      "multiple_inception_state": "UNKNOWN",
+      "final_source_correction": "assertion_region_of_interest_and_related_assertions_not_supported",
+      "regional_or_related_scope": "UNKNOWN"
     }
   },
   "dependency_notice_evidence": {

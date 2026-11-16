@@ -1,0 +1,38 @@
+{
+  "pass": true,
+  "base_commit": "e02c175",
+  "cases": [
+    {
+      "fixture": "unsigned.png",
+      "format": "json",
+      "byte_identical": true
+    },
+    {
+      "fixture": "unsigned.png",
+      "format": "text",
+      "byte_identical": true
+    },
+    {
+      "fixture": "signed.png",
+      "format": "json",
+      "byte_identical": true
+    },
+    {
+      "fixture": "signed.png",
+      "format": "text",
+      "byte_identical": true
+    },
+    {
+      "fixture": "altered.png",
+      "format": "json",
+      "byte_identical": true
+    },
+    {
+      "fixture": "altered.png",
+      "format": "text",
+      "byte_identical": true
+    }
+  ],
+  "actual_cli_calls": 12,
+  "candidate_cli_sha256": "d2efc0fa6b2d76b71ad16802d65ca3c6c5a71a62f2feacae424d4136cf7ee05c"
+}

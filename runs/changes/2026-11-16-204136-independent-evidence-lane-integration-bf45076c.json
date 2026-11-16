@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-204136-independent-evidence-lane-integration-bf45076c",
+  "recorded_at": "2026-11-16T20:41:36.188506+00:00",
+  "author": "Codex PM with independent tag/evidence specialists",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2d7123d4d7561193555bda133b7399d7abb37c92",
+  "changed": "Combine the independently implemented selected-reference and active-image-declaration evidence paths; preserve default JSON, optional formatter isolation, structural/regional refusals and both attributed histories.",
+  "proves": "All170 focused image parser/declaration/presentation/workflow controls pass on the reconciled CLI. NF/FI has166 affected contract controls, current actual private CLI/model execution, and a separately repaired cyclic-path refusal. Original202 records remain132 complete and70 open.",
+  "limits": "New combined CLI/browser/Linux evidence remains pending. Supporting evidence paths do not issue NF/FI/FA/PA, establish AI origin/truth or satisfy independent/human tag validation. No full original requirement closure or TestFlight release.",
+  "scope_ids": [
+    "F-020b",
+    "F-025",
+    "T-NF",
+    "T-FI",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "0c64b661e1b6085fcc416e76b2a2e498745d09ada0e816e78963caabe6062767",
+    "README.md": "63d3daa3564731d7c654634b6913a8bd1191f92ec81649640a4f618d838d0d1c",
+    "docs/image-declaration-profile-plan.md": "9858c6a6a71af45e7d42133a718571fb4fa9cad80e03d2fe2f33a82a3b2a0d24",
+    "docs/image-declaration-profile-result.md": "c86a6727ca95635a9934892f229b8115cd53eaeb065bf64c9cfbd3bfba9437c0",
+    "docs/manifest-inspection.md": "07ed75a72a1b35d6b5a2ec2596687d14d54c7f18ef23bc114a8618f949dae46c",
+    "docs/scope-progress.json": "66cc9553b76625306bbbf9a7a15acf9397afa11858bb174b0ded8bf681a79432",
+    "docs/scope-progress.md": "67ffabffaf15531e08d9a551c1854d70cf9ced1cd57bee2afa41cd7b26b429c5",
+    "runs/2026-11-16-evidence-lanes-merge.json": "545db5087f15f6fb16a1b59d170afc77f2de38f0780049b4e5a87bca91786dc3",
+    "runs/2026-11-16-image-declarations-component.json": "e89cef9665866a898204666aecea5b5809f82a6dc1a0f954ca6deabc07134d8a",
+    "runs/2026-11-16-image-declarations-default-compatibility.json": "a3da2ecec6f0a19c638634cf1bf13790a8b262cf4de9e29674ff6a56851cda72",
+    "runs/2026-11-16-image-declarations-original-controls.json": "ee6ce422420bff5cb91b746ae4af4ee3be49f227dea584b8d5e3d9c71208eabd",
+    "runs/2026-11-16-image-declarations-real-sdk-mac.json": "acd7b077bca48c747177bfd9de6ce66e4c83b8de607ad1da6865fe45b63a03bd",
+    "runs/2026-11-16-image-declarations-regional-correction.json": "65873e75564f8b15f59213f3a53791ff69a4f0ad62227970a7c11296d8886a6f",
+    "runs/2026-11-16-image-declarations-regional-real-sdk.json": "4f9e964cfba8e31a4acc14cdb3530aec333a2f6d0951a597a05134ac69c37e84",
+    "runs/2026-11-16-image-declarations-structure-correction.json": "53d3f5ba088e98dbed62d36585fd26951a3762fb869e5d0823a423039e45c6ba",
+    "runs/2026-11-16-image-declarations-structure-real-sdk.json": "1450356f499525d07e56f9fc42800689af4771bf74ff4f036bc77e47695d6687",
+    "scripts/inspect-manifest.py": "e546208d95e3c665b1fe84c67a9bbdad9f032b8a19d7b58e363d8fc10c3ccbc7",
+    "scripts/verify-manifest-declarations.py": "962ef8346ce170303ff3dc2b3642b27049d5ce84129f11a3c148f250f3c114e4",
+    "state.json": "6a7b3be2949bb7dd2856d02448a36ce18c441bec0f1b43248df54128ef953dad",
+    "tests/fixtures/c2pa-declarations-2026/compatible-declarations.png": "f8339b4e164b6eca556d723d55c990adaa224ea234b033b8054b67e63b3cd91d",
+    "tests/fixtures/c2pa-declarations-2026/custom-declaration.png": "3d4d7bfe0da49c970f7eb260f7d81e4368895dc24fc78cfcaa72f78a3022ff43",
+    "tests/fixtures/c2pa-declarations-2026/declared-creation-altered.png": "bae017fce9e990e06ad547c4913d62c3426eeb7808daebdc2de7577b7b170161",
+    "tests/fixtures/c2pa-declarations-2026/declared-creation.png": "2cc18ae4fd2173131cea4a6a793a510f5e4fea98259ffb1569d41e7a105dff9a",
+    "tests/fixtures/c2pa-declarations-2026/declared-edit.png": "a437e1c5b206a75b09f3024e56ecfecbc202a9501040657c8cdb42735454764e",
+    "tests/fixtures/c2pa-declarations-2026/generate.py": "29ed56a07c0f0f234006dd3ba0d93d81bc408357b19d0675ff6a6a87c63fb3a8",
+    "tests/fixtures/c2pa-declarations-2026/manifest.json": "54fd3b6929367181c30471840cd4cb3c50873cdd34acd606d66e38e37a8a1bdf",
+    "tests/fixtures/c2pa-declarations-2026/non-generative.png": "2fe6043ccd7c41b82e0e2d865372314efa4eb89fc047add644006d97eb1a7416",
+    "tests/fixtures/c2pa-declarations-2026/template-only.png": "7d16ec708b002f3ea814aac7fbd459296f68dd84257bd08f0b469873eebd504d",
+    "tests/test_manifest_declarations.py": "52825a2831aaa8907b0376356a3b2bad3a74a82767027ac455d1da89401bb0f3",
+    "tests/test_manifest_workflow.py": "06252aaa124cce17401f96f5a3f15291370c1b40007ee6727057c48f4cd6cb77",
+    "tools/manifest_declarations.py": "b09cb3fc4f09ae6e722ecb4b3518d708f302daa95f6ca9b67dba1d8d1f5b14ea"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-evidence-lanes-merge.json",
+      "sha256": "545db5087f15f6fb16a1b59d170afc77f2de38f0780049b4e5a87bca91786dc3"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-pair.json",
+      "sha256": "00ec4d2e859cd3bc8b254c46db9f08833ce437d8e675e1077b43eeb97e8094a1"
+    },
+    {
+      "path": "runs/2026-11-16-selected-reference-preparer-fixed.json",
+      "sha256": "9f63ccd88bc26c91c290fa8421238a3edd7648dbdfc578e6ae06c704b06dbb70"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:41:36.888059+00:00"
+    }
+  ]
+}

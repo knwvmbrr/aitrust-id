@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-16-203511-image-declarations-regional-scope-4fadc523",
+  "recorded_at": "2026-11-16T20:35:11.299803+00:00",
+  "author": "Codex - image-evidence engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85b885f44a5c663a37bb962e85c5efe93aea64a7",
+  "changed": "Refuse unresolved assertion-metadata regions and action relatedAssertions before reporting a generative declaration; validate metadata and parameter mappings.",
+  "proves": "Final166 focused controls and24 actual pinned-SDK profile calls pass.17 added scope/privacy controls preserve ordinary metadata, reject malformed mappings, and keep regional or related evidence Unknown without echoing embedded private text.",
+  "limits": "Semantic regional guards use bounded in-memory reports; no independently sourced regional corpus or accuracy claim. Prior receipts preserved. Component60%,132 complete/70 open remain; PM integration and fresh isolated Linux pending.",
+  "scope_ids": [
+    "F-025",
+    "T-FA",
+    "T-PA",
+    "X-07"
+  ],
+  "files": {
+    "tools/manifest_declarations.py": "b09cb3fc4f09ae6e722ecb4b3518d708f302daa95f6ca9b67dba1d8d1f5b14ea",
+    "tests/test_manifest_declarations.py": "52825a2831aaa8907b0376356a3b2bad3a74a82767027ac455d1da89401bb0f3",
+    "docs/image-declaration-profile-plan.md": "9858c6a6a71af45e7d42133a718571fb4fa9cad80e03d2fe2f33a82a3b2a0d24",
+    "docs/image-declaration-profile-result.md": "c86a6727ca95635a9934892f229b8115cd53eaeb065bf64c9cfbd3bfba9437c0",
+    "docs/scope-progress.json": "61871bfd62aaeeb802d40588b875be61863dd84897323e9bf9aaa9e369d69133",
+    "docs/scope-progress.md": "86f56fc1c010401775b2632a49a62f455c3e037072afaac45ca69f0ada4ff259",
+    "state.json": "2bb493f3d40b3130d42d1a94dbc420498e9f99be5577db9d4d87ded6dd955eee",
+    "runs/2026-11-16-image-declarations-regional-correction.json": "65873e75564f8b15f59213f3a53791ff69a4f0ad62227970a7c11296d8886a6f",
+    "runs/2026-11-16-image-declarations-regional-real-sdk.json": "4f9e964cfba8e31a4acc14cdb3530aec333a2f6d0951a597a05134ac69c37e84"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-image-declarations-regional-correction.json",
+      "sha256": "65873e75564f8b15f59213f3a53791ff69a4f0ad62227970a7c11296d8886a6f"
+    },
+    {
+      "path": "runs/2026-11-16-image-declarations-regional-real-sdk.json",
+      "sha256": "4f9e964cfba8e31a4acc14cdb3530aec333a2f6d0951a597a05134ac69c37e84"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-16T20:35:11.693772+00:00"
+    }
+  ]
+}
