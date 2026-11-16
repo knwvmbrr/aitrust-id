@@ -5,7 +5,9 @@ text. They return observations and positions, not HP or MT tags. No account,
 model download, service or network is needed. Use Python 3.12 in a source checkout.
 
 **Urgency:** look for literal time-pressure phrases alongside a measured proportion
-of sentence units starting with supported directive verbs.
+of sentence units starting with supported directive verbs. A nominated observation
+requires a directive and time phrase in the same unit; unrelated sentences cannot
+supply the association.
 
 ```sh
 python3 scripts/language-observations.py urgency --language en < /path/to/text.txt
@@ -54,7 +56,9 @@ Keep the output private unless you have reviewed it for sharing.
 
 ## Published method
 
-Method: `english-context-observations/1.0.0`. Language is explicitly caller-selected
+Urgency method: `english-context-observations/1.1.0`. Hedge and authority retain
+`english-context-observations/1.0.0`; their algorithm is unchanged. The common
+source hash changes with this revision. Language is explicitly caller-selected
 English. Input limit: 8,000 characters; at most 32 annotations of each kind.
 Positions refer to frozen NFC-normalized text, in Unicode codepoints.
 
@@ -74,6 +78,18 @@ Directive verbs at the start of a sentence unit, optionally after “please”:
 `submit`, `respond`, `decide`, `take`. Units end at a newline or `.`, `!`, `?`
 followed by whitespace/end. This keeps ordinary URL/decimal dots together but is
 not a full sentence parser. Density is directive units / all nonempty units.
+For urgency revision 1.1.0, nomination additionally requires at least one unit
+containing both a supported starting directive and time phrase. The finding
+contains only paired evidence; `paired_units` gives their unit/directive/time
+spans and `unpaired_time_pressure_spans` retains other time phrases. Global
+directive and time-phrase measurements are still reported.
+
+For example, “The committee met today. Read the archived minutes.” has literal
+time and directive measurements but no supported within-unit association.
+“Buy the guide. Last chance today.” also has no supported association in this
+method, even though a reader may connect the sentences. Cross-sentence discourse
+remains unresolved; this narrower boundary is not a general accuracy result.
+
 Default minimum: 0.5; set `--minimum-density` from greater than 0 through 1.
 This is a lexical parameter, not a validated manipulation threshold.
 

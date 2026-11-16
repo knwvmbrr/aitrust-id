@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-16
 
+### 2026-11-16-194236-mt-urgency-local-association-9dc8adb2
+
+Recorded 2026-11-16T19:42:36.216906+00:00 · Contributor: Codex MT owner · change
+
+- **Changed.** Urgency observations now pair a supported directive and time phrase within the same sentence unit, retaining global measurements and separate unpaired spans.
+- **Evidence.** One final adjacent run passes108 tests; the existing actual CLI consumer passes22 controls; six invented before/after examples retain the context and accuracy limits. [Change record](./runs/changes/2026-11-16-194236-mt-urgency-local-association-9dc8adb2.json).
+- **Not claimed.** Cross-sentence pressure can be missed. Grammar, quotation context, manipulation intent, independent accuracy, MT release, Linux integration and full requirement completion are not established.
+
+
 ### 2026-11-16-191827-q4-publication-evidence-8a149406
 
 Recorded 2026-11-16T19:18:27.195923+00:00 · Contributor: Codex · change

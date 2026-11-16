@@ -7,6 +7,7 @@ from protocol.corpus import CorpusError
 from protocol.normalization import NORMALIZATION_ID, normalize_nfc
 
 METHOD = 'english-context-observations/1.0.0'
+URGENCY_METHOD = 'english-context-observations/1.1.0'
 MAX_CHARACTERS = 8000
 MAX_ANNOTATIONS = 32
 HEDGE = re.compile(r'\b(?:may|might|could|possibly|perhaps|probably|likely|unlikely|uncertain|unclear|approximately|roughly|estimated|estimate)\b', re.I)
@@ -94,20 +95,31 @@ def observe(kind, original, language='en', context=None, minimum_density=.5):
                         'negation_interpreted': False}
     elif kind == 'urgency':
         sentence_units = units(subject)
-        directives = []
+        directives, paired_units, pressure = [], [], []
         for start, end in sentence_units:
             found = DIRECTIVE.match(subject, start, end)
+            local_pressure = [[m.start(), m.end()] for m in PRESSURE.finditer(subject, start, end)]
+            pressure.extend(local_pressure)
             if found:
-                directives.append([found.start('verb'), found.end('verb')])
-        pressure = [[m.start(), m.end()] for m in PRESSURE.finditer(subject)]
+                directive = [found.start('verb'), found.end('verb')]
+                directives.append(directive)
+                if local_pressure:
+                    paired_units.append({'unit_span': [start, end], 'directive_span': directive,
+                                         'time_pressure_spans': local_pressure})
+        paired_pressure = {tuple(span) for unit in paired_units for span in unit['time_pressure_spans']}
         density = len(directives)/len(sentence_units) if sentence_units else 0
         measurements = {'sentence_units': len(sentence_units), 'directive_units': len(directives),
                         'directive_density': density, 'minimum_density': minimum_density,
                         'directive_spans': directives, 'time_pressure_spans': pressure,
+                        'association_scope': 'same_sentence_unit', 'paired_units': paired_units,
+                        'unpaired_time_pressure_spans': [span for span in pressure if tuple(span) not in paired_pressure],
                         'grammatical_imperatives_verified': False}
-        if pressure and directives and density >= minimum_density:
-            findings.append({'id': 'sig.urgency_frame.v1', 'spans': sorted(set(map(tuple, pressure+directives))),
-                             'meaning': 'lexical_time_pressure_with_supported_directive_density'})
+        if paired_units and density >= minimum_density:
+            # A time word in an unrelated unit cannot supply the association.
+            # Cross-unit discourse and intent remain explicitly unclassified.
+            spans = [span for unit in paired_units for span in [unit['directive_span'], *unit['time_pressure_spans']]]
+            findings.append({'id': 'sig.urgency_frame.v1', 'spans': sorted(set(map(tuple, spans))),
+                             'meaning': 'same_unit_lexical_time_pressure_with_supported_directive_density'})
     else:
         attributed = []
         for start, end in units(subject):
@@ -123,7 +135,7 @@ def observe(kind, original, language='en', context=None, minimum_density=.5):
                                      'meaning': 'supported_authority_phrase_without_same_unit_source_marker'})
         measurements = {'marked_appeals': attributed, 'citation_resolution_performed': False,
                         'sources_elsewhere_checked': False}
-    return {'format': 'language-observation/v1', 'method': METHOD,
+    return {'format': 'language-observation/v1', 'method': URGENCY_METHOD if kind == 'urgency' else METHOD,
             'method_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             'kind': kind, 'language': language, 'subject_sha256': digest(subject),
             'subject_characters': len(subject), 'normalization_id': NORMALIZATION_ID,

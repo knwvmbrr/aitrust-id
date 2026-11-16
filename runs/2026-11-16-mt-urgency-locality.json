@@ -1,0 +1,581 @@
+{
+  "format": "ai-trust-id-mt-urgency-locality-engineering/v1",
+  "captured_at": "2026-11-16T19:42:09.608708+00:00",
+  "checked_by": "Codex MT owner",
+  "source_base": "2739570fc6864cf5cf6728d320bb7be5d301f8cf",
+  "pass": true,
+  "scope_ids": [
+    "F-019a",
+    "T-MT"
+  ],
+  "scope_percent_changes": {},
+  "full_requirements_closed": 0,
+  "source_sha256": {
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "scripts/language-observations.py": "ac86473b87ce6e499c1185ce3fd81e569c99bfc4d78360af470d490fd18b0abb",
+    "scripts/verify-independent-observations.py": "59039a6bcd22ac296b6e9da8c41741b51ce70e58d3321e9fb282c5beea162748",
+    "tests/test_language_observations.py": "19722287d64bae1621e6fdaf7ea025b709efc11b7310dc81ca7c60dff6ff0757",
+    "tests/test_mt_urgency_locality.py": "e5fe86bdaac03f20baa963e505062941f5b6b7a860a96cd26cf9fb35ff18d372",
+    "tests/test_observation_verifier.py": "2eef69e0657e9f90ce1878d21e79483704e8f350f902c036a40ecb87ac2804f3",
+    "tests/test_quantitative_observations.py": "f842b79ac44b522ddf5af01f8506f875327076b328264c125cf34786cebfaa83",
+    "docs/language-observations.md": "ed6a6c8be749916a24d699b301cf12f0165670da202682bf83fd358e5763fb5b",
+    "docs/mt-urgency-locality-plan.md": "9007c9c1cc96dd4a29fde209a7599850e9996d52958dc76c2e63c3ca343c4a00",
+    "docs/mt-urgency-locality-result.md": "b124698aecbbdd20436342ffe360c9a8c9add4789d9d48430c7752254fcedf3c",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "baseline_method_source_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+  "platform": {
+    "system": "Darwin",
+    "architecture": "arm64",
+    "python": "3.13.0"
+  },
+  "pytest": {
+    "argv": [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_language_observations.py",
+      "tests/test_mt_urgency_locality.py",
+      "tests/test_observation_verifier.py",
+      "tests/test_quantitative_observations.py"
+    ],
+    "tests": 108,
+    "failures_or_errors": 0,
+    "junit_sha256": "3c47961497c8107ec9a544a02019978a6b24478b1f8dd77574a9bafda0995c02",
+    "final_scoped_runs": 1
+  },
+  "existing_consumer": {
+    "path": "runs/2026-11-16-mt-urgency-consumer-macos.json",
+    "sha256": "70372e4316a3a7186703c54cee059965f314c65f2e60a57a13f0b493afcec160",
+    "actual_cli_controls": 22,
+    "pass": true
+  },
+  "comparisons": [
+    {
+      "case": "unrelated_date",
+      "synthetic_input": "The committee met today. Read the archived minutes.",
+      "before": {
+        "method": "english-context-observations/1.0.0",
+        "method_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "today",
+            "Read"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              25,
+              29
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              18,
+              23
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      },
+      "after": {
+        "method": "english-context-observations/1.1.0",
+        "method_sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "state": "NO_SUPPORTED_PATTERN",
+        "finding_spans_text": [],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              25,
+              29
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              18,
+              23
+            ]
+          ],
+          "association_scope": "same_sentence_unit",
+          "paired_units": [],
+          "unpaired_time_pressure_spans": [
+            [
+              18,
+              23
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      }
+    },
+    {
+      "case": "unrelated_publication",
+      "synthetic_input": "Install the patch. The news was published today.",
+      "before": {
+        "method": "english-context-observations/1.0.0",
+        "method_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Install",
+            "today"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              7
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              42,
+              47
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      },
+      "after": {
+        "method": "english-context-observations/1.1.0",
+        "method_sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "state": "NO_SUPPORTED_PATTERN",
+        "finding_spans_text": [],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              7
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              42,
+              47
+            ]
+          ],
+          "association_scope": "same_sentence_unit",
+          "paired_units": [],
+          "unpaired_time_pressure_spans": [
+            [
+              42,
+              47
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      }
+    },
+    {
+      "case": "legitimate_emergency",
+      "synthetic_input": "Read the evacuation notice now.",
+      "before": {
+        "method": "english-context-observations/1.0.0",
+        "method_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Read",
+            "now"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 1,
+          "directive_units": 1,
+          "directive_density": 1.0,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              4
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              27,
+              30
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      },
+      "after": {
+        "method": "english-context-observations/1.1.0",
+        "method_sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Read",
+            "now"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 1,
+          "directive_units": 1,
+          "directive_density": 1.0,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              4
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              27,
+              30
+            ]
+          ],
+          "association_scope": "same_sentence_unit",
+          "paired_units": [
+            {
+              "unit_span": [
+                0,
+                31
+              ],
+              "directive_span": [
+                0,
+                4
+              ],
+              "time_pressure_spans": [
+                [
+                  27,
+                  30
+                ]
+              ]
+            }
+          ],
+          "unpaired_time_pressure_spans": [],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      }
+    },
+    {
+      "case": "context_unresolved",
+      "synthetic_input": "Act now! This is an example, not advice.",
+      "before": {
+        "method": "english-context-observations/1.0.0",
+        "method_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Act",
+            "now"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              3
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              4,
+              7
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      },
+      "after": {
+        "method": "english-context-observations/1.1.0",
+        "method_sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Act",
+            "now"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              3
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              4,
+              7
+            ]
+          ],
+          "association_scope": "same_sentence_unit",
+          "paired_units": [
+            {
+              "unit_span": [
+                0,
+                8
+              ],
+              "directive_span": [
+                0,
+                3
+              ],
+              "time_pressure_spans": [
+                [
+                  4,
+                  7
+                ]
+              ]
+            }
+          ],
+          "unpaired_time_pressure_spans": [],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      }
+    },
+    {
+      "case": "cross_sentence_tradeoff",
+      "synthetic_input": "Buy the guide. Last chance today.",
+      "before": {
+        "method": "english-context-observations/1.0.0",
+        "method_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Buy",
+            "Last chance",
+            "today"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              3
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              15,
+              26
+            ],
+            [
+              27,
+              32
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      },
+      "after": {
+        "method": "english-context-observations/1.1.0",
+        "method_sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "state": "NO_SUPPORTED_PATTERN",
+        "finding_spans_text": [],
+        "measurements": {
+          "sentence_units": 2,
+          "directive_units": 1,
+          "directive_density": 0.5,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              3
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              15,
+              26
+            ],
+            [
+              27,
+              32
+            ]
+          ],
+          "association_scope": "same_sentence_unit",
+          "paired_units": [],
+          "unpaired_time_pressure_spans": [
+            [
+              15,
+              26
+            ],
+            [
+              27,
+              32
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      }
+    },
+    {
+      "case": "unrelated_evidence_positions",
+      "synthetic_input": "Install the viewer. Buy the pass now. The workshop is today.",
+      "before": {
+        "method": "english-context-observations/1.0.0",
+        "method_sha256": "30df585b10fdfc91361f94a97dac37d4f4a4be150410c3320c628c35fee7100b",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Install",
+            "Buy",
+            "now",
+            "today"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 3,
+          "directive_units": 2,
+          "directive_density": 0.6666666666666666,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              7
+            ],
+            [
+              20,
+              23
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              33,
+              36
+            ],
+            [
+              54,
+              59
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      },
+      "after": {
+        "method": "english-context-observations/1.1.0",
+        "method_sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "state": "OBSERVATIONS",
+        "finding_spans_text": [
+          [
+            "Buy",
+            "now"
+          ]
+        ],
+        "measurements": {
+          "sentence_units": 3,
+          "directive_units": 2,
+          "directive_density": 0.6666666666666666,
+          "minimum_density": 0.5,
+          "directive_spans": [
+            [
+              0,
+              7
+            ],
+            [
+              20,
+              23
+            ]
+          ],
+          "time_pressure_spans": [
+            [
+              33,
+              36
+            ],
+            [
+              54,
+              59
+            ]
+          ],
+          "association_scope": "same_sentence_unit",
+          "paired_units": [
+            {
+              "unit_span": [
+                19,
+                37
+              ],
+              "directive_span": [
+                20,
+                23
+              ],
+              "time_pressure_spans": [
+                [
+                  33,
+                  36
+                ]
+              ]
+            }
+          ],
+          "unpaired_time_pressure_spans": [
+            [
+              54,
+              59
+            ]
+          ],
+          "grammatical_imperatives_verified": false
+        },
+        "tags": [],
+        "intent_established": false
+      }
+    }
+  ],
+  "authored_synthetic_controls_only": true,
+  "independent_accuracy_evidence": false,
+  "tags_released": [],
+  "production_allowlist_changed": false,
+  "collection_enabled": false,
+  "local_docker_started": false,
+  "limits": [
+    "Unit-local association misses some genuine cross-sentence pressure.",
+    "Quoted/recommended context, grammar, intent and independent MT accuracy remain unresolved.",
+    "No current Linux, browser/native or physical-device acceptance."
+  ]
+}

@@ -21,7 +21,8 @@ SOURCES = ['tools/package_proximity.py', 'tools/language_observations.py',
            'protocol/normalization.py', 'protocol/unicode15-data.json']
 SOURCES += ['tools/credential_flow.py', 'scripts/credential-flow.py',
             'tests/test_credential_flow.py', 'docs/credential-flow.md',
-            'tests/test_observation_verifier.py']
+            'tests/test_observation_verifier.py', 'tests/test_mt_urgency_locality.py',
+            'docs/mt-urgency-locality-plan.md']
 
 METHOD_SOURCES = {'scripts/package-proximity.py': 'tools/package_proximity.py',
                   'scripts/language-observations.py': 'tools/language_observations.py',
@@ -77,6 +78,8 @@ def main():
         run('corrupt_snapshot', package, 'requests', 'UNAVAILABLE', 2)
         language = ['scripts/language-observations.py']
         run('legitimate_emergency_has_no_intent_verdict', language+['urgency', '--language', 'en'], 'Leave now. Call emergency services immediately.', 'OBSERVATIONS')
+        run('unrelated_date_does_not_supply_directive_association', language+['urgency', '--language', 'en'], 'The committee met today. Read the archived minutes.', 'NO_SUPPORTED_PATTERN')
+        run('cross_sentence_association_remains_unresolved', language+['urgency', '--language', 'en'], 'Buy the guide. Last chance today.', 'NO_SUPPORTED_PATTERN')
         run('pressure_without_directive', language+['urgency', '--language', 'en'], 'It happens today.', 'NO_SUPPORTED_PATTERN')
         run('unmarked_authority', language+['authority', '--language', 'en'], 'Experts agree.', 'OBSERVATIONS')
         run('marked_authority', language+['authority', '--language', 'en'], 'Experts agree [1].', 'NO_SUPPORTED_PATTERN')
