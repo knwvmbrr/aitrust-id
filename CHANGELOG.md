@@ -20,6 +20,24 @@ Recorded 2026-11-17T20:27:59.293759+00:00 · Contributor: Codex Android lane · 
 - **Not claimed.** Corrected hosted compile, Android runtime and physical device acceptance remain pending. No original requirement closes.
 
 
+### 2026-11-17-202519-current-development-evidence-index-c51fc553
+
+Recorded 2026-11-17T20:25:19.816824+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Refreshed the downloadable evidence index to point to five current engineering receipts.
+- **Evidence.** Strict evidence packet assembly verifies the current PS, privacy, protocol, extension and website receipts. [Change record](./runs/changes/2026-11-17-202519-current-development-evidence-index-c51fc553.json).
+- **Not claimed.** F-120 remains open for selected release exit evidence and outside implementer acceptance.
+
+
+### 2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522
+
+Recorded 2026-11-17T20:22:20.355457+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Verified the framing workflow alongside current browser routes and recorded zero as the full completion objective.
+- **Evidence.** 32 website and 14 extension checks passed and the current route boundaries and 202-record ledger verify. [Change record](./runs/changes/2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522.json).
+- **Not claimed.** Full MT release still requires contextual validation, independent labeling and human operation. The original requirements remain open.
+
+
 ### 2026-11-17-175729-android-share-offline-checker-bf7204be
 
 Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change
@@ -27,6 +45,15 @@ Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · 
 - **Changed.** Add a bounded independent Android text Share checker around the existing offline PS engine, native review/edit/check/clear lifecycle, compact branded results and an existing-tools hosted APK build path.
 - **Evidence.** Actual pinned WebAssembly and Android loader match 137 current development/Unicode probes; 9 packaging controls and the actual JVM lifecycle program pass. Asset identity, notice checks and permission refusals remain explicit. [Change record](./runs/changes/2026-11-17-175729-android-share-offline-checker-bf7204be.json).
 - **Not claimed.** APK compilation and actual Android Share/WebView execution await hosted tools; physical devices, TalkBack, human usability, production signing and independent accuracy remain unproven. N-014 and original scope completion unchanged.
+
+
+### 2026-11-17-151740-mt-private-evidence-workflow-a74f53af
+
+Recorded 2026-11-17T15:17:40.665896+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Added one private independently supervised framing workflow, short default output, explicit safe evidence export, failure isolation and actual CLI controls; reconciled the work-to-zero objective and stale publication pointers.
+- **Evidence.** 20 focused subprocess/contract tests and 11 actual invented-example CLI controls pass; broken/missing choice context leaves urgency usable and PS remains separate. [Change record](./runs/changes/2026-11-17-151740-mt-private-evidence-workflow-a74f53af.json).
+- **Not claimed.** No MT tag, contextual/intent accuracy, independent labeling, human accessibility, Android completion, new endpoint or original requirement closure. Protected integration and publication are pending.
 
 
 ### 2026-11-17-141623-independent-evidence-publication-6aeec82d
