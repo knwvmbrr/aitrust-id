@@ -16,6 +16,12 @@ SOURCE_ROOT = ROOT
 sys.path.insert(0, str(ROOT))
 from tools.blind_review_io import create, PacketError
 
+# CA92.1: this bundle's own non-sensitive appearance setting only.
+# Apple: NSPrivacyAccessedAPIType / NSPrivacyAccessedAPICategoryUserDefaults.
+REVIEWED_PRIVACY = {'NSPrivacyTracking': False, 'NSPrivacyAccessedAPITypes': [
+    {'NSPrivacyAccessedAPIType': 'NSPrivacyAccessedAPICategoryUserDefaults',
+     'NSPrivacyAccessedAPITypeReasons': ['CA92.1']}]}
+
 
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
@@ -23,6 +29,18 @@ def digest(raw):
 
 def uid(name):
     return digest(name.encode())[:24].upper()
+
+
+def privacy_manifest():
+    """Only package the reviewed declaration; reject silent privacy changes."""
+    source = ROOT / 'mobile/ios/PrivacyInfo.xcprivacy'
+    if (not source.is_file() or source.is_symlink()
+            or any(p.is_symlink() for p in source.parents if p != ROOT and ROOT in p.parents)):
+        raise ValueError('Native privacy manifest source refused')
+    raw = source.read_bytes()
+    if raw != plistlib.dumps(REVIEWED_PRIVACY):
+        raise ValueError('Native privacy manifest requires review')
+    return raw
 
 
 def project(profile='developer'):
@@ -33,12 +51,13 @@ def project(profile='developer'):
     def put(identity, isa, **fields):
         key = uid(identity); objects[key] = {"isa": isa, **fields}; return key
     source_refs = {name: put('file-' + name, 'PBXFileReference', lastKnownFileType='sourcecode.swift', path=name, sourceTree='<group>')
-                   for name in ['App.swift', 'Assets.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift']}
+                   for name in ['App.swift', 'Assets.swift', 'AppearancePreference.swift', 'BrandTheme.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift']}
     sources = put('source-group', 'PBXGroup', children=list(source_refs.values()), path='Source', sourceTree='<group>')
     assets = put('assets-folder', 'PBXFileReference', lastKnownFileType='folder', path='Assets', sourceTree='<group>')
     extras = [put('resource-' + name, 'PBXFileReference', lastKnownFileType=kind, path=name, sourceTree='<group>')
               for name, kind in [('Artwork.xcassets', 'folder.assetcatalog'), ('Notices', 'folder'),
-                                 ('Privacy.txt', 'text'), ('AppLicense.txt', 'text')]]
+                                 ('Privacy.txt', 'text'), ('AppLicense.txt', 'text'),
+                                 ('PrivacyInfo.xcprivacy', 'text.xml')]]
     products = {}
     for target, suffix, kind in [('App', 'app', 'wrapper.application'), ('Share', 'appex', 'wrapper.app-extension')]:
         products[target] = put('product-' + target, 'PBXFileReference', explicitFileType=kind, path='AITrustID' + ('Share' if target == 'Share' else '') + '.' + suffix, sourceTree='BUILT_PRODUCTS_DIR')
@@ -48,7 +67,7 @@ def project(profile='developer'):
     group = put('main-group', 'PBXGroup', children=[sources, tests, assets, *extras, product_group], sourceTree='<group>')
     targets = {}
     for target, main in [('App', 'App.swift'), ('Share', 'ShareController.swift')]:
-        build_files = [put(target + '-source-' + name, 'PBXBuildFile', fileRef=source_refs[name]) for name in [main, 'Assets.swift', 'CheckerController.swift', 'SharedText.swift']]
+        build_files = [put(target + '-source-' + name, 'PBXBuildFile', fileRef=source_refs[name]) for name in [main, 'Assets.swift', 'AppearancePreference.swift', 'BrandTheme.swift', 'CheckerController.swift', 'SharedText.swift']]
         phases = [put(target + '-sources', 'PBXSourcesBuildPhase', buildActionMask=2147483647, files=build_files, runOnlyForDeploymentPostprocessing=0),
                   put(target + '-resources', 'PBXResourcesBuildPhase', buildActionMask=2147483647, files=[put(target + '-asset-build', 'PBXBuildFile', fileRef=assets)], runOnlyForDeploymentPostprocessing=0)]
         extra_refs = extras if target == 'App' else extras[1:]
@@ -106,11 +125,12 @@ def scheme():
 def files(profile='developer'):
     if profile not in ('developer', 'distribution'):
         raise ValueError('Unknown native project profile')
+    reviewed_privacy = privacy_manifest()
     # Keep the current source/runtime/notice contract in one audited packager.
     native = runpy.run_path(str(SOURCE_ROOT / 'scripts/native_bundle.py'))
     native['assets'].__globals__['ROOT'] = ROOT
     payload = native['assets']()
-    allowed = {'App.swift', 'Assets.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift'}
+    allowed = {'App.swift', 'Assets.swift', 'AppearancePreference.swift', 'BrandTheme.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift'}
     source = ROOT / 'mobile/ios/Source'
     if {p.name for p in source.iterdir()} != allowed:
         raise ValueError('Unreviewed native source')
@@ -134,6 +154,7 @@ def files(profile='developer'):
             raise ValueError('Native disclosure or artwork source refused')
         payload[target] = file.read_bytes()
     payload['AppLicense.txt'] = payload['LICENSE']
+    payload['PrivacyInfo.xcprivacy'] = reviewed_privacy
     payload['Artwork.xcassets/Contents.json'] = b'{"info":{"author":"xcode","version":1}}\n'
     payload['Artwork.xcassets/AppIcon.appiconset/Contents.json'] = b'{"images":[{"filename":"AppIcon.png","idiom":"universal","platform":"ios","size":"1024x1024"}],"info":{"author":"xcode","version":1}}\n'
     payload['AITrustID.xcodeproj/project.pbxproj'] = plistlib.dumps(project(profile))

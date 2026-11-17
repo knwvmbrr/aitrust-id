@@ -11,6 +11,17 @@ final class UIFlows: XCTestCase {
         app.terminate()
     }
     override func setUpWithError() throws { continueAfterFailure = false; executionTimeAllowance = 120 }
+    override func tearDownWithError() throws {
+        // This suite runs only fixed invented text in its own disposable app.
+        // Preserve diagnostics instead of retrying or relaxing a failed action.
+        if let testRun, testRun.failureCount > 0 {
+            let app = XCUIApplication()
+            let image = XCTAttachment(screenshot: app.screenshot())
+            image.lifetime = .keepAlways; add(image)
+            let hierarchy = XCTAttachment(string: app.debugDescription)
+            hierarchy.lifetime = .keepAlways; add(hierarchy)
+        }
+    }
     private func assertEmpty(_ input: XCUIElement, file: StaticString = #filePath, line: UInt = #line) {
         XCTAssertTrue(input.exists, file: file, line: line)
         // UIKit may omit the accessibility value for an empty Share text view.
@@ -23,7 +34,25 @@ final class UIFlows: XCTestCase {
         return app
     }
     private func focus(_ input: XCUIElement, in app: XCUIApplication) {
-        XCTAssertTrue(input.waitForExistence(timeout: 20)); input.tap()
+        XCTAssertTrue(input.waitForExistence(timeout: 20))
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == true"), object: input)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
+        // One tap in the editable first-line inset, not the empty scroll area.
+        input.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.1)).tap()
+        // Only the fresh disposable simulator's observed onboarding banner.
+        // Never accept a permission, opt in, or dismiss an unknown alert.
+        let notice = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+            .staticTexts["Ready for Apple Intelligence"].firstMatch
+        let interruptedOrReady = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            app.keyboards.firstMatch.exists || notice.exists
+        }, object: input)
+        XCTAssertEqual(XCTWaiter.wait(for: [interruptedOrReady], timeout: 10), .completed)
+        if notice.exists {
+            notice.swipeUp()
+            let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: notice)
+            XCTAssertEqual(XCTWaiter.wait(for: [dismissed], timeout: 5), .completed)
+            input.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.1)).tap()
+        }
         XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 10))
     }
     private func finishShare(_ app: XCUIApplication) {
@@ -38,6 +67,34 @@ final class UIFlows: XCTestCase {
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true AND hittable == true"), object: button)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
         button.tap()
+    }
+    private func selectShareActivity(_ app: XCUIApplication) {
+        let share = app.cells["AI Trust ID"].firstMatch
+        XCTAssertTrue(share.waitForExistence(timeout: 20))
+        func containsVisibleImage(_ node: any XCUIElementSnapshot, in bounds: CGRect) -> Bool {
+            if node.elementType == .image && !node.frame.isEmpty && node.frame.intersects(bounds) { return true }
+            return node.children.contains { containsVisibleImage($0, in: bounds) }
+        }
+        var previousFrame = CGRect.zero
+        var stableSince = Date()
+        // Capture the remote cell once per evaluation. Repeated descendant
+        // exists/hittable queries can each fetch another remote hierarchy and
+        // consume this wait before a second stable sample can be observed.
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            guard let snapshot = try? share.snapshot(), snapshot.isEnabled,
+                  snapshot.label == "AI Trust ID", !snapshot.frame.isEmpty,
+                  containsVisibleImage(snapshot, in: snapshot.frame) else {
+                previousFrame = .zero; stableSince = Date(); return false
+            }
+            let frame = snapshot.frame
+            guard frame == previousFrame else {
+                previousFrame = frame; stableSince = Date(); return false
+            }
+            guard Date().timeIntervalSince(stableSince) >= 1 else { return false }
+            return share.isHittable
+        }, object: share)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 20), .completed)
+        share.tap()
     }
     func testExplicitPSCheckAndClear() {
         let app = launch()
@@ -82,8 +139,7 @@ final class UIFlows: XCTestCase {
     func testNativePracticeShareRequiresExplicitCheck() {
         let app = launch(); XCTAssertTrue(app.buttons["practice-share"].waitForExistence(timeout: 20))
         app.buttons["practice-share"].tap()
-        let share = app.cells["AI Trust ID"].firstMatch
-        XCTAssertTrue(share.waitForExistence(timeout: 20)); share.tap()
+        selectShareActivity(app)
         XCTAssertTrue(app.buttons["share-finish"].waitForExistence(timeout: 20))
         let input = app.textViews["share-selected-text"]
         XCTAssertTrue(input.waitForExistence(timeout: 20))
@@ -97,8 +153,7 @@ final class UIFlows: XCTestCase {
     private func openShare(_ app: XCUIApplication) {
         XCTAssertTrue(app.buttons["practice-share"].waitForExistence(timeout: 20))
         app.buttons["practice-share"].tap()
-        let share = app.cells["AI Trust ID"].firstMatch
-        XCTAssertTrue(share.waitForExistence(timeout: 20)); share.tap()
+        selectShareActivity(app)
         let opened = app.buttons["share-finish"].waitForExistence(timeout: 20)
         if !opened {
             let screenshot = XCTAttachment(screenshot: app.screenshot()); screenshot.lifetime = .keepAlways; add(screenshot)

@@ -39,7 +39,7 @@ def inspect(archive, payload):
         if not executable.is_file() or executable.stat().st_size == 0:
             raise ValueError('Device executable missing')
         for name, raw in payload.items():
-            if name.startswith(('Assets/', 'Notices/')) or name in {'Privacy.txt', 'AppLicense.txt'}:
+            if name.startswith(('Assets/', 'Notices/')) or name in {'Privacy.txt', 'AppLicense.txt', 'PrivacyInfo.xcprivacy'}:
                 actual = bundle / name
                 if not actual.is_file() or actual.read_bytes() != raw:
                     raise ValueError('Bundled resource differs')

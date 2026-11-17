@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-17T21:04:03.528656+00:00",
+  "pass": true,
+  "observed_result": "33 passed, 1 warning in 24.72s",
+  "sources": {
+    "tools/dispute_correction_link.py": "57dcd96d0e3bf931fb59c0a78c0bc0f0ff46b9b65bf72372c1f321ed364f8810",
+    "scripts/link-dispute-correction.py": "d39119837c7b020883e6880f79c757a8910803e84ae3eebfceb1b5999b604c53",
+    "tests/test_dispute_correction_link.py": "d0f3f41196c06fd939a8d9fb5c352afd0821ee25851cac7a6e019ed0b2133256",
+    "tools/community_store.py": "6e473154f241624724325566a8f7f0595c79f0a3df78907337471a68377edffe",
+    "tools/community_core.py": "422173c28f4f1429bedea5ddfc6f3b91ab7f9205c0b395e93775c513955fb817",
+    "tools/newsroom.py": "e79bf47500ed18cbb1e7dca6249a284e988588ca0708189b9cef4cef09ef9361",
+    "tools/editorial_cli.py": "2a1d4cdcbc0b1821840f49044611884af28beab711dc8afba66b877a07b64b66",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_dispute_correction_link.py",
+    "tests/test_community_store.py",
+    "-q"
+  ],
+  "synthetic_only": true,
+  "public_integration": false,
+  "original_requirement_closed": false
+}

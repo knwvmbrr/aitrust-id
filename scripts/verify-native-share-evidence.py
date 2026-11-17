@@ -8,8 +8,8 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-PROOF = 'runs/2026-11-09-native-share-hosted-workflow.json'
-ASSETS = {'/index.html', '/bridge.mjs', '/method.py', '/device-manifest.json',
+PROOF = 'runs/2026-11-17-native-share-current-workflow.json'
+ASSETS = {'/index.html', '/bridge.mjs', '/detector-source.zip', '/device-manifest.json',
           '/runtime/pyodide.mjs', '/runtime/pyodide.asm.mjs', '/runtime/pyodide.asm.wasm',
           '/runtime/python_stdlib.zip', '/runtime/pyodide-lock.json'}
 
@@ -18,7 +18,8 @@ def verify(root=ROOT, proof=None):
     value = json.loads((root / PROOF).read_text()) if proof is None else proof
     required = {'pass': True, 'physical_device': False, 'independent_accuracy': False,
                 'human_accessibility': False, 'installable_phone_release': False,
-                'source_unchanged_during_execution': True, 'owned_simulator_removed': True}
+                'source_unchanged_during_execution': True, 'post_ui_source_unchanged': True,
+                'owned_simulator_removed': True}
     if not isinstance(value, dict) or any(value.get(key) is not expected for key, expected in required.items()):
         raise ValueError('Native software proof boundary is invalid')
     if type(value.get('test_count')) is not int or value['test_count'] != 5:

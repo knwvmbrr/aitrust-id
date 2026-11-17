@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20
+
+Recorded 2026-11-17T21:41:56.884960+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current website, protocol and route-boundary checks for the iPhone and private dispute integration.
+- **Evidence.** Website and protocol completed 32 and 40 checks. All five current engineering receipts and the reviewed endpoint and permission boundaries validate. [Change record](./runs/changes/2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20.json).
+- **Not claimed.** Engineering evidence leaves physical and Apple distribution acceptance, live public dispute handling and independent accuracy open.
+
+
+### 2026-11-17-213544-current-iphone-dispute-integration-407aab6a
+
+Recorded 2026-11-17T21:35:44.942783+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated the simulator-verified iPhone package with local appearance controls, privacy manifests and exact Python notices, plus the private dispute-to-correction CLI.
+- **Evidence.** Five simulator workflows, 36 resource comparisons and 189 focused integration checks passed. The existing distribution profiles match; the current signing attempt timed out at Share. [Change record](./runs/changes/2026-11-17-213544-current-iphone-dispute-integration-407aab6a.json).
+- **Not claimed.** Apple validation and upload of this candidate, physical accessibility, operational public correction and independent tag accuracy remain pending. Scope is 132 complete and 70 open.
+
+
 ### 2026-11-17-211023-verified-runtime-and-community-publication-5b66606e
 
 Recorded 2026-11-17T21:10:23.819417+00:00 · Contributor: Codex PM · change

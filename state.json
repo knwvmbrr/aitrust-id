@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T21:10:23.781661+00:00",
-  "active_increment": "Live web package includes verified Python runtime notices and the MT guide. The community workbench is merged, five current native simulator workflows passed, and the Android test APK compiles. The scope ledger has 132 complete and 70 open original requirements.",
+  "updated": "2026-11-17T21:41:49.470060+00:00",
+  "active_increment": "The verified iPhone source and its privacy and runtime notices are integrated. Current signing timed out. The private synthetic dispute-to-correction CLI has executable checks. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -781,7 +781,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-17T20:42:51.151270+00:00",
+    "audited_at": "2026-11-17T21:30:28.283655+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -797,7 +797,7 @@
     "source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/mt-evidence-workflow.md",
+    "latest_increment": "docs/dispute-correction-link.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 0,
@@ -809,7 +809,7 @@
     "target_direction_date": "2026-10-14",
     "current_target_verification": "runs/2026-11-17-independent-evidence-protected-checks.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
-    "latest_owner_direction": "Continue resolving all available engineering until zero open original requirements; skip a specific owner/external step and continue other work without waiving it.",
+    "latest_owner_direction": "Advance the iPhone candidate toward TestFlight and reach 60 open original requirements. Skip owner-dependent steps and close only fully functioning requirements.",
     "latest_owner_direction_date": "2026-11-17",
     "latest_increment_completed_ids": [],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
@@ -1062,7 +1062,7 @@
   "personal_route_boundaries": {
     "status": "Current hidden-email source and existing personal boundaries reviewed; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-10-14-setup-published-routes.json",
+    "evidence": "runs/2026-11-17-native-dispute-route-boundaries.json",
     "source_files": 1008,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1125,13 +1125,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-runtime-notices-protocol.json",
+    "protocol": "runs/2026-11-17-native-dispute-protocol.json",
     "extension": "runs/2026-11-17-runtime-notices-extension.json",
-    "website": "runs/2026-11-17-current-runtime-notices-website.json",
+    "website": "runs/2026-11-17-native-dispute-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T21:10:23.781661+00:00",
+  "updated_at": "2026-11-17T21:41:49.470060+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1976,7 +1976,7 @@
     "status": "developer_share_workflow_passes_physical_acceptance_open",
     "requirement": "N-013",
     "percent_complete": 80,
-    "workflow_proof": "runs/2026-11-09-native-share-hosted-workflow.json",
+    "workflow_proof": "runs/2026-11-17-native-share-current-workflow.json",
     "provider_controls": "runs/2026-11-07-native-share-text-controls.json",
     "guide": "docs/native-share-developer.md",
     "ui_workflows_passed": 5,
@@ -1994,7 +1994,14 @@
     "bootstrap_evidence": "runs/2026-11-07-native-bootstrap-separation.json",
     "automation_budget_evidence": "runs/2026-11-07-native-automation-budget.json",
     "publication": "runs/2026-11-09-pan-publication.json",
-    "hosted_ci": {
+    "code_and_guide_published": true,
+    "distribution_archive": "runs/2026-11-17-ios-runtime-notices-unsigned-archive.json",
+    "workflow_current_source_pass": true,
+    "publication_pending": false,
+    "signing_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
+    "current_candidate_apple_validation": false,
+    "current_candidate_uploaded": false,
+    "historical_hosted_ci": {
       "pass": true,
       "run_id": 42655612677,
       "source_commit": "153450d312e1418e617e91c2881664e74204d9dd",
@@ -2004,11 +2011,7 @@
       "owned_simulator_removed": true,
       "archive": "runs/2026-11-09-ios-hosted-archive.json",
       "retained_startup_refusal": "runs/2026-11-09-native-share-hosted-startup-refusal.json"
-    },
-    "code_and_guide_published": true,
-    "distribution_archive": "runs/2026-11-09-ios-distribution-final-archive.json",
-    "workflow_current_source_pass": true,
-    "publication_pending": false
+    }
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3103,7 +3106,7 @@
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
-    "device_archive_evidence": "runs/2026-11-09-ios-distribution-final-archive.json",
+    "device_archive_evidence": "runs/2026-11-17-ios-runtime-notices-unsigned-archive.json",
     "archive_signed": false,
     "store_bundle_configured": true,
     "app_store_record_created": true,
@@ -3111,7 +3114,7 @@
     "released": false,
     "app_store_status": "Prepare for Submission",
     "share_bundle_id": "com.aitrustid.app.share",
-    "signing_identity_available": false,
+    "signing_identity_available": true,
     "offline_privacy_notices_packaged": true,
     "app_icon_packaged": true,
     "manual_release_saved": true,
@@ -3125,12 +3128,11 @@
     "xcode_account_configured": true,
     "owner_sign_in_required": false,
     "protected_merge": "a6f0a5181565addc7d54b2ac6d8941c784dd98ac",
-    "local_certificate_panel_empty": true,
     "certificate_creation_disabled_when_observed": true,
     "existing_team_distribution_certificate_observed": true,
     "existing_certificate_expiry_observed": "2027-02-23",
     "existing_certificate_revoked": false,
-    "local_signing_identity_available": false,
+    "local_signing_identity_available": true,
     "source_and_guide_published": true,
     "source_publication": "runs/2026-11-09-pan-publication.json",
     "app_store_publication_pending": true,
@@ -3139,7 +3141,11 @@
     "promotional_text_saved": "Check selected text offline with the PS development preview. Review matched command patterns on your device, with no account.",
     "review_contact_phone_requires_owner": true,
     "review_contact_saved": false,
-    "screenshots_uploaded": false
+    "screenshots_uploaded": false,
+    "current_profiles_compatible": true,
+    "signing_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
+    "current_candidate_validated_by_apple": false,
+    "november_9_local_certificate_panel_empty": false
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
@@ -3540,7 +3546,13 @@
     "sqlite_safety_reserve": "runs/2026-11-17-community-sqlite-reserve-mac.json",
     "merge_commit": "4abb44c162f9ea8a2094f48398985791be3df67b",
     "protected_checks": "runs/2026-11-17-community-protected-checks.json",
-    "site_ledger_publication": "runs/2026-11-17-community-site-publication.json"
+    "site_ledger_publication": "runs/2026-11-17-community-site-publication.json",
+    "private_dispute_correction": {
+      "status": "verified_synthetic_private_sqlite",
+      "guide": "docs/dispute-correction-link.md",
+      "evidence": "runs/2026-11-17-dispute-link-current-sqlite.json",
+      "public_integration": false
+    }
   },
   "android_share_candidate": {
     "status": "test APK compiled and test signature verified; runtime unverified",

@@ -6,25 +6,33 @@ Submission**, and registered identifiers `com.aitrustid.app` and
 release. No build has been uploaded or submitted to Apple.
 
 The saved app-information draft uses **Check shared text offline**, category
-**Utilities**, and the existing public privacy-policy URL. Privacy disclosures
-remain unpublished. The owner has now signed into the existing developer team
-in Xcode. Its local certificate panel is empty and creation actions were disabled
-when inspected; that observation does not establish whether cloud signing is
-available. Signing and provisioning still need verification. No new external-agent access,
-certificate, private key, legal declaration or account permission was granted.
+**Utilities**, and the existing public privacy-policy URL. Privacy declarations
+and review contact are pending.
 
-The separate distribution profile now builds an actual unsigned physical-iOS
-archive with those identifiers, version 1.0, a compiled app icon and exact bundled
-privacy/license/runtime resources. The default developer profile remains
-separate. [Archive inspection](../runs/2026-11-09-ios-distribution-final-archive.json)
-records this bounded result. Signing remains disabled in both profiles. Private
-account identifiers, credentials and other projects remain outside the repo.
+## November 17 candidate
+
+The current app and Share extension use the reviewed appearance controls, privacy
+manifests, sealed detector module and complete pinned Python runtime notices.
+[Five simulator workflows](../runs/2026-11-17-native-share-current-workflow.json)
+passed against the integrated source. The
+[unsigned device archive](../runs/2026-11-17-ios-runtime-notices-unsigned-archive.json)
+contains the expected registered identifiers, compiled app icon and exact
+resources in both bundles.
+
+The existing Apple Distribution identity matches the current app and Share
+provisioning profiles. A bounded signing attempt on a private copy timed out
+at the Share extension before producing a signature. The unsigned archive was
+preserved. See the [signing attempt](../runs/2026-11-17-current-ios-signing-attempt.json).
+An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
+[Apple validation on November 15](../runs/2026-11-15-apple-package-validation-passed.json).
+The November 17 candidate still needs signing, validation and upload. Keys, profiles and build
+artifacts stay private.
 
 ## Complete the distribution package
 
 1. Verify the separate app/Share identifiers and saved draft against the
    generated distribution project; keep the preview build separate.
-2. Supply the owner-controlled signing identity and provisioning profiles.
+2. Sign with the matched distribution identity and provisioning profiles.
    Keep private keys and account credentials outside source and public evidence.
 3. Finish the required-reason API, privacy-manifest and final data-use review
    against the actual signed package and its bundled runtime. The icon and
@@ -58,13 +66,11 @@ ways to use the supported checks.
 ## Current physical target
 
 Apple device status identifies the paired, connected iPhone 14 Plus as running
-iOS 27.0.1. Developer Mode is disabled. The existing manual-profile download
-produced no AI Trust ID profile, and this Mac still has no valid local signing
-identity. Cloud signing remains unverified. No device security setting was
-changed, no credential was created or revoked, and no physical app workflow or
-upload is credited. See the [read-only observation](../runs/2026-11-09-iphone-target-status.json).
+iOS 27.0.1. Developer Mode is disabled. The November 9 read-only check predates the current signing identity and profiles.
+The device setting was left as observed and physical app workflows remain pending.
+See the [read-only observation](../runs/2026-11-09-iphone-target-status.json).
 
-## Reopened listing draft
+## November 10 listing draft
 
 The owner reopened the signed-in App Store session. A short promotional line
 now explicitly describes the offline PS development preview; a reload confirmed
