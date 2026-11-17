@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-17T20:42:51.151270+00:00",
+  "audited_at": "2026-11-17T21:30:28.283655+00:00",
   "client_date": "2026-11-17",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -8244,16 +8244,18 @@
       "id": "N-005",
       "kind": "requirement",
       "title": "Label dispute, correction, and supersession workflow",
-      "percent_complete": 40,
+      "percent_complete": 60,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks"
       ],
-      "audited_at": "2026-11-17T20:36:04.261404+00:00",
+      "audited_at": "2026-11-17T21:30:28.283655+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex community engineering lane \u2014 private synthetic workbench and isolated PostgreSQL controls, 2026-11-17T20:36:04.261404+00:00"
+        "Codex community engineering lane \u2014 private synthetic workbench and isolated PostgreSQL controls, 2026-11-17T20:36:04.261404+00:00",
+        "Codex \u2014 source-bound synthetic SQLite dispute-to-editorial-correction CLI and refusal checks, 2026-11-17T21:30:28.283655+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8261,15 +8263,18 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Bind a private dispute disposition to a verified exact tag record and a versioned correction or supersession artifact. Test identity drift, stale evidence and replay before verifying the full public workflow with actual moderators.",
+      "next_fix": "Integrate the checked correction binding with the authorized public submission, review, appeal and supersession workflow. Verify assigned moderators, affected inboxes, safe publication and actual end-to-end public handling.",
       "next_owner": "Michael assigns moderators; Codex application",
       "evidence": [
         "runs/2026-10-08-scope-plan-workflows-public.json",
         "site/src/policies.js",
         "runs/2026-11-17-community-hosted-capacity.json",
-        "docs/community-core.md"
+        "docs/community-core.md",
+        "runs/2026-11-17-dispute-link-current-sqlite.json",
+        "docs/dispute-correction-link.md",
+        "tests/test_dispute_correction_link.py"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Synthetic private SQLite workbench with current browser/gateway assertions. Exact report, moderator selection, prior journal and correction are checked. This evidence covers private executable controls. Public moderator operation, appeal and publication remain open.",
       "required_acceptance": [
         "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
       ],
@@ -8771,12 +8776,13 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-09T21:37:15.236103+00:00",
+      "audited_at": "2026-11-17T21:30:28.283655+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
         "Codex \u2014 selected-text transport, generation cancellation, scoped controls and inline-evidence lifecycle repair; actual fresh-simulator workflow, 2026-11-07T15:35:42.008478+00:00",
-        "Codex \u2014 separate App Store record, registered app/Share identifiers, unsigned distribution archive, bundled offline notices and presentation-ready explicit checks; 2026-11-09T16:17:10.971578+00:00"
+        "Codex \u2014 separate App Store record, registered app/Share identifiers, unsigned distribution archive, bundled offline notices and presentation-ready explicit checks; 2026-11-09T16:17:10.971578+00:00",
+        "Codex \u2014 integrated the exact five-workflow iPhone candidate, with verified resources and bounded local signing evidence, 2026-11-17T21:30:28.283655+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8784,7 +8790,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Provide owner-controlled signing identity and provisioning, finish actual privacy/platform declarations, inspect and upload the signed build for the owner-run pilot. Complete physical iPhone 14 Plus installation with actual iOS version, per-source Share compatibility, memory/lifecycle, VoiceOver, offline/update/removal and outside-user acceptance. Retain original Android obligations and resolve the iOS-27-deprecated provider path before claiming future support.",
+      "next_fix": "Finish signing the current candidate, validate and upload it to App Store Connect, then complete the physical iPhone 14 Plus Share-source, lifecycle, offline, VoiceOver, update/removal and outside-user tasks. Keep Android acceptance separately tracked. Assess the deprecated compatibility provider path on supported physical iOS.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8823,14 +8829,17 @@
         "runs/2026-11-09-native-share-hosted-workflow.json",
         "runs/2026-11-09-ios-hosted-archive.json",
         "runs/2026-11-09-native-share-hosted-startup-refusal.json",
-        "runs/2026-11-09-iphone-target-status.json"
+        "runs/2026-11-09-iphone-target-status.json",
+        "runs/2026-11-17-native-share-current-workflow.json",
+        "runs/2026-11-17-ios-runtime-notices-unsigned-archive.json",
+        "runs/2026-11-17-current-ios-signing-attempt.json"
       ],
-      "evidence_scope": "Current-source five UI workflows pass on an owned iPhone 14 Plus simulator, iOS 26.2/SDK 27.2, with source identity stable and owned simulator removed. Offline notices, explicit admission, cancellation and repeat handoff are exercised. Registered-ID Release iPhoneOS archive compiles, exact resources and unsigned executables are inspected. App Store record is saved as Prepare for Submission; no upload, signing, physical/human acceptance or independent accuracy is claimed. The same current native sources also passed all five workflows and unsigned archive inspection on hosted iOS 27.2/SDK 27.1. A separate simulator-startup refusal is retained. Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
+      "evidence_scope": "All five selected simulator workflows passed for the exact source integrated here. Both registered-ID bundles in the unsigned device archive contain the verified privacy, detector and runtime resources. The current distribution profiles match the local identity. The signing attempt timed out at the Share extension. Physical-device, human accessibility, Apple validation of these bytes, and independent accuracy remain pending.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
       "queue": "open",
-      "native_candidate_limit": "Current developer Share software passes its five UI workflows on the selected simulator. The original failed prototype and earlier boot failures remain historical evidence. The compatibility API is deprecated in iOS 27; physical-phone and outside-user acceptance remain open."
+      "native_candidate_limit": "Five actual iPhone 14 Plus simulator workflows pass using invented text. The generic Share provider compatibility API is deprecated in iOS 27. Physical phone and outside-user acceptance remain open."
     },
     {
       "id": "N-014",

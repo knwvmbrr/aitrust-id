@@ -7,13 +7,41 @@ const reasons={
  'sig.obfuscated_payload.v3':'Passes encoded content to eval or exec, which can run code.'
 };
 const notify=state=>window.webkit.messageHandlers.lifecycle.postMessage({state});
+const moduleLoader=String.raw`
+import hashlib as _aitrust_hashlib, zipfile as _aitrust_zipfile
+with _aitrust_zipfile.ZipFile('/tmp/aitrust-detector-source.zip') as _aitrust_archive:
+    _aitrust_members = _aitrust_archive.infolist()
+    if len(_aitrust_members) != 1 or _aitrust_archive.comment:
+        raise ValueError('Module archive refused')
+    _aitrust_member = _aitrust_members[0]
+    if (_aitrust_member.filename != 'method.py' or _aitrust_member.header_offset != 0
+            or _aitrust_member.flag_bits != 0 or _aitrust_member.extra
+            or _aitrust_member.compress_type != _aitrust_zipfile.ZIP_STORED
+            or not 0 < _aitrust_member.file_size <= 200_000
+            or _aitrust_member.compress_size != _aitrust_member.file_size
+            or (_aitrust_member.external_attr >> 16) != 0o100644):
+        raise ValueError('Module member refused')
+    _aitrust_source = _aitrust_archive.read(_aitrust_member)
+if _aitrust_hashlib.sha256(_aitrust_source).hexdigest() != _aitrust_expected_source:
+    raise ValueError('Module identity differs')
+exec(compile(_aitrust_source.decode('utf-8', errors='strict'), 'aitrust-bundled-method.py', 'exec'), globals())
+del _aitrust_source, _aitrust_archive, _aitrust_members, _aitrust_member, _aitrust_hashlib, _aitrust_zipfile
+`;
 try {
  const response=await fetch('./device-manifest.json');if(!response.ok)throw Error('Unavailable');
  const manifest=await response.json();
  const {loadPyodide}=await import('./runtime/pyodide.mjs');
  const py=await loadPyodide({indexURL:new URL('./runtime/',location.href).href,stdout:()=>{},stderr:()=>{}});
- const source=await fetch('./method.py');if(!source.ok)throw Error('Unavailable');
- py.runPython(new TextDecoder('utf-8',{fatal:true}).decode(await source.arrayBuffer()));
+ if(!/^[a-f0-9]{64}$/.test(manifest.bundle_sha256))throw Error('Unavailable');
+ const source=await fetch('./detector-source.zip');if(!source.ok)throw Error('Unavailable');
+ const archive=new Uint8Array(await source.arrayBuffer());
+ if(!archive.length||archive.length>200_256)throw Error('Unavailable');
+ py.FS.writeFile('/tmp/aitrust-detector-source.zip',archive);
+ py.globals.set('_aitrust_expected_source',manifest.bundle_sha256);
+ try {py.runPython(moduleLoader);} finally {
+  py.FS.unlink('/tmp/aitrust-detector-source.zip');
+  py.globals.delete('_aitrust_expected_source');
+ }
  const check=py.globals.get('check_device'),normalize=py.globals.get('normalize_nfc');
  window.checkAnswer=text=>{
   if(typeof text!=='string'||!text.trim()||Array.from(text).length>manifest.max_codepoints)throw Error('Invalid input');

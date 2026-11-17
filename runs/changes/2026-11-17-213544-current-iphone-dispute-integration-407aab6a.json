@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-213544-current-iphone-dispute-integration-407aab6a",
+  "recorded_at": "2026-11-17T21:35:44.942783+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a8af22a6d86e09f4e9b9cdc23e9c1fee568bf4e1",
+  "changed": "Integrated the simulator-verified iPhone package with local appearance controls, privacy manifests and exact Python notices, plus the private dispute-to-correction CLI.",
+  "proves": "Five simulator workflows, 36 resource comparisons and 189 focused integration checks passed. The existing distribution profiles match; the current signing attempt timed out at Share.",
+  "limits": "Apple validation and upload of this candidate, physical accessibility, operational public correction and independent tag accuracy remain pending. Scope is 132 complete and 70 open.",
+  "scope_ids": [
+    "N-013",
+    "N-005",
+    "F-057",
+    "F-137"
+  ],
+  "files": {
+    ".github/workflows/native-share.yml": "15d95c68fd6e6991a7c082899b76bfef6b6e7b33029c42ec8be86bc0daf0b8e4",
+    "docs/app-store-readiness.md": "3fad3a6a41d98f69172ab1f6db5bbf9cf0d13f96b2c8a252c5850c01366ffe1d",
+    "docs/dispute-correction-link-plan.md": "5c286da2587eff0a24ca2e5f2e963f6cdc37dcef9c1f728692179e9040f1c295",
+    "docs/dispute-correction-link.md": "8ae07cb97deb75a6202e3c101cfb810b3cf0022a198557689123a43b0a4af0c2",
+    "docs/native-share-developer.md": "810f32dbbc63ccf46b78745351a4e9a42fa76fc4921ea643bd31a4387f38c762",
+    "docs/scope-progress.json": "c6e518b3f46ee02a31b33e8e92d8d3580552e055617b7d1e79f29a7a75b3a62a",
+    "docs/scope-progress.md": "9b9fc4016fc6ce4ae42f6e646c49f2b15067594bd774f254406a19538995fb31",
+    "docs/scope-task-index.md": "f7f5110e40b60c092d3c6974ae5536edb6a38a73d6089224875e2ef74ab6c732",
+    "mobile/ios/Privacy.txt": "c13c72fe81c186ac98d8cf8734f85f5b1d5b1195fca04228689f2540dbd56543",
+    "mobile/ios/PrivacyInfo.xcprivacy": "522b17bcf2a5f9f2310b461bc3e3360441465b218064b0ec7dfa54618661a496",
+    "mobile/ios/Source/AppearancePreference.swift": "c461556b4eb4e09a48990ab4fafe5a94803e040b9ef16cde440b9598fd8b19fd",
+    "mobile/ios/Source/Assets.swift": "2f6cce866cc8d13ae55e78de19bcc9df270f59585183c9b9149e1f63af552b8a",
+    "mobile/ios/Source/BrandTheme.swift": "f83bb287e697d135c62c643fa4889488bde232b9363d8dba209c555af6a384af",
+    "mobile/ios/Source/CheckerController.swift": "2cca03ca44164ea695b1ba07aefc3cb87cfc51355fdacef64339349a3b0b631e",
+    "mobile/ios/Tests/BundleProbe.swift": "0f944ea147cf253e8953576f6403c01236024e23d57d5b4f294d7d71d8e23078",
+    "mobile/ios/Tests/UIFlows.swift": "a8ffaf2ebd07b2ddaf566a4e0b4077a82d397340f62c63fe15547614d8570a40",
+    "mobile/ios/Web/bridge.mjs": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007",
+    "runs/2026-11-15-apple-package-validation-passed.json": "7e59c6c19378001a540cbd7e91b764330b6a51b57a7a679b071f613c11e8f675",
+    "runs/2026-11-15-validated-ipa-inspection.json": "25d35e4f05a664bc2119dd65215d3a4b4b2dbaf15f7e96d0fb1ca95ca79874ba",
+    "runs/2026-11-17-current-ios-signing-attempt.json": "9b1c4718ce9863bcb9da9baad44dd7e45034b7038c61907ebebf403d5e33ab57",
+    "runs/2026-11-17-dispute-link-current-sqlite.json": "8f49e304f90a61a99add3baaa9d871a2b7d4451d8726af7489bbd0bfa78e05aa",
+    "runs/2026-11-17-native-dispute-website-changelog-refusal.json": "f78f4101615638ef6a4686da55822e135d1bed3cf13c29773fa019a482dfc43c",
+    "runs/2026-11-17-native-dispute-website-source-drift.json": "7859d68d744c1ab7b00a7d5ac4246754e1acc8bde3e52b5332a11e8856ac852a",
+    "runs/2026-11-17-native-share-current-workflow.json": "4872ecce845cc475cee09fa46490aa5ff3e744e63883c8c929157f44319927bb",
+    "scripts/build-ios-project.py": "821b0e95ee9e6169997bd030ab17f6d279fa747b5c91293d0c67b3f72514108e",
+    "scripts/link-dispute-correction.py": "d39119837c7b020883e6880f79c757a8910803e84ae3eebfceb1b5999b604c53",
+    "scripts/native_bundle.py": "0e0cca91cd13863fcef55edf52ab5388a013458d3edc47a8a28e184be91503e2",
+    "scripts/verify-ios-archive.py": "b592ba4ee33dd40001fc2bb314d10bf8019c9ec6f010d024c6c21523c78d4ac8",
+    "scripts/verify-ios-bundle.py": "0630ee511b7df755c1b0dd7ff0121f7681e6bab49fb9a0844db7ca920323673d",
+    "scripts/verify-ios-share.py": "27839e7c7b2ab23a11761ac075f5b9e386f2ec68dcf63dff665d9bbf2b1403a3",
+    "scripts/verify-native-share-evidence.py": "68fbe09d641278602926395307e19c3bb8de3fd64382d189ad364cb117964638",
+    "scripts/verify-route-boundaries.py": "9049031a656eb837d801c1011608a219ca8e78bae5d63b60250e0e0a2aeebb28",
+    "site/public/reference/native-share-developer.md": "810f32dbbc63ccf46b78745351a4e9a42fa76fc4921ea643bd31a4387f38c762",
+    "site/public/reference/public-scope.json": "abf3b900aab84b6a09a6a4a48747428d3cd7524dcd0b7eebad79328c15c49d6b",
+    "site/src/public-scope.json": "abf3b900aab84b6a09a6a4a48747428d3cd7524dcd0b7eebad79328c15c49d6b",
+    "site/src/scope-manifest.json": "4321d6e7d901b0ea96c15d6d9dfab17266d4d7a06beed99326babb61a442be5d",
+    "state.json": "ce4a1ece0a587a6ba2ef90f3f52155f2982d4039aa9ddc66e3506a1dffa4cef3",
+    "tests/test_dispute_correction_link.py": "d0f3f41196c06fd939a8d9fb5c352afd0821ee25851cac7a6e019ed0b2133256",
+    "tests/test_ios_appearance.py": "f99f99a15383f2c89049eea1a73c875847cbce8813bf488f7959f9e8d7919cdd",
+    "tests/test_ios_archive.py": "8ad08e5febfb74b3c07a6eb7a121297aa8fafe6f95f67435db6a547a884562a9",
+    "tests/test_ios_project_package.py": "fb6e963c0fe9e107a6cc92c1270792cf09a9fd5c8cd61e8b691e6df363018de7",
+    "tests/test_ios_share_verifier.py": "5e282477dabb366282608bc4da6a4548bf8d124d95080626856e4ff4ccbbe210",
+    "tests/test_native_bundle.py": "c4d1c5edc5b1cb18cdc3f947b5b5e212de9bf74de4d945b12e7b320852cce89a",
+    "tests/test_native_share_evidence.py": "34d068a7253acd24dba4fdb20a805d0ff2b367d4d98b635a178b57571d06d750",
+    "tools/dispute_correction_link.py": "57dcd96d0e3bf931fb59c0a78c0bc0f0ff46b9b65bf72372c1f321ed364f8810"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-native-share-current-workflow.json",
+      "sha256": "4872ecce845cc475cee09fa46490aa5ff3e744e63883c8c929157f44319927bb"
+    },
+    {
+      "path": "runs/2026-11-17-ios-runtime-notices-unsigned-archive.json",
+      "sha256": "dfa624f4dac0aafc28ff87152afafa00a8bc5ce6181e805a0bd2922004da6079"
+    },
+    {
+      "path": "runs/2026-11-17-current-ios-signing-attempt.json",
+      "sha256": "9b1c4718ce9863bcb9da9baad44dd7e45034b7038c61907ebebf403d5e33ab57"
+    },
+    {
+      "path": "runs/2026-11-17-dispute-link-current-sqlite.json",
+      "sha256": "8f49e304f90a61a99add3baaa9d871a2b7d4451d8726af7489bbd0bfa78e05aa"
+    },
+    {
+      "path": "runs/2026-11-15-apple-package-validation-passed.json",
+      "sha256": "7e59c6c19378001a540cbd7e91b764330b6a51b57a7a679b071f613c11e8f675"
+    },
+    {
+      "path": "runs/2026-11-17-native-dispute-website-source-drift.json",
+      "sha256": "7859d68d744c1ab7b00a7d5ac4246754e1acc8bde3e52b5332a11e8856ac852a"
+    },
+    {
+      "path": "runs/2026-11-17-native-dispute-website-changelog-refusal.json",
+      "sha256": "f78f4101615638ef6a4686da55822e135d1bed3cf13c29773fa019a482dfc43c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-native-share-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T21:35:45.407104+00:00"
+    }
+  ]
+}

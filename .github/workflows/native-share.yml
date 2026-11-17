@@ -5,6 +5,9 @@ on:
     paths: ['mobile/ios/**', 'scripts/*ios*.py', 'scripts/native_bundle.py', 'scripts/verify-shared-text.py', 'tests/test_ios*.py', '.github/workflows/native-share.yml']
 permissions:
   contents: read
+concurrency:
+  group: native-share-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   native-share:
     # GitHub's standard Xcode 27 image; no paid xlarge runner.
@@ -44,6 +47,7 @@ jobs:
             ${{ env.AITRUST_NATIVE_PROOF }}/text/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/share/*.log
+            ${{ env.AITRUST_NATIVE_PROOF }}/share/workflow.xcresult
             ${{ env.AITRUST_NATIVE_PROOF }}/archive/proof.json
             ${{ env.AITRUST_NATIVE_PROOF }}/archive/archive.log
           retention-days: 7

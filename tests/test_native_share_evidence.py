@@ -26,7 +26,8 @@ def test_current_native_software_proof(prepared_assets):
 
 @pytest.mark.parametrize('key,value', [('physical_device', True), ('independent_accuracy', True),
     ('human_accessibility', True), ('installable_phone_release', True), ('pass', False),
-    ('source_unchanged_during_execution', False), ('owned_simulator_removed', False),
+    ('source_unchanged_during_execution', False), ('post_ui_source_unchanged', False),
+    ('owned_simulator_removed', False),
     ('test_count', 4), ('test_count', 5.0), ('profile', 'unknown'), ('captured_at', '2099-01-01T00:00:00+00:00')])
 def test_overclaim_or_partial_execution_refused(key, value):
     value_proof = proof(); value_proof[key] = value
@@ -50,7 +51,7 @@ def test_unknown_asset_identity_refused():
 
 
 def test_zeroed_executable_asset_digest_refused(prepared_assets):
-    value = proof(); value['asset_fingerprints']['/method.py'] = '0' * 64
+    value = proof(); value['asset_fingerprints']['/detector-source.zip'] = '0' * 64
     with pytest.raises(ValueError, match='Native bundle differs'):
         guard['verify'](proof=value)
 
