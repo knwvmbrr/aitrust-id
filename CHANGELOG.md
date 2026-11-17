@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-202759-android-hosted-java-compiler-efe1e9fa
+
+Recorded 2026-11-17T20:27:59.293759+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Compile Java 8 lambdas with the JDK bootstrap classes and keep Android API stubs on the compiler classpath.
+- **Evidence.** Hosted run 44169342019 reached javac and exposed the LambdaMetafactory bootstrap error after its SDK, asset and session checks passed. Local packaging controls pass. [Change record](./runs/changes/2026-11-17-202759-android-hosted-java-compiler-efe1e9fa.json).
+- **Not claimed.** Corrected hosted compile, Android runtime and physical device acceptance remain pending. No original requirement closes.
+
+
 ### 2026-11-17-175729-android-share-offline-checker-bf7204be
 
 Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change

@@ -96,7 +96,9 @@ def compile_apk(sdk,java_home):
         run([tools/'aapt2','compile','--dir',ROOT/'mobile/android/res','-o',stage/'resources.zip'])
         run([tools/'aapt2','link','-o',stage/'resources.apk','-I',platform,'--manifest',ROOT/'mobile/android/AndroidManifest.xml','--java',generated,'-A',OUTPUT/'assets',stage/'resources.zip'])
         sources=sorted((ROOT/'mobile/android/src').rglob('*.java'))+sorted((OUTPUT/'generated').rglob('*.java'))+sorted(generated.rglob('*.java'))
-        run([java_home/'bin/javac','-encoding','UTF-8','-source','8','-target','8','-bootclasspath',platform,'-classpath',platform,'-d',classes,*sources])
+        # The Android stub JAR supplies platform types, not javac's compiler
+        # bootstrap classes. D8 checks the Android platform and min API below.
+        run([java_home/'bin/javac','-encoding','UTF-8','--release','8','-classpath',platform,'-d',classes,*sources])
         run([tools/'d8','--release','--min-api','29','--lib',platform,'--output',dex,*sorted(classes.rglob('*.class'))])
         unsigned=stage/'unpacked.apk';shutil.copyfile(stage/'resources.apk',unsigned)
         with zipfile.ZipFile(unsigned,'a',compression=zipfile.ZIP_DEFLATED) as archive:

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-17T20:27:58.814761+00:00",
+  "author": "Codex Android lane",
+  "scope_ids": [
+    "N-014"
+  ],
+  "claim_level": "engineering_only",
+  "hosted_run": 44169342019,
+  "pr": 108,
+  "observed_source": "f2f9314dd47f3cc24cbd42095de449ee62e0bf40",
+  "sdk_inventory_passed": true,
+  "locked_runtime_install_passed": true,
+  "session_and_asset_controls_passed": true,
+  "apk_compiled": false,
+  "android_runtime_executed": false,
+  "failed_step": "Prepare exact offline PS assets and build an unsigned APK",
+  "failure_signature": "Cannot find LambdaMetafactory.metafactory while javac uses Android stubs as bootclasspath",
+  "root_cause": "Android API stubs used as the Java compiler bootstrap classpath",
+  "corrected_build_helper_sha256": "ef3afbbd7fca59f4afaf5aef22db738f5c49873d85fa6886def66bace6521000",
+  "correction": "Use javac --release 8 with API 36 stub JAR on classpath, then keep D8 Android platform and min API 29 checks",
+  "corrected_hosted_compile": "PENDING",
+  "independent_accuracy_evidence": false,
+  "original_requirement_closures": 0
+}
