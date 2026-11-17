@@ -30,6 +30,8 @@ def test_real_components_preserve_locations_without_combined_verdict():
     assert result['combined_confidence'] is None
     assert result['tag_asserted'] is result['intent_established'] is False
     assert all(row['limitations'] == workflow.LIMITS for row in result['checks'])
+    corpus_digest = workflow.sha((ROOT / 'protocol/corpus.py').read_bytes())
+    assert all(row['sources']['protocol/corpus.py'] == corpus_digest for row in result['checks'])
     assert text not in json.dumps(result)
 
 

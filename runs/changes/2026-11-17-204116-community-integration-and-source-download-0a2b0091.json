@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-204116-community-integration-and-source-download-0a2b0091",
+  "recorded_at": "2026-11-17T20:41:16.817979+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af8bfe9745bd635259a46a1593bd2d5ed936379f",
+  "changed": "Bound the reviewed community sources to current route verification and added the signed public source download. Corrected the urgency and authority source lists to include their corpus dependency.",
+  "proves": "All 32 website capability checks and the route inventory passed. The attested archive and four anonymous release downloads match. The corrected framing source binding passes 20 focused tests and 11 command controls.",
+  "limits": "The community workbench runs on synthetic data. Live moderators, Android runtime and independent MT accuracy still need acceptance.",
+  "scope_ids": [
+    "F-137",
+    "F-120",
+    "F-057",
+    "N-014",
+    "T-MT"
+  ],
+  "files": {
+    "docs/scope-progress.json": "d9cf2d10dde6f44b83e87bbf3a9b811b87d68ae46df3f20c6f71faf564e226ef",
+    "docs/scope-progress.md": "51cf70453270238eba5d845e53dd87548391f4489b7ff9da9cdb55769d62281d",
+    "docs/scope-task-index.md": "eba7b59a45b29990d8bf662aba0ee9a8c1506043a6067041f033b330c1f07a7c",
+    "eval/route-boundaries.json": "ee65aac573de3a9e343fb1d65f06062fae29bfceebd9c2d678ddb7f562ca6be6",
+    "runs/2026-11-17-android-emulator-host-inventory.json": "90e179fff10c01fd9ed75c0fac83b1126605de4dc19e55bd8385cf25dbd1ab2e",
+    "runs/2026-11-17-community-current-website.json": "65fbdc729a923002242f08d8c81c481ca11a0bde9c071c067f01f6988e7b8c79",
+    "runs/2026-11-17-community-hosted-capacity.json": "ac5d08b713831b14902a161ec055339977c6ffc9d5537609d8d42a317840618f",
+    "runs/2026-11-17-community-integrated-boundaries.json": "a756a9a87d2846a6441103f5e2a4b7395c7ac312b66e2b82ecbe6f644c0e6cbe",
+    "runs/2026-11-17-mt-authenticated-source-publication.json": "012c93ea812dcbe39058374e813510df90cc96de6d09b5f796b985eb54b9c50d",
+    "runs/2026-11-17-mt-source-binding-corrected.json": "4bf7f37fbe3e164c9cccbfb948a535bcf77d7243e5773b15785731dce1756d46",
+    "runs/2026-11-17-mt-workflow-protected-checks.json": "c7181707c354b45c69d9bbbed4d59f6ea4e374b62db75751dbaffcab85a83dc4",
+    "runs/2026-11-17-mt-workflow-publication.json": "14fd44aba15dd221746c1e15c5551da354c73296ae5ad3588a2478d917447a10",
+    "scripts/verify-route-boundaries.py": "d812e0b93f0cf7442ebfe7bef98cbc6238f40eaf8b337794b23c9b15cec279fa",
+    "scripts/verify-site.cjs": "ddf095da2ca056c3aab7e74a00d8c4695a0c9c113e2d5fd34b031db12c43381e",
+    "site/index.html": "cee27f64d128e44825d361c7c6189e099e416dc288e85f8292e4ee1e925633c6",
+    "site/public/reference/public-scope.json": "c68eab7d376ce07f52e74f9b6a864fb8409840266677bbc3a5a437cc10646f41",
+    "site/src/public-scope.json": "c68eab7d376ce07f52e74f9b6a864fb8409840266677bbc3a5a437cc10646f41",
+    "site/src/scope-manifest.json": "5b59e63a2e694305bf7cd63fdcd3a523085cdf1f1a2181e5f58c55625ae843c8",
+    "site/src/usage.js": "4c80c034b58d5488821ff98c1536f3e3997625612f064106461111fd6d6e3d06",
+    "state.json": "1dfd9e584a1787b100a42afb7983b53fa4cb538e7828e44dd276414069b0221e",
+    "tests/test_mt_workflow.py": "c57cd278c3e46827a823b32fd7cb1de97c709b68271b2c894a16a08fc7b6fd03",
+    "tools/mt_workflow.py": "cbe1c09f7e4e89ed267b3411c2f0996da22423759d5a323d7e2bc6c716903a1b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-community-current-website.json",
+      "sha256": "65fbdc729a923002242f08d8c81c481ca11a0bde9c071c067f01f6988e7b8c79"
+    },
+    {
+      "path": "runs/2026-11-17-community-integrated-boundaries.json",
+      "sha256": "a756a9a87d2846a6441103f5e2a4b7395c7ac312b66e2b82ecbe6f644c0e6cbe"
+    },
+    {
+      "path": "runs/2026-11-17-mt-authenticated-source-publication.json",
+      "sha256": "012c93ea812dcbe39058374e813510df90cc96de6d09b5f796b985eb54b9c50d"
+    },
+    {
+      "path": "runs/2026-11-17-mt-source-binding-corrected.json",
+      "sha256": "4bf7f37fbe3e164c9cccbfb948a535bcf77d7243e5773b15785731dce1756d46"
+    },
+    {
+      "path": "runs/2026-11-17-android-emulator-host-inventory.json",
+      "sha256": "90e179fff10c01fd9ed75c0fac83b1126605de4dc19e55bd8385cf25dbd1ab2e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:41:17.375021+00:00"
+    }
+  ]
+}

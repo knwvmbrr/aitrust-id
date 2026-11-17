@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4",
+  "recorded_at": "2026-11-17T20:36:04.867937+00:00",
+  "author": "Codex PM and community engineering",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "af8bfe9745bd635259a46a1593bd2d5ed936379f",
+  "changed": "Recorded verified MT publication and the community workflow\u2019s hosted results. Added the framing guide to the MT detail panel and advanced F-137 through executable checks.",
+  "proves": "All 297 published artifacts matched at both MT deployment origins. The isolated PostgreSQL run showed that pause and retraction succeed when ordinary writes reach reserved capacity.",
+  "limits": "F-137 still requires real moderator and operating acceptance. N-005 still needs exact tag correction binding. Current Android runtime and independent MT release validation remain open.",
+  "scope_ids": [
+    "F-137",
+    "F-135",
+    "F-136",
+    "N-005",
+    "F-120",
+    "T-MT"
+  ],
+  "files": {
+    "docs/scope-progress.json": "d9cf2d10dde6f44b83e87bbf3a9b811b87d68ae46df3f20c6f71faf564e226ef",
+    "docs/scope-progress.md": "51cf70453270238eba5d845e53dd87548391f4489b7ff9da9cdb55769d62281d",
+    "docs/scope-task-index.md": "eba7b59a45b29990d8bf662aba0ee9a8c1506043a6067041f033b330c1f07a7c",
+    "runs/2026-11-17-community-hosted-capacity.json": "ac5d08b713831b14902a161ec055339977c6ffc9d5537609d8d42a317840618f",
+    "runs/2026-11-17-mt-workflow-protected-checks.json": "c7181707c354b45c69d9bbbed4d59f6ea4e374b62db75751dbaffcab85a83dc4",
+    "runs/2026-11-17-mt-workflow-publication.json": "14fd44aba15dd221746c1e15c5551da354c73296ae5ad3588a2478d917447a10",
+    "scripts/verify-site.cjs": "ddf095da2ca056c3aab7e74a00d8c4695a0c9c113e2d5fd34b031db12c43381e",
+    "site/index.html": "cee27f64d128e44825d361c7c6189e099e416dc288e85f8292e4ee1e925633c6",
+    "site/public/reference/public-scope.json": "c68eab7d376ce07f52e74f9b6a864fb8409840266677bbc3a5a437cc10646f41",
+    "site/src/public-scope.json": "c68eab7d376ce07f52e74f9b6a864fb8409840266677bbc3a5a437cc10646f41",
+    "site/src/scope-manifest.json": "5b59e63a2e694305bf7cd63fdcd3a523085cdf1f1a2181e5f58c55625ae843c8",
+    "site/src/usage.js": "4c80c034b58d5488821ff98c1536f3e3997625612f064106461111fd6d6e3d06",
+    "state.json": "31866acffe4d49bc702e6405aceddee0921e3b451dfce793115ef3153ab6316d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-mt-workflow-publication.json",
+      "sha256": "14fd44aba15dd221746c1e15c5551da354c73296ae5ad3588a2478d917447a10"
+    },
+    {
+      "path": "runs/2026-11-17-mt-workflow-protected-checks.json",
+      "sha256": "c7181707c354b45c69d9bbbed4d59f6ea4e374b62db75751dbaffcab85a83dc4"
+    },
+    {
+      "path": "runs/2026-11-17-community-hosted-capacity.json",
+      "sha256": "ac5d08b713831b14902a161ec055339977c6ffc9d5537609d8d42a317840618f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:36:05.492859+00:00"
+    }
+  ]
+}

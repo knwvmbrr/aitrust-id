@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-204116-community-integration-and-source-download-0a2b0091
+
+Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bound the reviewed community sources to current route verification and added the signed public source download. Corrected the urgency and authority source lists to include their corpus dependency.
+- **Evidence.** All 32 website capability checks and the route inventory passed. The attested archive and four anonymous release downloads match. The corrected framing source binding passes 20 focused tests and 11 command controls. [Change record](./runs/changes/2026-11-17-204116-community-integration-and-source-download-0a2b0091.json).
+- **Not claimed.** The community workbench runs on synthetic data. Live moderators, Android runtime and independent MT accuracy still need acceptance.
+
+
+### 2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4
+
+Recorded 2026-11-17T20:36:04.867937+00:00 · Contributor: Codex PM and community engineering · change
+
+- **Changed.** Recorded verified MT publication and the community workflow’s hosted results. Added the framing guide to the MT detail panel and advanced F-137 through executable checks.
+- **Evidence.** All 297 published artifacts matched at both MT deployment origins. The isolated PostgreSQL run showed that pause and retraction succeed when ordinary writes reach reserved capacity. [Change record](./runs/changes/2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4.json).
+- **Not claimed.** F-137 still requires real moderator and operating acceptance. N-005 still needs exact tag correction binding. Current Android runtime and independent MT release validation remain open.
+
+
 ### 2026-11-17-203115-community-postgres-byte-reserve-bbb3e974
 
 Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engineering lane · change

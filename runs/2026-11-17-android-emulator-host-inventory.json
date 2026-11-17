@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-17T20:38:01.299947+00:00",
+  "author": "Codex Android lane",
+  "scope_ids": [
+    "N-014"
+  ],
+  "claim_level": "engineering_only",
+  "source_commit": "ed0270ba21dc5825f4f7d7d9b27e9a24eb88cc62",
+  "pr": 108,
+  "run_id": 44171007663,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44171007663",
+  "job_id": 134349759503,
+  "workflow_conclusion": "success",
+  "compile_pass": true,
+  "zero_manifest_permissions": true,
+  "ephemeral_test_signature_verified": true,
+  "apk": {
+    "artifact_id": 14366803552,
+    "archive_sha256": "b67f5a4cd82b8b074061dd0061e2d3f8d3a48ea69276b44e5bac6d68708e6d37",
+    "signed_bytes": 6444652,
+    "signed_sha256": "0348770031eb2a2f0e368223a5704b54ab247b9853de252a904741ba53a69d64",
+    "downloaded_binary_members_verified": true
+  },
+  "tested_sources": {
+    "scripts/verify-android-emulator.py": "27765711e23371526481bd2e31c58c8af941f485a1abcc98714f7ce3e0298c1c",
+    ".github/workflows/android-share.yml": "c06494cf13805d26624d8fafae7cf79f978f9c17171dbf20b967995ed4b8251c",
+    "scripts/android-share-build.py": "ef3afbbd7fca59f4afaf5aef22db738f5c49873d85fa6886def66bace6521000"
+  },
+  "runtime_parity_cases": 137,
+  "engine_method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+  "emulator_host_inventory": {
+    "format": "ai-trust-id-android-emulator/v1",
+    "recorded_at": "2026-11-17T20:36:45.174897+00:00",
+    "status": "UNAVAILABLE",
+    "pass": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "cases": [],
+    "prerequisites": {
+      "github_hosted_linux": true,
+      "sdkmanager": true,
+      "avdmanager": true,
+      "adb": true,
+      "emulator_preinstalled": false,
+      "aosp_image_preinstalled": false,
+      "kvm_device_exists": true,
+      "kvm_access": false,
+      "existing_license_match": false,
+      "sdk_writable": true,
+      "sdk_free_bytes": 94346817536
+    },
+    "reason": "Existing disposable runner prerequisites unavailable.",
+    "missing_prerequisites": [
+      "kvm_access",
+      "existing_license_match"
+    ],
+    "elapsed_seconds": 0.17
+  },
+  "hosted_sdk_install_attempted": false,
+  "hosted_license_changed": false,
+  "android_intents_exercised": 0,
+  "android_webview_exercised": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closures": 0
+}

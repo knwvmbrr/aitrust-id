@@ -60,10 +60,10 @@ def subject(text, language):
 
 def identity(kind):
     files = ['tools/mt_workflow.py', 'scripts/mt-evidence-worker.py', 'scripts/worker_process.py',
-             'protocol/normalization.py', 'protocol/unicode15-data.json']
-    files += (['tools/choice_framing.py', 'tools/language_observations.py',
-               'protocol/corpus.py', 'tools/blind_review_io.py'] if kind == 'choice'
-              else ['tools/language_observations.py'])
+             'protocol/normalization.py', 'protocol/unicode15-data.json',
+             'tools/language_observations.py', 'protocol/corpus.py']
+    if kind == 'choice':
+        files.extend(['tools/choice_framing.py', 'tools/blind_review_io.py'])
     return {name: sha((ROOT / name).read_bytes()) for name in files}
 
 
