@@ -5,3 +5,7 @@ sbom/notices/*.txt -text -whitespace
 
 # Preserve upstream native licensing declaration formatting.
 sbom/native/sources/*.txt -whitespace
+
+# Retain upstream license/header bytes in the derived nested-runtime notice bundle.
+sbom/nested-runtime/*.txt -whitespace
+sbom/nested-runtime/*.rst -whitespace

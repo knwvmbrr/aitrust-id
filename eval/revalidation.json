@@ -1189,7 +1189,11 @@
         "runs/2026-11-09-hash-inbox-current-macos.json",
         "runs/2026-11-09-hash-inbox-current-linux.json",
         "scripts/verify-policies.cjs",
-        "docs/mt-evidence-workflow.md"
+        "docs/mt-evidence-workflow.md",
+        "sbom/nested-runtime/*",
+        "tools/nested_runtime_inventory.py",
+        "scripts/verify-nested-runtime.py",
+        "tests/test_nested_runtime_inventory.py"
       ],
       "commands": [
         [

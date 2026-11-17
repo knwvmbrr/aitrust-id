@@ -1,0 +1,20 @@
+{
+  "profile": "versioned-upstream-license-document/v1",
+  "retrieved_at": "2026-11-17T15:11:15.709128+00:00",
+  "url": "https://raw.githubusercontent.com/python/cpython/v3.14.2/Doc/license.rst",
+  "bytes": 57595,
+  "sha256": "c695d550b135e53e38807e76496d1db17d22c40e461d1f3f354c86188d3305dd",
+  "source_version": "3.14.2",
+  "tag_signature_verified": false,
+  "publisher_identity_independently_verified": false,
+  "purpose": "Version-matched CPython incorporated-software acknowledgements missing from the selected standalone Python license file.",
+  "additional_documents": [
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.14.2/Misc/sbom.spdx.json",
+      "path": "sbom/nested-runtime/cpython-v3.14.2-sbom.spdx.json",
+      "sha256": "d539d8b99e28b190bc21aa932c69e8a554124bbe6ab196e705f31fc23aa6bd68",
+      "bytes": 79329,
+      "purpose": "Version-matched upstream third-party file/license declarations; not independent permission clearance."
+    }
+  ]
+}
