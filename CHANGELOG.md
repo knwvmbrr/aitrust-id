@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-211023-verified-runtime-and-community-publication-5b66606e
+
+Recorded 2026-11-17T21:10:23.819417+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Recorded the verified live Python notices, framing guide, and current scope publication.
+- **Evidence.** All 11 protected checks passed for the web notice merge. The deployed site matched all 298 artifacts on each origin. The immediately preceding moderation-ledger deployment also passed exact comparison. [Change record](./runs/changes/2026-11-17-211023-verified-runtime-and-community-publication-5b66606e.json).
+- **Not claimed.** The archived source and evidence describe development capabilities. Independent tag release, full dependency obligations, and operational acceptance remain open.
+
+
 ### 2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600
 
 Recorded 2026-11-17T21:01:58.602773+00:00 · Contributor: Codex PM · change
