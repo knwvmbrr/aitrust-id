@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-17T22:21:46.286300+00:00",
+  "audited_at": "2026-11-17T22:48:27.698232+00:00",
   "client_date": "2026-11-17",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -8782,7 +8782,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-17T22:21:46.286300+00:00",
+      "audited_at": "2026-11-17T22:48:27.698232+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8797,7 +8797,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Verify all five workflows on hosted iOS 27.2 with paginated notices. Complete protected authorization for the matched distribution identity, then sign, validate and upload the current package. Complete physical iPhone 14 Plus Share-source, lifecycle, offline, VoiceOver, update/removal and outside-user acceptance.",
+      "next_fix": "Resolve the hosted simulator shutdown and deletion timeouts. Complete protected key authorization, sign, validate and upload the current package. Complete physical iPhone 14 Plus Share-source, lifecycle, offline, VoiceOver, update/removal and outside-user acceptance.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8843,14 +8843,15 @@
         "runs/2026-11-17-paged-notices-native-share-workflow.json",
         "runs/2026-11-17-paged-notices-ios-archive.json",
         "runs/2026-11-17-ios-notice-page-reconstruction.json",
-        "runs/2026-11-17-ios-signing-keychain-diagnosis.json"
+        "runs/2026-11-17-ios-signing-keychain-diagnosis.json",
+        "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
       ],
-      "evidence_scope": "The iOS 26.2 simulator completed five workflows including offline notice navigation, paging and PS behavior. The executable and all 36 resources were checked in the fresh unsigned archive. The earlier hosted iOS 27.2 run stopped at its UI deadline. Protected signing, Apple validation, upload and physical/human checks remain open.",
+      "evidence_scope": "All five UI workflows passed on iOS 26.2 locally and iOS 27.2 hosted. The hosted result bundle confirms five passes and zero skips. The hosted job failed at cleanup. The current registered-ID archive and signing settings are verified, with protected signing, Apple submission and physical and human checks open.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
       "queue": "open",
-      "native_candidate_limit": "Local iOS 26.2 simulator coverage and registered-ID unsigned archive are current. Hosted iOS 27.2 recheck is pending. The typed Share provider API is deprecated in iOS 27."
+      "native_candidate_limit": "Both simulator runtimes passed the five UI cases. Hosted cleanup, the deprecated Share provider compatibility path on physical iOS, and outside-user acceptance remain open."
     },
     {
       "id": "N-014",
