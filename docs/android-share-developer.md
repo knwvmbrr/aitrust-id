@@ -74,6 +74,13 @@ a connected phone. If prerequisites are absent, `emulator.json` records
 install or emulator case fails the job. Only synthetic UI data is inspected,
 and the app-owned emulator is stopped.
 
+Run 44171007663 rebuilt and signed the test APK. The runner had the SDK tools
+and sufficient disk. Its user could not access KVM, and the existing Android
+SDK license record did not match the reviewed package license. The emulator
+step refused before installation and executed zero Android cases. An emulator
+with a working licensed SDK or an authorized test device is still needed.
+[Runner inventory and APK evidence](../runs/2026-11-17-android-emulator-host-inventory.json)
+
 ## Acceptance still owed
 
 - Android WebView/Share execution against the signed development APK.

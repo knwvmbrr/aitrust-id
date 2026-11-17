@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-203801-android-emulator-host-refusal-8f0dd08f
+
+Recorded 2026-11-17T20:38:01.402946+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Record the current hosted Android build and exact emulator prerequisites that prevented execution.
+- **Evidence.** Run 44171007663 compiled the APK, verified the development signature, and identified inaccessible KVM and a missing matching SDK license record. The downloaded APK matches its recorded engine and loader. [Change record](./runs/changes/2026-11-17-203801-android-emulator-host-refusal-8f0dd08f.json).
+- **Not claimed.** The emulator step stopped before installation and ran zero Android cases. N-014 remains open for Android Share and physical acceptance.
+
+
 ### 2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00
 
 Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · change
