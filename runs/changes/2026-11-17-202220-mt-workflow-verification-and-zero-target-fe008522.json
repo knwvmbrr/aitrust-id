@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522",
+  "recorded_at": "2026-11-17T20:22:20.355457+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0ff7a08630e05ab5f08a801a7fd5ad40df896ab7",
+  "changed": "Verified the framing workflow alongside current browser routes and recorded zero as the full completion objective.",
+  "proves": "32 website and 14 extension checks passed and the current route boundaries and 202-record ledger verify.",
+  "limits": "Full MT release still requires contextual validation, independent labeling and human operation. The original requirements remain open.",
+  "scope_ids": [
+    "T-MT",
+    "F-019a",
+    "F-019b",
+    "F-019c"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "d29a34f6c0dc7c3451996bb8328bb52ba930cca823e5008be83a7823854932b6",
+    "README.md": "ddaeffe6617caab232e9b71feb905356cedc383ee52f7abc6b176c1f642433c0",
+    "docs/mt-evidence-workflow.md": "42f509e92a2bf011b9f5750956957018e5c42cc1aeb2f0f377d2a1ce17ea8784",
+    "docs/mt-workflow-plan.md": "c55712194a1f2f096c98e5922b4fd6fca31c6e1d9c2a2c2fd04928e2295dcf66",
+    "docs/scope-60-execution.md": "5a492e6f49aca6d59185182fdd8d7f21c2ddb7dc334f1ca684b390bd7f2e7a96",
+    "docs/scope-progress.json": "5f4893acd8d4123128d75ca852ff66b0bbebcd1c2adbe7a0f9b3e1301a632e28",
+    "docs/scope-progress.md": "755bca476f71f6fbe03372b4e0ab55b0fa131ec030c3fe66691ed91d2bf835be",
+    "eval/revalidation.json": "f59e5ea0fffcc7c7fe8e2aeb8b9b682d2cd98f9f913b65ca8a5640689ca5919a",
+    "eval/route-boundaries.json": "e969121a0736891f9ef50f1fd4ec5b17a7ce55a6da2d36cabbe2dc10f725940c",
+    "runs/2026-11-17-mt-workflow-boundaries.json": "b036ca7422dcdb4c9826025ab6084efb20cd37ae34c2e0e817dc64c50e0e53df",
+    "runs/2026-11-17-mt-workflow-extension.json": "ba12032fd7a8e17cffa5993f8979004af9e29150735060a58f0eab1542e48846",
+    "runs/2026-11-17-mt-workflow-mac-final.json": "a983a38b4b4d6ebee449d134a9650065ecfe6a32f1ab098b324940f5b95635f0",
+    "runs/2026-11-17-mt-workflow-mac.json": "c61097870ddc41201fea0c059b4014d9cc009ffd2002895867132ae1022a037b",
+    "runs/2026-11-17-mt-workflow-website.json": "d20eda9305a420718f8f2cd57459798baca49993056767ed99e4f1342dcc37df",
+    "scripts/check-mt-evidence.py": "03ae90db4f5d6a51e87dbb37c6f8726d1f3691f12ab756f2a559c20125ae36ce",
+    "scripts/mt-evidence-worker.py": "85441096f4063c622ea1dbac45b3fb2ab963e2bf38529808fe79df4082dc3837",
+    "scripts/verify-mt-evidence.py": "c9dea38f4a40e87746d3eabfd8a33435ba57fd60c2b71eab68ba29f4b1c42b99",
+    "scripts/verify-route-boundaries.py": "ec0770f799584ec54307d1a5ecc487f4152fc626b095702f52de0e3cebe5f957",
+    "site/public/reference/public-scope.json": "65c669c68784f11588a14f83f2fc096d08f6de1f76eacd577c2bd211de49ac0b",
+    "site/scripts/render-reference.mjs": "7173a2ff11c981fa5a0dfbe933ba1ab9b741c2603ed77115325f7ec4ceb557bb",
+    "site/src/public-scope.json": "65c669c68784f11588a14f83f2fc096d08f6de1f76eacd577c2bd211de49ac0b",
+    "site/src/scope-manifest.json": "d52737e93f9331a669687d724c1dfb781c1b6f058c5472d6b87cb5f2e6165c81",
+    "state.json": "66bb7b78165952583f470f46179acaf492b65695f7ee8f67ea653e182d00bb6e",
+    "tests/test_mt_workflow.py": "b141ac5ef35e92769882f5cce7ec446580d29573e8830d5313fa295c513d858f",
+    "tools/mt_workflow.py": "e993a80bad9d09494de7257aae9389685de6084cd49c4cd8fc406915b0e63276"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-mt-workflow-website.json",
+      "sha256": "d20eda9305a420718f8f2cd57459798baca49993056767ed99e4f1342dcc37df"
+    },
+    {
+      "path": "runs/2026-11-17-mt-workflow-extension.json",
+      "sha256": "ba12032fd7a8e17cffa5993f8979004af9e29150735060a58f0eab1542e48846"
+    },
+    {
+      "path": "runs/2026-11-17-mt-workflow-boundaries.json",
+      "sha256": "b036ca7422dcdb4c9826025ab6084efb20cd37ae34c2e0e817dc64c50e0e53df"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:22:20.876668+00:00"
+    }
+  ]
+}

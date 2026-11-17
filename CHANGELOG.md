@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522
+
+Recorded 2026-11-17T20:22:20.355457+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Verified the framing workflow alongside current browser routes and recorded zero as the full completion objective.
+- **Evidence.** 32 website and 14 extension checks passed and the current route boundaries and 202-record ledger verify. [Change record](./runs/changes/2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522.json).
+- **Not claimed.** Full MT release still requires contextual validation, independent labeling and human operation. The original requirements remain open.
+
+
+### 2026-11-17-151740-mt-private-evidence-workflow-a74f53af
+
+Recorded 2026-11-17T15:17:40.665896+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Added one private independently supervised framing workflow, short default output, explicit safe evidence export, failure isolation and actual CLI controls; reconciled the work-to-zero objective and stale publication pointers.
+- **Evidence.** 20 focused subprocess/contract tests and 11 actual invented-example CLI controls pass; broken/missing choice context leaves urgency usable and PS remains separate. [Change record](./runs/changes/2026-11-17-151740-mt-private-evidence-workflow-a74f53af.json).
+- **Not claimed.** No MT tag, contextual/intent accuracy, independent labeling, human accessibility, Android completion, new endpoint or original requirement closure. Protected integration and publication are pending.
+
+
 ### 2026-11-17-141623-independent-evidence-publication-6aeec82d
 
 Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change

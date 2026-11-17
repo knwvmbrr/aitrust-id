@@ -1,0 +1,95 @@
+{
+  "format": "ai-trust-id-mt-workflow-controls/v1",
+  "recorded_at": "2026-11-17T15:13:11.136410+00:00",
+  "executed_by": "Codex PM",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.0",
+  "pass": true,
+  "controls": [
+    {
+      "id": "complete_two_checks",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "id": "explicit_no_pattern",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "id": "choice_unavailable_does_not_disable_urgency",
+      "expected_exit": 3,
+      "observed_exit": 3,
+      "passed": true
+    },
+    {
+      "id": "all_unavailable",
+      "expected_exit": 2,
+      "observed_exit": 2,
+      "passed": true
+    },
+    {
+      "id": "invalid_utf8",
+      "expected_exit": 2,
+      "observed_exit": 2,
+      "passed": true
+    },
+    {
+      "id": "oversized_input",
+      "expected_exit": 2,
+      "observed_exit": 2,
+      "passed": true
+    },
+    {
+      "id": "prepare_private_invented_context",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "id": "complete_all_three",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "id": "choice_subject_mismatch_is_partial",
+      "expected_exit": 3,
+      "observed_exit": 3,
+      "passed": true
+    },
+    {
+      "id": "explicit_private_export",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "id": "no_overwrite",
+      "expected_exit": 2,
+      "observed_exit": 2,
+      "passed": true
+    }
+  ],
+  "sources": {
+    "tools/mt_workflow.py": "25667e47899e1c78e4efa029097310ccac9d7a4137e3651c9ef430e450d541d3",
+    "scripts/mt-evidence-worker.py": "85441096f4063c622ea1dbac45b3fb2ab963e2bf38529808fe79df4082dc3837",
+    "scripts/check-mt-evidence.py": "03ae90db4f5d6a51e87dbb37c6f8726d1f3691f12ab756f2a559c20125ae36ce",
+    "scripts/verify-mt-evidence.py": "c9dea38f4a40e87746d3eabfd8a33435ba57fd60c2b71eab68ba29f4b1c42b99",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "tools/choice_framing.py": "0ba444f77f832fa7dc7967f0ada24457f21340f58d62597ec527fc44cfb2c122",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tests/test_mt_workflow.py": "311bb951696a5e2f48c841c9223d993cd76969e21fea313c85234d1016fd62e3"
+  },
+  "synthetic_only": true,
+  "network_namespace_isolation_exercised": false,
+  "tag_asserted": false,
+  "independent_accuracy_evidence": false,
+  "limits": "Actual local command execution, not independent MT accuracy or human route acceptance. No OS network sandbox claim."
+}
