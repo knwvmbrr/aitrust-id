@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72
+
+Recorded 2026-11-17T18:04:07.040068+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Reserve bounded audit capacity for privacy retractions after ordinary community writes stop.
+- **Evidence.** 52 focused checks and17 fresh actual CLI calls pass. The boundary test proves existing queued/published content can still be removed without pruning audit history. [Change record](./runs/changes/2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72.json).
+- **Not claimed.** Synthetic workbench only. PostgreSQL execution and production moderator/auth/client/recovery acceptance remain pending; no full requirement percentage changes.
+
+
+### 2026-11-17-180119-synthetic-community-core-8b1f6251
+
+Recorded 2026-11-17T18:01:19.800078+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Implement a runnable synthetic moderated community core, private CLI/store, explicit public projections, corrections, retractions, private report metadata and separate PostgreSQL development adapter.
+- **Evidence.** 51 focused local checks and17 actual CLI calls pass. Two-user/official/moderator roles, safe HTML, consent, ownership, correction/replay/cache scrubbing, private marker absence and storage refusals execute. Actual PostgreSQL/schema/grants/CAS controls are implemented but await isolated Linux execution. [Change record](./runs/changes/2026-11-17-180119-synthetic-community-core-8b1f6251.json).
+- **Not claimed.** Synthetic development only. SQLite is not a real-user destination; remote PostgreSQL operating gates remain. No public endpoint, posting client, production authentication, actual moderator program, real collection, training, tag release or original requirement closure.
+
+
 ### 2026-11-17-141623-independent-evidence-publication-6aeec82d
 
 Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change

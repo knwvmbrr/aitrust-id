@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72",
+  "recorded_at": "2026-11-17T18:04:07.040068+00:00",
+  "author": "Codex - community engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0ff7a08630e05ab5f08a801a7fd5ad40df896ab7",
+  "changed": "Reserve bounded audit capacity for privacy retractions after ordinary community writes stop.",
+  "proves": "52 focused checks and17 fresh actual CLI calls pass. The boundary test proves existing queued/published content can still be removed without pruning audit history.",
+  "limits": "Synthetic workbench only. PostgreSQL execution and production moderator/auth/client/recovery acceptance remain pending; no full requirement percentage changes.",
+  "scope_ids": [
+    "F-135",
+    "F-136",
+    "F-137",
+    "N-005"
+  ],
+  "files": {
+    "tools/community_core.py": "f156aaaefcffceed2f407edf715c94da921b2edbce449b8867f88f61b2f81f27",
+    "tests/test_community_core.py": "ababb0040d358c94e08d35f5b5dc7bc1f4e8ad087f277b05a4918b057d9973f8",
+    "docs/community-core.md": "abbaf7d418db30cacb56c3b9e10290c19270c4928d4d17332a93318d7a1d2ed6",
+    "docs/community-core-result.md": "9e2949310aa1e5ef5e2b1788a499bdec3f14d8baa7166d3a55096bbf93cac8f0",
+    "runs/2026-11-17-community-capacity-cli.json": "2ebcb276826887f901bc73ca44a32e04941652b47fda20c3deb2d3942fe183dd",
+    "runs/2026-11-17-community-capacity-correction.json": "bbd9a1b53982389255fb6ce5803044997526f6564f1c1bf2b386cbe1e5cfde7d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-community-capacity-cli.json",
+      "sha256": "2ebcb276826887f901bc73ca44a32e04941652b47fda20c3deb2d3942fe183dd"
+    },
+    {
+      "path": "runs/2026-11-17-community-capacity-correction.json",
+      "sha256": "bbd9a1b53982389255fb6ce5803044997526f6564f1c1bf2b386cbe1e5cfde7d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T18:04:07.699433+00:00"
+    }
+  ]
+}

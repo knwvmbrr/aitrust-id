@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-17T18:04:06.994081+00:00",
+  "pass": true,
+  "author": "Codex - community engineering lane",
+  "sources": {
+    "tools/community_core.py": "f156aaaefcffceed2f407edf715c94da921b2edbce449b8867f88f61b2f81f27",
+    "tests/test_community_core.py": "ababb0040d358c94e08d35f5b5dc7bc1f4e8ad087f277b05a4918b057d9973f8",
+    "scripts/community-workbench.py": "9a4159166adb14f2860f6462443e6c705ef0ffac0258b8c9c0dff65ea15ac060",
+    "scripts/verify-community-core.py": "458d45442f34cea4572b969040eee292abf8217fc47693bc8c410b6917e39503"
+  },
+  "change": "Reserve the final256 audit slots for privacy retractions before normal-write admission stops.",
+  "focused_tests": {
+    "tests": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "actual_cli_calls": 17,
+  "cli_evidence": "runs/2026-11-17-community-capacity-cli.json",
+  "prior_local_receipt_preserved": "runs/2026-11-17-community-local-component.json",
+  "postgresql_execution_verified": false,
+  "synthetic_only": true,
+  "public_service_enabled": false,
+  "full_requirements_closed": 0,
+  "original_requirement_percentages_changed": false
+}
