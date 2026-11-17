@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-202519-current-development-evidence-index-c51fc553
+
+Recorded 2026-11-17T20:25:19.816824+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Refreshed the downloadable evidence index to point to five current engineering receipts.
+- **Evidence.** Strict evidence packet assembly verifies the current PS, privacy, protocol, extension and website receipts. [Change record](./runs/changes/2026-11-17-202519-current-development-evidence-index-c51fc553.json).
+- **Not claimed.** F-120 remains open for selected release exit evidence and outside implementer acceptance.
+
+
 ### 2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522
 
 Recorded 2026-11-17T20:22:20.355457+00:00 · Contributor: Codex PM · change

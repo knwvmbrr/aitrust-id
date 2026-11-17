@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-202519-current-development-evidence-index-c51fc553",
+  "recorded_at": "2026-11-17T20:25:19.816824+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "94c9a09d373736a471447fbadf21d41cb3ea0657",
+  "changed": "Refreshed the downloadable evidence index to point to five current engineering receipts.",
+  "proves": "Strict evidence packet assembly verifies the current PS, privacy, protocol, extension and website receipts.",
+  "limits": "F-120 remains open for selected release exit evidence and outside implementer acceptance.",
+  "scope_ids": [
+    "F-120",
+    "T-MT"
+  ],
+  "files": {
+    "runs/2026-11-17-mt-current-PII_REDACTED.json": "2a618b640846c48ece1afce7822dd6051f2360b32cdb3f20de2752128b9a1bdd",
+    "runs/2026-11-17-mt-current-PS.json": "1652d8bf7a348e35a0827f8bf0b88e32740c89aa5593633f9216d695ed160087",
+    "runs/2026-11-17-mt-current-protocol.json": "55be3c26ac491c18a0402a00afab490950e3aa7d443da0d1bc3c8dce63c39ca6",
+    "state.json": "e0eb52cd521115a2c2736b177781f60c5e823af31520ca6a77455431c7070f0a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-mt-current-PS.json",
+      "sha256": "1652d8bf7a348e35a0827f8bf0b88e32740c89aa5593633f9216d695ed160087"
+    },
+    {
+      "path": "runs/2026-11-17-mt-current-PII_REDACTED.json",
+      "sha256": "2a618b640846c48ece1afce7822dd6051f2360b32cdb3f20de2752128b9a1bdd"
+    },
+    {
+      "path": "runs/2026-11-17-mt-current-protocol.json",
+      "sha256": "55be3c26ac491c18a0402a00afab490950e3aa7d443da0d1bc3c8dce63c39ca6"
+    },
+    {
+      "path": "runs/2026-11-17-mt-workflow-extension.json",
+      "sha256": "ba12032fd7a8e17cffa5993f8979004af9e29150735060a58f0eab1542e48846"
+    },
+    {
+      "path": "runs/2026-11-17-mt-workflow-website.json",
+      "sha256": "d20eda9305a420718f8f2cd57459798baca49993056767ed99e4f1342dcc37df"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/build-evidence-packet.py",
+        "--require-current"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:25:21.830048+00:00"
+    }
+  ]
+}

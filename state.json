@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T15:20:32.430703+00:00",
+  "updated": "2026-11-17T20:25:18.891998+00:00",
   "active_increment": "Work to zero open original requirements. MT private workflow executes urgency/authority/selected-choice evidence with independent failures; Android Share, community/PostgreSQL and nested-runtime notice enforcement are active parallel lanes. No independent release gate or full original closure is inferred.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -795,7 +795,7 @@
     "source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/tag-integration-2026-11-16.md",
+    "latest_increment": "docs/mt-evidence-workflow.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 0,
@@ -1121,15 +1121,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-12-hidden-email-current-PS.json",
-    "PII_REDACTED": "runs/2026-11-12-hidden-email-current-PII_REDACTED.json",
-    "protocol": "runs/2026-11-12-hidden-email-current-protocol.json",
-    "extension": "runs/2026-11-12-hidden-email-current-extension.json",
-    "website": "runs/2026-11-12-hidden-email-current-website.json",
+    "PS": "runs/2026-11-17-mt-current-PS.json",
+    "PII_REDACTED": "runs/2026-11-17-mt-current-PII_REDACTED.json",
+    "protocol": "runs/2026-11-17-mt-current-protocol.json",
+    "extension": "runs/2026-11-17-mt-workflow-extension.json",
+    "website": "runs/2026-11-17-mt-workflow-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T15:20:32.430703+00:00",
+  "updated_at": "2026-11-17T20:25:18.891998+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3504,7 +3504,7 @@
     }
   },
   "mt_evidence_workflow": {
-    "status": "implemented_local_controls_pass; protected_integration_pending",
+    "status": "implemented; five current engineering capabilities verified locally; protected integration pending",
     "implemented_by": "Codex PM",
     "guide": "docs/mt-evidence-workflow.md",
     "plan": "docs/mt-workflow-plan.md",
@@ -3516,6 +3516,7 @@
     "production_MT_asserted": false,
     "combined_confidence": null,
     "independent_accuracy_evidence": false,
-    "full_original_closures": []
+    "full_original_closures": [],
+    "boundaries": "runs/2026-11-17-mt-workflow-boundaries.json"
   }
 }
