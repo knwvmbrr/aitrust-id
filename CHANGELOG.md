@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600
+
+Recorded 2026-11-17T21:01:58.602773+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Recorded the protected community merge and the verified iPhone candidate workflow execution.
+- **Evidence.** All 11 required checks passed before the community merge. All five current iPhone app and Share workflows passed, with source identity and simulator cleanup verified. [Change record](./runs/changes/2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600.json).
+- **Not claimed.** The community workbench uses synthetic data. iPhone distribution signing, TestFlight and physical accessibility remain open. Public native proof omits private command paths.
+
+
 ### 2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65
 
 Recorded 2026-11-17T20:55:25.671478+00:00 · Contributor: Codex PM · change
