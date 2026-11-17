@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T21:01:20.251134+00:00",
-  "active_increment": "Community workbench merged after storage safety review. MT framing is live and its signed source is downloadable. Verified iPhone candidate passed all five simulator workflows. Runtime notice web integration is in protected review.",
+  "updated": "2026-11-17T21:10:23.781661+00:00",
+  "active_increment": "Live web package includes verified Python runtime notices and the MT guide. The community workbench is merged, five current native simulator workflows passed, and the Android test APK compiles. The scope ledger has 132 complete and 70 open original requirements.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://b3801a69.aitrust-id.pages.dev",
+    "deployment_url": "https://abe4f780.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-17-mt-workflow-publication.json",
+    "publication_evidence": "runs/2026-11-17-runtime-notices-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -836,8 +836,8 @@
         "reason": "Owner explicitly set zero open originals as completion objective. Sixty remains an intermediate milestone; acceptance criteria unchanged."
       }
     ],
-    "latest_increment_publication": "runs/2026-11-17-mt-workflow-publication.json",
-    "published_source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de",
+    "latest_increment_publication": "runs/2026-11-17-runtime-notices-publication.json",
+    "published_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
     "latest_increment_candidate_ids": [
       "F-019a",
       "F-025"
@@ -1131,7 +1131,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T21:01:20.251134+00:00",
+  "updated_at": "2026-11-17T21:10:23.781661+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3054,12 +3054,12 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de",
-    "deployment_url": "https://b3801a69.aitrust-id.pages.dev",
+    "source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
+    "deployment_url": "https://abe4f780.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-17-mt-workflow-publication.json",
+    "evidence": "runs/2026-11-17-runtime-notices-publication.json",
     "metadata_only_followup": true,
-    "meaning": "Exact static artifacts from this source were verified on both the owned domain and the deployment URL.",
+    "meaning": "The exact merged static application artifacts passed comparison on both the owned domain and the Cloudflare deployment URL.",
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
@@ -3539,7 +3539,8 @@
     "current_boundaries": "runs/2026-11-17-community-integrated-boundaries.json",
     "sqlite_safety_reserve": "runs/2026-11-17-community-sqlite-reserve-mac.json",
     "merge_commit": "4abb44c162f9ea8a2094f48398985791be3df67b",
-    "protected_checks": "runs/2026-11-17-community-protected-checks.json"
+    "protected_checks": "runs/2026-11-17-community-protected-checks.json",
+    "site_ledger_publication": "runs/2026-11-17-community-site-publication.json"
   },
   "android_share_candidate": {
     "status": "test APK compiled and test signature verified; runtime unverified",
@@ -3550,7 +3551,7 @@
     "physical_device_accepted": false
   },
   "nested_runtime_notices": {
-    "status": "current site and offline distribution checks pass locally; protected integration pending",
+    "status": "web release merged and verified live",
     "implemented_by": "Codex dependency engineering lane",
     "evidence": "runs/2026-11-17-nested-runtime-obligations.json",
     "guide": "docs/nested-runtime-evidence.md",
@@ -3564,6 +3565,9 @@
     "unsigned_ios_candidate_bundle_verified": true,
     "ios_current_candidate_ui_workflows": 5,
     "ios_current_candidate_simulator_evidence": "runs/2026-11-17-ios-runtime-notices-simulator.json",
-    "ios_candidate_source_commit": "2fd15f5"
+    "ios_candidate_source_commit": "2fd15f5",
+    "web_publication": "runs/2026-11-17-runtime-notices-publication.json",
+    "protected_checks": "runs/2026-11-17-runtime-notices-protected-checks.json",
+    "web_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d"
   }
 }
