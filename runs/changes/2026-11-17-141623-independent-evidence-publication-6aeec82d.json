@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-141623-independent-evidence-publication-6aeec82d",
+  "recorded_at": "2026-11-17T14:16:23.376395+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+  "changed": "Publish the merged independent evidence workflows and persist exact Linux, protected-CI and public-site verification, retaining the earlier runtime download timeout.",
+  "proves": "All11 required protected engineering checks passed and isolated non-root Linux SDK completed21 inspector cases plus24 declaration calls in12 groups with exact source. All296 published files match on each of2 origins with security headers:592 comparisons. Merged source bf35566 is deployed; scope202 originals,132 complete,70 open.",
+  "limits": "No independently release-validated new tag, human/physical-device acceptance, TestFlight upload or original requirement closure. Target60 remains unmet. The first transfer timed out; a later actual-browser transfer and unchanged full verifier pass, with root cause unestablished. This metadata followup does not redeploy the application snapshot.",
+  "scope_ids": [
+    "F-019a",
+    "F-020b",
+    "F-025",
+    "T-MT",
+    "T-NF",
+    "T-FI",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "runs/2026-11-16-final-image-declarations-linux.json": "a4221c0ee7cd3d683d12b7a87e68241ccd3cdf0045f1241319f253015bec8ec9",
+    "runs/2026-11-16-final-image-inspection-linux.json": "ef1d6aee39e9e70fabb25fbd81564bf164e6bd3c6fdc403466c922e8937911ce",
+    "runs/2026-11-16-publication-runtime-download-timeout.json": "26b18744ff6190891d5d9ed0d02c600da3f47e6309efe10ed2ecf921286d09be",
+    "runs/2026-11-17-independent-evidence-protected-checks.json": "d524d5f0f9282f2f1e0e33ea0a3093c4796d85d19ac133f3c365f2641d3a0c8d",
+    "runs/2026-11-17-independent-evidence-publication.json": "77319daf2069c3f7f072f41131a0f8a06a65f48c40dd79fb63bd93de2255c747",
+    "runs/2026-11-17-runtime-page-transfer.json": "c26a5fb5c53a6543b0e4e54dccd9c24b12ac0ccf8f89330fabb58ef4b0a4d939",
+    "state.json": "2b97bb37f08058a4dde5ccdf8f60a07553e8b75af26f68e7a5c9f40bd3f3578f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-16-final-image-inspection-linux.json",
+      "sha256": "ef1d6aee39e9e70fabb25fbd81564bf164e6bd3c6fdc403466c922e8937911ce"
+    },
+    {
+      "path": "runs/2026-11-16-final-image-declarations-linux.json",
+      "sha256": "a4221c0ee7cd3d683d12b7a87e68241ccd3cdf0045f1241319f253015bec8ec9"
+    },
+    {
+      "path": "runs/2026-11-17-independent-evidence-protected-checks.json",
+      "sha256": "d524d5f0f9282f2f1e0e33ea0a3093c4796d85d19ac133f3c365f2641d3a0c8d"
+    },
+    {
+      "path": "runs/2026-11-17-independent-evidence-publication.json",
+      "sha256": "77319daf2069c3f7f072f41131a0f8a06a65f48c40dd79fb63bd93de2255c747"
+    },
+    {
+      "path": "runs/2026-11-16-publication-runtime-download-timeout.json",
+      "sha256": "26b18744ff6190891d5d9ed0d02c600da3f47e6309efe10ed2ecf921286d09be"
+    },
+    {
+      "path": "runs/2026-11-17-runtime-page-transfer.json",
+      "sha256": "c26a5fb5c53a6543b0e4e54dccd9c24b12ac0ccf8f89330fabb58ef4b0a4d939"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T14:16:24.035111+00:00"
+    }
+  ]
+}

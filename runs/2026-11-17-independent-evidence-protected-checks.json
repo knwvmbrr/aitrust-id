@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-11-17T14:15:04.378919+00:00",
+  "pass": true,
+  "source_head": "374253f943b8a60847886cf4e550b878a4c259d4",
+  "merged_source": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+  "required_engineering_checks": [
+    {
+      "name": "accessibility",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573390"
+    },
+    {
+      "name": "change-records",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573057"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573193"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573176"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573054"
+    },
+    {
+      "name": "host-config",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573282"
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573910"
+    },
+    {
+      "name": "regressions",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573096"
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611572722"
+    },
+    {
+      "name": "site",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573371"
+    },
+    {
+      "name": "spec",
+      "conclusion": "success",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440/job/133611573218"
+    }
+  ],
+  "required_engineering_check_count": 11,
+  "required_engineering_checks_passed": true,
+  "release_gate": "failure",
+  "independent_release_approved": false,
+  "sdk_run": {
+    "conclusion": "success",
+    "databaseId": 43956282350,
+    "headSha": "374253f943b8a60847886cf4e550b878a4c259d4",
+    "status": "completed",
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282350"
+  },
+  "core_run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/43956282440",
+  "public_prs": [
+    "https://github.com/knwvmbrr/aitrust-id/pull/104",
+    "https://github.com/knwvmbrr/aitrust-id/pull/105"
+  ],
+  "original_scope": {
+    "total": 202,
+    "complete": 132,
+    "open": 70,
+    "target_open": 60,
+    "full_closures_this_batch": 0
+  },
+  "scope": "Protected software engineering and source-exact Linux SDK evidence only; not human, physical-device or independently labeled tag acceptance."
+}

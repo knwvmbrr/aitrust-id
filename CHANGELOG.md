@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-17
+
+### 2026-11-17-141623-independent-evidence-publication-6aeec82d
+
+Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Publish the merged independent evidence workflows and persist exact Linux, protected-CI and public-site verification, retaining the earlier runtime download timeout.
+- **Evidence.** All11 required protected engineering checks passed and isolated non-root Linux SDK completed21 inspector cases plus24 declaration calls in12 groups with exact source. All296 published files match on each of2 origins with security headers:592 comparisons. Merged source bf35566 is deployed; scope202 originals,132 complete,70 open. [Change record](./runs/changes/2026-11-17-141623-independent-evidence-publication-6aeec82d.json).
+- **Not claimed.** No independently release-validated new tag, human/physical-device acceptance, TestFlight upload or original requirement closure. Target60 remains unmet. The first transfer timed out; a later actual-browser transfer and unchanged full verifier pass, with root cause unestablished. This metadata followup does not redeploy the application snapshot.
+
+
 ## Unreleased — 2026-11-16
 
 ### 2026-11-16-210346-nonroot-declaration-evidence-diagnostic-ca462bff

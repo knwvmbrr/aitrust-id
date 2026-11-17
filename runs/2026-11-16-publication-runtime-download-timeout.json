@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-11-17T00:23:28.538257+00:00",
+  "pass": false,
+  "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+  "command": "node scripts/verify-publication.cjs --source bf35566c4bb3b33f9912402862d5066cbc9050dd --origin https://aitrustid.com --origin https://d604bbdf.aitrust-id.pages.dev",
+  "failure": "ordinary_browser_transport_download_timeout",
+  "asset": "/device/runtime-314.0.7/pyodide.asm.wasm",
+  "http_status_observed": 200,
+  "reported_content_bytes": 9598218,
+  "request_deadline_ms": 30000,
+  "private_log_sha256": "e9285bdeaa5d1cafdf1da3413009e158ffd6fefda7e28c13a6914087c0f1abd8",
+  "root_cause_established": false,
+  "protections_changed": false,
+  "full_publication_verified": false
+}

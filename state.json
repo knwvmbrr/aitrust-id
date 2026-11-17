@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-16T21:03:45.929916+00:00",
+  "updated": "2026-11-17T14:16:23.241640+00:00",
   "active_increment": "Four-form caller-selected choice observation: 86 focused tests, 26 private CLI controls on Mac and isolated Linux, 40 protocol and 32 website checks, and reviewed 1008-file boundaries pass. Protected publication pending; 70 original requirements remain. No MT verdict or independent accuracy claim.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -801,11 +801,11 @@
     "target_open_records": 60,
     "target_start_open_records": 78,
     "target_remaining_closures": 10,
-    "publication_pending": true,
+    "publication_pending": false,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
     "target_direction_date": "2026-10-14",
-    "current_target_verification": "runs/2026-11-09-hash-inbox-scope.json",
+    "current_target_verification": "runs/2026-11-17-independent-evidence-protected-checks.json",
     "publication_evidence_merge": "runs/2026-10-11-independent-mobile-protected-merges.json",
     "latest_owner_direction": "Integrate MT and image; independently advance other tags; target60 open, skip owner-only gates, close only fully functioning original requirements.",
     "latest_owner_direction_date": "2026-11-16",
@@ -1117,7 +1117,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-16T21:03:45.929916+00:00",
+  "updated_at": "2026-11-17T14:16:23.241640+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1499,9 +1499,10 @@
       "receipt": "runs/2026-11-16-mt-urgency-locality.json",
       "actual_mac_consumer": "runs/2026-11-16-mt-urgency-consumer-macos.json",
       "integrated_candidate": true,
-      "combined_linux_acceptance_pending": true,
+      "combined_linux_acceptance_pending": false,
       "independent_accuracy_evidence": false,
-      "tag_released": false
+      "tag_released": false,
+      "linux_engineering_checks": "runs/2026-11-17-independent-evidence-protected-checks.json"
     }
   },
   "mobile_scope_payload": {
@@ -1567,7 +1568,7 @@
       "focused_tests_passed": 96,
       "actual_mac_cli_controls_passed": 21,
       "fresh_linux_execution": false,
-      "publication_pending": true,
+      "publication_pending": false,
       "plan": "docs/image-evidence-readout-plan.md",
       "result": "docs/image-evidence-readout-result.md",
       "evidence": [
@@ -1576,11 +1577,12 @@
         "runs/2026-11-16-image-evidence-json-compatibility.json"
       ],
       "optional_import_failure_isolation": "runs/2026-11-16-image-text-failure-isolation.json",
-      "current_source_linux_sdk_execution_pending": true
+      "current_source_linux_sdk_execution_pending": false,
+      "linux_evidence": "runs/2026-11-16-final-image-inspection-linux.json"
     },
     "action_declarations": {
       "profile": "attached-png-action-declarations/1.0.0",
-      "status": "implemented_mac_component_verified_pending_pm_and_linux",
+      "status": "published_bounded_research_profile",
       "implemented_by": "Codex - image-evidence engineering lane",
       "component_percent_complete": 60,
       "scope_id": "F-025",
@@ -1592,8 +1594,8 @@
       "focused_tests_passed": 166,
       "actual_mac_cli_controls_passed": 24,
       "default_output_byte_identical_cases": 6,
-      "fresh_linux_execution": false,
-      "publication_pending": true,
+      "fresh_linux_execution": true,
+      "publication_pending": false,
       "plan": "docs/image-declaration-profile-plan.md",
       "result": "docs/image-declaration-profile-result.md",
       "evidence": [
@@ -1608,7 +1610,10 @@
       ],
       "multiple_inception_state": "UNKNOWN",
       "final_source_correction": "assertion_region_of_interest_and_related_assertions_not_supported",
-      "regional_or_related_scope": "UNKNOWN"
+      "regional_or_related_scope": "UNKNOWN",
+      "pm_review_completed": true,
+      "linux_evidence": "runs/2026-11-16-final-image-declarations-linux.json",
+      "publication_evidence": "runs/2026-11-17-independent-evidence-publication.json"
     }
   },
   "dependency_notice_evidence": {
@@ -3044,7 +3049,16 @@
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
     "app_store_uploaded": false,
-    "app_store_released": false
+    "app_store_released": false,
+    "latest_engineering_increment": {
+      "captured_at": "2026-11-17T12:27:44.932Z",
+      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
+      "primary_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
+      "matching_artifacts": 592,
+      "independent_release_validated": false
+    }
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -3226,6 +3240,15 @@
         "app_store_uploaded": false,
         "app_store_released": false
       }
+    },
+    {
+      "captured_at": "2026-11-17T12:27:44.932Z",
+      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
+      "primary_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
+      "matching_artifacts": 592,
+      "independent_release_validated": false
     }
   ],
   "directory_rollover_test_clock": {
@@ -3388,11 +3411,7 @@
     "complete": 132,
     "open": 70,
     "fully_closed_this_increment": 0,
-    "pending": [
-      "fresh isolated Linux parser execution",
-      "protected PR checks",
-      "publication"
-    ],
+    "pending": [],
     "owner_only_gates_skipped": true,
     "gate_audit": "docs/open-requirement-gates-2026-11-16.json",
     "next_active_lanes": [
@@ -3411,16 +3430,34 @@
       "ci_event_policy": "runs/2026-11-16-ci-event-efficiency.json",
       "tag_releases": 0,
       "fully_closed_original_requirements": 0,
-      "pending": [
-        "hosted current Linux declaration controls",
-        "protected PR merge",
-        "publication"
-      ],
+      "pending": [],
       "current_website_evidence": "runs/2026-11-16-independent-evidence-website.json",
       "current_boundary_evidence": "runs/2026-11-16-declaration-collector-boundaries.json",
       "linux_collector_failure": "runs/2026-11-16-manifest-declaration-linux-collector-failed.json",
       "diagnostic_fix_controls": "runs/2026-11-16-manifest-declaration-diagnostic-controls.json",
-      "current_linux_collector_rerun_pending": true
+      "current_linux_collector_rerun_pending": false,
+      "linux_inspector_evidence": "runs/2026-11-16-final-image-inspection-linux.json",
+      "linux_declaration_evidence": "runs/2026-11-16-final-image-declarations-linux.json",
+      "protected_checks": "runs/2026-11-17-independent-evidence-protected-checks.json",
+      "publication": {
+        "captured_at": "2026-11-17T12:27:44.932Z",
+        "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+        "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
+        "primary_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-17-independent-evidence-publication.json",
+        "matching_artifacts": 592,
+        "independent_release_validated": false
+      }
+    },
+    "status": "published_engineering_increment",
+    "publication": {
+      "captured_at": "2026-11-17T12:27:44.932Z",
+      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
+      "primary_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
+      "matching_artifacts": 592,
+      "independent_release_validated": false
     }
   },
   "tag_status": {
@@ -3436,6 +3473,19 @@
     "other_parent_tags": 12,
     "original_open_requirements": 70,
     "all_tags_concurrently_staffed": false,
-    "candidate_changes_integrated": true
+    "candidate_changes_integrated": true,
+    "publication_completed_at": "2026-11-17T12:27:44.932Z",
+    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd"
+  },
+  "current_engineering_revalidation_status": {
+    "latest_published_evidence_increment": {
+      "captured_at": "2026-11-17T12:27:44.932Z",
+      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
+      "primary_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
+      "matching_artifacts": 592,
+      "independent_release_validated": false
+    }
   }
 }
