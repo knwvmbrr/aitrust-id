@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-225245-ios27-notice-record-revalidation-c584eebb",
+  "recorded_at": "2026-11-17T22:52:45.336617+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "81862e20eacef1191051cb9f9aaa8e12e4fa4cfc",
+  "changed": "Verified the updated scope and distribution readiness evidence with the current source.",
+  "proves": "All five capability receipts and the current route and ownership checks pass.",
+  "limits": "The hosted simulator cleanup timeouts, protected signing, Apple submission and physical acceptance remain open.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "c1b6ccf7ddda773069e9543fd8d2fd6b0db6752c084ed45e1c78f8978c3b728c",
+    "eval/route-boundaries.json": "e35e7f234af943ead45df8ed592768473d5c82a96d4439641aa8705f1371e422",
+    "runs/2026-11-17-ios27-notice-evidence-website.json": "461dd83cc59768c0c8d8a97c3702cb1e7cdeb753984bb4c1991297477b717f49",
+    "runs/2026-11-17-ios27-notice-evidence-protocol.json": "f7e016a7c10491d27ee5fe84a2b0cc2d4a43851c3b2a4295d6680aee86c288e1",
+    "runs/2026-11-17-ios27-notice-evidence-route-boundaries.json": "d29289f59ef6e6a090fe27f2158af341c4f104d6850f51ca35aea330618fdca1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-ios27-notice-evidence-website.json",
+      "sha256": "461dd83cc59768c0c8d8a97c3702cb1e7cdeb753984bb4c1991297477b717f49"
+    },
+    {
+      "path": "runs/2026-11-17-ios27-notice-evidence-protocol.json",
+      "sha256": "f7e016a7c10491d27ee5fe84a2b0cc2d4a43851c3b2a4295d6680aee86c288e1"
+    },
+    {
+      "path": "runs/2026-11-17-ios27-notice-evidence-route-boundaries.json",
+      "sha256": "d29289f59ef6e6a090fe27f2158af341c4f104d6850f51ca35aea330618fdca1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T22:52:45.428144+00:00"
+    }
+  ]
+}

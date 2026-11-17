@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T22:27:29.924406+00:00",
-  "active_increment": "Five current local iPhone simulator workflows and the paginated-notice device archive passed. Hosted iOS 27.2 and protected signing remain pending. The inactive stream observer handles exact-limit split CRLF. Original scope is 132 complete, 70 open.",
+  "updated": "2026-11-17T22:52:42.976417+00:00",
+  "active_increment": "Current iOS 26.2 and hosted iOS 27.2 UI workflows passed after notice pagination. Hosted cleanup timed out. Manual signing settings match both targets and protected key authorization remains pending. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -792,7 +792,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-17T22:21:46.286300+00:00",
+    "audited_at": "2026-11-17T22:48:27.698232+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -1073,7 +1073,7 @@
   "personal_route_boundaries": {
     "status": "Current hidden-email source and existing personal boundaries reviewed; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-11-17-paged-notice-route-boundaries.json",
+    "evidence": "runs/2026-11-17-ios27-notice-evidence-route-boundaries.json",
     "source_files": 1008,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1136,13 +1136,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-paged-notice-protocol.json",
+    "protocol": "runs/2026-11-17-ios27-notice-evidence-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-17-paged-notice-website.json",
+    "website": "runs/2026-11-17-ios27-notice-evidence-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T22:27:29.924406+00:00",
+  "updated_at": "2026-11-17T22:52:42.976417+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2037,7 +2037,16 @@
       "failed_stage": "ui_workflows"
     },
     "notice_pagination": "runs/2026-11-17-ios-notice-page-reconstruction.json",
-    "current_hosted_27_2_acceptance": false
+    "current_hosted_27_2_acceptance": false,
+    "current_hosted_ci": {
+      "runtime": "iOS 27.2",
+      "ui_workflows_passed": 5,
+      "pass": false,
+      "failed_stage": "cleanup",
+      "owned_simulator_removed": false,
+      "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
+    },
+    "current_hosted_27_2_ui_pass": true
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3179,7 +3188,7 @@
       "for_review": true,
       "uploaded": false
     },
-    "native_source_merge": "35ab4b56dbdf222d5274bb49dfbef23497f3d6f1",
+    "native_source_merge": "81862e20eacef1191051cb9f9aaa8e12e4fa4cfc",
     "protected_signing_timeout_diagnosis": "runs/2026-11-17-ios-signing-keychain-diagnosis.json",
     "current_signing_configuration_preflight": "runs/2026-11-17-paged-notice-signing-preflight.json",
     "signing_next_step": "Protected access for the existing Apple Distribution key. Both exact installed provisioning profiles and both Release target settings match."

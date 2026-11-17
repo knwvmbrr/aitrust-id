@@ -20,15 +20,19 @@ passed on iOS 26.2 Simulator. The new
 [unsigned device archive](../runs/2026-11-17-paged-notices-ios-archive.json)
 verified the bundle identifiers, compiled icon and all 36 runtime and notice
 resources. The hosted iOS 27.2 run of the previous reader reached its UI deadline
-while querying the combined notice view. The paginated reader awaits that hosted
-recheck.
+while querying the combined notice view. The paginated reader
+[passed all five UI workflows on hosted iOS 27.2](../runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json).
+The hosted job failed afterward because simulator shutdown and deletion timed out.
+The local simulator run completed cleanup.
 
 The existing Apple Distribution identity matches the current app and Share
 provisioning profiles. A bounded signing attempt on a private copy timed out
 at the Share extension before producing a signature. The unsigned archive was
 preserved. macOS logs show a protected Keychain authorization request immediately
-before the signing operation stopped making progress. The authorized team and
-distribution certificate are visible in Xcode. See the
+before the signing operation stopped making progress. The developer team and distribution certificate are visible in Xcode. The
+[current signing preflight](../runs/2026-11-17-paged-notice-signing-preflight.json)
+verified Release signing settings for both targets and matched the installed
+profiles to the existing certificate. See the
 [signing attempt](../runs/2026-11-17-current-ios-signing-attempt.json) and
 [Keychain diagnosis](../runs/2026-11-17-ios-signing-keychain-diagnosis.json).
 An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed

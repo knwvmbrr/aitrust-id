@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-225245-ios27-notice-record-revalidation-c584eebb
+
+Recorded 2026-11-17T22:52:45.336617+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified the updated scope and distribution readiness evidence with the current source.
+- **Evidence.** All five capability receipts and the current route and ownership checks pass. [Change record](./runs/changes/2026-11-17-225245-ios27-notice-record-revalidation-c584eebb.json).
+- **Not claimed.** The hosted simulator cleanup timeouts, protected signing, Apple submission and physical acceptance remain open.
+
+
+### 2026-11-17-224828-paged-notices-ios27-result-cf71837c
+
+Recorded 2026-11-17T22:48:28.502920+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the hosted result for the paginated notice reader and retained the cleanup failure.
+- **Evidence.** The downloaded Xcode result bundle confirms all five UI cases passed on iOS 27.2 with zero skips. Shutdown and deletion each reached their cleanup deadline. [Change record](./runs/changes/2026-11-17-224828-paged-notices-ios27-result-cf71837c.json).
+- **Not claimed.** Hosted removal remains unverified. Protected distribution signing, Apple upload and physical acceptance remain open.
+
+
 ### 2026-11-17-222732-paged-notices-distribution-preflight-42b13a14
 
 Recorded 2026-11-17T22:27:32.143367+00:00 · Contributor: Codex · change
