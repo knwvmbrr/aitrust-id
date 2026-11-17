@@ -25,7 +25,12 @@ grouping/decimals, percentages and date-shaped tokens. Calendar validity,
 written-out numbers, unusual date formats, ranges, word-attached identifiers and
 adjacent non-ASCII token boundaries are outside the method. Adjacent non-ASCII
 characters are explicitly skipped, avoiding different word-category behavior
-between Python/Unicode versions. Marker-contained digits are excluded. Quotes,
+between Python/Unicode versions. Marker-contained digits are excluded. Method
+`1.0.1` also excludes numbers and dates followed directly by `#`. A percent sign
+is supported as a single trailing suffix, as in `12%` and `12.5%`. Leading or
+repeated percent signs and attached values such as `%12`, `12%%3`, `12%34`, or
+`12%quota` produce no clipped numeric detail. A space in `12% 34` separates
+two supported details. Quotes,
 code and examples are not classified as assertions or recommendations.
 
 Limits are 32,000 UTF-8 bytes, 8,000 normalized characters, 256 details and 48

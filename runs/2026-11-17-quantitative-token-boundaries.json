@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-11-17T21:43:50.706527+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "plain_counts_no_private_text_or_details",
+      "pass": true
+    },
+    {
+      "case": "grouping_decimal_and_date_shape",
+      "pass": true
+    },
+    {
+      "case": "markers_excluded_and_same_unit_only",
+      "pass": true
+    },
+    {
+      "case": "identifiers_ip_and_broken_grouping",
+      "pass": true
+    },
+    {
+      "case": "hash_and_percent_suffixes_refuse_partial_details",
+      "pass": true
+    },
+    {
+      "case": "complete_percent_and_date_keep_citation_boundaries",
+      "pass": true
+    },
+    {
+      "case": "non_ascii_boundary_refusal",
+      "pass": true
+    },
+    {
+      "case": "invalid_utf8",
+      "pass": true
+    },
+    {
+      "case": "nul_input",
+      "pass": true
+    },
+    {
+      "case": "byte_limit",
+      "pass": true
+    },
+    {
+      "case": "detail_limit",
+      "pass": true
+    },
+    {
+      "case": "explicit_private_details",
+      "pass": true
+    },
+    {
+      "case": "private_export_never_overwrites",
+      "pass": true
+    }
+  ],
+  "case_count": 13,
+  "sources": {
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "scripts/quantitative-observations.py": "32baf241b0143e6ab8e6a784cb103d1501b74419e981168cd9ff87fc1da58c4b",
+    "scripts/verify-quantitative-observations.py": "3da5a474d9f5c25ed1552913c43e50fa4d46773ec4309e4bbae9223398cd6962"
+  },
+  "source_unchanged_during_execution": true,
+  "isolated_linux": false,
+  "external_canary_blocked": null,
+  "nonroot_execution": true,
+  "only_authored_synthetic_inputs": true,
+  "tag_assertions": 0,
+  "independent_accuracy_evidence": false
+}

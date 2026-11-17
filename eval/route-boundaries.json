@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-17T21:39:02.625694+00:00",
+  "reviewed_at": "2026-11-17T21:49:37.580857+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -60,7 +60,7 @@
     "deploy/research/metadata-pilot-policy.json": "ba1e64ef0f97f67c91d0dac4a3127f619b08f23680c3691709c8450bb21d7cbd",
     "docs/agent-output-plan.md": "518218894187780b436bdd69baa6afe3d773de71e838ebe1c2c0ce2a44a4036c",
     "docs/agent-output.md": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
-    "docs/app-store-readiness.md": "3fad3a6a41d98f69172ab1f6db5bbf9cf0d13f96b2c8a252c5850c01366ffe1d",
+    "docs/app-store-readiness.md": "75437a0c162d2235304dc0bb8ac2e14b5925dfb48ef611d952ad425105191cfa",
     "docs/asset-notices-plan.md": "4f873738c57d36af66683321fc58bf4baa92e1b7428fd2194337f858a5d40f5f",
     "docs/asset-notices-result.md": "3546fe6fda381af88f711caf3f3bb9cc6d99ac64ec360400ea4c36008f5d77b5",
     "docs/asset-notices.md": "5d50bd25913fabc0c6b179221c5d1e499a14ebd8be719c3da13e9310e19cd78a",
@@ -757,7 +757,7 @@
     "scripts/verify-organization-directory.py": "74159f0ff30dc3c9e3daa8f052e2b817a90807685c82419efd0fd75f8c3ff5fd",
     "scripts/verify-private-policy.py": "22b5725b403f87e4ecdb68663b66994320074e4439c5a6d618e0e88d011f0197",
     "scripts/verify-ps-efficiency.py": "99c08706ba84cc0efb6751ccd6b24d85e122b89838c2854a11677ed0bf6c30ac",
-    "scripts/verify-quantitative-observations.py": "7a49df7f59671810e0943abcf86731e2264a6361564310ec53090f9779f71de0",
+    "scripts/verify-quantitative-observations.py": "3da5a474d9f5c25ed1552913c43e50fa4d46773ec4309e4bbae9223398cd6962",
     "scripts/verify-redistribution-notices.py": "25a47193c9e1ee1eb4582047fa575234badfecc9eb1d15d76d9e5fe4140002e1",
     "scripts/verify-reference-review-windows.py": "fd1c118e04e5f919a3d2eb950ada2715ec6c4ccd7cd228b3154062cacab6c1f6",
     "scripts/verify-reference-revision.py": "30d9f98daaf8102115e5ce45af49fdd7b300dc78f256b87dee5a658ed15e90e1",
@@ -860,12 +860,12 @@
     "site/src/policies.js": "f06f3e69fce96674991eaa1bd9169226a39da2ee9d80c38b06152af25a8de26b",
     "site/src/presentation.js": "8f08d1839cd577e5480eda33d8b1ee73a5721ce2d1734b58f772cf998776599b",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "abf3b900aab84b6a09a6a4a48747428d3cd7524dcd0b7eebad79328c15c49d6b",
+    "site/src/public-scope.json": "1e1d8aeec0ee42d54475dff581443f7a8bf1e7a408aea67441c1c32b65e0af74",
     "site/src/redaction-performance-model.js": "e6a9c38b194fdecebf9ac52ae7676e6561d4c374160f60b0983129423314834d",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "4321d6e7d901b0ea96c15d6d9dfab17266d4d7a06beed99326babb61a442be5d",
+    "site/src/scope-manifest.json": "b0c4c1ef1a19164b74a0846fc7c8d4b29c4535e9cec6534b665d9fece4db2335",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
     "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
@@ -1015,7 +1015,7 @@
     "tests/test_private_policy_cli.py": "aa9ad2b556bdd519bb925f3ec9f0c0057d128c0fb873a6c4706be9aa017ececd",
     "tests/test_ps_efficiency_evidence.py": "a518218452bd1dbead265eefe109bf19df8d288f7f09d31de5c608ab72921be4",
     "tests/test_python_input_pins.py": "59573588df5ba336c8bc2ecb859a7e1ed599534cfb61db13069ceeff944beb1f",
-    "tests/test_quantitative_observations.py": "f842b79ac44b522ddf5af01f8506f875327076b328264c125cf34786cebfaa83",
+    "tests/test_quantitative_observations.py": "217da295ada111e9fcee1d86d8672130857c0532ea8a6a3d76403edd7a82e806",
     "tests/test_recovery_stream_boundary.py": "0d5e4be8f0ef4fb93ff300e671738b88365524e9a927cb9f85ee68d9da08472a",
     "tests/test_redaction_development_builder.py": "e3f9e736b2dbc888e501abf9c7d95afa49d9f7f0684aa5143e50b589e7a92993",
     "tests/test_redaction_development_client.py": "f3b964c65fecb91a2d1a2db5cca875a754ccc31c303972735295c09e6c6ac7aa",
@@ -1086,7 +1086,7 @@
     "tools/organization_directory_lab.py": "4f58501f705df9a917675d53eb6adae52899b3753828c4138a628ea5184f0209",
     "tools/package_proximity.py": "1ce62f01086757fd96f8b9e536f230b627fd9f5bd9919d6c17f169598d896e84",
     "tools/private_policy.py": "bcc69df1dc1615e1574c0e870760ebb36edc42140a8ab5fdbbfd695ba4d8f11e",
-    "tools/quantitative_observations.py": "ec27459447054729cc58a578b5ef34525dbc9dff2582432243fd7a912a4cf012",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
     "tools/redaction_observations.py": "fed317d28b1a45f9a7e526bfaccf9eb2284fd6c94bb43bd02aeb50bc90b8cdea",
     "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
     "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
@@ -1097,7 +1097,7 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-17-native-dispute-website.json",
+    "website": "runs/2026-11-17-quantitative-listing-website.json",
     "extension": "runs/2026-11-17-runtime-notices-extension.json"
   },
   "device_evidence": {

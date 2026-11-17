@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-214941-quantitative-listing-revalidation-b9713fbc
+
+Recorded 2026-11-17T21:49:41.842302+00:00 · Contributor: Codex · change
+
+- **Changed.** Published source-bound engineering verification for the numeric boundary and listing draft work.
+- **Evidence.** The current website and protocol checks passed, and all five capability receipts are current. [Change record](./runs/changes/2026-11-17-214941-quantitative-listing-revalidation-b9713fbc.json).
+- **Not claimed.** This records simulator documentation and an isolated numeric observation. Independent accuracy and Apple distribution remain pending.
+
+
+### 2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc
+
+Recorded 2026-11-17T21:43:51.442416+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed partial numeric matches in hash identifiers and malformed percent tokens. Captured Light and Dark App Store listing drafts from the current iPhone and iPad simulator build.
+- **Evidence.** The versioned independent CLI passed 13 controls and 42 focused tests. Four simulator captures match the declared dimensions without transparency. [Change record](./runs/changes/2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc.json).
+- **Not claimed.** Contextual source support, independent tag accuracy and App Store upload remain pending. The original scope remains 132 complete and 70 open.
+
+
 ### 2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20
 
 Recorded 2026-11-17T21:41:56.884960+00:00 · Contributor: Codex · change

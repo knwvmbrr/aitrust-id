@@ -54,6 +54,12 @@ def main():
     check('markers_excluded_and_same_unit_only',b'There are 12 items [1]. Another has 25. https://example.invalid/2026.',0,
         {'supported_detail_count':2,'with_same_unit_marker':1,'without_same_unit_marker':1})
     check('identifiers_ip_and_broken_grouping',b'ID123 abc-123 123@example.com @123 123@456 192.0.2.1 12,34.',0,{'supported_detail_count':0})
+    check('hash_and_percent_suffixes_refuse_partial_details',
+        b'Identifiers: 12#3 2026-10-11#release 12%quota 12%#draft 12%% 12%%3 12%34 %12 12%+34. Total: 25 [1].', 0,
+        {'supported_detail_count':1,'with_same_unit_marker':1,'without_same_unit_marker':0,
+         'method':'literal-quantitative-observations/1.0.1'})
+    check('complete_percent_and_date_keep_citation_boundaries',b'Rates: 12% 12.5% [8]. Date: 2026-10-11.',0,
+        {'supported_detail_count':3,'with_same_unit_marker':2,'without_same_unit_marker':1})
     check('non_ascii_boundary_refusal','é123 表456 78\u0301 90\u00a0'.encode(),0,{'supported_detail_count':0,'skipped_detail_count':4})
     for name,raw in [('invalid_utf8',b'\xff PRIVATE_QUANTITATIVE_CANARY'),
                      ('nul_input',b'PRIVATE_QUANTITATIVE_CANARY\0'),('byte_limit',b'x'*32001),

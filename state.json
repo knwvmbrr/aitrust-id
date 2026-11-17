@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T21:41:49.470060+00:00",
+  "updated": "2026-11-17T21:49:39.638297+00:00",
   "active_increment": "The verified iPhone source and its privacy and runtime notices are integrated. Current signing timed out. The private synthetic dispute-to-correction CLI has executable checks. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -781,7 +781,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-17T21:30:28.283655+00:00",
+    "audited_at": "2026-11-17T21:43:50.734497+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -797,7 +797,7 @@
     "source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/dispute-correction-link.md",
+    "latest_increment": "docs/quantitative-observations.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 0,
@@ -1062,7 +1062,7 @@
   "personal_route_boundaries": {
     "status": "Current hidden-email source and existing personal boundaries reviewed; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-11-17-native-dispute-route-boundaries.json",
+    "evidence": "runs/2026-11-17-quantitative-listing-route-boundaries.json",
     "source_files": 1008,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1125,13 +1125,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-native-dispute-protocol.json",
+    "protocol": "runs/2026-11-17-quantitative-listing-protocol.json",
     "extension": "runs/2026-11-17-runtime-notices-extension.json",
-    "website": "runs/2026-11-17-native-dispute-website.json",
+    "website": "runs/2026-11-17-quantitative-listing-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T21:41:49.470060+00:00",
+  "updated_at": "2026-11-17T21:49:39.638297+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1698,7 +1698,13 @@
     "protected_merge": "runs/2026-10-11-quantitative-protected-merge.json",
     "anonymous_download": "runs/2026-10-11-quantitative-merged-source.json",
     "anonymous_linux": "runs/2026-10-11-quantitative-cli-merged-linux.json",
-    "published_source": "81f66a0ccd3b9c6d915f664e4af1e010aaa85088"
+    "published_source": "81f66a0ccd3b9c6d915f664e4af1e010aaa85088",
+    "latest_boundary_revision": {
+      "method": "literal-quantitative-observations/1.0.1",
+      "evidence": "runs/2026-11-17-quantitative-token-boundaries.json",
+      "focused_tests_passed": 42,
+      "independent_accuracy_evidence": false
+    }
   },
   "pipeline_performance": {
     "status": "per_response_source_identity_and_display_verified",
@@ -3145,7 +3151,13 @@
     "current_profiles_compatible": true,
     "signing_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
     "current_candidate_validated_by_apple": false,
-    "november_9_local_certificate_panel_empty": false
+    "november_9_local_certificate_panel_empty": false,
+    "listing_draft_capture": {
+      "proof": "runs/2026-11-17-ios-listing-drafts.json",
+      "image_count": 4,
+      "for_review": true,
+      "uploaded": false
+    }
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
