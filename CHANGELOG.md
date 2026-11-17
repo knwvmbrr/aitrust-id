@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9
+
+Recorded 2026-11-17T20:52:02.905426+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Reserve SQLite capacity for emergency moderation actions and reuse freed overflow pages inside the existing atomic transaction.
+- **Evidence.** 55 focused tests pass, including full-budget refusal followed by pause and growing retraction, plus the legacy-store safety path. The 17 actual workbench command calls also pass. [Change record](./runs/changes/2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9.json).
+- **Not claimed.** The workbench uses synthetic data. Operating moderators and public integration still require acceptance.
+
+
 ### 2026-11-17-204116-community-integration-and-source-download-0a2b0091
 
 Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change

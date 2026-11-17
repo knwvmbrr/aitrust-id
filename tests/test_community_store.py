@@ -65,3 +65,57 @@ def test_held_storage_lock_returns_busy_instead_of_hanging(tmp_path):
     with (p/'access.lock').open('r+') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         with pytest.raises(BlockingIOError): s.Store(p).view('public')
+
+
+def test_sqlite_capacity_preserves_pause_and_retraction(tmp_path, monkeypatch):
+    # Exercise actual overflow pages and a real rollback at a smaller data budget.
+    monkeypatch.setattr(s, 'MAX_DB', 64 * 4096)
+    p = root(tmp_path)
+    store = s.Store(p)
+    short = store.apply('user-one', request('submit', {'body': 'x', 'consent_public': True}), 1000)
+    store.apply('mod-one', request('approve', {'post_id': short['id'], 'version': 1}), 1000)
+    large = {'body': '💬' * 2000, 'consent_public': True}
+    db = p / 'community.sqlite'
+    for i in range(7):
+        before = db.read_bytes()
+        try:
+            store.apply('user-one', request('submit', large), 1100 + 61 * i)
+        except c.Refused:
+            assert i >= 4
+            assert db.read_bytes() == before
+            break
+    else:
+        pytest.fail('Admitted ordinary writes after reaching the storage reserve')
+
+    with sqlite3.connect(db) as connection:
+        raw_before = connection.execute('SELECT length(payload) FROM community').fetchone()[0]
+    store.apply('admin-one', request('pause', {'paused': True}), 1500)
+    store.apply('mod-one', request('retract', {'post_id': short['id'], 'version': 2, 'reason': 'privacy'}), 1500)
+    with sqlite3.connect(db) as connection:
+        raw_after = connection.execute('SELECT length(payload) FROM community').fetchone()[0]
+    assert raw_after > raw_before
+    assert next(row for row in store.view('public')['items'] if row['id'] == short['id'])['body'] is None
+    assert db.stat().st_size <= s.MAX_DB
+
+
+def test_legacy_sqlite_store_over_admission_budget_still_allows_removal(tmp_path, monkeypatch):
+    p = root(tmp_path)
+    store = s.Store(p)
+    short = store.apply('user-one', request('submit', {'body': 'x', 'consent_public': True}), 1000)
+    store.apply('mod-one', request('approve', {'post_id': short['id'], 'version': 1}), 1000)
+    large = {'body': '💬' * 2000, 'consent_public': True}
+    for i in range(5):
+        store.apply('user-one', request('submit', large), 1100 + 61 * i)
+
+    # Choose a limit where the existing document fits without its safety reserve.
+    db = p / 'community.sqlite'
+    with sqlite3.connect(db) as connection:
+        packed = connection.execute('SELECT payload FROM community').fetchone()[0]
+    limit = len(packed) + 256
+    assert len(packed) < limit < len(packed) + s.safety_reserve(c.parse(packed, s.MAX_DB))
+    monkeypatch.setattr(s, 'MAX_DB', limit * 2)
+    with pytest.raises(c.Refused):
+        store.apply('mod-one', request('warn', {'post_id': short['id'], 'version': 2, 'reason': 'conduct'}), 1500)
+    store.apply('admin-one', request('pause', {'paused': True}), 1500)
+    store.apply('mod-one', request('retract', {'post_id': short['id'], 'version': 2, 'reason': 'privacy'}), 1500)
+    assert store.view('public')['items'][0]['state'] == 'retracted'
