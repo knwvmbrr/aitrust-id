@@ -531,6 +531,10 @@ PATTERNS += ('scripts/ci-ubuntu-mirror.py', 'tests/test_ci_ubuntu_mirror.py', 'd
 
 PATTERNS += ('tools/agent_output.py', 'scripts/agent-output.py', 'scripts/agent-signature.cjs', 'scripts/verify-agent-output.py', 'scripts/verify-agent-output-view.cjs', 'tests/test_agent_output.py', 'tests/test_agent_output_evidence.py', 'docs/agent-output-plan.md', 'docs/agent-output.md', 'runs/2026-11-06-agent-output-*.json')
 
+PATTERNS += ('tools/mt_workflow.py','scripts/mt-evidence-worker.py','scripts/check-mt-evidence.py',
+             'scripts/verify-mt-evidence.py','tests/test_mt_workflow.py',
+             'docs/mt-workflow-plan.md','docs/mt-evidence-workflow.md')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

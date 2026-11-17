@@ -120,6 +120,9 @@ The source also includes separately selected
 [package-name proximity](docs/package-proximity.md),
 [credential-to-HTTP dataflow](docs/credential-flow.md), and
 [English language observations](docs/language-observations.md).
+For one private command with separate urgency, authority and selected-choice results,
+use the [framing evidence workflow](docs/mt-evidence-workflow.md). A failed check
+does not erase its peers; this research route issues no MT tag.
 Each has its own CLI, input boundary, version, exact evidence positions and failure
 state. They neither change the live PS checker nor release HP or MT. No inspected
 program executes; no ranking or source is fetched. Their combined actual CLI
