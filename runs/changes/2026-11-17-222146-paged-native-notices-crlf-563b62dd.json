@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-222146-paged-native-notices-crlf-563b62dd",
+  "recorded_at": "2026-11-17T22:21:46.985205+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "06573cb0963891ab11d4bb73b111478202ca7df4",
+  "changed": "Added a bounded, browsable offline notice reader and corrected CRLF framing at the synthetic stream line limit.",
+  "proves": "All five local native workflows passed. The unsigned archive verified 36 unaltered resources, and the seven notices reconstructed byte for byte. Twelve stream control groups passed.",
+  "limits": "Hosted iOS 27.2 recheck, protected signing, Apple submission, physical acceptance and live vendor capture remain open. No original requirement was closed.",
+  "scope_ids": [
+    "N-013",
+    "F-030",
+    "F-057"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "6e7b39cec876296056204229526b6d6b5ab7843fddf9d2a93b9f1e59f540ce0b",
+    "docs/native-share-developer.md": "97f1f12361edf1e247641536fd41ed94843a42e4d3abe18d9cf7e3ab24261bb2",
+    "docs/scope-progress.json": "46d5ef5cb371a55b6055bae119d37d2a1bf2b02c4bde3dad0f006b3a8f64cc7d",
+    "docs/scope-progress.md": "347a30a400572e5ae5003e10a95abe851ddec50931fd3fab187cefa0eef50dbd",
+    "docs/stream-observer-plan.md": "17062359ad8dc7e1b479f87c8a194e2c3e1b4f12ad2c27c314c41ab3226de121",
+    "extension/src/main-world/stream-observer.mjs": "f6a2e3f0b66df2f169246f79468e1ad967ee8ee2a7a9b5bbc1965223811cadde",
+    "mobile/ios/Source/CheckerController.swift": "be4c949e7d16b9c8cd42d1f9978fa14b5fac1520e20296d4b482d7d716751528",
+    "mobile/ios/Tests/UIFlows.swift": "9e58e1d78553ffa25d6e1ce534135d7d68bace7f7d18fd7fd0418c831fb90386",
+    "runs/2026-11-17-ios-notice-page-reconstruction.json": "3dec355ca2fad39f78823aea3d0ac4fdcc7d2b99aab3b5fa40667262bcc73da0",
+    "runs/2026-11-17-ios-signing-keychain-diagnosis.json": "3b8f5494e7d711e4e6c18cead9fabd49b03b7753a89b6fbcc3829afd37773069",
+    "runs/2026-11-17-paged-notices-ios-archive.json": "c2ac8ff435e4e1d8e5c8e5bf442d529a0f7e632ba04bf49d711f4d6759cfe458",
+    "runs/2026-11-17-paged-notices-native-share-workflow.json": "66af37964f5749403be0cfe63c988b15764daded060e5eceb1b2447391ea3067",
+    "runs/2026-11-17-stream-crlf-boundary.json": "6935a9c43bc04aeef6da92a6e165234b247fe68365f4909cebe24a0a7447592e",
+    "scripts/verify-native-share-evidence.py": "62cc80b352d94497dd4bac1a82d2f2617ad76e16e645eaaafa1cd310cf1ca35a",
+    "site/public/reference/native-share-developer.md": "97f1f12361edf1e247641536fd41ed94843a42e4d3abe18d9cf7e3ab24261bb2",
+    "site/public/reference/public-scope.json": "cd864e89e0f669abc10cf03960534ba00bc9b7c5e49ca5c0adda9da82f15d119",
+    "site/src/public-scope.json": "cd864e89e0f669abc10cf03960534ba00bc9b7c5e49ca5c0adda9da82f15d119",
+    "site/src/scope-manifest.json": "19e30433366a7eb6955e786e62be9a6728e6c6759332b7cb2ab15bc996f93a8e",
+    "state.json": "2a58d7116452aad68737b7b8fce683d9e3cb27992841c12df07ea633c9a5829b",
+    "tests/stream-observer.cjs": "01c165f672f9c511738cea5234822406f0531522c438dfd0fd6a5e45110ddb6c",
+    "tests/test_stream_observer.py": "117986c74d8d1e8dae484531f355cd02882ea198ab222bb0b325ae4165e36cfa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-paged-notices-native-share-workflow.json",
+      "sha256": "66af37964f5749403be0cfe63c988b15764daded060e5eceb1b2447391ea3067"
+    },
+    {
+      "path": "runs/2026-11-17-paged-notices-ios-archive.json",
+      "sha256": "c2ac8ff435e4e1d8e5c8e5bf442d529a0f7e632ba04bf49d711f4d6759cfe458"
+    },
+    {
+      "path": "runs/2026-11-17-ios-notice-page-reconstruction.json",
+      "sha256": "3dec355ca2fad39f78823aea3d0ac4fdcc7d2b99aab3b5fa40667262bcc73da0"
+    },
+    {
+      "path": "runs/2026-11-17-ios-signing-keychain-diagnosis.json",
+      "sha256": "3b8f5494e7d711e4e6c18cead9fabd49b03b7753a89b6fbcc3829afd37773069"
+    },
+    {
+      "path": "runs/2026-11-17-stream-crlf-boundary.json",
+      "sha256": "6935a9c43bc04aeef6da92a6e165234b247fe68365f4909cebe24a0a7447592e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-native-share-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T22:21:47.429208+00:00"
+    }
+  ]
+}

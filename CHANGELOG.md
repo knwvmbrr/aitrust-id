@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-222732-paged-notices-distribution-preflight-42b13a14
+
+Recorded 2026-11-17T22:27:32.143367+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the notice and stream changes to current engineering receipts and verified both manual Xcode distribution target settings.
+- **Evidence.** Website, protocol and extension checks passed. Both installed profiles match the selected certificate and both target configurations match the registered identifiers. [Change record](./runs/changes/2026-11-17-222732-paged-notices-distribution-preflight-42b13a14.json).
+- **Not claimed.** Protected access to the existing signing key, hosted iOS 27.2 execution, Apple upload and physical and live vendor acceptance remain open.
+
+
+### 2026-11-17-222146-paged-native-notices-crlf-563b62dd
+
+Recorded 2026-11-17T22:21:46.985205+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a bounded, browsable offline notice reader and corrected CRLF framing at the synthetic stream line limit.
+- **Evidence.** All five local native workflows passed. The unsigned archive verified 36 unaltered resources, and the seven notices reconstructed byte for byte. Twelve stream control groups passed. [Change record](./runs/changes/2026-11-17-222146-paged-native-notices-crlf-563b62dd.json).
+- **Not claimed.** Hosted iOS 27.2 recheck, protected signing, Apple submission, physical acceptance and live vendor capture remain open. No original requirement was closed.
+
+
 ### 2026-11-17-220518-offline-removal-revalidation-bfb3e025
 
 Recorded 2026-11-17T22:05:18.805922+00:00 · Contributor: Codex · change

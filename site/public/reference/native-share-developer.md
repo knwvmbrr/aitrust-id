@@ -119,6 +119,8 @@ keyboards and operating-system services have separate privacy behavior.
 Use the **Dark mode** switch to choose Light or Dark. Choose **Auto** to return
 to the system setting. The app and extension store the appearance preference
 locally and separately. The containing app's **Privacy & open-source notices**
-view includes the pinned Python standard-library notices and works offline.
+view opens an offline document list. Choose one notice and use Previous or Next
+on longer documents. The visible page is limited to 3,000 characters. The
+bundled files remain complete, including the Python standard-library notices.
 Both targets package the reviewed privacy manifest. Current simulator execution
 and resource checks are linked from [distribution readiness](app-store-readiness.md).

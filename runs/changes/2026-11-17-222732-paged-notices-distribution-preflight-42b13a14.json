@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-222732-paged-notices-distribution-preflight-42b13a14",
+  "recorded_at": "2026-11-17T22:27:32.143367+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "06573cb0963891ab11d4bb73b111478202ca7df4",
+  "changed": "Bound the notice and stream changes to current engineering receipts and verified both manual Xcode distribution target settings.",
+  "proves": "Website, protocol and extension checks passed. Both installed profiles match the selected certificate and both target configurations match the registered identifiers.",
+  "limits": "Protected access to the existing signing key, hosted iOS 27.2 execution, Apple upload and physical and live vendor acceptance remain open.",
+  "scope_ids": [
+    "N-013",
+    "F-030"
+  ],
+  "files": {
+    "state.json": "7ac9c6c7b5698878fa9bc729cb79924a5861bd84d988486952a02322bc64dff3",
+    "eval/route-boundaries.json": "cf1004ac8d6f3d5e325190464cc52812970029f1ebcbf923fee363d44418fdaa",
+    "runs/2026-11-17-paged-notice-website.json": "fbbeb4dc66c6a5078755de26267be35b304549fe436d5471bbb66db77c9c027a",
+    "runs/2026-11-17-paged-notice-protocol.json": "2c476082eed79e022eed260d0259b381ee0b8d51a5ce55c8f4fae6b338c9d137",
+    "runs/2026-11-17-crlf-extension.json": "94896b60ad6794d09bbcaf9a8dca1e68df929d6877019c1d46c3f8c4e8ae5e0a",
+    "runs/2026-11-17-paged-notice-route-boundaries.json": "d6ba5ef7cdfc50f26a86deb55dd78407f0df07b592bd8c198bea3b1866385a6d",
+    "runs/2026-11-17-paged-notice-signing-preflight.json": "78f57df367fd9f14af72ff282abf66b85c7f272ecd665065ea1b208f3913fca7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-paged-notice-website.json",
+      "sha256": "fbbeb4dc66c6a5078755de26267be35b304549fe436d5471bbb66db77c9c027a"
+    },
+    {
+      "path": "runs/2026-11-17-paged-notice-protocol.json",
+      "sha256": "2c476082eed79e022eed260d0259b381ee0b8d51a5ce55c8f4fae6b338c9d137"
+    },
+    {
+      "path": "runs/2026-11-17-crlf-extension.json",
+      "sha256": "94896b60ad6794d09bbcaf9a8dca1e68df929d6877019c1d46c3f8c4e8ae5e0a"
+    },
+    {
+      "path": "runs/2026-11-17-paged-notice-route-boundaries.json",
+      "sha256": "d6ba5ef7cdfc50f26a86deb55dd78407f0df07b592bd8c198bea3b1866385a6d"
+    },
+    {
+      "path": "runs/2026-11-17-paged-notice-signing-preflight.json",
+      "sha256": "78f57df367fd9f14af72ff282abf66b85c7f272ecd665065ea1b208f3913fca7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T22:27:32.200827+00:00"
+    }
+  ]
+}

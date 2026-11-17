@@ -100,7 +100,11 @@ export function observeAssistantStream(response, requestedLimits = {}) {
       const value = buffer.slice(0, newline); buffer = buffer.slice(newline + 1);
       line(value.endsWith('\r') ? value.slice(0, -1) : value);
     }
-    if (buffer.length > limits.line) throw new Error('invalid');
+    // A chunk can end with the CR of CRLF. Keep that one framing character
+    // pending until LF arrives; the completed line still checks size and stray CR.
+    if (buffer.length > limits.line && !(buffer.length === limits.line + 1 && buffer.endsWith('\r'))) {
+      throw new Error('invalid');
+    }
   };
   (async () => {
     try {

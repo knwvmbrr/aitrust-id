@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-17T22:14:24.419392+00:00",
+  "pass": true,
+  "scope_id": "F-030",
+  "base": "35ab4b56dbdf222d5274bb49dfbef23497f3d6f1",
+  "node": "v22.12.0",
+  "sources": {
+    "extension/src/main-world/stream-observer.mjs": "f6a2e3f0b66df2f169246f79468e1ad967ee8ee2a7a9b5bbc1965223811cadde",
+    "tests/stream-observer.cjs": "01c165f672f9c511738cea5234822406f0531522c438dfd0fd6a5e45110ddb6c",
+    "tests/test_stream_observer.py": "117986c74d8d1e8dae484531f355cd02882ea198ab222bb0b325ae4165e36cfa",
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba"
+  },
+  "before": {
+    "groups": 1,
+    "failed": 1,
+    "expected": "observed",
+    "actual": "unavailable"
+  },
+  "after": {
+    "node_groups": 12,
+    "node_passed": 12,
+    "pytest_wrapper_passed": 1
+  },
+  "added_controls": [
+    "exact_line_unsplit_crlf",
+    "exact_line_crlf_split_twice",
+    "oversized_payload_split_and_unsplit",
+    "dangling_cr_eof",
+    "double_cr_and_stray_cr_refused",
+    "original_response_identity_and_bytes_preserved"
+  ],
+  "profile": "aitrust.assistant-text.v1",
+  "installed_manifest_changed": false,
+  "synthetic_only": true,
+  "live_vendor_capture": false,
+  "requirements_closed": 0
+}

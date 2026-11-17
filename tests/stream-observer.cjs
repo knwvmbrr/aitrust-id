@@ -31,6 +31,48 @@ test('original response identity, headers and body remain usable; split UTF-8 an
   assert.equal(observed.bytes, bytes.length); assert.ok(Object.isFrozen(observed));
 });
 
+function responseFromChunks(chunks) {
+  return response(new ReadableStream({
+    start(controller) {
+      for (const chunk of chunks) controller.enqueue(encode(chunk));
+      controller.close();
+    },
+  }));
+}
+
+test('an exact-limit line accepts CRLF both together and split after CR', async () => {
+  const { observeAssistantStream } = await modulePromise;
+  const line = 'data: ' + JSON.stringify(record());
+  const raw = line + '\r\n\r\n';
+  for (const chunks of [[raw], [line + '\r', '\n\r', '\n']]) {
+    const original = responseFromChunks(chunks);
+    const observation = observeAssistantStream(original, { line: line.length });
+    const [result, page] = await Promise.all([observation.completion, original.arrayBuffer()]);
+    assert.equal(observation.response, original);
+    assert.deepEqual(new Uint8Array(page), encode(raw));
+    assert.equal(result.status, 'observed');
+    assert.equal(result.text, 'Example');
+    assert.equal(result.events, 1);
+    assert.equal(result.bytes, encode(raw).byteLength);
+  }
+});
+
+test('pending CR never admits oversized, incomplete, or stray-CR lines', async () => {
+  const { observeAssistantStream } = await modulePromise;
+  const line = 'data: ' + JSON.stringify(record());
+  const longer = 'data: ' + JSON.stringify(record('ExampleX'));
+  const shorter = 'data: ' + JSON.stringify(record('A'));
+  for (const chunks of [[longer + '\r', '\n\r\n'], [longer + '\r\n\r\n'], [line + '\r'],
+    [line + '\r', '\r\n\r\n'], [shorter + '\r', 'x\n\n']]) {
+    const original = responseFromChunks(chunks);
+    const observation = observeAssistantStream(original, { line: line.length });
+    const [result, page] = await Promise.all([observation.completion, original.arrayBuffer()]);
+    unavailable(result, 'invalid_stream');
+    assert.equal(observation.response, original);
+    assert.deepEqual(new Uint8Array(page), encode(chunks.join('')));
+  }
+});
+
 test('unsupported, already consumed and non-success responses are not observed', async () => {
   const { observeAssistantStream } = await modulePromise;
   const used = response('example'); await used.text();
