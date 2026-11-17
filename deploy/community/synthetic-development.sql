@@ -18,7 +18,7 @@ CREATE TABLE community_dev.document (
 );
 CREATE FUNCTION community_dev.compare_swap_synthetic(previous_base64 text, next_base64 text)
 RETURNS boolean LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog,pg_temp AS $$
-DECLARE old_value jsonb; new_value jsonb; changed integer; key_name text;
+DECLARE old_value jsonb; new_value jsonb; changed integer; key_name text; removable_posts integer;
 BEGIN
  IF octet_length(previous_base64)>349528 OR octet_length(next_base64)>349528 THEN
    RAISE EXCEPTION 'Synthetic community transaction refused';
@@ -48,6 +48,16 @@ BEGIN
  IF (new_value->>'revision')::bigint<>(old_value->>'revision')::bigint+1
     OR (new_value->>'clock')::bigint<(old_value->>'clock')::bigint THEN
    RAISE EXCEPTION 'Synthetic community transaction refused';
+ END IF;
+ SELECT count(*) INTO removable_posts
+ FROM jsonb_each(new_value->'posts') AS post
+ WHERE post.value->>'state' IN ('queued','published');
+ -- Each emergency action spends a reserve unit. 1 KiB covers the bounded
+ -- addition of an audit row, event, request record and scalar field updates.
+ IF octet_length(new_value::text) + 1024 * (
+      removable_posts + CASE WHEN new_value->'posting_paused'='true'::jsonb THEN 0 ELSE 1 END
+    ) > 262144 THEN
+   RAISE EXCEPTION 'Synthetic community capacity reserve reached';
  END IF;
  UPDATE community_dev.document SET payload=new_value WHERE singleton=1 AND payload=old_value;
  GET DIAGNOSTICS changed=ROW_COUNT;

@@ -197,14 +197,17 @@ def test_dispute_resolution_records_separate_proposed_correction_without_rewriti
     with pytest.raises(c.Refused): e.audit('user-two')
 
 
-def test_capacity_reserves_privacy_retraction_without_silently_pruning_audit():
+def test_audit_capacity_reserves_pause_and_retraction_without_pruning():
     e = c.Community(); p = published(e, text='REMOVE_AT_CAPACITY_CANARY')
     row = copy.deepcopy(e.state['audit'][0])
-    e.state['audit'] = [copy.deepcopy(row) for _ in range(c.MAX_AUDIT-c.MAX_POSTS)]
-    e.state['revision'] = c.MAX_AUDIT-c.MAX_POSTS
+    e.state['audit'] = [copy.deepcopy(row) for _ in range(c.MAX_AUDIT-c.MAX_POSTS-1)]
+    e.state['revision'] = c.MAX_AUDIT-c.MAX_POSTS-1
     c.validate(e.state)
     before = len(e.state['audit'])
     with pytest.raises(c.Refused): submit(e, 'user-two')
+    run(e, 'admin-one', 'pause', {'paused': True})
+    with pytest.raises(c.Refused): run(e, 'admin-one', 'pause', {'paused': False})
+    with pytest.raises(c.Refused): run(e, 'admin-one', 'pause', {'paused': True})
     run(e, 'mod-one', 'retract', {'post_id': p['id'], 'version': p['version'], 'reason': 'privacy'})
-    assert len(e.state['audit']) == before+1
+    assert len(e.state['audit']) == before+2
     assert 'REMOVE_AT_CAPACITY_CANARY' not in c.encode(e.state).decode()

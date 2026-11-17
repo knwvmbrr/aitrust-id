@@ -14,6 +14,12 @@ MAX_STATE = 262144
 ROLES = ('ait_community_runtime', 'ait_community_public')
 
 
+def encode_state(state):
+    # Measure compact UTF-8, so Unicode escapes do not impose a second, larger
+    # byte budget than PostgreSQL's own JSONB text measurement.
+    return json.dumps(state, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode('utf-8')
+
+
 class Postgres:
     def __init__(self, directory):
         core.require(sys.platform == 'linux' and os.geteuid() != 0)
@@ -43,7 +49,7 @@ class Postgres:
         core.require(synthetic_only is True)
         # A fresh synthetic schema only. Existing namespaces/roles refuse atomically.
         schema = (ROOT/'deploy/community/synthetic-development.sql').read_text()
-        raw = base64.b64encode(core.encode(core.initial())).decode('ascii')
+        raw = base64.b64encode(encode_state(core.initial())).decode('ascii')
         insertion = "INSERT INTO community_dev.document VALUES(1,convert_from(decode('" + raw + "','base64'),'UTF8')::jsonb);\nCOMMIT;\n"
         core.require(schema.count('\nCOMMIT;\n') == 1)
         self.sql(schema.replace('\nCOMMIT;\n', '\n' + insertion))
@@ -56,8 +62,8 @@ class Postgres:
 
     def apply(self, actor, request, now):
         for _ in range(6):
-            engine = self.read(); old = core.encode(engine.state)
-            result = engine.apply(actor, request, now); new = core.encode(engine.state)
+            engine = self.read(); old = encode_state(engine.state)
+            result = engine.apply(actor, request, now); new = encode_state(engine.state)
             if old == new: return result
             core.require(len(new) <= MAX_STATE)
             # Both values use the fixed base64 alphabet, never SQL interpolation of text.

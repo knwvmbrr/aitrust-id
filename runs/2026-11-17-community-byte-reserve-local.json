@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-17T20:31:15.431914+00:00",
+  "pass": true,
+  "authors": [
+    "Codex community engineering lane"
+  ],
+  "problem": "A retraction of short text can add serialized audit, event and request data. The PostgreSQL byte cap shared by ordinary writes could prevent removal.",
+  "fix": "Reserve 1024 JSONB text bytes per removable post and one pause. Reserve one audit slot for emergency pause alongside the existing removal allocation. Use compact UTF-8 to avoid ASCII escape expansion before PostgreSQL measures the document.",
+  "sources": {
+    "tools/community_core.py": "422173c28f4f1429bedea5ddfc6f3b91ab7f9205c0b395e93775c513955fb817",
+    "tools/community_postgres.py": "5dff95a007beb61cf9002ca04242df462313d40eac1bbcefb391ca397b97b49c",
+    "deploy/community/synthetic-development.sql": "b802f6a4aec79dde4f336517ee337857acef9c7345230a0ce7919c92ed16d1e1",
+    "scripts/verify-community-postgres.py": "c609f1a0de668b1ef8a7859b059e28e385a3fa5b6e3989869f40dada70e2611c",
+    "tests/test_community_core.py": "893fca457eb7f78f1b3ebe7578345b32b447dbc2e1e1d9df407b32a50cd0f1b5",
+    "tests/test_community_postgres.py": "b0526cb964d6850291603decb0486e4ff9d7532521a32072cf7e62fa6fa89733"
+  },
+  "focused_tests": {
+    "tests": 53,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "local_cli_evidence": "runs/2026-11-17-community-byte-reserve-cli.json",
+  "prior_hosted_evidence": "runs/2026-11-17-community-hosted-initial.json",
+  "new_capacity_hosted_run_pending": true,
+  "synthetic_only": true,
+  "production_changed": false,
+  "full_requirements_closed": 0
+}

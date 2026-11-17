@@ -39,10 +39,10 @@ compromised trusted writer can still fabricate plausible approved state.
 
 | Check | Result |
 | --- | --- |
-| Current focused core/store/CLI/PG-boundary/workflow suite |52 passed, zero failures/skips on macOS |
+| Current focused core/store/CLI/PG-boundary/workflow suite |53 passed on macOS after byte-reserve correction |
 | Actual current-source local CLI lifecycle |17 calls across7 groups passed; temporary synthetic SQLite store removed |
 | Syntax and whitespace checks |Pass |
-| Actual PostgreSQL18 installation/schema/CAS/grants/lifecycle |Pending fresh isolated hosted Linux execution; implementation and tests do not establish its runtime result |
+| Actual PostgreSQL 18 installation, schema, CAS, grants and lifecycle |12 groups passed on the initial draft; the new saturation control awaits a fresh run |
 | Public transport, CSRF/TLS/session/MFA, two real users, actual moderators and phone clients |Not executed or released by this increment |
 
 The initial core run passed26 checks, then the first store/CLI set passed39 and
@@ -55,6 +55,18 @@ retains the earlier local receipts unchanged. These successive runs followed act
 of independent accuracy. During an in-flight audit timestamp edit, review caught
 an accidental request-validator `at` lookup before the next execution; it was
 removed. No runtime pass is claimed for that intermediate edited source.
+
+The initial hosted run passed all 12 PostgreSQL control groups and 17 CLI calls.
+Its artifact hashes match the tested commit, and the receipt records verified
+shutdown and removal of the isolated test cluster.
+[Initial hosted evidence](../runs/2026-11-17-community-hosted-initial.json).
+
+Review found that a retraction of short text could add more audit and request
+bytes than it removes. PostgreSQL now reserves 1 KiB per removable post plus
+one pause before ordinary writes reach the cap. The core also reserves an
+audit slot for that pause. The corrected source passed 53 local tests and 17 CLI
+calls. A fresh PostgreSQL run will measure the actual saturated-store behavior.
+[Local correction evidence](../runs/2026-11-17-community-byte-reserve-local.json).
 
 The PostgreSQL runner is restricted to a fresh private `/tmp/aitrust-metadata-*`
 cluster, the existing fixed PostgreSQL18 binary path and a fresh Linux network

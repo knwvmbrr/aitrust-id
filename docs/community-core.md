@@ -121,8 +121,7 @@ The engine caps256 posts,128 private metadata reports,128 appeals,128 replay
 events,256 cached requests and4096 audit actions. Eight ordinary write attempts
 per actor per60 trusted-clock seconds are admitted. Requests are at most16KiB;
 message bodies are at most2000 characters and reject unsafe control/bidi text.
-Reads use1–20 items. The final256 audit slots are reserved for retraction, so
-ordinary writes cannot exhaust the space needed to remove every remaining post.
+Reads use1–20 items. The last 257 audit slots are reserved for retraction and one emergency pause.
 Clock rollback, stale revisions, corrupt state, unavailable
 storage, held locks and capacity exhaustion refuse explicitly. These are software
 bounds, not a service SLA or internet-level denial-of-service protection.
@@ -130,8 +129,10 @@ bounds, not a service SLA or internet-level denial-of-service protection.
 Synthetic SQLite uses private owner-held0700/0600 files, fixed schema, no links,
 exclusive nonblocking locks and atomic transactions. PostgreSQL uses its own
 private socket-only test cluster, separate schema/roles and a256KiB JSONB state
-cap; atomic compare-and-swap retries at most six times. Counts may remain below
-engine limits when the PostgreSQL byte cap is reached. No raw user text is placed
+cap. The database reserves 1 KiB for each removable message and one more for
+pausing posts. Ordinary writes can therefore reach the byte limit before the
+engine reaches its count limit. The adapter retries a conflicting update at most
+six times. No raw user text is placed
 in process arguments or PostgreSQL diagnostics. Database and OS administrators
 remain trusted; the runtime role is a trusted application role, not a participant.
 Its CAS function can submit replacement synthetic state: it is not SQL-enforced

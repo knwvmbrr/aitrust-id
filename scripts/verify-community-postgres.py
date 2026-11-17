@@ -16,7 +16,7 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]; sys.path.insert(0, str(ROOT))
 from tools import community_core as core
-from tools.community_postgres import Postgres, BIN
+from tools.community_postgres import Postgres, BIN, MAX_STATE, encode_state
 from tools.backup_retention import require_namespace
 
 SOURCES = ('tools/community_core.py', 'tools/community_store.py', 'tools/community_postgres.py',
@@ -37,6 +37,7 @@ def verify(namespace):
     control = [str(BIN/'pg_ctl'), '-D', str(work/'data')]
     env = {'PATH': '/usr/bin:/bin', 'LANG': 'C.UTF-8'}
     started = False; stopped = True; cleaned = False; cases = []; stage = 'init'; failed = None
+    capacity = None
     def run(args, input=None, timeout=20):
         require_namespace(namespace)
         r = subprocess.run(list(map(str,args)), input=input, capture_output=True, timeout=timeout, env=env)
@@ -153,11 +154,43 @@ def verify(namespace):
             left,right=[base64.b64encode(x).decode() for x in (old,core.encode(new.state))]
             return pg.sql("SELECT community_dev.compare_swap_synthetic('"+left+"','"+right+"');",'ait_community_runtime')
         core.require(cas(first)=='t' and cas(second)=='f');case('stale_snapshot_cannot_overwrite_committed_state')
-        stage = 'bounds_outage'
-        denied(lambda:pg.view('public',after=-1));denied(lambda:pg.view('public',limit=21))
-        apply('admin-one','pause',{'paused':True})
-        denied(lambda:apply('user-two','submit',{'body':'Unavailable','consent_public':True}))
-        core.require(pg.view('public')['cache_control']=='no-store');case('bounded_public_queries_and_posting_pause_keep_reads_available')
+        stage = 'byte_capacity'
+        denied(lambda: pg.view('public', after=-1)); denied(lambda: pg.view('public', limit=21))
+        short = apply('user-one', 'submit', {'body': 'x', 'consent_public': True})
+        short = apply('mod-one', 'approve', {'post_id': short['id'], 'version': short['version']})
+        refused = False
+        for _ in range(128):
+            now += 60  # Test storage saturation independently of the actor throttle.
+            addition = req('submit', {'body': '🌳' * 500, 'consent_public': True})
+            try:
+                pg.apply('user-two', addition, now)
+            except core.Refused:
+                refused = True
+                break
+        core.require(refused)
+        def document_bytes():
+            return int(pg.sql('SELECT octet_length(payload::text) FROM community_dev.document;', 'ait_community_runtime'))
+        before_bytes = document_bytes()
+        candidate = pg.read()
+        candidate.apply('user-two', addition, now)  # The core's count/rate limits still allow this.
+        candidate_raw = base64.b64encode(encode_state(candidate.state)).decode('ascii')
+        attempted_bytes = int(pg.sql("SELECT octet_length(convert_from(decode('"+candidate_raw+"','base64'),'UTF8')::jsonb::text);", 'ait_community_runtime'))
+        removable = sum(row['state'] in ('queued', 'published') for row in candidate.state['posts'].values())
+        core.require(attempted_bytes <= MAX_STATE and attempted_bytes + 1024 * (removable + 1) > MAX_STATE)
+        core.require(addition['request_id'] not in pg.read().state['posts'])
+        apply('admin-one', 'pause', {'paused': True})
+        paused_bytes = document_bytes()
+        apply('mod-one', 'retract', {'post_id': short['id'], 'version': short['version'], 'reason': 'privacy'})
+        removed_bytes = document_bytes()
+        tombstone = next(row for row in pg.view('public')['items'] if row['id'] == short['id'])
+        core.require(tombstone['state'] == 'retracted' and tombstone['body'] is None and removed_bytes > paused_bytes)
+        denied(lambda: apply('user-two', 'submit', {'body': 'Unavailable', 'consent_public': True}))
+        core.require(pg.view('public')['cache_control'] == 'no-store')
+        capacity = {'byte_limit': MAX_STATE, 'document_bytes_at_refusal': before_bytes,
+            'rejected_candidate_bytes': attempted_bytes, 'rejected_candidate_reserved_bytes': 1024 * (removable + 1),
+            'document_bytes_after_pause': paused_bytes, 'document_bytes_after_retraction': removed_bytes,
+            'post_count_at_refusal': len(candidate.state['posts']) - 1}
+        case('actual_byte_reserve_refuses_ordinary_writes_but_keeps_pause_and_growing_retraction_available')
         stage = 'source_fence';core.require(inventory()==before)
     except Exception:
         failed=stage
@@ -172,7 +205,7 @@ def verify(namespace):
             except OSError: cleaned=False
     return {'captured_at':datetime.now(timezone.utc).isoformat(),'pass':failed is None and stopped and cleaned,
         'format':'synthetic-community-postgresql-evidence/v1','sources':before,'source_unchanged':inventory()==before,
-        'controls':cases,'failure_stage':failed,'postgresql_major':18,'actual_postgresql':True,
+        'controls':cases,'capacity':capacity,'failure_stage':failed,'postgresql_major':18,'actual_postgresql':True,
         'non_root':os.geteuid()!=0,'network_namespace_isolated':True,'socket_only_cluster':True,
         'cluster_shutdown_verified':stopped,'private_cluster_removed':cleaned,'synthetic_only':True,
         'public_service_enabled':False,'real_user_data_collected':False,'new_endpoints':0,

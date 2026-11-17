@@ -172,8 +172,9 @@ class Community:
     def _apply(self, actor, rid, op, d, now):
         s = self.state; role = ACTORS[actor]; moderator = role == 'moderator'
         require(len(s['audit']) < MAX_AUDIT)
-        # Preserve one emergency removal slot per possible remaining post.
-        require(len(s['audit']) < MAX_AUDIT - MAX_POSTS or op == 'retract')
+        # Reserve one slot per removable post and one to pause admissions.
+        is_emergency_pause = op == 'pause' and d.get('paused') is True and not s['posting_paused']
+        require(len(s['audit']) < MAX_AUDIT - MAX_POSTS - 1 or op == 'retract' or is_emergency_pause)
         if op in ('submit', 'reply', 'edit', 'supersede', 'report', 'appeal'):
             require(not s['posting_paused'])
             times = [t for t in s['rates'].get(actor, []) if now - t < 60]

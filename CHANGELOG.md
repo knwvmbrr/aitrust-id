@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-203115-community-postgres-byte-reserve-bbb3e974
+
+Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Reserve PostgreSQL document capacity and audit slots for pausing admissions and removing posts at saturation. Record the initial hosted PostgreSQL run.
+- **Evidence.** Initial isolated Linux PostgreSQL run passed 12 control groups and verified shutdown. The capacity correction passed 53 focused local tests and 17 actual CLI calls. The next hosted run will measure byte saturation against the corrected source. [Change record](./runs/changes/2026-11-17-203115-community-postgres-byte-reserve-bbb3e974.json).
+- **Not claimed.** Synthetic software evidence only. The new PostgreSQL saturation control still awaits execution. Original requirement closures, global scope, public posting and real collection stay outside this increment.
+
+
 ### 2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72
 
 Recorded 2026-11-17T18:04:07.040068+00:00 · Contributor: Codex - community engineering lane · change

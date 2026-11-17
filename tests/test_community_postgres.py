@@ -69,3 +69,10 @@ def test_hosted_workflow_tracks_every_executed_source_and_keeps_synthetic_isolat
     serialized=json.dumps(workflow)
     assert 'sudo unshare --net' in serialized and '--run-as' in serialized
     assert workflow['permissions']=={'contents':'read'}
+
+
+def test_postgres_state_encoding_preserves_utf8_within_the_storage_budget():
+    value = {'public': '☕🌳'}
+    encoded = p.encode_state(value)
+    assert encoded == '{"public":"☕🌳"}'.encode('utf-8')
+    assert json.loads(encoded) == value and len(encoded) < len(c.encode(value))
