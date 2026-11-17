@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-175729-android-share-offline-checker-bf7204be
+
+Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Add a bounded independent Android text Share checker around the existing offline PS engine, native review/edit/check/clear lifecycle, compact branded results and an existing-tools hosted APK build path.
+- **Evidence.** Actual pinned WebAssembly and Android loader match 137 current development/Unicode probes; 9 packaging controls and the actual JVM lifecycle program pass. Asset identity, notice checks and permission refusals remain explicit. [Change record](./runs/changes/2026-11-17-175729-android-share-offline-checker-bf7204be.json).
+- **Not claimed.** APK compilation and actual Android Share/WebView execution await hosted tools; physical devices, TalkBack, human usability, production signing and independent accuracy remain unproven. N-014 and original scope completion unchanged.
+
+
 ### 2026-11-17-141623-independent-evidence-publication-6aeec82d
 
 Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
