@@ -11,6 +11,24 @@ Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engi
 - **Not claimed.** Synthetic software evidence only. The new PostgreSQL saturation control still awaits execution. Original requirement closures, global scope, public posting and real collection stay outside this increment.
 
 
+### 2026-11-17-202519-current-development-evidence-index-c51fc553
+
+Recorded 2026-11-17T20:25:19.816824+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Refreshed the downloadable evidence index to point to five current engineering receipts.
+- **Evidence.** Strict evidence packet assembly verifies the current PS, privacy, protocol, extension and website receipts. [Change record](./runs/changes/2026-11-17-202519-current-development-evidence-index-c51fc553.json).
+- **Not claimed.** F-120 remains open for selected release exit evidence and outside implementer acceptance.
+
+
+### 2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522
+
+Recorded 2026-11-17T20:22:20.355457+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Verified the framing workflow alongside current browser routes and recorded zero as the full completion objective.
+- **Evidence.** 32 website and 14 extension checks passed and the current route boundaries and 202-record ledger verify. [Change record](./runs/changes/2026-11-17-202220-mt-workflow-verification-and-zero-target-fe008522.json).
+- **Not claimed.** Full MT release still requires contextual validation, independent labeling and human operation. The original requirements remain open.
+
+
 ### 2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72
 
 Recorded 2026-11-17T18:04:07.040068+00:00 · Contributor: Codex - community engineering lane · change
@@ -29,6 +47,15 @@ Recorded 2026-11-17T18:01:19.800078+00:00 · Contributor: Codex - community engi
 - **Not claimed.** Synthetic development only. SQLite is not a real-user destination; remote PostgreSQL operating gates remain. No public endpoint, posting client, production authentication, actual moderator program, real collection, training, tag release or original requirement closure.
 
 
+### 2026-11-17-151740-mt-private-evidence-workflow-a74f53af
+
+Recorded 2026-11-17T15:17:40.665896+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Added one private independently supervised framing workflow, short default output, explicit safe evidence export, failure isolation and actual CLI controls; reconciled the work-to-zero objective and stale publication pointers.
+- **Evidence.** 20 focused subprocess/contract tests and 11 actual invented-example CLI controls pass; broken/missing choice context leaves urgency usable and PS remains separate. [Change record](./runs/changes/2026-11-17-151740-mt-private-evidence-workflow-a74f53af.json).
+- **Not claimed.** No MT tag, contextual/intent accuracy, independent labeling, human accessibility, Android completion, new endpoint or original requirement closure. Protected integration and publication are pending.
+
+
 ### 2026-11-17-141623-independent-evidence-publication-6aeec82d
 
 Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
@@ -36,7 +63,6 @@ Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
 - **Changed.** Publish the merged independent evidence workflows and persist exact Linux, protected-CI and public-site verification, retaining the earlier runtime download timeout.
 - **Evidence.** All11 required protected engineering checks passed and isolated non-root Linux SDK completed21 inspector cases plus24 declaration calls in12 groups with exact source. All296 published files match on each of2 origins with security headers:592 comparisons. Merged source bf35566 is deployed; scope202 originals,132 complete,70 open. [Change record](./runs/changes/2026-11-17-141623-independent-evidence-publication-6aeec82d.json).
 - **Not claimed.** No independently release-validated new tag, human/physical-device acceptance, TestFlight upload or original requirement closure. Target60 remains unmet. The first transfer timed out; a later actual-browser transfer and unchanged full verifier pass, with root cause unestablished. This metadata followup does not redeploy the application snapshot.
-
 
 ## Unreleased — 2026-11-16
 

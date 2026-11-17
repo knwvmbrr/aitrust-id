@@ -187,3 +187,30 @@ subject to their own gates. No tag accuracy, human acceptance, collection or ful
 requirement closure is inferred from visual/metadata checks. See
 [the plan](quarterly-brand-and-agent-plan.md) and
 [web checks](../runs/2026-11-16-q4-web-theme-seo.json).
+
+## Work continues to zero — November 17
+
+The owner's completion objective is **zero open original requirements**. Sixty is
+an intermediate milestone. This instruction does not relax any original job or
+independent acceptance gate. All 202 records remain; no closure is credited merely
+for more tests, component work or an outside task being unavailable.
+
+The current executable lanes are:
+
+| Accountable owner | Work being implemented | Whole requirement still requires |
+| --- | --- | --- |
+| Codex PM | One private MT evidence workflow, separate urgency/authority/choice workers, exact evidence and per-check failure/recovery | Context/error policy, independent agreement/accuracy and human operation |
+| Android engineer (`seo` agent) | Native Android Share receiver and bundled offline PS engine; actual Android build and controlled Share execution | Physical Android/TalkBack and outside-user acceptance |
+| Dependency/debug engineer (`share_debugger` agent) | Inspect pinned nested Python runtime; classify and enforce incorporated notices; produce complete notice bundle | Complete shipping integration and any remaining full-source/permission obligations |
+| Community engineer (`web_camo` agent) | Moderation/correction/appeal state engine, synthetic workbench and PostgreSQL transaction adapter | Adopted public/authenticated transport, actual moderators and real operation |
+
+Names identify the active agent handles, not a claim that their former SEO or
+visual work is still their assigned job. There are four concurrent engineers,
+including the PM. No second tag depends on MT's release, and no private-research
+endpoint is repurposed for community data.
+
+After each executable increment, review the original acceptance before closing
+anything. Continue the next available engineering action when one specific step
+requires Michael, another real person, credentials or qualified judgment. The
+next tag integration queue is HP evidence composition, NF/FI evidence review and
+supported provenance evidence—not production assertions from unvalidated models.
