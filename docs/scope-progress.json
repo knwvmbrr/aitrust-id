@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-17T21:43:50.734497+00:00",
+  "audited_at": "2026-11-17T21:56:05.539761+00:00",
   "client_date": "2026-11-17",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -8734,11 +8734,12 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-09T21:37:15.236103+00:00",
+      "audited_at": "2026-11-17T21:56:05.539761+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
+        "Codex \u2014 lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements",
+        "Codex offline delivery lane \u2014 removed cache recreation on fetch and verified before/after behavior in Chromium and WebKit, 2026-11-17T21:56:05.539761+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8759,7 +8760,8 @@
         "runs/2026-10-13-ps-lazy-regressions.json",
         "runs/2026-10-13-ps-lazy-device-engines.json",
         "runs/2026-10-13-ps-lazy-staging-timing.json",
-        "runs/2026-11-09-iphone-target-status.json"
+        "runs/2026-11-09-iphone-target-status.json",
+        "runs/2026-11-17-offline-worker-removal-browser.json"
       ],
       "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
       "required_acceptance": [

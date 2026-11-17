@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-11-17T21:54:25.852Z",
+  "pass": true,
+  "cases": [
+    {
+      "engine": "chromium",
+      "stage": "original",
+      "pass": true,
+      "actual_generated_worker": true,
+      "worker_sha256": "8595b838a35374d673dee91c1d0b2321b7cd25a7804ec109eb7674180d77ab9f",
+      "unregistered": true,
+      "removed": true,
+      "absentAfterDelete": true,
+      "controlled": true,
+      "cacheExistsAfterFetch": true,
+      "responseOk": true,
+      "network_fallback": true
+    },
+    {
+      "engine": "chromium",
+      "stage": "fixed",
+      "pass": true,
+      "actual_generated_worker": true,
+      "worker_sha256": "2a485067e6f26495bb3bc2f6e2729f8649f776c3e2a2a8a90ec3937711ca2021",
+      "unregistered": true,
+      "removed": true,
+      "absentAfterDelete": true,
+      "controlled": true,
+      "cacheExistsAfterFetch": false,
+      "responseOk": true,
+      "network_fallback": true
+    },
+    {
+      "engine": "webkit",
+      "stage": "original",
+      "pass": true,
+      "actual_generated_worker": true,
+      "worker_sha256": "8595b838a35374d673dee91c1d0b2321b7cd25a7804ec109eb7674180d77ab9f",
+      "unregistered": true,
+      "removed": true,
+      "absentAfterDelete": true,
+      "controlled": true,
+      "cacheExistsAfterFetch": true,
+      "responseOk": true,
+      "network_fallback": true
+    },
+    {
+      "engine": "webkit",
+      "stage": "fixed",
+      "pass": true,
+      "actual_generated_worker": true,
+      "worker_sha256": "2a485067e6f26495bb3bc2f6e2729f8649f776c3e2a2a8a90ec3937711ca2021",
+      "unregistered": true,
+      "removed": true,
+      "absentAfterDelete": true,
+      "controlled": true,
+      "cacheExistsAfterFetch": false,
+      "responseOk": true,
+      "network_fallback": true
+    }
+  ],
+  "hosted_timeout_cause_established": false,
+  "same_origin_invented_fixture": true,
+  "source_sha256": {
+    "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+    "tests/offline-worker-cache.cjs": "b144f3bdb9a2a5567e99422a6d44a3931c7cb89f4c76c940e92855e9bfd9e8b1"
+  }
+}

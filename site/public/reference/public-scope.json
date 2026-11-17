@@ -13591,11 +13591,12 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-09T21:37:15.236103+00:00",
+        "audited_at": "2026-11-17T21:56:05.539761+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — prior session/run attribution",
-          "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements"
+          "Codex — lazy PS context and preserved semantics; source-bound paired timing and fresh staging/browser measurements",
+          "Codex offline delivery lane — removed cache recreation on fetch and verified before/after behavior in Chromium and WebKit, 2026-11-17T21:56:05.539761+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -13616,7 +13617,8 @@
           "runs/2026-10-13-ps-lazy-regressions.json",
           "runs/2026-10-13-ps-lazy-device-engines.json",
           "runs/2026-10-13-ps-lazy-staging-timing.json",
-          "runs/2026-11-09-iphone-target-status.json"
+          "runs/2026-11-09-iphone-target-status.json",
+          "runs/2026-11-17-offline-worker-removal-browser.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Read-only Apple device status now identifies the connected target as iPhone 14 Plus on iOS 27.0.1, with Developer Mode disabled; no physical app workflow is credited.",
         "required_acceptance": [

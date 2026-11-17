@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T21:49:39.638297+00:00",
+  "updated": "2026-11-17T21:56:05.539761+00:00",
   "active_increment": "The verified iPhone source and its privacy and runtime notices are integrated. Current signing timed out. The private synthetic dispute-to-correction CLI has executable checks. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -740,7 +740,17 @@
     "normalization_id": "NFC-Unicode-15.0.0/v1",
     "latest_engine_verification": "runs/2026-10-10-context-v6-fixed-device-engines.json",
     "current_engine_evidence": "runs/2026-10-13-ps-lazy-device-engines.json",
-    "native_share_simulator_software_verified": true
+    "native_share_simulator_software_verified": true,
+    "offline_cache_removal_followup": {
+      "evidence": "runs/2026-11-17-offline-worker-removal-browser.json",
+      "browser_engines": [
+        "chromium",
+        "webkit"
+      ],
+      "recreation_fixed": true,
+      "hosted_timeout_cause_established": false,
+      "physical_acceptance": false
+    }
   },
   "fast_verification": {
     "command": "make verify-ps",
@@ -781,7 +791,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-17T21:43:50.734497+00:00",
+    "audited_at": "2026-11-17T21:56:05.539761+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -1131,7 +1141,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T21:49:39.638297+00:00",
+  "updated_at": "2026-11-17T21:56:05.539761+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",

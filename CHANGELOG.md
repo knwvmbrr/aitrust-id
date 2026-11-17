@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233
+
+Recorded 2026-11-17T22:04:04.416012+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the replay, removal and privacy results for the final worker and the hosted iPhone verification timeout.
+- **Evidence.** Both engines completed 137 parity cases and subsequent offline removal. The hosted iOS 27.2 run completed two workflows before reaching its suite deadline. [Change record](./runs/changes/2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233.json).
+- **Not claimed.** Hosted native acceptance remains open. The exact local iOS build and current hosted run are separate evidence. No scope requirement was closed.
+
+
+### 2026-11-17-215606-offline-worker-removal-f10f94a6
+
+Recorded 2026-11-17T21:56:06.160703+00:00 · Contributor: Codex · change
+
+- **Changed.** Changed the offline worker to use lookup-only access to its named cache and added a regression to device verification.
+- **Evidence.** Original and fixed generated workers were executed in Chromium and WebKit. Once removed, the fixed worker fetched from the network without recreating host storage. [Change record](./runs/changes/2026-11-17-215606-offline-worker-removal-f10f94a6.json).
+- **Not claimed.** The hosted removal timeout has a separate unresolved cause. Physical device, VoiceOver and independent accuracy acceptance remain open. No requirement was closed.
+
+
 ### 2026-11-17-214941-quantitative-listing-revalidation-b9713fbc
 
 Recorded 2026-11-17T21:49:41.842302+00:00 · Contributor: Codex · change
