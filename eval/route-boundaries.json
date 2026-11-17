@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-17T21:49:37.580857+00:00",
+  "reviewed_at": "2026-11-17T22:05:14.455577+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -770,7 +770,7 @@
     "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "9049031a656eb837d801c1011608a219ca8e78bae5d63b60250e0e0a2aeebb28",
+    "scripts/verify-route-boundaries.py": "036e32016bbb7e4c27d73922e49540df76a6e85df23c700f2284b7d4c38b4327",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
@@ -841,7 +841,7 @@
     "site/public/theme.js": "c212d1069cb9da9cce8baf96707b92ed58d9d7b9050e922fce5382527c8d1ff7",
     "site/scripts/owner-guide.mjs": "f9c50c5a055853c6ee81950a062b5eef14c58fcb6dd705738d8b2ac1abd72f61",
     "site/scripts/prepare-device.mjs": "9e6011d991f923dcd2c089ce4b5bce524fe7536f00200da8ec849143d8d6e021",
-    "site/scripts/prepare-offline.mjs": "7fb14b82e3c6969cdd7653ea07f79f8f2a63773c787992c0dfe7c62b39ad83e5",
+    "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
     "site/scripts/prepare-performance.mjs": "67fd775c7f0387297202f5be901d4380f15fa89143e9349b5b1fdfe865d0d340",
     "site/scripts/prepare.mjs": "4c034764ad0cbfe98f13f73a977f3e0ce736c006e8254a8a3e5f267dd5077d8d",
     "site/scripts/render-reference.mjs": "a886d7a6facf58931867126bb060b5b0e89bf4addc9e7b1652aa48496147c006",
@@ -860,12 +860,12 @@
     "site/src/policies.js": "f06f3e69fce96674991eaa1bd9169226a39da2ee9d80c38b06152af25a8de26b",
     "site/src/presentation.js": "8f08d1839cd577e5480eda33d8b1ee73a5721ce2d1734b58f772cf998776599b",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "1e1d8aeec0ee42d54475dff581443f7a8bf1e7a408aea67441c1c32b65e0af74",
+    "site/src/public-scope.json": "94cfd11116abbd57decb2f5143541ff04cdbb3abe3037b8b1cf4c1e847a82745",
     "site/src/redaction-performance-model.js": "e6a9c38b194fdecebf9ac52ae7676e6561d4c374160f60b0983129423314834d",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "b0c4c1ef1a19164b74a0846fc7c8d4b29c4535e9cec6534b665d9fece4db2335",
+    "site/src/scope-manifest.json": "144d81e0ae44014d95fbbf1e832f3baa5fb02e47fe4ae7c295fc30cb4c89026e",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
     "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
@@ -926,6 +926,7 @@
     "tests/group-receipts.cjs": "4704ada4d0732654b1b651eb7fb90decc1114f83a40970dfddb8b4f4866fc829",
     "tests/key-backup.cjs": "60065961d7258d6913d3c31eaabe2506647c5ec3f4a9f137e98631645fd4a4d4",
     "tests/offline-revocation.cjs": "6047130192d5e73e6e58e525b7fe108b54ba9533a9b0584fa5ffe59b200891db",
+    "tests/offline-worker-cache.cjs": "b144f3bdb9a2a5567e99422a6d44a3931c7cb89f4c76c940e92855e9bfd9e8b1",
     "tests/pipeline-timing.cjs": "8ee4a40c0902dba3399d98eaf10681801389b78daafe77c8ada9f4eeb1f37453",
     "tests/redaction-performance.cjs": "a7af9c56eb6b3eb3296d6e5e35f35d762209358753000736c28829d6eaa69d19",
     "tests/restore_isolation_kernel.py": "080d16540926b449201d0eefd5e0e56aa5a052b15e65e0bf630be5cb398cc68c",
@@ -1097,12 +1098,12 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-17-quantitative-listing-website.json",
+    "website": "runs/2026-11-17-offline-removal-website.json",
     "extension": "runs/2026-11-17-runtime-notices-extension.json"
   },
   "device_evidence": {
-    "source_commit": "8c8c99306eeb763b39115ef04fe61f683ff20023",
-    "receipt": "runs/2026-10-14-tag-isolation-device-browser.json",
+    "source_commit": "fc55eb4a913f7727f8e045573187f9a6e1701c48",
+    "receipt": "runs/2026-11-17-offline-removal-device-browser.json",
     "sources": [
       "site/src/device-client.js",
       "site/src/device-worker.js",

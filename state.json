@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T21:56:05.539761+00:00",
+  "updated": "2026-11-17T22:05:16.611487+00:00",
   "active_increment": "The verified iPhone source and its privacy and runtime notices are integrated. Current signing timed out. The private synthetic dispute-to-correction CLI has executable checks. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -749,7 +749,8 @@
       ],
       "recreation_fixed": true,
       "hosted_timeout_cause_established": false,
-      "physical_acceptance": false
+      "physical_acceptance": false,
+      "device_browser_evidence": "runs/2026-11-17-offline-removal-device-browser.json"
     }
   },
   "fast_verification": {
@@ -1072,7 +1073,7 @@
   "personal_route_boundaries": {
     "status": "Current hidden-email source and existing personal boundaries reviewed; protected publication pending",
     "manifest": "eval/route-boundaries.json",
-    "evidence": "runs/2026-11-17-quantitative-listing-route-boundaries.json",
+    "evidence": "runs/2026-11-17-offline-removal-route-boundaries.json",
     "source_files": 1008,
     "controls_and_ci_contract_tests": 57,
     "records": [
@@ -1135,13 +1136,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-quantitative-listing-protocol.json",
+    "protocol": "runs/2026-11-17-offline-removal-protocol.json",
     "extension": "runs/2026-11-17-runtime-notices-extension.json",
-    "website": "runs/2026-11-17-quantitative-listing-website.json",
+    "website": "runs/2026-11-17-offline-removal-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T21:56:05.539761+00:00",
+  "updated_at": "2026-11-17T22:05:16.611487+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2027,6 +2028,13 @@
       "owned_simulator_removed": true,
       "archive": "runs/2026-11-09-ios-hosted-archive.json",
       "retained_startup_refusal": "runs/2026-11-09-native-share-hosted-startup-refusal.json"
+    },
+    "current_hosted_ci": {
+      "pass": false,
+      "evidence": "runs/2026-11-17-current-native-hosted-ui-timeout.json",
+      "runtime": "iOS 27.2",
+      "completed_test_count": 2,
+      "failed_stage": "ui_workflows"
     }
   },
   "organization_policy": {
@@ -3167,7 +3175,8 @@
       "image_count": 4,
       "for_review": true,
       "uploaded": false
-    }
+    },
+    "native_source_merge": "35ab4b56dbdf222d5274bb49dfbef23497f3d6f1"
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",

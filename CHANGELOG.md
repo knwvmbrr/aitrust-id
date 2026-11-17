@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-220518-offline-removal-revalidation-bfb3e025
+
+Recorded 2026-11-17T22:05:18.805922+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the reviewed worker, two-engine execution, current capability checks and the hosted iPhone timeout to the updated state.
+- **Evidence.** All five current engineering receipts validate, and the current route guard accepts the exact committed browser test and source. [Change record](./runs/changes/2026-11-17-220518-offline-removal-revalidation-bfb3e025.json).
+- **Not claimed.** Physical and human acceptance remain pending. The hosted iPhone suite timed out and the current signed Apple submission is pending.
+
+
 ### 2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233
 
 Recorded 2026-11-17T22:04:04.416012+00:00 · Contributor: Codex · change
