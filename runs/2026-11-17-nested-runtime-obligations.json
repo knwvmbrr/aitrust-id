@@ -1,0 +1,173 @@
+{
+  "profile": "nested-runtime-source-and-notice-engineering/v1",
+  "observed_by": "Codex",
+  "pass": true,
+  "source_base": "0ff7a08630e05ab5f08a801a7fd5ad40df896ab7",
+  "captured_at": "2026-11-17T20:34:29.438013+00:00",
+  "pinned_archive": {
+    "package": "pyodide",
+    "version": "314.0.7",
+    "sha256": "66b7949e5a0cba2250b586d7e368bf12fb482800748d182c4618254b685ffaa0",
+    "nested_member": "package/python_stdlib.zip",
+    "nested_sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+  },
+  "historical_stage_receipts": {
+    "initial_archive_collection": {
+      "captured_at": "2026-11-17T15:21:14.464692+00:00",
+      "stage": "initial_actual_pinned_archive_collection",
+      "exit_status": 0,
+      "deadline_seconds": 45,
+      "log_sha256": "8131c94edfdaf13acee541143b2e7e84af6450a47218bb0223b5919516c73e38"
+    },
+    "earlier_derived_bundle_collection": {
+      "captured_at": "2026-11-17T18:03:17.232551+00:00",
+      "stage": "complete_pinned_archive_and_derived_notice_collection",
+      "exit_status": 0,
+      "deadline_seconds": 45,
+      "log_sha256": "6774c4d48a34525b518f40a6cc5159920cd157b7c733cc5982d2dd10fa13c4dc"
+    },
+    "earlier_focused_suite": {
+      "captured_at": "2026-11-17T17:56:26.044905+00:00",
+      "stage": "initial_focused_controls",
+      "exit_status": 0,
+      "deadline_seconds": 60,
+      "log_sha256": "64eb31683b4820cc38977ac3de294cc3f7774298df9167ebe0ce59bc684df5fc"
+    }
+  },
+  "archive_collection_and_replay": {
+    "captured_at": "2026-11-17T20:32:14.094408+00:00",
+    "stage": "actual_archive_collection_and_replay",
+    "deadline_seconds": 45,
+    "exit_status": 0,
+    "log_sha256": "ad61e2a16359f9ea68077171518f9d7f34549514915e7add9376a7a131fe04cb",
+    "result": {
+      "captured_at": "2026-11-17T20:32:14.048927+00:00",
+      "pass": true,
+      "profile": "pinned-runtime-source-notice-observation/v1",
+      "sources": {
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+        "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+        "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+        "sbom/assets/notices.json": "29afaecdb0b6cf6f935d13d3beed67800b8e5f2f1408df75e4ffd6d52b1c66d5",
+        "sbom/native/manifest.json": "5553b42d8ff154fd7596174e884e48ea83839c0aefa8170d01c2c3a5c1f58a33",
+        "sbom/nested-runtime/cpython-v3.14.2-license.rst": "c695d550b135e53e38807e76496d1db17d22c40e461d1f3f354c86188d3305dd",
+        "sbom/nested-runtime/cpython-v3.14.2-sbom.spdx.json": "d539d8b99e28b190bc21aa932c69e8a554124bbe6ab196e705f31fc23aa6bd68",
+        "sbom/nested-runtime/upstream-license-origin.json": "42b0f92f263499745cf5d20dc92e2474268ed958d74a392603859c66da2f09dd",
+        "sbom/notices/b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe.txt": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "sbom/notices/manifest.json": "76ef3d73025195737c1d5701604607ce0f73ed163e9099466f34164acd33ff97",
+        "scripts/asset_notices.py": "5aa6420ecab4a722d627725cb9bc5a8181b9787539eb67b7a33e120abb0109d2",
+        "scripts/license_notices.py": "a1ff720900ff9e0d5dbd479087390c67fe1dac04839f75676e626acf59427ffa",
+        "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+        "scripts/verify-native-dependencies.py": "6de88de15c06808040d2c675df6ef13f591980a10ab457600064f14b73f3e46d",
+        "scripts/verify-nested-runtime.py": "2f8e68456223e91f0c045f3b64d425b9aee841d302014df37f9d00237bf70d75",
+        "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+        "site/public/device-licenses/pyodide-MPL-2.0.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "site/public/device-licenses/python-license.txt": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+        "site/public/device-licenses/source.txt": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2",
+        "tests/test_native_inventory.py": "e0e919841f954ccdcf86247338708fce946d06d4a178e3ea32c8bf5c09489dcf",
+        "tests/test_nested_runtime_inventory.py": "b810f736f82acb427dedbede83e151395e0bcce7f2d729e084ae26d0ea69e22a",
+        "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+        "tools/native_inventory.py": "a839c3043e3a542634ecba6e3a289dd5035efbf66081ccd33974445b740c2bf9",
+        "tools/nested_runtime_inventory.py": "7e90fb0d63d24155db0f8b7dfd317c6958b657b530691c023a7d7fc152cd11b9"
+      },
+      "archive_bytes_replayed": true,
+      "entries": 614,
+      "files": 567,
+      "python_modules": 559,
+      "explicit_spdx_modules": 7,
+      "vendored_source_hash_matches": 4,
+      "expanded_bytes": 9596411,
+      "notice_bindings_checked": 6,
+      "prepared_runtime_members_checked": 0,
+      "notice_bundle_sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321",
+      "notice_bundle_bytes": 245510,
+      "permission_cleared": false,
+      "complete_transitive_coverage": false,
+      "full_corresponding_source_established": false,
+      "independent_accuracy_evidence": false
+    }
+  },
+  "verified_output_sources": {
+    "sbom/nested-runtime/manifest.json": "95e313ea71514f15784a6b2893abfc4f904321717820f28458479800c7972b57",
+    "sbom/nested-runtime/obligations.json": "aec684f1dbbfb8bf028b284010b09eb44abddb14df87580dcccde1b043766545",
+    "sbom/nested-runtime/PYTHON-STDLIB-NOTICES.txt": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+  },
+  "focused_controls": {
+    "captured_at": "2026-11-17T20:32:58.895029+00:00",
+    "deadline_seconds": 100,
+    "exit_status": 0,
+    "log_sha256": "5550ae3f6b07122916cde123d8e5a53e73f81e89f2d31444e2e35c1f2fe8a002",
+    "tests": 121,
+    "by_module": {
+      "tests.test_nested_runtime_inventory": 52,
+      "tests.test_native_inventory": 32,
+      "tests.test_asset_notices": 37
+    },
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_sha256": "4dcf53c5b9ee24f2fd30f7ba080fcd7c152f3baef49aa6dd045ba46339b2c75c"
+  },
+  "web_post_build_staging": {
+    "stage-render": {
+      "returncode": 0,
+      "log_sha256": "f6be947e35e0a0a31d9da5ec72f1f38cdaed1b3a413ff3848ae09847882987c8",
+      "deadline_seconds": 45
+    },
+    "stage-offline": {
+      "returncode": 0,
+      "log_sha256": "8789fedf1cb807fb4b70613fcb91df28fba705065c0561e115e34042eb382604",
+      "deadline_seconds": 60
+    },
+    "stage-no-overwrite": {
+      "returncode": 1,
+      "log_sha256": "03d9f218536b4de7c0f932c3dfa4b11c45c40c85836abcd80501b6e84b3b3a57",
+      "deadline_seconds": 60
+    },
+    "stage-changed-runtime": {
+      "returncode": 1,
+      "log_sha256": "0e286e765bd12d21815128634b0bc8c58554cf5b5193dd7e2d9d33cd825237bb",
+      "deadline_seconds": 45
+    },
+    "exact_original_notices": 4,
+    "offline_manifest_bound": true,
+    "visible_licenses_link": true,
+    "notice_bundle_sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321",
+    "notice_bundle_bytes": 245510,
+    "prepared_runtime_members_checked": 5,
+    "generated_fixture_dist": true,
+    "complete_website_build_run": false,
+    "browser_run": false,
+    "captured_at": "2026-11-17T20:33:46.382617+00:00",
+    "pass": true,
+    "sources": {
+      "site/scripts/prepare-offline.mjs": "7fb14b82e3c6969cdd7653ea07f79f8f2a63773c787992c0dfe7c62b39ad83e5",
+      "site/scripts/render-reference.mjs": "533307864ad3eaa74dc95fb9916d23f6f2d626bbf84431cd471a504c6b608a4c",
+      "site/src/policies.js": "f06f3e69fce96674991eaa1bd9169226a39da2ee9d80c38b06152af25a8de26b",
+      "sbom/nested-runtime/PYTHON-STDLIB-NOTICES.txt": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321",
+      "scripts/verify-nested-runtime.py": "2f8e68456223e91f0c045f3b64d425b9aee841d302014df37f9d00237bf70d75",
+      "tools/nested_runtime_inventory.py": "7e90fb0d63d24155db0f8b7dfd317c6958b657b530691c023a7d7fc152cd11b9"
+    }
+  },
+  "archive_export_and_tamper_refusal": {
+    "actual-export": {
+      "exit_status": 0,
+      "log_sha256": "798a46766749819fe886dcdf345cf2d827be31e95d46402db752f98ec3e72d67",
+      "deadline_seconds": 45
+    },
+    "tampered-archive": {
+      "exit_status": 1,
+      "log_sha256": "0e286e765bd12d21815128634b0bc8c58554cf5b5193dd7e2d9d33cd825237bb",
+      "deadline_seconds": 45
+    },
+    "captured_at": "2026-11-17T20:34:29.438013+00:00",
+    "pass": true
+  },
+  "runtime_executed": false,
+  "production_deployed": false,
+  "native_packager_executed": false,
+  "full_scope_acceptance": false,
+  "permission_cleared": false,
+  "independent_accuracy_evidence": false
+}

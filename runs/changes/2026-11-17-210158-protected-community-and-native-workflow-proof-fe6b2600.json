@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600",
+  "recorded_at": "2026-11-17T21:01:58.602773+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "07d9fe82d8c10e2d49eb049d3d3d85fe892fc093",
+  "changed": "Recorded the protected community merge and the verified iPhone candidate workflow execution.",
+  "proves": "All 11 required checks passed before the community merge. All five current iPhone app and Share workflows passed, with source identity and simulator cleanup verified.",
+  "limits": "The community workbench uses synthetic data. iPhone distribution signing, TestFlight and physical accessibility remain open. Public native proof omits private command paths.",
+  "scope_ids": [
+    "F-137",
+    "N-013",
+    "F-057"
+  ],
+  "files": {
+    "runs/2026-11-17-community-protected-checks.json": "37a374896ff9135ad650c1ec1b27b999660d48f9fdb706a33dd804a661022c40",
+    "runs/2026-11-17-ios-runtime-notices-simulator.json": "2ed9e22d5af83f2e91419b5f2b9d5ea35bbcaf89053094b86866a8ea5b7b8302",
+    "state.json": "9b3addcce80d0885450b271efca9204058e827ef99374b8af71aab2d457e0fd6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-community-protected-checks.json",
+      "sha256": "37a374896ff9135ad650c1ec1b27b999660d48f9fdb706a33dd804a661022c40"
+    },
+    {
+      "path": "runs/2026-11-17-ios-runtime-notices-simulator.json",
+      "sha256": "2ed9e22d5af83f2e91419b5f2b9d5ea35bbcaf89053094b86866a8ea5b7b8302"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T21:01:59.024551+00:00"
+    }
+  ]
+}

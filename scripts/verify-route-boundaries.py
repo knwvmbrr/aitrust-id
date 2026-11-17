@@ -538,6 +538,10 @@ PATTERNS += ('tools/mt_workflow.py','scripts/mt-evidence-worker.py','scripts/che
 PATTERNS += ('tools/community_*.py','scripts/*community*.py','tests/test_community*.py',
              'deploy/community/*','docs/community-core*.md')
 
+PATTERNS += ('tools/nested_runtime_inventory.py','scripts/verify-nested-runtime.py',
+             'tests/test_nested_runtime_inventory.py','sbom/nested-runtime/*',
+             'docs/nested-runtime-*.md')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

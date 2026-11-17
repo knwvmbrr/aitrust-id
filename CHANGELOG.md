@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600
+
+Recorded 2026-11-17T21:01:58.602773+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Recorded the protected community merge and the verified iPhone candidate workflow execution.
+- **Evidence.** All 11 required checks passed before the community merge. All five current iPhone app and Share workflows passed, with source identity and simulator cleanup verified. [Change record](./runs/changes/2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600.json).
+- **Not claimed.** The community workbench uses synthetic data. iPhone distribution signing, TestFlight and physical accessibility remain open. Public native proof omits private command paths.
+
+
+### 2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65
+
+Recorded 2026-11-17T20:55:25.671478+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserved the SQLite retraction safety fix while preparing the verified runtime notices for web publication.
+- **Evidence.** The combined tree passes its reviewed source boundaries using current browser receipts. Both change histories are intact. [Change record](./runs/changes/2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65.json).
+- **Not claimed.** Public notice deployment and full transitive obligations remain open at this step.
+
+
+### 2026-11-17-205231-runtime-notices-current-package-checks-d5e62e1a
+
+Recorded 2026-11-17T20:52:31.456386+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bound runtime notice packaging to current website and protocol evidence. Retained the verified unsigned iOS candidate receipt.
+- **Evidence.** The built site stages the exact fifth notice and links it from licensing. All five capability receipts are current. An isolated iOS candidate compiled and matched 36 bundled resources, including Python notices in both targets. [Change record](./runs/changes/2026-11-17-205231-runtime-notices-current-package-checks-d5e62e1a.json).
+- **Not claimed.** Protected web integration, whole dependency obligations and current iOS UI, signing and physical acceptance remain open.
+
+
 ### 2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9
 
 Recorded 2026-11-17T20:52:02.905426+00:00 · Contributor: Codex PM · change
@@ -11,6 +38,15 @@ Recorded 2026-11-17T20:52:02.905426+00:00 · Contributor: Codex PM · change
 - **Not claimed.** The workbench uses synthetic data. Operating moderators and public integration still require acceptance.
 
 
+### 2026-11-17-204251-integrate-python-runtime-notices-d6965330
+
+Recorded 2026-11-17T20:42:51.917053+00:00 · Contributor: Codex PM and dependency engineering · change
+
+- **Changed.** Integrated the exact Python standard-library notice bundle into the website and linked the open dependency and Android requirements to actual evidence.
+- **Evidence.** The archive verifier reproduced 614 entries and classified 559 Python modules. The web build stages the five notices and fails on a runtime identity mismatch. The Android host report identifies the unavailable emulator prerequisites. [Change record](./runs/changes/2026-11-17-204251-integrate-python-runtime-notices-d6965330.json).
+- **Not claimed.** Native notice packaging, remaining transitive obligations and Android Share runtime acceptance are open.
+
+
 ### 2026-11-17-204116-community-integration-and-source-download-0a2b0091
 
 Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change
@@ -18,6 +54,15 @@ Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change
 - **Changed.** Bound the reviewed community sources to current route verification and added the signed public source download. Corrected the urgency and authority source lists to include their corpus dependency.
 - **Evidence.** All 32 website capability checks and the route inventory passed. The attested archive and four anonymous release downloads match. The corrected framing source binding passes 20 focused tests and 11 command controls. [Change record](./runs/changes/2026-11-17-204116-community-integration-and-source-download-0a2b0091.json).
 - **Not claimed.** The community workbench runs on synthetic data. Live moderators, Android runtime and independent MT accuracy still need acceptance.
+
+
+### 2026-11-17-203627-bound-python-stdlib-notices-e4b8ad4c
+
+Recorded 2026-11-17T20:36:27.391888+00:00 · Contributor: Codex · change
+
+- **Changed.** Inspected Pyodide’s pinned standard library archive and staged a separate digest-checked website notice with visible licensing access.
+- **Evidence.** Actual pinned archive replay checked 614 entries and 559 Python modules. All 121 adjacent controls passed. The real web post-build steps preserved four upstream notices and staged the fifth with the pinned runtime bytes. [Change record](./runs/changes/2026-11-17-203627-bound-python-stdlib-notices-e4b8ad4c.json).
+- **Not claimed.** No complete website build, publication or native package was exercised by this receipt. Artifact signing, remaining dependency obligations and the original F-057 and X-02 acceptance stay open. No license clearance or independent accuracy granted.
 
 
 ### 2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4

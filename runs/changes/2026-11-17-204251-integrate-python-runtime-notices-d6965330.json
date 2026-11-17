@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-204251-integrate-python-runtime-notices-d6965330",
+  "recorded_at": "2026-11-17T20:42:51.917053+00:00",
+  "author": "Codex PM and dependency engineering",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3d7e13f350a3afe43fbdaa225115906d4b895d4b",
+  "changed": "Integrated the exact Python standard-library notice bundle into the website and linked the open dependency and Android requirements to actual evidence.",
+  "proves": "The archive verifier reproduced 614 entries and classified 559 Python modules. The web build stages the five notices and fails on a runtime identity mismatch. The Android host report identifies the unavailable emulator prerequisites.",
+  "limits": "Native notice packaging, remaining transitive obligations and Android Share runtime acceptance are open.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-014"
+  ],
+  "files": {
+    ".gitattributes": "efc2bc95e544103dc1ca3a1168216ff7322e0d6a71d92376a975cc7c62195217",
+    "docs/native-dependency-evidence.md": "062f80ff1920e83b2530ca06452ee5b27b54ef9fe62e55b1fcdd988eca8faf80",
+    "docs/nested-runtime-evidence.md": "3f0bed9997777f9796d23100970edec3cc9ea07cb9653303a772a768b4015fa0",
+    "docs/nested-runtime-plan.md": "9e7d5458b36fae70a09a51176fab9650979d7dc1a45d8b6c5b9bf95a01acfcf4",
+    "docs/scope-progress.json": "0bbcceacf4cef7c61fdec6a2d26be347c6fe069a0b66d4a53ff8fbc18896c71c",
+    "docs/scope-progress.md": "b8dfc3e94a26c70b5d318b1e932d1e417625cab595937ca88e39f1e7346c626b",
+    "eval/revalidation.json": "99df451a37e901733ceb0ecc24fc7c254e8353153456fb5a40d37b7ddde34e35",
+    "runs/2026-11-17-nested-runtime-obligations.json": "0d9544ba9cc381de9be968faa361cbccdbeb73e5cd86143786d8ac897fb6add1",
+    "sbom/nested-runtime/PYTHON-STDLIB-NOTICES.txt": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321",
+    "sbom/nested-runtime/cpython-v3.14.2-license.rst": "c695d550b135e53e38807e76496d1db17d22c40e461d1f3f354c86188d3305dd",
+    "sbom/nested-runtime/cpython-v3.14.2-sbom.spdx.json": "d539d8b99e28b190bc21aa932c69e8a554124bbe6ab196e705f31fc23aa6bd68",
+    "sbom/nested-runtime/manifest.json": "95e313ea71514f15784a6b2893abfc4f904321717820f28458479800c7972b57",
+    "sbom/nested-runtime/obligations.json": "aec684f1dbbfb8bf028b284010b09eb44abddb14df87580dcccde1b043766545",
+    "sbom/nested-runtime/upstream-license-origin.json": "42b0f92f263499745cf5d20dc92e2474268ed958d74a392603859c66da2f09dd",
+    "scripts/verify-nested-runtime.py": "2f8e68456223e91f0c045f3b64d425b9aee841d302014df37f9d00237bf70d75",
+    "site/public/reference/native-dependency-evidence.md": "062f80ff1920e83b2530ca06452ee5b27b54ef9fe62e55b1fcdd988eca8faf80",
+    "site/public/reference/public-scope.json": "91cb58ed0ae190945610948213b88f32422c81200ef25665f909868bd35aa098",
+    "site/scripts/prepare-offline.mjs": "7fb14b82e3c6969cdd7653ea07f79f8f2a63773c787992c0dfe7c62b39ad83e5",
+    "site/scripts/render-reference.mjs": "a886d7a6facf58931867126bb060b5b0e89bf4addc9e7b1652aa48496147c006",
+    "site/src/public-scope.json": "91cb58ed0ae190945610948213b88f32422c81200ef25665f909868bd35aa098",
+    "site/src/scope-manifest.json": "00894ab3feddaeec4c7cb7db369c24e18a933b1ad62c621aa6074d5527a0fe87",
+    "state.json": "6d469cf0c0fcfedb1a503385baffa92249d0387f77df3f32581a692f3cb31241",
+    "tests/test_nested_runtime_inventory.py": "b810f736f82acb427dedbede83e151395e0bcce7f2d729e084ae26d0ea69e22a",
+    "tools/nested_runtime_inventory.py": "7e90fb0d63d24155db0f8b7dfd317c6958b657b530691c023a7d7fc152cd11b9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-nested-runtime-obligations.json",
+      "sha256": "0d9544ba9cc381de9be968faa361cbccdbeb73e5cd86143786d8ac897fb6add1"
+    },
+    {
+      "path": "runs/2026-11-17-android-emulator-host-inventory.json",
+      "sha256": "90e179fff10c01fd9ed75c0fac83b1126605de4dc19e55bd8385cf25dbd1ab2e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:42:52.486451+00:00"
+    }
+  ]
+}

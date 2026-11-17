@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65",
+  "recorded_at": "2026-11-17T20:55:25.671478+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "79e88ae1c2303db398d3bae3dd45b7355034a3e6",
+  "changed": "Preserved the SQLite retraction safety fix while preparing the verified runtime notices for web publication.",
+  "proves": "The combined tree passes its reviewed source boundaries using current browser receipts. Both change histories are intact.",
+  "limits": "Public notice deployment and full transitive obligations remain open at this step.",
+  "scope_ids": [
+    "F-057",
+    "F-137"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "3c2c5332007906b1953afebf3bf3fcfdc5ed428d8df33a75ea45612857f590d9",
+    "state.json": "a418e3dab71fbc9644923e5b67ed25d78cdd63635c12806d4c686150e5763c72",
+    "runs/2026-11-17-runtime-notices-current-boundaries.json": "782212186e0c52075ef3737a0eb03d03ab1ab804fd54e5d042fad44bd1b21a81"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-runtime-notices-current-boundaries.json",
+      "sha256": "782212186e0c52075ef3737a0eb03d03ab1ab804fd54e5d042fad44bd1b21a81"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:55:26.922370+00:00"
+    }
+  ]
+}

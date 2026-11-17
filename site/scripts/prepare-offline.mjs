@@ -1,8 +1,14 @@
 import {readFile,writeFile,readdir} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
 const dist=new URL('../dist/',import.meta.url);
+const runtimeNotices=execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[
+ fileURLToPath(new URL('../../scripts/verify-nested-runtime.py',import.meta.url)),
+ '--prepared-runtime',fileURLToPath(new URL('device/runtime-314.0.7/',dist)), '--print-notices'
+],{maxBuffer:4_000_000,timeout:45_000});
+await writeFile(new URL('device-licenses/python-stdlib-notices.txt',dist),runtimeNotices,{flag:'wx'});
 for(const size of [192,512]){
  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 72 72"><rect width="72" height="72" rx="12" fill="#f7f8f6"/><g transform="translate(12 12)" fill="none" stroke="#202723"><path d="M9 7h22l10 10v20a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V11a4 4 0 0 1 4-4Z" stroke-width="2.5"/><circle cx="31" cy="17" r="2.5" stroke-width="2"/><path d="M14 25h16M14 31h10" stroke-width="2.5" stroke-linecap="round"/></g></svg>`;
  await sharp(Buffer.from(svg)).png().toFile(fileURLToPath(new URL(`app-icon-${size}.png`,dist)));
