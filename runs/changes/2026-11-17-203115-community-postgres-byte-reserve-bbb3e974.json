@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-203115-community-postgres-byte-reserve-bbb3e974",
+  "recorded_at": "2026-11-17T20:31:15.494984+00:00",
+  "author": "Codex - community engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a57e6f3f8feca20509cec03c7fd2311e1f3d6f58",
+  "changed": "Reserve PostgreSQL document capacity and audit slots for pausing admissions and removing posts at saturation. Record the initial hosted PostgreSQL run.",
+  "proves": "Initial isolated Linux PostgreSQL run passed 12 control groups and verified shutdown. The capacity correction passed 53 focused local tests and 17 actual CLI calls. The next hosted run will measure byte saturation against the corrected source.",
+  "limits": "Synthetic software evidence only. The new PostgreSQL saturation control still awaits execution. Original requirement closures, global scope, public posting and real collection stay outside this increment.",
+  "scope_ids": [
+    "F-135",
+    "F-136",
+    "F-137",
+    "N-005"
+  ],
+  "files": {
+    "tools/community_core.py": "422173c28f4f1429bedea5ddfc6f3b91ab7f9205c0b395e93775c513955fb817",
+    "tools/community_postgres.py": "5dff95a007beb61cf9002ca04242df462313d40eac1bbcefb391ca397b97b49c",
+    "deploy/community/synthetic-development.sql": "b802f6a4aec79dde4f336517ee337857acef9c7345230a0ce7919c92ed16d1e1",
+    "scripts/verify-community-postgres.py": "c609f1a0de668b1ef8a7859b059e28e385a3fa5b6e3989869f40dada70e2611c",
+    "tests/test_community_core.py": "893fca457eb7f78f1b3ebe7578345b32b447dbc2e1e1d9df407b32a50cd0f1b5",
+    "tests/test_community_postgres.py": "b0526cb964d6850291603decb0486e4ff9d7532521a32072cf7e62fa6fa89733",
+    "docs/community-core.md": "22cb0cf8d6a6a751afde9a1eb5423cfd8a2c6982ed7647aabc3db08b87e12099",
+    "docs/community-core-result.md": "95274e76e0526e24db112f876ba1fd68a65450aa14b6f65aa1677091775447ee",
+    "runs/2026-11-17-community-hosted-initial.json": "cb7426704111c83946455eb58609fee6bb379e167ace2601ab2cace6f509418a",
+    "runs/2026-11-17-community-byte-reserve-cli.json": "5fdf9731751875a9ff6201524cd064e6d921dc073e5d7a69946d9d78ffe1c5c4",
+    "runs/2026-11-17-community-byte-reserve-local.json": "fedf8877e1c06bee691ba482cba0a295f8b1d3939a3b4ef0009bc93d02833041"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-community-hosted-initial.json",
+      "sha256": "cb7426704111c83946455eb58609fee6bb379e167ace2601ab2cace6f509418a"
+    },
+    {
+      "path": "runs/2026-11-17-community-byte-reserve-local.json",
+      "sha256": "fedf8877e1c06bee691ba482cba0a295f8b1d3939a3b4ef0009bc93d02833041"
+    },
+    {
+      "path": "runs/2026-11-17-community-byte-reserve-cli.json",
+      "sha256": "5fdf9731751875a9ff6201524cd064e6d921dc073e5d7a69946d9d78ffe1c5c4"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:31:16.006689+00:00"
+    }
+  ]
+}

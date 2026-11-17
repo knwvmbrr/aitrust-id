@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9
+
+Recorded 2026-11-17T20:52:02.905426+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Reserve SQLite capacity for emergency moderation actions and reuse freed overflow pages inside the existing atomic transaction.
+- **Evidence.** 55 focused tests pass, including full-budget refusal followed by pause and growing retraction, plus the legacy-store safety path. The 17 actual workbench command calls also pass. [Change record](./runs/changes/2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9.json).
+- **Not claimed.** The workbench uses synthetic data. Operating moderators and public integration still require acceptance.
+
+
+### 2026-11-17-204116-community-integration-and-source-download-0a2b0091
+
+Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bound the reviewed community sources to current route verification and added the signed public source download. Corrected the urgency and authority source lists to include their corpus dependency.
+- **Evidence.** All 32 website capability checks and the route inventory passed. The attested archive and four anonymous release downloads match. The corrected framing source binding passes 20 focused tests and 11 command controls. [Change record](./runs/changes/2026-11-17-204116-community-integration-and-source-download-0a2b0091.json).
+- **Not claimed.** The community workbench runs on synthetic data. Live moderators, Android runtime and independent MT accuracy still need acceptance.
+
+
+### 2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4
+
+Recorded 2026-11-17T20:36:04.867937+00:00 · Contributor: Codex PM and community engineering · change
+
+- **Changed.** Recorded verified MT publication and the community workflow’s hosted results. Added the framing guide to the MT detail panel and advanced F-137 through executable checks.
+- **Evidence.** All 297 published artifacts matched at both MT deployment origins. The isolated PostgreSQL run showed that pause and retraction succeed when ordinary writes reach reserved capacity. [Change record](./runs/changes/2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4.json).
+- **Not claimed.** F-137 still requires real moderator and operating acceptance. N-005 still needs exact tag correction binding. Current Android runtime and independent MT release validation remain open.
+
+
+### 2026-11-17-203115-community-postgres-byte-reserve-bbb3e974
+
+Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Reserve PostgreSQL document capacity and audit slots for pausing admissions and removing posts at saturation. Record the initial hosted PostgreSQL run.
+- **Evidence.** Initial isolated Linux PostgreSQL run passed 12 control groups and verified shutdown. The capacity correction passed 53 focused local tests and 17 actual CLI calls. The next hosted run will measure byte saturation against the corrected source. [Change record](./runs/changes/2026-11-17-203115-community-postgres-byte-reserve-bbb3e974.json).
+- **Not claimed.** Synthetic software evidence only. The new PostgreSQL saturation control still awaits execution. Original requirement closures, global scope, public posting and real collection stay outside this increment.
+
+
 ### 2026-11-17-202519-current-development-evidence-index-c51fc553
 
 Recorded 2026-11-17T20:25:19.816824+00:00 · Contributor: Codex PM · change
@@ -20,6 +56,24 @@ Recorded 2026-11-17T20:22:20.355457+00:00 · Contributor: Codex PM · change
 - **Not claimed.** Full MT release still requires contextual validation, independent labeling and human operation. The original requirements remain open.
 
 
+### 2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72
+
+Recorded 2026-11-17T18:04:07.040068+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Reserve bounded audit capacity for privacy retractions after ordinary community writes stop.
+- **Evidence.** 52 focused checks and17 fresh actual CLI calls pass. The boundary test proves existing queued/published content can still be removed without pruning audit history. [Change record](./runs/changes/2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72.json).
+- **Not claimed.** Synthetic workbench only. PostgreSQL execution and production moderator/auth/client/recovery acceptance remain pending; no full requirement percentage changes.
+
+
+### 2026-11-17-180119-synthetic-community-core-8b1f6251
+
+Recorded 2026-11-17T18:01:19.800078+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Implement a runnable synthetic moderated community core, private CLI/store, explicit public projections, corrections, retractions, private report metadata and separate PostgreSQL development adapter.
+- **Evidence.** 51 focused local checks and17 actual CLI calls pass. Two-user/official/moderator roles, safe HTML, consent, ownership, correction/replay/cache scrubbing, private marker absence and storage refusals execute. Actual PostgreSQL/schema/grants/CAS controls are implemented but await isolated Linux execution. [Change record](./runs/changes/2026-11-17-180119-synthetic-community-core-8b1f6251.json).
+- **Not claimed.** Synthetic development only. SQLite is not a real-user destination; remote PostgreSQL operating gates remain. No public endpoint, posting client, production authentication, actual moderator program, real collection, training, tag release or original requirement closure.
+
+
 ### 2026-11-17-151740-mt-private-evidence-workflow-a74f53af
 
 Recorded 2026-11-17T15:17:40.665896+00:00 · Contributor: Codex PM · change
@@ -36,7 +90,6 @@ Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
 - **Changed.** Publish the merged independent evidence workflows and persist exact Linux, protected-CI and public-site verification, retaining the earlier runtime download timeout.
 - **Evidence.** All11 required protected engineering checks passed and isolated non-root Linux SDK completed21 inspector cases plus24 declaration calls in12 groups with exact source. All296 published files match on each of2 origins with security headers:592 comparisons. Merged source bf35566 is deployed; scope202 originals,132 complete,70 open. [Change record](./runs/changes/2026-11-17-141623-independent-evidence-publication-6aeec82d.json).
 - **Not claimed.** No independently release-validated new tag, human/physical-device acceptance, TestFlight upload or original requirement closure. Target60 remains unmet. The first transfer timed out; a later actual-browser transfer and unchanged full verifier pass, with root cause unestablished. This metadata followup does not redeploy the application snapshot.
-
 
 ## Unreleased — 2026-11-16
 

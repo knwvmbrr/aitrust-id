@@ -535,6 +535,9 @@ PATTERNS += ('tools/mt_workflow.py','scripts/mt-evidence-worker.py','scripts/che
              'scripts/verify-mt-evidence.py','tests/test_mt_workflow.py',
              'docs/mt-workflow-plan.md','docs/mt-evidence-workflow.md')
 
+PATTERNS += ('tools/community_*.py','scripts/*community*.py','tests/test_community*.py',
+             'deploy/community/*','docs/community-core*.md')
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

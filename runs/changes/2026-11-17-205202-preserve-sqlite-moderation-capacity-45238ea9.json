@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9",
+  "recorded_at": "2026-11-17T20:52:02.905426+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3d7e13f350a3afe43fbdaa225115906d4b895d4b",
+  "changed": "Reserve SQLite capacity for emergency moderation actions and reuse freed overflow pages inside the existing atomic transaction.",
+  "proves": "55 focused tests pass, including full-budget refusal followed by pause and growing retraction, plus the legacy-store safety path. The 17 actual workbench command calls also pass.",
+  "limits": "The workbench uses synthetic data. Operating moderators and public integration still require acceptance.",
+  "scope_ids": [
+    "F-137",
+    "N-005"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "1e4b381a5aa0a6a0479de0d28d861b16587658b283740cbe012d2d74944a4e6e",
+    "runs/2026-11-17-community-sqlite-reserve-mac.json": "c1917ea201eb15f90c51830d181f38cbb774b7f33f4404bdf806c7fe0ca8989c",
+    "runs/2026-11-17-community-sqlite-review-boundaries.json": "22e0ddc8c8133830bc07328f11cfd5258c588faf629c455e10320f65bded82c6",
+    "state.json": "b12185040bbe2bebeef5621b2611ca93bb43b28a7a90b7fb5e32ab89d1fb5a89",
+    "tests/test_community_store.py": "0b12da89faa8feb849029bc0ab45893af55b3523b7c2616d567219e9809b8958",
+    "tools/community_store.py": "6e473154f241624724325566a8f7f0595c79f0a3df78907337471a68377edffe"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-community-sqlite-reserve-mac.json",
+      "sha256": "c1917ea201eb15f90c51830d181f38cbb774b7f33f4404bdf806c7fe0ca8989c"
+    },
+    {
+      "path": "runs/2026-11-17-community-sqlite-review-boundaries.json",
+      "sha256": "22e0ddc8c8133830bc07328f11cfd5258c588faf629c455e10320f65bded82c6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T20:52:04.245878+00:00"
+    }
+  ]
+}

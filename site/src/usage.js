@@ -13,6 +13,7 @@ const checkStep=tag=>tag.id==='PII_REDACTED'
 
 export function usage(tag) {
   const available = ['PS','PII_REDACTED'].includes(tag.id);
+  const framingGuide = {label:'Read the offline framing guide',href:'/reference/mt-evidence-workflow.md'};
   const orgNext={
     fleet:'Open the fleet guide. Approve the exact source and public key, enroll a private workspace, apply signed policy and resume locally. Pause or remove it whenever you choose.',
     host:'Open the file-checking guide. Choose one private text file, verify the source fingerprint and keep the terminal visible. Pause or stop whenever you choose.',
@@ -24,7 +25,7 @@ export function usage(tag) {
     NF:'Suggest a claim and the reference passage that supports it.',
     FI:'Share a claim and a reference passage that disagree.',
     HP:'Suggest a claim that needs checking, with a source that explains why.',
-    MT:'Share an example of urgent wording and the context that makes it helpful or pressuring.',
+    MT:'Try the offline framing checks on a Mac or Linux computer to see which phrases each check found.',
     IV:'Help define what a reviewer should record, and how to correct or withdraw a review.',
     FA:'Suggest a generation record that could show where an item came from.',
     PA:'Suggest a consented example of an AI draft and the edits made afterward.',
@@ -37,7 +38,7 @@ export function usage(tag) {
     ? tag.id==='fleet' ? 'Run the free offline deployment software yourself. A managed organization service is not offered.' : 'Explore the plan and tell us what your team needs. This offering is not available to buy.'
     : tag.proposed ? 'Read the proposal or share an example that would help us test it.'
     : 'Explore how this tag would work, or share an example to help us build it.',
-    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='fleet'?[{label:'Fleet deployment guide',href:'/reference/fleet-deployment.md'},{label:'Download source',href:sourceDownload}]:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:tag.id==='sso'?[{label:'Organization sign-in guide',href:'/reference/organization-directory.md'},{label:'Download source',href:sourceDownload}]:tag.id==='host'?[{label:'Check a file while you work',href:'/reference/host-capture.md'},{label:'Download source',href:sourceDownload}]:[]};
+    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='fleet'?[{label:'Fleet deployment guide',href:'/reference/fleet-deployment.md'},{label:'Download source',href:sourceDownload}]:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:tag.id==='sso'?[{label:'Organization sign-in guide',href:'/reference/organization-directory.md'},{label:'Download source',href:sourceDownload}]:tag.id==='host'?[{label:'Check a file while you work',href:'/reference/host-capture.md'},{label:'Download source',href:sourceDownload}]:tag.id==='MT'?[framingGuide]:[]};
   return {available:true,summary:tag.id==='PS'
     ? 'Copy an AI answer, paste it and check. No account or install needed. Commands are checked, never run.'
     : 'Check a draft with your own local redactor before you share it. Review the result and make any edits yourself. This is a local-service preview, separate from the website’s on-device PS checker.',

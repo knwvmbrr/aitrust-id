@@ -1,0 +1,148 @@
+{
+  "captured_at": "2026-11-17T20:31:15.427216+00:00",
+  "pass": true,
+  "run_id": 44169353801,
+  "job_id": 134343953549,
+  "pull_request": 109,
+  "head": "a57e6f3f8feca20509cec03c7fd2311e1f3d6f58",
+  "artifact_name": "synthetic-community-software",
+  "hosted_focused_tests": 52,
+  "source_hashes_verified_against_head": true,
+  "capacity_reserve_verified": false,
+  "artifacts": {
+    "community-cli": {
+      "sha256": "8f7f8594b11e0b2c20c565b0d9da30a9493f971317e912491b8a692513368e5e",
+      "report": {
+        "captured_at": "2026-11-17T20:26:54.879017+00:00",
+        "pass": true,
+        "sources": {
+          "tools/community_core.py": "f156aaaefcffceed2f407edf715c94da921b2edbce449b8867f88f61b2f81f27",
+          "tools/community_store.py": "8a79be17439616b8ff73044be4acfc029f5977933c795731b6cc34e12ac90ba1",
+          "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+          "scripts/community-workbench.py": "9a4159166adb14f2860f6462443e6c705ef0ffac0258b8c9c0dff65ea15ac060",
+          "scripts/verify-community-core.py": "458d45442f34cea4572b969040eee292abf8217fc47693bc8c410b6917e39503",
+          "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+          "tests/test_community_core.py": "ababb0040d358c94e08d35f5b5dc7bc1f4e8ad087f277b05a4918b057d9973f8",
+          "tests/test_community_store.py": "64b7a97a5833c3afb929cdc15390ebd53247f3958929fb8cf6890d19a42153c1",
+          "tests/test_community_cli.py": "28176617e5952a61afca4778c5f64af760a3da044039a316b7377a7d9caf982e"
+        },
+        "source_unchanged": true,
+        "actual_cli_calls": 17,
+        "controls": [
+          "actual_private_store_initialization",
+          "unapproved_text_never_public",
+          "official_reply_reviewed_independently",
+          "current_replay_and_export_scrub_removed_body",
+          "independent_appeal_never_republishes_scrubbed_text",
+          "existing_export_not_overwritten",
+          "owned_store_removed_saved_copy_limit_explicit"
+        ],
+        "temporary_store_removed": true,
+        "synthetic_only": true,
+        "new_endpoints": 0,
+        "public_service_enabled": false,
+        "real_user_data_collected": false,
+        "independent_accuracy_evidence": false,
+        "full_requirements_closed": 0
+      }
+    },
+    "community-postgres": {
+      "sha256": "f4dac53084cce90860c8435674bfa2218d64f3a6e9ec30234def66118209ac88",
+      "report": {
+        "captured_at": "2026-11-17T20:27:15.043299+00:00",
+        "pass": true,
+        "format": "synthetic-community-postgresql-evidence/v1",
+        "sources": {
+          "tools/community_core.py": "f156aaaefcffceed2f407edf715c94da921b2edbce449b8867f88f61b2f81f27",
+          "tools/community_store.py": "8a79be17439616b8ff73044be4acfc029f5977933c795731b6cc34e12ac90ba1",
+          "tools/community_postgres.py": "97449f9f6450af9f839615cd932b98a0a56155fa785acbdc7b443efbe9b8525e",
+          "scripts/community-workbench.py": "9a4159166adb14f2860f6462443e6c705ef0ffac0258b8c9c0dff65ea15ac060",
+          "scripts/community-postgres-sandbox.py": "25e9df22d413107bfffa819c9f26dfd3e2b583bcb58eb61f6202727eb6ce9f07",
+          "scripts/verify-community-postgres.py": "92462a3fa6ab8c766af435024b8d5a7f36ca301f4a92305387eb6db0c97b2858",
+          "deploy/community/synthetic-development.sql": "3475bae65d7b4664c2724a0b80925e88fc3749ca02d63134be0381bb6a69f196",
+          "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+          "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+          "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
+          "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+          "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+          "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+          "tests/test_community_core.py": "ababb0040d358c94e08d35f5b5dc7bc1f4e8ad087f277b05a4918b057d9973f8",
+          "tests/test_community_store.py": "64b7a97a5833c3afb929cdc15390ebd53247f3958929fb8cf6890d19a42153c1",
+          "tests/test_community_cli.py": "28176617e5952a61afca4778c5f64af760a3da044039a316b7377a7d9caf982e",
+          "tests/test_community_postgres.py": "9c123e71a182e0aa03957694994e9dcd13c09113d6c00bc9d1ca2333dffa2ce0",
+          ".github/workflows/community-workbench.yml": "93b1b980dd72fa55c54d1ff4d1079668a3f8c704a079577bc4e77a0391fc3cac"
+        },
+        "source_unchanged": true,
+        "controls": [
+          {
+            "case": "actual_private_socket_cluster_and_single_install",
+            "pass": true
+          },
+          {
+            "case": "three_nonlogin_nonprivileged_development_roles",
+            "pass": true
+          },
+          {
+            "case": "public_cannot_read_private_state_runtime_cannot_directly_mutate_missing_shape_refused",
+            "pass": true
+          },
+          {
+            "case": "actual_cli_two_user_review_and_sql_public_projection_parity",
+            "pass": true
+          },
+          {
+            "case": "adversarial_runtime_replacement_wrong_format_types_revision_and_unknown_fields_refused",
+            "pass": true
+          },
+          {
+            "case": "corrupted_was_public_flags_and_private_fields_do_not_expose_queued_retracted_or_unapproved_bodies",
+            "pass": true
+          },
+          {
+            "case": "private_report_marker_and_queued_body_absent_from_public_views",
+            "pass": true
+          },
+          {
+            "case": "actual_concurrent_idempotency_and_conflicting_retry_refusal",
+            "pass": true
+          },
+          {
+            "case": "actual_retraction_scrubbing_and_independent_appeal_no_republication",
+            "pass": true
+          },
+          {
+            "case": "actual_reviewed_correction_and_safe_supersession",
+            "pass": true
+          },
+          {
+            "case": "stale_snapshot_cannot_overwrite_committed_state",
+            "pass": true
+          },
+          {
+            "case": "bounded_public_queries_and_posting_pause_keep_reads_available",
+            "pass": true
+          }
+        ],
+        "failure_stage": null,
+        "postgresql_major": 18,
+        "actual_postgresql": true,
+        "non_root": true,
+        "network_namespace_isolated": true,
+        "socket_only_cluster": true,
+        "cluster_shutdown_verified": true,
+        "private_cluster_removed": true,
+        "synthetic_only": true,
+        "public_service_enabled": false,
+        "real_user_data_collected": false,
+        "new_endpoints": 0,
+        "production_changed": false,
+        "independent_accuracy_evidence": false,
+        "full_requirements_closed": 0
+      }
+    }
+  },
+  "synthetic_only": true,
+  "production_changed": false,
+  "new_endpoints": 0,
+  "full_requirements_closed": 0
+}
