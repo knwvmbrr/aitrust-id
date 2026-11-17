@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-220518-offline-removal-revalidation-bfb3e025
+
+Recorded 2026-11-17T22:05:18.805922+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the reviewed worker, two-engine execution, current capability checks and the hosted iPhone timeout to the updated state.
+- **Evidence.** All five current engineering receipts validate, and the current route guard accepts the exact committed browser test and source. [Change record](./runs/changes/2026-11-17-220518-offline-removal-revalidation-bfb3e025.json).
+- **Not claimed.** Physical and human acceptance remain pending. The hosted iPhone suite timed out and the current signed Apple submission is pending.
+
+
+### 2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233
+
+Recorded 2026-11-17T22:04:04.416012+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the replay, removal and privacy results for the final worker and the hosted iPhone verification timeout.
+- **Evidence.** Both engines completed 137 parity cases and subsequent offline removal. The hosted iOS 27.2 run completed two workflows before reaching its suite deadline. [Change record](./runs/changes/2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233.json).
+- **Not claimed.** Hosted native acceptance remains open. The exact local iOS build and current hosted run are separate evidence. No scope requirement was closed.
+
+
+### 2026-11-17-215606-offline-worker-removal-f10f94a6
+
+Recorded 2026-11-17T21:56:06.160703+00:00 · Contributor: Codex · change
+
+- **Changed.** Changed the offline worker to use lookup-only access to its named cache and added a regression to device verification.
+- **Evidence.** Original and fixed generated workers were executed in Chromium and WebKit. Once removed, the fixed worker fetched from the network without recreating host storage. [Change record](./runs/changes/2026-11-17-215606-offline-worker-removal-f10f94a6.json).
+- **Not claimed.** The hosted removal timeout has a separate unresolved cause. Physical device, VoiceOver and independent accuracy acceptance remain open. No requirement was closed.
+
+
+### 2026-11-17-214941-quantitative-listing-revalidation-b9713fbc
+
+Recorded 2026-11-17T21:49:41.842302+00:00 · Contributor: Codex · change
+
+- **Changed.** Published source-bound engineering verification for the numeric boundary and listing draft work.
+- **Evidence.** The current website and protocol checks passed, and all five capability receipts are current. [Change record](./runs/changes/2026-11-17-214941-quantitative-listing-revalidation-b9713fbc.json).
+- **Not claimed.** This records simulator documentation and an isolated numeric observation. Independent accuracy and Apple distribution remain pending.
+
+
+### 2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc
+
+Recorded 2026-11-17T21:43:51.442416+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed partial numeric matches in hash identifiers and malformed percent tokens. Captured Light and Dark App Store listing drafts from the current iPhone and iPad simulator build.
+- **Evidence.** The versioned independent CLI passed 13 controls and 42 focused tests. Four simulator captures match the declared dimensions without transparency. [Change record](./runs/changes/2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc.json).
+- **Not claimed.** Contextual source support, independent tag accuracy and App Store upload remain pending. The original scope remains 132 complete and 70 open.
+
+
 ### 2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20
 
 Recorded 2026-11-17T21:41:56.884960+00:00 · Contributor: Codex · change

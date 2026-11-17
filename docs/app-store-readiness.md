@@ -28,6 +28,13 @@ An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
 The November 17 candidate still needs signing, validation and upload. Keys, profiles and build
 artifacts stay private.
 
+The [listing draft record](../runs/2026-11-17-ios-listing-drafts.json) covers four
+actual screenshots of the initial checker in Light and Dark mode. The simulator
+captures use iPhone 14 Pro (1179 × 2556) and 13-inch iPad Pro (2064 × 2752).
+The JPEGs remain private for review. Apple lists these dimensions in its
+[screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/).
+Store asset upload and physical acceptance are pending.
+
 ## Complete the distribution package
 
 1. Verify the separate app/Share identifiers and saved draft against the

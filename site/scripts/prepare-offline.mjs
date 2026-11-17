@@ -25,7 +25,7 @@ const version=hash.digest('hex');
 const source=`const NAME=${JSON.stringify('aitrust-id-offline-'+version)},ASSETS=${JSON.stringify(assets)};
 self.addEventListener('install',event=>event.waitUntil((async()=>{try{const cache=await caches.open(NAME);await cache.addAll(ASSETS);}catch(error){await caches.delete(NAME);throw error;}})()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const name of await caches.keys())if(name.startsWith('aitrust-id-offline-')&&name!==NAME)await caches.delete(name);await self.clients.claim();})()));
-self.addEventListener('fetch',event=>{const url=new URL(event.request.url);if(event.request.method!=='GET'||url.origin!==self.location.origin||url.search||!ASSETS.includes(url.pathname))return;event.respondWith((async()=>{const cache=await caches.open(NAME);return await cache.match(url.pathname)||fetch(event.request);})());});
+self.addEventListener('fetch',event=>{const url=new URL(event.request.url);if(event.request.method!=='GET'||url.origin!==self.location.origin||url.search||!ASSETS.includes(url.pathname))return;event.respondWith(caches.match(url.pathname,{cacheName:NAME}).then(response=>response||fetch(event.request)));});
 `;
 await writeFile(new URL('offline-worker.js',dist),source);
 await writeFile(new URL('offline-release.json',dist),JSON.stringify({format:'ai-trust-id-offline-assets/v1',version,public_asset_count:assets.length,bytes,assets},null,2));

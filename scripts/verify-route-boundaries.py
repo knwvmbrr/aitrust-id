@@ -545,6 +545,8 @@ PATTERNS += ('tools/nested_runtime_inventory.py','scripts/verify-nested-runtime.
              'tests/test_nested_runtime_inventory.py','sbom/nested-runtime/*',
              'docs/nested-runtime-*.md')
 
+PATTERNS += ('tests/offline-worker-cache.cjs',)
+
 def verify(root=ROOT):
     before = inventory(root)
     pins = verify_root_inputs(root)

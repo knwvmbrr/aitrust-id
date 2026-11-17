@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc",
+  "recorded_at": "2026-11-17T21:43:51.442416+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cd18938cfd6e4c355107c2bd0f79f5c6b5de9063",
+  "changed": "Fixed partial numeric matches in hash identifiers and malformed percent tokens. Captured Light and Dark App Store listing drafts from the current iPhone and iPad simulator build.",
+  "proves": "The versioned independent CLI passed 13 controls and 42 focused tests. Four simulator captures match the declared dimensions without transparency.",
+  "limits": "Contextual source support, independent tag accuracy and App Store upload remain pending. The original scope remains 132 complete and 70 open.",
+  "scope_ids": [
+    "F-015",
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "75437a0c162d2235304dc0bb8ac2e14b5925dfb48ef611d952ad425105191cfa",
+    "docs/quantitative-observations.md": "2f90b10c7409e507c98c56df12aa0cc33050de4e8e1ebe4a37655ea4693f8488",
+    "docs/scope-progress.json": "5c4bd8d308ecb384e1cff37a2426710c9a2daf40fb2b12b6b5f6dc1751f2a993",
+    "docs/scope-progress.md": "c8a599ac3b593d092ac0cb14a44224ca001921ac12a87ac208a277c68f58255d",
+    "runs/2026-11-17-ios-listing-drafts.json": "6411796a6d550cf07696045f6078b060d77be55248f8b4968024846228090635",
+    "runs/2026-11-17-quantitative-token-boundaries.json": "527efd98c0f5d6ae27724d8c1f08e85801c4089cc5cd9ac94b5c36e8264dcd44",
+    "scripts/verify-quantitative-observations.py": "3da5a474d9f5c25ed1552913c43e50fa4d46773ec4309e4bbae9223398cd6962",
+    "site/public/reference/public-scope.json": "1e1d8aeec0ee42d54475dff581443f7a8bf1e7a408aea67441c1c32b65e0af74",
+    "site/src/public-scope.json": "1e1d8aeec0ee42d54475dff581443f7a8bf1e7a408aea67441c1c32b65e0af74",
+    "site/src/scope-manifest.json": "b0c4c1ef1a19164b74a0846fc7c8d4b29c4535e9cec6534b665d9fece4db2335",
+    "state.json": "1bd8c80ad8c88a59408e3323c34701c5684d62098ed7ab6d61c1b948263adab5",
+    "tests/test_quantitative_observations.py": "217da295ada111e9fcee1d86d8672130857c0532ea8a6a3d76403edd7a82e806",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-quantitative-token-boundaries.json",
+      "sha256": "527efd98c0f5d6ae27724d8c1f08e85801c4089cc5cd9ac94b5c36e8264dcd44"
+    },
+    {
+      "path": "runs/2026-11-17-ios-listing-drafts.json",
+      "sha256": "6411796a6d550cf07696045f6078b060d77be55248f8b4968024846228090635"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_quantitative_observations.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T21:43:52.884872+00:00"
+    }
+  ]
+}

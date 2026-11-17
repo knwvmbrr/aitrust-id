@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-214941-quantitative-listing-revalidation-b9713fbc",
+  "recorded_at": "2026-11-17T21:49:41.842302+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cd18938cfd6e4c355107c2bd0f79f5c6b5de9063",
+  "changed": "Published source-bound engineering verification for the numeric boundary and listing draft work.",
+  "proves": "The current website and protocol checks passed, and all five capability receipts are current.",
+  "limits": "This records simulator documentation and an isolated numeric observation. Independent accuracy and Apple distribution remain pending.",
+  "scope_ids": [
+    "F-015",
+    "N-013"
+  ],
+  "files": {
+    "state.json": "bc42a2c7e5d4660b3150f0500cbe3ca174d0b82970b5bc0b74ca653e85ac3046",
+    "eval/route-boundaries.json": "7d634fa58c61c2a19f6d7fd6f13c510af29a93fa3316491ca45a231dfec8dd38",
+    "runs/2026-11-17-quantitative-listing-website.json": "c39d95ca70c9001870c7b98a3735512a7060a43f614271aa5d7cfe2dfa19c050",
+    "runs/2026-11-17-quantitative-listing-protocol.json": "c33a34c10698d2b94af8c58b8fb6eabf56645c485558ec3e02e814584733c01a",
+    "runs/2026-11-17-quantitative-listing-route-boundaries.json": "e961a03f5402f26661ed472a443c5229024578cac09db89c9a0aff4bc9ee6700"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-quantitative-listing-website.json",
+      "sha256": "c39d95ca70c9001870c7b98a3735512a7060a43f614271aa5d7cfe2dfa19c050"
+    },
+    {
+      "path": "runs/2026-11-17-quantitative-listing-protocol.json",
+      "sha256": "c33a34c10698d2b94af8c58b8fb6eabf56645c485558ec3e02e814584733c01a"
+    },
+    {
+      "path": "runs/2026-11-17-quantitative-listing-route-boundaries.json",
+      "sha256": "e961a03f5402f26661ed472a443c5229024578cac09db89c9a0aff4bc9ee6700"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T21:49:41.901314+00:00"
+    }
+  ]
+}

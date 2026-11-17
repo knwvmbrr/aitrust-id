@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233",
+  "recorded_at": "2026-11-17T22:04:04.416012+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9e693a36fde908634d8d46398b8259472cbb4720",
+  "changed": "Recorded the replay, removal and privacy results for the final worker and the hosted iPhone verification timeout.",
+  "proves": "Both engines completed 137 parity cases and subsequent offline removal. The hosted iOS 27.2 run completed two workflows before reaching its suite deadline.",
+  "limits": "Hosted native acceptance remains open. The exact local iOS build and current hosted run are separate evidence. No scope requirement was closed.",
+  "scope_ids": [
+    "N-012",
+    "N-013"
+  ],
+  "files": {
+    "docs/scope-progress.json": "b58c8fb5dda32e1ccb4427b74a69b4ea9139d92099e6b83fc8ef450e1220a810",
+    "docs/scope-progress.md": "13074155b7099f0dd58d1c119dbd1c877c85b18bd1bca0b09374af6b6506b821",
+    "runs/2026-11-17-current-native-hosted-ui-timeout.json": "9ebf735763b60b023654e894f9dfd870095f4e33cb08f8fbac8f6ab2b3e42328",
+    "runs/2026-11-17-offline-removal-device-browser.json": "7d91f1d90e72dd8f9e102844e195aa5f6f895cdf1d099d8da22e7ef8e0a34a6f",
+    "runs/2026-11-17-offline-removal-protocol.json": "fcff79444ae6b11958a9a9d4476c57f47142820fdad36646832c72552e5afbb7",
+    "runs/2026-11-17-offline-removal-website.json": "1d826405e3ae8349a3fde9579adc28d5798779c62eb4116624526a66ff71f10c",
+    "runs/2026-11-17-offline-worker-removal-browser.json": "99b5eab521b392c6cbf1df2b0d6bfcee9ede0b92252ec4819ffde19e477a570f",
+    "scripts/verify-device.cjs": "0e77733956c2c05dc80bc8129902b54b8e5a5abe464ef93b3290e38a07b97d59",
+    "scripts/verify-route-boundaries.py": "036e32016bbb7e4c27d73922e49540df76a6e85df23c700f2284b7d4c38b4327",
+    "site/public/reference/public-scope.json": "94cfd11116abbd57decb2f5143541ff04cdbb3abe3037b8b1cf4c1e847a82745",
+    "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+    "site/src/public-scope.json": "94cfd11116abbd57decb2f5143541ff04cdbb3abe3037b8b1cf4c1e847a82745",
+    "site/src/scope-manifest.json": "144d81e0ae44014d95fbbf1e832f3baa5fb02e47fe4ae7c295fc30cb4c89026e",
+    "state.json": "cf40c6bb402b0a76c2df1a37fbc4ff5ddfc66d391fe1089631a1cf8f7b95aa50",
+    "tests/offline-worker-cache.cjs": "b144f3bdb9a2a5567e99422a6d44a3931c7cb89f4c76c940e92855e9bfd9e8b1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-offline-removal-device-browser.json",
+      "sha256": "7d91f1d90e72dd8f9e102844e195aa5f6f895cdf1d099d8da22e7ef8e0a34a6f"
+    },
+    {
+      "path": "runs/2026-11-17-offline-removal-website.json",
+      "sha256": "1d826405e3ae8349a3fde9579adc28d5798779c62eb4116624526a66ff71f10c"
+    },
+    {
+      "path": "runs/2026-11-17-offline-removal-protocol.json",
+      "sha256": "fcff79444ae6b11958a9a9d4476c57f47142820fdad36646832c72552e5afbb7"
+    },
+    {
+      "path": "runs/2026-11-17-current-native-hosted-ui-timeout.json",
+      "sha256": "9ebf735763b60b023654e894f9dfd870095f4e33cb08f8fbac8f6ab2b3e42328"
+    }
+  ],
+  "checks": []
+}

@@ -10,12 +10,20 @@ from protocol.normalization import NORMALIZATION_ID
 from tools.language_observations import subject_text, units, overlap, SOURCE_MARKER
 
 ROOT=Path(__file__).resolve().parents[1]
-METHOD='literal-quantitative-observations/1.0.0'
+METHOD='literal-quantitative-observations/1.0.1'
 MAX_DETAILS=256
 MAX_REPORT_BYTES=131072
 # Recognize entire date-shaped or grouped/decimal tokens. Word-attached and
 # identifier fragments are excluded; calendar validity is not inferred.
-TOKEN=re.compile(r'(?<![\w@#.,/:+-])(?:[0-9]{4}-[0-9]{2}-[0-9]{2}|[+-]?(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]+)?%?)(?![\w@/:+-]|[.,][0-9])',re.ASCII)
+TOKEN = re.compile(
+    r'(?<![\w@#%.,/:+-])'
+    r'(?:[0-9]{4}-[0-9]{2}-[0-9]{2}|[+-]?(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]+)?%?)'
+    # Block hash-attached identifiers and partial matches after the optional
+    # percentage suffix backtracks. The leading fence also blocks the
+    # scanner from restarting on the digits after a percent sign.
+    r'(?![\w@#%/:+-]|[.,][0-9])',
+    re.ASCII,
+)
 
 
 def digest(text):return hashlib.sha256(text.encode('utf-8')).hexdigest()
