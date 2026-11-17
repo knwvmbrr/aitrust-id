@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00
+
+Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Record the real hosted Android build and add a hosted emulator path with reviewed SDK package versions and an existing license match.
+- **Evidence.** Hosted run 44169646271 produced and verified an ephemeral test APK with zero permissions. The downloaded APK contains classes.dex and matches the recorded method and loader. Official metadata and local refusal controls passed for the new emulator step. [Change record](./runs/changes/2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00.json).
+- **Not claimed.** The first runner did not execute emulator cases. Actual Android runtime, physical usability and independent accuracy remain pending.
+
+
 ### 2026-11-17-202759-android-hosted-java-compiler-efe1e9fa
 
 Recorded 2026-11-17T20:27:59.293759+00:00 · Contributor: Codex Android lane · change

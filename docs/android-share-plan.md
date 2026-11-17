@@ -98,3 +98,27 @@ N-014 cannot reach 100% from source or emulator work alone.
 
 Security review is required before integration. No physical device, Play Store,
 independent validation or full original-scope closure is claimed by this plan.
+
+## Hosted emulator follow-up, after the first APK build
+
+The successful hosted build used Ubuntu image `20261111.370`. Its standard
+inventory supplies command-line tools, API 36, build-tools and JDK 17. The image
+and emulator are absent from the runner's published package list. Before booting
+an emulator, record each prerequisite separately. The Android workflow may
+request the two pinned official Linux packages only on a GitHub-hosted runner
+with an existing exact `android-sdk-license` record, accessible KVM, the
+installed tools and sufficient free space. Read the Google repository metadata
+and require the reviewed stable revisions, archive sizes and checksums. Use
+closed stdin for `sdkmanager`, check the installed revisions and require license
+bytes to remain unchanged. Report drift or a missing prerequisite before boot.
+
+Use the smaller AOSP API 36 x86_64 revision 2 system image with emulator 37.2.13.
+Google lists roughly 1.19 GB total compressed. Individual downloads and the job
+have deadlines. Scope signing, emulator data and synthetic inputs to the
+disposable runner. Failure after starting an agreed test cannot pass as an
+emulator result. Physical acceptance remains separate.
+
+- [Exact hosted inventory](https://github.com/actions/runner-images/blob/ubuntu24/20261111.370/images/ubuntu/Ubuntu2404-Readme.md)
+- [Google AOSP system image metadata](https://dl.google.com/android/repository/sys-img/android/sys-img2-3.xml)
+- [Google Android emulator metadata](https://dl.google.com/android/repository/repository2-3.xml)
+- [Android SDK license-record implementation](https://android.googlesource.com/platform/tools/base/+/mirror-goog-studio-master-dev/repository/src/main/java/com/android/repository/api/License.java)

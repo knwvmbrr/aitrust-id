@@ -81,7 +81,9 @@ jobs:
           "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" sign --ks "$RUNNER_TEMP/aitrust-ci.p12" --ks-key-alias aitrust-ci --ks-pass pass:android --out output/android-share/ai-trust-id-ci-test.apk output/android-share/ai-trust-id-unsigned.apk
           "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" verify --verbose output/android-share/ai-trust-id-ci-test.apk
           rm -- "$RUNNER_TEMP/aitrust-ci.p12"
-      - name: Execute share flows only if an owned API36 emulator is already available
+      - name: Verify Share on a disposable API 36 emulator when hosted prerequisites permit
+        env:
+          AITRUST_ANDROID_RUNNER: ${{ runner.environment }}
         run: python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk
       - name: Preserve engineering evidence and the development APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

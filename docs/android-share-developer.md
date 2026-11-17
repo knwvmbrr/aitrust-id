@@ -1,9 +1,9 @@
 # Android offline PS checker — developer operation
 
-This branch contains the Android source and build path. The local component
-checks run; **a compiled APK and actual Android share-flow run are still pending
-hosted execution**. It is not a Play Store release. PS remains a development
-preview with its independent release gates unchanged.
+This branch contains the Android source and build path. GitHub Actions compiled
+an APK with zero declared permissions and verified the signature on its
+development test copy. The first runner lacked the preinstalled emulator
+environment. PS remains a development preview. [Hosted build](https://github.com/knwvmbrr/aitrust-id/actions/runs/44169646271)
 
 Android 10/API 29 or newer and a working multiprocess WebView are required. The
 app appears in the system Share chooser for one `text/plain` item. It never
@@ -62,18 +62,21 @@ Its key is created and removed inside the job; it is not a production signing
 identity. Do not represent that APK as a maintained Play release or promise stable
 signing across builds. The unsigned APK is not directly installable.
 
-If the runner already has the reviewed API 36 Google APIs x86_64 system image,
-emulator and KVM, a dedicated emulator on port 5580 receives synthetic share intents.
+The emulator step checks the hosted runner's SDK tools, KVM, recorded Android
+SDK license and disk space. If emulator packages are absent and the preexisting
+license exactly matches, it verifies Google's package metadata and requests
+emulator 37.2.13 and AOSP API 36 x86_64 image revision 2 with closed stdin.
+A dedicated emulator on port 5580 receives synthetic share intents.
 The test checks explicit Check, PS finding, edit invalidation, a new share/No
 finding, unsupported MIME refusal, Clear and background cleanup. It never selects
-a connected phone or downloads an emulator image. If those tools are absent,
-`emulator.json` records `UNAVAILABLE`, `pass:false`; a green compilation job does
-not turn that into device acceptance. A started emulator failing a case fails the
-job. Only synthetic UI data is inspected, and the app-owned emulator is stopped.
+a connected phone. If prerequisites are absent, `emulator.json` records
+`UNAVAILABLE`, `pass:false` and the specific missing conditions. A failed SDK
+install or emulator case fails the job. Only synthetic UI data is inspected,
+and the app-owned emulator is stopped.
 
 ## Acceptance still owed
 
-- Actual current-source APK compilation and Android WebView/Share execution.
+- Android WebView/Share execution against the signed development APK.
 - Real Android source-app compatibility and hostile/malformed intent checks.
 - TalkBack, large text, contrast and navigation testing by actual users.
 - Physical-device install, startup/memory/battery, offline/update/removal evidence.
