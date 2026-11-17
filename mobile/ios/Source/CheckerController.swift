@@ -256,11 +256,29 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     }
 }
 
-/// Read-only bundled disclosures. No browser, account, input or network request.
-private final class NativeNoticesController: UIViewController {
+/// Read-only bundled disclosures. The index never loads document text.
+private final class NativeNoticesController: UITableViewController {
+    private let notices = [
+        (id: "privacy", title: "Privacy", path: "Privacy.txt"),
+        (id: "app", title: "AI Trust ID license", path: "AppLicense.txt"),
+        (id: "pyodide", title: "Pyodide license", path: "Notices/pyodide-MPL-2.0.txt"),
+        (id: "python", title: "Python license", path: "Notices/python-license.txt"),
+        (id: "unicode", title: "Unicode license", path: "Notices/unicode-license.txt"),
+        (id: "source", title: "Source and redistribution", path: "Notices/source.txt"),
+        (id: "stdlib", title: "Python standard library notices", path: "Notices/python-stdlib-notices.txt")
+    ]
+
+    init() { super.init(style: .insetGrouped) }
+    required init?(coder: NSCoder) { return nil }
+
     override func viewDidLoad() {
-        super.viewDidLoad(); title = "Privacy & notices"; BrandTheme.installBackdrop(in: view)
-        let appearance = UINavigationBarAppearance(); appearance.configureWithOpaqueBackground()
+        super.viewDidLoad()
+        title = "Privacy & notices"
+        tableView.backgroundColor = BrandTheme.panel
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 48
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = BrandTheme.panel
         appearance.titleTextAttributes = [.foregroundColor: BrandTheme.ink, .font: BrandTheme.font(.headline)]
         navigationController?.navigationBar.standardAppearance = appearance
@@ -269,30 +287,148 @@ private final class NativeNoticesController: UIViewController {
         navigationController?.navigationBar.tintColor = BrandTheme.ink
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "privacy-done"
-        let text = UITextView(); text.isEditable = false; text.isSelectable = true; text.dataDetectorTypes = []
-        text.font = BrandTheme.font(.body); text.adjustsFontForContentSizeCategory = true
-        text.backgroundColor = BrandTheme.panel; text.textColor = BrandTheme.ink
-        text.layer.cornerRadius = 20
-        text.accessibilityIdentifier = "privacy-notices-text"; text.accessibilityLabel = "Offline privacy and open-source notices"
-        text.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 24, right: 16)
-        var sections: [String] = []
-        for name in ["Privacy.txt", "AppLicense.txt", "Notices/pyodide-MPL-2.0.txt", "Notices/python-license.txt", "Notices/unicode-license.txt", "Notices/source.txt",
-                     "Notices/python-stdlib-notices.txt"] {
-            guard let url = Bundle.main.resourceURL?.appendingPathComponent(name),
-                  let value = try? String(contentsOf: url, encoding: .utf8) else {
-                text.text = "Bundled notices are unavailable. This build needs repair before distribution."
-                install(text); return
-            }
-            sections.append(value)
-        }
-        text.text = sections.joined(separator: "\n\n────────────────\n\n"); install(text)
     }
-    private func install(_ text: UITextView) {
-        text.translatesAutoresizingMaskIntoConstraints = false; view.addSubview(text)
-        NSLayoutConstraint.activate([text.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            text.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            text.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            text.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)])
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        notices.count
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let notice = notices[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notice") ?? UITableViewCell(style: .default, reuseIdentifier: "notice")
+        var content = cell.defaultContentConfiguration()
+        content.text = notice.title
+        content.textProperties.font = BrandTheme.font(.body)
+        content.textProperties.color = BrandTheme.ink
+        cell.contentConfiguration = content
+        cell.backgroundColor = BrandTheme.panel
+        cell.accessoryType = .disclosureIndicator
+        cell.accessibilityIdentifier = "privacy-entry-" + notice.id
+        cell.accessibilityTraits.insert(.button)
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let notice = notices[indexPath.row]
+        let reader = NoticeReaderController(path: notice.path)
+        reader.title = notice.title
+        navigationController?.pushViewController(reader, animated: true)
+    }
+
     @objc private func done() { dismiss(animated: true) }
+}
+
+/// Keep each selectable accessibility value bounded, including the largest notice.
+private final class NoticeReaderController: UIViewController {
+    private let path: String
+    private let text = UITextView()
+    private let pageLabel = UILabel()
+    private let previous = UIButton(type: .system)
+    private let nextButton = UIButton(type: .system)
+    private let navigationRow = UIStackView()
+    private var pages: [Substring] = []
+    private var page = 0
+    private static let pageSize = 3_000
+
+    init(path: String) {
+        self.path = path
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) { return nil }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = BrandTheme.panel
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "All notices", style: .plain, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem?.accessibilityIdentifier = "privacy-index"
+        text.isEditable = false
+        text.isSelectable = true
+        text.dataDetectorTypes = []
+        text.font = BrandTheme.font(.body)
+        text.adjustsFontForContentSizeCategory = true
+        text.backgroundColor = BrandTheme.panel
+        text.textColor = BrandTheme.ink
+        text.accessibilityIdentifier = "privacy-notices-text"
+        text.accessibilityLabel = "Notice text"
+        text.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 20, right: 12)
+        text.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        pageLabel.font = BrandTheme.font(.footnote)
+        pageLabel.textColor = BrandTheme.muted
+        pageLabel.adjustsFontForContentSizeCategory = true
+        pageLabel.numberOfLines = 0
+        pageLabel.textAlignment = .center
+        pageLabel.accessibilityIdentifier = "privacy-page"
+        configure(previous, title: "Previous", id: "privacy-previous", action: #selector(previousPage))
+        configure(nextButton, title: "Next", id: "privacy-next", action: #selector(nextPage))
+        navigationRow.addArrangedSubview(previous)
+        navigationRow.addArrangedSubview(nextButton)
+        navigationRow.spacing = 8
+        navigationRow.distribution = .fillEqually
+        let content = UIStackView(arrangedSubviews: [text, pageLabel, navigationRow])
+        content.axis = .vertical
+        content.spacing = 8
+        content.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(content)
+        let area = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            content.topAnchor.constraint(equalTo: area.topAnchor, constant: 12),
+            content.bottomAnchor.constraint(equalTo: area.bottomAnchor, constant: -12),
+            content.leadingAnchor.constraint(equalTo: area.leadingAnchor, constant: 16),
+            content.trailingAnchor.constraint(equalTo: area.trailingAnchor, constant: -16)
+        ])
+        registerForTraitChanges([UITraitPreferredContentSizeCategory.self], target: self, action: #selector(adaptNavigation))
+        adaptNavigation()
+
+        if let url = Bundle.main.resourceURL?.appendingPathComponent(path),
+           let value = try? String(contentsOf: url, encoding: .utf8), !value.isEmpty {
+            pages = Self.paginate(value)
+        }
+        render()
+    }
+
+    private static func paginate(_ source: String) -> [Substring] {
+        var start = source.startIndex
+        var pages: [Substring] = []
+        while start < source.endIndex {
+            let limit = source.index(start, offsetBy: pageSize, limitedBy: source.endIndex) ?? source.endIndex
+            var end = limit
+            if limit < source.endIndex, let newline = source[start..<limit].lastIndex(where: { $0.isNewline }) {
+                end = source.index(after: newline)
+            }
+            pages.append(source[start..<end])
+            start = end
+        }
+        return pages
+    }
+
+    private func configure(_ button: UIButton, title: String, id: String, action: Selector) {
+        button.configuration = BrandTheme.button(title)
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
+        button.accessibilityIdentifier = id
+        button.addTarget(self, action: action, for: .touchUpInside)
+        button.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
+    }
+
+    private func render() {
+        text.text = pages.isEmpty ? "Bundled notice unavailable." : String(pages[page])
+        text.setContentOffset(.zero, animated: false)
+        pageLabel.isHidden = pages.count < 2
+        navigationRow.isHidden = pages.count < 2
+        pageLabel.text = "Page \(page + 1) of \(pages.count)"
+        previous.isEnabled = page > 0
+        nextButton.isEnabled = page + 1 < pages.count
+    }
+
+    @objc private func adaptNavigation() {
+        navigationRow.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+    }
+    @objc private func back() { navigationController?.popViewController(animated: true) }
+    @objc private func previousPage() { if page > 0 { move(to: page - 1) } }
+    @objc private func nextPage() { if page + 1 < pages.count { move(to: page + 1) } }
+    private func move(to destination: Int) {
+        page = destination
+        render()
+        UIAccessibility.post(notification: .layoutChanged, argument: pageLabel)
+    }
 }

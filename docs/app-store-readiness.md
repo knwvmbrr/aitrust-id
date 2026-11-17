@@ -11,18 +11,26 @@ and review contact are pending.
 
 ## November 17 candidate
 
-The current app and Share extension use the reviewed appearance controls, privacy
-manifests, sealed detector module and complete pinned Python runtime notices.
-[Five simulator workflows](../runs/2026-11-17-native-share-current-workflow.json)
-passed against the integrated source. The
-[unsigned device archive](../runs/2026-11-17-ios-runtime-notices-unsigned-archive.json)
-contains the expected registered identifiers, compiled app icon and exact
-resources in both bundles.
+The current app opens bundled privacy and license notices as separate
+documents with up to 3,000 characters per page. The Python standard-library
+notice remains complete. [Exact reconstruction](../runs/2026-11-17-ios-notice-page-reconstruction.json)
+verified all seven documents. All
+[five workflows](../runs/2026-11-17-paged-notices-native-share-workflow.json)
+passed on iOS 26.2 Simulator. The new
+[unsigned device archive](../runs/2026-11-17-paged-notices-ios-archive.json)
+verified the bundle identifiers, compiled icon and all 36 runtime and notice
+resources. The hosted iOS 27.2 run of the previous reader reached its UI deadline
+while querying the combined notice view. The paginated reader awaits that hosted
+recheck.
 
 The existing Apple Distribution identity matches the current app and Share
 provisioning profiles. A bounded signing attempt on a private copy timed out
 at the Share extension before producing a signature. The unsigned archive was
-preserved. See the [signing attempt](../runs/2026-11-17-current-ios-signing-attempt.json).
+preserved. macOS logs show a protected Keychain authorization request immediately
+before the signing operation stopped making progress. The authorized team and
+distribution certificate are visible in Xcode. See the
+[signing attempt](../runs/2026-11-17-current-ios-signing-attempt.json) and
+[Keychain diagnosis](../runs/2026-11-17-ios-signing-keychain-diagnosis.json).
 An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
 [Apple validation on November 15](../runs/2026-11-15-apple-package-validation-passed.json).
 The November 17 candidate still needs signing, validation and upload. Keys, profiles and build

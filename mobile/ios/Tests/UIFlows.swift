@@ -101,12 +101,31 @@ final class UIFlows: XCTestCase {
         app.scrollViews.firstMatch.swipeUp()
         app.buttons["privacy-notices"].tap()
         let notices = app.textViews["privacy-notices-text"]
-        XCTAssertTrue(notices.waitForExistence(timeout: 10))
-        let noticeText = notices.value as? String ?? ""
-        XCTAssertTrue(noticeText.contains("does not redact personal information"))
-        XCTAssertTrue(noticeText.contains("Apache License"))
-        XCTAssertTrue(noticeText.contains("Mozilla Public License"))
-        XCTAssertFalse(noticeText.contains("Bundled notices are unavailable"))
+        XCTAssertFalse(notices.exists)
+        for (id, expected) in [("privacy", "does not redact personal information"),
+                               ("app", "Apache License"),
+                               ("pyodide", "Mozilla Public License"),
+                               ("stdlib", "Pinned runtime source/notice retention evidence")] {
+            app.descendants(matching: .any).matching(identifier: "privacy-entry-" + id).firstMatch.tap()
+            XCTAssertTrue(notices.waitForExistence(timeout: 10))
+            let firstPage = notices.value as? String ?? ""
+            XCTAssertTrue(firstPage.contains(expected))
+            XCTAssertLessThanOrEqual(firstPage.count, 3_000)
+            if id == "stdlib" {
+                let page = app.staticTexts["privacy-page"]
+                XCTAssertTrue(page.label.hasPrefix("Page 1 of "))
+                XCTAssertFalse(app.buttons["privacy-previous"].isEnabled)
+                app.buttons["privacy-next"].tap()
+                XCTAssertTrue(page.label.hasPrefix("Page 2 of "))
+                let secondPage = notices.value as? String ?? ""
+                XCTAssertFalse(secondPage.isEmpty)
+                XCTAssertNotEqual(firstPage, secondPage)
+                XCTAssertLessThanOrEqual(secondPage.count, 3_000)
+                app.buttons["privacy-previous"].tap()
+                XCTAssertEqual(notices.value as? String, firstPage)
+            }
+            app.buttons["privacy-index"].tap()
+        }
         app.buttons["privacy-done"].tap()
         app.scrollViews.firstMatch.swipeDown()
         let input = app.textViews["selected-text"]

@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-17T22:18:29.628740+00:00",
+  "kind": "bounded_read_only_keychain_signing_diagnosis",
+  "previous_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
+  "log_window_utc": [
+    "2026-11-17T21:27:27Z",
+    "2026-11-17T21:28:00Z"
+  ],
+  "signature_step": "com.aitrustid.app.share",
+  "observed_events": [
+    {
+      "timestamp": "2026-11-17T21:27:32.916212Z",
+      "actor": "securityd",
+      "event": "protected_codesign_key_access_prompt"
+    },
+    {
+      "timestamp": "2026-11-17T21:27:32.916247Z",
+      "actor": "securityd",
+      "event": "SecurityAgentConnection"
+    },
+    {
+      "timestamp": "2026-11-17T21:27:32.916258Z",
+      "actor": "securityd",
+      "event": "SecurityAgentXPCQuery"
+    },
+    {
+      "timestamp": "2026-11-17T21:27:54.839241Z",
+      "actor": "signing_attempt",
+      "event": "timeout_before_signature"
+    }
+  ],
+  "xcode_existing_developer_team_observed": true,
+  "existing_apple_distribution_certificate_observed": true,
+  "authorization_outcome_confirmed": false,
+  "credential_or_keychain_changes": false,
+  "new_signing_attempt": false,
+  "current_apple_validation": false,
+  "testflight_upload": false,
+  "requirements_closed": []
+}

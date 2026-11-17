@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-17T21:56:05.539761+00:00",
+  "audited_at": "2026-11-17T22:21:46.286300+00:00",
   "client_date": "2026-11-17",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -2534,11 +2534,12 @@
         "bounded_contract",
         "implemented_mechanism"
       ],
-      "audited_at": "2026-10-13T10:47:59.195628+00:00",
+      "audited_at": "2026-11-17T22:21:46.286300+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
-        "Codex \u2014 bounded inactive developer observer and original prototype retirement, 2026-10-13"
+        "Codex \u2014 bounded inactive developer observer and original prototype retirement, 2026-10-13",
+        "Codex stream observer lane \u2014 handled CRLF split at the line limit with exact host-response preservation controls, 2026-11-17T22:21:46.286300+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -2552,9 +2553,10 @@
         "extension/src/main-world/stream-observer.mjs",
         "docs/stream-observer-plan.md",
         "tests/stream-observer.cjs",
-        "runs/2026-10-08-browser-checks.json"
+        "runs/2026-10-08-browser-checks.json",
+        "runs/2026-11-17-stream-crlf-boundary.json"
       ],
-      "evidence_scope": "Bounded inactive developer stream component only. The unsafe automatic fetch prototype was retired; installed capture remains user-invoked DOM-only. No live MAIN-world vendor capture, stream-origin authenticity, tag or independent acceptance is credited.",
+      "evidence_scope": "The inactive synthetic observer now handles a CR/LF chunk split at the exact configured line limit, preserves host response bytes and refuses oversized or malformed framing. Live vendor capture or an accepted replacement remains pending.",
       "required_acceptance": [
         "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
       ],
@@ -8780,13 +8782,14 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-17T21:30:28.283655+00:00",
+      "audited_at": "2026-11-17T22:21:46.286300+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
         "Codex \u2014 selected-text transport, generation cancellation, scoped controls and inline-evidence lifecycle repair; actual fresh-simulator workflow, 2026-11-07T15:35:42.008478+00:00",
         "Codex \u2014 separate App Store record, registered app/Share identifiers, unsigned distribution archive, bundled offline notices and presentation-ready explicit checks; 2026-11-09T16:17:10.971578+00:00",
-        "Codex \u2014 integrated the exact five-workflow iPhone candidate, with verified resources and bounded local signing evidence, 2026-11-17T21:30:28.283655+00:00"
+        "Codex \u2014 integrated the exact five-workflow iPhone candidate, with verified resources and bounded local signing evidence, 2026-11-17T21:30:28.283655+00:00",
+        "Codex native delivery lane \u2014 paginated privacy and license notices, reproduced all five local workflows, verified exact archive resources and diagnosed Keychain signing, 2026-11-17T22:21:46.286300+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8794,7 +8797,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Finish signing the current candidate, validate and upload it to App Store Connect, then complete the physical iPhone 14 Plus Share-source, lifecycle, offline, VoiceOver, update/removal and outside-user tasks. Keep Android acceptance separately tracked. Assess the deprecated compatibility provider path on supported physical iOS.",
+      "next_fix": "Verify all five workflows on hosted iOS 27.2 with paginated notices. Complete protected authorization for the matched distribution identity, then sign, validate and upload the current package. Complete physical iPhone 14 Plus Share-source, lifecycle, offline, VoiceOver, update/removal and outside-user acceptance.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8836,14 +8839,18 @@
         "runs/2026-11-09-iphone-target-status.json",
         "runs/2026-11-17-native-share-current-workflow.json",
         "runs/2026-11-17-ios-runtime-notices-unsigned-archive.json",
-        "runs/2026-11-17-current-ios-signing-attempt.json"
+        "runs/2026-11-17-current-ios-signing-attempt.json",
+        "runs/2026-11-17-paged-notices-native-share-workflow.json",
+        "runs/2026-11-17-paged-notices-ios-archive.json",
+        "runs/2026-11-17-ios-notice-page-reconstruction.json",
+        "runs/2026-11-17-ios-signing-keychain-diagnosis.json"
       ],
-      "evidence_scope": "All five selected simulator workflows passed for the exact source integrated here. Both registered-ID bundles in the unsigned device archive contain the verified privacy, detector and runtime resources. The current distribution profiles match the local identity. The signing attempt timed out at the Share extension. Physical-device, human accessibility, Apple validation of these bytes, and independent accuracy remain pending.",
+      "evidence_scope": "The iOS 26.2 simulator completed five workflows including offline notice navigation, paging and PS behavior. The executable and all 36 resources were checked in the fresh unsigned archive. The earlier hosted iOS 27.2 run stopped at its UI deadline. Protected signing, Apple validation, upload and physical/human checks remain open.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
       "queue": "open",
-      "native_candidate_limit": "Five actual iPhone 14 Plus simulator workflows pass using invented text. The generic Share provider compatibility API is deprecated in iOS 27. Physical phone and outside-user acceptance remain open."
+      "native_candidate_limit": "Local iOS 26.2 simulator coverage and registered-ID unsigned archive are current. Hosted iOS 27.2 recheck is pending. The typed Share provider API is deprecated in iOS 27."
     },
     {
       "id": "N-014",

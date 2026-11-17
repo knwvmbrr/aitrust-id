@@ -8,7 +8,7 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-PROOF = 'runs/2026-11-17-native-share-current-workflow.json'
+PROOF = 'runs/2026-11-17-paged-notices-native-share-workflow.json'
 ASSETS = {'/index.html', '/bridge.mjs', '/detector-source.zip', '/device-manifest.json',
           '/runtime/pyodide.mjs', '/runtime/pyodide.asm.mjs', '/runtime/pyodide.asm.wasm',
           '/runtime/python_stdlib.zip', '/runtime/pyodide-lock.json'}
