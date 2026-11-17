@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65
+
+Recorded 2026-11-17T20:55:25.671478+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserved the SQLite retraction safety fix while preparing the verified runtime notices for web publication.
+- **Evidence.** The combined tree passes its reviewed source boundaries using current browser receipts. Both change histories are intact. [Change record](./runs/changes/2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65.json).
+- **Not claimed.** Public notice deployment and full transitive obligations remain open at this step.
+
+
 ### 2026-11-17-205231-runtime-notices-current-package-checks-d5e62e1a
 
 Recorded 2026-11-17T20:52:31.456386+00:00 · Contributor: Codex PM · change
@@ -9,6 +18,15 @@ Recorded 2026-11-17T20:52:31.456386+00:00 · Contributor: Codex PM · change
 - **Changed.** Bound runtime notice packaging to current website and protocol evidence. Retained the verified unsigned iOS candidate receipt.
 - **Evidence.** The built site stages the exact fifth notice and links it from licensing. All five capability receipts are current. An isolated iOS candidate compiled and matched 36 bundled resources, including Python notices in both targets. [Change record](./runs/changes/2026-11-17-205231-runtime-notices-current-package-checks-d5e62e1a.json).
 - **Not claimed.** Protected web integration, whole dependency obligations and current iOS UI, signing and physical acceptance remain open.
+
+
+### 2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9
+
+Recorded 2026-11-17T20:52:02.905426+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Reserve SQLite capacity for emergency moderation actions and reuse freed overflow pages inside the existing atomic transaction.
+- **Evidence.** 55 focused tests pass, including full-budget refusal followed by pause and growing retraction, plus the legacy-store safety path. The 17 actual workbench command calls also pass. [Change record](./runs/changes/2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9.json).
+- **Not claimed.** The workbench uses synthetic data. Operating moderators and public integration still require acceptance.
 
 
 ### 2026-11-17-204251-integrate-python-runtime-notices-d6965330

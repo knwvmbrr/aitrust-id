@@ -11,6 +11,7 @@ from tools import community_core as core
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_DB = 8 * 1024 * 1024
+SAFETY_OPERATION_BYTES = 1024
 TABLE = 'CREATE TABLE community(singleton INTEGER PRIMARY KEY CHECK(singleton=1),payload BLOB NOT NULL) STRICT'
 SENSITIVE = {'.git', '.ssh', '.gnupg', '.aws', '.config', 'library', '.password-store'}
 
@@ -37,11 +38,16 @@ def initialize(path, *, synthetic_only=False):
     return {'initialized': True, 'synthetic_only': True, 'public_service_enabled': False, 'research_collection_enabled': False}
 
 
+def safety_reserve(state):
+    removable = sum(post['state'] in ('queued', 'published') for post in state['posts'].values())
+    return SAFETY_OPERATION_BYTES * (removable + int(not state['posting_paused']))
+
+
 class Store:
     def __init__(self, path): self.path = Path(path).expanduser().absolute()
 
     @contextmanager
-    def transaction(self):
+    def transaction(self, *, operation=None):
         scope(self.path)
         with directory(self.path, ROOT) as fd:
             lock = os.open('access.lock', os.O_RDWR | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=fd)
@@ -56,17 +62,35 @@ class Store:
                 core.require((held.st_dev, held.st_ino) == (current.st_dev, current.st_ino))
                 db = sqlite3.connect('file:' + quote(str(self.path / 'community.sqlite'), safe='/') + '?mode=rw', uri=True, timeout=1)
                 db.execute('PRAGMA trusted_schema=OFF'); db.execute('PRAGMA temp_store=MEMORY'); db.execute('PRAGMA secure_delete=ON')
-                db.execute('PRAGMA max_page_count=2048')
+                page_size = db.execute('PRAGMA page_size').fetchone()[0]
+                core.require(512 <= page_size <= 65536 and page_size & (page_size - 1) == 0)
+                page_limit = MAX_DB // page_size
+                core.require(page_limit >= 4)
+                core.require(db.execute(f'PRAGMA max_page_count={page_limit}').fetchone()[0] == page_limit)
                 core.require(db.execute('PRAGMA journal_mode=DELETE').fetchone()[0] == 'delete')
                 db.execute('BEGIN IMMEDIATE')
                 schema = db.execute("SELECT type,name,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'").fetchall()
                 core.require(schema == [('table', 'community', TABLE)])
                 rows = db.execute('SELECT singleton,payload FROM community').fetchall()
                 core.require(len(rows) == 1 and rows[0][0] == 1 and type(rows[0][1]) is bytes)
-                engine = core.Community(core.parse(rows[0][1], MAX_DB))
+                previous_bytes = rows[0][1]
+                engine = core.Community(core.parse(previous_bytes, MAX_DB))
+                before = engine.state
                 yield engine
-                raw = core.encode(core.validate(engine.state)); core.require(len(raw) < MAX_DB // 2)
-                db.execute('UPDATE community SET payload=? WHERE singleton=1', (raw,))
+                if engine.state is not before:
+                    raw = core.encode(core.validate(engine.state))
+                    limit = MAX_DB // 2
+                    emergency_pause = operation == 'pause' and not before['posting_paused'] and engine.state['posting_paused']
+                    if operation == 'retract' or emergency_pause:
+                        # A legacy store may already occupy its ordinary reserve.
+                        # Safety actions may spend that existing headroom but
+                        # must never increase the admitted bytes plus reserve.
+                        limit = max(limit, len(previous_bytes) + safety_reserve(before))
+                    core.require(len(raw) + safety_reserve(engine.state) <= limit)
+                    # Free the old overflow pages before allocating the new BLOB.
+                    # BEGIN IMMEDIATE and the rollback journal keep this atomic.
+                    db.execute('DELETE FROM community WHERE singleton=1')
+                    db.execute('INSERT INTO community VALUES(1,?)', (raw,))
                 current = self.path.stat(follow_symlinks=False)
                 core.require((held.st_dev, held.st_ino) == (current.st_dev, current.st_ino)); db.commit()
             except BaseException:
@@ -77,7 +101,9 @@ class Store:
                 os.close(lock)
 
     def apply(self, actor, request, now):
-        with self.transaction() as engine: return engine.apply(actor, request, now)
+        operation = request.get('operation') if type(request) is dict else None
+        with self.transaction(operation=operation) as engine:
+            return engine.apply(actor, request, now)
 
     def view(self, operation, **kwargs):
         core.require(operation in ('public', 'replay', 'private', 'audit'))
