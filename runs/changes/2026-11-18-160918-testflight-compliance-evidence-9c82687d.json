@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-160918-testflight-compliance-evidence-9c82687d",
+  "recorded_at": "2026-11-18T16:09:18.684938+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7b5ab10df9c91a4134d0d655c315b13df890e422",
+  "changed": "Identify the internal TestFlight blocker and replay source evidence for selected embedded libraries.",
+  "proves": "Chrome shows build 1.0 (1) with Missing Compliance; the exact signed IPA passed package and runtime input checks, and three embedded library source archives were matched.",
+  "limits": "No compliance declaration, tester access, physical device acceptance, full dependency clearance, or scope closure.",
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "c523f42622dc07783e0ff67a4a392e24f26f8ef8b7a61d9cdd3573f889c01746",
+    "docs/scope-progress.json": "96b7686ca552aa25733240daed0d6fb83b095f0f76250295821e0133fe800d1b",
+    "docs/scope-progress.md": "3ef9217d58a199d65aaf85bbee23f78bb45ac13720a65c9d47eb059b6696ed6e",
+    "runs/2026-11-18-ios-testflight-compliance-inputs.json": "20bb5e389f06216af38d6c95b226c1e3d1fb3585c2b4f9f5f179a4981985eb8a",
+    "runs/2026-11-18-pyodide-embedded-sources.json": "fe57f814a2998103a54f33a3e53ebe9bdcd6f2529eca5d0e4109bc1642ed42b7",
+    "runs/2026-11-18-testflight-missing-compliance.json": "5c519baaf7238804c15a5507e9982dc6c5d716f365592a4c4e6fb2304f1d25cf",
+    "scripts/verify-ios-compliance-inputs.py": "12106dfc04e62c0f3215bba6f5e83937f696ff2b075e14285c989356b4684a7f",
+    "scripts/verify-pyodide-release-origin.py": "55b05775e737aebb249068cd24e060451baffa85bd5eba5ecbd5fc694c445766",
+    "site/public/reference/public-scope.json": "c11cc75959d2a0d9222426ce0dd1454f0a3739a3cf7169bf846c03636196787b",
+    "site/src/public-scope.json": "c11cc75959d2a0d9222426ce0dd1454f0a3739a3cf7169bf846c03636196787b",
+    "site/src/scope-manifest.json": "f6905b20483c5d415fb05d99cfc962e35a3ceda2e75fbe052aba0cd1f81427a5",
+    "state.json": "1897e813bda72726c3fb12b9e1ea577c2bce6013efdd2ad6e34d632821cc3dd0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-testflight-missing-compliance.json",
+      "sha256": "5c519baaf7238804c15a5507e9982dc6c5d716f365592a4c4e6fb2304f1d25cf"
+    },
+    {
+      "path": "runs/2026-11-18-ios-testflight-compliance-inputs.json",
+      "sha256": "20bb5e389f06216af38d6c95b226c1e3d1fb3585c2b4f9f5f179a4981985eb8a"
+    },
+    {
+      "path": "runs/2026-11-18-pyodide-embedded-sources.json",
+      "sha256": "fe57f814a2998103a54f33a3e53ebe9bdcd6f2529eca5d0e4109bc1642ed42b7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T16:09:19.341853+00:00"
+    }
+  ]
+}

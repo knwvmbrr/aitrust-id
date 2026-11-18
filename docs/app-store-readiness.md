@@ -66,18 +66,27 @@ The exported build **1.0 (1)** preserves all 36 expected runtime and notice
 resources and passed all Apple Organizer validation checks. See the
 [signed build and validation receipt](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json).
 Xcode confirmed that [the internal TestFlight upload completed](../runs/2026-11-18-ios-testflight-internal-upload.json).
-Apple’s processing status and availability to testers were not verified: the
-App Store Connect dashboard returned to sign-in. This build was designated
-for internal TestFlight only. Physical iPhone, VoiceOver and outside-user
-acceptance remain open.
+Signed-in Chrome now shows internal build **1.0 (1)** with **Missing
+Compliance**. No internal testing group was listed and the build is not yet
+available on the test iPhone. The [dashboard observation](../runs/2026-11-18-testflight-missing-compliance.json)
+is separate from the upload receipt.
+
+The [signed-package audit](../runs/2026-11-18-ios-testflight-compliance-inputs.json)
+verified both targets, all five runtime files in each, and the bridge source.
+The checker uses SHA-256 for package integrity. The bundled WASM provides a
+Python hashing implementation and reports `OpenSSL (stub)` with zero cipher
+suites when probed in Node. Neither target declares `ITSAppUsesNonExemptEncryption`.
+This is evidence for reviewing the questionnaire, not an export determination
+or a physical-device measurement. Apple describes [how to clear Missing
+Compliance](https://developer.apple.com/help/app-store-connect/test-a-beta-version/provide-export-compliance-information-for-beta-builds/).
 
 ### First iPhone 14 Plus check
 
 1. In [App Store Connect](https://appstoreconnect.apple.com/apps), open
-   **AI Trust ID → TestFlight**. Check **1.0 (1)** and confirm your authorized
-   internal tester can see it. Use the App Store Connect [internal tester
-   instructions](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/)
-   if the processed build has not been assigned to that tester.
+   **AI Trust ID → TestFlight → iOS**, choose **Manage** next to **1.0 (1)**
+   and review and submit the export compliance information. When Apple makes
+   the build available, add it to a group with your own account using the
+   [internal tester instructions](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/).
 2. Open **TestFlight** on the iPhone and install **1.0 (1)**. Then open AI Trust
    ID and try **Practice sharing**. In the share sheet, select **AI Trust ID**.
    Confirm the text appears for review and the app waits for **Check with PS**.

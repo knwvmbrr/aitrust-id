@@ -164,10 +164,50 @@ def replay(directory, manifest, locked):
         archive(name)
 
 
+def replay_embedded(directory, manifest):
+    """Verify selected library archives against pinned recipes and runtime identity."""
+    observed = read_json(ROOT / 'runs/2026-11-18-ios-testflight-compliance-inputs.json')
+    measured = observed['packaged_wasm_node_probe']['embedded_libraries']
+    require(observed['pass'] is True and observed['pyodide_runtime_version'] == manifest['pyodide_version'],
+            'Missing exact signed runtime observation')
+    require(measured['python'] == manifest['python_version'], 'Python version differs')
+    emscripten = manifest['archives']['emscripten.tar.gz']
+    names = {f'tools/ports/{name}.py' for name in ('zlib', 'bzip2')}
+    raw = read_file(directory / 'emscripten.tar.gz', emscripten['bytes'])
+    require(digest(raw) == emscripten['sha256'], 'Emscripten source differs')
+    recipes = tar_members(raw, 'emscripten-' + manifest['emscripten_commit'] + '/', names)
+    results = {}
+    for name, expected_version, filename in (
+        ('zlib', '1.3.1', 'zlib-1.3.1.tar.gz'), ('bzip2', '1.0.6', 'bzip2-1.0.6.zip')
+    ):
+        recipe = recipes[f'tools/ports/{name}.py']
+        version = re.findall(r"^VERSION = '([0-9.]+)'$", recipe.decode(), re.M)
+        sums = re.findall(r"^HASH = '([0-9a-f]{128})'$", recipe.decode(), re.M)
+        source = read_file(directory / filename, ARCHIVE_LIMIT)
+        require(version == [expected_version] and sums == [hashlib.sha512(source).hexdigest()],
+                'Embedded source differs from pinned Emscripten port')
+        if name == 'zlib':
+            require(measured[name] == expected_version, 'Actual zlib version differs')
+        results[name] = {'recipe_version': expected_version, 'recipe_sha256': digest(recipe),
+                         'archive_sha512': sums[0], 'runtime_version_observed': name == 'zlib'}
+    sqlite = 'sqlite-autoconf-3390000'
+    source = read_file(directory / (sqlite + '.tar.gz'), ARCHIVE_LIMIT)
+    sqlite_digest = 'e90bcaef6dd5813fcdee4e867f6b65f3c9bfd0aec0f1017f9f3bbce1e4ed09e2'
+    require(digest(source) == sqlite_digest, 'SQLite source archive differs')
+    header = tar_members(source, sqlite + '/', {'sqlite3.h'})['sqlite3.h']
+    matches = re.findall(r'^#define SQLITE_SOURCE_ID +"([^"\r\n]+)"$', header.decode(), re.M)
+    require(matches == [measured['sqlite_source_id']], 'Actual SQLite source ID differs')
+    results['sqlite'] = {'archive_sha256': sqlite_digest, 'source_id': matches[0]}
+    return results
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--replay-dir", type=Path, help="Existing directory holding the six named archives")
+    parser.add_argument("--embedded", action="store_true", help="Also check the three selected embedded library archives")
     args = parser.parse_args()
+    if args.embedded and args.replay_dir is None:
+        parser.error("--embedded requires --replay-dir")
     try:
         manifest, lock = checked_manifest()
         if args.replay_dir is not None:
@@ -179,6 +219,7 @@ def main():
             "archives_replayed": 6 if args.replay_dir is not None else 0,
             "runtime_members_compared": len(RUNTIME_FILES) if args.replay_dir is not None else 0,
             "upstream_recipe_files_checked": len(RECIPE_FILES) if args.replay_dir is not None else 0,
+            "selected_embedded_sources": replay_embedded(args.replay_dir, manifest) if args.embedded else {},
             "wasm_rebuilt_from_source": False,
             "full_dependency_coverage": False,
             "permission_cleared": False,

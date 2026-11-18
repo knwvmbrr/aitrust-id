@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-160918-testflight-compliance-evidence-9c82687d
+
+Recorded 2026-11-18T16:09:18.684938+00:00 · Contributor: Codex · change
+
+- **Changed.** Identify the internal TestFlight blocker and replay source evidence for selected embedded libraries.
+- **Evidence.** Chrome shows build 1.0 (1) with Missing Compliance; the exact signed IPA passed package and runtime input checks, and three embedded library source archives were matched. [Change record](./runs/changes/2026-11-18-160918-testflight-compliance-evidence-9c82687d.json).
+- **Not claimed.** No compliance declaration, tester access, physical device acceptance, full dependency clearance, or scope closure.
+
+
 ### 2026-11-18-155054-bind-verified-pyodide-origin-f99fc9fd
 
 Recorded 2026-11-18T15:50:54.433955+00:00 · Contributor: Codex · change
