@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-013614-phone-search-and-social-drafts-19fdd706",
+  "recorded_at": "2026-11-18T01:36:14.812270+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "961617461be3dc7443ad26b185dd41e4397c80fa",
+  "changed": "Make the canonical PS guide discoverable for phone and computer searches and generate short social drafts from checked public pages.",
+  "proves": "Generated three reviewable drafts against the live site. Each includes a verified canonical destination and visible claim checks.",
+  "limits": "Search Console indexing and audience measurements remain unverified. Social posting requires a connected account and review.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-PS",
+    "N-012"
+  ],
+  "files": {
+    ".github/workflows/social-drafts.yml": "6df15f010dd87a3614bf7a5cd8d5b55cdae576b252a9e350db88883089c1da48",
+    "docs/website.md": "7f9364693692b8db52fc9ca54a9bec855c359dea44e4edf7bb3cf1d1b001e690",
+    "scripts/build-social-drafts.py": "bc75e8014b273c9bdd9dadf9cac7318fa82e138e1ac544f234feb08925b2618a",
+    "scripts/verify-seo.mjs": "ea9b99cce8ba79f246619fe5f204e7abaa0583ee49af3a7b36eb103464e7ae0b",
+    "site/scripts/owner-guide.mjs": "6a2cfb57ed4050a82d9381f70112f378214b0acceae880fdce508bcdee2b4201",
+    "site/scripts/render-reference.mjs": "89309c36d6be8972f1b6d62da69f05cac711adb6ec2e358376f34397222b693f"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/build-social-drafts.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:36:15.690872+00:00"
+    }
+  ]
+}

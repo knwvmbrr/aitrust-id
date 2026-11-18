@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased — 2026-11-18
+
+### 2026-11-18-014306-phone-search-engineering-evidence-3092640b
+
+Recorded 2026-11-18T01:43:06.844118+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the search guide and social draft workflow to the current public-route and website checks.
+- **Evidence.** All 32 website checks and the current route and state checks passed. [Change record](./runs/changes/2026-11-18-014306-phone-search-engineering-evidence-3092640b.json).
+- **Not claimed.** Search Console, reader adoption and scheduled publication remain separate.
+
+
+### 2026-11-18-013828-verify-phone-search-and-drafts-c64f68a3
+
+Recorded 2026-11-18T01:38:28.951593+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual canonical route checks and the ready-to-review draft pack.
+- **Evidence.** The built website has 36 canonical destinations, 20 tag summaries and a reciprocal guide link. All three social drafts match between the built and live inputs. Wrong canonicals, excluded pages and missing public claims refused generation. [Change record](./runs/changes/2026-11-18-013828-verify-phone-search-and-drafts-c64f68a3.json).
+- **Not claimed.** Production deployment, Google indexing, social network connection and publication are tracked separately.
+
+
+### 2026-11-18-013614-phone-search-and-social-drafts-19fdd706
+
+Recorded 2026-11-18T01:36:14.812270+00:00 · Contributor: Codex · change
+
+- **Changed.** Make the canonical PS guide discoverable for phone and computer searches and generate short social drafts from checked public pages.
+- **Evidence.** Generated three reviewable drafts against the live site. Each includes a verified canonical destination and visible claim checks. [Change record](./runs/changes/2026-11-18-013614-phone-search-and-social-drafts-19fdd706.json).
+- **Not claimed.** Search Console indexing and audience measurements remain unverified. Social posting requires a connected account and review.
+
+
 ## Unreleased — 2026-11-17
 
 ### 2026-11-17-225245-ios27-notice-record-revalidation-c584eebb

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-014306-phone-search-engineering-evidence-3092640b",
+  "recorded_at": "2026-11-18T01:43:06.844118+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "961617461be3dc7443ad26b185dd41e4397c80fa",
+  "changed": "Bound the search guide and social draft workflow to the current public-route and website checks.",
+  "proves": "All 32 website checks and the current route and state checks passed.",
+  "limits": "Search Console, reader adoption and scheduled publication remain separate.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-PS"
+  ],
+  "files": {
+    "state.json": "80aa8a51ad9e21b00ad4e45cf4abe04320bb167a62f0b806c65c9226c43c07b4",
+    "eval/route-boundaries.json": "742dd4aabdc84e41184b48bc2287094c7af07173538489fd14b215ac5c68d69c",
+    "runs/2026-11-17-phone-seo-current-website.json": "034c718b91611c4b223c7ac0758c87d5c312bce6f74c8b87d7bb747227064cfe",
+    "runs/2026-11-17-phone-seo-current-boundaries.json": "83e94b5215782aeddf2aed9ec4ca06faea6612b6bc8a45ee2e8863a3099316db"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-phone-seo-current-website.json",
+      "sha256": "034c718b91611c4b223c7ac0758c87d5c312bce6f74c8b87d7bb747227064cfe"
+    },
+    {
+      "path": "runs/2026-11-17-phone-seo-current-boundaries.json",
+      "sha256": "83e94b5215782aeddf2aed9ec4ca06faea6612b6bc8a45ee2e8863a3099316db"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:43:07.343233+00:00"
+    }
+  ]
+}
