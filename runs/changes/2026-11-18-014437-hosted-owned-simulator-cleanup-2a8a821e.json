@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-014437-hosted-owned-simulator-cleanup-2a8a821e",
+  "recorded_at": "2026-11-18T01:44:37.949259+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e317ecacfcc95f2e69113c4c8a099772aba9c3bb",
+  "changed": "Recorded exact simulator removal on macOS and hosted iOS 27.2 and bound distribution status to the fresh unsigned archive and signing retry.",
+  "proves": "The hosted runner deleted the owned simulator and verified registry absence. Three local cleanup checks passed. The hosted notice reader reached the later PS step and the unsigned archive matched 36 resources.",
+  "limits": "The hosted UI test deadline, protected Share signing, TestFlight upload and physical acceptance remain open. The original ledger remains at 70 open.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "05ad36d126779cf667ea3cf699ad59b3fdba510ad577a39c5901115a2438e145",
+    "docs/native-share-developer.md": "5100b1e733ff81294e9540dde675cc57c0a125e34de783dfc052cf52f65c70e7",
+    "docs/scope-progress.json": "1b94b84938fa12fc2bbf133ded0e984aab0cc3ccc455b6189d924ec76517c5aa",
+    "docs/scope-progress.md": "eb2fd5b7904f17a8648f62d1d63544e44e7e69d0c0746039adfaf4f727aedccf",
+    "runs/2026-11-17-hosted-ios27-owned-cleanup.json": "eddcf32aa3677b69a68c50c2d3179f77144550b0a0a33c237769f46aa05aca44",
+    "runs/2026-11-17-owned-cleanup-ios-archive.json": "f78caa60e6d21809ec7795fe1d901e915af086e77b270e76bfc4eeb037e0359c",
+    "runs/2026-11-17-owned-cleanup-keyboard-navigation.json": "45cde207cdef95905d0243f8c25fdab9611b508b47cc449b3df44558f0150d28",
+    "state.json": "272f642dc9c7d4f0dc9cdd636eb30472af1a95d97c4274519fba5747362c00f8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
+      "sha256": "eddcf32aa3677b69a68c50c2d3179f77144550b0a0a33c237769f46aa05aca44"
+    },
+    {
+      "path": "runs/2026-11-17-owned-cleanup-ios-archive.json",
+      "sha256": "f78caa60e6d21809ec7795fe1d901e915af086e77b270e76bfc4eeb037e0359c"
+    },
+    {
+      "path": "runs/2026-11-17-share-manual-signing-retry.json",
+      "sha256": "425fce28cf12ea1ebe9f0ea8b1df20b1490102e64a7ec6cf1b8367d5b092c5b1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:44:38.593905+00:00"
+    }
+  ]
+}

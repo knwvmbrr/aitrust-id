@@ -1,0 +1,29 @@
+{
+  "kind": "local_owned_cleanup_with_remaining_ui_reliability_failures",
+  "captured_at": "2026-11-18T01:24:46.191330+00:00",
+  "pass": false,
+  "failed_stage": "ui_workflows",
+  "source_commit": "e317ecacfcc95f2e69113c4c8a099772aba9c3bb",
+  "runtime": "iOS 26.2",
+  "sdk": "27.2",
+  "ui_test_sha256": "9e784fd59fb9cf8843ef303de1857581236f57cc9fe62da8bac40095aa40e2c3",
+  "runner_sha256": "35729b5909566b270720dde5d0f2f677b3d64a55ca868abb244579f0e486f368",
+  "observed_ui_cases": {
+    "executed": 5,
+    "passed": 3,
+    "failed": 2
+  },
+  "observed_background_clear_passed": true,
+  "observed_failed_ui_checks": [
+    "return_to_notice_page_one_after_previous_tap",
+    "share_activity_cell_visible_before_selection"
+  ],
+  "owned_simulator_removed": true,
+  "owned_simulator_delete_passed": true,
+  "owned_simulator_inventory_absent": true,
+  "source_unchanged_during_execution": true,
+  "receipt_sha256": "10e55e4e5d390ae3aca14fc8a517627d215ed1548ff6416c08b1c6a08fcb8a82",
+  "physical_device": false,
+  "independent_accuracy": false,
+  "requirements_closed": []
+}

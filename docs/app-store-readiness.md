@@ -23,7 +23,13 @@ resources. The hosted iOS 27.2 run of the previous reader reached its UI deadlin
 while querying the combined notice view. The paginated reader
 [passed all five UI workflows on hosted iOS 27.2](../runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json).
 The hosted job failed afterward because simulator shutdown and deletion timed out.
-The local simulator run completed cleanup.
+The updated verifier asks CoreSimulator to delete the owned device directly
+and checks the registry for its exact identifier. It verified removal on three
+local runs and on [hosted iOS 27.2](../runs/2026-11-17-hosted-ios27-owned-cleanup.json).
+The latest hosted workflow completed notice navigation and then reached the
+two-minute limit while checking its second PS result. The complete five-case
+proof remains open. The fresh [unsigned archive](../runs/2026-11-17-owned-cleanup-ios-archive.json)
+verified both bundle identifiers and all 36 resources.
 
 The existing Apple Distribution identity matches the current app and Share
 provisioning profiles. A bounded signing attempt on a private copy timed out
@@ -35,6 +41,9 @@ verified Release signing settings for both targets and matched the installed
 profiles to the existing certificate. See the
 [signing attempt](../runs/2026-11-17-current-ios-signing-attempt.json) and
 [Keychain diagnosis](../runs/2026-11-17-ios-signing-keychain-diagnosis.json).
+A second [archive signing attempt](../runs/2026-11-17-share-manual-signing-retry.json)
+used the matching profiles in Xcode and reached a fresh Keychain authorization
+request at Share signing. It timed out after 120 seconds.
 An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
 [Apple validation on November 15](../runs/2026-11-15-apple-package-validation-passed.json).
 The November 17 candidate still needs signing, validation and upload. Keys, profiles and build

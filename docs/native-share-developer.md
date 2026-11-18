@@ -27,8 +27,11 @@ python3 scripts/verify-ios-share.py \
 ```
 
 The command creates its own iPhone 14 Plus simulator, builds the current app and
-extension, runs five actual UI workflows and removes only that simulator. It
-rejects an existing output path or any output inside a Git checkout. Logs,
+extension, runs five actual UI workflows and removes only that simulator.
+It submits one bounded deletion and confirms the exact device is absent from
+the simulator registry. Both checks must pass before the verifier accepts the
+test result. The verifier rejects an existing output path or any output inside
+a Git checkout. Logs,
 generated code, the Xcode result bundle and `proof.json` stay in the private
 output directory. They use invented examples only. A boot, timeout, skipped case,
 source change, failed workflow or cleanup failure cannot produce a passing proof.

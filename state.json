@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T22:52:42.976417+00:00",
-  "active_increment": "Current iOS 26.2 and hosted iOS 27.2 UI workflows passed after notice pagination. Hosted cleanup timed out. Manual signing settings match both targets and protected key authorization remains pending. Original scope is 132 complete and 70 open.",
+  "updated": "2026-11-18T01:44:13.462297+00:00",
+  "active_increment": "Direct simulator deletion passed on hosted iOS 27.2 after a native UI deadline. The latest UI bundle is incomplete. Share signing timed out at protected access. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1142,7 +1142,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T22:52:42.976417+00:00",
+  "updated_at": "2026-11-18T01:44:13.462297+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2012,9 +2012,9 @@
     "automation_budget_evidence": "runs/2026-11-07-native-automation-budget.json",
     "publication": "runs/2026-11-09-pan-publication.json",
     "code_and_guide_published": true,
-    "distribution_archive": "runs/2026-11-17-paged-notices-ios-archive.json",
-    "workflow_current_source_pass": true,
-    "publication_pending": false,
+    "distribution_archive": "runs/2026-11-17-owned-cleanup-ios-archive.json",
+    "workflow_current_source_pass": false,
+    "publication_pending": true,
     "signing_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
     "current_candidate_apple_validation": false,
     "current_candidate_uploaded": false,
@@ -2040,13 +2040,28 @@
     "current_hosted_27_2_acceptance": false,
     "current_hosted_ci": {
       "runtime": "iOS 27.2",
+      "pass": false,
+      "ui_workflows_logged_passed": 3,
+      "exact_xcresult_summary_available": false,
+      "failed_stage": "ui_workflows",
+      "owned_simulator_removed": true,
+      "evidence": "runs/2026-11-17-hosted-ios27-owned-cleanup.json"
+    },
+    "current_hosted_27_2_ui_pass": false,
+    "local_cleanup_observations": [
+      "runs/2026-11-17-owned-cleanup-first-local-run.json",
+      "runs/2026-11-17-owned-cleanup-notice-navigation.json",
+      "runs/2026-11-17-owned-cleanup-keyboard-navigation.json"
+    ],
+    "signing_retry": "runs/2026-11-17-share-manual-signing-retry.json",
+    "previous_hosted_completed_ui_cleanup_timeout": {
+      "runtime": "iOS 27.2",
       "ui_workflows_passed": 5,
       "pass": false,
       "failed_stage": "cleanup",
       "owned_simulator_removed": false,
       "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
-    },
-    "current_hosted_27_2_ui_pass": true
+    }
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3142,7 +3157,7 @@
   },
   "app_store_preparation": {
     "registered_bundle_id": "com.aitrustid.app",
-    "device_archive_evidence": "runs/2026-11-17-paged-notices-ios-archive.json",
+    "device_archive_evidence": "runs/2026-11-17-owned-cleanup-ios-archive.json",
     "archive_signed": false,
     "store_bundle_configured": true,
     "app_store_record_created": true,
@@ -3191,7 +3206,8 @@
     "native_source_merge": "81862e20eacef1191051cb9f9aaa8e12e4fa4cfc",
     "protected_signing_timeout_diagnosis": "runs/2026-11-17-ios-signing-keychain-diagnosis.json",
     "current_signing_configuration_preflight": "runs/2026-11-17-paged-notice-signing-preflight.json",
-    "signing_next_step": "Protected access for the existing Apple Distribution key. Both exact installed provisioning profiles and both Release target settings match."
+    "signing_next_step": "The archive retry reached a fresh protected Keychain request at AITrustIDShare. Both profile bindings match. Current signing, Apple validation and upload remain pending.",
+    "signing_retry": "runs/2026-11-17-share-manual-signing-retry.json"
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",

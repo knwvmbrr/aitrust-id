@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-014437-hosted-owned-simulator-cleanup-2a8a821e
+
+Recorded 2026-11-18T01:44:37.949259+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded exact simulator removal on macOS and hosted iOS 27.2 and bound distribution status to the fresh unsigned archive and signing retry.
+- **Evidence.** The hosted runner deleted the owned simulator and verified registry absence. Three local cleanup checks passed. The hosted notice reader reached the later PS step and the unsigned archive matched 36 resources. [Change record](./runs/changes/2026-11-18-014437-hosted-owned-simulator-cleanup-2a8a821e.json).
+- **Not claimed.** The hosted UI test deadline, protected Share signing, TestFlight upload and physical acceptance remain open. The original ledger remains at 70 open.
+
+
 ### 2026-11-18-011720-owned-simulator-cleanup-candidate-2587c37b
 
 Recorded 2026-11-18T01:17:20.795717+00:00 · Contributor: Codex · change
