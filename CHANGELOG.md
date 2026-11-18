@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-021538-split-native-workflow-budget-594abe10
+
+Recorded 2026-11-18T02:15:38.648833+00:00 · Contributor: Codex · change
+
+- **Changed.** Run Privacy and Notices as its own iPhone UI test and require each of the six named workflows and verified disposal.
+- **Evidence.** The native runner tests enforce case names, run counts, failure and skip handling, source identity and removal of the simulator. [Change record](./runs/changes/2026-11-18-021538-split-native-workflow-budget-594abe10.json).
+- **Not claimed.** Full simulator execution, physical acceptance and distribution signing are separate gates.
+
+
 ### 2026-11-18-015733-public-search-and-open-mobile-state-2a92d8be
 
 Recorded 2026-11-18T01:57:33.317941+00:00 · Contributor: Codex · change

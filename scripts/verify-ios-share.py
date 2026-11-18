@@ -33,6 +33,16 @@ SOURCES += ['mobile/ios/Source/' + name for name in
             ['App.swift', 'Assets.swift', 'AppearancePreference.swift', 'BrandTheme.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift']]
 
 SOURCES = list(dict.fromkeys([*SOURCES, *NOTICE_SOURCES, BUNDLE, BASE + 'manifest.json', BASE + 'obligations.json']))
+WORKFLOW_IDS = tuple(f'UIFlows/{name}()' for name in (
+    'testBackgroundClearsInputAndResult',
+    'testEditInvalidatesOldFinding',
+    'testExplicitPSCheckAndClear',
+    'testNativePracticeShareRequiresExplicitCheck',
+    'testPrivacyNoticesPageNavigation',
+    'testShareClearDuringCheckAndRepeat',
+))
+PROFILE = 'invented-text/UIActivityViewController/local-PS/simulator/v2'
+UI_PHASE_SECONDS = 780
 
 def source_hashes():
     return {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in SOURCES}
@@ -52,9 +62,28 @@ def accepted_summary(summary):
     return (isinstance(summary, dict)
             and all(type(summary.get(key)) is int for key in ['totalTestCount', 'passedTests', 'failedTests'])
             and type(summary.get('skippedTests', 0)) is int
-            and summary.get('result') == 'Passed' and summary.get('totalTestCount') == 5
-            and summary.get('passedTests') == 5 and summary.get('failedTests') == 0
+            and summary.get('result') == 'Passed' and summary.get('totalTestCount') == len(WORKFLOW_IDS)
+            and summary.get('passedTests') == len(WORKFLOW_IDS) and summary.get('failedTests') == 0
             and summary.get('skippedTests', 0) == 0 and not summary.get('testFailures'))
+
+
+def accepted_workflows(report):
+    pending = report.get('testNodes') if isinstance(report, dict) else None
+    if not isinstance(pending, list):
+        return False
+    pending = pending.copy()
+    passed = []
+    while pending:
+        node = pending.pop()
+        if not isinstance(node, dict) or not isinstance(node.get('children', []), list):
+            return False
+        if node.get('nodeType') == 'Test Case':
+            identifier = node.get('nodeIdentifier')
+            if identifier not in WORKFLOW_IDS or node.get('result') != 'Passed':
+                return False
+            passed.append(identifier)
+        pending.extend(node.get('children', []))
+    return sorted(passed) == list(WORKFLOW_IDS)
 
 
 def simulator_identity(value):
@@ -63,6 +92,20 @@ def simulator_identity(value):
         raise ValueError('Unexpected simulator identity')
     # Xcode destination matching is case-sensitive even though simctl's is not.
     return value
+
+
+def simulator_absent(raw, owned):
+    inventory = json.loads(raw)
+    groups = inventory.get('devices') if isinstance(inventory, dict) else None
+    if not isinstance(groups, dict) or any(not isinstance(devices, list) for devices in groups.values()):
+        raise ValueError('Simulator inventory unavailable')
+    identities = []
+    for devices in groups.values():
+        for device in devices:
+            if not isinstance(device, dict) or not isinstance(device.get('udid'), str):
+                raise ValueError('Simulator inventory has an invalid device')
+            identities.append(simulator_identity(device['udid']).lower())
+    return owned.lower() not in identities
 
 
 def host_capacity(raw, free_bytes):
@@ -185,14 +228,26 @@ def main():
         report['owned_simulator_removed'] = False
         previous_stage = stage
         stage = 'cleanup'
-        clean = []
+        report['owned_simulator_delete_passed'] = False
+        report['owned_simulator_inventory_absent'] = None
         try:
-            for action in ['shutdown', 'delete']:
-                try:
-                    command(['xcrun', 'simctl', action, owned], timeout=90, cleanup=True)
-                    clean.append(action)
-                except (ValueError, OSError, subprocess.SubprocessError): pass
-            report['owned_simulator_removed'] = clean == ['shutdown', 'delete']
+            try:
+                command(['xcrun', 'simctl', 'delete', owned], timeout=90, cleanup=True,
+                        terminal_output=True)
+                report['owned_simulator_delete_passed'] = True
+            except (ValueError, OSError, subprocess.SubprocessError):
+                # A timed-out client may have already submitted the request.
+                # Preserve the failed operation and still observe device state.
+                pass
+            try:
+                raw = command(['xcrun', 'simctl', 'list', 'devices', owned, '--json'],
+                              timeout=15, cleanup=True)
+                report['owned_simulator_inventory_absent'] = simulator_absent(raw, owned)
+            except (ValueError, OSError, subprocess.SubprocessError):
+                pass
+            report['owned_simulator_removed'] = (
+                report['owned_simulator_delete_passed'] and
+                report['owned_simulator_inventory_absent'] is True)
             if not report['owned_simulator_removed']: report['pass'] = False
             return report['owned_simulator_removed']
         finally:
@@ -249,7 +304,8 @@ def main():
         try:
             command([*build, '-resultBundlePath', str(output / 'workflow.xcresult'), '-test-timeouts-enabled', 'YES',
                      '-default-test-execution-time-allowance', '120', '-maximum-test-execution-time-allowance', '150',
-                     'test-without-building', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'], timeout=600)
+                     'test-without-building', 'CODE_SIGNING_ALLOWED=NO', 'ONLY_ACTIVE_ARCH=YES'],
+                    timeout=UI_PHASE_SECONDS)
         finally:
             # Keep this boundary even if UI or later result parsing fails.
             report['post_ui_source_unchanged'] = False
@@ -269,13 +325,17 @@ def main():
         measured = json.loads(command(['xcrun', 'xcresulttool', 'get', 'test-results', 'summary',
                                       '--path', str(output / 'workflow.xcresult'), '--format', 'json']))
         if not accepted_summary(measured): raise ValueError('Native workflow acceptance failed')
+        workflows = json.loads(command(['xcrun', 'xcresulttool', 'get', 'test-results', 'tests',
+                                       '--path', str(output / 'workflow.xcresult')]))
+        if not accepted_workflows(workflows): raise ValueError('Native workflow identities did not pass')
         report.update({'pass': True, 'sources': before,
-                       'test_count': 5, 'runtime': runtime['name'], 'runtime_build': runtime['buildversion'],
+                       'test_count': len(WORKFLOW_IDS), 'workflow_ids': list(WORKFLOW_IDS),
+                       'runtime': runtime['name'], 'runtime_build': runtime['buildversion'],
                        'xcode': command(['xcodebuild', '-version']),
                        'sdk': command(['xcrun', '--sdk', 'iphonesimulator', '--show-sdk-version']),
                        'method_sha256': json.loads(payload['Assets/device-manifest.json'])['method_sha256'],
                        'asset_fingerprints': json.loads(payload['Assets/native-assets.json'])['hashes'],
-                       'profile': 'invented-text/UIActivityViewController/local-PS/simulator/v1',
+                       'profile': PROFILE,
                        'limits': ['Typed-provider compatibility API deprecated in iOS 27; no future SDK guarantee.',
                                   'Provider allocation and OS storage are not hard-bounded or physically erased.',
                                   'No physical phone, arbitrary third-party share source or human accessibility acceptance.']})
