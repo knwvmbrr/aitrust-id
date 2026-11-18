@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-143404-bind-revocation-comparison-evidence-7ace931b",
+  "recorded_at": "2026-11-18T14:34:04.001633+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "864a1e32544d30c756cec6654a0b2607d691c5e9",
+  "changed": "Bind the signed-history comparison and TestFlight access observation to current route and engineering evidence.",
+  "proves": "32 website checks, 40 protocol checks and the public route boundaries passed. The current evidence packet accepts all selected engineering receipts.",
+  "limits": "No public log, independent witness, physical iPhone, VoiceOver session or TestFlight readiness claim is inferred.",
+  "scope_ids": [
+    "F-125",
+    "N-013"
+  ],
+  "files": {
+    "state.json": "d86b3f56003b21503997d8e39482414cd1c9b736cef9cd5e9765201d1770cd0a",
+    "eval/route-boundaries.json": "62044edec98cbcd67685ec0ba5dbb5c087c8ded801b00d798e0c0af353167df1",
+    "runs/2026-11-18-revocation-comparison-website.json": "06a63d711f3d78344b68e0182b19fecff4a8cfbf6243d8f8e4e09dcf96822973",
+    "runs/2026-11-18-revocation-comparison-protocol.json": "26db2840147a36e86245934f8c47b69fd6508d79c181ad4ce9777ecc8f696490",
+    "runs/2026-11-18-revocation-comparison-boundaries.json": "8999322baa5d0164b3e9585d0d41d1b66c18b0c9ebaf6ca1e8adb5ccb4e2f6f3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-revocation-comparison-website.json",
+      "sha256": "06a63d711f3d78344b68e0182b19fecff4a8cfbf6243d8f8e4e09dcf96822973"
+    },
+    {
+      "path": "runs/2026-11-18-revocation-comparison-protocol.json",
+      "sha256": "26db2840147a36e86245934f8c47b69fd6508d79c181ad4ce9777ecc8f696490"
+    },
+    {
+      "path": "runs/2026-11-18-revocation-comparison-boundaries.json",
+      "sha256": "8999322baa5d0164b3e9585d0d41d1b66c18b0c9ebaf6ca1e8adb5ccb4e2f6f3"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T14:34:04.524283+00:00"
+    }
+  ]
+}

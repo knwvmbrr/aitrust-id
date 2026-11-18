@@ -1,7 +1,7 @@
 /* Selected signed checkpoint history: conditional offline status, not global transparency. */
 'use strict';
 const crypto=require('node:crypto'),r=require('./receipts.cjs');
-const VERSION='offline-revocation-log/1.0.0',POLICY='offline-freshness-policy/1.0.0',ZERO='0'.repeat(64),MAX=64;
+const VERSION='offline-revocation-log/1.0.0',POLICY='offline-freshness-policy/1.0.0',COMPARISON='offline-revocation-comparison/1.0.0',ZERO='0'.repeat(64),MAX=64;
 function fields(v,n){if(!v||typeof v!=='object'||Array.isArray(v)||Object.keys(v).sort().join('|')!==[...n].sort().join('|'))throw Error('Missing or unknown revocation field');}
 function fp(v){if(typeof v!=='string'||!/^([a-f0-9]{64})$/.test(v))throw Error('Invalid key or checkpoint fingerprint');return v;}
 function time(v){if(!Number.isSafeInteger(v)||v<0)throw Error('Unsupported local clock');return v;}
@@ -24,6 +24,32 @@ function history(log,pinnedAuthority){
   previous=r.hash(r.bytes(signed));checked.push({payload:v,sha256:previous});prior=v;
  }
  return checked;
+}
+function compareHistories(leftLog,rightLog,pinnedAuthority){
+ // Verify both complete inputs even when they already differ at an early checkpoint.
+ const left=history(leftLog,pinnedAuthority),right=history(rightLog,pinnedAuthority);
+ const overlap=Math.min(left.length,right.length);
+ let common=0;
+ while(common<overlap&&left[common].sha256===right[common].sha256)common++;
+ const branch=common<overlap;
+ let differentStatement=null;
+ // Ignore the predecessor digest here: a re-signing can change linkage without
+ // changing the declared time window or the set of revoked keys.
+ for(let i=common;i<overlap;i++){
+  const a=left[i].payload,b=right[i].payload;
+  if(a.issued_at!==b.issued_at||a.expires_at!==b.expires_at||r.canonical(a.revoked_keys)!==r.canonical(b.revoked_keys)){
+   differentStatement=i+1;break;
+  }
+ }
+ const outcome=branch?'divergent_signed_histories':left.length===right.length?'same_signed_history':left.length<right.length?'left_is_signed_prefix':'right_is_signed_prefix';
+ return {
+  profile:COMPARISON,outcome,authority_key_sha256:left[0].payload.authority_key_sha256,
+  left_checkpoints:left.length,right_checkpoints:right.length,
+  common_checkpoint:common?{sequence:common,sha256:left[common-1].sha256}:null,
+  first_divergence:branch?{sequence:common+1,left_checkpoint_sha256:left[common].sha256,right_checkpoint_sha256:right[common].sha256}:null,
+  first_different_statement_sequence:differentStatement,
+  key_status_evaluated:false,global_log_completeness_proven:false,public_transparency_witnessed:false,tag_issuance:false,
+ };
 }
 function extend(log,privateKey,revokedPublicKey,issuedAt,lifetime){
  time(issuedAt);if(!Number.isSafeInteger(lifetime)||lifetime<60||lifetime>604800)throw Error('Declare checkpoint lifetime');
@@ -51,4 +77,4 @@ function assess(log,pinnedAuthority,selectedPolicy,keys,now){
  const statuses=keys.map(k=>({key_sha256:k,status:p.revoked_keys.includes(k)?'revoked_in_selected_log':freshness==='within_selected_policy'?'not_recorded_revoked_as_of_selected_checkpoint':'unknown'}));
  return {...common,checkpoint:{sequence:p.sequence,sha256:head.sha256,issued_at:p.issued_at,expires_at:p.expires_at,clock:p.clock},freshness,status_age_seconds:now-p.issued_at,keys:statuses,can_continue_under_selected_policy:freshness==='within_selected_policy'&&statuses.every(k=>k.status==='not_recorded_revoked_as_of_selected_checkpoint')};
 }
-module.exports=Object.freeze({VERSION,POLICY,MAX,id,checkpoint,history,extend,policy,assess});
+module.exports=Object.freeze({VERSION,POLICY,COMPARISON,MAX,id,checkpoint,history,compareHistories,extend,policy,assess});

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-142915-compare-signed-revocation-histories-fa7b2737",
+  "recorded_at": "2026-11-18T14:29:15.583331+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "864a1e32544d30c756cec6654a0b2607d691c5e9",
+  "changed": "Add an offline CLI to compare two signed revocation histories and record the current TestFlight sign-in blocker with a physical-device checklist.",
+  "proves": "62 focused controls passed, covering genuine divergence, matching prefixes, P-256 re-signing, malformed input and CLI refusal. App Store Connect returned to sign-in after refresh.",
+  "limits": "No public log or independent witness was operated. Apple processing and installation were not verified, and neither original requirement is closed.",
+  "scope_ids": [
+    "F-125",
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "0e36c5787673ac9ea978690556ebb3eef930951541640a5e8558ac42bc32d081",
+    "docs/offline-revocation-plan.md": "cff320af49b7d9cdae0a59bc8ca07d0dc647c92108e3067f6806dfd36ecda82a",
+    "docs/offline-revocation.md": "b0f16fd7c4444c8d53a2b4f0c2a30b6cdb185fdedfe2bd4cf616263faf8dbf51",
+    "docs/scope-60-execution.md": "0e1b4dd85c69d6ec995bb8c26d57821bf6799e4f6a662a4a87d66fb9ca6e1daa",
+    "docs/scope-progress.json": "60928ffe52d567fa8fb4d7fd9c950bb261ddbd1d913c9c3fb88e0b5cc0bd7458",
+    "docs/scope-progress.md": "a30eea1a52e37b3d1a07d63a4c73c76aa0bcc035b41da62e353e5a87962ff2ee",
+    "protocol/revocation.cjs": "0cfd35c00fd7a2e1dde91f567c499669c99fade18622933dfa08a55e1488caa7",
+    "runs/2026-11-18-offline-revocation-comparison.json": "4423ca6896135afa78a4f6830dade45a21cfe593cd69c2eeb26988d745e4493e",
+    "runs/2026-11-18-testflight-dashboard-authentication.json": "0cfcaa5216b2e886c926aba41db46c4cd552845ef5616e21add264d3fa786f93",
+    "scripts/revocation.cjs": "a8809ef584056f9736f92346bb8f4318594e7bd5f9fcbe2853e0d63995cb5821",
+    "site/public/reference/public-scope.json": "b505e2ddda660db2d8894d6664117a12cf3904b9c7daf111f48a2b3b35087f7e",
+    "site/src/public-scope.json": "b505e2ddda660db2d8894d6664117a12cf3904b9c7daf111f48a2b3b35087f7e",
+    "site/src/scope-manifest.json": "4cf4cd5a7bba4ae770ec49cdf3e7f2249c4385178c5552ef42022b6434b5c9cf",
+    "state.json": "927b2081fc7cf1caf247c89875fe884e13574891c8f7473dbcc8161c606dc12c",
+    "tests/offline-revocation.cjs": "6002d263e094c95c1e64f2fd181a15ece32c5ea9bd900806d489dcb5b0375101",
+    "tests/test_offline_revocation.py": "acb15839c6d730000dd356f796f4ed23da79ec70e730cc87d61e5edd2c7d7e32"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-offline-revocation-comparison.json",
+      "sha256": "4423ca6896135afa78a4f6830dade45a21cfe593cd69c2eeb26988d745e4493e"
+    },
+    {
+      "path": "runs/2026-11-18-testflight-dashboard-authentication.json",
+      "sha256": "0cfcaa5216b2e886c926aba41db46c4cd552845ef5616e21add264d3fa786f93"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T14:29:15.994874+00:00"
+    }
+  ]
+}

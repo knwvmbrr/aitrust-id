@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-143404-bind-revocation-comparison-evidence-7ace931b
+
+Recorded 2026-11-18T14:34:04.001633+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the signed-history comparison and TestFlight access observation to current route and engineering evidence.
+- **Evidence.** 32 website checks, 40 protocol checks and the public route boundaries passed. The current evidence packet accepts all selected engineering receipts. [Change record](./runs/changes/2026-11-18-143404-bind-revocation-comparison-evidence-7ace931b.json).
+- **Not claimed.** No public log, independent witness, physical iPhone, VoiceOver session or TestFlight readiness claim is inferred.
+
+
+### 2026-11-18-142915-compare-signed-revocation-histories-fa7b2737
+
+Recorded 2026-11-18T14:29:15.583331+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an offline CLI to compare two signed revocation histories and record the current TestFlight sign-in blocker with a physical-device checklist.
+- **Evidence.** 62 focused controls passed, covering genuine divergence, matching prefixes, P-256 re-signing, malformed input and CLI refusal. App Store Connect returned to sign-in after refresh. [Change record](./runs/changes/2026-11-18-142915-compare-signed-revocation-histories-fa7b2737.json).
+- **Not claimed.** No public log or independent witness was operated. Apple processing and installation were not verified, and neither original requirement is closed.
+
+
 ### 2026-11-18-134148-testflight-scope-evidence-cf7c1d63
 
 Recorded 2026-11-18T13:41:48.884286+00:00 · Contributor: Codex · change
