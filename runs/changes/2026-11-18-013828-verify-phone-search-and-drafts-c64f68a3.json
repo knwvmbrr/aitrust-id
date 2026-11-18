@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-013828-verify-phone-search-and-drafts-c64f68a3",
+  "recorded_at": "2026-11-18T01:38:28.951593+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "961617461be3dc7443ad26b185dd41e4397c80fa",
+  "changed": "Recorded actual canonical route checks and the ready-to-review draft pack.",
+  "proves": "The built website has 36 canonical destinations, 20 tag summaries and a reciprocal guide link. All three social drafts match between the built and live inputs. Wrong canonicals, excluded pages and missing public claims refused generation.",
+  "limits": "Production deployment, Google indexing, social network connection and publication are tracked separately.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-PS",
+    "N-012"
+  ],
+  "files": {
+    "state.json": "e960e9ac5dc212fe2b794ecfa0007a8122defa85f64c5bbc2973479ebac953ae",
+    "runs/2026-11-17-phone-search-and-social-drafts.json": "350507452747e8d2d53d1d3446d3e939a25ccf251b3c069baf52f314047090fb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-phone-search-and-social-drafts.json",
+      "sha256": "350507452747e8d2d53d1d3446d3e939a25ccf251b3c069baf52f314047090fb"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "scripts/verify-seo.mjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:38:29.230066+00:00"
+    }
+  ]
+}

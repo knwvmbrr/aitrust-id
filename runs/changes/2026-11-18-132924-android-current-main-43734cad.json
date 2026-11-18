@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-132924-android-current-main-43734cad",
+  "recorded_at": "2026-11-18T13:29:24.603347+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "681ac320da07487de361ce6a2d2620fc88cd171a",
+  "changed": "Resolved Android Share branch conflicts against current main, preserving both histories and selecting current website and route evidence.",
+  "proves": "The installed JVM lifecycle controls, the pinned engine comparisons, 32 website checks and the public route gate ran on the reconciled source.",
+  "limits": "The Android preview remains in draft. No emulator or physical TalkBack session was evidenced, and no original requirement closed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "2d24a2d72de1774cef29cd16797907edd723e9c20bed02c1d7c9512a371bc786",
+    "state.json": "2aa2a4bfb415edad8e127ca228a1d8601cfbf0ddf15c124225c5c55d8b340f61",
+    "runs/2026-11-18-android-reconciled-boundaries.json": "48cd113176f27fabd90ec1ec518973c4b4e6fe2847a9a28504fa31608faf2ac8",
+    "runs/2026-11-18-android-reconciled-website.json": "af36428081b1c08f3cf77b55ba45b3894db75e4395a732ba19084b7bf5ac9dca"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-android-reconciled-boundaries.json",
+      "sha256": "48cd113176f27fabd90ec1ec518973c4b4e6fe2847a9a28504fa31608faf2ac8"
+    },
+    {
+      "path": "runs/2026-11-18-android-reconciled-website.json",
+      "sha256": "af36428081b1c08f3cf77b55ba45b3894db75e4395a732ba19084b7bf5ac9dca"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T13:29:25.187727+00:00"
+    }
+  ]
+}

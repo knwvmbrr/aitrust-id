@@ -2,6 +2,104 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-132924-android-current-main-43734cad
+
+Recorded 2026-11-18T13:29:24.603347+00:00 · Contributor: Codex · change
+
+- **Changed.** Resolved Android Share branch conflicts against current main, preserving both histories and selecting current website and route evidence.
+- **Evidence.** The installed JVM lifecycle controls, the pinned engine comparisons, 32 website checks and the public route gate ran on the reconciled source. [Change record](./runs/changes/2026-11-18-132924-android-current-main-43734cad.json).
+- **Not claimed.** The Android preview remains in draft. No emulator or physical TalkBack session was evidenced, and no original requirement closed.
+
+
+### 2026-11-18-024833-close-hosted-ios-workflow-1bace56b
+
+Recorded 2026-11-18T02:48:33.366433+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the completed hosted iPhone simulator and unsigned archive checks.
+- **Evidence.** The exact hosted iOS 27.2 source passed all six named Xcode UI tests, verified removal of its simulator, and matched 36 archived resources. [Change record](./runs/changes/2026-11-18-024833-close-hosted-ios-workflow-1bace56b.json).
+- **Not claimed.** The archive remains unsigned. TestFlight upload, real device and human acceptance remain open.
+
+
+### 2026-11-18-022945-bind-split-native-proof-ba515973
+
+Recorded 2026-11-18T02:29:45.323761+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the six-case local iPhone proof to current website, protocol and route verification.
+- **Evidence.** The current evidence packet links the passing local run and the separate hosted boot failure without changing any scope gate. [Change record](./runs/changes/2026-11-18-022945-bind-split-native-proof-ba515973.json).
+- **Not claimed.** The hosted retry, protected signing and physical acceptance have separate outcomes.
+
+
+### 2026-11-18-022606-hosted-split-ios-boot-timeout-3e7467c7
+
+Recorded 2026-11-18T02:26:06.675800+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the hosted iOS 27.2 boot and inventory deadlines for the six-case candidate.
+- **Evidence.** The hosted runner returned no bootstatus output and never reached app build or UI execution. Its delete command succeeded and inventory confirmation timed out. [Change record](./runs/changes/2026-11-18-022606-hosted-split-ios-boot-timeout-3e7467c7.json).
+- **Not claimed.** The local six-case pass is separate from this hosted failure.
+
+
+### 2026-11-18-022426-six-ios-workflows-local-pass-bbd30eb4
+
+Recorded 2026-11-18T02:24:26.423310+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected the completed local iPhone proof and documented the independent notice and PS test budgets.
+- **Evidence.** iOS 26.2 passed all six named cases, with no failures or skips, and verified owned simulator removal in the same run. [Change record](./runs/changes/2026-11-18-022426-six-ios-workflows-local-pass-bbd30eb4.json).
+- **Not claimed.** Hosted iOS, TestFlight, physical operation and human acceptance have separate evidence. No original requirement changed completion percentage.
+
+
+### 2026-11-18-021538-split-native-workflow-budget-594abe10
+
+Recorded 2026-11-18T02:15:38.648833+00:00 · Contributor: Codex · change
+
+- **Changed.** Run Privacy and Notices as its own iPhone UI test and require each of the six named workflows and verified disposal.
+- **Evidence.** The native runner tests enforce case names, run counts, failure and skip handling, source identity and removal of the simulator. [Change record](./runs/changes/2026-11-18-021538-split-native-workflow-budget-594abe10.json).
+- **Not claimed.** Full simulator execution, physical acceptance and distribution signing are separate gates.
+
+
+### 2026-11-18-015733-public-search-and-open-mobile-state-2a92d8be
+
+Recorded 2026-11-18T01:57:33.317941+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified the live phone guide and social draft automation, and selected the current scope and public route evidence.
+- **Evidence.** The public domain and Pages deployment match the reviewed build on four crawler and HTML files. The default-branch workflow produced three identical checked drafts. The current website, protocol, route and state checks passed. [Change record](./runs/changes/2026-11-18-015733-public-search-and-open-mobile-state-2a92d8be.json).
+- **Not claimed.** Google indexing, scheduled social publication, protected app signing and full mobile UI acceptance remain open.
+
+
+### 2026-11-18-015233-preserve-simulator-and-signing-evidence-33ffa2e7
+
+Recorded 2026-11-18T01:52:33.999663+00:00 · Contributor: Codex · change
+
+- **Changed.** Added the verified cleanup candidate and the current Xcode signing retry to the shared scope ledger and distribution guide.
+- **Evidence.** Hosted iOS 27.2 and three local runs verified removal. A fresh unsigned archive matched 36 resources. The UI deadline and protected signing timeout have separate receipts. [Change record](./runs/changes/2026-11-18-015233-preserve-simulator-and-signing-evidence-33ffa2e7.json).
+- **Not claimed.** The candidate still needs a complete native UI run and a signed TestFlight package. The ledger retains 70 open requirements.
+
+
+### 2026-11-18-014306-phone-search-engineering-evidence-3092640b
+
+Recorded 2026-11-18T01:43:06.844118+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the search guide and social draft workflow to the current public-route and website checks.
+- **Evidence.** All 32 website checks and the current route and state checks passed. [Change record](./runs/changes/2026-11-18-014306-phone-search-engineering-evidence-3092640b.json).
+- **Not claimed.** Search Console, reader adoption and scheduled publication remain separate.
+
+
+### 2026-11-18-013828-verify-phone-search-and-drafts-c64f68a3
+
+Recorded 2026-11-18T01:38:28.951593+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual canonical route checks and the ready-to-review draft pack.
+- **Evidence.** The built website has 36 canonical destinations, 20 tag summaries and a reciprocal guide link. All three social drafts match between the built and live inputs. Wrong canonicals, excluded pages and missing public claims refused generation. [Change record](./runs/changes/2026-11-18-013828-verify-phone-search-and-drafts-c64f68a3.json).
+- **Not claimed.** Production deployment, Google indexing, social network connection and publication are tracked separately.
+
+
+### 2026-11-18-013614-phone-search-and-social-drafts-19fdd706
+
+Recorded 2026-11-18T01:36:14.812270+00:00 · Contributor: Codex · change
+
+- **Changed.** Make the canonical PS guide discoverable for phone and computer searches and generate short social drafts from checked public pages.
+- **Evidence.** Generated three reviewable drafts against the live site. Each includes a verified canonical destination and visible claim checks. [Change record](./runs/changes/2026-11-18-013614-phone-search-and-social-drafts-19fdd706.json).
+- **Not claimed.** Search Console indexing and audience measurements remain unverified. Social posting requires a connected account and review.
+
 ### 2026-11-18-013522-android-preview-route-review-834f0786
 
 Recorded 2026-11-18T01:35:22.690589+00:00 · Contributor: Codex · change
@@ -9,7 +107,6 @@ Recorded 2026-11-18T01:35:22.690589+00:00 · Contributor: Codex · change
 - **Changed.** Reconciled the independent Android preview branch with the current web and public route inventories.
 - **Evidence.** All 32 website revalidation checks passed. The installed JVM and 137 engine comparison cases passed on the reconciled source. [Change record](./runs/changes/2026-11-18-013522-android-preview-route-review-834f0786.json).
 - **Not claimed.** Android emulator and physical TalkBack acceptance are pending. The preview carries zero new full scope closures.
-
 
 ## Unreleased — 2026-11-17
 
@@ -175,15 +272,6 @@ Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change
 - **Not claimed.** The community workbench runs on synthetic data. Live moderators, Android runtime and independent MT accuracy still need acceptance.
 
 
-### 2026-11-17-203801-android-emulator-host-refusal-8f0dd08f
-
-Recorded 2026-11-17T20:38:01.402946+00:00 · Contributor: Codex Android lane · change
-
-- **Changed.** Record the current hosted Android build and exact emulator prerequisites that prevented execution.
-- **Evidence.** Run 44171007663 compiled the APK, verified the development signature, and identified inaccessible KVM and a missing matching SDK license record. The downloaded APK matches its recorded engine and loader. [Change record](./runs/changes/2026-11-17-203801-android-emulator-host-refusal-8f0dd08f.json).
-- **Not claimed.** The emulator step stopped before installation and ran zero Android cases. N-014 remains open for Android Share and physical acceptance.
-
-
 ### 2026-11-17-203627-bound-python-stdlib-notices-e4b8ad4c
 
 Recorded 2026-11-17T20:36:27.391888+00:00 · Contributor: Codex · change
@@ -202,15 +290,6 @@ Recorded 2026-11-17T20:36:04.867937+00:00 · Contributor: Codex PM and community
 - **Not claimed.** F-137 still requires real moderator and operating acceptance. N-005 still needs exact tag correction binding. Current Android runtime and independent MT release validation remain open.
 
 
-### 2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00
-
-Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · change
-
-- **Changed.** Record the real hosted Android build and add a hosted emulator path with reviewed SDK package versions and an existing license match.
-- **Evidence.** Hosted run 44169646271 produced and verified an ephemeral test APK with zero permissions. The downloaded APK contains classes.dex and matches the recorded method and loader. Official metadata and local refusal controls passed for the new emulator step. [Change record](./runs/changes/2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00.json).
-- **Not claimed.** The first runner did not execute emulator cases. Actual Android runtime, physical usability and independent accuracy remain pending.
-
-
 ### 2026-11-17-203115-community-postgres-byte-reserve-bbb3e974
 
 Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engineering lane · change
@@ -218,15 +297,6 @@ Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engi
 - **Changed.** Reserve PostgreSQL document capacity and audit slots for pausing admissions and removing posts at saturation. Record the initial hosted PostgreSQL run.
 - **Evidence.** Initial isolated Linux PostgreSQL run passed 12 control groups and verified shutdown. The capacity correction passed 53 focused local tests and 17 actual CLI calls. The next hosted run will measure byte saturation against the corrected source. [Change record](./runs/changes/2026-11-17-203115-community-postgres-byte-reserve-bbb3e974.json).
 - **Not claimed.** Synthetic software evidence only. The new PostgreSQL saturation control still awaits execution. Original requirement closures, global scope, public posting and real collection stay outside this increment.
-
-
-### 2026-11-17-202759-android-hosted-java-compiler-efe1e9fa
-
-Recorded 2026-11-17T20:27:59.293759+00:00 · Contributor: Codex Android lane · change
-
-- **Changed.** Compile Java 8 lambdas with the JDK bootstrap classes and keep Android API stubs on the compiler classpath.
-- **Evidence.** Hosted run 44169342019 reached javac and exposed the LambdaMetafactory bootstrap error after its SDK, asset and session checks passed. Local packaging controls pass. [Change record](./runs/changes/2026-11-17-202759-android-hosted-java-compiler-efe1e9fa.json).
-- **Not claimed.** Corrected hosted compile, Android runtime and physical device acceptance remain pending. No original requirement closes.
 
 
 ### 2026-11-17-202519-current-development-evidence-index-c51fc553
@@ -265,15 +335,6 @@ Recorded 2026-11-17T18:01:19.800078+00:00 · Contributor: Codex - community engi
 - **Not claimed.** Synthetic development only. SQLite is not a real-user destination; remote PostgreSQL operating gates remain. No public endpoint, posting client, production authentication, actual moderator program, real collection, training, tag release or original requirement closure.
 
 
-### 2026-11-17-175729-android-share-offline-checker-bf7204be
-
-Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change
-
-- **Changed.** Add a bounded independent Android text Share checker around the existing offline PS engine, native review/edit/check/clear lifecycle, compact branded results and an existing-tools hosted APK build path.
-- **Evidence.** Actual pinned WebAssembly and Android loader match 137 current development/Unicode probes; 9 packaging controls and the actual JVM lifecycle program pass. Asset identity, notice checks and permission refusals remain explicit. [Change record](./runs/changes/2026-11-17-175729-android-share-offline-checker-bf7204be.json).
-- **Not claimed.** APK compilation and actual Android Share/WebView execution await hosted tools; physical devices, TalkBack, human usability, production signing and independent accuracy remain unproven. N-014 and original scope completion unchanged.
-
-
 ### 2026-11-17-151740-mt-private-evidence-workflow-a74f53af
 
 Recorded 2026-11-17T15:17:40.665896+00:00 · Contributor: Codex PM · change
@@ -290,6 +351,38 @@ Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
 - **Changed.** Publish the merged independent evidence workflows and persist exact Linux, protected-CI and public-site verification, retaining the earlier runtime download timeout.
 - **Evidence.** All11 required protected engineering checks passed and isolated non-root Linux SDK completed21 inspector cases plus24 declaration calls in12 groups with exact source. All296 published files match on each of2 origins with security headers:592 comparisons. Merged source bf35566 is deployed; scope202 originals,132 complete,70 open. [Change record](./runs/changes/2026-11-17-141623-independent-evidence-publication-6aeec82d.json).
 - **Not claimed.** No independently release-validated new tag, human/physical-device acceptance, TestFlight upload or original requirement closure. Target60 remains unmet. The first transfer timed out; a later actual-browser transfer and unchanged full verifier pass, with root cause unestablished. This metadata followup does not redeploy the application snapshot.
+
+### 2026-11-17-203801-android-emulator-host-refusal-8f0dd08f
+
+Recorded 2026-11-17T20:38:01.402946+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Record the current hosted Android build and exact emulator prerequisites that prevented execution.
+- **Evidence.** Run 44171007663 compiled the APK, verified the development signature, and identified inaccessible KVM and a missing matching SDK license record. The downloaded APK matches its recorded engine and loader. [Change record](./runs/changes/2026-11-17-203801-android-emulator-host-refusal-8f0dd08f.json).
+- **Not claimed.** The emulator step stopped before installation and ran zero Android cases. N-014 remains open for Android Share and physical acceptance.
+
+### 2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00
+
+Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Record the real hosted Android build and add a hosted emulator path with reviewed SDK package versions and an existing license match.
+- **Evidence.** Hosted run 44169646271 produced and verified an ephemeral test APK with zero permissions. The downloaded APK contains classes.dex and matches the recorded method and loader. Official metadata and local refusal controls passed for the new emulator step. [Change record](./runs/changes/2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00.json).
+- **Not claimed.** The first runner did not execute emulator cases. Actual Android runtime, physical usability and independent accuracy remain pending.
+
+### 2026-11-17-202759-android-hosted-java-compiler-efe1e9fa
+
+Recorded 2026-11-17T20:27:59.293759+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Compile Java 8 lambdas with the JDK bootstrap classes and keep Android API stubs on the compiler classpath.
+- **Evidence.** Hosted run 44169342019 reached javac and exposed the LambdaMetafactory bootstrap error after its SDK, asset and session checks passed. Local packaging controls pass. [Change record](./runs/changes/2026-11-17-202759-android-hosted-java-compiler-efe1e9fa.json).
+- **Not claimed.** Corrected hosted compile, Android runtime and physical device acceptance remain pending. No original requirement closes.
+
+### 2026-11-17-175729-android-share-offline-checker-bf7204be
+
+Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Add a bounded independent Android text Share checker around the existing offline PS engine, native review/edit/check/clear lifecycle, compact branded results and an existing-tools hosted APK build path.
+- **Evidence.** Actual pinned WebAssembly and Android loader match 137 current development/Unicode probes; 9 packaging controls and the actual JVM lifecycle program pass. Asset identity, notice checks and permission refusals remain explicit. [Change record](./runs/changes/2026-11-17-175729-android-share-offline-checker-bf7204be.json).
+- **Not claimed.** APK compilation and actual Android Share/WebView execution await hosted tools; physical devices, TalkBack, human usability, production signing and independent accuracy remain unproven. N-014 and original scope completion unchanged.
 
 ## Unreleased — 2026-11-16
 

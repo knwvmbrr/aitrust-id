@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-022945-bind-split-native-proof-ba515973",
+  "recorded_at": "2026-11-18T02:29:45.323761+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "436ec9a34dce32b4c93afd671b766537f3e331bf",
+  "changed": "Bound the six-case local iPhone proof to current website, protocol and route verification.",
+  "proves": "The current evidence packet links the passing local run and the separate hosted boot failure without changing any scope gate.",
+  "limits": "The hosted retry, protected signing and physical acceptance have separate outcomes.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "a83972a48e40b64f97ad54866cbeee68afa4cfb57bcbaf5e6e3b546e873e694b",
+    "eval/route-boundaries.json": "48fc1df885cba99bcc16b986d8ad241be5384c498a5c61cadf215c2f442bd85a",
+    "runs/2026-11-17-ios-split-website.json": "8cf1a48fffc02233eab43c9dd03dfa783d4f1dd4b16adcd546bd3d2581e20236",
+    "runs/2026-11-17-ios-split-protocol.json": "cc5fcc70888a8232bb9486f63ebe334db0155be4172b0d3c43ede9732935f756",
+    "runs/2026-11-17-ios-split-boundaries.json": "d1421492897055ba73b0b3a6d0799776526a197478663aebb1789b6e39fef8b0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-ios-split-boundaries.json",
+      "sha256": "d1421492897055ba73b0b3a6d0799776526a197478663aebb1789b6e39fef8b0"
+    },
+    {
+      "path": "runs/2026-11-17-split-native-share-workflow.json",
+      "sha256": "363f61ac4ddcc8edf63a026b9f3e6a0506f44221d68a904b6cb286db5c64c68c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T02:29:45.845907+00:00"
+    }
+  ]
+}

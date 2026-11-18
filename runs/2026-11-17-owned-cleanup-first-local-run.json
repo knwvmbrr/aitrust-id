@@ -1,0 +1,49 @@
+{
+  "kind": "local_owned_simulator_cleanup_with_notice_page_ui_failure",
+  "captured_at": "2026-11-17T23:57:30.877445+00:00",
+  "pass": false,
+  "failed_stage": "ui_workflows",
+  "runtime": "iOS 26.2",
+  "sdk": "27.2",
+  "xcode": "Xcode 27.2\nBuild version 27B52",
+  "runner_sha256": "35729b5909566b270720dde5d0f2f677b3d64a55ca868abb244579f0e486f368",
+  "ui_test_sha256": "9e58e1d78553ffa25d6e1ce534135d7d68bace7f7d18fd7fd0418c831fb90386",
+  "observed_ui_cases": {
+    "executed": 5,
+    "passed": 4,
+    "failed": 1
+  },
+  "notice_snapshot_after_tap": "Page 1 of 83",
+  "notice_expected_page_after_tap": 2,
+  "failure_interpretation": "The synthesized Next tap did not produce the expected page in the post-action accessibility snapshot. The cause was not isolated.",
+  "owned_simulator_removed": true,
+  "owned_simulator_delete_passed": true,
+  "owned_simulator_inventory_absent": true,
+  "cleanup": [
+    {
+      "operation": [
+        "simctl",
+        "delete"
+      ],
+      "outcome": "passed",
+      "timeout_seconds": 90,
+      "started_at": "2026-11-17T23:57:27.041369+00:00",
+      "finished_at": "2026-11-17T23:57:30.608992+00:00"
+    },
+    {
+      "operation": [
+        "simctl",
+        "list"
+      ],
+      "outcome": "passed",
+      "timeout_seconds": 15,
+      "started_at": "2026-11-17T23:57:30.609812+00:00",
+      "finished_at": "2026-11-17T23:57:30.869519+00:00"
+    }
+  ],
+  "source_unchanged_during_execution": true,
+  "receipt_sha256": "defd09a35aa23d0feaa48f615bd2218b7573a4785ebf75a1463b4e0ed8280dff",
+  "physical_device": false,
+  "independent_accuracy": false,
+  "requirements_closed": []
+}

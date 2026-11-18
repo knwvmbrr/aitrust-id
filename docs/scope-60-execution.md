@@ -205,8 +205,9 @@ The current executable lanes are:
 | Community engineer (`web_camo` agent) | Moderation/correction/appeal state engine, synthetic workbench and PostgreSQL transaction adapter | Adopted public/authenticated transport, actual moderators and real operation |
 
 Names identify the active agent handles, not a claim that their former SEO or
-visual work is still their assigned job. There are four concurrent engineers,
-including the PM. No second tag depends on MT's release, and no private-research
+visual work is still their assigned job. The table records work assignments for
+that increment. Use a current workflow link and status to check whether work is
+running. No second tag depends on MT's release, and no private-research
 endpoint is repurposed for community data.
 
 After each executable increment, review the original acceptance before closing
@@ -214,3 +215,28 @@ anything. Continue the next available engineering action when one specific step
 requires Michael, another real person, credentials or qualified judgment. The
 next tag integration queue is HP evidence composition, NF/FI evidence review and
 supported provenance evidence—not production assertions from unvalidated models.
+
+## Simulator custody and public discovery pilot — November 17
+
+N-013 has source-bound evidence that the candidate runner deleted its owned
+simulator and verified removal on local iOS 26.2 and hosted iOS 27.2. The hosted
+UI check completed notice navigation and timed out during the later PS checks.
+Signing stopped at the protected Share key request. The iPhone requirement
+remains 80% with the current UI, signing, TestFlight and physical gates open.
+[Hosted results](../runs/2026-11-17-hosted-ios27-owned-cleanup.json)
+
+The web team verified the canonical mobile guide and generated three
+reviewable drafts from live pages. Search Console measurement and social
+account connection remain open. [Discovery and draft evidence](../runs/2026-11-17-phone-search-and-social-drafts.json)
+
+The ledger has 132 complete and 70 open across all 202 original requirements.
+Ten fully accepted requirements remain to reach the intermediate target.
+
+## Independent iPhone test budgets — November 17
+
+The local iOS 26.2 run passed all six named screens and lifecycle checks,
+including the separate Privacy and Notices case and both PS outcomes. The
+same run verified simulator removal. N-013 remains at 80% with signing,
+TestFlight and physical acceptance open.
+[Local proof](../runs/2026-11-17-split-native-share-workflow.json) ·
+[Hosted iOS 27.2 run](https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825)

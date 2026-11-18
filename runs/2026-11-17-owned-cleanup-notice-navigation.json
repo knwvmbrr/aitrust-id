@@ -1,0 +1,25 @@
+{
+  "kind": "local_cleanup_and_notice_page_transitions_with_keyboard_failure",
+  "captured_at": "2026-11-18T00:06:08.733151+00:00",
+  "pass": false,
+  "failed_stage": "ui_workflows",
+  "runtime": "iOS 26.2",
+  "sdk": "27.2",
+  "ui_test_sha256": "d4afc3ba87181f3c87fe356db49bd10f90fb23fb7551607875194f14cec9045c",
+  "runner_sha256": "35729b5909566b270720dde5d0f2f677b3d64a55ca868abb244579f0e486f368",
+  "observed_ui_cases": {
+    "executed": 5,
+    "passed": 4,
+    "failed": 1
+  },
+  "notice_page_transitions_passed": true,
+  "observed_failure": "The fixed coordinate tap did not lead to a visible keyboard or the known simulator onboarding banner before the focus deadline.",
+  "owned_simulator_removed": true,
+  "owned_simulator_delete_passed": true,
+  "owned_simulator_inventory_absent": true,
+  "source_unchanged_during_execution": true,
+  "receipt_sha256": "44ec36aaecf39bf5c2082ad57d95c4f1c479ed173d360e4b8eb04f0a683ee6a9",
+  "physical_device": false,
+  "independent_accuracy": false,
+  "requirements_closed": []
+}
