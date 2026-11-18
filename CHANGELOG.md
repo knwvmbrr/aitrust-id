@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-161247-bind-testflight-compliance-verification-9f514396
+
+Recorded 2026-11-18T16:12:47.395367+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the scope verification receipts after the TestFlight compliance and library evidence changes.
+- **Evidence.** Forty protocol commands, thirty-two site commands and the route boundary verification pass against current inputs. [Change record](./runs/changes/2026-11-18-161247-bind-testflight-compliance-verification-9f514396.json).
+- **Not claimed.** Apple’s questionnaire remains unanswered. Scope is 132 complete and 70 open.
+
+
 ### 2026-11-18-160918-testflight-compliance-evidence-9c82687d
 
 Recorded 2026-11-18T16:09:18.684938+00:00 · Contributor: Codex · change

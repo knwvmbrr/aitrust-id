@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T16:09:18.651933+00:00",
+  "updated": "2026-11-18T16:12:47.363713+00:00",
   "active_increment": "Verified the TestFlight compliance blocker, audited the exact signed iPhone runtime, and matched selected embedded source archives. Scope remains 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1136,13 +1136,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-18-pyodide-origin-protocol.json",
+    "protocol": "runs/2026-11-18-testflight-compliance-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-18-pyodide-origin-website.json",
+    "website": "runs/2026-11-18-testflight-compliance-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T16:09:18.651933+00:00",
+  "updated_at": "2026-11-18T16:12:47.363713+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3680,6 +3680,6 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-18-pyodide-origin-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-18-testflight-compliance-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json"
 }

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-161247-bind-testflight-compliance-verification-9f514396",
+  "recorded_at": "2026-11-18T16:12:47.395367+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2643715f53b44c1e063c27b7542a05877dd0983f",
+  "changed": "Refresh the scope verification receipts after the TestFlight compliance and library evidence changes.",
+  "proves": "Forty protocol commands, thirty-two site commands and the route boundary verification pass against current inputs.",
+  "limits": "Apple\u2019s questionnaire remains unanswered. Scope is 132 complete and 70 open.",
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "58d9ae0f8eb6c9fb1c346e5da7672cc20b9cd0c89fa4f22e2244eadf1adb437e",
+    "runs/2026-11-18-testflight-compliance-boundaries.json": "eda3d1a1d8eb6e8a0df1888a40f4f7f9de1c792310d155b313a5c19988bf13e6",
+    "runs/2026-11-18-testflight-compliance-protocol.json": "a1f26f25a03d147f5c9f4a1bdf7d57467eaf40a87c815aae927d24bc0a5df228",
+    "runs/2026-11-18-testflight-compliance-website.json": "18620417b9b6944e10f03eb53bcc5cf55e07dbdcc4a1cd3600d146066fc8519b",
+    "state.json": "6dbfdcd9825943e63a7de644228f846c72c8a840eba93b17b58cb00594f2d3b0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-testflight-compliance-protocol.json",
+      "sha256": "a1f26f25a03d147f5c9f4a1bdf7d57467eaf40a87c815aae927d24bc0a5df228"
+    },
+    {
+      "path": "runs/2026-11-18-testflight-compliance-website.json",
+      "sha256": "18620417b9b6944e10f03eb53bcc5cf55e07dbdcc4a1cd3600d146066fc8519b"
+    },
+    {
+      "path": "runs/2026-11-18-testflight-compliance-boundaries.json",
+      "sha256": "eda3d1a1d8eb6e8a0df1888a40f4f7f9de1c792310d155b313a5c19988bf13e6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T16:12:48.808454+00:00"
+    }
+  ]
+}
