@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-024833-close-hosted-ios-workflow-1bace56b",
+  "recorded_at": "2026-11-18T02:48:33.366433+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0444783837cda6b5e430c013ec76addba315ccba",
+  "changed": "Recorded the completed hosted iPhone simulator and unsigned archive checks.",
+  "proves": "The exact hosted iOS 27.2 source passed all six named Xcode UI tests, verified removal of its simulator, and matched 36 archived resources.",
+  "limits": "The archive remains unsigned. TestFlight upload, real device and human acceptance remain open.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "6d97829297ae72836269e2f4270b2df289833bb89c4b8dff8760f4cf79f2f97a",
+    "runs/2026-11-17-hosted-split-ios27-pass.json": "e5ca6e76dbb1d7a4f751850893294ddc5b76dd01b49bc1a07ba11a2552c2f992"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-hosted-split-ios27-pass.json",
+      "sha256": "e5ca6e76dbb1d7a4f751850893294ddc5b76dd01b49bc1a07ba11a2552c2f992"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T02:48:33.977164+00:00"
+    }
+  ]
+}
