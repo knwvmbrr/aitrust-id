@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T02:29:45.295128+00:00",
-  "active_increment": "All six named local iPhone workflows and owned simulator removal passed. Hosted verification and protected Share signing are separate. Original scope is 132 complete and 70 open.",
+  "updated": "2026-11-18T02:48:33.315047+00:00",
+  "active_increment": "All six named iPhone workflows and simulator removal passed on local iOS 26.2 and hosted iOS 27.2. The hosted unsigned archive verified 36 resources. Protected Share signing, TestFlight and physical acceptance are open. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1142,7 +1142,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T02:29:45.295128+00:00",
+  "updated_at": "2026-11-18T02:48:33.315047+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2037,16 +2037,18 @@
       "failed_stage": "ui_workflows"
     },
     "notice_pagination": "runs/2026-11-17-ios-notice-page-reconstruction.json",
-    "current_hosted_27_2_acceptance": false,
+    "current_hosted_27_2_acceptance": true,
     "current_hosted_ci": {
+      "evidence": "runs/2026-11-17-hosted-split-ios27-pass.json",
       "runtime": "iOS 27.2",
-      "ui_workflows_passed": 5,
-      "pass": false,
-      "failed_stage": "cleanup",
-      "owned_simulator_removed": false,
-      "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
+      "pass": true,
+      "run_id": 44223165515,
+      "source_commit": "436ec9a34dce32b4c93afd671b766537f3e331bf",
+      "ui_workflows_passed": 6,
+      "owned_simulator_removed": true,
+      "unsigned_archive_resources": 36
     },
-    "current_hosted_27_2_ui_pass": false,
+    "current_hosted_27_2_ui_pass": true,
     "cleanup_candidate": {
       "source_commit": "e317ecacfcc95f2e69113c4c8a099772aba9c3bb",
       "branch": "codex/ios-owned-cleanup",
@@ -2064,7 +2066,15 @@
     "previous_workflow_proof": "runs/2026-11-17-paged-notices-native-share-workflow.json",
     "split_workflow_candidate_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825",
     "split_workflow_hosted_first_attempt": "runs/2026-11-17-hosted-split-ios27-boot.json",
-    "split_workflow_hosted_retry": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44223165515"
+    "split_workflow_hosted_retry": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44223165515",
+    "previous_hosted_ci": {
+      "runtime": "iOS 27.2",
+      "ui_workflows_passed": 5,
+      "pass": false,
+      "failed_stage": "cleanup",
+      "owned_simulator_removed": false,
+      "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
+    }
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",

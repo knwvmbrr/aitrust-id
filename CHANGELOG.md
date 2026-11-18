@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-024833-close-hosted-ios-workflow-1bace56b
+
+Recorded 2026-11-18T02:48:33.366433+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the completed hosted iPhone simulator and unsigned archive checks.
+- **Evidence.** The exact hosted iOS 27.2 source passed all six named Xcode UI tests, verified removal of its simulator, and matched 36 archived resources. [Change record](./runs/changes/2026-11-18-024833-close-hosted-ios-workflow-1bace56b.json).
+- **Not claimed.** The archive remains unsigned. TestFlight upload, real device and human acceptance remain open.
+
+
 ### 2026-11-18-022945-bind-split-native-proof-ba515973
 
 Recorded 2026-11-18T02:29:45.323761+00:00 · Contributor: Codex · change
