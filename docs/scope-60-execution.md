@@ -282,3 +282,11 @@ physical testing have not been verified. The ledger remains **132 complete /
 Review identified equivalent P-256 encodings. The updated policy compares
 public key identity rather than encoding, including for authority exclusion.
 [All nine witness controls passed](../runs/2026-11-18-revocation-witness-key-identity.json). The count is unchanged.
+
+## November 18: Pyodide release origin
+
+The six-archive verification matched all five bundled runtime members to the
+upstream core release and checked seven build recipes. The verified inputs
+include CPython, Emscripten and the Pyodide build helper. F-057 and X-02 still
+need dependency and redistribution coverage. The ledger records 132 complete
+and 70 open. [Execution receipt](../runs/2026-11-18-pyodide-release-origin.json).

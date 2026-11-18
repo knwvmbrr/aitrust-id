@@ -79,3 +79,32 @@ No global requirement milestone changes with this increment.
 [CPython 3.14.2 license and acknowledgements](https://github.com/python/cpython/blob/v3.14.2/Doc/license.rst) ·
 [CPython 3.14.2 SPDX inventory](https://github.com/python/cpython/blob/v3.14.2/Misc/sbom.spdx.json) ·
 [Pyodide 314.0.7 source and recipes](https://github.com/pyodide/pyodide/tree/314.0.7).
+
+## Pyodide WASM release origin
+
+The release check compares the five bundled runtime members with both the
+npm tarball and Pyodide’s published core tarball. It pins the corresponding
+release commit and records the versions and hashes in its CPython and
+Emscripten build recipes. An offline verifier accepts saved archives and
+replays these checks without executing anything from them. The release
+files, the recipe and the separately downloaded CPython source have their
+own digests.
+
+This evidence covers distribution byte identity and the upstream source
+pins. A build from source, the Emscripten toolchain installation and all
+embedded library obligations are still pending.
+
+The [manifest](../sbom/nested-runtime/pyodide-wasm-release.json) lists the six
+archive URLs, saved filenames, sizes and SHA-256 digests. Save the files under
+those names and run the verification locally.
+
+```sh
+python3 scripts/verify-pyodide-release-origin.py --replay-dir /path/to/saved/archives
+```
+
+Running without `--replay-dir` checks the manifest against the npm lock and the
+asset inventory. With the archives present, it also checks the npm integrity
+hash, compares the five release files, reads seven recipe files and verifies the
+three source archive digests. The Pyodide source and the build helper use the
+release commit and submodule revision. The CPython digest comes from the
+recipe. The Emscripten source comes from its version 5.0.3 tag.
