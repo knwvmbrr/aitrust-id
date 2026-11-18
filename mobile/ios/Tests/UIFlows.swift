@@ -46,12 +46,16 @@ final class UIFlows: XCTestCase {
         let interruptedOrReady = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
             app.keyboards.firstMatch.exists || notice.exists
         }, object: input)
-        XCTAssertEqual(XCTWaiter.wait(for: [interruptedOrReady], timeout: 10), .completed)
+        let focused = XCTWaiter.wait(for: [interruptedOrReady], timeout: 5) == .completed
         if notice.exists {
             notice.swipeUp()
             let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: notice)
             XCTAssertEqual(XCTWaiter.wait(for: [dismissed], timeout: 5), .completed)
             input.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.1)).tap()
+        } else if !focused && !app.keyboards.firstMatch.exists {
+            // XCTest can lose the first coordinate gesture on a newly launched
+            // simulator. Make one standard element tap and still require typing.
+            input.tap()
         }
         XCTAssertTrue(app.keyboards.firstMatch.waitForExistence(timeout: 10))
     }
@@ -113,15 +117,26 @@ final class UIFlows: XCTestCase {
             XCTAssertLessThanOrEqual(firstPage.count, 3_000)
             if id == "stdlib" {
                 let page = app.staticTexts["privacy-page"]
+                func waitForPage(_ number: Int) {
+                    let changed = XCTNSPredicateExpectation(
+                        predicate: NSPredicate(format: "label BEGINSWITH %@", "Page \(number) of "),
+                        object: page
+                    )
+                    XCTAssertEqual(XCTWaiter.wait(for: [changed], timeout: 5), .completed,
+                                   "Expected the reader to display page \(number)")
+                }
                 XCTAssertTrue(page.label.hasPrefix("Page 1 of "))
                 XCTAssertFalse(app.buttons["privacy-previous"].isEnabled)
-                app.buttons["privacy-next"].tap()
-                XCTAssertTrue(page.label.hasPrefix("Page 2 of "))
+                let next = app.buttons["privacy-next"]
+                XCTAssertTrue(next.isEnabled && next.isHittable)
+                next.tap()
+                waitForPage(2)
                 let secondPage = notices.value as? String ?? ""
                 XCTAssertFalse(secondPage.isEmpty)
                 XCTAssertNotEqual(firstPage, secondPage)
                 XCTAssertLessThanOrEqual(secondPage.count, 3_000)
                 app.buttons["privacy-previous"].tap()
+                waitForPage(1)
                 XCTAssertEqual(notices.value as? String, firstPage)
             }
             app.buttons["privacy-index"].tap()

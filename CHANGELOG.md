@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-18
+
+### 2026-11-18-011720-owned-simulator-cleanup-candidate-2587c37b
+
+Recorded 2026-11-18T01:17:20.795717+00:00 · Contributor: Codex · change
+
+- **Changed.** Request direct deletion of the owned simulator, verify registry removal, and explicitly check the notice pagination and editor keyboard UI states.
+- **Evidence.** Two real local runs deleted their simulator and confirmed its removal. The second run passed the notice navigation case and exposed a separate editor focus failure. The signed archive retry reached the protected access request and expired. [Change record](./runs/changes/2026-11-18-011720-owned-simulator-cleanup-candidate-2587c37b.json).
+- **Not claimed.** The pending full UI rerun and hosted cleanup need current execution. No signed package, TestFlight upload, phone acceptance or requirement closure was recorded.
+
+
 ## Unreleased — 2026-11-17
 
 ### 2026-11-17-225245-ios27-notice-record-revalidation-c584eebb

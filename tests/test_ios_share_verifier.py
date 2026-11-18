@@ -205,7 +205,8 @@ def lifecycle_run(tmp_path, monkeypatch):
     runtime = 'com.apple.CoreSimulator.SimRuntime.iOS-synthetic'
     unchanged = {'synthetic-source.swift': 'a' * 64}
 
-    def run(*, failure=None, failure_exception=None, summary=None, source_states=None):
+    def run(*, failure=None, failure_exception=None, summary=None, source_states=None,
+            inventory=None):
         trace, calls = [], []
         states = source_states or [unchanged, unchanged, unchanged]
         output = tmp_path / 'proof'
@@ -223,11 +224,14 @@ def lifecycle_run(tmp_path, monkeypatch):
                    'Assets/device-manifest.json': json.dumps({'method_sha256': 'a' * 64}).encode(),
                    'Assets/native-assets.json': b'{"hashes":{}}'}
         def command(argv, **options):
-            if argv[1:3] == ['simctl', 'list']:
+            if argv[1:4] == ['simctl', 'list', 'devices']:
+                assert argv[4:] == [identity, '--json']
+                name, value = 'inventory', '{"devices":{}}' if inventory is None else inventory
+            elif argv[1:4] == ['simctl', 'list', 'runtimes']:
                 name, value = 'runtimes', json.dumps({'runtimes': [{'identifier': runtime,
                     'isAvailable': True, 'name': 'Synthetic iOS', 'buildversion': 'synthetic'}]})
             elif argv[1:3] == ['simctl', 'create']: name, value = 'create', identity
-            elif argv[1:3] in [['simctl', action] for action in ['boot', 'bootstatus', 'shutdown', 'delete']]:
+            elif argv[1:3] in [['simctl', action] for action in ['boot', 'bootstatus', 'delete']]:
                 name, value = argv[2], ''
                 assert argv[3] == identity
             elif 'build-for-testing' in argv: name, value = 'build', ''
@@ -261,37 +265,55 @@ def lifecycle_run(tmp_path, monkeypatch):
 def test_completed_ui_is_reclaimed_before_exact_summary_and_final_identity(lifecycle_run):
     status, proof, trace, calls = lifecycle_run()
     assert status == 0 and proof['pass'] is True
-    ordered = ['ui', 'hash-2', 'shutdown', 'delete', 'summary', 'hash-3']
+    ordered = ['ui', 'hash-2', 'delete', 'inventory', 'summary', 'hash-3']
     assert [trace.index(name) for name in ordered] == sorted(trace.index(name) for name in ordered)
-    assert trace.count('shutdown') == trace.count('delete') == 1
+    assert trace.count('inventory') == trace.count('delete') == 1
     assert proof['post_ui_sources'] == proof['attempted_sources'] == proof['final_sources']
     assert proof['post_ui_source_unchanged'] is proof['source_unchanged_during_execution'] is True
     assert proof['owned_simulator_removed'] is True and proof['test_count'] == 5
-    for name, timeout in [('ui', 600), ('summary', 30), ('shutdown', 90), ('delete', 90)]:
+    assert proof['owned_simulator_delete_passed'] is proof['owned_simulator_inventory_absent'] is True
+    for name, timeout in [('ui', 600), ('summary', 30), ('delete', 90), ('inventory', 15)]:
         call = next(call for call in calls if call['name'] == name)
         assert call['timeout'] == timeout
-        assert call['cleanup'] is (name in ['shutdown', 'delete'])
+        assert call['cleanup'] is (name in ['delete', 'inventory'])
 
 
 def test_summary_deadline_keeps_post_ui_identity_and_original_failure(lifecycle_run):
     status, proof, trace, _ = lifecycle_run(failure='summary')
     assert status == 2 and proof['pass'] is False and proof['failed_stage'] == 'result'
     assert trace.index('delete') < trace.index('summary')
-    assert trace.count('shutdown') == trace.count('delete') == 1
+    assert trace.count('inventory') == trace.count('delete') == 1
     assert proof['owned_simulator_removed'] is True
     assert proof['post_ui_sources'] == proof['attempted_sources'] == proof['final_sources']
     assert proof['source_unchanged_during_execution'] is True
     assert 'sources' not in proof and 'test_count' not in proof
 
 
-@pytest.mark.parametrize('failed_action', ['shutdown', 'delete'])
+@pytest.mark.parametrize('failed_action', ['delete', 'inventory'])
 def test_failed_early_cleanup_stops_parsing_and_is_never_retried(lifecycle_run, failed_action):
     status, proof, trace, _ = lifecycle_run(failure=failed_action)
     assert status == 2 and proof['pass'] is False and proof['failed_stage'] == 'cleanup'
     assert proof['owned_simulator_removed'] is False
-    assert trace.count('shutdown') == trace.count('delete') == 1
+    assert trace.count('inventory') == trace.count('delete') == 1
+    assert proof['owned_simulator_delete_passed'] is (failed_action != 'delete')
+    assert proof['owned_simulator_inventory_absent'] is (None if failed_action == 'inventory' else True)
     assert 'summary' not in trace
     assert proof['post_ui_source_unchanged'] is True
+
+
+@pytest.mark.parametrize(('inventory', 'absent'), [
+    ('{"devices":{"iOS":[{"udid":"706597c7-9a9e-4f75-9de8-48f211d005d4"}]}}', False),
+    ('{"devices":{"iOS":[{"state":"Shutdown"}]}}', None),
+    ('{"devices":[]}', None),
+    ('not JSON', None),
+])
+def test_delete_success_requires_valid_inventory_and_exact_absence(lifecycle_run, inventory, absent):
+    status, proof, trace, _ = lifecycle_run(inventory=inventory)
+    assert status == 2 and proof['failed_stage'] == 'cleanup'
+    assert proof['owned_simulator_delete_passed'] is True
+    assert proof['owned_simulator_inventory_absent'] is absent
+    assert proof['owned_simulator_removed'] is False
+    assert 'summary' not in trace
 
 
 @pytest.mark.parametrize('failed_phase', ['build', 'ui'])
@@ -300,7 +322,7 @@ def test_earlier_failure_still_reclaims_owned_guest_once(lifecycle_run, failed_p
     assert status == 2 and proof['pass'] is False
     assert proof['failed_stage'] == ('build' if failed_phase == 'build' else 'ui_workflows')
     assert proof['owned_simulator_removed'] is True
-    assert trace.count('shutdown') == trace.count('delete') == 1 and 'summary' not in trace
+    assert trace.count('inventory') == trace.count('delete') == 1 and 'summary' not in trace
     assert ('post_ui_sources' in proof) is (failed_phase == 'ui')
 
 
@@ -334,7 +356,7 @@ def test_unavailable_source_snapshot_fails_closed_without_repeating_cleanup(life
     assert proof['source_unchanged_during_execution'] is False
     assert proof[boundary + '_sources_unavailable'] is True
     assert proof['owned_simulator_removed'] is True
-    assert trace.count('shutdown') == trace.count('delete') == 1
+    assert trace.count('inventory') == trace.count('delete') == 1
 
 
 def test_late_source_capture_failure_does_not_mask_summary_deadline(lifecycle_run):
@@ -346,13 +368,13 @@ def test_late_source_capture_failure_does_not_mask_summary_deadline(lifecycle_ru
     assert proof['final_sources_unavailable'] is True
     assert proof['source_unchanged_during_execution'] is False
     assert proof['owned_simulator_removed'] is True
-    assert trace.count('shutdown') == trace.count('delete') == 1
+    assert trace.count('inventory') == trace.count('delete') == 1
 
 
 def test_interrupted_cleanup_preserves_failure_report_and_original_interrupt(lifecycle_run, tmp_path):
     import json
     with pytest.raises(KeyboardInterrupt):
-        lifecycle_run(failure='shutdown', failure_exception=KeyboardInterrupt())
+        lifecycle_run(failure='delete', failure_exception=KeyboardInterrupt())
     proof = json.loads((tmp_path / 'proof/proof.json').read_text())
     assert proof['pass'] is False and proof['owned_simulator_removed'] is False
     assert proof['post_ui_source_unchanged'] is True

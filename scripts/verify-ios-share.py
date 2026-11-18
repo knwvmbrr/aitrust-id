@@ -65,6 +65,20 @@ def simulator_identity(value):
     return value
 
 
+def simulator_absent(raw, owned):
+    inventory = json.loads(raw)
+    groups = inventory.get('devices') if isinstance(inventory, dict) else None
+    if not isinstance(groups, dict) or any(not isinstance(devices, list) for devices in groups.values()):
+        raise ValueError('Simulator inventory unavailable')
+    identities = []
+    for devices in groups.values():
+        for device in devices:
+            if not isinstance(device, dict) or not isinstance(device.get('udid'), str):
+                raise ValueError('Simulator inventory has an invalid device')
+            identities.append(simulator_identity(device['udid']).lower())
+    return owned.lower() not in identities
+
+
 def host_capacity(raw, free_bytes):
     values = raw.split()
     if len(values) != 2 or not all(value.isascii() and value.isdecimal() and int(value) > 0
@@ -185,14 +199,26 @@ def main():
         report['owned_simulator_removed'] = False
         previous_stage = stage
         stage = 'cleanup'
-        clean = []
+        report['owned_simulator_delete_passed'] = False
+        report['owned_simulator_inventory_absent'] = None
         try:
-            for action in ['shutdown', 'delete']:
-                try:
-                    command(['xcrun', 'simctl', action, owned], timeout=90, cleanup=True)
-                    clean.append(action)
-                except (ValueError, OSError, subprocess.SubprocessError): pass
-            report['owned_simulator_removed'] = clean == ['shutdown', 'delete']
+            try:
+                command(['xcrun', 'simctl', 'delete', owned], timeout=90, cleanup=True,
+                        terminal_output=True)
+                report['owned_simulator_delete_passed'] = True
+            except (ValueError, OSError, subprocess.SubprocessError):
+                # A timed-out client may have already submitted the request.
+                # Preserve the failed operation and still observe device state.
+                pass
+            try:
+                raw = command(['xcrun', 'simctl', 'list', 'devices', owned, '--json'],
+                              timeout=15, cleanup=True)
+                report['owned_simulator_inventory_absent'] = simulator_absent(raw, owned)
+            except (ValueError, OSError, subprocess.SubprocessError):
+                pass
+            report['owned_simulator_removed'] = (
+                report['owned_simulator_delete_passed'] and
+                report['owned_simulator_inventory_absent'] is True)
             if not report['owned_simulator_removed']: report['pass'] = False
             return report['owned_simulator_removed']
         finally:

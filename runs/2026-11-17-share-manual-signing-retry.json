@@ -1,0 +1,25 @@
+{
+  "kind": "bounded_xcode_distribution_archive_retry",
+  "source_commit": "961617461be3dc7443ad26b185dd41e4397c80fa",
+  "previous_preflight": "runs/2026-11-17-paged-notice-signing-preflight.json",
+  "started_at": "2026-11-17T23:46:00.067056+00:00",
+  "captured_at": "2026-11-17T23:48:00.113629+00:00",
+  "finished_at": "2026-11-17T23:48:00.113629+00:00",
+  "archive_deadline_seconds": 120,
+  "command": "xcodebuild archive",
+  "manual_profile_bindings_verified": [
+    "com.aitrustid.app",
+    "com.aitrustid.app.share"
+  ],
+  "observed_codesign_target": "AITrustIDShare",
+  "protected_key_access_requested_at": "2026-11-17T23:46:09.909474+00:00",
+  "protected_key_access_source": "securityd Unified Log",
+  "protected_access_granted_observed": false,
+  "source_inputs_changed": false,
+  "archive_deadline": true,
+  "credential_or_keychain_changes": false,
+  "signed_archive_verified": false,
+  "apple_validation_performed": false,
+  "testflight_upload_performed": false,
+  "requirements_closed": []
+}

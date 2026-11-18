@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-011720-owned-simulator-cleanup-candidate-2587c37b",
+  "recorded_at": "2026-11-18T01:17:20.795717+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "961617461be3dc7443ad26b185dd41e4397c80fa",
+  "changed": "Request direct deletion of the owned simulator, verify registry removal, and explicitly check the notice pagination and editor keyboard UI states.",
+  "proves": "Two real local runs deleted their simulator and confirmed its removal. The second run passed the notice navigation case and exposed a separate editor focus failure. The signed archive retry reached the protected access request and expired.",
+  "limits": "The pending full UI rerun and hosted cleanup need current execution. No signed package, TestFlight upload, phone acceptance or requirement closure was recorded.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "scripts/verify-ios-share.py": "35729b5909566b270720dde5d0f2f677b3d64a55ca868abb244579f0e486f368",
+    "tests/test_ios_share_verifier.py": "8de576c302be65a11b0299535c0f6aa7b6e4aceb041dd536d41374c72b17354b",
+    "mobile/ios/Tests/UIFlows.swift": "9e784fd59fb9cf8843ef303de1857581236f57cc9fe62da8bac40095aa40e2c3",
+    "runs/2026-11-17-share-manual-signing-retry.json": "425fce28cf12ea1ebe9f0ea8b1df20b1490102e64a7ec6cf1b8367d5b092c5b1",
+    "runs/2026-11-17-owned-cleanup-first-local-run.json": "ef3af8c50dd7fbdc3edab28a9885b205acf6e7b13335c4771b10327d450dfa51",
+    "runs/2026-11-17-owned-cleanup-notice-navigation.json": "90ad89ad607b0251a7e82f3c59f898865a3755f0c1643d68327276b3a161f486"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-owned-cleanup-first-local-run.json",
+      "sha256": "ef3af8c50dd7fbdc3edab28a9885b205acf6e7b13335c4771b10327d450dfa51"
+    },
+    {
+      "path": "runs/2026-11-17-owned-cleanup-notice-navigation.json",
+      "sha256": "90ad89ad607b0251a7e82f3c59f898865a3755f0c1643d68327276b3a161f486"
+    },
+    {
+      "path": "runs/2026-11-17-share-manual-signing-retry.json",
+      "sha256": "425fce28cf12ea1ebe9f0ea8b1df20b1490102e64a7ec6cf1b8367d5b092c5b1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ios_share_verifier.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:17:26.862089+00:00"
+    }
+  ]
+}
