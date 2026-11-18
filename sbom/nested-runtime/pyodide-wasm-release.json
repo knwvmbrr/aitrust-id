@@ -1,0 +1,72 @@
+{
+  "format": "ai-trust-id-pyodide-wasm-release/v1",
+  "pyodide_version": "314.0.7",
+  "python_version": "3.14.2",
+  "emscripten_version": "5.0.3",
+  "pyodide_commit": "b1e4fcc2488962f6360a97f19b9982d6fdb5d16f",
+  "pyodide_build_commit": "79fb82b2a576a833a12f3889061ca976de2f4167",
+  "emscripten_commit": "285c424dfa9e83b03cf8490c65ceadb7c45f28eb",
+  "archives": {
+    "npm.tgz": {
+      "url": "https://registry.npmjs.org/pyodide/-/pyodide-314.0.7.tgz",
+      "bytes": 6488647,
+      "sha256": "66b7949e5a0cba2250b586d7e368bf12fb482800748d182c4618254b685ffaa0"
+    },
+    "core.tar.bz2": {
+      "url": "https://github.com/pyodide/pyodide/releases/download/314.0.7/pyodide-core-314.0.7.tar.bz2",
+      "bytes": 6757104,
+      "sha256": "2abdcc2e35208af406e07724cffa85bc582ced97e9028383ecf5462541393f95"
+    },
+    "source.tar.gz": {
+      "url": "https://codeload.github.com/pyodide/pyodide/tar.gz/b1e4fcc2488962f6360a97f19b9982d6fdb5d16f",
+      "bytes": 1465591,
+      "sha256": "a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9"
+    },
+    "build.tar.gz": {
+      "url": "https://codeload.github.com/pyodide/pyodide-build/tar.gz/79fb82b2a576a833a12f3889061ca976de2f4167",
+      "bytes": 632523,
+      "sha256": "c7409e2376725d36fbd8ed1229d1ec861c155bdfab8ddd707de6f89a9f0b9ca9"
+    },
+    "cpython.tgz": {
+      "url": "https://www.python.org/ftp/python/3.14.2/Python-3.14.2.tgz",
+      "bytes": 30601597,
+      "sha256": "c609e078adab90e2c6bacb6afafacd5eaf60cd94cf670f1e159565725fcd448d"
+    },
+    "emscripten.tar.gz": {
+      "url": "https://codeload.github.com/emscripten-core/emscripten/tar.gz/285c424dfa9e83b03cf8490c65ceadb7c45f28eb",
+      "bytes": 34477324,
+      "sha256": "8c8c413026dd7b86b0acf7e4b48cb718956c21a053887f2a628168dd1ba2cb33"
+    }
+  },
+  "recipe_hashes": {
+    ".gitmodules": "aee8bb7ac27894457992f05ffc74d2101bbed2c1ee04665d36eb84ec9407d63e",
+    ".github/workflows/main.yml": "9b27d8274323d6be25dfedad86f79c68ad4a6d295d8b51e864f9957c41b0dbed",
+    ".github/workflows/deploy_release.yml": "a1b4addd58543338b376142ec05d120ea044caed3ac8307cad722f47ba2c9e7f",
+    "Makefile": "3df6235bfc8776d3b6fe82df0ed1cc37b187351e88e6aa14e7e203b14e34b313",
+    "Makefile.envs": "d257f9fdeca74f68791b1a37ef6b0a3c07dea523e5c9ee79826c399cb5516eb3",
+    "cpython/Makefile": "fbeeebe3363fa9da54b6908c903a16bbf736af65647a9fbfe277c8e40eb785bf",
+    "emsdk/Makefile": "8b2dfe4111c8ba746ecd475b6ee4774776ec090dc255c147ec56146b06a03fc8"
+  },
+  "runtime_members": {
+    "pyodide.mjs": {
+      "bytes": 17931,
+      "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109"
+    },
+    "pyodide.asm.mjs": {
+      "bytes": 1250344,
+      "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635"
+    },
+    "pyodide.asm.wasm": {
+      "bytes": 9598218,
+      "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6"
+    },
+    "python_stdlib.zip": {
+      "bytes": 2545637,
+      "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+    },
+    "pyodide-lock.json": {
+      "bytes": 119077,
+      "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-155054-bind-verified-pyodide-origin-f99fc9fd",
+  "recorded_at": "2026-11-18T15:50:54.433955+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "35a02596ec4fdf66f06f0955a48a8c261f09ee86",
+  "changed": "Bind the Pyodide archive replay to the current site, protocol and route evidence.",
+  "proves": "Website and protocol revalidation passed, and all five runtime assets in the local website build matched the release manifest.",
+  "limits": "Release artifact signing, a source rebuild and complete dependency obligations remain open.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "state.json": "ce0f8b33b1558ed38ec22eba1600f6f695c102fba4fb286a544556f345c91559",
+    "eval/route-boundaries.json": "7072739a01bf3666e941bbf9ff91842d8923906e3f247eae408245c466d7b230",
+    "runs/2026-11-18-pyodide-origin-website.json": "1549fae54230ca20ff450c0b3c4d11bfded8c40db136a1af5b6edfb547623198",
+    "runs/2026-11-18-pyodide-origin-protocol.json": "25d5bfe5816f11480d23251f5d18db67b65db106c209de1986d49ae02c93e97f",
+    "runs/2026-11-18-pyodide-origin-boundaries.json": "5d2591f5fd4805daa20ea00286ce03e1f508c8c674a54ddcb99c0757ded36717"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-pyodide-origin-website.json",
+      "sha256": "1549fae54230ca20ff450c0b3c4d11bfded8c40db136a1af5b6edfb547623198"
+    },
+    {
+      "path": "runs/2026-11-18-pyodide-origin-protocol.json",
+      "sha256": "25d5bfe5816f11480d23251f5d18db67b65db106c209de1986d49ae02c93e97f"
+    },
+    {
+      "path": "runs/2026-11-18-pyodide-origin-boundaries.json",
+      "sha256": "5d2591f5fd4805daa20ea00286ce03e1f508c8c674a54ddcb99c0757ded36717"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T15:50:54.909404+00:00"
+    }
+  ]
+}

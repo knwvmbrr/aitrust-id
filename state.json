@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T15:14:23.276377+00:00",
-  "active_increment": "Added verified offline signing and verification of revocation witness observations. Mac browser sessions still require Apple sign-in to check TestFlight installability. Original scope: 132 complete, 70 open.",
+  "updated": "2026-11-18T15:50:52.623919+00:00",
+  "active_increment": "Verified the five bundled Pyodide files against the upstream core archive and retained exact source archives. Scope remains 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -792,7 +792,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-18T15:10:42.848744+00:00",
+    "audited_at": "2026-11-18T15:46:57.961717+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -850,8 +850,8 @@
     "latest_increment_publication": "runs/2026-11-17-runtime-notices-publication.json",
     "published_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
     "latest_increment_candidate_ids": [
-      "F-125",
-      "N-013"
+      "F-057",
+      "X-02"
     ],
     "intermediate_target_open_records": 60,
     "intermediate_remaining_closures": 10
@@ -1136,13 +1136,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-18-witness-identity-protocol.json",
+    "protocol": "runs/2026-11-18-pyodide-origin-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-18-witness-identity-website.json",
+    "website": "runs/2026-11-18-pyodide-origin-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T15:14:23.276377+00:00",
+  "updated_at": "2026-11-18T15:50:52.623919+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3676,5 +3676,6 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-18-witness-identity-boundaries.json"
+  "current_route_boundaries": "runs/2026-11-18-pyodide-origin-boundaries.json",
+  "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json"
 }

@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-155054-bind-verified-pyodide-origin-f99fc9fd
+
+Recorded 2026-11-18T15:50:54.433955+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the Pyodide archive replay to the current site, protocol and route evidence.
+- **Evidence.** Website and protocol revalidation passed, and all five runtime assets in the local website build matched the release manifest. [Change record](./runs/changes/2026-11-18-155054-bind-verified-pyodide-origin-f99fc9fd.json).
+- **Not claimed.** Release artifact signing, a source rebuild and complete dependency obligations remain open.
+
+
+### 2026-11-18-154658-verify-pyodide-wasm-release-origin-478c80ff
+
+Recorded 2026-11-18T15:46:58.742277+00:00 · Contributor: Codex · change
+
+- **Changed.** Pin the upstream Pyodide release archives and add an offline replay against the npm lock and bundled runtime inventory.
+- **Evidence.** Six real archives replayed successfully. All five runtime files match the upstream core release byte for byte, and seven recipe files match their retained digests. [Change record](./runs/changes/2026-11-18-154658-verify-pyodide-wasm-release-origin-478c80ff.json).
+- **Not claimed.** A source rebuild, platform coverage, redistribution decisions and release artifact attestation remain open. No full requirement closed.
+
+
 ### 2026-11-18-151425-bind-revalidated-witness-identity-3d9ed90e
 
 Recorded 2026-11-18T15:14:25.064747+00:00 · Contributor: Codex · change

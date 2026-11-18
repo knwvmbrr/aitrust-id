@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-154658-verify-pyodide-wasm-release-origin-478c80ff",
+  "recorded_at": "2026-11-18T15:46:58.742277+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "35a02596ec4fdf66f06f0955a48a8c261f09ee86",
+  "changed": "Pin the upstream Pyodide release archives and add an offline replay against the npm lock and bundled runtime inventory.",
+  "proves": "Six real archives replayed successfully. All five runtime files match the upstream core release byte for byte, and seven recipe files match their retained digests.",
+  "limits": "A source rebuild, platform coverage, redistribution decisions and release artifact attestation remain open. No full requirement closed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/nested-runtime-evidence.md": "c5d7e5105f3717378efc0a17472deabd3ba2652434c2c5976d417fad58f81958",
+    "docs/scope-60-execution.md": "8caaa02314d9f082449294256093d9620d9ca97e267aa35e9b68e94afb0e11d0",
+    "docs/scope-progress.json": "7a58270cde8916da1a37a0ef6005a94e3cc35c2c3944252e1b56109e1ee89d54",
+    "docs/scope-progress.md": "246fce0eaf2a7bda2a77a0cf31991f3e4df60c427a2dd7f2d301dfff8e3a9942",
+    "runs/2026-11-18-pyodide-release-origin.json": "b19aef89fdf92c409d05cc6276d592190e76cc1f9357b51502e22779e88d6f89",
+    "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+    "scripts/verify-pyodide-release-origin.py": "e24cf187542f828847e8626a27671cedbfa446e03005ef1eaeb430168ff58209",
+    "scripts/verify-route-boundaries.py": "d8941d3ef3885118a383ca6a023082ccc5446343fd69bd09b0d3bb38a22c0f69",
+    "site/public/reference/public-scope.json": "cbcd0d11430732dc4176146f2fd4917dba86cd3d60d30538519cdbdf3e525daf",
+    "site/src/public-scope.json": "cbcd0d11430732dc4176146f2fd4917dba86cd3d60d30538519cdbdf3e525daf",
+    "site/src/scope-manifest.json": "ff2b067918eddc8474c8090787c76d7f1f128e81629063c409a48e0644f69d2e",
+    "state.json": "19b393b18b8a7f6b5a4d4ea88d7ce359bcf203c026ca1134d1a12e63e0aabdf3",
+    "tests/test_pyodide_release_origin.py": "1b431237e3589a4f80b5bf34e1cdb082000ea262ea99b922090495c1ede8343b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-pyodide-release-origin.json",
+      "sha256": "b19aef89fdf92c409d05cc6276d592190e76cc1f9357b51502e22779e88d6f89"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T15:46:59.433944+00:00"
+    }
+  ]
+}

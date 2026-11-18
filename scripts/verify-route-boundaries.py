@@ -546,6 +546,7 @@ PATTERNS += ('tools/community_*.py','scripts/*community*.py','tests/test_communi
 PATTERNS += ('tools/nested_runtime_inventory.py','scripts/verify-nested-runtime.py',
              'tests/test_nested_runtime_inventory.py','sbom/nested-runtime/*',
              'docs/nested-runtime-*.md')
+PATTERNS += ('scripts/verify-pyodide-release-origin.py', 'tests/test_pyodide_release_origin.py')
 
 PATTERNS += ('tests/offline-worker-cache.cjs',)
 

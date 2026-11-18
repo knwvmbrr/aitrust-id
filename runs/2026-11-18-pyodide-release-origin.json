@@ -1,0 +1,21 @@
+{
+  "kind": "archive_release_origin_replay",
+  "captured_at": "2026-11-18T15:46:57.961717+00:00",
+  "pass": true,
+  "replayed_archives": 6,
+  "matching_runtime_members": 5,
+  "matching_recipe_files": 7,
+  "focused_controls_passed": 2,
+  "sources": {
+    "scripts/verify-pyodide-release-origin.py": "e24cf187542f828847e8626a27671cedbfa446e03005ef1eaeb430168ff58209",
+    "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "sbom/assets/notices.json": "29afaecdb0b6cf6f935d13d3beed67800b8e5f2f1408df75e4ffd6d52b1c66d5",
+    "tests/test_pyodide_release_origin.py": "1b431237e3589a4f80b5bf34e1cdb082000ea262ea99b922090495c1ede8343b"
+  },
+  "upstream_release": "https://github.com/pyodide/pyodide/releases/tag/314.0.7",
+  "wasm_rebuilt_from_source": false,
+  "full_dependency_coverage": false,
+  "permission_cleared": false,
+  "requirements_closed": []
+}
