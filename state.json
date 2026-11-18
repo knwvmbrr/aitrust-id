@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T02:48:33.315047+00:00",
-  "active_increment": "All six named iPhone workflows and simulator removal passed on local iOS 26.2 and hosted iOS 27.2. The hosted unsigned archive verified 36 resources. Protected Share signing, TestFlight and physical acceptance are open. Original scope is 132 complete and 70 open.",
+  "updated": "2026-11-18T13:41:46.855733+00:00",
+  "active_increment": "iPhone build 1.0 (1) signed, passed Apple package validation and uploaded for internal TestFlight. App Store Connect processing and real-device acceptance remain unverified. Original scope: 132 complete, 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -792,7 +792,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-17T22:48:27.698232+00:00",
+    "audited_at": "2026-11-18T13:35:32.222337+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -850,8 +850,7 @@
     "latest_increment_publication": "runs/2026-11-17-runtime-notices-publication.json",
     "published_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
     "latest_increment_candidate_ids": [
-      "F-019a",
-      "F-025"
+      "N-013"
     ],
     "intermediate_target_open_records": 60,
     "intermediate_remaining_closures": 10
@@ -1136,13 +1135,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-ios-split-protocol.json",
+    "protocol": "runs/2026-11-18-testflight-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-17-ios-split-website.json",
+    "website": "runs/2026-11-18-testflight-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T02:48:33.315047+00:00",
+  "updated_at": "2026-11-18T13:41:46.855733+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1990,7 +1989,7 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "developer_share_workflow_passes_physical_acceptance_open",
+    "status": "internal_testflight_upload_completed_processing_and_physical_acceptance_open",
     "requirement": "N-013",
     "percent_complete": 80,
     "workflow_proof": "runs/2026-11-17-split-native-share-workflow.json",
@@ -2016,8 +2015,8 @@
     "workflow_current_source_pass": true,
     "publication_pending": false,
     "signing_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
-    "current_candidate_apple_validation": false,
-    "current_candidate_uploaded": false,
+    "current_candidate_apple_validation": true,
+    "current_candidate_uploaded": true,
     "historical_hosted_ci": {
       "pass": true,
       "run_id": 42655612677,
@@ -2074,7 +2073,11 @@
       "failed_stage": "cleanup",
       "owned_simulator_removed": false,
       "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
-    }
+    },
+    "current_signed_archive": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+    "current_apple_validation": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+    "current_testflight_upload": "runs/2026-11-18-ios-testflight-internal-upload.json",
+    "testflight_processing_verified": false
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3669,5 +3672,5 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-17-ios-split-boundaries.json"
+  "current_route_boundaries": "runs/2026-11-18-testflight-boundaries.json"
 }

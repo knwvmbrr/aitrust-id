@@ -3,7 +3,7 @@
 AI Trust ID has a separate App Store Connect record, saved in **Prepare for
 Submission**, and registered identifiers `com.aitrustid.app` and
 `com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
-release. No build has been uploaded or submitted to Apple.
+release. The App Store version has not been submitted for public review.
 
 The saved app-information draft uses **Check shared text offline**, category
 **Utilities**, and the existing public privacy-policy URL. Privacy declarations
@@ -37,7 +37,7 @@ profiles to the existing certificate. See the
 [Keychain diagnosis](../runs/2026-11-17-ios-signing-keychain-diagnosis.json).
 An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
 [Apple validation on November 15](../runs/2026-11-15-apple-package-validation-passed.json).
-The November 17 candidate still needs signing, validation and upload. Keys, profiles and build
+The November 17 signing result was provisional. Keys, profiles and build
 artifacts stay private.
 
 ### Subsequent signing and simulator check
@@ -57,9 +57,19 @@ while waiting for a second PS result.
 The current suite runs notice navigation separately. All six named workflows
 and simulator removal passed together on local iOS 26.2.
 [Local proof](../runs/2026-11-17-split-native-share-workflow.json) ·
-[Hosted iOS 27.2 run](https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825)
+[Hosted iOS 27.2 proof](../runs/2026-11-17-hosted-split-ios27-pass.json)
 
-Distribution signing, TestFlight upload and physical acceptance remain open.
+## November 18 distribution
+
+The current app and Share extension were signed with the existing profiles.
+The exported build **1.0 (1)** preserves all 36 expected runtime and notice
+resources and passed all Apple Organizer validation checks. See the
+[signed build and validation receipt](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json).
+Xcode confirmed that [the internal TestFlight upload completed](../runs/2026-11-18-ios-testflight-internal-upload.json).
+Apple’s processing status and availability to testers were not verified: the
+App Store Connect dashboard returned to sign-in. This build was designated
+for internal TestFlight only. Physical iPhone, VoiceOver and outside-user
+acceptance remain open.
 
 The [listing draft record](../runs/2026-11-17-ios-listing-drafts.json) covers four
 actual screenshots of the initial checker in Light and Dark mode. The simulator

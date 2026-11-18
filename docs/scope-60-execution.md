@@ -240,3 +240,12 @@ same run verified simulator removal. N-013 remains at 80% with signing,
 TestFlight and physical acceptance open.
 [Local proof](../runs/2026-11-17-split-native-share-workflow.json) ·
 [Hosted iOS 27.2 run](https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825)
+
+## November 18: internal iPhone beta upload
+
+N-013 stays at 80% and the ledger stays at **132 complete / 70 open**.
+The current app and Share extension signed with the existing profiles.
+[Apple validated build 1.0 (1)](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json), and
+[Xcode confirmed the internal TestFlight upload](../runs/2026-11-18-ios-testflight-internal-upload.json).
+App Store Connect processing, tester access, the physical iPhone workflow and
+VoiceOver and outside-user acceptance remain open.

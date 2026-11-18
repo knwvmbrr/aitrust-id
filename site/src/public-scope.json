@@ -13665,7 +13665,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-18T02:23:24.523441+00:00",
+        "audited_at": "2026-11-18T13:35:32.222337+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -13674,7 +13674,8 @@
           "Codex — integrated the exact five-workflow iPhone candidate, with verified resources and bounded local signing evidence, 2026-11-17T21:30:28.283655+00:00",
           "Codex native delivery lane — paginated privacy and license notices, reproduced all five local workflows, verified exact archive resources and diagnosed Keychain signing, 2026-11-17T22:21:46.286300+00:00",
           "Codex — direct deletion and simulator inventory confirmation on local and hosted runs; 2026-11-18T01:52:33.178019+00:00",
-          "Codex — separate notice navigation and same-run named iPhone workflow verification; 2026-11-18T02:23:24.523441+00:00"
+          "Codex — separate notice navigation and same-run named iPhone workflow verification; 2026-11-18T02:23:24.523441+00:00",
+          "Codex — signed, verified and uploaded the current iPhone distribution build, 2026-11-18T13:35:32.222337+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -13682,7 +13683,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Complete protected Share key authorization, Apple signing, validation and TestFlight upload. Complete physical iPhone, VoiceOver and outside-user acceptance. The hosted simulator result is tracked separately from the current local pass.",
+        "next_fix": "Verify App Store Connect processing and internal tester access, then complete physical iPhone, Share, offline, VoiceOver and outside-user acceptance.",
         "next_owner": "Michael / physical-device testers / Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -13736,9 +13737,12 @@
           "runs/2026-11-17-owned-cleanup-keyboard-navigation.json",
           "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
           "runs/2026-11-17-owned-cleanup-ios-archive.json",
-          "runs/2026-11-17-split-native-share-workflow.json"
+          "runs/2026-11-17-split-native-share-workflow.json",
+          "runs/2026-11-17-hosted-split-ios27-pass.json",
+          "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+          "runs/2026-11-18-ios-testflight-internal-upload.json"
         ],
-        "evidence_scope": "All six current UI workflows passed on local iOS 26.2 with verified simulator removal. The separate hosted candidate run and previous UI and signing timeouts remain linked from the distribution guide.",
+        "evidence_scope": "All six iPhone simulator workflows and owned simulator removal passed on local iOS 26.2 and hosted iOS 27.2. The exact current distribution archive and Share extension were signed, the package passed Apple validation, and Xcode confirmed an internal TestFlight upload. Installation and physical and human acceptance were not verified.",
         "required_acceptance": [
           "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],
