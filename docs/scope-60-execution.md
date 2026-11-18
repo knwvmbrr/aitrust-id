@@ -263,3 +263,22 @@ histories and reports their common checkpoint and first divergence.
 The command releases no tags and contacts no witnesses. Public distribution,
 witnessing, completeness, rotation and outside-user acceptance still keep F-125
 open. All 202 records remain: **132 complete / 70 open**.
+
+## November 18: witness observations and TestFlight recheck
+
+F-125 now has a working offline tool for selected witness keys to sign and
+verify the same exact checkpoint. It refuses a replay or a conflicting prior
+observation when a signer advances and refuses duplicate or authority keys
+in the selected witness set. [Eight new witness controls and the existing
+62 revocation controls passed](../runs/2026-11-18-revocation-witness-offline-controls.json).
+Independent operators, public distribution, completeness, rotation and
+outside-user per-device acceptance remain open.
+
+The [Mac dashboards still returned to sign-in](../runs/2026-11-18-testflight-mac-session-recheck.json).
+The previous internal upload is confirmed; processing, tester access and
+physical testing have not been verified. The ledger remains **132 complete /
+70 open**, with F-125 and N-013 both at 80%.
+
+Review identified equivalent P-256 encodings. The updated policy compares
+public key identity rather than encoding, including for authority exclusion.
+[All nine witness controls passed](../runs/2026-11-18-revocation-witness-key-identity.json). The count is unchanged.

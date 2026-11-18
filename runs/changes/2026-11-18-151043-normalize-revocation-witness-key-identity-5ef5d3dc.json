@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-151043-normalize-revocation-witness-key-identity-5ef5d3dc",
+  "recorded_at": "2026-11-18T15:10:43.885976+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a7319f542c465d3f1ff42a6b26afc4cb5f0bd1f5",
+  "changed": "Use the underlying public key identity to count distinct witnesses and exclude the authority while preserving existing wire key fingerprints.",
+  "proves": "Nine witness controls passed, including equivalent P-256 encodings for duplicate and authority exclusion, and all 62 prior revocation controls passed.",
+  "limits": "The verification still does not prove separate operators, freshness, public distribution or any full requirement closure.",
+  "scope_ids": [
+    "F-125"
+  ],
+  "files": {
+    "docs/offline-revocation.md": "8369aaf8640491e84c024f3aec6c5603a5d5acff2ca246f4778938312520af02",
+    "docs/scope-60-execution.md": "5b3bb6d82a1d0044855f0a87829fa69b9e8d38b8f99b9b4b37d17e483fa04bbc",
+    "docs/scope-progress.json": "bad0e72b22e70888fb4ae20a36179aa8f539259a01481a64d4c3fd176c1f931a",
+    "docs/scope-progress.md": "8e914e105bf17c7587c03a3a1a457ca55facbcfd0ab13a2d8f1c08caa1f3e147",
+    "protocol/revocation-witnesses.cjs": "32ffb117d0265acd63a0ceb4eae76ed486361525b8aae43d11703cc3be465c14",
+    "runs/2026-11-18-revocation-witness-key-identity.json": "63b8dc8e5a5d8df2684fdd22297925efcf5e40641ae35e2668355779bb7bdf00",
+    "site/public/reference/public-scope.json": "bc096c68413621dabba18ae09550ea6a27deb511afaf45a9fb5100d16e242a90",
+    "site/src/public-scope.json": "bc096c68413621dabba18ae09550ea6a27deb511afaf45a9fb5100d16e242a90",
+    "site/src/scope-manifest.json": "7acc6e635916167bd0c24852895aa5ec6e0ff8efa9707345b8ad74d6733badea",
+    "state.json": "fecda50b4a1914310a0fa1ec7445fdbc8eb20d668bee545962e43a6c7d415a0b",
+    "tests/offline-revocation-witnesses.cjs": "632c8e8c104c3d5b6098400601de7bfd3d005bc68076917b49677c3fa6f6c24c",
+    "tests/test_offline_revocation_witnesses.py": "ded99e6f3466772e2879841805f910a4fe1c72573c44c8bd2c01cccd86214658"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-revocation-witness-key-identity.json",
+      "sha256": "63b8dc8e5a5d8df2684fdd22297925efcf5e40641ae35e2668355779bb7bdf00"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T15:10:44.482398+00:00"
+    }
+  ]
+}
