@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-17T22:52:40.705798+00:00",
+  "reviewed_at": "2026-11-18T01:43:05.154667+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -30,6 +30,7 @@
     ".github/workflows/native-share.yml": "15d95c68fd6e6991a7c082899b76bfef6b6e7b33029c42ec8be86bc0daf0b8e4",
     ".github/workflows/organization-directory.yml": "7c1668060036cf388cb93d78f10e63d047b5e0d2daad39c66742a5ce3e3f9551",
     ".github/workflows/redaction-development.yml": "1b117178e6bb4b408b1e01dcd1cf091808be6e600b33ae65a4144fe212fc635e",
+    ".github/workflows/social-drafts.yml": "6df15f010dd87a3614bf7a5cd8d5b55cdae576b252a9e350db88883089c1da48",
     "deploy/backup/bootstrap.sh": "88edbdfcdf3c641ffb358ab193a51597d5bfcc1f34acf070ecdbb963a9512762",
     "deploy/backup/configure.py": "f5e7039a452d0d18326cec2116606e821ed7f655917208e55eaeb7cffa122892",
     "deploy/backup/cycle.py": "d7305df7fb9d65c9cb82a05ca750a49bf7e077ddde98419ff5781a16239b4a3d",
@@ -840,12 +841,12 @@
     "site/public/sitemap.xml": "4aa2e13deb579be2386a4ade8ddf6f41244820f3fcb7f778b4a2b2bd9c733767",
     "site/public/tag-logo.svg": "a546b5eeb2a74eb5c12cb66f89132a9a6fc1913d456b5919b7b5d6473e1f4d8c",
     "site/public/theme.js": "c212d1069cb9da9cce8baf96707b92ed58d9d7b9050e922fce5382527c8d1ff7",
-    "site/scripts/owner-guide.mjs": "f9c50c5a055853c6ee81950a062b5eef14c58fcb6dd705738d8b2ac1abd72f61",
+    "site/scripts/owner-guide.mjs": "6a2cfb57ed4050a82d9381f70112f378214b0acceae880fdce508bcdee2b4201",
     "site/scripts/prepare-device.mjs": "9e6011d991f923dcd2c089ce4b5bce524fe7536f00200da8ec849143d8d6e021",
     "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
     "site/scripts/prepare-performance.mjs": "67fd775c7f0387297202f5be901d4380f15fa89143e9349b5b1fdfe865d0d340",
     "site/scripts/prepare.mjs": "4c034764ad0cbfe98f13f73a977f3e0ce736c006e8254a8a3e5f267dd5077d8d",
-    "site/scripts/render-reference.mjs": "a886d7a6facf58931867126bb060b5b0e89bf4addc9e7b1652aa48496147c006",
+    "site/scripts/render-reference.mjs": "89309c36d6be8972f1b6d62da69f05cac711adb6ec2e358376f34397222b693f",
     "site/scripts/seo.mjs": "13596d28b2574b6a20fb5a8457da4085d7a2cfaa942d9dfcd1c8600d6441bdf0",
     "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
     "site/src/catalog.js": "06348eb62645f1f9fe7ace3edfc385569bcb07c1def9dfbf25a03faf65ac8b27",
@@ -1099,7 +1100,7 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-17-ios27-notice-evidence-website.json",
+    "website": "runs/2026-11-17-phone-seo-current-website.json",
     "extension": "runs/2026-11-17-crlf-extension.json"
   },
   "device_evidence": {

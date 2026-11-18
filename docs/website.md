@@ -131,7 +131,11 @@ All references contain their actual status, limits and release requirements. Pro
 enterprise offerings are not advertised as shipped products. Structured data uses
 WebSite, CollectionPage/WebPage and DefinedTerm; no invented ratings, certifications,
 prices or incorporated-company status. Invalid tag paths return a real 404 with noindex.
-There are 22 canonical sitemap URLs: home, tag index and 20 detail pages.
+The current sitemap has 36 canonical URLs, including 20 tag and offering pages.
+The static operating guide gives phone and desktop visitors a direct way to find
+the free PS preview, follow examples, and read the detected patterns and limits.
+The PS evidence page links back to the guide. The preview opens through its
+existing interactive link. [Google URL guidance](https://developers.google.com/search/docs/crawling-indexing/url-structure)
 
 `public/theme.js` is an early same-origin script compatible with the existing CSP.
 It validates the saved appearance enum and synchronizes system and cross-tab changes.
@@ -153,6 +157,24 @@ URLs, and monitor indexing reports. See [Google's Search Console guidance](https
 and [recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
 The user's pasted search results describe other services and are not indexing evidence
 for this owned domain. No third-party biometric or certification claims are reused.
+
+## Social drafts
+
+The Social Drafts workflow builds three short AI Trust ID posts about command
+checks, phone use and validation. An editorial change to its source triggers a
+new draft artifact. The workflow can also be run on demand. Each draft links
+to a live canonical page and carries a stable content ID for review and
+duplicate detection. If the relevant page, metadata or public claim changes,
+the job fails until the draft is reviewed.
+
+```sh
+python3 scripts/build-social-drafts.py
+python3 scripts/build-social-drafts.py --site-dir site/dist
+```
+
+Use the first command for production checks and the second after a local build.
+The JSON holds the draft text and the visible claims checked for each URL.
+Review it before scheduling through the brand's connected social account.
 
 ## Friendly tag detail presentation
 

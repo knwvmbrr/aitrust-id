@@ -41,4 +41,13 @@ for(const tag of allTags){
 const robots=fs.readFileSync(path.join(dist,'robots.txt'),'utf8');
 assert.match(robots,/User-agent: \*\s+Allow: \//);
 assert.ok(robots.includes(`Sitemap: ${origin}/sitemap.xml`));
-console.log(JSON.stringify({pass:true,canonical_pages:urls.length,tag_summaries:allTags.length,scope:'Built HTML metadata, static tag discovery and declared crawler policy. Actual indexing/ranking unmeasured.'},null,2));
+const guidePath='/reference/operate/';
+assert.ok(urls.includes(origin+guidePath),'Search guide missing from sitemap');
+const guide=fs.readFileSync(path.join(dist,guidePath,'index.html'),'utf8');
+assert.match(guide,/<title>Check AI Commands on Your Phone or Computer \| AI Trust ID<\/title>/);
+assert.match(guide,/<h2>Check an answer from your phone<\/h2>/);
+assert.match(guide,/<a href="\/#person\/PS">Open the free PS preview<\/a>/);
+assert.match(guide,/<a href="\/tags\/ps\/">PS evidence page<\/a>/);
+const ps=fs.readFileSync(path.join(dist,'tags/ps/index.html'),'utf8');
+assert.match(ps,/<a href="\/reference\/operate\/">Check an AI answer on your phone or computer<\/a>/);
+console.log(JSON.stringify({pass:true,canonical_pages:urls.length,tag_summaries:allTags.length,phone_guide_linked:true,scope:'Built HTML metadata, static tag discovery and declared crawler policy. Actual indexing/ranking unmeasured.'},null,2));
