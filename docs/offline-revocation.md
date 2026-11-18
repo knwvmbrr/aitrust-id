@@ -117,7 +117,8 @@ node scripts/revocation-witnesses.cjs verify log-2.json authority.pub witness-po
 Exit `0` means the selected number of distinct public keys signed that
 checkpoint. Exit `3` means too few valid observations; exit `2` means some
 input was refused. The authority's own key, duplicates, unknown keys and
-observations for another checkpoint never count. Several keys can belong to
+observations for another checkpoint never count. Two encodings of the same
+P-256 public point count as one key. Several keys can belong to
 one operator. The result cannot prove independent operators, when the log
 was seen, public distribution, current key status or completeness.
 

@@ -50,6 +50,16 @@ test('an authority, duplicate key or unreviewed policy cannot dilute the thresho
  for(const bad of [{...policy,minimum_witnesses:1},{...policy,unexpected:true},{...policy,version:'future'}])assert.throws(()=>check(next,[a1,b1],bad),/Invalid witness policy/);
  assert.throws(()=>check(next,[a1,a1]),/duplicate/);
 });
+test('equivalent P-256 public point encodings represent one witness and one authority',()=>{
+ // Public fixtures only: two supported SPKI encodings of one P-256 point.
+ const expanded='-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnH0a9Yj3u7XIpzPlvLm61RoYwKAf\ncOFu4FCN7qtQ88m0mrPL/PGy6AHvbNLjqdm7KVZNnsXJGpSrZEtKmQamvg==\n-----END PUBLIC KEY-----\n';
+ const compact='-----BEGIN PUBLIC KEY-----\nMDkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDIgACnH0a9Yj3u7XIpzPlvLm61RoYwKAf\ncOFu4FCN7qtQ88k=\n-----END PUBLIC KEY-----\n';
+ assert.equal(witness.createPolicy(authority.pub,2,[expanded,c.pub]).minimum_witnesses,2);
+ assert.equal(witness.createPolicy(authority.pub,2,[compact,c.pub]).minimum_witnesses,2);
+ assert.throws(()=>witness.createPolicy(authority.pub,2,[expanded,compact]),/duplicate/);
+ assert.throws(()=>witness.createPolicy(compact,2,[expanded,c.pub]),/Authority/);
+ assert.throws(()=>witness.createPolicy(expanded,2,[compact,c.pub]),/Authority/);
+});
 test('all supplied observations validate even when two already meet the threshold',()=>{
  const unrelated=key(),wrong=witness.sign(next,authority.pub,unrelated.priv,null);
  assert.throws(()=>check(next,[a1,b1,wrong]),/Unknown/);

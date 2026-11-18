@@ -8,7 +8,15 @@ const OBSERVATION='offline-revocation-witness/1.0.0';
 const POLICY='offline-revocation-witness-policy/1.0.0';
 const MAX_WITNESSES=8;
 
-function selectKeys(policy,authority){
+function keyIdentity(pem){
+ const fingerprint=revocation.id(pem);
+ // The wire fingerprint identifies the supplied SPKI; use normalized public
+ // coordinates separately so alternate encodings cannot count as two keys.
+ const {kty,crv,x,y}=createPublicKey(pem).export({format:'jwk'});
+ return {fingerprint,distinct:receipts.hash(receipts.bytes([kty,crv,x,y??null]))};
+}
+
+function selectKeys(policy,authorityKey){
  if(!policy||typeof policy!=='object'||Array.isArray(policy)
     ||Object.keys(policy).length!==3||!['version','minimum_witnesses','witness_public_keys'].every(k=>Object.hasOwn(policy,k))
     ||policy.version!==POLICY||!Array.isArray(policy.witness_public_keys)
@@ -16,17 +24,19 @@ function selectKeys(policy,authority){
     ||!Number.isSafeInteger(policy.minimum_witnesses)||policy.minimum_witnesses<2
     ||policy.minimum_witnesses>policy.witness_public_keys.length)throw Error('Invalid witness policy');
  const selected=new Map();
+ const distinct=new Set([keyIdentity(authorityKey).distinct]);
  for(const key of policy.witness_public_keys){
-  const id=revocation.id(key);
-  if(id===authority||selected.has(id))throw Error('Authority or duplicate witness key');
-  selected.set(id,key);
+  const id=keyIdentity(key);
+  if(distinct.has(id.distinct))throw Error('Authority or duplicate witness key');
+  distinct.add(id.distinct);
+  selected.set(id.fingerprint,key);
  }
  return selected;
 }
 
 function createPolicy(authorityKey,minimum,witnessKeys){
  const policy={version:POLICY,minimum_witnesses:minimum,witness_public_keys:witnessKeys};
- selectKeys(policy,revocation.id(authorityKey));
+ selectKeys(policy,authorityKey);
  return policy;
 }
 
@@ -49,7 +59,7 @@ function sign(log,authorityKey,witnessPrivateKey,prior){
  const chain=revocation.history(log,authorityKey);
  const witnessPublicKey=createPublicKey(witnessPrivateKey).export({type:'spki',format:'pem'});
  const head=chain.at(-1);
- if(revocation.id(witnessPublicKey)===head.payload.authority_key_sha256)throw Error('Authority cannot sign as witness');
+ if(keyIdentity(witnessPublicKey).distinct===keyIdentity(authorityKey).distinct)throw Error('Authority cannot sign as witness');
  // Null denotes an explicitly selected first observation. Undefined is refused.
  if(prior!==null){
   const saved=receipts.verify(prior,witnessPublicKey);
@@ -63,7 +73,7 @@ function sign(log,authorityKey,witnessPrivateKey,prior){
 function verify(log,authorityKey,policy,signedObservations){
  const head=revocation.history(log,authorityKey).at(-1);
  const expected=observation(head);
- const selected=selectKeys(policy,expected.authority_key_sha256);
+ const selected=selectKeys(policy,authorityKey);
  if(!Array.isArray(signedObservations)||signedObservations.length>selected.size)throw Error('Witness input exceeds roster');
  const verified=new Set();
  for(const envelope of signedObservations){

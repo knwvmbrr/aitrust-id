@@ -11,5 +11,5 @@ def test_selected_witness_observations_on_actual_node():
         cwd=ROOT, capture_output=True, text=True, timeout=90, check=False,
     )
     assert result.returncode == 0, result.stdout + result.stderr
-    for tally in ('# tests 8', '# pass 8', '# fail 0', '# skipped 0'):
+    for tally in ('# tests 9', '# pass 9', '# fail 0', '# skipped 0'):
         assert tally in result.stdout.splitlines()

@@ -278,3 +278,7 @@ The [Mac dashboards still returned to sign-in](../runs/2026-11-18-testflight-mac
 The previous internal upload is confirmed; processing, tester access and
 physical testing have not been verified. The ledger remains **132 complete /
 70 open**, with F-125 and N-013 both at 80%.
+
+Review identified equivalent P-256 encodings. The updated policy compares
+public key identity rather than encoding, including for authority exclusion.
+[All nine witness controls passed](../runs/2026-11-18-revocation-witness-key-identity.json). The count is unchanged.

@@ -1,0 +1,42 @@
+{
+  "kind": "offline_revocation_witness_controls",
+  "captured_at": "2026-11-18T15:10:42.848744+00:00",
+  "pass": true,
+  "source_base": "a7319f542c465d3f1ff42a6b26afc4cb5f0bd1f5",
+  "sources": {
+    "protocol/revocation.cjs": "0cfd35c00fd7a2e1dde91f567c499669c99fade18622933dfa08a55e1488caa7",
+    "protocol/revocation-witnesses.cjs": "32ffb117d0265acd63a0ceb4eae76ed486361525b8aae43d11703cc3be465c14",
+    "scripts/revocation-witnesses.cjs": "1351b587bc9b08c7e8c0241dd715e0edc1ab9c41a291fcdc78172cd433d6f9ea",
+    "tests/offline-revocation-witnesses.cjs": "632c8e8c104c3d5b6098400601de7bfd3d005bc68076917b49677c3fa6f6c24c",
+    "tests/test_offline_revocation_witnesses.py": "ded99e6f3466772e2879841805f910a4fe1c72573c44c8bd2c01cccd86214658"
+  },
+  "platform": "macOS",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_offline_revocation_witnesses.py",
+    "tests/test_offline_revocation.py",
+    "-q"
+  ],
+  "wrapper_tests_passed": 2,
+  "new_witness_controls_passed": 9,
+  "existing_revocation_controls_passed": 62,
+  "controls": [
+    "two selected Ed25519 and P-256 keys on one exact checkpoint",
+    "insufficient witness count",
+    "authority and duplicate rejection",
+    "unknown and invalid signatures refused after threshold met",
+    "wrong checkpoint, fork or authority refused",
+    "trusted prior required to advance",
+    "damaged log refused before any output",
+    "actual CLI policy, sign, advance and verify with owner-only key permissions and no overwrite",
+    "equivalent compressed and uncompressed P-256 keys count only once and cannot bypass authority exclusion"
+  ],
+  "independent_witness_operators_proven": false,
+  "public_transparency_service_operated": false,
+  "key_status_evaluated": false,
+  "requirements_closed": [],
+  "prior_execution": "runs/2026-11-18-revocation-witness-offline-controls.json",
+  "review_finding": "https://github.com/knwvmbrr/aitrust-id/pull/122#discussion_r4615981163"
+}

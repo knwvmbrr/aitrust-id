@@ -7797,7 +7797,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-18T14:50:45.503559+00:00",
+        "audited_at": "2026-11-18T15:10:42.848744+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — optional signed checkpoint history, explicitly selected freshness policy, offline CLI, single/group integration and actual Mac/Linux checks",
@@ -7820,9 +7820,10 @@
           "tests/offline-revocation.cjs",
           "runs/2026-10-11-offline-revocation-platforms.json",
           "runs/2026-11-18-offline-revocation-comparison.json",
-          "runs/2026-11-18-revocation-witness-offline-controls.json"
+          "runs/2026-11-18-revocation-witness-offline-controls.json",
+          "runs/2026-11-18-revocation-witness-key-identity.json"
         ],
-        "evidence_scope": "The offline tool verifies separately selected witness keys signing one exact authority checkpoint. The signer can check that a later log extends a locally held observation. Actual independent witness operation, public distribution, completeness, rotation and per-device acceptance are unverified.",
+        "evidence_scope": "The offline tool verifies separately selected witness keys signing one exact authority checkpoint and deduplicates equivalent public key encodings. The signer can check that a later log extends a locally held observation. Actual independent witness operation, public distribution, completeness, rotation and per-device acceptance are unverified.",
         "required_acceptance": [
           "Operating public revocation transparency and witness/distribution evidence; full outside-user per-device operation."
         ],
