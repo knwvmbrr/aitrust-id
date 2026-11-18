@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-133752-internal-testflight-upload-d74a569c",
+  "recorded_at": "2026-11-18T13:37:52.273966+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0231f44e5a5a62b23ee5820db05aeae5e98073a9",
+  "changed": "Retry distribution signing for the current iPhone build, validate the signed package with Apple and upload it for internal TestFlight. Record the outcome in the scope ledger.",
+  "proves": "Both distribution signatures passed strict checks, all 36 packaged resources matched, Apple validated 1.0 (1), and Xcode confirmed the upload completed.",
+  "limits": "App Store Connect processing, tester availability, physical iPhone operation, VoiceOver, outside-user acceptance and public App Review were not verified. No full scope requirement closes.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "3b8e4556f9c6bbcda7049b8cbfbd8961062bda019d8ce10e2553c2d92340a719",
+    "docs/scope-60-execution.md": "4bc86fd284f945f3aabc44f1b243f1dac188280d8d39334fc5d79a01c126928c",
+    "docs/scope-progress.json": "5201128d83070713cf6d3f2c582ff44dc4da5e1aa00efd18c234ced1021e80fd",
+    "docs/scope-progress.md": "5201d16208b78830f43c3b79bda468cd81ef47f9c77d83ae169e514f3c57a647",
+    "runs/2026-11-18-ios-signed-archive-and-apple-validation.json": "2fb0d588da89667305983eea6a95c7b193b39381f93a93e8cf7ce0511769903c",
+    "runs/2026-11-18-ios-testflight-internal-upload.json": "b10a902365bfb574efbb78a86b5d96a95428019f12280d230f2681e376944716",
+    "runs/2026-11-18-testflight-protocol.json": "0eb20331eeea74b0f4622f60133b3d2831c902155667b84b23a2e0fc224b0592",
+    "site/public/reference/public-scope.json": "28b7cb48c4fa8058bd0f65f1dd4eac11366245916659f9aa8cacd63ce8c320fd",
+    "site/src/public-scope.json": "28b7cb48c4fa8058bd0f65f1dd4eac11366245916659f9aa8cacd63ce8c320fd",
+    "site/src/scope-manifest.json": "8017f1d240082e022de58d911cbcd377deeb4b481f772315239e9cdd11f9ba02",
+    "state.json": "259177552edb0fa00ab2590b525e8aef7f0a6f6588dcf3910937a81ea4e54208"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+      "sha256": "2fb0d588da89667305983eea6a95c7b193b39381f93a93e8cf7ce0511769903c"
+    },
+    {
+      "path": "runs/2026-11-18-ios-testflight-internal-upload.json",
+      "sha256": "b10a902365bfb574efbb78a86b5d96a95428019f12280d230f2681e376944716"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T13:37:52.914317+00:00"
+    }
+  ]
+}

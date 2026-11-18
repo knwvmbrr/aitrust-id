@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-134148-testflight-scope-evidence-cf7c1d63
+
+Recorded 2026-11-18T13:41:48.884286+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the internal TestFlight milestone and unchanged completion count to fresh website, protocol and route receipts.
+- **Evidence.** 32 website checks, 40 protocol checks, the route boundary verifier and the current evidence packet passed. [Change record](./runs/changes/2026-11-18-134148-testflight-scope-evidence-cf7c1d63.json).
+- **Not claimed.** No physical device, human accessibility or independent tag accuracy claim was added.
+
+
+### 2026-11-18-133752-internal-testflight-upload-d74a569c
+
+Recorded 2026-11-18T13:37:52.273966+00:00 · Contributor: Codex · change
+
+- **Changed.** Retry distribution signing for the current iPhone build, validate the signed package with Apple and upload it for internal TestFlight. Record the outcome in the scope ledger.
+- **Evidence.** Both distribution signatures passed strict checks, all 36 packaged resources matched, Apple validated 1.0 (1), and Xcode confirmed the upload completed. [Change record](./runs/changes/2026-11-18-133752-internal-testflight-upload-d74a569c.json).
+- **Not claimed.** App Store Connect processing, tester availability, physical iPhone operation, VoiceOver, outside-user acceptance and public App Review were not verified. No full scope requirement closes.
+
+
 ### 2026-11-18-024833-close-hosted-ios-workflow-1bace56b
 
 Recorded 2026-11-18T02:48:33.366433+00:00 · Contributor: Codex · change
