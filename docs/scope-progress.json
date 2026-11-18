@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-18T13:35:32.222337+00:00",
+  "audited_at": "2026-11-18T14:29:13.625078+00:00",
   "client_date": "2026-11-18",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -5034,10 +5034,11 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-10-11T00:32:13.834109+00:00",
+      "audited_at": "2026-11-18T14:29:13.625078+00:00",
       "checked_by": "Codex",
       "implemented_by": [
-        "Codex \u2014 optional signed checkpoint history, explicitly selected freshness policy, offline CLI, single/group integration and actual Mac/Linux checks"
+        "Codex \u2014 optional signed checkpoint history, explicitly selected freshness policy, offline CLI, single/group integration and actual Mac/Linux checks",
+        "Codex \u2014 implemented and exercised offline comparison of two signed revocation histories, 2026-11-18T14:29:13.625078+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -5045,7 +5046,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver actual publicly distributed/witnessed revocation transparency, equivocation/completeness checks, rotation and outside-user per-device acceptance. Current signed cached history is not a public transparency service.",
+      "next_fix": "Operate a public log with independent witnessing and distribution, verify completeness and rotation, and complete outside-user per-device acceptance. The supplied-copy comparison is implemented.",
       "next_owner": "Codex and Michael",
       "evidence": [
         "docs/offline-revocation-plan.md",
@@ -5053,9 +5054,10 @@
         "protocol/revocation.cjs",
         "scripts/revocation.cjs",
         "tests/offline-revocation.cjs",
-        "runs/2026-10-11-offline-revocation-platforms.json"
+        "runs/2026-10-11-offline-revocation-platforms.json",
+        "runs/2026-11-18-offline-revocation-comparison.json"
       ],
-      "evidence_scope": "Actual conditional offline key-status model with separately selected authority and cached checkpoint. No operating public transparency service, current global revocation, authorship or independently validated tag claim.",
+      "evidence_scope": "The existing selected-log model now compares two fully verified, caller-supplied histories. The CLI detects conflicting signed checkpoints and distinguishes re-signing alone from a changed time window or revoked-key set. It neither contacts witnesses nor establishes public distribution, global completeness or key status.",
       "required_acceptance": [
         "Operating public revocation transparency and witness/distribution evidence; full outside-user per-device operation."
       ],
@@ -8782,7 +8784,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-18T13:35:32.222337+00:00",
+      "audited_at": "2026-11-18T14:29:13.625078+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8800,7 +8802,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Verify App Store Connect processing and internal tester access, then complete physical iPhone, Share, offline, VoiceOver and outside-user acceptance.",
+      "next_fix": "Sign in to App Store Connect to confirm processing and access for the internal tester; then complete physical iPhone Share, offline, VoiceOver and outside-user acceptance.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8857,9 +8859,10 @@
         "runs/2026-11-17-split-native-share-workflow.json",
         "runs/2026-11-17-hosted-split-ios27-pass.json",
         "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
-        "runs/2026-11-18-ios-testflight-internal-upload.json"
+        "runs/2026-11-18-ios-testflight-internal-upload.json",
+        "runs/2026-11-18-testflight-dashboard-authentication.json"
       ],
-      "evidence_scope": "All six iPhone simulator workflows and owned simulator removal passed on local iOS 26.2 and hosted iOS 27.2. The exact current distribution archive and Share extension were signed, the package passed Apple validation, and Xcode confirmed an internal TestFlight upload. Installation and physical and human acceptance were not verified.",
+      "evidence_scope": "All six iPhone simulator workflows and owned simulator removal passed on local iOS 26.2 and hosted iOS 27.2. The exact current distribution archive and Share extension were signed, the package passed Apple validation, and Xcode confirmed an internal TestFlight upload. Installation and physical and human acceptance were not verified. A fresh App Store Connect dashboard check required sign-in; an owner checklist is available for physical testing.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],

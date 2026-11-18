@@ -71,6 +71,26 @@ App Store Connect dashboard returned to sign-in. This build was designated
 for internal TestFlight only. Physical iPhone, VoiceOver and outside-user
 acceptance remain open.
 
+### First iPhone 14 Plus check
+
+1. In [App Store Connect](https://appstoreconnect.apple.com/apps), open
+   **AI Trust ID → TestFlight**. Check **1.0 (1)** and confirm your authorized
+   internal tester can see it. Use the App Store Connect [internal tester
+   instructions](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/)
+   if the processed build has not been assigned to that tester.
+2. Open **TestFlight** on the iPhone and install **1.0 (1)**. Then open AI Trust
+   ID and try **Practice sharing**. In the share sheet, select **AI Trust ID**.
+   Confirm the text appears for review and the app waits for **Check with PS**.
+3. Turn on **VoiceOver** under **Settings → Accessibility → VoiceOver**. Confirm
+   it can reach **Check with PS**, announces the result, reaches **Why PS?** and
+   can dismiss the sheet. Check from a second source app using invented text,
+   and confirm editing or clearing removes the old result.
+4. After installation, repeat the synthetic check with Wi-Fi and cellular
+   disabled. Record the iOS and app versions and which steps passed; do not
+   include private shared text in feedback.
+
+This is a physical acceptance checklist; it is not a test result.
+
 The [listing draft record](../runs/2026-11-17-ios-listing-drafts.json) covers four
 actual screenshots of the initial checker in Light and Dark mode. The simulator
 captures use iPhone 14 Pro (1179 × 2556) and 13-inch iPad Pro (2064 × 2752).

@@ -249,3 +249,17 @@ The current app and Share extension signed with the existing profiles.
 [Xcode confirmed the internal TestFlight upload](../runs/2026-11-18-ios-testflight-internal-upload.json).
 App Store Connect processing, tester access, the physical iPhone workflow and
 VoiceOver and outside-user acceptance remain open.
+
+## November 18: TestFlight readiness and signed-history comparison
+
+The previously uploaded iPhone build 1.0 (1) could not be checked for
+processing or tester access because [App Store Connect requested sign-in](../runs/2026-11-18-testflight-dashboard-authentication.json).
+The [owner checklist](app-store-readiness.md#first-iphone-14-plus-check)
+covers real iPhone Share, offline use and VoiceOver. N-013 remains at 80%.
+
+For F-125, the local `compare` command verifies both complete supplied signed
+histories and reports their common checkpoint and first divergence.
+[All 62 focused controls passed](../runs/2026-11-18-offline-revocation-comparison.json).
+The command releases no tags and contacts no witnesses. Public distribution,
+witnessing, completeness, rotation and outside-user acceptance still keep F-125
+open. All 202 records remain: **132 complete / 70 open**.

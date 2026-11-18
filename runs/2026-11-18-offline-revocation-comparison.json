@@ -1,0 +1,33 @@
+{
+  "kind": "offline_revocation_comparison_controls",
+  "captured_at": "2026-11-18T14:29:13.625078+00:00",
+  "pass": true,
+  "source_base": "864a1e32544d30c756cec6654a0b2607d691c5e9",
+  "sources": {
+    "protocol/revocation.cjs": "0cfd35c00fd7a2e1dde91f567c499669c99fade18622933dfa08a55e1488caa7",
+    "scripts/revocation.cjs": "a8809ef584056f9736f92346bb8f4318594e7bd5f9fcbe2853e0d63995cb5821",
+    "tests/offline-revocation.cjs": "6002d263e094c95c1e64f2fd181a15ece32c5ea9bd900806d489dcb5b0375101",
+    "tests/test_offline_revocation.py": "acb15839c6d730000dd356f796f4ed23da79ec70e730cc87d61e5edd2c7d7e32"
+  },
+  "platform": "macOS",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_offline_revocation.py",
+    "-q"
+  ],
+  "wrapper_tests_passed": 1,
+  "node_controls_passed": 62,
+  "new_comparison_controls_passed": 6,
+  "cli_exit_controls": {
+    "same_or_signed_prefix": 0,
+    "refused_input": 2,
+    "divergent_signed_histories": 4
+  },
+  "independent_witness_used": false,
+  "public_transparency_service_operated": false,
+  "global_log_completeness_proven": false,
+  "issued_tags": false,
+  "requirements_closed": []
+}
