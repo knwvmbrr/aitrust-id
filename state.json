@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T01:43:06.815997+00:00",
-  "active_increment": "Current iOS 26.2 and hosted iOS 27.2 UI workflows passed after notice pagination. Hosted cleanup timed out. Manual signing settings match both targets and protected key authorization remains pending. Original scope is 132 complete and 70 open.",
+  "updated": "2026-11-18T01:57:33.288727+00:00",
+  "active_increment": "The phone search guide is live, and the main-branch workflow generated three social drafts. Hosted iOS candidate simulator removal passed, with the full UI proof and protected Share signing still open. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1136,13 +1136,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-ios27-notice-evidence-protocol.json",
+    "protocol": "runs/2026-11-17-release-scope-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-17-phone-seo-current-website.json",
+    "website": "runs/2026-11-17-release-scope-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T01:43:06.815997+00:00",
+  "updated_at": "2026-11-18T01:57:33.288727+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2046,7 +2046,21 @@
       "owned_simulator_removed": false,
       "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
     },
-    "current_hosted_27_2_ui_pass": true
+    "current_hosted_27_2_ui_pass": true,
+    "cleanup_candidate": {
+      "source_commit": "e317ecacfcc95f2e69113c4c8a099772aba9c3bb",
+      "branch": "codex/ios-owned-cleanup",
+      "owned_removal_verified": true,
+      "local_receipts": [
+        "runs/2026-11-17-owned-cleanup-first-local-run.json",
+        "runs/2026-11-17-owned-cleanup-notice-navigation.json",
+        "runs/2026-11-17-owned-cleanup-keyboard-navigation.json"
+      ],
+      "hosted_receipt": "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
+      "complete_current_ui_pass": false,
+      "unsigned_archive": "runs/2026-11-17-owned-cleanup-ios-archive.json"
+    },
+    "signing_retry": "runs/2026-11-17-share-manual-signing-retry.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3191,7 +3205,8 @@
     "native_source_merge": "81862e20eacef1191051cb9f9aaa8e12e4fa4cfc",
     "protected_signing_timeout_diagnosis": "runs/2026-11-17-ios-signing-keychain-diagnosis.json",
     "current_signing_configuration_preflight": "runs/2026-11-17-paged-notice-signing-preflight.json",
-    "signing_next_step": "Protected access for the existing Apple Distribution key. Both exact installed provisioning profiles and both Release target settings match."
+    "signing_next_step": "Protected access to the existing Apple Distribution key at the Share extension. The fresh archive retry reached its deadline.",
+    "signing_retry": "runs/2026-11-17-share-manual-signing-retry.json"
   },
   "pii_pan_containment": {
     "status": "source_and_development_evidence_published; independent_acceptance_open",
@@ -3631,12 +3646,14 @@
   "public_discovery": {
     "seo_and_social_proof": "runs/2026-11-17-phone-search-and-social-drafts.json",
     "canonical_guide": "https://aitrustid.com/reference/operate/",
-    "updated_guide_deployed": false,
+    "updated_guide_deployed": true,
     "canonical_pages": 36,
     "social_drafts": 3,
     "social_network_connected": false,
     "posts_published": 0,
-    "search_console_verified": false
+    "search_console_verified": false,
+    "production_verification": "runs/2026-11-17-phone-seo-production.json",
+    "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-17-phone-seo-current-boundaries.json"
+  "current_route_boundaries": "runs/2026-11-17-release-scope-boundaries.json"
 }

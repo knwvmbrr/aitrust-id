@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-015233-preserve-simulator-and-signing-evidence-33ffa2e7",
+  "recorded_at": "2026-11-18T01:52:33.999663+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "28bfdfe5a63065a1a5ca8b3cb08dc21f11667d86",
+  "changed": "Added the verified cleanup candidate and the current Xcode signing retry to the shared scope ledger and distribution guide.",
+  "proves": "Hosted iOS 27.2 and three local runs verified removal. A fresh unsigned archive matched 36 resources. The UI deadline and protected signing timeout have separate receipts.",
+  "limits": "The candidate still needs a complete native UI run and a signed TestFlight package. The ledger retains 70 open requirements.",
+  "scope_ids": [
+    "N-013",
+    "WP-SITE"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "b2303cc264cf62e66346385bacda1cac0587a1cea073469790ba9d3acd181947",
+    "docs/scope-60-execution.md": "a3cc0aac30a5d4f25e50847a78dd637a5d5af7171b1815abdf2fb85efd581a7f",
+    "docs/scope-progress.json": "dddbd0527dbe3d9e8552cd485641c491edaff8e6bdee675c1ad6a6c79e307156",
+    "docs/scope-progress.md": "bd454e4af8dbe39661fd8c2e780253cce8e4a80f546d7348a60ccf85a969da7d",
+    "runs/2026-11-17-hosted-ios27-owned-cleanup.json": "eddcf32aa3677b69a68c50c2d3179f77144550b0a0a33c237769f46aa05aca44",
+    "runs/2026-11-17-owned-cleanup-first-local-run.json": "ef3af8c50dd7fbdc3edab28a9885b205acf6e7b13335c4771b10327d450dfa51",
+    "runs/2026-11-17-owned-cleanup-ios-archive.json": "f78caa60e6d21809ec7795fe1d901e915af086e77b270e76bfc4eeb037e0359c",
+    "runs/2026-11-17-owned-cleanup-keyboard-navigation.json": "45cde207cdef95905d0243f8c25fdab9611b508b47cc449b3df44558f0150d28",
+    "runs/2026-11-17-owned-cleanup-notice-navigation.json": "90ad89ad607b0251a7e82f3c59f898865a3755f0c1643d68327276b3a161f486",
+    "runs/2026-11-17-share-manual-signing-retry.json": "425fce28cf12ea1ebe9f0ea8b1df20b1490102e64a7ec6cf1b8367d5b092c5b1",
+    "site/public/reference/public-scope.json": "46565bfcd707ce26eb85d7e038f835f2a6c033ead10aab3c789a3cf692e545c4",
+    "site/src/public-scope.json": "46565bfcd707ce26eb85d7e038f835f2a6c033ead10aab3c789a3cf692e545c4",
+    "site/src/scope-manifest.json": "6ed992b989f4e85bf790b06524678e0e532ae3b2da9018a4432b2c4b64beb0bb",
+    "state.json": "ac8ad69d664bdd4fc78057b67abfa94d559a5ce419fced63161c62fa89751994"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
+      "sha256": "eddcf32aa3677b69a68c50c2d3179f77144550b0a0a33c237769f46aa05aca44"
+    },
+    {
+      "path": "runs/2026-11-17-owned-cleanup-ios-archive.json",
+      "sha256": "f78caa60e6d21809ec7795fe1d901e915af086e77b270e76bfc4eeb037e0359c"
+    },
+    {
+      "path": "runs/2026-11-17-share-manual-signing-retry.json",
+      "sha256": "425fce28cf12ea1ebe9f0ea8b1df20b1490102e64a7ec6cf1b8367d5b092c5b1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:52:35.430809+00:00"
+    }
+  ]
+}
