@@ -8,7 +8,7 @@ import runpy
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-PROOF = 'runs/2026-11-17-paged-notices-native-share-workflow.json'
+PROOF = 'runs/2026-11-17-split-native-share-workflow.json'
 ASSETS = {'/index.html', '/bridge.mjs', '/detector-source.zip', '/device-manifest.json',
           '/runtime/pyodide.mjs', '/runtime/pyodide.asm.mjs', '/runtime/pyodide.asm.wasm',
           '/runtime/python_stdlib.zip', '/runtime/pyodide-lock.json'}
@@ -19,17 +19,20 @@ def verify(root=ROOT, proof=None):
     required = {'pass': True, 'physical_device': False, 'independent_accuracy': False,
                 'human_accessibility': False, 'installable_phone_release': False,
                 'source_unchanged_during_execution': True, 'post_ui_source_unchanged': True,
-                'owned_simulator_removed': True}
+                'owned_simulator_removed': True, 'owned_simulator_delete_passed': True,
+                'owned_simulator_inventory_absent': True}
     if not isinstance(value, dict) or any(value.get(key) is not expected for key, expected in required.items()):
         raise ValueError('Native software proof boundary is invalid')
-    if type(value.get('test_count')) is not int or value['test_count'] != 5:
+    module = runpy.run_path(str(root / 'scripts/verify-ios-share.py'))
+    workflow_ids = list(module['WORKFLOW_IDS'])
+    if (type(value.get('test_count')) is not int or value['test_count'] != len(workflow_ids)
+            or value.get('workflow_ids') != workflow_ids):
         raise ValueError('Complete native workflow execution is required')
-    if value.get('profile') != 'invented-text/UIActivityViewController/local-PS/simulator/v1':
+    if value.get('profile') != module['PROFILE']:
         raise ValueError('Unknown native workflow profile')
     date = datetime.fromisoformat(value['captured_at'])
     if date.tzinfo is None or date > datetime.now(timezone.utc):
         raise ValueError('Native proof date is invalid')
-    module = runpy.run_path(str(root / 'scripts/verify-ios-share.py'))
     expected_sources = {name: hashlib.sha256((root / name).read_bytes()).hexdigest()
                         for name in module['SOURCES']}
     if value.get('sources') != expected_sources:
@@ -54,7 +57,7 @@ def verify(root=ROOT, proof=None):
     actual = json.loads(bundle['Assets/native-assets.json'])['hashes']
     if hashes != actual:
         raise ValueError('Native bundle differs from the executed assets; run the native workflow again')
-    return {'pass': True, 'native_ui_workflows': 5, 'physical_device': False,
+    return {'pass': True, 'native_ui_workflows': len(workflow_ids), 'physical_device': False,
             'independent_accuracy': False, 'requirement_complete': False}
 
 

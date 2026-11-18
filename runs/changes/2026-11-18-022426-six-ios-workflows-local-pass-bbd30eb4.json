@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-022426-six-ios-workflows-local-pass-bbd30eb4",
+  "recorded_at": "2026-11-18T02:24:26.423310+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "436ec9a34dce32b4c93afd671b766537f3e331bf",
+  "changed": "Selected the completed local iPhone proof and documented the independent notice and PS test budgets.",
+  "proves": "iOS 26.2 passed all six named cases, with no failures or skips, and verified owned simulator removal in the same run.",
+  "limits": "Hosted iOS, TestFlight, physical operation and human acceptance have separate evidence. No original requirement changed completion percentage.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "6b8a3adf76feaa49ccc92d07a98553b9f71035a4aaaf212f8537962ecee6c6bf",
+    "docs/native-share-developer.md": "67bf73776be40fe20641842ae79fbe907cdb874b554dc4a4b1e56765de2830be",
+    "docs/scope-60-execution.md": "bd24fb91df2b688c7608707254c1d177e398a694bb989deeefb430142d133326",
+    "docs/scope-progress.json": "1b8d7846ac591b618ffe8d6313d80d0f3a4e83e7063b7d0664c9a226b77d248d",
+    "docs/scope-progress.md": "d2dca27ab739374048fa2c209740741589dee514be7d1bb10e4b5d4b6357644c",
+    "runs/2026-11-17-split-native-share-workflow.json": "363f61ac4ddcc8edf63a026b9f3e6a0506f44221d68a904b6cb286db5c64c68c",
+    "scripts/verify-native-share-evidence.py": "b2bb4bf54fb297566acda27050e27945525fd3aa54052128503ba2252d6f0bab",
+    "site/public/reference/native-share-developer.md": "67bf73776be40fe20641842ae79fbe907cdb874b554dc4a4b1e56765de2830be",
+    "site/public/reference/public-scope.json": "eb6075ca77f3746c96264ef481252d5c1b2781693b72e91fd950cbd06eb7a073",
+    "site/src/public-scope.json": "eb6075ca77f3746c96264ef481252d5c1b2781693b72e91fd950cbd06eb7a073",
+    "site/src/scope-manifest.json": "9980f5cf972915de1b7805e9213efae3ec5ec0e06d956d9ad24f297a31214cd2",
+    "state.json": "897ac569a48e4bf67dcd12e4cce9246cfd88c3a7e60ee63ed2caa71fe8425935",
+    "tests/test_native_share_evidence.py": "28fc7b62e2291e29f5e0105d664f78f5d9a34f596de86f16b07a3712bdd6b1e8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-split-native-share-workflow.json",
+      "sha256": "363f61ac4ddcc8edf63a026b9f3e6a0506f44221d68a904b6cb286db5c64c68c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-native-share-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T02:24:26.889560+00:00"
+    }
+  ]
+}

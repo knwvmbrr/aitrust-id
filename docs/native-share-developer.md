@@ -27,16 +27,16 @@ python3 scripts/verify-ios-share.py \
 ```
 
 The command creates its own iPhone 14 Plus simulator, builds the current app and
-extension, runs five actual UI workflows and removes only that simulator. It
+extension, runs six UI workflows and verifies removal of that simulator. It
 rejects an existing output path or any output inside a Git checkout. Logs,
 generated code, the Xcode result bundle and `proof.json` stay in the private
 output directory. They use invented examples only. A boot, timeout, skipped case,
 source change, failed workflow or cleanup failure cannot produce a passing proof.
-Each workflow has a 120-second automation allowance (150-second Xcode ceiling);
-the entire UI phase remains bounded at 600 seconds. All five original scenarios and their acceptance remain required. The first
-workflow also opens the offline privacy and license view. Keyboard readiness and
-completed Share dismissal are checked before subsequent actions. These are development-runner limits,
-not measured or accepted phone performance claims.
+Each workflow has a 120-second automation allowance (150-second Xcode ceiling).
+The 780-second UI phase covers setup and the six cases. Privacy and notice
+navigation has its own case, and both PS checks keep their existing assertions.
+The runner reads the Xcode summary and requires a pass for every named case.
+Keyboard readiness and Share dismissal are checked before later actions.
 
 For source inspection alone, run:
 

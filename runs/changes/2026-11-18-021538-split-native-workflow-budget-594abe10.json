@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-021538-split-native-workflow-budget-594abe10",
+  "recorded_at": "2026-11-18T02:15:38.648833+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f0e5d477dbb67b86af29af32897b828f503c27a8",
+  "changed": "Run Privacy and Notices as its own iPhone UI test and require each of the six named workflows and verified disposal.",
+  "proves": "The native runner tests enforce case names, run counts, failure and skip handling, source identity and removal of the simulator.",
+  "limits": "Full simulator execution, physical acceptance and distribution signing are separate gates.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "mobile/ios/Tests/UIFlows.swift": "99df7ee9bcd2039d9a6095377fa90c5adc6117b480599eb061abb0fa96960b8f",
+    "scripts/verify-ios-share.py": "e7ca30c5def781bb7920e9c404ff9d9132dbc7385c2a817117a8d373263e2cc4",
+    "tests/test_ios_share_verifier.py": "4b7ebe84b4bad2c106adc84781e1823a09bd15330402171390f430b034e1d2a2"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_ios_share_verifier.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T02:15:45.213598+00:00"
+    }
+  ]
+}

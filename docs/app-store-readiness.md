@@ -51,9 +51,15 @@ verified both bundle identifiers and all 36 runtime and notice resources.
 The [cleanup candidate](https://github.com/knwvmbrr/aitrust-id/tree/codex/ios-owned-cleanup)
 deleted its own simulator and verified the registry no longer contained it in
 three local runs and on [hosted iOS 27.2](../runs/2026-11-17-hosted-ios27-owned-cleanup.json).
-The hosted run completed the notice navigation, then hit the case deadline
-waiting for a second PS result. The complete current-source UI proof,
-distribution signing and TestFlight upload remain open.
+That hosted run completed notice navigation, then hit the case deadline
+while waiting for a second PS result.
+
+The current suite runs notice navigation separately. All six named workflows
+and simulator removal passed together on local iOS 26.2.
+[Local proof](../runs/2026-11-17-split-native-share-workflow.json) ·
+[Hosted iOS 27.2 run](https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825)
+
+Distribution signing, TestFlight upload and physical acceptance remain open.
 
 The [listing draft record](../runs/2026-11-17-ios-listing-drafts.json) covers four
 actual screenshots of the initial checker in Light and Dark mode. The simulator
