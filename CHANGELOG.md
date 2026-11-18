@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-022945-bind-split-native-proof-ba515973
+
+Recorded 2026-11-18T02:29:45.323761+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the six-case local iPhone proof to current website, protocol and route verification.
+- **Evidence.** The current evidence packet links the passing local run and the separate hosted boot failure without changing any scope gate. [Change record](./runs/changes/2026-11-18-022945-bind-split-native-proof-ba515973.json).
+- **Not claimed.** The hosted retry, protected signing and physical acceptance have separate outcomes.
+
+
+### 2026-11-18-022606-hosted-split-ios-boot-timeout-3e7467c7
+
+Recorded 2026-11-18T02:26:06.675800+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the hosted iOS 27.2 boot and inventory deadlines for the six-case candidate.
+- **Evidence.** The hosted runner returned no bootstatus output and never reached app build or UI execution. Its delete command succeeded and inventory confirmation timed out. [Change record](./runs/changes/2026-11-18-022606-hosted-split-ios-boot-timeout-3e7467c7.json).
+- **Not claimed.** The local six-case pass is separate from this hosted failure.
+
+
+### 2026-11-18-022426-six-ios-workflows-local-pass-bbd30eb4
+
+Recorded 2026-11-18T02:24:26.423310+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected the completed local iPhone proof and documented the independent notice and PS test budgets.
+- **Evidence.** iOS 26.2 passed all six named cases, with no failures or skips, and verified owned simulator removal in the same run. [Change record](./runs/changes/2026-11-18-022426-six-ios-workflows-local-pass-bbd30eb4.json).
+- **Not claimed.** Hosted iOS, TestFlight, physical operation and human acceptance have separate evidence. No original requirement changed completion percentage.
+
+
 ### 2026-11-18-021538-split-native-workflow-budget-594abe10
 
 Recorded 2026-11-18T02:15:38.648833+00:00 · Contributor: Codex · change

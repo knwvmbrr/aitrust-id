@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-022606-hosted-split-ios-boot-timeout-3e7467c7",
+  "recorded_at": "2026-11-18T02:26:06.675800+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "436ec9a34dce32b4c93afd671b766537f3e331bf",
+  "changed": "Recorded the hosted iOS 27.2 boot and inventory deadlines for the six-case candidate.",
+  "proves": "The hosted runner returned no bootstatus output and never reached app build or UI execution. Its delete command succeeded and inventory confirmation timed out.",
+  "limits": "The local six-case pass is separate from this hosted failure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "6d7ad124e8b565f8303b11495e6cd543b5bafb70697890c9ff659220f22d4a28",
+    "runs/2026-11-17-hosted-split-ios27-boot.json": "6d2a2aecbae80658109b659b911a15bc24a591170cbcf632da7bad718c04d8eb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-hosted-split-ios27-boot.json",
+      "sha256": "6d2a2aecbae80658109b659b911a15bc24a591170cbcf632da7bad718c04d8eb"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T02:26:07.184472+00:00"
+    }
+  ]
+}

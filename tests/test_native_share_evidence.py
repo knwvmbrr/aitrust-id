@@ -27,8 +27,9 @@ def test_current_native_software_proof(prepared_assets):
 @pytest.mark.parametrize('key,value', [('physical_device', True), ('independent_accuracy', True),
     ('human_accessibility', True), ('installable_phone_release', True), ('pass', False),
     ('source_unchanged_during_execution', False), ('post_ui_source_unchanged', False),
-    ('owned_simulator_removed', False),
-    ('test_count', 4), ('test_count', 5.0), ('profile', 'unknown'), ('captured_at', '2099-01-01T00:00:00+00:00')])
+    ('owned_simulator_removed', False), ('owned_simulator_delete_passed', False),
+    ('owned_simulator_inventory_absent', None), ('test_count', 5), ('test_count', 6.0),
+    ('workflow_ids', []), ('profile', 'unknown'), ('captured_at', '2099-01-01T00:00:00+00:00')])
 def test_overclaim_or_partial_execution_refused(key, value):
     value_proof = proof(); value_proof[key] = value
     with pytest.raises(ValueError): guard['verify'](proof=value_proof)

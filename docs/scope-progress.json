@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-18T01:52:33.178019+00:00",
+  "audited_at": "2026-11-18T02:23:24.523441+00:00",
   "client_date": "2026-11-17",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -8782,7 +8782,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-18T01:52:33.178019+00:00",
+      "audited_at": "2026-11-18T02:23:24.523441+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8790,7 +8790,8 @@
         "Codex \u2014 separate App Store record, registered app/Share identifiers, unsigned distribution archive, bundled offline notices and presentation-ready explicit checks; 2026-11-09T16:17:10.971578+00:00",
         "Codex \u2014 integrated the exact five-workflow iPhone candidate, with verified resources and bounded local signing evidence, 2026-11-17T21:30:28.283655+00:00",
         "Codex native delivery lane \u2014 paginated privacy and license notices, reproduced all five local workflows, verified exact archive resources and diagnosed Keychain signing, 2026-11-17T22:21:46.286300+00:00",
-        "Codex \u2014 direct deletion and simulator inventory confirmation on local and hosted runs; 2026-11-18T01:52:33.178019+00:00"
+        "Codex \u2014 direct deletion and simulator inventory confirmation on local and hosted runs; 2026-11-18T01:52:33.178019+00:00",
+        "Codex \u2014 separate notice navigation and same-run named iPhone workflow verification; 2026-11-18T02:23:24.523441+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8798,7 +8799,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Complete all original UI workflows and verified removal in the same source-current run. Separate notice navigation from the timed-out combined PS checks while preserving the assertions. Complete Share key authorization, Apple signing, validation and upload. Complete physical iPhone and human acceptance.",
+      "next_fix": "Complete protected Share key authorization, Apple signing, validation and TestFlight upload. Complete physical iPhone, VoiceOver and outside-user acceptance. The hosted simulator result is tracked separately from the current local pass.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8851,14 +8852,15 @@
         "runs/2026-11-17-owned-cleanup-notice-navigation.json",
         "runs/2026-11-17-owned-cleanup-keyboard-navigation.json",
         "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
-        "runs/2026-11-17-owned-cleanup-ios-archive.json"
+        "runs/2026-11-17-owned-cleanup-ios-archive.json",
+        "runs/2026-11-17-split-native-share-workflow.json"
       ],
-      "evidence_scope": "The candidate cleanup runner removed its own simulator and verified absence on iOS 26.2 and hosted iOS 27.2. The latest hosted UI proof stopped at its deadline after notice navigation. The unsigned device archive matched both bundle identifiers and 36 resources.",
+      "evidence_scope": "All six current UI workflows passed on local iOS 26.2 with verified simulator removal. The separate hosted candidate run and previous UI and signing timeouts remain linked from the distribution guide.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
       "queue": "open",
-      "native_candidate_limit": "Candidate cleanup is verified. Complete paired UI and cleanup, signing, physical iPhone, VoiceOver and outside-user acceptance remain open."
+      "native_candidate_limit": "Local simulator acceptance is current. Hosted runtime, protected signing, physical device and human acceptance have separate evidence."
     },
     {
       "id": "N-014",
