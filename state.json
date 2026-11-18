@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-17T22:52:42.976417+00:00",
+  "updated": "2026-11-18T01:35:22.662739+00:00",
   "active_increment": "Current iOS 26.2 and hosted iOS 27.2 UI workflows passed after notice pagination. Hosted cleanup timed out. Manual signing settings match both targets and protected key authorization remains pending. Original scope is 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1138,11 +1138,11 @@
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
     "protocol": "runs/2026-11-17-ios27-notice-evidence-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-17-ios27-notice-evidence-website.json",
+    "website": "runs/2026-11-17-android-integration-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-17T22:52:42.976417+00:00",
+  "updated_at": "2026-11-18T01:35:22.662739+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3627,5 +3627,6 @@
     "web_publication": "runs/2026-11-17-runtime-notices-publication.json",
     "protected_checks": "runs/2026-11-17-runtime-notices-protected-checks.json",
     "web_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d"
-  }
+  },
+  "current_route_boundaries": "runs/2026-11-17-android-integration-boundaries.json"
 }

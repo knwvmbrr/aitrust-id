@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-18
+
+### 2026-11-18-013522-android-preview-route-review-834f0786
+
+Recorded 2026-11-18T01:35:22.690589+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled the independent Android preview branch with the current web and public route inventories.
+- **Evidence.** All 32 website revalidation checks passed. The installed JVM and 137 engine comparison cases passed on the reconciled source. [Change record](./runs/changes/2026-11-18-013522-android-preview-route-review-834f0786.json).
+- **Not claimed.** Android emulator and physical TalkBack acceptance are pending. The preview carries zero new full scope closures.
+
+
 ## Unreleased — 2026-11-17
 
 ### 2026-11-17-225245-ios27-notice-record-revalidation-c584eebb

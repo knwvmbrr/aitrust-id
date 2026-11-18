@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-013522-android-preview-route-review-834f0786",
+  "recorded_at": "2026-11-18T01:35:22.690589+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "558b365298dfba3a4605d8bdb2e2b80b19d8fecf",
+  "changed": "Reconciled the independent Android preview branch with the current web and public route inventories.",
+  "proves": "All 32 website revalidation checks passed. The installed JVM and 137 engine comparison cases passed on the reconciled source.",
+  "limits": "Android emulator and physical TalkBack acceptance are pending. The preview carries zero new full scope closures.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "state.json": "9c7a333186a4714719e10b587a8bf69559762113aee7512039512bf528c205b1",
+    "eval/route-boundaries.json": "0c7783be6f2a433edc64adfd01048576461ef37704817686c25d78c5c48a8020",
+    "runs/2026-11-17-android-integration-website.json": "c95fef7399a67c4fbea6b2f595d118a4a1b2669a6a3004278396188f1cd88cf1",
+    "runs/2026-11-17-android-integration-boundaries.json": "9aa2b820dd9e5b1fb7df9d061905720ad8831d89fd590ca923bb6a1c63228668"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-android-integration-website.json",
+      "sha256": "c95fef7399a67c4fbea6b2f595d118a4a1b2669a6a3004278396188f1cd88cf1"
+    },
+    {
+      "path": "runs/2026-11-17-android-integration-boundaries.json",
+      "sha256": "9aa2b820dd9e5b1fb7df9d061905720ad8831d89fd590ca923bb6a1c63228668"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:35:23.211344+00:00"
+    }
+  ]
+}

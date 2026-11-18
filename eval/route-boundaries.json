@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-17T22:52:40.705798+00:00",
+  "reviewed_at": "2026-11-18T01:35:20.998010+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -21,6 +21,7 @@
     ".gitattributes": "efc2bc95e544103dc1ca3a1168216ff7322e0d6a71d92376a975cc7c62195217",
     ".github/CODEOWNERS": "2fa300a3d884e4e16d8b24611817c8216e2ffc53e621cb49914128905f1d570c",
     ".github/dependabot.yml": "febf54bb3e7515bfa5b74b725e43ef6fcde00ac7a35d733168efbd2c3a3b2a13",
+    ".github/workflows/android-share.yml": "c06494cf13805d26624d8fafae7cf79f978f9c17171dbf20b967995ed4b8251c",
     ".github/workflows/ci.yml": "d29a34f6c0dc7c3451996bb8328bb52ba930cca823e5008be83a7823854932b6",
     ".github/workflows/community-workbench.yml": "93b1b980dd72fa55c54d1ff4d1079668a3f8c704a079577bc4e77a0391fc3cac",
     ".github/workflows/fleet.yml": "53eb16fdd7d03d017c9118f82cdd259f1342be0a35b29e51cfce0f5dda807fab",
@@ -1099,7 +1100,7 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-17-ios27-notice-evidence-website.json",
+    "website": "runs/2026-11-17-android-integration-website.json",
     "extension": "runs/2026-11-17-crlf-extension.json"
   },
   "device_evidence": {
