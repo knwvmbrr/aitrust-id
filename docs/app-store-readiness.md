@@ -67,8 +67,9 @@ resources and passed all Apple Organizer validation checks. See the
 [signed build and validation receipt](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json).
 Xcode confirmed that [the internal TestFlight upload completed](../runs/2026-11-18-ios-testflight-internal-upload.json).
 Signed-in Chrome now shows internal build **1.0 (1)** with **Missing
-Compliance**. No internal testing group was listed and the build is not yet
-available on the test iPhone. The [dashboard observation](../runs/2026-11-18-testflight-missing-compliance.json)
+Compliance**. **iPhone Owner Test** has the account holder as its sole tester
+and manual build assignment. Apple disables build 1 in that group’s picker
+until compliance is resolved. [Group enrollment evidence](../runs/2026-11-18-testflight-owner-group.json). The [dashboard observation](../runs/2026-11-18-testflight-missing-compliance.json)
 is separate from the upload receipt.
 
 The [signed-package audit](../runs/2026-11-18-ios-testflight-compliance-inputs.json)
@@ -85,7 +86,7 @@ Compliance](https://developer.apple.com/help/app-store-connect/test-a-beta-versi
 1. In [App Store Connect](https://appstoreconnect.apple.com/apps), open
    **AI Trust ID → TestFlight → iOS**, choose **Manage** next to **1.0 (1)**
    and review and submit the export compliance information. When Apple makes
-   the build available, add it to a group with your own account using the
+   the build available, add it to **iPhone Owner Test** using the
    [internal tester instructions](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/).
 2. Open **TestFlight** on the iPhone and install **1.0 (1)**. Then open AI Trust
    ID and try **Practice sharing**. In the share sheet, select **AI Trust ID**.

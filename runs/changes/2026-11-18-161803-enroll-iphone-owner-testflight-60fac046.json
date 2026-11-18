@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-161803-enroll-iphone-owner-testflight-60fac046",
+  "recorded_at": "2026-11-18T16:18:03.829151+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "43dd74848b6e73a68322da200a7b8d5f1b7f4db8",
+  "changed": "Create the internal iPhone Owner Test group and enroll only the existing Apple account holder.",
+  "proves": "The group has one tester with manual distribution, and the build picker disables build 1.0 (1) with Missing Compliance.",
+  "limits": "No export declaration was saved, no build assigned, and there was no iPhone installation, VoiceOver test, public review, or scope closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "0cdf3cdc50be83c86ec5d516db694f04618c6ebfce5db3001427a3a3064df2e7",
+    "docs/scope-progress.json": "97f6dc830bef34badb851701c31a32b61657a8ea6679567f876e1effbf484840",
+    "docs/scope-progress.md": "6a6f855f585b3aac6ac3ccad6e07f9935f3fd4e28eada95cb3212ffbd7ee2c31",
+    "runs/2026-11-18-testflight-owner-group.json": "adf7f82fc23cd74048648771f53ad953044769bd6ef39ad2e28de1d249e4b479",
+    "site/public/reference/public-scope.json": "d414a047770bb0ebfa46ee8eb05df7905794daea010b6a10df00ff09b6c536cf",
+    "site/src/public-scope.json": "d414a047770bb0ebfa46ee8eb05df7905794daea010b6a10df00ff09b6c536cf",
+    "site/src/scope-manifest.json": "fe4b4cbe47ce7d74d6c5c7b9f92f0e173b96a38c6ea0f55b7cd55f604244e8ed",
+    "state.json": "f37629e4d902f3e55a717e726618214f6d5990c12361fe3e5f2c5c081339eca4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-testflight-owner-group.json",
+      "sha256": "adf7f82fc23cd74048648771f53ad953044769bd6ef39ad2e28de1d249e4b479"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T16:18:04.489981+00:00"
+    }
+  ]
+}

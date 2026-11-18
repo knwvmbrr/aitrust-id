@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T16:12:47.363713+00:00",
+  "updated": "2026-11-18T16:18:03.093924+00:00",
   "active_increment": "Verified the TestFlight compliance blocker, audited the exact signed iPhone runtime, and matched selected embedded source archives. Scope remains 132 complete and 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1142,7 +1142,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T16:12:47.363713+00:00",
+  "updated_at": "2026-11-18T16:18:03.093924+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2085,6 +2085,9 @@
     "app_store_connect_internal_build_visible": true,
     "testflight_build_status": "Missing Compliance",
     "testflight_tester_access_verified": false,
+    "testflight_owner_group_membership_verified": true,
+    "testflight_build_assigned_to_owner_group": false,
+    "latest_testflight_owner_group_evidence": "runs/2026-11-18-testflight-owner-group.json",
     "current_testflight_compliance_inputs": "runs/2026-11-18-ios-testflight-compliance-inputs.json"
   },
   "organization_policy": {

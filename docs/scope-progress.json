@@ -8791,7 +8791,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-18T16:08:29.389587+00:00",
+      "audited_at": "2026-11-18T16:18:03.093924+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8809,7 +8809,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Review and resolve the Missing Compliance questionnaire for internal TestFlight build 1.0 (1), assign it to the owner\u2019s internal tester group, then complete the physical iPhone Share, offline, VoiceOver and outside-user checks.",
+      "next_fix": "Review and resolve the Missing Compliance questionnaire, assign build 1.0 (1) to the existing iPhone Owner Test group, then complete physical iPhone Share, offline, VoiceOver and outside-user checks.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8871,9 +8871,10 @@
         "runs/2026-11-18-testflight-mac-session-recheck.json",
         "runs/2026-11-18-testflight-missing-compliance.json",
         "runs/2026-11-18-ios-testflight-compliance-inputs.json",
-        "scripts/verify-ios-compliance-inputs.py"
+        "scripts/verify-ios-compliance-inputs.py",
+        "runs/2026-11-18-testflight-owner-group.json"
       ],
-      "evidence_scope": "Signed-in Chrome shows internal build 1.0 (1) with Missing Compliance and no group listed. The exact signed IPA was measured for checksum and bundled TLS behavior. No declaration, tester access, installation or physical acceptance is verified.",
+      "evidence_scope": "Signed-in Chrome confirms the owner is the sole tester in an internal group with manual distribution. Build 1.0 (1) is disabled in that group\u2019s picker with Missing Compliance. The signed IPA was measured for checksum and bundled TLS behavior. No build assignment, installation or physical acceptance is verified.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],

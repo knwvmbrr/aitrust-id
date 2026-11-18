@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-161803-enroll-iphone-owner-testflight-60fac046
+
+Recorded 2026-11-18T16:18:03.829151+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the internal iPhone Owner Test group and enroll only the existing Apple account holder.
+- **Evidence.** The group has one tester with manual distribution, and the build picker disables build 1.0 (1) with Missing Compliance. [Change record](./runs/changes/2026-11-18-161803-enroll-iphone-owner-testflight-60fac046.json).
+- **Not claimed.** No export declaration was saved, no build assigned, and there was no iPhone installation, VoiceOver test, public review, or scope closure.
+
+
 ### 2026-11-18-161247-bind-testflight-compliance-verification-9f514396
 
 Recorded 2026-11-18T16:12:47.395367+00:00 · Contributor: Codex · change
