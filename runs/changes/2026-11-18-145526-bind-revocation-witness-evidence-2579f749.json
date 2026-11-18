@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-145526-bind-revocation-witness-evidence-2579f749",
+  "recorded_at": "2026-11-18T14:55:26.068315+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "36d91b839a1badbd9e245ffa003802245bd84d10",
+  "changed": "Bind the offline witness CLI and both current scope records to the executed route and engineering checks.",
+  "proves": "32 website checks, 40 protocol checks, the route gate and current evidence packet passed.",
+  "limits": "The evidence covers selected keys rather than independent operators and records no physical iPhone result, new tag release or requirement closure.",
+  "scope_ids": [
+    "F-125",
+    "N-013"
+  ],
+  "files": {
+    "state.json": "e5620efff951cb228fa0ad8979e9c38bd3779bd66af4180d6412c81ffbadefd0",
+    "eval/route-boundaries.json": "7a4f1a7ea98f8ec2e3861ef1e5d0df64150319d711975ba5d4cad09d4fa02592",
+    "runs/2026-11-18-revocation-witness-website.json": "670b09015fc39af472678708459d8fae4b4c50322d9ce7696a47c4e1257f6097",
+    "runs/2026-11-18-revocation-witness-protocol.json": "f2a74327ba4f145b7fa5df42ef4d33ba5998f983c9fda6157770bc032e80a414",
+    "runs/2026-11-18-revocation-witness-boundaries.json": "96e9b14f210dcc73abcd22e7294e4235ff472dd5e66c2914f3b876101a9673ce"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-revocation-witness-website.json",
+      "sha256": "670b09015fc39af472678708459d8fae4b4c50322d9ce7696a47c4e1257f6097"
+    },
+    {
+      "path": "runs/2026-11-18-revocation-witness-protocol.json",
+      "sha256": "f2a74327ba4f145b7fa5df42ef4d33ba5998f983c9fda6157770bc032e80a414"
+    },
+    {
+      "path": "runs/2026-11-18-revocation-witness-boundaries.json",
+      "sha256": "96e9b14f210dcc73abcd22e7294e4235ff472dd5e66c2914f3b876101a9673ce"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T14:55:26.589236+00:00"
+    }
+  ]
+}

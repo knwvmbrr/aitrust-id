@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T14:34:02.198603+00:00",
-  "active_increment": "Added and tested offline comparison of two signed revocation histories. App Store Connect requires sign-in to confirm internal TestFlight readiness. Original scope: 132 complete, 70 open.",
+  "updated": "2026-11-18T14:55:24.279189+00:00",
+  "active_increment": "Added verified offline signing and verification of revocation witness observations. Mac browser sessions still require Apple sign-in to check TestFlight installability. Original scope: 132 complete, 70 open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -792,7 +792,7 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-18T14:29:13.625078+00:00",
+    "audited_at": "2026-11-18T14:50:45.503559+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
@@ -850,8 +850,8 @@
     "latest_increment_publication": "runs/2026-11-17-runtime-notices-publication.json",
     "published_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
     "latest_increment_candidate_ids": [
-      "N-013",
-      "F-125"
+      "F-125",
+      "N-013"
     ],
     "intermediate_target_open_records": 60,
     "intermediate_remaining_closures": 10
@@ -1136,13 +1136,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-17-runtime-notices-PS.json",
     "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-18-revocation-comparison-protocol.json",
+    "protocol": "runs/2026-11-18-revocation-witness-protocol.json",
     "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-18-revocation-comparison-website.json",
+    "website": "runs/2026-11-18-revocation-witness-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T14:34:02.198603+00:00",
+  "updated_at": "2026-11-18T14:55:24.279189+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1372,7 +1372,8 @@
     "publication": "runs/2026-10-11-revocation-publication.json",
     "protected_merge": "runs/2026-10-11-offline-status-protected-merge.json",
     "authenticated_source": "runs/2026-10-11-offline-status-download-timing-confirmed.json",
-    "current_supplied_history_comparison": "runs/2026-11-18-offline-revocation-comparison.json"
+    "current_supplied_history_comparison": "runs/2026-11-18-offline-revocation-comparison.json",
+    "current_selected_witness_observation_controls": "runs/2026-11-18-revocation-witness-offline-controls.json"
   },
   "offline_key_recovery": {
     "implemented": true,
@@ -2080,7 +2081,7 @@
     "current_apple_validation": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
     "current_testflight_upload": "runs/2026-11-18-ios-testflight-internal-upload.json",
     "testflight_processing_verified": false,
-    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-dashboard-authentication.json"
+    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-mac-session-recheck.json"
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -3675,5 +3676,5 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-18-revocation-comparison-boundaries.json"
+  "current_route_boundaries": "runs/2026-11-18-revocation-witness-boundaries.json"
 }

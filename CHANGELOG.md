@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-145526-bind-revocation-witness-evidence-2579f749
+
+Recorded 2026-11-18T14:55:26.068315+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the offline witness CLI and both current scope records to the executed route and engineering checks.
+- **Evidence.** 32 website checks, 40 protocol checks, the route gate and current evidence packet passed. [Change record](./runs/changes/2026-11-18-145526-bind-revocation-witness-evidence-2579f749.json).
+- **Not claimed.** The evidence covers selected keys rather than independent operators and records no physical iPhone result, new tag release or requirement closure.
+
+
+### 2026-11-18-145122-sign-revocation-witness-observations-19ddabe5
+
+Recorded 2026-11-18T14:51:22.551664+00:00 · Contributor: Codex · change
+
+- **Changed.** Add offline signing and verification of revocation witness observations, and record the current TestFlight session recheck.
+- **Evidence.** Eight new witness controls and all 62 prior revocation controls passed. Both accessible Mac browsers requested App Store Connect sign-in. [Change record](./runs/changes/2026-11-18-145122-sign-revocation-witness-observations-19ddabe5.json).
+- **Not claimed.** Selected key agreement is not evidence of independent operators or publication. TestFlight processing and iPhone access remain unverified. No full scope records closed.
+
+
 ### 2026-11-18-143404-bind-revocation-comparison-evidence-7ace931b
 
 Recorded 2026-11-18T14:34:04.001633+00:00 · Contributor: Codex · change

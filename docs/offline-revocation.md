@@ -90,6 +90,37 @@ The comparison prints checkpoint fingerprints and counts. It does not expose
 the revoked-key lists, rewrite either copy, select a winner or clear a key. A
 matching pair cannot rule out missing or conflicting copies elsewhere.
 
+## Verify signed witness observations
+
+A witness can sign the exact head of a log it has checked. Keep your private
+key and prior observations under your own control. Use the authority public
+key you already trust; do not take it or a witness roster from the log.
+
+```sh
+node scripts/revocation-witnesses.cjs sign log-1.json authority.pub witness-private.pem witness-1.json --first-observation
+node scripts/revocation-witnesses.cjs sign log-2.json authority.pub witness-private.pem witness-2.json --after witness-1.json
+```
+
+Use `--first-observation` only for a new witness. For later observations, keep
+your saved receipt and use `--after`. The new log must contain your prior signed
+checkpoint and extend it. Do not reset the witness when that check fails. The
+tool only saves an observation; it does not send or publish it.
+
+To verify, obtain each witness public key through a channel you trust. This
+example selects two keys and requires both to endorse the exact same checkpoint:
+
+```sh
+node scripts/revocation-witnesses.cjs policy authority.pub 2 witness-policy.json witness-a.pub witness-b.pub
+node scripts/revocation-witnesses.cjs verify log-2.json authority.pub witness-policy.json witness-a-2.json witness-b-2.json
+```
+
+Exit `0` means the selected number of distinct public keys signed that
+checkpoint. Exit `3` means too few valid observations; exit `2` means some
+input was refused. The authority's own key, duplicates, unknown keys and
+observations for another checkpoint never count. Several keys can belong to
+one operator. The result cannot prove independent operators, when the log
+was seen, public distribution, current key status or completeness.
+
 ## What this protects, and what remains open
 
 Canonical signed complete history and a separately pinned checkpoint detect

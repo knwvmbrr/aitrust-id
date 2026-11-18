@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-18T14:33:59.921654+00:00",
+  "reviewed_at": "2026-11-18T14:55:22.068265+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -214,6 +214,7 @@
     "protocol/reserved-subjects.cjs": "4ef18ca508118d39eab0bb821a35db553961c80ffa040d18dacf9c4300cb49b9",
     "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
     "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "protocol/revocation-witnesses.cjs": "67bcbeb0d226c1109e2d1e28c265940081bdcb96ad9047ab7ecaef4265cb061c",
     "protocol/revocation.cjs": "0cfd35c00fd7a2e1dde91f567c499669c99fade18622933dfa08a55e1488caa7",
     "protocol/scope_groups.py": "885bc5cb213d0f098546c0c507fc30c0c6a30a08744f85c4dedd2477f462e3d9",
     "protocol/signals.py": "a2d3e52b5ec6760f8f7b2db4a38741b424a31f767e59c16d745a9d897af65f71",
@@ -700,6 +701,7 @@
     "scripts/review-reference-revision.py": "730d44d5235b3ac4b4f392e2fa1afee3dc8441f5fa822fe459761cf672662e24",
     "scripts/review-session-revision.py": "db37559bfb079b1b02c7a8cf324144461edbbb885929d4cea45e9ebcce73cfc6",
     "scripts/reviewer-agreement.py": "e8da7cb0e8c1b7c8187cf83cdee2449b041f76d0e146966bd3fe88263d8790f5",
+    "scripts/revocation-witnesses.cjs": "1351b587bc9b08c7e8c0241dd715e0edc1ab9c41a291fcdc78172cd433d6f9ea",
     "scripts/revocation.cjs": "a8809ef584056f9736f92346bb8f4318594e7bd5f9fcbe2853e0d63995cb5821",
     "scripts/scope-progress.py": "6adce2f296884001bc6c52fe868388b384acccd316f6b431766b8ab481eca001",
     "scripts/select-ios-runtime.py": "c5d0884571738cb715a821910ffc7486931415d95a394eb3817e14344e5a8909",
@@ -773,7 +775,7 @@
     "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
     "scripts/verify-reviewer-agreement.py": "49c303a76c183b4fcef1adedb5e8695c0d1b046e067dca467b7474b253941ee8",
     "scripts/verify-route-boundaries.cjs": "d012f15d22fdd90fe6b81db673a71ed328170ce211a8cebd63043cc45542ed8a",
-    "scripts/verify-route-boundaries.py": "036e32016bbb7e4c27d73922e49540df76a6e85df23c700f2284b7d4c38b4327",
+    "scripts/verify-route-boundaries.py": "9b5752efd0065730f203707ab6be58635b761ff5c3db5534b4bf885a83fb9f9e",
     "scripts/verify-runtime-sbom-standard.py": "d806faa61ce8fd290653051837100d922ca0218d0e9ca260632e14c860a33496",
     "scripts/verify-runtime-sbom.py": "73f1c0f11eb5ab1418854cd5b57b133553fbae5ae3c1c3e21e4f62f19c481ead",
     "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
@@ -863,12 +865,12 @@
     "site/src/policies.js": "f06f3e69fce96674991eaa1bd9169226a39da2ee9d80c38b06152af25a8de26b",
     "site/src/presentation.js": "8f08d1839cd577e5480eda33d8b1ee73a5721ce2d1734b58f772cf998776599b",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "b505e2ddda660db2d8894d6664117a12cf3904b9c7daf111f48a2b3b35087f7e",
+    "site/src/public-scope.json": "158c57f454bb3eacfe6e2fccf0e3378087acf04574a923cd70fdf8879b6ca975",
     "site/src/redaction-performance-model.js": "e6a9c38b194fdecebf9ac52ae7676e6561d4c374160f60b0983129423314834d",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "4cf4cd5a7bba4ae770ec49cdf3e7f2249c4385178c5552ef42022b6434b5c9cf",
+    "site/src/scope-manifest.json": "5a99603e12eb8a7c9f15069db0ccf62d5222d37812035f1e3d54a1ff4be46a72",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
     "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
@@ -928,6 +930,7 @@
     "tests/fixtures/timestamp-freetsa-2026/tsa.pem": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467",
     "tests/group-receipts.cjs": "4704ada4d0732654b1b651eb7fb90decc1114f83a40970dfddb8b4f4866fc829",
     "tests/key-backup.cjs": "60065961d7258d6913d3c31eaabe2506647c5ec3f4a9f137e98631645fd4a4d4",
+    "tests/offline-revocation-witnesses.cjs": "a9a4b4dcc71b5672a0ee6b87892c1ef5901a6b18f430fefc10fcc7900f471d4c",
     "tests/offline-revocation.cjs": "6002d263e094c95c1e64f2fd181a15ece32c5ea9bd900806d489dcb5b0375101",
     "tests/offline-worker-cache.cjs": "b144f3bdb9a2a5567e99422a6d44a3931c7cb89f4c76c940e92855e9bfd9e8b1",
     "tests/pipeline-timing.cjs": "8ee4a40c0902dba3399d98eaf10681801389b78daafe77c8ada9f4eeb1f37453",
@@ -1011,6 +1014,7 @@
     "tests/test_nli_references.py": "9a858ad2e3eeb2b501e26dccc1b4fd4d14f8c933a699c0bb17c3071de5c8c578",
     "tests/test_observation_verifier.py": "2eef69e0657e9f90ce1878d21e79483704e8f350f902c036a40ecb87ac2804f3",
     "tests/test_offline_revocation.py": "acb15839c6d730000dd356f796f4ed23da79ec70e730cc87d61e5edd2c7d7e32",
+    "tests/test_offline_revocation_witnesses.py": "bcb5c1f86b901b803b977ec1e2a6d89623e9ff1abedd392414c18ae6291a5eba",
     "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0",
     "tests/test_organization_directory_evidence.py": "d8faab9ce6776628c3ae52059dda3517e5ee9531149e1c247a406e132fd9051c",
     "tests/test_package_proximity.py": "b789d18cb0613cad336da111780c333f0d2f2ebd8f41a862fbbe3a14f887673b",
@@ -1101,7 +1105,7 @@
     "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-18-revocation-comparison-website.json",
+    "website": "runs/2026-11-18-revocation-witness-website.json",
     "extension": "runs/2026-11-17-crlf-extension.json"
   },
   "device_evidence": {

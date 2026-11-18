@@ -70,3 +70,26 @@ authorize a key or claim a live witness. Verify the real CLI inputs and exit
 states and test Ed25519 forks, P-256 re-signing and incomplete histories.
 Public distribution, rotation, independent witnesses and outside-user
 acceptance remain F-125 work.
+
+## Signed witness observations — November 18, 2026
+
+Keep the authority log and its single-log check unchanged. Add a separate
+offline receipt type that binds the authority fingerprint, checkpoint sequence
+and exact signed checkpoint fingerprint. A witness verifies the entire
+selected log before signing. For later observations it supplies its own
+previously saved receipt under the same key; the new log must include that exact
+checkpoint and strictly extend it. A first observation must be explicit.
+
+The verifier supplies a separate policy with the trusted witness public keys
+and a minimum count of at least two. Validate all supplied receipts under the
+selected keys. Refuse an invalid, unknown, duplicate or authority signature,
+wrong checkpoint, bad chain or unreviewed field. A short set returns insufficient
+witnesses, not a verdict. Return only counts and the checkpoint reference. Use
+the existing bounded canonical signature and safe file helpers. Do not contact
+any service, issue tags or create production signing keys.
+
+Several keys may have one operator or collude. The offline result does not
+prove independent operators, timeliness, key status, publication, completeness
+or that every witness saved its own prior receipt. Real public distribution,
+separate witness operation, rotation and outside-user workflows are still
+required. Verify synthetic multi-key and advance/refusal cases and real CLI I/O.
