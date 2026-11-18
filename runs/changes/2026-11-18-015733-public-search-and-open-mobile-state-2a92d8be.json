@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-015733-public-search-and-open-mobile-state-2a92d8be",
+  "recorded_at": "2026-11-18T01:57:33.317941+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "28bfdfe5a63065a1a5ca8b3cb08dc21f11667d86",
+  "changed": "Verified the live phone guide and social draft automation, and selected the current scope and public route evidence.",
+  "proves": "The public domain and Pages deployment match the reviewed build on four crawler and HTML files. The default-branch workflow produced three identical checked drafts. The current website, protocol, route and state checks passed.",
+  "limits": "Google indexing, scheduled social publication, protected app signing and full mobile UI acceptance remain open.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-PS",
+    "N-013"
+  ],
+  "files": {
+    "state.json": "99199d999186cdea0ab3eedf6cf617b0a995723f5c9c3dd04baf9579de665a95",
+    "eval/route-boundaries.json": "52fc6caaf45ad72e9e5e57cd4bffaf8204ff819ecdac482f1eb4d62908b66236",
+    "runs/2026-11-17-phone-seo-production.json": "7b2ed10d1027f7b388df47884f6c2793f764d9d3679febb21f1e9f236c456de3",
+    "runs/2026-11-17-release-scope-boundaries.json": "3358ba9146070ad0ccd0fc7d701c8c8204c2dc844dbf7db9036ebba499a73197",
+    "runs/2026-11-17-release-scope-website.json": "55a113b24c60c9f3a6f7ace1b056e8ce295441a720845ee5e33253f6cd0ed33f",
+    "runs/2026-11-17-release-scope-protocol.json": "33c0a4f95bbd7100df94381c2f8c4ac1c834d00506b13148ac3ebec1aeb89813"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-phone-seo-production.json",
+      "sha256": "7b2ed10d1027f7b388df47884f6c2793f764d9d3679febb21f1e9f236c456de3"
+    },
+    {
+      "path": "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
+      "sha256": "eddcf32aa3677b69a68c50c2d3179f77144550b0a0a33c237769f46aa05aca44"
+    },
+    {
+      "path": "runs/2026-11-17-release-scope-boundaries.json",
+      "sha256": "3358ba9146070ad0ccd0fc7d701c8c8204c2dc844dbf7db9036ebba499a73197"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T01:57:33.788168+00:00"
+    }
+  ]
+}

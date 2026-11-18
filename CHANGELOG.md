@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-18
 
+### 2026-11-18-015733-public-search-and-open-mobile-state-2a92d8be
+
+Recorded 2026-11-18T01:57:33.317941+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified the live phone guide and social draft automation, and selected the current scope and public route evidence.
+- **Evidence.** The public domain and Pages deployment match the reviewed build on four crawler and HTML files. The default-branch workflow produced three identical checked drafts. The current website, protocol, route and state checks passed. [Change record](./runs/changes/2026-11-18-015733-public-search-and-open-mobile-state-2a92d8be.json).
+- **Not claimed.** Google indexing, scheduled social publication, protected app signing and full mobile UI acceptance remain open.
+
+
+### 2026-11-18-015233-preserve-simulator-and-signing-evidence-33ffa2e7
+
+Recorded 2026-11-18T01:52:33.999663+00:00 · Contributor: Codex · change
+
+- **Changed.** Added the verified cleanup candidate and the current Xcode signing retry to the shared scope ledger and distribution guide.
+- **Evidence.** Hosted iOS 27.2 and three local runs verified removal. A fresh unsigned archive matched 36 resources. The UI deadline and protected signing timeout have separate receipts. [Change record](./runs/changes/2026-11-18-015233-preserve-simulator-and-signing-evidence-33ffa2e7.json).
+- **Not claimed.** The candidate still needs a complete native UI run and a signed TestFlight package. The ledger retains 70 open requirements.
+
+
 ### 2026-11-18-014306-phone-search-engineering-evidence-3092640b
 
 Recorded 2026-11-18T01:43:06.844118+00:00 · Contributor: Codex · change

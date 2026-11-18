@@ -40,6 +40,21 @@ An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
 The November 17 candidate still needs signing, validation and upload. Keys, profiles and build
 artifacts stay private.
 
+### Subsequent signing and simulator check
+
+The [Xcode archive retry](../runs/2026-11-17-share-manual-signing-retry.json)
+matched both profiles and requested protected Keychain access at the Share
+extension. It reached the 120-second deadline before producing a signed archive.
+The [fresh unsigned archive](../runs/2026-11-17-owned-cleanup-ios-archive.json)
+verified both bundle identifiers and all 36 runtime and notice resources.
+
+The [cleanup candidate](https://github.com/knwvmbrr/aitrust-id/tree/codex/ios-owned-cleanup)
+deleted its own simulator and verified the registry no longer contained it in
+three local runs and on [hosted iOS 27.2](../runs/2026-11-17-hosted-ios27-owned-cleanup.json).
+The hosted run completed the notice navigation, then hit the case deadline
+waiting for a second PS result. The complete current-source UI proof,
+distribution signing and TestFlight upload remain open.
+
 The [listing draft record](../runs/2026-11-17-ios-listing-drafts.json) covers four
 actual screenshots of the initial checker in Light and Dark mode. The simulator
 captures use iPhone 14 Pro (1179 × 2556) and 13-inch iPad Pro (2064 × 2752).

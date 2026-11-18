@@ -214,3 +214,19 @@ anything. Continue the next available engineering action when one specific step
 requires Michael, another real person, credentials or qualified judgment. The
 next tag integration queue is HP evidence composition, NF/FI evidence review and
 supported provenance evidence—not production assertions from unvalidated models.
+
+## Simulator custody and public discovery pilot — November 17
+
+N-013 has source-bound evidence that the candidate runner deleted its owned
+simulator and verified removal on local iOS 26.2 and hosted iOS 27.2. The hosted
+UI check completed notice navigation and timed out during the later PS checks.
+Signing stopped at the protected Share key request. The iPhone requirement
+remains 80% with the current UI, signing, TestFlight and physical gates open.
+[Hosted results](../runs/2026-11-17-hosted-ios27-owned-cleanup.json)
+
+The web team verified the canonical mobile guide and generated three
+reviewable drafts from live pages. Search Console measurement and social
+account connection remain open. [Discovery and draft evidence](../runs/2026-11-17-phone-search-and-social-drafts.json)
+
+The ledger has 132 complete and 70 open across all 202 original requirements.
+Ten fully accepted requirements remain to reach the intermediate target.

@@ -1,0 +1,56 @@
+{
+  "kind": "hosted_owned_simulator_cleanup_verified_after_ui_deadline",
+  "captured_at": "2026-11-18T01:40:53.932585+00:00",
+  "workflow_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44215075645",
+  "run_id": 44215075645,
+  "source_commit": "e317ecacfcc95f2e69113c4c8a099772aba9c3bb",
+  "runtime": "iOS 27.2",
+  "sdk": "27.1",
+  "xcode": "Xcode 27.1\nBuild version 27A9275",
+  "pass": false,
+  "failed_stage": "ui_workflows",
+  "ui_phase_deadline_seconds": 600,
+  "logged_ui_cases": {
+    "testBackgroundClearsInputAndResult": "passed",
+    "testEditInvalidatesOldFinding": "passed",
+    "testExplicitPSCheckAndClear": "exceeded execution time allowance",
+    "testNativePracticeShareRequiresExplicitCheck": "passed",
+    "testShareClearDuringCheckAndRepeat": "started"
+  },
+  "exact_xcresult_summary_available": false,
+  "notice_navigation_completed_before_deadline": true,
+  "deadline_context": "The notice and ordinary-text check steps of the combined workflow completed. The test reached the 120-second allowance while waiting for its second PS result; the final Share case began but the process reached the 600-second UI phase deadline.",
+  "owned_simulator_removed": true,
+  "owned_simulator_delete_passed": true,
+  "owned_simulator_inventory_absent": true,
+  "cleanup": [
+    {
+      "operation": [
+        "simctl",
+        "delete"
+      ],
+      "outcome": "passed",
+      "timeout_seconds": 90,
+      "started_at": "2026-11-18T01:39:33.310665+00:00",
+      "finished_at": "2026-11-18T01:40:50.664215+00:00"
+    },
+    {
+      "operation": [
+        "simctl",
+        "list"
+      ],
+      "outcome": "passed",
+      "timeout_seconds": 15,
+      "started_at": "2026-11-18T01:40:50.714061+00:00",
+      "finished_at": "2026-11-18T01:40:53.729858+00:00"
+    }
+  ],
+  "source_unchanged_during_execution": true,
+  "receipt_sha256": "a6ea219097d58a052ca02ba27e33e51834c347546bb0b4746b3ffb4c6f61f17b",
+  "ui_log_sha256": "b8f072688548d986ae7abd0dabf03241df1991561338b9e55bcd99e4519c4dbb",
+  "runner_sha256": "35729b5909566b270720dde5d0f2f677b3d64a55ca868abb244579f0e486f368",
+  "ui_test_sha256": "9e784fd59fb9cf8843ef303de1857581236f57cc9fe62da8bac40095aa40e2c3",
+  "physical_device": false,
+  "independent_accuracy": false,
+  "requirements_closed": []
+}
