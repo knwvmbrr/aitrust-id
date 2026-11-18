@@ -12,5 +12,5 @@ def test_real_stream_controls():
     result = subprocess.run([node, '--test', '--test-reporter=tap', 'tests/stream-observer.cjs'],
                             cwd=ROOT, text=True, capture_output=True, timeout=30)
     assert result.returncode == 0, result.stdout + result.stderr
-    assert '# tests 10' in result.stdout and '# pass 10' in result.stdout
+    assert '# tests 12' in result.stdout and '# pass 12' in result.stdout
     assert '# fail 0' in result.stdout

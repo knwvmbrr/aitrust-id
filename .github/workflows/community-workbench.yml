@@ -1,0 +1,73 @@
+name: synthetic-community-workbench
+on:
+  push:
+    branches: [main]
+    tags: ['**']
+    paths:
+      - 'tools/community_*.py'
+      - 'scripts/*community*.py'
+      - 'tests/test_community*.py'
+      - 'deploy/community/**'
+      - 'tools/blind_review_io.py'
+      - 'scripts/worker_process.py'
+      - 'scripts/verify-metadata-store.py'
+      - 'tools/backup_retention.py'
+      - 'deploy/backup/restore.py'
+      - 'protocol/reports.py'
+      - 'eval/requirements.lock'
+      - '.github/workflows/community-workbench.yml'
+  pull_request:
+    paths:
+      - 'tools/community_*.py'
+      - 'scripts/*community*.py'
+      - 'tests/test_community*.py'
+      - 'deploy/community/**'
+      - 'tools/blind_review_io.py'
+      - 'scripts/worker_process.py'
+      - 'scripts/verify-metadata-store.py'
+      - 'tools/backup_retention.py'
+      - 'deploy/backup/restore.py'
+      - 'protocol/reports.py'
+      - 'eval/requirements.lock'
+      - '.github/workflows/community-workbench.yml'
+permissions:
+  contents: read
+jobs:
+  private-community-software:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install existing pinned verification dependencies
+        run: python -m pip install --require-hashes -r eval/requirements.lock
+      - name: Verify core, private file storage, CLI and adapter refusals
+        run: python -m pytest -q tests/test_community_core.py tests/test_community_store.py tests/test_community_cli.py tests/test_community_postgres.py
+      - name: Exercise actual private no-network CLI
+        run: python scripts/verify-community-core.py --output output/verification/community-cli.json
+      - name: Install PostgreSQL18 from the existing fingerprint-checked official source
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -q
+          sudo apt-get install -y ca-certificates curl gnupg postgresql-common
+          curl --fail --silent --show-error --proto '=https' --tlsv1.2 https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /tmp/aitrust-community-pgdg.asc
+          fingerprint=$(gpg --show-keys --with-colons /tmp/aitrust-community-pgdg.asc | awk -F: '$1=="fpr" { print $10; exit }')
+          test "$fingerprint" = B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+          sudo install -m 0644 /tmp/aitrust-community-pgdg.asc /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          printf '%s\n' 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt noble-pgdg main' | sudo tee /etc/apt/sources.list.d/aitrust-community-pgdg.list >/dev/null
+          printf '\ncreate_main_cluster = false\n' | sudo tee -a /etc/postgresql-common/createcluster.conf >/dev/null
+          sudo apt-get update -q
+          sudo apt-get install -y postgresql-18 postgresql-client-18
+      - name: Execute disposable PostgreSQL controls with no network and no root runtime
+        run: sudo unshare --net -- "$(command -v python)" scripts/community-postgres-sandbox.py --run-as "$(id -un)" --output output/verification/community-postgres.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: synthetic-community-software
+          path: |
+            output/verification/community-cli.json
+            output/verification/community-postgres.json
+          if-no-files-found: error

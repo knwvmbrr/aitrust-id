@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-220518-offline-removal-revalidation-bfb3e025",
+  "recorded_at": "2026-11-17T22:05:18.805922+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fc55eb4a913f7727f8e045573187f9a6e1701c48",
+  "changed": "Bound the reviewed worker, two-engine execution, current capability checks and the hosted iPhone timeout to the updated state.",
+  "proves": "All five current engineering receipts validate, and the current route guard accepts the exact committed browser test and source.",
+  "limits": "Physical and human acceptance remain pending. The hosted iPhone suite timed out and the current signed Apple submission is pending.",
+  "scope_ids": [
+    "N-012",
+    "N-013"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "552ee2d8a671f9efaf2380d4231f3968e692272d4a337e469dfb77808525fa79",
+    "runs/2026-11-17-offline-removal-route-boundaries.json": "39eba020932603ee7dc4bfe56dfa9400ac6fc01ee6dc6720e8580304123d6fea",
+    "state.json": "4061d153a71892f1ee3e61e3ffdc3420be86bacf6ac332448e24a5ee5c4e9332"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-offline-removal-website.json",
+      "sha256": "1d826405e3ae8349a3fde9579adc28d5798779c62eb4116624526a66ff71f10c"
+    },
+    {
+      "path": "runs/2026-11-17-offline-removal-protocol.json",
+      "sha256": "fcff79444ae6b11958a9a9d4476c57f47142820fdad36646832c72552e5afbb7"
+    },
+    {
+      "path": "runs/2026-11-17-offline-removal-route-boundaries.json",
+      "sha256": "39eba020932603ee7dc4bfe56dfa9400ac6fc01ee6dc6720e8580304123d6fea"
+    },
+    {
+      "path": "runs/2026-11-17-offline-removal-device-browser.json",
+      "sha256": "7d91f1d90e72dd8f9e102844e195aa5f6f895cdf1d099d8da22e7ef8e0a34a6f"
+    },
+    {
+      "path": "runs/2026-11-17-current-native-hosted-ui-timeout.json",
+      "sha256": "9ebf735763b60b023654e894f9dfd870095f4e33cb08f8fbac8f6ab2b3e42328"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/offline-worker-cache.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T22:05:19.890497+00:00"
+    }
+  ]
+}

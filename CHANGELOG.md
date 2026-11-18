@@ -2,6 +2,168 @@
 
 ## Unreleased — 2026-11-17
 
+### 2026-11-17-225245-ios27-notice-record-revalidation-c584eebb
+
+Recorded 2026-11-17T22:52:45.336617+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified the updated scope and distribution readiness evidence with the current source.
+- **Evidence.** All five capability receipts and the current route and ownership checks pass. [Change record](./runs/changes/2026-11-17-225245-ios27-notice-record-revalidation-c584eebb.json).
+- **Not claimed.** The hosted simulator cleanup timeouts, protected signing, Apple submission and physical acceptance remain open.
+
+
+### 2026-11-17-224828-paged-notices-ios27-result-cf71837c
+
+Recorded 2026-11-17T22:48:28.502920+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the hosted result for the paginated notice reader and retained the cleanup failure.
+- **Evidence.** The downloaded Xcode result bundle confirms all five UI cases passed on iOS 27.2 with zero skips. Shutdown and deletion each reached their cleanup deadline. [Change record](./runs/changes/2026-11-17-224828-paged-notices-ios27-result-cf71837c.json).
+- **Not claimed.** Hosted removal remains unverified. Protected distribution signing, Apple upload and physical acceptance remain open.
+
+
+### 2026-11-17-222732-paged-notices-distribution-preflight-42b13a14
+
+Recorded 2026-11-17T22:27:32.143367+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the notice and stream changes to current engineering receipts and verified both manual Xcode distribution target settings.
+- **Evidence.** Website, protocol and extension checks passed. Both installed profiles match the selected certificate and both target configurations match the registered identifiers. [Change record](./runs/changes/2026-11-17-222732-paged-notices-distribution-preflight-42b13a14.json).
+- **Not claimed.** Protected access to the existing signing key, hosted iOS 27.2 execution, Apple upload and physical and live vendor acceptance remain open.
+
+
+### 2026-11-17-222146-paged-native-notices-crlf-563b62dd
+
+Recorded 2026-11-17T22:21:46.985205+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a bounded, browsable offline notice reader and corrected CRLF framing at the synthetic stream line limit.
+- **Evidence.** All five local native workflows passed. The unsigned archive verified 36 unaltered resources, and the seven notices reconstructed byte for byte. Twelve stream control groups passed. [Change record](./runs/changes/2026-11-17-222146-paged-native-notices-crlf-563b62dd.json).
+- **Not claimed.** Hosted iOS 27.2 recheck, protected signing, Apple submission, physical acceptance and live vendor capture remain open. No original requirement was closed.
+
+
+### 2026-11-17-220518-offline-removal-revalidation-bfb3e025
+
+Recorded 2026-11-17T22:05:18.805922+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the reviewed worker, two-engine execution, current capability checks and the hosted iPhone timeout to the updated state.
+- **Evidence.** All five current engineering receipts validate, and the current route guard accepts the exact committed browser test and source. [Change record](./runs/changes/2026-11-17-220518-offline-removal-revalidation-bfb3e025.json).
+- **Not claimed.** Physical and human acceptance remain pending. The hosted iPhone suite timed out and the current signed Apple submission is pending.
+
+
+### 2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233
+
+Recorded 2026-11-17T22:04:04.416012+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the replay, removal and privacy results for the final worker and the hosted iPhone verification timeout.
+- **Evidence.** Both engines completed 137 parity cases and subsequent offline removal. The hosted iOS 27.2 run completed two workflows before reaching its suite deadline. [Change record](./runs/changes/2026-11-17-220404-offline-replay-and-hosted-native-observations-db63e233.json).
+- **Not claimed.** Hosted native acceptance remains open. The exact local iOS build and current hosted run are separate evidence. No scope requirement was closed.
+
+
+### 2026-11-17-215606-offline-worker-removal-f10f94a6
+
+Recorded 2026-11-17T21:56:06.160703+00:00 · Contributor: Codex · change
+
+- **Changed.** Changed the offline worker to use lookup-only access to its named cache and added a regression to device verification.
+- **Evidence.** Original and fixed generated workers were executed in Chromium and WebKit. Once removed, the fixed worker fetched from the network without recreating host storage. [Change record](./runs/changes/2026-11-17-215606-offline-worker-removal-f10f94a6.json).
+- **Not claimed.** The hosted removal timeout has a separate unresolved cause. Physical device, VoiceOver and independent accuracy acceptance remain open. No requirement was closed.
+
+
+### 2026-11-17-214941-quantitative-listing-revalidation-b9713fbc
+
+Recorded 2026-11-17T21:49:41.842302+00:00 · Contributor: Codex · change
+
+- **Changed.** Published source-bound engineering verification for the numeric boundary and listing draft work.
+- **Evidence.** The current website and protocol checks passed, and all five capability receipts are current. [Change record](./runs/changes/2026-11-17-214941-quantitative-listing-revalidation-b9713fbc.json).
+- **Not claimed.** This records simulator documentation and an isolated numeric observation. Independent accuracy and Apple distribution remain pending.
+
+
+### 2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc
+
+Recorded 2026-11-17T21:43:51.442416+00:00 · Contributor: Codex · change
+
+- **Changed.** Fixed partial numeric matches in hash identifiers and malformed percent tokens. Captured Light and Dark App Store listing drafts from the current iPhone and iPad simulator build.
+- **Evidence.** The versioned independent CLI passed 13 controls and 42 focused tests. Four simulator captures match the declared dimensions without transparency. [Change record](./runs/changes/2026-11-17-214351-quantitative-boundaries-and-ios-listing-d99171dc.json).
+- **Not claimed.** Contextual source support, independent tag accuracy and App Store upload remain pending. The original scope remains 132 complete and 70 open.
+
+
+### 2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20
+
+Recorded 2026-11-17T21:41:56.884960+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current website, protocol and route-boundary checks for the iPhone and private dispute integration.
+- **Evidence.** Website and protocol completed 32 and 40 checks. All five current engineering receipts and the reviewed endpoint and permission boundaries validate. [Change record](./runs/changes/2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20.json).
+- **Not claimed.** Engineering evidence leaves physical and Apple distribution acceptance, live public dispute handling and independent accuracy open.
+
+
+### 2026-11-17-213544-current-iphone-dispute-integration-407aab6a
+
+Recorded 2026-11-17T21:35:44.942783+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated the simulator-verified iPhone package with local appearance controls, privacy manifests and exact Python notices, plus the private dispute-to-correction CLI.
+- **Evidence.** Five simulator workflows, 36 resource comparisons and 189 focused integration checks passed. The existing distribution profiles match; the current signing attempt timed out at Share. [Change record](./runs/changes/2026-11-17-213544-current-iphone-dispute-integration-407aab6a.json).
+- **Not claimed.** Apple validation and upload of this candidate, physical accessibility, operational public correction and independent tag accuracy remain pending. Scope is 132 complete and 70 open.
+
+
+### 2026-11-17-211023-verified-runtime-and-community-publication-5b66606e
+
+Recorded 2026-11-17T21:10:23.819417+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Recorded the verified live Python notices, framing guide, and current scope publication.
+- **Evidence.** All 11 protected checks passed for the web notice merge. The deployed site matched all 298 artifacts on each origin. The immediately preceding moderation-ledger deployment also passed exact comparison. [Change record](./runs/changes/2026-11-17-211023-verified-runtime-and-community-publication-5b66606e.json).
+- **Not claimed.** The archived source and evidence describe development capabilities. Independent tag release, full dependency obligations, and operational acceptance remain open.
+
+
+### 2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600
+
+Recorded 2026-11-17T21:01:58.602773+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Recorded the protected community merge and the verified iPhone candidate workflow execution.
+- **Evidence.** All 11 required checks passed before the community merge. All five current iPhone app and Share workflows passed, with source identity and simulator cleanup verified. [Change record](./runs/changes/2026-11-17-210158-protected-community-and-native-workflow-proof-fe6b2600.json).
+- **Not claimed.** The community workbench uses synthetic data. iPhone distribution signing, TestFlight and physical accessibility remain open. Public native proof omits private command paths.
+
+
+### 2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65
+
+Recorded 2026-11-17T20:55:25.671478+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserved the SQLite retraction safety fix while preparing the verified runtime notices for web publication.
+- **Evidence.** The combined tree passes its reviewed source boundaries using current browser receipts. Both change histories are intact. [Change record](./runs/changes/2026-11-17-205525-reconcile-runtime-notices-with-storage-fix-b5795f65.json).
+- **Not claimed.** Public notice deployment and full transitive obligations remain open at this step.
+
+
+### 2026-11-17-205231-runtime-notices-current-package-checks-d5e62e1a
+
+Recorded 2026-11-17T20:52:31.456386+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bound runtime notice packaging to current website and protocol evidence. Retained the verified unsigned iOS candidate receipt.
+- **Evidence.** The built site stages the exact fifth notice and links it from licensing. All five capability receipts are current. An isolated iOS candidate compiled and matched 36 bundled resources, including Python notices in both targets. [Change record](./runs/changes/2026-11-17-205231-runtime-notices-current-package-checks-d5e62e1a.json).
+- **Not claimed.** Protected web integration, whole dependency obligations and current iOS UI, signing and physical acceptance remain open.
+
+
+### 2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9
+
+Recorded 2026-11-17T20:52:02.905426+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Reserve SQLite capacity for emergency moderation actions and reuse freed overflow pages inside the existing atomic transaction.
+- **Evidence.** 55 focused tests pass, including full-budget refusal followed by pause and growing retraction, plus the legacy-store safety path. The 17 actual workbench command calls also pass. [Change record](./runs/changes/2026-11-17-205202-preserve-sqlite-moderation-capacity-45238ea9.json).
+- **Not claimed.** The workbench uses synthetic data. Operating moderators and public integration still require acceptance.
+
+
+### 2026-11-17-204251-integrate-python-runtime-notices-d6965330
+
+Recorded 2026-11-17T20:42:51.917053+00:00 · Contributor: Codex PM and dependency engineering · change
+
+- **Changed.** Integrated the exact Python standard-library notice bundle into the website and linked the open dependency and Android requirements to actual evidence.
+- **Evidence.** The archive verifier reproduced 614 entries and classified 559 Python modules. The web build stages the five notices and fails on a runtime identity mismatch. The Android host report identifies the unavailable emulator prerequisites. [Change record](./runs/changes/2026-11-17-204251-integrate-python-runtime-notices-d6965330.json).
+- **Not claimed.** Native notice packaging, remaining transitive obligations and Android Share runtime acceptance are open.
+
+
+### 2026-11-17-204116-community-integration-and-source-download-0a2b0091
+
+Recorded 2026-11-17T20:41:16.817979+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bound the reviewed community sources to current route verification and added the signed public source download. Corrected the urgency and authority source lists to include their corpus dependency.
+- **Evidence.** All 32 website capability checks and the route inventory passed. The attested archive and four anonymous release downloads match. The corrected framing source binding passes 20 focused tests and 11 command controls. [Change record](./runs/changes/2026-11-17-204116-community-integration-and-source-download-0a2b0091.json).
+- **Not claimed.** The community workbench runs on synthetic data. Live moderators, Android runtime and independent MT accuracy still need acceptance.
+
+
 ### 2026-11-17-203801-android-emulator-host-refusal-8f0dd08f
 
 Recorded 2026-11-17T20:38:01.402946+00:00 · Contributor: Codex Android lane · change
@@ -11,6 +173,24 @@ Recorded 2026-11-17T20:38:01.402946+00:00 · Contributor: Codex Android lane · 
 - **Not claimed.** The emulator step stopped before installation and ran zero Android cases. N-014 remains open for Android Share and physical acceptance.
 
 
+### 2026-11-17-203627-bound-python-stdlib-notices-e4b8ad4c
+
+Recorded 2026-11-17T20:36:27.391888+00:00 · Contributor: Codex · change
+
+- **Changed.** Inspected Pyodide’s pinned standard library archive and staged a separate digest-checked website notice with visible licensing access.
+- **Evidence.** Actual pinned archive replay checked 614 entries and 559 Python modules. All 121 adjacent controls passed. The real web post-build steps preserved four upstream notices and staged the fifth with the pinned runtime bytes. [Change record](./runs/changes/2026-11-17-203627-bound-python-stdlib-notices-e4b8ad4c.json).
+- **Not claimed.** No complete website build, publication or native package was exercised by this receipt. Artifact signing, remaining dependency obligations and the original F-057 and X-02 acceptance stay open. No license clearance or independent accuracy granted.
+
+
+### 2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4
+
+Recorded 2026-11-17T20:36:04.867937+00:00 · Contributor: Codex PM and community engineering · change
+
+- **Changed.** Recorded verified MT publication and the community workflow’s hosted results. Added the framing guide to the MT detail panel and advanced F-137 through executable checks.
+- **Evidence.** All 297 published artifacts matched at both MT deployment origins. The isolated PostgreSQL run showed that pause and retraction succeed when ordinary writes reach reserved capacity. [Change record](./runs/changes/2026-11-17-203604-hosted-community-controls-and-framing-link-f95f7db4.json).
+- **Not claimed.** F-137 still requires real moderator and operating acceptance. N-005 still needs exact tag correction binding. Current Android runtime and independent MT release validation remain open.
+
+
 ### 2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00
 
 Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · change
@@ -18,6 +198,15 @@ Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · 
 - **Changed.** Record the real hosted Android build and add a hosted emulator path with reviewed SDK package versions and an existing license match.
 - **Evidence.** Hosted run 44169646271 produced and verified an ephemeral test APK with zero permissions. The downloaded APK contains classes.dex and matches the recorded method and loader. Official metadata and local refusal controls passed for the new emulator step. [Change record](./runs/changes/2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00.json).
 - **Not claimed.** The first runner did not execute emulator cases. Actual Android runtime, physical usability and independent accuracy remain pending.
+
+
+### 2026-11-17-203115-community-postgres-byte-reserve-bbb3e974
+
+Recorded 2026-11-17T20:31:15.494984+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Reserve PostgreSQL document capacity and audit slots for pausing admissions and removing posts at saturation. Record the initial hosted PostgreSQL run.
+- **Evidence.** Initial isolated Linux PostgreSQL run passed 12 control groups and verified shutdown. The capacity correction passed 53 focused local tests and 17 actual CLI calls. The next hosted run will measure byte saturation against the corrected source. [Change record](./runs/changes/2026-11-17-203115-community-postgres-byte-reserve-bbb3e974.json).
+- **Not claimed.** Synthetic software evidence only. The new PostgreSQL saturation control still awaits execution. Original requirement closures, global scope, public posting and real collection stay outside this increment.
 
 
 ### 2026-11-17-202759-android-hosted-java-compiler-efe1e9fa
@@ -47,6 +236,24 @@ Recorded 2026-11-17T20:22:20.355457+00:00 · Contributor: Codex PM · change
 - **Not claimed.** Full MT release still requires contextual validation, independent labeling and human operation. The original requirements remain open.
 
 
+### 2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72
+
+Recorded 2026-11-17T18:04:07.040068+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Reserve bounded audit capacity for privacy retractions after ordinary community writes stop.
+- **Evidence.** 52 focused checks and17 fresh actual CLI calls pass. The boundary test proves existing queued/published content can still be removed without pruning audit history. [Change record](./runs/changes/2026-11-17-180407-community-privacy-removal-capacity-d6f2ea72.json).
+- **Not claimed.** Synthetic workbench only. PostgreSQL execution and production moderator/auth/client/recovery acceptance remain pending; no full requirement percentage changes.
+
+
+### 2026-11-17-180119-synthetic-community-core-8b1f6251
+
+Recorded 2026-11-17T18:01:19.800078+00:00 · Contributor: Codex - community engineering lane · change
+
+- **Changed.** Implement a runnable synthetic moderated community core, private CLI/store, explicit public projections, corrections, retractions, private report metadata and separate PostgreSQL development adapter.
+- **Evidence.** 51 focused local checks and17 actual CLI calls pass. Two-user/official/moderator roles, safe HTML, consent, ownership, correction/replay/cache scrubbing, private marker absence and storage refusals execute. Actual PostgreSQL/schema/grants/CAS controls are implemented but await isolated Linux execution. [Change record](./runs/changes/2026-11-17-180119-synthetic-community-core-8b1f6251.json).
+- **Not claimed.** Synthetic development only. SQLite is not a real-user destination; remote PostgreSQL operating gates remain. No public endpoint, posting client, production authentication, actual moderator program, real collection, training, tag release or original requirement closure.
+
+
 ### 2026-11-17-175729-android-share-offline-checker-bf7204be
 
 Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change
@@ -72,7 +279,6 @@ Recorded 2026-11-17T14:16:23.376395+00:00 · Contributor: Codex PM · change
 - **Changed.** Publish the merged independent evidence workflows and persist exact Linux, protected-CI and public-site verification, retaining the earlier runtime download timeout.
 - **Evidence.** All11 required protected engineering checks passed and isolated non-root Linux SDK completed21 inspector cases plus24 declaration calls in12 groups with exact source. All296 published files match on each of2 origins with security headers:592 comparisons. Merged source bf35566 is deployed; scope202 originals,132 complete,70 open. [Change record](./runs/changes/2026-11-17-141623-independent-evidence-publication-6aeec82d.json).
 - **Not claimed.** No independently release-validated new tag, human/physical-device acceptance, TestFlight upload or original requirement closure. Target60 remains unmet. The first transfer timed out; a later actual-browser transfer and unchanged full verifier pass, with root cause unestablished. This metadata followup does not redeploy the application snapshot.
-
 
 ## Unreleased — 2026-11-16
 

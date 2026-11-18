@@ -5,6 +5,9 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     let input = UITextView(), status = UILabel(), result = UILabel()
     private let checkButton = UIButton(type: .system), detailsButton = UIButton(type: .system)
     private let evidence = UILabel()
+    private let appearanceSettings = AppearanceSettings()
+    private let darkModeSwitch = UISwitch(), automaticAppearanceButton = UIButton(type: .system)
+    private let appearanceRow = UIStackView()
     private var web: WKWebView?, assets: Assets?, deadline: DispatchWorkItem?
     private var generation = 0, pendingText: String?, matches: [[String: Any]] = []
     private var busy = false
@@ -14,21 +17,26 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     private func identity(_ value: String) -> String { shareMode ? "share-" + value : value }
 
     private func font(_ style: UIFont.TextStyle) -> UIFont {
-        let original = UIFont.preferredFont(forTextStyle: style)
-        return original.fontDescriptor.withDesign(.rounded).map { UIFont(descriptor: $0, size: 0) } ?? original
+        BrandTheme.font(style)
     }
     private func label(_ text: String, _ style: UIFont.TextStyle) -> UILabel {
         let item = UILabel(); item.text = text; item.font = font(style); item.numberOfLines = 0
+        item.textColor = style == .footnote ? BrandTheme.muted : BrandTheme.ink
+        item.backgroundColor = BrandTheme.panel
         item.adjustsFontForContentSizeCategory = true; return item
     }
     private func button(_ title: String, _ action: Selector, _ id: String) -> UIButton {
-        let item = UIButton(type: .system); item.configuration = .tinted(); item.configuration?.title = title
+        let item = UIButton(type: .system); item.configuration = BrandTheme.button(title)
+        item.titleLabel?.adjustsFontForContentSizeCategory = true
         item.accessibilityIdentifier = identity(id); item.addTarget(self, action: action, for: .touchUpInside)
         item.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true; return item
     }
     override func viewDidLoad() {
-        super.viewDidLoad(); view.backgroundColor = .systemBackground
+        super.viewDidLoad(); BrandTheme.installBackdrop(in: view)
         let scroll = UIScrollView(), stack = UIStackView(); stack.axis = .vertical; stack.spacing = 16
+        stack.backgroundColor = BrandTheme.panel; stack.layer.cornerRadius = 20
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16)
         scroll.translatesAutoresizingMaskIntoConstraints = false; stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scroll); scroll.addSubview(stack)
         NSLayoutConstraint.activate([
@@ -38,30 +46,40 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
             stack.leadingAnchor.constraint(equalTo: scroll.contentLayoutGuide.leadingAnchor, constant: 20), stack.trailingAnchor.constraint(equalTo: scroll.contentLayoutGuide.trailingAnchor, constant: -20),
             stack.widthAnchor.constraint(equalTo: scroll.frameLayoutGuide.widthAnchor, constant: -40)
         ])
-        stack.addArrangedSubview(label("AI TRUST ID", .title1))
+        stack.addArrangedSubview(label("AI TRUST ID", .title2))
+        stack.addArrangedSubview(appearanceControls())
         stack.addArrangedSubview(label("PS · Check selected text", .headline))
         stack.addArrangedSubview(label("Looks for supported download-and-run commands and encoded-code execution. Development preview; independent accuracy checks are pending.", .body))
         stack.addArrangedSubview(label("Your text stays on this device. Commands are never run. This check does not redact personal information.", .footnote))
         input.font = font(.body); input.adjustsFontForContentSizeCategory = true; input.delegate = self
+        input.backgroundColor = BrandTheme.panel; input.textColor = BrandTheme.ink; input.tintColor = BrandTheme.ink
         input.accessibilityLabel = "Selected text"; input.accessibilityIdentifier = identity("selected-text")
-        input.layer.borderWidth = 1; input.layer.borderColor = UIColor.separator.cgColor; input.layer.cornerRadius = 12
+        input.layer.borderWidth = 1; input.layer.cornerRadius = 12
         input.textContainerInset = UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 8)
         input.autocorrectionType = .no; input.spellCheckingType = .no; input.autocapitalizationType = .none
         input.heightAnchor.constraint(greaterThanOrEqualToConstant: 180).isActive = true; stack.addArrangedSubview(input)
-        checkButton.configuration = .filled(); checkButton.configuration?.title = "Check with PS"
+        checkButton.configuration = BrandTheme.button("Check with PS", primary: true)
+        checkButton.configurationUpdateHandler = { button in
+            button.configuration = BrandTheme.button("Check with PS", primary: button.isEnabled)
+        }
+        checkButton.titleLabel?.adjustsFontForContentSizeCategory = true
         checkButton.accessibilityIdentifier = identity("check-ps"); checkButton.addTarget(self, action: #selector(check), for: .touchUpInside)
         checkButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true; stack.addArrangedSubview(checkButton)
         stack.addArrangedSubview(button("Clear", #selector(clear), "clear"))
         if shareMode { stack.addArrangedSubview(button("Done / Cancel", #selector(finish), "finish")) }
         else { stack.addArrangedSubview(button("Practice sharing", #selector(practiceShare), "practice-share")) }
         status.numberOfLines = 0; status.font = font(.body); status.adjustsFontForContentSizeCategory = true
+        status.textColor = BrandTheme.muted; status.backgroundColor = BrandTheme.panel
         status.accessibilityIdentifier = identity("check-status"); stack.addArrangedSubview(status)
         result.numberOfLines = 0; result.font = font(.body); result.adjustsFontForContentSizeCategory = true
+        result.textColor = BrandTheme.ink; result.backgroundColor = BrandTheme.panel
         result.accessibilityIdentifier = identity("check-result"); stack.addArrangedSubview(result)
-        detailsButton.configuration = .tinted(); detailsButton.configuration?.title = "Why PS?"
+        detailsButton.configuration = BrandTheme.button("Why PS?")
+        detailsButton.titleLabel?.adjustsFontForContentSizeCategory = true
         detailsButton.accessibilityIdentifier = identity("why-ps"); detailsButton.addTarget(self, action: #selector(details), for: .touchUpInside)
         detailsButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true; detailsButton.isHidden = true; stack.addArrangedSubview(detailsButton)
         evidence.numberOfLines = 0; evidence.font = font(.footnote)
+        evidence.textColor = BrandTheme.ink; evidence.backgroundColor = BrandTheme.panel
         evidence.adjustsFontForContentSizeCategory = true; evidence.isHidden = true
         evidence.accessibilityIdentifier = identity("check-evidence"); stack.addArrangedSubview(evidence)
         if !shareMode { stack.addArrangedSubview(button("Privacy & open-source notices", #selector(privacy), "privacy-notices")) }
@@ -69,7 +87,66 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
             backgroundObservers.append(NotificationCenter.default.addObserver(forName: name,
                 object: nil, queue: .main) { [weak self] _ in self?.clear() })
         }
-        refreshCheckButton()
+        registerForTraitChanges([UITraitUserInterfaceStyle.self, UITraitAccessibilityContrast.self,
+                                 UITraitPreferredContentSizeCategory.self],
+            target: self, action: #selector(refreshBrandAppearance))
+        applyAppearancePreference(); refreshBrandAppearance(); refreshCheckButton()
+    }
+    private func appearanceControls() -> UIView {
+        let title = label("Dark mode", .body); title.isAccessibilityElement = false
+        title.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        let toggle = UIStackView(arrangedSubviews: [title, darkModeSwitch])
+        toggle.axis = .horizontal; toggle.alignment = .center; toggle.spacing = 12
+        appearanceRow.addArrangedSubview(toggle)
+        appearanceRow.addArrangedSubview(automaticAppearanceButton)
+        appearanceRow.spacing = 12; appearanceRow.backgroundColor = BrandTheme.panel
+        darkModeSwitch.accessibilityIdentifier = identity("appearance-dark")
+        darkModeSwitch.accessibilityLabel = "Dark mode"
+        darkModeSwitch.accessibilityHint = "Choose Light or Dark for this checker. Auto follows your device."
+        darkModeSwitch.onTintColor = BrandTheme.ink; darkModeSwitch.thumbTintColor = BrandTheme.panel
+        darkModeSwitch.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
+        darkModeSwitch.setContentHuggingPriority(.required, for: .horizontal)
+        darkModeSwitch.addTarget(self, action: #selector(chooseDarkAppearance), for: .valueChanged)
+        automaticAppearanceButton.accessibilityIdentifier = identity("appearance-auto")
+        automaticAppearanceButton.accessibilityLabel = "Use device appearance"
+        automaticAppearanceButton.accessibilityHint = "Follow your device’s Light or Dark setting."
+        automaticAppearanceButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        automaticAppearanceButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
+        automaticAppearanceButton.addTarget(self, action: #selector(chooseAutomaticAppearance), for: .touchUpInside)
+        refreshAppearanceLayout()
+        return appearanceRow
+    }
+    private func refreshAppearanceLayout() {
+        // Give enlarged text its own line rather than compressing native controls.
+        let enlarged = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
+        appearanceRow.axis = enlarged ? .vertical : .horizontal
+        appearanceRow.alignment = enlarged ? .fill : .center
+    }
+    private func applyAppearancePreference() {
+        switch appearanceSettings.preference {
+        case .system: overrideUserInterfaceStyle = .unspecified
+        case .light: overrideUserInterfaceStyle = .light
+        case .dark: overrideUserInterfaceStyle = .dark
+        }
+        refreshAppearanceControls()
+    }
+    private func refreshAppearanceControls() {
+        darkModeSwitch.setOn(traitCollection.userInterfaceStyle == .dark, animated: false)
+        let automatic = appearanceSettings.preference == .system
+        automaticAppearanceButton.configuration = BrandTheme.button("Auto", primary: automatic)
+        automaticAppearanceButton.accessibilityValue = automatic ? "On" : "Off"
+    }
+    @objc private func chooseDarkAppearance() {
+        appearanceSettings.preference = darkModeSwitch.isOn ? .dark : .light
+        applyAppearancePreference()
+    }
+    @objc private func chooseAutomaticAppearance() {
+        appearanceSettings.preference = .system; applyAppearancePreference()
+    }
+    @objc private func refreshBrandAppearance() {
+        input.layer.borderColor = BrandTheme.control.resolvedColor(with: traitCollection).cgColor
+        refreshAppearanceLayout()
+        refreshAppearanceControls()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated); presentedForChecking = true; refreshCheckButton()
@@ -173,36 +250,185 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     }
     @objc private func privacy() {
         let controller = NativeNoticesController()
-        present(UINavigationController(rootViewController: controller), animated: true)
+        let navigation = UINavigationController(rootViewController: controller)
+        navigation.overrideUserInterfaceStyle = overrideUserInterfaceStyle
+        present(navigation, animated: true)
     }
 }
 
-/// Read-only bundled disclosures. No browser, account, input or network request.
-private final class NativeNoticesController: UIViewController {
+/// Read-only bundled disclosures. The index never loads document text.
+private final class NativeNoticesController: UITableViewController {
+    private let notices = [
+        (id: "privacy", title: "Privacy", path: "Privacy.txt"),
+        (id: "app", title: "AI Trust ID license", path: "AppLicense.txt"),
+        (id: "pyodide", title: "Pyodide license", path: "Notices/pyodide-MPL-2.0.txt"),
+        (id: "python", title: "Python license", path: "Notices/python-license.txt"),
+        (id: "unicode", title: "Unicode license", path: "Notices/unicode-license.txt"),
+        (id: "source", title: "Source and redistribution", path: "Notices/source.txt"),
+        (id: "stdlib", title: "Python standard library notices", path: "Notices/python-stdlib-notices.txt")
+    ]
+
+    init() { super.init(style: .insetGrouped) }
+    required init?(coder: NSCoder) { return nil }
+
     override func viewDidLoad() {
-        super.viewDidLoad(); title = "Privacy & notices"; view.backgroundColor = .systemBackground
+        super.viewDidLoad()
+        title = "Privacy & notices"
+        tableView.backgroundColor = BrandTheme.panel
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 48
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = BrandTheme.panel
+        appearance.titleTextAttributes = [.foregroundColor: BrandTheme.ink, .font: BrandTheme.font(.headline)]
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.tintColor = BrandTheme.ink
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "privacy-done"
-        let text = UITextView(); text.isEditable = false; text.isSelectable = true; text.dataDetectorTypes = []
-        text.font = .preferredFont(forTextStyle: .body); text.adjustsFontForContentSizeCategory = true
-        text.accessibilityIdentifier = "privacy-notices-text"; text.accessibilityLabel = "Offline privacy and open-source notices"
-        text.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 24, right: 16)
-        var sections: [String] = []
-        for name in ["Privacy.txt", "AppLicense.txt", "Notices/pyodide-MPL-2.0.txt", "Notices/python-license.txt", "Notices/unicode-license.txt", "Notices/source.txt"] {
-            guard let url = Bundle.main.resourceURL?.appendingPathComponent(name),
-                  let value = try? String(contentsOf: url, encoding: .utf8) else {
-                text.text = "Bundled notices are unavailable. This build needs repair before distribution."
-                install(text); return
-            }
-            sections.append(value)
-        }
-        text.text = sections.joined(separator: "\n\n────────────────\n\n"); install(text)
     }
-    private func install(_ text: UITextView) {
-        text.translatesAutoresizingMaskIntoConstraints = false; view.addSubview(text)
-        NSLayoutConstraint.activate([text.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            text.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            text.leadingAnchor.constraint(equalTo: view.leadingAnchor), text.trailingAnchor.constraint(equalTo: view.trailingAnchor)])
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        notices.count
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let notice = notices[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notice") ?? UITableViewCell(style: .default, reuseIdentifier: "notice")
+        var content = cell.defaultContentConfiguration()
+        content.text = notice.title
+        content.textProperties.font = BrandTheme.font(.body)
+        content.textProperties.color = BrandTheme.ink
+        cell.contentConfiguration = content
+        cell.backgroundColor = BrandTheme.panel
+        cell.accessoryType = .disclosureIndicator
+        cell.accessibilityIdentifier = "privacy-entry-" + notice.id
+        cell.accessibilityTraits.insert(.button)
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let notice = notices[indexPath.row]
+        let reader = NoticeReaderController(path: notice.path)
+        reader.title = notice.title
+        navigationController?.pushViewController(reader, animated: true)
+    }
+
     @objc private func done() { dismiss(animated: true) }
+}
+
+/// Keep each selectable accessibility value bounded, including the largest notice.
+private final class NoticeReaderController: UIViewController {
+    private let path: String
+    private let text = UITextView()
+    private let pageLabel = UILabel()
+    private let previous = UIButton(type: .system)
+    private let nextButton = UIButton(type: .system)
+    private let navigationRow = UIStackView()
+    private var pages: [Substring] = []
+    private var page = 0
+    private static let pageSize = 3_000
+
+    init(path: String) {
+        self.path = path
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) { return nil }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = BrandTheme.panel
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "All notices", style: .plain, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem?.accessibilityIdentifier = "privacy-index"
+        text.isEditable = false
+        text.isSelectable = true
+        text.dataDetectorTypes = []
+        text.font = BrandTheme.font(.body)
+        text.adjustsFontForContentSizeCategory = true
+        text.backgroundColor = BrandTheme.panel
+        text.textColor = BrandTheme.ink
+        text.accessibilityIdentifier = "privacy-notices-text"
+        text.accessibilityLabel = "Notice text"
+        text.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 20, right: 12)
+        text.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        pageLabel.font = BrandTheme.font(.footnote)
+        pageLabel.textColor = BrandTheme.muted
+        pageLabel.adjustsFontForContentSizeCategory = true
+        pageLabel.numberOfLines = 0
+        pageLabel.textAlignment = .center
+        pageLabel.accessibilityIdentifier = "privacy-page"
+        configure(previous, title: "Previous", id: "privacy-previous", action: #selector(previousPage))
+        configure(nextButton, title: "Next", id: "privacy-next", action: #selector(nextPage))
+        navigationRow.addArrangedSubview(previous)
+        navigationRow.addArrangedSubview(nextButton)
+        navigationRow.spacing = 8
+        navigationRow.distribution = .fillEqually
+        let content = UIStackView(arrangedSubviews: [text, pageLabel, navigationRow])
+        content.axis = .vertical
+        content.spacing = 8
+        content.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(content)
+        let area = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            content.topAnchor.constraint(equalTo: area.topAnchor, constant: 12),
+            content.bottomAnchor.constraint(equalTo: area.bottomAnchor, constant: -12),
+            content.leadingAnchor.constraint(equalTo: area.leadingAnchor, constant: 16),
+            content.trailingAnchor.constraint(equalTo: area.trailingAnchor, constant: -16)
+        ])
+        registerForTraitChanges([UITraitPreferredContentSizeCategory.self], target: self, action: #selector(adaptNavigation))
+        adaptNavigation()
+
+        if let url = Bundle.main.resourceURL?.appendingPathComponent(path),
+           let value = try? String(contentsOf: url, encoding: .utf8), !value.isEmpty {
+            pages = Self.paginate(value)
+        }
+        render()
+    }
+
+    private static func paginate(_ source: String) -> [Substring] {
+        var start = source.startIndex
+        var pages: [Substring] = []
+        while start < source.endIndex {
+            let limit = source.index(start, offsetBy: pageSize, limitedBy: source.endIndex) ?? source.endIndex
+            var end = limit
+            if limit < source.endIndex, let newline = source[start..<limit].lastIndex(where: { $0.isNewline }) {
+                end = source.index(after: newline)
+            }
+            pages.append(source[start..<end])
+            start = end
+        }
+        return pages
+    }
+
+    private func configure(_ button: UIButton, title: String, id: String, action: Selector) {
+        button.configuration = BrandTheme.button(title)
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
+        button.accessibilityIdentifier = id
+        button.addTarget(self, action: action, for: .touchUpInside)
+        button.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
+    }
+
+    private func render() {
+        text.text = pages.isEmpty ? "Bundled notice unavailable." : String(pages[page])
+        text.setContentOffset(.zero, animated: false)
+        pageLabel.isHidden = pages.count < 2
+        navigationRow.isHidden = pages.count < 2
+        pageLabel.text = "Page \(page + 1) of \(pages.count)"
+        previous.isEnabled = page > 0
+        nextButton.isEnabled = page + 1 < pages.count
+    }
+
+    @objc private func adaptNavigation() {
+        navigationRow.axis = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? .vertical : .horizontal
+    }
+    @objc private func back() { navigationController?.popViewController(animated: true) }
+    @objc private func previousPage() { if page > 0 { move(to: page - 1) } }
+    @objc private func nextPage() { if page + 1 < pages.count { move(to: page + 1) } }
+    private func move(to destination: Int) {
+        page = destination
+        render()
+        UIAccessibility.post(notification: .layoutChanged, argument: pageLabel)
+    }
 }

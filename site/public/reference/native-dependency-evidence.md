@@ -41,8 +41,10 @@ refused three workerd build binaries larger than 128 MiB. Only their exact
 locked archive hashes and member names receive their observed size limits;
 other members keep the original limit.
 
-One nested archive, Pyodide's `python_stdlib.zip`, remains uninspected by this
-scanner. Version lists and README tables are upstream declarations, not complete
+This scanner records the identity of Pyodide's `python_stdlib.zip`. The separate
+[nested runtime check](nested-runtime-evidence.md) now replays and inspects its
+614 entries and verifies the corresponding standard library notice bundle.
+Version lists and README tables are upstream declarations, not complete
 source/relinking evidence or a substitute for full license terms. Native static
 linkage, embedded code, model permissions, source-offer obligations and the
 remaining runtime review stay open. `permission_cleared` and

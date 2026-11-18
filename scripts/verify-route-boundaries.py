@@ -145,6 +145,7 @@ PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-prob
              'scripts/select-ios-runtime.py', 'tests/test_ios_runtime_selection.py',
              'docs/native-share-repair-plan.md', 'docs/native-share-developer.md', 'runs/*native-share*workflow.json',
              'scripts/prepare-native-bundle.py', 'scripts/verify-ios-bundle.py', 'scripts/verify-shared-text.py',
+             'scripts/verify-ios-archive.py', 'tests/test_ios_archive.py', 'tests/test_ios_appearance.py',
              'tests/test_native_bundle.py', 'docs/native-share-plan.md', 'docs/native-engine-checks.md',
              'docs/experiments/native-share-unreleased.json', 'tools/private_policy.py',
              'scripts/check-private-policy.py', 'scripts/prepare-private-policy-demo.py',
@@ -534,6 +535,17 @@ PATTERNS += ('tools/agent_output.py', 'scripts/agent-output.py', 'scripts/agent-
 PATTERNS += ('tools/mt_workflow.py','scripts/mt-evidence-worker.py','scripts/check-mt-evidence.py',
              'scripts/verify-mt-evidence.py','tests/test_mt_workflow.py',
              'docs/mt-workflow-plan.md','docs/mt-evidence-workflow.md')
+
+PATTERNS += ('tools/community_*.py','scripts/*community*.py','tests/test_community*.py',
+             'deploy/community/*','docs/community-core*.md',
+             'tools/dispute_correction_link.py','scripts/link-dispute-correction.py',
+             'tests/test_dispute_correction_link.py','docs/dispute-correction-link*.md')
+
+PATTERNS += ('tools/nested_runtime_inventory.py','scripts/verify-nested-runtime.py',
+             'tests/test_nested_runtime_inventory.py','sbom/nested-runtime/*',
+             'docs/nested-runtime-*.md')
+
+PATTERNS += ('tests/offline-worker-cache.cjs',)
 
 def verify(root=ROOT):
     before = inventory(root)

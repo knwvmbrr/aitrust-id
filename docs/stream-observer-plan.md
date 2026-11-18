@@ -60,3 +60,12 @@ Run `node --test tests/stream-observer.cjs`. CI executes these controls on Node 
 the Python regression wrapper executes the same real web-stream controls with an
 explicit TAP reporter. Full current-route and source-bound revalidation remain
 required before publication. Physical devices and live vendor behavior stay open.
+
+## CRLF at the line limit
+
+A chunk may end after the CR that starts a CRLF delimiter. The observer keeps
+that one framing character until LF arrives and then applies the same content
+limit. The synthetic regression checks the exact boundary, oversized lines,
+stray CR and incomplete EOF. Accepted and refused observations preserve the
+host response bytes. Live vendor capture remains an open acceptance step.
+See the [CRLF regression record](../runs/2026-11-17-stream-crlf-boundary.json).

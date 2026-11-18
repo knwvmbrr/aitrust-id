@@ -11,7 +11,8 @@ inspect = runpy.run_path(str(Path(__file__).resolve().parents[1] / 'scripts/veri
 @pytest.fixture
 def archive(tmp_path):
     payload = {'Assets/method.py': b'fixture method', 'Notices/license.txt': b'fixture notice',
-               'Privacy.txt': b'fixture privacy', 'AppLicense.txt': b'fixture license'}
+               'Privacy.txt': b'fixture privacy', 'AppLicense.txt': b'fixture license',
+               'PrivacyInfo.xcprivacy': plistlib.dumps({'NSPrivacyTracking': False})}
     app = tmp_path / 'Products/Applications/AITrustID.app'
     share = app / 'PlugIns/AITrustIDShare.appex'
     for bundle, identifier, executable in [(app, 'com.aitrustid.app', 'AITrustID'),
@@ -37,6 +38,7 @@ def test_exact_bundle_resources_pass_content_inspection(archive):
 
 
 @pytest.mark.parametrize('mutation', ['preview_identifier', 'simulator_platform', 'changed_notice', 'missing_privacy',
+                                    'missing_manifest', 'changed_manifest', 'manifest_link',
                                     'missing_executable', 'missing_icon', 'missing_orientation', 'profile', 'signature', 'resource_link'])
 def test_archive_refuses_invalid_distribution_boundary(archive, mutation):
     root, app, share, payload = archive
@@ -46,6 +48,10 @@ def test_archive_refuses_invalid_distribution_boundary(archive, mutation):
     elif mutation == 'missing_orientation': info['UISupportedInterfaceOrientations'].pop()
     elif mutation == 'changed_notice': (share / 'Notices/license.txt').write_bytes(b'changed')
     elif mutation == 'missing_privacy': (share / 'Privacy.txt').unlink()
+    elif mutation == 'missing_manifest': (share / 'PrivacyInfo.xcprivacy').unlink()
+    elif mutation == 'changed_manifest': (share / 'PrivacyInfo.xcprivacy').write_bytes(plistlib.dumps({'NSPrivacyTracking': True}))
+    elif mutation == 'manifest_link':
+        (share / 'PrivacyInfo.xcprivacy').unlink(); (share / 'PrivacyInfo.xcprivacy').symlink_to(app / 'PrivacyInfo.xcprivacy')
     elif mutation == 'missing_executable': (share / 'AITrustIDShare').unlink()
     elif mutation == 'missing_icon': (app / 'Assets.car').unlink()
     elif mutation == 'profile': (share / 'embedded.mobileprovision').write_bytes(b'not accepted')

@@ -36,6 +36,34 @@ def test_complete_literal_tokens_without_identifier_or_marker_fragments(text,exp
     assert brief['truth_established'] is False and brief['calendar_validity_checked'] is False
 
 
+@pytest.mark.parametrize('text', [
+    'Identifier 12#3.', 'Release 2026-10-11#draft.', 'Value 1,250.50#item.',
+    'Value 12%quota.', 'Value +12%#draft.', 'Value 12%%.',
+    'Value 12%%3.', 'Value 12%34.', 'Value %12.', 'Value 12%+34.',
+])
+def test_hash_and_percent_suffixes_cannot_produce_partial_details(text):
+    brief, detail = tool.observe(text, 'en')
+    assert brief['supported_detail_count'] == 0
+    assert detail['details'] == []
+
+
+def test_complete_percentages_and_numbers_separated_by_space_are_supported():
+    text = '12% 34, 56%.'
+    brief, detail = tool.observe(text, 'en')
+    assert brief['supported_detail_count'] == 3
+    assert [text[slice(*row['span'])] for row in detail['details']] == ['12%', '34', '56%']
+
+
+def test_suffix_boundary_preserves_complete_tokens_and_same_unit_citations():
+    text = 'Use 12#3 and 12%quota. Rate: 12.5% [8]. Date: 2026-10-11.'
+    brief, detail = tool.observe(text, 'en')
+    assert brief['with_same_unit_marker'] == brief['without_same_unit_marker'] == 1
+    rate, date = detail['details']
+    assert text[slice(*rate['span'])] == '12.5%'
+    assert [text[slice(*span)] for span in rate['source_marker_spans']] == ['[8]']
+    assert text[slice(*date['span'])] == '2026-10-11' and not date['source_marker_spans']
+
+
 def test_source_marker_is_local_not_a_resolution_or_truth_claim():
     brief,detail=tool.observe('The report has 12 items [1]. Another has 25 items.','en')
     assert brief['with_same_unit_marker']==1 and brief['without_same_unit_marker']==1
@@ -107,6 +135,6 @@ def test_actual_verifier_runs_all_supported_and_failure_routes():
     result=subprocess.run([sys.executable,str(ROOT/'scripts/verify-quantitative-observations.py')],capture_output=True,timeout=10)
     assert result.returncode==0 and not result.stderr
     record=json.loads(result.stdout)
-    assert record['pass'] and record['case_count']==11 and record['source_unchanged_during_execution']
+    assert record['pass'] and record['case_count']==13 and record['source_unchanged_during_execution']
     assert len(record['sources'])==8 and record['tag_assertions']==0
     assert record['independent_accuracy_evidence'] is False

@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-11-17T18:03:32.770687+00:00",
+  "pass": true,
+  "sources": {
+    "tools/community_core.py": "f156aaaefcffceed2f407edf715c94da921b2edbce449b8867f88f61b2f81f27",
+    "tools/community_store.py": "8a79be17439616b8ff73044be4acfc029f5977933c795731b6cc34e12ac90ba1",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/community-workbench.py": "9a4159166adb14f2860f6462443e6c705ef0ffac0258b8c9c0dff65ea15ac060",
+    "scripts/verify-community-core.py": "458d45442f34cea4572b969040eee292abf8217fc47693bc8c410b6917e39503",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "tests/test_community_core.py": "ababb0040d358c94e08d35f5b5dc7bc1f4e8ad087f277b05a4918b057d9973f8",
+    "tests/test_community_store.py": "64b7a97a5833c3afb929cdc15390ebd53247f3958929fb8cf6890d19a42153c1",
+    "tests/test_community_cli.py": "28176617e5952a61afca4778c5f64af760a3da044039a316b7377a7d9caf982e"
+  },
+  "source_unchanged": true,
+  "actual_cli_calls": 17,
+  "controls": [
+    "actual_private_store_initialization",
+    "unapproved_text_never_public",
+    "official_reply_reviewed_independently",
+    "current_replay_and_export_scrub_removed_body",
+    "independent_appeal_never_republishes_scrubbed_text",
+    "existing_export_not_overwritten",
+    "owned_store_removed_saved_copy_limit_explicit"
+  ],
+  "temporary_store_removed": true,
+  "synthetic_only": true,
+  "new_endpoints": 0,
+  "public_service_enabled": false,
+  "real_user_data_collected": false,
+  "independent_accuracy_evidence": false,
+  "full_requirements_closed": 0
+}

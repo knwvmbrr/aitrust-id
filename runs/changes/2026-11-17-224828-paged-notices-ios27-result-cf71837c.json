@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-224828-paged-notices-ios27-result-cf71837c",
+  "recorded_at": "2026-11-17T22:48:28.502920+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "81862e20eacef1191051cb9f9aaa8e12e4fa4cfc",
+  "changed": "Recorded the hosted result for the paginated notice reader and retained the cleanup failure.",
+  "proves": "The downloaded Xcode result bundle confirms all five UI cases passed on iOS 27.2 with zero skips. Shutdown and deletion each reached their cleanup deadline.",
+  "limits": "Hosted removal remains unverified. Protected distribution signing, Apple upload and physical acceptance remain open.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "09b26a1628aad03bc644df0e5fe7dd94ed7f9ac79470056617a6d3d73bdd0595",
+    "docs/scope-progress.json": "221a2d1bb5ffca15212fbea7f94e99a75bc2e416da538d896a9c4c07bec5212b",
+    "docs/scope-progress.md": "9c9df96585b2392e6a72d6ea4b4162a97d5bffd48a7b0a78a33fff75948be9ba",
+    "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json": "c3d9d0c72fdca218ec01c214181fcd3f379db035e8a518478c1f08a352e754a0",
+    "site/public/reference/public-scope.json": "3e4fc10de4b4a15c258d0b8224fade8f3e278b4c5887d6ebebd5aee36b8ac971",
+    "site/src/public-scope.json": "3e4fc10de4b4a15c258d0b8224fade8f3e278b4c5887d6ebebd5aee36b8ac971",
+    "site/src/scope-manifest.json": "b2d707a16a0458ba603457cef3b546d6f3ba2f0a395c0044bfb4d4c237a3ea53",
+    "state.json": "d81e36fb8f3956f218a48a786258fc7b2e877133c26e639e962205c25c5ccee0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json",
+      "sha256": "c3d9d0c72fdca218ec01c214181fcd3f379db035e8a518478c1f08a352e754a0"
+    },
+    {
+      "path": "runs/2026-11-17-paged-notice-signing-preflight.json",
+      "sha256": "78f57df367fd9f14af72ff282abf66b85c7f272ecd665065ea1b208f3913fca7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T22:48:28.968758+00:00"
+    }
+  ]
+}

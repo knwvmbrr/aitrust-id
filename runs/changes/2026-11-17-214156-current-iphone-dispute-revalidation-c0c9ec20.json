@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-214156-current-iphone-dispute-revalidation-c0c9ec20",
+  "recorded_at": "2026-11-17T21:41:56.884960+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a8af22a6d86e09f4e9b9cdc23e9c1fee568bf4e1",
+  "changed": "Recorded current website, protocol and route-boundary checks for the iPhone and private dispute integration.",
+  "proves": "Website and protocol completed 32 and 40 checks. All five current engineering receipts and the reviewed endpoint and permission boundaries validate.",
+  "limits": "Engineering evidence leaves physical and Apple distribution acceptance, live public dispute handling and independent accuracy open.",
+  "scope_ids": [
+    "N-013",
+    "N-005",
+    "F-057",
+    "F-137"
+  ],
+  "files": {
+    "state.json": "5cbd4b53cb708b9650e037f63b506f2e7b5b09ee7020c0ffe1c87e410d95b1c5",
+    "eval/route-boundaries.json": "bede5908cf892339fdea4aa8506d4394e1f4810eb1557e6cce67f28d4d1b0ba3",
+    "runs/2026-11-17-native-dispute-website.json": "a03718d0631ab499ed65c8ef0c35c59a369b07c0e02a6f7c1bb7fd1e83ae586b",
+    "runs/2026-11-17-native-dispute-protocol.json": "b5c66a3c16e4226ce2137d4ce12d2c63afbd919fc5fc65b060827b21cb3ead01",
+    "runs/2026-11-17-native-dispute-route-boundaries.json": "b4aa0d9113cee7ca69cdab144de322b24e641e8cfa5895bcc36ed2b4088ed2c6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-native-dispute-website.json",
+      "sha256": "a03718d0631ab499ed65c8ef0c35c59a369b07c0e02a6f7c1bb7fd1e83ae586b"
+    },
+    {
+      "path": "runs/2026-11-17-native-dispute-protocol.json",
+      "sha256": "b5c66a3c16e4226ce2137d4ce12d2c63afbd919fc5fc65b060827b21cb3ead01"
+    },
+    {
+      "path": "runs/2026-11-17-native-dispute-route-boundaries.json",
+      "sha256": "b4aa0d9113cee7ca69cdab144de322b24e641e8cfa5895bcc36ed2b4088ed2c6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T21:41:57.131694+00:00"
+    }
+  ]
+}

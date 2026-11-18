@@ -76,7 +76,7 @@ accuracy gate. N-013 stays open until its full acceptance is completed.
 AI Trust ID now has its own App Store Connect record in **Prepare for Submission**.
 The app identifier is `com.aitrustid.app`; the separately registered Share
 identifier is `com.aitrustid.app.share`. The saved draft requires no app login
-and uses manual release. No build has been uploaded or approved.
+and uses manual release. The [distribution readiness page](app-store-readiness.md) tracks signing, validation and upload.
 
 ```sh
 python3 scripts/build-ios-project.py --profile distribution \
@@ -113,3 +113,14 @@ In the containing app, **Privacy & open-source notices** opens bundled text and
 licenses. It does not open a browser, detect links or send selected text. This
 view and PS's local resources work offline. Apple/TestFlight feedback, device
 keyboards and operating-system services have separate privacy behavior.
+
+## Appearance and offline notices
+
+Use the **Dark mode** switch to choose Light or Dark. Choose **Auto** to return
+to the system setting. The app and extension store the appearance preference
+locally and separately. The containing app's **Privacy & open-source notices**
+view opens an offline document list. Choose one notice and use Previous or Next
+on longer documents. The visible page is limited to 3,000 characters. The
+bundled files remain complete, including the Python standard-library notices.
+Both targets package the reviewed privacy manifest. Current simulator execution
+and resource checks are linked from [distribution readiness](app-store-readiness.md).

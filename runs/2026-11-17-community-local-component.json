@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-11-17T18:00:45.283779+00:00",
+  "pass": true,
+  "author": "Codex - community engineering lane",
+  "base": "0ff7a08",
+  "stage": "local_component_before_hosted_postgresql",
+  "sources": {
+    "tools/community_store.py": "8a79be17439616b8ff73044be4acfc029f5977933c795731b6cc34e12ac90ba1",
+    "tools/community_core.py": "37cb667aa8db5ff3e0e89335da498d891cc7c5f2e4cf3b174c58febc92bff39e",
+    "tools/community_postgres.py": "97449f9f6450af9f839615cd932b98a0a56155fa785acbdc7b443efbe9b8525e",
+    "scripts/verify-community-postgres.py": "92462a3fa6ab8c766af435024b8d5a7f36ca301f4a92305387eb6db0c97b2858",
+    "scripts/community-postgres-sandbox.py": "25e9df22d413107bfffa819c9f26dfd3e2b583bcb58eb61f6202727eb6ce9f07",
+    "scripts/verify-community-core.py": "458d45442f34cea4572b969040eee292abf8217fc47693bc8c410b6917e39503",
+    "scripts/community-workbench.py": "9a4159166adb14f2860f6462443e6c705ef0ffac0258b8c9c0dff65ea15ac060",
+    "tests/test_community_postgres.py": "9c123e71a182e0aa03957694994e9dcd13c09113d6c00bc9d1ca2333dffa2ce0",
+    "tests/test_community_core.py": "1b1673f4e6f7f1761606160f271095ce8369496e151305a0504180573ad1f304",
+    "tests/test_community_store.py": "64b7a97a5833c3afb929cdc15390ebd53247f3958929fb8cf6890d19a42153c1",
+    "tests/test_community_cli.py": "28176617e5952a61afca4778c5f64af760a3da044039a316b7377a7d9caf982e",
+    "deploy/community/synthetic-development.sql": "3475bae65d7b4664c2724a0b80925e88fc3749ca02d63134be0381bb6a69f196",
+    ".github/workflows/community-workbench.yml": "93b1b980dd72fa55c54d1ff4d1079668a3f8c704a079577bc4e77a0391fc3cac"
+  },
+  "focused_tests": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "actual_local_cli_calls": 17,
+  "local_cli_evidence": "runs/2026-11-17-community-local-cli.json",
+  "initial_static_review_correction": "Audit timestamp edit accidentally added an at lookup to request rows. Review caught it before the next execution; removed before current tests.",
+  "postgresql_execution_verified": false,
+  "production_authentication": false,
+  "synthetic_only": true,
+  "new_endpoints": 0,
+  "public_service_enabled": false,
+  "real_user_data_collected": false,
+  "new_tag_releases": 0,
+  "independent_accuracy_evidence": false,
+  "original_requirement_percentages_changed": false,
+  "remaining": [
+    "Fresh isolated Linux PostgreSQL execution and PM source review",
+    "Approved HTTP/client/authentication and actual moderator operating gates",
+    "Private-content/retention/at-rest/backup/recovery and human accessibility acceptance"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "captured_at": "2026-11-17T20:40:38.983126+00:00",
+  "pass": true,
+  "source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de",
+  "protected_signing_run": 44170223827,
+  "release_url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-11-17-13e808e",
+  "release_kind": "development_source_prerelease",
+  "anonymous_assets": [
+    {
+      "name": "aitrust-id-source.tar.gz",
+      "bytes": 14212660,
+      "sha256": "555383bcf6ef6f3bb98d9ec2a8cbddec5b2470c4e1fc3852e610a388da0326cc",
+      "anonymous_download_matched": true
+    },
+    {
+      "name": "source.sigstore.json",
+      "bytes": 10701,
+      "sha256": "fcc511341be567a3c0bfde2165f40cb60e2765e28c7e811c65dd576e8733277f",
+      "anonymous_download_matched": true
+    },
+    {
+      "name": "trusted-root.jsonl",
+      "bytes": 34634,
+      "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+      "anonymous_download_matched": true
+    },
+    {
+      "name": "README-VERIFY.txt",
+      "bytes": 689,
+      "sha256": "98530d0c46c5b27027986bae460a22e29a360ddc64750760ab0bc8932eb7f91d",
+      "anonymous_download_matched": true
+    }
+  ],
+  "verified_source": {
+    "captured_at": "2026-11-17T20:39:43.366722+00:00",
+    "pass": true,
+    "kind": "authenticated_development_source_snapshot",
+    "repository": "knwvmbrr/aitrust-id",
+    "signer_workflow": "knwvmbrr/aitrust-id/.github/workflows/ci.yml",
+    "expected_certificate_identity": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/ci.yml@refs/heads/main",
+    "offline_inputs": true,
+    "captured_inputs_verified": true,
+    "bundle_sha256": "fcc511341be567a3c0bfde2165f40cb60e2765e28c7e811c65dd576e8733277f",
+    "trusted_root_sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+    "independent_tag_accuracy_evidence": false,
+    "license_cleared": false,
+    "profile": "aitrust-development-source/1.0.0",
+    "source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de",
+    "source_files": 4603,
+    "source_bytes": 55629091,
+    "sha256": "555383bcf6ef6f3bb98d9ec2a8cbddec5b2470c4e1fc3852e610a388da0326cc",
+    "tag_release_validated": false,
+    "installed_dependencies_authenticated": false
+  },
+  "independently_release_validated": false
+}
