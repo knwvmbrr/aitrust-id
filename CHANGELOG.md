@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-070555-mt-preview-integrity-correction-bedaf577
+
+Recorded 2026-11-19T07:05:55.348819+00:00 · Contributor: Codex - MT integrity correction lane · change
+
+- **Changed.** Correct MT request/result identity and closed evidence validation; capture bounded no-follow source snapshots before publishing method bundles.
+- **Evidence.** 13 Node groups,36 focused Python tests and fresh Chromium/WebKit controls pass; each browser validates30 full records and refuses five corrupt result types before rendering. Source links/FIFO/oversize/drift preserve prior outputs. [Change record](./runs/changes/2026-11-19-070555-mt-preview-integrity-correction-bedaf577.json).
+- **Not claimed.** Supersedes unmounted70a38b5 evidence for integrity adoption. No canonical method change, tag assertion, independent accuracy, physical-device acceptance, full closure or production mounting. Prior receipts preserved; PM owns integration.
+
+
 ### 2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8
 
 Recorded 2026-11-19T06:28:07.219514+00:00 · Contributor: Codex - MT on-device evidence engineering lane · change

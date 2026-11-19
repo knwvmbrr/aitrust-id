@@ -1,4 +1,10 @@
-# MT device explorer — working component result
+# MT device explorer — initial component result
+
+**Superseded for integration.** Review found missing request-to-result binding,
+open nested record fields and unsafe builder input reads in the initial component.
+The [integrity correction](mt-device-integrity-correction.md) and its new receipts
+replace this initial result for current adoption; original run records remain
+unchanged historical evidence.
 
 Codex's MT on-device evidence engineering lane built this increment from
 `324db5a83ad6883551d5baeaab0ec2793bea50be` on 2026-11-19.

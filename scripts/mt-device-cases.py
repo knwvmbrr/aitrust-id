@@ -6,7 +6,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools.mt_device import inspect_mt_device
 
-CASES=[('urgency_positive','urgency','Buy now.'),
+CASES=[('urgency_positive','urgency','Buy now.'),('urgency_overlapping_supported_spans','urgency','Act fast.'),
  ('urgency_legitimate','urgency','Leave now. Call emergency services immediately.'),
  ('urgency_other_unit','urgency','The committee met today. Read the archived minutes.'),
  ('urgency_density_limit','urgency','Buy now. This is an offer. The page has terms.'),
@@ -35,7 +35,9 @@ CASES=[('urgency_positive','urgency','Buy now.'),
 
 def cases():
  rows=[]
- for identity,kind,text in CASES:
+ witnesses=json.loads((ROOT/'runs/2026-10-10-normalization-version-gap.json').read_text())['examples'][:3]
+ selected=[*CASES,*[(f'frozen_nfc_witness_{i}', 'urgency',w['input']+' Buy now.') for i,w in enumerate(witnesses)]]
+ for identity,kind,text in selected:
   try:expected=json.loads(inspect_mt_device(kind,text))
   except (ValueError,UnicodeError):expected=None
   rows.append({'id':identity,'kind':kind,'text':text,'expected':expected})

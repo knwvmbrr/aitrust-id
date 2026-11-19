@@ -53,8 +53,12 @@ change shared catalogue availability, production mounting or release status.
 The MT source files run unmodified in an ephemeral in-memory Python filesystem.
 The bundle and each embedded file are SHA-256 checked before use. The adapter
 preserves the entire canonical Python method record, normalized subject identity,
-source identities and exact method versions. The UI validates selected method,
-result state, identities, counts and no-tag/no-intent flags before rendering.
+source identities and exact method versions. The UI binds the selected request to its exact frozen-NFC SHA-256 and normalized
+character count. It checks closed original and nested record schemas, source
+identities, count/span relationships and no-tag/no-intent fields before rendering.
+Unknown fields are refused, not silently removed. Valid records are frozen before
+explanations or optional private details can use them. The adapter envelope is
+`mt-device-phrase-explorer/1.0.1`; canonical method versions are unchanged.
 
 ## Reproduce engineering checks
 
@@ -78,3 +82,11 @@ control navigation uses Option+Tab, respecting native browser behavior.
 This is desktop-hosted browser evidence. It does not substitute for the owner's
 physical iPhone 14 Plus, human VoiceOver or independent annotation/accuracy
 acceptance. No MT production assertion or full requirement closure is implied.
+
+The builder captures source and notice inputs using held no-follow/nonblocking
+regular-file descriptors and ancestor directory identities. Each source is capped
+at 200,000 bytes before reading. It rechecks all captured identities before
+replacing public outputs; source refusal leaves previous outputs unchanged. The
+builder does not import source modules to obtain its selected-file constants.
+The browser and Python normalizers use the same frozen Unicode15 tables; the
+generated JavaScript normalizer is checked against its captured source and data.

@@ -6,7 +6,7 @@ from protocol.normalization import normalize_nfc, NORMALIZATION_ID
 from tools import language_observations
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = 'mt-device-phrase-explorer/1.0.0'
+PROFILE = 'mt-device-phrase-explorer/1.0.1'
 SOURCE_FILES = ('tools/mt_device.py', 'tools/language_observations.py', 'tools/authority_quotation.py',
                 'protocol/normalization.py', 'protocol/unicode15-data.json', 'protocol/corpus.py',
                 'tools/blind_review_io.py', 'scripts/authority-quotation.py')
@@ -32,7 +32,7 @@ def inspect_mt_device(kind, text):
     if original['method'] != METHODS[kind]: raise ValueError('Unexpected MT phrase method.')
     return json.dumps({'format':PROFILE,'check':kind,'method':METHODS[kind],
         'state':original['state'],'counts':counts,'original':original,
-        'subject_sha256':hashlib.sha256(normalized.encode()).hexdigest(),
+        'subject_sha256':hashlib.sha256(normalized.encode()).hexdigest(),'subject_characters':len(normalized),
         'normalization_id':NORMALIZATION_ID,'offset_unit':'NFC_unicode_codepoint',
         'source_sha256':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in SOURCE_FILES},
         'tags':[],'intent_established':False,'truth_established':False,
