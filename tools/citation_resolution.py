@@ -27,6 +27,14 @@ class CitationError(ValueError):
     """Refusals never include caller-controlled values."""
 
 
+class OutputCommitUncertain(CitationError):
+    """A complete final output may exist; inspect it before attempting another write."""
+    output_may_exist = True
+
+    def __init__(self):
+        super().__init__('Local citation output commit uncertain.')
+
+
 def need(condition):
     if not condition:
         raise CitationError('Local citation evidence unavailable.')
@@ -56,6 +64,7 @@ class Capture:
         self.fds = []
         self.directories = []
         self.files = []
+        self.output_may_exist = False
 
     def parent(self, path):
         path = Path(path).absolute()
@@ -115,37 +124,66 @@ class Capture:
         temporary = '.citation-' + secrets.token_hex(16)
         fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
                      0o600, dir_fd=parent)
-        created = None
+        error = None
+        may_exist = False
         try:
             with os.fdopen(fd, 'wb') as stream:
                 os.fchmod(stream.fileno(), 0o600)
                 stream.write(raw)
                 stream.flush()
                 os.fsync(stream.fileno())
-                created = identity(os.fstat(stream.fileno()))
             self.check()
-            # Atomic no-replace publication. No partial final file on refusal.
-            os.link(temporary, name, src_dir_fd=parent, dst_dir_fd=parent, follow_symlinks=False)
+            # Atomic no-replace publication of complete bytes. An unexpected
+            # link error can itself have an uncertain filesystem outcome.
+            try:
+                os.link(temporary, name, src_dir_fd=parent, dst_dir_fd=parent, follow_symlinks=False)
+            except FileExistsError:
+                raise
+            except BaseException:
+                may_exist = self.output_may_exist = True
+                raise
+            may_exist = self.output_may_exist = True
+        except BaseException as failure:
+            error = failure
+        # Attempt temporary cleanup exactly once. Never remove a final file or
+        # assert rollback after crossing the publication boundary.
+        try:
+            os.unlink(temporary, dir_fd=parent)
+        except BaseException as failure:
+            if error is None:
+                error = failure
+        if error is None and may_exist:
             try:
                 os.fsync(parent)
-            except BaseException:
-                # Remove only our new inode on a failed durability check.
-                if identity(os.stat(name, dir_fd=parent, follow_symlinks=False)) == created:
-                    os.unlink(name, dir_fd=parent)
-                raise
-        finally:
-            os.unlink(temporary, dir_fd=parent)
+            except BaseException as failure:
+                error = failure
+        if error is not None:
+            if may_exist:
+                raise OutputCommitUncertain() from None
+            raise error
 
     def close(self):
-        for fd in reversed(self.fds):
-            os.close(fd)
+        owned = self.fds
         self.fds = []
+        error = None
+        for fd in reversed(owned):
+            try:
+                os.close(fd)
+            except BaseException as failure:
+                if error is None:
+                    error = failure
+        if error is not None:
+            if self.output_may_exist:
+                raise OutputCommitUncertain() from None
+            raise CitationError('Local citation evidence unavailable.') from None
 
     def __enter__(self):
         return self
 
-    def __exit__(self, *_):
+    def __exit__(self, kind, value, traceback):
         self.close()
+        if kind is not None and self.output_may_exist:
+            raise OutputCommitUncertain() from None
 
 
 def current_sources(capture):

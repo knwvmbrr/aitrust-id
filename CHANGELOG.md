@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-084306-fi-output-publication-uncertainty-b743fe02
+
+Recorded 2026-11-19T08:43:06.492562+00:00 · Contributor: Codex · change
+
+- **Changed.** Distinguish ordinary FI sidecar refusals from uncertain output publication after link, cleanup, sync or close failures; preserve complete output and attempt every owned descriptor close.
+- **Evidence.** Three original injected post-publication defects are preserved; 105 focused controls and 19 actual isolated-Python macOS CLI controls verify typed fixed uncertainty, no private echo, precommit refusals and unchanged ordinary local-resolution states. [Change record](./runs/changes/2026-11-19-084306-fi-output-publication-uncertainty-b743fe02.json).
+- **Not claimed.** Unexpected filesystem outcomes may leave a complete final output or private temporary names; inspect before retrying. No rollback, tag issuance, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-081515-fi-citation-sidecar-60c2fd3b
 
 Recorded 2026-11-19T08:15:15.674664+00:00 · Contributor: Codex · change

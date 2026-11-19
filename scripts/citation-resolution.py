@@ -19,8 +19,10 @@ class Parser(argparse.ArgumentParser):
 
 
 def main(argv=None):
+    uncertainty = ()
     try:
         from tools import citation_resolution as tool
+        uncertainty = (tool.OutputCommitUncertain,)
         parser = Parser(description=__doc__, allow_abbrev=False)
         sub = parser.add_subparsers(dest='command', required=True, parser_class=Parser)
         prepare = sub.add_parser('prepare', allow_abbrev=False)
@@ -59,6 +61,9 @@ def main(argv=None):
                     capture.check()
         print(json.dumps(result, ensure_ascii=True, sort_keys=True))
         return 0
+    except uncertainty:
+        print('{"state":"UNAVAILABLE","reason":"output_commit_uncertain","output_may_exist":true,"tags":[]}')
+        return 2
     except (ValueError, OSError, UnicodeError, TypeError, RecursionError, RuntimeError, ImportError, SyntaxError):
         print('{"state":"UNAVAILABLE","reason":"invalid_or_unsupported_local_citation_request","tags":[]}')
         return 2

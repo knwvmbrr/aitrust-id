@@ -262,7 +262,7 @@ def test_oversize_refused_before_any_read(tmp_path, monkeypatch):
         capture.read(subject, c.MAX_SUBJECT_BYTES)
 
 
-def test_failed_directory_durability_check_leaves_no_new_output(tmp_path, monkeypatch):
+def test_failed_directory_durability_check_reports_uncertainty_with_complete_output(tmp_path, monkeypatch):
     private, _, _ = setup_files(tmp_path)
     output = private / 'new.json'
     original = os.fsync
@@ -271,9 +271,148 @@ def test_failed_directory_durability_check_leaves_no_new_output(tmp_path, monkey
             raise OSError('inert directory durability failure')
         return original(fd)
     monkeypatch.setattr(os, 'fsync', fsync)
-    with c.Capture() as capture, pytest.raises(OSError):
+    with c.Capture() as capture, pytest.raises(c.OutputCommitUncertain) as caught:
         capture.save(output, {'subject_text_included': False}, 1000)
-    assert not output.exists() and not list(private.glob('.citation-*'))
+    assert caught.value.output_may_exist is True
+    assert str(caught.value) == 'Local citation output commit uncertain.'
+    assert json.loads(output.read_bytes()) == {'subject_text_included': False}
+    assert not list(private.glob('.citation-*'))
+
+
+@pytest.mark.parametrize('mode', ['unlink', 'link_before', 'link_after'])
+def test_library_uncertain_publication_never_promises_rollback(tmp_path, monkeypatch, mode):
+    private, _, _ = setup_files(tmp_path)
+    output = private / 'new.json'
+    link, unlink = os.link, os.unlink
+    linked = False
+    def maybe_link(*args, **kwargs):
+        nonlocal linked
+        if mode == 'link_before': raise OSError('SYNTHETIC_PRIVATE_CANARY')
+        result = link(*args, **kwargs)
+        linked = True
+        if mode == 'link_after': raise OSError('SYNTHETIC_PRIVATE_CANARY')
+        return result
+    def maybe_unlink(*args, **kwargs):
+        if mode == 'unlink' and linked: raise OSError('SYNTHETIC_PRIVATE_CANARY')
+        return unlink(*args, **kwargs)
+    monkeypatch.setattr(os, 'link', maybe_link)
+    monkeypatch.setattr(os, 'unlink', maybe_unlink)
+    with c.Capture() as capture, pytest.raises(c.OutputCommitUncertain) as caught:
+        capture.save(output, {'synthetic': True}, 1000)
+    assert str(caught.value) == 'Local citation output commit uncertain.'
+    assert caught.value.output_may_exist is True
+    assert output.exists() is (mode != 'link_before')
+    if output.exists(): assert json.loads(output.read_bytes()) == {'synthetic': True}
+
+
+@pytest.mark.parametrize('published', [False, True])
+def test_close_attempts_every_owned_handle_and_classifies_postcommit_failure(tmp_path, monkeypatch, published):
+    private, _, _ = setup_files(tmp_path)
+    capture = c.Capture()
+    output = private / 'new.json'
+    if published: capture.save(output, {'synthetic': True}, 1000)
+    else: capture.parent(output)
+    owned = list(capture.fds)
+    close = os.close
+    seen = []
+    def fail_once(fd):
+        close(fd)
+        seen.append(fd)
+        if len(seen) == 1: raise OSError('SYNTHETIC_PRIVATE_CANARY')
+    monkeypatch.setattr(os, 'close', fail_once)
+    expected = c.OutputCommitUncertain if published else c.CitationError
+    with pytest.raises(expected) as caught: capture.close()
+    assert isinstance(caught.value, c.OutputCommitUncertain) is published
+    assert seen == list(reversed(owned)) and capture.fds == []
+    capture.close()
+    assert seen == list(reversed(owned))  # Never retry possibly closed/reused descriptors.
+    for fd in owned:
+        with pytest.raises(OSError): os.fstat(fd)
+    assert output.exists() is published
+
+
+FAULT_DRIVER = r'''
+import importlib.abc,json,os,pathlib,runpy,stat,sys
+root,mode=sys.argv[1:3];sys.path.insert(0,root)
+if mode=='import':
+ class Fail(importlib.abc.MetaPathFinder):
+  def find_spec(self,fullname,path=None,target=None):
+   if fullname=='tools.citation_resolution':raise ImportError('SYNTHETIC_PRIVATE_CANARY')
+ sys.meta_path.insert(0,Fail())
+else:
+ from tools import citation_resolution as c
+ link,unlink,fsync,close=os.link,os.unlink,os.fsync,os.close
+ linked=False;closed=False;drifted=False
+ original_check=c.Capture.check
+ def check_fault(self):
+  global drifted
+  if mode=='drift' and not drifted:
+   drifted=True;pathlib.Path(sys.argv[sys.argv.index('--subject')+1]).write_bytes(b'SYNTHETIC_PRIVATE_CANARY')
+  return original_check(self)
+ def link_fault(*args,**kwargs):
+  global linked
+  if mode=='link_before':raise OSError('SYNTHETIC_PRIVATE_CANARY')
+  if mode=='race':
+   fd=os.open(args[1],os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600,dir_fd=kwargs['dst_dir_fd'])
+   with os.fdopen(fd,'wb') as stream:stream.write(b'EXISTING_DESTINATION')
+  result=link(*args,**kwargs);linked=True
+  if mode=='link_after':raise OSError('SYNTHETIC_PRIVATE_CANARY')
+  return result
+ def unlink_fault(*args,**kwargs):
+  if mode=='unlink' and linked:raise OSError('SYNTHETIC_PRIVATE_CANARY')
+  return unlink(*args,**kwargs)
+ def fsync_fault(fd):
+  if (mode=='fsync' and linked and stat.S_ISDIR(os.fstat(fd).st_mode)) or (mode=='pre_fsync' and not linked):raise OSError('SYNTHETIC_PRIVATE_CANARY')
+  return fsync(fd)
+ def close_fault(fd):
+  global closed
+  close(fd)
+  if mode=='close' and linked and not closed:
+   closed=True;raise OSError('SYNTHETIC_PRIVATE_CANARY')
+ os.link=link_fault;os.unlink=unlink_fault;os.fsync=fsync_fault;os.close=close_fault;c.Capture.check=check_fault
+sys.argv=[str(pathlib.Path(root)/'scripts/citation-resolution.py'),*sys.argv[3:]]
+runpy.run_path(sys.argv[0],run_name='__main__')
+'''
+
+
+def fault_cli(mode, *args):
+    return subprocess.run([sys.executable, '-I', '-S', '-B', '-c', FAULT_DRIVER,
+        str(ROOT), mode, *map(str, args)], capture_output=True, timeout=5,
+        env={'PATH': os.defpath, 'PYTHONIOENCODING': 'utf-8'})
+
+
+@pytest.mark.parametrize('mode', ['unlink', 'fsync', 'close', 'link_before', 'link_after'])
+@pytest.mark.parametrize('command', ['prepare', 'check'])
+def test_actual_cli_postpublication_failures_are_fixed_uncertainty(tmp_path, mode, command):
+    private, subject, store = setup_files(tmp_path)
+    side = private / 'sidecar.json'
+    if command == 'prepare':
+        output = side
+        args = ('prepare', '--subject', subject, '--corpus', store, '--map', '1=first', '--output', output)
+    else:
+        result = cli('prepare', '--subject', subject, '--corpus', store, '--map', '1=first', '--output', side)
+        assert result.returncode == 0
+        output = private / 'report.json'
+        args = ('check', '--subject', subject, '--corpus', store, '--sidecar', side, '--private-report', output)
+    result = fault_cli(mode, *args)
+    assert result.returncode == 2 and not result.stderr
+    assert json.loads(result.stdout) == {'state': 'UNAVAILABLE', 'reason': 'output_commit_uncertain',
+                                       'output_may_exist': True, 'tags': []}
+    assert output.exists() is (mode != 'link_before')
+    if output.exists():
+        value = json.loads(output.read_bytes())
+        assert value['format'] == ('local-citation-sidecar/v1' if command == 'prepare' else 'local-citation-evidence/v1')
+        assert output.stat().st_mode & 0o777 == 0o600
+
+
+@pytest.mark.parametrize('mode', ['pre_fsync', 'import', 'race', 'drift'])
+def test_actual_cli_precommit_and_import_refusals_stay_generic_and_private(tmp_path, mode):
+    private, subject, store = setup_files(tmp_path)
+    output = private / 'new.json'
+    result = fault_cli(mode, 'prepare', '--subject', subject, '--corpus', store, '--output', output)
+    refuse(result)
+    if mode == 'race': assert output.read_bytes() == b'EXISTING_DESTINATION'
+    else: assert not output.exists()
 
 
 @pytest.mark.parametrize('args', [('SYNTHETIC_PRIVATE_CANARY',), ('--unknown=SYNTHETIC_PRIVATE_CANARY',),
