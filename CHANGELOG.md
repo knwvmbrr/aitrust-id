@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da
+
+Recorded 2026-11-19T06:02:15.686376+00:00 · Contributor: Codex - C2PA evidence engineering lane · change
+
+- **Changed.** Bind the finite optional C2PA Python/native cohort to exact wheel, source, notice and native release artifacts with a bounded offline verifier.
+- **Evidence.** 47 focused checks and four actual CLI controls pass; 14 wheels, 10 source distributions, two native release byte matches and 309 Python-file matches are replayed without package execution. [Change record](./runs/changes/2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da.json).
+- **Not claimed.** Engineering evidence only: no license permission, resolved native graph, source offers, reproducible build, publisher authentication, tag release or full X-02/F-057 closure. Scope/state/selectors unchanged.
+
+
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
 
 Recorded 2026-11-19T05:26:23.351858+00:00 · Contributor: Codex · change

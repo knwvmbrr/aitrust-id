@@ -1,0 +1,132 @@
+{
+  "captured_at": "2026-11-19T06:01:48.041098+00:00",
+  "source_base": "4ae7a14d1738211969bbc9faca041c3afbf03b40",
+  "author": "Codex - C2PA evidence engineering lane",
+  "profile": "c2pa-selected-artifact-notice-observations/1.0.0",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "pass": true,
+  "sources": {
+    "tools/c2pa_cohort.py": "c629eb76ef327f87c80c3171d429a45ac4772696eacabd69f29ecc97d7e56983",
+    "scripts/verify-c2pa-cohort.py": "590880f395ad634e93e0ec6cefb859fac50b2360b0d85a3fbf2ee5f946163595",
+    "tests/test_c2pa_cohort.py": "5cbe9c1ec035fa3a3dd16f673fe0fb477d2a930330b8ecb46fb75ebcfe33bc76",
+    "docs/c2pa-cohort-plan.md": "2d048947a09a273e96d40d5ecfc1a69200963be6f39108ff9ada4d3a00103e92",
+    "docs/c2pa-cohort-review.md": "dbefc897eb9d511417ee4b0fccde63e1f341e65b9344fb3047077c4b27e54e2c",
+    "sbom/c2pa/.gitattributes": "1ef6cb2213cc1f57685c203306fcaac6271139d42ee47b5d549d0d7d8b55ea41",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+    "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
+    "sbom/c2pa/manifest.json": "6863096ebbf4a0c1c3b7e215c89293b386a32c79e797cfaaf3599c935f8e4449"
+  },
+  "focused_tests": {
+    "command": "python -m pytest -q tests/test_c2pa_cohort.py",
+    "exit_status": 0,
+    "passed": 47,
+    "reported_duration_seconds": 1.32
+  },
+  "actual_cli_checks": [
+    {
+      "name": "checkout_only_no_replay_credit",
+      "exit_status": 0,
+      "pass": true,
+      "result": {
+        "profile": "c2pa-selected-artifact-notice-observations/1.0.0",
+        "pass": true,
+        "packages": 10,
+        "distinct_wheels": 14,
+        "selected_profile_slots": 20,
+        "retained_texts": 70,
+        "native_release_matches": 2,
+        "artifact_bytes_replayed": false,
+        "source_bytes_replayed": false,
+        "packages_executed": false,
+        "permission_cleared": false,
+        "release_approved": false,
+        "source_build_reproduced": false,
+        "publisher_signature_verified": false,
+        "complete_native_dependency_graph": false
+      }
+    },
+    {
+      "name": "actual_cached_artifact_and_source_replay",
+      "exit_status": 0,
+      "pass": true,
+      "result": {
+        "profile": "c2pa-selected-artifact-notice-observations/1.0.0",
+        "pass": true,
+        "packages": 10,
+        "distinct_wheels": 14,
+        "selected_profile_slots": 20,
+        "retained_texts": 70,
+        "native_release_matches": 2,
+        "artifact_bytes_replayed": true,
+        "source_bytes_replayed": true,
+        "packages_executed": false,
+        "permission_cleared": false,
+        "release_approved": false,
+        "source_build_reproduced": false,
+        "publisher_signature_verified": false,
+        "complete_native_dependency_graph": false
+      }
+    },
+    {
+      "name": "clearance_request_refused",
+      "exit_status": 2,
+      "pass": true
+    },
+    {
+      "name": "changed_actual_wheel_refused_before_member_replay",
+      "exit_status": 2,
+      "pass": true
+    }
+  ],
+  "source_unchanged_during_cli_execution": true,
+  "matched_python_file_instances": 309,
+  "retained_notice_relationships": {
+    "c2pa_source_notices": 2,
+    "c2pa_matching_wheel_notice_members": 0,
+    "requests_source_notice_not_in_wheel_notice_selection": true,
+    "charset_normalizer_source_data_notice_not_in_wheel_notice_selection": true
+  },
+  "retained_first_failures": [
+    {
+      "stage": "source_download",
+      "signature": "64 MiB source archive retrieval bound exceeded",
+      "action": "Stopped; used six small exact-commit documents instead."
+    },
+    {
+      "stage": "first_collection",
+      "signature": "strict lock parser omitted existing --only-binary=:all: policy",
+      "action": "Required exactly one existing binary-only policy before package headers; added refusal controls."
+    },
+    {
+      "stage": "first_pytest",
+      "passed": 38,
+      "failed": 2,
+      "signatures": [
+        "ZIP writer normalized NUL fixture before inspection",
+        "RECORD size test replaced a nonexistent literal length"
+      ],
+      "action": "Constructed actual NUL-containing ZIP header and reject original-vs-normalized names; mutate parsed CSV size explicitly. Current controls pass."
+    }
+  ],
+  "upstream_source_obligations": {
+    "full_rust_source_archive_retained": false,
+    "source_archive_download_stopped_at_bytes": 67108865,
+    "source_commit_cargo_lock_url": "https://raw.githubusercontent.com/contentauth/c2pa-rs/e7cc666c3409bdaf4cea8e49046dfbf8290dff89/Cargo.lock",
+    "source_commit_cargo_lock_http_status": 404,
+    "complete_rust_native_notice_graph": false
+  },
+  "packages_installed": false,
+  "packages_executed": false,
+  "services_changed": false,
+  "tag_activation_changed": false,
+  "tag_assertions": 0,
+  "independent_accuracy_evidence": false,
+  "global_scope_changed": false,
+  "permission_cleared": false,
+  "release_approved": false,
+  "source_build_reproduced": false,
+  "publisher_signature_verified": false,
+  "complete_native_dependency_graph": false
+}
