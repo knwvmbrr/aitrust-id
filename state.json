@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T09:00:04.807170+00:00",
+  "updated": "2026-11-19T09:24:39.822476+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1137,13 +1137,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-19-fi-citation-PS.json",
     "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
-    "protocol": "runs/2026-11-19-fi-citation-final-protocol.json",
+    "protocol": "runs/2026-11-19-fi-citation-opaque-protocol.json",
     "extension": "runs/2026-11-19-fi-citation-extension.json",
-    "website": "runs/2026-11-19-fi-citation-final-website.json",
+    "website": "runs/2026-11-19-fi-citation-opaque-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T09:00:04.807170+00:00",
+  "updated_at": "2026-11-19T09:24:39.822476+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3713,10 +3713,10 @@
     "fi_citation_integration": {
       "PS": "runs/2026-11-19-fi-citation-PS.json",
       "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
-      "protocol": "runs/2026-11-19-fi-citation-final-protocol.json",
+      "protocol": "runs/2026-11-19-fi-citation-opaque-protocol.json",
       "extension": "runs/2026-11-19-fi-citation-extension.json",
-      "website": "runs/2026-11-19-fi-citation-final-website.json",
-      "boundaries": "runs/2026-11-19-fi-citation-final-boundaries.json",
+      "website": "runs/2026-11-19-fi-citation-opaque-website.json",
+      "boundaries": "runs/2026-11-19-fi-citation-opaque-boundaries.json",
       "source_bound_checks_passed": true,
       "independent_accuracy_evidence": false,
       "protected_publication_pending": true
@@ -3982,11 +3982,11 @@
     "publication_evidence": "runs/2026-11-19-mt-live-publication.json"
   },
   "fi_citation_sidecar": {
-    "status": "corrected_ownership_integrated_and_checked; protected_publication_pending",
+    "status": "reviewed_opaque_targets_and_ownership_integrated; protected_publication_pending",
     "method": "declared-local-numbered-citations/1.0.0",
     "source": "tools/citation_resolution.py",
     "cli": "scripts/citation-resolution.py",
-    "evidence": "runs/2026-11-19-fi-citation-final-integration.json",
+    "evidence": "runs/2026-11-19-fi-citation-reviewed-integration.json",
     "subject_upload_enabled": false,
     "default_analysis": false,
     "explicit_private_export_required": true,
@@ -3996,8 +3996,13 @@
     "independent_accuracy_evidence": false,
     "actual_macos_cli_controls": 23,
     "linux_execution_recorded": false,
-    "focused_component_tests": 110,
+    "focused_component_tests": 140,
     "postpublication_uncertainty_explicit": true,
-    "raw_output_descriptor_capture_owned": true
+    "raw_output_descriptor_capture_owned": true,
+    "current_ownership_evidence": "runs/2026-11-19-fi-current-source-ownership-macos.json",
+    "current_grammar_evidence": "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+    "actual_macos_grammar_cases": 24,
+    "actual_macos_grammar_cli_commands": 48,
+    "opaque_targets_after_unsupported_labels": true
   }
 }

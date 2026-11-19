@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-092440-record-reviewed-fi-target-and-ownership-integration-6fd91c14
+
+Recorded 2026-11-19T09:24:40.414720+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source acceptance after the reviewed opaque-target fix, keeping exact source-bound grammar and ownership evidence separate from prior candidates.
+- **Evidence.** All five groups match unchanged source: 7PS,6privacy,52protocol,14extension,43website commands. Current140component tests, root206controls,24grammarcases/48CLIcommands and23freshownershipCLIcontrols pass; separate review clears the original parser and I/O cases. Reviewed1280source boundaries pass. [Change record](./runs/changes/2026-11-19-092440-record-reviewed-fi-target-and-ownership-integration-6fd91c14.json).
+- **Not claimed.** The corrected source must still pass protected CI before merge and public delivery. No general Markdown, FI verdict, source truth, independent accuracy, human acceptance or original closure. All202IDs and132complete/70open remain.
+
+
+### 2026-11-19-092024-record-opaque-target-protocol-before-site-check-d067de9d
+
+Recorded 2026-11-19T09:20:24.544561+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing current protocol checks before the serialized website execution for the opaque-target correction.
+- **Evidence.** All52protocolcommands pass against stable source with the140component tests and unchanged source/access constraints. [Change record](./runs/changes/2026-11-19-092024-record-opaque-target-protocol-before-site-check-d067de9d.json).
+- **Not claimed.** The fresh website and boundary check, protected CI and publication remain required. No accuracy or parent closure is claimed.
+
+
+### 2026-11-19-091913-project-reviewed-fi-opaque-target-contract-3caa12e5
+
+Recorded 2026-11-19T09:19:13.582416+00:00 · Contributor: Codex · change
+
+- **Changed.** Project the corrected finite citation-target grammar, exact current-source ownership evidence and review-before-freeze handoff discipline.
+- **Evidence.** Root206component/input controls pass and all3original parser counterexamples now exclude hidden target numbers while retaining later standalone markers. Separate review passes39focused checks,24boundary combinations and4actualcommands. The frozen source has24actualgrammarcases/48commands and23freshownershipCLIcontrols. [Change record](./runs/changes/2026-11-19-091913-project-reviewed-fi-opaque-target-contract-3caa12e5.json).
+- **Not claimed.** Affected integration and protected publication follow. This does not add general Markdown interpretation, source support, tag release, independent accuracy or original requirement closure.
+
+
 ### 2026-11-19-091152-hold-fi-opaque-link-target-parser-gap-7a3c2074
 
 Recorded 2026-11-19T09:11:52.823994+00:00 · Contributor: Codex · change

@@ -101,8 +101,12 @@ link/definition forms are `unsupported`. An adjacent parenthesized/bracketed
 link target or definition line is kept opaque, so an inner numeric token does
 not become a new supported marker. For example, `[1][2]` is unsupported; `[1]
 [2]` separated by whitespace contains two literal candidates. A backslash
-immediately before a marker conservatively makes it unsupported. Only directly
-adjacent link punctuation is recognized; whitespace-separated prose is inspected
+immediately before a marker conservatively makes it unsupported. Adjacent target
+consumption also applies when the label was already unsupported as nested or
+escaped: `[nested [label]](https://example.invalid/[1])` contains one unsupported
+occurrence, not a supported `[1]` from the URL. A real standalone marker after
+a closed target, or on the next line after a definition, remains inspectable.
+Only directly adjacent link punctuation is recognized; whitespace-separated prose is inspected
 as literal selected markers. This is not a general Markdown parser.
 
 Quoted text, code examples and array indexing can contain the same literal

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-091913-project-reviewed-fi-opaque-target-contract-3caa12e5",
+  "recorded_at": "2026-11-19T09:19:13.582416+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ad2cbcebc522652b9200dbc220e703f0116a4244",
+  "changed": "Project the corrected finite citation-target grammar, exact current-source ownership evidence and review-before-freeze handoff discipline.",
+  "proves": "Root206component/input controls pass and all3original parser counterexamples now exclude hidden target numbers while retaining later standalone markers. Separate review passes39focused checks,24boundary combinations and4actualcommands. The frozen source has24actualgrammarcases/48commands and23freshownershipCLIcontrols.",
+  "limits": "Affected integration and protected publication follow. This does not add general Markdown interpretation, source support, tag release, independent accuracy or original requirement closure.",
+  "scope_ids": [
+    "T-FI",
+    "F-054"
+  ],
+  "files": {
+    "docs/agent-handoffs.md": "b76b80de02457c2a199239b0fd5bd55e2ae0840413bc0ffebdeec26c52de5f1d",
+    "docs/scope-progress.json": "698755ac9761146a7b5bbac896334d746a3ce73d59f0ffb6650f816388ddb32a",
+    "docs/scope-progress.md": "c9e8bd8309f79179b82528a86369ae37265f913618eeebfe54e09b8b71518d55",
+    "eval/route-boundaries.json": "2aea90071c9cf8d2d748d51665baeccf264d6645a07a4457c856ecd875ea0ef6",
+    "runs/2026-11-19-fi-opaque-target-root-review.json": "4a5112199cfe3d838c6562b35b9bdbe255885e914fb8b590348d11db889c3035",
+    "site/public/reference/fi-citation-sidecar-plan.md": "e9452ca321e7b35a1af7e4a96c9eee7b779326912fbb4932f1966e985f067d54",
+    "site/public/reference/fi-citation-sidecar.md": "93be92ed4faea588f10ad75be83c0343fe7473092c6a2f76fc4f5771a7ed047a",
+    "site/public/reference/public-scope.json": "b323fb2b2368dc6313b7fd3bed584c0f5f13894b8164b970464fc4922d4f26b7",
+    "site/src/public-scope.json": "b323fb2b2368dc6313b7fd3bed584c0f5f13894b8164b970464fc4922d4f26b7",
+    "site/src/scope-manifest.json": "e3d38e91ee14850ab09d1ce2c15829f6c4d8b6abb131f47d29a5eaad9012785c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-opaque-target-root-review.json",
+      "sha256": "4a5112199cfe3d838c6562b35b9bdbe255885e914fb8b590348d11db889c3035"
+    },
+    {
+      "path": "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+      "sha256": "e17098a7743dd9319306e7ea241c5e99c73eb468cc03456a93e30d89378c9c8c"
+    },
+    {
+      "path": "runs/2026-11-19-fi-current-source-ownership-macos.json",
+      "sha256": "0113aabea3b22ba14e662a42d4289109a1477b99afe3dd7f86392792e2f57239"
+    }
+  ],
+  "checks": []
+}
