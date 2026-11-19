@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8
+
+Recorded 2026-11-19T06:28:07.219514+00:00 · Contributor: Codex - MT on-device evidence engineering lane · change
+
+- **Changed.** Build a separate on-device MT phrase explorer component with exact Python urgency/authority observations, lazy per-run workers and scoped import/render failure containment.
+- **Evidence.** 80 focused Python checks, eight Node client groups and two actual browser engines pass; each browser matches26 full native records with private-detail, failure, cancellation, reflow and storage controls. [Change record](./runs/changes/2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8.json).
+- **Not claimed.** Working unpublished component: PM must mount and production-build it. No MT assertion, manipulation/intent/truth verdict, independent accuracy, physical iPhone/VoiceOver acceptance, dependency clearance or full requirement closure. Scope/state unchanged.
+
+
 ### 2026-11-19-055630-record-source-download-integration-evidence-4edd25dd
 
 Recorded 2026-11-19T05:56:30.225088+00:00 · Contributor: Codex · change

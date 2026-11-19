@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-11-19T06:16:32.563Z",
+  "pass": false,
+  "profile": "mt-device-phrase-explorer/1.0.0",
+  "bundle_sha256": "3127bf9f46eea3da6a32bf307ef522ae100bd085f56405a3ba1ed8d963f50ddd",
+  "sources": {
+    "tools/mt_device.py": "2fd7970b8bdbfa1aa74c72187fe4f1fba73ebaf7f4bf0034101ccfbb4e49e01d",
+    "scripts/build-mt-device.py": "e7428b4bc62444eda7d4cfef9c2aea7dd43c22bc671e1c05605f4cdf45024bd3",
+    "scripts/build-mt-device-fixture.mjs": "a456393837d76e908bd09b1d25d19478325c72a7ccf9c9f0c39bee6a363369f1",
+    "scripts/mt-device-cases.py": "aaaf1d6d28833d3ab672daffcf4ee4b1b1be49a6be506d2a4e10369f28ae7e5e",
+    "scripts/verify-mt-device.cjs": "f3976487e480b93ae731dfba7516c13873e3f9f2afade25d5af582c65c018dfa",
+    "site/src/MTExplorer.jsx": "e5d0e6495aa2fd9a8b181f598b580c0c9b994d907a542077945e7df2d6cd71aa",
+    "site/src/mt-device-client.js": "e205b47dc72bf4f25c10cc2b469cc820191330bcd56b90f584c20bacc087cc02",
+    "site/src/mt-device-worker.js": "34d1f36eeb838fce529cc9d914b6a8233347a58456b131b8c2ba7c9f35979196",
+    "site/src/mt-device-result.js": "01ab22c20625b33295f0bd1c947025bba677ce90385f80390fdd9e30e5278b62",
+    "site/src/mt-device-manifest.json": "a791f059f5e306ebe31d0e8fdef3ae9f421650039fefaf6ee5157faab5532d19",
+    "site/public/mt-device/method-3127bf9f46eea3da6a32bf307ef522ae100bd085f56405a3ba1ed8d963f50ddd.json": "3127bf9f46eea3da6a32bf307ef522ae100bd085f56405a3ba1ed8d963f50ddd",
+    "site/public/mt-device/notices.txt": "23b59ce45b5ea086679994977198cf0c91aba9ba81ecf2f9e087d4d86712b2c3",
+    "tests/test_mt_device.py": "a9b6c24eed7e29c7ad9abf542d459e3265dac5d1f28ac7f880601191d599a0dd",
+    "tests/mt-device-client.mjs": "9127e5dbbb87d6d6de037471b6bcc6a0a7fbb2fbcff5ea7063b31829b9226895"
+  },
+  "physical_device_tested": false,
+  "independent_accuracy_evidence": false,
+  "engines": [],
+  "errors": [
+    {
+      "engine": "Chromium",
+      "stage": "screenshots_and_reflow",
+      "message": "320px enlarged-text overflow"
+    }
+  ]
+}

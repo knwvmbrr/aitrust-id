@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8",
+  "recorded_at": "2026-11-19T06:28:07.219514+00:00",
+  "author": "Codex - MT on-device evidence engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "324db5a83ad6883551d5baeaab0ec2793bea50be",
+  "changed": "Build a separate on-device MT phrase explorer component with exact Python urgency/authority observations, lazy per-run workers and scoped import/render failure containment.",
+  "proves": "80 focused Python checks, eight Node client groups and two actual browser engines pass; each browser matches26 full native records with private-detail, failure, cancellation, reflow and storage controls.",
+  "limits": "Working unpublished component: PM must mount and production-build it. No MT assertion, manipulation/intent/truth verdict, independent accuracy, physical iPhone/VoiceOver acceptance, dependency clearance or full requirement closure. Scope/state unchanged.",
+  "scope_ids": [
+    "F-019b",
+    "F-019c",
+    "T-MT"
+  ],
+  "files": {
+    "docs/mt-device-explorer-plan.md": "2e1bf61b5540a58ffcbbfd8d43f0f724e852a4e243de1e9c3b4859eaaf488fce",
+    "docs/mt-device-explorer-result.md": "70dcd5f51b815b0aa00a0eb4bafb998047bbe5e3dc64fa8c8dc873b2a7109269",
+    "docs/mt-device-explorer.md": "67da7585562df7e71d577a45a4539b823065a7969513ff895ec3e815994c5e8e",
+    "runs/2026-11-19-mt-device-browser.json": "a5a1302a7908d7546036009f9c1edd964edd5a5dd5ee4e64e579217fed6ed0ee",
+    "runs/2026-11-19-mt-device-explorer.json": "18a587bc9c38e832e4dcb7f2d8571b439f4963ca2a416943759076b2e454206d",
+    "runs/2026-11-19-mt-device-keyboard-fixture-failure.json": "99d9898b3cea24c746a85c5077f052b7f4ca316123c8e318b49e918d79b9f297",
+    "runs/2026-11-19-mt-device-layout-fixture-failure.json": "7432b745ee97e82c4d6ca1f99a50951397e41af194556f879ee202fd253d7645",
+    "scripts/build-mt-device-fixture.mjs": "4bcdcabb905244ba856a2dc89241f4c44e39e4bf66b5cdec1df178cc04a7b214",
+    "scripts/build-mt-device.py": "e7428b4bc62444eda7d4cfef9c2aea7dd43c22bc671e1c05605f4cdf45024bd3",
+    "scripts/mt-device-cases.py": "aaaf1d6d28833d3ab672daffcf4ee4b1b1be49a6be506d2a4e10369f28ae7e5e",
+    "scripts/verify-mt-device.cjs": "b76f0b1509bba68cd48c3c068d5f42b6d0820c98d88fbecd88eae74504068867",
+    "site/public/mt-device/.gitattributes": "3aeb1c02c4731e0b60494bbc5d1bddcc1c71fe4cdd5de46b9f10e29b220e106d",
+    "site/public/mt-device/method-3127bf9f46eea3da6a32bf307ef522ae100bd085f56405a3ba1ed8d963f50ddd.json": "3127bf9f46eea3da6a32bf307ef522ae100bd085f56405a3ba1ed8d963f50ddd",
+    "site/public/mt-device/notices.txt": "23b59ce45b5ea086679994977198cf0c91aba9ba81ecf2f9e087d4d86712b2c3",
+    "site/src/MTExplorer.jsx": "d6a54b43a1ec70580c60f198bde71dbdd428c0bec561e0cbf9b0c947a6128c80",
+    "site/src/MTExplorerSlot.jsx": "774c165916edf0bc891aff874ce48dcf1da625d06d9a5c05859ece1d9afd2a06",
+    "site/src/mt-device-client.js": "e205b47dc72bf4f25c10cc2b469cc820191330bcd56b90f584c20bacc087cc02",
+    "site/src/mt-device-manifest.json": "a791f059f5e306ebe31d0e8fdef3ae9f421650039fefaf6ee5157faab5532d19",
+    "site/src/mt-device-result.js": "01ab22c20625b33295f0bd1c947025bba677ce90385f80390fdd9e30e5278b62",
+    "site/src/mt-device-worker.js": "34d1f36eeb838fce529cc9d914b6a8233347a58456b131b8c2ba7c9f35979196",
+    "tests/mt-device-client.mjs": "9127e5dbbb87d6d6de037471b6bcc6a0a7fbb2fbcff5ea7063b31829b9226895",
+    "tests/test_mt_device.py": "a9b6c24eed7e29c7ad9abf542d459e3265dac5d1f28ac7f880601191d599a0dd",
+    "tools/mt_device.py": "2fd7970b8bdbfa1aa74c72187fe4f1fba73ebaf7f4bf0034101ccfbb4e49e01d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-device-explorer.json",
+      "sha256": "18a587bc9c38e832e4dcb7f2d8571b439f4963ca2a416943759076b2e454206d"
+    },
+    {
+      "path": "runs/2026-11-19-mt-device-browser.json",
+      "sha256": "a5a1302a7908d7546036009f9c1edd964edd5a5dd5ee4e64e579217fed6ed0ee"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T06:28:07.255952+00:00"
+    }
+  ]
+}
