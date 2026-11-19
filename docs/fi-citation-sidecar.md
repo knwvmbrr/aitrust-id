@@ -54,8 +54,12 @@ The console prints occurrence counts only:
 `COMPLETE` means this bounded inspection completed, including any unsupported
 occurrences. Zero occurrences means no selected bracket markers, not absence of
 all citations. Exit 0 is a completed observation. Exit 2 and fixed `UNAVAILABLE`
-mean inputs, bindings, syntax options, limits or storage refused; no observation
-or new private output is granted. No confidence, truth, source-support,
+with reason `invalid_or_unsupported_local_citation_request` mean inputs,
+bindings, syntax options, limits or a pre-publication storage step refused; no
+new final destination was committed by that operation. An existing destination
+is preserved. A different exit2 reason, `output_commit_uncertain`, includes
+`output_may_exist: true`: publication succeeded or its outcome is unknown, but
+later I/O/cleanup/close did not complete. No confidence, truth, source-support,
 authenticity, freshness or independent-accuracy claim follows from either result.
 
 For exact spans and bindings, explicitly add a new destination:
@@ -74,6 +78,19 @@ them. Nothing is saved automatically by `check`; existing files are never
 overwritten. Changed raw subject bytes (even NFC-equivalent replacements),
 corpus bytes, document bindings or method sources require a newly prepared
 sidecar. Source hashes identify code; they do not authenticate an installation.
+
+If `output_commit_uncertain` occurs, **inspect before retrying**. A complete new
+file may already be at the destination you selected, even though the command
+exited2; its durability/cleanup was not confirmed. Keep the failure and inspect
+that exact private destination and any `.citation-*` temporary names in its
+directory yourself before deciding to retain or remove them. A temporary name
+may refer to the same complete inode. Do not automatically retry at the same or
+another destination, delete a final file, or treat uncertainty as a successful
+evidence export. The tool does not promise rollback when the filesystem reports
+an error. Ordinary pre-publication cleanup errors may leave a private temporary
+file but never commit a new final destination. No private path or content is
+printed in either fixed refusal. Abrupt process/power loss can prevent delivery
+of any result; inspect your selected destination before repeating a write.
 
 ## Exact profile and limits
 
@@ -119,6 +136,13 @@ The library exposes `prepare(corpus_bytes, subject_bytes, pairs)` and
 `check(corpus_bytes, subject_bytes, sidecar_bytes)`. File callers should use the
 CLI's descriptor-bound capture/export path; byte APIs validate the selected
 captured values. Private details always bind the current method sources.
+`Capture.save` and post-publication capture cleanup expose the bounded
+`OutputCommitUncertain` exception (`output_may_exist = True`) to library callers.
+Its message contains no filesystem path, input value or original exception text.
+All owned descriptor closes are attempted once even if a close reports failure;
+potentially closed descriptor numbers are never retried. Known destination-exists
+errors preserve that file and remain ordinary refusals. Unexpected link-attempt
+errors are conservatively uncertain even if no final file can be observed.
 
 This implements FI's separate local resolution-evidence component. Full T-FI
 still needs independent contradiction-versus-missing-evidence labels/error rates,

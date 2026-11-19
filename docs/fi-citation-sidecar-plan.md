@@ -38,7 +38,9 @@ and file descriptors, with pre-read bounds and post-read identity checks.
 Subject/corpus/sidecar inputs must be owner-private. Outputs require an existing
 owner-private directory outside this checkout and are exclusively created at
 0600, never overwritten. Every captured input is rechecked before publication;
-temporary output is removed on refusal. CLI parsing and runtime refusals emit
+temporary cleanup is attempted once. Post-publication cleanup/durability/close
+failures explicitly report that output may exist, without promising rollback.
+CLI parsing and runtime refusals emit
 fixed diagnostics without path/argument/content echo. No raw subject, URL,
 corpus text, source ID or linking hash is printed in the brief result.
 
@@ -59,3 +61,24 @@ paths and unchanged quantitative-checker operation when this optional module
 fails. Record source-bound counts and failures honestly. Full T-FI still needs
 independent evidence-type labels/error reporting, accepted tag mapping and human
 release operation. No original completion percentage changes.
+
+## Publication-boundary correction plan, before code
+
+The first candidate incorrectly treated all output I/O errors as ordinary
+refusals. Injected temporary-unlink, failed rollback after directory-fsync, and
+descriptor-close failures reproduce a complete final file existing after an
+ordinary error. Preserve that failed receipt and the earlier successful controls.
+
+Replace rollback assumptions with an explicit publication boundary: before the
+link attempt, refusal guarantees no newly committed final destination; after a
+successful link, or an unexpected error whose link outcome is unknown, raise a
+fixed typed `OutputCommitUncertain` instead of attempting to promise rollback.
+CLI exit2 remains Unavailable but adds `reason: output_commit_uncertain` and
+`output_may_exist: true`. Known destination-exists refusal never overwrites it.
+Attempt all owned descriptor closes; post-publication close/cleanup failures
+retain uncertainty. Import failures must still yield the ordinary fixed refusal
+without referring to an uninitialized module variable. Document inspect-before-
+retry handling, including possible private temporary-name remnants; do not
+automatically retry or remove a complete final file. Regression controls inject
+the exact boundaries in the library and actual CLI, preserve no-final-output on
+source drift/pre-link failure, and verify no private path/value echo.
