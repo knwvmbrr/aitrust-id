@@ -35,6 +35,9 @@ async function startSiteFixture({directory,port=0}={}){
  }finally{fs.closeSync(headerFile.fd);}
  const server=http.createServer((req,res)=>{
   let relative='/',fd;
+  // A close error may follow a completed close. Relinquish ownership first,
+  // because that numeric descriptor can already belong to something else.
+  const closeOwned=()=>{const owned=fd;fd=undefined;if(owned!==undefined)fs.closeSync(owned);};
   const respond=status=>{res.writeHead(status,{'content-type':'text/plain',...headersFor(rules,relative),...(status===405?{allow:'GET, HEAD'}:{})});res.end();};
   try{
    if(req.method!=='GET'&&req.method!=='HEAD'){req.resume();respond(405);return;}
@@ -43,11 +46,11 @@ async function startSiteFixture({directory,port=0}={}){
    if(relative.includes('\\')||relative.includes('\0')||relative.split('/').some(p=>p==='.'||p==='..'))throw Error('Invalid path');
    const opened=openBuildFile(root,rootIdentity,relative);fd=opened.fd;
    res.writeHead(200,{'content-type':mime[path.extname(opened.file)]||'application/octet-stream',...headersFor(rules,relative)});
-   if(req.method==='HEAD'){fs.closeSync(fd);fd=undefined;res.end();return;}
+   if(req.method==='HEAD'){closeOwned();res.end();return;}
    const stream=fs.createReadStream(null,{fd,autoClose:true});fd=undefined;
    res.once('close',()=>stream.destroy());stream.once('error',()=>res.destroy());stream.pipe(res);
   }catch{
-   if(fd!==undefined)fs.closeSync(fd);
+   try{closeOwned();}catch{res.destroy();return;}
    if(res.headersSent)res.destroy();else respond(404);
   }
  });

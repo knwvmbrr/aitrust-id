@@ -14,3 +14,30 @@ test('file and ancestor symlinks cannot disclose outside content; FIFOs do not h
 test('linked roots/header files, malformed and oversized header policy refuse startup',async t=>{const {root,temp}=tree(t);fs.symlinkSync(root,path.join(temp,'root-link'),'dir');await assert.rejects(startSiteFixture({directory:path.join(temp,'root-link')}));fs.renameSync(path.join(root,'_headers'),path.join(temp,'headers'));fs.symlinkSync(path.join(temp,'headers'),path.join(root,'_headers'));await assert.rejects(startSiteFixture({directory:root}));fs.unlinkSync(path.join(root,'_headers'));fs.writeFileSync(path.join(root,'_headers'),'x'.repeat(65537));await assert.rejects(startSiteFixture({directory:root}));fs.writeFileSync(path.join(root,'_headers'),'No route\n  Bad: header\n');await assert.rejects(startSiteFixture({directory:root}));fs.writeFileSync(path.join(root,'_headers'),'/*\n  X-Test: invalid\0value\n');await assert.rejects(startSiteFixture({directory:root}));});
 test('root replacement refuses instead of switching the server to a different build',async t=>{const {root,temp}=tree(t),f=await fixture(t,root);fs.renameSync(root,path.join(temp,'old-build'));fs.mkdirSync(root);fs.writeFileSync(path.join(root,'index.html'),'SYNTHETIC_PRIVATE_CANARY');const r=await request(f.url);assert.equal(r.status,404);assert.equal(r.body,'');await f.close();await f.close();});
 test('actual CLI binds loopback, serves CSP, closes on SIGTERM and refuses malformed argv safely',async t=>{const {root}=tree(t);const child=spawn(process.execPath,['scripts/site-fixture-server.cjs','--directory',root,'--port','0'],{cwd:path.join(__dirname,'..'),stdio:['ignore','pipe','pipe']});t.after(()=>{if(child.exitCode===null)child.kill('SIGTERM');});const exit=new Promise((resolve,reject)=>{child.once('error',reject);child.once('exit',(code,signal)=>resolve({code,signal}));});const url=await new Promise((resolve,reject)=>{let text='';child.stdout.on('data',b=>{text+=b;const m=/SITE_FIXTURE_READY (http:\/\/127\.0\.0\.1:\d+)/.exec(text);if(m)resolve(m[1]);});child.once('exit',()=>reject(Error('CLI failed to start')));});const r=await request(url);assert.equal(r.status,200);security(r);child.kill('SIGTERM');assert.deepEqual(await exit,{code:0,signal:null});const invalid=spawn(process.execPath,['scripts/site-fixture-server.cjs','PRIVATE_ARGUMENT_CANARY'],{cwd:path.join(__dirname,'..'),stdio:['ignore','pipe','pipe']});let stderr='';invalid.stderr.on('data',b=>stderr+=b);const code=await new Promise(r=>invalid.once('exit',r));assert.equal(code,1);assert.equal(stderr.trim(),'SITE_FIXTURE_START_FAILED');});
+
+// Each mutation below is scoped to this serial synthetic request and restored
+// before its owned marker is inspected/closed. No descriptor number is retried.
+async function closeFault(t,preResponseFailure){
+ const {root,temp}=tree(t),server=await fixture(t,root),marker=path.join(temp,'owned-marker');fs.writeFileSync(marker,'OWNED_MARKER');
+ const originalOpen=fs.openSync,originalClose=fs.closeSync,originalHead=http.ServerResponse.prototype.writeHead;
+ let target,markerFd,attempts=0,armed=true,injectedResponseFailure=false,reused=false,networkFailed=false;
+ const markerIdentity=fs.statSync(marker);
+ const sameMarker=fd=>{const actual=fs.fstatSync(fd);return actual.dev===markerIdentity.dev&&actual.ino===markerIdentity.ino;};
+ const closeMarker=()=>{const owned=markerFd;markerFd=undefined;if(owned!==undefined){try{if(sameMarker(owned))originalClose(owned);}catch{}}};
+ t.after(closeMarker);
+ try{
+  fs.openSync=function(name,...args){const fd=originalOpen(name,...args);if(name===path.join(root,'index.html'))target=fd;return fd;};
+  fs.closeSync=function(fd){
+   if(fd===target){attempts++;if(armed){armed=false;originalClose(fd);markerFd=originalOpen(marker,'r');reused=markerFd===fd;const error=Error('Synthetic close-completed EIO');error.code='EIO';throw error;}}
+   return originalClose(fd);
+  };
+  if(preResponseFailure)http.ServerResponse.prototype.writeHead=function(status,...args){if(status===200&&!injectedResponseFailure){injectedResponseFailure=true;throw Error('Synthetic response preparation failure');}return originalHead.call(this,status,...args);};
+  const u=new URL(server.url);
+  await new Promise((resolve,reject)=>{const req=http.request({host:u.hostname,port:u.port,path:'/',method:'HEAD',timeout:1500},res=>{res.resume();res.once('end',resolve);});req.once('error',error=>{networkFailed=true;resolve();});req.once('timeout',()=>req.destroy(Error('Owned fault-control timeout')));req.end();});
+  assert(networkFailed,'An indeterminate close must not report a successful response');
+ }finally{fs.openSync=originalOpen;fs.closeSync=originalClose;http.ServerResponse.prototype.writeHead=originalHead;}
+ try{assert(reused,'Control must reuse the exact numeric descriptor');assert.equal(attempts,1,'Request cleanup must never retry a close-failed descriptor');assert(sameMarker(markerFd),'Unrelated replacement descriptor was closed');if(preResponseFailure)assert(injectedResponseFailure);}
+ finally{closeMarker();}
+}
+test('HEAD close-completed EIO never closes its unrelated reused marker descriptor',{timeout:5000},async t=>closeFault(t,false));
+test('pre-response error cleanup closes once and safely destroys on close uncertainty',{timeout:5000},async t=>closeFault(t,true));

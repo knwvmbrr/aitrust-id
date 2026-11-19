@@ -18,6 +18,15 @@ Recorded 2026-11-19T16:37:16.865927+00:00 · Contributor: Codex · change
 - **Changed.** Represent an unavailable NF check observation count as JSON null instead of inventing measured zero; retain integer zero for a completed no-match check.
 - **Evidence.** 13 focused controls and 10 actual current macOS CLI commands distinguish completed zero, Unicode partial availability, one failed check, both failed checks and optional-method drift. The original misleading-zero reproduction is preserved. [Change record](./runs/changes/2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024.json).
 - **Not claimed.** Targeted count semantics only; unrelated timeout controls and the full suite were not rerun. No tag, accuracy, original scope closure or human acceptance is claimed; prior full worker evidence remains historical.
+### 2026-11-19-165341-fixture-close-ownership-correction-d21e80ce
+
+Recorded 2026-11-19T16:53:41.951575+00:00 · Contributor: Codex site fixture lane · change
+
+- **Changed.** Corrected HEAD and request-error descriptor cleanup: relinquish ownership before attempting close, never retry a close-failed numeric descriptor, and destroy the response safely when cleanup is uncertain.
+- **Evidence.** Preserved the actual failing-before counterexample with two close attempts and a lost reused marker descriptor. Corrected actual HEAD injection attempts close once and preserves the exact reused owned marker; all ten focused HTTP/CLI groups pass, including pre-response cleanup uncertainty. The streamed GET implementation is unchanged. [Change record](./runs/changes/2026-11-19-165341-fixture-close-ownership-correction-d21e80ce.json).
+- **Not claimed.** Fixture-only correction; no product/probe changes or broad suite. Close failure leaves the OS outcome uncertain, so no completed-close guarantee is claimed. Earlier HP semantic proof remains historical and is not relabeled as current server-source replay. PM owns reopened fixture source review and CI.
+
+
 ### 2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52
 
 Recorded 2026-11-19T16:41:59.413341+00:00 · Contributor: Codex site fixture lane · change
