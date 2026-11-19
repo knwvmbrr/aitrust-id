@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-091653-fi-current-source-ownership-proof-6bf1f56a
+
+Recorded 2026-11-19T09:16:53.420114+00:00 · Contributor: Codex · change
+
+- **Changed.** Record fresh FI ownership and publication CLI verification against the frozen corrected opaque-target source without changing source, documentation or tests.
+- **Evidence.** All 23 existing actual isolated-Python macOS ownership and uncertainty CLI controls pass on source commit 99982c1 with all ten selected input hashes unchanged before and after execution. [Change record](./runs/changes/2026-11-19-091653-fi-current-source-ownership-proof-6bf1f56a.json).
+- **Not claimed.** Bookkeeping-only proof alignment; the focused suite was not rerun and historical receipts are preserved. No FI tag, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-091316-fi-unsupported-label-opaque-targets-7889f64f
 
 Recorded 2026-11-19T09:13:16.297489+00:00 · Contributor: Codex · change
