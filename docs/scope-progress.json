@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-19T04:25:55.397408+00:00",
-  "client_date": "2026-11-18",
+  "audited_at": "2026-11-19T05:44:15.750347+00:00",
+  "client_date": "2026-11-19",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
   "attribution_rule": "Session/run attribution distinguished from owner-reported Claude additions; Git account author is not substituted for actual implementer",
@@ -2534,7 +2534,7 @@
         "bounded_contract",
         "implemented_mechanism"
       ],
-      "audited_at": "2026-11-17T22:21:46.286300+00:00",
+      "audited_at": "2026-11-19T05:44:15.750347+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
@@ -2554,9 +2554,10 @@
         "docs/stream-observer-plan.md",
         "tests/stream-observer.cjs",
         "runs/2026-10-08-browser-checks.json",
-        "runs/2026-11-17-stream-crlf-boundary.json"
+        "runs/2026-11-17-stream-crlf-boundary.json",
+        "docs/f030-live-stream-plan.md"
       ],
-      "evidence_scope": "The inactive synthetic observer now handles a CR/LF chunk split at the exact configured line limit, preserves host response bytes and refuses oversized or malformed framing. Live vendor capture or an accepted replacement remains pending.",
+      "evidence_scope": "The inactive synthetic observer now handles a CR/LF chunk split at the exact configured line limit, preserves host response bytes and refuses oversized or malformed framing. Live vendor capture or an accepted replacement remains pending. A fresh synthetic live response exposed a mixed-frame transport privacy boundary and source/DOM representation mismatch. No live stream hook, parser activation or new permission was enabled; a separate explicit opt-in remains required before observing mixed streams.",
       "required_acceptance": [
         "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
       ],
@@ -4527,7 +4528,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-18T16:08:29.389587+00:00",
+      "audited_at": "2026-11-19T05:44:15.750347+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
@@ -4537,7 +4538,8 @@
         "Codex \u2014 bounded selected font/Unicode/runtime/model-card consistency, actual pinned runtime archive comparison, exact Unicode notice packaging and Mac/network-isolated Linux refusals",
         "Codex \u2014 actual 205-artifact native/executable observation, unchanged upstream declarations, bounded offline verifier and exact archive replay; no permission clearance",
         "Codex \u2014 exact bundled native privacy, Apache and runtime notices inspected in unsigned app and Share archive; no full transitive/privacy/platform clearance, 2026-11-09T16:17:10.971578+00:00",
-        "Codex dependency engineering lane \u2014 verified nested Python source and notice bindings, plus web staging, 2026-11-17T20:42:51.151270+00:00"
+        "Codex dependency engineering lane \u2014 verified nested Python source and notice bindings, plus web staging, 2026-11-17T20:42:51.151270+00:00",
+        "Codex with source-export/debugger and Linux/source-review lanes \u2014 deterministic PS-only source distribution, real Mac/Linux execution, refusing dependency policy and exact esbuild source cohort review, 2026-11-19T05:44:15.750347+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -4545,7 +4547,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Complete native and platform cohorts, review embedded library build and source offers, verify redistribution obligations and enforce the conflict policy. The pinned Pyodide archives now match all five bundled runtime files. Attest the actual release artifacts with the completed SBOM.",
+      "next_fix": "Complete the other 13 distribution policy scopes and their actual release-consumer enforcement; resolve full native, model, platform, embedded-source and redistribution obligations. PS source-only operation and selected esbuild notices do not clear the whole project. Attest the actual release artifacts with the completed SBOM.",
       "next_owner": "Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -4606,9 +4608,20 @@
         "docs/nested-runtime-evidence.md",
         "runs/2026-11-17-nested-runtime-obligations.json",
         "runs/2026-11-18-pyodide-release-origin.json",
-        "runs/2026-11-18-pyodide-embedded-sources.json"
+        "runs/2026-11-18-pyodide-embedded-sources.json",
+        "docs/dependency-conflict-plan.md",
+        "docs/ps-source-distribution.md",
+        "eval/dependency-policy.json",
+        "tools/dependency_policy.py",
+        "scripts/verify-dependency-policy.py",
+        "tools/ps_source_distribution.py",
+        "scripts/export-ps-source.py",
+        "runs/2026-11-19-ps-source-default-policy-actual.json",
+        "runs/2026-11-19-ps-source-linux-actual.json",
+        "docs/esbuild-source-review.md",
+        "runs/2026-11-19-esbuild-source-cohort.json"
       ],
-      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes. Signed iPhone WASM directly reports zlib and SQLite identifiers that match selected verified upstream archives; the bzip2 archive matches the Emscripten recipe. Full embedded source and license coverage is still open.",
+      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes. Signed iPhone WASM directly reports zlib and SQLite identifiers that match selected verified upstream archives; the bzip2 archive matches the Emscripten recipe. Full embedded source and license coverage is still open. The exact nine-source-file PS package plus generated manifest now executes without optional packages on macOS and isolated nonroot Linux, rebuilding identical ZIP bytes. Its actual exporter refuses changed, missing, unknown, paid and proprietary policy selections. The other 13 distribution scopes remain blocked by this policy; existing preview consumers are not promoted to approved releases. All 26 Go-code esbuild members lack build-info markers consistent with the pinned custom compiler recipe; selected source notices are bound, without asserting binary/source equivalence or compiler authentication. Full original acceptance and percentage remain unchanged.",
       "required_acceptance": [
         "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
       ],
@@ -7128,7 +7141,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-18T16:08:29.389587+00:00",
+      "audited_at": "2026-11-19T05:44:15.750347+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
@@ -7136,7 +7149,8 @@
         "Codex \u2014 descriptor-bound capture of signed source inputs, private tool handoff and actual Mac/network-isolated Linux signature checks",
         "Codex \u2014 bounded selected font/Unicode/runtime/model-card consistency, actual pinned runtime archive comparison, exact Unicode notice packaging and Mac/network-isolated Linux refusals",
         "Codex \u2014 actual 205-artifact native/executable observation, unchanged upstream declarations, bounded offline verifier and exact archive replay; no permission clearance",
-        "Codex dependency engineering lane \u2014 verified nested Python source and notice bindings, plus web staging, 2026-11-17T20:42:51.151270+00:00"
+        "Codex dependency engineering lane \u2014 verified nested Python source and notice bindings, plus web staging, 2026-11-17T20:42:51.151270+00:00",
+        "Codex with source-export/debugger and Linux/source-review lanes \u2014 deterministic PS-only source distribution, real Mac/Linux execution, refusing dependency policy and exact esbuild source cohort review, 2026-11-19T05:44:15.750347+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -7144,7 +7158,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Complete native and platform cohorts, review embedded library build and source offers, verify redistribution obligations and enforce the conflict policy. The pinned Pyodide archives now match all five bundled runtime files.",
+      "next_fix": "Complete the other 13 distribution policy scopes and their actual release-consumer enforcement; resolve full native, model, platform, embedded-source and redistribution obligations. PS source-only operation and selected esbuild notices do not clear the whole project.",
       "next_owner": "Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -7198,9 +7212,20 @@
         "docs/nested-runtime-evidence.md",
         "runs/2026-11-17-nested-runtime-obligations.json",
         "runs/2026-11-18-pyodide-release-origin.json",
-        "runs/2026-11-18-pyodide-embedded-sources.json"
+        "runs/2026-11-18-pyodide-embedded-sources.json",
+        "docs/dependency-conflict-plan.md",
+        "docs/ps-source-distribution.md",
+        "eval/dependency-policy.json",
+        "tools/dependency_policy.py",
+        "scripts/verify-dependency-policy.py",
+        "tools/ps_source_distribution.py",
+        "scripts/export-ps-source.py",
+        "runs/2026-11-19-ps-source-default-policy-actual.json",
+        "runs/2026-11-19-ps-source-linux-actual.json",
+        "docs/esbuild-source-review.md",
+        "runs/2026-11-19-esbuild-source-cohort.json"
       ],
-      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes. Signed iPhone WASM directly reports zlib and SQLite identifiers that match selected verified upstream archives; the bzip2 archive matches the Emscripten recipe. Full embedded source and license coverage is still open.",
+      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes. Signed iPhone WASM directly reports zlib and SQLite identifiers that match selected verified upstream archives; the bzip2 archive matches the Emscripten recipe. Full embedded source and license coverage is still open. The exact nine-source-file PS package plus generated manifest now executes without optional packages on macOS and isolated nonroot Linux, rebuilding identical ZIP bytes. Its actual exporter refuses changed, missing, unknown, paid and proprietary policy selections. The other 13 distribution scopes remain blocked by this policy; existing preview consumers are not promoted to approved releases. All 26 Go-code esbuild members lack build-info markers consistent with the pinned custom compiler recipe; selected source notices are bound, without asserting binary/source equivalence or compiler authentication. Full original acceptance and percentage remain unchanged.",
       "required_acceptance": [
         "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
       ],

@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-055630-record-source-download-integration-evidence-4edd25dd
+
+Recorded 2026-11-19T05:56:30.225088+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source PS, privacy, protocol, extension, website and boundary acceptance for the integrated PS-only source download; retain the 132/70 original completion ledger.
+- **Evidence.** All five source-bound groups pass with unchanged sources: 7 PS, 6 privacy, 45 protocol, 14 extension and 36 website command groups. The built browser downloads the exact 130103-byte package and checks its guide and checksum; current personal route boundaries pass. [Change record](./runs/changes/2026-11-19-055630-record-source-download-integration-evidence-4edd25dd.json).
+- **Not claimed.** These are engineering executions, not independent accuracy, physical-device acceptance or legal clearance. Protected CI, public deployment and full original dependency/source obligations remain pending.
+
+
+### 2026-11-19-055147-verify-closed-disclosure-source-links-9384834b
+
+Recorded 2026-11-19T05:51:47.151850+00:00 · Contributor: Codex · change
+
+- **Changed.** Inspect the independent source links even while their Terminal and local-service disclosures are closed; retain the visible keyboard and copy-command checks.
+- **Evidence.** Focused built catalogue and workflow checks both passed, including the actual PS download, identical bytes, guide response and digest response. The corrected verifier also passes syntax validation. [Change record](./runs/changes/2026-11-19-055147-verify-closed-disclosure-source-links-9384834b.json).
+- **Not claimed.** Automated browser operation is distinct from human accessibility and independent accuracy. Fresh full source-bound website execution and publication remain pending.
+
+
+### 2026-11-19-054934-bind-ps-download-browser-acceptance-ee421b8a
+
+Recorded 2026-11-19T05:49:34.634889+00:00 · Contributor: Codex · change
+
+- **Changed.** Update catalogue acceptance to distinguish the small PS source ZIP from the full local-service repository and require the isolated Python command; place PS download instructions beside their own checker.
+- **Evidence.** The current browser rejection identified the former two-identical-download assertion. The corrected verifier parses and retains the full-service route while requiring a dedicated PS download and no-redaction disclosure. [Change record](./runs/changes/2026-11-19-054934-bind-ps-download-browser-acceptance-ee421b8a.json).
+- **Not claimed.** Syntax and explicit route assertions are recorded; fresh complete browser execution and protected publication remain pending. No requirement closure or accuracy claim.
+
+
+### 2026-11-19-054504-integrate-small-ps-download-and-conflict-policy-d3ae8daf
+
+Recorded 2026-11-19T05:45:04.086095+00:00 · Contributor: Codex · change
+
+- **Changed.** Connect a deterministic PS-only source download to its independent Terminal instructions; enforce exact-source dependency conflict refusals for that exporter and required CI, preserve the esbuild source review and mixed-stream privacy blockers, and refuse unresolved changelog merge markers.
+- **Evidence.** 145 focused integration and failure controls pass; actual Mac and isolated nonroot Linux receipts verify identical ZIP bytes and extracted finding/no-finding operation. Site preparation exports through the real policy. [Change record](./runs/changes/2026-11-19-054504-integrate-small-ps-download-and-conflict-policy-d3ae8daf.json).
+- **Not claimed.** 132 complete and 70 original open requirements remain. Other 13 policy scopes remain blocked, existing previews are not approved releases, and independent tag accuracy, legal clearance, live mixed-stream capture, physical phone acceptance and new publication remain unverified.
+
+
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
 
 Recorded 2026-11-19T05:26:23.351858+00:00 · Contributor: Codex · change

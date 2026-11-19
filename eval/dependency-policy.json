@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "profile": "technical-dependency-conflict-policy/v1",
+  "captured_at": "2026-11-19T05:18:14.452077+00:00",
+  "reviewed_by": "Codex",
+  "claims": {
+    "legal_clearance": false,
+    "independent_accuracy": false,
+    "complete_project_obligations": false
+  },
+  "components": {
+    "project-ps-source": {
+      "assessment": "reviewed_source_distribution",
+      "license_expression": "Apache-2.0",
+      "source_available": true,
+      "required_processing_payment": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        },
+        {
+          "path": "docs/ps-source-distribution.md",
+          "sha256": "3ce82b596ca61a6339ca9d54b2a5726ddfd240a037f68c20157d3049241daa6f",
+          "bytes": 3670
+        },
+        {
+          "path": "protocol/normalization.py",
+          "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+          "bytes": 2419
+        },
+        {
+          "path": "scripts/build-device-detector.py",
+          "sha256": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+          "bytes": 9406
+        },
+        {
+          "path": "scripts/check-ps.py",
+          "sha256": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+          "bytes": 6722
+        },
+        {
+          "path": "scripts/worker_process.py",
+          "sha256": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+          "bytes": 2986
+        },
+        {
+          "path": "services/evaluator/app.py",
+          "sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+          "bytes": 28865
+        }
+      ],
+      "notice_paths": [
+        "LICENSE"
+      ],
+      "review_scope": "Exact first-party PS source and operating guide under the project Apache license; no third-party interpreter or other repository assets are redistributed."
+    },
+    "unicode-nfc-tables": {
+      "assessment": "reviewed_source_distribution",
+      "license_expression": "Unicode-3.0",
+      "source_available": true,
+      "required_processing_payment": false,
+      "files": [
+        {
+          "path": "eval/vectors/unicode/LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+          "bytes": 1995
+        },
+        {
+          "path": "protocol/unicode15-data.json",
+          "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+          "bytes": 59614
+        }
+      ],
+      "notice_paths": [
+        "eval/vectors/unicode/LICENSE.txt"
+      ],
+      "review_scope": "The existing frozen Unicode-derived NFC tables with their complete retained Unicode License V3 notice included in this source distribution; no other data or runtime is approved."
+    },
+    "source-snapshot-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "sbom/assets/notices.json",
+          "sha256": "5c165aea3c716a183174a10ce8be0b5e0894554a8ad5492171e5141dc642facd",
+          "bytes": 11659
+        },
+        {
+          "path": "sbom/native/manifest.json",
+          "sha256": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+          "bytes": 156949
+        },
+        {
+          "path": "scripts/build-source-snapshot.py",
+          "sha256": "710a58149f3126af87a24e2e1380606ac90efab3fa6521cf837a53b9d1405c99",
+          "bytes": 1242
+        },
+        {
+          "path": "scripts/source_snapshot.py",
+          "sha256": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+          "bytes": 10055
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "web-checker-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "sbom/assets/notices.json",
+          "sha256": "5c165aea3c716a183174a10ce8be0b5e0894554a8ad5492171e5141dc642facd",
+          "bytes": 11659
+        },
+        {
+          "path": "sbom/nested-runtime/obligations.json",
+          "sha256": "aec684f1dbbfb8bf028b284010b09eb44abddb14df87580dcccde1b043766545",
+          "bytes": 425383
+        },
+        {
+          "path": "site/package-lock.json",
+          "sha256": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+          "bytes": 118066
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "ios-app-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "mobile/ios/PrivacyInfo.xcprivacy",
+          "sha256": "522b17bcf2a5f9f2310b461bc3e3360441465b218064b0ec7dfa54618661a496",
+          "bytes": 501
+        },
+        {
+          "path": "sbom/nested-runtime/obligations.json",
+          "sha256": "aec684f1dbbfb8bf028b284010b09eb44abddb14df87580dcccde1b043766545",
+          "bytes": 425383
+        },
+        {
+          "path": "scripts/build-ios-project.py",
+          "sha256": "821b0e95ee9e6169997bd030ab17f6d279fa747b5c91293d0c67b3f72514108e",
+          "bytes": 16137
+        },
+        {
+          "path": "scripts/prepare-native-bundle.py",
+          "sha256": "a86227e42ac02e803ba65491fbf3e3846667c6a3c62b5a5cc834b820b59609b1",
+          "bytes": 1642
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "android-app-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "docs/scope-progress.json",
+          "sha256": "3e365a9e9892393c2a9bf16bee872ca06b451a154b223edbb90e25d15353f0d0",
+          "bytes": 721374
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "gateway-linux-amd64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "eval/dependencies/runtime-sbom.json",
+          "sha256": "9a395779af6e3a1cd8be120c906ac5c5954e07b96e84a82287b9387c60da89b4",
+          "bytes": 2497
+        },
+        {
+          "path": "sbom/runtime/gateway-linux-amd64.spdx.json",
+          "sha256": "7e80adc314e7cf6c51bd44e6192b24fca52bd0354169cf0dcae1b16bac7a5ebc",
+          "bytes": 2415731
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "evaluator-linux-amd64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "eval/dependencies/runtime-sbom.json",
+          "sha256": "9a395779af6e3a1cd8be120c906ac5c5954e07b96e84a82287b9387c60da89b4",
+          "bytes": 2497
+        },
+        {
+          "path": "sbom/runtime/evaluator-linux-amd64.spdx.json",
+          "sha256": "305175f4e408496e4c13bc66d293bc9453123211306e056ad4050fbc4517678b",
+          "bytes": 2458360
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "anonymizer-linux-amd64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "eval/dependencies/runtime-sbom.json",
+          "sha256": "9a395779af6e3a1cd8be120c906ac5c5954e07b96e84a82287b9387c60da89b4",
+          "bytes": 2497
+        },
+        {
+          "path": "sbom/runtime/anonymizer-linux-amd64.spdx.json",
+          "sha256": "fb34aef22c1338af22545b9572d9cf14949c5bcff60d23dc62a73b655f56c6f4",
+          "bytes": 2904736
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "nli-linux-x86_64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "research/nli/assets.json",
+          "sha256": "d363b0c6d1d096c848252c6f1e64da5204a42e1267371b7810ced62de43e941a",
+          "bytes": 1293
+        },
+        {
+          "path": "research/nli/notices.json",
+          "sha256": "b35307093588509bc57e07734418c1e2687b6a72fcb1af8454b2f75057a9aeed",
+          "bytes": 34794
+        },
+        {
+          "path": "research/nli/wheel-provenance-linux.json",
+          "sha256": "978e017c6024ab926739765b7600b93062b8556f99741f41412ed691ae72f9f3",
+          "bytes": 12202
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "nli-macos-arm64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "research/nli/assets.json",
+          "sha256": "d363b0c6d1d096c848252c6f1e64da5204a42e1267371b7810ced62de43e941a",
+          "bytes": 1293
+        },
+        {
+          "path": "research/nli/notices.json",
+          "sha256": "b35307093588509bc57e07734418c1e2687b6a72fcb1af8454b2f75057a9aeed",
+          "bytes": 34794
+        },
+        {
+          "path": "research/nli/wheel-provenance-mac.json",
+          "sha256": "58a70430251ee95c37bdbc692b3e98a0738ebacbb5206f671e8afc9534ebe339",
+          "bytes": 11578
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "c2pa-linux-x86_64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "eval/c2pa-inspection.lock",
+          "sha256": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+          "bytes": 28906
+        },
+        {
+          "path": "eval/dependencies/c2pa-inspection.json",
+          "sha256": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+          "bytes": 1694
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "c2pa-macos-arm64-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "eval/c2pa-inspection.lock",
+          "sha256": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+          "bytes": 28906
+        },
+        {
+          "path": "eval/dependencies/c2pa-inspection.json",
+          "sha256": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+          "bytes": 1694
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "mcp-stdio-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "integrations/mcp/requirements.lock",
+          "sha256": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea",
+          "bytes": 42598
+        },
+        {
+          "path": "scripts/ai-tools-server.py",
+          "sha256": "1b07224d2f809de4e5da19c606bd5f9900706fc7fd5ccec61e1351d12bf5f8c0",
+          "bytes": 7400
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    },
+    "node-build-tools-unreviewed": {
+      "assessment": "pending",
+      "license_expression": null,
+      "source_available": null,
+      "required_processing_payment": null,
+      "files": [
+        {
+          "path": "package-lock.json",
+          "sha256": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+          "bytes": 2143
+        },
+        {
+          "path": "sbom/native/manifest.json",
+          "sha256": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+          "bytes": 156949
+        },
+        {
+          "path": "site/package-lock.json",
+          "sha256": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+          "bytes": 118066
+        }
+      ],
+      "notice_paths": [],
+      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+    }
+  },
+  "routes": {
+    "ps-source": {
+      "kind": "source-only",
+      "dependencies": [
+        {
+          "component": "project-ps-source",
+          "required": true
+        },
+        {
+          "component": "unicode-nfc-tables",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Independently obtained CPython 3.12 or newer; no interpreter is bundled or licensed by this source profile.",
+        "macOS or Linux with the existing POSIX process/file interfaces; OS rights are external prerequisites.",
+        "This profile approves only the listed source-and-notice package, not the full Python/OS distribution or independent PS accuracy."
+      ],
+      "entrypoints": [
+        "python3 -I -S -B scripts/check-ps.py"
+      ],
+      "release_scope": "Exact nine-member source distribution plus generated manifest; no interpreter, binary dependency, other tag, user input or accuracy approval."
+    },
+    "source-snapshot": {
+      "kind": "whole-repository",
+      "dependencies": [
+        {
+          "component": "source-snapshot-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "scripts/build-source-snapshot.py"
+      ],
+      "release_scope": "Registered source-snapshot scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "web-checker": {
+      "kind": "bundled-runtime",
+      "dependencies": [
+        {
+          "component": "web-checker-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "site/package-lock.json"
+      ],
+      "release_scope": "Registered web-checker scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "ios-app": {
+      "kind": "platform-app",
+      "dependencies": [
+        {
+          "component": "ios-app-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Owner selected the Apple application route and an active developer membership. Apple SDKs are proprietary platform prerequisites, not relabeled open-source.",
+        "The actual SDK agreement, bundled runtime/source obligations and release scope still require review; no exception or fee approval is manufactured."
+      ],
+      "entrypoints": [
+        "scripts/build-ios-project.py"
+      ],
+      "release_scope": "Registered ios-app scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "android-app": {
+      "kind": "platform-app",
+      "dependencies": [
+        {
+          "component": "android-app-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Android SDK/runtime image rights and actual artifact distribution remain pending. The scope record is not a licensed platform artifact."
+      ],
+      "entrypoints": [
+        "docs/scope-progress.json"
+      ],
+      "release_scope": "Registered android-app scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "gateway-linux-amd64": {
+      "kind": "bundled-runtime",
+      "dependencies": [
+        {
+          "component": "gateway-linux-amd64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "eval/dependencies/runtime-sbom.json"
+      ],
+      "release_scope": "Registered gateway-linux-amd64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "evaluator-linux-amd64": {
+      "kind": "bundled-runtime",
+      "dependencies": [
+        {
+          "component": "evaluator-linux-amd64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "eval/dependencies/runtime-sbom.json"
+      ],
+      "release_scope": "Registered evaluator-linux-amd64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "anonymizer-linux-amd64": {
+      "kind": "bundled-runtime",
+      "dependencies": [
+        {
+          "component": "anonymizer-linux-amd64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "eval/dependencies/runtime-sbom.json"
+      ],
+      "release_scope": "Registered anonymizer-linux-amd64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "nli-linux-x86_64": {
+      "kind": "optional-model",
+      "dependencies": [
+        {
+          "component": "nli-linux-x86_64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "research/nli/assets.json"
+      ],
+      "release_scope": "Registered nli-linux-x86_64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "nli-macos-arm64": {
+      "kind": "optional-model",
+      "dependencies": [
+        {
+          "component": "nli-macos-arm64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "research/nli/assets.json"
+      ],
+      "release_scope": "Registered nli-macos-arm64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "c2pa-linux-x86_64": {
+      "kind": "optional-sdk",
+      "dependencies": [
+        {
+          "component": "c2pa-linux-x86_64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "eval/dependencies/c2pa-inspection.json"
+      ],
+      "release_scope": "Registered c2pa-linux-x86_64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "c2pa-macos-arm64": {
+      "kind": "optional-sdk",
+      "dependencies": [
+        {
+          "component": "c2pa-macos-arm64-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "eval/dependencies/c2pa-inspection.json"
+      ],
+      "release_scope": "Registered c2pa-macos-arm64 scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "mcp-stdio": {
+      "kind": "optional-sdk",
+      "dependencies": [
+        {
+          "component": "mcp-stdio-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "integrations/mcp/requirements.lock"
+      ],
+      "release_scope": "Registered mcp-stdio scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    },
+    "node-build-tools": {
+      "kind": "build-tools",
+      "dependencies": [
+        {
+          "component": "node-build-tools-unreviewed",
+          "required": true
+        }
+      ],
+      "prerequisites": [
+        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+      ],
+      "entrypoints": [
+        "package-lock.json"
+      ],
+      "release_scope": "Registered node-build-tools scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+    }
+  },
+  "exceptions": []
+}

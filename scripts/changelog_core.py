@@ -164,6 +164,10 @@ def verify(root=ROOT, base=None, head='HEAD'):
             errors.append('Generated dependency/build artifact is tracked: '+tracked)
     records = {}
     log = (root / 'CHANGELOG.md').read_text()
+    # The generated human index must never retain a Git conflict, even when
+    # both competing entry blocks still happen to match their JSON records.
+    if re.search(r'(?m)^(?:<{7}|>{7}|\|{7})(?:\s|$)|^={7}$', log):
+        errors.append('Unresolved merge marker in CHANGELOG.md')
     for p in sorted((root / EVENT_DIR).glob('*.json')):
         name = p.relative_to(root).as_posix()
         try:
