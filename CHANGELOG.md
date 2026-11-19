@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024
+
+Recorded 2026-11-19T16:37:16.865927+00:00 · Contributor: Codex · change
+
+- **Changed.** Represent an unavailable NF check observation count as JSON null instead of inventing measured zero; retain integer zero for a completed no-match check.
+- **Evidence.** 13 focused controls and 10 actual current macOS CLI commands distinguish completed zero, Unicode partial availability, one failed check, both failed checks and optional-method drift. The original misleading-zero reproduction is preserved. [Change record](./runs/changes/2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024.json).
+- **Not claimed.** Targeted count semantics only; unrelated timeout controls and the full suite were not rerun. No tag, accuracy, original scope closure or human acceptance is claimed; prior full worker evidence remains historical.
+
+
 ### 2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c
 
 Recorded 2026-11-19T16:24:22.064198+00:00 · Contributor: Codex · change
