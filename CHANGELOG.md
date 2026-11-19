@@ -107,6 +107,14 @@ Recorded 2026-11-19T06:02:15.686376+00:00 · Contributor: Codex - C2PA evidence 
 - **Evidence.** 47 focused checks and four actual CLI controls pass; 14 wheels, 10 source distributions, two native release byte matches and 309 Python-file matches are replayed without package execution. [Change record](./runs/changes/2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da.json).
 - **Not claimed.** Engineering evidence only: no license permission, resolved native graph, source offers, reproducible build, publisher authentication, tag release or full X-02/F-057 closure. Scope/state/selectors unchanged.
 
+### 2026-11-19-062346-bind-nli-source-notice-obligations-d561a116
+
+Recorded 2026-11-19T06:23:46.805239+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the finite optional NLI model and two locked runtime cohorts to replayed notices, official source references and explicit native/source-offer obligations; retain a deterministic notice bundle and bounded raw ZIP-header refusal controls.
+- **Evidence.** All44 cached wheel occurrences replay successfully, including88 notice occurrences;50 focused controls pass. Existing model/tokenizer/config/card bytes match pinned provider Git or LFS identities without inference or new weight downloads. Earlier malformed-header admissions and the strict local-ZIP64 candidate refusal remain recorded. [Change record](./runs/changes/2026-11-19-062346-bind-nli-source-notice-obligations-d561a116.json).
+- **Not claimed.** Publisher card metadata is real licensing evidence; related base-code terms do not establish the exact training-base revision.16 native package occurrences retain explicit applicability/source blockers. Distribution-ready remainsfalse. No qualified legal clearance, independent accuracy, global requirement closure, runtime/service change or deployment is claimed.
+
 
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
 

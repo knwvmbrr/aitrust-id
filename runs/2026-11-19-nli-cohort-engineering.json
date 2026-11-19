@@ -1,0 +1,89 @@
+{
+  "format": "nli-license-cohort-engineering/v1",
+  "captured_at": "2026-11-19T06:22:08.939781+00:00",
+  "pass": true,
+  "focused_tests": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "pytest",
+      "tests/test_nli_license_cohort.py",
+      "-q"
+    ],
+    "passed": 50,
+    "duration_seconds": 0.84
+  },
+  "actual_wheel_replay": {
+    "occurrences": 44,
+    "mac_package_count": 22,
+    "linux_package_count": 22,
+    "execution_host": "macOS",
+    "package_code_executed": false,
+    "archives_extracted": false
+  },
+  "actual_model_asset_identity_checks": {
+    "count": 4,
+    "weights_newly_downloaded": false,
+    "model_code_executed": false,
+    "retained_asset_identities_unchanged_after_header_refinement": true
+  },
+  "result": {
+    "profile": "nli-model-runtime-obligations/v1",
+    "pass": true,
+    "wheel_occurrences": 44,
+    "packages_per_platform": 22,
+    "notice_occurrences": 88,
+    "unique_notice_texts": 40,
+    "source_form_package_occurrences": 28,
+    "blocked_native_package_occurrences": 16,
+    "model_license_evidence": "pinned_publisher_declared_apache2",
+    "exact_training_base_revision_established": false,
+    "archive_bytes_replayed": false,
+    "observation_sha256": "0604e0323c2e3e748b9f006d863dbdacb587c2af354cc1f4d1204aade268e8b5",
+    "notice_bundle_sha256": "f6e1e4a41d00f0e8c6a2076b7c2413207c3d33b1c45c9697ac6e0614051c7a2c",
+    "distribution_ready": false,
+    "permission_cleared": false,
+    "independent_accuracy_evidence": false,
+    "complete_project_obligations": false
+  },
+  "manifest_sha256": "c1c2cd50b49421ee8b12f45183698d1e6995a67b1a016b482c7d41aad9efada2",
+  "sources": {
+    "research/nli/assets.json": "d363b0c6d1d096c848252c6f1e64da5204a42e1267371b7810ced62de43e941a",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "research/nli/notices.json": "b35307093588509bc57e07734418c1e2687b6a72fcb1af8454b2f75057a9aeed",
+    "research/nli/requirements-mac.lock": "02960b1ea4f3a0b8d31ecba9ca376261383abefc6111dc3054f2f3fe5115e88c",
+    "research/nli/requirements-linux.lock": "e149a6705f77d47139d66e93b159db048c28dbb8be3e79f32c58e567f820701d",
+    "research/nli/wheel-provenance-mac.json": "58a70430251ee95c37bdbc692b3e98a0738ebacbb5206f671e8afc9534ebe339",
+    "research/nli/wheel-provenance-linux.json": "978e017c6024ab926739765b7600b93062b8556f99741f41412ed691ae72f9f3",
+    "tools/nli_license_cohort.py": "07b076c4e96adf8910233eaaea9771dd74f5a676d3852b587b6abf83c23a5102",
+    "scripts/verify-nli-license-cohort.py": "5e248ee94edfb7fd68e6347b2344c9c2d7ca228b2190bbdd461ea616b6924fe7",
+    "tests/test_nli_license_cohort.py": "816717dd62627909c26d4a94be746bb327a1241b22fdea55f2cda93e8111adf2",
+    "docs/nli-license-cohort.md": "1e2b05a9233fd4f42386be03bc7d6849e7b6f90bd86cb347d4bfce4228783407",
+    "docs/nli-license-cohort-plan.md": "b11fce466df6c3f1c513b143a86e677f3e7164f71cc3b307bb54837ff512d3fa",
+    ".gitattributes": "81c3801a4784ab4b0051a0bc519e54eca26395fec5a5278a0611daea20357c5d"
+  },
+  "related_receipts": {
+    "runs/2026-11-19-nli-final-header-replay.json": "3b9fca3fdf09829a395d865bfa619fe40b59a7c6dcda296c5efaf1b5dc4a2320",
+    "runs/2026-11-19-nli-asset-source-identity.json": "75e752f5386759bda9079e0f2805f0b1c370d45eec861b6107a1aed6be2ce95c",
+    "runs/2026-11-19-nli-archive-profile-review.json": "2ab6fbba4fa4359327fa3fe61a91b7725484537f08dc1ddf2439d7cbd49a6113",
+    "runs/2026-11-19-nli-header-candidate-refusal.json": "e8cd7d420bf7c064a37e0922605ca0dce22c2254265ff12f05460eba91d5486d"
+  },
+  "unresolved_native_obligations": {
+    "hf-xet": "Rust bundled dependency terms and exact native build/source correspondence not established",
+    "ml_dtypes": "Eigen MPL covered source availability and exact binary/header source correspondence not established",
+    "numpy": "Platform-specific bundled BLAS/Fortran terms and applicable corresponding source not established",
+    "onnx": "NOTICE names bundled abseil/protobuf/nanobind; exact linked-source/license correspondence not established",
+    "onnxruntime": "Full embedded-term applicability/source offers unresolved; pinned upstream tag and advertised short commit retrieval failed",
+    "protobuf": "Bundled native implementation and dependency source/license correspondence not established",
+    "PyYAML": "Bundled LibYAML implementation/source/notice correspondence not established",
+    "tokenizers": "Upstream Apache text retained; exact compiled Rust dependency/source correspondence not established"
+  },
+  "first_strict_local_zip64_candidate_preserved_as_failed": true,
+  "final_profile": "Bounded classic central directory with matching bounded local size extras; raw names checked before ZipInfo normalization",
+  "permission_cleared": false,
+  "qualified_legal_clearance": false,
+  "independent_accuracy_evidence": false,
+  "full_original_requirement_closed": false,
+  "global_scope_or_route_selectors_changed": false
+}

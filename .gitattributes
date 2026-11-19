@@ -9,3 +9,7 @@ sbom/native/sources/*.txt -whitespace
 # Retain upstream license/header bytes in the derived nested-runtime notice bundle.
 sbom/nested-runtime/*.txt -whitespace
 sbom/nested-runtime/*.rst -whitespace
+
+# Preserve exact upstream text retained by the NLI cohort.
+sbom/reviews/nli/THIRD-PARTY-NOTICES.txt -whitespace
+sbom/reviews/nli/sources/base-README.md -whitespace
