@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 4,
+    "finished_scoped_tasks": 5,
     "original_requirement_closures": 0
   },
   "goals": {
@@ -485,6 +485,34 @@
           {
             "path": "runs/2026-11-19-session-acceptance-preservation-review.json",
             "sha256": "8517aa23dd2f8c8574fabe8353b1b157159c72517b9b6d66d9c2d980aac0ac34"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "session-hp-accessibility-readiness",
+      "original_ids": [
+        "T-HP",
+        "F-142"
+      ],
+      "worker": "/root/web_camo",
+      "status": "closed",
+      "deliverable": "Reproduce delayed HP indexed-locator race and correct the verifier to probe the ready interface without relaxing accessibility checks.",
+      "done_evidence": [
+        "Controlled actual HP child delay reproduces retargeting in both themes.",
+        "Ready-first existing focus/target/disclosure/spacing/forced-colors probes pass in both themes.",
+        "PM reviews the exact verifier-only change; normal CI invokes the controlled regression."
+      ],
+      "blocker": null,
+      "next_unblocked_task": "session-hp-detail-explorer",
+      "closure_record": {
+        "closed_at": "2026-11-19T16:17:37.642988+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-19-hp-a11y-readiness-final.json",
+            "sha256": "18ffb3768215423fb65e772364b145afe859c451a4828c7df863717c5338df89"
           }
         ]
       }
@@ -5120,5 +5148,5 @@
     "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a"
   },
-  "updated_at": "2026-11-19T16:04:18.247904+00:00"
+  "updated_at": "2026-11-19T16:17:37.642988+00:00"
 }

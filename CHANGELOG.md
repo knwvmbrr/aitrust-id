@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c
+
+Recorded 2026-11-19T16:24:22.064198+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the fully passing integrated site and current source/access boundary evidence; refreshed current tag-worker state without promoting any original requirement.
+- **Evidence.** All46website commands pass on unchanged source, including actual HP results, PS/MT failure isolation and the delayed-loading focus regression. All5capability receipts assess current;1314reviewed boundary sources preserve existing access/endpoints.171focused current Python controls passed within protocol verification. [Change record](./runs/changes/2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c.json).
+- **Not claimed.** Five scoped tasks are closed; original totals remain132complete/70open. Protected GitHub checks and actual public deployment are pending. No independent tag accuracy, physical-phone or full WCAG acceptance.
+
+
+### 2026-11-19-161749-verified-accessibility-readiness-handoff-8c4121a8
+
+Recorded 2026-11-19T16:17:49.420284+00:00 · Contributor: Codex · change
+
+- **Changed.** Reviewed and integrated the reproduced HP readiness correction; task board now closes the bounded debugging deliverable and keeps full human acceptance open.
+- **Evidence.** Exact verifier-only change preserves product and probes. Controlled actual child insertion reproduced both-theme locator retargeting; ready-first checks pass19focus controls per theme. Live accounting records five scoped tasks, zero original closures and70open. [Change record](./runs/changes/2026-11-19-161749-verified-accessibility-readiness-handoff-8c4121a8.json).
+- **Not claimed.** Full current website execution is still required after this changed source. Human VoiceOver, physical phones and independent tag release remain unverified.
+
+
 ### 2026-11-19-161559-preserve-tag-integration-review-candidates-ce5a4578
 
 Recorded 2026-11-19T16:15:59.446198+00:00 · Contributor: Codex · change

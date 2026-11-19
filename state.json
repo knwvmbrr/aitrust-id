@@ -1,12 +1,12 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T15:48:48.892967+00:00",
-  "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
+  "updated": "2026-11-19T16:24:21.938954+00:00",
+  "active_increment": "Publish reviewed independent HP/NF method previews and durable tag-worker/task-list accountability.132original requirements complete;70remain open; protected publication pending.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
-    "Physical iPhone and Android install/offline checks; phone screen-reader review; native Share integrations remain future scope",
+    "Physical iPhone and Android Share/lifecycle/offline/accessibility acceptance remains pending; engineering builds and the owner-only TestFlight build are separate evidence.",
     "Independent held-out ground truth, accepted sampling and evaluation policy",
     "Human screen-reader and outside-user install/removal evaluation",
     "Broader live ChatGPT compatibility across regeneration, multi-response and vendor updates",
@@ -1149,7 +1149,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T15:48:48.892967+00:00",
+  "updated_at": "2026-11-19T16:24:21.938954+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3594,11 +3594,18 @@
     "phase": "PM protected integration/publication; both tag implementation lanes returned",
     "minimum_finished_named_deliverables_per_session": 1,
     "minimum_original_requirement_closures_per_session": 1,
-    "finished_scoped_tasks": 4,
+    "finished_scoped_tasks": 5,
     "original_requirement_closures": 0,
     "original_requirement_goal_met": false,
     "session_goal_check": "python3 scripts/session-delivery.py --check-session",
-    "completion_is_not_accuracy": true
+    "completion_is_not_accuracy": true,
+    "last_debugging_result": {
+      "source_commit": "52dd930a8ba6943177ee877146ed6a54e6304e0b",
+      "evidence": "runs/2026-11-19-hp-a11y-readiness-final.json",
+      "kind": "verifier_lazy_readiness_correction",
+      "product_or_probe_relaxation": false,
+      "original_requirement_closures": 0
+    }
   },
   "q4_web_verification": {
     "website": "runs/2026-11-16-q4-website-current.json",
@@ -3686,9 +3693,9 @@
     }
   },
   "tag_status": {
-    "recorded_at": "2026-11-16T20:47:35.175951+00:00",
-    "board": "docs/tag-status-2026-11-16.json",
-    "readable_board": "docs/tag-status-2026-11-18.md",
+    "recorded_at": "2026-11-19T16:24:21.938954+00:00",
+    "board": "docs/session-delivery.json",
+    "readable_board": "docs/session-delivery-plan.md",
     "complete_tags": 0,
     "independently_release_validated_tags": 0,
     "working_preview_tags": [
@@ -3701,16 +3708,24 @@
     "candidate_changes_integrated": true,
     "publication_completed_at": "2026-11-17T12:27:44.932Z",
     "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
-    "active_agents_checked_at": "2026-11-19T02:12:36.319671+00:00",
+    "active_agents_checked_at": "2026-11-19T16:24:21.938954+00:00",
     "specialist_agents_currently_running": 0,
     "current_integration_owner": "Codex PM",
     "active_tag_lanes": [],
     "delivered_this_increment": {
-      "MT": "runs/2026-11-18-authority-quotation-candidate.json",
-      "NF_FI": "runs/2026-11-18-reference-claim-coverage.json"
+      "HP": "runs/2026-11-19-tag-bots-integrated-site-ready.json",
+      "NF": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "task_list_lead": "runs/2026-11-19-tag-integration-pre-pr-review.json",
+      "debugging": "runs/2026-11-19-hp-a11y-readiness-final.json"
     },
-    "integration_status": "Both specialist candidates delivered and integrated into working branch; checks and publication pending",
-    "current_status_board": "docs/tag-status-2026-11-18.md"
+    "integration_status": "HP/NF component source and full current engineering checks passed; PM protected publication pending. No new tag release.",
+    "current_status_board": "docs/session-delivery-plan.md",
+    "previous_board": "docs/tag-status-2026-11-16.json",
+    "working_method_previews": {
+      "MT": "Previously published local literal wording methods; no MT tag release",
+      "HP": "Integrated on-device literal detail method; protected publication pending",
+      "NF": "Integrated offline selected-passage literal/cosine methods; no NF tag release"
+    }
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
@@ -3772,6 +3787,23 @@
       "protected_publication_pending": false,
       "protected_publication": "runs/2026-11-19-fi-protected-merge.json",
       "live_publication": "runs/2026-11-19-fi-live-publication.json"
+    },
+    "tag_bot_integration": {
+      "PS": "runs/2026-11-19-tag-bots-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-tag-bots-PII_REDACTED.json",
+      "extension": "runs/2026-11-19-tag-bots-extension.json",
+      "protocol": "runs/2026-11-19-tag-bots-protocol.json",
+      "website": "runs/2026-11-19-tag-bots-ready-website.json",
+      "boundaries": "runs/2026-11-19-tag-bots-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": true,
+      "retained_failed_website_candidates": [
+        "runs/2026-11-19-tag-bots-website.json",
+        "runs/2026-11-19-tag-bots-corrected-website.json"
+      ],
+      "built_site_evidence": "runs/2026-11-19-tag-bots-integrated-site-ready.json",
+      "accounting_inspection_goal_is_not_release": true
     }
   },
   "mt_evidence_workflow": {
@@ -4094,5 +4126,6 @@
     },
     "original_closures": 0,
     "publication_pending": true
-  }
+  },
+  "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests."
 }

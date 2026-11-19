@@ -4,7 +4,7 @@ Snapshot: 2026-11-19T15:20:45.481757+00:00 · Base `3716233b9460efa57c1f0d01bfe3
 
 This is a dated assignment snapshot, not a background agent heartbeat. The JSON is the durable detailed board; it preserves every open original, its full acceptance, job, outcome, historical limit, accountable lane, exact evidence index and next action. It does not change the scope ledger.
 
-**Originals: 202 total, 132 complete, 70 open. Finished scoped tasks: 4. Original requirement closures: 0. Requirement goal: NOT MET. Session success: false.**
+**Originals: 202 total, 132 complete, 70 open. Finished scoped tasks: 5. Original requirement closures: 0. Requirement goal: NOT MET. Session success: false.**
 
 The session requires at least one fully working named deliverable and at least one genuine original closure. The requested destination is 60 open originals. Completing a subcomponent, audit, UI or engineering test does not lower 70. The conditional ten-item stretch queue is not a forecast and creates no automatic group closures.
 
@@ -123,7 +123,9 @@ The table names each original and its blocking category. The JSON retains the fu
 - HP frozen component: independently reviewed against raw/NFC binding, closed results, source identity and failure isolation.
 - NF frozen component: independently reviewed against selected spans, canonical cosine consistency, private CLI and sibling failure isolation.
 
-These are four finished engineering/management deliverables and zero original closures. The original requirement goal remains NOT MET.
+- Accessibility readiness regression: debugging bot reproduced the live-locator race and corrected only the verifier; the PM reviewed the source and both-theme proof. Unchanged probes remain required.
+
+These are five finished engineering/management deliverables and zero original closures. The original requirement goal remains NOT MET.
 
 ## Next unblocked execution sequence
 
