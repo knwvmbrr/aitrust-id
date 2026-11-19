@@ -26,6 +26,7 @@ PROJECT_FILES = frozenset({
     'protocol/normalization.py', 'LICENSE', 'docs/ps-source-distribution.md',
 })
 UNICODE_FILES = frozenset({'protocol/unicode15-data.json', 'eval/vectors/unicode/LICENSE.txt'})
+PROJECT_ATTRIBUTION = b'AITrust-ID\nCopyright 2026 Michael Raashad McGuire and AITrust-ID contributors.\n'
 REVIEWS = {
     'project-ps-source': ('Apache-2.0', PROJECT_FILES, 'LICENSE'),
     'unicode-nfc-tables': ('Unicode-3.0', UNICODE_FILES, 'eval/vectors/unicode/LICENSE.txt'),
@@ -189,13 +190,17 @@ def component_status(identity, component, root):
     license_id, expected, notice = REVIEWS[identity]
     if (component['license_expression'] != license_id or component['source_available'] is not True or
             component['required_processing_payment'] is not False or
-            {row['path'] for row in component['files']} != expected or component['notice_paths'] != [notice]):
+            {row['path'] for row in component['files']} != expected or
+            component['notice_paths'] != ([notice, 'docs/ps-source-distribution.md']
+                                          if identity == 'project-ps-source' else [notice])):
         return 'blocked_unknown', 'reviewed_source_profile_changed'
     try:
         for item in component['files']:
             raw = read(root, item['path'])
             if len(raw) != item['bytes'] or sha(raw) != item['sha256']:
                 return 'blocked_unknown', 'selected_source_or_notice_changed'
+            if identity == 'project-ps-source' and item['path'] == 'docs/ps-source-distribution.md' and PROJECT_ATTRIBUTION not in raw:
+                return 'blocked_unknown', 'applicable_project_attribution_missing'
             if item['path'] == notice and sha(raw) != LICENSE_HASHES[license_id]:
                 return 'blocked_unknown', 'license_text_requires_review'
     except (OSError, ValueError, TypeError):

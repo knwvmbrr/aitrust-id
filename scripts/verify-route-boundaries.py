@@ -194,6 +194,8 @@ PATTERNS += ('runs/2026-11-09-pan-pipeline-timing-linux.json',
 
 PATTERNS += ('eval/dependency-policy.json', 'tools/dependency_policy.py', 'scripts/check-dependency-policy.py', 'scripts/verify-dependency-policy.py', 'tests/test_dependency_policy.py', 'tools/ps_source_distribution.py', 'scripts/export-ps-source.py', 'tests/test_ps_source_distribution.py', 'docs/ps-source-distribution.md', 'docs/dependency-conflict-plan.md', 'tools/esbuild_cohort.py', 'scripts/verify-esbuild-cohort.py', 'tests/test_esbuild_cohort.py', 'sbom/reviews/esbuild-source.json', 'sbom/reviews/sources/*', 'site/public/downloads/aitrust-id-ps-source.zip', 'site/public/downloads/aitrust-id-ps-source.zip.sha256')
 
+PATTERNS += ('NOTICE',)
+
 def read_json(file):
     return read_evidence(file)
 

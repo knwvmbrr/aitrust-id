@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-061622-verify-notice-corrected-download-integration-49ce30c9",
+  "recorded_at": "2026-11-19T06:16:22.875817+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "324db5a83ad6883551d5baeaab0ec2793bea50be",
+  "changed": "Bind the corrected PS attribution-bearing download to current PS, privacy, protocol, extension, website and personal-route acceptance.",
+  "proves": "All five unchanged-source engineering groups pass (7/6/45/14/36 command groups); the actual browser download matches the corrected ZIP, guide and checksum. Current boundary review includes the source NOTICE consumed by the attribution control and passes.",
+  "limits": "No independent accuracy, physical-device acceptance, broad license clearance or full original closure. Protected review and live publication still pending; 132 complete and70 open retained.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+    "docs/scope-progress.json": "ebf371fed36f28e343b03b6f620c7baa2e448756999975471e00ce0b52a9d0b6",
+    "eval/dependency-policy.json": "85a36d74190d6ad77b47a19731b50ce07fe2fc81572f009348befb89ae48cdcb",
+    "eval/revalidation.json": "c52951e0dd230a19af6205038193326d200c977938fc42cd7a3b55f53c76aa3e",
+    "eval/route-boundaries.json": "698e42b5a29821b2a57627ef9d05161934b03a87b01825e3f52d45fec2784f1d",
+    "runs/2026-11-19-ps-source-notice-PII_REDACTED.json": "fe995bef7c06e4698b20a74e7bd9243739969cae44dd2a5581afb78470e86488",
+    "runs/2026-11-19-ps-source-notice-PS.json": "52df4ac4b0e4ad07fed568164486c44ed29ff605a8dd0a715bccbc59e099a4d0",
+    "runs/2026-11-19-ps-source-notice-boundaries.json": "27d260910b8070ac61b43432be0918faf4bf07d7faff889eef36875ed701da36",
+    "runs/2026-11-19-ps-source-notice-extension.json": "8bf83dd7a550afbbdafe299d64f3f8d5a7795f1f7df1c97e70aae97bef8a969f",
+    "runs/2026-11-19-ps-source-notice-linux.json": "7b19c417175d0d7aa2166b1399f557f2c00e130cfd5b76cd2c1ed6b8ca26c6a6",
+    "runs/2026-11-19-ps-source-notice-macos.json": "ea715443efcd21cefe95c59a85959aa28a9850db6d665da624b59aa245115cb3",
+    "runs/2026-11-19-ps-source-notice-protocol.json": "cf8b5ef62f4f6a63897a11a7c710fc1746c03fe39d977ae9201b2a4847eea3e9",
+    "runs/2026-11-19-ps-source-notice-staging-preserved.json": "e6de3e4a61c29df7c9bb4fa1cb8c9a8bae71165e19021e0101e3addd7d772a75",
+    "runs/2026-11-19-ps-source-notice-website.json": "01f76baba0da44d3a86590dedeea82541246111909467c6bc250287102eb30fb",
+    "scripts/verify-route-boundaries.py": "03c24961d9e9b79e876895c722c76e198a8e3064a4825e853adfeacb76802d71",
+    "site/public/downloads/aitrust-id-ps-source.zip": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+    "site/public/downloads/aitrust-id-ps-source.zip.sha256": "9f77d8f7b5e6ca1cc70e9a69dbee27dcf10ad083050697d2659e5e0a6949990a",
+    "site/public/reference/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+    "site/public/reference/public-scope.json": "92923bb495ba8e37370bb229e89b8d32496820700c8a0fb24628ac690c102795",
+    "site/src/public-scope.json": "92923bb495ba8e37370bb229e89b8d32496820700c8a0fb24628ac690c102795",
+    "site/src/scope-manifest.json": "3030d151b1be31289ab58681faa0fd6de1364e08dcce91dcd12b371a928c0ee5",
+    "state.json": "e3ec59097723ea77f068aa0c04a8dd67712c7109b746128445e6151fa2799695",
+    "tests/test_dependency_policy.py": "a7fcf507eb15064dc8dc536983f49d3e6a47b3e0569f9d5cae33ca3aeadb2770",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-ps-source-notice-website.json",
+      "sha256": "01f76baba0da44d3a86590dedeea82541246111909467c6bc250287102eb30fb"
+    },
+    {
+      "path": "runs/2026-11-19-ps-source-notice-boundaries.json",
+      "sha256": "27d260910b8070ac61b43432be0918faf4bf07d7faff889eef36875ed701da36"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T06:16:23.618661+00:00"
+    }
+  ]
+}

@@ -204,3 +204,26 @@ def test_malformed_cli_arguments_do_not_echo_values(arguments):
     assert result.returncode == 2
     assert 'AUTHORED_PRIVATE_ARG_CANARY' not in result.stdout + result.stderr
     assert result.stderr == 'Dependency policy request refused; use --help.\n'
+
+
+def test_applicable_project_notice_is_in_the_actual_package(tmp_path):
+    output=tmp_path/'notice.zip'
+    distribution.export(output)
+    with zipfile.ZipFile(output) as archive:
+        guide=archive.read('docs/ps-source-distribution.md')
+        assert policy.PROJECT_ATTRIBUTION in guide
+        assert b'\n'.join((ROOT/'NOTICE').read_bytes().splitlines()[:2])+b'\n' in guide
+
+
+def test_removing_notice_and_rehashing_policy_still_refuses_export(selected,tmp_path):
+    target,value=selected
+    path=target/'docs/ps-source-distribution.md'
+    path.write_bytes(path.read_bytes().replace(policy.PROJECT_ATTRIBUTION,b''))
+    entry=next(r for r in value['components']['project-ps-source']['files']
+        if r['path']=='docs/ps-source-distribution.md')
+    raw=path.read_bytes();entry.update(sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw))
+    store(target,value)
+    assert policy.evaluate('ps-source',target)['release_allowed'] is False
+    output=tmp_path/'notice-stripped.zip'
+    with pytest.raises(ValueError):distribution.export(output,target)
+    assert not output.exists()

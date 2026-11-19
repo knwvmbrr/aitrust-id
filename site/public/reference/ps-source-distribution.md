@@ -74,3 +74,13 @@ missing approved files, unexpected archive members and a non-allowed route.
 The deterministic ZIP contains only the exact policy-approved members plus its
 generated `.aitrust-ps-source.json` manifest. No interpreter, input text or
 private environment is added during export.
+
+## Project attribution — retained from NOTICE
+
+AITrust-ID
+Copyright 2026 Michael Raashad McGuire and AITrust-ID contributors.
+
+This is the applicable project attribution from the repository NOTICE. The
+separate specification, font, Pyodide and SPDX assets described there are not
+included in this source-only package. Their distribution notices remain with
+their own artifacts. The retained Unicode notice is included separately above.

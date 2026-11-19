@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-061622-verify-notice-corrected-download-integration-49ce30c9
+
+Recorded 2026-11-19T06:16:22.875817+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the corrected PS attribution-bearing download to current PS, privacy, protocol, extension, website and personal-route acceptance.
+- **Evidence.** All five unchanged-source engineering groups pass (7/6/45/14/36 command groups); the actual browser download matches the corrected ZIP, guide and checksum. Current boundary review includes the source NOTICE consumed by the attribution control and passes. [Change record](./runs/changes/2026-11-19-061622-verify-notice-corrected-download-integration-49ce30c9.json).
+- **Not claimed.** No independent accuracy, physical-device acceptance, broad license clearance or full original closure. Protected review and live publication still pending; 132 complete and70 open retained.
+
+
+### 2026-11-19-061058-preserve-applicable-project-notice-in-ps-archive-83f040f2
+
+Recorded 2026-11-19T06:10:58.800334+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the applicable project NOTICE attribution in the PS source guide and require it independently of its declared hash; rebuild the source ZIP, digest and current scope/state projections.
+- **Evidence.** 69 focused policy/export controls pass, including an actual ZIP attribution inspection and removed-and-rehashed attribution refusal. The corrected archive executes finding/no-finding checks and rebuilds identical bytes on Mac and network-isolated nonroot Linux; staging IDs, images, configuration and health remain unchanged. [Change record](./runs/changes/2026-11-19-061058-preserve-applicable-project-notice-in-ps-archive-83f040f2.json).
+- **Not claimed.** The earlier unpublished candidate and its immutable evidence remain historical. Corrected source ZIP is 130542 bytes; no independent accuracy, full original closure, legal clearance or live publication is granted. Fresh integration and protected checks follow.
+
+
 ### 2026-11-19-055630-record-source-download-integration-evidence-4edd25dd
 
 Recorded 2026-11-19T05:56:30.225088+00:00 · Contributor: Codex · change

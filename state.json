@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T05:56:30.059611+00:00",
+  "updated": "2026-11-19T06:16:22.832306+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1143,7 +1143,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T05:56:30.059611+00:00",
+  "updated_at": "2026-11-19T06:16:22.832306+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3627,12 +3627,12 @@
       "live_publication": "runs/2026-11-19-agent-tools-trust-live-publication.json"
     },
     "ps_source_distribution": {
-      "PS": "runs/2026-11-19-ps-source-PS.json",
-      "PII_REDACTED": "runs/2026-11-19-ps-source-PII_REDACTED.json",
-      "protocol": "runs/2026-11-19-ps-source-protocol.json",
-      "extension": "runs/2026-11-19-ps-source-extension.json",
-      "website": "runs/2026-11-19-ps-source-website.json",
-      "boundaries": "runs/2026-11-19-ps-source-boundaries.json",
+      "PS": "runs/2026-11-19-ps-source-notice-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-ps-source-notice-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-ps-source-notice-protocol.json",
+      "extension": "runs/2026-11-19-ps-source-notice-extension.json",
+      "website": "runs/2026-11-19-ps-source-notice-website.json",
+      "boundaries": "runs/2026-11-19-ps-source-notice-boundaries.json",
       "independent_accuracy_evidence": false,
       "source_bound_checks_passed": true,
       "protected_publication_pending": true
@@ -3721,7 +3721,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-19-ps-source-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-19-ps-source-notice-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -3810,19 +3810,27 @@
   "ps_source_distribution": {
     "status": "integrated_actual_mac_linux_operation; protected_publication_pending",
     "artifact": "site/public/downloads/aitrust-id-ps-source.zip",
-    "sha256": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b",
-    "bytes": 130103,
+    "sha256": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+    "bytes": 130542,
     "source_members": 9,
     "generated_manifest_members": 1,
     "prerequisites": "Existing CPython 3.12+ on macOS or Linux; interpreter and OS not bundled",
     "evidence": [
+      "runs/2026-11-19-ps-source-notice-macos.json",
+      "runs/2026-11-19-ps-source-notice-linux.json",
+      "runs/2026-11-19-ps-source-notice-staging-preserved.json"
+    ],
+    "optional_packages_required": false,
+    "independent_accuracy_evidence": false,
+    "full_original_requirement_closure": false,
+    "prior_artifact_evidence": [
       "runs/2026-11-19-ps-source-default-policy-actual.json",
       "runs/2026-11-19-ps-source-linux-actual.json",
       "runs/2026-11-19-ps-source-integration.json"
     ],
-    "optional_packages_required": false,
-    "independent_accuracy_evidence": false,
-    "full_original_requirement_closure": false
+    "retired_unpublished_candidate_sha256": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b",
+    "applicable_project_notice_retained": true,
+    "notice_removal_with_rehashed_policy_refused": true
   },
   "dependency_conflict_policy": {
     "profile": "technical-dependency-conflict-policy/v1",

@@ -22,8 +22,8 @@
         },
         {
           "path": "docs/ps-source-distribution.md",
-          "sha256": "3ce82b596ca61a6339ca9d54b2a5726ddfd240a037f68c20157d3049241daa6f",
-          "bytes": 3670
+          "sha256": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+          "bytes": 4109
         },
         {
           "path": "protocol/normalization.py",
@@ -52,9 +52,10 @@
         }
       ],
       "notice_paths": [
-        "LICENSE"
+        "LICENSE",
+        "docs/ps-source-distribution.md"
       ],
-      "review_scope": "Exact first-party PS source and operating guide under the project Apache license; no third-party interpreter or other repository assets are redistributed."
+      "review_scope": "Exact first-party PS source and operating guide under the project Apache license; no third-party interpreter or other repository assets are redistributed. Applicable first-party NOTICE attribution is retained in the included operating guide and independently required by the exporter policy."
     },
     "unicode-nfc-tables": {
       "assessment": "reviewed_source_distribution",
