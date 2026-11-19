@@ -10728,11 +10728,12 @@
           "selected_integration",
           "final_acceptance"
         ],
-        "audited_at": "2026-11-06T04:47:04.474978+00:00",
+        "audited_at": "2026-11-19T04:25:55.397408+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-          "Codex — foreground capture implementation and actual macOS/Linux execution, 2026-11-06T04:24:57.021692+00:00"
+          "Codex — foreground capture implementation and actual macOS/Linux execution, 2026-11-06T04:24:57.021692+00:00",
+          "Codex — worker launch/ownership stop-signal repair, actual current macOS and isolated Linux terminal execution, 2026-11-19T04:25:55.397408+00:00"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -10765,9 +10766,12 @@
           "runs/2026-11-06-host-capture-reviewed-acceptance.json",
           "runs/2026-11-06-host-capture-final-macos.json",
           "runs/2026-11-06-host-capture-final-linux.json",
-          "runs/2026-11-06-host-capture-final-acceptance.json"
+          "runs/2026-11-06-host-capture-final-acceptance.json",
+          "runs/2026-11-18-host-stop-launch-macos.json",
+          "runs/2026-11-19-host-stop-launch-linux.json",
+          "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json"
         ],
-        "evidence_scope": "Complete foreground one-private-text-file adapter, optional independent PS worker, source-change refusal, visible controls and actual OS/failure checks. No hosted agent, independent security/human acceptance, accuracy or phone support.",
+        "evidence_scope": "Complete foreground one-private-text-file adapter, optional independent PS worker, source-change refusal, visible controls and actual OS/failure checks. No hosted agent, independent security/human acceptance, accuracy or phone support. Current startup stop-signal repair is bound to 20 actual controls per OS; original completion date is retained.",
         "required_acceptance": [],
         "queue": "completed"
       }

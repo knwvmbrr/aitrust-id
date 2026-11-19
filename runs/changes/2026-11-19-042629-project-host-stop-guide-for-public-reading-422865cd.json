@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-042629-project-host-stop-guide-for-public-reading-422865cd",
+  "recorded_at": "2026-11-19T04:26:29.323066+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ab5fa14e7c075bcad3301791f2284ef1256f80ae",
+  "changed": "Regenerate the public host-capture guide from its reviewed canonical source with the bounded worker handoff explanation.",
+  "proves": "The public guide includes the exact current source explanation and remains a description of the selected one-file foreground adapter.",
+  "limits": "Not universal screen capture, independent accuracy, human acceptance or new scope closure.",
+  "scope_ids": [
+    "F-160",
+    "F-096"
+  ],
+  "files": {
+    "site/public/reference/host-capture.md": "90ab5ae83e9fd253caf79ac0c0777fa125dbfafd6be775be5aa0a96d7a6fcd81"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-host-stop-launch-macos.json",
+      "sha256": "298d76cd6716d0f76ad79aaa344d68ebb2f7bd27f9ef40992aca1f4692c253e9"
+    },
+    {
+      "path": "runs/2026-11-19-host-stop-launch-linux.json",
+      "sha256": "7a6965b79e9414925d0e42a1b091ed1f26ce845f400ac7cb91c5bd68ee48e466"
+    }
+  ],
+  "checks": []
+}

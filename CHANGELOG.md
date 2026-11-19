@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-043014-integrate-verified-foreground-stop-repair-7d4e82e7
+
+Recorded 2026-11-19T04:30:14.326519+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate the executed host stop handoff with complete current-source personal, extension, protocol, website and boundary evidence.
+- **Evidence.** All selected engineering groups pass with unchanged sources; OS stop evidence is current and selected public routes remain bounded. [Change record](./runs/changes/2026-11-19-043014-integrate-verified-foreground-stop-repair-7d4e82e7.json).
+- **Not claimed.** Protected CI and live publication still pending. Original scope stays 132 complete and 70 open; no independent accuracy, human acceptance or full new closure.
+
+
+### 2026-11-19-042629-project-host-stop-guide-for-public-reading-422865cd
+
+Recorded 2026-11-19T04:26:29.323066+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the public host-capture guide from its reviewed canonical source with the bounded worker handoff explanation.
+- **Evidence.** The public guide includes the exact current source explanation and remains a description of the selected one-file foreground adapter. [Change record](./runs/changes/2026-11-19-042629-project-host-stop-guide-for-public-reading-422865cd.json).
+- **Not claimed.** Not universal screen capture, independent accuracy, human acceptance or new scope closure.
+
+
+### 2026-11-19-042556-bind-current-foreground-stop-os-executions-3460ba27
+
+Recorded 2026-11-19T04:25:56.209067+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the repaired foreground worker stop handoff to new actual macOS and isolated nonroot Linux evidence, while preserving the original requirement completion and historical runs.
+- **Evidence.** Twenty actual current-source terminal controls pass per OS; three forced stop-signal subcases fail when only the handoff is removed; source binding and refusal tests pass. [Change record](./runs/changes/2026-11-19-042556-bind-current-foreground-stop-os-executions-3460ba27.json).
+- **Not claimed.** Prior CI process state is not proven. No independent tag accuracy, human acceptance, phone use, new requirement closure or deployment is granted.
+
+
 ### 2026-11-19-042308-defer-host-terminal-stops-through-worker-handoff-d6001143
 
 Recorded 2026-11-19T04:23:08.048042+00:00 · Contributor: Codex · change
