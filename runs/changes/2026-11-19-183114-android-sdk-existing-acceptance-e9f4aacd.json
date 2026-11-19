@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-183114-android-sdk-existing-acceptance-e9f4aacd",
+  "recorded_at": "2026-11-19T18:31:14.932239+00:00",
+  "author": "Codex Android lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "70085c9a22cb63102261384609b4b93e5c1daf9c",
+  "changed": "Correct Android emulator prerequisites to let the existing SDK manager decide existing license acceptance with closed stdin; preserve license bytes on success and failure, bound process diagnostics and time, and grant only the disposable hosted UID KVM access. Include Android implementation sources in reviewed boundary inventory.",
+  "proves": "Thirteen targeted prerequisite/process controls, nine packaging refusals, the actual JVM lifecycle program and pinned Android-loader real-WASM parity all pass on current local sources. The initial synthetic fixture disk mismatch was corrected without lowering the actual runtime minimum.",
+  "limits": "No new license is accepted and no local emulator is installed. Actual hosted APK/runtime proof is pending; no physical Android, TalkBack, independent accuracy or original N-014 closure.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3",
+    "docs/android-share-plan.md": "81aa936b56790d3c7456ab2c3d60276b3194935f23d867fc3dbd2b0cd91d77ca",
+    "runs/2026-11-19-android-prerequisites-local.json": "d755bafa03c332886759f4d4be718e87fb939a93857c7fa7692d84e6f272ee6a",
+    "scripts/verify-android-emulator.py": "3a260c9412096ba5ba473bc372a061cdc1fa83259b39f0ee9f36427b0df07fce",
+    "scripts/verify-route-boundaries.py": "7c43a1a5e362dbce0d2d67df83997c8fbd7606513c60fc93b1a348cce59e7f03",
+    "tests/test_android_emulator_prerequisites.py": "3b253810d7939bfcc2e14a81eeb120dc3ba365358f53f7f3885bce7faec2fff1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-android-prerequisites-local.json",
+      "sha256": "d755bafa03c332886759f4d4be718e87fb939a93857c7fa7692d84e6f272ee6a"
+    }
+  ],
+  "checks": []
+}

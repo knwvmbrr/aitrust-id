@@ -297,6 +297,12 @@ PATTERNS += ('tools/authority_quotation.py','scripts/authority-quotation.py','sc
 
 PATTERNS += ('tests/test_reference_claim_coverage.py',)
 
+PATTERNS += ('mobile/android/**/*', 'scripts/android-share-build.py',
+             'scripts/verify-android-*.py', 'scripts/verify-android-*.mjs',
+             'tests/test_android_share.py', 'tests/test_android_emulator_prerequisites.py',
+             'docs/android-share-plan.md', 'docs/android-share-developer.md')
+
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

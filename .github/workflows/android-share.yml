@@ -23,6 +23,7 @@ on:
       - 'sbom/assets/notices.json'
       - 'sbom/notices/manifest.json'
       - 'tests/test_android_share.py'
+      - 'tests/test_android_emulator_prerequisites.py'
       - '.github/workflows/android-share.yml'
   pull_request:
     paths:
@@ -45,6 +46,7 @@ on:
       - 'sbom/assets/notices.json'
       - 'sbom/notices/manifest.json'
       - 'tests/test_android_share.py'
+      - 'tests/test_android_emulator_prerequisites.py'
       - '.github/workflows/android-share.yml'
 permissions:
   contents: read
@@ -69,6 +71,7 @@ jobs:
       - name: Exercise session state and asset refusal controls
         run: |
           python3 -B -m unittest discover -s tests -p test_android_share.py -v
+          python3 -B -m unittest discover -s tests -p test_android_emulator_prerequisites.py -v
           python3 -B scripts/verify-android-session.py --java-home "$JAVA_HOME_17_X64"
       - name: Prepare exact offline PS assets and build an unsigned APK
         run: python3 -B scripts/android-share-build.py --runtime-directory site/node_modules/pyodide --compile --sdk-root "$ANDROID_SDK_ROOT" --java-home "$JAVA_HOME_17_X64"
@@ -82,9 +85,15 @@ jobs:
           "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" verify --verbose output/android-share/ai-trust-id-ci-test.apk
           rm -- "$RUNNER_TEMP/aitrust-ci.p12"
       - name: Verify Share on a disposable API 36 emulator when hosted prerequisites permit
+        if: runner.environment == 'github-hosted'
         env:
           AITRUST_ANDROID_RUNNER: ${{ runner.environment }}
-        run: python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk
+        shell: bash
+        run: |
+          if test -c /dev/kvm && command -v setfacl >/dev/null; then
+            sudo -n setfacl -m "u:$(id -u):rw" /dev/kvm
+          fi
+          python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk
       - name: Preserve engineering evidence and the development APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()

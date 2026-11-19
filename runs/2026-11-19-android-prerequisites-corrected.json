@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-19T18:33:03.423903+00:00",
+  "author": "Codex Android lane",
+  "scope_ids": [
+    "N-014"
+  ],
+  "pass": true,
+  "sources": {
+    "scripts/verify-android-emulator.py": "68ac8545670f14130aa558a4527e418076762a1171a3b136506f23bbe8250b53",
+    "tests/test_android_emulator_prerequisites.py": "581e7f00688fb7e26ab684bf196a2e3c17041ff611f4de839709f0aa63bfb1c1",
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3",
+    "scripts/verify-route-boundaries.py": "7c43a1a5e362dbce0d2d67df83997c8fbd7606513c60fc93b1a348cce59e7f03",
+    "docs/android-share-plan.md": "81aa936b56790d3c7456ab2c3d60276b3194935f23d867fc3dbd2b0cd91d77ca"
+  },
+  "sources_unchanged": true,
+  "focused_prerequisite_controls": 15,
+  "actual_commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_android_emulator_prerequisites.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "private_log_sha256": "ad03f1b7f54475ed7f2fb616213a9a7ff73972f6e9e303f8d33a80cc98464bfa"
+    }
+  ],
+  "current_official_metadata": [
+    {
+      "package": "emulator",
+      "revision": "37.2.13",
+      "archive_size": 349658551,
+      "checksum": "f41f9e31eb5ca64926603c03265c50bbc0ff4172",
+      "pass": true
+    },
+    {
+      "package": "system-images;android-36;default;x86_64",
+      "revision": "2",
+      "archive_size": 844217077,
+      "checksum": "829c076e8ff448a336097ae25a355b495ba36e2c",
+      "pass": true
+    }
+  ],
+  "review_corrections": [
+    {
+      "finding": "Actual child was reaped but wait wrapper raised before completed flag; group signal could target released number.",
+      "fix": "Never signal when known process.returncode shows the child was reaped; actual post-reap error test confirms no signal attempt.",
+      "async_atomicity_claimed": false
+    },
+    {
+      "finding": "Explicit SDK license refusal with zero exit classified as install failure.",
+      "fix": "Explicit bounded refusal message yields unavailable independent of exit code; unrelated installer failure still fails.",
+      "actual_zero_exit_sdk_refusal_observed": false
+    }
+  ],
+  "prior_local_component_receipt": "runs/2026-11-19-android-prerequisites-local.json",
+  "prior_receipt_is_historical": true,
+  "emulator_executed": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false,
+  "license_newly_accepted": false
+}

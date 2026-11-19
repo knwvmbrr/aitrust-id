@@ -7,9 +7,12 @@ import json
 import os
 from pathlib import Path
 import re
+import selectors
 import shlex
 import shutil
 import subprocess
+import signal
+import stat
 import tempfile
 import time
 import urllib.request
@@ -23,10 +26,61 @@ LICENSE_HASH='efa68a6b3c661d18699d5c026771d5911cdc2f83'
 GOOGLE_REPOSITORY='https://dl.google.com/android/repository/'
 METADATA_LIMIT=4*1024*1024
 DISK_MINIMUM=6*1024**3
+SDK_TIMEOUT_SECONDS=270
+SDK_OUTPUT_LIMIT=1024*1024
 PACKAGES={
     'emulator':('repository2-3.xml','37.2.13','emulator-linux_x64-16740729.zip',349658551,'f41f9e31eb5ca64926603c03265c50bbc0ff4172'),
     IMAGE:('sys-img/android/sys-img2-3.xml','2','x86_64-36_r02.zip',844217077,'829c076e8ff448a336097ae25a355b495ba36e2c'),
 }
+
+
+def existing_license_record(path):
+    """Read only a bounded regular SDK acceptance record; never accept a license."""
+    fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+    try:
+        info=os.fstat(fd)
+        if not stat.S_ISREG(info.st_mode) or not 0<info.st_size<=8192:
+            raise ValueError('Existing SDK license record unavailable')
+        raw=os.read(fd,8193)
+        if len(raw)>8192 or not raw.strip():
+            raise ValueError('Existing SDK license record unavailable')
+        lines=raw.decode('ascii').splitlines()
+        if not all(not line.strip() or re.fullmatch('[0-9a-f]{40}',line.strip()) for line in lines):
+            raise ValueError('Existing SDK license record malformed')
+        return raw
+    finally:
+        os.close(fd)
+
+
+def sdk_install(argv):
+    """Run the existing manager with closed stdin and bounded private diagnostics."""
+    with subprocess.Popen(argv,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,
+                          stderr=subprocess.STDOUT,start_new_session=True) as process:
+        output=bytearray();deadline=time.monotonic()+SDK_TIMEOUT_SECONDS;completed=False
+        try:
+            with selectors.DefaultSelector() as selector:
+                selector.register(process.stdout,selectors.EVENT_READ)
+                while selector.get_map():
+                    left=deadline-time.monotonic()
+                    if left<=0:raise ValueError('Reviewed SDK install timeout')
+                    for key,_ in selector.select(min(left,1)):
+                        chunk=os.read(key.fileobj.fileno(),16384)
+                        if not chunk:
+                            selector.unregister(key.fileobj)
+                        else:
+                            output.extend(chunk)
+                            if len(output)>SDK_OUTPUT_LIMIT:
+                                raise ValueError('Reviewed SDK diagnostics exceeded limit')
+            code=process.wait(timeout=max(.001,deadline-time.monotonic()))
+            completed=True
+            return code,bytes(output)
+        finally:
+            # On error this unreaped child still reserves the owned group ID.
+            # Do not kill a numeric process/group ID after successful wait/reap.
+            if not completed and process.returncode is None:
+                try:os.killpg(process.pid,signal.SIGKILL)
+                except ProcessLookupError:pass
+            process.wait(timeout=5)
 
 
 def require_metadata_identity(package, expected):
@@ -74,20 +128,19 @@ def prepare_emulator(sdk, report):
     emulator=sdk/'emulator/emulator'
     image=sdk/'system-images/android-36/default/x86_64/system.img'
     license_file=sdk/'licenses/android-sdk-license'
-    license_raw=b''
-    if license_file.is_file() and not license_file.is_symlink():
-        with license_file.open('rb') as stream:
-            license_raw=stream.read(8193)
+    try:license_raw=existing_license_record(license_file)
+    except (OSError,ValueError,UnicodeError):license_raw=b''
     inventory={
         'github_hosted_linux':os.environ.get('GITHUB_ACTIONS')=='true' and os.environ.get('AITRUST_ANDROID_RUNNER')=='github-hosted' and os.environ.get('RUNNER_OS')=='Linux',
         'sdkmanager':os.access(manager,os.X_OK),'avdmanager':os.access(avd,os.X_OK),'adb':os.access(adb,os.X_OK),
         'emulator_preinstalled':os.access(emulator,os.X_OK),'aosp_image_preinstalled':image.is_file(),
         'kvm_device_exists':Path('/dev/kvm').exists(),'kvm_access':os.access('/dev/kvm',os.R_OK|os.W_OK),
-        'existing_license_match':len(license_raw)<=8192 and LICENSE_HASH.encode() in license_raw.splitlines(),
+        'existing_license_record':bool(license_raw),
+        'metadata_license_hash_recorded':LICENSE_HASH.encode() in license_raw.splitlines(),
         'sdk_writable':os.access(sdk,os.W_OK),'sdk_free_bytes':shutil.disk_usage(sdk).free,
     }
     report['prerequisites']=inventory
-    required=['github_hosted_linux','sdkmanager','avdmanager','adb','kvm_access','existing_license_match']
+    required=['github_hosted_linux','sdkmanager','avdmanager','adb','kvm_access','existing_license_record']
     missing=[key for key in required if not inventory[key]]
     if missing:
         report['reason']='Existing disposable runner prerequisites unavailable.'
@@ -99,6 +152,8 @@ def prepare_emulator(sdk, report):
     needed=[key for key,present in [('emulator',inventory['emulator_preinstalled']),(IMAGE,inventory['aosp_image_preinstalled'])] if not present]
     report['bound_revisions']={key:value[1] for key,value in PACKAGES.items()}
     report['requested_packages']=needed
+    report['existing_license_record_sha256']=hashlib.sha256(license_raw).hexdigest()
+    report['sdk_license_acceptance_inferred_from_metadata_hash']=False
     if needed:
         if not inventory['sdk_writable'] or inventory['sdk_free_bytes']<DISK_MINIMUM:
             report['reason']='Hosted SDK directory lacks write access or download space.'
@@ -107,12 +162,18 @@ def prepare_emulator(sdk, report):
         for package in needed:
             require_metadata_identity(package,PACKAGES[package])
         report['phase']='sdk_install'
-        install=subprocess.run([str(manager),f'--sdk_root={sdk}','--channel=0','--install',*needed],
-                               stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=270)
-        if install.returncode or not os.access(emulator,os.X_OK) or not image.is_file():
+        try:
+            code,diagnostics=sdk_install([str(manager),f'--sdk_root={sdk}','--channel=0','--install',*needed])
+        finally:
+            if existing_license_record(license_file)!=license_raw:
+                raise ValueError('SDK license record changed unexpectedly')
+        report['license_record_unchanged']=True
+        if re.search(rb'\blicenses?\b[^\r\n]{0,512}\bnot (?:been )?accepted\b',diagnostics,re.I):
+            report['reason']='The SDK manager refused installation under its existing license record.'
+            report['missing_prerequisites']=['existing_sdk_license_acceptance']
+            return None
+        if code or not os.access(emulator,os.X_OK) or not image.is_file():
             raise ValueError('Reviewed SDK install failed with closed stdin')
-        if license_file.read_bytes()!=license_raw:
-            raise ValueError('SDK license record changed unexpectedly')
     if installed_revision(emulator.parent)!=PACKAGES['emulator'][1] or installed_revision(image.parent)!=PACKAGES[IMAGE][1]:
         raise ValueError('Installed SDK package version differs from review')
     return adb,emulator,avd

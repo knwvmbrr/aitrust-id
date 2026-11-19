@@ -122,3 +122,30 @@ emulator result. Physical acceptance remains separate.
 - [Google AOSP system image metadata](https://dl.google.com/android/repository/sys-img/android/sys-img2-3.xml)
 - [Google Android emulator metadata](https://dl.google.com/android/repository/repository2-3.xml)
 - [Android SDK license-record implementation](https://android.googlesource.com/platform/tools/base/+/mirror-goog-studio-master-dev/repository/src/main/java/com/android/repository/api/License.java)
+
+## November 19 prerequisite correction plan
+
+The earlier hosted run never booted Android. It found inaccessible `/dev/kvm`
+and no literal match between the repository XML license text hash and the
+runner's existing SDK record. The XML hash is useful to detect metadata drift;
+it is not a substitute for the SDK manager's actual acceptance check.
+
+Keep the reviewed metadata/license bytes and package identities pinned. Require
+an existing regular bounded license-record file and never write to it. Invoke
+the existing SDK manager with closed stdin, then verify the original record is
+unchanged on success **and failure**. Only the SDK manager may decide whether an
+existing record permits installation. A refused license is an unavailable
+prerequisite, never a passed runtime check; unrelated installation failure fails.
+
+On the disposable GitHub-hosted Linux runner only, grant its current UID read
+and write access to the existing KVM character device using an ACL, not global
+device permissions. No local Mac, self-hosted host or phone is changed. Missing
+KVM/ACL tools remain explicit unavailable prerequisites. Retain bounded install,
+boot, UI and cleanup deadlines and the dedicated emulator serial.
+
+Risks: misclassifying SDK failures, accepting altered license records, broad host
+access, and calling an unexecuted emulator a success. Add refusal controls for
+missing/link/oversized license records, unchanged and changed failure outcomes,
+closed stdin, exact metadata drift, and hosted-only KVM dispatch. Actual hosted
+execution is needed after those controls; Android/TalkBack physical acceptance
+and N-014 remain open regardless of emulator results.

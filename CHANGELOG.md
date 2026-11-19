@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-183441-android-prerequisite-review-complete-b55d55a1
+
+Recorded 2026-11-19T18:34:41.316246+00:00 · Contributor: Codex · change
+
+- **Changed.** Record distinct task-list-lead review of the Android prerequisite corrections before hosted integration.
+- **Evidence.** The independent reviewer executed four affected post-reap, normal completion, zero-exit license-refusal and unrelated-install-failure controls and matched all five source identities in the corrected receipt. [Change record](./runs/changes/2026-11-19-183441-android-prerequisite-review-complete-b55d55a1.json).
+- **Not claimed.** This is source-bound engineering review, not an actual emulator, real device, TalkBack, SDK license acceptance or full N-014 completion.
+
+
+### 2026-11-19-183324-android-reviewed-prerequisite-corrections-687857c7
+
+Recorded 2026-11-19T18:33:24.248622+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Prevent process-group signalling after a known child reap, and classify explicit SDK license refusals as unavailable regardless of manager exit code.
+- **Evidence.** Fifteen focused controls pass, including an actual child reaped before a simulated wait error, timeout/output caps and license mutation refusals. Both pinned current official package metadata identities match. Prior 13-control proof is retained as historical source evidence. [Change record](./runs/changes/2026-11-19-183324-android-reviewed-prerequisite-corrections-687857c7.json).
+- **Not claimed.** The post-reap injection models a review edge without forcing OS PID reuse; no atomic asynchronous-cleanup guarantee. Zero-exit license refusal is a synthetic SDK contract control. No hosted emulator, physical device, TalkBack or full original closure yet.
+
+
+### 2026-11-19-183114-android-sdk-existing-acceptance-e9f4aacd
+
+Recorded 2026-11-19T18:31:14.932239+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Correct Android emulator prerequisites to let the existing SDK manager decide existing license acceptance with closed stdin; preserve license bytes on success and failure, bound process diagnostics and time, and grant only the disposable hosted UID KVM access. Include Android implementation sources in reviewed boundary inventory.
+- **Evidence.** Thirteen targeted prerequisite/process controls, nine packaging refusals, the actual JVM lifecycle program and pinned Android-loader real-WASM parity all pass on current local sources. The initial synthetic fixture disk mismatch was corrected without lowering the actual runtime minimum. [Change record](./runs/changes/2026-11-19-183114-android-sdk-existing-acceptance-e9f4aacd.json).
+- **Not claimed.** No new license is accepted and no local emulator is installed. Actual hosted APK/runtime proof is pending; no physical Android, TalkBack, independent accuracy or original N-014 closure.
+
+
 ### 2026-11-19-182536-android-nov19-current-main-217b3db9
 
 Recorded 2026-11-19T18:25:36.792087+00:00 · Contributor: Codex · change
