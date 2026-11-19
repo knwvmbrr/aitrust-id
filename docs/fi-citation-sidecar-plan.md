@@ -1,0 +1,61 @@
+# FI local citation sidecar architecture and risks
+
+Codex implementation lane, 2026-11-19. Base `c088bc6e60c17dc14410b14d4849a8d6f99e4ecf`.
+This component issues no FI or other tag and changes no corpus-v1 or existing route.
+
+## Architecture before implementation
+
+The standard-library library and CLI take an explicitly selected UTF-8 subject
+file and an existing private corpus-v1 file. `prepare` captures both and accepts
+caller-declared numbered-marker-to-document-ID mappings. It writes a separate
+private sidecar binding raw and frozen Unicode-15 NFC subject hashes, the exact
+corpus bytes and manifest, document raw/NFC hashes, parser profile and source
+identities. `check` recomputes those bindings before producing any observation.
+The console carries only counts and fixed states. Optional private details carry
+marker spans and identities, never source or subject text.
+
+The finite literal grammar supports `[1]` through `[9999]` without leading zeros.
+Balanced nested brackets, escaped markers, Markdown links/definitions, malformed
+or unmatched brackets are recorded as unsupported rather than clipped to a
+supported inner marker. Text without brackets has no selected markers; this is
+not a claim that other citation forms are absent. Quotes, code, array indexing,
+prose intent, source meaning and claim-to-source entailment are not interpreted.
+Unbracketed URLs, author/year, superscript and other citation systems are outside
+this profile. They are never reported as unresolved numbered markers.
+
+Each supported occurrence is resolved-in-attached-corpus only when its declared
+document is present with the captured bytes; without a declaration it is
+unresolved-in-attached-corpus. Unsupported syntax has its own state. A resolved
+mapping is a caller's association, not source authenticity, freshness, citation
+correctness, truth or support. No document download, model, service or request is
+performed. A changed subject/corpus/method invalidates the sidecar; no automatic
+rebind or grandfathered result is permitted.
+
+## Privacy and failure controls
+
+Inputs are finite regular single-link files opened through no-follow directory
+and file descriptors, with pre-read bounds and post-read identity checks.
+Subject/corpus/sidecar inputs must be owner-private. Outputs require an existing
+owner-private directory outside this checkout and are exclusively created at
+0600, never overwritten. Every captured input is rechecked before publication;
+temporary output is removed on refusal. CLI parsing and runtime refusals emit
+fixed diagnostics without path/argument/content echo. No raw subject, URL,
+corpus text, source ID or linking hash is printed in the brief result.
+
+Risks include deliberately misleading declarations, incomplete corpora, lexical
+bracket ambiguity and linkability of private hashes/spans. The user explicitly
+chooses mappings and private export. Permission checks cannot protect a hostile
+same-UID process or authenticate installed project code. Bounded descriptors
+protect file handling, not factual correctness. Linux/macOS CPython 3.10+ are the
+intended standard-library environments; actual executions identify their OS.
+
+## Acceptance for this component
+
+Verify exact and repeated markers, missing mappings, unsupported syntax, frozen
+NFC spans and no input text in either output; reject rebound subject/corpus/
+document/source identities, duplicate/unknown fields, excessive inputs, unsafe
+files, drift and existing outputs. Exercise actual prepare/check/refusal CLI
+paths and unchanged quantitative-checker operation when this optional module
+fails. Record source-bound counts and failures honestly. Full T-FI still needs
+independent evidence-type labels/error reporting, accepted tag mapping and human
+release operation. No original completion percentage changes.

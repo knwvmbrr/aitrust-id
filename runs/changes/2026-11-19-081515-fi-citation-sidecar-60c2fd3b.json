@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-081515-fi-citation-sidecar-60c2fd3b",
+  "recorded_at": "2026-11-19T08:15:15.674664+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c088bc6e60c17dc14410b14d4849a8d6f99e4ecf",
+  "changed": "Add a separate offline caller-declared numbered-citation sidecar and stdlib CLI, preserving corpus v1 and existing tag routes.",
+  "proves": "86 focused controls and 15 actual isolated-Python macOS CLI controls verify exact NFC and document bindings, separate local-resolution states, private exports, no overwrite, refusal and independent-route operation.",
+  "limits": "Literal marker associations do not establish semantic source support, authenticity, freshness or independent accuracy. No FI tag, original scope closure, Linux execution or human acceptance is claimed.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "tools/citation_resolution.py": "6d7bf66d62ce68fc6c76a04c31258ed5a2c2b7fe517b7c65354b9187f36d0378",
+    "scripts/citation-resolution.py": "96e4c17fc830f7bb374d6d8faa38624b3ce0fc1c0226508cad041204afd6e98e",
+    "tests/test_citation_resolution.py": "c9a395f90ca6e96ba7fac3272deb7e8bea0db986cfd6666f049654f8353c1ea2",
+    "docs/fi-citation-sidecar.md": "c7a81087180ecc9e28a3a39df8038c83939ff4445d3acc41c5029ef25a8e5cad",
+    "docs/fi-citation-sidecar-plan.md": "738a5f40ef0a4ffbce531dbf8e5cfa209b583019fe79175b4e25213f2acd1ee8",
+    "runs/2026-11-19-fi-citation-sidecar-macos.json": "a9905f67c77f1c4384fbf124edfeadd80a7d712768b50252df1ee6195a87ff17"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-citation-sidecar-macos.json",
+      "sha256": "a9905f67c77f1c4384fbf124edfeadd80a7d712768b50252df1ee6195a87ff17"
+    }
+  ],
+  "checks": []
+}

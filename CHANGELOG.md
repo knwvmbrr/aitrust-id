@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-081515-fi-citation-sidecar-60c2fd3b
+
+Recorded 2026-11-19T08:15:15.674664+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separate offline caller-declared numbered-citation sidecar and stdlib CLI, preserving corpus v1 and existing tag routes.
+- **Evidence.** 86 focused controls and 15 actual isolated-Python macOS CLI controls verify exact NFC and document bindings, separate local-resolution states, private exports, no overwrite, refusal and independent-route operation. [Change record](./runs/changes/2026-11-19-081515-fi-citation-sidecar-60c2fd3b.json).
+- **Not claimed.** Literal marker associations do not establish semantic source support, authenticity, freshness or independent accuracy. No FI tag, original scope closure, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f
 
 Recorded 2026-11-19T08:01:00.226372+00:00 · Contributor: Codex · change
