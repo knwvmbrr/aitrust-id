@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T06:16:22.832306+00:00",
+  "updated": "2026-11-19T06:29:50.374414+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-06-host-protected-publication.json",
+    "evidence": "runs/2026-11-19-ps-source-live-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://abe4f780.aitrust-id.pages.dev",
+    "deployment_url": "https://1e3d6ed3.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -315,7 +315,7 @@
     "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "deployment": "https://842da8d4.aitrust-id.pages.dev",
-    "source_commit": "24ec1ff5a365441ffe19b772c7121664af77b12b",
+    "source_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -324,7 +324,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-10-14-research-http-live-publication.json",
+    "publication": "runs/2026-11-19-ps-source-live-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -1143,7 +1143,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T06:16:22.832306+00:00",
+  "updated_at": "2026-11-19T06:29:50.374414+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1213,10 +1213,10 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
-    "preview": "https://335346d2.aitrust-id.pages.dev",
-    "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
-    "all_artifacts_verified_per_origin": 304,
+    "source_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
+    "preview": "https://1e3d6ed3.aitrust-id.pages.dev",
+    "evidence": "runs/2026-11-19-ps-source-live-publication.json",
+    "all_artifacts_verified_per_origin": 307,
     "origins_verified": 2,
     "primary_unrelated_files_preserved": 12,
     "full_requirements_closed": []
@@ -3079,8 +3079,8 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-19-agent-tools-protected-merge.json",
-    "merge_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+    "evidence": "runs/2026-11-19-ps-source-protected-merge.json",
+    "merge_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
     "publicly_verified": true,
     "required_checks_passed": 11
   },
@@ -3148,12 +3148,12 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
-    "deployment_url": "https://335346d2.aitrust-id.pages.dev",
+    "source_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
+    "deployment_url": "https://1e3d6ed3.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
-    "protected_merge": "runs/2026-11-19-agent-tools-protected-merge.json",
-    "matching_artifacts": 608,
+    "evidence": "runs/2026-11-19-ps-source-live-publication.json",
+    "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json",
+    "matching_artifacts": 614,
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
@@ -3365,6 +3365,34 @@
       "evidence": "runs/2026-11-17-independent-evidence-publication.json",
       "matching_artifacts": 592,
       "independent_release_validated": false
+    },
+    {
+      "replaced_at": "2026-11-19T06:29:50.372502+00:00",
+      "previous_production_publication": {
+        "status": "live_and_verified",
+        "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+        "deployment_url": "https://335346d2.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+        "protected_merge": "runs/2026-11-19-agent-tools-protected-merge.json",
+        "matching_artifacts": 608,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false
+      },
+      "previous_latest_runtime_publication": {
+        "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+        "preview": "https://335346d2.aitrust-id.pages.dev",
+        "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+        "all_artifacts_verified_per_origin": 304,
+        "origins_verified": 2,
+        "primary_unrelated_files_preserved": 12,
+        "full_requirements_closed": []
+      }
     }
   ],
   "directory_rollover_test_clock": {
@@ -3635,7 +3663,9 @@
       "boundaries": "runs/2026-11-19-ps-source-notice-boundaries.json",
       "independent_accuracy_evidence": false,
       "source_bound_checks_passed": true,
-      "protected_publication_pending": true
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-19-ps-source-protected-merge.json",
+      "live_publication": "runs/2026-11-19-ps-source-live-publication.json"
     }
   },
   "mt_evidence_workflow": {
@@ -3784,31 +3814,22 @@
   },
   "prior_production_publication": {
     "status": "live_and_verified",
-    "source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
-    "deployment_url": "https://abe4f780.aitrust-id.pages.dev",
+    "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+    "deployment_url": "https://335346d2.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-17-runtime-notices-publication.json",
-    "metadata_only_followup": true,
-    "meaning": "The exact merged static application artifacts passed comparison on both the owned domain and the Cloudflare deployment URL.",
+    "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+    "protected_merge": "runs/2026-11-19-agent-tools-protected-merge.json",
+    "matching_artifacts": 608,
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
-    "app_store_uploaded": false,
-    "app_store_released": false,
-    "latest_engineering_increment": {
-      "captured_at": "2026-11-17T12:27:44.932Z",
-      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
-      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
-      "primary_url": "https://aitrustid.com",
-      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
-      "matching_artifacts": 592,
-      "independent_release_validated": false
-    }
+    "public_app_store_released": false,
+    "formation_filed": false
   },
   "ps_source_distribution": {
-    "status": "integrated_actual_mac_linux_operation; protected_publication_pending",
+    "status": "live_source_only_development_download_verified",
     "artifact": "site/public/downloads/aitrust-id-ps-source.zip",
     "sha256": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
     "bytes": 130542,
@@ -3830,7 +3851,10 @@
     ],
     "retired_unpublished_candidate_sha256": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b",
     "applicable_project_notice_retained": true,
-    "notice_removal_with_rehashed_policy_refused": true
+    "notice_removal_with_rehashed_policy_refused": true,
+    "public_url": "https://aitrustid.com/downloads/aitrust-id-ps-source.zip",
+    "publication": "runs/2026-11-19-ps-source-live-publication.json",
+    "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json"
   },
   "dependency_conflict_policy": {
     "profile": "technical-dependency-conflict-policy/v1",

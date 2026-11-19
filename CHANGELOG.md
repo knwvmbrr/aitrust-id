@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-062950-record-live-small-ps-source-publication-c942c7f2
+
+Recorded 2026-11-19T06:29:50.419236+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the actual protected PS-only source download publication and plan the independent MT/cohort integration before its shared source changes.
+- **Evidence.** PR127 passed11required checks at the reviewed exacthead; source98fc8b7 merged and307artifacts per origin matched on both owned domain and Cloudflare deployment,614total. The corrected130542byte source package retains project and Unicode notices. [Change record](./runs/changes/2026-11-19-062950-record-live-small-ps-source-publication-c942c7f2.json).
+- **Not claimed.** Publication proves exact delivery and engineering operation, not independent accuracy or full original closure. Next MT/cohort integration is planned, not published. Original132complete/70open remains.
+
+
 ### 2026-11-19-061622-verify-notice-corrected-download-integration-49ce30c9
 
 Recorded 2026-11-19T06:16:22.875817+00:00 · Contributor: Codex · change
