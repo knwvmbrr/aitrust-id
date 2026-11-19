@@ -1,6 +1,44 @@
 # Changelog
 
+## Unreleased — 2026-11-19
+
+### 2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f
+
+Recorded 2026-11-19T01:08:00.060832+00:00 · Contributor: Codex · change
+
+- **Changed.** Save the owner-approved export compliance answer and assign TestFlight 1.0 (1) to the owner-only testing group.
+- **Evidence.** Apple shows Ready to Test after the saved answer, then the owner group shows 1 tester, 1 build and Testing. [Change record](./runs/changes/2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f.json).
+- **Not claimed.** Phone installation, physical Share, VoiceOver and outside-user acceptance remain open. Public App Store review and independent accuracy are not claimed. The follow-up PR still requires current site verification.
+
+
 ## Unreleased — 2026-11-18
+
+### 2026-11-18-161803-enroll-iphone-owner-testflight-60fac046
+
+Recorded 2026-11-18T16:18:03.829151+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the internal iPhone Owner Test group and enroll only the existing Apple account holder.
+- **Evidence.** The group has one tester with manual distribution, and the build picker disables build 1.0 (1) with Missing Compliance. [Change record](./runs/changes/2026-11-18-161803-enroll-iphone-owner-testflight-60fac046.json).
+- **Not claimed.** No export declaration was saved, no build assigned, and there was no iPhone installation, VoiceOver test, public review, or scope closure.
+
+
+### 2026-11-18-161247-bind-testflight-compliance-verification-9f514396
+
+Recorded 2026-11-18T16:12:47.395367+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the scope verification receipts after the TestFlight compliance and library evidence changes.
+- **Evidence.** Forty protocol commands, thirty-two site commands and the route boundary verification pass against current inputs. [Change record](./runs/changes/2026-11-18-161247-bind-testflight-compliance-verification-9f514396.json).
+- **Not claimed.** Apple’s questionnaire remains unanswered. Scope is 132 complete and 70 open.
+
+
+### 2026-11-18-160918-testflight-compliance-evidence-9c82687d
+
+Recorded 2026-11-18T16:09:18.684938+00:00 · Contributor: Codex · change
+
+- **Changed.** Identify the internal TestFlight blocker and replay source evidence for selected embedded libraries.
+- **Evidence.** Chrome shows build 1.0 (1) with Missing Compliance; the exact signed IPA passed package and runtime input checks, and three embedded library source archives were matched. [Change record](./runs/changes/2026-11-18-160918-testflight-compliance-evidence-9c82687d.json).
+- **Not claimed.** No compliance declaration, tester access, physical device acceptance, full dependency clearance, or scope closure.
+
 
 ### 2026-11-18-155054-bind-verified-pyodide-origin-f99fc9fd
 
