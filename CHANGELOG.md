@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-153301-session-delivery-accounting-7c0e9026
+
+Recorded 2026-11-19T15:33:01.556268+00:00 · Contributor: Codex · change
+
+- **Changed.** Added separate tag queues and a task-list lead with strict session delivery accounting, frozen baseline criteria and current reviewed evidence.
+- **Evidence.** 39 focused controls and actual inspect/check-session commands pass their expected results; independent review reproduced and verified corrections to self-review and argument disclosure. [Change record](./runs/changes/2026-11-19-153301-session-delivery-accounting-7c0e9026.json).
+- **Not claimed.** 132 original requirements remain complete and 70 open. No tag release or original requirement closure is approved by this accounting tool; strict session goal remains unmet.
+
+
 ### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37
 
 Recorded 2026-11-19T09:46:20.522872+00:00 · Contributor: Codex · change
