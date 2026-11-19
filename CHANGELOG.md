@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-040839-bind-regenerated-owner-decision-to-current-website-ef675146
+
+Recorded 2026-11-19T04:08:39.834981+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the actual canonical owner-decision source and refresh only the affected website and boundary execution receipts.
+- **Evidence.** All 32 current website groups pass against unchanged sources, the exact dated decision renderer passes, and bounded route review passes. [Change record](./runs/changes/2026-11-19-040839-bind-regenerated-owner-decision-to-current-website-ef675146.json).
+- **Not claimed.** The preceding hosted CI refused the source mismatch and also recorded one five-second signing-worker timeout; corrected source must pass protected CI. No full original scope requirement is newly complete.
+
+
+### 2026-11-19-040339-preserve-exact-generated-decision-history-spacing-ecb081da
+
+Recorded 2026-11-19T04:03:39.759768+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve original paragraph spacing in the canonical decision-history source so regenerated DECISIONS.md and its public projection remain byte-identical to the reviewed wording.
+- **Evidence.** The dated decision verifier passes with exact rendered source matching. [Change record](./runs/changes/2026-11-19-040339-preserve-exact-generated-decision-history-spacing-ecb081da.json).
+- **Not claimed.** No new decision or acceptance is inferred.
+
+
+### 2026-11-19-040313-repair-generated-decision-source-binding-87906e6d
+
+Recorded 2026-11-19T04:03:13.665571+00:00 · Contributor: Codex · change
+
+- **Changed.** Move the already published trust and presentation-layer direction into the preserved decision-history source used to generate DECISIONS.md.
+- **Evidence.** The actual decision verifier now passes without changing rendered decision text, acceptance states or source validation rules. [Change record](./runs/changes/2026-11-19-040313-repair-generated-decision-source-binding-87906e6d.json).
+- **Not claimed.** Repairs a generated-document source mismatch; no formation, legal execution or original requirement closure.
+
+
 ### 2026-11-19-040035-integrate-current-trust-governance-and-runtime-evidence-bec09deb
 
 Recorded 2026-11-19T04:00:35.828325+00:00 · Contributor: Codex · change

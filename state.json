@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T04:00:35.789438+00:00",
+  "updated": "2026-11-19T04:08:39.797200+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1095,7 +1095,7 @@
     "public_catalogue": "runs/2026-11-10-private-tools-live-site.json",
     "public_policies": "runs/2026-11-10-private-tools-live-policies.json",
     "current_verification": "runs/2026-11-12-hidden-email-reviewed-boundaries.json",
-    "current_evidence": "runs/2026-11-19-agent-tools-ready-boundaries.json"
+    "current_evidence": "runs/2026-11-19-agent-tools-final-decision-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1139,11 +1139,11 @@
     "PII_REDACTED": "runs/2026-11-18-agent-tools-publish-PII_REDACTED.json",
     "protocol": "runs/2026-11-19-agent-tools-ready-protocol.json",
     "extension": "runs/2026-11-18-agent-tools-publish-extension.json",
-    "website": "runs/2026-11-19-agent-tools-ready-website.json",
+    "website": "runs/2026-11-19-agent-tools-final-decision-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T04:00:35.789438+00:00",
+  "updated_at": "2026-11-19T04:08:39.797200+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3623,8 +3623,8 @@
       "PII_REDACTED": "runs/2026-11-18-agent-tools-publish-PII_REDACTED.json",
       "protocol": "runs/2026-11-19-agent-tools-ready-protocol.json",
       "extension": "runs/2026-11-18-agent-tools-publish-extension.json",
-      "website": "runs/2026-11-19-agent-tools-ready-website.json",
-      "boundaries": "runs/2026-11-19-agent-tools-ready-boundaries.json",
+      "website": "runs/2026-11-19-agent-tools-final-decision-website.json",
+      "boundaries": "runs/2026-11-19-agent-tools-final-decision-boundaries.json",
       "independent_accuracy_evidence": false,
       "source_bound_checks_passed": true,
       "protected_publication_pending": true
@@ -3713,7 +3713,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-19-agent-tools-ready-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-19-agent-tools-final-decision-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "mac_and_clean_linux_software_verified_protected_publication_pending",
