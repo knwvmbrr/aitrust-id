@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
+
+Recorded 2026-11-19T05:26:23.351858+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an exact policy-gated PS source-only ZIP exporter and trusted-root inspector with deterministic members, included notices, external prerequisites and no-clobber output.
+- **Evidence.** 35 focused controls pass. Real default-policy build and verification, deterministic repeated archives, isolated private extracted FINDING and NO_FINDING executions, and five actual copied-source policy/tamper refusal groups pass across20 bounded CLI commands with stable source identities. [Change record](./runs/changes/2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e.json).
+- **Not claimed.** Only this nine-file source distribution plus generated manifest is admitted. CPython and OS remain external prerequisites. No interpreter, whole-repository approval, legal clearance, independent accuracy, global dependency completion or original requirement closure is claimed.
+
+
 ### 2026-11-19-043946-publish-agent-tools-trust-drafts-and-stop-repair-7390e354
 
 Recorded 2026-11-19T04:39:46.339045+00:00 · Contributor: Codex · change
