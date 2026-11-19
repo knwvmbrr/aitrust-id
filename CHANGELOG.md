@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-084728-hold-fi-stream-wrapper-cleanup-gap-77d9438d
+
+Recorded 2026-11-19T08:47:28.680477+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain passing publication-uncertainty controls while holding FI for the separately reproduced stream-wrapper descriptor leak.
+- **Evidence.** Root repeats the peer wrapper-failure case: no final output is created, but the unowned raw descriptor remains open after Capture exits and is manually closed. The corrected uncertainty candidate passes protocol checks; that does not close this newly identified cleanup case. [Change record](./runs/changes/2026-11-19-084728-hold-fi-stream-wrapper-cleanup-gap-77d9438d.json).
+- **Not claimed.** This candidate remains held. Exactly-once raw descriptor ownership, focused correction and current integration checks are required before publication; no original closure.
+
+
+### 2026-11-19-084539-integrate-corrected-fi-output-contract-and-guides-494948d7
+
+Recorded 2026-11-19T08:45:39.087388+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate and project explicit publication uncertainty for FI private output, preserving the original reproduced defect and scope history.
+- **Evidence.** The corrected author run passes 105 focused tests and 19 actual Mac CLI controls. Root repeats 171 component/input controls and the original cleanup-after-link fault; it now produces typed uncertainty with an honest possible-output flag. Exact guides and scope references are regenerated before execution. [Change record](./runs/changes/2026-11-19-084539-integrate-corrected-fi-output-contract-and-guides-494948d7.json).
+- **Not claimed.** Separate peer replay, fresh protocol/website execution and protected publication remain pending. No rollback, tag, source-truth, independent accuracy or original-closure claim is added.
+
+
 ### 2026-11-19-084057-retain-fi-post-publication-cleanup-gap-b5c7e98a
 
 Recorded 2026-11-19T08:40:57.310171+00:00 · Contributor: Codex · change

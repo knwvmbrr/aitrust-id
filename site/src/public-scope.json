@@ -996,7 +996,7 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-11-19T08:19:40.465287+00:00",
+        "audited_at": "2026-11-19T08:45:37.764414+00:00",
         "checked_by": "Codex",
         "implemented_by": [
           "Codex — bounded offline caller-declared citation component; separate implementation and peer review, 2026-11-19"
@@ -1020,7 +1020,9 @@
           "scripts/citation-resolution.py",
           "tests/test_citation_resolution.py",
           "docs/fi-citation-sidecar.md",
-          "runs/2026-11-19-fi-citation-sidecar-macos.json"
+          "runs/2026-11-19-fi-citation-sidecar-macos.json",
+          "runs/2026-11-19-fi-postcommit-corrected-macos.json",
+          "runs/2026-11-19-fi-postcommit-root-replay.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [
