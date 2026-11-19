@@ -1,0 +1,2647 @@
+{
+  "profile": "nli-model-runtime-obligations/v1",
+  "captured_at": "2026-11-19T06:19:45.930420+00:00",
+  "observed_by": "Codex",
+  "sources": {
+    "research/nli/assets.json": "d363b0c6d1d096c848252c6f1e64da5204a42e1267371b7810ced62de43e941a",
+    "research/nli/backend.py": "1dbf75bd5dd1f175724ea63f4f0363d7c03b93b05d4543be341cae3c9d1f54b3",
+    "research/nli/notices.json": "b35307093588509bc57e07734418c1e2687b6a72fcb1af8454b2f75057a9aeed",
+    "research/nli/requirements-mac.lock": "02960b1ea4f3a0b8d31ecba9ca376261383abefc6111dc3054f2f3fe5115e88c",
+    "research/nli/requirements-linux.lock": "e149a6705f77d47139d66e93b159db048c28dbb8be3e79f32c58e567f820701d",
+    "research/nli/wheel-provenance-mac.json": "58a70430251ee95c37bdbc692b3e98a0738ebacbb5206f671e8afc9534ebe339",
+    "research/nli/wheel-provenance-linux.json": "978e017c6024ab926739765b7600b93062b8556f99741f41412ed691ae72f9f3",
+    "tools/nli_license_cohort.py": "07b076c4e96adf8910233eaaea9771dd74f5a676d3852b587b6abf83c23a5102",
+    "scripts/verify-nli-license-cohort.py": "5e248ee94edfb7fd68e6347b2344c9c2d7ca228b2190bbdd461ea616b6924fe7",
+    "tests/test_nli_license_cohort.py": "816717dd62627909c26d4a94be746bb327a1241b22fdea55f2cda93e8111adf2",
+    "docs/nli-license-cohort.md": "1e2b05a9233fd4f42386be03bc7d6849e7b6f90bd86cb347d4bfce4228783407",
+    "docs/nli-license-cohort-plan.md": "b11fce466df6c3f1c513b143a86e677f3e7164f71cc3b307bb54837ff512d3fa"
+  },
+  "upstream": [
+    {
+      "name": "model-tree.json",
+      "url": "https://huggingface.co/api/models/cross-encoder/nli-deberta-v3-xsmall/tree/a150876415327c80daeff35ca6f68f5ed8cf5c24?recursive=true&expand=false",
+      "sha256": "c0286c0d0fbfae271bacf1c5f5fbe56a05aac466c761568750a119dc91dcbbc8",
+      "bytes": 4600,
+      "path": "sbom/reviews/nli/sources/model-tree.json"
+    },
+    {
+      "name": "base-tree.json",
+      "url": "https://huggingface.co/api/models/microsoft/deberta-v3-xsmall/tree/4b419818330868dff6a60ad3e6b1c730f8b8c0c6?recursive=true&expand=false",
+      "sha256": "0bdc926f9d4724a2c5205cfb685aabd70733d2ee9889293251a79180c28dcc63",
+      "bytes": 1708,
+      "path": "sbom/reviews/nli/sources/base-tree.json"
+    },
+    {
+      "name": "base-README.md",
+      "url": "https://huggingface.co/microsoft/deberta-v3-xsmall/raw/4b419818330868dff6a60ad3e6b1c730f8b8c0c6/README.md",
+      "sha256": "235a48b97b65c66b730c36444441ebfb8d5360c0e9100753b83825f90a622656",
+      "bytes": 3727,
+      "path": "sbom/reviews/nli/sources/base-README.md"
+    },
+    {
+      "name": "deberta-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/DeBERTa/4d7fe0bd4fb3c7d4f4005a7cafabde9800372098/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141,
+      "path": "sbom/reviews/nli/sources/deberta-LICENSE.txt"
+    },
+    {
+      "name": "tokenizers-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/huggingface/tokenizers/301277072263fb3830eb66eec7e47adadf76f1dc/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "path": "sbom/reviews/nli/sources/tokenizers-LICENSE.txt"
+    },
+    {
+      "name": "tokenizers-python-Cargo.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/tokenizers/301277072263fb3830eb66eec7e47adadf76f1dc/bindings/python/Cargo.toml",
+      "sha256": "b22e1ccb03566a1d4d30ffa415dee41be1f3bd7f4188f53c393e27154f45126d",
+      "bytes": 1160,
+      "path": "sbom/reviews/nli/sources/tokenizers-python-Cargo.toml"
+    },
+    {
+      "name": "tokenizers-python-Cargo.lock",
+      "url": "https://raw.githubusercontent.com/huggingface/tokenizers/301277072263fb3830eb66eec7e47adadf76f1dc/bindings/python/Cargo.lock",
+      "sha256": "afcedf7f2ebe008b068d7afd25e77f7d9d8e433c24153bc35a1eb5611083ee5b",
+      "bytes": 36178,
+      "path": "sbom/reviews/nli/sources/tokenizers-python-Cargo.lock"
+    },
+    {
+      "name": "flatbuffers-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/google/flatbuffers/7e163021e59cca4f8e1e35a7c828b5c6b7915953/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "path": "sbom/reviews/nli/sources/flatbuffers-LICENSE.txt"
+    }
+  ],
+  "model": {
+    "repository": "cross-encoder/nli-deberta-v3-xsmall",
+    "revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+    "assets": [
+      {
+        "name": "model.onnx",
+        "bytes": 284200859,
+        "sha256": "7105da41f625c42eca24e9465ec99150d02a80e644659d7a1daa93a6357155d4",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/onnx/model.onnx"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 8656624,
+        "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/tokenizer.json"
+      },
+      {
+        "name": "config.json",
+        "bytes": 1053,
+        "sha256": "8d9f07bf7ba54a6fc3b1962483056f94c39dcf188db4cf61843e1c88f94b2342",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/config.json"
+      },
+      {
+        "name": "README.md",
+        "bytes": 2871,
+        "sha256": "4aeb5585a9eeb71b2d572249f9faa22ef3378c6abee3eeaffaae8c961068a2c6",
+        "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-xsmall/resolve/a150876415327c80daeff35ca6f68f5ed8cf5c24/README.md"
+      }
+    ],
+    "card_license_declaration": "Apache-2.0",
+    "base_repository_declared": "microsoft/deberta-v3-xsmall",
+    "base_observation_revision": "4b419818330868dff6a60ad3e6b1c730f8b8c0c6",
+    "base_license_declaration": "MIT",
+    "license_file_present_in_model_or_base_tree": false,
+    "publisher_license_metadata_semantics": "https://huggingface.co/docs/hub/repositories-licenses",
+    "publisher_declared_repository_license_evidence": true,
+    "exact_pretraining_base_revision_established": false,
+    "related_microsoft_code_license_is_model_grant": false,
+    "training_datasets_bundled": false,
+    "independent_rights_or_accuracy_verified": false,
+    "status": "publisher_declared_terms_bound_base_correspondence_unestablished"
+  },
+  "wheels": [
+    {
+      "platform": "linux",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "wheel": "pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6",
+      "pypi_url": "https://files.pythonhosted.org/packages/74/27/e5b8f34d02d9995b80abcef563ea1f8b56d20134d8f4e5e81733b1feceb2/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "license_members": [
+        "pyyaml-6.0.3.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "MIT",
+      "artifact_bytes": 801626,
+      "member_count": 24,
+      "contents_sha256": "376cbe6bb6ec4a1737d2239c3a12e1bf9186eb336bdefc37139ad1d07bb855aa",
+      "python_source_count": 18,
+      "native_members": [
+        {
+          "member": "yaml/_yaml.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "3f91601d7da50f3d1521e807f04820be198ccaedc2a89094d69031cf8928d8af",
+          "bytes": 2653048
+        }
+      ],
+      "notices": [
+        {
+          "member": "pyyaml-6.0.3.dist-info/licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+          "bytes": 1101,
+          "path": "research/nli/notices/8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "anyio",
+      "version": "4.15.1",
+      "wheel": "anyio-4.15.1-py3-none-any.whl",
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "pypi_url": "https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl",
+      "license_members": [
+        "anyio-4.15.1.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "MIT",
+      "artifact_bytes": 132079,
+      "member_count": 53,
+      "contents_sha256": "d1c5e2ece53acd123b8c69ac9acff31b5b8bda35f5a0341759eb0843919d37a2",
+      "python_source_count": 46,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "anyio-4.15.1.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+          "bytes": 1081,
+          "path": "research/nli/notices/5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "click",
+      "version": "8.5.0",
+      "wheel": "click-8.5.0-py3-none-any.whl",
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "pypi_url": "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl",
+      "license_members": [
+        "click-8.5.0.dist-info/licenses/LICENSE.txt"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "artifact_bytes": 125251,
+      "member_count": 22,
+      "contents_sha256": "857757ec16aaa74187a0effb743fd7630b8e1375a005c326ace7948db32df019",
+      "python_source_count": 17,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "click-8.5.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "bytes": 1475,
+          "path": "research/nli/notices/9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "filelock",
+      "version": "4.1.1",
+      "wheel": "filelock-4.1.1-py3-none-any.whl",
+      "sha256": "3f4a557945a7b0f95efeb1f432267affe5d45ac8ddde2aed1b97ebb62382c089",
+      "pypi_url": "https://files.pythonhosted.org/packages/d7/8b/f837f52905395ba4510fe61f753c24833fb0a9c76e21267bb9f828b664a9/filelock-4.1.1-py3-none-any.whl",
+      "license_members": [
+        "filelock-4.1.1.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "MIT",
+      "artifact_bytes": 132460,
+      "member_count": 28,
+      "contents_sha256": "0e0e15d76792fdd9394fb50edb306d7ec56340b9875b313411ff61c393e29ab2",
+      "python_source_count": 23,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "filelock-4.1.1.dist-info/licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+          "bytes": 1088,
+          "path": "research/nli/notices/608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "wheel": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "pypi_url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "license_members": [],
+      "declared_license": "Apache 2.0",
+      "artifact_bytes": 26661,
+      "member_count": 14,
+      "contents_sha256": "665e34a1b796694b8c0b370e7cf0c8b9f6e08dd48a0794200f3e0619022e5556",
+      "python_source_count": 10,
+      "native_members": [],
+      "notices": []
+    },
+    {
+      "platform": "linux",
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "wheel": "fsspec-2026.9.0-py3-none-any.whl",
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "pypi_url": "https://files.pythonhosted.org/packages/6c/c0/a98505f18594f1bce828bb159cec0fcf9860562f1a2c85913409fc8f3d9e/fsspec-2026.9.0-py3-none-any.whl",
+      "license_members": [
+        "fsspec-2026.9.0.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "artifact_bytes": 221738,
+      "member_count": 62,
+      "contents_sha256": "019d599ef25bfb6cc35d538f4df23d82fa94775d6e6597a8797a5bad8869047d",
+      "python_source_count": 58,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "fsspec-2026.9.0.dist-info/licenses/LICENSE",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+          "bytes": 1513,
+          "path": "research/nli/notices/2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "h11",
+      "version": "0.16.0",
+      "wheel": "h11-0.16.0-py3-none-any.whl",
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "pypi_url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl",
+      "license_members": [
+        "h11-0.16.0.dist-info/licenses/LICENSE.txt"
+      ],
+      "declared_license": "MIT",
+      "artifact_bytes": 37515,
+      "member_count": 17,
+      "contents_sha256": "a5d98ff805c8fd00ea2b962878e56dfaf389f3c57f3febd07950218fdd2d282c",
+      "python_source_count": 11,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+          "bytes": 1124,
+          "path": "research/nli/notices/37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "wheel": "hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8",
+      "pypi_url": "https://files.pythonhosted.org/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "license_members": [
+        "hf_xet-1.7.0.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "Apache-2.0",
+      "artifact_bytes": 4212180,
+      "member_count": 7,
+      "contents_sha256": "15e8630d13fe394824acf796c550533e818b844e56bc09f6c9a4e05bdc3c7566",
+      "python_source_count": 1,
+      "native_members": [
+        {
+          "member": "hf_xet/hf_xet.abi3.so",
+          "sha256": "a4e40058860f3ad4ca9b0193d47b47e0e7bf8ca7e5ae0735696274c6c4c1706b",
+          "bytes": 11274016
+        }
+      ],
+      "notices": [
+        {
+          "member": "hf_xet-1.7.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "path": "research/nli/notices/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "wheel": "httpcore2-2.13.1-py3-none-any.whl",
+      "sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a",
+      "pypi_url": "https://files.pythonhosted.org/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl",
+      "license_members": [
+        "httpcore2-2.13.1.dist-info/licenses/LICENSE.md"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "artifact_bytes": 83423,
+      "member_count": 36,
+      "contents_sha256": "8df533be3dba7b13a3b0f029dbc18f8d432ccdf9b448496aba022c55bd3f3c48",
+      "python_source_count": 31,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "httpcore2-2.13.1.dist-info/licenses/LICENSE.md",
+          "sha256": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9",
+          "bytes": 1599,
+          "path": "research/nli/notices/c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "httpx2",
+      "version": "2.13.1",
+      "wheel": "httpx2-2.13.1-py3-none-any.whl",
+      "sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4",
+      "pypi_url": "https://files.pythonhosted.org/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl",
+      "license_members": [
+        "httpx2-2.13.1.dist-info/licenses/LICENSE.md"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "artifact_bytes": 95597,
+      "member_count": 36,
+      "contents_sha256": "3b6e7eab680bc1aa86860ab230eec91030f12aa9ba9b1b47291d27ffce95f0ee",
+      "python_source_count": 30,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "httpx2-2.13.1.dist-info/licenses/LICENSE.md",
+          "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30",
+          "bytes": 1589,
+          "path": "research/nli/notices/7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "huggingface_hub",
+      "version": "2.2.0",
+      "wheel": "huggingface_hub-2.2.0-py3-none-any.whl",
+      "sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3",
+      "pypi_url": "https://files.pythonhosted.org/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl",
+      "license_members": [
+        "huggingface_hub-2.2.0.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "Apache-2.0",
+      "artifact_bytes": 839884,
+      "member_count": 190,
+      "contents_sha256": "be99c005431cb591a0e072e2afb53c7f33aef61d647628ee6291466a73b4a136",
+      "python_source_count": 181,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "huggingface_hub-2.2.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "path": "research/nli/notices/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "idna",
+      "version": "3.20",
+      "wheel": "idna-3.20-py3-none-any.whl",
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "pypi_url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl",
+      "license_members": [
+        "idna-3.20.dist-info/licenses/LICENSE.md"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "artifact_bytes": 69583,
+      "member_count": 16,
+      "contents_sha256": "867b263d997c2cf081ee404163f75da2a6aa59dab33134083d4bc127cddfad67",
+      "python_source_count": 10,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "idna-3.20.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "bytes": 1541,
+          "path": "research/nli/notices/1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "ml_dtypes",
+      "version": "0.6.0",
+      "wheel": "ml_dtypes-0.6.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "26b1f1fa4f0435a2946859823f6e2bf06796f1e9f10f5a05b08a5e3c8f46ff69",
+      "pypi_url": "https://files.pythonhosted.org/packages/89/a5/da8ae6c6f1babe4b68e3e55d43d39b529e29774f10e0910671a6b8c86eb8/ml_dtypes-0.6.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "license_members": [
+        "ml_dtypes-0.6.0.dist-info/licenses/LICENSE",
+        "ml_dtypes-0.6.0.dist-info/licenses/LICENSE.eigen"
+      ],
+      "declared_license": "Apache-2.0",
+      "artifact_bytes": 410169,
+      "member_count": 10,
+      "contents_sha256": "842fcd1b6804f45e761b3901b11174b0a3d1a6a68dfae6dfc521c0ce8c5749dc",
+      "python_source_count": 3,
+      "native_members": [
+        {
+          "member": "ml_dtypes/_ml_dtypes_ext.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "075ed9cb76a9d0692944cee23b61af1a315683baca0173da5e6bd9b20f6d7f8e",
+          "bytes": 1739832
+        }
+      ],
+      "notices": [
+        {
+          "member": "ml_dtypes-0.6.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "path": "research/nli/notices/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt"
+        },
+        {
+          "member": "ml_dtypes-0.6.0.dist-info/licenses/LICENSE.eigen",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+          "bytes": 16726,
+          "path": "research/nli/notices/3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "numpy",
+      "version": "2.5.4",
+      "wheel": "numpy-2.5.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "6ffa07666f8da0eef81d149934a626d0d95fbd6838432a33e66245423a9062c0",
+      "pypi_url": "https://files.pythonhosted.org/packages/da/24/3bd070f3269dc609d8f26b2643f62ef91bb415841c0b294805aaf7fe06da/numpy-2.5.4-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "license_members": [
+        "numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+        "numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+        "numpy-2.5.4.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+        "numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+        "numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+        "numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md"
+      ],
+      "declared_license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "artifact_bytes": 16718044,
+      "member_count": 926,
+      "contents_sha256": "9cea654a5acf38725a59acffd42de703a6c105ad13bffdf80745ec41aa4f369d",
+      "python_source_count": 407,
+      "native_members": [
+        {
+          "member": "numpy.libs/libgfortran-83c28eba-468e71e5.so.5.0.0",
+          "sha256": "a6a368328d02a5d8a149746f13f6268f8cc9192df5c18777b25c3c9b5ef52160",
+          "bytes": 2862249
+        },
+        {
+          "member": "numpy.libs/libquadmath-2284e583-a9307bba.so.0.0.0",
+          "sha256": "6bc3069003caec1f075be3c51ae8355332f081fa9465910c4b5724e7fe7d8ad4",
+          "bytes": 275553
+        },
+        {
+          "member": "numpy.libs/libscipy_openblas64_-f48b354e.so",
+          "sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96",
+          "bytes": 24325657
+        },
+        {
+          "member": "numpy/_core/_multiarray_tests.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "1356878f9ef15f62174af09a30be36c8048bfdd49fbff0b9df828d0f9eff2fa0",
+          "bytes": 146776
+        },
+        {
+          "member": "numpy/_core/_multiarray_umath.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "405abe5c8f52c1d15b71bafbd155693237b6e1742bc598638b7fc0626bcc1576",
+          "bytes": 10633113
+        },
+        {
+          "member": "numpy/_core/_operand_flag_tests.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "4e2d3b29ee6d7920ebda8f4facf18c4c240c0dafb618d9921a388d37d58df31d",
+          "bytes": 16800
+        },
+        {
+          "member": "numpy/_core/_rational_tests.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "e47d9ec683d4ef02549244eddb688740c73d191981930ed439ecee63bfd65990",
+          "bytes": 65848
+        },
+        {
+          "member": "numpy/_core/_simd.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "e64b6191bb182af06f03e3e7102b4165aa3c35c0e9ef3d94b79ba28bd378765b",
+          "bytes": 1506088
+        },
+        {
+          "member": "numpy/_core/_struct_ufunc_tests.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "9db6dd6dd5c3ef59ed0428e8195e05edb792ba9c2dea64b683c6511c9839c775",
+          "bytes": 16928
+        },
+        {
+          "member": "numpy/_core/_umath_tests.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "fed2c94267e9dea0c7364733314a75c1a8b12b7cd9d6ec68ffeed98de2346c3a",
+          "bytes": 50344
+        },
+        {
+          "member": "numpy/fft/_pocketfft_umath.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "37eea6cf4de15ba3cc9487e704bbd306de65bf804310b1067f1b11d1e50a9de8",
+          "bytes": 539312
+        },
+        {
+          "member": "numpy/linalg/_umath_linalg.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "f15d9f7f32bd87fc0082e3d4eb46304b0fafbfd27bae712811c0bae20cf3d563",
+          "bytes": 235897
+        },
+        {
+          "member": "numpy/linalg/lapack_lite.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "32b56703f2639f07073eec950a5dbe0ccd397ece5c1d82f7cc2505166b019699",
+          "bytes": 29985
+        },
+        {
+          "member": "numpy/random/_bounded_integers.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "45ef8d6c1a65f9bf287190e2c0f5297ec6dfed9411ff942789fb27f82d5dfa05",
+          "bytes": 316800
+        },
+        {
+          "member": "numpy/random/_common.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "2b01ada16f10eafd2ed578d1fd1cf637d476120f224d3846c882529f00b30892",
+          "bytes": 258824
+        },
+        {
+          "member": "numpy/random/_generator.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "2a6dcb8d65ff603c7943b642e04a37356774a96dc32de3dc8b59171938408391",
+          "bytes": 845872
+        },
+        {
+          "member": "numpy/random/_mt19937.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "8a6b3ec2095ac4cc0c52655f41e1e3e76f5c3da891a3dfe2d4729897d012da9a",
+          "bytes": 139160
+        },
+        {
+          "member": "numpy/random/_pcg64.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "1573dafacd3740c81255c3b22c9bb1cfe3cbe6d904f77801382ec19b2af74fc2",
+          "bytes": 155200
+        },
+        {
+          "member": "numpy/random/_philox.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "a1c1c7f655cfbd4ed4f6fa1c8fad23da50dcaec0e192e9e9b012c47be23516ed",
+          "bytes": 131096
+        },
+        {
+          "member": "numpy/random/_sfc64.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "d8f2aa1f3e52abee15858e6bbad2b1acdf92888d3f0e83c1a30552e7d366cb86",
+          "bytes": 96200
+        },
+        {
+          "member": "numpy/random/bit_generator.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "30b89d04a78a753a0ff494324638e633e8b6111ab258123e4288114acaacefea",
+          "bytes": 241128
+        },
+        {
+          "member": "numpy/random/mtrand.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "05fa55a19653596f138a172b03f4846ea6f85c96696ebf7a635564dc9e792f28",
+          "bytes": 670616
+        }
+      ],
+      "notices": [
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+          "sha256": "4860083caa0de2ac3292ca98bd074bd8f45d8b32624e37b1e70a240bff61e488",
+          "bytes": 46794,
+          "path": "research/nli/notices/4860083caa0de2ac3292ca98bd074bd8f45d8b32624e37b1e70a240bff61e488.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+          "bytes": 1018,
+          "path": "research/nli/notices/fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98",
+          "bytes": 690,
+          "path": "research/nli/notices/3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af",
+          "bytes": 20785,
+          "path": "research/nli/notices/e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c",
+          "bytes": 1414,
+          "path": "research/nli/notices/f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910",
+          "bytes": 1514,
+          "path": "research/nli/notices/211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9",
+          "bytes": 1543,
+          "path": "research/nli/notices/c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056",
+          "bytes": 1498,
+          "path": "research/nli/notices/a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55",
+          "bytes": 2266,
+          "path": "research/nli/notices/a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+          "bytes": 1593,
+          "path": "research/nli/notices/05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+          "bytes": 3511,
+          "path": "research/nli/notices/103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face",
+          "bytes": 2745,
+          "path": "research/nli/notices/469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156",
+          "bytes": 2926,
+          "path": "research/nli/notices/0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918",
+          "bytes": 1154,
+          "path": "research/nli/notices/e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800",
+          "bytes": 1509,
+          "path": "research/nli/notices/6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f",
+          "bytes": 1226,
+          "path": "research/nli/notices/9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9",
+          "bytes": 332,
+          "path": "research/nli/notices/268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9.txt"
+        },
+        {
+          "member": "numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+          "bytes": 1018,
+          "path": "research/nli/notices/fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec.txt"
+        },
+        {
+          "member": "numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+          "bytes": 1593,
+          "path": "research/nli/notices/05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6.txt"
+        },
+        {
+          "member": "numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+          "bytes": 3511,
+          "path": "research/nli/notices/103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "onnx",
+      "version": "1.23.2",
+      "wheel": "onnx-1.23.2-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "7abf381d278f31ac62487fddedc9dd42da842dce94d5d43536836ee3efdf4a2b",
+      "pypi_url": "https://files.pythonhosted.org/packages/87/56/21509a657f9a73ab0ca307d325043f49ca6c4ff6bf79edeb9e159190d44d/onnx-1.23.2-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "license_members": [
+        "onnx-1.23.2.dist-info/licenses/LICENSE",
+        "onnx-1.23.2.dist-info/licenses/NOTICE"
+      ],
+      "declared_license": "Apache-2.0",
+      "artifact_bytes": 8881633,
+      "member_count": 1190,
+      "contents_sha256": "013352ec12bee7681c2e98cc2b4a612df1c1fdf0373225a439506a1a900e7dd5",
+      "python_source_count": 510,
+      "native_members": [
+        {
+          "member": "onnx/onnx_cpp2py_export.abi3.so",
+          "sha256": "9885c622a164db12d518b4c57f2b6fbc7b5042c32c99f4c3ba8a6436985c6b27",
+          "bytes": 6992408
+        }
+      ],
+      "notices": [
+        {
+          "member": "onnx-1.23.2.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "path": "research/nli/notices/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt"
+        },
+        {
+          "member": "onnx-1.23.2.dist-info/licenses/NOTICE",
+          "sha256": "a4a6f2d7c4df16d4478df326169800219a6b4f51ce6f9a86074cc467e8adab28",
+          "bytes": 2133,
+          "path": "research/nli/notices/a4a6f2d7c4df16d4478df326169800219a6b4f51ce6f9a86074cc467e8adab28.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "onnxruntime",
+      "version": "1.31.0",
+      "wheel": "onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "sha256": "37fd78cee5160c7a43a1730ccb3682ffd880af9c9e80385d625c0c2f8b125809",
+      "pypi_url": "https://files.pythonhosted.org/packages/0d/ac/67ebbaab4b3083f2a6b27ee6c4aa400c7f8d6c72b5499aac7e4cd6ba74f5/onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "license_members": [],
+      "declared_license": "MIT License",
+      "artifact_bytes": 23760708,
+      "member_count": 322,
+      "contents_sha256": "8b031bf482683c49441f95e5ad14e9ca14cfc63e931ced3a1e5cb8bbd888672f",
+      "python_source_count": 305,
+      "native_members": [
+        {
+          "member": "onnxruntime/capi/libonnxruntime.so.1.31.0",
+          "sha256": "21901b1b02233484b80888c16f4f5473742f796bf5528d5d0c4073dbe9802001",
+          "bytes": 29352200
+        },
+        {
+          "member": "onnxruntime/capi/libonnxruntime_providers_shared.so",
+          "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d",
+          "bytes": 14632
+        },
+        {
+          "member": "onnxruntime/capi/onnxruntime_pybind11_state.cpython-313-x86_64-linux-gnu.so",
+          "sha256": "c8f3c0f7b51e0d12563f77829fc2632daade3a7d09b3a17b6cf3a50d490f5b0b",
+          "bytes": 30958696
+        }
+      ],
+      "notices": [
+        {
+          "member": "onnxruntime/LICENSE",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "bytes": 1073,
+          "path": "sbom/reviews/nli/notices/2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c.txt"
+        },
+        {
+          "member": "onnxruntime/ThirdPartyNotices.txt",
+          "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3",
+          "bytes": 338088,
+          "path": "sbom/reviews/nli/notices/143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "packaging",
+      "version": "26.3",
+      "wheel": "packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "pypi_url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "license_members": [
+        "packaging-26.3.dist-info/licenses/LICENSE",
+        "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+        "packaging-26.3.dist-info/licenses/LICENSE.BSD"
+      ],
+      "declared_license": "Apache-2.0 OR BSD-2-Clause",
+      "artifact_bytes": 129956,
+      "member_count": 29,
+      "contents_sha256": "16f1a3d6619357fa9ae6a53f3a26facb1c3e9fd5fdb4e85b8649b9bf40257c82",
+      "python_source_count": 22,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "bytes": 197,
+          "path": "research/nli/notices/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt"
+        },
+        {
+          "member": "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "path": "research/nli/notices/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt"
+        },
+        {
+          "member": "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "bytes": 1344,
+          "path": "research/nli/notices/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "protobuf",
+      "version": "7.36.2",
+      "wheel": "protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2",
+      "pypi_url": "https://files.pythonhosted.org/packages/db/f3/3996583dd2906297a637af12114deddf7658af6e683fedb83be061983fb5/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "license_members": [
+        "protobuf-7.36.2.dist-info/LICENSE"
+      ],
+      "declared_license": "3-Clause BSD License",
+      "artifact_bytes": 343223,
+      "member_count": 63,
+      "contents_sha256": "1ba438c530243bb3ef415b69d9a4ef0397c277d1598223948b06ba4bce4f8a72",
+      "python_source_count": 58,
+      "native_members": [
+        {
+          "member": "google/_upb/_message.abi3.so",
+          "sha256": "4ac1622d643ff188f4f355cc89a439f6881c397d766911e1246f9f4a215d051d",
+          "bytes": 421992
+        }
+      ],
+      "notices": [
+        {
+          "member": "protobuf-7.36.2.dist-info/LICENSE",
+          "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+          "bytes": 1732,
+          "path": "research/nli/notices/6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "wheel": "tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "376851d22bcf9d650a5c3090bb83e6cf9e895fbf0595369fa4cd43c1f69b5f87",
+      "pypi_url": "https://files.pythonhosted.org/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "license_members": [],
+      "declared_license": null,
+      "artifact_bytes": 3396193,
+      "member_count": 31,
+      "contents_sha256": "d372adb95ddc8b856a78b02b0813c85593f89135d32a49ea348932e5f5e5e095",
+      "python_source_count": 16,
+      "native_members": [
+        {
+          "member": "tokenizers/tokenizers.abi3.so",
+          "sha256": "4b1458a379296762a034d3bc89299c0c35b4eefb0577acca922f481b262c65a1",
+          "bytes": 11326992
+        }
+      ],
+      "notices": []
+    },
+    {
+      "platform": "linux",
+      "name": "tqdm",
+      "version": "4.70.1",
+      "wheel": "tqdm-4.70.1-py3-none-any.whl",
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "pypi_url": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl",
+      "license_members": [
+        "tqdm-4.70.1.dist-info/licenses/LICENCE"
+      ],
+      "declared_license": "MPL-2.0 AND MIT",
+      "artifact_bytes": 80199,
+      "member_count": 39,
+      "contents_sha256": "1df678879d6e1dfbd7beab65f794431028440d1ebf88e6a6422b17f870caf3c9",
+      "python_source_count": 31,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "tqdm-4.70.1.dist-info/licenses/LICENCE",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de",
+          "bytes": 1985,
+          "path": "research/nli/notices/fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "truststore",
+      "version": "0.10.4",
+      "wheel": "truststore-0.10.4-py3-none-any.whl",
+      "sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981",
+      "pypi_url": "https://files.pythonhosted.org/packages/19/97/56608b2249fe206a67cd573bc93cd9896e1efb9e98bce9c163bcdc704b88/truststore-0.10.4-py3-none-any.whl",
+      "license_members": [
+        "truststore-0.10.4.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "MIT",
+      "artifact_bytes": 18660,
+      "member_count": 11,
+      "contents_sha256": "38a24375fbf9d8b33bb447142554f644e8abbc7f466b754b4ada10712d7c7f46",
+      "python_source_count": 6,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "truststore-0.10.4.dist-info/licenses/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+          "bytes": 1086,
+          "path": "research/nli/notices/33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca.txt"
+        }
+      ]
+    },
+    {
+      "platform": "linux",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "wheel": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "pypi_url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "license_members": [
+        "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+      ],
+      "declared_license": "PSF-2.0",
+      "artifact_bytes": 45571,
+      "member_count": 5,
+      "contents_sha256": "e6072f7fd36b38ff84eb0457bcc2e3379b279f04d1323450e98c53c05e5d60bc",
+      "python_source_count": 1,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "bytes": 13936,
+          "path": "research/nli/notices/3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "wheel": "pyyaml-6.0.3-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0",
+      "pypi_url": "https://files.pythonhosted.org/packages/89/a0/6cf41a19a1f2f3feab0e9c0b74134aa2ce6849093d5517a0c550fe37a648/pyyaml-6.0.3-cp312-cp312-macosx_11_0_arm64.whl",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "artifact_bytes": 173973,
+      "member_count": 24,
+      "contents_sha256": "1823a44cc042ee7711598fd5648981cc443c7ede5653854f7934e1f39fd0cf53",
+      "python_source_count": 18,
+      "native_members": [
+        {
+          "member": "yaml/_yaml.cpython-312-darwin.so",
+          "sha256": "e22e20c9ba0922aea16158d839a651b58226eb0e86544879b7d5f5229135d928",
+          "bytes": 381768
+        }
+      ],
+      "notices": [
+        {
+          "member": "pyyaml-6.0.3.dist-info/licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+          "bytes": 1101,
+          "path": "research/nli/notices/8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "anyio",
+      "version": "4.15.1",
+      "wheel": "anyio-4.15.1-py3-none-any.whl",
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "pypi_url": "https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 132079,
+      "member_count": 53,
+      "contents_sha256": "d1c5e2ece53acd123b8c69ac9acff31b5b8bda35f5a0341759eb0843919d37a2",
+      "python_source_count": 46,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "anyio-4.15.1.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+          "bytes": 1081,
+          "path": "research/nli/notices/5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "click",
+      "version": "8.5.0",
+      "wheel": "click-8.5.0-py3-none-any.whl",
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "pypi_url": "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSE.txt"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 125251,
+      "member_count": 22,
+      "contents_sha256": "857757ec16aaa74187a0effb743fd7630b8e1375a005c326ace7948db32df019",
+      "python_source_count": 17,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "click-8.5.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "bytes": 1475,
+          "path": "research/nli/notices/9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "filelock",
+      "version": "4.1.1",
+      "wheel": "filelock-4.1.1-py3-none-any.whl",
+      "sha256": "3f4a557945a7b0f95efeb1f432267affe5d45ac8ddde2aed1b97ebb62382c089",
+      "pypi_url": "https://files.pythonhosted.org/packages/d7/8b/f837f52905395ba4510fe61f753c24833fb0a9c76e21267bb9f828b664a9/filelock-4.1.1-py3-none-any.whl",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "artifact_bytes": 132460,
+      "member_count": 28,
+      "contents_sha256": "0e0e15d76792fdd9394fb50edb306d7ec56340b9875b313411ff61c393e29ab2",
+      "python_source_count": 23,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "filelock-4.1.1.dist-info/licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+          "bytes": 1088,
+          "path": "research/nli/notices/608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "wheel": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "pypi_url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "declared_license": "Apache 2.0",
+      "license_files": [],
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "artifact_bytes": 26661,
+      "member_count": 14,
+      "contents_sha256": "665e34a1b796694b8c0b370e7cf0c8b9f6e08dd48a0794200f3e0619022e5556",
+      "python_source_count": 10,
+      "native_members": [],
+      "notices": []
+    },
+    {
+      "platform": "mac",
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "wheel": "fsspec-2026.9.0-py3-none-any.whl",
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "pypi_url": "https://files.pythonhosted.org/packages/6c/c0/a98505f18594f1bce828bb159cec0fcf9860562f1a2c85913409fc8f3d9e/fsspec-2026.9.0-py3-none-any.whl",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 221738,
+      "member_count": 62,
+      "contents_sha256": "019d599ef25bfb6cc35d538f4df23d82fa94775d6e6597a8797a5bad8869047d",
+      "python_source_count": 58,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "fsspec-2026.9.0.dist-info/licenses/LICENSE",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+          "bytes": 1513,
+          "path": "research/nli/notices/2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "h11",
+      "version": "0.16.0",
+      "wheel": "h11-0.16.0-py3-none-any.whl",
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "pypi_url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSE.txt"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "artifact_bytes": 37515,
+      "member_count": 17,
+      "contents_sha256": "a5d98ff805c8fd00ea2b962878e56dfaf389f3c57f3febd07950218fdd2d282c",
+      "python_source_count": 11,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+          "bytes": 1124,
+          "path": "research/nli/notices/37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "wheel": "hf_xet-1.7.0-cp38-abi3-macosx_11_0_arm64.whl",
+      "sha256": "59fba37039233c7fcbe196817d6cdcf1b40dfb17b410f229d85b0cf0a1848da4",
+      "pypi_url": "https://files.pythonhosted.org/packages/c3/47/a26ebdce7056a61e931f228439bc0ab08cbec239d1690f965e5e637cba79/hf_xet-1.7.0-cp38-abi3-macosx_11_0_arm64.whl",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "artifact_bytes": 3560352,
+      "member_count": 7,
+      "contents_sha256": "40cbca0a1fea751ba9b406f76d172a589242a68ab9e88bf7825508484d57994f",
+      "python_source_count": 1,
+      "native_members": [
+        {
+          "member": "hf_xet/hf_xet.abi3.so",
+          "sha256": "196bc0f5f5a9d66e3f314d252c97732ea09f930b51c722d0612db7ae17406a5b",
+          "bytes": 7401056
+        }
+      ],
+      "notices": [
+        {
+          "member": "hf_xet-1.7.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "path": "research/nli/notices/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "wheel": "httpcore2-2.13.1-py3-none-any.whl",
+      "sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a",
+      "pypi_url": "https://files.pythonhosted.org/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSE.md"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "artifact_bytes": 83423,
+      "member_count": 36,
+      "contents_sha256": "8df533be3dba7b13a3b0f029dbc18f8d432ccdf9b448496aba022c55bd3f3c48",
+      "python_source_count": 31,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "httpcore2-2.13.1.dist-info/licenses/LICENSE.md",
+          "sha256": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9",
+          "bytes": 1599,
+          "path": "research/nli/notices/c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "httpx2",
+      "version": "2.13.1",
+      "wheel": "httpx2-2.13.1-py3-none-any.whl",
+      "sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4",
+      "pypi_url": "https://files.pythonhosted.org/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSE.md"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "artifact_bytes": 95597,
+      "member_count": 36,
+      "contents_sha256": "3b6e7eab680bc1aa86860ab230eec91030f12aa9ba9b1b47291d27ffce95f0ee",
+      "python_source_count": 30,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "httpx2-2.13.1.dist-info/licenses/LICENSE.md",
+          "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30",
+          "bytes": 1589,
+          "path": "research/nli/notices/7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "huggingface_hub",
+      "version": "2.2.0",
+      "wheel": "huggingface_hub-2.2.0-py3-none-any.whl",
+      "sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3",
+      "pypi_url": "https://files.pythonhosted.org/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "artifact_bytes": 839884,
+      "member_count": 190,
+      "contents_sha256": "be99c005431cb591a0e072e2afb53c7f33aef61d647628ee6291466a73b4a136",
+      "python_source_count": 181,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "huggingface_hub-2.2.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "path": "research/nli/notices/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "idna",
+      "version": "3.20",
+      "wheel": "idna-3.20-py3-none-any.whl",
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "pypi_url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSE.md"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 69583,
+      "member_count": 16,
+      "contents_sha256": "867b263d997c2cf081ee404163f75da2a6aa59dab33134083d4bc127cddfad67",
+      "python_source_count": 10,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "idna-3.20.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "bytes": 1541,
+          "path": "research/nli/notices/1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "ml_dtypes",
+      "version": "0.6.0",
+      "wheel": "ml_dtypes-0.6.0-cp312-cp312-macosx_10_13_universal2.whl",
+      "sha256": "5359c588cc62de6f78d7430f06b65853d884955494d86d6ad90b6dd64a3f3a08",
+      "pypi_url": "https://files.pythonhosted.org/packages/84/6a/441eb053b078954f7fea284dfb288701884d0a1404d39babb858e1649023/ml_dtypes-0.6.0-cp312-cp312-macosx_10_13_universal2.whl",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSE",
+        "LICENSE.eigen"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 565447,
+      "member_count": 10,
+      "contents_sha256": "bc15662f496fba4d963028c9e590246bd8440a96341523a72b20bcbc22a16ee8",
+      "python_source_count": 3,
+      "native_members": [
+        {
+          "member": "ml_dtypes/_ml_dtypes_ext.cpython-312-darwin.so",
+          "sha256": "7035bce34356b455e30252fa379292f5b33554d770a09078163d77e026d10a35",
+          "bytes": 2600648
+        }
+      ],
+      "notices": [
+        {
+          "member": "ml_dtypes-0.6.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "path": "research/nli/notices/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt"
+        },
+        {
+          "member": "ml_dtypes-0.6.0.dist-info/licenses/LICENSE.eigen",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+          "bytes": 16726,
+          "path": "research/nli/notices/3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "numpy",
+      "version": "2.5.4",
+      "wheel": "numpy-2.5.4-cp312-cp312-macosx_14_0_arm64.whl",
+      "sha256": "9cb18a327b49c5c337f972b03682f6a49855525faaf3c0d3e9c96cd0fd8880a8",
+      "pypi_url": "https://files.pythonhosted.org/packages/31/2f/5ea3570fcb8ccd0882bea99436a513b2c85dad8f774a2057849130a8fb99/numpy-2.5.4-cp312-cp312-macosx_14_0_arm64.whl",
+      "declared_license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_files": [
+        "LICENSE.txt",
+        "numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "numpy/_core/src/highway/LICENSE",
+        "numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "numpy/_core/src/umath/svml/LICENSE",
+        "numpy/fft/pocketfft/LICENSE.md",
+        "numpy/linalg/lapack_lite/LICENSE.txt",
+        "numpy/ma/LICENSE",
+        "numpy/random/LICENSE.md",
+        "numpy/random/src/distributions/LICENSE.md",
+        "numpy/random/src/mt19937/LICENSE.md",
+        "numpy/random/src/pcg64/LICENSE.md",
+        "numpy/random/src/philox/LICENSE.md",
+        "numpy/random/src/sfc64/LICENSE.md",
+        "numpy/random/src/splitmix64/LICENSE.md"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 5451717,
+      "member_count": 923,
+      "contents_sha256": "3d28e175af593305e9cd38fb088d027f668cb5c11b63b05e837fcbfb9db43c43",
+      "python_source_count": 407,
+      "native_members": [
+        {
+          "member": "numpy/_core/_multiarray_tests.cpython-312-darwin.so",
+          "sha256": "083ab89907471d9d6af7337ae44f6acbde5e5e23ef173394dc6251c925fc08ba",
+          "bytes": 121192
+        },
+        {
+          "member": "numpy/_core/_multiarray_umath.cpython-312-darwin.so",
+          "sha256": "af36cbbb39b27651a8b9f7dfa491775016f331a58e8d116eb6b4cfd5e22efb77",
+          "bytes": 3996184
+        },
+        {
+          "member": "numpy/_core/_operand_flag_tests.cpython-312-darwin.so",
+          "sha256": "e910e6642301f2f28a986d819a3249d5d1013b2ee6ce4e5e9a95082ecc4d3627",
+          "bytes": 51240
+        },
+        {
+          "member": "numpy/_core/_rational_tests.cpython-312-darwin.so",
+          "sha256": "73d0f8c90654dd97fa2b0ed6c45882eb8fe83a8c4256e38bfc31713e5e07841b",
+          "bytes": 73352
+        },
+        {
+          "member": "numpy/_core/_simd.cpython-312-darwin.so",
+          "sha256": "e78efa667e9cd2d0f319968a7feae06adf7f0945efde8bbcad3bd0f75e199541",
+          "bytes": 339640
+        },
+        {
+          "member": "numpy/_core/_struct_ufunc_tests.cpython-312-darwin.so",
+          "sha256": "24218eec682f48246b450903e270be19eca1c6c2d828235ddef29949f2cc8950",
+          "bytes": 51480
+        },
+        {
+          "member": "numpy/_core/_umath_tests.cpython-312-darwin.so",
+          "sha256": "1c55454c29a1a5f500fc22cf095e862b0af0f17e14c2a1fbe7140832c21a0d66",
+          "bytes": 71904
+        },
+        {
+          "member": "numpy/fft/_pocketfft_umath.cpython-312-darwin.so",
+          "sha256": "51add49e0b523ae7b20a10a879a77e0998afb795d6d233ef8936f0a58ce4e36f",
+          "bytes": 329912
+        },
+        {
+          "member": "numpy/linalg/_umath_linalg.cpython-312-darwin.so",
+          "sha256": "aa8f5a2f363ad911eddb849e3ed82ba017bd2fec5b8dde28a330e2873f501fb8",
+          "bytes": 154880
+        },
+        {
+          "member": "numpy/linalg/lapack_lite.cpython-312-darwin.so",
+          "sha256": "a7895a9c0d4afdf3fbbdc2456e016590aa0fbd8d7e203079debee39bd0269b5c",
+          "bytes": 53008
+        },
+        {
+          "member": "numpy/random/_bounded_integers.cpython-312-darwin.so",
+          "sha256": "1215997585debe5651a77a52563dc32508e67414ef35761c49afa150ce1f8e1f",
+          "bytes": 298024
+        },
+        {
+          "member": "numpy/random/_common.cpython-312-darwin.so",
+          "sha256": "884ecb8d16bbb1572816a89fff6b2b5722bb8210273ff744ec0db5c0496de5fd",
+          "bytes": 250656
+        },
+        {
+          "member": "numpy/random/_generator.cpython-312-darwin.so",
+          "sha256": "87a6dfcf15b6107936915f76e1a52b00d68f2e539169aee194af7a3e5bbacc1b",
+          "bytes": 690960
+        },
+        {
+          "member": "numpy/random/_mt19937.cpython-312-darwin.so",
+          "sha256": "9779d38f6e586d845f2ee652959f3edf1acb44fbeff6f4ee16ec7fb58f23dd6d",
+          "bytes": 133520
+        },
+        {
+          "member": "numpy/random/_pcg64.cpython-312-darwin.so",
+          "sha256": "39fbdcf07c23901f4ae0b6ab3be3e05829a83495819a69cda8ddbd11d06ff136",
+          "bytes": 152544
+        },
+        {
+          "member": "numpy/random/_philox.cpython-312-darwin.so",
+          "sha256": "5a74868b1a98c3d0a776cf275c88959871376bab0ff15ef0d882229ddd5a2a56",
+          "bytes": 133792
+        },
+        {
+          "member": "numpy/random/_sfc64.cpython-312-darwin.so",
+          "sha256": "6bb290611b7fa2304d28f3c8ddb0156f435ead1aa0f5a997ddfe4e8a6762c200",
+          "bytes": 98256
+        },
+        {
+          "member": "numpy/random/bit_generator.cpython-312-darwin.so",
+          "sha256": "88bbb27d3f58e12c9be2ff6af6eff4e409599a3e6cece3b4144d4aa8878b149b",
+          "bytes": 226640
+        },
+        {
+          "member": "numpy/random/mtrand.cpython-312-darwin.so",
+          "sha256": "0e52c63a090850119f67a570ae2fd094861fcff3a0bad00cbf3a0c86faa82510",
+          "bytes": 580912
+        }
+      ],
+      "notices": [
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+          "sha256": "649a589ab31076e79e9ce62ba24eae9959598124176640dbc95f87bd10f34fcf",
+          "bytes": 46826,
+          "path": "research/nli/notices/649a589ab31076e79e9ce62ba24eae9959598124176640dbc95f87bd10f34fcf.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+          "bytes": 1018,
+          "path": "research/nli/notices/fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98",
+          "bytes": 690,
+          "path": "research/nli/notices/3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af",
+          "bytes": 20785,
+          "path": "research/nli/notices/e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c",
+          "bytes": 1414,
+          "path": "research/nli/notices/f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910",
+          "bytes": 1514,
+          "path": "research/nli/notices/211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9",
+          "bytes": 1543,
+          "path": "research/nli/notices/c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056",
+          "bytes": 1498,
+          "path": "research/nli/notices/a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55",
+          "bytes": 2266,
+          "path": "research/nli/notices/a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+          "bytes": 1593,
+          "path": "research/nli/notices/05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+          "bytes": 3511,
+          "path": "research/nli/notices/103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face",
+          "bytes": 2745,
+          "path": "research/nli/notices/469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156",
+          "bytes": 2926,
+          "path": "research/nli/notices/0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918",
+          "bytes": 1154,
+          "path": "research/nli/notices/e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800",
+          "bytes": 1509,
+          "path": "research/nli/notices/6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f",
+          "bytes": 1226,
+          "path": "research/nli/notices/9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f.txt"
+        },
+        {
+          "member": "numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9",
+          "bytes": 332,
+          "path": "research/nli/notices/268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9.txt"
+        },
+        {
+          "member": "numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+          "bytes": 1018,
+          "path": "research/nli/notices/fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec.txt"
+        },
+        {
+          "member": "numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+          "bytes": 1593,
+          "path": "research/nli/notices/05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6.txt"
+        },
+        {
+          "member": "numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+          "bytes": 3511,
+          "path": "research/nli/notices/103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "onnx",
+      "version": "1.23.2",
+      "wheel": "onnx-1.23.2-cp312-abi3-macosx_13_0_universal2.whl",
+      "sha256": "1b8680ce1e6a9a4736374a9dce4de14ea8ee05e0dccf0784a78a6e5646bdc1f6",
+      "pypi_url": "https://files.pythonhosted.org/packages/d7/d9/967d6f6838ad60964de912a5e7d01915282899b254460705d952f5d14c1a/onnx-1.23.2-cp312-abi3-macosx_13_0_universal2.whl",
+      "declared_license": "Apache-2.0",
+      "license_files": [],
+      "classifiers": [],
+      "artifact_bytes": 9725612,
+      "member_count": 1190,
+      "contents_sha256": "884771919c581664c3dfada0faa614b09f967885a29454c26709c6f34e924d3c",
+      "python_source_count": 510,
+      "native_members": [
+        {
+          "member": "onnx/onnx_cpp2py_export.abi3.so",
+          "sha256": "4b638f68beb21569cca37a26dca2d8711dec439800bd990ae176cbf90edf85f3",
+          "bytes": 10252216
+        }
+      ],
+      "notices": [
+        {
+          "member": "onnx-1.23.2.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "path": "research/nli/notices/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt"
+        },
+        {
+          "member": "onnx-1.23.2.dist-info/licenses/NOTICE",
+          "sha256": "a4a6f2d7c4df16d4478df326169800219a6b4f51ce6f9a86074cc467e8adab28",
+          "bytes": 2133,
+          "path": "research/nli/notices/a4a6f2d7c4df16d4478df326169800219a6b4f51ce6f9a86074cc467e8adab28.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "onnxruntime",
+      "version": "1.31.0",
+      "wheel": "onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl",
+      "sha256": "aaab9b3af536b06ca27ab5e35e3d429c97457ce76cf298af103f687e8b9975c0",
+      "pypi_url": "https://files.pythonhosted.org/packages/b3/bd/2ac094311163b803e3626c3937461d6900934bd56cca7601f6150ff860c3/onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl",
+      "declared_license": "MIT License",
+      "license_files": [],
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "artifact_bytes": 20882054,
+      "member_count": 321,
+      "contents_sha256": "c83e153bf9f536520bfbd964485222444735a8b4d677fce84738d4643750a61b",
+      "python_source_count": 305,
+      "native_members": [
+        {
+          "member": "onnxruntime/capi/libonnxruntime.1.31.0.dylib",
+          "sha256": "ff52828ce7c6dd1aea99a5e9f5da9e2786e3d03e467fbf8b6893a4b624334920",
+          "bytes": 33037336
+        },
+        {
+          "member": "onnxruntime/capi/onnxruntime_pybind11_state.so",
+          "sha256": "605defa19ccbb0e2254be08e783ebf1eb8aa4e6353d5308f04ffbeaedbdaf742",
+          "bytes": 40771472
+        }
+      ],
+      "notices": [
+        {
+          "member": "onnxruntime/LICENSE",
+          "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+          "bytes": 1073,
+          "path": "sbom/reviews/nli/notices/2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c.txt"
+        },
+        {
+          "member": "onnxruntime/ThirdPartyNotices.txt",
+          "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3",
+          "bytes": 338088,
+          "path": "sbom/reviews/nli/notices/143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "packaging",
+      "version": "26.3",
+      "wheel": "packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "pypi_url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "declared_license": "Apache-2.0 OR BSD-2-Clause",
+      "license_files": [
+        "LICENSE",
+        "LICENSE.APACHE",
+        "LICENSE.BSD"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 129956,
+      "member_count": 29,
+      "contents_sha256": "16f1a3d6619357fa9ae6a53f3a26facb1c3e9fd5fdb4e85b8649b9bf40257c82",
+      "python_source_count": 22,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "bytes": 197,
+          "path": "research/nli/notices/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt"
+        },
+        {
+          "member": "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "path": "research/nli/notices/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt"
+        },
+        {
+          "member": "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "bytes": 1344,
+          "path": "research/nli/notices/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "protobuf",
+      "version": "7.36.2",
+      "wheel": "protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl",
+      "sha256": "cbc70b17ee27e28894c7fee8bb04be1abead49e936bc70eb60052531eee2079e",
+      "pypi_url": "https://files.pythonhosted.org/packages/32/72/98342feb672507c8f3a69e34b4fa8961f608edba5c1a48a6f47156d92cb5/protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl",
+      "declared_license": "3-Clause BSD License",
+      "license_files": [],
+      "classifiers": [],
+      "artifact_bytes": 456039,
+      "member_count": 63,
+      "contents_sha256": "c5b6ac4d6d392e9b4be006e0aa117c6fa740e726fec7dadae329e51a72b5c3a5",
+      "python_source_count": 58,
+      "native_members": [
+        {
+          "member": "google/_upb/_message.abi3.so",
+          "sha256": "5fe9c5aa8c22f90136ea60aa2e46bdbd95d1953c1a35bdd3ca4cd643b1d74f6d",
+          "bytes": 695714
+        }
+      ],
+      "notices": [
+        {
+          "member": "protobuf-7.36.2.dist-info/LICENSE",
+          "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+          "bytes": 1732,
+          "path": "research/nli/notices/6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "wheel": "tokenizers-0.23.3-cp310-abi3-macosx_11_0_arm64.whl",
+      "sha256": "68649e97d5b43c44c031d8d848874a6eecae8f8fe40ea989aa777a5a83aca716",
+      "pypi_url": "https://files.pythonhosted.org/packages/b2/72/01e49f032bb346e5aaf06c10c74fe8aeec847173adbadd66eb7c53054bf2/tokenizers-0.23.3-cp310-abi3-macosx_11_0_arm64.whl",
+      "declared_license": null,
+      "license_files": [],
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "artifact_bytes": 3101381,
+      "member_count": 31,
+      "contents_sha256": "c0cac7bd7a1f97a38bcd342ab2261fe89aeaa14a40d5068fdc5a2e62a868f692",
+      "python_source_count": 16,
+      "native_members": [
+        {
+          "member": "tokenizers/tokenizers.abi3.so",
+          "sha256": "83c58f9ec4937f86521c76ba5222215d3e7707a25818d5ea69604e230fd4a96c",
+          "bytes": 9619248
+        }
+      ],
+      "notices": []
+    },
+    {
+      "platform": "mac",
+      "name": "tqdm",
+      "version": "4.70.1",
+      "wheel": "tqdm-4.70.1-py3-none-any.whl",
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "pypi_url": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl",
+      "declared_license": "MPL-2.0 AND MIT",
+      "license_files": [
+        "LICENCE"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 80199,
+      "member_count": 39,
+      "contents_sha256": "1df678879d6e1dfbd7beab65f794431028440d1ebf88e6a6422b17f870caf3c9",
+      "python_source_count": 31,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "tqdm-4.70.1.dist-info/licenses/LICENCE",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de",
+          "bytes": 1985,
+          "path": "research/nli/notices/fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "truststore",
+      "version": "0.10.4",
+      "wheel": "truststore-0.10.4-py3-none-any.whl",
+      "sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981",
+      "pypi_url": "https://files.pythonhosted.org/packages/19/97/56608b2249fe206a67cd573bc93cd9896e1efb9e98bce9c163bcdc704b88/truststore-0.10.4-py3-none-any.whl",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 18660,
+      "member_count": 11,
+      "contents_sha256": "38a24375fbf9d8b33bb447142554f644e8abbc7f466b754b4ada10712d7c7f46",
+      "python_source_count": 6,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "truststore-0.10.4.dist-info/licenses/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+          "bytes": 1086,
+          "path": "research/nli/notices/33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca.txt"
+        }
+      ]
+    },
+    {
+      "platform": "mac",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "wheel": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "pypi_url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "declared_license": "PSF-2.0",
+      "license_files": [
+        "LICENSE"
+      ],
+      "classifiers": [],
+      "artifact_bytes": 45571,
+      "member_count": 5,
+      "contents_sha256": "e6072f7fd36b38ff84eb0457bcc2e3379b279f04d1323450e98c53c05e5d60bc",
+      "python_source_count": 1,
+      "native_members": [],
+      "notices": [
+        {
+          "member": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "bytes": 13936,
+          "path": "research/nli/notices/3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf.txt"
+        }
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "platform": "linux",
+      "wheel_sha256": "0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Bundled LibYAML implementation/source/notice correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "platform": "linux",
+      "wheel_sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "platform": "linux",
+      "wheel_sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "filelock",
+      "version": "4.1.1",
+      "platform": "linux",
+      "wheel_sha256": "3f4a557945a7b0f95efeb1f432267affe5d45ac8ddde2aed1b97ebb62382c089",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "platform": "linux",
+      "wheel_sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "terms_reviewed": "Apache-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": true,
+      "permission_cleared": false
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "platform": "linux",
+      "wheel_sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "platform": "linux",
+      "wheel_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "platform": "linux",
+      "wheel_sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8",
+      "terms_reviewed": "Apache-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Rust bundled dependency terms and exact native build/source correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "platform": "linux",
+      "wheel_sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "httpx2",
+      "version": "2.13.1",
+      "platform": "linux",
+      "wheel_sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "2.2.0",
+      "platform": "linux",
+      "wheel_sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3",
+      "terms_reviewed": "Apache-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "platform": "linux",
+      "wheel_sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "ml_dtypes",
+      "version": "0.6.0",
+      "platform": "linux",
+      "wheel_sha256": "26b1f1fa4f0435a2946859823f6e2bf06796f1e9f10f5a05b08a5e3c8f46ff69",
+      "terms_reviewed": "Apache-2.0 AND MPL-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Eigen MPL covered source availability and exact binary/header source correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "platform": "linux",
+      "wheel_sha256": "6ffa07666f8da0eef81d149934a626d0d95fbd6838432a33e66245423a9062c0",
+      "terms_reviewed": "Multiple retained bundled terms",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Platform-specific bundled BLAS/Fortran terms and applicable corresponding source not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "onnx",
+      "version": "1.23.2",
+      "platform": "linux",
+      "wheel_sha256": "7abf381d278f31ac62487fddedc9dd42da842dce94d5d43536836ee3efdf4a2b",
+      "terms_reviewed": "Apache-2.0 and retained NOTICE",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "NOTICE names bundled abseil/protobuf/nanobind; exact linked-source/license correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.31.0",
+      "platform": "linux",
+      "wheel_sha256": "37fd78cee5160c7a43a1730ccb3682ffd880af9c9e80385d625c0c2f8b125809",
+      "terms_reviewed": "MIT and retained third-party terms",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Full embedded-term applicability/source offers unresolved; pinned upstream tag and advertised short commit retrieval failed",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "platform": "linux",
+      "wheel_sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "terms_reviewed": "Apache-2.0 OR BSD-2-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "platform": "linux",
+      "wheel_sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Bundled native implementation and dependency source/license correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "platform": "linux",
+      "wheel_sha256": "376851d22bcf9d650a5c3090bb83e6cf9e895fbf0595369fa4cd43c1f69b5f87",
+      "terms_reviewed": "Apache-2.0 upstream source text; absent from wheel",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Upstream Apache text retained; exact compiled Rust dependency/source correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": true,
+      "permission_cleared": false
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "platform": "linux",
+      "wheel_sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "terms_reviewed": "MPL-2.0 AND MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "retain MPL notice and provide covered Source Code Form under MPL-2.0; retain MIT portions"
+      ],
+      "source_offer": "Covered Python Source Code Form is present in this wheel; no native member observed",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.4",
+      "platform": "linux",
+      "wheel_sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "platform": "linux",
+      "wheel_sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "terms_reviewed": "PSF-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "platform": "mac",
+      "wheel_sha256": "fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Bundled LibYAML implementation/source/notice correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "platform": "mac",
+      "wheel_sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "platform": "mac",
+      "wheel_sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "filelock",
+      "version": "4.1.1",
+      "platform": "mac",
+      "wheel_sha256": "3f4a557945a7b0f95efeb1f432267affe5d45ac8ddde2aed1b97ebb62382c089",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "platform": "mac",
+      "wheel_sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "terms_reviewed": "Apache-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": true,
+      "permission_cleared": false
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "platform": "mac",
+      "wheel_sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "platform": "mac",
+      "wheel_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "platform": "mac",
+      "wheel_sha256": "59fba37039233c7fcbe196817d6cdcf1b40dfb17b410f229d85b0cf0a1848da4",
+      "terms_reviewed": "Apache-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Rust bundled dependency terms and exact native build/source correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "platform": "mac",
+      "wheel_sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "httpx2",
+      "version": "2.13.1",
+      "platform": "mac",
+      "wheel_sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "2.2.0",
+      "platform": "mac",
+      "wheel_sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3",
+      "terms_reviewed": "Apache-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "platform": "mac",
+      "wheel_sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "ml_dtypes",
+      "version": "0.6.0",
+      "platform": "mac",
+      "wheel_sha256": "5359c588cc62de6f78d7430f06b65853d884955494d86d6ad90b6dd64a3f3a08",
+      "terms_reviewed": "Apache-2.0 AND MPL-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Eigen MPL covered source availability and exact binary/header source correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "platform": "mac",
+      "wheel_sha256": "9cb18a327b49c5c337f972b03682f6a49855525faaf3c0d3e9c96cd0fd8880a8",
+      "terms_reviewed": "Multiple retained bundled terms",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Platform-specific bundled BLAS/Fortran terms and applicable corresponding source not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "onnx",
+      "version": "1.23.2",
+      "platform": "mac",
+      "wheel_sha256": "1b8680ce1e6a9a4736374a9dce4de14ea8ee05e0dccf0784a78a6e5646bdc1f6",
+      "terms_reviewed": "Apache-2.0 and retained NOTICE",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "NOTICE names bundled abseil/protobuf/nanobind; exact linked-source/license correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.31.0",
+      "platform": "mac",
+      "wheel_sha256": "aaab9b3af536b06ca27ab5e35e3d429c97457ce76cf298af103f687e8b9975c0",
+      "terms_reviewed": "MIT and retained third-party terms",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Full embedded-term applicability/source offers unresolved; pinned upstream tag and advertised short commit retrieval failed",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "platform": "mac",
+      "wheel_sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "terms_reviewed": "Apache-2.0 OR BSD-2-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "platform": "mac",
+      "wheel_sha256": "cbc70b17ee27e28894c7fee8bb04be1abead49e936bc70eb60052531eee2079e",
+      "terms_reviewed": "BSD-3-Clause",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Bundled native implementation and dependency source/license correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "platform": "mac",
+      "wheel_sha256": "68649e97d5b43c44c031d8d848874a6eecae8f8fe40ea989aa777a5a83aca716",
+      "terms_reviewed": "Apache-2.0 upstream source text; absent from wheel",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "resolve exact bundled native terms and applicable source/relinking obligations before redistribution approval"
+      ],
+      "source_offer": "Upstream Apache text retained; exact compiled Rust dependency/source correspondence not established",
+      "native_obligations_resolved": false,
+      "status": "blocked_native_obligations",
+      "upstream_license_text_required": true,
+      "permission_cleared": false
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "platform": "mac",
+      "wheel_sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "terms_reviewed": "MPL-2.0 AND MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files",
+        "retain MPL notice and provide covered Source Code Form under MPL-2.0; retain MIT portions"
+      ],
+      "source_offer": "Covered Python Source Code Form is present in this wheel; no native member observed",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.4",
+      "platform": "mac",
+      "wheel_sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981",
+      "terms_reviewed": "MIT",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "platform": "mac",
+      "wheel_sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "terms_reviewed": "PSF-2.0",
+      "retention_actions": [
+        "preserve exact copyright, grant, attribution and disclaimer texts",
+        "do not imply upstream endorsement; preserve applicable patent/trademark limits",
+        "identify modifications if distributing modified covered files"
+      ],
+      "source_offer": "No source offer identified in reviewed primary permissive terms; source Python files are included",
+      "native_obligations_resolved": null,
+      "status": "source_notice_retention_bound",
+      "upstream_license_text_required": false,
+      "permission_cleared": false
+    }
+  ],
+  "source_retrieval_failures": [
+    {
+      "url": "https://api.github.com/repos/microsoft/onnxruntime/releases/tags/v1.31.0",
+      "http_status": 404,
+      "scope": "observed retrieval failure; no replacement with main"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.31.0/LICENSE",
+      "http_status": 404,
+      "scope": "observed retrieval failure; no replacement with main"
+    },
+    {
+      "url": "https://api.github.com/repos/microsoft/onnxruntime/commits/402979a",
+      "http_status": 404,
+      "scope": "observed retrieval failure; no replacement with main"
+    }
+  ],
+  "permission_cleared": false,
+  "complete_native_source_coverage": false,
+  "distribution_ready": false,
+  "independent_accuracy_evidence": false,
+  "bundle": {
+    "path": "sbom/reviews/nli/THIRD-PARTY-NOTICES.txt",
+    "sha256": "f6e1e4a41d00f0e8c6a2076b7c2413207c3d33b1c45c9697ac6e0614051c7a2c",
+    "bytes": 599683
+  },
+  "observation_sha256": "0604e0323c2e3e748b9f006d863dbdacb587c2af354cc1f4d1204aade268e8b5"
+}

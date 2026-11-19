@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-062346-bind-nli-source-notice-obligations-d561a116
+
+Recorded 2026-11-19T06:23:46.805239+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the finite optional NLI model and two locked runtime cohorts to replayed notices, official source references and explicit native/source-offer obligations; retain a deterministic notice bundle and bounded raw ZIP-header refusal controls.
+- **Evidence.** All44 cached wheel occurrences replay successfully, including88 notice occurrences;50 focused controls pass. Existing model/tokenizer/config/card bytes match pinned provider Git or LFS identities without inference or new weight downloads. Earlier malformed-header admissions and the strict local-ZIP64 candidate refusal remain recorded. [Change record](./runs/changes/2026-11-19-062346-bind-nli-source-notice-obligations-d561a116.json).
+- **Not claimed.** Publisher card metadata is real licensing evidence; related base-code terms do not establish the exact training-base revision.16 native package occurrences retain explicit applicability/source blockers. Distribution-ready remainsfalse. No qualified legal clearance, independent accuracy, global requirement closure, runtime/service change or deployment is claimed.
+
+
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
 
 Recorded 2026-11-19T05:26:23.351858+00:00 · Contributor: Codex · change
