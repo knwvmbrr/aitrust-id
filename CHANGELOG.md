@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-023935-bind-lab-bootstrap-and-diagnostic-verification-923a4f04
+
+Recorded 2026-11-19T02:39:35.772322+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind updated Linux evidence and failure diagnostics to current website and route review.
+- **Evidence.** Current32 website commands,41 protocol commands and route boundary checks pass. [Change record](./runs/changes/2026-11-19-023935-bind-lab-bootstrap-and-diagnostic-verification-923a4f04.json).
+- **Not claimed.** Scheduled PS and privacy startup follow-up require hosted execution. No independent accuracy, physical acceptance or original requirement closure.
+
+
+### 2026-11-19-023620-refresh-linux-lab-protocol-evidence-f3d563a3
+
+Recorded 2026-11-19T02:36:20.039984+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh protocol evidence after recording Linux tool interoperability and startup diagnostics.
+- **Evidence.** All41 current protocol commands pass. [Change record](./runs/changes/2026-11-19-023620-refresh-linux-lab-protocol-evidence-f3d563a3.json).
+- **Not claimed.** Website and hosted startup follow-up remain pending; no independent accuracy or original requirement closure.
+
+
+### 2026-11-19-023437-record-linux-mcp-and-fix-lab-bootstrap-ab8f6acd
+
+Recorded 2026-11-19T02:34:37.589573+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the real clean Linux MCP pass, install the locked PS parity-test framework in its own lane and integrate bounded failure-only privacy startup diagnostics.
+- **Evidence.** Linux API/MCP twelve controls pass with current source hashes; MT and NF/FI Linux lanes pass; diagnostic integration fixtures pass. [Change record](./runs/changes/2026-11-19-023437-record-linux-mcp-and-fix-lab-bootstrap-ab8f6acd.json).
+- **Not claimed.** PS lab dependency fix and privacy startup diagnostics require a hosted rerun. No service-health success, tag accuracy, physical device acceptance or original requirement closure.
+
+
+### 2026-11-19-023205-capture-failed-personal-startup-94ee4f81
+
+Recorded 2026-11-19T02:32:05.009746+00:00 · Contributor: Codex · change
+
+- **Changed.** Added failure-only bounded diagnostics for the disposable CI anonymizer before cleanup, with exact container ownership validation and disposable-token redaction.
+- **Evidence.** All 36 collector and worker controls passed. Actual CLI refusal without a credential produced no Docker calls. Workflow review preserves existing startup, verification and cleanup steps while uploading diagnostic output after failure. [Change record](./runs/changes/2026-11-19-023205-capture-failed-personal-startup-94ee4f81.json).
+- **Not claimed.** No local container started. A new hosted startup failure still needs actual State, Health and stderr evidence before its cause can be established. This diagnostic cannot accept service health or complete a requirement.
+
+
 ### 2026-11-19-022119-bind-integrated-tag-tool-site-and-boundary-checks-ce4d2e69
 
 Recorded 2026-11-19T02:21:19.354115+00:00 · Contributor: Codex · change

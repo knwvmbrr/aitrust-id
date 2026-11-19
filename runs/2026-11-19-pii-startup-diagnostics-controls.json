@@ -1,0 +1,44 @@
+{
+  "kind": "pii_startup_diagnostic_controls",
+  "captured_at": "2026-11-19T02:31:40.468798+00:00",
+  "source_base": "6ebcbeb6aa15ea599b088c98078407703734d0f2",
+  "pass": true,
+  "focused_tests": 36,
+  "test_log_sha256": "e17f16350d7ab9e125e625d727053edc557d8d5ae8068ffa659f1eb0bfe48bd3",
+  "junit_sha256": "fd4548876a4416f208bfe6992174e8a9a8202873252f602ac50fea29eb83df43",
+  "sources": {
+    "scripts/diagnose-personal-startup.py": "4d75542132ba0eabad09a1002e5b227632a9885390c107d30ec370bb60ab2399",
+    "tests/test_personal_startup_diagnostics.py": "a13cbe510ab2b2b8bf4f37a257cfe4d640e3fd2fcbebf8807f65a8ee62041f91",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+    ".github/workflows/redaction-development.yml": "f4cbc6806ab7b3dcc8e493954107fab7bed0362a37fdd3164425bed22d63a440",
+    "docs/pii-startup-diagnostics-plan.md": "ba96ec2cd120a1300642636a92f4f70c61cac42143553cf710697aae716e9a41"
+  },
+  "actual_missing_token_cli": {
+    "kind": "personal_pipeline_startup_diagnostic",
+    "captured_at": "2026-11-19T02:31:40.405687+00:00",
+    "collection_state": "UNAVAILABLE",
+    "service_health_accepted": false,
+    "command_timeout_seconds": 10,
+    "command_output_limit_bytes": 65536,
+    "container": "aitrust-staging-anonymizer-1",
+    "commands": {},
+    "token_redacted": false,
+    "reason": "private_token_unavailable"
+  },
+  "actual_stderr_merge_and_supervisor_limits": true,
+  "docker_runtime_started": false,
+  "diagnostic_captured_from_actual_container": false,
+  "existing_compose_start_verification_cleanup_steps_preserved": true,
+  "primary_failure_preserved_by_failure_only_continue_on_error_step": true,
+  "runtime_resources_or_timeouts_changed": false,
+  "failed_hosted_run": {
+    "id": 44443814221,
+    "job": 135290927628,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44443814221/job/135290927628",
+    "observation": "Container reported unhealthy approximately 1.5 seconds after start. Runtime state and logs were not retained."
+  },
+  "service_health_accepted": false,
+  "independent_accuracy_evidence": false,
+  "original_requirements_closed": []
+}

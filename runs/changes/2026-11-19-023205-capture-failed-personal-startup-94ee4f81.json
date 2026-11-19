@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-023205-capture-failed-personal-startup-94ee4f81",
+  "recorded_at": "2026-11-19T02:32:05.009746+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6ebcbeb6aa15ea599b088c98078407703734d0f2",
+  "changed": "Added failure-only bounded diagnostics for the disposable CI anonymizer before cleanup, with exact container ownership validation and disposable-token redaction.",
+  "proves": "All 36 collector and worker controls passed. Actual CLI refusal without a credential produced no Docker calls. Workflow review preserves existing startup, verification and cleanup steps while uploading diagnostic output after failure.",
+  "limits": "No local container started. A new hosted startup failure still needs actual State, Health and stderr evidence before its cause can be established. This diagnostic cannot accept service health or complete a requirement.",
+  "scope_ids": [
+    "T-PII",
+    "F-023",
+    "F-040",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".github/workflows/redaction-development.yml": "f4cbc6806ab7b3dcc8e493954107fab7bed0362a37fdd3164425bed22d63a440",
+    "docs/pii-startup-diagnostics-plan.md": "ba96ec2cd120a1300642636a92f4f70c61cac42143553cf710697aae716e9a41",
+    "scripts/diagnose-personal-startup.py": "4d75542132ba0eabad09a1002e5b227632a9885390c107d30ec370bb60ab2399",
+    "tests/test_personal_startup_diagnostics.py": "a13cbe510ab2b2b8bf4f37a257cfe4d640e3fd2fcbebf8807f65a8ee62041f91",
+    "runs/2026-11-19-pii-startup-diagnostics-controls.json": "67ac326356b1626fbb66476f19c88f4eb8b07c1be189d8d3989533f25bf6c8d6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-pii-startup-diagnostics-controls.json",
+      "sha256": "67ac326356b1626fbb66476f19c88f4eb8b07c1be189d8d3989533f25bf6c8d6"
+    }
+  ],
+  "checks": []
+}
