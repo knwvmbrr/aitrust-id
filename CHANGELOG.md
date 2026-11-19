@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-055604-rolldown-source-notice-cohort-618cc86f
+
+Recorded 2026-11-19T05:56:04.492828+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Preserve the previously uncollected Rolldown third-party notice and bind 15 native addons plus wrapper to exact cached packages and pinned upstream source/build declarations.
+- **Evidence.** Actual replay of 16 locked npm archives and one pinned upstream source archive passed; 11 focused refusal controls passed. Both complete bundled license texts are retained byte for byte. [Change record](./runs/changes/2026-11-19-055604-rolldown-source-notice-cohort-618cc86f.json).
+- **Not claimed.** Supplemental source/notice observations only. Compiled Rust graph, platform/runtime terms, actual compiler identity, reproducible builds and distribution source-offer assembly remain unresolved. No permission or release clearance and no original requirement closure.
+
+
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
 
 Recorded 2026-11-19T05:26:23.351858+00:00 · Contributor: Codex · change

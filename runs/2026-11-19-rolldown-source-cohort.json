@@ -1,0 +1,99 @@
+{
+  "profile": "rolldown-source-cohort-execution/1.0.0",
+  "captured_at": "2026-11-19T05:55:54.808044+00:00",
+  "source_base": "4ae7a14d1738211969bbc9faca041c3afbf03b40",
+  "observed_by": "Codex dependency engineering lane",
+  "source_hashes": {
+    "tools/rolldown_cohort.py": "b6114cd0c04cd5a44533cc0e69e77c0071671e26507d60b947c4dc2bff4229d3",
+    "scripts/verify-rolldown-cohort.py": "520c0e60feac2c875076ee081ecf990f68d54ff76680fd4e5f49f51cb1a751d6",
+    "tests/test_rolldown_cohort.py": "84cc173cebb389a0b5e4bef9a27e3e0862218bb1716c3311ceafaa44040ad92c",
+    "docs/rolldown-source-review.md": "4acdb42db020ee4a118616a1f57f94b03f927207376e056b58559ec04d46ff47"
+  },
+  "manifest_sha256": "4d070b5ac69d4c964e98b49bf31bb47551cb3c18c2c47b1ac85e71259ab667f8",
+  "checks": [
+    {
+      "command": "python3 -B scripts/verify-rolldown-cohort.py",
+      "exit_code": 0,
+      "result": {
+        "pass": true,
+        "profile": "rolldown-platform-source-observations/1.0.0",
+        "package_archives": 16,
+        "native_addons": 15,
+        "binary_bytes_replayed": false,
+        "source_archive_replayed": false,
+        "notice_files": 2,
+        "source_texts": 10,
+        "permission_cleared": false,
+        "release_approved": false,
+        "complete_transitive_coverage": false,
+        "reproducible_build_verified": false,
+        "publisher_signature_verified": false,
+        "actual_toolchain_verified": false
+      }
+    },
+    {
+      "command": "python3 -B scripts/verify-rolldown-cohort.py --archive-dir <private npm cache> --source-dir <private pinned source cache>",
+      "exit_code": 0,
+      "result": {
+        "pass": true,
+        "profile": "rolldown-platform-source-observations/1.0.0",
+        "package_archives": 16,
+        "native_addons": 15,
+        "binary_bytes_replayed": true,
+        "source_archive_replayed": true,
+        "notice_files": 2,
+        "source_texts": 10,
+        "permission_cleared": false,
+        "release_approved": false,
+        "complete_transitive_coverage": false,
+        "reproducible_build_verified": false,
+        "publisher_signature_verified": false,
+        "actual_toolchain_verified": false
+      }
+    }
+  ],
+  "focused_tests": {
+    "command": "python3 -B -m unittest discover -s tests -p 'test_rolldown_cohort.py' -v",
+    "exit_code": 0,
+    "tests": 11,
+    "seconds": 0.292,
+    "initial_fixture_issue": "Initial positive fixture resolved through macOS /var symlink and was refused; test root was canonicalized. Production path checks were not relaxed."
+  },
+  "before": {
+    "generic_wrapper_notice_members": [
+      "package/LICENSE"
+    ],
+    "third_party_notice_bytes_present_in_locked_wrapper": 2209
+  },
+  "after": {
+    "preserved_complete_notice_files": 2,
+    "upstream_source_files": 10,
+    "native_addons_mapped": 15,
+    "wrapper_archives_mapped": 1
+  },
+  "upstream_archive": {
+    "filename": "rolldown-source.tar.gz",
+    "url": "https://codeload.github.com/rolldown/rolldown/tar.gz/f7de35f45bcd4cb8e4b6d8d11e74fbfb20b03127",
+    "final_url": "https://codeload.github.com/rolldown/rolldown/tar.gz/f7de35f45bcd4cb8e4b6d8d11e74fbfb20b03127",
+    "bytes": 6187960,
+    "sha256": "29639fa95586c660b38acb86d7ae6f5931dcee7cb91c8fd93a3c05fd6287eec0",
+    "captured_at": "2026-11-19T05:46:41.303184+00:00",
+    "publisher_signature_verified": false,
+    "archive_checksum_basis": "observed_sha256_not_independent_publisher_checksum"
+  },
+  "limits": [
+    "Native addons and package scripts were never executed.",
+    "Supplemental exact notices are preserved; prior generic notice inventory remains unchanged.",
+    "Whole-workspace Cargo lock is not a target-specific compiled dependency graph.",
+    "Source snapshots and declared toolchains do not establish binary equivalence or compiler authenticity.",
+    "Transitive/native/platform obligations and distribution source-offer assembly remain unresolved."
+  ],
+  "permission_cleared": false,
+  "release_approved": false,
+  "complete_transitive_coverage": false,
+  "original_scope_completion_claimed": false,
+  "binary_or_package_script_executed": false,
+  "packages_installed": false,
+  "production_mutated": false,
+  "source_archives_private": true
+}
