@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-165341-fixture-close-ownership-correction-d21e80ce",
+  "recorded_at": "2026-11-19T16:53:41.951575+00:00",
+  "author": "Codex site fixture lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "58f9cd639addaad1961d2e3922dd7daed61896fc",
+  "changed": "Corrected HEAD and request-error descriptor cleanup: relinquish ownership before attempting close, never retry a close-failed numeric descriptor, and destroy the response safely when cleanup is uncertain.",
+  "proves": "Preserved the actual failing-before counterexample with two close attempts and a lost reused marker descriptor. Corrected actual HEAD injection attempts close once and preserves the exact reused owned marker; all ten focused HTTP/CLI groups pass, including pre-response cleanup uncertainty. The streamed GET implementation is unchanged.",
+  "limits": "Fixture-only correction; no product/probe changes or broad suite. Close failure leaves the OS outcome uncertain, so no completed-close guarantee is claimed. Earlier HP semantic proof remains historical and is not relabeled as current server-source replay. PM owns reopened fixture source review and CI.",
+  "scope_ids": [
+    "F-054",
+    "F-139",
+    "T-HP"
+  ],
+  "files": {
+    "runs/2026-11-19-site-fixture-close-ownership-corrected.json": "7df3ba7ce06b8907d692664a65fe7e21483ab3fa28f0af885c623540f9ec959d",
+    "runs/2026-11-19-site-fixture-head-close-before.json": "f6fdd5cc7a71ac7e138ef6736b8b103126c545c2c4223f6f03ef5e473b6a2a99",
+    "scripts/site-fixture-server.cjs": "225d45cf1e6013c08190db9a8cbce88b3fcc8e526cf81d3dc02800c3cff4bfde",
+    "tests/site-fixture-server.cjs": "c7a5811588240362185bebfe2917df1f83c7ab1cbfac71051c0edb1be4b1758c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-site-fixture-head-close-before.json",
+      "sha256": "f6fdd5cc7a71ac7e138ef6736b8b103126c545c2c4223f6f03ef5e473b6a2a99"
+    },
+    {
+      "path": "runs/2026-11-19-site-fixture-close-ownership-corrected.json",
+      "sha256": "7df3ba7ce06b8907d692664a65fe7e21483ab3fa28f0af885c623540f9ec959d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/site-fixture-server.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T16:53:42.173428+00:00"
+    }
+  ]
+}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-165341-fixture-close-ownership-correction-d21e80ce
+
+Recorded 2026-11-19T16:53:41.951575+00:00 · Contributor: Codex site fixture lane · change
+
+- **Changed.** Corrected HEAD and request-error descriptor cleanup: relinquish ownership before attempting close, never retry a close-failed numeric descriptor, and destroy the response safely when cleanup is uncertain.
+- **Evidence.** Preserved the actual failing-before counterexample with two close attempts and a lost reused marker descriptor. Corrected actual HEAD injection attempts close once and preserves the exact reused owned marker; all ten focused HTTP/CLI groups pass, including pre-response cleanup uncertainty. The streamed GET implementation is unchanged. [Change record](./runs/changes/2026-11-19-165341-fixture-close-ownership-correction-d21e80ce.json).
+- **Not claimed.** Fixture-only correction; no product/probe changes or broad suite. Close failure leaves the OS outcome uncertain, so no completed-close guarantee is claimed. Earlier HP semantic proof remains historical and is not relabeled as current server-source replay. PM owns reopened fixture source review and CI.
+
+
 ### 2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52
 
 Recorded 2026-11-19T16:41:59.413341+00:00 · Contributor: Codex site fixture lane · change
