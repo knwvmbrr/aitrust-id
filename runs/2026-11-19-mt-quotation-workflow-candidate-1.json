@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-11-19T18:28:38.603957+00:00",
+  "pass": false,
+  "check": "pytest tests/test_mt_quotation_workflow.py tests/test_mt_workflow.py tests/test_authority_quotation.py",
+  "observed_summary": "1 failed,79 passed in4.61s",
+  "source_sha256": {
+    "tools/mt_workflow.py": "6045e624a3b9d8bf6dbc0ed38e5f56ee39e1d2b024d618e196f54f5864bcd39c",
+    "tools/mt_quotation_component.py": "cde1cddf716b128e68bb7b1c5b8e95b7c4c89b90e0f0794dbef6e1ac6bf3809f",
+    "scripts/mt-evidence-worker.py": "f4ccabc629b1c93a82a9e4900c279f2b9a9190768831fa7777c4270501af1d68",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "tests/test_mt_quotation_workflow.py": "b30fbe25691bc99a02a843ee9cca9bc72ca52098ec3d3c13c6981f88fe7e7a1d"
+  },
+  "failed_assertion": "Record-budget refusal test expected urgency NO_SUPPORTED_PATTERN, but existing unchanged urgency returns OBSERVATIONS:1 directive in2 literal units reaches its declared0.5 threshold.",
+  "fix": "Correct authored test expectation only; preserve actual urgency behavior and the candidate record-budget refusal.",
+  "canonical_methods_changed": false
+}

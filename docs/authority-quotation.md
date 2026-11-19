@@ -3,7 +3,10 @@
 This optional, local command separates supported authority phrases inside ASCII
 double quotes from phrases outside them. It helps inspect a quotation-context
 gap in the older authority observation; it does not issue MT or other tags.
-It is not selected automatically by `check-mt-evidence.py`.
+It is not selected automatically by `check-mt-evidence.py`. The combined workflow
+now accepts the separate explicit `--check authority-quotation` option, with a
+versioned full-record adapter and bounded canonical replay; see
+[the workflow guide](https://github.com/knwvmbrr/aitrust-id/blob/main/docs/mt-quotation-workflow.md).
 
 Use Python 3 from the repository root. Supply selected English text through stdin:
 

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-183843-selected-quotation-framing-workflow-eba9c75f
+
+Recorded 2026-11-19T18:38:43.500483+00:00 · Contributor: Codex MT tag lane · change
+
+- **Changed.** Added explicit authority-quotation selection to the existing independent framing CLI, with a separate versioned context envelope, complete canonical record, raw/frozen-NFC/source binding, closed validation and actual bounded full-record canonical replay. Legacy methods, selections and browser/device sources remain unchanged.
+- **Evidence.** 82 affected Python controls,15 actual new-route CLI controls and11 existing CLI controls pass on frozen source. Coherent forged omissions/context modifications are rejected by replay; unsupported syntax, broken optional source and worker/replay failures leave selected siblings operational. Private full-record export and no-overwrite were exercised. First authored expectation failure is preserved. [Change record](./runs/changes/2026-11-19-183843-selected-quotation-framing-workflow-eba9c75f.json).
+- **Not claimed.** No MT tag, semantic intent/endorsement or independent agreement/accuracy; same-method replay is not independent corroboration. No scope percentage, shared site/state or deployment changes. Human/owner MT gates remain open; the engineering baseline verifier requires Git history while the checker itself does not.
+
+
 ### 2026-11-19-173627-tag-bots-state-closeout-3bc059bd
 
 Recorded 2026-11-19T17:36:27.015784+00:00 · Contributor: Codex · change

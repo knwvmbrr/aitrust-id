@@ -1,0 +1,120 @@
+{
+  "captured_at": "2026-11-19T18:36:48.906753+00:00",
+  "format": "mt-quotation-workflow-controls/v1",
+  "pass": true,
+  "source_sha256": {
+    "tools/mt_workflow.py": "454549459f33e94caf5522ee59bc6ec2678dfe38b40844f10d659b71efe7f7a7",
+    "tools/mt_quotation_component.py": "cde1cddf716b128e68bb7b1c5b8e95b7c4c89b90e0f0794dbef6e1ac6bf3809f",
+    "scripts/mt-evidence-worker.py": "f4ccabc629b1c93a82a9e4900c279f2b9a9190768831fa7777c4270501af1d68",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "scripts/verify-mt-quotation-workflow.py": "9fff6b939dea1cbf69a301c5113747123393c5b5629dec66d144f6a4773e14cc",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "tools/choice_framing.py": "0ba444f77f832fa7dc7967f0ada24457f21340f58d62597ec527fc44cfb2c122",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "tests/test_mt_quotation_workflow.py": "c283d1d2d8d9d235c51dd6d2457583e2b819e8ea019b7e84128ba48108a21248",
+    "tests/test_mt_workflow.py": "c57cd278c3e46827a823b32fd7cb1de97c709b68271b2c894a16a08fc7b6fd03",
+    "tests/test_authority_quotation.py": "5a9bdd12a8027f071d37fab1b625768640efad3a66308c5732334018bf09d93c",
+    "docs/mt-quotation-workflow.md": "da4f3ec6254575e069cc023d5f602a35dc689c097fed1d69380182f7ad1c5e17",
+    "docs/mt-evidence-workflow.md": "ca01fcfcc7deeacc8862be47e72c52d57f4d6ca1efafe67534aa4fc901dda6c7",
+    "docs/authority-quotation.md": "485cd38466ce5d2a65a30687a893724fef3330bc17545088f65ad2218e14fa14"
+  },
+  "source_unchanged_during_execution": true,
+  "actual_cli_controls": [
+    {
+      "id": "committed_baseline_option_unavailable",
+      "observed_exit_status": 2,
+      "pass": true
+    },
+    {
+      "id": "selected_quote_retained",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "legacy_authority_preserved",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "quoted_marker_not_borrowed",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "outside_marker_retained_unverified",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "unsupported_quote_partial_not_global",
+      "observed_exit_status": 3,
+      "pass": true
+    },
+    {
+      "id": "unsupported_quote_not_zero",
+      "observed_exit_status": 2,
+      "pass": true
+    },
+    {
+      "id": "no_supported_phrase_is_not_a_verdict",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "invalid_utf8_refused",
+      "observed_exit_status": 2,
+      "pass": true
+    },
+    {
+      "id": "duplicate_selection_refused",
+      "observed_exit_status": 2,
+      "pass": true
+    },
+    {
+      "id": "full_record_budget_refused_not_clipped",
+      "observed_exit_status": 2,
+      "pass": true
+    },
+    {
+      "id": "explicit_private_full_record",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "private_no_overwrite",
+      "observed_exit_status": 2,
+      "pass": true
+    },
+    {
+      "id": "prepare_existing_synthetic_choice_context",
+      "observed_exit_status": 0,
+      "pass": true
+    },
+    {
+      "id": "all_four_explicit_checks_complete",
+      "observed_exit_status": 0,
+      "pass": true
+    }
+  ],
+  "python": "3.12.14",
+  "platform": "Darwin",
+  "authored_synthetic_only": true,
+  "baseline_commit": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
+  "canonical_method_unchanged": "ascii-quoted-authority-observations/1.0.0",
+  "complete_canonical_private_record_checked": true,
+  "raw_and_frozen_NFC_bound": true,
+  "private_no_overwrite_checked": true,
+  "MT_tag_asserted": false,
+  "intent_or_semantic_endorsement_established": false,
+  "independent_accuracy_evidence": false,
+  "independent_corroboration": false,
+  "human_agreement_measured": false,
+  "OS_network_sandbox_exercised": false,
+  "scope_percentages_changed": false
+}
