@@ -9,6 +9,13 @@ Recorded 2026-11-19T15:33:01.556268+00:00 · Contributor: Codex · change
 - **Changed.** Added separate tag queues and a task-list lead with strict session delivery accounting, frozen baseline criteria and current reviewed evidence.
 - **Evidence.** 39 focused controls and actual inspect/check-session commands pass their expected results; independent review reproduced and verified corrections to self-review and argument disclosure. [Change record](./runs/changes/2026-11-19-153301-session-delivery-accounting-7c0e9026.json).
 - **Not claimed.** 132 original requirements remain complete and 70 open. No tag release or original requirement closure is approved by this accounting tool; strict session goal remains unmet.
+### 2026-11-19-153047-hp-on-device-literal-details-90157d57
+
+Recorded 2026-11-19T15:30:47.416628+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Built an independent on-device HP literal-detail explorer with exact unmodified quantitative Python, raw and frozen-NFC identity binding, closed result validation, private optional evidence, scoped lazy failure containment and safe source/notice packaging.
+- **Evidence.** 77 focused Python checks and 10 Node groups passed; actual Chromium and WebKit each matched 28 full native-Python records/refusals and passed 5 corrupt-result UI cases, cancellation, privacy, import/render/worker failure and responsive controls. Original LICENSE/NOTICE/Unicode notices are packaged exactly. Four 390px light/dark screenshots were inspected. [Change record](./runs/changes/2026-11-19-153047-hp-on-device-literal-details-90157d57.json).
+- **Not claimed.** No HP assertion, semantic specificity or source-support judgment, independent accuracy, physical-phone/human accessibility acceptance, production mounting, license clearance or parent requirement completion. Initial runtime delivery still needs network. F-015 and T-HP release acceptance remains open.
 
 
 ### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37
