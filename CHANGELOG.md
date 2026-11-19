@@ -90,6 +90,23 @@ Recorded 2026-11-19T05:56:04.492828+00:00 · Contributor: Codex dependency engin
 - **Evidence.** Actual replay of 16 locked npm archives and one pinned upstream source archive passed; 11 focused refusal controls passed. Both complete bundled license texts are retained byte for byte. [Change record](./runs/changes/2026-11-19-055604-rolldown-source-notice-cohort-618cc86f.json).
 - **Not claimed.** Supplemental source/notice observations only. Compiled Rust graph, platform/runtime terms, actual compiler identity, reproducible builds and distribution source-offer assembly remain unresolved. No permission or release clearance and no original requirement closure.
 
+### 2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe
+
+Recorded 2026-11-19T06:10:08.540495+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Preflight bounded C2PA ZIP directories before ZipInfo allocation and suppress malformed CLI argument echoes.
+- **Evidence.** 59 focused tests and actual current cache replay pass; oversized or inconsistent directories refuse before ZipFile is called, malformed private canary receives a fixed refusal, and original artifact/notice observations stay identical. [Change record](./runs/changes/2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe.json).
+- **Not claimed.** Finite classic ZIP profile explicitly refuses ZIP64, split disks, comments, trailing data and unsupported structures. No native graph, compiler, source-offer, permission or original scope clearance. Prior evidence retained unchanged.
+
+
+### 2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da
+
+Recorded 2026-11-19T06:02:15.686376+00:00 · Contributor: Codex - C2PA evidence engineering lane · change
+
+- **Changed.** Bind the finite optional C2PA Python/native cohort to exact wheel, source, notice and native release artifacts with a bounded offline verifier.
+- **Evidence.** 47 focused checks and four actual CLI controls pass; 14 wheels, 10 source distributions, two native release byte matches and 309 Python-file matches are replayed without package execution. [Change record](./runs/changes/2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da.json).
+- **Not claimed.** Engineering evidence only: no license permission, resolved native graph, source offers, reproducible build, publisher authentication, tag release or full X-02/F-057 closure. Scope/state/selectors unchanged.
+
 
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e
 

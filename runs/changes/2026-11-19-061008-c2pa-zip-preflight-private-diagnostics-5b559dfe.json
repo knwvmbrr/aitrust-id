@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe",
+  "recorded_at": "2026-11-19T06:10:08.540495+00:00",
+  "author": "Codex dependency engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d127e70e5acf3b8e9d0be742fdf425723e9171a7",
+  "changed": "Preflight bounded C2PA ZIP directories before ZipInfo allocation and suppress malformed CLI argument echoes.",
+  "proves": "59 focused tests and actual current cache replay pass; oversized or inconsistent directories refuse before ZipFile is called, malformed private canary receives a fixed refusal, and original artifact/notice observations stay identical.",
+  "limits": "Finite classic ZIP profile explicitly refuses ZIP64, split disks, comments, trailing data and unsupported structures. No native graph, compiler, source-offer, permission or original scope clearance. Prior evidence retained unchanged.",
+  "scope_ids": [
+    "X-02",
+    "F-057"
+  ],
+  "files": {
+    "docs/c2pa-cohort-review.md": "984fd51db2a9ae2d288964e89b02f15ba0bdae11307c3627bda650619a376c70",
+    "runs/2026-11-19-c2pa-parser-privacy-correction.json": "b759256d0cf0558c7122bde9a688f4bf0b4b0d1c189765c7c8e75f9aa1d70404",
+    "sbom/c2pa/manifest.json": "5b2074cc8385cb66429b7af35cbe1ea7c0a7286f35a184556e495246fa0d5188",
+    "scripts/verify-c2pa-cohort.py": "e4ee3c5caf47f267abd708053306a3f23f1e432564e35f2f7225b2c5be44ba3a",
+    "tests/test_c2pa_cohort.py": "6e05c34404ff4b2c15beb0c9b40a6e6dda145b78aee16e03fcd21a6a99674c98",
+    "tools/c2pa_cohort.py": "b9fabb46d7d2e5dab4e6b6ecbf328f10dc659886d1fec7a75fd4c6ac055fd643"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-c2pa-parser-privacy-correction.json",
+      "sha256": "b759256d0cf0558c7122bde9a688f4bf0b4b0d1c189765c7c8e75f9aa1d70404"
+    },
+    {
+      "path": "sbom/c2pa/manifest.json",
+      "sha256": "5b2074cc8385cb66429b7af35cbe1ea7c0a7286f35a184556e495246fa0d5188"
+    }
+  ],
+  "checks": []
+}
