@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-081457-synchronize-publication-state-timestamps-cbede663
+
+Recorded 2026-11-19T08:14:57.703543+00:00 · Contributor: Codex · change
+
+- **Changed.** Synchronize both required state timestamps after recording actual MT publication.
+- **Evidence.** The accountability guard passes all referenced evidence chronology and 132 complete / 70 open. CI caught the earlier metadata update changing updated_at alone; the same strict guard is retained. [Change record](./runs/changes/2026-11-19-081457-synchronize-publication-state-timestamps-cbede663.json).
+- **Not claimed.** Metadata correction only; the deployed source and successful live controls are unchanged. No full requirement or release gate closes.
+
+
 ### 2026-11-19-081236-record-live-independent-mt-wording-preview-5eb800bf
 
 Recorded 2026-11-19T08:12:36.084343+00:00 · Contributor: Codex · change
