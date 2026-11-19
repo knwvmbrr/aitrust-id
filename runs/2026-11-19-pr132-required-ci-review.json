@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-19T17:13:38.092138+00:00",
+  "profile": "pr132-required-engineering-checks-readonly-review/v1",
+  "pass": true,
+  "pass_scope": "All eleven configured required engineering checks only; not overall workflow or release approval",
+  "reviewed_by": "/root/seo",
+  "repository": "knwvmbrr/aitrust-id",
+  "pull_request": 132,
+  "reviewed_head": "c243d895c0f56c5d667432ce9e77b4291e51f6d1",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "4f11b50ac0d951d98305b83c7df733415d02002ab07629f0471252a8ae1a1533",
+    "scripts/site-fixture-server.cjs": "225d45cf1e6013c08190db9a8cbce88b3fcc8e526cf81d3dc02800c3cff4bfde",
+    "scripts/verify-built-website.cjs": "eb0e51971f685e0a11963a3230af8834e14b29af601995700716ed2d247c9724",
+    "scripts/hp-site-controls.cjs": "7c822eb76bbdb8e4e165be7ef6bc8108d531a305fb7831464499029c927c310c",
+    "tools/nf_source_evidence.py": "c69d9bb1d555aa1c6048a4dede9312229fa01b5b4905e1ef912010b17885b046"
+  },
+  "pull_request_observation": {
+    "headRefOid": "c243d895c0f56c5d667432ce9e77b4291e51f6d1",
+    "mergeStateStatus": "UNSTABLE",
+    "reviewDecision": "",
+    "state": "OPEN",
+    "url": "https://github.com/knwvmbrr/aitrust-id/pull/132"
+  },
+  "workflow_run": {
+    "id": 44573701906,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906",
+    "head_sha": "c243d895c0f56c5d667432ce9e77b4291e51f6d1",
+    "status": "completed",
+    "conclusion": "failure",
+    "created_at": "2026-11-19T17:07:22Z",
+    "updated_at": "2026-11-19T17:12:16Z"
+  },
+  "required_checks": [
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355412",
+      "name": "accessibility",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355177",
+      "name": "change-records",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355388",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355616",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355340",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355335",
+      "name": "host-config",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355283",
+      "name": "no-egress",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735354738",
+      "name": "regressions",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355331",
+      "name": "scope-plan",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355272",
+      "name": "site",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44573701906/job/135735355097",
+      "name": "spec",
+      "state": "SUCCESS",
+      "workflow": "ci"
+    }
+  ],
+  "required_counts": {
+    "total": 11,
+    "pass": 11,
+    "fail": 0,
+    "pending": 0
+  },
+  "review_threads": {
+    "total": 1,
+    "unresolved": 0,
+    "pagination_complete": true,
+    "threads": [
+      {
+        "id": "PRRT_kwDOVBYh3s65mLIz",
+        "isResolved": true,
+        "isOutdated": true,
+        "path": "tools/nf_source_evidence.py",
+        "comments": {
+          "nodes": [
+            {
+              "url": "https://github.com/knwvmbrr/aitrust-id/pull/132#discussion_r4631786446"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "nonrequired_failed_jobs": [
+    {
+      "name": "gates",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Require actual accessibility release evidence",
+        "Assess statistical evidence even when accessibility refuses release"
+      ]
+    }
+  ],
+  "prior_failed_run_preserved": {
+    "id": 44565992666,
+    "head": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+    "required_pass": 10,
+    "required_failed": [
+      "site"
+    ],
+    "exact_site_error": "HP site open: Built-site CSP missing",
+    "subsequent_correction": "Header-aware fixture replaces plain CI static server; strict HP CSP assertion retained. NF unavailable count corrected separately."
+  },
+  "reviewer_actions": {
+    "rerun": false,
+    "comment": false,
+    "thread_resolution": false,
+    "merge": false,
+    "source_edit": false,
+    "deployment": false
+  },
+  "limitations": {
+    "tag_release_approved": false,
+    "independent_accuracy_approved": false,
+    "certification_operating_claim": false,
+    "original_requirements_closed": 0,
+    "publication_or_parent_task_closure_claimed": false
+  }
+}

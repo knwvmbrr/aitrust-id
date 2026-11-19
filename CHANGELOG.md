@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-173627-tag-bots-state-closeout-3bc059bd
+
+Recorded 2026-11-19T17:36:27.015784+00:00 · Contributor: Codex · change
+
+- **Changed.** Set the dated delivery state to verified implementation completion while keeping the unmet original requirement target explicit.
+- **Evidence.** Published92be88d has exact live HTTP/browser evidence; current accounting records9scoped deliverables and0original closures, with source-bound metadata verification passed. [Change record](./runs/changes/2026-11-19-173627-tag-bots-state-closeout-3bc059bd.json).
+- **Not claimed.** No background specialist processes or new independently validated tags are claimed.70original requirements remain open. Git bookkeeping does not redeploy the site.
+
+
+### 2026-11-19-173534-tag-bots-bookkeeping-verified-6d6cd0e9
+
+Recorded 2026-11-19T17:35:34.891866+00:00 · Contributor: Codex · change
+
+- **Changed.** Verified the final task-board/publication bookkeeping against current source and retained the published implementation identity.
+- **Evidence.** Live accounting identifies9distinct completed scoped tasks,0original closures and70open originals. All46closeout website commands pass; the1316implementation input hashes are unchanged and reviewed boundaries pass with current metadata evidence. [Change record](./runs/changes/2026-11-19-173534-tag-bots-bookkeeping-verified-6d6cd0e9.json).
+- **Not claimed.** The strict original-closure goal remains unmet. These are Git bookkeeping records, not a newer live deployment or independent tag acceptance; the site remains the verified92be88d source.
+
+
+### 2026-11-19-172842-verified-tag-bots-publication-closeout-6c0c11b8
+
+Recorded 2026-11-19T17:28:42.363742+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded protected publication, exact live verification and all completed named tag-worker jobs; refreshed the dated task board and ownership state.
+- **Evidence.** PR132 merged reviewed headc243d895 as92be88d after11required passes and zero unresolved findings. Both origins match322artifacts each; production browser executes HP and neighbouring PS/MT with reviewed headers. Nine scoped deliverables have dated distinct-reviewer evidence. [Change record](./runs/changes/2026-11-19-172842-verified-tag-bots-publication-closeout-6c0c11b8.json).
+- **Not claimed.** Original totals remain132complete/70open with zero original closures and the60-open target unmet. No independent tag release, physical-phone or human-screen-reader acceptance. This follow-up records Git operations metadata; it does not claim a newer site deployment.
+
+
 ### 2026-11-19-170538-corrected-tag-integration-ready-for-ci-0b4e8ceb
 
 Recorded 2026-11-19T17:05:38.583300+00:00 · Contributor: Codex · change
