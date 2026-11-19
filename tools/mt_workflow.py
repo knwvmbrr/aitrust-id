@@ -6,11 +6,14 @@ from pathlib import Path
 import runpy
 import subprocess
 import sys
+import time
 
 from protocol.normalization import normalize_nfc, NORMALIZATION_ID
 
 ROOT = Path(__file__).resolve().parents[1]
-COMPONENTS = ('urgency', 'authority', 'choice')
+QUOTATION = 'authority-quotation'
+COMPONENTS = ('urgency', 'authority', 'choice', QUOTATION)
+CONTEXT_PROFILE = 'independent-framing-context-evidence/v1'
 PROFILE = 'independent-framing-evidence/v1'
 MAX_BYTES = 32000
 MAX_CHARACTERS = 8000
@@ -64,6 +67,10 @@ def identity(kind):
              'tools/language_observations.py', 'protocol/corpus.py']
     if kind == 'choice':
         files.extend(['tools/choice_framing.py', 'tools/blind_review_io.py'])
+    if kind == QUOTATION:
+        files.extend(['tools/mt_quotation_component.py', 'tools/authority_quotation.py',
+                      'scripts/authority-quotation.py', 'tools/blind_review_io.py',
+                      'scripts/check-mt-evidence.py'])
     return {name: sha((ROOT / name).read_bytes()) for name in files}
 
 
@@ -81,7 +88,21 @@ def valid_hash(value):
     return isinstance(value, str) and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
 
 
-def validate(row, kind, text, sources):
+def validate(row, kind, text, sources, *, replay_timeout=DEADLINE):
+    if kind == QUOTATION:
+        from tools.mt_quotation_component import validate_shape, expected_replay, canonical_json
+        validate_shape(row, text, sources, LIMITS)
+        request = json.dumps({'component': kind, 'subject': text,
+                              'packet': {'replay_record': row}}, allow_nan=False, separators=(',', ':')).encode()
+        if len(request) > 200000:
+            raise ValueError('Quotation replay request exceeds its budget')
+        child = SUPERVISE([sys.executable, '-I', '-S', '-B', str(ROOT / 'scripts/mt-evidence-worker.py')],
+                          input=request, timeout=replay_timeout, output_limit=OUTPUT_LIMIT)
+        if (child.returncode != 0 or identity(kind) != sources
+                or canonical_json(parse(child.stdout)) != canonical_json(expected_replay(text, sources))):
+            raise ValueError('Canonical quotation replay unavailable')
+        return row
+
     keys = {'component', 'state', 'method', 'subject_sha256', 'normalization_id',
             'observations', 'sources', 'context_selection_performed', 'limitations'}
     if (not isinstance(row, dict) or set(row) != keys or row['component'] != kind
@@ -127,20 +148,33 @@ def run_component(kind, text, packet=None, *, deadline=DEADLINE):
     try:
         # A broken optional choice module is loaded only in its child. Its failure
         # cannot invalidate the urgency/authority result or invoke another tag.
+        if kind == QUOTATION and (type(deadline) not in (int, float) or not 0 < deadline <= 60):
+            raise ValueError('Invalid quotation deadline')
+        started = time.monotonic()
         before = identity(kind)
         request = json.dumps({'component': kind, 'subject': text,
                               'packet': str(packet) if packet is not None else None}, allow_nan=False).encode()
+        first_budget = deadline - (time.monotonic() - started) if kind == QUOTATION else deadline
+        if first_budget <= 0:
+            raise ValueError('Component deadline exhausted')
         child = SUPERVISE([sys.executable, '-I', '-S', '-B', str(ROOT / 'scripts/mt-evidence-worker.py')],
-                          input=request, timeout=deadline, output_limit=OUTPUT_LIMIT)
+                          input=request, timeout=first_budget, output_limit=OUTPUT_LIMIT)
         if child.returncode != 0 or identity(kind) != before:
             raise ValueError('Changed or failed worker')
-        return validate(parse(child.stdout), kind, text, before)
+        remaining = deadline - (time.monotonic() - started) if kind == QUOTATION else deadline
+        if remaining <= 0:
+            raise ValueError('Component deadline exhausted')
+        result = validate(parse(child.stdout), kind, text, before, replay_timeout=remaining)
+        if kind == QUOTATION and identity(kind) != before:
+            raise ValueError('Method changed during validation')
+        return result
     except (OSError, ValueError, TypeError, KeyError, RuntimeError, ImportError,
             UnicodeError, RecursionError, subprocess.SubprocessError):
         return unavailable(kind)
 
 
 def check(text, components, language, packet=None):
+    original = text
     text = subject(text, language)
     if (not isinstance(components, (list, tuple)) or not components
             or len(components) > len(COMPONENTS) or any(v not in COMPONENTS for v in components)
@@ -148,7 +182,7 @@ def check(text, components, language, packet=None):
         raise ValueError('Explicit supported component selection required')
     rows = {}
     with ThreadPoolExecutor(max_workers=len(components)) as pool:
-        pending = {pool.submit(run_component, kind, text, packet if kind == 'choice' else None): kind
+        pending = {pool.submit(run_component, kind, original if kind == QUOTATION else text, packet if kind == 'choice' else None): kind
                    for kind in components}
         for future in as_completed(pending):
             kind = pending[future]
@@ -158,13 +192,24 @@ def check(text, components, language, packet=None):
                 rows[kind] = unavailable(kind)
     checks = [rows[kind] for kind in components]
     failed = sum(r['state'] == 'UNAVAILABLE' for r in checks)
-    return {'format': PROFILE, 'state': 'UNAVAILABLE' if failed == len(checks) else 'PARTIAL' if failed else 'COMPLETE',
+    result = {'format': CONTEXT_PROFILE if QUOTATION in components else PROFILE, 'state': 'UNAVAILABLE' if failed == len(checks) else 'PARTIAL' if failed else 'COMPLETE',
             'language': language, 'subject_sha256': sha(text.encode()), 'subject_characters': len(text),
             'normalization_id': NORMALIZATION_ID, 'span_units': 'NFC_unicode_codepoints',
             'checks': checks, 'text_included': False, **LIMITS}
+    if QUOTATION in components:
+        result.update(raw_subject_sha256=sha(original.encode('utf-8')),
+                      raw_subject_characters=len(original), raw_subject_bytes=len(original.encode('utf-8')))
+    return result
 
 
 def brief(row):
     if row['state'] == 'UNAVAILABLE':
-        return row['component'].capitalize() + ': unavailable. Other selected checks are separate.'
+        label = 'Authority quotation' if row['component'] == QUOTATION else row['component'].capitalize()
+        return label + ': unavailable. Other selected checks are separate.'
+    if row['component'] == QUOTATION:
+        counts = row['counts']
+        return ('Authority quotation: ' + str(counts['quoted_phrase_count']) + ' quoted phrase(s); '
+                + str(counts['outside_supported_quotes_without_marker']) + ' outside phrase(s) without a local marker; '
+                + str(counts['outside_supported_quotes_with_marker']) + ' outside phrase(s) with a marker. '
+                'Placement does not establish endorsement; sources are not verified.')
     return row['component'].capitalize() + ': ' + MESSAGES[row['component']][row['state'] != 'OBSERVATIONS']

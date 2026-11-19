@@ -2,6 +2,23 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-184040-reviewed-mt-quotation-integration-8cab0e54
+
+Recorded 2026-11-19T18:40:40.117912+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate the independent quotation-aware MT workflow and preserve its original author commit and evidence history.
+- **Evidence.** A separate PM review executes five canonical/raw-identity/forgery/type/isolation controls against unchanged frozen method and adapter sources; no new tag or combined confidence is asserted. [Change record](./runs/changes/2026-11-19-184040-reviewed-mt-quotation-integration-8cab0e54.json).
+- **Not claimed.** This completes a selected offline engineering job, not contextual MT interpretation, independent agreement, human operation or either full original requirement.
+
+
+### 2026-11-19-183843-selected-quotation-framing-workflow-eba9c75f
+
+Recorded 2026-11-19T18:38:43.500483+00:00 · Contributor: Codex MT tag lane · change
+
+- **Changed.** Added explicit authority-quotation selection to the existing independent framing CLI, with a separate versioned context envelope, complete canonical record, raw/frozen-NFC/source binding, closed validation and actual bounded full-record canonical replay. Legacy methods, selections and browser/device sources remain unchanged.
+- **Evidence.** 82 affected Python controls,15 actual new-route CLI controls and11 existing CLI controls pass on frozen source. Coherent forged omissions/context modifications are rejected by replay; unsupported syntax, broken optional source and worker/replay failures leave selected siblings operational. Private full-record export and no-overwrite were exercised. First authored expectation failure is preserved. [Change record](./runs/changes/2026-11-19-183843-selected-quotation-framing-workflow-eba9c75f.json).
+- **Not claimed.** No MT tag, semantic intent/endorsement or independent agreement/accuracy; same-method replay is not independent corroboration. No scope percentage, shared site/state or deployment changes. Human/owner MT gates remain open; the engineering baseline verifier requires Git history while the checker itself does not.
+
 ### 2026-11-19-183441-android-prerequisite-review-complete-b55d55a1
 
 Recorded 2026-11-19T18:34:41.316246+00:00 · Contributor: Codex · change
