@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-154458-hp-built-site-integration-verified-36288c66
+
+Recorded 2026-11-19T15:44:58.028506+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Completed built-site HP method-preview integration with calm Claim details display, original formal name, preparation, public guide, generated index, scoped availability and npm controls; kept NF offline guide copy separate from its planned tag.
+- **Evidence.** Fresh site build passed. Source-stable actual Chromium and WebKit controls each matched five complete native HP records, verified opt-in details/cancellation/privacy and 320px enlarged controls, then ran real PS and MT checks after the actual HP child chunk failed. Final light/dark/enlarged snapshots were inspected; original HP/PS/MT sources are unchanged. Initial build and visual failures are preserved. [Change record](./runs/changes/2026-11-19-154458-hp-built-site-integration-verified-36288c66.json).
+- **Not claimed.** No HP or NF production tag assertion, independent accuracy, human/physical-device acceptance or full requirement closure. No deployment was performed. Temporary NF guide is untracked, not Git-ignored; PM must integrate its actual source and preparation before publication. No broad suite rerun.
+
+
+### 2026-11-19-154303-hp-phone-title-and-generated-reference-80c6cbb5
+
+Recorded 2026-11-19T15:43:03.076854+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Used Claim details as the HP display name while retaining formal Hallucination possible and its original job/claim/release. Added deterministic generated index/HP reference coverage and awaited actual dark-theme application before screenshots.
+- **Evidence.** First built-site Chromium/WebKit checks each passed five whole-record comparisons, privacy/cancellation and successful actual PS and MT checks after an HP chunk refusal. Visual review separately found the long title breaking at 200% and a premature dark screenshot; the affected presentation/proof is being refreshed. [Change record](./runs/changes/2026-11-19-154303-hp-phone-title-and-generated-reference-80c6cbb5.json).
+- **Not claimed.** No core method change or rerun, HP tag promotion, independent accuracy or human/physical-device acceptance. Pending NF source/prepare integration remains PM-owned.
+
+
+### 2026-11-19-154031-hp-build-reference-and-disclosure-check-316dedd2
+
+Recorded 2026-11-19T15:40:31.698179+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Corrected the HP pre-result disclosure assertion: private evidence remains absent until a result. Preserved the initial build refusal for the pending NF reference; the isolated verification build uses the exact frozen NF guide as an ignored input, with real source/preparation integration retained as a PM publication prerequisite.
+- **Evidence.** Initial actual build refused a missing public NF reference rather than publishing an absent guide. Corrected source syntax passes; no HP core method changed. [Change record](./runs/changes/2026-11-19-154031-hp-build-reference-and-disclosure-check-316dedd2.json).
+- **Not claimed.** No deployment or independent tag accuracy. The pending NF source and its prepare copy must be integrated before clean-clone publication.
+
+
+### 2026-11-19-153916-mount-hp-method-preview-f8553f3f
+
+Recorded 2026-11-19T15:39:16.862594+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Mounted the reviewed independent HP literal-detail explorer only in its planned HP modal; added preparation, guide links and build/test aliases, and updated HP-aware site assertions. Added PM-requested NF offline guide/caller-selected observation copy while preserving planned NF status.
+- **Evidence.** The integration and its focused actual-built-site control pass syntax checks. Existing standalone source-bound parity remains unchanged; fresh production build and browser integration evidence will be recorded after this attributed change gate. [Change record](./runs/changes/2026-11-19-153916-mount-hp-method-preview-f8553f3f.json).
+- **Not claimed.** No HP or NF tag release, independent accuracy, full requirement closure, physical phone or human accessibility acceptance, new data collection or endpoint. NF guide preparation and deployment remain PM-owned.
+
+
 ### 2026-11-19-153301-session-delivery-accounting-7c0e9026
 
 Recorded 2026-11-19T15:33:01.556268+00:00 · Contributor: Codex · change

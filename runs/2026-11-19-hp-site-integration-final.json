@@ -1,0 +1,108 @@
+{
+  "captured_at": "2026-11-19T15:44:57.978523+00:00",
+  "pass": true,
+  "base_commit": "651a9dfa7bec26bbe6b2c92f6ba9bb6d71c26f24",
+  "browser_evidence": {
+    "path": "runs/2026-11-19-hp-production-site-final.json",
+    "sha256": "2874c76bddaa491a90f833665cc368122698d3c5c5dd2a859802e478e86395c8"
+  },
+  "source_sha256": {
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301",
+    "site/src/catalog.js": "bb5a58689a9e9df6e3088ec814d26e43107dd5f56e5cebe160950abfa869959a",
+    "site/src/presentation.js": "bfdf8d69da72a1f7cd57be8b41ae1ce69ad3a7646af59d00e849f09145226a20",
+    "site/src/usage.js": "9836e544c5b41605372819baefd6e6877293d619ba65ab8ef7d8fde4cdbd0fd0",
+    "site/scripts/prepare.mjs": "4548e723a0c459fbf178f46efda74b4a7b85d309013a94b8c82c655f974f70b2",
+    "package.json": "1832d316de2af5f7b7eb216d73d27f389a1008ff6724cd2047d0dc31be777fa4",
+    "scripts/verify-site.cjs": "33f6e3733170db1874a019c125b9f5a21a44e594e5838e919021eeb9aa3e96d3",
+    "scripts/hp-site-controls.cjs": "7c822eb76bbdb8e4e165be7ef6bc8108d531a305fb7831464499029c927c310c",
+    "site/src/HPExplorer.jsx": "42708f179f5a7848c9123c16d8877aaef93bb9df95b205ee9ce3774a9d0a8a9e",
+    "site/src/HPExplorerSlot.jsx": "475104b9089f743ddc795c8580c8db705723e2e5e67f20159aab3c3fd3fcfe71",
+    "site/src/hp-device-client.js": "c6f228d57ba2cdd39e1a52c4adb72ee4d1423261f8099ba427331400bf10e2f4",
+    "site/src/hp-device-result.js": "f0fe16cc1e03b9c77e25b4f1a80ddb06e5124d123cec18ede764f0ae89c56fef",
+    "site/src/hp-device-worker.js": "fa8216594fffa7b11a4621a47a193813c2a602957cbf238dd36bc8e0e3fbc6df",
+    "site/src/hp-device-manifest.json": "982c9af3ae67953e12ea9f4d99e8a4010b3cc777a19e1025e0838a74c4cc7f0e",
+    "tools/hp_device.py": "be4fb51923195a4cdeff74e0913902bd92897764c942f240a9fcce051f913ac4",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "docs/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044"
+  },
+  "additional_generated_and_doc_sha256": {
+    "site/index.html": "2b946060ad9aae7c4021fde0d376ed96951e52835119b94d3dd3d6b2716fdce0",
+    "site/public/reference/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+    "docs/hp-site-integration.md": "e969979983f870e2f45208b81be3daaa2a43573919b5691b0b31c24f434e2446"
+  },
+  "visually_inspected_screenshots_sha256": {
+    "output/playwright/hp-production-phone-light.png": "006bea4625e154d14d84fbc0f979f6898eccd8f389a1918c4e9785ee2c6a05b3",
+    "output/playwright/hp-production-phone-dark.png": "e4e4da1f5f8de6a8f5b7944fbceee80bc9764e3d3197262dfa6c04bdbfc6d63e",
+    "output/playwright/hp-production-modal-320-enlarged.png": "9cb662891ba7f5cf10fecbb655ff2978c18c405d907ae049f772508ce7d6938a"
+  },
+  "unchanged_core_and_peer_sources": [
+    "site/src/HPExplorer.jsx",
+    "site/src/HPExplorerSlot.jsx",
+    "site/src/hp-device-client.js",
+    "site/src/hp-device-result.js",
+    "site/src/hp-device-worker.js",
+    "site/src/hp-device-manifest.json",
+    "tools/hp_device.py",
+    "tools/quantitative_observations.py",
+    "tools/language_observations.py",
+    "scripts/build-hp-device.py",
+    "site/src/device-client.js",
+    "site/src/device-worker.js",
+    "site/src/mt-device-client.js",
+    "site/src/mt-device-worker.js"
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/hp-site-controls.cjs"
+      ],
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site.cjs"
+      ],
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0
+    }
+  ],
+  "actual_site_build_observed_exit_status": 0,
+  "build_warnings": [
+    "Existing Radix use-client directive bundling warnings",
+    "Main chunk remains over500kB; this task does not claim bundle performance improvement"
+  ],
+  "first_build_failure_preserved": "runs/2026-11-19-hp-site-build-candidate-1.json",
+  "first_visual_findings_preserved": "runs/2026-11-19-hp-site-visual-followup.json",
+  "display_name": "Claim details",
+  "formal_name": "Hallucination possible",
+  "full_tag_status": "Coming Soon",
+  "NF_temporary_build_input": {
+    "path": "site/public/reference/nf-source-evidence.md",
+    "sha256": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "tracked_in_this_commit": false,
+    "git_ignored": false,
+    "correction_to_earlier_ignored_wording": "The supplied guide is temporary untracked, not excluded by Git. It is intentionally outside this commit.",
+    "remaining": "PM must merge the actual NF source/guide and its prepare hook before clean-clone publication."
+  },
+  "production_deployed": false,
+  "scope_percentages_changed": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_or_human_screenreader_tested": false,
+  "broad_site_suite_rerun": false
+}

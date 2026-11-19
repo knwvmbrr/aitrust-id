@@ -22,9 +22,9 @@ export function usage(tag) {
     support:'Use Report an issue for a defect. For a vulnerability, choose the private security channel; do not post sensitive details publicly.',
     proprietary:'Open the local practice guide in How it works. Read its invented policy before checking the example; share requirements without confidential documents.'};
   const tagNext={
-    NF:'Suggest a claim and the reference passage that supports it.',
+    NF:'Choose a claim and source passage in the offline guide. Literal matches and word overlap are separate observations; no NF tag is issued.',
     FI:'Share a claim and a reference passage that disagree.',
-    HP:'Suggest a claim that needs checking, with a source that explains why.',
+    HP:'Paste English text into Find details here. Read the short counts; open exact positions only if you need them. No HP tag is issued.',
     MT:'Try two wording checks here, or open the local guide. These previews do not issue an MT tag.',
     IV:'Help define what a reviewer should record, and how to correct or withdraw a review.',
     FA:'Suggest a generation record that could show where an item came from.',
@@ -38,7 +38,7 @@ export function usage(tag) {
     ? tag.id==='fleet' ? 'Run the free offline deployment software yourself. A managed organization service is not offered.' : 'Explore the plan and tell us what your team needs. This offering is not available to buy.'
     : tag.proposed ? 'Read the proposal or share an example that would help us test it.'
     : 'Explore how this tag would work, or share an example to help us build it.',
-    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='fleet'?[{label:'Fleet deployment guide',href:'/reference/fleet-deployment.md'},{label:'Download source',href:sourceDownload}]:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:tag.id==='sso'?[{label:'Organization sign-in guide',href:'/reference/organization-directory.md'},{label:'Download source',href:sourceDownload}]:tag.id==='host'?[{label:'Check a file while you work',href:'/reference/host-capture.md'},{label:'Download source',href:sourceDownload}]:tag.id==='MT'?[{label:'Wording preview guide',href:'/reference/mt-device-explorer.md'},framingGuide]:[]};
+    steps:[],next:orgNext[tag.id]||tagNext[tag.id],links:tag.id==='fleet'?[{label:'Fleet deployment guide',href:'/reference/fleet-deployment.md'},{label:'Download source',href:sourceDownload}]:tag.id==='audit'?[{label:'Self-hosted audit guide',href:'/reference/organization-audit.md'},{label:'Try personal PS exports',href:'/#person/PS'}]:tag.id==='sso'?[{label:'Organization sign-in guide',href:'/reference/organization-directory.md'},{label:'Download source',href:sourceDownload}]:tag.id==='host'?[{label:'Check a file while you work',href:'/reference/host-capture.md'},{label:'Download source',href:sourceDownload}]:tag.id==='MT'?[{label:'Wording preview guide',href:'/reference/mt-device-explorer.md'},framingGuide]:tag.id==='HP'?[{label:'Literal-detail preview guide',href:'/reference/hp-device-explorer.md'}]:tag.id==='NF'?[{label:'Offline claim-and-passage guide',href:'/reference/nf-source-evidence.md'}]:[]};
   return {available:true,summary:tag.id==='PS'
     ? 'Copy an AI answer, paste it and check. No account or install needed. Commands are checked, never run.'
     : 'Check a draft with your own local redactor before you share it. Review the result and make any edits yourself. This is a local-service preview, separate from the website’s on-device PS checker.',
