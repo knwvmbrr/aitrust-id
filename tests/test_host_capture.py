@@ -302,6 +302,55 @@ class HostCapture(unittest.TestCase):
             self.assertEqual(sum(r['action']=='captured' for r in self.rows()),1)
             terminal.send('exit 0');self.assertEqual(terminal.finish(),0)
 
+    def test_pending_terminal_stop_during_worker_launch_reaps_owned_child(self):
+        # Force the ownership window with a real PS child, without relying on
+        # the scheduler to hit the native vfork-before-setsid interval.
+        for stop in (signal.SIGTSTP,signal.SIGTTIN,signal.SIGTTOU):
+            with self.subTest(signal=stop.name):
+                self.output=self.base/('records-'+stop.name)
+                pidfile=self.base/(stop.name+'-pid')
+                completed=self.base/(stop.name+'-constructed')
+                closed=self.base/(stop.name+'-closed')
+                launcher=self.base/(stop.name+'-launcher.py')
+                launcher.write_text('''import json,os,runpy,signal,sys
+from pathlib import Path
+sys.path.insert(0,ROOT)
+from tools import host_capture as h
+signal.pthread_sigmask(signal.SIG_BLOCK,{signal.SIGUSR1})
+prior=set(signal.pthread_sigmask(signal.SIG_BLOCK,()))
+original=h.Worker
+class LaunchWindowWorker(original):
+    def __init__(self,script,text):
+        super().__init__(script,text)
+        Path(PIDFILE).write_text(str(self.process.pid))
+        os.kill(os.getpid(),STOP)
+        Path(COMPLETED).write_text(json.dumps({'pending':STOP in signal.sigpending()}))
+    def close(self):
+        super().close()
+        Path(CLOSED).write_text(json.dumps({'mask_restored':set(signal.pthread_sigmask(signal.SIG_BLOCK,()))==prior,
+            'returncode':self.process.returncode}))
+h.Worker=LaunchWindowWorker
+sys.argv=[str(Path(ROOT)/'scripts/host-capture.py'),*sys.argv[1:]]
+runpy.run_path(sys.argv[0],run_name='__main__')
+'''.replace('ROOT',repr(str(ROOT))).replace('PIDFILE',repr(str(pidfile)))
+                    .replace('COMPLETED',repr(str(completed))).replace('CLOSED',repr(str(closed)))
+                    .replace('STOP',str(int(stop))))
+                # Failed paths use the owned terminal teardown and the frozen
+                # child's parent-death watcher; never signal a stale saved PID.
+                with Terminal(self.args('PS'),script=launcher) as terminal:
+                    terminal.until('HOST STOPPED · interrupted' if stop==signal.SIGTSTP
+                                   else 'foreground terminal ownership lost')
+                    self.assertEqual(terminal.finish(),130 if stop==signal.SIGTSTP else 2)
+                child=int(pidfile.read_text())
+                self.assertEqual(json.loads(completed.read_text()),{'pending':True})
+                cleanup=json.loads(closed.read_text())
+                self.assertTrue(cleanup['mask_restored']);self.assertIsNotNone(cleanup['returncode'])
+                with self.assertRaises(ProcessLookupError):os.kill(child,0)
+                child=None
+                self.write('Changed after the queued terminal stop.');time.sleep(.1)
+                self.assertEqual(sum(r['action']=='captured' for r in self.rows()),1)
+                self.assertFalse(any(r['action']=='result' for r in self.rows()))
+
     def test_background_resume_refuses_new_capture_after_sigstop(self):
         with Terminal([],argv=['/bin/bash','--noprofile','--norc','-i']) as terminal:
             terminal.send(shlex.join([sys.executable,'-B',str(ROOT/'scripts/host-capture.py'),*self.args('PS')]))

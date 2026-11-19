@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-042308-defer-host-terminal-stops-through-worker-handoff-d6001143
+
+Recorded 2026-11-19T04:23:08.048042+00:00 · Contributor: Codex · change
+
+- **Changed.** Defer terminal stop signals across detached worker construction and caller ownership assignment; restore the exact parent mask before existing interruption cleanup.
+- **Evidence.** Initial host-only Mac suite passed20 controls. The reviewed forced-constructor control queues SIGTSTP, SIGTTIN and SIGTTOU with a real child; removing only the launch mask in a private source copy fails all three completion controls. [Change record](./runs/changes/2026-11-19-042308-defer-host-terminal-stops-through-worker-handoff-d6001143.json).
+- **Not claimed.** Exact failed hosted process state was not captured. Source-bound final Mac and nonroot isolated Linux executions are pending. No original requirement closure, independent accuracy, human acceptance or production deployment is claimed.
+
+
 ### 2026-11-19-040839-bind-regenerated-owner-decision-to-current-website-ef675146
 
 Recorded 2026-11-19T04:08:39.834981+00:00 · Contributor: Codex · change
