@@ -8791,7 +8791,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-18T16:18:03.093924+00:00",
+      "audited_at": "2026-11-19T01:07:58.229513+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8801,7 +8801,8 @@
         "Codex native delivery lane \u2014 paginated privacy and license notices, reproduced all five local workflows, verified exact archive resources and diagnosed Keychain signing, 2026-11-17T22:21:46.286300+00:00",
         "Codex \u2014 direct deletion and simulator inventory confirmation on local and hosted runs; 2026-11-18T01:52:33.178019+00:00",
         "Codex \u2014 separate notice navigation and same-run named iPhone workflow verification; 2026-11-18T02:23:24.523441+00:00",
-        "Codex \u2014 signed, verified and uploaded the current iPhone distribution build, 2026-11-18T13:35:32.222337+00:00"
+        "Codex \u2014 signed, verified and uploaded the current iPhone distribution build, 2026-11-18T13:35:32.222337+00:00",
+        "Codex \u2014 saved the owner-approved Apple compliance answer and assigned build 1.0 (1) to the existing owner-only internal group, 2026-11-19T01:07:58.229513+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8809,7 +8810,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Review and resolve the Missing Compliance questionnaire, assign build 1.0 (1) to the existing iPhone Owner Test group, then complete physical iPhone Share, offline, VoiceOver and outside-user checks.",
+      "next_fix": "Install assigned internal TestFlight build 1.0 (1) on the iPhone 14 Plus and complete physical Share, offline, VoiceOver, lifecycle, removal and outside-user acceptance.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8872,9 +8873,10 @@
         "runs/2026-11-18-testflight-missing-compliance.json",
         "runs/2026-11-18-ios-testflight-compliance-inputs.json",
         "scripts/verify-ios-compliance-inputs.py",
-        "runs/2026-11-18-testflight-owner-group.json"
+        "runs/2026-11-18-testflight-owner-group.json",
+        "runs/2026-11-18-testflight-owner-build-testing.json"
       ],
-      "evidence_scope": "Signed-in Chrome confirms the owner is the sole tester in an internal group with manual distribution. Build 1.0 (1) is disabled in that group\u2019s picker with Missing Compliance. The signed IPA was measured for checksum and bundled TLS behavior. No build assignment, installation or physical acceptance is verified.",
+      "evidence_scope": "The owner-approved compliance answer was saved. Apple shows the owner-only internal group with 1 tester, 1 build and build 1.0 (1) Testing. Assignment is verified; actual installation, physical Share and human VoiceOver acceptance remain open.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],

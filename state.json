@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T16:18:03.093924+00:00",
-  "active_increment": "Verified the TestFlight compliance blocker, audited the exact signed iPhone runtime, and matched selected embedded source archives. Scope remains 132 complete and 70 open.",
+  "updated": "2026-11-19T01:07:58.229513+00:00",
+  "active_increment": "Owner-approved compliance saved and TestFlight 1.0 (1) assigned to the owner-only group with Testing status. Physical Share and VoiceOver acceptance remain open; 70 requirements remain.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1142,7 +1142,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T16:18:03.093924+00:00",
+  "updated_at": "2026-11-19T01:07:58.229513+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1992,7 +1992,7 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "internal_testflight_build_visible_missing_export_compliance",
+    "status": "internal_testflight_build_assigned_testing_physical_acceptance_open",
     "requirement": "N-013",
     "percent_complete": 80,
     "workflow_proof": "runs/2026-11-17-split-native-share-workflow.json",
@@ -2080,14 +2080,14 @@
     "current_signed_archive": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
     "current_apple_validation": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
     "current_testflight_upload": "runs/2026-11-18-ios-testflight-internal-upload.json",
-    "testflight_processing_verified": false,
-    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-missing-compliance.json",
+    "testflight_processing_verified": true,
+    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-owner-build-testing.json",
     "app_store_connect_internal_build_visible": true,
-    "testflight_build_status": "Missing Compliance",
-    "testflight_tester_access_verified": false,
+    "testflight_build_status": "Testing",
+    "testflight_tester_access_verified": true,
     "testflight_owner_group_membership_verified": true,
-    "testflight_build_assigned_to_owner_group": false,
-    "latest_testflight_owner_group_evidence": "runs/2026-11-18-testflight-owner-group.json",
+    "testflight_build_assigned_to_owner_group": true,
+    "latest_testflight_owner_group_evidence": "runs/2026-11-18-testflight-owner-build-testing.json",
     "current_testflight_compliance_inputs": "runs/2026-11-18-ios-testflight-compliance-inputs.json"
   },
   "organization_policy": {

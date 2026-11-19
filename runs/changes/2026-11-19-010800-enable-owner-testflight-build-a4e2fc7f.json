@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f",
+  "recorded_at": "2026-11-19T01:08:00.060832+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9ccf18ce958be67b41f637144b1d1f35c4df7ed2",
+  "changed": "Save the owner-approved export compliance answer and assign TestFlight 1.0 (1) to the owner-only testing group.",
+  "proves": "Apple shows Ready to Test after the saved answer, then the owner group shows 1 tester, 1 build and Testing.",
+  "limits": "Phone installation, physical Share, VoiceOver and outside-user acceptance remain open. Public App Store review and independent accuracy are not claimed. The follow-up PR still requires current site verification.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "docs/app-store-readiness.md": "696dbef949233275b2c8666a94bb4662ab96e131828224d6fb64c1f8012797f3",
+    "docs/scope-progress.json": "14b339ecdf6fcc653d366b8e4337fc1358e6ff84592b6b420688605c15d1d8ef",
+    "docs/scope-progress.md": "efb31b5c76807a4654c87ea4f0f8e37512c623769aa01581fe43731b6ab8d773",
+    "runs/2026-11-18-testflight-owner-build-testing.json": "505b0d117bb9a8dad89ccf010e228d883ca49f8375541db3bc0487a3534211ff",
+    "site/public/reference/public-scope.json": "b8e3b50ff0d8e1a2e2239c17e9c49fd978c960c56cc5dc6fe040fb0e78c1e878",
+    "site/src/public-scope.json": "b8e3b50ff0d8e1a2e2239c17e9c49fd978c960c56cc5dc6fe040fb0e78c1e878",
+    "site/src/scope-manifest.json": "00346ee4a5f12e95b7616353fc46c565352123001a9f69d574059ce0bbb56714",
+    "state.json": "b6b33aee9b71d6f084eac93b4cfb63299e572202c662eddc17e122e975c91036"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-testflight-owner-build-testing.json",
+      "sha256": "505b0d117bb9a8dad89ccf010e228d883ca49f8375541db3bc0487a3534211ff"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T01:08:01.365200+00:00"
+    }
+  ]
+}

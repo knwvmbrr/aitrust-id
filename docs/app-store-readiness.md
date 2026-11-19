@@ -66,28 +66,24 @@ The exported build **1.0 (1)** preserves all 36 expected runtime and notice
 resources and passed all Apple Organizer validation checks. See the
 [signed build and validation receipt](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json).
 Xcode confirmed that [the internal TestFlight upload completed](../runs/2026-11-18-ios-testflight-internal-upload.json).
-Signed-in Chrome now shows internal build **1.0 (1)** with **Missing
-Compliance**. **iPhone Owner Test** has the account holder as its sole tester
-and manual build assignment. Apple disables build 1 in that group’s picker
-until compliance is resolved. [Group enrollment evidence](../runs/2026-11-18-testflight-owner-group.json). The [dashboard observation](../runs/2026-11-18-testflight-missing-compliance.json)
-is separate from the upload receipt.
+The owner approved the exact export-compliance response. After it was saved,
+Apple showed **Ready to Test**. Build **1.0 (1)** was then assigned to
+**iPhone Owner Test**. App Store Connect shows **1 tester, 1 build**, and
+**Testing**. The group contains only the account holder and automatic
+build distribution remains off. See the [assignment observation](../runs/2026-11-18-testflight-owner-build-testing.json).
 
+This verifies internal beta assignment. Actual installation on the iPhone,
+Share reliability and human VoiceOver acceptance are not yet recorded. This
+is not public App Store review approval or an independent accuracy result.
 The [signed-package audit](../runs/2026-11-18-ios-testflight-compliance-inputs.json)
-verified both targets, all five runtime files in each, and the bridge source.
-The checker uses SHA-256 for package integrity. The bundled WASM provides a
-Python hashing implementation and reports `OpenSSL (stub)` with zero cipher
-suites when probed in Node. Neither target declares `ITSAppUsesNonExemptEncryption`.
-This is evidence for reviewing the questionnaire, not an export determination
-or a physical-device measurement. Apple describes [how to clear Missing
-Compliance](https://developer.apple.com/help/app-store-connect/test-a-beta-version/provide-export-compliance-information-for-beta-builds/).
+records the technical inputs considered before the owner approved the answer.
 
 ### First iPhone 14 Plus check
 
-1. In [App Store Connect](https://appstoreconnect.apple.com/apps), open
-   **AI Trust ID → TestFlight → iOS**, choose **Manage** next to **1.0 (1)**
-   and review and submit the export compliance information. When Apple makes
-   the build available, add it to **iPhone Owner Test** using the
-   [internal tester instructions](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/).
+1. Confirm the iPhone uses the Apple account invited to **iPhone Owner Test**.
+   The build is already assigned. If TestFlight needs an invitation accepted,
+   use the Apple invitation for that account. No new signing certificate or
+   Developer Mode change is needed to install an internal TestFlight build.
 2. Open **TestFlight** on the iPhone and install **1.0 (1)**. Then open AI Trust
    ID and try **Practice sharing**. In the share sheet, select **AI Trust ID**.
    Confirm the text appears for review and the app waits for **Check with PS**.

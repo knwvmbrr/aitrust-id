@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-19
+
+### 2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f
+
+Recorded 2026-11-19T01:08:00.060832+00:00 · Contributor: Codex · change
+
+- **Changed.** Save the owner-approved export compliance answer and assign TestFlight 1.0 (1) to the owner-only testing group.
+- **Evidence.** Apple shows Ready to Test after the saved answer, then the owner group shows 1 tester, 1 build and Testing. [Change record](./runs/changes/2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f.json).
+- **Not claimed.** Phone installation, physical Share, VoiceOver and outside-user acceptance remain open. Public App Store review and independent accuracy are not claimed. The follow-up PR still requires current site verification.
+
+
 ## Unreleased — 2026-11-18
 
 ### 2026-11-18-161803-enroll-iphone-owner-testflight-60fac046
