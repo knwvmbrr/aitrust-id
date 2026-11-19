@@ -31,7 +31,7 @@ the call does not prove a program ran or that a transfer was unauthorized.
 
 ## Supported profile
 
-Method `python-credential-flow-observation/1.0.0` uses the built-in Python syntax
+Method `python-credential-flow-observation/1.0.1` uses the built-in Python syntax
 tree. It is a separate reference component for F-012, not the proposed Semgrep
 implementation or an active PS signal. No new dependency is installed.
 
@@ -64,6 +64,10 @@ Limits: 8,000 characters, 2,000 syntax nodes, expression depth 32. Output uses
 frozen NFC-normalized Unicode codepoints; AST UTF-8 byte columns are converted.
 The source hash and subject hash make the observation reproducible. Subject hashes
 and positions can correlate private code: review before sharing the JSON.
+Repeated call keyword names refuse even when Python's AST parser accepts them:
+they are not runnable supported programs. Static concatenation refuses before
+creating a propagated literal longer than 8,000 characters, so a small series of
+doubling assignments cannot bypass the input bound through exponential growth.
 
 This component does not classify whether a displayed program is recommended,
 quoted, authorized or malicious. Those boundaries and independent measurement

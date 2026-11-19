@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-183456-credential-flow-context-binding-d8c4808b
+
+Recorded 2026-11-19T18:34:56.887333+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse impossible duplicate-keyword calls and oversized propagated literals in the bounded credential-flow method; add an independent private whole-document raw/NFC source-context binding workflow with unverified caller declarations and canonical static evidence.
+- **Evidence.** 143 focused controls and 31 actual isolated-Python macOS CLI controls verify the two concrete refusal fixes, raw/NFC selection and document spans, independent static/context evidence, kernel network denial, private no-overwrite exports and honest I/O uncertainty; original defects and initial fixture failure are preserved. [Change record](./runs/changes/2026-11-19-183456-credential-flow-context-binding-d8c4808b.json).
+- **Not claimed.** Context remains caller-declared, not inferred recommendation, authorization or intent. No program, named credential or URL is executed/read/contacted; no PS mapping, independent accuracy, original F012 closure, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-173627-tag-bots-state-closeout-3bc059bd
 
 Recorded 2026-11-19T17:36:27.015784+00:00 · Contributor: Codex · change

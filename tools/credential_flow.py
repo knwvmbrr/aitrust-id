@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 from protocol.corpus import CorpusError
 from protocol.normalization import NORMALIZATION_ID, normalize_nfc
 
-METHOD = 'python-credential-flow-observation/1.0.0'
+METHOD = 'python-credential-flow-observation/1.0.1'
 SECRET_KEYS = {'OPENAI_API_KEY', 'AWS_SECRET_ACCESS_KEY', 'GITHUB_TOKEN', 'DATABASE_PASSWORD'}
 MAX_CHARACTERS = 8000
 
@@ -92,7 +92,11 @@ def observe(original):
             a, b = evaluate(node.left), evaluate(node.right)
             if not isinstance(a, Value) or not isinstance(b, Value):
                 raise CorpusError('Unsupported concatenation.')
-            literal = a.literal+b.literal if isinstance(a.literal, str) and isinstance(b.literal, str) else None
+            literal = None
+            if isinstance(a.literal, str) and isinstance(b.literal, str):
+                if len(a.literal) + len(b.literal) > MAX_CHARACTERS:
+                    raise CorpusError('Propagated static literal exceeds the limit.')
+                literal = a.literal + b.literal
             return Value(tuple(sorted(set(a.sources+b.sources))), literal)
         if isinstance(node, ast.Attribute) and symbol(node.value, 'os') and node.attr == 'environ':
             return Symbol('environment')
@@ -103,6 +107,8 @@ def observe(original):
             return read(node) if key.literal in SECRET_KEYS else Value()
         if not isinstance(node, ast.Call) or any(k.arg is None for k in node.keywords):
             raise CorpusError('Unsupported expression or transformation.')
+        if len({keyword.arg for keyword in node.keywords}) != len(node.keywords):
+            raise CorpusError('Repeated keyword arguments are unsupported.')
         target = node.func
         if symbol(target, 'path') or isinstance(target, ast.Name) and target.id == 'open' and target.id not in names:
             if node.keywords or not 1 <= len(node.args) <= 2 or symbol(target, 'path') and len(node.args) != 1:

