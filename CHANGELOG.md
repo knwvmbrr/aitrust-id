@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-091152-hold-fi-opaque-link-target-parser-gap-7a3c2074
+
+Recorded 2026-11-19T09:11:52.823994+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the automated-review finding and three actual nested/escaped-link reproductions while holding FI publication.
+- **Evidence.** All three synthetic cases incorrectly salvage a numbered token from the URL or definition target after an already-unsupported label. The result violates the declared opaque-target profile even though earlier controls pass. [Change record](./runs/changes/2026-11-19-091152-hold-fi-opaque-link-target-parser-gap-7a3c2074.json).
+- **Not claimed.** The current candidate remains unmerged. Target consumption must be independent of label rejection, followed by focused current-source verification. No original closure.
+
+
 ### 2026-11-19-090005-record-final-fi-output-ownership-integration-7c163607
 
 Recorded 2026-11-19T09:00:05.370135+00:00 · Contributor: Codex · change
