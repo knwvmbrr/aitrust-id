@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37
+
+Recorded 2026-11-19T09:46:20.522872+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected FI offline-source/guide publication, exact live artifacts and retained WebKit timeout observation.
+- **Evidence.** All11required engineering checks pass at the reviewed revision. All315artifacts match at both HTTPS origins (630comparisons); actual live MT controls pass. The offline FI source and usage/risk guides are public. Canonical main preserves12unrelated paths and bytes. [Change record](./runs/changes/2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37.json).
+- **Not claimed.** FI and MT are not independently validated released tags; FI is an offline CLI, not a website checker. The original WebKit timeout passed one unchanged-source site-job retry and both engines pass locally; its underlying cause remains unestablished and is retained. No original closure:132complete/70open.
+
+
 ### 2026-11-19-092440-record-reviewed-fi-target-and-ownership-integration-6fd91c14
 
 Recorded 2026-11-19T09:24:40.414720+00:00 · Contributor: Codex · change

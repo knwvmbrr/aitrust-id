@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-11-19T09:46:19.427195+00:00",
+  "pass": true,
+  "source_commit": "0c1ab2ad792e9770390cdc9001bfeadd094bf986",
+  "workflow_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44496199468",
+  "original_failed_job": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44496199468/job/135463885628",
+  "original_failure": "iPhone WebKit UI Check result region wait exceeded 50000ms; exact positive/negative/offline wait not identifiable in the saved report",
+  "original_android_engine_passed": true,
+  "controlled_retry_job": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44496199468/job/135468486238",
+  "controlled_retry_passed": true,
+  "retry_requested_for_site_job_only": true,
+  "other_passing_jobs_carried_at_same_revision": true,
+  "source_changed_for_retry": false,
+  "timeouts_changed": false,
+  "original_failure_retained": true,
+  "selected_ps_inputs_sha256": {
+    "scripts/verify-device.cjs": "0e77733956c2c05dc80bc8129902b54b8e5a5abe464ef93b3290e38a07b97d59",
+    "site/src/device-client.js": "53e6e8fe5de3f6650bbd894f4af9138e92a7c697e0d827bdce13921edf3e39c5",
+    "site/src/device-worker.js": "b327e1c5984d954e3a2a6f369e3462b6ccc13d3e6d6db7fe56dd2dccfb0d39ee",
+    "site/src/handheld.jsx": "438815d794b55490d9ac68c209469d9f98f299c229f77315685a447457c9fbf8",
+    "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tests/offline-worker-cache.cjs": "b144f3bdb9a2a5567e99422a6d44a3931c7cb89f4c76c940e92855e9bfd9e8b1",
+    "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e"
+  },
+  "selected_inputs_match_prior_passing_heads": [
+    "c721754cd30916e239366e962bd218eeaf9ad4fb",
+    "280aee9921291e86851ce6557f9d3d731766408b"
+  ],
+  "macos_two_engine_replay": "runs/2026-11-19-fi-device-ci-macos-replay.json",
+  "underlying_cause_established": false,
+  "source_fix_claimed": false,
+  "remaining": "Retain observation; if repeated, add phase-specific text-free diagnostics before another unchanged retry.",
+  "independent_accuracy_evidence": false
+}
