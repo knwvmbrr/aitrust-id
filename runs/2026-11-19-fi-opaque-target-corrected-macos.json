@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "component": "FI unsupported-label opaque-target correction",
+  "recorded_at": "2026-11-19T09:12:53.420842+00:00",
+  "implemented_by": "Codex",
+  "base_commit": "9c2c572637a652635946e08436aad8bdf0470a9f",
+  "platform": "Darwin",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "tests/test_citation_resolution.py": "213f0173448cf6af4fb9c1d043cf2c5b3a7a9b6cbe1c4ebf1b5a17f1ec5a62d5",
+    "docs/fi-citation-sidecar.md": "93be92ed4faea588f10ad75be83c0343fe7473092c6a2f76fc4f5771a7ed047a",
+    "docs/fi-citation-sidecar-plan.md": "e9452ca321e7b35a1af7e4a96c9eee7b779326912fbb4932f1966e985f067d54",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec"
+  },
+  "focused_tests": {
+    "passed": 140,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 1.64
+  },
+  "actual_cli": {
+    "cases_passed": 24,
+    "commands_passed": 48,
+    "failed": 0,
+    "isolated_flags": [
+      "-I",
+      "-S",
+      "-B"
+    ],
+    "minimal_environment": true,
+    "stdlib_only": true,
+    "cases": [
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "418a482f3e70fba83c214f9ab631b40c275f6c9be90ccfbb5a443bbe29ca185f"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "2d1ccf59dd3dd4ccb9a61338a4465cf73cbcea7f6e83155a307cb66d340135b6"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "418a482f3e70fba83c214f9ab631b40c275f6c9be90ccfbb5a443bbe29ca185f"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "2d1ccf59dd3dd4ccb9a61338a4465cf73cbcea7f6e83155a307cb66d340135b6"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "418a482f3e70fba83c214f9ab631b40c275f6c9be90ccfbb5a443bbe29ca185f"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "nested",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "2d1ccf59dd3dd4ccb9a61338a4465cf73cbcea7f6e83155a307cb66d340135b6"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "418a482f3e70fba83c214f9ab631b40c275f6c9be90ccfbb5a443bbe29ca185f"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "parenthesized",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "2d1ccf59dd3dd4ccb9a61338a4465cf73cbcea7f6e83155a307cb66d340135b6"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "418a482f3e70fba83c214f9ab631b40c275f6c9be90ccfbb5a443bbe29ca185f"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "bracketed",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "2d1ccf59dd3dd4ccb9a61338a4465cf73cbcea7f6e83155a307cb66d340135b6"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": false,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 1,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "04dc88a84d9a5f4f3c80a1dee80148204fb15ef7f426e1f5435d580db5d944c2",
+        "check_stdout_sha256": "418a482f3e70fba83c214f9ab631b40c275f6c9be90ccfbb5a443bbe29ca185f"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": false,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 0,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "51ace7fa2a02d090ca981ca64c2291424c1a33d459eb2c8ebb85393366f0ccf9"
+      },
+      {
+        "label_shape": "escaped",
+        "adjacent_target_shape": "definition",
+        "number_one_declared": true,
+        "subsequent_standalone_marker": true,
+        "expected_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "actual_counts": {
+          "resolved-in-attached-corpus": 1,
+          "unresolved-in-attached-corpus": 0,
+          "unsupported": 1
+        },
+        "passed": true,
+        "prepare_stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "check_stdout_sha256": "2d1ccf59dd3dd4ccb9a61338a4465cf73cbcea7f6e83155a307cb66d340135b6"
+      }
+    ]
+  },
+  "boundaries": {
+    "opaque_consumption_independent_of_balanced_label_reason": true,
+    "hidden_target_number_never_resolved_or_unresolved": true,
+    "subsequent_standalone_marker_preserved": true,
+    "no_unrelated_prose_consumed_in_focused_controls": true,
+    "nested_and_escaped_reasons_preserved": true,
+    "private_content_or_path_echo": false,
+    "general_markdown_parser": false
+  },
+  "historical_evidence_preserved": [
+    "runs/2026-11-19-fi-opaque-target-original-defect.json",
+    "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+    "runs/2026-11-19-fi-postcommit-corrected-macos.json",
+    "runs/2026-11-19-fi-citation-sidecar-macos.json"
+  ],
+  "claims": {
+    "full_T_FI_completion": false,
+    "tag_issuance": false,
+    "source_truth_or_support": false,
+    "independent_accuracy": false,
+    "human_acceptance": false,
+    "linux_execution": false,
+    "kernel_network_isolation_measured": false
+  }
+}

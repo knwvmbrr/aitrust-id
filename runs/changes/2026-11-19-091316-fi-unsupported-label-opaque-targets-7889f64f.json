@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-091316-fi-unsupported-label-opaque-targets-7889f64f",
+  "recorded_at": "2026-11-19T09:13:16.297489+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9c2c572637a652635946e08436aad8bdf0470a9f",
+  "changed": "Consume adjacent finite link targets and definition lines independently of unsupported nested or escaped citation-label classification, preventing hidden target numbers from becoming citation candidates.",
+  "proves": "Three original parser defects are preserved; 140 focused controls and 24 actual macOS grammar cases across 48 isolated-Python CLI commands verify mapped and unmapped inner-target exclusion plus subsequent standalone marker handling.",
+  "limits": "This remains a finite literal bracket profile, not a general Markdown parser or citation-truth check. No FI tag, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "tests/test_citation_resolution.py": "213f0173448cf6af4fb9c1d043cf2c5b3a7a9b6cbe1c4ebf1b5a17f1ec5a62d5",
+    "docs/fi-citation-sidecar.md": "93be92ed4faea588f10ad75be83c0343fe7473092c6a2f76fc4f5771a7ed047a",
+    "docs/fi-citation-sidecar-plan.md": "e9452ca321e7b35a1af7e4a96c9eee7b779326912fbb4932f1966e985f067d54",
+    "runs/2026-11-19-fi-opaque-target-original-defect.json": "91e5e55f9c1b1e80a81fbb839e6a02872cd0b5357777d31f092dcf50202c889f",
+    "runs/2026-11-19-fi-opaque-target-corrected-macos.json": "e17098a7743dd9319306e7ea241c5e99c73eb468cc03456a93e30d89378c9c8c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-opaque-target-original-defect.json",
+      "sha256": "91e5e55f9c1b1e80a81fbb839e6a02872cd0b5357777d31f092dcf50202c889f"
+    },
+    {
+      "path": "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+      "sha256": "e17098a7743dd9319306e7ea241c5e99c73eb468cc03456a93e30d89378c9c8c"
+    }
+  ],
+  "checks": []
+}

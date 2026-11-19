@@ -102,3 +102,18 @@ controls must show the raw descriptor closed/attempted, final absent, temporary
 cleanup attempted, other handles closed, fixed private diagnostics, and no
 unsafe retry after a close reports failure. Existing post-publication uncertainty
 and no-overwrite behavior must continue to pass.
+
+## Unsupported-label adjacent-target correction plan, before code
+
+Automated review found that nested/escaped label classification skipped the
+existing adjacent-target consumption branch. Consequently numeric brackets
+inside a URL/definition could become separate supported markers. Preserve a
+minimized reproduction of the frozen source, then separate balanced-label
+classification from adjacent parenthesized/bracketed target or definition-line
+consumption. Consume that finite opaque suffix even when the label is already
+unsupported, retaining its unsupported reason. Do not consume unrelated text or
+expand the declared syntax into general Markdown support. Test nested/escaped
+labels with each target shape, mapped/unmapped target numbers, unmatched targets,
+and subsequent standalone markers after a closed target or definition newline.
+Fresh exact-source CLI demonstrations must show no hidden target marker becomes
+resolved or unresolved. Preserve prior evidence and full FI acceptance limits.
