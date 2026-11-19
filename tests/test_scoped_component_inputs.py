@@ -15,6 +15,10 @@ for cap in ('protocol', 'website'):
         'tools/ps_source_distribution.py', 'scripts/export-ps-source.py',
         'site/public/downloads/aitrust-id-ps-source.zip', 'sbom/reviews/esbuild-source.json'])
 
+for cap in ('protocol','website'):
+    REQUIRED.setdefault(cap, []).extend(['tools/mt_device.py','scripts/build-mt-device.py',
+        'site/src/mt-device-manifest.json','site/src/mt-device-result.js','scripts/mt-site-controls.cjs'])
+
 
 def test_actual_new_component_inputs_are_bound():
     for cap,paths in REQUIRED.items():assert set(paths)<=r.fingerprint(cap)['sources'].keys()

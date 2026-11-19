@@ -646,3 +646,9 @@ preserve unavailable states, and do not establish safety or independent accuracy
 Implementation and review lanes use the [agent handoff protocol](docs/agent-handoffs.md).
 It distinguishes active work, frozen evidence, integration and publication; a
 completed task or queued message is not reported as a running agent.
+
+
+The [MT wording preview](https://aitrustid.com/#person/MT) offers two explicitly
+selected on-device phrase observations. Text is not uploaded or saved; the first
+run downloads its Python runtime. It issues no MT tag or intent verdict. Read the
+[method, privacy and engineering limits](docs/mt-device-explorer.md).

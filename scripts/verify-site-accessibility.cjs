@@ -14,7 +14,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict');const {chromium
    await page.emulateMedia({forcedColors:'active'});assert(await root.isVisible());assert.equal(await root.evaluate(e=>e.scrollWidth>e.clientWidth+1),false,name+' forced colors overflow');await page.emulateMedia({forcedColors:'none'});
   }
   await page.goto(base);await page.evaluate(t=>window.AITrustTheme.setPreference(t),theme);await check('catalogue',page.locator('body'));
-  for(const tag of allTags){await page.goto(base+'/#'+tag.audience+'/'+tag.id);await page.evaluate(t=>window.AITrustTheme.setPreference(t),theme);const dialog=page.getByRole('dialog');await dialog.waitFor();await check(tag.id,dialog);}
+  for(const tag of allTags){await page.goto(base+'/#'+tag.audience+'/'+tag.id);await page.evaluate(t=>window.AITrustTheme.setPreference(t),theme);const dialog=page.getByRole('dialog');await dialog.waitFor();if(tag.id==='MT')await dialog.locator('[data-mt-explorer]').waitFor();await check(tag.id,dialog);}
   for(const slug of footer){await page.goto(base+'/#'+slug);await page.evaluate(t=>window.AITrustTheme.setPreference(t),theme);const dialog=page.getByRole('dialog');await dialog.waitFor();await check(slug,dialog);}
   await page.goto(base+'/#person/PS');await page.evaluate(t=>window.AITrustTheme.setPreference(t),theme);await page.getByRole('button',{name:'Check on this device',exact:true}).click();const dialog=page.getByRole('dialog');await check('PS checker empty',dialog);
   const input=page.getByLabel('AI answer',{exact:true}),submit=page.getByRole('button',{name:'Check answer',exact:true});

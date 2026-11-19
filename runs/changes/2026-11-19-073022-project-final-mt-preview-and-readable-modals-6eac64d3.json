@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-073022-project-final-mt-preview-and-readable-modals-6eac64d3",
+  "recorded_at": "2026-11-19T07:30:22.970579+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "eb5321d182d33a9a92e2c5d70421dd7974d3cb9f",
+  "changed": "Regenerate the complete public catalogue and references from the final MT-preview wording, guarded mount and narrow-screen layout before source-bound integration execution.",
+  "proves": "Preparation preserves 20 tag/offer records and all 202 original scope IDs. The final actual production controls and static references now select the same exact source; scope verification passes.",
+  "limits": "Current source-bound integration, protected CI and publication are pending. MT remains planned as a tag, no independent accuracy or physical/human accessibility acceptance is granted, and the original 132/70 ledger is retained.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-MT",
+    "F-139",
+    "F-150"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "ced1b58defb311340ec8dc33d458b2cebcf0cd1dd1b49d213c6bbd6f7f47d82f",
+    "README.md": "cc4dd64b37f4405fa9915d6f8d3bc5756f6b02499e20821911fca33529755ae5",
+    "docs/modal-enlarged-text-fix.md": "663edd5b772340ae9ea2cca0a3f250a8d3dc86a23ff070db2f0ca42d1fc183db",
+    "docs/scope-progress.json": "ef6ba0d96649487656e80ef2e8d3ae53a87ba7ecf69781dfd7f5d9787b37702d",
+    "eval/revalidation.json": "e303df9e6575a040785d55343d6fb1fbfe070f3e3dc0d4d1e6d95af09c0bbfbc",
+    "package.json": "2c340c9e12ebf8f7d8f5328a8771d6c89e37c5f58e83aa6495ef249154452ccf",
+    "runs/2026-11-19-mt-production-mount-focused.json": "28438325fc6b1849251d15d7a77351a5aa03a92b4c0635e973214c436c3f4c67",
+    "scripts/mt-site-controls.cjs": "5cdd8c8eb85795b13fd6ca0adce21850273c258c3e3ba29c49871796534ee7f2",
+    "scripts/verify-mt-client.cjs": "9b43b3294b707ce461080df869469e487bafbe1a05cf69940c88153b27b794af",
+    "scripts/verify-route-boundaries.py": "a3426295dac79e841c69f7c08fb4a77a29e369d225906595f1a4f48b44e40904",
+    "scripts/verify-site.cjs": "9931d3464debc4ab51a33337ced3eb86014baaaa1c1d04dd7034c9aa4e5bf592",
+    "site/index.html": "2e3cd68687871af23bf6a20f9b4f7bed2b708447b503e9f6edae5eef151cb9b7",
+    "site/public/reference/mt-device-explorer.md": "dad64b08d055ce89e0ea5ed1c35eac7b094be449d5eae4b09065994f09bd9896",
+    "site/public/reference/mt-evidence-workflow.md": "42f509e92a2bf011b9f5750956957018e5c42cc1aeb2f0f377d2a1ce17ea8784",
+    "site/public/reference/public-scope.json": "9ed0e0f134a5f4f03ea86295a0f30b18d709e10cf51adf6db108487fd6b19209",
+    "site/scripts/prepare.mjs": "6ae2a5b80bd923483695ff5d94fd0f7ed85f07df9f0df7726c147b3844f62b16",
+    "site/src/catalog.js": "f00353d23693e9b6e6e50da4c273a316b349a3347d6ef935532633ebcf1f93f6",
+    "site/src/main.jsx": "ac31307ee51620143ab00dba6cc1ba462d5bc461de70ab5566236839f0b9b9a6",
+    "site/src/presentation.js": "4253fe610df20ab93632be719bf8cc94c797abd07d950e66114e850ae92c1602",
+    "site/src/public-scope.json": "9ed0e0f134a5f4f03ea86295a0f30b18d709e10cf51adf6db108487fd6b19209",
+    "site/src/scope-manifest.json": "37ed87fb7969e6edcc54609d91bc189b0ca33d2b5083232eb86cdc97c425d7cd",
+    "site/src/styles.css": "baec654b988d03fa229ec32bfce4ec29a272430a278c832e585d4ef6015c58c7",
+    "site/src/usage.js": "cfd400e0517b5994a3d28942674381d9b73886ae57865cf83adc8ecde190d58e",
+    "state.json": "4010a0761bb41cd6dc9e64a973fecef679be0ab30ba82250888c4cb4455af817",
+    "tests/test_scoped_component_inputs.py": "edab7e3e0043d0269bc9fa20f2110ed0222fba403a5ac4678aecdc8af407b89c"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T07:30:23.205413+00:00"
+    }
+  ]
+}

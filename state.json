@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T06:57:23.036380+00:00",
+  "updated": "2026-11-19T07:49:49.852136+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1143,7 +1143,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T06:57:23.036380+00:00",
+  "updated_at": "2026-11-19T07:49:49.852136+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3667,6 +3667,17 @@
       "protected_publication_pending": false,
       "protected_publication": "runs/2026-11-19-ps-source-protected-merge.json",
       "live_publication": "runs/2026-11-19-ps-source-live-publication.json"
+    },
+    "mt_cohort_integration": {
+      "PS": "runs/2026-11-19-mt-cohorts-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-mt-cohorts-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-mt-cohorts-protocol.json",
+      "extension": "runs/2026-11-19-mt-cohorts-extension.json",
+      "website": "runs/2026-11-19-mt-cohorts-website.json",
+      "boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": true
     }
   },
   "mt_evidence_workflow": {
@@ -3752,7 +3763,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-19-ps-source-notice-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -3898,5 +3909,31 @@
     "new_original_closures": 0,
     "independent_accuracy_evidence": false,
     "integration_evidence": "runs/2026-11-19-cohort-policy-integration.json"
+  },
+  "mt_device_preview": {
+    "status": "integrated_production_controls_passed; protected_publication_pending",
+    "methods": {
+      "urgency": "english-context-observations/1.1.0",
+      "authority": "ascii-quoted-authority-observations/1.0.0"
+    },
+    "envelope": "mt-device-phrase-explorer/1.0.1",
+    "component": "site/src/MTExplorerSlot.jsx",
+    "evidence": [
+      "runs/2026-11-19-mt-device-browser-corrected.json",
+      "runs/2026-11-19-mt-device-correction.json"
+    ],
+    "on_device": true,
+    "default_analysis": false,
+    "input_upload_enabled": false,
+    "input_storage_enabled": false,
+    "fresh_worker_per_run": true,
+    "scoped_import_render_failure_boundary": true,
+    "exact_request_subject_binding": true,
+    "closed_result_schema": true,
+    "mt_tag_issued": false,
+    "independent_accuracy_evidence": false,
+    "physical_iphone_and_voiceover_complete": false,
+    "current_production_evidence": "runs/2026-11-19-mt-production-catalogue.json",
+    "current_accessibility_evidence": "runs/2026-11-19-mt-production-accessibility.json"
   }
 }

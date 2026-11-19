@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-074949-record-combined-mt-cohort-integration-acceptance-4589a662
+
+Recorded 2026-11-19T07:49:49.905148+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source acceptance for the mounted private MT phrase preview, readable modals and corrected dependency/source-notice tooling before protected publication.
+- **Evidence.** All five unchanged-source engineering groups pass: 7 PS, 6 privacy, 51 protocol, 14 extension and 42 website command groups. The real MT modal runs both observations under ordinary CSP, binds their input, preserves privacy and leaves PS usable when its chunk fails. Current boundaries and 62-surface accessibility probes pass. [Change record](./runs/changes/2026-11-19-074949-record-combined-mt-cohort-integration-acceptance-4589a662.json).
+- **Not claimed.** No MT tag, intent classification, independent accuracy, physical iPhone/VoiceOver acceptance or broad redistribution clearance. Protected CI and live delivery remain pending; all 202 IDs and 132 complete/70 open are retained.
+
+
+### 2026-11-19-074249-await-real-mt-controls-before-accessibility-probes-17c9f998
+
+Recorded 2026-11-19T07:42:49.331172+00:00 · Contributor: Codex · change
+
+- **Changed.** Wait for the actual lazy MT explorer before catalogue and accessibility geometry/focus probes, instead of treating an open modal shell as completed content.
+- **Evidence.** The focused accessibility run now passes all measured surfaces in both themes; the earlier failure measured controls while the MT panel was still mounting and moving the later contribution action. No focus rule or error assertion was removed. [Change record](./runs/changes/2026-11-19-074249-await-real-mt-controls-before-accessibility-probes-17c9f998.json).
+- **Not claimed.** This corrects test readiness and preserves real focus/size/spacing checks. Final full website execution and publication remain pending; no physical-device or human screen-reader acceptance is granted.
+
+
+### 2026-11-19-073507-distinguish-mt-preview-from-tag-release-in-ui-checks-5e5de0b7
+
+Recorded 2026-11-19T07:35:07.935469+00:00 · Contributor: Codex · change
+
+- **Changed.** Require accurate planned-tag versus available-method wording in catalogue checks and announce both MT inputs as required while retaining the existing custom accessible errors.
+- **Evidence.** The combined catalogue check caught its former No-checker assertion, which is false for the new bounded preview. Required native fields retain custom form validation through noValidate; the updated production controller parses. [Change record](./runs/changes/2026-11-19-073507-distinguish-mt-preview-from-tag-release-in-ui-checks-5e5de0b7.json).
+- **Not claimed.** The MT tag remains planned and its validation card is not promoted. Fresh protocol/website execution follows; unaffected PS, privacy and extension evidence is retained.
+
+
+### 2026-11-19-073022-project-final-mt-preview-and-readable-modals-6eac64d3
+
+Recorded 2026-11-19T07:30:22.970579+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the complete public catalogue and references from the final MT-preview wording, guarded mount and narrow-screen layout before source-bound integration execution.
+- **Evidence.** Preparation preserves 20 tag/offer records and all 202 original scope IDs. The final actual production controls and static references now select the same exact source; scope verification passes. [Change record](./runs/changes/2026-11-19-073022-project-final-mt-preview-and-readable-modals-6eac64d3.json).
+- **Not claimed.** Current source-bound integration, protected CI and publication are pending. MT remains planned as a tag, no independent accuracy or physical/human accessibility acceptance is granted, and the original 132/70 ledger is retained.
+
+
+### 2026-11-19-072909-put-wording-action-before-contribution-details-5f2b545d
+
+Recorded 2026-11-19T07:29:09.005445+00:00 · Contributor: Codex · change
+
+- **Changed.** Place the working MT phrase preview before local-guide and contribution details, keep static availability wording accurate, and capture the ordinary phone layout alongside enlarged-text QA.
+- **Evidence.** The preceding ordinary-CSP production run passed both input-bound methods, privacy and missing-chunk containment; enlarged-text screenshot now retains whole words and a compact header. The final controller parses for the forthcoming complete execution. [Change record](./runs/changes/2026-11-19-072909-put-wording-action-before-contribution-details-5f2b545d.json).
+- **Not claimed.** This is a method-preview layout change. Fresh complete integration execution follows; no MT tag release, independent accuracy or human/device acceptance.
+
+
+### 2026-11-19-072449-keep-enlarged-modal-text-readable-b1bebe31
+
+Recorded 2026-11-19T07:24:49.931247+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve enlarged text while reducing narrow-screen modal chrome and retaining a fixed 44px close target; strengthen the real MT modal checks against a consuming sticky header and fragmented result words.
+- **Evidence.** Visual inspection of the first real 320px enlarged-text screenshot identified a failure that horizontal-scroll-only checks missed. The updated production control parses; a fresh build and visual check follow. [Change record](./runs/changes/2026-11-19-072449-keep-enlarged-modal-text-readable-b1bebe31.json).
+- **Not claimed.** This preserves focus, labels, themes and tag logic. Fresh combined browser execution is pending; physical iPhone and human VoiceOver acceptance remain open.
+
+
+### 2026-11-19-071942-mount-independent-private-mt-wording-preview-170d8757
+
+Recorded 2026-11-19T07:19:42.923117+00:00 · Contributor: Codex · change
+
+- **Changed.** Mount the corrected request-bound MT wording preview through its scoped lazy/error boundary; prepare exact source/notices, publish both guides and distinguish its two observations from the planned MT tag.
+- **Evidence.** 72 focused adapter/builder/source-binding checks and 13 Node client groups pass. Preparation passes; the independent corrected fixture evidence retains full browser parity and corrupt-result refusals. New built-modal controls cover ordinary browser input binding, privacy, reflow and missing-chunk containment. [Change record](./runs/changes/2026-11-19-071942-mount-independent-private-mt-wording-preview-170d8757.json).
+- **Not claimed.** Actual combined production-modal execution, fresh integration receipts and protected publication are next. No MT assertion, contextual intent classification, independent accuracy or physical iPhone/VoiceOver acceptance. All original percentages and 132 complete/70 open remain unchanged.
+
+
 ### 2026-11-19-065723-bind-reviewed-cohort-checks-and-safe-source-verification-eb829c41
 
 Recorded 2026-11-19T06:57:23.079539+00:00 · Contributor: Codex · change

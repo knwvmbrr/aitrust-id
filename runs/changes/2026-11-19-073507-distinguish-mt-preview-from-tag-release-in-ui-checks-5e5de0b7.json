@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-073507-distinguish-mt-preview-from-tag-release-in-ui-checks-5e5de0b7",
+  "recorded_at": "2026-11-19T07:35:07.935469+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "eb5321d182d33a9a92e2c5d70421dd7974d3cb9f",
+  "changed": "Require accurate planned-tag versus available-method wording in catalogue checks and announce both MT inputs as required while retaining the existing custom accessible errors.",
+  "proves": "The combined catalogue check caught its former No-checker assertion, which is false for the new bounded preview. Required native fields retain custom form validation through noValidate; the updated production controller parses.",
+  "limits": "The MT tag remains planned and its validation card is not promoted. Fresh protocol/website execution follows; unaffected PS, privacy and extension evidence is retained.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-MT",
+    "F-139"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "a995965d670abb782806571fafb98211bce1709b7763ed7e547aaa2c4b8309c0",
+    "site/src/MTExplorer.jsx": "e41c2dd66d38986f9d54912e70bbc49ae5259f4a03dd2b1f1928a520183be30d",
+    "scripts/mt-site-controls.cjs": "c889706afd73b6d051fae76ac8aec7e37069d9418689141b9ce21e6dd1ad6bc1"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/mt-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T07:35:08.253735+00:00"
+    }
+  ]
+}

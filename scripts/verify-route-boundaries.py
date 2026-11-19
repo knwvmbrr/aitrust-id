@@ -198,6 +198,10 @@ PATTERNS += ('NOTICE',)
 
 PATTERNS += ('tools/rolldown_cohort.py', 'scripts/verify-rolldown-cohort.py', 'tests/test_rolldown_cohort.py', 'docs/rolldown-source-review.md', 'sbom/reviews/rolldown-source.json', 'tools/c2pa_cohort.py', 'scripts/verify-c2pa-cohort.py', 'tests/test_c2pa_cohort.py', 'docs/c2pa-cohort-plan.md', 'docs/c2pa-cohort-result.md', 'sbom/c2pa/**/*', 'tools/nli_license_cohort.py', 'scripts/verify-nli-license-cohort.py', 'tests/test_nli_license_cohort.py', 'docs/nli-license-cohort.md', 'sbom/reviews/nli/**/*', 'docs/changelog-merge-parent-plan.md', 'docs/agent-handoffs.md')
 
+PATTERNS += ('tools/mt_device.py', 'scripts/build-mt-device.py', 'tests/test_mt_device.py', 'scripts/build-mt-device-fixture.mjs', 'scripts/verify-mt-device.cjs', 'tests/mt-device-client.mjs', 'site/src/MTExplorer.jsx', 'site/src/MTExplorerSlot.jsx', 'site/src/mt-device-client.js', 'site/src/mt-device-result.js', 'site/src/mt-device-worker.js', 'site/src/mt-device-manifest.json', 'site/public/mt-device/*', 'site/public/reference/mt-device-explorer.md', 'docs/mt-device-explorer-plan.md', 'docs/mt-device-explorer.md', 'docs/mt-device-explorer-result.md', 'docs/mt-device-integrity-correction.md', 'scripts/mt-site-controls.cjs')
+
+PATTERNS += ('scripts/verify-mt-client.cjs',)
+
 def read_json(file):
     return read_evidence(file)
 
