@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "component": "NF canonical cosine result binding correction",
+  "recorded_at": "2026-11-19T15:36:53.128193+00:00",
+  "implemented_by": "Codex",
+  "base_commit": "2386283ab3b3ef52668400b8c00197a760e6e8de",
+  "platform": "Darwin",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "tools/nf_source_evidence.py": "9012a04cf412ab27d8deede84b49b214d620fc788092d872e1ffe3607d817602",
+    "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+    "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "tests/test_nf_source_evidence.py": "2c85dd6e6f041ce05e71872da23cf0d81f6acdbd8281c6d89e5e825245d38649",
+    "docs/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "docs/nf-source-evidence-plan.md": "32bb1d50fa38677e9d30c34312808677081562d4e6eab507c739080573322b77",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec"
+  },
+  "source_hashes_stable_before_after": true,
+  "focused_tests": {
+    "passed": 95,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 10.38
+  },
+  "actual_cli": {
+    "passed": 23,
+    "failed": 0,
+    "controls": [
+      {
+        "name": "ascii_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "ascii_brief",
+        "exit_code": 0,
+        "passed": true,
+        "state": "COMPLETE",
+        "stdout_sha256": "ba2ea003de9658e05349628fa1e5addcc88e2f61109ef0cf49a334caf2b49095",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "ascii_private_report",
+        "exit_code": 0,
+        "passed": true,
+        "state": "COMPLETE",
+        "stdout_sha256": "b8183493a8f1b8cd18582007ccdc9c71e52a98a8101bcca95039abd2727cfa0f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "existing_report_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "actual_worker_score_refused_cosine_only",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "stdout_sha256": "c534dfe049258434a490b26cedc877c048e8040e73fc0e6b482a0b5478ef040f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "actual_worker_omission_refused_cosine_only",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "stdout_sha256": "c534dfe049258434a490b26cedc877c048e8040e73fc0e6b482a0b5478ef040f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "changed_subject_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unicode_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unicode_partial_private",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "stdout_sha256": "5502522a1bd198ec5c071de0e44d27abfebd98cf00a5867af22c8f91372482be",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "missing_corpus_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "linked_subject_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unknown_argument_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_fdopen",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_fdopen_reuse",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_fsync",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_unlink",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_link_unknown",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_close",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "fi_absent_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "broken_cosine_fi_absent_exact_completes",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "stdout_sha256": "c534dfe049258434a490b26cedc877c048e8040e73fc0e6b482a0b5478ef040f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "broken_nf_quantitative_completes",
+        "exit_code": 0,
+        "passed": true,
+        "state": "OBSERVATIONS",
+        "stdout_sha256": "5cb10004a98066cfa662e675a721d14f8b7591110f304fdddeaf5d88940f6644",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unavailable_worker_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "all_workers_unavailable_no_export",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "4b9e26f67643c7970182667b673ad313dd26b83168db6d40d115806dff9c7fee",
+        "stderr_bytes": 0
+      }
+    ],
+    "isolated_python_flags": [
+      "-I",
+      "-S",
+      "-B"
+    ],
+    "minimal_environment": true,
+    "synthetic_only": true,
+    "corruption_controls": "Fixed diagnostic adapter mutates completed real worker rows immediately before the actual canonical validator; source files unchanged"
+  },
+  "bounded_replay_observation": {
+    "pairs": 8,
+    "distinct_claim_tokens": 512,
+    "claim_characters": 1937,
+    "passage_characters": 2000,
+    "reference_lines_per_pair": 1000,
+    "validation_seconds": 0.290533,
+    "universal_latency_or_hardware_acceptance": false
+  },
+  "boundaries": {
+    "canonical_score_values_and_complete_match_list_replayed": true,
+    "plausible_forgery_and_omission_rejected": true,
+    "literal_sibling_preserved": true,
+    "literal_and_common_contract_unchanged": true,
+    "actual_macos_ipv4_ipv6_denial_observed": true,
+    "no_network_or_model_during_replay": true
+  },
+  "historical_evidence_preserved": [
+    "runs/2026-11-19-nf-source-initial-refusal.json",
+    "runs/2026-11-19-nf-source-evidence-macos.json",
+    "runs/2026-11-19-nf-cosine-binding-original-defect.json"
+  ],
+  "claims": {
+    "NF_or_FI_tag_issuance": false,
+    "full_T_NF_completion": false,
+    "independent_accuracy_or_corroboration": false,
+    "source_truth_or_freshness": false,
+    "human_acceptance": false,
+    "linux_execution": false
+  }
+}

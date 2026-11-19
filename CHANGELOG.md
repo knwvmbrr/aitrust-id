@@ -16,6 +16,22 @@ Recorded 2026-11-19T15:30:47.416628+00:00 · Contributor: Codex HP tag lane · c
 - **Changed.** Built an independent on-device HP literal-detail explorer with exact unmodified quantitative Python, raw and frozen-NFC identity binding, closed result validation, private optional evidence, scoped lazy failure containment and safe source/notice packaging.
 - **Evidence.** 77 focused Python checks and 10 Node groups passed; actual Chromium and WebKit each matched 28 full native-Python records/refusals and passed 5 corrupt-result UI cases, cancellation, privacy, import/render/worker failure and responsive controls. Original LICENSE/NOTICE/Unicode notices are packaged exactly. Four 390px light/dark screenshots were inspected. [Change record](./runs/changes/2026-11-19-153047-hp-on-device-literal-details-90157d57.json).
 - **Not claimed.** No HP assertion, semantic specificity or source-support judgment, independent accuracy, physical-phone/human accessibility acceptance, production mounting, license clearance or parent requirement completion. Initial runtime delivery still needs network. F-015 and T-HP release acceptance remains open.
+### 2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead
+
+Recorded 2026-11-19T15:37:37.915789+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind accepted cosine scores and complete match lists to replay of the unchanged canonical component on the exact capped caller-selected passages before rebasing or export.
+- **Evidence.** The two original plausible-corruption acceptances are preserved; 95 focused controls and 23 actual current macOS CLI controls reject score forgery and match omission while retaining the literal sibling, plus a bounded replay cost observation. [Change record](./runs/changes/2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead.json).
+- **Not claimed.** Canonical replay verifies record consistency, not independent accuracy, semantic support, source freshness or truth. No NF or FI tag, original scope closure, Linux execution or human acceptance is claimed.
+
+
+### 2026-11-19-153132-nf-selected-source-evidence-9e6db2cb
+
+Recorded 2026-11-19T15:31:32.517470+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separately invoked NF evidence workflow binding caller-selected arbitrary NFC claim and source passage spans, composing canonical literal and cosine observations in independent bounded network-denied workers with NF-owned private I/O.
+- **Evidence.** 91 focused controls and 21 actual isolated-Python macOS CLI controls verify source and span identity, separate observation failures, real network denial, timeout and output caps, private exports, cross-tag independence and honest publication uncertainty; the initial failed candidate is retained. [Change record](./runs/changes/2026-11-19-153132-nf-selected-source-evidence-9e6db2cb.json).
+- **Not claimed.** Literal occurrence and cosine resemblance do not establish semantic support, source freshness or truth. No NF or FI tag, original scope closure, independent accuracy, Linux execution, full dependency clearance or human acceptance is claimed.
 
 
 ### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37

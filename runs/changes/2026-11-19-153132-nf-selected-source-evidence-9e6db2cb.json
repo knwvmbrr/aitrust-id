@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-153132-nf-selected-source-evidence-9e6db2cb",
+  "recorded_at": "2026-11-19T15:31:32.517470+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+  "changed": "Add a separately invoked NF evidence workflow binding caller-selected arbitrary NFC claim and source passage spans, composing canonical literal and cosine observations in independent bounded network-denied workers with NF-owned private I/O.",
+  "proves": "91 focused controls and 21 actual isolated-Python macOS CLI controls verify source and span identity, separate observation failures, real network denial, timeout and output caps, private exports, cross-tag independence and honest publication uncertainty; the initial failed candidate is retained.",
+  "limits": "Literal occurrence and cosine resemblance do not establish semantic support, source freshness or truth. No NF or FI tag, original scope closure, independent accuracy, Linux execution, full dependency clearance or human acceptance is claimed.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "tools/nf_source_evidence.py": "16c4af14a48fdb5ef86757e44ed05e9bb3a22e518bf8f2b4d4d298bc57fe1214",
+    "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+    "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "tests/test_nf_source_evidence.py": "f3faf951e0fa1834a4ddcf88b7d788b0f0e11e0402dac7eac0293821c36c8bb8",
+    "docs/nf-source-evidence.md": "16f17c6b13a471c0bbac1d80ee8c72b6be63bd7f9f3654064a84b9429f9bf193",
+    "docs/nf-source-evidence-plan.md": "d5766fd80d9a663e63334ad5f1c92743cd98d907f2748571fe53be058a93ad52",
+    "runs/2026-11-19-nf-source-initial-refusal.json": "ab806aaf871be1cdeb19b96422498835768159aa1ad42070761bf58917816dd1",
+    "runs/2026-11-19-nf-source-evidence-macos.json": "dc31fb4fec39003d83f61c75d5952819224e010222d4fcc5a8aae658a8b8b558"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-nf-source-initial-refusal.json",
+      "sha256": "ab806aaf871be1cdeb19b96422498835768159aa1ad42070761bf58917816dd1"
+    },
+    {
+      "path": "runs/2026-11-19-nf-source-evidence-macos.json",
+      "sha256": "dc31fb4fec39003d83f61c75d5952819224e010222d4fcc5a8aae658a8b8b558"
+    }
+  ],
+  "checks": []
+}
