@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T09:24:39.822476+00:00",
+  "updated": "2026-11-19T09:46:19.907115+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-19-mt-live-publication.json",
+    "evidence": "runs/2026-11-19-fi-live-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://ddae87b2.aitrust-id.pages.dev",
+    "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-17-runtime-notices-publication.json",
+    "publication_evidence": "runs/2026-11-19-fi-live-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -98,7 +98,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-14-research-http-live-browser.json",
+    "verification": "runs/2026-11-19-fi-citation-opaque-website.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -315,7 +315,7 @@
     "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "deployment": "https://842da8d4.aitrust-id.pages.dev",
-    "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -324,7 +324,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-11-19-mt-live-publication.json",
+    "publication": "runs/2026-11-19-fi-live-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -1143,7 +1143,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T09:24:39.822476+00:00",
+  "updated_at": "2026-11-19T09:46:19.907115+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1213,11 +1213,12 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
-    "preview": "https://ddae87b2.aitrust-id.pages.dev",
-    "evidence": "runs/2026-11-19-mt-live-publication.json",
-    "all_artifacts_verified_per_origin": 313,
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "preview": "https://5d24e1c8.aitrust-id.pages.dev",
+    "evidence": "runs/2026-11-19-fi-live-publication.json",
+    "all_artifacts_verified_per_origin": 315,
     "origins_verified": 2,
+    "primary_unrelated_files_preserved": 12,
     "full_requirements_closed": []
   },
   "ci_portability": {
@@ -3078,8 +3079,8 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-19-mt-protected-merge.json",
-    "merge_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+    "evidence": "runs/2026-11-19-fi-protected-merge.json",
+    "merge_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
     "publicly_verified": true,
     "required_checks_passed": 11
   },
@@ -3147,12 +3148,12 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
-    "deployment_url": "https://ddae87b2.aitrust-id.pages.dev",
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-19-mt-live-publication.json",
-    "protected_merge": "runs/2026-11-19-mt-protected-merge.json",
-    "matching_artifacts": 626,
+    "evidence": "runs/2026-11-19-fi-live-publication.json",
+    "protected_merge": "runs/2026-11-19-fi-protected-merge.json",
+    "matching_artifacts": 630,
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
@@ -3161,7 +3162,7 @@
     "public_app_store_released": false,
     "formation_filed": false,
     "metadata_only_followup": true,
-    "meaning": "Records the verified implementation deployment; subsequent operations records remain in Git and do not rewrite the deployed implementation changelog."
+    "meaning": "Records the actual implementation deployment. Later operations records remain in Git and do not rewrite the deployed implementation changelog."
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -3422,6 +3423,35 @@
         "primary_unrelated_files_preserved": 12,
         "full_requirements_closed": []
       }
+    },
+    {
+      "replaced_at": "2026-11-19T09:46:19.427195+00:00",
+      "previous_production_publication": {
+        "status": "live_and_verified",
+        "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+        "deployment_url": "https://ddae87b2.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-19-mt-live-publication.json",
+        "protected_merge": "runs/2026-11-19-mt-protected-merge.json",
+        "matching_artifacts": 626,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false,
+        "metadata_only_followup": true,
+        "meaning": "Records the verified implementation deployment; subsequent operations records remain in Git and do not rewrite the deployed implementation changelog."
+      },
+      "previous_latest_runtime_publication": {
+        "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+        "preview": "https://ddae87b2.aitrust-id.pages.dev",
+        "evidence": "runs/2026-11-19-mt-live-publication.json",
+        "all_artifacts_verified_per_origin": 313,
+        "origins_verified": 2,
+        "full_requirements_closed": []
+      }
     }
   ],
   "directory_rollover_test_clock": {
@@ -3663,12 +3693,11 @@
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
-      "captured_at": "2026-11-19T04:38:44.632Z",
-      "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
-      "deployment_url": "https://335346d2.aitrust-id.pages.dev",
-      "primary_url": "https://aitrustid.com",
-      "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
-      "matching_artifacts": 608,
+      "captured_at": "2026-11-19T09:46:19.427195+00:00",
+      "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+      "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
+      "evidence": "runs/2026-11-19-fi-live-publication.json",
+      "matching_artifacts": 630,
       "independent_release_validated": false
     },
     "agent_integration": {
@@ -3719,7 +3748,9 @@
       "boundaries": "runs/2026-11-19-fi-citation-opaque-boundaries.json",
       "source_bound_checks_passed": true,
       "independent_accuracy_evidence": false,
-      "protected_publication_pending": true
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-19-fi-protected-merge.json",
+      "live_publication": "runs/2026-11-19-fi-live-publication.json"
     }
   },
   "mt_evidence_workflow": {
@@ -3868,19 +3899,21 @@
   },
   "prior_production_publication": {
     "status": "live_and_verified",
-    "source_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
-    "deployment_url": "https://1e3d6ed3.aitrust-id.pages.dev",
+    "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+    "deployment_url": "https://ddae87b2.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-19-ps-source-live-publication.json",
-    "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json",
-    "matching_artifacts": 614,
+    "evidence": "runs/2026-11-19-mt-live-publication.json",
+    "protected_merge": "runs/2026-11-19-mt-protected-merge.json",
+    "matching_artifacts": 626,
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
     "public_app_store_released": false,
-    "formation_filed": false
+    "formation_filed": false,
+    "metadata_only_followup": true,
+    "meaning": "Records the verified implementation deployment; subsequent operations records remain in Git and do not rewrite the deployed implementation changelog."
   },
   "ps_source_distribution": {
     "status": "live_source_only_development_download_verified",
@@ -3977,12 +4010,12 @@
     "physical_iphone_and_voiceover_complete": false,
     "current_production_evidence": "runs/2026-11-19-mt-production-catalogue.json",
     "current_accessibility_evidence": "runs/2026-11-19-mt-production-accessibility.json",
-    "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
-    "live_evidence": "runs/2026-11-19-mt-live-controls.json",
-    "publication_evidence": "runs/2026-11-19-mt-live-publication.json"
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "live_evidence": "runs/2026-11-19-fi-live-mt-controls.json",
+    "publication_evidence": "runs/2026-11-19-fi-live-publication.json"
   },
   "fi_citation_sidecar": {
-    "status": "reviewed_opaque_targets_and_ownership_integrated; protected_publication_pending",
+    "status": "public_offline_development_component; FI_tag_not_released",
     "method": "declared-local-numbered-citations/1.0.0",
     "source": "tools/citation_resolution.py",
     "cli": "scripts/citation-resolution.py",
@@ -3995,7 +4028,7 @@
     "semantic_source_support_established": false,
     "independent_accuracy_evidence": false,
     "actual_macos_cli_controls": 23,
-    "linux_execution_recorded": false,
+    "linux_execution_recorded": true,
     "focused_component_tests": 140,
     "postpublication_uncertainty_explicit": true,
     "raw_output_descriptor_capture_owned": true,
@@ -4003,6 +4036,18 @@
     "current_grammar_evidence": "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
     "actual_macos_grammar_cases": 24,
     "actual_macos_grammar_cli_commands": 48,
-    "opaque_targets_after_unsupported_labels": true
+    "opaque_targets_after_unsupported_labels": true,
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "publication_evidence": "runs/2026-11-19-fi-live-publication.json",
+    "protected_merge": "runs/2026-11-19-fi-protected-merge.json",
+    "linux_execution_scope": "Current test suite under the CI nonroot network-isolated job; not a physical-device or independent-accuracy study"
+  },
+  "operational_observations": {
+    "webkit_ci_timeout": {
+      "evidence": "runs/2026-11-19-fi-ci-device-observation.json",
+      "source_fix_claimed": false,
+      "unchanged_revision_retry_passed": true,
+      "underlying_cause_established": false
+    }
   }
 }
