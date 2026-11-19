@@ -46,6 +46,23 @@ Recorded 2026-11-19T06:10:58.800334+00:00 · Contributor: Codex · change
 - **Evidence.** 69 focused policy/export controls pass, including an actual ZIP attribution inspection and removed-and-rehashed attribution refusal. The corrected archive executes finding/no-finding checks and rebuilds identical bytes on Mac and network-isolated nonroot Linux; staging IDs, images, configuration and health remain unchanged. [Change record](./runs/changes/2026-11-19-061058-preserve-applicable-project-notice-in-ps-archive-83f040f2.json).
 - **Not claimed.** The earlier unpublished candidate and its immutable evidence remain historical. Corrected source ZIP is 130542 bytes; no independent accuracy, full original closure, legal clearance or live publication is granted. Fresh integration and protected checks follow.
 
+### 2026-11-19-070555-mt-preview-integrity-correction-bedaf577
+
+Recorded 2026-11-19T07:05:55.348819+00:00 · Contributor: Codex - MT integrity correction lane · change
+
+- **Changed.** Correct MT request/result identity and closed evidence validation; capture bounded no-follow source snapshots before publishing method bundles.
+- **Evidence.** 13 Node groups,36 focused Python tests and fresh Chromium/WebKit controls pass; each browser validates30 full records and refuses five corrupt result types before rendering. Source links/FIFO/oversize/drift preserve prior outputs. [Change record](./runs/changes/2026-11-19-070555-mt-preview-integrity-correction-bedaf577.json).
+- **Not claimed.** Supersedes unmounted70a38b5 evidence for integrity adoption. No canonical method change, tag assertion, independent accuracy, physical-device acceptance, full closure or production mounting. Prior receipts preserved; PM owns integration.
+
+
+### 2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8
+
+Recorded 2026-11-19T06:28:07.219514+00:00 · Contributor: Codex - MT on-device evidence engineering lane · change
+
+- **Changed.** Build a separate on-device MT phrase explorer component with exact Python urgency/authority observations, lazy per-run workers and scoped import/render failure containment.
+- **Evidence.** 80 focused Python checks, eight Node client groups and two actual browser engines pass; each browser matches26 full native records with private-detail, failure, cancellation, reflow and storage controls. [Change record](./runs/changes/2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8.json).
+- **Not claimed.** Working unpublished component: PM must mount and production-build it. No MT assertion, manipulation/intent/truth verdict, independent accuracy, physical iPhone/VoiceOver acceptance, dependency clearance or full requirement closure. Scope/state unchanged.
+
 
 ### 2026-11-19-055630-record-source-download-integration-evidence-4edd25dd
 
