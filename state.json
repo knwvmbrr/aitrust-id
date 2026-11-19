@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T02:39:35.731139+00:00",
+  "updated": "2026-11-19T02:51:38.674441+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1142,7 +1142,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T02:39:35.731139+00:00",
+  "updated_at": "2026-11-19T02:51:38.674441+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3739,7 +3739,9 @@
     "historical_package_fully_reviewed": false,
     "evidence": "runs/2026-11-18-legal-execution-packet.json",
     "michigan_llc_source": "docs/legal/michigan-llc-packet.md",
-    "michigan_llc_evidence": "runs/2026-11-18-michigan-llc-packet.json"
+    "michigan_llc_evidence": "runs/2026-11-18-michigan-llc-packet.json",
+    "owner_choice": "compare_both_structures_before_selecting",
+    "comparison": "runs/2026-11-18-entity-structure-comparison.json"
   },
   "virtual_tag_lab": {
     "status": "MT_and_NF_FI_passed_PS_test_dependency_repaired_rerun_pending",
@@ -3747,6 +3749,7 @@
     "mac_controls_passed": 329,
     "independent_accuracy_granted": false,
     "first_hosted_evidence": "runs/2026-11-18-agent-tools-first-hosted.json",
-    "privacy_startup_cause": "unestablished_failure_only_diagnostics_added"
+    "privacy_startup_cause": "HTTP privacy module import failed; directory traversal correction reproduced, hosted image confirmation pending",
+    "startup_diagnostic": "runs/2026-11-18-privacy-startup-hosted.json"
   }
 }

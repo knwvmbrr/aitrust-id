@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-025701-retain-import-candidate-revalidation-refusals-59cc8569",
+  "recorded_at": "2026-11-19T02:57:01.800930+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dfb68c479180bb3773e48982a9584b2be2155ecd",
+  "changed": "Retain failed candidate checks before obtaining fresh real Linux setup evidence.",
+  "proves": "Protocol rejects stale full-build setup evidence after Dockerfile changes; website accounting refuses unrecorded new run outputs.",
+  "limits": "These are recorded failures, not successful source revalidation. Corrected container startup and current clean setup remain to execute.",
+  "scope_ids": [
+    "F-150",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "runs/2026-11-18-agent-tools-protocol-import-fix.json": "2fed9304b6aae164369344af973bd107f5dbddad51baec71a7c28c9cbdd9b027",
+    "runs/2026-11-18-agent-tools-website-import-fix.json": "a2ebaaee206be5a3f46aa51bd376160ba7b0e16a963b80dd0c0282a452d479a2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-agent-tools-protocol-import-fix.json",
+      "sha256": "2fed9304b6aae164369344af973bd107f5dbddad51baec71a7c28c9cbdd9b027"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-website-import-fix.json",
+      "sha256": "a2ebaaee206be5a3f46aa51bd376160ba7b0e16a963b80dd0c0282a452d479a2"
+    }
+  ],
+  "checks": []
+}

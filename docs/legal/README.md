@@ -35,3 +35,5 @@ redactions. The proposed corrections here do not close that backlog.
 [Read the unexecuted owner packet](execution-packet.md). It includes operating adoption, formation decisions, contributor and reviewer forms, metadata consent, community notice, social approval, paid-service worksheet, incident procedure and IP/mark review. This is a current operating reconciliation, not a complete professional review or execution of the external formation package.
 
 [Proposed Michigan single-member LLC documents](michigan-llc-packet.md) are a distinct owner-reviewed commercial formation option. They do not adopt the historical deferred foundation-owned/Delaware LLC draft. Articles worksheet, operating agreement, initial action, asset schedules, license/tax determinations and compliance calendar remain unexecuted.
+
+[Ownership comparison](entity-structure-comparison.md): Michael requested both structures compared before choosing on 18 November 2026. No entity structure, ownership transfer or filing is selected or authorized by these drafts.

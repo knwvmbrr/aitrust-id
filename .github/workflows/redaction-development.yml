@@ -15,6 +15,7 @@ on:
       - 'tests/test_redaction_worker_observations.py'
       - 'scripts/diagnose-personal-startup.py'
       - 'tests/test_personal_startup_diagnostics.py'
+      - 'tests/test_container_protocol_import.py'
       - '.github/workflows/redaction-development.yml'
 permissions:
   contents: read
@@ -84,7 +85,7 @@ jobs:
           python -m pip install --require-hashes -r eval/requirements.lock
           python scripts/verify-service.py --help
           python scripts/verify-assertion-replay.py --help
-          python -m pytest tests/test_personal_startup_diagnostics.py tests/test_worker_process.py -q
+          python -m pytest tests/test_personal_startup_diagnostics.py tests/test_worker_process.py tests/test_container_protocol_import.py -q
       - name: Create a private disposable staging credential
         run: |
           python - <<'PYCREDENTIAL'

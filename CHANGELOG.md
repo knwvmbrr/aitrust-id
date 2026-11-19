@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-025701-retain-import-candidate-revalidation-refusals-59cc8569
+
+Recorded 2026-11-19T02:57:01.800930+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain failed candidate checks before obtaining fresh real Linux setup evidence.
+- **Evidence.** Protocol rejects stale full-build setup evidence after Dockerfile changes; website accounting refuses unrecorded new run outputs. [Change record](./runs/changes/2026-11-19-025701-retain-import-candidate-revalidation-refusals-59cc8569.json).
+- **Not claimed.** These are recorded failures, not successful source revalidation. Corrected container startup and current clean setup remain to execute.
+
+
+### 2026-11-19-025250-correct-service-import-directory-and-compare-ownership-60eb77aa
+
+Recorded 2026-11-19T02:52:50.969186+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve HTTP-module startup diagnostics, add explicit traversable read-only protocol directories and nonroot image import assertions, and compare ownership structures without selecting one.
+- **Evidence.** Actual pinned Uvicorn reproduces failure with0444 directory and loads identical module bytes after0555 correction. Twenty-eight integrated import and diagnostic controls pass; four comparison pages rendered and inspected. [Change record](./runs/changes/2026-11-19-025250-correct-service-import-directory-and-compare-ownership-60eb77aa.json).
+- **Not claimed.** Original hosted directory mode and corrected image startup await the next real hosted run. No resources or network isolation weakened, no entity selected or filed, no original requirement closure.
+
+
+### 2026-11-19-024649-make-shared-protocol-directory-traversable-28b43967
+
+Recorded 2026-11-19T02:46:49.911408+00:00 · Contributor: Codex · change
+
+- **Changed.** Set shared ASGI package directory search permissions explicitly and check module resolution as the runtime user in each selected image build.
+- **Evidence.** Nonroot pinned Uvicorn0.34 CLI loading reproduces the hosted import error at directory0444 and succeeds at0555 while source files stay0444. All57 adjacent checks passed before the mode observation addition and all4 final import controls passed afterward. The build now prints the prior directory mode. [Change record](./runs/changes/2026-11-19-024649-make-shared-protocol-directory-traversable-28b43967.json).
+- **Not claimed.** The original hosted directory mode is unobserved until a fresh hosted image build. No local Docker or service process started. Actual container startup, health and replay remain pending.
+
+
 ### 2026-11-19-023935-bind-lab-bootstrap-and-diagnostic-verification-923a4f04
 
 Recorded 2026-11-19T02:39:35.772322+00:00 · Contributor: Codex · change
