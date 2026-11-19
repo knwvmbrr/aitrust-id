@@ -95,3 +95,12 @@ download. `verify:ps-results` compares the public download to the full source
 commit named in `state.json`'s publication record. When checking a new deployment
 before its publication record is written, pass `AITRUST_PUBLISHED_SOURCE` with
 that full commit. Local checks continue to compare to the working changelog.
+
+
+During a real pending merge, staged verification may recover an incoming event's
+evidence from its unique original addition reachable through Git's MERGE_HEAD.
+The event must still match that committed record exactly, and the evidence must
+match its bytes at that original commit. Fresh current-file coverage remains
+required. Copied but unmerged branch records and edited or ambiguous events cannot
+borrow that history. Explicit committed-range verification does not consult a
+pending merge parent. This preserves history; it grants no new release claim.

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-064440-retain-exact-incoming-evidence-during-real-merge-249f98ec
+
+Recorded 2026-11-19T06:44:40.213683+00:00 · Contributor: Codex · change
+
+- **Changed.** Let the staged changelog guard recover an incoming event from its exact original commit during a real pending merge, while refusing ambiguous named refs and preserving immutable history and current-file coverage.
+- **Evidence.** 48 actual Git/staged-history controls pass; peer replay confirms the prior named-branch bypass refuses and genuine pending merges pass. Regular bounded no-follow Git pseudoref reads replace ambiguous ref resolution. [Change record](./runs/changes/2026-11-19-064440-retain-exact-incoming-evidence-during-real-merge-249f98ec.json).
+- **Not claimed.** This fixes accountability integration, not detector accuracy or release validation. The current cohort remains bounded source/notice evidence; no original requirement closure.
+
+
 ### 2026-11-19-062950-record-live-small-ps-source-publication-c942c7f2
 
 Recorded 2026-11-19T06:29:50.419236+00:00 · Contributor: Codex · change
@@ -63,6 +72,23 @@ Recorded 2026-11-19T05:45:04.086095+00:00 · Contributor: Codex · change
 - **Changed.** Connect a deterministic PS-only source download to its independent Terminal instructions; enforce exact-source dependency conflict refusals for that exporter and required CI, preserve the esbuild source review and mixed-stream privacy blockers, and refuse unresolved changelog merge markers.
 - **Evidence.** 145 focused integration and failure controls pass; actual Mac and isolated nonroot Linux receipts verify identical ZIP bytes and extracted finding/no-finding operation. Site preparation exports through the real policy. [Change record](./runs/changes/2026-11-19-054504-integrate-small-ps-download-and-conflict-policy-d3ae8daf.json).
 - **Not claimed.** 132 complete and 70 original open requirements remain. Other 13 policy scopes remain blocked, existing previews are not approved releases, and independent tag accuracy, legal clearance, live mixed-stream capture, physical phone acceptance and new publication remain unverified.
+
+### 2026-11-19-060942-rolldown-pax-parser-bound-15aff49f
+
+Recorded 2026-11-19T06:09:42.623264+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Cap decompressed Rolldown tar bytes before PAX and extended metadata parsing, preserving original archive/notice observations.
+- **Evidence.** 12 focused tests and actual replay of the same 16 package archives plus pinned source pass; oversized inert PAX metadata refuses before member processing. Source hashes stayed stable during current CLI replay. [Change record](./runs/changes/2026-11-19-060942-rolldown-pax-parser-bound-15aff49f.json).
+- **Not claimed.** Bounded evidence only; native compiler/transitive/platform/source-offer obligations and all clearance flags remain unresolved. Prior receipts preserved.
+
+
+### 2026-11-19-055604-rolldown-source-notice-cohort-618cc86f
+
+Recorded 2026-11-19T05:56:04.492828+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Preserve the previously uncollected Rolldown third-party notice and bind 15 native addons plus wrapper to exact cached packages and pinned upstream source/build declarations.
+- **Evidence.** Actual replay of 16 locked npm archives and one pinned upstream source archive passed; 11 focused refusal controls passed. Both complete bundled license texts are retained byte for byte. [Change record](./runs/changes/2026-11-19-055604-rolldown-source-notice-cohort-618cc86f.json).
+- **Not claimed.** Supplemental source/notice observations only. Compiled Rust graph, platform/runtime terms, actual compiler identity, reproducible builds and distribution source-offer assembly remain unresolved. No permission or release clearance and no original requirement closure.
 
 
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e

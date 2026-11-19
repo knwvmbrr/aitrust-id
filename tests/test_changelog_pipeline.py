@@ -149,6 +149,75 @@ class ChangePipeline(unittest.TestCase):
         (self.root/n).unlink();self.commit()
         (self.root/n).write_bytes(raw);self.commit()
         self.assertIsNone(m.committed_event_origin(self.root,n,'HEAD'))
+    def pending_evidence_merge(self, bad_original=False, real_merge=True):
+        self.git('checkout','-qb','incoming',self.base)
+        proof=self.root/'docs/observed.json';proof.write_text('{"version":1}\n')
+        one,name=self.record(id='incoming-event-one',files={'docs/observed.json':m.digest(self.root,'docs/observed.json')},
+            evidence=[{'path':'docs/observed.json','sha256':'0'*64 if bad_original else m.digest(self.root,'docs/observed.json')}])
+        self.commit()
+        proof.write_text('{"version":2}\n')
+        two,_=self.record(id='incoming-event-two',files={'docs/observed.json':m.digest(self.root,'docs/observed.json')})
+        self.commit();incoming=self.git('rev-parse','HEAD').strip()
+        self.git('checkout','-qb','receiver',self.base)
+        (self.root/m.EVENT_DIR).mkdir(parents=True,exist_ok=True)
+        (self.root/'source.py').write_text('receiver\n')
+        self.record(id='receiver-event-one');self.commit()
+        if real_merge:
+            result=subprocess.run(['git','merge','--no-ff','--no-commit','incoming'],cwd=self.root,capture_output=True)
+            self.assertIn(result.returncode,(0,1))
+        else:
+            self.git('checkout','incoming','--','docs/observed.json',m.EVENT_DIR)
+        # Resolve only the human index; JSON events and evidence stay unchanged.
+        log=self.git('show','HEAD:CHANGELOG.md')+'\n'+m.entry(one,name)+'\n'+m.entry(two,'runs/changes/incoming-event-two.json')
+        (self.root/'CHANGELOG.md').write_text(log);self.git('add','.')
+        return name,incoming
+    def test_real_pending_merge_uses_exact_incoming_original_evidence(self):
+        name,incoming=self.pending_evidence_merge()
+        self.assertIsNone(m.committed_event_origin(self.root,name,'HEAD'))
+        self.assertIsNotNone(m.committed_event_origin(self.root,name,'HEAD',include_merge_parent=True))
+        self.assertTrue(m.verify_staged(self.root)['pass'])
+        # An explicitly reviewed committed range never borrows a pending parent.
+        self.assertFalse(m.verify(self.root,self.base)['pass'])
+    def test_copied_unmerged_branch_cannot_supply_historical_evidence(self):
+        self.pending_evidence_merge(real_merge=False)
+        self.assertFalse(m.verify_staged(self.root)['pass'])
+    def test_branch_named_merge_head_cannot_supply_unmerged_history(self):
+        name,incoming=self.pending_evidence_merge(real_merge=False)
+        self.git('branch','MERGE_HEAD',incoming)
+        self.assertFalse((self.root/'.git/MERGE_HEAD').exists())
+        self.assertIsNone(m.pending_merge_parent(self.root))
+        self.assertFalse(m.verify_staged(self.root)['pass'])
+    def test_tag_named_merge_head_cannot_supply_unmerged_history(self):
+        name,incoming=self.pending_evidence_merge(real_merge=False)
+        self.git('tag','MERGE_HEAD',incoming)
+        self.assertIsNone(m.pending_merge_parent(self.root))
+        self.assertFalse(m.verify_staged(self.root)['pass'])
+    def test_nonregular_oversized_or_multiple_merge_metadata_cannot_supply_history(self):
+        name,incoming=self.pending_evidence_merge(real_merge=False)
+        metadata=self.root/'.git/MERGE_HEAD'
+        target=self.root/'incoming-id';target.write_text(incoming+'\n')
+        for kind in ('symlink','fifo','oversized','multiple'):
+            with self.subTest(kind=kind):
+                if kind=='symlink':metadata.symlink_to(target)
+                elif kind=='fifo':os.mkfifo(metadata)
+                elif kind=='oversized':metadata.write_text('0'*1000)
+                else:metadata.write_text(incoming+'\n'+incoming+'\n')
+                try:
+                    self.assertIsNone(m.pending_merge_parent(self.root))
+                    self.assertFalse(m.verify_staged(self.root)['pass'])
+                finally:metadata.unlink()
+
+    def test_pending_merge_does_not_accept_bad_original_evidence(self):
+        self.pending_evidence_merge(bad_original=True)
+        self.assertFalse(m.verify_staged(self.root)['pass'])
+    def test_pending_merge_modified_event_cannot_borrow_snapshot(self):
+        name,_=self.pending_evidence_merge()
+        p=self.root/name;r=json.loads(p.read_text());original=m.entry(r,name)
+        r['changed']='Edited incoming record.';p.write_text(json.dumps(r))
+        log=self.root/'CHANGELOG.md';log.write_text(log.read_text().replace(original,m.entry(r,name)))
+        self.git('add','.')
+        self.assertFalse(m.verify_staged(self.root)['pass'])
+
     def test_unrelated_pass_cannot_support_release_claim(self):
         r,n=self.record(changed='PS is independently validated.');self.assertTrue(m.validate_record(self.root,r,n))
     def test_failed_gate_rejected(self):

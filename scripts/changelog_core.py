@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import re
+import stat
 import subprocess
 import tempfile
 
@@ -81,9 +82,41 @@ def entry(record, name):
             f"- **Evidence.** {record['proves']} [Change record](./{name}).\n"
             f"- **Not claimed.** {record['limits']}\n")
 
-def committed_event_origin(root, name, head):
-    """Only the original reachable addition can bind a committed event's evidence."""
-    commits = git(root, 'log', '--reverse', '--format=%H', '--diff-filter=A', head, '--', name).splitlines()
+def pending_merge_parent(root):
+    """Read the actual pseudo-ref; a branch/tag named MERGE_HEAD is not a merge."""
+    try:
+        # --git-path with absolute formatting can resolve a final symlink.
+        # Use the verified per-worktree Git directory plus the literal basename.
+        name = str(Path(git(root, 'rev-parse', '--absolute-git-dir').strip()) / 'MERGE_HEAD')
+        descriptor = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+        try:
+            before = os.fstat(descriptor)
+            if not stat.S_ISREG(before.st_mode) or before.st_nlink != 1 or before.st_size not in (40, 41):
+                return None
+            raw = os.read(descriptor, 42)
+            after = os.fstat(descriptor)
+            current = os.stat(name, follow_symlinks=False)
+            identity = lambda info: (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns)
+            if identity(before) != identity(after) or identity(after) != identity(current):
+                return None
+        finally:
+            os.close(descriptor)
+        if not re.fullmatch(rb'[0-9a-f]{40}\n?', raw):
+            return None
+        parent = raw.decode('ascii').strip()
+        return parent if git(root, 'cat-file', '-t', parent).strip() == 'commit' else None
+    except (OSError, ValueError, subprocess.CalledProcessError):
+        return None
+
+
+def committed_event_origin(root, name, head, include_merge_parent=False):
+    """Only an original addition reachable from reviewed parents can bind evidence."""
+    heads = [head]
+    if include_merge_parent and head == 'HEAD':
+        parent = pending_merge_parent(root)
+        if parent:
+            heads.append(parent)
+    commits = git(root, 'log', '--reverse', '--format=%H', '--diff-filter=A', *heads, '--', name).splitlines()
     if len(commits) != 1:
         return None
     first = commits[0]
@@ -200,7 +233,7 @@ def verify(root=ROOT, base=None, head='HEAD'):
     new = {n: r for n, r in records.items() if n not in previous}
     for name, r in new.items():
         errors += validate_record(root, r, name, current=True,
-                                  evidence_commit=committed_event_origin(root, name, head))
+                                  evidence_commit=committed_event_origin(root, name, head, include_merge_parent=base is None))
     changed = changes(root, base, head)
     for f in changed:
         if not any(r['kind'] == 'change' and f in r['files'] and r['files'][f] == digest(root, f) for r in new.values()):

@@ -1,0 +1,49 @@
+{
+  "profile": "rolldown-parser-correction/1.0.0",
+  "captured_at": "2026-11-19T06:09:42.552223+00:00",
+  "previous_source_commit": "e9fde67fdfe2e1b91f454fdef9b0cbec1eed0c19",
+  "previous_receipt": "runs/2026-11-19-rolldown-source-cohort.json",
+  "source_hashes": {
+    "tools/rolldown_cohort.py": "0642fece29449eabb0e7916d9802272df71a11f817c428da38ddc396015a071e",
+    "scripts/verify-rolldown-cohort.py": "520c0e60feac2c875076ee081ecf990f68d54ff76680fd4e5f49f51cb1a751d6",
+    "tests/test_rolldown_cohort.py": "3385a88ddc53431da449205d1357a6a4b4ee12a48e45d2fc07790252e08b72da",
+    "docs/rolldown-source-review.md": "e78a3b53149c201d1d5f9461f32e2999c9bd02d7eb7c9776da8015d4838331fb",
+    "sbom/reviews/rolldown-source.json": "b29609ced4a2a9c67e02005d49c1efb71ed50b8ae23522e231d6ba0ca7eb22e6",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "sbom/native/manifest.json": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+    "sbom/notices/manifest.json": "8a19f0328c542c610fb5028e78313c80e7bf40c2d4e51f281a144883ee95bb58"
+  },
+  "source_unchanged_during_execution": true,
+  "archive_and_notice_observations_unchanged": true,
+  "correction": "Bound decompressed tar bytes, including PAX/extended metadata, before tarfile consumes headers.",
+  "focused_tests": {
+    "command": "python3 -B -m unittest discover -s tests -p 'test_rolldown_cohort.py' -v",
+    "passed": 12,
+    "exit_code": 0,
+    "seconds": 0.308
+  },
+  "actual_current_replay": {
+    "command": "python3 -B scripts/verify-rolldown-cohort.py --archive-dir <private npm cache> --source-dir <private pinned source cache>",
+    "exit_code": 0,
+    "result": {
+      "pass": true,
+      "profile": "rolldown-platform-source-observations/1.0.0",
+      "package_archives": 16,
+      "native_addons": 15,
+      "binary_bytes_replayed": true,
+      "source_archive_replayed": true,
+      "notice_files": 2,
+      "source_texts": 10,
+      "permission_cleared": false,
+      "release_approved": false,
+      "complete_transitive_coverage": false,
+      "reproducible_build_verified": false,
+      "publisher_signature_verified": false,
+      "actual_toolchain_verified": false
+    }
+  },
+  "original_scope_closure_claimed": false,
+  "permission_cleared": false,
+  "packages_executed": false,
+  "production_mutated": false
+}

@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-11-19T06:44:40.164955+00:00",
+  "pass": true,
+  "kind": "pending_merge_evidence_identity",
+  "sources": {
+    "scripts/changelog_core.py": "dd9941b80370e8f362db7fd42677ab6bea8bec38e4f68d25124b08c708d6c9d9",
+    "tests/test_changelog_pipeline.py": "69749573a012c7568e1bf04843545a1004f6114a115f2efcc51e1e1a9475fc73",
+    "docs/changelog-merge-parent-plan.md": "0d704ed8e4bcaf0aa3d908953c4a340f56997b160bc70c3c8091c997ac6de57d",
+    "docs/changelog-policy.md": "2119b3387da8d1cbf5736b339e749210ffc54cc3ffc5c8b777b3c95a59397f07"
+  },
+  "focused_git_and_staged_controls_passed": 48,
+  "peer_original_branch_spoof_reproduction_now_refused": true,
+  "peer_targeted_positive_negative_controls_passed": 2,
+  "actual_pseudoref_required": true,
+  "named_branch_or_tag_fallback": false,
+  "unique_original_addition_required": true,
+  "exact_record_and_historical_evidence_required": true,
+  "fresh_current_file_coverage_required": true,
+  "immutable_history_required": true,
+  "explicit_committed_range_ignores_pending_parent": true,
+  "prior_history_or_evidence_rewritten": false,
+  "independent_accuracy_evidence": false,
+  "scope": "Preserve exact committed evidence during a real pending merge; no acceptance or release authority"
+}
