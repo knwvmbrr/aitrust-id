@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52",
+  "recorded_at": "2026-11-19T16:41:59.413341+00:00",
+  "author": "Codex site fixture lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+  "changed": "Replaced the CI plain static server with a shared loopback fixture that applies the built reviewed headers, GET/HEAD and path/link refusals. The current-build controller uses the same module and cleanup; CI checks startup readiness and runs the focused fixture controls.",
+  "proves": "Eight actual HTTP/CLI groups pass, workflow YAML and both caller paths are checked, and the actual HP integration passed against the shared server under ordinary CSP, including real PS and MT after HP child failure. Source and actual served artifact hashes are recorded; peer security replay found no blocker.",
+  "limits": "No CSP assertion or accessibility-probe weakening, product/core changes, broad suite, deployment, independent tag accuracy or full PR-head publication-byte claim. PM owns new source bindings and actual CI rerun; fixture assumes an owned frozen build.",
+  "scope_ids": [
+    "F-054",
+    "F-139",
+    "T-HP"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "4f11b50ac0d951d98305b83c7df733415d02002ab07629f0471252a8ae1a1533",
+    "docs/site-fixture-server.md": "89790df3410e27263dfcf06a6c3ac11ede91a6773b6c4a2083110646b21de8e8",
+    "runs/2026-11-19-reviewed-fixture-hp-integration.json": "4fef90e8baa0eda7fceef6028aba5b4ff0bdd3474e99cbc92c67b3a6352e6427",
+    "runs/2026-11-19-site-fixture-http-controls.json": "7ebd92b57e53ab598287125f1f39187c615b3a3fb38c54f51d70c061b54f4304",
+    "scripts/site-fixture-server.cjs": "f75279f96b1b1d541e5927c02aace90bb17ed78cf5bf3e203b4f3dd561369dbb",
+    "scripts/verify-built-website.cjs": "eb0e51971f685e0a11963a3230af8834e14b29af601995700716ed2d247c9724",
+    "tests/site-fixture-server.cjs": "49b3aa8e7c9b8a81ecc1f39d78ab5723ee7d25aa13dadd2e3a6903763886fa50"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-site-fixture-http-controls.json",
+      "sha256": "7ebd92b57e53ab598287125f1f39187c615b3a3fb38c54f51d70c061b54f4304"
+    },
+    {
+      "path": "runs/2026-11-19-reviewed-fixture-hp-integration.json",
+      "sha256": "4fef90e8baa0eda7fceef6028aba5b4ff0bdd3474e99cbc92c67b3a6352e6427"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T16:41:59.503799+00:00"
+    }
+  ]
+}

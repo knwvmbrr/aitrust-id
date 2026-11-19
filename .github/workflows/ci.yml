@@ -376,13 +376,17 @@ jobs:
         run: npm run verify:device
       - name: Verify built catalogue and accessibility
         run: |
-          python3 -m http.server 5174 --bind 127.0.0.1 --directory site/dist > /tmp/site-server.log 2>&1 &
+          node --test tests/site-fixture-server.cjs
+          node scripts/site-fixture-server.cjs --directory site/dist --port 5174 > /tmp/site-server.log 2>&1 &
           site_server_pid=$!
-          trap 'kill "$site_server_pid"' EXIT
+          trap 'if kill -0 "$site_server_pid" 2>/dev/null; then kill "$site_server_pid"; fi' EXIT
+          site_server_ready=no
           for attempt in 1 2 3 4 5; do
-            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then break; fi
+            if ! kill -0 "$site_server_pid" 2>/dev/null; then cat /tmp/site-server.log; exit 1; fi
+            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then site_server_ready=yes; break; fi
             sleep 1
           done
+          if [ "$site_server_ready" != yes ]; then cat /tmp/site-server.log; exit 1; fi
           npm run verify:site
           AITRUST_SITE_URL=http://127.0.0.1:5174 npm run verify:seasonal-theme
           npm run verify:performance
