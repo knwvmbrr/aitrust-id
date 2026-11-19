@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-043946-publish-agent-tools-trust-drafts-and-stop-repair-7390e354
+
+Recorded 2026-11-19T04:39:46.339045+00:00 · Contributor: Codex · change
+
+- **Changed.** Record protected PR125 merge and exact live publication of local agent tools, tag research candidates, trust-owned LLC drafts and the host launch stop repair.
+- **Evidence.** All 11 required hosted checks passed; 304 reviewed files matched on each of two HTTPS origins, and the original main checkout synchronized with all 12 unrelated untracked files preserved. [Change record](./runs/changes/2026-11-19-043946-publish-agent-tools-trust-drafts-and-stop-repair-7390e354.json).
+- **Not claimed.** This follow-up records the already deployed source. Original scope remains 132 complete and 70 open; no legal formation, independent tag validation, physical phone acceptance or social posting is claimed.
+
+
 ### 2026-11-19-043014-integrate-verified-foreground-stop-repair-7d4e82e7
 
 Recorded 2026-11-19T04:30:14.326519+00:00 · Contributor: Codex · change
