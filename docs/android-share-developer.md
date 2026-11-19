@@ -63,15 +63,23 @@ identity. Do not represent that APK as a maintained Play release or promise stab
 signing across builds. The unsigned APK is not directly installable.
 
 The emulator step checks the hosted runner's SDK tools, KVM, recorded Android
-SDK license and disk space. If emulator packages are absent and the preexisting
-license exactly matches, it verifies Google's package metadata and requests
-emulator 37.2.13 and AOSP API 36 x86_64 image revision 2 with closed stdin.
+SDK license record and disk space. On this disposable hosted runner only, an
+ACL grants the current UID access to the existing KVM character device. If
+emulator packages are absent, the helper verifies Google's reviewed package and
+license-text identities and invokes the existing SDK manager for emulator 37.2.13
+and AOSP API 36 x86_64 image revision 2 with closed stdin. The SDK manager decides
+whether its existing acceptance record permits installation; a raw repository
+XML-text hash is not substituted for that decision. No license record is created
+or changed; its bytes are checked on success and failure. Diagnostics and install
+time are bounded; no installer text is published.
 A dedicated emulator on port 5580 receives synthetic share intents.
 The test checks explicit Check, PS finding, edit invalidation, a new share/No
 finding, unsupported MIME refusal, Clear and background cleanup. It never selects
 a connected phone. If prerequisites are absent, `emulator.json` records
 `UNAVAILABLE`, `pass:false` and the specific missing conditions. A failed SDK
-install or emulator case fails the job. Only synthetic UI data is inspected,
+install unrelated to an explicit license refusal, or a failed emulator case,
+fails the job. Explicit license refusal is Unavailable even if the SDK wrapper
+returns zero. Only synthetic UI data is inspected,
 and the app-owned emulator is stopped.
 
 Run 44171007663 rebuilt and signed the test APK. The runner had the SDK tools

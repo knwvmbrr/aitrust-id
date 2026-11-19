@@ -303,6 +303,16 @@ PATTERNS += ('mobile/android/**/*', 'scripts/android-share-build.py',
              'docs/android-share-plan.md', 'docs/android-share-developer.md')
 
 
+PATTERNS += ('tools/credential_flow.py', 'tools/credential_flow_context.py',
+             'tools/credential_context_io.py', 'scripts/credential-flow.py',
+             'scripts/credential-flow-context.py', 'scripts/credential-context-worker.py',
+             'tests/test_credential_flow.py', 'tests/test_credential_flow_context.py',
+             'docs/credential-flow.md', 'docs/credential-flow-context*.md',
+             'tools/mt_quotation_component.py', 'tests/test_mt_quotation_workflow.py',
+             'scripts/verify-mt-quotation-workflow.py', 'docs/mt-quotation-workflow*.md',
+             'docs/tag-wave-nov19-integration.md')
+
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

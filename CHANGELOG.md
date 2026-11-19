@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-224416-tag-wave-current-capability-evidence-6157f6f9
+
+Recorded 2026-11-19T22:44:16.949875+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current PS, privacy, extension and protocol validation after independent tag-wave integration, with the exact corrected Linux credential evidence.
+- **Evidence.** All four configured capability command groups pass on frozen inputs, including the new affected component controls. Corrected Linux source matches macOS and preserves actual nonroot/network-denial evidence. Reviewed source inventory covers1352 implementation inputs. [Change record](./runs/changes/2026-11-19-224416-tag-wave-current-capability-evidence-6157f6f9.json).
+- **Not claimed.** Website/protected/hosted Android validation is pending. Existing scope remains132complete/70open; no full original, independent accuracy or physical-device acceptance is claimed.
+
+
+### 2026-11-19-203722-independent-wave-scope-and-gates-7533d8d0
+
+Recorded 2026-11-19T20:37:22.271042+00:00 · Contributor: Codex · change
+
+- **Changed.** Update four original scope evidence records, independent operator guides and README, and bind PS context, quotation-aware MT and Android controls into protocol/source-bound verification.
+- **Evidence.** Every original acceptance, percentage, milestone and completion field is preserved against current main; all202 records render with132 complete and70 open. Separately reviewed exact worker sources are integrated with failure histories intact. [Change record](./runs/changes/2026-11-19-203722-independent-wave-scope-and-gates-7533d8d0.json).
+- **Not claimed.** Protected current-source and hosted Android checks are still pending. This adds no original closure, inferred use/intent, independent accuracy, phone accessibility acceptance, new license assent or production tag.
+
+
 ### 2026-11-19-184637-ps-mt-android-next-wave-df1f65ce
 
 Recorded 2026-11-19T18:46:37.284172+00:00 · Contributor: Codex task-list lead · change
