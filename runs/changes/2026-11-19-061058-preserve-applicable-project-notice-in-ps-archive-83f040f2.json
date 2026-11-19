@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-061058-preserve-applicable-project-notice-in-ps-archive-83f040f2",
+  "recorded_at": "2026-11-19T06:10:58.800334+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "324db5a83ad6883551d5baeaab0ec2793bea50be",
+  "changed": "Retain the applicable project NOTICE attribution in the PS source guide and require it independently of its declared hash; rebuild the source ZIP, digest and current scope/state projections.",
+  "proves": "69 focused policy/export controls pass, including an actual ZIP attribution inspection and removed-and-rehashed attribution refusal. The corrected archive executes finding/no-finding checks and rebuilds identical bytes on Mac and network-isolated nonroot Linux; staging IDs, images, configuration and health remain unchanged.",
+  "limits": "The earlier unpublished candidate and its immutable evidence remain historical. Corrected source ZIP is 130542 bytes; no independent accuracy, full original closure, legal clearance or live publication is granted. Fresh integration and protected checks follow.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+    "docs/scope-progress.json": "ebf371fed36f28e343b03b6f620c7baa2e448756999975471e00ce0b52a9d0b6",
+    "eval/dependency-policy.json": "85a36d74190d6ad77b47a19731b50ce07fe2fc81572f009348befb89ae48cdcb",
+    "eval/revalidation.json": "c52951e0dd230a19af6205038193326d200c977938fc42cd7a3b55f53c76aa3e",
+    "runs/2026-11-19-ps-source-notice-linux.json": "7b19c417175d0d7aa2166b1399f557f2c00e130cfd5b76cd2c1ed6b8ca26c6a6",
+    "runs/2026-11-19-ps-source-notice-macos.json": "ea715443efcd21cefe95c59a85959aa28a9850db6d665da624b59aa245115cb3",
+    "runs/2026-11-19-ps-source-notice-staging-preserved.json": "e6de3e4a61c29df7c9bb4fa1cb8c9a8bae71165e19021e0101e3addd7d772a75",
+    "site/public/downloads/aitrust-id-ps-source.zip": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+    "site/public/downloads/aitrust-id-ps-source.zip.sha256": "9f77d8f7b5e6ca1cc70e9a69dbee27dcf10ad083050697d2659e5e0a6949990a",
+    "site/public/reference/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+    "site/public/reference/public-scope.json": "92923bb495ba8e37370bb229e89b8d32496820700c8a0fb24628ac690c102795",
+    "site/src/public-scope.json": "92923bb495ba8e37370bb229e89b8d32496820700c8a0fb24628ac690c102795",
+    "site/src/scope-manifest.json": "3030d151b1be31289ab58681faa0fd6de1364e08dcce91dcd12b371a928c0ee5",
+    "state.json": "9575b3d729ad821fb49ae381ed30f6b269b049dade4e22d65fbf2a002f14ef44",
+    "tests/test_dependency_policy.py": "a7fcf507eb15064dc8dc536983f49d3e6a47b3e0569f9d5cae33ca3aeadb2770",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-ps-source-notice-macos.json",
+      "sha256": "ea715443efcd21cefe95c59a85959aa28a9850db6d665da624b59aa245115cb3"
+    },
+    {
+      "path": "runs/2026-11-19-ps-source-notice-linux.json",
+      "sha256": "7b19c417175d0d7aa2166b1399f557f2c00e130cfd5b76cd2c1ed6b8ca26c6a6"
+    },
+    {
+      "path": "runs/2026-11-19-ps-source-notice-staging-preserved.json",
+      "sha256": "e6de3e4a61c29df7c9bb4fa1cb8c9a8bae71165e19021e0101e3addd7d772a75"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-dependency-policy.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T06:10:59.170051+00:00"
+    }
+  ]
+}

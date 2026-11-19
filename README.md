@@ -88,6 +88,8 @@ performs **no redaction**. Failure is Unavailable, never a safety clearance.
 The combined service checker and independent privacy checker are separate routes.
 [Tag independence architecture](docs/tag-failure-isolation-plan.md).
 
+For a smaller source-only download, use [PS source ZIP](https://aitrustid.com/downloads/aitrust-id-ps-source.zip) and its [operating guide](docs/ps-source-distribution.md). This package needs existing Python 3.12+ on Linux or macOS; it includes no interpreter, optional packages or service. Source integrity checks do not establish detector accuracy.
+
 [Download the source](https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip)
 or clone this repository. Follow the [installation and verification guide](docs/open-validation-path.md).
 PS checks bounded command-risk patterns in text you supply; it does not certify

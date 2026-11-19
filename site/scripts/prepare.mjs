@@ -2,6 +2,7 @@ import {execFileSync} from 'node:child_process';
 import {performanceHTML} from '../src/performance-model.js';
 import {policies,policyPath,policyText,policyDownloadPath,publisher,releasePolicy} from '../src/policies.js';
 import fs from 'node:fs';
+import os from 'node:os';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -11,6 +12,18 @@ import {usageHTML} from '../src/usage.js';
 import sharp from 'sharp';
 import {metadata,origin,tagPath} from './seo.mjs';
 const site=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const repo=path.dirname(site);
+// Build through the same refusing source policy used by the standalone CLI.
+const psTemp=fs.mkdtempSync(path.join(fs.realpathSync(os.tmpdir()),'aitrust-ps-download-'));
+try {
+ const archive=path.join(psTemp,'aitrust-id-ps-source.zip');
+ execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/export-ps-source.py'),'build','--output',archive],{stdio:'pipe'});
+ const bytes=fs.readFileSync(archive);
+ const target=path.join(site,'public/downloads');fs.mkdirSync(target,{recursive:true});
+ fs.writeFileSync(path.join(target,'aitrust-id-ps-source.zip'),bytes);
+ fs.writeFileSync(path.join(target,'aitrust-id-ps-source.zip.sha256'),createHash('sha256').update(bytes).digest('hex')+'  aitrust-id-ps-source.zip\n');
+ fs.copyFileSync(path.join(repo,'docs/ps-source-distribution.md'),path.join(site,'public/reference/ps-source-distribution.md'));
+} finally {fs.rmSync(psTemp,{recursive:true,force:true});}
+
 const scope=JSON.parse(fs.readFileSync(path.join(repo,'docs/master-scope.json')));
 execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/scope-progress.py')],{stdio:'pipe'});
 const progress=JSON.parse(fs.readFileSync(path.join(repo,'docs/scope-progress.json')));

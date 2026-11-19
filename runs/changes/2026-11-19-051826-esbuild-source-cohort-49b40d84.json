@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-051826-esbuild-source-cohort-49b40d84",
+  "recorded_at": "2026-11-19T05:18:26.969102+00:00",
+  "author": "Codex dependency engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4421ab58b625c8a93203f378de45ac591465b276",
+  "changed": "Added source-bound offline review and replay of the 26 locked esbuild platform archives, 29 members and exact upstream source notices, with explicit unavailable Go build identity.",
+  "proves": "Eleven focused controls pass; actual 26-archive and four-source replay passes; corrupted source refuses with fixed diagnostics; source pins and exact MIT/BSD notices are retained.",
+  "limits": "No publisher signature, binary/source reproducibility, actual compiler identity, blanket permission clearance, route approval or original requirement closure.",
+  "scope_ids": [
+    "X-02",
+    "F-057"
+  ],
+  "files": {
+    "docs/esbuild-source-review.md": "aaa0fe3672fb123612212bc92edf2bef119c0e5b55c90ee2097148bda7a970d3",
+    "runs/2026-11-19-esbuild-source-cohort.json": "c19929f2d61ba3f5f669e14314971c77db9acc93634d2727e463007c82930d51",
+    "sbom/reviews/esbuild-source.json": "76eed3448c2e1a7fd75fdaba89a93625f5b61c3670d4ab2c75ab8f6886c43f0b",
+    "sbom/reviews/sources/2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067.txt": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067",
+    "sbom/reviews/sources/2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b.txt": "2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b",
+    "sbom/reviews/sources/3b17df1bad490358bfa01617ec8ca36e24aea6508982964064dc97874d4be2ed.txt": "3b17df1bad490358bfa01617ec8ca36e24aea6508982964064dc97874d4be2ed",
+    "sbom/reviews/sources/3eb04925b8ec5b4b744f710fbfa54847e8a55caa3982dc9b02f3bb803ef4376d.txt": "3eb04925b8ec5b4b744f710fbfa54847e8a55caa3982dc9b02f3bb803ef4376d",
+    "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+    "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+    "sbom/reviews/sources/aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72.txt": "aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72",
+    "sbom/reviews/sources/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+    "sbom/reviews/sources/f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2.txt": "f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2",
+    "sbom/reviews/sources/fa534d2510336c58d1bc84ff129fa61dbb918f75962c0d7301f27f4b2ebd6107.txt": "fa534d2510336c58d1bc84ff129fa61dbb918f75962c0d7301f27f4b2ebd6107",
+    "sbom/reviews/sources/ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4.txt": "ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4",
+    "scripts/verify-esbuild-cohort.py": "a3e830c46464fd727387401f62ade04a89feecc454b8b1f14b73f663dd0c747a",
+    "tests/test_esbuild_cohort.py": "7b2e1e82a48b6c0750e12013b085c8fe19dc8cb2244c023e9b7b377208178959",
+    "tools/esbuild_cohort.py": "37dac4b6caf8f206c838926677300689ad95b30d925c44e693260b80fea3e0ba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-esbuild-source-cohort.json",
+      "sha256": "c19929f2d61ba3f5f669e14314971c77db9acc93634d2727e463007c82930d51"
+    },
+    {
+      "path": "sbom/reviews/esbuild-source.json",
+      "sha256": "76eed3448c2e1a7fd75fdaba89a93625f5b61c3670d4ab2c75ab8f6886c43f0b"
+    }
+  ],
+  "checks": []
+}

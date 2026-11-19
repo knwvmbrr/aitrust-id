@@ -161,6 +161,23 @@ class ChangePipeline(unittest.TestCase):
         r,n=self.record();self.commit();(self.root/n).write_text(json.dumps(r));self.assertFalse(m.verify(self.root)['pass'])
     def test_human_entry_must_agree(self):
         self.record();(self.root/'CHANGELOG.md').write_text('# Changelog\n');self.assertFalse(m.verify(self.root)['pass'])
+    def test_matching_entries_do_not_hide_unresolved_changelog_markers(self):
+        self.record();p=self.root/'CHANGELOG.md';original=p.read_text()
+        for marker in ('<<<<<<< HEAD','=======','>>>>>>> feature','||||||| base'):
+            with self.subTest(marker=marker):
+                p.write_text(original+'\n'+marker+'\n')
+                result=m.verify(self.root)
+                self.assertFalse(result['pass'])
+                self.assertIn('Unresolved merge marker in CHANGELOG.md',result['errors'])
+        p.write_text(original+'\nA literal <<<<<<< token can be discussed inline.\n')
+        self.assertTrue(m.verify(self.root)['pass'])
+    def test_staged_changelog_markers_refuse_even_with_valid_events(self):
+        (self.root/'source.py').write_text('after\n');_,name=self.record()
+        p=self.root/'CHANGELOG.md';p.write_text(p.read_text()+'\n<<<<<<< HEAD\n=======\n>>>>>>> branch\n')
+        self.git('add','source.py','CHANGELOG.md',name)
+        result=m.verify_staged(self.root)
+        self.assertFalse(result['pass'])
+        self.assertIn('Unresolved merge marker in CHANGELOG.md',result['errors'])
     def test_traversal_rejected(self):
         r,n=self.record(files={'../private.env':'0'*64});self.assertTrue(m.validate_record(self.root,r,n))
     def test_hook_relative_index_environment(self):

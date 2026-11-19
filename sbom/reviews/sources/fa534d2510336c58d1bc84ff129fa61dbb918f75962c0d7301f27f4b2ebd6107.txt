@@ -1,0 +1,10 @@
+
+// The build info blob left by the linker is identified by a 32-byte header,
+// consisting of buildInfoMagic (14 bytes), followed by version-dependent
+// fields.
+var buildInfoMagic = []byte("\xff Go buildinf:")
+
+const (
+	buildInfoAlign      = 16
+	buildInfoHeaderSize = 32
+)

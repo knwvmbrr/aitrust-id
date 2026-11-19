@@ -464,7 +464,25 @@
         "scripts/verify-authority-quotation.py",
         "tests/test_authority_quotation.py",
         "tests/test_reference_claim_coverage.py",
-        "runs/2026-11-18-agent-tools-clean-setup-linux.json"
+        "runs/2026-11-18-agent-tools-clean-setup-linux.json",
+        "eval/dependency-policy.json",
+        "tools/dependency_policy.py",
+        "scripts/check-dependency-policy.py",
+        "scripts/verify-dependency-policy.py",
+        "tests/test_dependency_policy.py",
+        "tools/ps_source_distribution.py",
+        "scripts/export-ps-source.py",
+        "tests/test_ps_source_distribution.py",
+        "docs/ps-source-distribution.md",
+        "docs/dependency-conflict-plan.md",
+        "tools/esbuild_cohort.py",
+        "scripts/verify-esbuild-cohort.py",
+        "tests/test_esbuild_cohort.py",
+        "sbom/reviews/esbuild-source.json",
+        "sbom/reviews/sources/*",
+        "site/public/downloads/aitrust-id-ps-source.zip",
+        "site/public/downloads/aitrust-id-ps-source.zip.sha256",
+        "NOTICE"
       ],
       "commands": [
         [
@@ -742,6 +760,29 @@
           "pytest",
           "tests/test_ai_tag_api.py",
           "tests/test_release_announcements.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-dependency-policy.py"
+        ],
+        [
+          "{python}",
+          "scripts/export-ps-source.py",
+          "verify",
+          "site/public/downloads/aitrust-id-ps-source.zip"
+        ],
+        [
+          "{python}",
+          "scripts/verify-esbuild-cohort.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_dependency_policy.py",
+          "tests/test_ps_source_distribution.py",
+          "tests/test_esbuild_cohort.py",
           "-q"
         ]
       ]
@@ -1234,7 +1275,25 @@
         "scripts/authority-quotation.py",
         "scripts/verify-authority-quotation.py",
         "tests/test_authority_quotation.py",
-        "tests/test_reference_claim_coverage.py"
+        "tests/test_reference_claim_coverage.py",
+        "eval/dependency-policy.json",
+        "tools/dependency_policy.py",
+        "scripts/check-dependency-policy.py",
+        "scripts/verify-dependency-policy.py",
+        "tests/test_dependency_policy.py",
+        "tools/ps_source_distribution.py",
+        "scripts/export-ps-source.py",
+        "tests/test_ps_source_distribution.py",
+        "docs/ps-source-distribution.md",
+        "docs/dependency-conflict-plan.md",
+        "tools/esbuild_cohort.py",
+        "scripts/verify-esbuild-cohort.py",
+        "tests/test_esbuild_cohort.py",
+        "sbom/reviews/esbuild-source.json",
+        "sbom/reviews/sources/*",
+        "site/public/downloads/aitrust-id-ps-source.zip",
+        "site/public/downloads/aitrust-id-ps-source.zip.sha256",
+        "NOTICE"
       ],
       "commands": [
         [
@@ -1421,6 +1480,29 @@
           "-m",
           "pytest",
           "tests/test_hash_reports_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-dependency-policy.py"
+        ],
+        [
+          "{python}",
+          "scripts/export-ps-source.py",
+          "verify",
+          "site/public/downloads/aitrust-id-ps-source.zip"
+        ],
+        [
+          "{python}",
+          "scripts/verify-esbuild-cohort.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_dependency_policy.py",
+          "tests/test_ps_source_distribution.py",
+          "tests/test_esbuild_cohort.py",
           "-q"
         ]
       ]

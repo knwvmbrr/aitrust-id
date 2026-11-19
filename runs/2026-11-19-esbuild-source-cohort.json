@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-11-19T05:18:26.896518+00:00",
+  "pass": true,
+  "kind": "bounded_esbuild_source_cohort_engineering",
+  "source_base": "4421ab58b625c8a93203f378de45ac591465b276",
+  "contributor": "Codex dependency engineering lane",
+  "review_manifest_sha256": "76eed3448c2e1a7fd75fdaba89a93625f5b61c3670d4ab2c75ab8f6886c43f0b",
+  "source_files": {
+    "tools/esbuild_cohort.py": "37dac4b6caf8f206c838926677300689ad95b30d925c44e693260b80fea3e0ba",
+    "scripts/verify-esbuild-cohort.py": "a3e830c46464fd727387401f62ade04a89feecc454b8b1f14b73f663dd0c747a",
+    "tests/test_esbuild_cohort.py": "7b2e1e82a48b6c0750e12013b085c8fe19dc8cb2244c023e9b7b377208178959",
+    "docs/esbuild-source-review.md": "aaa0fe3672fb123612212bc92edf2bef119c0e5b55c90ee2097148bda7a970d3"
+  },
+  "actual_cached_platform_archives_replayed": 26,
+  "actual_members_observed": 29,
+  "node_launchers_observed": 3,
+  "actual_go_code_members_without_marker": 26,
+  "actual_compiler_identity_verified": false,
+  "source_text_references": 20,
+  "unique_public_text_blobs": 11,
+  "tests": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-q",
+      "tests.test_esbuild_cohort"
+    ],
+    "tests": 11,
+    "pass": true,
+    "elapsed_seconds": 0.104
+  },
+  "actual_cli": {
+    "command": "python3 -B scripts/verify-esbuild-cohort.py --archive-dir OWNER_CACHE --source-dir OWNER_SOURCE_CACHE",
+    "exit": 0,
+    "platform_archives": 26,
+    "binary_bytes_replayed": true,
+    "upstream_archives_replayed": true
+  },
+  "corrupted_source_control": {
+    "exit": 2,
+    "fixed_diagnostic": true,
+    "private_path_echo": false
+  },
+  "candidate_refusals_retained": [
+    {
+      "reason": "Source-only browser fixture symlink refused by strict initial generic archive reader",
+      "resolution": "One exact source-only path/target is counted but never followed; other links still refused."
+    },
+    {
+      "reason": "Single-candidate assumption refused three platform archives",
+      "resolution": "All29members across26archives are now inspected, including3Node launchers and3Wasm objects."
+    }
+  ],
+  "source_relationship_checks": {
+    "xsys_h1_matches_source_go_sum": true,
+    "go_source_sha256_size_match_official_metadata": true,
+    "publisher_signature_verified": false,
+    "reproducible_build_verified": false
+  },
+  "installed_packages": false,
+  "local_docker_used": false,
+  "production_changed": false,
+  "scope_complete": false,
+  "permission_cleared": false,
+  "independent_accuracy_evidence": false,
+  "limits": "Exact26esbuild platform archive and selected source/notice evidence only. Source declarations do not authenticate binaries or establish exact compiled dependency membership. No full X-02/F-057 closure or route release approval.",
+  "reviewed_upstream_binary_or_source_executed": false,
+  "upstream_files_bytes_acquired": 40195538
+}

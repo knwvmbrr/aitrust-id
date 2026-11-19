@@ -133,6 +133,12 @@ jobs:
         run: python scripts/verify-redistribution-notices.py
       - name: Verify native observations without claiming transitive or license clearance
         run: python scripts/verify-native-dependencies.py
+      - name: Enforce bounded PS source distribution and dependency conflicts
+        run: |
+          python scripts/verify-dependency-policy.py
+          python scripts/export-ps-source.py verify site/public/downloads/aitrust-id-ps-source.zip
+          python scripts/verify-esbuild-cohort.py
+          python -m pytest tests/test_dependency_policy.py tests/test_ps_source_distribution.py tests/test_esbuild_cohort.py -q
       - name: Refuse corrupted notice evidence and permission promotion
         run: python -m pytest tests/test_license_notices.py -q
       - name: Exercise independent editorial choices and private input refusals

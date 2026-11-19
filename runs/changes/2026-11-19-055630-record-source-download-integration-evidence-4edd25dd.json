@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-055630-record-source-download-integration-evidence-4edd25dd",
+  "recorded_at": "2026-11-19T05:56:30.225088+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4ae7a14d1738211969bbc9faca041c3afbf03b40",
+  "changed": "Record current-source PS, privacy, protocol, extension, website and boundary acceptance for the integrated PS-only source download; retain the 132/70 original completion ledger.",
+  "proves": "All five source-bound groups pass with unchanged sources: 7 PS, 6 privacy, 45 protocol, 14 extension and 36 website command groups. The built browser downloads the exact 130103-byte package and checks its guide and checksum; current personal route boundaries pass.",
+  "limits": "These are engineering executions, not independent accuracy, physical-device acceptance or legal clearance. Protected CI, public deployment and full original dependency/source obligations remain pending.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "b151997afc0fbf5e49fc59958c19d08f02cffb1b6f719d2d41a59892dd6fee87",
+    "README.md": "e984a68e754b282a0d5a3e20aebf2b5fb3e07dfd7290145fbd481c41469c957c",
+    "docs/dependency-conflict-plan.md": "8b4b5a0374a2f5cfe824fcaf1b7f6d99d8e13e017d8739ea31ffa081c364c4ea",
+    "docs/f030-live-stream-plan.md": "3794f5a86973da87b94f82a90ee860f334ddc69c2813e0e36b197a0f52c8e014",
+    "docs/scope-60-execution.md": "2b78437c1eba3e934a7818b7d9f46aebc08798d4c3347d789e413688a57397d2",
+    "docs/scope-progress.json": "3b22ca19ee4cf7b1f5cb0f8525ea9186b08e1c0a454f17078d728a62020d8ce7",
+    "eval/dependency-policy.json": "e823db75c2b105a582014049ada85e9a0b383d27a076357adbb73b3590b01c4a",
+    "eval/revalidation.json": "ea699d5721fdd43d46df78e1b6d202142192e036093713df4c1e1d3a38bb320b",
+    "eval/route-boundaries.json": "aae3ef6e7f810afe9ff4600aa110597ea9024caa3439903e8eeaaaf9bcf90649",
+    "package.json": "17914822ac8a2396f7a98808ce34e61123384895847052395b4a1c4a1da5dfa8",
+    "runs/2026-11-19-ps-source-PII_REDACTED.json": "3f0159b239fe83bddb4a2ab137d6dac82c78b718c980a83a30b1145bd0bc4b1d",
+    "runs/2026-11-19-ps-source-PS.json": "79dddb504e664300ed2ad45f5e7936b61a57bdd68238bf3010cbd330ed26825a",
+    "runs/2026-11-19-ps-source-boundaries.json": "98c720ba89ff32899606acfcbc2f7cf6d8ae52da94bb1d8b08810413c644e7d6",
+    "runs/2026-11-19-ps-source-extension.json": "62833c51708b5266e1086c1b7736cb72ddf3e15c4ae2708e0a153838e0ffb83f",
+    "runs/2026-11-19-ps-source-integration.json": "79744745d30832fdb8fe7a7103fa0f6a15333ed59d16a11910a85973dc5339d2",
+    "runs/2026-11-19-ps-source-linux-actual.json": "06e00bd3fbf5315f3d908a20fa188f524e0eaa6977c80a98c96890ba6e6534bf",
+    "runs/2026-11-19-ps-source-protocol.json": "597e3aeb439f4aabe01c8165eaa6d471bc1bbac16f508ccc289712f8a831ec5a",
+    "runs/2026-11-19-ps-source-website.json": "1e3bd3386abf9f0e6dcd078a029c746286eded71ebbc28f08bfdb68e29cc93c7",
+    "scripts/changelog_core.py": "09af6a2c98bd37772436e0550cd4cbed422914a8989bf3f4a93fc81120a71b31",
+    "scripts/check-dependency-policy.py": "08b9e505854ae1bb6810a63d070418a3f8e53ca36ee46a6b6735e96018641bdc",
+    "scripts/verify-dependency-policy.py": "7481049dd8598089a8b549e5bb77f21975d10753cdedcda0b9ced0692e771dd1",
+    "scripts/verify-route-boundaries.py": "dddf091601701efde65738e433ba6a0ca0217a691c9109631525b3fdc6d9735f",
+    "scripts/verify-site.cjs": "633ef18676a33f019784e2d263ee79022dfcbe04109a1435dc3c64bad4422510",
+    "scripts/verify-workflows.cjs": "3980aade9af205cbde9da8d8fb36deda9f4ff69cdc8be1925edeec235055d846",
+    "site/index.html": "ddbbc569e1d776d23eed8b54b926e7ef5ed19af91de7c571f8149c04cbffdc18",
+    "site/public/downloads/aitrust-id-ps-source.zip": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b",
+    "site/public/downloads/aitrust-id-ps-source.zip.sha256": "f011ee31043766547dda0e4069bbee1cbc262ec60629593ad4aab4648825138e",
+    "site/public/reference/ps-source-distribution.md": "3ce82b596ca61a6339ca9d54b2a5726ddfd240a037f68c20157d3049241daa6f",
+    "site/public/reference/public-scope.json": "b0ff3ccfb9e1c86416e638f91b6da8b21691608854e0ea1956e54cf34459cc4a",
+    "site/scripts/prepare.mjs": "3bef565bd8fa5a3246f02dfa60ac6632d42e713963a8563525abe05068d17702",
+    "site/src/main.jsx": "6ac420d1ba51499a898aa580d9c31c741564002f884f18899aada3d85fc08124",
+    "site/src/public-scope.json": "b0ff3ccfb9e1c86416e638f91b6da8b21691608854e0ea1956e54cf34459cc4a",
+    "site/src/scope-manifest.json": "f7a52850439735c2b85f86834223f501c4a6070215cb4d3872c9152106a6274e",
+    "site/src/usage.js": "943d13c5368739995da7dd4ae6068a693c1f606333265d1fa605cd951c85a40b",
+    "state.json": "940098a088e51e696d56f5bb6073073c285b322527cd47c380291e76343c19e6",
+    "tests/test_changelog_pipeline.py": "b80da0b13c72cadbadfdd09eb3e0d9dac7b1f42b55bbeb21ad4f19c3ee3810fb",
+    "tests/test_dependency_policy.py": "4b1198dac0d91faa9fddf8e7a1a67c3e442ada8944f46ed7939157f84a4816a7",
+    "tests/test_scoped_component_inputs.py": "cbf7b8b334ce878affe9e1fa3c92bd46ba12837d7726eb121a43d399edf82476",
+    "tools/dependency_policy.py": "ef8688ce9925334802540c2cb1445087e5dbcdb9069dde00b04ba6a22015bd15"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-ps-source-website.json",
+      "sha256": "1e3bd3386abf9f0e6dcd078a029c746286eded71ebbc28f08bfdb68e29cc93c7"
+    },
+    {
+      "path": "runs/2026-11-19-ps-source-boundaries.json",
+      "sha256": "98c720ba89ff32899606acfcbc2f7cf6d8ae52da94bb1d8b08810413c644e7d6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T05:56:31.073240+00:00"
+    }
+  ]
+}

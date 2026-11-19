@@ -27,6 +27,22 @@ try{
  await page.goto(base);const nav=page.getByRole('navigation',{name:'Company and community'});assert(await nav.getByRole('link').count()===8,'Footer lost a workflow');
  for(const [name,slug] of workflows){const link=nav.getByRole('link',{name,exact:true});assert(await link.getAttribute('href')==='#'+slug,'Wrong destination '+name);assert((await link.innerText()).split('\n').length>=2,'Missing purpose '+name);}
  for(const [name,slug] of workflows){const d=await open(name);assert(await d.locator(`[data-workflow="${slug}"]`).count()===1,'Shared or wrong panel '+name);await axe();await page.keyboard.press('Escape');assert(await page.getByRole('dialog').count()===0,'Cannot close '+name);assert(new URL(page.url()).hash==='#person','Closing route mismatch '+name);}
+ // Exercise the actual PS-only download rather than a full-repository archive.
+ await page.goto(base+'/#person/PS');
+ const terminal=page.locator('[data-tag-usage] details').filter({has:page.locator('summary').filter({hasText:'PS in Terminal'})});
+ await terminal.locator('summary').click();
+ const psLink=terminal.getByRole('link',{name:'Download PS source',exact:true});
+ assert(await psLink.getAttribute('href')==='/downloads/aitrust-id-ps-source.zip','PS download uses another distribution');
+ const psDownloadWait=page.waitForEvent('download');await psLink.click();
+ const psDownloaded=await psDownloadWait;
+ const psBytes=fs.readFileSync(await psDownloaded.path());
+ assert(psBytes.equals(fs.readFileSync('site/public/downloads/aitrust-id-ps-source.zip')),'Downloaded PS bytes differ');
+ assert(psDownloaded.suggestedFilename()==='aitrust-id-ps-source.zip','PS filename unclear');
+ const psGuide=await context.request.get(base+'/reference/ps-source-distribution.md');
+ assert(psGuide.status()===200&&(await psGuide.text())===fs.readFileSync('docs/ps-source-distribution.md','utf8'),'PS guide unavailable or stale');
+ const psDigest=await context.request.get(base+'/downloads/aitrust-id-ps-source.zip.sha256');
+ assert(psDigest.status()===200&&(await psDigest.text())===require('node:crypto').createHash('sha256').update(psBytes).digest('hex')+'  aitrust-id-ps-source.zip\n','PS digest mismatch');
+ await page.keyboard.press('Escape');
  const report=await open('Report');await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByRole('alert').innerText()==='Describe what happened and what you expected.','Report missing error');assert(await report.getByLabel('What happened?',{exact:true}).evaluate(e=>e===document.activeElement),'Report error focus');
  const synthetic='Synthetic <img src=x onerror="window.injected=true">';await report.getByLabel('What happened?',{exact:true}).fill(synthetic);await report.getByRole('button',{name:'Download draft',exact:true}).click();assert(await report.getByLabel('What did you expect?',{exact:true}).evaluate(e=>e===document.activeElement),'Expected result required');await report.getByLabel('What did you expect?',{exact:true}).fill('A short bounded finding.');await report.getByLabel('Tag',{exact:true}).selectOption('PII_REDACTED');const r=await download(report,'Download draft');assert(r.workflow==='report'&&r.tag==='PII_REDACTED'&&r.observed===synthetic&&r.expected==='A short bounded finding.'&&r.status==='draft_not_submitted','Report export inaccurate');assert(!(await report.getByRole('link',{name:'Open public GitHub report'}).getAttribute('href')).includes('Synthetic'),'Draft leaks to URL');await report.getByLabel('Report type').selectOption('Security or privacy');assert(await report.locator('form').count()===0&&await report.getByRole('link',{name:'Open public GitHub report'}).count()===0,'Security report exposes public form');await axe();
  const assist=await open('Assist');await assist.getByRole('button',{name:'Code & adapters',exact:false}).click();await assist.getByRole('button',{name:'Download contribution'}).click();assert(await assist.getByRole('alert').innerText()==='Describe the contribution you can deliver.','Contribution validation');await assist.getByLabel('What can you deliver?').fill('Reproduce a synthetic adapter failure.');const a=await download(assist,'Download contribution');assert(a.role==='code'&&a.status==='proposal_not_submitted'&&!JSON.stringify(a).includes(synthetic),'Independent contribution state/export');await axe();

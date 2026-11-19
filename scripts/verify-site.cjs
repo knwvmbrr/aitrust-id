@@ -79,7 +79,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      assert((await dialog.getByRole('region',{name:'Tag performance',exact:true}).innerText()).includes('Self-hosted workflow checked; hosted-service performance not measured.'),'Audit software confused with an operating hosted service');
      await guide.scrollIntoViewIfNeeded();await page.screenshot({path:'output/playwright/audit-guide-entry.png'});
     }
-    if(id==='PS'){await use.getByText('PS in Terminal',{exact:true}).click();await use.getByRole('button',{name:'Copy PS command',exact:true}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='python3 scripts/check-ps.py response.txt','Standalone PS copied a dependent service command');assert((await use.textContent()).includes('No redaction is performed.'),'Standalone route lost its privacy boundary');await use.getByText('PS in Terminal',{exact:true}).click();}
+    if(id==='PS'){await use.getByText('PS in Terminal',{exact:true}).click();await use.getByRole('button',{name:'Copy PS command',exact:true}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='python3 -I -S -B scripts/check-ps.py response.txt','Standalone PS copied a dependent service command');assert((await use.textContent()).includes('No redaction is performed.'),'Standalone route lost its privacy boundary');await use.getByText('PS in Terminal',{exact:true}).click();}
     assert(await dialog.locator('details[open]').count()===0,id+' details must start collapsed');
     for(const title of ['How it works','Testing and evidence','Privacy and full details']){
      const summary=dialog.locator('summary').filter({hasText:title});await summary.focus();await page.keyboard.press('Enter');
@@ -97,7 +97,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     }
 
     if(id==='PS'){
-     const downloads=await dialog.locator('[data-tag-usage] a').filter({hasText:'Download source'}).evaluateAll(nodes=>nodes.map(e=>e.getAttribute('href')));assert(downloads.length===2&&downloads.every(href=>href==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip'),'Both independent PS setup paths need the correct source download');
+     const fullSource=dialog.locator('[data-tag-usage]').getByRole('link',{name:'Download source',exact:true,includeHidden:true}),psSource=dialog.locator('[data-tag-usage]').getByRole('link',{name:'Download PS source',exact:true,includeHidden:true});assert(await fullSource.count()===1&&await fullSource.getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','Local service needs the full source path');assert(await psSource.count()===1&&await psSource.getAttribute('href')==='/downloads/aitrust-id-ps-source.zip'&&await psSource.getAttribute('download')!==null,'Standalone PS needs its own actual download');
      assert(await dialog.locator('[data-tag-usage] a').filter({hasText:'Try locally'}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
      await axe();
      await dialog.getByRole('button',{name:'Report an issue',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();

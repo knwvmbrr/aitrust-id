@@ -290,3 +290,14 @@ upstream core release and checked seven build recipes. The verified inputs
 include CPython, Emscripten and the Pyodide build helper. F-057 and X-02 still
 need dependency and redistribution coverage. The ledger records 132 complete
 and 70 open. [Execution receipt](../runs/2026-11-18-pyodide-release-origin.json).
+
+
+## November 19 — PS source-only path and refusing dependency policy
+
+Codex integrated a real PS-only source ZIP, exposed directly in the PS Terminal instructions with its operating guide and SHA-256 companion. It needs an existing Python 3.12+ interpreter on Linux/macOS; it does not need a container, optional package, account or privacy checker. Actual Mac and network-isolated nonroot Linux checks verified identical artifact bytes and extracted finding/no-finding operation. This establishes operation, not independent detector accuracy.
+
+The exporter invokes the new exact-source dependency policy. Missing/changed notices, unknown scopes and required paid or proprietary processors refuse publication. Only the nine-file PS source profile is admitted; 13 other registered distribution scopes stay blocked. Existing preview workflows are not falsely promoted. The esbuild lane also completed a source-bound review of all 26 Go-code members and their selected build/source notice evidence, without claiming compiler authenticity or complete source equivalence.
+
+The current-vendor capture investigation found mixed assistant/private transport records and a Markdown-to-DOM subject-mapping gap. The reviewed plan records those blockers; no raw stream record, credential, new capture permission or active hook is published. F-030 stays open.
+
+All 202 original IDs, 132 completed and 70 open are retained. F-057 and X-02 retain their full native/platform/model/source-offer and release obligations. The source package is useful functioning software; it is not a substitute closure for either broad requirement.

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e",
+  "recorded_at": "2026-11-19T05:26:23.351858+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4421ab58b625c8a93203f378de45ac591465b276",
+  "changed": "Add an exact policy-gated PS source-only ZIP exporter and trusted-root inspector with deterministic members, included notices, external prerequisites and no-clobber output.",
+  "proves": "35 focused controls pass. Real default-policy build and verification, deterministic repeated archives, isolated private extracted FINDING and NO_FINDING executions, and five actual copied-source policy/tamper refusal groups pass across20 bounded CLI commands with stable source identities.",
+  "limits": "Only this nine-file source distribution plus generated manifest is admitted. CPython and OS remain external prerequisites. No interpreter, whole-repository approval, legal clearance, independent accuracy, global dependency completion or original requirement closure is claimed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/ps_source_distribution.py": "39cc9b5e092b8c0d26a58c7e31a44a7d48a708524f819b77a2549f4ff94794c6",
+    "scripts/export-ps-source.py": "7ee020a6d3f2d585e7e8f7e370c5604bea5f78fc97cba0f9f5bdfa93b9e696e3",
+    "tests/test_ps_source_distribution.py": "c9a72550dd8ddc7aa3aaa0dff3df5986bab26520cebfd70f0a5ef5729082e7ca",
+    "docs/ps-source-distribution.md": "3ce82b596ca61a6339ca9d54b2a5726ddfd240a037f68c20157d3049241daa6f",
+    "docs/ps-source-distribution-plan.md": "4934362bea1f85e28d778bd51cb3b1c21a6420be6c6a9ea93085ca4c2804dc28",
+    "runs/2026-11-19-ps-source-default-policy-actual.json": "25fc761ea609d4cac2fdf3d65659ebd297ebc305742a07dab62b4ed581607909"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-ps-source-default-policy-actual.json",
+      "sha256": "25fc761ea609d4cac2fdf3d65659ebd297ebc305742a07dab62b4ed581607909"
+    }
+  ],
+  "checks": []
+}
