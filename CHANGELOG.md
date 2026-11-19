@@ -37,6 +37,13 @@ Recorded 2026-11-19T15:50:22.033240+00:00 · Contributor: Codex · change
 - **Evidence.** Production site build passed with all202 original records retained; generated artifacts reflect current evidence without changing any percentage. [Change record](./runs/changes/2026-11-19-155022-tag-method-generated-scope-0ef2705e.json).
 - **Not claimed.** Generated scope and successful build are not release validation or original requirement closure. Final protected checks and publication remain pending.
 
+### 2026-11-19-161533-hp-lazy-probe-readiness-a330f77a
+
+Recorded 2026-11-19T16:15:33.389768+00:00 · Contributor: Codex HP accessibility lane · change
+
+- **Changed.** Waited for the actual HP form before accessibility control enumeration and added a controlled delayed real-child regression inside the normal site verifier. Importing the verifier exposes the focused control without launching full verification.
+- **Evidence.** One bounded Chromium replay reproduced the same live indexed locator changing from Testing and evidence to unfocused Source notices after HP insertion. Ready-first unchanged probes passed both themes with19 focus checks each and zero failures, plus target/disclosure/spacing/forced-colors checks. The failed full-site candidate remains preserved. [Change record](./runs/changes/2026-11-19-161533-hp-lazy-probe-readiness-a330f77a.json).
+- **Not claimed.** Verifier readiness correction only; no product, CSS, focus assertion or probe relaxation. No full site suite, human screen-reader/physical-phone acceptance, HP independent accuracy or requirement completion.
 
 
 ### 2026-11-19-154458-hp-built-site-integration-verified-36288c66
