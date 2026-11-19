@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-032609-align-governance-with-owner-trust-direction-0f6d8766",
+  "recorded_at": "2026-11-19T03:26:09.951019+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "changed": "Aligned current governance and decision history with the trust-owned operating LLC direction while preserving future independent standards governance as a separate proposal.",
+  "proves": "The active governance document no longer unconditionally assigns specification or mark assets to an unformed foundation. Existing licenses, RFC evidence and conformance recusal remain in force.",
+  "limits": "No entity, certification program, trademark clearance, legal instrument review or asset transfer is claimed.",
+  "scope_ids": [
+    "F-075",
+    "F-143",
+    "F-150",
+    "WP-GOVERNANCE"
+  ],
+  "files": {
+    "GOVERNANCE.md": "97964ebd616af7b3c0f4f4c1fa36f728038f9101677d13f7ced277e2a0f69c7c",
+    "DECISIONS.md": "b1b96b462d67b9773856e9e3c992b48de01df04a2dfc72968a94fb0ead26187e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-owner-trust-and-presentation-direction.json",
+      "sha256": "4b58af798af6caf0aa286a042af56e509bb783344f6604409897a0b874bd00c2"
+    }
+  ],
+  "checks": []
+}

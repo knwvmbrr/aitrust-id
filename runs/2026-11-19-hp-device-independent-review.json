@@ -1,0 +1,82 @@
+{
+  "profile": "hp-device-independent-engineering-review/v1",
+  "captured_at": "2026-11-19T15:34:47.870Z",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "source_commit": "262403d266d4870715e1da5b1647917bd03c37de",
+  "source_sha256": {
+    "tools/hp_device.py": "be4fb51923195a4cdeff74e0913902bd92897764c942f240a9fcce051f913ac4",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "site/src/hp-device-result.js": "f0fe16cc1e03b9c77e25b4f1a80ddb06e5124d123cec18ede764f0ae89c56fef",
+    "site/src/hp-device-client.js": "c6f228d57ba2cdd39e1a52c4adb72ee4d1423261f8099ba427331400bf10e2f4",
+    "site/src/hp-device-worker.js": "fa8216594fffa7b11a4621a47a193813c2a602957cbf238dd36bc8e0e3fbc6df",
+    "site/src/HPExplorer.jsx": "42708f179f5a7848c9123c16d8877aaef93bb9df95b205ee9ce3774a9d0a8a9e",
+    "site/src/HPExplorerSlot.jsx": "475104b9089f743ddc795c8580c8db705723e2e5e67f20159aab3c3fd3fcfe71",
+    "site/src/hp-device-manifest.json": "982c9af3ae67953e12ea9f4d99e8a4010b3cc777a19e1025e0838a74c4cc7f0e",
+    "scripts/build-hp-device.py": "9f84d7649e756500eb31a9fe7595ec7a9c65663cd24e414250025afdf2f789df",
+    "tests/test_hp_device.py": "2afb09f81e8bc72728d14eb4320740344f6543b770b71509ac0c0a587e9c84ca",
+    "tests/hp-device-client.mjs": "0e4962619887bb071db03f78bbe6a437fd2025344b776296506b44b30373be5c",
+    "docs/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+    "runs/2026-11-19-hp-device-core-corrected.json": "e5fd9d0823bf8509cf0910d37b7a041a927928edc8566a3131661818455e90a4",
+    "runs/2026-11-19-hp-device-browser-candidate-1.json": "fc53984e291eb34a9526f0156395c5b54a422549d07e134a5270319325325601"
+  },
+  "source_unchanged_during_review": true,
+  "commands": [
+    "node --input-type=module (targeted canonical record/input-binding/privacy and two-client failure controls)",
+    "python3 -B -c (canonical inspect_hp_device; authored text passed through stdin, not executed)"
+  ],
+  "checks": [
+    {
+      "name": "canonical_python_to_javascript_record_and_nonclaim",
+      "pass": true
+    },
+    {
+      "name": "nfc_equivalent_but_raw_different_result_refused",
+      "pass": true
+    },
+    {
+      "name": "unknown_private_field",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "changed_source_hash",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "invented_hp_tag",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "getter_refused_without_execution",
+      "pass": true
+    },
+    {
+      "name": "oversized_input_refused_before_worker",
+      "pass": true
+    },
+    {
+      "name": "one_client_failure_does_not_stop_peer_worker",
+      "pass": true
+    }
+  ],
+  "source_review": [
+    "Closed original/envelope schemas, fixed nonclaim flags and exact raw/frozen-NFC/source binding precede rendering.",
+    "Builder source/read/notice bounds and explicit postpublication uncertainty reviewed; no captured source execution.",
+    "Lazy import/render boundary and generation cancellation stay HP-local.",
+    "Browser receipt records28full parity/refusal cases and5corrupt-result controls per engine, not a physical phone or production PS/MT integration."
+  ],
+  "verdict": "No actionable blocker found within the bounded standalone literal-detail explorer scope.",
+  "browser_reexecuted_by_reviewer": false,
+  "production_mount_verified": false,
+  "HP_tag_asserted": false,
+  "independent_accuracy_evidence": false,
+  "scope_approval_granted": false,
+  "original_requirements_closed": 0,
+  "limits": [
+    "This is source/focused engineering review; not independent detector validation, full HP/F015 closure, physical-device/human acceptance or production mounting.",
+    "No heavy browser/native/model suite was run; source worktree not edited."
+  ]
+}

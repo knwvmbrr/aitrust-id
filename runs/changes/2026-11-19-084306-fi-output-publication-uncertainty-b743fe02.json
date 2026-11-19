@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-084306-fi-output-publication-uncertainty-b743fe02",
+  "recorded_at": "2026-11-19T08:43:06.492562+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fddbb702c912bcbd56348a9791479897476db62f",
+  "changed": "Distinguish ordinary FI sidecar refusals from uncertain output publication after link, cleanup, sync or close failures; preserve complete output and attempt every owned descriptor close.",
+  "proves": "Three original injected post-publication defects are preserved; 105 focused controls and 19 actual isolated-Python macOS CLI controls verify typed fixed uncertainty, no private echo, precommit refusals and unchanged ordinary local-resolution states.",
+  "limits": "Unexpected filesystem outcomes may leave a complete final output or private temporary names; inspect before retrying. No rollback, tag issuance, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "tools/citation_resolution.py": "fb683b4ac07651c8507f4712cf54450adb81a17a1845fae337438c20f7f1fa29",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "tests/test_citation_resolution.py": "a678bd1acb16f83fcfe8952eddc382688166f62496e7500c9a6e161b1a60c333",
+    "docs/fi-citation-sidecar.md": "88e4a9f1cef486b33d41e91d541f87a7b39ec1b093f59930e724b93373b6aa1e",
+    "docs/fi-citation-sidecar-plan.md": "6ac55ac30c4a5f7ce9490e7a7bf4422e9883144568a6cee472060be54989da70",
+    "runs/2026-11-19-fi-postcommit-original-defect.json": "c1d056a9e23bc3e85b3b317faccef1f47d7cf4e436f61762ad89d0d7956f1e81",
+    "runs/2026-11-19-fi-postcommit-corrected-macos.json": "82c30e93302c8a0013402e54a31809af3f17b5acf587d520f3441c6c1db03ae0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-postcommit-original-defect.json",
+      "sha256": "c1d056a9e23bc3e85b3b317faccef1f47d7cf4e436f61762ad89d0d7956f1e81"
+    },
+    {
+      "path": "runs/2026-11-19-fi-postcommit-corrected-macos.json",
+      "sha256": "82c30e93302c8a0013402e54a31809af3f17b5acf587d520f3441c6c1db03ae0"
+    }
+  ],
+  "checks": []
+}

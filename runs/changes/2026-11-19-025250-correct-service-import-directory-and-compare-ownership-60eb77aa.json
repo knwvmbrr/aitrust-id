@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-025250-correct-service-import-directory-and-compare-ownership-60eb77aa",
+  "recorded_at": "2026-11-19T02:52:50.969186+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dfb68c479180bb3773e48982a9584b2be2155ecd",
+  "changed": "Preserve HTTP-module startup diagnostics, add explicit traversable read-only protocol directories and nonroot image import assertions, and compare ownership structures without selecting one.",
+  "proves": "Actual pinned Uvicorn reproduces failure with0444 directory and loads identical module bytes after0555 correction. Twenty-eight integrated import and diagnostic controls pass; four comparison pages rendered and inspected.",
+  "limits": "Original hosted directory mode and corrected image startup await the next real hosted run. No resources or network isolation weakened, no entity selected or filed, no original requirement closure.",
+  "scope_ids": [
+    "F-150",
+    "WP-OPERATIONS",
+    "WP-GOVERNANCE",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    ".github/workflows/redaction-development.yml": "00ec671ba5b8ccc156c39de1547b2dbcdc19700f3c663dd85bc7c72d154b746b",
+    "docs/legal/README.md": "bf72c3aecd33e87c5cc7053d28f771651cc986c82914dcc78b34b50d655b7518",
+    "services/anonymizer/Dockerfile": "fba7cc95464450228deb3718a56535066e9476efa1cfec14a850511590617d08",
+    "services/evaluator/Dockerfile": "69f04c221aa724b742511ae6e1ba71f63ddda52d52199b7c119ff4ea8ea7dd36",
+    "services/gateway/Dockerfile": "f54f70902b4cdca938a3b285c159327bde56b7bf44a3efc91df7a1265a3d8c30",
+    "site/scripts/render-reference.mjs": "28d3868c35d2a222e1023be03e9dfdd12f26ea32e1078cc7df052393789be471",
+    "state.json": "b6b7be9b5250c4dd85aedb628ad5e4f3011901ca3861cfd03bd42f57112a971b",
+    "docs/legal/entity-structure-comparison.md": "ac51157111d2f2d7ae25d99e900670f6b129f93dfca8d8f0664e6079327491c2",
+    "docs/pii-protocol-import-plan.md": "8fa8756f3851af722cacd81b5e78f75402ec41a81b945c1c9f98544ae9686fc3",
+    "runs/2026-11-18-entity-structure-comparison.json": "e303d4d07c8ccfcacf1fce264be79d4ea6fa653756b91659052caccaf7f54fcc",
+    "runs/2026-11-18-privacy-startup-hosted.json": "9b5e2ae7fe6d5800d4f315c677541e56dbf5a67d2592c52d0484f09ff8ca3a59",
+    "runs/2026-11-19-container-protocol-import-controls.json": "47e3fb0e76738e2b4ae0ec0885b00feb04905ed0938619ff04afdbc7e5da6a5a",
+    "tests/test_container_protocol_import.py": "10939be009c5a117305fb1f52c07551349619a02de928a73242ba27bcfbfdc70"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-container-protocol-import-controls.json",
+      "sha256": "47e3fb0e76738e2b4ae0ec0885b00feb04905ed0938619ff04afdbc7e5da6a5a"
+    },
+    {
+      "path": "runs/2026-11-18-privacy-startup-hosted.json",
+      "sha256": "9b5e2ae7fe6d5800d4f315c677541e56dbf5a67d2592c52d0484f09ff8ca3a59"
+    },
+    {
+      "path": "runs/2026-11-18-entity-structure-comparison.json",
+      "sha256": "e303d4d07c8ccfcacf1fce264be79d4ea6fa653756b91659052caccaf7f54fcc"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T02:52:51.366770+00:00"
+    }
+  ]
+}

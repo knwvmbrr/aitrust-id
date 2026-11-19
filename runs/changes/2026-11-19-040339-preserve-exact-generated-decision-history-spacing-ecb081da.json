@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-040339-preserve-exact-generated-decision-history-spacing-ecb081da",
+  "recorded_at": "2026-11-19T04:03:39.759768+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b54b4a0f792dcffb6effe71b4da2730eb2f5ec38",
+  "changed": "Preserve original paragraph spacing in the canonical decision-history source so regenerated DECISIONS.md and its public projection remain byte-identical to the reviewed wording.",
+  "proves": "The dated decision verifier passes with exact rendered source matching.",
+  "limits": "No new decision or acceptance is inferred.",
+  "scope_ids": [
+    "F-075",
+    "WP-GOVERNANCE"
+  ],
+  "files": {
+    "docs/decision-history.md": "e0305c703c09dde378ce27d8162f8c80cea8ca17fc630c1cb17b68dfbdcd6954"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-owner-trust-and-presentation-direction.json",
+      "sha256": "4b58af798af6caf0aa286a042af56e509bb783344f6604409897a0b874bd00c2"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-decisions.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T04:03:39.813038+00:00"
+    }
+  ]
+}

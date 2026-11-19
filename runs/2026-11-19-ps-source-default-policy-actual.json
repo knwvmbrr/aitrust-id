@@ -1,0 +1,242 @@
+{
+  "format": "ai-trust-id-ps-source-actual/v1",
+  "captured_at": "2026-11-19T05:25:27.807074+00:00",
+  "pass": true,
+  "platform": "darwin",
+  "python_version": "3.13.0",
+  "non_root": true,
+  "real_policy_integration": true,
+  "injected_policy_used": false,
+  "pip_or_dependency_installation": false,
+  "minimal_environment_keys": [
+    "LANG",
+    "LC_ALL",
+    "PATH"
+  ],
+  "interpreter_flags": [
+    "-I",
+    "-S",
+    "-B"
+  ],
+  "synthetic_inputs_only": true,
+  "legal_clearance": false,
+  "independent_accuracy_evidence": false,
+  "complete_project_obligations": false,
+  "original_requirement_closed": false,
+  "sources": {
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "docs/ps-source-distribution-plan.md": {
+      "sha256": "4934362bea1f85e28d778bd51cb3b1c21a6420be6c6a9ea93085ca4c2804dc28",
+      "bytes": 2225
+    },
+    "docs/ps-source-distribution.md": {
+      "sha256": "3ce82b596ca61a6339ca9d54b2a5726ddfd240a037f68c20157d3049241daa6f",
+      "bytes": 3670
+    },
+    "eval/dependency-policy.json": {
+      "sha256": "e823db75c2b105a582014049ada85e9a0b383d27a076357adbb73b3590b01c4a",
+      "bytes": 25204
+    },
+    "eval/vectors/unicode/LICENSE.txt": {
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "bytes": 1995
+    },
+    "protocol/normalization.py": {
+      "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "bytes": 2419
+    },
+    "protocol/unicode15-data.json": {
+      "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "bytes": 59614
+    },
+    "scripts/build-device-detector.py": {
+      "sha256": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "bytes": 9406
+    },
+    "scripts/check-ps.py": {
+      "sha256": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "bytes": 6722
+    },
+    "scripts/export-ps-source.py": {
+      "sha256": "7ee020a6d3f2d585e7e8f7e370c5604bea5f78fc97cba0f9f5bdfa93b9e696e3",
+      "bytes": 1302
+    },
+    "scripts/worker_process.py": {
+      "sha256": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+      "bytes": 2986
+    },
+    "services/evaluator/app.py": {
+      "sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "bytes": 28865
+    },
+    "tests/test_ps_source_distribution.py": {
+      "sha256": "c9a72550dd8ddc7aa3aaa0dff3df5986bab26520cebfd70f0a5ef5729082e7ca",
+      "bytes": 13098
+    },
+    "tools/dependency_policy.py": {
+      "sha256": "ef8688ce9925334802540c2cb1445087e5dbcdb9069dde00b04ba6a22015bd15",
+      "bytes": 13859
+    },
+    "tools/ps_source_distribution.py": {
+      "sha256": "39cc9b5e092b8c0d26a58c7e31a44a7d48a708524f819b77a2549f4ff94794c6",
+      "bytes": 11032
+    }
+  },
+  "policy_sha256": "d6ef4886fb80d4530bebca0df155660f7f5ac8f2ac810a629045dd2b3ca21c78",
+  "approved_files": [
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "docs/ps-source-distribution.md",
+      "sha256": "3ce82b596ca61a6339ca9d54b2a5726ddfd240a037f68c20157d3049241daa6f",
+      "bytes": 3670
+    },
+    {
+      "path": "eval/vectors/unicode/LICENSE.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "bytes": 1995
+    },
+    {
+      "path": "protocol/normalization.py",
+      "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "bytes": 2419
+    },
+    {
+      "path": "protocol/unicode15-data.json",
+      "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "bytes": 59614
+    },
+    {
+      "path": "scripts/build-device-detector.py",
+      "sha256": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "bytes": 9406
+    },
+    {
+      "path": "scripts/check-ps.py",
+      "sha256": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "bytes": 6722
+    },
+    {
+      "path": "scripts/worker_process.py",
+      "sha256": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+      "bytes": 2986
+    },
+    {
+      "path": "services/evaluator/app.py",
+      "sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "bytes": 28865
+    }
+  ],
+  "external_prerequisites": [
+    "Independently obtained CPython 3.12 or newer; no interpreter is bundled or licensed by this source profile.",
+    "macOS or Linux with the existing POSIX process/file interfaces; OS rights are external prerequisites.",
+    "This profile approves only the listed source-and-notice package, not the full Python/OS distribution or independent PS accuracy."
+  ],
+  "archive": {
+    "sha256": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b",
+    "bytes": 130103,
+    "source_member_count": 9,
+    "generated_manifest_count": 1,
+    "deterministic_repeat_equal": true,
+    "exact_members": [
+      ".aitrust-ps-source.json",
+      "LICENSE",
+      "docs/ps-source-distribution.md",
+      "eval/vectors/unicode/LICENSE.txt",
+      "protocol/normalization.py",
+      "protocol/unicode15-data.json",
+      "scripts/build-device-detector.py",
+      "scripts/check-ps.py",
+      "scripts/worker_process.py",
+      "services/evaluator/app.py"
+    ],
+    "manifest_is_authentication": false
+  },
+  "notices": {
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "eval/vectors/unicode/LICENSE.txt": {
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "bytes": 1995
+    }
+  },
+  "extracted_execution": [
+    {
+      "case": "finding",
+      "expected_state": "FINDING",
+      "observed_state": "FINDING",
+      "exit_status": 0,
+      "exact_method_identity": true,
+      "input_text_absent_from_output_and_archive": true,
+      "redaction_performed": false,
+      "independently_validated": false
+    },
+    {
+      "case": "no-finding",
+      "expected_state": "NO_FINDING",
+      "observed_state": "NO_FINDING",
+      "exit_status": 0,
+      "exact_method_identity": true,
+      "input_text_absent_from_output_and_archive": true,
+      "redaction_performed": false,
+      "independently_validated": false
+    }
+  ],
+  "actual_policy_fault_controls": [
+    {
+      "case": "unknown-component",
+      "actual_policy_status": "blocked_unknown",
+      "release_allowed": false,
+      "build_exit_status": 2,
+      "verify_exit_status": 2,
+      "fixed_refusal_without_traceback_or_values": true,
+      "output_created": false
+    },
+    {
+      "case": "required-paid",
+      "actual_policy_status": "paid",
+      "release_allowed": false,
+      "build_exit_status": 2,
+      "verify_exit_status": 2,
+      "fixed_refusal_without_traceback_or_values": true,
+      "output_created": false
+    },
+    {
+      "case": "required-closed",
+      "actual_policy_status": "prohibited",
+      "release_allowed": false,
+      "build_exit_status": 2,
+      "verify_exit_status": 2,
+      "fixed_refusal_without_traceback_or_values": true,
+      "output_created": false
+    },
+    {
+      "case": "source-tamper",
+      "actual_policy_status": "blocked_unknown",
+      "release_allowed": false,
+      "build_exit_status": 2,
+      "verify_exit_status": 2,
+      "fixed_refusal_without_traceback_or_values": true,
+      "output_created": false
+    },
+    {
+      "case": "notice-tamper",
+      "actual_policy_status": "blocked_unknown",
+      "release_allowed": false,
+      "build_exit_status": 2,
+      "verify_exit_status": 2,
+      "fixed_refusal_without_traceback_or_values": true,
+      "output_created": false
+    }
+  ],
+  "source_unchanged": true,
+  "command_count": 20
+}

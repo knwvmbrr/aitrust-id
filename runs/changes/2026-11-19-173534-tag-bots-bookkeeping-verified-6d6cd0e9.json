@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-173534-tag-bots-bookkeeping-verified-6d6cd0e9",
+  "recorded_at": "2026-11-19T17:35:34.891866+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "92be88d00e967d53d4b8604b8f90561088efc903",
+  "changed": "Verified the final task-board/publication bookkeeping against current source and retained the published implementation identity.",
+  "proves": "Live accounting identifies9distinct completed scoped tasks,0original closures and70open originals. All46closeout website commands pass; the1316implementation input hashes are unchanged and reviewed boundaries pass with current metadata evidence.",
+  "limits": "The strict original-closure goal remains unmet. These are Git bookkeeping records, not a newer live deployment or independent tag acceptance; the site remains the verified92be88d source.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-074"
+  ],
+  "files": {
+    "docs/session-delivery-plan.md": "5476bc41c0af9277f771dfc54067dfe262f25e5c1ecaa068c166b5988304c6d2",
+    "docs/session-delivery.json": "33ef2fba6603c9388c7fddc98be7196aa5b6073aeaa4209bccf94cc2085c5d3f",
+    "eval/route-boundaries.json": "e912ac77cd5cc03200ece7998c3465c9ae854f13310a2371789ef012acbfa18c",
+    "runs/2026-11-19-pr132-required-ci-review.json": "d02c82c201f511882cc604d442c8e55cd4778b0a54b8ab9abc5b142e962374c0",
+    "runs/2026-11-19-tag-bots-closeout-boundaries.json": "3e410dfe0eb4b2ae3294a7936356706330be5d20fb6fe86b216aff6ad6c7a527",
+    "runs/2026-11-19-tag-bots-closeout-website.json": "8df8c2cec4586cf450e06cfe90208223abfd0522e05cbee030b90c565147afdf",
+    "runs/2026-11-19-tag-bots-final-accounting.json": "4ff805280010f2f2fda795f3834eecaea34823ff882d1141ee3ae36326135f10",
+    "runs/2026-11-19-tag-bots-live-browser.json": "18b6a27fa5022a007242941c357a7666925ea047e1752cf2df28bc4c11525dc5",
+    "runs/2026-11-19-tag-bots-live-http.json": "631e9e2f8dd702bfad5c150d90dc5e7f969bfff7185f6306a467537f3cab85da",
+    "runs/2026-11-19-tag-bots-live-publication.json": "a7534e3cb988da05936100e5812e7cda6532e058a3344c23e2767ae347390450",
+    "runs/2026-11-19-tag-bots-protected-merge.json": "596e10824ef6abe89c107062eb2f3c8b81a28e687f7698f8c17e1a79ad59d725",
+    "state.json": "63c44669424c3a600d56cd36bef4083e049173ba5dc07af45f6e3a0d2bf6e465"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-tag-bots-final-accounting.json",
+      "sha256": "4ff805280010f2f2fda795f3834eecaea34823ff882d1141ee3ae36326135f10"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-closeout-website.json",
+      "sha256": "8df8c2cec4586cf450e06cfe90208223abfd0522e05cbee030b90c565147afdf"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-closeout-boundaries.json",
+      "sha256": "3e410dfe0eb4b2ae3294a7936356706330be5d20fb6fe86b216aff6ad6c7a527"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-live-publication.json",
+      "sha256": "a7534e3cb988da05936100e5812e7cda6532e058a3344c23e2767ae347390450"
+    }
+  ],
+  "checks": []
+}

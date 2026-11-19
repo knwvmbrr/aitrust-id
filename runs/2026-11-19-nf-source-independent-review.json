@@ -1,0 +1,80 @@
+{
+  "profile": "nf-source-evidence-independent-engineering-review/v1",
+  "captured_at": "2026-11-19T15:40:36.597781+00:00",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "source_commit": "ed2f0292fdba8c3644d6554234edda089dc57b03",
+  "source_sha256": {
+    "tools/nf_source_evidence.py": "9012a04cf412ab27d8deede84b49b214d620fc788092d872e1ffe3607d817602",
+    "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+    "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "tests/test_nf_source_evidence.py": "2c85dd6e6f041ce05e71872da23cf0d81f6acdbd8281c6d89e5e825245d38649",
+    "docs/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "runs/2026-11-19-nf-cosine-binding-corrected-macos.json": "ab08c01a2bf653cd98a5a2a8a63ce8a129404f09fbe29bd3a9045606068d9f37"
+  },
+  "source_unchanged_during_review": true,
+  "commands": [
+    "python3 -B - (targeted canonical full-row replay and actual private CLI controls)",
+    "python3 -I -S -B scripts/check-nf-source-evidence.py prepare --subject <owned private authored fixture> --corpus <owned corpus> --selections <owned selection> --check literal --check cosine --output <new private sidecar>",
+    "python3 -I -S -B scripts/check-nf-source-evidence.py check --subject <same fixture> --corpus <same corpus> --sidecar <captured sidecar> --private-report <new private report>",
+    "python3 -I -S -B scripts/check-nf-source-evidence.py --unknown=AUTHORED_PRIVATE_ARGUMENT_CANARY"
+  ],
+  "checks": [
+    {
+      "name": "canonical_negative_qualification_pair_record",
+      "pass": true,
+      "semantic_truth_established": false
+    },
+    {
+      "name": "forged_cosine_one",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "omitted_cosine_matches",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "actual_nfc_bound_pair_private_cli_global_spans_and_raw_rebind_refusal",
+      "pass": true,
+      "prepare_exit": 0,
+      "check_exit": 0,
+      "rebind_exit": 2
+    },
+    {
+      "name": "actual_unicode_literal_survives_unavailable_ascii_cosine",
+      "pass": true,
+      "prepare_exit": 0,
+      "check_exit": 0,
+      "state": "PARTIAL"
+    },
+    {
+      "name": "actual_cli_malformed_argument_private_refusal",
+      "pass": true,
+      "exit_code": 2
+    }
+  ],
+  "source_review": [
+    "Exact raw/NFC/corpus/document/span/method sources bind the sidecar; original source/passage projection identities remain distinct.",
+    "Full capped canonical cosine row replay rejects both altered scores and omitted matches; repetition is consistency, not independent corroboration.",
+    "No-follow bounded private I/O, no-replace publication and explicit postpublication uncertainty preserve current I/O contract.",
+    "Separate pipe-only network-denied workers and optional-method identities preserve independent literal/cosine failure states."
+  ],
+  "verdict": "No actionable blocker found within the explicit selected-passage literal/cosine engineering scope.",
+  "original_requirements_closed": 0,
+  "NF_or_FI_tag_asserted": false,
+  "independent_accuracy_evidence": false,
+  "scope_approval_granted": false,
+  "limits": [
+    "Fresh observations use authored material, not independent semantic-support validation or physical/human acceptance.",
+    "No model/assets downloaded, no browser/native suite or production service mutation.",
+    "Synthetic positive cosine similarity for a negated passage is not support or truth; full T-NF/FI acceptance stays open."
+  ]
+}

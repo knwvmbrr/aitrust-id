@@ -67,6 +67,61 @@ revoked, unavailable, future, expired or stale. Exit `2` refuses malformed or
 untrusted input, altered history, rollback or unsafe file permissions. None of
 these exits is an independent authorship, identity, accuracy or certification result.
 
+## Compare two saved copies
+
+If two people received different copies, use a separately trusted authority
+public key to check them on your own device:
+
+```sh
+node scripts/revocation.cjs compare /your/saved/left.json /your/saved/right.json /your/saved/authority-public.pem
+```
+
+- **Exit 0:** Both copies contain the same signed checkpoint sequence, or
+  one is an exact signed prefix of the other. A prefix may be an older copy.
+- **Exit 4:** Both full histories have valid signatures and links, but they
+  differ at the reported sequence. Keep the original files for investigation.
+  A different signature alone can change a checkpoint digest. The result also
+  says where the recorded time window or revoked-key set first differs, if
+  either does.
+- **Exit 2:** A file is missing, malformed, unsafe to read, or fails verification
+  under the supplied key. No comparison was issued.
+
+The comparison prints checkpoint fingerprints and counts. It does not expose
+the revoked-key lists, rewrite either copy, select a winner or clear a key. A
+matching pair cannot rule out missing or conflicting copies elsewhere.
+
+## Verify signed witness observations
+
+A witness can sign the exact head of a log it has checked. Keep your private
+key and prior observations under your own control. Use the authority public
+key you already trust; do not take it or a witness roster from the log.
+
+```sh
+node scripts/revocation-witnesses.cjs sign log-1.json authority.pub witness-private.pem witness-1.json --first-observation
+node scripts/revocation-witnesses.cjs sign log-2.json authority.pub witness-private.pem witness-2.json --after witness-1.json
+```
+
+Use `--first-observation` only for a new witness. For later observations, keep
+your saved receipt and use `--after`. The new log must contain your prior signed
+checkpoint and extend it. Do not reset the witness when that check fails. The
+tool only saves an observation; it does not send or publish it.
+
+To verify, obtain each witness public key through a channel you trust. This
+example selects two keys and requires both to endorse the exact same checkpoint:
+
+```sh
+node scripts/revocation-witnesses.cjs policy authority.pub 2 witness-policy.json witness-a.pub witness-b.pub
+node scripts/revocation-witnesses.cjs verify log-2.json authority.pub witness-policy.json witness-a-2.json witness-b-2.json
+```
+
+Exit `0` means the selected number of distinct public keys signed that
+checkpoint. Exit `3` means too few valid observations; exit `2` means some
+input was refused. The authority's own key, duplicates, unknown keys and
+observations for another checkpoint never count. Two encodings of the same
+P-256 public point count as one key. Several keys can belong to
+one operator. The result cannot prove independent operators, when the log
+was seen, public distribution, current key status or completeness.
+
 ## What this protects, and what remains open
 
 Canonical signed complete history and a separately pinned checkpoint detect
@@ -77,7 +132,8 @@ Supported key algorithms are Ed25519 and P-256/SHA-256. Windows-specific key/fil
 permissions are not supported by this Unix CLI.
 
 A compromised authority could omit a revocation or sign conflicting histories.
-This tool does not contact witnesses or check completeness against other people.
+The comparison detects differences in the two supplied copies only. It does not
+contact witnesses or establish completeness across their holders.
 A long-disconnected verifier has unknown current status. Local clock manipulation,
 key custody/recovery, public distribution and independent witnessing need separate
 controls and acceptance. F-125 remains open for a publicly witnessed transparency

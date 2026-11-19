@@ -50,3 +50,65 @@ test('unchanged Mac-generated public vector verifies under its recorded historic
 
 test('missing status still validates the separately supplied authority key',()=>assert.throws(()=>v.assess(null,'invalid key',policy,[fp],now)));
 test('unsupported authority algorithm refused before history or status use',()=>{const k=crypto.generateKeyPairSync('rsa',{modulusLength:1024}).publicKey.export({type:'spki',format:'pem'});assert.throws(()=>v.id(k),/Unsupported revocation key algorithm/);});
+
+test('same history and shorter genuine snapshots describe only the supplied overlap',()=>{
+ const longer=v.extend(log,authority.priv,one.pub,now+1,3600);
+ for(const [a,b,outcome] of [[log,clone(log),'same_signed_history'],[log,longer,'left_is_signed_prefix'],[longer,log,'right_is_signed_prefix']]){
+  const x=v.compareHistories(a,b,authority.pub);
+  assert.equal(x.outcome,outcome);
+  assert.deepEqual(x.common_checkpoint,{sequence:1,sha256:policy.minimum_checkpoint_sha256});
+  assert.equal(x.first_divergence,null);assert.equal(x.first_different_statement_sequence,null);
+  for(const f of ['key_status_evaluated','global_log_completeness_proven','public_transparency_witnessed','tag_issuance'])assert.equal(x[f],false);
+ }
+});
+test('two authentic revocation statements at one sequence produce a divergent comparison',()=>{
+ const a=v.extend(log,authority.priv,one.pub,now+1,3600),b=v.extend(log,authority.priv,two.pub,now+1,3600);
+ const x=v.compareHistories(a,b,authority.pub);
+ assert.equal(x.outcome,'divergent_signed_histories');assert.equal(x.common_checkpoint.sequence,1);
+ assert.deepEqual(x.first_divergence,{sequence:2,left_checkpoint_sha256:v.history(a,authority.pub)[1].sha256,right_checkpoint_sha256:v.history(b,authority.pub)[1].sha256});
+ assert.equal(x.first_different_statement_sequence,2);
+ assert(!JSON.stringify(x).includes(v.id(one.pub)));assert(!JSON.stringify(x).includes(v.id(two.pub)));
+});
+test('different valid genesis statements have no common signed checkpoint',()=>{
+ const alternate=v.extend(null,authority.priv,one.pub,now,3600);
+ const x=v.compareHistories(log,alternate,authority.pub);
+ assert.equal(x.common_checkpoint,null);assert.equal(x.first_divergence.sequence,1);assert.equal(x.first_different_statement_sequence,1);
+});
+test('P-256 re-signing changes signed anchors without implying different revocation statements',()=>{
+ const a=pair('ec'),left=v.extend(null,a.priv,null,now,3600),right=v.extend(null,a.priv,null,now,3600);
+ assert.notEqual(left.checkpoints[0].signature,right.checkpoints[0].signature);
+ const nextLeft=v.extend(left,a.priv,null,now+1,3600),nextRight=v.extend(right,a.priv,null,now+1,3600);
+ const x=v.compareHistories(nextLeft,nextRight,a.pub);
+ assert.equal(x.outcome,'divergent_signed_histories');assert.equal(x.first_divergence.sequence,1);
+ assert.equal(x.first_different_statement_sequence,null);
+ const different=v.extend(right,a.priv,one.pub,now+1,3600);
+ assert.equal(v.compareHistories(nextLeft,different,a.pub).first_different_statement_sequence,2);
+});
+test('a broken suffix, missing genesis or unrelated authority cannot produce a comparison',()=>{
+ const a=v.extend(log,authority.priv,one.pub,now+1,3600),b=v.extend(log,authority.priv,two.pub,now+1,3600);
+ const late=v.extend(b,authority.priv,null,now+2,3600);
+ late.checkpoints[2].signature=Buffer.alloc(64).toString('base64');
+ assert.throws(()=>v.compareHistories(a,late,authority.pub));
+ assert.throws(()=>v.compareHistories(a,{...b,checkpoints:b.checkpoints.slice(1)},authority.pub));
+ assert.throws(()=>v.compareHistories(a,v.extend(null,two.priv,null,now,3600),authority.pub));
+});
+test('compare CLI returns separately parseable conflict, prefix and refusal results without writing inputs',()=>{
+ const dir=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'aitrust-revocation-compare-')));
+ const put=(name,bytes)=>{const p=path.join(dir,name);fs.writeFileSync(p,bytes,{mode:0o600});return p;};
+ const a=v.extend(log,authority.priv,one.pub,now+1,3600),b=v.extend(log,authority.priv,two.pub,now+1,3600);
+ try{
+  const key=put('authority-public.pem',authority.pub),left=put('left.json',r.bytes(a)),right=put('right.json',r.bytes(b));
+  const prefix=put('prefix.json',r.bytes(log)),bad=put('bad.json','{"version":1,"version":2}'),link=path.join(dir,'linked.json');
+  fs.symlinkSync(right,link);
+  const run=(a,b)=>spawnSync(process.execPath,['scripts/revocation.cjs','compare',a,b,key],{cwd:path.resolve(__dirname,'..'),encoding:'utf8',timeout:4000});
+  const conflict=run(left,right);assert.equal(conflict.status,4);assert.equal(conflict.stderr,'');
+  assert.equal(JSON.parse(conflict.stdout).first_divergence.sequence,2);
+  const consistent=run(prefix,left);assert.equal(consistent.status,0);
+  assert.equal(JSON.parse(consistent.stdout).outcome,'left_is_signed_prefix');
+  for(const refused of [run(left,bad),run(left,link),run(left,path.join(dir,'missing.json'))]){
+   assert.equal(refused.status,2);assert.equal(refused.stdout,'');assert(!refused.stderr.includes(dir));
+  }
+  assert.equal(fs.readdirSync(dir).length,6);
+  assert.deepEqual(fs.readFileSync(left),r.bytes(a));assert.deepEqual(fs.readFileSync(right),r.bytes(b));
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});

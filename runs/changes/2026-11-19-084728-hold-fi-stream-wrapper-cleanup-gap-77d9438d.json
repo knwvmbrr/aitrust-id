@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-084728-hold-fi-stream-wrapper-cleanup-gap-77d9438d",
+  "recorded_at": "2026-11-19T08:47:28.680477+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6d0a5a85f853c30805477d8a15cd568f8daa5675",
+  "changed": "Retain passing publication-uncertainty controls while holding FI for the separately reproduced stream-wrapper descriptor leak.",
+  "proves": "Root repeats the peer wrapper-failure case: no final output is created, but the unowned raw descriptor remains open after Capture exits and is manually closed. The corrected uncertainty candidate passes protocol checks; that does not close this newly identified cleanup case.",
+  "limits": "This candidate remains held. Exactly-once raw descriptor ownership, focused correction and current integration checks are required before publication; no original closure.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "docs/scope-progress.json": "d316218110cfaa932ba2648d40e8e51f2369826124fccde723e69a1d0e872334",
+    "docs/scope-progress.md": "1d0701df4e8d2d2c2f84cafee456a57e5b0fc16e5044a3dc03403253f61d9b90",
+    "eval/route-boundaries.json": "a8d446eaffb111a7fc0420c72d7715ff92917b711024853e54cda2a3f65f3388",
+    "runs/2026-11-19-fi-citation-io-protocol.json": "a93f2b18f1b6536db3817ea5cdebd8a4c7831dd75fafbc129ce4861fff056bcc",
+    "runs/2026-11-19-fi-fdopen-gap.json": "dc03e1e587c9dfe9f893403d4ba291b75a6439e484c94ae2ca72f854bf4ee4bc",
+    "runs/2026-11-19-fi-postcommit-root-replay.json": "af9d7c8c82f151ef488cc888673b1bbce8872a4080cf259d40c669bd596d09ef",
+    "site/public/reference/fi-citation-sidecar-plan.md": "6ac55ac30c4a5f7ce9490e7a7bf4422e9883144568a6cee472060be54989da70",
+    "site/public/reference/fi-citation-sidecar.md": "88e4a9f1cef486b33d41e91d541f87a7b39ec1b093f59930e724b93373b6aa1e",
+    "site/public/reference/public-scope.json": "104211c1f8f825abeab262715f07b862e1325749feb5eca3acd3067999c2b7f3",
+    "site/src/public-scope.json": "104211c1f8f825abeab262715f07b862e1325749feb5eca3acd3067999c2b7f3",
+    "site/src/scope-manifest.json": "7212b263d3633b3ff89c02d0e7b1ca2e2f9c1a45411fb470894089fcdcea7fe4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-fdopen-gap.json",
+      "sha256": "dc03e1e587c9dfe9f893403d4ba291b75a6439e484c94ae2ca72f854bf4ee4bc"
+    },
+    {
+      "path": "runs/2026-11-19-fi-citation-io-protocol.json",
+      "sha256": "a93f2b18f1b6536db3817ea5cdebd8a4c7831dd75fafbc129ce4861fff056bcc"
+    }
+  ],
+  "checks": []
+}

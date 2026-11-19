@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-19T16:54:27.382198+00:00",
+  "profile": "site-fixture-owned-fd-correction-independent-review/v1",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "implemented_by": "/root/web_camo",
+  "reviewed_commit": "f007371f075b516b32d371cbc6849032b441cb86",
+  "source_sha256": {
+    "scripts/site-fixture-server.cjs": "225d45cf1e6013c08190db9a8cbce88b3fcc8e526cf81d3dc02800c3cff4bfde",
+    "tests/site-fixture-server.cjs": "c7a5811588240362185bebfe2917df1f83c7ab1cbfac71051c0edb1be4b1758c",
+    "runs/2026-11-19-site-fixture-close-ownership-corrected.json": "7df3ba7ce06b8907d692664a65fe7e21483ab3fa28f0af885c623540f9ec959d"
+  },
+  "updates_review": {
+    "path": "runs/2026-11-19-site-fixture-header-independent-review.json",
+    "sha256": "e73ad885d1e5e62f0f0663376394770de27c2cd5d9e5fa4f0e9322d59ef61458",
+    "historical_only": true,
+    "missed_defect": "Original review did not exercise close-completed-then-error numeric descriptor reuse. Parent counterexample invalidated completeness of that review."
+  },
+  "reviewed_parent_original_failure": "runs/2026-11-19-site-fixture-owned-fd-original.json",
+  "control": {
+    "command": "node --test --test-name-pattern=\"HEAD close-completed EIO|pre-response error cleanup\" tests/site-fixture-server.cjs",
+    "exit_code": 0,
+    "tests": 2,
+    "passed": 2,
+    "failed": 0,
+    "elapsed_ms": 75.836333,
+    "original_eight_controls_rerun": false
+  },
+  "verified": [
+    "closeOwned relinquishes request fd before calling closeSync",
+    "HEAD close error cannot retry a reused numeric descriptor",
+    "cleanup close uncertainty destroys response without uncaught request-handler exception",
+    "exact reused marker descriptor survives each injected failure",
+    "fault hooks are restored and owned marker identity is checked before test teardown"
+  ],
+  "actionable_findings": [],
+  "source_unchanged_during_review": true,
+  "limits": {
+    "close_error_OS_outcome_may_remain_uncertain": true,
+    "underlying_close_completion_guaranteed": false,
+    "current_server_browser_proof_by_reviewer": false,
+    "original_requirement_closures": 0,
+    "source_edits_by_reviewer": false,
+    "production_changed": false
+  }
+}

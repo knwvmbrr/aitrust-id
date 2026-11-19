@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-031348-bind-current-setup-proof-and-align-trust-forms-a50c5cba",
+  "recorded_at": "2026-11-19T03:13:48.255282+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9e1813d2137ec061a724f6997f286fd8ce1faeb5",
+  "changed": "Bound the new actual clean-setup receipt in protocol revalidation and aligned current operating formation instructions with owner-selected trust-owned manager-managed LLC.",
+  "proves": "Fourteen source-binding controls pass; older nonprofit form instructions are expressly excluded from the selected filing route.",
+  "limits": "No formation, transfer, signature, independent accuracy or new full requirement closure.",
+  "scope_ids": [
+    "F-105",
+    "F-150",
+    "WP-OPERATIONS"
+  ],
+  "files": {
+    "docs/legal/README.md": "4690a082ee39ecb69ac5965dcb40aa05690ee5300515399acbb9e1c0bb665a68",
+    "docs/legal/entity-structure-comparison.md": "051a86d065a1817d4c6e9eeddf3ac7c47f5af50782a9bf38a8c0e42eba5f26a0",
+    "docs/legal/execution-packet.md": "85284cb95ce439b71c8579ecc098d588bfdc570086fd9592b0e719a9ecbc37ff",
+    "docs/legal/michigan-llc-packet.md": "a7d0b373a5c734878e9656984d528a9ab2d1674fb7ac13e7d0911b2be7e5e2d8",
+    "docs/pii-protocol-import-plan.md": "314ef7d0de62a2f9edb1bac8a05511c452f9e812f37b188232b93cf6d734fd84",
+    "docs/quiet-layer-architecture.md": "39058ef9049597b66b98b8ae028a01dd782fab395d637f713d767a625fa92bec",
+    "docs/scope-progress.json": "46f263220ed160dc269768b873cdf556806c4acba8741cf8fd61baabda7b8146",
+    "docs/scope-progress.md": "864697fca8eaafd88055120ee3283e1196ea171bd7d131fe45a0a386c763caac",
+    "docs/tag-status-2026-11-18.md": "0e6d328fd1c33279f61455d429ea7e72cd0698c35d58e0cf81e435391ae60f68",
+    "eval/revalidation.json": "52250257fc72c1d66e2cf214422439a061a48dc080ec272c0dd8b5392325661d",
+    "runs/2026-11-18-agent-tools-clean-setup-linux.json": "e91e201bce5922d941721e9e033e303faf2c9997a4d68fc8625981b25faaf0b2",
+    "runs/2026-11-18-owner-trust-and-presentation-direction.json": "4b58af798af6caf0aa286a042af56e509bb783344f6604409897a0b874bd00c2",
+    "runs/2026-11-18-protocol-import-hosted-compact.json": "d58b97f224f26c6061526536575dc37c0e1e73d0855ca743800717ac210e3e5b",
+    "runs/2026-11-18-protocol-import-hosted-english.json": "fc89112b679a88c8a034d3501a80c66219ded6a0dbe1b1f180e630d430f86fb4",
+    "runs/2026-11-18-protocol-import-hosted-replay.json": "b1348756bc93f13def5f0784dfba1ecb9da635b6433a539aa0c8e93fb5e1e121",
+    "runs/2026-11-18-protocol-import-hosted-result.json": "e26fb4b355c98a1f1062bccd2004939e787e40a73a12915f127d12ec9f34b70c",
+    "runs/2026-11-18-protocol-import-hosted-service.json": "2771768d299798014b493cc539ebf41f67d8b3a35f76bf1ac84a85969ee2c7c7",
+    "runs/2026-11-18-setup-receipt-binding-caught.json": "d82fea62e04288e6cf5b9051e643f24e6484dae26a224d68e9cb392e33b32b41",
+    "scripts/verify-local-setup-evidence.py": "56e8e89f00a137bebb53058279bc23296cf238ceae7871dd1f6da97d3679e4c5",
+    "site/public/reference/public-scope.json": "fe402e1b7ccf9073c63649ca83dfbc5a7948d002b21f6f9cc91081b12a3c893d",
+    "site/src/public-scope.json": "fe402e1b7ccf9073c63649ca83dfbc5a7948d002b21f6f9cc91081b12a3c893d",
+    "site/src/scope-manifest.json": "694459c1044b449f99fe33662392998e64f734763f8bfc9c7bbd1ae209faeda6",
+    "state.json": "48d709ae380835c6bc8ad513b929622dcbdf7a966a708fbdf54f1297fcb784d8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-setup-receipt-binding-caught.json",
+      "sha256": "d82fea62e04288e6cf5b9051e643f24e6484dae26a224d68e9cb392e33b32b41"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T03:13:48.352142+00:00"
+    }
+  ]
+}

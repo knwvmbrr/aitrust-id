@@ -112,3 +112,9 @@ Independent accuracy remains under F-108. No outside person, independent validat
 certification or detector release is inferred. This approval does not reallocate
 F-057 or F-120. Current processing time is recorded; no earlier approval time is
 invented.
+
+
+## Owner direction recorded 2026-11-18
+
+- Michael selected his existing revocable living trust as the intended 100 percent owner of a manager-managed Michigan operating LLC and confirmed he is its current trustee. Michael is founder and proposed initial Company manager. This supersedes the interim personal-owner drafting direction; the older foundation-owned operating company is not selected. No trust instrument review, filing, signature, IP assignment or membership transfer was performed. Exact trust identity and authority remain private execution prerequisites. See `runs/2026-11-18-owner-trust-and-presentation-direction.json` and `docs/legal/michigan-llc-packet.md`.
+- The product remains a presentation layer of compact independent tags alongside permitted screen content, expanding across supported visible formats and devices. Access, inference and presentation remain separate; original content actions and sibling results must survive bounded tag failures. Broad screen coverage is an objective, not authority to bypass OS protections or an absolute noninterference guarantee. See `docs/quiet-layer-architecture.md` and ENH-QUIET-LAYER in `docs/scope-progress.json`.

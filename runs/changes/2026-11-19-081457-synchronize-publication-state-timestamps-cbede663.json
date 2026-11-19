@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-081457-synchronize-publication-state-timestamps-cbede663",
+  "recorded_at": "2026-11-19T08:14:57.703543+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "05a513ece9b953e98356b4970ab4511e70b48664",
+  "changed": "Synchronize both required state timestamps after recording actual MT publication.",
+  "proves": "The accountability guard passes all referenced evidence chronology and 132 complete / 70 open. CI caught the earlier metadata update changing updated_at alone; the same strict guard is retained.",
+  "limits": "Metadata correction only; the deployed source and successful live controls are unchanged. No full requirement or release gate closes.",
+  "scope_ids": [
+    "T-MT"
+  ],
+  "files": {
+    "runs/2026-11-19-mt-publication-state-chronology.json": "5fa8c091c39a0e85fd2d9f203a4b03806fed9603c0cf309ede949e5d02b6f42f",
+    "state.json": "b5a42ed5e1fe95027af8c983501275c5afdae3cccded90f0f4ae35a85837ff65"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-publication-state-chronology.json",
+      "sha256": "5fa8c091c39a0e85fd2d9f203a4b03806fed9603c0cf309ede949e5d02b6f42f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T08:14:58.161715+00:00"
+    }
+  ]
+}

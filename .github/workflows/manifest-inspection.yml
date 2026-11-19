@@ -1,5 +1,7 @@
 name: optional-manifest-inspection
 on:
+  schedule:
+    - cron: '0 8 * * *'
   push:
     branches: [main]
     tags: ['**']

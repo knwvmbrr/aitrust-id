@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-145122-sign-revocation-witness-observations-19ddabe5",
+  "recorded_at": "2026-11-18T14:51:22.551664+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "36d91b839a1badbd9e245ffa003802245bd84d10",
+  "changed": "Add offline signing and verification of revocation witness observations, and record the current TestFlight session recheck.",
+  "proves": "Eight new witness controls and all 62 prior revocation controls passed. Both accessible Mac browsers requested App Store Connect sign-in.",
+  "limits": "Selected key agreement is not evidence of independent operators or publication. TestFlight processing and iPhone access remain unverified. No full scope records closed.",
+  "scope_ids": [
+    "F-125",
+    "N-013"
+  ],
+  "files": {
+    "docs/offline-revocation-plan.md": "efd37d64d8f650038ca71ca6519838df05bf9a87ef49d67e4022490e94694b88",
+    "docs/offline-revocation.md": "3b0a3c223c6d713523cdc597c13a03d464209c29b6f6d668a342d8fe36f16a76",
+    "docs/scope-60-execution.md": "20047ce45ad6cacc26b3c45c72d7b70ef598d6358c2bd60d57d000dbc557c0eb",
+    "docs/scope-progress.json": "770cce17b47d72bef2a52d6973db1a2b5e2b2a65cd33627ae40b3034c51a5d41",
+    "docs/scope-progress.md": "2edb8f5748a2ba1f2739d3442dc63666c9c58de3f8417081e75f6b16bb2f2e4c",
+    "protocol/revocation-witnesses.cjs": "67bcbeb0d226c1109e2d1e28c265940081bdcb96ad9047ab7ecaef4265cb061c",
+    "runs/2026-11-18-revocation-witness-offline-controls.json": "3af96242447017399a7b780d1690228b40b101919713f41615923b462a257e9a",
+    "runs/2026-11-18-testflight-mac-session-recheck.json": "c8203682e02903050c8062e62f641ca18b556eef57df5358481a4bdff2c3630a",
+    "scripts/revocation-witnesses.cjs": "1351b587bc9b08c7e8c0241dd715e0edc1ab9c41a291fcdc78172cd433d6f9ea",
+    "scripts/verify-route-boundaries.py": "9b5752efd0065730f203707ab6be58635b761ff5c3db5534b4bf885a83fb9f9e",
+    "site/public/reference/public-scope.json": "158c57f454bb3eacfe6e2fccf0e3378087acf04574a923cd70fdf8879b6ca975",
+    "site/src/public-scope.json": "158c57f454bb3eacfe6e2fccf0e3378087acf04574a923cd70fdf8879b6ca975",
+    "site/src/scope-manifest.json": "5a99603e12eb8a7c9f15069db0ccf62d5222d37812035f1e3d54a1ff4be46a72",
+    "state.json": "67c8af199ae50723123aebccbf33d0dc2f711c437ccb6c5f83d7ae113ac83c04",
+    "tests/offline-revocation-witnesses.cjs": "a9a4b4dcc71b5672a0ee6b87892c1ef5901a6b18f430fefc10fcc7900f471d4c",
+    "tests/test_offline_revocation_witnesses.py": "bcb5c1f86b901b803b977ec1e2a6d89623e9ff1abedd392414c18ae6291a5eba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-revocation-witness-offline-controls.json",
+      "sha256": "3af96242447017399a7b780d1690228b40b101919713f41615923b462a257e9a"
+    },
+    {
+      "path": "runs/2026-11-18-testflight-mac-session-recheck.json",
+      "sha256": "c8203682e02903050c8062e62f641ca18b556eef57df5358481a4bdff2c3630a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T14:51:23.356955+00:00"
+    }
+  ]
+}

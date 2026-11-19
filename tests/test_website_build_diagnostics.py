@@ -24,6 +24,7 @@ def test_real_child_build_phase_controls():
 def test_diagnostic_runner_and_guarded_writer_are_bound():
     required = {'scripts/website-build-phases.cjs',
                 'scripts/verify-built-website.cjs', 'scripts/execution-report.cjs',
+                'scripts/site-fixture-server.cjs', 'tests/site-fixture-server.cjs',
                 'tests/website-build-phases.cjs',
                 'tests/test_website_build_diagnostics.py'}
     current = fingerprint('website')
@@ -46,8 +47,15 @@ def controller_fixture(tmp_path):
     scripts.mkdir()
     (tmp_path / 'tests').mkdir()
     for name in ['verify-built-website.cjs', 'website-build-phases.cjs',
-                 'execution-report.cjs', 'static-headers.cjs']:
+                 'execution-report.cjs', 'static-headers.cjs',
+                 'site-fixture-server.cjs']:
         shutil.copyfile(ROOT / 'scripts' / name, scripts / name)
+    # The controller's first child now also exercises the real fixture server.
+    # Keep its transitive source/policy inputs in this disposable process tree.
+    shutil.copyfile(ROOT / 'tests/site-fixture-server.cjs',
+                    tmp_path / 'tests/site-fixture-server.cjs')
+    (tmp_path / 'site/public').mkdir(parents=True)
+    shutil.copyfile(ROOT / 'site/public/_headers', tmp_path / 'site/public/_headers')
     report = tmp_path / 'output/verification/website-build-phases.json'
     report.parent.mkdir(parents=True)
     report.write_text(json.dumps({'pass': True, 'old_success': True}))

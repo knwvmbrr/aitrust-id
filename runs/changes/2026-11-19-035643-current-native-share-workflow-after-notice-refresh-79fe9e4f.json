@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-035643-current-native-share-workflow-after-notice-refresh-79fe9e4f",
+  "recorded_at": "2026-11-19T03:56:43.121970+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "changed": "Selected a fresh actual six-workflow iPhone14Plus Simulator execution bound to the refreshed notice metadata and unchanged native software.",
+  "proves": "All six named UI workflows passed on installed iOS26.2; current source and assets matched throughout and the owned Simulator was deleted and absent afterward.",
+  "limits": "Simulator software evidence only: no physical phone, human VoiceOver, third-party Share-provider acceptance, independent detector accuracy or new TestFlight upload.",
+  "scope_ids": [
+    "N-013",
+    "F-150",
+    "WP-MOBILE",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "scripts/verify-native-share-evidence.py": "87bf3bd2a4516c4bcef32983ed8d3681bbf96d12228a3168518019c9a5c6b065",
+    "state.json": "eb3473f10b574a87b6c14838369bcf9280c903dd5ac77a4d3cfdba83a074f9f1",
+    "runs/2026-11-19-current-notices-native-share-workflow.json": "cc4d16e29cc5b3b93709ff9b7e4b9c35b55467a5501e61e4b1c7005f4019303c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-current-notices-native-share-workflow.json",
+      "sha256": "cc4d16e29cc5b3b93709ff9b7e4b9c35b55467a5501e61e4b1c7005f4019303c"
+    }
+  ],
+  "checks": []
+}

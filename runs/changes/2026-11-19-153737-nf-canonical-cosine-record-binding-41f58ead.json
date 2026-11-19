@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead",
+  "recorded_at": "2026-11-19T15:37:37.915789+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2386283ab3b3ef52668400b8c00197a760e6e8de",
+  "changed": "Bind accepted cosine scores and complete match lists to replay of the unchanged canonical component on the exact capped caller-selected passages before rebasing or export.",
+  "proves": "The two original plausible-corruption acceptances are preserved; 95 focused controls and 23 actual current macOS CLI controls reject score forgery and match omission while retaining the literal sibling, plus a bounded replay cost observation.",
+  "limits": "Canonical replay verifies record consistency, not independent accuracy, semantic support, source freshness or truth. No NF or FI tag, original scope closure, Linux execution or human acceptance is claimed.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "tools/nf_source_evidence.py": "9012a04cf412ab27d8deede84b49b214d620fc788092d872e1ffe3607d817602",
+    "tests/test_nf_source_evidence.py": "2c85dd6e6f041ce05e71872da23cf0d81f6acdbd8281c6d89e5e825245d38649",
+    "docs/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "docs/nf-source-evidence-plan.md": "32bb1d50fa38677e9d30c34312808677081562d4e6eab507c739080573322b77",
+    "runs/2026-11-19-nf-cosine-binding-original-defect.json": "ec6caacb78bf8ef03ebb562494b3ac413bd69d86dd874d6ee80c139e984ed470",
+    "runs/2026-11-19-nf-cosine-binding-corrected-macos.json": "ab08c01a2bf653cd98a5a2a8a63ce8a129404f09fbe29bd3a9045606068d9f37"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-nf-cosine-binding-original-defect.json",
+      "sha256": "ec6caacb78bf8ef03ebb562494b3ac413bd69d86dd874d6ee80c139e984ed470"
+    },
+    {
+      "path": "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "sha256": "ab08c01a2bf653cd98a5a2a8a63ce8a129404f09fbe29bd3a9045606068d9f37"
+    }
+  ],
+  "checks": []
+}

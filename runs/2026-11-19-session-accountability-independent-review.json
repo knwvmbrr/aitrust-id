@@ -1,0 +1,74 @@
+{
+  "profile": "session-accountability-independent-review/v1",
+  "captured_at": "2026-11-19T15:31:47.666306+00:00",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "source_commit_context": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+  "working_tree_sources": true,
+  "source_sha256": {
+    "tools/session_delivery.py": "49e0b4e19363fc2b0f3666e91e0cadd7ea9fd66fa69b9fe258d90d689f1f4327",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "tests/test_session_delivery.py": "9e93fd7ba7a357ff871e0d2a68c792f58d44fcdc99773c8d781641d4a1a8d7f6",
+    "docs/session-accountability-plan.md": "0976bbe7476138c9c4ef2468b4ca5346de0670cc7cb6f11b31575179acacc492"
+  },
+  "source_unchanged_during_review": true,
+  "commands": [
+    "python3 -B - (targeted accounting identity, synthetic fresh/stale evidence and unchanged132/70 controls)",
+    "python3 -I -S -B scripts/session-delivery.py --unknown=AUTHORED_PRIVATE_ARGUMENT_CANARY"
+  ],
+  "checks": [
+    {
+      "name": "same_actual_implementer_and_reviewer",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "reviewer_is_assigned_worker",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "boolean_identity",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "distinct_review_fresh_synthetic_proof",
+      "pass": true,
+      "finished_scoped_tasks": 1,
+      "original_closures": 0,
+      "original_open": 70,
+      "session_success": false,
+      "scope": "synthetic accounting control only; no real task closure recorded"
+    },
+    {
+      "name": "old_evidence_with_recomputed_digest",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "actual_cli_fixed_malformed_argument_refusal",
+      "pass": true,
+      "command": "python3 -I -S -B scripts/session-delivery.py --unknown=AUTHORED_PRIVATE_ARGUMENT_CANARY",
+      "exit_code": 2,
+      "private_value_echoed": false,
+      "stderr_empty": true
+    }
+  ],
+  "source_review": [
+    "Full baseline SHA validated before Git execution.",
+    "Closed task reviewer must differ from both actual implementer and assigned worker; identities are bounded strings.",
+    "Passing evidence requires a session-current timezone-aware captured_at.",
+    "Counters are exact integers; original and scoped task counts are derived separately."
+  ],
+  "verdict": "No remaining blocker in the previously reproduced accounting/privacy cases.",
+  "scope_approval_granted": false,
+  "real_task_closed_by_this_review": false,
+  "original_requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "limits": [
+    "Accounting and reviewed source consistency only; no functional, legal, human or tag acceptance is machine-approved.",
+    "Synthetic candidate boards existed only in memory/private temporary files; shared board/ledger/state were not modified.",
+    "No broad test suite or product runtime execution."
+  ]
+}

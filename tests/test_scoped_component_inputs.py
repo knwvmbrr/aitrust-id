@@ -10,6 +10,20 @@ REQUIRED={'protocol':['docs/master-scope.json','docs/scope-progress.json','GOVER
                        'runs/2026-10-13-clean-setup-owner-decision.json','runs/2026-10-13-one-command-linux-setup.json'],
           'extension':['LICENSE','scripts/build-firefox-extension.py','extension/src/firefox/permissions.js']}
 
+for cap in ('protocol', 'website'):
+    REQUIRED.setdefault(cap, []).extend(['eval/dependency-policy.json', 'tools/dependency_policy.py',
+        'tools/ps_source_distribution.py', 'scripts/export-ps-source.py',
+        'site/public/downloads/aitrust-id-ps-source.zip', 'sbom/reviews/esbuild-source.json'])
+
+for cap in ('protocol','website'):
+    REQUIRED.setdefault(cap, []).extend(['tools/mt_device.py','scripts/build-mt-device.py',
+        'site/src/mt-device-manifest.json','site/src/mt-device-result.js','scripts/mt-site-controls.cjs'])
+
+REQUIRED['protocol'].extend(['tools/citation_resolution.py','scripts/citation-resolution.py',
+                             'tests/test_citation_resolution.py','docs/fi-citation-sidecar.md'])
+REQUIRED['website'].extend(['scripts/verify-seo.cjs','scripts/verify-seo.mjs',
+                            'tests/seo-metadata.mjs','docs/fi-citation-sidecar.md'])
+
 
 def test_actual_new_component_inputs_are_bound():
     for cap,paths in REQUIRED.items():assert set(paths)<=r.fingerprint(cap)['sources'].keys()

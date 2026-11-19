@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-070555-mt-preview-integrity-correction-bedaf577",
+  "recorded_at": "2026-11-19T07:05:55.348819+00:00",
+  "author": "Codex - MT integrity correction lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "70a38b5b064f00246b187317695eb972b759a203",
+  "changed": "Correct MT request/result identity and closed evidence validation; capture bounded no-follow source snapshots before publishing method bundles.",
+  "proves": "13 Node groups,36 focused Python tests and fresh Chromium/WebKit controls pass; each browser validates30 full records and refuses five corrupt result types before rendering. Source links/FIFO/oversize/drift preserve prior outputs.",
+  "limits": "Supersedes unmounted70a38b5 evidence for integrity adoption. No canonical method change, tag assertion, independent accuracy, physical-device acceptance, full closure or production mounting. Prior receipts preserved; PM owns integration.",
+  "scope_ids": [
+    "F-019b",
+    "F-019c",
+    "T-MT"
+  ],
+  "files": {
+    "docs/mt-device-explorer-result.md": "bcc93b0347426563bb9c46190f575befbd6881fbac5d2acd0236e4e4355d94d3",
+    "docs/mt-device-explorer.md": "dad64b08d055ce89e0ea5ed1c35eac7b094be449d5eae4b09065994f09bd9896",
+    "docs/mt-device-integrity-correction.md": "7c055579fbe8a8fe92ef7706358f044be4251aba46df7a3187a1b6a42d6430a5",
+    "runs/2026-11-19-mt-device-browser-corrected.json": "26644ab91ca53a16b5a2cde544248aa1b5c9d527b34b74844272aec41a30b5ea",
+    "runs/2026-11-19-mt-device-correction.json": "ce149f7c89ad919600240375068fe53ad979a274acdc34f5110e0ba850e19ef9",
+    "runs/2026-11-19-mt-device-integrity-before.json": "250194ef19ef94e02de3f0187572db31dc7f4afca5970529fd63277d4a99bc1d",
+    "scripts/build-mt-device-fixture.mjs": "96f722b862db64fbc570bd8f426a50d14e490a0fab6c3cc831eb558656e4f6fb",
+    "scripts/build-mt-device.py": "b0142dec86ba1c1a2e9a961e5d77d7498d01235ea3a3cc73df8f28dcc55c43a5",
+    "scripts/mt-device-cases.py": "86f299587d33f57b865da82439611c6250d0dd3d5d84873c78c4b27dd7e6dbe1",
+    "scripts/verify-mt-device.cjs": "b18f0d438c26f3b9ae628b724064e28f50a19211a781010ddb9811e993119e64",
+    "site/public/mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750",
+    "site/public/mt-device/method-3127bf9f46eea3da6a32bf307ef522ae100bd085f56405a3ba1ed8d963f50ddd.json": null,
+    "site/src/mt-device-client.js": "f17b991c28760ebcefec515bae9cd095dfbe59540dc2bb6572a21380989a3fff",
+    "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+    "site/src/mt-device-result.js": "3c76732aa4d3ca38beb553d3011d57b7b0db3fb94b94e0fcb360e67f0f3854af",
+    "tests/mt-device-client.mjs": "cfdb6b30505275d80af722933745196f3dc90f4513659cb1d78f720a39dc34c7",
+    "tests/test_mt_device.py": "54a274c8d95288e5c173865a3203305397802299165ef81416d73721374eb5c8",
+    "tools/mt_device.py": "68f7ceaf6e2d87e0f5babf58534954d3c28a2bad85b1728734f31682d219166b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-device-correction.json",
+      "sha256": "ce149f7c89ad919600240375068fe53ad979a274acdc34f5110e0ba850e19ef9"
+    },
+    {
+      "path": "runs/2026-11-19-mt-device-browser-corrected.json",
+      "sha256": "26644ab91ca53a16b5a2cde544248aa1b5c9d527b34b74844272aec41a30b5ea"
+    },
+    {
+      "path": "runs/2026-11-19-mt-device-integrity-before.json",
+      "sha256": "250194ef19ef94e02de3f0187572db31dc7f4afca5970529fd63277d4a99bc1d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T07:05:55.410570+00:00"
+    }
+  ]
+}

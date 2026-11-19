@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-074249-await-real-mt-controls-before-accessibility-probes-17c9f998",
+  "recorded_at": "2026-11-19T07:42:49.331172+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "eb5321d182d33a9a92e2c5d70421dd7974d3cb9f",
+  "changed": "Wait for the actual lazy MT explorer before catalogue and accessibility geometry/focus probes, instead of treating an open modal shell as completed content.",
+  "proves": "The focused accessibility run now passes all measured surfaces in both themes; the earlier failure measured controls while the MT panel was still mounting and moving the later contribution action. No focus rule or error assertion was removed.",
+  "limits": "This corrects test readiness and preserves real focus/size/spacing checks. Final full website execution and publication remain pending; no physical-device or human screen-reader acceptance is granted.",
+  "scope_ids": [
+    "WP-SITE",
+    "F-139",
+    "F-150"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "24713ce77ecf0f75bac39c1b91a0fb53842b1e2d9d05005584732e18e6a2dc36",
+    "scripts/verify-site-accessibility.cjs": "5527fc339447751795d44dc71ae1c4c0c78c407955b1135246dffddef9721f33"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site-accessibility.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T07:42:49.570312+00:00"
+    }
+  ]
+}

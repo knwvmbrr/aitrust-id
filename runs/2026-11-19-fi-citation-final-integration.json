@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-11-19T09:00:04.805280+00:00",
+  "pass": true,
+  "capabilities": {
+    "PS": {
+      "evidence": "runs/2026-11-19-fi-citation-PS.json",
+      "checks_passed": 7,
+      "source_fingerprint": "8c84031ae708e7639616a574c6ab5adf8ee472969663891d17859112c76d2a16"
+    },
+    "PII_REDACTED": {
+      "evidence": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
+      "checks_passed": 6,
+      "source_fingerprint": "35b212dcfc2f8c264d3e0c6a5a6b2a919456c4ef1e16501e70d5ec4baea64082"
+    },
+    "protocol": {
+      "evidence": "runs/2026-11-19-fi-citation-final-protocol.json",
+      "checks_passed": 52,
+      "source_fingerprint": "de7cf2fbfe17bd9d3140630d80ffa4f245d0431930eed44a4e1c9688beb4cef3"
+    },
+    "extension": {
+      "evidence": "runs/2026-11-19-fi-citation-extension.json",
+      "checks_passed": 14,
+      "source_fingerprint": "575f9a2a7bd8ee3e5096c931eba9462916907615aa6ce81c7b3e506cfcaf328e"
+    },
+    "website": {
+      "evidence": "runs/2026-11-19-fi-citation-final-website.json",
+      "checks_passed": 43,
+      "source_fingerprint": "80febb2ba0233318323eea8129721cf3acae40cc7e1f67cc22ddf44a4951250d"
+    }
+  },
+  "boundaries": "runs/2026-11-19-fi-citation-final-boundaries.json",
+  "ownership_review": "runs/2026-11-19-fi-final-ownership-review.json",
+  "current_component_evidence": "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+  "focused_component_tests": 110,
+  "actual_macos_cli_controls": 23,
+  "full_FI_complete": false,
+  "independent_accuracy_evidence": false,
+  "original_complete": 132,
+  "original_open": 70,
+  "original_ids_preserved": 202,
+  "new_original_closures": 0,
+  "protected_publication_pending": true
+}

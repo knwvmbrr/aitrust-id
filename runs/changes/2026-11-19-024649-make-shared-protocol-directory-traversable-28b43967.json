@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-024649-make-shared-protocol-directory-traversable-28b43967",
+  "recorded_at": "2026-11-19T02:46:49.911408+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6c0d92d4e2d6be5e3a018d392ae6e53e31cfd5a5",
+  "changed": "Set shared ASGI package directory search permissions explicitly and check module resolution as the runtime user in each selected image build.",
+  "proves": "Nonroot pinned Uvicorn0.34 CLI loading reproduces the hosted import error at directory0444 and succeeds at0555 while source files stay0444. All57 adjacent checks passed before the mode observation addition and all4 final import controls passed afterward. The build now prints the prior directory mode.",
+  "limits": "The original hosted directory mode is unobserved until a fresh hosted image build. No local Docker or service process started. Actual container startup, health and replay remain pending.",
+  "scope_ids": [
+    "T-PII",
+    "F-023",
+    "F-040",
+    "WP-RELEASE"
+  ],
+  "files": {
+    ".github/workflows/redaction-development.yml": "00ec671ba5b8ccc156c39de1547b2dbcdc19700f3c663dd85bc7c72d154b746b",
+    "services/anonymizer/Dockerfile": "fba7cc95464450228deb3718a56535066e9476efa1cfec14a850511590617d08",
+    "services/gateway/Dockerfile": "f54f70902b4cdca938a3b285c159327bde56b7bf44a3efc91df7a1265a3d8c30",
+    "services/evaluator/Dockerfile": "69f04c221aa724b742511ae6e1ba71f63ddda52d52199b7c119ff4ea8ea7dd36",
+    "tests/test_container_protocol_import.py": "10939be009c5a117305fb1f52c07551349619a02de928a73242ba27bcfbfdc70",
+    "docs/pii-protocol-import-plan.md": "8fa8756f3851af722cacd81b5e78f75402ec41a81b945c1c9f98544ae9686fc3",
+    "runs/2026-11-19-container-protocol-import-controls.json": "47e3fb0e76738e2b4ae0ec0885b00feb04905ed0938619ff04afdbc7e5da6a5a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-container-protocol-import-controls.json",
+      "sha256": "47e3fb0e76738e2b4ae0ec0885b00feb04905ed0938619ff04afdbc7e5da6a5a"
+    }
+  ],
+  "checks": []
+}

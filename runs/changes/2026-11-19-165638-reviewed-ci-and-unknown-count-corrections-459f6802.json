@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-165638-reviewed-ci-and-unknown-count-corrections-459f6802",
+  "recorded_at": "2026-11-19T16:56:38.106493+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "13152e06629578b87a5ac4f5c6c9ec23319f08fa",
+  "changed": "Integrated explicit unknown NF counts and shared reviewed-header fixtures; corrected owned descriptor cleanup after a concrete counterexample, updated disposable controller dependencies and retained closure/reopen history.",
+  "proves": "NF13focused/10macOS/10Linux controls and independent review distinguish null from measured0. Shared fixture10HTTP/error controls pass; independent exact-fd replay now preserves the replacement with one close. Eight controller lifecycle tests pass with the real transitive fixture inputs.",
+  "limits": "Old protected candidate passed10of11 and was not retried unchanged. Current all-capability/protected verification is pending after changed source. Six scoped tasks, zero original closures;70remain open. No product/probe relaxation or independent accuracy claim.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-054",
+    "F-074"
+  ],
+  "files": {
+    "docs/session-delivery-plan.md": "bddc5d70fd80f75e67cd6bbc03b7fa997fef9e3e045c988e5a93777563cdabc5",
+    "docs/session-delivery.json": "03a3da468f7ec2d0f56a9f97b1ff215c2f56a0fd52f47eb1bdb3f8572b162f91",
+    "eval/revalidation.json": "f4b52ece4b3cca87048fd495b1e5e99e384e5b69fe317f269f2eca2843e681b8",
+    "runs/2026-11-19-nf-unavailable-count-independent-review.json": "9448e2674992a15b36d9caa872e91c70ecf7ef0d3e0d5ab14fe5f3f3404de333",
+    "runs/2026-11-19-site-fixture-fd-correction-independent-review.json": "d5a8d37bdaa2c28d844d9eca75d5b8691a5f1d5b3102c45542dff304bb12ea34",
+    "runs/2026-11-19-site-fixture-header-independent-review.json": "e73ad885d1e5e62f0f0663376394770de27c2cd5d9e5fa4f0e9322d59ef61458",
+    "runs/2026-11-19-site-fixture-owned-fd-corrected.json": "839e96ce750311ba43b56f2690c564b18a54bf94d2b6094ea74e69ec913891e7",
+    "runs/2026-11-19-site-fixture-owned-fd-original.json": "1029f4bf92afd0ed0543bad4c54d37f469a5c548389ffb4e7ed9ca1bbfe61edf",
+    "runs/2026-11-19-tag-bots-protected-ci-failure.json": "a28e3d75144c7c1341e9e7ee862efa8e8289b099bd556a4a6412f11d2f7de311",
+    "scripts/verify-route-boundaries.py": "acfd214c9215cf65769c23a078367aaf6cbc27574f0c90c7c549062af9da68fe",
+    "site/public/reference/nf-source-evidence.md": "0349cb22f0c39d9cf58851147609fac07885a48ff2af0899292bce88faa78318",
+    "state.json": "34634dcb136f37302c7ad5d835b64e359c01e74bf55404c2c020338f26ec2dcd",
+    "tests/test_website_build_diagnostics.py": "12001dbf04ced126674677c06002b9138d80ea5a33782a7ca2a45c9f88d524c6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-nf-unavailable-count-independent-review.json",
+      "sha256": "9448e2674992a15b36d9caa872e91c70ecf7ef0d3e0d5ab14fe5f3f3404de333"
+    },
+    {
+      "path": "runs/2026-11-19-nf-unavailable-count-macos.json",
+      "sha256": "1006bb7df30325c144caa55c7e9e9f35a4b8818c7c0530e5ed3f458814ebee02"
+    },
+    {
+      "path": "runs/2026-11-19-nf-unavailable-count-linux.json",
+      "sha256": "5f71dc1d7c3925e50fa6e9681e147784399b5effd8b20d7787776213332df29a"
+    },
+    {
+      "path": "runs/2026-11-19-site-fixture-close-ownership-corrected.json",
+      "sha256": "7df3ba7ce06b8907d692664a65fe7e21483ab3fa28f0af885c623540f9ec959d"
+    },
+    {
+      "path": "runs/2026-11-19-site-fixture-owned-fd-corrected.json",
+      "sha256": "839e96ce750311ba43b56f2690c564b18a54bf94d2b6094ea74e69ec913891e7"
+    },
+    {
+      "path": "runs/2026-11-19-site-fixture-fd-correction-independent-review.json",
+      "sha256": "d5a8d37bdaa2c28d844d9eca75d5b8691a5f1d5b3102c45542dff304bb12ea34"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-protected-ci-failure.json",
+      "sha256": "a28e3d75144c7c1341e9e7ee862efa8e8289b099bd556a4a6412f11d2f7de311"
+    }
+  ],
+  "checks": []
+}

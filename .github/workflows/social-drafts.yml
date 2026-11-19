@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/build-social-drafts.py', '.github/workflows/social-drafts.yml']
+    paths: ['scripts/build-social-drafts.py', 'scripts/release-announcements.py', 'tests/test_release_announcements.py', 'communications/**', 'CHANGELOG.md', 'site/src/policies.js', 'tools/tag_api.py', 'scripts/ai-tools-server.py', '.github/workflows/social-drafts.yml']
   pull_request:
-    paths: ['scripts/build-social-drafts.py', '.github/workflows/social-drafts.yml']
+    paths: ['scripts/build-social-drafts.py', 'scripts/release-announcements.py', 'tests/test_release_announcements.py', 'communications/**', 'CHANGELOG.md', 'site/src/policies.js', 'tools/tag_api.py', 'scripts/ai-tools-server.py', '.github/workflows/social-drafts.yml']
 permissions:
   contents: read
 jobs:
@@ -19,9 +19,19 @@ jobs:
       - name: Prepare drafts from live canonical pages
         run: |
           python3 scripts/build-social-drafts.py > "$RUNNER_TEMP/aitrust-social-drafts.json"
+      - name: Check release review controls and build an owner review queue
+        run: |
+          python3 -m unittest discover -s tests -p test_release_announcements.py -v
+          python3 scripts/release-announcements.py > "$RUNNER_TEMP/aitrust-release-queue.json"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: ai-trust-id-social-drafts
           path: ${{ runner.temp }}/aitrust-social-drafts.json
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ai-trust-id-release-review-queue
+          path: ${{ runner.temp }}/aitrust-release-queue.json
           if-no-files-found: error
           retention-days: 14

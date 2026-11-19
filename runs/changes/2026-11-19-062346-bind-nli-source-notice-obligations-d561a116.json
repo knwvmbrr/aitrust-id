@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-062346-bind-nli-source-notice-obligations-d561a116",
+  "recorded_at": "2026-11-19T06:23:46.805239+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4ae7a14d1738211969bbc9faca041c3afbf03b40",
+  "changed": "Bind the finite optional NLI model and two locked runtime cohorts to replayed notices, official source references and explicit native/source-offer obligations; retain a deterministic notice bundle and bounded raw ZIP-header refusal controls.",
+  "proves": "All44 cached wheel occurrences replay successfully, including88 notice occurrences;50 focused controls pass. Existing model/tokenizer/config/card bytes match pinned provider Git or LFS identities without inference or new weight downloads. Earlier malformed-header admissions and the strict local-ZIP64 candidate refusal remain recorded.",
+  "limits": "Publisher card metadata is real licensing evidence; related base-code terms do not establish the exact training-base revision.16 native package occurrences retain explicit applicability/source blockers. Distribution-ready remainsfalse. No qualified legal clearance, independent accuracy, global requirement closure, runtime/service change or deployment is claimed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".gitattributes": "81c3801a4784ab4b0051a0bc519e54eca26395fec5a5278a0611daea20357c5d",
+    "tools/nli_license_cohort.py": "07b076c4e96adf8910233eaaea9771dd74f5a676d3852b587b6abf83c23a5102",
+    "scripts/verify-nli-license-cohort.py": "5e248ee94edfb7fd68e6347b2344c9c2d7ca228b2190bbdd461ea616b6924fe7",
+    "tests/test_nli_license_cohort.py": "816717dd62627909c26d4a94be746bb327a1241b22fdea55f2cda93e8111adf2",
+    "docs/nli-license-cohort.md": "1e2b05a9233fd4f42386be03bc7d6849e7b6f90bd86cb347d4bfce4228783407",
+    "docs/nli-license-cohort-plan.md": "b11fce466df6c3f1c513b143a86e677f3e7164f71cc3b307bb54837ff512d3fa",
+    "sbom/reviews/nli/THIRD-PARTY-NOTICES.txt": "f6e1e4a41d00f0e8c6a2076b7c2413207c3d33b1c45c9697ac6e0614051c7a2c",
+    "sbom/reviews/nli/manifest.json": "c1c2cd50b49421ee8b12f45183698d1e6995a67b1a016b482c7d41aad9efada2",
+    "sbom/reviews/nli/notices/143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3.txt": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3",
+    "sbom/reviews/nli/notices/2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+    "sbom/reviews/nli/sources/base-README.md": "235a48b97b65c66b730c36444441ebfb8d5360c0e9100753b83825f90a622656",
+    "sbom/reviews/nli/sources/base-tree.json": "0bdc926f9d4724a2c5205cfb685aabd70733d2ee9889293251a79180c28dcc63",
+    "sbom/reviews/nli/sources/deberta-LICENSE.txt": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "sbom/reviews/nli/sources/flatbuffers-LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "sbom/reviews/nli/sources/model-tree.json": "c0286c0d0fbfae271bacf1c5f5fbe56a05aac466c761568750a119dc91dcbbc8",
+    "sbom/reviews/nli/sources/tokenizers-LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "sbom/reviews/nli/sources/tokenizers-python-Cargo.lock": "afcedf7f2ebe008b068d7afd25e77f7d9d8e433c24153bc35a1eb5611083ee5b",
+    "sbom/reviews/nli/sources/tokenizers-python-Cargo.toml": "b22e1ccb03566a1d4d30ffa415dee41be1f3bd7f4188f53c393e27154f45126d",
+    "runs/2026-11-19-nli-archive-profile-review.json": "2ab6fbba4fa4359327fa3fe61a91b7725484537f08dc1ddf2439d7cbd49a6113",
+    "runs/2026-11-19-nli-asset-source-identity.json": "75e752f5386759bda9079e0f2805f0b1c370d45eec861b6107a1aed6be2ce95c",
+    "runs/2026-11-19-nli-bounded-central-replay.json": "cd26c511c192f8d854ac3cacccb9fb469e9e85cc8bec239a1eb5899a8f4e3039",
+    "runs/2026-11-19-nli-cohort-engineering.json": "3a9c54d4fe54a6ff79ea09ce8b073e33ae0391fd582db59aedbec4ee722675a7",
+    "runs/2026-11-19-nli-final-header-replay.json": "3b9fca3fdf09829a395d865bfa619fe40b59a7c6dcda296c5efaf1b5dc4a2320",
+    "runs/2026-11-19-nli-header-candidate-refusal.json": "e8cd7d420bf7c064a37e0922605ca0dce22c2254265ff12f05460eba91d5486d",
+    "runs/2026-11-19-nli-license-cohort-replay.json": "a70472bc7b5d3f75f3a239b345795953a5668c845acf47a375ddc0156022d029"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-nli-cohort-engineering.json",
+      "sha256": "3a9c54d4fe54a6ff79ea09ce8b073e33ae0391fd582db59aedbec4ee722675a7"
+    },
+    {
+      "path": "runs/2026-11-19-nli-final-header-replay.json",
+      "sha256": "3b9fca3fdf09829a395d865bfa619fe40b59a7c6dcda296c5efaf1b5dc4a2320"
+    },
+    {
+      "path": "runs/2026-11-19-nli-archive-profile-review.json",
+      "sha256": "2ab6fbba4fa4359327fa3fe61a91b7725484537f08dc1ddf2439d7cbd49a6113"
+    },
+    {
+      "path": "runs/2026-11-19-nli-header-candidate-refusal.json",
+      "sha256": "e8cd7d420bf7c064a37e0922605ca0dce22c2254265ff12f05460eba91d5486d"
+    }
+  ],
+  "checks": []
+}

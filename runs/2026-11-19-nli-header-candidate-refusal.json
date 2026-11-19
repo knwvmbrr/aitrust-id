@@ -1,0 +1,15 @@
+{
+  "format": "nli-archive-profile-candidate-failure/v1",
+  "pass": false,
+  "reason": "Reviewed stricter header candidate refused an actual locked wheel before writing a new observation",
+  "artifact": {
+    "platform": "linux",
+    "name": "protobuf",
+    "version": "7.36.2",
+    "wheel": "protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+    "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2"
+  },
+  "source_sha256": "9506afcd6fe1907b1d6512c1de094c6fddde2ee11c7ad87acc1d303147f5cc25",
+  "package_execution": false,
+  "prior_observations_preserved": true
+}

@@ -6,12 +6,26 @@ The thing that makes a standard outlive its author is neutral governance. The th
 a standard is capture by a single vendor — **including capture by the founder**. This document
 is a commitment against that.
 
-## Structure (target)
+## Current operating structure direction
 
-* The **specification and taxonomy** (`spec/`) and the certification mark are to be assigned to
-  an independent foundation. Adopting the taxonomy must never mean depending on any one company.
-* **Implementations** — including commercial ones — compete freely on top of the spec.
-* Conformance testing and mark licensing fund the foundation, not any individual.
+Michael selected his existing revocable living trust as intended sole owner of a
+Michigan manager-managed operating LLC, with himself as initial manager. He
+reports that he is the current trustee. The trust instrument, actual formation,
+asset transfers and execution remain unverified. The current individual operator
+continues until a real, lawful operating transfer is completed. The company’s
+ownership does not change existing public licenses or tag validation requirements.
+
+## Future standards governance
+
+The historical two-entity proposal contemplated an independent foundation holding
+the specification, taxonomy and any certification mark, with implementations
+competing on top. That institutional ownership and funding structure is retained
+as a future proposal, not a selected assignment or an existing institution.
+Any asset transfer, certification-mark ownership and conflict rules require a
+separate qualified review and actual adoption. No certification program or
+charitable status is operating merely because a draft exists. Implementations,
+including commercial ones, may use the specification under its actual licenses;
+conformance must not require one vendor’s implementation.
 
 ## Decision making
 

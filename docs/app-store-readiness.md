@@ -3,7 +3,7 @@
 AI Trust ID has a separate App Store Connect record, saved in **Prepare for
 Submission**, and registered identifiers `com.aitrustid.app` and
 `com.aitrustid.app.share`. Its draft requires no app sign-in and uses manual
-release. No build has been uploaded or submitted to Apple.
+release. The App Store version has not been submitted for public review.
 
 The saved app-information draft uses **Check shared text offline**, category
 **Utilities**, and the existing public privacy-policy URL. Privacy declarations
@@ -37,7 +37,7 @@ profiles to the existing certificate. See the
 [Keychain diagnosis](../runs/2026-11-17-ios-signing-keychain-diagnosis.json).
 An [earlier package](../runs/2026-11-15-validated-ipa-inspection.json) passed
 [Apple validation on November 15](../runs/2026-11-15-apple-package-validation-passed.json).
-The November 17 candidate still needs signing, validation and upload. Keys, profiles and build
+The November 17 signing result was provisional. Keys, profiles and build
 artifacts stay private.
 
 ### Subsequent signing and simulator check
@@ -57,9 +57,45 @@ while waiting for a second PS result.
 The current suite runs notice navigation separately. All six named workflows
 and simulator removal passed together on local iOS 26.2.
 [Local proof](../runs/2026-11-17-split-native-share-workflow.json) ·
-[Hosted iOS 27.2 run](https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825)
+[Hosted iOS 27.2 proof](../runs/2026-11-17-hosted-split-ios27-pass.json)
 
-Distribution signing, TestFlight upload and physical acceptance remain open.
+## November 18 distribution
+
+The current app and Share extension were signed with the existing profiles.
+The exported build **1.0 (1)** preserves all 36 expected runtime and notice
+resources and passed all Apple Organizer validation checks. See the
+[signed build and validation receipt](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json).
+Xcode confirmed that [the internal TestFlight upload completed](../runs/2026-11-18-ios-testflight-internal-upload.json).
+The owner approved the exact export-compliance response. After it was saved,
+Apple showed **Ready to Test**. Build **1.0 (1)** was then assigned to
+**iPhone Owner Test**. App Store Connect shows **1 tester, 1 build**, and
+**Testing**. The group contains only the account holder and automatic
+build distribution remains off. See the [assignment observation](../runs/2026-11-18-testflight-owner-build-testing.json).
+
+This verifies internal beta assignment. Actual installation on the iPhone,
+Share reliability and human VoiceOver acceptance are not yet recorded. This
+is not public App Store review approval or an independent accuracy result.
+The [signed-package audit](../runs/2026-11-18-ios-testflight-compliance-inputs.json)
+records the technical inputs considered before the owner approved the answer.
+
+### First iPhone 14 Plus check
+
+1. Confirm the iPhone uses the Apple account invited to **iPhone Owner Test**.
+   The build is already assigned. If TestFlight needs an invitation accepted,
+   use the Apple invitation for that account. No new signing certificate or
+   Developer Mode change is needed to install an internal TestFlight build.
+2. Open **TestFlight** on the iPhone and install **1.0 (1)**. Then open AI Trust
+   ID and try **Practice sharing**. In the share sheet, select **AI Trust ID**.
+   Confirm the text appears for review and the app waits for **Check with PS**.
+3. Turn on **VoiceOver** under **Settings → Accessibility → VoiceOver**. Confirm
+   it can reach **Check with PS**, announces the result, reaches **Why PS?** and
+   can dismiss the sheet. Check from a second source app using invented text,
+   and confirm editing or clearing removes the old result.
+4. After installation, repeat the synthetic check with Wi-Fi and cellular
+   disabled. Record the iOS and app versions and which steps passed; do not
+   include private shared text in feedback.
+
+This is a physical acceptance checklist; it is not a test result.
 
 The [listing draft record](../runs/2026-11-17-ios-listing-drafts.json) covers four
 actual screenshots of the initial checker in Light and Dark mode. The simulator

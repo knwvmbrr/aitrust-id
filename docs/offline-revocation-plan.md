@@ -48,3 +48,48 @@ contract or independently validated claim is changed. Full named requirements
 remain open until their remaining actual acceptance is evidenced.
 
 Author: Codex. Planned 2026-10-11 UTC before implementation.
+
+## Two-history comparison — November 18, 2026
+
+F-125 needs a way to detect contradictions when a verifier receives two
+histories. Add an optional `compare` operation to the existing offline CLI.
+Verify both entire chains against the same separately chosen authority key
+before comparison. Report exact equality, a strict prefix in either direction,
+or the first divergent signed checkpoint. Distinguish a changed payload from
+a different signature over the same payload: P-256 can produce distinct
+signatures for the same statement. Show only signed-checkpoint fingerprints
+and sequence counts, and keep validation separate from a decision to trust
+either branch.
+
+The operation reads two selected files and a public key. It has no signing,
+writing, network, service or tag dependency. A matched prefix is compatible
+with ordinary catch-up and does not prove freshness, honesty or completeness.
+An invalid suffix, unrelated signer, or missing input must refuse comparison.
+A valid conflict is a different outcome from malformed evidence and cannot
+authorize a key or claim a live witness. Verify the real CLI inputs and exit
+states and test Ed25519 forks, P-256 re-signing and incomplete histories.
+Public distribution, rotation, independent witnesses and outside-user
+acceptance remain F-125 work.
+
+## Signed witness observations — November 18, 2026
+
+Keep the authority log and its single-log check unchanged. Add a separate
+offline receipt type that binds the authority fingerprint, checkpoint sequence
+and exact signed checkpoint fingerprint. A witness verifies the entire
+selected log before signing. For later observations it supplies its own
+previously saved receipt under the same key; the new log must include that exact
+checkpoint and strictly extend it. A first observation must be explicit.
+
+The verifier supplies a separate policy with the trusted witness public keys
+and a minimum count of at least two. Validate all supplied receipts under the
+selected keys. Refuse an invalid, unknown, duplicate or authority signature,
+wrong checkpoint, bad chain or unreviewed field. A short set returns insufficient
+witnesses, not a verdict. Return only counts and the checkpoint reference. Use
+the existing bounded canonical signature and safe file helpers. Do not contact
+any service, issue tags or create production signing keys.
+
+Several keys may have one operator or collude. The offline result does not
+prove independent operators, timeliness, key status, publication, completeness
+or that every witness saved its own prior receipt. Real public distribution,
+separate witness operation, rotation and outside-user workflows are still
+required. Verify synthetic multi-key and advance/refusal cases and real CLI I/O.

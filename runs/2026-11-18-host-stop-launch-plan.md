@@ -1,0 +1,9 @@
+# Foreground worker launch signal handoff
+
+The failed Linux Ctrl-Z control printed `HOST CAPTURED` then `^Z`, without the existing interruption message. Capture is announced before `Worker` construction. CPython 3.12.16's Linux vfork path restores the child's signal mask/default handlers before `setsid`, while the parent is suspended until exec/exit. A foreground stop in this window can stop the child before it detaches. The failed CI has no process-state snapshot, so this mechanism is source-supported, not a recovered proof of that particular process state.
+
+Plan: block only SIGTSTP/SIGTTIN/SIGTTOU on the capture thread around construction and assignment of its owned worker, then restore the exact prior mask. A queued parent signal will run the existing interruption/foreground-loss handler after ownership is established. The pipe-only worker in a private session retains those blocked terminal-stop signals; SIGKILL cancellation and its parent-death watcher remain unchanged. No subprocess private flags, pre-exec callbacks, deadline increases, source-gate changes or automatic restarts.
+
+Risk: restoring the mask can immediately raise; the caller assignment must precede restoration and remain inside run's existing cleanup. Validate actual pending signals at a forced constructor boundary with a real child, exact mask restoration, child reap and absence of results or resumed capture. Keep original real Ctrl-Z, background-resume and parent-death controls. Run source-bound focused/current host controls separately on macOS and nonroot network-isolated Linux; historical evidence remains historical and no accuracy/human acceptance is claimed.
+
+Primary source: https://github.com/python/cpython/blob/v3.12.16/Modules/_posixsubprocess.c#L625-L639 (child mask restoration precedes setsid); vfork parent masking/launch is at lines 1063–1109.

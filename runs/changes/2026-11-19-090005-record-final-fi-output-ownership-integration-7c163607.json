@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-090005-record-final-fi-output-ownership-integration-7c163607",
+  "recorded_at": "2026-11-19T09:00:05.370135+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7049abd34084211e0e60d87e514141e06d9289bc",
+  "changed": "Record final current-source acceptance after correcting FI publication uncertainty and raw descriptor ownership, preserving every prior candidate and reproduced gap.",
+  "proves": "All five source-bound groups match: 7 PS, 6 privacy, 52 protocol, 14 extension and 43 website command groups. The component passes110focused and23actualMacCLI controls; root passes176component/input controls and separate peer replay clears the reproduced I/O boundaries. Reviewed1280source routes/permissions are unchanged.",
+  "limits": "Protected CI and publication remain pending. Caller associations do not verify source support, truth or FI; no independent accuracy, human acceptance or original requirement closure. All202IDs and132complete/70open remain.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "docs/scope-progress.json": "756987257d0813364a726d713d432f368cb5f336a66f4e04c67b3771efb3b0e1",
+    "docs/scope-progress.md": "f39c6be824fdcfd31451b3134c37812047e81e21a97f1bfc8ff7f2ecac1ca414",
+    "eval/route-boundaries.json": "0353ce9af39567263355ba1e62b21efd592f6c2891c32b0b2201e57f35c981cf",
+    "runs/2026-11-19-fi-citation-final-boundaries.json": "dd1c63b6e2342ab8385657cf253b1eeeb7e2970fa01ccbeeb71a919bd95f03c1",
+    "runs/2026-11-19-fi-citation-final-integration.json": "817b003804a7b0e2db4de4b58c0856dc6f229fab2309e71f8504f093a1af4f72",
+    "runs/2026-11-19-fi-citation-final-protocol.json": "9a224627dd9d99ee976fcad17f8df24702d6d1c7e4b97fba3a519a6d89c5f980",
+    "runs/2026-11-19-fi-citation-final-website.json": "a159dbae25c3dc84e1ae8a31aed6010f1296e0f47d5ea7910c95f2e5d4fab751",
+    "runs/2026-11-19-fi-final-ownership-review.json": "b97072aac8e1c6e7132405944f5fdd4990a011914d0929992ba2ffda5e132a12",
+    "site/public/reference/fi-citation-sidecar-plan.md": "f6ac41bd7162f54ee02cde3eed376896b21eb219b65cdccc6011332158ca7576",
+    "site/public/reference/fi-citation-sidecar.md": "32277234966f62e7bf940f2ac799b41cf1d257bc57d45eb5c1b80a27c116519b",
+    "site/public/reference/public-scope.json": "43e20370939dd46a24086fbb02a5b8c9850922836bc0d4b6320a17467381a480",
+    "site/src/public-scope.json": "43e20370939dd46a24086fbb02a5b8c9850922836bc0d4b6320a17467381a480",
+    "site/src/scope-manifest.json": "d3cefdbff439f8090987c6ff91b811450313ef7aa8076028f48ca18aa4c752eb",
+    "state.json": "ba8b9a2b16966fec22bc2405eaf43150ad5fb0516f35759f2585eb63ea8a20bc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-citation-final-integration.json",
+      "sha256": "817b003804a7b0e2db4de4b58c0856dc6f229fab2309e71f8504f093a1af4f72"
+    },
+    {
+      "path": "runs/2026-11-19-fi-citation-final-boundaries.json",
+      "sha256": "dd1c63b6e2342ab8385657cf253b1eeeb7e2970fa01ccbeeb71a919bd95f03c1"
+    },
+    {
+      "path": "runs/2026-11-19-fi-final-ownership-review.json",
+      "sha256": "b97072aac8e1c6e7132405944f5fdd4990a011914d0929992ba2ffda5e132a12"
+    }
+  ],
+  "checks": []
+}

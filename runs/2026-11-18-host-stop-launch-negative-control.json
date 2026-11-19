@@ -1,0 +1,12 @@
+{
+  "format": "ai-trust-id-host-launch-negative-control/v1",
+  "pass": true,
+  "control": "remove launch mask only from private source clone; run actual three-signal child-constructor regression",
+  "returncode": 1,
+  "expected_missing_constructor_completion_count": 3,
+  "raw_output_sha256": "2c51e90a1e1af8cc20446a4ddfdb3ac9bd0d94bb634bcc908fa9d261bfb39cf4",
+  "actual_vfork_deadlock_reproduced": false,
+  "synthetic_inputs_only": true,
+  "source_repository_mutated": false,
+  "original_ci_root_process_state_recovered": false
+}

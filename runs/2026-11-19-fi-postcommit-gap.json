@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-11-19T08:40:11.265878+00:00",
+  "kind": "reproduced_gap",
+  "source_sha256": "6d7bf66d62ce68fc6c76a04c31258ed5a2c2b7fe517b7c65354b9187f36d0378",
+  "pass": false,
+  "synthetic_only": true,
+  "injected_failure": "temporary_cleanup_after_atomic_link_and_sync",
+  "exception_observed": "OSError",
+  "new_complete_output_exists_despite_exception": true,
+  "output_mode_0600": true,
+  "root_diagnosis": "After successful atomic publication and sync, temporary cleanup failure raises ordinary OSError while the complete final output remains. Explicit publication uncertainty is required for late failures. Ordinary fsync failure with successful rollback is not this gap.",
+  "accepted_for_release": false,
+  "independent_accuracy_evidence": false
+}

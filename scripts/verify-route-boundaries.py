@@ -50,6 +50,8 @@ PATTERNS += ('scripts/group-receipt.cjs', 'tests/group-receipts.cjs',
              'tests/test_group_receipts.py', 'tests/fixtures/group-receipt-2026/*')
 PATTERNS += ('scripts/revocation.cjs', 'tests/offline-revocation.cjs',
              'tests/test_offline_revocation.py', 'tests/fixtures/offline-revocation-2026/*')
+PATTERNS += ('scripts/revocation-witnesses.cjs', 'tests/offline-revocation-witnesses.cjs',
+             'tests/test_offline_revocation_witnesses.py')
 PATTERNS += ('scripts/key-backup.cjs', 'scripts/atomic-output.cjs', 'tests/key-backup.cjs', 'tests/test_key_backup.py')
 PATTERNS += ('scripts/gateway-key.cjs','scripts/verify-signed-gateway.cjs','tests/test_transport_signing.py','deploy/docker-compose.signing.yml')
 PATTERNS += ('spec/image-provenance-boundary.json', 'scripts/verify-image-provenance-boundary.py',
@@ -137,6 +139,11 @@ PATTERNS += ('scripts/setup-local.py','scripts/verify-local-setup-evidence.py',
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
+PATTERNS += ('tools/citation_resolution.py','scripts/citation-resolution.py',
+             'tests/test_citation_resolution.py','docs/fi-citation-sidecar.md',
+             'docs/fi-citation-sidecar-plan.md','scripts/verify-seo.cjs',
+             'scripts/verify-seo.mjs','tests/seo-metadata.mjs')
+
 HOST_RENDERED_ASSET = 'site/public/share-card.png'
 
 PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-probe-cases.py',
@@ -189,6 +196,32 @@ PATTERNS += ('runs/2026-11-09-pan-pipeline-timing-linux.json',
              'runs/2026-11-09-pan-service-linux.json', 'runs/2026-11-09-pan-replay-linux.json',
              'tests/test_redaction_worker_observations.py', 'tests/test_replay_verifier_engine.py',
              'docs/pii-separator-correction-plan.md', 'docs/app-store-readiness.md')
+
+PATTERNS += ('eval/dependency-policy.json', 'tools/dependency_policy.py', 'scripts/check-dependency-policy.py', 'scripts/verify-dependency-policy.py', 'tests/test_dependency_policy.py', 'tools/ps_source_distribution.py', 'scripts/export-ps-source.py', 'tests/test_ps_source_distribution.py', 'docs/ps-source-distribution.md', 'docs/dependency-conflict-plan.md', 'tools/esbuild_cohort.py', 'scripts/verify-esbuild-cohort.py', 'tests/test_esbuild_cohort.py', 'sbom/reviews/esbuild-source.json', 'sbom/reviews/sources/*', 'site/public/downloads/aitrust-id-ps-source.zip', 'site/public/downloads/aitrust-id-ps-source.zip.sha256')
+
+PATTERNS += ('NOTICE',)
+
+PATTERNS += ('tools/rolldown_cohort.py', 'scripts/verify-rolldown-cohort.py', 'tests/test_rolldown_cohort.py', 'docs/rolldown-source-review.md', 'sbom/reviews/rolldown-source.json', 'tools/c2pa_cohort.py', 'scripts/verify-c2pa-cohort.py', 'tests/test_c2pa_cohort.py', 'docs/c2pa-cohort-plan.md', 'docs/c2pa-cohort-result.md', 'sbom/c2pa/**/*', 'tools/nli_license_cohort.py', 'scripts/verify-nli-license-cohort.py', 'tests/test_nli_license_cohort.py', 'docs/nli-license-cohort.md', 'sbom/reviews/nli/**/*', 'docs/changelog-merge-parent-plan.md', 'docs/agent-handoffs.md')
+
+PATTERNS += ('tools/mt_device.py', 'scripts/build-mt-device.py', 'tests/test_mt_device.py', 'scripts/build-mt-device-fixture.mjs', 'scripts/verify-mt-device.cjs', 'tests/mt-device-client.mjs', 'site/src/MTExplorer.jsx', 'site/src/MTExplorerSlot.jsx', 'site/src/mt-device-client.js', 'site/src/mt-device-result.js', 'site/src/mt-device-worker.js', 'site/src/mt-device-manifest.json', 'site/public/mt-device/*', 'site/public/reference/mt-device-explorer.md', 'docs/mt-device-explorer-plan.md', 'docs/mt-device-explorer.md', 'docs/mt-device-explorer-result.md', 'docs/mt-device-integrity-correction.md', 'scripts/mt-site-controls.cjs')
+
+PATTERNS += ('scripts/verify-mt-client.cjs',)
+
+# Review the independent HP/NF surfaces and delivery accounting as project code;
+# this binding does not promote a tag or approve independent accuracy.
+PATTERNS += ('AGENTS.md', 'tools/session_delivery.py', 'scripts/session-delivery.py',
+             'tests/test_session_delivery.py', 'docs/session-accountability-plan.md',
+             'tools/hp_device.py', 'scripts/build-hp-device.py',
+             'scripts/build-hp-device-fixture.mjs', 'scripts/verify-hp-device.cjs',
+             'scripts/hp-device-cases.py', 'scripts/hp-site-controls.cjs', 'scripts/verify-hp-client.cjs',
+             'scripts/site-fixture-server.cjs', 'tests/site-fixture-server.cjs',
+             'tests/test_hp_device.py', 'tests/hp-device-client.mjs',
+             'site/public/hp-device/*', 'site/public/reference/hp-device-explorer.md',
+             'docs/hp-device-explorer.md', 'docs/hp-device-explorer-plan.md',
+             'tools/nf_source_evidence.py', 'tools/nf_private_io.py',
+             'scripts/check-nf-source-evidence.py', 'scripts/nf-source-worker.py',
+             'tests/test_nf_source_evidence.py', 'docs/nf-source-evidence.md',
+             'docs/nf-source-evidence-plan.md', 'site/public/reference/nf-source-evidence.md')
 
 def read_json(file):
     return read_evidence(file)
@@ -257,6 +290,12 @@ PATTERNS += ('tools/fleet.py','scripts/fleet.py','scripts/verify-fleet.py','scri
 PATTERNS += ('tools/hash_reports.py', 'scripts/hash-reports.py', 'scripts/verify-hash-reports.py', 'scripts/verify-hash-reports-linux.py', 'scripts/verify-hash-reports-evidence.py', 'tests/test_hash_reports.py', 'tests/test_hash_reports_evidence.py', 'docs/hash-report-intake-plan.md', 'docs/hash-report-intake.md', '.github/workflows/hash-reports.yml', 'runs/2026-11-09-hash-inbox-macos.json', 'runs/2026-11-09-hash-inbox-linux.json', 'runs/2026-11-09-fleet-root-guard-macos.json', 'runs/2026-11-09-fleet-root-guard-linux.json')
 
 PATTERNS += ('runs/2026-11-09-hash-inbox-current-macos.json','runs/2026-11-09-hash-inbox-current-linux.json')
+
+PATTERNS += ('tools/tag_api.py', 'scripts/tag-api.py', 'scripts/ai-tools-server.py', 'scripts/verify-ai-tools.py', 'integrations/**/*', 'tests/test_ai_*.py', 'scripts/release-announcements.py', 'tests/test_release_announcements.py', 'communications/**/*')
+
+PATTERNS += ('tools/authority_quotation.py','scripts/authority-quotation.py','scripts/verify-authority-quotation.py','tests/test_authority_quotation.py')
+
+PATTERNS += ('tests/test_reference_claim_coverage.py',)
 
 def inventory(root):
     found = {}
@@ -544,6 +583,7 @@ PATTERNS += ('tools/community_*.py','scripts/*community*.py','tests/test_communi
 PATTERNS += ('tools/nested_runtime_inventory.py','scripts/verify-nested-runtime.py',
              'tests/test_nested_runtime_inventory.py','sbom/nested-runtime/*',
              'docs/nested-runtime-*.md')
+PATTERNS += ('scripts/verify-pyodide-release-origin.py', 'tests/test_pyodide_release_origin.py')
 
 PATTERNS += ('tests/offline-worker-cache.cjs',)
 

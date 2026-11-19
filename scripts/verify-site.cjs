@@ -1,4 +1,6 @@
 const {writeReport}=require('./execution-report.cjs');
+const {verifyMTSite}=require('./mt-site-controls.cjs');
+const {verifyHPSite}=require('./hp-site-controls.cjs');
 const fs=require('node:fs');
 const {chromium}=require('playwright');
 const base=process.env.AITRUST_SITE_URL||'http://127.0.0.1:5174';
@@ -34,13 +36,17 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    const ids=await page.locator('[data-tag-id]').evaluateAll(nodes=>nodes.map(n=>n.dataset.tagId));
    assert(ids.length===(audience==='person'?14:6),'Audience filtering failed');
    for(const id of ids){
-    const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();
+    const tile=page.locator(`[data-tag-id="${id}"]`);await tile.click();const dialog=page.getByRole('dialog');await dialog.waitFor();if(id==='MT')await dialog.locator('[data-mt-explorer]').waitFor();if(id==='HP')await dialog.locator('[data-hp-explorer]').waitFor();
     assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
     assert(await dialog.locator('[data-tag-example]').innerText(),id+' missing everyday example');
-    const working=['PS','PII_REDACTED'].includes(id);const validation=dialog.getByRole('region',{name:'Validation status'});assert(await validation.count()===(working?1:0),'Wrong validation card visibility');if(working)assert((await validation.innerText()).includes('Validation in progress'),'Working preview stage missing');assert((await dialog.locator('[data-tag-availability]').innerText()).includes(working?(id==='PS'?'preview':'Local setup'):(audience==='person'?'No checker':'No team service')),'Availability hidden');
+    const working=['PS','PII_REDACTED'].includes(id);const validation=dialog.getByRole('region',{name:'Validation status'});assert(await validation.count()===(working?1:0),'Wrong validation card visibility');if(working)assert((await validation.innerText()).includes('Validation in progress'),'Working preview stage missing');assert((await dialog.locator('[data-tag-availability]').innerText()).includes(working?(id==='PS'?'preview':'Local setup'):(id==='MT'?'Wording-method preview available':id==='HP'?'Literal-detail preview available':audience==='person'?'No checker':'No team service')),'Availability hidden');
     assert(await dialog.locator('details:not([data-service-timing]):not([data-redaction-recognition])').count()===(id==='PS'?6:id==='PII_REDACTED'?4:3),id+' must have its compact disclosures and applicable setup');
     assert(await dialog.locator('[data-redaction-recognition]').count()===(id==='PII_REDACTED'?1:0),id+' must retain its independent redaction breakdown only when applicable');
     const use=dialog.locator('[data-tag-usage]');assert(await use.count()===1,id+' use instructions missing');
+    if(id==='HP'){
+      assert(await use.getByRole('link',{name:'Literal-detail preview guide',exact:true}).getAttribute('href')==='/reference/hp-device-explorer.md','HP preview guide missing');
+      assert((await dialog.locator('[data-tag-limit]').innerText()).includes('full HP tag is still planned'),'HP method preview promoted the full tag');
+    }
     if(id==='MT'){
       const guide=use.getByRole('link',{name:'Read the offline framing guide'});
       assert(await guide.getAttribute('href')==='/reference/mt-evidence-workflow.md','MT framing guide link missing');
@@ -79,7 +85,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
      assert((await dialog.getByRole('region',{name:'Tag performance',exact:true}).innerText()).includes('Self-hosted workflow checked; hosted-service performance not measured.'),'Audit software confused with an operating hosted service');
      await guide.scrollIntoViewIfNeeded();await page.screenshot({path:'output/playwright/audit-guide-entry.png'});
     }
-    if(id==='PS'){await use.getByText('PS in Terminal',{exact:true}).click();await use.getByRole('button',{name:'Copy PS command',exact:true}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='python3 scripts/check-ps.py response.txt','Standalone PS copied a dependent service command');assert((await use.textContent()).includes('No redaction is performed.'),'Standalone route lost its privacy boundary');await use.getByText('PS in Terminal',{exact:true}).click();}
+    if(id==='PS'){await use.getByText('PS in Terminal',{exact:true}).click();await use.getByRole('button',{name:'Copy PS command',exact:true}).click();assert(await page.evaluate(()=>navigator.clipboard.readText())==='python3 -I -S -B scripts/check-ps.py response.txt','Standalone PS copied a dependent service command');assert((await use.textContent()).includes('No redaction is performed.'),'Standalone route lost its privacy boundary');await use.getByText('PS in Terminal',{exact:true}).click();}
     assert(await dialog.locator('details[open]').count()===0,id+' details must start collapsed');
     for(const title of ['How it works','Testing and evidence','Privacy and full details']){
      const summary=dialog.locator('summary').filter({hasText:title});await summary.focus();await page.keyboard.press('Enter');
@@ -97,7 +103,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     }
 
     if(id==='PS'){
-     const downloads=await dialog.locator('[data-tag-usage] a').filter({hasText:'Download source'}).evaluateAll(nodes=>nodes.map(e=>e.getAttribute('href')));assert(downloads.length===2&&downloads.every(href=>href==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip'),'Both independent PS setup paths need the correct source download');
+     const fullSource=dialog.locator('[data-tag-usage]').getByRole('link',{name:'Download source',exact:true,includeHidden:true}),psSource=dialog.locator('[data-tag-usage]').getByRole('link',{name:'Download PS source',exact:true,includeHidden:true});assert(await fullSource.count()===1&&await fullSource.getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip','Local service needs the full source path');assert(await psSource.count()===1&&await psSource.getAttribute('href')==='/downloads/aitrust-id-ps-source.zip'&&await psSource.getAttribute('download')!==null,'Standalone PS needs its own actual download');
      assert(await dialog.locator('[data-tag-usage] a').filter({hasText:'Try locally'}).getAttribute('href')==='https://github.com/knwvmbrr/aitrust-id/blob/main/docs/open-validation-path.md','Local installation guide missing');
      await axe();
      await dialog.getByRole('button',{name:'Report an issue',exact:true}).click();const report=page.getByRole('dialog',{name:'Report',exact:true});await report.waitFor();
@@ -208,7 +214,9 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    const missing=await ordinary.request.get(base+'/tags/not-a-real-tag/');assert(missing.status()===404,'Unknown tag is a soft 404');
    productionPolicyVerified=true;await ordinary.close();
   }
-  const report={date:process.env.AITRUST_CLIENT_DATE||new Intl.DateTimeFormat('en-CA',{timeZone:'America/Indianapolis'}).format(new Date()),captured_at:new Date().toISOString(),url:base,builtSite:true,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,plainLanguageTagSummaries:20,visibleValidationStatus:20,compactDisclosures:true,perTagUseInstructions:20,workingTagSetupGuides:2,selfHostedFont:true,completeDetailExport:true,themeSwitch:true,switchKeyboardSpace:true,crossTabThemeSync:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:canonicalURLs.length,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
+  const mtPreview=await verifyMTSite(browser,base);
+  const hpPreview=await verifyHPSite(browser,base);
+  const report={date:process.env.AITRUST_CLIENT_DATE||new Intl.DateTimeFormat('en-CA',{timeZone:'America/Indianapolis'}).format(new Date()),captured_at:new Date().toISOString(),url:base,builtSite:true,mtPreview,hpPreview,tagModalsChecked:checked,personRecords:14,enterpriseOfferings:6,preservedScopeRecords:scopeIds.length,deepLinks:true,malformedFragmentSafe:true,keyboardFocusTrap:true,escapeRestoresFocus:true,nestedReportFocus:true,draftExport:true,noFalseSubmission:true,noScriptReference:true,mobile320:true,textEnlargement200:true,axeViolations:0,unexpectedOutboundRequests:0,footerModalsChecked:8,nativeModelContextAvailable:nativeModelContext,nativeModelToolsValidated:false,manualScreenReader:false,remoteIntake:false,published:base.startsWith('https://'),axeInjectionOnlyCSPBypass:true,productionPolicyVerified,compactTagTiles:true,plainLanguageTagSummaries:20,visibleValidationStatus:20,compactDisclosures:true,perTagUseInstructions:20,workingTagSetupGuides:2,selfHostedFont:true,completeDetailExport:true,themeSwitch:true,switchKeyboardSpace:true,crossTabThemeSync:true,lightDarkSystem:true,themePersistence:true,blockedStorageSafe:true,forcedColors:true,crawlableTagReferences:20,canonicalSitemapURLs:canonicalURLs.length,uniqueTitlesAndDescriptions:true,structuredDataJSONParsed:true,structuredDataTypesReviewed:true,googleRichResultsTestVerified:false,socialPreviewPNG:true,googleIndexingVerified:false,searchConsoleVerified:false};
   writeReport(process.env.AITRUST_SITE_REPORT||'output/verification/site-verification.json',report);console.log(JSON.stringify(report));await context.close();
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

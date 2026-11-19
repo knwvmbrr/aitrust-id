@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-040035-integrate-current-trust-governance-and-runtime-evidence-bec09deb",
+  "recorded_at": "2026-11-19T04:00:35.828325+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "changed": "Bind the current trust-governance integration and refreshed runtime inventories to executed protocol, website and route-boundary checks.",
+  "proves": "All 41 protocol and 32 website check groups passed against unchanged source; current bounded personal-route review passed.",
+  "limits": "Engineering evidence only. Original scope remains 132 complete and 70 open; no formation filing, independent tag release validation, physical iPhone acceptance or live publication is asserted.",
+  "scope_ids": [
+    "F-057",
+    "F-075",
+    "F-143",
+    "F-150",
+    "WP-GOVERNANCE",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "state.json": "b60785985dc6b4ca2b33ae54ec9c2ce6fc215b11442e7274d407ff6cbf4c5482",
+    "eval/route-boundaries.json": "389d1d114cd81d10fc84f0a1c5e7c61bedf459df67f62df1736b90d01a749ce2",
+    "runs/2026-11-19-agent-tools-ready-protocol.json": "b732d8a336033c1cf2cd558e22a1e95ae6574d6ab2940e9a1fe04750d7b21b91",
+    "runs/2026-11-19-agent-tools-ready-website.json": "6df606e07aa6aefa1a200284471a0ad557e69b2dc83437f62db1b8b044342534",
+    "runs/2026-11-19-agent-tools-ready-boundaries.json": "02a73e1604132687c0b18c9f1b7e7c3f08d1ed138d19bc300719c2cd6d56d1d0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-agent-tools-ready-protocol.json",
+      "sha256": "b732d8a336033c1cf2cd558e22a1e95ae6574d6ab2940e9a1fe04750d7b21b91"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-ready-website.json",
+      "sha256": "6df606e07aa6aefa1a200284471a0ad557e69b2dc83437f62db1b8b044342534"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-ready-boundaries.json",
+      "sha256": "02a73e1604132687c0b18c9f1b7e7c3f08d1ed138d19bc300719c2cd6d56d1d0"
+    }
+  ],
+  "checks": []
+}

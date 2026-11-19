@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-18-151425-bind-revalidated-witness-identity-3d9ed90e",
+  "recorded_at": "2026-11-18T15:14:25.064747+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a7319f542c465d3f1ff42a6b26afc4cb5f0bd1f5",
+  "changed": "Bind the reviewed witness identity fix to current website, protocol and route checks.",
+  "proves": "All 32 website checks, all 40 protocol checks, the route boundary check and the current evidence packet passed.",
+  "limits": "No independent witnesses, public log, mobile install or additional scope completion is claimed.",
+  "scope_ids": [
+    "F-125"
+  ],
+  "files": {
+    "state.json": "f330a4c829c53bd7cf2b28ad60d1f51171979af82e30d68a6e47d06c40e0d0d9",
+    "eval/route-boundaries.json": "089860bb5c98453bcbb132c28f095a6d2c079a6e2fb5a97ac87914efeb93da95",
+    "runs/2026-11-18-witness-identity-website.json": "daae6573c20c15a09315b32005f4441dc45d0e0ec41e0a8671d7a3885356c23b",
+    "runs/2026-11-18-witness-identity-protocol.json": "eb2abc34699c2f70e559da5f9226a14ff5f5d9c9b56e3e138108bd63221fcb61",
+    "runs/2026-11-18-witness-identity-boundaries.json": "872ffe22052f8e0782cd752c8e4260f60ecf73e550d7594fe7950d005f962e64"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-witness-identity-website.json",
+      "sha256": "daae6573c20c15a09315b32005f4441dc45d0e0ec41e0a8671d7a3885356c23b"
+    },
+    {
+      "path": "runs/2026-11-18-witness-identity-protocol.json",
+      "sha256": "eb2abc34699c2f70e559da5f9226a14ff5f5d9c9b56e3e138108bd63221fcb61"
+    },
+    {
+      "path": "runs/2026-11-18-witness-identity-boundaries.json",
+      "sha256": "872ffe22052f8e0782cd752c8e4260f60ecf73e550d7594fe7950d005f962e64"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-18T15:14:25.587471+00:00"
+    }
+  ]
+}

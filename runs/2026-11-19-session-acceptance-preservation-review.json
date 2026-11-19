@@ -1,0 +1,109 @@
+{
+  "profile": "session-acceptance-preservation-independent-review/v1",
+  "captured_at": "2026-11-19T15:47:49.587063+00:00",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "source_commit_context": "859a994a65b9cbc33d0d95f1b835ab49d430ca89",
+  "working_tree_sources": true,
+  "source_sha256": {
+    "tools/session_delivery.py": "7d612f8eb684922b4e211b580cffd2bdc8eabbb513ce311ef73d4a8add45977f",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "tests/test_session_delivery.py": "6101d3b54b5e2f00be54e448fb7081cde6504117d411121ee3c76a8d3f5e0ea9",
+    "docs/session-accountability-plan.md": "0976bbe7476138c9c4ef2468b4ca5346de0670cc7cb6f11b31575179acacc492",
+    "docs/session-delivery.json": "f8f9cd6602b377aa052e7af226d758fa938c770f6108ca1cfa79b924225bd53d"
+  },
+  "source_unchanged_during_review": true,
+  "checks": [
+    {
+      "name": "already_completed_original_master_acceptance_drift",
+      "id": "F-001",
+      "pass": true,
+      "result": "refused"
+    },
+    {
+      "name": "still_open_original_required_acceptance_drift",
+      "id": "F-156",
+      "pass": true,
+      "result": "refused"
+    }
+  ],
+  "actual_cli_checks": [
+    {
+      "command": "python3 -I -S -B scripts/session-delivery.py",
+      "exit_code": 0,
+      "result": {
+        "active_tag_assignments_at_snapshot": 2,
+        "activity_is_live_heartbeat": false,
+        "baseline_commit": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+        "baseline_original_complete": 132,
+        "board_sha256": "9435dfbd0c8a7a8876ba6c41921ec1716b4237b5a64a95bd59dfc7b55359fc21",
+        "captured_at": "2026-11-19T15:47:49.236652+00:00",
+        "closures_to_target": 10,
+        "finished_scoped_tasks": [
+          "session-original-acceptance-audit",
+          "session-nf-independent-crossreview",
+          "session-hp-independent-crossreview",
+          "session-delivery-accounting"
+        ],
+        "independent_accuracy_evidence": false,
+        "kind": "session_delivery_accounting",
+        "new_original_closures": [],
+        "original_complete": 132,
+        "original_open": 70,
+        "original_requirement_goal_met": false,
+        "pass": true,
+        "reopened_originals": [],
+        "scope": "Identity, evidence hashes and delivery accounting only; full acceptance remains a review judgment.",
+        "scope_approval_granted": false,
+        "scoped_delivery_goal_met": true,
+        "session_id": "2026-11-19-original-closure-70-to-60",
+        "session_success": false,
+        "tag_bots": 14,
+        "target_open": 60
+      }
+    },
+    {
+      "command": "python3 -I -S -B scripts/session-delivery.py --check-session",
+      "exit_code": 1,
+      "result": {
+        "active_tag_assignments_at_snapshot": 2,
+        "activity_is_live_heartbeat": false,
+        "baseline_commit": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+        "baseline_original_complete": 132,
+        "board_sha256": "9435dfbd0c8a7a8876ba6c41921ec1716b4237b5a64a95bd59dfc7b55359fc21",
+        "captured_at": "2026-11-19T15:47:49.580156+00:00",
+        "closures_to_target": 10,
+        "finished_scoped_tasks": [
+          "session-original-acceptance-audit",
+          "session-nf-independent-crossreview",
+          "session-hp-independent-crossreview",
+          "session-delivery-accounting"
+        ],
+        "independent_accuracy_evidence": false,
+        "kind": "session_delivery_accounting",
+        "new_original_closures": [],
+        "original_complete": 132,
+        "original_open": 70,
+        "original_requirement_goal_met": false,
+        "pass": true,
+        "reopened_originals": [],
+        "scope": "Identity, evidence hashes and delivery accounting only; full acceptance remains a review judgment.",
+        "scope_approval_granted": false,
+        "scoped_delivery_goal_met": true,
+        "session_id": "2026-11-19-original-closure-70-to-60",
+        "session_success": false,
+        "tag_bots": 14,
+        "target_open": 60
+      }
+    }
+  ],
+  "verdict": "No remaining blocker found in the two targeted acceptance-preservation cases; unchanged accounting remains132complete/70open and original session goal unmet.",
+  "scope_approval_granted": false,
+  "original_requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "limits": [
+    "Read-only current-source review and targeted controls, not automatic full acceptance approval.",
+    "Mutated acceptance existed in memory only; shared board/master/ledger/state unchanged.",
+    "Previous review receipt retained as historical evidence for its earlier source hashes."
+  ]
+}

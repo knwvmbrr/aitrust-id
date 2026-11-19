@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-031753-current-source-plugin-runtime-website-evidence-02d8e6db",
+  "recorded_at": "2026-11-19T03:17:53.024433+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9e1813d2137ec061a724f6997f286fd8ce1faeb5",
+  "changed": "Retained passing current-source PS, PII, protocol and website engineering executions after new clean-setup receipt binding and owner legal direction.",
+  "proves": "Seven PS, six privacy, 41 protocol and 32 website command groups passed with source stable; detector accuracy and human acceptance are separate.",
+  "limits": "Synthetic engineering checks only; independent release evidence, physical iPhone acceptance, entity execution and original 70 open requirements unchanged.",
+  "scope_ids": [
+    "F-105",
+    "F-150",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "runs/2026-11-18-agent-tools-publish-PS.json": "e43a123932784dd0c31834a4702e8f6dea0da315ad42fb759a2162e4d19f30f5",
+    "runs/2026-11-18-agent-tools-publish-PII_REDACTED.json": "8ee7529363bea28f7c40d6789bba129274981b5875f1482d651bec281b9f6c79",
+    "runs/2026-11-18-agent-tools-publish-protocol.json": "347348a63c0d3b92474fa31f833b3d4755bcfabd20ad8403a16a5ed245872c90",
+    "runs/2026-11-18-agent-tools-publish-website.json": "26e0601e9f05d72772c4c99f6ad16d2ec8b7633c9aee3e145a70afcc810d9d13"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-agent-tools-publish-PS.json",
+      "sha256": "e43a123932784dd0c31834a4702e8f6dea0da315ad42fb759a2162e4d19f30f5"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-publish-PII_REDACTED.json",
+      "sha256": "8ee7529363bea28f7c40d6789bba129274981b5875f1482d651bec281b9f6c79"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-publish-protocol.json",
+      "sha256": "347348a63c0d3b92474fa31f833b3d4755bcfabd20ad8403a16a5ed245872c90"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-publish-website.json",
+      "sha256": "26e0601e9f05d72772c4c99f6ad16d2ec8b7633c9aee3e145a70afcc810d9d13"
+    }
+  ],
+  "checks": []
+}

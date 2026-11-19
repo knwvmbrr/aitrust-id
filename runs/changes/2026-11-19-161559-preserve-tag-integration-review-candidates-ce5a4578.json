@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-161559-preserve-tag-integration-review-candidates-ce5a4578",
+  "recorded_at": "2026-11-19T16:15:59.446198+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6d7e1c236878de2c767f1673b5fd8afb62efd2de",
+  "changed": "Preserved both full website candidate failures and the final pre-PR privacy/accounting review before the focused lazy-screen accessibility correction.",
+  "proves": "The first candidate isolated an obsolete HP SEO assertion; the tightened ten-case SEO check passes. The second candidate passed HP method/PS/MT isolation and other initial website phases, then exposed an indexed-control focus race. Separate review verifies original criteria and public evidence redaction.",
+  "limits": "Website remains a failed candidate until the readiness correction is integrated and the full gate passes. Four scoped tasks and zero originals are closed;70originals remain open. No independent accuracy or physical-device claim.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-142",
+    "F-074"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "d2670eeeca1cb0b05c0fa6ddf7a33cc31324c1ec97974142494ee03df0c9e363",
+    "AGENTS.md": "64335866e529ab3e970a862c08db36741ff00523d6e0b6986003a95c1a8b43ec",
+    "README.md": "e4c5e93e6d899436ee2ba79ff1401856eba6d35daf90171b164d56f2ced5493a",
+    "docs/scope-progress.json": "c99752d12d02b902225106de850d884c16368e7886b02b07f9f582473130d38a",
+    "docs/scope-progress.md": "ff53c933134d3c0fe170aed7cef47ca9fa5ff9d88dcdb0c83c400a748a07536a",
+    "docs/session-accountability-plan.md": "585c6bfc35db134353818c51ddf0a7251b8095bcc3faaada5918b8489b6ddc31",
+    "docs/session-delivery-plan.md": "f78a8c69d401cf59fb52e78fd054ead933dc46913d42e781e717fb81e1f86ba3",
+    "docs/session-delivery.json": "95ff94eb7337d4b493def6c340ee04fff5924dd41ada6055e82a4506ce81723a",
+    "eval/revalidation.json": "cc3c57d48ce6fa7ba44d7d6ae31567b22da6c9720e8cdfbf3b01944b9cfe6ff5",
+    "package.json": "f00a20c6ed2ff388831c1ac6c316914b038262908805c1b20207627636900aaa",
+    "runs/2026-11-19-hp-device-independent-review.json": "4927babd1284ffc60e2dded4db8a95874375f47cd21899ccb87f5c23d8c7103e",
+    "runs/2026-11-19-nf-source-independent-review.json": "0a1b751dd77d350003053b306e1d24cc93ab9bd68a7758d2ad8b9f8521ef2b0d",
+    "runs/2026-11-19-session-acceptance-preservation-review.json": "8517aa23dd2f8c8574fabe8353b1b157159c72517b9b6d66d9c2d980aac0ac34",
+    "runs/2026-11-19-tag-bots-PII_REDACTED.json": "aceb2eb9a359928fb6f2b3a8716bd19bace5d77e25582d9f19b5523b3238f30b",
+    "runs/2026-11-19-tag-bots-PS.json": "2c58801e14a440f3d4178da9747e0da851453a9233d01e32aef3cc84088f4516",
+    "runs/2026-11-19-tag-bots-accessibility-failed.json": "28887981c884333111bf5e272baf4a1da018ef098a0a3285f34bac8343e4f413",
+    "runs/2026-11-19-tag-bots-corrected-website.json": "1a0201f1f54b66f96dfe4a3e68ad30a92751052ae4b45e7125d26bead651bfd6",
+    "runs/2026-11-19-tag-bots-extension.json": "cb761fd247d3fc80a2961344f31139cd01b6355eff9cf46ba507a94d300d49a9",
+    "runs/2026-11-19-tag-bots-preflight-refusal.json": "337947a93a552b1f58027ca592c2710cc41bb5c2d328ed488e759a95d69a031a",
+    "runs/2026-11-19-tag-bots-prepublication-correction.json": "d0fc5976caabbd98018fffa07c4b0d154e941349b7c915a2f4c8bc429e9bd98a",
+    "runs/2026-11-19-tag-bots-protocol.json": "cd7b15e76df2f3064abd15aac034cec77594a3150292c560758f2b68d9766905",
+    "runs/2026-11-19-tag-bots-website.json": "6ed4573ff7bdf29fff5c76272b02cea5233eb6f02537e58f118affcc6d66c79d",
+    "runs/2026-11-19-tag-components-integrated.json": "b1162eaa84dc8cf241c8e151a5713f712600d96846c1acae9620d69936cb1bff",
+    "runs/2026-11-19-tag-integration-pre-pr-review.json": "c8c0070843996069010c3e5aeb0312ac13d12304b4f41349abdb6c5751480acc",
+    "scripts/verify-hp-client.cjs": "331e4da26344b2e4363e502d5db8f328f06d80ad6bf6b234d87a8e557045ee82",
+    "scripts/verify-route-boundaries.py": "c0365120851273545d9d45dcf13b92b9699a0104948af3c9162c431f47d49023",
+    "site/public/reference/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "site/public/reference/public-scope.json": "7123f792b600cb7fc1d48c35ece683508ee0919ea62868c856f88af36c9e40e4",
+    "site/scripts/prepare.mjs": "c3ddb5ea829d4773591d28d2476a185129353d1b1510aac8afe560a7dec01f20",
+    "site/src/public-scope.json": "7123f792b600cb7fc1d48c35ece683508ee0919ea62868c856f88af36c9e40e4",
+    "site/src/scope-manifest.json": "ff35259f2c4e2e81f115752f86f409f5f619995fa3e421262c4d140fcd328c33",
+    "state.json": "6ccd4f8ba61431ef6c710bd61f7daae3be5a6766d8a04d4452301d0374a4f2a5",
+    "tests/seo-metadata.mjs": "4dd397087a7c426b3d2ba6bcf4d83af764d8705a543178ab98ff5914804dbbf6",
+    "tests/test_session_delivery.py": "6101d3b54b5e2f00be54e448fb7081cde6504117d411121ee3c76a8d3f5e0ea9",
+    "tools/session_delivery.py": "7d612f8eb684922b4e211b580cffd2bdc8eabbb513ce311ef73d4a8add45977f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-tag-integration-pre-pr-review.json",
+      "sha256": "c8c0070843996069010c3e5aeb0312ac13d12304b4f41349abdb6c5751480acc"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-website.json",
+      "sha256": "6ed4573ff7bdf29fff5c76272b02cea5233eb6f02537e58f118affcc6d66c79d"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-corrected-website.json",
+      "sha256": "1a0201f1f54b66f96dfe4a3e68ad30a92751052ae4b45e7125d26bead651bfd6"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-accessibility-failed.json",
+      "sha256": "28887981c884333111bf5e272baf4a1da018ef098a0a3285f34bac8343e4f413"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-prepublication-correction.json",
+      "sha256": "d0fc5976caabbd98018fffa07c4b0d154e941349b7c915a2f4c8bc429e9bd98a"
+    }
+  ],
+  "checks": []
+}

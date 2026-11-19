@@ -1,0 +1,129 @@
+{
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "ai-trust-id-tool-result/v1"
+    },
+    "state": {
+      "enum": [
+        "COMPLETE",
+        "PARTIAL",
+        "UNAVAILABLE"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "PS",
+              "PII_REDACTED"
+            ]
+          },
+          "state": {
+            "enum": [
+              "FINDING",
+              "NO_FINDING",
+              "UNAVAILABLE"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "maxLength": 256
+          },
+          "method": {
+            "type": "array",
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "revision": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "sha256",
+                "revision"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "properties": {
+                "signal_id": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "signal_id",
+                "count"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "code",
+          "state",
+          "message",
+          "method",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reason": {
+      "enum": [
+        null,
+        "busy"
+      ]
+    },
+    "independently_validated": {
+      "const": false
+    },
+    "safety_clearance": {
+      "const": false
+    },
+    "text_included": {
+      "const": false
+    },
+    "subject_identity_included": {
+      "const": false
+    },
+    "research_submitted": {
+      "const": false
+    }
+  },
+  "required": [
+    "format",
+    "state",
+    "checks",
+    "reason",
+    "independently_validated",
+    "safety_clearance",
+    "text_included",
+    "subject_identity_included",
+    "research_submitted"
+  ],
+  "additionalProperties": false
+}

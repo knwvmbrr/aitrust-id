@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-020930-reference-claim-coverage-8f1dbeb0",
+  "recorded_at": "2026-11-19T02:09:30.242338+00:00",
+  "author": "Codex NF/FI evidence lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7b5ab10df9c91a4134d0d655c315b13df890e422",
+  "changed": "Account for every supported claim line in automatic reference NLI results and show evaluated and unevaluated line counts in the summary.",
+  "proves": "The old maximum-one comparison omits coverage; the current map accounts for both claims with the same one controlled comparison. Three actual private CLI controls and 228 focused compatibility and refusal checks pass.",
+  "limits": "Coverage counts model outputs for bounded input lines. Source truth, exhaustive retrieval, model accuracy and NF/FI release remain unestablished. No original parent requirement closes.",
+  "scope_ids": [
+    "F-020b",
+    "T-NF",
+    "T-FI"
+  ],
+  "files": {
+    "research/nli/references.py": "11b82d35eeb12cc299c65d59ab2c5fcc96118a36911604157476f98842b2c657",
+    "scripts/check-nli-references.py": "1c3b1f624ca7d1acd0ef5072b1f80670984c6546d50b025c168cc632d3109cc8",
+    "tests/test_reference_claim_coverage.py": "d574bf99d4b862fcff67956cdb051817bca913497a3236ae7e39fb1c09f6c942",
+    "docs/nli-references.md": "4b8d4595f61975acfe70916d749c96c4c16060a3a3eba605c93fbd8dc27d96cc",
+    "docs/reference-claim-coverage-plan.md": "5dccc5fcd12d1d99901c3b2cdf1d95f52c48735148da275bbbb7714ff1b72505",
+    "docs/reference-claim-coverage-result.md": "e56870bf388ee0f50c3f6e3e3d7ea5fdacee80855dd46524eab0bd28b0ca714e",
+    "runs/2026-11-18-reference-claim-coverage.json": "0a785b6a9aa702e1ba46b66afcb2493d6a1da7d4d0a0f5fb1f67597effc0fead"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-reference-claim-coverage.json",
+      "sha256": "0a785b6a9aa702e1ba46b66afcb2493d6a1da7d4d0a0f5fb1f67597effc0fead"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T02:09:30.756210+00:00"
+    }
+  ]
+}

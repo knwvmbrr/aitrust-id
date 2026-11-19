@@ -240,3 +240,64 @@ same run verified simulator removal. N-013 remains at 80% with signing,
 TestFlight and physical acceptance open.
 [Local proof](../runs/2026-11-17-split-native-share-workflow.json) ·
 [Hosted iOS 27.2 run](https://github.com/knwvmbrr/aitrust-id/actions/runs/44222014825)
+
+## November 18: internal iPhone beta upload
+
+N-013 stays at 80% and the ledger stays at **132 complete / 70 open**.
+The current app and Share extension signed with the existing profiles.
+[Apple validated build 1.0 (1)](../runs/2026-11-18-ios-signed-archive-and-apple-validation.json), and
+[Xcode confirmed the internal TestFlight upload](../runs/2026-11-18-ios-testflight-internal-upload.json).
+App Store Connect processing, tester access, the physical iPhone workflow and
+VoiceOver and outside-user acceptance remain open.
+
+## November 18: TestFlight readiness and signed-history comparison
+
+The previously uploaded iPhone build 1.0 (1) could not be checked for
+processing or tester access because [App Store Connect requested sign-in](../runs/2026-11-18-testflight-dashboard-authentication.json).
+The [owner checklist](app-store-readiness.md#first-iphone-14-plus-check)
+covers real iPhone Share, offline use and VoiceOver. N-013 remains at 80%.
+
+For F-125, the local `compare` command verifies both complete supplied signed
+histories and reports their common checkpoint and first divergence.
+[All 62 focused controls passed](../runs/2026-11-18-offline-revocation-comparison.json).
+The command releases no tags and contacts no witnesses. Public distribution,
+witnessing, completeness, rotation and outside-user acceptance still keep F-125
+open. All 202 records remain: **132 complete / 70 open**.
+
+## November 18: witness observations and TestFlight recheck
+
+F-125 now has a working offline tool for selected witness keys to sign and
+verify the same exact checkpoint. It refuses a replay or a conflicting prior
+observation when a signer advances and refuses duplicate or authority keys
+in the selected witness set. [Eight new witness controls and the existing
+62 revocation controls passed](../runs/2026-11-18-revocation-witness-offline-controls.json).
+Independent operators, public distribution, completeness, rotation and
+outside-user per-device acceptance remain open.
+
+The [Mac dashboards still returned to sign-in](../runs/2026-11-18-testflight-mac-session-recheck.json).
+The previous internal upload is confirmed; processing, tester access and
+physical testing have not been verified. The ledger remains **132 complete /
+70 open**, with F-125 and N-013 both at 80%.
+
+Review identified equivalent P-256 encodings. The updated policy compares
+public key identity rather than encoding, including for authority exclusion.
+[All nine witness controls passed](../runs/2026-11-18-revocation-witness-key-identity.json). The count is unchanged.
+
+## November 18: Pyodide release origin
+
+The six-archive verification matched all five bundled runtime members to the
+upstream core release and checked seven build recipes. The verified inputs
+include CPython, Emscripten and the Pyodide build helper. F-057 and X-02 still
+need dependency and redistribution coverage. The ledger records 132 complete
+and 70 open. [Execution receipt](../runs/2026-11-18-pyodide-release-origin.json).
+
+
+## November 19 — PS source-only path and refusing dependency policy
+
+Codex integrated a real PS-only source ZIP, exposed directly in the PS Terminal instructions with its operating guide and SHA-256 companion. It needs an existing Python 3.12+ interpreter on Linux/macOS; it does not need a container, optional package, account or privacy checker. Actual Mac and network-isolated nonroot Linux checks verified identical artifact bytes and extracted finding/no-finding operation. This establishes operation, not independent detector accuracy.
+
+The exporter invokes the new exact-source dependency policy. Missing/changed notices, unknown scopes and required paid or proprietary processors refuse publication. Only the nine-file PS source profile is admitted; 13 other registered distribution scopes stay blocked. Existing preview workflows are not falsely promoted. The esbuild lane also completed a source-bound review of all 26 Go-code members and their selected build/source notice evidence, without claiming compiler authenticity or complete source equivalence.
+
+The current-vendor capture investigation found mixed assistant/private transport records and a Markdown-to-DOM subject-mapping gap. The reviewed plan records those blockers; no raw stream record, credential, new capture permission or active hook is published. F-030 stays open.
+
+All 202 original IDs, 132 completed and 70 open are retained. F-057 and X-02 retain their full native/platform/model/source-offer and release obligations. The source package is useful functioning software; it is not a substitute closure for either broad requirement.

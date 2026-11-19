@@ -1,0 +1,1045 @@
+{
+  "profile": "esbuild-platform-source-observations/1.0.0",
+  "captured_at": "2026-11-19T05:19:50.654761+00:00",
+  "status": "bounded_source_and_notice_evidence",
+  "source_commit": "bb9db84c02433fbe37b3509f53f9f3e3cc48725e",
+  "sources": {
+    "tools/esbuild_cohort.py": "37dac4b6caf8f206c838926677300689ad95b30d925c44e693260b80fea3e0ba",
+    "scripts/verify-esbuild-cohort.py": "a3e830c46464fd727387401f62ade04a89feecc454b8b1f14b73f663dd0c747a",
+    "tests/test_esbuild_cohort.py": "7b2e1e82a48b6c0750e12013b085c8fe19dc8cb2244c023e9b7b377208178959",
+    "docs/esbuild-source-review.md": "aaa0fe3672fb123612212bc92edf2bef119c0e5b55c90ee2097148bda7a970d3"
+  },
+  "selected_inputs_sha256": "8d4113a4e67e44e031b9a7e6e8dfb2bfba48efa88c52aaab34b3c83ebf885b46",
+  "platform_artifacts": [
+    {
+      "package_path": "node_modules/@esbuild/aix-ppc64",
+      "archive_sha256": "a8213e2aab77aa3bac2986f14b063d6a2c73b8e990f912cf3148240779a902f5",
+      "archive_bytes": 4591089,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "0dd860154344f94b7a9367e64ffc2bc5b89a4313b4a399e5127cdc4ff5000303",
+          "bytes": 12589886,
+          "format": "unclassified-native-name",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/android-arm",
+      "archive_sha256": "7cdd7bf3b1f32b98e05b2bd3b3d8e6494a609127d4949ccd623158131190bfd6",
+      "archive_bytes": 3750373,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "b3cdaf234fd51a7908b2ffc4a84b3baa466656ccb2586498de4cc2f77b6f1e1e",
+          "bytes": 3504,
+          "format": "script",
+          "build_info": null,
+          "declared_interpreter": "node"
+        },
+        {
+          "member": "package/esbuild.wasm",
+          "sha256": "cc8c5e14db584cd75c6c9fc16e1aae3d5b8e99ab7f333aeee71f59e23fa9f24e",
+          "bytes": 13940120,
+          "format": "wasm",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/android-arm64",
+      "archive_sha256": "db807d7dc5b874395766752b6a69a19d0f3022dc23cc171967f2348174437046",
+      "archive_bytes": 4479873,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "087671da02d323e7915fafc13567c0929192633ed544bd8adee9bc020fddf5b4",
+          "bytes": 11534582,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/android-x64",
+      "archive_sha256": "a7fe3dd3613a952f85b1a71a2a9a6311e83608f9385738ae0588036c3a5b62f0",
+      "archive_bytes": 3750376,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "b3cdaf234fd51a7908b2ffc4a84b3baa466656ccb2586498de4cc2f77b6f1e1e",
+          "bytes": 3504,
+          "format": "script",
+          "build_info": null,
+          "declared_interpreter": "node"
+        },
+        {
+          "member": "package/esbuild.wasm",
+          "sha256": "cc8c5e14db584cd75c6c9fc16e1aae3d5b8e99ab7f333aeee71f59e23fa9f24e",
+          "bytes": 13940120,
+          "format": "wasm",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/darwin-arm64",
+      "archive_sha256": "5d64cc9bc527d598450b5f8d47ff293eb9f3aea38dd9eff67fd55d228c5ccb43",
+      "archive_bytes": 4417651,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "e2dc9a52440a2a34f09434a2f4843cb1e30f84e40dcf238976ec61ef8cd7f36a",
+          "bytes": 10573778,
+          "format": "macho-or-fat-candidate",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/darwin-x64",
+      "archive_sha256": "4cc582287781c171f5ac2d216dc15ab1c40bc83bff59803211a68b66e0c762cb",
+      "archive_bytes": 4792951,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "dd53ccf32f9b5b3ab30d41388ef1fc8f81c44ca57ee7a32a7364a1753308d009",
+          "bytes": 11630864,
+          "format": "macho-or-fat-candidate",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/freebsd-arm64",
+      "archive_sha256": "21d6e2e4354963b883c94295acac811fb5ccae64565add1d2b4800de79e79b88",
+      "archive_bytes": 4250474,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "5fef5a5ef24d9660d7711b756be5ddeba1fb3ca8dd62d703682ebb9fab3b68b0",
+          "bytes": 10289274,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/freebsd-x64",
+      "archive_sha256": "4e147967a2e83a37d7940828180b273262b207dbfbb0401210b0f0b8c244613a",
+      "archive_bytes": 4705559,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "4427a8cbfa0661943ccfef2606a65b35f3411ac73e447e86f7732aace61e4609",
+          "bytes": 11350138,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-arm",
+      "archive_sha256": "e561104a2b25e4dc8eeaffd08c7acbe6608d17cb3cf5c10564aff3ef96979993",
+      "archive_bytes": 4486671,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "a2d93f7a8b1c9f91d47beec987888b4765c890501b6274f4bdff4061a5e0d9fd",
+          "bytes": 10748016,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-arm64",
+      "archive_sha256": "2145e9e686c95ee47c1181f83f272f0ff95820e52d7736fdcd9eeb106fd6456a",
+      "archive_bytes": 4275227,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "51e829ba36f36be6d9aea6e329ddc4f9350302339b16aaca96a3cb97f64a8ebb",
+          "bytes": 10289264,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-ia32",
+      "archive_sha256": "8b14d5baeb1c24af0aa51c264e3baed254c2260f89ef53122aa94990342651ce",
+      "archive_bytes": 4469396,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "9cd7515a75d6f96b0aa055861cf987498315428088cd6d18de5082f904ae5794",
+          "bytes": 10752112,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-loong64",
+      "archive_sha256": "da0458e915ed15cbf3ff88e4f6d5915e9acf631e5f5194853c3ed6937abd7a66",
+      "archive_bytes": 4537082,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "73fa76af9b13f7a27fdb20673b8c2af927fe1511d14e51edeb4b7b71f7f03d0e",
+          "bytes": 11141232,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-mips64el",
+      "archive_sha256": "e80871cca79b9ba8cff095a47430bd6966166a8899bc38b14aa1e80e6972809c",
+      "archive_bytes": 4087041,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "d734787abc3c99d95242805047fe32da85a5822f04bf33d766a966bf5fd85488",
+          "bytes": 12320880,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-ppc64",
+      "archive_sha256": "dac8f3063e26d0b2b180ef40fb2c505bfd519ef952959f859940bf406e8b9527",
+      "archive_bytes": 4311182,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "90709144617c2adf8f6c14937f03b114c259de0b9309666e3a9d89a1fb266d04",
+          "bytes": 10944624,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-riscv64",
+      "archive_sha256": "18da29aadd3e9fca4510c0ce0063a4f78689cf5bca6f9d143f4cfbcf6cecd856",
+      "archive_bytes": 4443193,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "86df35a46bedde8b756edb6565a1df7b5a832ad74dd0e179608cbf6509a2582a",
+          "bytes": 10092656,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-s390x",
+      "archive_sha256": "7e1459ff57e4be55f5e025f0f4e322768bfa8cce16e8acd82a746ca02e8a4bb9",
+      "archive_bytes": 4554280,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "f8cad0db35132e5ac3065c4345c36e7ffe18fdc98417a61bcf5a95a6c694e57c",
+          "bytes": 11468912,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/linux-x64",
+      "archive_sha256": "9ed00ab5330c94386f3273eda99a1fb0e8f37cfd6cb5270e4ad2fe3527da3546",
+      "archive_bytes": 4728498,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "0c6588b092a2c291a72bab90659f3c9e0e25e0fe59c9ac12b4dae4d945e5548c",
+          "bytes": 11407472,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/netbsd-arm64",
+      "archive_sha256": "152b68aa6cd678348bed45f5415b0ffc704ee71ad6b5cfea60ddd8846df88d82",
+      "archive_bytes": 4236831,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "490cfdac2d96d5608d91cf55bdf4052bbde7013dafe87ec7adc7784778ad4d4c",
+          "bytes": 10223747,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/netbsd-x64",
+      "archive_sha256": "5e474fdb102907c0ea126c9fa3cea6515873d00d13298b6f9785f00cf8e70f96",
+      "archive_bytes": 4689812,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "c61e0e4c553a4986fd0e9d63a0425e93be831ff7b13bfb8a564368fb7590f85d",
+          "bytes": 11313283,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/openbsd-arm64",
+      "archive_sha256": "1b8f85e4ae38f0f411fb0d8d1d89926223ffc4381fdc168b199be9409317ca5c",
+      "archive_bytes": 4246268,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "f9d814698e26c09c3f90d4c103cbdf3832c9f2c841d64a93889d63d23da9b8cf",
+          "bytes": 10289387,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/openbsd-x64",
+      "archive_sha256": "9cc0139b48b4a29915162025e8819a75a903657a98469f5439052516538735ce",
+      "archive_bytes": 4698508,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "2e30dce11f7236aa362c1c57212cc696f51472169aa417f30e9b641f3b7dcade",
+          "bytes": 11350251,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/openharmony-arm64",
+      "archive_sha256": "55da121e57776992e71bf710294af3e949120cb90318e608b72ff095706ef07a",
+      "archive_bytes": 3750380,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "b3cdaf234fd51a7908b2ffc4a84b3baa466656ccb2586498de4cc2f77b6f1e1e",
+          "bytes": 3504,
+          "format": "script",
+          "build_info": null,
+          "declared_interpreter": "node"
+        },
+        {
+          "member": "package/esbuild.wasm",
+          "sha256": "cc8c5e14db584cd75c6c9fc16e1aae3d5b8e99ab7f333aeee71f59e23fa9f24e",
+          "bytes": 13940120,
+          "format": "wasm",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/sunos-x64",
+      "archive_sha256": "d9dbb698f053dec9d612ac16dec3ec08639ded278fd390673b6050deca1d3989",
+      "archive_bytes": 4704344,
+      "members": [
+        {
+          "member": "package/bin/esbuild",
+          "sha256": "770e0d2bc930b1a1d19d3f43243ff8f393efddb599e7f5843160feacd253267d",
+          "bytes": 11350231,
+          "format": "elf",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/win32-arm64",
+      "archive_sha256": "3eec4af19935fd2264601ec149e90e81b680586856a2b1a5473c762f739ef851",
+      "archive_bytes": 4313618,
+      "members": [
+        {
+          "member": "package/esbuild.exe",
+          "sha256": "bfb8798ab678f1ce4a723739f4a3eabab3244d7a04eeb12be2eb9f58095c13ef",
+          "bytes": 10404864,
+          "format": "pe-candidate",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/win32-ia32",
+      "archive_sha256": "8ca9744a58f8ef3bf5c2f1c2ba035a251c99d5890b545a4543437f49f2c01dd3",
+      "archive_bytes": 4639641,
+      "members": [
+        {
+          "member": "package/esbuild.exe",
+          "sha256": "8fa99b6e0945830fce8d7e208fdb21763aa4aea875751f4a0eec7f6e262af1dd",
+          "bytes": 11030528,
+          "format": "pe-candidate",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@esbuild/win32-x64",
+      "archive_sha256": "5c5d62da7572b57ddc1fa3caedc36c1218b5d8d02ce9c7ee70e3339fce4453c4",
+      "archive_bytes": 4818189,
+      "members": [
+        {
+          "member": "package/esbuild.exe",
+          "sha256": "ec02ee9b14ab332416fedd10614dfb80eed5304d94f67745067c011934a8c3c3",
+          "bytes": 11670528,
+          "format": "pe-candidate",
+          "build_info": {
+            "profile": "go-inline-build-info-observation/v1",
+            "marker_count": 0,
+            "status": "unavailable",
+            "reason": "marker_absent",
+            "toolchain_version": null,
+            "module_metadata_sha256": null,
+            "embedded_version_literals": [
+              "go1.26.4"
+            ],
+            "publisher_authenticated": false
+          },
+          "declared_interpreter": null
+        }
+      ],
+      "declared_node_engine": ">=18",
+      "binary_executed": false
+    }
+  ],
+  "upstream_archives": [
+    {
+      "url": "https://codeload.github.com/evanw/esbuild/tar.gz/bb9db84c02433fbe37b3509f53f9f3e3cc48725e",
+      "final_url": "https://codeload.github.com/evanw/esbuild/tar.gz/bb9db84c02433fbe37b3509f53f9f3e3cc48725e",
+      "bytes": 1999234,
+      "sha256": "ab3d83d34f00117170518097c07ed05b534c64403c6f9f96c21898ce32bc6921",
+      "captured_at": "2026-11-19T05:07:45.164412+00:00",
+      "publisher_signature_verified": false,
+      "format": "tar-gzip",
+      "filename": "esbuild-source.tar.gz"
+    },
+    {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.0.0-20220715151400-c0bba94af5f8.zip",
+      "final_url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.0.0-20220715151400-c0bba94af5f8.zip",
+      "bytes": 1798284,
+      "sha256": "3b180937216e93559f16b6076d09baf54a5707378f11b867b6eb914c56b09b91",
+      "captured_at": "2026-11-19T05:07:45.885090+00:00",
+      "publisher_signature_verified": false,
+      "format": "module-zip",
+      "filename": "xsys-source.zip",
+      "prefix": "golang.org/x/sys@v0.0.0-20220715151400-c0bba94af5f8/"
+    },
+    {
+      "url": "https://go.dev/dl/go1.26.4.src.tar.gz",
+      "final_url": "https://dl.google.com/go/go1.26.4.src.tar.gz",
+      "bytes": 34118246,
+      "sha256": "4f668a32fbfc1132e6a881fb968c2f1dada631492a339211735fbb255a42602d",
+      "captured_at": "2026-11-19T05:07:47.042102+00:00",
+      "publisher_signature_verified": false,
+      "format": "tar-gzip",
+      "filename": "go-source.tar.gz"
+    },
+    {
+      "url": "https://go.dev/dl/?mode=json&include=all",
+      "final_url": "https://go.dev/dl/?mode=json&include=all",
+      "bytes": 2279774,
+      "sha256": "dff81fa9170d1a7c6a1f38b6cec38c0e3a9e67fd0354419c123ab7c8b8f3c3eb",
+      "captured_at": "2026-11-19T05:07:47.483769+00:00",
+      "publisher_signature_verified": false,
+      "format": "json",
+      "filename": "go-download-metadata.json"
+    }
+  ],
+  "source_texts": [
+    {
+      "archive": "esbuild-source.tar.gz",
+      "member": "esbuild-bb9db84c02433fbe37b3509f53f9f3e3cc48725e/LICENSE.md",
+      "member_sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "lines": null,
+      "role": "esbuild_mit_license",
+      "path": "sbom/reviews/sources/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt",
+      "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "bytes": 1069
+    },
+    {
+      "archive": "esbuild-source.tar.gz",
+      "member": "esbuild-bb9db84c02433fbe37b3509f53f9f3e3cc48725e/go.mod",
+      "member_sha256": "2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b",
+      "lines": null,
+      "role": "esbuild_go_mod",
+      "path": "sbom/reviews/sources/2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b.txt",
+      "sha256": "2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b",
+      "bytes": 428
+    },
+    {
+      "archive": "esbuild-source.tar.gz",
+      "member": "esbuild-bb9db84c02433fbe37b3509f53f9f3e3cc48725e/go.sum",
+      "member_sha256": "f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2",
+      "lines": null,
+      "role": "esbuild_go_sum",
+      "path": "sbom/reviews/sources/f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2.txt",
+      "sha256": "f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2",
+      "bytes": 207
+    },
+    {
+      "archive": "esbuild-source.tar.gz",
+      "member": "esbuild-bb9db84c02433fbe37b3509f53f9f3e3cc48725e/go.version",
+      "member_sha256": "aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72",
+      "lines": null,
+      "role": "esbuild_declared_go_version",
+      "path": "sbom/reviews/sources/aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72.txt",
+      "sha256": "aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72",
+      "bytes": 7
+    },
+    {
+      "archive": "esbuild-source.tar.gz",
+      "member": "esbuild-bb9db84c02433fbe37b3509f53f9f3e3cc48725e/version.txt",
+      "member_sha256": "ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4",
+      "lines": null,
+      "role": "esbuild_declared_version",
+      "path": "sbom/reviews/sources/ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4.txt",
+      "sha256": "ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4",
+      "bytes": 7
+    },
+    {
+      "archive": "esbuild-source.tar.gz",
+      "member": "esbuild-bb9db84c02433fbe37b3509f53f9f3e3cc48725e/Makefile",
+      "member_sha256": "ca1b97d21eefa651e5a882619e054209b6f446203d832d6d5f8fc52bea4eeb29",
+      "lines": [
+        1,
+        82
+      ],
+      "role": "esbuild_buildinfo_removal_recipe",
+      "path": "sbom/reviews/sources/3eb04925b8ec5b4b744f710fbfa54847e8a55caa3982dc9b02f3bb803ef4376d.txt",
+      "sha256": "3eb04925b8ec5b4b744f710fbfa54847e8a55caa3982dc9b02f3bb803ef4376d",
+      "bytes": 3885
+    },
+    {
+      "archive": "xsys-source.zip",
+      "member": "golang.org/x/sys@v0.0.0-20220715151400-c0bba94af5f8/LICENSE",
+      "member_sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067",
+      "lines": null,
+      "role": "xsys_license",
+      "path": "sbom/reviews/sources/2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067.txt",
+      "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067",
+      "bytes": 1479
+    },
+    {
+      "archive": "xsys-source.zip",
+      "member": "golang.org/x/sys@v0.0.0-20220715151400-c0bba94af5f8/PATENTS",
+      "member_sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "lines": null,
+      "role": "xsys_patents",
+      "path": "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt",
+      "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "bytes": 1303
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/LICENSE",
+      "member_sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "bytes": 1453
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/PATENTS",
+      "member_sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt",
+      "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "bytes": 1303
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/crypto/LICENSE",
+      "member_sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "bytes": 1453
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/crypto/PATENTS",
+      "member_sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt",
+      "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "bytes": 1303
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/net/LICENSE",
+      "member_sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "bytes": 1453
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/net/PATENTS",
+      "member_sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt",
+      "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "bytes": 1303
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/sys/LICENSE",
+      "member_sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "bytes": 1453
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/sys/PATENTS",
+      "member_sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt",
+      "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "bytes": 1303
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/text/LICENSE",
+      "member_sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "bytes": 1453
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/vendor/golang.org/x/text/PATENTS",
+      "member_sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "lines": null,
+      "role": "go_distribution_notice_context",
+      "path": "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt",
+      "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "bytes": 1303
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/debug/buildinfo/buildinfo.go",
+      "member_sha256": "cbc672615b67d47a32ddb5b193edd31603bf6c5e30b3497e9d33c91760f2a003",
+      "lines": [
+        54,
+        63
+      ],
+      "role": "go_buildinfo_header_definition",
+      "path": "sbom/reviews/sources/fa534d2510336c58d1bc84ff129fa61dbb918f75962c0d7301f27f4b2ebd6107.txt",
+      "sha256": "fa534d2510336c58d1bc84ff129fa61dbb918f75962c0d7301f27f4b2ebd6107",
+      "bytes": 275
+    },
+    {
+      "archive": "go-source.tar.gz",
+      "member": "go/src/cmd/link/internal/ld/data.go",
+      "member_sha256": "d2c24726a9f365e311acacc68961e42121369076f099727aeecf69cb06cfa601",
+      "lines": [
+        2469,
+        2509
+      ],
+      "role": "go_linker_buildinfo_layout",
+      "path": "sbom/reviews/sources/3b17df1bad490358bfa01617ec8ca36e24aea6508982964064dc97874d4be2ed.txt",
+      "sha256": "3b17df1bad490358bfa01617ec8ca36e24aea6508982964064dc97874d4be2ed",
+      "bytes": 1450
+    }
+  ],
+  "source_relationships": {
+    "esbuild_tag": "v0.28.1",
+    "tag_to_commit_observed_via": "https://api.github.com/repos/evanw/esbuild/git/ref/tags/v0.28.1",
+    "tag_signature_verified": false,
+    "recipe_declared_go_version": "1.26.4",
+    "actual_compiler_identity_verified": false,
+    "binary_to_source_reproduced": false,
+    "xsys_module_h1": "h1:0A+M6Uqn+Eje4kHMK80dtF3JCXC4ykBgQG4Fe06QRhQ=",
+    "xsys_h1_matches_source_go_sum": true,
+    "go_source_matches_official_download_sha256_and_size": true,
+    "buildinfo_removal": "Explicit upstream Makefile linker transformation; consistency evidence only."
+  },
+  "limits": [
+    "Project base 4421ab58b625c8a93203f378de45ac591465b276; exact26selected platform artifacts only.",
+    "Source declarations do not authenticate published binaries or actual compiled dependency membership.",
+    "Missing build info does not establish closed-source or paid code.",
+    "Go source vendored notice context does not establish linked package membership.",
+    "No install, reviewed-binary execution, model or network action in ordinary verification.",
+    "Source/notice evidence only; complete transitive coverage and distribution permission remain unapproved."
+  ],
+  "permission_cleared": false,
+  "release_approved": false,
+  "reproducible_build_verified": false,
+  "publisher_signature_verified": false
+}

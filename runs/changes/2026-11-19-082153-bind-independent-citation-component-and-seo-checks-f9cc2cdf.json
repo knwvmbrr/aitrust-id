@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-082153-bind-independent-citation-component-and-seo-checks-f9cc2cdf",
+  "recorded_at": "2026-11-19T08:21:53.599035+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7d740502904d70b387029f2a1bcf9782ae821fce",
+  "changed": "Bind the reviewed offline citation sidecar into protocol and route-source checks; preserve its open parent criteria, expose both usage/risk guides, and make the real SEO tests part of source-bound website execution.",
+  "proves": "152 focused component and input-binding controls pass on the integrated source. A separate read-only review demonstrated valid mixed outcomes, private output and refusal of changed raw input and duplicate JSON. Existing corpus format, tag allowlist and service routes are unchanged.",
+  "limits": "Full integration execution and protected publication are pending. The build guard correctly refused an initial run before this fresh event; it remains enforced. Caller associations do not establish source support or FI, and no original completion percentage changes.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "README.md": "51f5cff4af4d2f30470aa05f639540346a347a44b9f1bdb4406c0348e8c1ca6e",
+    "docs/scope-progress.json": "8bd09dd67fcd71d22b29437ca8e8f63bd368d6fd251afcdd0d24b03ef6032916",
+    "docs/scope-progress.md": "43cdd678f91daf757cc49e2676ac5ea03397ba92028addcfdf898ebd15e51950",
+    "eval/revalidation.json": "613848ee5a04ca4cb01c109f097831de34878e877ee45c7a7e41804e913760d1",
+    "package.json": "659e50ebc29caf3cd82e7ac701ddc483d8735179e00d8e3330949f016cd10c97",
+    "runs/2026-11-19-fi-citation-integration-review.json": "42f2b4b228d47bee20b2f086cc8595534aaea946b9f3d9110ea86e82fe2057f8",
+    "scripts/verify-route-boundaries.py": "68e81b155154aab2892dc3fbe8efebdfd40c42611cf65d14461e52212c045a0b",
+    "scripts/verify-seo.cjs": "9427e4c0026cbd381c8076f7f0b9ddb16326e340f711758eaddb53c21d41bbda",
+    "site/scripts/prepare.mjs": "8e28b526d340575a16b0262ad165135313f9472765af5475b0a7f53ccfb6f708",
+    "tests/test_scoped_component_inputs.py": "9e647aabec8344f212d65751e635768417bc077dbcfd6dc0ae5e2d6283be4289"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-citation-integration-review.json",
+      "sha256": "42f2b4b228d47bee20b2f086cc8595534aaea946b9f3d9110ea86e82fe2057f8"
+    }
+  ],
+  "checks": []
+}

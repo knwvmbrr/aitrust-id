@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-11-19T06:09:36.263597+00:00",
+  "pass": true,
+  "artifact_sha256": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+  "artifact_bytes": 130542,
+  "member_count": 10,
+  "applicable_project_notice_retained": true,
+  "notice_removal_even_with_policy_rehash_refused_by_focused_test": true,
+  "actual_extracted_cases": [
+    {
+      "expected": "FINDING",
+      "actual": "FINDING",
+      "exit": 0,
+      "input_executed": false
+    },
+    {
+      "expected": "NO_FINDING",
+      "actual": "NO_FINDING",
+      "exit": 0,
+      "input_executed": false
+    }
+  ],
+  "reconstructed_identical_bytes": true,
+  "source_hashes": {
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "tools/ps_source_distribution.py": "39cc9b5e092b8c0d26a58c7e31a44a7d48a708524f819b77a2549f4ff94794c6",
+    "scripts/export-ps-source.py": "7ee020a6d3f2d585e7e8f7e370c5604bea5f78fc97cba0f9f5bdfa93b9e696e3",
+    "eval/dependency-policy.json": "85a36d74190d6ad77b47a19731b50ce07fe2fc81572f009348befb89ae48cdcb"
+  },
+  "isolated_python_flags": [
+    "-I",
+    "-S",
+    "-B"
+  ],
+  "optional_packages_installed": false,
+  "input_executed": false,
+  "independent_accuracy_evidence": false,
+  "legal_clearance": false,
+  "source_scope": "Selected PS source with retained applicable project and Unicode attribution; no interpreter/OS or unrelated assets bundled",
+  "retired_unpublished_candidate_sha256": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b"
+}

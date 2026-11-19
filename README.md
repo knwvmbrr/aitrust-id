@@ -88,6 +88,8 @@ performs **no redaction**. Failure is Unavailable, never a safety clearance.
 The combined service checker and independent privacy checker are separate routes.
 [Tag independence architecture](docs/tag-failure-isolation-plan.md).
 
+For a smaller source-only download, use [PS source ZIP](https://aitrustid.com/downloads/aitrust-id-ps-source.zip) and its [operating guide](docs/ps-source-distribution.md). This package needs existing Python 3.12+ on Linux or macOS; it includes no interpreter, optional packages or service. Source integrity checks do not establish detector accuracy.
+
 [Download the source](https://github.com/knwvmbrr/aitrust-id/archive/refs/heads/main.zip)
 or clone this repository. Follow the [installation and verification guide](docs/open-validation-path.md).
 PS checks bounded command-risk patterns in text you supply; it does not certify
@@ -113,6 +115,12 @@ Markdown documents into an owner-held, versioned file. It checks source integrit
 and returns exact reference passages with Unicode spans, entirely offline.
 Run `python3 scripts/corpus.py --help`. A literal match is not an NF/FI verdict;
 those tags remain planned. No attached document is automatically uploaded.
+
+The optional [numbered-marker sidecar](docs/fi-citation-sidecar.md) associates
+literal numbered markers with documents you explicitly select from that corpus.
+It distinguishes declared, undeclared and unsupported markers. It does not prove
+a source supports a claim, fetch a reference or issue FI/NF. Subject text stays
+local; detailed bindings require a separate private export.
 
 ## Inspect independent signals offline
 
@@ -411,6 +419,17 @@ run regressions and the device suite, then `python scripts/build-tag-performance
 using the verification environment. `npm run build:site` rejects stale method-bound
 reports; `npm run verify:performance` checks all panels, static pages and empty states.
 
+## Tag workers and delivery accountability
+
+The [dated task board](docs/session-delivery-plan.md) preserves every open original
+requirement and its full acceptance. Its [machine record](docs/session-delivery.json)
+names all fourteen logical tag queues and only the workers actually assigned at
+that snapshot. The task-list lead reviews frozen deliverables; the PM owns shared
+integration. A completed component and a fully closed requirement have separate
+counters. Run `python3 scripts/session-delivery.py` to inspect them, or add
+`--check-session` to require the strict session closure goal. The board is not a
+background scheduler or a claim that dormant agents keep working.
+
 ## Change accountability
 
 Every source, public copy, policy, scope or operational-evidence change needs a
@@ -632,3 +651,21 @@ separate gates. Run `make verify-host-capture` for its focused checks.
 
 
 Tag delivery and ownership: [all14 tag scores and gaps](docs/tag-status-2026-11-16.md). Completion and independent accuracy are separate; no complete tag is independently release validated.
+
+## Connect your AI application
+
+Use the free [Python/JSON tag API and MCP plugin](docs/ai-tools.md) to call the
+implemented checks from an AI application. PS runs without Docker or an account;
+optional privacy checking stays separate. Results identify the method and evidence,
+preserve unavailable states, and do not establish safety or independent accuracy.
+
+
+Implementation and review lanes use the [agent handoff protocol](docs/agent-handoffs.md).
+It distinguishes active work, frozen evidence, integration and publication; a
+completed task or queued message is not reported as a running agent.
+
+
+The [MT wording preview](https://aitrustid.com/#person/MT) offers two explicitly
+selected on-device phrase observations. Text is not uploaded or saved; the first
+run downloads its Python runtime. It issues no MT tag or intent verdict. Read the
+[method, privacy and engineering limits](docs/mt-device-explorer.md).

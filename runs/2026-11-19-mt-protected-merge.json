@@ -1,0 +1,93 @@
+{
+  "captured_at": "2026-11-19T08:12:36.042642+00:00",
+  "pass": true,
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/128",
+  "reviewed_head": "c088bc6e60c17dc14410b14d4849a8d6f99e4ecf",
+  "merge_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+  "required_checks": [
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214616",
+      "name": "site",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214733",
+      "name": "no-egress",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214726",
+      "name": "host-config",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214706",
+      "name": "scope-plan",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214242",
+      "name": "spec",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214516",
+      "name": "change-records",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214602",
+      "name": "regressions",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214619",
+      "name": "accessibility",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214678",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214637",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214690",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS"
+    }
+  ],
+  "required_checks_passed": 11,
+  "live_publication": "runs/2026-11-19-mt-live-publication.json",
+  "live_method_controls": "runs/2026-11-19-mt-live-controls.json",
+  "independent_accuracy_release_gate_passed": false,
+  "release_gate_refusals": [
+    "Frozen independent holdout and pre-agreed method required",
+    "PS precision lower bound does not clear 0.93",
+    "PS recall lower bound does not clear 0.75",
+    "Calibration evidence missing",
+    "Human accessibility acceptance incomplete"
+  ],
+  "release_gate_ci": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44484115176/job/135423214581",
+  "mt_tag_released": false,
+  "original_completed": 132,
+  "original_open": 70,
+  "new_original_closures": 0,
+  "independent_accuracy_evidence": false,
+  "broad_distribution_clearance": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-023437-record-linux-mcp-and-fix-lab-bootstrap-ab8f6acd",
+  "recorded_at": "2026-11-19T02:34:37.589573+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6ebcbeb6aa15ea599b088c98078407703734d0f2",
+  "changed": "Record the real clean Linux MCP pass, install the locked PS parity-test framework in its own lane and integrate bounded failure-only privacy startup diagnostics.",
+  "proves": "Linux API/MCP twelve controls pass with current source hashes; MT and NF/FI Linux lanes pass; diagnostic integration fixtures pass.",
+  "limits": "PS lab dependency fix and privacy startup diagnostics require a hosted rerun. No service-health success, tag accuracy, physical device acceptance or original requirement closure.",
+  "scope_ids": [
+    "F-150",
+    "WP-VALIDATION",
+    "WP-OPERATIONS"
+  ],
+  "files": {
+    ".github/workflows/redaction-development.yml": "f4cbc6806ab7b3dcc8e493954107fab7bed0362a37fdd3164425bed22d63a440",
+    ".github/workflows/tag-lab.yml": "8c37a4c485da50d4b42b47692f9b07beedb4c7947d80dd0b8b536fc130bf49f6",
+    "docs/scope-progress.json": "7e5d6c35280e7821c8634480486d778fec4d2de5e6170b114be5984e4667ff7c",
+    "docs/scope-progress.md": "dd68e4ad5aa0329855d0abb1452d6d62d17ddfcf194365d28769b013d6730500",
+    "state.json": "dadedf5e017cd7f61ad4333fd75fe4d7a0e88c304db4e3af1fb103128ae32cf5",
+    "docs/pii-startup-diagnostics-plan.md": "ba96ec2cd120a1300642636a92f4f70c61cac42143553cf710697aae716e9a41",
+    "runs/2026-11-18-agent-tools-first-hosted.json": "eba9b4dca1d774207ab45e93c7d321e4adeb4fc729baaf7eeaa974cddd30a932",
+    "runs/2026-11-18-ai-tools-linux.json": "741b9fc12e2892b8c67088c6f8cb22a590270041c807c82e7f1c209fb48f29c2",
+    "runs/2026-11-19-pii-startup-diagnostics-controls.json": "67ac326356b1626fbb66476f19c88f4eb8b07c1be189d8d3989533f25bf6c8d6",
+    "scripts/diagnose-personal-startup.py": "4d75542132ba0eabad09a1002e5b227632a9885390c107d30ec370bb60ab2399",
+    "tests/test_personal_startup_diagnostics.py": "a13cbe510ab2b2b8bf4f37a257cfe4d640e3fd2fcbebf8807f65a8ee62041f91"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-ai-tools-linux.json",
+      "sha256": "741b9fc12e2892b8c67088c6f8cb22a590270041c807c82e7f1c209fb48f29c2"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-first-hosted.json",
+      "sha256": "eba9b4dca1d774207ab45e93c7d321e4adeb4fc729baaf7eeaa974cddd30a932"
+    },
+    {
+      "path": "runs/2026-11-19-pii-startup-diagnostics-controls.json",
+      "sha256": "67ac326356b1626fbb66476f19c88f4eb8b07c1be189d8d3989533f25bf6c8d6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T02:34:38.117291+00:00"
+    }
+  ]
+}

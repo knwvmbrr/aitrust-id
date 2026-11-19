@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-084057-retain-fi-post-publication-cleanup-gap-b5c7e98a",
+  "recorded_at": "2026-11-19T08:40:57.310171+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "280aee9921291e86851ce6557f9d3d731766408b",
+  "changed": "Hold FI publication and preserve a fresh reproduction of late cleanup failure after successful atomic output publication.",
+  "proves": "Against the frozen candidate, synthetic temporary unlink failure raises ordinary OSError while a complete new0600final file remains. Ordinary fsync failure with successful rollback is distinguished from this reproduced path.",
+  "limits": "This is a failing candidate record, not accepted release evidence. Correction and focused post-publication failure tests are required before merge; no original closure.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "docs/ci-efficiency-observation.md": "3940049f002139369212af6d213a54334f3db9c5d837f33cd1f47271b9c00eaf",
+    "runs/2026-11-19-ci-efficiency-observation.json": "9889ad82418ede6dd5629bc842a0a18ce909211d984432ac4ae825b4cc266e7e",
+    "runs/2026-11-19-fi-postcommit-gap.json": "527f1216d45def1c5d719fb5da9c9f92419ddb9576ed3b769e369ee3b927a064"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-postcommit-gap.json",
+      "sha256": "527f1216d45def1c5d719fb5da9c9f92419ddb9576ed3b769e369ee3b927a064"
+    }
+  ],
+  "checks": []
+}

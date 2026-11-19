@@ -1,0 +1,185 @@
+{
+  "captured_at": "2026-11-19T02:06:42.020635+00:00",
+  "kind": "bounded_engineering_candidate",
+  "author": "Codex - MT evidence engineering lane",
+  "source_base": "7b5ab10df9c91a4134d0d655c315b13df890e422",
+  "method": "ascii-quoted-authority-observations/1.0.0",
+  "scope_ids": [
+    "F-019c",
+    "T-MT"
+  ],
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "pass": true,
+  "focused_pytest": {
+    "argv": [
+      "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_authority_quotation.py",
+      "tests/test_language_observations.py",
+      "tests/test_mt_workflow.py"
+    ],
+    "exit_status": 0,
+    "passed": 114,
+    "reported_duration_seconds": 1.79
+  },
+  "actual_cli": {
+    "captured_at": "2026-11-19T02:05:26.259002+00:00",
+    "pass": true,
+    "method": "ascii-quoted-authority-observations/1.0.0",
+    "case_count": 22,
+    "cases": [
+      {
+        "case": "legacy_quoted_phrase_unchanged",
+        "pass": true
+      },
+      {
+        "case": "legacy_quoted_marker_unchanged",
+        "pass": true
+      },
+      {
+        "case": "quoted_mention_separated",
+        "pass": true
+      },
+      {
+        "case": "quoted_url_not_borrowed",
+        "pass": true
+      },
+      {
+        "case": "unquoted_marker_preserved",
+        "pass": true
+      },
+      {
+        "case": "mixed_contexts_independent",
+        "pass": true
+      },
+      {
+        "case": "different_quotes_no_marker_borrowing",
+        "pass": true
+      },
+      {
+        "case": "phrase_does_not_cross_quote",
+        "pass": true
+      },
+      {
+        "case": "brief_has_no_input",
+        "pass": true
+      },
+      {
+        "case": "unbalanced_quote",
+        "pass": true
+      },
+      {
+        "case": "escaped_quote",
+        "pass": true
+      },
+      {
+        "case": "curly_quotes",
+        "pass": true
+      },
+      {
+        "case": "backtick",
+        "pass": true
+      },
+      {
+        "case": "invalid_utf8",
+        "pass": true
+      },
+      {
+        "case": "nul",
+        "pass": true
+      },
+      {
+        "case": "input_bytes",
+        "pass": true
+      },
+      {
+        "case": "quote_limit",
+        "pass": true
+      },
+      {
+        "case": "phrase_limit",
+        "pass": true
+      },
+      {
+        "case": "marker_limit",
+        "pass": true
+      },
+      {
+        "case": "unit_limit",
+        "pass": true
+      },
+      {
+        "case": "private_normalized_details",
+        "pass": true
+      },
+      {
+        "case": "private_output_never_overwritten",
+        "pass": true
+      }
+    ],
+    "legacy_target_regression": {
+      "old_quote_findings": 1,
+      "old_borrowed_marker_findings": 0,
+      "target_contract_passes_legacy": false
+    },
+    "sources": {
+      "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+      "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+      "scripts/verify-authority-quotation.py": "16c3c128aebbf014efd4befca92877d0904748f8730f2bbbbb9137a7f09d869b",
+      "tests/test_authority_quotation.py": "5a9bdd12a8027f071d37fab1b625768640efad3a66308c5732334018bf09d93c",
+      "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+      "scripts/language-observations.py": "ac86473b87ce6e499c1185ce3fd81e569c99bfc4d78360af470d490fd18b0abb",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d"
+    },
+    "source_unchanged_during_execution": true,
+    "only_authored_synthetic_inputs": true,
+    "tag_assertions": 0,
+    "independent_accuracy_evidence": false,
+    "isolated_linux": false,
+    "network_namespace_checked": false,
+    "limit": "Local executable regression controls; no MT release, semantic attribution, quote endorsement or model accuracy."
+  },
+  "preserved_before_controls": {
+    "quoted_phrase": {
+      "subject": "The training example says \"Experts agree\".",
+      "state": "OBSERVATIONS",
+      "finding_count": 1,
+      "marked_count": 0
+    },
+    "quoted_marker": {
+      "subject": "Experts agree; the quoted example is \"https://example.invalid\".",
+      "state": "NO_SUPPORTED_PATTERN",
+      "finding_count": 0,
+      "marked_count": 1
+    },
+    "ordinary_marker": {
+      "subject": "Experts agree; see https://example.invalid.",
+      "state": "NO_SUPPORTED_PATTERN",
+      "finding_count": 0,
+      "marked_count": 1
+    }
+  },
+  "legacy_target_contract_failure": {
+    "target_expectation_pass": false,
+    "quoted_phrase_expected_outside_count": 0,
+    "quoted_phrase_actual_legacy_count": 1,
+    "quoted_marker_expected_outside_count": 1,
+    "quoted_marker_actual_legacy_count": 0
+  },
+  "tag_assertions": 0,
+  "independent_accuracy_evidence": false,
+  "production_mt_workflow_changed": false,
+  "global_scope_completion_changed": false,
+  "network_namespace_checked": false,
+  "limitations": [
+    "Authored synthetic controls on this Mac only; not an independent holdout or release validation.",
+    "ASCII double-quote lexical context only; no endorsement, semantic attribution, nesting or negation inference.",
+    "No new MT production assertion, tag release, model or public endpoint."
+  ]
+}

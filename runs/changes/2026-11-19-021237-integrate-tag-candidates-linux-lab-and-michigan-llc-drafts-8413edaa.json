@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-021237-integrate-tag-candidates-linux-lab-and-michigan-llc-drafts-8413edaa",
+  "recorded_at": "2026-11-19T02:12:37.615954+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a6e6abd37b9d0b979b1cf8e365c3b6ccd483f85a",
+  "changed": "Integrate independently delivered MT quotation and NF/FI claim coverage components; repair repeated-match API schema and encoded-execution wording; configure separate scheduled Linux lanes; prepare a distinct Michigan LLC document set.",
+  "proves": "Actual API/MCP controls pass after two debugger findings; 73 integration tests across new components pass; local lab controls pass; nine LLC pages and thirteen operations pages rendered and inspected.",
+  "limits": "No parent tag released, independent labels acquired, Linux scheduled run completed, account connected, social post sent, legal filing executed or original requirement closed. Remaining original requirements:70.",
+  "scope_ids": [
+    "F-150",
+    "WP-INTEGRATIONS",
+    "WP-GOVERNANCE",
+    "WP-VALIDATION",
+    "WP-COMMUNITY"
+  ],
+  "files": {
+    ".github/workflows/manifest-inspection.yml": "ebf62a07be33371643908054749859d721ee03a9828313aee27b6de9d3509304",
+    ".github/workflows/redaction-development.yml": "82334c96f4657d4c369a03a4bc93a33cdb707ea41c6bb6476e8ee14e83010f25",
+    ".github/workflows/social-drafts.yml": "f67321c8ec9702f2662223307d67dd24f37b312325352d01d4b3931c33509d9f",
+    ".gitignore": "1dc1f61a7605046f9750d87416f7f24064d2c04c4e45fc9d7cbba7200f631441",
+    "README.md": "3763c0bef16fe543cefaf6d469d30f40af3f9584d224c814be7f44f848ba3e89",
+    "docs/legal/README.md": "3ff70d0c8914a2a1a6e459a55fa6ba8bd10ab35c357bccebd58f362bba4602fe",
+    "docs/legal/reviewed-corrections.md": "eaeb349aa6c1aad4e17e21affd7826843bde599b921a6bb7b935f03560186160",
+    "docs/nli-references.md": "4b8d4595f61975acfe70916d749c96c4c16060a3a3eba605c93fbd8dc27d96cc",
+    "docs/scope-progress.json": "8a71e82c05229b423a05a2c2aab2fc7a9ebba94363a5ed22cca15c2ae62a37cd",
+    "docs/scope-progress.md": "a5986f5d50c581bf859121e8a65ebcc69315f9e8ce84b232c761ec726c3cd0de",
+    "eval/revalidation.json": "19d6a569bd20919e954e0feecace9796f5c79a2ecda14dc3870ccb94307d56f2",
+    "research/nli/references.py": "11b82d35eeb12cc299c65d59ab2c5fcc96118a36911604157476f98842b2c657",
+    "scripts/check-nli-references.py": "1c3b1f624ca7d1acd0ef5072b1f80670984c6546d50b025c168cc632d3109cc8",
+    "scripts/verify-route-boundaries.py": "47f9768de2806c12ac7af34eb9b113429b97a209c93dbab6285fcf52f15a8f0d",
+    "site/scripts/render-reference.mjs": "327ddfb493e5d5c0b2979d2542bafa8f6475d91c194fc011e1a248ef6f763290",
+    "state.json": "4668e3d433b4b323a5fc564330723f8f19070fa121090632d6f1ce429a7db492",
+    ".github/workflows/ai-tools.yml": "31e472ba454e9093549b0168234ba8dcac7b98d527d4835131f880d27e60617c",
+    ".github/workflows/tag-lab.yml": "a1196fe341b543fa38ea6be808b654453e8d91605d7856e48f813230500228f6",
+    "communications/accounts.json": "464d3680d875c647b90ac4809297418721492843b3093225d1f564a4ede1b4de",
+    "communications/releases/agent-tools-preview.json": "7fe2f4abf87d8fd88770058969a194fa96c8d432070cf06b3c61e37b36e2b00a",
+    "docs/ai-tool-plugin-plan.md": "80380fd607c85955c3ede5163f129d4af12f87cbfd7cd3f94c20cda5a4129c5a",
+    "docs/ai-tools.md": "4e2ca5c583f680d1339fd6f418c5cfbb6c9eee6978f945bfe1aa78e355e37abe",
+    "docs/authority-quotation-plan.md": "2975aa6314ea45f837d5571ef555470b82b71853054fbf3d29b0fe01963b7874",
+    "docs/authority-quotation-result.md": "e9de5ad1e186d7b4760159e4e3ded3f2b6803e6b27c76dc97301925788a47019",
+    "docs/authority-quotation.md": "cd7339f4727188da92d32bdaae1f23c552a452586f055f5640230aa52cc916d4",
+    "docs/communications-plan.md": "9723368bfe8dfb7ced7abc74be68e5b0e5a857dedd1eb3d2ff7445f5676d6b11",
+    "docs/legal/execution-packet.md": "3b3ef1d2f0fa361dc381f10802a6c8331c22ba96557ecdaa96bf90c8470b749a",
+    "docs/legal/michigan-llc-packet.md": "6010005a7e26ccc6bc49ac24bbc44da7681ee2cde189d1dc9c7d0697a2baabf7",
+    "docs/reference-claim-coverage-plan.md": "5dccc5fcd12d1d99901c3b2cdf1d95f52c48735148da275bbbb7714ff1b72505",
+    "docs/reference-claim-coverage-result.md": "e56870bf388ee0f50c3f6e3e3d7ea5fdacee80855dd46524eab0bd28b0ca714e",
+    "docs/social-launch-kit.md": "ffa7bb6f2584b9ebc9a7e5ff0e9fbdfc33032a29918840bd6b8d0b550ce482c4",
+    "docs/tag-safety-use-cases.json": "631d1fdd4fcc89a4032d7ea62f4cfb3a8c624eea729785d2b4f3ac51850eb000",
+    "docs/tag-safety-use-cases.md": "3d148a5231ccece289f5aea51b5c63ea4a09001bca2c409e48139b9bb1d94b0a",
+    "docs/tag-status-2026-11-18.md": "c557bf371f27afd2019f3cda66236db6a70d24c7f3bbbb789aaa4b38ec4cad2a",
+    "docs/virtual-tag-lab.md": "1003245a3710cdc0d143261177b7323986288632fe17e4b60e901be9e276741a",
+    "integrations/ai-tools/check-text.input.schema.json": "78bf99eb5a0c2f5bdb90528b43af0dfa7b45804f251dc618f3d3a77da4b1623b",
+    "integrations/ai-tools/check-text.output.schema.json": "54a3d0330e4ecd4eb9b7f65cde9492d45cd8b6c32b82f6d83bc707ea31c42610",
+    "integrations/ai-tools/function-tools.json": "a69301e18521fb975f13f718fb332400c739ccd7af76720502e9e6ec0567d00a",
+    "integrations/mcp/requirements.in": "e6c1d29fe87f6e388e1bc35a791364b788f5452ab0524f8b452084e2cf569400",
+    "integrations/mcp/requirements.lock": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea",
+    "runs/2026-11-18-ai-tools-mac-debugged.json": "6b335a58ce68c504c4bdbe3f68f92a4c683873dd0a0dc68c18944a8c540c5cf1",
+    "runs/2026-11-18-ai-tools-mac-final.json": "b0144bce791f4ab6cc088f5cdaaa2f7bcf806bd55eb67a8073fd5f4e52556a6c",
+    "runs/2026-11-18-ai-tools-mac-repeated-evidence-fixed.json": "a6c7e6c0b400200e8cc85e58ed426180fa736f9201e14e3adc15381d9f99c69c",
+    "runs/2026-11-18-ai-tools-mac.json": "81c7a70bdf811365185ec490f10b93c3fc4b126a64d445f98a00d3c4530f9ce0",
+    "runs/2026-11-18-authority-quotation-candidate.json": "d8a812a89e413f0562260b5a9e09b36fa6ed9d2298b69b0ba78a20fa7130e18d",
+    "runs/2026-11-18-legal-execution-packet.json": "59edeb32e6fe9173fc466a84fdd6451f9c577d92e21ff9a93c4b850e21c039b0",
+    "runs/2026-11-18-michigan-llc-packet.json": "f40c30aadeed0c63bb50313e434da0059dd7340ac5a90140628a58100f758f71",
+    "runs/2026-11-18-reference-claim-coverage.json": "0a785b6a9aa702e1ba46b66afcb2493d6a1da7d4d0a0f5fb1f67597effc0fead",
+    "runs/2026-11-18-release-review-queue.json": "ca72b33391f660a35a34b2cebc284bb14e4546a87a2b6a8fda055e94d229424b",
+    "runs/2026-11-18-virtual-tag-lab-local.json": "d8919737130a5212372b55e706056d86cfd46de4b17cef1aa5a47f457a36913c",
+    "scripts/ai-tools-server.py": "1b07224d2f809de4e5da19c606bd5f9900706fc7fd5ccec61e1351d12bf5f8c0",
+    "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+    "scripts/release-announcements.py": "0d9b169c39420a680f6f47737ed294c34e78ce632140ae94d0cc7611e4943dc7",
+    "scripts/tag-api.py": "5d716e4db502e468dabcefba77e6d4f82605f23f57e3b8951a312461faec924a",
+    "scripts/verify-ai-tools.py": "9a9f0903989123b82290c04ed5367fb2e3547a396d91450332df8a53c499e4e3",
+    "scripts/verify-authority-quotation.py": "16c3c128aebbf014efd4befca92877d0904748f8730f2bbbbb9137a7f09d869b",
+    "tests/test_ai_tag_api.py": "2b216d365bbb7222b1887dc711c10bca7946df886e35d2c98d71e533a763f57e",
+    "tests/test_ai_tools_mcp.py": "2ccb5ddbea55767d5cebb07e9032382dfc1cfb072861e972217228e9a7a7198a",
+    "tests/test_authority_quotation.py": "5a9bdd12a8027f071d37fab1b625768640efad3a66308c5732334018bf09d93c",
+    "tests/test_reference_claim_coverage.py": "d574bf99d4b862fcff67956cdb051817bca913497a3236ae7e39fb1c09f6c942",
+    "tests/test_release_announcements.py": "817f149726a38ce7027ce3d5b0b9f7b08f591ab8de1bf3be513df15421dc98f4",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-ai-tools-mac-debugged.json",
+      "sha256": "6b335a58ce68c504c4bdbe3f68f92a4c683873dd0a0dc68c18944a8c540c5cf1"
+    },
+    {
+      "path": "runs/2026-11-18-michigan-llc-packet.json",
+      "sha256": "f40c30aadeed0c63bb50313e434da0059dd7340ac5a90140628a58100f758f71"
+    },
+    {
+      "path": "runs/2026-11-18-virtual-tag-lab-local.json",
+      "sha256": "d8919737130a5212372b55e706056d86cfd46de4b17cef1aa5a47f457a36913c"
+    },
+    {
+      "path": "runs/2026-11-18-authority-quotation-candidate.json",
+      "sha256": "d8a812a89e413f0562260b5a9e09b36fa6ed9d2298b69b0ba78a20fa7130e18d"
+    },
+    {
+      "path": "runs/2026-11-18-reference-claim-coverage.json",
+      "sha256": "0a785b6a9aa702e1ba46b66afcb2493d6a1da7d4d0a0f5fb1f67597effc0fead"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T02:12:38.070211+00:00"
+    }
+  ]
+}

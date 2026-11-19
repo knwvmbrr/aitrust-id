@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-034530-retain-linked-notice-precondition-repair-13d795a3",
+  "recorded_at": "2026-11-19T03:45:30.778100+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "changed": "Recorded linked notice-inventory and generated-public-projection refusals and selected the fresh actual observation chain in state.",
+  "proves": "All current notice and nested-runtime consistency preconditions now pass on actual observations; prior failures remain in the execution history.",
+  "limits": "Affected protocol and website source-bound revalidation and required CI still pending; no expanded clearance.",
+  "scope_ids": [
+    "F-057",
+    "F-150",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "runs/2026-11-19-notice-and-projection-revalidation-repair.json": "410af875bc54f050b39d48f8ca11f1197a6c1aa66aed9cd5cefd5af41384eefb",
+    "state.json": "6894e3d5c7c7edc2cde0601a87e0bf440bfc23800d26d7bec0caffb4c8cb99c3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-notice-and-projection-revalidation-repair.json",
+      "sha256": "410af875bc54f050b39d48f8ca11f1197a6c1aa66aed9cd5cefd5af41384eefb"
+    },
+    {
+      "path": "runs/2026-11-19-current-runtime-notice-observations.json",
+      "sha256": "64fcc1b49ee490353fcded66327bfcc76eafa5f32aaf64b2087a818e50383a06"
+    }
+  ],
+  "checks": []
+}

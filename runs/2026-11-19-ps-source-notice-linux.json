@@ -1,0 +1,82 @@
+{
+  "format": "ai-trust-id-ps-source-linux-operation/v1",
+  "captured_at": "2026-11-19T06:09:01.794799+00:00",
+  "pass": true,
+  "artifact_sha256": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+  "artifact_bytes": 130542,
+  "member_count": 10,
+  "source_member_count": 9,
+  "applicable_project_notice_retained": true,
+  "control_source_count": 13,
+  "source_hashes": {
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "tools/ps_source_distribution.py": "39cc9b5e092b8c0d26a58c7e31a44a7d48a708524f819b77a2549f4ff94794c6",
+    "scripts/export-ps-source.py": "7ee020a6d3f2d585e7e8f7e370c5604bea5f78fc97cba0f9f5bdfa93b9e696e3",
+    "eval/dependency-policy.json": "85a36d74190d6ad77b47a19731b50ce07fe2fc81572f009348befb89ae48cdcb"
+  },
+  "source_commit_reference": "324db5a83ad6883551d5baeaab0ec2793bea50be",
+  "source_snapshot_is_selected_bytes": true,
+  "platform": "linux",
+  "python_version": "3.13.5",
+  "non_root": true,
+  "uid": 1000,
+  "isolated_network_namespace": true,
+  "only_loopback_interface": true,
+  "python_flags": {
+    "isolated": 1,
+    "no_site": 1,
+    "dont_write_bytecode": 1,
+    "no_site_packages": true,
+    "site_loaded": false
+  },
+  "real_default_policy_verified_before_extraction": true,
+  "injected_route_check": false,
+  "optional_nli_and_ios_routes_remain_refused": true,
+  "extracted_source_actual_cases": [
+    {
+      "expected": "FINDING",
+      "actual": "FINDING",
+      "exit": 0,
+      "input_sha256": "ca739edbf97fcc02415abdd008bc7f4b952c6200f2743e143d6fc8a256f254d1",
+      "input_executed": false,
+      "independent_accuracy_evidence": false
+    },
+    {
+      "expected": "NO_FINDING",
+      "actual": "NO_FINDING",
+      "exit": 0,
+      "input_sha256": "11b22645a4df677bd6720ef0a419a41ff35d0f3ca9a97c38296ef24b4781230e",
+      "input_executed": false,
+      "independent_accuracy_evidence": false
+    }
+  ],
+  "reconstructed_zip_identical": true,
+  "source_unchanged": true,
+  "minimal_source_control_only": true,
+  "packages_installed": false,
+  "network_used_by_checker": false,
+  "local_docker_used": false,
+  "synthetic_inputs_only": true,
+  "original_input_executed": false,
+  "independent_accuracy_evidence": false,
+  "human_acceptance_complete": false,
+  "blanket_license_clearance": false,
+  "original_X02_complete": false,
+  "elapsed_seconds": 0.993,
+  "limits": {
+    "address_space_bytes_per_process": 536870912,
+    "cpu_seconds_per_process": 30,
+    "open_files_per_process": 64,
+    "subprocess_timeout_seconds": 30
+  },
+  "scope": "Actual Linux operation of exact PS source-only artifact with separately supplied CPython/POSIX prerequisites. No binary/runtime/platform license clearance or full tag release acceptance."
+}

@@ -1,0 +1,30 @@
+{
+  "format": "mt-device-source-manifest/v1",
+  "runtime": "314.0.7",
+  "runtime_path": "/device/runtime-314.0.7/",
+  "path": "/mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json",
+  "bundle_sha256": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750",
+  "bundle_bytes": 190794,
+  "sources": {
+    "tools/mt_device.py": "68f7ceaf6e2d87e0f5babf58534954d3c28a2bad85b1728734f31682d219166b",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb"
+  },
+  "methods": {
+    "urgency": "english-context-observations/1.1.0",
+    "authority": "ascii-quoted-authority-observations/1.0.0"
+  },
+  "normalization_id": "NFC-Unicode-15.0.0/v1",
+  "max_codepoints": 8000,
+  "max_bytes": 32000
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "component": "NF cosine record canonical-binding defect",
+  "base_commit": "2386283ab3b3ef52668400b8c00197a760e6e8de",
+  "source_sha256": "16c4af14a48fdb5ef86757e44ed05e9bb3a22e518bf8f2b4d4d298bc57fe1214",
+  "synthetic_only": true,
+  "cases": [
+    {
+      "case": "forged_score",
+      "corrupted_current_bound_record_accepted": true
+    },
+    {
+      "case": "omitted_matches",
+      "corrupted_current_bound_record_accepted": true
+    }
+  ],
+  "cause": "Range, order and span validation did not replay canonical cosine values or ensure complete canonical match list.",
+  "claims": {
+    "fixed": false,
+    "accuracy_or_scope_completion": false
+  }
+}

@@ -1167,9 +1167,9 @@ References are not claims that the entire package is done.
 
 **Access/cost:** Free personal capability; organization administration priced separately only after acceptance.
 
-**Decision gate:** Entity, mark and revenue decisions require owner/professional review; preparatory work proceeds without filing.
+**Decision gate:** Michael selected an existing revocable living trust as intended sole owner of a manager-managed Michigan operating LLC. Trust authority, formation, tax/legal fit and execution remain private prerequisites. A future standards entity or certification-mark owner is separately unselected; no foundation-owned business is adopted.
 
-**Existing references:** [GOVERNANCE.md](../GOVERNANCE.md), [DECISIONS.md](../DECISIONS.md), [site/src/policies.js](../site/src/policies.js). References establish only their stated test/proposal scope, not completion of this whole package.
+**Existing references:** [GOVERNANCE.md](../GOVERNANCE.md), [DECISIONS.md](../DECISIONS.md), [site/src/policies.js](../site/src/policies.js), [docs/legal/michigan-llc-packet.md](../docs/legal/michigan-llc-packet.md), [runs/2026-11-18-owner-trust-and-presentation-direction.json](../runs/2026-11-18-owner-trust-and-presentation-direction.json). References establish only their stated test/proposal scope, not completion of this whole package.
 
 ### WP-OPERATIONS
 

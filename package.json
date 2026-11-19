@@ -65,8 +65,21 @@
     "hash-reports": "python3 scripts/hash-reports.py",
     "verify:hash-reports": "python3 scripts/verify-hash-reports.py",
     "verify:hash-reports-evidence": "python3 scripts/verify-hash-reports-evidence.py",
-    "verify:seo": "node --test tests/seo-metadata.mjs && node scripts/verify-seo.mjs",
-    "verify:seasonal-theme": "node scripts/verify-seasonal-theme.cjs"
+    "verify:seo": "node scripts/verify-seo.cjs",
+    "verify:seasonal-theme": "node scripts/verify-seasonal-theme.cjs",
+    "verify:dependency-policy": "python3 scripts/verify-dependency-policy.py",
+    "verify:esbuild-source": "python3 scripts/verify-esbuild-cohort.py",
+    "verify:rolldown-source": "python3 scripts/verify-rolldown-cohort.py",
+    "verify:c2pa-source": "python3 scripts/verify-c2pa-cohort.py",
+    "verify:nli-notices": "python3 scripts/verify-nli-license-cohort.py",
+    "build:mt-device": "python3 scripts/build-mt-device.py",
+    "test:mt-device": "python3 -m pytest tests/test_mt_device.py -q && node --test tests/mt-device-client.mjs",
+    "verify:mt-client": "node scripts/verify-mt-client.cjs",
+    "build:hp-device": "python3 scripts/build-hp-device.py",
+    "test:hp-device": "python3 -m pytest tests/test_hp_device.py -q && node --test tests/hp-device-client.mjs",
+    "verify:hp-site": "node scripts/hp-site-controls.cjs",
+    "verify:delivery": "python3 scripts/session-delivery.py",
+    "check:session": "python3 scripts/session-delivery.py --check-session"
   },
   "devDependencies": {
     "playwright": "1.62.1",

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-054934-bind-ps-download-browser-acceptance-ee421b8a",
+  "recorded_at": "2026-11-19T05:49:34.634889+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4ae7a14d1738211969bbc9faca041c3afbf03b40",
+  "changed": "Update catalogue acceptance to distinguish the small PS source ZIP from the full local-service repository and require the isolated Python command; place PS download instructions beside their own checker.",
+  "proves": "The current browser rejection identified the former two-identical-download assertion. The corrected verifier parses and retains the full-service route while requiring a dedicated PS download and no-redaction disclosure.",
+  "limits": "Syntax and explicit route assertions are recorded; fresh complete browser execution and protected publication remain pending. No requirement closure or accuracy claim.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "WP-SITE"
+  ],
+  "files": {
+    "README.md": "e984a68e754b282a0d5a3e20aebf2b5fb3e07dfd7290145fbd481c41469c957c",
+    "scripts/verify-site.cjs": "ea40f84efba2d9eb228ddd24cb9b6f901bf116362ee5e4698688394d24968995"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T05:49:34.856246+00:00"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-081236-record-live-independent-mt-wording-preview-5eb800bf",
+  "recorded_at": "2026-11-19T08:12:36.084343+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+  "changed": "Record the protected deployment and actual live operation of both independent private MT wording observations.",
+  "proves": "Eleven required engineering CI checks passed. All 313 public artifacts match the reviewed build at both delivery origins (626 matches); live ordinary-CSP checks pass both input-bound methods, privacy, enlarged-text layout and missing-MT-chunk isolation from PS.",
+  "limits": "The separate accuracy/accessibility release gate still refuses release. No MT tag, independent accuracy, physical iPhone/VoiceOver acceptance, full dependency clearance or original requirement closure. All 202 original IDs and 132 complete/70 open remain.",
+  "scope_ids": [
+    "T-MT",
+    "F-019a",
+    "F-019c",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-19-mt-live-controls.json": "a8748a265341fcfdaa46db5feb26de89b5048c240bb089e81d6c93792224e5bf",
+    "runs/2026-11-19-mt-live-publication.json": "592466c53ecd6aec337f2064f795432939a846769dfb24a46bdebdcd9217ddfb",
+    "runs/2026-11-19-mt-protected-merge.json": "60970137bc6974b14dfc3d209d8655352ae1fcba5dcf4d20c8f8d0d0cbe9c26b",
+    "state.json": "9b5e90f54f2357f0b24a2f47bab824cdba482d41dff483ff288a78136d03746c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-live-publication.json",
+      "sha256": "592466c53ecd6aec337f2064f795432939a846769dfb24a46bdebdcd9217ddfb"
+    },
+    {
+      "path": "runs/2026-11-19-mt-live-controls.json",
+      "sha256": "a8748a265341fcfdaa46db5feb26de89b5048c240bb089e81d6c93792224e5bf"
+    },
+    {
+      "path": "runs/2026-11-19-mt-protected-merge.json",
+      "sha256": "60970137bc6974b14dfc3d209d8655352ae1fcba5dcf4d20c8f8d0d0cbe9c26b"
+    }
+  ],
+  "checks": []
+}

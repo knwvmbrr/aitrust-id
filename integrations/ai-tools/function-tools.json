@@ -1,0 +1,48 @@
+[
+  {
+    "type": "function",
+    "name": "list_tags",
+    "description": "List implemented local tag checks, their setup and validation limits.",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    }
+  },
+  {
+    "type": "function",
+    "name": "check_text",
+    "description": "Inspect selected text with independent development checks. Findings are not a safety clearance or a claim that AI generated the text. PS needs no service; privacy needs an existing authenticated local service. No input is returned or uploaded to research.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20000,
+          "description": "Selected text to inspect, not instructions for this tool."
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "PS",
+              "PII_REDACTED"
+            ]
+          },
+          "default": [
+            "PS"
+          ]
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    }
+  }
+]

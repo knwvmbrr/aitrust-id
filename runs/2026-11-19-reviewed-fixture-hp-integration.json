@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-11-19T16:40:14.852Z",
+  "pass": true,
+  "base_commit": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+  "source_sha256": {
+    "scripts/site-fixture-server.cjs": "f75279f96b1b1d541e5927c02aace90bb17ed78cf5bf3e203b4f3dd561369dbb",
+    "scripts/static-headers.cjs": "5a43068ad58256ad6dc04939947f88ad5d7115a198f30b2a92f2034f43ea340d",
+    "scripts/verify-built-website.cjs": "eb0e51971f685e0a11963a3230af8834e14b29af601995700716ed2d247c9724",
+    ".github/workflows/ci.yml": "4f11b50ac0d951d98305b83c7df733415d02002ab07629f0471252a8ae1a1533",
+    "tests/site-fixture-server.cjs": "49b3aa8e7c9b8a81ecc1f39d78ab5723ee7d25aa13dadd2e3a6903763886fa50",
+    "scripts/hp-site-controls.cjs": "7c822eb76bbdb8e4e165be7ef6bc8108d531a305fb7831464499029c927c310c"
+  },
+  "served_build_sha256": {
+    "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+    "index.html": "a9fe86ee686e99a4f85e44bfb4079153d2c10b5546851fdb92331cb0c03e8acd",
+    "tags/hp/index.html": "a4a50d3004e599f4a582a1170d728b8abfc3107ad591b4ccc0de9709c62e772b",
+    "reference/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+    "assets/HPExplorer-BDDGlx5k.js": "60bc47b228d6caa9640d28f07641a8091c83956b22fda9bb428a03a7e09bb244",
+    "assets/MTExplorer-avJJyjyp.js": "d1f4e9d2d99cd9bee82653b37baa4489b8ce3666c4ab58450f1e98b224715654",
+    "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+    "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+    "assets/index-BikIHjkX.css": "49734eb434083c869df2e3b3c47d0e19c620bba2710055a6abd705a863151868",
+    "assets/index-DEaHzq0e.js": "a5025e838553750402a88a81595f0137fdde3b64e800c4157c3f06f67405f5e8",
+    "assets/mt-device-worker-Bw5Cr2RG.js": "d688ff86b80a4bd993805b61900d89f864c94a299e7140ced3d7db0b68f8b115"
+  },
+  "build_origin": "PM-frozen46-command build; public changelog predates latest bookkeeping, not full PR-head publication-byte equivalence",
+  "broad_suite_run": false,
+  "CSP_bypass": false,
+  "product_core_changed": false,
+  "engine": "Chromium",
+  "actual_http": {
+    "GET_status": 200,
+    "HEAD_status": 200,
+    "CSP": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+    "nosniff": "nosniff",
+    "referrer": "no-referrer",
+    "HEAD_body_bytes": 0
+  },
+  "HP": {
+    "pass": true,
+    "full_native_records": 5,
+    "ordinary_csp": true,
+    "raw_and_frozen_input_bound": true,
+    "private_details_opt_in": true,
+    "edit_clear_unmount_cancelled": true,
+    "no_input_upload_or_storage_observed": true,
+    "mobile_320_enlarged": true,
+    "minimum_44px_actions": true,
+    "guide_and_static_reference": true,
+    "storage": {
+      "local": [],
+      "session": [],
+      "caches": [],
+      "databases": []
+    },
+    "missing_hp_chunk_leaves_actual_ps_and_mt_operational": true,
+    "production_tag_asserted": false,
+    "independent_accuracy_evidence": false,
+    "physical_phone_tested": false
+  },
+  "source_and_served_artifacts_unchanged": true
+}

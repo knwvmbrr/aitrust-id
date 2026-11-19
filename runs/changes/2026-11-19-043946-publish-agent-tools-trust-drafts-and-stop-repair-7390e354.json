@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-043946-publish-agent-tools-trust-drafts-and-stop-repair-7390e354",
+  "recorded_at": "2026-11-19T04:39:46.339045+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+  "changed": "Record protected PR125 merge and exact live publication of local agent tools, tag research candidates, trust-owned LLC drafts and the host launch stop repair.",
+  "proves": "All 11 required hosted checks passed; 304 reviewed files matched on each of two HTTPS origins, and the original main checkout synchronized with all 12 unrelated untracked files preserved.",
+  "limits": "This follow-up records the already deployed source. Original scope remains 132 complete and 70 open; no legal formation, independent tag validation, physical phone acceptance or social posting is claimed.",
+  "scope_ids": [
+    "F-075",
+    "F-096",
+    "F-150",
+    "F-160",
+    "WP-GOVERNANCE",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "state.json": "2d79b77b86c5704bbd5726f1f42c51d67af578a742819032b4e92e06355a6570",
+    "runs/2026-11-19-agent-tools-trust-live-publication.json": "442fff3f184a263d104f2c891b37ffd75bd68c90278ff50c94583ab3f248d337",
+    "runs/2026-11-19-agent-tools-protected-merge.json": "3c4daa221f84efb9e9c2f016670fa78b9a82f564f35c35dbd1dba389770d5103"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+      "sha256": "442fff3f184a263d104f2c891b37ffd75bd68c90278ff50c94583ab3f248d337"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-protected-merge.json",
+      "sha256": "3c4daa221f84efb9e9c2f016670fa78b9a82f564f35c35dbd1dba389770d5103"
+    }
+  ],
+  "checks": []
+}

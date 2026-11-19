@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-091653-fi-current-source-ownership-proof-6bf1f56a",
+  "recorded_at": "2026-11-19T09:16:53.420114+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "99982c1d006b67c71d5541c90d44b13fe5eaf4e3",
+  "changed": "Record fresh FI ownership and publication CLI verification against the frozen corrected opaque-target source without changing source, documentation or tests.",
+  "proves": "All 23 existing actual isolated-Python macOS ownership and uncertainty CLI controls pass on source commit 99982c1 with all ten selected input hashes unchanged before and after execution.",
+  "limits": "Bookkeeping-only proof alignment; the focused suite was not rerun and historical receipts are preserved. No FI tag, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-19-fi-current-source-ownership-macos.json": "0113aabea3b22ba14e662a42d4289109a1477b99afe3dd7f86392792e2f57239"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-current-source-ownership-macos.json",
+      "sha256": "0113aabea3b22ba14e662a42d4289109a1477b99afe3dd7f86392792e2f57239"
+    }
+  ],
+  "checks": []
+}

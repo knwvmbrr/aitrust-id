@@ -1,12 +1,12 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T13:29:24.551179+00:00",
-  "active_increment": "All six named iPhone workflows and simulator removal passed on local iOS 26.2 and hosted iOS 27.2. The hosted unsigned archive verified 36 resources. Protected Share signing, TestFlight and physical acceptance are open. Original scope is 132 complete and 70 open.",
+  "updated": "2026-11-19T17:36:26.910670+00:00",
+  "active_increment": "Independent HP/NF methods and task-list accountability published.132originals complete,70open; nine scoped jobs complete. Next authorized scope work remains in the preserved queues.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
-    "Physical iPhone and Android install/offline checks; phone screen-reader review; native Share integrations remain future scope",
+    "Physical iPhone and Android Share/lifecycle/offline/accessibility acceptance remains pending; engineering builds and the owner-only TestFlight build are separate evidence.",
     "Independent held-out ground truth, accepted sampling and evaluation policy",
     "Human screen-reader and outside-user install/removal evaluation",
     "Broader live ChatGPT compatibility across regeneration, multi-response and vendor updates",
@@ -36,17 +36,17 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-06-host-protected-publication.json",
+    "evidence": "runs/2026-11-19-fi-live-publication.json",
     "remaining": [
       "Human screen-reader review",
-      "Native optional model-tool integration unverified",
+      "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
       "DNSSEC and DMARC rollout remain unverified",
       "Self-hosted community and private research application gates remain open",
       "Search Console ownership verification, sitemap submission and actual Google indexing checks"
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://abe4f780.aitrust-id.pages.dev",
+    "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-17-runtime-notices-publication.json",
+    "publication_evidence": "runs/2026-11-19-fi-live-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -98,7 +98,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-10-14-research-http-live-browser.json",
+    "verification": "runs/2026-11-19-fi-citation-opaque-website.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -315,7 +315,7 @@
     "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
     "deployment": "https://842da8d4.aitrust-id.pages.dev",
-    "source_commit": "24ec1ff5a365441ffe19b772c7121664af77b12b",
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -324,7 +324,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-10-14-research-http-live-publication.json",
+    "publication": "runs/2026-11-19-fi-live-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -792,13 +792,13 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-17T22:48:27.698232+00:00",
+    "audited_at": "2026-11-19T15:41:06.148336+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
-    "enhancements": 11,
+    "enhancements": 13,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
@@ -808,7 +808,7 @@
     "source_commit": "0033207b3df5374958619108bf75d81b3e079f17",
     "public_workflow_evidence": "runs/2026-10-11-authenticated-live-workflows.json",
     "latest_measurement_publication": "runs/2026-11-09-pan-publication.json",
-    "latest_increment": "docs/app-store-readiness.md",
+    "latest_increment": "docs/scope-60-execution.md",
     "completed_subtasks": 3,
     "open_subtasks": 114,
     "target_open_records": 0,
@@ -850,11 +850,17 @@
     "latest_increment_publication": "runs/2026-11-17-runtime-notices-publication.json",
     "published_source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
     "latest_increment_candidate_ids": [
-      "F-019a",
-      "F-025"
+      "F-057",
+      "X-02"
     ],
     "intermediate_target_open_records": 60,
-    "intermediate_remaining_closures": 10
+    "intermediate_remaining_closures": 10,
+    "latest_component_evidence": [
+      "runs/2026-11-19-tag-components-integrated.json",
+      "runs/2026-11-19-hp-production-site-final.json",
+      "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "runs/2026-11-19-nf-source-evidence-linux.json"
+    ]
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1094,7 +1100,8 @@
     "publication": "runs/2026-11-10-private-tools-publication.json",
     "public_catalogue": "runs/2026-11-10-private-tools-live-site.json",
     "public_policies": "runs/2026-11-10-private-tools-live-policies.json",
-    "current_verification": "runs/2026-11-12-hidden-email-reviewed-boundaries.json"
+    "current_verification": "runs/2026-11-12-hidden-email-reviewed-boundaries.json",
+    "current_evidence": "runs/2026-11-19-agent-tools-host-stop-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1134,15 +1141,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-17-runtime-notices-PS.json",
-    "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-17-ios-split-protocol.json",
-    "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-18-android-reconciled-website.json",
+    "PS": "runs/2026-11-19-fi-citation-PS.json",
+    "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
+    "protocol": "runs/2026-11-19-fi-citation-opaque-protocol.json",
+    "extension": "runs/2026-11-19-fi-citation-extension.json",
+    "website": "runs/2026-11-19-fi-citation-opaque-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T13:29:24.551179+00:00",
+  "updated_at": "2026-11-19T17:36:26.910670+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1212,14 +1219,11 @@
     "owner_decision": "runs/2026-10-13-historical-reproducibility-owner-decision.json"
   },
   "latest_runtime_publication": {
-    "source_commit": "544f52ca3613c6f3fbe69b879f059e21c147a2f9",
-    "preview": "https://642cc51a.aitrust-id.pages.dev",
-    "evidence": "runs/2026-11-12-hidden-email-publication.json",
-    "all_artifacts_verified_per_origin": 293,
-    "origins_verified": 3,
-    "live_catalogue": "runs/2026-11-12-hidden-email-live-site.json",
-    "live_workflows": "runs/2026-11-12-hidden-email-live-workflows.json",
-    "live_policies": "runs/2026-11-12-hidden-email-live-policies.json",
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "preview": "https://5d24e1c8.aitrust-id.pages.dev",
+    "evidence": "runs/2026-11-19-fi-live-publication.json",
+    "all_artifacts_verified_per_origin": 315,
+    "origins_verified": 2,
     "primary_unrelated_files_preserved": 12,
     "full_requirements_closed": []
   },
@@ -1236,10 +1240,10 @@
     "positive_acceptance": "runs/2026-10-10-required-ci-positive-acceptance.json"
   },
   "dependency_license_audit": {
-    "status": "three_observed_linux_images_pass_pinned_official_spdx_schema_and_selected_consistency; unsigned; incomplete_license_and_client_coverage",
+    "status": "fresh_three_linux_amd64_images_scanned_current_inventory_and_spdx_checks_pass_unsigned_license_and_client_coverage_incomplete",
     "package_occurrences": 424,
     "manifest": "eval/dependencies/runtime-sbom.json",
-    "evidence": "runs/2026-10-11-runtime-license-inventory.json",
+    "evidence": "runs/2026-11-19-runtime-license-inventory.json",
     "license_cleared": false,
     "release_signed": false,
     "spdx_standard_evidence": "runs/2026-10-10-spdx-standard-inventory.json",
@@ -1251,7 +1255,8 @@
     "website_revalidation": "runs/2026-10-10-spdx-website-revalidation-repaired.json",
     "precondition_diagnosis": "runs/2026-10-10-target25-revalidation-order.json",
     "hosted_source_evidence": "runs/2026-10-10-spdx-protected-merge.json",
-    "readme_review_evidence": "runs/2026-10-10-spdx-readme-current-render.json"
+    "readme_review_evidence": "runs/2026-10-10-spdx-readme-current-render.json",
+    "fresh_actual_scan": "runs/2026-11-19-runtime-inventory-rescan.json"
   },
   "dependency_automation": {
     "status": "protected_source_merged; codeowners_accepted; all_ten_actual_update_jobs_succeeded; proposal_held_by_required_checks",
@@ -1371,7 +1376,9 @@
     "current_boundaries": "runs/2026-10-11-revocation-current-boundaries.json",
     "publication": "runs/2026-10-11-revocation-publication.json",
     "protected_merge": "runs/2026-10-11-offline-status-protected-merge.json",
-    "authenticated_source": "runs/2026-10-11-offline-status-download-timing-confirmed.json"
+    "authenticated_source": "runs/2026-10-11-offline-status-download-timing-confirmed.json",
+    "current_supplied_history_comparison": "runs/2026-11-18-offline-revocation-comparison.json",
+    "current_selected_witness_observation_controls": "runs/2026-11-18-revocation-witness-key-identity.json"
   },
   "offline_key_recovery": {
     "implemented": true,
@@ -1660,7 +1667,8 @@
     "current_capabilities": "runs/2026-10-11-notices-current-capabilities.json",
     "current_boundaries": "runs/2026-10-11-notices-checkout-boundaries.json",
     "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
-    "website_publication": "runs/2026-10-11-notices-publication.json"
+    "website_publication": "runs/2026-10-11-notices-publication.json",
+    "current_fresh_image_notice_observations": "runs/2026-11-19-current-runtime-notice-observations.json"
   },
   "metadata_storage_controls": {
     "status": "synthetic_only_component",
@@ -1990,7 +1998,7 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "developer_share_workflow_passes_physical_acceptance_open",
+    "status": "internal_testflight_build_assigned_testing_physical_acceptance_open",
     "requirement": "N-013",
     "percent_complete": 80,
     "workflow_proof": "runs/2026-11-17-split-native-share-workflow.json",
@@ -2016,8 +2024,8 @@
     "workflow_current_source_pass": true,
     "publication_pending": false,
     "signing_attempt": "runs/2026-11-17-current-ios-signing-attempt.json",
-    "current_candidate_apple_validation": false,
-    "current_candidate_uploaded": false,
+    "current_candidate_apple_validation": true,
+    "current_candidate_uploaded": true,
     "historical_hosted_ci": {
       "pass": true,
       "run_id": 42655612677,
@@ -2074,7 +2082,23 @@
       "failed_stage": "cleanup",
       "owned_simulator_removed": false,
       "evidence": "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json"
-    }
+    },
+    "current_signed_archive": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+    "current_apple_validation": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+    "current_testflight_upload": "runs/2026-11-18-ios-testflight-internal-upload.json",
+    "testflight_processing_verified": true,
+    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-owner-build-testing.json",
+    "app_store_connect_internal_build_visible": true,
+    "testflight_build_status": "Testing",
+    "testflight_tester_access_verified": true,
+    "testflight_owner_group_membership_verified": true,
+    "testflight_build_assigned_to_owner_group": true,
+    "latest_testflight_owner_group_evidence": "runs/2026-11-18-testflight-owner-build-testing.json",
+    "current_testflight_compliance_inputs": "runs/2026-11-18-ios-testflight-compliance-inputs.json",
+    "current_software_workflow_evidence": "runs/2026-11-19-current-notices-native-share-workflow.json",
+    "current_software_workflows_passed": 6,
+    "current_software_runtime": "iOS26.2 Simulator",
+    "physical_phone_acceptance_complete": false
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2107,7 +2131,8 @@
     ],
     "full_python_evidence": "runs/2026-10-12-native-notice-repaired-full-suite.json",
     "direct_packaging_all_notices_bound": true,
-    "direct_packaging_repair_evidence": "runs/2026-10-12-native-notice-direct-repair.json"
+    "direct_packaging_repair_evidence": "runs/2026-10-12-native-notice-direct-repair.json",
+    "current_observation_chain": "runs/2026-11-19-current-runtime-notice-observations.json"
   },
   "editorial_workflow": {
     "profile": "owner-editorial-review/v1",
@@ -2713,13 +2738,13 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Source-bound complete-input Linux setup and ten actual failure controls pass; PR72 publication verified",
+    "status": "Current 27-input Linux clean-clone setup, authenticated pipeline, ten actual failure controls and exact original staging restoration passed; protected publication pending.",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
     "collection_enabled": false,
     "independent_release_validated": false,
-    "evidence": "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
+    "evidence": "runs/2026-11-18-agent-tools-clean-setup-linux.json",
     "cache_scope": "Installed usable Podman and pinned dependency caches; not a blank-host installer",
     "human_acceptance_complete": false,
     "physical_phone_tested": false,
@@ -2940,7 +2965,8 @@
     "current_website_receipt": "runs/2026-10-15-native-accepted-website.json",
     "retained_website_refusal": "runs/2026-10-15-native-current-website.json",
     "source_commit": "42c9aba74b80ee2766904727cdaa81d381010e74",
-    "protected_merge": "runs/2026-10-15-native-protected-merge.json"
+    "protected_merge": "runs/2026-10-15-native-protected-merge.json",
+    "current_observation_chain": "runs/2026-11-19-current-runtime-notice-observations.json"
   },
   "current_capture_attempt": "runs/2026-10-15-current-capture-paused-observation.json",
   "quiet_paused_checks": {
@@ -2997,10 +3023,10 @@
       "macOS",
       "Linux"
     ],
-    "controls_per_os": 19,
+    "controls_per_os": 20,
     "evidence": [
-      "runs/2026-11-06-host-capture-final-macos.json",
-      "runs/2026-11-06-host-capture-final-linux.json"
+      "runs/2026-11-18-host-stop-launch-macos.json",
+      "runs/2026-11-19-host-stop-launch-linux.json"
     ],
     "guide": "docs/host-capture.md",
     "source_changes_stop_capture": true,
@@ -3011,10 +3037,17 @@
     "independent_security_review": false,
     "human_acceptance": false,
     "independent_accuracy_evidence": false,
-    "current_engineering_evidence": "runs/2026-11-06-host-release-protocol.json",
+    "current_engineering_evidence": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
     "foreground_job_control_verified": true,
     "cross_repository_output_refused": true,
-    "protected_publication": "runs/2026-11-06-host-protected-publication.json"
+    "protected_publication": "runs/2026-11-19-agent-tools-protected-merge.json",
+    "prior_os_evidence": [
+      "runs/2026-11-06-host-capture-final-macos.json",
+      "runs/2026-11-06-host-capture-final-linux.json"
+    ],
+    "launch_stop_handoff_verified": true,
+    "launch_control_negative_evidence": "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json",
+    "precise_prior_ci_process_state_proven": false
   },
   "browser_ci_installation": {
     "status": "local_policy_checks_pass; corrected_hosted_execution_pending",
@@ -3052,10 +3085,10 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-12-hidden-email-publication.json",
-    "merge_commit": "544f52ca3613c6f3fbe69b879f059e21c147a2f9",
+    "evidence": "runs/2026-11-19-fi-protected-merge.json",
+    "merge_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
     "publicly_verified": true,
-    "required_checks_passed": 22
+    "required_checks_passed": 11
   },
   "scope_target_current": {
     "records": 202,
@@ -3066,7 +3099,8 @@
     "ledger": "docs/scope-progress.json",
     "intermediate_target_open": 60,
     "intermediate_closures_needed": 10,
-    "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues."
+    "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues.",
+    "immediate_target_source": "docs/session-delivery.json"
   },
   "organization_directory": {
     "status": "clock_skew_fence_repaired; current_real_provider_acceptance_and_live_publication_verified",
@@ -3121,28 +3155,21 @@
   },
   "production_publication": {
     "status": "live_and_verified",
-    "source_commit": "f75b56a429218d64cf781fa2c6efb268890a987d",
-    "deployment_url": "https://abe4f780.aitrust-id.pages.dev",
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-17-runtime-notices-publication.json",
-    "metadata_only_followup": true,
-    "meaning": "The exact merged static application artifacts passed comparison on both the owned domain and the Cloudflare deployment URL.",
+    "evidence": "runs/2026-11-19-fi-live-publication.json",
+    "protected_merge": "runs/2026-11-19-fi-protected-merge.json",
+    "matching_artifacts": 630,
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
-    "app_store_uploaded": false,
-    "app_store_released": false,
-    "latest_engineering_increment": {
-      "captured_at": "2026-11-17T12:27:44.932Z",
-      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
-      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
-      "primary_url": "https://aitrustid.com",
-      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
-      "matching_artifacts": 592,
-      "independent_release_validated": false
-    }
+    "public_app_store_released": false,
+    "formation_filed": false,
+    "metadata_only_followup": true,
+    "meaning": "Records the actual implementation deployment. Later operations records remain in Git and do not rewrite the deployed implementation changelog."
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -3347,6 +3374,91 @@
       "evidence": "runs/2026-11-17-independent-evidence-publication.json",
       "matching_artifacts": 592,
       "independent_release_validated": false
+    },
+    {
+      "replaced_at": "2026-11-19T06:29:50.372502+00:00",
+      "previous_production_publication": {
+        "status": "live_and_verified",
+        "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+        "deployment_url": "https://335346d2.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+        "protected_merge": "runs/2026-11-19-agent-tools-protected-merge.json",
+        "matching_artifacts": 608,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false
+      },
+      "previous_latest_runtime_publication": {
+        "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+        "preview": "https://335346d2.aitrust-id.pages.dev",
+        "evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+        "all_artifacts_verified_per_origin": 304,
+        "origins_verified": 2,
+        "primary_unrelated_files_preserved": 12,
+        "full_requirements_closed": []
+      }
+    },
+    {
+      "replaced_at": "2026-11-19T08:12:36.042642+00:00",
+      "previous_production_publication": {
+        "status": "live_and_verified",
+        "source_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
+        "deployment_url": "https://1e3d6ed3.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-19-ps-source-live-publication.json",
+        "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json",
+        "matching_artifacts": 614,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false
+      },
+      "previous_latest_runtime_publication": {
+        "source_commit": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
+        "preview": "https://1e3d6ed3.aitrust-id.pages.dev",
+        "evidence": "runs/2026-11-19-ps-source-live-publication.json",
+        "all_artifacts_verified_per_origin": 307,
+        "origins_verified": 2,
+        "primary_unrelated_files_preserved": 12,
+        "full_requirements_closed": []
+      }
+    },
+    {
+      "replaced_at": "2026-11-19T09:46:19.427195+00:00",
+      "previous_production_publication": {
+        "status": "live_and_verified",
+        "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+        "deployment_url": "https://ddae87b2.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-19-mt-live-publication.json",
+        "protected_merge": "runs/2026-11-19-mt-protected-merge.json",
+        "matching_artifacts": 626,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false,
+        "metadata_only_followup": true,
+        "meaning": "Records the verified implementation deployment; subsequent operations records remain in Git and do not rewrite the deployed implementation changelog."
+      },
+      "previous_latest_runtime_publication": {
+        "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+        "preview": "https://ddae87b2.aitrust-id.pages.dev",
+        "evidence": "runs/2026-11-19-mt-live-publication.json",
+        "all_artifacts_verified_per_origin": 313,
+        "origins_verified": 2,
+        "full_requirements_closed": []
+      }
     }
   ],
   "directory_rollover_test_clock": {
@@ -3462,16 +3574,40 @@
     "readiness": "runs/2026-11-12-choice-between-current-readiness.json"
   },
   "agent_delivery": {
-    "plan": "docs/quarterly-brand-and-agent-plan.md",
+    "plan": "docs/session-accountability-plan.md",
     "integration_owner": "Codex PM",
     "specialist_lanes": [
-      "web camouflage",
-      "native branding",
-      "SEO"
+      "HP on-device literal detail explorer",
+      "NF explicit claim/passage observations",
+      "independent task-list and source review"
     ],
-    "tag_lanes": "Separate contracts and evidence per tag; not all currently staffed",
+    "tag_lanes": "14 named logical queues; bounded independent workers in waves, not14 continuously running bots",
     "proprietary_assistant": "planned evaluation track only; no trained model or collection activated",
-    "heavy_validation_policy": "One local native UI or browser validation workload at a time; agents may continue source review. Separate remote CI machines remain independent."
+    "heavy_validation_policy": "One local native UI or browser validation workload at a time; agents may continue source review. Separate remote CI machines remain independent.",
+    "handoff_protocol": "docs/agent-handoffs.md",
+    "previous_plan": "docs/quarterly-brand-and-agent-plan.md",
+    "board": "docs/session-delivery.json",
+    "reader_board": "docs/session-delivery-plan.md",
+    "task_list_lead": "/root/seo",
+    "assignment_snapshot_at": "2026-11-19T17:26:45.647724+00:00",
+    "active_tag_workers_at_snapshot": 0,
+    "phase": "Protected implementation and verified public delivery complete; nine scoped jobs recorded, zero original closures.",
+    "minimum_finished_named_deliverables_per_session": 1,
+    "minimum_original_requirement_closures_per_session": 1,
+    "finished_scoped_tasks": 9,
+    "original_requirement_closures": 0,
+    "original_requirement_goal_met": false,
+    "session_goal_check": "python3 scripts/session-delivery.py --check-session",
+    "completion_is_not_accuracy": true,
+    "last_debugging_result": {
+      "source_commit": "52dd930a8ba6943177ee877146ed6a54e6304e0b",
+      "evidence": "runs/2026-11-19-hp-a11y-readiness-final.json",
+      "kind": "verifier_lazy_readiness_correction",
+      "product_or_probe_relaxation": false,
+      "original_requirement_closures": 0
+    },
+    "closeout_evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+    "final_accounting": "runs/2026-11-19-tag-bots-final-accounting.json"
   },
   "q4_web_verification": {
     "website": "runs/2026-11-16-q4-website-current.json",
@@ -3559,9 +3695,9 @@
     }
   },
   "tag_status": {
-    "recorded_at": "2026-11-16T20:47:35.175951+00:00",
-    "board": "docs/tag-status-2026-11-16.json",
-    "readable_board": "docs/tag-status-2026-11-16.md",
+    "recorded_at": "2026-11-19T17:26:45.647724+00:00",
+    "board": "docs/session-delivery.json",
+    "readable_board": "docs/session-delivery-plan.md",
     "complete_tags": 0,
     "independently_release_validated_tags": 0,
     "working_preview_tags": [
@@ -3572,18 +3708,119 @@
     "original_open_requirements": 70,
     "all_tags_concurrently_staffed": false,
     "candidate_changes_integrated": true,
-    "publication_completed_at": "2026-11-17T12:27:44.932Z",
-    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd"
+    "publication_completed_at": "2026-11-19T17:24:33.190085+00:00",
+    "published_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
+    "active_agents_checked_at": "2026-11-19T17:26:45.647724+00:00",
+    "specialist_agents_currently_running": 0,
+    "current_integration_owner": "Codex PM",
+    "active_tag_lanes": [],
+    "delivered_this_increment": {
+      "HP": "runs/2026-11-19-tag-bots-integrated-site-ready.json",
+      "NF": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "task_list_lead": "runs/2026-11-19-tag-integration-pre-pr-review.json",
+      "debugging": "runs/2026-11-19-hp-a11y-readiness-final.json"
+    },
+    "integration_status": "HP bounded browser method and NF offline source workflow published; all11required checks and exact live delivery verified. Full original tags remain unvalidated.",
+    "current_status_board": "docs/session-delivery-plan.md",
+    "previous_board": "docs/tag-status-2026-11-16.json",
+    "working_method_previews": {
+      "MT": "Published local literal wording methods; no MT tag release",
+      "HP": "Published on-device literal detail method; no HP tag release",
+      "NF": "Published offline selected-passage literal/cosine methods; no NF tag release"
+    }
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
-      "captured_at": "2026-11-17T12:27:44.932Z",
-      "source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
-      "deployment_url": "https://d604bbdf.aitrust-id.pages.dev",
-      "primary_url": "https://aitrustid.com",
-      "evidence": "runs/2026-11-17-independent-evidence-publication.json",
-      "matching_artifacts": 592,
+      "captured_at": "2026-11-19T17:24:33.190085+00:00",
+      "source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
+      "deployment_url": "https://f19cd9fe.aitrust-id.pages.dev",
+      "evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+      "matching_artifacts": 644,
       "independent_release_validated": false
+    },
+    "agent_integration": {
+      "PS": "runs/2026-11-19-agent-tools-host-stop-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-agent-tools-host-stop-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
+      "extension": "runs/2026-11-19-agent-tools-host-stop-extension.json",
+      "website": "runs/2026-11-19-agent-tools-host-stop-website.json",
+      "boundaries": "runs/2026-11-19-agent-tools-host-stop-boundaries.json",
+      "independent_accuracy_evidence": false,
+      "source_bound_checks_passed": true,
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-19-agent-tools-protected-merge.json",
+      "live_publication": "runs/2026-11-19-agent-tools-trust-live-publication.json"
+    },
+    "ps_source_distribution": {
+      "PS": "runs/2026-11-19-ps-source-notice-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-ps-source-notice-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-ps-source-notice-protocol.json",
+      "extension": "runs/2026-11-19-ps-source-notice-extension.json",
+      "website": "runs/2026-11-19-ps-source-notice-website.json",
+      "boundaries": "runs/2026-11-19-ps-source-notice-boundaries.json",
+      "independent_accuracy_evidence": false,
+      "source_bound_checks_passed": true,
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-19-ps-source-protected-merge.json",
+      "live_publication": "runs/2026-11-19-ps-source-live-publication.json"
+    },
+    "mt_cohort_integration": {
+      "PS": "runs/2026-11-19-mt-cohorts-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-mt-cohorts-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-mt-cohorts-protocol.json",
+      "extension": "runs/2026-11-19-mt-cohorts-extension.json",
+      "website": "runs/2026-11-19-mt-cohorts-website.json",
+      "boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-19-mt-protected-merge.json",
+      "live_publication": "runs/2026-11-19-mt-live-publication.json"
+    },
+    "fi_citation_integration": {
+      "PS": "runs/2026-11-19-fi-citation-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-fi-citation-opaque-protocol.json",
+      "extension": "runs/2026-11-19-fi-citation-extension.json",
+      "website": "runs/2026-11-19-fi-citation-opaque-website.json",
+      "boundaries": "runs/2026-11-19-fi-citation-opaque-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-19-fi-protected-merge.json",
+      "live_publication": "runs/2026-11-19-fi-live-publication.json"
+    },
+    "tag_bot_integration": {
+      "PS": "runs/2026-11-19-tag-bots-fixed-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-tag-bots-fixed-PII_REDACTED.json",
+      "extension": "runs/2026-11-19-tag-bots-fixed-extension.json",
+      "protocol": "runs/2026-11-19-tag-bots-fixed-protocol.json",
+      "website": "runs/2026-11-19-tag-bots-closeout-website.json",
+      "boundaries": "runs/2026-11-19-tag-bots-closeout-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": false,
+      "retained_failed_website_candidates": [
+        "runs/2026-11-19-tag-bots-website.json",
+        "runs/2026-11-19-tag-bots-corrected-website.json"
+      ],
+      "built_site_evidence": "runs/2026-11-19-tag-bots-corrected-site-ready.json",
+      "accounting_inspection_goal_is_not_release": true,
+      "correction_pending": [],
+      "failed_protected_run": 44565992666,
+      "failed_protected_head": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+      "required_pass_at_failed_head": 10,
+      "required_total": 11,
+      "current_focused_python_controls": 175,
+      "shared_fixture_controls": 10,
+      "root_cause_corrections": [
+        "NF unknown count",
+        "reviewed CI headers",
+        "exactly-once fixture descriptor cleanup"
+      ],
+      "protected_publication": "runs/2026-11-19-tag-bots-protected-merge.json",
+      "live_publication": "runs/2026-11-19-tag-bots-live-publication.json",
+      "bookkeeping_website_revalidation_pending": false
     }
   },
   "mt_evidence_workflow": {
@@ -3669,5 +3906,245 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-18-android-reconciled-boundaries.json"
+  "current_route_boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
+  "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
+  "agent_tag_tools": {
+    "status": "published_local_development_integration",
+    "implemented_by": "Codex",
+    "guide": "docs/ai-tools.md",
+    "evidence": "runs/2026-11-18-ai-tools-mac-debugged.json",
+    "mcp_protocol_checks_passed": 5,
+    "api_checks_passed": 7,
+    "callable_tags": [
+      "PS",
+      "PII_REDACTED"
+    ],
+    "public_endpoint_deployed": false,
+    "independent_accuracy_granted": false,
+    "review_defects_fixed": [
+      "Repeated signals aggregated without lost counts",
+      "Encoded execution gets accurate command-risk wording"
+    ],
+    "linux_evidence": "runs/2026-11-18-ai-tools-linux.json",
+    "publication": "runs/2026-11-19-agent-tools-protected-merge.json"
+  },
+  "release_communications": {
+    "status": "draft_queue_and_approval_validator_implemented_no_connected_accounts",
+    "guide": "docs/social-launch-kit.md",
+    "evidence": "runs/2026-11-18-release-review-queue.json",
+    "requested_handle": "AITRUSTID",
+    "handle_availability_verified": false,
+    "connected_accounts": 0,
+    "automatic_network_publication": false
+  },
+  "legal_execution_packet": {
+    "status": "unexecuted_drafts_prepared_not_counsel_cleared",
+    "source": "docs/legal/execution-packet.md",
+    "operator_decision_required": true,
+    "formation_filed": false,
+    "historical_package_fully_reviewed": false,
+    "evidence": "runs/2026-11-18-legal-execution-packet.json",
+    "michigan_llc_source": "docs/legal/michigan-llc-packet.md",
+    "michigan_llc_evidence": "runs/2026-11-18-michigan-llc-packet.json",
+    "owner_choice": "existing_revocable_living_trust_sole_member_michael_initial_manager",
+    "comparison": "runs/2026-11-18-entity-structure-comparison.json",
+    "owner_reports_current_trustee": true,
+    "trust_instrument_reviewed": false,
+    "trust_identity_public": false,
+    "current_decision": "runs/2026-11-18-owner-trust-and-presentation-direction.json",
+    "current_artifacts": "runs/2026-11-18-trust-owner-packet-artifacts.json",
+    "source_publication": "runs/2026-11-19-agent-tools-protected-merge.json"
+  },
+  "virtual_tag_lab": {
+    "status": "PS_MT_NF_FI_hosted_lanes_passed_privacy_startup_repair_proven",
+    "guide": "docs/virtual-tag-lab.md",
+    "mac_controls_passed": 329,
+    "independent_accuracy_granted": false,
+    "first_hosted_evidence": "runs/2026-11-18-agent-tools-first-hosted.json",
+    "privacy_startup_cause": "All three fresh Docker images observed protocol directory 0444 before correction; explicit 0555 traversal and nonroot module check passed with healthy actual services and replay",
+    "startup_diagnostic": "runs/2026-11-18-privacy-startup-hosted.json",
+    "current_runtime_evidence": "runs/2026-11-18-protocol-import-hosted-service.json",
+    "schedules_live_on_default_branch": true,
+    "first_default_branch_schedule_execution_verified": false
+  },
+  "prior_production_publication": {
+    "status": "live_and_verified",
+    "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
+    "deployment_url": "https://ddae87b2.aitrust-id.pages.dev",
+    "public_url": "https://aitrustid.com",
+    "evidence": "runs/2026-11-19-mt-live-publication.json",
+    "protected_merge": "runs/2026-11-19-mt-protected-merge.json",
+    "matching_artifacts": 626,
+    "scope_records": 202,
+    "completed_requirements": 132,
+    "open_requirements": 70,
+    "independent_tag_accuracy_approved": false,
+    "real_collection_enabled": false,
+    "public_app_store_released": false,
+    "formation_filed": false,
+    "metadata_only_followup": true,
+    "meaning": "Records the verified implementation deployment; subsequent operations records remain in Git and do not rewrite the deployed implementation changelog."
+  },
+  "ps_source_distribution": {
+    "status": "live_source_only_development_download_verified",
+    "artifact": "site/public/downloads/aitrust-id-ps-source.zip",
+    "sha256": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+    "bytes": 130542,
+    "source_members": 9,
+    "generated_manifest_members": 1,
+    "prerequisites": "Existing CPython 3.12+ on macOS or Linux; interpreter and OS not bundled",
+    "evidence": [
+      "runs/2026-11-19-ps-source-notice-macos.json",
+      "runs/2026-11-19-ps-source-notice-linux.json",
+      "runs/2026-11-19-ps-source-notice-staging-preserved.json"
+    ],
+    "optional_packages_required": false,
+    "independent_accuracy_evidence": false,
+    "full_original_requirement_closure": false,
+    "prior_artifact_evidence": [
+      "runs/2026-11-19-ps-source-default-policy-actual.json",
+      "runs/2026-11-19-ps-source-linux-actual.json",
+      "runs/2026-11-19-ps-source-integration.json"
+    ],
+    "retired_unpublished_candidate_sha256": "552f679a4191180a0260093ffe862eb7677b7d5b0ef8cfcd098e5e946dc8a05b",
+    "applicable_project_notice_retained": true,
+    "notice_removal_with_rehashed_policy_refused": true,
+    "public_url": "https://aitrustid.com/downloads/aitrust-id-ps-source.zip",
+    "publication": "runs/2026-11-19-ps-source-live-publication.json",
+    "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json",
+    "current_verifier_evidence": "runs/2026-11-19-ps-source-canonical-linux.json",
+    "public_artifact_bytes_unchanged_by_verifier_hardening": true
+  },
+  "dependency_conflict_policy": {
+    "profile": "technical-dependency-conflict-policy/v1",
+    "admitted_source_scope": "ps-source",
+    "registered_scopes": 14,
+    "other_scopes_blocked": 13,
+    "enforced_consumer": "scripts/export-ps-source.py",
+    "existing_preview_consumers_promoted": false,
+    "complete_project_obligations": false,
+    "legal_clearance": false
+  },
+  "dependency_source_cohorts": {
+    "status": "integrated_bounded_observations; distribution_obligations_unresolved",
+    "rolldown": {
+      "evidence": "runs/2026-11-19-rolldown-parser-correction.json",
+      "native_addons": 15,
+      "actual_archives_replayed": 16,
+      "notice_files": 2,
+      "permission_cleared": false
+    },
+    "c2pa": {
+      "evidence": "runs/2026-11-19-c2pa-parser-privacy-correction.json",
+      "packages": 10,
+      "distinct_wheels": 14,
+      "selected_slots": 20,
+      "original_texts": 70,
+      "permission_cleared": false
+    },
+    "nli": {
+      "evidence": "runs/2026-11-19-nli-cohort-engineering.json",
+      "actual_replay": "runs/2026-11-19-nli-final-header-replay.json",
+      "wheel_occurrences": 44,
+      "notice_occurrences": 88,
+      "unique_notice_texts": 40,
+      "runtime_execution_claimed_by_cohort": false,
+      "distribution_ready": false
+    },
+    "new_original_closures": 0,
+    "independent_accuracy_evidence": false,
+    "integration_evidence": "runs/2026-11-19-cohort-policy-integration.json"
+  },
+  "mt_device_preview": {
+    "status": "live_private_wording_method_preview; MT_tag_not_released",
+    "methods": {
+      "urgency": "english-context-observations/1.1.0",
+      "authority": "ascii-quoted-authority-observations/1.0.0"
+    },
+    "envelope": "mt-device-phrase-explorer/1.0.1",
+    "component": "site/src/MTExplorerSlot.jsx",
+    "evidence": [
+      "runs/2026-11-19-mt-device-browser-corrected.json",
+      "runs/2026-11-19-mt-device-correction.json"
+    ],
+    "on_device": true,
+    "default_analysis": false,
+    "input_upload_enabled": false,
+    "input_storage_enabled": false,
+    "fresh_worker_per_run": true,
+    "scoped_import_render_failure_boundary": true,
+    "exact_request_subject_binding": true,
+    "closed_result_schema": true,
+    "mt_tag_issued": false,
+    "independent_accuracy_evidence": false,
+    "physical_iphone_and_voiceover_complete": false,
+    "current_production_evidence": "runs/2026-11-19-mt-production-catalogue.json",
+    "current_accessibility_evidence": "runs/2026-11-19-mt-production-accessibility.json",
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "live_evidence": "runs/2026-11-19-fi-live-mt-controls.json",
+    "publication_evidence": "runs/2026-11-19-fi-live-publication.json"
+  },
+  "fi_citation_sidecar": {
+    "status": "public_offline_development_component; FI_tag_not_released",
+    "method": "declared-local-numbered-citations/1.0.0",
+    "source": "tools/citation_resolution.py",
+    "cli": "scripts/citation-resolution.py",
+    "evidence": "runs/2026-11-19-fi-citation-reviewed-integration.json",
+    "subject_upload_enabled": false,
+    "default_analysis": false,
+    "explicit_private_export_required": true,
+    "corpus_v1_unchanged": true,
+    "fi_tag_issued": false,
+    "semantic_source_support_established": false,
+    "independent_accuracy_evidence": false,
+    "actual_macos_cli_controls": 23,
+    "linux_execution_recorded": true,
+    "focused_component_tests": 140,
+    "postpublication_uncertainty_explicit": true,
+    "raw_output_descriptor_capture_owned": true,
+    "current_ownership_evidence": "runs/2026-11-19-fi-current-source-ownership-macos.json",
+    "current_grammar_evidence": "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+    "actual_macos_grammar_cases": 24,
+    "actual_macos_grammar_cli_commands": 48,
+    "opaque_targets_after_unsupported_labels": true,
+    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "publication_evidence": "runs/2026-11-19-fi-live-publication.json",
+    "protected_merge": "runs/2026-11-19-fi-protected-merge.json",
+    "linux_execution_scope": "Current test suite under the CI nonroot network-isolated job; not a physical-device or independent-accuracy study"
+  },
+  "operational_observations": {
+    "webkit_ci_timeout": {
+      "evidence": "runs/2026-11-19-fi-ci-device-observation.json",
+      "source_fix_claimed": false,
+      "unchanged_revision_retry_passed": true,
+      "underlying_cause_established": false
+    }
+  },
+  "independent_tag_increments": {
+    "recorded_at": "2026-11-19T15:48:48.892967+00:00",
+    "HP": {
+      "status": "reviewed_on_device_literal_method_preview; planned_HP_tag_not_released",
+      "source_commit": "262403d266d4870715e1da5b1647917bd03c37de",
+      "site_integration_source": "53ef63a1daaaed50f85cb60f8fb25747785ecf47",
+      "guide": "docs/hp-device-explorer.md",
+      "browser_evidence": "runs/2026-11-19-hp-production-site-final.json",
+      "review": "runs/2026-11-19-hp-device-independent-review.json",
+      "physical_phone_verified": false,
+      "independent_accuracy_evidence": false
+    },
+    "NF": {
+      "status": "reviewed_offline_selected_source_method; planned_NF_tag_not_released",
+      "source_commit": "ed2f0292fdba8c3644d6554234edda089dc57b03",
+      "guide": "docs/nf-source-evidence.md",
+      "macos_evidence": "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "linux_evidence": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "review": "runs/2026-11-19-nf-source-independent-review.json",
+      "independent_accuracy_evidence": false
+    },
+    "original_closures": 0,
+    "publication_pending": false,
+    "publication": "runs/2026-11-19-tag-bots-live-publication.json",
+    "published_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903"
+  },
+  "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests."
 }

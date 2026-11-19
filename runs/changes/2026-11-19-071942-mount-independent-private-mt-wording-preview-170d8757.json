@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-071942-mount-independent-private-mt-wording-preview-170d8757",
+  "recorded_at": "2026-11-19T07:19:42.923117+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "eb5321d182d33a9a92e2c5d70421dd7974d3cb9f",
+  "changed": "Mount the corrected request-bound MT wording preview through its scoped lazy/error boundary; prepare exact source/notices, publish both guides and distinguish its two observations from the planned MT tag.",
+  "proves": "72 focused adapter/builder/source-binding checks and 13 Node client groups pass. Preparation passes; the independent corrected fixture evidence retains full browser parity and corrupt-result refusals. New built-modal controls cover ordinary browser input binding, privacy, reflow and missing-chunk containment.",
+  "limits": "Actual combined production-modal execution, fresh integration receipts and protected publication are next. No MT assertion, contextual intent classification, independent accuracy or physical iPhone/VoiceOver acceptance. All original percentages and 132 complete/70 open remain unchanged.",
+  "scope_ids": [
+    "T-MT",
+    "F-019a",
+    "F-019c",
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "ced1b58defb311340ec8dc33d458b2cebcf0cd1dd1b49d213c6bbd6f7f47d82f",
+    "README.md": "cc4dd64b37f4405fa9915d6f8d3bc5756f6b02499e20821911fca33529755ae5",
+    "docs/scope-progress.json": "ef6ba0d96649487656e80ef2e8d3ae53a87ba7ecf69781dfd7f5d9787b37702d",
+    "eval/revalidation.json": "e303df9e6575a040785d55343d6fb1fbfe070f3e3dc0d4d1e6d95af09c0bbfbc",
+    "package.json": "2c340c9e12ebf8f7d8f5328a8771d6c89e37c5f58e83aa6495ef249154452ccf",
+    "runs/2026-11-19-mt-production-mount-focused.json": "28438325fc6b1849251d15d7a77351a5aa03a92b4c0635e973214c436c3f4c67",
+    "scripts/mt-site-controls.cjs": "d48937d98e4d5fa03118804f4e04f22690689805b875921bc6df34db05ec143e",
+    "scripts/verify-mt-client.cjs": "9b43b3294b707ce461080df869469e487bafbe1a05cf69940c88153b27b794af",
+    "scripts/verify-route-boundaries.py": "a3426295dac79e841c69f7c08fb4a77a29e369d225906595f1a4f48b44e40904",
+    "scripts/verify-site.cjs": "9931d3464debc4ab51a33337ced3eb86014baaaa1c1d04dd7034c9aa4e5bf592",
+    "site/index.html": "c10726d385fa0f4a33ea8a1575baf2aa03723843f0133e7a80d512bb3be76faa",
+    "site/public/reference/mt-device-explorer.md": "dad64b08d055ce89e0ea5ed1c35eac7b094be449d5eae4b09065994f09bd9896",
+    "site/public/reference/mt-evidence-workflow.md": "42f509e92a2bf011b9f5750956957018e5c42cc1aeb2f0f377d2a1ce17ea8784",
+    "site/public/reference/public-scope.json": "9ed0e0f134a5f4f03ea86295a0f30b18d709e10cf51adf6db108487fd6b19209",
+    "site/scripts/prepare.mjs": "6ae2a5b80bd923483695ff5d94fd0f7ed85f07df9f0df7726c147b3844f62b16",
+    "site/src/catalog.js": "f00353d23693e9b6e6e50da4c273a316b349a3347d6ef935532633ebcf1f93f6",
+    "site/src/main.jsx": "190dff367176a93714f5502a1281234695d27d30c6ee103e15a70b45f03e6bde",
+    "site/src/presentation.js": "45439f00ee6beb597325f153b63c62284cd110e6590428ea3c63c6fe20cd13ef",
+    "site/src/public-scope.json": "9ed0e0f134a5f4f03ea86295a0f30b18d709e10cf51adf6db108487fd6b19209",
+    "site/src/scope-manifest.json": "37ed87fb7969e6edcc54609d91bc189b0ca33d2b5083232eb86cdc97c425d7cd",
+    "site/src/usage.js": "cfd400e0517b5994a3d28942674381d9b73886ae57865cf83adc8ecde190d58e",
+    "state.json": "4010a0761bb41cd6dc9e64a973fecef679be0ab30ba82250888c4cb4455af817",
+    "tests/test_scoped_component_inputs.py": "edab7e3e0043d0269bc9fa20f2110ed0222fba403a5ac4678aecdc8af407b89c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-production-mount-focused.json",
+      "sha256": "28438325fc6b1849251d15d7a77351a5aa03a92b4c0635e973214c436c3f4c67"
+    },
+    {
+      "path": "runs/2026-11-19-mt-device-browser-corrected.json",
+      "sha256": "26644ab91ca53a16b5a2cde544248aa1b5c9d527b34b74844272aec41a30b5ea"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/mt-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T07:19:43.479081+00:00"
+    }
+  ]
+}

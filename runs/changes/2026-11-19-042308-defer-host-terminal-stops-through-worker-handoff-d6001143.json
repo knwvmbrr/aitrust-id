@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-042308-defer-host-terminal-stops-through-worker-handoff-d6001143",
+  "recorded_at": "2026-11-19T04:23:08.048042+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a78fccaa06c80302fa0f0244244629af236ae24e",
+  "changed": "Defer terminal stop signals across detached worker construction and caller ownership assignment; restore the exact parent mask before existing interruption cleanup.",
+  "proves": "Initial host-only Mac suite passed20 controls. The reviewed forced-constructor control queues SIGTSTP, SIGTTIN and SIGTTOU with a real child; removing only the launch mask in a private source copy fails all three completion controls.",
+  "limits": "Exact failed hosted process state was not captured. Source-bound final Mac and nonroot isolated Linux executions are pending. No original requirement closure, independent accuracy, human acceptance or production deployment is claimed.",
+  "scope_ids": [
+    "F-160",
+    "F-096"
+  ],
+  "files": {
+    "tools/host_capture.py": "ddc2fc186e03af052d2c7f6fc93f3506fb120d617c077135a8e665ca57485f72",
+    "tests/test_host_capture.py": "482481fcbfeedaff38a463fbb5ee7f72ae0dd61ff124096471ac933d3e5ef8af",
+    "docs/host-capture.md": "90ab5ae83e9fd253caf79ac0c0777fa125dbfafd6be775be5aa0a96d7a6fcd81",
+    "runs/2026-11-18-host-stop-launch-plan.md": "89a9481a16a1123966ea79afde0750c59fab5b2c37f033aebf31d7d2f39505cb",
+    "runs/2026-11-18-host-stop-launch-negative-control.json": "a833e9e0e043dca72fa3278b966c81fdd446fd452de3cc08aca9be0c94437014",
+    "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json": "4c200213b7b2d29e1dcfea1015133bdece496d6e7808aa492df331d36f2133fc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json",
+      "sha256": "4c200213b7b2d29e1dcfea1015133bdece496d6e7808aa492df331d36f2133fc"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "tests/test_host_capture.py",
+        "HostCapture.test_pending_terminal_stop_during_worker_launch_reaps_owned_child",
+        "-v"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T04:23:08.983922+00:00"
+    }
+  ]
+}

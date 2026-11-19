@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "component": "FI citation save post-publication defect",
+  "source_sha256": "6d7bf66d62ce68fc6c76a04c31258ed5a2c2b7fe517b7c65354b9187f36d0378",
+  "cases": [
+    {
+      "case": "unlink_after_link",
+      "ordinary_error_after_final_exists": true,
+      "complete_json": true,
+      "typed_uncertainty_available": false
+    },
+    {
+      "case": "fsync_and_failed_rollback",
+      "ordinary_error_after_final_exists": true,
+      "complete_json": true,
+      "typed_uncertainty_available": false
+    },
+    {
+      "case": "close_after_save",
+      "ordinary_error_after_final_exists": true,
+      "complete_json": true,
+      "typed_uncertainty_available": false
+    }
+  ],
+  "synthetic_fault_injection": true,
+  "ordinary_generic_refusal_claim_disproved": true,
+  "root_or_real_user_inputs_touched": false,
+  "claims": {
+    "fixed": false,
+    "full_T_FI_completion": false
+  }
+}

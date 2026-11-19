@@ -133,6 +133,32 @@ jobs:
         run: python scripts/verify-redistribution-notices.py
       - name: Verify native observations without claiming transitive or license clearance
         run: python scripts/verify-native-dependencies.py
+      - name: Enforce bounded PS source distribution and dependency conflicts
+        run: |
+          python scripts/verify-dependency-policy.py
+          python scripts/export-ps-source.py verify site/public/downloads/aitrust-id-ps-source.zip
+          python scripts/verify-esbuild-cohort.py
+          python -m pytest tests/test_dependency_policy.py tests/test_ps_source_distribution.py tests/test_esbuild_cohort.py -q
+      - name: Check bounded native and model source notices without granting clearance
+        run: |
+          python scripts/verify-rolldown-cohort.py
+          python scripts/verify-c2pa-cohort.py
+          python scripts/verify-nli-license-cohort.py
+          python -m pytest tests/test_rolldown_cohort.py tests/test_c2pa_cohort.py tests/test_nli_license_cohort.py -q
+      - name: Enforce private input-bound MT method preview contracts
+        run: |
+          python scripts/build-mt-device.py
+          python -m pytest tests/test_mt_device.py -q
+          node --test tests/mt-device-client.mjs
+      - name: Verify dated task accounting without declaring unmet session goals complete
+        run: |
+          python scripts/session-delivery.py
+          python -m pytest tests/test_session_delivery.py -q
+      - name: Keep HP device preview and NF source workers independently bounded
+        run: |
+          python scripts/build-hp-device.py
+          python -m pytest tests/test_hp_device.py tests/test_nf_source_evidence.py -q
+          node --test tests/hp-device-client.mjs
       - name: Refuse corrupted notice evidence and permission promotion
         run: python -m pytest tests/test_license_notices.py -q
       - name: Exercise independent editorial choices and private input refusals
@@ -350,13 +376,17 @@ jobs:
         run: npm run verify:device
       - name: Verify built catalogue and accessibility
         run: |
-          python3 -m http.server 5174 --bind 127.0.0.1 --directory site/dist > /tmp/site-server.log 2>&1 &
+          node --test tests/site-fixture-server.cjs
+          node scripts/site-fixture-server.cjs --directory site/dist --port 5174 > /tmp/site-server.log 2>&1 &
           site_server_pid=$!
-          trap 'kill "$site_server_pid"' EXIT
+          trap 'if kill -0 "$site_server_pid" 2>/dev/null; then kill "$site_server_pid"; fi' EXIT
+          site_server_ready=no
           for attempt in 1 2 3 4 5; do
-            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then break; fi
+            if ! kill -0 "$site_server_pid" 2>/dev/null; then cat /tmp/site-server.log; exit 1; fi
+            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then site_server_ready=yes; break; fi
             sleep 1
           done
+          if [ "$site_server_ready" != yes ]; then cat /tmp/site-server.log; exit 1; fi
           npm run verify:site
           AITRUST_SITE_URL=http://127.0.0.1:5174 npm run verify:seasonal-theme
           npm run verify:performance

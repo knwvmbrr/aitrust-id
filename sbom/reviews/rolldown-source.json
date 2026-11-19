@@ -1,0 +1,1310 @@
+{
+  "profile": "rolldown-platform-source-observations/1.0.0",
+  "captured_at": "2026-11-19T05:54:36.927606+00:00",
+  "source_commit": "f7de35f45bcd4cb8e4b6d8d11e74fbfb20b03127",
+  "status": "bounded_source_and_notice_evidence",
+  "sources": {
+    "tools/rolldown_cohort.py": "0642fece29449eabb0e7916d9802272df71a11f817c428da38ddc396015a071e",
+    "scripts/verify-rolldown-cohort.py": "520c0e60feac2c875076ee081ecf990f68d54ff76680fd4e5f49f51cb1a751d6",
+    "tests/test_rolldown_cohort.py": "3385a88ddc53431da449205d1357a6a4b4ee12a48e45d2fc07790252e08b72da",
+    "docs/rolldown-source-review.md": "e78a3b53149c201d1d5f9461f32e2999c9bd02d7eb7c9776da8015d4838331fb"
+  },
+  "selected_inputs_sha256": "0b8b6d17af8ffc861d3f1ac7e2fe008754d39c3d6f8fbcb5bdaad74fc05ba5d1",
+  "packages": [
+    {
+      "package_path": "node_modules/@rolldown/binding-android-arm-eabi",
+      "archive_sha256": "61973ad34c04878cf0ec1fbdc6b00ede0e5e7b00d4bf6ec85ca38de53d792b8f",
+      "archive_bytes": 6736333,
+      "package_json_sha256": "db7affcd6d2d1874defda543274bf6e0dde713871ed57bf0956e9276dae0797a",
+      "package_json": {
+        "name": "@rolldown/binding-android-arm-eabi",
+        "version": "1.2.13",
+        "cpu": [
+          "arm"
+        ],
+        "main": "rolldown-binding.android-arm-eabi.node",
+        "files": [
+          "rolldown-binding.android-arm-eabi.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "android"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.android-arm-eabi.node",
+        "bytes": 11656248,
+        "sha256": "e102f063625e8372fd8e7003abe2a29e2897929d0011cfed68ee8038d5f71b93",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "armv7-linux-androideabi",
+        "os": [
+          "android"
+        ],
+        "cpu": [
+          "arm"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-android-arm64",
+      "archive_sha256": "33340dadefcea9fd8eb73c8cb2c32cc21020856065c3f3da7b9cedc1ed5d2e2c",
+      "archive_bytes": 7737193,
+      "package_json_sha256": "9894efa28de86e27f4a5c37ef912ca10090593e4ff63b9ef9acc5d6aede8083d",
+      "package_json": {
+        "name": "@rolldown/binding-android-arm64",
+        "version": "1.2.13",
+        "cpu": [
+          "arm64"
+        ],
+        "main": "rolldown-binding.android-arm64.node",
+        "files": [
+          "rolldown-binding.android-arm64.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "android"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.android-arm64.node",
+        "bytes": 17740376,
+        "sha256": "8a7aa0577e7bdc03124234effb4f699469b075f50e4aa0584a0bd953e2a0b4a1",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "aarch64-linux-android",
+        "os": [
+          "android"
+        ],
+        "cpu": [
+          "arm64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-darwin-arm64",
+      "archive_sha256": "1b03e925ffdd1f952fdc76a6aebdb5a79cb64cc3f659644458f002e952443a06",
+      "archive_bytes": 7427740,
+      "package_json_sha256": "143103555918cf17e31468f5f27ebe02babb3dfe29a261eff81b050f92b0ed08",
+      "package_json": {
+        "name": "@rolldown/binding-darwin-arm64",
+        "version": "1.2.13",
+        "cpu": [
+          "arm64"
+        ],
+        "main": "rolldown-binding.darwin-arm64.node",
+        "files": [
+          "rolldown-binding.darwin-arm64.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "darwin"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.darwin-arm64.node",
+        "bytes": 16902128,
+        "sha256": "94942f7c7ac5dad56845df9cbbf68ff7207cfde4c666cfd41dd3facdb10beb26",
+        "format": "macho-or-fat-candidate"
+      },
+      "selector": {
+        "target": "aarch64-apple-darwin",
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "arm64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-darwin-x64",
+      "archive_sha256": "1252eeaf942eaa564ff77cd42f3723bdac63a2a170bae7669a3e573e9fa66d2d",
+      "archive_bytes": 7787608,
+      "package_json_sha256": "05f1fffca7072b484ce06e64af9f48d7f1efd936028bad4ba77c973a460fa4a3",
+      "package_json": {
+        "name": "@rolldown/binding-darwin-x64",
+        "version": "1.2.13",
+        "cpu": [
+          "x64"
+        ],
+        "main": "rolldown-binding.darwin-x64.node",
+        "files": [
+          "rolldown-binding.darwin-x64.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "darwin"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.darwin-x64.node",
+        "bytes": 17806856,
+        "sha256": "1409b28173623b9d0b95cc878bcd38fd5e07fefa1f30b498ac3ef21c25c12ec3",
+        "format": "macho-or-fat-candidate"
+      },
+      "selector": {
+        "target": "x86_64-apple-darwin",
+        "os": [
+          "darwin"
+        ],
+        "cpu": [
+          "x64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-freebsd-x64",
+      "archive_sha256": "d2dfe85465eff21fef45851fd1e0d5c7acf379d021fa992415326964d82ea4b0",
+      "archive_bytes": 8133467,
+      "package_json_sha256": "d6c3752d6997a1014a123516213dca04f8549e5c43328abad91d7aa44680410e",
+      "package_json": {
+        "name": "@rolldown/binding-freebsd-x64",
+        "version": "1.2.13",
+        "cpu": [
+          "x64"
+        ],
+        "main": "rolldown-binding.freebsd-x64.node",
+        "files": [
+          "rolldown-binding.freebsd-x64.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "freebsd"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.freebsd-x64.node",
+        "bytes": 19651712,
+        "sha256": "0ff58004ddd63a54392da13b1c46a779636abad89e764a89cf00a7c7808b3b33",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "x86_64-unknown-freebsd",
+        "os": [
+          "freebsd"
+        ],
+        "cpu": [
+          "x64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+      "archive_sha256": "ea21106a37ceba643e0e1cd9b9111f402481ac7a93f7febde61bb738ada110e3",
+      "archive_bytes": 7465749,
+      "package_json_sha256": "d260910ec640768d481216ab893f1c9dbf1d771a869babbabf5868c73cadfd7d",
+      "package_json": {
+        "name": "@rolldown/binding-linux-arm-gnueabihf",
+        "version": "1.2.13",
+        "cpu": [
+          "arm"
+        ],
+        "main": "rolldown-binding.linux-arm-gnueabihf.node",
+        "files": [
+          "rolldown-binding.linux-arm-gnueabihf.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-arm-gnueabihf.node",
+        "bytes": 16208748,
+        "sha256": "b188fde81a294a219cea581f77eb674f767c6ccff278a3a8b6ee68c1d2f26192",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "armv7-unknown-linux-gnueabihf",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-arm64-gnu",
+      "archive_sha256": "137b29a5fba6d1ad81235da65891a33fdc73ffdf2a22336929e6d4332640c2fd",
+      "archive_bytes": 7738867,
+      "package_json_sha256": "0ef9d77397d41905eb2609665114762366a0b48ae435d219efc9a176452b5f85",
+      "package_json": {
+        "name": "@rolldown/binding-linux-arm64-gnu",
+        "version": "1.2.13",
+        "cpu": [
+          "arm64"
+        ],
+        "main": "rolldown-binding.linux-arm64-gnu.node",
+        "files": [
+          "rolldown-binding.linux-arm64-gnu.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-arm64-gnu.node",
+        "bytes": 17632896,
+        "sha256": "a5cbc07ab76f7bf761ab8222b19b5256dcf7595b78fc0704ab6ff5e825a95d7c",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "aarch64-unknown-linux-gnu",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-arm64-musl",
+      "archive_sha256": "e0cbd4ed2133d27c16b3dd85a5afe8d328db76d9828245c3b509e4a8bd1f73fa",
+      "archive_bytes": 7758315,
+      "package_json_sha256": "8362ce348ad5c30867a90877170d9e38943fe1beecd1bf5d332c830b09c26fa6",
+      "package_json": {
+        "name": "@rolldown/binding-linux-arm64-musl",
+        "version": "1.2.13",
+        "cpu": [
+          "arm64"
+        ],
+        "main": "rolldown-binding.linux-arm64-musl.node",
+        "files": [
+          "rolldown-binding.linux-arm64-musl.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ],
+        "libc": [
+          "musl"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-arm64-musl.node",
+        "bytes": 17672576,
+        "sha256": "90effec23c0d27ef9e4c25b5f7ac1e42d6fab38f3565e4583711b356102c3266",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "aarch64-unknown-linux-musl",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "arm64"
+        ],
+        "libc": [
+          "musl"
+        ]
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+      "archive_sha256": "63a981d1c0cf179ad6e5488f6e856a6d0f9b9cc01ca3ffe86e403afd31505bcc",
+      "archive_bytes": 9034698,
+      "package_json_sha256": "7923207974e2d7092d0218fbd11153afa8792cd3a1b76ed155b52e985452959e",
+      "package_json": {
+        "name": "@rolldown/binding-linux-ppc64-gnu",
+        "version": "1.2.13",
+        "cpu": [
+          "ppc64"
+        ],
+        "main": "rolldown-binding.linux-ppc64-gnu.node",
+        "files": [
+          "rolldown-binding.linux-ppc64-gnu.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-ppc64-gnu.node",
+        "bytes": 22299040,
+        "sha256": "14269f6fd1aa5bda9594224f6b4fa307d1b7efd303e4de89104dddfe5cd75271",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "powerpc64le-unknown-linux-gnu",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "ppc64"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-s390x-gnu",
+      "archive_sha256": "b387845f9b24da121b6f11c6d75d242894e6704ed7f096c267a8759bda8838dd",
+      "archive_bytes": 8345518,
+      "package_json_sha256": "ae20ca07fed7168d789fac545ba80e1e4fa5e308a374b31c9757fbf5ae484f68",
+      "package_json": {
+        "name": "@rolldown/binding-linux-s390x-gnu",
+        "version": "1.2.13",
+        "cpu": [
+          "s390x"
+        ],
+        "main": "rolldown-binding.linux-s390x-gnu.node",
+        "files": [
+          "rolldown-binding.linux-s390x-gnu.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-s390x-gnu.node",
+        "bytes": 20856488,
+        "sha256": "51f911c3ea1031a6ec46abe0e6313cdf9315a7466dd7a7ce7c96cd95b6699274",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "s390x-unknown-linux-gnu",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "s390x"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-x64-gnu",
+      "archive_sha256": "210481d7a9e91606e57cebc8d64ee175eda2c042ad4f6369da347caf43cc874f",
+      "archive_bytes": 8180509,
+      "package_json_sha256": "1f9c52e025068eda7e6f46bb7918177998855591d8b3e6474c3d92a8fe881909",
+      "package_json": {
+        "name": "@rolldown/binding-linux-x64-gnu",
+        "version": "1.2.13",
+        "cpu": [
+          "x64"
+        ],
+        "main": "rolldown-binding.linux-x64-gnu.node",
+        "files": [
+          "rolldown-binding.linux-x64-gnu.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-x64-gnu.node",
+        "bytes": 19620096,
+        "sha256": "e2dcde1b5c90a4cfd894432f2776d66f09234e7df561fe2946d513b76743d2ee",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "x86_64-unknown-linux-gnu",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "x64"
+        ],
+        "libc": [
+          "glibc"
+        ]
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-linux-x64-musl",
+      "archive_sha256": "4cc27485f7a7a85293f11a9b590689825550065b34db6514d0ccd87fff99e2a0",
+      "archive_bytes": 8164891,
+      "package_json_sha256": "78afec595215f15c633df53611fdf8b6a056e56b2de6551720be72b37f3c3817",
+      "package_json": {
+        "name": "@rolldown/binding-linux-x64-musl",
+        "version": "1.2.13",
+        "cpu": [
+          "x64"
+        ],
+        "main": "rolldown-binding.linux-x64-musl.node",
+        "files": [
+          "rolldown-binding.linux-x64-musl.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "linux"
+        ],
+        "libc": [
+          "musl"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.linux-x64-musl.node",
+        "bytes": 19701552,
+        "sha256": "c4e26568990f7bf5c0fb899fe63ca7da80d7a5b498b1f6fa63c900f82de6f30c",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "x86_64-unknown-linux-musl",
+        "os": [
+          "linux"
+        ],
+        "cpu": [
+          "x64"
+        ],
+        "libc": [
+          "musl"
+        ]
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-openharmony-arm64",
+      "archive_sha256": "ebef90cb3e6200c7aa0dc9ada70e30e6d6af7703a17b5590af12fb9679756f5e",
+      "archive_bytes": 7689361,
+      "package_json_sha256": "ef439f874f674de7a8909d31f8617fecda0c1041c408dd8e3372ba82698fc875",
+      "package_json": {
+        "name": "@rolldown/binding-openharmony-arm64",
+        "version": "1.2.13",
+        "cpu": [
+          "arm64"
+        ],
+        "main": "rolldown-binding.openharmony-arm64.node",
+        "files": [
+          "rolldown-binding.openharmony-arm64.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "openharmony"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.openharmony-arm64.node",
+        "bytes": 17729464,
+        "sha256": "d4a7a946cf3484ee629eade5860504906d4c7196de045a3f9c54b30fa2e253b4",
+        "format": "elf"
+      },
+      "selector": {
+        "target": "aarch64-unknown-linux-ohos",
+        "os": [
+          "openharmony"
+        ],
+        "cpu": [
+          "arm64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-win32-arm64-msvc",
+      "archive_sha256": "7a4bf7d7f12f00066f50b080416722391aaceaa47d094b295ab019a5839e4771",
+      "archive_bytes": 7851321,
+      "package_json_sha256": "f7870cefc3c651c23e99b4cfd14f74f26eefaf7afe6034e08703bdeb137428e7",
+      "package_json": {
+        "name": "@rolldown/binding-win32-arm64-msvc",
+        "version": "1.2.13",
+        "cpu": [
+          "arm64"
+        ],
+        "main": "rolldown-binding.win32-arm64-msvc.node",
+        "files": [
+          "rolldown-binding.win32-arm64-msvc.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "win32"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.win32-arm64-msvc.node",
+        "bytes": 18406400,
+        "sha256": "d3fca83b1aa2efa2e7301f0fc7baa040835ff9110e826844b6cb3eda287d7d9f",
+        "format": "pe-candidate"
+      },
+      "selector": {
+        "target": "aarch64-pc-windows-msvc",
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "arm64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/@rolldown/binding-win32-x64-msvc",
+      "archive_sha256": "4be3eb3db40c945a518b977ce5c180a23337b5dbd80b25be0c60cadcb7d90491",
+      "archive_bytes": 8252358,
+      "package_json_sha256": "349cde33ec84476779296a79beb626f4cc12ed1fcd0173853bd87db1ff738e4a",
+      "package_json": {
+        "name": "@rolldown/binding-win32-x64-msvc",
+        "version": "1.2.13",
+        "cpu": [
+          "x64"
+        ],
+        "main": "rolldown-binding.win32-x64-msvc.node",
+        "files": [
+          "rolldown-binding.win32-x64-msvc.node"
+        ],
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "license": "MIT",
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/",
+          "access": "public"
+        },
+        "os": [
+          "win32"
+        ]
+      },
+      "native_member": {
+        "member": "package/rolldown-binding.win32-x64-msvc.node",
+        "bytes": 21403648,
+        "sha256": "ad8ce881caacbd746362552136cc5fd3c6fbdec9ef00e6c97ff1fb1750c32a47",
+        "format": "pe-candidate"
+      },
+      "selector": {
+        "target": "x86_64-pc-windows-msvc",
+        "os": [
+          "win32"
+        ],
+        "cpu": [
+          "x64"
+        ],
+        "libc": null
+      },
+      "bundled_notices": {},
+      "binary_executed": false
+    },
+    {
+      "package_path": "node_modules/rolldown",
+      "archive_sha256": "6609ae17a89a69e6e97acc3a1c5d5473b20b8c93ec2a3ed4d6f6bf71f691d6bf",
+      "archive_bytes": 203136,
+      "package_json_sha256": "2b7a7eb200cef2191475439e441690ac69aaf85e6677c699e7916efa2af7e8a7",
+      "package_json": {
+        "name": "rolldown",
+        "version": "1.2.13",
+        "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.",
+        "keywords": [
+          "bundler",
+          "esbuild",
+          "parcel",
+          "rolldown",
+          "rollup",
+          "webpack"
+        ],
+        "homepage": "https://rolldown.rs/",
+        "bugs": {
+          "url": "https://github.com/rolldown/rolldown/issues"
+        },
+        "license": "MIT",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/rolldown/rolldown.git",
+          "directory": "packages/rolldown"
+        },
+        "bin": {
+          "rolldown": "./bin/cli.mjs"
+        },
+        "files": [
+          "bin",
+          "cli",
+          "dist",
+          "LICENSE",
+          "THIRD-PARTY-LICENSE",
+          "!dist/*.node"
+        ],
+        "type": "module",
+        "main": "./dist/index.mjs",
+        "module": "./dist/index.mjs",
+        "types": "./dist/index.d.mts",
+        "imports": {
+          "#parallel-plugin-worker": "./dist/parallel-plugin-worker.mjs"
+        },
+        "exports": {
+          ".": "./dist/index.mjs",
+          "./config": "./dist/config.mjs",
+          "./experimental": "./dist/experimental-index.mjs",
+          "./experimental/runtime-types": {
+            "types": "./dist/experimental-runtime-types.d.ts"
+          },
+          "./experimental/runtime": {
+            "types": "./dist/experimental-runtime.d.ts",
+            "default": "./dist/experimental-runtime.mjs"
+          },
+          "./filter": "./dist/filter-index.mjs",
+          "./getLogFilter": "./dist/get-log-filter.mjs",
+          "./parallelPlugin": "./dist/parallel-plugin.mjs",
+          "./parseAst": "./dist/parse-ast-index.mjs",
+          "./package.json": "./package.json",
+          "./plugins": "./dist/plugins-index.mjs",
+          "./utils": "./dist/utils-index.mjs"
+        },
+        "publishConfig": {
+          "access": "public",
+          "registry": "https://registry.npmjs.org/"
+        },
+        "dependencies": {
+          "@oxc-project/types": "=0.153.0",
+          "@rolldown/pluginutils": "^1.0.0"
+        },
+        "devDependencies": {
+          "@emnapi/core": "2.0.0-alpha.5",
+          "@emnapi/runtime": "2.0.0-alpha.5",
+          "@napi-rs/cli": "^3.10.0",
+          "@napi-rs/wasm-runtime": "~1.2.5",
+          "@oxc-node/cli": "^0.1.0",
+          "cac": "^7.0.0",
+          "consola": "^3.4.2",
+          "emnapi": "2.0.0-alpha.5",
+          "execa": "^9.2.0",
+          "fresh-import": "^0.2.1",
+          "glob": "^13.0.0",
+          "oxc-parser": "=0.153.0",
+          "pathe": "^2.0.3",
+          "remeda": "^2.50.0",
+          "rolldown": "1.2.13",
+          "rolldown-plugin-dts": "^0.28.0",
+          "rollup": "^4.63.0",
+          "signal-exit": "4.1.0",
+          "source-map": "0.8.0",
+          "typescript": "^6.0.0",
+          "valibot": "1.5.0"
+        },
+        "napi": {
+          "binaryName": "rolldown-binding",
+          "dtsHeader": "type MaybePromise<T> = T | Promise<T>\ntype Nullable<T> = T | null | undefined\ntype VoidNullable<T = void> = T | null | undefined | void\nexport type BindingStringOrRegex = string | RegExp\nexport type BindingResult<T> = { errors: BindingError[], isBindingErrors: boolean } | T\n\n",
+          "packageName": "@rolldown/binding",
+          "targets": [
+            "aarch64-apple-darwin",
+            "aarch64-linux-android",
+            "aarch64-pc-windows-msvc",
+            "aarch64-unknown-linux-gnu",
+            "aarch64-unknown-linux-musl",
+            "aarch64-unknown-linux-ohos",
+            "armv7-linux-androideabi",
+            "armv7-unknown-linux-gnueabihf",
+            "powerpc64le-unknown-linux-gnu",
+            "s390x-unknown-linux-gnu",
+            "wasm32-wasip1-threads",
+            "x86_64-apple-darwin",
+            "x86_64-pc-windows-msvc",
+            "x86_64-unknown-freebsd",
+            "x86_64-unknown-linux-gnu",
+            "x86_64-unknown-linux-musl"
+          ],
+          "wasm": {
+            "initialMemory": 16384,
+            "browser": {
+              "fs": true,
+              "asyncInit": true,
+              "errorEvent": true
+            }
+          }
+        },
+        "engines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "optionalDependencies": {
+          "@rolldown/binding-darwin-arm64": "1.2.13",
+          "@rolldown/binding-android-arm64": "1.2.13",
+          "@rolldown/binding-win32-arm64-msvc": "1.2.13",
+          "@rolldown/binding-linux-arm64-gnu": "1.2.13",
+          "@rolldown/binding-linux-arm64-musl": "1.2.13",
+          "@rolldown/binding-openharmony-arm64": "1.2.13",
+          "@rolldown/binding-android-arm-eabi": "1.2.13",
+          "@rolldown/binding-linux-arm-gnueabihf": "1.2.13",
+          "@rolldown/binding-linux-ppc64-gnu": "1.2.13",
+          "@rolldown/binding-linux-s390x-gnu": "1.2.13",
+          "@rolldown/binding-darwin-x64": "1.2.13",
+          "@rolldown/binding-win32-x64-msvc": "1.2.13",
+          "@rolldown/binding-freebsd-x64": "1.2.13",
+          "@rolldown/binding-linux-x64-gnu": "1.2.13",
+          "@rolldown/binding-linux-x64-musl": "1.2.13"
+        },
+        "scripts": {
+          "# Scrips for binding #": "_",
+          "artifacts": "napi artifacts --cwd ./src --package-json-path ../package.json -o=../artifacts --npm-dir ../npm",
+          "build-binding": "oxnode ./build-binding.ts",
+          "build-binding:release": "pnpm build-binding --release",
+          "build-binding:profile": "pnpm build-binding --profile profile --features chrome-tracing",
+          "build-binding:wasi": "pnpm build-binding --target wasm32-wasip1-threads",
+          "build-binding:wasi:release": "pnpm build-binding --profile release-wasi --target wasm32-wasip1-threads",
+          "# Scrips for node #": "_",
+          "build-node": "node --enable-source-maps --import @oxc-node/core/register -C dev ./build.ts",
+          "build-types-check": "tsc -p ./tsconfig.check.json",
+          "build-js-glue": "pnpm run --sequential '/^build-(node|types-check)$/'",
+          "build-native:debug": "pnpm run --sequential '/^build-(binding|js-glue)$/'",
+          "build-native:release": "pnpm run --sequential '/^build-(binding:release|js-glue)$/'",
+          "build-native:profile": "pnpm run build-binding:profile && pnpm run build-js-glue",
+          "build-native:memory-profile": "pnpm run build-binding:profile --features default_global_allocator && pnpm run build-js-glue",
+          "build-wasi:debug": "TARGET='rolldown-wasi' pnpm run --sequential '/^build-(binding|binding:wasi|node)$/'",
+          "build-wasi:release": "TARGET='rolldown-wasi' pnpm run --sequential '/^build-(binding|binding:wasi:release|node)$/'",
+          "build-browser-pkg:debug": "TARGET='browser' pnpm run --sequential '/^build-(binding:wasi|node)$/'",
+          "build-browser-pkg:release": "TARGET='browser' pnpm run --sequential '/^build-(binding:wasi:release|node)$/'",
+          "# Scrips for docs #": "_",
+          "publint": "publint ."
+        }
+      },
+      "native_member": {
+        "member": "package/bin/cli.mjs",
+        "bytes": 244,
+        "sha256": "98d6df62aa3c84284db17944a2a8017f911640e9c4d3de907a9f93b467ee47c8",
+        "format": "script"
+      },
+      "selector": null,
+      "bundled_notices": {
+        "LICENSE": {
+          "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+          "bytes": 1302
+        },
+        "THIRD-PARTY-LICENSE": {
+          "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c",
+          "bytes": 2209
+        }
+      },
+      "binary_executed": false
+    }
+  ],
+  "upstream_archive": {
+    "filename": "rolldown-source.tar.gz",
+    "url": "https://codeload.github.com/rolldown/rolldown/tar.gz/f7de35f45bcd4cb8e4b6d8d11e74fbfb20b03127",
+    "final_url": "https://codeload.github.com/rolldown/rolldown/tar.gz/f7de35f45bcd4cb8e4b6d8d11e74fbfb20b03127",
+    "bytes": 6187960,
+    "sha256": "29639fa95586c660b38acb86d7ae6f5931dcee7cb91c8fd93a3c05fd6287eec0",
+    "captured_at": "2026-11-19T05:46:41.303184+00:00",
+    "publisher_signature_verified": false,
+    "archive_checksum_basis": "observed_sha256_not_independent_publisher_checksum"
+  },
+  "source_texts": [
+    {
+      "member": "LICENSE",
+      "path": "sbom/reviews/sources/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
+      "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+      "bytes": 1302
+    },
+    {
+      "member": "THIRD-PARTY-LICENSE",
+      "path": "sbom/reviews/sources/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
+      "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c",
+      "bytes": 2209
+    },
+    {
+      "member": "Cargo.toml",
+      "path": "sbom/reviews/sources/5156ce3b07843a92729f9922a8258669b72fdd433571b9bf37a39aae946fa082.txt",
+      "sha256": "5156ce3b07843a92729f9922a8258669b72fdd433571b9bf37a39aae946fa082",
+      "bytes": 14035
+    },
+    {
+      "member": "Cargo.lock",
+      "path": "sbom/reviews/sources/12c2aff1bbfe8a7f0b744d1cc32d913bb25d93f9ebbb3c039f5a30e8d510f7f4.txt",
+      "sha256": "12c2aff1bbfe8a7f0b744d1cc32d913bb25d93f9ebbb3c039f5a30e8d510f7f4",
+      "bytes": 101098
+    },
+    {
+      "member": "rust-toolchain.toml",
+      "path": "sbom/reviews/sources/8f1d138e5654698acc01fcf2e93e3d16d74a2bb7aa1f481521512f6d20756ee6.txt",
+      "sha256": "8f1d138e5654698acc01fcf2e93e3d16d74a2bb7aa1f481521512f6d20756ee6",
+      "bytes": 51
+    },
+    {
+      "member": "crates/rolldown_binding/Cargo.toml",
+      "path": "sbom/reviews/sources/e35de674aaffa81e891fcf372202c19d1f01affb05bf9412b15f5baf371766ef.txt",
+      "sha256": "e35de674aaffa81e891fcf372202c19d1f01affb05bf9412b15f5baf371766ef",
+      "bytes": 3951
+    },
+    {
+      "member": "crates/rolldown_binding/build.rs",
+      "path": "sbom/reviews/sources/3f8d314a43dbcb94b5d5154de481c60197283665dcfb1606187b7cfc52fea700.txt",
+      "sha256": "3f8d314a43dbcb94b5d5154de481c60197283665dcfb1606187b7cfc52fea700",
+      "bytes": 108
+    },
+    {
+      "member": "packages/rolldown/package.json",
+      "path": "sbom/reviews/sources/992de675144ecaabf37c3aa86a7c9e95a8f7e7faee9834aff53720226087303c.txt",
+      "sha256": "992de675144ecaabf37c3aa86a7c9e95a8f7e7faee9834aff53720226087303c",
+      "bytes": 6793
+    },
+    {
+      "member": "packages/rolldown/build-binding.ts",
+      "path": "sbom/reviews/sources/ca09cddc908ee4aac144dfce2206c95eab66ea821fed869ffbe1610fa46a08b0.txt",
+      "sha256": "ca09cddc908ee4aac144dfce2206c95eab66ea821fed869ffbe1610fa46a08b0",
+      "bytes": 1218
+    },
+    {
+      "member": ".github/workflows/reusable-release-build.yml",
+      "path": "sbom/reviews/sources/feef3bd222f59b6bb56272624c9ce65b4b658cf17646c87e205703fa799ae443.txt",
+      "sha256": "feef3bd222f59b6bb56272624c9ce65b4b658cf17646c87e205703fa799ae443",
+      "bytes": 13064
+    }
+  ],
+  "source_projection": {
+    "declared_rust_channel": "1.99.0",
+    "workspace_license": "MIT",
+    "cargo_lock_package_count": 406,
+    "cargo_lock_source_counts": {
+      "registry": 353,
+      "git": 0,
+      "workspace_or_path": 53,
+      "other": 0
+    },
+    "targets_declared": [
+      "aarch64-apple-darwin",
+      "aarch64-linux-android",
+      "aarch64-pc-windows-msvc",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-unknown-linux-musl",
+      "aarch64-unknown-linux-ohos",
+      "armv7-linux-androideabi",
+      "armv7-unknown-linux-gnueabihf",
+      "powerpc64le-unknown-linux-gnu",
+      "s390x-unknown-linux-gnu",
+      "wasm32-wasip1-threads",
+      "x86_64-apple-darwin",
+      "x86_64-pc-windows-msvc",
+      "x86_64-unknown-freebsd",
+      "x86_64-unknown-linux-gnu",
+      "x86_64-unknown-linux-musl"
+    ],
+    "binary_to_source_reproduced": false,
+    "cargo_lock_is_compiled_dependency_graph": false
+  },
+  "limits": [
+    "Native addons and package scripts were never executed.",
+    "Supplemental exact notices are preserved; prior generic notice inventory remains unchanged.",
+    "Whole-workspace Cargo lock is not a target-specific compiled dependency graph.",
+    "Source snapshots and declared toolchains do not establish binary equivalence or compiler authenticity.",
+    "Transitive/native/platform obligations and distribution source-offer assembly remain unresolved."
+  ],
+  "permission_cleared": false,
+  "release_approved": false,
+  "complete_transitive_coverage": false,
+  "reproducible_build_verified": false,
+  "publisher_signature_verified": false,
+  "actual_toolchain_verified": false
+}
