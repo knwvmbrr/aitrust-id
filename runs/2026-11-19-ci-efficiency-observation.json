@@ -1,0 +1,927 @@
+{
+  "captured_at": "2026-11-19T08:37:20.674461+00:00",
+  "kind": "ci_efficiency_observation",
+  "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44486045559",
+  "source_commit": "80088a56243779d7a3f29802fffd417baf15b13d",
+  "workflow_sha256": "ced1b58defb311340ec8dc33d458b2cebcf0cd1dd1b49d213c6bbd6f7f47d82f",
+  "developer_elapsed_seconds": 509,
+  "summed_job_duration_seconds": 1255,
+  "billing_minutes_claimed": false,
+  "jobs": [
+    {
+      "name": "regressions",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:34Z",
+      "elapsed_seconds": 15,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run pip install --require-hashes -r services/gateway/requirements.lock",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Run pip install --require-hashes -r eval/requirements.lock",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python scripts/verify-dataset-provenance.py --verify-history",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-regressions.py --output output/verification/hosted-regressions.json",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python scripts/verify-measurements.py",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "site",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:20Z",
+      "completed_at": "2026-11-19T08:23:44Z",
+      "elapsed_seconds": 504,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 4
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run pip install --require-hashes -r services/gateway/requirements.lock",
+          "elapsed_seconds": 9
+        },
+        {
+          "name": "Run pip install --require-hashes -r eval/requirements.lock",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run npm ci",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run npm ci --prefix site",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Validate source-bound redaction development charts and isolated tag states",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run npm run verify:enterprise",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run npm run build:site",
+          "elapsed_seconds": 9
+        },
+        {
+          "name": "Verify truthful search descriptions and crawlable static pages",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Bind prepared runtime bytes to retained upstream members",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Exercise native engine resources, freshness and private-output refusals",
+          "elapsed_seconds": 14
+        },
+        {
+          "name": "Exercise current-route deployment boundaries and violating profiles",
+          "elapsed_seconds": 6
+        },
+        {
+          "name": "Prepare the signed canonical Ubuntu archive on disposable CI",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium webkit",
+          "elapsed_seconds": 243
+        },
+        {
+          "name": "Check the private agent view without source or tag overclaims",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Review actual detailed browser export without disabling personal checking",
+          "elapsed_seconds": 12
+        },
+        {
+          "name": "Reproduce the current synthetic service record through the browser export",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Offline observations and optional receipt controls",
+          "elapsed_seconds": 6
+        },
+        {
+          "name": "Device method parity, offline and private input boundaries",
+          "elapsed_seconds": 48
+        },
+        {
+          "name": "Verify built catalogue and accessibility",
+          "elapsed_seconds": 125
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:28Z",
+      "elapsed_seconds": 9,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python3 scripts/verify-device-build-matrix.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:18Z",
+      "completed_at": "2026-11-19T08:15:42Z",
+      "elapsed_seconds": 24,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-scope-plan.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/scope-progress.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-accountability.py",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Bind the actual clean Linux setup without granting human/tag acceptance",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-decisions.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Keep the approved metadata pilot disabled until operational gates pass",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-signals.py --check",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Resolve legacy group jobs without completing their detectors",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Exercise independent offline observation CLIs without executing inspected programs",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Exercise independently supervised framing checks without issuing MT",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Exercise bounded quantitative CLI privacy and failure controls",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Exercise bounded nominal agreement without real labels or automatic submission",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python scripts/verify-project-controls.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Verify unsigned observed runtime SBOM identity",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Verify accountable ownership and bounded dependency proposals",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Refuse missing roots and unsafe dependency policy changes",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-vocabulary.py",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Install hashed conformance test dependencies",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Keep approved conformance software separate from outside-human acceptance",
+          "elapsed_seconds": 8
+        },
+        {
+          "name": "Validate source-bound service timing and refuse altered measurements",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run make verify-primitives",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python scripts/verify-reserved-subjects.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-hash-disclosure.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "host-config",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:57Z",
+      "elapsed_seconds": 38,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run sudo apt-get update && sudo apt-get install -y shellcheck",
+          "elapsed_seconds": 4
+        },
+        {
+          "name": "Run make host-build",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Run shellcheck -e SC1091 deploy/host/bootstrap.sh deploy/host/deploy.sh deploy/host/verify.sh",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run make backup-build",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Refuse unsafe restore boundaries before secrets or filesystem changes",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run shellcheck -e SC1091 deploy/backup/bootstrap.sh deploy/backup/deploy.sh deploy/backup/verify.sh deploy/backup/schedule.sh deploy/backup/source-monitor.sh",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Verify bounded replacement-host evidence without production credentials",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run make alerts-build",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Run shellcheck deploy/alerts/install.sh",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run make notifications-build",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Run shellcheck deploy/notifications/install.sh deploy/notifications/prepare-edge.sh deploy/notifications/activate-edge.sh",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "change-records",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:37Z",
+      "elapsed_seconds": 18,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Exercise change record failure cases",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Require records for the actual push or PR changes",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:20:08Z",
+      "elapsed_seconds": 289,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run pip install --require-hashes -r services/gateway/requirements.lock",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Run pip install --require-hashes -r eval/requirements.lock",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run sudo unshare -n sh -c 'ip link set lo up && exec setpriv --reuid \"$1\" --regid \"$2\" --clear-groups --no-new-privs --inh-caps=-all --ambient-caps=-all --bounding-set=-all -- \"$3\" -m pytest tests --ignore=tests/test_route_boundaries.py -q' sh \"$(id -u)\" \"$(id -g)\" \"$(command -v python)\"",
+          "elapsed_seconds": 275
+        },
+        {
+          "name": "Run echo \"network-isolated evaluator tests complete\"",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "gates",
+      "conclusion": "failure",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:32Z",
+      "elapsed_seconds": 13,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run pip install --require-hashes -r services/gateway/requirements.lock",
+          "elapsed_seconds": 4
+        },
+        {
+          "name": "Run pip install --require-hashes -r eval/requirements.lock",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Require actual accessibility release evidence",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Assess statistical evidence even when accessibility refuses release",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "spec",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:18:01Z",
+      "elapsed_seconds": 162,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run pip install --require-hashes -r services/gateway/requirements.lock",
+          "elapsed_seconds": 6
+        },
+        {
+          "name": "Run pip install --require-hashes -r eval/requirements.lock",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python -m pytest tests/test_gateway_integration.py -q",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Keep tag routes independent under real HTTP saturation and worker failures",
+          "elapsed_seconds": 31
+        },
+        {
+          "name": "Exercise protected restore generation and namespace refusal cases",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Refuse invalid experimental confidence without granting evidence standing",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Preserve PS findings while refusing unnecessary context work",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Enforce commercial-interest recusal without asserting real governance",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Require actual private hash-report intake acceptance",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Require current actual fleet acceptance for its software closure",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python scripts/verify-verdict-boundaries.py",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python scripts/verify-dependencies.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Check preserved component notice identity without claiming legal clearance",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Verify native observations without claiming transitive or license clearance",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Enforce bounded PS source distribution and dependency conflicts",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Check bounded native and model source notices without granting clearance",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Enforce private input-bound MT method preview contracts",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Refuse corrupted notice evidence and permission promotion",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Exercise independent editorial choices and private input refusals",
+          "elapsed_seconds": 34
+        },
+        {
+          "name": "Check selected public asset notices without granting clearance",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Validate bound inventories with the pinned official SPDX schema",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Refuse corrupted SPDX inventories and altered schema trust inputs",
+          "elapsed_seconds": 4
+        },
+        {
+          "name": "Verify optional local-model pins and failure controls without downloading weights",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Verify selective reference revision without a truth or freshness verdict",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Enforce caller-declared reference windows without a freshness or tag claim",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Exercise private synthetic feedback analysis without collecting participant data",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Refuse research collection and bound synthetic transport independently of tag routes",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Execute parsed feedback and research CI commands to detect folded arguments",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Compare private selected revisions without an origin or knowledge verdict",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Bind the complete organization audit workflow to actual Linux execution",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Refuse unexpected browser CI archive or runner configuration",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Exercise foreground host capture without granting managed deployment or tag release",
+          "elapsed_seconds": 10
+        },
+        {
+          "name": "Refuse unsafe synthetic backup execution before database creation",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Check distinct caller-bound choice framing without a manipulation verdict",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Refuse altered source snapshots and unsafe signing policy",
+          "elapsed_seconds": 2
+        },
+        {
+          "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Exercise private agent output on a clean Linux runner",
+          "elapsed_seconds": 12
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Exercise real build-phase children and refuse partial success",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Exercise inactive stream boundaries without capture permissions",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Verify real public timestamp evidence and refuse tampering without network",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python -m pytest tests/test_assertion_formats.py tests/test_http_privacy.py -q",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:28Z",
+      "elapsed_seconds": 9,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run python3 scripts/verify-device-build-matrix.py",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:19Z",
+      "completed_at": "2026-11-19T08:15:27Z",
+      "elapsed_seconds": 8,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run python3 scripts/verify-device-build-matrix.py",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "success",
+      "started_at": "2026-11-19T08:15:20Z",
+      "completed_at": "2026-11-19T08:18:06Z",
+      "elapsed_seconds": 166,
+      "steps": [
+        {
+          "name": "Set up job",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "elapsed_seconds": 7
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "elapsed_seconds": 5
+        },
+        {
+          "name": "Run npm ci",
+          "elapsed_seconds": 3
+        },
+        {
+          "name": "Prepare the signed canonical Ubuntu archive on disposable CI",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "elapsed_seconds": 93
+        },
+        {
+          "name": "Run npm run verify:axe-gate",
+          "elapsed_seconds": 22
+        },
+        {
+          "name": "Run npm run verify:a11y-probes",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run npm run verify:consumer",
+          "elapsed_seconds": 1
+        },
+        {
+          "name": "Run npm run verify:extension-privacy",
+          "elapsed_seconds": 27
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "elapsed_seconds": 0
+        },
+        {
+          "name": "Complete job",
+          "elapsed_seconds": 0
+        }
+      ]
+    },
+    {
+      "name": "source-provenance",
+      "conclusion": "skipped",
+      "started_at": "2026-11-19T08:23:44Z",
+      "completed_at": "2026-11-19T08:23:44Z",
+      "elapsed_seconds": 0,
+      "steps": []
+    }
+  ],
+  "optimized_execution_demonstrated": false,
+  "all_existing_controls_retained": true,
+  "new_original_closures": 0
+}

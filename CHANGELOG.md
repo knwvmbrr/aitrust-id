@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-084057-retain-fi-post-publication-cleanup-gap-b5c7e98a
+
+Recorded 2026-11-19T08:40:57.310171+00:00 · Contributor: Codex · change
+
+- **Changed.** Hold FI publication and preserve a fresh reproduction of late cleanup failure after successful atomic output publication.
+- **Evidence.** Against the frozen candidate, synthetic temporary unlink failure raises ordinary OSError while a complete new0600final file remains. Ordinary fsync failure with successful rollback is distinguished from this reproduced path. [Change record](./runs/changes/2026-11-19-084057-retain-fi-post-publication-cleanup-gap-b5c7e98a.json).
+- **Not claimed.** This is a failing candidate record, not accepted release evidence. Correction and focused post-publication failure tests are required before merge; no original closure.
+
+
+### 2026-11-19-083752-record-measured-ci-provisioning-bottleneck-eac75827
+
+Recorded 2026-11-19T08:37:52.748896+00:00 · Contributor: Codex · change
+
+- **Changed.** Record measured CI elapsed and summed job time and a narrowly scoped provisioning experiment before any workflow change.
+- **Evidence.** The actual metadata run took 509 seconds elapsed and 1255 summed job seconds; browser provisioning accounted for 336 seconds. Existing assertions and release gates remain intact. [Change record](./runs/changes/2026-11-19-083752-record-measured-ci-provisioning-bottleneck-eac75827.json).
+- **Not claimed.** No speedup, image availability, billing reduction or new requirement closure is claimed. Image selection and adoption require exact digest verification and actual hosted parity.
+
+
 ### 2026-11-19-083150-record-current-fi-citation-integration-acceptance-ee5c1c51
 
 Recorded 2026-11-19T08:31:50.532286+00:00 · Contributor: Codex · change
