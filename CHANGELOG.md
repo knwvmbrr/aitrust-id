@@ -10,6 +10,14 @@ Recorded 2026-11-19T05:26:23.351858+00:00 · Contributor: Codex · change
 - **Evidence.** 35 focused controls pass. Real default-policy build and verification, deterministic repeated archives, isolated private extracted FINDING and NO_FINDING executions, and five actual copied-source policy/tamper refusal groups pass across20 bounded CLI commands with stable source identities. [Change record](./runs/changes/2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e.json).
 - **Not claimed.** Only this nine-file source distribution plus generated manifest is admitted. CPython and OS remain external prerequisites. No interpreter, whole-repository approval, legal clearance, independent accuracy, global dependency completion or original requirement closure is claimed.
 
+### 2026-11-19-051826-esbuild-source-cohort-49b40d84
+
+Recorded 2026-11-19T05:18:26.969102+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Added source-bound offline review and replay of the 26 locked esbuild platform archives, 29 members and exact upstream source notices, with explicit unavailable Go build identity.
+- **Evidence.** Eleven focused controls pass; actual 26-archive and four-source replay passes; corrupted source refuses with fixed diagnostics; source pins and exact MIT/BSD notices are retained. [Change record](./runs/changes/2026-11-19-051826-esbuild-source-cohort-49b40d84.json).
+- **Not claimed.** No publisher signature, binary/source reproducibility, actual compiler identity, blanket permission clearance, route approval or original requirement closure.
+
 
 ### 2026-11-19-043946-publish-agent-tools-trust-drafts-and-stop-repair-7390e354
 
