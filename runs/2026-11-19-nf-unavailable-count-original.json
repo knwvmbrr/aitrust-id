@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "component": "NF unavailable count summary defect",
+  "base_commit": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+  "source_sha256": "9012a04cf412ab27d8deede84b49b214d620fc788092d872e1ffe3607d817602",
+  "reproduced": true,
+  "cause": "UNAVAILABLE summary emitted measured zero instead of unknown; completed no-match and failed evaluation were indistinguishable by count.",
+  "controlled_synthetic_result": true,
+  "architecture_before_correction": "Change only unavailable count to JSON null, document null versus measured0, keep state and successful count semantics unchanged. Validate mixed, all-unavailable, Unicode actual-worker and synthetic failure paths with selected focused tests and fresh targeted CLI checks; no broad timeout rerun.",
+  "claims": {
+    "fixed": false,
+    "tag_release": false,
+    "full_T_NF_completion": false
+  }
+}

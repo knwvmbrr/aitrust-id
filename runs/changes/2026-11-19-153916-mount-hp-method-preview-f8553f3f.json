@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-153916-mount-hp-method-preview-f8553f3f",
+  "recorded_at": "2026-11-19T15:39:16.862594+00:00",
+  "author": "Codex HP tag lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "651a9dfa7bec26bbe6b2c92f6ba9bb6d71c26f24",
+  "changed": "Mounted the reviewed independent HP literal-detail explorer only in its planned HP modal; added preparation, guide links and build/test aliases, and updated HP-aware site assertions. Added PM-requested NF offline guide/caller-selected observation copy while preserving planned NF status.",
+  "proves": "The integration and its focused actual-built-site control pass syntax checks. Existing standalone source-bound parity remains unchanged; fresh production build and browser integration evidence will be recorded after this attributed change gate.",
+  "limits": "No HP or NF tag release, independent accuracy, full requirement closure, physical phone or human accessibility acceptance, new data collection or endpoint. NF guide preparation and deployment remain PM-owned.",
+  "scope_ids": [
+    "T-HP",
+    "F-015",
+    "T-NF",
+    "F-020a",
+    "F-081"
+  ],
+  "files": {
+    "docs/hp-site-integration.md": "13f9e263531597fae9af15b73d58acac128bee9a83b8c3ad4b265730261445a2",
+    "package.json": "1832d316de2af5f7b7eb216d73d27f389a1008ff6724cd2047d0dc31be777fa4",
+    "scripts/hp-site-controls.cjs": "2e7d07c20f8080adf8e6c1d05cd0e0bafe91bee5cda500b7e22e4e6c53f06b60",
+    "scripts/verify-site.cjs": "62511c863d46cad71b9cfb1c503263f06e0af9c18cc95d56c763230d5b1f6784",
+    "site/scripts/prepare.mjs": "4548e723a0c459fbf178f46efda74b4a7b85d309013a94b8c82c655f974f70b2",
+    "site/src/catalog.js": "dd88f0434011c8a1c38003fec0ddcb7714486f943f94952fc6790fa81f720fa5",
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301",
+    "site/src/presentation.js": "bfdf8d69da72a1f7cd57be8b41ae1ce69ad3a7646af59d00e849f09145226a20",
+    "site/src/usage.js": "9836e544c5b41605372819baefd6e6877293d619ba65ab8ef7d8fde4cdbd0fd0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-hp-device-browser-candidate-1.json",
+      "sha256": "fc53984e291eb34a9526f0156395c5b54a422549d07e134a5270319325325601"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/hp-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T15:39:17.256652+00:00"
+    }
+  ]
+}

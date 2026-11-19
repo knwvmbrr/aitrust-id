@@ -1,0 +1,84 @@
+{
+  "captured_at": "2026-11-19T16:13:41.841Z",
+  "pass": true,
+  "source_sha256": {
+    "scripts/verify-site-accessibility.cjs": "1e4822bd6bcaa7ce5c603ea63ac4d38fd1dc40fa15dd37bc7308b1356be985be",
+    "scripts/accessibility-probes.cjs": "4e2c4a0c86968eb89267e93381aba6fa0fe3309ee989ed4da37f647d7cf1141d",
+    "site/src/HPExplorer.jsx": "42708f179f5a7848c9123c16d8877aaef93bb9df95b205ee9ce3774a9d0a8a9e",
+    "site/src/HPExplorerSlot.jsx": "475104b9089f743ddc795c8580c8db705723e2e5e67f20159aab3c3fd3fcfe71",
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301"
+  },
+  "full_site_suite_run": false,
+  "product_changed": false,
+  "result": {
+    "pass": true,
+    "controlled_actual_hp_lazy_insertion": true,
+    "unchanged_probes": true,
+    "themes": [
+      {
+        "theme": "light",
+        "actual_child_request_held": true,
+        "readiness_waited_for_child": true,
+        "indexed_target_before": "Testing and evidence\n+",
+        "indexed_target_after": {
+          "name": "Source notices",
+          "focused": false,
+          "indicator": false
+        },
+        "ready_first": {
+          "disclosure": {
+            "checked": 3,
+            "failures": []
+          },
+          "targets": {
+            "controls": 17,
+            "inline_exceptions": 0,
+            "failures": []
+          },
+          "focus": {
+            "checked": 19,
+            "failures": []
+          },
+          "spacing": {
+            "clipped": [],
+            "horizontal_overflow": false
+          }
+        },
+        "forced_colors_reflow": true
+      },
+      {
+        "theme": "dark",
+        "actual_child_request_held": true,
+        "readiness_waited_for_child": true,
+        "indexed_target_before": "Testing and evidence\n+",
+        "indexed_target_after": {
+          "name": "Source notices",
+          "focused": false,
+          "indicator": false
+        },
+        "ready_first": {
+          "disclosure": {
+            "checked": 3,
+            "failures": []
+          },
+          "targets": {
+            "controls": 17,
+            "inline_exceptions": 0,
+            "failures": []
+          },
+          "focus": {
+            "checked": 19,
+            "failures": []
+          },
+          "spacing": {
+            "clipped": [],
+            "horizontal_overflow": false
+          }
+        },
+        "forced_colors_reflow": true
+      }
+    ],
+    "manual_screen_reader": false
+  },
+  "source_unchanged": true
+}

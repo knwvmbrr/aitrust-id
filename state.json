@@ -1,12 +1,12 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T09:46:19.907115+00:00",
-  "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
+  "updated": "2026-11-19T17:05:38.453703+00:00",
+  "active_increment": "Publish reviewed independent HP/NF method previews and durable tag-worker/task-list accountability.132original requirements complete;70remain open; protected publication pending.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
-    "Physical iPhone and Android install/offline checks; phone screen-reader review; native Share integrations remain future scope",
+    "Physical iPhone and Android Share/lifecycle/offline/accessibility acceptance remains pending; engineering builds and the owner-only TestFlight build are separate evidence.",
     "Independent held-out ground truth, accepted sampling and evaluation policy",
     "Human screen-reader and outside-user install/removal evaluation",
     "Broader live ChatGPT compatibility across regeneration, multi-response and vendor updates",
@@ -792,13 +792,13 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-18T15:46:57.961717+00:00",
+    "audited_at": "2026-11-19T15:41:06.148336+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
-    "enhancements": 11,
+    "enhancements": 13,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
@@ -854,7 +854,13 @@
       "X-02"
     ],
     "intermediate_target_open_records": 60,
-    "intermediate_remaining_closures": 10
+    "intermediate_remaining_closures": 10,
+    "latest_component_evidence": [
+      "runs/2026-11-19-tag-components-integrated.json",
+      "runs/2026-11-19-hp-production-site-final.json",
+      "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "runs/2026-11-19-nf-source-evidence-linux.json"
+    ]
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1143,7 +1149,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T09:46:19.907115+00:00",
+  "updated_at": "2026-11-19T17:05:38.453703+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3093,7 +3099,8 @@
     "ledger": "docs/scope-progress.json",
     "intermediate_target_open": 60,
     "intermediate_closures_needed": 10,
-    "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues."
+    "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues.",
+    "immediate_target_source": "docs/session-delivery.json"
   },
   "organization_directory": {
     "status": "clock_skew_fence_repaired; current_real_provider_acceptance_and_live_publication_verified",
@@ -3567,17 +3574,38 @@
     "readiness": "runs/2026-11-12-choice-between-current-readiness.json"
   },
   "agent_delivery": {
-    "plan": "docs/quarterly-brand-and-agent-plan.md",
+    "plan": "docs/session-accountability-plan.md",
     "integration_owner": "Codex PM",
     "specialist_lanes": [
-      "web camouflage",
-      "native branding",
-      "SEO"
+      "HP on-device literal detail explorer",
+      "NF explicit claim/passage observations",
+      "independent task-list and source review"
     ],
-    "tag_lanes": "Separate contracts and evidence per tag; not all currently staffed",
+    "tag_lanes": "14 named logical queues; bounded independent workers in waves, not14 continuously running bots",
     "proprietary_assistant": "planned evaluation track only; no trained model or collection activated",
     "heavy_validation_policy": "One local native UI or browser validation workload at a time; agents may continue source review. Separate remote CI machines remain independent.",
-    "handoff_protocol": "docs/agent-handoffs.md"
+    "handoff_protocol": "docs/agent-handoffs.md",
+    "previous_plan": "docs/quarterly-brand-and-agent-plan.md",
+    "board": "docs/session-delivery.json",
+    "reader_board": "docs/session-delivery-plan.md",
+    "task_list_lead": "/root/seo",
+    "assignment_snapshot_at": "2026-11-19T16:56:37.993739+00:00",
+    "active_tag_workers_at_snapshot": 0,
+    "phase": "Corrected candidate fully verified locally; PM protected update/publication pending.",
+    "minimum_finished_named_deliverables_per_session": 1,
+    "minimum_original_requirement_closures_per_session": 1,
+    "finished_scoped_tasks": 6,
+    "original_requirement_closures": 0,
+    "original_requirement_goal_met": false,
+    "session_goal_check": "python3 scripts/session-delivery.py --check-session",
+    "completion_is_not_accuracy": true,
+    "last_debugging_result": {
+      "source_commit": "52dd930a8ba6943177ee877146ed6a54e6304e0b",
+      "evidence": "runs/2026-11-19-hp-a11y-readiness-final.json",
+      "kind": "verifier_lazy_readiness_correction",
+      "product_or_probe_relaxation": false,
+      "original_requirement_closures": 0
+    }
   },
   "q4_web_verification": {
     "website": "runs/2026-11-16-q4-website-current.json",
@@ -3665,9 +3693,9 @@
     }
   },
   "tag_status": {
-    "recorded_at": "2026-11-16T20:47:35.175951+00:00",
-    "board": "docs/tag-status-2026-11-16.json",
-    "readable_board": "docs/tag-status-2026-11-18.md",
+    "recorded_at": "2026-11-19T16:24:21.938954+00:00",
+    "board": "docs/session-delivery.json",
+    "readable_board": "docs/session-delivery-plan.md",
     "complete_tags": 0,
     "independently_release_validated_tags": 0,
     "working_preview_tags": [
@@ -3680,16 +3708,24 @@
     "candidate_changes_integrated": true,
     "publication_completed_at": "2026-11-17T12:27:44.932Z",
     "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
-    "active_agents_checked_at": "2026-11-19T02:12:36.319671+00:00",
+    "active_agents_checked_at": "2026-11-19T16:56:37.993739+00:00",
     "specialist_agents_currently_running": 0,
     "current_integration_owner": "Codex PM",
     "active_tag_lanes": [],
     "delivered_this_increment": {
-      "MT": "runs/2026-11-18-authority-quotation-candidate.json",
-      "NF_FI": "runs/2026-11-18-reference-claim-coverage.json"
+      "HP": "runs/2026-11-19-tag-bots-integrated-site-ready.json",
+      "NF": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "task_list_lead": "runs/2026-11-19-tag-integration-pre-pr-review.json",
+      "debugging": "runs/2026-11-19-hp-a11y-readiness-final.json"
     },
-    "integration_status": "Both specialist candidates delivered and integrated into working branch; checks and publication pending",
-    "current_status_board": "docs/tag-status-2026-11-18.md"
+    "integration_status": "Corrected source,175focused Python controls and all5current capability groups pass; protected GitHub recheck/publication pending.",
+    "current_status_board": "docs/session-delivery-plan.md",
+    "previous_board": "docs/tag-status-2026-11-16.json",
+    "working_method_previews": {
+      "MT": "Previously published local literal wording methods; no MT tag release",
+      "HP": "Integrated on-device literal detail method; protected publication pending",
+      "NF": "Integrated offline selected-passage literal/cosine methods; no NF tag release"
+    }
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
@@ -3751,6 +3787,35 @@
       "protected_publication_pending": false,
       "protected_publication": "runs/2026-11-19-fi-protected-merge.json",
       "live_publication": "runs/2026-11-19-fi-live-publication.json"
+    },
+    "tag_bot_integration": {
+      "PS": "runs/2026-11-19-tag-bots-fixed-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-tag-bots-fixed-PII_REDACTED.json",
+      "extension": "runs/2026-11-19-tag-bots-fixed-extension.json",
+      "protocol": "runs/2026-11-19-tag-bots-fixed-protocol.json",
+      "website": "runs/2026-11-19-tag-bots-fixed-website.json",
+      "boundaries": "runs/2026-11-19-tag-bots-fixed-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": true,
+      "retained_failed_website_candidates": [
+        "runs/2026-11-19-tag-bots-website.json",
+        "runs/2026-11-19-tag-bots-corrected-website.json"
+      ],
+      "built_site_evidence": "runs/2026-11-19-tag-bots-corrected-site-ready.json",
+      "accounting_inspection_goal_is_not_release": true,
+      "correction_pending": [],
+      "failed_protected_run": 44565992666,
+      "failed_protected_head": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+      "required_pass_at_failed_head": 10,
+      "required_total": 11,
+      "current_focused_python_controls": 175,
+      "shared_fixture_controls": 10,
+      "root_cause_corrections": [
+        "NF unknown count",
+        "reviewed CI headers",
+        "exactly-once fixture descriptor cleanup"
+      ]
     }
   },
   "mt_evidence_workflow": {
@@ -4049,5 +4114,30 @@
       "unchanged_revision_retry_passed": true,
       "underlying_cause_established": false
     }
-  }
+  },
+  "independent_tag_increments": {
+    "recorded_at": "2026-11-19T15:48:48.892967+00:00",
+    "HP": {
+      "status": "reviewed_on_device_literal_method_preview; planned_HP_tag_not_released",
+      "source_commit": "262403d266d4870715e1da5b1647917bd03c37de",
+      "site_integration_source": "53ef63a1daaaed50f85cb60f8fb25747785ecf47",
+      "guide": "docs/hp-device-explorer.md",
+      "browser_evidence": "runs/2026-11-19-hp-production-site-final.json",
+      "review": "runs/2026-11-19-hp-device-independent-review.json",
+      "physical_phone_verified": false,
+      "independent_accuracy_evidence": false
+    },
+    "NF": {
+      "status": "reviewed_offline_selected_source_method; planned_NF_tag_not_released",
+      "source_commit": "ed2f0292fdba8c3644d6554234edda089dc57b03",
+      "guide": "docs/nf-source-evidence.md",
+      "macos_evidence": "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "linux_evidence": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "review": "runs/2026-11-19-nf-source-independent-review.json",
+      "independent_accuracy_evidence": false
+    },
+    "original_closures": 0,
+    "publication_pending": true
+  },
+  "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests."
 }

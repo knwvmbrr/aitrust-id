@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "component": "NF selected-source corrected Linux engineering execution",
+  "recorded_at": "2026-11-19T15:45:07.102638+00:00",
+  "source_commit": "ed2f0292fdba8c3644d6554234edda089dc57b03",
+  "source_sha256": {
+    "tools/nf_source_evidence.py": "9012a04cf412ab27d8deede84b49b214d620fc788092d872e1ffe3607d817602",
+    "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+    "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "tests/test_nf_source_evidence.py": "2c85dd6e6f041ce05e71872da23cf0d81f6acdbd8281c6d89e5e825245d38649",
+    "docs/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "docs/nf-source-evidence-plan.md": "32bb1d50fa38677e9d30c34312808677081562d4e6eab507c739080573322b77",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "scripts/quantitative-observations.py": "32baf241b0143e6ab8e6a784cb103d1501b74419e981168cd9ff87fc1da58c4b"
+  },
+  "source_hashes_stable_before_after": true,
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python_version": "3.13.5",
+  "uid": 1000,
+  "nonroot": true,
+  "isolated_network_namespace": true,
+  "only_loopback_interface": true,
+  "python_flags": {
+    "isolated": 1,
+    "no_site": 1,
+    "dont_write_bytecode": 1
+  },
+  "pytest_suite_run": false,
+  "packages_installed": false,
+  "actual_cli": {
+    "passed": 21,
+    "failed": 0,
+    "controls": [
+      {
+        "name": "ascii_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "elapsed_seconds": 0.074,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "ascii_brief",
+        "exit_code": 0,
+        "passed": true,
+        "state": "COMPLETE",
+        "elapsed_seconds": 0.287,
+        "stdout_sha256": "ba2ea003de9658e05349628fa1e5addcc88e2f61109ef0cf49a334caf2b49095",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "ascii_private",
+        "exit_code": 0,
+        "passed": true,
+        "state": "COMPLETE",
+        "elapsed_seconds": 0.262,
+        "stdout_sha256": "b8183493a8f1b8cd18582007ccdc9c71e52a98a8101bcca95039abd2727cfa0f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "existing_report_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.276,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "changed_subject_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.085,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unicode_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "elapsed_seconds": 0.078,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unicode_partial",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "elapsed_seconds": 0.257,
+        "stdout_sha256": "5502522a1bd198ec5c071de0e44d27abfebd98cf00a5867af22c8f91372482be",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "unknown_argument_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.073,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "missing_corpus_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.074,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "linked_input_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.078,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_fdopen",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.089,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_fdopen_reuse",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.08,
+        "stdout_sha256": "261cff817ac1d764fad5f751ef7609332a0a0fe3716f459bbd1c7a5031505ee0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_fsync",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.079,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_unlink",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.09,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_link_unknown",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.083,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "io_close",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "elapsed_seconds": 0.095,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "fi_absent_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "elapsed_seconds": 0.074,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "broken_cosine_exact_complete",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "elapsed_seconds": 0.17,
+        "stdout_sha256": "c534dfe049258434a490b26cedc877c048e8040e73fc0e6b482a0b5478ef040f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "broken_nf_quantitative_complete",
+        "exit_code": 0,
+        "passed": true,
+        "state": "OBSERVATIONS",
+        "elapsed_seconds": 0.061,
+        "stdout_sha256": "5cb10004a98066cfa662e675a721d14f8b7591110f304fdddeaf5d88940f6644",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "timeout_fixture_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "elapsed_seconds": 0.076,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "timeout_literal_cosine_complete",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "elapsed_seconds": 8.185,
+        "stdout_sha256": "d8197632cd5b5f2c6a2966db06d950f39b081e1e7af9f8b181732c899dfeccfb",
+        "stderr_bytes": 0
+      }
+    ]
+  },
+  "focused_library_controls": {
+    "passed": 7,
+    "failed": 0,
+    "controls": [
+      {
+        "name": "binding_raw_subject_sha256",
+        "passed": true
+      },
+      {
+        "name": "binding_subject_sha256",
+        "passed": true
+      },
+      {
+        "name": "binding_corpus_file_sha256",
+        "passed": true
+      },
+      {
+        "name": "binding_corpus_manifest_sha256",
+        "passed": true
+      },
+      {
+        "name": "binding_source_sha256",
+        "passed": true
+      },
+      {
+        "name": "canonical_score_refusal",
+        "passed": true
+      },
+      {
+        "name": "canonical_omission_refusal",
+        "passed": true
+      }
+    ]
+  },
+  "observed_boundaries": {
+    "real_nf_libseccomp_ipv4_ipv6_denial": true,
+    "corrected_canonical_score_and_completeness_refusals": true,
+    "unicode_literal_independent_of_cosine": true,
+    "fi_absent_and_nf_literal_works": true,
+    "nf_broken_and_quantitative_works": true,
+    "real_owned_deadline_sibling_survives": true,
+    "private_exports_no_text_nooverwrite": true,
+    "ordinary_and_uncertain_io_faults": true
+  },
+  "claims": {
+    "NF_FI_tag_issuance": false,
+    "full_T_NF_completion": false,
+    "independent_accuracy": false,
+    "human_acceptance": false,
+    "whole_pipeline_license_clearance": false
+  },
+  "limits": {
+    "producer_address_space_bytes": 536870912,
+    "producer_cpu_seconds": 60,
+    "producer_open_files": 256,
+    "cli_timeout_seconds": 25,
+    "nf_worker_deadline_seconds": 8
+  },
+  "scope": "Selected stdlib controls and actual commands only, not the full pytest suite. All examples and I/O/source fault fixtures are invented.",
+  "public_recorded_at": "2026-11-19T15:46:41.929964+00:00",
+  "executed_by": "Codex",
+  "raw_producer_receipt_sha256": "02d3c6ec0411eed5cfcd05635eced7cbe0d4b909775e66cadff45b686500f684",
+  "producer_script_sha256": "8bfb3909d26bbaaccd5257f52def5eeab3580e5180f45b0bab7fdc963df0aec5",
+  "host_context_script_sha256": "c8c41d3de52115f740fc4aceea0276ddab7ef38b40238088991a7fe8a0c4bc44",
+  "host_preservation": {
+    "same_original_staging_ids_images_config_pids_start_times_health": true,
+    "container_inventory_unchanged": true,
+    "staging_lifecycle_commands_used": false,
+    "execution_exit": 0
+  },
+  "host_context_receipt_sha256": "fb0ef7bd27d6371ce726160fc4fb15da58d16986c18c9b46a039e6e1457e4fe6",
+  "cleanup": {
+    "owned_temporary_directory_removed": true
+  },
+  "private_raw_evidence_retained": true,
+  "no_new_infrastructure_credentials_packages_or_service_changes": true
+}

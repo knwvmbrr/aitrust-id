@@ -1,0 +1,195 @@
+{
+  "captured_at": "2026-11-19T15:29:59.063074+00:00",
+  "pass": true,
+  "profile": "hp-literal-detail-explorer/1.0.0",
+  "canonical_method_unchanged": true,
+  "canonical_method": "literal-quantitative-observations/1.0.1",
+  "source_sha256": {
+    "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "tools/hp_device.py": "be4fb51923195a4cdeff74e0913902bd92897764c942f240a9fcce051f913ac4",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "scripts/build-hp-device.py": "9f84d7649e756500eb31a9fe7595ec7a9c65663cd24e414250025afdf2f789df",
+    "scripts/build-hp-device-fixture.mjs": "4550b337a8ff118eb2b90f499aa2b9383ce4d58fedf383db82630d333cc4ced1",
+    "scripts/hp-device-cases.py": "d2d2e5f8a7a4bc6b20cbb54559237cd452d8a4e2b0384764a3a2303b15b8a3e8",
+    "scripts/verify-hp-device.cjs": "929df15cb036c9bd5bffaae57b2bc61ab701cbe7d096a42d9b52448eb228fc4f",
+    "site/src/HPExplorer.jsx": "42708f179f5a7848c9123c16d8877aaef93bb9df95b205ee9ce3774a9d0a8a9e",
+    "site/src/HPExplorerSlot.jsx": "475104b9089f743ddc795c8580c8db705723e2e5e67f20159aab3c3fd3fcfe71",
+    "site/src/hp-device-client.js": "c6f228d57ba2cdd39e1a52c4adb72ee4d1423261f8099ba427331400bf10e2f4",
+    "site/src/hp-device-worker.js": "fa8216594fffa7b11a4621a47a193813c2a602957cbf238dd36bc8e0e3fbc6df",
+    "site/src/hp-device-result.js": "f0fe16cc1e03b9c77e25b4f1a80ddb06e5124d123cec18ede764f0ae89c56fef",
+    "site/src/hp-device-manifest.json": "982c9af3ae67953e12ea9f4d99e8a4010b3cc777a19e1025e0838a74c4cc7f0e",
+    "site/public/hp-device/method-943b5b2352f86c44d80d79625cbdcfca8f25a1719d116640863ca7d730f370fb.json": "943b5b2352f86c44d80d79625cbdcfca8f25a1719d116640863ca7d730f370fb",
+    "site/public/hp-device/notices.txt": "36de7bca357f2fffec7617e63ed992634b0e8e028b298184683dc81ebe4faad9",
+    "tests/test_hp_device.py": "2afb09f81e8bc72728d14eb4320740344f6543b770b71509ac0c0a587e9c84ca",
+    "tests/hp-device-client.mjs": "0e4962619887bb071db03f78bbe6a437fd2025344b776296506b44b30373be5c",
+    "docs/hp-device-explorer-plan.md": "bca7e40a3ff2cab04d853766f245cb09097be5a772427f729877bb54e5236020",
+    "docs/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044"
+  },
+  "source_unchanged_during_execution": true,
+  "checks": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_hp_device.py",
+        "tests/test_quantitative_observations.py"
+      ],
+      "exit_status": 0,
+      "stdout": "........................................................................ [ 93%]\n.....                                                                    [100%]\n77 passed in 0.84s\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/hp-device-client.mjs"
+      ],
+      "exit_status": 0,
+      "stdout": "TAP version 13\n# Subtest: bounded input and frozen identity reject malformed values\nok 1 - bounded input and frozen identity reject malformed values\n  ---\n  duration_ms: 10.362333\n  ...\n# Subtest: client does not start at creation and owns a fresh worker per explicit run\nok 2 - client does not start at creation and owns a fresh worker per explicit run\n  ---\n  duration_ms: 71.004667\n  ...\n# Subtest: wrong subject and NFC-equivalent but different raw input cannot reuse a result\nok 3 - wrong subject and NFC-equivalent but different raw input cannot reuse a result\n  ---\n  duration_ms: 63.44125\n  ...\n# Subtest: clear/stop affects only its own worker and late messages cannot revive it\nok 4 - clear/stop affects only its own worker and late messages cannot revive it\n  ---\n  duration_ms: 32.50325\n  ...\n# Subtest: loading/evaluation/termination failures reject and never become a quiet result\nok 5 - loading/evaluation/termination failures reject and never become a quiet result\n  ---\n  duration_ms: 24.386166\n  ...\n# Subtest: closed canonical/nested schema refuses raw fields, altered sources/counts/spans and false interpretation\nok 6 - closed canonical/nested schema refuses raw fields, altered sources/counts/spans and false interpretation\n  ---\n  duration_ms: 682.748042\n  ...\n# Subtest: data accessors and malformed dense collections are refused before rendering\nok 7 - data accessors and malformed dense collections are refused before rendering\n  ---\n  duration_ms: 62.048958\n  ...\n# Subtest: literal/date, marker and long-s source semantics stay canonical, with immutable safe descriptions\nok 8 - literal/date, marker and long-s source semantics stay canonical, with immutable safe descriptions\n  ---\n  duration_ms: 155.097041\n  ...\n# Subtest: all existing frozen NFC version witnesses bind raw and normalized identities\nok 9 - all existing frozen NFC version witnesses bind raw and normalized identities\n  ---\n  duration_ms: 53.091417\n  ...\n# Subtest: bundle carries exact project NOTICE, LICENSE and Unicode attribution\nok 10 - bundle carries exact project NOTICE, LICENSE and Unicode attribution\n  ---\n  duration_ms: 0.928791\n  ...\n1..10\n# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1239.116334\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-hp-device.cjs"
+      ],
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "actual_canonical_cli_controls": [
+    {
+      "id": "unmarked",
+      "argv": [
+        "python3",
+        "scripts/quantitative-observations.py",
+        "--language",
+        "en"
+      ],
+      "exit_status": 0,
+      "result": {
+        "format": "quantitative-observation/v1",
+        "method": "literal-quantitative-observations/1.0.1",
+        "state": "OBSERVATIONS",
+        "supported_detail_count": 1,
+        "without_same_unit_marker": 1,
+        "with_same_unit_marker": 0,
+        "skipped_detail_count": 0,
+        "source_lookup_performed": false,
+        "source_support_established": false,
+        "calendar_validity_checked": false,
+        "truth_established": false,
+        "uncertainty_inferred": false,
+        "score_is_probability": false,
+        "independent_accuracy_evidence": false,
+        "network_used": false,
+        "tags": []
+      }
+    },
+    {
+      "id": "marked",
+      "argv": [
+        "python3",
+        "scripts/quantitative-observations.py",
+        "--language",
+        "en"
+      ],
+      "exit_status": 0,
+      "result": {
+        "format": "quantitative-observation/v1",
+        "method": "literal-quantitative-observations/1.0.1",
+        "state": "NO_SUPPORTED_PATTERN",
+        "supported_detail_count": 1,
+        "without_same_unit_marker": 0,
+        "with_same_unit_marker": 1,
+        "skipped_detail_count": 0,
+        "source_lookup_performed": false,
+        "source_support_established": false,
+        "calendar_validity_checked": false,
+        "truth_established": false,
+        "uncertainty_inferred": false,
+        "score_is_probability": false,
+        "independent_accuracy_evidence": false,
+        "network_used": false,
+        "tags": []
+      }
+    },
+    {
+      "id": "token_boundary",
+      "argv": [
+        "python3",
+        "scripts/quantitative-observations.py",
+        "--language",
+        "en"
+      ],
+      "exit_status": 0,
+      "result": {
+        "format": "quantitative-observation/v1",
+        "method": "literal-quantitative-observations/1.0.1",
+        "state": "OBSERVATIONS",
+        "supported_detail_count": 1,
+        "without_same_unit_marker": 1,
+        "with_same_unit_marker": 0,
+        "skipped_detail_count": 0,
+        "source_lookup_performed": false,
+        "source_support_established": false,
+        "calendar_validity_checked": false,
+        "truth_established": false,
+        "uncertainty_inferred": false,
+        "score_is_probability": false,
+        "independent_accuracy_evidence": false,
+        "network_used": false,
+        "tags": []
+      }
+    }
+  ],
+  "browser_evidence": {
+    "path": "runs/2026-11-19-hp-device-browser-candidate-1.json",
+    "sha256": "fc53984e291eb34a9526f0156395c5b54a422549d07e134a5270319325325601",
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "full_records_per_engine": 28
+  },
+  "visually_inspected_screenshots": {
+    "hp-device-webkit-dark.png": "5c2b1bd66450c4ecbd0384ea77a7aaac14c802a55cd1c833787b20098adde499",
+    "hp-device-webkit-light.png": "d6457cd09af271321beee8a6698cccebd7988cc859190c2222e07709abf73544",
+    "hp-device-chromium-light.png": "aae77a79f2e428fb1dfeed36253a46dbff2ff334679eaea13687c53aaf84826e",
+    "hp-device-chromium-dark.png": "fa76267c2821fa30008ebc8e3fc37aee7f6d23d8e12feda71b399071b73e8ef8"
+  },
+  "documentation_correction": "Draft named nonexistent observe-quantitative.py; corrected to existing quantitative-observations.py and executed actual help/controls before delivery.",
+  "independent_accuracy_evidence": false,
+  "HP_tag_asserted": false,
+  "production_mounted": false,
+  "scope_percentages_changed": false,
+  "physical_phone_or_human_voiceover_tested": false,
+  "remaining": [
+    "PM shared mounting, build preparation and production capability/asset review",
+    "Representative contextual specificity/citation-scope labels and simpler-baseline comparison for F-015",
+    "Contradiction/repetition/hedging mechanisms and independent HP release acceptance",
+    "Physical phone and human accessibility acceptance"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-19T15:51:33.840492+00:00",
+  "pass": false,
+  "kind": "tag_bots_revalidation_preflight",
+  "error_signature": "ValueError: Checks must be repository scripts",
+  "commands_started": 0,
+  "cause": "New direct node --test command violated the existing fixed scripts-only revalidation consumer contract.",
+  "correction": "Added fixed scripts/verify-hp-client.cjs entrypoint matching the existing MT pattern, preserving runner restrictions.",
+  "scope": "Preflight refusal, not a failed tag observation or completed capability run."
+}

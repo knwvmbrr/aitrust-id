@@ -59,3 +59,31 @@ another authorized job. Distinguish a completed lane, an integrated candidate,
 protected CI, a merged source and exact verified public delivery. Report only the
 state actually observed; do not describe a dormant agent as working after the
 integration turn ends.
+
+## Task-list lead and session closeout
+
+The PM dispatches implementation; the task-list lead owns the dated assignment
+board in `docs/session-delivery.json` and its readable companion
+`docs/session-delivery-plan.md`. Every tag has a named logical queue. A queue is
+not a running agent: only active assignments name an actual worker. With three
+specialist slots, staff bounded tag increments and review in waves rather than
+claiming fourteen simultaneous processes.
+
+Before implementation, choose an original requirement and write the full done
+evidence for the next deliverable. Keep its historical job, outcome and acceptance
+intact. If owner action or outside evidence blocks it, preserve that blocker and
+dispatch the next authorized engineering task. A new component cannot be counted
+as a full original tag release.
+
+At closeout, require a different reviewer, a current passing execution record and
+its exact digest. Run `python3 scripts/session-delivery.py` to inspect accounting.
+Run it with `--check-session` for the strict session goal: at least one completed
+named deliverable **and** one genuinely closed original requirement. Exit 1 means
+the goal remains unmet; exit 2 means accounting itself is invalid or unavailable.
+A successful inspection alone does not mean the session goal passed.
+
+The task-list lead updates assignments and blockers after review. The PM updates
+the scope ledger, state and attributed changelog before protected integration.
+The board counts finished scoped tasks and original requirement closures
+separately. Never lower acceptance, reuse an old passing report as new execution,
+or describe completed agents as still running to satisfy the session goal.

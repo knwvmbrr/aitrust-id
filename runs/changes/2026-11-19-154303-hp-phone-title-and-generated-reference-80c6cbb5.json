@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-154303-hp-phone-title-and-generated-reference-80c6cbb5",
+  "recorded_at": "2026-11-19T15:43:03.076854+00:00",
+  "author": "Codex HP tag lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "651a9dfa7bec26bbe6b2c92f6ba9bb6d71c26f24",
+  "changed": "Used Claim details as the HP display name while retaining formal Hallucination possible and its original job/claim/release. Added deterministic generated index/HP reference coverage and awaited actual dark-theme application before screenshots.",
+  "proves": "First built-site Chromium/WebKit checks each passed five whole-record comparisons, privacy/cancellation and successful actual PS and MT checks after an HP chunk refusal. Visual review separately found the long title breaking at 200% and a premature dark screenshot; the affected presentation/proof is being refreshed.",
+  "limits": "No core method change or rerun, HP tag promotion, independent accuracy or human/physical-device acceptance. Pending NF source/prepare integration remains PM-owned.",
+  "scope_ids": [
+    "T-HP",
+    "F-015"
+  ],
+  "files": {
+    "docs/hp-site-integration.md": "e969979983f870e2f45208b81be3daaa2a43573919b5691b0b31c24f434e2446",
+    "package.json": "1832d316de2af5f7b7eb216d73d27f389a1008ff6724cd2047d0dc31be777fa4",
+    "runs/2026-11-19-hp-production-site-candidate-1.json": "a6d23b207e408d9fc49cbe5c7d4ca1c673f40b23543413e69691a00784319ccf",
+    "runs/2026-11-19-hp-site-build-candidate-1.json": "b2e2d3510f45edab85f92d14a789662dead8220bb06fcf6522b6fe5947ad137c",
+    "runs/2026-11-19-hp-site-visual-followup.json": "7adaad39b0eae3f9ea8b3b7d091f19561bca90233e71bc2b3d0fe8f39c4e000d",
+    "scripts/hp-site-controls.cjs": "7c822eb76bbdb8e4e165be7ef6bc8108d531a305fb7831464499029c927c310c",
+    "scripts/verify-site.cjs": "33f6e3733170db1874a019c125b9f5a21a44e594e5838e919021eeb9aa3e96d3",
+    "site/index.html": "c33d308debe6d65522d2bbd2c76879eb1f3720bace31c6318df6033045f39661",
+    "site/public/reference/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+    "site/public/reference/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "site/scripts/prepare.mjs": "4548e723a0c459fbf178f46efda74b4a7b85d309013a94b8c82c655f974f70b2",
+    "site/src/catalog.js": "bb5a58689a9e9df6e3088ec814d26e43107dd5f56e5cebe160950abfa869959a",
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301",
+    "site/src/presentation.js": "bfdf8d69da72a1f7cd57be8b41ae1ce69ad3a7646af59d00e849f09145226a20",
+    "site/src/usage.js": "9836e544c5b41605372819baefd6e6877293d619ba65ab8ef7d8fde4cdbd0fd0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-hp-production-site-candidate-1.json",
+      "sha256": "a6d23b207e408d9fc49cbe5c7d4ca1c673f40b23543413e69691a00784319ccf"
+    },
+    {
+      "path": "runs/2026-11-19-hp-site-visual-followup.json",
+      "sha256": "7adaad39b0eae3f9ea8b3b7d091f19561bca90233e71bc2b3d0fe8f39c4e000d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/hp-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T15:43:03.343843+00:00"
+    }
+  ]
+}

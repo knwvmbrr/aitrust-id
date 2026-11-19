@@ -1,0 +1,139 @@
+{
+  "captured_at": "2026-11-19T16:07:58.544Z",
+  "pass": false,
+  "results": [
+    {
+      "name": "catalogue",
+      "theme": "light",
+      "targets": {
+        "controls": 31,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 29,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "PS",
+      "theme": "light",
+      "targets": {
+        "controls": 49,
+        "inline_exceptions": 1,
+        "failures": []
+      },
+      "focus": {
+        "checked": 51,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 5,
+        "failures": []
+      }
+    },
+    {
+      "name": "PII_REDACTED",
+      "theme": "light",
+      "targets": {
+        "controls": 28,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 28,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 4,
+        "failures": []
+      }
+    },
+    {
+      "name": "NF",
+      "theme": "light",
+      "targets": {
+        "controls": 14,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 16,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "FI",
+      "theme": "light",
+      "targets": {
+        "controls": 15,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 15,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    },
+    {
+      "name": "HP",
+      "theme": "light",
+      "targets": {
+        "controls": 14,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 14,
+        "failures": [
+          "Not keyboard focused: Source notices",
+          "No focus indicator: Source notices",
+          "Focused control fully obscured: Source notices"
+        ]
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      },
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      }
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: HP focus\n+ actual - expected\n\n+ [\n+   'Not keyboard focused: Source notices',\n+   'No focus indicator: Source notices',\n+   'Focused control fully obscured: Source notices'\n+ ]\n- []\n",
+  "errors": [],
+  "full_wcag_conformance_asserted": false
+}

@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-11-19T16:53:41.633Z",
+  "pass": true,
+  "source_sha256": {
+    "scripts/site-fixture-server.cjs": "225d45cf1e6013c08190db9a8cbce88b3fcc8e526cf81d3dc02800c3cff4bfde",
+    "tests/site-fixture-server.cjs": "c7a5811588240362185bebfe2917df1f83c7ab1cbfac71051c0edb1be4b1758c"
+  },
+  "injected_close_completed_then_EIO": true,
+  "exact_owned_marker_fd_reuse": true,
+  "close_attempts": 1,
+  "replacement_fd_survived": true,
+  "indeterminate_response_destroyed": true,
+  "synthetic_owned_files_only": true,
+  "focused_tests": {
+    "argv": [
+      "node",
+      "--test",
+      "tests/site-fixture-server.cjs"
+    ],
+    "exit_status": 0,
+    "stdout": "TAP version 13\n# Subtest: actual GET and HEAD apply reviewed headers with the same MIME and no HEAD body\nok 1 - actual GET and HEAD apply reviewed headers with the same MIME and no HEAD body\n  ---\n  duration_ms: 15.832125\n  ...\n# Subtest: specific reviewed header overrides survive the shared fixture\nok 2 - specific reviewed header overrides survive the shared fixture\n  ---\n  duration_ms: 4.000458\n  ...\n# Subtest: unknown files and unsafe raw targets return bounded404 without path/content echo\nok 3 - unknown files and unsafe raw targets return bounded404 without path/content echo\n  ---\n  duration_ms: 6.09325\n  ...\n# Subtest: methods other than GET/HEAD refuse with405 and reviewed safety headers\nok 4 - methods other than GET/HEAD refuse with405 and reviewed safety headers\n  ---\n  duration_ms: 2.770792\n  ...\n# Subtest: file and ancestor symlinks cannot disclose outside content; FIFOs do not hang\nok 5 - file and ancestor symlinks cannot disclose outside content; FIFOs do not hang\n  ---\n  duration_ms: 6.891542\n  ...\n# Subtest: linked roots/header files, malformed and oversized header policy refuse startup\nok 6 - linked roots/header files, malformed and oversized header policy refuse startup\n  ---\n  duration_ms: 2.191542\n  ...\n# Subtest: root replacement refuses instead of switching the server to a different build\nok 7 - root replacement refuses instead of switching the server to a different build\n  ---\n  duration_ms: 2.780833\n  ...\n# Subtest: actual CLI binds loopback, serves CSP, closes on SIGTERM and refuses malformed argv safely\nok 8 - actual CLI binds loopback, serves CSP, closes on SIGTERM and refuses malformed argv safely\n  ---\n  duration_ms: 106.344791\n  ...\n# Subtest: HEAD close-completed EIO never closes its unrelated reused marker descriptor\nok 9 - HEAD close-completed EIO never closes its unrelated reused marker descriptor\n  ---\n  duration_ms: 3.274667\n  ...\n# Subtest: pre-response error cleanup closes once and safely destroys on close uncertainty\nok 10 - pre-response error cleanup closes once and safely destroys on close uncertainty\n  ---\n  duration_ms: 2.133041\n  ...\n1..10\n# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 211.985917\n",
+    "groups": 10,
+    "original_HTTP_CLI_groups": 8,
+    "HEAD_and_pre_response_cleanup_reuse_regressions": 2
+  },
+  "before_evidence": {
+    "path": "runs/2026-11-19-site-fixture-head-close-before.json",
+    "sha256": "f6fdd5cc7a71ac7e138ef6736b8b103126c545c2c4223f6f03ef5e473b6a2a99"
+  },
+  "historical_HP_evidence": {
+    "path": "runs/2026-11-19-reviewed-fixture-hp-integration.json",
+    "sha256": "4fef90e8baa0eda7fceef6028aba5b4ff0bdd3474e99cbc92c67b3a6352e6427",
+    "retained_as_historical_only": true,
+    "current_server_HP_browser_replay": false
+  },
+  "source_unchanged_during_execution": true,
+  "broad_suite_run": false,
+  "stream_code_changed": false,
+  "product_or_probes_changed": false,
+  "scope_percentages_changed": false,
+  "remaining_limit": "A close exception leaves the OS outcome uncertain. The numeric fd is never retried; the response is destroyed. This does not guarantee every underlying close completed."
+}

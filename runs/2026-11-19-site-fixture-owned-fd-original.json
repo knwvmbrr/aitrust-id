@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-11-19T16:51:29.636819+00:00",
+  "pass": false,
+  "kind": "owned_fixture_head_fd_reuse_counterexample",
+  "source_sha256": {
+    "scripts/site-fixture-server.cjs": "f75279f96b1b1d541e5927c02aace90bb17ed78cf5bf3e203b4f3dd561369dbb"
+  },
+  "authored_head_close_after_release": true,
+  "replacement_fd_survived": false,
+  "mechanism": "HEAD close released its descriptor then raised EIO; catch cleanup retried the reused numeric descriptor and closed the authored marker.",
+  "only_owned_synthetic_files": true,
+  "production_platform_involved": false,
+  "correction_required": "Clear request descriptor ownership before close and never retry a failed numeric close; handle cleanup refusal without an uncaught request-handler failure.",
+  "original_requirement_closures": 0
+}

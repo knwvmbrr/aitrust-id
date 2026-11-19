@@ -1,0 +1,56 @@
+{
+  "captured_at": "2026-11-19T15:32:52.417030+00:00",
+  "kind": "session_delivery_implementation",
+  "pass": true,
+  "source_sha256": {
+    "tools/session_delivery.py": "49e0b4e19363fc2b0f3666e91e0cadd7ea9fd66fa69b9fe258d90d689f1f4327",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "tests/test_session_delivery.py": "9e93fd7ba7a357ff871e0d2a68c792f58d44fcdc99773c8d781641d4a1a8d7f6",
+    "docs/session-accountability-plan.md": "0976bbe7476138c9c4ef2468b4ca5346de0670cc7cb6f11b31575179acacc492",
+    "docs/session-delivery.json": "6cfc7f08f70a7000522f7f83a8dd55fc22886e3487f80242b5ad5357faca38e6",
+    "docs/session-delivery-plan.md": "05d88f1d5aed202fe2a912ab76d65d7079917e50df3617c32627e3d5123dc180",
+    "docs/agent-handoffs.md": "1768644c4572ff82e7f5efcdaf02a11f861bc9e4b95974b1ac2e4410c3875b49"
+  },
+  "checks": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_session_delivery.py"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": ".......................................                                  [100%]\n39 passed in 2.54s",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "scripts/session-delivery.py"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": "{\"active_tag_assignments_at_snapshot\": 2, \"activity_is_live_heartbeat\": false, \"baseline_commit\": \"3716233b9460efa57c1f0d01bfe30989395efcc4\", \"baseline_original_complete\": 132, \"board_sha256\": \"95dbfbaff9e0bab697e4b548ec6b3653855703695efcaa136db8b1ab41352240\", \"captured_at\": \"2026-11-19T15:32:52.052271+00:00\", \"closures_to_target\": 10, \"finished_scoped_tasks\": [], \"independent_accuracy_evidence\": false, \"kind\": \"session_delivery_accounting\", \"new_original_closures\": [], \"original_complete\": 132, \"original_open\": 70, \"original_requirement_goal_met\": false, \"pass\": true, \"reopened_originals\": [], \"scope\": \"Identity, evidence hashes and delivery accounting only; full acceptance remains a review judgment.\", \"scope_approval_granted\": false, \"scoped_delivery_goal_met\": false, \"session_id\": \"2026-11-19-original-closure-70-to-60\", \"session_success\": false, \"tag_bots\": 14, \"target_open\": 60}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "scripts/session-delivery.py",
+        "--check-session"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "stdout": "{\"active_tag_assignments_at_snapshot\": 2, \"activity_is_live_heartbeat\": false, \"baseline_commit\": \"3716233b9460efa57c1f0d01bfe30989395efcc4\", \"baseline_original_complete\": 132, \"board_sha256\": \"95dbfbaff9e0bab697e4b548ec6b3653855703695efcaa136db8b1ab41352240\", \"captured_at\": \"2026-11-19T15:32:52.410513+00:00\", \"closures_to_target\": 10, \"finished_scoped_tasks\": [], \"independent_accuracy_evidence\": false, \"kind\": \"session_delivery_accounting\", \"new_original_closures\": [], \"original_complete\": 132, \"original_open\": 70, \"original_requirement_goal_met\": false, \"pass\": true, \"reopened_originals\": [], \"scope\": \"Identity, evidence hashes and delivery accounting only; full acceptance remains a review judgment.\", \"scope_approval_granted\": false, \"scoped_delivery_goal_met\": false, \"session_id\": \"2026-11-19-original-closure-70-to-60\", \"session_success\": false, \"tag_bots\": 14, \"target_open\": 60}",
+      "stderr": ""
+    }
+  ],
+  "review": "runs/2026-11-19-session-accountability-independent-review.json",
+  "original_complete": 132,
+  "original_open": 70,
+  "original_closures": 0,
+  "independent_accuracy_evidence": false,
+  "scope": "Accounting implementation, actual CLI and focused controls; no original acceptance approval."
+}

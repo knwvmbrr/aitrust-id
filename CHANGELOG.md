@@ -2,6 +2,206 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-170538-corrected-tag-integration-ready-for-ci-0b4e8ceb
+
+Recorded 2026-11-19T17:05:38.583300+00:00 · Contributor: Codex · change
+
+- **Changed.** Captured the fully passing corrected source and refreshed reviewed boundary receipts before updating the protected candidate.
+- **Evidence.** All5current capability receipts assess valid; website46commands pass through the shared reviewed-header server and fixed descriptor cleanup.175current focused Python controls pass.1316source/access inputs remain within reviewed routes/permissions. [Change record](./runs/changes/2026-11-19-170538-corrected-tag-integration-ready-for-ci-0b4e8ceb.json).
+- **Not claimed.** The previous10/11protected candidate remains failed history; a changed-source CI run is required. Six scoped tasks, zero original closures;70remain open. No independent accuracy, human accessibility or physical-device acceptance.
+
+
+### 2026-11-19-170016-current-correction-capability-checks-880574f2
+
+Recorded 2026-11-19T17:00:16.377461+00:00 · Contributor: Codex · change
+
+- **Changed.** Captured current capability evidence after the reviewed fixture and NF summary corrections, retaining failed candidates and exact source identities.
+- **Evidence.** Current PS7, privacy6, extension14 and protocol55 configured commands pass with unchanged sources; NF unavailable remains unknown and measured0 remains0. Reviewed fixture cleanup preserves replacement descriptors with one close. [Change record](./runs/changes/2026-11-19-170016-current-correction-capability-checks-880574f2.json).
+- **Not claimed.** Current full website and hosted protected checks remain pending. Six scoped tasks are closed; no original closure or independent tag validation is implied.
+
+
+### 2026-11-19-165638-reviewed-ci-and-unknown-count-corrections-459f6802
+
+Recorded 2026-11-19T16:56:38.106493+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated explicit unknown NF counts and shared reviewed-header fixtures; corrected owned descriptor cleanup after a concrete counterexample, updated disposable controller dependencies and retained closure/reopen history.
+- **Evidence.** NF13focused/10macOS/10Linux controls and independent review distinguish null from measured0. Shared fixture10HTTP/error controls pass; independent exact-fd replay now preserves the replacement with one close. Eight controller lifecycle tests pass with the real transitive fixture inputs. [Change record](./runs/changes/2026-11-19-165638-reviewed-ci-and-unknown-count-corrections-459f6802.json).
+- **Not claimed.** Old protected candidate passed10of11 and was not retried unchanged. Current all-capability/protected verification is pending after changed source. Six scoped tasks, zero original closures;70remain open. No product/probe relaxation or independent accuracy claim.
+
+
+### 2026-11-19-164023-nf-unavailable-count-linux-proof-69160faf
+
+Recorded 2026-11-19T16:40:23.703692+00:00 · Contributor: Codex · change
+
+- **Changed.** Record targeted current-source Linux CLI verification of unknown versus measured-zero NF observation counts.
+- **Evidence.** 10 actual isolated-Python Linux commands pass on exact correction commit 8742be4 as UID1000 with real libseccomp protections; eleven selected source hashes and original staging identities remain unchanged, and the owned temporary checkout is removed. [Change record](./runs/changes/2026-11-19-164023-nf-unavailable-count-linux-proof-69160faf.json).
+- **Not claimed.** Count-correction evidence only; the full suite and unrelated timeout controls were not rerun, and prior full-worker receipts remain historical. No tag, independent accuracy, full original closure or human acceptance is claimed.
+
+
+### 2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024
+
+Recorded 2026-11-19T16:37:16.865927+00:00 · Contributor: Codex · change
+
+- **Changed.** Represent an unavailable NF check observation count as JSON null instead of inventing measured zero; retain integer zero for a completed no-match check.
+- **Evidence.** 13 focused controls and 10 actual current macOS CLI commands distinguish completed zero, Unicode partial availability, one failed check, both failed checks and optional-method drift. The original misleading-zero reproduction is preserved. [Change record](./runs/changes/2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024.json).
+- **Not claimed.** Targeted count semantics only; unrelated timeout controls and the full suite were not rerun. No tag, accuracy, original scope closure or human acceptance is claimed; prior full worker evidence remains historical.
+### 2026-11-19-165341-fixture-close-ownership-correction-d21e80ce
+
+Recorded 2026-11-19T16:53:41.951575+00:00 · Contributor: Codex site fixture lane · change
+
+- **Changed.** Corrected HEAD and request-error descriptor cleanup: relinquish ownership before attempting close, never retry a close-failed numeric descriptor, and destroy the response safely when cleanup is uncertain.
+- **Evidence.** Preserved the actual failing-before counterexample with two close attempts and a lost reused marker descriptor. Corrected actual HEAD injection attempts close once and preserves the exact reused owned marker; all ten focused HTTP/CLI groups pass, including pre-response cleanup uncertainty. The streamed GET implementation is unchanged. [Change record](./runs/changes/2026-11-19-165341-fixture-close-ownership-correction-d21e80ce.json).
+- **Not claimed.** Fixture-only correction; no product/probe changes or broad suite. Close failure leaves the OS outcome uncertain, so no completed-close guarantee is claimed. Earlier HP semantic proof remains historical and is not relabeled as current server-source replay. PM owns reopened fixture source review and CI.
+
+
+### 2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52
+
+Recorded 2026-11-19T16:41:59.413341+00:00 · Contributor: Codex site fixture lane · change
+
+- **Changed.** Replaced the CI plain static server with a shared loopback fixture that applies the built reviewed headers, GET/HEAD and path/link refusals. The current-build controller uses the same module and cleanup; CI checks startup readiness and runs the focused fixture controls.
+- **Evidence.** Eight actual HTTP/CLI groups pass, workflow YAML and both caller paths are checked, and the actual HP integration passed against the shared server under ordinary CSP, including real PS and MT after HP child failure. Source and actual served artifact hashes are recorded; peer security replay found no blocker. [Change record](./runs/changes/2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52.json).
+- **Not claimed.** No CSP assertion or accessibility-probe weakening, product/core changes, broad suite, deployment, independent tag accuracy or full PR-head publication-byte claim. PM owns new source bindings and actual CI rerun; fixture assumes an owned frozen build.
+
+
+### 2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c
+
+Recorded 2026-11-19T16:24:22.064198+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the fully passing integrated site and current source/access boundary evidence; refreshed current tag-worker state without promoting any original requirement.
+- **Evidence.** All46website commands pass on unchanged source, including actual HP results, PS/MT failure isolation and the delayed-loading focus regression. All5capability receipts assess current;1314reviewed boundary sources preserve existing access/endpoints.171focused current Python controls passed within protocol verification. [Change record](./runs/changes/2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c.json).
+- **Not claimed.** Five scoped tasks are closed; original totals remain132complete/70open. Protected GitHub checks and actual public deployment are pending. No independent tag accuracy, physical-phone or full WCAG acceptance.
+
+
+### 2026-11-19-161749-verified-accessibility-readiness-handoff-8c4121a8
+
+Recorded 2026-11-19T16:17:49.420284+00:00 · Contributor: Codex · change
+
+- **Changed.** Reviewed and integrated the reproduced HP readiness correction; task board now closes the bounded debugging deliverable and keeps full human acceptance open.
+- **Evidence.** Exact verifier-only change preserves product and probes. Controlled actual child insertion reproduced both-theme locator retargeting; ready-first checks pass19focus controls per theme. Live accounting records five scoped tasks, zero original closures and70open. [Change record](./runs/changes/2026-11-19-161749-verified-accessibility-readiness-handoff-8c4121a8.json).
+- **Not claimed.** Full current website execution is still required after this changed source. Human VoiceOver, physical phones and independent tag release remain unverified.
+
+
+### 2026-11-19-161559-preserve-tag-integration-review-candidates-ce5a4578
+
+Recorded 2026-11-19T16:15:59.446198+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved both full website candidate failures and the final pre-PR privacy/accounting review before the focused lazy-screen accessibility correction.
+- **Evidence.** The first candidate isolated an obsolete HP SEO assertion; the tightened ten-case SEO check passes. The second candidate passed HP method/PS/MT isolation and other initial website phases, then exposed an indexed-control focus race. Separate review verifies original criteria and public evidence redaction. [Change record](./runs/changes/2026-11-19-161559-preserve-tag-integration-review-candidates-ce5a4578.json).
+- **Not claimed.** Website remains a failed candidate until the readiness correction is integrated and the full gate passes. Four scoped tasks and zero originals are closed;70originals remain open. No independent accuracy or physical-device claim.
+
+
+### 2026-11-19-160542-reviewed-tag-integration-public-record-e897ea82
+
+Recorded 2026-11-19T16:05:42.269098+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated independently reviewed tag components, updated scope evidence and task accountability, and corrected an unpublished execution record representation before publication.
+- **Evidence.** 169 earlier combined controls retain their original source/time; final accounting has41focused checks and separate review. NF actual Linux and HP browser evidence are retained. Public run files contain no local home/temp path markers;10SEOcontrols now distinguish the literal HP preview from a planned tag. [Change record](./runs/changes/2026-11-19-160542-reviewed-tag-integration-public-record-e897ea82.json).
+- **Not claimed.** The first full website candidate passed42commands then refused a stale HP SEO expectation; its failed receipt remains. Corrected whole-site verification and protected publication are pending.70originals remain open and no tag release is claimed.
+
+
+### 2026-11-19-155616-tag-bots-source-bound-checks-0236b561
+
+Recorded 2026-11-19T15:56:16.183071+00:00 · Contributor: Codex · change
+
+- **Changed.** Added the fixed HP client check entrypoint required by the revalidation consumer and preserved the refused direct-command candidate; captured four current capability runs.
+- **Evidence.** PS7, PII6, extension14 and protocol55 configured commands passed with unchanged sources. Original open count remains70; live task accounting continues to refuse the unmet original-closure goal. [Change record](./runs/changes/2026-11-19-155616-tag-bots-source-bound-checks-0236b561.json).
+- **Not claimed.** These are source-bound engineering passes, not independent accuracy or original closure. Website validation and protected publication remain pending.
+
+
+### 2026-11-19-155022-tag-method-generated-scope-0ef2705e
+
+Recorded 2026-11-19T15:50:22.033240+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public scope mirrors and added the tracked NF guide preparation after integrating the independent components.
+- **Evidence.** Production site build passed with all202 original records retained; generated artifacts reflect current evidence without changing any percentage. [Change record](./runs/changes/2026-11-19-155022-tag-method-generated-scope-0ef2705e.json).
+- **Not claimed.** Generated scope and successful build are not release validation or original requirement closure. Final protected checks and publication remain pending.
+
+### 2026-11-19-161533-hp-lazy-probe-readiness-a330f77a
+
+Recorded 2026-11-19T16:15:33.389768+00:00 · Contributor: Codex HP accessibility lane · change
+
+- **Changed.** Waited for the actual HP form before accessibility control enumeration and added a controlled delayed real-child regression inside the normal site verifier. Importing the verifier exposes the focused control without launching full verification.
+- **Evidence.** One bounded Chromium replay reproduced the same live indexed locator changing from Testing and evidence to unfocused Source notices after HP insertion. Ready-first unchanged probes passed both themes with19 focus checks each and zero failures, plus target/disclosure/spacing/forced-colors checks. The failed full-site candidate remains preserved. [Change record](./runs/changes/2026-11-19-161533-hp-lazy-probe-readiness-a330f77a.json).
+- **Not claimed.** Verifier readiness correction only; no product, CSS, focus assertion or probe relaxation. No full site suite, human screen-reader/physical-phone acceptance, HP independent accuracy or requirement completion.
+
+
+### 2026-11-19-154458-hp-built-site-integration-verified-36288c66
+
+Recorded 2026-11-19T15:44:58.028506+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Completed built-site HP method-preview integration with calm Claim details display, original formal name, preparation, public guide, generated index, scoped availability and npm controls; kept NF offline guide copy separate from its planned tag.
+- **Evidence.** Fresh site build passed. Source-stable actual Chromium and WebKit controls each matched five complete native HP records, verified opt-in details/cancellation/privacy and 320px enlarged controls, then ran real PS and MT checks after the actual HP child chunk failed. Final light/dark/enlarged snapshots were inspected; original HP/PS/MT sources are unchanged. Initial build and visual failures are preserved. [Change record](./runs/changes/2026-11-19-154458-hp-built-site-integration-verified-36288c66.json).
+- **Not claimed.** No HP or NF production tag assertion, independent accuracy, human/physical-device acceptance or full requirement closure. No deployment was performed. Temporary NF guide is untracked, not Git-ignored; PM must integrate its actual source and preparation before publication. No broad suite rerun.
+
+
+### 2026-11-19-154303-hp-phone-title-and-generated-reference-80c6cbb5
+
+Recorded 2026-11-19T15:43:03.076854+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Used Claim details as the HP display name while retaining formal Hallucination possible and its original job/claim/release. Added deterministic generated index/HP reference coverage and awaited actual dark-theme application before screenshots.
+- **Evidence.** First built-site Chromium/WebKit checks each passed five whole-record comparisons, privacy/cancellation and successful actual PS and MT checks after an HP chunk refusal. Visual review separately found the long title breaking at 200% and a premature dark screenshot; the affected presentation/proof is being refreshed. [Change record](./runs/changes/2026-11-19-154303-hp-phone-title-and-generated-reference-80c6cbb5.json).
+- **Not claimed.** No core method change or rerun, HP tag promotion, independent accuracy or human/physical-device acceptance. Pending NF source/prepare integration remains PM-owned.
+
+
+### 2026-11-19-154031-hp-build-reference-and-disclosure-check-316dedd2
+
+Recorded 2026-11-19T15:40:31.698179+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Corrected the HP pre-result disclosure assertion: private evidence remains absent until a result. Preserved the initial build refusal for the pending NF reference; the isolated verification build uses the exact frozen NF guide as an ignored input, with real source/preparation integration retained as a PM publication prerequisite.
+- **Evidence.** Initial actual build refused a missing public NF reference rather than publishing an absent guide. Corrected source syntax passes; no HP core method changed. [Change record](./runs/changes/2026-11-19-154031-hp-build-reference-and-disclosure-check-316dedd2.json).
+- **Not claimed.** No deployment or independent tag accuracy. The pending NF source and its prepare copy must be integrated before clean-clone publication.
+
+
+### 2026-11-19-153916-mount-hp-method-preview-f8553f3f
+
+Recorded 2026-11-19T15:39:16.862594+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Mounted the reviewed independent HP literal-detail explorer only in its planned HP modal; added preparation, guide links and build/test aliases, and updated HP-aware site assertions. Added PM-requested NF offline guide/caller-selected observation copy while preserving planned NF status.
+- **Evidence.** The integration and its focused actual-built-site control pass syntax checks. Existing standalone source-bound parity remains unchanged; fresh production build and browser integration evidence will be recorded after this attributed change gate. [Change record](./runs/changes/2026-11-19-153916-mount-hp-method-preview-f8553f3f.json).
+- **Not claimed.** No HP or NF tag release, independent accuracy, full requirement closure, physical phone or human accessibility acceptance, new data collection or endpoint. NF guide preparation and deployment remain PM-owned.
+
+
+### 2026-11-19-153301-session-delivery-accounting-7c0e9026
+
+Recorded 2026-11-19T15:33:01.556268+00:00 · Contributor: Codex · change
+
+- **Changed.** Added separate tag queues and a task-list lead with strict session delivery accounting, frozen baseline criteria and current reviewed evidence.
+- **Evidence.** 39 focused controls and actual inspect/check-session commands pass their expected results; independent review reproduced and verified corrections to self-review and argument disclosure. [Change record](./runs/changes/2026-11-19-153301-session-delivery-accounting-7c0e9026.json).
+- **Not claimed.** 132 original requirements remain complete and 70 open. No tag release or original requirement closure is approved by this accounting tool; strict session goal remains unmet.
+### 2026-11-19-153047-hp-on-device-literal-details-90157d57
+
+Recorded 2026-11-19T15:30:47.416628+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Built an independent on-device HP literal-detail explorer with exact unmodified quantitative Python, raw and frozen-NFC identity binding, closed result validation, private optional evidence, scoped lazy failure containment and safe source/notice packaging.
+- **Evidence.** 77 focused Python checks and 10 Node groups passed; actual Chromium and WebKit each matched 28 full native-Python records/refusals and passed 5 corrupt-result UI cases, cancellation, privacy, import/render/worker failure and responsive controls. Original LICENSE/NOTICE/Unicode notices are packaged exactly. Four 390px light/dark screenshots were inspected. [Change record](./runs/changes/2026-11-19-153047-hp-on-device-literal-details-90157d57.json).
+- **Not claimed.** No HP assertion, semantic specificity or source-support judgment, independent accuracy, physical-phone/human accessibility acceptance, production mounting, license clearance or parent requirement completion. Initial runtime delivery still needs network. F-015 and T-HP release acceptance remains open.
+### 2026-11-19-154710-nf-selected-source-linux-evidence-29a4ed46
+
+Recorded 2026-11-19T15:47:10.334274+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual corrected-source NF execution as an unprivileged user on the existing isolated Linux verification host, without changing NF sources or active services.
+- **Evidence.** 21 actual CLI and 7 selected stdlib library controls pass under Python3.13.5 UID1000, kernel network namespace and real libseccomp IPv4/IPv6 denial; all15 selected input hashes and original staging identities remain unchanged, and the owned temporary checkout is removed. [Change record](./runs/changes/2026-11-19-154710-nf-selected-source-linux-evidence-29a4ed46.json).
+- **Not claimed.** Selected engineering controls only; the full pytest suite was not run on Linux and no package was installed. No NF or FI tag, original scope closure, independent accuracy, source-truth, dependency clearance or human acceptance is claimed.
+
+
+### 2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead
+
+Recorded 2026-11-19T15:37:37.915789+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind accepted cosine scores and complete match lists to replay of the unchanged canonical component on the exact capped caller-selected passages before rebasing or export.
+- **Evidence.** The two original plausible-corruption acceptances are preserved; 95 focused controls and 23 actual current macOS CLI controls reject score forgery and match omission while retaining the literal sibling, plus a bounded replay cost observation. [Change record](./runs/changes/2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead.json).
+- **Not claimed.** Canonical replay verifies record consistency, not independent accuracy, semantic support, source freshness or truth. No NF or FI tag, original scope closure, Linux execution or human acceptance is claimed.
+
+
+### 2026-11-19-153132-nf-selected-source-evidence-9e6db2cb
+
+Recorded 2026-11-19T15:31:32.517470+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separately invoked NF evidence workflow binding caller-selected arbitrary NFC claim and source passage spans, composing canonical literal and cosine observations in independent bounded network-denied workers with NF-owned private I/O.
+- **Evidence.** 91 focused controls and 21 actual isolated-Python macOS CLI controls verify source and span identity, separate observation failures, real network denial, timeout and output caps, private exports, cross-tag independence and honest publication uncertainty; the initial failed candidate is retained. [Change record](./runs/changes/2026-11-19-153132-nf-selected-source-evidence-9e6db2cb.json).
+- **Not claimed.** Literal occurrence and cosine resemblance do not establish semantic support, source freshness or truth. No NF or FI tag, original scope closure, independent accuracy, Linux execution, full dependency clearance or human acceptance is claimed.
+
+
 ### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37
 
 Recorded 2026-11-19T09:46:20.522872+00:00 · Contributor: Codex · change

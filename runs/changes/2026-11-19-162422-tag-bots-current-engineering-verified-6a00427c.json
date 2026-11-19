@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c",
+  "recorded_at": "2026-11-19T16:24:22.064198+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c28695f75422d654ae531103ef3d2680f07a38a1",
+  "changed": "Recorded the fully passing integrated site and current source/access boundary evidence; refreshed current tag-worker state without promoting any original requirement.",
+  "proves": "All46website commands pass on unchanged source, including actual HP results, PS/MT failure isolation and the delayed-loading focus regression. All5capability receipts assess current;1314reviewed boundary sources preserve existing access/endpoints.171focused current Python controls passed within protocol verification.",
+  "limits": "Five scoped tasks are closed; original totals remain132complete/70open. Protected GitHub checks and actual public deployment are pending. No independent tag accuracy, physical-phone or full WCAG acceptance.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-142",
+    "F-074"
+  ],
+  "files": {
+    "docs/session-delivery-plan.md": "15a6f3867cb96fd3196de6660c93484bcd078353de79e84b88e2f6f9bb215040",
+    "docs/session-delivery.json": "6d96b0bb6622162a8ea2780b6350d678886239c352f8906667b8d3e1ea39aea2",
+    "eval/route-boundaries.json": "439cf35941012730f59da66ec4c2f68c1af1ebce20853b8db03f1bd2362fdfe9",
+    "runs/2026-11-19-tag-bots-accessibility-ready.json": "856c9d6f3beba19dcd0396d467f17d2ccdffbec172688bef3859d9199616c7ec",
+    "runs/2026-11-19-tag-bots-boundaries.json": "f717416182970ddeffea7788a2b9bd9aa8120bd31308ddaed1627513110441e3",
+    "runs/2026-11-19-tag-bots-integrated-site-ready.json": "ec4b7611ad8fb9dcc4785a5b1d383ccef0a66a6c43af97eb5f1f171e3fe9b4b8",
+    "runs/2026-11-19-tag-bots-ready-website.json": "a780b37cd8f8a71abd2af1116b5c92b3c372aa855fc5f3bb37c1b09eabc3fa8e",
+    "state.json": "d857aa46d3374c78518899ea58d911ed619efc2e2e097e9ca593a5a2016af711"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-tag-bots-ready-website.json",
+      "sha256": "a780b37cd8f8a71abd2af1116b5c92b3c372aa855fc5f3bb37c1b09eabc3fa8e"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-integrated-site-ready.json",
+      "sha256": "ec4b7611ad8fb9dcc4785a5b1d383ccef0a66a6c43af97eb5f1f171e3fe9b4b8"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-accessibility-ready.json",
+      "sha256": "856c9d6f3beba19dcd0396d467f17d2ccdffbec172688bef3859d9199616c7ec"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-boundaries.json",
+      "sha256": "f717416182970ddeffea7788a2b9bd9aa8120bd31308ddaed1627513110441e3"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-protocol.json",
+      "sha256": "cd7b15e76df2f3064abd15aac034cec77594a3150292c560758f2b68d9766905"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-155022-tag-method-generated-scope-0ef2705e",
+  "recorded_at": "2026-11-19T15:50:22.033240+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6d7e1c236878de2c767f1673b5fd8afb62efd2de",
+  "changed": "Regenerated public scope mirrors and added the tracked NF guide preparation after integrating the independent components.",
+  "proves": "Production site build passed with all202 original records retained; generated artifacts reflect current evidence without changing any percentage.",
+  "limits": "Generated scope and successful build are not release validation or original requirement closure. Final protected checks and publication remain pending.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-074"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "d2670eeeca1cb0b05c0fa6ddf7a33cc31324c1ec97974142494ee03df0c9e363",
+    "AGENTS.md": "64335866e529ab3e970a862c08db36741ff00523d6e0b6986003a95c1a8b43ec",
+    "README.md": "e4c5e93e6d899436ee2ba79ff1401856eba6d35daf90171b164d56f2ced5493a",
+    "docs/scope-progress.json": "c99752d12d02b902225106de850d884c16368e7886b02b07f9f582473130d38a",
+    "docs/scope-progress.md": "ff53c933134d3c0fe170aed7cef47ca9fa5ff9d88dcdb0c83c400a748a07536a",
+    "docs/session-delivery-plan.md": "f78a8c69d401cf59fb52e78fd054ead933dc46913d42e781e717fb81e1f86ba3",
+    "docs/session-delivery.json": "f98d1dff6a521b38fd648f5ee36e90eff2c44f6379ede69aea5565674f2a1581",
+    "eval/revalidation.json": "a99fd1e9f4d7dd73fcf3e97df29f762a0fb27e6d77428fde3022bc570b2ab22c",
+    "package.json": "f00a20c6ed2ff388831c1ac6c316914b038262908805c1b20207627636900aaa",
+    "runs/2026-11-19-hp-device-independent-review.json": "4927babd1284ffc60e2dded4db8a95874375f47cd21899ccb87f5c23d8c7103e",
+    "runs/2026-11-19-nf-source-independent-review.json": "0a1b751dd77d350003053b306e1d24cc93ab9bd68a7758d2ad8b9f8521ef2b0d",
+    "runs/2026-11-19-session-acceptance-preservation-review.json": "8517aa23dd2f8c8574fabe8353b1b157159c72517b9b6d66d9c2d980aac0ac34",
+    "runs/2026-11-19-tag-components-integrated.json": "d1ed2118fb1992662b65972e6adeb0bbb7016676554a757081f3d1efdf3f903a",
+    "scripts/verify-route-boundaries.py": "18c511446fcc4c054d9d0ab0a377886c95eb639fbd35ace369cdbb61859427af",
+    "site/public/reference/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "site/public/reference/public-scope.json": "7123f792b600cb7fc1d48c35ece683508ee0919ea62868c856f88af36c9e40e4",
+    "site/scripts/prepare.mjs": "c3ddb5ea829d4773591d28d2476a185129353d1b1510aac8afe560a7dec01f20",
+    "site/src/public-scope.json": "7123f792b600cb7fc1d48c35ece683508ee0919ea62868c856f88af36c9e40e4",
+    "site/src/scope-manifest.json": "ff35259f2c4e2e81f115752f86f409f5f619995fa3e421262c4d140fcd328c33",
+    "state.json": "6ccd4f8ba61431ef6c710bd61f7daae3be5a6766d8a04d4452301d0374a4f2a5",
+    "tests/test_session_delivery.py": "6101d3b54b5e2f00be54e448fb7081cde6504117d411121ee3c76a8d3f5e0ea9",
+    "tools/session_delivery.py": "7d612f8eb684922b4e211b580cffd2bdc8eabbb513ce311ef73d4a8add45977f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-hp-production-site-final.json",
+      "sha256": "2874c76bddaa491a90f833665cc368122698d3c5c5dd2a859802e478e86395c8"
+    },
+    {
+      "path": "runs/2026-11-19-session-acceptance-preservation-review.json",
+      "sha256": "8517aa23dd2f8c8574fabe8353b1b157159c72517b9b6d66d9c2d980aac0ac34"
+    }
+  ],
+  "checks": []
+}

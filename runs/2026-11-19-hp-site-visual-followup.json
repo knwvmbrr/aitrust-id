@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-11-19T15:43:03.033228+00:00",
+  "initial_execution": "runs/2026-11-19-hp-production-site-candidate-1.json",
+  "functional_checks_passed": true,
+  "visual_review_pass": false,
+  "observations": [
+    "At320px/200% the original Hallucination possible display title broke within a word.",
+    "The first dark screenshot was captured before the media-change paint and still showed light colors."
+  ],
+  "screenshots_sha256": {
+    "output/playwright/hp-production-phone-light.png": "2a2909b2c2d8225e0ad69d673b8df0e6ada9dc364ee4ef220851d947247ca385",
+    "output/playwright/hp-production-phone-dark.png": "2a2909b2c2d8225e0ad69d673b8df0e6ada9dc364ee4ef220851d947247ca385",
+    "output/playwright/hp-production-modal-320-enlarged.png": "2d943c0e067d48d266e28ffa806ed424839545a54b2239b97aa89194c0af6722"
+  },
+  "approved_fix": "Use Claim details as display name with original Hallucination possible formalName preserved; await actual dark-theme application before screenshot. Refresh affected built-site proof only.",
+  "canonical_method_changed": false
+}

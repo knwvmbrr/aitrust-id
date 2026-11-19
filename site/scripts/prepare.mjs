@@ -26,6 +26,9 @@ try {
 
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-mt-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/mt-device-explorer.md'),path.join(site,'public/reference/mt-device-explorer.md'));
+execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-hp-device.py')],{stdio:'pipe'});
+fs.copyFileSync(path.join(repo,'docs/hp-device-explorer.md'),path.join(site,'public/reference/hp-device-explorer.md'));
+fs.copyFileSync(path.join(repo,'docs/nf-source-evidence.md'),path.join(site,'public/reference/nf-source-evidence.md'));
 fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar.md'),path.join(site,'public/reference/fi-citation-sidecar.md'));
 fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar-plan.md'),path.join(site,'public/reference/fi-citation-sidecar-plan.md'));
 fs.copyFileSync(path.join(repo,'docs/mt-evidence-workflow.md'),path.join(site,'public/reference/mt-evidence-workflow.md'));

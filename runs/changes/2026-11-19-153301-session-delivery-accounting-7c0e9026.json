@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-153301-session-delivery-accounting-7c0e9026",
+  "recorded_at": "2026-11-19T15:33:01.556268+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+  "changed": "Added separate tag queues and a task-list lead with strict session delivery accounting, frozen baseline criteria and current reviewed evidence.",
+  "proves": "39 focused controls and actual inspect/check-session commands pass their expected results; independent review reproduced and verified corrections to self-review and argument disclosure.",
+  "limits": "132 original requirements remain complete and 70 open. No tag release or original requirement closure is approved by this accounting tool; strict session goal remains unmet.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-074"
+  ],
+  "files": {
+    "docs/agent-handoffs.md": "1768644c4572ff82e7f5efcdaf02a11f861bc9e4b95974b1ac2e4410c3875b49",
+    "docs/session-accountability-plan.md": "0976bbe7476138c9c4ef2468b4ca5346de0670cc7cb6f11b31575179acacc492",
+    "docs/session-delivery-plan.md": "05d88f1d5aed202fe2a912ab76d65d7079917e50df3617c32627e3d5123dc180",
+    "docs/session-delivery.json": "6cfc7f08f70a7000522f7f83a8dd55fc22886e3487f80242b5ad5357faca38e6",
+    "runs/2026-11-19-session-accountability-independent-review.json": "fbe47c2a98c0895fb1c09c49d4b5565e834327f96ce25b2b4613490e5a778f26",
+    "runs/2026-11-19-session-delivery-implementation.json": "9d9d4e9c8ad4a5c854bf5fd351aa1d1454940c3dbdf67a35fea1832d665a2f4e",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "tests/test_session_delivery.py": "9e93fd7ba7a357ff871e0d2a68c792f58d44fcdc99773c8d781641d4a1a8d7f6",
+    "tools/session_delivery.py": "49e0b4e19363fc2b0f3666e91e0cadd7ea9fd66fa69b9fe258d90d689f1f4327"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-session-delivery-implementation.json",
+      "sha256": "9d9d4e9c8ad4a5c854bf5fd351aa1d1454940c3dbdf67a35fea1832d665a2f4e"
+    },
+    {
+      "path": "runs/2026-11-19-session-accountability-independent-review.json",
+      "sha256": "fbe47c2a98c0895fb1c09c49d4b5565e834327f96ce25b2b4613490e5a778f26"
+    }
+  ],
+  "checks": []
+}

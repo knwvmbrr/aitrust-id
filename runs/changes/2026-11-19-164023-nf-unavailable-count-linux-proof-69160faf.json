@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-164023-nf-unavailable-count-linux-proof-69160faf",
+  "recorded_at": "2026-11-19T16:40:23.703692+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8742be421986cff3abb1754c7a441b9fb6076cdf",
+  "changed": "Record targeted current-source Linux CLI verification of unknown versus measured-zero NF observation counts.",
+  "proves": "10 actual isolated-Python Linux commands pass on exact correction commit 8742be4 as UID1000 with real libseccomp protections; eleven selected source hashes and original staging identities remain unchanged, and the owned temporary checkout is removed.",
+  "limits": "Count-correction evidence only; the full suite and unrelated timeout controls were not rerun, and prior full-worker receipts remain historical. No tag, independent accuracy, full original closure or human acceptance is claimed.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "runs/2026-11-19-nf-unavailable-count-linux.json": "5f71dc1d7c3925e50fa6e9681e147784399b5effd8b20d7787776213332df29a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-nf-unavailable-count-linux.json",
+      "sha256": "5f71dc1d7c3925e50fa6e9681e147784399b5effd8b20d7787776213332df29a"
+    }
+  ],
+  "checks": []
+}
