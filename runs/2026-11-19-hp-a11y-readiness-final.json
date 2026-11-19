@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-11-19T16:15:33.347916+00:00",
+  "pass": true,
+  "base_commit": "53ef63a1daaaed50f85cb60f8fb25747785ecf47",
+  "controlled_execution": {
+    "path": "runs/2026-11-19-hp-a11y-readiness-candidate-1.json",
+    "sha256": "35f4a2a11e023879a0b84157c12bd6c5f9c1a6a29be1aaa9ef1ca664777962c0"
+  },
+  "original_full_site_failure": {
+    "source_sha256": "28887981c884333111bf5e272baf4a1da018ef098a0a3285f34bac8343e4f413",
+    "pass": false,
+    "HP_results": [
+      {
+        "name": "HP",
+        "theme": "light",
+        "targets": {
+          "controls": 14,
+          "inline_exceptions": 0,
+          "failures": []
+        },
+        "focus": {
+          "checked": 14,
+          "failures": [
+            "Not keyboard focused: Source notices",
+            "No focus indicator: Source notices",
+            "Focused control fully obscured: Source notices"
+          ]
+        },
+        "spacing": {
+          "clipped": [],
+          "horizontal_overflow": false
+        },
+        "disclosure": {
+          "checked": 3,
+          "failures": []
+        }
+      }
+    ],
+    "preserved_unchanged_by_this_lane": true
+  },
+  "verifier_sha256": "1e4822bd6bcaa7ce5c603ea63ac4d38fd1dc40fa15dd37bc7308b1356be985be",
+  "unchanged_probes_sha256": "4e2c4a0c86968eb89267e93381aba6fa0fe3309ee989ed4da37f647d7cf1141d",
+  "changed_product_sources": [],
+  "target_identity_drift_reproduced_in_actual_chunk_control": true,
+  "ready_first_focus_checks_per_theme": 19,
+  "ready_first_focus_failures": 0,
+  "focused_import_executes_no_main": true,
+  "regression_runs_in_normal_full_main": true,
+  "check": {
+    "argv": [
+      "node",
+      "--check",
+      "scripts/verify-site-accessibility.cjs"
+    ],
+    "exit_status": 0
+  },
+  "full_site_suite_run": false,
+  "scope_percentages_changed": false,
+  "manual_screenreader": false,
+  "physical_phone": false,
+  "independent_accuracy_evidence": false
+}

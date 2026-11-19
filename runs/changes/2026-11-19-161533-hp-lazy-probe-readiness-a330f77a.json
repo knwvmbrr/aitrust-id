@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-161533-hp-lazy-probe-readiness-a330f77a",
+  "recorded_at": "2026-11-19T16:15:33.389768+00:00",
+  "author": "Codex HP accessibility lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "53ef63a1daaaed50f85cb60f8fb25747785ecf47",
+  "changed": "Waited for the actual HP form before accessibility control enumeration and added a controlled delayed real-child regression inside the normal site verifier. Importing the verifier exposes the focused control without launching full verification.",
+  "proves": "One bounded Chromium replay reproduced the same live indexed locator changing from Testing and evidence to unfocused Source notices after HP insertion. Ready-first unchanged probes passed both themes with19 focus checks each and zero failures, plus target/disclosure/spacing/forced-colors checks. The failed full-site candidate remains preserved.",
+  "limits": "Verifier readiness correction only; no product, CSS, focus assertion or probe relaxation. No full site suite, human screen-reader/physical-phone acceptance, HP independent accuracy or requirement completion.",
+  "scope_ids": [
+    "F-142",
+    "T-HP"
+  ],
+  "files": {
+    "docs/hp-accessibility-readiness.md": "92f47a1921dc38c50c81a5fce719fb34a1c58ddf6578fc559fd6ed4fae260b9c",
+    "runs/2026-11-19-hp-a11y-readiness-candidate-1.json": "35f4a2a11e023879a0b84157c12bd6c5f9c1a6a29be1aaa9ef1ca664777962c0",
+    "runs/2026-11-19-hp-a11y-readiness-final.json": "18ffb3768215423fb65e772364b145afe859c451a4828c7df863717c5338df89",
+    "scripts/verify-site-accessibility.cjs": "1e4822bd6bcaa7ce5c603ea63ac4d38fd1dc40fa15dd37bc7308b1356be985be",
+    "site/public/reference/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-hp-a11y-readiness-candidate-1.json",
+      "sha256": "35f4a2a11e023879a0b84157c12bd6c5f9c1a6a29be1aaa9ef1ca664777962c0"
+    },
+    {
+      "path": "runs/2026-11-19-hp-a11y-readiness-final.json",
+      "sha256": "18ffb3768215423fb65e772364b145afe859c451a4828c7df863717c5338df89"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site-accessibility.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T16:15:33.516731+00:00"
+    }
+  ]
+}
