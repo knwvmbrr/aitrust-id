@@ -9,6 +9,7 @@ import io
 import json
 from pathlib import Path
 import re
+import struct
 import tarfile
 from urllib.parse import urlsplit
 import zipfile
@@ -92,10 +93,60 @@ class ExpandedReader:
         return data
 
 
+def zip_directory_preflight(raw):
+    """Bound classic single-disk ZIP metadata before ZipFile allocates ZipInfo."""
+    need(len(raw) >= 22 and raw[-22:-18] == b'PK\x05\x06')
+    end = len(raw) - 22
+    signature, disk, directory_disk, disk_count, count, size, start, comment = struct.unpack_from('<4s4H2IH', raw, end)
+    need(signature == b'PK\x05\x06' and disk == directory_disk == comment == 0)
+    need(0 < count == disk_count <= MAX_FILES and count != 0xffff)
+    need(size != 0xffffffff and start != 0xffffffff and 0 < size <= 8 * 1024**2 and start + size == end)
+    # ZIP64 end records/locators, split archives, archive/entry comments, trailing
+    # data and self-extracting prefixes are outside this finite classic profile.
+    pos = start; seen = set(); offsets = set(); ranges = []; expanded = 0
+
+    def extra_fields(data):
+        offset = 0; tags = set()
+        while offset < len(data):
+            need(offset + 4 <= len(data))
+            tag, length = struct.unpack_from('<HH', data, offset)
+            need(tag != 1 and tag not in tags and offset + 4 + length <= len(data))
+            tags.add(tag); offset += 4 + length
+        need(offset == len(data))
+
+    for _ in range(count):
+        need(pos + 46 <= end)
+        fields = struct.unpack_from('<4s6H3I5H2I', raw, pos)
+        sig, _, _, flags, method, _, _, _, compressed, unpacked, namesize, extrasize, commentsize, member_disk, _, _, local = fields
+        need(sig == b'PK\x01\x02' and not flags & 1 and member_disk == 0)
+        need(commentsize == 0 and 0 < namesize <= 2048 and extrasize <= 4096)
+        finish = pos + 46 + namesize + extrasize
+        need(finish <= end and compressed != 0xffffffff and unpacked != 0xffffffff and local != 0xffffffff)
+        need(compressed <= MAX_ARCHIVE and unpacked <= MAX_MEMBER)
+        expanded += unpacked; need(expanded <= MAX_EXPANDED)
+        name_raw = raw[pos + 46:pos + 46 + namesize]
+        name = name_raw.decode('utf-8' if flags & 0x800 else 'cp437', 'strict'); safe(name)
+        need(name not in seen and local not in offsets); seen.add(name); offsets.add(local)
+        extra_fields(raw[pos + 46 + namesize:finish])
+        need(0 <= local and local + 30 <= start)
+        header = struct.unpack_from('<4s5H3I2H', raw, local)
+        need(header[0] == b'PK\x03\x04' and header[2] == flags and header[3] == method)
+        need(header[7] != 0xffffffff and header[8] != 0xffffffff)
+        local_name, local_extra = header[-2:]
+        need(local_name == namesize and local_extra <= 4096)
+        payload = local + 30 + local_name + local_extra
+        need(payload + compressed <= start and raw[local + 30:local + 30 + local_name] == name_raw)
+        extra_fields(raw[local + 30 + local_name:payload])
+        ranges.append((local, payload + compressed)); pos = finish
+    need(pos == end and min(offsets) == 0)
+    ranges.sort(); need(all(a[1] <= b[0] for a, b in zip(ranges, ranges[1:])))
+
+
 def archive(raw, kind):
     need(type(raw) is bytes and 0 < len(raw) <= MAX_ARCHIVE)
     rows = {}; seen = set(); total = 0
     if kind == 'zip':
+        zip_directory_preflight(raw)
         with zipfile.ZipFile(io.BytesIO(raw)) as z:
             for item in z.infolist():
                 name = item.filename; safe(item.orig_filename); need(item.orig_filename == name); safe(name); need(name not in seen and len(seen) < MAX_FILES); seen.add(name)

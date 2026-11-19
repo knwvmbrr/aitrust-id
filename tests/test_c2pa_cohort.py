@@ -185,3 +185,52 @@ def test_finite_lock_policy_and_unknown_lines_refused(tmp_path):
                     original.replace('c2pa-python==0.38.0','c2pa-python==0.38.1')]:
         path.write_text(changed)
         with pytest.raises(ValueError):c.locked(tmp_path)
+
+
+def test_zip_count_limit_precedes_zipinfo_allocation(monkeypatch):
+    raw = zipped([('one', b''), ('two', b'')])
+    monkeypatch.setattr(c, 'MAX_FILES', 1)
+    def forbidden(*args, **kwargs):
+        raise AssertionError('ZipFile must not allocate over-limit directory')
+    monkeypatch.setattr(c.zipfile, 'ZipFile', forbidden)
+    with pytest.raises(ValueError): c.archive(raw, 'zip')
+
+
+@pytest.mark.parametrize('mutation', ['count_lie', 'zip64_count', 'split_disk', 'comment', 'trailing', 'directory_size', 'overlap'])
+def test_zip_unsupported_or_inconsistent_directory_refused_before_allocation(monkeypatch, mutation):
+    import struct
+    raw = bytearray(zipped([('one', b''), ('two', b'')]))
+    end = len(raw) - 22
+    if mutation == 'count_lie':
+        struct.pack_into('<HH', raw, end + 8, 1, 1)
+    if mutation == 'zip64_count':
+        struct.pack_into('<HH', raw, end + 8, 0xffff, 0xffff)
+    if mutation == 'split_disk': struct.pack_into('<H', raw, end + 4, 1)
+    if mutation == 'comment':
+        struct.pack_into('<H', raw, end + 20, 1); raw += b'x'
+    if mutation == 'trailing': raw += b'x'
+    if mutation == 'directory_size': struct.pack_into('<I', raw, end + 12, 9 * 1024**2)
+    if mutation == 'overlap':
+        first = raw.index(b'PK\x01\x02'); second = raw.index(b'PK\x01\x02', first + 4)
+        struct.pack_into('<I', raw, second + 42, 0)
+    def forbidden(*args, **kwargs):
+        raise AssertionError('ZipFile called before directory refusal')
+    monkeypatch.setattr(c.zipfile, 'ZipFile', forbidden)
+    with pytest.raises(ValueError): c.archive(bytes(raw), 'zip')
+
+
+@pytest.mark.parametrize('extra', [b'\x01\x00\x00\x00', b'\x55\x54\x00\x00\x55\x54\x00\x00', b'\x55\x54\x02\x00x'])
+def test_zip64_duplicate_or_truncated_extra_metadata_refused(extra):
+    f = io.BytesIO()
+    with zipfile.ZipFile(f, 'w') as z:
+        item = zipfile.ZipInfo('file'); item.extra = extra
+        z.writestr(item, b'inert')
+    with pytest.raises(ValueError): c.archive(f.getvalue(), 'zip')
+
+
+def test_cli_malformed_arguments_do_not_echo_private_values():
+    canary = 'AUTHORED_PRIVATE_ARGUMENT_CANARY'
+    result = subprocess.run([sys.executable, str(c.ROOT / 'scripts/verify-c2pa-cohort.py'), '--unknown=' + canary], capture_output=True, timeout=10)
+    assert result.returncode == 2 and result.stdout == b''
+    assert result.stderr == b'C2PA cohort evidence unavailable; no permission or release granted.\n'
+    assert canary.encode() not in result.stderr

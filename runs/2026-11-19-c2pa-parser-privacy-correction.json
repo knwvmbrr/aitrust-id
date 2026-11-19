@@ -1,0 +1,61 @@
+{
+  "profile": "c2pa-parser-privacy-correction/1.0.0",
+  "captured_at": "2026-11-19T06:10:08.484967+00:00",
+  "previous_source_commit": "d127e70e5acf3b8e9d0be742fdf425723e9171a7",
+  "previous_receipt": "runs/2026-11-19-c2pa-cohort-evidence.json",
+  "source_hashes": {
+    "tools/c2pa_cohort.py": "b9fabb46d7d2e5dab4e6b6ecbf328f10dc659886d1fec7a75fd4c6ac055fd643",
+    "scripts/verify-c2pa-cohort.py": "e4ee3c5caf47f267abd708053306a3f23f1e432564e35f2f7225b2c5be44ba3a",
+    "tests/test_c2pa_cohort.py": "6e05c34404ff4b2c15beb0c9b40a6e6dda145b78aee16e03fcd21a6a99674c98",
+    "docs/c2pa-cohort-plan.md": "2d048947a09a273e96d40d5ecfc1a69200963be6f39108ff9ada4d3a00103e92",
+    "docs/c2pa-cohort-review.md": "984fd51db2a9ae2d288964e89b02f15ba0bdae11307c3627bda650619a376c70",
+    "sbom/c2pa/.gitattributes": "1ef6cb2213cc1f57685c203306fcaac6271139d42ee47b5d549d0d7d8b55ea41",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+    "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+    "tools/manifest_inspection.py": "3ae83be2f2eec5b291759a416745f74a155ab6d488bf14e90d1e419340dda8c0",
+    "sbom/c2pa/manifest.json": "5b2074cc8385cb66429b7af35cbe1ea7c0a7286f35a184556e495246fa0d5188"
+  },
+  "source_unchanged_during_execution": true,
+  "archive_and_notice_observations_unchanged": true,
+  "corrections": [
+    "Fixed CLI refusal suppresses malformed argument values.",
+    "Classic single-disk ZIP central directory validated before ZipFile member-object allocation. ZIP64/split disks/comments/trailing data/prefixes/duplicate names or extra tags and overlaps explicitly refuse."
+  ],
+  "focused_tests": {
+    "command": "python3 -B -m pytest -q tests/test_c2pa_cohort.py",
+    "passed": 59,
+    "exit_code": 0,
+    "seconds": 1.59
+  },
+  "actual_current_replay": {
+    "command": "python3 -B scripts/verify-c2pa-cohort.py --cache-dir <private pinned artifact cache>",
+    "exit_code": 0,
+    "result": {
+      "profile": "c2pa-selected-artifact-notice-observations/1.0.0",
+      "pass": true,
+      "packages": 10,
+      "distinct_wheels": 14,
+      "selected_profile_slots": 20,
+      "retained_texts": 70,
+      "native_release_matches": 2,
+      "artifact_bytes_replayed": true,
+      "source_bytes_replayed": true,
+      "packages_executed": false,
+      "permission_cleared": false,
+      "release_approved": false,
+      "source_build_reproduced": false,
+      "publisher_signature_verified": false,
+      "complete_native_dependency_graph": false
+    }
+  },
+  "actual_cli_private_canary_refusal": {
+    "exit_code": 2,
+    "private_canary_echoed": false,
+    "traceback": false
+  },
+  "original_scope_closure_claimed": false,
+  "permission_cleared": false,
+  "packages_executed": false,
+  "production_mutated": false
+}

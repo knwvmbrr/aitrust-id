@@ -36,6 +36,13 @@ size drift, unsupported metadata, missing selections and attempted permission
 promotion refuse verification. Each archive is limited to 64 MiB compressed,
 40 MiB per member, 160 MiB expanded and 10,000 members. Public text is capped at
 4 MiB per retained document.
+ZIP central-directory counts, offsets, declared sizes and bounded extra fields are
+preflighted before `ZipFile` creates member objects. The finite ZIP profile refuses
+ZIP64 metadata, split disks, archive/entry comments, trailing data, self-extracting
+prefixes, duplicate decoded names/extra tags and overlapping local records. These
+formats are not needed by the exact selected artifacts; refusal is not a claim of
+universal ZIP support. Directory metadata is capped at 8 MiB. Malformed CLI arguments
+receive a fixed refusal without echoing private argument values.
 
 ## What is established
 

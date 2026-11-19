@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe
+
+Recorded 2026-11-19T06:10:08.540495+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Preflight bounded C2PA ZIP directories before ZipInfo allocation and suppress malformed CLI argument echoes.
+- **Evidence.** 59 focused tests and actual current cache replay pass; oversized or inconsistent directories refuse before ZipFile is called, malformed private canary receives a fixed refusal, and original artifact/notice observations stay identical. [Change record](./runs/changes/2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe.json).
+- **Not claimed.** Finite classic ZIP profile explicitly refuses ZIP64, split disks, comments, trailing data and unsupported structures. No native graph, compiler, source-offer, permission or original scope clearance. Prior evidence retained unchanged.
+
+
 ### 2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da
 
 Recorded 2026-11-19T06:02:15.686376+00:00 · Contributor: Codex - C2PA evidence engineering lane · change

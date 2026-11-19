@@ -11,12 +11,17 @@ sys.path.insert(0,str(ROOT)); sys.dont_write_bytecode = True
 from tools.c2pa_cohort import verify
 
 
+class Parser(argparse.ArgumentParser):
+    def error(self, message):
+        raise ValueError('Invalid verifier arguments.')
+
+
 def main():
-    p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--cache-dir',type=Path,help='Replay exact public upstream artifacts in a private cache.')
-    p.add_argument('--require-clearance',action='store_true',help='Refuse: this inventory does not grant license clearance.')
-    a=p.parse_args()
     try:
+        p=Parser(description=__doc__)
+        p.add_argument('--cache-dir',type=Path,help='Replay exact public upstream artifacts in a private cache.')
+        p.add_argument('--require-clearance',action='store_true',help='Refuse: this inventory does not grant license clearance.')
+        a=p.parse_args()
         print(json.dumps(verify(cache_dir=a.cache_dir,require_clearance=a.require_clearance)))
         return 0
     except (ValueError,KeyError,TypeError,IndexError,StopIteration,RecursionError,OSError,EOFError,tarfile.TarError,zipfile.BadZipFile):
