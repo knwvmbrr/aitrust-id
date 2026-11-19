@@ -87,3 +87,21 @@ CLI, guide, focused tests and attributed evidence before commit. Full T-NF remai
 open for representative independent claim/passage labels, supported accuracy and
 coverage, accepted semantic mapping, source authenticity/freshness and human
 route acceptance. This is a complete literal evidence component, not an NF tag.
+
+## Canonical cosine record-binding correction, before code
+
+Root review reproduced accepted forged cosine 1.0 and an omitted match list on
+current-bound worker records. Structural bounds did not bind numeric values or
+completeness. Preserve both failed controls before correcting the validator.
+Replay the existing canonical cosine component on the same at most eight
+selected claim/passage pairs and compare complete canonical JSON rows before
+rebasing/display/export. This adds no algorithm or different selection. Each
+passage is at most 2,000 characters and each usable claim at most 512 lexical
+tokens: at most 1,000 short source lines and about 512,000 dictionary-term visits
+per pair, about 4.1 million across the whole capped batch, plus bounded sorting.
+No full corpus is searched during replay. Shared trusted source code and its
+before/after file identity remain prerequisites; a compromised same-UID
+installation is outside the declared guarantee. The existing per-check failure
+boundary must turn replay/import/error into that check's Unavailable without
+affecting its sibling. Replay establishes record consistency, not independent
+method correctness, semantic support or truth. Do not alter literal matching.

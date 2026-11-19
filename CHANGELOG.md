@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead
+
+Recorded 2026-11-19T15:37:37.915789+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind accepted cosine scores and complete match lists to replay of the unchanged canonical component on the exact capped caller-selected passages before rebasing or export.
+- **Evidence.** The two original plausible-corruption acceptances are preserved; 95 focused controls and 23 actual current macOS CLI controls reject score forgery and match omission while retaining the literal sibling, plus a bounded replay cost observation. [Change record](./runs/changes/2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead.json).
+- **Not claimed.** Canonical replay verifies record consistency, not independent accuracy, semantic support, source freshness or truth. No NF or FI tag, original scope closure, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-153132-nf-selected-source-evidence-9e6db2cb
 
 Recorded 2026-11-19T15:31:32.517470+00:00 · Contributor: Codex · change

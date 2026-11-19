@@ -253,6 +253,32 @@ def test_closed_worker_results_reject_corruption_before_rebasing(kind, mode):
         nf.validate_output(value, kind, pairs, '1' * 64, sources)
 
 
+@pytest.mark.parametrize('mode', ['forged_score', 'omitted_matches'])
+def test_canonical_cosine_replay_rejects_plausible_corruption(mode):
+    pairs = [{'claim': 'Water is safe.', 'passage': 'Water is not safe.'}]
+    sources = {'fixed': '0' * 64}
+    rows = nf.evaluate('cosine', pairs)
+    if mode == 'forged_score': rows[0]['matches'][0]['cosine'] = 1.0
+    else: rows[0]['matches'] = []; rows[0]['state'] = 'NO_SIMILAR_PASSAGE'
+    value = {'component': 'cosine', 'method': nf.METHODS['cosine'], 'request_sha256': '1' * 64,
+        'source_sha256': sources, 'network_control': 'macos_sandbox_deny_network' if sys.platform == 'darwin'
+        else 'linux_seccomp_deny_network', 'ipv4_ipv6_denied': True, 'rows': rows}
+    with pytest.raises(ValueError): nf.validate_output(value, 'cosine', pairs, '1' * 64, sources)
+
+
+@pytest.mark.parametrize('mode', ['forged_score', 'omitted_matches'])
+def test_real_cosine_worker_record_corruption_keeps_literal_available(monkeypatch, mode):
+    validate = nf.validate_output
+    def corrupt(value, kind, *args):
+        if kind == 'cosine':
+            if mode == 'forged_score': value['rows'][0]['matches'][0]['cosine'] = 1.0
+            else: value['rows'][0]['matches'] = []; value['rows'][0]['state'] = 'NO_SIMILAR_PASSAGE'
+        return validate(value, kind, *args)
+    monkeypatch.setattr(nf, 'validate_output', corrupt)
+    value = execute(*fixture()[:2], bound())
+    assert value['state'] == 'PARTIAL' and [v['state'] for v in value['checks']] == ['COMPLETE', 'UNAVAILABLE']
+
+
 @pytest.mark.parametrize('mode', ['timeout', 'output_limit'])
 def test_actual_owned_worker_timeout_or_output_limit_preserves_sibling(tmp_path, mode):
     copied = tmp_path / 'source'; copy_source(copied)

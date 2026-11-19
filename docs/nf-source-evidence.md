@@ -98,6 +98,11 @@ selected original pair. `match_offset_origin: original_subject_and_document`
 means returned match positions have already been rebased into those originals;
 virtual projection offsets never replace them. Omitted claims/sources are not
 evaluated, and a passage quote can itself be wrong or stale.
+Before accepting a cosine record, the validator replays the same capped
+canonical selections and compares the complete numeric/span/result rows. This
+detects changed scores and omitted matches; it is record consistency, not an
+independent accuracy study or corroboration. Replay does not search other sources
+and a replay failure makes only that check Unavailable.
 
 ## Resource and error handling
 

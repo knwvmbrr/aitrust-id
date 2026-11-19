@@ -245,6 +245,10 @@ def validate_output(value, kind, pairs, request_sha256, sources):
                 score = match['cosine']
                 require(type(score) in (int, float) and .75 <= score <= 1 and score <= previous)
                 previous = score
+    if kind == 'cosine':
+        # Structural bounds alone cannot bind numeric values or missing rows.
+        # Replay the same capped canonical projections, never a broader search.
+        require(io.encoded(rows) == io.encoded(evaluate('cosine', pairs)))
     return value
 
 
