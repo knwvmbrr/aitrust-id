@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-153047-hp-on-device-literal-details-90157d57",
+  "recorded_at": "2026-11-19T15:30:47.416628+00:00",
+  "author": "Codex HP tag lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+  "changed": "Built an independent on-device HP literal-detail explorer with exact unmodified quantitative Python, raw and frozen-NFC identity binding, closed result validation, private optional evidence, scoped lazy failure containment and safe source/notice packaging.",
+  "proves": "77 focused Python checks and 10 Node groups passed; actual Chromium and WebKit each matched 28 full native-Python records/refusals and passed 5 corrupt-result UI cases, cancellation, privacy, import/render/worker failure and responsive controls. Original LICENSE/NOTICE/Unicode notices are packaged exactly. Four 390px light/dark screenshots were inspected.",
+  "limits": "No HP assertion, semantic specificity or source-support judgment, independent accuracy, physical-phone/human accessibility acceptance, production mounting, license clearance or parent requirement completion. Initial runtime delivery still needs network. F-015 and T-HP release acceptance remains open.",
+  "scope_ids": [
+    "T-HP",
+    "F-015"
+  ],
+  "files": {
+    "docs/hp-device-explorer-plan.md": "bca7e40a3ff2cab04d853766f245cb09097be5a772427f729877bb54e5236020",
+    "docs/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+    "runs/2026-11-19-hp-device-browser-candidate-1.json": "fc53984e291eb34a9526f0156395c5b54a422549d07e134a5270319325325601",
+    "runs/2026-11-19-hp-device-core-corrected.json": "e5fd9d0823bf8509cf0910d37b7a041a927928edc8566a3131661818455e90a4",
+    "runs/2026-11-19-hp-device-core-final.json": "5354f71fadea3ad56d7821fca3de950fd3c21b05a64fb88fda76076bc1bbeba2",
+    "scripts/build-hp-device-fixture.mjs": "4550b337a8ff118eb2b90f499aa2b9383ce4d58fedf383db82630d333cc4ced1",
+    "scripts/build-hp-device.py": "9f84d7649e756500eb31a9fe7595ec7a9c65663cd24e414250025afdf2f789df",
+    "scripts/hp-device-cases.py": "d2d2e5f8a7a4bc6b20cbb54559237cd452d8a4e2b0384764a3a2303b15b8a3e8",
+    "scripts/verify-hp-device.cjs": "929df15cb036c9bd5bffaae57b2bc61ab701cbe7d096a42d9b52448eb228fc4f",
+    "site/public/hp-device/.gitattributes": "2c8af6712f2e2278cec58acc52ef9523fdf5e6588a0983562ab75c5829c614cf",
+    "site/public/hp-device/method-943b5b2352f86c44d80d79625cbdcfca8f25a1719d116640863ca7d730f370fb.json": "943b5b2352f86c44d80d79625cbdcfca8f25a1719d116640863ca7d730f370fb",
+    "site/public/hp-device/notices.txt": "36de7bca357f2fffec7617e63ed992634b0e8e028b298184683dc81ebe4faad9",
+    "site/src/HPExplorer.jsx": "42708f179f5a7848c9123c16d8877aaef93bb9df95b205ee9ce3774a9d0a8a9e",
+    "site/src/HPExplorerSlot.jsx": "475104b9089f743ddc795c8580c8db705723e2e5e67f20159aab3c3fd3fcfe71",
+    "site/src/hp-device-client.js": "c6f228d57ba2cdd39e1a52c4adb72ee4d1423261f8099ba427331400bf10e2f4",
+    "site/src/hp-device-manifest.json": "982c9af3ae67953e12ea9f4d99e8a4010b3cc777a19e1025e0838a74c4cc7f0e",
+    "site/src/hp-device-result.js": "f0fe16cc1e03b9c77e25b4f1a80ddb06e5124d123cec18ede764f0ae89c56fef",
+    "site/src/hp-device-worker.js": "fa8216594fffa7b11a4621a47a193813c2a602957cbf238dd36bc8e0e3fbc6df",
+    "tests/hp-device-client.mjs": "0e4962619887bb071db03f78bbe6a437fd2025344b776296506b44b30373be5c",
+    "tests/test_hp_device.py": "2afb09f81e8bc72728d14eb4320740344f6543b770b71509ac0c0a587e9c84ca",
+    "tools/hp_device.py": "be4fb51923195a4cdeff74e0913902bd92897764c942f240a9fcce051f913ac4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-hp-device-browser-candidate-1.json",
+      "sha256": "fc53984e291eb34a9526f0156395c5b54a422549d07e134a5270319325325601"
+    },
+    {
+      "path": "runs/2026-11-19-hp-device-core-corrected.json",
+      "sha256": "e5fd9d0823bf8509cf0910d37b7a041a927928edc8566a3131661818455e90a4"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T15:30:47.492347+00:00"
+    }
+  ]
+}

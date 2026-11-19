@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-153047-hp-on-device-literal-details-90157d57
+
+Recorded 2026-11-19T15:30:47.416628+00:00 · Contributor: Codex HP tag lane · change
+
+- **Changed.** Built an independent on-device HP literal-detail explorer with exact unmodified quantitative Python, raw and frozen-NFC identity binding, closed result validation, private optional evidence, scoped lazy failure containment and safe source/notice packaging.
+- **Evidence.** 77 focused Python checks and 10 Node groups passed; actual Chromium and WebKit each matched 28 full native-Python records/refusals and passed 5 corrupt-result UI cases, cancellation, privacy, import/render/worker failure and responsive controls. Original LICENSE/NOTICE/Unicode notices are packaged exactly. Four 390px light/dark screenshots were inspected. [Change record](./runs/changes/2026-11-19-153047-hp-on-device-literal-details-90157d57.json).
+- **Not claimed.** No HP assertion, semantic specificity or source-support judgment, independent accuracy, physical-phone/human accessibility acceptance, production mounting, license clearance or parent requirement completion. Initial runtime delivery still needs network. F-015 and T-HP release acceptance remains open.
+
+
 ### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37
 
 Recorded 2026-11-19T09:46:20.522872+00:00 · Contributor: Codex · change
