@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-11-19T08:31:49.956616+00:00",
+  "pass": true,
+  "capabilities": {
+    "PS": {
+      "evidence": "runs/2026-11-19-fi-citation-PS.json",
+      "checks_passed": 7,
+      "source_fingerprint": "8c84031ae708e7639616a574c6ab5adf8ee472969663891d17859112c76d2a16"
+    },
+    "PII_REDACTED": {
+      "evidence": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
+      "checks_passed": 6,
+      "source_fingerprint": "35b212dcfc2f8c264d3e0c6a5a6b2a919456c4ef1e16501e70d5ec4baea64082"
+    },
+    "protocol": {
+      "evidence": "runs/2026-11-19-fi-citation-protocol.json",
+      "checks_passed": 52,
+      "source_fingerprint": "4a41e0e67a594524b03eb46d6412e886a14b6f3361a9b9a8ba9c0f91b53e87bf"
+    },
+    "extension": {
+      "evidence": "runs/2026-11-19-fi-citation-extension.json",
+      "checks_passed": 14,
+      "source_fingerprint": "575f9a2a7bd8ee3e5096c931eba9462916907615aa6ce81c7b3e506cfcaf328e"
+    },
+    "website": {
+      "evidence": "runs/2026-11-19-fi-citation-website.json",
+      "checks_passed": 43,
+      "source_fingerprint": "64e16c79a79a686cec2c04251cf9cd4331ab4b613aeb7aff6edaf464c396d88a"
+    }
+  },
+  "boundary_evidence": "runs/2026-11-19-fi-citation-boundaries.json",
+  "component_evidence": "runs/2026-11-19-fi-citation-sidecar-macos.json",
+  "peer_review": "runs/2026-11-19-fi-citation-integration-review.json",
+  "original_scope_ids": 202,
+  "original_complete": 132,
+  "original_open": 70,
+  "new_original_closures": 0,
+  "fi_tag_issued": false,
+  "independent_accuracy_evidence": false,
+  "protected_publication_pending": true
+}

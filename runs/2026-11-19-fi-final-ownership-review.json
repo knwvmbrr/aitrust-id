@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-11-19T08:53:22.560257+00:00",
+  "pass": true,
+  "source_sha256": {
+    "tools/citation_resolution.py": "0bf1e10f503c282b80963246a974b37fac0f2ddb99fe9b6af26f321fbe03c463",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "tests/test_citation_resolution.py": "8ef9d413c8718547a23386fbc1f8b8630524383d817c3a8daf74c0eea1cbb0b9"
+  },
+  "root_actual_original_fdopen_replay": {
+    "raw_descriptor_closed_after_context": true,
+    "no_new_final_file": true
+  },
+  "root_focused_controls": {
+    "passed": 176,
+    "failed": 0
+  },
+  "author_current_actual_macos_cli_controls": 23,
+  "author_evidence": "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+  "peer_review": {
+    "reviewed_by": "Codex \u2014 separate web_camo lane",
+    "focused_checks_passed": 23,
+    "original_leak_replayed_and_refused": true,
+    "normal_complete_0600_save": true,
+    "source_hashes_and_receipt_bindings_unchanged": true,
+    "scope": "Output publication and descriptor ownership only"
+  },
+  "original_gaps_preserved": [
+    "runs/2026-11-19-fi-postcommit-gap.json",
+    "runs/2026-11-19-fi-fdopen-gap.json"
+  ],
+  "full_FI_complete": false,
+  "independent_accuracy_evidence": false,
+  "new_original_closures": 0
+}

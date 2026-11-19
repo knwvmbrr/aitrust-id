@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "website_build_phases",
+  "captured_at": "2026-11-19T08:23:25.447Z",
+  "pass": false,
+  "expected_phases": [
+    "private-file-controls",
+    "build",
+    "catalogue",
+    "performance",
+    "workflows",
+    "accessibility",
+    "mobile-payload",
+    "feedback",
+    "policies"
+  ],
+  "phases": [
+    {
+      "phase": "private-file-controls",
+      "started_at": "2026-11-19T08:23:11.133Z",
+      "finished_at": "2026-11-19T08:23:11.288Z",
+      "elapsed_ms": 156,
+      "exit_status": 0,
+      "signal": null,
+      "failure": null,
+      "pass": true
+    },
+    {
+      "phase": "build",
+      "started_at": "2026-11-19T08:23:11.288Z",
+      "finished_at": "2026-11-19T08:23:25.445Z",
+      "elapsed_ms": 14157,
+      "exit_status": 1,
+      "signal": null,
+      "failure": "child_exit_failed",
+      "pass": false
+    }
+  ],
+  "sequence_request_refused": false,
+  "controller_aborted": true,
+  "raw_child_output_included": false,
+  "command_arguments_included": false,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_verified": false
+}

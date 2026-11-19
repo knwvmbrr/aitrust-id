@@ -520,7 +520,12 @@
         "docs/mt-device-explorer-result.md",
         "docs/mt-device-integrity-correction.md",
         "scripts/mt-site-controls.cjs",
-        "scripts/verify-mt-client.cjs"
+        "scripts/verify-mt-client.cjs",
+        "tools/citation_resolution.py",
+        "scripts/citation-resolution.py",
+        "tests/test_citation_resolution.py",
+        "docs/fi-citation-sidecar.md",
+        "docs/fi-citation-sidecar-plan.md"
       ],
       "commands": [
         [
@@ -854,6 +859,13 @@
         [
           "node",
           "scripts/verify-mt-client.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_citation_resolution.py",
+          "-q"
         ]
       ]
     },
@@ -1401,7 +1413,12 @@
         "docs/mt-device-explorer-result.md",
         "docs/mt-device-integrity-correction.md",
         "scripts/mt-site-controls.cjs",
-        "scripts/verify-mt-client.cjs"
+        "scripts/verify-mt-client.cjs",
+        "scripts/verify-seo.cjs",
+        "scripts/verify-seo.mjs",
+        "tests/seo-metadata.mjs",
+        "docs/fi-citation-sidecar.md",
+        "docs/fi-citation-sidecar-plan.md"
       ],
       "commands": [
         [
@@ -1644,6 +1661,10 @@
         [
           "node",
           "scripts/verify-mt-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-seo.cjs"
         ]
       ]
     }

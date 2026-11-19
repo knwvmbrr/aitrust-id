@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-085036-fi-raw-output-descriptor-ownership-e767e978",
+  "recorded_at": "2026-11-19T08:50:36.696731+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8e33d44227ebb1d3127677723074f84fcebd422b",
+  "changed": "Keep FI temporary raw output descriptors owned by Capture through stream-construction failure using closefd=False, with exactly one close attempt and primary prepublication refusal preserved.",
+  "proves": "The original injected raw descriptor leak is preserved; 110 focused controls and 23 actual isolated-Python macOS CLI controls verify descriptor ownership, secondary close errors, reused-descriptor safety, complete cleanup attempts and unchanged publication uncertainty.",
+  "limits": "A failed close does not prove the descriptor closed, and its number is never retried. Filesystem publication can remain uncertain; no FI tag, scope closure, independent accuracy, Linux execution or human acceptance is claimed.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "tools/citation_resolution.py": "0bf1e10f503c282b80963246a974b37fac0f2ddb99fe9b6af26f321fbe03c463",
+    "tests/test_citation_resolution.py": "8ef9d413c8718547a23386fbc1f8b8630524383d817c3a8daf74c0eea1cbb0b9",
+    "docs/fi-citation-sidecar.md": "32277234966f62e7bf940f2ac799b41cf1d257bc57d45eb5c1b80a27c116519b",
+    "docs/fi-citation-sidecar-plan.md": "f6ac41bd7162f54ee02cde3eed376896b21eb219b65cdccc6011332158ca7576",
+    "runs/2026-11-19-fi-fdopen-original-defect.json": "3c1f11009fbcfd417912972eb2567f8c54c255ffb69e672ea1abf8423fa72a58",
+    "runs/2026-11-19-fi-fdopen-corrected-macos.json": "8e9a42d63b807c2a09240aa226ccee5f45f54c8a01c28b02e4683632843996c8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-fdopen-original-defect.json",
+      "sha256": "3c1f11009fbcfd417912972eb2567f8c54c255ffb69e672ea1abf8423fa72a58"
+    },
+    {
+      "path": "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+      "sha256": "8e9a42d63b807c2a09240aa226ccee5f45f54c8a01c28b02e4683632843996c8"
+    }
+  ],
+  "checks": []
+}

@@ -139,6 +139,11 @@ PATTERNS += ('scripts/setup-local.py','scripts/verify-local-setup-evidence.py',
 # Host font rendering changes this decorative raster, not executable sources.
 # The versioned prepare.mjs generator remains fingerprinted; deployment checks
 # still compare every published artifact byte. No other source is excluded.
+PATTERNS += ('tools/citation_resolution.py','scripts/citation-resolution.py',
+             'tests/test_citation_resolution.py','docs/fi-citation-sidecar.md',
+             'docs/fi-citation-sidecar-plan.md','scripts/verify-seo.cjs',
+             'scripts/verify-seo.mjs','tests/seo-metadata.mjs')
+
 HOST_RENDERED_ASSET = 'site/public/share-card.png'
 
 PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-probe-cases.py',

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-091152-hold-fi-opaque-link-target-parser-gap-7a3c2074",
+  "recorded_at": "2026-11-19T09:11:52.823994+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c721754cd30916e239366e962bd218eeaf9ad4fb",
+  "changed": "Retain the automated-review finding and three actual nested/escaped-link reproductions while holding FI publication.",
+  "proves": "All three synthetic cases incorrectly salvage a numbered token from the URL or definition target after an already-unsupported label. The result violates the declared opaque-target profile even though earlier controls pass.",
+  "limits": "The current candidate remains unmerged. Target consumption must be independent of label rejection, followed by focused current-source verification. No original closure.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-19-fi-opaque-target-gap.json": "7dfd694b371ebed27daa4def0d4f65a2d67938cc80bbb3bf8dcba46fdb85de75"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-opaque-target-gap.json",
+      "sha256": "7dfd694b371ebed27daa4def0d4f65a2d67938cc80bbb3bf8dcba46fdb85de75"
+    }
+  ],
+  "checks": []
+}

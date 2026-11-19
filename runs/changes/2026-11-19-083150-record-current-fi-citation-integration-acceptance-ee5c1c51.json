@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-083150-record-current-fi-citation-integration-acceptance-ee5c1c51",
+  "recorded_at": "2026-11-19T08:31:50.532286+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7d740502904d70b387029f2a1bcf9782ae821fce",
+  "changed": "Record current-source acceptance of the independent offline FI citation-association component, published guide inputs and bound SEO checks.",
+  "proves": "All five unchanged-source engineering groups pass: 7 PS, 6 privacy, 52 protocol, 14 extension and 43 website command groups. The route review covers 1280 sources with unchanged endpoints/permissions and retains actual service/replay evidence. Scope, contributor attribution and state chronology agree.",
+  "limits": "This is a literal caller-mapping component, not an FI verdict, semantic source verification or independent validation. The failed website candidate is retained; protected CI and publication remain pending. All 202 IDs and 132 complete / 70 open remain.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "README.md": "51f5cff4af4d2f30470aa05f639540346a347a44b9f1bdb4406c0348e8c1ca6e",
+    "docs/scope-progress.json": "8bd09dd67fcd71d22b29437ca8e8f63bd368d6fd251afcdd0d24b03ef6032916",
+    "docs/scope-progress.md": "43cdd678f91daf757cc49e2676ac5ea03397ba92028addcfdf898ebd15e51950",
+    "eval/revalidation.json": "613848ee5a04ca4cb01c109f097831de34878e877ee45c7a7e41804e913760d1",
+    "eval/route-boundaries.json": "4fe348c8aaac53f1cd04ba5cf39005a4097a7aa38de392c5690f1a95d2e67c29",
+    "package.json": "659e50ebc29caf3cd82e7ac701ddc483d8735179e00d8e3330949f016cd10c97",
+    "runs/2026-11-19-fi-citation-PII_REDACTED.json": "5723c9b54e40b8f29f6e69abc2809b41896104a68deb2f975dcccd1c0b595f45",
+    "runs/2026-11-19-fi-citation-PS.json": "ab75b1874cb763842f97b10cfa8e01c0dc150009abbb16c0ce08e2b56e98222e",
+    "runs/2026-11-19-fi-citation-boundaries.json": "81bf465f44afc625840d0d031ee6b201e6d7c86969f2e1cb2ee037c9f02bddfb",
+    "runs/2026-11-19-fi-citation-extension.json": "2fa807530dd749638cca5dbb605db371fcb187c04f45975062e42844b748dda7",
+    "runs/2026-11-19-fi-citation-integration-review.json": "42f2b4b228d47bee20b2f086cc8595534aaea946b9f3d9110ea86e82fe2057f8",
+    "runs/2026-11-19-fi-citation-integration.json": "cc7b4ce3d29a32dc7319142e216e7b2feec416bb60458a502b95a0da9cc398ab",
+    "runs/2026-11-19-fi-citation-precoverage-phases.json": "20a3cbece99dd6e1aa811234b6a3e0b0f3cf17c0f4113517b57065f7c1c7bd2c",
+    "runs/2026-11-19-fi-citation-protocol.json": "d0f55895a9f932034312f73746e19b11d07c811ee0314a3d5a3655d806073f70",
+    "runs/2026-11-19-fi-citation-website-precoverage.json": "4f89c6633c4fdfb55402efb993afedf80c8ed6ca80e1938c7251c40a501cc3d3",
+    "runs/2026-11-19-fi-citation-website.json": "47510334f9a72bc69ffb3b2967f9a4b239d2da896be134a34d9923cf31adeb14",
+    "scripts/verify-route-boundaries.py": "68e81b155154aab2892dc3fbe8efebdfd40c42611cf65d14461e52212c045a0b",
+    "scripts/verify-seo.cjs": "9427e4c0026cbd381c8076f7f0b9ddb16326e340f711758eaddb53c21d41bbda",
+    "site/public/reference/fi-citation-sidecar-plan.md": "738a5f40ef0a4ffbce531dbf8e5cfa209b583019fe79175b4e25213f2acd1ee8",
+    "site/public/reference/fi-citation-sidecar.md": "c7a81087180ecc9e28a3a39df8038c83939ff4445d3acc41c5029ef25a8e5cad",
+    "site/public/reference/public-scope.json": "ff3ed4205a965a6c08a16f0fb316d35c679d79c7c3c56ef92aab1bd7e434adb5",
+    "site/scripts/prepare.mjs": "8e28b526d340575a16b0262ad165135313f9472765af5475b0a7f53ccfb6f708",
+    "site/src/public-scope.json": "ff3ed4205a965a6c08a16f0fb316d35c679d79c7c3c56ef92aab1bd7e434adb5",
+    "site/src/scope-manifest.json": "6a96a0241a75ec7a78b5c3203a6d54e751e2cc897cc43945ad850d4a44c28968",
+    "state.json": "bf8c09ab323707097cf3ae1ec73f930cfeba99788f2ab68448ac598f40797804",
+    "tests/test_scoped_component_inputs.py": "9e647aabec8344f212d65751e635768417bc077dbcfd6dc0ae5e2d6283be4289"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-citation-integration.json",
+      "sha256": "cc7b4ce3d29a32dc7319142e216e7b2feec416bb60458a502b95a0da9cc398ab"
+    },
+    {
+      "path": "runs/2026-11-19-fi-citation-website.json",
+      "sha256": "47510334f9a72bc69ffb3b2967f9a4b239d2da896be134a34d9923cf31adeb14"
+    },
+    {
+      "path": "runs/2026-11-19-fi-citation-boundaries.json",
+      "sha256": "81bf465f44afc625840d0d031ee6b201e6d7c86969f2e1cb2ee037c9f02bddfb"
+    }
+  ],
+  "checks": []
+}

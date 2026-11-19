@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "component": "FI raw output descriptor before stream ownership",
+  "base_commit": "8e33d44227ebb1d3127677723074f84fcebd422b",
+  "source_sha256": "fb683b4ac07651c8507f4712cf54450adb81a17a1845fae337438c20f7f1fa29",
+  "synthetic_fault_injection": true,
+  "fdopen_failure_raw_descriptor_live_after_capture_exit": true,
+  "final_output_exists": false,
+  "temporary_output_names_remain": false,
+  "manual_owned_descriptor_cleanup_completed": true,
+  "claims": {
+    "fixed": false,
+    "full_T_FI_completion": false
+  }
+}

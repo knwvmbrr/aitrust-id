@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-085323-project-final-fi-descriptor-ownership-and-peer-review-61a34ccb",
+  "recorded_at": "2026-11-19T08:53:23.881805+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7049abd34084211e0e60d87e514141e06d9289bc",
+  "changed": "Project the final checked FI output-ownership contract, both guides and source-bound review into the preserved scope before current integration.",
+  "proves": "Root passes 176 component/input controls and repeats the previously leaking descriptor case; it now closes on refusal. A separate reviewer passes 23 focused cases including the original leak, reused descriptors, normal600output and publication uncertainty. The author current23actualMacCLI controls pass.",
+  "limits": "Fresh affected integration and protected CI/publication remain pending. This is bounded caller-association engineering, not FI, source support, independent accuracy or parent completion.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "docs/scope-progress.json": "756987257d0813364a726d713d432f368cb5f336a66f4e04c67b3771efb3b0e1",
+    "docs/scope-progress.md": "f39c6be824fdcfd31451b3134c37812047e81e21a97f1bfc8ff7f2ecac1ca414",
+    "eval/route-boundaries.json": "0353ce9af39567263355ba1e62b21efd592f6c2891c32b0b2201e57f35c981cf",
+    "runs/2026-11-19-fi-final-ownership-review.json": "b97072aac8e1c6e7132405944f5fdd4990a011914d0929992ba2ffda5e132a12",
+    "site/public/reference/fi-citation-sidecar-plan.md": "f6ac41bd7162f54ee02cde3eed376896b21eb219b65cdccc6011332158ca7576",
+    "site/public/reference/fi-citation-sidecar.md": "32277234966f62e7bf940f2ac799b41cf1d257bc57d45eb5c1b80a27c116519b",
+    "site/public/reference/public-scope.json": "43e20370939dd46a24086fbb02a5b8c9850922836bc0d4b6320a17467381a480",
+    "site/src/public-scope.json": "43e20370939dd46a24086fbb02a5b8c9850922836bc0d4b6320a17467381a480",
+    "site/src/scope-manifest.json": "d3cefdbff439f8090987c6ff91b811450313ef7aa8076028f48ca18aa4c752eb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-final-ownership-review.json",
+      "sha256": "b97072aac8e1c6e7132405944f5fdd4990a011914d0929992ba2ffda5e132a12"
+    },
+    {
+      "path": "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+      "sha256": "8e9a42d63b807c2a09240aa226ccee5f45f54c8a01c28b02e4683632843996c8"
+    }
+  ],
+  "checks": []
+}

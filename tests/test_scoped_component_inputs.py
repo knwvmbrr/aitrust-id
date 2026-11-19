@@ -19,6 +19,11 @@ for cap in ('protocol','website'):
     REQUIRED.setdefault(cap, []).extend(['tools/mt_device.py','scripts/build-mt-device.py',
         'site/src/mt-device-manifest.json','site/src/mt-device-result.js','scripts/mt-site-controls.cjs'])
 
+REQUIRED['protocol'].extend(['tools/citation_resolution.py','scripts/citation-resolution.py',
+                             'tests/test_citation_resolution.py','docs/fi-citation-sidecar.md'])
+REQUIRED['website'].extend(['scripts/verify-seo.cjs','scripts/verify-seo.mjs',
+                            'tests/seo-metadata.mjs','docs/fi-citation-sidecar.md'])
+
 
 def test_actual_new_component_inputs_are_bound():
     for cap,paths in REQUIRED.items():assert set(paths)<=r.fingerprint(cap)['sources'].keys()

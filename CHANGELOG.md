@@ -2,6 +2,141 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-092440-record-reviewed-fi-target-and-ownership-integration-6fd91c14
+
+Recorded 2026-11-19T09:24:40.414720+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source acceptance after the reviewed opaque-target fix, keeping exact source-bound grammar and ownership evidence separate from prior candidates.
+- **Evidence.** All five groups match unchanged source: 7PS,6privacy,52protocol,14extension,43website commands. Current140component tests, root206controls,24grammarcases/48CLIcommands and23freshownershipCLIcontrols pass; separate review clears the original parser and I/O cases. Reviewed1280source boundaries pass. [Change record](./runs/changes/2026-11-19-092440-record-reviewed-fi-target-and-ownership-integration-6fd91c14.json).
+- **Not claimed.** The corrected source must still pass protected CI before merge and public delivery. No general Markdown, FI verdict, source truth, independent accuracy, human acceptance or original closure. All202IDs and132complete/70open remain.
+
+
+### 2026-11-19-092024-record-opaque-target-protocol-before-site-check-d067de9d
+
+Recorded 2026-11-19T09:20:24.544561+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing current protocol checks before the serialized website execution for the opaque-target correction.
+- **Evidence.** All52protocolcommands pass against stable source with the140component tests and unchanged source/access constraints. [Change record](./runs/changes/2026-11-19-092024-record-opaque-target-protocol-before-site-check-d067de9d.json).
+- **Not claimed.** The fresh website and boundary check, protected CI and publication remain required. No accuracy or parent closure is claimed.
+
+
+### 2026-11-19-091913-project-reviewed-fi-opaque-target-contract-3caa12e5
+
+Recorded 2026-11-19T09:19:13.582416+00:00 · Contributor: Codex · change
+
+- **Changed.** Project the corrected finite citation-target grammar, exact current-source ownership evidence and review-before-freeze handoff discipline.
+- **Evidence.** Root206component/input controls pass and all3original parser counterexamples now exclude hidden target numbers while retaining later standalone markers. Separate review passes39focused checks,24boundary combinations and4actualcommands. The frozen source has24actualgrammarcases/48commands and23freshownershipCLIcontrols. [Change record](./runs/changes/2026-11-19-091913-project-reviewed-fi-opaque-target-contract-3caa12e5.json).
+- **Not claimed.** Affected integration and protected publication follow. This does not add general Markdown interpretation, source support, tag release, independent accuracy or original requirement closure.
+
+
+### 2026-11-19-091152-hold-fi-opaque-link-target-parser-gap-7a3c2074
+
+Recorded 2026-11-19T09:11:52.823994+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the automated-review finding and three actual nested/escaped-link reproductions while holding FI publication.
+- **Evidence.** All three synthetic cases incorrectly salvage a numbered token from the URL or definition target after an already-unsupported label. The result violates the declared opaque-target profile even though earlier controls pass. [Change record](./runs/changes/2026-11-19-091152-hold-fi-opaque-link-target-parser-gap-7a3c2074.json).
+- **Not claimed.** The current candidate remains unmerged. Target consumption must be independent of label rejection, followed by focused current-source verification. No original closure.
+
+
+### 2026-11-19-090005-record-final-fi-output-ownership-integration-7c163607
+
+Recorded 2026-11-19T09:00:05.370135+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final current-source acceptance after correcting FI publication uncertainty and raw descriptor ownership, preserving every prior candidate and reproduced gap.
+- **Evidence.** All five source-bound groups match: 7 PS, 6 privacy, 52 protocol, 14 extension and 43 website command groups. The component passes110focused and23actualMacCLI controls; root passes176component/input controls and separate peer replay clears the reproduced I/O boundaries. Reviewed1280source routes/permissions are unchanged. [Change record](./runs/changes/2026-11-19-090005-record-final-fi-output-ownership-integration-7c163607.json).
+- **Not claimed.** Protected CI and publication remain pending. Caller associations do not verify source support, truth or FI; no independent accuracy, human acceptance or original requirement closure. All202IDs and132complete/70open remain.
+
+
+### 2026-11-19-085434-record-final-fi-protocol-before-website-check-96b61e3b
+
+Recorded 2026-11-19T08:54:34.258894+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing current protocol checks before the serialized website build and browser controls.
+- **Evidence.** All52protocolcommand groups pass against stable corrected source. The result is recorded before the website prebuild guard checks new evidence coverage. [Change record](./runs/changes/2026-11-19-085434-record-final-fi-protocol-before-website-check-96b61e3b.json).
+- **Not claimed.** Website, reviewed boundaries, protected CI and publication follow. Existing source-bound PS/privacy/extension checks will be reused only if their exact fingerprints still match. No accuracy or original closure.
+
+
+### 2026-11-19-085323-project-final-fi-descriptor-ownership-and-peer-review-61a34ccb
+
+Recorded 2026-11-19T08:53:23.881805+00:00 · Contributor: Codex · change
+
+- **Changed.** Project the final checked FI output-ownership contract, both guides and source-bound review into the preserved scope before current integration.
+- **Evidence.** Root passes 176 component/input controls and repeats the previously leaking descriptor case; it now closes on refusal. A separate reviewer passes 23 focused cases including the original leak, reused descriptors, normal600output and publication uncertainty. The author current23actualMacCLI controls pass. [Change record](./runs/changes/2026-11-19-085323-project-final-fi-descriptor-ownership-and-peer-review-61a34ccb.json).
+- **Not claimed.** Fresh affected integration and protected CI/publication remain pending. This is bounded caller-association engineering, not FI, source support, independent accuracy or parent completion.
+
+
+### 2026-11-19-084728-hold-fi-stream-wrapper-cleanup-gap-77d9438d
+
+Recorded 2026-11-19T08:47:28.680477+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain passing publication-uncertainty controls while holding FI for the separately reproduced stream-wrapper descriptor leak.
+- **Evidence.** Root repeats the peer wrapper-failure case: no final output is created, but the unowned raw descriptor remains open after Capture exits and is manually closed. The corrected uncertainty candidate passes protocol checks; that does not close this newly identified cleanup case. [Change record](./runs/changes/2026-11-19-084728-hold-fi-stream-wrapper-cleanup-gap-77d9438d.json).
+- **Not claimed.** This candidate remains held. Exactly-once raw descriptor ownership, focused correction and current integration checks are required before publication; no original closure.
+
+
+### 2026-11-19-084539-integrate-corrected-fi-output-contract-and-guides-494948d7
+
+Recorded 2026-11-19T08:45:39.087388+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate and project explicit publication uncertainty for FI private output, preserving the original reproduced defect and scope history.
+- **Evidence.** The corrected author run passes 105 focused tests and 19 actual Mac CLI controls. Root repeats 171 component/input controls and the original cleanup-after-link fault; it now produces typed uncertainty with an honest possible-output flag. Exact guides and scope references are regenerated before execution. [Change record](./runs/changes/2026-11-19-084539-integrate-corrected-fi-output-contract-and-guides-494948d7.json).
+- **Not claimed.** Separate peer replay, fresh protocol/website execution and protected publication remain pending. No rollback, tag, source-truth, independent accuracy or original-closure claim is added.
+
+
+### 2026-11-19-084057-retain-fi-post-publication-cleanup-gap-b5c7e98a
+
+Recorded 2026-11-19T08:40:57.310171+00:00 · Contributor: Codex · change
+
+- **Changed.** Hold FI publication and preserve a fresh reproduction of late cleanup failure after successful atomic output publication.
+- **Evidence.** Against the frozen candidate, synthetic temporary unlink failure raises ordinary OSError while a complete new0600final file remains. Ordinary fsync failure with successful rollback is distinguished from this reproduced path. [Change record](./runs/changes/2026-11-19-084057-retain-fi-post-publication-cleanup-gap-b5c7e98a.json).
+- **Not claimed.** This is a failing candidate record, not accepted release evidence. Correction and focused post-publication failure tests are required before merge; no original closure.
+
+
+### 2026-11-19-083752-record-measured-ci-provisioning-bottleneck-eac75827
+
+Recorded 2026-11-19T08:37:52.748896+00:00 · Contributor: Codex · change
+
+- **Changed.** Record measured CI elapsed and summed job time and a narrowly scoped provisioning experiment before any workflow change.
+- **Evidence.** The actual metadata run took 509 seconds elapsed and 1255 summed job seconds; browser provisioning accounted for 336 seconds. Existing assertions and release gates remain intact. [Change record](./runs/changes/2026-11-19-083752-record-measured-ci-provisioning-bottleneck-eac75827.json).
+- **Not claimed.** No speedup, image availability, billing reduction or new requirement closure is claimed. Image selection and adoption require exact digest verification and actual hosted parity.
+
+
+### 2026-11-19-083150-record-current-fi-citation-integration-acceptance-ee5c1c51
+
+Recorded 2026-11-19T08:31:50.532286+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source acceptance of the independent offline FI citation-association component, published guide inputs and bound SEO checks.
+- **Evidence.** All five unchanged-source engineering groups pass: 7 PS, 6 privacy, 52 protocol, 14 extension and 43 website command groups. The route review covers 1280 sources with unchanged endpoints/permissions and retains actual service/replay evidence. Scope, contributor attribution and state chronology agree. [Change record](./runs/changes/2026-11-19-083150-record-current-fi-citation-integration-acceptance-ee5c1c51.json).
+- **Not claimed.** This is a literal caller-mapping component, not an FI verdict, semantic source verification or independent validation. The failed website candidate is retained; protected CI and publication remain pending. All 202 IDs and 132 complete / 70 open remain.
+
+
+### 2026-11-19-082607-record-fi-checks-before-serialized-website-execution-7851e8f2
+
+Recorded 2026-11-19T08:26:07.937533+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing PS, privacy, protocol and extension checks and retain the refused website candidate before serializing its evidence/build phase. Refresh the reviewed source inventory without changing service routes or extension permissions.
+- **Evidence.** Four current-source groups pass. The first website candidate has stable source and one failed build-controller command; its failed receipt and phase record are preserved. Fresh website execution follows after these newly generated evidence files are covered. [Change record](./runs/changes/2026-11-19-082607-record-fi-checks-before-serialized-website-execution-7851e8f2.json).
+- **Not claimed.** Concurrent evidence capture produced uncovered run files while the build guard executed. A subsequent prematurely started candidate was cancelled; sequential checked operations now precede execution. No failed candidate is accepted, no guard is weakened and no FI tag or original closure is granted.
+
+
+### 2026-11-19-082247-project-current-fi-citation-scope-and-guides-bc3e3a06
+
+Recorded 2026-11-19T08:22:47.471412+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the preserved public scope and publish the exact FI sidecar usage and architecture guides from the accepted local source.
+- **Evidence.** The recorded site build passes with all 202 original IDs and unchanged 132 complete / 70 open. Both linked guides are copied; the FI record names the functioning component and remaining parent acceptance. [Change record](./runs/changes/2026-11-19-082247-project-current-fi-citation-scope-and-guides-bc3e3a06.json).
+- **Not claimed.** Fresh combined engineering execution and protected publication follow. No FI tag or independent source-support claim is granted.
+
+
+### 2026-11-19-082153-bind-independent-citation-component-and-seo-checks-f9cc2cdf
+
+Recorded 2026-11-19T08:21:53.599035+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the reviewed offline citation sidecar into protocol and route-source checks; preserve its open parent criteria, expose both usage/risk guides, and make the real SEO tests part of source-bound website execution.
+- **Evidence.** 152 focused component and input-binding controls pass on the integrated source. A separate read-only review demonstrated valid mixed outcomes, private output and refusal of changed raw input and duplicate JSON. Existing corpus format, tag allowlist and service routes are unchanged. [Change record](./runs/changes/2026-11-19-082153-bind-independent-citation-component-and-seo-checks-f9cc2cdf.json).
+- **Not claimed.** Full integration execution and protected publication are pending. The build guard correctly refused an initial run before this fresh event; it remains enforced. Caller associations do not establish source support or FI, and no original completion percentage changes.
+
+
 ### 2026-11-19-081457-synchronize-publication-state-timestamps-cbede663
 
 Recorded 2026-11-19T08:14:57.703543+00:00 · Contributor: Codex · change
@@ -18,6 +153,50 @@ Recorded 2026-11-19T08:12:36.084343+00:00 · Contributor: Codex · change
 - **Changed.** Record the protected deployment and actual live operation of both independent private MT wording observations.
 - **Evidence.** Eleven required engineering CI checks passed. All 313 public artifacts match the reviewed build at both delivery origins (626 matches); live ordinary-CSP checks pass both input-bound methods, privacy, enlarged-text layout and missing-MT-chunk isolation from PS. [Change record](./runs/changes/2026-11-19-081236-record-live-independent-mt-wording-preview-5eb800bf.json).
 - **Not claimed.** The separate accuracy/accessibility release gate still refuses release. No MT tag, independent accuracy, physical iPhone/VoiceOver acceptance, full dependency clearance or original requirement closure. All 202 original IDs and 132 complete/70 open remain.
+
+### 2026-11-19-091653-fi-current-source-ownership-proof-6bf1f56a
+
+Recorded 2026-11-19T09:16:53.420114+00:00 · Contributor: Codex · change
+
+- **Changed.** Record fresh FI ownership and publication CLI verification against the frozen corrected opaque-target source without changing source, documentation or tests.
+- **Evidence.** All 23 existing actual isolated-Python macOS ownership and uncertainty CLI controls pass on source commit 99982c1 with all ten selected input hashes unchanged before and after execution. [Change record](./runs/changes/2026-11-19-091653-fi-current-source-ownership-proof-6bf1f56a.json).
+- **Not claimed.** Bookkeeping-only proof alignment; the focused suite was not rerun and historical receipts are preserved. No FI tag, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
+### 2026-11-19-091316-fi-unsupported-label-opaque-targets-7889f64f
+
+Recorded 2026-11-19T09:13:16.297489+00:00 · Contributor: Codex · change
+
+- **Changed.** Consume adjacent finite link targets and definition lines independently of unsupported nested or escaped citation-label classification, preventing hidden target numbers from becoming citation candidates.
+- **Evidence.** Three original parser defects are preserved; 140 focused controls and 24 actual macOS grammar cases across 48 isolated-Python CLI commands verify mapped and unmapped inner-target exclusion plus subsequent standalone marker handling. [Change record](./runs/changes/2026-11-19-091316-fi-unsupported-label-opaque-targets-7889f64f.json).
+- **Not claimed.** This remains a finite literal bracket profile, not a general Markdown parser or citation-truth check. No FI tag, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
+### 2026-11-19-085036-fi-raw-output-descriptor-ownership-e767e978
+
+Recorded 2026-11-19T08:50:36.696731+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep FI temporary raw output descriptors owned by Capture through stream-construction failure using closefd=False, with exactly one close attempt and primary prepublication refusal preserved.
+- **Evidence.** The original injected raw descriptor leak is preserved; 110 focused controls and 23 actual isolated-Python macOS CLI controls verify descriptor ownership, secondary close errors, reused-descriptor safety, complete cleanup attempts and unchanged publication uncertainty. [Change record](./runs/changes/2026-11-19-085036-fi-raw-output-descriptor-ownership-e767e978.json).
+- **Not claimed.** A failed close does not prove the descriptor closed, and its number is never retried. Filesystem publication can remain uncertain; no FI tag, scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
+### 2026-11-19-084306-fi-output-publication-uncertainty-b743fe02
+
+Recorded 2026-11-19T08:43:06.492562+00:00 · Contributor: Codex · change
+
+- **Changed.** Distinguish ordinary FI sidecar refusals from uncertain output publication after link, cleanup, sync or close failures; preserve complete output and attempt every owned descriptor close.
+- **Evidence.** Three original injected post-publication defects are preserved; 105 focused controls and 19 actual isolated-Python macOS CLI controls verify typed fixed uncertainty, no private echo, precommit refusals and unchanged ordinary local-resolution states. [Change record](./runs/changes/2026-11-19-084306-fi-output-publication-uncertainty-b743fe02.json).
+- **Not claimed.** Unexpected filesystem outcomes may leave a complete final output or private temporary names; inspect before retrying. No rollback, tag issuance, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
+### 2026-11-19-081515-fi-citation-sidecar-60c2fd3b
+
+Recorded 2026-11-19T08:15:15.674664+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separate offline caller-declared numbered-citation sidecar and stdlib CLI, preserving corpus v1 and existing tag routes.
+- **Evidence.** 86 focused controls and 15 actual isolated-Python macOS CLI controls verify exact NFC and document bindings, separate local-resolution states, private exports, no overwrite, refusal and independent-route operation. [Change record](./runs/changes/2026-11-19-081515-fi-citation-sidecar-60c2fd3b.json).
+- **Not claimed.** Literal marker associations do not establish semantic source support, authenticity, freshness or independent accuracy. No FI tag, original scope closure, Linux execution or human acceptance is claimed.
 
 
 ### 2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f

@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-19T09:19:12.074168+00:00",
+  "pass": true,
+  "source_sha256": {
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "tests/test_citation_resolution.py": "213f0173448cf6af4fb9c1d043cf2c5b3a7a9b6cbe1c4ebf1b5a17f1ec5a62d5"
+  },
+  "actual_root_cases": [
+    {
+      "synthetic_subject": "[nested [label]](https://example.invalid/[1])",
+      "hidden_target_excluded": true,
+      "subsequent_standalone_retained": true
+    },
+    {
+      "synthetic_subject": "\\[label](https://example.invalid/[1])",
+      "hidden_target_excluded": true,
+      "subsequent_standalone_retained": true
+    },
+    {
+      "synthetic_subject": "[nested [label]]: https://example.invalid/[1]",
+      "hidden_target_excluded": true,
+      "subsequent_standalone_retained": true
+    }
+  ],
+  "root_focused_tests_passed": 206,
+  "root_focused_tests_failed": 0,
+  "peer_reported_checks": {
+    "focused_tests": 39,
+    "boundary_combinations": 24,
+    "actual_prepare_check_commands": 4,
+    "prior_IO_ast_unchanged": true,
+    "scope": "Finite literal grammar and unchanged publication/descriptor regressions; not independent accuracy"
+  },
+  "current_grammar_evidence": "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+  "current_ownership_evidence": "runs/2026-11-19-fi-current-source-ownership-macos.json",
+  "review_thread": "PRRT_kwDOVBYh3s65ZJXp",
+  "independent_accuracy_evidence": false,
+  "new_original_closures": 0
+}

@@ -996,16 +996,18 @@
         "milestones_passed": [
           "bounded_contract"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
+        "audited_at": "2026-11-19T09:19:12.078519+00:00",
         "checked_by": "Codex",
-        "implemented_by": [],
+        "implemented_by": [
+          "Codex — bounded offline caller-declared citation component; separate implementation and peer review, 2026-11-19"
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
+        "next_fix": "Complete independent contradiction-versus-missing-evidence labels, category error reporting, accepted FI mapping and supported human operation. The separate offline sidecar now binds caller-declared numbered-marker associations to the exact subject, attached corpus and source documents; this does not prove citation correctness or source support and issues no FI tag.",
         "next_owner": "Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -1013,7 +1015,19 @@
           "docs/reference-revisions.md",
           "tools/reference_revision.py",
           "runs/2026-10-12-reference-revision-practice-local.json",
-          "runs/2026-10-12-reference-revision-linux.json"
+          "runs/2026-10-12-reference-revision-linux.json",
+          "tools/citation_resolution.py",
+          "scripts/citation-resolution.py",
+          "tests/test_citation_resolution.py",
+          "docs/fi-citation-sidecar.md",
+          "runs/2026-11-19-fi-citation-sidecar-macos.json",
+          "runs/2026-11-19-fi-postcommit-corrected-macos.json",
+          "runs/2026-11-19-fi-postcommit-root-replay.json",
+          "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+          "runs/2026-11-19-fi-final-ownership-review.json",
+          "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+          "runs/2026-11-19-fi-current-source-ownership-macos.json",
+          "runs/2026-11-19-fi-opaque-target-root-review.json"
         ],
         "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
         "required_acceptance": [

@@ -33,12 +33,25 @@ files without a handoff. After correction, repeat the affected controls and
 source-bound execution; review the corrected identity, not an earlier screenshot
 or passing result.
 
+Check outstanding repository review threads before freezing another integration
+run and immediately before merging. Reproduce each applicable finding against
+the current source. Green CI does not settle an unresolved counterexample.
+Resolve a thread only after the corrected source is on the review branch and
+the actual regression passes; an unpushed local fix is not that state.
+
 ## Integrate and publish
 
 Preserve child commits and both changelog entries. Resolve only understood merge
 conflicts, reject remaining markers and run the real staged-index guard. Historical
 evidence remains tied to its original commit; current changes still need fresh
 matching records. Do not alter an old event to make integration pass.
+
+Finish public evidence writes and their fresh change records before starting the
+website prebuild guard. Serialize a newly captured protocol receipt, its record,
+then the website build; avoid producing uncovered run files during that guard.
+Use checked sequential operations for dependencies so a failed preparation step
+cannot launch a consumer against an incomplete snapshot. Reuse unchanged
+capability evidence only when its exact source fingerprint still passes.
 
 Only count an original requirement complete after its full recorded acceptance
 works and is evidenced. Keep blocked owner/external gates open and advance
