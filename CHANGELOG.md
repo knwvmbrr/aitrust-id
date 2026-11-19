@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-090005-record-final-fi-output-ownership-integration-7c163607
+
+Recorded 2026-11-19T09:00:05.370135+00:00 · Contributor: Codex · change
+
+- **Changed.** Record final current-source acceptance after correcting FI publication uncertainty and raw descriptor ownership, preserving every prior candidate and reproduced gap.
+- **Evidence.** All five source-bound groups match: 7 PS, 6 privacy, 52 protocol, 14 extension and 43 website command groups. The component passes110focused and23actualMacCLI controls; root passes176component/input controls and separate peer replay clears the reproduced I/O boundaries. Reviewed1280source routes/permissions are unchanged. [Change record](./runs/changes/2026-11-19-090005-record-final-fi-output-ownership-integration-7c163607.json).
+- **Not claimed.** Protected CI and publication remain pending. Caller associations do not verify source support, truth or FI; no independent accuracy, human acceptance or original requirement closure. All202IDs and132complete/70open remain.
+
+
+### 2026-11-19-085434-record-final-fi-protocol-before-website-check-96b61e3b
+
+Recorded 2026-11-19T08:54:34.258894+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing current protocol checks before the serialized website build and browser controls.
+- **Evidence.** All52protocolcommand groups pass against stable corrected source. The result is recorded before the website prebuild guard checks new evidence coverage. [Change record](./runs/changes/2026-11-19-085434-record-final-fi-protocol-before-website-check-96b61e3b.json).
+- **Not claimed.** Website, reviewed boundaries, protected CI and publication follow. Existing source-bound PS/privacy/extension checks will be reused only if their exact fingerprints still match. No accuracy or original closure.
+
+
+### 2026-11-19-085323-project-final-fi-descriptor-ownership-and-peer-review-61a34ccb
+
+Recorded 2026-11-19T08:53:23.881805+00:00 · Contributor: Codex · change
+
+- **Changed.** Project the final checked FI output-ownership contract, both guides and source-bound review into the preserved scope before current integration.
+- **Evidence.** Root passes 176 component/input controls and repeats the previously leaking descriptor case; it now closes on refusal. A separate reviewer passes 23 focused cases including the original leak, reused descriptors, normal600output and publication uncertainty. The author current23actualMacCLI controls pass. [Change record](./runs/changes/2026-11-19-085323-project-final-fi-descriptor-ownership-and-peer-review-61a34ccb.json).
+- **Not claimed.** Fresh affected integration and protected CI/publication remain pending. This is bounded caller-association engineering, not FI, source support, independent accuracy or parent completion.
+
+
 ### 2026-11-19-084728-hold-fi-stream-wrapper-cleanup-gap-77d9438d
 
 Recorded 2026-11-19T08:47:28.680477+00:00 · Contributor: Codex · change

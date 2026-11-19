@@ -143,6 +143,12 @@ All owned descriptor closes are attempted once even if a close reports failure;
 potentially closed descriptor numbers are never retried. Known destination-exists
 errors preserve that file and remain ordinary refusals. Unexpected link-attempt
 errors are conservatively uncertain even if no final file can be observed.
+The capture owns each raw temporary descriptor immediately after opening it;
+`fdopen(..., closefd=False)` never transfers that ownership to the stream.
+Construction failure therefore still gets one raw-close attempt along with all
+other owned handles. A secondary close error preserves an existing primary
+pre-publication refusal. Close errors do not prove a descriptor remained open:
+it may already be closed and reused, so its number is never retried.
 
 This implements FI's separate local resolution-evidence component. Full T-FI
 still needs independent contradiction-versus-missing-evidence labels/error rates,
