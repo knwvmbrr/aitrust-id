@@ -64,7 +64,10 @@ method considered. Unchanged sources elsewhere cannot establish freshness.
 The console contains counts and check states, not words, source IDs, hashes,
 spans or scores. `COMPLETE` means all selected observations completed; `PARTIAL`
 means at least one completed and another is Unavailable. Exit 0 permits either
-state; inspect each check. When all are Unavailable, exit 2 reports that state
+state; inspect each check. Each check's `pairs_with_observations` is an integer
+only when that check completed. A completed no-match is `0`; an Unavailable check
+has JSON `null`, meaning the count was not measured, never zero findings.
+When all are Unavailable, exit 2 reports that state
 and creates no requested result file. A check is one batch over the selected
 pairs; one unsupported pair makes that whole check Unavailable. It does not
 erase completed results of the sibling check or change other personal checkers.

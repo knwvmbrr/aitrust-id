@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-170538-corrected-tag-integration-ready-for-ci-0b4e8ceb
+
+Recorded 2026-11-19T17:05:38.583300+00:00 · Contributor: Codex · change
+
+- **Changed.** Captured the fully passing corrected source and refreshed reviewed boundary receipts before updating the protected candidate.
+- **Evidence.** All5current capability receipts assess valid; website46commands pass through the shared reviewed-header server and fixed descriptor cleanup.175current focused Python controls pass.1316source/access inputs remain within reviewed routes/permissions. [Change record](./runs/changes/2026-11-19-170538-corrected-tag-integration-ready-for-ci-0b4e8ceb.json).
+- **Not claimed.** The previous10/11protected candidate remains failed history; a changed-source CI run is required. Six scoped tasks, zero original closures;70remain open. No independent accuracy, human accessibility or physical-device acceptance.
+
+
+### 2026-11-19-170016-current-correction-capability-checks-880574f2
+
+Recorded 2026-11-19T17:00:16.377461+00:00 · Contributor: Codex · change
+
+- **Changed.** Captured current capability evidence after the reviewed fixture and NF summary corrections, retaining failed candidates and exact source identities.
+- **Evidence.** Current PS7, privacy6, extension14 and protocol55 configured commands pass with unchanged sources; NF unavailable remains unknown and measured0 remains0. Reviewed fixture cleanup preserves replacement descriptors with one close. [Change record](./runs/changes/2026-11-19-170016-current-correction-capability-checks-880574f2.json).
+- **Not claimed.** Current full website and hosted protected checks remain pending. Six scoped tasks are closed; no original closure or independent tag validation is implied.
+
+
+### 2026-11-19-165638-reviewed-ci-and-unknown-count-corrections-459f6802
+
+Recorded 2026-11-19T16:56:38.106493+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated explicit unknown NF counts and shared reviewed-header fixtures; corrected owned descriptor cleanup after a concrete counterexample, updated disposable controller dependencies and retained closure/reopen history.
+- **Evidence.** NF13focused/10macOS/10Linux controls and independent review distinguish null from measured0. Shared fixture10HTTP/error controls pass; independent exact-fd replay now preserves the replacement with one close. Eight controller lifecycle tests pass with the real transitive fixture inputs. [Change record](./runs/changes/2026-11-19-165638-reviewed-ci-and-unknown-count-corrections-459f6802.json).
+- **Not claimed.** Old protected candidate passed10of11 and was not retried unchanged. Current all-capability/protected verification is pending after changed source. Six scoped tasks, zero original closures;70remain open. No product/probe relaxation or independent accuracy claim.
+
+
 ### 2026-11-19-164023-nf-unavailable-count-linux-proof-69160faf
 
 Recorded 2026-11-19T16:40:23.703692+00:00 · Contributor: Codex · change

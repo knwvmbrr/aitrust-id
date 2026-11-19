@@ -214,6 +214,7 @@ PATTERNS += ('AGENTS.md', 'tools/session_delivery.py', 'scripts/session-delivery
              'tools/hp_device.py', 'scripts/build-hp-device.py',
              'scripts/build-hp-device-fixture.mjs', 'scripts/verify-hp-device.cjs',
              'scripts/hp-device-cases.py', 'scripts/hp-site-controls.cjs', 'scripts/verify-hp-client.cjs',
+             'scripts/site-fixture-server.cjs', 'tests/site-fixture-server.cjs',
              'tests/test_hp_device.py', 'tests/hp-device-client.mjs',
              'site/public/hp-device/*', 'site/public/reference/hp-device-explorer.md',
              'docs/hp-device-explorer.md', 'docs/hp-device-explorer-plan.md',

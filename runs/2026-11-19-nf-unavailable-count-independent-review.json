@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-19T16:38:35.233997+00:00",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "implemented_by": "/root/share_debugger",
+  "reviewed_commit": "8742be421986cff3abb1754c7a441b9fb6076cdf",
+  "profile": "nf-unavailable-summary-focused-independent-review/v1",
+  "source_sha256": {
+    "tools/nf_source_evidence.py": "c69d9bb1d555aa1c6048a4dede9312229fa01b5b4905e1ef912010b17885b046",
+    "tests/test_nf_source_evidence.py": "11f393ee995e897a2724a858a5cfb6208646b047dbc7ae48f267eaf8cd7166e0",
+    "docs/nf-source-evidence.md": "0349cb22f0c39d9cf58851147609fac07885a48ff2af0899292bce88faa78318",
+    "runs/2026-11-19-nf-unavailable-count-macos.json": "1006bb7df30325c144caa55c7e9e9f35a4b8818c7c0530e5ed3f458814ebee02",
+    "runs/2026-11-19-nf-unavailable-count-original.json": "4dc6e77a61bd8c1be307624f9929e1bad7cb475f3bdbb0a5094c11400801fb21"
+  },
+  "review_target": "PR132 P2 unavailable observation counts",
+  "controls": [
+    {
+      "command": "python3 -m pytest tests/test_nf_source_evidence.py -q -k summary_counts_separate_unknown_from_measured_zero",
+      "exit_code": 0,
+      "passed": 4,
+      "deselected": 95,
+      "elapsed_seconds": 0.14
+    },
+    {
+      "command": "python3 -m pytest tests/test_nf_source_evidence.py -q -k \"unicode_exact_completes_when_cosine_unavailable_and_raw_nfc_identity_distinct or worker_failure_isolated_and_not_a_negative_observation\"",
+      "exit_code": 0,
+      "passed": 3,
+      "deselected": 96,
+      "elapsed_seconds": 0.37
+    }
+  ],
+  "verified_boundaries": {
+    "complete_no_observations_is_integer_zero": true,
+    "unavailable_count_is_json_null": true,
+    "unavailable_rows_not_dereferenced": true,
+    "actual_unicode_literal_complete_cosine_unavailable": true,
+    "either_worker_failure_preserves_sibling_result": true,
+    "all_author_receipt_source_hashes_match_current": true,
+    "author_focused_tests_reviewed": 13,
+    "author_actual_mac_cli_commands_reviewed": 10,
+    "author_commands_not_relabelled_as_reviewer_execution": true,
+    "full_report_or_default_worker_contract_changed": false
+  },
+  "actionable_findings": [],
+  "limits": {
+    "independent_accuracy_validation": false,
+    "NF_or_FI_tag_release_approved": false,
+    "original_requirements_closed": 0,
+    "production_changed": false,
+    "review_thread_resolved": false,
+    "broad_suite_rerun": false
+  }
+}

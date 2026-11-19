@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 5,
+    "finished_scoped_tasks": 6,
     "original_requirement_closures": 0
   },
   "goals": {
@@ -135,10 +135,10 @@
       "bot_id": "tag_nf",
       "actual_worker": null,
       "status": "reviewed",
-      "checked_at": "2026-11-19T15:48:48.892967+00:00",
-      "current_component_status": "Frozen component and independent engineering review complete; PM protected integration/publication pending.",
+      "checked_at": "2026-11-19T16:56:37.993739+00:00",
+      "current_component_status": "Correction source frozen and independently reviewed; PM current/protected verification pending.",
       "blocking_acceptance": "Selected reference/NLI and caller-declared citation components exist; claim-specific reference selection, contradiction-versus-missing-evidence labels, calibrated accepted tag mapping and supported human operation remain.",
-      "next_task": "Finish protected integration and exact publication checks; then reassess original acceptance without waiving independent evidence."
+      "next_task": "session-nf-unavailable-count"
     },
     {
       "tag_id": "T-FI",
@@ -155,10 +155,10 @@
       "bot_id": "tag_hp",
       "actual_worker": null,
       "status": "reviewed",
-      "checked_at": "2026-11-19T15:48:48.892967+00:00",
-      "current_component_status": "Frozen component and independent engineering review complete; PM protected integration/publication pending.",
+      "checked_at": "2026-11-19T16:56:37.993739+00:00",
+      "current_component_status": "Correction source frozen and independently reviewed; PM current/protected verification pending.",
       "blocking_acceptance": "Literal quantities/hedges and selected-pair NLI observations exist; expected uncertainty, contextual specificity, representative independent errors, accepted HP mapping and full human integration remain.",
-      "next_task": "Finish protected integration and exact publication checks; then reassess original acceptance without waiving independent evidence."
+      "next_task": "session-security-header-fixture"
     },
     {
       "tag_id": "T-MT",
@@ -513,6 +513,80 @@
           {
             "path": "runs/2026-11-19-hp-a11y-readiness-final.json",
             "sha256": "18ffb3768215423fb65e772364b145afe859c451a4828c7df863717c5338df89"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "session-nf-unavailable-count",
+      "original_ids": [
+        "T-NF"
+      ],
+      "worker": "/root/share_debugger",
+      "status": "in_review",
+      "deliverable": "Represent unavailable NF observation counts as unknown/null while preserving completed no-match zero.",
+      "done_evidence": [
+        "Actual mixed and all-unavailable summaries keep measured versus unknown counts distinct.",
+        "Focused current-source tests, private CLI controls and separate reviewer pass; public review fix is pushed before thread resolution."
+      ],
+      "blocker": null,
+      "next_unblocked_task": "session-nf-explicit-passage"
+    },
+    {
+      "task_id": "session-security-header-fixture",
+      "original_ids": [
+        "T-HP",
+        "F-054"
+      ],
+      "worker": "/root/web_camo",
+      "status": "closed",
+      "deliverable": "Reuse a bounded loopback-only built-site server that applies reviewed headers in both CI and local verification without weakening CSP assertions.",
+      "done_evidence": [
+        "Actual HTTP/method/path/link/HEAD and reviewed-header controls pass.",
+        "Actual HP check executes under the real reviewed CSP; server and caller sources receive independent review.",
+        "HEAD and pre-response cleanup attempt close once; a released/reused owned marker descriptor survives failure."
+      ],
+      "blocker": null,
+      "next_unblocked_task": "session-hp-detail-explorer",
+      "history": [
+        {
+          "at": "2026-11-19T16:51:29.636819+00:00",
+          "action": "reopened_after_new_counterexample",
+          "prior_closure": {
+            "closed_at": "2026-11-19T16:45:43.098169+00:00",
+            "completed_by": "/root/web_camo",
+            "verified_by": "/root",
+            "evidence": [
+              {
+                "path": "runs/2026-11-19-site-fixture-header-independent-review.json",
+                "sha256": "e73ad885d1e5e62f0f0663376394770de27c2cd5d9e5fa4f0e9322d59ef61458"
+              },
+              {
+                "path": "runs/2026-11-19-reviewed-fixture-hp-integration.json",
+                "sha256": "4fef90e8baa0eda7fceef6028aba5b4ff0bdd3474e99cbc92c67b3a6352e6427"
+              }
+            ]
+          },
+          "reason": "Owned HEAD descriptor can close then throw; cleanup retried the reused number.",
+          "evidence": "runs/2026-11-19-site-fixture-owned-fd-original.json"
+        }
+      ],
+      "closure_record": {
+        "closed_at": "2026-11-19T16:56:37.993739+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-19-site-fixture-close-ownership-corrected.json",
+            "sha256": "7df3ba7ce06b8907d692664a65fe7e21483ab3fa28f0af885c623540f9ec959d"
+          },
+          {
+            "path": "runs/2026-11-19-site-fixture-owned-fd-corrected.json",
+            "sha256": "839e96ce750311ba43b56f2690c564b18a54bf94d2b6094ea74e69ec913891e7"
+          },
+          {
+            "path": "runs/2026-11-19-site-fixture-fd-correction-independent-review.json",
+            "sha256": "d5a8d37bdaa2c28d844d9eca75d5b8691a5f1d5b3102c45542dff304bb12ea34"
           }
         ]
       }
@@ -5148,5 +5222,5 @@
     "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a"
   },
-  "updated_at": "2026-11-19T16:17:37.642988+00:00"
+  "updated_at": "2026-11-19T16:56:37.993739+00:00"
 }

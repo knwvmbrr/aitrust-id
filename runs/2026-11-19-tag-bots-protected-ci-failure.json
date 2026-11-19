@@ -1,0 +1,84 @@
+{
+  "captured_at": "2026-11-19T16:45:43.098169+00:00",
+  "pass": false,
+  "kind": "protected_tag_bot_candidate",
+  "head_sha": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+  "run_id": 44565992666,
+  "required_checks": [
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707739398",
+      "name": "scope-plan",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707739006",
+      "name": "accessibility",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707738894",
+      "name": "regressions",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707738520",
+      "name": "host-config",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707739720",
+      "name": "no-egress",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707739039",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707738909",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "fail",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707739080",
+      "name": "site",
+      "state": "FAILURE"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707738885",
+      "name": "spec",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707738927",
+      "name": "change-records",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44565992666/job/135707738847",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS"
+    }
+  ],
+  "unchanged_retry_performed": false,
+  "site_failure": "Plain CI http.server omitted reviewed security headers; HP CSP assertion correctly refused.",
+  "separate_review_finding": "NF unavailable summary invented observation count0; corrected to explicit unknown.",
+  "corrections_source": [
+    "8742be421986cff3abb1754c7a441b9fb6076cdf",
+    "58f9cd639addaad1961d2e3922dd7daed61896fc"
+  ],
+  "current_fixed_revalidation_pending": true,
+  "independent_accuracy_evidence": false
+}

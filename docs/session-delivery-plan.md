@@ -4,7 +4,7 @@ Snapshot: 2026-11-19T15:20:45.481757+00:00 · Base `3716233b9460efa57c1f0d01bfe3
 
 This is a dated assignment snapshot, not a background agent heartbeat. The JSON is the durable detailed board; it preserves every open original, its full acceptance, job, outcome, historical limit, accountable lane, exact evidence index and next action. It does not change the scope ledger.
 
-**Originals: 202 total, 132 complete, 70 open. Finished scoped tasks: 5. Original requirement closures: 0. Requirement goal: NOT MET. Session success: false.**
+**Originals: 202 total, 132 complete, 70 open. Finished scoped tasks: 6. Original requirement closures: 0. Requirement goal: NOT MET. Session success: false.**
 
 The session requires at least one fully working named deliverable and at least one genuine original closure. The requested destination is 60 open originals. Completing a subcomponent, audit, UI or engineering test does not lower 70. The conditional ten-item stretch queue is not a forecast and creates no automatic group closures.
 
@@ -14,10 +14,10 @@ The session requires at least one fully working named deliverable and at least o
 |---|---|---|---|
 | PM / integration | `/root` | Active coordination | Review evidence, integrate through protection, own ledger/state and truthful closure decisions. |
 | Task-list lead | `/root/seo` | Audit and manager review completed | Preserve this complete acceptance/blocker board; review frozen NF/HP work next. |
-| NF evidence bot | `/root/share_debugger` | Frozen and reviewed | Standalone caller-selected NFC claim/reference passages with separate literal/cosine observations, bounded workers and safe private export. |
-| HP device bot | `/root/web_camo` | Frozen and reviewed | Canonical literal-detail method on-device, exact input/source binding, lazy isolated UI and actual browser evidence. |
+| NF evidence bot | `/root/share_debugger` | Count correction reviewed | Standalone caller-selected NFC claim/reference passages with separate literal/cosine observations, bounded workers and safe private export. |
+| HP device bot | `/root/web_camo` | Owned-FD correction reviewed | Canonical literal-detail method on-device, exact input/source binding, lazy isolated UI and actual browser evidence. |
 
-NF and HP engineering and source reviews have returned; the PM is integrating and publishing their results. No tag worker is currently running. All 14 logical tag bots are listed in JSON. A queued or blocked bot with `actual_worker: null` is not running. Michael remains the actual accountable operator; agents do not become legal officers, independent human reviewers or certifiers.
+Both corrections have returned and received separate review. The fixture task was reopened after a new descriptor counterexample and is closed again only after the corrected one-close/reused-marker controls passed. No tag specialist remains running; the PM owns final verification. All 14 logical tag bots are listed in JSON. A queued or blocked bot with `actual_worker: null` is not running. Michael remains the actual accountable operator; agents do not become legal officers, independent human reviewers or certifiers.
 
 ## Audit result and closure target
 
@@ -125,7 +125,9 @@ The table names each original and its blocking category. The JSON retains the fu
 
 - Accessibility readiness regression: debugging bot reproduced the live-locator race and corrected only the verifier; the PM reviewed the source and both-theme proof. Unchanged probes remain required.
 
-These are five finished engineering/management deliverables and zero original closures. The original requirement goal remains NOT MET.
+- Reviewed-header fixture: prior HTTP/CSP controls passed, then the PM found an additional owned-descriptor error case. The earlier closure/reopen remains in JSON history; corrected exactly-once controls and independent review now support its new closure.
+
+These are six currently closed engineering/management deliverables and zero original closures. The original requirement goal remains NOT MET.
 
 ## Next unblocked execution sequence
 

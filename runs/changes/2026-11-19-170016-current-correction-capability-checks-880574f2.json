@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-170016-current-correction-capability-checks-880574f2",
+  "recorded_at": "2026-11-19T17:00:16.377461+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "13152e06629578b87a5ac4f5c6c9ec23319f08fa",
+  "changed": "Captured current capability evidence after the reviewed fixture and NF summary corrections, retaining failed candidates and exact source identities.",
+  "proves": "Current PS7, privacy6, extension14 and protocol55 configured commands pass with unchanged sources; NF unavailable remains unknown and measured0 remains0. Reviewed fixture cleanup preserves replacement descriptors with one close.",
+  "limits": "Current full website and hosted protected checks remain pending. Six scoped tasks are closed; no original closure or independent tag validation is implied.",
+  "scope_ids": [
+    "T-HP",
+    "T-NF",
+    "F-054",
+    "F-074"
+  ],
+  "files": {
+    "docs/session-delivery-plan.md": "bddc5d70fd80f75e67cd6bbc03b7fa997fef9e3e045c988e5a93777563cdabc5",
+    "docs/session-delivery.json": "03a3da468f7ec2d0f56a9f97b1ff215c2f56a0fd52f47eb1bdb3f8572b162f91",
+    "eval/revalidation.json": "f4b52ece4b3cca87048fd495b1e5e99e384e5b69fe317f269f2eca2843e681b8",
+    "runs/2026-11-19-nf-unavailable-count-independent-review.json": "9448e2674992a15b36d9caa872e91c70ecf7ef0d3e0d5ab14fe5f3f3404de333",
+    "runs/2026-11-19-site-fixture-fd-correction-independent-review.json": "d5a8d37bdaa2c28d844d9eca75d5b8691a5f1d5b3102c45542dff304bb12ea34",
+    "runs/2026-11-19-site-fixture-header-independent-review.json": "e73ad885d1e5e62f0f0663376394770de27c2cd5d9e5fa4f0e9322d59ef61458",
+    "runs/2026-11-19-site-fixture-owned-fd-corrected.json": "839e96ce750311ba43b56f2690c564b18a54bf94d2b6094ea74e69ec913891e7",
+    "runs/2026-11-19-site-fixture-owned-fd-original.json": "1029f4bf92afd0ed0543bad4c54d37f469a5c548389ffb4e7ed9ca1bbfe61edf",
+    "runs/2026-11-19-tag-bots-fixed-PII_REDACTED.json": "f686b5e531c73d991d02003aecc2e89ff47284e4e3cb23d0569d15f8dddf6885",
+    "runs/2026-11-19-tag-bots-fixed-PS.json": "6bf13bce3d092c1d4b1cc19841fdaa64972f305020473057399bf2692187d79e",
+    "runs/2026-11-19-tag-bots-fixed-extension.json": "c80139651b1cb0b4a81b28a2d7ad06dda74fd02c17c603b722d57bb4bdf2504f",
+    "runs/2026-11-19-tag-bots-fixed-protocol.json": "6416f78fc906d8beb30a9fc14740ec141b8036fc191c96a51fde43b17f7e4078",
+    "runs/2026-11-19-tag-bots-protected-ci-failure.json": "a28e3d75144c7c1341e9e7ee862efa8e8289b099bd556a4a6412f11d2f7de311",
+    "scripts/verify-route-boundaries.py": "acfd214c9215cf65769c23a078367aaf6cbc27574f0c90c7c549062af9da68fe",
+    "site/public/reference/nf-source-evidence.md": "0349cb22f0c39d9cf58851147609fac07885a48ff2af0899292bce88faa78318",
+    "state.json": "34634dcb136f37302c7ad5d835b64e359c01e74bf55404c2c020338f26ec2dcd",
+    "tests/test_website_build_diagnostics.py": "12001dbf04ced126674677c06002b9138d80ea5a33782a7ca2a45c9f88d524c6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-tag-bots-fixed-PS.json",
+      "sha256": "6bf13bce3d092c1d4b1cc19841fdaa64972f305020473057399bf2692187d79e"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-fixed-PII_REDACTED.json",
+      "sha256": "f686b5e531c73d991d02003aecc2e89ff47284e4e3cb23d0569d15f8dddf6885"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-fixed-extension.json",
+      "sha256": "c80139651b1cb0b4a81b28a2d7ad06dda74fd02c17c603b722d57bb4bdf2504f"
+    },
+    {
+      "path": "runs/2026-11-19-tag-bots-fixed-protocol.json",
+      "sha256": "6416f78fc906d8beb30a9fc14740ec141b8036fc191c96a51fde43b17f7e4078"
+    },
+    {
+      "path": "runs/2026-11-19-site-fixture-owned-fd-corrected.json",
+      "sha256": "839e96ce750311ba43b56f2690c564b18a54bf94d2b6094ea74e69ec913891e7"
+    }
+  ],
+  "checks": []
+}
