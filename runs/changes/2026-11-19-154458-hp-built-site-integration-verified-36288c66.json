@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-154458-hp-built-site-integration-verified-36288c66",
+  "recorded_at": "2026-11-19T15:44:58.028506+00:00",
+  "author": "Codex HP tag lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "651a9dfa7bec26bbe6b2c92f6ba9bb6d71c26f24",
+  "changed": "Completed built-site HP method-preview integration with calm Claim details display, original formal name, preparation, public guide, generated index, scoped availability and npm controls; kept NF offline guide copy separate from its planned tag.",
+  "proves": "Fresh site build passed. Source-stable actual Chromium and WebKit controls each matched five complete native HP records, verified opt-in details/cancellation/privacy and 320px enlarged controls, then ran real PS and MT checks after the actual HP child chunk failed. Final light/dark/enlarged snapshots were inspected; original HP/PS/MT sources are unchanged. Initial build and visual failures are preserved.",
+  "limits": "No HP or NF production tag assertion, independent accuracy, human/physical-device acceptance or full requirement closure. No deployment was performed. Temporary NF guide is untracked, not Git-ignored; PM must integrate its actual source and preparation before publication. No broad suite rerun.",
+  "scope_ids": [
+    "T-HP",
+    "F-015",
+    "T-NF",
+    "F-020a",
+    "F-081"
+  ],
+  "files": {
+    "docs/hp-site-integration.md": "e969979983f870e2f45208b81be3daaa2a43573919b5691b0b31c24f434e2446",
+    "package.json": "1832d316de2af5f7b7eb216d73d27f389a1008ff6724cd2047d0dc31be777fa4",
+    "runs/2026-11-19-hp-production-site-candidate-1.json": "a6d23b207e408d9fc49cbe5c7d4ca1c673f40b23543413e69691a00784319ccf",
+    "runs/2026-11-19-hp-production-site-final.json": "2874c76bddaa491a90f833665cc368122698d3c5c5dd2a859802e478e86395c8",
+    "runs/2026-11-19-hp-site-build-candidate-1.json": "b2e2d3510f45edab85f92d14a789662dead8220bb06fcf6522b6fe5947ad137c",
+    "runs/2026-11-19-hp-site-integration-final.json": "2df61233352605bdd0c9d0228f9e0af40e999204a6efe348f662a4f3caa5cdc4",
+    "runs/2026-11-19-hp-site-visual-followup.json": "7adaad39b0eae3f9ea8b3b7d091f19561bca90233e71bc2b3d0fe8f39c4e000d",
+    "scripts/hp-site-controls.cjs": "7c822eb76bbdb8e4e165be7ef6bc8108d531a305fb7831464499029c927c310c",
+    "scripts/verify-site.cjs": "33f6e3733170db1874a019c125b9f5a21a44e594e5838e919021eeb9aa3e96d3",
+    "site/index.html": "2b946060ad9aae7c4021fde0d376ed96951e52835119b94d3dd3d6b2716fdce0",
+    "site/public/reference/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+    "site/public/reference/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "site/scripts/prepare.mjs": "4548e723a0c459fbf178f46efda74b4a7b85d309013a94b8c82c655f974f70b2",
+    "site/src/catalog.js": "bb5a58689a9e9df6e3088ec814d26e43107dd5f56e5cebe160950abfa869959a",
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301",
+    "site/src/presentation.js": "bfdf8d69da72a1f7cd57be8b41ae1ce69ad3a7646af59d00e849f09145226a20",
+    "site/src/usage.js": "9836e544c5b41605372819baefd6e6877293d619ba65ab8ef7d8fde4cdbd0fd0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-hp-production-site-final.json",
+      "sha256": "2874c76bddaa491a90f833665cc368122698d3c5c5dd2a859802e478e86395c8"
+    },
+    {
+      "path": "runs/2026-11-19-hp-site-integration-final.json",
+      "sha256": "2df61233352605bdd0c9d0228f9e0af40e999204a6efe348f662a4f3caa5cdc4"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T15:44:58.125848+00:00"
+    }
+  ]
+}

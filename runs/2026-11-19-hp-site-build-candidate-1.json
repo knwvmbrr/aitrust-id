@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-19T15:40:31.638922+00:00",
+  "pass": false,
+  "argv": [
+    "npm",
+    "run",
+    "build:site"
+  ],
+  "observed_exit_status": 1,
+  "failed_step": "site/scripts/prepare.mjs",
+  "error_signature": "Missing reference /reference/nf-source-evidence.md",
+  "source_sha256": {
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301",
+    "site/src/catalog.js": "dd88f0434011c8a1c38003fec0ddcb7714486f943f94952fc6790fa81f720fa5",
+    "site/src/presentation.js": "bfdf8d69da72a1f7cd57be8b41ae1ce69ad3a7646af59d00e849f09145226a20",
+    "site/src/usage.js": "9836e544c5b41605372819baefd6e6877293d619ba65ab8ef7d8fde4cdbd0fd0",
+    "site/scripts/prepare.mjs": "4548e723a0c459fbf178f46efda74b4a7b85d309013a94b8c82c655f974f70b2",
+    "package.json": "1832d316de2af5f7b7eb216d73d27f389a1008ff6724cd2047d0dc31be777fa4",
+    "scripts/verify-site.cjs": "62511c863d46cad71b9cfb1c503263f06e0af9c18cc95d56c763230d5b1f6784",
+    "scripts/hp-site-controls.cjs": "2e7d07c20f8080adf8e6c1d05cd0e0bafe91bee5cda500b7e22e4e6c53f06b60"
+  },
+  "cause": "PM requested NF reference copy before its independent source branch is merged. Preparation correctly refused a nonexistent public reference.",
+  "next_action": "Use exact frozen NF guide only as ignored build input for this isolated HP check; PM must integrate NF source and its preparation before publication. No guard bypass.",
+  "production_published": false
+}
