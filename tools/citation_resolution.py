@@ -243,8 +243,13 @@ def markers(text):
                 reason = 'escaped_bracket'
             elif tail.startswith(('(', ':', '[')):
                 reason = 'link_or_definition_syntax'
-                # Keep adjacent link targets opaque; numbers inside a target
-                # must not become additional supported citation occurrences.
+            elif not match:
+                reason = 'unsupported_bracket_syntax'
+            else:
+                reason = None
+            # A balanced label's target is opaque even when the label was
+            # already rejected as nested/escaped. Never salvage target numbers.
+            if not depth and tail.startswith(('(', ':', '[')):
                 if tail[0] in '([':
                     opening = tail[0]
                     closing = ')' if opening == '(' else ']'
@@ -259,10 +264,6 @@ def markers(text):
                 else:
                     end = text.find('\n', at)
                     at = len(text) if end == -1 else end
-            elif not match:
-                reason = 'unsupported_bracket_syntax'
-            else:
-                reason = None
         need(len(result) < MAX_MARKERS)
         result.append({'span': [start, at], 'number': int(match.group(1)) if reason is None else None,
                        'unsupported_reason': reason})

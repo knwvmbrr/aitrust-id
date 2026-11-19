@@ -79,6 +79,55 @@ def test_unknown_syntax_never_salvages_inner_supported_number(text):
     assert rows and all(r['unsupported_reason'] and r['number'] is None for r in rows)
 
 
+@pytest.mark.parametrize('label,reason', [('[nested [label]]', 'nested_brackets'),
+                                       ('\\[label]', 'escaped_bracket')])
+@pytest.mark.parametrize('suffix', ['(https://example.invalid/[1])', '[reference [1]]',
+                                   ': https://example.invalid/[1]'])
+@pytest.mark.parametrize('declared', [False, True])
+def test_unsupported_labels_keep_all_adjacent_target_shapes_opaque(label, reason, suffix, declared):
+    text = label + suffix
+    rows = c.markers(text)
+    assert len(rows) == 1 and rows[0]['number'] is None
+    assert rows[0]['unsupported_reason'] == reason
+    assert rows[0]['span'][1] == len(text)
+    mappings = [(1, 'first')] if declared else []
+    side = c.prepare(attached(), text.encode(), mappings)
+    brief, detail = c.check(attached(), text.encode(), c.encoded(side))
+    assert brief['counts'] == {'resolved-in-attached-corpus': 0,
+        'unresolved-in-attached-corpus': 0, 'unsupported': 1}
+    assert detail['markers'][0]['declaration'] is None
+
+
+@pytest.mark.parametrize('label', ['[nested [label]]', '\\[label]'])
+@pytest.mark.parametrize('suffix', ['(https://example.invalid/[1])', '[reference [1]]',
+                                   ': https://example.invalid/[1]\n'])
+@pytest.mark.parametrize('declared', [False, True])
+def test_real_standalone_marker_after_opaque_target_is_not_hidden(label, suffix, declared):
+    text = label + suffix + ' Real marker [1].'
+    rows = c.markers(text)
+    assert len(rows) == 2 and rows[0]['number'] is None and rows[1]['number'] == 1
+    assert text[slice(*rows[1]['span'])] == '[1]'
+    side = c.prepare(attached(), text.encode(), [(1, 'first')] if declared else [])
+    brief, _ = c.check(attached(), text.encode(), c.encoded(side))
+    assert brief['counts']['unsupported'] == 1
+    assert brief['counts']['resolved-in-attached-corpus'] == int(declared)
+    assert brief['counts']['unresolved-in-attached-corpus'] == int(not declared)
+
+
+@pytest.mark.parametrize('text', ['[nested [label]](https://example.invalid/[1]',
+    '\\[label][reference [1]', '[nested [label]]: definition [1] [2]'])
+def test_unclosed_opaque_targets_and_definition_remainder_never_salvage(text):
+    rows = c.markers(text)
+    assert len(rows) == 1 and rows[0]['number'] is None and rows[0]['span'][1] == len(text)
+
+
+@pytest.mark.parametrize('text', ['[nested [label]] Ordinary prose [1].',
+    '\\[label] Ordinary prose [1].', '[label] (separate prose) [1].'])
+def test_nonadjacent_unrelated_text_remains_in_scope(text):
+    rows = c.markers(text)
+    assert len(rows) == 2 and rows[0]['number'] is None and rows[1]['number'] == 1
+
+
 def test_quotes_code_and_array_meaning_not_inferred_and_no_brackets_not_global_absence():
     text = '"[1]" `x[1]` https://example.invalid Author (2020)'
     assert len(c.markers(text)) == 2

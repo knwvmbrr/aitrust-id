@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "component": "FI opaque target after unsupported label defect",
+  "base_commit": "9c2c572637a652635946e08436aad8bdf0470a9f",
+  "source_sha256": "0bf1e10f503c282b80963246a974b37fac0f2ddb99fe9b6af26f321fbe03c463",
+  "synthetic_only": true,
+  "cases": [
+    {
+      "name": "nested_parenthesized_target",
+      "unexpected_supported_inner_target": true
+    },
+    {
+      "name": "escaped_parenthesized_target",
+      "unexpected_supported_inner_target": true
+    },
+    {
+      "name": "nested_definition",
+      "unexpected_supported_inner_target": true
+    }
+  ],
+  "claims": {
+    "fixed": false,
+    "tag_issuance": false,
+    "full_T_FI_completion": false
+  }
+}

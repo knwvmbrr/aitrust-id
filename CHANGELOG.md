@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-091316-fi-unsupported-label-opaque-targets-7889f64f
+
+Recorded 2026-11-19T09:13:16.297489+00:00 · Contributor: Codex · change
+
+- **Changed.** Consume adjacent finite link targets and definition lines independently of unsupported nested or escaped citation-label classification, preventing hidden target numbers from becoming citation candidates.
+- **Evidence.** Three original parser defects are preserved; 140 focused controls and 24 actual macOS grammar cases across 48 isolated-Python CLI commands verify mapped and unmapped inner-target exclusion plus subsequent standalone marker handling. [Change record](./runs/changes/2026-11-19-091316-fi-unsupported-label-opaque-targets-7889f64f.json).
+- **Not claimed.** This remains a finite literal bracket profile, not a general Markdown parser or citation-truth check. No FI tag, original scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-085036-fi-raw-output-descriptor-ownership-e767e978
 
 Recorded 2026-11-19T08:50:36.696731+00:00 · Contributor: Codex · change
