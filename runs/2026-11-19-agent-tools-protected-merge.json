@@ -1,0 +1,83 @@
+{
+  "captured_at": "2026-11-19T04:39:46.294560+00:00",
+  "kind": "protected_agent_tools_and_trust_drafts_publication",
+  "pass": true,
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/125",
+  "reviewed_head": "2089e2ff5893d2cf8638cb8d18519a82445c361e",
+  "merge_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+  "required_checks": [
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425033",
+      "name": "no-egress",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425004",
+      "name": "site",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425128",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340424877",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340424728",
+      "name": "accessibility",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425091",
+      "name": "host-config",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425029",
+      "name": "regressions",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425117",
+      "name": "spec",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340424993",
+      "name": "scope-plan",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425008",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44458844847/job/135340425092",
+      "name": "change-records",
+      "state": "SUCCESS"
+    }
+  ],
+  "required_checks_passed": 11,
+  "live_evidence": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+  "local_checkout_synced": true,
+  "unrelated_local_untracked_files_preserved": 12,
+  "scheduled_tag_lab_default_branch_state": "active",
+  "schedule_execution_claimed": false,
+  "original_scope": {
+    "records": 202,
+    "complete": 132,
+    "open": 70,
+    "new_full_closures": []
+  },
+  "formation_filed": false,
+  "trust_instrument_reviewed": false,
+  "independent_tag_release_validation": false,
+  "physical_phone_acceptance": false,
+  "social_posts_sent": false,
+  "local_build_environment_repair": "Use existing hash-pinned verification environment instead of system Python lacking pydantic; no source or dependency change."
+}
