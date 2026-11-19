@@ -207,6 +207,21 @@ PATTERNS += ('tools/mt_device.py', 'scripts/build-mt-device.py', 'tests/test_mt_
 
 PATTERNS += ('scripts/verify-mt-client.cjs',)
 
+# Review the independent HP/NF surfaces and delivery accounting as project code;
+# this binding does not promote a tag or approve independent accuracy.
+PATTERNS += ('AGENTS.md', 'tools/session_delivery.py', 'scripts/session-delivery.py',
+             'tests/test_session_delivery.py', 'docs/session-accountability-plan.md',
+             'tools/hp_device.py', 'scripts/build-hp-device.py',
+             'scripts/build-hp-device-fixture.mjs', 'scripts/verify-hp-device.cjs',
+             'scripts/hp-device-cases.py', 'scripts/hp-site-controls.cjs', 'scripts/verify-hp-client.cjs',
+             'tests/test_hp_device.py', 'tests/hp-device-client.mjs',
+             'site/public/hp-device/*', 'site/public/reference/hp-device-explorer.md',
+             'docs/hp-device-explorer.md', 'docs/hp-device-explorer-plan.md',
+             'tools/nf_source_evidence.py', 'tools/nf_private_io.py',
+             'scripts/check-nf-source-evidence.py', 'scripts/nf-source-worker.py',
+             'tests/test_nf_source_evidence.py', 'docs/nf-source-evidence.md',
+             'docs/nf-source-evidence-plan.md', 'site/public/reference/nf-source-evidence.md')
+
 def read_json(file):
     return read_evidence(file)
 

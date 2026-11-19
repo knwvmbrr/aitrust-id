@@ -77,7 +77,9 @@
     "verify:mt-client": "node scripts/verify-mt-client.cjs",
     "build:hp-device": "python3 scripts/build-hp-device.py",
     "test:hp-device": "python3 -m pytest tests/test_hp_device.py -q && node --test tests/hp-device-client.mjs",
-    "verify:hp-site": "node scripts/hp-site-controls.cjs"
+    "verify:hp-site": "node scripts/hp-site-controls.cjs",
+    "verify:delivery": "python3 scripts/session-delivery.py",
+    "check:session": "python3 scripts/session-delivery.py --check-session"
   },
   "devDependencies": {
     "playwright": "1.62.1",

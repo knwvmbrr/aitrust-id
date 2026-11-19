@@ -1,0 +1,80 @@
+{
+  "profile": "independent-tag-integration-pre-pr-review/v1",
+  "captured_at": "2026-11-19T16:06:30.835466+00:00",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "source_commit_context": "6d7e1c236878de2c767f1673b5fd8afb62efd2de",
+  "working_tree_sources": true,
+  "source_sha256": {
+    "AGENTS.md": "64335866e529ab3e970a862c08db36741ff00523d6e0b6986003a95c1a8b43ec",
+    "tools/session_delivery.py": "7d612f8eb684922b4e211b580cffd2bdc8eabbb513ce311ef73d4a8add45977f",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "tests/test_session_delivery.py": "6101d3b54b5e2f00be54e448fb7081cde6504117d411121ee3c76a8d3f5e0ea9",
+    "docs/session-delivery.json": "95ff94eb7337d4b493def6c340ee04fff5924dd41ada6055e82a4506ce81723a",
+    "docs/session-delivery-plan.md": "f78a8c69d401cf59fb52e78fd054ead933dc46913d42e781e717fb81e1f86ba3",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "c99752d12d02b902225106de850d884c16368e7886b02b07f9f582473130d38a",
+    "state.json": "6ccd4f8ba61431ef6c710bd61f7daae3be5a6766d8a04d4452301d0374a4f2a5",
+    ".github/workflows/ci.yml": "d2670eeeca1cb0b05c0fa6ddf7a33cc31324c1ec97974142494ee03df0c9e363",
+    "eval/revalidation.json": "cc3c57d48ce6fa7ba44d7d6ae31567b22da6c9720e8cdfbf3b01944b9cfe6ff5",
+    "site/scripts/prepare.mjs": "c3ddb5ea829d4773591d28d2476a185129353d1b1510aac8afe560a7dec01f20",
+    "site/src/main.jsx": "30964fadf3fd9f001bf3a6313b6023c6ab3681339f7acc3d7d4f1742db9d6301",
+    "site/src/presentation.js": "bfdf8d69da72a1f7cd57be8b41ae1ce69ad3a7646af59d00e849f09145226a20",
+    "site/src/usage.js": "9836e544c5b41605372819baefd6e6877293d619ba65ab8ef7d8fde4cdbd0fd0",
+    "docs/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "site/public/reference/nf-source-evidence.md": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "runs/2026-11-19-tag-components-integrated.json": "b1162eaa84dc8cf241c8e151a5713f712600d96846c1acae9620d69936cb1bff"
+  },
+  "source_unchanged_during_review": true,
+  "checks": {
+    "original_ids_preserved": 202,
+    "unchanged_original_master_criteria": 202,
+    "unchanged_open_original_acceptance": 70,
+    "original_complete": 132,
+    "original_open": 70,
+    "nf_guide_tracked_public_and_dist_exact": true,
+    "nf_guide_sha256": "923a7d2a3a967335ca2c994b71cee30037b822c44ff7156f23171d651c69e1d8",
+    "public_execution_receipt_sanitized_without_new_execution_credit": true,
+    "old_169_count_and_source_identity_preserved": true,
+    "private_raw_record_digest_matches_observed_prior_record": true,
+    "new_public_run_jsons_scanned": 38,
+    "known_private_path_marker_hits": 0,
+    "scoped_task_vs_original_counters_separate": true,
+    "tag_worker_snapshot_consistent": true
+  },
+  "actual_cli_checks": [
+    {
+      "command": "python3 -I -S -B scripts/session-delivery.py",
+      "exit_code": 0,
+      "original_complete": 132,
+      "original_open": 70,
+      "scoped_tasks_finished": 4,
+      "original_closures": 0,
+      "active_tag_assignments_at_snapshot": 0,
+      "session_success": false
+    },
+    {
+      "command": "python3 -I -S -B scripts/session-delivery.py --check-session",
+      "exit_code": 1,
+      "original_complete": 132,
+      "original_open": 70,
+      "scoped_tasks_finished": 4,
+      "original_closures": 0,
+      "active_tag_assignments_at_snapshot": 0,
+      "session_success": false
+    }
+  ],
+  "reviewed_limits": [
+    "HP is a lazy bounded literal preview, no HP assertion or independent-accuracy claim.",
+    "NF public guide exposes explicit offline literal/cosine workflow; no source-support truth or default service/tag promotion.",
+    "CI additions preserve named jobs and existing permissions; no new endpoint or capture permission observed.",
+    "Four closed scoped tasks are audit, reviews and accounting; NF/HP implementation/publication acceptance remains separately tracked."
+  ],
+  "verdict": "No remaining actionable blocker in the targeted privacy cleanup, original acceptance preservation, accounting and reviewed source integration.",
+  "full_current_website_validation_pending": true,
+  "browser_or_product_suite_rerun_by_reviewer": false,
+  "production_publication_verified": false,
+  "scope_approval_granted": false,
+  "original_requirements_closed": 0,
+  "independent_accuracy_evidence": false
+}

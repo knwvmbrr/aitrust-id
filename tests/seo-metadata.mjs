@@ -16,11 +16,19 @@ test('local privacy setup is not described as a website capability',()=>{
  assert.match(tagDescription(tag('PII_REDACTED')),/Local setup required\. PII does not run in this website checker/);
 });
 test('unavailable adopted tags do not appear as available development checkers',()=>{
- for(const id of ['NF','FI','HP','IV','FA','PA','UNK','PII_OUTBOUND']){
+ for(const id of ['NF','FI','IV','FA','PA','UNK','PII_OUTBOUND']){
   const description=tagDescription(tag(id));
   assert.match(description,/Planned · No checker available yet/,id);
   assert.doesNotMatch(description,/Development preview|Works here/,id);
  }
+});
+test('HP discovery distinguishes literal detail exploration from tag release',()=>{
+ const description=tagDescription(tag('HP'));
+ assert.equal(tag('HP').status,'Coming Soon');
+ assert.equal(tag('HP').formalName,'Hallucination possible');
+ assert.match(description,/Explore numbers and date-shaped details/);
+ assert.match(description,/Planned tag · Literal-detail preview available/);
+ assert.doesNotMatch(description,/No checker|Works here|certified|independently validated|detects hallucinations|verifies facts|accuracy guarantee/i);
 });
 test('MT discovery distinguishes its wording-method preview from tag release',()=>{
  const description=tagDescription(tag('MT'));

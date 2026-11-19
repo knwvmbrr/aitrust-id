@@ -525,7 +525,40 @@
         "scripts/citation-resolution.py",
         "tests/test_citation_resolution.py",
         "docs/fi-citation-sidecar.md",
-        "docs/fi-citation-sidecar-plan.md"
+        "docs/fi-citation-sidecar-plan.md",
+        "tools/session_delivery.py",
+        "scripts/session-delivery.py",
+        "tests/test_session_delivery.py",
+        "docs/session-accountability-plan.md",
+        "tools/hp_device.py",
+        "scripts/build-hp-device.py",
+        "scripts/build-hp-device-fixture.mjs",
+        "scripts/verify-hp-device.cjs",
+        "scripts/hp-device-cases.py",
+        "scripts/hp-site-controls.cjs",
+        "tests/test_hp_device.py",
+        "tests/hp-device-client.mjs",
+        "site/src/HPExplorer.jsx",
+        "site/src/HPExplorerSlot.jsx",
+        "site/src/hp-device-client.js",
+        "site/src/hp-device-worker.js",
+        "site/src/hp-device-result.js",
+        "site/src/hp-device-manifest.json",
+        "site/public/hp-device/*",
+        "site/public/reference/hp-device-explorer.md",
+        "docs/hp-device-explorer.md",
+        "docs/hp-device-explorer-plan.md",
+        "tools/nf_source_evidence.py",
+        "tools/nf_private_io.py",
+        "scripts/check-nf-source-evidence.py",
+        "scripts/nf-source-worker.py",
+        "tests/test_nf_source_evidence.py",
+        "docs/nf-source-evidence.md",
+        "docs/nf-source-evidence-plan.md",
+        "site/public/reference/nf-source-evidence.md",
+        "AGENTS.md",
+        "docs/hp-site-integration.md",
+        "scripts/verify-hp-client.cjs"
       ],
       "commands": [
         [
@@ -866,6 +899,23 @@
           "pytest",
           "tests/test_citation_resolution.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_session_delivery.py",
+          "tests/test_hp_device.py",
+          "tests/test_nf_source_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/session-delivery.py"
+        ],
+        [
+          "node",
+          "scripts/verify-hp-client.cjs"
         ]
       ]
     },
@@ -1418,7 +1468,40 @@
         "scripts/verify-seo.mjs",
         "tests/seo-metadata.mjs",
         "docs/fi-citation-sidecar.md",
-        "docs/fi-citation-sidecar-plan.md"
+        "docs/fi-citation-sidecar-plan.md",
+        "tools/session_delivery.py",
+        "scripts/session-delivery.py",
+        "tests/test_session_delivery.py",
+        "docs/session-accountability-plan.md",
+        "tools/hp_device.py",
+        "scripts/build-hp-device.py",
+        "scripts/build-hp-device-fixture.mjs",
+        "scripts/verify-hp-device.cjs",
+        "scripts/hp-device-cases.py",
+        "scripts/hp-site-controls.cjs",
+        "tests/test_hp_device.py",
+        "tests/hp-device-client.mjs",
+        "site/src/HPExplorer.jsx",
+        "site/src/HPExplorerSlot.jsx",
+        "site/src/hp-device-client.js",
+        "site/src/hp-device-worker.js",
+        "site/src/hp-device-result.js",
+        "site/src/hp-device-manifest.json",
+        "site/public/hp-device/*",
+        "site/public/reference/hp-device-explorer.md",
+        "docs/hp-device-explorer.md",
+        "docs/hp-device-explorer-plan.md",
+        "tools/nf_source_evidence.py",
+        "tools/nf_private_io.py",
+        "scripts/check-nf-source-evidence.py",
+        "scripts/nf-source-worker.py",
+        "tests/test_nf_source_evidence.py",
+        "docs/nf-source-evidence.md",
+        "docs/nf-source-evidence-plan.md",
+        "site/public/reference/nf-source-evidence.md",
+        "AGENTS.md",
+        "docs/hp-site-integration.md",
+        "scripts/verify-hp-client.cjs"
       ],
       "commands": [
         [
@@ -1665,6 +1748,23 @@
         [
           "node",
           "scripts/verify-seo.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_session_delivery.py",
+          "tests/test_hp_device.py",
+          "tests/test_nf_source_evidence.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/session-delivery.py"
+        ],
+        [
+          "node",
+          "scripts/verify-hp-client.cjs"
         ]
       ]
     }

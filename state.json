@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T09:46:19.907115+00:00",
+  "updated": "2026-11-19T15:48:48.892967+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -792,13 +792,13 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-18T15:46:57.961717+00:00",
+    "audited_at": "2026-11-19T15:41:06.148336+00:00",
     "completed_records": 132,
     "open_records": 70,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
-    "enhancements": 11,
+    "enhancements": 13,
     "definition": "100% only for full functioning acceptance; milestone coverage, not effort or overall project percentage",
     "verified_by": "Codex",
     "execution_evidence": "runs/2026-10-11-authenticated-results-acceptance.json",
@@ -854,7 +854,13 @@
       "X-02"
     ],
     "intermediate_target_open_records": 60,
-    "intermediate_remaining_closures": 10
+    "intermediate_remaining_closures": 10,
+    "latest_component_evidence": [
+      "runs/2026-11-19-tag-components-integrated.json",
+      "runs/2026-11-19-hp-production-site-final.json",
+      "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "runs/2026-11-19-nf-source-evidence-linux.json"
+    ]
   },
   "research_components": {
     "adjudication": "tested supplied-input interpretation and experimental precedence; real media adapter not implemented",
@@ -1143,7 +1149,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T09:46:19.907115+00:00",
+  "updated_at": "2026-11-19T15:48:48.892967+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3093,7 +3099,8 @@
     "ledger": "docs/scope-progress.json",
     "intermediate_target_open": 60,
     "intermediate_closures_needed": 10,
-    "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues."
+    "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues.",
+    "immediate_target_source": "docs/session-delivery.json"
   },
   "organization_directory": {
     "status": "clock_skew_fence_repaired; current_real_provider_acceptance_and_live_publication_verified",
@@ -3567,17 +3574,31 @@
     "readiness": "runs/2026-11-12-choice-between-current-readiness.json"
   },
   "agent_delivery": {
-    "plan": "docs/quarterly-brand-and-agent-plan.md",
+    "plan": "docs/session-accountability-plan.md",
     "integration_owner": "Codex PM",
     "specialist_lanes": [
-      "web camouflage",
-      "native branding",
-      "SEO"
+      "HP on-device literal detail explorer",
+      "NF explicit claim/passage observations",
+      "independent task-list and source review"
     ],
-    "tag_lanes": "Separate contracts and evidence per tag; not all currently staffed",
+    "tag_lanes": "14 named logical queues; bounded independent workers in waves, not14 continuously running bots",
     "proprietary_assistant": "planned evaluation track only; no trained model or collection activated",
     "heavy_validation_policy": "One local native UI or browser validation workload at a time; agents may continue source review. Separate remote CI machines remain independent.",
-    "handoff_protocol": "docs/agent-handoffs.md"
+    "handoff_protocol": "docs/agent-handoffs.md",
+    "previous_plan": "docs/quarterly-brand-and-agent-plan.md",
+    "board": "docs/session-delivery.json",
+    "reader_board": "docs/session-delivery-plan.md",
+    "task_list_lead": "/root/seo",
+    "assignment_snapshot_at": "2026-11-19T15:48:48.892967+00:00",
+    "active_tag_workers_at_snapshot": 0,
+    "phase": "PM protected integration/publication; both tag implementation lanes returned",
+    "minimum_finished_named_deliverables_per_session": 1,
+    "minimum_original_requirement_closures_per_session": 1,
+    "finished_scoped_tasks": 4,
+    "original_requirement_closures": 0,
+    "original_requirement_goal_met": false,
+    "session_goal_check": "python3 scripts/session-delivery.py --check-session",
+    "completion_is_not_accuracy": true
   },
   "q4_web_verification": {
     "website": "runs/2026-11-16-q4-website-current.json",
@@ -4049,5 +4070,29 @@
       "unchanged_revision_retry_passed": true,
       "underlying_cause_established": false
     }
+  },
+  "independent_tag_increments": {
+    "recorded_at": "2026-11-19T15:48:48.892967+00:00",
+    "HP": {
+      "status": "reviewed_on_device_literal_method_preview; planned_HP_tag_not_released",
+      "source_commit": "262403d266d4870715e1da5b1647917bd03c37de",
+      "site_integration_source": "53ef63a1daaaed50f85cb60f8fb25747785ecf47",
+      "guide": "docs/hp-device-explorer.md",
+      "browser_evidence": "runs/2026-11-19-hp-production-site-final.json",
+      "review": "runs/2026-11-19-hp-device-independent-review.json",
+      "physical_phone_verified": false,
+      "independent_accuracy_evidence": false
+    },
+    "NF": {
+      "status": "reviewed_offline_selected_source_method; planned_NF_tag_not_released",
+      "source_commit": "ed2f0292fdba8c3644d6554234edda089dc57b03",
+      "guide": "docs/nf-source-evidence.md",
+      "macos_evidence": "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+      "linux_evidence": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "review": "runs/2026-11-19-nf-source-independent-review.json",
+      "independent_accuracy_evidence": false
+    },
+    "original_closures": 0,
+    "publication_pending": true
   }
 }

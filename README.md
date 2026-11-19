@@ -419,6 +419,17 @@ run regressions and the device suite, then `python scripts/build-tag-performance
 using the verification environment. `npm run build:site` rejects stale method-bound
 reports; `npm run verify:performance` checks all panels, static pages and empty states.
 
+## Tag workers and delivery accountability
+
+The [dated task board](docs/session-delivery-plan.md) preserves every open original
+requirement and its full acceptance. Its [machine record](docs/session-delivery.json)
+names all fourteen logical tag queues and only the workers actually assigned at
+that snapshot. The task-list lead reviews frozen deliverables; the PM owns shared
+integration. A completed component and a fully closed requirement have separate
+counters. Run `python3 scripts/session-delivery.py` to inspect them, or add
+`--check-session` to require the strict session closure goal. The board is not a
+background scheduler or a claim that dormant agents keep working.
+
 ## Change accountability
 
 Every source, public copy, policy, scope or operational-evidence change needs a

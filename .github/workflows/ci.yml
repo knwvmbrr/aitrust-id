@@ -150,6 +150,15 @@ jobs:
           python scripts/build-mt-device.py
           python -m pytest tests/test_mt_device.py -q
           node --test tests/mt-device-client.mjs
+      - name: Verify dated task accounting without declaring unmet session goals complete
+        run: |
+          python scripts/session-delivery.py
+          python -m pytest tests/test_session_delivery.py -q
+      - name: Keep HP device preview and NF source workers independently bounded
+        run: |
+          python scripts/build-hp-device.py
+          python -m pytest tests/test_hp_device.py tests/test_nf_source_evidence.py -q
+          node --test tests/hp-device-client.mjs
       - name: Refuse corrupted notice evidence and permission promotion
         run: python -m pytest tests/test_license_notices.py -q
       - name: Exercise independent editorial choices and private input refusals

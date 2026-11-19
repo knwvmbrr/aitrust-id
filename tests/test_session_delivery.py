@@ -92,6 +92,8 @@ def test_new_original_and_component_are_counted_separately(case):
     lambda c: c['board']['goals'].update(requirement_goal_status='MET'),
     lambda c: c['board']['original_open_requirements'].pop(),
     lambda c: c['board']['original_open_requirements'][0].update(required_acceptance=['weakened']),
+    lambda c: tool.rows(c['current_master'])['T-HP'].update(acceptance='weakened before closure'),
+    lambda c: tool.rows(c['current'])['T-HP'].update(required_acceptance=['weakened before closure']),
     lambda c: c['current']['records'].pop(),
     lambda c: c['current']['records'][-1].update(id='invented'),
     lambda c: c['board']['tag_bots'][0].update(status='active', actual_worker=None),

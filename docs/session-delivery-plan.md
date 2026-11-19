@@ -4,7 +4,7 @@ Snapshot: 2026-11-19T15:20:45.481757+00:00 · Base `3716233b9460efa57c1f0d01bfe3
 
 This is a dated assignment snapshot, not a background agent heartbeat. The JSON is the durable detailed board; it preserves every open original, its full acceptance, job, outcome, historical limit, accountable lane, exact evidence index and next action. It does not change the scope ledger.
 
-**Originals: 202 total, 132 complete, 70 open. Finished scoped tasks: 0. Original requirement closures: 0. Requirement goal: NOT MET. Session success: false.**
+**Originals: 202 total, 132 complete, 70 open. Finished scoped tasks: 4. Original requirement closures: 0. Requirement goal: NOT MET. Session success: false.**
 
 The session requires at least one fully working named deliverable and at least one genuine original closure. The requested destination is 60 open originals. Completing a subcomponent, audit, UI or engineering test does not lower 70. The conditional ten-item stretch queue is not a forecast and creates no automatic group closures.
 
@@ -13,11 +13,11 @@ The session requires at least one fully working named deliverable and at least o
 | Lane | Accountable worker | Dated state | Concrete next deliverable |
 |---|---|---|---|
 | PM / integration | `/root` | Active coordination | Review evidence, integrate through protection, own ledger/state and truthful closure decisions. |
-| Task-list lead | `/root/seo` | Audit in review | Preserve this complete acceptance/blocker board; review frozen NF/HP work next. |
-| NF evidence bot | `/root/share_debugger` | Active | Standalone caller-selected NFC claim/reference passages with separate literal/cosine observations, bounded workers and safe private export. |
-| HP device bot | `/root/web_camo` | Active | Canonical literal-detail method on-device, exact input/source binding, lazy isolated UI and actual browser evidence. |
+| Task-list lead | `/root/seo` | Audit and manager review completed | Preserve this complete acceptance/blocker board; review frozen NF/HP work next. |
+| NF evidence bot | `/root/share_debugger` | Frozen and reviewed | Standalone caller-selected NFC claim/reference passages with separate literal/cosine observations, bounded workers and safe private export. |
+| HP device bot | `/root/web_camo` | Frozen and reviewed | Canonical literal-detail method on-device, exact input/source binding, lazy isolated UI and actual browser evidence. |
 
-Only NF and HP currently have assigned active tag workers. All 14 logical tag bots are listed in JSON. A queued or blocked bot with `actual_worker: null` is not running. Michael remains the actual accountable operator; agents do not become legal officers, independent human reviewers or certifiers.
+NF and HP engineering and source reviews have returned; the PM is integrating and publishing their results. No tag worker is currently running. All 14 logical tag bots are listed in JSON. A queued or blocked bot with `actual_worker: null` is not running. Michael remains the actual accountable operator; agents do not become legal officers, independent human reviewers or certifiers.
 
 ## Audit result and closure target
 
@@ -114,6 +114,16 @@ The table names each original and its blocking category. The JSON retains the fu
 | N-013 | 80% | Native iPhone sharing into a tag check | physical and outside operation |
 | N-014 | 20% | Native Android sharing into a tag check | physical and outside operation |
 | N-015 | 80% | Blind PS review from a phone | ps independent release |
+
+## Completed scoped tasks
+
+- Acceptance/blocker board: implemented by the task-list lead, reviewed by the PM against the immutable baseline and executable accounting.
+- Delivery accounting CLI: implemented by the PM, reviewed independently by the task-list lead; 39 focused controls and actual commands pass their expected outcomes.
+
+- HP frozen component: independently reviewed against raw/NFC binding, closed results, source identity and failure isolation.
+- NF frozen component: independently reviewed against selected spans, canonical cosine consistency, private CLI and sibling failure isolation.
+
+These are four finished engineering/management deliverables and zero original closures. The original requirement goal remains NOT MET.
 
 ## Next unblocked execution sequence
 

@@ -188,6 +188,13 @@ def inspect(board, baseline, baseline_master, current, current_master, root=ROOT
     before, after = rows(baseline), rows(current)
     old_master, new_master = rows(baseline_master), rows(current_master)
     require(before.keys() == after.keys() == old_master.keys() == new_master.keys())
+    for key in before:
+        # Prevent laundering weaker criteria into the next session's baseline,
+        # even when this session does not yet claim that original as complete.
+        require({k: new_master[key][k] for k in ('baseline_job', 'outcome', 'acceptance')}
+                == {k: old_master[key][k] for k in ('baseline_job', 'outcome', 'acceptance')})
+        if before[key]['percent_complete'] < 100 and after[key]['percent_complete'] < 100:
+            require(after[key]['required_acceptance'] == before[key]['required_acceptance'])
     old_done = {key for key, row in before.items() if complete(row)}
     new_done = {key for key, row in after.items() if complete(row)}
     old_open = set(before) - old_done

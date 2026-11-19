@@ -2,6 +2,43 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-161559-preserve-tag-integration-review-candidates-ce5a4578
+
+Recorded 2026-11-19T16:15:59.446198+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved both full website candidate failures and the final pre-PR privacy/accounting review before the focused lazy-screen accessibility correction.
+- **Evidence.** The first candidate isolated an obsolete HP SEO assertion; the tightened ten-case SEO check passes. The second candidate passed HP method/PS/MT isolation and other initial website phases, then exposed an indexed-control focus race. Separate review verifies original criteria and public evidence redaction. [Change record](./runs/changes/2026-11-19-161559-preserve-tag-integration-review-candidates-ce5a4578.json).
+- **Not claimed.** Website remains a failed candidate until the readiness correction is integrated and the full gate passes. Four scoped tasks and zero originals are closed;70originals remain open. No independent accuracy or physical-device claim.
+
+
+### 2026-11-19-160542-reviewed-tag-integration-public-record-e897ea82
+
+Recorded 2026-11-19T16:05:42.269098+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated independently reviewed tag components, updated scope evidence and task accountability, and corrected an unpublished execution record representation before publication.
+- **Evidence.** 169 earlier combined controls retain their original source/time; final accounting has41focused checks and separate review. NF actual Linux and HP browser evidence are retained. Public run files contain no local home/temp path markers;10SEOcontrols now distinguish the literal HP preview from a planned tag. [Change record](./runs/changes/2026-11-19-160542-reviewed-tag-integration-public-record-e897ea82.json).
+- **Not claimed.** The first full website candidate passed42commands then refused a stale HP SEO expectation; its failed receipt remains. Corrected whole-site verification and protected publication are pending.70originals remain open and no tag release is claimed.
+
+
+### 2026-11-19-155616-tag-bots-source-bound-checks-0236b561
+
+Recorded 2026-11-19T15:56:16.183071+00:00 · Contributor: Codex · change
+
+- **Changed.** Added the fixed HP client check entrypoint required by the revalidation consumer and preserved the refused direct-command candidate; captured four current capability runs.
+- **Evidence.** PS7, PII6, extension14 and protocol55 configured commands passed with unchanged sources. Original open count remains70; live task accounting continues to refuse the unmet original-closure goal. [Change record](./runs/changes/2026-11-19-155616-tag-bots-source-bound-checks-0236b561.json).
+- **Not claimed.** These are source-bound engineering passes, not independent accuracy or original closure. Website validation and protected publication remain pending.
+
+
+### 2026-11-19-155022-tag-method-generated-scope-0ef2705e
+
+Recorded 2026-11-19T15:50:22.033240+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated public scope mirrors and added the tracked NF guide preparation after integrating the independent components.
+- **Evidence.** Production site build passed with all202 original records retained; generated artifacts reflect current evidence without changing any percentage. [Change record](./runs/changes/2026-11-19-155022-tag-method-generated-scope-0ef2705e.json).
+- **Not claimed.** Generated scope and successful build are not release validation or original requirement closure. Final protected checks and publication remain pending.
+
+
+
 ### 2026-11-19-154458-hp-built-site-integration-verified-36288c66
 
 Recorded 2026-11-19T15:44:58.028506+00:00 · Contributor: Codex HP tag lane · change

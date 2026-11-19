@@ -53,3 +53,12 @@ Verify unchanged 132/70 inspection, genuine witnessed transition accounting,
 stale/duplicate/invented closure refusals, missing/tampered evidence, altered
 acceptance, unsafe inputs and an actual CLI session-goal refusal. Continue work
 on unblocked tag tasks when original acceptance requires another person.
+
+## Mutable board versus method identity
+
+Runtime capability fingerprints bind the accounting implementation, not the
+mutable assignment snapshot. Every closeout runs the live accounting command and
+records its board digest separately. Changing an agent assignment must not cause
+all detector regression suites to rerun or make an old accounting observation
+current. CI also runs the live guard against its checkout. Source changes still
+require the existing capability checks.

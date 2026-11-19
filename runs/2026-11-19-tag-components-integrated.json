@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-11-19T15:43:38.150601+00:00",
+  "pass": true,
+  "kind": "integrated_independent_tag_components",
+  "command": [
+    "{verification_python}",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_session_delivery.py",
+    "tests/test_hp_device.py",
+    "tests/test_nf_source_evidence.py"
+  ],
+  "exit_code": 0,
+  "tests_passed": 169,
+  "elapsed_seconds": 12.78,
+  "source_sha256": {
+    "tools/session_delivery.py": "49e0b4e19363fc2b0f3666e91e0cadd7ea9fd66fa69b9fe258d90d689f1f4327",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "tests/test_session_delivery.py": "9e93fd7ba7a357ff871e0d2a68c792f58d44fcdc99773c8d781641d4a1a8d7f6",
+    "tools/hp_device.py": "be4fb51923195a4cdeff74e0913902bd92897764c942f240a9fcce051f913ac4",
+    "tests/test_hp_device.py": "2afb09f81e8bc72728d14eb4320740344f6543b770b71509ac0c0a587e9c84ca",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/nf_source_evidence.py": "9012a04cf412ab27d8deede84b49b214d620fc788092d872e1ffe3607d817602",
+    "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+    "tests/test_nf_source_evidence.py": "2c85dd6e6f041ce05e71872da23cf0d81f6acdbd8281c6d89e5e825245d38649",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd"
+  },
+  "review_receipts": [
+    "runs/2026-11-19-session-accountability-independent-review.json",
+    "runs/2026-11-19-hp-device-independent-review.json",
+    "runs/2026-11-19-nf-source-independent-review.json"
+  ],
+  "original_complete": 132,
+  "original_open": 70,
+  "original_closures": 0,
+  "tag_release_approved": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "scope": "Current integrated Python components and accounting only; production HP mounting still in progress.",
+  "interpreter": {
+    "implementation": "CPython",
+    "version": "3.12.14",
+    "binary_sha256": "c0ad12d399a2802704d57463e56939b50beace818b5b3629cc16b9c77e6af998"
+  },
+  "command_representation": "Public argv template; the actual local interpreter path is withheld.",
+  "private_execution_record_sha256": "d1ed2118fb1992662b65972e6adeb0bbb7016676554a757081f3d1efdf3f903a",
+  "public_representation_corrected_at": "2026-11-19T16:04:18.241359+00:00",
+  "execution_repeated_for_redaction": false
+}
