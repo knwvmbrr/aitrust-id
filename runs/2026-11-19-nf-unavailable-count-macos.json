@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "component": "NF unavailable observation count correction",
+  "recorded_at": "2026-11-19T16:36:51.193319+00:00",
+  "implemented_by": "Codex",
+  "base_commit": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
+  "platform": "Darwin",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "tools/nf_source_evidence.py": "c69d9bb1d555aa1c6048a4dede9312229fa01b5b4905e1ef912010b17885b046",
+    "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+    "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "tests/test_nf_source_evidence.py": "11f393ee995e897a2724a858a5cfb6208646b047dbc7ae48f267eaf8cd7166e0",
+    "docs/nf-source-evidence.md": "0349cb22f0c39d9cf58851147609fac07885a48ff2af0899292bce88faa78318"
+  },
+  "source_snapshot": "Selected current working source bytes before correction commit; exact digests above",
+  "focused_tests": {
+    "passed": 13,
+    "failed": 0,
+    "deselected": 86,
+    "elapsed_seconds": 0.8,
+    "selection": "summary counts, actual Unicode, all unavailable, supervision failures, sibling isolation, actual private exports",
+    "unrelated_actual_timeout_rerun": false
+  },
+  "actual_cli": {
+    "passed": 10,
+    "failed": 0,
+    "isolated_python_flags": [
+      "-I",
+      "-S",
+      "-B"
+    ],
+    "minimal_environment": true,
+    "controls": [
+      {
+        "name": "ascii_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "expected_counts": null,
+        "actual_counts": null,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662"
+      },
+      {
+        "name": "complete_measured_zero_and_one",
+        "exit_code": 0,
+        "passed": true,
+        "state": "COMPLETE",
+        "expected_counts": [
+          0,
+          1
+        ],
+        "actual_counts": [
+          0,
+          1
+        ],
+        "stdout_sha256": "ba2ea003de9658e05349628fa1e5addcc88e2f61109ef0cf49a334caf2b49095"
+      },
+      {
+        "name": "unicode_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "expected_counts": null,
+        "actual_counts": null,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662"
+      },
+      {
+        "name": "unicode_unknown_cosine",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "expected_counts": [
+          1,
+          null
+        ],
+        "actual_counts": [
+          1,
+          null
+        ],
+        "stdout_sha256": "3b985e2ebe4fbeaec62787e7e07a2d043ea3d526502765ad483b34f8053adbd2"
+      },
+      {
+        "name": "one_failed_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "expected_counts": null,
+        "actual_counts": null,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662"
+      },
+      {
+        "name": "one_failed_summary",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "expected_counts": [
+          null,
+          1
+        ],
+        "actual_counts": [
+          null,
+          1
+        ],
+        "stdout_sha256": "ce31991513181bd8df0051935c6571ac0ebea6de46ef1afc166b58e6f09a5144"
+      },
+      {
+        "name": "both_failed_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "expected_counts": null,
+        "actual_counts": null,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662"
+      },
+      {
+        "name": "both_failed_summary",
+        "exit_code": 2,
+        "passed": true,
+        "state": "UNAVAILABLE",
+        "expected_counts": [
+          null,
+          null
+        ],
+        "actual_counts": [
+          null,
+          null
+        ],
+        "stdout_sha256": "15fe238c653d6ca099114fbc161c39f8e0b2bba7c0c3fdfd3bbc02f115975a92"
+      },
+      {
+        "name": "cosine_drift_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "state": "SELECTION_SAVED",
+        "expected_counts": null,
+        "actual_counts": null,
+        "stdout_sha256": "4ba93ff7cde8a077d202cb0dcd9584141b778ab2440f6268199d014a94bf6662"
+      },
+      {
+        "name": "cosine_drift_unknown_not_zero",
+        "exit_code": 0,
+        "passed": true,
+        "state": "PARTIAL",
+        "expected_counts": [
+          0,
+          null
+        ],
+        "actual_counts": [
+          0,
+          null
+        ],
+        "stdout_sha256": "f5802bea6c5bf315c6c319795447e12920e8b4b7dc6f6d97c4e87c003068d7cb"
+      }
+    ]
+  },
+  "boundaries": {
+    "unavailable_count_is_json_null": true,
+    "completed_no_match_is_integer_zero": true,
+    "actual_unicode_partial_counts": [
+      1,
+      null
+    ],
+    "both_failed_counts": [
+      null,
+      null
+    ],
+    "private_report_not_created_when_all_unavailable": true,
+    "no_input_text_or_private_path_echo": true
+  },
+  "preserved_original": "runs/2026-11-19-nf-unavailable-count-original.json",
+  "prior_full_worker_linux_receipt": "runs/2026-11-19-nf-source-evidence-linux.json",
+  "claims": {
+    "full_current_suite_rerun": false,
+    "prior_full_linux_proof_relabelled_current": false,
+    "NF_FI_tag_issuance": false,
+    "independent_accuracy": false,
+    "full_T_NF_completion": false,
+    "human_acceptance": false
+  }
+}

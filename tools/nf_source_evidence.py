@@ -313,6 +313,6 @@ def summary(result, saved=False):
     return {'format': PROFILE, 'state': result['state'], 'selected_pairs': len(result['bindings']['pairs']),
             'checks': [{'component': r['component'], 'state': r['state'],
                         'pairs_with_observations': sum(bool(p['matches']) for p in r['observation']['rows'])
-                        if r['state'] == 'COMPLETE' else 0} for r in result['checks']],
+                        if r['state'] == 'COMPLETE' else None} for r in result['checks']],
             'private_report_saved': saved, 'tags': [], 'truth_established': False,
             'semantic_support_established': False, 'independent_accuracy_evidence': False}

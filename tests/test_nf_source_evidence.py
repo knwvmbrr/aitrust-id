@@ -87,6 +87,7 @@ def test_unicode_exact_completes_when_cosine_unavailable_and_raw_nfc_identity_di
     assert result['state'] == 'PARTIAL'
     literal, cosine = result['checks']
     assert literal['state'] == 'COMPLETE' and cosine['state'] == 'UNAVAILABLE'
+    assert [r['pairs_with_observations'] for r in nf.summary(result)['checks']] == [1, None]
     match = literal['observation']['rows'][0]['matches'][0]
     assert normalize_nfc(text.decode())[slice(*match['claim_span'])] == 'Café details.'
     assert match['source_span'] == selection['pairs'][0]['source_span']
@@ -151,6 +152,7 @@ def test_worker_failure_isolated_and_not_a_negative_observation(monkeypatch, kin
     result = execute(*fixture()[:2], bound())
     assert result['state'] == 'PARTIAL'
     assert [r['state'] for r in result['checks']] == (['UNAVAILABLE', 'COMPLETE'] if kind == 'literal' else ['COMPLETE', 'UNAVAILABLE'])
+    assert [r['pairs_with_observations'] for r in nf.summary(result)['checks']] == ([None, 1] if kind == 'literal' else [0, None])
 
 
 def test_real_cli_private_exports_no_overwrite_and_rebinding_refusal(tmp_path):
@@ -227,6 +229,8 @@ def test_supervision_failures_become_only_selected_unavailable(tmp_path, monkeyp
     with nf.io.Capture() as capture:
         result = nf.run_check('literal', [{'claim': 'A', 'passage': 'A'}], {}, capture)
     assert result == {'component': 'literal', 'state': 'UNAVAILABLE', 'reason': 'selected_check_unavailable'}
+    brief = nf.summary({'state': 'UNAVAILABLE', 'bindings': {'pairs': [{}]}, 'checks': [result]})
+    assert brief['checks'][0]['pairs_with_observations'] is None
 
 
 @pytest.mark.parametrize('kind', ['literal', 'cosine'])
@@ -346,6 +350,27 @@ def test_all_checks_unavailable_does_not_create_private_report(tmp_path):
     result = cli(*check_args(p), '--private-report', report, root=copied)
     assert result.returncode == 2 and not result.stderr and not report.exists()
     assert json.loads(result.stdout)['private_report_saved'] is False
+    assert [r['pairs_with_observations'] for r in json.loads(result.stdout)['checks']] == [None, None]
+
+
+@pytest.mark.parametrize('states,matches,expected', [
+    (['COMPLETE', 'COMPLETE'], [[], []], [0, 0]),
+    (['COMPLETE', 'UNAVAILABLE'], [[], None], [0, None]),
+    (['UNAVAILABLE', 'COMPLETE'], [None, [{}]], [None, 1]),
+    (['UNAVAILABLE', 'UNAVAILABLE'], [None, None], [None, None]),
+])
+def test_summary_counts_separate_unknown_from_measured_zero(states, matches, expected):
+    checks = []
+    for kind, state, observations in zip(nf.CHECKS, states, matches):
+        row = {'component': kind, 'state': state}
+        if state == 'COMPLETE': row['observation'] = {'rows': [{'matches': observations}]}
+        checks.append(row)
+    value = nf.summary({'state': 'synthetic_summary_control', 'bindings': {'pairs': [{}]}, 'checks': checks})
+    assert [r['pairs_with_observations'] for r in value['checks']] == expected
+    decoded = json.loads(json.dumps(value))
+    for row, wanted in zip(decoded['checks'], expected):
+        if wanted is None: assert row['pairs_with_observations'] is None
+        else: assert type(row['pairs_with_observations']) is int and row['pairs_with_observations'] == wanted
 
 
 IO_DRIVER = r'''
